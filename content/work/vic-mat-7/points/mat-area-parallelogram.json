@@ -1,0 +1,263 @@
+{
+ "id": "mat-area-parallelogram",
+ "title": "Area of a parallelogram",
+ "brief": "7f2d53c54943",
+ "shortlist": [
+  [
+   "mat-area-triangles-parallelograms",
+   0.639
+  ],
+  [
+   "mat-properties-quadrilaterals",
+   0.269
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 may adapt mat-area-triangles-parallelograms, but is not highly sure, so to the Opus match check",
+  "2026-11-12T12:53:57Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:50Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:05Z write: done",
+  "2026-11-12T15:35:10Z check: flagged",
+  "2026-11-12T15:42:25Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "confirm": 0.00395,
+  "write": 0.00744,
+  "check": 0.01131,
+  "fix": 0.02042,
+  "recheck": 0.00767
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-area-triangles-parallelograms",
+  "changes": [
+   "The card also covers triangles, but the new point is only about the parallelogram, so the triangle content and question b would need to be removed or moved to a separate point.",
+   "The card uses the Queensland-style framing and terms; the Victorian Level 7 syllabus wording and the perpendicular height terminology should be checked and aligned to the Victorian Curriculum 2.0 language."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same parallelogram area idea at a suitable depth, but it also covers triangles and its question b is about triangles, so it needs trimming to fit this point.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point covers both triangles and parallelograms and does not show the cut-and-move rearrangement into a rectangle, so it is broader than this point, which teaches only why a parallelogram's area is base times perpendicular height.",
+  "model": "claude-opus-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Area of a parallelogram",
+  "card": [
+   "A parallelogram has two pairs of parallel sides. Its base is one of its sides. Its perpendicular height is the straight distance from the base up to the opposite side, at a right angle to the base.",
+   "The slanted side is not the height. The height is always measured at a right angle to the base.",
+   "Cut a triangle off one end and slide it to the other end. The shape becomes a rectangle with the same base and the same height.",
+   "So the area of a parallelogram is base \\(\\times\\) perpendicular height. Example: base 9 cm and height 4 cm give \\(9 \\times 4 = 36\\) cm squared."
+  ],
+  "remember": "Area of a parallelogram is base times perpendicular height, never the slanted side.",
+  "a": {
+   "q": "Why does a parallelogram have the same area as a rectangle with its base and perpendicular height?",
+   "opts": [
+    "A cut-off triangle can be moved to make a rectangle",
+    "Its slanted sides are the same length as the height",
+    "Its area is half of the rectangle with the same sides",
+    "Its four angles can all be turned into right angles"
+   ],
+   "why": "Moving the triangle from one end to the other makes a rectangle without changing the area. The rectangle has the same base and the same perpendicular height. The slanted side is longer than the height, so it is not the same as the height.",
+   "clue": "Think about what happens when you cut and slide a triangle."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's garden bed is a parallelogram. Its base is 8 m, its slanted side is 5 m and its perpendicular height is 4 m. What is its area?",
+   "opts": [
+    "32 square metres",
+    "40 square metres",
+    "16 square metres",
+    "20 square metres"
+   ],
+   "why": "Area is base times perpendicular height, so \\(8 \\times 4 = 32\\). The tempting answer is 40, which uses the slanted side of 5 m instead of the perpendicular height.",
+   "clue": "Which of the given lengths is at a right angle to the base?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A parallelogram with its base and perpendicular height marked by a dashed line at a right angle to the base. A triangle at one end is shaded, with an arrow showing it moving to the other end to form a rectangle with the same base and height.",
+    "why": "It shows how cutting and moving a triangle turns a parallelogram into a rectangle."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A cut-off triangle can be moved to make a rectangle",
+   "also_right": []
+  },
+  "b": {
+   "best": "32 square metres",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about what happens when you cut and slide a triangle' points straight at the right option, so a student can pick it by matching words without understanding why the areas are equal."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'36 cm squared' is written in words rather than as \\(36\\ \\text{cm}^2\\). It could be read as (36 cm)² and does not match the 'square metres' used in question b."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct (a: the cut-and-slide triangle; b: 32 square metres). Question a's clue gives the answer away, and the card writes the unit as '36 cm squared' instead of cm²."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'Think about what happens when you cut and slide a triangle' points straight at the right option, so a student can pick it by matching words without understanding why the areas are equal.",
+  "Card, wording: '36 cm squared' is written in words rather than as \\(36\\ \\text{cm}^2\\). It could be read as (36 cm)² and does not match the 'square metres' used in question b."
+ ],
+ "proposal": {
+  "title": "Area of a parallelogram",
+  "card": [
+   "A parallelogram has two pairs of parallel sides. Its base is one of its sides. Its perpendicular height is the straight distance from the base to the opposite side, at a right angle to the base.",
+   "The slanted side is not the height. The height is always measured at a right angle to the base.",
+   "Cut a triangle off one end and slide it to the other end. The shape becomes a rectangle with the same base and the same height, and no area is lost or added.",
+   "So the area of a parallelogram is base \\(\\times\\) perpendicular height. Example: base 9 cm and height 4 cm give \\(9 \\times 4 = 36 \\text{ cm}^{2}\\)."
+  ],
+  "remember": "Area of a parallelogram is base times perpendicular height, not base times the slanted side.",
+  "a": {
+   "q": "Why does a parallelogram have the same area as a rectangle with its base and perpendicular height?",
+   "opts": [
+    "A cut-off triangle can be moved to make a rectangle",
+    "Its slanted sides are the same length as the height",
+    "Its area is half of the rectangle with the same sides",
+    "Its four angles can all be turned into right angles"
+   ],
+   "why": "Moving the triangle from one end to the other makes a rectangle without changing the area. That rectangle has the same base and the same perpendicular height. The slanted side is longer than the height, so it is not the same as the height.",
+   "clue": "Does moving part of a shape change how much space it covers?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's garden bed is a parallelogram. Its base is 8 m, its slanted side is 5 m and its perpendicular height is 4 m. What is its area?",
+   "opts": [
+    "\\(32 \\text{ m}^{2}\\)",
+    "\\(40 \\text{ m}^{2}\\)",
+    "\\(16 \\text{ m}^{2}\\)",
+    "\\(20 \\text{ m}^{2}\\)"
+   ],
+   "why": "Area is base times perpendicular height, so \\(8 \\times 4 = 32 \\text{ m}^{2}\\). The tempting answer is \\(40 \\text{ m}^{2}\\), which uses the slanted side of 5 m instead of the perpendicular height.",
+   "clue": "Which of the given lengths is at a right angle to the base?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A parallelogram with its base labelled and its perpendicular height marked by a dashed line at a right angle to the base. A triangle at one end is shaded, with an arrow showing it moving to the other end to form a rectangle with the same base and height.",
+    "why": "It shows how cutting and moving a triangle turns a parallelogram into a rectangle with the same area."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A cut-off triangle can be moved to make a rectangle",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(32 \\text{ m}^{2}\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about what happens when you cut and slide a triangle' points straight at the right option, so a student can pick it by matching words without understanding why the areas are equal."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'36 cm squared' is written in words rather than as \\(36\\ \\text{cm}^2\\). It could be read as (36 cm)² and does not match the 'square metres' used in question b."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue 'Think about what happens when you cut and slide a triangle' points straight at the right option, so a student can pick it by matching words without understanding why the areas are equal.",
+   "Card, wording: '36 cm squared' is written in words rather than as \\(36\\ \\text{cm}^2\\). It could be read as (36 cm)² and does not match the 'square metres' used in question b."
+  ]
+ },
+ "final": {
+  "title": "Area of a parallelogram",
+  "card": [
+   "A parallelogram has two pairs of parallel sides. Its base is one of its sides. Its perpendicular height is the straight distance from the base to the opposite side, at a right angle to the base.",
+   "The slanted side is not the height. The height is always measured at a right angle to the base.",
+   "Cut a triangle off one end and slide it to the other end. The shape becomes a rectangle with the same base and the same height, and no area is lost or added.",
+   "So the area of a parallelogram is base \\(\\times\\) perpendicular height. Example: base 9 cm and height 4 cm give \\(9 \\times 4 = 36 \\text{ cm}^{2}\\)."
+  ],
+  "remember": "Area of a parallelogram is base times perpendicular height, not base times the slanted side.",
+  "a": {
+   "q": "Why does a parallelogram have the same area as a rectangle with its base and perpendicular height?",
+   "opts": [
+    "A cut-off triangle can be moved to make a rectangle",
+    "Its slanted sides are the same length as the height",
+    "Its area is half of the rectangle with the same sides",
+    "Its four angles can all be turned into right angles"
+   ],
+   "why": "Moving the triangle from one end to the other makes a rectangle without changing the area. That rectangle has the same base and the same perpendicular height. The slanted side is longer than the height, so it is not the same as the height.",
+   "clue": "Does moving part of a shape change how much space it covers?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's garden bed is a parallelogram. Its base is 8 m, its slanted side is 5 m and its perpendicular height is 4 m. What is its area?",
+   "opts": [
+    "\\(32 \\text{ m}^{2}\\)",
+    "\\(40 \\text{ m}^{2}\\)",
+    "\\(16 \\text{ m}^{2}\\)",
+    "\\(20 \\text{ m}^{2}\\)"
+   ],
+   "why": "Area is base times perpendicular height, so \\(8 \\times 4 = 32 \\text{ m}^{2}\\). The tempting answer is \\(40 \\text{ m}^{2}\\), which uses the slanted side of 5 m instead of the perpendicular height.",
+   "clue": "Which of the given lengths is at a right angle to the base?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A parallelogram with its base labelled and its perpendicular height marked by a dashed line at a right angle to the base. A triangle at one end is shaded, with an arrow showing it moving to the other end to form a rectangle with the same base and height.",
+    "why": "It shows how cutting and moving a triangle turns a parallelogram into a rectangle with the same area."
+   }
+  ]
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,278 @@
+{
+ "id": "geo-protecting-landscapes",
+ "title": "Protecting landscapes",
+ "brief": "669974dc4197",
+ "shortlist": [
+  [
+   "geo-landscapes-landforms",
+   0.533
+  ],
+  [
+   "geo-first-nations-knowledge-managing",
+   0.333
+  ],
+  [
+   "geo-types-landscape",
+   0.282
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:48Z new, match",
+  "2026-11-12T12:44:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:00Z write: failed the content check, writing again",
+  "2026-11-12T15:35:06Z write: done",
+  "2026-11-12T15:59:42Z check: for review (first-nations)",
+  "2026-11-13T15:20:10Z review: rejected, to be written again",
+  "2026-11-13T15:37:11Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T15:44:54Z claude-code check: answered by a separate subagent",
+  "2026-11-13T15:44:54Z check: for review (first-nations)",
+  "2026-11-13T16:10:52Z review: approved as written"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.01396,
+  "check": 0.00924
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest card, on First Nations knowledge in managing landscapes, covers Traditional Owner joint management but not national parks, World Heritage listing or development rules, which are the main ideas of the new point, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Protecting landscapes",
+  "card": [
+   [
+    "National parks",
+    "A national park is an area of land set aside by government to protect its natural features, such as landforms, plants and animals. Rules limit what people can do there."
+   ],
+   [
+    "World Heritage listing",
+    "A place of great natural or cultural value can be listed as World Heritage. The listing is made through a United Nations body, and it brings international attention and expectations of care."
+   ],
+   [
+    "Rules on development",
+    "Laws and planning rules can limit or ban activities such as building, mining or clearing land in sensitive areas. Visitors may also be kept to marked tracks."
+   ],
+   [
+    "Traditional Owners",
+    "Traditional Owners have cared for Country for many thousands of years. In many parks they share in managing the land with government, using their knowledge and cultural responsibilities."
+   ]
+  ],
+  "remember": "Parks, listing and rules protect landforms, and Traditional Owners often help manage them.",
+  "a": {
+   "q": "Which action is an example of a rule on development protecting a landform?",
+   "opts": [
+    "Banning mining in a park with rock formations",
+    "Building a car park beside a gorge",
+    "Selling land near a cliff to a developer",
+    "Clearing bush to make room for a new road"
+   ],
+   "why": "A ban on mining limits an activity that could damage the landform, so it protects it. The other options change the land or allow it to be changed, so they do not protect it.",
+   "clue": "Which option limits something people could do to the land?"
+  },
+  "b": {
+   "d": 2,
+   "q": "A park in Victoria is jointly managed by a government agency and the local Traditional Owners. Why is this arrangement often used?",
+   "opts": [
+    "Traditional Owners bring knowledge and care for Country",
+    "Traditional Owners are paid to ban all visitors from parks",
+    "It stops the government from making any rules about the park",
+    "It means the park can no longer be called a national park"
+   ],
+   "why": "Traditional Owners have cared for Country for many thousands of years, so sharing management brings their knowledge and responsibilities into protecting the land. The other options claim things the card does not say, such as removing government rules or the park's status.",
+   "clue": "Think about who has cared for Country the longest."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-13T15:37:11Z",
+   "step": "write",
+   "version": {
+    "title": "Protecting landscapes",
+    "card": [
+     [
+      "National parks",
+      "areas set aside by government to protect natural features such as landforms, plants and animals. Rangers manage them, and rules limit what visitors may do."
+     ],
+     [
+      "World Heritage listing",
+      "a list kept by UNESCO, a United Nations body, of places with outstanding natural or cultural value. Australia has promised to protect its listed places, and its laws limit actions that could harm them."
+     ],
+     [
+      "Rules on development",
+      "laws and planning rules that limit or ban building, mining or clearing land in fragile or protected areas, or set conditions on how it is done."
+     ],
+     [
+      "Traditional Owners",
+      "Aboriginal and Torres Strait Islander people with cultural ties to an area's Country. In many parks they share decisions with government, as Anangu do at Uluru-Kata Tjuta National Park."
+     ]
+    ],
+    "remember": "Parks, World Heritage listing and rules on development protect landforms, often with Traditional Owners sharing management.",
+    "a": {
+     "q": "How does World Heritage listing help protect a landform in Australia?",
+     "opts": [
+      "Australian laws limit actions that could harm it",
+      "The United Nations sends rangers to run the site",
+      "It becomes a national park as soon as it is listed",
+      "It bans every visitor from going to the site"
+     ],
+     "why": "Australia has promised to protect its World Heritage places, and its laws limit actions that could harm them. UNESCO keeps the list, but it does not send rangers to run each place.",
+     "clue": "Think about who protects places inside this country."
+    },
+    "b": {
+     "d": 2,
+     "q": "The Victorian government and a group of Traditional Owners agree to jointly manage a national park with granite hills and gorges. What does joint management mean here?",
+     "opts": [
+      "They share decisions about how the park is cared for",
+      "The Traditional Owners now run the park on their own",
+      "The government decides and then tells them its plans",
+      "The park is no longer covered by protection rules"
+     ],
+     "why": "Joint management means both groups take part in decisions about caring for the park. The government making decisions and then telling the Traditional Owners would not be shared management.",
+     "clue": "Think about who has a say in what happens to the park."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T15:44:54Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Australian laws limit actions that could harm it",
+     "also_right": []
+    },
+    "b": {
+     "best": "They share decisions about how the park is cared for",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "first-nations",
+    "summary": "No problems found. The point names Traditional Owners and joint management at Uluru-Kata Tjuta, so it is marked first-nations for review."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Protecting landscapes",
+  "card": [
+   [
+    "National parks",
+    "areas set aside by government to protect natural features such as landforms, plants and animals. Rangers manage them, and rules limit what visitors may do."
+   ],
+   [
+    "World Heritage listing",
+    "a list kept by UNESCO, a United Nations body, of places with outstanding natural or cultural value. Australia has promised to protect its listed places, and its laws limit actions that could harm them."
+   ],
+   [
+    "Rules on development",
+    "laws and planning rules that limit or ban building, mining or clearing land in fragile or protected areas, or set conditions on how it is done."
+   ],
+   [
+    "Traditional Owners",
+    "Aboriginal and Torres Strait Islander people with cultural ties to an area's Country. In many parks they share decisions with government, as Anangu do at Uluru-Kata Tjuta National Park."
+   ]
+  ],
+  "remember": "Parks, World Heritage listing and rules on development protect landforms, often with Traditional Owners sharing management.",
+  "a": {
+   "q": "How does World Heritage listing help protect a landform in Australia?",
+   "opts": [
+    "Australian laws limit actions that could harm it",
+    "The United Nations sends rangers to run the site",
+    "It becomes a national park as soon as it is listed",
+    "It bans every visitor from going to the site"
+   ],
+   "why": "Australia has promised to protect its World Heritage places, and its laws limit actions that could harm them. UNESCO keeps the list, but it does not send rangers to run each place.",
+   "clue": "Think about who protects places inside this country."
+  },
+  "b": {
+   "d": 2,
+   "q": "The Victorian government and a group of Traditional Owners agree to jointly manage a national park with granite hills and gorges. What does joint management mean here?",
+   "opts": [
+    "They share decisions about how the park is cared for",
+    "The Traditional Owners now run the park on their own",
+    "The government decides and then tells them its plans",
+    "The park is no longer covered by protection rules"
+   ],
+   "why": "Joint management means both groups take part in decisions about caring for the park. The government making decisions and then telling the Traditional Owners would not be shared management.",
+   "clue": "Think about who has a say in what happens to the park."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Australian laws limit actions that could harm it",
+   "also_right": []
+  },
+  "b": {
+   "best": "They share decisions about how the park is cared for",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "first-nations",
+  "summary": "No problems found. The point names Traditional Owners and joint management at Uluru-Kata Tjuta, so it is marked first-nations for review."
+ },
+ "sensitive": "first-nations",
+ "flags": [],
+ "checked_by": "claude-code",
+ "final": {
+  "title": "Protecting landscapes",
+  "card": [
+   [
+    "National parks",
+    "areas set aside by government to protect natural features such as landforms, plants and animals. Rangers manage them, and rules limit what visitors may do."
+   ],
+   [
+    "World Heritage listing",
+    "a list kept by UNESCO, a United Nations body, of places with outstanding natural or cultural value. Australia has promised to protect its listed places, and its laws limit actions that could harm them."
+   ],
+   [
+    "Rules on development",
+    "laws and planning rules that limit or ban building, mining or clearing land in fragile or protected areas, or set conditions on how it is done."
+   ],
+   [
+    "Traditional Owners",
+    "Aboriginal and Torres Strait Islander people with cultural ties to an area's Country. In many parks they share decisions with government, as Anangu do at Uluru-Kata Tjuta National Park."
+   ]
+  ],
+  "remember": "Parks, World Heritage listing and rules on development protect landforms, often with Traditional Owners sharing management.",
+  "a": {
+   "q": "How does World Heritage listing help protect a landform in Australia?",
+   "opts": [
+    "Australian laws limit actions that could harm it",
+    "The United Nations sends rangers to run the site",
+    "It becomes a national park as soon as it is listed",
+    "It bans every visitor from going to the site"
+   ],
+   "why": "Australia has promised to protect its World Heritage places, and its laws limit actions that could harm them. UNESCO keeps the list, but it does not send rangers to run each place.",
+   "clue": "Think about who protects places inside this country."
+  },
+  "b": {
+   "d": 2,
+   "q": "The Victorian government and a group of Traditional Owners agree to jointly manage a national park with granite hills and gorges. What does joint management mean here?",
+   "opts": [
+    "They share decisions about how the park is cared for",
+    "The Traditional Owners now run the park on their own",
+    "The government decides and then tells them its plans",
+    "The park is no longer covered by protection rules"
+   ],
+   "why": "Joint management means both groups take part in decisions about caring for the park. The government making decisions and then telling the Traditional Owners would not be shared management.",
+   "clue": "Think about who has a say in what happens to the park."
+  }
+ },
+ "cleared_by": "owner"
+}

@@ -1,0 +1,310 @@
+{
+ "id": "eng-editing-impact",
+ "title": "Editing for impact",
+ "brief": "d979cec7562a",
+ "shortlist": [
+  [
+   "eng-planning-drafting-editing",
+   0.431
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:46Z new, match",
+  "2026-11-12T12:44:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:37Z write: failed the content check, writing again",
+  "2026-11-12T15:25:57Z write: done",
+  "2026-11-12T15:35:04Z check: flagged",
+  "2026-11-12T15:42:22Z fix: suggested",
+  "2026-11-13T15:17:11Z review: rejected, to be written again",
+  "2026-11-13T15:37:10Z claude-code write: failed the content check, to be written once more",
+  "2026-11-13T15:37:52Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T15:44:54Z claude-code check: answered by a separate subagent",
+  "2026-11-13T15:44:54Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 7e-05,
+  "write": 0.01837,
+  "check": 0.01039,
+  "fix": 0.01973
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the general planning-drafting-editing process at a broad level, while the new point teaches specific editing techniques (removing repetition, reordering for flow, swapping weak words for precise ones) for impact, so it is a different and narrower idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Editing for impact",
+  "card": [
+   "Editing is improving a draft after you have written it. Good editing gives the writing more effect on the reader.",
+   [
+    "Remove repetition",
+    "Cut words or ideas that say the same thing twice. \"The loud, noisy crowd\" says loud twice, so \"the noisy crowd\" is tighter."
+   ],
+   [
+    "Reorder for flow",
+    "Move sentences so each one leads smoothly to the next. Ideas on the same topic should sit together."
+   ],
+   [
+    "Precise words",
+    "Swap weak, vague words for exact ones. \"Went quickly\" can become \"sprinted\", and \"a nice day\" can become \"a warm, bright day\"."
+   ]
+  ],
+  "remember": "Edit by cutting repeats, ordering for flow and choosing exact words.",
+  "a": {
+   "q": "Which edit swaps a weak word for a more precise one in \"The dog went across the yard\"?",
+   "opts": [
+    "The dog bounded across the yard",
+    "The dog went across the big yard",
+    "The dog went across the yard again",
+    "The dog, a dog, went across the yard"
+   ],
+   "why": "\"Bounded\" is an exact verb that shows how the dog moved, where \"went\" is vague. Adding \"big\" gives a detail about the yard but does not replace the weak word \"went\".",
+   "clue": "Look for the option that replaces the vague verb."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leila's draft about a hot soup has four sentences. The last one says again that the soup burned her tongue, which the second sentence already said. Which edit removes repetition?",
+   "opts": [
+    "Cut the last sentence, which repeats the second",
+    "Swap hot for warm in the first sentence",
+    "Move the salt sentence to the very start",
+    "Change burned to hurt in the second sentence"
+   ],
+   "why": "The last sentence says again what the second already said, so cutting it removes repetition. Moving a sentence changes order, and swapping a word changes word choice, so those are different edits.",
+   "clue": "Which sentence says what has already been said?"
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-13T15:37:10Z",
+   "step": "write",
+   "version": {
+    "title": "Editing for impact",
+    "card": [
+     "Editing means rereading a draft and changing it so it has more effect on the reader. Three common edits are below.",
+     [
+      "Cut repetition",
+      "remove words or sentences that say the same thing again. \"It was a cold, freezing night\" becomes \"It was a freezing night\"."
+     ],
+     [
+      "Reorder for flow",
+      "move sentences so each one leads to the next. In a recount, events usually read best in the order they happened."
+     ],
+     [
+      "Precise words",
+      "swap a vague word for an exact one. \"The boy said quietly\" can become \"The boy whispered\", and \"a big wave\" can become \"a towering wave\"."
+     ]
+    ],
+    "remember": "Cut what repeats, put ideas in order, and pick the exact word.",
+    "a": {
+     "q": "Josh changes \"The car went down the street\" to \"The car roared down the street\". Which kind of edit is this?",
+     "opts": [
+      "Swapping a vague word for a precise one",
+      "Cutting a word that repeats an idea",
+      "Moving a sentence so ideas flow better",
+      "Adding a detail that describes the street"
+     ],
+     "why": "Went is vague, and roared shows exactly how the car moved and sounded. Nothing in the first sentence was said twice, so no repetition was cut.",
+     "clue": "Compare the verb before and after the change."
+    },
+    "b": {
+     "d": 3,
+     "q": "Ella's draft reads: \"Then we set up the tent by the lake. We packed the car early on Saturday. At night we cooked dinner on the fire.\" Which edit would most improve its flow?",
+     "opts": [
+      "Move the packing sentence to the start",
+      "Cut the sentence about cooking dinner",
+      "Change set up to a more precise verb",
+      "Join all three into one long sentence"
+     ],
+     "why": "Packing the car happened first, so moving that sentence to the start puts the events in order and each one leads to the next. A more precise verb changes word choice, but the events would still be out of order.",
+     "clue": "Which event happened first?"
+    }
+   },
+   "problems": [
+    "eng-editing-impact quotes more than 10 words: \"Then we set up the tent by the lake. We packed the car early on Saturday. At night we cooked dinner on the fire.\""
+   ]
+  },
+  {
+   "at": "2026-11-13T15:37:52Z",
+   "step": "write",
+   "version": {
+    "title": "Editing for impact",
+    "card": [
+     "Editing means rereading a draft and changing it so it has more effect on the reader. Three common edits are below.",
+     [
+      "Cut repetition",
+      "remove words or sentences that say the same thing again. \"It was a cold, freezing night\" becomes \"It was a freezing night\"."
+     ],
+     [
+      "Reorder for flow",
+      "move sentences so each one leads to the next. In a recount, events usually read best in the order they happened."
+     ],
+     [
+      "Precise words",
+      "swap a vague word for an exact one. \"The boy said quietly\" can become \"The boy whispered\", and \"a big wave\" can become \"a towering wave\"."
+     ]
+    ],
+    "remember": "Cut what repeats, put ideas in order, and pick the exact word.",
+    "a": {
+     "q": "Josh changes \"The car went down the street\" to \"The car roared down the street\". Which kind of edit is this?",
+     "opts": [
+      "Swapping a vague word for a precise one",
+      "Cutting a word that repeats an idea",
+      "Moving a sentence so ideas flow better",
+      "Adding a detail that describes the street"
+     ],
+     "why": "Went is vague, and roared shows exactly how the car moved and sounded. Nothing in the first sentence was said twice, so no repetition was cut.",
+     "clue": "Compare the verb before and after the change."
+    },
+    "b": {
+     "d": 3,
+     "q": "Ella's camping recount has three sentences. In order, they tell how she set up the tent, cooked dinner that night, then packed the car before leaving home. Which edit would most improve its flow?",
+     "opts": [
+      "Move the packing sentence to the start",
+      "Cut the sentence about cooking dinner",
+      "Change set up to a more precise verb",
+      "Join all three into one long sentence"
+     ],
+     "why": "Packing the car happened first, so moving that sentence to the start puts the events in order and each one leads to the next. A more precise verb changes word choice, but the events would still be out of order.",
+     "clue": "Which event happened first?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T15:44:54Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Swapping a vague word for a precise one",
+     "also_right": []
+    },
+    "b": {
+     "best": "Move the packing sentence to the start",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Editing for impact",
+  "card": [
+   "Editing means rereading a draft and changing it so it has more effect on the reader. Three common edits are below.",
+   [
+    "Cut repetition",
+    "remove words or sentences that say the same thing again. \"It was a cold, freezing night\" becomes \"It was a freezing night\"."
+   ],
+   [
+    "Reorder for flow",
+    "move sentences so each one leads to the next. In a recount, events usually read best in the order they happened."
+   ],
+   [
+    "Precise words",
+    "swap a vague word for an exact one. \"The boy said quietly\" can become \"The boy whispered\", and \"a big wave\" can become \"a towering wave\"."
+   ]
+  ],
+  "remember": "Cut what repeats, put ideas in order, and pick the exact word.",
+  "a": {
+   "q": "Josh changes \"The car went down the street\" to \"The car roared down the street\". Which kind of edit is this?",
+   "opts": [
+    "Swapping a vague word for a precise one",
+    "Cutting a word that repeats an idea",
+    "Moving a sentence so ideas flow better",
+    "Adding a detail that describes the street"
+   ],
+   "why": "Went is vague, and roared shows exactly how the car moved and sounded. Nothing in the first sentence was said twice, so no repetition was cut.",
+   "clue": "Compare the verb before and after the change."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ella's camping recount has three sentences. In order, they tell how she set up the tent, cooked dinner that night, then packed the car before leaving home. Which edit would most improve its flow?",
+   "opts": [
+    "Move the packing sentence to the start",
+    "Cut the sentence about cooking dinner",
+    "Change set up to a more precise verb",
+    "Join all three into one long sentence"
+   ],
+   "why": "Packing the car happened first, so moving that sentence to the start puts the events in order and each one leads to the next. A more precise verb changes word choice, but the events would still be out of order.",
+   "clue": "Which event happened first?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Swapping a vague word for a precise one",
+   "also_right": []
+  },
+  "b": {
+   "best": "Move the packing sentence to the start",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Editing for impact",
+  "card": [
+   "Editing means rereading a draft and changing it so it has more effect on the reader. Three common edits are below.",
+   [
+    "Cut repetition",
+    "remove words or sentences that say the same thing again. \"It was a cold, freezing night\" becomes \"It was a freezing night\"."
+   ],
+   [
+    "Reorder for flow",
+    "move sentences so each one leads to the next. In a recount, events usually read best in the order they happened."
+   ],
+   [
+    "Precise words",
+    "swap a vague word for an exact one. \"The boy said quietly\" can become \"The boy whispered\", and \"a big wave\" can become \"a towering wave\"."
+   ]
+  ],
+  "remember": "Cut what repeats, put ideas in order, and pick the exact word.",
+  "a": {
+   "q": "Josh changes \"The car went down the street\" to \"The car roared down the street\". Which kind of edit is this?",
+   "opts": [
+    "Swapping a vague word for a precise one",
+    "Cutting a word that repeats an idea",
+    "Moving a sentence so ideas flow better",
+    "Adding a detail that describes the street"
+   ],
+   "why": "Went is vague, and roared shows exactly how the car moved and sounded. Nothing in the first sentence was said twice, so no repetition was cut.",
+   "clue": "Compare the verb before and after the change."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ella's camping recount has three sentences. In order, they tell how she set up the tent, cooked dinner that night, then packed the car before leaving home. Which edit would most improve its flow?",
+   "opts": [
+    "Move the packing sentence to the start",
+    "Cut the sentence about cooking dinner",
+    "Change set up to a more precise verb",
+    "Join all three into one long sentence"
+   ],
+   "why": "Packing the car happened first, so moving that sentence to the start puts the events in order and each one leads to the next. A more precise verb changes word choice, but the events would still be out of order.",
+   "clue": "Which event happened first?"
+  }
+ },
+ "cleared_by": "checker",
+ "checked_by": "claude-code"
+}

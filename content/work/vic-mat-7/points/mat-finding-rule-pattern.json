@@ -1,0 +1,236 @@
+{
+ "id": "mat-finding-rule-pattern",
+ "title": "Finding the rule for a pattern",
+ "brief": "d1d127f96d77",
+ "shortlist": [
+  [
+   "mat-tables-values-from-rule",
+   0.287
+  ],
+  [
+   "mat-patterns-rules",
+   0.223
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T12:53:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T14:38:08Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:06:00Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:15:50Z write: failed the content check, writing again",
+  "2026-11-12T15:26:05Z write: done",
+  "2026-11-12T15:35:10Z check: flagged",
+  "2026-11-12T15:42:25Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.01436,
+  "check": 0.01079,
+  "fix": 0.01931,
+  "recheck": 0.00679
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Patterns and rules, only covers patterns that are a simple multiple of the step number, while this point needs the rule for a growing pattern that also has an added or subtracted constant, such as the matchstick squares, which is a new step.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Finding the rule for a pattern",
+  "card": [
+   "A growing pattern adds the same amount each step. Find that amount by subtracting one term from the next. This is the common difference.",
+   "The rule for the nth term starts with the common difference times \\(n\\). For a difference of 4, start with \\(4n\\).",
+   "Then adjust. Compare \\(4n\\) with the actual term. Add or subtract the number that makes them match. This is the constant.",
+   [
+    "Example",
+    "Matchsticks for 1, 2, 3 squares in a row: 4, 7, 10. The difference is 3, so start with \\(3n\\). For \\(n = 1\\), \\(3n = 3\\), but the term is 4, so add 1. The rule is \\(3n + 1\\)."
+   ]
+  ],
+  "remember": "Rule: common difference times \\(n\\), then add or subtract the number that fixes the first term.",
+  "a": {
+   "q": "A pattern has terms 5, 9, 13, 17. What is the common difference?",
+   "opts": [
+    "4",
+    "5",
+    "3",
+    "17"
+   ],
+   "why": "Each term is 4 more than the one before, because \\(9 - 5 = 4\\). The first term, 5, is tempting, but it is where the pattern starts, not how much it grows.",
+   "clue": "Subtract one term from the next one."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tiles in a pattern follow 5, 8, 11, 14 for steps 1, 2, 3, 4. What is the rule for the nth term?",
+   "opts": [
+    "\\(3n + 2\\)",
+    "\\(3n + 5\\)",
+    "\\(2n + 3\\)",
+    "\\(5n + 3\\)"
+   ],
+   "why": "The difference is 3, so start with \\(3n\\). At \\(n = 1\\), \\(3n = 3\\) but the term is 5, so add 2. The rule \\(3n + 5\\) is tempting, but it gives 8 for the first term.",
+   "clue": "Check your rule by putting \\(n = 1\\) into it."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "4",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(3n + 2\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says 'A growing pattern adds the same amount each step', which states it as true of all growing patterns. Many growing patterns do not grow by a fixed amount, such as square numbers 1, 4, 9, 16. Say 'Some growing patterns add the same amount each step' or 'In these patterns…'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers check out: a is 4 and b is 3n + 2, and the explanations agree. One small problem: the card's first line suggests every growing pattern adds the same amount each step, which is not true (for example, square numbers)."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says 'A growing pattern adds the same amount each step', which states it as true of all growing patterns. Many growing patterns do not grow by a fixed amount, such as square numbers 1, 4, 9, 16. Say 'Some growing patterns add the same amount each step' or 'In these patterns…'."
+ ],
+ "proposal": {
+  "title": "Finding the rule for a pattern",
+  "card": [
+   "Some growing patterns add the same amount each step. Subtract one term from the next to find that amount. This is the common difference.",
+   "The nth term is the term at step \\(n\\). Its rule starts with the common difference times \\(n\\). For a difference of 4, start with \\(4n\\).",
+   "Then adjust. Compare \\(4n\\) with the actual term. Add or subtract the number that makes them match. This is the constant.",
+   "For example, matchsticks for 1, 2, 3 squares in a row: 4, 7, 10. The difference is 3, so start with \\(3n\\). For \\(n = 1\\), \\(3n = 3\\), but the term is 4, so add 1. The rule is \\(3n + 1\\)."
+  ],
+  "remember": "Rule: common difference times \\(n\\), then add or subtract the number that fixes the first term.",
+  "a": {
+   "q": "A pattern has terms 5, 9, 13, 17. What is the common difference?",
+   "opts": [
+    "4",
+    "5",
+    "3",
+    "17"
+   ],
+   "why": "Each term is 4 more than the one before, because \\(9 - 5 = 4\\). The first term, 5, is tempting, but it is where the pattern starts, not how much it grows.",
+   "clue": "Subtract one term from the next one."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tiles in a pattern follow 5, 8, 11, 14 for steps 1, 2, 3, 4. What is the rule for the nth term?",
+   "opts": [
+    "\\(3n + 2\\)",
+    "\\(3n + 5\\)",
+    "\\(2n + 3\\)",
+    "\\(5n + 3\\)"
+   ],
+   "why": "The difference is 3, so start with \\(3n\\). At \\(n = 1\\), \\(3n = 3\\) but the term is 5, so add 2. The rule \\(3n + 5\\) is tempting, but it gives 8 for the first term.",
+   "clue": "Check your rule by putting \\(n = 1\\) into it."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "Three matchstick drawings side by side: 1 square, 2 squares in a row and 3 squares in a row, each square made of matchsticks with shared sides between squares in a row. Under each drawing, the step number and the matchstick count: step 1, 4 matchsticks; step 2, 7 matchsticks; step 3, 10 matchsticks.",
+    "why": "Seeing that each new square adds 3 matchsticks shows where the common difference comes from."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "4",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(3n + 2\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says 'A growing pattern adds the same amount each step', which states it as true of all growing patterns. Many growing patterns do not grow by a fixed amount, such as square numbers 1, 4, 9, 16. Say 'Some growing patterns add the same amount each step' or 'In these patterns…'."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card says 'A growing pattern adds the same amount each step', which states it as true of all growing patterns. Many growing patterns do not grow by a fixed amount, such as square numbers 1, 4, 9, 16. Say 'Some growing patterns add the same amount each step' or 'In these patterns…'."
+  ]
+ },
+ "final": {
+  "title": "Finding the rule for a pattern",
+  "card": [
+   "Some growing patterns add the same amount each step. Subtract one term from the next to find that amount. This is the common difference.",
+   "The nth term is the term at step \\(n\\). Its rule starts with the common difference times \\(n\\). For a difference of 4, start with \\(4n\\).",
+   "Then adjust. Compare \\(4n\\) with the actual term. Add or subtract the number that makes them match. This is the constant.",
+   "For example, matchsticks for 1, 2, 3 squares in a row: 4, 7, 10. The difference is 3, so start with \\(3n\\). For \\(n = 1\\), \\(3n = 3\\), but the term is 4, so add 1. The rule is \\(3n + 1\\)."
+  ],
+  "remember": "Rule: common difference times \\(n\\), then add or subtract the number that fixes the first term.",
+  "a": {
+   "q": "A pattern has terms 5, 9, 13, 17. What is the common difference?",
+   "opts": [
+    "4",
+    "5",
+    "3",
+    "17"
+   ],
+   "why": "Each term is 4 more than the one before, because \\(9 - 5 = 4\\). The first term, 5, is tempting, but it is where the pattern starts, not how much it grows.",
+   "clue": "Subtract one term from the next one."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tiles in a pattern follow 5, 8, 11, 14 for steps 1, 2, 3, 4. What is the rule for the nth term?",
+   "opts": [
+    "\\(3n + 2\\)",
+    "\\(3n + 5\\)",
+    "\\(2n + 3\\)",
+    "\\(5n + 3\\)"
+   ],
+   "why": "The difference is 3, so start with \\(3n\\). At \\(n = 1\\), \\(3n = 3\\) but the term is 5, so add 2. The rule \\(3n + 5\\) is tempting, but it gives 8 for the first term.",
+   "clue": "Check your rule by putting \\(n = 1\\) into it."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "Three matchstick drawings side by side: 1 square, 2 squares in a row and 3 squares in a row, each square made of matchsticks with shared sides between squares in a row. Under each drawing, the step number and the matchstick count: step 1, 4 matchsticks; step 2, 7 matchsticks; step 3, 10 matchsticks.",
+    "why": "Seeing that each new square adds 3 matchsticks shows where the common difference comes from."
+   }
+  ]
+ },
+ "cleared_by": "recheck"
+}

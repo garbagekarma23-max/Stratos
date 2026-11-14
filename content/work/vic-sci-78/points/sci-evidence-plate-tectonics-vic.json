@@ -1,0 +1,299 @@
+{
+ "id": "sci-evidence-plate-tectonics-vic",
+ "title": "Evidence for plate tectonics",
+ "brief": "73ec6297a007",
+ "shortlist": [
+  [
+   "sci-evidence-plate-tectonics",
+   0.637
+  ],
+  [
+   "sci-moves-plates",
+   0.422
+  ],
+  [
+   "geo-plate-tectonics-mountain-building",
+   0.295
+  ],
+  [
+   "sci-divergent-convergent-transform-boundaries",
+   0.269
+  ],
+  [
+   "sci-earthquakes-volcanoes",
+   0.253
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:55Z new, match",
+  "2026-11-12T12:44:22Z match: Claude Haiku 5.5 says reuse sci-evidence-plate-tectonics, so to the Opus match check, as every reuse is",
+  "2026-11-12T15:15:52Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:26:06Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:35:11Z write: done",
+  "2026-11-12T15:42:25Z check: flagged",
+  "2026-11-12T15:45:43Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00036,
+  "confirm": 0.01243,
+  "write": 0.00728,
+  "check": 0.01384,
+  "fix": 0.02111,
+  "recheck": 0.01157
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "sci-evidence-plate-tectonics",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the same evidence for plate tectonics (matching coastlines, matching fossils across oceans, and sea-floor ridge and magnetic evidence) at a suitable Year 8 depth, and its questions are fair for this course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card shares the coastline and fossil evidence, but it never mentions continental drift or how this evidence led scientists to replace it with plate tectonics, which is the core of this brief. It also uses magnetic stripes where the brief asks for the young age of rock at mid-ocean ridges, so adding these would be new steps, not small changes.",
+  "model": "claude-opus-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Evidence for plate tectonics",
+  "card": [
+   "Long ago, Alfred Wegener suggested that the continents were once joined and have drifted apart. This was called continental drift. He could not explain what moved them, so many scientists doubted it.",
+   [
+    "Matching coastlines",
+    "the edges of some continents fit together like jigsaw pieces, such as the east coast of South America and the west coast of Africa."
+   ],
+   [
+    "Fossils",
+    "the same fossils of land animals and plants are found in rocks on continents now far apart, divided by oceans they could not have crossed."
+   ],
+   [
+    "Ocean floor rock",
+    "rock beside a mid-ocean ridge is young, and it gets older with distance from the ridge. This shows new crust forming at the ridge and spreading outwards."
+   ]
+  ],
+  "remember": "Matching coastlines, shared fossils and young rock at ridges all fit moving plates. New evidence led scientists to replace continental drift with plate tectonics.",
+  "a": {
+   "q": "Fossils of the same land plant are found in South America and Africa. Which idea does this best support?",
+   "opts": [
+    "The continents were once joined",
+    "The two continents have always been apart",
+    "The plant seeds floated across the ocean",
+    "The plant grew in the same climate by chance"
+   ],
+   "why": "A land plant could not easily cross a wide ocean, so the best explanation is that the continents were once joined. Floating seeds is tempting, but it would not explain fossils of land animals as well.",
+   "clue": "Think about whether a land plant could cross an ocean."
+  },
+  "b": {
+   "d": 3,
+   "q": "Scientists drill into the sea floor either side of a mid-ocean ridge. They find the youngest rock at the ridge and older rock further away on both sides. What does this show?",
+   "opts": [
+    "New crust forms at the ridge and spreads outwards",
+    "Old crust is made at the ridge and sinks away",
+    "The sea floor is the same age everywhere",
+    "The ridge is the oldest part of the ocean floor"
+   ],
+   "why": "Young rock at the ridge that gets older with distance shows new crust forming there and moving away. The option about old crust reverses cause and effect, because the youngest rock is at the ridge.",
+   "clue": "Where is the youngest rock, and how does age change with distance?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A map of South America and Africa placed side by side so their coastlines fit together, with matching fossil areas shaded on both continents and labelled Fossils.",
+    "why": "It lets students see how the coastlines and fossil finds line up."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The continents were once joined",
+   "also_right": []
+  },
+  "b": {
+   "best": "New crust forms at the ridge and spreads outwards",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why dismisses floating seeds because they 'would not explain fossils of land animals', but the question is only about a land plant. It should instead say that a land plant's seeds could not cross a wide ocean."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says the 'old crust' option 'reverses cause and effect'. That option actually gets the age of the rock and where crust is made the wrong way round, so 'cause and effect' could confuse students."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate. Why (a) argues from land animals when the question is about a plant, and why (b) wrongly calls the distractor a reversal of 'cause and effect'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The why dismisses floating seeds because they 'would not explain fossils of land animals', but the question is only about a land plant. It should instead say that a land plant's seeds could not cross a wide ocean.",
+  "Question b, wording: The why says the 'old crust' option 'reverses cause and effect'. That option actually gets the age of the rock and where crust is made the wrong way round, so 'cause and effect' could confuse students."
+ ],
+ "proposal": {
+  "title": "Evidence for plate tectonics",
+  "card": [
+   "Long ago, Alfred Wegener suggested that the continents were once joined and have drifted apart. This was called continental drift. He could not explain what moved them, so many scientists doubted it.",
+   [
+    "Matching coastlines",
+    "the edges of some continents fit together like jigsaw pieces, such as the east coast of South America and the west coast of Africa."
+   ],
+   [
+    "Fossils",
+    "the same fossils of land animals and plants are found in rocks on continents now far apart, divided by oceans they could not have crossed."
+   ],
+   [
+    "Ocean floor rock",
+    "rock beside a mid-ocean ridge is young and gets older with distance from the ridge, so new crust forms there and spreads out. This evidence led scientists to replace continental drift with plate tectonics."
+   ]
+  ],
+  "remember": "Matching coastlines, shared fossils and young rock at ridges all fit moving plates, so plate tectonics replaced continental drift.",
+  "a": {
+   "q": "Fossils of the same land plant are found in South America and Africa. Which idea does this best support?",
+   "opts": [
+    "The continents were once joined",
+    "The two continents have always been apart",
+    "The plant seeds floated across the ocean",
+    "The plant grew in the same climate by chance"
+   ],
+   "why": "A land plant could not spread across a wide ocean, so the best explanation is that the continents were once joined. Floating seeds is tempting, but a land plant's seeds could not survive a crossing of an ocean that wide.",
+   "clue": "Think about whether a land plant could cross an ocean."
+  },
+  "b": {
+   "d": 3,
+   "q": "Scientists drill into the sea floor either side of a mid-ocean ridge. They find the youngest rock at the ridge and older rock further away on both sides. What does this show?",
+   "opts": [
+    "New crust forms at the ridge and spreads outwards",
+    "Old crust is made at the ridge and sinks away",
+    "The sea floor is the same age everywhere",
+    "The ridge is the oldest part of the ocean floor"
+   ],
+   "why": "Young rock at the ridge that gets older with distance shows new crust forming there and moving away. The option about old crust gets things the wrong way round: the rock at the ridge is the youngest, and crust is made there and spreads out, not sinking away.",
+   "clue": "Where is the youngest rock, and how does age change with distance?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A map of South America and Africa placed side by side so their coastlines fit together, with matching fossil areas shaded on both continents and labelled Fossils.",
+    "why": "It lets students see how the coastlines and fossil finds line up."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The continents were once joined",
+    "also_right": []
+   },
+   "b": {
+    "best": "New crust forms at the ridge and spreads outwards",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 13,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why dismisses floating seeds because they 'would not explain fossils of land animals', but the question is only about a land plant. It should instead say that a land plant's seeds could not cross a wide ocean."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says the 'old crust' option 'reverses cause and effect'. That option actually gets the age of the rock and where crust is made the wrong way round, so 'cause and effect' could confuse students."
+   }
+  ],
+  "flags": [
+   "Question a, other: The why dismisses floating seeds because they 'would not explain fossils of land animals', but the question is only about a land plant. It should instead say that a land plant's seeds could not cross a wide ocean.",
+   "Question b, wording: The why says the 'old crust' option 'reverses cause and effect'. That option actually gets the age of the rock and where crust is made the wrong way round, so 'cause and effect' could confuse students."
+  ]
+ },
+ "final": {
+  "title": "Evidence for plate tectonics",
+  "card": [
+   "Long ago, Alfred Wegener suggested that the continents were once joined and have drifted apart. This was called continental drift. He could not explain what moved them, so many scientists doubted it.",
+   [
+    "Matching coastlines",
+    "the edges of some continents fit together like jigsaw pieces, such as the east coast of South America and the west coast of Africa."
+   ],
+   [
+    "Fossils",
+    "the same fossils of land animals and plants are found in rocks on continents now far apart, divided by oceans they could not have crossed."
+   ],
+   [
+    "Ocean floor rock",
+    "rock beside a mid-ocean ridge is young and gets older with distance from the ridge, so new crust forms there and spreads out. This evidence led scientists to replace continental drift with plate tectonics."
+   ]
+  ],
+  "remember": "Matching coastlines, shared fossils and young rock at ridges all fit moving plates, so plate tectonics replaced continental drift.",
+  "a": {
+   "q": "Fossils of the same land plant are found in South America and Africa. Which idea does this best support?",
+   "opts": [
+    "The continents were once joined",
+    "The two continents have always been apart",
+    "The plant seeds floated across the ocean",
+    "The plant grew in the same climate by chance"
+   ],
+   "why": "A land plant could not spread across a wide ocean, so the best explanation is that the continents were once joined. Floating seeds is tempting, but a land plant's seeds could not survive a crossing of an ocean that wide.",
+   "clue": "Think about whether a land plant could cross an ocean."
+  },
+  "b": {
+   "d": 3,
+   "q": "Scientists drill into the sea floor either side of a mid-ocean ridge. They find the youngest rock at the ridge and older rock further away on both sides. What does this show?",
+   "opts": [
+    "New crust forms at the ridge and spreads outwards",
+    "Old crust is made at the ridge and sinks away",
+    "The sea floor is the same age everywhere",
+    "The ridge is the oldest part of the ocean floor"
+   ],
+   "why": "Young rock at the ridge that gets older with distance shows new crust forming there and moving away. The option about old crust gets things the wrong way round: the rock at the ridge is the youngest, and crust is made there and spreads out, not sinking away.",
+   "clue": "Where is the youngest rock, and how does age change with distance?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A map of South America and Africa placed side by side so their coastlines fit together, with matching fossil areas shaded on both continents and labelled Fossils.",
+    "why": "It lets students see how the coastlines and fossil finds line up."
+   }
+  ]
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,225 @@
+{
+ "id": "mat-index-laws-algebraic-products",
+ "title": "Index laws for algebraic products and quotients",
+ "brief": "0486a3b9b1f8",
+ "shortlist": [
+  [
+   "mat-index-laws-with-variables",
+   0.211
+  ],
+  [
+   "mat-proofs-about-numbers",
+   0.205
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 may adapt mat-index-laws-with-variables, but is not highly sure, so to the Opus match check",
+  "2026-11-12T15:15:47Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:26:04Z write: done",
+  "2026-11-12T15:35:09Z check: flagged",
+  "2026-11-12T15:42:24Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "confirm": 0.00666,
+  "write": 0.02133,
+  "check": 0.01006,
+  "fix": 0.01766,
+  "recheck": 0.0074
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-index-laws-with-variables",
+  "changes": [
+   "The card covers division and power of a power as well, which the Year 10 brief does not need, but the multiplication and division rules shown are the same idea at a suitable depth.",
+   "The card's worked examples use only positive powers with numbers in front; the Year 10 brief's example (4a³b)(2ab²) involves several variables multiplied together, so an example with multiple variables should be added."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same index laws for products and quotients at a similar depth, but its examples use a single variable and it would need a multi-variable example to match the Year 10 brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point teaches index laws for a single variable and also covers power of a power, which one of its questions tests, while the new point is narrower and centres on handling several variables in turn in products and quotients, so it would need a different focus rather than small changes.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Index laws for algebraic products and quotients",
+  "card": [
+   "To multiply terms, multiply the numbers, then add the powers of each variable. A variable with no power written has power 1.",
+   "To divide terms, divide the numbers, then subtract the powers of each variable.",
+   "Worked example: \\((4a^{3}b)(2ab^{2})\\). Numbers: \\(4 \\times 2 = 8\\). Powers of \\(a\\): \\(3 + 1 = 4\\). Powers of \\(b\\): \\(1 + 2 = 3\\). The answer is \\(8a^{4}b^{3}\\).",
+   "Worked example: \\(12x^{5} \\div 3x^{2}\\). Numbers: \\(12 \\div 3 = 4\\). Powers of \\(x\\): \\(5 - 2 = 3\\). The answer is \\(4x^{3}\\)."
+  ],
+  "remember": "Numbers are multiplied or divided as usual. Powers of the same variable are added to multiply and subtracted to divide.",
+  "a": {
+   "q": "Simplify \\((3m^{2}n)(5m^{4}n^{3})\\).",
+   "opts": [
+    "\\(15m^{6}n^{4}\\)",
+    "\\(15m^{8}n^{3}\\)",
+    "\\(8m^{6}n^{4}\\)",
+    "\\(15m^{6}n^{3}\\)"
+   ],
+   "why": "Multiply the numbers: \\(3 \\times 5 = 15\\). Add the powers of \\(m\\): \\(2 + 4 = 6\\). Add the powers of \\(n\\): \\(1 + 3 = 4\\). Multiplying the powers instead, as in \\(m^{8}\\), is a tempting mistake.",
+   "clue": "Add powers when you multiply. Remember \\(n\\) has power 1."
+  },
+  "b": {
+   "d": 3,
+   "q": "Simplify \\(20p^{7}q^{2} \\div 4p^{3}q\\).",
+   "opts": [
+    "\\(5p^{4}q\\)",
+    "\\(5p^{10}q^{3}\\)",
+    "\\(16p^{4}q\\)",
+    "\\(5p^{4}q^{2}\\)"
+   ],
+   "why": "Divide the numbers: \\(20 \\div 4 = 5\\). Subtract the powers of \\(p\\): \\(7 - 3 = 4\\). Subtract the powers of \\(q\\): \\(2 - 1 = 1\\), so \\(q\\) stays. Leaving the power of \\(q\\) as 2, as if \\(q\\) had no power in the divisor, is the tempting mistake.",
+   "clue": "A variable with no power written has power 1."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(15m^{6}n^{4}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(5p^{4}q\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says the mistake treats q 'as if q had no power in the divisor'. The card says a variable with no power written has power 1, so this phrasing is confusing. The mistake is really ignoring q in the divisor, treating its power as 0. Reword, e.g. 'as if there were no q in the divisor'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct and the card is accurate. The only problem is that why (b) describes the mistake as treating q 'as if it had no power', which clashes with the card's rule that no power written means power 1."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The why says the mistake treats q 'as if q had no power in the divisor'. The card says a variable with no power written has power 1, so this phrasing is confusing. The mistake is really ignoring q in the divisor, treating its power as 0. Reword, e.g. 'as if there were no q in the divisor'."
+ ],
+ "proposal": {
+  "title": "Index laws for algebraic products and quotients",
+  "card": [
+   "To multiply terms, multiply the numbers, then add the powers of each variable. A variable with no power written has power 1.",
+   "To divide terms, divide the numbers, then subtract the powers of each variable.",
+   "Worked example: \\((4a^{3}b)(2ab^{2})\\). Numbers: \\(4 \\times 2 = 8\\). Powers of \\(a\\): \\(3 + 1 = 4\\). Powers of \\(b\\): \\(1 + 2 = 3\\). The answer is \\(8a^{4}b^{3}\\).",
+   "Worked example: \\(12x^{5} \\div 3x^{2}\\). Numbers: \\(12 \\div 3 = 4\\). Powers of \\(x\\): \\(5 - 2 = 3\\). The answer is \\(4x^{3}\\)."
+  ],
+  "remember": "Numbers are multiplied or divided as usual. Powers of the same variable are added to multiply and subtracted to divide.",
+  "a": {
+   "q": "Simplify \\((3m^{2}n)(5m^{4}n^{3})\\).",
+   "opts": [
+    "\\(15m^{6}n^{4}\\)",
+    "\\(15m^{8}n^{3}\\)",
+    "\\(8m^{6}n^{4}\\)",
+    "\\(15m^{6}n^{3}\\)"
+   ],
+   "why": "Multiply the numbers: \\(3 \\times 5 = 15\\). Add the powers of \\(m\\): \\(2 + 4 = 6\\). Add the powers of \\(n\\): \\(1 + 3 = 4\\). Multiplying the powers instead, as in \\(m^{8}\\), is a tempting mistake.",
+   "clue": "Add powers when you multiply. Remember \\(n\\) has power 1."
+  },
+  "b": {
+   "d": 3,
+   "q": "Simplify \\(20p^{7}q^{2} \\div 4p^{3}q\\).",
+   "opts": [
+    "\\(5p^{4}q\\)",
+    "\\(5p^{10}q^{3}\\)",
+    "\\(16p^{4}q\\)",
+    "\\(5p^{4}q^{2}\\)"
+   ],
+   "why": "Divide the numbers: \\(20 \\div 4 = 5\\). Subtract the powers of \\(p\\): \\(7 - 3 = 4\\). Subtract the powers of \\(q\\): \\(2 - 1 = 1\\), so \\(q\\) stays. Leaving the power of \\(q\\) as 2, as if there were no \\(q\\) in the divisor, is the tempting mistake.",
+   "clue": "A variable with no power written has power 1."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(15m^{6}n^{4}\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(5p^{4}q\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says the mistake treats q 'as if q had no power in the divisor'. The card says a variable with no power written has power 1, so this phrasing is confusing. The mistake is really ignoring q in the divisor, treating its power as 0. Reword, e.g. 'as if there were no q in the divisor'."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The why says the mistake treats q 'as if q had no power in the divisor'. The card says a variable with no power written has power 1, so this phrasing is confusing. The mistake is really ignoring q in the divisor, treating its power as 0. Reword, e.g. 'as if there were no q in the divisor'."
+  ]
+ },
+ "final": {
+  "title": "Index laws for algebraic products and quotients",
+  "card": [
+   "To multiply terms, multiply the numbers, then add the powers of each variable. A variable with no power written has power 1.",
+   "To divide terms, divide the numbers, then subtract the powers of each variable.",
+   "Worked example: \\((4a^{3}b)(2ab^{2})\\). Numbers: \\(4 \\times 2 = 8\\). Powers of \\(a\\): \\(3 + 1 = 4\\). Powers of \\(b\\): \\(1 + 2 = 3\\). The answer is \\(8a^{4}b^{3}\\).",
+   "Worked example: \\(12x^{5} \\div 3x^{2}\\). Numbers: \\(12 \\div 3 = 4\\). Powers of \\(x\\): \\(5 - 2 = 3\\). The answer is \\(4x^{3}\\)."
+  ],
+  "remember": "Numbers are multiplied or divided as usual. Powers of the same variable are added to multiply and subtracted to divide.",
+  "a": {
+   "q": "Simplify \\((3m^{2}n)(5m^{4}n^{3})\\).",
+   "opts": [
+    "\\(15m^{6}n^{4}\\)",
+    "\\(15m^{8}n^{3}\\)",
+    "\\(8m^{6}n^{4}\\)",
+    "\\(15m^{6}n^{3}\\)"
+   ],
+   "why": "Multiply the numbers: \\(3 \\times 5 = 15\\). Add the powers of \\(m\\): \\(2 + 4 = 6\\). Add the powers of \\(n\\): \\(1 + 3 = 4\\). Multiplying the powers instead, as in \\(m^{8}\\), is a tempting mistake.",
+   "clue": "Add powers when you multiply. Remember \\(n\\) has power 1."
+  },
+  "b": {
+   "d": 3,
+   "q": "Simplify \\(20p^{7}q^{2} \\div 4p^{3}q\\).",
+   "opts": [
+    "\\(5p^{4}q\\)",
+    "\\(5p^{10}q^{3}\\)",
+    "\\(16p^{4}q\\)",
+    "\\(5p^{4}q^{2}\\)"
+   ],
+   "why": "Divide the numbers: \\(20 \\div 4 = 5\\). Subtract the powers of \\(p\\): \\(7 - 3 = 4\\). Subtract the powers of \\(q\\): \\(2 - 1 = 1\\), so \\(q\\) stays. Leaving the power of \\(q\\) as 2, as if there were no \\(q\\) in the divisor, is the tempting mistake.",
+   "clue": "A variable with no power written has power 1."
+  }
+ },
+ "cleared_by": "recheck"
+}

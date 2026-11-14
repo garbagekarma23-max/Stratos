@@ -1,0 +1,381 @@
+{
+ "id": "ecb-sectors-depend-each-other",
+ "title": "How the sectors depend on each other",
+ "brief": "e2885a578c56",
+ "shortlist": [
+  [
+   "eco-circular-flow-income",
+   0.52
+  ],
+  [
+   "ecb-sectors-economy",
+   0.44
+  ],
+  [
+   "ecb-shapes-financial-sector",
+   0.395
+  ],
+  [
+   "eco-five-sector-circular-flow-2",
+   0.38
+  ],
+  [
+   "eco-economic-agents-sectors",
+   0.371
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:44Z new, match",
+  "2026-11-12T12:44:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:34Z write: done",
+  "2026-11-12T15:25:55Z check: flagged",
+  "2026-11-12T15:35:03Z fix: suggested",
+  "2026-11-12T17:07:10Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-13T06:06:33Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-13T09:32:51Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T10:40:35Z claude-code check: answered by a separate subagent",
+  "2026-11-13T10:40:35Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "write": 0.01092,
+  "check": 0.00943,
+  "fix": 0.01974,
+  "recheck": 0.00961
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest card, The three-sector circular flow, explains the money loop but does not teach the knock-on chain from falling household spending to business sales, jobs, incomes and tax revenue, so it is related rather than the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The right option says the government 'has less to spend on services' as a certainty, while the card says lower tax 'can leave' it with less to spend. Governments can borrow or keep spending in a downturn, so the option should be hedged, for example 'may have less to spend'.",
+ "rejected": {
+  "title": "How the sectors depend on each other",
+  "card": [
+   "Each sector in the circular flow relies on the others. Households need businesses for goods and jobs. Businesses need households to buy what they make.",
+   "Spending by one sector is income for another. Household spending is the sales of businesses.",
+   "So a change in one place spreads. If households cut their spending, business sales fall. Businesses may then cut jobs and hours, so household incomes fall.",
+   "Lower incomes and lower sales mean less tax paid to government. This can leave the government with less to spend on services."
+  ],
+  "remember": "Spending is income for someone else, so a fall in one sector can spread to the others.",
+  "a": {
+   "q": "Households in Ballarat spend less in local shops. Which change is most likely to follow first?",
+   "opts": [
+    "Shops make fewer sales",
+    "Shops make higher profits",
+    "Households earn more income",
+    "The government collects more tax"
+   ],
+   "why": "Household spending is the sales of businesses, so less spending means fewer sales. Profits and incomes are more likely to fall than rise, and tax revenue follows later.",
+   "clue": "One sector's spending is another sector's income."
+  },
+  "b": {
+   "d": 3,
+   "q": "Many shoppers in Bendigo spend less, so a clothing shop cuts its staff hours. What is the likely effect on the government?",
+   "opts": [
+    "Less tax is paid, so it has less to spend on services",
+    "More tax is paid, so it has more to spend on services",
+    "Tax paid is unchanged, so its spending stays the same",
+    "Less tax is paid, but only by the clothing shop owner"
+   ],
+   "why": "The shop's lower sales and the workers' fewer hours both mean lower incomes, so less tax is paid and the government is likely to have less to spend. The tempting option that only the shop owner pays less misses the workers, who also earn less and so pay less tax.",
+   "clue": "Who earns less here: the shop, its workers, or both?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-13T06:06:33Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The right option says the government 'has less to spend on services' as a certainty, while the card says lower tax 'can leave' it with less to spend. Governments can borrow or keep spending in a downturn, so the option should be hedged, for example 'may have less to spend'."
+   ],
+   "saved": {
+    "draft": {
+     "title": "How the sectors depend on each other",
+     "card": [
+      "Each sector in the circular flow relies on the others. Households need businesses for goods and jobs. Businesses need households to buy what they make.",
+      "Spending by one sector is income for another. Household spending is the sales of businesses.",
+      "So a change in one place spreads. If households cut their spending, business sales fall. Businesses may then cut jobs and hours, so household incomes fall.",
+      "Lower incomes and lower sales mean less tax paid to government. This can leave the government with less to spend on services."
+     ],
+     "remember": "Spending is income for someone else, so a fall in one sector can spread to the others.",
+     "a": {
+      "q": "Households in Ballarat spend less in local shops. Which change is most likely to follow first?",
+      "opts": [
+       "Shops make fewer sales",
+       "Shops make higher profits",
+       "Households earn more income",
+       "The government collects more tax"
+      ],
+      "why": "Household spending is the sales of businesses, so less spending means fewer sales. Profits and incomes are more likely to fall than rise, and tax revenue follows later.",
+      "clue": "One sector's spending is another sector's income."
+     },
+     "b": {
+      "d": 3,
+      "q": "Many shoppers in a Bendigo town spend less, and a clothing shop cuts staff hours. What is the next likely effect on the government?",
+      "opts": [
+       "It may collect less tax and have less to spend",
+       "It collects more tax, as shops need help",
+       "Its tax revenue stays the same in every case",
+       "It gains money, as households will save more"
+      ],
+      "why": "Lower sales and lower incomes mean less tax is paid, so the government may have less to spend. More tax would need more income, and the shop's cut in hours lowers income.",
+      "clue": "Think about what workers and shops pay tax on."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Shops make fewer sales",
+      "also_right": []
+     },
+     "b": {
+      "best": "It may collect less tax and have less to spend",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is the only one hedged with 'may'. The wrong options are absolute or come with odd reasons ('stays the same in every case', 'households will save more', 'shops need help'), so a student could pick the right one without knowing the idea."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "'A Bendigo town' is confusing, because Bendigo is itself a city. 'Shoppers in Bendigo' would be clearer."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and question a are correct. In question b the right option stands out as the only hedged one ('may') among absolute or implausible distractors, and 'a Bendigo town' is awkward wording."
+    },
+    "flags": [
+     "Question b, wording: The right option is the only one hedged with 'may'. The wrong options are absolute or come with odd reasons ('stays the same in every case', 'households will save more', 'shops need help'), so a student could pick the right one without knowing the idea.",
+     "Question b, wording: 'A Bendigo town' is confusing, because Bendigo is itself a city. 'Shoppers in Bendigo' would be clearer."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "How the sectors depend on each other",
+     "card": [
+      "Each sector in the circular flow relies on the others. Households need businesses for goods and jobs. Businesses need households to buy what they make.",
+      "Spending by one sector is income for another. Household spending is the sales of businesses.",
+      "So a change in one place spreads. If households cut their spending, business sales fall. Businesses may then cut jobs and hours, so household incomes fall.",
+      "Lower incomes and lower sales mean less tax paid to government. This can leave the government with less to spend on services."
+     ],
+     "remember": "Spending is income for someone else, so a fall in one sector can spread to the others.",
+     "a": {
+      "q": "Households in Ballarat spend less in local shops. Which change is most likely to follow first?",
+      "opts": [
+       "Shops make fewer sales",
+       "Shops make higher profits",
+       "Households earn more income",
+       "The government collects more tax"
+      ],
+      "why": "Household spending is the sales of businesses, so less spending means fewer sales. Profits and incomes are more likely to fall than rise, and tax revenue follows later.",
+      "clue": "One sector's spending is another sector's income."
+     },
+     "b": {
+      "d": 3,
+      "q": "Many shoppers in Bendigo spend less, so a clothing shop cuts its staff hours. What is the likely effect on the government?",
+      "opts": [
+       "Less tax is paid, so it has less to spend on services",
+       "More tax is paid, so it has more to spend on services",
+       "Tax paid is unchanged, so its spending stays the same",
+       "Less tax is paid, but only by the clothing shop owner"
+      ],
+      "why": "The shop's lower sales and the workers' fewer hours both mean lower incomes, so less tax is paid and the government is likely to have less to spend. The tempting option that only the shop owner pays less misses the workers, who also earn less and so pay less tax.",
+      "clue": "Who earns less here: the shop, its workers, or both?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-12T17:07:10Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Shops make fewer sales",
+       "also_right": []
+      },
+      "b": {
+       "best": "Less tax is paid, so it has less to spend on services",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The right option says the government 'has less to spend on services' as a certainty, while the card says lower tax 'can leave' it with less to spend. Governments can borrow or keep spending in a downturn, so the option should be hedged, for example 'may have less to spend'."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are sound and have one clear answer each. One small issue: question b's right option states that the government will have less to spend, where the card only says it can."
+     },
+     "flags": [
+      "Question b, wording: The right option says the government 'has less to spend on services' as a certainty, while the card says lower tax 'can leave' it with less to spend. Governments can borrow or keep spending in a downturn, so the option should be hedged, for example 'may have less to spend'."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-13T09:32:51Z",
+   "step": "write",
+   "version": {
+    "title": "How the sectors depend on each other",
+    "card": [
+     "Each sector in the circular flow relies on the others. Households need businesses for goods and jobs. Businesses need households to buy what they make.",
+     "Spending by one sector is income for another. Household spending is the sales of businesses.",
+     "So a change in one place spreads. If households cut their spending, business sales fall. Businesses may then cut jobs and hours, so household incomes fall.",
+     "Lower incomes and lower sales mean less tax paid to government. This can leave the government with less to spend on services."
+    ],
+    "remember": "Spending is income for someone else, so a fall in one sector can spread to the others.",
+    "a": {
+     "q": "Households in Ballarat spend less in local shops. Which change is most likely to follow first?",
+     "opts": [
+      "Shops make fewer sales",
+      "Shops make higher profits",
+      "Households earn more income",
+      "The government collects more tax"
+     ],
+     "why": "Household spending is the sales of businesses, so less spending means fewer sales. Profits and incomes are more likely to fall than rise, and tax revenue follows later.",
+     "clue": "One sector's spending is another sector's income."
+    },
+    "b": {
+     "d": 3,
+     "q": "Many shoppers in Bendigo spend less, so a clothing shop cuts its staff hours. What is the likely effect on the government?",
+     "opts": [
+      "Less tax is paid, so it may have less to spend",
+      "More tax is paid, so it may have more to spend",
+      "Tax paid is unchanged, so its spending may stay the same",
+      "Less tax is paid, but only by the clothing shop owner"
+     ],
+     "why": "The shop's lower sales and the workers' fewer hours both mean lower incomes, so less tax is paid and the government may have less to spend on services. The tempting option that only the shop owner pays less misses the workers, who also earn less and so pay less tax.",
+     "clue": "Who earns less here: the shop, its workers, or both?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T10:40:35Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Shops make fewer sales",
+     "also_right": []
+    },
+    "b": {
+     "best": "Less tax is paid, so it may have less to spend",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "How the sectors depend on each other",
+  "card": [
+   "Each sector in the circular flow relies on the others. Households need businesses for goods and jobs. Businesses need households to buy what they make.",
+   "Spending by one sector is income for another. Household spending is the sales of businesses.",
+   "So a change in one place spreads. If households cut their spending, business sales fall. Businesses may then cut jobs and hours, so household incomes fall.",
+   "Lower incomes and lower sales mean less tax paid to government. This can leave the government with less to spend on services."
+  ],
+  "remember": "Spending is income for someone else, so a fall in one sector can spread to the others.",
+  "a": {
+   "q": "Households in Ballarat spend less in local shops. Which change is most likely to follow first?",
+   "opts": [
+    "Shops make fewer sales",
+    "Shops make higher profits",
+    "Households earn more income",
+    "The government collects more tax"
+   ],
+   "why": "Household spending is the sales of businesses, so less spending means fewer sales. Profits and incomes are more likely to fall than rise, and tax revenue follows later.",
+   "clue": "One sector's spending is another sector's income."
+  },
+  "b": {
+   "d": 3,
+   "q": "Many shoppers in Bendigo spend less, so a clothing shop cuts its staff hours. What is the likely effect on the government?",
+   "opts": [
+    "Less tax is paid, so it may have less to spend",
+    "More tax is paid, so it may have more to spend",
+    "Tax paid is unchanged, so its spending may stay the same",
+    "Less tax is paid, but only by the clothing shop owner"
+   ],
+   "why": "The shop's lower sales and the workers' fewer hours both mean lower incomes, so less tax is paid and the government may have less to spend on services. The tempting option that only the shop owner pays less misses the workers, who also earn less and so pay less tax.",
+   "clue": "Who earns less here: the shop, its workers, or both?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Shops make fewer sales",
+   "also_right": []
+  },
+  "b": {
+   "best": "Less tax is paid, so it may have less to spend",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "How the sectors depend on each other",
+  "card": [
+   "Each sector in the circular flow relies on the others. Households need businesses for goods and jobs. Businesses need households to buy what they make.",
+   "Spending by one sector is income for another. Household spending is the sales of businesses.",
+   "So a change in one place spreads. If households cut their spending, business sales fall. Businesses may then cut jobs and hours, so household incomes fall.",
+   "Lower incomes and lower sales mean less tax paid to government. This can leave the government with less to spend on services."
+  ],
+  "remember": "Spending is income for someone else, so a fall in one sector can spread to the others.",
+  "a": {
+   "q": "Households in Ballarat spend less in local shops. Which change is most likely to follow first?",
+   "opts": [
+    "Shops make fewer sales",
+    "Shops make higher profits",
+    "Households earn more income",
+    "The government collects more tax"
+   ],
+   "why": "Household spending is the sales of businesses, so less spending means fewer sales. Profits and incomes are more likely to fall than rise, and tax revenue follows later.",
+   "clue": "One sector's spending is another sector's income."
+  },
+  "b": {
+   "d": 3,
+   "q": "Many shoppers in Bendigo spend less, so a clothing shop cuts its staff hours. What is the likely effect on the government?",
+   "opts": [
+    "Less tax is paid, so it may have less to spend",
+    "More tax is paid, so it may have more to spend",
+    "Tax paid is unchanged, so its spending may stay the same",
+    "Less tax is paid, but only by the clothing shop owner"
+   ],
+   "why": "The shop's lower sales and the workers' fewer hours both mean lower incomes, so less tax is paid and the government may have less to spend on services. The tempting option that only the shop owner pays less misses the workers, who also earn less and so pay less tax.",
+   "clue": "Who earns less here: the shop, its workers, or both?"
+  }
+ },
+ "checked_by": "claude-code"
+}

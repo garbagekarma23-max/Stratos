@@ -1,0 +1,136 @@
+{
+ "id": "mat-two-way-tables-two",
+ "title": "Two-way tables for two events",
+ "brief": "9fc5a90b35b5",
+ "shortlist": [
+  [
+   "mat-two-way-tables-2",
+   0.477
+  ],
+  [
+   "mat-conditional-probability-from-two",
+   0.278
+  ],
+  [
+   "mat-sample-spaces-probability-2",
+   0.24
+  ],
+  [
+   "mat-listing-outcomes-compound-events",
+   0.218
+  ],
+  [
+   "mat-complementary-events",
+   0.209
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:54Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:06:01Z write: done",
+  "2026-11-12T15:15:50Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00037,
+  "write": 0.02202,
+  "check": 0.00842
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point teaches two-way tables as equally likely combined outcomes (dividing matching cells by total cells), but the new point is about probabilities from counted survey data such as P(boy and plays sport), which needs a different rule, so it is not a small adjustment.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Two-way tables for two events",
+  "card": [
+   "A two-way table sorts a group by two features at once. One feature runs down the rows and the other runs across the columns.",
+   "Each cell shows how many fit both features. The totals show how many fit each feature on its own, and the grand total is the whole group.",
+   "To find a probability, divide the count you want by the grand total. \"And\" means one cell, so P(boy and plays sport) is that cell's count \\(\\div\\) the grand total.",
+   "Example: in a class of 20, 6 boys play sport, 4 boys do not, 5 girls play sport and 5 girls do not. P(girl and plays sport) \\(= \\frac{5}{20} = \\frac{1}{4}\\)."
+  ],
+  "remember": "Pick the cell you want, then divide its count by the grand total.",
+  "a": {
+   "q": "A table sorts 40 students by year level and by whether they walk to school. In the cell for Year 7 and walks, the count is 8. What is P(Year 7 and walks)?",
+   "opts": [
+    "\\(\\frac{8}{40}\\)",
+    "\\(\\frac{8}{20}\\)",
+    "\\(\\frac{40}{8}\\)",
+    "\\(\\frac{8}{48}\\)"
+   ],
+   "why": "The cell for Year 7 and walks holds 8 students, and the grand total is 40, so the probability is \\(\\frac{8}{40}\\). Dividing by a row or column total instead of the grand total is a tempting mistake, but \"and\" over the whole group uses the grand total.",
+   "clue": "Divide the cell's count by the whole group."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia surveys 30 students at her school in Geelong about pets. 9 girls have a dog, 6 girls do not, 7 boys have a dog and 8 boys do not. What is P(boy and has a dog)?",
+   "opts": [
+    "\\(\\frac{7}{30}\\)",
+    "\\(\\frac{7}{15}\\)",
+    "\\(\\frac{16}{30}\\)",
+    "\\(\\frac{9}{30}\\)"
+   ],
+   "why": "The cell for boy and has a dog is 7, and the grand total is \\(9 + 6 + 7 + 8 = 30\\). So the probability is \\(\\frac{7}{30}\\). The option \\(\\frac{16}{30}\\) counts everyone with a dog, which is a different event.",
+   "clue": "Find the one cell that fits both features."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(\\frac{8}{40}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(\\frac{7}{30}\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Two-way tables for two events",
+  "card": [
+   "A two-way table sorts a group by two features at once. One feature runs down the rows and the other runs across the columns.",
+   "Each cell shows how many fit both features. The totals show how many fit each feature on its own, and the grand total is the whole group.",
+   "To find a probability, divide the count you want by the grand total. \"And\" means one cell, so P(boy and plays sport) is that cell's count \\(\\div\\) the grand total.",
+   "Example: in a class of 20, 6 boys play sport, 4 boys do not, 5 girls play sport and 5 girls do not. P(girl and plays sport) \\(= \\frac{5}{20} = \\frac{1}{4}\\)."
+  ],
+  "remember": "Pick the cell you want, then divide its count by the grand total.",
+  "a": {
+   "q": "A table sorts 40 students by year level and by whether they walk to school. In the cell for Year 7 and walks, the count is 8. What is P(Year 7 and walks)?",
+   "opts": [
+    "\\(\\frac{8}{40}\\)",
+    "\\(\\frac{8}{20}\\)",
+    "\\(\\frac{40}{8}\\)",
+    "\\(\\frac{8}{48}\\)"
+   ],
+   "why": "The cell for Year 7 and walks holds 8 students, and the grand total is 40, so the probability is \\(\\frac{8}{40}\\). Dividing by a row or column total instead of the grand total is a tempting mistake, but \"and\" over the whole group uses the grand total.",
+   "clue": "Divide the cell's count by the whole group."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia surveys 30 students at her school in Geelong about pets. 9 girls have a dog, 6 girls do not, 7 boys have a dog and 8 boys do not. What is P(boy and has a dog)?",
+   "opts": [
+    "\\(\\frac{7}{30}\\)",
+    "\\(\\frac{7}{15}\\)",
+    "\\(\\frac{16}{30}\\)",
+    "\\(\\frac{9}{30}\\)"
+   ],
+   "why": "The cell for boy and has a dog is 7, and the grand total is \\(9 + 6 + 7 + 8 = 30\\). So the probability is \\(\\frac{7}{30}\\). The option \\(\\frac{16}{30}\\) counts everyone with a dog, which is a different event.",
+   "clue": "Find the one cell that fits both features."
+  }
+ },
+ "cleared_by": "checker"
+}

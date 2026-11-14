@@ -1,0 +1,435 @@
+{
+ "id": "mat-solving-simultaneous-equations-with",
+ "title": "Solving simultaneous equations with graphs",
+ "brief": "8247369410de",
+ "shortlist": [
+  [
+   "mat-simultaneous-equations-by-graphing",
+   0.745
+  ],
+  [
+   "mat-simultaneous-linear-equations-2",
+   0.607
+  ],
+  [
+   "mat-simultaneous-equations-by-substitution",
+   0.471
+  ],
+  [
+   "mat-simultaneous-equations",
+   0.463
+  ],
+  [
+   "mat-simultaneous-equations-by-elimination",
+   0.405
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:48Z write: failed the content check, writing again",
+  "2026-11-12T15:26:03Z write: done (still fails the content check)",
+  "2026-11-12T15:35:08Z check: flagged",
+  "2026-11-12T15:42:24Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00038,
+  "write": 0.02827,
+  "check": 0.01573,
+  "fix": 0.06469,
+  "recheck": 0.00845
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Simultaneous equations by graphing, covers reading the crossing point and checking it, but it does not teach that parallel lines have no solution, which the new point's brief requires, so it would need a new idea rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Solving simultaneous equations with graphs",
+  "card": [
+   "Simultaneous equations are two equations that must both be true at once. Each linear equation draws a straight line.",
+   "A point on a line makes that equation true. The point where the two lines cross is on both lines, so it is the solution.",
+   "Write the solution as a value of \\(x\\) and a value of \\(y\\). Here \\(x = 2\\) and \\(y = 3\\). Check it by putting both values into each equation.",
+   "Parallel lines have the same gradient and never cross. Two equations whose lines are parallel and different have no solution."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The lines \\(y = x + 1\\) and \\(y = -x + 5\\) cross at the point \\((2, 3)\\), shown with dashed guides to \\(x = 2\\) and \\(y = 3\\).",
+    "x": {
+     "min": -1,
+     "max": 6,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -1,
+     "max": 7,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x + 1",
+      "label": "\\(y = x + 1\\)",
+      "labelAt": 4.5,
+      "pos": "above-left"
+     },
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "-x + 5",
+      "label": "\\(y = -x + 5\\)",
+      "labelAt": 4,
+      "pos": "above-right"
+     },
+     {
+      "type": "guide",
+      "at": [
+       2,
+       3
+      ],
+      "xLabel": "2",
+      "yLabel": "3"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       3
+      ],
+      "on": [
+       "f",
+       "g"
+      ],
+      "is": "intersection",
+      "label": "\\((2, 3)\\)",
+      "pos": "below"
+     }
+    ]
+   }
+  },
+  "remember": "The solution is where the lines cross. Parallel lines never cross, so there is none.",
+  "a": {
+   "q": "The lines for two equations cross at \\((4, -1)\\). What is the solution?",
+   "opts": [
+    "\\(x = 4\\) and \\(y = -1\\)",
+    "\\(x = -1\\) and \\(y = 4\\)",
+    "\\(x = 3\\) and \\(y = 0\\)",
+    "There is no solution"
+   ],
+   "why": "The crossing point is on both lines, so its coordinates solve both equations. The \\(x\\) value comes first in \\((4, -1)\\), so swapping them is a mistake.",
+   "clue": "The crossing point is written as \\((x, y)\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam graphs \\(y = 2x + 3\\) and \\(y = 2x - 5\\). What does this show about the simultaneous equations?",
+   "opts": [
+    "There is no solution, because the lines are parallel",
+    "There is one solution, where the lines meet the \\(y\\)-axis",
+    "There is one solution, at \\((2, 3)\\)",
+    "There are many solutions, because the gradients match"
+   ],
+   "why": "Both lines have gradient 2 but different \\(y\\)-intercepts, so they are parallel and never cross. Matching gradients do not give a solution: they mean the lines never meet.",
+   "clue": "Compare the two gradients."
+  }
+ },
+ "redone": true,
+ "local": [
+  "mat-solving-simultaneous-equations-with the figure on card line 2 has the label \\((2, 3)\\) on a curve. Move it with pos or labelAt, or move the curve"
+ ],
+ "check": {
+  "a": {
+   "best": "\\(x = 4\\) and \\(y = -1\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "There is no solution, because the lines are parallel",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The line \"Parallel lines have the same gradient\" teaches the equal-gradients idea that belongs to point 4 (Parallel and perpendicular lines). This point only needs to say that parallel lines never cross."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The question and its clue (\"Compare the two gradients\") rest on the idea that equal gradients mean parallel lines. That idea belongs to point 4, not to this point."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) says matching gradients \"mean the lines never meet\". That is false when the intercepts are also equal: the lines are then the same line, with infinitely many solutions. The card itself says \"parallel and different\", so the why contradicts the card's care."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The graph and both answers are correct. The card and question b borrow point 4's equal-gradients idea, and why (b) wrongly says matching gradients always mean the lines never meet, which ignores identical lines."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The line \"Parallel lines have the same gradient\" teaches the equal-gradients idea that belongs to point 4 (Parallel and perpendicular lines). This point only needs to say that parallel lines never cross.",
+  "Question b, other: The question and its clue (\"Compare the two gradients\") rest on the idea that equal gradients mean parallel lines. That idea belongs to point 4, not to this point.",
+  "Question b, fact: Why (b) says matching gradients \"mean the lines never meet\". That is false when the intercepts are also equal: the lines are then the same line, with infinitely many solutions. The card itself says \"parallel and different\", so the why contradicts the card's care.",
+  "Content check: mat-solving-simultaneous-equations-with the figure on card line 2 has the label \\((2, 3)\\) on a curve. Move it with pos or labelAt, or move the curve"
+ ],
+ "proposal": {
+  "title": "Solving simultaneous equations with graphs",
+  "card": [
+   "Simultaneous equations are two equations that must both be true at once. Each linear equation draws a straight line.",
+   "A point on a line makes that equation true. The point where the two lines cross is on both lines, so it is the solution.",
+   "Write the solution as a value of \\(x\\) and a value of \\(y\\). Here \\(x = 2\\) and \\(y = 3\\). Check it by putting both values into each equation.",
+   "Parallel lines never cross. If two different lines are parallel, no point is on both, so no pair of values makes both equations true. There is no solution."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The lines \\(y = x + 1\\) and \\(y = -x + 5\\) cross at the point \\((2, 3)\\), shown with dashed guides to 2 on the x-axis and 3 on the y-axis.",
+    "x": {
+     "min": -1,
+     "max": 6,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -1,
+     "max": 7,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x + 1",
+      "label": "\\(y = x + 1\\)",
+      "labelAt": 4.5,
+      "pos": "above-left"
+     },
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "-x + 5",
+      "label": "\\(y = -x + 5\\)",
+      "labelAt": 4,
+      "pos": "above-right"
+     },
+     {
+      "type": "guide",
+      "at": [
+       2,
+       3
+      ],
+      "xLabel": "2",
+      "yLabel": "3"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       3
+      ],
+      "on": [
+       "f",
+       "g"
+      ],
+      "is": "intersection"
+     }
+    ]
+   }
+  },
+  "remember": "The solution is where the lines cross. Parallel lines never cross, so there is none.",
+  "a": {
+   "q": "The lines for two equations cross at \\((4, -1)\\). What is the solution?",
+   "opts": [
+    "\\(x = 4\\) and \\(y = -1\\)",
+    "\\(x = -1\\) and \\(y = 4\\)",
+    "\\(x = 3\\) and \\(y = 0\\)",
+    "There is no solution"
+   ],
+   "why": "The crossing point is on both lines, so its coordinates solve both equations. The \\(x\\) value comes first in \\((4, -1)\\), so swapping them is a mistake.",
+   "clue": "The crossing point is written as \\((x, y)\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena graphs two linear equations. Her two lines are parallel and different, so they never cross. Which statement is true?",
+   "opts": [
+    "No pair of \\(x\\) and \\(y\\) values makes both true",
+    "The solutions are where each line meets the \\(y\\)-axis",
+    "Every point on either line is a solution",
+    "The solution is the point halfway between the lines"
+   ],
+   "why": "No point lies on both lines, so no pair of values makes both equations true, and there is no solution. A point on just one line, such as its \\(y\\)-intercept, makes only that line's equation true.",
+   "clue": "Is any point on both lines?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(x = 4\\) and \\(y = -1\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "No pair of \\(x\\) and \\(y\\) values makes both true",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The line \"Parallel lines have the same gradient\" teaches the equal-gradients idea that belongs to point 4 (Parallel and perpendicular lines). This point only needs to say that parallel lines never cross."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The question and its clue (\"Compare the two gradients\") rest on the idea that equal gradients mean parallel lines. That idea belongs to point 4, not to this point."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) says matching gradients \"mean the lines never meet\". That is false when the intercepts are also equal: the lines are then the same line, with infinitely many solutions. The card itself says \"parallel and different\", so the why contradicts the card's care."
+   }
+  ],
+  "flags": [
+   "Card, other: The line \"Parallel lines have the same gradient\" teaches the equal-gradients idea that belongs to point 4 (Parallel and perpendicular lines). This point only needs to say that parallel lines never cross.",
+   "Question b, other: The question and its clue (\"Compare the two gradients\") rest on the idea that equal gradients mean parallel lines. That idea belongs to point 4, not to this point.",
+   "Question b, fact: Why (b) says matching gradients \"mean the lines never meet\". That is false when the intercepts are also equal: the lines are then the same line, with infinitely many solutions. The card itself says \"parallel and different\", so the why contradicts the card's care.",
+   "Content check: mat-solving-simultaneous-equations-with the figure on card line 2 has the label \\((2, 3)\\) on a curve. Move it with pos or labelAt, or move the curve"
+  ]
+ },
+ "final": {
+  "title": "Solving simultaneous equations with graphs",
+  "card": [
+   "Simultaneous equations are two equations that must both be true at once. Each linear equation draws a straight line.",
+   "A point on a line makes that equation true. The point where the two lines cross is on both lines, so it is the solution.",
+   "Write the solution as a value of \\(x\\) and a value of \\(y\\). Here \\(x = 2\\) and \\(y = 3\\). Check it by putting both values into each equation.",
+   "Parallel lines never cross. If two different lines are parallel, no point is on both, so no pair of values makes both equations true. There is no solution."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The lines \\(y = x + 1\\) and \\(y = -x + 5\\) cross at the point \\((2, 3)\\), shown with dashed guides to 2 on the x-axis and 3 on the y-axis.",
+    "x": {
+     "min": -1,
+     "max": 6,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -1,
+     "max": 7,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x + 1",
+      "label": "\\(y = x + 1\\)",
+      "labelAt": 4.5,
+      "pos": "above-left"
+     },
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "-x + 5",
+      "label": "\\(y = -x + 5\\)",
+      "labelAt": 4,
+      "pos": "above-right"
+     },
+     {
+      "type": "guide",
+      "at": [
+       2,
+       3
+      ],
+      "xLabel": "2",
+      "yLabel": "3"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       3
+      ],
+      "on": [
+       "f",
+       "g"
+      ],
+      "is": "intersection"
+     }
+    ]
+   }
+  },
+  "remember": "The solution is where the lines cross. Parallel lines never cross, so there is none.",
+  "a": {
+   "q": "The lines for two equations cross at \\((4, -1)\\). What is the solution?",
+   "opts": [
+    "\\(x = 4\\) and \\(y = -1\\)",
+    "\\(x = -1\\) and \\(y = 4\\)",
+    "\\(x = 3\\) and \\(y = 0\\)",
+    "There is no solution"
+   ],
+   "why": "The crossing point is on both lines, so its coordinates solve both equations. The \\(x\\) value comes first in \\((4, -1)\\), so swapping them is a mistake.",
+   "clue": "The crossing point is written as \\((x, y)\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena graphs two linear equations. Her two lines are parallel and different, so they never cross. Which statement is true?",
+   "opts": [
+    "No pair of \\(x\\) and \\(y\\) values makes both true",
+    "The solutions are where each line meets the \\(y\\)-axis",
+    "Every point on either line is a solution",
+    "The solution is the point halfway between the lines"
+   ],
+   "why": "No point lies on both lines, so no pair of values makes both equations true, and there is no solution. A point on just one line, such as its \\(y\\)-intercept, makes only that line's equation true.",
+   "clue": "Is any point on both lines?"
+  }
+ },
+ "cleared_by": "recheck"
+}

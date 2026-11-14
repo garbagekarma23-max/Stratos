@@ -1,0 +1,316 @@
+{
+ "id": "geo-economic-social-sustainability-farming",
+ "title": "Economic and social sustainability of farming",
+ "brief": "91d2f3b1c4d6",
+ "shortlist": [
+  [
+   "geo-economic-factors-farming",
+   0.344
+  ],
+  [
+   "geo-natural-farmed-ecosystems",
+   0.268
+  ],
+  [
+   "geo-rural-change",
+   0.23
+  ],
+  [
+   "geo-farming-innovations",
+   0.215
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:49Z new, match",
+  "2026-11-12T12:44:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:42Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:01Z write: failed the content check, writing again",
+  "2026-11-12T15:35:07Z write: done",
+  "2026-11-12T15:59:43Z check: flagged",
+  "2026-11-12T16:02:55Z fix: suggested",
+  "2026-11-13T15:20:31Z review: rejected, to be written again",
+  "2026-11-13T15:37:11Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T15:44:54Z claude-code check: answered by a separate subagent",
+  "2026-11-13T15:44:54Z check: flagged",
+  "2026-11-13T16:08:24Z fix: suggested",
+  "2026-11-13T16:10:55Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 2
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.01363,
+  "check": 0.01058,
+  "fix": 0.071
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches farm sustainability through droughts and price swings alongside the viability of rural towns: the economic factors card covers what limits output, the rural change card is a Year 12 NSW card on town decline, and the other two cards are about ecosystems and farming innovations.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Economic and social sustainability of farming",
+  "card": [
+   [
+    "Economic",
+    "A farm is economically sustainable if it stays profitable over many years. Droughts can cut harvests, and price swings can cut the money earned from what is sold."
+   ],
+   [
+    "Social",
+    "Farming is socially sustainable if rural towns keep their people, services and young workers. Services include schools, clinics and shops."
+   ],
+   "The two are linked. If farms earn too little, families may leave, and a town can lose its school or clinic.",
+   "If young people leave and few take over the farms, there may be fewer workers and farmers in the future. That can make farming harder to continue in that area."
+  ],
+  "remember": "Farming lasts when farms stay profitable and rural towns keep their people and services.",
+  "a": {
+   "q": "Which situation shows a problem with the social sustainability of farming?",
+   "opts": [
+    "A farming town loses its school and most young people leave",
+    "A farm earns less money in a year when wheat prices fall",
+    "A dry year gives a farm a smaller harvest than usual",
+    "A farmer sells a harvest at a lower price than last year"
+   ],
+   "why": "Social sustainability is about rural towns keeping their people, services and young workers. A lost school and departing young people threaten that. Lower prices and a dry year are economic problems, though they can add to social ones.",
+   "clue": "Look for the option about people and services in a town."
+  },
+  "b": {
+   "d": 3,
+   "q": "Several dry years and low wool prices leave farms around Ouyen in Victoria earning little. Many families leave, and the local clinic closes. What does this best show?",
+   "opts": [
+    "Economic problems can lead to social problems in rural towns",
+    "Social problems always come before economic ones on farms",
+    "Rural towns stay sustainable if their farms are profitable",
+    "Droughts affect only the social side of farming"
+   ],
+   "why": "Low farm income came first, and families then left and a service closed. This shows how economic pressure can lead to social problems. The card does not say social problems always come first, and droughts hit farm income too.",
+   "clue": "Follow the order of events: what happened first?"
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-13T15:37:11Z",
+   "step": "write",
+   "version": {
+    "title": "Economic and social sustainability of farming",
+    "card": [
+     [
+      "Economic",
+      "a farm needs to make a profit over many years, not just in good ones. Droughts cut harvests, and swings in prices change what crops and livestock earn."
+     ],
+     "Farms can get through bad years by spreading their risk, such as growing more than one crop or also keeping livestock, and by saving money in good years.",
+     [
+      "Social",
+      "rural towns need enough people to keep services such as schools, clinics and shops, and young people to work on farms and take them over."
+     ],
+     "The two are linked. When farms earn less, families and workers may leave, services can close, and the town becomes harder to live and farm in."
+    ],
+    "remember": "Farming lasts when farms can get through bad years and their towns keep people and services.",
+    "a": {
+     "q": "A wheat farmer puts money aside in good years to use in the next drought. Which part of farming's sustainability does this help?",
+     "opts": [
+      "Economic, as the farm can stay profitable over time",
+      "Economic, as it raises the price the wheat sells for",
+      "Social, as it keeps the town's school and clinic open",
+      "Environmental, as it protects the soil during drought"
+     ],
+     "why": "Saving in good years helps the farm get through a drought and stay profitable over many years, which is economic sustainability. It does not change the price wheat sells for, and it does not protect the soil.",
+     "clue": "The farmer is planning with money, not soil."
+    },
+    "b": {
+     "d": 3,
+     "q": "Several dry years and low grain prices leave farms around a Mallee town earning little. Many families leave, and the town's clinic closes. What does this best show?",
+     "opts": [
+      "Low farm income can lead to fewer services in a town",
+      "A town's services close first, then farms lose money",
+      "Droughts lower farm income but do not change towns",
+      "Low grain prices hurt towns, but dry years do not"
+     ],
+     "why": "Farm income fell first, then families left and a service closed, so economic trouble led to social trouble. The order matters: the clinic closed after the farms earned less, not before.",
+     "clue": "Follow the order of events: what happened first?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T15:44:54Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Economic, as the farm can stay profitable over time",
+     "also_right": []
+    },
+    "b": {
+     "best": "Low farm income can lead to fewer services in a town",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "b",
+      "kind": "wording",
+      "detail": "The right option is the only hedged one (\"can lead to\"), while the three wrong options make flat claims that the question's own scenario contradicts (dry years are named as a cause, the town did change, and the clinic closed after farms earned less). A student can rule them out from the stem alone without knowing the link between economic and social sustainability."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "The facts are sound and both intended answers are right. Question b is easy to answer without the idea: the right option is the only hedged one, and the scenario itself rules out each wrong option."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Economic and social sustainability of farming",
+  "card": [
+   [
+    "Economic",
+    "a farm needs to make a profit over many years, not just in good ones. Droughts cut harvests, and swings in prices change what crops and livestock earn."
+   ],
+   "Farms can get through bad years by spreading their risk, such as growing more than one crop or also keeping livestock, and by saving money in good years.",
+   [
+    "Social",
+    "rural towns need enough people to keep services such as schools, clinics and shops, and young people to work on farms and take them over."
+   ],
+   "The two are linked. When farms earn less, families and workers may leave, services can close, and the town becomes harder to live and farm in."
+  ],
+  "remember": "Farming lasts when farms can get through bad years and their towns keep people and services.",
+  "a": {
+   "q": "A wheat farmer puts money aside in good years to use in the next drought. Which part of farming's sustainability does this help?",
+   "opts": [
+    "Economic, as the farm can stay profitable over time",
+    "Economic, as it raises the price the wheat sells for",
+    "Social, as it keeps the town's school and clinic open",
+    "Environmental, as it protects the soil during drought"
+   ],
+   "why": "Saving in good years helps the farm get through a drought and stay profitable over many years, which is economic sustainability. It does not change the price wheat sells for, and it does not protect the soil.",
+   "clue": "The farmer is planning with money, not soil."
+  },
+  "b": {
+   "d": 3,
+   "q": "Several dry years and low grain prices leave farms around a Mallee town earning little. Many families leave, and the town's clinic closes. What does this best show?",
+   "opts": [
+    "Low farm income can lead to fewer services in a town",
+    "A town's services close first, then farms lose money",
+    "Droughts lower farm income but do not change towns",
+    "Low grain prices hurt towns, but dry years do not"
+   ],
+   "why": "Farm income fell first, then families left and a service closed, so economic trouble led to social trouble. The order matters: the clinic closed after the farms earned less, not before.",
+   "clue": "Follow the order of events: what happened first?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Economic, as the farm can stay profitable over time",
+   "also_right": []
+  },
+  "b": {
+   "best": "Low farm income can lead to fewer services in a town",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only hedged one (\"can lead to\"), while the three wrong options make flat claims that the question's own scenario contradicts (dry years are named as a cause, the town did change, and the clinic closed after farms earned less). A student can rule them out from the stem alone without knowing the link between economic and social sustainability."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts are sound and both intended answers are right. Question b is easy to answer without the idea: the right option is the only hedged one, and the scenario itself rules out each wrong option."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option is the only hedged one (\"can lead to\"), while the three wrong options make flat claims that the question's own scenario contradicts (dry years are named as a cause, the town did change, and the clinic closed after farms earned less). A student can rule them out from the stem alone without knowing the link between economic and social sustainability."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Economic and social sustainability of farming",
+  "card": [
+   [
+    "Economic",
+    "a farm needs to make a profit over many years, not just in good ones. Droughts cut harvests, and swings in prices change what crops and livestock earn."
+   ],
+   "Farms can get through bad years by spreading their risk, such as growing more than one crop or also keeping livestock, and by saving money in good years.",
+   [
+    "Social",
+    "rural towns need enough people to keep services such as schools, clinics and shops, and young people to work on farms and take them over."
+   ],
+   "Farming lasts only when both hold, and the two are linked. When farms earn less, families may leave, services can close, and the town becomes harder to live and farm in."
+  ],
+  "remember": "Farming lasts when farms can get through bad years and their towns keep people and services.",
+  "a": {
+   "q": "A wheat farmer puts money aside in good years to use in the next drought. Which part of farming's sustainability does this help?",
+   "opts": [
+    "Economic, as the farm can stay profitable over time",
+    "Economic, as it raises the price the wheat sells for",
+    "Social, as it keeps the town's school and clinic open",
+    "Environmental, as it protects the soil during drought"
+   ],
+   "why": "Saving in good years helps the farm get through a drought and stay profitable over many years, which is economic sustainability. It does not change the price wheat sells for, and it does not protect the soil.",
+   "clue": "The farmer is planning with money, not soil."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ben's farm near a Mallee town has stayed profitable through several dry years by keeping sheep as well as growing wheat. But the town's clinic has closed and most young people have moved away. Is farming in this area sustainable?",
+   "opts": [
+    "Not fully, as the town is losing its people and services",
+    "Yes, as Ben's farm is still making a profit over time",
+    "Yes, as a town's services do not affect its farms",
+    "Not fully, as a farm should never have a bad year"
+   ],
+   "why": "Farming lasts only when farms stay profitable and towns keep their people and services. Ben's farm is doing well, but without young people there may be no one to work on farms or take them over, so profit alone is not enough. A bad year is not the problem, as a farm needs a profit over many years, not in every year.",
+   "clue": "Check both parts: the farm and the town."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Economic and social sustainability of farming",
+  "card": [
+   [
+    "Economic",
+    "a farm needs to make a profit over many years, not just in good ones. Droughts cut harvests, and swings in prices change what crops and livestock earn."
+   ],
+   "Farms can get through bad years by spreading their risk, such as growing more than one crop or also keeping livestock, and by saving money in good years.",
+   [
+    "Social",
+    "rural towns need enough people to keep services such as schools, clinics and shops, and young people to work on farms and take them over."
+   ],
+   "Farming lasts only when both hold, and the two are linked. When farms earn less, families may leave, services can close, and the town becomes harder to live and farm in."
+  ],
+  "remember": "Farming lasts when farms can get through bad years and their towns keep people and services.",
+  "a": {
+   "q": "A wheat farmer puts money aside in good years to use in the next drought. Which part of farming's sustainability does this help?",
+   "opts": [
+    "Economic, as the farm can stay profitable over time",
+    "Economic, as it raises the price the wheat sells for",
+    "Social, as it keeps the town's school and clinic open",
+    "Environmental, as it protects the soil during drought"
+   ],
+   "why": "Saving in good years helps the farm get through a drought and stay profitable over many years, which is economic sustainability. It does not change the price wheat sells for, and it does not protect the soil.",
+   "clue": "The farmer is planning with money, not soil."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ben's farm near a Mallee town has stayed profitable through several dry years by keeping sheep as well as growing wheat. But the town's clinic has closed and most young people have moved away. Is farming in this area sustainable?",
+   "opts": [
+    "Not fully, as the town is losing its people and services",
+    "Yes, as Ben's farm is still making a profit over time",
+    "Yes, as a town's services do not affect its farms",
+    "Not fully, as a farm should never have a bad year"
+   ],
+   "why": "Farming lasts only when farms stay profitable and towns keep their people and services. Ben's farm is doing well, but without young people there may be no one to work on farms or take them over, so profit alone is not enough. A bad year is not the problem, as a farm needs a profit over many years, not in every year.",
+   "clue": "Check both parts: the farm and the town."
+  }
+ },
+ "cleared_by": "owner"
+}

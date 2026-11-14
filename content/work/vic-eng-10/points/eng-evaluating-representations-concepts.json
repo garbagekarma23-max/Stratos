@@ -1,0 +1,248 @@
+{
+ "id": "eng-evaluating-representations-concepts",
+ "title": "Evaluating representations of concepts",
+ "brief": "ff552bea1d5e",
+ "shortlist": [
+  [
+   "eng-context-shapes-representation",
+   0.352
+  ],
+  [
+   "eng-representation-people-places",
+   0.298
+  ],
+  [
+   "eng-representation-media-texts",
+   0.273
+  ],
+  [
+   "eng-representation-non-fiction-media",
+   0.208
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:45Z new, match",
+  "2026-11-12T12:44:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:35Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:25:57Z write: done",
+  "2026-11-12T15:35:03Z check: flagged",
+  "2026-11-12T15:42:22Z fix: suggested",
+  "2026-11-12T17:07:10Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00625,
+  "check": 0.01085,
+  "fix": 0.0229,
+  "recheck": 0.01023
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, eng-context-shapes-representation, teaches how context shapes the representation of people, groups and places, not how fairly a text represents a concept such as success or justice, so it is related but not the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Evaluating representations of concepts",
+  "card": [
+   "A representation is the way a text presents a concept, such as success or justice. A text shows one version of the concept. It does not show the whole of it.",
+   [
+    "Fairly",
+    "Ask whether the text treats the concept even-handedly, or pushes one side by leaving out other views or using loaded words."
+   ],
+   [
+    "Fully",
+    "Ask how much of the concept the text covers. A text that defines success only as money leaves out other ideas of success, such as health or friendship."
+   ],
+   [
+    "Context",
+    "A text is shaped by when, where and for whom it was made. Its context can explain why it represents a concept the way it does."
+   ]
+  ],
+  "remember": "Judge a representation by how fair and how full it is, and link it to its context.",
+  "a": {
+   "q": "A school magazine article says a person is successful only if they earn a high salary. Which judgement about its representation of success is best?",
+   "opts": [
+    "It is narrow, as it leaves out other kinds of success",
+    "It is full, as money is the only real kind of success",
+    "It is fair, as the article is about a school magazine",
+    "It is accurate, as it uses a clear and simple definition"
+   ],
+   "why": "The article covers only one idea of success, so it is not a full representation. The tempting option says it is full, but a single measure leaves out other ideas such as health or friendship.",
+   "clue": "Ask how much of the concept the article covers."
+  },
+  "b": {
+   "d": 3,
+   "q": "A 1950s poster shows justice as a stern judge who always punishes wrongdoers and never shows mercy. Which response best evaluates the poster?",
+   "opts": [
+    "It shows one view of justice, which may reflect its era",
+    "It shows the full meaning of justice for every era",
+    "It is fair because posters must be simple and direct",
+    "It cannot be judged because it is only a poster"
+   ],
+   "why": "The poster presents justice as punishment alone, so it is a partial view. Its context, the era it was made in, may help explain that view. The option about posters being simple is tempting, but a simple message can still be unfair or narrow.",
+   "clue": "Think about how full the view is, and when it was made."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It is narrow, as it leaves out other kinds of success",
+   "also_right": []
+  },
+  "b": {
+   "best": "It shows one view of justice, which may reflect its era",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one with a hedge ('may reflect its era'), and the distractors are absolute or plainly weak. A student could pick it without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Content is accurate and both intended answers are correct. The only issue is that question b's right option stands out as the only hedged one."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option is the only one with a hedge ('may reflect its era'), and the distractors are absolute or plainly weak. A student could pick it without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Evaluating representations of concepts",
+  "card": [
+   "A representation is the way a text presents a concept, such as success or justice. A text shows one version of the concept. It does not show the whole of it.",
+   [
+    "Fairly",
+    "Ask whether the text treats the concept even-handedly, or pushes one side by leaving out other views or using loaded words."
+   ],
+   [
+    "Fully",
+    "Ask how much of the concept the text covers. A text that defines success only as money leaves out other ideas of success, such as health or friendship."
+   ],
+   [
+    "Context",
+    "A text is shaped by when, where and for whom it was made. Its context can explain why it represents a concept the way it does."
+   ]
+  ],
+  "remember": "Judge a representation by how fair and how full it is, and link it to its context.",
+  "a": {
+   "q": "A school magazine article says a person is successful only if they earn a high salary. Which judgement about its representation of success is best?",
+   "opts": [
+    "It is narrow, as it leaves out other kinds of success",
+    "It is full, as money is the only real kind of success",
+    "It is fair, as it gives every view of success equal space",
+    "It is full, as it uses one clear measure of success"
+   ],
+   "why": "The article covers only one idea of success, so it is not a full representation. The tempting option says it is full because the measure is clear, but a single clear measure still leaves out other ideas such as health or friendship.",
+   "clue": "Ask how much of the concept the article covers."
+  },
+  "b": {
+   "d": 3,
+   "q": "A 1950s poster shows justice as a stern judge who always punishes wrongdoers and never shows mercy. Which response best evaluates the poster?",
+   "opts": [
+    "A narrow view of justice that its era may help explain",
+    "A full view of justice that its era may help explain",
+    "A narrow view of justice that its era cannot help explain",
+    "A full view of justice that every era would agree with"
+   ],
+   "why": "The poster presents justice as punishment alone and leaves out mercy, so its view is narrow. The time it was made in can help explain why it shows justice this way. The option calling it full is tempting because it mentions the era, but a view without mercy does not cover the whole concept.",
+   "clue": "Judge how much of justice it covers, then think about when it was made."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:10Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It is narrow, as it leaves out other kinds of success",
+    "also_right": []
+   },
+   "b": {
+    "best": "A narrow view of justice that its era may help explain",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:10Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one with a hedge ('may reflect its era'), and the distractors are absolute or plainly weak. A student could pick it without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The right option is the only one with a hedge ('may reflect its era'), and the distractors are absolute or plainly weak. A student could pick it without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "Evaluating representations of concepts",
+  "card": [
+   "A representation is the way a text presents a concept, such as success or justice. A text shows one version of the concept. It does not show the whole of it.",
+   [
+    "Fairly",
+    "Ask whether the text treats the concept even-handedly, or pushes one side by leaving out other views or using loaded words."
+   ],
+   [
+    "Fully",
+    "Ask how much of the concept the text covers. A text that defines success only as money leaves out other ideas of success, such as health or friendship."
+   ],
+   [
+    "Context",
+    "A text is shaped by when, where and for whom it was made. Its context can explain why it represents a concept the way it does."
+   ]
+  ],
+  "remember": "Judge a representation by how fair and how full it is, and link it to its context.",
+  "a": {
+   "q": "A school magazine article says a person is successful only if they earn a high salary. Which judgement about its representation of success is best?",
+   "opts": [
+    "It is narrow, as it leaves out other kinds of success",
+    "It is full, as money is the only real kind of success",
+    "It is fair, as it gives every view of success equal space",
+    "It is full, as it uses one clear measure of success"
+   ],
+   "why": "The article covers only one idea of success, so it is not a full representation. The tempting option says it is full because the measure is clear, but a single clear measure still leaves out other ideas such as health or friendship.",
+   "clue": "Ask how much of the concept the article covers."
+  },
+  "b": {
+   "d": 3,
+   "q": "A 1950s poster shows justice as a stern judge who always punishes wrongdoers and never shows mercy. Which response best evaluates the poster?",
+   "opts": [
+    "A narrow view of justice that its era may help explain",
+    "A full view of justice that its era may help explain",
+    "A narrow view of justice that its era cannot help explain",
+    "A full view of justice that every era would agree with"
+   ],
+   "why": "The poster presents justice as punishment alone and leaves out mercy, so its view is narrow. The time it was made in can help explain why it shows justice this way. The option calling it full is tempting because it mentions the era, but a view without mercy does not cover the whole concept.",
+   "clue": "Judge how much of justice it covers, then think about when it was made."
+  }
+ },
+ "cleared_by": "recheck"
+}

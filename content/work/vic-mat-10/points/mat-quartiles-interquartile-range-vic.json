@@ -1,0 +1,227 @@
+{
+ "id": "mat-quartiles-interquartile-range-vic",
+ "title": "Quartiles and interquartile range",
+ "brief": "bb6f5bd5f1fa",
+ "shortlist": [
+  [
+   "mat-five-number-summary-interquartile",
+   0.279
+  ],
+  [
+   "mat-measures-spread",
+   0.21
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 may adapt mat-five-number-summary-interquartile, but is not highly sure, so to the Opus match check",
+  "2026-11-12T15:15:47Z confirm: Claude Opus 5.5 may adapt mat-five-number-summary-interquartile, but is not highly sure, so it is for you to review",
+  "2026-11-13T12:13:15Z match: claude-code says adapt mat-five-number-summary-interquartile (3 changes)",
+  "2026-11-13T12:13:15Z claude-code review: adapting mat-five-number-summary-interquartile on the next run",
+  "2026-11-13T13:04:53Z adapt: done",
+  "2026-11-13T13:11:25Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "confirm": 0.01166,
+  "adapt": 0.00695,
+  "check": 0.00894
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-five-number-summary-interquartile",
+  "changes": [
+   "Replace the Hobart clinic waiting-times example in question b with a Victorian local context, such as a Melbourne or regional Victorian clinic or service."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same quartile and IQR method at a suitable Year 10 depth, but its Hobart example should be made local to Victoria and the card also covers the five-number summary, which the new point does not ask for.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-five-number-summary-interquartile",
+  "changes": [
+   "Change the Hobart clinic in question b to a Victorian place, such as a Bendigo or Melbourne clinic.",
+   "Add a short line saying the quartiles split the ordered data into four equal parts, as the brief describes."
+  ],
+  "sure": "medium",
+  "reason": "The bank point already teaches how to find Q1 and Q3 and IQR = Q3 − Q1 at Year 10 depth, with two fair questions, but it is framed around the five-number summary, which may overlap a separate box-plot point, and it needs a local example.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-five-number-summary-interquartile",
+  "changes": [
+   "Title it Quartiles and interquartile range, and drop the five-number summary as the card's frame, including the minimum and maximum in the example, since the five-number summary is another point in this chapter.",
+   "Add a line that the quartiles split the ordered data into four parts with about the same number of values in each.",
+   "Change the Hobart clinic in question b to a place in Victoria, such as a Bendigo clinic."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "title",
+   "card1",
+   "card2",
+   "card3",
+   "card4 label",
+   "card4",
+   "a.q",
+   "a.why",
+   "b.q",
+   "b.why"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point finds quartiles and the IQR correctly at Year 10 depth, and all its numbers check out. It is framed around the five-number summary, which is its own point in this chapter, and it uses a Hobart example.",
+   "item": "bf3d53523a6268d6",
+   "result": "decided",
+   "saved": {
+    "id": "mat-quartiles-interquartile-range-vic",
+    "title": "Quartiles and interquartile range",
+    "brief": "bb6f5bd5f1fa",
+    "shortlist": [
+     [
+      "mat-five-number-summary-interquartile",
+      0.279
+     ],
+     [
+      "mat-measures-spread",
+      0.21
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00028,
+     "confirm": 0.01166
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-five-number-summary-interquartile",
+     "changes": [
+      "Replace the Hobart clinic waiting-times example in question b with a Victorian local context, such as a Melbourne or regional Victorian clinic or service."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches the same quartile and IQR method at a suitable Year 10 depth, but its Hobart example should be made local to Victoria and the card also covers the five-number summary, which the new point does not ask for.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-five-number-summary-interquartile",
+     "changes": [
+      "Change the Hobart clinic in question b to a Victorian place, such as a Bendigo or Melbourne clinic.",
+      "Add a short line saying the quartiles split the ordered data into four equal parts, as the brief describes."
+     ],
+     "sure": "medium",
+     "reason": "The bank point already teaches how to find Q1 and Q3 and IQR = Q3 − Q1 at Year 10 depth, with two fair questions, but it is framed around the five-number summary, which may overlap a separate box-plot point, and it needs a local example.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "eb621a31d4cd52d1"
+  }
+ ],
+ "draft": {
+  "title": "Quartiles and interquartile range",
+  "card": [
+   "Put the data in order. The quartiles split the ordered data into four parts, with about the same number of values in each.",
+   "The median splits the ordered data into a lower half and an upper half. If there is an odd number of values, leave the median out of both halves.",
+   "\\(Q_{1}\\) is the median of the lower half. \\(Q_{3}\\) is the median of the upper half. The interquartile range is \\(\\text{IQR} = Q_{3} - Q_{1}\\), the spread of the middle half of the data.",
+   [
+    "Example",
+    "3, 5, 6, 8, 9, 12, 14. The median is 8, \\(Q_{1}\\) is 5 and \\(Q_{3}\\) is 12. \\(\\text{IQR} = 12 - 5 = 7\\)."
+   ]
+  ],
+  "remember": "Order first, split at the median, then \\(\\text{IQR} = Q_{3} - Q_{1}\\).",
+  "a": {
+   "q": "Last term, seven students each read this many books: 4, 9, 2, 7, 5, 11, 6. What is the IQR?",
+   "opts": [
+    "5",
+    "9",
+    "7",
+    "2"
+   ],
+   "why": "In order the data is 2, 4, 5, 6, 7, 9, 11. The median is 6, \\(Q_{1}\\) is 4 and \\(Q_{3}\\) is 9, so \\(\\text{IQR} = 9 - 4 = 5\\). Using 9 is tempting, but that is the range (\\(11 - 2\\)), not a spread found from the quartiles.",
+   "clue": "Put the values in order before you find any quartile."
+  },
+  "b": {
+   "d": 3,
+   "q": "Waiting times at a Bendigo clinic, in minutes, are 3, 5, 6, 8, 10, 12, 15, 20. Find the IQR.",
+   "opts": [
+    "8",
+    "13.5",
+    "17",
+    "4.5"
+   ],
+   "why": "There are 8 values, so the lower half is 3, 5, 6, 8 and the upper half is 10, 12, 15, 20. \\(Q_{1} = 5.5\\) and \\(Q_{3} = 13.5\\), so \\(\\text{IQR} = 13.5 - 5.5 = 8\\). The value 13.5 is only \\(Q_{3}\\), and 17 is the range.",
+   "clue": "With 8 values, split into two halves of 4 and find the middle of each."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "5",
+   "also_right": []
+  },
+  "b": {
+   "best": "8",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card example and both questions follow the median-split method correctly: IQR 7, 5 and 8, and the explanations agree."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Quartiles and interquartile range",
+  "card": [
+   "Put the data in order. The quartiles split the ordered data into four parts, with about the same number of values in each.",
+   "The median splits the ordered data into a lower half and an upper half. If there is an odd number of values, leave the median out of both halves.",
+   "\\(Q_{1}\\) is the median of the lower half. \\(Q_{3}\\) is the median of the upper half. The interquartile range is \\(\\text{IQR} = Q_{3} - Q_{1}\\), the spread of the middle half of the data.",
+   [
+    "Example",
+    "3, 5, 6, 8, 9, 12, 14. The median is 8, \\(Q_{1}\\) is 5 and \\(Q_{3}\\) is 12. \\(\\text{IQR} = 12 - 5 = 7\\)."
+   ]
+  ],
+  "remember": "Order first, split at the median, then \\(\\text{IQR} = Q_{3} - Q_{1}\\).",
+  "a": {
+   "q": "Last term, seven students each read this many books: 4, 9, 2, 7, 5, 11, 6. What is the IQR?",
+   "opts": [
+    "5",
+    "9",
+    "7",
+    "2"
+   ],
+   "why": "In order the data is 2, 4, 5, 6, 7, 9, 11. The median is 6, \\(Q_{1}\\) is 4 and \\(Q_{3}\\) is 9, so \\(\\text{IQR} = 9 - 4 = 5\\). Using 9 is tempting, but that is the range (\\(11 - 2\\)), not a spread found from the quartiles.",
+   "clue": "Put the values in order before you find any quartile."
+  },
+  "b": {
+   "d": 3,
+   "q": "Waiting times at a Bendigo clinic, in minutes, are 3, 5, 6, 8, 10, 12, 15, 20. Find the IQR.",
+   "opts": [
+    "8",
+    "13.5",
+    "17",
+    "4.5"
+   ],
+   "why": "There are 8 values, so the lower half is 3, 5, 6, 8 and the upper half is 10, 12, 15, 20. \\(Q_{1} = 5.5\\) and \\(Q_{3} = 13.5\\), so \\(\\text{IQR} = 13.5 - 5.5 = 8\\). The value 13.5 is only \\(Q_{3}\\), and 17 is the range.",
+   "clue": "With 8 values, split into two halves of 4 and find the middle of each."
+  }
+ }
+}

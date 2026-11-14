@@ -1,0 +1,186 @@
+{
+ "id": "ecb-analysing-response-issue",
+ "title": "Analysing a response to an issue",
+ "brief": "268ad7d2cff2",
+ "shortlist": [
+  [
+   "ecb-five-concepts-economics-business",
+   0.208
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:44Z new, match",
+  "2026-11-12T12:44:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:32Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:25:55Z write: done",
+  "2026-11-12T15:35:02Z check: flagged",
+  "2026-11-12T15:59:42Z fix: suggested",
+  "2026-11-12T16:19:51Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 7e-05,
+  "write": 0.00643,
+  "check": 0.01097,
+  "fix": 0.01531
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point only introduces the five concepts and asks students to identify which concept applies, while the new point asks students to judge a response to an issue by listing and weighing costs and benefits for each affected group, a different skill at a different depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Analysing a response to an issue",
+  "card": [
+   "A response is an action someone takes to deal with an economic or business issue. A government might make a new rule. A business might change its prices.",
+   "Most responses affect different groups in different ways. List the groups affected, such as consumers, workers, businesses and the government.",
+   "For each group, list the likely costs and the likely benefits. A cost is something a group gives up or loses. A benefit is something a group gains.",
+   "Then weigh them up. Compare the costs and benefits across all the groups, and decide whether the response is worth it. Different people may weigh them differently."
+  ],
+  "remember": "List the costs and benefits for each group affected, then weigh them up.",
+  "a": {
+   "q": "A council bans cars from a shopping street. What is the best way to start judging this response?",
+   "opts": [
+    "List the likely costs and benefits for each group affected",
+    "Ask only the shoppers whether they like the idea",
+    "Count how many people walk down the street each day",
+    "Check whether other councils have banned cars too"
+   ],
+   "why": "Judging a response means listing its likely costs and benefits for each group, such as shoppers, drivers and shop owners, then weighing them up. Asking only shoppers is tempting, but it leaves out the other groups who are affected.",
+   "clue": "Think about everyone the ban touches, not just one group."
+  },
+  "b": {
+   "d": 3,
+   "q": "A town in Victoria is told that a new dairy factory will open. It will give jobs to local workers, but its trucks will add noise to nearby homes. Which step is still needed to judge this response?",
+   "opts": [
+    "Weigh up the costs and benefits for all groups affected",
+    "Count only the jobs, because jobs are the main benefit",
+    "Count only the noise, because costs matter more than gains",
+    "Decide that the factory is good because it brings jobs"
+   ],
+   "why": "The jobs are a benefit for workers and the noise is a cost for residents. Judging the response means weighing both across all the groups. Looking at only the jobs or only the noise ignores part of the picture.",
+   "clue": "One group gains and another loses, so what must you do with both?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "List the likely costs and benefits for each group affected",
+   "also_right": []
+  },
+  "b": {
+   "best": "Weigh up the costs and benefits for all groups affected",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The scenario is not clearly a 'response' as the card defines it (an action someone takes to deal with an economic or business issue). A town being told a dairy factory will open names no issue and no one responding to it, so students may be unsure what they are judging. Frame it as, for example, a council approving a factory to create local jobs."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The answers and explanations match the card. Question b's scenario is not clearly a response to an issue as the card defines one, because it names no issue and no one acting on it, so it should be reframed."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The scenario is not clearly a 'response' as the card defines it (an action someone takes to deal with an economic or business issue). A town being told a dairy factory will open names no issue and no one responding to it, so students may be unsure what they are judging. Frame it as, for example, a council approving a factory to create local jobs."
+ ],
+ "proposal": {
+  "title": "Analysing a response to an issue",
+  "card": [
+   "A response is an action someone takes to deal with an economic or business issue. A government might make a new rule. A business might change its prices.",
+   "Most responses affect different groups in different ways. List the groups affected, such as consumers, workers, businesses and the government.",
+   "For each group, list the likely costs and the likely benefits. A cost is something a group gives up or loses. A benefit is something a group gains.",
+   "Then weigh them up. Compare the costs and benefits across all the groups, and decide whether the response is worth it. Different people may weigh them differently."
+  ],
+  "remember": "List the costs and benefits for each group affected, then weigh them up.",
+  "a": {
+   "q": "A council bans cars from a shopping street. What is the best way to start judging this response?",
+   "opts": [
+    "List the likely costs and benefits for each group affected",
+    "Ask only the shoppers whether they like the idea",
+    "Count how many people walk down the street each day",
+    "Check whether other councils have banned cars too"
+   ],
+   "why": "Judging a response means listing its likely costs and benefits for each group, such as shoppers, drivers and shop owners, then weighing them up. Asking only shoppers is tempting, but it leaves out the other groups who are affected.",
+   "clue": "Think about everyone the ban touches, not just one group."
+  },
+  "b": {
+   "d": 3,
+   "q": "Few jobs are available in a Victorian town, so the council approves a new dairy factory to create local jobs. The factory will employ local workers, but its trucks will add noise near homes. Which step is still needed to judge this response?",
+   "opts": [
+    "Weigh up the costs and benefits for all groups affected",
+    "Count only the jobs, because jobs are the main benefit",
+    "Count only the noise, because costs matter more than gains",
+    "Decide the factory is good because it brings jobs"
+   ],
+   "why": "The council's approval is the response. The jobs are a benefit for workers and the noise is a cost for nearby residents. Judging the response means weighing both across all the groups, so looking at only the jobs or only the noise ignores part of the picture.",
+   "clue": "One group gains and another loses, so what must you do with both?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:51Z",
+  "rules": 1,
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The scenario is not clearly a 'response' as the card defines it (an action someone takes to deal with an economic or business issue). A town being told a dairy factory will open names no issue and no one responding to it, so students may be unsure what they are judging. Frame it as, for example, a council approving a factory to create local jobs."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The scenario is not clearly a 'response' as the card defines it (an action someone takes to deal with an economic or business issue). A town being told a dairy factory will open names no issue and no one responding to it, so students may be unsure what they are judging. Frame it as, for example, a council approving a factory to create local jobs."
+  ]
+ },
+ "final": {
+  "title": "Analysing a response to an issue",
+  "card": [
+   "A response is an action someone takes to deal with an economic or business issue. A government might make a new rule. A business might change its prices.",
+   "Most responses affect different groups in different ways. List the groups affected, such as consumers, workers, businesses and the government.",
+   "For each group, list the likely costs and the likely benefits. A cost is something a group gives up or loses. A benefit is something a group gains.",
+   "Then weigh them up. Compare the costs and benefits across all the groups, and decide whether the response is worth it. Different people may weigh them differently."
+  ],
+  "remember": "List the costs and benefits for each group affected, then weigh them up.",
+  "a": {
+   "q": "A council bans cars from a shopping street. What is the best way to start judging this response?",
+   "opts": [
+    "List the likely costs and benefits for each group affected",
+    "Ask only the shoppers whether they like the idea",
+    "Count how many people walk down the street each day",
+    "Check whether other councils have banned cars too"
+   ],
+   "why": "Judging a response means listing its likely costs and benefits for each group, such as shoppers, drivers and shop owners, then weighing them up. Asking only shoppers is tempting, but it leaves out the other groups who are affected.",
+   "clue": "Think about everyone the ban touches, not just one group."
+  },
+  "b": {
+   "d": 3,
+   "q": "Few jobs are available in a Victorian town, so the council approves a new dairy factory to create local jobs. The factory will employ local workers, but its trucks will add noise near homes. Which step is still needed to judge this response?",
+   "opts": [
+    "Weigh up the costs and benefits for all groups affected",
+    "Count only the jobs, because jobs are the main benefit",
+    "Count only the noise, because costs matter more than gains",
+    "Decide the factory is good because it brings jobs"
+   ],
+   "why": "The council's approval is the response. The jobs are a benefit for workers and the noise is a cost for nearby residents. Judging the response means weighing both across all the groups, so looking at only the jobs or only the noise ignores part of the picture.",
+   "clue": "One group gains and another loses, so what must you do with both?"
+  }
+ },
+ "cleared_by": "auto"
+}

@@ -1,0 +1,194 @@
+{
+ "id": "geo-embodied-carbon-trade",
+ "title": "Embodied carbon in trade",
+ "brief": "38d7348f5fb1",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:49Z new, write",
+  "2026-11-12T15:05:56Z write: done",
+  "2026-11-12T15:15:42Z check: flagged",
+  "2026-11-12T15:26:01Z fix: suggested",
+  "2026-11-12T17:07:11Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-13T15:03:50Z autoreview: undone, back to the review list",
+  "2026-11-13T15:21:06Z review: approved with the fix"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.03222,
+  "check": 0.01137,
+  "fix": 0.01483,
+  "recheck": 0.00759
+ },
+ "draft": {
+  "title": "Embodied carbon in trade",
+  "card": [
+   "Embodied carbon is the emissions released in making and moving a product. This covers mining, factory energy and shipping.",
+   "The emissions are counted in the country where the product is made, not where it is used.",
+   "So when a country imports goods, the emissions from making them appear in the exporting country's totals.",
+   "This can make a country that imports many goods look cleaner than its buying habits really are."
+  ],
+  "remember": "Embodied carbon is counted where a product is made, not where it is used.",
+  "a": {
+   "q": "A shop in Geelong sells a jacket made in Vietnam. Where are the emissions from making it counted?",
+   "opts": [
+    "In Vietnam, where it was made",
+    "In Australia, where it is sold",
+    "Half in each country",
+    "In neither country"
+   ],
+   "why": "Emissions from making a product are counted in the country that made it. Australia is wrong because the jacket's buyer is not where the emissions were released.",
+   "clue": "Where did the factory stand?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Country X closes its factories and imports most of its goods from Asia. What is likely to happen to the emissions that X reports?",
+   "opts": [
+    "They fall, though its buying may not have changed",
+    "They rise, because it now buys more goods",
+    "They stay the same, because the goods are the same",
+    "They fall, because it now buys fewer goods"
+   ],
+   "why": "Emissions from making the goods are now counted in the exporting countries, so X's reported total falls. The last option is wrong because the scenario says nothing about buying less.",
+   "clue": "Ask where the factory emissions are counted now."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "In Vietnam, where it was made",
+   "also_right": []
+  },
+  "b": {
+   "best": "They fall, though its buying may not have changed",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says embodied carbon covers shipping, then says 'the emissions' are counted in the country where the product is made. Under national (UNFCCC) reporting, emissions from international shipping fuel are reported separately and are not counted in the exporting country's totals. Either limit the counting line to the emissions from making the product, or note that international shipping is reported separately."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "Both questions are sound and match the card. One card line implies international shipping emissions are counted in the maker country's totals, but under national reporting they are reported separately, so the counting line needs narrowing."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says embodied carbon covers shipping, then says 'the emissions' are counted in the country where the product is made. Under national (UNFCCC) reporting, emissions from international shipping fuel are reported separately and are not counted in the exporting country's totals. Either limit the counting line to the emissions from making the product, or note that international shipping is reported separately."
+ ],
+ "proposal": {
+  "title": "Embodied carbon in trade",
+  "card": [
+   "Embodied carbon is the emissions released in making and moving a product. This covers mining, factory energy and shipping.",
+   "Emissions from making a product are counted in the country where it is made, not where it is used. Emissions from international shipping are reported separately, outside any one country's total.",
+   "So when a country imports goods, the emissions from making them appear in the exporting country's totals.",
+   "This can make a country that imports many goods look cleaner than its buying habits really are."
+  ],
+  "remember": "Making emissions count where a product is made, not where it is used.",
+  "a": {
+   "q": "A shop in Geelong sells a jacket made in Vietnam. Where are the emissions from making it counted?",
+   "opts": [
+    "In Vietnam, where it was made",
+    "In Australia, where it is sold",
+    "Split evenly between the two countries",
+    "In neither country, as it was traded"
+   ],
+   "why": "Emissions from making a product are counted in the country that made it, so they go in Vietnam's total. Australia is wrong because selling or using the jacket there does not move the making emissions into Australia's total.",
+   "clue": "Where did the factory stand?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Country X closes its factories and imports most of its goods from Asia. What is likely to happen to the emissions that X reports?",
+   "opts": [
+    "They fall, though its buying may not have changed",
+    "They rise, because it now buys more goods",
+    "They stay the same, because the goods are the same",
+    "They fall, because it now buys fewer goods"
+   ],
+   "why": "Emissions from making the goods are now counted in the exporting countries, so X's reported total falls. The last option is wrong because the scenario says nothing about buying less: the fall comes from where the goods are made.",
+   "clue": "Ask where the factory emissions are counted now."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:11Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "In Vietnam, where it was made",
+    "also_right": []
+   },
+   "b": {
+    "best": "They fall, though its buying may not have changed",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto_undone": {
+  "at": "2026-11-12T17:07:11Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says embodied carbon covers shipping, then says 'the emissions' are counted in the country where the product is made. Under national (UNFCCC) reporting, emissions from international shipping fuel are reported separately and are not counted in the exporting country's totals. Either limit the counting line to the emissions from making the product, or note that international shipping is reported separately."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card says embodied carbon covers shipping, then says 'the emissions' are counted in the country where the product is made. Under national (UNFCCC) reporting, emissions from international shipping fuel are reported separately and are not counted in the exporting country's totals. Either limit the counting line to the emissions from making the product, or note that international shipping is reported separately."
+  ],
+  "undone": "2026-11-13T15:03:50Z"
+ },
+ "final": {
+  "title": "Embodied carbon in trade",
+  "card": [
+   "Embodied carbon is the emissions released in making and moving a product. This covers mining, factory energy and shipping.",
+   "Emissions from making a product are counted in the country where it is made, not where it is used. Emissions from international shipping are reported separately, outside any one country's total.",
+   "So when a country imports goods, the emissions from making them appear in the exporting country's totals.",
+   "This can make a country that imports many goods look cleaner than its buying habits really are."
+  ],
+  "remember": "Making emissions count where a product is made, not where it is used.",
+  "a": {
+   "q": "A shop in Geelong sells a jacket made in Vietnam. Where are the emissions from making it counted?",
+   "opts": [
+    "In Vietnam, where it was made",
+    "In Australia, where it is sold",
+    "Split evenly between the two countries",
+    "In neither country, as it was traded"
+   ],
+   "why": "Emissions from making a product are counted in the country that made it, so they go in Vietnam's total. Australia is wrong because selling or using the jacket there does not move the making emissions into Australia's total.",
+   "clue": "Where did the factory stand?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Country X closes its factories and imports most of its goods from Asia. What is likely to happen to the emissions that X reports?",
+   "opts": [
+    "They fall, though its buying may not have changed",
+    "They rise, because it now buys more goods",
+    "They stay the same, because the goods are the same",
+    "They fall, because it now buys fewer goods"
+   ],
+   "why": "Emissions from making the goods are now counted in the exporting countries, so X's reported total falls. The last option is wrong because the scenario says nothing about buying less: the fall comes from where the goods are made.",
+   "clue": "Ask where the factory emissions are counted now."
+  }
+ },
+ "cleared_by": "owner"
+}

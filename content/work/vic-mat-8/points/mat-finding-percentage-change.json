@@ -1,0 +1,376 @@
+{
+ "id": "mat-finding-percentage-change",
+ "title": "Finding a percentage change",
+ "brief": "44ba712f35c8",
+ "shortlist": [
+  [
+   "mat-percentage-increase-decrease-2-ac",
+   0.602
+  ],
+  [
+   "mat-percentage-quantity",
+   0.536
+  ],
+  [
+   "mat-profit-loss-percentage-change",
+   0.477
+  ],
+  [
+   "mat-discounts-price-increases",
+   0.418
+  ],
+  [
+   "mat-converting-fractions-decimals-percentages",
+   0.358
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:54Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:06:01Z write: failed the content check, writing again",
+  "2026-11-12T15:15:51Z write: done",
+  "2026-11-12T15:26:05Z check: flagged",
+  "2026-11-12T15:35:10Z fix: suggested",
+  "2026-11-12T16:19:54Z autoreview: picked as a spot check. It would have been cleared with the fix (b other)",
+  "2026-11-13T12:13:15Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.02581,
+  "check": 0.00845,
+  "fix": 0.01585
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Profit, loss and percentage change, teaches the same formula but only within profit and loss, so it is narrower than the general percentage change point and would need a new step to fit this course.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Finding a percentage change",
+  "card": [
+   "A percentage change compares the change in an amount with the original amount. Find the change first: new amount minus original amount.",
+   "Divide the change by the original amount, then multiply by 100. The result is a percentage increase if the change is positive, and a percentage decrease if it is negative.",
+   "Worked example: a game falls from $50 to $40. The change is \\(40 - 50 = -10\\). Then \\(\\frac{-10}{50} \\times 100 = -20\\), so it is a 20% decrease.",
+   "Always divide by the original amount, not the new one. A rise from $40 to $50 is \\(\\frac{10}{40} \\times 100 = 25\\%\\)."
+  ],
+  "remember": "Divide the change by the original amount, then multiply by 100.",
+  "a": {
+   "q": "A bike's price rises from $200 to $250. What is the percentage increase?",
+   "opts": [
+    "25%",
+    "20%",
+    "50%",
+    "125%"
+   ],
+   "why": "The change is \\(250 - 200 = 50\\). Then \\(\\frac{50}{200} \\times 100 = 25\\%\\). The tempting 20% comes from dividing by the new amount, $250, instead of the original.",
+   "clue": "Divide the change by the starting price."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tia's weekly screen time drops from 20 hours to 15 hours. What is the percentage decrease?",
+   "opts": [
+    "25%",
+    "5%",
+    "33%",
+    "75%"
+   ],
+   "why": "The change is \\(20 - 15 = 5\\) hours. Then \\(\\frac{5}{20} \\times 100 = 25\\%\\). The 33% comes from dividing by 15, the new amount, but the original is 20.",
+   "clue": "Which amount did Tia start with?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "25%",
+   "also_right": []
+  },
+  "b": {
+   "best": "25%",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why works out the change as 20 − 15 = 5. The card defines the change as new amount minus original amount, which gives 15 − 20 = −5, and says a negative change means a decrease. The why should follow the card's method: −5 ÷ 20 × 100 = −25, so a 25% decrease."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct (25% each), and the distractors are sound. One small inconsistency: why (b) works out the change as original minus new (5), but the card defines it as new minus original (−5)."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The why works out the change as 20 − 15 = 5. The card defines the change as new amount minus original amount, which gives 15 − 20 = −5, and says a negative change means a decrease. The why should follow the card's method: −5 ÷ 20 × 100 = −25, so a 25% decrease."
+ ],
+ "proposal": {
+  "title": "Finding a percentage change",
+  "card": [
+   "A percentage change compares the change in an amount with the original amount. Find the change first: new amount minus original amount.",
+   "Divide the change by the original amount, then multiply by 100. The result is a percentage increase if the change is positive, and a percentage decrease if it is negative.",
+   "Worked example: a game falls from $50 to $40. The change is \\(40 - 50 = -10\\). Then \\(\\frac{-10}{50} \\times 100 = -20\\), so it is a 20% decrease.",
+   "Always divide by the original amount, not the new one. A rise from $40 to $50 is \\(\\frac{10}{40} \\times 100 = 25\\%\\)."
+  ],
+  "remember": "Divide the change by the original amount, then multiply by 100.",
+  "a": {
+   "q": "A bike's price rises from $200 to $250. What is the percentage increase?",
+   "opts": [
+    "25%",
+    "20%",
+    "50%",
+    "125%"
+   ],
+   "why": "The change is \\(250 - 200 = 50\\). Then \\(\\frac{50}{200} \\times 100 = 25\\%\\). The tempting 20% comes from dividing by the new amount, $250, instead of the original.",
+   "clue": "Divide the change by the starting price."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tia's weekly screen time drops from 20 hours to 15 hours. What is the percentage decrease?",
+   "opts": [
+    "25%",
+    "5%",
+    "33%",
+    "75%"
+   ],
+   "why": "The change is \\(15 - 20 = -5\\) hours. Then \\(\\frac{-5}{20} \\times 100 = -25\\), so it is a 25% decrease. The 33% comes from dividing by 15, the new amount, but the original is 20.",
+   "clue": "Which amount did Tia start with?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:54Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why works out the change as 20 − 15 = 5. The card defines the change as new amount minus original amount, which gives 15 − 20 = −5, and says a negative change means a decrease. The why should follow the card's method: −5 ÷ 20 × 100 = −25, so a 25% decrease."
+   }
+  ],
+  "flags": [
+   "Question b, other: The why works out the change as 20 − 15 = 5. The card defines the change as new amount minus original amount, which gives 15 − 20 = −5, and says a negative change means a decrease. The why should follow the card's method: −5 ÷ 20 × 100 = −25, so a 25% decrease."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Finding a percentage change",
+  "card": [
+   "A percentage change compares the change in an amount with the original amount. Find the change first: new amount minus original amount.",
+   "Divide the change by the original amount, then multiply by 100. The result is a percentage increase if the change is positive, and a percentage decrease if it is negative.",
+   "Worked example: a game falls from $50 to $40. The change is \\(40 - 50 = -10\\). Then \\(\\frac{-10}{50} \\times 100 = -20\\), so it is a 20% decrease.",
+   "Always divide by the original amount, not the new one. A rise from $40 to $50 is \\(\\frac{10}{40} \\times 100 = 25\\%\\)."
+  ],
+  "remember": "Divide the change by the original amount, then multiply by 100.",
+  "a": {
+   "q": "A bike's price rises from $200 to $250. What is the percentage increase?",
+   "opts": [
+    "25%",
+    "20%",
+    "50%",
+    "125%"
+   ],
+   "why": "The change is \\(250 - 200 = 50\\). Then \\(\\frac{50}{200} \\times 100 = 25\\%\\). The tempting 20% comes from dividing by the new amount, $250, instead of the original.",
+   "clue": "Divide the change by the starting price."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tia's weekly screen time drops from 20 hours to 15 hours. What is the percentage decrease?",
+   "opts": [
+    "25%",
+    "5%",
+    "33%",
+    "75%"
+   ],
+   "why": "The change is \\(15 - 20 = -5\\) hours. Then \\(\\frac{-5}{20} \\times 100 = -25\\), so it is a 25% decrease. The 33% comes from dividing by 15, the new amount, but the original is 20.",
+   "clue": "Which amount did Tia start with?"
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix makes why (b) follow the card's method, new minus original, giving -25 and so a 25% decrease. Every number checks out and nothing else changed.",
+   "item": "f3d9d359541ad030",
+   "result": "decided",
+   "saved": {
+    "id": "mat-finding-percentage-change",
+    "title": "Finding a percentage change",
+    "brief": "44ba712f35c8",
+    "shortlist": [
+     [
+      "mat-percentage-increase-decrease-2-ac",
+      0.602
+     ],
+     [
+      "mat-percentage-quantity",
+      0.536
+     ],
+     [
+      "mat-profit-loss-percentage-change",
+      0.477
+     ],
+     [
+      "mat-discounts-price-increases",
+      0.418
+     ],
+     [
+      "mat-converting-fractions-decimals-percentages",
+      0.358
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 1
+    },
+    "usd": {
+     "match": 0.00025,
+     "write": 0.02581,
+     "check": 0.00845,
+     "fix": 0.01585
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The closest bank point, Profit, loss and percentage change, teaches the same formula but only within profit and loss, so it is narrower than the general percentage change point and would need a new step to fit this course.",
+     "model": "claude-haiku-5-5"
+    },
+    "draft": {
+     "title": "Finding a percentage change",
+     "card": [
+      "A percentage change compares the change in an amount with the original amount. Find the change first: new amount minus original amount.",
+      "Divide the change by the original amount, then multiply by 100. The result is a percentage increase if the change is positive, and a percentage decrease if it is negative.",
+      "Worked example: a game falls from $50 to $40. The change is \\(40 - 50 = -10\\). Then \\(\\frac{-10}{50} \\times 100 = -20\\), so it is a 20% decrease.",
+      "Always divide by the original amount, not the new one. A rise from $40 to $50 is \\(\\frac{10}{40} \\times 100 = 25\\%\\)."
+     ],
+     "remember": "Divide the change by the original amount, then multiply by 100.",
+     "a": {
+      "q": "A bike's price rises from $200 to $250. What is the percentage increase?",
+      "opts": [
+       "25%",
+       "20%",
+       "50%",
+       "125%"
+      ],
+      "why": "The change is \\(250 - 200 = 50\\). Then \\(\\frac{50}{200} \\times 100 = 25\\%\\). The tempting 20% comes from dividing by the new amount, $250, instead of the original.",
+      "clue": "Divide the change by the starting price."
+     },
+     "b": {
+      "d": 3,
+      "q": "Tia's weekly screen time drops from 20 hours to 15 hours. What is the percentage decrease?",
+      "opts": [
+       "25%",
+       "5%",
+       "33%",
+       "75%"
+      ],
+      "why": "The change is \\(20 - 15 = 5\\) hours. Then \\(\\frac{5}{20} \\times 100 = 25\\%\\). The 33% comes from dividing by 15, the new amount, but the original is 20.",
+      "clue": "Which amount did Tia start with?"
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "25%",
+      "also_right": []
+     },
+     "b": {
+      "best": "25%",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The why works out the change as 20 − 15 = 5. The card defines the change as new amount minus original amount, which gives 15 − 20 = −5, and says a negative change means a decrease. The why should follow the card's method: −5 ÷ 20 × 100 = −25, so a 25% decrease."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both answers are correct (25% each), and the distractors are sound. One small inconsistency: why (b) works out the change as original minus new (5), but the card defines it as new minus original (−5)."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question b, other: The why works out the change as 20 − 15 = 5. The card defines the change as new amount minus original amount, which gives 15 − 20 = −5, and says a negative change means a decrease. The why should follow the card's method: −5 ÷ 20 × 100 = −25, so a 25% decrease."
+    ],
+    "proposal": {
+     "title": "Finding a percentage change",
+     "card": [
+      "A percentage change compares the change in an amount with the original amount. Find the change first: new amount minus original amount.",
+      "Divide the change by the original amount, then multiply by 100. The result is a percentage increase if the change is positive, and a percentage decrease if it is negative.",
+      "Worked example: a game falls from $50 to $40. The change is \\(40 - 50 = -10\\). Then \\(\\frac{-10}{50} \\times 100 = -20\\), so it is a 20% decrease.",
+      "Always divide by the original amount, not the new one. A rise from $40 to $50 is \\(\\frac{10}{40} \\times 100 = 25\\%\\)."
+     ],
+     "remember": "Divide the change by the original amount, then multiply by 100.",
+     "a": {
+      "q": "A bike's price rises from $200 to $250. What is the percentage increase?",
+      "opts": [
+       "25%",
+       "20%",
+       "50%",
+       "125%"
+      ],
+      "why": "The change is \\(250 - 200 = 50\\). Then \\(\\frac{50}{200} \\times 100 = 25\\%\\). The tempting 20% comes from dividing by the new amount, $250, instead of the original.",
+      "clue": "Divide the change by the starting price."
+     },
+     "b": {
+      "d": 3,
+      "q": "Tia's weekly screen time drops from 20 hours to 15 hours. What is the percentage decrease?",
+      "opts": [
+       "25%",
+       "5%",
+       "33%",
+       "75%"
+      ],
+      "why": "The change is \\(15 - 20 = -5\\) hours. Then \\(\\frac{-5}{20} \\times 100 = -25\\), so it is a 25% decrease. The 33% comes from dividing by 15, the new amount, but the original is 20.",
+      "clue": "Which amount did Tia start with?"
+     }
+    },
+    "proposal_problems": [],
+    "auto": {
+     "at": "2026-11-12T16:19:54Z",
+     "rules": 1,
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The why works out the change as 20 − 15 = 5. The card defines the change as new amount minus original amount, which gives 15 − 20 = −5, and says a negative change means a decrease. The why should follow the card's method: −5 ÷ 20 × 100 = −25, so a 25% decrease."
+      }
+     ],
+     "flags": [
+      "Question b, other: The why works out the change as 20 − 15 = 5. The card defines the change as new amount minus original amount, which gives 15 − 20 = −5, and says a negative change means a decrease. The why should follow the card's method: −5 ÷ 20 × 100 = −25, so a 25% decrease."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "7819c9e863c79ebe"
+  }
+ ]
+}

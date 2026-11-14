@@ -1,0 +1,240 @@
+{
+ "id": "geo-australia-s-aid-program",
+ "title": "Australia's aid program",
+ "brief": "ddcf82992c5d",
+ "shortlist": [
+  [
+   "geo-australian-overseas-aid",
+   0.677
+  ],
+  [
+   "hhd-australia-s-aid-program",
+   0.235
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:49Z new, match",
+  "2026-11-12T12:44:18Z match: Claude Haiku 5.5 says adapt geo-australian-overseas-aid (1 change)",
+  "2026-11-12T15:15:43Z adapt: done",
+  "2026-11-12T15:26:00Z check: flagged",
+  "2026-11-12T15:35:07Z fix: suggested",
+  "2026-11-12T17:07:11Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-13T15:03:50Z autoreview: undone, back to the review list",
+  "2026-11-13T15:22:38Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "adapt": 0.006,
+  "check": 0.01533,
+  "fix": 0.04536,
+  "recheck": 0.00716
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-australian-overseas-aid",
+  "changes": [
+   "Add economic growth as an area Australian aid supports, since the new point's brief lists it and the card does not mention it."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same idea at the right Year 10 depth, and its questions are fair, but it needs a small addition to cover economic growth as an aid area.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "geo-australian-overseas-aid",
+  "changes": [
+   "Add economic growth as an area Australian aid supports, since the new point's brief lists it and the card does not mention it."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "card3",
+   "remember",
+   "a.q",
+   "a.opt1",
+   "a.opt2",
+   "a.opt3",
+   "a.opt4",
+   "a.why",
+   "b.q",
+   "b.opt1",
+   "b.opt2",
+   "b.opt3",
+   "b.opt4",
+   "b.why",
+   "b.clue"
+  ]
+ },
+ "draft": {
+  "title": "Australian overseas aid",
+  "card": [
+   "Overseas aid is money, goods, skills and services that one country gives to another to improve wellbeing. The Australian Government pays for Australia's aid from the federal budget, which comes mostly from taxes.",
+   "Most of Australia's aid goes to countries in the Indo-Pacific region, which includes Southeast Asia and the Pacific islands. These are close neighbours, and many have lower incomes.",
+   "Aid is spent on health, education, disaster recovery and economic growth. Examples are vaccination programs, school teacher training, rebuilding after a cyclone, and roads and ports that help trade and jobs.",
+   "Aid is one way to lift wellbeing in other countries. It is given by a government, so it is different from money raised by charities."
+  ],
+  "remember": "Australian aid is government support, mostly to Asia and the Pacific, for health, education, disaster recovery and economic growth.",
+  "a": {
+   "q": "Which situation shows Australian overseas aid?",
+   "opts": [
+    "The Australian Government pays for a clinic in Vanuatu",
+    "A charity runs a sponsor-a-child appeal in Australia",
+    "A Queensland council builds a new local swimming pool",
+    "An Australian company opens a factory in Indonesia"
+   ],
+   "why": "Overseas aid is given by the Australian Government to another country to improve wellbeing, and a clinic in Vanuatu fits this. A charity appeal is tempting, but charities are not the government, so it is not Australian Government aid.",
+   "clue": "Who gives the aid, and where does it go?"
+  },
+  "b": {
+   "d": 3,
+   "q": "The federal budget pays for a new port in Tonga to help trade and jobs. Which area of aid is this, and who gives it?",
+   "opts": [
+    "Economic growth, given by the Australian Government",
+    "Economic growth, given by Australian charities",
+    "Disaster recovery, given by the Australian Government",
+    "Education, given by Australian charities"
+   ],
+   "why": "A port that helps trade and jobs supports economic growth, and money from the federal budget means the Australian Government gives it. Disaster recovery is tempting, but no disaster is described. Charities raise their own money rather than spending the federal budget.",
+   "clue": "What does the port help, and whose money pays for it?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The Australian Government pays for a clinic in Vanuatu",
+   "also_right": []
+  },
+  "b": {
+   "best": "Economic growth, given by the Australian Government",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The last line says aid 'is given by a government, so it is different from money raised by charities'. In geography, overseas aid also includes non-government aid, and point 2 of this chapter says NGOs run aid projects. The line should limit itself to Australian Government aid, for example 'Government aid is different from money raised by charities', not define all aid as coming from governments."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer and the facts about Australia's Indo-Pacific aid focus are correct. One card line implies all aid comes from governments, which clashes with the NGO aid point in the same chapter and should be reworded to refer only to government aid."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The last line says aid 'is given by a government, so it is different from money raised by charities'. In geography, overseas aid also includes non-government aid, and point 2 of this chapter says NGOs run aid projects. The line should limit itself to Australian Government aid, for example 'Government aid is different from money raised by charities', not define all aid as coming from governments."
+ ],
+ "proposal": {
+  "title": "Australia's aid program",
+  "card": [
+   "Australia's aid program is the help the Australian Government gives other countries to improve wellbeing. It can be money, goods, skills or services, paid for from the federal budget, which comes mostly from taxes.",
+   "Most of Australia's aid goes to countries in the Indo-Pacific region, which includes Southeast Asia and the Pacific islands. These are close neighbours, and many have lower incomes.",
+   "The aid is spent on health, education, disaster relief and economic growth. Examples are vaccination programs, teacher training, rebuilding after a cyclone, and roads and ports that help trade and jobs.",
+   "Government aid is one way to lift wellbeing in other countries. It is different from money that charities raise from the public."
+  ],
+  "remember": "Australia's aid program is government support, mostly to the Indo-Pacific, for health, education, disaster relief and economic growth.",
+  "a": {
+   "q": "Which situation is part of Australia's aid program?",
+   "opts": [
+    "The federal budget pays for a clinic in Vanuatu",
+    "A charity raises money for a clinic in Vanuatu",
+    "A Victorian council builds a local swimming pool",
+    "An Australian company opens a factory in Indonesia"
+   ],
+   "why": "Australia's aid program is paid for by the Australian Government from the federal budget, and a clinic in Vanuatu helps wellbeing in another country. The charity option is tempting, but money a charity raises from the public is not government aid.",
+   "clue": "Whose money pays for it, and where does it go?"
+  },
+  "b": {
+   "d": 3,
+   "q": "The federal budget pays for a new port in Tonga to help trade and jobs. Which area of aid is this, and who gives it?",
+   "opts": [
+    "Economic growth, given by the Australian Government",
+    "Economic growth, given by Australian charities",
+    "Disaster relief, given by the Australian Government",
+    "Education, given by Australian charities"
+   ],
+   "why": "A port that helps trade and jobs supports economic growth, and money from the federal budget means the Australian Government gives it. Disaster relief is tempting, but no disaster is described. Charities raise money from the public rather than spending the federal budget.",
+   "clue": "What does the port help, and whose money pays for it?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:11Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The federal budget pays for a clinic in Vanuatu",
+    "also_right": []
+   },
+   "b": {
+    "best": "Economic growth, given by the Australian Government",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto_undone": {
+  "at": "2026-11-12T17:07:11Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 16,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The last line says aid 'is given by a government, so it is different from money raised by charities'. In geography, overseas aid also includes non-government aid, and point 2 of this chapter says NGOs run aid projects. The line should limit itself to Australian Government aid, for example 'Government aid is different from money raised by charities', not define all aid as coming from governments."
+   }
+  ],
+  "flags": [
+   "Card, fact: The last line says aid 'is given by a government, so it is different from money raised by charities'. In geography, overseas aid also includes non-government aid, and point 2 of this chapter says NGOs run aid projects. The line should limit itself to Australian Government aid, for example 'Government aid is different from money raised by charities', not define all aid as coming from governments."
+  ],
+  "undone": "2026-11-13T15:03:50Z"
+ },
+ "final": {
+  "title": "Australia's aid program",
+  "card": [
+   "Australia's aid program is the help the Australian Government gives other countries to improve wellbeing. It can be money, goods, skills or services, paid for from the federal budget, which comes mostly from taxes.",
+   "Most of Australia's aid goes to countries in the Indo-Pacific region, which includes Southeast Asia and the Pacific islands. These are close neighbours, and many have lower incomes.",
+   "The aid is spent on health, education, disaster relief and economic growth. Examples are vaccination programs, teacher training, rebuilding after a cyclone, and roads and ports that help trade and jobs.",
+   "Government aid is one way to lift wellbeing in other countries. It is different from money that charities raise from the public."
+  ],
+  "remember": "Australia's aid program is government support, mostly to the Indo-Pacific, for health, education, disaster relief and economic growth.",
+  "a": {
+   "q": "Which situation is part of Australia's aid program?",
+   "opts": [
+    "The federal budget pays for a clinic in Vanuatu",
+    "A charity raises money for a clinic in Vanuatu",
+    "A Victorian council builds a local swimming pool",
+    "An Australian company opens a factory in Indonesia"
+   ],
+   "why": "Australia's aid program is paid for by the Australian Government from the federal budget, and a clinic in Vanuatu helps wellbeing in another country. The charity option is tempting, but money a charity raises from the public is not government aid.",
+   "clue": "Whose money pays for it, and where does it go?"
+  },
+  "b": {
+   "d": 3,
+   "q": "The federal budget pays for a new port in Tonga to help trade and jobs. Which area of aid is this, and who gives it?",
+   "opts": [
+    "Economic growth, given by the Australian Government",
+    "Economic growth, given by Australian charities",
+    "Disaster relief, given by the Australian Government",
+    "Education, given by Australian charities"
+   ],
+   "why": "A port that helps trade and jobs supports economic growth, and money from the federal budget means the Australian Government gives it. Disaster relief is tempting, but no disaster is described. Charities raise money from the public rather than spending the federal budget.",
+   "clue": "What does the port help, and whose money pays for it?"
+  }
+ },
+ "cleared_by": "owner"
+}

@@ -1,0 +1,433 @@
+{
+ "id": "ecb-checking-sources",
+ "title": "Checking sources",
+ "brief": "e6773e20939e",
+ "shortlist": [
+  [
+   "ecb-finding-organising-information",
+   0.392
+  ],
+  [
+   "his-comparing-sources-check-accuracy",
+   0.316
+  ],
+  [
+   "ecb-relevant-reliable-sources",
+   0.292
+  ],
+  [
+   "ecb-spotting-bias-source",
+   0.275
+  ],
+  [
+   "his-accuracy-usefulness-source",
+   0.23
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:44Z new, match",
+  "2026-11-12T12:44:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:32Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:25:55Z write: failed the content check, writing again",
+  "2026-11-12T15:35:03Z write: done",
+  "2026-11-12T15:59:41Z check: flagged",
+  "2026-11-12T16:02:55Z fix: suggested",
+  "2026-11-12T17:07:10Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-13T06:06:33Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-13T09:32:51Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T10:40:35Z claude-code check: answered by a separate subagent",
+  "2026-11-13T10:40:35Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.01422,
+  "check": 0.01171,
+  "fix": 0.02115,
+  "recheck": 0.00941
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches the full checklist of who made a source, when, why, and whether other sources agree; the closest, Finding and organising information, covers who and when but is broader and omits the cross-checking step, while Spotting bias in a source is pitched at Year 10.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The right option says to find newer sources 'with the same figures'. That reads as looking only for sources that already agree, which is a biased search, and newer wage figures would likely differ from 2009 ones. Better: 'Find newer sources by known authors and compare their figures'.",
+ "rejected": {
+  "title": "Checking sources",
+  "card": [
+   "A source is where information comes from, such as a website, a news article, a report or a video. Not every source is accurate or fair, so check it before you use it.",
+   [
+    "Who and when",
+    "Who made it? Look for an author or organisation that knows the topic, and ask whether they gain if you believe it. When was it made? Prices, wages and laws change, so an old source may be out of date."
+   ],
+   [
+    "Why",
+    "Why was it made? A source may aim to inform, to sell a product or to persuade. A source made to sell or persuade may leave out facts that do not suit it."
+   ],
+   [
+    "Agree",
+    "Do other sources agree? If several separate, reliable sources give the same facts, you can trust them more."
+   ]
+  ],
+  "remember": "Check who, when and why, then see whether other sources agree.",
+  "a": {
+   "q": "Ben finds a 2012 report on average weekly rent in Melbourne. A statistics office wrote it to inform the public, and two other reports from 2012 give the same figures. Which check raises the most doubt about using it today?",
+   "opts": [
+    "When: rents may have changed a lot since 2012",
+    "Who: a statistics office may not know about rents",
+    "Why: the report may be trying to sell homes",
+    "Agree: the other reports may give different figures"
+   ],
+   "why": "The report is more than ten years old, and rents change over time, so its figures may be out of date. The other checks pass: a statistics office knows the topic, it was made to inform rather than to sell, and other reports give the same figures.",
+   "clue": "Look for the one check the report does not clearly pass."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is researching how much teenagers in Geelong earn from part-time jobs. She finds a 2009 blog post by an unnamed writer with no other sources. Which step would best help her judge whether to use it?",
+   "opts": [
+    "Find newer sources by known authors with the same figures",
+    "Check that the blog post is easy to read and has pictures",
+    "Count how many times the blog post has been shared online",
+    "Use it, because a blog post is written by a real person"
+   ],
+   "why": "The post is old and has no known author, so Priya should look for newer sources by known authors and see whether they agree. Being easy to read or widely shared does not show that the facts are accurate.",
+   "clue": "The post has an unknown author and an old date."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-13T06:06:33Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The right option says to find newer sources 'with the same figures'. That reads as looking only for sources that already agree, which is a biased search, and newer wage figures would likely differ from 2009 ones. Better: 'Find newer sources by known authors and compare their figures'."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Checking sources",
+     "card": [
+      "A source is where information comes from, such as a website, a news article, a report or a video. Not every source is accurate or fair, so check it before you use it.",
+      [
+       "Who and when",
+       "Who made it? Look for an author or organisation that knows the topic, and ask whether they gain if you believe it. When was it made? Prices, wages and laws change, so an old source may be out of date."
+      ],
+      [
+       "Why",
+       "Why was it made? A source may aim to inform, to sell a product or to persuade. A source made to sell or persuade may leave out facts that do not suit it."
+      ],
+      [
+       "Agree",
+       "Do other sources agree? If several separate, reliable sources give the same facts, you can trust them more."
+      ]
+     ],
+     "remember": "Check who, when and why, then see whether other sources agree.",
+     "a": {
+      "q": "A student finds a website that says a new energy drink is the best-selling drink in Australia. The site is run by the company that makes the drink. Which check raises the most doubt?",
+      "opts": [
+       "Why it was made: the company wants to sell its drink",
+       "When it was made: websites are always out of date",
+       "Who made it: companies never give correct facts",
+       "Whether others agree: one source is enough to trust"
+      ],
+      "why": "The company gains if readers buy the drink, so the claim may leave out facts. The other options are too strong: websites are not always out of date, and companies can give correct facts.",
+      "clue": "Think about what the maker of the site wants readers to do."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya is researching how much teenagers in Geelong earn from part-time jobs. She finds a 2009 blog post by an unnamed writer with no other sources. Which step would best help her judge whether to use it?",
+      "opts": [
+       "Find newer sources by known authors with the same figures",
+       "Check that the blog post is easy to read and has pictures",
+       "Count how many times the blog post has been shared online",
+       "Use it, because a blog post is written by a real person"
+      ],
+      "why": "The post is old and has no known author, so Priya should look for newer sources by known authors and see whether they agree. Being easy to read or widely shared does not show that facts are accurate.",
+      "clue": "The post has an unknown author and an old date."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Why it was made: the company wants to sell its drink",
+      "also_right": []
+     },
+     "b": {
+      "best": "Find newer sources by known authors with the same figures",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "All three wrong options make absolute or extreme claims ('one source is enough', 'never', 'always'), while the right option is the only reasonable one. A student could pick it by ruling out absolute words without knowing which check applies."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card, the remember line and both questions are accurate, and the intended answers are right. In question a, every wrong option uses an absolute claim ('never', 'always', 'one source is enough'), so a student could pick the answer by ruling those out rather than by knowing the idea."
+    },
+    "flags": [
+     "Question a, wording: All three wrong options make absolute or extreme claims ('one source is enough', 'never', 'always'), while the right option is the only reasonable one. A student could pick it by ruling out absolute words without knowing which check applies."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Checking sources",
+     "card": [
+      "A source is where information comes from, such as a website, a news article, a report or a video. Not every source is accurate or fair, so check it before you use it.",
+      [
+       "Who and when",
+       "Who made it? Look for an author or organisation that knows the topic, and ask whether they gain if you believe it. When was it made? Prices, wages and laws change, so an old source may be out of date."
+      ],
+      [
+       "Why",
+       "Why was it made? A source may aim to inform, to sell a product or to persuade. A source made to sell or persuade may leave out facts that do not suit it."
+      ],
+      [
+       "Agree",
+       "Do other sources agree? If several separate, reliable sources give the same facts, you can trust them more."
+      ]
+     ],
+     "remember": "Check who, when and why, then see whether other sources agree.",
+     "a": {
+      "q": "Ben finds a 2012 report on average weekly rent in Melbourne. A statistics office wrote it to inform the public, and two other reports from 2012 give the same figures. Which check raises the most doubt about using it today?",
+      "opts": [
+       "When: rents may have changed a lot since 2012",
+       "Who: a statistics office may not know about rents",
+       "Why: the report may be trying to sell homes",
+       "Agree: the other reports may give different figures"
+      ],
+      "why": "The report is more than ten years old, and rents change over time, so its figures may be out of date. The other checks pass: a statistics office knows the topic, it was made to inform rather than to sell, and other reports give the same figures.",
+      "clue": "Look for the one check the report does not clearly pass."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya is researching how much teenagers in Geelong earn from part-time jobs. She finds a 2009 blog post by an unnamed writer with no other sources. Which step would best help her judge whether to use it?",
+      "opts": [
+       "Find newer sources by known authors with the same figures",
+       "Check that the blog post is easy to read and has pictures",
+       "Count how many times the blog post has been shared online",
+       "Use it, because a blog post is written by a real person"
+      ],
+      "why": "The post is old and has no known author, so Priya should look for newer sources by known authors and see whether they agree. Being easy to read or widely shared does not show that the facts are accurate.",
+      "clue": "The post has an unknown author and an old date."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-12T17:07:10Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "When: rents may have changed a lot since 2012",
+       "also_right": []
+      },
+      "b": {
+       "best": "Find newer sources by known authors with the same figures",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The right option says to find newer sources 'with the same figures'. That reads as looking only for sources that already agree, which is a biased search, and newer wage figures would likely differ from 2009 ones. Better: 'Find newer sources by known authors and compare their figures'."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions have one clear right answer that matches the card. In question b, the right option's wording 'with the same figures' suggests seeking only agreeing sources and should say to compare figures instead."
+     },
+     "flags": [
+      "Question b, wording: The right option says to find newer sources 'with the same figures'. That reads as looking only for sources that already agree, which is a biased search, and newer wage figures would likely differ from 2009 ones. Better: 'Find newer sources by known authors and compare their figures'."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-13T09:32:51Z",
+   "step": "write",
+   "version": {
+    "title": "Checking sources",
+    "card": [
+     "A source is where information comes from, such as a website, a news article, a report or a video. Not every source is accurate or fair, so check it before you use it.",
+     [
+      "Who and when",
+      "Who made it? Look for an author or organisation that knows the topic, and ask whether they gain if you believe it. When was it made? Prices, wages and laws change, so an old source may be out of date."
+     ],
+     [
+      "Why",
+      "Why was it made? A source may aim to inform, to sell a product or to persuade. A source made to sell or persuade may leave out facts that do not suit it."
+     ],
+     [
+      "Agree",
+      "Do other sources agree? If several separate, reliable sources give the same facts, you can trust them more."
+     ]
+    ],
+    "remember": "Check who, when and why, then see whether other sources agree.",
+    "a": {
+     "q": "Ben finds a 2012 report on average weekly rent in Melbourne. A statistics office wrote it to inform the public, and two other reports from 2012 give the same figures. Which check raises the most doubt about using it today?",
+     "opts": [
+      "When: rents may have changed a lot since 2012",
+      "Who: a statistics office may not know about rents",
+      "Why: the report may be trying to sell homes",
+      "Agree: the other reports may give different figures"
+     ],
+     "why": "The report is more than ten years old, and rents change over time, so its figures may be out of date. The other checks pass: a statistics office knows the topic, it was made to inform rather than to sell, and other reports give the same figures.",
+     "clue": "Look for the one check the report does not clearly pass."
+    },
+    "b": {
+     "d": 3,
+     "q": "Priya is researching how much teenagers in Geelong earn from part-time jobs. She finds a 2009 blog post by an unnamed writer with no other sources. Which step would best help her judge whether to use it?",
+     "opts": [
+      "Find newer sources by known authors and compare figures",
+      "Check that the blog post is easy to read and has pictures",
+      "Count how many times the blog post has been shared online",
+      "Use it, because a blog post is written by a real person"
+     ],
+     "why": "The post is old and has no known author, so Priya should look for newer sources by known authors and compare what they say. Being easy to read or widely shared does not show that the facts are accurate.",
+     "clue": "The post has an unknown author and an old date."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T10:40:35Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "When: rents may have changed a lot since 2012",
+     "also_right": []
+    },
+    "b": {
+     "best": "Find newer sources by known authors and compare figures",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Checking sources",
+  "card": [
+   "A source is where information comes from, such as a website, a news article, a report or a video. Not every source is accurate or fair, so check it before you use it.",
+   [
+    "Who and when",
+    "Who made it? Look for an author or organisation that knows the topic, and ask whether they gain if you believe it. When was it made? Prices, wages and laws change, so an old source may be out of date."
+   ],
+   [
+    "Why",
+    "Why was it made? A source may aim to inform, to sell a product or to persuade. A source made to sell or persuade may leave out facts that do not suit it."
+   ],
+   [
+    "Agree",
+    "Do other sources agree? If several separate, reliable sources give the same facts, you can trust them more."
+   ]
+  ],
+  "remember": "Check who, when and why, then see whether other sources agree.",
+  "a": {
+   "q": "Ben finds a 2012 report on average weekly rent in Melbourne. A statistics office wrote it to inform the public, and two other reports from 2012 give the same figures. Which check raises the most doubt about using it today?",
+   "opts": [
+    "When: rents may have changed a lot since 2012",
+    "Who: a statistics office may not know about rents",
+    "Why: the report may be trying to sell homes",
+    "Agree: the other reports may give different figures"
+   ],
+   "why": "The report is more than ten years old, and rents change over time, so its figures may be out of date. The other checks pass: a statistics office knows the topic, it was made to inform rather than to sell, and other reports give the same figures.",
+   "clue": "Look for the one check the report does not clearly pass."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is researching how much teenagers in Geelong earn from part-time jobs. She finds a 2009 blog post by an unnamed writer with no other sources. Which step would best help her judge whether to use it?",
+   "opts": [
+    "Find newer sources by known authors and compare figures",
+    "Check that the blog post is easy to read and has pictures",
+    "Count how many times the blog post has been shared online",
+    "Use it, because a blog post is written by a real person"
+   ],
+   "why": "The post is old and has no known author, so Priya should look for newer sources by known authors and compare what they say. Being easy to read or widely shared does not show that the facts are accurate.",
+   "clue": "The post has an unknown author and an old date."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "When: rents may have changed a lot since 2012",
+   "also_right": []
+  },
+  "b": {
+   "best": "Find newer sources by known authors and compare figures",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Checking sources",
+  "card": [
+   "A source is where information comes from, such as a website, a news article, a report or a video. Not every source is accurate or fair, so check it before you use it.",
+   [
+    "Who and when",
+    "Who made it? Look for an author or organisation that knows the topic, and ask whether they gain if you believe it. When was it made? Prices, wages and laws change, so an old source may be out of date."
+   ],
+   [
+    "Why",
+    "Why was it made? A source may aim to inform, to sell a product or to persuade. A source made to sell or persuade may leave out facts that do not suit it."
+   ],
+   [
+    "Agree",
+    "Do other sources agree? If several separate, reliable sources give the same facts, you can trust them more."
+   ]
+  ],
+  "remember": "Check who, when and why, then see whether other sources agree.",
+  "a": {
+   "q": "Ben finds a 2012 report on average weekly rent in Melbourne. A statistics office wrote it to inform the public, and two other reports from 2012 give the same figures. Which check raises the most doubt about using it today?",
+   "opts": [
+    "When: rents may have changed a lot since 2012",
+    "Who: a statistics office may not know about rents",
+    "Why: the report may be trying to sell homes",
+    "Agree: the other reports may give different figures"
+   ],
+   "why": "The report is more than ten years old, and rents change over time, so its figures may be out of date. The other checks pass: a statistics office knows the topic, it was made to inform rather than to sell, and other reports give the same figures.",
+   "clue": "Look for the one check the report does not clearly pass."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is researching how much teenagers in Geelong earn from part-time jobs. She finds a 2009 blog post by an unnamed writer with no other sources. Which step would best help her judge whether to use it?",
+   "opts": [
+    "Find newer sources by known authors and compare figures",
+    "Check that the blog post is easy to read and has pictures",
+    "Count how many times the blog post has been shared online",
+    "Use it, because a blog post is written by a real person"
+   ],
+   "why": "The post is old and has no known author, so Priya should look for newer sources by known authors and compare what they say. Being easy to read or widely shared does not show that the facts are accurate.",
+   "clue": "The post has an unknown author and an old date."
+  }
+ },
+ "checked_by": "claude-code"
+}

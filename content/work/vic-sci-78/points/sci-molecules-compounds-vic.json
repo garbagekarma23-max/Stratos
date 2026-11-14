@@ -1,0 +1,236 @@
+{
+ "id": "sci-molecules-compounds-vic",
+ "title": "Molecules and compounds",
+ "brief": "c009c9ad4bde",
+ "shortlist": [
+  [
+   "sci-molecules-compounds",
+   0.804
+  ],
+  [
+   "sci-telling-elements-compounds-mixtures",
+   0.562
+  ],
+  [
+   "sci-atoms-elements",
+   0.405
+  ],
+  [
+   "sci-reading-chemical-formulas",
+   0.294
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:55Z new, match",
+  "2026-11-12T12:44:22Z match: Claude Haiku 5.5 may adapt sci-molecules-compounds, but is not highly sure, so to the Opus match check",
+  "2026-11-12T15:15:51Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:26:07Z write: done",
+  "2026-11-12T15:35:11Z check: flagged",
+  "2026-11-12T15:42:26Z fix: suggested",
+  "2026-11-12T16:19:55Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "confirm": 0.00988,
+  "write": 0.00651,
+  "check": 0.01294,
+  "fix": 0.01862
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "sci-molecules-compounds",
+  "changes": [
+   "Add a sentence to the card explaining that a compound's elements are chemically joined in a fixed ratio, unlike a mixture, where the substances are only combined and keep their own properties."
+  ],
+  "sure": "medium",
+  "reason": "The bank card covers the molecule and compound definitions at the right depth, but it never contrasts compounds with mixtures, which the brief requires, so one added sentence is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point sci-molecules-compounds teaches molecules and compounds, but it never contrasts a compound with a mixture, which this brief requires, and adding that would be a new step rather than a small change.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Molecules and compounds",
+  "card": [
+   [
+    "Molecule",
+    "Two or more atoms joined together. The atoms can be of the same element or of different elements."
+   ],
+   [
+    "Compound",
+    "A substance made of atoms of different elements joined together in a fixed ratio. Water is a compound: its atoms are always hydrogen and oxygen in the same ratio."
+   ],
+   [
+    "Mixture",
+    "Two or more substances mixed together without being joined. The amounts can vary, and the parts keep their own properties. Salty water is a mixture, and you can make it as salty as you like."
+   ],
+   "Oxygen gas is made of molecules with two oxygen atoms each. It is a molecule but not a compound, because both atoms are the same element."
+  ],
+  "remember": "A compound has different elements joined in a fixed ratio. A mixture is not joined, and its amounts can change.",
+  "a": {
+   "q": "Which of these is a compound?",
+   "opts": [
+    "Carbon dioxide, with carbon and oxygen atoms joined",
+    "Air, with oxygen and nitrogen gases mixed together",
+    "Oxygen gas, with two oxygen atoms joined",
+    "Salty water, with salt dissolved in water"
+   ],
+   "why": "Carbon dioxide has atoms of two different elements joined in a fixed ratio. Oxygen gas has joined atoms, so it is a molecule, but both atoms are the same element, so it is not a compound.",
+   "clue": "A compound needs different elements joined together."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam says that every molecule is a compound. Why is Sam wrong?",
+   "opts": [
+    "A molecule can have atoms of just one element",
+    "A molecule can have atoms that are not joined",
+    "A molecule can have atoms in any ratio you like",
+    "A molecule can have atoms of only two elements"
+   ],
+   "why": "A molecule is two or more atoms joined, and they can be the same element, as in oxygen gas, which has two oxygen atoms. A compound needs different elements, so some molecules are not compounds.",
+   "clue": "Think about a molecule of oxygen gas."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Carbon dioxide, with carbon and oxygen atoms joined",
+   "also_right": []
+  },
+  "b": {
+   "best": "A molecule can have atoms of just one element",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"Oxygen gas ... It is a molecule\" calls the gas itself a molecule. Oxygen gas is a substance made of many O2 molecules, so this blurs particle and substance. Why (a) repeats it (\"so it is a molecule\"). Better: \"Each oxygen molecule is a molecule but not a compound\" or \"Oxygen gas is made of molecules but is not a compound.\""
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct, with one clear answer each. The only problem is minor wording: the card and why (a) say oxygen gas \"is a molecule\" when it is made of molecules."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: \"Oxygen gas ... It is a molecule\" calls the gas itself a molecule. Oxygen gas is a substance made of many O2 molecules, so this blurs particle and substance. Why (a) repeats it (\"so it is a molecule\"). Better: \"Each oxygen molecule is a molecule but not a compound\" or \"Oxygen gas is made of molecules but is not a compound.\""
+ ],
+ "proposal": {
+  "title": "Molecules and compounds",
+  "card": [
+   [
+    "Molecule",
+    "Two or more atoms joined together. The atoms can be of the same element or of different elements."
+   ],
+   [
+    "Compound",
+    "A substance made of atoms of different elements joined together in a fixed ratio. Water is a compound: its atoms are always hydrogen and oxygen in the same ratio."
+   ],
+   [
+    "Mixture",
+    "Two or more substances mixed together without being joined. The amounts can vary, and the parts keep their own properties. Salty water is a mixture, and you can make it as salty as you like."
+   ],
+   "Oxygen gas is made of molecules, each with two oxygen atoms joined. Oxygen gas is not a compound, because both atoms in each molecule are the same element."
+  ],
+  "remember": "A compound has different elements joined in a fixed ratio. A mixture is not joined, and its amounts can change.",
+  "a": {
+   "q": "Which of these is a compound?",
+   "opts": [
+    "Carbon dioxide, with carbon and oxygen atoms joined",
+    "Air, with oxygen and nitrogen gases mixed together",
+    "Oxygen gas, with molecules of two oxygen atoms",
+    "Salty water, with salt dissolved in water"
+   ],
+   "why": "Carbon dioxide has atoms of two different elements joined in a fixed ratio. Oxygen gas is made of molecules, but each molecule has two atoms of the same element, so oxygen gas is not a compound.",
+   "clue": "A compound needs different elements joined together."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam says that every molecule is a compound. Why is Sam wrong?",
+   "opts": [
+    "A molecule can have atoms of just one element",
+    "A molecule can have atoms that are not joined",
+    "A molecule can have atoms in any ratio you like",
+    "A molecule can have atoms of only two elements"
+   ],
+   "why": "A molecule is two or more atoms joined, and they can be the same element, as in an oxygen molecule, which has two oxygen atoms. A compound needs different elements, so some molecules are not compounds.",
+   "clue": "Think about a molecule of oxygen gas."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:55Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"Oxygen gas ... It is a molecule\" calls the gas itself a molecule. Oxygen gas is a substance made of many O2 molecules, so this blurs particle and substance. Why (a) repeats it (\"so it is a molecule\"). Better: \"Each oxygen molecule is a molecule but not a compound\" or \"Oxygen gas is made of molecules but is not a compound.\""
+   }
+  ],
+  "flags": [
+   "Card, wording: \"Oxygen gas ... It is a molecule\" calls the gas itself a molecule. Oxygen gas is a substance made of many O2 molecules, so this blurs particle and substance. Why (a) repeats it (\"so it is a molecule\"). Better: \"Each oxygen molecule is a molecule but not a compound\" or \"Oxygen gas is made of molecules but is not a compound.\""
+  ]
+ },
+ "final": {
+  "title": "Molecules and compounds",
+  "card": [
+   [
+    "Molecule",
+    "Two or more atoms joined together. The atoms can be of the same element or of different elements."
+   ],
+   [
+    "Compound",
+    "A substance made of atoms of different elements joined together in a fixed ratio. Water is a compound: its atoms are always hydrogen and oxygen in the same ratio."
+   ],
+   [
+    "Mixture",
+    "Two or more substances mixed together without being joined. The amounts can vary, and the parts keep their own properties. Salty water is a mixture, and you can make it as salty as you like."
+   ],
+   "Oxygen gas is made of molecules, each with two oxygen atoms joined. Oxygen gas is not a compound, because both atoms in each molecule are the same element."
+  ],
+  "remember": "A compound has different elements joined in a fixed ratio. A mixture is not joined, and its amounts can change.",
+  "a": {
+   "q": "Which of these is a compound?",
+   "opts": [
+    "Carbon dioxide, with carbon and oxygen atoms joined",
+    "Air, with oxygen and nitrogen gases mixed together",
+    "Oxygen gas, with molecules of two oxygen atoms",
+    "Salty water, with salt dissolved in water"
+   ],
+   "why": "Carbon dioxide has atoms of two different elements joined in a fixed ratio. Oxygen gas is made of molecules, but each molecule has two atoms of the same element, so oxygen gas is not a compound.",
+   "clue": "A compound needs different elements joined together."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam says that every molecule is a compound. Why is Sam wrong?",
+   "opts": [
+    "A molecule can have atoms of just one element",
+    "A molecule can have atoms that are not joined",
+    "A molecule can have atoms in any ratio you like",
+    "A molecule can have atoms of only two elements"
+   ],
+   "why": "A molecule is two or more atoms joined, and they can be the same element, as in an oxygen molecule, which has two oxygen atoms. A compound needs different elements, so some molecules are not compounds.",
+   "clue": "Think about a molecule of oxygen gas."
+  }
+ },
+ "cleared_by": "auto"
+}

@@ -1,0 +1,413 @@
+{
+ "id": "geo-flows-water-connect-places",
+ "title": "How flows of water connect places",
+ "brief": "e37da214d60a",
+ "shortlist": [
+  [
+   "geo-moving-water-changes-places",
+   0.42
+  ],
+  [
+   "geo-water-use-murray-darling",
+   0.309
+  ],
+  [
+   "geo-water-first-nations-australians",
+   0.292
+  ],
+  [
+   "geo-forms-water",
+   0.278
+  ],
+  [
+   "geo-murray-darling-basin-plan",
+   0.263
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:47Z new, match",
+  "2026-11-12T12:44:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:41Z write: done",
+  "2026-11-12T15:25:59Z check: flagged",
+  "2026-11-12T15:35:06Z fix: suggested",
+  "2026-11-12T16:19:52Z autoreview: picked as a spot check. It would have been cleared with the fix (a other)",
+  "2026-11-13T12:13:14Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.0121,
+  "check": 0.00949,
+  "fix": 0.01828
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, geo-moving-water-changes-places, covers water linking places and carrying soil and erosion, but it does not teach groundwater, nutrients or pollution, or how upstream actions change downstream places as in the Murray-Darling Basin, so it is related rather than the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "How flows of water connect places",
+  "card": [
+   "Rivers and groundwater carry water from one place to another. Rivers flow downhill from upstream to downstream, and groundwater moves slowly through soil and rock.",
+   "Moving water also carries other things: sediment (soil and sand), nutrients and pollution. These can travel a long way from where they started.",
+   "So what happens upstream can change places downstream. Taking water, clearing land or adding pollution upstream can change the amount and quality of water further down.",
+   "The Murray-Darling Basin is an example. Its rivers join many towns, farms and wetlands across several states, so the use of water in one part can affect people and ecosystems in another."
+  ],
+  "remember": "Water flows carry more than water, so upstream actions can affect downstream places.",
+  "a": {
+   "q": "Why can a farm upstream affect a town downstream on the same river?",
+   "opts": [
+    "The river carries water and anything in it downstream",
+    "The river carries only water, so the farm has no effect",
+    "Groundwater always moves upstream from the town",
+    "Rivers stop flowing once they pass a farm"
+   ],
+   "why": "A river moves water and also sediment, nutrients and pollution from upstream to downstream. The town can therefore be affected by what the farm takes or adds. A river carrying only water would not link the places in this way.",
+   "clue": "Think about what a river carries besides water."
+  },
+  "b": {
+   "d": 2,
+   "q": "Heavy soil erosion upstream sends a lot of sediment into a river. Which change is most likely in a wetland downstream?",
+   "opts": [
+    "The water becomes muddier as sediment arrives",
+    "The water becomes clearer as sediment stays upstream",
+    "The wetland is unaffected, as sediment cannot travel",
+    "The wetland dries up because sediment adds water"
+   ],
+   "why": "Moving water carries sediment downstream, so the wetland receives muddier water. The idea that the wetland is unaffected is wrong because flows connect places. Sediment does not add water.",
+   "clue": "Where does sediment go once the river picks it up?"
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "image",
+    "brief": "A map of the Murray-Darling Basin showing its main rivers, such as the Murray and the Darling, and the states it covers, with an arrow showing the direction of flow.",
+    "why": "A map shows how one river system links many places across several states."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The river carries water and anything in it downstream",
+   "also_right": []
+  },
+  "b": {
+   "best": "The water becomes muddier as sediment arrives",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The last sentence of why (a), 'A river carrying only water would not link the places in this way', clashes with the card. The card says taking water upstream changes the amount of water downstream, so a river carrying only water still links the farm and the town."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate, and the intended answers are right. One small issue: why (a) says a river carrying only water would not link places, but the card shows that taking water upstream still affects places downstream."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The last sentence of why (a), 'A river carrying only water would not link the places in this way', clashes with the card. The card says taking water upstream changes the amount of water downstream, so a river carrying only water still links the farm and the town."
+ ],
+ "proposal": {
+  "title": "How flows of water connect places",
+  "card": [
+   "Rivers and groundwater carry water from one place to another. Rivers flow downhill from upstream to downstream, and groundwater moves slowly through soil and rock.",
+   "Moving water also carries other things: sediment (soil and sand), nutrients and pollution. These can travel a long way from where they started.",
+   "So what happens upstream can change places downstream. Taking water, clearing land or adding pollution upstream can change the amount and quality of water further down.",
+   "The Murray-Darling Basin is an example. Its rivers join many towns, farms and wetlands across several states, so the use of water in one part can affect people and ecosystems in another."
+  ],
+  "remember": "Water flows carry more than water, so upstream actions can affect downstream places.",
+  "a": {
+   "q": "Why can a farm upstream affect a town downstream on the same river?",
+   "opts": [
+    "The river carries water and anything in it downstream",
+    "The river carries only water, so the farm has no effect",
+    "Groundwater always moves upstream from the town",
+    "Rivers stop flowing once they pass a farm"
+   ],
+   "why": "A river moves water, sediment, nutrients and pollution from upstream to downstream. If the farm takes water or adds pollution, the town can get less water or dirtier water. The option about carrying only water is wrong twice: rivers carry more than water, and taking water upstream would still leave less for the town.",
+   "clue": "Think about what a river carries, and which way it flows."
+  },
+  "b": {
+   "d": 2,
+   "q": "Heavy soil erosion upstream sends a lot of sediment into a river. Which change is most likely in a wetland downstream?",
+   "opts": [
+    "The water becomes muddier as sediment arrives",
+    "The water becomes clearer as sediment stays upstream",
+    "The wetland is unaffected, as sediment cannot travel",
+    "The wetland dries up because sediment adds water"
+   ],
+   "why": "Moving water carries sediment downstream, so the wetland receives muddier water. The idea that the wetland is unaffected is wrong because flows connect places and sediment can travel a long way. Sediment does not add water.",
+   "clue": "Where does sediment go once the river picks it up?"
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "image",
+    "brief": "A map of the Murray-Darling Basin showing its main rivers, such as the Murray and the Darling, and the states it covers, with an arrow showing the direction of flow.",
+    "why": "A map shows how one river system links many places across several states."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:52Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The last sentence of why (a), 'A river carrying only water would not link the places in this way', clashes with the card. The card says taking water upstream changes the amount of water downstream, so a river carrying only water still links the farm and the town."
+   }
+  ],
+  "flags": [
+   "Question a, other: The last sentence of why (a), 'A river carrying only water would not link the places in this way', clashes with the card. The card says taking water upstream changes the amount of water downstream, so a river carrying only water still links the farm and the town."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "How flows of water connect places",
+  "card": [
+   "Rivers and groundwater carry water from one place to another. Rivers flow downhill from upstream to downstream, and groundwater moves slowly through soil and rock.",
+   "Moving water also carries other things: sediment (soil and sand), nutrients and pollution. These can travel a long way from where they started.",
+   "So what happens upstream can change places downstream. Taking water, clearing land or adding pollution upstream can change the amount and quality of water further down.",
+   "The Murray-Darling Basin is an example. Its rivers join many towns, farms and wetlands across several states, so the use of water in one part can affect people and ecosystems in another."
+  ],
+  "remember": "Water flows carry more than water, so upstream actions can affect downstream places.",
+  "a": {
+   "q": "Why can a farm upstream affect a town downstream on the same river?",
+   "opts": [
+    "The river carries water and anything in it downstream",
+    "The river carries only water, so the farm has no effect",
+    "Groundwater always moves upstream from the town",
+    "Rivers stop flowing once they pass a farm"
+   ],
+   "why": "A river moves water, sediment, nutrients and pollution from upstream to downstream. If the farm takes water or adds pollution, the town can get less water or dirtier water. The option about carrying only water is wrong twice: rivers carry more than water, and taking water upstream would still leave less for the town.",
+   "clue": "Think about what a river carries, and which way it flows."
+  },
+  "b": {
+   "d": 2,
+   "q": "Heavy soil erosion upstream sends a lot of sediment into a river. Which change is most likely in a wetland downstream?",
+   "opts": [
+    "The water becomes muddier as sediment arrives",
+    "The water becomes clearer as sediment stays upstream",
+    "The wetland is unaffected, as sediment cannot travel",
+    "The wetland dries up because sediment adds water"
+   ],
+   "why": "Moving water carries sediment downstream, so the wetland receives muddier water. The idea that the wetland is unaffected is wrong because flows connect places and sediment can travel a long way. Sediment does not add water.",
+   "clue": "Where does sediment go once the river picks it up?"
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "image",
+    "brief": "A map of the Murray-Darling Basin showing its main rivers, such as the Murray and the Darling, and the states it covers, with an arrow showing the direction of flow.",
+    "why": "A map shows how one river system links many places across several states."
+   }
+  ]
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:14Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix rewrites why (a) so it no longer says a river carrying only water would not link places, which matches the card. Everything else is right and unchanged, with one clear answer to each question.",
+   "item": "aef90278ad533e68",
+   "result": "decided",
+   "saved": {
+    "id": "geo-flows-water-connect-places",
+    "title": "How flows of water connect places",
+    "brief": "e37da214d60a",
+    "shortlist": [
+     [
+      "geo-moving-water-changes-places",
+      0.42
+     ],
+     [
+      "geo-water-use-murray-darling",
+      0.309
+     ],
+     [
+      "geo-water-first-nations-australians",
+      0.292
+     ],
+     [
+      "geo-forms-water",
+      0.278
+     ],
+     [
+      "geo-murray-darling-basin-plan",
+      0.263
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 1,
+     "check": 1,
+     "fix": 1
+    },
+    "usd": {
+     "match": 0.00029,
+     "write": 0.0121,
+     "check": 0.00949,
+     "fix": 0.01828
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The closest bank point, geo-moving-water-changes-places, covers water linking places and carrying soil and erosion, but it does not teach groundwater, nutrients or pollution, or how upstream actions change downstream places as in the Murray-Darling Basin, so it is related rather than the same idea.",
+     "model": "claude-haiku-5-5"
+    },
+    "draft": {
+     "title": "How flows of water connect places",
+     "card": [
+      "Rivers and groundwater carry water from one place to another. Rivers flow downhill from upstream to downstream, and groundwater moves slowly through soil and rock.",
+      "Moving water also carries other things: sediment (soil and sand), nutrients and pollution. These can travel a long way from where they started.",
+      "So what happens upstream can change places downstream. Taking water, clearing land or adding pollution upstream can change the amount and quality of water further down.",
+      "The Murray-Darling Basin is an example. Its rivers join many towns, farms and wetlands across several states, so the use of water in one part can affect people and ecosystems in another."
+     ],
+     "remember": "Water flows carry more than water, so upstream actions can affect downstream places.",
+     "a": {
+      "q": "Why can a farm upstream affect a town downstream on the same river?",
+      "opts": [
+       "The river carries water and anything in it downstream",
+       "The river carries only water, so the farm has no effect",
+       "Groundwater always moves upstream from the town",
+       "Rivers stop flowing once they pass a farm"
+      ],
+      "why": "A river moves water and also sediment, nutrients and pollution from upstream to downstream. The town can therefore be affected by what the farm takes or adds. A river carrying only water would not link the places in this way.",
+      "clue": "Think about what a river carries besides water."
+     },
+     "b": {
+      "d": 2,
+      "q": "Heavy soil erosion upstream sends a lot of sediment into a river. Which change is most likely in a wetland downstream?",
+      "opts": [
+       "The water becomes muddier as sediment arrives",
+       "The water becomes clearer as sediment stays upstream",
+       "The wetland is unaffected, as sediment cannot travel",
+       "The wetland dries up because sediment adds water"
+      ],
+      "why": "Moving water carries sediment downstream, so the wetland receives muddier water. The idea that the wetland is unaffected is wrong because flows connect places. Sediment does not add water.",
+      "clue": "Where does sediment go once the river picks it up?"
+     },
+     "wants": [
+      {
+       "at": "card 4",
+       "kind": "image",
+       "brief": "A map of the Murray-Darling Basin showing its main rivers, such as the Murray and the Darling, and the states it covers, with an arrow showing the direction of flow.",
+       "why": "A map shows how one river system links many places across several states."
+      }
+     ]
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "The river carries water and anything in it downstream",
+      "also_right": []
+     },
+     "b": {
+      "best": "The water becomes muddier as sediment arrives",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The last sentence of why (a), 'A river carrying only water would not link the places in this way', clashes with the card. The card says taking water upstream changes the amount of water downstream, so a river carrying only water still links the farm and the town."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both questions are accurate, and the intended answers are right. One small issue: why (a) says a river carrying only water would not link places, but the card shows that taking water upstream still affects places downstream."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a, other: The last sentence of why (a), 'A river carrying only water would not link the places in this way', clashes with the card. The card says taking water upstream changes the amount of water downstream, so a river carrying only water still links the farm and the town."
+    ],
+    "proposal": {
+     "title": "How flows of water connect places",
+     "card": [
+      "Rivers and groundwater carry water from one place to another. Rivers flow downhill from upstream to downstream, and groundwater moves slowly through soil and rock.",
+      "Moving water also carries other things: sediment (soil and sand), nutrients and pollution. These can travel a long way from where they started.",
+      "So what happens upstream can change places downstream. Taking water, clearing land or adding pollution upstream can change the amount and quality of water further down.",
+      "The Murray-Darling Basin is an example. Its rivers join many towns, farms and wetlands across several states, so the use of water in one part can affect people and ecosystems in another."
+     ],
+     "remember": "Water flows carry more than water, so upstream actions can affect downstream places.",
+     "a": {
+      "q": "Why can a farm upstream affect a town downstream on the same river?",
+      "opts": [
+       "The river carries water and anything in it downstream",
+       "The river carries only water, so the farm has no effect",
+       "Groundwater always moves upstream from the town",
+       "Rivers stop flowing once they pass a farm"
+      ],
+      "why": "A river moves water, sediment, nutrients and pollution from upstream to downstream. If the farm takes water or adds pollution, the town can get less water or dirtier water. The option about carrying only water is wrong twice: rivers carry more than water, and taking water upstream would still leave less for the town.",
+      "clue": "Think about what a river carries, and which way it flows."
+     },
+     "b": {
+      "d": 2,
+      "q": "Heavy soil erosion upstream sends a lot of sediment into a river. Which change is most likely in a wetland downstream?",
+      "opts": [
+       "The water becomes muddier as sediment arrives",
+       "The water becomes clearer as sediment stays upstream",
+       "The wetland is unaffected, as sediment cannot travel",
+       "The wetland dries up because sediment adds water"
+      ],
+      "why": "Moving water carries sediment downstream, so the wetland receives muddier water. The idea that the wetland is unaffected is wrong because flows connect places and sediment can travel a long way. Sediment does not add water.",
+      "clue": "Where does sediment go once the river picks it up?"
+     },
+     "wants": [
+      {
+       "at": "card 4",
+       "kind": "image",
+       "brief": "A map of the Murray-Darling Basin showing its main rivers, such as the Murray and the Darling, and the states it covers, with an arrow showing the direction of flow.",
+       "why": "A map shows how one river system links many places across several states."
+      }
+     ]
+    },
+    "proposal_problems": [],
+    "auto": {
+     "at": "2026-11-12T16:19:52Z",
+     "rules": 1,
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The last sentence of why (a), 'A river carrying only water would not link the places in this way', clashes with the card. The card says taking water upstream changes the amount of water downstream, so a river carrying only water still links the farm and the town."
+      }
+     ],
+     "flags": [
+      "Question a, other: The last sentence of why (a), 'A river carrying only water would not link the places in this way', clashes with the card. The card says taking water upstream changes the amount of water downstream, so a river carrying only water still links the farm and the town."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "4c54a76833deb6b3"
+  }
+ ]
+}

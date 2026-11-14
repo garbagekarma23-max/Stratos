@@ -1,0 +1,328 @@
+{
+ "id": "mat-solving-exponential-equations-with",
+ "title": "Solving exponential equations with logarithms",
+ "brief": "7927798ab569",
+ "shortlist": [
+  [
+   "mat-solving-exponential-equations",
+   0.58
+  ],
+  [
+   "mat-logarithm-laws",
+   0.542
+  ],
+  [
+   "mat-exponential-logarithmic-equations",
+   0.417
+  ],
+  [
+   "mat-solving-simple-exponential-equations",
+   0.378
+  ],
+  [
+   "mat-change-base",
+   0.372
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 may adapt mat-solving-exponential-equations, but is not highly sure, so to the Opus match check",
+  "2026-11-12T15:15:48Z confirm: Claude Opus 5.5 may adapt mat-solving-exponential-equations, but is not highly sure, so it is for you to review",
+  "2026-11-13T12:13:15Z match: claude-code says adapt mat-solving-exponential-equations (4 changes)",
+  "2026-11-13T12:13:15Z claude-code review: adapting mat-solving-exponential-equations on the next run",
+  "2026-11-13T13:04:53Z adapt: done",
+  "2026-11-13T13:11:25Z check: flagged",
+  "2026-11-13T13:13:39Z fix: suggested",
+  "2026-11-13T15:05:19Z autoreview: cleared with the fix (card other, b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00041,
+  "confirm": 0.01185,
+  "adapt": 0.00945,
+  "check": 0.0109,
+  "fix": 0.04863
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-solving-exponential-equations",
+  "changes": [
+   "Replace question b (2e^x = 14, which uses base e and ln) with a question using a common base, since base e may be beyond the Year 10A course.",
+   "Trim the card's base-e and ln guidance so that it matches the Year 10A depth of the new point."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same take-logs-then-divide method, but its base-e material and question b go beyond what this Year 10A point needs, so it needs small changes rather than reuse.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-solving-exponential-equations",
+  "changes": [
+   "Remove the dot point on base e and the natural log, ln, because e is not part of Level 10A; keep only base 10 log.",
+   "Change the remember line to 'Isolate the power, take logs of both sides, then divide', without the ln reference.",
+   "Replace question b, which uses e, with one in a base other than e, such as solving 2 × 3^x = 40 to 2 decimal places.",
+   "Say the calculator's log button is used, rather than saying log or ln both work."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same take-logs method with the same 3^x = 20 example, but its base e and ln content goes beyond Level 10A and should be removed.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-solving-exponential-equations",
+  "changes": [
+   "Remove the card line on base e and ln.",
+   "Change the remember line to 'Isolate the power, take logs of both sides, then divide', with no mention of ln.",
+   "Replace question b, which uses e, with one in another base, such as solving \\(2 \\times 3^{x} = 40\\) to 2 decimal places.",
+   "Say to use the calculator's log button, rather than saying log or ln both work."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card2",
+   "card3",
+   "card4",
+   "remember",
+   "a.q",
+   "b.q",
+   "b.opt1",
+   "b.opt2",
+   "b.opt3",
+   "b.opt4",
+   "b.why",
+   "b.clue"
+  ]
+ },
+ "cleared_by": "auto",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the take-logs method with the brief's own 3^x = 20 example and its question a is right, but e and ln are not part of Level 10A.",
+   "item": "4e23341d3ec93bc1",
+   "result": "decided",
+   "saved": {
+    "id": "mat-solving-exponential-equations-with",
+    "title": "Solving exponential equations with logarithms",
+    "brief": "7927798ab569",
+    "shortlist": [
+     [
+      "mat-solving-exponential-equations",
+      0.58
+     ],
+     [
+      "mat-logarithm-laws",
+      0.542
+     ],
+     [
+      "mat-exponential-logarithmic-equations",
+      0.417
+     ],
+     [
+      "mat-solving-simple-exponential-equations",
+      0.378
+     ],
+     [
+      "mat-change-base",
+      0.372
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00041,
+     "confirm": 0.01185
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-solving-exponential-equations",
+     "changes": [
+      "Replace question b (2e^x = 14, which uses base e and ln) with a question using a common base, since base e may be beyond the Year 10A course.",
+      "Trim the card's base-e and ln guidance so that it matches the Year 10A depth of the new point."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches the same take-logs-then-divide method, but its base-e material and question b go beyond what this Year 10A point needs, so it needs small changes rather than reuse.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-solving-exponential-equations",
+     "changes": [
+      "Remove the dot point on base e and the natural log, ln, because e is not part of Level 10A; keep only base 10 log.",
+      "Change the remember line to 'Isolate the power, take logs of both sides, then divide', without the ln reference.",
+      "Replace question b, which uses e, with one in a base other than e, such as solving 2 × 3^x = 40 to 2 decimal places.",
+      "Say the calculator's log button is used, rather than saying log or ln both work."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches the same take-logs method with the same 3^x = 20 example, but its base e and ln content goes beyond Level 10A and should be removed.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "b38b5ca0270a52b9"
+  }
+ ],
+ "draft": {
+  "title": "Solving exponential equations",
+  "card": [
+   "To solve an equation with \\(x\\) in the power, take logarithms of both sides. This brings the power down: \\(3^{x} = 20\\) becomes \\(x \\log 3 = \\log 20\\).",
+   "Then divide: \\(x = \\log 20 \\div \\log 3 \\approx 2.73\\). Use the same base on both sides. Use your calculator's \\(\\log\\) button.",
+   "Get the power on its own first. For \\(2 \\times 3^{x} = 40\\), divide both sides by 2 to get \\(3^{x} = 20\\), then take logarithms.",
+   ""
+  ],
+  "remember": "Isolate the power, take logs of both sides, then divide",
+  "a": {
+   "q": "Find \\(x\\) if \\(5^{x} = 40\\). Round to 2 decimal places.",
+   "opts": [
+    "2.29",
+    "8.00",
+    "0.44",
+    "3.69"
+   ],
+   "why": "Taking logs gives \\(x \\log 5 = \\log 40\\), so \\(x = \\log 40 \\div \\log 5 \\approx 2.29\\). Dividing 40 by 5 to get 8 is tempting, but that treats \\(5^{x}\\) as \\(5 \\times x\\), and it is not.",
+   "clue": "Bring the power down with logs, then divide the two log values."
+  },
+  "b": {
+   "d": 2,
+   "q": "Solve \\(4 \\times 3^{x} = 100\\). Give \\(x\\) to 2 decimal places.",
+   "opts": [
+    "2.93",
+    "4.19",
+    "8.33",
+    "1.05"
+   ],
+   "why": "Divide both sides by 4 to get \\(3^{x} = 25\\), so \\(x = \\log 25 \\div \\log 3 \\approx 2.93\\). Taking \\(\\log 100\\) straight away gives 4.19, which skips the step of getting \\(3^{x}\\) alone.",
+   "clue": "Get \\(3^{x}\\) on its own before you take logs."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2.29",
+   "also_right": []
+  },
+  "b": {
+   "best": "2.93",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card ends with an empty bullet line, which will show as a blank dot point. Remove it."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says 'Taking log 100 straight away gives 4.19, which skips the step of getting 3^x alone.' Taking logs of both sides first is valid if done properly (log 4 + x log 3 = log 100). The 4.19 comes from ignoring the 4 and computing log 100 ÷ log 3, and the why should say that."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct: 2.29 and 2.93. The card has a stray empty bullet, and the why for (b) slightly misdescribes the 4.19 distractor as 'taking log 100 straight away' when the error is ignoring the 4."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The card ends with an empty bullet line, which will show as a blank dot point. Remove it.",
+  "Question b, wording: The why says 'Taking log 100 straight away gives 4.19, which skips the step of getting 3^x alone.' Taking logs of both sides first is valid if done properly (log 4 + x log 3 = log 100). The 4.19 comes from ignoring the 4 and computing log 100 ÷ log 3, and the why should say that."
+ ],
+ "proposal": {
+  "title": "Solving exponential equations with logarithms",
+  "card": [
+   "To solve an equation with \\(x\\) in the power, take logarithms of both sides. This brings the power down: \\(3^{x} = 20\\) becomes \\(x \\log 3 = \\log 20\\).",
+   "Then divide: \\(x = \\log 20 \\div \\log 3 \\approx 2.73\\). Use the same base on both sides, such as your calculator's \\(\\log\\) button.",
+   "Get the power on its own first. For \\(2 \\times 3^{x} = 40\\), divide both sides by 2 to get \\(3^{x} = 20\\), then take logarithms."
+  ],
+  "remember": "Get the power alone, take logs of both sides, then divide.",
+  "a": {
+   "q": "Find \\(x\\) if \\(5^{x} = 40\\). Round to 2 decimal places.",
+   "opts": [
+    "2.29",
+    "8.00",
+    "0.44",
+    "3.69"
+   ],
+   "why": "Taking logs gives \\(x \\log 5 = \\log 40\\), so \\(x = \\log 40 \\div \\log 5 \\approx 2.29\\). Dividing 40 by 5 to get 8 is tempting, but that treats \\(5^{x}\\) as \\(5 \\times x\\), and it is not.",
+   "clue": "Bring the power down with logs, then divide the two log values."
+  },
+  "b": {
+   "d": 2,
+   "q": "Solve \\(4 \\times 3^{x} = 100\\). Give \\(x\\) to 2 decimal places.",
+   "opts": [
+    "2.93",
+    "4.19",
+    "8.33",
+    "0.34"
+   ],
+   "why": "Divide both sides by 4 to get \\(3^{x} = 25\\), so \\(x = \\log 25 \\div \\log 3 \\approx 2.93\\). The answer 4.19 comes from ignoring the 4 and working out \\(\\log 100 \\div \\log 3\\). The 4 multiplies \\(3^{x}\\), so it must be dealt with, not dropped.",
+   "clue": "Get \\(3^{x}\\) on its own before you take logs."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-13T15:05:19Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card ends with an empty bullet line, which will show as a blank dot point. Remove it."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says 'Taking log 100 straight away gives 4.19, which skips the step of getting 3^x alone.' Taking logs of both sides first is valid if done properly (log 4 + x log 3 = log 100). The 4.19 comes from ignoring the 4 and computing log 100 ÷ log 3, and the why should say that."
+   }
+  ],
+  "flags": [
+   "Card, other: The card ends with an empty bullet line, which will show as a blank dot point. Remove it.",
+   "Question b, wording: The why says 'Taking log 100 straight away gives 4.19, which skips the step of getting 3^x alone.' Taking logs of both sides first is valid if done properly (log 4 + x log 3 = log 100). The 4.19 comes from ignoring the 4 and computing log 100 ÷ log 3, and the why should say that."
+  ]
+ },
+ "final": {
+  "title": "Solving exponential equations with logarithms",
+  "card": [
+   "To solve an equation with \\(x\\) in the power, take logarithms of both sides. This brings the power down: \\(3^{x} = 20\\) becomes \\(x \\log 3 = \\log 20\\).",
+   "Then divide: \\(x = \\log 20 \\div \\log 3 \\approx 2.73\\). Use the same base on both sides, such as your calculator's \\(\\log\\) button.",
+   "Get the power on its own first. For \\(2 \\times 3^{x} = 40\\), divide both sides by 2 to get \\(3^{x} = 20\\), then take logarithms."
+  ],
+  "remember": "Get the power alone, take logs of both sides, then divide.",
+  "a": {
+   "q": "Find \\(x\\) if \\(5^{x} = 40\\). Round to 2 decimal places.",
+   "opts": [
+    "2.29",
+    "8.00",
+    "0.44",
+    "3.69"
+   ],
+   "why": "Taking logs gives \\(x \\log 5 = \\log 40\\), so \\(x = \\log 40 \\div \\log 5 \\approx 2.29\\). Dividing 40 by 5 to get 8 is tempting, but that treats \\(5^{x}\\) as \\(5 \\times x\\), and it is not.",
+   "clue": "Bring the power down with logs, then divide the two log values."
+  },
+  "b": {
+   "d": 2,
+   "q": "Solve \\(4 \\times 3^{x} = 100\\). Give \\(x\\) to 2 decimal places.",
+   "opts": [
+    "2.93",
+    "4.19",
+    "8.33",
+    "0.34"
+   ],
+   "why": "Divide both sides by 4 to get \\(3^{x} = 25\\), so \\(x = \\log 25 \\div \\log 3 \\approx 2.93\\). The answer 4.19 comes from ignoring the 4 and working out \\(\\log 100 \\div \\log 3\\). The 4 multiplies \\(3^{x}\\), so it must be dealt with, not dropped.",
+   "clue": "Get \\(3^{x}\\) on its own before you take logs."
+  }
+ }
+}

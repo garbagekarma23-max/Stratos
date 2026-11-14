@@ -1,0 +1,459 @@
+{
+ "id": "geo-patterns-trends-relationships",
+ "title": "Patterns, trends and relationships",
+ "brief": "f58a57a6a11c",
+ "shortlist": [
+  [
+   "geo-space",
+   0.317
+  ],
+  [
+   "sci-patterns-trends-anomalies",
+   0.287
+  ],
+  [
+   "geo-describing-distribution",
+   0.236
+  ],
+  [
+   "ecb-finding-trends-economic-data",
+   0.212
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:48Z new, match",
+  "2026-11-12T12:44:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:41Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:25:59Z write: done",
+  "2026-11-12T15:35:06Z check: flagged",
+  "2026-11-12T15:59:43Z fix: suggested",
+  "2026-11-12T17:07:11Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-13T12:13:14Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.00586,
+  "check": 0.01139,
+  "fix": 0.01837,
+  "recheck": 0.00669
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches relationships, where two things change together; the closest points cover space patterns, trends in data, or distributions, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Patterns, trends and relationships",
+  "card": [
+   [
+    "Pattern",
+    "how something is spread across space. For example, most of a country's people may live in a band along its coast."
+   ],
+   [
+    "Trend",
+    "a change over time. For example, a town's population may rise year after year."
+   ],
+   [
+    "Relationship",
+    "how two things change together. For example, towns with more rainfall may also have more farms."
+   ],
+   "To tell them apart, ask what the data shows: where things are (pattern), how they change over time (trend), or how one thing links to another (relationship)."
+  ],
+  "remember": "Pattern is where. Trend is when. Relationship is how two things link.",
+  "a": {
+   "q": "A map shows most of a region's farms are clustered near its main river. What does this show?",
+   "opts": [
+    "A pattern, because it shows how farms are spread",
+    "A trend, because it shows how farms are spread",
+    "A relationship, because it shows where the river is",
+    "A pattern, because it shows farms changing each year"
+   ],
+   "why": "The map shows how farms are spread across space, so it is a pattern. A trend needs a change over time, which the map does not show.",
+   "clue": "Does the map show change over time, or spread across space?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia records the number of visitors to a Cairns beach each year from 2015 to 2024. The numbers rise each year. What has she found?",
+   "opts": [
+    "A trend, because visitor numbers change over time",
+    "A pattern, because visitor numbers are spread over space",
+    "A relationship, because visitors and years are both numbers",
+    "A pattern, because the numbers rise in a regular way"
+   ],
+   "why": "Visitor numbers changing from year to year is a change over time, so it is a trend. The rise is regular, which tempts some students to say pattern, but a pattern is about how things are spread across space.",
+   "clue": "Look at what the data is measured against: places or years?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A pattern, because it shows how farms are spread",
+   "also_right": []
+  },
+  "b": {
+   "best": "A trend, because visitor numbers change over time",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem pairs farms with being near the river, which looks like the card's relationship example (rainfall and farms). A student could reasonably read it as a relationship. The relationship option's reason is wrong, so the key still holds, but wording such as 'A map shows where a region's farms are' would remove the doubt."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct and match the explanations. One minor point: question a's stem (farms clustered near a river) also hints at a relationship between farms and water, so it could be reworded to show spread alone."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The stem pairs farms with being near the river, which looks like the card's relationship example (rainfall and farms). A student could reasonably read it as a relationship. The relationship option's reason is wrong, so the key still holds, but wording such as 'A map shows where a region's farms are' would remove the doubt."
+ ],
+ "proposal": {
+  "title": "Patterns, trends and relationships",
+  "card": [
+   [
+    "Pattern",
+    "how something is spread across space. For example, most of a country's people may live in a band along its coast."
+   ],
+   [
+    "Trend",
+    "a change over time. For example, a town's population may rise year after year."
+   ],
+   [
+    "Relationship",
+    "how two things change together. For example, towns with more rainfall may also have more farms."
+   ],
+   "To tell them apart, ask what the data shows: where things are (pattern), how they change over time (trend), or how one thing links to another (relationship)."
+  ],
+  "remember": "Pattern is where. Trend is when. Relationship is how two things link.",
+  "a": {
+   "q": "A map shows where a region's farms are. Most are clustered in its north-east corner. What does the map show?",
+   "opts": [
+    "A pattern, because it shows how farms are spread out",
+    "A trend, because it shows how farms change over time",
+    "A relationship, because it links farms to another factor",
+    "A trend, because the farms are grouped in one corner"
+   ],
+   "why": "The map shows where farms are across space, so it is a pattern. It shows only one thing, the farms, at one time, so there is no change over time for a trend and no second thing for a relationship.",
+   "clue": "Does the map show change over time, or spread across space?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia records the number of visitors to a Cairns beach each year from 2015 to 2024. The numbers rise each year. What has she found?",
+   "opts": [
+    "A trend, because visitor numbers change over time",
+    "A pattern, because visitor numbers are spread over space",
+    "A relationship, because visitors and years are both numbers",
+    "A pattern, because the numbers rise in a regular way"
+   ],
+   "why": "Visitor numbers changing from year to year is a change over time, so it is a trend. The rise is regular, which tempts some students to say pattern, but a pattern is about how things are spread across space.",
+   "clue": "Look at what the data is measured against: places or years?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:11Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A pattern, because it shows how farms are spread out",
+    "also_right": []
+   },
+   "b": {
+    "best": "A trend, because visitor numbers change over time",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:11Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem pairs farms with being near the river, which looks like the card's relationship example (rainfall and farms). A student could reasonably read it as a relationship. The relationship option's reason is wrong, so the key still holds, but wording such as 'A map shows where a region's farms are' would remove the doubt."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The stem pairs farms with being near the river, which looks like the card's relationship example (rainfall and farms). A student could reasonably read it as a relationship. The relationship option's reason is wrong, so the key still holds, but wording such as 'A map shows where a region's farms are' would remove the doubt."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Patterns, trends and relationships",
+  "card": [
+   [
+    "Pattern",
+    "how something is spread across space. For example, most of a country's people may live in a band along its coast."
+   ],
+   [
+    "Trend",
+    "a change over time. For example, a town's population may rise year after year."
+   ],
+   [
+    "Relationship",
+    "how two things change together. For example, towns with more rainfall may also have more farms."
+   ],
+   "To tell them apart, ask what the data shows: where things are (pattern), how they change over time (trend), or how one thing links to another (relationship)."
+  ],
+  "remember": "Pattern is where. Trend is when. Relationship is how two things link.",
+  "a": {
+   "q": "A map shows where a region's farms are. Most are clustered in its north-east corner. What does the map show?",
+   "opts": [
+    "A pattern, because it shows how farms are spread out",
+    "A trend, because it shows how farms change over time",
+    "A relationship, because it links farms to another factor",
+    "A trend, because the farms are grouped in one corner"
+   ],
+   "why": "The map shows where farms are across space, so it is a pattern. It shows only one thing, the farms, at one time, so there is no change over time for a trend and no second thing for a relationship.",
+   "clue": "Does the map show change over time, or spread across space?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia records the number of visitors to a Cairns beach each year from 2015 to 2024. The numbers rise each year. What has she found?",
+   "opts": [
+    "A trend, because visitor numbers change over time",
+    "A pattern, because visitor numbers are spread over space",
+    "A relationship, because visitors and years are both numbers",
+    "A pattern, because the numbers rise in a regular way"
+   ],
+   "why": "Visitor numbers changing from year to year is a change over time, so it is a trend. The rise is regular, which tempts some students to say pattern, but a pattern is about how things are spread across space.",
+   "clue": "Look at what the data is measured against: places or years?"
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:14Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix rewrites question a so the map shows only where farms are, with no river to suggest a relationship, and its options and why are sound. Question b and the card are unchanged and right.",
+   "item": "63c592e4c31d101f",
+   "result": "decided",
+   "saved": {
+    "id": "geo-patterns-trends-relationships",
+    "title": "Patterns, trends and relationships",
+    "brief": "f58a57a6a11c",
+    "shortlist": [
+     [
+      "geo-space",
+      0.317
+     ],
+     [
+      "sci-patterns-trends-anomalies",
+      0.287
+     ],
+     [
+      "geo-describing-distribution",
+      0.236
+     ],
+     [
+      "ecb-finding-trends-economic-data",
+      0.212
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00027,
+     "write": 0.00586,
+     "check": 0.01139,
+     "fix": 0.01837,
+     "recheck": 0.00669
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "high",
+     "reason": "None of the bank points teaches relationships, where two things change together; the closest points cover space patterns, trends in data, or distributions, so a new point is needed.",
+     "model": "claude-haiku-5-5"
+    },
+    "alone": true,
+    "draft": {
+     "title": "Patterns, trends and relationships",
+     "card": [
+      [
+       "Pattern",
+       "how something is spread across space. For example, most of a country's people may live in a band along its coast."
+      ],
+      [
+       "Trend",
+       "a change over time. For example, a town's population may rise year after year."
+      ],
+      [
+       "Relationship",
+       "how two things change together. For example, towns with more rainfall may also have more farms."
+      ],
+      "To tell them apart, ask what the data shows: where things are (pattern), how they change over time (trend), or how one thing links to another (relationship)."
+     ],
+     "remember": "Pattern is where. Trend is when. Relationship is how two things link.",
+     "a": {
+      "q": "A map shows most of a region's farms are clustered near its main river. What does this show?",
+      "opts": [
+       "A pattern, because it shows how farms are spread",
+       "A trend, because it shows how farms are spread",
+       "A relationship, because it shows where the river is",
+       "A pattern, because it shows farms changing each year"
+      ],
+      "why": "The map shows how farms are spread across space, so it is a pattern. A trend needs a change over time, which the map does not show.",
+      "clue": "Does the map show change over time, or spread across space?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia records the number of visitors to a Cairns beach each year from 2015 to 2024. The numbers rise each year. What has she found?",
+      "opts": [
+       "A trend, because visitor numbers change over time",
+       "A pattern, because visitor numbers are spread over space",
+       "A relationship, because visitors and years are both numbers",
+       "A pattern, because the numbers rise in a regular way"
+      ],
+      "why": "Visitor numbers changing from year to year is a change over time, so it is a trend. The rise is regular, which tempts some students to say pattern, but a pattern is about how things are spread across space.",
+      "clue": "Look at what the data is measured against: places or years?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "A pattern, because it shows how farms are spread",
+      "also_right": []
+     },
+     "b": {
+      "best": "A trend, because visitor numbers change over time",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The stem pairs farms with being near the river, which looks like the card's relationship example (rainfall and farms). A student could reasonably read it as a relationship. The relationship option's reason is wrong, so the key still holds, but wording such as 'A map shows where a region's farms are' would remove the doubt."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both answers are correct and match the explanations. One minor point: question a's stem (farms clustered near a river) also hints at a relationship between farms and water, so it could be reworded to show spread alone."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a, wording: The stem pairs farms with being near the river, which looks like the card's relationship example (rainfall and farms). A student could reasonably read it as a relationship. The relationship option's reason is wrong, so the key still holds, but wording such as 'A map shows where a region's farms are' would remove the doubt."
+    ],
+    "proposal": {
+     "title": "Patterns, trends and relationships",
+     "card": [
+      [
+       "Pattern",
+       "how something is spread across space. For example, most of a country's people may live in a band along its coast."
+      ],
+      [
+       "Trend",
+       "a change over time. For example, a town's population may rise year after year."
+      ],
+      [
+       "Relationship",
+       "how two things change together. For example, towns with more rainfall may also have more farms."
+      ],
+      "To tell them apart, ask what the data shows: where things are (pattern), how they change over time (trend), or how one thing links to another (relationship)."
+     ],
+     "remember": "Pattern is where. Trend is when. Relationship is how two things link.",
+     "a": {
+      "q": "A map shows where a region's farms are. Most are clustered in its north-east corner. What does the map show?",
+      "opts": [
+       "A pattern, because it shows how farms are spread out",
+       "A trend, because it shows how farms change over time",
+       "A relationship, because it links farms to another factor",
+       "A trend, because the farms are grouped in one corner"
+      ],
+      "why": "The map shows where farms are across space, so it is a pattern. It shows only one thing, the farms, at one time, so there is no change over time for a trend and no second thing for a relationship.",
+      "clue": "Does the map show change over time, or spread across space?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia records the number of visitors to a Cairns beach each year from 2015 to 2024. The numbers rise each year. What has she found?",
+      "opts": [
+       "A trend, because visitor numbers change over time",
+       "A pattern, because visitor numbers are spread over space",
+       "A relationship, because visitors and years are both numbers",
+       "A pattern, because the numbers rise in a regular way"
+      ],
+      "why": "Visitor numbers changing from year to year is a change over time, so it is a trend. The rise is regular, which tempts some students to say pattern, but a pattern is about how things are spread across space.",
+      "clue": "Look at what the data is measured against: places or years?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-12T17:07:11Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "A pattern, because it shows how farms are spread out",
+       "also_right": []
+      },
+      "b": {
+       "best": "A trend, because visitor numbers change over time",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-12T17:07:11Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 11,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The stem pairs farms with being near the river, which looks like the card's relationship example (rainfall and farms). A student could reasonably read it as a relationship. The relationship option's reason is wrong, so the key still holds, but wording such as 'A map shows where a region's farms are' would remove the doubt."
+      }
+     ],
+     "flags": [
+      "Question a, wording: The stem pairs farms with being near the river, which looks like the card's relationship example (rainfall and farms). A student could reasonably read it as a relationship. The relationship option's reason is wrong, so the key still holds, but wording such as 'A map shows where a region's farms are' would remove the doubt."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "d2fdcb11392a8120"
+  }
+ ]
+}

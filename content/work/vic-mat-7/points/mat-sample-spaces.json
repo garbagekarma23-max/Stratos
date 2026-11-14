@@ -1,0 +1,468 @@
+{
+ "id": "mat-sample-spaces",
+ "title": "Sample spaces",
+ "brief": "4b07b20219e6",
+ "shortlist": [
+  [
+   "mat-sample-spaces-probability-2",
+   0.554
+  ],
+  [
+   "mat-sample-size-variation",
+   0.413
+  ],
+  [
+   "mat-making-inferences-from-sample",
+   0.322
+  ],
+  [
+   "mat-census-sample-experiment-observation",
+   0.257
+  ],
+  [
+   "mat-sample-spaces-probability",
+   0.222
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 may adapt mat-sample-spaces-probability-2, but is not highly sure, so to the Opus match check",
+  "2026-11-12T12:53:57Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:50Z write: done",
+  "2026-11-12T15:26:05Z check: flagged",
+  "2026-11-12T15:35:10Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-13T12:13:15Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "confirm": 0.00901,
+  "write": 0.01245,
+  "check": 0.01043,
+  "fix": 0.01935,
+  "recheck": 0.00708
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-sample-spaces-probability-2",
+  "changes": [
+   "The Victorian Level 7 syllabus code VC2M7P01 and its wording should be matched, so the card should be presented for Victorian Year 7 with Victorian-curriculum naming rather than the Year 7 cross-state label."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same sample space idea at Year 7 depth, but it is tagged to other states' Year 7 courses, so it needs a light adaptation to suit the Victorian Level 7 course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point also teaches events and calculating probabilities, and both its questions test probability rather than listing a sample space, so it is broader than this point, which only teaches what a sample space is.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Sample spaces",
+  "card": [
+   "An experiment is an action with results that are not certain, such as rolling a die or spinning a spinner. Each possible result is an outcome.",
+   "The sample space is the list of every possible outcome. We write it inside curly brackets, such as \\(\\{1, 2, 3, 4, 5, 6\\}\\) for one roll of a die.",
+   "Each outcome is listed once. Order does not matter, but none can be left out.",
+   "Example: a bag holds a red, a blue and a green counter. One counter is taken out. The sample space is \\(\\{\\text{red}, \\text{blue}, \\text{green}\\}\\), which has 3 outcomes."
+  ],
+  "remember": "A sample space lists every possible outcome, each one once.",
+  "a": {
+   "q": "A coin is tossed once. Which is the sample space?",
+   "opts": [
+    "{heads, tails}",
+    "{heads}",
+    "{heads, tails, edge}",
+    "{heads, heads, tails}"
+   ],
+   "why": "A toss can only land heads or tails, and each is listed once. Listing heads twice is wrong because each outcome appears once only.",
+   "clue": "List every result once, with none missing."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia spins a spinner with 5 equal sections numbered 1 to 5. She records the number it lands on. What is the sample space?",
+   "opts": [
+    "{1, 2, 3, 4, 5}",
+    "{1, 2, 3, 4}",
+    "{1, 3, 5}",
+    "{1, 2, 3, 4, 5, 6}"
+   ],
+   "why": "The spinner has sections 1 to 5, so those five numbers are every possible outcome. {1, 2, 3, 4, 5, 6} adds a 6 that is not on the spinner.",
+   "clue": "Only numbers on the spinner can be outcomes."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "{heads, tails}",
+   "also_right": []
+  },
+  "b": {
+   "best": "{1, 2, 3, 4, 5}",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The options write sets as plain text, such as {heads, tails}, but the card writes them in LaTeX, such as \\(\\{1, 2, 3, 4, 5, 6\\}\\). The notation is inconsistent within the point."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The options write sets as plain text, such as {1, 2, 3, 4, 5}, but the card writes them in LaTeX. The notation is inconsistent within the point."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The content and answers are correct. The only issue is that the question options write sets as plain text, while the card writes them in LaTeX."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The options write sets as plain text, such as {heads, tails}, but the card writes them in LaTeX, such as \\(\\{1, 2, 3, 4, 5, 6\\}\\). The notation is inconsistent within the point.",
+  "Question b, wording: The options write sets as plain text, such as {1, 2, 3, 4, 5}, but the card writes them in LaTeX. The notation is inconsistent within the point."
+ ],
+ "proposal": {
+  "title": "Sample spaces",
+  "card": [
+   "An experiment is an action with results that are not certain, such as rolling a die or spinning a spinner. Each possible result is an outcome.",
+   "The sample space is the list of every possible outcome. We write it inside curly brackets, such as \\(\\{1, 2, 3, 4, 5, 6\\}\\) for one roll of a die.",
+   "Each outcome is listed once. Order does not matter, but none can be left out.",
+   "Example: a bag holds a red, a blue and a green counter. One counter is taken out. The sample space is \\(\\{\\text{red}, \\text{blue}, \\text{green}\\}\\), which has 3 outcomes."
+  ],
+  "remember": "A sample space lists every possible outcome, each one once.",
+  "a": {
+   "q": "A coin is tossed once. Which is the sample space?",
+   "opts": [
+    "\\(\\{\\text{heads}, \\text{tails}\\}\\)",
+    "\\(\\{\\text{heads}\\}\\)",
+    "\\(\\{\\text{tails}\\}\\)",
+    "\\(\\{\\text{heads}, \\text{heads}, \\text{tails}\\}\\)"
+   ],
+   "why": "A toss can land heads or tails, so both must be listed, each once. \\(\\{\\text{heads}, \\text{heads}, \\text{tails}\\}\\) is wrong because it lists heads twice, and each outcome appears once only.",
+   "clue": "List every result once, with none missing."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia spins a spinner with 5 equal sections numbered 1 to 5. She records the number it lands on. What is the sample space?",
+   "opts": [
+    "\\(\\{1, 2, 3, 4, 5\\}\\)",
+    "\\(\\{1, 2, 3, 4\\}\\)",
+    "\\(\\{1, 3, 5\\}\\)",
+    "\\(\\{1, 2, 3, 4, 5, 6\\}\\)"
+   ],
+   "why": "The spinner has sections 1 to 5, so those five numbers are every possible outcome. \\(\\{1, 2, 3, 4, 5, 6\\}\\) adds a 6 that is not on the spinner.",
+   "clue": "Only numbers on the spinner can be outcomes."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(\\{\\text{heads}, \\text{tails}\\}\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(\\{1, 2, 3, 4, 5\\}\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The options write sets as plain text, such as {heads, tails}, but the card writes them in LaTeX, such as \\(\\{1, 2, 3, 4, 5, 6\\}\\). The notation is inconsistent within the point."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The options write sets as plain text, such as {1, 2, 3, 4, 5}, but the card writes them in LaTeX. The notation is inconsistent within the point."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The options write sets as plain text, such as {heads, tails}, but the card writes them in LaTeX, such as \\(\\{1, 2, 3, 4, 5, 6\\}\\). The notation is inconsistent within the point.",
+   "Question b, wording: The options write sets as plain text, such as {1, 2, 3, 4, 5}, but the card writes them in LaTeX. The notation is inconsistent within the point."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Sample spaces",
+  "card": [
+   "An experiment is an action with results that are not certain, such as rolling a die or spinning a spinner. Each possible result is an outcome.",
+   "The sample space is the list of every possible outcome. We write it inside curly brackets, such as \\(\\{1, 2, 3, 4, 5, 6\\}\\) for one roll of a die.",
+   "Each outcome is listed once. Order does not matter, but none can be left out.",
+   "Example: a bag holds a red, a blue and a green counter. One counter is taken out. The sample space is \\(\\{\\text{red}, \\text{blue}, \\text{green}\\}\\), which has 3 outcomes."
+  ],
+  "remember": "A sample space lists every possible outcome, each one once.",
+  "a": {
+   "q": "A coin is tossed once. Which is the sample space?",
+   "opts": [
+    "\\(\\{\\text{heads}, \\text{tails}\\}\\)",
+    "\\(\\{\\text{heads}\\}\\)",
+    "\\(\\{\\text{tails}\\}\\)",
+    "\\(\\{\\text{heads}, \\text{heads}, \\text{tails}\\}\\)"
+   ],
+   "why": "A toss can land heads or tails, so both must be listed, each once. \\(\\{\\text{heads}, \\text{heads}, \\text{tails}\\}\\) is wrong because it lists heads twice, and each outcome appears once only.",
+   "clue": "List every result once, with none missing."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia spins a spinner with 5 equal sections numbered 1 to 5. She records the number it lands on. What is the sample space?",
+   "opts": [
+    "\\(\\{1, 2, 3, 4, 5\\}\\)",
+    "\\(\\{1, 2, 3, 4\\}\\)",
+    "\\(\\{1, 3, 5\\}\\)",
+    "\\(\\{1, 2, 3, 4, 5, 6\\}\\)"
+   ],
+   "why": "The spinner has sections 1 to 5, so those five numbers are every possible outcome. \\(\\{1, 2, 3, 4, 5, 6\\}\\) adds a 6 that is not on the spinner.",
+   "clue": "Only numbers on the spinner can be outcomes."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix writes every set in the options and why lines in LaTeX, matching the card, and changes nothing else that matters. Both right answers are correct and each question has one right option.",
+   "item": "a991d0642f67db82",
+   "result": "decided",
+   "saved": {
+    "id": "mat-sample-spaces",
+    "title": "Sample spaces",
+    "brief": "4b07b20219e6",
+    "shortlist": [
+     [
+      "mat-sample-spaces-probability-2",
+      0.554
+     ],
+     [
+      "mat-sample-size-variation",
+      0.413
+     ],
+     [
+      "mat-making-inferences-from-sample",
+      0.322
+     ],
+     [
+      "mat-census-sample-experiment-observation",
+      0.257
+     ],
+     [
+      "mat-sample-spaces-probability",
+      0.222
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "confirm": 1,
+     "write": 1,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.0002,
+     "confirm": 0.00901,
+     "write": 0.01245,
+     "check": 0.01043,
+     "fix": 0.01935,
+     "recheck": 0.00708
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-sample-spaces-probability-2",
+     "changes": [
+      "The Victorian Level 7 syllabus code VC2M7P01 and its wording should be matched, so the card should be presented for Victorian Year 7 with Victorian-curriculum naming rather than the Year 7 cross-state label."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same sample space idea at Year 7 depth, but it is tagged to other states' Year 7 courses, so it needs a light adaptation to suit the Victorian Level 7 course.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The closest bank point also teaches events and calculating probabilities, and both its questions test probability rather than listing a sample space, so it is broader than this point, which only teaches what a sample space is.",
+     "model": "claude-opus-5-5"
+    },
+    "draft": {
+     "title": "Sample spaces",
+     "card": [
+      "An experiment is an action with results that are not certain, such as rolling a die or spinning a spinner. Each possible result is an outcome.",
+      "The sample space is the list of every possible outcome. We write it inside curly brackets, such as \\(\\{1, 2, 3, 4, 5, 6\\}\\) for one roll of a die.",
+      "Each outcome is listed once. Order does not matter, but none can be left out.",
+      "Example: a bag holds a red, a blue and a green counter. One counter is taken out. The sample space is \\(\\{\\text{red}, \\text{blue}, \\text{green}\\}\\), which has 3 outcomes."
+     ],
+     "remember": "A sample space lists every possible outcome, each one once.",
+     "a": {
+      "q": "A coin is tossed once. Which is the sample space?",
+      "opts": [
+       "{heads, tails}",
+       "{heads}",
+       "{heads, tails, edge}",
+       "{heads, heads, tails}"
+      ],
+      "why": "A toss can only land heads or tails, and each is listed once. Listing heads twice is wrong because each outcome appears once only.",
+      "clue": "List every result once, with none missing."
+     },
+     "b": {
+      "d": 2,
+      "q": "Mia spins a spinner with 5 equal sections numbered 1 to 5. She records the number it lands on. What is the sample space?",
+      "opts": [
+       "{1, 2, 3, 4, 5}",
+       "{1, 2, 3, 4}",
+       "{1, 3, 5}",
+       "{1, 2, 3, 4, 5, 6}"
+      ],
+      "why": "The spinner has sections 1 to 5, so those five numbers are every possible outcome. {1, 2, 3, 4, 5, 6} adds a 6 that is not on the spinner.",
+      "clue": "Only numbers on the spinner can be outcomes."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "{heads, tails}",
+      "also_right": []
+     },
+     "b": {
+      "best": "{1, 2, 3, 4, 5}",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The options write sets as plain text, such as {heads, tails}, but the card writes them in LaTeX, such as \\(\\{1, 2, 3, 4, 5, 6\\}\\). The notation is inconsistent within the point."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The options write sets as plain text, such as {1, 2, 3, 4, 5}, but the card writes them in LaTeX. The notation is inconsistent within the point."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The content and answers are correct. The only issue is that the question options write sets as plain text, while the card writes them in LaTeX."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a, wording: The options write sets as plain text, such as {heads, tails}, but the card writes them in LaTeX, such as \\(\\{1, 2, 3, 4, 5, 6\\}\\). The notation is inconsistent within the point.",
+     "Question b, wording: The options write sets as plain text, such as {1, 2, 3, 4, 5}, but the card writes them in LaTeX. The notation is inconsistent within the point."
+    ],
+    "proposal": {
+     "title": "Sample spaces",
+     "card": [
+      "An experiment is an action with results that are not certain, such as rolling a die or spinning a spinner. Each possible result is an outcome.",
+      "The sample space is the list of every possible outcome. We write it inside curly brackets, such as \\(\\{1, 2, 3, 4, 5, 6\\}\\) for one roll of a die.",
+      "Each outcome is listed once. Order does not matter, but none can be left out.",
+      "Example: a bag holds a red, a blue and a green counter. One counter is taken out. The sample space is \\(\\{\\text{red}, \\text{blue}, \\text{green}\\}\\), which has 3 outcomes."
+     ],
+     "remember": "A sample space lists every possible outcome, each one once.",
+     "a": {
+      "q": "A coin is tossed once. Which is the sample space?",
+      "opts": [
+       "\\(\\{\\text{heads}, \\text{tails}\\}\\)",
+       "\\(\\{\\text{heads}\\}\\)",
+       "\\(\\{\\text{tails}\\}\\)",
+       "\\(\\{\\text{heads}, \\text{heads}, \\text{tails}\\}\\)"
+      ],
+      "why": "A toss can land heads or tails, so both must be listed, each once. \\(\\{\\text{heads}, \\text{heads}, \\text{tails}\\}\\) is wrong because it lists heads twice, and each outcome appears once only.",
+      "clue": "List every result once, with none missing."
+     },
+     "b": {
+      "d": 2,
+      "q": "Mia spins a spinner with 5 equal sections numbered 1 to 5. She records the number it lands on. What is the sample space?",
+      "opts": [
+       "\\(\\{1, 2, 3, 4, 5\\}\\)",
+       "\\(\\{1, 2, 3, 4\\}\\)",
+       "\\(\\{1, 3, 5\\}\\)",
+       "\\(\\{1, 2, 3, 4, 5, 6\\}\\)"
+      ],
+      "why": "The spinner has sections 1 to 5, so those five numbers are every possible outcome. \\(\\{1, 2, 3, 4, 5, 6\\}\\) adds a 6 that is not on the spinner.",
+      "clue": "Only numbers on the spinner can be outcomes."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-12T17:07:12Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "\\(\\{\\text{heads}, \\text{tails}\\}\\)",
+       "also_right": []
+      },
+      "b": {
+       "best": "\\(\\{1, 2, 3, 4, 5\\}\\)",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-12T17:07:12Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The options write sets as plain text, such as {heads, tails}, but the card writes them in LaTeX, such as \\(\\{1, 2, 3, 4, 5, 6\\}\\). The notation is inconsistent within the point."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The options write sets as plain text, such as {1, 2, 3, 4, 5}, but the card writes them in LaTeX. The notation is inconsistent within the point."
+      }
+     ],
+     "flags": [
+      "Question a, wording: The options write sets as plain text, such as {heads, tails}, but the card writes them in LaTeX, such as \\(\\{1, 2, 3, 4, 5, 6\\}\\). The notation is inconsistent within the point.",
+      "Question b, wording: The options write sets as plain text, such as {1, 2, 3, 4, 5}, but the card writes them in LaTeX. The notation is inconsistent within the point."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "ea6ea3cbe99d0d67"
+  }
+ ]
+}

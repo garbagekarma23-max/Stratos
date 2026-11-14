@@ -1,0 +1,252 @@
+{
+ "id": "his-federation-vic",
+ "title": "Federation",
+ "brief": "efebc7ed2f4d",
+ "shortlist": [
+  [
+   "his-federation",
+   0.589
+  ],
+  [
+   "mod-white-australia",
+   0.391
+  ],
+  [
+   "his-end-white-australia-policy",
+   0.221
+  ],
+  [
+   "his-protection-policies",
+   0.209
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:51Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:45Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:03Z write: failed the content check, writing again",
+  "2026-11-12T15:35:08Z write: done",
+  "2026-11-12T15:42:23Z check: for review (other-sensitive)",
+  "2026-11-13T15:24:20Z review: rejected, to be written again",
+  "2026-11-13T15:37:12Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T15:44:54Z claude-code check: answered by a separate subagent",
+  "2026-11-13T15:44:54Z check: for review (other-sensitive)",
+  "2026-11-13T16:11:23Z review: approved as written"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.02516,
+  "check": 0.00823
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No single bank point covers both the 1 January 1901 Federation and the Immigration Restriction Act as one of the new parliament's first laws: his-federation omits the Act, and mod-white-australia covers the Act without the Federation event, so a new point is the safer match.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Federation",
+  "card": [
+   "Before 1901 Australia was six separate British colonies: New South Wales, Victoria, Queensland, South Australia, Western Australia and Tasmania. Each had its own government and laws.",
+   "On 1 January 1901 the six colonies joined to form the Commonwealth of Australia. This joining is called Federation. The colonies became states, and a national parliament was set up.",
+   "One of the new parliament's first laws was the Immigration Restriction Act 1901. It made it hard for people who were not of European background to migrate to Australia.",
+   "This law was the base of what became known as the White Australia policy. It shaped who could come to the new nation."
+  ],
+  "remember": "Federation joined six colonies into one nation in 1901, and one of its first laws limited who could migrate.",
+  "a": {
+   "q": "Which event took place at Federation on 1 January 1901?",
+   "opts": [
+    "Six colonies joined to form one nation",
+    "Britain sent the First Fleet to set up a colony",
+    "Gold was found and migrants began to arrive",
+    "Six colonies each became a separate country"
+   ],
+   "why": "On that date the six colonies joined under one national parliament, and they became states. They did not become separate countries, which is the opposite of what Federation did.",
+   "clue": "Think about what the word Federation means for the colonies."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which statement best describes the Immigration Restriction Act 1901?",
+   "opts": [
+    "A national law that made migration hard for non-Europeans",
+    "A colonial law that ended convict transport to Australia",
+    "A law that gave each colony control of its own migration",
+    "A national law that welcomed migrants from all countries"
+   ],
+   "why": "The Act was passed by the new national parliament and limited who could migrate, which is the base of the White Australia policy. It did not welcome all migrants, which is the most tempting wrong option.",
+   "clue": "It was one of the first laws of the new parliament, and it shaped who could come."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-13T15:37:12Z",
+   "step": "write",
+   "version": {
+    "title": "Federation",
+    "card": [
+     "Before 1901 there were six British colonies on the continent. Each had its own government and laws, and most taxed goods brought in from the others.",
+     [
+      "Federation",
+      "On 1 January 1901 the colonies joined to form the Commonwealth of Australia. They became states and kept their own parliaments, and a new national parliament made laws on shared matters such as defence, trade and migration."
+     ],
+     "One of the national parliament's first laws was the Immigration Restriction Act 1901. Under it, an officer could give a migrant a dictation test of 50 words in any European language, chosen so the person would fail.",
+     [
+      "White Australia policy",
+      "The test was used to keep out people who were not white, such as migrants from China and other parts of Asia. The Act was the base of the White Australia policy, which aimed to keep the population white."
+     ]
+    ],
+    "remember": "In 1901 six colonies became one nation, and its parliament soon passed a law to limit migration by race.",
+    "a": {
+     "q": "What changed for Victoria on 1 January 1901?",
+     "opts": [
+      "It became a state within one national Commonwealth",
+      "It became a separate country with its own parliament",
+      "It became a British colony with its own government",
+      "It lost its parliament and was run by the nation"
+     ],
+     "why": "At Federation the six colonies joined as states of the Commonwealth of Australia. Victoria kept its own parliament, while the national parliament took charge of shared matters. It was already a colony before 1901, and it did not become a country on its own.",
+     "clue": "Federation joined the colonies together. What were they called after that?"
+    },
+    "b": {
+     "d": 3,
+     "q": "In 1902 a man from Japan arrives in Melbourne hoping to work. An officer gives him a dictation test in a language he does not know. What is the purpose of the test?",
+     "opts": [
+      "To keep him out under the Immigration Restriction Act",
+      "To check he can read English well enough to work",
+      "To decide which state he will be allowed to live in",
+      "To let the colony of Victoria choose its own migrants"
+     ],
+     "why": "The dictation test was set so the person would fail, which let officers keep out people who were not white. It was not a fair check of English, as it could be in any European language. After Federation, migration was a national matter, not a colony's.",
+     "clue": "Was the test meant to be passed?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T15:44:54Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "It became a state within one national Commonwealth",
+     "also_right": []
+    },
+    "b": {
+     "best": "To keep him out under the Immigration Restriction Act",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "other-sensitive",
+    "summary": "No problems found. The point covers the racial discrimination of the White Australia policy, so it is marked sensitive."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Federation",
+  "card": [
+   "Before 1901 there were six British colonies on the continent. Each had its own government and laws, and most taxed goods brought in from the others.",
+   [
+    "Federation",
+    "On 1 January 1901 the colonies joined to form the Commonwealth of Australia. They became states and kept their own parliaments, and a new national parliament made laws on shared matters such as defence, trade and migration."
+   ],
+   "One of the national parliament's first laws was the Immigration Restriction Act 1901. Under it, an officer could give a migrant a dictation test of 50 words in any European language, chosen so the person would fail.",
+   [
+    "White Australia policy",
+    "The test was used to keep out people who were not white, such as migrants from China and other parts of Asia. The Act was the base of the White Australia policy, which aimed to keep the population white."
+   ]
+  ],
+  "remember": "In 1901 six colonies became one nation, and its parliament soon passed a law to limit migration by race.",
+  "a": {
+   "q": "What changed for Victoria on 1 January 1901?",
+   "opts": [
+    "It became a state within one national Commonwealth",
+    "It became a separate country with its own parliament",
+    "It became a British colony with its own government",
+    "It lost its parliament and was run by the nation"
+   ],
+   "why": "At Federation the six colonies joined as states of the Commonwealth of Australia. Victoria kept its own parliament, while the national parliament took charge of shared matters. It was already a colony before 1901, and it did not become a country on its own.",
+   "clue": "Federation joined the colonies together. What were they called after that?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1902 a man from Japan arrives in Melbourne hoping to work. An officer gives him a dictation test in a language he does not know. What is the purpose of the test?",
+   "opts": [
+    "To keep him out under the Immigration Restriction Act",
+    "To check he can read English well enough to work",
+    "To decide which state he will be allowed to live in",
+    "To let the colony of Victoria choose its own migrants"
+   ],
+   "why": "The dictation test was set so the person would fail, which let officers keep out people who were not white. It was not a fair check of English, as it could be in any European language. After Federation, migration was a national matter, not a colony's.",
+   "clue": "Was the test meant to be passed?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It became a state within one national Commonwealth",
+   "also_right": []
+  },
+  "b": {
+   "best": "To keep him out under the Immigration Restriction Act",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "other-sensitive",
+  "summary": "No problems found. The point covers the racial discrimination of the White Australia policy, so it is marked sensitive."
+ },
+ "sensitive": "other-sensitive",
+ "flags": [],
+ "checked_by": "claude-code",
+ "final": {
+  "title": "Federation",
+  "card": [
+   "Before 1901 there were six British colonies on the continent. Each had its own government and laws, and most taxed goods brought in from the others.",
+   [
+    "Federation",
+    "On 1 January 1901 the colonies joined to form the Commonwealth of Australia. They became states and kept their own parliaments, and a new national parliament made laws on shared matters such as defence, trade and migration."
+   ],
+   "One of the national parliament's first laws was the Immigration Restriction Act 1901. Under it, an officer could give a migrant a dictation test of 50 words in any European language, chosen so the person would fail.",
+   [
+    "White Australia policy",
+    "The test was used to keep out people who were not white, such as migrants from China and other parts of Asia. The Act was the base of the White Australia policy, which aimed to keep the population white."
+   ]
+  ],
+  "remember": "In 1901 six colonies became one nation, and its parliament soon passed a law to limit migration by race.",
+  "a": {
+   "q": "What changed for Victoria on 1 January 1901?",
+   "opts": [
+    "It became a state within one national Commonwealth",
+    "It became a separate country with its own parliament",
+    "It became a British colony with its own government",
+    "It lost its parliament and was run by the nation"
+   ],
+   "why": "At Federation the six colonies joined as states of the Commonwealth of Australia. Victoria kept its own parliament, while the national parliament took charge of shared matters. It was already a colony before 1901, and it did not become a country on its own.",
+   "clue": "Federation joined the colonies together. What were they called after that?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1902 a man from Japan arrives in Melbourne hoping to work. An officer gives him a dictation test in a language he does not know. What is the purpose of the test?",
+   "opts": [
+    "To keep him out under the Immigration Restriction Act",
+    "To check he can read English well enough to work",
+    "To decide which state he will be allowed to live in",
+    "To let the colony of Victoria choose its own migrants"
+   ],
+   "why": "The dictation test was set so the person would fail, which let officers keep out people who were not white. It was not a fair check of English, as it could be in any European language. After Federation, migration was a national matter, not a colony's.",
+   "clue": "Was the test meant to be passed?"
+  }
+ },
+ "cleared_by": "owner"
+}

@@ -1,0 +1,204 @@
+{
+ "id": "ecb-incentives",
+ "title": "Incentives",
+ "brief": "367953e8b4ea",
+ "shortlist": [
+  [
+   "eco-incentives-decisions",
+   0.253
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:44Z new, match",
+  "2026-11-12T12:44:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:32Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:25:55Z write: done",
+  "2026-11-12T15:35:02Z check: flagged",
+  "2026-11-12T15:59:42Z fix: suggested",
+  "2026-11-12T16:19:51Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.00597,
+  "check": 0.0092,
+  "fix": 0.01753
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point is a broader Units 1 and 2 (VCE) card that adds subsidies, rebates and regulations beyond the Years 7 and 8 brief on incentives and disincentives, so it is at a different depth and scope and would need more than small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Incentives",
+  "card": [
+   [
+    "Incentive",
+    "An incentive is something that encourages people to make a choice. A discount or a reward is an incentive."
+   ],
+   [
+    "Disincentive",
+    "A disincentive is something that discourages people from making a choice. A fine or a tax is a disincentive."
+   ],
+   "Incentives and disincentives change what a choice gives or costs a person. This can change what they decide to do.",
+   "The same thing can be both. A tax on a product is a disincentive to buy it, but a discount on that product is an incentive to buy it."
+  ],
+  "remember": "Incentives encourage a choice. Disincentives discourage one.",
+  "a": {
+   "q": "A council fines people who drop litter in a park. What is the fine?",
+   "opts": [
+    "A disincentive, because it discourages littering",
+    "An incentive, because it encourages littering",
+    "An incentive, because it encourages people to pay",
+    "A disincentive, because it encourages people to visit"
+   ],
+   "why": "A fine makes littering cost more, so it discourages the choice. That makes it a disincentive. It is not an incentive, because it does not encourage the choice it is aimed at.",
+   "clue": "Does the fine make people more or less likely to litter?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia runs a bakery in Ballarat. She gives customers a free coffee when they buy ten pies. What is the free coffee?",
+   "opts": [
+    "An incentive to buy more pies",
+    "A disincentive to buy more pies",
+    "A tax on customers who buy pies",
+    "A fine for customers who buy few pies"
+   ],
+   "why": "The free coffee is a reward that encourages customers to buy more pies, so it is an incentive. It is not a disincentive, because it does not discourage the choice to buy.",
+   "clue": "Is the free coffee a reward or a penalty?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A disincentive, because it discourages littering",
+   "also_right": []
+  },
+  "b": {
+   "best": "An incentive to buy more pies",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The fourth line says 'The same thing can be both', but its example uses two different things: a tax, which is a disincentive, and a discount, which is an incentive. The example does not show one thing being both, so it confuses the idea. A fitting example is a tax on cigarettes: it is a disincentive to smoke but an incentive to quit."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and their explanations are correct. The card's line 'The same thing can be both' is illustrated with two different things (a tax and a discount), so the example contradicts the claim and should be replaced or the line reworded."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The fourth line says 'The same thing can be both', but its example uses two different things: a tax, which is a disincentive, and a discount, which is an incentive. The example does not show one thing being both, so it confuses the idea. A fitting example is a tax on cigarettes: it is a disincentive to smoke but an incentive to quit."
+ ],
+ "proposal": {
+  "title": "Incentives",
+  "card": [
+   [
+    "Incentive",
+    "An incentive is something that encourages people to make a choice. A discount or a reward is an incentive."
+   ],
+   [
+    "Disincentive",
+    "A disincentive is something that discourages people from making a choice. A fine or a tax is a disincentive."
+   ],
+   "Incentives and disincentives change what a choice gives or costs a person. This can change what they decide to do.",
+   "The same thing can be both. A tax on cigarettes is a disincentive to smoke, and it is also an incentive to quit."
+  ],
+  "remember": "Incentives encourage a choice. Disincentives discourage one.",
+  "a": {
+   "q": "A council fines people who drop litter in a park. What is the fine?",
+   "opts": [
+    "A disincentive, because it discourages littering",
+    "An incentive, because it encourages littering",
+    "An incentive, because it encourages people to pay",
+    "A disincentive, because it encourages people to visit"
+   ],
+   "why": "A fine makes littering cost more, so it discourages the choice. That makes it a disincentive. It is not an incentive to litter, because it does not encourage the choice it is aimed at.",
+   "clue": "Does the fine make people more or less likely to litter?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia runs a bakery in Ballarat. She gives customers a free coffee when they buy ten pies. What is the free coffee?",
+   "opts": [
+    "An incentive to buy more pies",
+    "A disincentive to buy more pies",
+    "A tax on customers who buy pies",
+    "A fine for customers who buy few pies"
+   ],
+   "why": "The free coffee is a reward that encourages customers to buy more pies, so it is an incentive. It is not a disincentive, because it does not discourage the choice to buy.",
+   "clue": "Is the free coffee a reward or a penalty?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:51Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The fourth line says 'The same thing can be both', but its example uses two different things: a tax, which is a disincentive, and a discount, which is an incentive. The example does not show one thing being both, so it confuses the idea. A fitting example is a tax on cigarettes: it is a disincentive to smoke but an incentive to quit."
+   }
+  ],
+  "flags": [
+   "Card, wording: The fourth line says 'The same thing can be both', but its example uses two different things: a tax, which is a disincentive, and a discount, which is an incentive. The example does not show one thing being both, so it confuses the idea. A fitting example is a tax on cigarettes: it is a disincentive to smoke but an incentive to quit."
+  ]
+ },
+ "final": {
+  "title": "Incentives",
+  "card": [
+   [
+    "Incentive",
+    "An incentive is something that encourages people to make a choice. A discount or a reward is an incentive."
+   ],
+   [
+    "Disincentive",
+    "A disincentive is something that discourages people from making a choice. A fine or a tax is a disincentive."
+   ],
+   "Incentives and disincentives change what a choice gives or costs a person. This can change what they decide to do.",
+   "The same thing can be both. A tax on cigarettes is a disincentive to smoke, and it is also an incentive to quit."
+  ],
+  "remember": "Incentives encourage a choice. Disincentives discourage one.",
+  "a": {
+   "q": "A council fines people who drop litter in a park. What is the fine?",
+   "opts": [
+    "A disincentive, because it discourages littering",
+    "An incentive, because it encourages littering",
+    "An incentive, because it encourages people to pay",
+    "A disincentive, because it encourages people to visit"
+   ],
+   "why": "A fine makes littering cost more, so it discourages the choice. That makes it a disincentive. It is not an incentive to litter, because it does not encourage the choice it is aimed at.",
+   "clue": "Does the fine make people more or less likely to litter?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia runs a bakery in Ballarat. She gives customers a free coffee when they buy ten pies. What is the free coffee?",
+   "opts": [
+    "An incentive to buy more pies",
+    "A disincentive to buy more pies",
+    "A tax on customers who buy pies",
+    "A fine for customers who buy few pies"
+   ],
+   "why": "The free coffee is a reward that encourages customers to buy more pies, so it is an incentive. It is not a disincentive, because it does not discourage the choice to buy.",
+   "clue": "Is the free coffee a reward or a penalty?"
+  }
+ },
+ "cleared_by": "auto"
+}

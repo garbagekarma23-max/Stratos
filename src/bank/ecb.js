@@ -4660,5 +4660,3593 @@ MADE_BANKS.ecb = {
       "why": "Buying only sustainable timber protects the environment and goes beyond what the law demands. Fitting required safety equipment is tempting because it helps workers, but it is a legal duty, so it does not go beyond the law.",
       "clue": "Ask whether the law would have made him do it."
     }
+  },
+  "ecb-needs-wants-vic": {
+    "title": "Needs and wants",
+    "card": [
+      ["Needs", "Things people must have to survive, such as food, water, clothing and shelter."],
+      ["Wants", "Things people would like to have but can live without, such as a games console or a holiday."],
+      "To sort an item, ask: could the person survive without it? If yes, it is a want. If no, it is a need.",
+      "The same type of item can be either. A warm coat in a cold winter is a need. A fifth coat in a new style is a want."
+    ],
+    "remember": "A need is required to survive. A want is something you would like but can live without.",
+    "a": {
+      "q": "Which of these is a want rather than a need?",
+      "opts": [
+        "A new pair of designer sunglasses",
+        "A bottle of clean drinking water",
+        "A roof to sleep under at night",
+        "A basic meal each day"
+      ],
+      "why": "A person can live without designer sunglasses, so they are a want. Water, shelter and food are required to survive, so they are needs.",
+      "clue": "Which one could a person live without?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Leila lives in Ballarat, where winters are cold. She buys a basic warm jacket, then also buys a fourth jacket because it is in fashion. Which describes her purchases?",
+      "opts": [
+        "The first jacket is a need, the fourth is a want",
+        "Both jackets are needs, as jackets are clothing",
+        "Both jackets are wants, as she could stay inside",
+        "The first jacket is a want, the fourth is a need"
+      ],
+      "why": "A basic warm jacket helps her stay safe in the cold, so it is a need. A fourth jacket bought for fashion is something she can live without, so it is a want. The type of item, clothing, does not decide this on its own.",
+      "clue": "Ask whether she could survive without each jacket."
+    }
+  },
+  "ecb-economic-resources": {
+    "title": "Economic resources",
+    "card": [
+      "Goods are things you can touch, such as bread or a bike. Services are things done for you, such as a haircut. Both are made using economic resources.",
+      ["Natural", "things that come from nature, such as land, water and minerals."],
+      ["Human", "the work and skills of people."],
+      ["Capital", "things made to help produce other goods and services, such as tools, machines and buildings."]
+    ],
+    "remember": "Goods and services are made from natural, human and capital resources.",
+    "a": {
+      "q": "Which of these is a capital resource for a bakery in Bendigo?",
+      "opts": [
+        "An oven used to bake the bread",
+        "The wheat grown on a farm",
+        "The skills of the baker",
+        "The water from the local river"
+      ],
+      "why": "An oven is a machine made to help produce bread, so it is a capital resource. The wheat and water come from nature, so they are natural resources. The baker's skills are a human resource.",
+      "clue": "Which one was made by people to help produce other things?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia runs a surf school in Torquay. Which of these is a human resource she uses?",
+      "opts": [
+        "Her instructors' skill at teaching surfing",
+        "The surfboards she hires out",
+        "The beach where lessons are held",
+        "The shed that stores the wetsuits"
+      ],
+      "why": "Human resources are the work and skills of people, so the instructors' teaching skill is the human resource. The surfboards and the shed are capital resources, as they are made to help produce lessons. The beach comes from nature, so it is a natural resource.",
+      "clue": "Look for the option about what people can do, not what they use."
+    }
+  },
+  "ecb-basic-economic-problem": {
+    "title": "The basic economic problem",
+    "card": [
+      "People's wants have no end. When one want is met, new ones soon appear.",
+      "Resources are limited. There is only so much land, labour and equipment to make goods and services. This shortage is called scarcity.",
+      "Wants are unlimited but resources are scarce. This is the basic economic problem.",
+      "Because of this, individuals, businesses and governments must choose how to use their limited resources. Choosing one use means going without others."
+    ],
+    "remember": "Unlimited wants meet scarce resources, so choices must be made.",
+    "a": {
+      "q": "Why can no society meet all of its people's wants?",
+      "opts": [
+        "Wants are unlimited but resources are scarce",
+        "Resources are unlimited but wants are scarce",
+        "People only want things they cannot afford",
+        "Governments choose not to produce enough"
+      ],
+      "why": "Wants keep growing, while land, labour and equipment are limited. That gap is the basic economic problem. It is not that wants are scarce, because people always want more.",
+      "clue": "Think about which side has no end and which side runs out."
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia's town council in Bendigo has a set budget. It wants a new pool, a bigger library and more bike paths. What does this show?",
+      "opts": [
+        "Limited resources force the council to choose",
+        "The council has too few wants to plan well",
+        "Scarcity only affects businesses and families",
+        "The council can fund every project it wants"
+      ],
+      "why": "The budget is limited but the wants are many, so the council must choose how to use its money. Scarcity affects governments as well as individuals and businesses.",
+      "clue": "Can the council pay for everything on its list?"
+    }
+  },
+  "ecb-three-economic-questions-vic": {
+    "title": "The three economic questions",
+    "card": [
+      "Resources are scarce, so every society must answer three questions about how to use them.",
+      ["What to produce", "which goods and services to make, and how much of each."],
+      ["How to produce", "which resources and methods to use, such as people's work or machines."],
+      ["Who gets it", "how the goods and services made are shared among the people."]
+    ],
+    "remember": "Every society must decide what, how and who.",
+    "a": {
+      "q": "A government decides to use its land and workers to build homes, not a golf course. Which question is it answering?",
+      "opts": ["What to produce", "How to produce", "Who gets what is produced", "Whether wants are unlimited"],
+      "why": "The choice is about which goods and services to make, so it answers what to produce. It is not how to produce, which is about the methods used to build them.",
+      "clue": "The choice is about which thing to make."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam's bakery in Geelong swaps hand kneading for a dough machine. Which question is Sam answering?",
+      "opts": ["How to produce", "What to produce", "Who gets what is produced", "How much wants will grow"],
+      "why": "Sam is choosing a method, using a machine in place of people's work. That is how to produce. The bakery still makes bread, so what to produce has not changed.",
+      "clue": "Look at what changed: the product or the method?"
+    }
+  },
+  "ecb-opportunity-cost-vic": {
+    "title": "Opportunity cost",
+    "card": [
+      "Because resources are limited, choosing one thing means not choosing others. Every choice has something given up.",
+      "The opportunity cost of a choice is the next best option you give up. It is only one thing, not a list of everything you missed out on.",
+      "Say you spend Saturday at work. Your options were work, time with friends, or sleeping in. If time with friends was your next best choice, that is the opportunity cost.",
+      "Opportunity cost is not always money. It can be time, or the use of a resource such as land or a machine."
+    ],
+    "remember": "Opportunity cost is the next best option given up, not everything given up.",
+    "a": {
+      "q": "Zoe has $20. She could buy a book, see a movie or buy a cap. She buys the book, and the movie was her next best choice. What is her opportunity cost?",
+      "opts": ["Seeing the movie", "Buying the cap", "The $20 she spent", "Seeing the movie and buying the cap"],
+      "why": "Opportunity cost is the next best option given up. The movie was Zoe's next best choice, so it is the cost. The cap was also given up, but it was not the next best, and opportunity cost is only one option.",
+      "clue": "Look for the next best choice, not all the choices."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam's school council owns a spare hall. It could hold a Year 7 disco, a chess club or a book sale. The council picks the disco. Without the disco, it would have chosen the chess club over the book sale. What is the opportunity cost of the disco?",
+      "opts": [
+        "Using the hall for the chess club",
+        "Using the hall for the book sale",
+        "Using the hall for the book sale and chess club",
+        "The money spent on disco decorations"
+      ],
+      "why": "If the disco were not an option, the council would have picked the chess club, so the chess club is the next best option given up. The book sale was also given up, but it ranked lower, and opportunity cost is only one option. Money spent on decorations is a cost of the disco, not an option given up.",
+      "clue": "Ask what the council would have done with the hall instead."
+    }
+  },
+  "ecb-weighing-costs-benefits": {
+    "title": "Weighing costs and benefits",
+    "card": [
+      ["Benefits", "what an option gives you, such as money, enjoyment or something useful."],
+      [
+        "Costs",
+        "what an option takes from you, such as money, time or effort. Costs also include the option's opportunity cost."
+      ],
+      "Net benefit is the benefits minus the costs. A sensible decision compares the net benefit of each option.",
+      "The best choice is the option with the greatest net benefit. An option can look good because of its benefits, but still be a poor choice if another option has a greater net benefit."
+    ],
+    "remember": "Compare the benefits and costs of each option, then pick the greatest net benefit.",
+    "a": {
+      "q": "What does a sensible decision maker do when choosing between options?",
+      "opts": [
+        "Picks the option with the greatest net benefit",
+        "Picks the option with the greatest benefits",
+        "Picks the option with the lowest price",
+        "Picks the option that most people choose"
+      ],
+      "why": "A sensible choice compares benefits with costs and takes the greatest net benefit. Choosing the greatest benefits alone is tempting, but it ignores costs, and an option with big benefits can still have bigger costs.",
+      "clue": "Look at both what an option gives and what it takes."
+    },
+    "b": {
+      "d": 3,
+      "q": "Liam in Ballarat can buy a concert ticket for $100, worth $120 to him, or a video game for $50, worth $90 to him. Using each price as its cost, which has the greatest net benefit?",
+      "opts": [
+        "The game, with a net benefit of $40",
+        "The concert, with a net benefit of $120",
+        "The concert, with a net benefit of $20",
+        "The game, with a net benefit of $90"
+      ],
+      "why": "Net benefit is benefits minus costs: the concert gives $120 minus $100, which is $20, and the game gives $90 minus $50, which is $40. Picking the concert because $120 is the biggest number is tempting, but that ignores its $100 cost.",
+      "clue": "Take each option's cost away from its benefit, then compare."
+    }
+  },
+  "ecb-incentives": {
+    "title": "Incentives",
+    "card": [
+      [
+        "Incentive",
+        "An incentive is something that encourages people to make a choice. A discount or a reward is an incentive."
+      ],
+      [
+        "Disincentive",
+        "A disincentive is something that discourages people from making a choice. A fine or a tax is a disincentive."
+      ],
+      "Incentives and disincentives change what a choice gives or costs a person. This can change what they decide to do.",
+      "The same thing can be both. A tax on cigarettes is a disincentive to smoke, and it is also an incentive to quit."
+    ],
+    "remember": "Incentives encourage a choice. Disincentives discourage one.",
+    "a": {
+      "q": "A council fines people who drop litter in a park. What is the fine?",
+      "opts": [
+        "A disincentive, because it discourages littering",
+        "An incentive, because it encourages littering",
+        "An incentive, because it encourages people to pay",
+        "A disincentive, because it encourages people to visit"
+      ],
+      "why": "A fine makes littering cost more, so it discourages the choice. That makes it a disincentive. It is not an incentive to litter, because it does not encourage the choice it is aimed at.",
+      "clue": "Does the fine make people more or less likely to litter?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia runs a bakery in Ballarat. She gives customers a free coffee when they buy ten pies. What is the free coffee?",
+      "opts": [
+        "An incentive to buy more pies",
+        "A disincentive to buy more pies",
+        "A tax on customers who buy pies",
+        "A fine for customers who buy few pies"
+      ],
+      "why": "The free coffee is a reward that encourages customers to buy more pies, so it is an incentive. It is not a disincentive, because it does not discourage the choice to buy.",
+      "clue": "Is the free coffee a reward or a penalty?"
+    }
+  },
+  "ecb-demand-vic": {
+    "title": "Demand",
+    "card": [
+      "Demand is how much of a product buyers want and can afford at each price. Wanting something is not enough. A buyer must also be able to pay for it.",
+      "As the price of a product rises, people usually buy less of it. As the price falls, they usually buy more.",
+      "Buyers cut back when prices rise for two reasons. Some cannot afford it any more, and some switch to a cheaper product instead.",
+      "A demand schedule is a table that lists the quantity buyers would purchase at each price. A demand curve is a line that shows the same thing on a graph, and it slopes down."
+    ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A demand curve drawn from a demand schedule. At $5 buyers want 10, at $4 they want 20, at $3 they want 30, at $2 they want 40 and at $1 they want 50. The line slopes down: a higher price means fewer are bought.",
+        "x": {"min": 0, "max": 70, "step": 10, "label": "Quantity"},
+        "y": {"min": 0, "max": 6, "step": 1, "label": "Price ($)"},
+        "grid": true,
+        "items": [
+          {
+            "type": "curve",
+            "id": "D",
+            "points": [[10, 5], [20, 4], [30, 3], [40, 2], [50, 1]],
+            "label": "Demand",
+            "pos": "above-right",
+            "labelAt": 42
+          },
+          {"type": "point", "at": [10, 5], "on": ["D"]},
+          {"type": "point", "at": [20, 4], "on": ["D"]},
+          {"type": "point", "at": [30, 3], "on": ["D"]},
+          {"type": "point", "at": [40, 2], "on": ["D"]},
+          {"type": "point", "at": [50, 1], "on": ["D"]}
+        ]
+      }
+    },
+    "remember": "Demand links price to the amount people buy: a higher price usually means less is bought.",
+    "a": {
+      "q": "A shop in Geelong cuts the price of its sandwiches. What usually happens to the number of sandwiches people want to buy?",
+      "opts": ["It usually goes up", "It usually goes down", "It stays about the same", "It goes up for wealthy buyers alone"],
+      "why": "As price falls, people usually buy more. A lower price puts the sandwiches within reach of more buyers, and some switch from other lunches. The effect is not limited to wealthy buyers.",
+      "clue": "Think about what a lower price does to what buyers can afford."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia in Bendigo really wants a new phone that costs $900, but she has only $300 saved. Is she part of the demand for that phone at $900?",
+      "opts": [
+        "No, as she cannot pay that price now",
+        "Yes, as she wants the phone very much",
+        "No, as she has not been to a shop yet",
+        "Yes, as she could save the rest later"
+      ],
+      "why": "Demand needs buyers who both want a product and can afford it at that price. Mia wants the phone but cannot pay $900, so she is not part of demand at that price. Wanting it a lot, or saving later, does not change what she can pay now.",
+      "clue": "Demand needs more than wanting a product."
+    }
+  },
+  "ecb-supply-vic": {
+    "title": "Supply",
+    "card": [
+      "Supply is how much of a product sellers will offer for sale at each price.",
+      "As the price rises, sellers usually offer more. A higher price means more money for each item sold.",
+      "As the price falls, sellers usually offer less. Some items may no longer be worth making at a low price.",
+      "Supply describes the sellers' side of a market. It is a different idea from demand."
+    ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "A supply curve sloping up. When the price rises from a low price to a high price, sellers offer more: the quantity offered rises from fewer to more, from A to B along the curve.",
+        "x": {"min": 0, "max": 10, "label": "Quantity"},
+        "y": {"min": 0, "max": 10, "label": "Price"},
+        "items": [
+          {"type": "curve", "id": "S", "points": [[1, 1], [9, 9]], "label": "Supply", "pos": "above", "labelAt": 9},
+          {"type": "guide", "at": [2.5, 2.5], "xLabel": "fewer", "yLabel": "low price"},
+          {"type": "guide", "at": [6, 6], "xLabel": "more", "yLabel": "high price"},
+          {"type": "point", "at": [2.5, 2.5], "on": ["S"], "label": "A", "pos": "below-right"},
+          {"type": "point", "at": [6, 6], "on": ["S"], "label": "B", "pos": "below-right"},
+          {"type": "arrow", "from": [3, 3.7], "to": [5.4, 6.1]}
+        ]
+      }
+    },
+    "remember": "Higher price, sellers usually offer more. Lower price, they usually offer less.",
+    "a": {
+      "q": "Which of these best describes what supply means in a market?",
+      "opts": [
+        "How much sellers will offer at each price",
+        "How much buyers want to buy at each price",
+        "How much a product costs to make",
+        "How many sellers there are in a market"
+      ],
+      "why": "Supply is the amount sellers will offer at each price. The option about buyers is not supply, because supply describes the sellers' side of a market.",
+      "clue": "Supply is about the sellers' side of the market."
+    },
+    "b": {
+      "d": 2,
+      "q": "At a Yarra Valley farm stand, the price of strawberries rises from $4 to $6 a punnet. What will the farm usually do?",
+      "opts": [
+        "Offer more punnets for sale",
+        "Offer fewer punnets for sale",
+        "Offer the same number of punnets",
+        "Stop selling punnets at the gate"
+      ],
+      "why": "A higher price means more money for each punnet, so the Yarra Valley farm usually offers more. Offering fewer would match a price fall, not a rise.",
+      "clue": "What does a higher price mean for the seller's income?"
+    }
+  },
+  "ecb-equilibrium-price-vic": {
+    "title": "Equilibrium price",
+    "card": [
+      "Buyers want a certain amount at each price. Sellers offer a certain amount at each price. The two amounts only match at one price.",
+      "That price is the equilibrium price. At it, the amount buyers want equals the amount sellers offer. The amount traded is the equilibrium quantity.",
+      "On a graph, the demand curve (D) and the supply curve (S) cross at the equilibrium. Price is on the vertical axis and quantity is on the horizontal axis.",
+      "Prices in a market tend to move towards the equilibrium price and settle there, unless something changes what buyers want or sellers offer."
+    ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "Demand D slopes down and supply S slopes up. They cross at the equilibrium. A dashed line from the crossing point meets the price axis at P* and the quantity axis at Q*.",
+        "x": {"min": 0, "max": 10, "label": "Quantity"},
+        "y": {"min": 0, "max": 10, "label": "Price"},
+        "items": [
+          {"type": "curve", "id": "D", "points": [[0, 10], [10, 0]], "label": "D", "pos": "above-right"},
+          {"type": "curve", "id": "S", "points": [[0, 2], [8, 10]], "label": "S", "pos": "right"},
+          {"type": "guide", "at": [4, 6], "xLabel": "Q*", "yLabel": "P*"},
+          {"type": "point", "at": [4, 6], "on": ["D", "S"], "is": "intersection"}
+        ]
+      }
+    },
+    "remember": "Equilibrium is the price where buyers' demand and sellers' supply match, shown where the curves cross.",
+    "a": {
+      "q": "What is the equilibrium price in a market?",
+      "opts": [
+        "The price where the amount wanted equals the amount offered",
+        "The lowest price that sellers are willing to accept",
+        "The price that the government says sellers must charge",
+        "The price where sellers make the most profit possible"
+      ],
+      "why": "At the equilibrium price, buyers want exactly the amount that sellers offer. Sellers may accept lower prices than this, but that does not make them the equilibrium, since the amounts only match at one price.",
+      "clue": "Think about when buyers and sellers want the same amount."
+    },
+    "b": {
+      "d": 2,
+      "q": "At a school fete in Bendigo, the demand and supply curves for lemonade cross at $3 and 80 cups. What do these numbers show?",
+      "opts": [
+        "Buyers want 80 cups and sellers offer 80 cups at $3",
+        "Buyers want 80 cups and sellers offer 3 cups at $3",
+        "Sellers offer 80 cups at any price above $3",
+        "Buyers want 80 cups at any price below $3"
+      ],
+      "why": "The crossing point shows the price and the quantity where wanted and offered amounts are equal. So at $3, buyers want 80 cups and sellers offer 80 cups. The options about any price are wrong because the amounts only match at that one price.",
+      "clue": "Where the curves cross, the two amounts are the same."
+    }
+  },
+  "ecb-shortages-surpluses": {
+    "title": "Shortages and surpluses",
+    "card": [
+      ["Shortage", "When the price is below equilibrium, buyers want more than sellers offer. Some buyers miss out."],
+      ["Surplus", "When the price is above equilibrium, sellers offer more than buyers want. Unsold stock builds up."],
+      "In a shortage, buyers compete for the limited stock, so the price tends to rise. In a surplus, sellers cut prices to clear stock, so the price tends to fall.",
+      "Either way, the price moves towards equilibrium, where the shortage or surplus is gone."
+    ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "Demand D and supply S cross at the equilibrium price P*. At a price P1 below P*, the quantity demanded is greater than the quantity supplied, which is a shortage. At a price P2 above P*, the quantity supplied is greater than the quantity demanded, which is a surplus.",
+        "x": {"min": 0, "max": 10, "label": "Quantity"},
+        "y": {"min": 0, "max": 10, "label": "Price"},
+        "items": [
+          {"type": "curve", "id": "D", "points": [[0, 10], [10, 0]], "label": "D", "pos": "above-right"},
+          {"type": "curve", "id": "S", "points": [[0, 2], [8, 10]], "label": "S", "pos": "right"},
+          {"type": "guide", "at": [4, 6], "xLabel": "", "yLabel": "P*"},
+          {"type": "guide", "at": [6, 4], "xLabel": "", "yLabel": "P1"},
+          {"type": "guide", "at": [2, 8], "xLabel": "", "yLabel": "P2"},
+          {"type": "point", "at": [4, 6], "on": ["D", "S"], "is": "intersection"}
+        ]
+      }
+    },
+    "remember": "Below equilibrium means a shortage and a rising price. Above it means a surplus and a falling price.",
+    "a": {
+      "q": "A bakery in Geelong prices its pies above the equilibrium price. What is likely to happen?",
+      "opts": [
+        "Unsold pies build up and the price tends to fall",
+        "Buyers want more pies than offered and the price rises",
+        "Unsold pies build up and the price tends to rise",
+        "Buyers want more pies than offered and the price falls"
+      ],
+      "why": "Above equilibrium, sellers offer more than buyers want, so stock is left over and the price tends to fall. The option with a shortage is wrong because a shortage happens when the price is below equilibrium.",
+      "clue": "Think about whether pies sell out or get left over."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tickets to a concert in Ballarat sell out in minutes at $40, and many fans are left without one. What does this suggest, and what is likely to follow?",
+      "opts": [
+        "The price is below equilibrium, so the price may rise",
+        "The price is below equilibrium, so the price may fall",
+        "The price is above equilibrium, so the price may fall",
+        "The price is above equilibrium, so the price may rise"
+      ],
+      "why": "Fans wanting more tickets than are offered is a shortage, which happens when the price is below equilibrium. Buyers compete for the tickets, so the price tends to rise. Selling out quickly does not mean the price is too high.",
+      "clue": "Did buyers want more or less than was offered?"
+    }
+  },
+  "ecb-price-mechanism-vic": {
+    "title": "The price mechanism",
+    "card": [
+      "Resources such as land, workers and materials are scarce. They cannot make everything people want, so they must be steered to where they are most wanted.",
+      "The price mechanism does this steering through prices. A price is a signal that tells buyers and sellers what to do.",
+      [
+        "Rising price",
+        "a signal that a product is in high demand or short supply. Businesses may make more of it, and buyers may use less of it."
+      ],
+      [
+        "Falling price",
+        "a signal that a product is less wanted or plentiful. Businesses may make less of it, and buyers may use more of it."
+      ]
+    ],
+    "remember": "Prices are signals. They steer scarce resources to where they are most wanted.",
+    "a": {
+      "q": "What is the main job of the price mechanism?",
+      "opts": [
+        "To steer scarce resources to where they are most wanted",
+        "To make sure every product costs the same amount",
+        "To stop businesses from making a profit on products",
+        "To decide which products the government will make"
+      ],
+      "why": "Changing prices signal to buyers and businesses what to do, which moves scarce resources to where they are most wanted. It does not make prices equal, because prices rise and fall with what people want.",
+      "clue": "Think about what a price signal tells businesses and buyers."
+    },
+    "b": {
+      "d": 3,
+      "q": "A heatwave hits Mildura and the price of bottled water at the local shop rises. What signal does the higher price send to businesses?",
+      "opts": [
+        "Water is in high demand, so selling more is worthwhile",
+        "Water is plentiful, so sellers should make less of it",
+        "Water is not wanted, so buyers will stop buying it",
+        "Water is cheap to make, so the shop should close"
+      ],
+      "why": "A rising price signals that a product is in high demand or short supply. Businesses may then make or sell more of it. The option about plentiful water has the signal reversed, because plentiful goods tend to fall in price.",
+      "clue": "A rising price is a signal about how much people want a product."
+    }
+  },
+  "ecb-consumer-sovereignty": {
+    "title": "Consumer sovereignty",
+    "card": [
+      "Consumer sovereignty means consumers have the power to decide what is produced. They do this through what they choose to buy and what they leave on the shelf.",
+      "When many people buy a product, sales rise. Businesses see this and may make more of it, or make similar products.",
+      "When people stop buying a product, sales fall. A business that ignores this loses sales and may need to change what it makes or stop making it.",
+      "This works in a free market, where businesses are free to choose what to make and consumers are free to choose what to buy."
+    ],
+    "remember": "Consumers vote with their spending, and businesses that ignore them lose sales.",
+    "a": {
+      "q": "Which situation best shows consumer sovereignty?",
+      "opts": [
+        "Shoppers stop buying a snack, so the maker changes it",
+        "A maker adds a new snack and tells shoppers to buy it",
+        "A snack maker lowers its costs by using cheaper packaging",
+        "A snack maker advertises more than its rivals do"
+      ],
+      "why": "Consumer sovereignty means buyers' choices steer what is made. Here shoppers stop buying, and the maker responds. In the option where the maker simply tells shoppers what to buy, the business is leading, not the consumers.",
+      "clue": "Who is steering the choice about what gets made?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Leo runs a bakery in Ballarat. He keeps making a loaf that fewer customers buy each month, while customers keep asking for sourdough. What is most likely to happen to his bakery?",
+      "opts": [
+        "It loses sales to bakeries that make what customers want",
+        "It keeps its sales, because Leo chooses what is made",
+        "It gains sales, because the loaf is now rarer",
+        "It is forced to close within a month"
+      ],
+      "why": "Customers choose where to spend, so a business that ignores their wants can lose sales to rivals. Leo does choose what to bake, but that does not protect his sales. Losing sales does not mean the bakery must close at once, so the closing option goes too far.",
+      "clue": "Customers can take their money to another bakery."
+    }
+  },
+  "ecb-purposes-business": {
+    "title": "The purposes of business",
+    "card": [
+      "A business is an organisation that makes or sells goods and services to customers, such as shoes or haircuts.",
+      "One purpose of a business is to provide the goods and services that people want. If nobody wants what it sells, a business will struggle to carry on.",
+      "A second purpose is to make a profit for its owners. Profit is the money left over after a business pays its costs from the money it earns.",
+      "Some businesses, called social enterprises, also aim to solve a social or environmental problem. A café that trains and hires people who have found it hard to get work is one example."
+    ],
+    "remember": "Businesses provide what people want and aim to make a profit. Some also aim to solve a problem.",
+    "a": {
+      "q": "Which of these best describes profit?",
+      "opts": [
+        "Money left over after costs are paid from earnings",
+        "All the money a business takes in from its customers",
+        "The money an owner puts in to start the business",
+        "The money a business pays to its workers each week"
+      ],
+      "why": "Profit is what remains once the costs are taken out of the money earned. The total money taken in is only the earnings, so it is not profit until costs are paid.",
+      "clue": "Profit is what is left after something is taken away."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya starts a bakery in Bendigo. She sells bread to local families and uses any profit to pay for free lunches at a nearby school. What makes her business a social enterprise?",
+      "opts": [
+        "It also aims to solve a social problem",
+        "It earns money from the bread it sells",
+        "It makes a profit for its owner",
+        "It provides what local families want"
+      ],
+      "why": "A social enterprise also aims to solve a social or environmental problem, and the free school lunches do that. Earning money, making a profit and providing what people want are true of most businesses, so they do not set a social enterprise apart.",
+      "clue": "Which purpose do only some businesses have?"
+    }
+  },
+  "ecb-business-goals": {
+    "title": "Business goals",
+    "card": [
+      "A goal is something a business sets out to achieve. Goals give owners and workers a clear target, and a business can have several at once.",
+      "Making a profit means earning more from sales than the business spends on costs. Growth means getting bigger, such as selling more or opening new shops.",
+      "Market share is the part of all sales in a market that one business wins. Serving customers well means looking after them so they come back.",
+      "Acting sustainably means running the business in a way that looks after the environment and community, so it can carry on over the long term."
+    ],
+    "remember": "Common business goals are profit, growth, market share, serving customers well and acting sustainably.",
+    "a": {
+      "q": "Mia's bakery in Bendigo wants more of the town's bread buyers to choose her shop instead of rival bakeries. Which goal is this?",
+      "opts": ["Winning more market share", "Earning a bigger profit", "Acting more sustainably", "Serving customers better"],
+      "why": "Taking buyers from rival bakeries means winning a bigger part of the town's bread sales, which is market share. Profit is about earning more than the business spends on costs, not about beating rivals for buyers.",
+      "clue": "Her aim is about her rivals, not her costs."
+    },
+    "b": {
+      "d": 3,
+      "q": "Omar's cycle shop in Geelong switches to recycled packaging and fixes old bikes so fewer end up in landfill. Which goal is he mainly pursuing?",
+      "opts": ["Acting sustainably", "Growing the business", "Serving customers well", "Making a profit"],
+      "why": "Recycling and keeping bikes out of landfill look after the environment, so this is sustainability. Some customers may like it, but the actions are aimed at cutting waste, not at looking after customers.",
+      "clue": "Ask what cutting waste protects over the long term."
+    }
+  },
+  "ecb-business-ownership-structures": {
+    "title": "Business ownership structures",
+    "card": [
+      [
+        "Sole trader",
+        "a business owned and run by one person. The owner keeps the profit, and the business is not a separate legal entity from them."
+      ],
+      ["Partnership", "a business owned by two or more people who share the work, the profit and the risk."],
+      [
+        "Company",
+        "a separate legal entity, which means the law treats it as its own person. It is owned by shareholders, who each own a share of it."
+      ],
+      "If a sole trader or partnership fails, the owners can lose their own assets, such as savings or a car, to pay its debts."
+    ],
+    "remember": "Sole trader: one owner. Partnership: two or more. Company: shareholders own a separate legal entity.",
+    "a": {
+      "q": "Which description fits a company?",
+      "opts": [
+        "A separate legal entity owned by shareholders",
+        "A business owned and run by one person",
+        "A business owned by two or more people who share risk",
+        "A business whose owners can lose their own assets"
+      ],
+      "why": "A company is its own legal entity, and shareholders own it. The option about two or more people sharing risk describes a partnership, which is not a separate legal entity.",
+      "clue": "Think about who the law treats as the business."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tariq and Lena run a bike repair shop in Bendigo. They own it together, and the shop is not a separate legal entity. The shop fails and owes money. What could happen?",
+      "opts": [
+        "Tariq and Lena could lose their own assets",
+        "Only the shop's own assets could be used to pay",
+        "Shareholders would lose the shares they own",
+        "Tariq and Lena would not be affected at all"
+      ],
+      "why": "Two owners and no separate legal entity make this a partnership. The owners of a partnership can lose their own assets, such as savings or a car, to pay its debts. So the debts are not limited to the shop's own assets, and there are no shareholders here.",
+      "clue": "Work out the structure first, then think about whose assets are at risk."
+    }
+  },
+  "ecb-goods-services-businesses": {
+    "title": "Goods and services businesses",
+    "card": [
+      [
+        "Goods",
+        "things you can touch, such as shoes, bread or a phone. A business that makes or sells them is a goods business."
+      ],
+      [
+        "Services",
+        "work done for you, such as a haircut, a bus ride or a music lesson. You cannot hold a service in your hands."
+      ],
+      "Businesses can also be grouped by industry. Primary industries take natural resources from the land or sea, such as farming, fishing and mining.",
+      "Secondary industries turn materials into products, such as a factory making furniture. Tertiary industries provide services, such as banking, teaching and retail."
+    ],
+    "remember": "Goods are things you can touch and services are work done for you. Primary takes resources, secondary makes products, tertiary serves.",
+    "a": {
+      "q": "Which business mainly sells a service?",
+      "opts": [
+        "A dog grooming salon in Geelong",
+        "A bakery in Ballarat",
+        "A shoe shop in Bendigo",
+        "A bike factory in Shepparton"
+      ],
+      "why": "Grooming is work done for a customer, so it is a service. A bakery, a shoe shop and a bike factory all provide things you can touch, which are goods.",
+      "clue": "Which one sells work done for you, not an object?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's company in Mildura turns tomatoes from local farms into jars of pasta sauce. Which industry is her business in?",
+      "opts": [
+        "Secondary, because it turns materials into a product",
+        "Primary, because tomatoes come from farms",
+        "Tertiary, because it sells to supermarkets",
+        "Tertiary, because jars of sauce are goods"
+      ],
+      "why": "Priya's business takes materials and makes them into a new product, which is secondary industry. The tomatoes are grown by farmers in the primary industry, but Priya does not grow them.",
+      "clue": "Look at what Priya's business does with the tomatoes."
+    }
+  },
+  "ecb-target-markets": {
+    "title": "Target markets",
+    "card": [
+      "A target market is the group of customers a business aims to sell to. A business cannot suit everyone, so it picks the people most likely to buy.",
+      "A target market can be described by age, income, location and interests. For example, a skate shop might aim at teenagers who live near a skate park.",
+      "Knowing its target market helps a business decide what to sell, what price to charge and how to tell people about it.",
+      "Customers outside the target market can still buy. The business just does not build its plan around them."
+    ],
+    "remember": "A target market is the group a business chooses to aim at, described by things like age, income, location and interests.",
+    "a": {
+      "q": "Which of these best describes a target market?",
+      "opts": [
+        "The group of customers a business aims to sell to",
+        "Every person who lives in the same suburb as the business",
+        "The customers who have bought from the business before",
+        "The other businesses that sell similar products"
+      ],
+      "why": "A target market is the group a business chooses to aim at. Past customers are not the same thing, because a business may aim at people who have never bought from it yet.",
+      "clue": "Think about who the business plans around."
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia opens a café in Dubbo that sells cheap breakfasts and quick coffees near a university campus. Which description is most likely her target market?",
+      "opts": [
+        "University students who live or study nearby",
+        "Retired people who live in another town",
+        "Business owners who want expensive dinners",
+        "Tourists who visit only in the summer holidays"
+      ],
+      "why": "Cheap food, quick service and a spot near a campus suit students who live or study nearby. The other groups differ in location, income or interests from what Mia's café offers.",
+      "clue": "Match the price, the place and the product to the customers."
+    }
+  },
+  "ecb-spotting-market-opportunity": {
+    "title": "Spotting a market opportunity",
+    "card": [
+      "A market opportunity is an unmet need or a gap in what is on offer. A business that can fill it has a chance to gain customers.",
+      [
+        "Market research",
+        "asking people or studying data to learn what customers want. A survey that shows many families cannot find a product shows a gap."
+      ],
+      [
+        "New technology",
+        "can make something possible that was not possible before, or make it cheaper. This can open a gap for a new product or service."
+      ],
+      [
+        "Lifestyle changes",
+        "changes in how people live, such as more people working from home, can create needs that no business is meeting yet."
+      ]
+    ],
+    "remember": "A market opportunity is a gap a business can fill. Research, technology and changes in how people live can reveal one.",
+    "a": {
+      "q": "Which of these is a market opportunity?",
+      "opts": [
+        "Many shoppers want a service no local shop offers",
+        "A shop owner wants to earn much more money this year",
+        "A business has hired three extra staff for the summer",
+        "A café already sells a wide range of drinks to locals"
+      ],
+      "why": "A market opportunity is an unmet need or gap that a business can fill. Wanting more money is a goal of the owner, not a gap in what customers can buy.",
+      "clue": "Look for a need that nobody is meeting yet."
+    },
+    "b": {
+      "d": 2,
+      "q": "Jess runs a small shop in Bendigo. She asks 100 local people what they would like to buy, and many say they cannot find fresh bread made without gluten. What has Jess done?",
+      "opts": [
+        "Used market research to spot a market opportunity",
+        "Used new technology to spot a market opportunity",
+        "Spotted a market opportunity from a change in lifestyle",
+        "Set a goal of growing her share of the market"
+      ],
+      "why": "Jess asked people what they want, which is market research. Their answers show a gap that she could fill. She did not use new technology, and nothing in the case says that people's way of life has changed.",
+      "clue": "How did Jess find out what customers want?"
+    }
+  },
+  "ecb-entrepreneur-does": {
+    "title": "What an entrepreneur does",
+    "card": [
+      "An entrepreneur starts a new business, or grows one, in the hope of making a profit. They bring resources together to make something new or better.",
+      [
+        "Spots an opportunity",
+        "notices a need or want that people would pay to have met, such as no café near a busy beach."
+      ],
+      [
+        "Takes a risk",
+        "puts in money, time or effort without knowing if the business will work. If it fails, they can lose what they put in."
+      ],
+      [
+        "Organises resources",
+        "brings together what the business needs, such as equipment, materials and workers, and puts them to use."
+      ]
+    ],
+    "remember": "An entrepreneur sees a chance, risks something to chase it, and gathers what the business needs.",
+    "a": {
+      "q": "Ana wants to be an entrepreneur. Which of these choices fits?",
+      "opts": [
+        "Ana uses her savings to start a dog-washing van business",
+        "Ana earns a wage washing dogs at a pet shop",
+        "Ana pays a business to wash her dog each month",
+        "Ana writes a review of a dog-washing van"
+      ],
+      "why": "Ana risks her own savings to start a business, so she is acting as an entrepreneur. Working for a wage is tempting, but the pet shop's owner carries the risk, not Ana.",
+      "clue": "Who could lose money if the business fails?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Hamid sees that cyclists in his town travel an hour to get bikes fixed. He asks friends if they would pay for repairs closer to home. He has not started a business yet. Which part of being an entrepreneur is this?",
+      "opts": [
+        "Spotting an opportunity",
+        "Taking a risk on a business",
+        "Organising his resources",
+        "Making a profit from sales"
+      ],
+      "why": "Hamid has found a need that people would pay to have met, which is spotting an opportunity. Asking friends takes a little time, but he has not yet put anything at stake in a business that could fail, so he is not taking a risk yet.",
+      "clue": "He has noticed a need, but has he started a business?"
+    }
+  },
+  "ecb-entrepreneurship-business-success": {
+    "title": "Entrepreneurship and business success",
+    "card": [
+      "Many entrepreneurs start with a good idea. Some traits can help them turn that idea into a business that lasts.",
+      [
+        "Creativity",
+        "coming up with new ideas, or new ways to solve a problem. It helps a business offer something people want."
+      ],
+      [
+        "Persistence",
+        "keeping going with the plan when things are hard or slow. Many businesses take time to win customers."
+      ],
+      [
+        "Risk and learning",
+        "Willingness to take risks means trying something that might not work, such as spending savings on stock. Learning from failure means working out what went wrong and changing it next time."
+      ]
+    ],
+    "remember": "Creativity, persistence, taking risks and learning from failure can help an idea become a lasting business.",
+    "a": {
+      "q": "Kai runs a weekend cookie stall. Which action best shows learning from failure?",
+      "opts": [
+        "Asking buyers why sales fell, then fixing the problem",
+        "Opening the same stall every week through a slow year",
+        "Spending his savings on stock that might not sell",
+        "Inventing a cookie flavour nobody has tried before"
+      ],
+      "why": "Learning from failure means working out what went wrong and changing it. Asking buyers why sales fell and then fixing the problem does both. Opening the stall every week through a slow year is tempting, but it is persistence: Kai keeps going without changing anything.",
+      "clue": "Which action responds to something that went wrong?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Priya's online shop made no sales for three months. She changed nothing, but kept posting every day until orders began to arrive. Which trait did she show?",
+      "opts": ["Persistence", "Creativity", "Willingness to take risks", "Learning from failure"],
+      "why": "Priya kept going with her plan through a slow start, which is persistence. Learning from failure is tempting because sales were poor, but she did not work out what went wrong or change anything.",
+      "clue": "Did Priya change her plan, or stick with it?"
+    }
+  },
+  "ecb-innovation-vic": {
+    "title": "Innovation",
+    "card": [
+      "Innovation is a new or better product, or a new or better way of working. It can be a brand new idea or an improvement on something that already exists.",
+      [
+        "Product innovation",
+        "a new or improved good or service, such as an electric car or a home solar battery that stores power from rooftop panels."
+      ],
+      [
+        "Process innovation",
+        "a new or improved way of making or delivering things, such as a factory that uses robots to cut waste and save time."
+      ],
+      "An innovation can help a business stand out from rivals, cut costs and keep customers. Simply making more of the usual product, or changing its price, is not innovation."
+    ],
+    "remember": "A better product or a better way of working can help a business stand out, cut costs and keep customers.",
+    "a": {
+      "q": "Which change at a bakery in Ballarat is an innovation?",
+      "opts": [
+        "Baking a loaf that stays fresh for a whole week",
+        "Baking twice as many of its usual loaves each day",
+        "Charging fifty cents more for each of its loaves",
+        "Selling its usual loaves for less on Mondays"
+      ],
+      "why": "A loaf that stays fresh for a week is an improved product, so it is a product innovation. Baking more of the usual loaves, or changing their price, does not give buyers a better product or change how the work is done.",
+      "clue": "Is the bakery improving something, or just selling more or at a different price?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi's farm near Shepparton buys sensors that tell him when each paddock needs water. He now uses far less water. What kind of innovation is this?",
+      "opts": [
+        "A new way of working, because it changes how he farms",
+        "A new product, because he sells something new to buyers",
+        "Not innovation, because the farm still grows the same crop",
+        "Not innovation, because he bought the sensors from others"
+      ],
+      "why": "The sensors change how Ravi does his work, so this is a new way of working. The crop staying the same does not matter, because innovation can be a better way of working. It also does not matter that he did not invent the sensors.",
+      "clue": "Ask what changed: what is sold, or how the work is done?"
+    }
+  },
+  "ecb-aboriginal-torres-strait-islander": {
+    "title": "Aboriginal and Torres Strait Islander businesses",
+    "card": [
+      "An Aboriginal or Torres Strait Islander business is at least half owned by Aboriginal or Torres Strait Islander people. There are thousands of them, the number is growing, and they work in many industries, such as building, tourism, food, cleaning and the arts.",
+      "Like any business, they aim to earn a profit. Many also aim to help their community, such as by hiring and training local Aboriginal people, and to keep culture strong.",
+      "Many also care for Country: the land, waters and sky that First Nations people belong to and have a responsibility to look after. A business might, for example, do land care or guide visitors on Country.",
+      "Some buyers seek out these businesses. Governments in Australia have targets to buy from them, and lists help buyers find them. Winning this work helps the businesses grow."
+    ],
+    "remember": "They aim for profit, many also work for community, culture and Country, and buyers can seek them out.",
+    "a": {
+      "q": "Which is true of many Aboriginal and Torres Strait Islander-owned businesses?",
+      "opts": [
+        "They aim for profit and also for community goals",
+        "They aim for community goals instead of profit",
+        "They work in only a few industries, such as art",
+        "They are owned and run by a government agency"
+      ],
+      "why": "Like any business they aim to earn a profit, and many also aim to help their community, culture and Country. The goals sit side by side, so community goals do not replace profit.",
+      "clue": "What do they share with any other business?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A Victorian council has a goal to buy more from Aboriginal businesses. It needs weeds cleared along a creek and picks a land care business owned by Aboriginal people, which also trains local young people. Which statement best fits?",
+      "opts": [
+        "The council is a buyer seeking out an Aboriginal business",
+        "The business has given up its profit to train young people",
+        "The council now owns and runs the land care business",
+        "The law makes the business sell its work only to councils"
+      ],
+      "why": "The council is a customer choosing to buy from an Aboriginal business, as governments can. The business is paid for its work, so training young people sits alongside profit rather than replacing it. The council buys the service but does not own the business.",
+      "clue": "Who is buying here, and who is selling?"
+    }
+  },
+  "ecb-risk-reward-starting-business": {
+    "title": "Risk and reward in starting a business",
+    "card": [
+      [
+        "Reward",
+        "Starting a business can bring rewards. These include profit, which is money left after costs are paid, and independence, which means being your own boss."
+      ],
+      "Another reward is pride, the good feeling of building something that is your own and that people use.",
+      [
+        "Risk",
+        "Starting a business also has risks. The owner can lose the money they put in, and the time they spent on it."
+      ],
+      "Many new businesses close within a few years. Owners weigh the possible rewards against the risks before they start."
+    ],
+    "remember": "A new business can give profit, independence and pride, but the owner can also lose money and time.",
+    "a": {
+      "q": "Which of these is a risk of starting a business?",
+      "opts": [
+        "The owner may lose the money they put in",
+        "The owner can choose how the business runs",
+        "The owner may earn a profit from sales",
+        "The owner may feel proud of what they built"
+      ],
+      "why": "Losing the money put into the business is a risk, because the business may not earn enough to pay it back. The other three are rewards: independence, profit and pride.",
+      "clue": "Think about what could happen if the business does badly."
+    },
+    "b": {
+      "d": 2,
+      "q": "Priya leaves her job to open a bike repair shop in Ballarat. She spends her savings on tools. Which sentence best describes the risk she takes?",
+      "opts": [
+        "The shop may close, and her savings and time be lost",
+        "The shop may give her the freedom to set her own hours",
+        "The shop may make a profit once its costs are paid",
+        "The shop may give her pride in running her own business"
+      ],
+      "why": "The risk is that the shop does not work out, so the savings and time she put in are lost. Setting her own hours, making a profit and feeling proud are rewards that could come if the shop does well.",
+      "clue": "A risk is something that could go wrong, not something good."
+    }
+  },
+  "ecb-people-work-vic": {
+    "title": "Why people work",
+    "card": [
+      "Work is effort that people put into making goods or providing services. Most people work to earn income, which is money received. Income pays for needs such as food and housing, and for wants.",
+      "Many people also work for satisfaction. They enjoy the job, or feel proud when they do it well.",
+      "Work can give a sense of purpose, such as helping others or doing something that matters. It can also build skills, make friendships with workmates and shape how people see themselves, such as \"I am a nurse\".",
+      "People weigh these reasons differently. One person may work mainly for income. Another may take a lower-paid job because it gives more purpose, satisfaction, skills or friendships."
+    ],
+    "remember": "People work for income, and also for satisfaction, purpose, skills, friendships and identity.",
+    "a": {
+      "q": "Leila works at a local animal shelter. Which reason for working is NOT about income?",
+      "opts": [
+        "She feels her work has a purpose in helping animals",
+        "She needs money to pay for her phone plan",
+        "She wants to save for a holiday",
+        "She uses her pay to buy her lunch"
+      ],
+      "why": "Feeling that the work has a purpose is a reason for working that does not depend on money. The other three are all about the money she earns, whether she spends it or saves it, so they are about income.",
+      "clue": "Which reason does not involve money or pay?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom is offered two jobs. One pays more but is lonely and has no new learning. The other pays less but has a friendly team and teaches him new skills. He takes the lower-paid job. What does this show about Tom?",
+      "opts": [
+        "He valued friendships and skills above the extra pay",
+        "He valued the extra pay above friendships and skills",
+        "He chose the job that gave him the most income",
+        "He took the job mainly to help others in need"
+      ],
+      "why": "Tom gave up some income to get friendships and new skills, so he valued those above the extra pay. Saying he valued the pay more reverses his choice, since he turned down the higher-paid job. Nothing in the scenario says he took the job to help others.",
+      "clue": "Look at what Tom gave up and what he gained."
+    }
+  },
+  "ecb-wages-salaries": {
+    "title": "Wages and salaries",
+    "card": [
+      [
+        "Income",
+        "Income is money a person receives. Money earned from working for an employer is called income from employment."
+      ],
+      [
+        "Wage",
+        "money paid for each hour worked. A worker who does more hours earns more, and one who does fewer hours earns less."
+      ],
+      [
+        "Salary",
+        "a fixed amount for a whole year, paid in equal parts, such as every fortnight. It stays the same even if the hours worked change a little from week to week."
+      ],
+      "Wages and salaries are both income from employment. They differ in how the pay is worked out."
+    ],
+    "remember": "Wage: paid by the hour. Salary: a yearly amount paid in parts.",
+    "a": {
+      "q": "Jai is paid $26 for every hour he works at a pool. What is this pay called?",
+      "opts": ["A wage", "A salary", "A profit", "A dividend"],
+      "why": "Jai is paid for each hour he works, so his pay is a wage. A salary is a fixed yearly amount paid in parts, which does not match pay worked out by the hour.",
+      "clue": "Look at how his pay is worked out."
+    },
+    "b": {
+      "d": 2,
+      "q": "Priya works as an office manager in Geelong. Her contract says she earns $78,000 a year, paid in equal amounts each fortnight. Why is this a salary?",
+      "opts": [
+        "It is a fixed yearly amount, paid in parts",
+        "It is paid for each hour she works",
+        "It is not income from employment",
+        "It changes with the hours she works each week"
+      ],
+      "why": "A salary is a fixed amount for a year, paid in parts, and Priya's pay fits this. Being paid every fortnight does not make it a wage, because a wage is worked out for each hour worked.",
+      "clue": "Think about how the yearly amount is split up."
+    }
+  },
+  "ecb-other-sources-income": {
+    "title": "Other sources of income",
+    "card": [
+      "Income is money received. Many Australians earn it from work, but it can come from other sources too.",
+      ["Profit", "money left for the owner of a business after all its costs are paid."],
+      [
+        "Interest",
+        "money a bank pays you for keeping your savings with it. Dividends are a share of a company's profit, paid to people who own shares in it."
+      ],
+      [
+        "Rent",
+        "money a property owner receives from a tenant who uses the property. Government payments, such as Youth Allowance, are money the government pays to people who meet set rules."
+      ]
+    ],
+    "remember": "Income can come from a business, savings, shares, property or the government, as well as from work.",
+    "a": {
+      "q": "Jai owns shares in a company. The company pays him part of its profit each year. What is this income called?",
+      "opts": ["A dividend", "Interest", "Rent", "A government payment"],
+      "why": "A dividend is a share of a company's profit paid to the people who own shares. Interest is tempting, but it is paid by a bank on savings, not by a company to its owners.",
+      "clue": "Jai owns part of the company."
+    },
+    "b": {
+      "d": 2,
+      "q": "Priya has $2000 in a bank account. Each year the bank adds some money to the account. What type of income is this?",
+      "opts": ["Interest", "A dividend", "Profit", "Rent"],
+      "why": "The bank pays interest to people for keeping their savings with it. A dividend is tempting because it is also money from owning something, but dividends come from company shares, not from a bank account.",
+      "clue": "Think about who is paying the money and what it is for."
+    }
+  },
+  "ecb-types-employment": {
+    "title": "Types of employment",
+    "card": [
+      [
+        "Full-time and part-time",
+        "these workers have regular hours each week and get paid leave, such as annual leave and sick leave. Full-time workers work more hours than part-time workers."
+      ],
+      [
+        "Casual",
+        "these workers have no guaranteed hours and no paid leave. They usually get a higher hourly rate to make up for this."
+      ],
+      [
+        "Contractor",
+        "a person who works for themselves and is paid for each job or project, rather than being an employee of one business."
+      ],
+      "Each type has trade-offs. Regular hours and paid leave give more certainty. A higher hourly rate comes with less certainty about how much work there will be."
+    ],
+    "remember": "Regular hours and paid leave, or a higher hourly rate with no guarantees, or working for yourself.",
+    "a": {
+      "q": "Jai works at a pool. His hours change each week, he gets no paid sick leave, and his hourly rate is higher than other staff. What type of worker is he?",
+      "opts": ["A casual worker", "A full-time worker", "A part-time worker", "A contractor"],
+      "why": "Hours that are not guaranteed, no paid leave and a higher hourly rate are the signs of casual work. A part-time worker also works fewer hours, but has regular hours and paid leave.",
+      "clue": "Which type has no guaranteed hours?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya is a part-time worker at a bakery in Bendigo. Her friend Sam works casual shifts at a nearby café. Which statement about them is correct?",
+      "opts": [
+        "Priya has paid leave, but Sam does not",
+        "Sam has paid leave, but Priya does not",
+        "Priya has a higher hourly rate than Sam",
+        "Sam has more certain hours than Priya"
+      ],
+      "why": "Part-time workers get paid leave, while casual workers do not. Casual workers usually have a higher hourly rate to make up for it, so Priya's rate is not likely to be higher.",
+      "clue": "Which of the two has regular hours and paid leave?"
+    }
+  },
+  "ecb-paid-unpaid-work": {
+    "title": "Paid and unpaid work",
+    "card": [
+      [
+        "Paid work",
+        "Work done in return for income, such as a wage or salary. A nurse, a bus driver and a shop assistant all do paid work."
+      ],
+      ["Unpaid work", "Work done without payment. Examples are caring for family, housework and volunteering."],
+      "Unpaid work still has value. A parent caring for a child, or a volunteer who coaches a junior sports team, provides help the community needs.",
+      "The same task can be paid or unpaid. Cooking dinner at home is unpaid work, but cooking it in a restaurant is paid work."
+    ],
+    "remember": "Work is paid or unpaid. Unpaid work still adds to the community.",
+    "a": {
+      "q": "Which of these is an example of unpaid work?",
+      "opts": [
+        "Cleaning the house you live in with your family",
+        "Cleaning offices at night for a cleaning company",
+        "Cleaning a school hall for a weekly wage",
+        "Cleaning a hotel room as a casual employee"
+      ],
+      "why": "Housework for your own family is done without payment, so it is unpaid work. The other three are done in return for income, so they are paid work, even though the task is cleaning in each case.",
+      "clue": "Look for the one where nobody pays the worker."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya spends Saturday mornings helping at a food bank in Geelong, and she is not paid. A student says her work is not really work because she earns no income. Which reply is best?",
+      "opts": [
+        "It is unpaid work, and it still helps the community",
+        "It is not work, because only paid tasks count as work",
+        "It is paid work, because the food bank gains from it",
+        "It is only work if the food bank gives her a wage later"
+      ],
+      "why": "Volunteering is unpaid work. Work does not need to bring in income to be work, and the food bank's clients still gain from it. The tempting wrong option says only paid tasks count, but the card shows unpaid work is still work.",
+      "clue": "Does a task stop being work when no one pays for it?"
+    }
+  },
+  "ecb-from-making-goods-providing": {
+    "title": "From making goods to providing services",
+    "card": [
+      "Goods are things you can touch, such as wheat, wool and cars. Services are things people do for others, such as teaching, nursing and cutting hair.",
+      "A long time ago, most Australians worked in farming, mining or factories. These jobs produce goods.",
+      "Today most Australians work in services, such as health care, education, retail and professional work like accounting and law.",
+      "Goods are still made and grown in Australia. The change is that a much larger share of jobs is now in services."
+    ],
+    "remember": "Work has shifted from mostly making goods to mostly providing services.",
+    "a": {
+      "q": "Which job is an example of a service?",
+      "opts": [
+        "A nurse caring for patients at a hospital",
+        "A farmer growing wheat in the Mallee",
+        "A worker building cars in a factory",
+        "A miner digging iron ore from the ground"
+      ],
+      "why": "A nurse does something for other people, so the job is a service. The other three jobs produce things you can touch, which are goods.",
+      "clue": "Which job is about doing something for someone?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia says that Australia now makes no goods because most people work in services. What is wrong with her claim?",
+      "opts": [
+        "Goods are still made, but most jobs are now in services",
+        "Most Australians still work in farming and factories",
+        "Services are now made by machines, not by people",
+        "Australia now has fewer jobs than it did before"
+      ],
+      "why": "Farms, mines and factories in Australia still produce goods. What has changed is the share of jobs, and most are now in services. Saying most people still work in farming and factories is wrong, because that was true long ago, not today.",
+      "clue": "Think about where Australia's wheat and wool still come from."
+    }
+  },
+  "ecb-technology-automation": {
+    "title": "Technology and jobs",
+    "card": [
+      "Technology such as machines, robots and artificial intelligence can do some tasks faster or more cheaply than people. This is called automation. Some jobs shrink or disappear as a result, such as checkout work when self-serve machines are used.",
+      "Technology also creates new jobs. People are needed to design, build, run and fix it, in areas such as software and data.",
+      "The jobs lost and the jobs created often need different skills. A checkout worker may not have the skills for a software job straight away.",
+      "Because technology keeps changing, workers may need to learn new skills."
+    ],
+    "remember": "Automation can remove some jobs and create others, so workers may need to learn new skills.",
+    "a": {
+      "q": "A supermarket in Melbourne adds self-serve machines at its checkouts and now needs fewer checkout staff. What does this show about automation and jobs?",
+      "opts": [
+        "Automation can remove some jobs",
+        "Automation can add more checkout jobs",
+        "Automation can make old skills last longer",
+        "Automation can keep the number of jobs the same"
+      ],
+      "why": "Self-serve machines do work that checkout staff once did, so the store needs fewer of them. Adding checkout jobs is tempting because technology does create jobs, but the new jobs are in areas such as software and data, not checkout work.",
+      "clue": "Look at what happened to the number of checkout staff."
+    },
+    "b": {
+      "d": 3,
+      "q": "A Geelong bank uses an artificial intelligence app that handles many customer requests. It hires more data analysts to run the app and needs fewer tellers. What will most help a teller who wants to move into the new work?",
+      "opts": [
+        "Learn new skills, such as working with data",
+        "Keep teller skills, as they suit data jobs",
+        "Learn more teller skills, such as handling cash",
+        "Wait, as the app will create more teller jobs"
+      ],
+      "why": "The new jobs need different skills from teller work, so the teller may need training or study in skills such as working with data. Keeping teller skills is tempting, but the jobs lost and the jobs created often need different skills.",
+      "clue": "Do the old jobs and the new jobs need the same skills?"
+    }
+  },
+  "ecb-gig-economy": {
+    "title": "The gig economy",
+    "card": [
+      "The gig economy is a way of working where people do short jobs, called gigs, that they find through an app or website. Food delivery and ride sharing are common examples.",
+      "Gig workers can often choose when they work and how many gigs they take. This flexibility suits people who want to fit work around study, family or other jobs.",
+      "Gig work often lacks steady pay. Workers may be paid for each gig, so their income can rise and fall from week to week.",
+      "Gig workers are often not given paid leave, such as sick leave or holiday pay. Their super, money saved for retirement, may also be missing or small unless they arrange it themselves."
+    ],
+    "remember": "Gig work trades flexibility for less certainty about pay, leave and super.",
+    "a": {
+      "q": "Which of these is the best example of work in the gig economy?",
+      "opts": [
+        "Taking food delivery jobs through an app when you choose",
+        "Working fixed shifts each week at a supermarket",
+        "Running a shop that has staff on set wages",
+        "Working a full-time office job with paid holidays"
+      ],
+      "why": "A gig is a short job found through an app, and the worker picks which ones to take. Fixed supermarket shifts are regular work on a set roster each week, so they are not gigs.",
+      "clue": "Look for short jobs found through an app."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam drives for a ride-sharing app in Geelong and is paid for each trip. In a quiet week he gets few bookings and earns much less. Which feature of gig work does this show?",
+      "opts": [
+        "Pay that is not steady from week to week",
+        "A lack of choice about when to work",
+        "Having no paid work at all",
+        "Being paid a fixed wage whatever the demand"
+      ],
+      "why": "Sam is paid for each trip, so his income follows how many trips he gets. That makes his pay unsteady. Choosing his own hours is a different feature of gig work, and it is not what the quiet week shows.",
+      "clue": "Think about what happens to pay when there are fewer trips."
+    }
+  },
+  "ecb-flexible-remote-work": {
+    "title": "Flexible and remote work",
+    "card": [
+      [
+        "Remote work",
+        "Working away from the employer's workplace, often from home, using a computer and the internet."
+      ],
+      [
+        "Flexible work",
+        "Having some choice over when or how much you work, such as part-time hours or starting and finishing at different times."
+      ],
+      "More people now work this way. It can help them balance work with life outside work, such as caring for family, study or sport. It can also save time spent travelling to work.",
+      "It can also blur the line between work and home life. A worker may answer messages late at night or find it hard to switch off."
+    ],
+    "remember": "Flexible and remote work can help balance life and work, but it can also blur the line between them.",
+    "a": {
+      "q": "Sam works from home on a laptop and can choose his start time each day. What is one benefit this may give him?",
+      "opts": [
+        "It can make it easier to fit in family, study or sport",
+        "It can make it harder for him to switch off at night",
+        "It can add to the time he spends travelling to work",
+        "It can mean he no longer works for an employer"
+      ],
+      "why": "Choosing where and when to work can make it easier to fit family, study or sport around work. Finding it hard to switch off can happen, but it is a drawback of remote work, not a benefit.",
+      "clue": "Is each option a good thing for Sam, or a problem?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya works from home for a design firm. She now often replies to emails at 10 pm and finds it hard to stop thinking about work. Which problem does this show?",
+      "opts": [
+        "The line between work and home life has become blurred",
+        "She spends more time travelling to work each day",
+        "Her work is flexible only because she works part-time",
+        "She has moved from a service job to a factory job"
+      ],
+      "why": "Working from home can make it hard to separate work time from personal time, which is what Priya is finding. She works from home, so she is not travelling more: remote work can save travel time, not add to it.",
+      "clue": "Look at the time she answers emails and how she feels afterwards."
+    }
+  },
+  "ecb-future-work": {
+    "title": "The future of work",
+    "card": [
+      "Work keeps changing. Some jobs shrink or disappear, and new jobs appear that did not exist before.",
+      "Nobody can say exactly which jobs will exist in 20 years. This is why skills that suit many jobs are expected to matter more than training for one job only.",
+      "Skills expected to matter more include problem solving (finding a way through a new challenge), digital skills (using technology well) and adaptability (adjusting to change).",
+      "Lifelong learning means continuing to learn new skills throughout a working life, not only at school. It helps workers adapt when their jobs change."
+    ],
+    "remember": "Jobs will keep changing, so skills that can be used in many jobs, and ongoing learning, are expected to matter more.",
+    "a": {
+      "q": "Why is lifelong learning expected to matter more in the future of work?",
+      "opts": [
+        "Jobs keep changing, so workers need to learn new skills",
+        "Jobs will stay the same, so workers must repeat old skills",
+        "School learning stops being useful once a person is working",
+        "Only computer workers will need to keep on learning"
+      ],
+      "why": "If jobs keep changing, workers who keep learning can adapt to new tasks and new jobs. The option about jobs staying the same is wrong because the card says work keeps changing.",
+      "clue": "Think about what workers need when their jobs change."
+    },
+    "b": {
+      "d": 2,
+      "q": "Tom is choosing what to learn for his future career. Nobody can be sure which jobs will exist in 20 years. Which choice best prepares him?",
+      "opts": [
+        "Build problem solving and digital skills that suit many jobs",
+        "Master one task that his chosen job needs right now",
+        "Avoid new technology so that he can keep his current skills",
+        "Stop studying once he has found his first job"
+      ],
+      "why": "Skills such as problem solving and digital skills can be used across many jobs, so they help when work changes. Mastering one task is tempting, but it may not be needed if that job changes or disappears.",
+      "clue": "Which choice still helps if his job changes?"
+    }
+  },
+  "ecb-australian-consumer-law": {
+    "title": "The Australian Consumer Law",
+    "card": [
+      "The Australian Consumer Law (ACL) is a set of rules that protects buyers in every state and territory. It applies to businesses that sell goods and services to consumers.",
+      ["Safe", "Products must be safe to use in the ways they are meant to be used."],
+      ["Work as they should", "Products must do the job they are made for and last a reasonable time."],
+      [
+        "Match the description",
+        "Products must be as they were described, such as in an advertisement, on the packaging or by a salesperson."
+      ]
+    ],
+    "remember": "The ACL protects buyers everywhere in Australia: products must be safe, work properly and match their description.",
+    "a": {
+      "q": "Jai buys a torch labelled \"waterproof\". It stops working after one splash. Which part of the ACL does this break?",
+      "opts": [
+        "The product does not match its description",
+        "The product is not sold in his state",
+        "The product is not safe to hold",
+        "The product is not made in Australia"
+      ],
+      "why": "The label said waterproof, but the torch failed in water, so it did not match its description. The ACL does not ask where a product is made, and nothing here suggests the torch was unsafe.",
+      "clue": "Compare what the label promised with what happened."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya buys a hair dryer in Geelong. It overheats and gives her a burn when she uses it normally. Which guarantee has the seller failed to meet?",
+      "opts": [
+        "The product must be safe to use",
+        "The product must match its description",
+        "The product must be sold at a fair price",
+        "The product must come with a free repair"
+      ],
+      "why": "A hair dryer that burns someone during normal use is not safe. It may also not work as it should, but the main failure is safety. The ACL does not set prices or promise free repairs.",
+      "clue": "Think about what harmed Priya when she used it normally."
+    }
+  },
+  "ecb-repair-replace-or-refund": {
+    "title": "Repair, replace or refund",
+    "card": [
+      [
+        "Major fault",
+        "a serious problem. The product is unsafe, or it would not have been bought if the buyer had known. The buyer can choose a refund or a replacement."
+      ],
+      [
+        "Minor fault",
+        "a smaller problem that can be fixed in a reasonable time. The seller can choose to repair it, replace it or refund the buyer."
+      ],
+      "A seller cannot take these rights away with a sign such as \"no refunds\". The rights apply to a faulty product, even if the sign says otherwise.",
+      "These rights are for faults. They do not cover a buyer who simply changes their mind. A seller may choose to offer that, but the law does not make them."
+    ],
+    "remember": "Major fault: the buyer chooses. Minor fault: the seller chooses. A sign cannot remove these rights.",
+    "a": {
+      "q": "Who gets to choose between a refund and a replacement when a product has a major fault?",
+      "opts": ["The buyer", "The seller", "The shop's manager", "The product's maker"],
+      "why": "For a major fault the buyer chooses between a refund and a replacement. The seller chooses only for a minor fault, which is the most tempting wrong answer.",
+      "clue": "Think about how serious the fault is."
+    },
+    "b": {
+      "d": 3,
+      "q": "Jaya buys a hairdryer in Geelong. A sign at the till says \"no refunds\". The hairdryer is unsafe and overheats on day one. What is Jaya's position?",
+      "opts": [
+        "She can choose a refund or a replacement",
+        "She must accept a repair, as the sign says",
+        "She has no rights, because she saw the sign",
+        "She can only get a refund if the seller agrees"
+      ],
+      "why": "An unsafe hairdryer has a major fault, so the buyer can choose a refund or replacement. A \"no refunds\" sign cannot remove this right, so seeing the sign does not change it.",
+      "clue": "Can a sign take away rights for a faulty product?"
+    }
+  },
+  "ecb-misleading-deceptive-conduct": {
+    "title": "Misleading and deceptive conduct",
+    "card": [
+      "Misleading and deceptive conduct is when a business gives a false picture of what it sells, so buyers are tricked or left with the wrong idea. It is against the Australian Consumer Law.",
+      "Three common examples are false claims about a product, fake prices and hidden fees. A fake price is a \"was\" price that was never really charged. A hidden fee is a cost the buyer is not told about until late.",
+      "A business can break the rule even without a lie. Leaving out important facts, or a picture or wording that gives the wrong idea, can also mislead.",
+      "The ACCC (a national body) and Consumer Affairs Victoria (a Victorian body) enforce the rules. They can investigate businesses that break them."
+    ],
+    "remember": "A business must not give buyers a false picture, and the ACCC and Consumer Affairs Victoria enforce this.",
+    "a": {
+      "q": "A shop puts a \"Was $100, now $60\" sign on a jacket that was never sold for $100. Why is this a problem?",
+      "opts": [
+        "It is a fake price that gives buyers a false picture",
+        "It is a hidden fee added after the buyer has paid",
+        "It is a faulty product that should be refunded",
+        "It is a sale that should have been approved first"
+      ],
+      "why": "The \"was\" price was never charged, so the sign makes the discount look bigger than it is. That gives buyers a false picture. A hidden fee is a different example, because it is about a cost buyers are not told about.",
+      "clue": "Was the $100 price ever really charged?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi's online store in Geelong advertises a game for $29. At checkout, a $12 \"service fee\" appears that was not mentioned before. Which statement best describes this?",
+      "opts": [
+        "It is misleading, because the fee was hidden until checkout",
+        "It is fine, because the $29 price shown was true",
+        "It is a fake price, because the game is worth less than $29",
+        "It is a major fault, so the buyer can choose a refund"
+      ],
+      "why": "A cost the buyer is not told about until late is a hidden fee, which gives a false picture of the real price. The $29 being a true figure does not fix this, because leaving out important facts can also mislead. It is not a fake price, since that is about a \"was\" price never charged.",
+      "clue": "A business can mislead without telling a lie."
+    }
+  },
+  "ecb-consumer-responsibilities": {
+    "title": "Consumer responsibilities",
+    "card": [
+      "Consumers have rights under the law, and they also have responsibilities. Meeting them helps buyers protect themselves and makes it easier to sort out a problem.",
+      [
+        "Read the terms",
+        "Before agreeing to buy or sign up, read the terms and conditions. They set out the price, the length of the deal and any rules or extra charges."
+      ],
+      [
+        "Keep receipts",
+        "A receipt shows what you bought, where, when and for how much. Keep it, or other proof such as a bank statement, so you can show a seller you bought the item."
+      ],
+      [
+        "Use and complain properly",
+        "Use a product the way it is meant to be used. If there is a problem, take it first to the seller, then to a consumer agency if it is not fixed."
+      ]
+    ],
+    "remember": "Read the terms, keep proof of purchase, use products as intended, and complain through the right channels.",
+    "a": {
+      "q": "Ben buys headphones, and a week later one side stops working. How does keeping his receipt help him?",
+      "opts": [
+        "It helps him show he bought them from that shop",
+        "It proves the fault was not caused by him",
+        "It is the only proof the shop has to accept",
+        "It is what gives him the right to have them fixed"
+      ],
+      "why": "A receipt records what was bought, where, when and for how much, so it helps Ben show the shop sold him the headphones. It says nothing about how he used them, so it cannot prove the fault was not his doing. His rights come from the law, and other proof such as a bank statement can also show the purchase.",
+      "clue": "Think about the details a receipt records."
+    },
+    "b": {
+      "d": 2,
+      "q": "Zara's new blender stops working. She used it to crush large blocks of ice, but the instructions say it is for soft foods only. Which responsibility did Zara not meet?",
+      "opts": [
+        "Using the product as it is meant to be used",
+        "Reading the terms before agreeing to buy",
+        "Keeping the receipt as proof of purchase",
+        "Complaining through the right channels"
+      ],
+      "why": "The instructions say the blender is for soft foods, and Zara used it on large ice blocks. That means she did not use it as intended. The other options are not mentioned in the case, so we cannot say she missed them.",
+      "clue": "Compare what the instructions say with what Zara did."
+    }
+  },
+  "ecb-ethical-business-behaviour": {
+    "title": "Ethical business behaviour",
+    "card": [
+      "Ethics are ideas about what is right and wrong. An ethical business tries to do what is right, not only what the law says it must do.",
+      ["Workers", "Treating workers fairly, such as paying them properly and keeping their workplace safe."],
+      ["Honesty", "Telling the truth about the business and its products, even when a lie might win a sale."],
+      ["Environment", "Caring for the environment, such as cutting waste and using less energy."]
+    ],
+    "remember": "Ethical businesses aim to do what is right, not just what the law requires, and this can win trust.",
+    "a": {
+      "q": "Which best describes an ethical business?",
+      "opts": [
+        "It tries to do what is right, beyond what the law requires",
+        "It does only what the law forces it to do",
+        "It sets the lowest prices it can in its market",
+        "It gives away most of its products for free"
+      ],
+      "why": "Ethics are about right and wrong, so an ethical business aims to do what is right even where no law makes it. Doing only what the law requires is the minimum, not the whole of ethical behaviour.",
+      "clue": "Think about going further than the rules."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam's Bikes in Geelong could throw away its old packaging, but it chooses to reuse it and cut waste, although no law forces it to. Which type of ethical behaviour is this?",
+      "opts": ["Caring for the environment", "Treating workers fairly", "Telling the truth", "Setting fair prices"],
+      "why": "Reusing packaging and cutting waste is a way of caring for the environment. It is not about workers or honesty, which are different types of ethical behaviour.",
+      "clue": "What is being done with the packaging?"
+    }
+  },
+  "ecb-comparing-before-you-buy": {
+    "title": "Comparing before you buy",
+    "card": [
+      "A smart consumer compares prices and quality at more than one shop before buying. The cheapest item is not always the best choice if it breaks quickly.",
+      "Unit pricing shows the cost per standard amount, such as per 100 grams or per litre. It lets you compare packs of different sizes fairly.",
+      "Reviews from other buyers can show how a product works in real life. Read several, because one review may not be typical.",
+      "Check the full cost, not just the sticker price. Delivery fees, booking fees and extra charges can make a cheap offer cost more."
+    ],
+    "remember": "Compare price, quality, unit price, reviews and the full cost before you pay.",
+    "a": {
+      "q": "Why is unit pricing useful when comparing a small and a large pack of pasta?",
+      "opts": [
+        "It shows the cost per 100 grams for both packs",
+        "It shows which pack has the better brand name",
+        "It shows which pack other buyers reviewed best",
+        "It shows which pack has no delivery fee added"
+      ],
+      "why": "Unit pricing gives the cost for the same amount, so the two packs can be compared fairly. Reviews are a different tool, and they do not tell you the cost per amount.",
+      "clue": "Think about what is the same for both packs."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi finds a skateboard for $60 on a website. Another site sells it for $68 with free delivery. The first site adds $12 delivery. Which site is cheaper, and why?",
+      "opts": [
+        "The second site, because its full cost is $68",
+        "The first site, because its sticker price is $60",
+        "The second site, because free delivery is always best",
+        "The first site, because delivery fees are not a cost"
+      ],
+      "why": "The first site costs $60 plus $12, which is $72 in total. The second site costs $68, so it is cheaper. The $60 sticker price is tempting, but it leaves out the delivery fee.",
+      "clue": "Add every charge before comparing."
+    }
+  },
+  "ecb-advertising-persuades": {
+    "title": "How advertising persuades",
+    "card": [
+      [
+        "Celebrity endorsement",
+        "a famous person, such as a sports star, is paid to use or praise a product. Fans may want it because they link it with that person."
+      ],
+      [
+        "Limited-time offer",
+        "a deal that ends soon, such as 'today only'. It makes people feel they must buy now, before they think it through."
+      ],
+      [
+        "Bandwagon appeal",
+        "the ad says lots of people already buy the product. You feel you should join in so you do not miss out."
+      ],
+      [
+        "Influencer post",
+        "an online personality shows or praises a product to their followers on social media. They may be paid or given free products, even if the post looks personal."
+      ]
+    ],
+    "remember": "Ads often play on feelings, not just facts: fame, deadlines, the crowd and online personalities can all make you want to buy.",
+    "a": {
+      "q": "An ad says 'Join the millions of teens who already wear Zoomo shoes'. Which technique is this?",
+      "opts": ["A bandwagon appeal", "A celebrity endorsement", "A limited-time offer", "An influencer post"],
+      "why": "The ad suggests that many people are buying, so you should join them. That is a bandwagon appeal. No famous person, deadline or online personality is named, so the other options do not fit.",
+      "clue": "Who is the ad saying is buying the shoes?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A phone store posts 'Sale ends at midnight tonight, buy now!'. Which technique is it using, and how does it work?",
+      "opts": [
+        "A limited-time offer, which makes people feel rushed",
+        "A bandwagon appeal, which says many people are buying",
+        "A celebrity endorsement, which links the phone to a star",
+        "An influencer post, which shows the phone to followers"
+      ],
+      "why": "The ad sets a deadline, so shoppers feel they must buy before it ends. That is a limited-time offer. It does not mention what others are buying, so it is not a bandwagon appeal.",
+      "clue": "Look at what the ad says about time."
+    }
+  },
+  "ecb-common-financial-scams": {
+    "title": "Common financial scams",
+    "card": [
+      "A scam is a trick to take money or personal details from people. Scammers often pretend to be a real business, bank or person.",
+      [
+        "Phishing",
+        "a message that pretends to be from a trusted company and asks for passwords or card details, often with a link to a fake website."
+      ],
+      [
+        "Fake online shop",
+        "a website or social media page that takes payment for goods that never arrive, or sends poor copies."
+      ],
+      [
+        "Fake prize or quick riches",
+        "a message saying you won something you never entered, or an offer of fast, easy money. Young people are often targeted on social media."
+      ]
+    ],
+    "remember": "Scams come in many forms, but each one tries to get your money or your details.",
+    "a": {
+      "q": "Zara gets a text saying it is from her bank. It asks her to tap a link and type in her password. What type of scam is this?",
+      "opts": ["Phishing", "A fake online shop", "A fake prize", "An offer of quick riches"],
+      "why": "Phishing pretends to be a trusted company to get passwords or card details. It is not a fake shop, because nothing is being sold, and it does not promise a prize or easy money.",
+      "clue": "Who is the message pretending to be, and what does it want?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Leo sees a social media page selling cheap football boots. He pays, but nothing ever arrives and the page disappears. Which scam is this?",
+      "opts": ["A fake online shop", "Phishing", "A fake prize", "An offer of quick riches"],
+      "why": "Leo paid for goods that never came, which is a fake online shop. It is tempting to call it phishing, but the page did not ask for his passwords by pretending to be a trusted company.",
+      "clue": "What did Leo pay for, and what did he get?"
+    }
+  },
+  "ecb-spotting-avoiding-scams": {
+    "title": "Spotting and avoiding scams",
+    "card": [
+      "Scams have warning signs. One is pressure to act fast, such as \"pay in the next hour or lose your chance\".",
+      "Another is a request to pay with gift cards, or to share a password or a code sent to your phone. Real businesses do not ask you for these.",
+      "A deal that looks too good to be true, such as a brand new phone for a tiny price, is also a warning sign.",
+      "If you are unsure, check with Scamwatch, the Australian Government's scam website. Never share your passwords or codes with anyone."
+    ],
+    "remember": "Pressure, gift card payments, requests for codes and deals too good to be true are warning signs. Check with Scamwatch, and never share codes.",
+    "a": {
+      "q": "Which message shows a warning sign of a scam?",
+      "opts": [
+        "Send gift card codes in the next hour to keep your account",
+        "Your parcel is out for delivery and will arrive tomorrow",
+        "Your school library book is due back next Friday",
+        "Your phone plan bill is ready to view in your account"
+      ],
+      "why": "Asking for payment with gift card codes and demanding quick action are both warning signs. The other messages give ordinary information and ask for nothing risky.",
+      "clue": "Look for pressure and an unusual way to pay."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya gets a text with a code from her email provider. Then a caller says he is from the provider and asks her to read the code out. What should she do?",
+      "opts": [
+        "Hang up, keep the code private and check with Scamwatch",
+        "Read out the code, because he knows her email provider",
+        "Read out only half of the code to be safe",
+        "Ask him to send the request in writing, then read it out"
+      ],
+      "why": "Codes should never be shared with anyone, even someone who sounds official. Knowing the provider's name does not prove he is real, and sharing even part of a code is still sharing it.",
+      "clue": "Should a code ever be read out to someone else?"
+    }
+  },
+  "ecb-tax-we-pay-it": {
+    "title": "What tax is and why we pay it",
+    "card": [
+      "Tax is money that people and businesses must pay to government. Paying it is not a choice: the law requires it.",
+      "Governments use tax to pay for services that everyone shares, such as schools, hospitals, roads and defence.",
+      "Many shared services, such as a public road or a public library, cost nothing to use. This is because tax has already paid for them.",
+      "Tax is collected from many people and businesses, so the cost of shared services is spread across the community. Without tax, governments would have little money to provide them."
+    ],
+    "remember": "Tax pools money from many people and businesses to pay for services we all share.",
+    "a": {
+      "q": "Which of these best describes tax?",
+      "opts": [
+        "Money people and businesses must pay to government",
+        "Money people choose to give to a charity they support",
+        "Money a business charges customers for what it sells",
+        "Money the government lends to people and businesses"
+      ],
+      "why": "Tax goes to government, and the law requires it to be paid. A gift to charity is a choice, and the price a business charges goes to the business, not to government.",
+      "clue": "Think about who receives the money and whether paying is optional."
+    },
+    "b": {
+      "d": 2,
+      "q": "A new bridge is built over the Yarra River in Melbourne, and all drivers can cross it for free. Where did the government most likely get the money to build it?",
+      "opts": [
+        "From tax collected from people and businesses",
+        "From fees paid only by the drivers who cross it",
+        "From the private savings of the workers who built it",
+        "From the profits of the shops near the new bridge"
+      ],
+      "why": "Governments pay for shared services like roads and bridges with tax collected from many people and businesses. Drivers cross the bridge for free, so fees from them cannot be the source.",
+      "clue": "The bridge is free to use, so who else pays?"
+    }
+  },
+  "ecb-income-tax-vic": {
+    "title": "Income tax",
+    "card": [
+      "Income tax is a tax taken from the money people earn, such as wages and salaries.",
+      [
+        "Tax-free threshold",
+        "the amount a person can earn in a year before they pay income tax on it. In Australia, the first $18,200 a year is not taxed."
+      ],
+      [
+        "Tax brackets",
+        "income above the threshold is split into bands called tax brackets. Each higher bracket has a higher rate, which applies only to the dollars earned within it."
+      ],
+      "So people on higher incomes pay a higher rate on each extra dollar. Their first dollars are still taxed at the lower rates, the same as everyone else's."
+    ],
+    "remember": "Income tax rises in steps: nothing up to the threshold, then higher rates only on the dollars in higher brackets.",
+    "a": {
+      "q": "A worker in Australia earns a yearly income. What does the tax-free threshold do for them?",
+      "opts": [
+        "The first part of their yearly income is not taxed",
+        "All of their income is free of tax if they work part time",
+        "They pay the same tax rate on every dollar they earn",
+        "They only pay tax on money they spend in shops"
+      ],
+      "why": "The tax-free threshold is the amount a person can earn in a year without paying income tax on it. It does not make all income tax-free, even for part-time workers, because any income above it is taxed.",
+      "clue": "A threshold is a line. What happens on each side of it?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Leila and Sam both work in Melbourne. Leila earns enough to reach a higher tax bracket than Sam. Which statement is correct?",
+      "opts": [
+        "Leila pays a higher rate than Sam on her extra dollars",
+        "Leila pays her top rate on every dollar she earns",
+        "Both pay the same rate, as both earn above the threshold",
+        "Sam pays a higher rate on his extra dollars than Leila"
+      ],
+      "why": "Leila's extra dollars fall in a higher bracket, so they are taxed at a higher rate than Sam's. It is tempting to think her top rate covers all her income, but each rate applies only to the dollars within its bracket, so her first dollars are taxed like Sam's.",
+      "clue": "Which of Leila's dollars does her higher rate apply to?"
+    }
+  },
+  "ecb-goods-services-tax-vic": {
+    "title": "The goods and services tax",
+    "card": [
+      "The goods and services tax (GST) is a tax of 10 per cent added to the price of most goods and services. The seller collects it from the buyer and passes it on to the government.",
+      "If an item costs $50 before tax, GST adds $5, so the buyer pays $55. To find the GST, divide the price before tax by 10.",
+      "Some things are left out of the GST, such as basic food, most health care and education. A bag of apples or a visit to the doctor has no GST added.",
+      "The GST applies to everyone who buys taxed goods and services, whatever their age or income. The money raised goes to the states and territories."
+    ],
+    "remember": "GST adds 10 per cent to most prices, but basic food, most health care and education are left out.",
+    "a": {
+      "q": "Jai wants a pair of headphones priced at $80 before tax. What is the total he pays once GST is added?",
+      "opts": ["$88", "$81", "$90", "$80"],
+      "why": "GST is one tenth of $80, which is $8, so Jai pays $88. Paying $90 adds $10 instead of one tenth of $80, which is $8.",
+      "clue": "Find one tenth of the price, then add it on."
+    },
+    "b": {
+      "d": 3,
+      "q": "At a shop in Geelong, Tilly buys a bag of fresh carrots and a new bike helmet. Which statement about GST is correct?",
+      "opts": [
+        "GST is added to the helmet but not to the carrots",
+        "GST is added to the carrots but not to the helmet",
+        "GST is added to both, as it applies to all goods",
+        "GST is added to neither, as Tilly is a young shopper"
+      ],
+      "why": "Most goods carry GST, so the helmet has it. Basic food, such as carrots, is left out. GST does not depend on the age or income of the buyer, so being young does not remove it.",
+      "clue": "Think about which item is basic food."
+    }
+  },
+  "ecb-lodging-tax-return": {
+    "title": "Young people and tax",
+    "card": [
+      "A young person who starts a job needs a tax file number (TFN). It is a personal number that the Australian Taxation Office (ATO) uses to keep track of their tax.",
+      "When they start the job, the worker gives their TFN to their employer. The employer then takes tax out of each pay and sends it to the government.",
+      "The tax year ends on 30 June. After that date, the worker lodges their own tax return, which tells the ATO what they earned and what tax was paid.",
+      "If the tax taken from their pay was more than they owed, the worker may get a refund. If too little tax was taken, they may have to pay the difference to the ATO."
+    ],
+    "remember": "Your employer takes tax from each pay. Your tax return after 30 June shows if you paid too much (refund) or too little (pay the ATO the difference).",
+    "a": {
+      "q": "A teenager works part time and lodges a tax return. Why might they get a refund?",
+      "opts": [
+        "More tax came out of their pay than they owed for the year",
+        "Their employer took no tax at all out of their pay that year",
+        "They gave their employer their tax file number when hired",
+        "They lodged their tax return early, before the 30 June date"
+      ],
+      "why": "A refund is the difference when the tax taken from pay is more than the tax owed. If no tax was taken out, there would be nothing to give back. Giving a TFN to an employer is a normal step, not a reason for a refund.",
+      "clue": "Compare what was taken from pay with what was owed."
+    },
+    "b": {
+      "d": 2,
+      "q": "Noah, aged 15, gets a job at a bakery in Geelong. What should he do with his tax file number when he starts?",
+      "opts": [
+        "Give it to the bakery so tax can be taken from his pay",
+        "Keep it to himself until he lodges a tax return in July",
+        "Use it to pay his own tax to the ATO each week",
+        "Give it to the bakery so it can lodge his tax return"
+      ],
+      "why": "A new worker gives their TFN to their employer, and the employer takes tax from each pay. The bakery does not lodge Noah's return for him: he lodges his own after 30 June.",
+      "clue": "Who takes the tax out of each pay, and who lodges the return?"
+    }
+  },
+  "ecb-tax-revenue-spent": {
+    "title": "How tax revenue is spent",
+    "card": [
+      "The government collects tax and then spends it. It spends on services and support that people share.",
+      "The biggest areas of spending are social security and welfare, health, education and defence.",
+      [
+        "Social security and welfare",
+        "payments and support for people who need help, such as the age pension or help for people who are looking for work."
+      ],
+      [
+        "Infrastructure",
+        "roads, bridges, railways and other large structures that many people use. Government spending on infrastructure sits alongside the four big areas."
+      ]
+    ],
+    "remember": "Tax revenue is spent on shared needs: welfare, health, education, defence and infrastructure.",
+    "a": {
+      "q": "Which of these is an example of government spending on infrastructure?",
+      "opts": [
+        "Building a new bridge over a river",
+        "Paying the age pension to retirees",
+        "Paying doctors in a public hospital",
+        "Buying equipment for the armed forces"
+      ],
+      "why": "A bridge is a large structure that many people use, so it is infrastructure. The age pension is social security and welfare, which is a different area of spending.",
+      "clue": "Infrastructure is built and used by many people."
+    },
+    "b": {
+      "d": 2,
+      "q": "Sam's family receives a payment from the government because a parent has lost their job and is looking for work. Which area of government spending does this belong to?",
+      "opts": [
+        "Social security and welfare",
+        "Roads and other infrastructure",
+        "Education and schools",
+        "Defence and the armed forces"
+      ],
+      "why": "Payments that support people who need help, such as people looking for work, are social security and welfare. Education is also a big area of spending, but it pays for schools and learning, not income support for families.",
+      "clue": "The payment helps a person who needs support."
+    }
+  },
+  "ecb-setting-financial-goals": {
+    "title": "Setting financial goals",
+    "card": [
+      [
+        "Short term",
+        "a financial goal (something you save money for) that you can reach within a few months, such as new shoes or a movie ticket."
+      ],
+      ["Medium term", "a goal that takes about one to a few years to reach, such as a laptop."],
+      ["Long term", "a goal that takes many years to reach, such as a car or a home."],
+      "Any goal, short, medium or long term, is easier to reach when it is clear. A clear goal states an amount and a date."
+    ],
+    "remember": "Sort a goal by how long it takes. Give every goal an amount and a date.",
+    "a": {
+      "q": "Which of these is the clearest financial goal?",
+      "opts": [
+        "Save $600 for a laptop by the end of June",
+        "Save some money for a laptop very soon",
+        "Try to buy a good laptop one day",
+        "Spend less each week so a laptop is possible"
+      ],
+      "why": "This goal states both an amount, $600, and a date, the end of June. The others are vague, so it is hard to plan for them or to tell when they have been reached.",
+      "clue": "Look for the goal with a number and a deadline."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya is 13. She wants a $40 bucket hat next month, a $900 bike in two years and a home when she is an adult. Which pair is matched correctly?",
+      "opts": [
+        "Hat is short term, home is long term",
+        "Hat is medium term, bike is short term",
+        "Bike is long term, home is medium term",
+        "Hat is long term, bike is medium term"
+      ],
+      "why": "The hat is bought next month, so it is short term. A home takes many years, so it is long term. The bike is tempting to call long term because it costs a lot, but two years fits medium term.",
+      "clue": "Sort each goal by how long it takes to reach, not by its price."
+    }
+  },
+  "ecb-making-budget": {
+    "title": "Making a personal budget",
+    "card": [
+      "A budget is a plan that lists the money you expect to receive (income) and the money you expect to spend (expenses) over a period, such as a month.",
+      ["Fixed costs", "expenses that stay the same each time, such as a phone plan or a gym fee."],
+      ["Variable costs", "expenses that can go up or down, such as snacks, clothes or a myki top-up."],
+      "Subtract total expenses from income to see what is left to save. If expenses are higher than income, the budget shows a shortfall, and you need to cut costs or earn more."
+    ],
+    "remember": "Income minus all expenses, fixed and variable, shows what is left to save.",
+    "a": {
+      "q": "Mia checks what she spent on four things in March and April. Which one is a fixed cost?",
+      "opts": [
+        "Music app: $12 in March, $12 in April",
+        "Snacks: $18 in March, $25 in April",
+        "Myki top-up: $30 in March, $22 in April",
+        "Clothes: $0 in March, $45 in April"
+      ],
+      "why": "The music app cost the same amount in both months, so it is a fixed cost. Snacks, myki top-ups and clothes went up or down between months, so they are variable costs, even though a myki is used often.",
+      "clue": "Compare the two months for each item."
+    },
+    "b": {
+      "d": 3,
+      "q": "Jaden earns $200 a month from a weekend job. His fixed costs are $60 and his variable costs are $150. What does his budget show?",
+      "opts": [
+        "A shortfall of $10, so he needs to cut costs or earn more",
+        "$10 left over, so he can save $10 a month from his job",
+        "$140 left over, because only fixed costs are counted",
+        "$50 left over, because only variable costs are counted"
+      ],
+      "why": "Total expenses are $60 + $150 = $210, which is $10 more than his income of $200, so the budget shows a shortfall. The $140 and $50 answers each subtract only one kind of cost, but a budget counts both fixed and variable costs.",
+      "clue": "Add both kinds of cost before comparing with income."
+    }
+  },
+  "ecb-debt-credit": {
+    "title": "Debt and credit",
+    "card": [
+      "Debt is money you owe. You can borrow with a credit card, a loan or buy now pay later (BNPL), which lets you take an item home and pay for it in parts.",
+      "Borrowing can cost more than paying upfront. Interest is a charge for borrowing money, and some products also add fees.",
+      "For example, a $500 phone bought on credit may end up costing $560 once interest and fees are added.",
+      "A credit record is a history of how you repay what you borrow. Missed payments can harm it and make future borrowing harder."
+    ],
+    "remember": "Borrowing can cost more than paying upfront, and missed payments can harm your credit record.",
+    "a": {
+      "q": "Why can buying a $300 jacket on credit cost more than paying $300 upfront?",
+      "opts": [
+        "Interest and fees are added to the price",
+        "The shop raises the price of the jacket",
+        "Credit records add a charge each year",
+        "Only the first payment includes the $300"
+      ],
+      "why": "Borrowing can add interest and fees on top of the price, so the total paid can be above $300. A credit record tracks repayments. It is not a charge.",
+      "clue": "Think about what lenders add when you borrow."
+    },
+    "b": {
+      "d": 2,
+      "q": "Sam buys a $200 skateboard using BNPL but misses two payments. What can result from the missed payments?",
+      "opts": [
+        "His credit record is harmed, making borrowing harder",
+        "His debt is cancelled, since he already owns the board",
+        "He pays less overall, since his first payment was on time",
+        "His credit record improves, since he chose to use BNPL"
+      ],
+      "why": "Missed payments can harm a credit record, which can make future borrowing harder. Taking the board home does not cancel the debt: with BNPL he still owes the remaining parts.",
+      "clue": "What does a credit record keep track of?"
+    }
+  },
+  "ecb-questions-investigation": {
+    "title": "Questions for an investigation",
+    "card": [
+      "An investigation question is the question you set out to answer when you research an economic or business issue. A good one guides what you look for.",
+      [
+        "Open",
+        "it cannot be answered with just yes or no. It needs explaining, such as \"How does...\" or \"Why has...\"."
+      ],
+      [
+        "Focused",
+        "it is about one issue, in a clear place or group. \"How has the price of eggs changed in Australian supermarkets?\" is focused. \"How does the whole economy work?\" is too wide."
+      ],
+      [
+        "Evidence",
+        "it can be answered with information you can find, such as prices, sales figures or survey results. A question about what is best or what is right depends on opinion, so evidence alone cannot settle it."
+      ]
+    ],
+    "remember": "A good investigation question is open, focused on one issue, and answerable with evidence.",
+    "a": {
+      "q": "Which of these is the best investigation question for a Year 7 student studying an economic issue?",
+      "opts": [
+        "How have school canteen prices changed over two years?",
+        "Have school canteen prices gone up over the last two years?",
+        "Should the school canteen lower its prices for students?",
+        "How have prices changed in every shop around the world?"
+      ],
+      "why": "\"How have school canteen prices changed over two years?\" is open, focused on one issue and can be answered with price records. \"Have school canteen prices gone up over the last two years?\" is focused but closed, as yes or no answers it. The question about every shop in the world is far too wide.",
+      "clue": "Look for a question that is open, narrow and can be checked."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia plans to investigate a bakery in Ballarat. Which investigation question is open, focused and answerable with evidence?",
+      "opts": [
+        "Why have the bakery's bread sales changed since January?",
+        "Have the bakery's bread sales gone up since January?",
+        "Why does the bakery make the best bread in Victoria?",
+        "Why have bread sales changed in every bakery since 1900?"
+      ],
+      "why": "Sales records and customer surveys can show why the bakery's bread sales changed, and the question needs explaining, not yes or no. The question about sales going up is focused and can be checked, but it is closed because yes or no answers it. \"Best bread\" is a matter of opinion, and every bakery since 1900 is far too wide.",
+      "clue": "Check each question for all three features, not just one."
+    }
+  },
+  "ecb-checking-sources": {
+    "title": "Checking sources",
+    "card": [
+      "A source is where information comes from, such as a website, a news article, a report or a video. Not every source is accurate or fair, so check it before you use it.",
+      [
+        "Who and when",
+        "Who made it? Look for an author or organisation that knows the topic, and ask whether they gain if you believe it. When was it made? Prices, wages and laws change, so an old source may be out of date."
+      ],
+      [
+        "Why",
+        "Why was it made? A source may aim to inform, to sell a product or to persuade. A source made to sell or persuade may leave out facts that do not suit it."
+      ],
+      [
+        "Agree",
+        "Do other sources agree? If several separate, reliable sources give the same facts, you can trust them more."
+      ]
+    ],
+    "remember": "Check who, when and why, then see whether other sources agree.",
+    "a": {
+      "q": "Ben finds a 2012 report on average weekly rent in Melbourne. A statistics office wrote it to inform the public, and two other reports from 2012 give the same figures. Which check raises the most doubt about using it today?",
+      "opts": [
+        "When: rents may have changed a lot since 2012",
+        "Who: a statistics office may not know about rents",
+        "Why: the report may be trying to sell homes",
+        "Agree: the other reports may give different figures"
+      ],
+      "why": "The report is more than ten years old, and rents change over time, so its figures may be out of date. The other checks pass: a statistics office knows the topic, it was made to inform rather than to sell, and other reports give the same figures.",
+      "clue": "Look for the one check the report does not clearly pass."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya is researching how much teenagers in Geelong earn from part-time jobs. She finds a 2009 blog post by an unnamed writer with no other sources. Which step would best help her judge whether to use it?",
+      "opts": [
+        "Find newer sources by known authors and compare figures",
+        "Check that the blog post is easy to read and has pictures",
+        "Count how many times the blog post has been shared online",
+        "Use it, because a blog post is written by a real person"
+      ],
+      "why": "The post is old and has no known author, so Priya should look for newer sources by known authors and compare what they say. Being easy to read or widely shared does not show that the facts are accurate.",
+      "clue": "The post has an unknown author and an old date."
+    }
+  },
+  "ecb-reading-economic-graphs": {
+    "title": "Reading economic graphs",
+    "card": [
+      [
+        "Line graph",
+        "A line graph shows how something changes over time. Time runs along the bottom axis, so you can see a rise, a fall or a steady trend."
+      ],
+      [
+        "Bar graph",
+        "A bar graph compares amounts across different groups or categories. A taller bar means a larger amount."
+      ],
+      [
+        "Supply and demand",
+        "A supply and demand model shows how price and quantity affect each other. The demand line slopes down: a higher price means buyers want less. The supply line slopes up: a higher price means sellers offer more."
+      ],
+      "Before you read a graph, check the title, the labels on both axes and the units. Then pick the graph that suits the question you are asking."
+    ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "A line graph of the price of a loaf of bread in a town from 2019 to 2023. The price rises from 3 dollars in 2019 to 5 dollars in 2023.",
+        "x": {"min": 2018, "max": 2024, "label": "Year", "step": 1},
+        "y": {"min": 0, "max": 6, "label": "Price ($)", "step": 1},
+        "grid": true,
+        "items": [
+          {
+            "type": "curve",
+            "id": "P",
+            "points": [[2019, 3], [2020, 3.5], [2021, 4], [2022, 4.5], [2023, 5]],
+            "label": "Bread price",
+            "pos": "above-left"
+          }
+        ]
+      },
+      "2": {
+        "kind": "chart",
+        "chart": "bar",
+        "alt": "A bar graph of money spent by four students in a week. Ali spent 12 dollars, Bella 20 dollars, Chen 8 dollars and Dana 15 dollars.",
+        "bars": [["Ali", 12], ["Bella", 20], ["Chen", 8], ["Dana", 15]],
+        "y": {"min": 0, "max": 25, "step": 5, "label": "Dollars spent"},
+        "x": {"label": "Student"}
+      },
+      "3": {
+        "kind": "graph",
+        "alt": "A supply and demand model. Demand D slopes down and supply S slopes up. They cross at price P* and quantity Q*.",
+        "x": {"min": 0, "max": 10, "label": "Quantity"},
+        "y": {"min": 0, "max": 10, "label": "Price"},
+        "items": [
+          {"type": "curve", "id": "D", "points": [[0, 10], [10, 0]], "label": "D", "pos": "above-right"},
+          {"type": "curve", "id": "S", "points": [[0, 0], [10, 10]], "label": "S", "pos": "above-left"},
+          {"type": "guide", "at": [5, 5], "xLabel": "Q*", "yLabel": "P*"},
+          {"type": "point", "at": [5, 5], "on": ["D", "S"], "is": "intersection"}
+        ]
+      }
+    },
+    "remember": "Line graphs show change over time, bar graphs compare amounts, and supply and demand show how price and quantity affect each other.",
+    "a": {
+      "q": "Which graph is best for showing how a shop's monthly sales changed over one year?",
+      "opts": [
+        "A line graph, with months along the bottom",
+        "A bar graph, with one bar for each product",
+        "A supply and demand model, with price up the side",
+        "A graph with no labels on either of its axes"
+      ],
+      "why": "Sales are changing over time, so a line graph with months on the bottom axis shows the trend. A bar graph with one bar for each product compares products, not change across a year.",
+      "clue": "Which graph has time along the bottom?"
+    },
+    "b": {
+      "d": 2,
+      "q": "The bar graph shows the tickets sold by four school fundraisers. Which fundraiser sold the most tickets?",
+      "opts": ["Raffle", "Book sale", "Cake stall", "Car wash"],
+      "why": "A bar graph compares amounts, and the tallest bar shows the largest amount. The raffle bar is the tallest, reaching 65 tickets. The book sale bar is the next tallest, at 50, so it sold fewer.",
+      "clue": "Look for the tallest bar.",
+      "fig": {
+        "kind": "chart",
+        "chart": "bar",
+        "alt": "A bar graph of tickets sold by four fundraisers: Cake stall 40, Raffle 65, Car wash 30, Book sale 50.",
+        "bars": [["Cake stall", 40], ["Raffle", 65], ["Car wash", 30], ["Book sale", 50]],
+        "y": {"min": 0, "max": 70, "step": 10, "label": "Tickets sold"},
+        "x": {"label": "Fundraiser"}
+      }
+    }
+  },
+  "ecb-analysing-response-issue": {
+    "title": "Analysing a response to an issue",
+    "card": [
+      "A response is an action someone takes to deal with an economic or business issue. A government might make a new rule. A business might change its prices.",
+      "Most responses affect different groups in different ways. List the groups affected, such as consumers, workers, businesses and the government.",
+      "For each group, list the likely costs and the likely benefits. A cost is something a group gives up or loses. A benefit is something a group gains.",
+      "Then weigh them up. Compare the costs and benefits across all the groups, and decide whether the response is worth it. Different people may weigh them differently."
+    ],
+    "remember": "List the costs and benefits for each group affected, then weigh them up.",
+    "a": {
+      "q": "A council bans cars from a shopping street. What is the best way to start judging this response?",
+      "opts": [
+        "List the likely costs and benefits for each group affected",
+        "Ask only the shoppers whether they like the idea",
+        "Count how many people walk down the street each day",
+        "Check whether other councils have banned cars too"
+      ],
+      "why": "Judging a response means listing its likely costs and benefits for each group, such as shoppers, drivers and shop owners, then weighing them up. Asking only shoppers is tempting, but it leaves out the other groups who are affected.",
+      "clue": "Think about everyone the ban touches, not just one group."
+    },
+    "b": {
+      "d": 3,
+      "q": "Few jobs are available in a Victorian town, so the council approves a new dairy factory to create local jobs. The factory will employ local workers, but its trucks will add noise near homes. Which step is still needed to judge this response?",
+      "opts": [
+        "Weigh up the costs and benefits for all groups affected",
+        "Count only the jobs, because jobs are the main benefit",
+        "Count only the noise, because costs matter more than gains",
+        "Decide the factory is good because it brings jobs"
+      ],
+      "why": "The council's approval is the response. The jobs are a benefit for workers and the noise is a cost for nearby residents. Judging the response means weighing both across all the groups, so looking at only the jobs or only the noise ignores part of the picture.",
+      "clue": "One group gains and another loses, so what must you do with both?"
+    }
+  },
+  "ecb-two-sector-circular-flow": {
+    "title": "The two-sector circular flow model",
+    "card": [
+      "The two-sector circular flow model has two sectors: households and businesses. Households own the resources businesses need to make goods and services. These are called factors of production.",
+      "There are four factors. Land is natural resources. Labour is people's work. Capital is equipment, machines and buildings. Enterprise is the skill and risk of starting and running a business.",
+      "Businesses pay households income for each factor: rent for land, wages for labour, interest for capital and profit for enterprise.",
+      "Households spend that income on goods and services from businesses. Businesses use this money to pay for resources again, so money flows in a loop."
+    ],
+    "remember": "Households earn rent, wages, interest and profit from businesses, then spend that income back at businesses.",
+    "a": {
+      "q": "Sam works at a café in Bendigo and spends his wages on a bike from a local shop. What does this show about money?",
+      "opts": [
+        "It flows from business to household and back to business",
+        "It flows from household to business and then stops",
+        "It moves only between households and never to businesses",
+        "It is spent once and does not return to any business"
+      ],
+      "why": "The café pays wages to Sam, and he spends them at the bike shop, so money moves from a business to a household and back to a business. It does not stop there, because the bike shop uses that money to pay for resources again.",
+      "clue": "Follow the money from the café to Sam to the bike shop."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mei came up with the idea for a bakery in Ballarat and took the risk of starting it. What does the model say she earns for this?",
+      "opts": [
+        "Profit, the income paid for enterprise",
+        "Wages, the income paid for labour",
+        "Rent, the income paid for land",
+        "Interest, the income paid for capital"
+      ],
+      "why": "Having the idea and taking the risk of starting a business is enterprise, and the income for enterprise is profit. Wages are tempting because Mei may also work in the bakery, but wages pay for labour, not for the risk of starting a business.",
+      "clue": "Which factor is about the skill and risk of starting a business?"
+    }
+  },
+  "ecb-adding-government-finance-overseas": {
+    "title": "Adding government, finance and the overseas sector",
+    "card": [
+      "The two-sector model has only households and businesses. The five-sector model adds three more sectors to match a real economy.",
+      [
+        "Government",
+        "Households and businesses pay taxes to the government. The government spends money on things such as schools, roads and hospitals."
+      ],
+      [
+        "Financial institutions",
+        "Banks and similar bodies collect savings from households. They lend money to businesses, which use it to invest in equipment and buildings."
+      ],
+      [
+        "Overseas sector",
+        "Households and businesses buy imports from other countries, so money flows out. Other countries buy exports, so money flows in."
+      ]
+    ],
+    "remember": "Each new sector links to the flow in two directions: money goes to it and comes back from it.",
+    "a": {
+      "q": "Which pair of flows links households and businesses to the financial institutions sector?",
+      "opts": [
+        "Savings in, and loans out to businesses",
+        "Taxes in, and public services out",
+        "Exports in, and imports out",
+        "Wages in, and goods and services out"
+      ],
+      "why": "Financial institutions collect savings and lend to businesses that want to invest. Taxes and public services link to the government. Exports and imports link to the overseas sector.",
+      "clue": "Think about where a bank gets money and where it sends it."
+    },
+    "b": {
+      "d": 2,
+      "q": "Sam's Surfboards in Torquay sells boards to a shop in Hawaii. Which sector does the money come from, and what is this flow called?",
+      "opts": [
+        "The overseas sector, as an export",
+        "The overseas sector, as an import",
+        "The government sector, as a tax",
+        "Financial institutions, as a loan"
+      ],
+      "why": "The buyer is in another country, so the money comes from the overseas sector. Goods sold abroad are exports. An import would be the opposite: Australians buying goods from abroad.",
+      "clue": "Who is buying the boards, and where are they?"
+    }
+  },
+  "ecb-leakages-injections": {
+    "title": "Leakages and injections",
+    "card": [
+      [
+        "Leakages",
+        "Money taken out of the circular flow, so it is not spent on Australian goods and services. The three leakages are saving, tax and imports."
+      ],
+      [
+        "Injections",
+        "Money added to the circular flow. The three injections are investment (businesses buying equipment and buildings), government spending and exports."
+      ],
+      "Each leakage has a matching injection. Saving is paired with investment, tax with government spending, and imports with exports.",
+      "If injections are greater than leakages, more money flows through the economy and it grows. If leakages are greater than injections, the flow shrinks."
+    ],
+    "remember": "Leakages take money out of the flow. Injections put it in. Injections above leakages mean growth.",
+    "a": {
+      "q": "A household in Geelong puts $500 of its pay into a savings account. In the circular flow, what is this?",
+      "opts": [
+        "A leakage, because the money is not spent",
+        "An injection, because the bank gets money",
+        "A leakage, because the money is paid as tax",
+        "An injection, because the household gets interest"
+      ],
+      "why": "Saved money is taken out of the flow of spending, so saving is a leakage. It is not an injection: the bank holding the money does not add new spending to the flow.",
+      "clue": "Is the $500 being spent on goods and services?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In one year, the total of injections in Australia is greater than the total of leakages. What is the most likely result?",
+      "opts": [
+        "More money flows through the economy, so it grows",
+        "Less money flows through the economy, so it shrinks",
+        "The flow stays the same, as the two always cancel out",
+        "Households save more, so spending falls"
+      ],
+      "why": "Injections add money to the flow and leakages remove it. When injections are larger, the flow gets bigger and the economy grows. The shrinking option reverses this and describes leakages above injections.",
+      "clue": "Which of the two adds money to the flow?"
+    }
+  },
+  "ecb-sectors-depend-each-other": {
+    "title": "How the sectors depend on each other",
+    "card": [
+      "Each sector in the circular flow relies on the others. Households need businesses for goods and jobs. Businesses need households to buy what they make.",
+      "Spending by one sector is income for another. Household spending is the sales of businesses.",
+      "So a change in one place spreads. If households cut their spending, business sales fall. Businesses may then cut jobs and hours, so household incomes fall.",
+      "Lower incomes and lower sales mean less tax paid to government. This can leave the government with less to spend on services."
+    ],
+    "remember": "Spending is income for someone else, so a fall in one sector can spread to the others.",
+    "a": {
+      "q": "Households in Ballarat spend less in local shops. Which change is most likely to follow first?",
+      "opts": [
+        "Shops make fewer sales",
+        "Shops make higher profits",
+        "Households earn more income",
+        "The government collects more tax"
+      ],
+      "why": "Household spending is the sales of businesses, so less spending means fewer sales. Profits and incomes are more likely to fall than rise, and tax revenue follows later.",
+      "clue": "One sector's spending is another sector's income."
+    },
+    "b": {
+      "d": 3,
+      "q": "Many shoppers in Bendigo spend less, so a clothing shop cuts its staff hours. What is the likely effect on the government?",
+      "opts": [
+        "Less tax is paid, so it may have less to spend",
+        "More tax is paid, so it may have more to spend",
+        "Tax paid is unchanged, so its spending may stay the same",
+        "Less tax is paid, but only by the clothing shop owner"
+      ],
+      "why": "The shop's lower sales and the workers' fewer hours both mean lower incomes, so less tax is paid and the government may have less to spend on services. The tempting option that only the shop owner pays less misses the workers, who also earn less and so pay less tax.",
+      "clue": "Who earns less here: the shop, its workers, or both?"
+    }
+  },
+  "ecb-economic-growth-gdp-vic": {
+    "title": "Economic growth and GDP",
+    "card": [
+      ["GDP", "Gross domestic product is the value of all final goods and services made in a country in a year."],
+      [
+        "Economic growth",
+        "Economic growth is GDP rising over time. It is usually shown as a percentage change from one year to the next."
+      ],
+      [
+        "Real GDP",
+        "GDP measured after removing the effect of price rises. Growth is measured with real GDP, so it shows more being made, not just higher prices."
+      ],
+      "Only final goods and services count, those sold to their end user. GDP counts what is made inside the country, whoever owns the business. It includes services such as haircuts as well as goods such as cars."
+    ],
+    "remember": "Growth means real GDP rising: more goods and services made, not just higher prices.",
+    "a": {
+      "q": "Which statement best describes economic growth in a country?",
+      "opts": [
+        "More goods and services being made in the country",
+        "More people being born or moving into the country",
+        "Higher average prices for goods and services sold",
+        "More businesses opening up in the country"
+      ],
+      "why": "Economic growth is real GDP rising, which means more final goods and services are made. Higher prices alone do not count, because real GDP removes the effect of price rises.",
+      "clue": "Think about what real GDP measures once price rises are removed."
+    },
+    "b": {
+      "d": 2,
+      "q": "Real GDP in a country was $900 billion in one year. The next year it was $936 billion. What does this show?",
+      "opts": ["The economy grew", "The economy shrank", "Prices rose in general", "Unemployment fell"],
+      "why": "Real GDP rose from $900 billion to $936 billion, so more goods and services were made and the economy grew. Real GDP has the effect of price rises removed, so it cannot show that prices rose, and it says nothing about jobs.",
+      "clue": "Real figures have already had price rises taken out."
+    }
+  },
+  "ecb-unemployment-rate-vic": {
+    "title": "The unemployment rate",
+    "card": [
+      "The labour force is everyone aged 15 or over who has a job or is actively looking for one. People who are not working and not looking, such as full-time students and retirees, are outside it.",
+      "A person is unemployed if they have no job, are looking for work and are available to start. Someone who works even a few hours a week is counted as employed.",
+      "Unemployment rate = unemployed people ÷ labour force × 100. For example, 50 unemployed people in a labour force of 1000 gives a rate of 5%.",
+      "High unemployment wastes resources, because people who could work are idle. It also lowers living standards, because households have less income to spend."
+    ],
+    "remember": "Unemployment rate = unemployed people as a share of the labour force, not of the whole population. High unemployment wastes resources.",
+    "a": {
+      "q": "Who would be counted as unemployed in the official figures?",
+      "opts": [
+        "Leila, who has no job and is applying for work",
+        "Sam, who is retired and does not want a job",
+        "Priya, who is studying full time and not job hunting",
+        "Tom, who works six hours a week at a bakery"
+      ],
+      "why": "Leila has no job, is looking for work and is available, so she is unemployed. Tom is employed because he works some hours, even though it is not many.",
+      "clue": "Unemployed people want work and are looking for it."
+    },
+    "b": {
+      "d": 3,
+      "q": "A small country town has 4000 residents aged 15 or over. Of these, 2000 are in the labour force, and 100 of them are unemployed. What is the town's unemployment rate?",
+      "opts": ["5%", "2.5%", "95%", "50%"],
+      "why": "The rate divides unemployed people by the labour force, not by all residents: 100 ÷ 2000 × 100 = 5%. The tempting answer is 2.5%, which wrongly divides by all 4000 residents, including people who are not working or looking.",
+      "clue": "Which number counts only people working or looking for work?"
+    }
+  },
+  "ecb-business-cycle-vic": {
+    "title": "The business cycle",
+    "card": [
+      "The economy does not grow at an even pace. It moves through ups and downs over time. This pattern is called the business cycle.",
+      [
+        "Boom",
+        "a period of strong growth. Real GDP rises quickly, jobs are easy to find and unemployment is low. Price rises often speed up."
+      ],
+      [
+        "Slowdown",
+        "a period of weak or negative growth. Real GDP rises slowly or falls, firms hire fewer workers and unemployment tends to rise. Price rises often ease."
+      ],
+      "Indicators such as GDP growth, unemployment and inflation show which phase the economy is in. After a slowdown, growth picks up again and a new upswing begins."
+    ],
+    "remember": "The economy swings between booms and slowdowns, and indicators show which phase it is in.",
+    "a": {
+      "q": "Which set of changes in indicators best fits a boom?",
+      "opts": [
+        "Fast GDP growth and falling unemployment",
+        "Fast GDP growth and rising unemployment",
+        "Falling GDP and falling unemployment",
+        "Falling GDP and rising unemployment"
+      ],
+      "why": "In a boom, output grows quickly and firms hire more workers, so unemployment falls. Fast growth with rising unemployment does not fit, because strong growth usually creates jobs.",
+      "clue": "In a boom, are firms hiring more or fewer workers?"
+    },
+    "b": {
+      "d": 2,
+      "q": "In one year, a country's real GDP growth falls from 4% to 0.5%, and its unemployment rate rises from 4% to 6%. What does this suggest?",
+      "opts": [
+        "The economy is moving into a slowdown",
+        "The economy is moving into a boom",
+        "The economy has stopped following a cycle",
+        "The economy is growing faster than before"
+      ],
+      "why": "Weaker growth and higher unemployment are signs of a slowdown. A boom would show faster growth and falling unemployment, the reverse of these figures.",
+      "clue": "Look at which way growth and unemployment moved."
+    }
+  },
+  "ecb-indicators-guide-decisions": {
+    "title": "How indicators guide decisions",
+    "card": [
+      "Economic indicators are figures such as GDP growth, unemployment and inflation. Different groups watch them to help decide what to do.",
+      [
+        "Government",
+        "may change its budget when indicators change. For example, it may spend more on projects if unemployment is rising."
+      ],
+      [
+        "Reserve Bank",
+        "Australia's central bank, which sets the cash rate. It may raise the rate if inflation is above its target, to slow spending and price rises."
+      ],
+      [
+        "Business and households",
+        "Firms use indicators to decide on hiring and investment. Households use them to decide on spending, saving and borrowing."
+      ]
+    ],
+    "remember": "Each group reads the indicators that matter to its own choices.",
+    "a": {
+      "q": "Inflation in Australia is well above the Reserve Bank's target. What might the Reserve Bank do?",
+      "opts": [
+        "Raise the cash rate to slow price rises",
+        "Cut the cash rate to speed up spending",
+        "Hire more workers for public projects",
+        "Raise the budget spending on roads"
+      ],
+      "why": "A higher cash rate makes borrowing dearer, which slows spending and eases price rises. Cutting the rate would push spending up, which is the wrong way when inflation is high.",
+      "clue": "Which way should spending move to slow price rises?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya owns a bakery in Ballarat. Local unemployment is rising and GDP growth is slowing. Which decision best fits these indicators?",
+      "opts": [
+        "Delay buying a second oven until conditions improve",
+        "Hire three more bakers to meet rising demand",
+        "Open two more shops straight away",
+        "Raise spending on new equipment this month"
+      ],
+      "why": "Weak growth and rising unemployment suggest households may spend less, so waiting to invest is sensible. The other choices expect stronger demand than the indicators show.",
+      "clue": "Would shoppers be spending more or less in these conditions?"
+    }
+  },
+  "ecb-living-standards": {
+    "title": "Material and non-material living standards",
+    "card": [
+      [
+        "Living standards",
+        "how well off people in a country are. They cover how much people can buy and also the quality of their lives."
+      ],
+      [
+        "Material",
+        "access to goods and services, such as food, housing, clothing, healthcare and transport. GDP per person is the common way to measure it."
+      ],
+      [
+        "Non-material",
+        "things that are not bought or sold directly, such as a clean environment, good health, safety, literacy and leisure time."
+      ],
+      "Income can rise while non-material living standards fall. For example, a mining boom may lift incomes but add pollution to a town's air."
+    ],
+    "remember": "Living standards include what people can buy and the quality of life around them.",
+    "a": {
+      "q": "Which change would raise non-material living standards in a city?",
+      "opts": [
+        "Cleaner air in a large city",
+        "A rise in the average nurse wage",
+        "More new cars sold to households",
+        "More rental housing for families"
+      ],
+      "why": "Cleaner air is part of the environment, which is not bought or sold directly, so it is non-material. The other three are about income or access to goods and services, which are material.",
+      "clue": "Look for the change that is not about income or buying things."
+    },
+    "b": {
+      "d": 3,
+      "q": "Average income in Bendigo rises 10%, but workers now work much longer hours and have less free time. What happens to living standards?",
+      "opts": [
+        "Material rises and non-material falls",
+        "Material and non-material both rise",
+        "Material falls and non-material rises",
+        "Material and non-material both fall"
+      ],
+      "why": "Higher income raises material living standards because people can buy more. Less free time is a non-material loss, so non-material living standards fall. Choosing both rise treats income as the whole picture and ignores the lost free time.",
+      "clue": "Free time is on one side and income is on the other."
+    }
+  },
+  "ecb-government-s-economic-aims": {
+    "title": "Government's economic aims",
+    "card": [
+      [
+        "Growth",
+        "strong, steady growth in the economy. This means the total output of goods and services rises at a healthy pace without big swings."
+      ],
+      ["Low unemployment", "as many people as possible who want a job can find one."],
+      ["Stable prices", "prices rise only slowly and predictably, so households and businesses can plan ahead."],
+      [
+        "Fair share",
+        "a fair share of income, meaning income is spread so that people on low incomes are not left far behind. Together, the four aims seek to raise living standards: how well off people are in income, jobs and access to goods and services."
+      ]
+    ],
+    "remember": "Growth, jobs, stable prices and a fair share of income all aim to lift living standards.",
+    "a": {
+      "q": "Which of these is an example of the aim of stable prices?",
+      "opts": [
+        "Prices of most goods rise slowly and predictably",
+        "Wages rise faster than prices every single year",
+        "More people find full-time work in regional towns",
+        "Income is spread more evenly between households"
+      ],
+      "why": "Stable prices means prices rise only slowly and predictably. The option about jobs is the aim of low unemployment, and the option about income spread is the aim of a fair share of income.",
+      "clue": "Think about what households need to plan ahead."
+    },
+    "b": {
+      "d": 2,
+      "q": "In Australia, output is growing, prices are steady and income gaps are not widening. But more people who want a job cannot find one. Which aim is not being met?",
+      "opts": ["Low unemployment", "Stable prices", "Strong, steady growth", "A fair share of income"],
+      "why": "People who want a job but cannot find one means the aim of low unemployment is not being met. Growth is tempting, but output is still growing, so that aim is being met.",
+      "clue": "Which part of the case is going wrong?"
+    }
+  },
+  "ecb-other-ways-government-intervenes": {
+    "title": "Other ways government intervenes",
+    "card": [
+      [
+        "Welfare payments",
+        "money paid to people who need support, such as the unemployed or people with a disability, to help them meet basic needs."
+      ],
+      [
+        "Regulations",
+        "rules that businesses must follow, such as safety standards for products, to protect consumers and workers."
+      ],
+      [
+        "Subsidies",
+        "payments to businesses that lower their costs, so they can charge less or produce more of a good that benefits the community."
+      ],
+      [
+        "Competition laws",
+        "laws that stop businesses from joining together to fix prices or misusing their market power, so consumers keep fair choices."
+      ]
+    ],
+    "remember": "Each tool is a way government fixes a problem the market leaves or protects consumers.",
+    "a": {
+      "q": "The government says every child car seat must pass a crash test before it can be sold. Which tool is this?",
+      "opts": ["A regulation", "A competition law", "A subsidy", "A welfare payment"],
+      "why": "A crash test rule is a safety standard for a product, which is a regulation. A competition law is also a law, but it stops price fixing and misuse of market power, not unsafe products. A subsidy and a welfare payment are payments, not rules.",
+      "clue": "Is this rule about prices and rivals, or about the product itself?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Three bakeries in a town agree to all charge the same high price for bread. Which tool is designed to stop this?",
+      "opts": ["Competition laws", "Subsidies", "Welfare payments", "Product safety regulations"],
+      "why": "Competition laws stop businesses from agreeing to fix prices, so consumers keep fair choices. Product safety regulations are also rules, but they deal with safe products, not price agreements.",
+      "clue": "The problem is businesses working together on price."
+    }
+  },
+  "ecb-reserve-bank-australia": {
+    "title": "The Reserve Bank of Australia",
+    "card": [
+      "The Reserve Bank of Australia (RBA) is Australia's central bank. It is owned by the nation, not by a private company.",
+      "Monetary policy means using interest rates to influence how much people and businesses spend. The RBA's Monetary Policy Board makes these decisions.",
+      "The Board makes its decisions independently of the government. This means elected politicians do not tell it what to decide.",
+      "The RBA's aims are to keep prices stable and to support full employment, which means most people who want a job can find one."
+    ],
+    "remember": "The RBA is the central bank. It sets monetary policy on its own, to keep prices stable and support jobs.",
+    "a": {
+      "q": "Who decides Australia's monetary policy?",
+      "opts": [
+        "The RBA's Monetary Policy Board",
+        "The Prime Minister and the cabinet",
+        "The big commercial banks together",
+        "The Treasurer, each budget night"
+      ],
+      "why": "The RBA's Monetary Policy Board makes monetary policy decisions. The Prime Minister and the Treasurer lead the government, but the Board decides independently of them.",
+      "clue": "Think about which body is independent of the government."
+    },
+    "b": {
+      "d": 3,
+      "q": "A minister says the RBA must follow the government's wishes on interest rates before an election. Why would this go against how the RBA works?",
+      "opts": [
+        "The RBA decides monetary policy independently",
+        "The RBA has no power over interest rates",
+        "The RBA only looks after the banks' profits",
+        "The RBA only handles the government's budget"
+      ],
+      "why": "The Monetary Policy Board sets monetary policy independently of the government, so the government does not direct its decisions. The RBA's aims are stable prices and full employment, not the government's budget or bank profits.",
+      "clue": "Look at the third card line."
+    }
+  },
+  "ecb-cash-rate": {
+    "title": "The cash rate",
+    "card": [
+      "Banks lend money to each other overnight to manage their daily cash needs. The interest rate on these loans is called the cash rate.",
+      "The Reserve Bank of Australia (RBA) sets a target for the cash rate. It can change the target at its meetings during the year.",
+      "Banks use the cash rate as a starting point for the rates they charge and pay customers. When it changes, their home loan and savings rates tend to change in the same direction.",
+      "Banks decide their own rates, so they may not pass on a change in full or at the same time."
+    ],
+    "remember": "The RBA sets the cash rate, and the rates banks offer customers tend to move the same way.",
+    "a": {
+      "q": "What is the cash rate?",
+      "opts": [
+        "The rate on overnight loans between banks",
+        "The rate banks charge on home loans",
+        "The rate banks pay on savings accounts",
+        "The rate the government pays on its debt"
+      ],
+      "why": "The cash rate is the interest rate on overnight loans between banks, and the RBA sets its target. Home loan and savings rates are different rates that tend to follow it, so they are not the cash rate itself.",
+      "clue": "Think about who borrows and who lends at this rate."
+    },
+    "b": {
+      "d": 3,
+      "q": "The RBA lowers the cash rate. Mia has a home loan with a bank in Bendigo. What is most likely to happen to her loan rate?",
+      "opts": [
+        "It tends to fall, though the bank decides by how much",
+        "It must fall by exactly the same amount at once",
+        "It stays the same, as the cash rate only affects banks",
+        "It tends to rise, as banks need to make up lost income"
+      ],
+      "why": "Home loan rates tend to follow the cash rate, so a cut usually leads to a lower rate for Mia. The bank sets its own rates, so it may not pass on the whole change or do it straight away. That is why the option saying it must fall by exactly the same amount is wrong.",
+      "clue": "Check the direction first, then ask whether anything is guaranteed."
+    }
+  },
+  "ecb-interest-rates-affect-spending": {
+    "title": "How interest rates affect spending",
+    "card": [
+      "When the RBA raises the cash rate, banks tend to raise their rates too. Borrowing becomes dearer, because loans such as home loans cost more in interest.",
+      "Saving also becomes more rewarding, because savers earn more interest on their deposits. Some people choose to save more and spend less.",
+      "With less spending, demand for goods and services grows more slowly. Businesses find it harder to raise prices, so inflation slows.",
+      "Cutting the cash rate does the opposite. Borrowing is cheaper and saving earns less, so spending tends to rise, and so can inflation."
+    ],
+    "remember": "A higher cash rate tends to slow spending and inflation. A lower rate tends to lift them.",
+    "a": {
+      "q": "The RBA raises the cash rate and banks raise their loan rates. What is the likely effect on household spending?",
+      "opts": [
+        "It tends to slow, as borrowing costs more",
+        "It tends to rise, as saving earns more",
+        "It tends to rise, as borrowing costs more",
+        "It tends to slow, as saving earns less"
+      ],
+      "why": "Higher loan rates make borrowing dearer, and higher savings rates make saving more rewarding, so households tend to spend less. The tempting option says saving earns less, but a higher cash rate tends to lift savings rates.",
+      "clue": "Think about what happens to the cost of a loan."
+    },
+    "b": {
+      "d": 3,
+      "q": "Inflation in Australia is rising quickly because people are spending a lot. Which RBA move would most likely slow it, and why?",
+      "opts": [
+        "Raise the cash rate, so spending slows",
+        "Cut the cash rate, so spending slows",
+        "Raise the cash rate, so borrowing is cheaper",
+        "Cut the cash rate, so saving is more rewarding"
+      ],
+      "why": "Raising the cash rate makes borrowing dearer and saving more rewarding, so spending slows and inflation eases. Cutting the rate does the opposite and would tend to push spending up, not slow it.",
+      "clue": "To slow spending, should borrowing be cheaper or dearer?"
+    }
+  },
+  "ecb-inflation-target": {
+    "title": "The inflation target",
+    "card": [
+      "Inflation is a rise in the general level of prices over time. The RBA's target is to keep inflation between 2 and 3 per cent a year, on average.",
+      "On average means over time, not every month. Inflation can sit above or below the range for a while, and the aim is to bring it back.",
+      "Low, steady inflation helps people and businesses plan. They can guess what wages, rent and supplies will cost next year.",
+      "The target is above zero because falling prices can lead people to delay spending, which can slow the economy. It is kept low because high inflation makes prices hard to predict and savings buy less."
+    ],
+    "remember": "The RBA aims for 2 to 3 per cent inflation on average, so people can plan.",
+    "a": {
+      "q": "Why does the RBA aim for low, steady inflation rather than rapidly changing prices?",
+      "opts": [
+        "People and businesses can plan with more confidence",
+        "Prices stay exactly the same from month to month",
+        "The government can spend without limits on services",
+        "Wages and rents are fixed by law for each year"
+      ],
+      "why": "When inflation is low and steady, people and businesses can guess future costs and plan ahead. The target does not freeze prices, because inflation is a rise in prices over time and the aim is 2 to 3 per cent.",
+      "clue": "Think about guessing next year's costs."
+    },
+    "b": {
+      "d": 3,
+      "q": "Inflation in Australia is 3.4 per cent this year, above the RBA's target. Over several years it averages 2.6 per cent. What does this show?",
+      "opts": [
+        "The RBA can meet the target on average despite a high year",
+        "The RBA has failed, as inflation must stay within the range",
+        "The target applies only to a single year of price rises",
+        "Inflation of 2.6 per cent is too low to count as steady"
+      ],
+      "why": "The target is an average over time, so one year above the range does not mean it has been missed. An average of 2.6 per cent is inside the 2 to 3 per cent range.",
+      "clue": "Does the target apply to every single year?"
+    }
+  },
+  "ecb-australia-s-changing-trade": {
+    "title": "Australia's changing trade partners",
+    "card": [
+      "Trade partners are the countries Australia buys from and sells to. For much of the 1800s and early 1900s, the United Kingdom was Australia's main trade partner.",
+      "After World War II, this began to change. In 1973 the United Kingdom joined the European Economic Community, which later became the European Union. This made it harder for Australia to sell farm goods there.",
+      "Today most of Australia's trade is with Asia. China is the largest single trading partner, and other major partners include Japan, South Korea, India and the United States.",
+      "Australia's partners changed with the world around it. Asian economies grew fast and needed minerals and energy, and they are close to Australia, which keeps shipping costs lower."
+    ],
+    "remember": "Australia's trade has shifted from the United Kingdom to Asia, and China is now the largest partner.",
+    "a": {
+      "q": "Which statement best describes how Australia's main trade partners have changed over time?",
+      "opts": [
+        "From the United Kingdom to mostly Asian countries",
+        "From Asian countries to mostly the United Kingdom",
+        "From the United States to mostly European countries",
+        "From China to mostly the United Kingdom"
+      ],
+      "why": "Australia once traded mostly with the United Kingdom, and today most of its trade is with Asia. The reverse order is tempting, but it gets the direction of change wrong.",
+      "clue": "Think about who was the main partner long ago, and who is now."
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia runs a mining company in Western Australia. Which country is she most likely to sell the most iron ore to today?",
+      "opts": ["China", "The United Kingdom", "New Zealand", "Canada"],
+      "why": "Fast-growing Asian economies need minerals, and China is Australia's largest trading partner, so it is the most likely buyer. The United Kingdom was the main partner long ago, but most of Australia's trade has since moved to Asia.",
+      "clue": "Think about which part of the world grew fast and needed minerals."
+    }
+  },
+  "ecb-costs-benefits-globalisation": {
+    "title": "Costs and benefits of globalisation",
+    "card": [
+      [
+        "Benefits",
+        "Globalisation can bring cheaper goods, because firms can make or buy things where costs are lowest. It can also give firms bigger markets to sell to and create new jobs."
+      ],
+      [
+        "Costs",
+        "It can also cost some local jobs, when a business closes because imports or overseas production are cheaper. It may widen inequality, because the gains do not reach everyone equally."
+      ],
+      [
+        "Shocks",
+        "Economies that are closely linked can pass problems to each other. A downturn or a crisis in one country can spread to others through trade and money flows."
+      ],
+      "The effects differ between people. A shopper may gain from cheaper goods while a worker in a local factory loses a job."
+    ],
+    "remember": "Globalisation can bring cheaper goods, bigger markets and new jobs, but it can also cost local jobs, widen inequality and spread shocks.",
+    "a": {
+      "q": "Which is a cost of globalisation, not a benefit?",
+      "opts": [
+        "A downturn in one country spreads to others",
+        "Shoppers can buy cheaper goods",
+        "Firms can sell to bigger markets",
+        "New jobs are created in export industries"
+      ],
+      "why": "Closely linked economies can pass shocks to each other, so a downturn in one country can spread and leave others worse off. Bigger markets may sound like it involves other countries too, but it helps firms sell more, so it is a benefit.",
+      "clue": "Think about which effect leaves people worse off."
+    },
+    "b": {
+      "d": 3,
+      "q": "A shoe factory in Ballarat closes because cheaper shoes are now imported. Shoppers in Ballarat pay less for shoes. Which effects of globalisation does this show?",
+      "opts": [
+        "Cheaper goods and a loss of local jobs",
+        "Bigger markets and a loss of local jobs",
+        "Cheaper goods and new jobs in export firms",
+        "Bigger markets and new jobs in export firms"
+      ],
+      "why": "Shoppers paying less for shoes is the benefit of cheaper goods, and the factory closing is the cost of lost local jobs. Bigger markets is tempting, but that would mean a Ballarat firm selling more overseas, which does not happen here.",
+      "clue": "Match the shoppers to one effect and the factory workers to another."
+    }
+  },
+  "ecb-trade-agreements-tariffs": {
+    "title": "Trade agreements and tariffs",
+    "card": [
+      [
+        "Tariff",
+        "A tariff is a tax on imports. The importer pays it when the goods enter the country, so imported goods usually cost more."
+      ],
+      [
+        "Protection",
+        "A tariff can protect local producers. Imports become dearer, so local goods can compete better and local firms may sell more."
+      ],
+      [
+        "Cost",
+        "Tariffs also raise prices for buyers. Shoppers may pay more for imports, and for local goods too, when local firms face less competition."
+      ],
+      [
+        "Free trade agreement",
+        "A free trade agreement is a deal between countries to cut or remove tariffs on each other's goods. The aim is to increase trade between them."
+      ]
+    ],
+    "remember": "Tariffs shield local producers but raise prices. Free trade agreements cut tariffs to increase trade.",
+    "a": {
+      "q": "A government adds a tariff to imported bicycles. What is the most likely effect on local bicycle makers?",
+      "opts": [
+        "They are protected, because imports cost more",
+        "They lose sales, because local bikes cost more",
+        "They are unaffected, because buyers pay the tariff",
+        "They face more competition, because imports cost less"
+      ],
+      "why": "A tariff makes imported bikes dearer, so local makers can compete better. The tempting option that local makers lose sales has it backwards: the tariff is placed on imports, not on local bikes.",
+      "clue": "Which bikes does the tariff make dearer?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Country B used to charge a tariff on cheese imported from Country A. The two countries then sign a free trade agreement. What is the most likely result?",
+      "opts": [
+        "A's cheese becomes cheaper in B, so trade can rise",
+        "A's cheese becomes dearer in B, so trade can fall",
+        "B's local cheesemakers gain protection from A's cheese",
+        "B's government collects a bigger tariff on A's cheese"
+      ],
+      "why": "The agreement cuts tariffs, so A's cheese costs less when it enters B and more may be sold. The tempting option about protection describes what a tariff does, but the agreement removes that tariff, so B's cheesemakers lose that protection.",
+      "clue": "What does a free trade agreement do to tariffs?"
+    }
+  },
+  "ecb-competitive-advantage-vic": {
+    "title": "What competitive advantage is",
+    "card": [
+      "Rivals are businesses that sell similar goods or services to the same customers. Customers choose between them.",
+      "A competitive advantage is something a business has that makes customers choose it over its rivals.",
+      "It can be something customers see, such as a lower price or better quality. It can also be something behind the scenes, such as cheaper ways of making the product.",
+      "A business with a competitive advantage can win more sales, and that can help it earn more profit."
+    ],
+    "remember": "A competitive advantage is the reason customers pick one business and not its rivals.",
+    "a": {
+      "q": "What is the best description of a competitive advantage?",
+      "opts": [
+        "Something that makes customers choose a business over rivals",
+        "Something that makes a business larger than all its rivals",
+        "Something that lets a business charge any price it likes",
+        "Something that a business has but its rivals do not want"
+      ],
+      "why": "A competitive advantage is about winning customers from rivals. Being larger is not the same thing: a big business can still lose customers to a smaller one that offers something they prefer.",
+      "clue": "Think about what customers do when they have a choice."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two bakeries sit on the same street in Geelong and sell similar bread. Priya's bakery is bigger, but most locals buy from Tom's, because his bread is fresher. What does this show?",
+      "opts": [
+        "Tom's freshness is a competitive advantage",
+        "Priya's size is a competitive advantage",
+        "Neither bakery has a competitive advantage",
+        "Both bakeries share the same competitive advantage"
+      ],
+      "why": "Customers choose Tom's over a rival because of fresher bread, so freshness is his competitive advantage. Size alone is not an advantage here, because it does not make customers choose Priya's.",
+      "clue": "Look for what is making customers choose."
+    }
+  },
+  "ecb-cost-leadership-differentiation": {
+    "title": "Cost leadership and differentiation",
+    "card": [
+      [
+        "Cost leadership",
+        "The business works to have the lowest costs in its market. Low costs let it charge low prices and still make a profit."
+      ],
+      [
+        "Differentiation",
+        "The business makes its product different from rivals in ways customers value, such as design, quality or service. Customers will pay a higher price for the difference."
+      ],
+      "A cost leader keeps costs down by buying in bulk, making large amounts, or cutting out extras. A differentiator spends on what makes its product stand out.",
+      "The two paths pull in different directions. Low prices attract customers who want a bargain, and a special product attracts customers who want something better."
+    ],
+    "remember": "Cost leadership wins on low costs and prices. Differentiation wins on a product customers see as better.",
+    "a": {
+      "q": "Which business is using differentiation to compete?",
+      "opts": [
+        "A bakery that sells sourdough made with rare local grains",
+        "A bakery that cuts its prices below every other bakery",
+        "A bakery that buys flour in huge bulk orders",
+        "A bakery that removes seating to keep its costs low"
+      ],
+      "why": "The bakery with rare local grains makes its product different in a way customers will pay more for. Cutting prices, bulk buying and cutting costs all aim at lower costs and prices, which is cost leadership.",
+      "clue": "Look for the business that makes its product stand out, not cheaper."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom runs a bike shop in Ballarat. A big chain opens nearby and sells bikes much more cheaply. Tom hand-builds custom bikes and offers free fitting. Which strategy is Tom using, and why?",
+      "opts": [
+        "Differentiation, as customers pay more for custom bikes",
+        "Cost leadership, as free fitting keeps his costs low",
+        "Differentiation, as he sells bikes at the lowest price",
+        "Cost leadership, as hand-building makes bikes cheaper"
+      ],
+      "why": "Custom bikes and free fitting make Tom's product different and better, so some customers will pay more. That is differentiation. Hand-building and free services add to his costs, so he is not a cost leader.",
+      "clue": "Does Tom win by being cheapest, or by being different?"
+    }
+  },
+  "ecb-marketing-mix": {
+    "title": "The marketing mix",
+    "card": [
+      "The marketing mix is the set of choices a business makes to sell its good or service. It is often called the 4 Ps: product, price, place and promotion.",
+      ["Product", "what is sold, including its features, quality, design and packaging."],
+      ["Price", "what customers pay, and any discounts or deals offered."],
+      [
+        "Place",
+        "where and how customers can buy it, such as in a shop, online or through a stockist. Promotion is how the business tells customers about it, such as ads, social media posts or sales signs."
+      ]
+    ],
+    "remember": "The 4 Ps are product, price, place and promotion, and a business makes choices about each one.",
+    "a": {
+      "q": "Which choice is about place in the marketing mix?",
+      "opts": [
+        "Selling a product through an online store",
+        "Giving a product a new look and packaging",
+        "Offering a product at half price for a week",
+        "Running ads for a product on social media"
+      ],
+      "why": "Place is about where and how customers can buy, and an online store is one way. Changing packaging is a product choice, while a half price deal is a price choice. Ads are promotion.",
+      "clue": "Think about where the customer goes to buy."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi owns a bakery in Bendigo. He starts giving out free samples at the local market to get people to try his new sourdough. Which part of the marketing mix is this?",
+      "opts": ["Promotion", "Product", "Place", "Price"],
+      "why": "Free samples tell customers about the bread and encourage them to try it, so this is promotion. It is not price, even though the samples are free, because he is not changing what customers pay for the loaf. The market is where he is giving them out, but the aim is to get the bread noticed, not to change where it is sold.",
+      "clue": "What is the free sample trying to do for the bread?"
+    }
+  },
+  "ecb-branding-digital-marketing": {
+    "title": "Branding and digital marketing",
+    "card": [
+      [
+        "Brand",
+        "the name, logo, look and reputation that make a business easy to recognise. A strong brand also helps customers trust it."
+      ],
+      [
+        "Social media",
+        "a business can post on platforms such as Instagram or TikTok to reach many people and talk with customers directly."
+      ],
+      [
+        "Influencers",
+        "people with a large online following who recommend products. Their followers may trust them more than a plain advertisement."
+      ],
+      [
+        "Targeted ads",
+        "online ads shown only to chosen groups, such as people of a certain age or who live in a certain area. This helps a business reach likely buyers."
+      ]
+    ],
+    "remember": "A strong brand is recognised and trusted, and digital tools carry its message to chosen customers.",
+    "a": {
+      "q": "Which result shows that a business has built a strong brand?",
+      "opts": [
+        "Shoppers recognise its logo and trust its products",
+        "Shoppers see its ads more often than any rival's",
+        "Shoppers can buy its products at many different stores",
+        "Shoppers find its products cheaper than any rival's"
+      ],
+      "why": "A strong brand means customers recognise the business and trust it. Seeing ads often can help with recognition, but it does not show that customers trust the business.",
+      "clue": "A brand lives in what customers think and feel about a business."
+    },
+    "b": {
+      "d": 3,
+      "q": "Zoe runs a skate shop in Geelong. She wants to reach teenagers who live nearby, and she pays for online ads shown only to people aged 13 to 18 in Geelong. What is this an example of?",
+      "opts": ["A targeted online ad", "An influencer recommendation", "A social media conversation", "A brand logo and name"],
+      "why": "The ads are shown only to a chosen group by age and area, which makes them targeted ads. An influencer is a person with a following who recommends a product, and Zoe has not used one.",
+      "clue": "Look at who sees the ad and how that group was chosen."
+    }
+  },
+  "ecb-keeping-advantage-through-entrepreneurship": {
+    "title": "Keeping an advantage through entrepreneurship",
+    "card": [
+      "An advantage does not last on its own. When a business does well with an idea, rivals can copy it, and the edge shrinks.",
+      [
+        "Innovating",
+        "bringing in a new product, service or way of working. A new idea gives the business something rivals do not yet have."
+      ],
+      [
+        "Improving products",
+        "making an existing product better over time, such as adding features or fixing faults, so customers keep choosing it over copies."
+      ],
+      [
+        "New markets",
+        "selling to new groups of customers or in new places, such as another city or country, where the business can grow and rivals may not yet compete."
+      ]
+    ],
+    "remember": "Rivals copy, so entrepreneurs keep innovating, improving and finding new markets.",
+    "a": {
+      "q": "Why do businesses keep innovating after a successful idea has won them customers?",
+      "opts": [
+        "Rivals can copy the idea, so its edge can shrink",
+        "Winning customers makes rival businesses leave",
+        "The government limits how long a product is sold",
+        "A popular product gets dearer to make each year"
+      ],
+      "why": "Rivals can copy an idea that is working, so the edge it gave can shrink, and new ideas restore it. Success does not drive rivals away: it tends to draw them in to copy.",
+      "clue": "Think about what rivals do when they see an idea working."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's bakery in Ballarat sells a popular sourdough loaf. A rival bakery starts selling a very similar loaf. Which response is an example of finding a new market?",
+      "opts": [
+        "Selling her loaves at weekend markets in Geelong",
+        "Adding seeds to her sourdough to improve the recipe",
+        "Baking a new fruit loaf for her regular customers",
+        "Buying a new oven that bakes her loaves faster"
+      ],
+      "why": "Selling in Geelong takes her loaves to new customers in a new place. The fruit loaf is a new product, but it goes to the same regular customers, so it is innovating, not a new market. Adding seeds improves the existing product, and the oven is a new way of working.",
+      "clue": "Which choice changes where she sells, not what or how she bakes?"
+    }
+  },
+  "ecb-human-resource-management": {
+    "title": "Human resource management",
+    "card": [
+      "Human resource management (HRM) is how a business manages its staff. It covers finding, training, rewarding and looking after them.",
+      "Finding staff means recruiting and choosing people with the right skills. Training helps them do their jobs well. Rewarding means pay and other benefits.",
+      "Looking after staff includes safe workplaces, fair treatment and support for their wellbeing. Staff who feel looked after are more likely to stay.",
+      "The aim of HRM is for staff to work well, so the business can compete better against other businesses."
+    ],
+    "remember": "HRM is how a business manages its people, so they work well and the business competes better.",
+    "a": {
+      "q": "What is the aim of human resource management?",
+      "opts": [
+        "Staff work well, so the business competes better",
+        "Staff cost less, as pay is kept as low as possible",
+        "Staff change often, so new people bring new ideas",
+        "Customers pay less, so they buy more of the products"
+      ],
+      "why": "HRM aims to have staff work well so the business can compete better. Keeping pay as low as possible ignores the rewarding part of HRM, and staff leaving often goes against looking after them so they stay. Setting prices for customers is not about managing staff.",
+      "clue": "Think about why a business would train, reward and look after its staff."
+    },
+    "b": {
+      "d": 2,
+      "q": "Ravi owns a bakery in Ballarat. Staff keep leaving after a few months, so he raises their pay and starts regular chats about how they are coping. Which parts of HRM is he using?",
+      "opts": [
+        "Rewarding staff and looking after them",
+        "Finding staff and training them",
+        "Finding staff and rewarding them",
+        "Training staff and looking after them"
+      ],
+      "why": "Higher pay is a reward, and chats about how staff are coping support their wellbeing, which is looking after them. Ravi is not hiring anyone new or teaching new skills, so finding and training are not part of these changes.",
+      "clue": "Match each change to one part of HRM on the card."
+    }
+  },
+  "ecb-recruiting-selecting-staff": {
+    "title": "Recruiting and selecting staff",
+    "card": [
+      [
+        "Recruiting",
+        "finding people who might do the job. A business advertises the role, often with a job description that lists the duties and the skills needed."
+      ],
+      [
+        "Selecting",
+        "choosing the best person from those who applied. The business sorts the applications and makes a shortlist of people who fit the role."
+      ],
+      "Shortlisted people are interviewed, so the business can ask about their skills and experience. It then contacts referees, people who know the applicant's work, to check what they said.",
+      "The aim is to choose the person whose skills best fit the role, not just the first person to apply. A good choice saves the cost of hiring again."
+    ],
+    "remember": "Recruit to attract applicants, then select the best fit for the role.",
+    "a": {
+      "q": "A bakery in Ballarat has received 40 applications for a baker's job. What is the business doing when it picks six to interview?",
+      "opts": [
+        "Selecting, by shortlisting applicants who fit the role",
+        "Recruiting, by advertising the role to more people",
+        "Selecting, by checking what referees say about them",
+        "Recruiting, by writing a list of duties for the job"
+      ],
+      "why": "Choosing a few people from those who applied is selecting. Advertising and writing duties happen earlier, to attract applicants, which is recruiting.",
+      "clue": "The applications have already arrived."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya interviews Jack for a sales job at her shop in Geelong. Jack says he ran a busy market stall for two years. What should Priya do next to check this claim?",
+      "opts": [
+        "Contact his referees to confirm his work history",
+        "Offer him the job because he sounded confident",
+        "Advertise the job again to attract more people",
+        "Write a new job description for the role"
+      ],
+      "why": "Referees know the applicant's work, so contacting them checks what Jack said. Hiring on confidence alone skips the check, and advertising again is recruiting, which has already been done.",
+      "clue": "Who knows how Jack worked in the past?"
+    }
+  },
+  "ecb-training-development": {
+    "title": "Training and development",
+    "card": [
+      [
+        "Training",
+        "builds the skills a worker needs for the job they do now, such as learning to use a new machine or a safety procedure."
+      ],
+      [
+        "Development",
+        "prepares a worker for future roles and wider responsibility, such as a leadership course for someone who may become a manager."
+      ],
+      "Both can raise productivity. Skilled staff often work faster and make fewer mistakes.",
+      "Both can also help a business keep good staff. Workers who see a business investing in them may be less likely to leave."
+    ],
+    "remember": "Training is for the job now. Development is for roles to come. Both can lift output and keep staff.",
+    "a": {
+      "q": "A shop pays for four cashiers to do different courses. Which course is aimed at development, not training?",
+      "opts": [
+        "A course to prepare for a supervisor role",
+        "A lesson on using a new card machine",
+        "A session on the shop's refund rules",
+        "A drill on safe lifting of stock"
+      ],
+      "why": "A course that prepares a cashier for a supervisor role builds skills for a future job, which is development. The other three build skills for the job the cashier does now, so they are training.",
+      "clue": "Which course looks ahead to a different role?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya runs a bakery in Ballarat. She pays for a new baker, Tom, to learn the safe use of a new oven. Which describes this best?",
+      "opts": [
+        "Training, because it builds a skill Tom needs in his job now",
+        "Development, because it makes Tom more skilled than before",
+        "Training, because it prepares Tom to run the bakery later",
+        "Development, because the business paid for the course"
+      ],
+      "why": "Using the new oven is a skill Tom needs in his current job, so it is training. Development is about preparing for future roles, and more skill alone does not make something development.",
+      "clue": "Ask whether the skill is for Tom's job now or a later role."
+    }
+  },
+  "ecb-motivating-employees": {
+    "title": "Motivating employees",
+    "card": [
+      "Motivation is the drive that makes staff want to do their work well. Motivated staff tend to try harder and are more likely to stay.",
+      ["Financial", "rewards that give staff money, such as pay rises, bonuses and commission on sales."],
+      [
+        "Non-financial",
+        "rewards that do not pay money, such as praise, flexible hours, a good workplace and chances to learn and move up."
+      ],
+      "Money can matter, but it is not the only thing that motivates people. Many businesses use a mix of both kinds."
+    ],
+    "remember": "Staff can be motivated with money or without it, and a mix often suits.",
+    "a": {
+      "q": "A gym in Cairns gives its trainers a bonus for each new member they sign up. What kind of motivation is this?",
+      "opts": [
+        "Financial, because it pays trainers extra money",
+        "Non-financial, because it rewards good effort",
+        "Financial, because it gives trainers more time off",
+        "Non-financial, because it gives trainers recognition"
+      ],
+      "why": "A bonus is extra money, so it is a financial reward. It rewards effort, but that does not make it non-financial, because what matters is whether the reward is money.",
+      "clue": "Look at what the trainers receive."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam's café in Bendigo cannot afford to raise wages. Which step would still be a way to motivate staff?",
+      "opts": [
+        "Let staff choose some of their own shifts",
+        "Cut the bonus that staff were promised",
+        "Pay a commission on every coffee sold",
+        "Offer a pay rise to the best barista"
+      ],
+      "why": "Letting staff choose shifts is flexible hours, a non-financial reward that costs little. Commission and a pay rise are financial and need extra money, and cutting a bonus would lower motivation.",
+      "clue": "The café cannot spend more on pay."
+    }
+  },
+  "ecb-productivity-competitiveness": {
+    "title": "Productivity and competitiveness",
+    "card": [
+      "Productivity is how much a business produces for each hour of work. If staff make more in the same time, productivity rises.",
+      "Well-managed, motivated staff tend to be more productive. They waste less time and make fewer mistakes.",
+      "Higher productivity spreads the cost of wages over more output. The cost of making each item falls.",
+      "Lower costs let a business charge lower prices or earn more profit on each sale. This helps it compete with other businesses."
+    ],
+    "remember": "More output per hour means lower cost per item, which helps a business compete.",
+    "a": {
+      "q": "A factory pays the same wages, but its staff now make more shoes each hour. What happens to the cost of making each pair?",
+      "opts": [
+        "It falls, as wages are spread over more pairs",
+        "It rises, as more shoes need more wages",
+        "It stays the same, as wages did not change",
+        "It rises, as staff are working faster"
+      ],
+      "why": "The same wages are shared across more pairs of shoes, so each pair costs less to make. Wages did not change, but output rose, so the cost per pair does not stay the same.",
+      "clue": "Divide the same wages by more shoes."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two cafés in Geelong pay staff the same hourly rate. Café A's motivated staff serve 30 customers an hour. Café B's staff serve 20. Which is the most likely result?",
+      "opts": [
+        "Café A has a lower wage cost per customer",
+        "Café B has a lower wage cost per customer",
+        "Both have the same wage cost per customer",
+        "Café A has a higher wage cost per customer"
+      ],
+      "why": "The same hourly pay is spread over more customers at Café A, so its wage cost per customer is lower. Equal hourly pay does not mean equal cost per customer, because output per hour differs.",
+      "clue": "Compare wage cost per customer, not pay per hour."
+    }
+  },
+  "ecb-pay-conditions": {
+    "title": "Pay and conditions",
+    "card": [
+      [
+        "National Employment Standards",
+        "11 minimum entitlements that apply to almost all employees in Australia, such as annual leave, personal leave and maximum weekly hours."
+      ],
+      [
+        "Award",
+        "a set of minimum pay rates and conditions for a particular industry or job, such as penalty rates and breaks. It sits on top of the National Employment Standards."
+      ],
+      [
+        "Enterprise agreement",
+        "a deal bargained between an employer and its employees at one workplace. It can add to the minimums, but it cannot drop below them."
+      ],
+      "Employers must meet these minimums, so a worker's pay and conditions come from the standards, any award that covers them and any agreement at their workplace."
+    ],
+    "remember": "Standards and awards set the minimum. An enterprise agreement can add more at one workplace.",
+    "a": {
+      "q": "Which of these is an enterprise agreement?",
+      "opts": [
+        "A deal bargained between one employer and its staff",
+        "A list of minimum entitlements for almost all employees",
+        "Minimum pay rates for every worker in one industry",
+        "A rule that sets the same pay for all workplaces"
+      ],
+      "why": "An enterprise agreement is bargained at a single workplace between an employer and its employees. Minimum entitlements for almost all employees are the National Employment Standards, and industry minimums are an award.",
+      "clue": "Think about where the deal is made and who makes it."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's award sets a minimum hourly rate for café workers. Her café owner and staff bargain a deal with a higher rate and extra leave. What does this deal show?",
+      "opts": [
+        "An enterprise agreement can add to the minimums",
+        "An enterprise agreement can cut pay below the award",
+        "An award can only be set by one workplace",
+        "The National Employment Standards set the hourly rate"
+      ],
+      "why": "A deal bargained at one workplace is an enterprise agreement, and it can add more than the minimums. It cannot drop below them, so it cannot cut pay below the award. The hourly rate here comes from the award and the deal, not the standards.",
+      "clue": "Look at who bargained the deal and how its rate compares with the award."
+    }
+  },
+  "ecb-fair-work-system": {
+    "title": "The Fair Work system",
+    "card": [
+      "The Fair Work Act 2009 is the national law that sets the rules for most workplaces in Australia. It covers matters such as pay, conditions, termination of employment and bargaining.",
+      [
+        "Fair Work Commission",
+        "the national workplace tribunal. It sets minimum wages, makes and varies modern awards, approves enterprise agreements and settles disputes, such as unfair dismissal claims."
+      ],
+      [
+        "Fair Work Ombudsman",
+        "the agency that enforces the law. It gives advice, investigates complaints about underpayment and can take legal action against employers who break the rules."
+      ],
+      "The two bodies have different jobs. One makes decisions and sets rules, such as wage rates. The other checks that employers follow the law and acts when they do not."
+    ],
+    "remember": "The Act sets the rules. The Commission decides, sets wages and makes awards. The Ombudsman enforces.",
+    "a": {
+      "q": "Which national body sets minimum wages and makes modern awards for workplaces across Australia?",
+      "opts": [
+        "The Fair Work Commission",
+        "The Fair Work Ombudsman",
+        "An employer association",
+        "A single employer's human resources team"
+      ],
+      "why": "The Fair Work Commission is the tribunal that sets minimum wages and makes and varies modern awards. The Fair Work Ombudsman is tempting, but its job is to enforce the law and investigate breaches, not to set wage rates.",
+      "clue": "Which body makes decisions and sets rules, rather than enforcing them?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia works at a bakery in Geelong and learns she has been underpaid for months. She wants the underpayment investigated and, if needed, taken to court. Which body should she contact?",
+      "opts": [
+        "The Fair Work Ombudsman",
+        "The Fair Work Commission",
+        "The Fair Work Act 2009",
+        "The bakery's employer association"
+      ],
+      "why": "The Fair Work Ombudsman enforces the law. It investigates underpayment complaints and can take legal action. The Fair Work Commission is tempting, but it sets wages, makes awards and settles disputes. It does not investigate and prosecute breaches.",
+      "clue": "Which body checks that employers follow the law and acts when they do not?"
+    }
+  },
+  "ecb-trade-unions": {
+    "title": "Trade unions",
+    "card": [
+      "A trade union is a group of workers who join together. One worker has little bargaining power alone, but a group speaks with a stronger voice.",
+      "Unions bargain with employers for better pay, conditions and safety at work. Workers choose to join, and members usually pay a fee.",
+      "Unions also support members in disputes, for example by giving advice or speaking for a member who thinks they have been treated unfairly.",
+      "Many unions cover workers in one industry or job, such as teachers, nurses or electricians. A union acts for its members, not for employers."
+    ],
+    "remember": "A union is workers joining together to bargain and to support members.",
+    "a": {
+      "q": "Why do workers join a trade union?",
+      "opts": [
+        "To bargain as a group and to get support in disputes",
+        "To set the minimum wage for every worker in Australia",
+        "To advise businesses on how to follow workplace law",
+        "To run the business and choose who the managers are"
+      ],
+      "why": "A union gives workers a group voice for bargaining and help in disputes. Setting minimum wages for all workers is not a union's job, and advising businesses is what an employer group does, not a union.",
+      "clue": "Think about what a group can do that one worker alone cannot."
+    },
+    "b": {
+      "d": 2,
+      "q": "Kai works at a warehouse in Geelong and is a union member. He thinks his team's safety rules are poor. What can the union do for him?",
+      "opts": [
+        "Bargain with the employer for better safety for the team",
+        "Pay the team's wages while the rules are being fixed",
+        "Speak for the employer when it deals with the government",
+        "Stop the employer from ever changing the rules again"
+      ],
+      "why": "Unions bargain for better safety and can support members in disputes. The union does not pay wages, and speaking for the employer is a job for an employer group. The union also cannot promise to stop all change.",
+      "clue": "A union acts for its members."
+    }
+  },
+  "ecb-employer-groups": {
+    "title": "Employer groups",
+    "card": [
+      "An employer group is an organisation that businesses join so they can act together. It represents the interests of its member businesses.",
+      "Members get advice on workplace law, such as pay rates, awards and what the rules require of an employer.",
+      "An employer group can bargain with unions on behalf of its members, so each business does not have to do it alone.",
+      "It also speaks for business to government. It can put forward its members' views when workplace rules are being made or changed."
+    ],
+    "remember": "Employer groups act for businesses: they advise, bargain and speak to government.",
+    "a": {
+      "q": "Which of these is something an employer group does for its members?",
+      "opts": [
+        "Advises them on workplace law",
+        "Sets the minimum wage for their workers",
+        "Represents their workers in disputes",
+        "Enforces workplace rules against them"
+      ],
+      "why": "Employer groups give their member businesses advice on workplace law. Representing workers in disputes is tempting, but that is what a trade union does, and employer groups act for businesses.",
+      "clue": "Think about who joins an employer group."
+    },
+    "b": {
+      "d": 2,
+      "q": "Several bakeries in Bendigo want to put their views on workplace rules to the state government. They would rather not each do it alone. What could they do?",
+      "opts": [
+        "Join an employer group to speak for them",
+        "Join a trade union to speak for them",
+        "Ask their workers to bargain with government",
+        "Wait for the government to ask them"
+      ],
+      "why": "An employer group speaks for business to government, so the bakeries can share one voice. A trade union is tempting, but it represents workers, not business owners.",
+      "clue": "Who do the bakeries want to speak for them: businesses or workers?"
+    }
+  },
+  "ecb-ways-invest-vic": {
+    "title": "Ways to invest",
+    "card": [
+      [
+        "Savings and term deposits",
+        "Money in a bank savings account is low risk, earns interest and can be taken out at any time. A term deposit locks the money in the bank for a set time, usually for a higher rate."
+      ],
+      [
+        "Shares",
+        "A share is a small part ownership of a company. Its price can rise or fall, and the company may pay dividends. Listed shares can usually be sold quickly, but returns and losses can be large."
+      ],
+      [
+        "Property",
+        "Property can earn rent and may rise in price. It costs a lot to buy and can take weeks or months to sell."
+      ],
+      [
+        "Bonds and managed funds",
+        "A bond is a loan to a government or company that pays interest. A managed fund pools many people's money, and professionals invest it in a mix of assets."
+      ]
+    ],
+    "remember": "Each way to invest has its own mix of risk, return and how quickly it can be sold.",
+    "a": {
+      "q": "Leo lends $1,000 to the Australian Government. It pays him interest each year and repays him after five years. What has Leo bought?",
+      "opts": ["A bond", "A share", "A managed fund", "A term deposit"],
+      "why": "Leo has lent money to a government that pays him interest, which is a bond. A term deposit also pays interest for a set time, but the money is placed with a bank, not lent to a government.",
+      "clue": "Who is borrowing Leo's money?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya may need her money back in a few days, and she does not want to risk losing any of it. Which investment suits her best?",
+      "opts": [
+        "A savings account at a bank",
+        "Shares in a listed company",
+        "A house she rents out",
+        "A two-year term deposit at a bank"
+      ],
+      "why": "A savings account is low risk and the money can be taken out at any time, so it meets both of Priya's needs. Shares can usually be sold quickly, but their price may have fallen when she sells. The term deposit locks her money away and the house can take months to sell.",
+      "clue": "Check each option for both risk and speed of access."
+    }
+  },
+  "ecb-diversification-vic": {
+    "title": "Diversification",
+    "card": [
+      "Diversification means spreading money across different investments instead of putting it all in one. It is the idea behind not putting all your eggs in one basket.",
+      "If one investment loses value, the others may not. So a single loss does less harm to the whole amount.",
+      "Investments that are different from each other protect better. Shares in five companies in the same industry can all fall for the same reason. Shares, property and bonds are less likely to all fall together.",
+      "Diversification lowers the harm from one loss. It does not remove risk, and it does not guarantee a profit."
+    ],
+    "remember": "Spread your money so one loss does less harm. Risk is reduced, not removed.",
+    "a": {
+      "q": "Why does diversification help an investor?",
+      "opts": [
+        "One investment falling does less harm to the total",
+        "It guarantees that every investment will make a profit",
+        "It removes all risk from the money that is invested",
+        "It makes sure the investor earns the highest return"
+      ],
+      "why": "With money spread out, a loss on one investment is only part of the total. It does not guarantee profit or remove risk, because some investments can still lose value.",
+      "clue": "Think about what happens to the total when just one basket drops."
+    },
+    "b": {
+      "d": 3,
+      "q": "Kai has $10,000 to invest. Which plan is the most diversified?",
+      "opts": [
+        "$3,000 in shares, $3,000 in bonds and $4,000 in property",
+        "$10,000 in shares of one large mining company",
+        "$5,000 in shares of one bank and $5,000 in another bank",
+        "$2,500 in shares of each of four mining companies"
+      ],
+      "why": "The plan with shares, bonds and property spreads money across three different types of investment, so a fall in one is less likely to hit them all. Two banks or four mining companies are still in one industry, which can all fall for the same reason. One mining company has no spread at all.",
+      "clue": "Look for investments that are different in type, not just different in name."
+    }
+  },
+  "ecb-insurance": {
+    "title": "Insurance",
+    "card": [
+      "Insurance protects a person from a large loss they could not easily pay for alone. Common cases are a car crash, a house fire or illness.",
+      ["Premium", "the regular payment made to the insurer to keep the cover. It might be paid monthly or yearly."],
+      [
+        "Excess",
+        "the part of a claim the insured person pays first. The insurer pays the rest, up to the limits of the policy."
+      ],
+      "The premium is a small, certain cost. In return, the insured person avoids the risk of a large cost they cannot predict."
+    ],
+    "remember": "Pay a small premium now to protect against a large loss later. The excess is paid first by you.",
+    "a": {
+      "q": "Which of these is an insurance premium?",
+      "opts": [
+        "The regular payment made to keep the cover",
+        "The amount the insurer pays after a claim",
+        "The part of a claim the insured pays first",
+        "The loss caused by a car crash or fire"
+      ],
+      "why": "A premium is the regular payment to the insurer for cover. The part of a claim paid first by the insured is the excess, which is the most tempting mix-up.",
+      "clue": "Think of what you pay every month or year, before anything goes wrong."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's car is damaged in a crash in Geelong. The repair bill is $3000 and her policy has an $800 excess. How much does her insurer pay, and why?",
+      "opts": [
+        "$2200, because Priya pays the excess first",
+        "$800, because the insurer pays the excess first",
+        "$3000, because the premium covers the whole bill",
+        "$2200, because the premium is taken off the bill"
+      ],
+      "why": "Priya pays the excess of $800 first, so the insurer pays the rest: $3000 - $800 = $2200. The premium is the regular payment for cover, not an amount taken off a claim.",
+      "clue": "Who pays the excess first, the insured or the insurer?"
+    }
+  },
+  "ecb-investment-scams": {
+    "title": "Investment scams",
+    "card": [
+      "An investment scam is a trick that takes your money by offering a fake or dishonest investment. Scammers target people of any age, including young people.",
+      "A warning sign is a promise of high returns with no risk. Real investments that can earn more usually carry more risk, so a promise of big profits with no chance of loss is not believable.",
+      "Other warning signs are pressure to act fast, such as \"only 24 hours left\", and an adviser who is not licensed. A genuine business gives you time to think and check.",
+      "Before investing, check the business on ASIC's Moneysmart website, which lists licensed businesses. ASIC is the Australian Securities and Investments Commission. If it is not on the list, do not hand over money."
+    ],
+    "remember": "Big returns with no risk, pressure to hurry and no licence are all signs of a scam. Check Moneysmart first.",
+    "a": {
+      "q": "Which offer shows the clearest sign of an investment scam?",
+      "opts": [
+        "A promise of 30% a year with no risk of loss",
+        "A fund that says its returns can go up or down",
+        "An adviser who lists their licence details",
+        "A bank account that pays a low rate of interest"
+      ],
+      "why": "Higher returns usually come with higher risk, so a high return with no risk cannot be trusted. The fund that says returns can fall is being honest about risk, which is what real investments do.",
+      "clue": "Which offer ignores the link between risk and return?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Jay gets a call from a man offering shares in a mining company. He says the offer ends tonight. What should Jay do first?",
+      "opts": [
+        "Check if the business is licensed on Moneysmart",
+        "Pay a small deposit to hold the offer until tomorrow",
+        "Ask the caller whether he is a licensed adviser",
+        "Invest only if friends say the company seems good"
+      ],
+      "why": "Moneysmart lists licensed businesses, so it is an independent check. Asking the caller proves nothing, because a scammer can simply say yes. The deadline is itself pressure to act fast, so paying a deposit would be giving in to it.",
+      "clue": "Trust a source that does not depend on what the caller says."
+    }
+  },
+  "ecb-legal-ethical-investing": {
+    "title": "Legal and ethical investing",
+    "card": [
+      [
+        "Legal",
+        "Investors must follow the law. Insider trading, which means buying or selling shares using secret information the public does not have, is illegal in Australia."
+      ],
+      [
+        "Ethical",
+        "Many investors also choose ethical investments. These avoid businesses or products the investor thinks cause harm, such as tobacco or fossil fuels."
+      ],
+      "Some managed funds are built this way. A fund can leave out certain industries, so investors can follow their values without picking each share themselves.",
+      "Being legal and being ethical are different tests. An investment can be legal but still go against an investor's values. Ethical funds may also earn less or more than other funds, and the return is not guaranteed."
+    ],
+    "remember": "Legal investing follows the law. Ethical investing also follows the investor's values.",
+    "a": {
+      "q": "Sam picks a managed fund that leaves out tobacco companies because he thinks they cause harm. What type of investing is this?",
+      "opts": ["Ethical investing", "Insider trading", "Diversification", "Investing with no risk"],
+      "why": "Sam is choosing a fund that avoids a harm he cares about, so it is ethical investing. It is not insider trading, which means using secret information and is illegal.",
+      "clue": "He is choosing based on his values."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya invests in a coal mining company, which is legal. She later decides it goes against her values about climate change. What does this show?",
+      "opts": [
+        "Legal and ethical are different tests of an investment",
+        "Legal and ethical are the same test of an investment",
+        "Her change of view made the coal investment illegal",
+        "Ethical investing is a law that bans coal shares"
+      ],
+      "why": "The law allowed her investment, but her own values lead her to judge it differently, so legal and ethical are different tests. Her views do not change the law: ethical investing is a choice investors make, not a legal rule.",
+      "clue": "Think about what the law covers and what values cover."
+    }
+  },
+  "ecb-who-contributes-super": {
+    "title": "Who contributes to super",
+    "card": [
+      "The superannuation guarantee (SG) is a law that requires employers to pay a set share of most workers' ordinary pay into a super fund. The rate is now 12 per cent.",
+      "This money is paid into the worker's super fund, not into their everyday bank account. It is saved for retirement, not spent now.",
+      "Workers can add their own money to super as well. These are called voluntary contributions, and they can build up savings faster.",
+      "An employer cannot swap the SG for extra cash in a worker's pay. If an employer does not pay it in full and on time, the Australian Taxation Office (ATO) can make them pay it, plus extra charges."
+    ],
+    "remember": "Employers are required to pay into super. Workers can choose to add more.",
+    "a": {
+      "q": "Under the superannuation guarantee, what must an employer do for a worker?",
+      "opts": [
+        "Pay a set share of wages into the worker's super fund",
+        "Pay the worker a bonus every year into their bank account",
+        "Match every dollar the worker adds to their own super",
+        "Pay the government a share of the worker's wages as tax"
+      ],
+      "why": "The guarantee is a law that sends a set share of wages to the worker's super fund. Matching the worker's own extra payments is not required, because those voluntary contributions are the worker's choice.",
+      "clue": "Think about where the employer's payment is sent."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya works at a bakery in Bendigo. She asks her boss to pay her the super share as cash in her next pay instead. What is the best reply?",
+      "opts": [
+        "No, the employer's share must go into her super fund",
+        "Yes, if she asks, since the money belongs to her anyway",
+        "Yes, as long as they both sign a written agreement",
+        "No, she must first make her own voluntary contributions"
+      ],
+      "why": "The guarantee requires the employer to pay the set share into a super fund, so it cannot be swapped for cash, even if both sides agree in writing. Priya's own extra payments are optional, and the employer's share does not depend on them.",
+      "clue": "Think about where the employer's share has to end up."
+    }
+  },
+  "ecb-super-grows": {
+    "title": "How super grows",
+    "card": [
+      "Super money is invested, for example in shares and property. The fund earns returns, such as dividends and rent, and adds them to the balance.",
+      "Compound returns mean the returns earn returns of their own. Super is held for decades, so this effect builds up and the balance can grow a lot.",
+      "Fees are taken out of the balance each year. A small difference in fees, repeated over decades, can leave a much smaller final balance.",
+      "Funds differ in their fees and in their returns. Choosing a fund with lower fees or stronger returns can make a big difference to the final balance."
+    ],
+    "remember": "Time and compound returns grow super. Fees and the choice of fund can change how much it grows.",
+    "a": {
+      "q": "Why can super grow a lot over a working life?",
+      "opts": [
+        "Returns stay in the fund and build on each other for decades",
+        "Returns are paid out each year, so they never add up",
+        "The fund adds the same amount each year, so growth is steady",
+        "Fees are charged only once, so they barely touch the balance"
+      ],
+      "why": "Returns are added to the balance, so later returns are earned on them too, and decades let this build up. Returns paid out each year could not compound. Fees are taken out of the balance each year, not once, so they slow growth rather than barely touching it.",
+      "clue": "Think about what happens to last year's returns."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya and Sam each start with the same super balance, and their funds earn the same returns before fees. Priya's fund charges higher fees than Sam's. What is the most likely result after 30 years?",
+      "opts": [
+        "Priya's balance is smaller, because fees come out each year",
+        "Priya's balance is larger, because higher fees buy growth",
+        "Both balances match, because the starting amounts match",
+        "Priya's balance is smaller, because fees stop compounding"
+      ],
+      "why": "Higher fees are taken out of Priya's balance each year, so less money is left to earn returns, and over 30 years the gap builds up. Her fund still earns compound returns, so fees do not stop compounding. They shrink the amount that compounds.",
+      "clue": "Does Priya's fund still earn returns on its returns?"
+    }
+  },
+  "ecb-super-living-standards": {
+    "title": "Superannuation and the Age Pension",
+    "card": [
+      "The Age Pension is a regular payment from the Australian Government to older people who need support. It is paid for from taxes.",
+      "People with more super have more of their own income in retirement. This lets them live better than the Age Pension alone would allow. Fewer of them need the full pension.",
+      "Australia's population is ageing. More people are retiring and fewer workers pay tax for each retiree, which pushes up the total cost of the Age Pension.",
+      "If more retirees can fund themselves with super, the cost of the Age Pension to government is eased."
+    ],
+    "remember": "More super means fewer retirees rely on the full Age Pension, easing its cost to government.",
+    "a": {
+      "q": "Across the population, what happens to the Age Pension when more people build up higher super savings?",
+      "opts": [
+        "Fewer people need the full pension, which eases the cost",
+        "More people need the full pension, which raises the cost",
+        "The pension is no longer paid to anyone at all",
+        "The pension costs more because retirees spend less"
+      ],
+      "why": "When retirees have more super, fewer need the full Age Pension, so the cost to government is eased. The pension does not stop being paid, because some people still need support.",
+      "clue": "Think about who needs government support if they have their own savings."
+    },
+    "b": {
+      "d": 3,
+      "q": "Why does Australia's ageing population make super matter more for government budgets?",
+      "opts": [
+        "Pension costs rise while fewer workers pay tax per retiree",
+        "Pension costs fall while more workers pay tax per retiree",
+        "Retirees need less super because they live longer lives",
+        "Pension costs fall because fewer people reach retirement age"
+      ],
+      "why": "As more people retire and fewer workers pay tax for each retiree, the total cost of the Age Pension goes up. Super helps because retirees who fund themselves need less from the pension. The option with more workers per retiree reverses what ageing does.",
+      "clue": "Compare the number of retirees with the workers who pay tax."
+    }
+  },
+  "ecb-big-financial-decisions": {
+    "title": "Big financial decisions",
+    "card": [
+      "A big financial decision is a choice that involves a lot of money and lasts a long time, such as buying a car, renting or buying a home, or taking out a loan.",
+      "Income matters because it sets what a person can afford to repay. Interest rates matter because a higher rate makes a loan cost more.",
+      "Total cost over time is more than the price on the sticker. It includes interest, fees and running costs such as insurance, repairs and fuel.",
+      "Personal goals matter too. A person who wants to move cities soon may prefer renting, while someone planning to stay for years may prefer buying."
+    ],
+    "remember": "Weigh income, interest rates, total cost over time and personal goals together.",
+    "a": {
+      "q": "Which of these is part of the total cost of buying a car on a loan?",
+      "opts": [
+        "The interest paid on the loan as well as the price",
+        "The price on the sticker only",
+        "The income the buyer earns each year",
+        "The buyer's goal of owning a car"
+      ],
+      "why": "Total cost over time adds interest and other costs to the price. Income and goals affect the decision, but they are not costs of the car.",
+      "clue": "Total cost is more than the sticker price."
+    },
+    "b": {
+      "d": 3,
+      "q": "Leila is 24 and takes a job in Mildura for one year before she moves overseas. She is choosing between renting a flat and buying one. Which choice best fits her situation?",
+      "opts": [
+        "Renting, because her goal is to stay only a short time",
+        "Buying, because owning is always cheaper than renting",
+        "Renting, because interest rates do not affect renters",
+        "Buying, because her income will rise when she moves"
+      ],
+      "why": "Her goal is a short stay, and buying a home has large costs that suit a longer stay. Buying is not always cheaper, and nothing in the case says her income will rise.",
+      "clue": "Look at how long she plans to stay."
+    }
+  },
+  "ecb-cost-benefit-analysis": {
+    "title": "Cost-benefit analysis",
+    "card": [
+      "Cost-benefit analysis is a way to judge an option. List all the costs and all the benefits of it, including ones that fall on other people.",
+      "Where possible, put a dollar value on each item. Some items, such as a quieter street, are hard to value, so they may be described in words instead.",
+      "Add up the benefits and the costs, then compare them. If the benefits outweigh the costs, the option is worth taking.",
+      "If the costs outweigh the benefits, the option is not worth taking as it stands. Another option may do better."
+    ],
+    "remember": "List every cost and benefit, value what you can, then compare the totals.",
+    "a": {
+      "q": "What is the main purpose of a cost-benefit analysis?",
+      "opts": [
+        "To weigh the total benefits of an option against its costs",
+        "To find the option with the lowest cost, ignoring benefits",
+        "To find the option with the most benefits, ignoring costs",
+        "To record how much money a business spent on an option"
+      ],
+      "why": "A cost-benefit analysis weighs benefits against costs to judge whether an option is worth taking. Looking at costs alone or benefits alone is tempting, but it ignores half of the comparison.",
+      "clue": "Both sides of the list matter."
+    },
+    "b": {
+      "d": 3,
+      "q": "A council in Bendigo plans a skate park. It estimates benefits of $3 million in health and fun for users. Costs are $2 million to build plus $0.4 million in noise costs to nearby homes. What should the analysis conclude?",
+      "opts": [
+        "Benefits of $3m outweigh costs of $2.4m, so build it",
+        "Benefits of $3m outweigh the $2m build cost, so build it",
+        "Costs of $2.4m are close to benefits, so do not build it",
+        "The noise cannot be valued, so no analysis is possible"
+      ],
+      "why": "The costs include the build cost and the noise cost to neighbours, a total of $2.4 million. Benefits of $3 million are higher, so the park is worth building. Leaving out the noise cost is tempting, but the analysis lists all costs, including those on other people.",
+      "clue": "Add every cost, including those on neighbours."
+    }
+  },
+  "ecb-validity-sources": {
+    "title": "Validity of sources",
+    "card": [
+      "A valid source is authentic and accurate. Authentic means it is genuine and from who it claims to be from. Accurate means its facts are correct.",
+      "Check who made the source and their expertise. Ask whether they know the topic well, such as a statistician writing about data.",
+      "Check the purpose and the date. A source made to sell something may leave out facts. An old source may be out of date.",
+      "Check whether other evidence supports it. If other reliable sources report the same facts, the source is more likely to be valid."
+    ],
+    "remember": "Check who, why, when, and whether other evidence agrees.",
+    "a": {
+      "q": "Why does a student check whether other sources report the same facts?",
+      "opts": [
+        "Other reliable sources back up the facts",
+        "Other sources show who made the original",
+        "Other sources show how old the original is",
+        "Other sources prove the purpose is neutral"
+      ],
+      "why": "If other reliable evidence supports the facts, they are more likely to be accurate. Who made a source and when are checked by looking at the source itself, which is why those options are tempting but wrong.",
+      "clue": "Think about accuracy."
+    },
+    "b": {
+      "d": 3,
+      "q": "Leo is researching how many Australians own a pet. A pet food company's website says 9 in 10 homes have one. Which check is most useful for judging this claim?",
+      "opts": [
+        "Whether a national statistics survey agrees",
+        "Whether the website looks professional",
+        "Whether the company has traded for many years",
+        "Whether the company repeats the claim often"
+      ],
+      "why": "A similar figure from an independent survey is other evidence that supports the claim. The company has a purpose, selling pet food, so its own pages repeating a claim do not test it. A good-looking website says little about accuracy.",
+      "clue": "Look for evidence outside the company."
+    }
+  },
+  "ecb-predicting-from-trends": {
+    "title": "Predicting from trends",
+    "card": [
+      "A trend is a pattern of change over time in economic data, such as prices or interest rates rising for several months.",
+      "To make a prediction, find the likely cause of the trend. Then ask what effect it will have and who is affected.",
+      "Example: when interest rates rise, new home loans cost more, so buyers can borrow less. Demand for homes is likely to ease, so growth in house prices is likely to slow.",
+      "A prediction says what is likely, not certain. Other things, such as a change in income, can change the outcome."
+    ],
+    "remember": "Spot the trend, find its cause, then predict who is affected and how.",
+    "a": {
+      "q": "Interest rates have risen for several months. What is the most likely effect on the housing market?",
+      "opts": [
+        "House price growth slows as buyers can borrow less",
+        "House price growth speeds up as loans cost more",
+        "Demand for homes rises as buyers can borrow more",
+        "House prices are certain to fall as loans cost more"
+      ],
+      "why": "Higher rates make new loans dearer, so buyers can borrow less and demand eases. That makes slower price growth likely. A prediction is never certain, so saying prices are certain to fall goes too far.",
+      "clue": "Follow the chain from the cost of a loan to how much buyers can borrow."
+    },
+    "b": {
+      "d": 2,
+      "q": "Petrol prices in Melbourne have climbed for six months because oil costs more. What is the most likely effect on a person who drives far to work each day?",
+      "opts": [
+        "Less money left over for other spending",
+        "More money left over for other spending",
+        "No change in what they spend on petrol",
+        "A lower cost of getting to work"
+      ],
+      "why": "The trend is rising petrol prices, so a long commute now costs more. With more spent on petrol, less is left for other things. Falling costs would need the trend to run the other way.",
+      "clue": "Link the rising price to the driver's weekly costs."
+    }
   }
 };

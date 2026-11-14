@@ -1,0 +1,270 @@
+{
+ "id": "eng-backing-up-opinion",
+ "title": "Backing up an opinion",
+ "brief": "8cb386447b96",
+ "shortlist": [
+  [
+   "eng-forming-justifying-opinion",
+   0.52
+  ],
+  [
+   "eng-fact-opinion-claims",
+   0.214
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:46Z new, match",
+  "2026-11-12T12:44:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:37Z write: failed the content check, writing again",
+  "2026-11-12T15:25:57Z write: done (still fails the content check)",
+  "2026-11-12T15:35:04Z check: flagged",
+  "2026-11-12T15:42:22Z fix: suggested",
+  "2026-11-12T17:07:10Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-13T15:14:48Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "write": 0.01287,
+  "check": 0.01473,
+  "fix": 0.02388,
+  "recheck": 0.0092
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, eng-forming-justifying-opinion, teaches reasons and details but only for opinions about a text, while this point covers opinions generally and asks for evidence and examples, so it is a broader idea and needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Backing up an opinion",
+  "card": [
+   "An opinion is what a person thinks or feels about something. On its own, it is only a claim, and a reader has no reason to agree.",
+   [
+    "Reason",
+    "explains why the writer thinks this. It often follows the word because."
+   ],
+   [
+    "Example",
+    "a specific case that shows the opinion is true, such as a named place, event or person."
+   ],
+   [
+    "Evidence",
+    "a fact, a number or an expert's view that can be checked, such as a survey result."
+   ]
+  ],
+  "remember": "An opinion convinces more when it comes with reasons, examples and evidence.",
+  "a": {
+   "q": "Which sentence backs up the opinion that our school should start later?",
+   "opts": [
+    "Teens need more sleep, so a later start helps them focus",
+    "Starting later would be much better for everyone at school",
+    "Anyone who disagrees with a later start is plainly silly",
+    "I really feel strongly that school should start later"
+   ],
+   "why": "The right answer gives a reason: teens need more sleep, which links to focus. The second option only repeats the opinion in stronger words, so it gives the reader nothing to weigh up.",
+   "clue": "Look for the sentence that explains why, not just what."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya writes: \"Our town needs a skate park.\" Which addition would make her opinion most convincing?",
+   "opts": [
+    "A council survey found 70 per cent of teens have nowhere to skate",
+    "It is honestly the best idea anyone in town has ever had",
+    "Everyone I know thinks a skate park would be great",
+    "Skate parks are obviously cool, so nobody could dislike them"
+   ],
+   "why": "A survey result is evidence that a reader can check, so it supports the opinion. Everyone I know is tempting, but it is only a claim about a few friends, so it is weaker than a checked result.",
+   "clue": "Which addition could a reader look up and check?"
+  }
+ },
+ "redone": true,
+ "local": [
+  "eng-backing-up-opinionb option is 65 characters: A council survey found 70 per cent of teens have nowhere to skate"
+ ],
+ "check": {
+  "a": {
+   "best": "Teens need more sleep, so a later start helps them focus",
+   "also_right": []
+  },
+  "b": {
+   "best": "A council survey found 70 per cent of teens have nowhere to skate",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why refers to 'the second option', but options appear in random order. The option it seems to describe ('Starting later would be much better for everyone at school', which repeats the opinion in stronger words) is not necessarily second. The listed second option is a personal attack ('plainly silly'), which does not fit the description."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Example: a specific case that shows the opinion is true' overstates what an example does. An example supports or illustrates an opinion; it cannot prove an opinion true. Something like 'shows the opinion in action' or 'supports the opinion' would be safer."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one with a precise detail (a council survey, 70 per cent). The clue ('could a reader look up and check?') also points straight to it, so a student could pick it without understanding why evidence is convincing."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are clear and correct. However, why (a) names the 'second option' even though options are shuffled, and it misdescribes that option. The card also says an example 'shows the opinion is true', which overstates what an example does."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The why refers to 'the second option', but options appear in random order. The option it seems to describe ('Starting later would be much better for everyone at school', which repeats the opinion in stronger words) is not necessarily second. The listed second option is a personal attack ('plainly silly'), which does not fit the description.",
+  "Card, wording: 'Example: a specific case that shows the opinion is true' overstates what an example does. An example supports or illustrates an opinion; it cannot prove an opinion true. Something like 'shows the opinion in action' or 'supports the opinion' would be safer.",
+  "Question b, wording: The right option is the only one with a precise detail (a council survey, 70 per cent). The clue ('could a reader look up and check?') also points straight to it, so a student could pick it without understanding why evidence is convincing.",
+  "Content check: eng-backing-up-opinionb option is 65 characters: A council survey found 70 per cent of teens have nowhere to skate"
+ ],
+ "proposal": {
+  "title": "Backing up an opinion",
+  "card": [
+   "An opinion is what a person thinks or feels about something. On its own, it is only a claim, and a reader has no reason to agree.",
+   [
+    "Reason",
+    "explains why the writer thinks this. It often follows the word because."
+   ],
+   [
+    "Example",
+    "a specific case that supports the opinion, such as a named place, event or person."
+   ],
+   [
+    "Evidence",
+    "a fact, a number or an expert's view that can be checked, such as a survey result."
+   ]
+  ],
+  "remember": "An opinion convinces more when it comes with reasons, examples and evidence.",
+  "a": {
+   "q": "Which sentence backs up the opinion that our school should start later?",
+   "opts": [
+    "Teens need more sleep, so a later start helps them focus",
+    "Starting later would be much better for everyone at school",
+    "Anyone who disagrees with a later start is plainly silly",
+    "I really feel strongly that school should start later"
+   ],
+   "why": "The right answer gives a reason: teens need more sleep, and that links to focus. 'Starting later would be much better for everyone' is tempting, but it only repeats the opinion in stronger words, so it gives the reader nothing to weigh up.",
+   "clue": "Look for the sentence that explains why, not just what."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya writes: \"Our town needs a skate park.\" Which addition would make her opinion most convincing?",
+   "opts": [
+    "A council survey found 7 in 10 teens have nowhere to skate",
+    "My friend Sam said last week that skate parks are great",
+    "It is 100 per cent the best idea our town has had",
+    "I have wanted a skate park ever since I turned nine"
+   ],
+   "why": "The survey result is evidence: it is a fact that can be checked, and it shows why the town needs a skate park. The comment from Sam is tempting because it names a person and a time, but it is just another opinion, not a checked fact or an expert's view.",
+   "clue": "Which addition is more than someone's opinion or feeling?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:10Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Teens need more sleep, so a later start helps them focus",
+    "also_right": []
+   },
+   "b": {
+    "best": "A council survey found 7 in 10 teens have nowhere to skate",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:10Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why refers to 'the second option', but options appear in random order. The option it seems to describe ('Starting later would be much better for everyone at school', which repeats the opinion in stronger words) is not necessarily second. The listed second option is a personal attack ('plainly silly'), which does not fit the description."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Example: a specific case that shows the opinion is true' overstates what an example does. An example supports or illustrates an opinion; it cannot prove an opinion true. Something like 'shows the opinion in action' or 'supports the opinion' would be safer."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one with a precise detail (a council survey, 70 per cent). The clue ('could a reader look up and check?') also points straight to it, so a student could pick it without understanding why evidence is convincing."
+   }
+  ],
+  "flags": [
+   "Question a, other: The why refers to 'the second option', but options appear in random order. The option it seems to describe ('Starting later would be much better for everyone at school', which repeats the opinion in stronger words) is not necessarily second. The listed second option is a personal attack ('plainly silly'), which does not fit the description.",
+   "Card, wording: 'Example: a specific case that shows the opinion is true' overstates what an example does. An example supports or illustrates an opinion; it cannot prove an opinion true. Something like 'shows the opinion in action' or 'supports the opinion' would be safer.",
+   "Question b, wording: The right option is the only one with a precise detail (a council survey, 70 per cent). The clue ('could a reader look up and check?') also points straight to it, so a student could pick it without understanding why evidence is convincing.",
+   "Content check: eng-backing-up-opinionb option is 65 characters: A council survey found 70 per cent of teens have nowhere to skate"
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Backing up an opinion",
+  "card": [
+   "An opinion is what a person thinks or feels about something. On its own, it is only a claim, and a reader has no reason to agree.",
+   [
+    "Reason",
+    "explains why the writer thinks this. It often follows the word because."
+   ],
+   [
+    "Example",
+    "a specific case that supports the opinion, such as a named place, event or person."
+   ],
+   [
+    "Evidence",
+    "a fact, a number or an expert's view that can be checked, such as a survey result."
+   ]
+  ],
+  "remember": "An opinion convinces more when it comes with reasons, examples and evidence.",
+  "a": {
+   "q": "Which sentence backs up the opinion that our school should start later?",
+   "opts": [
+    "Teens need more sleep, so a later start helps them focus",
+    "Starting later would be much better for everyone at school",
+    "Anyone who disagrees with a later start is plainly silly",
+    "I really feel strongly that school should start later"
+   ],
+   "why": "The right answer gives a reason: teens need more sleep, and that links to focus. 'Starting later would be much better for everyone' is tempting, but it only repeats the opinion in stronger words, so it gives the reader nothing to weigh up.",
+   "clue": "Look for the sentence that explains why, not just what."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya writes: \"Our town needs a skate park.\" Which addition would make her opinion most convincing?",
+   "opts": [
+    "A council survey found 7 in 10 teens have nowhere to skate",
+    "My friend Sam said last week that skate parks are great",
+    "It is 100 per cent the best idea our town has had",
+    "I have wanted a skate park ever since I turned nine"
+   ],
+   "why": "The survey result is evidence: it is a fact that can be checked, and it shows why the town needs a skate park. The comment from Sam is tempting because it names a person and a time, but it is just another opinion, not a checked fact or an expert's view.",
+   "clue": "Which addition is more than someone's opinion or feeling?"
+  }
+ },
+ "cleared_by": "owner"
+}

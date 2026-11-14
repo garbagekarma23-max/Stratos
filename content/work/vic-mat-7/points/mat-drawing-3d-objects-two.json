@@ -1,0 +1,461 @@
+{
+ "id": "mat-drawing-3d-objects-two",
+ "title": "Drawing 3D objects in two dimensions",
+ "brief": "50094c57e0d9",
+ "shortlist": [
+  [
+   "mat-nets-views-objects",
+   0.506
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T12:53:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T14:38:08Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:06:00Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:15:50Z write: done",
+  "2026-11-12T15:26:05Z check: flagged",
+  "2026-11-12T15:35:10Z fix: suggested",
+  "2026-11-12T16:19:54Z autoreview: picked as a spot check. It would have been cleared with the fix (card wording)",
+  "2026-11-13T12:13:15Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.00801,
+  "check": 0.00979,
+  "fix": 0.02293
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers nets, views and perspective but not isometric drawings, which the new point requires, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Drawing 3D objects in two dimensions",
+  "card": [
+   [
+    "Net",
+    "a flat shape that folds up to make a solid. It shows every face laid out, joined along edges. A cube has a net of 6 squares."
+   ],
+   [
+    "Views",
+    "The front, side and top views each show the object from one direction, as flat shapes. Each view hides the depth, so one view alone cannot show the whole object."
+   ],
+   [
+    "Isometric drawing",
+    "a single picture on dot paper that shows three faces at once, as a corner of the solid. Vertical edges are drawn as vertical lines. Edges that are the same length in the object are the same length in the drawing."
+   ],
+   "Example: a tall box that is 2 cubes wide, 1 cube deep and 3 cubes high. Its front view is a rectangle 2 wide and 3 high. Its top view is a rectangle 2 wide and 1 deep."
+  ],
+  "remember": "A net unfolds the faces. Views show one side at a time. An isometric drawing shows three faces at once.",
+  "a": {
+   "q": "Which drawing of a solid shows its faces laid out flat so that they can be folded up to make it?",
+   "opts": [
+    "A net",
+    "A top view",
+    "A front view",
+    "An isometric drawing"
+   ],
+   "why": "A net lays every face out flat, joined along edges, and it folds up into the solid. An isometric drawing is tempting, but it shows the solid as a picture with three faces, and nothing can be folded from it.",
+   "clue": "Think of a box that has been cut open and flattened."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam draws a box that is 4 cubes long, 2 cubes deep and 3 cubes high. Looking straight down from above, what shape is the top view?",
+   "opts": [
+    "A rectangle, 4 long and 2 deep",
+    "A rectangle, 4 long and 3 high",
+    "A rectangle, 2 deep and 3 high",
+    "A rectangle, 4 long and 5 high"
+   ],
+   "why": "The top view shows the length and the depth, so it is 4 by 2. The height of 3 cannot be seen from above, because a view hides the direction we look along. A rectangle 4 long and 3 high is the front view.",
+   "clue": "Looking down, which measurement points away from you?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "An isometric drawing on dot paper of a box 2 cubes wide, 1 cube deep and 3 cubes high, showing the front, side and top faces, with vertical edges drawn as vertical lines.",
+    "why": "It lets the student see three faces in one picture."
+   },
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A net of a cube made of 6 squares in a cross shape, next to the folded cube.",
+    "why": "It shows how the flat faces fold into a solid."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A net",
+   "also_right": []
+  },
+  "b": {
+   "best": "A rectangle, 4 long and 2 deep",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Each view hides the depth' clashes with the example and question b, where 'depth' names one of the box's dimensions and the top view shows it ('2 wide and 1 deep'). The top view actually hides the height. Reword, e.g. 'Each view hides the distance in the direction you are looking.'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are clear and correct. The card says each view 'hides the depth', but its own example and question b have the top view showing the depth (it hides the height). This could confuse students, so the line should be reworded."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: 'Each view hides the depth' clashes with the example and question b, where 'depth' names one of the box's dimensions and the top view shows it ('2 wide and 1 deep'). The top view actually hides the height. Reword, e.g. 'Each view hides the distance in the direction you are looking.'"
+ ],
+ "proposal": {
+  "title": "Drawing 3D objects in two dimensions",
+  "card": [
+   [
+    "Net",
+    "a flat shape that folds up to make a solid. It shows every face laid out, joined along edges. A cube has a net of 6 squares."
+   ],
+   [
+    "Views",
+    "The front, side and top views each show the object from one direction, as flat shapes. Each view hides the distance in the direction you are looking, so one view alone cannot show the whole object."
+   ],
+   [
+    "Isometric drawing",
+    "a single picture on dot paper that shows three faces at once, as if seen from a corner. Vertical edges are drawn as vertical lines. Edges that are the same length in the object are the same length in the drawing."
+   ],
+   "Example: a tall box that is 2 cubes wide, 1 cube deep and 3 cubes high. Its front view is a rectangle 2 wide and 3 high. Its top view is a rectangle 2 wide and 1 deep."
+  ],
+  "remember": "A net unfolds the faces. Views show one side at a time. An isometric drawing shows three faces at once.",
+  "a": {
+   "q": "Which drawing of a solid shows its faces laid out flat so that they can be folded up to make it?",
+   "opts": [
+    "A net",
+    "A top view",
+    "A front view",
+    "An isometric drawing"
+   ],
+   "why": "A net lays every face out flat, joined along edges, and it folds up into the solid. An isometric drawing is tempting, but it shows the solid as one picture with three faces, and nothing can be folded from it.",
+   "clue": "Think of a box that has been cut open and flattened."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam draws a box that is 4 cubes long, 2 cubes deep and 3 cubes high. Looking straight down from above, what shape is the top view?",
+   "opts": [
+    "A rectangle, 4 long and 2 deep",
+    "A rectangle, 4 long and 3 high",
+    "A rectangle, 2 deep and 3 high",
+    "Three rectangles: 4 by 2, 4 by 3 and 2 by 3"
+   ],
+   "why": "The top view shows the length and the depth, so it is 4 by 2. Looking down, the height of 3 is the distance in the direction you are looking, so it is hidden. A rectangle 4 long and 3 high is the front view, and three faces at once is an isometric drawing.",
+   "clue": "Looking down, which measurement points away from you?"
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A net of a cube made of 6 squares in a cross shape, next to the folded cube.",
+    "why": "It shows how the flat faces fold into a solid."
+   },
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "An isometric drawing on dot paper of a box 2 cubes wide, 1 cube deep and 3 cubes high, showing the front, side and top faces, with vertical edges drawn as vertical lines.",
+    "why": "It lets the student see three faces in one picture."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:54Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Each view hides the depth' clashes with the example and question b, where 'depth' names one of the box's dimensions and the top view shows it ('2 wide and 1 deep'). The top view actually hides the height. Reword, e.g. 'Each view hides the distance in the direction you are looking.'"
+   }
+  ],
+  "flags": [
+   "Card, wording: 'Each view hides the depth' clashes with the example and question b, where 'depth' names one of the box's dimensions and the top view shows it ('2 wide and 1 deep'). The top view actually hides the height. Reword, e.g. 'Each view hides the distance in the direction you are looking.'"
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Drawing 3D objects in two dimensions",
+  "card": [
+   [
+    "Net",
+    "a flat shape that folds up to make a solid. It shows every face laid out, joined along edges. A cube has a net of 6 squares."
+   ],
+   [
+    "Views",
+    "The front, side and top views each show the object from one direction, as flat shapes. Each view hides the distance in the direction you are looking, so one view alone cannot show the whole object."
+   ],
+   [
+    "Isometric drawing",
+    "a single picture on dot paper that shows three faces at once, as if seen from a corner. Vertical edges are drawn as vertical lines. Edges that are the same length in the object are the same length in the drawing."
+   ],
+   "Example: a tall box that is 2 cubes wide, 1 cube deep and 3 cubes high. Its front view is a rectangle 2 wide and 3 high. Its top view is a rectangle 2 wide and 1 deep."
+  ],
+  "remember": "A net unfolds the faces. Views show one side at a time. An isometric drawing shows three faces at once.",
+  "a": {
+   "q": "Which drawing of a solid shows its faces laid out flat so that they can be folded up to make it?",
+   "opts": [
+    "A net",
+    "A top view",
+    "A front view",
+    "An isometric drawing"
+   ],
+   "why": "A net lays every face out flat, joined along edges, and it folds up into the solid. An isometric drawing is tempting, but it shows the solid as one picture with three faces, and nothing can be folded from it.",
+   "clue": "Think of a box that has been cut open and flattened."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam draws a box that is 4 cubes long, 2 cubes deep and 3 cubes high. Looking straight down from above, what shape is the top view?",
+   "opts": [
+    "A rectangle, 4 long and 2 deep",
+    "A rectangle, 4 long and 3 high",
+    "A rectangle, 2 deep and 3 high",
+    "Three rectangles: 4 by 2, 4 by 3 and 2 by 3"
+   ],
+   "why": "The top view shows the length and the depth, so it is 4 by 2. Looking down, the height of 3 is the distance in the direction you are looking, so it is hidden. A rectangle 4 long and 3 high is the front view, and three faces at once is an isometric drawing.",
+   "clue": "Looking down, which measurement points away from you?"
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A net of a cube made of 6 squares in a cross shape, next to the folded cube.",
+    "why": "It shows how the flat faces fold into a solid."
+   },
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "An isometric drawing on dot paper of a box 2 cubes wide, 1 cube deep and 3 cubes high, showing the front, side and top faces, with vertical edges drawn as vertical lines.",
+    "why": "It lets the student see three faces in one picture."
+   }
+  ]
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix replaces 'hides the depth' with 'hides the distance in the direction you are looking', which no longer clashes with the top view showing the depth. Both answers are right, and the new wrong option in question b is clearly wrong.",
+   "item": "59ead98b166732b7",
+   "result": "decided",
+   "saved": {
+    "id": "mat-drawing-3d-objects-two",
+    "title": "Drawing 3D objects in two dimensions",
+    "brief": "50094c57e0d9",
+    "shortlist": [
+     [
+      "mat-nets-views-objects",
+      0.506
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 1
+    },
+    "usd": {
+     "match": 0.0001,
+     "write": 0.00801,
+     "check": 0.00979,
+     "fix": 0.02293
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "high",
+     "reason": "The bank point covers nets, views and perspective but not isometric drawings, which the new point requires, so a new point is needed.",
+     "model": "claude-haiku-5-5"
+    },
+    "alone": true,
+    "draft": {
+     "title": "Drawing 3D objects in two dimensions",
+     "card": [
+      [
+       "Net",
+       "a flat shape that folds up to make a solid. It shows every face laid out, joined along edges. A cube has a net of 6 squares."
+      ],
+      [
+       "Views",
+       "The front, side and top views each show the object from one direction, as flat shapes. Each view hides the depth, so one view alone cannot show the whole object."
+      ],
+      [
+       "Isometric drawing",
+       "a single picture on dot paper that shows three faces at once, as a corner of the solid. Vertical edges are drawn as vertical lines. Edges that are the same length in the object are the same length in the drawing."
+      ],
+      "Example: a tall box that is 2 cubes wide, 1 cube deep and 3 cubes high. Its front view is a rectangle 2 wide and 3 high. Its top view is a rectangle 2 wide and 1 deep."
+     ],
+     "remember": "A net unfolds the faces. Views show one side at a time. An isometric drawing shows three faces at once.",
+     "a": {
+      "q": "Which drawing of a solid shows its faces laid out flat so that they can be folded up to make it?",
+      "opts": [
+       "A net",
+       "A top view",
+       "A front view",
+       "An isometric drawing"
+      ],
+      "why": "A net lays every face out flat, joined along edges, and it folds up into the solid. An isometric drawing is tempting, but it shows the solid as a picture with three faces, and nothing can be folded from it.",
+      "clue": "Think of a box that has been cut open and flattened."
+     },
+     "b": {
+      "d": 2,
+      "q": "Sam draws a box that is 4 cubes long, 2 cubes deep and 3 cubes high. Looking straight down from above, what shape is the top view?",
+      "opts": [
+       "A rectangle, 4 long and 2 deep",
+       "A rectangle, 4 long and 3 high",
+       "A rectangle, 2 deep and 3 high",
+       "A rectangle, 4 long and 5 high"
+      ],
+      "why": "The top view shows the length and the depth, so it is 4 by 2. The height of 3 cannot be seen from above, because a view hides the direction we look along. A rectangle 4 long and 3 high is the front view.",
+      "clue": "Looking down, which measurement points away from you?"
+     },
+     "wants": [
+      {
+       "at": "card 3",
+       "kind": "diagram",
+       "brief": "An isometric drawing on dot paper of a box 2 cubes wide, 1 cube deep and 3 cubes high, showing the front, side and top faces, with vertical edges drawn as vertical lines.",
+       "why": "It lets the student see three faces in one picture."
+      },
+      {
+       "at": "card 1",
+       "kind": "diagram",
+       "brief": "A net of a cube made of 6 squares in a cross shape, next to the folded cube.",
+       "why": "It shows how the flat faces fold into a solid."
+      }
+     ]
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "A net",
+      "also_right": []
+     },
+     "b": {
+      "best": "A rectangle, 4 long and 2 deep",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "'Each view hides the depth' clashes with the example and question b, where 'depth' names one of the box's dimensions and the top view shows it ('2 wide and 1 deep'). The top view actually hides the height. Reword, e.g. 'Each view hides the distance in the direction you are looking.'"
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both answers are clear and correct. The card says each view 'hides the depth', but its own example and question b have the top view showing the depth (it hides the height). This could confuse students, so the line should be reworded."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Card, wording: 'Each view hides the depth' clashes with the example and question b, where 'depth' names one of the box's dimensions and the top view shows it ('2 wide and 1 deep'). The top view actually hides the height. Reword, e.g. 'Each view hides the distance in the direction you are looking.'"
+    ],
+    "proposal": {
+     "title": "Drawing 3D objects in two dimensions",
+     "card": [
+      [
+       "Net",
+       "a flat shape that folds up to make a solid. It shows every face laid out, joined along edges. A cube has a net of 6 squares."
+      ],
+      [
+       "Views",
+       "The front, side and top views each show the object from one direction, as flat shapes. Each view hides the distance in the direction you are looking, so one view alone cannot show the whole object."
+      ],
+      [
+       "Isometric drawing",
+       "a single picture on dot paper that shows three faces at once, as if seen from a corner. Vertical edges are drawn as vertical lines. Edges that are the same length in the object are the same length in the drawing."
+      ],
+      "Example: a tall box that is 2 cubes wide, 1 cube deep and 3 cubes high. Its front view is a rectangle 2 wide and 3 high. Its top view is a rectangle 2 wide and 1 deep."
+     ],
+     "remember": "A net unfolds the faces. Views show one side at a time. An isometric drawing shows three faces at once.",
+     "a": {
+      "q": "Which drawing of a solid shows its faces laid out flat so that they can be folded up to make it?",
+      "opts": [
+       "A net",
+       "A top view",
+       "A front view",
+       "An isometric drawing"
+      ],
+      "why": "A net lays every face out flat, joined along edges, and it folds up into the solid. An isometric drawing is tempting, but it shows the solid as one picture with three faces, and nothing can be folded from it.",
+      "clue": "Think of a box that has been cut open and flattened."
+     },
+     "b": {
+      "d": 2,
+      "q": "Sam draws a box that is 4 cubes long, 2 cubes deep and 3 cubes high. Looking straight down from above, what shape is the top view?",
+      "opts": [
+       "A rectangle, 4 long and 2 deep",
+       "A rectangle, 4 long and 3 high",
+       "A rectangle, 2 deep and 3 high",
+       "Three rectangles: 4 by 2, 4 by 3 and 2 by 3"
+      ],
+      "why": "The top view shows the length and the depth, so it is 4 by 2. Looking down, the height of 3 is the distance in the direction you are looking, so it is hidden. A rectangle 4 long and 3 high is the front view, and three faces at once is an isometric drawing.",
+      "clue": "Looking down, which measurement points away from you?"
+     },
+     "wants": [
+      {
+       "at": "card 1",
+       "kind": "diagram",
+       "brief": "A net of a cube made of 6 squares in a cross shape, next to the folded cube.",
+       "why": "It shows how the flat faces fold into a solid."
+      },
+      {
+       "at": "card 3",
+       "kind": "diagram",
+       "brief": "An isometric drawing on dot paper of a box 2 cubes wide, 1 cube deep and 3 cubes high, showing the front, side and top faces, with vertical edges drawn as vertical lines.",
+       "why": "It lets the student see three faces in one picture."
+      }
+     ]
+    },
+    "proposal_problems": [],
+    "auto": {
+     "at": "2026-11-12T16:19:54Z",
+     "rules": 1,
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "'Each view hides the depth' clashes with the example and question b, where 'depth' names one of the box's dimensions and the top view shows it ('2 wide and 1 deep'). The top view actually hides the height. Reword, e.g. 'Each view hides the distance in the direction you are looking.'"
+      }
+     ],
+     "flags": [
+      "Card, wording: 'Each view hides the depth' clashes with the example and question b, where 'depth' names one of the box's dimensions and the top view shows it ('2 wide and 1 deep'). The top view actually hides the height. Reword, e.g. 'Each view hides the distance in the direction you are looking.'"
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "7122bc2462fea4b8"
+  }
+ ]
+}

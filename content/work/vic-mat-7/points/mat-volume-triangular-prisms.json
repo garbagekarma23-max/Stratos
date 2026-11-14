@@ -1,0 +1,265 @@
+{
+ "id": "mat-volume-triangular-prisms",
+ "title": "Volume of triangular prisms",
+ "brief": "9663e6813c90",
+ "shortlist": [
+  [
+   "mat-volume-rectangular-triangular-prisms",
+   0.726
+  ],
+  [
+   "mat-volume-capacity-prisms",
+   0.516
+  ],
+  [
+   "mat-surface-area-prisms",
+   0.293
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 may adapt mat-volume-rectangular-triangular-prisms, but is not highly sure, so to the Opus match check",
+  "2026-11-12T12:53:57Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:50Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:05Z write: failed the content check, writing again",
+  "2026-11-12T15:35:10Z write: done",
+  "2026-11-12T15:42:24Z check: flagged",
+  "2026-11-12T15:45:43Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "confirm": 0.00782,
+  "write": 0.01966,
+  "check": 0.00962,
+  "fix": 0.05197,
+  "recheck": 0.00747
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-volume-rectangular-triangular-prisms",
+  "changes": [
+   "Add the triangle area formula, one half times base times height, so students can find the cross-section of a triangular prism rather than being given its area."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea of volume as cross-section area times length for rectangular and triangular prisms at the Year 7 depth, but it does not state the triangle area formula that the new point relies on.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers both rectangular and triangular prisms and gives the triangle's area ready-made, while this point is only about triangular prisms and needs students to work out ½ × b × h first, so it is narrower and adds a step.",
+  "model": "claude-opus-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Volume of triangular prisms",
+  "card": [
+   "A right prism has the same cross-section all the way along its length. For a triangular prism, the cross-section is a triangle.",
+   "Volume of a right prism \\(=\\) area of cross-section \\(\\times\\) length. The length is the distance between the two triangle ends.",
+   "For a triangular prism, the cross-section area is \\(\\frac{1}{2} \\times b \\times h\\). So the volume is \\(\\frac{1}{2} \\times b \\times h \\times \\text{length}\\). Here \\(h\\) is the height of the triangle, at right angles to its base.",
+   [
+    "Example",
+    "A triangle has base 6 cm and height 4 cm, and the prism is 10 cm long. Triangle area: \\(\\frac{1}{2} \\times 6 \\times 4 = 12\\) cm\\(^{2}\\). Volume: \\(12 \\times 10 = 120\\) cm\\(^{3}\\)."
+   ]
+  ],
+  "remember": "Find the area of the triangle end first, then multiply by the length of the prism.",
+  "a": {
+   "q": "A triangular prism has a triangle end with base 8 cm and height 5 cm. The prism is 6 cm long. What is its volume?",
+   "opts": [
+    "\\(120\\) cm\\(^{3}\\)",
+    "\\(240\\) cm\\(^{3}\\)",
+    "\\(60\\) cm\\(^{3}\\)",
+    "\\(19\\) cm\\(^{3}\\)"
+   ],
+   "why": "The triangle area is \\(\\frac{1}{2} \\times 8 \\times 5 = 20\\) cm\\(^{2}\\). Then \\(20 \\times 6 = 120\\) cm\\(^{3}\\). The option of \\(240\\) cm\\(^{3}\\) is what you get if you forget the half.",
+   "clue": "Find the area of the triangle end first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya builds a wooden wedge shaped like a triangular prism. Its triangle end has base 10 cm and height 3 cm. The wedge is 12 cm long. What is its volume?",
+   "opts": [
+    "\\(180\\) cm\\(^{3}\\)",
+    "\\(360\\) cm\\(^{3}\\)",
+    "\\(15\\) cm\\(^{3}\\)",
+    "\\(36\\) cm\\(^{3}\\)"
+   ],
+   "why": "The triangle area is \\(\\frac{1}{2} \\times 10 \\times 3 = 15\\) cm\\(^{2}\\). The volume is \\(15 \\times 12 = 180\\) cm\\(^{3}\\). The option of \\(360\\) cm\\(^{3}\\) comes from leaving out the half, and \\(15\\) cm\\(^{3}\\) stops after the triangle area.",
+   "clue": "The length of the prism is not part of the triangle."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A right triangular prism lying on one of its rectangular faces. One triangle end is shaded and labelled cross-section. The base b and the perpendicular height h of the triangle are marked with a right angle symbol. The distance between the two triangle ends is marked length.",
+    "why": "It shows which triangle is the cross-section and which measure is the length."
+   }
+  ]
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(120\\) cm\\(^{3}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(180\\) cm\\(^{3}\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The right answer, 120 cm³, is the same as the worked example's answer on the card, so a student could pick it from memory of the example without doing the working. Changing the numbers so the answer differs from 120 would avoid this."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers check out: (a) is 120 cm³ and (b) is 180 cm³. The only issue is minor: question (a)'s answer matches the card's worked example (120 cm³), which could let a student guess it without working."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The right answer, 120 cm³, is the same as the worked example's answer on the card, so a student could pick it from memory of the example without doing the working. Changing the numbers so the answer differs from 120 would avoid this."
+ ],
+ "proposal": {
+  "title": "Volume of triangular prisms",
+  "card": [
+   "A right prism has the same cross-section all the way along its length. For a triangular prism, the cross-section is a triangle.",
+   "Volume of a right prism \\(=\\) area of cross-section \\(\\times\\) length. The length is the distance between the two triangle ends.",
+   "For a triangular prism, the cross-section area is \\(\\frac{1}{2} \\times b \\times h\\). So the volume is \\(\\frac{1}{2} \\times b \\times h \\times \\text{length}\\). Here \\(h\\) is the height of the triangle, at right angles to its base.",
+   [
+    "Example",
+    "A triangle has base 6 cm and height 4 cm, and the prism is 10 cm long. Triangle area: \\(\\frac{1}{2} \\times 6 \\times 4 = 12\\) cm\\(^{2}\\). Volume: \\(12 \\times 10 = 120\\) cm\\(^{3}\\)."
+   ]
+  ],
+  "remember": "Find the area of the triangle end first, then multiply by the length of the prism.",
+  "a": {
+   "q": "A triangular prism has a triangle end with base 8 cm and height 3 cm. The prism is 9 cm long. What is its volume?",
+   "opts": [
+    "\\(108\\) cm\\(^{3}\\)",
+    "\\(216\\) cm\\(^{3}\\)",
+    "\\(12\\) cm\\(^{3}\\)",
+    "\\(20\\) cm\\(^{3}\\)"
+   ],
+   "why": "The triangle area is \\(\\frac{1}{2} \\times 8 \\times 3 = 12\\) cm\\(^{2}\\). Then \\(12 \\times 9 = 108\\) cm\\(^{3}\\). The option of \\(216\\) cm\\(^{3}\\) is what you get if you forget the half, and \\(12\\) cm\\(^{3}\\) stops after the triangle area.",
+   "clue": "Find the area of the triangle end first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya builds a wooden wedge shaped like a triangular prism. Its triangle end has base 10 cm and height 3 cm. The wedge is 12 cm long. What is its volume?",
+   "opts": [
+    "\\(180\\) cm\\(^{3}\\)",
+    "\\(360\\) cm\\(^{3}\\)",
+    "\\(15\\) cm\\(^{3}\\)",
+    "\\(25\\) cm\\(^{3}\\)"
+   ],
+   "why": "The triangle area is \\(\\frac{1}{2} \\times 10 \\times 3 = 15\\) cm\\(^{2}\\). The volume is \\(15 \\times 12 = 180\\) cm\\(^{3}\\). The option of \\(360\\) cm\\(^{3}\\) comes from leaving out the half, \\(15\\) cm\\(^{3}\\) stops after the triangle area, and \\(25\\) cm\\(^{3}\\) adds the measurements instead of multiplying.",
+   "clue": "The length of the prism is not part of the triangle."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A right triangular prism lying on one of its rectangular faces. One triangle end is shaded and labelled cross-section. The base b and the perpendicular height h of the triangle are marked with a right angle symbol. The distance between the two triangle ends is marked length.",
+    "why": "It shows which triangle is the cross-section and which measure is the length."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(108\\) cm\\(^{3}\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(180\\) cm\\(^{3}\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The right answer, 120 cm³, is the same as the worked example's answer on the card, so a student could pick it from memory of the example without doing the working. Changing the numbers so the answer differs from 120 would avoid this."
+   }
+  ],
+  "flags": [
+   "Question a, other: The right answer, 120 cm³, is the same as the worked example's answer on the card, so a student could pick it from memory of the example without doing the working. Changing the numbers so the answer differs from 120 would avoid this."
+  ]
+ },
+ "final": {
+  "title": "Volume of triangular prisms",
+  "card": [
+   "A right prism has the same cross-section all the way along its length. For a triangular prism, the cross-section is a triangle.",
+   "Volume of a right prism \\(=\\) area of cross-section \\(\\times\\) length. The length is the distance between the two triangle ends.",
+   "For a triangular prism, the cross-section area is \\(\\frac{1}{2} \\times b \\times h\\). So the volume is \\(\\frac{1}{2} \\times b \\times h \\times \\text{length}\\). Here \\(h\\) is the height of the triangle, at right angles to its base.",
+   [
+    "Example",
+    "A triangle has base 6 cm and height 4 cm, and the prism is 10 cm long. Triangle area: \\(\\frac{1}{2} \\times 6 \\times 4 = 12\\) cm\\(^{2}\\). Volume: \\(12 \\times 10 = 120\\) cm\\(^{3}\\)."
+   ]
+  ],
+  "remember": "Find the area of the triangle end first, then multiply by the length of the prism.",
+  "a": {
+   "q": "A triangular prism has a triangle end with base 8 cm and height 3 cm. The prism is 9 cm long. What is its volume?",
+   "opts": [
+    "\\(108\\) cm\\(^{3}\\)",
+    "\\(216\\) cm\\(^{3}\\)",
+    "\\(12\\) cm\\(^{3}\\)",
+    "\\(20\\) cm\\(^{3}\\)"
+   ],
+   "why": "The triangle area is \\(\\frac{1}{2} \\times 8 \\times 3 = 12\\) cm\\(^{2}\\). Then \\(12 \\times 9 = 108\\) cm\\(^{3}\\). The option of \\(216\\) cm\\(^{3}\\) is what you get if you forget the half, and \\(12\\) cm\\(^{3}\\) stops after the triangle area.",
+   "clue": "Find the area of the triangle end first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya builds a wooden wedge shaped like a triangular prism. Its triangle end has base 10 cm and height 3 cm. The wedge is 12 cm long. What is its volume?",
+   "opts": [
+    "\\(180\\) cm\\(^{3}\\)",
+    "\\(360\\) cm\\(^{3}\\)",
+    "\\(15\\) cm\\(^{3}\\)",
+    "\\(25\\) cm\\(^{3}\\)"
+   ],
+   "why": "The triangle area is \\(\\frac{1}{2} \\times 10 \\times 3 = 15\\) cm\\(^{2}\\). The volume is \\(15 \\times 12 = 180\\) cm\\(^{3}\\). The option of \\(360\\) cm\\(^{3}\\) comes from leaving out the half, \\(15\\) cm\\(^{3}\\) stops after the triangle area, and \\(25\\) cm\\(^{3}\\) adds the measurements instead of multiplying.",
+   "clue": "The length of the prism is not part of the triangle."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A right triangular prism lying on one of its rectangular faces. One triangle end is shaded and labelled cross-section. The base b and the perpendicular height h of the triangle are marked with a right angle symbol. The distance between the two triangle ends is marked length.",
+    "why": "It shows which triangle is the cross-section and which measure is the length."
+   }
+  ]
+ },
+ "cleared_by": "recheck"
+}

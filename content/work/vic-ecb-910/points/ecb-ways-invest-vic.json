@@ -1,0 +1,273 @@
+{
+ "id": "ecb-ways-invest-vic",
+ "title": "Ways to invest",
+ "brief": "181f4fd1401a",
+ "shortlist": [
+  [
+   "ecb-ways-invest",
+   0.56
+  ],
+  [
+   "acc-other-ways-invest",
+   0.372
+  ],
+  [
+   "ecb-risk-return",
+   0.297
+  ],
+  [
+   "ecb-superannuation",
+   0.262
+  ],
+  [
+   "ecb-consumer-rewards",
+   0.229
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:45Z new, match",
+  "2026-11-12T12:44:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:33Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:25:56Z write: done",
+  "2026-11-12T15:35:03Z check: flagged",
+  "2026-11-12T15:42:21Z fix: suggested",
+  "2026-11-12T17:07:10Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "write": 0.00584,
+  "check": 0.01107,
+  "fix": 0.02316,
+  "recheck": 0.00716
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, ecb-ways-invest, covers shares, term deposits, managed funds, property and super but not bonds or savings accounts, and it does not teach how quickly each option can be sold, so it is a narrower match and needs a new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Ways to invest",
+  "card": [
+   [
+    "Savings and term deposits",
+    "Money in a bank account earns interest and is low risk. A term deposit locks the money away for a set time, usually for a higher rate."
+   ],
+   [
+    "Shares",
+    "A share is a small part ownership of a company. Its price can rise or fall, and the company may pay dividends. Returns can be high, but so can losses."
+   ],
+   [
+    "Property",
+    "Property can earn rent and may rise in price. It costs a lot to buy and can take weeks or months to sell."
+   ],
+   [
+    "Bonds and managed funds",
+    "A bond is a loan to a government or company that pays interest. A managed fund pools many people's money, and professionals invest it in a mix of assets."
+   ]
+  ],
+  "remember": "Each way to invest has its own mix of risk, return and how quickly it can be sold.",
+  "a": {
+   "q": "Which investment is a loan to a government or company that pays interest?",
+   "opts": [
+    "A bond",
+    "A share",
+    "A managed fund",
+    "A term deposit"
+   ],
+   "why": "A bond is a loan, and the borrower pays interest to the investor. A share is different: it is part ownership of a company, not a loan to it.",
+   "clue": "Think about who is borrowing the money."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya may need her money back in a few days. Which investment is hardest to sell quickly?",
+   "opts": [
+    "A house she rents out",
+    "Shares in a listed company",
+    "A savings account",
+    "A bank account she can access at any time"
+   ],
+   "why": "Property can take weeks or months to sell, so it is the hardest to turn into cash quickly. Shares are riskier, but they can usually be sold quickly, so risk and speed of sale are different things.",
+   "clue": "Which one costs a lot and takes time to sell?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A bond",
+   "also_right": []
+  },
+  "b": {
+   "best": "A house she rents out",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue ('costs a lot and takes time to sell') repeats the card's wording for property almost exactly, so it points straight to the answer rather than prompting thought."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'A savings account' and 'A bank account she can access at any time' are near-duplicates. Both are bank accounts, so they are easy to rule out together and the question is weaker."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and answers are correct. In question b, the clue nearly copies the card's description of property, and two options are near-duplicate bank accounts."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue ('costs a lot and takes time to sell') repeats the card's wording for property almost exactly, so it points straight to the answer rather than prompting thought.",
+  "Question b, wording: 'A savings account' and 'A bank account she can access at any time' are near-duplicates. Both are bank accounts, so they are easy to rule out together and the question is weaker."
+ ],
+ "proposal": {
+  "title": "Ways to invest",
+  "card": [
+   [
+    "Savings and term deposits",
+    "Money in a bank savings account is low risk, earns interest and can be taken out at any time. A term deposit locks the money in the bank for a set time, usually for a higher rate."
+   ],
+   [
+    "Shares",
+    "A share is a small part ownership of a company. Its price can rise or fall, and the company may pay dividends. Listed shares can usually be sold quickly, but returns and losses can be large."
+   ],
+   [
+    "Property",
+    "Property can earn rent and may rise in price. It costs a lot to buy and can take weeks or months to sell."
+   ],
+   [
+    "Bonds and managed funds",
+    "A bond is a loan to a government or company that pays interest. A managed fund pools many people's money, and professionals invest it in a mix of assets."
+   ]
+  ],
+  "remember": "Each way to invest has its own mix of risk, return and how quickly it can be sold.",
+  "a": {
+   "q": "Leo lends $1,000 to the Australian Government. It pays him interest each year and repays him after five years. What has Leo bought?",
+   "opts": [
+    "A bond",
+    "A share",
+    "A managed fund",
+    "A term deposit"
+   ],
+   "why": "Leo has lent money to a government that pays him interest, which is a bond. A term deposit also pays interest for a set time, but the money is placed with a bank, not lent to a government.",
+   "clue": "Who is borrowing Leo's money?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya may need her money back in a few days, and she does not want to risk losing any of it. Which investment suits her best?",
+   "opts": [
+    "A savings account at a bank",
+    "Shares in a listed company",
+    "A house she rents out",
+    "A two-year term deposit at a bank"
+   ],
+   "why": "A savings account is low risk and the money can be taken out at any time, so it meets both of Priya's needs. Shares can usually be sold quickly, but their price may have fallen when she sells. The term deposit locks her money away and the house can take months to sell.",
+   "clue": "Check each option for both risk and speed of access."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:10Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A bond",
+    "also_right": []
+   },
+   "b": {
+    "best": "A savings account at a bank",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:10Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue ('costs a lot and takes time to sell') repeats the card's wording for property almost exactly, so it points straight to the answer rather than prompting thought."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'A savings account' and 'A bank account she can access at any time' are near-duplicates. Both are bank accounts, so they are easy to rule out together and the question is weaker."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue ('costs a lot and takes time to sell') repeats the card's wording for property almost exactly, so it points straight to the answer rather than prompting thought.",
+   "Question b, wording: 'A savings account' and 'A bank account she can access at any time' are near-duplicates. Both are bank accounts, so they are easy to rule out together and the question is weaker."
+  ]
+ },
+ "final": {
+  "title": "Ways to invest",
+  "card": [
+   [
+    "Savings and term deposits",
+    "Money in a bank savings account is low risk, earns interest and can be taken out at any time. A term deposit locks the money in the bank for a set time, usually for a higher rate."
+   ],
+   [
+    "Shares",
+    "A share is a small part ownership of a company. Its price can rise or fall, and the company may pay dividends. Listed shares can usually be sold quickly, but returns and losses can be large."
+   ],
+   [
+    "Property",
+    "Property can earn rent and may rise in price. It costs a lot to buy and can take weeks or months to sell."
+   ],
+   [
+    "Bonds and managed funds",
+    "A bond is a loan to a government or company that pays interest. A managed fund pools many people's money, and professionals invest it in a mix of assets."
+   ]
+  ],
+  "remember": "Each way to invest has its own mix of risk, return and how quickly it can be sold.",
+  "a": {
+   "q": "Leo lends $1,000 to the Australian Government. It pays him interest each year and repays him after five years. What has Leo bought?",
+   "opts": [
+    "A bond",
+    "A share",
+    "A managed fund",
+    "A term deposit"
+   ],
+   "why": "Leo has lent money to a government that pays him interest, which is a bond. A term deposit also pays interest for a set time, but the money is placed with a bank, not lent to a government.",
+   "clue": "Who is borrowing Leo's money?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya may need her money back in a few days, and she does not want to risk losing any of it. Which investment suits her best?",
+   "opts": [
+    "A savings account at a bank",
+    "Shares in a listed company",
+    "A house she rents out",
+    "A two-year term deposit at a bank"
+   ],
+   "why": "A savings account is low risk and the money can be taken out at any time, so it meets both of Priya's needs. Shares can usually be sold quickly, but their price may have fallen when she sells. The term deposit locks her money away and the house can take months to sell.",
+   "clue": "Check each option for both risk and speed of access."
+  }
+ },
+ "cleared_by": "recheck"
+}

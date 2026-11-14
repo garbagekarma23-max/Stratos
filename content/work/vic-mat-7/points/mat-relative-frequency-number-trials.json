@@ -1,0 +1,250 @@
+{
+ "id": "mat-relative-frequency-number-trials",
+ "title": "Relative frequency and the number of trials",
+ "brief": "604e166955db",
+ "shortlist": [
+  [
+   "mat-experiments-theory",
+   0.629
+  ],
+  [
+   "mat-expected-relative-frequency",
+   0.621
+  ],
+  [
+   "mat-estimating-probability-from-relative",
+   0.452
+  ],
+  [
+   "mat-relative-frequency",
+   0.312
+  ],
+  [
+   "mat-sample-spaces-probability-2",
+   0.212
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 says reuse mat-experiments-theory, so to the Opus match check, as every reuse is",
+  "2026-11-12T12:53:57Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:50Z write: done",
+  "2026-11-12T15:26:05Z check: flagged",
+  "2026-11-12T15:35:10Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "confirm": 0.01443,
+  "write": 0.01245,
+  "check": 0.01074,
+  "fix": 0.02088,
+  "recheck": 0.0077
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-experiments-theory",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the same idea, that relative frequency varies with few trials and usually settles closer to the theoretical probability with many trials, at a suitable Year 7 depth, and its terms and examples fit Victoria.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-experiments-theory, covers how more trials bring relative frequency closer to the theoretical probability but never defines relative frequency, which this brief also teaches, and adding that definition would be a new step; the other relative frequency points are about estimating an unknown probability, not comparing with theory.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Relative frequency and trials",
+  "card": [
+   "A trial is one go at an experiment, such as one coin toss. Doing many trials and recording the results is how we test chance.",
+   "Relative frequency is how often an outcome happened, divided by the number of trials. Relative frequency \\(=\\) number of times it happened \\(\\div\\) number of trials.",
+   "Example: Sam tosses a coin 20 times and gets 12 heads. The relative frequency of heads is \\(\\frac{12}{20} = 0.6\\).",
+   "The theoretical probability of heads is \\(0.5\\). With more trials, relative frequency usually gets closer to this, but it may not match it exactly."
+  ],
+  "remember": "Relative frequency is times it happened over trials, and it usually nears the probability as trials grow.",
+  "a": {
+   "q": "Priya rolls a die 40 times and gets a six 8 times. What is the relative frequency of a six?",
+   "opts": [
+    "\\(\\frac{8}{40} = 0.2\\)",
+    "\\(\\frac{8}{32} = 0.25\\)",
+    "\\(\\frac{40}{8} = 5\\)",
+    "\\(\\frac{1}{6} \\approx 0.17\\)"
+   ],
+   "why": "Relative frequency is the number of sixes over the number of trials, so \\(\\frac{8}{40} = 0.2\\). The value \\(\\frac{1}{6}\\) is the theoretical probability, not what happened in her trials.",
+   "clue": "Divide how often it happened by the number of trials."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo tosses a coin and records heads each time. Which of his results will most likely be closest to 0.5 for heads?",
+   "opts": [
+    "300 heads in 600 tosses",
+    "3 heads in 5 tosses",
+    "7 heads in 10 tosses",
+    "1 head in 2 tosses"
+   ],
+   "why": "300 in 600 is exactly 0.5, and with so many trials it is the most likely to be near 0.5. Small numbers of tosses can land near 0.5 by luck, as 1 in 2 does, but they are less reliable.",
+   "clue": "More trials usually give a more reliable result."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(\\frac{8}{40} = 0.2\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "300 heads in 600 tosses",
+   "also_right": [
+    "1 head in 2 tosses"
+   ]
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question asks which recorded result 'will most likely be' closest to 0.5, but the results are already given. '1 head in 2 tosses' is exactly 0.5, just like 300 in 600, so two options are equally close and a careful student could defend either. Reword it to ask which result Leo should trust most as an estimate, or change 1 in 2 so it is not exactly 0.5."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says 1 in 2 lands 'near 0.5 by luck', but it is exactly 0.5. This understates the problem that two options are equally correct as written."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b has two options that both equal exactly 0.5 (1 in 2 and 300 in 600), and its 'will most likely be' wording does not fit results already recorded, so it needs rewording. The card and question a are fine."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker says “1 head in 2 tosses” could also be right.",
+  "Question b, wording: The question asks which recorded result 'will most likely be' closest to 0.5, but the results are already given. '1 head in 2 tosses' is exactly 0.5, just like 300 in 600, so two options are equally close and a careful student could defend either. Reword it to ask which result Leo should trust most as an estimate, or change 1 in 2 so it is not exactly 0.5.",
+  "Question b, other: The why says 1 in 2 lands 'near 0.5 by luck', but it is exactly 0.5. This understates the problem that two options are equally correct as written."
+ ],
+ "proposal": {
+  "title": "Relative frequency and trials",
+  "card": [
+   "A trial is one go at an experiment, such as one coin toss. Doing many trials and recording the results is how we test chance.",
+   "Relative frequency is how often an outcome happened, divided by the number of trials. Relative frequency \\(=\\) number of times it happened \\(\\div\\) number of trials.",
+   "Example: Sam tosses a coin 20 times and gets 12 heads. The relative frequency of heads is \\(\\frac{12}{20} = 0.6\\).",
+   "The theoretical probability of heads is \\(0.5\\). With more trials, relative frequency usually gets closer to it, so results from many trials give a more reliable estimate than results from a few."
+  ],
+  "remember": "Relative frequency is times it happened over trials. More trials usually give a better estimate of the probability.",
+  "a": {
+   "q": "Priya rolls a die 40 times and gets a six 8 times. What is the relative frequency of a six?",
+   "opts": [
+    "\\(\\frac{8}{40} = 0.2\\)",
+    "\\(\\frac{8}{32} = 0.25\\)",
+    "\\(\\frac{40}{8} = 5\\)",
+    "\\(\\frac{1}{6} \\approx 0.17\\)"
+   ],
+   "why": "Relative frequency is the number of sixes over the number of trials, so \\(\\frac{8}{40} = 0.2\\). The value \\(\\frac{1}{6}\\) is the theoretical probability, not what happened in her trials.",
+   "clue": "Divide how often it happened by the number of trials."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo tosses the same coin in four separate sets and records the heads. Which set gives the most reliable estimate of the probability of heads?",
+   "opts": [
+    "290 heads in 600 tosses",
+    "1 head in 2 tosses",
+    "3 heads in 5 tosses",
+    "6 heads in 10 tosses"
+   ],
+   "why": "The set of 600 tosses has by far the most trials, so its relative frequency, \\(\\frac{290}{600} \\approx 0.48\\), is the most reliable estimate. The set of 2 tosses gives exactly \\(0.5\\), but with only two trials that match is down to luck, so it is not reliable.",
+   "clue": "Look at the number of trials, not just the answer."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(\\frac{8}{40} = 0.2\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "290 heads in 600 tosses",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question asks which recorded result 'will most likely be' closest to 0.5, but the results are already given. '1 head in 2 tosses' is exactly 0.5, just like 300 in 600, so two options are equally close and a careful student could defend either. Reword it to ask which result Leo should trust most as an estimate, or change 1 in 2 so it is not exactly 0.5."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says 1 in 2 lands 'near 0.5 by luck', but it is exactly 0.5. This understates the problem that two options are equally correct as written."
+   }
+  ],
+  "flags": [
+   "Question b: the checker says “1 head in 2 tosses” could also be right.",
+   "Question b, wording: The question asks which recorded result 'will most likely be' closest to 0.5, but the results are already given. '1 head in 2 tosses' is exactly 0.5, just like 300 in 600, so two options are equally close and a careful student could defend either. Reword it to ask which result Leo should trust most as an estimate, or change 1 in 2 so it is not exactly 0.5.",
+   "Question b, other: The why says 1 in 2 lands 'near 0.5 by luck', but it is exactly 0.5. This understates the problem that two options are equally correct as written."
+  ]
+ },
+ "final": {
+  "title": "Relative frequency and trials",
+  "card": [
+   "A trial is one go at an experiment, such as one coin toss. Doing many trials and recording the results is how we test chance.",
+   "Relative frequency is how often an outcome happened, divided by the number of trials. Relative frequency \\(=\\) number of times it happened \\(\\div\\) number of trials.",
+   "Example: Sam tosses a coin 20 times and gets 12 heads. The relative frequency of heads is \\(\\frac{12}{20} = 0.6\\).",
+   "The theoretical probability of heads is \\(0.5\\). With more trials, relative frequency usually gets closer to it, so results from many trials give a more reliable estimate than results from a few."
+  ],
+  "remember": "Relative frequency is times it happened over trials. More trials usually give a better estimate of the probability.",
+  "a": {
+   "q": "Priya rolls a die 40 times and gets a six 8 times. What is the relative frequency of a six?",
+   "opts": [
+    "\\(\\frac{8}{40} = 0.2\\)",
+    "\\(\\frac{8}{32} = 0.25\\)",
+    "\\(\\frac{40}{8} = 5\\)",
+    "\\(\\frac{1}{6} \\approx 0.17\\)"
+   ],
+   "why": "Relative frequency is the number of sixes over the number of trials, so \\(\\frac{8}{40} = 0.2\\). The value \\(\\frac{1}{6}\\) is the theoretical probability, not what happened in her trials.",
+   "clue": "Divide how often it happened by the number of trials."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo tosses the same coin in four separate sets and records the heads. Which set gives the most reliable estimate of the probability of heads?",
+   "opts": [
+    "290 heads in 600 tosses",
+    "1 head in 2 tosses",
+    "3 heads in 5 tosses",
+    "6 heads in 10 tosses"
+   ],
+   "why": "The set of 600 tosses has by far the most trials, so its relative frequency, \\(\\frac{290}{600} \\approx 0.48\\), is the most reliable estimate. The set of 2 tosses gives exactly \\(0.5\\), but with only two trials that match is down to luck, so it is not reliable.",
+   "clue": "Look at the number of trials, not just the answer."
+  }
+ },
+ "cleared_by": "recheck"
+}

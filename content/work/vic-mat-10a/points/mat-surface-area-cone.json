@@ -1,0 +1,250 @@
+{
+ "id": "mat-surface-area-cone",
+ "title": "Surface area of a cone",
+ "brief": "6eccacd3e97a",
+ "shortlist": [
+  [
+   "mat-surface-area-cylinders",
+   0.239
+  ],
+  [
+   "mat-surface-area-volume",
+   0.235
+  ],
+  [
+   "mat-surface-area",
+   0.231
+  ],
+  [
+   "mat-surface-area-composite-solids",
+   0.218
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:04Z write: failed the content check, writing again",
+  "2026-11-12T15:35:09Z write: done",
+  "2026-11-12T15:59:43Z check: flagged",
+  "2026-11-12T16:02:56Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.02031,
+  "check": 0.00937,
+  "fix": 0.03143,
+  "recheck": 0.00726
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches the surface area of a cone; the closest, mat-surface-area-cylinders, covers a different solid with a different formula, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Surface area of a cone",
+  "card": [
+   "A cone has a circular base of radius \\(r\\) and a curved surface. The slant height \\(s\\) is the distance from the tip down the side of the cone to the edge of the base.",
+   "The curved surface has area \\(\\pi r s\\). Use the slant height \\(s\\), not the vertical height \\(h\\).",
+   "A closed cone also has a circular base of area \\(\\pi r^{2}\\). So the total surface area is \\(SA = \\pi r^{2} + \\pi r s\\).",
+   [
+    "Example",
+    "A closed cone has radius 3 cm and slant height 5 cm. Base: \\(\\pi \\times 3^{2} = 9\\pi\\). Curved: \\(\\pi \\times 3 \\times 5 = 15\\pi\\). Total: \\(24\\pi \\approx 75.4\\) cm\\(^{2}\\)."
+   ]
+  ],
+  "remember": "Closed cone: base \\(\\pi r^{2}\\) plus curved surface \\(\\pi r s\\), using slant height.",
+  "a": {
+   "q": "A closed cone has radius 4 cm and slant height 7 cm. What is its total surface area, in terms of \\(\\pi\\)?",
+   "opts": [
+    "\\(44\\pi \\text{ cm}^{2}\\)",
+    "\\(28\\pi \\text{ cm}^{2}\\)",
+    "\\(23\\pi \\text{ cm}^{2}\\)",
+    "\\(112\\pi \\text{ cm}^{2}\\)"
+   ],
+   "why": "Base: \\(\\pi \\times 4^{2} = 16\\pi\\). Curved: \\(\\pi \\times 4 \\times 7 = 28\\pi\\). Total \\(44\\pi\\). Giving \\(28\\pi\\) leaves out the base, which a closed cone has.",
+   "clue": "A closed cone has a base as well as a curved surface."
+  },
+  "b": {
+   "d": 3,
+   "q": "A closed cone has radius 6 cm and vertical height 8 cm. What is its total surface area, in terms of \\(\\pi\\)?",
+   "opts": [
+    "\\(96\\pi \\text{ cm}^{2}\\)",
+    "\\(84\\pi \\text{ cm}^{2}\\)",
+    "\\(48\\pi \\text{ cm}^{2}\\)",
+    "\\(132\\pi \\text{ cm}^{2}\\)"
+   ],
+   "why": "First find the slant height: \\(s = \\sqrt{6^{2} + 8^{2}} = 10\\). Then \\(SA = \\pi \\times 6^{2} + \\pi \\times 6 \\times 10 = 36\\pi + 60\\pi = 96\\pi\\). Using \\(h = 8\\) as the slant height gives \\(84\\pi\\), which is wrong.",
+   "clue": "The formula needs the slant height, which is not given."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A cone with the radius \\(r\\) marked on the circular base, the slant height \\(s\\) marked along the side from the tip to the edge of the base, and the vertical height \\(h\\) marked from the tip straight down to the centre of the base as a dashed line.",
+    "why": "It shows the slant height apart from the vertical height."
+   }
+  ]
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(44\\pi \\text{ cm}^{2}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(96\\pi \\text{ cm}^{2}\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The question gives the vertical height, so students must find the slant height with Pythagoras (s = √(r² + h²)). The card says to use s rather than h but never shows how s relates to r and h, so the question needs more than the card teaches. Add a card line linking s, r and h, or give the slant height in the question."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question a are correct. Question b needs Pythagoras to find the slant height from the vertical height, which the card never teaches; add that step to the card or give the slant height."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, level: The question gives the vertical height, so students must find the slant height with Pythagoras (s = √(r² + h²)). The card says to use s rather than h but never shows how s relates to r and h, so the question needs more than the card teaches. Add a card line linking s, r and h, or give the slant height in the question."
+ ],
+ "proposal": {
+  "title": "Surface area of a cone",
+  "card": [
+   "A cone has a circular base of radius \\(r\\) and a curved surface. The slant height \\(s\\) is the distance from the tip down the side of the cone to the edge of the base.",
+   "The vertical height \\(h\\), the radius \\(r\\) and the slant height \\(s\\) form a right-angled triangle. So by Pythagoras, \\(s = \\sqrt{r^{2} + h^{2}}\\).",
+   "The curved surface has area \\(\\pi r s\\), using \\(s\\), not \\(h\\). A closed cone also has a base of area \\(\\pi r^{2}\\), so \\(SA = \\pi r^{2} + \\pi r s\\).",
+   "For example, a closed cone has radius 3 cm and height 4 cm. Then \\(s = \\sqrt{9 + 16} = 5\\). Base \\(9\\pi\\), curved \\(15\\pi\\), so the total is \\(24\\pi \\approx 75.4\\) cm\\(^{2}\\)."
+  ],
+  "remember": "Closed cone: \\(SA = \\pi r^{2} + \\pi r s\\), with the slant height \\(s\\), not \\(h\\).",
+  "a": {
+   "q": "A closed cone has radius 4 cm and slant height 7 cm. What is its total surface area, in terms of \\(\\pi\\)?",
+   "opts": [
+    "\\(44\\pi\\) cm\\(^{2}\\)",
+    "\\(28\\pi\\) cm\\(^{2}\\)",
+    "\\(23\\pi\\) cm\\(^{2}\\)",
+    "\\(112\\pi\\) cm\\(^{2}\\)"
+   ],
+   "why": "Base: \\(\\pi \\times 4^{2} = 16\\pi\\). Curved: \\(\\pi \\times 4 \\times 7 = 28\\pi\\). The total is \\(44\\pi\\). Giving \\(28\\pi\\) leaves out the base, which a closed cone has.",
+   "clue": "A closed cone has a base as well as a curved surface."
+  },
+  "b": {
+   "d": 3,
+   "q": "A closed cone has radius 6 cm and vertical height 8 cm. What is its total surface area, in terms of \\(\\pi\\)?",
+   "opts": [
+    "\\(96\\pi\\) cm\\(^{2}\\)",
+    "\\(84\\pi\\) cm\\(^{2}\\)",
+    "\\(60\\pi\\) cm\\(^{2}\\)",
+    "\\(136\\pi\\) cm\\(^{2}\\)"
+   ],
+   "why": "First find the slant height: \\(s = \\sqrt{36 + 64} = 10\\). Then \\(SA = 36\\pi + 60\\pi = 96\\pi\\). Using \\(h = 8\\) in place of the slant height gives \\(36\\pi + 48\\pi = 84\\pi\\), which is wrong.",
+   "clue": "Which length does the formula need, and is it given?"
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A cone with the radius \\(r\\) marked on the circular base from the centre to the edge, the slant height \\(s\\) marked along the side from the tip to the edge of the base, and the vertical height \\(h\\) marked as a dashed line from the tip straight down to the centre of the base. A small right-angle mark shows where \\(h\\) meets \\(r\\), so \\(r\\), \\(h\\) and \\(s\\) form a right-angled triangle.",
+    "why": "It shows the slant height apart from the vertical height and the right-angled triangle used to find it."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(44\\pi\\) cm\\(^{2}\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(96\\pi\\) cm\\(^{2}\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The question gives the vertical height, so students must find the slant height with Pythagoras (s = √(r² + h²)). The card says to use s rather than h but never shows how s relates to r and h, so the question needs more than the card teaches. Add a card line linking s, r and h, or give the slant height in the question."
+   }
+  ],
+  "flags": [
+   "Question b, level: The question gives the vertical height, so students must find the slant height with Pythagoras (s = √(r² + h²)). The card says to use s rather than h but never shows how s relates to r and h, so the question needs more than the card teaches. Add a card line linking s, r and h, or give the slant height in the question."
+  ]
+ },
+ "final": {
+  "title": "Surface area of a cone",
+  "card": [
+   "A cone has a circular base of radius \\(r\\) and a curved surface. The slant height \\(s\\) is the distance from the tip down the side of the cone to the edge of the base.",
+   "The vertical height \\(h\\), the radius \\(r\\) and the slant height \\(s\\) form a right-angled triangle. So by Pythagoras, \\(s = \\sqrt{r^{2} + h^{2}}\\).",
+   "The curved surface has area \\(\\pi r s\\), using \\(s\\), not \\(h\\). A closed cone also has a base of area \\(\\pi r^{2}\\), so \\(SA = \\pi r^{2} + \\pi r s\\).",
+   "For example, a closed cone has radius 3 cm and height 4 cm. Then \\(s = \\sqrt{9 + 16} = 5\\). Base \\(9\\pi\\), curved \\(15\\pi\\), so the total is \\(24\\pi \\approx 75.4\\) cm\\(^{2}\\)."
+  ],
+  "remember": "Closed cone: \\(SA = \\pi r^{2} + \\pi r s\\), with the slant height \\(s\\), not \\(h\\).",
+  "a": {
+   "q": "A closed cone has radius 4 cm and slant height 7 cm. What is its total surface area, in terms of \\(\\pi\\)?",
+   "opts": [
+    "\\(44\\pi\\) cm\\(^{2}\\)",
+    "\\(28\\pi\\) cm\\(^{2}\\)",
+    "\\(23\\pi\\) cm\\(^{2}\\)",
+    "\\(112\\pi\\) cm\\(^{2}\\)"
+   ],
+   "why": "Base: \\(\\pi \\times 4^{2} = 16\\pi\\). Curved: \\(\\pi \\times 4 \\times 7 = 28\\pi\\). The total is \\(44\\pi\\). Giving \\(28\\pi\\) leaves out the base, which a closed cone has.",
+   "clue": "A closed cone has a base as well as a curved surface."
+  },
+  "b": {
+   "d": 3,
+   "q": "A closed cone has radius 6 cm and vertical height 8 cm. What is its total surface area, in terms of \\(\\pi\\)?",
+   "opts": [
+    "\\(96\\pi\\) cm\\(^{2}\\)",
+    "\\(84\\pi\\) cm\\(^{2}\\)",
+    "\\(60\\pi\\) cm\\(^{2}\\)",
+    "\\(136\\pi\\) cm\\(^{2}\\)"
+   ],
+   "why": "First find the slant height: \\(s = \\sqrt{36 + 64} = 10\\). Then \\(SA = 36\\pi + 60\\pi = 96\\pi\\). Using \\(h = 8\\) in place of the slant height gives \\(36\\pi + 48\\pi = 84\\pi\\), which is wrong.",
+   "clue": "Which length does the formula need, and is it given?"
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A cone with the radius \\(r\\) marked on the circular base from the centre to the edge, the slant height \\(s\\) marked along the side from the tip to the edge of the base, and the vertical height \\(h\\) marked as a dashed line from the tip straight down to the centre of the base. A small right-angle mark shows where \\(h\\) meets \\(r\\), so \\(r\\), \\(h\\) and \\(s\\) form a right-angled triangle.",
+    "why": "It shows the slant height apart from the vertical height and the right-angled triangle used to find it."
+   }
+  ]
+ },
+ "cleared_by": "recheck"
+}

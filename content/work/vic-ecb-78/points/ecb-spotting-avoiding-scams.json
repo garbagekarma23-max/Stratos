@@ -1,0 +1,207 @@
+{
+ "id": "ecb-spotting-avoiding-scams",
+ "title": "Spotting and avoiding scams",
+ "brief": "29590a9e2571",
+ "shortlist": [
+  [
+   "ecb-scams-identity-theft",
+   0.333
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:44Z new, match",
+  "2026-11-12T12:44:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:32Z write: done",
+  "2026-11-12T15:25:55Z check: flagged",
+  "2026-11-12T15:35:03Z fix: suggested",
+  "2026-11-12T17:07:10Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.01091,
+  "check": 0.01183,
+  "fix": 0.01633,
+  "recheck": 0.00802
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Scams and identity theft, is a Year 9 card that defines scams and identity theft, whereas the new point is about spotting and avoiding scams, with gift card requests, Scamwatch and never sharing codes, at a different depth for Years 7 and 8.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Spotting and avoiding scams",
+  "card": [
+   "Scams have warning signs. One is pressure to act fast, such as \"pay in the next hour or lose your chance\".",
+   "Another is a request for gift cards or personal details, such as a password or a code sent to your phone. Real businesses do not ask for these.",
+   "A deal that looks too good to be true, such as a brand new phone for a tiny price, is also a warning sign.",
+   "If you are unsure, check with Scamwatch, the Australian Government's scam website. Never share your passwords or codes with anyone."
+  ],
+  "remember": "Pressure, odd payment or detail requests and deals too good to be true are warning signs. Check, and never share codes.",
+  "a": {
+   "q": "Which message shows a warning sign of a scam?",
+   "opts": [
+    "Send gift card codes in the next hour to keep your account",
+    "Your parcel is out for delivery and will arrive tomorrow",
+    "Your school library book is due back next Friday",
+    "Your phone plan bill is ready to view in your account"
+   ],
+   "why": "Asking for gift card codes and demanding quick action are both warning signs. The other messages give ordinary information and ask for nothing risky.",
+   "clue": "Look for pressure and an unusual way to pay."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya gets a text with a code from her email provider. Then a caller says he is from the provider and asks her to read the code out. What should she do?",
+   "opts": [
+    "Hang up, keep the code private and check with Scamwatch",
+    "Read out the code, because he knows her email provider",
+    "Read out only half of the code to be safe",
+    "Ask him to send the request in writing, then read it out"
+   ],
+   "why": "Codes must never be shared, even with someone who sounds official. Knowing the provider's name does not prove he is real, and sharing even part of a code is still risky.",
+   "clue": "Should a code ever be read out to someone else?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Send gift card codes in the next hour to keep your account",
+   "also_right": []
+  },
+  "b": {
+   "best": "Hang up, keep the code private and check with Scamwatch",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"Real businesses do not ask for these\" follows \"gift cards or personal details\", so it reads as if real businesses never ask for any personal details. Real businesses often ask for a name, address or date of birth, for example to deliver a parcel or check who you are. The line should be limited to passwords, one-time codes and payment by gift card."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer, and the explanations agree with the card. One card line overstates things: it says real businesses never ask for personal details, but it should be limited to passwords, codes and gift card payments."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: \"Real businesses do not ask for these\" follows \"gift cards or personal details\", so it reads as if real businesses never ask for any personal details. Real businesses often ask for a name, address or date of birth, for example to deliver a parcel or check who you are. The line should be limited to passwords, one-time codes and payment by gift card."
+ ],
+ "proposal": {
+  "title": "Spotting and avoiding scams",
+  "card": [
+   "Scams have warning signs. One is pressure to act fast, such as \"pay in the next hour or lose your chance\".",
+   "Another is a request to pay with gift cards, or to share a password or a code sent to your phone. Real businesses do not ask you for these.",
+   "A deal that looks too good to be true, such as a brand new phone for a tiny price, is also a warning sign.",
+   "If you are unsure, check with Scamwatch, the Australian Government's scam website. Never share your passwords or codes with anyone."
+  ],
+  "remember": "Pressure, gift card payments, requests for codes and deals too good to be true are warning signs. Check with Scamwatch, and never share codes.",
+  "a": {
+   "q": "Which message shows a warning sign of a scam?",
+   "opts": [
+    "Send gift card codes in the next hour to keep your account",
+    "Your parcel is out for delivery and will arrive tomorrow",
+    "Your school library book is due back next Friday",
+    "Your phone plan bill is ready to view in your account"
+   ],
+   "why": "Asking for payment with gift card codes and demanding quick action are both warning signs. The other messages give ordinary information and ask for nothing risky.",
+   "clue": "Look for pressure and an unusual way to pay."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya gets a text with a code from her email provider. Then a caller says he is from the provider and asks her to read the code out. What should she do?",
+   "opts": [
+    "Hang up, keep the code private and check with Scamwatch",
+    "Read out the code, because he knows her email provider",
+    "Read out only half of the code to be safe",
+    "Ask him to send the request in writing, then read it out"
+   ],
+   "why": "Codes should never be shared with anyone, even someone who sounds official. Knowing the provider's name does not prove he is real, and sharing even part of a code is still sharing it.",
+   "clue": "Should a code ever be read out to someone else?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:10Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Send gift card codes in the next hour to keep your account",
+    "also_right": []
+   },
+   "b": {
+    "best": "Hang up, keep the code private and check with Scamwatch",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:10Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"Real businesses do not ask for these\" follows \"gift cards or personal details\", so it reads as if real businesses never ask for any personal details. Real businesses often ask for a name, address or date of birth, for example to deliver a parcel or check who you are. The line should be limited to passwords, one-time codes and payment by gift card."
+   }
+  ],
+  "flags": [
+   "Card, fact: \"Real businesses do not ask for these\" follows \"gift cards or personal details\", so it reads as if real businesses never ask for any personal details. Real businesses often ask for a name, address or date of birth, for example to deliver a parcel or check who you are. The line should be limited to passwords, one-time codes and payment by gift card."
+  ]
+ },
+ "final": {
+  "title": "Spotting and avoiding scams",
+  "card": [
+   "Scams have warning signs. One is pressure to act fast, such as \"pay in the next hour or lose your chance\".",
+   "Another is a request to pay with gift cards, or to share a password or a code sent to your phone. Real businesses do not ask you for these.",
+   "A deal that looks too good to be true, such as a brand new phone for a tiny price, is also a warning sign.",
+   "If you are unsure, check with Scamwatch, the Australian Government's scam website. Never share your passwords or codes with anyone."
+  ],
+  "remember": "Pressure, gift card payments, requests for codes and deals too good to be true are warning signs. Check with Scamwatch, and never share codes.",
+  "a": {
+   "q": "Which message shows a warning sign of a scam?",
+   "opts": [
+    "Send gift card codes in the next hour to keep your account",
+    "Your parcel is out for delivery and will arrive tomorrow",
+    "Your school library book is due back next Friday",
+    "Your phone plan bill is ready to view in your account"
+   ],
+   "why": "Asking for payment with gift card codes and demanding quick action are both warning signs. The other messages give ordinary information and ask for nothing risky.",
+   "clue": "Look for pressure and an unusual way to pay."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya gets a text with a code from her email provider. Then a caller says he is from the provider and asks her to read the code out. What should she do?",
+   "opts": [
+    "Hang up, keep the code private and check with Scamwatch",
+    "Read out the code, because he knows her email provider",
+    "Read out only half of the code to be safe",
+    "Ask him to send the request in writing, then read it out"
+   ],
+   "why": "Codes should never be shared with anyone, even someone who sounds official. Knowing the provider's name does not prove he is real, and sharing even part of a code is still sharing it.",
+   "clue": "Should a code ever be read out to someone else?"
+  }
+ },
+ "cleared_by": "recheck"
+}

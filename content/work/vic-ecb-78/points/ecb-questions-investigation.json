@@ -1,0 +1,297 @@
+{
+ "id": "ecb-questions-investigation",
+ "title": "Questions for an investigation",
+ "brief": "0dbc05881333",
+ "shortlist": [
+  [
+   "ecb-asking-inquiry-question",
+   0.469
+  ],
+  [
+   "his-asking-historical-questions",
+   0.223
+  ],
+  [
+   "mat-algorithms-that-sort-shapes",
+   0.206
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:44Z new, match",
+  "2026-11-12T12:44:14Z match: Claude Haiku 5.5 says adapt ecb-asking-inquiry-question (3 changes)",
+  "2026-11-12T15:15:33Z adapt: failed the content check, writing again",
+  "2026-11-12T15:25:55Z adapt: done (still fails the content check)",
+  "2026-11-12T15:35:02Z check: flagged",
+  "2026-11-12T15:59:42Z fix: suggested",
+  "2026-11-12T17:07:10Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "adapt": 0.0112,
+  "check": 0.01398,
+  "fix": 0.02254,
+  "recheck": 0.00707
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "ecb-asking-inquiry-question",
+  "changes": [
+   "Use the term investigation question to match the new point and the Victorian chapter, Investigating issues, in place of inquiry question.",
+   "Replace the Hobart bakery example in question b with a bakery or business in a Victorian place, since the course is for students in Victoria.",
+   "Check the example questions and answers against the Victorian Curriculum Levels 7 and 8 wording for this chapter."
+  ],
+  "sure": "high",
+  "reason": "The bank card teaches the same idea at a suitable depth for these levels, but it uses the inquiry wording and a Tasmanian example, so it needs small changes to fit the Victorian course.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "ecb-asking-inquiry-question",
+  "changes": [
+   "Use the term investigation question to match the new point and the Victorian chapter, Investigating issues, in place of inquiry question.",
+   "Replace the Hobart bakery example in question b with a bakery or business in a Victorian place, since the course is for students in Victoria.",
+   "Check the example questions and answers against the Victorian Curriculum Levels 7 and 8 wording for this chapter."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "title",
+   "card1",
+   "remember",
+   "a.q",
+   "b.q",
+   "b.opt1",
+   "b.opt2",
+   "b.opt3",
+   "b.opt4",
+   "b.why"
+  ]
+ },
+ "draft": {
+  "title": "Asking an investigation question",
+  "card": [
+   "An investigation question is the question you set out to answer when you research an economic or business issue. A good one guides what you look for.",
+   [
+    "Open",
+    "it cannot be answered with just yes or no. It needs explaining, such as \"How does...\" or \"Why has...\"."
+   ],
+   [
+    "Focused",
+    "it is about one issue, in a clear place or group. \"How has the price of eggs changed in Australian supermarkets?\" is focused. \"How does the whole economy work?\" is too wide."
+   ],
+   [
+    "Evidence",
+    "it can be answered with information you can find, such as prices, sales figures or survey results. A question about what is best or what is right depends on opinion, so evidence alone cannot settle it."
+   ]
+  ],
+  "remember": "A good investigation question is open, focused on one issue, and answerable with evidence.",
+  "a": {
+   "q": "Which of these is the best investigation question for a Year 7 student studying an economic issue?",
+   "opts": [
+    "How have school canteen prices changed over two years?",
+    "Is the school canteen good?",
+    "Is the canteen cheaper than the shop?",
+    "How does every business in Australia set prices?"
+   ],
+   "why": "The first question is open, focused on one issue and can be answered with price records. \"Is the school canteen good?\" is a closed yes or no question, and it depends on opinion. Asking about every business is far too wide.",
+   "clue": "Look for a question that is open, narrow and can be checked."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia plans to investigate a bakery in Ballarat. Which investigation question is open, focused and answerable with evidence?",
+   "opts": [
+    "Why have bread sales at Mia's Ballarat bakery changed this year?",
+    "Does the Ballarat bakery sell the best bread in Victoria?",
+    "Is the Ballarat bakery busy on Saturdays?",
+    "How do all bakeries in the world make money?"
+   ],
+   "why": "Sales records and customer surveys can show why bread sales changed, and the question needs explaining, not yes or no. \"Best bread\" is a matter of opinion, so evidence alone cannot settle it. The Saturday question is focused and can be checked, but it is closed because it only needs yes or no.",
+   "clue": "Check each question for all three features, not just one."
+  }
+ },
+ "redone": true,
+ "local": [
+  "ecb-questions-investigationb option is 64 characters: Why have bread sales at Mia's Ballarat bakery changed this year?"
+ ],
+ "check": {
+  "a": {
+   "best": "How have school canteen prices changed over two years?",
+   "also_right": []
+  },
+  "b": {
+   "best": "Why have bread sales at Mia's Ballarat bakery changed this year?",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says \"The first question is open...\", but the options are shuffled and the right answer is not first, so this explanation will point students to the wrong option. Name the question instead (\"How have school canteen prices changed over two years?\")."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option stands out. It is clearly the longest, and it is the only option with a precise detail (\"this year\") and the only one that names Mia. A student could pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says Mia plans to investigate \"a bakery in Ballarat\", but the right option calls it \"Mia's Ballarat bakery\", which suggests Mia owns it. This is confusing and also ties the right option to the stem."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and answers are sound. Why (a) refers to \"the first question\", which will point to the wrong option once the options are shuffled. In question b, the right option is the longest and the only one naming Mia (\"Mia's Ballarat bakery\", which also clashes with the stem), so it gives itself away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) says \"The first question is open...\", but the options are shuffled and the right answer is not first, so this explanation will point students to the wrong option. Name the question instead (\"How have school canteen prices changed over two years?\").",
+  "Question b, wording: The right option stands out. It is clearly the longest, and it is the only option with a precise detail (\"this year\") and the only one that names Mia. A student could pick it without knowing the idea.",
+  "Question b, wording: The stem says Mia plans to investigate \"a bakery in Ballarat\", but the right option calls it \"Mia's Ballarat bakery\", which suggests Mia owns it. This is confusing and also ties the right option to the stem.",
+  "Content check: ecb-questions-investigationb option is 64 characters: Why have bread sales at Mia's Ballarat bakery changed this year?"
+ ],
+ "proposal": {
+  "title": "Questions for an investigation",
+  "card": [
+   "An investigation question is the question you set out to answer when you research an economic or business issue. A good one guides what you look for.",
+   [
+    "Open",
+    "it cannot be answered with just yes or no. It needs explaining, such as \"How does...\" or \"Why has...\"."
+   ],
+   [
+    "Focused",
+    "it is about one issue, in a clear place or group. \"How has the price of eggs changed in Australian supermarkets?\" is focused. \"How does the whole economy work?\" is too wide."
+   ],
+   [
+    "Evidence",
+    "it can be answered with information you can find, such as prices, sales figures or survey results. A question about what is best or what is right depends on opinion, so evidence alone cannot settle it."
+   ]
+  ],
+  "remember": "A good investigation question is open, focused on one issue, and answerable with evidence.",
+  "a": {
+   "q": "Which of these is the best investigation question for a Year 7 student studying an economic issue?",
+   "opts": [
+    "How have school canteen prices changed over two years?",
+    "Have school canteen prices gone up over the last two years?",
+    "Should the school canteen lower its prices for students?",
+    "How have prices changed in every shop around the world?"
+   ],
+   "why": "\"How have school canteen prices changed over two years?\" is open, focused on one issue and can be answered with price records. \"Have school canteen prices gone up over the last two years?\" is focused but closed, as yes or no answers it. The question about every shop in the world is far too wide.",
+   "clue": "Look for a question that is open, narrow and can be checked."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia plans to investigate a bakery in Ballarat. Which investigation question is open, focused and answerable with evidence?",
+   "opts": [
+    "Why have the bakery's bread sales changed since January?",
+    "Have the bakery's bread sales gone up since January?",
+    "Why does the bakery make the best bread in Victoria?",
+    "Why have bread sales changed in every bakery since 1900?"
+   ],
+   "why": "Sales records and customer surveys can show why the bakery's bread sales changed, and the question needs explaining, not yes or no. The question about sales going up is focused and can be checked, but it is closed because yes or no answers it. \"Best bread\" is a matter of opinion, and every bakery since 1900 is far too wide.",
+   "clue": "Check each question for all three features, not just one."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:10Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "How have school canteen prices changed over two years?",
+    "also_right": []
+   },
+   "b": {
+    "best": "Why have the bakery's bread sales changed since January?",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:10Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says \"The first question is open...\", but the options are shuffled and the right answer is not first, so this explanation will point students to the wrong option. Name the question instead (\"How have school canteen prices changed over two years?\")."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option stands out. It is clearly the longest, and it is the only option with a precise detail (\"this year\") and the only one that names Mia. A student could pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says Mia plans to investigate \"a bakery in Ballarat\", but the right option calls it \"Mia's Ballarat bakery\", which suggests Mia owns it. This is confusing and also ties the right option to the stem."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) says \"The first question is open...\", but the options are shuffled and the right answer is not first, so this explanation will point students to the wrong option. Name the question instead (\"How have school canteen prices changed over two years?\").",
+   "Question b, wording: The right option stands out. It is clearly the longest, and it is the only option with a precise detail (\"this year\") and the only one that names Mia. A student could pick it without knowing the idea.",
+   "Question b, wording: The stem says Mia plans to investigate \"a bakery in Ballarat\", but the right option calls it \"Mia's Ballarat bakery\", which suggests Mia owns it. This is confusing and also ties the right option to the stem.",
+   "Content check: ecb-questions-investigationb option is 64 characters: Why have bread sales at Mia's Ballarat bakery changed this year?"
+  ]
+ },
+ "final": {
+  "title": "Questions for an investigation",
+  "card": [
+   "An investigation question is the question you set out to answer when you research an economic or business issue. A good one guides what you look for.",
+   [
+    "Open",
+    "it cannot be answered with just yes or no. It needs explaining, such as \"How does...\" or \"Why has...\"."
+   ],
+   [
+    "Focused",
+    "it is about one issue, in a clear place or group. \"How has the price of eggs changed in Australian supermarkets?\" is focused. \"How does the whole economy work?\" is too wide."
+   ],
+   [
+    "Evidence",
+    "it can be answered with information you can find, such as prices, sales figures or survey results. A question about what is best or what is right depends on opinion, so evidence alone cannot settle it."
+   ]
+  ],
+  "remember": "A good investigation question is open, focused on one issue, and answerable with evidence.",
+  "a": {
+   "q": "Which of these is the best investigation question for a Year 7 student studying an economic issue?",
+   "opts": [
+    "How have school canteen prices changed over two years?",
+    "Have school canteen prices gone up over the last two years?",
+    "Should the school canteen lower its prices for students?",
+    "How have prices changed in every shop around the world?"
+   ],
+   "why": "\"How have school canteen prices changed over two years?\" is open, focused on one issue and can be answered with price records. \"Have school canteen prices gone up over the last two years?\" is focused but closed, as yes or no answers it. The question about every shop in the world is far too wide.",
+   "clue": "Look for a question that is open, narrow and can be checked."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia plans to investigate a bakery in Ballarat. Which investigation question is open, focused and answerable with evidence?",
+   "opts": [
+    "Why have the bakery's bread sales changed since January?",
+    "Have the bakery's bread sales gone up since January?",
+    "Why does the bakery make the best bread in Victoria?",
+    "Why have bread sales changed in every bakery since 1900?"
+   ],
+   "why": "Sales records and customer surveys can show why the bakery's bread sales changed, and the question needs explaining, not yes or no. The question about sales going up is focused and can be checked, but it is closed because yes or no answers it. \"Best bread\" is a matter of opinion, and every bakery since 1900 is far too wide.",
+   "clue": "Check each question for all three features, not just one."
+  }
+ },
+ "cleared_by": "recheck"
+}

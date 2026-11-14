@@ -1,0 +1,438 @@
+{
+ "id": "ecb-predicting-from-trends",
+ "title": "Predicting from trends",
+ "brief": "e38b39bc46ec",
+ "shortlist": [
+  [
+   "ecb-predicting-consumer-financial-impacts",
+   0.444
+  ],
+  [
+   "ecb-finding-trends-economic-data",
+   0.321
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:45Z new, match",
+  "2026-11-12T12:44:15Z match: Claude Haiku 5.5 may adapt ecb-predicting-consumer-financial-impacts, but is not highly sure, so to the Opus match check",
+  "2026-11-12T15:15:34Z confirm: Claude Opus 5.5 may adapt ecb-predicting-consumer-financial-impacts, but is not highly sure, so it is for you to review",
+  "2026-11-13T12:13:14Z match: claude-code says adapt ecb-predicting-consumer-financial-impacts (3 changes)",
+  "2026-11-13T12:13:14Z claude-code review: adapting ecb-predicting-consumer-financial-impacts on the next run",
+  "2026-11-13T13:04:51Z adapt: done",
+  "2026-11-13T13:11:25Z check: flagged",
+  "2026-11-13T13:13:37Z fix: suggested",
+  "2026-11-13T15:07:27Z claude-code review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "confirm": 0.00838,
+  "adapt": 0.00407,
+  "check": 0.01067,
+  "fix": 0.01793
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "ecb-predicting-consumer-financial-impacts",
+  "changes": [
+   "Replace the Perth petrol example in question b with a Melbourne or other Victorian example so the place is local to the course.",
+   "Add a house price example, such as rising interest rates slowing house price growth, to match the new point's brief."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same trend-to-cause-to-prediction method at a suitable depth, but its examples are about consumer repayments and Perth, so it needs local and house-price examples to fit this Victorian course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "ecb-predicting-consumer-financial-impacts",
+  "changes": [
+   "Change the Perth petrol price example in question b to a Victorian place such as Melbourne.",
+   "Swap or extend the card's interest-rate example so it shows rising rates slowing house prices, matching the brief."
+  ],
+  "sure": "medium",
+  "reason": "The bank point already teaches spotting a trend, finding its cause and making a likely prediction at a Year 9 level, so only the example and place need to suit the Victorian course.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "ecb-predicting-consumer-financial-impacts",
+  "changes": [
+   "Retitle and frame it as predicting from trends and cause and effect links in economic data, not only consumer and financial impacts.",
+   "Extend the interest rate example on the card to show that rising rates are likely to slow house prices, as the brief says.",
+   "Change the Perth petrol example in question b to a Victorian place, such as Melbourne."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "title",
+   "card1",
+   "card2",
+   "card3",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:14Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches spotting a trend, finding its cause and making a likely prediction, but it frames this as consumer impacts. It needs the brief's wider framing and its house price example.",
+   "item": "9f312eb2473b24e3",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-predicting-from-trends",
+    "title": "Predicting from trends",
+    "brief": "e38b39bc46ec",
+    "shortlist": [
+     [
+      "ecb-predicting-consumer-financial-impacts",
+      0.444
+     ],
+     [
+      "ecb-finding-trends-economic-data",
+      0.321
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00033,
+     "confirm": 0.00838
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "ecb-predicting-consumer-financial-impacts",
+     "changes": [
+      "Replace the Perth petrol example in question b with a Melbourne or other Victorian example so the place is local to the course.",
+      "Add a house price example, such as rising interest rates slowing house price growth, to match the new point's brief."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same trend-to-cause-to-prediction method at a suitable depth, but its examples are about consumer repayments and Perth, so it needs local and house-price examples to fit this Victorian course.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "ecb-predicting-consumer-financial-impacts",
+     "changes": [
+      "Change the Perth petrol price example in question b to a Victorian place such as Melbourne.",
+      "Swap or extend the card's interest-rate example so it shows rising rates slowing house prices, matching the brief."
+     ],
+     "sure": "medium",
+     "reason": "The bank point already teaches spotting a trend, finding its cause and making a likely prediction at a Year 9 level, so only the example and place need to suit the Victorian course.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "cd96ca37203aa2e6"
+  },
+  {
+   "at": "2026-11-13T15:07:27Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix gives the right chain: dearer new loans mean buyers borrow less, so growth in house prices slows. Question a now tests that chain with options of even length, and question b is unchanged and right.",
+   "item": "0fc33293a7d81e61",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-predicting-from-trends",
+    "title": "Predicting from trends",
+    "brief": "e38b39bc46ec",
+    "shortlist": [
+     [
+      "ecb-predicting-consumer-financial-impacts",
+      0.444
+     ],
+     [
+      "ecb-finding-trends-economic-data",
+      0.321
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "confirm": 1,
+     "adapt": 1,
+     "check": 1,
+     "fix": 1
+    },
+    "usd": {
+     "match": 0.00033,
+     "confirm": 0.00838,
+     "adapt": 0.00407,
+     "check": 0.01067,
+     "fix": 0.01793
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "ecb-predicting-consumer-financial-impacts",
+     "changes": [
+      "Replace the Perth petrol example in question b with a Melbourne or other Victorian example so the place is local to the course.",
+      "Add a house price example, such as rising interest rates slowing house price growth, to match the new point's brief."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same trend-to-cause-to-prediction method at a suitable depth, but its examples are about consumer repayments and Perth, so it needs local and house-price examples to fit this Victorian course.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "ecb-predicting-consumer-financial-impacts",
+     "changes": [
+      "Change the Perth petrol price example in question b to a Victorian place such as Melbourne.",
+      "Swap or extend the card's interest-rate example so it shows rising rates slowing house prices, matching the brief."
+     ],
+     "sure": "medium",
+     "reason": "The bank point already teaches spotting a trend, finding its cause and making a likely prediction at a Year 9 level, so only the example and place need to suit the Victorian course.",
+     "model": "claude-opus-5-5"
+    },
+    "adapt": {
+     "from": "ecb-predicting-consumer-financial-impacts",
+     "changes": [
+      "Retitle and frame it as predicting from trends and cause and effect links in economic data, not only consumer and financial impacts.",
+      "Extend the interest rate example on the card to show that rising rates are likely to slow house prices, as the brief says.",
+      "Change the Perth petrol example in question b to a Victorian place, such as Melbourne."
+     ],
+     "by": "claude-code",
+     "parts": [
+      "title",
+      "card1",
+      "card2",
+      "card3",
+      "a.q",
+      "b.q"
+     ]
+    },
+    "cleared_by": "claude-code",
+    "draft": {
+     "title": "Predicting from trends",
+     "card": [
+      "A trend is a pattern of change over time in economic data, such as prices or interest rates rising for several months.",
+      "To make a prediction, find the likely cause of the trend. Then ask what effect it will have and who is affected.",
+      "Example: if interest rates rise, loans cost more. Households with variable rate loans pay more, so they have less to spend on housing. Demand for homes is likely to ease, so house prices are likely to slow.",
+      "A prediction says what is likely, not certain. Other things, such as a change in income, can change the outcome."
+     ],
+     "remember": "Spot the trend, find its cause, then predict who is affected and how.",
+     "a": {
+      "q": "Interest rates have risen for several months and a bank passes this on. What is the likely effect on a household with a variable rate home loan?",
+      "opts": [
+       "Their loan repayments become larger",
+       "Their loan repayments become smaller",
+       "Their loan repayments stay the same",
+       "Their loan is paid off sooner"
+      ],
+      "why": "A higher rate means the family pays more interest, so repayments are likely to rise. Smaller repayments would follow a fall in rates, which is the opposite trend.",
+      "clue": "Think about what a higher rate means for the cost of borrowing."
+     },
+     "b": {
+      "d": 2,
+      "q": "Petrol prices in Melbourne have climbed for six months because oil costs more. What is the most likely effect on a person who drives far to work each day?",
+      "opts": [
+       "Less money left over for other spending",
+       "More money left over for other spending",
+       "No change in what they spend on petrol",
+       "A lower cost of getting to work"
+      ],
+      "why": "The trend is rising petrol prices, so a long commute now costs more. With more spent on petrol, less is left for other things. Falling costs would need the trend to run the other way.",
+      "clue": "Link the rising price to the driver's weekly costs."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Their loan repayments become larger",
+      "also_right": []
+     },
+     "b": {
+      "best": "Less money left over for other spending",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The example's chain is muddled. Households already paying more on variable rate loans having 'less to spend on housing' is not why demand for homes eases. The main link is that higher rates make new loans dearer, so buyers can borrow less. Also, 'house prices are likely to slow' should say price growth is likely to slow."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions are correct and fair. The card's interest-rate example gives a muddled cause-and-effect chain: demand eases mainly because buyers can borrow less, not because existing borrowers have less to spend on housing. It also says 'prices slow' where it means price growth slows."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Card, fact: The example's chain is muddled. Households already paying more on variable rate loans having 'less to spend on housing' is not why demand for homes eases. The main link is that higher rates make new loans dearer, so buyers can borrow less. Also, 'house prices are likely to slow' should say price growth is likely to slow."
+    ],
+    "proposal": {
+     "title": "Predicting from trends",
+     "card": [
+      "A trend is a pattern of change over time in economic data, such as prices or interest rates rising for several months.",
+      "To make a prediction, find the likely cause of the trend. Then ask what effect it will have and who is affected.",
+      "Example: when interest rates rise, new home loans cost more, so buyers can borrow less. Demand for homes is likely to ease, so growth in house prices is likely to slow.",
+      "A prediction says what is likely, not certain. Other things, such as a change in income, can change the outcome."
+     ],
+     "remember": "Spot the trend, find its cause, then predict who is affected and how.",
+     "a": {
+      "q": "Interest rates have risen for several months. What is the most likely effect on the housing market?",
+      "opts": [
+       "House price growth slows as buyers can borrow less",
+       "House price growth speeds up as loans cost more",
+       "Demand for homes rises as buyers can borrow more",
+       "House prices are certain to fall as loans cost more"
+      ],
+      "why": "Higher rates make new loans dearer, so buyers can borrow less and demand eases. That makes slower price growth likely. A prediction is never certain, so saying prices are certain to fall goes too far.",
+      "clue": "Follow the chain from the cost of a loan to how much buyers can borrow."
+     },
+     "b": {
+      "d": 2,
+      "q": "Petrol prices in Melbourne have climbed for six months because oil costs more. What is the most likely effect on a person who drives far to work each day?",
+      "opts": [
+       "Less money left over for other spending",
+       "More money left over for other spending",
+       "No change in what they spend on petrol",
+       "A lower cost of getting to work"
+      ],
+      "why": "The trend is rising petrol prices, so a long commute now costs more. With more spent on petrol, less is left for other things. Falling costs would need the trend to run the other way.",
+      "clue": "Link the rising price to the driver's weekly costs."
+     }
+    },
+    "proposal_problems": [],
+    "rewrites": 0
+   },
+   "after": "383d90f496d80357"
+  }
+ ],
+ "draft": {
+  "title": "Predicting from trends",
+  "card": [
+   "A trend is a pattern of change over time in economic data, such as prices or interest rates rising for several months.",
+   "To make a prediction, find the likely cause of the trend. Then ask what effect it will have and who is affected.",
+   "Example: if interest rates rise, loans cost more. Households with variable rate loans pay more, so they have less to spend on housing. Demand for homes is likely to ease, so house prices are likely to slow.",
+   "A prediction says what is likely, not certain. Other things, such as a change in income, can change the outcome."
+  ],
+  "remember": "Spot the trend, find its cause, then predict who is affected and how.",
+  "a": {
+   "q": "Interest rates have risen for several months and a bank passes this on. What is the likely effect on a household with a variable rate home loan?",
+   "opts": [
+    "Their loan repayments become larger",
+    "Their loan repayments become smaller",
+    "Their loan repayments stay the same",
+    "Their loan is paid off sooner"
+   ],
+   "why": "A higher rate means the family pays more interest, so repayments are likely to rise. Smaller repayments would follow a fall in rates, which is the opposite trend.",
+   "clue": "Think about what a higher rate means for the cost of borrowing."
+  },
+  "b": {
+   "d": 2,
+   "q": "Petrol prices in Melbourne have climbed for six months because oil costs more. What is the most likely effect on a person who drives far to work each day?",
+   "opts": [
+    "Less money left over for other spending",
+    "More money left over for other spending",
+    "No change in what they spend on petrol",
+    "A lower cost of getting to work"
+   ],
+   "why": "The trend is rising petrol prices, so a long commute now costs more. With more spent on petrol, less is left for other things. Falling costs would need the trend to run the other way.",
+   "clue": "Link the rising price to the driver's weekly costs."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Their loan repayments become larger",
+   "also_right": []
+  },
+  "b": {
+   "best": "Less money left over for other spending",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The example's chain is muddled. Households already paying more on variable rate loans having 'less to spend on housing' is not why demand for homes eases. The main link is that higher rates make new loans dearer, so buyers can borrow less. Also, 'house prices are likely to slow' should say price growth is likely to slow."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct and fair. The card's interest-rate example gives a muddled cause-and-effect chain: demand eases mainly because buyers can borrow less, not because existing borrowers have less to spend on housing. It also says 'prices slow' where it means price growth slows."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The example's chain is muddled. Households already paying more on variable rate loans having 'less to spend on housing' is not why demand for homes eases. The main link is that higher rates make new loans dearer, so buyers can borrow less. Also, 'house prices are likely to slow' should say price growth is likely to slow."
+ ],
+ "proposal": {
+  "title": "Predicting from trends",
+  "card": [
+   "A trend is a pattern of change over time in economic data, such as prices or interest rates rising for several months.",
+   "To make a prediction, find the likely cause of the trend. Then ask what effect it will have and who is affected.",
+   "Example: when interest rates rise, new home loans cost more, so buyers can borrow less. Demand for homes is likely to ease, so growth in house prices is likely to slow.",
+   "A prediction says what is likely, not certain. Other things, such as a change in income, can change the outcome."
+  ],
+  "remember": "Spot the trend, find its cause, then predict who is affected and how.",
+  "a": {
+   "q": "Interest rates have risen for several months. What is the most likely effect on the housing market?",
+   "opts": [
+    "House price growth slows as buyers can borrow less",
+    "House price growth speeds up as loans cost more",
+    "Demand for homes rises as buyers can borrow more",
+    "House prices are certain to fall as loans cost more"
+   ],
+   "why": "Higher rates make new loans dearer, so buyers can borrow less and demand eases. That makes slower price growth likely. A prediction is never certain, so saying prices are certain to fall goes too far.",
+   "clue": "Follow the chain from the cost of a loan to how much buyers can borrow."
+  },
+  "b": {
+   "d": 2,
+   "q": "Petrol prices in Melbourne have climbed for six months because oil costs more. What is the most likely effect on a person who drives far to work each day?",
+   "opts": [
+    "Less money left over for other spending",
+    "More money left over for other spending",
+    "No change in what they spend on petrol",
+    "A lower cost of getting to work"
+   ],
+   "why": "The trend is rising petrol prices, so a long commute now costs more. With more spent on petrol, less is left for other things. Falling costs would need the trend to run the other way.",
+   "clue": "Link the rising price to the driver's weekly costs."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Predicting from trends",
+  "card": [
+   "A trend is a pattern of change over time in economic data, such as prices or interest rates rising for several months.",
+   "To make a prediction, find the likely cause of the trend. Then ask what effect it will have and who is affected.",
+   "Example: when interest rates rise, new home loans cost more, so buyers can borrow less. Demand for homes is likely to ease, so growth in house prices is likely to slow.",
+   "A prediction says what is likely, not certain. Other things, such as a change in income, can change the outcome."
+  ],
+  "remember": "Spot the trend, find its cause, then predict who is affected and how.",
+  "a": {
+   "q": "Interest rates have risen for several months. What is the most likely effect on the housing market?",
+   "opts": [
+    "House price growth slows as buyers can borrow less",
+    "House price growth speeds up as loans cost more",
+    "Demand for homes rises as buyers can borrow more",
+    "House prices are certain to fall as loans cost more"
+   ],
+   "why": "Higher rates make new loans dearer, so buyers can borrow less and demand eases. That makes slower price growth likely. A prediction is never certain, so saying prices are certain to fall goes too far.",
+   "clue": "Follow the chain from the cost of a loan to how much buyers can borrow."
+  },
+  "b": {
+   "d": 2,
+   "q": "Petrol prices in Melbourne have climbed for six months because oil costs more. What is the most likely effect on a person who drives far to work each day?",
+   "opts": [
+    "Less money left over for other spending",
+    "More money left over for other spending",
+    "No change in what they spend on petrol",
+    "A lower cost of getting to work"
+   ],
+   "why": "The trend is rising petrol prices, so a long commute now costs more. With more spent on petrol, less is left for other things. Falling costs would need the trend to run the other way.",
+   "clue": "Link the rising price to the driver's weekly costs."
+  }
+ }
+}

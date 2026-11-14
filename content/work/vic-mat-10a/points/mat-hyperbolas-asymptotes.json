@@ -1,0 +1,393 @@
+{
+ "id": "mat-hyperbolas-asymptotes",
+ "title": "Hyperbolas and asymptotes",
+ "brief": "748766386a0a",
+ "shortlist": [
+  [
+   "mat-hyperbolas",
+   0.472
+  ],
+  [
+   "mat-tangent-graph",
+   0.407
+  ],
+  [
+   "mat-exponential-logarithmic-graphs",
+   0.334
+  ],
+  [
+   "mat-graphs-logarithmic-functions",
+   0.321
+  ],
+  [
+   "mat-exponential-functions",
+   0.277
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:48Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:04Z write: failed the content check, writing again",
+  "2026-11-12T15:35:09Z write: done",
+  "2026-11-12T15:59:43Z check: flagged",
+  "2026-11-12T16:02:56Z fix: suggested",
+  "2026-11-12T16:19:54Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00046,
+  "write": 0.0261,
+  "check": 0.01153,
+  "fix": 0.02512
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the reciprocal hyperbola y = a/(x - h) + k with asymptotes x = h and y = k; the closest, mat-hyperbolas, covers conics in the form x²/a² - y²/b² = 1, and the others cover trig, exponential and logarithmic asymptotes.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Hyperbolas and asymptotes",
+  "card": [
+   "The graph of \\(y = \\frac{a}{x - h} + k\\) is a hyperbola. It has two separate branches, and it never crosses its asymptotes.",
+   [
+    "Vertical asymptote",
+    "\\(x = h\\). The denominator would be zero there, so the graph has no point at that \\(x\\) value."
+   ],
+   [
+    "Horizontal asymptote",
+    "\\(y = k\\). As \\(x\\) gets very large or very small, the fraction gets close to 0, so \\(y\\) gets close to \\(k\\)."
+   ],
+   "Example: \\(y = \\frac{2}{x - 1} + 3\\) has a vertical asymptote at \\(x = 1\\) and a horizontal asymptote at \\(y = 3\\). Because \\(a = 2\\) is positive, the branches lie to the upper right and lower left of where the asymptotes cross."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The hyperbola \\(y = \\frac{2}{x - 1} + 3\\) with a vertical asymptote at \\(x = 1\\) and a horizontal asymptote at \\(y = 3\\). One branch is upper right and one is lower left.",
+    "x": {
+     "min": -5,
+     "max": 7,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -3,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "asymptote",
+      "x": 1
+     },
+     {
+      "type": "asymptote",
+      "y": 3
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\frac{2}{x - 1} + 3",
+      "breaks": [
+       1
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       1,
+       -2
+      ],
+      "label": "\\(x = 1\\)",
+      "pos": "right"
+     },
+     {
+      "type": "text",
+      "at": [
+       -4,
+       3
+      ],
+      "label": "\\(y = 3\\)",
+      "pos": "above"
+     }
+    ]
+   }
+  },
+  "remember": "For \\(y = \\frac{a}{x - h} + k\\), read the asymptotes as \\(x = h\\) and \\(y = k\\).",
+  "a": {
+   "q": "What are the asymptotes of \\(y = \\frac{5}{x + 2} - 4\\)?",
+   "opts": [
+    "\\(x = -2\\) and \\(y = -4\\)",
+    "\\(x = 2\\) and \\(y = -4\\)",
+    "\\(x = -2\\) and \\(y = 4\\)",
+    "\\(x = -4\\) and \\(y = -2\\)"
+   ],
+   "why": "Write \\(x + 2\\) as \\(x - (-2)\\), so \\(h = -2\\) and the vertical asymptote is \\(x = -2\\). The number added at the end is \\(k = -4\\), so the horizontal asymptote is \\(y = -4\\). The option \\(x = 2\\) copies the sign in the bracket instead of reversing it.",
+   "clue": "Write \\(x + 2\\) in the form \\(x - h\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "A hyperbola has a vertical asymptote at \\(x = 3\\) and a horizontal asymptote at \\(y = -1\\). Which equation could it be?",
+   "opts": [
+    "\\(y = \\frac{4}{x - 3} - 1\\)",
+    "\\(y = \\frac{4}{x + 3} - 1\\)",
+    "\\(y = \\frac{4}{x - 3} + 1\\)",
+    "\\(y = \\frac{4}{x + 1} - 3\\)"
+   ],
+   "why": "Here \\(h = 3\\) gives a denominator of \\(x - 3\\), and \\(k = -1\\) gives \\(-1\\) at the end. The option with \\(x + 3\\) has its asymptote at \\(x = -3\\). The option with \\(+ 1\\) has its horizontal asymptote at \\(y = 1\\).",
+   "clue": "The denominator is zero at the vertical asymptote."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(x = -2\\) and \\(y = -4\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(y = \\frac{4}{x - 3} - 1\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"As \\(x\\) gets very large or very small\" is ambiguous. A student may read \"very small\" as close to 0, where the fraction does not approach 0. It should say very large positive or very large negative (large in size, either sign)."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, graph and both questions are correct, and each question has exactly one right answer. One small wording issue: \"very small\" in the horizontal asymptote line could be read as near zero rather than large and negative."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: \"As \\(x\\) gets very large or very small\" is ambiguous. A student may read \"very small\" as close to 0, where the fraction does not approach 0. It should say very large positive or very large negative (large in size, either sign)."
+ ],
+ "proposal": {
+  "title": "Hyperbolas and asymptotes",
+  "card": [
+   "The graph of \\(y = \\frac{a}{x - h} + k\\) is a hyperbola. It has two separate branches, and it never crosses its asymptotes.",
+   [
+    "Vertical asymptote",
+    "\\(x = h\\). The denominator would be zero there, so the graph has no point at that \\(x\\) value."
+   ],
+   [
+    "Horizontal asymptote",
+    "\\(y = k\\). As \\(x\\) becomes a very large positive or very large negative number, the fraction gets close to 0, so \\(y\\) gets close to \\(k\\)."
+   ],
+   "Example: \\(y = \\frac{2}{x - 1} + 3\\) has a vertical asymptote at \\(x = 1\\) and a horizontal asymptote at \\(y = 3\\). Because \\(a = 2\\) is positive, the branches lie to the upper right and lower left of where the asymptotes cross."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The hyperbola \\(y = \\frac{2}{x - 1} + 3\\) with a vertical asymptote at \\(x = 1\\) and a horizontal asymptote at \\(y = 3\\). One branch is upper right and one is lower left.",
+    "x": {
+     "min": -5,
+     "max": 7,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -3,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "asymptote",
+      "x": 1
+     },
+     {
+      "type": "asymptote",
+      "y": 3
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\frac{2}{x - 1} + 3",
+      "breaks": [
+       1
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       1,
+       -2
+      ],
+      "label": "\\(x = 1\\)",
+      "pos": "right"
+     },
+     {
+      "type": "text",
+      "at": [
+       -4,
+       3
+      ],
+      "label": "\\(y = 3\\)",
+      "pos": "above"
+     }
+    ]
+   }
+  },
+  "remember": "For \\(y = \\frac{a}{x - h} + k\\), read the asymptotes as \\(x = h\\) and \\(y = k\\).",
+  "a": {
+   "q": "What are the asymptotes of \\(y = \\frac{5}{x + 2} - 4\\)?",
+   "opts": [
+    "\\(x = -2\\) and \\(y = -4\\)",
+    "\\(x = 2\\) and \\(y = -4\\)",
+    "\\(x = -2\\) and \\(y = 4\\)",
+    "\\(x = -4\\) and \\(y = -2\\)"
+   ],
+   "why": "Write \\(x + 2\\) as \\(x - (-2)\\), so \\(h = -2\\) and the vertical asymptote is \\(x = -2\\). The number added at the end is \\(k = -4\\), so the horizontal asymptote is \\(y = -4\\). The option \\(x = 2\\) copies the sign in the bracket instead of reversing it.",
+   "clue": "Write \\(x + 2\\) in the form \\(x - h\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "A hyperbola has a vertical asymptote at \\(x = 3\\) and a horizontal asymptote at \\(y = -1\\). Which equation could it be?",
+   "opts": [
+    "\\(y = \\frac{4}{x - 3} - 1\\)",
+    "\\(y = \\frac{4}{x + 3} - 1\\)",
+    "\\(y = \\frac{4}{x - 3} + 1\\)",
+    "\\(y = \\frac{4}{x + 1} - 3\\)"
+   ],
+   "why": "Here \\(h = 3\\) gives a denominator of \\(x - 3\\), and \\(k = -1\\) gives \\(-1\\) at the end. The option with \\(x + 3\\) has its asymptote at \\(x = -3\\). The option with \\(+ 1\\) has its horizontal asymptote at \\(y = 1\\).",
+   "clue": "The denominator is zero at the vertical asymptote."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:54Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"As \\(x\\) gets very large or very small\" is ambiguous. A student may read \"very small\" as close to 0, where the fraction does not approach 0. It should say very large positive or very large negative (large in size, either sign)."
+   }
+  ],
+  "flags": [
+   "Card, wording: \"As \\(x\\) gets very large or very small\" is ambiguous. A student may read \"very small\" as close to 0, where the fraction does not approach 0. It should say very large positive or very large negative (large in size, either sign)."
+  ]
+ },
+ "final": {
+  "title": "Hyperbolas and asymptotes",
+  "card": [
+   "The graph of \\(y = \\frac{a}{x - h} + k\\) is a hyperbola. It has two separate branches, and it never crosses its asymptotes.",
+   [
+    "Vertical asymptote",
+    "\\(x = h\\). The denominator would be zero there, so the graph has no point at that \\(x\\) value."
+   ],
+   [
+    "Horizontal asymptote",
+    "\\(y = k\\). As \\(x\\) becomes a very large positive or very large negative number, the fraction gets close to 0, so \\(y\\) gets close to \\(k\\)."
+   ],
+   "Example: \\(y = \\frac{2}{x - 1} + 3\\) has a vertical asymptote at \\(x = 1\\) and a horizontal asymptote at \\(y = 3\\). Because \\(a = 2\\) is positive, the branches lie to the upper right and lower left of where the asymptotes cross."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The hyperbola \\(y = \\frac{2}{x - 1} + 3\\) with a vertical asymptote at \\(x = 1\\) and a horizontal asymptote at \\(y = 3\\). One branch is upper right and one is lower left.",
+    "x": {
+     "min": -5,
+     "max": 7,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -3,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "asymptote",
+      "x": 1
+     },
+     {
+      "type": "asymptote",
+      "y": 3
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\frac{2}{x - 1} + 3",
+      "breaks": [
+       1
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       1,
+       -2
+      ],
+      "label": "\\(x = 1\\)",
+      "pos": "right"
+     },
+     {
+      "type": "text",
+      "at": [
+       -4,
+       3
+      ],
+      "label": "\\(y = 3\\)",
+      "pos": "above"
+     }
+    ]
+   }
+  },
+  "remember": "For \\(y = \\frac{a}{x - h} + k\\), read the asymptotes as \\(x = h\\) and \\(y = k\\).",
+  "a": {
+   "q": "What are the asymptotes of \\(y = \\frac{5}{x + 2} - 4\\)?",
+   "opts": [
+    "\\(x = -2\\) and \\(y = -4\\)",
+    "\\(x = 2\\) and \\(y = -4\\)",
+    "\\(x = -2\\) and \\(y = 4\\)",
+    "\\(x = -4\\) and \\(y = -2\\)"
+   ],
+   "why": "Write \\(x + 2\\) as \\(x - (-2)\\), so \\(h = -2\\) and the vertical asymptote is \\(x = -2\\). The number added at the end is \\(k = -4\\), so the horizontal asymptote is \\(y = -4\\). The option \\(x = 2\\) copies the sign in the bracket instead of reversing it.",
+   "clue": "Write \\(x + 2\\) in the form \\(x - h\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "A hyperbola has a vertical asymptote at \\(x = 3\\) and a horizontal asymptote at \\(y = -1\\). Which equation could it be?",
+   "opts": [
+    "\\(y = \\frac{4}{x - 3} - 1\\)",
+    "\\(y = \\frac{4}{x + 3} - 1\\)",
+    "\\(y = \\frac{4}{x - 3} + 1\\)",
+    "\\(y = \\frac{4}{x + 1} - 3\\)"
+   ],
+   "why": "Here \\(h = 3\\) gives a denominator of \\(x - 3\\), and \\(k = -1\\) gives \\(-1\\) at the end. The option with \\(x + 3\\) has its asymptote at \\(x = -3\\). The option with \\(+ 1\\) has its horizontal asymptote at \\(y = 1\\).",
+   "clue": "The denominator is zero at the vertical asymptote."
+  }
+ },
+ "cleared_by": "auto"
+}

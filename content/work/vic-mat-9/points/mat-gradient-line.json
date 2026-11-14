@@ -1,0 +1,246 @@
+{
+ "id": "mat-gradient-line",
+ "title": "Gradient of a line",
+ "brief": "4210d801a4db",
+ "shortlist": [
+  [
+   "mat-gradient-interval",
+   0.651
+  ],
+  [
+   "mat-linear-functions",
+   0.351
+  ],
+  [
+   "mat-gradient-y-intercept",
+   0.312
+  ],
+  [
+   "mat-gradient-as-rate-change",
+   0.297
+  ],
+  [
+   "mat-stationary-points",
+   0.233
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:54Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:06:02Z write: failed the content check, writing again",
+  "2026-11-12T15:15:51Z write: done",
+  "2026-11-12T15:26:06Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00049,
+  "write": 0.074,
+  "check": 0.00894
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Gradient of an interval, covers rise over run and the positive and negative cases, but it does not teach the zero gradient of a flat line or the undefined gradient of a vertical line that the new point requires, so it is narrower than the brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Gradient of a line",
+  "card": [
+   "Gradient measures how steep a line is. Gradient \\(=\\) rise \\(\\div\\) run. The rise is the vertical change and the run is the horizontal change between two points.",
+   "From \\((1, 2)\\) to \\((4, 8)\\), the rise is \\(8 - 2 = 6\\) and the run is \\(4 - 1 = 3\\). The gradient is \\(\\frac{6}{3} = 2\\).",
+   "A line going up to the right has a positive gradient. A line going down to the right has a negative gradient.",
+   "A flat line has gradient \\(0\\), because its rise is \\(0\\). A vertical line has an undefined gradient, because its run is \\(0\\) and we cannot divide by \\(0\\)."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A straight line going up to the right through the points (1, 2) and (4, 8). Between them the rise is 6 and the run is 3.",
+    "x": {
+     "min": 0,
+     "max": 6,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2x",
+      "domain": [
+       0.5,
+       5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       2
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((1, 2)\\)",
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       8
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((4, 8)\\)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Rise over run: down is negative, flat is zero, vertical is undefined.",
+  "a": {
+   "q": "What is the gradient of the line through \\((2, 7)\\) and \\((5, 1)\\)?",
+   "opts": [
+    "\\(-2\\)",
+    "\\(2\\)",
+    "\\(-\\frac{1}{2}\\)",
+    "\\(\\frac{1}{2}\\)"
+   ],
+   "why": "The rise is \\(1 - 7 = -6\\) and the run is \\(5 - 2 = 3\\), so the gradient is \\(\\frac{-6}{3} = -2\\). Using run over rise gives \\(-\\frac{1}{2}\\), which turns the fraction upside down.",
+   "clue": "The line goes down to the right. Put the rise on top."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two posts on a map grid are at \\((3, -2)\\) and \\((3, 5)\\). What is the gradient of the line through them?",
+   "opts": [
+    "Undefined, as the run is \\(0\\)",
+    "Zero, as the run is \\(0\\)",
+    "Zero, as the rise is \\(0\\)",
+    "Undefined, as the rise is \\(0\\)"
+   ],
+   "why": "Both points have \\(x = 3\\), so the run is \\(0\\) and the line is vertical. Dividing the rise of \\(7\\) by a run of \\(0\\) cannot be done, so the gradient is undefined. Zero is the gradient of a flat line, where the rise is \\(0\\).",
+   "clue": "Compare the two x values. What is the run?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(-2\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "Undefined, as the run is \\(0\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Gradient of a line",
+  "card": [
+   "Gradient measures how steep a line is. Gradient \\(=\\) rise \\(\\div\\) run. The rise is the vertical change and the run is the horizontal change between two points.",
+   "From \\((1, 2)\\) to \\((4, 8)\\), the rise is \\(8 - 2 = 6\\) and the run is \\(4 - 1 = 3\\). The gradient is \\(\\frac{6}{3} = 2\\).",
+   "A line going up to the right has a positive gradient. A line going down to the right has a negative gradient.",
+   "A flat line has gradient \\(0\\), because its rise is \\(0\\). A vertical line has an undefined gradient, because its run is \\(0\\) and we cannot divide by \\(0\\)."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A straight line going up to the right through the points (1, 2) and (4, 8). Between them the rise is 6 and the run is 3.",
+    "x": {
+     "min": 0,
+     "max": 6,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2x",
+      "domain": [
+       0.5,
+       5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       2
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((1, 2)\\)",
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       8
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((4, 8)\\)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Rise over run: down is negative, flat is zero, vertical is undefined.",
+  "a": {
+   "q": "What is the gradient of the line through \\((2, 7)\\) and \\((5, 1)\\)?",
+   "opts": [
+    "\\(-2\\)",
+    "\\(2\\)",
+    "\\(-\\frac{1}{2}\\)",
+    "\\(\\frac{1}{2}\\)"
+   ],
+   "why": "The rise is \\(1 - 7 = -6\\) and the run is \\(5 - 2 = 3\\), so the gradient is \\(\\frac{-6}{3} = -2\\). Using run over rise gives \\(-\\frac{1}{2}\\), which turns the fraction upside down.",
+   "clue": "The line goes down to the right. Put the rise on top."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two posts on a map grid are at \\((3, -2)\\) and \\((3, 5)\\). What is the gradient of the line through them?",
+   "opts": [
+    "Undefined, as the run is \\(0\\)",
+    "Zero, as the run is \\(0\\)",
+    "Zero, as the rise is \\(0\\)",
+    "Undefined, as the rise is \\(0\\)"
+   ],
+   "why": "Both points have \\(x = 3\\), so the run is \\(0\\) and the line is vertical. Dividing the rise of \\(7\\) by a run of \\(0\\) cannot be done, so the gradient is undefined. Zero is the gradient of a flat line, where the rise is \\(0\\).",
+   "clue": "Compare the two x values. What is the run?"
+  }
+ },
+ "cleared_by": "checker"
+}

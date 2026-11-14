@@ -1,0 +1,138 @@
+{
+ "id": "sci-household-energy-audits",
+ "title": "Household energy audits",
+ "brief": "c704641850ac",
+ "shortlist": [
+  [
+   "sci-kinetic-potential-energy",
+   0.298
+  ],
+  [
+   "sci-energy-transfer-transformation",
+   0.291
+  ],
+  [
+   "sci-conservation-energy",
+   0.263
+  ],
+  [
+   "sci-energy-flow-ecosystem",
+   0.259
+  ],
+  [
+   "sci-energy-swinging-or-rolling",
+   0.254
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:55Z new, match",
+  "2026-11-12T12:44:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:52Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:07Z write: done",
+  "2026-11-12T15:35:11Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00691,
+  "check": 0.00787
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points covers household energy audits, which need appliance power, hours of use and kilowatt-hour calculations, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Household energy audits",
+  "card": [
+   "An energy audit is a list of the appliances in a home. It shows where the home uses the most energy, so a family can decide what to change.",
+   "For each appliance, write down its power and the hours it is used. Power is how fast it uses energy. It is often printed on the appliance in watts (W) or kilowatts (kW).",
+   "Energy used in kilowatt-hours (kWh) = power in kW × time in hours. A 2 kW heater used for 3 hours uses 2 × 3 = 6 kWh. To change watts to kilowatts, divide by 1000.",
+   "Add up the kWh for each appliance. The appliance with the largest kWh uses the most energy. It is not always the one with the highest power, because hours of use matter too."
+  ],
+  "remember": "Energy in kWh = power in kW × hours, so both power and time of use matter.",
+  "a": {
+   "q": "Which appliance in an audit uses the most energy over one day?",
+   "opts": [
+    "The one with the highest kWh total",
+    "The one with the highest power rating",
+    "The one that is switched on most often",
+    "The one that is the oldest in the home"
+   ],
+   "why": "An audit compares energy in kWh, which combines power and hours of use. The highest power rating is tempting, but an appliance with high power used for a few minutes can use less energy than a weaker one left on all day.",
+   "clue": "Energy depends on power and on time."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya audits her home in Geelong. Her 1.5 kW heater runs for 2 hours a day. Her 0.1 kW computer runs for 8 hours a day. Which statement is correct?",
+   "opts": [
+    "The heater uses 3 kWh and the computer uses 0.8 kWh",
+    "The heater uses 3 kWh and the computer uses 8 kWh",
+    "The heater uses 0.75 kWh and the computer uses 0.8 kWh",
+    "The heater uses 3.5 kWh and the computer uses 8.1 kWh"
+   ],
+   "why": "Heater: 1.5 × 2 = 3 kWh. Computer: 0.1 × 8 = 0.8 kWh. The heater uses more energy even though the computer runs for longer, because its power is much higher. Adding power and hours instead of multiplying them gives the wrong totals.",
+   "clue": "Multiply power in kW by hours for each appliance."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The one with the highest kWh total",
+   "also_right": []
+  },
+  "b": {
+   "best": "The heater uses 3 kWh and the computer uses 0.8 kWh",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Household energy audits",
+  "card": [
+   "An energy audit is a list of the appliances in a home. It shows where the home uses the most energy, so a family can decide what to change.",
+   "For each appliance, write down its power and the hours it is used. Power is how fast it uses energy. It is often printed on the appliance in watts (W) or kilowatts (kW).",
+   "Energy used in kilowatt-hours (kWh) = power in kW × time in hours. A 2 kW heater used for 3 hours uses 2 × 3 = 6 kWh. To change watts to kilowatts, divide by 1000.",
+   "Add up the kWh for each appliance. The appliance with the largest kWh uses the most energy. It is not always the one with the highest power, because hours of use matter too."
+  ],
+  "remember": "Energy in kWh = power in kW × hours, so both power and time of use matter.",
+  "a": {
+   "q": "Which appliance in an audit uses the most energy over one day?",
+   "opts": [
+    "The one with the highest kWh total",
+    "The one with the highest power rating",
+    "The one that is switched on most often",
+    "The one that is the oldest in the home"
+   ],
+   "why": "An audit compares energy in kWh, which combines power and hours of use. The highest power rating is tempting, but an appliance with high power used for a few minutes can use less energy than a weaker one left on all day.",
+   "clue": "Energy depends on power and on time."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya audits her home in Geelong. Her 1.5 kW heater runs for 2 hours a day. Her 0.1 kW computer runs for 8 hours a day. Which statement is correct?",
+   "opts": [
+    "The heater uses 3 kWh and the computer uses 0.8 kWh",
+    "The heater uses 3 kWh and the computer uses 8 kWh",
+    "The heater uses 0.75 kWh and the computer uses 0.8 kWh",
+    "The heater uses 3.5 kWh and the computer uses 8.1 kWh"
+   ],
+   "why": "Heater: 1.5 × 2 = 3 kWh. Computer: 0.1 × 8 = 0.8 kWh. The heater uses more energy even though the computer runs for longer, because its power is much higher. Adding power and hours instead of multiplying them gives the wrong totals.",
+   "clue": "Multiply power in kW by hours for each appliance."
+  }
+ },
+ "cleared_by": "checker"
+}

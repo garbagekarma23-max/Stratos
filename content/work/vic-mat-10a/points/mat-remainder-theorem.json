@@ -1,0 +1,128 @@
+{
+ "id": "mat-remainder-theorem",
+ "title": "The remainder theorem",
+ "brief": "4c75178db2cb",
+ "shortlist": [
+  [
+   "mat-remainder-factor-theorems",
+   0.641
+  ],
+  [
+   "mat-dividing-polynomials",
+   0.403
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:04Z write: failed the content check, writing again",
+  "2026-11-12T15:35:09Z write: done",
+  "2026-11-12T15:59:43Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.01617,
+  "check": 0.00739
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-remainder-factor-theorems, is broader than this point: it also covers the factor theorem and the rational root theorem, and its second question tests the factor theorem rather than the remainder theorem, so it does not fit this point exactly.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The remainder theorem",
+  "card": [
+   "When a polynomial \\(P(x)\\) is divided by \\((x - a)\\), the remainder is \\(P(a)\\). You can find it by substituting, with no long division.",
+   "To find the remainder, set \\((x - a)\\) equal to 0 and solve for \\(x\\). That value is \\(a\\). Then work out \\(P(a)\\).",
+   "Example: divide \\(P(x) = x^{3} - 2x + 5\\) by \\((x - 2)\\). Here \\(a = 2\\), so \\(P(2) = 8 - 4 + 5 = 9\\). The remainder is \\(9\\).",
+   "For a divisor such as \\((x + 3)\\), set \\(x + 3 = 0\\), so \\(a = -3\\). The remainder is \\(P(-3)\\), not \\(P(3)\\)."
+  ],
+  "remember": "Divide by \\((x - a)\\) and the remainder is \\(P(a)\\). Watch the sign of \\(a\\).",
+  "a": {
+   "q": "\\(P(x) = x^{2} + 3x - 4\\) is divided by \\((x - 1)\\). What is the remainder?",
+   "opts": [
+    "\\(0\\)",
+    "\\(-4\\)",
+    "\\(6\\)",
+    "\\(-6\\)"
+   ],
+   "why": "The divisor is \\((x - 1)\\), so \\(a = 1\\). Then \\(P(1) = 1 + 3 - 4 = 0\\). The value \\(-4\\) is \\(P(0)\\), which is the constant term and not the remainder here.",
+   "clue": "Substitute the value of \\(x\\) that makes \\(x - 1\\) equal to 0."
+  },
+  "b": {
+   "d": 3,
+   "q": "\\(P(x) = 2x^{3} - x + 7\\) is divided by \\((x + 2)\\). What is the remainder?",
+   "opts": [
+    "\\(-7\\)",
+    "\\(9\\)",
+    "\\(21\\)",
+    "\\(5\\)"
+   ],
+   "why": "Setting \\(x + 2 = 0\\) gives \\(a = -2\\). So \\(P(-2) = 2(-8) + 2 + 7 = -16 + 9 = -7\\). The value \\(21\\) is \\(P(2)\\), found by using the wrong sign for \\(a\\).",
+   "clue": "Set the divisor equal to 0 first, and keep the sign of the result."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(0\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(-7\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card's example and both answers check out: P(1) = 0 for (a) and P(-2) = -7 for (b), and the explanations match the card."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The remainder theorem",
+  "card": [
+   "When a polynomial \\(P(x)\\) is divided by \\((x - a)\\), the remainder is \\(P(a)\\). You can find it by substituting, with no long division.",
+   "To find the remainder, set \\((x - a)\\) equal to 0 and solve for \\(x\\). That value is \\(a\\). Then work out \\(P(a)\\).",
+   "Example: divide \\(P(x) = x^{3} - 2x + 5\\) by \\((x - 2)\\). Here \\(a = 2\\), so \\(P(2) = 8 - 4 + 5 = 9\\). The remainder is \\(9\\).",
+   "For a divisor such as \\((x + 3)\\), set \\(x + 3 = 0\\), so \\(a = -3\\). The remainder is \\(P(-3)\\), not \\(P(3)\\)."
+  ],
+  "remember": "Divide by \\((x - a)\\) and the remainder is \\(P(a)\\). Watch the sign of \\(a\\).",
+  "a": {
+   "q": "\\(P(x) = x^{2} + 3x - 4\\) is divided by \\((x - 1)\\). What is the remainder?",
+   "opts": [
+    "\\(0\\)",
+    "\\(-4\\)",
+    "\\(6\\)",
+    "\\(-6\\)"
+   ],
+   "why": "The divisor is \\((x - 1)\\), so \\(a = 1\\). Then \\(P(1) = 1 + 3 - 4 = 0\\). The value \\(-4\\) is \\(P(0)\\), which is the constant term and not the remainder here.",
+   "clue": "Substitute the value of \\(x\\) that makes \\(x - 1\\) equal to 0."
+  },
+  "b": {
+   "d": 3,
+   "q": "\\(P(x) = 2x^{3} - x + 7\\) is divided by \\((x + 2)\\). What is the remainder?",
+   "opts": [
+    "\\(-7\\)",
+    "\\(9\\)",
+    "\\(21\\)",
+    "\\(5\\)"
+   ],
+   "why": "Setting \\(x + 2 = 0\\) gives \\(a = -2\\). So \\(P(-2) = 2(-8) + 2 + 7 = -16 + 9 = -7\\). The value \\(21\\) is \\(P(2)\\), found by using the wrong sign for \\(a\\).",
+   "clue": "Set the divisor equal to 0 first, and keep the sign of the result."
+  }
+ },
+ "cleared_by": "checker"
+}

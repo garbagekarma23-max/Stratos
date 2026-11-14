@@ -1,0 +1,468 @@
+{
+ "id": "geo-where-world-s-biomes",
+ "title": "Where the world's biomes are",
+ "brief": "c4c220401564",
+ "shortlist": [
+  [
+   "geo-land-biomes",
+   0.532
+  ],
+  [
+   "geo-biome",
+   0.482
+  ],
+  [
+   "geo-biome-productivity",
+   0.45
+  ],
+  [
+   "geo-water-biomes",
+   0.412
+  ],
+  [
+   "geo-food-fibre-from-biomes",
+   0.383
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:49Z new, match",
+  "2026-11-12T12:44:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:42Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:01Z write: done",
+  "2026-11-12T15:35:06Z check: flagged",
+  "2026-11-12T15:59:43Z fix: suggested",
+  "2026-11-12T17:07:11Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-13T06:06:33Z autoreject: rejected, to be written again (a wording, a other)",
+  "2026-11-13T09:32:53Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T10:40:35Z claude-code check: answered by a separate subagent",
+  "2026-11-13T10:40:35Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.00666,
+  "check": 0.00956,
+  "fix": 0.02198,
+  "recheck": 0.01089
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, geo-land-biomes, describes what each land biome is like rather than the latitude bands where they sit, including deserts around 30 degrees, so it does not teach the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, wording: The distractor 'Mountains are always arranged in east to west lines' uses 'always', but the card only says mountains 'can' break up the bands. The absolute word marks it as wrong without testing the idea.\n- Question a, other: The clue 'What two climate features decide a biome?' points straight at the only option that names two climate features, so a student can pick it without understanding why latitude matters.",
+ "rejected": {
+  "title": "Where the world's biomes are",
+  "card": [
+   "A biome is set mainly by its temperature and rainfall. Both change with latitude, which is how far a place is north or south of the equator.",
+   "Because of this, biomes form rough bands that run east to west around the globe. Mountains and ocean currents can break up these bands.",
+   [
+    "Near the equator",
+    "it is hot and wet all year, so tropical rainforests grow there."
+   ],
+   [
+    "Further out",
+    "deserts are common around 30 degrees north and south, where rainfall is low. Tundra lies near the poles, where it is very cold."
+   ]
+  ],
+  "remember": "Temperature and rainfall change with latitude, so biomes form bands from the equator to the poles.",
+  "a": {
+   "q": "Why do biomes form bands by latitude?",
+   "opts": [
+    "Temperature and rainfall change with latitude",
+    "Soil type is the same along each line of latitude",
+    "Animals move along lines of latitude to find food",
+    "Mountains are always arranged in east to west lines"
+   ],
+   "why": "Biomes depend mainly on temperature and rainfall, and both change with latitude. Soil and animals do not set the bands. Mountains can break the bands up rather than make them.",
+   "clue": "What two climate features decide a biome?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena studies a world biome map. Which biome is she most likely to find at about 30 degrees south, and why?",
+   "opts": [
+    "Desert, because rainfall is low at that latitude",
+    "Tundra, because it is very cold at that latitude",
+    "Tropical rainforest, because it is wet all year there",
+    "Desert, because it is very cold all year there"
+   ],
+   "why": "Deserts are common around 30 degrees north and south because rainfall there is low. Desert with the reason very cold is tempting, but cold is what makes tundra near the poles, not deserts at 30 degrees.",
+   "clue": "Check both the biome and the reason the card gives for it."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A simple world map with latitude lines at the equator, 30 degrees north and south, and the poles. Horizontal bands are labelled: tundra near the poles, deserts around 30 degrees north and south, tropical rainforest along the equator.",
+    "why": "Seeing the bands on a map shows how biomes line up with latitude."
+   }
+  ]
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-13T06:06:33Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, wording: The distractor 'Mountains are always arranged in east to west lines' uses 'always', but the card only says mountains 'can' break up the bands. The absolute word marks it as wrong without testing the idea.",
+    "Question a, other: The clue 'What two climate features decide a biome?' points straight at the only option that names two climate features, so a student can pick it without understanding why latitude matters."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Where the world's biomes are",
+     "card": [
+      "A biome is set mainly by its temperature and rainfall. Both change with latitude, which is how far a place is north or south of the equator.",
+      "Because of this, biomes form rough bands that run east to west around the globe. Mountains and ocean currents can break up these bands.",
+      [
+       "Near the equator",
+       "it is hot and wet all year, so tropical rainforests grow there."
+      ],
+      [
+       "Further out",
+       "deserts are common around 30 degrees north and south, where rainfall is low. Tundra lies near the poles, where it is very cold."
+      ]
+     ],
+     "remember": "Temperature and rainfall change with latitude, so biomes form bands from the equator to the poles.",
+     "a": {
+      "q": "Why do biomes form bands by latitude?",
+      "opts": [
+       "Temperature and rainfall change with latitude",
+       "Soil type is the same along each line of latitude",
+       "Animals move along lines of latitude to find food",
+       "Mountains are always arranged in east to west lines"
+      ],
+      "why": "Biomes depend mainly on temperature and rainfall, and both change with latitude. Soil and animals do not set the bands. Mountains can break the bands up rather than make them.",
+      "clue": "What two climate features decide a biome?"
+     },
+     "b": {
+      "d": 2,
+      "q": "A map shows a hot, wet biome in a band along the equator. Which biome is it most likely to be?",
+      "opts": [
+       "Tropical rainforest",
+       "Tundra",
+       "Desert",
+       "Temperate forest"
+      ],
+      "why": "Places near the equator are hot and wet all year, which suits tropical rainforest. Deserts are common around 30 degrees and tundra is near the poles, so both are tempting but wrong for the equator.",
+      "clue": "Think about which biome the card places at the equator."
+     },
+     "wants": [
+      {
+       "at": "card 2",
+       "kind": "diagram",
+       "brief": "A simple world map with latitude lines at the equator, 30 degrees north and south, and the poles. Horizontal bands are labelled: tundra near the poles, deserts around 30 degrees north and south, tropical rainforest along the equator.",
+       "why": "Seeing the bands on a map shows how biomes line up with latitude."
+      }
+     ]
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Temperature and rainfall change with latitude",
+      "also_right": []
+     },
+     "b": {
+      "best": "Tropical rainforest",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The stem says the biome is both 'hot, wet' and at the equator, so a student can rule out tundra and desert from 'hot, wet' alone without knowing the latitude pattern. Dropping one of the clues, or asking about the 30-degree or polar bands, would test the idea better."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and answers are correct. Question b is too easy because it describes the biome as both hot and wet and at the equator, so it can be answered without knowing the latitude pattern."
+    },
+    "flags": [
+     "Question b, wording: The stem says the biome is both 'hot, wet' and at the equator, so a student can rule out tundra and desert from 'hot, wet' alone without knowing the latitude pattern. Dropping one of the clues, or asking about the 30-degree or polar bands, would test the idea better."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Where the world's biomes are",
+     "card": [
+      "A biome is set mainly by its temperature and rainfall. Both change with latitude, which is how far a place is north or south of the equator.",
+      "Because of this, biomes form rough bands that run east to west around the globe. Mountains and ocean currents can break up these bands.",
+      [
+       "Near the equator",
+       "it is hot and wet all year, so tropical rainforests grow there."
+      ],
+      [
+       "Further out",
+       "deserts are common around 30 degrees north and south, where rainfall is low. Tundra lies near the poles, where it is very cold."
+      ]
+     ],
+     "remember": "Temperature and rainfall change with latitude, so biomes form bands from the equator to the poles.",
+     "a": {
+      "q": "Why do biomes form bands by latitude?",
+      "opts": [
+       "Temperature and rainfall change with latitude",
+       "Soil type is the same along each line of latitude",
+       "Animals move along lines of latitude to find food",
+       "Mountains are always arranged in east to west lines"
+      ],
+      "why": "Biomes depend mainly on temperature and rainfall, and both change with latitude. Soil and animals do not set the bands. Mountains can break the bands up rather than make them.",
+      "clue": "What two climate features decide a biome?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Lena studies a world biome map. Which biome is she most likely to find at about 30 degrees south, and why?",
+      "opts": [
+       "Desert, because rainfall is low at that latitude",
+       "Tundra, because it is very cold at that latitude",
+       "Tropical rainforest, because it is wet all year there",
+       "Desert, because it is very cold all year there"
+      ],
+      "why": "Deserts are common around 30 degrees north and south because rainfall there is low. Desert with the reason very cold is tempting, but cold is what makes tundra near the poles, not deserts at 30 degrees.",
+      "clue": "Check both the biome and the reason the card gives for it."
+     },
+     "wants": [
+      {
+       "at": "card 2",
+       "kind": "diagram",
+       "brief": "A simple world map with latitude lines at the equator, 30 degrees north and south, and the poles. Horizontal bands are labelled: tundra near the poles, deserts around 30 degrees north and south, tropical rainforest along the equator.",
+       "why": "Seeing the bands on a map shows how biomes line up with latitude."
+      }
+     ]
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-12T17:07:11Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Temperature and rainfall change with latitude",
+       "also_right": []
+      },
+      "b": {
+       "best": "Desert, because rainfall is low at that latitude",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "wording",
+        "detail": "The distractor 'Mountains are always arranged in east to west lines' uses 'always', but the card only says mountains 'can' break up the bands. The absolute word marks it as wrong without testing the idea."
+       },
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The clue 'What two climate features decide a biome?' points straight at the only option that names two climate features, so a student can pick it without understanding why latitude matters."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both answers are accurate. In question a, the distractor uses the absolute 'always' where the card says 'can', and the clue nearly gives the answer away."
+     },
+     "flags": [
+      "Question a, wording: The distractor 'Mountains are always arranged in east to west lines' uses 'always', but the card only says mountains 'can' break up the bands. The absolute word marks it as wrong without testing the idea.",
+      "Question a, other: The clue 'What two climate features decide a biome?' points straight at the only option that names two climate features, so a student can pick it without understanding why latitude matters."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-13T09:32:53Z",
+   "step": "write",
+   "version": {
+    "title": "Where the world's biomes are",
+    "card": [
+     "A biome is set mainly by its temperature and rainfall. Both change with latitude, which is how far a place is north or south of the equator.",
+     "Because of this, biomes form rough bands that run east to west around the globe. Mountains and ocean currents can break up these bands.",
+     [
+      "Near the equator",
+      "it is hot and wet all year, so tropical rainforests grow there."
+     ],
+     [
+      "Further out",
+      "deserts are common around 30 degrees north and south, where rainfall is low. Tundra lies near the poles, where it is very cold."
+     ]
+    ],
+    "remember": "Temperature and rainfall change with latitude, so biomes form bands from the equator to the poles.",
+    "a": {
+     "q": "Why do biomes form bands by latitude?",
+     "opts": [
+      "Temperature and rainfall change with latitude",
+      "Soil and rock types change with latitude",
+      "Plants and animals move along lines of latitude",
+      "Mountain ranges mostly run from east to west"
+     ],
+     "why": "Biomes depend mainly on temperature and rainfall, and both change with latitude. Soil, rock and animals do not set the bands. Mountains can break the bands up rather than make them.",
+     "clue": "Think about what a biome is mainly set by."
+    },
+    "b": {
+     "d": 3,
+     "q": "Lena studies a world biome map. Which biome is she most likely to find at about 30 degrees south, and why?",
+     "opts": [
+      "Desert, because rainfall is low at that latitude",
+      "Tundra, because it is very cold at that latitude",
+      "Tropical rainforest, because it is wet all year there",
+      "Desert, because it is very cold all year there"
+     ],
+     "why": "Deserts are common around 30 degrees north and south because rainfall there is low. Desert with the reason very cold is tempting, but cold is what makes tundra near the poles, not deserts at 30 degrees.",
+     "clue": "Check both the biome and the reason the card gives for it."
+    },
+    "wants": [
+     {
+      "at": "card 2",
+      "kind": "diagram",
+      "brief": "A simple world map with latitude lines at the equator, 30 degrees north and south, and the poles. Horizontal bands are labelled: tundra near the poles, deserts around 30 degrees north and south, tropical rainforest along the equator.",
+      "why": "Seeing the bands on a map shows how biomes line up with latitude."
+     }
+    ]
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T10:40:35Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Temperature and rainfall change with latitude",
+     "also_right": []
+    },
+    "b": {
+     "best": "Desert, because rainfall is low at that latitude",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Where the world's biomes are",
+  "card": [
+   "A biome is set mainly by its temperature and rainfall. Both change with latitude, which is how far a place is north or south of the equator.",
+   "Because of this, biomes form rough bands that run east to west around the globe. Mountains and ocean currents can break up these bands.",
+   [
+    "Near the equator",
+    "it is hot and wet all year, so tropical rainforests grow there."
+   ],
+   [
+    "Further out",
+    "deserts are common around 30 degrees north and south, where rainfall is low. Tundra lies near the poles, where it is very cold."
+   ]
+  ],
+  "remember": "Temperature and rainfall change with latitude, so biomes form bands from the equator to the poles.",
+  "a": {
+   "q": "Why do biomes form bands by latitude?",
+   "opts": [
+    "Temperature and rainfall change with latitude",
+    "Soil and rock types change with latitude",
+    "Plants and animals move along lines of latitude",
+    "Mountain ranges mostly run from east to west"
+   ],
+   "why": "Biomes depend mainly on temperature and rainfall, and both change with latitude. Soil, rock and animals do not set the bands. Mountains can break the bands up rather than make them.",
+   "clue": "Think about what a biome is mainly set by."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena studies a world biome map. Which biome is she most likely to find at about 30 degrees south, and why?",
+   "opts": [
+    "Desert, because rainfall is low at that latitude",
+    "Tundra, because it is very cold at that latitude",
+    "Tropical rainforest, because it is wet all year there",
+    "Desert, because it is very cold all year there"
+   ],
+   "why": "Deserts are common around 30 degrees north and south because rainfall there is low. Desert with the reason very cold is tempting, but cold is what makes tundra near the poles, not deserts at 30 degrees.",
+   "clue": "Check both the biome and the reason the card gives for it."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A simple world map with latitude lines at the equator, 30 degrees north and south, and the poles. Horizontal bands are labelled: tundra near the poles, deserts around 30 degrees north and south, tropical rainforest along the equator.",
+    "why": "Seeing the bands on a map shows how biomes line up with latitude."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Temperature and rainfall change with latitude",
+   "also_right": []
+  },
+  "b": {
+   "best": "Desert, because rainfall is low at that latitude",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Where the world's biomes are",
+  "card": [
+   "A biome is set mainly by its temperature and rainfall. Both change with latitude, which is how far a place is north or south of the equator.",
+   "Because of this, biomes form rough bands that run east to west around the globe. Mountains and ocean currents can break up these bands.",
+   [
+    "Near the equator",
+    "it is hot and wet all year, so tropical rainforests grow there."
+   ],
+   [
+    "Further out",
+    "deserts are common around 30 degrees north and south, where rainfall is low. Tundra lies near the poles, where it is very cold."
+   ]
+  ],
+  "remember": "Temperature and rainfall change with latitude, so biomes form bands from the equator to the poles.",
+  "a": {
+   "q": "Why do biomes form bands by latitude?",
+   "opts": [
+    "Temperature and rainfall change with latitude",
+    "Soil and rock types change with latitude",
+    "Plants and animals move along lines of latitude",
+    "Mountain ranges mostly run from east to west"
+   ],
+   "why": "Biomes depend mainly on temperature and rainfall, and both change with latitude. Soil, rock and animals do not set the bands. Mountains can break the bands up rather than make them.",
+   "clue": "Think about what a biome is mainly set by."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena studies a world biome map. Which biome is she most likely to find at about 30 degrees south, and why?",
+   "opts": [
+    "Desert, because rainfall is low at that latitude",
+    "Tundra, because it is very cold at that latitude",
+    "Tropical rainforest, because it is wet all year there",
+    "Desert, because it is very cold all year there"
+   ],
+   "why": "Deserts are common around 30 degrees north and south because rainfall there is low. Desert with the reason very cold is tempting, but cold is what makes tundra near the poles, not deserts at 30 degrees.",
+   "clue": "Check both the biome and the reason the card gives for it."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A simple world map with latitude lines at the equator, 30 degrees north and south, and the poles. Horizontal bands are labelled: tundra near the poles, deserts around 30 degrees north and south, tropical rainforest along the equator.",
+    "why": "Seeing the bands on a map shows how biomes line up with latitude."
+   }
+  ]
+ },
+ "checked_by": "claude-code"
+}

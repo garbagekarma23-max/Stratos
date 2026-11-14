@@ -1,0 +1,326 @@
+{
+ "id": "ecb-supply-vic",
+ "title": "Supply",
+ "brief": "d8f85b05d163",
+ "shortlist": [
+  [
+   "ecb-supply",
+   0.768
+  ],
+  [
+   "ecb-changes-price",
+   0.471
+  ],
+  [
+   "ecb-equilibrium-price",
+   0.396
+  ],
+  [
+   "ecb-market",
+   0.239
+  ],
+  [
+   "ecb-prices-direct-resources",
+   0.238
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:44Z new, match",
+  "2026-11-12T12:44:14Z match: Claude Haiku 5.5 says adapt ecb-supply (1 change)",
+  "2026-11-12T15:15:32Z adapt: done",
+  "2026-11-12T15:25:55Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "adapt": 0.00367,
+  "check": 0.00842
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "ecb-supply",
+  "changes": [
+   "Replace the Tasmanian farm gate example in question b with a strawberry or similar produce example from a Victorian location, such as a farm or market in Victoria."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same idea at the right depth, but its question b uses a Tasmanian setting, so it should be localised to Victoria.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "ecb-supply",
+  "changes": [
+   "Replace the Tasmanian farm gate example in question b with a strawberry or similar produce example from a Victorian location, such as a farm or market in Victoria."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "a.q",
+   "b.q",
+   "b.why"
+  ]
+ },
+ "draft": {
+  "title": "Supply",
+  "card": [
+   "Supply is how much of a product sellers will offer for sale at each price.",
+   "As the price rises, sellers usually offer more. A higher price means more money for each item sold.",
+   "As the price falls, sellers usually offer less. Some items may no longer be worth making at a low price.",
+   "Supply describes the sellers' side of a market. It is a different idea from demand."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A supply curve sloping up. When the price rises from a low price to a high price, sellers offer more: the quantity offered rises from fewer to more, from A to B along the curve.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Quantity"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Price"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "S",
+      "points": [
+       [
+        1,
+        1
+       ],
+       [
+        9,
+        9
+       ]
+      ],
+      "label": "Supply",
+      "pos": "above",
+      "labelAt": 9
+     },
+     {
+      "type": "guide",
+      "at": [
+       2.5,
+       2.5
+      ],
+      "xLabel": "fewer",
+      "yLabel": "low price"
+     },
+     {
+      "type": "guide",
+      "at": [
+       6,
+       6
+      ],
+      "xLabel": "more",
+      "yLabel": "high price"
+     },
+     {
+      "type": "point",
+      "at": [
+       2.5,
+       2.5
+      ],
+      "on": [
+       "S"
+      ],
+      "label": "A",
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       6
+      ],
+      "on": [
+       "S"
+      ],
+      "label": "B",
+      "pos": "below-right"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       3,
+       3.7
+      ],
+      "to": [
+       5.4,
+       6.1
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "Higher price, sellers usually offer more. Lower price, they usually offer less.",
+  "a": {
+   "q": "Which of these best describes what supply means in a market?",
+   "opts": [
+    "How much sellers will offer at each price",
+    "How much buyers want to buy at each price",
+    "How much a product costs to make",
+    "How many sellers there are in a market"
+   ],
+   "why": "Supply is the amount sellers will offer at each price. The option about buyers is not supply, because supply describes the sellers' side of a market.",
+   "clue": "Supply is about the sellers' side of the market."
+  },
+  "b": {
+   "d": 2,
+   "q": "At a Yarra Valley farm stand, the price of strawberries rises from $4 to $6 a punnet. What will the farm usually do?",
+   "opts": [
+    "Offer more punnets for sale",
+    "Offer fewer punnets for sale",
+    "Offer the same number of punnets",
+    "Stop selling punnets at the gate"
+   ],
+   "why": "A higher price means more money for each punnet, so the Yarra Valley farm usually offers more. Offering fewer would match a price fall, not a rise.",
+   "clue": "What does a higher price mean for the seller's income?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "How much sellers will offer at each price",
+   "also_right": []
+  },
+  "b": {
+   "best": "Offer more punnets for sale",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Supply",
+  "card": [
+   "Supply is how much of a product sellers will offer for sale at each price.",
+   "As the price rises, sellers usually offer more. A higher price means more money for each item sold.",
+   "As the price falls, sellers usually offer less. Some items may no longer be worth making at a low price.",
+   "Supply describes the sellers' side of a market. It is a different idea from demand."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A supply curve sloping up. When the price rises from a low price to a high price, sellers offer more: the quantity offered rises from fewer to more, from A to B along the curve.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Quantity"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Price"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "S",
+      "points": [
+       [
+        1,
+        1
+       ],
+       [
+        9,
+        9
+       ]
+      ],
+      "label": "Supply",
+      "pos": "above",
+      "labelAt": 9
+     },
+     {
+      "type": "guide",
+      "at": [
+       2.5,
+       2.5
+      ],
+      "xLabel": "fewer",
+      "yLabel": "low price"
+     },
+     {
+      "type": "guide",
+      "at": [
+       6,
+       6
+      ],
+      "xLabel": "more",
+      "yLabel": "high price"
+     },
+     {
+      "type": "point",
+      "at": [
+       2.5,
+       2.5
+      ],
+      "on": [
+       "S"
+      ],
+      "label": "A",
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       6
+      ],
+      "on": [
+       "S"
+      ],
+      "label": "B",
+      "pos": "below-right"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       3,
+       3.7
+      ],
+      "to": [
+       5.4,
+       6.1
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "Higher price, sellers usually offer more. Lower price, they usually offer less.",
+  "a": {
+   "q": "Which of these best describes what supply means in a market?",
+   "opts": [
+    "How much sellers will offer at each price",
+    "How much buyers want to buy at each price",
+    "How much a product costs to make",
+    "How many sellers there are in a market"
+   ],
+   "why": "Supply is the amount sellers will offer at each price. The option about buyers is not supply, because supply describes the sellers' side of a market.",
+   "clue": "Supply is about the sellers' side of the market."
+  },
+  "b": {
+   "d": 2,
+   "q": "At a Yarra Valley farm stand, the price of strawberries rises from $4 to $6 a punnet. What will the farm usually do?",
+   "opts": [
+    "Offer more punnets for sale",
+    "Offer fewer punnets for sale",
+    "Offer the same number of punnets",
+    "Stop selling punnets at the gate"
+   ],
+   "why": "A higher price means more money for each punnet, so the Yarra Valley farm usually offers more. Offering fewer would match a price fall, not a rise.",
+   "clue": "What does a higher price mean for the seller's income?"
+  }
+ },
+ "cleared_by": "checker"
+}

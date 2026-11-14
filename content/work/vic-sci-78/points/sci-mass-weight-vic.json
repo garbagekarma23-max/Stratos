@@ -1,0 +1,480 @@
+{
+ "id": "sci-mass-weight-vic",
+ "title": "Mass and weight",
+ "brief": "466edf4a9969",
+ "shortlist": [
+  [
+   "sci-gravity-mass-weight",
+   0.822
+  ],
+  [
+   "sci-mass-effect-force",
+   0.426
+  ],
+  [
+   "sci-conservation-mass",
+   0.296
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:55Z new, match",
+  "2026-11-12T12:44:22Z match: Claude Haiku 5.5 may adapt sci-gravity-mass-weight, but is not highly sure, so to the Opus match check",
+  "2026-11-12T15:15:51Z confirm: Claude Opus 5.5 may adapt sci-gravity-mass-weight, but is not highly sure, so it is for you to review",
+  "2026-11-13T12:13:15Z match: claude-code says adapt sci-gravity-mass-weight (3 changes)",
+  "2026-11-13T12:13:15Z claude-code review: adapting sci-gravity-mass-weight on the next run",
+  "2026-11-13T13:04:55Z adapt: done",
+  "2026-11-13T13:11:26Z check: flagged",
+  "2026-11-13T13:13:40Z fix: suggested",
+  "2026-11-13T15:07:27Z claude-code review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "confirm": 0.00936,
+  "adapt": 0.00422,
+  "check": 0.01103,
+  "fix": 0.01817
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "sci-gravity-mass-weight",
+  "changes": [
+   "Add the relationship that weight is about 9.8 times mass on Earth, so students can calculate weight from mass using the gravitational field strength of 9.8 N/kg.",
+   "Add that this factor is the strength of Earth's gravity and differs on other bodies, so the calculation applies to Earth only as stated."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same mass and weight idea at the right Year 7 depth, but it does not give the 9.8 times mass relationship that the new point requires, so it needs that small addition.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "sci-gravity-mass-weight",
+  "changes": [
+   "Add a line saying that on Earth an object's weight in newtons is about 9.8 times its mass in kilograms, for example a 2 kg rock weighs about 19.6 N.",
+   "Change the 'Used in' context and any examples to suit students in Victoria, Levels 7 and 8."
+  ],
+  "sure": "medium",
+  "reason": "The bank point already teaches mass versus weight with kilograms and newtons at this level, but it needs the 'about 9.8 times the mass' rule from your brief added.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "sci-gravity-mass-weight",
+  "changes": [
+   "Add a card line saying that on Earth an object's weight in newtons is about 9.8 times its mass in kilograms, so a 2 kg rock weighs about 19.6 N.",
+   "Cut the first card line's explanation of gravity down to a mention, since gravity as a force belongs to the contact and non-contact forces point in this chapter.",
+   "Change the title to Mass and weight."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "title",
+   "card1",
+   "card4",
+   "card3",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches mass in kilograms and weight in newtons at the right depth, but it lacks the brief's rule that weight on Earth is about 9.8 times the mass, and its first line explains gravity, which the contact and non-contact forces point covers.",
+   "item": "41a96097f0b23597",
+   "result": "decided",
+   "saved": {
+    "id": "sci-mass-weight-vic",
+    "title": "Mass and weight",
+    "brief": "466edf4a9969",
+    "shortlist": [
+     [
+      "sci-gravity-mass-weight",
+      0.822
+     ],
+     [
+      "sci-mass-effect-force",
+      0.426
+     ],
+     [
+      "sci-conservation-mass",
+      0.296
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00026,
+     "confirm": 0.00936
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "sci-gravity-mass-weight",
+     "changes": [
+      "Add the relationship that weight is about 9.8 times mass on Earth, so students can calculate weight from mass using the gravitational field strength of 9.8 N/kg.",
+      "Add that this factor is the strength of Earth's gravity and differs on other bodies, so the calculation applies to Earth only as stated."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches the same mass and weight idea at the right Year 7 depth, but it does not give the 9.8 times mass relationship that the new point requires, so it needs that small addition.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "sci-gravity-mass-weight",
+     "changes": [
+      "Add a line saying that on Earth an object's weight in newtons is about 9.8 times its mass in kilograms, for example a 2 kg rock weighs about 19.6 N.",
+      "Change the 'Used in' context and any examples to suit students in Victoria, Levels 7 and 8."
+     ],
+     "sure": "medium",
+     "reason": "The bank point already teaches mass versus weight with kilograms and newtons at this level, but it needs the 'about 9.8 times the mass' rule from your brief added.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "a085d64d0236845e"
+  },
+  {
+   "at": "2026-11-13T15:07:27Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix adds that the Moon's pull is about one-sixth of Earth's, which both questions rely on. That is right (about 1.6 against 9.8 N per kg), and the questions are unchanged.",
+   "item": "d606a36e4988e1bf",
+   "result": "decided",
+   "saved": {
+    "id": "sci-mass-weight-vic",
+    "title": "Mass and weight",
+    "brief": "466edf4a9969",
+    "shortlist": [
+     [
+      "sci-gravity-mass-weight",
+      0.822
+     ],
+     [
+      "sci-mass-effect-force",
+      0.426
+     ],
+     [
+      "sci-conservation-mass",
+      0.296
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "confirm": 1,
+     "adapt": 1,
+     "check": 1,
+     "fix": 1
+    },
+    "usd": {
+     "match": 0.00026,
+     "confirm": 0.00936,
+     "adapt": 0.00422,
+     "check": 0.01103,
+     "fix": 0.01817
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "sci-gravity-mass-weight",
+     "changes": [
+      "Add the relationship that weight is about 9.8 times mass on Earth, so students can calculate weight from mass using the gravitational field strength of 9.8 N/kg.",
+      "Add that this factor is the strength of Earth's gravity and differs on other bodies, so the calculation applies to Earth only as stated."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches the same mass and weight idea at the right Year 7 depth, but it does not give the 9.8 times mass relationship that the new point requires, so it needs that small addition.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "sci-gravity-mass-weight",
+     "changes": [
+      "Add a line saying that on Earth an object's weight in newtons is about 9.8 times its mass in kilograms, for example a 2 kg rock weighs about 19.6 N.",
+      "Change the 'Used in' context and any examples to suit students in Victoria, Levels 7 and 8."
+     ],
+     "sure": "medium",
+     "reason": "The bank point already teaches mass versus weight with kilograms and newtons at this level, but it needs the 'about 9.8 times the mass' rule from your brief added.",
+     "model": "claude-opus-5-5"
+    },
+    "adapt": {
+     "from": "sci-gravity-mass-weight",
+     "changes": [
+      "Add a card line saying that on Earth an object's weight in newtons is about 9.8 times its mass in kilograms, so a 2 kg rock weighs about 19.6 N.",
+      "Cut the first card line's explanation of gravity down to a mention, since gravity as a force belongs to the contact and non-contact forces point in this chapter.",
+      "Change the title to Mass and weight."
+     ],
+     "by": "claude-code",
+     "parts": [
+      "title",
+      "card1",
+      "card4",
+      "card3",
+      "a.q",
+      "b.q"
+     ]
+    },
+    "cleared_by": "claude-code",
+    "draft": {
+     "title": "Mass and weight",
+     "card": [
+      "Weight comes from gravity, the pull of a planet or moon on an object. Earth is so massive that its pull on us is easy to notice.",
+      [
+       "Mass",
+       "the amount of matter in an object. It is measured in kilograms (kg) and stays the same wherever the object is."
+      ],
+      [
+       "Weight",
+       "the force of gravity on an object from Earth, the Moon or another body. It is measured in newtons (N). More mass means more weight."
+      ],
+      "On Earth, an object's weight in newtons is about 9.8 times its mass in kilograms. A 2 kg rock weighs about 19.6 N."
+     ],
+     "remember": "Mass is how much matter there is. Weight is the pull of gravity on it.",
+     "a": {
+      "q": "An astronaut flies from Earth to the Moon. How do her mass and her weight change?",
+      "opts": [
+       "Mass stays the same and weight gets smaller",
+       "Mass gets smaller and weight stays the same",
+       "Both mass and weight stay the same",
+       "Both mass and weight get smaller"
+      ],
+      "why": "Mass is the amount of matter in her body, and that does not change with place. Weight is the pull of gravity, and the Moon's pull is weaker than Earth's. Saying that both get smaller mixes up mass with weight.",
+      "clue": "Which one depends on the pull of gravity where she is?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Liam hangs a 2 kg rock from a force meter on Earth, then repeats this on the Moon. Which statement is correct?",
+      "opts": [
+       "The reading is less on the Moon and the mass is still 2 kg",
+       "The reading is less on the Moon because the mass is smaller",
+       "The reading is the same on both because the mass is 2 kg",
+       "The reading is more on the Moon and the mass is still 2 kg"
+      ],
+      "why": "A force meter measures weight, which is the pull of gravity. The Moon's gravity is weaker, so the reading is smaller. The rock has the same amount of matter, so its mass stays 2 kg. The option saying the mass is smaller is tempting but confuses mass with weight.",
+      "clue": "A force meter measures a force, not the amount of matter."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Mass stays the same and weight gets smaller",
+      "also_right": []
+     },
+     "b": {
+      "best": "The reading is less on the Moon and the mass is still 2 kg",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "level",
+       "detail": "Both questions depend on the Moon's gravity being weaker than Earth's, but the card never says so. It only says weight can come from the Moon or another body. Add a line such as 'The Moon's pull is about one-sixth of Earth's, so things weigh less there.'"
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and answers are correct. However, both questions rely on the Moon's gravity being weaker than Earth's, which the card never states, so add that line to the card."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Card, level: Both questions depend on the Moon's gravity being weaker than Earth's, but the card never says so. It only says weight can come from the Moon or another body. Add a line such as 'The Moon's pull is about one-sixth of Earth's, so things weigh less there.'"
+    ],
+    "proposal": {
+     "title": "Mass and weight",
+     "card": [
+      [
+       "Mass",
+       "the amount of matter in an object. It is measured in kilograms (kg) and stays the same wherever the object is."
+      ],
+      [
+       "Weight",
+       "the pull of gravity on an object from Earth, the Moon or another body. It is a force, measured in newtons (N) with a force meter. More mass means more weight."
+      ],
+      "On Earth, an object's weight in newtons is about 9.8 times its mass in kilograms. A 2 kg rock weighs about 19.6 N.",
+      "The Moon's pull is about one-sixth of Earth's, so things weigh less there. Their mass does not change, because the amount of matter is the same."
+     ],
+     "remember": "Mass stays the same everywhere. Weight changes with the strength of gravity.",
+     "a": {
+      "q": "An astronaut flies from Earth to the Moon. How do her mass and her weight change?",
+      "opts": [
+       "Mass stays the same and weight gets smaller",
+       "Mass gets smaller and weight stays the same",
+       "Both mass and weight stay the same",
+       "Both mass and weight get smaller"
+      ],
+      "why": "Mass is the amount of matter in her body, and that does not change with place. Weight is the pull of gravity, and the Moon's pull is about one-sixth of Earth's. Saying that both get smaller mixes up mass with weight.",
+      "clue": "Which one depends on the pull of gravity where she is?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Liam hangs a 2 kg rock from a force meter on Earth, then repeats this on the Moon. Which statement is correct?",
+      "opts": [
+       "The reading is less on the Moon and the mass is still 2 kg",
+       "The reading is less on the Moon because the mass is smaller",
+       "The reading is the same on both because the mass is 2 kg",
+       "The reading is more on the Moon and the mass is still 2 kg"
+      ],
+      "why": "A force meter measures weight, which is the pull of gravity. The Moon's pull is weaker, so the reading is smaller. The option saying the mass is smaller is tempting, but the rock has the same amount of matter, so its mass stays 2 kg.",
+      "clue": "A force meter measures a force, not the amount of matter."
+     }
+    },
+    "proposal_problems": [],
+    "rewrites": 0
+   },
+   "after": "543f9928ad2f9eba"
+  }
+ ],
+ "draft": {
+  "title": "Mass and weight",
+  "card": [
+   "Weight comes from gravity, the pull of a planet or moon on an object. Earth is so massive that its pull on us is easy to notice.",
+   [
+    "Mass",
+    "the amount of matter in an object. It is measured in kilograms (kg) and stays the same wherever the object is."
+   ],
+   [
+    "Weight",
+    "the force of gravity on an object from Earth, the Moon or another body. It is measured in newtons (N). More mass means more weight."
+   ],
+   "On Earth, an object's weight in newtons is about 9.8 times its mass in kilograms. A 2 kg rock weighs about 19.6 N."
+  ],
+  "remember": "Mass is how much matter there is. Weight is the pull of gravity on it.",
+  "a": {
+   "q": "An astronaut flies from Earth to the Moon. How do her mass and her weight change?",
+   "opts": [
+    "Mass stays the same and weight gets smaller",
+    "Mass gets smaller and weight stays the same",
+    "Both mass and weight stay the same",
+    "Both mass and weight get smaller"
+   ],
+   "why": "Mass is the amount of matter in her body, and that does not change with place. Weight is the pull of gravity, and the Moon's pull is weaker than Earth's. Saying that both get smaller mixes up mass with weight.",
+   "clue": "Which one depends on the pull of gravity where she is?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam hangs a 2 kg rock from a force meter on Earth, then repeats this on the Moon. Which statement is correct?",
+   "opts": [
+    "The reading is less on the Moon and the mass is still 2 kg",
+    "The reading is less on the Moon because the mass is smaller",
+    "The reading is the same on both because the mass is 2 kg",
+    "The reading is more on the Moon and the mass is still 2 kg"
+   ],
+   "why": "A force meter measures weight, which is the pull of gravity. The Moon's gravity is weaker, so the reading is smaller. The rock has the same amount of matter, so its mass stays 2 kg. The option saying the mass is smaller is tempting but confuses mass with weight.",
+   "clue": "A force meter measures a force, not the amount of matter."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Mass stays the same and weight gets smaller",
+   "also_right": []
+  },
+  "b": {
+   "best": "The reading is less on the Moon and the mass is still 2 kg",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "level",
+    "detail": "Both questions depend on the Moon's gravity being weaker than Earth's, but the card never says so. It only says weight can come from the Moon or another body. Add a line such as 'The Moon's pull is about one-sixth of Earth's, so things weigh less there.'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct. However, both questions rely on the Moon's gravity being weaker than Earth's, which the card never states, so add that line to the card."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, level: Both questions depend on the Moon's gravity being weaker than Earth's, but the card never says so. It only says weight can come from the Moon or another body. Add a line such as 'The Moon's pull is about one-sixth of Earth's, so things weigh less there.'"
+ ],
+ "proposal": {
+  "title": "Mass and weight",
+  "card": [
+   [
+    "Mass",
+    "the amount of matter in an object. It is measured in kilograms (kg) and stays the same wherever the object is."
+   ],
+   [
+    "Weight",
+    "the pull of gravity on an object from Earth, the Moon or another body. It is a force, measured in newtons (N) with a force meter. More mass means more weight."
+   ],
+   "On Earth, an object's weight in newtons is about 9.8 times its mass in kilograms. A 2 kg rock weighs about 19.6 N.",
+   "The Moon's pull is about one-sixth of Earth's, so things weigh less there. Their mass does not change, because the amount of matter is the same."
+  ],
+  "remember": "Mass stays the same everywhere. Weight changes with the strength of gravity.",
+  "a": {
+   "q": "An astronaut flies from Earth to the Moon. How do her mass and her weight change?",
+   "opts": [
+    "Mass stays the same and weight gets smaller",
+    "Mass gets smaller and weight stays the same",
+    "Both mass and weight stay the same",
+    "Both mass and weight get smaller"
+   ],
+   "why": "Mass is the amount of matter in her body, and that does not change with place. Weight is the pull of gravity, and the Moon's pull is about one-sixth of Earth's. Saying that both get smaller mixes up mass with weight.",
+   "clue": "Which one depends on the pull of gravity where she is?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam hangs a 2 kg rock from a force meter on Earth, then repeats this on the Moon. Which statement is correct?",
+   "opts": [
+    "The reading is less on the Moon and the mass is still 2 kg",
+    "The reading is less on the Moon because the mass is smaller",
+    "The reading is the same on both because the mass is 2 kg",
+    "The reading is more on the Moon and the mass is still 2 kg"
+   ],
+   "why": "A force meter measures weight, which is the pull of gravity. The Moon's pull is weaker, so the reading is smaller. The option saying the mass is smaller is tempting, but the rock has the same amount of matter, so its mass stays 2 kg.",
+   "clue": "A force meter measures a force, not the amount of matter."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Mass and weight",
+  "card": [
+   [
+    "Mass",
+    "the amount of matter in an object. It is measured in kilograms (kg) and stays the same wherever the object is."
+   ],
+   [
+    "Weight",
+    "the pull of gravity on an object from Earth, the Moon or another body. It is a force, measured in newtons (N) with a force meter. More mass means more weight."
+   ],
+   "On Earth, an object's weight in newtons is about 9.8 times its mass in kilograms. A 2 kg rock weighs about 19.6 N.",
+   "The Moon's pull is about one-sixth of Earth's, so things weigh less there. Their mass does not change, because the amount of matter is the same."
+  ],
+  "remember": "Mass stays the same everywhere. Weight changes with the strength of gravity.",
+  "a": {
+   "q": "An astronaut flies from Earth to the Moon. How do her mass and her weight change?",
+   "opts": [
+    "Mass stays the same and weight gets smaller",
+    "Mass gets smaller and weight stays the same",
+    "Both mass and weight stay the same",
+    "Both mass and weight get smaller"
+   ],
+   "why": "Mass is the amount of matter in her body, and that does not change with place. Weight is the pull of gravity, and the Moon's pull is about one-sixth of Earth's. Saying that both get smaller mixes up mass with weight.",
+   "clue": "Which one depends on the pull of gravity where she is?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam hangs a 2 kg rock from a force meter on Earth, then repeats this on the Moon. Which statement is correct?",
+   "opts": [
+    "The reading is less on the Moon and the mass is still 2 kg",
+    "The reading is less on the Moon because the mass is smaller",
+    "The reading is the same on both because the mass is 2 kg",
+    "The reading is more on the Moon and the mass is still 2 kg"
+   ],
+   "why": "A force meter measures weight, which is the pull of gravity. The Moon's pull is weaker, so the reading is smaller. The option saying the mass is smaller is tempting, but the rock has the same amount of matter, so its mass stays 2 kg.",
+   "clue": "A force meter measures a force, not the amount of matter."
+  }
+ }
+}

@@ -1,0 +1,375 @@
+{
+ "id": "sci-word-balanced-equations",
+ "title": "Word and balanced equations",
+ "brief": "3692d27cc741",
+ "shortlist": [
+  [
+   "sci-balancing-chemical-equation",
+   0.608
+  ],
+  [
+   "chem-balanced-equations",
+   0.325
+  ],
+  [
+   "sci-reactants-products",
+   0.281
+  ],
+  [
+   "mat-simultaneous-equations-by-graphing",
+   0.231
+  ],
+  [
+   "mat-simultaneous-equations-by-substitution",
+   0.214
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:56Z new, match",
+  "2026-11-12T12:44:23Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:54Z write: done",
+  "2026-11-12T15:26:07Z check: flagged",
+  "2026-11-12T15:35:12Z fix: suggested",
+  "2026-11-12T17:07:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-13T06:06:33Z autoreject: rejected, to be written again (card wording)",
+  "2026-11-13T09:32:54Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T10:40:35Z claude-code check: answered by a separate subagent",
+  "2026-11-13T10:40:35Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.01142,
+  "check": 0.01409,
+  "fix": 0.01878,
+  "recheck": 0.01083
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No single bank point covers both the word equation (naming reactants and products) and the balanced equation; the closest card, sci-balancing-chemical-equation, covers only balancing, and adding the word-equation content would be a new idea rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, wording: The second line says 'A balanced equation uses chemical formulas instead of names' and then gives H₂ + O₂ → H₂O as the example, which is not balanced. A student could take an unbalanced formula equation for a balanced one. Better: 'A formula equation uses chemical formulas instead of names; it must then be balanced.'",
+ "rejected": {
+  "title": "Word and balanced equations",
+  "card": [
+   "A word equation names the reactants (the substances you start with) and the products (the new substances made). The arrow means \"react to form\".",
+   "A balanced equation uses chemical formulas instead of names. For example, hydrogen + oxygen → water becomes H₂ + O₂ → H₂O before balancing.",
+   "Atoms are not made or destroyed, so each kind of atom must be the same on both sides. We balance by putting numbers in front of formulas, called coefficients. We never change the small numbers inside a formula, called subscripts.",
+   "Balanced: 2H₂ + O₂ → 2H₂O. The large 2s are coefficients and the small ₂s are subscripts. Each side has 4 hydrogen atoms and 2 oxygen atoms."
+  ],
+  "remember": "Balance an equation by changing the numbers in front of formulas, so each kind of atom matches on both sides.",
+  "a": {
+   "q": "Which equation is balanced?",
+   "opts": [
+    "2Mg + O₂ → 2MgO",
+    "Mg + O₂ → MgO",
+    "Mg + O₂ → 2MgO",
+    "2Mg + 2O₂ → 2MgO"
+   ],
+   "why": "2Mg + O₂ → 2MgO has 2 magnesium atoms and 2 oxygen atoms on each side. Mg + O₂ → MgO is tempting because it uses the right formulas, but it has 2 oxygen atoms on the left and only 1 on the right.",
+   "clue": "Count each kind of atom on both sides of the arrow."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is balancing H₂ + Cl₂ → HCl. She changes it to H₂ + Cl₂ → HCl₂. What is wrong with her method?",
+   "opts": [
+    "She changed a subscript, but should add a coefficient",
+    "She should have changed the arrow to an equals sign",
+    "She should have written the reactants as words",
+    "She added a chlorine atom, but should have removed one"
+   ],
+   "why": "Changing the subscript in HCl makes a different substance, HCl₂, which is not what is made. Balancing only changes the coefficients in front, giving H₂ + Cl₂ → 2HCl. Removing an atom instead is tempting, but it would also change a formula.",
+   "clue": "Which numbers are you allowed to change?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-13T06:06:33Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, wording: The second line says 'A balanced equation uses chemical formulas instead of names' and then gives H₂ + O₂ → H₂O as the example, which is not balanced. A student could take an unbalanced formula equation for a balanced one. Better: 'A formula equation uses chemical formulas instead of names; it must then be balanced.'"
+   ],
+   "saved": {
+    "draft": {
+     "title": "Word and balanced equations",
+     "card": [
+      "A word equation names the reactants (the substances you start with) and the products (the new substances made). An arrow means \"react to form\".",
+      "A balanced equation uses chemical formulas instead of names. For example, hydrogen + oxygen → water becomes H2 + O2 → H2O before balancing.",
+      "Atoms are not made or destroyed, so each kind of atom must be the same on both sides. We add numbers in front of formulas, called coefficients, to do this. We never change the small numbers inside a formula.",
+      "Balanced: 2H2 + O2 → 2H2O. Each side has 4 hydrogen atoms and 2 oxygen atoms."
+     ],
+     "remember": "Balance an equation by changing the numbers in front of formulas, so each kind of atom matches on both sides.",
+     "a": {
+      "q": "Which equation is balanced?",
+      "opts": [
+       "2Mg + O2 → 2MgO",
+       "Mg + O2 → MgO",
+       "Mg + O2 → 2MgO",
+       "2Mg + 2O2 → 2MgO"
+      ],
+      "why": "2Mg + O2 → 2MgO has 2 magnesium atoms and 2 oxygen atoms on each side. Mg + O2 → MgO is tempting because it uses the right formulas, but it has 2 oxygen atoms on the left and only 1 on the right.",
+      "clue": "Count each kind of atom on both sides of the arrow."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya balances H2 + Cl2 → HCl. She changes it to H2 + Cl2 → HCl2. What is wrong with her method?",
+      "opts": [
+       "She changed a formula, but should add a number in front",
+       "She should have changed the arrow to an equals sign",
+       "She should have written the reactants as words",
+       "She added a chlorine atom, but should have removed one"
+      ],
+      "why": "Changing a small number inside a formula makes a different substance, HCl2, which is not what is made. Balancing only changes the numbers in front, giving H2 + Cl2 → 2HCl. Adding or removing atoms is tempting but it also changes the substance.",
+      "clue": "Which numbers are you allowed to change?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "2Mg + O2 → 2MgO",
+      "also_right": []
+     },
+     "b": {
+      "best": "She changed a formula, but should add a number in front",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "Formulas are written as plain text (H2, O2, H2O, 2H2), so subscripts appear the same size as coefficients. Yet the card says 'We never change the small numbers inside a formula', and nothing on screen is small. In '2H2' a student cannot see which 2 is the coefficient and which is the subscript. Use real subscripts (H₂, O₂, H₂O, MgO, Cl₂) throughout the card, questions and whys."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both answers are correct and unambiguous. The one problem is that chemical formulas are written without subscripts (H2, 2H2), which clashes with the card's reference to 'small numbers inside a formula' and could confuse coefficients with subscripts. Use proper subscripts throughout."
+    },
+    "flags": [
+     "Card, wording: Formulas are written as plain text (H2, O2, H2O, 2H2), so subscripts appear the same size as coefficients. Yet the card says 'We never change the small numbers inside a formula', and nothing on screen is small. In '2H2' a student cannot see which 2 is the coefficient and which is the subscript. Use real subscripts (H₂, O₂, H₂O, MgO, Cl₂) throughout the card, questions and whys."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Word and balanced equations",
+     "card": [
+      "A word equation names the reactants (the substances you start with) and the products (the new substances made). The arrow means \"react to form\".",
+      "A balanced equation uses chemical formulas instead of names. For example, hydrogen + oxygen → water becomes H₂ + O₂ → H₂O before balancing.",
+      "Atoms are not made or destroyed, so each kind of atom must be the same on both sides. We balance by putting numbers in front of formulas, called coefficients. We never change the small numbers inside a formula, called subscripts.",
+      "Balanced: 2H₂ + O₂ → 2H₂O. The large 2s are coefficients and the small ₂s are subscripts. Each side has 4 hydrogen atoms and 2 oxygen atoms."
+     ],
+     "remember": "Balance an equation by changing the numbers in front of formulas, so each kind of atom matches on both sides.",
+     "a": {
+      "q": "Which equation is balanced?",
+      "opts": [
+       "2Mg + O₂ → 2MgO",
+       "Mg + O₂ → MgO",
+       "Mg + O₂ → 2MgO",
+       "2Mg + 2O₂ → 2MgO"
+      ],
+      "why": "2Mg + O₂ → 2MgO has 2 magnesium atoms and 2 oxygen atoms on each side. Mg + O₂ → MgO is tempting because it uses the right formulas, but it has 2 oxygen atoms on the left and only 1 on the right.",
+      "clue": "Count each kind of atom on both sides of the arrow."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya is balancing H₂ + Cl₂ → HCl. She changes it to H₂ + Cl₂ → HCl₂. What is wrong with her method?",
+      "opts": [
+       "She changed a subscript, but should add a coefficient",
+       "She should have changed the arrow to an equals sign",
+       "She should have written the reactants as words",
+       "She added a chlorine atom, but should have removed one"
+      ],
+      "why": "Changing the subscript in HCl makes a different substance, HCl₂, which is not what is made. Balancing only changes the coefficients in front, giving H₂ + Cl₂ → 2HCl. Removing an atom instead is tempting, but it would also change a formula.",
+      "clue": "Which numbers are you allowed to change?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-12T17:07:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "2Mg + O₂ → 2MgO",
+       "also_right": []
+      },
+      "b": {
+       "best": "She changed a subscript, but should add a coefficient",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "wording",
+        "detail": "The second line says 'A balanced equation uses chemical formulas instead of names' and then gives H₂ + O₂ → H₂O as the example, which is not balanced. A student could take an unbalanced formula equation for a balanced one. Better: 'A formula equation uses chemical formulas instead of names; it must then be balanced.'"
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions have one clear correct answer, and the explanations are accurate. One minor wording issue: the card introduces 'a balanced equation' with an unbalanced formula equation as its example, which could confuse students."
+     },
+     "flags": [
+      "Card, wording: The second line says 'A balanced equation uses chemical formulas instead of names' and then gives H₂ + O₂ → H₂O as the example, which is not balanced. A student could take an unbalanced formula equation for a balanced one. Better: 'A formula equation uses chemical formulas instead of names; it must then be balanced.'"
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-13T09:32:54Z",
+   "step": "write",
+   "version": {
+    "title": "Word and balanced equations",
+    "card": [
+     "A word equation names the reactants (the substances you start with) and the products (the new substances made). The arrow means \"react to form\".",
+     "A formula equation uses chemical formulas instead of names, and it must then be balanced. For example, hydrogen + oxygen → water becomes H₂ + O₂ → H₂O, which is not yet balanced.",
+     "Atoms are not made or destroyed, so each kind of atom must be the same on both sides. We balance by putting numbers in front of formulas, called coefficients. We never change the small numbers inside a formula, called subscripts.",
+     "Balanced: 2H₂ + O₂ → 2H₂O. The large 2s are coefficients and the small ₂s are subscripts. Each side has 4 hydrogen atoms and 2 oxygen atoms."
+    ],
+    "remember": "Balance an equation by changing the numbers in front of formulas, so each kind of atom matches on both sides.",
+    "a": {
+     "q": "Which equation is balanced?",
+     "opts": [
+      "2Mg + O₂ → 2MgO",
+      "Mg + O₂ → MgO",
+      "Mg + O₂ → 2MgO",
+      "2Mg + 2O₂ → 2MgO"
+     ],
+     "why": "2Mg + O₂ → 2MgO has 2 magnesium atoms and 2 oxygen atoms on each side. Mg + O₂ → MgO is tempting because it uses the right formulas, but it has 2 oxygen atoms on the left and only 1 on the right.",
+     "clue": "Count each kind of atom on both sides of the arrow."
+    },
+    "b": {
+     "d": 3,
+     "q": "Priya is balancing H₂ + Cl₂ → HCl. She changes it to H₂ + Cl₂ → HCl₂. What is wrong with her method?",
+     "opts": [
+      "She changed a subscript, but should add a coefficient",
+      "She should have changed the arrow to an equals sign",
+      "She should have written the reactants as words",
+      "She added a chlorine atom, but should have removed one"
+     ],
+     "why": "Changing the subscript in HCl makes a different substance, HCl₂, which is not what is made. Balancing only changes the coefficients in front, giving H₂ + Cl₂ → 2HCl. Removing an atom instead is tempting, but it would also change a formula.",
+     "clue": "Which numbers are you allowed to change?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T10:40:35Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "2Mg + O₂ → 2MgO",
+     "also_right": []
+    },
+    "b": {
+     "best": "She changed a subscript, but should add a coefficient",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Word and balanced equations",
+  "card": [
+   "A word equation names the reactants (the substances you start with) and the products (the new substances made). The arrow means \"react to form\".",
+   "A formula equation uses chemical formulas instead of names, and it must then be balanced. For example, hydrogen + oxygen → water becomes H₂ + O₂ → H₂O, which is not yet balanced.",
+   "Atoms are not made or destroyed, so each kind of atom must be the same on both sides. We balance by putting numbers in front of formulas, called coefficients. We never change the small numbers inside a formula, called subscripts.",
+   "Balanced: 2H₂ + O₂ → 2H₂O. The large 2s are coefficients and the small ₂s are subscripts. Each side has 4 hydrogen atoms and 2 oxygen atoms."
+  ],
+  "remember": "Balance an equation by changing the numbers in front of formulas, so each kind of atom matches on both sides.",
+  "a": {
+   "q": "Which equation is balanced?",
+   "opts": [
+    "2Mg + O₂ → 2MgO",
+    "Mg + O₂ → MgO",
+    "Mg + O₂ → 2MgO",
+    "2Mg + 2O₂ → 2MgO"
+   ],
+   "why": "2Mg + O₂ → 2MgO has 2 magnesium atoms and 2 oxygen atoms on each side. Mg + O₂ → MgO is tempting because it uses the right formulas, but it has 2 oxygen atoms on the left and only 1 on the right.",
+   "clue": "Count each kind of atom on both sides of the arrow."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is balancing H₂ + Cl₂ → HCl. She changes it to H₂ + Cl₂ → HCl₂. What is wrong with her method?",
+   "opts": [
+    "She changed a subscript, but should add a coefficient",
+    "She should have changed the arrow to an equals sign",
+    "She should have written the reactants as words",
+    "She added a chlorine atom, but should have removed one"
+   ],
+   "why": "Changing the subscript in HCl makes a different substance, HCl₂, which is not what is made. Balancing only changes the coefficients in front, giving H₂ + Cl₂ → 2HCl. Removing an atom instead is tempting, but it would also change a formula.",
+   "clue": "Which numbers are you allowed to change?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2Mg + O₂ → 2MgO",
+   "also_right": []
+  },
+  "b": {
+   "best": "She changed a subscript, but should add a coefficient",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Word and balanced equations",
+  "card": [
+   "A word equation names the reactants (the substances you start with) and the products (the new substances made). The arrow means \"react to form\".",
+   "A formula equation uses chemical formulas instead of names, and it must then be balanced. For example, hydrogen + oxygen → water becomes H₂ + O₂ → H₂O, which is not yet balanced.",
+   "Atoms are not made or destroyed, so each kind of atom must be the same on both sides. We balance by putting numbers in front of formulas, called coefficients. We never change the small numbers inside a formula, called subscripts.",
+   "Balanced: 2H₂ + O₂ → 2H₂O. The large 2s are coefficients and the small ₂s are subscripts. Each side has 4 hydrogen atoms and 2 oxygen atoms."
+  ],
+  "remember": "Balance an equation by changing the numbers in front of formulas, so each kind of atom matches on both sides.",
+  "a": {
+   "q": "Which equation is balanced?",
+   "opts": [
+    "2Mg + O₂ → 2MgO",
+    "Mg + O₂ → MgO",
+    "Mg + O₂ → 2MgO",
+    "2Mg + 2O₂ → 2MgO"
+   ],
+   "why": "2Mg + O₂ → 2MgO has 2 magnesium atoms and 2 oxygen atoms on each side. Mg + O₂ → MgO is tempting because it uses the right formulas, but it has 2 oxygen atoms on the left and only 1 on the right.",
+   "clue": "Count each kind of atom on both sides of the arrow."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is balancing H₂ + Cl₂ → HCl. She changes it to H₂ + Cl₂ → HCl₂. What is wrong with her method?",
+   "opts": [
+    "She changed a subscript, but should add a coefficient",
+    "She should have changed the arrow to an equals sign",
+    "She should have written the reactants as words",
+    "She added a chlorine atom, but should have removed one"
+   ],
+   "why": "Changing the subscript in HCl makes a different substance, HCl₂, which is not what is made. Balancing only changes the coefficients in front, giving H₂ + Cl₂ → 2HCl. Removing an atom instead is tempting, but it would also change a formula.",
+   "clue": "Which numbers are you allowed to change?"
+  }
+ },
+ "checked_by": "claude-code"
+}

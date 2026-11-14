@@ -204,8 +204,8 @@ function courseSheet() {
       '<small>' + esc(c.about) + '</small>' + (note ? '<small class="pnote">' + esc(note) + '</small>' : '') + '</span>' +
       (first ? IC.right : '<span class="v">' + (on ? 'Open' : 'Switch') + '</span>') + '</button>';
   };
-  /* Under each place, the courses go by year (Year 11, then Year 12) or by level (AS, then A level), and A to Z by
-     subject within a year. yearGroup in places.js reads both from the course's data. */
+  /* Under each place, the courses go by year or level, in the order yearGroup in places.js gives (Year 7, Year 8,
+     Levels 7 and 8, and on to Year 12, then AS and A level), and A to Z by subject within each. */
   const byYear = ids => {
     const cs = ids.map(id => COURSE_LIST.find(x => x.id === id)), out = [];
     cs.slice().sort((a, b) => a.rank - b.rank || a.group.localeCompare(b.group, 'en') ||

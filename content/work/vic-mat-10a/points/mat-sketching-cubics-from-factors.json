@@ -1,0 +1,810 @@
+{
+ "id": "mat-sketching-cubics-from-factors",
+ "title": "Sketching cubics from factors",
+ "brief": "eed00f977754",
+ "shortlist": [
+  [
+   "mat-cubic-polynomial-graphs",
+   0.393
+  ],
+  [
+   "mat-cubic-quartic-graphs",
+   0.332
+  ],
+  [
+   "mat-y-intercept-context",
+   0.318
+  ],
+  [
+   "mat-solving-polynomial-equations",
+   0.288
+  ],
+  [
+   "mat-quadratic-graphs",
+   0.27
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 may adapt mat-cubic-polynomial-graphs, but is not highly sure, so to the Opus match check",
+  "2026-11-12T15:15:49Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:26:05Z write: failed the content check, writing again",
+  "2026-11-12T15:35:09Z write: done (still fails the content check)",
+  "2026-11-12T15:59:43Z check: flagged",
+  "2026-11-12T16:02:56Z fix: suggested",
+  "2026-11-12T16:19:54Z autoreview: picked as a spot check. It would have been cleared with the fix (the content check)",
+  "2026-11-13T12:13:15Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00058,
+  "confirm": 0.01589,
+  "write": 0.02965,
+  "check": 0.01296,
+  "fix": 0.03947
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-cubic-polynomial-graphs",
+  "changes": [
+   "The card's material on squared and cubed factors (touching at a turning point, flattening as it passes through) goes beyond this point's brief and should be removed or limited to the single-factor case.",
+   "The card's example and figures use NSW Year 11 framing, so they should be checked against the Victorian Level 10A syllabus wording."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same idea of sketching a cubic from its factors, the constant term and the sign of the x³ term, but it covers more than this point's brief, so it needs small trimming to fit the Level 10A course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Cubic and polynomial graphs, teaches the intercepts and end behaviour but also covers repeated factors (double roots touching, cubed factors flattening), and one of its questions tests a double root, so it goes beyond this brief and needs its own narrower point.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Sketching cubics from factors",
+  "card": [
+   "A cubic in factor form, such as \\(y = (x + 2)(x - 1)(x - 3)\\), crosses the x-axis where each factor is zero. Here the x-intercepts are \\(x = -2\\), \\(x = 1\\) and \\(x = 3\\).",
+   "For the y-intercept, put \\(x = 0\\). Here \\(y = (2)(-1)(-3) = 6\\), so the curve crosses the y-axis at \\((0, 6)\\).",
+   "The sign of the \\(x^{3}\\) term sets the ends. If it is positive, the curve starts low on the left and ends high on the right. If it is negative, it starts high and ends low.",
+   "Plot the intercepts, then draw a smooth curve through them with the correct ends. This cubic has a positive \\(x^{3}\\) term, so it rises from the bottom left, passes through all four points and ends high on the right."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The cubic \\(y = P(x)\\) with \\(P(x) = (x + 2)(x - 1)(x - 3)\\), rising from the bottom left and ending high on the right. It crosses the x-axis at \\((-2, 0)\\), \\((1, 0)\\) and \\((3, 0)\\), and the y-axis at \\((0, 6)\\).",
+    "x": {
+     "min": -4,
+     "max": 6,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -10,
+     "max": 14,
+     "label": "\\(y\\)",
+     "step": 2,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "(x + 2)(x - 1)(x - 3)",
+      "label": "\\(y = P(x)\\)",
+      "labelAt": 3.5,
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       -2,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\((-2, 0)\\)",
+      "pos": "below-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\((1, 0)\\)",
+      "pos": "below-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\((3, 0)\\)",
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       6
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, 6)\\)",
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
+  "remember": "Factors give the x-intercepts, \\(x = 0\\) gives the y-intercept, and the sign of the \\(x^{3}\\) term gives the ends.",
+  "a": {
+   "q": "A cubic is \\(y = (x - 4)(x + 1)(x - 2)\\). What are its x-intercepts?",
+   "opts": [
+    "\\(x = 4\\), \\(x = -1\\) and \\(x = 2\\)",
+    "\\(x = -4\\), \\(x = 1\\) and \\(x = -2\\)",
+    "\\(x = 4\\), \\(x = 1\\) and \\(x = 2\\)",
+    "\\(x = -4\\), \\(x = -1\\) and \\(x = 2\\)"
+   ],
+   "why": "Each factor is zero at an x-intercept: \\(x - 4 = 0\\) gives \\(x = 4\\), \\(x + 1 = 0\\) gives \\(x = -1\\), and \\(x - 2 = 0\\) gives \\(x = 2\\). The tempting option swaps every sign, which is the usual mistake of reading the number in the bracket as the intercept.",
+   "clue": "Solve each bracket equal to zero."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which describes \\(y = -(x + 1)(x - 2)(x - 3)\\)?",
+   "opts": [
+    "y-intercept \\(-6\\), ends high on the left and low on the right",
+    "y-intercept \\(6\\), ends high on the left and low on the right",
+    "y-intercept \\(-6\\), ends low on the left and high on the right",
+    "y-intercept \\(6\\), ends low on the left and high on the right"
+   ],
+   "why": "Put \\(x = 0\\): \\(y = -(1)(-2)(-3) = -6\\). Expanding, the \\(x^{3}\\) term is negative, so the curve starts high on the left and ends low on the right. The tempting option forgets the minus sign out the front when finding the y-intercept.",
+   "clue": "The minus sign in front of the brackets affects the y-intercept and the ends."
+  }
+ },
+ "redone": true,
+ "local": [
+  "mat-sketching-cubics-from-factors the figure on card line 4 has labels that run into each other: O and \\((1, 0)\\). Move one with pos or labelAt",
+  "mat-sketching-cubics-from-factors the figure on card line 4 has the label \\((-2, 0)\\) on a curve. Move it with pos or labelAt, or move the curve",
+  "mat-sketching-cubics-from-factors the figure on card line 4 has the label \\((0, 6)\\) on a curve. Move it with pos or labelAt, or move the curve"
+ ],
+ "check": {
+  "a": {
+   "best": "\\(x = 4\\), \\(x = -1\\) and \\(x = 2\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "y-intercept \\(-6\\), ends high on the left and low on the right",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Content check: mat-sketching-cubics-from-factors the figure on card line 4 has labels that run into each other: O and \\((1, 0)\\). Move one with pos or labelAt",
+  "Content check: mat-sketching-cubics-from-factors the figure on card line 4 has the label \\((-2, 0)\\) on a curve. Move it with pos or labelAt, or move the curve",
+  "Content check: mat-sketching-cubics-from-factors the figure on card line 4 has the label \\((0, 6)\\) on a curve. Move it with pos or labelAt, or move the curve"
+ ],
+ "proposal": {
+  "title": "Sketching cubics from factors",
+  "card": [
+   "A cubic in factor form, such as \\(y = (x + 2)(x - 1)(x - 3)\\), crosses the x-axis where each factor is zero. Here the x-intercepts are \\(x = -2\\), \\(x = 1\\) and \\(x = 3\\).",
+   "For the y-intercept, put \\(x = 0\\). Here \\(y = (2)(-1)(-3) = 6\\), so the curve crosses the y-axis at \\((0, 6)\\).",
+   "The sign of the \\(x^{3}\\) term sets the ends. If it is positive, the curve starts low on the left and ends high on the right. If it is negative, it starts high and ends low.",
+   "Plot the intercepts, then draw a smooth curve through them with the correct ends. This cubic has a positive \\(x^{3}\\) term, so it rises from the bottom left, passes through all four points and ends high on the right."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The cubic \\(y = P(x)\\) with \\(P(x) = (x + 2)(x - 1)(x - 3)\\), rising from the bottom left and ending high on the right. It crosses the x-axis at \\((-2, 0)\\), \\((1, 0)\\) and \\((3, 0)\\), and the y-axis at \\((0, 6)\\).",
+    "x": {
+     "min": -4,
+     "max": 6,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -10,
+     "max": 14,
+     "label": "\\(y\\)",
+     "step": 2,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "(x + 2)(x - 1)(x - 3)",
+      "label": "\\(y = P(x)\\)",
+      "labelAt": 3.5,
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       -2,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\((-2, 0)\\)",
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\((1, 0)\\)",
+      "pos": "above-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\((3, 0)\\)",
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       6
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, 6)\\)",
+      "pos": "above-right"
+     }
+    ]
+   }
+  },
+  "remember": "Factors give the x-intercepts, \\(x = 0\\) gives the y-intercept, and the sign of the \\(x^{3}\\) term gives the ends.",
+  "a": {
+   "q": "A cubic is \\(y = (x - 4)(x + 1)(x - 2)\\). What are its x-intercepts?",
+   "opts": [
+    "\\(x = 4\\), \\(x = -1\\) and \\(x = 2\\)",
+    "\\(x = -4\\), \\(x = 1\\) and \\(x = -2\\)",
+    "\\(x = 4\\), \\(x = 1\\) and \\(x = 2\\)",
+    "\\(x = -4\\), \\(x = -1\\) and \\(x = 2\\)"
+   ],
+   "why": "Each factor is zero at an x-intercept: \\(x - 4 = 0\\) gives \\(x = 4\\), \\(x + 1 = 0\\) gives \\(x = -1\\), and \\(x - 2 = 0\\) gives \\(x = 2\\). The tempting option swaps every sign, which is the usual mistake of reading the number in the bracket as the intercept.",
+   "clue": "Solve each bracket equal to zero."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which describes \\(y = -(x + 1)(x - 2)(x - 3)\\)?",
+   "opts": [
+    "y-intercept \\(-6\\), ends high on the left and low on the right",
+    "y-intercept \\(6\\), ends high on the left and low on the right",
+    "y-intercept \\(-6\\), ends low on the left and high on the right",
+    "y-intercept \\(6\\), ends low on the left and high on the right"
+   ],
+   "why": "Put \\(x = 0\\): \\(y = -(1)(-2)(-3) = -6\\). Expanding, the \\(x^{3}\\) term is negative, so the curve starts high on the left and ends low on the right. The tempting option forgets the minus sign out the front when finding the y-intercept.",
+   "clue": "The minus sign in front of the brackets affects the y-intercept and the ends."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:54Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [],
+  "flags": [
+   "Content check: mat-sketching-cubics-from-factors the figure on card line 4 has labels that run into each other: O and \\((1, 0)\\). Move one with pos or labelAt",
+   "Content check: mat-sketching-cubics-from-factors the figure on card line 4 has the label \\((-2, 0)\\) on a curve. Move it with pos or labelAt, or move the curve",
+   "Content check: mat-sketching-cubics-from-factors the figure on card line 4 has the label \\((0, 6)\\) on a curve. Move it with pos or labelAt, or move the curve"
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Sketching cubics from factors",
+  "card": [
+   "A cubic in factor form, such as \\(y = (x + 2)(x - 1)(x - 3)\\), crosses the x-axis where each factor is zero. Here the x-intercepts are \\(x = -2\\), \\(x = 1\\) and \\(x = 3\\).",
+   "For the y-intercept, put \\(x = 0\\). Here \\(y = (2)(-1)(-3) = 6\\), so the curve crosses the y-axis at \\((0, 6)\\).",
+   "The sign of the \\(x^{3}\\) term sets the ends. If it is positive, the curve starts low on the left and ends high on the right. If it is negative, it starts high and ends low.",
+   "Plot the intercepts, then draw a smooth curve through them with the correct ends. This cubic has a positive \\(x^{3}\\) term, so it rises from the bottom left, passes through all four points and ends high on the right."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The cubic \\(y = P(x)\\) with \\(P(x) = (x + 2)(x - 1)(x - 3)\\), rising from the bottom left and ending high on the right. It crosses the x-axis at \\((-2, 0)\\), \\((1, 0)\\) and \\((3, 0)\\), and the y-axis at \\((0, 6)\\).",
+    "x": {
+     "min": -4,
+     "max": 6,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -10,
+     "max": 14,
+     "label": "\\(y\\)",
+     "step": 2,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "(x + 2)(x - 1)(x - 3)",
+      "label": "\\(y = P(x)\\)",
+      "labelAt": 3.5,
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       -2,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\((-2, 0)\\)",
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\((1, 0)\\)",
+      "pos": "above-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\((3, 0)\\)",
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       6
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, 6)\\)",
+      "pos": "above-right"
+     }
+    ]
+   }
+  },
+  "remember": "Factors give the x-intercepts, \\(x = 0\\) gives the y-intercept, and the sign of the \\(x^{3}\\) term gives the ends.",
+  "a": {
+   "q": "A cubic is \\(y = (x - 4)(x + 1)(x - 2)\\). What are its x-intercepts?",
+   "opts": [
+    "\\(x = 4\\), \\(x = -1\\) and \\(x = 2\\)",
+    "\\(x = -4\\), \\(x = 1\\) and \\(x = -2\\)",
+    "\\(x = 4\\), \\(x = 1\\) and \\(x = 2\\)",
+    "\\(x = -4\\), \\(x = -1\\) and \\(x = 2\\)"
+   ],
+   "why": "Each factor is zero at an x-intercept: \\(x - 4 = 0\\) gives \\(x = 4\\), \\(x + 1 = 0\\) gives \\(x = -1\\), and \\(x - 2 = 0\\) gives \\(x = 2\\). The tempting option swaps every sign, which is the usual mistake of reading the number in the bracket as the intercept.",
+   "clue": "Solve each bracket equal to zero."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which describes \\(y = -(x + 1)(x - 2)(x - 3)\\)?",
+   "opts": [
+    "y-intercept \\(-6\\), ends high on the left and low on the right",
+    "y-intercept \\(6\\), ends high on the left and low on the right",
+    "y-intercept \\(-6\\), ends low on the left and high on the right",
+    "y-intercept \\(6\\), ends low on the left and high on the right"
+   ],
+   "why": "Put \\(x = 0\\): \\(y = -(1)(-2)(-3) = -6\\). Expanding, the \\(x^{3}\\) term is negative, so the curve starts high on the left and ends low on the right. The tempting option forgets the minus sign out the front when finding the y-intercept.",
+   "clue": "The minus sign in front of the brackets affects the y-intercept and the ends."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix only moves three labels to the side of each point the curve does not pass through, which deals with the content check problems. The intercepts, the y-intercept 6, the ends and both answers are right.",
+   "item": "6bb37068a2968c7d",
+   "result": "decided",
+   "saved": {
+    "id": "mat-sketching-cubics-from-factors",
+    "title": "Sketching cubics from factors",
+    "brief": "eed00f977754",
+    "shortlist": [
+     [
+      "mat-cubic-polynomial-graphs",
+      0.393
+     ],
+     [
+      "mat-cubic-quartic-graphs",
+      0.332
+     ],
+     [
+      "mat-y-intercept-context",
+      0.318
+     ],
+     [
+      "mat-solving-polynomial-equations",
+      0.288
+     ],
+     [
+      "mat-quadratic-graphs",
+      0.27
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "confirm": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 1
+    },
+    "usd": {
+     "match": 0.00058,
+     "confirm": 0.01589,
+     "write": 0.02965,
+     "check": 0.01296,
+     "fix": 0.03947
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-cubic-polynomial-graphs",
+     "changes": [
+      "The card's material on squared and cubed factors (touching at a turning point, flattening as it passes through) goes beyond this point's brief and should be removed or limited to the single-factor case.",
+      "The card's example and figures use NSW Year 11 framing, so they should be checked against the Victorian Level 10A syllabus wording."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches the same idea of sketching a cubic from its factors, the constant term and the sign of the x³ term, but it covers more than this point's brief, so it needs small trimming to fit the Level 10A course.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The closest bank point, Cubic and polynomial graphs, teaches the intercepts and end behaviour but also covers repeated factors (double roots touching, cubed factors flattening), and one of its questions tests a double root, so it goes beyond this brief and needs its own narrower point.",
+     "model": "claude-opus-5-5"
+    },
+    "draft": {
+     "title": "Sketching cubics from factors",
+     "card": [
+      "A cubic in factor form, such as \\(y = (x + 2)(x - 1)(x - 3)\\), crosses the x-axis where each factor is zero. Here the x-intercepts are \\(x = -2\\), \\(x = 1\\) and \\(x = 3\\).",
+      "For the y-intercept, put \\(x = 0\\). Here \\(y = (2)(-1)(-3) = 6\\), so the curve crosses the y-axis at \\((0, 6)\\).",
+      "The sign of the \\(x^{3}\\) term sets the ends. If it is positive, the curve starts low on the left and ends high on the right. If it is negative, it starts high and ends low.",
+      "Plot the intercepts, then draw a smooth curve through them with the correct ends. This cubic has a positive \\(x^{3}\\) term, so it rises from the bottom left, passes through all four points and ends high on the right."
+     ],
+     "cardFigs": {
+      "4": {
+       "kind": "graph",
+       "alt": "The cubic \\(y = P(x)\\) with \\(P(x) = (x + 2)(x - 1)(x - 3)\\), rising from the bottom left and ending high on the right. It crosses the x-axis at \\((-2, 0)\\), \\((1, 0)\\) and \\((3, 0)\\), and the y-axis at \\((0, 6)\\).",
+       "x": {
+        "min": -4,
+        "max": 6,
+        "label": "\\(x\\)",
+        "step": 1,
+        "nums": false
+       },
+       "y": {
+        "min": -10,
+        "max": 14,
+        "label": "\\(y\\)",
+        "step": 2,
+        "nums": false
+       },
+       "grid": true,
+       "items": [
+        {
+         "type": "fn",
+         "id": "f",
+         "expr": "(x + 2)(x - 1)(x - 3)",
+         "label": "\\(y = P(x)\\)",
+         "labelAt": 3.5,
+         "pos": "right"
+        },
+        {
+         "type": "point",
+         "at": [
+          -2,
+          0
+         ],
+         "on": [
+          "f"
+         ],
+         "is": "x-intercept",
+         "label": "\\((-2, 0)\\)",
+         "pos": "below-left"
+        },
+        {
+         "type": "point",
+         "at": [
+          1,
+          0
+         ],
+         "on": [
+          "f"
+         ],
+         "is": "x-intercept",
+         "label": "\\((1, 0)\\)",
+         "pos": "below-left"
+        },
+        {
+         "type": "point",
+         "at": [
+          3,
+          0
+         ],
+         "on": [
+          "f"
+         ],
+         "is": "x-intercept",
+         "label": "\\((3, 0)\\)",
+         "pos": "below-right"
+        },
+        {
+         "type": "point",
+         "at": [
+          0,
+          6
+         ],
+         "on": [
+          "f"
+         ],
+         "is": "y-intercept",
+         "label": "\\((0, 6)\\)",
+         "pos": "above-left"
+        }
+       ]
+      }
+     },
+     "remember": "Factors give the x-intercepts, \\(x = 0\\) gives the y-intercept, and the sign of the \\(x^{3}\\) term gives the ends.",
+     "a": {
+      "q": "A cubic is \\(y = (x - 4)(x + 1)(x - 2)\\). What are its x-intercepts?",
+      "opts": [
+       "\\(x = 4\\), \\(x = -1\\) and \\(x = 2\\)",
+       "\\(x = -4\\), \\(x = 1\\) and \\(x = -2\\)",
+       "\\(x = 4\\), \\(x = 1\\) and \\(x = 2\\)",
+       "\\(x = -4\\), \\(x = -1\\) and \\(x = 2\\)"
+      ],
+      "why": "Each factor is zero at an x-intercept: \\(x - 4 = 0\\) gives \\(x = 4\\), \\(x + 1 = 0\\) gives \\(x = -1\\), and \\(x - 2 = 0\\) gives \\(x = 2\\). The tempting option swaps every sign, which is the usual mistake of reading the number in the bracket as the intercept.",
+      "clue": "Solve each bracket equal to zero."
+     },
+     "b": {
+      "d": 3,
+      "q": "Which describes \\(y = -(x + 1)(x - 2)(x - 3)\\)?",
+      "opts": [
+       "y-intercept \\(-6\\), ends high on the left and low on the right",
+       "y-intercept \\(6\\), ends high on the left and low on the right",
+       "y-intercept \\(-6\\), ends low on the left and high on the right",
+       "y-intercept \\(6\\), ends low on the left and high on the right"
+      ],
+      "why": "Put \\(x = 0\\): \\(y = -(1)(-2)(-3) = -6\\). Expanding, the \\(x^{3}\\) term is negative, so the curve starts high on the left and ends low on the right. The tempting option forgets the minus sign out the front when finding the y-intercept.",
+      "clue": "The minus sign in front of the brackets affects the y-intercept and the ends."
+     }
+    },
+    "redone": true,
+    "local": [
+     "mat-sketching-cubics-from-factors the figure on card line 4 has labels that run into each other: O and \\((1, 0)\\). Move one with pos or labelAt",
+     "mat-sketching-cubics-from-factors the figure on card line 4 has the label \\((-2, 0)\\) on a curve. Move it with pos or labelAt, or move the curve",
+     "mat-sketching-cubics-from-factors the figure on card line 4 has the label \\((0, 6)\\) on a curve. Move it with pos or labelAt, or move the curve"
+    ],
+    "check": {
+     "a": {
+      "best": "\\(x = 4\\), \\(x = -1\\) and \\(x = 2\\)",
+      "also_right": []
+     },
+     "b": {
+      "best": "y-intercept \\(-6\\), ends high on the left and low on the right",
+      "also_right": []
+     },
+     "problems": [],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "No problems found."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Content check: mat-sketching-cubics-from-factors the figure on card line 4 has labels that run into each other: O and \\((1, 0)\\). Move one with pos or labelAt",
+     "Content check: mat-sketching-cubics-from-factors the figure on card line 4 has the label \\((-2, 0)\\) on a curve. Move it with pos or labelAt, or move the curve",
+     "Content check: mat-sketching-cubics-from-factors the figure on card line 4 has the label \\((0, 6)\\) on a curve. Move it with pos or labelAt, or move the curve"
+    ],
+    "proposal": {
+     "title": "Sketching cubics from factors",
+     "card": [
+      "A cubic in factor form, such as \\(y = (x + 2)(x - 1)(x - 3)\\), crosses the x-axis where each factor is zero. Here the x-intercepts are \\(x = -2\\), \\(x = 1\\) and \\(x = 3\\).",
+      "For the y-intercept, put \\(x = 0\\). Here \\(y = (2)(-1)(-3) = 6\\), so the curve crosses the y-axis at \\((0, 6)\\).",
+      "The sign of the \\(x^{3}\\) term sets the ends. If it is positive, the curve starts low on the left and ends high on the right. If it is negative, it starts high and ends low.",
+      "Plot the intercepts, then draw a smooth curve through them with the correct ends. This cubic has a positive \\(x^{3}\\) term, so it rises from the bottom left, passes through all four points and ends high on the right."
+     ],
+     "cardFigs": {
+      "4": {
+       "kind": "graph",
+       "alt": "The cubic \\(y = P(x)\\) with \\(P(x) = (x + 2)(x - 1)(x - 3)\\), rising from the bottom left and ending high on the right. It crosses the x-axis at \\((-2, 0)\\), \\((1, 0)\\) and \\((3, 0)\\), and the y-axis at \\((0, 6)\\).",
+       "x": {
+        "min": -4,
+        "max": 6,
+        "label": "\\(x\\)",
+        "step": 1,
+        "nums": false
+       },
+       "y": {
+        "min": -10,
+        "max": 14,
+        "label": "\\(y\\)",
+        "step": 2,
+        "nums": false
+       },
+       "grid": true,
+       "items": [
+        {
+         "type": "fn",
+         "id": "f",
+         "expr": "(x + 2)(x - 1)(x - 3)",
+         "label": "\\(y = P(x)\\)",
+         "labelAt": 3.5,
+         "pos": "right"
+        },
+        {
+         "type": "point",
+         "at": [
+          -2,
+          0
+         ],
+         "on": [
+          "f"
+         ],
+         "is": "x-intercept",
+         "label": "\\((-2, 0)\\)",
+         "pos": "above-left"
+        },
+        {
+         "type": "point",
+         "at": [
+          1,
+          0
+         ],
+         "on": [
+          "f"
+         ],
+         "is": "x-intercept",
+         "label": "\\((1, 0)\\)",
+         "pos": "above-right"
+        },
+        {
+         "type": "point",
+         "at": [
+          3,
+          0
+         ],
+         "on": [
+          "f"
+         ],
+         "is": "x-intercept",
+         "label": "\\((3, 0)\\)",
+         "pos": "below-right"
+        },
+        {
+         "type": "point",
+         "at": [
+          0,
+          6
+         ],
+         "on": [
+          "f"
+         ],
+         "is": "y-intercept",
+         "label": "\\((0, 6)\\)",
+         "pos": "above-right"
+        }
+       ]
+      }
+     },
+     "remember": "Factors give the x-intercepts, \\(x = 0\\) gives the y-intercept, and the sign of the \\(x^{3}\\) term gives the ends.",
+     "a": {
+      "q": "A cubic is \\(y = (x - 4)(x + 1)(x - 2)\\). What are its x-intercepts?",
+      "opts": [
+       "\\(x = 4\\), \\(x = -1\\) and \\(x = 2\\)",
+       "\\(x = -4\\), \\(x = 1\\) and \\(x = -2\\)",
+       "\\(x = 4\\), \\(x = 1\\) and \\(x = 2\\)",
+       "\\(x = -4\\), \\(x = -1\\) and \\(x = 2\\)"
+      ],
+      "why": "Each factor is zero at an x-intercept: \\(x - 4 = 0\\) gives \\(x = 4\\), \\(x + 1 = 0\\) gives \\(x = -1\\), and \\(x - 2 = 0\\) gives \\(x = 2\\). The tempting option swaps every sign, which is the usual mistake of reading the number in the bracket as the intercept.",
+      "clue": "Solve each bracket equal to zero."
+     },
+     "b": {
+      "d": 3,
+      "q": "Which describes \\(y = -(x + 1)(x - 2)(x - 3)\\)?",
+      "opts": [
+       "y-intercept \\(-6\\), ends high on the left and low on the right",
+       "y-intercept \\(6\\), ends high on the left and low on the right",
+       "y-intercept \\(-6\\), ends low on the left and high on the right",
+       "y-intercept \\(6\\), ends low on the left and high on the right"
+      ],
+      "why": "Put \\(x = 0\\): \\(y = -(1)(-2)(-3) = -6\\). Expanding, the \\(x^{3}\\) term is negative, so the curve starts high on the left and ends low on the right. The tempting option forgets the minus sign out the front when finding the y-intercept.",
+      "clue": "The minus sign in front of the brackets affects the y-intercept and the ends."
+     }
+    },
+    "proposal_problems": [],
+    "auto": {
+     "at": "2026-11-12T16:19:54Z",
+     "rules": 1,
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [],
+     "flags": [
+      "Content check: mat-sketching-cubics-from-factors the figure on card line 4 has labels that run into each other: O and \\((1, 0)\\). Move one with pos or labelAt",
+      "Content check: mat-sketching-cubics-from-factors the figure on card line 4 has the label \\((-2, 0)\\) on a curve. Move it with pos or labelAt, or move the curve",
+      "Content check: mat-sketching-cubics-from-factors the figure on card line 4 has the label \\((0, 6)\\) on a curve. Move it with pos or labelAt, or move the curve"
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "f8e07506e4c10d11"
+  }
+ ]
+}

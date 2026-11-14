@@ -1,0 +1,249 @@
+{
+ "id": "mat-true-bearings-vic",
+ "title": "True bearings",
+ "brief": "612615dddb42",
+ "shortlist": [
+  [
+   "mat-true-bearings",
+   0.687
+  ],
+  [
+   "mat-bearings-angles-elevation",
+   0.477
+  ],
+  [
+   "mat-bearings-elevation",
+   0.451
+  ],
+  [
+   "mat-true-compass-bearings",
+   0.399
+  ],
+  [
+   "mat-statements-connectives",
+   0.228
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 may adapt mat-true-bearings, but is not highly sure, so to the Opus match check",
+  "2026-11-12T15:15:47Z confirm: Claude Opus 5.5 may adapt mat-true-bearings, but is not highly sure, so it is for you to review",
+  "2026-11-13T12:13:15Z match: claude-code says adapt mat-true-bearings (2 changes)",
+  "2026-11-13T12:13:15Z claude-code review: adapting mat-true-bearings on the next run",
+  "2026-11-13T13:04:53Z adapt: done",
+  "2026-11-13T13:11:25Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "confirm": 0.00819,
+  "adapt": 0.00658,
+  "check": 0.0069
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-true-bearings",
+  "changes": [
+   "Write bearings with the T suffix used in Victorian courses, such as 045°T, instead of plain 045°."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same Year 10 idea of true bearings clockwise from north in three figures, but its notation omits the T suffix that the Victorian course uses.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-true-bearings",
+  "changes": [
+   "Write every true bearing with a T after the degree sign, as Victoria does (for example 045°T, 135°T, 305°T), in the card, the remember line and the answer options of both questions."
+  ],
+  "sure": "medium",
+  "reason": "The Year 10 true bearings point teaches the same idea at the right depth, but this course writes bearings with a T, such as 045°T, so the notation needs updating.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-true-bearings",
+  "changes": [
+   "Write every true bearing with T after the degree sign, such as 045°T, 135°T and 305°T, in the card, the remember line, both questions and their options.",
+   "Add north-east as 045°T to the card's example of a direction halfway between two main directions, as in the brief."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card1",
+   "card2",
+   "card3",
+   "card4",
+   "remember",
+   "a.q",
+   "a.opt1",
+   "a.opt2",
+   "a.opt3",
+   "a.opt4",
+   "a.why",
+   "b.q",
+   "b.opt1",
+   "b.opt2",
+   "b.opt3",
+   "b.opt4",
+   "b.why"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches true bearings at the right depth and its answers check out. Victoria writes true bearings with a T, as the brief's 045°T shows, so the notation needs changing.",
+   "item": "064b0041ae4bcb8f",
+   "result": "decided",
+   "saved": {
+    "id": "mat-true-bearings-vic",
+    "title": "True bearings",
+    "brief": "612615dddb42",
+    "shortlist": [
+     [
+      "mat-true-bearings",
+      0.687
+     ],
+     [
+      "mat-bearings-angles-elevation",
+      0.477
+     ],
+     [
+      "mat-bearings-elevation",
+      0.451
+     ],
+     [
+      "mat-true-compass-bearings",
+      0.399
+     ],
+     [
+      "mat-statements-connectives",
+      0.228
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00028,
+     "confirm": 0.00819
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-true-bearings",
+     "changes": [
+      "Write bearings with the T suffix used in Victorian courses, such as 045°T, instead of plain 045°."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same Year 10 idea of true bearings clockwise from north in three figures, but its notation omits the T suffix that the Victorian course uses.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-true-bearings",
+     "changes": [
+      "Write every true bearing with a T after the degree sign, as Victoria does (for example 045°T, 135°T, 305°T), in the card, the remember line and the answer options of both questions."
+     ],
+     "sure": "medium",
+     "reason": "The Year 10 true bearings point teaches the same idea at the right depth, but this course writes bearings with a T, such as 045°T, so the notation needs updating.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "75c250b43f73d357"
+  }
+ ],
+ "draft": {
+  "title": "True bearings",
+  "card": [
+   "A true bearing is an angle measured clockwise from north. It is written with three figures and the letter T, so 45° is written 045°T.",
+   "The four main directions are north 000°T, east 090°T, south 180°T and west 270°T. A full turn is 360°, so 360°T points north again, the same direction as 000°T.",
+   "A direction halfway between two of these is halfway between their bearings. North-east lies between north (000°T) and east (090°T), so it is 045°T. North-west lies between west (270°T) and north (use 360°T here), so it is 315°T.",
+   "The bearing back is half a turn round. If the bearing from A to B is under 180°T, add 180° to get the bearing from B to A. If it is 180°T or more, subtract 180°."
+  ],
+  "remember": "Bearings start at north and turn clockwise, and end with T. The way back is 180° different.",
+  "a": {
+   "q": "Which true bearing points south-east?",
+   "opts": [
+    "135°T",
+    "045°T",
+    "225°T",
+    "315°T"
+   ],
+   "why": "South-east is halfway between east (090°T) and south (180°T), so it is 135°T. 225°T is tempting, but that is south-west, halfway between south and west.",
+   "clue": "Find the angle halfway between east and south."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena walks from her camp to a lookout on a true bearing of 305°T. What is the true bearing from the lookout back to the camp?",
+   "opts": [
+    "125°T",
+    "055°T",
+    "215°T",
+    "235°T"
+   ],
+   "why": "The bearing is 180°T or more, so subtract 180°: \\(305^{\\circ} - 180^{\\circ} = 125^{\\circ}\\), which is 125°T. 055°T is tempting, but it comes from \\(360^{\\circ} - 305^{\\circ}\\), which does not give the opposite direction.",
+   "clue": "The way back is half a turn from the way out."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "135°T",
+   "also_right": []
+  },
+  "b": {
+   "best": "125°T",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "True bearings",
+  "card": [
+   "A true bearing is an angle measured clockwise from north. It is written with three figures and the letter T, so 45° is written 045°T.",
+   "The four main directions are north 000°T, east 090°T, south 180°T and west 270°T. A full turn is 360°, so 360°T points north again, the same direction as 000°T.",
+   "A direction halfway between two of these is halfway between their bearings. North-east lies between north (000°T) and east (090°T), so it is 045°T. North-west lies between west (270°T) and north (use 360°T here), so it is 315°T.",
+   "The bearing back is half a turn round. If the bearing from A to B is under 180°T, add 180° to get the bearing from B to A. If it is 180°T or more, subtract 180°."
+  ],
+  "remember": "Bearings start at north and turn clockwise, and end with T. The way back is 180° different.",
+  "a": {
+   "q": "Which true bearing points south-east?",
+   "opts": [
+    "135°T",
+    "045°T",
+    "225°T",
+    "315°T"
+   ],
+   "why": "South-east is halfway between east (090°T) and south (180°T), so it is 135°T. 225°T is tempting, but that is south-west, halfway between south and west.",
+   "clue": "Find the angle halfway between east and south."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena walks from her camp to a lookout on a true bearing of 305°T. What is the true bearing from the lookout back to the camp?",
+   "opts": [
+    "125°T",
+    "055°T",
+    "215°T",
+    "235°T"
+   ],
+   "why": "The bearing is 180°T or more, so subtract 180°: \\(305^{\\circ} - 180^{\\circ} = 125^{\\circ}\\), which is 125°T. 055°T is tempting, but it comes from \\(360^{\\circ} - 305^{\\circ}\\), which does not give the opposite direction.",
+   "clue": "The way back is half a turn from the way out."
+  }
+ }
+}

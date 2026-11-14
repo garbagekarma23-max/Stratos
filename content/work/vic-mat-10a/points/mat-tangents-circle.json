@@ -1,0 +1,383 @@
+{
+ "id": "mat-tangents-circle",
+ "title": "Tangents to a circle",
+ "brief": "faf21f5bdcff",
+ "shortlist": [
+  [
+   "mat-tangent-lines",
+   0.567
+  ],
+  [
+   "mat-tangents-normals",
+   0.495
+  ],
+  [
+   "mat-where-function-not-differentiable",
+   0.242
+  ],
+  [
+   "mat-graphs-sine-cosine-tangent",
+   0.236
+  ],
+  [
+   "mat-tangent-graph",
+   0.232
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:05Z write: failed the content check, writing again",
+  "2026-11-12T15:35:09Z write: done (still fails the content check)",
+  "2026-11-12T15:59:43Z check: flagged",
+  "2026-11-12T16:02:56Z fix: suggested",
+  "2026-11-13T15:26:08Z review: rejected, to be written again",
+  "2026-11-13T15:37:12Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T15:44:54Z claude-code check: answered by a separate subagent",
+  "2026-11-13T15:44:54Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00043,
+  "write": 0.02332,
+  "check": 0.00892,
+  "fix": 0.02655
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches that a tangent to a circle meets the radius at 90° or that tangents from an outside point are equal; they all concern tangent lines to curves and gradients, which is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Tangents to a circle",
+  "card": [
+   [
+    "Tangent",
+    "A tangent is a line that touches a circle at exactly one point. That point is called the point of contact."
+   ],
+   [
+    "Radius rule",
+    "A tangent meets the radius at the point of contact at \\(90^{\\circ}\\). So the radius and the tangent form a right angle."
+   ],
+   [
+    "Equal tangents",
+    "Two tangents drawn from the same point outside a circle are equal in length. The length is measured from the outside point to each point of contact."
+   ],
+   [
+    "Example",
+    "A tangent meets a radius of a circle at A. The radius is 5 cm and the distance from the centre O to the outside point P is 13 cm. Triangle OAP has a right angle at A, so \\(AP^{2} = 13^{2} - 5^{2} = 144\\), and \\(AP = 12\\) cm."
+   ]
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A circle with centre O. A radius runs from O to the point A on the circle. A tangent line touches the circle at A and is at right angles to the radius OA.",
+    "x": {
+     "min": -6,
+     "max": 7
+    },
+    "y": {
+     "min": -5,
+     "max": 5
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "circle",
+      "centre": [
+       0,
+       0
+      ],
+      "r": 3,
+      "label": "circle",
+      "labelAt": -3,
+      "pos": "left"
+     },
+     {
+      "type": "curve",
+      "id": "R",
+      "points": [
+       [
+        0,
+        0
+       ],
+       [
+        3,
+        0
+       ]
+      ],
+      "label": "radius",
+      "labelAt": 1.5,
+      "pos": "above"
+     },
+     {
+      "type": "curve",
+      "id": "T",
+      "points": [
+       [
+        3,
+        -4
+       ],
+       [
+        3,
+        4
+       ]
+      ],
+      "label": "tangent",
+      "labelAt": 3,
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "label": "O",
+      "pos": "below"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       0
+      ],
+      "label": "A",
+      "pos": "below-left"
+     }
+    ]
+   }
+  },
+  "remember": "A tangent is at right angles to the radius it touches. Tangents from one outside point are equal.",
+  "a": {
+   "q": "Which statement about a tangent and the radius to its point of contact is true?",
+   "opts": [
+    "They meet at \\(90^{\\circ}\\)",
+    "They are equal in length",
+    "They meet at \\(45^{\\circ}\\)",
+    "They are parallel to each other"
+   ],
+   "why": "A tangent meets the radius at the point of contact at a right angle. Equal length applies to two tangents from the same outside point, not to a tangent and a radius.",
+   "clue": "Think about the angle the card gives at the point of contact."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tangents PA and PB are drawn from the point P to a circle with centre O, touching it at A and B. The radius is 6 cm and OP is 10 cm. What is the length of PB?",
+   "opts": [
+    "8 cm",
+    "6 cm",
+    "10 cm",
+    "\\(\\sqrt{136}\\) cm"
+   ],
+   "why": "PB equals PA, and triangle OAP has a right angle at A. So \\(PA^{2} = 10^{2} - 6^{2} = 64\\), and PA and PB are 8 cm. Adding the squares gives \\(\\sqrt{136}\\), which wrongly treats OP as a shorter side.",
+   "clue": "Use the right angle at the point of contact, then equal tangents."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-13T15:37:12Z",
+   "step": "write",
+   "version": {
+    "title": "Tangents to a circle",
+    "card": [
+     [
+      "Tangent",
+      "a line that touches a circle at exactly one point, called the point of contact. It does not cut into the circle."
+     ],
+     [
+      "Tangent and radius",
+      "the radius drawn to the point of contact meets the tangent at \\(90^{\\circ}\\). This often makes a right-angled triangle with the centre."
+     ],
+     [
+      "Two tangents",
+      "from a point P outside a circle, two tangents can be drawn, touching it at A and B. They are equal in length, so \\(PA = PB\\)."
+     ],
+     "Example: a circle has centre O and radius 5 cm, and \\(OP = 13\\) cm. Triangle OAP has its right angle at A, so \\(PA^{2} = 13^{2} - 5^{2} = 144\\). So \\(PA = 12\\) cm, and \\(PB = 12\\) cm too."
+    ],
+    "remember": "The radius meets the tangent at \\(90^{\\circ}\\). Two tangents from one outside point are equal in length.",
+    "a": {
+     "q": "PA is a tangent to a circle with centre O, touching it at A. Angle AOP is \\(58^{\\circ}\\). What is angle APO?",
+     "opts": [
+      "\\(32^{\\circ}\\)",
+      "\\(58^{\\circ}\\)",
+      "\\(122^{\\circ}\\)",
+      "\\(29^{\\circ}\\)"
+     ],
+     "why": "The radius OA meets the tangent at \\(90^{\\circ}\\), so triangle OAP has a right angle at A. Angle APO is \\(180^{\\circ} - 90^{\\circ} - 58^{\\circ} = 32^{\\circ}\\). The answer \\(122^{\\circ}\\) leaves out the right angle at A.",
+     "clue": "Find the right angle in triangle OAP first."
+    },
+    "b": {
+     "d": 3,
+     "q": "Tangents from the point P touch a circle with centre O at A and B. The radius is 8 cm and \\(OP = 17\\) cm. What is \\(PA + PB\\)?",
+     "opts": [
+      "30 cm",
+      "15 cm",
+      "34 cm",
+      "18 cm"
+     ],
+     "why": "Triangle OAP has a right angle at A, so \\(PA^{2} = 17^{2} - 8^{2} = 225\\) and \\(PA = 15\\) cm. Tangents from P are equal, so \\(PB = 15\\) cm and the total is 30 cm. The answer 15 cm stops after finding only PA.",
+     "clue": "Use the right angle at A, then the equal tangents."
+    },
+    "wants": [
+     {
+      "at": "card 3",
+      "kind": "diagram",
+      "brief": "A circle with centre O and a point P outside it. Two tangents from P touch the circle at A and B. The radii OA and OB are drawn, each with a small right-angle mark where it meets its tangent. The interval OP is drawn. PA and PB each have one small equal-length tick. Label only O, A, B and P.",
+      "why": "Seeing both tangents, the two right angles and the triangles OAP and OBP shows where each rule applies."
+     }
+    ]
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T15:44:54Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "\\(32^{\\circ}\\)",
+     "also_right": []
+    },
+    "b": {
+     "best": "30 cm",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Tangents to a circle",
+  "card": [
+   [
+    "Tangent",
+    "a line that touches a circle at exactly one point, called the point of contact. It does not cut into the circle."
+   ],
+   [
+    "Tangent and radius",
+    "the radius drawn to the point of contact meets the tangent at \\(90^{\\circ}\\). This often makes a right-angled triangle with the centre."
+   ],
+   [
+    "Two tangents",
+    "from a point P outside a circle, two tangents can be drawn, touching it at A and B. They are equal in length, so \\(PA = PB\\)."
+   ],
+   "Example: a circle has centre O and radius 5 cm, and \\(OP = 13\\) cm. Triangle OAP has its right angle at A, so \\(PA^{2} = 13^{2} - 5^{2} = 144\\). So \\(PA = 12\\) cm, and \\(PB = 12\\) cm too."
+  ],
+  "remember": "The radius meets the tangent at \\(90^{\\circ}\\). Two tangents from one outside point are equal in length.",
+  "a": {
+   "q": "PA is a tangent to a circle with centre O, touching it at A. Angle AOP is \\(58^{\\circ}\\). What is angle APO?",
+   "opts": [
+    "\\(32^{\\circ}\\)",
+    "\\(58^{\\circ}\\)",
+    "\\(122^{\\circ}\\)",
+    "\\(29^{\\circ}\\)"
+   ],
+   "why": "The radius OA meets the tangent at \\(90^{\\circ}\\), so triangle OAP has a right angle at A. Angle APO is \\(180^{\\circ} - 90^{\\circ} - 58^{\\circ} = 32^{\\circ}\\). The answer \\(122^{\\circ}\\) leaves out the right angle at A.",
+   "clue": "Find the right angle in triangle OAP first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tangents from the point P touch a circle with centre O at A and B. The radius is 8 cm and \\(OP = 17\\) cm. What is \\(PA + PB\\)?",
+   "opts": [
+    "30 cm",
+    "15 cm",
+    "34 cm",
+    "18 cm"
+   ],
+   "why": "Triangle OAP has a right angle at A, so \\(PA^{2} = 17^{2} - 8^{2} = 225\\) and \\(PA = 15\\) cm. Tangents from P are equal, so \\(PB = 15\\) cm and the total is 30 cm. The answer 15 cm stops after finding only PA.",
+   "clue": "Use the right angle at A, then the equal tangents."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A circle with centre O and a point P outside it. Two tangents from P touch the circle at A and B. The radii OA and OB are drawn, each with a small right-angle mark where it meets its tangent. The interval OP is drawn. PA and PB each have one small equal-length tick. Label only O, A, B and P.",
+    "why": "Seeing both tangents, the two right angles and the triangles OAP and OBP shows where each rule applies."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(32^{\\circ}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "30 cm",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Tangents to a circle",
+  "card": [
+   [
+    "Tangent",
+    "a line that touches a circle at exactly one point, called the point of contact. It does not cut into the circle."
+   ],
+   [
+    "Tangent and radius",
+    "the radius drawn to the point of contact meets the tangent at \\(90^{\\circ}\\). This often makes a right-angled triangle with the centre."
+   ],
+   [
+    "Two tangents",
+    "from a point P outside a circle, two tangents can be drawn, touching it at A and B. They are equal in length, so \\(PA = PB\\)."
+   ],
+   "Example: a circle has centre O and radius 5 cm, and \\(OP = 13\\) cm. Triangle OAP has its right angle at A, so \\(PA^{2} = 13^{2} - 5^{2} = 144\\). So \\(PA = 12\\) cm, and \\(PB = 12\\) cm too."
+  ],
+  "remember": "The radius meets the tangent at \\(90^{\\circ}\\). Two tangents from one outside point are equal in length.",
+  "a": {
+   "q": "PA is a tangent to a circle with centre O, touching it at A. Angle AOP is \\(58^{\\circ}\\). What is angle APO?",
+   "opts": [
+    "\\(32^{\\circ}\\)",
+    "\\(58^{\\circ}\\)",
+    "\\(122^{\\circ}\\)",
+    "\\(29^{\\circ}\\)"
+   ],
+   "why": "The radius OA meets the tangent at \\(90^{\\circ}\\), so triangle OAP has a right angle at A. Angle APO is \\(180^{\\circ} - 90^{\\circ} - 58^{\\circ} = 32^{\\circ}\\). The answer \\(122^{\\circ}\\) leaves out the right angle at A.",
+   "clue": "Find the right angle in triangle OAP first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tangents from the point P touch a circle with centre O at A and B. The radius is 8 cm and \\(OP = 17\\) cm. What is \\(PA + PB\\)?",
+   "opts": [
+    "30 cm",
+    "15 cm",
+    "34 cm",
+    "18 cm"
+   ],
+   "why": "Triangle OAP has a right angle at A, so \\(PA^{2} = 17^{2} - 8^{2} = 225\\) and \\(PA = 15\\) cm. Tangents from P are equal, so \\(PB = 15\\) cm and the total is 30 cm. The answer 15 cm stops after finding only PA.",
+   "clue": "Use the right angle at A, then the equal tangents."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A circle with centre O and a point P outside it. Two tangents from P touch the circle at A and B. The radii OA and OB are drawn, each with a small right-angle mark where it meets its tangent. The interval OP is drawn. PA and PB each have one small equal-length tick. Label only O, A, B and P.",
+    "why": "Seeing both tangents, the two right angles and the triangles OAP and OBP shows where each rule applies."
+   }
+  ]
+ },
+ "cleared_by": "checker",
+ "checked_by": "claude-code"
+}

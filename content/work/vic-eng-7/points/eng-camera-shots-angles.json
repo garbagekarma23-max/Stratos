@@ -1,0 +1,431 @@
+{
+ "id": "eng-camera-shots-angles",
+ "title": "Camera shots and angles",
+ "brief": "0ee51ce9778c",
+ "shortlist": [
+  [
+   "eng-camera-angles",
+   0.455
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:46Z new, match",
+  "2026-11-12T12:44:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:37Z write: done",
+  "2026-11-12T15:25:57Z check: flagged",
+  "2026-11-12T15:35:04Z fix: suggested",
+  "2026-11-12T17:07:10Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-13T06:06:33Z autoreject: rejected, to be written again (remember other)",
+  "2026-11-13T09:32:52Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T10:40:35Z claude-code check: answered by a separate subagent",
+  "2026-11-13T10:40:35Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.01113,
+  "check": 0.01174,
+  "fix": 0.01622,
+  "recheck": 0.0108
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers only camera angles, while the new point also teaches close-ups and long shots (shot size), so no single bank point matches it exactly.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Remember, other: The remember line groups the ideas under 'shot size' and 'angle' and says shot size 'shows what we notice'. The card never uses the term 'shot size' and does not make this split; it just lists four separate shots and angles.",
+ "rejected": {
+  "title": "Camera shots and angles",
+  "card": [
+   [
+    "Close-up",
+    "The camera is very near a face or object. It lets the viewer see small details, such as a tear, so it often shows emotion."
+   ],
+   [
+    "Long shot",
+    "The camera is far away and shows a whole place or a small figure in it. It shows the setting and how big or empty it is."
+   ],
+   [
+    "Low angle",
+    "The camera looks up at a person from below. This can make them seem powerful, strong or scary."
+   ],
+   [
+    "High angle",
+    "The camera looks down at a person from above. This can make them seem small, weak or alone."
+   ]
+  ],
+  "remember": "Shot size shows what we notice. Angle can shape how powerful someone seems.",
+  "a": {
+   "q": "A film shows a girl from high above as she stands in a big hall. What effect does this camera angle have?",
+   "opts": [
+    "It makes her seem small and weak",
+    "It makes her seem strong and in charge",
+    "It shows the tear on her cheek in detail",
+    "It shows her face from very close up"
+   ],
+   "why": "The camera looks down on the girl, which is a high angle, so it can make her seem small and weak. A low angle would do the opposite and make her seem powerful. A tear or her face up close would need a close-up.",
+   "clue": "Think about where the camera is placed compared with the girl."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a film, Kai arrives at a huge farm. The camera is far away, so he is a tiny figure beside endless paddocks. What does this shot mainly show?",
+   "opts": [
+    "The size and setting of the farm",
+    "The sadness on Kai's face",
+    "That Kai is a powerful leader",
+    "The small details of Kai's hands"
+   ],
+   "why": "A long shot is taken from far away, so it shows the setting and how big it is. Kai's face and hands would need a close-up. Power would be shown by a low angle, not by distance.",
+   "clue": "Ask how far the camera is from Kai, and what it can fit in."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-13T06:06:33Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Remember, other: The remember line groups the ideas under 'shot size' and 'angle' and says shot size 'shows what we notice'. The card never uses the term 'shot size' and does not make this split; it just lists four separate shots and angles."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Camera shots and angles",
+     "card": [
+      [
+       "Close-up",
+       "The camera is very near a face or object. It lets the viewer see small details, such as a tear, so it often shows emotion."
+      ],
+      [
+       "Long shot",
+       "The camera is far away and shows a whole place or a small figure in it. It shows the setting and how big or empty it is."
+      ],
+      [
+       "Low angle",
+       "The camera looks up at a person from below. This can make them seem powerful, strong or scary."
+      ],
+      [
+       "High angle",
+       "The camera looks down at a person from above. This can make them seem small, weak or alone."
+      ]
+     ],
+     "remember": "Shot size shows what we notice. Angle can shape how powerful someone seems.",
+     "a": {
+      "q": "A film shows a girl from far above as she stands alone in a big, empty hall. What effect does this camera angle have?",
+      "opts": [
+       "It makes her seem small and alone",
+       "It makes her seem strong and in charge",
+       "It shows the tear on her cheek in detail",
+       "It shows her face from very close up"
+      ],
+      "why": "A high angle looks down on a person, so it can make them seem small and alone. A low angle would do the opposite and make her seem powerful.",
+      "clue": "Think about where the camera is placed compared with the girl."
+     },
+     "b": {
+      "d": 3,
+      "q": "In a film, Kai arrives at a huge farm. The camera is far away, so he is a tiny figure beside endless paddocks. What does this shot mainly show?",
+      "opts": [
+       "The size and setting of the farm",
+       "The sadness on Kai's face",
+       "That Kai is a powerful leader",
+       "The small details of Kai's hands"
+      ],
+      "why": "A long shot is taken from far away, so it shows the setting and how big it is. Kai's face and hands would need a close-up. Power would be shown by a low angle, not by distance.",
+      "clue": "Ask how far the camera is from Kai, and what it can fit in."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "It makes her seem small and alone",
+      "also_right": []
+     },
+     "b": {
+      "best": "The size and setting of the farm",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The stem says the girl 'stands alone', and the right option repeats 'alone'. A student could match the word without knowing what a high angle does. A neutral stem, such as 'stands in a big, empty hall', would avoid this."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card, answers and explanations are accurate. In question a, the stem's word 'alone' is echoed in the right option, which partly gives the answer away."
+    },
+    "flags": [
+     "Question a, wording: The stem says the girl 'stands alone', and the right option repeats 'alone'. A student could match the word without knowing what a high angle does. A neutral stem, such as 'stands in a big, empty hall', would avoid this."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Camera shots and angles",
+     "card": [
+      [
+       "Close-up",
+       "The camera is very near a face or object. It lets the viewer see small details, such as a tear, so it often shows emotion."
+      ],
+      [
+       "Long shot",
+       "The camera is far away and shows a whole place or a small figure in it. It shows the setting and how big or empty it is."
+      ],
+      [
+       "Low angle",
+       "The camera looks up at a person from below. This can make them seem powerful, strong or scary."
+      ],
+      [
+       "High angle",
+       "The camera looks down at a person from above. This can make them seem small, weak or alone."
+      ]
+     ],
+     "remember": "Shot size shows what we notice. Angle can shape how powerful someone seems.",
+     "a": {
+      "q": "A film shows a girl from high above as she stands in a big hall. What effect does this camera angle have?",
+      "opts": [
+       "It makes her seem small and weak",
+       "It makes her seem strong and in charge",
+       "It shows the tear on her cheek in detail",
+       "It shows her face from very close up"
+      ],
+      "why": "The camera looks down on the girl, which is a high angle, so it can make her seem small and weak. A low angle would do the opposite and make her seem powerful. A tear or her face up close would need a close-up.",
+      "clue": "Think about where the camera is placed compared with the girl."
+     },
+     "b": {
+      "d": 3,
+      "q": "In a film, Kai arrives at a huge farm. The camera is far away, so he is a tiny figure beside endless paddocks. What does this shot mainly show?",
+      "opts": [
+       "The size and setting of the farm",
+       "The sadness on Kai's face",
+       "That Kai is a powerful leader",
+       "The small details of Kai's hands"
+      ],
+      "why": "A long shot is taken from far away, so it shows the setting and how big it is. Kai's face and hands would need a close-up. Power would be shown by a low angle, not by distance.",
+      "clue": "Ask how far the camera is from Kai, and what it can fit in."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-12T17:07:10Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "It makes her seem small and weak",
+       "also_right": []
+      },
+      "b": {
+       "best": "The size and setting of the farm",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "remember",
+        "kind": "other",
+        "detail": "The remember line groups the ideas under 'shot size' and 'angle' and says shot size 'shows what we notice'. The card never uses the term 'shot size' and does not make this split; it just lists four separate shots and angles."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both questions are accurate, and each question has one clear answer. The only issue is that the remember line adds a 'shot size' versus 'angle' grouping the card does not teach."
+     },
+     "flags": [
+      "Remember, other: The remember line groups the ideas under 'shot size' and 'angle' and says shot size 'shows what we notice'. The card never uses the term 'shot size' and does not make this split; it just lists four separate shots and angles."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-13T09:32:52Z",
+   "step": "write",
+   "version": {
+    "title": "Camera shots and angles",
+    "card": [
+     [
+      "Close-up",
+      "The camera is very near a face or object. It lets the viewer see small details, such as a tear, so it often shows emotion."
+     ],
+     [
+      "Long shot",
+      "The camera is far away and shows a whole place or a small figure in it. It shows the setting and how big or empty it is."
+     ],
+     [
+      "Low angle",
+      "The camera looks up at a person from below. This can make them seem powerful, strong or scary."
+     ],
+     [
+      "High angle",
+      "The camera looks down at a person from above. This can make them seem small, weak or alone."
+     ]
+    ],
+    "remember": "Close-ups show emotion and long shots show setting. A low angle can make someone seem powerful, and a high angle can make them seem small.",
+    "a": {
+     "q": "A film shows a girl from high above as she stands in a big hall. What effect does this camera angle have?",
+     "opts": [
+      "It makes her seem small and weak",
+      "It makes her seem strong and in charge",
+      "It shows the tear on her cheek in detail",
+      "It shows her face from very close up"
+     ],
+     "why": "The camera looks down on the girl, which is a high angle, so it can make her seem small and weak. A low angle would do the opposite and make her seem powerful. A tear or her face up close would need a close-up.",
+     "clue": "Think about where the camera is placed compared with the girl."
+    },
+    "b": {
+     "d": 3,
+     "q": "In a film, Kai arrives at a huge farm. The camera is far away, so he is a tiny figure beside endless paddocks. What does this shot mainly show?",
+     "opts": [
+      "The size and setting of the farm",
+      "The sadness on Kai's face",
+      "That Kai is a powerful leader",
+      "The small details of Kai's hands"
+     ],
+     "why": "A long shot is taken from far away, so it shows the setting and how big it is. Kai's face and hands would need a close-up. Power would be shown by a low angle, not by distance.",
+     "clue": "Ask how far the camera is from Kai, and what it can fit in."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T10:40:35Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "It makes her seem small and weak",
+     "also_right": []
+    },
+    "b": {
+     "best": "The size and setting of the farm",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Camera shots and angles",
+  "card": [
+   [
+    "Close-up",
+    "The camera is very near a face or object. It lets the viewer see small details, such as a tear, so it often shows emotion."
+   ],
+   [
+    "Long shot",
+    "The camera is far away and shows a whole place or a small figure in it. It shows the setting and how big or empty it is."
+   ],
+   [
+    "Low angle",
+    "The camera looks up at a person from below. This can make them seem powerful, strong or scary."
+   ],
+   [
+    "High angle",
+    "The camera looks down at a person from above. This can make them seem small, weak or alone."
+   ]
+  ],
+  "remember": "Close-ups show emotion and long shots show setting. A low angle can make someone seem powerful, and a high angle can make them seem small.",
+  "a": {
+   "q": "A film shows a girl from high above as she stands in a big hall. What effect does this camera angle have?",
+   "opts": [
+    "It makes her seem small and weak",
+    "It makes her seem strong and in charge",
+    "It shows the tear on her cheek in detail",
+    "It shows her face from very close up"
+   ],
+   "why": "The camera looks down on the girl, which is a high angle, so it can make her seem small and weak. A low angle would do the opposite and make her seem powerful. A tear or her face up close would need a close-up.",
+   "clue": "Think about where the camera is placed compared with the girl."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a film, Kai arrives at a huge farm. The camera is far away, so he is a tiny figure beside endless paddocks. What does this shot mainly show?",
+   "opts": [
+    "The size and setting of the farm",
+    "The sadness on Kai's face",
+    "That Kai is a powerful leader",
+    "The small details of Kai's hands"
+   ],
+   "why": "A long shot is taken from far away, so it shows the setting and how big it is. Kai's face and hands would need a close-up. Power would be shown by a low angle, not by distance.",
+   "clue": "Ask how far the camera is from Kai, and what it can fit in."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It makes her seem small and weak",
+   "also_right": []
+  },
+  "b": {
+   "best": "The size and setting of the farm",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Camera shots and angles",
+  "card": [
+   [
+    "Close-up",
+    "The camera is very near a face or object. It lets the viewer see small details, such as a tear, so it often shows emotion."
+   ],
+   [
+    "Long shot",
+    "The camera is far away and shows a whole place or a small figure in it. It shows the setting and how big or empty it is."
+   ],
+   [
+    "Low angle",
+    "The camera looks up at a person from below. This can make them seem powerful, strong or scary."
+   ],
+   [
+    "High angle",
+    "The camera looks down at a person from above. This can make them seem small, weak or alone."
+   ]
+  ],
+  "remember": "Close-ups show emotion and long shots show setting. A low angle can make someone seem powerful, and a high angle can make them seem small.",
+  "a": {
+   "q": "A film shows a girl from high above as she stands in a big hall. What effect does this camera angle have?",
+   "opts": [
+    "It makes her seem small and weak",
+    "It makes her seem strong and in charge",
+    "It shows the tear on her cheek in detail",
+    "It shows her face from very close up"
+   ],
+   "why": "The camera looks down on the girl, which is a high angle, so it can make her seem small and weak. A low angle would do the opposite and make her seem powerful. A tear or her face up close would need a close-up.",
+   "clue": "Think about where the camera is placed compared with the girl."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a film, Kai arrives at a huge farm. The camera is far away, so he is a tiny figure beside endless paddocks. What does this shot mainly show?",
+   "opts": [
+    "The size and setting of the farm",
+    "The sadness on Kai's face",
+    "That Kai is a powerful leader",
+    "The small details of Kai's hands"
+   ],
+   "why": "A long shot is taken from far away, so it shows the setting and how big it is. Kai's face and hands would need a close-up. Power would be shown by a low angle, not by distance.",
+   "clue": "Ask how far the camera is from Kai, and what it can fit in."
+  }
+ },
+ "checked_by": "claude-code"
+}

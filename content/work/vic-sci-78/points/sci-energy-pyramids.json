@@ -1,0 +1,249 @@
+{
+ "id": "sci-energy-pyramids",
+ "title": "Energy pyramids",
+ "brief": "3b2b436dd3ad",
+ "shortlist": [
+  [
+   "sci-energy-flow-ecosystem",
+   0.439
+  ],
+  [
+   "sci-kinetic-potential-energy",
+   0.302
+  ],
+  [
+   "sci-energy-transfer-transformation",
+   0.296
+  ],
+  [
+   "sci-conservation-energy",
+   0.266
+  ],
+  [
+   "sci-energy-swinging-or-rolling",
+   0.256
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:55Z new, match",
+  "2026-11-12T12:44:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:52Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:07Z write: done",
+  "2026-11-12T15:35:11Z check: flagged",
+  "2026-11-12T15:42:25Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.00712,
+  "check": 0.012,
+  "fix": 0.01693,
+  "recheck": 0.00945
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, sci-energy-flow-ecosystem, covers energy loss at each feeding level but never gives the roughly tenth-of-energy rule or the energy pyramid shape, so teaching the new point would need added content rather than small edits.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Energy pyramids",
+  "card": [
+   "An energy pyramid shows how much energy is available at each feeding level of a food chain. Producers are at the bottom, then the animals that eat them, then the animals that eat those.",
+   "Only about a tenth of the energy at one level passes to the next. The rest is used by the organisms for living, such as moving and growing, or is lost as heat.",
+   "So each level up has about ten times less energy than the one below. The pyramid gets narrower towards the top.",
+   "Little energy is left at the top, so there is only enough for a few top feeders. This is why food chains are short, often with four or five levels at most."
+  ],
+  "remember": "About a tenth of the energy passes up each level, so the pyramid narrows and food chains stay short.",
+  "a": {
+   "q": "Why does an energy pyramid get narrower towards the top?",
+   "opts": [
+    "Only a small part of the energy passes to the next level",
+    "Animals higher up eat more food than those below them",
+    "Producers pass all of their energy to the next level",
+    "Energy is made again at each level of the chain"
+   ],
+   "why": "Only about a tenth of the energy passes to the next level, so each level has less than the one below. Passing on all the energy would keep the pyramid the same width, not make it narrower.",
+   "clue": "Think about how much energy is passed on at each step."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a grassland in western Victoria, the grass in an energy pyramid holds 10 000 units of energy. About how much energy reaches the hawks, which eat snakes that eat lizards that eat insects that eat the grass?",
+   "opts": [
+    "About 1 unit",
+    "About 10 units",
+    "About 100 units",
+    "About 1000 units"
+   ],
+   "why": "Energy passes through four steps: grass to insects, insects to lizards, lizards to snakes, and snakes to hawks. Each step keeps about a tenth, so 10 000 falls to 1000, 100, 10, then 1. About 10 units is tempting, but it counts only three steps.",
+   "clue": "Count the steps between the grass and the hawks."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "An energy pyramid with four stacked layers, widest at the bottom and narrowest at the top. From bottom to top the layers are labelled producers, animals that eat producers, animals that eat those, and top feeders. An arrow on the side points upwards and is labelled less energy.",
+    "why": "The student sees the pyramid narrow as the energy available falls at each level."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Only a small part of the energy passes to the next level",
+   "also_right": []
+  },
+  "b": {
+   "best": "About 1 unit",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says the energy that is not passed on is used for 'moving and growing'. Energy used for growth is built into body tissue, and that is mostly what the next level eats and gains. Moving, keeping the body working, heat, and parts not eaten or lost as waste would be more accurate."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound, with intended answers of 'Only a small part of the energy passes to the next level' and 'About 1 unit', and the whys agree. One minor fact issue: the card lists 'growing' as a way energy is lost, when growth is mostly what passes energy to the next level."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says the energy that is not passed on is used for 'moving and growing'. Energy used for growth is built into body tissue, and that is mostly what the next level eats and gains. Moving, keeping the body working, heat, and parts not eaten or lost as waste would be more accurate."
+ ],
+ "proposal": {
+  "title": "Energy pyramids",
+  "card": [
+   "An energy pyramid shows how much energy is available at each feeding level of a food chain. Producers are at the bottom, then the animals that eat them, then the animals that eat those.",
+   "Only about a tenth of the energy at one level passes to the next. The rest is used for moving and keeping the body working, is lost as heat, or stays in parts that are not eaten or are passed out as waste.",
+   "So each level up has only about a tenth of the energy of the level below. The pyramid gets narrower towards the top.",
+   "Little energy is left at the top, so there is only enough for a few top feeders. This is why food chains are short, often with four or five levels at most."
+  ],
+  "remember": "About a tenth of the energy passes up each level, so the pyramid narrows and food chains stay short.",
+  "a": {
+   "q": "Why does an energy pyramid get narrower towards the top?",
+   "opts": [
+    "Only a small part of the energy passes to the next level",
+    "Animals higher up eat more food than those below them",
+    "Producers pass all of their energy to the next level",
+    "Energy is made again at each level of the chain"
+   ],
+   "why": "Only about a tenth of the energy passes to the next level, so each level has less than the one below. Passing on all the energy would keep the pyramid the same width, not make it narrower.",
+   "clue": "Think about how much energy is passed on at each step."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a grassland in western Victoria, the grass in an energy pyramid holds 10 000 units of energy. About how much energy reaches the hawks, which eat snakes that eat lizards that eat insects that eat the grass?",
+   "opts": [
+    "About 1 unit",
+    "About 10 units",
+    "About 100 units",
+    "About 1000 units"
+   ],
+   "why": "Energy passes through four steps: grass to insects, insects to lizards, lizards to snakes, and snakes to hawks. Each step keeps about a tenth, so 10 000 falls to 1000, 100, 10, then 1. About 10 units is tempting, but it counts only three steps.",
+   "clue": "Count the steps between the grass and the hawks."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "An energy pyramid with four stacked layers, widest at the bottom and narrowest at the top. From bottom to top the layers are labelled producers, animals that eat producers, animals that eat those, and top feeders. An arrow on the side points upwards and is labelled less energy.",
+    "why": "The student sees the pyramid narrow as the energy available falls at each level."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Only a small part of the energy passes to the next level",
+    "also_right": []
+   },
+   "b": {
+    "best": "About 1 unit",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says the energy that is not passed on is used for 'moving and growing'. Energy used for growth is built into body tissue, and that is mostly what the next level eats and gains. Moving, keeping the body working, heat, and parts not eaten or lost as waste would be more accurate."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card says the energy that is not passed on is used for 'moving and growing'. Energy used for growth is built into body tissue, and that is mostly what the next level eats and gains. Moving, keeping the body working, heat, and parts not eaten or lost as waste would be more accurate."
+  ]
+ },
+ "final": {
+  "title": "Energy pyramids",
+  "card": [
+   "An energy pyramid shows how much energy is available at each feeding level of a food chain. Producers are at the bottom, then the animals that eat them, then the animals that eat those.",
+   "Only about a tenth of the energy at one level passes to the next. The rest is used for moving and keeping the body working, is lost as heat, or stays in parts that are not eaten or are passed out as waste.",
+   "So each level up has only about a tenth of the energy of the level below. The pyramid gets narrower towards the top.",
+   "Little energy is left at the top, so there is only enough for a few top feeders. This is why food chains are short, often with four or five levels at most."
+  ],
+  "remember": "About a tenth of the energy passes up each level, so the pyramid narrows and food chains stay short.",
+  "a": {
+   "q": "Why does an energy pyramid get narrower towards the top?",
+   "opts": [
+    "Only a small part of the energy passes to the next level",
+    "Animals higher up eat more food than those below them",
+    "Producers pass all of their energy to the next level",
+    "Energy is made again at each level of the chain"
+   ],
+   "why": "Only about a tenth of the energy passes to the next level, so each level has less than the one below. Passing on all the energy would keep the pyramid the same width, not make it narrower.",
+   "clue": "Think about how much energy is passed on at each step."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a grassland in western Victoria, the grass in an energy pyramid holds 10 000 units of energy. About how much energy reaches the hawks, which eat snakes that eat lizards that eat insects that eat the grass?",
+   "opts": [
+    "About 1 unit",
+    "About 10 units",
+    "About 100 units",
+    "About 1000 units"
+   ],
+   "why": "Energy passes through four steps: grass to insects, insects to lizards, lizards to snakes, and snakes to hawks. Each step keeps about a tenth, so 10 000 falls to 1000, 100, 10, then 1. About 10 units is tempting, but it counts only three steps.",
+   "clue": "Count the steps between the grass and the hawks."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "An energy pyramid with four stacked layers, widest at the bottom and narrowest at the top. From bottom to top the layers are labelled producers, animals that eat producers, animals that eat those, and top feeders. An arrow on the side points upwards and is labelled less energy.",
+    "why": "The student sees the pyramid narrow as the energy available falls at each level."
+   }
+  ]
+ },
+ "cleared_by": "recheck"
+}

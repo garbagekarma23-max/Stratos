@@ -1,0 +1,356 @@
+{
+ "id": "mat-linear-models-with-fixed",
+ "title": "Linear models with a fixed cost",
+ "brief": "37c2fb1fa10f",
+ "shortlist": [
+  [
+   "mat-linear-models-2",
+   0.394
+  ],
+  [
+   "mat-graphing-linear-relations-2",
+   0.313
+  ],
+  [
+   "mat-choosing-linear-or-quadratic",
+   0.261
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:54Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:06:01Z write: failed the content check, writing again",
+  "2026-11-12T15:15:51Z write: done",
+  "2026-11-12T15:26:05Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.07842,
+  "check": 0.01023
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-linear-models-2, teaches rate and starting value in a linear rule but does not teach finding a break-even point, which this new point requires, so it needs a new card.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Linear models with a fixed cost",
+  "card": [
+   "A fixed cost is paid whatever the amount used. A rate is the cost for each unit, such as each hour. In \\(C = 20 + 5h\\), the fixed cost is $20 and the rate is $5 per hour.",
+   "To find a cost, put the number into the rule. For \\(h = 4\\): \\(C = 20 + 5 \\times 4 = 20 + 20 = 40\\), so the cost is $40.",
+   "The graph is a straight line. It starts at the fixed cost on the vertical axis and rises by the rate for each step along.",
+   "The break-even point is where cost equals the money earned. Example: with income \\(I = 9h\\), solve \\(20 + 5h = 9h\\). Then \\(20 = 4h\\), so \\(h = 5\\)."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "A straight line \\(C = 20 + 5h\\) from \\(h = 0\\) to \\(h = 8\\). It starts at 20 on the vertical axis and passes through the point \\((4, 40)\\).",
+    "x": {
+     "min": 0,
+     "max": 8,
+     "label": "h",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 80,
+     "label": "C",
+     "step": 10
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "C",
+      "expr": "20 + 5x",
+      "domain": [
+       0,
+       8
+      ],
+      "label": "C",
+      "labelAt": 7.5,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       20
+      ],
+      "on": [
+       "C"
+      ],
+      "is": "y-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       40
+      ],
+      "on": [
+       "C"
+      ],
+      "label": "(4, 40)",
+      "pos": "below-right"
+     }
+    ]
+   },
+   "4": {
+    "kind": "graph",
+    "alt": "The cost line \\(C = 20 + 5h\\) and the income line \\(I = 9h\\) cross at the point \\((5, 45)\\), the break-even point.",
+    "x": {
+     "min": 0,
+     "max": 8,
+     "label": "h",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 80,
+     "label": "Dollars",
+     "step": 10
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "C",
+      "expr": "20 + 5x",
+      "domain": [
+       0,
+       8
+      ],
+      "label": "C",
+      "labelAt": 7.5,
+      "pos": "below"
+     },
+     {
+      "type": "fn",
+      "id": "I",
+      "expr": "9x",
+      "domain": [
+       0,
+       8
+      ],
+      "label": "I",
+      "labelAt": 7,
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       45
+      ],
+      "on": [
+       "C",
+       "I"
+      ],
+      "is": "intersection",
+      "label": "(5, 45)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Cost \\(=\\) fixed charge \\(+\\) rate \\(\\times\\) amount. Break-even is where cost \\(=\\) income.",
+  "a": {
+   "q": "A kayak hire shop charges $15 plus $6 per hour, so \\(C = 15 + 6h\\). What is the cost of 3 hours?",
+   "opts": [
+    "$33",
+    "$63",
+    "$18",
+    "$21"
+   ],
+   "why": "\\(C = 15 + 6 \\times 3 = 15 + 18 = 33\\). The $63 comes from adding 15 and 6 first and then multiplying by 3, but the fixed charge is paid only once.",
+   "clue": "Multiply the rate by the hours, then add the fixed charge once."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya sells candles at a Geelong market. Her stall costs \\(C = 40 + 2n\\) dollars for \\(n\\) candles, and she earns \\(I = 6n\\) dollars. How many candles does she sell to break even?",
+   "opts": [
+    "10 candles",
+    "20 candles",
+    "5 candles",
+    "7 candles"
+   ],
+   "why": "Break even when \\(40 + 2n = 6n\\), so \\(40 = 4n\\) and \\(n = 10\\). Check: cost is \\(40 + 20 = 60\\) and income is \\(6 \\times 10 = 60\\). The answer 20 comes from dividing 40 by 2 and ignoring the income.",
+   "clue": "Set the cost equal to the income, then solve for \\(n\\)."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$33",
+   "also_right": []
+  },
+  "b": {
+   "best": "10 candles",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out ($33 and 10 candles), and both graphs match their rules, labels and alts: (0, 20), (4, 40) and break-even at (5, 45)."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Linear models with a fixed cost",
+  "card": [
+   "A fixed cost is paid whatever the amount used. A rate is the cost for each unit, such as each hour. In \\(C = 20 + 5h\\), the fixed cost is $20 and the rate is $5 per hour.",
+   "To find a cost, put the number into the rule. For \\(h = 4\\): \\(C = 20 + 5 \\times 4 = 20 + 20 = 40\\), so the cost is $40.",
+   "The graph is a straight line. It starts at the fixed cost on the vertical axis and rises by the rate for each step along.",
+   "The break-even point is where cost equals the money earned. Example: with income \\(I = 9h\\), solve \\(20 + 5h = 9h\\). Then \\(20 = 4h\\), so \\(h = 5\\)."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "A straight line \\(C = 20 + 5h\\) from \\(h = 0\\) to \\(h = 8\\). It starts at 20 on the vertical axis and passes through the point \\((4, 40)\\).",
+    "x": {
+     "min": 0,
+     "max": 8,
+     "label": "h",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 80,
+     "label": "C",
+     "step": 10
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "C",
+      "expr": "20 + 5x",
+      "domain": [
+       0,
+       8
+      ],
+      "label": "C",
+      "labelAt": 7.5,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       20
+      ],
+      "on": [
+       "C"
+      ],
+      "is": "y-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       40
+      ],
+      "on": [
+       "C"
+      ],
+      "label": "(4, 40)",
+      "pos": "below-right"
+     }
+    ]
+   },
+   "4": {
+    "kind": "graph",
+    "alt": "The cost line \\(C = 20 + 5h\\) and the income line \\(I = 9h\\) cross at the point \\((5, 45)\\), the break-even point.",
+    "x": {
+     "min": 0,
+     "max": 8,
+     "label": "h",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 80,
+     "label": "Dollars",
+     "step": 10
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "C",
+      "expr": "20 + 5x",
+      "domain": [
+       0,
+       8
+      ],
+      "label": "C",
+      "labelAt": 7.5,
+      "pos": "below"
+     },
+     {
+      "type": "fn",
+      "id": "I",
+      "expr": "9x",
+      "domain": [
+       0,
+       8
+      ],
+      "label": "I",
+      "labelAt": 7,
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       45
+      ],
+      "on": [
+       "C",
+       "I"
+      ],
+      "is": "intersection",
+      "label": "(5, 45)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Cost \\(=\\) fixed charge \\(+\\) rate \\(\\times\\) amount. Break-even is where cost \\(=\\) income.",
+  "a": {
+   "q": "A kayak hire shop charges $15 plus $6 per hour, so \\(C = 15 + 6h\\). What is the cost of 3 hours?",
+   "opts": [
+    "$33",
+    "$63",
+    "$18",
+    "$21"
+   ],
+   "why": "\\(C = 15 + 6 \\times 3 = 15 + 18 = 33\\). The $63 comes from adding 15 and 6 first and then multiplying by 3, but the fixed charge is paid only once.",
+   "clue": "Multiply the rate by the hours, then add the fixed charge once."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya sells candles at a Geelong market. Her stall costs \\(C = 40 + 2n\\) dollars for \\(n\\) candles, and she earns \\(I = 6n\\) dollars. How many candles does she sell to break even?",
+   "opts": [
+    "10 candles",
+    "20 candles",
+    "5 candles",
+    "7 candles"
+   ],
+   "why": "Break even when \\(40 + 2n = 6n\\), so \\(40 = 4n\\) and \\(n = 10\\). Check: cost is \\(40 + 20 = 60\\) and income is \\(6 \\times 10 = 60\\). The answer 20 comes from dividing 40 by 2 and ignoring the income.",
+   "clue": "Set the cost equal to the income, then solve for \\(n\\)."
+  }
+ },
+ "cleared_by": "checker"
+}

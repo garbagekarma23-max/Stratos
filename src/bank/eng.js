@@ -9423,5 +9423,3652 @@ MADE_BANKS.eng = {
       "why": "Sam bends the spelling on purpose to copy the sound of a London accent, like \"bruvver\" for \"brother\". It is not a mistake, because the rest of the story uses standard spelling, which shows Sam knows it.",
       "clue": "Consider how people from the character's city might sound."
     }
+  },
+  "eng-language-that-empowers-or-vic": {
+    "title": "Language that empowers or disempowers",
+    "card": [
+      "The way a group is named and described shapes how readers see it. Word choice can give a group respect and a voice, or take them away.",
+      [
+        "Empowering",
+        "language shows people as capable agents who act, often by making them the subject of the sentence, as in 'Students ran the forum.' It can also use the name a group uses for itself."
+      ],
+      [
+        "Disempowering",
+        "language shows people as helpless, as a problem or as objects that others act on and decide for. An example is calling teenagers a menace."
+      ],
+      "These choices have social effects. They can change how a community is treated, what people expect of its members and how its members feel about themselves."
+    ],
+    "remember": "Naming and describing a group can build it up or put it down, and readers feel the effect.",
+    "a": {
+      "q": "A headline reads, 'Refugee families left stranded as officials decide their future.' What effect does this wording most likely have on the families?",
+      "opts": [
+        "It disempowers them by showing others deciding for them",
+        "It empowers them by showing sympathy for their situation",
+        "It empowers them by showing them making their own choices",
+        "It disempowers the officials by blaming them for the delay"
+      ],
+      "why": "The families are left stranded while officials make the decisions, so they are shown as people others act on, which disempowers them. The sympathy option is tempting, but feeling sorry for a group does not show its members as capable people who act.",
+      "clue": "In the headline, who does the deciding?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Which sentence about residents of an aged care home in Bendigo is the most empowering?",
+      "opts": [
+        "Residents voted to choose the home's new weekly activities",
+        "Residents are looked after by staff who decide their day",
+        "The elderly are a burden on the home's limited resources",
+        "The old folk in the home need to be kept happy and quiet"
+      ],
+      "why": "Residents voted and chose, so they are shown as capable people who make decisions. The sentence about staff deciding the day may sound kind, but it presents residents as people things are done to, which disempowers them.",
+      "clue": "Who is shown making the decisions?"
+    }
+  },
+  "eng-frames-circular-structures": {
+    "title": "Frames and circular structures",
+    "card": [
+      [
+        "Frame story",
+        "a story told inside another story. An outer story, such as a woman telling her grandson a tale by a fire, holds an inner story."
+      ],
+      [
+        "Circular structure",
+        "a text that ends where it began, with the same image, setting, line or situation. It is often a little changed by what came between."
+      ],
+      "Both create a link between the start and the end. Readers compare the two points and notice what has changed or stayed the same.",
+      "To evaluate them, ask what the link adds. It may suggest that nothing has changed, show growth, or make the inner story seem more believable or more personal."
+    ],
+    "remember": "Frames and circles link start and end, so readers compare the two.",
+    "a": {
+      "q": "What do a frame story and a circular structure have in common?",
+      "opts": [
+        "Both link the start and the end for comparison",
+        "Both tell events in reverse order",
+        "Both use a narrator who is a character",
+        "Both end with a surprise the reader did not expect"
+      ],
+      "why": "Both set up a link between the opening and the close, so readers compare them. A circular text can be told in order, and neither structure needs a surprise ending.",
+      "clue": "Think about what readers do when the end matches the start."
+    },
+    "b": {
+      "d": 3,
+      "q": "A short story opens with Jin sitting alone on a bus stop bench in the rain, bored and restless. After a journey of change, it ends with Jin on the same bench in the rain, calm and content. What is the effect of this structure?",
+      "opts": [
+        "It shows how Jin has changed in the same setting",
+        "It proves that nothing in Jin's life has changed",
+        "It tells the story inside another narrator's story",
+        "It makes the ending a complete surprise to readers"
+      ],
+      "why": "The ending returns to the opening setting, so readers compare Jin's mood then and now and see the change. A circular structure does not always mean nothing changes, and there is no outer story here, so it is not a frame.",
+      "clue": "The setting is the same. What is different about Jin?"
+    }
+  },
+  "eng-cohesion-across-extended-essay": {
+    "title": "Cohesion across an extended essay",
+    "card": [
+      "Cohesion means the parts of a text hold together. In a long essay, readers need to see how each paragraph connects to the whole argument.",
+      [
+        "Introduction",
+        "maps the argument. It states the contention and previews the main points in the order they will come."
+      ],
+      [
+        "Topic sentences",
+        "open each paragraph and echo the introduction. They repeat its main ideas in similar words, so the reader sees which point is being made."
+      ],
+      [
+        "Linking words",
+        "such as however, in addition and as a result, join paragraphs. They show whether the next point adds, contrasts or follows on."
+      ]
+    ],
+    "remember": "A mapped introduction, echoing topic sentences and linking words hold an essay together.",
+    "a": {
+      "q": "What is the main job of an introduction that maps the argument?",
+      "opts": [
+        "It previews the points so the essay's path is clear",
+        "It gives all the evidence before the body begins",
+        "It repeats the conclusion in the same words",
+        "It adds linking words between the body paragraphs"
+      ],
+      "why": "Mapping means stating the contention and previewing the main points in order, so readers can follow the essay. It does not hold the evidence, which belongs in the body paragraphs.",
+      "clue": "A map shows where you are going before you set out."
+    },
+    "b": {
+      "d": 3,
+      "q": "An essay argues that school uniforms should stay. Its introduction previews three points: cost, safety, then identity. The second body paragraph begins: \"Uniforms also protect students from danger on excursions.\" Which feature does this opening mainly show?",
+      "opts": [
+        "A topic sentence echoing the introduction's second point",
+        "A linking word that contrasts two paragraphs",
+        "An introduction that maps the whole argument",
+        "A conclusion that sums up the three points"
+      ],
+      "why": "The sentence opens the paragraph and returns to the second previewed point, safety. The word also adds to the argument, but it does not contrast, and the sentence is not the introduction or the conclusion.",
+      "clue": "Match the sentence to the order of points in the introduction."
+    }
+  },
+  "eng-parallel-structure": {
+    "title": "Parallel structure",
+    "card": [
+      "Parallel structure means using the same grammatical pattern for each item in a list or each part of a pair. For example: \"She likes to swim, to run and to climb.\"",
+      "Each part has the same form, such as all -ing words, all \"to\" verbs, or all short clauses built the same way. A part that breaks the pattern sounds clumsy.",
+      "Faulty: \"He enjoys hiking, swimming and to cycle.\" Fixed: \"He enjoys hiking, swimming and cycling.\"",
+      "Effect: the repeated pattern gives balance and rhythm. It also makes ideas easy to compare, because the reader sees each part lined up beside the next."
+    ],
+    "remember": "Keep the same pattern for each part. The repeat gives balance and makes comparing easy.",
+    "a": {
+      "q": "Which sentence uses parallel structure?",
+      "opts": [
+        "Lena packed her boots, her jacket and her torch",
+        "Lena packed her boots, her jacket and took a torch",
+        "Lena packed her boots, a jacket and to take a torch",
+        "Lena packed her boots, bringing her jacket and a torch"
+      ],
+      "why": "All three items in the right answer are noun phrases built the same way: her plus a noun. The other options switch between nouns and verbs, which breaks the pattern, so the list sounds uneven.",
+      "clue": "Check that every item in the list has the same form."
+    },
+    "b": {
+      "d": 3,
+      "q": "A speaker says, \"We came to swim, to fish and wanting quiet.\" Which rewrite fixes the pattern?",
+      "opts": [
+        "We came to swim, to fish and to rest",
+        "We came to swim, fishing and to rest",
+        "We came to swim, to fish and for quiet",
+        "We came to swim, to fish and resting"
+      ],
+      "why": "The fixed version repeats \"to\" plus a verb for all three items, so the list is balanced. The option ending \"for quiet\" looks close, but it swaps a verb pattern for a noun phrase, so the pattern still breaks.",
+      "clue": "Match the form of the first two items exactly."
+    }
+  },
+  "eng-active-passive-voice-vic": {
+    "title": "Active and passive voice",
+    "card": [
+      ["Active voice", "The doer of the action is the subject and comes first. \"The coach cancelled the match.\""],
+      [
+        "Passive voice",
+        "The receiver of the action moves to the front and becomes the subject. \"The match was cancelled.\" The verb is usually a form of \"be\" plus a past participle, such as \"was cancelled\"."
+      ],
+      "The passive can leave out who did the action, as in \"Mistakes were made.\" It can also add \"by\" to name the doer: \"The match was cancelled by the coach.\"",
+      "Effect: the active feels direct and names who is responsible. A writer may choose the passive to put the focus on the receiver or the action, or to leave the doer unnamed."
+    ],
+    "remember": "Active: the doer is the subject. Passive: the receiver is the subject, and the doer can be left out.",
+    "a": {
+      "q": "Which sentence is in the passive voice?",
+      "opts": [
+        "The window was broken during the storm",
+        "The storm broke the window last night",
+        "A branch smashed the window in the storm",
+        "Strong winds shattered the window"
+      ],
+      "why": "In the right answer the window is the subject, but it receives the action, and the verb is \"was broken\". The other three make a doer the subject (the storm, a branch, strong winds), so they are active.",
+      "clue": "Does the subject do the action, or have it done to it?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A council spokesperson wants a notice that does not name who closed the pool. Which sentence does this?",
+      "opts": [
+        "The pool has been closed until further notice",
+        "The council has closed the pool until further notice",
+        "We have closed the pool until further notice",
+        "Council staff closed the pool until further notice"
+      ],
+      "why": "The passive \"has been closed\" makes the pool the subject and names no doer, so it suits the spokesperson. The other options are active, and each names who closed the pool as the subject, even the one that only says \"we\".",
+      "clue": "Which sentence never says who did the closing?"
+    }
+  },
+  "eng-shades-meaning": {
+    "title": "Shades of meaning",
+    "card": [
+      "Near synonyms are words with similar meanings. They are not identical. Each one carries a slightly different shade of meaning.",
+      "Take ask, request, demand and plead. Ask is neutral. Request is polite and formal. Demand is forceful and expects a yes. Plead is emotional and desperate.",
+      "Many words also carry a feeling beyond their plain meaning. Slim and skinny both mean thin, but slim sounds positive and skinny can sound negative.",
+      "To choose the best word, ask what the writer wants the reader to feel or picture. Then pick the word whose shade fits that purpose most closely."
+    ],
+    "remember": "Near synonyms differ in force and feeling, so the precise word gives the exact meaning.",
+    "a": {
+      "q": "A writer changes 'Sam asked for a refund' to 'Sam demanded a refund'. How does this change the way Sam comes across?",
+      "opts": [
+        "Sam now sounds forceful and expects a yes",
+        "Sam now sounds polite and formal",
+        "Sam now sounds emotional and desperate",
+        "Sam sounds the same, as the words are synonyms"
+      ],
+      "why": "Demand is forceful and expects a yes, so Sam seems firm and insistent. Desperate is tempting because demand is a strong word, but that is the shade of plead. Near synonyms are not identical, so swapping one for another does change the meaning.",
+      "clue": "Which shade does demand carry that ask does not?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Jess is writing a story. She wants to show that her character, Mia, is upset and desperate when she speaks to her boss. Which sentence fits best?",
+      "opts": [
+        "Mia pleaded with her boss to let her keep her job",
+        "Mia asked her boss to let her keep her job",
+        "Mia demanded that her boss let her keep her job",
+        "Mia requested that her boss let her keep her job"
+      ],
+      "why": "Pleaded carries emotion and desperation, which matches what Jess wants to show. Demanded is tempting because it is strong, but it sounds forceful and expects a yes, not desperate. Asked is neutral and requested is polite and formal.",
+      "clue": "Which word carries emotion and desperation, not force?"
+    }
+  },
+  "eng-punctuation-rhythm-effect": {
+    "title": "Punctuation for rhythm and effect",
+    "card": [
+      "Writers choose punctuation on purpose. It controls how fast a reader moves through a sentence and which words get the most weight.",
+      [
+        "Ellipsis",
+        "three dots that show a pause, a trailing off or hesitation. In \"I think... maybe not\", the reader slows down and hears doubt."
+      ],
+      [
+        "Colon",
+        "a pause that sets up what comes next. In \"She opened the box: empty\", the short wait turns the last word into a reveal."
+      ],
+      [
+        "Short sentence",
+        "after a run of long sentences, a sentence of a few words, or even one word such as \"Silence\", stops the pace and makes that word hit hard."
+      ]
+    ],
+    "remember": "Choose punctuation for pace: dots hesitate, a colon sets up a reveal, a short sentence lands hard.",
+    "a": {
+      "q": "Which line uses punctuation to show a speaker hesitating?",
+      "opts": [
+        "Well... I suppose I could come along",
+        "I know what I need now: a quiet night in",
+        "Decided. I am coming along tonight",
+        "I could come along, eat, chat and leave"
+      ],
+      "why": "The ellipsis after Well makes the speaker trail off, so the reader hears doubt. The one-word sentence Decided does the opposite: it sounds firm and certain.",
+      "clue": "Which punctuation mark makes a speaker trail off?"
+    },
+    "b": {
+      "d": 3,
+      "q": "After a long build-up, Kai ends a mystery scene with \"He lifted the lid and saw what was inside: nothing.\" What is the main effect of the colon?",
+      "opts": [
+        "It makes a pause that sets up the reveal",
+        "It shows the speaker trailing off in doubt",
+        "It speeds the reader past the word nothing",
+        "It joins two items in a list of objects"
+      ],
+      "why": "The colon makes the reader wait for a moment, so the word nothing lands as a surprise. Trailing off in doubt is the effect of an ellipsis, not a colon.",
+      "clue": "What does a short wait do to the word that comes after it?"
+    }
+  },
+  "eng-mise-en-scene": {
+    "title": "Mise en scene",
+    "card": [
+      "Mise en scene (say it \"meez on sen\") means everything placed in the frame of a shot. It is French for \"put on stage\". Filmmakers choose each item to build meaning.",
+      "Setting is where the shot takes place. Costume is what characters wear. Props are the objects in the scene. Each one tells viewers something about a character or a mood.",
+      "Lighting shapes mood. Soft, warm light can feel safe, while harsh light or deep shadow can feel tense or threatening.",
+      "Where actors stand also carries meaning. A character placed alone at the edge of the frame, far from a group, can seem excluded."
+    ],
+    "remember": "Mise en scene is everything placed in the frame, and each choice helps build meaning.",
+    "a": {
+      "q": "Which choice is part of a shot's mise en scene?",
+      "opts": [
+        "A lamp left on a bare table in a dim room",
+        "The order in which two shots are joined",
+        "A narrator reading a story over the images",
+        "The length of time before a cut to a new shot"
+      ],
+      "why": "A lamp, a table and a dim room are all placed in the frame, so they are mise en scene. Joining shots in order and cutting after a set time are choices about how shots are put together, not about what is inside one frame.",
+      "clue": "Ask what is inside the frame of a single shot."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a school drama, Tara sits alone at one end of a long canteen table. The other students crowd the far end, laughing. What does this placement most likely suggest?",
+      "opts": [
+        "Tara is excluded from the group",
+        "Tara is the leader of the group",
+        "Tara is happy to be on her own",
+        "Tara has just arrived at the school"
+      ],
+      "why": "Where actors stand carries meaning. Tara placed far from a close, laughing group suggests she is left out. Calling her the leader is tempting because she is set apart, but leaders are usually placed with or in front of a group, not away from it.",
+      "clue": "Think about the distance between Tara and the crowd."
+    }
+  },
+  "eng-editing-choices-film": {
+    "title": "Editing choices in film",
+    "card": [
+      [
+        "Shot order",
+        "Editors choose which shots come first and which follow. Putting a shot of a worried face before a shot of a stranger makes viewers read the stranger as a threat."
+      ],
+      [
+        "Shot length",
+        "A shot held for a long time, called a long take, gives viewers time to look and feel. A run of very short shots speeds the pace and can build tension or panic."
+      ],
+      [
+        "Montage",
+        "A montage joins many short shots to show time passing or to link ideas. A training montage can show a character improving over weeks in a few seconds."
+      ],
+      [
+        "Slow motion",
+        "Slow motion stretches a moment so viewers focus on it. It can make an action look graceful, painful or important."
+      ]
+    ],
+    "remember": "Editors shape meaning by choosing the order, length and speed of shots.",
+    "a": {
+      "q": "A film shows a girl smiling, then a shot of a puppy, then a shot of her smiling again. What does the order of shots suggest?",
+      "opts": [
+        "The puppy is the reason she is happy",
+        "The girl is afraid of the puppy",
+        "The puppy is unrelated to the girl",
+        "Time is passing quickly in the scene"
+      ],
+      "why": "Placing the puppy between two smiles leads viewers to link the two, so the puppy seems to cause her joy. It is not a montage of time passing, because only one moment is shown.",
+      "clue": "Viewers join shots that sit side by side."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a chase scene, a director cuts between shots that each last under a second. What is the most likely effect on viewers?",
+      "opts": [
+        "It makes the scene feel fast and tense",
+        "It makes the scene feel calm and peaceful",
+        "It lets viewers study each setting closely",
+        "It shows that many weeks have passed"
+      ],
+      "why": "Very short shots speed the pace, which can build tension or panic. A calm feel and time to study a setting come from shots held for a long time, called long takes, and showing weeks passing is the job of a montage.",
+      "clue": "Think about what quick, short shots do to the pace."
+    }
+  },
+  "eng-documentary-techniques": {
+    "title": "Documentary techniques",
+    "card": [
+      [
+        "Interviews",
+        "An interview lets a person speak about their own experience. Filmmakers choose the questions and which parts of the answers stay in the final film."
+      ],
+      [
+        "Archival footage",
+        "Archival footage is older film or photos used to show the past. It can make a claim feel real, but the filmmaker still chooses which clips to use."
+      ],
+      [
+        "Voice-over",
+        "A voice-over is a narrator heard over the images. It can explain events and guide viewers towards a view of the subject."
+      ],
+      [
+        "Who speaks",
+        "Choosing who is heard shapes the representation. If only one group speaks, viewers may see the subject from that side alone."
+      ]
+    ],
+    "remember": "A documentary is built from choices, so it shows its subject from a chosen point of view.",
+    "a": {
+      "q": "A documentary about a town's new dam includes interviews only with the company that built it. What is the likely effect?",
+      "opts": [
+        "Viewers may see the dam mainly from the builders' side",
+        "Viewers may see the dam fairly from every side",
+        "Viewers may see the dam mainly from the locals' side",
+        "Viewers may see the dam as unimportant to the town"
+      ],
+      "why": "The choice of who speaks shapes the representation, so hearing only the builders leads viewers towards their view. It does not give a balanced picture, and the locals' side is missing because they are never heard.",
+      "clue": "Think about whose voices are left out."
+    },
+    "b": {
+      "d": 2,
+      "q": "Over old black-and-white clips of a flooded street, a calm narrator explains that the town was never prepared. Which technique guides viewers most directly towards this view?",
+      "opts": ["The voice-over", "The archival footage", "The interview", "The choice of who speaks"],
+      "why": "The narrator states the view in words over the images, which is a voice-over. The old clips show the past, but the clips alone do not say the town was unprepared.",
+      "clue": "Ask which part of the scene actually states the claim."
+    }
+  },
+  "eng-building-interpretation": {
+    "title": "Building an interpretation",
+    "card": [
+      "An interpretation is a reasoned view of what a text means. It goes beyond what happens and says what the text suggests about people, ideas or the world.",
+      "It is built from a pattern of evidence. A pattern is something that repeats or links across the whole text, such as a recurring image, a character's repeated choices or a shift in tone.",
+      "One quote or one scene is not enough, because it may be an exception. Evidence from the beginning, middle and end shows the view holds across the text.",
+      "A strong interpretation is a claim that can be argued, and it explains how the evidence supports the claim."
+    ],
+    "remember": "An interpretation is a reasoned claim about meaning, backed by patterns of evidence from the whole text.",
+    "a": {
+      "q": "Which of these is an interpretation of an invented novel about a lighthouse keeper?",
+      "opts": [
+        "The novel shows that isolation helps people face themselves",
+        "The novel shows the keeper living alone on a rocky island",
+        "The novel shows a storm waking the keeper in chapter one",
+        "The novel is told in twelve chapters across one winter"
+      ],
+      "why": "The option about isolation helping people face themselves is a claim about what the novel means, and a reader could argue for or against it using evidence. The storm option is tempting because a storm sounds like it might carry meaning, but the option only reports an event that anyone can check in the book. It says nothing about what the novel suggests.",
+      "clue": "Which option could two readers disagree about?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya says an invented novel shows that loyalty can be a trap. Which evidence would best support her view?",
+      "opts": [
+        "Loyalty harms a character early, midway and near the end",
+        "Loyalty rewards a character early, midway and near the end",
+        "Loyalty harms one character badly in the final chapter",
+        "Loyalty harms a character twice, both in chapter two"
+      ],
+      "why": "Her claim is about the whole book, so it needs evidence that both fits the claim and repeats across the text. One dramatic scene in the final chapter is tempting, but a single scene may be an exception. Two scenes in chapter two are still only one part of the book, and a pattern of loyalty being rewarded would work against her claim.",
+      "clue": "The evidence must fit her claim and hold across the whole book."
+    }
+  },
+  "eng-other-readings-text": {
+    "title": "Other readings of a text",
+    "card": [
+      "Different readers can interpret the same text in different ways. Each reader brings their own focus, experiences and questions.",
+      "Readers often choose a focus. A reading focused on power looks at who controls others. One focused on gender looks at how men and women are shown. One focused on history looks at the time the text came from.",
+      "A reading is worth considering when the text supports it with evidence. Two readings can both be sound even if they differ.",
+      "Weighing other readings sharpens your own. You may find stronger evidence, answer a challenge or change your view."
+    ],
+    "remember": "Sound readings can differ. Weighing other readings tests and sharpens your own.",
+    "a": {
+      "q": "Two students read the same invented story about a headmaster and a new teacher. One writes about who holds authority, the other about the era's attitudes to women. What explains the difference?",
+      "opts": [
+        "Each student chose a different focus for their reading",
+        "One student has misread what happens in the story",
+        "The text can support only one of these two focuses",
+        "The story means whatever each reader wants it to"
+      ],
+      "why": "Readers can choose different focuses, such as power or gender, and each can use evidence from the text. The misreading option is tempting, but a different focus is not an error, and both readings still rest on the story itself.",
+      "clue": "Think about what each reader chose to look at."
+    },
+    "b": {
+      "d": 3,
+      "q": "Leo reads an invented play as a story about family loyalty. A classmate argues it is about class power. What is the most useful thing for Leo to do?",
+      "opts": [
+        "Weigh the class power reading against evidence in the play",
+        "Ignore the class power reading, since his own came first",
+        "Switch to the class power reading, since it is the newer one",
+        "Ask the teacher which of the two readings is the correct one"
+      ],
+      "why": "Weighing another reading against the play can reveal stronger evidence or gaps in his view, which sharpens his own reading. Switching is tempting, but a reading should change because of evidence, not just because another reading exists.",
+      "clue": "Which choice uses the other reading to improve his own?"
+    }
+  },
+  "eng-ethical-dilemmas-literature": {
+    "title": "Ethical dilemmas in literature",
+    "card": [
+      "An ethical dilemma is a situation where a character must choose between options and each choice has a cost. No choice is clearly right.",
+      "Dilemmas usually set two values against each other, such as loyalty and honesty, or duty and mercy. Choosing one value means giving up part of the other.",
+      "Writers use dilemmas to invite readers to weigh the values for themselves. The reader asks what the character gains and loses, and what they would do.",
+      "A strong reading explains the competing values and points to evidence from the text. It does not just declare the character good or bad."
+    ],
+    "remember": "A dilemma sets values against each other, and readers weigh them using evidence.",
+    "a": {
+      "q": "In a novel, Priya sees her best friend cheat in an exam. Telling the teacher is honest but betrays her friend. Why is this an ethical dilemma?",
+      "opts": [
+        "Each choice upholds one value and costs another",
+        "Priya is clearly wrong whichever way she acts",
+        "The friend is a villain and Priya is a hero",
+        "Priya has only one possible choice to make"
+      ],
+      "why": "Honesty and loyalty pull in opposite directions, so every option has a cost and none is clearly right. It is not a case of a simple wrong choice, because the text sets up real values on both sides.",
+      "clue": "Look for the two values that pull against each other."
+    },
+    "b": {
+      "d": 3,
+      "q": "A short story shows Tom, a ferry captain, who can save a few passengers quickly or search longer for many, at the risk of losing all. What is the best way for a reader to respond?",
+      "opts": [
+        "Weigh the values at stake and use evidence from the text",
+        "Decide which choice is right and ignore the other",
+        "Treat Tom as a villain because someone is harmed",
+        "Assume the writer wants readers to feel no doubt"
+      ],
+      "why": "A dilemma invites readers to weigh competing values, such as mercy and duty, using evidence from the text. Declaring Tom good or bad skips the weighing, which is the tempting mistake because harm occurs either way.",
+      "clue": "No easy right answer means the reasoning matters most."
+    }
+  },
+  "eng-voice-as-literary-device-vic": {
+    "title": "Voice as a literary device",
+    "card": [
+      "Voice is the personality that comes through in the way a speaker or narrator tells something. A writer builds it through choices, so two speakers can describe the same event and sound very different.",
+      [
+        "Diction",
+        "the words chosen. \"Grabbed\" and \"selected\" can describe the same act, but they sound like different people."
+      ],
+      [
+        "Rhythm",
+        "the pattern of sentence length and pace. Short, broken sentences can sound nervous or angry. Long, flowing ones can sound calm or dreamy."
+      ],
+      [
+        "Attitude and point of view",
+        "attitude is the speaker's feeling about the subject, such as scorn or affection. Point of view is who tells the story, such as \"I\" or an outside narrator. Together, these choices can make readers trust a speaker, pity them or doubt them."
+      ]
+    ],
+    "remember": "A voice is built from word choice, rhythm, attitude and point of view, and it can guide how far readers trust the speaker.",
+    "a": {
+      "q": "Which choice by a writer is a choice of diction, one of the ways of building a voice?",
+      "opts": [
+        "Calling a house a \"shack\" instead of a \"home\"",
+        "Using mostly short sentences in a tense scene",
+        "Telling the story as \"I\" instead of as an outside narrator",
+        "Having the speaker show scorn for the subject"
+      ],
+      "why": "Diction means the words chosen, and \"shack\" instead of \"home\" is a word choice. Short sentences are rhythm, \"I\" is point of view, and scorn is attitude, so the other options are other tools of voice.",
+      "clue": "Diction is about the individual words picked."
+    },
+    "b": {
+      "d": 3,
+      "q": "A narrator says: \"I wasn't late. Everyone else was early. Ask anyone.\" Then the narrator adds, \"Actually, don't.\" What is the likely effect of this voice on a reader?",
+      "opts": [
+        "Readers may doubt the narrator's honesty",
+        "Readers may pity a narrator who is very calm",
+        "Readers may trust the narrator's balanced view",
+        "Readers may see an outside narrator describing events"
+      ],
+      "why": "The defensive tone and the quick change of mind make the narrator sound as if they are hiding something, so readers may doubt them. The narrator says \"I\", so the outside-narrator option is wrong, and the voice is not calm or balanced.",
+      "clue": "Notice the narrator's attitude and how the short sentences sound."
+    }
+  },
+  "eng-comparing-voice-across-texts": {
+    "title": "Comparing voice across texts",
+    "card": [
+      "Two texts can describe the same subject in very different voices. Setting them side by side shows how each writer's choices shape what a reader feels.",
+      "To compare voices, keep the subject the same and look at what differs. Ask which words, which sentence shapes and which attitude each writer chose.",
+      "Take two speakers describing the same empty house. One says, \"The house sat hollow, and I missed every room.\" The other says, \"The house was vacant. Sold by Friday.\"",
+      "The first voice uses a warm, longing word (\"missed\") and a flowing sentence, so a reader feels sadness. The second uses short, flat sentences and a businesslike tone, so a reader feels distance."
+    ],
+    "remember": "Same subject, different choices of word, sentence and attitude, different feelings in the reader.",
+    "a": {
+      "q": "Two poems describe the same storm. One uses long, rolling sentences and calls it a \"magnificent roar\". The other uses short, clipped sentences and calls it a \"nuisance\". What does comparing them show?",
+      "opts": [
+        "Different language choices create different feelings",
+        "Both poems give the reader the same feelings",
+        "Longer sentences make a poem better written",
+        "The storm itself changes between the two poems"
+      ],
+      "why": "The subject is the same, but the word choices and sentence lengths differ, so one voice feels awed and the other feels annoyed. The option about better writing is wrong because comparing voice is about effect, not quality.",
+      "clue": "Keep the subject fixed and ask what changed."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two narrators describe the first day at a new school. Narrator A says, \"Heart thudding, I froze. Could everyone see me shake?\" Narrator B says, \"First day. Bag down. Seat found. Fine.\" How do the voices differ in effect?",
+      "opts": [
+        "A sounds anxious and open, B sounds guarded",
+        "A sounds confident and calm, B sounds nervous",
+        "A and B sound equally anxious, B uses fewer words",
+        "A sounds cold and distant, B sounds warm"
+      ],
+      "why": "A names signs of fear, \"thudding\" and \"shake\", and asks a worried question, so the reader hears nerves shared openly. B uses clipped fragments and the flat word \"Fine\", which sounds controlled and may hold feeling back. The option saying both are equally anxious ignores how B's short, flat sentences change the attitude.",
+      "clue": "Look at what each narrator admits to feeling, and how."
+    }
+  },
+  "eng-parody-pastiche-homage": {
+    "title": "Parody, pastiche and homage",
+    "card": [
+      [
+        "Parody",
+        "copies the style of a text or genre in order to mock it. The humour comes from exaggerating features until they look silly."
+      ],
+      [
+        "Pastiche",
+        "imitates the style of a text, writer or genre in a playful way. It copies the style for fun and does not aim to mock it."
+      ],
+      [
+        "Homage",
+        "borrows from a text, such as a scene, a character or a line, to honour it. It shows respect for the original and the writer."
+      ],
+      "To tell them apart, ask what the writer does with the original. Mocking it points to parody, playing with its style points to pastiche, and honouring it points to homage."
+    ],
+    "remember": "Parody mocks, pastiche plays, homage honours.",
+    "a": {
+      "q": "A student writes a story in the grand, gloomy style of an old gothic novel. She loves the style and wants to have fun with it, not mock it. What is it?",
+      "opts": ["A pastiche", "A parody", "An homage", "A review"],
+      "why": "She imitates a style playfully, with no aim to mock it, so it is a pastiche. It is not a parody, because a parody copies a style in order to mock it.",
+      "clue": "Is the writer mocking the style or just playing in it?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A film ends with a quiet scene that deliberately recreates a famous scene from an older film. The director says it is a tribute to the filmmaker who inspired her. What is this?",
+      "opts": ["An homage", "A parody", "A pastiche", "A sequel"],
+      "why": "The director borrows a scene from an older film to honour it and its maker, so it is an homage. A pastiche imitates a style for fun, but here the aim is respect for one particular work.",
+      "clue": "Think about why the director borrows the scene."
+    }
+  },
+  "eng-endings-shape-interpretation": {
+    "title": "How endings shape interpretation",
+    "card": [
+      "An ending is the last part of a text. It gives readers a final view that can change how they understand everything that came before.",
+      [
+        "Resolved",
+        "the main problems are settled. Readers feel a sense of closure, and the events seem to have led to a clear outcome."
+      ],
+      [
+        "Open",
+        "the main question is left unanswered. Readers must decide for themselves what happens or what it means, so more than one reading is possible."
+      ],
+      [
+        "Twist",
+        "the ending reveals something unexpected. Readers look back and see earlier details in a new way, such as a narrator who was not telling the truth."
+      ]
+    ],
+    "remember": "The ending is the last thing a reader meets, so it can reshape how they read the whole text.",
+    "a": {
+      "q": "A story ends on the day Ravi opens a letter. We are never told what it says or what he does next. What type of ending is this?",
+      "opts": ["An open ending", "A resolved ending", "A twist ending", "A parody ending"],
+      "why": "The story stops with the main question unanswered, so readers must decide what the letter means. A twist would reveal something surprising that changes earlier events, but nothing is revealed here.",
+      "clue": "Does the story answer its main question?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In a story, a calm narrator describes a quiet week at a lighthouse. In the last paragraph we learn she has been alone there for years, and that the visitors she mentioned were never real. How does this ending affect the way readers see the earlier parts?",
+      "opts": [
+        "They reread the visits as signs of her loneliness",
+        "They see the earlier parts as unchanged by the ending",
+        "They treat the visitors as real and the ending as a mistake",
+        "They see the story as unfinished and open to any reading"
+      ],
+      "why": "This is a twist ending. The reveal makes readers look back and see the visits in a new way, as a sign of her loneliness. The ending is not open, because the story does answer what was real and what was not.",
+      "clue": "What do readers do with earlier details after a surprising reveal?"
+    }
+  },
+  "eng-keeping-voice-consistent": {
+    "title": "Keeping a voice consistent",
+    "card": [
+      "A voice is the sound of a speaker on the page. It comes from the speaker's viewpoint, vocabulary and attitude, and a sustained voice keeps all three steady from start to finish.",
+      [
+        "Viewpoint",
+        "who is speaking and how they see events, such as a first-person narrator who only knows what she has seen herself."
+      ],
+      ["Vocabulary", "the kind of words the speaker chooses, such as slang, everyday words or formal terms."],
+      ["Attitude", "the speaker's feeling about what they describe, such as bored, proud, nervous or sarcastic."]
+    ],
+    "remember": "If viewpoint, vocabulary or attitude slips, the speaker stops sounding like one real person.",
+    "a": {
+      "q": "What does it mean to sustain a voice in a piece of writing?",
+      "opts": [
+        "Keep viewpoint, vocabulary and attitude steady throughout",
+        "Use the most advanced vocabulary from start to finish",
+        "Change the speaker's attitude often to hold interest",
+        "Tell every event in the exact order it happened"
+      ],
+      "why": "A sustained voice keeps viewpoint, vocabulary and attitude steady, so the speaker feels like one real person from start to finish. Advanced words are not the aim: a casual speaker who suddenly uses them would sound like someone else.",
+      "clue": "Think of three things that should not change."
+    },
+    "b": {
+      "d": 3,
+      "q": "Jaz, a relaxed teenage skater, tells her story in first person using slang and casual words. Partway through she says, \"I subsequently proceeded to the skate park with my companions.\" What is the problem?",
+      "opts": [
+        "Her vocabulary turns formal, which does not suit her",
+        "Her viewpoint shifts from first person to third person",
+        "Her attitude shifts from relaxed to bitter and angry",
+        "Her vocabulary becomes even more casual than before"
+      ],
+      "why": "Words such as subsequently, proceeded and companions are stiff and formal, which does not match a slangy teenager, so her vocabulary slips and the voice breaks. She still says I, so her viewpoint has not shifted, and the sentence shows no anger.",
+      "clue": "Which of the three parts of her voice does this sentence change?"
+    }
+  },
+  "eng-transforming-text-into-new": {
+    "title": "Transforming a text into a new form",
+    "card": [
+      "To transform a text is to retell it in a new form, such as a letter, diary entry, poem or speech. You can also change who tells it.",
+      [
+        "Change of form",
+        "the features of the new form shape the retelling. A diary entry is private and personal, while a news report is formal and factual."
+      ],
+      [
+        "Change of viewpoint",
+        "telling the story through another character shows events the original left out. That character's feelings and opinions replace the first narrator's."
+      ],
+      "A transformation keeps the main events of the original but changes what readers notice and feel. The writer chooses which details to keep, drop or add."
+    ],
+    "remember": "A transformation keeps the story's events but changes what readers notice and feel.",
+    "a": {
+      "q": "A student retells a fairy tale as a letter written by the wolf to a friend. What is the main effect of this change?",
+      "opts": [
+        "Readers see events through the wolf's feelings and opinions",
+        "Readers get a neutral, factual account of what happened",
+        "Readers learn nothing new, because the events are the same",
+        "Readers see the same viewpoint as the original narrator"
+      ],
+      "why": "Moving to the wolf's viewpoint replaces the original narrator's opinions with the wolf's, so readers notice different things. The events can stay the same while the feelings change, so the effect is not nothing.",
+      "clue": "Whose feelings and opinions now shape the story?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya retells a story of a shipwreck, first told by an officer in a formal report, as a diary entry by a young deckhand. Which change would you expect in her version?",
+      "opts": [
+        "More personal fear and detail the officer left out",
+        "The same formal tone and the same viewpoint",
+        "A list of facts with no feelings shown",
+        "New main events that contradict the original story"
+      ],
+      "why": "A diary is private and personal, and the deckhand sees the wreck differently from the officer, so personal feelings and missing details appear. Changing the main events would be a new story, not a transformation.",
+      "clue": "Think about what a private diary and a different narrator each add."
+    }
+  },
+  "eng-dramatic-monologue": {
+    "title": "The dramatic monologue",
+    "card": [
+      "A dramatic monologue is one character speaking aloud to a listener who stays silent. The listener is in the scene, but the reader only hears the speaker.",
+      "The speaker is not the writer. The writer invents a character and lets that character talk, so the voice belongs to someone else.",
+      "The speaker often reveals more than they mean to. Boasts, excuses and slips can show their pride, fear or guilt, even when they are trying to look good.",
+      "Readers work out the truth by noticing the gap between what the speaker says and what the words give away. Because the listener never interrupts, the speaker keeps talking and gives more away."
+    ],
+    "remember": "One character talks, the listener is silent, and the words show more than the speaker intends.",
+    "a": {
+      "q": "Which feature makes a text a dramatic monologue?",
+      "opts": [
+        "One character speaks to a listener who does not reply",
+        "Two characters trade short lines of spoken dialogue",
+        "A narrator describes a character's thoughts in third person",
+        "The writer speaks directly to readers about their own life"
+      ],
+      "why": "A dramatic monologue is built on one character speaking to a silent listener. Dialogue is the tempting wrong answer, because it also has speaking characters, but it needs a reply from the other person.",
+      "clue": "Think about who speaks and who stays quiet."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dev tells a silent teacher that he never copied, that he only glanced at Sam's page, and that he was very tired. What does this most likely reveal about Dev?",
+      "opts": [
+        "He feels guilty and is making excuses",
+        "He is calm and has nothing to hide",
+        "He wants the teacher to speak next",
+        "He is giving the writer's own opinion"
+      ],
+      "why": "Dev denies copying, then adds a glance and tiredness as excuses. This shows guilt he did not mean to show. Calm is tempting because he firmly says he never copied, but someone with nothing to hide would not need to pile up excuses.",
+      "clue": "Look at what he adds after he denies it."
+    }
+  },
+  "eng-supporting-view-discussion": {
+    "title": "Supporting a view in discussion",
+    "card": [
+      "A view is your judgement about a text, such as what it suggests or how well it works. State it clearly so others know your position.",
+      "Back the view with an example from the text. Name the moment, character or technique, and say how it supports your view.",
+      "Respond to what others have said. You can agree and build on a point, or disagree politely and give your reason.",
+      "A strong contribution joins all three: a view, an example and a link to another speaker. A view with no example is unsupported, and a speech that ignores the others is not a discussion."
+    ],
+    "remember": "Say your view, prove it with an example, and answer the others.",
+    "a": {
+      "q": "In a class discussion of a novel, Sam says the narrator seems honest. Which reply is the strongest contribution?",
+      "opts": [
+        "Sam, I doubt her: she lies to her sister in chapter two",
+        "I think the ending is weak, as chapter ten rushes the twist",
+        "Sam, I doubt she is honest, but I cannot point to a moment",
+        "Sam, I agree with you, as most people in the class do"
+      ],
+      "why": "The reply about the narrator lying to her sister answers Sam's point, states a view and backs it with an example from the text. The reply about the rushed ending has a view and an example, but it ignores what Sam said, so it is not a response.",
+      "clue": "Look for a view, an example and a reply to Sam's point."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a discussion of a poem, Jo says the poem shows loneliness. Mina wants to disagree and still make a strong contribution. What should she say?",
+      "opts": [
+        "Jo, I see hope: the poem ends on a sunrise, a new start",
+        "Jo, I see hope, and the poem has four stanzas of six lines",
+        "Jo, I see hope, because that is just how it felt to me",
+        "Jo, you are wrong, and the rest of the class agrees with me"
+      ],
+      "why": "The sunrise reply responds to Jo, states a view and gives an example that shows why the poem suggests hope. The reply about four stanzas names a detail, but the detail does not support the view, so it is not real evidence.",
+      "clue": "An example only counts if it shows why the view is right."
+    }
+  },
+  "eng-choosing-level-formality": {
+    "title": "Choosing the level of formality",
+    "card": [
+      [
+        "Formal",
+        "Formal language uses full sentences, precise words and no slang. It suits speeches, reports and official occasions."
+      ],
+      [
+        "Informal",
+        "Informal language is relaxed and close to everyday talk. It may use slang, short forms like \"we're\" and a personal tone."
+      ],
+      "A speaker can mix the two on purpose. For example, a principal might tell a casual story inside a formal speech.",
+      "The informal moment can make the audience feel the speaker is one of them. The formal parts keep the speech serious and credible."
+    ],
+    "remember": "Mixing formal and informal language on purpose can build a connection while keeping a speech credible.",
+    "a": {
+      "q": "Why might a speaker add a casual story to a formal speech?",
+      "opts": [
+        "To connect with the audience while staying credible",
+        "To show the speaker does not care about the topic",
+        "To make the speech sound like a written report",
+        "To replace the formal points with everyday talk"
+      ],
+      "why": "A casual story makes the speaker feel closer to the audience, and the formal parts around it keep the speech serious. It is not a replacement for the formal points, because the card says the two are mixed.",
+      "clue": "Think about what the audience feels when a speaker sounds like one of them."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ayesha, a school captain, opens a formal assembly speech on school values with a funny story about losing her bus pass. She then returns to precise, formal language. What is the best explanation of her choice?",
+      "opts": [
+        "She used an informal moment to relate to students",
+        "She forgot the speech needed to be formal throughout",
+        "She wanted the whole speech to sound like casual chat",
+        "She used informal language because the topic is unimportant"
+      ],
+      "why": "Ayesha's story is a deliberate informal moment that helps students relate to her, and the return to formal language keeps the serious message credible. It is not a mistake, because she moves back to formal language on purpose.",
+      "clue": "She goes back to formal language after the story."
+    }
+  },
+  "eng-evaluating-representations-concepts": {
+    "title": "Evaluating representations of concepts",
+    "card": [
+      "A representation is the way a text presents a concept, such as success or justice. A text shows one version of the concept. It does not show the whole of it.",
+      [
+        "Fairly",
+        "Ask whether the text treats the concept even-handedly, or pushes one side by leaving out other views or using loaded words."
+      ],
+      [
+        "Fully",
+        "Ask how much of the concept the text covers. A text that defines success only as money leaves out other ideas of success, such as health or friendship."
+      ],
+      [
+        "Context",
+        "A text is shaped by when, where and for whom it was made. Its context can explain why it represents a concept the way it does."
+      ]
+    ],
+    "remember": "Judge a representation by how fair and how full it is, and link it to its context.",
+    "a": {
+      "q": "A school magazine article says a person is successful only if they earn a high salary. Which judgement about its representation of success is best?",
+      "opts": [
+        "It is narrow, as it leaves out other kinds of success",
+        "It is full, as money is the only real kind of success",
+        "It is fair, as it gives every view of success equal space",
+        "It is full, as it uses one clear measure of success"
+      ],
+      "why": "The article covers only one idea of success, so it is not a full representation. The tempting option says it is full because the measure is clear, but a single clear measure still leaves out other ideas such as health or friendship.",
+      "clue": "Ask how much of the concept the article covers."
+    },
+    "b": {
+      "d": 3,
+      "q": "A 1950s poster shows justice as a stern judge who always punishes wrongdoers and never shows mercy. Which response best evaluates the poster?",
+      "opts": [
+        "A narrow view of justice that its era may help explain",
+        "A full view of justice that its era may help explain",
+        "A narrow view of justice that its era cannot help explain",
+        "A full view of justice that every era would agree with"
+      ],
+      "why": "The poster presents justice as punishment alone and leaves out mercy, so its view is narrow. The time it was made in can help explain why it shows justice this way. The option calling it full is tempting because it mentions the era, but a view without mercy does not cover the whole concept.",
+      "clue": "Judge how much of justice it covers, then think about when it was made."
+    }
+  },
+  "eng-playing-with-spelling-effect": {
+    "title": "Playing with spelling for effect",
+    "card": [
+      "Writers sometimes bend standard spelling on purpose. A brand might write \"Kwik Wash\" instead of \"Quick Wash\". The change is a choice, not a mistake.",
+      "The bent spelling can catch the eye, because it looks odd on a sign or page. It can also copy a sound, such as \"Sooo good\" to stretch a word out, or \"gonna\" to sound casual.",
+      "The effect works only if the reader knows the standard form. The reader sees the gap between the two spellings, and that gap is what carries the meaning or tone.",
+      "A spelling can also suit an audience. A casual, bent spelling can seem friendly and playful, so it fits some products and poems better than a formal report."
+    ],
+    "remember": "Bent spelling is a deliberate choice, and it works because readers know the standard form.",
+    "a": {
+      "q": "A snack brand writes its slogan as \"Fresh n crunchy\". Why does this spelling work as a technique?",
+      "opts": [
+        "Readers know \"and\", so they notice the casual change",
+        "Readers have never seen the word \"and\" written down",
+        "It follows the standard spelling rules for slogans",
+        "It shows the writer could not spell the word"
+      ],
+      "why": "The spelling works because readers know the standard form \"and\", so they see the change and read it as casual and playful. It is not a mistake, and it does not follow standard rules.",
+      "clue": "What must the reader already know for the change to be noticed?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A poet writes \"The wind went whooooosh through the gum trees\". What is the main effect of the stretched spelling?",
+      "opts": [
+        "It copies the long sound of the wind for the reader",
+        "It makes the line more formal and serious",
+        "It shows the poet does not know the standard spelling",
+        "It gives the reader a fact about the type of tree"
+      ],
+      "why": "The extra letters make the reader hold the sound, so the spelling copies the wind. It is a deliberate choice, and it works because readers know the standard word \"whoosh\". It does not make the line formal.",
+      "clue": "Think about how the extra letters change the way you say the word."
+    }
+  },
+  "eng-implicit-values": {
+    "title": "Implicit values",
+    "card": [
+      "A value is something a text treats as important or right. An explicit value is stated outright. An implicit value is carried without being stated, and the reader works it out.",
+      [
+        "Normal",
+        "what the text treats as ordinary or expected. If every family in an advertisement lives in a large house, it quietly suggests that this is how people live."
+      ],
+      [
+        "Centred",
+        "who gets the focus, the voice and the sympathy. Whose view the reader sees through shapes whose view seems to matter."
+      ],
+      [
+        "Left out",
+        "who or what is missing. Silence can suggest that a group or view is unimportant, though it can also have other causes."
+      ]
+    ],
+    "remember": "Ask what a text treats as normal, who it centres and what it leaves out.",
+    "a": {
+      "q": "A news story about a flood quotes only the mayor and a business owner. Residents who lost homes are not quoted. Which implicit value does this most suggest?",
+      "opts": [
+        "Officials and owners matter more than residents",
+        "Floods are less serious than people think",
+        "Residents should speak only in private",
+        "The reporter dislikes the mayor"
+      ],
+      "why": "The story centres two voices and leaves out the residents, which suggests their views count for less. The text never states this, so it is implicit. Nothing in the story suggests the reporter's feelings about the mayor.",
+      "clue": "Look at whose voices are included and whose are missing."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a novel, every friend of the main family owns a holiday house and sends their children to private schools. The narrator presents their lives as ordinary and never mentions money. What implicit value does this suggest?",
+      "opts": [
+        "A wealthy lifestyle is how most people live",
+        "Private schools give students a better education",
+        "The narrator openly criticises the rich family",
+        "Readers should save up to buy a holiday house"
+      ],
+      "why": "Every family has the same wealth and the narrator never comments on it, so the text quietly suggests this is how people live. The novel says nothing about the quality of private schools, and an open criticism would be explicit, not implicit. Here there is no criticism at all.",
+      "clue": "What does the narrator's silence about money suggest?"
+    }
+  },
+  "eng-irony-satire": {
+    "title": "Irony and satire",
+    "card": [
+      [
+        "Irony",
+        "a gap between what is said or expected and what is meant or what actually happens. A writer who calls a leaking, rusty bucket a \"fine ship\" is using irony."
+      ],
+      [
+        "Kinds of irony",
+        "Verbal irony is when words mean something different from what they say. Situational irony is when events turn out very differently from what we expect."
+      ],
+      [
+        "Satire",
+        "writing that uses irony and humour to criticise people or society. It may exaggerate a flaw so that readers see it clearly."
+      ],
+      [
+        "Effect",
+        "Irony makes readers notice the gap and work out the real meaning. In satire, this can make a reader laugh and also question the thing being criticised."
+      ]
+    ],
+    "remember": "Irony is a gap between what seems true and what is meant. Satire uses that gap, with humour, to criticise.",
+    "a": {
+      "q": "Which statement best describes satire?",
+      "opts": [
+        "It uses irony and humour to criticise people or society",
+        "It uses humour only to make readers laugh",
+        "It states a writer's opinion in plain, serious words",
+        "It describes events that turn out as expected"
+      ],
+      "why": "Satire uses irony and humour for a purpose: to criticise. Humour alone is not enough, because a text that only entertains is not satire.",
+      "clue": "Satire has a target, not just a joke."
+    },
+    "b": {
+      "d": 3,
+      "q": "A town council spends a fortune on a new sign reading \"Our town saves money\". Then it cuts the library's opening hours. A columnist praises the council for its \"brilliant thrift\" and for \"bravely protecting the sign budget\". What is the columnist doing?",
+      "opts": [
+        "Using irony and humour to criticise the council",
+        "Using plain, serious words to praise the council",
+        "Using situational irony to describe an accident",
+        "Using humour only to entertain readers"
+      ],
+      "why": "The columnist says \"brilliant\" and \"bravely\" but means the opposite, which is verbal irony. Combined with humour, it is aimed at criticising the council, so it is satire. Praise on the surface does not mean the columnist is really praising.",
+      "clue": "Do the words match what the writer really thinks?"
+    }
+  },
+  "eng-inferring-themes": {
+    "title": "Inferring themes",
+    "card": [
+      "A theme is an idea about life that a text explores. A word such as loyalty, power or belonging names a topic. The theme is what the text suggests about that topic.",
+      "A text rarely states its theme. The reader infers it by joining clues into a pattern.",
+      [
+        "Clues",
+        "Look at what characters want and how they change, the conflicts they face, and symbols that return, such as a locked gate or a fading photo."
+      ],
+      "Write a theme as a general statement about people or life, not about one character's events, such as 'Loyalty can cost a person their freedom'. Then check that several parts of the text support it."
+    ],
+    "remember": "A theme is what a text suggests about a topic, inferred from patterns across the text.",
+    "a": {
+      "q": "Which of these is written as a theme?",
+      "opts": [
+        "Ambition can lead people to betray those they love",
+        "Mara can only make friends once she joins a choir",
+        "The novel's main topics are ambition and family",
+        "The story feels tense because it is set in winter"
+      ],
+      "why": "This is a general statement about what ambition does to people, which a text could explore. The sentence about Mara tells one character's events, which is plot. Naming ambition and family gives topics, not an idea about them.",
+      "clue": "A theme makes a general point about people, not one character."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a story, Tariq keeps failing to leave his village. Each time, a bridge he must cross is broken or flooded. At the end he stays and rebuilds it. Which theme do these patterns best support?",
+      "opts": [
+        "Belonging can matter more than escape",
+        "A broken bridge can ruin a journey",
+        "Floods are a danger to villages",
+        "Travelling always leads to disappointment"
+      ],
+      "why": "The repeated broken bridge and his choice to stay and rebuild it point to an idea about belonging to a place. The option about a broken bridge ruining a journey only restates an event. The option about travelling goes beyond the clues, which do not show that all travel fails.",
+      "clue": "Join the repeated bridge and his final choice into one idea."
+    }
+  },
+  "eng-refining-analytical-essay": {
+    "title": "Refining an analytical essay",
+    "card": [
+      "Refining is the check you do after a draft is written. You reread the essay against your thesis and fix what does not serve it.",
+      [
+        "Focus",
+        "Every paragraph must help prove the thesis. A paragraph that drifts to a new topic, or only retells the plot, should be cut or reworked."
+      ],
+      [
+        "Evidence",
+        "Each piece of evidence needs explaining. Check that you name the technique and say how it shapes the reader's understanding, rather than leaving a quotation to speak for itself."
+      ],
+      [
+        "Expression",
+        "Cut repeated ideas, filler and long-winded phrases so each sentence earns its place. The conclusion should show where the argument has arrived, not copy the introduction."
+      ]
+    ],
+    "remember": "Refine by testing each part against the thesis: focused, explained, concise, and a conclusion that adds something.",
+    "a": {
+      "q": "Zara is refining her essay. Which change would best improve a paragraph that only retells what happens in the story?",
+      "opts": [
+        "Rework it to explain how techniques support her thesis",
+        "Add a longer plot summary so readers follow the events",
+        "Move the paragraph to the end to act as a conclusion",
+        "Replace some words with longer, more formal vocabulary"
+      ],
+      "why": "Refining checks that each paragraph supports the thesis, so a retelling paragraph needs analysis linked to the argument. More summary or fancier words would not fix the lack of focus.",
+      "clue": "Ask what the paragraph does for the thesis."
+    },
+    "b": {
+      "d": 3,
+      "q": "Liam's conclusion repeats his introduction almost word for word. Which revision best fits the aim of refining?",
+      "opts": [
+        "Show what his analysis has revealed about the text's ideas",
+        "Add a new quotation to prove his first body paragraph",
+        "Make the conclusion longer by restating each paragraph",
+        "Delete the conclusion so the essay ends on analysis"
+      ],
+      "why": "A refined conclusion does more than repeat, so it should show where the argument has arrived. Restating each paragraph is still repetition, and adding a quotation belongs in a body paragraph.",
+      "clue": "The conclusion should move beyond what was already said."
+    }
+  },
+  "eng-language-identity-vic": {
+    "title": "Language and identity",
+    "card": [
+      "Our words, accent and how formal we sound can show our age, where we live and which groups we belong to. Sharing a group's words can help people feel they belong.",
+      [
+        "Slang",
+        "informal words used mostly among friends or people of a similar age, such as \"sick\" to mean great."
+      ],
+      [
+        "Local saying",
+        "a word or phrase used mainly in one place, such as \"potato cake\" in Victoria for the fried potato slice called a scallop in NSW."
+      ],
+      [
+        "Idiom",
+        "a phrase whose meaning is not the same as its separate words, such as \"under the weather\" for feeling unwell."
+      ]
+    ],
+    "remember": "Language works like a badge: the words we share mark the groups we belong to.",
+    "a": {
+      "q": "After landing a new trick, Jai says it was \"mad\", meaning it was excellent. What kind of language is this?",
+      "opts": [
+        "Slang, informal words used among friends",
+        "An idiom, a fixed phrase with a hidden meaning",
+        "A local saying, used mainly in one region",
+        "Formal language, suited to a school essay"
+      ],
+      "why": "Using \"mad\" to mean excellent gives an everyday word a new, informal meaning, like \"sick\" for great, so it is slang. It is not an idiom, because an idiom is a phrase whose meaning differs from its separate words, and \"mad\" is a single word.",
+      "clue": "Is this one word with a new meaning, or a whole phrase?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya moves from Geelong to a new school in Mildura. Within a few weeks she is saying the same phrases as her new classmates. What does this most likely show?",
+      "opts": [
+        "She is taking on shared words to fit in",
+        "Her word choices have no link to her identity",
+        "She can no longer speak in a formal way",
+        "She wants to sound more formal at school"
+      ],
+      "why": "Sharing a group's words can help people feel they belong, so Priya's new phrases help her fit in. Nothing in the story suggests she has lost her formal language or wants to sound more formal: she is copying her classmates' everyday phrases.",
+      "clue": "Why might someone start talking like a new group?"
+    }
+  },
+  "eng-evaluative-language-vic": {
+    "title": "Evaluative language",
+    "card": [
+      "Evaluative language is made up of words that judge something as good or bad, right or wrong, or worth or not worth our time. Brilliant, careless and unfair are examples.",
+      "These words show the writer's opinion. Compare \"The team lost the match\" with \"The team played a careless match\". The first reports a fact. The second judges it.",
+      "Some judging words are stronger than others. Decent is mild, good is stronger, and outstanding is very strong. A writer picks the strength to match how strongly they feel.",
+      "Evaluative words also shape how a reader feels. Calling a rule unfair makes a reader likely to side against it."
+    ],
+    "remember": "Evaluative words judge, and the strength of the word shows how strongly the writer feels.",
+    "a": {
+      "q": "Which sentence uses evaluative language?",
+      "opts": [
+        "The new library is a wonderful place to study",
+        "The new library opened on Monday morning",
+        "The new library has two floors and a café",
+        "The new library is on the corner of Park Street"
+      ],
+      "why": "Wonderful judges the library as good, so it shows the writer's opinion. The other sentences only give facts that can be checked, such as when it opened and where it is.",
+      "clue": "Look for the word that says the library is good or bad."
+    },
+    "b": {
+      "d": 3,
+      "q": "Zoe wrote a review of a school play. Which word would show the strongest positive opinion if she put it in the blank: \"The play was ___\"?",
+      "opts": ["Spectacular", "Pleasant", "Acceptable", "Tedious"],
+      "why": "Spectacular is very strong praise. Pleasant and acceptable also judge the play as good, but only mildly. Tedious is tempting because it is a strong judging word, but it judges the play as bad, not good.",
+      "clue": "First check whether each word praises or criticises, then compare how strong it is."
+    }
+  },
+  "eng-backing-up-opinion": {
+    "title": "Backing up an opinion",
+    "card": [
+      "An opinion is what a person thinks or feels about something. On its own, it is only a claim, and a reader has no reason to agree.",
+      ["Reason", "explains why the writer thinks this. It often follows the word because."],
+      ["Example", "a specific case that supports the opinion, such as a named place, event or person."],
+      ["Evidence", "a fact, a number or an expert's view that can be checked, such as a survey result."]
+    ],
+    "remember": "An opinion convinces more when it comes with reasons, examples and evidence.",
+    "a": {
+      "q": "Which sentence backs up the opinion that our school should start later?",
+      "opts": [
+        "Teens need more sleep, so a later start helps them focus",
+        "Starting later would be much better for everyone at school",
+        "Anyone who disagrees with a later start is plainly silly",
+        "I really feel strongly that school should start later"
+      ],
+      "why": "The right answer gives a reason: teens need more sleep, and that links to focus. 'Starting later would be much better for everyone' is tempting, but it only repeats the opinion in stronger words, so it gives the reader nothing to weigh up.",
+      "clue": "Look for the sentence that explains why, not just what."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya writes: \"Our town needs a skate park.\" Which addition would make her opinion most convincing?",
+      "opts": [
+        "A council survey found 7 in 10 teens have nowhere to skate",
+        "My friend Sam said last week that skate parks are great",
+        "It is 100 per cent the best idea our town has had",
+        "I have wanted a skate park ever since I turned nine"
+      ],
+      "why": "The survey result is evidence: it is a fact that can be checked, and it shows why the town needs a skate park. The comment from Sam is tempting because it names a person and a time, but it is just another opinion, not a checked fact or an expert's view.",
+      "clue": "Which addition is more than someone's opinion or feeling?"
+    }
+  },
+  "eng-purpose-shapes-structure": {
+    "title": "How purpose shapes structure",
+    "card": [
+      [
+        "Narrative",
+        "tells a story to entertain. It usually moves from an opening that introduces characters and setting, through a problem, to a resolution."
+      ],
+      [
+        "Information report",
+        "gives facts about a topic. It usually has an opening statement, then paragraphs or sections that each cover one part of the topic."
+      ],
+      [
+        "Persuasive text",
+        "tries to win the reader over to a point of view. It usually states its position, gives one argument per paragraph with reasons, then restates the position."
+      ],
+      [
+        "Procedure",
+        "explains how to do something. It usually lists the materials, then gives numbered steps in time order, because the reader follows them while doing the task."
+      ]
+    ],
+    "remember": "A text's job shapes its structure: a story, facts by topic, arguments or steps.",
+    "a": {
+      "q": "Why is a procedure usually written as numbered steps in order?",
+      "opts": [
+        "The reader has to do each action in the right sequence",
+        "The reader needs a problem and a resolution to enjoy",
+        "The reader wants facts sorted into topic sections",
+        "The reader should be won over to a point of view"
+      ],
+      "why": "A procedure helps someone do a task, so the order of actions matters. Sorting facts into topic sections suits an information report, which has a different job.",
+      "clue": "Think about what the reader does with the text."
+    },
+    "b": {
+      "d": 2,
+      "q": "Jess writes about the platypus. She starts with a short statement of what a platypus is. Then she writes one paragraph on its habitat, one on its diet and one on its body. Which text type is she writing?",
+      "opts": ["An information report", "A narrative", "A procedure", "A persuasive text"],
+      "why": "An opening statement followed by paragraphs that each cover one part of a topic is the structure of an information report. A persuasive text would state a position and give arguments for it, and a narrative would follow characters through a problem.",
+      "clue": "Look at how the paragraphs are sorted."
+    }
+  },
+  "eng-language-features-change-with": {
+    "title": "Language features change with purpose",
+    "card": [
+      [
+        "Report",
+        "A report informs. It uses technical words, such as habitat or predator, and facts that can be checked."
+      ],
+      [
+        "Persuasive text",
+        "A persuasive text tries to change what a reader thinks. It uses emotive words, which stir feelings, and opinions."
+      ],
+      [
+        "Story",
+        "A story entertains. It uses description to build a picture and dialogue, which is the words characters speak."
+      ],
+      "Writers choose words to suit the job the text must do."
+    ],
+    "remember": "The words a writer picks match what the text is trying to do.",
+    "a": {
+      "q": "Which sentence would most likely come from a persuasive text?",
+      "opts": [
+        "Our heartless council must stop this cruel waste now",
+        "The council collects bins on Tuesday each week",
+        "The bin truck rumbled slowly down the quiet street",
+        "First, place the bin on the kerb before sunrise"
+      ],
+      "why": "Heartless and cruel are emotive words, and the sentence gives an opinion about what should happen. The bin collection sentence states a fact, which suits a report.",
+      "clue": "Look for words meant to stir feelings."
+    },
+    "b": {
+      "d": 3,
+      "q": "Omar writes two sentences about penguins. The first says they are flightless birds of the Southern Hemisphere. The second says their flippers help them swim. What is the main purpose shown by this language?",
+      "opts": [
+        "To inform, using facts",
+        "To persuade, using opinions",
+        "To entertain, using dialogue",
+        "To persuade, using emotive words"
+      ],
+      "why": "The sentences state facts that can be checked and use no feelings or opinions. That suits a report that informs. Persuasive writing would add emotive words or opinions.",
+      "clue": "Could each sentence be checked?"
+    }
+  },
+  "eng-overviews-topic-sentences-conclusions": {
+    "title": "Overviews, topic sentences and conclusions",
+    "card": [
+      [
+        "Overview",
+        "It comes first and tells readers what is coming. It gets readers ready for the ideas that follow."
+      ],
+      [
+        "Topic sentence",
+        "It opens a paragraph and states the main idea of that paragraph. The other sentences in the paragraph then give details that support it."
+      ],
+      [
+        "Conclusion",
+        "It comes last and draws the ideas together. It reminds readers of the main points and does not start a new one."
+      ],
+      "Read together, the overview, topic sentences and conclusion give a text a clear path from start to finish."
+    ],
+    "remember": "Overview: what is coming. Topic sentence: the paragraph's main idea. Conclusion: ideas drawn together.",
+    "a": {
+      "q": "A paragraph in a text opens with a topic sentence. What does that sentence do?",
+      "opts": [
+        "It states the main idea of the paragraph",
+        "It sums up the whole text for the reader",
+        "It tells readers what the whole text will cover",
+        "It adds a new idea at the end of the text"
+      ],
+      "why": "A topic sentence opens a paragraph and names its main idea, so the other sentences can support it. Telling readers what the whole text covers is the job of an overview, not a topic sentence.",
+      "clue": "Think about what one paragraph is mostly about."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi writes a text arguing that his town needs a skate park. One paragraph covers safety and one covers exercise. Which sentence would suit his conclusion best?",
+      "opts": [
+        "A skate park would keep young people safe and active",
+        "A skate park could also bring tourists to our town",
+        "This text will explain why our town needs a skate park",
+        "Last year, ten students were hurt skating on roads"
+      ],
+      "why": "This sentence draws together Ravi's two main points, safety and exercise, which is what a conclusion does. The sentence about tourists is tempting because it supports his argument, but it starts a new point, and a conclusion does not do that.",
+      "clue": "Which sentence looks back over points Ravi has already made?"
+    }
+  },
+  "eng-compound-complex-sentences-vic": {
+    "title": "Compound and complex sentences",
+    "card": [
+      "A clause is a group of words with a subject and a verb. A main clause makes sense on its own: \"The bus was late.\"",
+      [
+        "Compound",
+        "two main clauses joined by a word such as and, but or so. \"The bus was late, but Ravi still made it.\""
+      ],
+      [
+        "Complex",
+        "a main clause plus a dependent clause. A dependent clause cannot stand alone. It often starts with a word such as because, although or when."
+      ],
+      "In \"Ravi ran because the bus was late\", the part \"because the bus was late\" cannot stand alone. The dependent clause can also come first, followed by a comma: \"Because the bus was late, Ravi ran.\""
+    ],
+    "remember": "Compound sentences join equal main clauses. Complex sentences add a dependent clause.",
+    "a": {
+      "q": "Which of these is a complex sentence?",
+      "opts": [
+        "Because it was raining, Mia stayed inside",
+        "It was raining, so Mia stayed inside",
+        "It was raining, and Mia stayed inside",
+        "It was raining, but Mia went outside"
+      ],
+      "why": "\"Because it was raining\" is a dependent clause. It cannot stand alone, so the sentence is complex. The other three join two main clauses with so, and or but, which makes them compound.",
+      "clue": "Look for a clause that cannot stand alone."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which sentence is compound?",
+      "opts": [
+        "The dog barked, and the cat hid under the bed",
+        "The dog barked when the cat walked past it",
+        "Although the dog barked, the cat stayed calm",
+        "The cat hid because the dog barked loudly"
+      ],
+      "why": "In the sentence joined by and, \"The dog barked\" and \"the cat hid under the bed\" can each stand alone, so it is compound. The others each have a dependent clause beginning with when, although or because. The sentence starting with Although is tempting because of its comma, but \"Although the dog barked\" cannot stand alone.",
+      "clue": "Check whether each part could be its own sentence."
+    }
+  },
+  "eng-colons-brackets": {
+    "title": "Colons and brackets",
+    "card": [
+      [
+        "Colon",
+        "A colon (:) introduces a list, an example or an explanation. It comes after a complete main clause, such as \"We need three things:\" before the list."
+      ],
+      "A colon can also lead into an explanation. \"Sam was happy: his team had won.\" The words after the colon explain the first part.",
+      [
+        "Brackets",
+        "Brackets ( ) come in pairs, an opening one and a closing one, and hold extra information. \"The museum (built in 1890) is near the station.\""
+      ],
+      "Take out the brackets and the words inside them, and the sentence must still make sense: \"The museum is near the station.\""
+    ],
+    "remember": "A colon introduces what follows. Brackets hold extra information that can be removed.",
+    "a": {
+      "q": "Which sentence uses brackets correctly?",
+      "opts": [
+        "Our school (founded in 1950) has a big oval",
+        "Our school (has a big) oval founded in 1950",
+        "Our (school founded in) 1950 has a big oval",
+        "Our school has a (big oval founded in 1950"
+      ],
+      "why": "The words inside the brackets are extra, and the sentence still works without them. Taking out \"has a big\" or \"school founded in\" leaves a broken sentence. The sentence that opens a bracket before \"big\" never closes it, and brackets must come in pairs.",
+      "clue": "Check for a pair of brackets, then cross out the words inside and reread."
+    },
+    "b": {
+      "d": 2,
+      "q": "Zara packed three snacks an apple, a muesli bar and some grapes. Where does the colon belong?",
+      "opts": ["After snacks", "After packed", "After three", "After apple"],
+      "why": "A colon goes after the complete main clause \"Zara packed three snacks\", to introduce the list. Putting it after apple would split the list.",
+      "clue": "The colon comes before the list starts."
+    }
+  },
+  "eng-camera-shots-angles": {
+    "title": "Camera shots and angles",
+    "card": [
+      [
+        "Close-up",
+        "The camera is very near a face or object. It lets the viewer see small details, such as a tear, so it often shows emotion."
+      ],
+      [
+        "Long shot",
+        "The camera is far away and shows a whole place or a small figure in it. It shows the setting and how big or empty it is."
+      ],
+      ["Low angle", "The camera looks up at a person from below. This can make them seem powerful, strong or scary."],
+      ["High angle", "The camera looks down at a person from above. This can make them seem small, weak or alone."]
+    ],
+    "remember": "Close-ups show emotion and long shots show setting. A low angle can make someone seem powerful, and a high angle can make them seem small.",
+    "a": {
+      "q": "A film shows a girl from high above as she stands in a big hall. What effect does this camera angle have?",
+      "opts": [
+        "It makes her seem small and weak",
+        "It makes her seem strong and in charge",
+        "It shows the tear on her cheek in detail",
+        "It shows her face from very close up"
+      ],
+      "why": "The camera looks down on the girl, which is a high angle, so it can make her seem small and weak. A low angle would do the opposite and make her seem powerful. A tear or her face up close would need a close-up.",
+      "clue": "Think about where the camera is placed compared with the girl."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a film, Kai arrives at a huge farm. The camera is far away, so he is a tiny figure beside endless paddocks. What does this shot mainly show?",
+      "opts": [
+        "The size and setting of the farm",
+        "The sadness on Kai's face",
+        "That Kai is a powerful leader",
+        "The small details of Kai's hands"
+      ],
+      "why": "A long shot is taken from far away, so it shows the setting and how big it is. Kai's face and hands would need a close-up. Power would be shown by a low angle, not by distance.",
+      "clue": "Ask how far the camera is from Kai, and what it can fit in."
+    }
+  },
+  "eng-sound-film": {
+    "title": "Sound in film",
+    "card": [
+      [
+        "Music",
+        "Music sets the mood of a scene. Slow, low notes that build can make a viewer feel tense, while bright, fast tunes can feel happy."
+      ],
+      [
+        "Sound effects",
+        "Sound effects are noises such as footsteps, a creaking door or a storm. They make a scene feel real and can warn the viewer or add fear."
+      ],
+      [
+        "Silence",
+        "When all sound stops, the viewer notices it. Silence can build suspense or make a moment feel shocking or sad."
+      ],
+      "Sound can work before anything happens on screen. A viewer may feel worried just from the sound of a scene."
+    ],
+    "remember": "Music, sound effects and silence all shape how a viewer feels.",
+    "a": {
+      "q": "In a film, a boy walks down a dark corridor. Low music slowly gets louder with each step he takes. What is the music mainly doing?",
+      "opts": [
+        "Making the viewer feel tense about what may come",
+        "Making the scene feel calm and peaceful",
+        "Telling the viewer exactly what the boy is thinking",
+        "Making the corridor seem cheerful and bright"
+      ],
+      "why": "Slow, low music that builds can make a viewer feel tense, even before any event on screen. It does not make a scene calm or cheerful. It sets a mood, but it does not tell us what the boy is thinking.",
+      "clue": "Think about how slow, low music that grows louder makes you feel."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a film, a loud storm rages, then all sound suddenly stops as Ava opens a door. What is the most likely effect of the sudden silence?",
+      "opts": [
+        "It builds suspense about what is behind the door",
+        "It makes the scene feel calm and safe again",
+        "It makes the storm seem louder and closer",
+        "It tells the viewer exactly what Ava is thinking"
+      ],
+      "why": "Silence after loud noise stands out, so the viewer pays close attention and may feel suspense. It is tempting to think quiet means calm and safe, but sudden silence at a tense moment makes the viewer wait for something to happen.",
+      "clue": "Notice how the sound changes from loud to nothing at all."
+    }
+  },
+  "eng-aboriginal-torres-strait-islander": {
+    "title": "Aboriginal and Torres Strait Islander literature",
+    "card": [
+      "Aboriginal and Torres Strait Islander literature includes stories, poems, plays and memoirs written by Aboriginal and Torres Strait Islander authors. A memoir is a true account of part of the author's own life.",
+      [
+        "Country",
+        "For many First Nations peoples, Country means the land, waters and sky that a person belongs to and cares for. It is more than a place on a map. Many authors write about their connection to Country."
+      ],
+      [
+        "Family and language",
+        "Many works draw on family, community and language. Language is part of who a person is, so a writer may use words from their own language to show their identity and where they come from."
+      ],
+      [
+        "Storytelling",
+        "First Nations peoples have told stories for a very long time, in speech, song, dance and art. Many writers draw on these traditions, so their work can carry knowledge handed down over generations."
+      ]
+    ],
+    "remember": "Many First Nations authors write about Country, family, language and long traditions of storytelling.",
+    "a": {
+      "q": "A memoir by a Torres Strait Islander author describes growing up on her island, her grandmother's teaching and her home language. What does this show about the writing?",
+      "opts": [
+        "It draws on Country, family and language",
+        "It is a made-up story with no link to real life",
+        "It avoids mentioning any place or relatives",
+        "It is a play written to be acted on a stage"
+      ],
+      "why": "The memoir centres on her island home, her grandmother and her language, which are common in First Nations writing. It is not made up, because a memoir is a true account of the author's own life.",
+      "clue": "Look at the place, the grandmother and the language."
+    },
+    "b": {
+      "d": 2,
+      "q": "Jarrah, a Year 7 student, reads a poem by a First Nations author that uses a few words from the author's own language. Why might the author have done this?",
+      "opts": [
+        "To show their identity and where they come from",
+        "To make the poem harder for anyone to read",
+        "To follow a rule that all poems must use them",
+        "To show that English words are never needed"
+      ],
+      "why": "Language is part of who a person is, so using words from it shows the author's identity and where they come from. The words are not there to shut readers out, and no rule says every poem must use them.",
+      "clue": "Think about what a person's language says about them."
+    }
+  },
+  "eng-showing-character": {
+    "title": "Showing character",
+    "card": [
+      ["Direct", "The writer tells the reader what a character is like. For example: \"Tariq was a generous boy.\""],
+      [
+        "Indirect",
+        "The writer shows the character and lets the reader work it out. This can be done through what the character does, says or thinks, and how other characters react to them."
+      ],
+      "Example: Tariq hands his last biscuit to a hungry classmate. The reader sees he is generous without being told.",
+      "Another example: other students go quiet when Priya walks in. Their reaction suggests she is feared or respected."
+    ],
+    "remember": "Telling states what a character is like. Showing lets the reader work it out from clues.",
+    "a": {
+      "q": "Which sentence reveals Lena's character indirectly?",
+      "opts": [
+        "Lena stayed back after class to help stack the chairs",
+        "Lena was the kindest and most helpful girl in her class",
+        "Lena was a caring girl who put other people first",
+        "Lena was kind, patient and thoughtful with everyone"
+      ],
+      "why": "Staying back to stack the chairs is an action, so the reader works out for themselves that Lena is helpful. The sentences calling her kind, caring or thoughtful tell the reader what she is like, so they are direct, even though they add detail.",
+      "clue": "Which one gives an action instead of a description?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In a story, when Jack gets on the bus, his classmates spread their bags across the empty seats and look away. What does this show?",
+      "opts": [
+        "Other characters' reactions hint that he is disliked",
+        "The writer states directly that Jack is unpopular",
+        "Jack's own thoughts reveal that he is lonely",
+        "Jack's dialogue shows that he is rude to others"
+      ],
+      "why": "The writer gives no label for Jack. The reader works out from how the others react that he may be disliked. The scene has no direct statement, none of Jack's thoughts and no dialogue, so the other options do not fit.",
+      "clue": "Look at who is doing something in the scene, and what the writer does not say."
+    }
+  },
+  "eng-setting-mood": {
+    "title": "Setting and mood",
+    "card": [
+      "The setting is where and when a story happens. It includes the place, the time of day, the season, the weather and the period in history.",
+      "Mood is the feeling a reader gets from a scene. Writers build mood by choosing details of the setting, such as sounds, light, weather and objects.",
+      "A storm at night can make a scene feel fearful. A sunny beach in the morning can make it feel calm or cheerful.",
+      "Setting can also reflect what a character feels. A lonely girl might walk through an empty, grey street with a cold wind blowing."
+    ],
+    "remember": "Details of the setting build the mood a reader feels, and setting can mirror a character's feelings.",
+    "a": {
+      "q": "Which sentence uses setting to create a tense, eerie mood?",
+      "opts": [
+        "Fog hid the empty road, and a gate creaked in the dark",
+        "Sam packed his bag and walked to the bus stop on Monday",
+        "The teacher handed out the maths tests at the start of class",
+        "Mia felt nervous, and she said she wanted to go home"
+      ],
+      "why": "The fog, empty road, dark and creaking gate are details of place and time that make the reader feel uneasy. The sentence about Mia names her feeling directly but gives no details of the setting.",
+      "clue": "Look for details of place, light and sound, not a character's words."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tariq has just failed to make the school team. The writer says he trudged home under a heavy grey sky as drizzle blurred the streetlights. How does the setting work here?",
+      "opts": [
+        "It reflects Tariq's gloomy feelings and gives a sad mood",
+        "It makes the reader feel excited about what comes next",
+        "It shows Tariq is a cruel person by how he walks",
+        "It only tells the reader the day of the week"
+      ],
+      "why": "The grey sky and drizzle match Tariq's disappointment, so the setting mirrors his feelings and builds a sad mood. The option about excitement is tempting, but nothing in the weather suggests it.",
+      "clue": "Match the weather to how Tariq feels."
+    }
+  },
+  "eng-plot-structure": {
+    "title": "Plot structure",
+    "card": [
+      [
+        "Orientation",
+        "the start of the story. It introduces the characters, the setting and the situation before anything goes wrong."
+      ],
+      [
+        "Complication",
+        "the problem that disturbs the situation and sets the story moving. After it, the character wants or needs something."
+      ],
+      ["Rising action", "a run of events in which the problem grows harder and the tension builds."],
+      [
+        "Climax and resolution",
+        "The climax is the turning point, where the tension is highest. The resolution is how things settle afterwards."
+      ]
+    ],
+    "remember": "A plot moves from a calm start, to a problem, to growing tension, to a peak, to an ending.",
+    "a": {
+      "q": "Which part of a plot is the point where the tension is at its highest?",
+      "opts": ["The climax", "The orientation", "The resolution", "The complication"],
+      "why": "The climax is the turning point, where tension peaks. The resolution is tempting, but it comes after the climax and shows how things settle.",
+      "clue": "After this point, the story starts to wind down."
+    },
+    "b": {
+      "d": 2,
+      "q": "In a story, Priya's dog runs off during a family picnic in the park. Which part of the plot is this moment?",
+      "opts": ["The complication", "The orientation", "The climax", "The resolution"],
+      "why": "The dog running off is the problem that disturbs the calm picnic and sets the story moving, so it is the complication. It is not the orientation, which introduces the characters and setting before anything goes wrong.",
+      "clue": "Ask whether this is the start of the problem or the peak of it."
+    }
+  },
+  "eng-types-conflict": {
+    "title": "Types of conflict",
+    "card": [
+      "Conflict is a struggle between a character and something that stands in their way. It gives a story its tension and keeps readers wanting to know what happens.",
+      [
+        "Character vs character",
+        "a struggle against another person, such as two rivals who both want the same prize."
+      ],
+      ["Character vs nature", "a struggle against the natural world, such as a hiker caught in a blizzard."],
+      [
+        "Character vs society and character vs self",
+        "Against society is a struggle with the rules or attitudes of a group, such as a girl who challenges a town's ban on her sport. Against self is a struggle inside the character's own mind, such as a boy torn between telling the truth and protecting a friend."
+      ]
+    ],
+    "remember": "Ask who or what the character is struggling against: another person, nature, society or themselves.",
+    "a": {
+      "q": "Priya spends the whole story fighting her own fear of speaking in public before a big speech. What type of conflict is this?",
+      "opts": [
+        "Character against self",
+        "Character against character",
+        "Character against nature",
+        "Character against society"
+      ],
+      "why": "The struggle is inside Priya's own mind, so it is a conflict against self. It is not against another person, because nobody else is standing in her way.",
+      "clue": "Where is the struggle happening: outside Priya or inside her?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In a short story, Tomas lives in a village where everyone must follow an old rule that bans anyone from leaving. He secretly plans to leave and is hunted by the villagers' leader. Which conflict is the main struggle against the rule?",
+      "opts": [
+        "Character against society",
+        "Character against character",
+        "Character against nature",
+        "Character against self"
+      ],
+      "why": "The ban is a rule held by the whole village, so Tomas is struggling against society. The leader hunting him is a person, but the struggle with the rule comes from the group's expectations, not one person's dislike of him.",
+      "clue": "Think about who made and enforces the rule that blocks Tomas."
+    }
+  },
+  "eng-rhyme-rhythm": {
+    "title": "Rhyme and rhythm",
+    "card": [
+      [
+        "Rhyme",
+        "Words rhyme when the vowel sound and every sound after it match, as in light and night. Cat and hot do not rhyme: only the t sound matches."
+      ],
+      [
+        "Syllable",
+        "A syllable is a part of a word with one vowel sound. Water has two syllables, WA-ter: the first is stressed (said strongly) and the second is unstressed (said lightly)."
+      ],
+      [
+        "Rhythm",
+        "Rhythm is the pattern of stressed and unstressed syllables in a line, such as da-DUM da-DUM. The stressed syllables are the beat you could tap or clap."
+      ],
+      "Rhyming words at line endings link those lines. Together with a steady rhythm, rhyme can make a poem sound musical, like a song or a chant."
+    ],
+    "remember": "Rhyme matches the vowel sound and what follows it. Rhythm is the pattern of stressed and unstressed syllables.",
+    "a": {
+      "q": "Which pair of words rhymes, so it could link two line endings?",
+      "opts": ["Smile and while", "Smile and small", "Smile and simple", "Smile and smell"],
+      "why": "Smile and while share the same vowel sound and the l sound after it, so they rhyme. Smile and small both end with an l sound, but their vowel sounds are different, so they do not rhyme.",
+      "clue": "Check the vowel sound, not just the last sound."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia claps as she reads this line aloud: \"The WIND blew COLD a-CROSS the HILL\". Her claps land on the parts in capitals, every second syllable. What is she finding?",
+      "opts": [
+        "The rhythm of the line",
+        "The rhyme of the line",
+        "The syllable count of the line",
+        "The rhyming words in the line"
+      ],
+      "why": "Mia claps only on the stressed syllables, so she is following the pattern of stressed and unstressed syllables, which is the rhythm. She is not counting syllables, because she skips every unstressed one, and rhyme is about matching sounds at line endings, not inside one line.",
+      "clue": "Does she clap on every syllable, or only the strong ones?"
+    }
+  },
+  "eng-lines-stanzas-free-verse": {
+    "title": "Lines, stanzas and free verse",
+    "card": [
+      [
+        "Line",
+        "a single row of words in a poem. The poet chooses where each line ends, so a line can stop in the middle of a sentence."
+      ],
+      [
+        "Stanza",
+        "a group of lines set apart from the next group by a blank space. A stanza works a bit like a paragraph in prose, often holding one idea or moment."
+      ],
+      [
+        "Free verse",
+        "a poem with no regular rhyme pattern and no steady rhythm. The poet has no set pattern to follow."
+      ],
+      "Because free verse has no pattern, line breaks and stanza breaks do more of the work. A very short line can make a word stand out, and a gap can make the reader pause."
+    ],
+    "remember": "Lines and stanzas shape a poem on the page. In free verse, the line breaks matter more.",
+    "a": {
+      "q": "Which of these is a stanza?",
+      "opts": [
+        "A group of lines set apart by a blank space",
+        "A single word that is repeated in a poem",
+        "The pair of words that rhyme at the line ends",
+        "The title that is written above the poem"
+      ],
+      "why": "A stanza is a group of lines set apart from the next group by a space. A line is only one row of words, and rhyming words are about sound, not about how the poem is grouped.",
+      "clue": "Think of how a paragraph is grouped in prose."
+    },
+    "b": {
+      "d": 3,
+      "q": "Zara writes a poem with no rhyme and no steady beat. She puts the word \"alone\" on a line by itself. What is the most likely effect?",
+      "opts": [
+        "It makes the word stand out and gives the reader a pause",
+        "It gives the poem a regular rhyme pattern at the line ends",
+        "It turns the poem into a single stanza of equal lines",
+        "It shows the poem is not free verse because it has a pattern"
+      ],
+      "why": "A poem with no rhyme and no steady beat is free verse, so line breaks do more of the work. A word on its own line stands out and slows the reader. Putting one word on a line does not add rhyme or make a regular pattern.",
+      "clue": "What does a very short line do to the one word in it?"
+    }
+  },
+  "eng-formal-spoken-presentations": {
+    "title": "Formal spoken presentations",
+    "card": [
+      [
+        "Opening",
+        "A formal presentation starts by greeting the audience and stating the topic. It may also say what the speaker will cover, so listeners know what to expect."
+      ],
+      [
+        "Organised points",
+        "The body has a clear order. Each point gets its own part, with a reason or an example, and the speaker uses words such as first, next and finally to show where they are."
+      ],
+      [
+        "Conclusion",
+        "The end sums up the main points and finishes on a clear final message. It does not add new points."
+      ],
+      [
+        "Formal words",
+        "The speaker picks words to suit the audience, such as a class, a principal or a visiting panel. Formal speech uses full sentences and avoids slang and very casual phrases."
+      ]
+    ],
+    "remember": "A formal presentation has a clear start, an ordered middle, a firm end and words that suit the audience.",
+    "a": {
+      "q": "Which sentence would best open a formal presentation to a school assembly about recycling?",
+      "opts": [
+        "Good morning, everyone. Today I will explain recycling",
+        "Hey guys, so, recycling, yeah, it's kind of a big deal",
+        "Recycling is good, and that is all I really want to say",
+        "In conclusion, recycling saves resources and our school"
+      ],
+      "why": "The first option greets the audience, states the topic and uses formal words. The last option is tempting because it is well written, but a conclusion belongs at the end, not the start.",
+      "clue": "An opening greets the audience and names the topic."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya is giving a talk to her Year 7 class on why sleep matters. She has finished her three points. What should her last part do?",
+      "opts": [
+        "Sum up her three points and end on a clear final message",
+        "Add a fourth point about sleep that she forgot to mention",
+        "Switch to casual slang so the talk ends in a relaxed way",
+        "Repeat her greeting and topic again to start the talk over"
+      ],
+      "why": "A conclusion sums up the main points and ends on a clear message. Adding a new point is tempting, but the card says a conclusion does not add new points, so it would leave the talk unfinished.",
+      "clue": "The ending pulls together what the audience has already heard."
+    }
+  },
+  "eng-spelling-rules-adding-endings": {
+    "title": "Spelling rules for adding endings",
+    "card": [
+      [
+        "Doubling",
+        "If a short word ends in one vowel then one consonant, double the consonant before an ending that starts with a vowel. Run becomes running and hop becomes hopping."
+      ],
+      [
+        "Dropping e",
+        "If a word ends in a silent e, drop the e before an ending that starts with a vowel. Make becomes making and hope becomes hoping."
+      ],
+      [
+        "Y to i",
+        "If a word ends in a consonant then y, change the y to i before most endings. Happy becomes happiness and carry becomes carried."
+      ],
+      "Check the end of the base word first, then pick the pattern that fits. If none fits, just add the ending, as in jump and jumping."
+    ],
+    "remember": "How a word ends tells you whether to double, drop e, change y to i, or just add the ending.",
+    "a": {
+      "q": "Which spelling of the word made from stop plus -ing is correct?",
+      "opts": ["stopping", "stoping", "stopeing", "stoppping"],
+      "why": "Stop ends in one vowel then one consonant, so the p is doubled before -ing. Stoping is tempting, but it leaves out the doubling and would suggest a long o sound.",
+      "clue": "Count the vowels and consonants at the end of stop."
+    },
+    "b": {
+      "d": 2,
+      "q": "Tom adds -ness to the word lazy to describe his cat on a hot day. Which spelling is correct, and why?",
+      "opts": [
+        "Laziness, because the y changes to i",
+        "Lazyness, because the y stays the same",
+        "Lazziness, because the z is doubled",
+        "Lazness, because the y is dropped"
+      ],
+      "why": "Lazy ends in a consonant, z, then y, so the y changes to i before -ness. Lazyness is tempting because it just adds the ending, but that is only for words where no pattern fits.",
+      "clue": "Look at the letter just before the y in lazy."
+    }
+  },
+  "eng-ways-organising-ideas": {
+    "title": "Ways of organising ideas",
+    "card": [
+      "Writers organise ideas so a reader can follow them. Three common ways are time order, cause and effect, and groups and types.",
+      [
+        "Time order",
+        "Ideas come in the order they happened or should be done. Words such as first, next, then and finally are common. Recounts and instructions often use it."
+      ],
+      [
+        "Cause and effect",
+        "Ideas link what made something happen (the cause) to what happened as a result (the effect). Words such as because, so and as a result are common."
+      ],
+      [
+        "Groups and types",
+        "Ideas are sorted into groups, and each group is described in turn. Words such as one kind, another type and some are common. A text about pets might have one part on dogs and one on cats."
+      ]
+    ],
+    "remember": "Ask how the ideas are linked: by when, by why, or by kind.",
+    "a": {
+      "q": "A text explains how to make a paper plane. It begins with folding the paper in half, then folding the corners, and ends with the wings. How is it organised?",
+      "opts": [
+        "In time order, one step after another",
+        "By cause and effect, as each fold causes the next",
+        "By groups and types of paper plane",
+        "By sorting the folds into kinds of wing"
+      ],
+      "why": "The steps are given in the order they are done, so the text uses time order. Each fold does follow another, but the text does not explain why one thing makes another happen, so it is not cause and effect.",
+      "clue": "Look at the order the steps are done in."
+    },
+    "b": {
+      "d": 3,
+      "q": "A paragraph says that heavy rain fell on Ballarat for three days. As a result, the creek overflowed, and so some roads were closed. How is it organised?",
+      "opts": [
+        "By cause and effect, each event leading to the next",
+        "In time order, because it mentions three days",
+        "By groups and types of flood damage",
+        "By cause and effect, with the rain as the only link"
+      ],
+      "why": "Words such as as a result and so link the rain to the overflow and then to the closures, so each event is the effect of the one before. It mentions three days, but the main link between events is cause and effect, so time order is the tempting wrong answer.",
+      "clue": "Look at the linking words as a result and so."
+    }
+  },
+  "eng-summarising-vic": {
+    "title": "Summarising",
+    "card": [
+      "A summary gives the main ideas of a text briefly. It is shorter than the original text.",
+      "Write a summary in your own words. Do not copy whole sentences from the text.",
+      "Leave out minor details and examples. They support a main idea but are not the main idea itself.",
+      "To find the main ideas, ask what each paragraph is mostly about. Then join those points in a few clear sentences."
+    ],
+    "remember": "A summary is short, in your own words, and keeps only the main ideas.",
+    "a": {
+      "q": "Which option best describes a good summary of a news article?",
+      "opts": [
+        "A short account of the main ideas in your own words",
+        "A short copy of the article's most interesting sentences",
+        "A list of every example the writer gives, in order",
+        "A retelling of the article that keeps all its details"
+      ],
+      "why": "A summary keeps the main ideas and puts them in your own words. Copying sentences is the tempting mistake, but a summary is not made of the writer's words, even if they are shortened.",
+      "clue": "Think about what you keep, and whose words you use."
+    },
+    "b": {
+      "d": 2,
+      "q": "Jai reads an article about how bees help farms. It says bees carry pollen between flowers so crops grow fruit. It tells a story about one orchard near Shepparton. Which sentence is best for his summary?",
+      "opts": [
+        "Bees move pollen between flowers, which helps crops grow",
+        "One Shepparton orchard had a good year after bees arrived",
+        "Bees are small insects that are black and yellow in colour",
+        "The article has a story about an orchard near Shepparton"
+      ],
+      "why": "The sentence about bees moving pollen to help crops grow states the main idea of the article in plain words. The orchard story is an example that supports that idea, so a summary leaves it out, even though it is in the article.",
+      "clue": "Choose the main idea, not the example that backs it up."
+    }
+  },
+  "eng-choosing-text-type": {
+    "title": "Choosing a text type",
+    "card": [
+      "A text type is the form a piece of writing takes, such as a letter, a report, a speech or a story. Each form has its own features and suits certain jobs.",
+      "Start with your purpose: why are you writing? You might want to inform, persuade, entertain or explain. Then think about your audience: who will read or hear it?",
+      "A speech is spoken aloud to a live audience, so it uses direct address and a strong, clear voice. A report gives facts in an organised, formal way. A story entertains with characters and events.",
+      "A letter is written to a particular person or group. Its tone can be formal or friendly, depending on who reads it and why you are writing."
+    ],
+    "remember": "Choose the form that fits your purpose and your audience.",
+    "a": {
+      "q": "Zara wants to convince her whole school to recycle more, and she will present her ideas at assembly. Which text type suits this best?",
+      "opts": [
+        "A persuasive speech",
+        "A story about a lost bottle",
+        "A formal report of facts",
+        "A friendly letter to a friend"
+      ],
+      "why": "Her purpose is to persuade, and the audience will hear her live at assembly. A speech is made for that job. A report gives facts in a formal way, but it is not built to be spoken aloud to win over a crowd.",
+      "clue": "Think about both why she is writing and how the audience will receive it."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mr Ito wants to tell the parents of the Year 7 students in his class about next term's camp: dates, costs and what to pack. Which text type suits this best?",
+      "opts": [
+        "A letter sent home to each family",
+        "A short story about a camp trip",
+        "A speech to the Year 7 students",
+        "A poem about life in the bush"
+      ],
+      "why": "His purpose is to inform, and his audience is the parents. A letter is written to a particular group, so it reaches them directly. A speech to the students goes to the wrong audience, and a story or poem entertains rather than informs.",
+      "clue": "Check two things: who needs the details, and what job the text must do."
+    }
+  },
+  "eng-editing-impact": {
+    "title": "Editing for impact",
+    "card": [
+      "Editing means rereading a draft and changing it so it has more effect on the reader. Three common edits are below.",
+      [
+        "Cut repetition",
+        "remove words or sentences that say the same thing again. \"It was a cold, freezing night\" becomes \"It was a freezing night\"."
+      ],
+      [
+        "Reorder for flow",
+        "move sentences so each one leads to the next. In a recount, events usually read best in the order they happened."
+      ],
+      [
+        "Precise words",
+        "swap a vague word for an exact one. \"The boy said quietly\" can become \"The boy whispered\", and \"a big wave\" can become \"a towering wave\"."
+      ]
+    ],
+    "remember": "Cut what repeats, put ideas in order, and pick the exact word.",
+    "a": {
+      "q": "Josh changes \"The car went down the street\" to \"The car roared down the street\". Which kind of edit is this?",
+      "opts": [
+        "Swapping a vague word for a precise one",
+        "Cutting a word that repeats an idea",
+        "Moving a sentence so ideas flow better",
+        "Adding a detail that describes the street"
+      ],
+      "why": "Went is vague, and roared shows exactly how the car moved and sounded. Nothing in the first sentence was said twice, so no repetition was cut.",
+      "clue": "Compare the verb before and after the change."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ella's camping recount has three sentences. In order, they tell how she set up the tent, cooked dinner that night, then packed the car before leaving home. Which edit would most improve its flow?",
+      "opts": [
+        "Move the packing sentence to the start",
+        "Cut the sentence about cooking dinner",
+        "Change set up to a more precise verb",
+        "Join all three into one long sentence"
+      ],
+      "why": "Packing the car happened first, so moving that sentence to the start puts the events in order and each one leads to the next. A more precise verb changes word choice, but the events would still be out of order.",
+      "clue": "Which event happened first?"
+    }
+  },
+  "eng-main-subordinate-clauses": {
+    "title": "Main and subordinate clauses",
+    "card": [
+      ["Clause", "A clause is a group of words built around a verb. It usually says who or what does something."],
+      [
+        "Main clause",
+        "a clause that makes sense on its own. It can stand alone as a full sentence, such as \"The bus arrived.\""
+      ],
+      [
+        "Subordinate clause",
+        "a clause that adds information but cannot stand alone. It depends on a main clause, such as \"because it was raining\"."
+      ],
+      "Subordinate clauses often begin with words such as because, although, when, if or after. In \"We stayed inside because it was raining\", the main clause is \"We stayed inside\"."
+    ],
+    "remember": "A main clause stands alone. A subordinate clause needs a main clause to make sense.",
+    "a": {
+      "q": "Which of these groups of words is a subordinate clause?",
+      "opts": [
+        "Although the shop was closed",
+        "The shop was closed early",
+        "Mia walked home from school",
+        "The dog barked at the gate"
+      ],
+      "why": "\"Although the shop was closed\" has a verb but leaves the reader waiting for more, so it depends on a main clause. \"The shop was closed early\" uses the same words without \"although\", so it makes sense alone and is a main clause, like the other two.",
+      "clue": "Which one leaves you waiting for the rest of the sentence?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In the sentence \"Leo packed his umbrella after he checked the forecast\", which words are the subordinate clause?",
+      "opts": [
+        "after he checked the forecast",
+        "Leo packed his umbrella",
+        "Leo packed his umbrella after",
+        "he checked the forecast"
+      ],
+      "why": "\"After he checked the forecast\" adds information about when Leo packed and cannot stand alone. \"He checked the forecast\" makes sense alone, but with \"after\" in front it becomes dependent, so the joining word is part of the subordinate clause.",
+      "clue": "Look for the clause that starts with a word like after, because or although."
+    }
+  },
+  "eng-connotation": {
+    "title": "Connotation",
+    "card": [
+      [
+        "Denotation",
+        "the basic dictionary meaning of a word. Slim and skinny both denote a person with little body fat."
+      ],
+      [
+        "Connotation",
+        "the feeling or idea a word carries beyond its basic meaning. Slim feels positive and suggests healthy or graceful. Skinny can feel negative and suggest thin in an unhealthy way."
+      ],
+      "Words with a similar denotation can have different connotations. Compare house and home, or cheap and affordable.",
+      "Writers choose words for their connotations on purpose. The choice shapes how a reader feels about a person, place or thing."
+    ],
+    "remember": "Similar words can mean the same thing but feel different, and writers pick the feeling they want.",
+    "a": {
+      "q": "Which pair of words has a similar basic meaning but different connotations?",
+      "opts": ["Curious and nosy", "Happy and sad", "Run and walk", "Tall and heavy"],
+      "why": "Curious and nosy both describe someone who wants to know things, so their denotation is similar. Curious feels positive and nosy feels negative. Run and walk can tempt, but they name different actions, so their basic meanings differ.",
+      "clue": "First check whether each pair could describe the very same thing."
+    },
+    "b": {
+      "d": 3,
+      "q": "A reporter describes a local footballer as stubborn. A different reporter calls the same player determined. What is the main difference between the two words?",
+      "opts": [
+        "Stubborn sounds negative, and determined sounds positive",
+        "Stubborn sounds positive, and determined sounds negative",
+        "They have quite different dictionary meanings",
+        "Determined is more formal, so it is the correct word"
+      ],
+      "why": "Both words describe someone who does not give up, so the basic meaning is close. Stubborn suggests being difficult, which feels negative, while determined suggests strength, which feels positive. The reversed option is tempting, but it swaps the two feelings.",
+      "clue": "Which word would the player rather read about themselves?"
+    }
+  },
+  "eng-positioning-readers-ethical-issues": {
+    "title": "Positioning readers on ethical issues",
+    "card": [
+      "An ethical issue is a question about right and wrong, such as whether a character should keep a secret or break a rule. Writers can lead readers to take a side on it.",
+      [
+        "What they show",
+        "A writer chooses which actions and events to put on the page. Showing a character helping a stranger can lead readers to approve of them."
+      ],
+      [
+        "What they leave out",
+        "A writer can leave out a character's reasons or a point of view. If readers never hear one side, they may judge that side more harshly."
+      ],
+      [
+        "How they describe it",
+        "Word choice carries a judgement. Calling a character \"firm\" can win approval, while \"stubborn\" or \"ruthless\" can lead readers to disapprove of the same act."
+      ]
+    ],
+    "remember": "Writers can guide your view of right and wrong through what they show, what they leave out and the words they choose.",
+    "a": {
+      "q": "A writer tells a story about a boy who keeps a lost wallet. The writer only describes how hungry and scared he is, and never mentions the owner. How does this position readers?",
+      "opts": [
+        "It may lead readers to sympathise with the boy",
+        "It may lead readers to blame the boy for the act",
+        "It shows the owner's side of the story fairly",
+        "It proves that keeping the wallet is legal"
+      ],
+      "why": "By showing only the boy's fear and leaving out the owner, the writer can lead readers to sympathise with him. The second option is tempting, but leaving out the owner removes the main reason to blame the boy.",
+      "clue": "Think about whose side of the story readers get to see."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two writers describe the same event: a manager closes a shop. One says she \"abandoned\" the staff. The other says she \"made a hard decision\". What is the main technique shaping readers' opinions?",
+      "opts": [
+        "Word choice that carries a judgement",
+        "Leaving out the shop's location",
+        "Showing the staff's actions in detail",
+        "Using a first-person narrator"
+      ],
+      "why": "The event is the same in both, but \"abandoned\" leads readers to disapprove and \"made a hard decision\" leads them to understand her. The difference lies in the words chosen. Neither description adds new events or leaves anything out.",
+      "clue": "The event is the same. What changes?"
+    }
+  },
+  "eng-tone": {
+    "title": "Tone",
+    "card": [
+      "Tone is the writer's attitude to the subject, which comes through in the words. Playful, bitter, serious, gentle and admiring are all tones.",
+      "Word choice is the main clue. Compare \"The old car coughed and died\" with \"The vehicle ceased to function\". The first sounds warm and a little humorous. The second sounds cold and official.",
+      "To name a tone, ask how the writer seems to feel about the subject. Look at the words that carry feeling, such as sneered, adored or merely.",
+      "Tone affects how a reader responds. A mocking tone can make us laugh at a character, while a respectful tone can make us take the character seriously."
+    ],
+    "remember": "Tone is the writer's attitude, and the word choices are the clues to it.",
+    "a": {
+      "q": "Which of these best describes what tone is in a piece of writing?",
+      "opts": [
+        "The writer's attitude to the subject, shown in the words",
+        "The place and time in which the story is set",
+        "The order in which the events of the story happen",
+        "The main message that the writer wants readers to learn"
+      ],
+      "why": "Tone is the attitude the writer shows towards the subject, and it comes through in word choice. Theme is the message a reader takes from a text, so it is a tempting mistake, but it is a different idea.",
+      "clue": "Think about how the writer seems to feel."
+    },
+    "b": {
+      "d": 3,
+      "q": "Read this sentence: \"Dad proudly unveiled his masterpiece, a crooked shed.\" The writer adds that it leaned like a tired giraffe. Which tone does the writing show?",
+      "opts": ["Gently mocking and humorous", "Bitter and resentful", "Solemn and respectful", "Cold and official"],
+      "why": "The comparison to a tired giraffe and the word masterpiece for a crooked shed poke fun at Dad in a friendly way, so the tone is gently mocking. It is not bitter, because nothing in the words suggests anger or resentment.",
+      "clue": "Look at how the shed is described, and ask whether the writer is angry or amused."
+    }
+  },
+  "eng-narrative-voice": {
+    "title": "Narrative voice",
+    "card": [
+      "Voice is the personality of the narrator that a reader hears in the writing. Two narrators can tell the same event and still sound completely different.",
+      [
+        "Word choice",
+        "The words a narrator picks give them a character. Slang and jokes sound chatty and young. Formal, careful words sound stiff or serious."
+      ],
+      [
+        "Sentence rhythm",
+        "The length and pace of sentences set how the narrator sounds. Short, quick sentences can sound nervous or blunt. Long, winding ones can sound dreamy or talkative."
+      ],
+      [
+        "Attitude",
+        "What the narrator seems to feel about people and events also shapes voice. A narrator might sound proud, shy, bored or full of wonder."
+      ]
+    ],
+    "remember": "Voice is who seems to be talking, built from word choice, sentence rhythm and attitude.",
+    "a": {
+      "q": "Which best describes what a narrative voice is?",
+      "opts": [
+        "The personality of the narrator heard in the writing",
+        "The order in which the events of a story are told",
+        "The sound of a character's words when read aloud",
+        "The point in the story where the conflict is solved"
+      ],
+      "why": "Voice is the personality a reader hears in the narrator's words. Reading aloud can help you hear it, but voice is not about sound itself: it comes from word choice, rhythm and attitude on the page.",
+      "clue": "Think about who seems to be talking to you."
+    },
+    "b": {
+      "d": 2,
+      "q": "A narrator moans about an itchy jumper, saying ugh and seriously, and calls it the worst day ever. Which feature most helps create this chatty, grumpy voice?",
+      "opts": [
+        "Casual, slangy word choice",
+        "Formal, careful word choice",
+        "A dreamy attitude full of wonder",
+        "A calm attitude with no strong feelings"
+      ],
+      "why": "Ugh and seriously are slang, and slang makes a narrator sound chatty and young. Formal, careful word choice would sound stiff instead, and a dreamy or calm attitude does not fit someone moaning about the worst day ever.",
+      "clue": "Look at the kind of words the narrator picks."
+    }
+  },
+  "eng-sentence-patterns-effect": {
+    "title": "Sentence patterns for effect",
+    "card": [
+      [
+        "Short sentences",
+        "A short sentence reads fast and stops suddenly. Writers can use it to build tension or to deliver a shock. Example: \"The door creaked. Then the lights died.\""
+      ],
+      [
+        "Long sentences",
+        "A long, flowing sentence carries the reader along and slows the pace. It can create a calm, dreamy or drawn-out mood. Example: \"We drifted on and on, down the slow, warm river.\""
+      ],
+      [
+        "Repeated patterns",
+        "When a writer repeats the same sentence pattern, the repetition builds emphasis. Example: \"We were tired. We were hungry. We kept going.\""
+      ],
+      "To name the effect, look at the length or pattern of the sentences, then say what it does to the reader's pace and feelings."
+    ],
+    "remember": "Sentence length and pattern shape pace and feeling: short can build tension, long can slow things down, repeated can add emphasis.",
+    "a": {
+      "q": "Which choice is most likely to build sudden tension?",
+      "opts": [
+        "Footsteps stopped. A handle turned",
+        "The footsteps drifted slowly along the hallway to us",
+        "Down the long hall, past the clock, came footsteps",
+        "The footsteps were slow, and the hallway was quiet"
+      ],
+      "why": "Two very short sentences read quickly and stop sharply, which builds tension. The longer sentences slow the pace and read more smoothly, so they do not create the same sudden effect.",
+      "clue": "Which option reads fastest and stops abruptly?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia writes about a race: \"I wanted it. I needed it. I chased it.\" What is the main effect of the repeated sentence pattern?",
+      "opts": [
+        "It builds emphasis on how strongly she wants to win",
+        "It slows the pace to create a calm, dreamy mood",
+        "It shocks the reader with a sudden, unexpected event",
+        "It shows the narrator is unsure about what she wants"
+      ],
+      "why": "Each sentence follows the same pattern, I, a verb, then it, and the repetition stresses how strong her desire is. The sentences are short, but the effect comes from the repeated pattern, not from a slow pace or a sudden shock.",
+      "clue": "Look at how each sentence is built, not only at its length."
+    }
+  },
+  "eng-genre-conventions-vic": {
+    "title": "Genre conventions",
+    "card": [
+      "A genre is a type of story, such as mystery, fantasy or science fiction. Stories in the same genre share familiar features called conventions.",
+      [
+        "Mystery",
+        "a puzzle to solve, with clues, suspects and a detective or other character who hunts for the truth."
+      ],
+      ["Fantasy", "an invented world, often with magic, strange creatures and a struggle between good and evil."],
+      [
+        "Science fiction",
+        "imagined science or technology, such as space travel or robots, often set in the future or on other planets."
+      ]
+    ],
+    "remember": "Conventions are the features readers expect from a genre, and they help us recognise it.",
+    "a": {
+      "q": "Which feature is a convention of the mystery genre?",
+      "opts": [
+        "A set of clues that point to a suspect",
+        "A kingdom ruled by a magical dragon",
+        "A spaceship travelling to a distant planet",
+        "A robot that learns to feel emotions"
+      ],
+      "why": "Clues and suspects are the puzzle at the heart of a mystery. The dragon belongs to fantasy, and the spaceship and robot belong to science fiction.",
+      "clue": "Think about what a detective needs to solve a case."
+    },
+    "b": {
+      "d": 2,
+      "q": "Kiri is reading a story set in a world with floating islands, a wizard school and spells. Which genre is it most likely to be?",
+      "opts": ["Fantasy", "Mystery", "Science fiction", "Realistic fiction"],
+      "why": "An invented world with magic and spells are conventions of fantasy. Science fiction relies on imagined science or technology, not magic, so it is the tempting wrong choice.",
+      "clue": "Look for an invented world and magic."
+    }
+  },
+  "eng-foreshadowing": {
+    "title": "Foreshadowing",
+    "card": [
+      "Foreshadowing is a hint early in a story about something that will happen later. The writer plants it before the reader knows it matters.",
+      "A hint can be an object, a line of dialogue, a setting detail or a mood. For example: \"The old bridge groaned as Tai crossed it.\" This may hint that the bridge will fail later.",
+      "Foreshadowing builds suspense, because the reader senses that something is coming and wants to find out what.",
+      "It also makes the ending feel earned. When the event arrives, the reader can look back and see the hints that led to it."
+    ],
+    "remember": "Foreshadowing plants an early hint of a later event, so readers feel suspense and the outcome feels earned.",
+    "a": {
+      "q": "Early in a story, Priya notices a crack spreading across the ice of the lake. Later the ice breaks under her brother. What is the crack an example of?",
+      "opts": [
+        "Foreshadowing, a hint of a later event",
+        "Flashback, a return to an earlier event",
+        "Setting, which is only a place description",
+        "Resolution, which settles the problem"
+      ],
+      "why": "The crack is planted before the ice breaks, so it hints at what will happen later. That is foreshadowing. It is not a flashback, because the story does not go back in time.",
+      "clue": "Does the detail point forward or backward in the story?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In chapter one, Mr Boyd locks a small box in his desk and tells Ellie never to touch it. In the last chapter, Ellie opens the box and finds the letter that solves the mystery. What is the main effect of the first scene?",
+      "opts": [
+        "It makes the ending feel earned, as the box was set up",
+        "It shows the reader events from Mr Boyd's past",
+        "It tells the reader the ending before it happens",
+        "It gives the reader a full description of the box"
+      ],
+      "why": "The box is introduced early, so the later discovery feels planned rather than random. The first scene does not reveal the ending, and it does not go back to the past. It only hints that the box will matter.",
+      "clue": "Think about how the reader feels when the box returns in the last chapter."
+    }
+  },
+  "eng-flashback": {
+    "title": "Flashback",
+    "card": [
+      "A flashback interrupts the main story to show an event from earlier. The story jumps back in time, then returns to the present.",
+      "Writers signal it in different ways, such as a change in tense, a memory, a dream or a line like \"Years before, ...\".",
+      "A flashback can reveal a character's past, such as why Omar fears water after a childhood accident.",
+      "It can also explain the present, by showing the earlier event that caused something happening now."
+    ],
+    "remember": "A flashback pauses the story to show an earlier event, which helps explain a character or the present.",
+    "a": {
+      "q": "A story follows Jo walking into a new school. The next paragraph shows Jo at her old school, saying goodbye to her friends. What technique is this?",
+      "opts": ["Flashback", "Foreshadowing", "Genre convention", "Cliffhanger"],
+      "why": "The story stops following Jo's first day and shows an earlier event, the goodbye. That is a flashback. Foreshadowing would hint at something still to come, not show the past.",
+      "clue": "Which way in time does the story jump?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Mara refuses to touch the piano in her aunt's house. The story then shows her at age seven, being scolded after breaking a piano at a recital. What does this flashback do?",
+      "opts": [
+        "Explains why Mara avoids the piano now",
+        "Hints that Mara will play the piano later",
+        "Introduces a new setting for the whole story",
+        "Shows what Mara's aunt will do next"
+      ],
+      "why": "The scene from Mara's childhood is an earlier event that explains her present behaviour. It does not point ahead to what she will do. It looks back to show the cause.",
+      "clue": "Ask what the earlier scene helps the reader understand about now."
+    }
+  },
+  "eng-representation-people-places-events": {
+    "title": "Representation of people, places and events",
+    "card": [
+      "Representation is the way a text shows a person, place or event. It is a version of that subject, not the whole truth.",
+      "Every text leaves things out and puts other things in focus. The writer or maker chooses which details, words and images to use.",
+      "The version also reflects when, where and by whom the text was made. A text made in another time or place, or by someone with a different view, can show the same subject differently.",
+      "To read a representation, ask what is included, what is left out, and who made the text and why."
+    ],
+    "remember": "A text gives one version of its subject, shaped by who made it, and when and where.",
+    "a": {
+      "q": "A tourist brochure shows only sunny beaches and smiling locals in a seaside town. What does this show about representation?",
+      "opts": [
+        "It gives one chosen version of the town",
+        "It gives the whole truth about the town",
+        "It shows the town as it is in every season",
+        "It shows how locals would describe the town"
+      ],
+      "why": "The brochure's makers chose which details to include, so it presents a version of the town. It is not the whole truth, because it leaves out other sides of the place.",
+      "clue": "Think about what the brochure chose to show and leave out."
+    },
+    "b": {
+      "d": 3,
+      "q": "A newspaper in 1920 and a website today both report on the same town flood. Their reports describe the event quite differently. What is the best reason?",
+      "opts": [
+        "Each report reflects the time it was made and who made it",
+        "The 1920 report is true, as it was written at the time",
+        "The website report is true, as it can use more sources",
+        "The flood changed, so the later report shows a new event"
+      ],
+      "why": "Representations are shaped by the time, place and maker of a text, so two texts about one event can differ. It is tempting to think one report is simply the true one, but each is a version that leaves things out, so neither is the whole truth.",
+      "clue": "Apart from the flood itself, what is different about the two reports?"
+    }
+  },
+  "eng-word-families-spelling": {
+    "title": "Word families for spelling",
+    "card": [
+      "Words that share a root belong to the same family. They share a base meaning and often the same spelling of that base.",
+      "Some letters are silent in one word but sound out in a relative. In sign the g is silent. In signal and signature you can hear it.",
+      "To spell a tricky word, think of a relative where the hidden letter is clear. Bomb has a silent b, and bombard lets you hear it.",
+      "Another example: muscle has a silent c, and muscular lets you hear it. Check that the relative really shares the meaning."
+    ],
+    "remember": "A relative of a word can show you letters you cannot hear.",
+    "a": {
+      "q": "Which pair shows a letter that is silent in one word but heard in its relative?",
+      "opts": ["Condemn and condemnation", "Condemn and condensation", "Knee and kneel", "Write and written"],
+      "why": "The n is silent in condemn but heard in condemnation, and the two share a meaning. Condensation has a clear n too, but it comes from a different root, so it is not a relative. In knee and kneel, and in write and written, the first letter is silent in both words.",
+      "clue": "Say both words in each pair aloud and listen for the same letter."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia is unsure how to spell solemn, because she cannot hear its last letter. Which word would best help her?",
+      "opts": ["solemnity", "solenoid", "insolence", "solidity"],
+      "why": "Solemnity is made from solemn and shares its meaning, and you can hear the n in it. Solenoid and insolence also have the letters s, o, l, e and n in a row, but they do not share solemn's meaning, so they are not in its family.",
+      "clue": "A true relative shares the meaning, not just some letters."
+    }
+  },
+  "eng-common-endings-academic-words": {
+    "title": "Common endings in academic words",
+    "card": [
+      [
+        "-tion",
+        "This is the most common of these sound-alike endings, as in education and equation. It often follows a verb ending in -ate or -ect, such as create and creation."
+      ],
+      [
+        "-sion",
+        "Verbs ending in -d or -de often take -sion, as in expand and expansion, or decide and decision. So do many ending in -se or -mit, as in revise and revision, or permit and permission."
+      ],
+      [
+        "-able and -ible",
+        "-able often joins a whole word, such as adapt and adaptable. -ible often joins a stem that is not a word alone, such as visible and edible."
+      ],
+      [
+        "-ance and -ence",
+        "No firm rule covers these, so learn each word. A related -ant or -ent word can help: important gives importance, and evident gives evidence."
+      ]
+    ],
+    "remember": "Start from the verb or a related word to pick the ending, and learn the exceptions.",
+    "a": {
+      "q": "Which spelling of this science word is correct?",
+      "opts": ["evaporation", "evaporasion", "evaporatian", "evaporacion"],
+      "why": "The verb evaporate ends in -ate, and verbs ending in -ate often take -tion, so it gives evaporation. The -sion ending more often follows verbs ending in -d, -de, -se or -mit, such as decide, so it does not fit here.",
+      "clue": "Start from the verb evaporate."
+    },
+    "b": {
+      "d": 3,
+      "q": "A Year 8 science report says a metal is adapt___ to hot places. Which choice is correct, and why?",
+      "opts": [
+        "adaptable, because adapt is a whole word",
+        "adaptible, because adapt is a whole word",
+        "adaptable, because the stem is not a word",
+        "adaptible, because the stem is not a word"
+      ],
+      "why": "Adapt is a whole word, and -able often joins a whole word, so adaptable is correct. The -ible ending more often joins a stem that cannot stand alone, such as vis in visible, which does not describe adapt.",
+      "clue": "Can adapt stand alone as a word?"
+    }
+  },
+  "eng-quotations-can-be-repurposed": {
+    "title": "How quotations can be repurposed",
+    "card": [
+      "A quotation is words taken from a longer text. When it is cut out, the words around it are lost.",
+      "Those lost words can change the meaning. A writer can leave out a \"but\" or a joke, so the quotation says something the speaker did not mean.",
+      "Example: a coach says the team played badly in the first half, but fought back to win. A headline that quotes only \"played badly\" gives a different message.",
+      "To check a quotation, find the original source. Ask who said it, when and why, and what came just before and after."
+    ],
+    "remember": "A quotation can change meaning when its context is cut away, so find the original.",
+    "a": {
+      "q": "Why can a quotation mislead a reader?",
+      "opts": [
+        "Cutting it out removes the words that shaped its meaning",
+        "Quotations always contain facts that are not true",
+        "Quotations are written by people who want to deceive",
+        "Short quotations are always harder to understand"
+      ],
+      "why": "The words before and after a quotation can change what it means. Taking it out removes them. Quotations are not always false or deceptive: many are accurate, and the problem is the missing context.",
+      "clue": "Think about what is left behind when words are cut out."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi tells a reporter he found the new bus timetable confusing at first, but now likes it. A poster quotes him saying only \"confusing at first\". What is the best way to check this poster?",
+      "opts": [
+        "Find the full interview to see what Ravi said around it",
+        "Count how many words are in the quotation on the poster",
+        "Ask whether the poster uses quotation marks correctly",
+        "Check whether the poster has a picture of Ravi on it"
+      ],
+      "why": "The full interview shows that Ravi went on to say he liked the timetable, so the poster changes his view. Correct quotation marks do not prove the words are used fairly, because the missing part is the problem.",
+      "clue": "What would show the words that were left out?"
+    }
+  },
+  "eng-problem-solution-compare-contrast": {
+    "title": "Problem-solution and compare-contrast structures",
+    "card": [
+      [
+        "Problem-solution",
+        "The writer first explains a problem and why it matters, then sets out one or more solutions. Words such as issue, because and as a result often signal it."
+      ],
+      [
+        "Compare-contrast",
+        "The writer looks at the likenesses (compare) and the differences (contrast) between two things. Words such as similarly, however and whereas often signal it."
+      ],
+      [
+        "Point by point",
+        "takes one point, such as cost, and covers both things before moving to the next point. A block structure instead covers all of one thing, then all of the other."
+      ],
+      "A structure shapes how a reader follows the ideas. A problem-solution text leads towards a fix. A compare-contrast text helps a reader weigh two things against each other."
+    ],
+    "remember": "Problem-solution moves from a problem to its fixes. Compare-contrast weighs two things, point by point or in blocks.",
+    "a": {
+      "q": "A paragraph begins: Many students arrive at school tired. It then suggests a later start time and a rule about screens at night. Which structure is it?",
+      "opts": [
+        "Problem-solution, from a problem to its fixes",
+        "Compare-contrast, two start times side by side",
+        "Compare-contrast, screens weighed against sleep",
+        "Problem-solution, from fixes back to a problem"
+      ],
+      "why": "The paragraph names a problem first, tired students, and then offers ways to fix it. That is problem-solution in its usual order. The fixes come after the problem, not before it, and the writer is not weighing two things against each other.",
+      "clue": "What does the paragraph start with, and what follows?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A writer compares trains and buses. One paragraph covers the cost of both, the next the comfort of both, then the speed of both. How is it organised?",
+      "opts": [
+        "Compare-contrast, point by point",
+        "Compare-contrast, in two blocks",
+        "Problem-solution, with several solutions",
+        "Problem-solution, one problem per paragraph"
+      ],
+      "why": "Each paragraph takes one point and covers both trains and buses before moving on. That is compare-contrast, point by point. A block structure would cover everything about trains first, then everything about buses.",
+      "clue": "Does each paragraph cover one thing, or one point for both things?"
+    }
+  },
+  "eng-questioning-text": {
+    "title": "Questioning a text",
+    "card": [
+      "Evaluating a text means asking questions about it before you accept its ideas. A text can be popular or well made and still be one-sided or wrong.",
+      ["Who", "Who made the text? Does the author know the topic, and could they gain from your agreeing?"],
+      ["Why", "Why was it made: to inform, to persuade or to sell something? The purpose shapes what is included."],
+      [
+        "Evidence",
+        "What evidence does it give, and can it be checked by someone else? Also ask what it leaves out, such as other views or facts that do not suit its argument."
+      ]
+    ],
+    "remember": "Ask who made a text, why, what evidence it gives and what it leaves out.",
+    "a": {
+      "q": "A shoe company's website says its own trail shoes are the best in Australia. It gives no test results. Which question best tests whether the claim is true?",
+      "opts": [
+        "Has anyone outside the company tested the shoes?",
+        "Is the website well designed and easy to use?",
+        "Do many people visit the website each day?",
+        "Do other websites also sell trail shoes?"
+      ],
+      "why": "The company gains if you agree, and it gives no proof. Tests by someone outside the company would be evidence that others can check. A well-designed or popular website can still make a claim that is false.",
+      "clue": "Who could check the claim without gaining from it?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi reads a council leaflet. It says a new skate park will make the town safer, and it quotes only residents who support the park. Which question points to the main weakness in the leaflet?",
+      "opts": [
+        "What do residents who oppose the park think?",
+        "Which council team produced the leaflet?",
+        "How many residents does the leaflet quote?",
+        "Is the leaflet written in clear, simple words?"
+      ],
+      "why": "The leaflet gives only one side, so the views of people against the park are missing. Asking how many residents it quotes is tempting, but more quotes from supporters would still leave out the other side. The leaflet already shows it comes from the council.",
+      "clue": "Whose views does the leaflet not show?"
+    }
+  },
+  "eng-persuasive-techniques-2": {
+    "title": "Persuasive techniques",
+    "card": [
+      [
+        "Rhetorical question",
+        "a question asked for effect, not for an answer. It makes the reader think the answer is obvious, such as \"Who wants to swim in a dirty river?\""
+      ],
+      [
+        "Inclusive language",
+        "words such as we, us and our. They place the writer and reader on the same side, such as \"We can keep our beaches clean.\""
+      ],
+      [
+        "Emotive words",
+        "words chosen to stir a feeling, such as \"heartbreaking\" or \"disgusting\". They make the reader feel, not only think."
+      ],
+      [
+        "Repetition and expert opinion",
+        "Repetition says a word or phrase again to make it stick. Expert opinion names a person with knowledge of the topic, such as a doctor, so the claim seems more trustworthy."
+      ]
+    ],
+    "remember": "Persuasive techniques work on the reader's thinking, feelings and trust to win them over.",
+    "a": {
+      "q": "A flyer says: \"Together, we can make our town safer.\" Which technique does this show?",
+      "opts": ["Inclusive language", "Rhetorical question", "Repetition", "Expert opinion"],
+      "why": "The words together, we and our place the writer and reader on the same side, which is inclusive language. It is not a rhetorical question because nothing is asked.",
+      "clue": "Look at the small words that mean the writer and reader together."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia writes in a school newsletter that Dr Lee, a dentist for 20 years, says fizzy drinks harm teeth. Which technique mainly makes her claim seem believable?",
+      "opts": ["Expert opinion", "Emotive words", "Inclusive language", "Rhetorical question"],
+      "why": "Naming Dr Lee and her 20 years as a dentist shows she has knowledge, so readers trust the claim. Nothing in Mia's sentence is chosen to stir a feeling, so emotive words are not the cause.",
+      "clue": "Who is speaking, and why should we trust them?"
+    }
+  },
+  "eng-news-report-structure": {
+    "title": "News report structure",
+    "card": [
+      [
+        "Headline",
+        "a short title that names the story. It is often in the present tense, such as \"Fire closes town library\"."
+      ],
+      [
+        "Lead",
+        "the first paragraph. It gives the most important facts and answers who, what, when, where, why and how."
+      ],
+      [
+        "Body",
+        "the paragraphs after the lead. They add detail, such as quotes and background, with the most important detail first and the least important last."
+      ],
+      "This is called the inverted pyramid. A reader who stops after the lead still knows the main story, and an editor can cut the last paragraphs without losing the main facts."
+    ],
+    "remember": "Put the main facts first, then add detail from most to least important.",
+    "a": {
+      "q": "Why does a news report put the main facts in the first paragraph?",
+      "opts": [
+        "A reader who stops early still gets the main story",
+        "It lets the writer give their opinion on the event",
+        "It makes the story follow the order events happened",
+        "It lets the report build up suspense for the reader"
+      ],
+      "why": "The lead holds the most important facts, so a reader who stops early still knows what happened. Telling events in time order is a different structure, and it can bury the main facts near the end.",
+      "clue": "Think about a reader who only has time for one paragraph."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya is writing a report on a flooded school oval in Bendigo. Which sentence belongs in her lead?",
+      "opts": [
+        "Heavy rain flooded the school oval on Monday morning",
+        "The oval was built in 1962 and is often used for sport",
+        "The principal said the clean-up would take most of a week",
+        "Students got a free day while workers pumped out water"
+      ],
+      "why": "The sentence about heavy rain flooding the oval on Monday morning answers what, where and when, so it states the main fact of the story. The others are detail that suits the body: the oval's history, the principal's quote and a smaller result. The quote is tempting, but a quote adds detail and does not state the main event.",
+      "clue": "Which sentence tells the reader what happened, where and when?"
+    }
+  },
+  "eng-revising-clarity-coherence": {
+    "title": "Revising for clarity and coherence",
+    "card": [
+      "Revising means looking again at a draft to make it better. It is different from proofreading, which fixes spelling and punctuation.",
+      [
+        "Order",
+        "check that ideas follow a logical order. If a point seems to jump in from nowhere, move it to where it fits."
+      ],
+      [
+        "Links",
+        "check that paragraphs link. Linking words and phrases such as \"however\", \"as a result\" and \"in the same way\" show how one idea connects to the next."
+      ],
+      [
+        "Clarity",
+        "check that each sentence says exactly what is meant. Cut extra words, swap vague words such as \"stuff\" for exact ones, and fix sentences that could be read two ways."
+      ]
+    ],
+    "remember": "Revise by checking order, links between paragraphs, and exact meaning.",
+    "a": {
+      "q": "Which action is revising for coherence, not just proofreading?",
+      "opts": [
+        "Moving a paragraph so the ideas follow a logical order",
+        "Correcting a misspelt word in the second paragraph",
+        "Adding a missing full stop at the end of a sentence",
+        "Changing a lower case letter to a capital after a full stop"
+      ],
+      "why": "Coherence is about how ideas fit together, so moving a paragraph into a logical order is revising. The other three fix spelling or punctuation, which is proofreading.",
+      "clue": "Which change affects how the ideas connect, not the spelling?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Leo's draft says: \"Our school needs more bins. Litter is everywhere.\" Which revision makes his writing clearer?",
+      "opts": [
+        "Our school needs more bins because litter covers the yard",
+        "Our school needs more bins and stuff for the yard area",
+        "Our school needs bins. Litter. More bins would help",
+        "Our school needs more bins, and bins are needed here too"
+      ],
+      "why": "Joining the sentences with \"because\" links the need for bins to its reason, and \"covers the yard\" is more exact than \"everywhere\". The option with \"stuff\" adds a vague word, the choppy option breaks the ideas apart with no links, and the option that says bins twice only repeats itself.",
+      "clue": "Look for the option that links the ideas and uses exact words."
+    }
+  },
+  "eng-language-that-builds-rapport": {
+    "title": "Language that builds rapport",
+    "card": [
+      "Rapport is a feeling of connection and trust between a speaker and an audience. Speakers build it so the audience is more willing to listen and agree.",
+      [
+        "Inclusive pronouns",
+        "Words such as we, us and our put the speaker and audience on the same side. \"We all want a safer street\" treats the audience as partners, not as outsiders."
+      ],
+      [
+        "Shared humour and tone",
+        "A joke about something the audience knows, or a warm, friendly tone, shows the speaker is like them. It can relax listeners and make the speaker seem likeable."
+      ],
+      [
+        "Agreement",
+        "A speaker can show agreement with the audience's views, such as \"You're right to be worried.\" This tells listeners they are understood, which can make them more open to what follows."
+      ]
+    ],
+    "remember": "Rapport language makes the audience feel the speaker is on their side.",
+    "a": {
+      "q": "A principal tells students that we have all sat through a long assembly, so she will keep this one short. Which technique builds rapport here?",
+      "opts": [
+        "Inclusive pronoun and a shared experience",
+        "Allusion to a well-known story",
+        "Emotive words that stir anger",
+        "A formal tone that keeps distance"
+      ],
+      "why": "The word we and the shared experience of long assemblies place the principal alongside the students. The formal option is wrong because it would keep a distance rather than close it.",
+      "clue": "Look at who the speaker says is in the same situation."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia, a swimming coach in Geelong, begins a talk by telling her swimmers they are right that early mornings are tough, and admits she groans at her own alarm too. What effect does this most likely have on the swimmers?",
+      "opts": [
+        "They feel understood, so they may listen more openly",
+        "They feel they are being told off for complaining",
+        "They feel the coach is hiding her own opinion",
+        "They feel the coach is far above them in rank"
+      ],
+      "why": "Mia agrees with the swimmers and shares a small, human admission. This shows she understands them, which can make them more open to her message. The telling-off option is wrong because she does not criticise them.",
+      "clue": "Think about how agreement and a shared feeling make listeners feel."
+    }
+  },
+  "eng-adapting-text-structure": {
+    "title": "Adapting a text structure",
+    "card": [
+      "Most text types have a usual structure. A persuasive text often has an opening claim, reasons and a conclusion. A report often has headings and facts in order.",
+      "Writers sometimes bend that structure. They might tell an argument as a story, or present a report as a list of steps or a diary.",
+      "The bend is done on purpose. It can surprise readers, hold their attention or make an idea easier to feel.",
+      "The text still has its original purpose. A persuasive text told as a story still tries to change what the reader thinks."
+    ],
+    "remember": "Bending a usual structure is a choice made to surprise or engage readers, while the purpose stays.",
+    "a": {
+      "q": "A writer wants to persuade readers to save water, so she writes a short story about a dry town. What has she done?",
+      "opts": [
+        "Adapted a persuasive structure by using a story",
+        "Changed the purpose from persuading to entertaining",
+        "Followed the usual structure of a persuasive text",
+        "Written a report by listing facts under headings"
+      ],
+      "why": "She has bent the usual persuasive structure by telling the argument as a story. The purpose is still to persuade, so saying she changed it to entertaining is wrong.",
+      "clue": "Ask what form the argument is told in, and what it still aims to do."
+    },
+    "b": {
+      "d": 3,
+      "q": "A council writes a report on a local creek as a list of ten rules the creek would give humans if it could speak. Why might it adapt the report this way?",
+      "opts": [
+        "To engage readers by presenting facts in a surprising form",
+        "To avoid giving readers any facts about the creek",
+        "To change the text into a narrative with a plot",
+        "To follow the usual structure so readers expect it"
+      ],
+      "why": "A report told as a list of rules from the creek is an unusual form, so it can surprise and engage readers while still giving information. It is not a narrative, because it has no plot, and it is not the usual report structure.",
+      "clue": "The form is unusual, but the text still informs."
+    }
+  },
+  "eng-condensing-information-with-noun": {
+    "title": "Condensing information with noun groups",
+    "card": [
+      "A noun group is a noun plus the words that describe it. It can be short, such as the dog, or long, such as the loud, scruffy dog from next door.",
+      "Writers add describing words before the noun and extra detail after it. One long noun group can hold facts that would otherwise need a whole sentence.",
+      "Nominalisation turns a verb or an adjective into a noun. Grow becomes growth, and decide becomes decision. This lets an action or quality be treated as a thing.",
+      "Compare: Online shopping has grown quickly. With a nominalised noun group it becomes the rapid growth of online shopping. The idea now fits inside one noun group, so it can be the subject of a sentence. Formal and academic writing uses this often."
+    ],
+    "remember": "Noun groups and nominalisation pack more information into fewer words.",
+    "a": {
+      "q": "Which choice shows nominalisation, turning a verb into a noun?",
+      "opts": [
+        "The council decided becomes the council's decision",
+        "The council decided becomes the council quickly decided",
+        "The council decided becomes the council had decided",
+        "The council decided becomes the council did decide"
+      ],
+      "why": "Decided is a verb, and decision is the noun made from it. The other options only change the verb or add an adverb, so the action is not turned into a thing.",
+      "clue": "Look for the option where the action becomes a noun."
+    },
+    "b": {
+      "d": 3,
+      "q": "Kiran rewrites: Cities have expanded fast, and this harms the bush around them. Which rewrite condenses the information best into one noun group as the subject?",
+      "opts": [
+        "The fast expansion of cities harms the surrounding bush",
+        "Cities expand fast and so they harm the surrounding bush",
+        "Cities have expanded quickly and the bush is being harmed",
+        "The bush is harmed because the cities expanded so quickly"
+      ],
+      "why": "Expansion is made from the verb expand, and the whole idea sits in one noun group as the subject. In the other options the action is still a verb, so the information is not packed into one noun group.",
+      "clue": "Find the option that starts with a noun group built from the verb expand."
+    }
+  },
+  "eng-reference-words-cohesion": {
+    "title": "Reference words and cohesion",
+    "card": [
+      "Cohesion is how the sentences in a text link together so it reads as one piece. A reference word helps by pointing back to something already said.",
+      "Words such as this, that, these, those, such, it and they stand in for an earlier idea. Writers use them so they do not repeat the same words. Example: \"The council banned plastic bags. This reduced litter.\"",
+      "Reference words need a clear target. In \"Tom met Ravi, and he laughed\", the word he could mean either boy, so the link is unclear.",
+      "The former and the latter point back to two things named earlier. The former is the first one named, and the latter is the second one named."
+    ],
+    "remember": "A reference word points back to an earlier idea, so sentences link without repeats, but the target must be clear.",
+    "a": {
+      "q": "Read: \"Many schools now start later. This helps tired teenagers.\" What does the word This do?",
+      "opts": [
+        "Points back to the schools starting later",
+        "Adds a new fact about teenagers",
+        "Introduces a new topic for the text",
+        "Repeats the first sentence word for word"
+      ],
+      "why": "This points back to the idea in the first sentence, the schools starting later, so the two sentences link. The fact about teenagers comes from the word helps, not from This, which only stands in for the earlier idea.",
+      "clue": "Ask what idea the word sends you back to."
+    },
+    "b": {
+      "d": 3,
+      "q": "Read: \"Mia met Zoe, and she gave her a gift.\" What is the main problem with the reference words?",
+      "opts": [
+        "She and her could each point to either girl",
+        "The word and should be replaced with a full stop",
+        "There are no reference words to link the sentence",
+        "She and her point to the gift, not to a person"
+      ],
+      "why": "Both she and her could mean Mia or Zoe, so a reader cannot tell who gave the gift to whom. The sentence does have reference words, so saying it has none is wrong.",
+      "clue": "Check whether each pointing word has one clear target."
+    }
+  },
+  "eng-abstract-nouns-that-summarise": {
+    "title": "Abstract nouns that summarise",
+    "card": [
+      "An abstract noun names an idea, not a physical thing. Examples are decision, failure, injustice and change.",
+      "A writer can use one to sum up a whole idea from the sentence before. Example: The council closed the pool without asking residents. This decision angered many families.",
+      "In that example, this decision stands for the whole act of closing the pool. The writer does not need to repeat it.",
+      "The noun also adds a view. Calling the closure an injustice judges it, while calling it a decision only names it. The new sentence can then build on the idea."
+    ],
+    "remember": "An abstract noun packs an earlier idea into one phrase and can add the writer's view.",
+    "a": {
+      "q": "Which phrase best fills the blank to sum up the idea of the first sentence? The school banned phones from every classroom. ___ made some students frustrated.",
+      "opts": ["This ban", "The students", "Every classroom", "The school's phones"],
+      "why": "This ban is built on the abstract noun ban, which sums up the whole act of banning phones from classrooms. Every classroom and the school's phones only name things from the first sentence, and the students names people, so none of them sums up the action.",
+      "clue": "Which phrase names the whole action, not a person, place or object?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi writes: The factory dumped waste into the creek for years. This negligence killed the fish. What does this negligence do in the second sentence?",
+      "opts": [
+        "Sums up the dumping and judges it as careless",
+        "Names the creek that the fish lived in",
+        "Repeats the first sentence in the same words",
+        "Describes the fish before they died"
+      ],
+      "why": "This negligence points back to the whole act of dumping waste and adds a judgement that it was careless. It does not repeat the sentence word for word, because it packs the idea into a new phrase.",
+      "clue": "Look at what the noun refers back to and what opinion it adds."
+    }
+  },
+  "eng-varying-sentence-length-vic": {
+    "title": "Varying sentence length",
+    "card": [
+      "A passage of sentences all the same length sounds flat. Mixing short and long sentences gives it rhythm and keeps a reader interested.",
+      [
+        "Long sentence",
+        "it can carry detail, build a scene or follow a chain of thoughts. Example: a sentence that lists what the tide swallowed as it crept up a beach, item by item."
+      ],
+      [
+        "Short sentence",
+        "it hits quickly, so after several long sentences it makes the main point or a sudden turn stand out. Example: \"Then the lights went out.\""
+      ],
+      "Writers also vary how sentences begin, such as with a time word, an -ing word or the subject. This stops a run of sentences from sounding the same."
+    ],
+    "remember": "Mix long and short sentences and vary the openings. A short one after long ones makes a point stand out.",
+    "a": {
+      "q": "A writer uses three long, detailed sentences to describe a quiet street. Then comes a four-word sentence: \"A door slammed shut.\" What is the main effect of the short sentence?",
+      "opts": [
+        "It makes the sudden event stand out from the long sentences",
+        "It gives more detail about the street than the long ones did",
+        "It slows the pace so the reader can relax and settle",
+        "It joins the long sentences into one smooth, calm idea"
+      ],
+      "why": "After long sentences, a very short one is abrupt, so it draws attention to the sudden event. It adds no extra detail, and its quick, sharp rhythm does not slow the pace.",
+      "clue": "Think about how a short sentence sounds after three long ones."
+    },
+    "b": {
+      "d": 3,
+      "q": "Jess writes a passage of five sentences. Each is four words long and starts with \"I\", such as \"I woke up early.\" Which change would best fix the rhythm of this passage?",
+      "opts": [
+        "Join some sentences and start others with a different word",
+        "Make every sentence longer by adding the same linking word",
+        "Make every sentence even shorter so they are all quick",
+        "Keep every sentence the same length but change the topic"
+      ],
+      "why": "The passage is flat because every sentence is short and starts with \"I\". Joining some and changing the openings gives a mix of lengths and starts. Making them all longer or all shorter would keep the sameness.",
+      "clue": "The problem is sameness, in length and in how each sentence starts."
+    }
+  },
+  "eng-word-choice-mood": {
+    "title": "Word choice and mood",
+    "card": [
+      "Mood is the feeling a passage creates in the reader, such as gloomy, peaceful or tense. Writers build it mainly through the words they choose.",
+      "Words carry feelings beyond their basic meaning. \"Strolled\" and \"crept\" both mean moved, but \"strolled\" feels relaxed and \"crept\" feels secretive.",
+      "A group of words with a similar feeling builds one mood. Words such as damp, grey, hollow and silent together build a gloomy mood.",
+      "The kinds of words a writer tends to choose over many texts also shape their style, such as plain or ornate, formal or casual."
+    ],
+    "remember": "Words carry feelings, and a group of similar ones builds the mood.",
+    "a": {
+      "q": "Which sentence builds a peaceful mood mainly through its word choice?",
+      "opts": [
+        "Soft light drifted over the calm, quiet lake",
+        "Cold shadows lurked behind the rotting fence",
+        "The siren shrieked as the crowd scrambled away",
+        "A single door slammed and everyone froze"
+      ],
+      "why": "Soft, drifted, calm and quiet all carry a gentle, restful feeling. The other options use words such as lurked, rotting, shrieked and froze, which build gloomy or tense moods.",
+      "clue": "Look for the sentence whose words all feel gentle."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya describes a corridor as narrow and airless, with echoing footsteps behind a girl who clutches her bag. Which mood do these word choices mainly build?",
+      "opts": [
+        "Tense, through words of confinement and pursuit",
+        "Peaceful, through words of space and calm",
+        "Gloomy, through words of rain and decay",
+        "Joyful, through words of movement and light"
+      ],
+      "why": "Narrow, airless, echoing and clutching suggest confinement and being followed, which builds tension. Gloomy is the most tempting wrong answer, but nothing in the words points to decay or sadness.",
+      "clue": "Ask what the words suggest is happening to her."
+    }
+  },
+  "eng-quotation-marks-ellipses-square": {
+    "title": "Quotation marks, ellipses and square brackets",
+    "card": [
+      [
+        "Quotation marks",
+        "They go around a writer's exact words. Anything you cut or change inside them must be marked, using the signs below."
+      ],
+      [
+        "Ellipsis",
+        "Three dots (...) show that words have been left out of a quotation. Use one only when you cut part of the original, so the quotation stays honest."
+      ],
+      [
+        "Square brackets",
+        "They show words you have added or changed so a quotation fits your sentence. For example, [she] can replace \"Mia\" when the quotation is used in your own sentence."
+      ],
+      "Original: \"The old dog slept by the fire all afternoon.\" Quoted: The narrator says the dog \"slept ... all afternoon\". The dots show that \"by the fire\" was cut."
+    ],
+    "remember": "Quotation marks keep exact words, an ellipsis marks a cut, and square brackets mark words added or changed.",
+    "a": {
+      "q": "A student writes: The poet says the sea \"roared ... against the cliffs\". What do the three dots show?",
+      "opts": [
+        "Some words were left out of the quotation",
+        "Some words were added to the quotation",
+        "The poet's sentence was left unfinished",
+        "The poet paused while speaking"
+      ],
+      "why": "An ellipsis inside a quotation shows that words were cut from the original. Added words are shown with square brackets, not dots, so that option mixes up the two marks.",
+      "clue": "Think about what each mark tells a reader about the original."
+    },
+    "b": {
+      "d": 3,
+      "q": "Jai said: \"I was terrified when the lights went out.\" A student writes: Jai admits that ___. Which quotation fills the gap honestly?",
+      "opts": [
+        "\"[he] was terrified when the lights went out\"",
+        "\"he was terrified when the lights went out\"",
+        "\"... he was terrified when the lights went out\"",
+        "\"I was terrified [when] the lights went out\""
+      ],
+      "why": "Jai's word I must become he to fit the student's sentence, and square brackets show that a word was changed. Writing he inside the quotation marks with no brackets hides the change. An ellipsis marks a cut, not a swapped word, so the dots do not make that version honest.",
+      "clue": "The word I has to change. Which mark shows a change?"
+    }
+  },
+  "eng-citing-sources": {
+    "title": "Citing sources",
+    "card": [
+      "A citation names where a writer's information or ideas came from. It gives credit to the person who made them.",
+      [
+        "In the text",
+        "a short note placed beside the borrowed idea, usually the author's name and the year, such as (Nguyen, 2021)."
+      ],
+      [
+        "Reference list",
+        "a list at the end of the work. Each entry gives the author, the title and the date, and sometimes more details such as the publisher or web address."
+      ],
+      "Citing lets readers check the source for themselves. A writer who uses someone else's work without naming it is passing it off as their own."
+    ],
+    "remember": "Cite to give credit and to let readers find the source.",
+    "a": {
+      "q": "Why does a writer put a reference list at the end of an essay?",
+      "opts": [
+        "So readers can find and check the sources used",
+        "So the essay reaches the required word count",
+        "So the writer can avoid using quotation marks",
+        "So the teacher knows how long research took"
+      ],
+      "why": "A reference list gives the author, title and date of each source, so a reader can find it and check it. It does not change the length of the work or replace marking the borrowed words in the text.",
+      "clue": "Think about what a reader can do with the list."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's report on coral reefs uses a statistic from an article by Tom Hale, published in 2022. She puts the statistic in her own words. What should she do?",
+      "opts": [
+        "Add (Hale, 2022) in the text and list the article at the end",
+        "Add nothing, because the sentence is in her own words",
+        "List the article at the end only if she copied it exactly",
+        "Add (Priya, 2022) in the text so readers know who wrote it"
+      ],
+      "why": "The idea and statistic came from Hale, so Priya needs to credit him, even though the wording is hers. She names him in the text and gives full details in the reference list. Rewording does not remove the need to cite.",
+      "clue": "Does changing the words change who the idea came from?"
+    }
+  },
+  "eng-lighting-colour-film": {
+    "title": "Lighting and colour in film",
+    "card": [
+      "Filmmakers choose how a scene is lit. Lighting can tell a viewer how to feel about a place or a character.",
+      [
+        "Bright, even light",
+        "Light that is strong and spread evenly, with few dark patches. It tends to feel safe, open and honest, because nothing is hidden."
+      ],
+      [
+        "Dim light, strong shadows",
+        "Little light, with deep dark areas beside bright ones. It tends to create mystery or threat, because the viewer cannot see everything."
+      ],
+      "Colour works with light. Warm colours such as soft gold can feel cosy. Cold colours such as pale blue can feel distant or uneasy. Viewers may read these differently, so look at the whole scene."
+    ],
+    "remember": "Bright, even light tends to feel safe and open. Dim light with shadows tends to feel mysterious or threatening.",
+    "a": {
+      "q": "A film shows a child walking down a hallway. Most of it is dark, and one lamp throws long shadows on the walls. What effect does this lighting most likely have?",
+      "opts": [
+        "It creates mystery or a sense of threat",
+        "It makes the hallway feel safe and open",
+        "It shows that nothing is hidden from the viewer",
+        "It makes the scene feel cheerful and welcoming"
+      ],
+      "why": "Dim light with strong shadows hides parts of the space, so the viewer wonders what is there. That builds mystery or threat. Bright, even light is the kind that feels safe and open.",
+      "clue": "Think about what the dark areas hide from the viewer."
+    },
+    "b": {
+      "d": 3,
+      "q": "In one film, Mia arrives at her new school in clear, even morning light, and the corridors are bright and soft gold. Later, her classmate Leo waits in a room lit by a single lamp, with half his face in shadow. Which reading of the lighting is most reasonable?",
+      "opts": [
+        "Mia's scenes feel safe, Leo seems mysterious or a threat",
+        "Mia's scenes feel threatening, Leo seems open and honest",
+        "Both scenes feel safe, as lighting has no effect on mood",
+        "Both scenes feel mysterious, as colour outweighs light"
+      ],
+      "why": "Clear, even, warm light tends to feel safe and open, so Mia's arrival feels welcoming. Leo's single lamp and half-hidden face create shadows, which suggest mystery or threat. The reversed reading mixes up the two effects.",
+      "clue": "Match each lighting style to the feeling it tends to create."
+    }
+  },
+  "eng-soundtrack-silence": {
+    "title": "Soundtrack and silence",
+    "card": [
+      "A soundtrack is the music and sound that plays under a film or show. It can tell the audience how to feel before a character says a word.",
+      "Slow, soft music can make a scene feel sad or calm. Fast, loud music with a pounding beat can build excitement or fear.",
+      "Silence is a choice too. When the sound suddenly cuts out, the audience can feel shock or tension.",
+      "Filmmakers often use a quiet moment before a loud one. The contrast makes the loud sound hit harder."
+    ],
+    "remember": "Music guides feelings. A sudden silence can make a moment shocking or tense.",
+    "a": {
+      "q": "In a short film, a girl waits at a bus stop while cheerful music plays. The music stops dead as a dark car pulls up. What effect does the silence most likely have?",
+      "opts": [
+        "It creates tension and warns that something is wrong",
+        "It shows that the girl feels calm and safe",
+        "It tells the audience the scene is over",
+        "It shows that the film has run out of music"
+      ],
+      "why": "A sudden silence after cheerful music makes the audience uneasy, so it builds tension. It does not signal calm, because the change from sound to quiet is what unsettles the audience.",
+      "clue": "Think about how you feel when a noise suddenly stops."
+    },
+    "b": {
+      "d": 2,
+      "q": "A film shows a boy walking alone through an empty school at night. Slow, low notes play and get faster and louder as he nears a door. What is the soundtrack most likely signalling?",
+      "opts": ["Growing fear or suspense", "Relaxed happiness", "Quiet sadness about loss", "A funny moment about to happen"],
+      "why": "Low notes that speed up and grow louder build fear and suspense as the boy nears the door. Sadness would usually be shown with slow, soft music that does not build.",
+      "clue": "Ask what faster, louder music does to an audience's feelings."
+    }
+  },
+  "eng-stereotypes-complex-characters": {
+    "title": "Stereotypes and complex characters",
+    "card": [
+      [
+        "Stereotype",
+        "A stereotype reduces a whole group to a few fixed traits, as if every member were the same. The traits are often simple and one-sided."
+      ],
+      [
+        "Complex character",
+        "A complex character has mixed qualities, such as kindness and stubbornness together. They have their own reasons and can change as the story goes on."
+      ],
+      "Suppose a story shows every teenager as lazy and glued to a phone. That is a stereotype. A teenager who is shy, funny, hard-working and changes after a setback is complex.",
+      "Complex characters usually make a fairer representation, because they show people as individuals and not as a single type. Readers can ask: is this character only one trait, or a whole person?"
+    ],
+    "remember": "A stereotype is a fixed, simple type. A complex character is mixed and can change.",
+    "a": {
+      "q": "Which description of a character is most likely to be a stereotype?",
+      "opts": [
+        "A farmer who is only ever grumpy and old-fashioned",
+        "A farmer who is generous but sometimes too proud",
+        "A farmer who doubts her plans and then changes them",
+        "A farmer who fears drought yet enjoys the hard work"
+      ],
+      "why": "The first farmer is reduced to two fixed traits, and nothing shows reasons or change. The others mix qualities or show change, so they are more complex.",
+      "clue": "Look for the character who is only one or two fixed traits."
+    },
+    "b": {
+      "d": 3,
+      "q": "A novel shows every city teenager as selfish. One chapter follows Dan, who is selfish at first, then helps a neighbour and begins to see things differently. What does Dan's chapter do to the novel's representation?",
+      "opts": [
+        "It makes one character complex, so the view is less fixed",
+        "It shows that the novel has no stereotypes at all",
+        "It turns Dan into a stereotype of kind teenagers",
+        "It makes the representation fairer for every teenager"
+      ],
+      "why": "Dan has mixed qualities and changes, so he is complex, and that works against a fixed view. It does not remove the stereotype from the rest of the novel, and one character cannot make the whole representation fair.",
+      "clue": "Dan changes, but the other teenagers in the novel do not."
+    }
+  },
+  "eng-representations-place-by-aboriginal": {
+    "title": "Representations of place as Country",
+    "card": [
+      "Many Aboriginal and Torres Strait Islander authors represent place as Country. Country is the land, waters and skies a people belong to, with its plants, animals, stories and ancestors.",
+      "In these texts, a place is often more than a setting. Writers may show Country as living, as family, or as something people care for and are cared for by.",
+      "Country can hold history. A creek or a hill may carry stories of ancestors, of events, or of loss and survival since colonisation.",
+      "Writers can show these ties by naming places in their own languages, through personification, and with detail that links a place to family over generations. Each author writes from their own people and Country, so representations differ."
+    ],
+    "remember": "In many of these texts, place is Country, tied to people, culture and history over time.",
+    "a": {
+      "q": "When an Aboriginal or Torres Strait Islander author represents a place as Country, what does this usually mean?",
+      "opts": [
+        "The place is tied to people, culture and history",
+        "The place is a backdrop that sets a story's mood",
+        "The place is land valued mainly for what it earns",
+        "The place is wild land that no people belong to"
+      ],
+      "why": "Country is the land, waters and skies a people belong to, so a place written as Country is tied to people, culture and history. A backdrop only sets a mood, while Country is shown as more than a setting.",
+      "clue": "Think about what Country includes besides the land itself."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a story, a narrator walks a beach with her uncle. He names each rock in their language and tells her who in the family fished there. How does the author represent the beach?",
+      "opts": [
+        "As Country, linked to family and culture over time",
+        "As a quiet setting chosen to build a calm mood",
+        "As a place the family hopes to buy and develop",
+        "As a symbol of the narrator's fear of the sea"
+      ],
+      "why": "Naming the rocks in language and linking them to family who fished there ties the beach to culture and history across generations, which is how Country is often represented. The walk may feel calm, but the details do more than set a mood: they connect the place to people.",
+      "clue": "What do the names and the fishing stories connect the beach to?"
+    }
+  },
+  "eng-moral-positions-literature": {
+    "title": "Moral positions in literature",
+    "card": [
+      "A moral position is a view about what is right or wrong. A text can lead readers towards one without stating it outright.",
+      "Authors use devices to guide judgement. Positive or negative imagery, loaded word choices and the narrator's tone can make a choice seem good or bad.",
+      "For example, a character who is described with images of cold, dark and cruelty is likely to be judged harshly. One shown with warm light and gentle verbs is likely to win sympathy.",
+      "Readers can accept the values a text suggests, or question them. A reader might ask whose view is shown and whose is left out."
+    ],
+    "remember": "Devices and images can lead readers to judge choices, but readers can still question the text's values.",
+    "a": {
+      "q": "A story describes a mayor's decision to close a park with the words 'greedy', 'slammed shut' and 'iron gate'. What is the likely effect on readers?",
+      "opts": [
+        "They are led to judge the decision as wrong",
+        "They are led to judge the decision as right",
+        "They are led to feel the decision is unimportant",
+        "They are led to see the decision as a joke"
+      ],
+      "why": "The negative word choices and harsh imagery guide readers to disapprove of the mayor's choice. The opposite answer is tempting only if the words were warm or approving, and they are not.",
+      "clue": "Consider whether the words are positive or negative."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a novel, Ravi lies to protect a friend. The narrator calls him brave and describes his steady hands and the soft light around him. Which response shows a reader questioning the text's values?",
+      "opts": [
+        "Asking whether the text excuses lying too easily",
+        "Agreeing that Ravi is brave because the narrator says so",
+        "Noting that soft light creates a warm mood around Ravi",
+        "Admiring Ravi because the text makes him sympathetic"
+      ],
+      "why": "Asking whether the text excuses lying steps back from its guidance and challenges its values. The other options accept or describe how the text guides the reader, rather than questioning it.",
+      "clue": "Which reader pushes back rather than follows the narrator?"
+    }
+  },
+  "eng-allegory-vic": {
+    "title": "Allegory",
+    "card": [
+      "An allegory is a story with two levels. On the surface, things happen to characters. Underneath, the characters and events stand for ideas or real events.",
+      "George Orwell's novel Animal Farm (1945) is a well-known allegory. Farm animals drive out their farmer, but the story stands for the Russian Revolution and the rule that followed it.",
+      "In an allegory, the whole story carries the second meaning, not just one object or one line. Its main characters and events each have a match underneath.",
+      "Writers can use allegory to explore ideas such as power, greed or fairness, or to comment on real events indirectly. Readers work out what each part stands for and check that the meanings fit together."
+    ],
+    "remember": "An allegory tells one story on the surface and another underneath.",
+    "a": {
+      "q": "Which of these is an allegory?",
+      "opts": [
+        "A tale where two ant nests stand for warring countries",
+        "A tale where a red scarf returns at every sad moment",
+        "A tale with one line comparing a flooded river to a snake",
+        "A tale told by an ant who speaks directly to the reader"
+      ],
+      "why": "When two ant nests stand for warring countries, the whole story has a second meaning, which makes it an allegory. A scarf that returns is one object with a meaning, not a whole story that stands for something else.",
+      "clue": "Which tale has a second meaning running through the whole story?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi's story follows a lion who takes all the food in the forest, until the smaller animals join together and stop him. Ravi says it is about people standing up to an unfair ruler. What makes it an allegory?",
+      "opts": [
+        "The whole story stands for an idea about power",
+        "The lion is an animal that acts like a person",
+        "The forest is described with rich sense detail",
+        "The lion appears again at each important moment"
+      ],
+      "why": "The lion, the smaller animals and what happens to them all match a second meaning about standing up to unfair rulers, so the story works on two levels. Animals that act like people appear in many stories with no hidden meaning, so that alone does not make an allegory.",
+      "clue": "Is the hidden meaning in one detail, or do the characters and events all have a match?"
+    }
+  },
+  "eng-symbolism-literature-vic": {
+    "title": "Symbolism in literature",
+    "card": [
+      "A symbol is an object, character, colour or setting that stands for an idea. A dove can stand for peace, and a red rose can stand for love.",
+      "A symbol is still a real thing in the story. A dove is a bird on the page, and it also points to an idea beyond itself.",
+      "A symbol can gather meaning across a text. If a writer keeps returning to the same object, each appearance can add to what it stands for.",
+      "To read a symbol, ask what the thing is, where it appears, and what idea it seems to point to. Look for clues in the text that support your reading."
+    ],
+    "remember": "A symbol is a thing that stands for an idea, and its meaning can grow each time it returns.",
+    "a": {
+      "q": "Ravi longs to leave his small town for the city. In the opening, middle and closing scenes, he stops at the same locked gate at the town's edge. What idea does the gate most likely stand for?",
+      "opts": [
+        "Being held back from the life he wants",
+        "The freedom to choose his own path",
+        "His pride in the town he grew up in",
+        "His joy at starting a new journey"
+      ],
+      "why": "Ravi wants a life beyond the town, and the gate between him and the road out is locked each time he stands there. So it points to being held back. Freedom is the opposite, because a locked gate stops him from going where he wants.",
+      "clue": "Think about what Ravi wants and what a locked gate does."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a novel, Lena's grandmother's old teapot is on the table during a family fight, a house move and a reunion. It is always kept safe. What does the teapot most likely come to stand for?",
+      "opts": [
+        "A family bond that lasts through every change",
+        "The arguments that keep dividing the family",
+        "The family's wish to throw out the past",
+        "The family's wealth and costly belongings"
+      ],
+      "why": "The teapot returns at each major family event, including the reunion, and is always kept safe, so it gathers the meaning of a bond that survives change. The arguments are tempting, but they are only one of the scenes, and the teapot is protected through all of them.",
+      "clue": "Look at every scene it appears in, not just one."
+    }
+  },
+  "eng-aesthetic-qualities": {
+    "title": "Aesthetic qualities",
+    "card": [
+      "Aesthetic qualities are the features that make a text striking or beautiful to read, such as its rhythm, imagery and shape. They also add to what the text means.",
+      [
+        "Rhythm",
+        "the pattern of beats and pauses in the words. Short, quick beats can feel urgent, and long lines can feel calm, so the sound can match the action."
+      ],
+      [
+        "Imagery",
+        "words that appeal to the senses. \"Frost crunched under our boots\" lets a reader hear and feel the cold, so the scene feels real."
+      ],
+      [
+        "Shape",
+        "how a text looks on the page, such as line length, gaps and stanzas. A poem about rain might fall down the page one word per line, so the layout acts out the idea."
+      ]
+    ],
+    "remember": "Ask how a text sounds, feels and looks, then how that adds to its meaning.",
+    "a": {
+      "q": "A poem about a lift going down sets one word on each line, so the words drop down the page. Which aesthetic quality is the poet using?",
+      "opts": [
+        "Shape, through how the words sit on the page",
+        "Imagery, through words that appeal to the senses",
+        "Rhythm, through a steady pattern of beats",
+        "Rhyme, through words with the same end sound"
+      ],
+      "why": "The words are arranged so the layout itself moves downward, which is shape. Imagery comes from sense detail in the words, not from where they sit on the page.",
+      "clue": "Think about how the poem looks, not how it sounds."
+    },
+    "b": {
+      "d": 3,
+      "q": "In Leo's poem about a storm, the lines rush along in short, quick beats. Once the storm passes, the poem slows into long lines. How does this rhythm add to the meaning?",
+      "opts": [
+        "The pace of the lines mirrors the storm, then the calm",
+        "The long lines let the reader see the storm's colours",
+        "The quick beats make the storm seem calm and gentle",
+        "The change in pace shows the poet lost track of rhythm"
+      ],
+      "why": "The quick beats feel urgent like the storm, and the long lines slow down as it ends, so the sound acts out what happens. Seeing colours would be imagery, which comes from sense detail, not from the pace of the lines.",
+      "clue": "How does the speed of the lines compare with the weather?"
+    }
+  },
+  "eng-verse-novels-graphic-novels": {
+    "title": "Verse novels and graphic novels",
+    "card": [
+      [
+        "Hybrid form",
+        "A hybrid form mixes features of different text types. It lets a writer tell a story in a way a plain prose novel does not."
+      ],
+      [
+        "Verse novel",
+        "A verse novel tells a long story through poems. Each poem may be a short scene or moment, and line breaks, rhythm and white space shape how it reads."
+      ],
+      [
+        "Graphic novel",
+        "A graphic novel tells a story through panels, images and words together. Readers follow the order of the panels and read the pictures as well as the text."
+      ],
+      "In both forms the way the text is set out is part of the meaning. A short line or a wordless panel can make a moment feel quiet or tense."
+    ],
+    "remember": "Verse novels use poems and graphic novels use panels, and in both the layout helps to make the meaning.",
+    "a": {
+      "q": "What makes a verse novel a hybrid form?",
+      "opts": [
+        "It tells a story using the features of poetry",
+        "It tells a story using only pictures in panels",
+        "It gives facts about real events in short chapters",
+        "It is a poem with no characters or events"
+      ],
+      "why": "A verse novel mixes the story of a novel with the features of poetry, such as line breaks and rhythm. It is not told through panels, which belong to graphic novels.",
+      "clue": "Think of a novel's story told in poems."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's graphic novel shows a girl waiting at a bus stop. One panel is a wide, empty street with no words. What is the most likely effect of this panel?",
+      "opts": [
+        "It makes the moment feel quiet and lonely",
+        "It tells the reader the story is a poem",
+        "It replaces the need for any other panels",
+        "It shows the narrator is lying to the reader"
+      ],
+      "why": "In a graphic novel the image carries meaning, so an empty street with no words can create a quiet, lonely mood. The wordless panel does not mean the narrator is lying. A story still needs a sequence of panels.",
+      "clue": "Pictures and white space can make a mood without any words."
+    }
+  },
+  "eng-unreliable-narrator": {
+    "title": "The unreliable narrator",
+    "card": [
+      "A narrator is the voice that tells the story. An unreliable narrator cannot be fully trusted to tell it truthfully or completely.",
+      "A narrator can be unreliable in three ways: they may lie, misunderstand what is happening, or leave things out. Telling the story as I, or in past tense, does not make a narrator unreliable on its own.",
+      "Readers spot this through clues. Look for the narrator contradicting themselves, other characters reacting differently, or events that do not match what the narrator claims.",
+      "Writers use this to make readers look past what the narrator says and work out the truth for themselves. It can build suspense or show what the narrator is really like."
+    ],
+    "remember": "Test the narrator's words against the clues around them, and trust the clues when the two clash.",
+    "a": {
+      "q": "Which narrator is unreliable?",
+      "opts": [
+        "One who misunderstands what is happening",
+        "One who tells the story in the first person",
+        "One who describes a setting in detail",
+        "One who tells the story in past tense"
+      ],
+      "why": "An unreliable narrator cannot be fully trusted, and misunderstanding events is one way this happens. Using the first person, detail or past tense does not make a narrator untrustworthy.",
+      "clue": "Which one makes the narrator's account wrong or incomplete?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom narrates a story about his soccer team. He tells readers he is the best player and never makes mistakes. Later he misses an easy goal, and his teammates groan. What does this suggest?",
+      "opts": [
+        "Tom is unreliable, as his claims clash with events",
+        "Tom is reliable, as he speaks with confidence",
+        "The teammates are unreliable, as they groan at him",
+        "Tom is reliable, as he narrates in the first person"
+      ],
+      "why": "Tom is the narrator, and the missed goal and the teammates' groans do not match his claims. That clash is a clue he cannot be fully trusted. Confidence does not make a narrator reliable, and the teammates are not narrating at all.",
+      "clue": "Compare what Tom tells readers with what actually happens."
+    }
+  },
+  "eng-non-linear-structures": {
+    "title": "Non-linear structures",
+    "card": [
+      "A linear story tells events in the order they happen. A non-linear story rearranges that order to shape how readers understand it.",
+      [
+        "In medias res",
+        "the story opens in the middle of the action. Readers are pulled in at once and must work out what led up to it."
+      ],
+      [
+        "Circular",
+        "the story ends where it began, such as with the same scene or line. This can show that nothing has changed, or that the character now sees it differently."
+      ],
+      [
+        "Time jumps",
+        "the story moves between past and present, or between different times. Readers link the pieces together and see how earlier events explain later ones."
+      ]
+    ],
+    "remember": "Changing the order of events changes what readers notice, wonder about and understand.",
+    "a": {
+      "q": "A story opens with Jai hanging from a cliff edge, gripping a rope. Later chapters explain how he got there. Where in the events does the story begin?",
+      "opts": [
+        "In the middle of the action",
+        "At the first event in time order",
+        "After the danger is over",
+        "Before any trouble has started"
+      ],
+      "why": "Jai is already in danger when the story opens, and the events that led there are explained later. So it begins in the middle of the action, called in medias res. It does not begin at the first event in time order, because how he reached the cliff happened before this scene.",
+      "clue": "Has the trouble already started when we meet Jai?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A novel opens with Lena locking her late grandmother's gate. It ends with Lena locking the same gate, but now smiling as she remembers her. What effect does this structure most likely have?",
+      "opts": [
+        "It shows how Lena's view of the same moment has changed",
+        "It shows that Lena's life is exactly the same as before",
+        "It hides the events of the story from the reader",
+        "It makes the story easier to follow in time order"
+      ],
+      "why": "Ending where the story began lets readers compare the two scenes. The same action now means something different, so it shows a change in Lena. A circular ending can show that nothing has changed, so the second option is tempting, but it is wrong here because Lena is now smiling.",
+      "clue": "Compare how Lena feels at the start with how she feels at the end."
+    }
+  },
+  "eng-rhetorical-devices-speeches": {
+    "title": "Rhetorical devices in speeches",
+    "card": [
+      [
+        "Group of three",
+        "three words, phrases or ideas in a row, such as \"we must listen, learn and act\". The rhythm feels complete and is easy to remember."
+      ],
+      [
+        "Repetition",
+        "the same word or phrase at the start of lines, such as \"We will not give up. We will not step back.\" It builds force and drives a point home."
+      ],
+      [
+        "Contrast",
+        "two opposite ideas placed side by side, such as \"small steps, giant change\". It makes a point sharper and clearer."
+      ],
+      [
+        "Direct address",
+        "speaking straight to the audience with words like you, we and us, such as \"You can change this school\". It makes listeners feel included and involved."
+      ]
+    ],
+    "remember": "Speakers use these devices to make ideas stick in the ears and minds of listeners.",
+    "a": {
+      "q": "A council speaker says: \"This new park offers shade, space and peace.\" Which device is this?",
+      "opts": ["A group of three", "Repetition at the start of lines", "Contrast", "Direct address"],
+      "why": "Shade, space and peace are three things listed in a row, so this is a group of three. It is not repetition at the start of lines, because no opening word or phrase is repeated across lines. There are no opposite ideas and no words like you or we, so it is not contrast or direct address.",
+      "clue": "Count the things the speaker lists."
+    },
+    "b": {
+      "d": 2,
+      "q": "Jaya is giving a speech about rubbish in the school yard. She wants each listener to feel the problem is theirs to fix. Which device suits this aim best?",
+      "opts": ["Direct address", "Repetition at the start of lines", "Contrast", "A group of three"],
+      "why": "Direct address speaks straight to the audience with words like you and we, which makes listeners feel included and involved. Repetition at the start of lines builds force, but it does not on its own speak to the listeners or draw them in.",
+      "clue": "Which device brings the listener into the speech?"
+    }
+  },
+  "eng-text-positions-audience": {
+    "title": "How a text positions its audience",
+    "card": [
+      "Positioning means a text leads its audience towards a particular response, such as sympathy, doubt or approval. A reader is guided, not forced, so a different reader may respond differently.",
+      [
+        "Order",
+        "what a text shows first sets the lens for what follows. A news story that opens with a worried resident makes readers feel for her before they hear the other side."
+      ],
+      [
+        "Voice",
+        "whose voice a text gives, and whose it leaves out, shapes whose view seems reasonable. If only the shop owner speaks, readers tend to see the problem through the owner's eyes."
+      ],
+      [
+        "Word choice",
+        "words carry attitude as well as meaning. A crowd described as \"a mob\" feels threatening, while \"a gathering\" feels calm."
+      ]
+    ],
+    "remember": "A text can lead its audience through what comes first, whose voice is heard and the words chosen.",
+    "a": {
+      "q": "A report on a new skate park quotes only nearby residents, who call it noisy. Which technique is mainly positioning readers to doubt the park?",
+      "opts": [
+        "Giving voice to only one group",
+        "Opening with a statement from the council",
+        "Using a calm word for the park",
+        "Showing both sides in equal space"
+      ],
+      "why": "Only the residents speak, so readers see the park through their complaints. The council opening would be about order, but no council statement is described, so it does not fit.",
+      "clue": "Ask who gets to speak in the report."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two websites report the same protest. One calls the people \"troublemakers\" and the other calls them \"concerned locals\". What is the main way each site positions readers?",
+      "opts": [
+        "Word choice that carries an attitude to the people",
+        "Opening with the most important event first",
+        "Leaving out the voices of the protesters",
+        "Repeating a point at the start of each line"
+      ],
+      "why": "The labels \"troublemakers\" and \"concerned locals\" show opposite attitudes to the same people, so word choice leads readers to different responses. The question does not say whose voices are heard or what comes first, so those options are not supported.",
+      "clue": "Look at the labels used for the same people."
+    }
+  },
+  "eng-representations-concepts-over-time": {
+    "title": "Representations of concepts over time",
+    "card": [
+      "A concept is a big idea, such as heroism, family or success. Texts show it in a particular way. That way is a representation.",
+      "Representations change across time and cultures, because people in different times and places value different things.",
+      "For example, an old tale might show a hero as a lone warrior who wins by strength. A recent film might show a hero as an ordinary person who helps others and shares the credit.",
+      "Comparing how texts represent the same concept shows each text's context: the time, place and values it was made in."
+    ],
+    "remember": "The same concept can be shown in different ways, and the differences point to each text's context.",
+    "a": {
+      "q": "What does it mean to say a text represents a concept such as family?",
+      "opts": [
+        "It shows the idea in a particular way",
+        "It gives a dictionary meaning of the word",
+        "It proves the one true form of the idea",
+        "It names every family in the text"
+      ],
+      "why": "A representation is the particular way a text shows a concept. The dictionary option is wrong because a text shows an idea through its characters and events, and different texts can show it differently.",
+      "clue": "Think of how a text chooses to show an idea."
+    },
+    "b": {
+      "d": 3,
+      "q": "A story from the 1800s shows a successful person as someone who earns great wealth and a grand house. A story written this year shows success as having good friends and time for hobbies. What does the difference best suggest?",
+      "opts": [
+        "The two stories come from contexts with different values",
+        "One author understands success and the other does not",
+        "Success has no meaning in either story",
+        "The newer story must be the better text"
+      ],
+      "why": "Each story represents success in a way that matches what its time and culture valued, so the difference points to context. The tempting option says one author is wrong, but the card shows that representations differ because values differ, not because of skill or knowledge.",
+      "clue": "Ask what each time and place valued."
+    }
+  },
+  "eng-writing-accents-dialects": {
+    "title": "Writing accents and dialects",
+    "card": [
+      [
+        "Accent",
+        "An accent is how words sound when someone speaks. A writer can show it by changing spelling, such as writing \"gonna\" or \"ya\" for the way a character says the words."
+      ],
+      [
+        "Dialect",
+        "A dialect is a way of speaking shared by a group or region. It has its own words and grammar, such as \"we was\" or \"youse\" for \"you\" when speaking to more than one person."
+      ],
+      "Writers use these changes to show where a character is from, or what their background and personality are like. A few well-chosen changes are enough for a reader to hear the voice.",
+      "Take care. If every word is altered, the text is hard to read. If only some characters are written this way, it can make them look silly or less clever, which is mockery."
+    ],
+    "remember": "Change a few words to give a character a voice, and do it with respect.",
+    "a": {
+      "q": "A writer has a character say \"We was late 'cause the bus never come.\" What is the writer showing through this grammar?",
+      "opts": ["The character's dialect", "The character's loud volume", "The character's lie", "The character's mood"],
+      "why": "Forms like \"we was\" and \"never come\" are grammar shared by a group of speakers, so they show a dialect. Volume and mood are not shown by this grammar, and nothing here suggests a lie.",
+      "clue": "Think about grammar shared by a group of speakers."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a story, only the farm worker Jed has his speech written with heavy spelling changes. The others speak in standard English. What is the main risk?",
+      "opts": [
+        "Jed could seem silly or less clever to readers",
+        "Jed's lines could become too short to follow",
+        "Jed's lines could sound just like the narrator",
+        "The other characters could sound more rural"
+      ],
+      "why": "When only one character's speech is changed heavily, readers can laugh at him or see him as less clever, which is mockery. The spelling changes do not shorten his lines, and they set him apart from the narrator rather than making him sound like it.",
+      "clue": "Ask what readers may think when only one person is written this way."
+    }
+  },
+  "eng-spelling-plurals": {
+    "title": "Spelling plurals",
+    "card": [
+      "Most nouns add -s, but nouns ending in s, x, sh or ch usually add -es: fox becomes foxes, church becomes churches. When ch sounds like k, just add -s: stomach becomes stomachs.",
+      "If a noun ends in a consonant and then y, change the y to ies: city becomes cities. If a vowel comes before the y, just add -s: day becomes days.",
+      "Many nouns ending in f or fe change to ves: leaf becomes leaves, wolf becomes wolves, knife becomes knives. Some, such as roof, just add -s: roofs.",
+      "Some plurals change completely: child becomes children, mouse becomes mice, foot becomes feet. A few do not change at all, such as sheep."
+    ],
+    "remember": "Check the ending of the noun, then pick the pattern. Learn the odd ones.",
+    "a": {
+      "q": "What is the plural of the noun \"berry\"?",
+      "opts": ["berries", "berrys", "berryes", "berrees"],
+      "why": "Berry ends in a consonant and then y, so the y changes to ies. Adding only -s is tempting, but that pattern is for a vowel before the y, as in days.",
+      "clue": "Look at the letter before the y."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which sentence spells every plural correctly?",
+      "opts": [
+        "The wolves left their paw prints near the benches",
+        "The wolfs left their paw prints near the benchs",
+        "The wolves left their paw prints near the bench's",
+        "The wolfs left their paw prints near the benches"
+      ],
+      "why": "Wolf changes to wolves, and bench ends in a ch that does not sound like k, so it takes -es to make benches. The other sentences miss one of these changes or add an apostrophe, which is not used to make the plural of a noun like bench.",
+      "clue": "Check the ending of each noun in turn."
+    }
+  },
+  "eng-explicit-values-language": {
+    "title": "Explicit values in language",
+    "card": [
+      "Values are the beliefs about what is right, wrong, good or bad that a writer holds. A writer states them explicitly when they say them outright, so the reader does not have to guess.",
+      [
+        "Judging words",
+        "words that label something as good or bad, such as shameful, wonderful or reckless. They show the writer's attitude."
+      ],
+      [
+        "Strong claims",
+        "statements made with certainty, such as \"Homework is pointless.\" They present an opinion as if it were settled."
+      ],
+      [
+        "Direct calls",
+        "commands or demands that tell the reader what to do, such as \"We must protect our local park.\" They show what the writer thinks is right."
+      ]
+    ],
+    "remember": "Explicit values are stated openly, through judging words, strong claims and calls for action.",
+    "a": {
+      "q": "Which sentence states the writer's values explicitly?",
+      "opts": [
+        "The council's decision to close the pool is shameful",
+        "The council closed the pool in March",
+        "The pool was built in 1975 beside the oval",
+        "The council met on Tuesday to discuss the pool"
+      ],
+      "why": "The word shameful is a judging word, so it states the writer's attitude outright. The other sentences only report facts and do not say what the writer thinks is right or wrong.",
+      "clue": "Look for the word that judges the council."
+    },
+    "b": {
+      "d": 3,
+      "q": "A blogger writes: \"Delete these apps today. Anyone who ignores this is reckless.\" How does the writer show their values?",
+      "opts": [
+        "With a direct call to act and a judging word",
+        "With a question that leaves the reader to decide",
+        "With statistics that let the reader draw a conclusion",
+        "With a story that hints at a lesson without stating it"
+      ],
+      "why": "Delete these apps today is a direct call for action, and reckless is a judging word. Both state the writer's beliefs outright. The other options describe ways of leaving values unstated, which this text does not do.",
+      "clue": "Find the command and the word that labels people."
+    }
+  },
+  "eng-organising-ideas-paragraphs": {
+    "title": "Organising ideas in paragraphs",
+    "card": [
+      "A paragraph develops one main idea. It usually opens with a topic sentence that states that idea.",
+      "The sentences after it support the idea with evidence, examples or explanation. They stay on the topic sentence's idea.",
+      "When the writer moves to a new idea, they start a new paragraph. Linking words such as however, also or as a result show how paragraphs connect.",
+      "The order of paragraphs matters. In an argument, each paragraph builds on the last towards the writer's point. In a story, the order builds events towards the ending."
+    ],
+    "remember": "One idea for each paragraph, usually stated up front, with paragraphs ordered to build towards the point.",
+    "a": {
+      "q": "What is the main job of a topic sentence?",
+      "opts": [
+        "To state the one idea the paragraph will develop",
+        "To give the strongest piece of evidence in the paragraph",
+        "To finish the paragraph by repeating the writer's point",
+        "To link the paragraph to the title of the text"
+      ],
+      "why": "A topic sentence names the idea the rest of the paragraph supports. Evidence comes in the sentences after it, so giving the strongest evidence is the job of those sentences, not the topic sentence.",
+      "clue": "It usually opens the paragraph."
+    },
+    "b": {
+      "d": 2,
+      "q": "Jess is writing about why her town needs a skate park. Her paragraph opens with a topic sentence about a safe place for teenagers to meet. Which sentence belongs in this paragraph?",
+      "opts": [
+        "Teens would have somewhere to go instead of dark car parks",
+        "The council should also repair the town's footpaths",
+        "Skate parks were first built in the United States",
+        "Local shops would earn more from extra visitors"
+      ],
+      "why": "The topic sentence is about a safe place for teenagers, and giving them somewhere to go instead of dark car parks supports that idea. The shop sentence supports a different idea, the benefit to business, so it needs its own paragraph.",
+      "clue": "Stay on the idea of safety."
+    }
+  },
+  "eng-contention-supporting-arguments": {
+    "title": "Contention and supporting arguments",
+    "card": [
+      [
+        "Contention",
+        "the main point a writer argues. It is a claim that someone could disagree with, and the whole piece works to prove it."
+      ],
+      ["Supporting argument", "a reason the contention is true. Each one usually gets its own paragraph."],
+      [
+        "Evidence",
+        "a fact, statistic, example or expert view that backs up a supporting argument. A reason with no evidence is only an opinion."
+      ],
+      "Example: \"Schools should start later.\" Reason: teenagers need more sleep. Evidence: a survey of tired students. Each reason points back to the contention."
+    ],
+    "remember": "The contention is the claim. Reasons support it, and evidence backs each reason.",
+    "a": {
+      "q": "Which sentence is the contention of a persuasive article?",
+      "opts": [
+        "Our town should build a skate park for young people",
+        "Skate parks are usually made of concrete and steel",
+        "The council opened a new library in the town last year",
+        "A survey found that many local teens skate each week"
+      ],
+      "why": "The sentence saying our town should build a skate park is a claim that someone could disagree with, so a writer could argue it. The survey result is tempting, but it is evidence that supports a claim, not the main point itself.",
+      "clue": "Which sentence is a claim a reader might disagree with?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya argues that \"Students should learn to cook at school.\" Which sentence is a supporting argument with evidence?",
+      "opts": [
+        "Cooking builds health: a survey found cooks eat more veg",
+        "Cooking is a topic that many people like to talk about",
+        "Many students enjoy food, so schools should think about it",
+        "Students should learn cooking because it is a good idea"
+      ],
+      "why": "The sentence about cooking building health gives a reason and backs it with evidence from a survey. The sentence saying cooking is a good idea uses the word because, but it only repeats the contention, so it gives no real reason or evidence.",
+      "clue": "Look for a reason plus a fact that backs it up."
+    }
+  },
+  "eng-rebuttal": {
+    "title": "Rebuttal",
+    "card": [
+      "A rebuttal is part of an argument where the writer deals with an opposing view. The writer first states what the other side says, then answers it.",
+      "The answer shows why the opposing view is weak. The writer might point to missing evidence, a flaw in the reasoning, or a cost the other side ignores.",
+      "Example: a writer says some people think homework builds good habits. The writer then replies that a student who copies answers only learns to copy. The first step states the other view. The second shows why it is weak.",
+      "A rebuttal makes the writer's case stronger. It shows the reader that the writer has thought about the other side and still holds their position. Phrases such as \"Some argue\" and \"However\" often signal one."
+    ],
+    "remember": "Name the other side's argument, then show its weakness to make your own case stronger.",
+    "a": {
+      "q": "What is the main job of a rebuttal in a persuasive text?",
+      "opts": [
+        "To answer an opposing view by showing its weakness",
+        "To repeat the writer's own view in stronger words",
+        "To list facts that all readers already accept",
+        "To sum up the whole text in the final paragraph"
+      ],
+      "why": "A rebuttal deals with the other side by stating it and showing why it is weak. Repeating your own view in stronger words is tempting, but it never engages with the opposing argument, so it is not a rebuttal.",
+      "clue": "Think about whose view the writer is answering."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya argues that her school should start later. First she says some people fear students will just go to bed later. Then she cites sleep studies showing teenagers naturally fall asleep later, so a later start suits them. Which part is the rebuttal?",
+      "opts": [
+        "Both steps together, the opposing view and the answer",
+        "Only the first step, which states what some people say",
+        "Only the second step, which gives the sleep evidence",
+        "Neither step, because her own view is not restated"
+      ],
+      "why": "A rebuttal has two steps: it states the opposing view and shows why it is weak. Both are needed. The first step alone is only the opposing view, which is tempting to call the rebuttal because it is the part about the other side.",
+      "clue": "Think about what each step does on its own."
+    }
+  },
+  "eng-editing-paragraphs-control": {
+    "title": "Editing paragraphs for control",
+    "card": [
+      [
+        "Focus",
+        "A paragraph should have one clear focus, shown in its topic sentence. Cut or move any sentence that drifts to another idea."
+      ],
+      [
+        "Sentences",
+        "Vary the length and the openings of sentences so the writing does not feel flat. Check each one for correct grammar, spelling and punctuation."
+      ],
+      [
+        "Vocabulary",
+        "Replace vague words such as good, bad, thing or a lot with precise ones. Example: \"a good result\" can become \"a record-breaking result\"."
+      ],
+      "Editing means reading your draft again and fixing these three areas so the paragraph stays in control of its point."
+    ],
+    "remember": "Edit for one focus, varied and correct sentences, and precise words.",
+    "a": {
+      "q": "A paragraph about the benefits of cycling to school includes a sentence about the most popular colours for new cars. What should the writer do?",
+      "opts": [
+        "Cut it or move it, as it drifts from the paragraph's focus",
+        "Keep it, as extra detail always makes a paragraph stronger",
+        "Make the sentence longer so it fits in with the others",
+        "Swap the vague words in it for more precise ones"
+      ],
+      "why": "Editing for control keeps one focus, so a sentence on another idea should be cut or moved. Making words more precise is a good edit, but it does not fix a sentence that is off topic.",
+      "clue": "Think about what the paragraph is meant to be about."
+    },
+    "b": {
+      "d": 2,
+      "q": "Tom's draft says the clean-up was good and the volunteers did a lot of things. Which edit improves the vocabulary most?",
+      "opts": [
+        "The clean-up was inspiring and volunteers collected rubbish",
+        "The clean-up was very good and volunteers did many things",
+        "The clean-up was good, and the volunteers did a lot",
+        "The clean-up was good and volunteers did lots of stuff"
+      ],
+      "why": "The edit that says the clean-up was inspiring and volunteers collected rubbish swaps vague words (good, things) for precise ones. The others still use vague words such as good, many things, a lot and stuff, and adding very does not make good any more precise.",
+      "clue": "Which option replaces vague words with exact ones?"
+    }
   }
 };

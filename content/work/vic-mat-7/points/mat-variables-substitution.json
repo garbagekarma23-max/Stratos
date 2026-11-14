@@ -1,0 +1,266 @@
+{
+ "id": "mat-variables-substitution",
+ "title": "Variables and substitution",
+ "brief": "1790d1568893",
+ "shortlist": [
+  [
+   "mat-substituting-into-formulas",
+   0.282
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 may adapt mat-substituting-into-formulas, but is not highly sure, so to the Opus match check",
+  "2026-11-12T12:53:57Z confirm: Claude Opus 5.5 may adapt mat-substituting-into-formulas, but is not highly sure, so it is for you to review",
+  "2026-11-13T12:13:15Z match: claude-code says adapt mat-substituting-into-formulas (1 change)",
+  "2026-11-13T12:13:15Z claude-code review: adapting mat-substituting-into-formulas on the next run",
+  "2026-11-13T13:04:53Z adapt: done",
+  "2026-11-13T13:11:26Z check: flagged",
+  "2026-11-13T14:23:58Z fix: suggested",
+  "2026-11-13T15:05:19Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "confirm": 0.00681,
+  "adapt": 0.0041,
+  "check": 0.01096,
+  "fix": 0.05043
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-substituting-into-formulas",
+  "changes": [
+   "Add an opening sentence explaining that a letter stands for a number that can change, since the card currently starts from formulas without teaching what a variable is."
+  ],
+  "sure": "medium",
+  "reason": "The bank card already teaches substitution at the right Year 7 depth, but it does not explain the core idea of a letter as a changing number, so one short addition is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-substituting-into-formulas",
+  "changes": [
+   "Reword the first line to use the term 'variable' and say that a letter stands for a number that can change, as the Victorian Level 7 syllabus does."
+  ],
+  "sure": "medium",
+  "reason": "The bank point already teaches substituting into everyday formulas such as P = 2l + 2w at Year 7 depth, and only needs the word 'variable' and its meaning added to match this course.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-substituting-into-formulas",
+  "changes": [
+   "Reword the first card line to say that a letter in a formula is a variable, which stands for a number that can change, and that substituting gives it one value."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card1",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "auto",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches substituting into formulas such as P = 2l + 2w at Year 7 depth, and its answers are right. It never says what a variable is, which the brief asks for.",
+   "item": "ca94af6fc8b61d2e",
+   "result": "decided",
+   "saved": {
+    "id": "mat-variables-substitution",
+    "title": "Variables and substitution",
+    "brief": "1790d1568893",
+    "shortlist": [
+     [
+      "mat-substituting-into-formulas",
+      0.282
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00027,
+     "confirm": 0.00681
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-substituting-into-formulas",
+     "changes": [
+      "Add an opening sentence explaining that a letter stands for a number that can change, since the card currently starts from formulas without teaching what a variable is."
+     ],
+     "sure": "medium",
+     "reason": "The bank card already teaches substitution at the right Year 7 depth, but it does not explain the core idea of a letter as a changing number, so one short addition is needed.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-substituting-into-formulas",
+     "changes": [
+      "Reword the first line to use the term 'variable' and say that a letter stands for a number that can change, as the Victorian Level 7 syllabus does."
+     ],
+     "sure": "medium",
+     "reason": "The bank point already teaches substituting into everyday formulas such as P = 2l + 2w at Year 7 depth, and only needs the word 'variable' and its meaning added to match this course.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "61a4014ead3b3577"
+  }
+ ],
+ "draft": {
+  "title": "Substituting into formulas",
+  "card": [
+   "A letter in a formula is a variable. It stands for a number that can change. To substitute, give each letter one value and write the numbers in brackets if they could be confused with signs.",
+   "Then work it out in the usual order: brackets first, then powers, then \\(\\times\\) and \\(\\div\\) from left to right, then \\(+\\) and \\(-\\) from left to right.",
+   "Example: speed \\(s = d \\div t\\). For \\(d = 150\\) and \\(t = 3\\), \\(s = 150 \\div 3 = 50\\).",
+   "Example: \\(A = \\frac{1}{2}bh\\) with \\(b = 6\\) and \\(h = 4\\). \\(A = \\frac{1}{2} \\times 6 \\times 4 = 3 \\times 4 = 12\\). Another: \\(P = 2l + 2w\\) with \\(l = 5\\) and \\(w = 3\\) gives \\(P = 10 + 6 = 16\\), because the \\(\\times\\) is done before the \\(+\\)."
+  ],
+  "remember": "Replace each letter with its number, then follow the order of operations.",
+  "a": {
+   "q": "A fence has a perimeter given by \\(P = 2l + 2w\\). Find \\(P\\) when \\(l = 7\\) and \\(w = 4\\).",
+   "opts": [
+    "22",
+    "64",
+    "18",
+    "51"
+   ],
+   "why": "\\(P = 2 \\times 7 + 2 \\times 4 = 14 + 8 = 22\\). The answer 64 comes from working strictly left to right: \\(2 \\times 7 = 14\\), then \\(14 + 2 = 16\\), then \\(16 \\times 4 = 64\\), which does the \\(+\\) before the second \\(\\times\\). The answer 18 comes from forgetting to double \\(w\\), giving \\(14 + 4\\).",
+   "clue": "Do each multiplication before the addition."
+  },
+  "b": {
+   "d": 2,
+   "q": "Dana rides 36 km in 3 hours. Use \\(s = d \\div t\\) with \\(d = 36\\) and \\(t = 3\\). What is her speed in km/h?",
+   "opts": [
+    "12",
+    "108",
+    "39",
+    "33"
+   ],
+   "why": "\\(s = 36 \\div 3 = 12\\) km/h. The answer 108 comes from multiplying \\(d\\) and \\(t\\) instead of dividing. The answers 39 and 33 come from adding or subtracting the two numbers.",
+   "clue": "Distance goes on top, time goes underneath."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "22",
+   "also_right": []
+  },
+  "b": {
+   "best": "12",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue says 'Distance goes on top, time goes underneath', which describes a fraction. The card and question write the formula as \\(s = d \\div t\\), never as a fraction, so the clue may confuse Year 7 students."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct (22 and 12), and the card and explanations are accurate. The only issue is minor: question b's clue speaks of 'top' and 'underneath' as if the formula were a fraction, but the card writes it with a ÷ sign."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The clue says 'Distance goes on top, time goes underneath', which describes a fraction. The card and question write the formula as \\(s = d \\div t\\), never as a fraction, so the clue may confuse Year 7 students."
+ ],
+ "proposal": {
+  "title": "Variables and substitution",
+  "card": [
+   "A letter in a formula is a variable. It stands for a number that can change. To substitute, replace each letter with its value. A number next to a letter means multiply, so \\(2l\\) means \\(2 \\times l\\).",
+   "Then work it out in the usual order: brackets first, then powers, then \\(\\times\\) and \\(\\div\\) from left to right, then \\(+\\) and \\(-\\) from left to right.",
+   "Example: speed \\(s = d \\div t\\). For \\(d = 150\\) and \\(t = 3\\), \\(s = 150 \\div 3 = 50\\).",
+   "Example: \\(P = 2l + 2w\\) with \\(l = 5\\) and \\(w = 3\\). \\(P = 2 \\times 5 + 2 \\times 3\\), which is \\(10 + 6 = 16\\), because each \\(\\times\\) is done before the \\(+\\)."
+  ],
+  "remember": "Replace each letter with its number, then follow the order of operations.",
+  "a": {
+   "q": "A fence has a perimeter given by \\(P = 2l + 2w\\). Find \\(P\\) when \\(l = 7\\) and \\(w = 4\\).",
+   "opts": [
+    "22",
+    "64",
+    "18",
+    "51"
+   ],
+   "why": "\\(P = 2 \\times 7 + 2 \\times 4\\), which is \\(14 + 8 = 22\\). The answer 64 comes from working strictly left to right: \\(14 + 2 = 16\\), then \\(16 \\times 4 = 64\\), which does the \\(+\\) before the second \\(\\times\\). The answer 18 comes from forgetting to double \\(w\\), and 51 from reading \\(2l\\) as 27 instead of \\(2 \\times 7\\).",
+   "clue": "Do each multiplication before the addition."
+  },
+  "b": {
+   "d": 2,
+   "q": "Dana rides 36 km in 3 hours. Use \\(s = d \\div t\\) with \\(d = 36\\) and \\(t = 3\\). What is her speed in km/h?",
+   "opts": [
+    "12",
+    "108",
+    "39",
+    "33"
+   ],
+   "why": "\\(s = 36 \\div 3 = 12\\) km/h. The answer 108 comes from multiplying \\(d\\) and \\(t\\) instead of dividing. The answers 39 and 33 come from adding or subtracting the two numbers.",
+   "clue": "Check which operation sign sits between \\(d\\) and \\(t\\)."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-13T15:05:19Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue says 'Distance goes on top, time goes underneath', which describes a fraction. The card and question write the formula as \\(s = d \\div t\\), never as a fraction, so the clue may confuse Year 7 students."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The clue says 'Distance goes on top, time goes underneath', which describes a fraction. The card and question write the formula as \\(s = d \\div t\\), never as a fraction, so the clue may confuse Year 7 students."
+  ]
+ },
+ "final": {
+  "title": "Variables and substitution",
+  "card": [
+   "A letter in a formula is a variable. It stands for a number that can change. To substitute, replace each letter with its value. A number next to a letter means multiply, so \\(2l\\) means \\(2 \\times l\\).",
+   "Then work it out in the usual order: brackets first, then powers, then \\(\\times\\) and \\(\\div\\) from left to right, then \\(+\\) and \\(-\\) from left to right.",
+   "Example: speed \\(s = d \\div t\\). For \\(d = 150\\) and \\(t = 3\\), \\(s = 150 \\div 3 = 50\\).",
+   "Example: \\(P = 2l + 2w\\) with \\(l = 5\\) and \\(w = 3\\). \\(P = 2 \\times 5 + 2 \\times 3\\), which is \\(10 + 6 = 16\\), because each \\(\\times\\) is done before the \\(+\\)."
+  ],
+  "remember": "Replace each letter with its number, then follow the order of operations.",
+  "a": {
+   "q": "A fence has a perimeter given by \\(P = 2l + 2w\\). Find \\(P\\) when \\(l = 7\\) and \\(w = 4\\).",
+   "opts": [
+    "22",
+    "64",
+    "18",
+    "51"
+   ],
+   "why": "\\(P = 2 \\times 7 + 2 \\times 4\\), which is \\(14 + 8 = 22\\). The answer 64 comes from working strictly left to right: \\(14 + 2 = 16\\), then \\(16 \\times 4 = 64\\), which does the \\(+\\) before the second \\(\\times\\). The answer 18 comes from forgetting to double \\(w\\), and 51 from reading \\(2l\\) as 27 instead of \\(2 \\times 7\\).",
+   "clue": "Do each multiplication before the addition."
+  },
+  "b": {
+   "d": 2,
+   "q": "Dana rides 36 km in 3 hours. Use \\(s = d \\div t\\) with \\(d = 36\\) and \\(t = 3\\). What is her speed in km/h?",
+   "opts": [
+    "12",
+    "108",
+    "39",
+    "33"
+   ],
+   "why": "\\(s = 36 \\div 3 = 12\\) km/h. The answer 108 comes from multiplying \\(d\\) and \\(t\\) instead of dividing. The answers 39 and 33 come from adding or subtracting the two numbers.",
+   "clue": "Check which operation sign sits between \\(d\\) and \\(t\\)."
+  }
+ }
+}

@@ -1,0 +1,252 @@
+{
+ "id": "mat-tables-values-from-rule-vic",
+ "title": "Tables of values from a rule",
+ "brief": "2994fd56e0e7",
+ "shortlist": [
+  [
+   "mat-tables-values-from-rule",
+   0.641
+  ],
+  [
+   "mat-graphing-linear-relations-2",
+   0.273
+  ],
+  [
+   "mat-solving-equation-from-graph",
+   0.225
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T12:53:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T14:38:08Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:06:00Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:15:50Z write: failed the content check, writing again",
+  "2026-11-12T15:26:05Z write: done",
+  "2026-11-12T15:35:10Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00032,
+  "write": 0.019,
+  "check": 0.00726
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card covers filling a table of values from a rule but does not teach plotting the pairs to see the pattern, which the new point's brief requires, so it is not the same point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Tables of values from a rule",
+  "card": [
+   "A rule links \\(x\\) and \\(y\\). To find \\(y\\), put a value of \\(x\\) into the rule and work it out.",
+   "Take the rule \\(y = 2x + 1\\). When \\(x = 3\\), \\(y = 2 \\times 3 + 1\\), which is \\(6 + 1 = 7\\). Multiply first, then add.",
+   "Do this for each \\(x\\) value to fill a table. For \\(x = 0, 1, 2, 3\\), the \\(y\\) values are \\(1, 3, 5, 7\\).",
+   "Each pair is a point: \\((0, 1)\\), \\((1, 3)\\), \\((2, 5)\\), \\((3, 7)\\). Plotted, the points lie in a straight line."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The points \\((0, 1)\\), \\((1, 3)\\), \\((2, 5)\\) and \\((3, 7)\\) from the rule \\(y = 2x + 1\\), lying on a straight line going up to the right.",
+    "x": {
+     "min": -1,
+     "max": 5,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -1,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2x + 1",
+      "domain": [
+       0,
+       3
+      ],
+      "style": "dot"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       1
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       3
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       7
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "Put each \\(x\\) into the rule, work out \\(y\\), and each pair is a point to plot.",
+  "a": {
+   "q": "Using the rule \\(y = 3x - 2\\), what is \\(y\\) when \\(x = 4\\)?",
+   "opts": [
+    "10",
+    "14",
+    "6",
+    "12"
+   ],
+   "why": "\\(y = 3 \\times 4 - 2 = 12 - 2 = 10\\). The option 14 comes from adding 2 instead of taking it away.",
+   "clue": "Multiply first, then subtract."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia fills a table for the rule \\(y = 2x + 1\\). Which pair of values is correct for her table?",
+   "opts": [
+    "\\(x = 5\\), \\(y = 11\\)",
+    "\\(x = 5\\), \\(y = 12\\)",
+    "\\(x = 5\\), \\(y = 10\\)",
+    "\\(x = 5\\), \\(y = 15\\)"
+   ],
+   "why": "\\(y = 2 \\times 5 + 1 = 10 + 1 = 11\\). The option 12 comes from adding 1 before multiplying: \\((5 + 1) \\times 2\\).",
+   "clue": "Multiply 2 by \\(x\\) first, then add 1."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "10",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(x = 5\\), \\(y = 11\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Tables of values from a rule",
+  "card": [
+   "A rule links \\(x\\) and \\(y\\). To find \\(y\\), put a value of \\(x\\) into the rule and work it out.",
+   "Take the rule \\(y = 2x + 1\\). When \\(x = 3\\), \\(y = 2 \\times 3 + 1\\), which is \\(6 + 1 = 7\\). Multiply first, then add.",
+   "Do this for each \\(x\\) value to fill a table. For \\(x = 0, 1, 2, 3\\), the \\(y\\) values are \\(1, 3, 5, 7\\).",
+   "Each pair is a point: \\((0, 1)\\), \\((1, 3)\\), \\((2, 5)\\), \\((3, 7)\\). Plotted, the points lie in a straight line."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The points \\((0, 1)\\), \\((1, 3)\\), \\((2, 5)\\) and \\((3, 7)\\) from the rule \\(y = 2x + 1\\), lying on a straight line going up to the right.",
+    "x": {
+     "min": -1,
+     "max": 5,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -1,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2x + 1",
+      "domain": [
+       0,
+       3
+      ],
+      "style": "dot"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       1
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       3
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       7
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "Put each \\(x\\) into the rule, work out \\(y\\), and each pair is a point to plot.",
+  "a": {
+   "q": "Using the rule \\(y = 3x - 2\\), what is \\(y\\) when \\(x = 4\\)?",
+   "opts": [
+    "10",
+    "14",
+    "6",
+    "12"
+   ],
+   "why": "\\(y = 3 \\times 4 - 2 = 12 - 2 = 10\\). The option 14 comes from adding 2 instead of taking it away.",
+   "clue": "Multiply first, then subtract."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia fills a table for the rule \\(y = 2x + 1\\). Which pair of values is correct for her table?",
+   "opts": [
+    "\\(x = 5\\), \\(y = 11\\)",
+    "\\(x = 5\\), \\(y = 12\\)",
+    "\\(x = 5\\), \\(y = 10\\)",
+    "\\(x = 5\\), \\(y = 15\\)"
+   ],
+   "why": "\\(y = 2 \\times 5 + 1 = 10 + 1 = 11\\). The option 12 comes from adding 1 before multiplying: \\((5 + 1) \\times 2\\).",
+   "clue": "Multiply 2 by \\(x\\) first, then add 1."
+  }
+ },
+ "cleared_by": "checker"
+}

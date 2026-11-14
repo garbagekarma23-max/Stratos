@@ -1,0 +1,156 @@
+{
+ "id": "mat-describing-distribution-2",
+ "title": "Describing a distribution",
+ "brief": "459f141b58fb",
+ "shortlist": [
+  [
+   "mat-shape-distribution-2",
+   0.33
+  ],
+  [
+   "geo-describing-distribution",
+   0.262
+  ],
+  [
+   "mat-choosing-measure-centre",
+   0.236
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T12:53:58Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T14:38:08Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:06:00Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:15:50Z write: done",
+  "2026-11-12T15:26:05Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.01343,
+  "check": 0.0098
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The best bank point, Shape of a distribution, covers shape, clusters, gaps and outliers but not centre or spread, which the new point also requires, so it is too narrow to reuse or adapt.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Describing a distribution",
+  "card": [
+   [
+    "Shape",
+    "Data can be spread evenly on both sides of the middle (symmetric). Or it can bunch up on one side with a long tail on the other (skewed)."
+   ],
+   [
+    "Centre and spread",
+    "The centre is a typical value in the middle of the data, such as the median. The spread is how far apart the values are."
+   ],
+   [
+    "Features",
+    "A cluster is a group of values close together. A gap is a stretch with no values. An outlier is a single value far from the rest."
+   ],
+   [
+    "Example",
+    "Take 2, 3, 3, 4, 4, 4, 5, 6, 14. Most values cluster from 2 to 6, and 14 is an outlier. There is a gap between 6 and 14."
+   ]
+  ],
+  "remember": "Describe the shape, centre and spread, then name any clusters, gaps and outliers.",
+  "a": {
+   "q": "Test scores out of 40 are 12, 13, 13, 14, 15, 15, 16 and 30. Which description fits best?",
+   "opts": [
+    "Most scores are 12 to 16, with 30 an outlier",
+    "Scores are spread evenly from 12 to 30, with no gaps",
+    "Most scores are 13 to 30, with 12 an outlier",
+    "Scores are symmetric about 21, with no outliers"
+   ],
+   "why": "Seven scores sit close together from 12 to 16, and 30 is far from them, so it is an outlier. The values do not spread evenly, because there is a big gap between 16 and 30.",
+   "clue": "Look for the group that sits together and the value far from it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ages of people on a bus in Bendigo are 10, 11, 11, 12, 12, 13, 40, 41 and 42. Which feature does this data have?",
+   "opts": [
+    "Two clusters, with a gap between 13 and 40",
+    "One cluster from 10 to 13, with 40 an outlier",
+    "One cluster from 10 to 42, with no gaps",
+    "One cluster from 10 to 13, with 42 an outlier"
+   ],
+   "why": "The ages 10 to 13 form one cluster and 40 to 42 form another, with a gap from 13 to 40. The older ages are three values close together, so they are a cluster, not a single outlier.",
+   "clue": "An outlier is one value on its own. How many values are near 40?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Most scores are 12 to 16, with 30 an outlier",
+   "also_right": []
+  },
+  "b": {
+   "best": "Two clusters, with a gap between 13 and 40",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Describing a distribution",
+  "card": [
+   [
+    "Shape",
+    "Data can be spread evenly on both sides of the middle (symmetric). Or it can bunch up on one side with a long tail on the other (skewed)."
+   ],
+   [
+    "Centre and spread",
+    "The centre is a typical value in the middle of the data, such as the median. The spread is how far apart the values are."
+   ],
+   [
+    "Features",
+    "A cluster is a group of values close together. A gap is a stretch with no values. An outlier is a single value far from the rest."
+   ],
+   [
+    "Example",
+    "Take 2, 3, 3, 4, 4, 4, 5, 6, 14. Most values cluster from 2 to 6, and 14 is an outlier. There is a gap between 6 and 14."
+   ]
+  ],
+  "remember": "Describe the shape, centre and spread, then name any clusters, gaps and outliers.",
+  "a": {
+   "q": "Test scores out of 40 are 12, 13, 13, 14, 15, 15, 16 and 30. Which description fits best?",
+   "opts": [
+    "Most scores are 12 to 16, with 30 an outlier",
+    "Scores are spread evenly from 12 to 30, with no gaps",
+    "Most scores are 13 to 30, with 12 an outlier",
+    "Scores are symmetric about 21, with no outliers"
+   ],
+   "why": "Seven scores sit close together from 12 to 16, and 30 is far from them, so it is an outlier. The values do not spread evenly, because there is a big gap between 16 and 30.",
+   "clue": "Look for the group that sits together and the value far from it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ages of people on a bus in Bendigo are 10, 11, 11, 12, 12, 13, 40, 41 and 42. Which feature does this data have?",
+   "opts": [
+    "Two clusters, with a gap between 13 and 40",
+    "One cluster from 10 to 13, with 40 an outlier",
+    "One cluster from 10 to 42, with no gaps",
+    "One cluster from 10 to 13, with 42 an outlier"
+   ],
+   "why": "The ages 10 to 13 form one cluster and 40 to 42 form another, with a gap from 13 to 40. The older ages are three values close together, so they are a cluster, not a single outlier.",
+   "clue": "An outlier is one value on its own. How many values are near 40?"
+  }
+ },
+ "cleared_by": "checker"
+}

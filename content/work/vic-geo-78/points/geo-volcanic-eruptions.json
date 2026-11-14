@@ -1,0 +1,752 @@
+{
+ "id": "geo-volcanic-eruptions",
+ "title": "Volcanic eruptions",
+ "brief": "b1ea4865e844",
+ "shortlist": [
+  [
+   "geo-volcanic-eruptions-as-hazards",
+   0.486
+  ],
+  [
+   "geo-volcanism",
+   0.339
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:48Z new, match",
+  "2026-11-12T12:44:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:41Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:00Z write: done",
+  "2026-11-12T15:35:06Z check: flagged",
+  "2026-11-12T15:59:43Z fix: suggested",
+  "2026-11-12T17:07:10Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-13T06:06:33Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-13T09:32:52Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T10:40:35Z claude-code check: answered by a separate subagent",
+  "2026-11-13T10:40:35Z check: flagged",
+  "2026-11-13T11:34:10Z fix: suggested",
+  "2026-11-13T12:13:14Z claude-code review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 2,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.00662,
+  "check": 0.01447,
+  "fix": 0.04331,
+  "recheck": 0.01038
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Volcanic eruptions as hazards, covers only the hazards of lava, ash, gas and hot flows, while the new point also needs how volcanoes form at plate boundaries, mudflows, and the fertile soils they leave, so it is narrower and needs a new card.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The why says the benefit comes 'only' after ash breaks down, but the card says fresh ash 'can' harm crops. 'Only' is stronger than the card supports.",
+ "rejected": {
+  "title": "Volcanic eruptions",
+  "card": [
+   "A volcano forms where magma, which is hot melted rock, rises through the Earth's crust. Many volcanoes form at plate boundaries.",
+   "The Pacific Ring of Fire is a belt of plate boundaries around the Pacific Ocean. It has many of the world's volcanoes.",
+   "Eruptions can bring lava, ash, gas and mudflows. Ash can cover farms and towns, and mudflows can bury land far from the volcano.",
+   "Fresh ash can harm crops. Over many years, though, ash and lava break down into soil rich in minerals, so volcanic soils are fertile. This is one reason people farm near volcanoes."
+  ],
+  "remember": "Eruptions bring lava, ash, gas and mudflows, but over time volcanic material makes fertile soil.",
+  "a": {
+   "q": "Why do some people choose to farm on land near a volcano?",
+   "opts": [
+    "Volcanic soils are rich in minerals",
+    "Volcanoes never erupt near farms",
+    "Lava turns into water for crops",
+    "Plate boundaries stop eruptions"
+   ],
+   "why": "Over many years, ash and lava break down into soil rich in minerals, so crops can grow well. The option about eruptions never reaching farms is wrong, because the card says ash can cover farms and towns.",
+   "clue": "Think about what happens to ash and lava over time."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mt Kelara, a volcano, last erupted 300 years ago. Today, farms cover its lower slopes. Which statement best explains this?",
+   "opts": [
+    "Old ash and lava have broken down into fertile soil",
+    "Fresh ash feeds crops with minerals straight away",
+    "Ash from eruptions falls on towns but not on farms",
+    "Gas from eruptions warms the soil so crops grow"
+   ],
+   "why": "Over many years, ash and lava from past eruptions break down into soil rich in minerals, which suits farming. The option about fresh ash is wrong, because fresh ash can harm crops: the benefit comes only after it breaks down over time.",
+   "clue": "Think about how long it takes ash and lava to become soil."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "claude-code",
+ "autoreject": [
+  {
+   "at": "2026-11-13T06:06:33Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The why says the benefit comes 'only' after ash breaks down, but the card says fresh ash 'can' harm crops. 'Only' is stronger than the card supports."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Volcanic eruptions",
+     "card": [
+      "A volcano forms where magma, which is hot melted rock, rises through the Earth's crust. Many volcanoes form at plate boundaries.",
+      "The Pacific Ring of Fire is a belt of plate boundaries around the Pacific Ocean. It has many of the world's volcanoes.",
+      "Eruptions can bring lava, ash, gas and mudflows. Ash can cover farms and towns, and mudflows can bury land far from the volcano.",
+      "Volcanic soils are also fertile, because ash and lava break down into soil rich in minerals. This is one reason people farm near volcanoes."
+     ],
+     "remember": "Volcanoes form where magma rises, and eruptions cause harm but also leave fertile soil.",
+     "a": {
+      "q": "Why do some people choose to farm on land near a volcano?",
+      "opts": [
+       "Volcanic soils are rich in minerals",
+       "Volcanoes never erupt near farms",
+       "Lava turns into water for crops",
+       "Plate boundaries stop eruptions"
+      ],
+      "why": "Ash and lava break down into soil rich in minerals, so crops can grow well. The option about eruptions never reaching farms is wrong, because the card says ash can cover farms and towns.",
+      "clue": "Think about what happens to ash and lava over time."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mt Arden, a volcano near the village of Tolu, erupts. Weeks later, villagers replant their fields. Which pair of facts best explains the harm and the benefit?",
+      "opts": [
+       "Ash and mudflows damaged land, but the soil is fertile",
+       "Gas cooled the soil, so it is now fertile",
+       "Magma sank into the crust, leaving fertile fields",
+       "Lava stopped ash, so the fields were not harmed"
+      ],
+      "why": "The eruption's ash and mudflows can bury land, but volcanic material breaks down into mineral-rich, fertile soil. The option about lava stopping ash is wrong, because ash is a separate hazard that can cover farms.",
+      "clue": "One fact is a hazard and the other is a later benefit."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Volcanic soils are rich in minerals",
+      "also_right": []
+     },
+     "b": {
+      "best": "Ash and mudflows damaged land, but the soil is fertile",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The scenario has villagers replanting 'weeks later' and links this to fertile soil. Fresh ash and mudflow deposits take years to break down into fertile soil, and fresh ash can harm crops. The card says ash and lava 'break down' into soil, so the timing teaches that the benefit is almost immediate."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option stands out. It is the longest, and it is the only one that pairs a harm with a benefit, which the stem and clue ask for directly. A student could pick it from the wording without knowing the idea."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "'Mt Arden' is the name of a real mountain in the Flinders Ranges, South Australia, and it is not a volcano. A fictional volcano name that does not match a real Australian place would avoid confusion."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Question b has problems. Its 'weeks later' timing suggests fresh ash and mudflows make soil fertile almost at once. Its right option is the only one that gives both a harm and a benefit, so it stands out. It also uses Mt Arden, the name of a real non-volcanic South Australian mountain. The card and question a are fine."
+    },
+    "flags": [
+     "Question b, fact: The scenario has villagers replanting 'weeks later' and links this to fertile soil. Fresh ash and mudflow deposits take years to break down into fertile soil, and fresh ash can harm crops. The card says ash and lava 'break down' into soil, so the timing teaches that the benefit is almost immediate.",
+     "Question b, wording: The right option stands out. It is the longest, and it is the only one that pairs a harm with a benefit, which the stem and clue ask for directly. A student could pick it from the wording without knowing the idea.",
+     "Question b, other: 'Mt Arden' is the name of a real mountain in the Flinders Ranges, South Australia, and it is not a volcano. A fictional volcano name that does not match a real Australian place would avoid confusion."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Volcanic eruptions",
+     "card": [
+      "A volcano forms where magma, which is hot melted rock, rises through the Earth's crust. Many volcanoes form at plate boundaries.",
+      "The Pacific Ring of Fire is a belt of plate boundaries around the Pacific Ocean. It has many of the world's volcanoes.",
+      "Eruptions can bring lava, ash, gas and mudflows. Ash can cover farms and towns, and mudflows can bury land far from the volcano.",
+      "Fresh ash can harm crops. Over many years, though, ash and lava break down into soil rich in minerals, so volcanic soils are fertile. This is one reason people farm near volcanoes."
+     ],
+     "remember": "Eruptions bring lava, ash, gas and mudflows, but over time volcanic material makes fertile soil.",
+     "a": {
+      "q": "Why do some people choose to farm on land near a volcano?",
+      "opts": [
+       "Volcanic soils are rich in minerals",
+       "Volcanoes never erupt near farms",
+       "Lava turns into water for crops",
+       "Plate boundaries stop eruptions"
+      ],
+      "why": "Over many years, ash and lava break down into soil rich in minerals, so crops can grow well. The option about eruptions never reaching farms is wrong, because the card says ash can cover farms and towns.",
+      "clue": "Think about what happens to ash and lava over time."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mt Kelara, a volcano, last erupted 300 years ago. Today, farms cover its lower slopes. Which statement best explains this?",
+      "opts": [
+       "Old ash and lava have broken down into fertile soil",
+       "Fresh ash feeds crops with minerals straight away",
+       "Ash from eruptions falls on towns but not on farms",
+       "Gas from eruptions warms the soil so crops grow"
+      ],
+      "why": "Over many years, ash and lava from past eruptions break down into soil rich in minerals, which suits farming. The option about fresh ash is wrong, because fresh ash can harm crops: the benefit comes only after it breaks down over time.",
+      "clue": "Think about how long it takes ash and lava to become soil."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-12T17:07:10Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Volcanic soils are rich in minerals",
+       "also_right": []
+      },
+      "b": {
+       "best": "Old ash and lava have broken down into fertile soil",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The why says the benefit comes 'only' after ash breaks down, but the card says fresh ash 'can' harm crops. 'Only' is stronger than the card supports."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both questions are accurate, and each question has one clear answer. One small issue: the why for (b) says the benefit comes 'only' after breakdown, which is stronger than the card's 'can'."
+     },
+     "flags": [
+      "Question b, wording: The why says the benefit comes 'only' after ash breaks down, but the card says fresh ash 'can' harm crops. 'Only' is stronger than the card supports."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-13T09:32:52Z",
+   "step": "write",
+   "version": {
+    "title": "Volcanic eruptions",
+    "card": [
+     "A volcano forms where magma, which is hot melted rock, rises through the Earth's crust. Many volcanoes form at plate boundaries.",
+     "The Pacific Ring of Fire is a belt of plate boundaries around the Pacific Ocean. It has many of the world's volcanoes.",
+     "Eruptions can bring lava, ash, gas and mudflows. Ash can cover farms and towns, and mudflows can bury land far from the volcano.",
+     "Fresh ash can harm crops. Over many years, though, ash and lava break down into soil rich in minerals, so volcanic soils are fertile. This is one reason people farm near volcanoes."
+    ],
+    "remember": "Eruptions bring lava, ash, gas and mudflows, but over time volcanic material makes fertile soil.",
+    "a": {
+     "q": "Why do some people choose to farm on land near a volcano?",
+     "opts": [
+      "Volcanic soils are rich in minerals",
+      "Volcanoes never erupt near farms",
+      "Lava turns into water for crops",
+      "Plate boundaries stop eruptions"
+     ],
+     "why": "Over many years, ash and lava break down into soil rich in minerals, so crops can grow well. The option saying volcanoes never erupt near farms is wrong, because the card says ash can cover farms and towns.",
+     "clue": "Think about what happens to ash and lava over time."
+    },
+    "b": {
+     "d": 3,
+     "q": "Mt Kelara, a volcano, last erupted 300 years ago. Today, farms cover its lower slopes. Which statement best explains this?",
+     "opts": [
+      "Old ash and lava have broken down into fertile soil",
+      "Fresh ash feeds crops with minerals straight away",
+      "Ash from eruptions falls on towns but not on farms",
+      "Gas from eruptions warms the soil so crops grow"
+     ],
+     "why": "Over many years, ash and lava from past eruptions break down into soil rich in minerals, which suits farming. The option about fresh ash is wrong, because fresh ash can harm crops: the fertile soil forms as it breaks down over time.",
+     "clue": "Think about how long it takes ash and lava to become soil."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T10:40:35Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Volcanic soils are rich in minerals",
+     "also_right": []
+    },
+    "b": {
+     "best": "Old ash and lava have broken down into fertile soil",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "a",
+      "kind": "wording",
+      "detail": "The distractor \"Volcanoes never erupt near farms\" uses \"never\" where the card says ash \"can\" cover farms and towns; the absolute word marks it as wrong to a test-wise student, though the option is meant to be false."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "Only a minor issue: one distractor in question a uses \"never\", which a test-wise student can rule out without knowing the idea. The card, the answers and the explanations are accurate and match each other."
+   }
+  },
+  {
+   "at": "2026-11-13T12:13:14Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix replaces the 'never' distractor in question a with wrong options that need the card to rule out, and updates why (a) to match. The card's facts and both answers are right.",
+   "item": "1abf5e582e499fcf",
+   "result": "decided",
+   "saved": {
+    "id": "geo-volcanic-eruptions",
+    "title": "Volcanic eruptions",
+    "brief": "b1ea4865e844",
+    "shortlist": [
+     [
+      "geo-volcanic-eruptions-as-hazards",
+      0.486
+     ],
+     [
+      "geo-volcanism",
+      0.339
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 2,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00024,
+     "write": 0.00662,
+     "check": 0.01447,
+     "fix": 0.04331,
+     "recheck": 0.01038
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The closest bank point, Volcanic eruptions as hazards, covers only the hazards of lava, ash, gas and hot flows, while the new point also needs how volcanoes form at plate boundaries, mudflows, and the fertile soils they leave, so it is narrower and needs a new card.",
+     "model": "claude-haiku-5-5"
+    },
+    "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The why says the benefit comes 'only' after ash breaks down, but the card says fresh ash 'can' harm crops. 'Only' is stronger than the card supports.",
+    "rejected": {
+     "title": "Volcanic eruptions",
+     "card": [
+      "A volcano forms where magma, which is hot melted rock, rises through the Earth's crust. Many volcanoes form at plate boundaries.",
+      "The Pacific Ring of Fire is a belt of plate boundaries around the Pacific Ocean. It has many of the world's volcanoes.",
+      "Eruptions can bring lava, ash, gas and mudflows. Ash can cover farms and towns, and mudflows can bury land far from the volcano.",
+      "Fresh ash can harm crops. Over many years, though, ash and lava break down into soil rich in minerals, so volcanic soils are fertile. This is one reason people farm near volcanoes."
+     ],
+     "remember": "Eruptions bring lava, ash, gas and mudflows, but over time volcanic material makes fertile soil.",
+     "a": {
+      "q": "Why do some people choose to farm on land near a volcano?",
+      "opts": [
+       "Volcanic soils are rich in minerals",
+       "Volcanoes never erupt near farms",
+       "Lava turns into water for crops",
+       "Plate boundaries stop eruptions"
+      ],
+      "why": "Over many years, ash and lava break down into soil rich in minerals, so crops can grow well. The option about eruptions never reaching farms is wrong, because the card says ash can cover farms and towns.",
+      "clue": "Think about what happens to ash and lava over time."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mt Kelara, a volcano, last erupted 300 years ago. Today, farms cover its lower slopes. Which statement best explains this?",
+      "opts": [
+       "Old ash and lava have broken down into fertile soil",
+       "Fresh ash feeds crops with minerals straight away",
+       "Ash from eruptions falls on towns but not on farms",
+       "Gas from eruptions warms the soil so crops grow"
+      ],
+      "why": "Over many years, ash and lava from past eruptions break down into soil rich in minerals, which suits farming. The option about fresh ash is wrong, because fresh ash can harm crops: the benefit comes only after it breaks down over time.",
+      "clue": "Think about how long it takes ash and lava to become soil."
+     }
+    },
+    "rewrites": 1,
+    "cleared_by": "autoreject",
+    "autoreject": [
+     {
+      "at": "2026-11-13T06:06:33Z",
+      "rules": 1,
+      "rewrites": 1,
+      "flags": [
+       "Question b, wording: The why says the benefit comes 'only' after ash breaks down, but the card says fresh ash 'can' harm crops. 'Only' is stronger than the card supports."
+      ],
+      "saved": {
+       "draft": {
+        "title": "Volcanic eruptions",
+        "card": [
+         "A volcano forms where magma, which is hot melted rock, rises through the Earth's crust. Many volcanoes form at plate boundaries.",
+         "The Pacific Ring of Fire is a belt of plate boundaries around the Pacific Ocean. It has many of the world's volcanoes.",
+         "Eruptions can bring lava, ash, gas and mudflows. Ash can cover farms and towns, and mudflows can bury land far from the volcano.",
+         "Volcanic soils are also fertile, because ash and lava break down into soil rich in minerals. This is one reason people farm near volcanoes."
+        ],
+        "remember": "Volcanoes form where magma rises, and eruptions cause harm but also leave fertile soil.",
+        "a": {
+         "q": "Why do some people choose to farm on land near a volcano?",
+         "opts": [
+          "Volcanic soils are rich in minerals",
+          "Volcanoes never erupt near farms",
+          "Lava turns into water for crops",
+          "Plate boundaries stop eruptions"
+         ],
+         "why": "Ash and lava break down into soil rich in minerals, so crops can grow well. The option about eruptions never reaching farms is wrong, because the card says ash can cover farms and towns.",
+         "clue": "Think about what happens to ash and lava over time."
+        },
+        "b": {
+         "d": 3,
+         "q": "Mt Arden, a volcano near the village of Tolu, erupts. Weeks later, villagers replant their fields. Which pair of facts best explains the harm and the benefit?",
+         "opts": [
+          "Ash and mudflows damaged land, but the soil is fertile",
+          "Gas cooled the soil, so it is now fertile",
+          "Magma sank into the crust, leaving fertile fields",
+          "Lava stopped ash, so the fields were not harmed"
+         ],
+         "why": "The eruption's ash and mudflows can bury land, but volcanic material breaks down into mineral-rich, fertile soil. The option about lava stopping ash is wrong, because ash is a separate hazard that can cover farms.",
+         "clue": "One fact is a hazard and the other is a later benefit."
+        }
+       },
+       "local": [],
+       "check": {
+        "a": {
+         "best": "Volcanic soils are rich in minerals",
+         "also_right": []
+        },
+        "b": {
+         "best": "Ash and mudflows damaged land, but the soil is fertile",
+         "also_right": []
+        },
+        "problems": [
+         {
+          "part": "b",
+          "kind": "fact",
+          "detail": "The scenario has villagers replanting 'weeks later' and links this to fertile soil. Fresh ash and mudflow deposits take years to break down into fertile soil, and fresh ash can harm crops. The card says ash and lava 'break down' into soil, so the timing teaches that the benefit is almost immediate."
+         },
+         {
+          "part": "b",
+          "kind": "wording",
+          "detail": "The right option stands out. It is the longest, and it is the only one that pairs a harm with a benefit, which the stem and clue ask for directly. A student could pick it from the wording without knowing the idea."
+         },
+         {
+          "part": "b",
+          "kind": "other",
+          "detail": "'Mt Arden' is the name of a real mountain in the Flinders Ranges, South Australia, and it is not a volcano. A fictional volcano name that does not match a real Australian place would avoid confusion."
+         }
+        ],
+        "sure": "high",
+        "sensitive": "none",
+        "summary": "Question b has problems. Its 'weeks later' timing suggests fresh ash and mudflows make soil fertile almost at once. Its right option is the only one that gives both a harm and a benefit, so it stands out. It also uses Mt Arden, the name of a real non-volcanic South Australian mountain. The card and question a are fine."
+       },
+       "flags": [
+        "Question b, fact: The scenario has villagers replanting 'weeks later' and links this to fertile soil. Fresh ash and mudflow deposits take years to break down into fertile soil, and fresh ash can harm crops. The card says ash and lava 'break down' into soil, so the timing teaches that the benefit is almost immediate.",
+        "Question b, wording: The right option stands out. It is the longest, and it is the only one that pairs a harm with a benefit, which the stem and clue ask for directly. A student could pick it from the wording without knowing the idea.",
+        "Question b, other: 'Mt Arden' is the name of a real mountain in the Flinders Ranges, South Australia, and it is not a volcano. A fictional volcano name that does not match a real Australian place would avoid confusion."
+       ],
+       "sensitive": "none",
+       "proposal": {
+        "title": "Volcanic eruptions",
+        "card": [
+         "A volcano forms where magma, which is hot melted rock, rises through the Earth's crust. Many volcanoes form at plate boundaries.",
+         "The Pacific Ring of Fire is a belt of plate boundaries around the Pacific Ocean. It has many of the world's volcanoes.",
+         "Eruptions can bring lava, ash, gas and mudflows. Ash can cover farms and towns, and mudflows can bury land far from the volcano.",
+         "Fresh ash can harm crops. Over many years, though, ash and lava break down into soil rich in minerals, so volcanic soils are fertile. This is one reason people farm near volcanoes."
+        ],
+        "remember": "Eruptions bring lava, ash, gas and mudflows, but over time volcanic material makes fertile soil.",
+        "a": {
+         "q": "Why do some people choose to farm on land near a volcano?",
+         "opts": [
+          "Volcanic soils are rich in minerals",
+          "Volcanoes never erupt near farms",
+          "Lava turns into water for crops",
+          "Plate boundaries stop eruptions"
+         ],
+         "why": "Over many years, ash and lava break down into soil rich in minerals, so crops can grow well. The option about eruptions never reaching farms is wrong, because the card says ash can cover farms and towns.",
+         "clue": "Think about what happens to ash and lava over time."
+        },
+        "b": {
+         "d": 3,
+         "q": "Mt Kelara, a volcano, last erupted 300 years ago. Today, farms cover its lower slopes. Which statement best explains this?",
+         "opts": [
+          "Old ash and lava have broken down into fertile soil",
+          "Fresh ash feeds crops with minerals straight away",
+          "Ash from eruptions falls on towns but not on farms",
+          "Gas from eruptions warms the soil so crops grow"
+         ],
+         "why": "Over many years, ash and lava from past eruptions break down into soil rich in minerals, which suits farming. The option about fresh ash is wrong, because fresh ash can harm crops: the benefit comes only after it breaks down over time.",
+         "clue": "Think about how long it takes ash and lava to become soil."
+        }
+       },
+       "proposal_problems": [],
+       "alone": true,
+       "recheck": {
+        "at": "2026-11-12T17:07:10Z",
+        "result": "kept",
+        "why": [
+         "the fresh check found a problem"
+        ],
+        "check": {
+         "a": {
+          "best": "Volcanic soils are rich in minerals",
+          "also_right": []
+         },
+         "b": {
+          "best": "Old ash and lava have broken down into fertile soil",
+          "also_right": []
+         },
+         "problems": [
+          {
+           "part": "b",
+           "kind": "wording",
+           "detail": "The why says the benefit comes 'only' after ash breaks down, but the card says fresh ash 'can' harm crops. 'Only' is stronger than the card supports."
+          }
+         ],
+         "sure": "high",
+         "sensitive": "none",
+         "summary": "The card and both questions are accurate, and each question has one clear answer. One small issue: the why for (b) says the benefit comes 'only' after breakdown, which is stronger than the card's 'can'."
+        },
+        "flags": [
+         "Question b, wording: The why says the benefit comes 'only' after ash breaks down, but the card says fresh ash 'can' harm crops. 'Only' is stronger than the card supports."
+        ]
+       }
+      }
+     }
+    ],
+    "written_by": "claude-code",
+    "draft": {
+     "title": "Volcanic eruptions",
+     "card": [
+      "A volcano forms where magma, which is hot melted rock, rises through the Earth's crust. Many volcanoes form at plate boundaries.",
+      "The Pacific Ring of Fire is a belt of plate boundaries around the Pacific Ocean. It has many of the world's volcanoes.",
+      "Eruptions can bring lava, ash, gas and mudflows. Ash can cover farms and towns, and mudflows can bury land far from the volcano.",
+      "Fresh ash can harm crops. Over many years, though, ash and lava break down into soil rich in minerals, so volcanic soils are fertile. This is one reason people farm near volcanoes."
+     ],
+     "remember": "Eruptions bring lava, ash, gas and mudflows, but over time volcanic material makes fertile soil.",
+     "a": {
+      "q": "Why do some people choose to farm on land near a volcano?",
+      "opts": [
+       "Volcanic soils are rich in minerals",
+       "Volcanoes never erupt near farms",
+       "Lava turns into water for crops",
+       "Plate boundaries stop eruptions"
+      ],
+      "why": "Over many years, ash and lava break down into soil rich in minerals, so crops can grow well. The option saying volcanoes never erupt near farms is wrong, because the card says ash can cover farms and towns.",
+      "clue": "Think about what happens to ash and lava over time."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mt Kelara, a volcano, last erupted 300 years ago. Today, farms cover its lower slopes. Which statement best explains this?",
+      "opts": [
+       "Old ash and lava have broken down into fertile soil",
+       "Fresh ash feeds crops with minerals straight away",
+       "Ash from eruptions falls on towns but not on farms",
+       "Gas from eruptions warms the soil so crops grow"
+      ],
+      "why": "Over many years, ash and lava from past eruptions break down into soil rich in minerals, which suits farming. The option about fresh ash is wrong, because fresh ash can harm crops: the fertile soil forms as it breaks down over time.",
+      "clue": "Think about how long it takes ash and lava to become soil."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Volcanic soils are rich in minerals",
+      "also_right": []
+     },
+     "b": {
+      "best": "Old ash and lava have broken down into fertile soil",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The distractor \"Volcanoes never erupt near farms\" uses \"never\" where the card says ash \"can\" cover farms and towns; the absolute word marks it as wrong to a test-wise student, though the option is meant to be false."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Only a minor issue: one distractor in question a uses \"never\", which a test-wise student can rule out without knowing the idea. The card, the answers and the explanations are accurate and match each other."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a, wording: The distractor \"Volcanoes never erupt near farms\" uses \"never\" where the card says ash \"can\" cover farms and towns; the absolute word marks it as wrong to a test-wise student, though the option is meant to be false."
+    ],
+    "checked_by": "claude-code",
+    "proposal": {
+     "title": "Volcanic eruptions",
+     "card": [
+      "A volcano forms where magma, which is hot melted rock, rises through the Earth's crust. Many volcanoes form at plate boundaries.",
+      "The Pacific Ring of Fire is a belt of plate boundaries around the Pacific Ocean. It has many of the world's volcanoes.",
+      "Eruptions can bring lava, ash, gas and mudflows. Ash can cover farms and towns, and mudflows can bury land far from the volcano.",
+      "Fresh ash can harm crops. Over many years, though, ash and lava break down into soil rich in minerals, so volcanic soils are fertile. This is one reason people farm near volcanoes."
+     ],
+     "remember": "Eruptions bring lava, ash, gas and mudflows, but over time volcanic material makes fertile soil.",
+     "a": {
+      "q": "Why do some people choose to farm on land near a volcano?",
+      "opts": [
+       "Volcanic soils are rich in minerals",
+       "Ash lands on towns but misses farms",
+       "Mudflows bring water to nearby fields",
+       "Plate boundaries stop volcanoes erupting"
+      ],
+      "why": "Over many years, ash and lava break down into soil rich in minerals, so crops can grow well. The option about ash missing farms is wrong, because ash can cover farms as well as towns. Mudflows bury land rather than water it, and many volcanoes form at plate boundaries.",
+      "clue": "Think about what happens to ash and lava over time."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mt Kelara, a volcano, last erupted 300 years ago. Today, farms cover its lower slopes. Which statement best explains this?",
+      "opts": [
+       "Old ash and lava have broken down into fertile soil",
+       "Fresh ash feeds crops with minerals straight away",
+       "Ash from eruptions falls on towns but not on farms",
+       "Gas from eruptions warms the soil so crops grow"
+      ],
+      "why": "Over many years, ash and lava from past eruptions break down into soil rich in minerals, which suits farming. The option about fresh ash is wrong, because fresh ash can harm crops: the fertile soil forms as it breaks down over time.",
+      "clue": "Think about how long it takes ash and lava to become soil."
+     }
+    },
+    "proposal_problems": []
+   },
+   "after": "fb1c4531b8a580e1"
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Volcanic eruptions",
+  "card": [
+   "A volcano forms where magma, which is hot melted rock, rises through the Earth's crust. Many volcanoes form at plate boundaries.",
+   "The Pacific Ring of Fire is a belt of plate boundaries around the Pacific Ocean. It has many of the world's volcanoes.",
+   "Eruptions can bring lava, ash, gas and mudflows. Ash can cover farms and towns, and mudflows can bury land far from the volcano.",
+   "Fresh ash can harm crops. Over many years, though, ash and lava break down into soil rich in minerals, so volcanic soils are fertile. This is one reason people farm near volcanoes."
+  ],
+  "remember": "Eruptions bring lava, ash, gas and mudflows, but over time volcanic material makes fertile soil.",
+  "a": {
+   "q": "Why do some people choose to farm on land near a volcano?",
+   "opts": [
+    "Volcanic soils are rich in minerals",
+    "Volcanoes never erupt near farms",
+    "Lava turns into water for crops",
+    "Plate boundaries stop eruptions"
+   ],
+   "why": "Over many years, ash and lava break down into soil rich in minerals, so crops can grow well. The option saying volcanoes never erupt near farms is wrong, because the card says ash can cover farms and towns.",
+   "clue": "Think about what happens to ash and lava over time."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mt Kelara, a volcano, last erupted 300 years ago. Today, farms cover its lower slopes. Which statement best explains this?",
+   "opts": [
+    "Old ash and lava have broken down into fertile soil",
+    "Fresh ash feeds crops with minerals straight away",
+    "Ash from eruptions falls on towns but not on farms",
+    "Gas from eruptions warms the soil so crops grow"
+   ],
+   "why": "Over many years, ash and lava from past eruptions break down into soil rich in minerals, which suits farming. The option about fresh ash is wrong, because fresh ash can harm crops: the fertile soil forms as it breaks down over time.",
+   "clue": "Think about how long it takes ash and lava to become soil."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Volcanic soils are rich in minerals",
+   "also_right": []
+  },
+  "b": {
+   "best": "Old ash and lava have broken down into fertile soil",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The distractor \"Volcanoes never erupt near farms\" uses \"never\" where the card says ash \"can\" cover farms and towns; the absolute word marks it as wrong to a test-wise student, though the option is meant to be false."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Only a minor issue: one distractor in question a uses \"never\", which a test-wise student can rule out without knowing the idea. The card, the answers and the explanations are accurate and match each other."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The distractor \"Volcanoes never erupt near farms\" uses \"never\" where the card says ash \"can\" cover farms and towns; the absolute word marks it as wrong to a test-wise student, though the option is meant to be false."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Volcanic eruptions",
+  "card": [
+   "A volcano forms where magma, which is hot melted rock, rises through the Earth's crust. Many volcanoes form at plate boundaries.",
+   "The Pacific Ring of Fire is a belt of plate boundaries around the Pacific Ocean. It has many of the world's volcanoes.",
+   "Eruptions can bring lava, ash, gas and mudflows. Ash can cover farms and towns, and mudflows can bury land far from the volcano.",
+   "Fresh ash can harm crops. Over many years, though, ash and lava break down into soil rich in minerals, so volcanic soils are fertile. This is one reason people farm near volcanoes."
+  ],
+  "remember": "Eruptions bring lava, ash, gas and mudflows, but over time volcanic material makes fertile soil.",
+  "a": {
+   "q": "Why do some people choose to farm on land near a volcano?",
+   "opts": [
+    "Volcanic soils are rich in minerals",
+    "Ash lands on towns but misses farms",
+    "Mudflows bring water to nearby fields",
+    "Plate boundaries stop volcanoes erupting"
+   ],
+   "why": "Over many years, ash and lava break down into soil rich in minerals, so crops can grow well. The option about ash missing farms is wrong, because ash can cover farms as well as towns. Mudflows bury land rather than water it, and many volcanoes form at plate boundaries.",
+   "clue": "Think about what happens to ash and lava over time."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mt Kelara, a volcano, last erupted 300 years ago. Today, farms cover its lower slopes. Which statement best explains this?",
+   "opts": [
+    "Old ash and lava have broken down into fertile soil",
+    "Fresh ash feeds crops with minerals straight away",
+    "Ash from eruptions falls on towns but not on farms",
+    "Gas from eruptions warms the soil so crops grow"
+   ],
+   "why": "Over many years, ash and lava from past eruptions break down into soil rich in minerals, which suits farming. The option about fresh ash is wrong, because fresh ash can harm crops: the fertile soil forms as it breaks down over time.",
+   "clue": "Think about how long it takes ash and lava to become soil."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Volcanic eruptions",
+  "card": [
+   "A volcano forms where magma, which is hot melted rock, rises through the Earth's crust. Many volcanoes form at plate boundaries.",
+   "The Pacific Ring of Fire is a belt of plate boundaries around the Pacific Ocean. It has many of the world's volcanoes.",
+   "Eruptions can bring lava, ash, gas and mudflows. Ash can cover farms and towns, and mudflows can bury land far from the volcano.",
+   "Fresh ash can harm crops. Over many years, though, ash and lava break down into soil rich in minerals, so volcanic soils are fertile. This is one reason people farm near volcanoes."
+  ],
+  "remember": "Eruptions bring lava, ash, gas and mudflows, but over time volcanic material makes fertile soil.",
+  "a": {
+   "q": "Why do some people choose to farm on land near a volcano?",
+   "opts": [
+    "Volcanic soils are rich in minerals",
+    "Ash lands on towns but misses farms",
+    "Mudflows bring water to nearby fields",
+    "Plate boundaries stop volcanoes erupting"
+   ],
+   "why": "Over many years, ash and lava break down into soil rich in minerals, so crops can grow well. The option about ash missing farms is wrong, because ash can cover farms as well as towns. Mudflows bury land rather than water it, and many volcanoes form at plate boundaries.",
+   "clue": "Think about what happens to ash and lava over time."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mt Kelara, a volcano, last erupted 300 years ago. Today, farms cover its lower slopes. Which statement best explains this?",
+   "opts": [
+    "Old ash and lava have broken down into fertile soil",
+    "Fresh ash feeds crops with minerals straight away",
+    "Ash from eruptions falls on towns but not on farms",
+    "Gas from eruptions warms the soil so crops grow"
+   ],
+   "why": "Over many years, ash and lava from past eruptions break down into soil rich in minerals, which suits farming. The option about fresh ash is wrong, because fresh ash can harm crops: the fertile soil forms as it breaks down over time.",
+   "clue": "Think about how long it takes ash and lava to become soil."
+  }
+ }
+}

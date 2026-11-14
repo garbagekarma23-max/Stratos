@@ -1,0 +1,136 @@
+{
+ "id": "mat-factorising-difference-two-squares",
+ "title": "Factorising a difference of two squares",
+ "brief": "caf7c1a87d33",
+ "shortlist": [
+  [
+   "mat-perfect-squares-difference-two",
+   0.457
+  ],
+  [
+   "mat-expanding-factorising-as-reverse",
+   0.399
+  ],
+  [
+   "mat-expanding-factorising",
+   0.389
+  ],
+  [
+   "mat-completing-square",
+   0.329
+  ],
+  [
+   "mat-solving-quadratics-by-factorising",
+   0.328
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:54Z new, match",
+  "2026-11-12T12:44:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:06:02Z write: done",
+  "2026-11-12T15:15:51Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0004,
+  "write": 0.02202,
+  "check": 0.009
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank card, mat-perfect-squares-difference-two, teaches expanding the difference of two squares rather than factorising it, and mat-expanding-factorising covers that factorising step only as one of several broader techniques, so neither matches this point exactly.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Factorising a difference of two squares",
+  "card": [
+   "A difference of two squares is one perfect square minus another, such as \\(x^{2} - 25\\). Here \\(x^{2}\\) is the square of \\(x\\), and 25 is the square of 5.",
+   "It factorises into a pair of brackets with the same two terms, one with a plus and one with a minus: \\(a^{2} - b^{2} = (a + b)(a - b)\\).",
+   "Example: \\(x^{2} - 25 = (x + 5)(x - 5)\\). Take the square root of each term, then write one plus and one minus.",
+   "Check by expanding: the middle terms \\(-5x\\) and \\(+5x\\) cancel. The pattern needs a minus between the squares. A sum such as \\(x^{2} + 25\\) does not factorise this way."
+  ],
+  "remember": "Square root of each term, then one bracket with a plus and one with a minus.",
+  "a": {
+   "q": "Which is the factorised form of \\(x^{2} - 49\\)?",
+   "opts": [
+    "\\((x + 7)(x - 7)\\)",
+    "\\((x - 7)(x - 7)\\)",
+    "\\((x + 7)(x + 7)\\)",
+    "\\((x + 49)(x - 49)\\)"
+   ],
+   "why": "49 is the square of 7, so the brackets hold \\(x\\) and 7, one with a plus and one with a minus. \\((x - 7)(x - 7)\\) is tempting, but it expands to \\(x^{2} - 14x + 49\\), which has a middle term.",
+   "clue": "What number multiplied by itself gives 49?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which is the factorised form of \\(9x^{2} - 16\\)?",
+   "opts": [
+    "\\((3x + 4)(3x - 4)\\)",
+    "\\((9x + 16)(9x - 16)\\)",
+    "\\((3x - 4)(3x - 4)\\)",
+    "\\((9x + 4)(9x - 4)\\)"
+   ],
+   "why": "\\(9x^{2}\\) is the square of \\(3x\\), and 16 is the square of 4. So the answer is \\((3x + 4)(3x - 4)\\). Using 9 and 16 in the brackets is the tempting mistake: the brackets hold the square roots, not the squares.",
+   "clue": "Take the square root of \\(9x^{2}\\), not just of the number 9."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\((x + 7)(x - 7)\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\((3x + 4)(3x - 4)\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Factorising a difference of two squares",
+  "card": [
+   "A difference of two squares is one perfect square minus another, such as \\(x^{2} - 25\\). Here \\(x^{2}\\) is the square of \\(x\\), and 25 is the square of 5.",
+   "It factorises into a pair of brackets with the same two terms, one with a plus and one with a minus: \\(a^{2} - b^{2} = (a + b)(a - b)\\).",
+   "Example: \\(x^{2} - 25 = (x + 5)(x - 5)\\). Take the square root of each term, then write one plus and one minus.",
+   "Check by expanding: the middle terms \\(-5x\\) and \\(+5x\\) cancel. The pattern needs a minus between the squares. A sum such as \\(x^{2} + 25\\) does not factorise this way."
+  ],
+  "remember": "Square root of each term, then one bracket with a plus and one with a minus.",
+  "a": {
+   "q": "Which is the factorised form of \\(x^{2} - 49\\)?",
+   "opts": [
+    "\\((x + 7)(x - 7)\\)",
+    "\\((x - 7)(x - 7)\\)",
+    "\\((x + 7)(x + 7)\\)",
+    "\\((x + 49)(x - 49)\\)"
+   ],
+   "why": "49 is the square of 7, so the brackets hold \\(x\\) and 7, one with a plus and one with a minus. \\((x - 7)(x - 7)\\) is tempting, but it expands to \\(x^{2} - 14x + 49\\), which has a middle term.",
+   "clue": "What number multiplied by itself gives 49?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which is the factorised form of \\(9x^{2} - 16\\)?",
+   "opts": [
+    "\\((3x + 4)(3x - 4)\\)",
+    "\\((9x + 16)(9x - 16)\\)",
+    "\\((3x - 4)(3x - 4)\\)",
+    "\\((9x + 4)(9x - 4)\\)"
+   ],
+   "why": "\\(9x^{2}\\) is the square of \\(3x\\), and 16 is the square of 4. So the answer is \\((3x + 4)(3x - 4)\\). Using 9 and 16 in the brackets is the tempting mistake: the brackets hold the square roots, not the squares.",
+   "clue": "Take the square root of \\(9x^{2}\\), not just of the number 9."
+  }
+ },
+ "cleared_by": "checker"
+}

@@ -1,0 +1,207 @@
+{
+ "id": "geo-transport-connects-places",
+ "title": "How transport connects places",
+ "brief": "625870f8c7ad",
+ "shortlist": [
+  [
+   "geo-transport-access",
+   0.48
+  ],
+  [
+   "geo-transport-technology-access",
+   0.258
+  ],
+  [
+   "geo-trade-links-places",
+   0.254
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:49Z new, match",
+  "2026-11-12T12:44:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:43Z write: done",
+  "2026-11-12T15:26:00Z check: flagged",
+  "2026-11-12T15:35:07Z fix: suggested",
+  "2026-11-12T16:19:53Z autoreview: cleared with the fix (a other, b other)",
+  "2026-11-13T15:03:50Z autoreview: undone, back to the review list",
+  "2026-11-13T15:20:44Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.01103,
+  "check": 0.00997,
+  "fix": 0.02091
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Transport and access, covers how easily people reach nearby services and how a town's use changes, but it does not teach how faster, cheaper transport links distant places to markets, jobs and services.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "How transport connects places",
+  "card": [
+   "Transport moves people and goods between places. The main modes are air, road, rail and sea.",
+   "When transport gets faster and cheaper, people and goods can travel further for the same time and money.",
+   "This links places to jobs, markets and services far away. A worker can live in one town and commute to a job in another. A farmer can sell produce to buyers in distant cities or other countries.",
+   "Each mode suits different jobs. Sea carries bulky goods in large amounts. Air is fast but costly, so it suits light, urgent or high-value items. Road and rail link towns and cities by land."
+  ],
+  "remember": "Better transport links places, so jobs, markets and services can be reached from further away.",
+  "a": {
+   "q": "A new fast rail line opens between two regional towns. What is the most likely effect on the towns?",
+   "opts": [
+    "Workers can reach jobs in the other town more easily",
+    "The two towns will become identical in their industries",
+    "People will stop using local shops in both towns",
+    "Goods will be moved only by sea between the towns"
+   ],
+   "why": "Faster rail shortens the trip, so people can reach jobs and services in the other town more easily. It does not make the towns identical, because each keeps its own industries and features.",
+   "clue": "Think about what a shorter trip lets a worker do."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya grows cherries near Orange and wants to sell them in Singapore within a day or two of picking. Which mode of transport best suits this?",
+   "opts": [
+    "Air freight, because it is fast over long distances",
+    "Sea freight, because it carries bulky goods in large amounts",
+    "Rail freight, because it links towns by land",
+    "Road freight, because it reaches every town"
+   ],
+   "why": "Cherries are light, high in value and spoil quickly, so fast air freight suits them. Sea freight carries large loads cheaply, but it is slow, so the fruit would spoil before it arrived.",
+   "clue": "Which mode is fastest over a long distance?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Workers can reach jobs in the other town more easily",
+   "also_right": []
+  },
+  "b": {
+   "best": "Air freight, because it is fast over long distances",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about what a shorter trip lets a worker do' points straight at the only option that mentions workers, so a student can pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Which mode is fastest over a long distance?' repeats the wording of the right option ('fast over long distances'), which gives the answer away."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and answers are accurate. Both clues give the answer away: clue (a) names workers, who appear only in the right option, and clue (b) echoes the right option's wording."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'Think about what a shorter trip lets a worker do' points straight at the only option that mentions workers, so a student can pick it without knowing the idea.",
+  "Question b, other: The clue 'Which mode is fastest over a long distance?' repeats the wording of the right option ('fast over long distances'), which gives the answer away."
+ ],
+ "proposal": {
+  "title": "How transport connects places",
+  "card": [
+   "Transport moves people and goods between places. The main modes are air, road, rail and sea.",
+   "When transport gets faster and cheaper, people and goods can travel further for the same time and money.",
+   "This links places to jobs, markets and services far away. A worker can live in one town and commute to a job in another. A farmer can sell produce to buyers in distant cities or other countries.",
+   "Each mode suits different jobs. Sea carries bulky goods in large amounts. Air is fast but costly, so it suits light, urgent or high-value items. Road and rail link towns and cities by land."
+  ],
+  "remember": "Better transport links places, so jobs, markets and services can be reached from further away.",
+  "a": {
+   "q": "A new fast rail line opens between two regional towns. What is the most likely effect on the towns?",
+   "opts": [
+    "Workers can reach jobs in the other town more easily",
+    "The two towns will become identical in their industries",
+    "Travel between the towns will take longer than before",
+    "Farmers will find it harder to sell in the other town"
+   ],
+   "why": "Faster rail shortens the trip, so people can reach jobs and services in the other town more easily. It does not make the towns identical, because each keeps its own industries and features. It also makes it easier, not harder, for farmers to reach buyers there.",
+   "clue": "What does faster transport change about how far people and goods can go?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya grows cherries in the Yarra Valley and wants to sell them in Singapore within a day or two of picking. Which mode of transport best suits this?",
+   "opts": [
+    "Air freight, because it is fast over long distances",
+    "Sea freight, because it carries bulky goods in large amounts",
+    "Rail freight, because it links towns by land",
+    "Road freight, because it reaches every town"
+   ],
+   "why": "Cherries are light, high in value and spoil quickly, so fast air freight suits them. Sea freight carries large loads cheaply, but it is slow, so the fruit would spoil before it arrived. Road and rail cannot cross the sea to Singapore.",
+   "clue": "What matters most for fruit that spoils quickly and must cross the sea?"
+  }
+ },
+ "proposal_problems": [],
+ "auto_undone": {
+  "at": "2026-11-12T16:19:53Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about what a shorter trip lets a worker do' points straight at the only option that mentions workers, so a student can pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Which mode is fastest over a long distance?' repeats the wording of the right option ('fast over long distances'), which gives the answer away."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue 'Think about what a shorter trip lets a worker do' points straight at the only option that mentions workers, so a student can pick it without knowing the idea.",
+   "Question b, other: The clue 'Which mode is fastest over a long distance?' repeats the wording of the right option ('fast over long distances'), which gives the answer away."
+  ],
+  "undone": "2026-11-13T15:03:50Z"
+ },
+ "final": {
+  "title": "How transport connects places",
+  "card": [
+   "Transport moves people and goods between places. The main modes are air, road, rail and sea.",
+   "When transport gets faster and cheaper, people and goods can travel further for the same time and money.",
+   "This links places to jobs, markets and services far away. A worker can live in one town and commute to a job in another. A farmer can sell produce to buyers in distant cities or other countries.",
+   "Each mode suits different jobs. Sea carries bulky goods in large amounts. Air is fast but costly, so it suits light, urgent or high-value items. Road and rail link towns and cities by land."
+  ],
+  "remember": "Better transport links places, so jobs, markets and services can be reached from further away.",
+  "a": {
+   "q": "A new fast rail line opens between two regional towns. What is the most likely effect on the towns?",
+   "opts": [
+    "Workers can reach jobs in the other town more easily",
+    "The two towns will become identical in their industries",
+    "Travel between the towns will take longer than before",
+    "Farmers will find it harder to sell in the other town"
+   ],
+   "why": "Faster rail shortens the trip, so people can reach jobs and services in the other town more easily. It does not make the towns identical, because each keeps its own industries and features. It also makes it easier, not harder, for farmers to reach buyers there.",
+   "clue": "What does faster transport change about how far people and goods can go?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya grows cherries in the Yarra Valley and wants to sell them in Singapore within a day or two of picking. Which mode of transport best suits this?",
+   "opts": [
+    "Air freight, because it is fast over long distances",
+    "Sea freight, because it carries bulky goods in large amounts",
+    "Rail freight, because it links towns by land",
+    "Road freight, because it reaches every town"
+   ],
+   "why": "Cherries are light, high in value and spoil quickly, so fast air freight suits them. Sea freight carries large loads cheaply, but it is slow, so the fruit would spoil before it arrived. Road and rail cannot cross the sea to Singapore.",
+   "clue": "What matters most for fruit that spoils quickly and must cross the sea?"
+  }
+ },
+ "cleared_by": "owner"
+}

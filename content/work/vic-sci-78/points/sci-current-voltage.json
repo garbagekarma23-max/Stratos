@@ -1,0 +1,246 @@
+{
+ "id": "sci-current-voltage",
+ "title": "Current and voltage",
+ "brief": "50df7b7d95b3",
+ "shortlist": [
+  [
+   "sci-static-current-electricity",
+   0.383
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:55Z new, match",
+  "2026-11-12T12:44:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:52Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:07Z write: done",
+  "2026-11-12T15:35:11Z check: flagged",
+  "2026-11-12T15:42:25Z fix: suggested",
+  "2026-11-12T16:19:55Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.00689,
+  "check": 0.01209,
+  "fix": 0.01819
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, sci-static-current-electricity, is written for Year 9 and covers static electricity too, but it never defines current in amperes or voltage in volts and does not mention circuit symbols, so it does not teach the new point's idea at the right depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Current and voltage",
+  "card": [
+   [
+    "Closed circuit",
+    "Charge can only flow around a closed circuit, a complete loop with no gaps. A switch that is open makes a gap and the flow stops."
+   ],
+   [
+    "Current",
+    "the flow of electric charge around the circuit. It is measured in amperes (amps, A)."
+   ],
+   [
+    "Voltage",
+    "the push the battery gives the charge. It is measured in volts (V). A higher voltage gives a bigger push."
+   ],
+   [
+    "Symbols",
+    "Circuits are drawn with standard symbols so that everyone can read them. A cell or battery, a globe, a switch and connecting wires each have their own symbol."
+   ]
+  ],
+  "remember": "Current is the flow of charge, in amps. Voltage is the push, in volts.",
+  "a": {
+   "q": "Which pair correctly matches each quantity with its unit?",
+   "opts": [
+    "Current in amperes, voltage in volts",
+    "Current in volts, voltage in amperes",
+    "Current in amperes, voltage in kilograms",
+    "Current in volts, voltage in kilograms"
+   ],
+   "why": "Current is the flow of charge and is measured in amperes. Voltage is the push from the battery and is measured in volts. Swapping the units is tempting, but the flow is in amps and the push is in volts.",
+   "clue": "Flow is measured in amps."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam builds a circuit with a battery, a globe and a switch. The globe stays off when the switch is open. What is the best reason?",
+   "opts": [
+    "The open switch leaves a gap, so charge cannot flow",
+    "The open switch removes the voltage from the battery",
+    "The open switch makes the current flow backwards",
+    "The open switch uses up the charge in the wires"
+   ],
+   "why": "Charge flows only around a closed circuit, and an open switch makes a gap in the loop. The battery still gives a push, but with a gap there is no current. So the globe stays off.",
+   "clue": "Think about what a gap does to a complete loop."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A simple closed circuit drawn with standard symbols: a cell or battery, a globe, a closed switch and connecting wires in one loop. Label each symbol: cell or battery, globe, switch, wire.",
+    "why": "It shows the standard symbols and what a closed circuit loop looks like."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Current in amperes, voltage in volts",
+   "also_right": []
+  },
+  "b": {
+   "best": "The open switch leaves a gap, so charge cannot flow",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Think about what a gap does to a complete loop' uses the word 'gap', which appears only in the right option, so a student could match the word without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, questions and explanations are accurate for Years 7–8. The only problem is that question b's clue repeats the word 'gap', which appears only in the right option, so it gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue 'Think about what a gap does to a complete loop' uses the word 'gap', which appears only in the right option, so a student could match the word without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Current and voltage",
+  "card": [
+   [
+    "Closed circuit",
+    "Charge can only flow around a closed circuit, a complete loop with no gaps. A switch that is open makes a gap and the flow stops."
+   ],
+   [
+    "Current",
+    "the flow of electric charge around the circuit. It is measured in amperes (amps, A)."
+   ],
+   [
+    "Voltage",
+    "the push the battery gives the charge. It is measured in volts (V). A higher voltage gives a bigger push."
+   ],
+   [
+    "Symbols",
+    "Circuits are drawn with standard symbols so that everyone can read them. A cell or battery, a globe, a switch and connecting wires each have their own symbol."
+   ]
+  ],
+  "remember": "Current is the flow of charge, in amps. Voltage is the push, in volts.",
+  "a": {
+   "q": "Which pair correctly matches each quantity with its unit?",
+   "opts": [
+    "Current in amperes, voltage in volts",
+    "Current in volts, voltage in amperes",
+    "Current in amperes, voltage in watts",
+    "Current in watts, voltage in volts"
+   ],
+   "why": "Current is the flow of charge and is measured in amperes. Voltage is the push from the battery and is measured in volts. Swapping the two units is the most tempting mistake, but the flow is in amps and the push is in volts.",
+   "clue": "Flow is measured in amps."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam builds a circuit with a battery, a globe and a switch. The globe stays off when the switch is open. What is the best reason?",
+   "opts": [
+    "The open switch leaves a gap, so charge cannot flow",
+    "The open switch removes the voltage from the battery",
+    "The open switch makes the current flow backwards",
+    "The open switch uses up the charge in the wires"
+   ],
+   "why": "Charge flows only around a closed circuit, and an open switch makes a gap in the loop. The battery still gives a push, but with the loop broken there is no current. So the globe stays off.",
+   "clue": "Is the loop still complete when the switch is open?"
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A simple closed circuit drawn with standard symbols: a cell or battery, a globe, a closed switch and connecting wires in one loop. Label each symbol: cell or battery, globe, switch, wire.",
+    "why": "It shows the standard symbols and what a closed circuit loop looks like."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:55Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Think about what a gap does to a complete loop' uses the word 'gap', which appears only in the right option, so a student could match the word without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue 'Think about what a gap does to a complete loop' uses the word 'gap', which appears only in the right option, so a student could match the word without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "Current and voltage",
+  "card": [
+   [
+    "Closed circuit",
+    "Charge can only flow around a closed circuit, a complete loop with no gaps. A switch that is open makes a gap and the flow stops."
+   ],
+   [
+    "Current",
+    "the flow of electric charge around the circuit. It is measured in amperes (amps, A)."
+   ],
+   [
+    "Voltage",
+    "the push the battery gives the charge. It is measured in volts (V). A higher voltage gives a bigger push."
+   ],
+   [
+    "Symbols",
+    "Circuits are drawn with standard symbols so that everyone can read them. A cell or battery, a globe, a switch and connecting wires each have their own symbol."
+   ]
+  ],
+  "remember": "Current is the flow of charge, in amps. Voltage is the push, in volts.",
+  "a": {
+   "q": "Which pair correctly matches each quantity with its unit?",
+   "opts": [
+    "Current in amperes, voltage in volts",
+    "Current in volts, voltage in amperes",
+    "Current in amperes, voltage in watts",
+    "Current in watts, voltage in volts"
+   ],
+   "why": "Current is the flow of charge and is measured in amperes. Voltage is the push from the battery and is measured in volts. Swapping the two units is the most tempting mistake, but the flow is in amps and the push is in volts.",
+   "clue": "Flow is measured in amps."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam builds a circuit with a battery, a globe and a switch. The globe stays off when the switch is open. What is the best reason?",
+   "opts": [
+    "The open switch leaves a gap, so charge cannot flow",
+    "The open switch removes the voltage from the battery",
+    "The open switch makes the current flow backwards",
+    "The open switch uses up the charge in the wires"
+   ],
+   "why": "Charge flows only around a closed circuit, and an open switch makes a gap in the loop. The battery still gives a push, but with the loop broken there is no current. So the globe stays off.",
+   "clue": "Is the loop still complete when the switch is open?"
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A simple closed circuit drawn with standard symbols: a cell or battery, a globe, a closed switch and connecting wires in one loop. Label each symbol: cell or battery, globe, switch, wire.",
+    "why": "It shows the standard symbols and what a closed circuit loop looks like."
+   }
+  ]
+ },
+ "cleared_by": "auto"
+}

@@ -1,0 +1,695 @@
+{
+ "id": "mat-average-rate-change-2-vic",
+ "title": "Average rate of change",
+ "brief": "0cb927f13c81",
+ "shortlist": [
+  [
+   "mat-average-rate-change",
+   0.553
+  ],
+  [
+   "mat-gradient-as-rate-change",
+   0.354
+  ],
+  [
+   "mat-rates-context",
+   0.289
+  ],
+  [
+   "mat-gradient-interval",
+   0.279
+  ],
+  [
+   "mat-instantaneous-rate-change",
+   0.248
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:05Z write: failed the content check, writing again",
+  "2026-11-12T15:35:09Z write: done (still fails the content check)",
+  "2026-11-12T15:59:43Z check: flagged",
+  "2026-11-12T16:02:56Z fix: suggested",
+  "2026-11-13T15:26:00Z review: rejected, to be written again",
+  "2026-11-13T15:37:12Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T15:44:54Z claude-code check: answered by a separate subagent",
+  "2026-11-13T15:44:54Z check: flagged",
+  "2026-11-13T16:08:25Z fix: suggested",
+  "2026-11-13T16:09:55Z autoreview: cleared with the fix (remember wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 2
+ },
+ "usd": {
+  "match": 0.00051,
+  "write": 0.02187,
+  "check": 0.01075,
+  "fix": 0.08793
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point teaches average rate of change at Year 11 depth using function notation, while this brief adds the idea of the chord approaching a single-point rate, which that point does not cover, so a new point is the safer match.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Average rate of change",
+  "card": [
+   "The average rate of change between two points on a curve is the gradient of the straight line joining them. It is the change in \\(y\\) divided by the change in \\(x\\).",
+   "Gradient \\(=\\) \\(\\frac{y_{2} - y_{1}}{x_{2} - x_{1}}\\). Example: for \\(y = x^{2}\\), between \\(x = 1\\) and \\(x = 3\\), the points are \\((1, 1)\\) and \\((3, 9)\\). The gradient is \\(\\frac{9 - 1}{3 - 1} = 4\\).",
+   "The rate of change of a curve is different at each point, so the average rate depends on which two points you pick.",
+   "As the two points move closer together, the average rate of change gets closer to the rate of change at a single point."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The curve \\(y = x^{2}\\) with the points (1, 1) and (3, 9) joined by a straight line L of gradient 4.",
+    "x": {
+     "min": -1,
+     "max": 5,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -4,
+     "max": 12,
+     "label": "\\(y\\)",
+     "step": 2
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2}",
+      "domain": [
+       -1,
+       3.2
+      ],
+      "label": "\\(y = x^{2}\\)",
+      "labelAt": -0.7,
+      "pos": "above"
+     },
+     {
+      "type": "curve",
+      "id": "L",
+      "points": [
+       [
+        0,
+        -3
+       ],
+       [
+        3.75,
+        12
+       ]
+      ],
+      "label": "L",
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       1
+      ],
+      "on": [
+       "f",
+       "L"
+      ],
+      "label": "\\((1, 1)\\)",
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       9
+      ],
+      "on": [
+       "f",
+       "L"
+      ],
+      "label": "\\((3, 9)\\)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Average rate of change is the gradient of the line joining two points on a curve.",
+  "a": {
+   "q": "A curve passes through \\((2, 5)\\) and \\((6, 13)\\). What is the average rate of change between these points?",
+   "opts": [
+    "2",
+    "\\(\\frac{1}{2}\\)",
+    "8",
+    "4"
+   ],
+   "why": "The change in \\(y\\) is \\(13 - 5 = 8\\) and the change in \\(x\\) is \\(6 - 2 = 4\\). So the gradient is \\(\\frac{8}{4} = 2\\). Dividing \\(x\\) by \\(y\\) instead gives \\(\\frac{1}{2}\\), which is the wrong way up.",
+   "clue": "Divide the change in \\(y\\) by the change in \\(x\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "A drone's height is \\(h = t^{2} + 2t\\) metres after \\(t\\) seconds. What is its average rate of change of height from \\(t = 1\\) to \\(t = 4\\), in metres per second?",
+   "opts": [
+    "7",
+    "8",
+    "5",
+    "\\(\\frac{1}{7}\\)"
+   ],
+   "why": "At \\(t = 1\\), \\(h = 3\\). At \\(t = 4\\), \\(h = 24\\). The rate is \\(\\frac{24 - 3}{4 - 1} = \\frac{21}{3} = 7\\). Using only the height at \\(t = 4\\) over 3 seconds gives 8, which ignores the starting height.",
+   "clue": "Find the height at each time first."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-13T15:37:12Z",
+   "step": "write",
+   "version": {
+    "title": "Average rate of change",
+    "card": [
+     "The average rate of change between two points on a curve is the gradient of the straight line joining them. That line is called a secant.",
+     "Average rate of change \\(= \\frac{y_{2} - y_{1}}{x_{2} - x_{1}}\\), the change in \\(y\\) divided by the change in \\(x\\). In a real situation it has units, such as metres per second.",
+     "For \\(y = x^{2}\\) from \\(x = 1\\) to \\(x = 3\\), the points are \\((1, 1)\\) and \\((3, 9)\\). The average rate of change is \\(\\frac{9 - 1}{3 - 1} = 4\\).",
+     "On a curve, the average rate can change with the two points chosen. Keeping \\((1, 1)\\) and moving the other point to \\(x = 2\\), then \\(x = 1.1\\), gives 3, then 2.1. As the points get closer, the average rate approaches the rate of change at \\(x = 1\\), which is 2."
+    ],
+    "cardFigs": {
+     "3": {
+      "kind": "graph",
+      "alt": "The curve \\(y = x^{2}\\) with the points \\((1, 1)\\) and \\((3, 9)\\) on it. A straight line, the secant, joins the two points and has gradient 4.",
+      "x": {
+       "min": -1,
+       "max": 5,
+       "label": "\\(x\\)",
+       "step": 1
+      },
+      "y": {
+       "min": -4,
+       "max": 12,
+       "label": "\\(y\\)",
+       "step": 2
+      },
+      "grid": true,
+      "items": [
+       {
+        "type": "fn",
+        "id": "f",
+        "expr": "x^{2}",
+        "domain": [
+         -1,
+         3.4
+        ],
+        "label": "\\(y = x^{2}\\)",
+        "labelAt": 2,
+        "pos": "below-right"
+       },
+       {
+        "type": "curve",
+        "id": "L",
+        "points": [
+         [
+          0,
+          -3
+         ],
+         [
+          3.5,
+          11
+         ]
+        ],
+        "label": "secant",
+        "labelAt": 3.5,
+        "pos": "right"
+       },
+       {
+        "type": "point",
+        "at": [
+         1,
+         1
+        ],
+        "on": [
+         "f",
+         "L"
+        ],
+        "is": "intersection",
+        "label": "\\((1, 1)\\)",
+        "pos": "above-left"
+       },
+       {
+        "type": "point",
+        "at": [
+         3,
+         9
+        ],
+        "on": [
+         "f",
+         "L"
+        ],
+        "is": "intersection",
+        "label": "\\((3, 9)\\)",
+        "pos": "below-right"
+       }
+      ]
+     }
+    },
+    "remember": "Change in \\(y\\) over change in \\(x\\) gives the average rate. Closer points give the rate at a single point.",
+    "a": {
+     "q": "For \\(y = x^{2}\\), the average rate of change from \\(x = 3\\) to \\(x = 4\\) is 7, to \\(x = 3.1\\) is 6.1, and to \\(x = 3.01\\) is 6.01. What do these suggest the rate of change at \\(x = 3\\) is?",
+     "opts": [
+      "6",
+      "7",
+      "9",
+      "6.01"
+     ],
+     "why": "As the second point moves closer to \\(x = 3\\), the average rates 7, 6.1 and 6.01 get closer and closer to 6. So the rate of change at \\(x = 3\\) is 6. The value 6.01 is only the closest of the averages, not the value they approach.",
+     "clue": "Look at the value the averages are getting closer to."
+    },
+    "b": {
+     "d": 3,
+     "q": "Water flows into a tank. After \\(t\\) minutes it holds \\(V = 3t^{2} + 4\\) litres. What is the average rate of change of \\(V\\) from \\(t = 1\\) to \\(t = 4\\)?",
+     "opts": [
+      "15 litres per minute",
+      "45 litres per minute",
+      "13 litres per minute",
+      "\\(\\frac{1}{15}\\) litres per minute"
+     ],
+     "why": "At \\(t = 1\\), \\(V = 7\\), and at \\(t = 4\\), \\(V = 52\\). The average rate is \\(\\frac{52 - 7}{4 - 1} = \\frac{45}{3} = 15\\) litres per minute. The value 45 is the change in volume, which still needs dividing by the 3 minutes.",
+     "clue": "Find the volume at each time first."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T15:44:54Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "6",
+     "also_right": []
+    },
+    "b": {
+     "best": "15 litres per minute",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "remember",
+      "kind": "wording",
+      "detail": "\"Closer points give the rate at a single point\" says closer points give that rate exactly, while the card says the average rate approaches it as the points get closer. Something like \"As the points get closer, the average rate approaches the rate at a single point\" would match the card."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "Every value checks out, including the graph: the secant is y = 4x - 3 through (1, 1) and (3, 9), and both right answers are correct. One small wording problem: the remember line says closer points give the rate at a single point, while the card says the average rate approaches it."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Average rate of change",
+  "card": [
+   "The average rate of change between two points on a curve is the gradient of the straight line joining them. That line is called a secant.",
+   "Average rate of change \\(= \\frac{y_{2} - y_{1}}{x_{2} - x_{1}}\\), the change in \\(y\\) divided by the change in \\(x\\). In a real situation it has units, such as metres per second.",
+   "For \\(y = x^{2}\\) from \\(x = 1\\) to \\(x = 3\\), the points are \\((1, 1)\\) and \\((3, 9)\\). The average rate of change is \\(\\frac{9 - 1}{3 - 1} = 4\\).",
+   "On a curve, the average rate can change with the two points chosen. Keeping \\((1, 1)\\) and moving the other point to \\(x = 2\\), then \\(x = 1.1\\), gives 3, then 2.1. As the points get closer, the average rate approaches the rate of change at \\(x = 1\\), which is 2."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "The curve \\(y = x^{2}\\) with the points \\((1, 1)\\) and \\((3, 9)\\) on it. A straight line, the secant, joins the two points and has gradient 4.",
+    "x": {
+     "min": -1,
+     "max": 5,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -4,
+     "max": 12,
+     "label": "\\(y\\)",
+     "step": 2
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2}",
+      "domain": [
+       -1,
+       3.4
+      ],
+      "label": "\\(y = x^{2}\\)",
+      "labelAt": 2,
+      "pos": "below-right"
+     },
+     {
+      "type": "curve",
+      "id": "L",
+      "points": [
+       [
+        0,
+        -3
+       ],
+       [
+        3.5,
+        11
+       ]
+      ],
+      "label": "secant",
+      "labelAt": 3.5,
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       1
+      ],
+      "on": [
+       "f",
+       "L"
+      ],
+      "is": "intersection",
+      "label": "\\((1, 1)\\)",
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       9
+      ],
+      "on": [
+       "f",
+       "L"
+      ],
+      "is": "intersection",
+      "label": "\\((3, 9)\\)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Change in \\(y\\) over change in \\(x\\) gives the average rate. Closer points give the rate at a single point.",
+  "a": {
+   "q": "For \\(y = x^{2}\\), the average rate of change from \\(x = 3\\) to \\(x = 4\\) is 7, to \\(x = 3.1\\) is 6.1, and to \\(x = 3.01\\) is 6.01. What do these suggest the rate of change at \\(x = 3\\) is?",
+   "opts": [
+    "6",
+    "7",
+    "9",
+    "6.01"
+   ],
+   "why": "As the second point moves closer to \\(x = 3\\), the average rates 7, 6.1 and 6.01 get closer and closer to 6. So the rate of change at \\(x = 3\\) is 6. The value 6.01 is only the closest of the averages, not the value they approach.",
+   "clue": "Look at the value the averages are getting closer to."
+  },
+  "b": {
+   "d": 3,
+   "q": "Water flows into a tank. After \\(t\\) minutes it holds \\(V = 3t^{2} + 4\\) litres. What is the average rate of change of \\(V\\) from \\(t = 1\\) to \\(t = 4\\)?",
+   "opts": [
+    "15 litres per minute",
+    "45 litres per minute",
+    "13 litres per minute",
+    "\\(\\frac{1}{15}\\) litres per minute"
+   ],
+   "why": "At \\(t = 1\\), \\(V = 7\\), and at \\(t = 4\\), \\(V = 52\\). The average rate is \\(\\frac{52 - 7}{4 - 1} = \\frac{45}{3} = 15\\) litres per minute. The value 45 is the change in volume, which still needs dividing by the 3 minutes.",
+   "clue": "Find the volume at each time first."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "6",
+   "also_right": []
+  },
+  "b": {
+   "best": "15 litres per minute",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"Closer points give the rate at a single point\" says closer points give that rate exactly, while the card says the average rate approaches it as the points get closer. Something like \"As the points get closer, the average rate approaches the rate at a single point\" would match the card."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Every value checks out, including the graph: the secant is y = 4x - 3 through (1, 1) and (3, 9), and both right answers are correct. One small wording problem: the remember line says closer points give the rate at a single point, while the card says the average rate approaches it."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, wording: \"Closer points give the rate at a single point\" says closer points give that rate exactly, while the card says the average rate approaches it as the points get closer. Something like \"As the points get closer, the average rate approaches the rate at a single point\" would match the card."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Average rate of change",
+  "card": [
+   "The average rate of change between two points on a curve is the gradient of the straight line joining them. That line is called a secant.",
+   "Average rate of change \\(= \\frac{y_{2} - y_{1}}{x_{2} - x_{1}}\\), the change in \\(y\\) divided by the change in \\(x\\). In a real situation it has units, such as metres per second.",
+   "For \\(y = x^{2}\\) from \\(x = 1\\) to \\(x = 3\\), the points are \\((1, 1)\\) and \\((3, 9)\\). The average rate of change is \\(\\frac{9 - 1}{3 - 1} = 4\\).",
+   "On a curve, the average rate can change with the two points chosen. Keeping \\((1, 1)\\) and moving the other point to \\(x = 2\\), then \\(x = 1.1\\), gives 3, then 2.1. As the points get closer, the average rate approaches the rate of change at \\(x = 1\\), which is 2."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "The curve \\(y = x^{2}\\) with the points \\((1, 1)\\) and \\((3, 9)\\) on it. A straight line, the secant, joins the two points and has gradient 4.",
+    "x": {
+     "min": -1,
+     "max": 5,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -4,
+     "max": 12,
+     "label": "\\(y\\)",
+     "step": 2
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2}",
+      "domain": [
+       -1,
+       3.4
+      ],
+      "label": "\\(y = x^{2}\\)",
+      "labelAt": 2,
+      "pos": "below-right"
+     },
+     {
+      "type": "curve",
+      "id": "L",
+      "points": [
+       [
+        0,
+        -3
+       ],
+       [
+        3.5,
+        11
+       ]
+      ],
+      "label": "secant",
+      "labelAt": 3.5,
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       1
+      ],
+      "on": [
+       "f",
+       "L"
+      ],
+      "is": "intersection",
+      "label": "\\((1, 1)\\)",
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       9
+      ],
+      "on": [
+       "f",
+       "L"
+      ],
+      "is": "intersection",
+      "label": "\\((3, 9)\\)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Change in \\(y\\) over change in \\(x\\) gives the average rate. As the points get closer, the average rate approaches the rate at a single point.",
+  "a": {
+   "q": "For \\(y = x^{2}\\), the average rate of change from \\(x = 3\\) to \\(x = 4\\) is 7, to \\(x = 3.1\\) is 6.1, and to \\(x = 3.01\\) is 6.01. What do these suggest the rate of change at \\(x = 3\\) is?",
+   "opts": [
+    "6",
+    "7",
+    "9",
+    "6.01"
+   ],
+   "why": "As the second point moves closer to \\(x = 3\\), the average rates 7, 6.1 and 6.01 get closer and closer to 6. So the rate of change at \\(x = 3\\) is 6. The value 6.01 is only the closest of the averages, not the value they approach.",
+   "clue": "Look at the value the averages are getting closer to."
+  },
+  "b": {
+   "d": 3,
+   "q": "Water flows into a tank. After \\(t\\) minutes it holds \\(V = 3t^{2} + 4\\) litres. What is the average rate of change of \\(V\\) from \\(t = 1\\) to \\(t = 4\\)?",
+   "opts": [
+    "15 litres per minute",
+    "45 litres per minute",
+    "13 litres per minute",
+    "\\(\\frac{1}{15}\\) litres per minute"
+   ],
+   "why": "At \\(t = 1\\), \\(V = 7\\), and at \\(t = 4\\), \\(V = 52\\). The average rate is \\(\\frac{52 - 7}{4 - 1} = \\frac{45}{3} = 15\\) litres per minute. The value 45 is the change in volume, which still needs dividing by the 3 minutes.",
+   "clue": "Find the volume at each time first."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-13T16:09:55Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"Closer points give the rate at a single point\" says closer points give that rate exactly, while the card says the average rate approaches it as the points get closer. Something like \"As the points get closer, the average rate approaches the rate at a single point\" would match the card."
+   }
+  ],
+  "flags": [
+   "Remember, wording: \"Closer points give the rate at a single point\" says closer points give that rate exactly, while the card says the average rate approaches it as the points get closer. Something like \"As the points get closer, the average rate approaches the rate at a single point\" would match the card."
+  ]
+ },
+ "final": {
+  "title": "Average rate of change",
+  "card": [
+   "The average rate of change between two points on a curve is the gradient of the straight line joining them. That line is called a secant.",
+   "Average rate of change \\(= \\frac{y_{2} - y_{1}}{x_{2} - x_{1}}\\), the change in \\(y\\) divided by the change in \\(x\\). In a real situation it has units, such as metres per second.",
+   "For \\(y = x^{2}\\) from \\(x = 1\\) to \\(x = 3\\), the points are \\((1, 1)\\) and \\((3, 9)\\). The average rate of change is \\(\\frac{9 - 1}{3 - 1} = 4\\).",
+   "On a curve, the average rate can change with the two points chosen. Keeping \\((1, 1)\\) and moving the other point to \\(x = 2\\), then \\(x = 1.1\\), gives 3, then 2.1. As the points get closer, the average rate approaches the rate of change at \\(x = 1\\), which is 2."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "The curve \\(y = x^{2}\\) with the points \\((1, 1)\\) and \\((3, 9)\\) on it. A straight line, the secant, joins the two points and has gradient 4.",
+    "x": {
+     "min": -1,
+     "max": 5,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -4,
+     "max": 12,
+     "label": "\\(y\\)",
+     "step": 2
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2}",
+      "domain": [
+       -1,
+       3.4
+      ],
+      "label": "\\(y = x^{2}\\)",
+      "labelAt": 2,
+      "pos": "below-right"
+     },
+     {
+      "type": "curve",
+      "id": "L",
+      "points": [
+       [
+        0,
+        -3
+       ],
+       [
+        3.5,
+        11
+       ]
+      ],
+      "label": "secant",
+      "labelAt": 3.5,
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       1
+      ],
+      "on": [
+       "f",
+       "L"
+      ],
+      "is": "intersection",
+      "label": "\\((1, 1)\\)",
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       9
+      ],
+      "on": [
+       "f",
+       "L"
+      ],
+      "is": "intersection",
+      "label": "\\((3, 9)\\)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Change in \\(y\\) over change in \\(x\\) gives the average rate. As the points get closer, the average rate approaches the rate at a single point.",
+  "a": {
+   "q": "For \\(y = x^{2}\\), the average rate of change from \\(x = 3\\) to \\(x = 4\\) is 7, to \\(x = 3.1\\) is 6.1, and to \\(x = 3.01\\) is 6.01. What do these suggest the rate of change at \\(x = 3\\) is?",
+   "opts": [
+    "6",
+    "7",
+    "9",
+    "6.01"
+   ],
+   "why": "As the second point moves closer to \\(x = 3\\), the average rates 7, 6.1 and 6.01 get closer and closer to 6. So the rate of change at \\(x = 3\\) is 6. The value 6.01 is only the closest of the averages, not the value they approach.",
+   "clue": "Look at the value the averages are getting closer to."
+  },
+  "b": {
+   "d": 3,
+   "q": "Water flows into a tank. After \\(t\\) minutes it holds \\(V = 3t^{2} + 4\\) litres. What is the average rate of change of \\(V\\) from \\(t = 1\\) to \\(t = 4\\)?",
+   "opts": [
+    "15 litres per minute",
+    "45 litres per minute",
+    "13 litres per minute",
+    "\\(\\frac{1}{15}\\) litres per minute"
+   ],
+   "why": "At \\(t = 1\\), \\(V = 7\\), and at \\(t = 4\\), \\(V = 52\\). The average rate is \\(\\frac{52 - 7}{4 - 1} = \\frac{45}{3} = 15\\) litres per minute. The value 45 is the change in volume, which still needs dividing by the 3 minutes.",
+   "clue": "Find the volume at each time first."
+  }
+ },
+ "cleared_by": "auto"
+}

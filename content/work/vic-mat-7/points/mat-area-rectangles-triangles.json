@@ -1,0 +1,295 @@
+{
+ "id": "mat-area-rectangles-triangles",
+ "title": "Area of rectangles and triangles",
+ "brief": "57771d143354",
+ "shortlist": [
+  [
+   "mat-area-triangles-parallelograms",
+   0.55
+  ],
+  [
+   "mat-classifying-triangles",
+   0.36
+  ],
+  [
+   "mat-volume-rectangular-triangular-prisms",
+   0.275
+  ],
+  [
+   "mat-area-perimeter-composite-shapes",
+   0.255
+  ],
+  [
+   "mat-angle-sum-triangle",
+   0.221
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:06:00Z write: done",
+  "2026-11-12T15:15:50Z check: flagged",
+  "2026-11-12T15:26:05Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.02142,
+  "check": 0.01298,
+  "fix": 0.02266,
+  "recheck": 0.0073
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers triangles and parallelograms but never teaches the rectangle area rule, and it adds parallelogram content beyond the new point, so it is broader than the brief and a new point is the safer match.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Area of rectangles and triangles",
+  "card": [
+   [
+    "Rectangle",
+    "Area is the space inside a shape. For a rectangle, \\(\\text{area} = \\text{length} \\times \\text{width}\\). It is measured in square units, such as cm squared."
+   ],
+   [
+    "Triangle",
+    "A triangle's area is half the base times the perpendicular height. The perpendicular height meets the base at a right angle. It is not the slanted side."
+   ],
+   [
+    "Why half",
+    "Two copies of a triangle can make a rectangle with the same base and height. So the triangle is half of that rectangle."
+   ],
+   [
+    "Example",
+    "A triangle has base 10 cm and perpendicular height 6 cm. Multiply \\(10 \\times 6 = 60\\), then halve it to get 30 square centimetres."
+   ]
+  ],
+  "remember": "Triangle area is half of base times perpendicular height. Do not forget the half.",
+  "a": {
+   "q": "A rectangle is 9 cm long and 4 cm wide. What is its area?",
+   "opts": [
+    "36 square centimetres",
+    "13 square centimetres",
+    "26 square centimetres",
+    "18 square centimetres"
+   ],
+   "why": "Area is length times width, so \\(9 \\times 4 = 36\\) square centimetres. Adding the sides to get 13 is a mistake, because adding does not measure the space inside the shape.",
+   "clue": "Multiply the two side lengths."
+  },
+  "b": {
+   "d": 3,
+   "q": "A triangle has a base of 12 cm, a perpendicular height of 5 cm and a slanted side of 13 cm. What is its area?",
+   "opts": [
+    "30 square centimetres",
+    "60 square centimetres",
+    "78 square centimetres",
+    "65 square centimetres"
+   ],
+   "why": "Area is half the base times the perpendicular height: \\(\\frac{1}{2} \\times 12 \\times 5 = 30\\). Using the slanted side of 13 cm gives 78, but the slanted side is not the perpendicular height.",
+   "clue": "Use the height that meets the base at a right angle."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A triangle with a horizontal base labelled base, a dashed vertical line from the top corner to the base labelled perpendicular height with a small right-angle mark, and one slanted side labelled slanted side.",
+    "why": "It shows which length is the perpendicular height and which is not."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "36 square centimetres",
+   "also_right": []
+  },
+  "b": {
+   "best": "30 square centimetres",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The 'Why half' line says two copies of a triangle make a rectangle with the same base and height. This is only true for right-angled triangles. Two copies of a general triangle make a parallelogram. A safer version: the triangle fits inside a rectangle with the same base and height and fills exactly half of it."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clearly correct answer, and the explanations agree with it. The card's 'Why half' line wrongly says that two copies of any triangle form a rectangle, which only holds for right-angled triangles, so it should be reworded."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The 'Why half' line says two copies of a triangle make a rectangle with the same base and height. This is only true for right-angled triangles. Two copies of a general triangle make a parallelogram. A safer version: the triangle fits inside a rectangle with the same base and height and fills exactly half of it."
+ ],
+ "proposal": {
+  "title": "Area of rectangles and triangles",
+  "card": [
+   [
+    "Rectangle",
+    "Area is the space inside a shape. For a rectangle, area \\(=\\) length \\(\\times\\) width. It is measured in square units, such as square centimetres (\\(\\text{cm}^{2}\\))."
+   ],
+   [
+    "Triangle",
+    "A triangle's area is half the base times the perpendicular height. The perpendicular height meets the base at a right angle. It is not the slanted side."
+   ],
+   [
+    "Why half",
+    "When the top corner sits above the base, the triangle fits inside a rectangle with the same base and height. It fills exactly half of that rectangle."
+   ],
+   [
+    "Example",
+    "A triangle has base 10 cm and perpendicular height 6 cm. Multiply \\(10 \\times 6 = 60\\), then halve it to get 30 square centimetres."
+   ]
+  ],
+  "remember": "Triangle area is half of base times perpendicular height. Do not forget the half.",
+  "a": {
+   "q": "A rectangle is 9 cm long and 4 cm wide. What is its area?",
+   "opts": [
+    "36 square centimetres",
+    "13 square centimetres",
+    "26 square centimetres",
+    "18 square centimetres"
+   ],
+   "why": "Area is length times width, so \\(9 \\times 4 = 36\\) square centimetres. Adding the sides to get 13 is a mistake, because adding does not measure the space inside the shape.",
+   "clue": "Multiply the two side lengths."
+  },
+  "b": {
+   "d": 3,
+   "q": "A triangle has a base of 12 cm, a perpendicular height of 5 cm and a slanted side of 13 cm. What is its area?",
+   "opts": [
+    "30 square centimetres",
+    "60 square centimetres",
+    "78 square centimetres",
+    "65 square centimetres"
+   ],
+   "why": "Area is half the base times the perpendicular height: \\(\\frac{1}{2} \\times 12 \\times 5 = 30\\). Using the slanted side of 13 cm gives 78, but the slanted side is not the perpendicular height.",
+   "clue": "Use the height that meets the base at a right angle."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A triangle with a horizontal base labelled base, a dashed vertical line from the top corner to the base labelled perpendicular height with a small right-angle mark, and one slanted side labelled slanted side.",
+    "why": "It shows which length is the perpendicular height and which is not."
+   },
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A triangle whose top corner sits above its base, drawn inside a rectangle with the same base and the same height. The triangle is shaded and the two unshaded parts of the rectangle are left clear. Label the bottom edge base and the rectangle's side height.",
+    "why": "It lets students see that the triangle takes up exactly half of the rectangle."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "36 square centimetres",
+    "also_right": []
+   },
+   "b": {
+    "best": "30 square centimetres",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The 'Why half' line says two copies of a triangle make a rectangle with the same base and height. This is only true for right-angled triangles. Two copies of a general triangle make a parallelogram. A safer version: the triangle fits inside a rectangle with the same base and height and fills exactly half of it."
+   }
+  ],
+  "flags": [
+   "Card, fact: The 'Why half' line says two copies of a triangle make a rectangle with the same base and height. This is only true for right-angled triangles. Two copies of a general triangle make a parallelogram. A safer version: the triangle fits inside a rectangle with the same base and height and fills exactly half of it."
+  ]
+ },
+ "final": {
+  "title": "Area of rectangles and triangles",
+  "card": [
+   [
+    "Rectangle",
+    "Area is the space inside a shape. For a rectangle, area \\(=\\) length \\(\\times\\) width. It is measured in square units, such as square centimetres (\\(\\text{cm}^{2}\\))."
+   ],
+   [
+    "Triangle",
+    "A triangle's area is half the base times the perpendicular height. The perpendicular height meets the base at a right angle. It is not the slanted side."
+   ],
+   [
+    "Why half",
+    "When the top corner sits above the base, the triangle fits inside a rectangle with the same base and height. It fills exactly half of that rectangle."
+   ],
+   [
+    "Example",
+    "A triangle has base 10 cm and perpendicular height 6 cm. Multiply \\(10 \\times 6 = 60\\), then halve it to get 30 square centimetres."
+   ]
+  ],
+  "remember": "Triangle area is half of base times perpendicular height. Do not forget the half.",
+  "a": {
+   "q": "A rectangle is 9 cm long and 4 cm wide. What is its area?",
+   "opts": [
+    "36 square centimetres",
+    "13 square centimetres",
+    "26 square centimetres",
+    "18 square centimetres"
+   ],
+   "why": "Area is length times width, so \\(9 \\times 4 = 36\\) square centimetres. Adding the sides to get 13 is a mistake, because adding does not measure the space inside the shape.",
+   "clue": "Multiply the two side lengths."
+  },
+  "b": {
+   "d": 3,
+   "q": "A triangle has a base of 12 cm, a perpendicular height of 5 cm and a slanted side of 13 cm. What is its area?",
+   "opts": [
+    "30 square centimetres",
+    "60 square centimetres",
+    "78 square centimetres",
+    "65 square centimetres"
+   ],
+   "why": "Area is half the base times the perpendicular height: \\(\\frac{1}{2} \\times 12 \\times 5 = 30\\). Using the slanted side of 13 cm gives 78, but the slanted side is not the perpendicular height.",
+   "clue": "Use the height that meets the base at a right angle."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A triangle with a horizontal base labelled base, a dashed vertical line from the top corner to the base labelled perpendicular height with a small right-angle mark, and one slanted side labelled slanted side.",
+    "why": "It shows which length is the perpendicular height and which is not."
+   },
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A triangle whose top corner sits above its base, drawn inside a rectangle with the same base and the same height. The triangle is shaded and the two unshaded parts of the rectangle are left clear. Label the bottom edge base and the rectangle's side height.",
+    "why": "It lets students see that the triangle takes up exactly half of the rectangle."
+   }
+  ]
+ },
+ "cleared_by": "recheck"
+}

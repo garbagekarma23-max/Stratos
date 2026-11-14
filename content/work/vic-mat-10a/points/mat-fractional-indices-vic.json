@@ -1,0 +1,221 @@
+{
+ "id": "mat-fractional-indices-vic",
+ "title": "Fractional indices",
+ "brief": "48c27d4537e4",
+ "shortlist": [
+  [
+   "mat-simplifying-with-index-laws",
+   0.279
+  ],
+  [
+   "mat-solving-simple-exponential-equations",
+   0.219
+  ],
+  [
+   "mat-index-laws-with-variables",
+   0.219
+  ],
+  [
+   "mat-index-laws",
+   0.21
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:04Z write: done",
+  "2026-11-12T15:35:09Z check: flagged",
+  "2026-11-12T15:59:44Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00747,
+  "check": 0.01091,
+  "fix": 0.02082,
+  "recheck": 0.01035
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches fractional indices or the link between a^(1/n) and roots; they only cover integer indices, index laws and exponential equations.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Fractional indices",
+  "card": [
+   "A fractional index means a root. The index \\(\\frac{1}{n}\\) means the \\(n\\)th root: \\(a^{\\frac{1}{n}} = \\sqrt[n]{a}\\).",
+   "For example, \\(25^{\\frac{1}{2}} = \\sqrt{25} = 5\\) and \\(64^{\\frac{1}{3}} = \\sqrt[3]{64} = 4\\).",
+   "When the top of the fraction is not 1, take the root shown by the bottom, then raise to the power on top: \\(a^{\\frac{m}{n}} = \\left(\\sqrt[n]{a}\\right)^{m}\\).",
+   "Worked example: \\(27^{\\frac{2}{3}}\\). The cube root of 27 is 3, and \\(3^{2} = 9\\). So \\(27^{\\frac{2}{3}} = 9\\). Taking the root first keeps the numbers small."
+  ],
+  "remember": "The bottom of the fraction is the root. The top is the power.",
+  "a": {
+   "q": "What is the value of \\(16^{\\frac{3}{4}}\\)?",
+   "opts": [
+    "8",
+    "12",
+    "64",
+    "48"
+   ],
+   "why": "The bottom is 4, so take the fourth root: \\(\\sqrt[4]{16} = 2\\). The top is 3, so \\(2^{3} = 8\\). The answer 12 comes from multiplying \\(16 \\times \\frac{3}{4}\\), which is not what an index means.",
+   "clue": "Take the root shown by the bottom number first, then use the top as the power."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia works out \\(125^{\\frac{2}{3}}\\). Which working and answer is correct?",
+   "opts": [
+    "\\(5^{2} = 25\\)",
+    "\\(5^{3} = 125\\)",
+    "\\(\\sqrt{125} \\times 3 \\approx 33.5\\)",
+    "\\(\\sqrt[2]{125}^{3} \\approx 1398\\)"
+   ],
+   "why": "The bottom is 3, so the cube root of 125 is 5. The top is 2, so \\(5^{2} = 25\\). The option \\(5^{3}\\) swaps the root and the power.",
+   "clue": "Which number is the root: the top or the bottom?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "8",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(5^{2} = 25\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says the option \\(5^{3}\\) 'swaps the root and the power', but it does not. It takes the cube root correctly (5) and then uses 3 as the power as well. The option that actually swaps them is \\(\\sqrt[2]{125}^{3}\\). The why should say that \\(5^{3}\\) uses the bottom number for both the root and the power."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct. Why (b) wrongly says the \\(5^{3}\\) option swaps the root and the power, when it actually uses 3 for both; the square-root-then-cube option is the one that swaps them."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The why says the option \\(5^{3}\\) 'swaps the root and the power', but it does not. It takes the cube root correctly (5) and then uses 3 as the power as well. The option that actually swaps them is \\(\\sqrt[2]{125}^{3}\\). The why should say that \\(5^{3}\\) uses the bottom number for both the root and the power."
+ ],
+ "proposal": {
+  "title": "Fractional indices",
+  "card": [
+   "A fractional index means a root. The index \\(\\frac{1}{n}\\) means the \\(n\\)th root: \\(a^{\\frac{1}{n}} = \\sqrt[n]{a}\\).",
+   "For example, \\(25^{\\frac{1}{2}} = \\sqrt{25} = 5\\) and \\(64^{\\frac{1}{3}} = \\sqrt[3]{64} = 4\\).",
+   "When the top of the fraction is not 1, take the root shown by the bottom, then raise to the power on top: \\(a^{\\frac{m}{n}} = \\left(\\sqrt[n]{a}\\right)^{m}\\).",
+   "Worked example: \\(27^{\\frac{2}{3}}\\). The cube root of 27 is 3, and \\(3^{2} = 9\\). So \\(27^{\\frac{2}{3}} = 9\\). Taking the root first keeps the numbers small."
+  ],
+  "remember": "The bottom of the fraction is the root. The top is the power.",
+  "a": {
+   "q": "What is the value of \\(16^{\\frac{3}{4}}\\)?",
+   "opts": [
+    "8",
+    "12",
+    "64",
+    "48"
+   ],
+   "why": "The bottom is 4, so take the fourth root: \\(\\sqrt[4]{16} = 2\\). The top is 3, so \\(2^{3} = 8\\). The answer 12 comes from multiplying \\(16 \\times \\frac{3}{4}\\), which is not what an index means.",
+   "clue": "Take the root shown by the bottom number first, then use the top as the power."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia works out \\(125^{\\frac{2}{3}}\\). Which working and answer is correct?",
+   "opts": [
+    "\\(5^{2} = 25\\)",
+    "\\(5^{3} = 125\\)",
+    "\\(\\sqrt{125} \\times 3 \\approx 33.5\\)",
+    "\\(\\left(\\sqrt{125}\\right)^{3} \\approx 1398\\)"
+   ],
+   "why": "The bottom is 3, so the cube root of 125 is 5. The top is 2, so \\(5^{2} = 25\\). The option \\(5^{3}\\) takes the cube root correctly but then uses the bottom number 3 as the power as well, while \\(\\left(\\sqrt{125}\\right)^{3}\\) swaps the root and the power.",
+   "clue": "Which number is the root: the top or the bottom?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "8",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(5^{2} = 25\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. 16^(3/4) = 8 and 125^(2/3) = 25. The distractor values (≈1398, ≈33.5, 125, 64, 48, 12) are calculated correctly, and the explanations match the card."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says the option \\(5^{3}\\) 'swaps the root and the power', but it does not. It takes the cube root correctly (5) and then uses 3 as the power as well. The option that actually swaps them is \\(\\sqrt[2]{125}^{3}\\). The why should say that \\(5^{3}\\) uses the bottom number for both the root and the power."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The why says the option \\(5^{3}\\) 'swaps the root and the power', but it does not. It takes the cube root correctly (5) and then uses 3 as the power as well. The option that actually swaps them is \\(\\sqrt[2]{125}^{3}\\). The why should say that \\(5^{3}\\) uses the bottom number for both the root and the power."
+  ]
+ },
+ "final": {
+  "title": "Fractional indices",
+  "card": [
+   "A fractional index means a root. The index \\(\\frac{1}{n}\\) means the \\(n\\)th root: \\(a^{\\frac{1}{n}} = \\sqrt[n]{a}\\).",
+   "For example, \\(25^{\\frac{1}{2}} = \\sqrt{25} = 5\\) and \\(64^{\\frac{1}{3}} = \\sqrt[3]{64} = 4\\).",
+   "When the top of the fraction is not 1, take the root shown by the bottom, then raise to the power on top: \\(a^{\\frac{m}{n}} = \\left(\\sqrt[n]{a}\\right)^{m}\\).",
+   "Worked example: \\(27^{\\frac{2}{3}}\\). The cube root of 27 is 3, and \\(3^{2} = 9\\). So \\(27^{\\frac{2}{3}} = 9\\). Taking the root first keeps the numbers small."
+  ],
+  "remember": "The bottom of the fraction is the root. The top is the power.",
+  "a": {
+   "q": "What is the value of \\(16^{\\frac{3}{4}}\\)?",
+   "opts": [
+    "8",
+    "12",
+    "64",
+    "48"
+   ],
+   "why": "The bottom is 4, so take the fourth root: \\(\\sqrt[4]{16} = 2\\). The top is 3, so \\(2^{3} = 8\\). The answer 12 comes from multiplying \\(16 \\times \\frac{3}{4}\\), which is not what an index means.",
+   "clue": "Take the root shown by the bottom number first, then use the top as the power."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia works out \\(125^{\\frac{2}{3}}\\). Which working and answer is correct?",
+   "opts": [
+    "\\(5^{2} = 25\\)",
+    "\\(5^{3} = 125\\)",
+    "\\(\\sqrt{125} \\times 3 \\approx 33.5\\)",
+    "\\(\\left(\\sqrt{125}\\right)^{3} \\approx 1398\\)"
+   ],
+   "why": "The bottom is 3, so the cube root of 125 is 5. The top is 2, so \\(5^{2} = 25\\). The option \\(5^{3}\\) takes the cube root correctly but then uses the bottom number 3 as the power as well, while \\(\\left(\\sqrt{125}\\right)^{3}\\) swaps the root and the power.",
+   "clue": "Which number is the root: the top or the bottom?"
+  }
+ },
+ "cleared_by": "recheck"
+}

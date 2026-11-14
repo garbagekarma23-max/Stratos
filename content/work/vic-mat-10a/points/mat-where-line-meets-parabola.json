@@ -1,0 +1,441 @@
+{
+ "id": "mat-where-line-meets-parabola",
+ "title": "Where a line meets a parabola",
+ "brief": "c9f12d550812",
+ "shortlist": [
+  [
+   "mat-simultaneous-equations",
+   0.364
+  ],
+  [
+   "mat-changing-parabola",
+   0.296
+  ],
+  [
+   "mat-quadratic-functions",
+   0.275
+  ],
+  [
+   "mat-graphing-parabolas",
+   0.269
+  ],
+  [
+   "mat-quadratic-graphs",
+   0.265
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:48Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:04Z write: failed the content check, writing again",
+  "2026-11-12T15:35:09Z write: done (still fails the content check)",
+  "2026-11-12T15:59:43Z check: flagged",
+  "2026-11-12T16:02:56Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00055,
+  "write": 0.03212,
+  "check": 0.01504,
+  "fix": 0.02961,
+  "recheck": 0.01068
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Simultaneous equations, has only one bullet on a line meeting a parabola, and the rest of the card covers broader linear simultaneous equations, so it is broader than the new point and no bank point teaches this idea on its own.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Where a line meets a parabola",
+  "card": [
+   "Where a line meets a parabola, both give the same \\(y\\) for the same \\(x\\). So set the two rules equal, rearrange to \\(= 0\\) and solve.",
+   "Example: \\(y = x^{2} - 2x - 3\\) and \\(y = x + 1\\). Then \\(x^{2} - 2x - 3 = x + 1\\), which gives \\(x^{2} - 3x - 4 = 0\\). Factorising gives \\((x - 4)(x + 1) = 0\\), so \\(x = 4\\) or \\(x = -1\\).",
+   "Each solution is an \\(x\\) value. Put it into the line to find \\(y\\): \\(x = 4\\) gives \\(y = 5\\), and \\(x = -1\\) gives \\(y = 0\\). The graphs meet at \\((4, 5)\\) and \\((-1, 0)\\).",
+   "The number of solutions is the number of meeting points. Two solutions mean two points. One repeated solution means the line just touches the parabola. No solutions mean the line misses it."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "The parabola \\(y = x^{2} - 2x - 3\\), concave up with vertex \\((1, -4)\\), and the line \\(y = x + 1\\). They cross at \\((-1, 0)\\) and \\((4, 5)\\).",
+    "x": {
+     "min": -4,
+     "max": 8,
+     "label": "\\(x\\)",
+     "step": 2,
+     "nums": false
+    },
+    "y": {
+     "min": -6,
+     "max": 10,
+     "label": "\\(y\\)",
+     "step": 2,
+     "nums": false
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2} - 2x - 3",
+      "domain": [
+       -2,
+       4.6
+      ],
+      "label": "Parabola",
+      "labelAt": 4.5,
+      "pos": "right"
+     },
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "x + 1",
+      "domain": [
+       -3,
+       7
+      ],
+      "label": "Line",
+      "labelAt": 6.5,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       -1,
+       0
+      ],
+      "on": [
+       "f",
+       "g"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       5
+      ],
+      "on": [
+       "f",
+       "g"
+      ],
+      "is": "intersection"
+     }
+    ]
+   }
+  },
+  "remember": "Set the line equal to the parabola, solve for \\(x\\), then find \\(y\\) from the line.",
+  "a": {
+   "q": "Which equation do you solve to find where \\(y = x^{2} + x - 2\\) meets \\(y = 2x + 4\\)?",
+   "opts": [
+    "\\(x^{2} - x - 6 = 0\\)",
+    "\\(x^{2} + 3x + 2 = 0\\)",
+    "\\(x^{2} - x + 2 = 0\\)",
+    "\\(x^{2} + x - 6 = 0\\)"
+   ],
+   "why": "Set \\(x^{2} + x - 2 = 2x + 4\\). Subtract \\(2x\\) and \\(4\\) from both sides to get \\(x^{2} - x - 6 = 0\\). Adding \\(2x\\) instead of subtracting it gives the tempting \\(x^{2} + 3x + 2 = 0\\).",
+   "clue": "Make the two rules equal, then move everything to one side."
+  },
+  "b": {
+   "d": 3,
+   "q": "How many points do the line \\(y = 2x - 1\\) and the parabola \\(y = x^{2}\\) share?",
+   "opts": [
+    "One point, where the line just touches",
+    "Two points, because the equation is quadratic",
+    "No points, because the line misses",
+    "Two points, at \\(x = 1\\) and \\(x = -1\\)"
+   ],
+   "why": "Set \\(x^{2} = 2x - 1\\), so \\(x^{2} - 2x + 1 = 0\\), which is \\((x - 1)^{2} = 0\\). The only solution is \\(x = 1\\), giving the single point \\((1, 1)\\). A quadratic equation can have one repeated solution, so it does not always mean two points.",
+   "clue": "Factorise and count the different values of \\(x\\)."
+  }
+ },
+ "redone": true,
+ "local": [
+  "mat-where-line-meets-parabola the figure on card line 3 has the label Parabola on a curve. Move it with pos or labelAt, or move the curve"
+ ],
+ "check": {
+  "a": {
+   "best": "\\(x^{2} - x - 6 = 0\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "One point, where the line just touches",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says that adding \\(2x\\) instead of subtracting it gives \\(x^{2} + 3x + 2 = 0\\). Adding \\(2x\\) but still subtracting 4 gives \\(x^{2} + 3x - 6 = 0\\). The distractor \\(x^{2} + 3x + 2 = 0\\) comes from adding both \\(2x\\) and \\(4\\), so the why misdescribes the error."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, graph and both answers are correct. The why for question a misdescribes the mistake behind the \\(x^{2} + 3x + 2 = 0\\) distractor: that option comes from adding both \\(2x\\) and \\(4\\), not just \\(2x\\)."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: The why says that adding \\(2x\\) instead of subtracting it gives \\(x^{2} + 3x + 2 = 0\\). Adding \\(2x\\) but still subtracting 4 gives \\(x^{2} + 3x - 6 = 0\\). The distractor \\(x^{2} + 3x + 2 = 0\\) comes from adding both \\(2x\\) and \\(4\\), so the why misdescribes the error.",
+  "Content check: mat-where-line-meets-parabola the figure on card line 3 has the label Parabola on a curve. Move it with pos or labelAt, or move the curve"
+ ],
+ "proposal": {
+  "title": "Where a line meets a parabola",
+  "card": [
+   "Where a line meets a parabola, both give the same \\(y\\) for the same \\(x\\). So set the two rules equal, rearrange to \\(= 0\\) and solve.",
+   "Example: \\(y = x^{2} - 2x - 3\\) and \\(y = x + 1\\). Then \\(x^{2} - 2x - 3 = x + 1\\), which gives \\(x^{2} - 3x - 4 = 0\\). Factorising gives \\((x - 4)(x + 1) = 0\\), so \\(x = 4\\) or \\(x = -1\\).",
+   "Each solution is an \\(x\\) value. Put it into the line to find \\(y\\): \\(x = 4\\) gives \\(y = 5\\), and \\(x = -1\\) gives \\(y = 0\\). The graphs meet at \\((4, 5)\\) and \\((-1, 0)\\).",
+   "The number of solutions is the number of meeting points. Two solutions mean two points. One repeated solution means the line just touches the parabola. No solutions mean the line misses it."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "The parabola \\(y = x^{2} - 2x - 3\\), concave up with vertex \\((1, -4)\\), and the line \\(y = x + 1\\). They cross at \\((-1, 0)\\) and \\((4, 5)\\).",
+    "x": {
+     "min": -4,
+     "max": 8,
+     "label": "\\(x\\)",
+     "step": 2,
+     "nums": false
+    },
+    "y": {
+     "min": -6,
+     "max": 10,
+     "label": "\\(y\\)",
+     "step": 2,
+     "nums": false
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2} - 2x - 3",
+      "domain": [
+       -2,
+       4.6
+      ],
+      "label": "Parabola",
+      "labelAt": 1,
+      "pos": "below"
+     },
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "x + 1",
+      "domain": [
+       -3,
+       7
+      ],
+      "label": "Line",
+      "labelAt": 6.5,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       -1,
+       0
+      ],
+      "on": [
+       "f",
+       "g"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       5
+      ],
+      "on": [
+       "f",
+       "g"
+      ],
+      "is": "intersection"
+     }
+    ]
+   }
+  },
+  "remember": "Set the line equal to the parabola, solve for \\(x\\), then find \\(y\\) from the line.",
+  "a": {
+   "q": "Which equation do you solve to find where \\(y = x^{2} + x - 2\\) meets \\(y = 2x + 4\\)?",
+   "opts": [
+    "\\(x^{2} - x - 6 = 0\\)",
+    "\\(x^{2} + 3x + 2 = 0\\)",
+    "\\(x^{2} - x + 2 = 0\\)",
+    "\\(x^{2} + x - 6 = 0\\)"
+   ],
+   "why": "Set \\(x^{2} + x - 2 = 2x + 4\\). Subtract \\(2x\\) and \\(4\\) from both sides to get \\(x^{2} - x - 6 = 0\\). Adding \\(2x\\) and \\(4\\) to both sides instead of subtracting them gives the tempting \\(x^{2} + 3x + 2 = 0\\).",
+   "clue": "Make the two rules equal, then move everything to one side."
+  },
+  "b": {
+   "d": 3,
+   "q": "How many points do the line \\(y = 2x - 1\\) and the parabola \\(y = x^{2}\\) share?",
+   "opts": [
+    "One point, where the line just touches",
+    "Two points, because the equation is quadratic",
+    "No points, because the line misses",
+    "Two points, at \\(x = 1\\) and \\(x = -1\\)"
+   ],
+   "why": "Set \\(x^{2} = 2x - 1\\), so \\(x^{2} - 2x + 1 = 0\\), which is \\((x - 1)^{2} = 0\\). The only solution is \\(x = 1\\), giving the single point \\((1, 1)\\). A quadratic equation can have one repeated solution, so it does not always mean two points.",
+   "clue": "Factorise and count the different values of \\(x\\)."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(x^{2} - x - 6 = 0\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "One point, where the line just touches",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says that adding \\(2x\\) instead of subtracting it gives \\(x^{2} + 3x + 2 = 0\\). Adding \\(2x\\) but still subtracting 4 gives \\(x^{2} + 3x - 6 = 0\\). The distractor \\(x^{2} + 3x + 2 = 0\\) comes from adding both \\(2x\\) and \\(4\\), so the why misdescribes the error."
+   }
+  ],
+  "flags": [
+   "Question a, fact: The why says that adding \\(2x\\) instead of subtracting it gives \\(x^{2} + 3x + 2 = 0\\). Adding \\(2x\\) but still subtracting 4 gives \\(x^{2} + 3x - 6 = 0\\). The distractor \\(x^{2} + 3x + 2 = 0\\) comes from adding both \\(2x\\) and \\(4\\), so the why misdescribes the error.",
+   "Content check: mat-where-line-meets-parabola the figure on card line 3 has the label Parabola on a curve. Move it with pos or labelAt, or move the curve"
+  ]
+ },
+ "final": {
+  "title": "Where a line meets a parabola",
+  "card": [
+   "Where a line meets a parabola, both give the same \\(y\\) for the same \\(x\\). So set the two rules equal, rearrange to \\(= 0\\) and solve.",
+   "Example: \\(y = x^{2} - 2x - 3\\) and \\(y = x + 1\\). Then \\(x^{2} - 2x - 3 = x + 1\\), which gives \\(x^{2} - 3x - 4 = 0\\). Factorising gives \\((x - 4)(x + 1) = 0\\), so \\(x = 4\\) or \\(x = -1\\).",
+   "Each solution is an \\(x\\) value. Put it into the line to find \\(y\\): \\(x = 4\\) gives \\(y = 5\\), and \\(x = -1\\) gives \\(y = 0\\). The graphs meet at \\((4, 5)\\) and \\((-1, 0)\\).",
+   "The number of solutions is the number of meeting points. Two solutions mean two points. One repeated solution means the line just touches the parabola. No solutions mean the line misses it."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "The parabola \\(y = x^{2} - 2x - 3\\), concave up with vertex \\((1, -4)\\), and the line \\(y = x + 1\\). They cross at \\((-1, 0)\\) and \\((4, 5)\\).",
+    "x": {
+     "min": -4,
+     "max": 8,
+     "label": "\\(x\\)",
+     "step": 2,
+     "nums": false
+    },
+    "y": {
+     "min": -6,
+     "max": 10,
+     "label": "\\(y\\)",
+     "step": 2,
+     "nums": false
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2} - 2x - 3",
+      "domain": [
+       -2,
+       4.6
+      ],
+      "label": "Parabola",
+      "labelAt": 1,
+      "pos": "below"
+     },
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "x + 1",
+      "domain": [
+       -3,
+       7
+      ],
+      "label": "Line",
+      "labelAt": 6.5,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       -1,
+       0
+      ],
+      "on": [
+       "f",
+       "g"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       5
+      ],
+      "on": [
+       "f",
+       "g"
+      ],
+      "is": "intersection"
+     }
+    ]
+   }
+  },
+  "remember": "Set the line equal to the parabola, solve for \\(x\\), then find \\(y\\) from the line.",
+  "a": {
+   "q": "Which equation do you solve to find where \\(y = x^{2} + x - 2\\) meets \\(y = 2x + 4\\)?",
+   "opts": [
+    "\\(x^{2} - x - 6 = 0\\)",
+    "\\(x^{2} + 3x + 2 = 0\\)",
+    "\\(x^{2} - x + 2 = 0\\)",
+    "\\(x^{2} + x - 6 = 0\\)"
+   ],
+   "why": "Set \\(x^{2} + x - 2 = 2x + 4\\). Subtract \\(2x\\) and \\(4\\) from both sides to get \\(x^{2} - x - 6 = 0\\). Adding \\(2x\\) and \\(4\\) to both sides instead of subtracting them gives the tempting \\(x^{2} + 3x + 2 = 0\\).",
+   "clue": "Make the two rules equal, then move everything to one side."
+  },
+  "b": {
+   "d": 3,
+   "q": "How many points do the line \\(y = 2x - 1\\) and the parabola \\(y = x^{2}\\) share?",
+   "opts": [
+    "One point, where the line just touches",
+    "Two points, because the equation is quadratic",
+    "No points, because the line misses",
+    "Two points, at \\(x = 1\\) and \\(x = -1\\)"
+   ],
+   "why": "Set \\(x^{2} = 2x - 1\\), so \\(x^{2} - 2x + 1 = 0\\), which is \\((x - 1)^{2} = 0\\). The only solution is \\(x = 1\\), giving the single point \\((1, 1)\\). A quadratic equation can have one repeated solution, so it does not always mean two points.",
+   "clue": "Factorise and count the different values of \\(x\\)."
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,479 @@
+{
+ "id": "eng-rhyme-rhythm",
+ "title": "Rhyme and rhythm",
+ "brief": "359f29c2fdb7",
+ "shortlist": [
+  [
+   "eng-sound-devices-poetry",
+   0.324
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:46Z new, match",
+  "2026-11-12T12:44:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:37Z write: done",
+  "2026-11-12T15:25:57Z check: flagged",
+  "2026-11-12T15:35:04Z fix: suggested",
+  "2026-11-12T17:07:10Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-13T06:06:33Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-13T09:32:52Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T10:40:35Z claude-code check: answered by a separate subagent",
+  "2026-11-13T10:40:35Z check: flagged",
+  "2026-11-13T11:34:10Z fix: suggested",
+  "2026-11-13T15:15:36Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 2,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00618,
+  "check": 0.01173,
+  "fix": 0.04018,
+  "recheck": 0.01154
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, eng-sound-devices-poetry, is broader: it covers alliteration, assonance, onomatopoeia and mood, with rhyme and rhythm only as one short definition, and its questions test onomatopoeia and assonance rather than rhyme or rhythm.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The stem says Mia taps 'the strong and weak syllables', which repeats the card's and remember line's definition of rhythm word for word. The clue then names 'the beat' and rules out end sounds. Together they give the answer away without testing understanding.",
+ "rejected": {
+  "title": "Rhyme and rhythm",
+  "card": [
+   [
+    "Rhyme",
+    "Rhyme is when words end with the same sound, such as \"light\" and \"night\". Rhyming words at the ends of lines link those lines together."
+   ],
+   [
+    "Rhythm",
+    "Rhythm is the beat of a poem. It comes from the pattern of stressed (strong) and unstressed (weak) syllables, such as da-DUM da-DUM."
+   ],
+   "A syllable is one beat of sound in a word. \"Water\" has two syllables: WA-ter. The first is stressed and the second is not.",
+   "Rhyme and rhythm together give a poem its sound. A steady beat with rhyming line endings can make a poem feel musical, like a song or a chant."
+  ],
+  "remember": "Rhyme is matching end sounds. Rhythm is the beat of strong and weak syllables.",
+  "a": {
+   "q": "Which pair of words rhymes, so it could link two line endings?",
+   "opts": [
+    "Smile and while",
+    "Smile and small",
+    "Smile and simple",
+    "Smile and smell"
+   ],
+   "why": "Smile and while end with the same sound, so they rhyme. Smile and small begin with the same sounds, but their endings are different, so they do not rhyme.",
+   "clue": "Listen to the ends of the words, not the starts."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia reads this line aloud: \"The WIND blew COLD a-CROSS the HILL\". She taps along to the strong and weak syllables. What is she finding?",
+   "opts": [
+    "The rhythm of the line",
+    "The rhyme of the line",
+    "The ending sound of the line",
+    "The number of lines in the poem"
+   ],
+   "why": "The pattern of stressed and unstressed syllables is the rhythm. Rhyme is about matching sounds at line endings, and Mia is tapping the beat inside one line, not comparing line endings.",
+   "clue": "Tapping follows the beat, not the matching end sounds."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "owner",
+ "autoreject": [
+  {
+   "at": "2026-11-13T06:06:33Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The stem says Mia taps 'the strong and weak syllables', which repeats the card's and remember line's definition of rhythm word for word. The clue then names 'the beat' and rules out end sounds. Together they give the answer away without testing understanding."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Rhyme and rhythm",
+     "card": [
+      [
+       "Rhyme",
+       "Rhyme is when words end with the same sound, such as \"light\" and \"night\". Rhyming words at the ends of lines link those lines together."
+      ],
+      [
+       "Rhythm",
+       "Rhythm is the beat of a poem. It comes from the pattern of stressed (strong) and unstressed (weak) syllables, such as da-DUM da-DUM."
+      ],
+      "A syllable is one beat of sound in a word. \"Water\" has two syllables: WA-ter. The first is stressed and the second is not.",
+      "Rhyme and rhythm together give a poem its sound. A steady beat with rhyming line endings can make a poem feel musical, like a song or a chant."
+     ],
+     "remember": "Rhyme is matching end sounds. Rhythm is the beat of strong and weak syllables.",
+     "a": {
+      "q": "Which pair of words rhymes, so it could link two line endings?",
+      "opts": [
+       "Smile and while",
+       "Smile and small",
+       "Smile and simple",
+       "Smile and smell"
+      ],
+      "why": "Smile and while end with the same sound, so they rhyme. Smile and small begin with the same sounds, but their endings are different, so they do not rhyme.",
+      "clue": "Listen to the ends of the words, not the starts."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia reads this line aloud: \"The WIND blew COLD across the HILL\". She taps along to the strong and weak syllables. What is she finding?",
+      "opts": [
+       "The rhythm of the line",
+       "The rhyme of the line",
+       "The ending sound of the line",
+       "The number of lines in the poem"
+      ],
+      "why": "The pattern of stressed and unstressed syllables is the rhythm. Rhyme is about matching sounds at line endings, and Mia is tapping the beat inside one line, not comparing line endings.",
+      "clue": "Tapping follows the beat, not the matching end sounds."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Smile and while",
+      "also_right": []
+     },
+     "b": {
+      "best": "The rhythm of the line",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The capitals mark only WIND, COLD and HILL as stressed, but 'across' is stressed on its second syllable (a-CROSS). The line is a regular da-DUM pattern: the WIND / blew COLD / a-CROSS / the HILL. As printed, it suggests 'across' has no strong syllable, which could mislead students tapping the beat. Write it as 'The WIND blew COLD a-CROSS the HILL'."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer, and the card is accurate. The line in question b leaves out the stress on 'across' (a-CROSS), so its stress marking is incomplete and could mislead students about the rhythm."
+    },
+    "flags": [
+     "Question b, fact: The capitals mark only WIND, COLD and HILL as stressed, but 'across' is stressed on its second syllable (a-CROSS). The line is a regular da-DUM pattern: the WIND / blew COLD / a-CROSS / the HILL. As printed, it suggests 'across' has no strong syllable, which could mislead students tapping the beat. Write it as 'The WIND blew COLD a-CROSS the HILL'."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Rhyme and rhythm",
+     "card": [
+      [
+       "Rhyme",
+       "Rhyme is when words end with the same sound, such as \"light\" and \"night\". Rhyming words at the ends of lines link those lines together."
+      ],
+      [
+       "Rhythm",
+       "Rhythm is the beat of a poem. It comes from the pattern of stressed (strong) and unstressed (weak) syllables, such as da-DUM da-DUM."
+      ],
+      "A syllable is one beat of sound in a word. \"Water\" has two syllables: WA-ter. The first is stressed and the second is not.",
+      "Rhyme and rhythm together give a poem its sound. A steady beat with rhyming line endings can make a poem feel musical, like a song or a chant."
+     ],
+     "remember": "Rhyme is matching end sounds. Rhythm is the beat of strong and weak syllables.",
+     "a": {
+      "q": "Which pair of words rhymes, so it could link two line endings?",
+      "opts": [
+       "Smile and while",
+       "Smile and small",
+       "Smile and simple",
+       "Smile and smell"
+      ],
+      "why": "Smile and while end with the same sound, so they rhyme. Smile and small begin with the same sounds, but their endings are different, so they do not rhyme.",
+      "clue": "Listen to the ends of the words, not the starts."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia reads this line aloud: \"The WIND blew COLD a-CROSS the HILL\". She taps along to the strong and weak syllables. What is she finding?",
+      "opts": [
+       "The rhythm of the line",
+       "The rhyme of the line",
+       "The ending sound of the line",
+       "The number of lines in the poem"
+      ],
+      "why": "The pattern of stressed and unstressed syllables is the rhythm. Rhyme is about matching sounds at line endings, and Mia is tapping the beat inside one line, not comparing line endings.",
+      "clue": "Tapping follows the beat, not the matching end sounds."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-12T17:07:10Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Smile and while",
+       "also_right": []
+      },
+      "b": {
+       "best": "The rhythm of the line",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The stem says Mia taps 'the strong and weak syllables', which repeats the card's and remember line's definition of rhythm word for word. The clue then names 'the beat' and rules out end sounds. Together they give the answer away without testing understanding."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Facts and answers are correct: 'smile/while' rhymes, and the marked line is a regular da-DUM rhythm. Question b's stem and clue repeat the definition of rhythm so closely that students can answer without understanding it."
+     },
+     "flags": [
+      "Question b, wording: The stem says Mia taps 'the strong and weak syllables', which repeats the card's and remember line's definition of rhythm word for word. The clue then names 'the beat' and rules out end sounds. Together they give the answer away without testing understanding."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-13T09:32:52Z",
+   "step": "write",
+   "version": {
+    "title": "Rhyme and rhythm",
+    "card": [
+     [
+      "Rhyme",
+      "Rhyme is when words end with the same sound, such as \"light\" and \"night\". Rhyming words at the ends of lines link those lines together."
+     ],
+     [
+      "Rhythm",
+      "Rhythm is the beat of a poem. It comes from the pattern of stressed (strong) and unstressed (weak) syllables, such as da-DUM da-DUM."
+     ],
+     "A syllable is one beat of sound in a word. \"Water\" has two syllables: WA-ter. The first is stressed and the second is not.",
+     "Rhyme and rhythm together give a poem its sound. A steady beat with rhyming line endings can make a poem feel musical, like a song or a chant."
+    ],
+    "remember": "Rhyme is matching end sounds. Rhythm is the beat of strong and weak syllables.",
+    "a": {
+     "q": "Which pair of words rhymes, so it could link two line endings?",
+     "opts": [
+      "Smile and while",
+      "Smile and small",
+      "Smile and simple",
+      "Smile and smell"
+     ],
+     "why": "Smile and while end with the same sound, so they rhyme. Smile and small begin with the same sounds, but their endings are different, so they do not rhyme.",
+     "clue": "Listen to the ends of the words, not the starts."
+    },
+    "b": {
+     "d": 3,
+     "q": "Mia claps as she reads this line aloud: \"The WIND blew COLD a-CROSS the HILL\". Her claps land on the parts in capitals, every second sound. What is she finding?",
+     "opts": [
+      "The rhythm of the line",
+      "The rhyme of the line",
+      "The ending sound of the line",
+      "The number of lines in the poem"
+     ],
+     "why": "Mia's claps land on the stressed syllables, so she is finding the pattern of stressed and unstressed syllables, which is the rhythm. Rhyme is about matching sounds at line endings, and Mia is looking inside one line, not comparing line endings.",
+     "clue": "Think about what her claps are following."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T10:40:35Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Smile and while",
+     "also_right": []
+    },
+    "b": {
+     "best": "The rhythm of the line",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "card",
+      "kind": "fact",
+      "detail": "The card defines rhyme as words that 'end with the same sound', and the remember line says 'matching end sounds'. That is too loose. Rhyme needs the vowel sound and everything after it to match (light/night: -ight). By the card's wording, 'cat' and 'hot' would rhyme because both end in a t sound."
+     },
+     {
+      "part": "a",
+      "kind": "wording",
+      "detail": "Under the card's definition ('end with the same sound'), smile, small, smell and simple all end with an l sound, so a student who follows the card closely could defend a distractor. The why says the endings of smile and small are different, but the card never explains that the vowel sound must match too."
+     },
+     {
+      "part": "card",
+      "kind": "wording",
+      "detail": "The card calls a syllable 'one beat of sound in a word', but it also says rhythm is 'the beat' made by the pattern of stressed syllables. Using 'beat' for both every syllable and the stressed beat can confuse students about what is being counted, as in question b, where the claps fall on every second syllable."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "Both questions have one clear right answer. The card defines rhyme loosely as words that 'end with the same sound', so the distractors in question a (which also end in an l sound) could be defended. It also uses 'beat' for both a syllable and the stressed beat of rhythm."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Rhyme and rhythm",
+  "card": [
+   [
+    "Rhyme",
+    "Rhyme is when words end with the same sound, such as \"light\" and \"night\". Rhyming words at the ends of lines link those lines together."
+   ],
+   [
+    "Rhythm",
+    "Rhythm is the beat of a poem. It comes from the pattern of stressed (strong) and unstressed (weak) syllables, such as da-DUM da-DUM."
+   ],
+   "A syllable is one beat of sound in a word. \"Water\" has two syllables: WA-ter. The first is stressed and the second is not.",
+   "Rhyme and rhythm together give a poem its sound. A steady beat with rhyming line endings can make a poem feel musical, like a song or a chant."
+  ],
+  "remember": "Rhyme is matching end sounds. Rhythm is the beat of strong and weak syllables.",
+  "a": {
+   "q": "Which pair of words rhymes, so it could link two line endings?",
+   "opts": [
+    "Smile and while",
+    "Smile and small",
+    "Smile and simple",
+    "Smile and smell"
+   ],
+   "why": "Smile and while end with the same sound, so they rhyme. Smile and small begin with the same sounds, but their endings are different, so they do not rhyme.",
+   "clue": "Listen to the ends of the words, not the starts."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia claps as she reads this line aloud: \"The WIND blew COLD a-CROSS the HILL\". Her claps land on the parts in capitals, every second sound. What is she finding?",
+   "opts": [
+    "The rhythm of the line",
+    "The rhyme of the line",
+    "The ending sound of the line",
+    "The number of lines in the poem"
+   ],
+   "why": "Mia's claps land on the stressed syllables, so she is finding the pattern of stressed and unstressed syllables, which is the rhythm. Rhyme is about matching sounds at line endings, and Mia is looking inside one line, not comparing line endings.",
+   "clue": "Think about what her claps are following."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Smile and while",
+   "also_right": []
+  },
+  "b": {
+   "best": "The rhythm of the line",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card defines rhyme as words that 'end with the same sound', and the remember line says 'matching end sounds'. That is too loose. Rhyme needs the vowel sound and everything after it to match (light/night: -ight). By the card's wording, 'cat' and 'hot' would rhyme because both end in a t sound."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Under the card's definition ('end with the same sound'), smile, small, smell and simple all end with an l sound, so a student who follows the card closely could defend a distractor. The why says the endings of smile and small are different, but the card never explains that the vowel sound must match too."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card calls a syllable 'one beat of sound in a word', but it also says rhythm is 'the beat' made by the pattern of stressed syllables. Using 'beat' for both every syllable and the stressed beat can confuse students about what is being counted, as in question b, where the claps fall on every second syllable."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer. The card defines rhyme loosely as words that 'end with the same sound', so the distractors in question a (which also end in an l sound) could be defended. It also uses 'beat' for both a syllable and the stressed beat of rhythm."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card defines rhyme as words that 'end with the same sound', and the remember line says 'matching end sounds'. That is too loose. Rhyme needs the vowel sound and everything after it to match (light/night: -ight). By the card's wording, 'cat' and 'hot' would rhyme because both end in a t sound.",
+  "Question a, wording: Under the card's definition ('end with the same sound'), smile, small, smell and simple all end with an l sound, so a student who follows the card closely could defend a distractor. The why says the endings of smile and small are different, but the card never explains that the vowel sound must match too.",
+  "Card, wording: The card calls a syllable 'one beat of sound in a word', but it also says rhythm is 'the beat' made by the pattern of stressed syllables. Using 'beat' for both every syllable and the stressed beat can confuse students about what is being counted, as in question b, where the claps fall on every second syllable."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Rhyme and rhythm",
+  "card": [
+   [
+    "Rhyme",
+    "Words rhyme when the vowel sound and every sound after it match, as in light and night. Cat and hot do not rhyme: only the t sound matches."
+   ],
+   [
+    "Syllable",
+    "A syllable is a part of a word with one vowel sound. Water has two syllables, WA-ter: the first is stressed (said strongly) and the second is unstressed (said lightly)."
+   ],
+   [
+    "Rhythm",
+    "Rhythm is the pattern of stressed and unstressed syllables in a line, such as da-DUM da-DUM. The stressed syllables are the beat you could tap or clap."
+   ],
+   "Rhyming words at line endings link those lines. Together with a steady rhythm, rhyme can make a poem sound musical, like a song or a chant."
+  ],
+  "remember": "Rhyme matches the vowel sound and what follows it. Rhythm is the pattern of stressed and unstressed syllables.",
+  "a": {
+   "q": "Which pair of words rhymes, so it could link two line endings?",
+   "opts": [
+    "Smile and while",
+    "Smile and small",
+    "Smile and simple",
+    "Smile and smell"
+   ],
+   "why": "Smile and while share the same vowel sound and the l sound after it, so they rhyme. Smile and small both end with an l sound, but their vowel sounds are different, so they do not rhyme.",
+   "clue": "Check the vowel sound, not just the last sound."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia claps as she reads this line aloud: \"The WIND blew COLD a-CROSS the HILL\". Her claps land on the parts in capitals, every second syllable. What is she finding?",
+   "opts": [
+    "The rhythm of the line",
+    "The rhyme of the line",
+    "The syllable count of the line",
+    "The rhyming words in the line"
+   ],
+   "why": "Mia claps only on the stressed syllables, so she is following the pattern of stressed and unstressed syllables, which is the rhythm. She is not counting syllables, because she skips every unstressed one, and rhyme is about matching sounds at line endings, not inside one line.",
+   "clue": "Does she clap on every syllable, or only the strong ones?"
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Rhyme and rhythm",
+  "card": [
+   [
+    "Rhyme",
+    "Words rhyme when the vowel sound and every sound after it match, as in light and night. Cat and hot do not rhyme: only the t sound matches."
+   ],
+   [
+    "Syllable",
+    "A syllable is a part of a word with one vowel sound. Water has two syllables, WA-ter: the first is stressed (said strongly) and the second is unstressed (said lightly)."
+   ],
+   [
+    "Rhythm",
+    "Rhythm is the pattern of stressed and unstressed syllables in a line, such as da-DUM da-DUM. The stressed syllables are the beat you could tap or clap."
+   ],
+   "Rhyming words at line endings link those lines. Together with a steady rhythm, rhyme can make a poem sound musical, like a song or a chant."
+  ],
+  "remember": "Rhyme matches the vowel sound and what follows it. Rhythm is the pattern of stressed and unstressed syllables.",
+  "a": {
+   "q": "Which pair of words rhymes, so it could link two line endings?",
+   "opts": [
+    "Smile and while",
+    "Smile and small",
+    "Smile and simple",
+    "Smile and smell"
+   ],
+   "why": "Smile and while share the same vowel sound and the l sound after it, so they rhyme. Smile and small both end with an l sound, but their vowel sounds are different, so they do not rhyme.",
+   "clue": "Check the vowel sound, not just the last sound."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia claps as she reads this line aloud: \"The WIND blew COLD a-CROSS the HILL\". Her claps land on the parts in capitals, every second syllable. What is she finding?",
+   "opts": [
+    "The rhythm of the line",
+    "The rhyme of the line",
+    "The syllable count of the line",
+    "The rhyming words in the line"
+   ],
+   "why": "Mia claps only on the stressed syllables, so she is following the pattern of stressed and unstressed syllables, which is the rhythm. She is not counting syllables, because she skips every unstressed one, and rhyme is about matching sounds at line endings, not inside one line.",
+   "clue": "Does she clap on every syllable, or only the strong ones?"
+  }
+ }
+}

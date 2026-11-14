@@ -1,0 +1,291 @@
+{
+ "id": "geo-grid-references-latitude-longitude",
+ "title": "Grid references, latitude and longitude",
+ "brief": "2f8120a06bcf",
+ "shortlist": [
+  [
+   "mat-latitude-longitude",
+   0.631
+  ],
+  [
+   "geo-space",
+   0.297
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:48Z new, match",
+  "2026-11-12T12:44:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:00Z write: done",
+  "2026-11-12T15:35:06Z check: flagged",
+  "2026-11-12T15:59:42Z fix: suggested",
+  "2026-11-12T17:07:11Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00811,
+  "check": 0.01048,
+  "fix": 0.02623,
+  "recheck": 0.00699
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point covers grid references (eastings then northings) as well as latitude and longitude, and the closest bank point, mat-latitude-longitude, teaches only latitude and longitude, so adding grid references would be a new step rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Grid references, latitude and longitude",
+  "card": [
+   [
+    "Area reference",
+    "a four-figure code that names one grid square on a map. Read the eastings (the vertical lines, numbered left to right) first, then the northings (the horizontal lines, numbered bottom to top)."
+   ],
+   [
+    "Grid reference",
+    "a six-figure code that pins down a point inside a square. Each half has three digits: the eastings first, then the northings. The first two digits of each half are the line number, and the third is tenths of the way to the next line."
+   ],
+   [
+    "Latitude",
+    "measures how far a place is north or south of the equator, in degrees. The equator is 0°, and the poles are 90° N and 90° S."
+   ],
+   [
+    "Longitude",
+    "measures how far a place is east or west of the prime meridian, in degrees. The prime meridian is 0° and runs through Greenwich in London. Latitude is given first, then longitude: Melbourne is about 38° S, 145° E."
+   ]
+  ],
+  "remember": "Grid references give eastings then northings. Latitude and longitude give degrees north or south, then east or west.",
+  "a": {
+   "q": "A map reference is written as 4 5 (eastings 4, northings 5). Which way should a student read it to find the square?",
+   "opts": [
+    "Along to line 4, then up to line 5",
+    "Up to line 5, then along to line 4",
+    "Along to line 5, then up to line 4",
+    "Down from line 4, then back to line 5"
+   ],
+   "why": "Eastings come first, so the student goes along the bottom to line 4, then up to line 5. Reading up first reverses the order, which is a common mistake.",
+   "clue": "Eastings are read before northings."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tess reads that a lighthouse is at 34° S, 151° E. Where is it on Earth?",
+   "opts": [
+    "South of the equator and east of the prime meridian",
+    "North of the equator and east of the prime meridian",
+    "South of the equator and west of the prime meridian",
+    "North of the equator and west of the prime meridian"
+   ],
+   "why": "S means south of the equator, and E means east of the prime meridian. The first number is latitude and the second is longitude, so 34° S is the latitude and 151° E is the longitude.",
+   "clue": "S and E tell you the direction from the equator and the prime meridian."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A simple map grid with vertical eastings lines numbered left to right and horizontal northings lines numbered bottom to top. One grid square is shaded and labelled as an area reference. A dot inside a square shows a point, with the eastings digits and northings digits marked beside it.",
+    "why": "It shows how eastings come before northings and how the third digit locates a point inside a square."
+   },
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A globe or world map with the equator marked as 0° latitude, the prime meridian marked as 0° longitude, and lines of latitude labelled north and south and lines of longitude labelled east and west.",
+    "why": "It lets a student see which lines measure latitude and which measure longitude."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Along to line 4, then up to line 5",
+   "also_right": []
+  },
+  "b": {
+   "best": "South of the equator and east of the prime meridian",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The card says an area reference is a four-figure code, but the question uses a two-figure reference '4 5'. This is inconsistent with the card and could confuse students. A four-figure example such as 0405 or 4552 would match the card."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question b are accurate. Question a uses a two-figure reference ('4 5'), which does not match the card's four-figure area reference and could confuse students."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The card says an area reference is a four-figure code, but the question uses a two-figure reference '4 5'. This is inconsistent with the card and could confuse students. A four-figure example such as 0405 or 4552 would match the card."
+ ],
+ "proposal": {
+  "title": "Grid references, latitude and longitude",
+  "card": [
+   [
+    "Area reference",
+    "a four-figure code that names one grid square by the two lines that meet at its bottom-left corner. Read the eastings (the vertical lines, numbered left to right) first, then the northings (the horizontal lines, numbered bottom to top)."
+   ],
+   [
+    "Grid reference",
+    "a six-figure code that pins down a point inside a square. Each half has three digits: the eastings first, then the northings. The first two digits of each half are the line number, and the third is tenths of the way to the next line."
+   ],
+   [
+    "Latitude",
+    "measures how far a place is north or south of the equator, in degrees. The equator is 0°, and the poles are 90° N and 90° S."
+   ],
+   [
+    "Longitude",
+    "measures how far a place is east or west of the prime meridian, in degrees. The prime meridian is 0° and runs through Greenwich in London. Latitude is given first, then longitude: Melbourne is about 38° S, 145° E."
+   ]
+  ],
+  "remember": "Grid references give eastings then northings. Latitude and longitude give degrees north or south, then east or west.",
+  "a": {
+   "q": "Jai is given the area reference 4552 on a topographic map. Which two grid lines meet at the bottom-left corner of that square?",
+   "opts": [
+    "Easting 45 and northing 52",
+    "Easting 52 and northing 45",
+    "Easting 46 and northing 53",
+    "Easting 44 and northing 51"
+   ],
+   "why": "Eastings come first, so the first two digits, 45, are the easting and the last two, 52, are the northing. The square is named by the lines at its bottom-left corner. Swapping them to easting 52 and northing 45 reverses the order, which is a common mistake.",
+   "clue": "Which half of the code is the easting?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tess reads that a lighthouse is at 34° S, 151° E. Where is it on Earth?",
+   "opts": [
+    "South of the equator and east of the prime meridian",
+    "North of the equator and east of the prime meridian",
+    "South of the equator and west of the prime meridian",
+    "North of the equator and west of the prime meridian"
+   ],
+   "why": "S means south of the equator, and E means east of the prime meridian. The first number is latitude and the second is longitude, so 34° S is the latitude and 151° E is the longitude.",
+   "clue": "S and E tell you the direction from the equator and the prime meridian."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A simple map grid with vertical eastings lines numbered left to right and horizontal northings lines numbered bottom to top. One grid square is shaded and labelled as an area reference, with the lines at its bottom-left corner marked. A dot inside another square shows a point, with the eastings digits and northings digits marked beside it.",
+    "why": "It shows how eastings come before northings and how the third digit locates a point inside a square."
+   },
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A globe or world map with the equator marked as 0° latitude, the prime meridian marked as 0° longitude, and lines of latitude labelled north and south and lines of longitude labelled east and west.",
+    "why": "It lets a student see which lines measure latitude and which measure longitude."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:11Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Easting 45 and northing 52",
+    "also_right": []
+   },
+   "b": {
+    "best": "South of the equator and east of the prime meridian",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:11Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 15,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The card says an area reference is a four-figure code, but the question uses a two-figure reference '4 5'. This is inconsistent with the card and could confuse students. A four-figure example such as 0405 or 4552 would match the card."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The card says an area reference is a four-figure code, but the question uses a two-figure reference '4 5'. This is inconsistent with the card and could confuse students. A four-figure example such as 0405 or 4552 would match the card."
+  ]
+ },
+ "final": {
+  "title": "Grid references, latitude and longitude",
+  "card": [
+   [
+    "Area reference",
+    "a four-figure code that names one grid square by the two lines that meet at its bottom-left corner. Read the eastings (the vertical lines, numbered left to right) first, then the northings (the horizontal lines, numbered bottom to top)."
+   ],
+   [
+    "Grid reference",
+    "a six-figure code that pins down a point inside a square. Each half has three digits: the eastings first, then the northings. The first two digits of each half are the line number, and the third is tenths of the way to the next line."
+   ],
+   [
+    "Latitude",
+    "measures how far a place is north or south of the equator, in degrees. The equator is 0°, and the poles are 90° N and 90° S."
+   ],
+   [
+    "Longitude",
+    "measures how far a place is east or west of the prime meridian, in degrees. The prime meridian is 0° and runs through Greenwich in London. Latitude is given first, then longitude: Melbourne is about 38° S, 145° E."
+   ]
+  ],
+  "remember": "Grid references give eastings then northings. Latitude and longitude give degrees north or south, then east or west.",
+  "a": {
+   "q": "Jai is given the area reference 4552 on a topographic map. Which two grid lines meet at the bottom-left corner of that square?",
+   "opts": [
+    "Easting 45 and northing 52",
+    "Easting 52 and northing 45",
+    "Easting 46 and northing 53",
+    "Easting 44 and northing 51"
+   ],
+   "why": "Eastings come first, so the first two digits, 45, are the easting and the last two, 52, are the northing. The square is named by the lines at its bottom-left corner. Swapping them to easting 52 and northing 45 reverses the order, which is a common mistake.",
+   "clue": "Which half of the code is the easting?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tess reads that a lighthouse is at 34° S, 151° E. Where is it on Earth?",
+   "opts": [
+    "South of the equator and east of the prime meridian",
+    "North of the equator and east of the prime meridian",
+    "South of the equator and west of the prime meridian",
+    "North of the equator and west of the prime meridian"
+   ],
+   "why": "S means south of the equator, and E means east of the prime meridian. The first number is latitude and the second is longitude, so 34° S is the latitude and 151° E is the longitude.",
+   "clue": "S and E tell you the direction from the equator and the prime meridian."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A simple map grid with vertical eastings lines numbered left to right and horizontal northings lines numbered bottom to top. One grid square is shaded and labelled as an area reference, with the lines at its bottom-left corner marked. A dot inside another square shows a point, with the eastings digits and northings digits marked beside it.",
+    "why": "It shows how eastings come before northings and how the third digit locates a point inside a square."
+   },
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A globe or world map with the equator marked as 0° latitude, the prime meridian marked as 0° longitude, and lines of latitude labelled north and south and lines of longitude labelled east and west.",
+    "why": "It lets a student see which lines measure latitude and which measure longitude."
+   }
+  ]
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,169 @@
+{
+ "id": "mat-volume-rectangular-prisms",
+ "title": "Volume of rectangular prisms",
+ "brief": "fc0cd297242c",
+ "shortlist": [
+  [
+   "mat-volume-rectangular-triangular-prisms",
+   0.617
+  ],
+  [
+   "mat-volume-capacity-prisms",
+   0.394
+  ],
+  [
+   "mat-volume-cylinders",
+   0.276
+  ],
+  [
+   "mat-volume-capacity",
+   0.217
+  ],
+  [
+   "mat-surface-area-volume",
+   0.208
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 may adapt mat-volume-rectangular-triangular-prisms, but is not highly sure, so to the Opus match check",
+  "2026-11-12T12:53:58Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:50Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:05Z write: failed the content check, writing again",
+  "2026-11-12T15:35:10Z write: done",
+  "2026-11-12T15:42:24Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00049,
+  "confirm": 0.01102,
+  "write": 0.0185,
+  "check": 0.00836
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-volume-rectangular-triangular-prisms",
+  "changes": [
+   "Question b, the triangular tent prism, goes beyond a rectangular prism point, so replace it with a rectangular prism question or drop it for this course."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same rectangular prism volume formula in cubic units at a Year 7 depth, but it also covers triangular prisms and its second question uses one, so that question needs changing for this point.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-volume-rectangular-triangular-prisms, also teaches triangular prisms and cross-section area times length, which is broader than this point. This point covers only length times width times height for rectangular prisms, so it needs its own card.",
+  "model": "claude-opus-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Volume of rectangular prisms",
+  "card": [
+   "Volume is the amount of space inside a 3D object. We measure it in cubic units, such as cubic centimetres (\\(\\text{cm}^{3}\\)) or cubic metres (\\(\\text{m}^{3}\\)).",
+   "A rectangular prism is a box shape. Its volume is \\(V = l \\times w \\times h\\), where \\(l\\) is length, \\(w\\) is width and \\(h\\) is height.",
+   "Worked example: a box is 5 cm long, 3 cm wide and 2 cm high. \\(V = 5 \\times 3 \\times 2 = 30\\), so the volume is \\(30 \\text{ cm}^{3}\\).",
+   "All three lengths must be in the same unit before you multiply. The answer is then in that unit cubed. Area uses squared units such as \\(\\text{cm}^{2}\\)."
+  ],
+  "remember": "Multiply the three lengths. The answer is in cubic units.",
+  "a": {
+   "q": "A fish tank is 40 cm long, 20 cm wide and 25 cm high. What is its volume?",
+   "opts": [
+    "\\(20{,}000 \\text{ cm}^{3}\\)",
+    "\\(85 \\text{ cm}^{3}\\)",
+    "\\(20{,}000 \\text{ cm}^{2}\\)",
+    "\\(800 \\text{ cm}^{3}\\)"
+   ],
+   "why": "\\(V = 40 \\times 20 \\times 25 = 20{,}000\\), and volume is in cubic units, so \\(\\text{cm}^{3}\\). Adding the lengths gives 85, which is not how volume works. Using \\(\\text{cm}^{2}\\) is tempting, but that is a unit for area.",
+   "clue": "Multiply all three lengths, and use a cubic unit."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's storage box is 2 m long, 50 cm wide and 40 cm high. What is its volume in cubic centimetres?",
+   "opts": [
+    "\\(400{,}000 \\text{ cm}^{3}\\)",
+    "\\(4{,}000 \\text{ cm}^{3}\\)",
+    "\\(200 \\text{ cm}^{3}\\)",
+    "\\(40{,}000 \\text{ cm}^{3}\\)"
+   ],
+   "why": "Change 2 m to 200 cm first. Then \\(V = 200 \\times 50 \\times 40 = 400{,}000\\), so the volume is \\(400{,}000 \\text{ cm}^{3}\\). Using 2 instead of 200 gives 4,000, which mixes units.",
+   "clue": "Put every length in centimetres before multiplying."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A rectangular prism drawn in 3D with its three edges labelled length (l), width (w) and height (h).",
+    "why": "It shows which three measurements are multiplied to find the volume."
+   }
+  ]
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(20{,}000 \\text{ cm}^{3}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(400{,}000 \\text{ cm}^{3}\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Volume of rectangular prisms",
+  "card": [
+   "Volume is the amount of space inside a 3D object. We measure it in cubic units, such as cubic centimetres (\\(\\text{cm}^{3}\\)) or cubic metres (\\(\\text{m}^{3}\\)).",
+   "A rectangular prism is a box shape. Its volume is \\(V = l \\times w \\times h\\), where \\(l\\) is length, \\(w\\) is width and \\(h\\) is height.",
+   "Worked example: a box is 5 cm long, 3 cm wide and 2 cm high. \\(V = 5 \\times 3 \\times 2 = 30\\), so the volume is \\(30 \\text{ cm}^{3}\\).",
+   "All three lengths must be in the same unit before you multiply. The answer is then in that unit cubed. Area uses squared units such as \\(\\text{cm}^{2}\\)."
+  ],
+  "remember": "Multiply the three lengths. The answer is in cubic units.",
+  "a": {
+   "q": "A fish tank is 40 cm long, 20 cm wide and 25 cm high. What is its volume?",
+   "opts": [
+    "\\(20{,}000 \\text{ cm}^{3}\\)",
+    "\\(85 \\text{ cm}^{3}\\)",
+    "\\(20{,}000 \\text{ cm}^{2}\\)",
+    "\\(800 \\text{ cm}^{3}\\)"
+   ],
+   "why": "\\(V = 40 \\times 20 \\times 25 = 20{,}000\\), and volume is in cubic units, so \\(\\text{cm}^{3}\\). Adding the lengths gives 85, which is not how volume works. Using \\(\\text{cm}^{2}\\) is tempting, but that is a unit for area.",
+   "clue": "Multiply all three lengths, and use a cubic unit."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's storage box is 2 m long, 50 cm wide and 40 cm high. What is its volume in cubic centimetres?",
+   "opts": [
+    "\\(400{,}000 \\text{ cm}^{3}\\)",
+    "\\(4{,}000 \\text{ cm}^{3}\\)",
+    "\\(200 \\text{ cm}^{3}\\)",
+    "\\(40{,}000 \\text{ cm}^{3}\\)"
+   ],
+   "why": "Change 2 m to 200 cm first. Then \\(V = 200 \\times 50 \\times 40 = 400{,}000\\), so the volume is \\(400{,}000 \\text{ cm}^{3}\\). Using 2 instead of 200 gives 4,000, which mixes units.",
+   "clue": "Put every length in centimetres before multiplying."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A rectangular prism drawn in 3D with its three edges labelled length (l), width (w) and height (h).",
+    "why": "It shows which three measurements are multiplied to find the volume."
+   }
+  ]
+ },
+ "cleared_by": "checker"
+}

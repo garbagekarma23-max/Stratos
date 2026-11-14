@@ -1,0 +1,235 @@
+{
+ "id": "ecb-debt-credit",
+ "title": "Debt and credit",
+ "brief": "ff1f46d57bd6",
+ "shortlist": [
+  [
+   "ecb-managing-debt",
+   0.28
+  ],
+  [
+   "ecb-good-debt-bad-debt",
+   0.27
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:44Z new, match",
+  "2026-11-12T12:44:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:32Z write: done",
+  "2026-11-12T15:25:54Z check: flagged",
+  "2026-11-12T15:35:03Z fix: suggested",
+  "2026-11-12T17:07:10Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.01076,
+  "check": 0.01163,
+  "fix": 0.0172,
+  "recheck": 0.00818
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches that credit costs more than paying upfront once fees are added or that missed payments can harm a credit record; the managing debt point covers repayment priority and borrowing within means, and the good and bad debt point covers what the borrowing buys, so both are different ideas.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Debt and credit",
+  "card": [
+   "Debt is money you owe. You can borrow with a credit card, a loan or buy now pay later (BNPL), which lets you take an item home and pay for it in parts.",
+   "Borrowing can cost more than paying upfront. Interest is a charge for borrowing money, and some products also add fees.",
+   "For example, a $500 phone bought on credit may end up costing $560 once interest and fees are added.",
+   "A credit record is a history of how you repay what you borrow. Missed payments can harm it and make future borrowing harder."
+  ],
+  "remember": "Borrowing usually costs more than paying upfront, and missed payments can harm your credit record.",
+  "a": {
+   "q": "Why can buying a $300 jacket on credit cost more than paying $300 upfront?",
+   "opts": [
+    "Interest and fees are added to the price",
+    "The shop raises the price of the jacket",
+    "Credit records add a charge each year",
+    "Only the first payment includes the $300"
+   ],
+   "why": "Borrowing can add interest and fees on top of the price, so the total paid can be above $300. A credit record tracks repayments. It is not a charge.",
+   "clue": "Think about what lenders add when you borrow."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam buys a $200 skateboard using BNPL but misses two payments. What is the most likely result?",
+   "opts": [
+    "Late fees may be added and his credit record may be harmed",
+    "The debt is cancelled because the board is already his",
+    "He pays less because the first payment was on time",
+    "His credit record improves because he used BNPL"
+   ],
+   "why": "Missed payments can lead to late fees and can harm a credit record. Paying in parts does not remove the debt, and missing payments does not make it cheaper.",
+   "clue": "What can happen when payments are missed?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Interest and fees are added to the price",
+   "also_right": []
+  },
+  "b": {
+   "best": "Late fees may be added and his credit record may be harmed",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is clearly the longest and the only one with a hedge ('may'), so a student could pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The question and why rely on 'late fees', but the card mentions only that some products add fees, not fees for missed payments. Students must infer late fees from outside the card."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says borrowing 'usually' costs more, which is stronger than the card's 'can cost more'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts are correct and both intended answers are right. Question b's right option stands out as the longest and only hedged choice, and it relies on late fees, which the card does not teach. The remember line's 'usually' is stronger than the card's 'can'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option is clearly the longest and the only one with a hedge ('may'), so a student could pick it without knowing the idea.",
+  "Question b, level: The question and why rely on 'late fees', but the card mentions only that some products add fees, not fees for missed payments. Students must infer late fees from outside the card.",
+  "Remember, other: The remember line says borrowing 'usually' costs more, which is stronger than the card's 'can cost more'."
+ ],
+ "proposal": {
+  "title": "Debt and credit",
+  "card": [
+   "Debt is money you owe. You can borrow with a credit card, a loan or buy now pay later (BNPL), which lets you take an item home and pay for it in parts.",
+   "Borrowing can cost more than paying upfront. Interest is a charge for borrowing money, and some products also add fees.",
+   "For example, a $500 phone bought on credit may end up costing $560 once interest and fees are added.",
+   "A credit record is a history of how you repay what you borrow. Missed payments can harm it and make future borrowing harder."
+  ],
+  "remember": "Borrowing can cost more than paying upfront, and missed payments can harm your credit record.",
+  "a": {
+   "q": "Why can buying a $300 jacket on credit cost more than paying $300 upfront?",
+   "opts": [
+    "Interest and fees are added to the price",
+    "The shop raises the price of the jacket",
+    "Credit records add a charge each year",
+    "Only the first payment includes the $300"
+   ],
+   "why": "Borrowing can add interest and fees on top of the price, so the total paid can be above $300. A credit record tracks repayments. It is not a charge.",
+   "clue": "Think about what lenders add when you borrow."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam buys a $200 skateboard using BNPL but misses two payments. What can result from the missed payments?",
+   "opts": [
+    "His credit record is harmed, making borrowing harder",
+    "His debt is cancelled, since he already owns the board",
+    "He pays less overall, since his first payment was on time",
+    "His credit record improves, since he chose to use BNPL"
+   ],
+   "why": "Missed payments can harm a credit record, which can make future borrowing harder. Taking the board home does not cancel the debt: with BNPL he still owes the remaining parts.",
+   "clue": "What does a credit record keep track of?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:10Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Interest and fees are added to the price",
+    "also_right": []
+   },
+   "b": {
+    "best": "His credit record is harmed, making borrowing harder",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:10Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is clearly the longest and the only one with a hedge ('may'), so a student could pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The question and why rely on 'late fees', but the card mentions only that some products add fees, not fees for missed payments. Students must infer late fees from outside the card."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says borrowing 'usually' costs more, which is stronger than the card's 'can cost more'."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The right option is clearly the longest and the only one with a hedge ('may'), so a student could pick it without knowing the idea.",
+   "Question b, level: The question and why rely on 'late fees', but the card mentions only that some products add fees, not fees for missed payments. Students must infer late fees from outside the card.",
+   "Remember, other: The remember line says borrowing 'usually' costs more, which is stronger than the card's 'can cost more'."
+  ]
+ },
+ "final": {
+  "title": "Debt and credit",
+  "card": [
+   "Debt is money you owe. You can borrow with a credit card, a loan or buy now pay later (BNPL), which lets you take an item home and pay for it in parts.",
+   "Borrowing can cost more than paying upfront. Interest is a charge for borrowing money, and some products also add fees.",
+   "For example, a $500 phone bought on credit may end up costing $560 once interest and fees are added.",
+   "A credit record is a history of how you repay what you borrow. Missed payments can harm it and make future borrowing harder."
+  ],
+  "remember": "Borrowing can cost more than paying upfront, and missed payments can harm your credit record.",
+  "a": {
+   "q": "Why can buying a $300 jacket on credit cost more than paying $300 upfront?",
+   "opts": [
+    "Interest and fees are added to the price",
+    "The shop raises the price of the jacket",
+    "Credit records add a charge each year",
+    "Only the first payment includes the $300"
+   ],
+   "why": "Borrowing can add interest and fees on top of the price, so the total paid can be above $300. A credit record tracks repayments. It is not a charge.",
+   "clue": "Think about what lenders add when you borrow."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam buys a $200 skateboard using BNPL but misses two payments. What can result from the missed payments?",
+   "opts": [
+    "His credit record is harmed, making borrowing harder",
+    "His debt is cancelled, since he already owns the board",
+    "He pays less overall, since his first payment was on time",
+    "His credit record improves, since he chose to use BNPL"
+   ],
+   "why": "Missed payments can harm a credit record, which can make future borrowing harder. Taking the board home does not cancel the debt: with BNPL he still owes the remaining parts.",
+   "clue": "What does a credit record keep track of?"
+  }
+ },
+ "cleared_by": "recheck"
+}

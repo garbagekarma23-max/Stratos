@@ -1,0 +1,218 @@
+{
+ "id": "mat-rationalising-denominator-vic",
+ "title": "Rationalising the denominator",
+ "brief": "ad3434ccb9dd",
+ "shortlist": [
+  [
+   "mat-conjugates-division",
+   0.296
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:05Z write: done",
+  "2026-11-12T15:35:09Z check: flagged",
+  "2026-11-12T15:59:44Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 7e-05,
+  "write": 0.00857,
+  "check": 0.01528,
+  "fix": 0.02199,
+  "recheck": 0.01059
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches rationalising complex denominators with conjugates, which is a different idea from removing a surd from a denominator in Year 10 surds, so no bank point matches the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Rationalising the denominator",
+  "card": [
+   "A fraction such as \\(\\frac{6}{\\sqrt{3}}\\) has a surd in its denominator. Rationalising means rewriting it so the denominator is a rational number.",
+   "Multiply the top and the bottom by the surd in the denominator. This is the same as multiplying by 1, so the value does not change.",
+   "A surd times itself gives a whole number: \\(\\sqrt{3} \\times \\sqrt{3} = 3\\). So the denominator becomes rational.",
+   [
+    "Example",
+    "\\(\\frac{6}{\\sqrt{3}} = \\frac{6 \\times \\sqrt{3}}{\\sqrt{3} \\times \\sqrt{3}} = \\frac{6\\sqrt{3}}{3}\\), which is \\(2\\sqrt{3}\\) once the 6 and the 3 are divided by 3."
+   ]
+  ],
+  "remember": "Multiply top and bottom by the denominator's surd, so the bottom becomes a whole number.",
+  "a": {
+   "q": "What is \\(\\frac{10}{\\sqrt{5}}\\) with a rational denominator, in simplest form?",
+   "opts": [
+    "\\(2\\sqrt{5}\\)",
+    "\\(10\\sqrt{5}\\)",
+    "\\(\\frac{2}{\\sqrt{5}}\\)",
+    "\\(5\\sqrt{2}\\)"
+   ],
+   "why": "Multiply top and bottom by \\(\\sqrt{5}\\): \\(\\frac{10\\sqrt{5}}{5} = 2\\sqrt{5}\\). Leaving it as \\(10\\sqrt{5}\\) forgets to divide by the new denominator 5.",
+   "clue": "Multiply top and bottom by \\(\\sqrt{5}\\), then simplify."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia says \\(\\frac{9}{\\sqrt{6}}\\) can be rationalised by multiplying top and bottom by \\(\\sqrt{3}\\). Which result is right for the correct method?",
+   "opts": [
+    "\\(\\frac{3\\sqrt{6}}{2}\\)",
+    "\\(\\frac{9\\sqrt{6}}{2}\\)",
+    "\\(\\frac{3\\sqrt{6}}{6}\\)",
+    "\\(\\frac{9\\sqrt{6}}{3}\\)"
+   ],
+   "why": "Multiply top and bottom by \\(\\sqrt{6}\\): \\(\\frac{9\\sqrt{6}}{6}\\), which is \\(\\frac{3\\sqrt{6}}{2}\\) after dividing by 3. Multiplying by \\(\\sqrt{3}\\) does not make the bottom rational, since \\(\\sqrt{6} \\times \\sqrt{3} = \\sqrt{18}\\).",
+   "clue": "Multiply by the whole surd in the denominator, then divide out common factors."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(2\\sqrt{5}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(\\frac{3\\sqrt{6}}{2}\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"A surd times itself gives a whole number\" is too general. Point 1 counts cube roots such as \\(\\sqrt[3]{5}\\) as surds, and \\(\\sqrt[3]{5} \\times \\sqrt[3]{5}\\) is not a whole number. It should say a square root of a whole number times itself gives that whole number."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers check out: \\(2\\sqrt{5}\\) and \\(\\frac{3\\sqrt{6}}{2}\\). The card's claim that any surd times itself gives a whole number is false for cube-root surds, which point 1 includes, so it should be limited to square roots."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: \"A surd times itself gives a whole number\" is too general. Point 1 counts cube roots such as \\(\\sqrt[3]{5}\\) as surds, and \\(\\sqrt[3]{5} \\times \\sqrt[3]{5}\\) is not a whole number. It should say a square root of a whole number times itself gives that whole number."
+ ],
+ "proposal": {
+  "title": "Rationalising the denominator",
+  "card": [
+   "A fraction such as \\(\\frac{6}{\\sqrt{3}}\\) has a surd in its denominator. Rationalising means rewriting it so the denominator is a rational number.",
+   "Multiply the top and the bottom by the surd in the denominator. This is the same as multiplying by 1, so the value does not change.",
+   "The square root of a whole number, times itself, gives that whole number: \\(\\sqrt{3} \\times \\sqrt{3} = 3\\). So the denominator becomes rational.",
+   [
+    "Example",
+    "\\(\\frac{6}{\\sqrt{3}} = \\frac{6 \\times \\sqrt{3}}{\\sqrt{3} \\times \\sqrt{3}} = \\frac{6\\sqrt{3}}{3}\\), which is \\(2\\sqrt{3}\\) once the 6 and the 3 are divided by 3."
+   ]
+  ],
+  "remember": "Multiply top and bottom by the denominator's surd, so the bottom becomes a whole number.",
+  "a": {
+   "q": "What is \\(\\frac{10}{\\sqrt{5}}\\) with a rational denominator, in simplest form?",
+   "opts": [
+    "\\(2\\sqrt{5}\\)",
+    "\\(10\\sqrt{5}\\)",
+    "\\(\\frac{2}{\\sqrt{5}}\\)",
+    "\\(5\\sqrt{2}\\)"
+   ],
+   "why": "Multiply top and bottom by \\(\\sqrt{5}\\): \\(\\frac{10\\sqrt{5}}{5} = 2\\sqrt{5}\\). Leaving it as \\(10\\sqrt{5}\\) forgets to divide by the new denominator 5.",
+   "clue": "Multiply top and bottom by \\(\\sqrt{5}\\), then simplify."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia tries to rationalise \\(\\frac{9}{\\sqrt{6}}\\) by multiplying top and bottom by \\(\\sqrt{3}\\), which does not work. What is the correct result, in simplest form?",
+   "opts": [
+    "\\(\\frac{3\\sqrt{6}}{2}\\)",
+    "\\(\\frac{9\\sqrt{6}}{2}\\)",
+    "\\(\\frac{3\\sqrt{6}}{6}\\)",
+    "\\(\\frac{9\\sqrt{6}}{3}\\)"
+   ],
+   "why": "Multiply top and bottom by \\(\\sqrt{6}\\): \\(\\frac{9\\sqrt{6}}{6}\\), which is \\(\\frac{3\\sqrt{6}}{2}\\) after dividing the 9 and the 6 by 3. Mia's way fails because \\(\\sqrt{6} \\times \\sqrt{3} = \\sqrt{18}\\), which is not rational.",
+   "clue": "Multiply by the whole surd in the denominator, then divide out common factors."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(2\\sqrt{5}\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(\\frac{3\\sqrt{6}}{2}\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"A surd times itself gives a whole number\" is too general. Point 1 counts cube roots such as \\(\\sqrt[3]{5}\\) as surds, and \\(\\sqrt[3]{5} \\times \\sqrt[3]{5}\\) is not a whole number. It should say a square root of a whole number times itself gives that whole number."
+   }
+  ],
+  "flags": [
+   "Card, fact: \"A surd times itself gives a whole number\" is too general. Point 1 counts cube roots such as \\(\\sqrt[3]{5}\\) as surds, and \\(\\sqrt[3]{5} \\times \\sqrt[3]{5}\\) is not a whole number. It should say a square root of a whole number times itself gives that whole number."
+  ]
+ },
+ "final": {
+  "title": "Rationalising the denominator",
+  "card": [
+   "A fraction such as \\(\\frac{6}{\\sqrt{3}}\\) has a surd in its denominator. Rationalising means rewriting it so the denominator is a rational number.",
+   "Multiply the top and the bottom by the surd in the denominator. This is the same as multiplying by 1, so the value does not change.",
+   "The square root of a whole number, times itself, gives that whole number: \\(\\sqrt{3} \\times \\sqrt{3} = 3\\). So the denominator becomes rational.",
+   [
+    "Example",
+    "\\(\\frac{6}{\\sqrt{3}} = \\frac{6 \\times \\sqrt{3}}{\\sqrt{3} \\times \\sqrt{3}} = \\frac{6\\sqrt{3}}{3}\\), which is \\(2\\sqrt{3}\\) once the 6 and the 3 are divided by 3."
+   ]
+  ],
+  "remember": "Multiply top and bottom by the denominator's surd, so the bottom becomes a whole number.",
+  "a": {
+   "q": "What is \\(\\frac{10}{\\sqrt{5}}\\) with a rational denominator, in simplest form?",
+   "opts": [
+    "\\(2\\sqrt{5}\\)",
+    "\\(10\\sqrt{5}\\)",
+    "\\(\\frac{2}{\\sqrt{5}}\\)",
+    "\\(5\\sqrt{2}\\)"
+   ],
+   "why": "Multiply top and bottom by \\(\\sqrt{5}\\): \\(\\frac{10\\sqrt{5}}{5} = 2\\sqrt{5}\\). Leaving it as \\(10\\sqrt{5}\\) forgets to divide by the new denominator 5.",
+   "clue": "Multiply top and bottom by \\(\\sqrt{5}\\), then simplify."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia tries to rationalise \\(\\frac{9}{\\sqrt{6}}\\) by multiplying top and bottom by \\(\\sqrt{3}\\), which does not work. What is the correct result, in simplest form?",
+   "opts": [
+    "\\(\\frac{3\\sqrt{6}}{2}\\)",
+    "\\(\\frac{9\\sqrt{6}}{2}\\)",
+    "\\(\\frac{3\\sqrt{6}}{6}\\)",
+    "\\(\\frac{9\\sqrt{6}}{3}\\)"
+   ],
+   "why": "Multiply top and bottom by \\(\\sqrt{6}\\): \\(\\frac{9\\sqrt{6}}{6}\\), which is \\(\\frac{3\\sqrt{6}}{2}\\) after dividing the 9 and the 6 by 3. Mia's way fails because \\(\\sqrt{6} \\times \\sqrt{3} = \\sqrt{18}\\), which is not rational.",
+   "clue": "Multiply by the whole surd in the denominator, then divide out common factors."
+  }
+ },
+ "cleared_by": "recheck"
+}

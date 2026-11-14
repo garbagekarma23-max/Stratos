@@ -1,0 +1,266 @@
+{
+ "id": "mat-surface-area-volume-sphere",
+ "title": "Surface area and volume of a sphere",
+ "brief": "be7b8e7b3533",
+ "shortlist": [
+  [
+   "mat-surface-area-volume",
+   0.432
+  ],
+  [
+   "mat-scaling-area-volume",
+   0.376
+  ],
+  [
+   "mat-volume-composite-solids",
+   0.296
+  ],
+  [
+   "mat-surface-area-composite-solids",
+   0.292
+  ],
+  [
+   "bio-surface-area-volume-ratio-2",
+   0.274
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:04Z write: failed the content check, writing again",
+  "2026-11-12T15:35:09Z write: done",
+  "2026-11-12T15:59:43Z check: flagged",
+  "2026-11-12T16:02:56Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.01875,
+  "check": 0.01344,
+  "fix": 0.02475,
+  "recheck": 0.00986
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches the surface area or volume formulas for a sphere; they cover prisms, scaling, composite solids and cell surface area to volume ratio, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Surface area and volume of a sphere",
+  "card": [
+   "A sphere is a perfectly round solid. Every point on its surface is the same distance, the radius \\(r\\), from the centre.",
+   [
+    "Surface area",
+    "\\(SA = 4\\pi r^{2}\\). This is four times the area of a circle with the same radius."
+   ],
+   [
+    "Volume",
+    "\\(V = \\frac{4}{3}\\pi r^{3}\\). The radius is cubed, not squared, because volume is measured in cubic units."
+   ],
+   [
+    "Example",
+    "A ball has radius 3 cm. \\(SA = 4 \\times \\pi \\times 3^{2} = 36\\pi\\), which is about \\(113.1\\) \\(\\text{cm}^{2}\\). \\(V = \\frac{4}{3} \\times \\pi \\times 3^{3} = 36\\pi\\), which is about \\(113.1\\) \\(\\text{cm}^{3}\\)."
+   ]
+  ],
+  "remember": "Surface area uses \\(r^{2}\\) with 4. Volume uses \\(r^{3}\\) with \\(\\frac{4}{3}\\).",
+  "a": {
+   "q": "Which pair of formulas gives the surface area and the volume of a sphere with radius \\(r\\)?",
+   "opts": [
+    "\\(SA = 4\\pi r^{2}\\) and \\(V = \\frac{4}{3}\\pi r^{3}\\)",
+    "\\(SA = \\frac{4}{3}\\pi r^{3}\\) and \\(V = 4\\pi r^{2}\\)",
+    "\\(SA = 4\\pi r^{3}\\) and \\(V = \\frac{4}{3}\\pi r^{2}\\)",
+    "\\(SA = 2\\pi r^{2}\\) and \\(V = \\frac{4}{3}\\pi r^{3}\\)"
+   ],
+   "why": "Surface area is measured in square units, so it uses \\(r^{2}\\), and volume uses \\(r^{3}\\). The swapped pair is tempting, but it puts the cube on the area.",
+   "clue": "Area uses a square, volume uses a cube."
+  },
+  "b": {
+   "d": 3,
+   "q": "A spherical water tank at a farm in Wodonga has radius 2 m. What is its volume, to the nearest cubic metre?",
+   "opts": [
+    "\\(34\\) \\(\\text{m}^{3}\\)",
+    "\\(50\\) \\(\\text{m}^{3}\\)",
+    "\\(101\\) \\(\\text{m}^{3}\\)",
+    "\\(25\\) \\(\\text{m}^{3}\\)"
+   ],
+   "why": "\\(V = \\frac{4}{3} \\times \\pi \\times 2^{3} = \\frac{32\\pi}{3}\\), which is about 33.5, so 34 cubic metres. The value 50 is the surface area \\(4\\pi \\times 2^{2}\\), which is the wrong formula. The value 101 comes from using \\(r = 4\\) by mistake.",
+   "clue": "Cube the radius first: \\(2^{3} = 8\\)."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(SA = 4\\pi r^{2}\\) and \\(V = \\frac{4}{3}\\pi r^{3}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(34\\) \\(\\text{m}^{3}\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) says 101 comes from using r = 4 by mistake, but with r = 4 the volume is about 268 m³. 101 comes from leaving out the 1/3: 4π × 2³ = 32π ≈ 100.5."
+   },
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The worked example uses r = 3, where the surface area and volume share the same number (36π ≈ 113.1). This is the one radius where they match, and students may take it to mean surface area and volume are equal or interchangeable. A different radius would avoid the coincidence."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Why (b) gives the wrong source for the distractor 101: it comes from leaving out the 1/3 (32π), not from using r = 4. The card's r = 3 example also gives surface area and volume the same number, which could confuse students."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: Why (b) says 101 comes from using r = 4 by mistake, but with r = 4 the volume is about 268 m³. 101 comes from leaving out the 1/3: 4π × 2³ = 32π ≈ 100.5.",
+  "Card, other: The worked example uses r = 3, where the surface area and volume share the same number (36π ≈ 113.1). This is the one radius where they match, and students may take it to mean surface area and volume are equal or interchangeable. A different radius would avoid the coincidence."
+ ],
+ "proposal": {
+  "title": "Surface area and volume of a sphere",
+  "card": [
+   "A sphere is a perfectly round solid. Every point on its surface is the same distance, the radius \\(r\\), from the centre.",
+   [
+    "Surface area",
+    "\\(SA = 4\\pi r^{2}\\). This is four times the area of a circle with the same radius."
+   ],
+   [
+    "Volume",
+    "\\(V = \\frac{4}{3}\\pi r^{3}\\). The radius is cubed, not squared, because volume is measured in cubic units."
+   ],
+   [
+    "Example",
+    "A ball has radius 5 cm. \\(SA = 4 \\times \\pi \\times 5^{2} = 100\\pi\\), which is about \\(314.2 \\text{ cm}^{2}\\). \\(V = \\frac{4}{3} \\times \\pi \\times 5^{3} = \\frac{500\\pi}{3}\\), which is about \\(523.6 \\text{ cm}^{3}\\)."
+   ]
+  ],
+  "remember": "Surface area uses \\(r^{2}\\) with 4. Volume uses \\(r^{3}\\) with \\(\\frac{4}{3}\\).",
+  "a": {
+   "q": "Which pair of formulas gives the surface area and the volume of a sphere with radius \\(r\\)?",
+   "opts": [
+    "\\(SA = 4\\pi r^{2}\\) and \\(V = \\frac{4}{3}\\pi r^{3}\\)",
+    "\\(SA = \\frac{4}{3}\\pi r^{3}\\) and \\(V = 4\\pi r^{2}\\)",
+    "\\(SA = 4\\pi r^{3}\\) and \\(V = \\frac{4}{3}\\pi r^{2}\\)",
+    "\\(SA = 2\\pi r^{2}\\) and \\(V = \\frac{4}{3}\\pi r^{3}\\)"
+   ],
+   "why": "Surface area is measured in square units, so it uses \\(r^{2}\\), and volume is measured in cubic units, so it uses \\(r^{3}\\). The swapped pair is tempting, but it puts the cube on the area.",
+   "clue": "Area uses a square, volume uses a cube."
+  },
+  "b": {
+   "d": 3,
+   "q": "A spherical water tank at a farm in Wodonga has radius 2 m. What is its volume, to the nearest cubic metre?",
+   "opts": [
+    "\\(34 \\text{ m}^{3}\\)",
+    "\\(50 \\text{ m}^{3}\\)",
+    "\\(101 \\text{ m}^{3}\\)",
+    "\\(17 \\text{ m}^{3}\\)"
+   ],
+   "why": "\\(V = \\frac{4}{3} \\times \\pi \\times 2^{3} = \\frac{32\\pi}{3}\\), which is about 33.5, so 34 cubic metres. The value 50 is the surface area, \\(4\\pi \\times 2^{2} = 16\\pi\\), so it uses the wrong formula. The value 101 comes from leaving out the 3 in \\(\\frac{4}{3}\\): \\(4\\pi \\times 2^{3} = 32\\pi\\), about 100.5.",
+   "clue": "Cube the radius first: \\(2^{3} = 8\\)."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(SA = 4\\pi r^{2}\\) and \\(V = \\frac{4}{3}\\pi r^{3}\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(34 \\text{ m}^{3}\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) says 101 comes from using r = 4 by mistake, but with r = 4 the volume is about 268 m³. 101 comes from leaving out the 1/3: 4π × 2³ = 32π ≈ 100.5."
+   },
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The worked example uses r = 3, where the surface area and volume share the same number (36π ≈ 113.1). This is the one radius where they match, and students may take it to mean surface area and volume are equal or interchangeable. A different radius would avoid the coincidence."
+   }
+  ],
+  "flags": [
+   "Question b, fact: Why (b) says 101 comes from using r = 4 by mistake, but with r = 4 the volume is about 268 m³. 101 comes from leaving out the 1/3: 4π × 2³ = 32π ≈ 100.5.",
+   "Card, other: The worked example uses r = 3, where the surface area and volume share the same number (36π ≈ 113.1). This is the one radius where they match, and students may take it to mean surface area and volume are equal or interchangeable. A different radius would avoid the coincidence."
+  ]
+ },
+ "final": {
+  "title": "Surface area and volume of a sphere",
+  "card": [
+   "A sphere is a perfectly round solid. Every point on its surface is the same distance, the radius \\(r\\), from the centre.",
+   [
+    "Surface area",
+    "\\(SA = 4\\pi r^{2}\\). This is four times the area of a circle with the same radius."
+   ],
+   [
+    "Volume",
+    "\\(V = \\frac{4}{3}\\pi r^{3}\\). The radius is cubed, not squared, because volume is measured in cubic units."
+   ],
+   [
+    "Example",
+    "A ball has radius 5 cm. \\(SA = 4 \\times \\pi \\times 5^{2} = 100\\pi\\), which is about \\(314.2 \\text{ cm}^{2}\\). \\(V = \\frac{4}{3} \\times \\pi \\times 5^{3} = \\frac{500\\pi}{3}\\), which is about \\(523.6 \\text{ cm}^{3}\\)."
+   ]
+  ],
+  "remember": "Surface area uses \\(r^{2}\\) with 4. Volume uses \\(r^{3}\\) with \\(\\frac{4}{3}\\).",
+  "a": {
+   "q": "Which pair of formulas gives the surface area and the volume of a sphere with radius \\(r\\)?",
+   "opts": [
+    "\\(SA = 4\\pi r^{2}\\) and \\(V = \\frac{4}{3}\\pi r^{3}\\)",
+    "\\(SA = \\frac{4}{3}\\pi r^{3}\\) and \\(V = 4\\pi r^{2}\\)",
+    "\\(SA = 4\\pi r^{3}\\) and \\(V = \\frac{4}{3}\\pi r^{2}\\)",
+    "\\(SA = 2\\pi r^{2}\\) and \\(V = \\frac{4}{3}\\pi r^{3}\\)"
+   ],
+   "why": "Surface area is measured in square units, so it uses \\(r^{2}\\), and volume is measured in cubic units, so it uses \\(r^{3}\\). The swapped pair is tempting, but it puts the cube on the area.",
+   "clue": "Area uses a square, volume uses a cube."
+  },
+  "b": {
+   "d": 3,
+   "q": "A spherical water tank at a farm in Wodonga has radius 2 m. What is its volume, to the nearest cubic metre?",
+   "opts": [
+    "\\(34 \\text{ m}^{3}\\)",
+    "\\(50 \\text{ m}^{3}\\)",
+    "\\(101 \\text{ m}^{3}\\)",
+    "\\(17 \\text{ m}^{3}\\)"
+   ],
+   "why": "\\(V = \\frac{4}{3} \\times \\pi \\times 2^{3} = \\frac{32\\pi}{3}\\), which is about 33.5, so 34 cubic metres. The value 50 is the surface area, \\(4\\pi \\times 2^{2} = 16\\pi\\), so it uses the wrong formula. The value 101 comes from leaving out the 3 in \\(\\frac{4}{3}\\): \\(4\\pi \\times 2^{3} = 32\\pi\\), about 100.5.",
+   "clue": "Cube the radius first: \\(2^{3} = 8\\)."
+  }
+ },
+ "cleared_by": "recheck"
+}

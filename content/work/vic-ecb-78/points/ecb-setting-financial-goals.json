@@ -1,0 +1,223 @@
+{
+ "id": "ecb-setting-financial-goals",
+ "title": "Setting financial goals",
+ "brief": "55183d439a22",
+ "shortlist": [
+  [
+   "ecb-short-long-term-financial",
+   0.582
+  ],
+  [
+   "ecb-managing-financial-risk",
+   0.324
+  ],
+  [
+   "ecb-shapes-financial-sector",
+   0.224
+  ],
+  [
+   "ecb-financial-institutions",
+   0.206
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:44Z new, match",
+  "2026-11-12T12:44:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:32Z write: done",
+  "2026-11-12T15:25:54Z check: flagged",
+  "2026-11-12T15:35:03Z fix: suggested",
+  "2026-11-12T16:19:51Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.01076,
+  "check": 0.00975,
+  "fix": 0.02134
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, on short and long-term goals, covers only two time horizons and does not teach medium-term goals or the idea that a goal with a set amount and date is easier to reach, so the new point is broader than any bank match.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Setting financial goals",
+  "card": [
+   "A financial goal is something you want to pay for with your money. Goals are grouped by how long they take to reach.",
+   [
+    "Short term",
+    "a goal you can reach soon, such as new shoes or a movie ticket."
+   ],
+   [
+    "Medium term",
+    "a goal that takes longer, such as a laptop."
+   ],
+   [
+    "Long term",
+    "a goal that takes many years, such as a car or a home. Clear goals are easier to reach when they state an amount and a date."
+   ]
+  ],
+  "remember": "Goals are short, medium or long term. An amount and a date make a goal clear.",
+  "a": {
+   "q": "Which of these is the clearest financial goal?",
+   "opts": [
+    "Save $600 for a laptop by the end of June",
+    "Save some money for a laptop soon",
+    "Try to buy a laptop one day",
+    "Spend less so a laptop is possible"
+   ],
+   "why": "This goal states both an amount, $600, and a date, the end of June. The others are vague, so it is hard to tell if they have been reached.",
+   "clue": "Look for the goal with a number and a deadline."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is 13. She wants a $40 bucket hat next month, a $900 bike in two years and a home when she is an adult. Which pair is matched correctly?",
+   "opts": [
+    "Hat is short term, home is long term",
+    "Hat is medium term, bike is short term",
+    "Bike is long term, home is medium term",
+    "Hat is long term, bike is medium term"
+   ],
+   "why": "The hat is bought next month, so it is short term. A home takes many years, so it is long term. The bike is tempting to call long term, but two years is closer to medium term.",
+   "clue": "Sort each goal by how long it takes to reach."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Save $600 for a laptop by the end of June",
+   "also_right": []
+  },
+  "b": {
+   "best": "Hat is short term, home is long term",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The sentence 'Clear goals are easier to reach when they state an amount and a date' sits inside the long-term bullet, so students may think it applies only to long-term goals. It belongs in its own line, since question a applies it to a laptop (medium-term) goal."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct and well supported. The one problem is that the line about clear goals needing an amount and a date is tucked into the long-term bullet, where it reads as if it applies only to long-term goals."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The sentence 'Clear goals are easier to reach when they state an amount and a date' sits inside the long-term bullet, so students may think it applies only to long-term goals. It belongs in its own line, since question a applies it to a laptop (medium-term) goal."
+ ],
+ "proposal": {
+  "title": "Setting financial goals",
+  "card": [
+   [
+    "Short term",
+    "a financial goal (something you save money for) that you can reach within a few months, such as new shoes or a movie ticket."
+   ],
+   [
+    "Medium term",
+    "a goal that takes about one to a few years to reach, such as a laptop."
+   ],
+   [
+    "Long term",
+    "a goal that takes many years to reach, such as a car or a home."
+   ],
+   "Any goal, short, medium or long term, is easier to reach when it is clear. A clear goal states an amount and a date."
+  ],
+  "remember": "Sort a goal by how long it takes. Give every goal an amount and a date.",
+  "a": {
+   "q": "Which of these is the clearest financial goal?",
+   "opts": [
+    "Save $600 for a laptop by the end of June",
+    "Save some money for a laptop very soon",
+    "Try to buy a good laptop one day",
+    "Spend less each week so a laptop is possible"
+   ],
+   "why": "This goal states both an amount, $600, and a date, the end of June. The others are vague, so it is hard to plan for them or to tell when they have been reached.",
+   "clue": "Look for the goal with a number and a deadline."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is 13. She wants a $40 bucket hat next month, a $900 bike in two years and a home when she is an adult. Which pair is matched correctly?",
+   "opts": [
+    "Hat is short term, home is long term",
+    "Hat is medium term, bike is short term",
+    "Bike is long term, home is medium term",
+    "Hat is long term, bike is medium term"
+   ],
+   "why": "The hat is bought next month, so it is short term. A home takes many years, so it is long term. The bike is tempting to call long term because it costs a lot, but two years fits medium term.",
+   "clue": "Sort each goal by how long it takes to reach, not by its price."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:51Z",
+  "rules": 1,
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The sentence 'Clear goals are easier to reach when they state an amount and a date' sits inside the long-term bullet, so students may think it applies only to long-term goals. It belongs in its own line, since question a applies it to a laptop (medium-term) goal."
+   }
+  ],
+  "flags": [
+   "Card, wording: The sentence 'Clear goals are easier to reach when they state an amount and a date' sits inside the long-term bullet, so students may think it applies only to long-term goals. It belongs in its own line, since question a applies it to a laptop (medium-term) goal."
+  ]
+ },
+ "final": {
+  "title": "Setting financial goals",
+  "card": [
+   [
+    "Short term",
+    "a financial goal (something you save money for) that you can reach within a few months, such as new shoes or a movie ticket."
+   ],
+   [
+    "Medium term",
+    "a goal that takes about one to a few years to reach, such as a laptop."
+   ],
+   [
+    "Long term",
+    "a goal that takes many years to reach, such as a car or a home."
+   ],
+   "Any goal, short, medium or long term, is easier to reach when it is clear. A clear goal states an amount and a date."
+  ],
+  "remember": "Sort a goal by how long it takes. Give every goal an amount and a date.",
+  "a": {
+   "q": "Which of these is the clearest financial goal?",
+   "opts": [
+    "Save $600 for a laptop by the end of June",
+    "Save some money for a laptop very soon",
+    "Try to buy a good laptop one day",
+    "Spend less each week so a laptop is possible"
+   ],
+   "why": "This goal states both an amount, $600, and a date, the end of June. The others are vague, so it is hard to plan for them or to tell when they have been reached.",
+   "clue": "Look for the goal with a number and a deadline."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is 13. She wants a $40 bucket hat next month, a $900 bike in two years and a home when she is an adult. Which pair is matched correctly?",
+   "opts": [
+    "Hat is short term, home is long term",
+    "Hat is medium term, bike is short term",
+    "Bike is long term, home is medium term",
+    "Hat is long term, bike is medium term"
+   ],
+   "why": "The hat is bought next month, so it is short term. A home takes many years, so it is long term. The bike is tempting to call long term because it costs a lot, but two years fits medium term.",
+   "clue": "Sort each goal by how long it takes to reach, not by its price."
+  }
+ },
+ "cleared_by": "auto"
+}

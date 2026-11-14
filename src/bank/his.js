@@ -5294,5 +5294,3022 @@ MADE_BANKS.his = {
       "why": "Private owners running a business for profit, with workers hired for wages, is capitalism. Socialism is the tempting wrong answer, because it also deals with factory wealth, but it says industry should be owned or shared by the community.",
       "clue": "Who owns the mill, and who gets the profit?"
     }
+  },
+  "his-early-human-migration-vic": {
+    "title": "Early human migration",
+    "card": [
+      "Modern humans, called Homo sapiens, first lived in Africa. Over tens of thousands of years, groups moved out and spread to other parts of the world.",
+      "People moved for reasons such as finding food, following animals, or responding to changes in climate. They travelled on foot and, in some places, by boat.",
+      "Our evidence comes from bones, stone tools and the remains of camps. Scientists also study the DNA of people today and of ancient remains.",
+      "Historians and scientists still debate the routes and the timing. New finds can change what they think."
+    ],
+    "remember": "Humans began in Africa and spread out over a very long time. The routes and dates are still debated.",
+    "a": {
+      "q": "Where did modern humans, Homo sapiens, first live?",
+      "opts": ["Africa", "Europe", "Asia", "Australia"],
+      "why": "The evidence shows that Homo sapiens first lived in Africa and then spread to other regions. Europe, Asia and Australia were reached later by groups who moved out over a very long time.",
+      "clue": "Think about where the spread began."
+    },
+    "b": {
+      "d": 3,
+      "q": "A team in a cave finds human bones that look older than any found before in the region. Some experts say the spread of humans may have begun earlier. What does this show about the dates of human migration?",
+      "opts": [
+        "The dates are revised as new evidence is found",
+        "The dates stay fixed once experts agree on them",
+        "The dates are proved by a single find in one cave",
+        "The dates show humans did not begin in Africa"
+      ],
+      "why": "Experts rethink the timing when new evidence such as older bones turns up, which is why the dates are still debated. One find does not prove the dates on its own, and it does not change where modern humans began.",
+      "clue": "Think about what new evidence does to existing ideas."
+    }
+  },
+  "his-first-farmers": {
+    "title": "The first farmers",
+    "card": [
+      "For most of human history, people moved around to hunt animals and gather wild plants. Farming began when people started to grow crops and keep animals for food.",
+      "Crops grow in one place and need care from planting to harvest, so farming families settled near their fields. Over time, small groups of homes grew into villages.",
+      "Farmers could often grow more food than their families needed. This extra food is called a surplus, and it could be stored or traded.",
+      "With a surplus, not everyone had to spend their days finding food. Some people could become potters, toolmakers or traders."
+    ],
+    "remember": "Farming let people settle, and a food surplus let some people do other work.",
+    "a": {
+      "q": "Why did farming lead some people to take up new jobs such as pottery?",
+      "opts": [
+        "A food surplus meant not everyone had to produce food",
+        "Farmers had to move often, so they needed new tools",
+        "Hunting animals became easier once crops were grown",
+        "Villages were too small for everyone to farm"
+      ],
+      "why": "A surplus meant the farmers could feed people who did not grow food, so some could make pots or tools. Crops tied farmers to their fields, so moving often is not the reason.",
+      "clue": "Think about what extra food made possible."
+    },
+    "b": {
+      "d": 3,
+      "q": "Long ago, a group of hunter-gatherers in the hills began planting barley and keeping goats near a river. Which change is most likely to follow in the years after?",
+      "opts": [
+        "They build permanent homes near their fields",
+        "They travel further each season to find wild food",
+        "They stop needing to store or trade any food",
+        "They give up their tools because farming is simple"
+      ],
+      "why": "Barley has to be planted, tended and harvested in the same place, so the group is likely to settle near its fields. Travelling further to find wild food is the old way of life that farming replaced.",
+      "clue": "Crops cannot follow the people around."
+    }
+  },
+  "his-features-early-societies": {
+    "title": "Features of early societies",
+    "card": [
+      "As early societies grew, they needed ways to organise large numbers of people. Many of them developed similar features.",
+      [
+        "Tools and writing",
+        "Tools made work such as farming and building easier. Writing let people keep records, such as how much grain was stored."
+      ],
+      [
+        "Laws and religion",
+        "Laws set rules for how people should behave. Religions shared beliefs and rituals that could bring people together."
+      ],
+      [
+        "Social classes",
+        "People were often divided into groups with different levels of power and wealth, such as rulers, workers and farmers."
+      ]
+    ],
+    "remember": "Tools, writing, laws, religions and classes helped early societies organise many people.",
+    "a": {
+      "q": "A ruler in an early city has scribes record how much grain each farmer hands over. Which feature does this show?",
+      "opts": [
+        "Writing used to keep records",
+        "Laws used to set punishments",
+        "Religion used to share beliefs",
+        "Tools used to ease farm work"
+      ],
+      "why": "Scribes noting down amounts of grain are using writing to keep records. Laws set rules for behaviour, and this scene is about recording, not about rules.",
+      "clue": "What are the scribes doing with the grain amounts?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In the city of Kalu, a council announces that anyone who steals from a neighbour must repay double. How does this help the city to organise its many people?",
+      "opts": [
+        "It sets shared rules for how people should behave",
+        "It divides people into groups of different wealth",
+        "It gives people a way to record how much they own",
+        "It makes farming and building work easier to do"
+      ],
+      "why": "A rule about stealing and repayment is a law, and shared rules help many people live together. Social classes sort people by power and wealth, which is a different feature.",
+      "clue": "Which feature of early societies does a punishment for stealing belong to?"
+    }
+  },
+  "his-archaeologists-study-past": {
+    "title": "How archaeologists study the past",
+    "card": [
+      [
+        "Excavate",
+        "to dig a site carefully, layer by layer, and record which layer each find lies in. Layers build up over time, so deeper layers are usually older than the ones above them."
+      ],
+      [
+        "Artefacts",
+        "objects made or used by people, such as tools, pottery and jewellery. Studying them shows how people lived."
+      ],
+      [
+        "Carbon dating",
+        "a method of finding the age of once-living material, such as bone, wood or charcoal, by measuring the carbon left in it."
+      ],
+      [
+        "Conserve",
+        "to protect sites and objects from damage and decay, so the evidence is kept for people in the future."
+      ]
+    ],
+    "remember": "Archaeologists dig, study and date finds, and conserve them so the evidence lasts.",
+    "a": {
+      "q": "At a dig, an archaeologist finds a coin in a deep layer and a clay pot in a layer above it. What does this suggest?",
+      "opts": [
+        "The coin is likely older than the pot",
+        "The pot is likely older than the coin",
+        "The coin and pot are likely the same age",
+        "The pot was likely made by the coin's owner"
+      ],
+      "why": "Layers build up over time, so deeper layers are usually older. The coin lies below the pot, so it is likely older. Saying the pot is older gets the rule the wrong way round.",
+      "clue": "Which layer was laid down first?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Archaeologists find a charcoal fireplace and a stone axe at a campsite. They want to know how old the camp is. Which step helps most?",
+      "opts": [
+        "Carbon dating the charcoal",
+        "Carbon dating the stone axe",
+        "Conserving the campsite",
+        "Taking the axe to a museum"
+      ],
+      "why": "Charcoal was once living wood, so carbon dating can measure its age. Stone was never alive, so it cannot be carbon dated, and conserving or moving finds does not give an age.",
+      "clue": "Carbon dating needs material that was once alive."
+    }
+  },
+  "his-end-western-roman-empire": {
+    "title": "The end of the Western Roman Empire",
+    "card": [
+      "In the later 300s CE the Roman Empire was split into a western half and an eastern half, each with its own emperor. The western half was ruled from Italy and the eastern half from Constantinople.",
+      [
+        "Western Empire",
+        "it ended in 476 CE, when a Germanic general, Odoacer, removed the last western emperor. Its lands in western Europe were then ruled by new kingdoms."
+      ],
+      [
+        "Eastern (Byzantine) Empire",
+        "it kept going for almost 1000 more years. It ended in 1453 CE, when the Ottomans captured Constantinople."
+      ],
+      "Much of Rome's world did not vanish. Roman law shaped later legal systems, Latin grew into languages such as Italian, French and Spanish, and Christianity stayed strong."
+    ],
+    "remember": "Only the western half fell in 476 CE. The eastern half lasted to 1453, and Roman law, language and religion carried on.",
+    "a": {
+      "q": "Which statement about the Roman Empire is correct?",
+      "opts": [
+        "The west ended in 476 CE and the east lasted to 1453",
+        "The east ended in 476 CE and the west lasted to 1453",
+        "Both halves ended in 476 CE, when Odoacer took power",
+        "Both halves lasted to 1453, when the Ottomans won"
+      ],
+      "why": "The western half ended in 476 CE, but the eastern half lasted until the Ottomans captured Constantinople in 1453. The tempting option that says both halves ended in 476 CE treats the whole empire as one, but only the western half fell then.",
+      "clue": "The empire had two halves, and they ended at different times."
+    },
+    "b": {
+      "d": 3,
+      "q": "A student says, \"When Rome fell in 476 CE, everything Roman disappeared from Europe.\" Which reply is best?",
+      "opts": [
+        "Roman law, Latin and Christianity carried on after 476 CE",
+        "Only the Eastern Empire ended in 476 CE, not the Western",
+        "Latin disappeared in 476 CE, but Roman law carried on",
+        "Roman rule ended in the east in 476 CE, but not the west"
+      ],
+      "why": "Roman law shaped later legal systems, Latin grew into several languages, and Christianity stayed strong. Only the western empire's rule ended in 476 CE, so the claim that everything vanished is wrong. The option saying Latin disappeared is tempting, but Latin lived on in languages such as Italian and French.",
+      "clue": "Think about what carried on after the western emperor was removed."
+    }
+  },
+  "his-spread-world-religions": {
+    "title": "The spread of world religions",
+    "card": [
+      "Between 600 and 1750 CE, Christianity, Islam and Buddhism spread across Asia, Africa and Europe. Where they took hold, they shaped laws and ways of life, such as rules on marriage, food and holy days.",
+      [
+        "Trade",
+        "Merchants carried their faith along trade routes and shared it with the people they met. Islam reached parts of Southeast Asia this way."
+      ],
+      [
+        "Conquest",
+        "Armies and rulers brought new lands under their control, and their religion often came with them. Islam spread widely across North Africa and Western Asia after 632 CE."
+      ],
+      [
+        "Missionaries",
+        "Missionaries are people who travel to teach their religion. Buddhist monks carried Buddhism along the Silk Roads, and Christian missionaries travelled to many lands."
+      ]
+    ],
+    "remember": "Religions spread by trade, conquest and missionaries, and they shaped laws and ways of life.",
+    "a": {
+      "q": "Which of these is an example of a religion spreading through missionaries?",
+      "opts": [
+        "Monks travel to a distant land to teach Buddhism",
+        "Merchants share their faith while selling silk",
+        "An army takes a city and its ruler changes religion",
+        "A family moves to a nearby town for farm work"
+      ],
+      "why": "Missionaries are people who travel in order to teach their religion, as the monks did. Merchants spread ideas while trading, so that is the spread through trade, not missionaries.",
+      "clue": "Look for people whose main purpose in travelling is to teach."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1300 CE, a merchant sails from Arabia to a port in Southeast Asia. He sells cloth and talks about his Muslim faith with local people, and some of them later convert. How did Islam spread here?",
+      "opts": [
+        "Through trade, as a merchant shared his faith",
+        "Through conquest, as an army took the port",
+        "Through missionaries, as he travelled to teach",
+        "Through law, as a ruler forced everyone to change"
+      ],
+      "why": "The merchant came to sell cloth and shared his faith while doing so, so this is spread through trade. No army or ruler was involved, and his main aim was not teaching, so he was not a missionary.",
+      "clue": "Ask why the man travelled and whether any army was involved."
+    }
+  },
+  "his-social-structures-pre-modern": {
+    "title": "Social structures in the pre-modern world",
+    "card": [
+      "Most pre-modern societies were ranked. People belonged to groups, and each group had a different level of power, wealth and respect.",
+      ["Top", "Rulers and nobles sat at the top. They held most of the land, power and wealth."],
+      [
+        "Bottom",
+        "Peasants, who farmed the land, and enslaved people, who were forced to work and owned by others, sat at the bottom. They had little power."
+      ],
+      "Your place usually came from the family you were born into, not from your work or savings. Few people could move up or down. In medieval Europe, a peasant's child usually stayed a peasant."
+    ],
+    "remember": "Pre-modern societies were ranked, and most people stayed in the place they were born into.",
+    "a": {
+      "q": "Tomas, a peasant's son in medieval Europe, works hard and saves some money. Why does he most likely stay a peasant?",
+      "opts": [
+        "His rank came mainly from the family he was born into",
+        "His rank came mainly from the money he had saved up",
+        "His rank came mainly from how hard he worked each day",
+        "His rank came mainly from a vote by people in his village"
+      ],
+      "why": "In most pre-modern societies, a person's place usually came from the family they were born into, so few could move up. Hard work or savings rarely changed that, which is why Tomas most likely stays a peasant like his parents.",
+      "clue": "Think about what was fixed for Tomas before he did any work."
+    },
+    "b": {
+      "d": 2,
+      "q": "In a medieval society, Aldric is a lord who owns a large estate. Brida farms a small plot on his land. Where did each most likely sit in the ranking?",
+      "opts": [
+        "Aldric near the top, Brida near the bottom",
+        "Aldric near the bottom, Brida near the top",
+        "Both near the top, as both held land",
+        "Both in the middle, as ranks were equal"
+      ],
+      "why": "Nobles such as lords held most land and power, so Aldric sat near the top. Peasants such as Brida farmed the land and had little power. Brida using land did not make her a noble.",
+      "clue": "Who held the land and power, and who worked it?"
+    }
+  },
+  "his-deep-time-oldest-continuous": {
+    "title": "Deep Time and continuous cultures",
+    "card": [
+      "Deep Time means the very long span of time before written records, when people were already living in Australia. For Aboriginal and Torres Strait Islander Peoples, it covers tens of thousands of years.",
+      "Aboriginal and Torres Strait Islander Peoples have lived in Australia for that whole span. They are the First Peoples of this continent.",
+      "A continuous culture is one that has been passed on from generation to generation without a break. Aboriginal and Torres Strait Islander cultures are the world's oldest continuous cultures.",
+      "Many cultures around the world are very old. What sets these cultures apart is the length of time they have carried on, while also changing and adapting."
+    ],
+    "remember": "Deep Time is tens of thousands of years, and these are the world's oldest continuous cultures.",
+    "a": {
+      "q": "What does it mean to call a culture continuous?",
+      "opts": [
+        "It has been passed on through generations without a break",
+        "It has stayed exactly the same since it began",
+        "It has been written down in books from the start",
+        "It began when other cultures first made contact"
+      ],
+      "why": "Continuous means the culture has been handed on from one generation to the next without a break. It does not mean it never changed, because the card says these cultures have also adapted.",
+      "clue": "Think about passing something on from parents to children."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya says Deep Time began when Europeans first wrote about Australia. Why is she wrong?",
+      "opts": [
+        "It covers tens of thousands of years before written records",
+        "It covers only the few hundred years since written records",
+        "It covers the time of the dinosaurs, before any people",
+        "It covers a few thousand years before written records"
+      ],
+      "why": "Deep Time is the very long span before written records, tens of thousands of years, and Aboriginal and Torres Strait Islander Peoples lived in Australia throughout it. Saying it covers only a few thousand years is tempting but far too short, and starting it at European writing ignores most of human life here.",
+      "clue": "Were people living here before anyone wrote records, and for how long?"
+    }
+  },
+  "his-creation-stories-country": {
+    "title": "Creation stories and Country",
+    "card": [
+      "Country means the land, waters, sky and living things that an Aboriginal or Torres Strait Islander group is connected to. It also takes in the group's spiritual ties and duties to that place.",
+      "Creation stories tell how Country was shaped, how people came to be and where law comes from. Law here means the rules for how to live and how to care for Country.",
+      "The Kulin Nations of central Victoria tell of Bunjil, a creator ancestor who often takes the form of a wedge-tailed eagle. In their stories, Bunjil shaped the land and gave the people their law.",
+      "The stories are passed on through story, song, dance and art. Each group's stories belong to its own Country, and Elders still teach them to young people today."
+    ],
+    "remember": "Creation stories are living knowledge of Country, people and law, carried in story, song, dance and art.",
+    "a": {
+      "q": "Which statement about creation stories, such as the Kulin Nations' stories of Bunjil, is correct?",
+      "opts": [
+        "They explain how Country, people and law came to be",
+        "They are the same for every group across Australia",
+        "They belong to the past and are no longer taught",
+        "They are told only to entertain young children"
+      ],
+      "why": "Creation stories carry knowledge of how Country, people and law came to be. They are not the same everywhere, because each group's stories belong to its own Country, and Elders still teach them today.",
+      "clue": "Think about what the stories teach, and whose they are."
+    },
+    "b": {
+      "d": 2,
+      "q": "A Year 8 class visits an art centre, where an Aboriginal artist is painting a creation story from her Country. What is the painting most likely doing?",
+      "opts": [
+        "Passing on knowledge of Country and law through art",
+        "Inventing a new story to explain the shape of the land",
+        "Keeping a record of a story that is no longer told",
+        "Decorating the walls, as the story has no other use"
+      ],
+      "why": "Art is one of the ways creation stories pass on knowledge of Country and law, along with story, song and dance. The story is not new and not finished: it belongs to her Country and is still taught today.",
+      "clue": "Think about how these stories reach each new generation."
+    }
+  },
+  "his-living-through-environmental-change": {
+    "title": "Living through environmental change",
+    "card": [
+      "The coldest part of the last ice age was about 20,000 years ago. After that the climate warmed, ice melted and sea levels rose until about 7,000 years ago.",
+      "Rising seas flooded low land. Tasmania was cut off from the mainland, and the Torres Strait Islands formed from high ground on land that had once joined Australia to New Guinea.",
+      "As the climate changed, many inland lakes dried up. Megafauna, very large animals such as giant kangaroos, had mostly died out much earlier, tens of thousands of years before the seas rose.",
+      "Aboriginal and Torres Strait Islander Peoples lived through these changes. They adapted how and where they lived, using new food sources and moving to new places."
+    ],
+    "remember": "Warming and rising seas reshaped the land, and people adapted how and where they lived.",
+    "a": {
+      "q": "What happened to the sea as the last ice age ended?",
+      "opts": [
+        "Sea levels rose and cut Tasmania off from the mainland",
+        "Sea levels fell and joined Tasmania to the mainland",
+        "Sea levels rose and joined New Guinea to Australia",
+        "Sea levels stayed the same while inland lakes filled"
+      ],
+      "why": "As the climate warmed, ice melted and the sea rose, flooding the low land between Tasmania and the mainland. The option saying the sea joined New Guinea to Australia has it backwards: rising seas flooded the land between them, leaving only the Torres Strait Islands above water.",
+      "clue": "Think about what warming does to ice, and where that water goes."
+    },
+    "b": {
+      "d": 3,
+      "q": "People lived beside an inland lake that slowly dried up as the climate changed. Which response best fits what people did in times like this?",
+      "opts": [
+        "They moved to other places and used different food sources",
+        "They hunted megafauna in place of food from the lake",
+        "They left the continent, because all of Australia dried out",
+        "They stayed on the dry shore and kept their old way of life"
+      ],
+      "why": "When a place changed, people adapted by moving and finding other foods. Hunting megafauna is tempting, but most megafauna had died out tens of thousands of years before this time, so they were not there to hunt.",
+      "clue": "Once the water was gone, what would people need to find?"
+    }
+  },
+  "his-changing-evidence-about-past": {
+    "title": "Changing evidence about the past",
+    "card": [
+      "Historians write about the past using evidence, such as burials, tools and dating tests. New evidence can change what they know.",
+      "Ancient burials at Lake Mungo in New South Wales showed that people lived in Australia tens of thousands of years ago.",
+      "Dating at Madjedbebe, in the Northern Territory, pushed the known age of human life in Australia back even further.",
+      "New finds can mean historians revise their accounts. They write about the past with the best evidence they have, and they update their accounts when better evidence appears."
+    ],
+    "remember": "New finds can push back dates, so historians may update their accounts.",
+    "a": {
+      "q": "Why have historians changed their writing about when people first lived in Australia?",
+      "opts": [
+        "New finds and dating gave older evidence of human life",
+        "Older books were lost, so the dates had to be guessed",
+        "People moved to Australia later than first thought",
+        "Historians prefer to change their accounts every few years"
+      ],
+      "why": "Finds such as Lake Mungo and dating at Madjedbebe gave older evidence, so accounts were revised. The option about later arrival is wrong because the evidence pushed the dates back, not forward.",
+      "clue": "Think about what the new evidence showed."
+    },
+    "b": {
+      "d": 2,
+      "q": "A museum guide says, \"Our display about early life in Australia was rewritten after a new dating result.\" What does this show about history?",
+      "opts": [
+        "Accounts of the past can change when new evidence appears",
+        "Earlier historians were careless, so their work is useless",
+        "The past itself changed when the dating result came out",
+        "Dating results are always final and can never be revised"
+      ],
+      "why": "Historians can revise accounts when better evidence arrives. The past did not change. Only what we know about it did.",
+      "clue": "What changed: the past, or what historians know?"
+    }
+  },
+  "his-trade-networks-technologies": {
+    "title": "Trade networks and technologies",
+    "card": [
+      "Aboriginal groups traded goods over long distances. Ochre (coloured earth used for painting and ceremony), stone axe heads and shells passed from group to group along trade routes, across many Countries.",
+      "Axe heads made from stone quarried at Mount William, on Wurundjeri Country north of Melbourne, have been found hundreds of kilometres away. Goods found far from their source are evidence of trade.",
+      "A ground-edge axe has a stone head whose edge was ground smooth and sharp against a rougher stone. A ground edge is stronger than a simple flaked edge and can be sharpened again.",
+      "Pieces of ground-edge axes found in the Kimberley are more than 40,000 years old, among the oldest found anywhere. Comparing tools from different times shows how technology changed."
+    ],
+    "remember": "Goods found far from their source show trade, and tools from different times show technology changing.",
+    "a": {
+      "q": "Archaeologists dig up red ochre at a site far from any place where ochre is found naturally. What does this most likely show?",
+      "opts": [
+        "It reached the site through trade between groups",
+        "It was made at the site from crushed local plants",
+        "It formed in the ground at the site over time",
+        "It shows the group never traded with neighbours"
+      ],
+      "why": "Ochre is a coloured earth, and this site is far from any source of it, so it was most likely passed along a trade route. It cannot have formed at the site or come from plants, because ochre comes from the earth at its source.",
+      "clue": "How could something end up far from where it comes from?"
+    },
+    "b": {
+      "d": 3,
+      "q": "At one site, tools dated to 20,000 years ago are all flaked stone, while tools dated to 3,000 years ago include ground-edge axes. What does this show?",
+      "opts": [
+        "Toolmaking at the site changed over time",
+        "Earlier toolmakers at the site had less skill",
+        "Ground-edge axes were invented first at this site",
+        "Flaked tools stopped being used at the site"
+      ],
+      "why": "A new kind of tool appearing at a later time shows technology changing. A different method is not proof of less skill, and ground-edge axes far older than these have been found in the Kimberley.",
+      "clue": "Compare the tools from the two dates."
+    }
+  },
+  "his-hatshepsut-vic": {
+    "title": "Hatshepsut",
+    "card": [
+      "Hatshepsut was a woman who ruled Egypt as pharaoh for about 20 years, around 1479 to 1458 BCE. She first ruled for her young stepson, Thutmose III, then took the title of pharaoh herself.",
+      "She sent a trade expedition by ship to Punt, a land probably on the southern Red Sea coast. It returned with goods such as incense, myrrh trees, ebony and gold.",
+      "She built and restored many temples. The best known is her mortuary temple at Deir el-Bahari, which shows the Punt expedition on its walls.",
+      "Later, many of her statues were broken and her name was chiselled off monuments. Historians think later rulers tried to erase her from the record, but they did not fully succeed."
+    ],
+    "remember": "Hatshepsut ruled as pharaoh, traded with Punt and built temples, yet later rulers tried to erase her name.",
+    "a": {
+      "q": "What was the main result of Hatshepsut's expedition to Punt?",
+      "opts": [
+        "It brought back goods such as incense and ebony",
+        "It added Punt to Egypt as a new province",
+        "It ended a war between Egypt and Punt",
+        "It found the source of the Nile river"
+      ],
+      "why": "The expedition was a trade mission, and it returned with goods such as incense, myrrh trees, ebony and gold. It was not a war or a conquest, so the option about adding Punt as a province is wrong.",
+      "clue": "Recall what kind of mission the card says the ships went on."
+    },
+    "b": {
+      "d": 3,
+      "q": "Archaeologists find a statue of Hatshepsut that was smashed, and her name chiselled off a wall. What does this best suggest?",
+      "opts": [
+        "Later rulers tried to erase her from Egypt's records",
+        "Hatshepsut was never a real ruler of Egypt",
+        "Her temples were built by a different pharaoh",
+        "Egyptians had no records of any women rulers"
+      ],
+      "why": "Damage to her statues and name suggests later rulers tried to erase her. It does not show she was unreal: the erasing was not complete, and her temples still record her rule, so the option saying she never ruled is tempting but wrong.",
+      "clue": "Someone chose to remove her name. Why remove the name of someone who did not exist?"
+    }
+  },
+  "his-egypt-s-legacy": {
+    "title": "Egypt's legacy",
+    "card": [
+      [
+        "Writing",
+        "Egyptians used hieroglyphs, a script of picture signs, on temple walls, monuments and papyrus. Scribes also used a faster, simpler script for everyday records."
+      ],
+      [
+        "Monuments",
+        "Pyramids, temples and statues still stand today. They show Egyptian skill in building and tell us about their beliefs and rulers."
+      ],
+      [
+        "Maths and medicine",
+        "Egyptians used mathematics to measure farm land and plan buildings. Their doctors wrote medical texts on papyrus and treated wounds and illnesses."
+      ],
+      [
+        "Rosetta Stone",
+        "For centuries no one could read hieroglyphs. The Rosetta Stone has the same text in three scripts, including Greek, which scholars could read. In the 1820s Jean-François Champollion used it to decode hieroglyphs, opening Egypt's records to historians."
+      ]
+    ],
+    "remember": "Egypt's writing, monuments, maths and medicine left evidence, and the Rosetta Stone let historians read it.",
+    "a": {
+      "q": "Why was the Rosetta Stone so useful for decoding hieroglyphs?",
+      "opts": [
+        "It repeated one text in Greek, a known language",
+        "It was the only hieroglyphic text ever written",
+        "It was a word list of hieroglyphs made by scribes",
+        "Its hieroglyphs were simpler than those on temples"
+      ],
+      "why": "The stone repeats one text in three scripts, and Greek was already understood. Matching the Greek to the hieroglyphs gave a way to work out the signs. It was not the only hieroglyphic text, as hieroglyphs cover many monuments and papyri.",
+      "clue": "How could a language you know help unlock one you do not?"
+    },
+    "b": {
+      "d": 2,
+      "q": "A historian in the 1700s could not read the carvings on an Egyptian temple. A historian today can. What changed?",
+      "opts": [
+        "Scholars worked out how to decode hieroglyphs",
+        "The carvings were copied into modern letters",
+        "Temples were rebuilt with Greek writing added",
+        "A dictionary of hieroglyphs was found in a tomb"
+      ],
+      "why": "In the 1820s Champollion used the Rosetta Stone to decode hieroglyphs, so historians could read the old carvings. The carvings were not copied into modern letters: historians read the same ancient signs today.",
+      "clue": "Think about what had to happen before anyone could read the old signs."
+    }
+  },
+  "his-geography-city-states": {
+    "title": "Geography and the city-states",
+    "card": [
+      "Greece is a land of steep mountains and hundreds of islands. Mountains split the mainland into separate valleys, and stretches of sea separated the islands.",
+      "Each valley, plain or island grew its own community with its own leaders and laws. These were city-states, called poleis, such as Athens and Sparta.",
+      "A city-state was a city and the farmland around it, and it ruled itself. Greeks shared a language and religion, but there was no single Greek country.",
+      "Little of the land was good for farming. As populations grew, many Greeks traded by sea for food and goods, and some founded colonies around the Mediterranean and Black Sea."
+    ],
+    "remember": "Greece's divided land gave it many self-ruling city-states, and poor farmland pushed Greeks to trade and found colonies.",
+    "a": {
+      "q": "Why did Greece develop many independent city-states rather than one united kingdom?",
+      "opts": [
+        "Mountains and sea kept communities apart",
+        "Greeks spoke many unrelated languages",
+        "Greek farmland was too rich to share",
+        "Persian rulers divided the land into regions"
+      ],
+      "why": "Mountains split the mainland and the sea separated the islands, so each community grew its own leaders and laws. Language is wrong because Greeks shared a language, so it did not keep them apart.",
+      "clue": "Think about how the land and water shaped travel."
+    },
+    "b": {
+      "d": 3,
+      "q": "Around 700 BCE, the city-state of Corinth has a growing population but little good farmland. What is a likely response from its people?",
+      "opts": [
+        "Trade by sea and found colonies overseas",
+        "Join Athens and Sparta into one country",
+        "Stop using ships and farm the mountains",
+        "Give up their own laws and leaders"
+      ],
+      "why": "With poor farmland and more people to feed, Greeks sought food and goods by trade, and some founded colonies abroad. Joining into one country is tempting but wrong, because each city-state ruled itself and there was no single Greek country.",
+      "clue": "Poor farmland meant they had to look beyond their own land."
+    }
+  },
+  "his-athenian-democracy": {
+    "title": "Democracy in Athens",
+    "card": [
+      "Democracy means rule by the people. Athens was a democracy about 2,500 years ago, in the 5th century BCE.",
+      "Citizens met in a body called the Assembly. They voted directly on laws and on matters such as war. They did not elect people to vote for them.",
+      "Only free adult men born to Athenian parents were citizens.",
+      "Women, enslaved people and foreigners were not citizens, so they had no vote. Most people living in Athens could not take part."
+    ],
+    "remember": "Athenian democracy gave citizens a direct vote, but only a small group counted as citizens.",
+    "a": {
+      "q": "Who was allowed to vote on laws in the Assembly in Athens?",
+      "opts": [
+        "A free man whose parents were both Athenian",
+        "A free woman whose parents were both Athenian",
+        "A foreign man who had lived in Athens for years",
+        "A man who was enslaved and worked in Athens"
+      ],
+      "why": "Only free adult men born to Athenian parents were citizens, and only citizens could vote. The foreign man lived in Athens, but living there did not make him a citizen.",
+      "clue": "Think about who counted as a citizen."
+    },
+    "b": {
+      "d": 3,
+      "q": "Why do historians say that democracy in Athens was limited?",
+      "opts": [
+        "Most people living in Athens were not citizens",
+        "Citizens elected others to vote on laws for them",
+        "Women could vote, but enslaved people could not",
+        "Citizens could vote only on matters of war"
+      ],
+      "why": "Women, enslaved people and foreigners were not citizens, so most people in Athens had no vote. Women were left out too, so the option saying they could vote is wrong. Citizens voted directly on laws as well as war, so the other two options did not happen.",
+      "clue": "Recall which groups were not citizens."
+    }
+  },
+  "his-life-sparta-vic": {
+    "title": "Life in Sparta",
+    "card": [
+      "Sparta was a Greek city-state that built its society around war. Its citizens were full-time soldiers, so they did not farm or do trade themselves.",
+      [
+        "Boys",
+        "Spartan boys left home at about age seven to join a state training system called the agoge. They learned to fight, to endure hardship and to obey."
+      ],
+      [
+        "Helots",
+        "Helots were people held in servitude by the Spartan state. They farmed the land and gave much of the crop to Spartan citizens, which freed the citizens to train for war."
+      ],
+      [
+        "Women",
+        "Spartan women had more freedom than Athenian women. They could own and manage property, and they took part in exercise and training."
+      ]
+    ],
+    "remember": "Sparta was built for war: boys trained from seven, helots farmed, and women had more freedom than in Athens.",
+    "a": {
+      "q": "Why could Spartan citizens spend their lives training for war?",
+      "opts": [
+        "Helots farmed the land and supplied their food",
+        "Spartan women ran all trade and farming alone",
+        "Foreign traders paid Sparta to do its fighting",
+        "Boys finished their training by the age of seven"
+      ],
+      "why": "Helots did the farming and gave much of the crop to citizens, so citizens had time to train. Boys began training at about seven, but that does not explain how adult citizens were freed from farm work.",
+      "clue": "Think about who grew the food."
+    },
+    "b": {
+      "d": 3,
+      "q": "A visitor from Athens in the 400s BCE notices that Spartan women own land and exercise in public. What does this show?",
+      "opts": [
+        "Spartan women had more freedom than Athenian women",
+        "Spartan women were trained in the agoge as boys were",
+        "Spartan women were helots who worked on the farms",
+        "Spartan women were treated the same as Athenian women"
+      ],
+      "why": "Spartan women could own property and take part in exercise, which Athenian women usually could not. The agoge was the training system for boys, so the option saying women trained in it is wrong, even though Spartan women did exercise.",
+      "clue": "Think about what Athenian women could usually do."
+    }
+  },
+  "his-persian-peloponnesian-wars": {
+    "title": "Persian and Peloponnesian Wars",
+    "card": [
+      [
+        "Persian Wars",
+        "In the early 400s BCE, the Persian Empire invaded Greece. Many Greek city-states joined forces to fight it, even though they were often rivals."
+      ],
+      [
+        "Main battles",
+        "The Athenians won at Marathon in 490 BCE. At the sea battle of Salamis in 480 BCE, the Greek fleet defeated the Persian navy. The Greeks won the war."
+      ],
+      [
+        "Peloponnesian War",
+        "After Persia was beaten, Athens and Sparta became rivals. Each led a group of allied city-states, and they fought each other for many years from 431 BCE."
+      ],
+      [
+        "Result",
+        "Sparta won the Peloponnesian War in 404 BCE. Athens was weakened by the long fighting, and the Greeks went from fighting a common enemy to fighting each other."
+      ]
+    ],
+    "remember": "Greeks united against Persia and won. Then Athens and Sparta fought each other, and Sparta won.",
+    "a": {
+      "q": "Which statement best describes how the two wars were different?",
+      "opts": [
+        "Greeks fought Persia together, then fought each other",
+        "Greeks fought each other first, then joined against Persia",
+        "Greeks fought Persia alone, with Athens against Sparta",
+        "Greeks fought at sea against Persia and on land after"
+      ],
+      "why": "In the Persian Wars many city-states joined forces against an outside enemy. In the Peloponnesian War, Athens and Sparta led groups of Greek states against each other. The second option has the order the wrong way round, because Persia came first.",
+      "clue": "Who was the enemy in each war, and which came first?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Kallis is a Greek sailor in 480 BCE. He fights at Salamis, where the Greek fleet defeats the enemy navy. Who is the enemy?",
+      "opts": ["The Persians", "The Spartans", "The Athenians", "The Peloponnesians"],
+      "why": "Salamis was a sea battle in the Persian Wars, where the Greek fleet defeated the Persian navy. Sparta and Athens were Greek, and they fought each other later, in the Peloponnesian War.",
+      "clue": "Salamis was part of the earlier war."
+    }
+  },
+  "his-greek-gods-legacy": {
+    "title": "Greek gods and legacy",
+    "card": [
+      "Ancient Greeks were polytheistic: they worshipped many gods. Zeus was the king of the gods and ruled the sky. Athena was the goddess of wisdom and war, and Greeks said Athens was named after her.",
+      "Greeks honoured their gods with temples, offerings and festivals. The Parthenon in Athens was a temple to Athena.",
+      "The Olympic Games began as a religious festival to honour Zeus. Athletes from many Greek city-states competed at Olympia, and a truce protected people travelling to and from the Games.",
+      "Greece also left ideas that are still used. Philosophers such as Socrates and Plato asked how people should live and be governed. Greek theatre created tragedy and comedy. Many countries today use democracy, an idea first tried in Greece."
+    ],
+    "remember": "Greeks honoured many gods at temples and festivals, and their ideas in philosophy, theatre and democracy are still used today.",
+    "a": {
+      "q": "Why were the Olympic Games held in ancient Greece?",
+      "opts": [
+        "To honour Zeus, the king of the gods",
+        "To honour Athena, the goddess of Athens",
+        "To train soldiers for the army of Sparta",
+        "To pass laws for all the Greek city-states"
+      ],
+      "why": "The Games began as a religious festival for Zeus, with athletes from many city-states. Athena was honoured at the Parthenon in Athens, but the Olympic Games were held for Zeus.",
+      "clue": "Think about which god ruled over all the others."
+    },
+    "b": {
+      "d": 3,
+      "q": "A Melbourne school stages a tragedy, debates a question Plato asked, and holds a class vote. What does this show?",
+      "opts": [
+        "Greek ideas in theatre, philosophy and democracy live on",
+        "These ideas began in Rome and only later reached Greece",
+        "Greek ideas were lost once the Greek city-states fell",
+        "The Olympic Games are the only Greek idea that lasted"
+      ],
+      "why": "Tragedy comes from Greek theatre, Plato was a Greek philosopher, and voting reflects democracy, first tried in Greece. The Rome option is tempting, but these ideas began in Greece, not Rome.",
+      "clue": "Match each activity to an area of Greek life."
+    }
+  },
+  "his-roman-society-vic": {
+    "title": "Roman society",
+    "card": [
+      [
+        "Patricians",
+        "a small group of old, wealthy families. A Roman was a patrician by birth into one of these families, and in the early republic they held most of the top jobs in government."
+      ],
+      [
+        "Plebeians",
+        "most free Roman citizens, from poor farmers to rich traders. Getting rich did not make a plebeian a patrician, but over time plebeians won the right to hold the top jobs too."
+      ],
+      [
+        "Enslaved people",
+        "people owned by others, many of them captured in war. The law treated them as property, and they worked on farms, in mines and in homes."
+      ],
+      [
+        "Paterfamilias",
+        "the father at the head of a Roman family. The law gave him power over his household, including his children and its enslaved people. Grown sons usually stayed under his power for as long as he lived."
+      ]
+    ],
+    "remember": "Patricians, plebeians and enslaved people had very different rights, and the paterfamilias held legal power over his household.",
+    "a": {
+      "q": "Gaius was born into an ordinary free Roman family. As an adult he grows very rich from trade. Which group does he belong to?",
+      "opts": [
+        "Plebeians, as wealth did not change his group",
+        "Patricians, because his new wealth moves him up",
+        "Enslaved people, because he works for a living",
+        "No group, because traders sat outside all three"
+      ],
+      "why": "Patricians were patricians by birth into the old families, so Gaius stays a plebeian however rich he gets. The patrician option is tempting, but wealth alone did not change a Roman's group.",
+      "clue": "Did money or birth decide a Roman's group?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Marcus is 30, married and runs his own farm. His father, Titus, is still alive. Under Roman law, who holds legal power over Marcus?",
+      "opts": [
+        "Titus, as the head of the family while he lives",
+        "Marcus himself, as he is an adult with a farm",
+        "Marcus's wife, as she runs their household",
+        "The Senate, as it ruled over every Roman family"
+      ],
+      "why": "The paterfamilias held power over his household, and grown sons usually stayed under it for as long as he lived. Being an adult with a farm and a wife did not free Marcus while his father was alive.",
+      "clue": "Does a son's age end his father's power in Roman law?"
+    }
+  },
+  "his-roman-army-expansion": {
+    "title": "The Roman army and expansion",
+    "card": [
+      "Rome's army was made up of legions. A legion was a unit of several thousand soldiers, mostly citizens who were paid, trained and drilled to fight in disciplined groups.",
+      "Over many centuries the legions conquered lands around the Mediterranean Sea. They took territory in places such as Gaul, Spain, Greece, Egypt and North Africa.",
+      "Conquest was only the first step. Roman soldiers built roads and forts across new lands, so troops, messages and traders could travel quickly and rebellions could be met.",
+      "Roman law also spread to conquered peoples. A shared set of rules helped Rome govern distant provinces and hold the empire together."
+    ],
+    "remember": "Trained legions won the land. Roads, forts and Roman law helped Rome keep it.",
+    "a": {
+      "q": "Why were the roads that Roman soldiers built useful to Rome's rulers?",
+      "opts": [
+        "They let troops and messages move quickly across the empire",
+        "They stopped conquered peoples from using Roman law",
+        "They were only built so traders could avoid Roman forts",
+        "They replaced the need for any soldiers in the provinces"
+      ],
+      "why": "Good roads let Rome send troops to trouble spots and carry messages across a large empire. The roads did not replace soldiers: legions and forts were still needed to hold the provinces.",
+      "clue": "Think about how far away the edges of the empire were."
+    },
+    "b": {
+      "d": 3,
+      "q": "Rome's legions defeat a tribe in a distant region. Which action would best help Rome keep control of that region for the long term?",
+      "opts": [
+        "Building a fort and a road, and applying Roman law",
+        "Withdrawing the legions straight after the victory",
+        "Leaving the tribe with no rules or laws to follow",
+        "Asking the tribe to build its own army to defend itself"
+      ],
+      "why": "Forts and roads let Rome station troops and respond quickly, while Roman law gave a shared set of rules for governing. Winning a battle alone does not hold land if the army leaves and no system is put in place.",
+      "clue": "Winning the fight was only the first step."
+    }
+  },
+  "his-julius-caesar": {
+    "title": "Julius Caesar",
+    "card": [
+      "Julius Caesar was a Roman general. In the 50s BCE he won great victories in Gaul, an area that is now mostly France. These wins made him famous, rich and powerful.",
+      "Caesar's rivals in Rome ordered him to give up his army. In 49 BCE he led his soldiers across the Rubicon, a small river that marked the edge of Italy. This started a civil war.",
+      "Caesar won the war and took power in Rome. He was made dictator, a ruler with very great power. Some senators feared he wanted to be king, which Romans hated.",
+      "In 44 BCE a group of senators murdered Caesar at a meeting of the Senate. They said they were protecting the republic."
+    ],
+    "remember": "Caesar won fame in Gaul, crossed the Rubicon to seize power, and was murdered in 44 BCE by senators who feared he would be king.",
+    "a": {
+      "q": "Why did a group of senators murder Julius Caesar in 44 BCE?",
+      "opts": [
+        "They feared he wanted to make himself king",
+        "They wanted to punish him for losing in Gaul",
+        "They were angry that he had given up his army",
+        "They wanted to make his rival the first emperor"
+      ],
+      "why": "The senators feared Caesar held too much power and wanted to be king, and they said they were protecting the republic. He had won in Gaul, not lost, and he had kept his army rather than given it up.",
+      "clue": "Think about what Romans felt about kings."
+    },
+    "b": {
+      "d": 3,
+      "q": "Why was Caesar's crossing of the Rubicon with his army in 49 BCE such a serious act?",
+      "opts": [
+        "He led his army against Rome's leaders, starting a war",
+        "He invaded Gaul, which began the war against its tribes",
+        "He ended the republic by crowning himself king that day",
+        "He broke a peace treaty with a foreign enemy of Rome"
+      ],
+      "why": "Caesar had been ordered to give up his army, and he led it across the border of Italy anyway. That set him against Rome's own leaders and began a civil war. The Gaul campaigns came earlier, and he was not crowned king.",
+      "clue": "Who was Caesar's army marching against?"
+    }
+  },
+  "his-feudal-system": {
+    "title": "Feudalism",
+    "card": [
+      "Feudalism was the system that organised land and power in much of medieval Europe. Land was the main source of wealth, so whoever held it held power.",
+      "The king granted large areas of land to powerful lords. In return, the lords promised loyalty and had to supply soldiers when the king needed them.",
+      "Lords then gave parts of their land to knights, who promised to fight for them. Each person owed duties to the one who gave them land.",
+      "At the bottom were the peasants. They worked the lord's land and in return he gave them protection. They did not hold power in the system."
+    ],
+    "remember": "Land went from king to lords to knights in return for loyalty and service, and peasants worked the lord's land for protection.",
+    "a": {
+      "q": "A king in medieval Europe granted land to a noble. What did the noble give the king in return?",
+      "opts": [
+        "Loyalty and soldiers when needed",
+        "Rent paid each year in coins",
+        "A share of every peasant's harvest",
+        "Money to build the king's churches"
+      ],
+      "why": "Under feudalism the king traded land for the lords' loyalty and for soldiers when he needed them. Rent in coins is tempting, but the grant was paid for with loyalty and military service, not money.",
+      "clue": "The king needed an army as well as people he could trust."
+    },
+    "b": {
+      "d": 2,
+      "q": "Sir Edmund is a knight who was given land by Lord Aldric. Who does Edmund owe service to under feudalism, and what service?",
+      "opts": [
+        "Lord Aldric, by fighting for him",
+        "Lord Aldric, by paying him in coins",
+        "The peasants, by farming their land",
+        "The king, by farming the royal land"
+      ],
+      "why": "Each person owed duties to the one who gave them land, and knights promised to fight for their lord. Paying Lord Aldric in coins names the right person but the wrong kind of service.",
+      "clue": "Who gave Edmund his land, and what did knights promise?"
+    }
+  },
+  "his-church-medieval-life": {
+    "title": "The Church in medieval life",
+    "card": [
+      "In medieval Europe, most people were Catholic. The Catholic Church was part of everyday life from birth to death, with baptisms, weddings and funerals.",
+      "The Church ran many schools and hospitals. Monks and nuns often did this work, and they cared for the sick and taught people to read.",
+      "The Church collected a tithe from its people. A tithe was a tenth of a person's produce or income, paid to support the Church and its priests.",
+      "The Church owned a lot of land and had great influence. Its power sometimes rivalled the king's, so kings and Church leaders could clash."
+    ],
+    "remember": "The Church shaped daily life, ran services, took a tithe and could rival kings.",
+    "a": {
+      "q": "A peasant family in medieval England gives a tenth of their harvest to the local priest. What is this payment called?",
+      "opts": ["A tithe", "A tax paid to the king", "A fee for a hospital stay", "A rent paid to the lord"],
+      "why": "A tithe was a tenth of produce or income paid to the Church. It was not paid to the king, and it was not a fee for a hospital stay, because those were run by the Church as a service.",
+      "clue": "Who received the harvest share, the king or the Church?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In a medieval town, a boy learns to read from monks and a sick neighbour is cared for by nuns. What does this best show about the Church?",
+      "opts": [
+        "It provided services that shaped daily life",
+        "It had no influence outside church services",
+        "It was controlled by the local king",
+        "It only dealt with rich nobles"
+      ],
+      "why": "Schools and hospitals run by monks and nuns show the Church provided services in daily life. It was not limited to church services, because it also taught and cared for people from all kinds of families.",
+      "clue": "Think about what monks and nuns did beyond prayer."
+    }
+  },
+  "his-black-death": {
+    "title": "The Black Death",
+    "card": [
+      "The Black Death was a plague that reached Europe in 1347. It spread quickly through towns and villages, carried by fleas on rats and by people.",
+      "It killed about a third of the people of Europe. Whole villages were left empty and many fields went unworked.",
+      "With so many dead, there were far fewer workers. This was a labour shortage, and landlords needed peasants to farm their land.",
+      "Surviving peasants could ask for better pay and conditions, or leave for a landlord who paid more. Some landlords gave in, because they could not find other workers."
+    ],
+    "remember": "Many died, workers became scarce, and surviving peasants gained power to demand better pay.",
+    "a": {
+      "q": "After the Black Death, why could many surviving peasants ask for higher pay?",
+      "opts": [
+        "Workers were scarce, so landlords needed them",
+        "Landlords had grown richer from the plague",
+        "The king ordered all wages to be raised",
+        "Fewer crops were needed, so work was easier"
+      ],
+      "why": "So many people died that few workers were left, so landlords needed the survivors, and some offered more to keep them. The king did not order a rise: it was the shortage of workers that gave peasants their power.",
+      "clue": "Think about what happens when there are fewer workers than jobs."
+    },
+    "b": {
+      "d": 2,
+      "q": "In 1350, a landlord in a village that lost many people cannot find workers for his fields. What is he most likely to do?",
+      "opts": [
+        "Offer better pay to keep the workers he has",
+        "Cut the pay of the workers who remain",
+        "Wait for the plague to end and workers to return",
+        "Sell his land to the peasants for nothing"
+      ],
+      "why": "With few workers left, offering better pay was his most likely way to keep them, as some landlords did. Cutting pay would risk losing the workers he had, since peasants could leave for a landlord who paid more.",
+      "clue": "He needs workers and there are few of them."
+    }
+  },
+  "his-renaissance-was-vic": {
+    "title": "What the Renaissance was",
+    "card": [
+      "The Renaissance was a time of new interest in the learning of ancient Greece and Rome. The word means rebirth.",
+      "It began in Italy in the 1300s. Many Italian towns had wealthy people who could pay for art and study, and Roman ruins stood all around them.",
+      "Thinkers and artists put human abilities at the centre of their work. They studied people, nature and the world, and they valued what humans could learn and make.",
+      "Artists copied ideas from Greek and Roman art, such as lifelike bodies. They also tried new methods to show people and places as they really look."
+    ],
+    "remember": "The Renaissance was a rebirth of Greek and Roman learning that began in Italy and focused on human abilities.",
+    "a": {
+      "q": "Historians call the Renaissance a rebirth. What was reborn?",
+      "opts": [
+        "Interest in the learning of ancient Greece and Rome",
+        "The rule of the Roman Empire over all of Italy",
+        "The Christian faith, which had nearly died out",
+        "Interest in the castles and knights of the past"
+      ],
+      "why": "Renaissance thinkers and artists turned back to the learning of ancient Greece and Rome. It was not the return of Roman rule: the change came in art and study, not in who governed Italy.",
+      "clue": "Was the change in ideas and learning, or in who ruled?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Sofia is a painter in Italy in the 1400s. She studies Roman statues and paints people with lifelike bodies. Which idea of the Renaissance does her work show?",
+      "opts": [
+        "Interest in ancient art and in showing people as they look",
+        "A turn away from the ancient world toward new subjects",
+        "A belief that art should show heaven, not the real world",
+        "A wish to follow only the art traditions of her own town"
+      ],
+      "why": "Sofia looks back to Roman art and shows human bodies as they really look, which reflects the Renaissance interest in Greek and Roman learning and in people. A turn away from the ancient world is wrong, because she is studying Roman statues.",
+      "clue": "Look at what Sofia studies and what she paints."
+    }
+  },
+  "his-florence-medici": {
+    "title": "Florence and the Medici",
+    "card": [
+      "Florence was a rich city in Italy. Its wealth came from trade and banking, and it was a city-state, a city that governed itself and its nearby land.",
+      "The Medici were a banking family. Over many years they became the most powerful family in Florence and ruled the city, often without holding a title such as king.",
+      "The Medici used their wealth to pay artists and scholars. Paying for art and learning in this way is called patronage.",
+      "Patronage drew talented people to Florence. Their work made the city a centre of Renaissance art."
+    ],
+    "remember": "The Medici used banking wealth to pay artists and scholars, and Florence became a centre of Renaissance art.",
+    "a": {
+      "q": "How did the Medici family help make Florence a centre of Renaissance art?",
+      "opts": [
+        "They paid artists and scholars to work there",
+        "They painted most of the city's great artworks",
+        "They banned artists from working in other cities",
+        "They taught art to every child in Florence"
+      ],
+      "why": "The Medici had wealth from banking and used it to pay artists and scholars. This is patronage. The family did not paint the works themselves, they paid the people who made them.",
+      "clue": "Think about what banking wealth could be spent on."
+    },
+    "b": {
+      "d": 2,
+      "q": "A wealthy banker in Florence pays a sculptor to carve a statue for the city and also pays a scholar to study old books. What is this an example of?",
+      "opts": ["Patronage", "Trade", "City-state rule", "Printing"],
+      "why": "Paying artists and scholars to do their work is patronage, as the Medici did. Trade is buying and selling goods, which is a different idea, even though trade helped make Florence rich.",
+      "clue": "Which word means paying for art and learning?"
+    }
+  },
+  "his-leonardo-michelangelo": {
+    "title": "Leonardo and Michelangelo",
+    "card": [
+      "Leonardo da Vinci (1452 to 1519) was an artist who also studied science. He dissected bodies to learn how they work, and he drew plans for machines such as flying devices.",
+      "Leonardo painted the Mona Lisa. His notebooks show that he treated art, science and invention as linked ways of understanding the world.",
+      "Michelangelo Buonarroti (1475 to 1564) was a sculptor and painter. He carved the marble statue of David in Florence, which shows the human body in great detail.",
+      "Michelangelo also painted the ceiling of the Sistine Chapel in Vatican City, inside Rome. Both men are seen as Renaissance masters because their work showed what human skill could do."
+    ],
+    "remember": "Leonardo joined art with science and invention. Michelangelo is known for the Sistine Chapel ceiling and the statue of David.",
+    "a": {
+      "q": "Which description best fits Leonardo da Vinci's work?",
+      "opts": [
+        "He joined art with science and invention",
+        "He was known mainly for carving marble statues",
+        "He ran a bank that paid for other artists' work",
+        "He invented the printing press used for books"
+      ],
+      "why": "Leonardo painted, but he also studied bodies and designed machines, so his work linked art with science and invention. Carving marble is the best known work of Michelangelo, not Leonardo.",
+      "clue": "Think about his notebooks of bodies and machines."
+    },
+    "b": {
+      "d": 2,
+      "q": "On a school trip to Italy, Ava sees a huge marble statue of a young man in Florence. Later, in Vatican City, she looks up at a famous painted chapel ceiling. Who made both works?",
+      "opts": [
+        "Michelangelo, who carved David and painted a chapel ceiling",
+        "Leonardo, who carved David and painted a chapel ceiling",
+        "Michelangelo, who painted the Mona Lisa and drew machines",
+        "Leonardo, who painted the Mona Lisa and drew machines"
+      ],
+      "why": "The statue is Michelangelo's David, and the ceiling is the Sistine Chapel, which Michelangelo also painted. Leonardo is the one who painted the Mona Lisa and drew machines, so the options that name him for David are wrong.",
+      "clue": "Which man was a sculptor as well as a painter?"
+    }
+  },
+  "his-shoguns-daimyo-samurai": {
+    "title": "Shoguns, daimyo and samurai",
+    "card": [
+      ["Emperor", "respected and honoured, and lived in the capital, but had little real power in feudal Japan."],
+      [
+        "Shogun",
+        "the military leader who actually ruled Japan. He held the most power, and a shogun's family could pass the title on."
+      ],
+      ["Daimyo", "powerful lords who held large areas of land. They ruled their own lands and supported the shogun."],
+      [
+        "Samurai",
+        "warriors who served a daimyo. They fought for their lord and were given a place of high rank in society."
+      ]
+    ],
+    "remember": "The shogun ruled, daimyo held the land, and samurai served the daimyo.",
+    "a": {
+      "q": "Who held the real power to rule Japan in feudal times?",
+      "opts": [
+        "The shogun, the top military leader",
+        "The emperor, who was honoured in the capital",
+        "The daimyo, lords who held large lands",
+        "The samurai, warriors who served lords"
+      ],
+      "why": "The shogun was the military leader who actually ruled Japan. The emperor was honoured but had little real power, which makes him the most tempting wrong answer. Daimyo ruled only their own lands, and samurai served the daimyo.",
+      "clue": "Think about who ruled the whole country, not who was honoured."
+    },
+    "b": {
+      "d": 2,
+      "q": "Lord Takeda held a large area of land in Japan and had warriors who fought for him. What was his role?",
+      "opts": ["He was a daimyo", "He was a shogun", "He was a samurai", "He was an emperor"],
+      "why": "A daimyo was a lord who held land and had samurai serving him. A samurai is wrong because samurai were the warriors, not the lord who held the land.",
+      "clue": "Who holds the land, and who serves him?"
+    }
+  },
+  "his-bushido-samurai-life": {
+    "title": "Bushido and samurai life",
+    "card": [
+      "Samurai were warriors who served a daimyo. They lived by a code of loyalty, honour and self-discipline.",
+      "This code was later called bushido, which means the way of the warrior. It was a set of values more than a written law.",
+      "Loyalty meant faithful service to their lord. Honour meant living in a way that earned respect, and self-discipline meant controlling their own behaviour.",
+      "Samurai did not only train to fight. Many also studied poetry and the tea ceremony, which were seen as part of a well-rounded life."
+    ],
+    "remember": "Samurai life was shaped by the values of bushido, and it included the arts as well as fighting.",
+    "a": {
+      "q": "Which description best fits the code later called bushido?",
+      "opts": [
+        "Values of loyalty, honour and self-discipline",
+        "Rules that let samurai choose their own lord",
+        "Laws that banned samurai from learning the arts",
+        "Orders from the emperor about how to farm rice"
+      ],
+      "why": "Bushido was a set of values about loyalty, honour and self-discipline. It did not ban the arts, because samurai also studied poetry and the tea ceremony.",
+      "clue": "Think about the three values the code was built on."
+    },
+    "b": {
+      "d": 2,
+      "q": "Kenji is a young samurai. Besides sword practice, he spends his evenings writing poems and learning the tea ceremony. What does this show about samurai life?",
+      "opts": [
+        "Samurai often studied the arts as well as fighting",
+        "Samurai often gave up sword training to study the arts",
+        "Samurai often left bushido behind once they took up poetry",
+        "Samurai often studied the arts instead of serving a lord"
+      ],
+      "why": "Many samurai studied poetry and the tea ceremony alongside fighting, and Kenji still practises with his sword. Taking up the arts did not mean leaving bushido behind, because these skills were seen as part of a well-rounded samurai life.",
+      "clue": "Kenji did not stop his sword practice."
+    }
+  },
+  "his-tokugawa-ieyasu-unifies-japan": {
+    "title": "Tokugawa Ieyasu unifies Japan",
+    "card": [
+      "For about a century, Japan's daimyo fought each other in long civil wars. The emperor had little real power to stop them.",
+      "Tokugawa Ieyasu was a powerful daimyo. In 1600 his army won the Battle of Sekigahara against rival daimyo.",
+      "In 1603 the emperor gave Ieyasu the title of shogun. He now led Japan as its military ruler.",
+      "The Tokugawa family kept the title of shogun for more than 250 years. This was a long period of peace."
+    ],
+    "remember": "Victory at Sekigahara in 1600 made Ieyasu shogun in 1603, and Tokugawa rule brought lasting peace.",
+    "a": {
+      "q": "What happened soon after Tokugawa Ieyasu won the Battle of Sekigahara?",
+      "opts": [
+        "He became shogun and started Tokugawa rule",
+        "He gave up power and the emperor ruled alone",
+        "He was defeated and the civil wars went on",
+        "He became emperor and ended the shogun's role"
+      ],
+      "why": "Winning at Sekigahara left Ieyasu the strongest daimyo, and in 1603 he became shogun. The emperor did not take over, because the shogun was the military ruler and the emperor had little real power.",
+      "clue": "Look at what title Ieyasu received in 1603."
+    },
+    "b": {
+      "d": 2,
+      "q": "Why did Tokugawa rule bring a long period of peace after years of civil war?",
+      "opts": [
+        "One shogun now led Japan and his family held power",
+        "The emperor took back control from the daimyo",
+        "The daimyo agreed to fight only in other countries",
+        "Samurai were no longer allowed to serve daimyo"
+      ],
+      "why": "The civil wars happened because daimyo fought each other for power. After Sekigahara, Ieyasu became shogun and his family kept the title for over 250 years, so one ruler led Japan. The emperor still had little real power.",
+      "clue": "Think about who held power after 1603."
+    }
+  },
+  "his-genghis-khan-vic": {
+    "title": "Genghis Khan",
+    "card": [
+      "Before 1206, the Mongols were many separate tribes who lived on the grasslands of Central Asia. The tribes often fought one another.",
+      "A leader called Temujin won over or defeated the other tribes. In 1206 the Mongol chiefs named him Genghis Khan. The exact meaning of this title is uncertain, but it is usually translated as universal ruler.",
+      "Once the tribes were united, he led them in wars of conquest. His armies took land across much of Asia, from northern China towards Central Asia and Persia.",
+      "After his death in 1227, his sons and grandsons kept expanding. The Mongol Empire became the largest land empire the world had seen."
+    ],
+    "remember": "Genghis Khan first united the Mongol tribes, and then led them to conquer much of Asia.",
+    "a": {
+      "q": "What did Genghis Khan do in 1206 that made the later conquests possible?",
+      "opts": [
+        "He united the Mongol tribes under one ruler",
+        "He led his armies to conquer northern China",
+        "He took land as far west as Persia",
+        "He made the Mongol Empire the largest ever seen"
+      ],
+      "why": "In 1206 the Mongol chiefs named Temujin as Genghis Khan, so the tribes could now fight as one. Conquering China and Persia came later, and the empire only became the largest after his sons and grandsons kept expanding.",
+      "clue": "Think about what had to happen to the tribes before they could act together."
+    },
+    "b": {
+      "d": 2,
+      "q": "Before 1206, a traveller on the grasslands of Central Asia meets Mongol groups who fight each other. Why were the Mongols then not yet a danger to far-off lands?",
+      "opts": [
+        "They were split into tribes with no single leader",
+        "They already ruled a huge empire across Asia",
+        "Genghis Khan had already led them to conquer China",
+        "They were one small tribe with too few fighters"
+      ],
+      "why": "Before 1206 the Mongols were many separate tribes who often fought each other, so they could not act as one army. Their conquests began only after Genghis Khan united them, so they did not yet rule an empire or hold China.",
+      "clue": "Look at what changed for the tribes in 1206."
+    }
+  },
+  "his-mongols-conquered-vic": {
+    "title": "How the Mongols conquered",
+    "card": [
+      "Mongol armies were made up mostly of horse archers. Mongol children learned to ride and shoot from a young age, so the soldiers could fire arrows accurately while riding fast.",
+      "Mongol armies moved quickly and used clever tactics. One trick was to pretend to retreat, which drew the enemy out of a strong position so the Mongols could turn and attack.",
+      "The Mongols also used terror. Cities that gave in were often spared, but cities that fought could be destroyed. Word of this spread, and some enemies surrendered without a fight.",
+      "Horse archers could not easily get past city walls. So Mongol armies took in skilled people from the lands they conquered, such as engineers, who built and used siege machines to break into walled cities."
+    ],
+    "remember": "Skilled riders, speed, tactics and fear helped the Mongols conquer, and borrowed engineers helped them take walled cities.",
+    "a": {
+      "q": "Why were skilled engineers from conquered peoples useful to the Mongol armies?",
+      "opts": [
+        "They knew how to attack walled cities",
+        "They taught Mongol children to ride horses",
+        "They led the fake retreats in open battle",
+        "They spread fear of the Mongols to cities"
+      ],
+      "why": "Horse archers could not easily get past city walls. Engineers knew how to build and use siege machines, which helped the Mongols break into cities. Fake retreats were a tactic of the Mongol riders, not a job for engineers.",
+      "clue": "Think about what horse archers could not easily get past."
+    },
+    "b": {
+      "d": 3,
+      "q": "A Mongol army reaches a walled city. Its leaders send a message that the city will be spared if it surrenders, but destroyed if it fights. Which Mongol method does this show?",
+      "opts": [
+        "Using terror to make enemies give in",
+        "Using engineers to build siege machines",
+        "Pretending to retreat to draw out the enemy",
+        "Using horse archers to fire while riding"
+      ],
+      "why": "The message uses fear of destruction to push the city to surrender without a fight. That is terror. Siege machines and fake retreats are ways of fighting, but here the Mongols are trying to avoid a fight.",
+      "clue": "The message is meant to win the city without any battle."
+    }
+  },
+  "his-trade-under-mongol-rule": {
+    "title": "Trade under Mongol rule",
+    "card": [
+      "The Silk Roads were a network of trade routes, used for centuries before the Mongols, linking China with lands further west as far as Europe. Merchants carried goods such as silk, spices and porcelain along them.",
+      "By the late 1200s the Mongol Empire had split into separate khanates, each ruled by a Mongol khan. The khanates sometimes fought each other.",
+      "Even so, Mongol rulers controlled most of the land the routes crossed and kept order along them. Travellers faced less danger from bandits, so more merchants made the journey, and ideas moved with the goods.",
+      "Marco Polo, a merchant from Venice, travelled to China in the 1270s and stayed for many years. The book about his journeys told many Europeans about China."
+    ],
+    "remember": "Mongol rulers kept order along most of the Silk Roads, so goods, ideas and travellers moved more freely.",
+    "a": {
+      "q": "Why did more merchants travel the Silk Roads under Mongol rule?",
+      "opts": [
+        "Mongol rulers kept order along most of the routes",
+        "Mongol rulers paid merchants to carry goods west",
+        "Mongol rulers let only Mongol merchants use them",
+        "Mongol rulers built the routes for the first time"
+      ],
+      "why": "Mongol rulers controlled most of the land the routes crossed and kept order along them, so travellers faced less danger from bandits. The routes were not new: merchants had used them for centuries before the Mongols.",
+      "clue": "Think about what made long journeys dangerous before."
+    },
+    "b": {
+      "d": 3,
+      "q": "In the 1280s, a merchant named Rashid carried silk west from China. Why was his journey likely safer than a similar trip 100 years earlier?",
+      "opts": [
+        "Mongol rulers kept order on most of his route",
+        "One Mongol emperor ruled every land on his route",
+        "The Mongol khanates had stopped fighting each other",
+        "Bandits had gone from every part of the route"
+      ],
+      "why": "Mongol rulers controlled most of the land the routes crossed and kept order along them, so there was less danger from bandits. By the 1280s there was no single ruler over it all: the empire had split into khanates, which sometimes fought each other.",
+      "clue": "Think about how much of the trip was under Mongol control."
+    }
+  },
+  "his-kublai-khan-yuan-china": {
+    "title": "Kublai Khan and Yuan China",
+    "card": [
+      "Kublai Khan was a grandson of Genghis Khan. He became the Great Khan, the ruler of the Mongol Empire, in the 1260s.",
+      "In 1271 Kublai named his rule the Yuan dynasty, and by 1279 he had conquered all of China. A dynasty is a line of rulers from one family.",
+      "Mongols were a small group among a huge Chinese population. Kublai used Mongol officials in the highest government jobs to keep control.",
+      "Kublai moved his capital to Dadu, on the site of modern Beijing. The Yuan dynasty ruled China until 1368."
+    ],
+    "remember": "Kublai Khan founded the Yuan dynasty, took all of China and kept Mongol officials in the top jobs.",
+    "a": {
+      "q": "Who founded the Yuan dynasty in China?",
+      "opts": [
+        "Kublai Khan, a grandson of Genghis Khan",
+        "Genghis Khan, who conquered all of China himself",
+        "Marco Polo, who came to rule China",
+        "A Chinese emperor who drove out the Mongols"
+      ],
+      "why": "Kublai Khan, Genghis Khan's grandson, named his rule the Yuan dynasty in 1271 and finished conquering China by 1279. Genghis Khan is the tempting answer, but it was his grandson who founded the Yuan dynasty.",
+      "clue": "Think about who had finished conquering China by 1279."
+    },
+    "b": {
+      "d": 3,
+      "q": "Kublai Khan ruled a Chinese population far larger than the Mongol people. Which choice best fits how he governed China?",
+      "opts": [
+        "He placed Mongol officials in top government jobs",
+        "He handed top government jobs only to local Chinese",
+        "He left China to rule itself under its old dynasty",
+        "He moved his capital away from China altogether"
+      ],
+      "why": "Mongols were few compared with the Chinese, so Kublai used Mongol officials in the highest jobs to keep control. Leaving China to its old rulers is tempting, but Kublai conquered China and ruled it himself as the Yuan dynasty.",
+      "clue": "Think about who held the top jobs and who kept control."
+    }
+  },
+  "his-historical-questions": {
+    "title": "Historical questions",
+    "card": [
+      "A historian's inquiry starts with a question. A good one is open: it needs an explanation, such as why or how something happened.",
+      "A closed question, such as \"When did it happen?\" or \"How many are there?\", has a short answer. It can help as a smaller step, but on its own it does not lead to an explanation.",
+      "A good question can be answered from evidence, such as objects, buildings and writing. A question about thoughts or feelings that nobody recorded, or about which place was best, cannot be settled by evidence.",
+      "A good question also guides the search. It tells you which sources to look for and what to look for in them."
+    ],
+    "remember": "A good historical question is open, can be answered with evidence, and points to the sources you need.",
+    "a": {
+      "q": "Which question would be the best one to begin a historical inquiry?",
+      "opts": [
+        "How did people in ancient Egypt build the pyramids?",
+        "In what year was the Great Pyramid finished?",
+        "Was ancient Egypt a better place than ancient Greece?",
+        "What did each pyramid worker feel on their first day?"
+      ],
+      "why": "The pyramids question asks how something happened, so it needs an explanation, and tools, quarries and building remains can answer it. The year question is closed and has a short answer. No one recorded how each worker felt on their first day, and which place was better is a judgement, so evidence cannot settle either.",
+      "clue": "Look for a question that needs an explanation and has evidence to answer it."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya is studying Bunjil's Shelter, a rock shelter in Victoria's Black Range with old paintings. Which question would best guide her search for sources?",
+      "opts": [
+        "Why did people make paintings at this shelter?",
+        "How many paintings are at this shelter?",
+        "What was each painter thinking as they worked?",
+        "Are the paintings here the best in Australia?"
+      ],
+      "why": "The why question is open, and it points Priya to sources such as the paintings, objects found nearby, and the knowledge held by the Traditional Owners. The how many question starts with how, but it is closed: a single number answers it. Each painter's private thoughts were not recorded, and which paintings are best is a judgement, so evidence cannot settle either.",
+      "clue": "A question starting with how can still have a one-number answer."
+    }
+  },
+  "his-chronology-dating": {
+    "title": "Chronology and dating",
+    "card": [
+      "Chronology means putting events in the order they happened. Historians show this on a timeline, with earlier events on the left and later events on the right.",
+      [
+        "BCE",
+        "\"Before Common Era\". Years are counted backwards towards year 1, so 500 BCE is earlier than 100 BCE."
+      ],
+      [
+        "CE",
+        "\"Common Era\". Years are counted forwards from year 1, so 100 CE is earlier than 500 CE. There is no year 0."
+      ],
+      [
+        "Centuries",
+        "A century is 100 years, counted from year 1, so the 1st century is years 1 to 100 and the 15th century is 1401 to 1500. In everyday use, people call the 1400s the 15th century."
+      ]
+    ],
+    "remember": "Order events on a timeline. BCE counts down to year 1, CE counts up from it, and the 1400s are the 15th century.",
+    "a": {
+      "q": "Which list puts these dates in order, from earliest to latest?",
+      "opts": [
+        "300 BCE, 50 BCE, 40 CE, 200 CE",
+        "50 BCE, 300 BCE, 40 CE, 200 CE",
+        "40 CE, 200 CE, 50 BCE, 300 BCE",
+        "200 CE, 40 CE, 50 BCE, 300 BCE"
+      ],
+      "why": "BCE years count down towards year 1, so 300 BCE comes before 50 BCE. All BCE dates come before CE dates, and CE years count up. The list that starts with 50 BCE is tempting, but it puts 50 BCE before 300 BCE, as if BCE years counted up.",
+      "clue": "For BCE years, a bigger number means further back in time."
+    },
+    "b": {
+      "d": 3,
+      "q": "A museum in Ballarat has a coin made in 1465. A student writes that it is from the 14th century. What is the mistake?",
+      "opts": [
+        "The 1400s are the 15th century, so it is from the 15th",
+        "The 1400s are the 14th century, but it should say BCE",
+        "Centuries are counted from year 0, so it is the 16th",
+        "A coin from 1465 is too old to be given a century"
+      ],
+      "why": "Centuries are counted from year 1, so years 1401 to 1500 are the 15th century, and 1465 falls in it. The student matched the 14 in 1465 to the century, which is a common slip. The BCE option is wrong because 1465 is a CE year, counted forwards.",
+      "clue": "The 1st century is years 1 to 100. Count up from there."
+    }
+  },
+  "his-useful-source": {
+    "title": "How useful a source is",
+    "card": [
+      "No source is useful or useless on its own. How useful it is depends on the question a historian is asking.",
+      "Historians ask who made the source, when it was made, why it was made and who it was made for.",
+      "A source made to persuade or to praise may leave out facts. It can still be useful, for example to show what the maker wanted people to believe.",
+      "A source made close to an event may be well informed. A source made long after may know the outcome but can be less reliable on small details."
+    ],
+    "remember": "Usefulness depends on the maker, the time, the purpose, the audience and the question.",
+    "a": {
+      "q": "A student says a speech written to persuade voters is useless. Which reply best shows how a historian could use it?",
+      "opts": [
+        "It can show what the speaker wanted voters to believe",
+        "It can show all the facts, as speeches leave nothing out",
+        "It can show how voters at the time felt about the speech",
+        "It can be used once its persuasive parts are cut out"
+      ],
+      "why": "A persuasive speech may leave out facts, but it can show the speaker's aims and what they wanted people to believe. The tempting wrong answer is about voters' feelings: the speaker made the speech, so it shows the speaker's view, not how voters reacted.",
+      "clue": "Think about who made the speech and why."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya is studying how a Victorian goldfield town was run in 1853. She finds a poster the town's police camp made to warn diggers to buy licences. What can the poster show her?",
+      "opts": [
+        "What rules the officials wanted diggers to follow",
+        "How diggers felt about the rules they had to obey",
+        "That the rules were obeyed, because officials made it",
+        "How often diggers broke the licence rules in 1853"
+      ],
+      "why": "The poster was made by officials for diggers, so it shows the rules officials wanted followed. It does not show what diggers felt, because diggers did not make it. A warning also cannot prove the rules were obeyed or how often they were broken.",
+      "clue": "Ask who made the poster and who it was meant for."
+    }
+  },
+  "his-perspectives-sources": {
+    "title": "Perspectives in the past",
+    "card": [
+      "A perspective is a point of view. It is how a person sees an event or an issue.",
+      "A person's perspective is shaped by their place in society, such as being a ruler or a worker. A pharaoh and a farmer felt a new tax in very different ways.",
+      "It is also shaped by their beliefs, their values and the time they lived in. People in the past often held ideas that are different from ours.",
+      "Two people can live through the same event and describe it differently. A different view is not the same as a mistake, so both accounts can be honest."
+    ],
+    "remember": "Who you are, what you believe, what you value and when you live shape how you see an event.",
+    "a": {
+      "q": "A pharaoh in ancient Egypt praised a new tax in the same year that a farmer complained about it. Which idea best explains the two views?",
+      "opts": [
+        "Each saw the tax from their own place in society",
+        "The farmer got the facts about the tax wrong",
+        "The pharaoh and farmer lived at different times",
+        "Their accounts describe two different taxes"
+      ],
+      "why": "A pharaoh and a farmer held very different places in society, so the same tax looked different to each of them. It is tempting to think the farmer got it wrong, but a different view is not the same as a mistake.",
+      "clue": "Both are talking about the same tax in the same year."
+    },
+    "b": {
+      "d": 3,
+      "q": "One drought hit ancient Rome. A landowner wrote that it caused little trouble, but a labourer wrote that families went hungry. What is the best conclusion?",
+      "opts": [
+        "Both can be honest, seen from different places in society",
+        "The landowner got it wrong, since he played down the hunger",
+        "The labourer got it wrong, since she overstated the hunger",
+        "The accounts describe two separate droughts in Rome"
+      ],
+      "why": "A rich landowner with grain to spare and a poor labourer would feel the same drought in different ways, so both accounts can be honest. Calling either one wrong is tempting, but differing accounts can show different perspectives rather than mistakes.",
+      "clue": "Could one drought hit a rich family and a poor family equally hard?"
+    }
+  },
+  "his-continuity-change-causes-consequences": {
+    "title": "Cause, consequence, continuity and change",
+    "card": [
+      ["Cause", "something that made an event happen. A cause comes before the event."],
+      ["Consequence", "something that followed from an event. A consequence comes after it."],
+      ["Continuity", "something that stayed the same over a period of time."],
+      ["Change", "something that became different over a period of time."]
+    ],
+    "remember": "Causes come before an event and consequences come after it. Continuity stays the same and change is different.",
+    "a": {
+      "q": "A flood ruins the crops of farmers in an ancient valley. Some of them then leave for a nearby town. How should a historian describe the move to the town?",
+      "opts": [
+        "A consequence of the flood",
+        "A cause of the flood",
+        "A continuity across the period",
+        "A cause of the farmers' hunger"
+      ],
+      "why": "The move happened after the flood and followed from it, so it is a consequence. It is not a cause of the flood, because a cause must come before the event it explains.",
+      "clue": "Did the move happen before or after the flood?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Over 500 years, a village keeps growing barley on its river land. Its homes change from reed huts to mud-brick houses. Which pair is correct?",
+      "opts": [
+        "Farming is continuity and the houses are change",
+        "Farming is change and the houses are continuity",
+        "Both farming and the houses are continuity",
+        "Both farming and the houses are change"
+      ],
+      "why": "Barley was grown on the river land at the start and at the end of the 500 years, so the farming is continuity. The homes were reed huts at first and mud-brick houses later, so they are change. Both can happen in the same village over the same period.",
+      "clue": "Compare each thing at the start and at the end of the 500 years."
+    }
+  },
+  "his-significance-interpretation": {
+    "title": "Significance and interpretation",
+    "card": [
+      "Significance is how much an event, person or change mattered. Historians judge it by its effects at the time and later.",
+      "Effects can be judged by how many people were affected, how deeply their lives changed and how long the effects lasted.",
+      "An interpretation is a historian's explanation of the past, built from evidence.",
+      "Historians can reach different interpretations from the same evidence. They may ask different questions, weigh sources differently or judge significance differently."
+    ],
+    "remember": "Significance is judged by effects. Different interpretations can come from the same evidence.",
+    "a": {
+      "q": "Two historians study the same sources on the Black Death but reach different interpretations. What is the most likely reason?",
+      "opts": [
+        "They weighed sources differently or asked other questions",
+        "One of them relied on forged copies of the sources",
+        "Interpretations are opinions that do not use evidence",
+        "Each of them read a different part of the sources"
+      ],
+      "why": "Historians can read the same evidence and stress different parts of it, or ask different questions of it. The tempting wrong answer is forged copies, but the two studied the same sources, and a difference in interpretation does not mean a source is fake.",
+      "clue": "Think about what historians do with the same evidence."
+    },
+    "b": {
+      "d": 3,
+      "q": "A railway reaches a small town in 1880. Within ten years, its farmers sell crops far away, and the town grows and stays larger for a century. Why might a historian call the railway significant?",
+      "opts": [
+        "Its effects reached many people and lasted a long time",
+        "It was new to the town and people talked about it",
+        "It happened long ago and is recorded in old sources",
+        "It was costly to build and took years to finish"
+      ],
+      "why": "Significance is judged by effects: how many people they reached, how deep they were and how long they lasted. Here the railway changed farming and growth for a century. Being new or talked about does not make something significant if its effects are small.",
+      "clue": "Look at what happened to the town after the railway came."
+    }
+  },
+  "his-causes-industrial-revolution": {
+    "title": "Causes of the Industrial Revolution",
+    "card": [
+      "The Industrial Revolution was the shift from making goods by hand to making them with machines in factories. It began in Britain from about 1750.",
+      [
+        "Resources and money",
+        "Britain had plenty of coal and iron. Coal fuelled machines and furnaces, and iron built machines and tools. Wealthy landowners and merchants also had money to invest in factories, mines and canals."
+      ],
+      [
+        "Markets",
+        "Britain's colonies supplied raw materials such as cotton and bought British goods. This gave factory owners a large market for what they made."
+      ],
+      [
+        "Inventions",
+        "New machines, such as the improved steam engine, drove factories and pumped water from mines. They let work be done faster and on a larger scale."
+      ]
+    ],
+    "remember": "Britain industrialised first because several things came together: resources, money, markets and new machines.",
+    "a": {
+      "q": "Why did Britain's supply of coal help industry grow from about 1750?",
+      "opts": [
+        "It fuelled steam engines and iron furnaces",
+        "It was sold to colonies in exchange for cotton",
+        "It was the metal used to build machines and tools",
+        "It replaced the need for machines in factories"
+      ],
+      "why": "Coal was the fuel that powered steam engines and heated furnaces to make iron. Iron, not coal, was the metal used to build machines and tools.",
+      "clue": "Think about what made machines and furnaces run."
+    },
+    "b": {
+      "d": 3,
+      "q": "A Lancashire mill owner in the 1780s buys raw cotton grown in British colonies, runs steam-driven machines, and sells much of his cloth to buyers in British colonies. Which cause does the cloth sale show best?",
+      "opts": [
+        "Colonies as markets for British goods",
+        "Coal and iron as local resources",
+        "Wealthy investors paying for factories",
+        "An improved steam engine driving machines"
+      ],
+      "why": "Selling cloth to buyers in the colonies shows colonies acting as markets for British goods. The steam-driven machines show a different cause, inventions, and the raw cotton shows colonies as a supply of materials, not as the place where goods were sold.",
+      "clue": "Which part of the story is about who buys the goods?"
+    }
+  },
+  "his-effects-industrial-revolution": {
+    "title": "Effects of the Industrial Revolution",
+    "card": [
+      "Factories needed many workers. People left farms and villages for the towns, so cities such as Manchester grew very fast.",
+      "Cities were crowded and often dirty. Many families shared small homes with poor drains and little clean water, and diseases such as cholera spread easily.",
+      "Factory work meant long hours, low pay and dangerous machines. Children were employed too, because they were cheap to hire and small enough to reach between machinery.",
+      "These conditions led to change. From the early 1800s, Parliament passed laws on working conditions, such as limits on child labour, and workers joined trade unions, which are groups that act together to win better pay and safer work."
+    ],
+    "remember": "Factories brought crowded cities and harsh work, and the response was new laws and trade unions.",
+    "a": {
+      "q": "Why did workers form trade unions in industrial Britain?",
+      "opts": [
+        "To act together for better pay and safer work",
+        "To stop factories from using any machines",
+        "To move families from the cities back to farms",
+        "To make laws on working conditions themselves"
+      ],
+      "why": "Unions let workers act as a group, which gave them more power than asking for change alone. The option about unions making laws themselves is tempting but wrong, because laws on working conditions were passed by Parliament, not by unions.",
+      "clue": "Think about what a group of workers can do that one worker cannot."
+    },
+    "b": {
+      "d": 2,
+      "q": "In 1800 a village girl named Ellen moves to a factory town to find work. Which is most likely to have been true of her new life?",
+      "opts": [
+        "She lived in a crowded home with a risk of disease",
+        "She worked short hours with a high wage",
+        "She was protected by laws limiting child labour",
+        "She had cleaner water than in her village"
+      ],
+      "why": "Industrial towns grew fast and were crowded, with poor drains and little clean water, so disease spread easily. Laws limiting child labour came later, in response to these conditions, so they would not have protected her in 1800.",
+      "clue": "Think about what cities were like when they grew so quickly, before any reforms."
+    }
+  },
+  "his-new-political-ideas": {
+    "title": "New political ideas",
+    "card": [
+      [
+        "Individual rights",
+        "the belief that every person has basic freedoms that a ruler cannot simply take away, such as freedom of speech."
+      ],
+      [
+        "Democracy",
+        "the belief that ordinary people should have a say in government, usually by voting for their leaders."
+      ],
+      [
+        "Nationalism",
+        "the belief that people who share a language, history or culture should form their own nation and have pride in it."
+      ],
+      [
+        "Socialism",
+        "the belief that wealth and major industries should be shared more equally or owned by the community, because workers made little from factory work."
+      ]
+    ],
+    "remember": "After the American and French revolutions, these ideas changed how people thought they should be governed.",
+    "a": {
+      "q": "A group of people who share a language and history demand their own independent country. Which idea are they acting on?",
+      "opts": ["Nationalism", "Democracy", "Socialism", "Individual rights"],
+      "why": "Nationalism is the belief that people with a shared language, history or culture should form their own nation. Democracy is tempting, but it is about people having a say in government, not about forming a nation.",
+      "clue": "Think about what the group shares and what it wants to form."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1850, a factory worker in a British town argues that the owners keep most of the wealth while workers stay poor, and that industries should be shared more equally. Which idea is this?",
+      "opts": ["Socialism", "Democracy", "Nationalism", "Individual rights"],
+      "why": "The worker wants wealth shared more equally, which is socialism. Democracy is tempting because it is about ordinary people, but it concerns having a say in government through voting, not how wealth is shared.",
+      "clue": "Focus on what the worker wants to change: government, nation or wealth?"
+    }
+  },
+  "his-movements-rights-since-1945": {
+    "title": "Movements for rights since 1945",
+    "card": [
+      "After 1945, groups of people organised movements to win rights or protect things they valued, and to change laws and attitudes. They included civil rights, Indigenous rights, women's rights, LGBTQI+ rights and environmental movements.",
+      [
+        "Protest",
+        "Marches, strikes, sit-ins and petitions. They draw public attention and put pressure on governments."
+      ],
+      [
+        "Courts",
+        "Legal cases that challenge unfair laws or test whether a right is protected. A judge decides what the law means."
+      ],
+      [
+        "Elections",
+        "Voting, and campaigning for candidates and parties, so that governments pass new laws or change old ones."
+      ]
+    ],
+    "remember": "Rights movements used protest, courts and elections to change laws and attitudes.",
+    "a": {
+      "q": "A group holds marches and sit-ins to demand an end to a law it sees as unfair. Which method is the group using?",
+      "opts": [
+        "Protest, to draw attention and pressure the government",
+        "Courts, to test the law through a legal case",
+        "Elections, to vote the government out of office",
+        "Protest, which asks a judge to cancel the law"
+      ],
+      "why": "Marches and sit-ins are protest. They make a problem public and pressure leaders to act. Protest does not ask a judge to rule on a law: that happens through a legal case in the courts.",
+      "clue": "Think about actions in streets and public places."
+    },
+    "b": {
+      "d": 3,
+      "q": "A group in Perth believes a mining company's plan breaks an existing law that protects a local river. It asks a judge to stop the plan, and the case is widely reported. Which method is the group using?",
+      "opts": [
+        "Courts, using a legal case to test what the law protects",
+        "Protest, using public pressure to make the government act",
+        "Elections, backing candidates who will pass a new law",
+        "Petitions, collecting signatures to show public support"
+      ],
+      "why": "The group asks a judge to decide whether the existing law protects the river, so it is using the courts. Protest is tempting because the case gets public attention, but no march, strike or petition is described.",
+      "clue": "Who decides the outcome here?"
+    }
+  },
+  "his-women-s-movement-australia-vic": {
+    "title": "The women's movement in Australia",
+    "card": [
+      "In 1902 the Commonwealth Franchise Act gave most women the right to vote and stand in federal elections. Most Aboriginal and Torres Strait Islander women and men were left out until 1962.",
+      "In 1969 the national wage tribunal ruled for equal pay for equal work. It helped women doing the same job as men, but not women in jobs done mostly by women.",
+      "In 1972 the tribunal ruled for equal pay for work of equal value. Jobs were compared by their skill and worth, so women in jobs few men did could also gain.",
+      "The Sex Discrimination Act 1984 made it unlawful to treat people unfairly because of their sex in areas such as hiring, promotion and education. Together these changes widened women's role in work and public life."
+    ],
+    "remember": "The vote gave most women a political voice, the pay rulings dealt with wages, and the 1984 Act banned unfair treatment because of sex.",
+    "a": {
+      "q": "What did the 1972 equal pay ruling add to the 1969 ruling?",
+      "opts": [
+        "Equal pay for work of equal value, not only the same job",
+        "Equal pay for women doing exactly the same job as men",
+        "A ban on refusing to hire people because of their sex",
+        "The right of most women to vote in federal elections"
+      ],
+      "why": "The 1969 ruling covered women doing the same job as men. The 1972 ruling went further, to work of equal value, so women in jobs done mostly by women could also gain. Equal pay for the same job was the 1969 step, not the new one.",
+      "clue": "Think about women in jobs that few men did."
+    },
+    "b": {
+      "d": 2,
+      "q": "In 1990, a bank in Ballarat tells Jess it will not promote her to branch manager because it wants a man in the job. Which change made this unlawful?",
+      "opts": [
+        "The Sex Discrimination Act of 1984",
+        "The equal pay ruling of 1972",
+        "The equal pay ruling of 1969",
+        "The Commonwealth Franchise Act of 1902"
+      ],
+      "why": "Refusing a promotion because of sex is unfair treatment at work, which the 1984 Act made unlawful. The equal pay rulings dealt with wages for a job, not with who gets hired or promoted.",
+      "clue": "Is the problem her pay, or how she is treated because of her sex?"
+    }
+  },
+  "his-aboriginal-torres-strait-islander-vic": {
+    "title": "Aboriginal and Torres Strait Islander societies in 1788",
+    "card": [
+      "In 1788 the continent and its islands were home to hundreds of Aboriginal and Torres Strait Islander nations. Each nation had its own Country, the land and waters it belonged to and cared for.",
+      "The nations spoke many different languages. Estimates are of several hundred languages, and many had dialects as well.",
+      "Each nation had its own laws. These covered things such as family ties, who could use which land, and how disputes were settled.",
+      "People cared for Country through practices such as seasonal movement, managing plants and animals, and passing knowledge on through stories and ceremony. Torres Strait Islander peoples lived on islands and also relied on the sea and on gardening."
+    ],
+    "remember": "In 1788 there were many nations, each with its own languages, laws and care for Country.",
+    "a": {
+      "q": "Which statement best describes Aboriginal and Torres Strait Islander peoples in 1788?",
+      "opts": [
+        "Many nations, each with its own languages and laws",
+        "One nation sharing a single language and set of laws",
+        "Scattered families with no shared laws or land ties",
+        "A few large groups led by one central government"
+      ],
+      "why": "The continent and islands held hundreds of nations, and each had its own languages, laws and Country. Describing one nation with one language is tempting, but it ignores this variety.",
+      "clue": "Think about how many nations there were, and whether they were all the same."
+    },
+    "b": {
+      "d": 2,
+      "q": "A student learns that in 1788 the Gunditjmara of western Victoria and the Meriam of the eastern Torres Strait differed in law, speech and how they cared for Country. What does this show?",
+      "opts": [
+        "There were many separate nations, not one single people",
+        "One of the two groups had laws and the other had none",
+        "Nations far apart differed, but neighbours were alike",
+        "Only island peoples had their own Country to care for"
+      ],
+      "why": "Every nation had its own Country, languages and laws, so these two differences point to many separate nations. The idea that only distant nations differed is tempting, but neighbouring nations also each had their own laws and Country.",
+      "clue": "Think about what every nation had, not just these two."
+    }
+  },
+  "his-gold-rushes-vic": {
+    "title": "The gold rushes",
+    "card": [
+      "Gold was found in Victoria in 1851. News spread fast, and the colony's population grew very quickly.",
+      "Hundreds of thousands of migrants arrived, from Britain, Ireland, Europe, North America and China. Many Chinese miners came from southern China.",
+      "The government charged each miner a licence fee to dig for gold. The fee was due before any digging, so miners with empty claims paid the same as lucky ones, and many were angry.",
+      "In 1854 anger over licences, and over how they were enforced, led miners at Ballarat to build the Eureka Stockade. Troops and police attacked it, and many miners and some soldiers died."
+    ],
+    "remember": "Gold in 1851 brought migrants to Victoria, and anger over licences led to the Eureka Stockade in 1854.",
+    "a": {
+      "q": "Why did many miners on the Victorian goldfields become angry with the government in the early 1850s?",
+      "opts": [
+        "They paid to dig even when they found no gold",
+        "They paid a tax on each ounce of gold they found",
+        "They were banned from keeping any gold they found",
+        "They had to sell all their gold to the government"
+      ],
+      "why": "The licence fee was paid to dig, before anyone knew if a claim held gold, so unlucky miners paid as much as lucky ones. A tax on each ounce found is a different kind of charge: it would only fall on miners who found gold.",
+      "clue": "Was the fee linked to digging or to finding?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Li Wei leaves southern China in 1855 and sails to Victoria. What is the most likely reason he goes?",
+      "opts": [
+        "He hopes to find gold after hearing the news of the rushes",
+        "He has been sent as a convict by the British government",
+        "He is joining the troops that attacked the Eureka Stockade",
+        "He has been told to build the new Commonwealth parliament"
+      ],
+      "why": "The gold rushes drew many migrants, including many from southern China, who hoped to find gold. The Eureka Stockade was attacked in 1854, before Li Wei left in 1855, and the Commonwealth parliament did not exist yet. China was not a British colony sending convicts.",
+      "clue": "What was found in Victoria in 1851?"
+    }
+  },
+  "his-federation-vic": {
+    "title": "Federation",
+    "card": [
+      "Before 1901 there were six British colonies on the continent. Each had its own government and laws, and most taxed goods brought in from the others.",
+      [
+        "Federation",
+        "On 1 January 1901 the colonies joined to form the Commonwealth of Australia. They became states and kept their own parliaments, and a new national parliament made laws on shared matters such as defence, trade and migration."
+      ],
+      "One of the national parliament's first laws was the Immigration Restriction Act 1901. Under it, an officer could give a migrant a dictation test of 50 words in any European language, chosen so the person would fail.",
+      [
+        "White Australia policy",
+        "The test was used to keep out people who were not white, such as migrants from China and other parts of Asia. The Act was the base of the White Australia policy, which aimed to keep the population white."
+      ]
+    ],
+    "remember": "In 1901 six colonies became one nation, and its parliament soon passed a law to limit migration by race.",
+    "a": {
+      "q": "What changed for Victoria on 1 January 1901?",
+      "opts": [
+        "It became a state within one national Commonwealth",
+        "It became a separate country with its own parliament",
+        "It became a British colony with its own government",
+        "It lost its parliament and was run by the nation"
+      ],
+      "why": "At Federation the six colonies joined as states of the Commonwealth of Australia. Victoria kept its own parliament, while the national parliament took charge of shared matters. It was already a colony before 1901, and it did not become a country on its own.",
+      "clue": "Federation joined the colonies together. What were they called after that?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1902 a man from Japan arrives in Melbourne hoping to work. An officer gives him a dictation test in a language he does not know. What is the purpose of the test?",
+      "opts": [
+        "To keep him out under the Immigration Restriction Act",
+        "To check he can read English well enough to work",
+        "To decide which state he will be allowed to live in",
+        "To let the colony of Victoria choose its own migrants"
+      ],
+      "why": "The dictation test was set so the person would fail, which let officers keep out people who were not white. It was not a fair check of English, as it could be in any European language. After Federation, migration was a national matter, not a colony's.",
+      "clue": "Was the test meant to be passed?"
+    }
+  },
+  "his-australia-as-social-laboratory": {
+    "title": "Australia as a social laboratory",
+    "card": [
+      [
+        "Social laboratory",
+        "a name given to Australia around 1900. Its colonies and then the new nation tested reforms in voting, work and welfare that few other countries had tried."
+      ],
+      [
+        "Voting",
+        "the secret ballot, where voters mark their choice in private, began in Victoria and South Australia in the 1850s, and other countries later copied it. South Australia gave women the vote in 1894, and federal law gave most non-Indigenous women the vote in 1902."
+      ],
+      [
+        "Work and welfare",
+        "in the Harvester case of 1907, a judge set a basic wage meant to let a worker support a family. The age pension, an income paid to older people, became national in 1909."
+      ],
+      [
+        "Who was left out",
+        "the 1902 voting law mostly kept Aboriginal people from voting in federal elections. The age pension law left most of them out as well."
+      ]
+    ],
+    "remember": "Australia tested new reforms early, but Aboriginal people were mostly left out of them.",
+    "a": {
+      "q": "Why is the secret ballot of the 1850s an example of Australia as a social laboratory?",
+      "opts": [
+        "Few places had tried it, and other nations later copied it",
+        "It let every adult in the colonies vote for the first time",
+        "It came from Britain, where voters had used it for years",
+        "It made voting compulsory for all men in the colonies"
+      ],
+      "why": "Victoria and South Australia tried the secret ballot before most places, and other countries later took it up. That is what being a social laboratory means. It did not give every adult the vote: South Australian women waited until 1894.",
+      "clue": "Think about where the idea started and where it went next."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1908 a newspaper in Melbourne praises Australia's reforms as fair to all its people. Which fact from the card best shows that this claim was too broad?",
+      "opts": [
+        "The 1902 law mostly kept Aboriginal people from voting",
+        "South Australia gave women the vote in 1894",
+        "A basic wage was set in the Harvester case of 1907",
+        "The secret ballot began in the 1850s"
+      ],
+      "why": "The 1902 voting law left out most Aboriginal people, so the reforms did not reach everyone. The other three options are real reforms, and they support the idea that Australia tried new ideas rather than showing who was left out.",
+      "clue": "Look for the fact about who was left out, not who gained."
+    }
+  },
+  "his-causes-world-war-i": {
+    "title": "Causes of World War I",
+    "card": [
+      [
+        "Militarism",
+        "the build-up of armies and navies, and the belief that military strength makes a nation great. Britain and Germany raced to build more warships."
+      ],
+      [
+        "Alliances",
+        "promises to support other countries in a war. They split Europe into two groups, so a quarrel between two countries could pull in many more."
+      ],
+      [
+        "Imperial rivalry and nationalism",
+        "powers competed for colonies and trade, while nationalism, strong pride in one's own nation, fed distrust. These four long-term causes built up tension over many years."
+      ],
+      [
+        "The trigger",
+        "the event that sets off a war. On 28 June 1914 a Bosnian Serb nationalist killed Archduke Franz Ferdinand of Austria-Hungary in Sarajevo, and this set off the war."
+      ]
+    ],
+    "remember": "Long-term causes built up tension for years. The Sarajevo killing was the trigger that set off the war.",
+    "a": {
+      "q": "Which statement best explains how alliances helped turn a local crisis into a wider war?",
+      "opts": [
+        "Promises of support pulled more countries into the quarrel",
+        "Each country had agreed to stay out of foreign disputes",
+        "Alliances gave every power an army of the same size",
+        "Alliances ended the race between powers to build warships"
+      ],
+      "why": "Alliances were promises to back other countries in a war, so a quarrel between two could drag in many more. They did not keep countries out of disputes, and they did not stop the race to build warships.",
+      "clue": "Think about what a promise of support meant once an ally went to war."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which pairing correctly matches a long-term cause of World War I with its trigger?",
+      "opts": [
+        "Long-term: militarism. Trigger: the Sarajevo killing",
+        "Long-term: the Sarajevo killing. Trigger: militarism",
+        "Long-term: nationalism. Trigger: the alliance system",
+        "Long-term: imperial rivalry. Trigger: the naval race"
+      ],
+      "why": "Militarism built up tension over many years, while the killing of Franz Ferdinand in 1914 was the event that set off the war. Swapping them is tempting, but a single event on one day cannot be a cause that built up over years. Alliances and the naval race were also long-term causes, not triggers.",
+      "clue": "Which one happened on a single day in 1914?"
+    }
+  },
+  "his-australians-enlisted-vic": {
+    "title": "Why Australians enlisted",
+    "card": [
+      "When war broke out in 1914, Australia was part of the British Empire. Many Australians saw Britain as the mother country and felt a duty to help defend it.",
+      "Other reasons were personal. Some men wanted adventure and travel. Pay was also a pull, especially for men who were out of work.",
+      "Pressure from family, friends and the community pushed many men to join. Men who stayed home could be shamed for not going.",
+      "Some Aboriginal men enlisted too, even though rules meant to keep them out of the forces were in place. Some were accepted anyway, and some were turned away."
+    ],
+    "remember": "Men enlisted for many reasons: loyalty, adventure, pay and pressure. Some Aboriginal men joined despite the rules.",
+    "a": {
+      "q": "Tom's parents were born in England. In 1914 he joins up because he feels it is his own duty to help defend the land they came from. Which reason for enlisting is this?",
+      "opts": ["Loyalty to Britain", "Hope of adventure", "Need for regular pay", "Pressure from family"],
+      "why": "Tom acts from his own sense of duty to defend England, part of Britain, which many Australians saw as the mother country. It is not pressure from family: his parents are only where his tie to Britain comes from, and nobody is pushing him to go.",
+      "clue": "Is Tom acting on his own sense of duty, or on what others expect?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Jack, a young Aboriginal man in Victoria, is turned away at one recruiting office in 1915, but another office accepts him. What does his case show?",
+      "opts": [
+        "Some Aboriginal men enlisted despite rules to stop them",
+        "Rules kept every Aboriginal man out of the forces",
+        "No rules applied to Aboriginal men who wanted to join",
+        "Rules forced Aboriginal men to join the forces"
+      ],
+      "why": "Rules were meant to keep Aboriginal men out, and Jack was turned away once, but he still got in, so the rules did not stop everyone. The tempting option that rules kept every Aboriginal man out is wrong, because the card says some were accepted anyway.",
+      "clue": "Did the rules stop every Aboriginal man from joining?"
+    }
+  },
+  "his-gallipoli-vic": {
+    "title": "Gallipoli",
+    "card": [
+      "Gallipoli is a peninsula in the Ottoman Empire (now Turkey). The Allies, including Britain and France, wanted to open a sea route to Russia and knock the Ottomans out of the war.",
+      "On 25 April 1915, soldiers of the Australian and New Zealand Army Corps (ANZAC) landed at a spot later called Anzac Cove. The Ottoman defenders held the high ground above the beach.",
+      "The landing did not go to plan. The troops were pinned down on steep, rough land, and the fighting turned into a long stalemate.",
+      "The Allies never took the peninsula. The Anzacs left in December 1915 and the last Allied troops left in January 1916, after heavy losses on both sides, so the campaign failed."
+    ],
+    "remember": "Gallipoli was an Allied campaign against the Ottoman Empire. It began with the landing on 25 April 1915 and failed to take the peninsula.",
+    "a": {
+      "q": "What was the main aim of the Gallipoli campaign?",
+      "opts": [
+        "To open a sea route to Russia and defeat the Ottomans",
+        "To help the Ottoman Empire defend itself from Russia",
+        "To capture Berlin and force Germany to surrender",
+        "To win back the Belgian coast from German troops"
+      ],
+      "why": "The Allies hoped to open a sea route to their ally Russia and knock the Ottoman Empire out of the war. The Ottomans were the enemy at Gallipoli, not a side the Allies were helping.",
+      "clue": "Which side were the Ottomans on, and which ally did the Allies need to reach?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Jarrah reads that the Anzacs left Gallipoli in December 1915. Why is the campaign described as a failure?",
+      "opts": [
+        "The Allies did not take the peninsula and withdrew",
+        "The Allies took the peninsula but lost many men",
+        "The Ottomans surrendered but the Allies still left",
+        "The 25 April landing was cancelled before it began"
+      ],
+      "why": "The Allies did not reach their goals and left without taking the peninsula, with the last troops gone by January 1916. Heavy losses alone do not explain it, as the Ottomans also lost many men but held the ground.",
+      "clue": "Who held the land when the fighting ended?"
+    }
+  },
+  "his-western-front-vic": {
+    "title": "The Western Front",
+    "card": [
+      "The Western Front was the line of fighting across France and Belgium. Both sides dug lines of trenches, and the ground between them was called no man's land.",
+      "Australians reached the Western Front in 1916 after leaving Gallipoli. Early battles there, both in northern France, included Fromelles in July and Pozières from late July to early September.",
+      "Machine guns could fire on troops crossing open ground, and artillery shelled trenches for days. Attackers were often cut down before they reached the enemy line.",
+      "The losses were huge. At Fromelles and Pozières thousands of Australians were killed or wounded in a short time, and living conditions in the trenches were also very hard."
+    ],
+    "remember": "On the Western Front, machine guns and artillery made attacks across open ground extremely costly.",
+    "a": {
+      "q": "Why were attacks across no man's land so costly for Australian troops in 1916?",
+      "opts": [
+        "Machine guns and artillery fired on men in open ground",
+        "The trenches were too far apart for troops to reach",
+        "Australian troops had no training for trench fighting",
+        "The fighting took place only at night in thick forest"
+      ],
+      "why": "Machine guns and artillery could hit soldiers crossing open ground, so attackers were often cut down before reaching the enemy line. The distance alone was not the problem: the danger came from the weapons firing on them.",
+      "clue": "Think about the weapons defending each line of trenches."
+    },
+    "b": {
+      "d": 2,
+      "q": "Sam's great-grandfather fought at Fromelles and then at Pozières. Where and when did he fight?",
+      "opts": ["In France, in 1916", "In Belgium, in 1916", "In Turkey, in 1915", "In France, in 1915"],
+      "why": "Fromelles and Pozières were both Western Front battles in northern France in 1916. The 1915 options mix them up with Gallipoli, which Australians had left before they reached the Western Front.",
+      "clue": "Australians reached the Western Front after leaving Gallipoli."
+    }
+  },
+  "his-anzac-legend-vic": {
+    "title": "The Anzac legend",
+    "card": [
+      "The Anzac legend is a story told about Australian soldiers of World War I. It praises courage, mateship and endurance in hard conditions.",
+      "It grew from the Gallipoli landing and wartime writing, and Anzac Day on 25 April is used to remember it.",
+      "Historians debate how well the legend fits what soldiers lived through. Some soldiers also felt fear, boredom or anger, and not all of them behaved like the heroes in the story.",
+      "Historians also ask whose stories it leaves out. Women, Aboriginal and Torres Strait Islander soldiers and others are often missing from the picture."
+    ],
+    "remember": "The Anzac legend praises courage and mateship, but historians question how true it is to soldiers' lives and who it leaves out.",
+    "a": {
+      "q": "Which pair of qualities does the Anzac legend praise most?",
+      "opts": [
+        "Courage and mateship",
+        "Obedience and strict discipline",
+        "Caution and careful planning",
+        "Wealth and social rank"
+      ],
+      "why": "The legend honours courage and mateship, meaning loyalty to your mates, along with endurance. Obedience and discipline may sound like soldierly qualities, but they are not what the legend is known for.",
+      "clue": "Think of what the story says about soldiers sticking by each other."
+    },
+    "b": {
+      "d": 3,
+      "q": "A historian reads letters from Australian soldiers in France. Many describe fear, boredom and anger at their officers. Which debate about the Anzac legend does this evidence add to?",
+      "opts": [
+        "How well it matches what soldiers lived through",
+        "Whose wartime stories it does not include",
+        "Why it grew from the Gallipoli landing",
+        "Why Anzac Day is held on 25 April"
+      ],
+      "why": "The letters show soldiers' real feelings, which do not always fit the heroic story, so they test how well the legend matches soldiers' lives. They are not about people missing from the legend, because these soldiers are the ones it already describes.",
+      "clue": "Are these soldiers missing from the story, or shown differently from it?"
+    }
+  },
+  "his-australians-pacific-war": {
+    "title": "Australians in the Pacific war",
+    "card": [
+      "In December 1941 Japan attacked across South-East Asia. Thousands of Australian soldiers were in Malaya and Singapore, helping Britain defend its main base in the region.",
+      [
+        "Fall of Singapore",
+        "Japanese forces pushed south through Malaya, and Singapore surrendered in February 1942. About 15,000 Australians were taken prisoner there."
+      ],
+      [
+        "Prisoners of war",
+        "Prisoners of war (POWs) were held until the war ended in 1945, and many were forced to build the Thai-Burma railway. About a third of the Australians held by Japan died, from disease, hunger and brutal treatment."
+      ],
+      [
+        "Kokoda Track",
+        "In July 1942 Japanese troops landed on Papua's north coast to cross the Owen Stanley Range by the Kokoda Track and take Port Moresby, a base close to northern Australia. Fighting in jungle and mud, Australians stopped them short of Port Moresby and from late September pushed them back over the range."
+      ]
+    ],
+    "remember": "Singapore's fall left thousands of Australians as prisoners of war. On the Kokoda Track, Australians stopped Japan short of Port Moresby.",
+    "a": {
+      "q": "How did thousands of Australian soldiers end up held by Japan early in 1942?",
+      "opts": [
+        "Singapore, the base they were defending, surrendered",
+        "Japan defeated them on the Kokoda Track in Papua",
+        "They were captured working on the Thai-Burma railway",
+        "Their troopships were sunk while sailing to Malaya"
+      ],
+      "why": "The Australians in Singapore were taken prisoner when it surrendered to Japan in February 1942. The Kokoda Track fighting began later, in July 1942, and there Australians pushed the Japanese back. The railway was built by prisoners after they were captured.",
+      "clue": "Where were thousands of Australian soldiers when Japan attacked?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A 1942 diary by an Australian soldier describes thick jungle, steep mud, a mountain range, and the enemy now falling back towards the north coast. Which part of the Pacific war does it describe?",
+      "opts": [
+        "The Kokoda Track campaign in Papua",
+        "The defence of Singapore in 1942",
+        "Work on the Thai-Burma railway",
+        "The fighting retreat through Malaya"
+      ],
+      "why": "On the Kokoda Track, Australians fought in jungle and mud on Papua's mountains and pushed the Japanese back towards the north coast. The railway also ran through jungle, but the men there were prisoners, not soldiers pushing an enemy back. In Malaya and Singapore the Australians were the ones forced back.",
+      "clue": "In which fighting were the Australians the side moving forward?"
+    }
+  },
+  "his-home-front-world-war": {
+    "title": "The home front in World War II",
+    "card": [
+      "The home front means life in Australia while its people were at war overseas. After Japan entered the war, the threat came close to home.",
+      [
+        "Darwin",
+        "On 19 February 1942, Japanese aircraft bombed Darwin. It was the first and largest of many air raids on northern Australia."
+      ],
+      [
+        "Rationing",
+        "Goods such as tea, butter, sugar, clothing and petrol were rationed. Each person could buy only a set amount, so supplies went to the war effort first."
+      ],
+      [
+        "Work and internment",
+        "Women took on jobs that men had done, as many men were away in the forces. Some people of German, Italian or Japanese background were interned, which means held in camps without a trial."
+      ]
+    ],
+    "remember": "War changed daily life in Australia: bombs on Darwin, rationing, women in new jobs and internment.",
+    "a": {
+      "q": "Why were goods such as tea, butter and petrol rationed in Australia during the war?",
+      "opts": [
+        "Supplies were needed for the war effort",
+        "Shops had no workers left to sell them",
+        "Japanese bombing had destroyed most farms",
+        "Prices had to be kept high to raise money"
+      ],
+      "why": "Rationing limited what each person could buy so that supplies could go to the war effort. Bombing mainly hit northern towns, so it did not destroy most farms.",
+      "clue": "Think about who needed the supplies most."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1943, Ruth works as a tram conductor in Melbourne, a job done by men before the war. Her brother is serving overseas. What does Ruth's job show about the home front?",
+      "opts": [
+        "Women took on jobs that men had done",
+        "Women were forced to move to northern Australia",
+        "Women were interned because of their background",
+        "Women replaced rationing with paid work"
+      ],
+      "why": "With many men away in the forces, women filled jobs that men had done, such as tram conducting. Some people of enemy background were interned, but nothing in Ruth's case suggests that.",
+      "clue": "Where were the men who usually did this work?"
+    }
+  },
+  "his-warfare-changed": {
+    "title": "How warfare changed",
+    "card": [
+      "World War I was mostly fought from trenches, where armies were stuck in long stand-offs. Between the wars, new machines made fighting faster and more mobile.",
+      [
+        "Tanks and aircraft",
+        "Tanks and fast-moving troops could break through enemy lines. Aircraft attacked soldiers, ships and cities from the air, far from the front line."
+      ],
+      [
+        "Aircraft carriers",
+        "Aircraft carriers are warships that carry planes. They let navies strike from the sea at targets far away, as Japan did at Pearl Harbor in 1941."
+      ],
+      [
+        "Total war and atomic bombs",
+        "Whole societies were turned to the war effort, with factories, workers and food supplies all used for it. In 1945 the United States dropped atomic bombs on Hiroshima and Nagasaki, and Japan surrendered soon after."
+      ]
+    ],
+    "remember": "Warfare moved from trenches to machines, drew in whole societies, and ended with atomic bombs.",
+    "a": {
+      "q": "Which change best describes how fighting in World War II differed from most fighting in World War I?",
+      "opts": [
+        "Tanks and aircraft made fighting faster and more mobile",
+        "Armies dug longer trenches and stayed in them",
+        "Navies stopped being used because of aircraft",
+        "Fighting was limited to soldiers on a front line"
+      ],
+      "why": "Tanks and aircraft let armies move quickly and strike far from the front. Trench stand-offs were more typical of World War I, so longer trenches is the tempting wrong answer.",
+      "clue": "Think about what machines let armies do."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1942, a factory in Melbourne switched from making cars to making aircraft parts, and its workers were directed to war jobs. What does this show about World War II?",
+      "opts": [
+        "Whole societies were turned to the war effort",
+        "Fighting was confined to a distant front line",
+        "Trench warfare needed more heavy machinery",
+        "Atomic bombs had already ended the war"
+      ],
+      "why": "A factory changing its work to supply the war shows a whole society being used for the war effort. Atomic bombs came in 1945, at the end of the war, so they do not explain a 1942 factory.",
+      "clue": "Look at who is helping the war besides soldiers."
+    }
+  },
+  "his-causes-holocaust": {
+    "title": "Causes of the Holocaust",
+    "card": [
+      [
+        "Antisemitism",
+        "Antisemitism is hatred of, or prejudice against, Jewish people. It existed in Europe for centuries before the Nazis, so the Nazis could build on ideas many people already knew."
+      ],
+      [
+        "Nazi race ideas",
+        "The Nazis claimed that people belong to biologically different races, and that a so-called Aryan race was superior. They falsely blamed Jewish people for Germany's problems, such as defeat in World War I and economic hardship."
+      ],
+      [
+        "Laws",
+        "After Hitler took power in 1933, the Nazis passed laws that removed Jewish people's rights step by step. The Nuremberg Laws of 1935 took away German citizenship from Jewish people and banned marriage between Jewish and non-Jewish Germans."
+      ],
+      "The Holocaust did not start with mass murder. Hatred, race ideas and laws came first, and these made persecution seem normal to many people."
+    ],
+    "remember": "Old hatred, Nazi race ideas and discriminatory laws prepared the way for the Holocaust.",
+    "a": {
+      "q": "Why did the Nazis find it easier to spread hatred of Jewish people in Germany?",
+      "opts": [
+        "Antisemitism already existed in Europe for centuries",
+        "Jewish people had held most of the power in Germany",
+        "Antisemitism was first invented in Germany in 1933",
+        "Germany's laws before 1933 had already banned Jewish people"
+      ],
+      "why": "Antisemitism was long-held, so the Nazis could build on prejudice many people already knew. It was not new in 1933, and the claim that Jewish people held power was a false Nazi idea, not a fact.",
+      "clue": "Think about whether the hatred began with the Nazis."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which best describes the Nuremberg Laws of 1935?",
+      "opts": [
+        "A step in stripping rights that made persecution seem normal",
+        "The start of the mass murder of Jewish people in death camps",
+        "A grant of equal rights to Jewish people under German law",
+        "An end to hatred by separating Jewish and non-Jewish people"
+      ],
+      "why": "The Nuremberg Laws took away citizenship and other rights. They were one step in a gradual process of laws that made persecution seem normal. They were not the start of mass murder: the card says the Holocaust did not begin with mass murder, and hatred, race ideas and laws came first.",
+      "clue": "The card says the Holocaust did not start with mass murder."
+    }
+  },
+  "his-events-holocaust": {
+    "title": "Events of the Holocaust",
+    "card": [
+      [
+        "Kristallnacht",
+        "On 9 and 10 November 1938, Nazi-led mobs attacked Jewish homes, shops and synagogues across Germany and Austria. Many Jewish men were arrested and sent to concentration camps."
+      ],
+      [
+        "Ghettos",
+        "After war began in 1939, the Nazis forced Jewish people in occupied Europe into crowded, walled-off areas called ghettos. Hunger, disease and forced labour killed many people there."
+      ],
+      [
+        "Death camps",
+        "From 1941, the Nazis built camps designed to murder people, such as Auschwitz-Birkenau. Jewish people were taken there by train from across Europe and killed in large numbers."
+      ],
+      "About six million Jews were murdered in the Holocaust. The Nazis also murdered many others, including Roma and Sinti people, disabled people and Soviet prisoners of war."
+    ],
+    "remember": "Persecution grew in stages: Kristallnacht, then ghettos, then death camps.",
+    "a": {
+      "q": "Which sequence puts these events of the Holocaust in the order they began?",
+      "opts": [
+        "Kristallnacht, ghettos, death camps",
+        "Ghettos, Kristallnacht, death camps",
+        "Death camps, ghettos, Kristallnacht",
+        "Kristallnacht, death camps, ghettos"
+      ],
+      "why": "Kristallnacht was in 1938, ghettos were set up after war began in 1939, and death camps were built from 1941. Placing death camps before ghettos is tempting because they are the best-known part, but they came later.",
+      "clue": "Persecution grew step by step, from attacks to mass murder."
+    },
+    "b": {
+      "d": 2,
+      "q": "A family in occupied Poland in 1940 is forced into a walled-off area where many people die of hunger and disease. What is this area called?",
+      "opts": ["A ghetto", "A death camp", "A Kristallnacht", "A concentration zone"],
+      "why": "Ghettos were crowded, walled-off areas where Jewish people were forced to live, and many died from hunger and disease. Death camps were different: they were built to murder people, who were transported there, mostly by train, and killed. Death camps also began from 1941, after this family's story.",
+      "clue": "Was this a place people were taken to be killed, or a place they were forced to live in?"
+    }
+  },
+  "his-experiences-perspectives-holocaust": {
+    "title": "Experiences and perspectives in the Holocaust",
+    "card": [
+      [
+        "Victims",
+        "Jewish people, and others the Nazis targeted such as Roma and disabled people, were persecuted and murdered. Their diaries, letters and survivors' accounts show what they lived through."
+      ],
+      [
+        "Perpetrators",
+        "People who carried out the persecution and killing, from officials and clerks who organised it to police, soldiers and camp guards. Historians study their orders and trial records to ask why they took part, such as belief in Nazi ideas, obeying orders or wanting to fit in."
+      ],
+      [
+        "Bystanders",
+        "People who saw what was happening and did nothing or little. Some were afraid of punishment, some did not care, and some gained, such as by taking Jewish homes or jobs."
+      ],
+      [
+        "Resisters and rescuers",
+        "People who fought back or helped others, often at the risk of death. Jews rose up in the Warsaw ghetto in 1943, and some non-Jews hid Jewish families in their homes."
+      ]
+    ],
+    "remember": "Historians ask what each person lived through and why they made the choices they did.",
+    "a": {
+      "q": "Historians find that some bystanders stayed silent out of fear, some did not care, and some gained. What does this show?",
+      "opts": [
+        "Bystanders acted for a range of different reasons",
+        "Bystanders acted for one reason, which was fear",
+        "Bystanders acted for one reason, which was Nazi belief",
+        "Bystanders took part in the killing, like perpetrators"
+      ],
+      "why": "The question gives three different reasons within one group, which is why historians ask about each person's choices. Fear was one reason, but not the only one. Bystanders did nothing or little, so they did not carry out the killing as perpetrators did.",
+      "clue": "Count how many different reasons the question gives."
+    },
+    "b": {
+      "d": 3,
+      "q": "Hans, a German clerk, typed the lists of Jewish families to be sent to the camps. He later said he was only doing his job. How would a historian describe his role?",
+      "opts": [
+        "A perpetrator, as his work helped carry out the killing",
+        "A bystander, as he never harmed anyone with his own hands",
+        "A victim, as he was made to do the job against his will",
+        "A rescuer, as he could warn families before they were taken"
+      ],
+      "why": "Officials and clerks who organised the persecution are perpetrators, because their work made the killing possible. Hans did not kill anyone himself, but he took part rather than only watching, so he was not a bystander.",
+      "clue": "Think about what his lists were used for."
+    }
+  },
+  "his-qing-china-west": {
+    "title": "Qing China and the West",
+    "card": [
+      "In the 1700s China was ruled by the Qing dynasty. It was large, rich and powerful, and it made goods that people overseas wanted, such as tea, silk and porcelain.",
+      "European merchants wanted to buy these goods. The Qing government did not want its trade controlled by foreigners, so it set the terms.",
+      "From 1757, European traders were limited to one port, Canton (now Guangzhou). They could trade only at certain times and with merchants approved by the Chinese government.",
+      "The Qing court saw little it needed from the West. Europeans had few goods China wanted, so they paid mostly in silver."
+    ],
+    "remember": "Qing China set the rules of trade because it was strong and wanted little from Europe.",
+    "a": {
+      "q": "Why did Qing China limit European traders to the port of Canton?",
+      "opts": [
+        "It wanted to control trade on its own terms",
+        "It was too weak to defend its other ports",
+        "It had no goods that Europeans wanted to buy",
+        "It was at war with the European countries"
+      ],
+      "why": "China was strong and wealthy, so it could set the terms of trade and keep foreign merchants in one place. The idea that China was weak is tempting but wrong: in the 1700s it was powerful, and Europeans wanted its tea and silk.",
+      "clue": "Think about who held the power in the 1700s."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1793 a British envoy asked the Qing emperor for wider trade. The emperor replied that China had all it needed and had no use for British goods. What does this show?",
+      "opts": [
+        "The Qing saw little need to trade with the West",
+        "The Qing feared Britain's army and navy",
+        "The Qing needed British goods to stay rich",
+        "The Qing wanted trade open at every port"
+      ],
+      "why": "The emperor's reply shows a state that felt self-sufficient and saw little it needed from Europe. Fear of Britain is tempting, but the card shows China was strong and in control of trade at this time.",
+      "clue": "Look at what the emperor says China already has."
+    }
+  },
+  "his-opium-wars": {
+    "title": "The Opium Wars",
+    "card": [
+      "British traders sold opium, grown in India, to buyers in China. Many Chinese people became addicted, and silver flowed out of China to pay for the drug.",
+      "The Qing government banned the opium trade. In 1839 an official, Lin Zexu, seized and destroyed a large stock of British opium at Canton.",
+      "Britain sent warships to keep the trade open and won the First Opium War (1839 to 1842). Fighting alongside France, it won a second war (1856 to 1860) to gain more access to China.",
+      "The peace treaties were called unequal because China was forced to sign them. China gave Hong Kong to Britain, opened more ports to foreign trade and paid money to Britain."
+    ],
+    "remember": "Britain fought to keep selling opium, and the forced treaties took Hong Kong and opened Chinese ports.",
+    "a": {
+      "q": "Why did Britain go to war with China in 1839?",
+      "opts": [
+        "To protect its opium trade after China tried to stop it",
+        "To end the opium trade that was harming Chinese people",
+        "To take back silver that China owed to British banks",
+        "To help the Qing government fight a rebellion at home"
+      ],
+      "why": "China had banned opium and destroyed British stocks, so Britain used force to keep the trade open. Britain did not try to end the trade. It was the seller, and it fought to keep selling.",
+      "clue": "Think about who was selling the opium and who wanted to stop it."
+    },
+    "b": {
+      "d": 2,
+      "q": "After the First Opium War, the Qing government signed a treaty that gave Hong Kong to Britain and opened more ports to foreign traders. Why do historians call such treaties unequal?",
+      "opts": [
+        "China was forced to sign them after losing a war",
+        "China gained little from them but chose to sign",
+        "Britain had to give up land and ports in exchange",
+        "Both sides lost territory and trading rights equally"
+      ],
+      "why": "The treaties followed a British victory, so China signed under force and gave up land and ports. Having to accept the terms is what made them unequal, not a free bargain between equals.",
+      "clue": "Ask whether China was free to refuse the terms."
+    }
+  },
+  "his-fall-qing": {
+    "title": "The fall of the Qing",
+    "card": [
+      "By the mid-1800s the Qing dynasty was weak. Foreign powers pressed it for trade and land, and it lost wars it could not win.",
+      "Revolts at home added to the strain. The Taiping Rebellion, which began in 1850, was a huge revolt that killed many millions of people.",
+      "Many Chinese came to blame the Qing for China's weakness. The Qing rulers were Manchu, not from the Han majority, and this added to the anger.",
+      "In 1911 a revolution broke out and the last emperor gave up the throne in 1912. This ended over 2,000 years of rule by emperors. China became a republic, a state led by a government and not by a monarch."
+    ],
+    "remember": "Pressure from abroad and revolts at home weakened the Qing, and the 1911 revolution replaced the emperor with a republic.",
+    "a": {
+      "q": "Which change did the 1911 revolution bring to China?",
+      "opts": [
+        "Rule by emperors ended and a republic was set up",
+        "A new emperor took over from a different dynasty",
+        "Foreign powers took direct control of the government",
+        "The Communist Party took power and ruled the country"
+      ],
+      "why": "The revolution ended rule by emperors and made China a republic. It did not simply swap one dynasty for another, which is what had happened in earlier changes of rule.",
+      "clue": "Think about what kind of state China became."
+    },
+    "b": {
+      "d": 3,
+      "q": "A historian argues that the Qing fell in 1911 because of problems that had built up long before. Which fact best supports this?",
+      "opts": [
+        "Decades of revolt had already drained Qing strength",
+        "The Qing had beaten foreign powers in earlier wars",
+        "Han Chinese had long backed their Manchu rulers",
+        "Rule by emperors in China had only just begun"
+      ],
+      "why": "Revolts such as the Taiping Rebellion, from 1850, strained the Qing for decades, so the dynasty was already weak before 1911. The Qing lost its wars with foreign powers rather than winning them, and anger at the Manchu rulers grew rather than support.",
+      "clue": "Which fact describes a problem that wore the Qing down?"
+    }
+  },
+  "his-communist-china": {
+    "title": "Communist China",
+    "card": [
+      [
+        "Civil war",
+        "Mao Zedong's Communist Party fought the Nationalists for control of China and won in 1949. Mao set up the People's Republic of China, and the Nationalists retreated to Taiwan."
+      ],
+      [
+        "Great Leap Forward",
+        "From 1958 Mao pushed farmers into huge communes and set impossible targets for grain and steel. Officials reported harvests far bigger than real ones, the state took too much grain, and tens of millions died in the famine that followed."
+      ],
+      [
+        "Cultural Revolution",
+        "From 1966 Mao urged young Red Guards to attack old ideas and anyone called an enemy of the revolution. Teachers, officials and many others were beaten, jailed or sent to labour on farms, many died, and schools and universities closed for years."
+      ],
+      [
+        "Reform",
+        "Mao died in 1976, and by 1978 Deng Xiaoping led China. From 1978 his market reforms let farmers sell extra crops and people run businesses for profit, and the economy grew fast, but the Communist Party kept full control of government."
+      ]
+    ],
+    "remember": "Mao's campaigns cost millions of lives. From 1978 the economy opened up, but the party kept its grip on power.",
+    "a": {
+      "q": "Why did so many people die during the Great Leap Forward?",
+      "opts": [
+        "False harvest reports let the state take too much grain",
+        "Red Guards shut down farms and attacked the farmers",
+        "The civil war with the Nationalists destroyed the crops",
+        "Market reforms let farmers sell their grain overseas"
+      ],
+      "why": "Officials claimed harvests that did not exist, so the state took grain that villages needed to eat, and famine followed. Red Guards belong to the Cultural Revolution, which began in 1966, after the famine.",
+      "clue": "Think about what happened to the grain that was grown."
+    },
+    "b": {
+      "d": 3,
+      "q": "In the 1980s, Li, a farmer in Sichuan, sells his extra rice at market and opens a small noodle shop. Protests calling for free elections are put down. What does this show about the reforms?",
+      "opts": [
+        "They changed the economy but kept party control",
+        "They brought back the farming communes of 1958",
+        "They ended the Communist Party's rule of China",
+        "They opened up politics but kept the economy closed"
+      ],
+      "why": "Li can sell extra crops and run a business for profit, so the economy has changed. The protests being put down shows the Communist Party still controls government, so the reforms did not end party rule. The last option reverses this: the economy opened, not politics.",
+      "clue": "Look at what Li can do with his rice, then at what happens to the protests."
+    }
+  },
+  "his-opening-japan": {
+    "title": "The opening of Japan",
+    "card": [
+      "From the 1630s, Japan's Tokugawa shoguns (military rulers) strictly limited contact with the outside world. Only a few Dutch and Chinese traders were allowed, at Nagasaki. This near isolation lasted about two centuries.",
+      "In 1853 an American naval commander, Commodore Matthew Perry, sailed warships into Edo Bay. He carried a letter from the US president asking Japan to open its ports to trade.",
+      "Japan's rulers knew that Western ships and guns were far stronger than their own. Fearing defeat, they gave in. In 1854 they signed a treaty opening some ports to American ships, and more treaties with other powers followed.",
+      "The treaties ended Japan's isolation. Many Japanese were angry that the shogun had given way to foreign pressure, and this anger weakened his rule."
+    ],
+    "remember": "Perry's warships in 1853 pressured Japan into opening its ports, ending about two centuries of near isolation.",
+    "a": {
+      "q": "Why did Japan's rulers agree to open their ports after Perry arrived in 1853?",
+      "opts": [
+        "They feared the Western warships were too strong to resist",
+        "They wanted Japan to stop trading with the Dutch and Chinese",
+        "They had already built a modern army and navy of their own",
+        "They were asked politely and had no fear of foreign power"
+      ],
+      "why": "Japan's rulers saw that Western ships and guns were stronger than their own, so they gave in rather than risk defeat. They did not have a modern army yet, so the option about a modern army is wrong.",
+      "clue": "Think about how Japan's military compared with Perry's ships."
+    },
+    "b": {
+      "d": 3,
+      "q": "A student says the shogun's government chose to open Japan freely, with no pressure from outside. Which fact from 1853 to 1854 best shows the student is wrong?",
+      "opts": [
+        "Perry sailed warships into Edo Bay before the treaty",
+        "Dutch and Chinese traders were allowed at Nagasaki",
+        "The 1854 treaty opened only some ports to ships",
+        "Many Japanese were angry at the treaties once signed"
+      ],
+      "why": "Warships arriving before the treaty shows the threat of force behind the request. The Nagasaki trade and the limit to some ports are true, but they do not show pressure. Anger at the treaties came after they were signed, so it does not show how the decision was made.",
+      "clue": "Look for the fact that shows force was present before the signing."
+    }
+  },
+  "his-meiji-restoration": {
+    "title": "The Meiji Restoration",
+    "card": [
+      "In 1868 a group of samurai leaders overthrew the Tokugawa shogunate, the military government that had ruled Japan for over 250 years. They put the young Emperor Meiji at the centre of government. This is called the Meiji Restoration.",
+      "Japan's leaders had seen how Western powers forced it to open its ports. They feared Japan could be weak against them. Their aim was to make Japan strong and wealthy enough to stand up to the West.",
+      "The new government built railways, telegraph lines and factories. It set up schools for children across the country. It also created a modern army with conscription, which meant men could be called up to serve, not just samurai.",
+      "The government copied ideas from Western countries and sent officials abroad to study them. Japan changed very quickly in a few decades."
+    ],
+    "remember": "Meiji leaders modernised Japan on Western models to make it strong against the West.",
+    "a": {
+      "q": "Why did the Meiji government copy Western railways, factories and armies?",
+      "opts": [
+        "To make Japan strong enough to resist Western powers",
+        "To hand control of Japan to Western governments",
+        "To bring back the rule of the Tokugawa shogun",
+        "To end the emperor's role in Japanese government"
+      ],
+      "why": "The leaders had seen Western powers force Japan to open its ports, so they wanted a strong, wealthy country. Copying Western methods was a way to gain that strength, not a way to give up control to the West.",
+      "clue": "Think about what the leaders feared after the ports were opened."
+    },
+    "b": {
+      "d": 2,
+      "q": "Which change shows how the Meiji government built a modern army?",
+      "opts": [
+        "Calling up men for service, not only samurai",
+        "Allowing only samurai to serve as soldiers",
+        "Hiring foreign armies to defend Japan",
+        "Closing Japan's ports to all foreign ships"
+      ],
+      "why": "Conscription meant men from many backgrounds could be called up to serve. Before this, fighting was the work of the samurai class, which is why limiting service to samurai describes the old system, not the new one.",
+      "clue": "The modern army was not just for one class."
+    }
+  },
+  "his-japan-s-expansion": {
+    "title": "Japan's expansion",
+    "card": [
+      "After the Meiji Restoration, Japan built a strong army and navy. It wanted to be treated as an equal by the Western powers and to gain land and resources.",
+      "Japan defeated China in a war in 1894 to 1895. It then defeated Russia in a war in 1904 to 1905, which showed that an Asian power could beat a European one.",
+      "Japan took control of Korea and made it part of its empire in 1910. In 1931 its army invaded Manchuria, a region of north-east China, and Japan set up a state there that it controlled.",
+      "Japan kept pushing into China and Southeast Asia. This growing empire led Japan into World War II."
+    ],
+    "remember": "Japan used its new military strength to win wars and take land, building an empire that led to World War II.",
+    "a": {
+      "q": "Why did Japan's defeat of Russia in 1904 to 1905 matter?",
+      "opts": [
+        "It showed an Asian power could beat a European one",
+        "It showed Western armies were still too strong for Asia",
+        "It ended Japan's plans to gain land and resources",
+        "It made Japan give up its army and navy"
+      ],
+      "why": "Russia was a European power, so Japan's win showed that an Asian power could beat one. It did not show Western armies were too strong, since Japan won, and Japan's empire kept growing after this war rather than ending.",
+      "clue": "Ask which side won, and where each side came from."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1931 Japan's army invaded Manchuria and set up a state it controlled there. Which statement best describes what this shows about Japan?",
+      "opts": [
+        "It was using force to build an empire on the Asian mainland",
+        "It was giving up its army to focus on trade and peace",
+        "It was defending Korea from an attack by Russia",
+        "It was opening its ports to foreign ships for the first time"
+      ],
+      "why": "The invasion of Manchuria, part of China, was an act of expansion by force. It was one step in the empire that led into World War II. Japan did not give up its army, and Korea had already been part of Japan's empire since 1910.",
+      "clue": "Ask whether Manchuria belonged to Japan before 1931."
+    }
+  },
+  "his-postwar-japan": {
+    "title": "Postwar Japan",
+    "card": [
+      "Japan surrendered in 1945 after World War II. Allied forces then occupied the country until 1952. Most of the occupation was led by the United States, under General Douglas MacArthur.",
+      "The occupation brought a new constitution in 1947. It made Japan a democracy, with an elected parliament called the Diet. The emperor stayed, but only as a symbol of the state, without political power.",
+      "Article 9 of the constitution gave up war as a way to settle disputes. Japan agreed not to keep armed forces for war. Later it built Self-Defence Forces, which it describes as being for defence only.",
+      "Japan then rebuilt its industry. From the 1950s its economy grew very fast, helped by exports such as cars and electronics. By the late 1960s it was one of the world's largest economies."
+    ],
+    "remember": "Defeat and occupation led to a democratic, peaceful constitution, and then to rapid economic growth.",
+    "a": {
+      "q": "What did the new Japanese constitution of 1947 do?",
+      "opts": [
+        "It made Japan a democracy and gave up war",
+        "It made the emperor the ruler with full power",
+        "It let the Allies govern Japan permanently",
+        "It built up Japan's army for overseas conquest"
+      ],
+      "why": "The constitution set up an elected parliament and gave the emperor only a symbolic role. Article 9 gave up war as a way to settle disputes. It did not restore the emperor's power, because he became a symbol of the state.",
+      "clue": "Think about who held power and what Article 9 said about war."
+    },
+    "b": {
+      "d": 3,
+      "q": "In the 1960s a visitor to Japan sees new car factories and busy exports. Which statement best explains how this was possible after 1945?",
+      "opts": [
+        "Japan rebuilt its industry and grew by exporting goods",
+        "Japan's army took resources from nearby countries",
+        "The Allies kept Japan under occupation to run its factories",
+        "The emperor ordered the economy to grow by decree"
+      ],
+      "why": "After 1945 Japan rebuilt its industry and from the 1950s grew fast, helped by exports such as cars and electronics. Taking resources by force belongs to the earlier empire, and the occupation ended in 1952. The emperor had only a symbolic role.",
+      "clue": "Check which options fit the years after 1952 and a peaceful constitution."
+    }
+  },
+  "his-coranderrk": {
+    "title": "Coranderrk",
+    "card": [
+      "Coranderrk was an Aboriginal reserve near Healesville in Victoria. It was set up in the 1860s on land that Wurundjeri and other Kulin people had asked for.",
+      "The residents farmed the land and grew crops such as hops. The station earned money from the crops it sold and won praise from many visitors.",
+      "William Barak, a Wurundjeri leader, spoke for the community. Residents wrote petitions and gave evidence to protest when the government tried to reduce the station or close it.",
+      "Coranderrk shows Aboriginal people using farming skills and public protest to resist control and to try to keep their land."
+    ],
+    "remember": "Coranderrk's farmers and leaders, such as William Barak, used petitions to defend their land.",
+    "a": {
+      "q": "Why is Coranderrk an example of Aboriginal resistance?",
+      "opts": [
+        "Its residents petitioned to keep their land",
+        "Its residents left the station to live in towns",
+        "Its residents asked the government to run it",
+        "Its residents sold the land to pay for farming"
+      ],
+      "why": "Barak and the community wrote petitions and gave evidence to protect the station, which is a way of resisting government plans. Leaving or selling the land would have given up what they were trying to keep.",
+      "clue": "Think about what the residents did when the government threatened the station."
+    },
+    "b": {
+      "d": 3,
+      "q": "Imagine an official in the 1880s argues that Coranderrk should be shrunk because its residents cannot farm. Which fact best challenges this claim?",
+      "opts": [
+        "The station earned money from the crops it sold",
+        "Residents wrote petitions to keep the station",
+        "William Barak spoke for the community",
+        "The reserve was on land the Kulin people asked for"
+      ],
+      "why": "The claim is that the residents cannot farm, so the best evidence shows their farming worked: the station grew crops and earned money from selling them. The petitions are tempting because they were resistance, but they show the residents protested, not how well they farmed.",
+      "clue": "The best evidence answers the exact claim being made."
+    }
+  },
+  "his-universal-declaration-human-rights-vic": {
+    "title": "The Universal Declaration of Human Rights",
+    "card": [
+      "The United Nations (UN) was formed in 1945, after the Second World War. Its members wanted to prevent such suffering happening again.",
+      "In 1948 the UN General Assembly adopted the Universal Declaration of Human Rights. It set out rights that belong to every person, in every country.",
+      "Australia was one of eight countries on the committee that drafted the Declaration. Australia's H. V. Evatt was also President of the General Assembly in 1948, which passed it.",
+      "The Declaration is a statement of shared ideals. It is not a treaty, so it does not by itself make a country change its laws."
+    ],
+    "remember": "The 1948 Declaration set out rights for all people. Australia helped draft it, and Evatt led the assembly that passed it.",
+    "a": {
+      "q": "What was the main purpose of the Universal Declaration of Human Rights, adopted in 1948?",
+      "opts": [
+        "To set out rights for every person after the war's suffering",
+        "To make each member country pass new laws straight away",
+        "To list the rights of only the countries that won the war",
+        "To end the Second World War by setting terms of peace"
+      ],
+      "why": "The Declaration followed the suffering of the Second World War and set out rights for every person. It was not a treaty with legal duties, and the war had already ended.",
+      "clue": "Think about what the world had just lived through, and who the rights were for."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom says Australia had to change its laws in 1948 because it helped draft the Declaration. What is wrong with his claim?",
+      "opts": [
+        "It was a statement of ideals, not a treaty forcing new laws",
+        "Australia was not on the committee that drafted it",
+        "It set out rights only for people living in Australia",
+        "It was adopted by Australia alone, not by the United Nations"
+      ],
+      "why": "The Declaration was a shared statement of ideals and did not by itself make any country change its laws. Australia did help draft it and Evatt led the assembly, but that does not turn it into a law.",
+      "clue": "Think about what kind of document the Declaration is."
+    }
+  },
+  "his-technology-living-standards": {
+    "title": "Technology and living standards",
+    "card": [
+      "After 1945, many new products became common in homes in countries like Australia. They included cars, televisions, washing machines, refrigerators and, later, computers.",
+      [
+        "Work",
+        "Machines and appliances cut the time spent on housework. Computers later changed office work, and many jobs came to need new skills."
+      ],
+      [
+        "Shopping",
+        "Cars let families live further from town and shop less often. Refrigerators let them store food for longer. Large stores such as supermarkets and shopping centres grew."
+      ],
+      [
+        "Free time",
+        "Television gave families a new way to spend evenings at home. Cars made it easier to take trips and holidays."
+      ]
+    ],
+    "remember": "New products after 1945 changed how people worked, shopped and spent their free time.",
+    "a": {
+      "q": "In the 1950s, Lena's family in Ballarat buys its first refrigerator. What change to their shopping is most likely?",
+      "opts": [
+        "Fewer trips to the shops, as fresh food keeps longer",
+        "More trips to the shops, as the fridge fills up quickly",
+        "More tinned food, as fresh food spoils in a fridge",
+        "The same trips as before, as a fridge does not keep food"
+      ],
+      "why": "A refrigerator keeps fresh food from spoiling for longer, so the family can buy more at once and shop less often. More trips is the reverse of this: shopping often for fresh food was more common before home refrigeration.",
+      "clue": "Think about what a fridge does to fresh food."
+    },
+    "b": {
+      "d": 2,
+      "q": "After 1945, more families in Melbourne bought a car. Which change to daily life does this best explain?",
+      "opts": [
+        "Families lived further out and drove to large stores",
+        "Families moved closer to town to be near small shops",
+        "Families shopped more often at a nearby corner store",
+        "Families took fewer trips away and stayed home more"
+      ],
+      "why": "Cars let families live further from town, shop less often and drive to large stores such as supermarkets. Moving closer to town or shopping more often at a corner store is the reverse of this, as those habits suit families without a car.",
+      "clue": "What does a car let a family do about distance?"
+    }
+  },
+  "his-health-longer-lives": {
+    "title": "Health and longer lives",
+    "card": [
+      "In the 20th century, people in many countries came to live much longer. Better medicine and public health were two main reasons.",
+      [
+        "Antibiotics",
+        "medicines that treat infections caused by bacteria. Illnesses that once often killed people, such as some lung infections, could now often be cured."
+      ],
+      [
+        "Vaccines",
+        "given to prevent disease before a person is infected. The polio vaccine, used widely from the 1950s, protected children from a disease that could cause paralysis."
+      ],
+      [
+        "Public health",
+        "Clean drinking water, sewage systems and health campaigns lowered the spread of disease. Fewer babies and children died, which helped raise life expectancy."
+      ]
+    ],
+    "remember": "Antibiotics, vaccines and public health helped people live longer in the 20th century.",
+    "a": {
+      "q": "What does a vaccine such as the polio vaccine do?",
+      "opts": [
+        "Protects a person from a disease before they catch it",
+        "Cures a person who already has a bacterial infection",
+        "Cleans the water supply that a town depends on",
+        "Treats a person's symptoms once they are already ill"
+      ],
+      "why": "A vaccine prepares the body so a person is protected before infection. Curing a bacterial infection is the job of antibiotics, which is the tempting wrong option.",
+      "clue": "Vaccines work before a person gets sick."
+    },
+    "b": {
+      "d": 3,
+      "q": "A town builds a sewage system and a clean water supply, and fewer children die of disease. What best explains the fall in deaths?",
+      "opts": [
+        "Disease spread less, so fewer children caught it",
+        "Antibiotics cured more children of bacterial infections",
+        "Vaccines protected more children before infection",
+        "Hospitals gave sick children faster treatment"
+      ],
+      "why": "Clean water and sewage are public health measures. They lower the spread of disease, so fewer children are infected in the first place. Antibiotics and vaccines also saved lives, but the town changed its water and sewage, not its medicines.",
+      "clue": "Look at what the town actually changed."
+    }
+  },
+  "his-life-postwar-migrants": {
+    "title": "Life for postwar migrants",
+    "card": [
+      "Many postwar migrants first stayed in migrant reception centres. Bonegilla, near Albury-Wodonga in Victoria, was the largest. It opened in 1947 and housed many thousands of newcomers.",
+      "Conditions in the camps were often basic. People lived in huts, shared rooms and bathrooms, and ate in large mess halls. Some camps were hot in summer and cold in winter.",
+      "Many migrants had agreed to work where the government sent them for about two years. Many men worked on big projects such as the Snowy Mountains Scheme in New South Wales, which built dams, tunnels and power stations. Many women were sent to hospitals, homes or factories.",
+      "Migrants could face prejudice. Some were called names, and some had trouble getting jobs that matched their skills. Many still settled, built communities and changed Australian life."
+    ],
+    "remember": "Many postwar migrants began in camps and hard work, and some met prejudice, but many settled and shaped Australia.",
+    "a": {
+      "q": "What was Bonegilla in Victoria?",
+      "opts": [
+        "A migrant reception centre where newcomers first stayed",
+        "A dam built by migrants in the Snowy Mountains",
+        "A ship that carried assisted British migrants",
+        "A prison camp for people seen as a danger"
+      ],
+      "why": "Bonegilla was the largest migrant reception centre, where many new arrivals lived first. The Snowy Mountains Scheme was a separate project that employed many migrants, so it is not the same thing.",
+      "clue": "Think about where migrants lived when they first arrived."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1952, Josef, a trained doctor from Latvia, has finished his work contract. He can only find work as a factory hand, and some workmates mock his accent. What part of the migrant experience does this show?",
+      "opts": [
+        "Prejudice, such as name-calling and skills not being used",
+        "Basic conditions, such as shared huts and mess halls",
+        "A two-year agreement to work where the government chose",
+        "Big projects, such as dams built for hydro-electricity"
+      ],
+      "why": "Josef is mocked and cannot get work that matches his training, which are both forms of prejudice migrants could face. The two-year agreement is tempting, but his contract has ended, so he is no longer being sent to a job by the government.",
+      "clue": "Look at what happens after his contract is over."
+    }
+  },
+  "his-refugees-from-vietnam-vic": {
+    "title": "Refugees from Vietnam",
+    "card": [
+      "The Vietnam War ended in 1975 when communist North Vietnam took over South Vietnam. Many people linked to the old government, or afraid of the new one, fled.",
+      [
+        "Refugee",
+        "a person who flees their country because of a real fear of harm and cannot safely go back. Many Vietnamese escaped in small, crowded boats, and many waited in camps in nearby countries such as Malaysia and Thailand."
+      ],
+      "The first boat reached Darwin in 1976. About 2,000 people came straight to Australia by boat, but far more were chosen from the camps and flown here, tens of thousands by the mid-1980s.",
+      "Their arrival tested Australians' attitudes: some feared them, while the government and many others welcomed them. As Vietnamese Australians built communities and businesses, such as in Footscray and Springvale, more Australians came to accept them."
+    ],
+    "remember": "Most Vietnamese refugees came from camps, some by boat. Early fears gave way to wider acceptance as their communities grew.",
+    "a": {
+      "q": "What made many of the Vietnamese who left after 1975 refugees?",
+      "opts": [
+        "They fled a real fear of harm and could not go back",
+        "They wanted higher pay and a better life abroad",
+        "They were chosen to fill jobs Australia needed",
+        "They reached another country by boat, not plane"
+      ],
+      "why": "A refugee flees a real fear of harm and cannot safely return, as many did after the communist takeover. Wanting higher pay makes someone a migrant, not a refugee. Travelling by boat does not decide it: most were flown to Australia from camps.",
+      "clue": "Think about why they left, not how they travelled."
+    },
+    "b": {
+      "d": 3,
+      "q": "A 1977 letter to a newspaper warns about refugee boats. In 1995 the Vietnamese shops and restaurants of a Melbourne suburb are popular with locals. What do the two sources suggest?",
+      "opts": [
+        "Attitudes were tested, then changed over time",
+        "Attitudes stayed fearful even as communities grew",
+        "Most refugees came by boat and settled in Darwin",
+        "Australians welcomed the refugees from the very start"
+      ],
+      "why": "The letter shows early fear, and the busy shops show a community that grew and was accepted, so attitudes were tested and then changed. They were not welcomed by everyone from the start, and the popular shops show fear did not stay the same.",
+      "clue": "Compare the mood in 1977 with the mood in 1995."
+    }
+  },
+  "his-rise-environmental-concern": {
+    "title": "The rise of environmental concern",
+    "card": [
+      "In 1962 the American biologist Rachel Carson published Silent Spring. It warned that pesticides such as DDT were harming birds, other wildlife and the wider environment.",
+      "The book was widely read. It made many ordinary people ask whether human activity was damaging nature, and it led people to question how chemicals were used.",
+      "Worry about pollution of air, water and land kept growing in the 1960s. In 1970 the first Earth Day was held in the United States, with millions of people taking part in events and rallies.",
+      "Over the same years, new environment groups formed and existing ones gained members. They pushed governments and businesses to protect the natural world."
+    ],
+    "remember": "Silent Spring in 1962 and rising pollution worries led to Earth Day in 1970 and new environment groups.",
+    "a": {
+      "q": "What was the main warning of Rachel Carson's book Silent Spring?",
+      "opts": [
+        "Pesticides were harming wildlife and the environment",
+        "Factories should be moved away from large cities",
+        "Forests were being cleared faster than they could regrow",
+        "Nuclear weapons tests were poisoning the oceans"
+      ],
+      "why": "Carson argued that pesticides such as DDT were harming birds and other wildlife. The other options are real environmental worries, but they were not the central warning of this book.",
+      "clue": "Think about the chemicals used on farms and crops."
+    },
+    "b": {
+      "d": 2,
+      "q": "In 1971 Priya, a student in Melbourne, joins a new environment group after reading about pollution and the first Earth Day. Which change in thinking does her choice best show?",
+      "opts": [
+        "Rising public worry about harm to the natural world",
+        "Rising public trust in farm chemicals such as DDT",
+        "Rising public belief that pollution did little harm",
+        "Falling public interest in how people affect nature"
+      ],
+      "why": "Priya's choice shows that more ordinary people were worried about pollution and willing to act, as with the new groups of this period. Rising trust in DDT is wrong, because Silent Spring had led people to question how chemicals were used.",
+      "clue": "Why would people be joining new groups at this time?"
+    }
+  },
+  "his-campaigns-save-tasmanian-rivers": {
+    "title": "Campaigns to save Tasmanian rivers",
+    "card": [
+      [
+        "Lake Pedder",
+        "In 1972 the Tasmanian government flooded Lake Pedder to make a larger lake for hydro-electric power. Many people were angry that a wild place had been lost."
+      ],
+      "The loss spurred activists to form groups, such as the Tasmanian Wilderness Society, to save other wild places. Their next target was a plan to dam the Franklin River.",
+      [
+        "Franklin blockade",
+        "In 1982 and 1983, protesters blocked the dam works by camping on the river and getting in the way of machines. Many were arrested. Their campaign drew national attention."
+      ],
+      [
+        "High Court",
+        "In 1983 the High Court of Australia ruled that the federal government could stop the dam. The Franklin River was saved."
+      ]
+    ],
+    "remember": "Lake Pedder was lost, which spurred activists. The Franklin blockade and the 1983 High Court ruling then stopped the dam.",
+    "a": {
+      "q": "How did the flooding of Lake Pedder affect the later campaign to save the Franklin River?",
+      "opts": [
+        "It spurred activists to organise to save other wild places",
+        "It showed the public that dams were always a good idea",
+        "It led the High Court to ban all dams in Tasmania",
+        "It ended the work of environment groups in Tasmania"
+      ],
+      "why": "The loss of Lake Pedder made many people angry and led activists to form groups to protect other places, such as the Franklin. The High Court did not ban all dams: its 1983 ruling was about the Franklin dam.",
+      "clue": "Think about how people felt after losing the lake."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dana says the Franklin Dam was stopped only because protesters blocked the machines. Which reply best fits the history?",
+      "opts": [
+        "The blockade won attention, but a court ruling stopped it",
+        "The blockade stopped it, and the court ruling came first",
+        "The court ruling stopped it, and the blockade did nothing",
+        "The Tasmanian government dropped it before any protest"
+      ],
+      "why": "The blockade drew national attention and many arrests, but it was the 1983 High Court ruling that let the federal government stop the dam. The reply saying the court ruling came first has the order wrong, as the blockade came before the ruling. The reply saying the blockade did nothing ignores the national attention it won.",
+      "clue": "Which event made the legal decision to stop the dam?"
+    }
+  },
+  "his-green-bans": {
+    "title": "Green bans",
+    "card": [
+      "A green ban was a refusal by workers to build on a site because the project would harm the environment or heritage. It began in Sydney in the early 1970s.",
+      "The bans were put in place by the New South Wales Builders Labourers' Federation, a union of building workers. Its members chose to refuse work, so the developer could not build.",
+      "Residents asked the union for help. One of the first bans protected Kelly's Bush, an area of bushland on the Sydney Harbour shore, from being cleared for houses. Later bans helped save historic buildings and neighbourhoods such as The Rocks.",
+      "Green bans were unusual because workers and residents joined forces. Workers used their power over building work to protect places, not to win better pay."
+    ],
+    "remember": "Green bans: builders refused to work on projects that would destroy bushland or heritage, at residents' request.",
+    "a": {
+      "q": "What was a green ban in 1970s Sydney?",
+      "opts": [
+        "Workers refusing to build on a site to protect the place",
+        "A law that stopped developers from clearing any bushland",
+        "A protest by residents who blocked a site with their bodies",
+        "A union strike to win higher pay for building workers"
+      ],
+      "why": "A green ban was a refusal by building workers to take on a project that would harm bushland or heritage. A strike for higher pay is the tempting wrong answer, because the workers were acting to protect places and not to win better pay.",
+      "clue": "Think about who stopped the work and why."
+    },
+    "b": {
+      "d": 3,
+      "q": "Residents of a Sydney suburb in 1972 feared a developer would clear their local bushland. Why could a green ban stop the project?",
+      "opts": [
+        "Builders agreed not to work on it, so it could not go ahead",
+        "The government passed a law that cancelled the project",
+        "The developer was fined by the residents' action group",
+        "Builders were paid more to leave the site alone"
+      ],
+      "why": "A green ban worked because the building workers themselves refused to do the work, so the developer could not build. It was not a law or a fine, because the union acted by its own choice. The residents asked for help but did not stop the work themselves.",
+      "clue": "Who would have had to do the building?"
+    }
+  },
+  "his-climate-change-as-global": {
+    "title": "Climate change as a global issue",
+    "card": [
+      "From the 1980s, scientists warned that burning fossil fuels such as coal, oil and gas was adding greenhouse gases to the air. They said this was warming the Earth.",
+      "Warming does not stop at borders. Emissions from one country affect the climate of all, so cutting them needs countries to act together.",
+      [
+        "Kyoto Protocol",
+        "agreed in 1997. Most countries joined, but only wealthy countries were set emission targets. Developing countries had no targets."
+      ],
+      [
+        "Paris Agreement",
+        "agreed in 2015. Nearly every country joined, and each set its own goal for cutting emissions. The aim is to limit warming."
+      ]
+    ],
+    "remember": "Climate change crosses borders, so countries made agreements to cut emissions.",
+    "a": {
+      "q": "Why did climate change lead to international agreements?",
+      "opts": [
+        "Emissions affect every country, so action had to be shared",
+        "Each country's emissions only harm that country's climate",
+        "Scientists had not yet found a link to fossil fuels",
+        "Only wealthy countries were producing greenhouse gases"
+      ],
+      "why": "Greenhouse gases mix in the air and warm the whole Earth, so one country cannot fix the problem alone. Saying the harm stays inside each country is wrong, because emissions affect everyone.",
+      "clue": "Does warming stop at a national border?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A student says the Paris Agreement was the same as the Kyoto Protocol. Which fact shows the student is wrong?",
+      "opts": [
+        "Paris had nearly all countries set their own emission goals",
+        "Paris set targets only for wealthy countries",
+        "Paris was agreed before scientists warned of warming",
+        "Paris was the first agreement to mention emissions"
+      ],
+      "why": "Under Paris in 2015, nearly every country set its own goal. Kyoto in 1997 set targets only for wealthy countries. Paris was not the first agreement on emissions, because Kyoto came first.",
+      "clue": "Think about which countries had emission targets under each agreement."
+    }
+  },
+  "his-evaluating-sources-as-evidence": {
+    "title": "Evaluating sources as evidence",
+    "card": [
+      "A historical source is anything made or left behind that gives information about the past, such as a letter, photograph, poster or diary. A source is not evidence until a historian has asked questions about it.",
+      "Ask who made it, why, when and for whom. A maker who saw the event, and recorded it soon after, may know more. A source made to persuade an audience may leave things out.",
+      "Check it against other sources. If several independent sources agree, the claim is more reliable. If they disagree, the historian must work out why.",
+      "A biased or one-sided source can still be useful evidence. A propaganda poster is a poor record of the facts, but it shows what its makers wanted people to believe."
+    ],
+    "remember": "Question a source before you trust it: who, why, when, for whom, and do others agree?",
+    "a": {
+      "q": "Why do historians ask why a source was made before using it as evidence?",
+      "opts": [
+        "Its purpose can shape what it includes or leaves out",
+        "A persuasive purpose means it can be set aside",
+        "Its purpose decides whether it counts as a source",
+        "Its purpose tells the historian when it was made"
+      ],
+      "why": "A source made to persuade or to defend someone may stress some things and skip others, so a historian must allow for this. That does not mean it can be set aside: a one-sided source can still be useful evidence once its purpose is understood.",
+      "clue": "Think about what a maker trying to persuade might choose to leave out."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1916, a government in Australia issued a poster urging men to enlist. A student wants to use it as evidence. Which use is best supported by the poster alone?",
+      "opts": [
+        "It shows what the government wanted people to believe",
+        "It proves how most men felt about the war",
+        "It proves how many men enlisted that year",
+        "It is useless because it was made to persuade"
+      ],
+      "why": "A poster made to persuade is good evidence of what its makers wanted people to think. It cannot prove how most men felt or how many enlisted without other sources to back it up. Its purpose does not make it useless, because a one-sided source can still be useful.",
+      "clue": "A source made to persuade can still tell you about the persuaders."
+    }
+  },
+  "his-perspectives-interpretations": {
+    "title": "Perspectives and interpretations",
+    "card": [
+      [
+        "Perspective",
+        "how a person saw events at the time. It is shaped by who they were, such as their age, job, beliefs and what they stood to gain or lose."
+      ],
+      [
+        "Interpretation",
+        "a historian's explanation of the past, written later. It is built from many sources and tries to explain what happened and why."
+      ],
+      "Historians can reach different interpretations of the same events. They may use different sources, give some evidence more weight, or ask different questions.",
+      "Disagreement does not mean one historian is careless. Interpretations can be compared by asking what evidence each one uses and how well it supports the claim."
+    ],
+    "remember": "A perspective is a view from the time. An interpretation is a later explanation, and historians can differ.",
+    "a": {
+      "q": "Which of these is an interpretation of the past?",
+      "opts": [
+        "A historian's 2015 book arguing why a strike began",
+        "A miner's letter describing the strike as it happened",
+        "A newspaper report written on the day of the strike",
+        "A worker's diary entry about her wages that week"
+      ],
+      "why": "An interpretation is a historian's later explanation, built from many sources. The letter, report and diary were made at the time, so they show the perspectives of people who lived through it.",
+      "clue": "Look for the one written later by someone explaining the events."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two historians study the same gold rush town. One argues it was mostly peaceful. The other argues it was often violent. What best explains this?",
+      "opts": [
+        "They may use different sources or weigh evidence differently",
+        "One of them is probably being careless with the evidence",
+        "One is giving a perspective and the other an interpretation",
+        "The past cannot be known, so neither view can be checked"
+      ],
+      "why": "Historians can reach different interpretations by choosing different sources, giving some evidence more weight, or asking different questions. Disagreement does not mean one of them is careless. Both historians wrote later, so both views are interpretations, and they can be checked by comparing the evidence each one uses.",
+      "clue": "Think about how historians build an interpretation from sources."
+    }
+  },
+  "his-short-term-long-term-vic": {
+    "title": "Short-term and long-term causes",
+    "card": [
+      [
+        "Long-term cause",
+        "a condition that builds up over years or decades and makes an event more likely. It sets the scene but does not make the event happen on its own."
+      ],
+      [
+        "Short-term cause",
+        "a more recent event that sparks the outcome, often called a trigger. It has its effect because the long-term causes are already in place."
+      ],
+      [
+        "Consequences",
+        "what follows from an event. Some are intended, which means the people involved wanted them. Others are unintended, which means nobody planned them."
+      ],
+      "Example: the assassination of Archduke Franz Ferdinand in June 1914 was a trigger for the First World War. Tensions between the great powers had built up for many years before it."
+    ],
+    "remember": "Long-term causes build the pressure. Triggers set the event off. Consequences can be planned or not.",
+    "a": {
+      "q": "Which statement best describes a trigger of a historical event?",
+      "opts": [
+        "A recent event that sparks an outcome already made likely",
+        "A slow change that builds up over many decades",
+        "A result of the event that nobody planned",
+        "A reason the event was intended by its leaders"
+      ],
+      "why": "A trigger is a short-term cause that sparks an event when long-term conditions are already in place. A slow build-up over decades describes a long-term cause, which is the most tempting wrong option.",
+      "clue": "Think about what sets an event off, not what prepares for it."
+    },
+    "b": {
+      "d": 3,
+      "q": "For years, a town in Victoria suffered falling crop prices and rising debts. Then a bank suddenly called in its loans and farmers marched in protest. Which is the best description of the bank's decision?",
+      "opts": [
+        "A short-term cause, which sparked the protest",
+        "A long-term cause, which built up over years",
+        "An unintended consequence of the protest",
+        "An intended consequence of the protest"
+      ],
+      "why": "The bank's decision was recent and sudden, and it sparked the protest because the long-term problems were already there. The falling prices and debts are the long-term causes. The decision came before the protest, so it cannot be a consequence of it.",
+      "clue": "Ask whether the decision came before or after the protest, and whether it built up slowly or happened suddenly."
+    }
+  },
+  "his-judging-historical-significance-vic": {
+    "title": "Judging historical significance",
+    "card": [
+      "Not every event in the past is equally significant. Historians judge significance, which means deciding how much an event matters, using set questions.",
+      [
+        "Breadth",
+        "how many people were affected. An event that changed life for a whole nation is broader than one that touched a single village."
+      ],
+      [
+        "Depth",
+        "how strongly people were affected. A change to people's rights, work or survival is deeper than a small change to daily habits."
+      ],
+      [
+        "Duration and relevance",
+        "Duration is how long the effects lasted, whether decades or only a year. Relevance is what the event helps explain about today, such as a law, a belief or a conflict that still exists."
+      ]
+    ],
+    "remember": "Ask how many, how deeply, how long, and what it explains about today.",
+    "a": {
+      "q": "A historian argues an event was significant because it took away a group's right to vote, not just their daily habits. Which measure is she using?",
+      "opts": ["Depth", "Breadth", "Duration", "Relevance"],
+      "why": "Losing the right to vote is a strong change to people's lives, so she is judging depth. Breadth is tempting, but breadth is about how many people were affected, and she says nothing about numbers.",
+      "clue": "Is she talking about numbers, time, today, or how big the change to lives was?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A new law in 1901 changed the rights of one small group of workers in a single town, but the changes it set up shaped their industry for over 80 years. Which judgement fits best?",
+      "opts": [
+        "Narrow in breadth but long in duration",
+        "Broad in breadth but short in duration",
+        "Narrow in breadth and short in duration",
+        "Broad in breadth and long in duration"
+      ],
+      "why": "Only one small group in a single town was affected, so the breadth is narrow. The effects lasted over 80 years, so the duration is long. The tempting answer is broad and long, but a single town's workers is not a wide number of people.",
+      "clue": "Check the number of people and the length of time separately."
+    }
+  },
+  "his-writing-historical-argument": {
+    "title": "Writing a historical argument",
+    "card": [
+      [
+        "Contention",
+        "A contention is the main claim of your argument. It answers the question with a clear position, such as \"The gold rushes changed Victoria more than any other event of the 1850s\"."
+      ],
+      [
+        "Evidence",
+        "Each point in your argument needs evidence from sources, such as a quote, a statistic or a described event. Explain how the evidence supports your claim."
+      ],
+      [
+        "Other views",
+        "A strong argument deals with other views. It admits a different view exists, then explains why the evidence supports your contention more."
+      ],
+      [
+        "Citing",
+        "Cite your sources so a reader can find them and check your evidence. Give the author or creator, the title and the date."
+      ]
+    ],
+    "remember": "State a clear claim, back it with sourced evidence, answer other views and cite your sources.",
+    "a": {
+      "q": "Which sentence is a clear contention for an essay on why Federation happened in 1901?",
+      "opts": [
+        "Fear of foreign powers and trade drove Federation",
+        "Federation happened in Australia in 1901",
+        "Many historians have written about Federation",
+        "The colonies had different tariffs and railway gauges"
+      ],
+      "why": "A contention takes a position that can be argued and supported with evidence. The statement that Federation happened in 1901 is a fact that nobody disputes, so it gives the essay nothing to argue.",
+      "clue": "Which one takes a position that needs evidence to support it?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Tariq argues that railways did more than gold to grow Victoria's economy. A classmate says gold mattered most. What should Tariq do to deal with this other view in his essay?",
+      "opts": [
+        "Explain why his evidence favours railways over gold",
+        "Leave out the gold view so his essay stays focused",
+        "Change his contention to say that gold mattered most",
+        "Add more quotes that agree with him and say nothing of gold"
+      ],
+      "why": "Dealing with other views means naming them and showing why the evidence favours your own claim. Ignoring the gold view leaves the argument open to challenge, even though it keeps the essay shorter.",
+      "clue": "A strong argument faces the other view instead of avoiding it."
+    }
   }
 };

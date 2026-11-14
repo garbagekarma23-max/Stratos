@@ -1,0 +1,264 @@
+{
+ "id": "geo-river-landforms",
+ "title": "River landforms",
+ "brief": "9804b99b0f79",
+ "shortlist": [
+  [
+   "geo-landscapes-landforms",
+   0.246
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:48Z new, match",
+  "2026-11-12T12:44:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:00Z write: done",
+  "2026-11-12T15:35:06Z check: flagged",
+  "2026-11-12T15:59:42Z fix: suggested",
+  "2026-11-12T17:07:11Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.00696,
+  "check": 0.01345,
+  "fix": 0.02174,
+  "recheck": 0.0083
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point only distinguishes landforms from landscapes and does not teach how rivers shape V-shaped valleys, waterfalls, meanders, oxbow lakes, floodplains or deltas, so the river landforms point needs a new card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "River landforms",
+  "card": [
+   [
+    "Near the source",
+    "The river runs steeply downhill and cuts down into the land. This forms V-shaped valleys. Where it drops over a band of hard rock, it can form a waterfall."
+   ],
+   [
+    "Middle course",
+    "The river slopes more gently and swings from side to side. This forms bends called meanders. If a meander is cut off from the river, it can be left as a curved oxbow lake."
+   ],
+   [
+    "Near the mouth",
+    "The river slows down and drops the sediment (soil and sand) it carries. A floodplain is flat land beside the river built up this way. A delta is formed where the river meets the sea and spreads out its sediment."
+   ],
+   "The shape of a river's landforms depends on where along its path they form. Steep land near the source cuts down, and gentler land further on bends, spreads and builds."
+  ],
+  "remember": "Near the source rivers cut down. In the middle they bend. Near the mouth they slow and build.",
+  "a": {
+   "q": "Which landform is a river most likely to build where it slows down near the sea?",
+   "opts": [
+    "A delta",
+    "A V-shaped valley",
+    "A waterfall",
+    "A meander"
+   ],
+   "why": "Near the sea the river slows and drops its sediment, which builds up a delta. A V-shaped valley is tempting, but it is cut by a fast river near its source.",
+   "clue": "Think about what a slow river does with the sediment it carries."
+  },
+  "b": {
+   "d": 3,
+   "q": "Hana walks along a river in a wide, gently sloping area. The river swings in large loops, and one old loop is a curved lake beside it. Which part of the river is she most likely in?",
+   "opts": [
+    "The middle course",
+    "Near the source",
+    "Near the mouth",
+    "At a waterfall"
+   ],
+   "why": "Large bends called meanders and a cut-off oxbow lake form in the middle course, where the slope is gentle. Near the mouth is tempting because the land is flat, but there the river slows and builds floodplains and deltas.",
+   "clue": "Which part of the river forms meanders and oxbow lakes?"
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A labelled diagram of a river from source to mouth. Near the source: V-shaped valley and waterfall. Middle course: meander and oxbow lake. Near the mouth: floodplain and delta.",
+    "why": "It shows where along a river each landform forms."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A delta",
+   "also_right": []
+  },
+  "b": {
+   "best": "The middle course",
+   "also_right": [
+    "Near the mouth"
+   ]
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Large meanders and oxbow lakes are also typical of a river's lower course, and many geography texts place oxbow lakes there. Hana's wide, gently sloping area with large loops also fits the lower course, so 'Near the mouth' can be defended. The why's claim that the mouth only builds floodplains and deltas oversimplifies this."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "Question b's answer, the middle course, matches the card. In real rivers, though, large meanders and oxbow lakes are common in the lower course too, so 'Near the mouth' is defensible. Consider making the scenario clearly mid-course, or allowing for this."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker says “Near the mouth” could also be right.",
+  "Question b, fact: Large meanders and oxbow lakes are also typical of a river's lower course, and many geography texts place oxbow lakes there. Hana's wide, gently sloping area with large loops also fits the lower course, so 'Near the mouth' can be defended. The why's claim that the mouth only builds floodplains and deltas oversimplifies this."
+ ],
+ "proposal": {
+  "title": "River landforms",
+  "card": [
+   [
+    "Near the source",
+    "The river runs steeply downhill and cuts down into the land. This forms V-shaped valleys. Where it drops over a band of hard rock, it can form a waterfall."
+   ],
+   [
+    "Middle course",
+    "The river slopes more gently and swings from side to side. This forms bends called meanders, which can grow larger further downstream. If a meander is cut off from the river, it can be left as a curved oxbow lake."
+   ],
+   [
+    "Near the mouth",
+    "The river slows down and drops the sediment (soil and sand) it carries. When it floods, it spreads sediment over the flat land beside it, building a floodplain. A delta forms where the river meets the sea and spreads out its sediment."
+   ],
+   "The shape of a river's landforms depends on where along its path they form. Steep land near the source cuts down, and gentler land further on bends, spreads and builds."
+  ],
+  "remember": "Near the source rivers cut down. Further on they bend. Near the mouth they slow and build.",
+  "a": {
+   "q": "Which landform is a river most likely to build where it slows down near the sea?",
+   "opts": [
+    "A delta",
+    "A V-shaped valley",
+    "A waterfall",
+    "A meander"
+   ],
+   "why": "Near the sea the river slows and drops its sediment, which builds up a delta. A V-shaped valley is tempting, but it is cut by a fast river near its source.",
+   "clue": "Think about what a slow river does with the sediment it carries."
+  },
+  "b": {
+   "d": 3,
+   "q": "After heavy rain, a river spills over its banks onto the flat farmland beside it. When the water drains away, a layer of mud is left on the fields. Which landform is this building?",
+   "opts": [
+    "A floodplain",
+    "A delta",
+    "An oxbow lake",
+    "A V-shaped valley"
+   ],
+   "why": "When a river floods, it spreads sediment over the flat land beside it, and this builds a floodplain. A delta is tempting because it is also built from sediment, but a delta forms where the river meets the sea, not on fields beside the river.",
+   "clue": "Where is the mud being left: beside the river or where it meets the sea?"
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A labelled diagram of a river from source to mouth. Near the source: V-shaped valley and waterfall. Middle course: meander and oxbow lake. Near the mouth: floodplain and delta.",
+    "why": "It shows where along a river each landform forms."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:11Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A delta",
+    "also_right": []
+   },
+   "b": {
+    "best": "A floodplain",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:11Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Large meanders and oxbow lakes are also typical of a river's lower course, and many geography texts place oxbow lakes there. Hana's wide, gently sloping area with large loops also fits the lower course, so 'Near the mouth' can be defended. The why's claim that the mouth only builds floodplains and deltas oversimplifies this."
+   }
+  ],
+  "flags": [
+   "Question b: the checker says “Near the mouth” could also be right.",
+   "Question b, fact: Large meanders and oxbow lakes are also typical of a river's lower course, and many geography texts place oxbow lakes there. Hana's wide, gently sloping area with large loops also fits the lower course, so 'Near the mouth' can be defended. The why's claim that the mouth only builds floodplains and deltas oversimplifies this."
+  ]
+ },
+ "final": {
+  "title": "River landforms",
+  "card": [
+   [
+    "Near the source",
+    "The river runs steeply downhill and cuts down into the land. This forms V-shaped valleys. Where it drops over a band of hard rock, it can form a waterfall."
+   ],
+   [
+    "Middle course",
+    "The river slopes more gently and swings from side to side. This forms bends called meanders, which can grow larger further downstream. If a meander is cut off from the river, it can be left as a curved oxbow lake."
+   ],
+   [
+    "Near the mouth",
+    "The river slows down and drops the sediment (soil and sand) it carries. When it floods, it spreads sediment over the flat land beside it, building a floodplain. A delta forms where the river meets the sea and spreads out its sediment."
+   ],
+   "The shape of a river's landforms depends on where along its path they form. Steep land near the source cuts down, and gentler land further on bends, spreads and builds."
+  ],
+  "remember": "Near the source rivers cut down. Further on they bend. Near the mouth they slow and build.",
+  "a": {
+   "q": "Which landform is a river most likely to build where it slows down near the sea?",
+   "opts": [
+    "A delta",
+    "A V-shaped valley",
+    "A waterfall",
+    "A meander"
+   ],
+   "why": "Near the sea the river slows and drops its sediment, which builds up a delta. A V-shaped valley is tempting, but it is cut by a fast river near its source.",
+   "clue": "Think about what a slow river does with the sediment it carries."
+  },
+  "b": {
+   "d": 3,
+   "q": "After heavy rain, a river spills over its banks onto the flat farmland beside it. When the water drains away, a layer of mud is left on the fields. Which landform is this building?",
+   "opts": [
+    "A floodplain",
+    "A delta",
+    "An oxbow lake",
+    "A V-shaped valley"
+   ],
+   "why": "When a river floods, it spreads sediment over the flat land beside it, and this builds a floodplain. A delta is tempting because it is also built from sediment, but a delta forms where the river meets the sea, not on fields beside the river.",
+   "clue": "Where is the mud being left: beside the river or where it meets the sea?"
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A labelled diagram of a river from source to mouth. Near the source: V-shaped valley and waterfall. Middle course: meander and oxbow lake. Near the mouth: floodplain and delta.",
+    "why": "It shows where along a river each landform forms."
+   }
+  ]
+ },
+ "cleared_by": "recheck"
+}

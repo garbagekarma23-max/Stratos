@@ -1,0 +1,287 @@
+{
+ "id": "sci-building-scientific-argument",
+ "title": "Building a scientific argument",
+ "brief": "c85a526cd53d",
+ "shortlist": [
+  [
+   "sci-evaluating-scientific-claim",
+   0.364
+  ],
+  [
+   "ecb-building-argument-with-evidence",
+   0.327
+  ],
+  [
+   "eng-arguments-evidence",
+   0.319
+  ],
+  [
+   "his-judging-historian-s-argument",
+   0.244
+  ],
+  [
+   "eng-logic-reasoning-flaws",
+   0.234
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:56Z new, match",
+  "2026-11-12T12:44:23Z match: Claude Haiku 5.5 may adapt ecb-building-argument-with-evidence, but is not highly sure, so to the Opus match check",
+  "2026-11-12T15:15:54Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:26:08Z write: done",
+  "2026-11-12T15:35:12Z check: flagged",
+  "2026-11-12T15:42:26Z fix: suggested",
+  "2026-11-12T17:07:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00038,
+  "confirm": 0.00993,
+  "write": 0.00619,
+  "check": 0.01262,
+  "fix": 0.0205,
+  "recheck": 0.00801
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "ecb-building-argument-with-evidence",
+  "changes": [
+   "Use the science term 'claim' in place of 'position', as the Victorian Science syllabus frames arguments around claims.",
+   "Replace the council, skate park and school examples with scientific examples, such as an experiment or a dataset from a named study.",
+   "Name scientific sources, such as a journal article, a repeated experiment or a published dataset, in place of council reports and surveys.",
+   "Add a step explaining how each piece of evidence supports the claim, so the card covers the reasoning the brief asks for."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same claim, several named evidence sources, and reply-to-counter-evidence structure at the right depth, but its economics and council examples and its 'position' terminology need changing for Victorian Year 9-10 Science.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, the Economics and Business card on building an argument, uses a position-and-reasons structure with civic examples, and the science claim card covers judging claims rather than building them, so a science claim–evidence–reasoning–counter-evidence card would need a different step and new contexts.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Building a scientific argument",
+  "card": [
+   [
+    "Claim",
+    "a statement that answers a question, such as \"Compost helps tomato plants grow taller\". The rest of the argument exists to support it."
+   ],
+   [
+    "Evidence",
+    "data and observations that back the claim. Evidence from several sources is stronger than one result, because it is less likely to be a fluke."
+   ],
+   [
+    "Reasoning",
+    "explains how the evidence links to the claim. It says why the data supports the claim, not just what the data is."
+   ],
+   [
+    "Counter-evidence",
+    "evidence that points the other way. A strong argument deals with it, for example by explaining it or by limiting the claim."
+   ]
+  ],
+  "remember": "A strong argument joins a claim, evidence from several sources, reasoning and a response to counter-evidence.",
+  "a": {
+   "q": "Which part of an argument explains why the data supports the claim?",
+   "opts": [
+    "The reasoning",
+    "The claim",
+    "The counter-evidence",
+    "The sample size"
+   ],
+   "why": "Reasoning is the step that links the evidence to the claim by saying why the data supports it. The evidence is the data itself, so it does not do this job. The claim is only the statement being argued.",
+   "clue": "Which part answers the question \"so what does the data show?\""
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya claims that a new fertiliser makes lettuces grow bigger. Her own trial supports this, but a local farm's trial found no effect. Which response makes her argument strongest?",
+   "opts": [
+    "Compare both trials and explain the different results",
+    "Leave out the farm's trial and repeat her own",
+    "State the claim again with more confidence",
+    "Say the farm's trial must be wrong"
+   ],
+   "why": "A strong argument deals with evidence that points the other way, for example by comparing methods and explaining why results differ. Leaving it out or dismissing it without a reason makes the argument weaker, even if her own trial is repeated.",
+   "clue": "What should an argument do with evidence that disagrees with it?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The reasoning",
+   "also_right": []
+  },
+  "b": {
+   "best": "Compare both trials and explain the different results",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The clue \"so what does the data show?\" sounds like a description of the evidence (what the data is), which the card separates from reasoning (why the data supports the claim). It could steer students away from the right answer. A clearer clue would be something like \"Which part says why the data backs the claim?\""
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) explains that the evidence does not do this job, but 'evidence' is not one of the options. It never addresses the counter-evidence or sample size options."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct and the card is accurate. The clue for question a reads like a description of evidence rather than reasoning and could mislead, and the why for a discusses an option ('evidence') that is not offered."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The clue \"so what does the data show?\" sounds like a description of the evidence (what the data is), which the card separates from reasoning (why the data supports the claim). It could steer students away from the right answer. A clearer clue would be something like \"Which part says why the data backs the claim?\"",
+  "Question a, other: Why (a) explains that the evidence does not do this job, but 'evidence' is not one of the options. It never addresses the counter-evidence or sample size options."
+ ],
+ "proposal": {
+  "title": "Building a scientific argument",
+  "card": [
+   [
+    "Claim",
+    "a statement that answers a question, such as \"Compost helps tomato plants grow taller\". The rest of the argument exists to support it."
+   ],
+   [
+    "Evidence",
+    "data and observations that back the claim. Evidence from several sources is stronger than one result, because it is less likely to be a fluke."
+   ],
+   [
+    "Reasoning",
+    "explains how the evidence links to the claim. It says why the data supports the claim, not just what the data is."
+   ],
+   [
+    "Counter-evidence",
+    "evidence that points the other way. A strong argument deals with it, for example by explaining it or by limiting the claim."
+   ]
+  ],
+  "remember": "A strong argument joins a claim, evidence from several sources, reasoning and a response to counter-evidence.",
+  "a": {
+   "q": "Sam claims compost helps tomato plants grow taller. He writes: \"Compost adds nutrients such as nitrogen, which plants use to build new leaves and stems.\" Which part of his argument is this sentence?",
+   "opts": [
+    "The reasoning",
+    "The evidence",
+    "The claim",
+    "The counter-evidence"
+   ],
+   "why": "The sentence explains why compost could make the plants taller, so it links the evidence to the claim: that is reasoning. Evidence would be the data itself, such as the measured heights of the plants. Counter-evidence would point against the claim, and the claim is the statement that compost helps.",
+   "clue": "Does the sentence give data, or say why data would back the claim?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya claims that a new fertiliser makes lettuces grow bigger. Her own trial supports this, but a local farm's trial found no effect. Which response makes her argument strongest?",
+   "opts": [
+    "Compare both trials and explain why results differ",
+    "Leave out the farm's trial and repeat her own",
+    "State her claim again with more confidence",
+    "Say the farm's trial must have been done wrong"
+   ],
+   "why": "A strong argument deals with evidence that points the other way, for example by comparing methods and explaining why results differ. Leaving it out or dismissing it without a reason makes the argument weaker, even if her own trial is repeated.",
+   "clue": "What should an argument do with evidence that disagrees with it?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The reasoning",
+    "also_right": []
+   },
+   "b": {
+    "best": "Compare both trials and explain why results differ",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The clue \"so what does the data show?\" sounds like a description of the evidence (what the data is), which the card separates from reasoning (why the data supports the claim). It could steer students away from the right answer. A clearer clue would be something like \"Which part says why the data backs the claim?\""
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) explains that the evidence does not do this job, but 'evidence' is not one of the options. It never addresses the counter-evidence or sample size options."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The clue \"so what does the data show?\" sounds like a description of the evidence (what the data is), which the card separates from reasoning (why the data supports the claim). It could steer students away from the right answer. A clearer clue would be something like \"Which part says why the data backs the claim?\"",
+   "Question a, other: Why (a) explains that the evidence does not do this job, but 'evidence' is not one of the options. It never addresses the counter-evidence or sample size options."
+  ]
+ },
+ "final": {
+  "title": "Building a scientific argument",
+  "card": [
+   [
+    "Claim",
+    "a statement that answers a question, such as \"Compost helps tomato plants grow taller\". The rest of the argument exists to support it."
+   ],
+   [
+    "Evidence",
+    "data and observations that back the claim. Evidence from several sources is stronger than one result, because it is less likely to be a fluke."
+   ],
+   [
+    "Reasoning",
+    "explains how the evidence links to the claim. It says why the data supports the claim, not just what the data is."
+   ],
+   [
+    "Counter-evidence",
+    "evidence that points the other way. A strong argument deals with it, for example by explaining it or by limiting the claim."
+   ]
+  ],
+  "remember": "A strong argument joins a claim, evidence from several sources, reasoning and a response to counter-evidence.",
+  "a": {
+   "q": "Sam claims compost helps tomato plants grow taller. He writes: \"Compost adds nutrients such as nitrogen, which plants use to build new leaves and stems.\" Which part of his argument is this sentence?",
+   "opts": [
+    "The reasoning",
+    "The evidence",
+    "The claim",
+    "The counter-evidence"
+   ],
+   "why": "The sentence explains why compost could make the plants taller, so it links the evidence to the claim: that is reasoning. Evidence would be the data itself, such as the measured heights of the plants. Counter-evidence would point against the claim, and the claim is the statement that compost helps.",
+   "clue": "Does the sentence give data, or say why data would back the claim?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya claims that a new fertiliser makes lettuces grow bigger. Her own trial supports this, but a local farm's trial found no effect. Which response makes her argument strongest?",
+   "opts": [
+    "Compare both trials and explain why results differ",
+    "Leave out the farm's trial and repeat her own",
+    "State her claim again with more confidence",
+    "Say the farm's trial must have been done wrong"
+   ],
+   "why": "A strong argument deals with evidence that points the other way, for example by comparing methods and explaining why results differ. Leaving it out or dismissing it without a reason makes the argument weaker, even if her own trial is repeated.",
+   "clue": "What should an argument do with evidence that disagrees with it?"
+  }
+ },
+ "cleared_by": "recheck"
+}

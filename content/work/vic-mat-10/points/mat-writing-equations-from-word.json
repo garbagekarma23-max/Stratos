@@ -1,0 +1,225 @@
+{
+ "id": "mat-writing-equations-from-word",
+ "title": "Writing equations from word problems",
+ "brief": "9e5b3fb08ec6",
+ "shortlist": [
+  [
+   "mat-writing-equations-from-words",
+   0.473
+  ],
+  [
+   "mat-simultaneous-equations-by-substitution",
+   0.428
+  ],
+  [
+   "mat-simultaneous-equations-by-graphing",
+   0.406
+  ],
+  [
+   "mat-simultaneous-equations-by-elimination",
+   0.362
+  ],
+  [
+   "mat-simultaneous-equations",
+   0.334
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:48Z write: failed the content check, writing again",
+  "2026-11-12T15:26:04Z write: done",
+  "2026-11-12T15:35:09Z check: flagged",
+  "2026-11-12T15:42:24Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "write": 0.01507,
+  "check": 0.00927,
+  "fix": 0.02053,
+  "recheck": 0.008
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-writing-equations-from-words, covers naming the unknown, building the equation and solving it, but it does not teach the brief's final step of checking that the answer makes sense in the situation, so adding that step would be more than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Writing equations from word problems",
+  "card": [
+   "Start by naming the unknown. Pick a letter and say what it stands for, such as \\(n\\) being the number of tickets sold.",
+   "Turn the facts into an equation. Words like total, is and equals point to the \\(=\\) sign. Look for what stays fixed and what changes.",
+   "Example: Mia hires a bike for a $12 fee plus $8 for each hour. She pays $44 in all. Let \\(h\\) be the hours. Then \\(12 + 8h = 44\\), so \\(8h = 32\\) and \\(h = 4\\).",
+   "Check the answer in the story. Four hours costs \\(12 + 8 \\times 4 = 44\\), which is right. The answer must also make sense, so hours cannot be negative."
+  ],
+  "remember": "Name the unknown, write the equation, solve it, then check it in the story.",
+  "a": {
+   "q": "Sam is paid $15 to start a job, plus $9 for each hour. He earns $60. With \\(h\\) as the hours, which equation fits?",
+   "opts": [
+    "\\(15 + 9h = 60\\)",
+    "\\(9 + 15h = 60\\)",
+    "\\(15h + 9h = 60\\)",
+    "\\(15 \\times 9h = 60\\)"
+   ],
+   "why": "The $15 is paid once, so it is added. The $9 is paid for every hour, so it is multiplied by \\(h\\). The option \\(9 + 15h = 60\\) swaps which amount is fixed and which is per hour.",
+   "clue": "Which amount is paid once, and which is paid again each hour?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is 4 years older than twice her cousin's age. Priya is 26. Let \\(c\\) be her cousin's age. What is \\(c\\)?",
+   "opts": [
+    "11",
+    "15",
+    "22",
+    "13"
+   ],
+   "why": "Twice the cousin's age plus 4 gives \\(2c + 4 = 26\\), so \\(2c = 22\\) and \\(c = 11\\). The answer 13 comes from writing \\(2(c + 4) = 26\\), which adds the 4 before doubling.",
+   "clue": "Double the age first, then add 4."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(15 + 9h = 60\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "11",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says the distractor 13 comes from writing \\(2(c + 4) = 26\\). That equation gives \\(c + 4 = 13\\), so \\(c = 9\\), not 13. The 13 comes from halving 26 and ignoring the 4. The explanation of the error is wrong."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one correct answer: \\(15 + 9h = 60\\) and 11. The why for (b) misexplains the distractor 13: \\(2(c + 4) = 26\\) gives \\(c = 9\\), and 13 really comes from \\(26 \\div 2\\) with the 4 ignored."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The why says the distractor 13 comes from writing \\(2(c + 4) = 26\\). That equation gives \\(c + 4 = 13\\), so \\(c = 9\\), not 13. The 13 comes from halving 26 and ignoring the 4. The explanation of the error is wrong."
+ ],
+ "proposal": {
+  "title": "Writing equations from word problems",
+  "card": [
+   "Start by naming the unknown. Pick a letter and say what it stands for, such as \\(n\\) being the number of tickets sold.",
+   "Turn the facts into an equation. Words like is and total give the \\(=\\) sign, twice means multiply by 2, and more than or older than means add.",
+   "Example: Mia hires a bike for a $12 fee plus $8 for each hour. She pays $44 in all. Let \\(h\\) be the hours. Then \\(12 + 8h = 44\\), so \\(8h = 32\\) and \\(h = 4\\).",
+   "Check the answer in the story. Four hours costs \\(12 + 8 \\times 4 = 44\\), which is right. The answer must also make sense, so hours cannot be negative."
+  ],
+  "remember": "Name the unknown, write the equation, solve it, then check it in the story.",
+  "a": {
+   "q": "Sam is paid $15 to start a job, plus $9 for each hour. He earns $60. With \\(h\\) as the hours, which equation fits?",
+   "opts": [
+    "\\(15 + 9h = 60\\)",
+    "\\(9 + 15h = 60\\)",
+    "\\(15h + 9h = 60\\)",
+    "\\(15 \\times 9h = 60\\)"
+   ],
+   "why": "The $15 is paid once, so it is added. The $9 is paid for every hour, so it is multiplied by \\(h\\). The option \\(9 + 15h = 60\\) swaps which amount is fixed and which is per hour.",
+   "clue": "Which amount is paid once, and which is paid again each hour?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is 4 years older than twice her cousin's age. Priya is 26. Let \\(c\\) be her cousin's age. What is \\(c\\)?",
+   "opts": [
+    "11",
+    "15",
+    "22",
+    "9"
+   ],
+   "why": "Twice the cousin's age plus 4 gives \\(2c + 4 = 26\\), so \\(2c = 22\\) and \\(c = 11\\). Check: \\(2 \\times 11 + 4 = 26\\). The answer 9 comes from writing \\(2(c + 4) = 26\\), which adds the 4 before doubling.",
+   "clue": "Double the age first, then add 4."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(15 + 9h = 60\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "11",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says the distractor 13 comes from writing \\(2(c + 4) = 26\\). That equation gives \\(c + 4 = 13\\), so \\(c = 9\\), not 13. The 13 comes from halving 26 and ignoring the 4. The explanation of the error is wrong."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The why says the distractor 13 comes from writing \\(2(c + 4) = 26\\). That equation gives \\(c + 4 = 13\\), so \\(c = 9\\), not 13. The 13 comes from halving 26 and ignoring the 4. The explanation of the error is wrong."
+  ]
+ },
+ "final": {
+  "title": "Writing equations from word problems",
+  "card": [
+   "Start by naming the unknown. Pick a letter and say what it stands for, such as \\(n\\) being the number of tickets sold.",
+   "Turn the facts into an equation. Words like is and total give the \\(=\\) sign, twice means multiply by 2, and more than or older than means add.",
+   "Example: Mia hires a bike for a $12 fee plus $8 for each hour. She pays $44 in all. Let \\(h\\) be the hours. Then \\(12 + 8h = 44\\), so \\(8h = 32\\) and \\(h = 4\\).",
+   "Check the answer in the story. Four hours costs \\(12 + 8 \\times 4 = 44\\), which is right. The answer must also make sense, so hours cannot be negative."
+  ],
+  "remember": "Name the unknown, write the equation, solve it, then check it in the story.",
+  "a": {
+   "q": "Sam is paid $15 to start a job, plus $9 for each hour. He earns $60. With \\(h\\) as the hours, which equation fits?",
+   "opts": [
+    "\\(15 + 9h = 60\\)",
+    "\\(9 + 15h = 60\\)",
+    "\\(15h + 9h = 60\\)",
+    "\\(15 \\times 9h = 60\\)"
+   ],
+   "why": "The $15 is paid once, so it is added. The $9 is paid for every hour, so it is multiplied by \\(h\\). The option \\(9 + 15h = 60\\) swaps which amount is fixed and which is per hour.",
+   "clue": "Which amount is paid once, and which is paid again each hour?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is 4 years older than twice her cousin's age. Priya is 26. Let \\(c\\) be her cousin's age. What is \\(c\\)?",
+   "opts": [
+    "11",
+    "15",
+    "22",
+    "9"
+   ],
+   "why": "Twice the cousin's age plus 4 gives \\(2c + 4 = 26\\), so \\(2c = 22\\) and \\(c = 11\\). Check: \\(2 \\times 11 + 4 = 26\\). The answer 9 comes from writing \\(2(c + 4) = 26\\), which adds the 4 before doubling.",
+   "clue": "Double the age first, then add 4."
+  }
+ },
+ "cleared_by": "recheck"
+}

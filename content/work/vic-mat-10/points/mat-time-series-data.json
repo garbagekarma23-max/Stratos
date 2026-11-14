@@ -1,0 +1,475 @@
+{
+ "id": "mat-time-series-data",
+ "title": "Time series data",
+ "brief": "4286ea0d93b6",
+ "shortlist": [
+  [
+   "mat-types-data-2",
+   0.312
+  ],
+  [
+   "mat-types-data",
+   0.301
+  ],
+  [
+   "mat-features-time-series",
+   0.266
+  ],
+  [
+   "mat-collecting-data",
+   0.235
+  ],
+  [
+   "mat-reading-graphs-real-data",
+   0.229
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:48Z write: done",
+  "2026-11-12T15:26:03Z check: flagged",
+  "2026-11-12T15:35:09Z fix: suggested",
+  "2026-11-12T16:19:53Z autoreview: picked as a spot check. It would have been cleared with the fix (a other)",
+  "2026-11-13T12:13:15Z claude-code review: left for you (it chose to leave it)",
+  "2026-11-13T15:25:55Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.01304,
+  "check": 0.01571,
+  "fix": 0.0233
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches time series features: the closest, mat-features-time-series, is in Units 3 and 4 and covers trend, seasonality, cycles and outliers, which is a broader and different idea from the Year 10 point on reading time series plots, so it is safer to create a new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Time series data",
+  "card": [
+   "Time series data is a set of values recorded at regular times, such as each month or each year. Time goes on the horizontal axis, and the points are joined by lines.",
+   [
+    "Trend",
+    "the long-term direction of the data, such as a general rise or fall over several years. Small ups and downs along the way do not change the trend."
+   ],
+   [
+    "Seasonal pattern",
+    "a rise and fall that repeats at about the same time each cycle, such as higher sales every December."
+   ],
+   [
+    "Unusual point",
+    "a value far from the pattern around it, such as one month with a sharp spike or drop. It may have a special cause, so it is worth checking."
+   ]
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A line graph of monthly ice cream sales over two years. Sales peak in January and dip in July each year, so the pattern repeats. Year 2 peaks are a little higher than year 1. One point in month 17 is a sharp drop.",
+    "x": {
+     "min": 0,
+     "max": 25,
+     "label": "Month",
+     "step": 5
+    },
+    "y": {
+     "min": 0,
+     "max": 100,
+     "label": "Sales",
+     "step": 20
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "s",
+      "points": [
+       [
+        1,
+        80
+       ],
+       [
+        4,
+        50
+       ],
+       [
+        7,
+        20
+       ],
+       [
+        10,
+        50
+       ],
+       [
+        13,
+        85
+       ],
+       [
+        16,
+        55
+       ],
+       [
+        17,
+        10
+       ],
+       [
+        19,
+        25
+       ],
+       [
+        22,
+        55
+       ],
+       [
+        25,
+        90
+       ]
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       17,
+       10
+      ],
+      "label": "Unusual",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Read a time series for the overall direction, the repeating cycle and any point that breaks the pattern.",
+  "a": {
+   "q": "A beach café's weekly takings are high every summer and low every winter, year after year. What is this pattern called?",
+   "opts": [
+    "A seasonal pattern",
+    "An upward trend",
+    "An unusual point",
+    "A downward trend"
+   ],
+   "why": "The rise and fall repeats at about the same time each year, so it is a seasonal pattern. A trend is a long-term direction, and this data keeps returning to where it started.",
+   "clue": "Does the rise and fall repeat each cycle?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev records the number of visitors to a museum each year from 2015 to 2024. Visitors rise by about 500 each year, except 2020, which is much lower. What is the best description?",
+   "opts": [
+    "Upward trend, with 2020 an unusual point",
+    "Seasonal pattern, with 2020 the peak",
+    "Downward trend, with 2020 the start",
+    "No trend, because 2020 is lower"
+   ],
+   "why": "Most years rise steadily, so the trend is upward. The 2020 value is far from the pattern around it, so it is an unusual point. One odd year does not cancel the trend.",
+   "clue": "Does one odd year change the long-term direction?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A seasonal pattern",
+   "also_right": []
+  },
+  "b": {
+   "best": "Upward trend, with 2020 an unusual point",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says the data 'keeps returning to where it started', which the question never states. It also suggests a seasonal pattern rules out a trend, but the card's own graph shows both (year 2 peaks are higher)."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, graph and both questions are correct. One minor issue: why (a) claims the data returns to where it started, which the question doesn't say, and it implies seasonal data cannot also have a trend."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) says the data 'keeps returning to where it started', which the question never states. It also suggests a seasonal pattern rules out a trend, but the card's own graph shows both (year 2 peaks are higher)."
+ ],
+ "proposal": {
+  "title": "Time series data",
+  "card": [
+   "Time series data is a set of values recorded at regular times, such as each month or each year. Time goes on the horizontal axis, and the points are joined by lines.",
+   [
+    "Trend",
+    "the long-term direction of the data, such as a general rise or fall over several years. Small ups and downs along the way do not change the trend."
+   ],
+   [
+    "Seasonal pattern",
+    "a rise and fall that repeats at about the same time each cycle, such as higher sales every December. A series can show a seasonal pattern and a trend at once."
+   ],
+   [
+    "Unusual point",
+    "a value far from the pattern around it, such as one month with a sharp spike or drop. It may have a special cause, so it is worth checking."
+   ]
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A line graph of monthly ice cream sales over two years. Sales peak in January and dip in July each year, so the pattern repeats. Year 2 peaks are a little higher than year 1, so there is also a slight upward trend. One point in month 17 is a sharp drop, labelled unusual.",
+    "x": {
+     "min": 0,
+     "max": 27,
+     "label": "Month",
+     "step": 5
+    },
+    "y": {
+     "min": 0,
+     "max": 100,
+     "label": "Sales",
+     "step": 20
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "s",
+      "points": [
+       [
+        1,
+        80
+       ],
+       [
+        4,
+        50
+       ],
+       [
+        7,
+        20
+       ],
+       [
+        10,
+        50
+       ],
+       [
+        13,
+        85
+       ],
+       [
+        16,
+        55
+       ],
+       [
+        17,
+        10
+       ],
+       [
+        19,
+        25
+       ],
+       [
+        22,
+        55
+       ],
+       [
+        25,
+        90
+       ]
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       17,
+       10
+      ],
+      "on": [
+       "s"
+      ],
+      "label": "Unusual",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Read a time series for the overall direction, the repeating cycle and any point that breaks the pattern.",
+  "a": {
+   "q": "A beach café's weekly takings are high every summer and low every winter, at about the same levels each year. What is this pattern called?",
+   "opts": [
+    "A seasonal pattern",
+    "An upward trend",
+    "An unusual point",
+    "A downward trend"
+   ],
+   "why": "The rise and fall repeats at about the same time each year, so it is a seasonal pattern. The levels stay about the same from year to year, so there is no long-term rise or fall and no trend here, though a series can show both.",
+   "clue": "Does the rise and fall repeat each cycle?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev records the number of visitors to a museum each year from 2015 to 2024. Visitors rise by about 500 each year, except 2020, which is much lower. What is the best description?",
+   "opts": [
+    "Upward trend, with 2020 an unusual point",
+    "Seasonal pattern, with 2020 the peak",
+    "Downward trend, with 2020 the start",
+    "No trend, because 2020 is lower"
+   ],
+   "why": "Most years rise steadily, so the trend is upward. The 2020 value is far from the pattern around it, so it is an unusual point. One odd year does not cancel the trend.",
+   "clue": "Does one odd year change the long-term direction?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:53Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says the data 'keeps returning to where it started', which the question never states. It also suggests a seasonal pattern rules out a trend, but the card's own graph shows both (year 2 peaks are higher)."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) says the data 'keeps returning to where it started', which the question never states. It also suggests a seasonal pattern rules out a trend, but the card's own graph shows both (year 2 peaks are higher)."
+  ],
+  "owner": "fix"
+ },
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "leave",
+   "sure": "medium",
+   "reason": "The fix mends question a's why and the graph matches its alt, but question b's right option is clearly the longest by the pipeline's rule (40 characters against 31 to 36). The owner should decide whether that gives it away.",
+   "item": "52d6d07bd374ac3a",
+   "result": "left"
+  }
+ ],
+ "final": {
+  "title": "Time series data",
+  "card": [
+   "Time series data is a set of values recorded at regular times, such as each month or each year. Time goes on the horizontal axis, and the points are joined by lines.",
+   [
+    "Trend",
+    "the long-term direction of the data, such as a general rise or fall over several years. Small ups and downs along the way do not change the trend."
+   ],
+   [
+    "Seasonal pattern",
+    "a rise and fall that repeats at about the same time each cycle, such as higher sales every December. A series can show a seasonal pattern and a trend at once."
+   ],
+   [
+    "Unusual point",
+    "a value far from the pattern around it, such as one month with a sharp spike or drop. It may have a special cause, so it is worth checking."
+   ]
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A line graph of monthly ice cream sales over two years. Sales peak in January and dip in July each year, so the pattern repeats. Year 2 peaks are a little higher than year 1, so there is also a slight upward trend. One point in month 17 is a sharp drop, labelled unusual.",
+    "x": {
+     "min": 0,
+     "max": 27,
+     "label": "Month",
+     "step": 5
+    },
+    "y": {
+     "min": 0,
+     "max": 100,
+     "label": "Sales",
+     "step": 20
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "s",
+      "points": [
+       [
+        1,
+        80
+       ],
+       [
+        4,
+        50
+       ],
+       [
+        7,
+        20
+       ],
+       [
+        10,
+        50
+       ],
+       [
+        13,
+        85
+       ],
+       [
+        16,
+        55
+       ],
+       [
+        17,
+        10
+       ],
+       [
+        19,
+        25
+       ],
+       [
+        22,
+        55
+       ],
+       [
+        25,
+        90
+       ]
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       17,
+       10
+      ],
+      "on": [
+       "s"
+      ],
+      "label": "Unusual",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Read a time series for the overall direction, the repeating cycle and any point that breaks the pattern.",
+  "a": {
+   "q": "A beach café's weekly takings are high every summer and low every winter, at about the same levels each year. What is this pattern called?",
+   "opts": [
+    "A seasonal pattern",
+    "An upward trend",
+    "An unusual point",
+    "A downward trend"
+   ],
+   "why": "The rise and fall repeats at about the same time each year, so it is a seasonal pattern. The levels stay about the same from year to year, so there is no long-term rise or fall and no trend here, though a series can show both.",
+   "clue": "Does the rise and fall repeat each cycle?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev records the number of visitors to a museum each year from 2015 to 2024. Visitors rise by about 500 each year, except 2020, which is much lower. What is the best description?",
+   "opts": [
+    "Upward trend, with 2020 an unusual point",
+    "Seasonal pattern, with 2020 the peak",
+    "Downward trend, with 2020 the start",
+    "No trend, because 2020 is lower"
+   ],
+   "why": "Most years rise steadily, so the trend is upward. The 2020 value is far from the pattern around it, so it is an unusual point. One odd year does not cancel the trend.",
+   "clue": "Does one odd year change the long-term direction?"
+  }
+ },
+ "cleared_by": "owner"
+}

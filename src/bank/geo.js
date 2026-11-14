@@ -7343,5 +7343,4356 @@ MADE_BANKS.geo = {
       "why": "When shops take back old phones, more can be reused or recycled, so fewer may be dumped in landfill where they harm land and water. Selling more new phones would add to waste, not cut it, and the law does not ban anyone from buying phones.",
       "clue": "Think about where an old phone goes once a shop takes it."
     }
+  },
+  "geo-water-cycle-2-vic": {
+    "title": "The water cycle",
+    "card": [
+      "The water cycle is the movement of water between the oceans, the air and the land. Water changes between liquid, gas (water vapour) and ice as it moves.",
+      [
+        "Evaporation",
+        "liquid water turns into water vapour, mostly from oceans, lakes and rivers. Transpiration is water vapour released from the leaves of plants."
+      ],
+      [
+        "Condensation",
+        "water vapour cools and turns back into tiny drops of liquid water, which form clouds. Precipitation is water falling from clouds as rain, hail or snow."
+      ],
+      [
+        "Runoff and infiltration",
+        "runoff is water flowing over the land surface towards rivers, lakes and the sea. Infiltration is water soaking down into the soil and rock."
+      ]
+    ],
+    "remember": "Water keeps moving: up as vapour, down as precipitation, then across or into the land.",
+    "a": {
+      "q": "On a warm day, water vapour rises from a dam, cools high in the air and forms clouds. Which two processes are these, in order?",
+      "opts": [
+        "Evaporation, then condensation",
+        "Condensation, then evaporation",
+        "Transpiration, then infiltration",
+        "Precipitation, then runoff"
+      ],
+      "why": "Liquid water turning into vapour is evaporation. The vapour then cools and turns back into liquid drops, which is condensation. Precipitation is not first here, because it is the water falling from the clouds afterwards.",
+      "clue": "First liquid becomes gas. Then the gas cools."
+    },
+    "b": {
+      "d": 3,
+      "q": "Heavy rain falls on a paddock near Bendigo. Some water then flows over the surface into a creek and some soaks into the soil. What are these two flows called?",
+      "opts": [
+        "Runoff and infiltration",
+        "Precipitation and infiltration",
+        "Transpiration and runoff",
+        "Runoff and evaporation"
+      ],
+      "why": "Water moving over the surface into the creek is runoff. Water soaking down into the soil is infiltration. The rain falling from the clouds is precipitation, but once it lands and flows across the paddock it is runoff.",
+      "clue": "One flow stays on top of the ground. The other goes down into it."
+    }
+  },
+  "geo-where-earth-s-water": {
+    "title": "Where the Earth's water is stored",
+    "card": [
+      "Almost all of the Earth's water is salty, and most of it is in the oceans. Only a small share is fresh water.",
+      "Most fresh water is not easy to use. A large part is locked up as ice in glaciers and ice sheets.",
+      "Much of the rest is held underground in aquifers, which are layers of rock or sand that hold water in their gaps.",
+      "Only a tiny share of fresh water is in rivers and lakes, yet people use these stores a great deal."
+    ],
+    "remember": "Most water is salty ocean. Most fresh water is ice or underground. Rivers and lakes hold very little.",
+    "a": {
+      "q": "Which store holds the largest amount of the Earth's water?",
+      "opts": ["The oceans", "Glaciers and ice sheets", "Aquifers underground", "Rivers and lakes"],
+      "why": "Almost all of the Earth's water is salty and in the oceans. Ice holds most of the fresh water, but that is only a small share of all water, so it cannot be the largest store.",
+      "clue": "Think of all water, not only fresh water."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya says rivers and lakes must hold most of the Earth's fresh water because people see and use them so often. What is wrong with her idea?",
+      "opts": [
+        "Most fresh water is in ice or underground",
+        "Most fresh water is stored in the oceans",
+        "Rivers and lakes hold salty water only",
+        "Most fresh water is in the air as vapour"
+      ],
+      "why": "People use rivers and lakes a lot, but they hold only a tiny share of fresh water. Most fresh water is locked in ice or held in aquifers. Being easy to see does not mean a store is large.",
+      "clue": "Seeing a store often does not tell you how big it is."
+    }
+  },
+  "geo-flows-water-connect-places": {
+    "title": "How flows of water connect places",
+    "card": [
+      "Rivers and groundwater carry water from one place to another. Rivers flow downhill from upstream to downstream, and groundwater moves slowly through soil and rock.",
+      "Moving water also carries other things: sediment (soil and sand), nutrients and pollution. These can travel a long way from where they started.",
+      "So what happens upstream can change places downstream. Taking water, clearing land or adding pollution upstream can change the amount and quality of water further down.",
+      "The Murray-Darling Basin is an example. Its rivers join many towns, farms and wetlands across several states, so the use of water in one part can affect people and ecosystems in another."
+    ],
+    "remember": "Water flows carry more than water, so upstream actions can affect downstream places.",
+    "a": {
+      "q": "Why can a farm upstream affect a town downstream on the same river?",
+      "opts": [
+        "The river carries water and anything in it downstream",
+        "The river carries only water, so the farm has no effect",
+        "Groundwater always moves upstream from the town",
+        "Rivers stop flowing once they pass a farm"
+      ],
+      "why": "A river moves water, sediment, nutrients and pollution from upstream to downstream. If the farm takes water or adds pollution, the town can get less water or dirtier water. The option about carrying only water is wrong twice: rivers carry more than water, and taking water upstream would still leave less for the town.",
+      "clue": "Think about what a river carries, and which way it flows."
+    },
+    "b": {
+      "d": 2,
+      "q": "Heavy soil erosion upstream sends a lot of sediment into a river. Which change is most likely in a wetland downstream?",
+      "opts": [
+        "The water becomes muddier as sediment arrives",
+        "The water becomes clearer as sediment stays upstream",
+        "The wetland is unaffected, as sediment cannot travel",
+        "The wetland dries up because sediment adds water"
+      ],
+      "why": "Moving water carries sediment downstream, so the wetland receives muddier water. The idea that the wetland is unaffected is wrong because flows connect places and sediment can travel a long way. Sediment does not add water.",
+      "clue": "Where does sediment go once the river picks it up?"
+    }
+  },
+  "geo-ways-people-use-value": {
+    "title": "Ways people use and value water",
+    "card": [
+      [
+        "Environmental value",
+        "Water keeps ecosystems alive. Rivers, wetlands and lakes give plants and animals a place to live and water to drink."
+      ],
+      [
+        "Economic value",
+        "Water helps people make money and goods. Farms use it to grow crops, factories use it to make products, and power stations use it to make electricity."
+      ],
+      [
+        "Cultural, spiritual and aesthetic value",
+        "Cultural and spiritual value comes from meaning, such as a lake used for ceremony. Aesthetic value comes from beauty, such as a waterfall people visit to enjoy the view."
+      ],
+      "One place can be valued in more than one way. People may value a river for its farms and also for its wildlife and its beauty."
+    ],
+    "remember": "People value water for nature, for money and goods, and for meaning and beauty.",
+    "a": {
+      "q": "A town's wetland is home to many birds and frogs. Which value of water does this show?",
+      "opts": ["Environmental value", "Economic value", "Aesthetic value", "Spiritual value"],
+      "why": "The wetland gives birds and frogs a place to live, so it has environmental value for the ecosystem. Aesthetic value is about beauty for people, and the question is about the animals that live there.",
+      "clue": "Think about who or what depends on the water to live."
+    },
+    "b": {
+      "d": 3,
+      "q": "Kiran's family pumps river water onto their apple orchard in Victoria and sells the apples. Each summer they also swim at a river bend, where they love the clear pools and tall gum trees. Which pair of values does this show?",
+      "opts": [
+        "Economic value and aesthetic value",
+        "Environmental value and economic value",
+        "Aesthetic value and spiritual value",
+        "Environmental value and spiritual value"
+      ],
+      "why": "Using river water to grow apples to sell is economic value. Enjoying the river bend for its clear pools and trees is aesthetic value, because it is about beauty. It is not spiritual value, as nothing in the story gives the place a meaning such as ceremony, and nothing is about wildlife living there.",
+      "clue": "For each use, ask what the family gets from the water."
+    }
+  },
+  "geo-water-asia-region": {
+    "title": "Water in the Asia region",
+    "card": [
+      "Water shapes how people live in Asia. It affects what people grow, how they earn a living and what they believe.",
+      [
+        "Monsoon",
+        "a seasonal wind that brings heavy rain to much of South and South-East Asia. Many farmers depend on this rain to flood fields and grow rice, a main food crop."
+      ],
+      [
+        "Mekong River",
+        "a long river that flows through several countries in South-East Asia. Millions of people fish in it and its wetlands for food and income."
+      ],
+      [
+        "Ganges",
+        "a river that flows across northern India and is sacred to Hindus. People bathe in it and hold ceremonies on its banks, so its value is spiritual as well as practical."
+      ]
+    ],
+    "remember": "In Asia, water supports food, fishing and faith: monsoon rice, the Mekong's fish and the sacred Ganges.",
+    "a": {
+      "q": "Why do many rice farmers in South and South-East Asia depend on the monsoon?",
+      "opts": [
+        "It brings heavy seasonal rain that waters their crops",
+        "It carries fish upstream into their rice fields",
+        "It makes the land cooler so rice can be stored",
+        "It melts snow that fills the rivers all year"
+      ],
+      "why": "The monsoon brings heavy rain in a particular season, and rice fields need plenty of water. The monsoon is a wind that brings rain, not a source of fish or snowmelt.",
+      "clue": "Think about what rice fields need most."
+    },
+    "b": {
+      "d": 3,
+      "q": "Pham fishes on the Mekong River in Vietnam to feed his family and sell at market. Asha bathes in the Ganges in India as part of her faith. Which two parts of life do their uses show water shaping?",
+      "opts": [
+        "How people earn a living and what they believe",
+        "What people grow and how they earn a living",
+        "What people grow and what they believe",
+        "How people travel and how they earn a living"
+      ],
+      "why": "Pham's fishing gives him food and income, so it is about earning a living. Asha's bathing in the Ganges is religious, so it is about what she believes. The tempting option pairs growing crops with belief, but Pham catches fish rather than growing anything.",
+      "clue": "Does either person grow anything in the story?"
+    }
+  },
+  "geo-australia-s-rainfall-water": {
+    "title": "Australia's rainfall and water resources",
+    "card": [
+      "Australia is the driest inhabited continent. Only Antarctica is drier, and no one lives there permanently.",
+      "Most rain falls on the north and east coasts and in Tasmania. Much of the inland is arid, meaning very dry, so water on the surface there is scarce.",
+      "Groundwater is water stored in the soil and rock under the ground. Large stores of it lie under the inland.",
+      "The Great Artesian Basin is one of these stores. It lies under parts of Queensland, South Australia, New South Wales and the Northern Territory."
+    ],
+    "remember": "Australia's water is unevenly spread: wet coasts in the north, east and Tasmania, a dry inland with groundwater below.",
+    "a": {
+      "q": "Why is Australia's water described as unevenly spread?",
+      "opts": [
+        "Some coasts get plenty of rain, but the inland gets little",
+        "The inland gets plenty of rain, but the coasts get little",
+        "Rain falls evenly, but some states use far more water",
+        "Australia gets less rain than every other continent"
+      ],
+      "why": "Unevenly spread means different places get very different amounts. The north and east coasts and Tasmania get most of the rain, while much of the inland is arid. The last option is about the total amount, not where it falls, and it is also wrong, because Antarctica is drier.",
+      "clue": "Think about where the rain falls, not how much falls in total."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ben lives in a dry town in western Queensland. A visitor asks where a large store of water might lie near the town. What should Ben say?",
+      "opts": [
+        "In groundwater stored in rock under the inland",
+        "In a large lake on the surface that stays full",
+        "In inland rivers that run high all year round",
+        "In a big dam filled by the town's own rainfall"
+      ],
+      "why": "Large stores of groundwater lie under the inland, and the Great Artesian Basin lies under parts of Queensland. The inland gets little rain, so its surface water is scarce, which rules out a lake that stays full, rivers running high all year or a dam filled by local rain.",
+      "clue": "Little rain means little water stays on the surface."
+    }
+  },
+  "geo-variable-rainfall-australia": {
+    "title": "Variable rainfall in Australia",
+    "card": [
+      "Variable rainfall means the amount of rain changes a lot from year to year. Australia has wet years and dry years, and a place can swing from one to the other.",
+      [
+        "El Niño",
+        "a pattern in the Pacific Ocean that is often linked to drier years in eastern and northern Australia. It does not always bring drought."
+      ],
+      [
+        "La Niña",
+        "a pattern in the Pacific Ocean that is often linked to wetter years in eastern and northern Australia. It does not always bring floods."
+      ],
+      "Because rainfall swings so much, droughts and floods are both common. Dams store water in wet years so that people can use it in dry years."
+    ],
+    "remember": "Rainfall swings from year to year. El Niño is often drier, La Niña is often wetter, and dams store water for dry years.",
+    "a": {
+      "q": "What does it mean to say Australia's rainfall is variable?",
+      "opts": [
+        "The amount of rain changes a lot from year to year",
+        "The amount of rain is about the same every year",
+        "Rain falls only in the wet season each year",
+        "The amount of rain slowly rises every year"
+      ],
+      "why": "Variable means the amount of rain changes a lot from one year to the next, with wet years and dry years. The option saying the amount is about the same every year is tempting to misread, but it describes steady rainfall, which is the opposite of variable.",
+      "clue": "Think about how rain differs from one year to the next."
+    },
+    "b": {
+      "d": 3,
+      "q": "A wheat farmer near Dubbo has had several dry years, and the Pacific Ocean is in an El Niño pattern. Why might the town's dam have been built?",
+      "opts": [
+        "To store water in wet years for use in dry years",
+        "To stop La Niña from bringing rain to the town",
+        "To make the rainfall the same in every year",
+        "To store water because El Niño always brings drought"
+      ],
+      "why": "Rainfall swings between wet and dry years, so dams hold water from wet years to use when it is dry. The option saying El Niño always brings drought is tempting, but El Niño is often linked to drier years, not always. Dams are built because of the swings in rainfall.",
+      "clue": "Dams help when rainfall is uneven from year to year."
+    }
+  },
+  "geo-climate-change-australia-s": {
+    "title": "Climate change and Australia's water",
+    "card": [
+      "Climate change means long-term shifts in temperature and rainfall patterns. Scientists use climate models to forecast how these shifts may affect Australia's water.",
+      [
+        "Less rain",
+        "Forecasts show less rain in the cool season (about April to October) across southern Australia. This is when many dams in southern cities and towns usually fill."
+      ],
+      [
+        "More evaporation",
+        "As the air warms, more water evaporates from dams, rivers, soil and plants. Less of the rain that falls is left to use."
+      ],
+      [
+        "Heavier downpours",
+        "Forecasts also show that when heavy rain does fall, it may be more intense. Water arrives in short, strong bursts, which can cause floods and is harder to capture and store."
+      ]
+    ],
+    "remember": "A warmer climate may bring less cool-season rain in the south, more evaporation and heavier downpours, which put pressure on water supplies.",
+    "a": {
+      "q": "Why does a warmer climate put pressure on the water stored in a dam?",
+      "opts": [
+        "More water evaporates from the dam's surface",
+        "Less water evaporates, so the dam overflows",
+        "Rain falls more slowly, so the dam fills evenly",
+        "Warm air soaks up rain before it reaches the ground"
+      ],
+      "why": "Warmer air means more evaporation, so more water is lost from dams, rivers and soil. Evaporation does not fall as it warms, so a dam does not gain water this way.",
+      "clue": "Think about what warm air does to water sitting in the open."
+    },
+    "b": {
+      "d": 3,
+      "q": "Forecasts say Hamish's town in southern Victoria will get less cool-season rain. His dam usually fills in winter. What is the likely effect on the town's water supply?",
+      "opts": [
+        "Less water flows into the dam, so supply is under pressure",
+        "More water flows into the dam, as winter is the wet season",
+        "The dam fills the same, as summer rain makes up for it",
+        "The dam is unaffected, as heavy downpours make up for it"
+      ],
+      "why": "The dam usually fills in the cool season, so less rain then means less water flows in and supply is under pressure. Heavier downpours do not make up for this, as they come in short bursts that are harder to capture and store.",
+      "clue": "When does this dam usually fill, and what is forecast for that time?"
+    }
+  },
+  "geo-managing-water-scarcity-australia": {
+    "title": "Managing water scarcity in Australia",
+    "card": [
+      "Australia is a dry continent, so it uses many ways to make sure people have enough water. Some add to supply and some reduce demand.",
+      [
+        "Supply",
+        "Dams store rainfall. Desalination plants remove salt from seawater. Recycled water is treated used water. Rainwater tanks collect rain from roofs."
+      ],
+      [
+        "Demand",
+        "Water restrictions limit how much water people can use, such as watering gardens. Efficient irrigation, such as drip systems, gives crops only the water they need."
+      ],
+      [
+        "Trading",
+        "In the Murray-Darling Basin, water entitlements can be bought and sold between users. Water can then move to the users who value it most."
+      ]
+    ],
+    "remember": "Australia manages scarcity by adding supply, cutting demand and trading water between users.",
+    "a": {
+      "q": "Which of these is a way of cutting demand for water?",
+      "opts": [
+        "Limiting garden watering in a dry spell",
+        "Building a dam to store rainfall",
+        "Treating used water so it can be reused",
+        "Removing salt from seawater"
+      ],
+      "why": "Water restrictions reduce how much water people use, so they cut demand. Dams, recycling and desalination all add to the supply of water instead.",
+      "clue": "Which one asks people to use less?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A drought hits a farming town in the Murray-Darling Basin. Tom's orchard needs more water. Jess has water she does not need this season. Which method lets Tom get water from Jess?",
+      "opts": ["Water trading", "Desalination", "Water restrictions", "Rainwater tanks"],
+      "why": "Water trading lets users in the Basin buy and sell water entitlements, so Tom can buy from Jess. Restrictions are tempting, but they limit use and do not move water between users.",
+      "clue": "One method involves buying and selling."
+    }
+  },
+  "geo-water-scarcity-west-asia": {
+    "title": "Water scarcity in West Asia and North Africa",
+    "card": [
+      "West Asia and North Africa is the most water-scarce region in the world. Much of it is hot and dry, with little rainfall.",
+      "Many countries use desalination, which removes salt from seawater to make fresh water. It needs a lot of energy and money.",
+      "Some countries pump ancient groundwater, which is water stored underground for thousands of years. It is not refilled quickly, so it can run low if overused.",
+      "Rivers such as the Nile and the Tigris and Euphrates flow through more than one country. Nations share them, and this can cause tension over who uses how much."
+    ],
+    "remember": "Dry lands rely on desalination, old groundwater and shared rivers, which can cause tension.",
+    "a": {
+      "q": "Why can shared rivers such as the Nile cause tension between nations?",
+      "opts": [
+        "Several countries depend on the same limited water",
+        "Rivers in this region contain too much salt",
+        "Each country owns the whole river it uses",
+        "Rivers flow only through one country at a time"
+      ],
+      "why": "A river that flows through more than one country must be shared, so one country's use can leave less for others. Salt is a problem with seawater, not these rivers, and the Nile and the Tigris and Euphrates both cross borders.",
+      "clue": "Think about who else uses the water."
+    },
+    "b": {
+      "d": 3,
+      "q": "A country in this region has almost no rivers but a long coastline. It builds plants that make fresh water from the sea. What is a main drawback of this choice?",
+      "opts": [
+        "It needs a lot of energy and money",
+        "It slowly drains ancient groundwater",
+        "It reduces the flow of shared rivers",
+        "It depends on regular heavy rainfall"
+      ],
+      "why": "Desalination removes salt from seawater, which takes large amounts of energy and money. Draining groundwater is a drawback of pumping ancient groundwater, not of desalination, and it does not use rivers or need rain.",
+      "clue": "Seawater is not groundwater, river water or rain."
+    }
+  },
+  "geo-natural-hazards-disasters": {
+    "title": "Natural hazards and disasters",
+    "card": [
+      [
+        "Natural hazard",
+        "An event in nature that could harm people or property. Examples are cyclones, floods and earthquakes."
+      ],
+      [
+        "Disaster",
+        "A hazard becomes a disaster when it causes major damage or loss of life that a community cannot cope with on its own."
+      ],
+      "The same hazard can be a disaster in one place and not in another. It depends on how many people are in the way and how well they can cope.",
+      "A hazard that strikes empty land, or a place well prepared for it, may cause little harm. It stays a hazard and does not become a disaster."
+    ],
+    "remember": "A hazard is the possible harm. A disaster is when a community cannot cope with the harm alone.",
+    "a": {
+      "q": "What is the difference between a natural hazard and a disaster?",
+      "opts": [
+        "A disaster is a hazard a community cannot cope with alone",
+        "A disaster is a hazard that happens in a large city",
+        "A hazard is a human event and a disaster is a natural one",
+        "A hazard is a small event and a disaster is a big one"
+      ],
+      "why": "A hazard only could cause harm. It becomes a disaster when the damage or loss of life is more than the community can handle alone. Size alone is not the test: a big event in an empty or well prepared area may not be a disaster.",
+      "clue": "Think about what happens to the people after the event."
+    },
+    "b": {
+      "d": 3,
+      "q": "An earthquake of the same strength strikes two places. In a remote desert, no one is hurt and nothing is damaged. In a crowded town, many homes fall and people need outside help. What can be said?",
+      "opts": [
+        "Both are hazards, but only the town's is a disaster",
+        "Both are disasters, because the strength was the same",
+        "Neither is a hazard, because earthquakes are natural",
+        "Only the desert one is a hazard, as it was not in a town"
+      ],
+      "why": "Both events are natural hazards because they could harm people or property. Only the town's event caused major damage that the community could not cope with alone, so it is a disaster. Strength is the same, but the harm and the ability to cope are not.",
+      "clue": "First ask what makes an event a hazard, then what makes one a disaster."
+    }
+  },
+  "geo-tropical-cyclones": {
+    "title": "Tropical cyclones",
+    "card": [
+      "A tropical cyclone is a huge spinning storm. It forms over warm ocean water near the equator, in the tropics.",
+      "Warm sea water feeds the storm with heat and moisture. When a cyclone moves over cooler water or onto land, it loses that supply and weakens.",
+      "Cyclones bring three main dangers: destructive winds, heavy rain, and storm surges. A storm surge is a rise in sea level that pushes water onto the coast.",
+      "In Australia, cyclones mostly hit northern areas, such as Queensland, the Northern Territory and northern Western Australia. The cyclone season runs from November to April."
+    ],
+    "remember": "Cyclones form over warm tropical seas and bring wind, rain and storm surges to northern Australia from November to April.",
+    "a": {
+      "q": "Why does a tropical cyclone usually weaken after it moves over land?",
+      "opts": [
+        "It loses the warm ocean water that feeds it",
+        "It gains too much heat from the dry ground",
+        "It is pushed back out to sea by storm surges",
+        "It runs out of rain because land is too flat"
+      ],
+      "why": "A cyclone gets its heat and moisture from warm ocean water. Over land that supply is cut off, so the storm weakens. Storm surges are a danger the cyclone causes, not something that pushes it back.",
+      "clue": "Think about what feeds the storm."
+    },
+    "b": {
+      "d": 2,
+      "q": "Layla lives in Townsville, Queensland. In which months should her family be most ready for a tropical cyclone?",
+      "opts": ["November to April", "May to October", "June to August", "Only in January"],
+      "why": "Cyclone season in northern Australia runs from November to April, so that is when Layla's family should be ready. Winter months are outside the season. A cyclone can arrive in any month of the season, not only January.",
+      "clue": "Cyclone season spans the warm, wet half of the year."
+    }
+  },
+  "geo-floods": {
+    "title": "Floods",
+    "card": [
+      "A flood happens when water covers land that is usually dry. It can occur when heavy rain makes a river overflow its banks.",
+      "It can also occur when rain falls faster than the ground and drains can take it away, so water pools on the surface.",
+      [
+        "Flash flood",
+        "water rises within hours of heavy rain, often with little warning. It can happen in small creeks and in towns where hard surfaces shed water quickly."
+      ],
+      [
+        "River flood",
+        "water builds up over days as rain far upstream flows down a river and spreads across a wide, flat plain. The flood can last for days or weeks."
+      ]
+    ],
+    "remember": "A flood can come from a river overflowing or from water pooling on the surface. Flash floods rise in hours, river floods build over days.",
+    "a": {
+      "q": "Which event is a flash flood?",
+      "opts": [
+        "A creek rises in two hours after a heavy storm",
+        "A river slowly spreads over a plain across ten days",
+        "A dam is drained on purpose to water crops",
+        "A dry riverbed stays empty for a whole year"
+      ],
+      "why": "A flash flood rises within hours of heavy rain. The slow spread over ten days is a river flood, which builds over days across a wide plain.",
+      "clue": "Think about how quickly the water rises."
+    },
+    "b": {
+      "d": 3,
+      "q": "Heavy rain falls over hills far inland. Five days later, the river near Priya's farm overflows and floods her paddocks. Which detail best shows this is a river flood, not a flash flood?",
+      "opts": [
+        "The water took five days to reach her farm",
+        "The rain that caused it was very heavy",
+        "The water covered land that is usually dry",
+        "The flood happened on land used for farming"
+      ],
+      "why": "River floods build over days, while flash floods rise within hours, so the five-day gap shows a river flood. Heavy rain is tempting, but it can cause both types. Water covering usually dry land is true of every flood.",
+      "clue": "Which detail would be different if it were a flash flood?"
+    }
+  },
+  "geo-drought-vic": {
+    "title": "Drought",
+    "card": [
+      "A drought is a long period of below-average rainfall. One dry week or one dry month is not a drought.",
+      "A drought builds slowly, over months or years. It often has no clear start or end, unlike a flood or a storm.",
+      "Soil dries out and dams, rivers and groundwater run low. Crops fail, farm animals go short of feed and water, and plants can die.",
+      "Towns can be hurt too. Water use may be restricted, and businesses that depend on farmers may lose income."
+    ],
+    "remember": "A drought is a slow build-up of dry weather that dries out land and water supplies.",
+    "a": {
+      "q": "Which of these best describes a drought?",
+      "opts": [
+        "Months of below-average rain that dry out soil and dams",
+        "A week of heavy rain that makes a river burst its banks",
+        "A single hot day when no rain falls on a town",
+        "A sudden storm that brings strong winds and big waves"
+      ],
+      "why": "A drought is a long period of below-average rainfall that slowly dries out the land. A single hot day is too short to be a drought, and a storm or flood is sudden.",
+      "clue": "Think about how long the dry weather lasts and how fast it builds."
+    },
+    "b": {
+      "d": 2,
+      "q": "For two years, a wheat farming district in the Wimmera region of Victoria gets far less rain than usual. Its dams are almost empty. What is the most likely effect on the district?",
+      "opts": [
+        "Crops fail and farmers have less income",
+        "Paddocks are covered by floodwater for weeks",
+        "Strong winds tear the roofs off many houses",
+        "Rivers rise quickly and wash away bridges"
+      ],
+      "why": "Long, below-average rainfall dries out soil and dams, so crops fail and farm income falls. Floodwater, strong winds and fast-rising rivers come from too much rain or from storms, not from drought.",
+      "clue": "The rain was far below normal for two years."
+    }
+  },
+  "geo-bushfires": {
+    "title": "Bushfires",
+    "card": [
+      "A bushfire is an uncontrolled fire in bush, forest or grassland. It needs fuel, such as dry leaves, bark, grass and twigs, plus heat and oxygen.",
+      "Bushfire risk is high when the weather is hot, dry and windy and the fuel is dry. Heat and dry air dry out the fuel, and wind pushes the flames so the fire spreads faster.",
+      "Fires threaten lives, homes and ecosystems. Smoke can harm health far from the fire, and animals and plants can lose their habitat.",
+      "Fire seasons differ across Australia. In the tropical north, most fires burn in the dry season, while in south-eastern Australia, summer fires are especially dangerous to lives and homes."
+    ],
+    "remember": "Bushfire risk is high when dry fuel meets hot, dry, windy weather.",
+    "a": {
+      "q": "Which set of conditions makes bushfire risk highest?",
+      "opts": [
+        "Hot, dry and windy weather with dry fuel",
+        "Cool, damp and calm weather with dry fuel",
+        "Hot, dry and windy weather with wet fuel",
+        "Cool, dry and calm weather with damp fuel"
+      ],
+      "why": "Hot, dry air dries out the fuel, and wind spreads the flames quickly. Dry fuel with calm, cool, damp weather is less risky because a fire is slower to start and spread.",
+      "clue": "Think about weather that dries fuel and weather that spreads flames."
+    },
+    "b": {
+      "d": 3,
+      "q": "After a wet spring, grass near Bendigo grew thick. By January, weeks of hot, dry weather have dried it out. Then a hot day with strong winds arrives. Why is the fire risk high that day?",
+      "opts": [
+        "The grass is now dry fuel and wind spreads the flames",
+        "The wet spring left the grass too damp to burn",
+        "Strong winds blow flames out before they can spread",
+        "Bushfires can start only in summer in Australia"
+      ],
+      "why": "Weeks of hot, dry weather have turned the thick grass into dry fuel, and strong wind spreads a fire fast. The wet spring does not lower the risk now, because the grass has since dried out. Fires do not start only in summer: in the tropical north, most burn in the dry season.",
+      "clue": "Look at what the weather has done to the grass by January."
+    }
+  },
+  "geo-preparing-responding-hazards": {
+    "title": "Preparing for and responding to hazards",
+    "card": [
+      [
+        "Before",
+        "Communities can reduce harm before a hazard strikes. They use forecasting and warnings to give people time to act."
+      ],
+      "They can also set building rules, build levees (raised banks that hold back water) and make fire plans, so homes and people are better protected.",
+      ["After", "After a hazard, emergency services carry out the response: rescue, shelter, food and medical care."],
+      "Recovery comes later. It means repairing homes, roads and services and helping people rebuild their lives."
+    ],
+    "remember": "Prepare before with forecasts, warnings, rules and plans. Respond and recover after.",
+    "a": {
+      "q": "Which action is preparation before a hazard, rather than a response after it?",
+      "opts": [
+        "Issuing a warning when a storm is forecast",
+        "Rescuing people from a flooded street",
+        "Handing out food to families after a flood",
+        "Rebuilding a road that was washed away"
+      ],
+      "why": "A warning is given before the hazard arrives, so people have time to act. Rescuing people and handing out food are part of the emergency response after the hazard strikes. Rebuilding a road is recovery, which comes later still.",
+      "clue": "Which action happens before the hazard arrives?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A council in a river town builds a levee and changes its building rules so new houses sit higher. What are these actions?",
+      "opts": [
+        "Preparation that reduces harm before a hazard",
+        "Emergency response that rescues people after a hazard",
+        "Recovery that rebuilds the town after a hazard",
+        "Forecasting that predicts when a hazard will happen"
+      ],
+      "why": "A levee and new building rules are put in place before a hazard, to reduce the harm it can cause. They are not rescue or rebuilding, which come after. Forecasting is tempting, but it predicts a hazard and does not change the town's buildings.",
+      "clue": "Were these actions done before or after the hazard?"
+    }
+  },
+  "geo-measures-liveability": {
+    "title": "Measures of liveability",
+    "card": [
+      "A liveability ranking gives each place a score. The score is built from many measures, and places are then ordered from highest to lowest.",
+      ["Environmental", "measures of the surroundings, such as air pollution, green space and climate."],
+      ["Economic", "measures of money and work, such as housing costs, jobs and the price of everyday goods."],
+      [
+        "Social",
+        "measures of how people live together and are served, such as crime, health care, education and public transport."
+      ]
+    ],
+    "remember": "Rankings turn many measures, from the environment, economy and society, into one score.",
+    "a": {
+      "q": "A liveability ranking counts the number of hospitals and clinics in a city. Which type of measure is this?",
+      "opts": ["Social", "Environmental", "Economic", "Political"],
+      "why": "Health care is a social measure because it shows how well people are served. Housing costs would be economic, and pollution would be environmental, so those do not fit hospitals and clinics.",
+      "clue": "Think about services that help people's health and wellbeing."
+    },
+    "b": {
+      "d": 3,
+      "q": "A ranking scores the town of Rivergum on traffic noise, the water quality of its creek and its tree cover. Which type of measure is it using?",
+      "opts": ["Environmental measures", "Economic measures", "Social measures", "Transport measures"],
+      "why": "Noise, water quality and tree cover all describe the quality of the surroundings, so they are environmental measures. Transport may seem tempting because of the word traffic, but the score is about noise, not how people get around, and public transport is a social measure.",
+      "clue": "Ask whether each one is about money, about services, or about the area itself."
+    }
+  },
+  "geo-liveability-where-people-live": {
+    "title": "Liveability and where people live",
+    "card": [
+      "People tend to move to, and stay in, places they see as liveable. A place that seems to offer a good quality of life draws people in.",
+      "Liveability is seen through a person's own needs. Two people can look at the same place and judge it differently.",
+      "What counts as liveable can differ with age, income, culture and needs. A family with young children may want good schools and parks. A retiree may want quiet streets and nearby health care.",
+      "A person on a low income may put housing costs first. Someone whose culture is linked to a community may want to live close to that community."
+    ],
+    "remember": "People are drawn to places they see as liveable, and what they see as liveable depends on who they are and what they need.",
+    "a": {
+      "q": "Why might a place be a good choice for one household but a poor choice for another?",
+      "opts": [
+        "Households judge it by their own needs and circumstances",
+        "Liveability is a fixed score that people can only accept",
+        "Only the household with more income can judge it fairly",
+        "The place changes its services for each new household"
+      ],
+      "why": "Liveability depends on what a person needs, such as their age, income or culture, so households can judge the same place differently. It is not a fixed score that everyone must accept in the same way.",
+      "clue": "Think about who is judging the place."
+    },
+    "b": {
+      "d": 2,
+      "q": "Sam is a retiree who is choosing a town to live in. Which feature is she most likely to see as making a town liveable?",
+      "opts": [
+        "Quiet streets and health care close by",
+        "A large number of schools for young children",
+        "Low-cost housing near a big student campus",
+        "Many playgrounds and sports fields for teenagers"
+      ],
+      "why": "A retiree is likely to value quiet and easy access to health care. Schools and playgrounds matter most to families with children, so they are less likely to be her first choice.",
+      "clue": "Think about what suits someone's age and needs."
+    }
+  },
+  "geo-judging-liveability-with-geographical": {
+    "title": "Judging liveability with geographical concepts",
+    "card": [
+      "Geographers use geographical concepts to judge how liveable a place is. This gives them a clear way to look at a place, instead of just giving an opinion.",
+      ["Space", "where things are located and how easy they are to reach, such as schools, clinics, shops and parks."],
+      [
+        "Environment",
+        "the quality of the surroundings, such as clean air and water, green space and the risk of floods or fires."
+      ],
+      [
+        "Interconnection",
+        "the links a place has to people, jobs and other places, such as roads, trains and internet access."
+      ]
+    ],
+    "remember": "Ask where services are, how good the surroundings are, and how well the place is linked to others.",
+    "a": {
+      "q": "A geographer checks how far residents of a suburb live from the nearest hospital and school. Which concept is being used?",
+      "opts": ["Space", "Environment", "Interconnection", "Liveability"],
+      "why": "The geographer is looking at where services are and how easy they are to reach, which is space. Interconnection is about links to people, jobs and other places, not about the location of services.",
+      "clue": "Think about where things are located."
+    },
+    "b": {
+      "d": 3,
+      "q": "A town in country Victoria has clean air and a large park. Its train line was closed, so many people cannot easily reach jobs in the city. Which concept shows the town's weakness?",
+      "opts": [
+        "Interconnection, because links to jobs are poor",
+        "Environment, because the surroundings are poor",
+        "Space, because the town has too few parks",
+        "Environment, because the train line closed"
+      ],
+      "why": "Poor links to jobs in the city are a problem of interconnection. The town's environment is a strength, as it has clean air and a large park, so it is not the weakness here.",
+      "clue": "The air and the park are good. What is the problem about?"
+    }
+  },
+  "geo-access-services-facilities-vic": {
+    "title": "Access to services and facilities",
+    "card": [
+      "Services and facilities include schools, hospitals, shops and public transport. How close and easy they are to reach affects how liveable a place feels.",
+      "Access is about more than distance. Cost, travel time, opening hours and whether transport runs often also decide how easy a service is to use.",
+      "Remote places often have fewer services, and the ones they have can be a long way off. People there may travel far for a specialist or a larger shop.",
+      "Technology can help fill some gaps. Telehealth gives medical appointments by video call, and online learning lets students study when a school is far away."
+    ],
+    "remember": "The easier it is to reach and use services, the more liveable a place feels. Technology can help remote places close some of the gap.",
+    "a": {
+      "q": "Which change would most improve access to services for a small town?",
+      "opts": [
+        "A daily bus from the town to the nearest hospital",
+        "A new park with seats beside the main street",
+        "A yearly music festival held at the showgrounds",
+        "Fresh paint and murals on the old town hall"
+      ],
+      "why": "A daily bus makes the hospital easier to reach, so it improves access to a service. A park, festival or murals may make the town nicer, but none of them helps people reach schools, hospitals or shops.",
+      "clue": "Which change helps people reach a service?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya lives on a remote farm in north-west Victoria, 150 km from the nearest high school. Which option would best let her study while living at home?",
+      "opts": [
+        "Online classes she can join from her farm",
+        "Telehealth calls she can join from her farm",
+        "A bigger library at the school 150 km away",
+        "A new high school in a Melbourne suburb"
+      ],
+      "why": "Online learning brings classes to Priya, so she can study without the long trip. Telehealth uses the same kind of technology, but it gives medical appointments, not schooling. A bigger library or a new school far away does not make school any easier for her to reach.",
+      "clue": "Which technology is for schooling rather than health?"
+    }
+  },
+  "geo-social-connectedness-community-identity": {
+    "title": "Social connectedness and community identity",
+    "card": [
+      "Liveability is how well a place meets the needs of the people who live there. Some of those needs are about feelings, not just buildings and services.",
+      [
+        "Safe",
+        "people who feel safe in their streets, homes and public spaces tend to rate their place as more liveable. Feeling threatened tends to lower that rating."
+      ],
+      [
+        "Connected",
+        "having family, friends, clubs and shared events nearby helps people feel welcome and included. People who feel left out tend to rate the same place lower."
+      ],
+      [
+        "Community identity",
+        "the shared sense of what a community is, built from things such as its history, traditions and local festivals. Sharing in it gives people a sense of belonging, which tends to raise how they rate a place."
+      ]
+    ],
+    "remember": "People rate a place higher when they feel safe, connected and that they belong, and lower when they feel left out or threatened.",
+    "a": {
+      "q": "Aroha, in Year 7, has just moved to a new town. Which change would most likely lead her to rate it as more liveable?",
+      "opts": [
+        "She joins a local netball team and makes friends",
+        "She stops going to the park after being teased there",
+        "She feels unsafe walking home past an empty lot",
+        "She is left out of a group chat by her classmates"
+      ],
+      "why": "Joining a team helps her feel included and connected to others, and these feelings tend to raise how people rate a place. Being teased, feeling unsafe or being left out are also feelings, but they tend to lower her rating, not raise it.",
+      "clue": "Does each change bring her closer to others or push her away?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Two families live on the same street in Bendigo. One rates it as highly liveable. The other rates it low. Which reason best explains the difference?",
+      "opts": [
+        "The second family feels left out by its neighbours",
+        "The first family feels unwelcome at the local club",
+        "The second family has made many friends nearby",
+        "Both families feel safe walking along the street"
+      ],
+      "why": "Feeling left out tends to lower how people rate a place, so it explains why the second family rates the street low. Feeling unwelcome would lower the first family's rating, which is the wrong way round, and a feeling both families share cannot explain a difference.",
+      "clue": "Which reason would lower one family's rating but not the other's?"
+    }
+  },
+  "geo-connection-country-place": {
+    "title": "Connection to Country and Place",
+    "card": [
+      [
+        "Country",
+        "a word used mainly by Aboriginal Peoples. Country includes land, waters, sky and kin. It is a living whole that people belong to, not only a piece of land."
+      ],
+      [
+        "Place",
+        "a word used by many Torres Strait Islander Peoples for their islands, seas, sky and kin. With a capital P, it means more than the everyday word place."
+      ],
+      "Being connected to Country and Place supports identity, culture and wellbeing. It links people to their stories, their family and their responsibilities to care for Country and Place.",
+      "Because of this, a place can be liveable partly because people feel connected to it. Being able to stay on and look after Country and Place is part of that."
+    ],
+    "remember": "Connection to Country and Place supports identity, culture and wellbeing, and so helps make a place liveable.",
+    "a": {
+      "q": "Which best describes Country for Aboriginal Peoples?",
+      "opts": [
+        "Land, waters, sky and kin that people belong to",
+        "Only the area of land that a person owns",
+        "A town that has a council and a main street",
+        "A national park that visitors can camp in"
+      ],
+      "why": "Country includes land, waters, sky and kin, and people belong to it. It is not only land a person owns, which is the tempting but narrower idea.",
+      "clue": "Country is bigger than land alone."
+    },
+    "b": {
+      "d": 3,
+      "q": "An Aboriginal community in Victoria cares for a river and passes on its stories to young people. How does this connection add to liveability?",
+      "opts": [
+        "It supports identity, culture and wellbeing",
+        "It makes the river's distance from shops shorter",
+        "It guarantees the town has more public transport",
+        "It removes the need for any other services"
+      ],
+      "why": "Caring for Country and sharing its stories strengthens identity, culture and wellbeing, which helps make the place liveable. It does not change distances or replace services.",
+      "clue": "Think about what connection gives people, not what it builds."
+    }
+  },
+  "geo-improving-liveability-locally": {
+    "title": "Improving liveability locally",
+    "card": [
+      "Liveability is how well a place meets the needs of the people who live there. Councils and community groups can both help make a place more liveable.",
+      [
+        "Parks and community centres",
+        "building and looking after parks, playgrounds and community centres where people meet, relax and join in. Community groups often run activities there."
+      ],
+      [
+        "Paths and public transport",
+        "building footpaths, bike paths and bus shelters. The state government runs most buses and trains, but councils can plan for, and ask for, better links."
+      ],
+      [
+        "Street trees and safer streets",
+        "planting street trees for shade and cooler streets, and adding better lighting so people feel safer walking at night."
+      ]
+    ],
+    "remember": "Councils and community groups lift liveability with parks, community centres, paths, transport links, street trees and safer streets.",
+    "a": {
+      "q": "Families in a Melbourne suburb say the streets near the station feel unsafe after dark because they are so dim. Which local strategy fits this problem best?",
+      "opts": [
+        "Add better lighting along the streets",
+        "Build a new playground in the local park",
+        "Add a bike path from homes to the shops",
+        "Open a bigger library in the town centre"
+      ],
+      "why": "The problem is about feeling unsafe in the dark, so better lighting makes the streets safer. A playground, bike path or library could make the suburb more liveable in other ways, but none of them deals with dim streets.",
+      "clue": "Match the problem to the type of local improvement."
+    },
+    "b": {
+      "d": 3,
+      "q": "People in a regional Victorian town say they cannot walk safely from their homes to the shops. Which council strategy fits this problem best?",
+      "opts": [
+        "Build a footpath along the main street",
+        "Run a new council train line to the shops",
+        "Build a community centre near the town hall",
+        "Plant shade trees in the town square"
+      ],
+      "why": "A footpath gives people a safe place to walk, and building footpaths is council work. A train line is tempting, but the state government runs most trains, so a council would not run its own line.",
+      "clue": "Think about what a council can build."
+    }
+  },
+  "geo-landscapes-landforms-vic": {
+    "title": "Landscapes and landforms",
+    "card": [
+      [
+        "Landscape",
+        "A large area of the Earth's surface with its own look. A desert, a coastline or a rainforest is a landscape."
+      ],
+      ["Landform", "A single natural feature of the land, such as a mountain, valley, dune or headland."],
+      "A landscape is made up of many landforms. A coastal landscape may include headlands, beaches and cliffs.",
+      "Think of size. A landform is one feature. A landscape is the whole area where many features sit together."
+    ],
+    "remember": "One feature is a landform. Many landforms together make a landscape.",
+    "a": {
+      "q": "Which one of these is a landform, not a landscape?",
+      "opts": ["A sand dune", "A desert", "A coastline", "A rainforest"],
+      "why": "A dune is one single feature of the land, so it is a landform. A desert, a coastline and a rainforest are each whole areas made of many features, so they are landscapes.",
+      "clue": "Which one is a single feature, not a whole area?"
+    },
+    "b": {
+      "d": 2,
+      "q": "A walker in the Grampians (Gariwerd) in Victoria crosses high peaks, deep valleys and rocky ridges. What is the whole area best called?",
+      "opts": ["A mountain landscape", "A mountain landform", "A single landform", "A coastal landscape"],
+      "why": "The area is large and holds many features, so it is a landscape, and its features are mountain ones. Calling it a landform is wrong, because each peak, valley or ridge is a landform, not the whole area.",
+      "clue": "Is the question about the whole area or one feature in it?"
+    }
+  },
+  "geo-types-landscapes-vic": {
+    "title": "Types of landscapes",
+    "card": [
+      "Landscapes are grouped into types by the main features that shape them. Each type has its own typical landforms.",
+      [
+        "Mountain",
+        "high, steep land with peaks and ridges. Coastal landscapes sit where land meets the sea, with beaches, cliffs and headlands."
+      ],
+      [
+        "Riverine",
+        "shaped by rivers, with channels, floodplains and billabongs. Desert landscapes are very dry, with features such as sand dunes and stony plains."
+      ],
+      [
+        "Karst and volcanic",
+        "karst landscapes form in limestone, which water dissolves, leaving caves and sinkholes. Volcanic landscapes form from erupted lava and ash, with features such as volcanic cones and craters."
+      ]
+    ],
+    "remember": "Each landscape type is known by its typical landforms, such as dunes in deserts and caves in karst.",
+    "a": {
+      "q": "A landscape is made mostly of limestone, with caves and sinkholes where water has dissolved the rock. Which type is it?",
+      "opts": ["Karst landscape", "Volcanic landscape", "Riverine landscape", "Coastal landscape"],
+      "why": "Karst landscapes form when water dissolves limestone, leaving caves and sinkholes. A volcanic landscape is the tempting choice for a landscape with holes, but its craters come from eruptions, not from dissolved rock.",
+      "clue": "Think about which rock water can dissolve."
+    },
+    "b": {
+      "d": 2,
+      "q": "Sam visits a flat area with a wide floodplain and a billabong beside a winding river channel. Which type of landscape is Sam in?",
+      "opts": ["Riverine landscape", "Coastal landscape", "Desert landscape", "Mountain landscape"],
+      "why": "Floodplains, billabongs and river channels are typical landforms of a riverine landscape, because they are shaped by a river. A coastal landscape is tempting because water is nearby, but it is found where land meets the sea, with beaches and cliffs.",
+      "clue": "Which type is shaped mainly by a river?"
+    }
+  },
+  "geo-australia-s-major-landforms": {
+    "title": "Australia's major landforms",
+    "card": [
+      "Australia is the lowest and flattest inhabited continent. Its land is very old, and over a very long time wind and water have worn it down. That is why so much of it is low and flat.",
+      [
+        "Great Dividing Range",
+        "a long chain of highlands down the east coast. It is the main mountain region of the continent."
+      ],
+      [
+        "Central Lowlands",
+        "a low, flat area in the middle of the continent. It lies west of the Great Dividing Range."
+      ],
+      [
+        "Western Plateau",
+        "a large, raised, flat area covering most of the west. It is the biggest of the three regions."
+      ]
+    ],
+    "remember": "Australia is old, low and flat. Highlands lie in the east, lowlands in the middle and a plateau across the west.",
+    "a": {
+      "q": "Most of Australia is low and flat. What is the main reason for this?",
+      "opts": [
+        "Its old land has been worn down by wind and water",
+        "Its young land has not yet had time to rise up",
+        "Ice sheets have pressed its land flat over time",
+        "Volcanoes have spread lava flat across its land"
+      ],
+      "why": "Australia's land is very old, so wind and water have had a very long time to wear it down. The idea of young land is tempting, but it reverses the truth: Australia is low and flat because its land is old, not young.",
+      "clue": "Think about how long the land has been exposed to the weather."
+    },
+    "b": {
+      "d": 2,
+      "q": "Sam travels from the east coast of Australia to the far west. Which order of landform regions does he cross?",
+      "opts": [
+        "Great Dividing Range, Central Lowlands, Western Plateau",
+        "Western Plateau, Central Lowlands, Great Dividing Range",
+        "Central Lowlands, Great Dividing Range, Western Plateau",
+        "Great Dividing Range, Western Plateau, Central Lowlands"
+      ],
+      "why": "The Great Dividing Range lies in the east, the Central Lowlands are in the middle and the Western Plateau covers most of the west. The reverse order is tempting, but it describes a trip from west to east.",
+      "clue": "Start with the highlands in the east, then move west."
+    }
+  },
+  "geo-people-value-landscapes": {
+    "title": "Why people value landscapes",
+    "card": [
+      [
+        "Beauty",
+        "Many people value a landscape for how it looks and feels. Its scenery can bring calm, wonder or a sense of pride in a place."
+      ],
+      [
+        "Recreation and tourism",
+        "People use landscapes for fun and fitness, such as walking, surfing or skiing. Visitors spend money on trips, so tourism can bring income to nearby towns."
+      ],
+      [
+        "Resources",
+        "A landscape can hold things people use, such as fertile soil, water, timber and minerals. These support farming, industry and daily life."
+      ],
+      [
+        "Spiritual and cultural meaning",
+        "A landscape can be tied to a community's beliefs, stories, history and identity. This value is about meaning, and it is not measured by money or use."
+      ]
+    ],
+    "remember": "People value landscapes for their beauty, recreation and tourism, resources, and spiritual and cultural meaning.",
+    "a": {
+      "q": "Farmers in a river valley value it because its soil grows good crops. Which kind of value is this?",
+      "opts": ["Its resources", "Its beauty", "Its recreation", "Its spiritual meaning"],
+      "why": "Fertile soil is a resource that people use to grow food. Beauty is about how a place looks, and the farmers value the soil for what it produces, not for its scenery.",
+      "clue": "Think about what the farmers take from the land."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tess lives in a town near a coastal national park. Every summer, visitors come to surf and camp there, and local cafés and shops earn more money. Which value of the landscape does this best show?",
+      "opts": ["Recreation and tourism", "Resources it holds", "Spiritual meaning", "Beauty of its scenery"],
+      "why": "The visitors surf and camp, and their spending helps the town, so this is recreation and tourism. Beauty may be part of why they come, but the case is about activities and income, not how the place looks.",
+      "clue": "Look at what the visitors do and what the town gains."
+    }
+  },
+  "geo-landscapes-aboriginal-torres-strait": {
+    "title": "Landscapes in Aboriginal and Torres Strait Islander cultures",
+    "card": [
+      "For Aboriginal and Torres Strait Islander Peoples, Country includes the land, waters, sky, plants and animals, and the stories and law tied to them. People belong to Country and care for it.",
+      "Many landforms are part of Dreaming stories, which explain how the land formed and how to care for it. These stories are passed down through generations and are still part of life and law today.",
+      [
+        "Uluru",
+        "Uluru in the Northern Territory is sacred to the Anangu people. Their law and stories, called Tjukurpa, are tied to the rock and the land around it."
+      ],
+      [
+        "Gariwerd",
+        "Gariwerd, also called the Grampians, in Victoria is Country for the Djab Wurrung and Jardwadjali peoples. It holds sacred sites, stories and rock art."
+      ]
+    ],
+    "remember": "Landforms are part of Country, with stories, law and spiritual meaning that continue today.",
+    "a": {
+      "q": "What does Country mean for Aboriginal and Torres Strait Islander Peoples?",
+      "opts": [
+        "Land, waters, sky and living things, with stories and law",
+        "The land a group owns, set by legal boundaries on a map",
+        "The rural parts of Australia, away from towns and cities",
+        "Landforms such as hills and rocks, but not waters or sky"
+      ],
+      "why": "Country takes in the land, waters, sky, plants and animals, and the stories and law tied to them. It is not the rural 'country' or a legal title. Limiting it to landforms on land misses the waters, sky and stories it also includes.",
+      "clue": "Country covers more than what you can stand on."
+    },
+    "b": {
+      "d": 3,
+      "q": "A ranger at Gariwerd tells a Year 8 class that some rock art sites are protected and closed to visitors. Which reason best explains why they matter to the Aboriginal peoples of Gariwerd?",
+      "opts": [
+        "They are sacred sites, still tied to stories and law today",
+        "They are relics of a culture that has now disappeared",
+        "They are mainly scenic spots kept safe for tourists",
+        "They are sacred to the Anangu, whose Country it is"
+      ],
+      "why": "Gariwerd is Country for the Djab Wurrung and Jardwadjali peoples, and its sacred sites are tied to stories and law that are still part of life today. The Anangu option is tempting because it says sacred, but the Anangu are the people of Uluru, not Gariwerd.",
+      "clue": "Check which peoples Gariwerd belongs to, and whether the connection has ended."
+    }
+  },
+  "geo-weathering-vic": {
+    "title": "Weathering",
+    "card": [
+      "Weathering is the breaking down of rock where it sits. The rock is not moved away. It is only broken or changed in place.",
+      [
+        "Physical",
+        "rock is broken into pieces without changing what it is made of. In frost weathering, water seeps into cracks, freezes and expands, and splits the rock. Heating by day and cooling at night can also crack rock."
+      ],
+      [
+        "Chemical",
+        "rock is changed or dissolved by chemical reactions. Slightly acidic rainwater can slowly dissolve limestone and wear out caves and hollows."
+      ],
+      [
+        "Biological",
+        "living things break rock down. Plant roots grow into cracks and push them wider. Burrowing animals can also loosen rock."
+      ]
+    ],
+    "remember": "Weathering breaks rock down in place, by physical, chemical or biological processes.",
+    "a": {
+      "q": "Which description best shows weathering rather than another process?",
+      "opts": [
+        "A cliff face cracks and crumbles where it stands",
+        "Sand is blown from one dune to a new place",
+        "A river carries pebbles downstream to the sea",
+        "Waves drop sand to form a beach along a bay"
+      ],
+      "why": "Weathering breaks rock down where it sits, so the broken rock stays in place. The other options all involve material being moved from one place to another, which is not weathering.",
+      "clue": "Which option has the rock staying where it is?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A tree grows beside a granite boulder in the Grampians. Over many years its roots grow into a crack and the boulder splits. What type of weathering is this?",
+      "opts": [
+        "Biological weathering, caused by a living thing",
+        "Chemical weathering, caused by acidic rain",
+        "Physical weathering, caused by freezing water",
+        "Biological weathering, caused by burrowing animals"
+      ],
+      "why": "The roots of a living plant pushed the crack wider, so this is biological weathering. Frost is also a way rock can split, but no water freezing is described here, and no animals are involved.",
+      "clue": "What is making the crack wider?"
+    }
+  },
+  "geo-river-landforms": {
+    "title": "River landforms",
+    "card": [
+      [
+        "Near the source",
+        "The river runs steeply downhill and cuts down into the land. This forms V-shaped valleys. Where it drops over a band of hard rock, it can form a waterfall."
+      ],
+      [
+        "Middle course",
+        "The river slopes more gently and swings from side to side. This forms bends called meanders, which can grow larger further downstream. If a meander is cut off from the river, it can be left as a curved oxbow lake."
+      ],
+      [
+        "Near the mouth",
+        "The river slows down and drops the sediment (soil and sand) it carries. When it floods, it spreads sediment over the flat land beside it, building a floodplain. A delta forms where the river meets the sea and spreads out its sediment."
+      ],
+      "The shape of a river's landforms depends on where along its path they form. Steep land near the source cuts down, and gentler land further on bends, spreads and builds."
+    ],
+    "remember": "Near the source rivers cut down. Further on they bend. Near the mouth they slow and build.",
+    "a": {
+      "q": "Which landform is a river most likely to build where it slows down near the sea?",
+      "opts": ["A delta", "A V-shaped valley", "A waterfall", "A meander"],
+      "why": "Near the sea the river slows and drops its sediment, which builds up a delta. A V-shaped valley is tempting, but it is cut by a fast river near its source.",
+      "clue": "Think about what a slow river does with the sediment it carries."
+    },
+    "b": {
+      "d": 3,
+      "q": "After heavy rain, a river spills over its banks onto the flat farmland beside it. When the water drains away, a layer of mud is left on the fields. Which landform is this building?",
+      "opts": ["A floodplain", "A delta", "An oxbow lake", "A V-shaped valley"],
+      "why": "When a river floods, it spreads sediment over the flat land beside it, and this builds a floodplain. A delta is tempting because it is also built from sediment, but a delta forms where the river meets the sea, not on fields beside the river.",
+      "clue": "Where is the mud being left: beside the river or where it meets the sea?"
+    }
+  },
+  "geo-coastal-landforms": {
+    "title": "Coastal landforms",
+    "card": [
+      [
+        "Erosion",
+        "Waves crash against a headland, a piece of land that sticks out into the sea. They wear the rock away and cut steep cliffs along its edges."
+      ],
+      [
+        "Sequence",
+        "Waves cut a cave into a weak spot in the cliff. If the cave wears right through the headland, it becomes an arch. When the top of the arch falls, a stack is left standing in the sea."
+      ],
+      [
+        "Example",
+        "The Twelve Apostles, on Victoria's Great Ocean Road, are stacks. They were once part of the cliffs."
+      ],
+      [
+        "Deposition",
+        "Waves also drop sand on the coast. This builds beaches and spits (long strips of sand that stick out from the land). Wind can then blow dry sand from the beach into dunes, hills of sand behind it."
+      ]
+    ],
+    "remember": "Waves wear headlands into cliffs, caves, arches and stacks. They drop sand to make beaches and spits, and wind can pile it into dunes.",
+    "a": {
+      "q": "A sea cave has worn right through a headland, leaving a bridge of rock over the water. What is this landform called?",
+      "opts": ["An arch", "A stack", "A spit", "A dune"],
+      "why": "A cave that wears right through the headland leaves an arch, with rock still joining the land above the water. A stack is a column of rock standing alone in the sea, with no bridge of rock to the land.",
+      "clue": "The rock still joins the land at the top."
+    },
+    "b": {
+      "d": 3,
+      "q": "Waves have dropped sand along a bay in Victoria. The sand now forms a long strip that sticks out from the land into the water. Which process and landform are these?",
+      "opts": [
+        "Deposition, forming a spit",
+        "Erosion, forming a spit",
+        "Deposition, forming a stack",
+        "Erosion, forming a stack"
+      ],
+      "why": "Waves dropped the sand, so this is deposition, and a long strip of sand sticking out from the land is a spit. Stacks are made when waves wear rock away, and they are rock, not sand.",
+      "clue": "Sand is dropped, not worn away, and it is not rock."
+    }
+  },
+  "geo-tectonic-forces-landforms": {
+    "title": "Tectonic forces and landforms",
+    "card": [
+      "The Earth's outer layer is broken into large slabs of rock called tectonic plates. They move very slowly, only a few centimetres a year. Where they meet or pull apart, they shape the land.",
+      [
+        "Folding",
+        "when plates push together, layers of rock can bend into folds. Over millions of years this can build fold mountains, such as the Himalayas."
+      ],
+      [
+        "Faulting",
+        "when rock cracks and blocks of land move along the crack, this is a fault. If plates pull apart, a block of land can drop between two faults to form a rift valley, such as the East African Rift."
+      ],
+      [
+        "Volcano",
+        "a landform built where magma (melted rock) reaches the surface. The magma erupts as lava and ash, which pile up around the opening."
+      ]
+    ],
+    "remember": "Plates push, pull and crack the land into mountains, rift valleys and volcanoes.",
+    "a": {
+      "q": "Two plates push together. Over millions of years, the squeezing crumples flat layers of rock and pushes them upwards. Which landform is built from this crumpled rock?",
+      "opts": ["Fold mountains", "A rift valley", "A volcano", "A delta"],
+      "why": "When plates push together, rock layers can bend, and over a very long time the bent layers can build fold mountains. A volcano is tempting, but it is built from lava and ash piling up where magma reaches the surface, not from squeezed rock layers.",
+      "clue": "What happens to rock layers when they are squeezed from both sides?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Two plates under a region are slowly pulling apart. A long block of land drops between two faults. What landform is forming?",
+      "opts": ["A rift valley", "Fold mountains", "A volcano", "A delta"],
+      "why": "Plates pulling apart can crack the rock into faults, and a block of land between them can drop to make a rift valley. Fold mountains are tempting, but they come from plates pushing together and bending rock, not from a block dropping.",
+      "clue": "Look at the direction the plates are moving and at what the land block does."
+    }
+  },
+  "geo-human-causes-landform-change": {
+    "title": "Human causes of landform change",
+    "card": [
+      "People change landforms in two main ways. Some activities reshape the land directly. Others speed up erosion, which is the wearing away and moving of soil and rock by wind, water and gravity.",
+      [
+        "Direct change",
+        "Mining and quarrying dig out rock and soil, leaving pits and cuts. Building levels ground and covers it with roads and concrete. Dams hold back a river and flood the land behind the wall."
+      ],
+      [
+        "Faster erosion",
+        "Land clearing removes trees and plants whose roots hold soil together. Farming, such as ploughing or too many animals grazing, can leave soil bare. Wind and rain then carry it away faster."
+      ],
+      "These changes can happen in months or years. Natural processes usually take far longer to make the same change."
+    ],
+    "remember": "People change land directly by digging, building and damming, and can speed up erosion by removing plants that hold soil.",
+    "a": {
+      "q": "A farmer in north-west Victoria clears a hillside of trees to plant crops. How can this change the landform?",
+      "opts": [
+        "Bare soil can be washed away faster by rain",
+        "The hill is dug out and leaves a large pit",
+        "A river is held back and floods the valley",
+        "The hill is levelled and covered with concrete"
+      ],
+      "why": "Tree roots hold soil in place, so clearing leaves bare soil that rain can wash away faster. Digging out a pit describes mining or quarrying, which is a direct change and not what clearing does.",
+      "clue": "Think about what tree roots do to soil."
+    },
+    "b": {
+      "d": 2,
+      "q": "A company opens a quarry in the hills near Bendigo and removes rock for roads. Which describes how this changes the landform?",
+      "opts": [
+        "It directly digs out rock and leaves a pit or cut",
+        "It speeds up erosion by taking plants off the soil",
+        "It holds back a river and floods land upstream",
+        "It levels ground and covers it with roads and houses"
+      ],
+      "why": "A quarry removes rock from the ground, so it changes the landform directly by leaving a pit or cut. Taking plants off soil is how clearing and some farming speed up erosion, which is not the main change a quarry makes.",
+      "clue": "What is physically taken out of the hill?"
+    }
+  },
+  "geo-managing-coasts-vic": {
+    "title": "Managing coasts",
+    "card": [
+      "Waves and currents wear away coasts and move sand along them. This is coastal erosion. People manage coasts to protect land, homes and beaches from it.",
+      [
+        "Hard engineering",
+        "building solid structures. A sea wall is a barrier along the shore that blocks waves. A groyne is a wall built out into the sea to trap sand moving along the beach."
+      ],
+      [
+        "Soft approaches",
+        "working with natural processes. Beach nourishment adds sand to a beach. Replanting dunes uses plant roots to hold sand in place."
+      ],
+      "Hard structures can protect one place but move erosion elsewhere. A groyne traps sand, so the beach further along the coast may get less sand and wear away faster."
+    ],
+    "remember": "Hard engineering builds structures and can shift erosion elsewhere. Soft approaches work with natural processes.",
+    "a": {
+      "q": "Which of these is a soft approach to managing a coast?",
+      "opts": [
+        "Planting grasses on sand dunes",
+        "Building a sea wall along the shore",
+        "Building groynes out into the sea",
+        "Placing a solid barrier at the base of a cliff"
+      ],
+      "why": "Replanting dunes works with natural processes, because roots hold the sand in place. Sea walls and groynes are solid structures, so they are hard engineering.",
+      "clue": "Which one uses plants or sand instead of building a structure?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A council builds a groyne to hold sand on Wavecrest Beach. Soon after, the next beach along the coast starts to lose sand faster. What is the most likely reason?",
+      "opts": [
+        "The groyne trapped sand that would have reached it",
+        "The groyne added extra sand to that beach",
+        "The groyne stopped waves from reaching the coast",
+        "The groyne helped dune plants grow on that beach"
+      ],
+      "why": "A groyne traps sand moving along the shore, so less sand reaches the next beach and it erodes faster. The groyne does not add sand. It also does not stop all waves from reaching the coast.",
+      "clue": "Think about where the sand moving along the beach ends up."
+    }
+  },
+  "geo-protecting-landscapes": {
+    "title": "Protecting landscapes",
+    "card": [
+      [
+        "National parks",
+        "areas set aside by government to protect natural features such as landforms, plants and animals. Rangers manage them, and rules limit what visitors may do."
+      ],
+      [
+        "World Heritage listing",
+        "a list kept by UNESCO, a United Nations body, of places with outstanding natural or cultural value. Australia has promised to protect its listed places, and its laws limit actions that could harm them."
+      ],
+      [
+        "Rules on development",
+        "laws and planning rules that limit or ban building, mining or clearing land in fragile or protected areas, or set conditions on how it is done."
+      ],
+      [
+        "Traditional Owners",
+        "Aboriginal and Torres Strait Islander people with cultural ties to an area's Country. In many parks they share decisions with government, as Anangu do at Uluru-Kata Tjuta National Park."
+      ]
+    ],
+    "remember": "Parks, World Heritage listing and rules on development protect landforms, often with Traditional Owners sharing management.",
+    "a": {
+      "q": "How does World Heritage listing help protect a landform in Australia?",
+      "opts": [
+        "Australian laws limit actions that could harm it",
+        "The United Nations sends rangers to run the site",
+        "It becomes a national park as soon as it is listed",
+        "It bans every visitor from going to the site"
+      ],
+      "why": "Australia has promised to protect its World Heritage places, and its laws limit actions that could harm them. UNESCO keeps the list, but it does not send rangers to run each place.",
+      "clue": "Think about who protects places inside this country."
+    },
+    "b": {
+      "d": 2,
+      "q": "The Victorian government and a group of Traditional Owners agree to jointly manage a national park with granite hills and gorges. What does joint management mean here?",
+      "opts": [
+        "They share decisions about how the park is cared for",
+        "The Traditional Owners now run the park on their own",
+        "The government decides and then tells them its plans",
+        "The park is no longer covered by protection rules"
+      ],
+      "why": "Joint management means both groups take part in decisions about caring for the park. The government making decisions and then telling the Traditional Owners would not be shared management.",
+      "clue": "Think about who has a say in what happens to the park."
+    }
+  },
+  "geo-explaining-landforms-with-interconnection": {
+    "title": "Interconnection and change in landforms",
+    "card": [
+      [
+        "Interconnection",
+        "This is how things link to each other. A landform is shaped by several processes working together, such as climate, rivers, rock type and people. A change in one can affect the others."
+      ],
+      [
+        "Change",
+        "This is how a landform alters over time. Many landforms formed slowly over thousands or millions of years. Some changes can happen quickly, such as in a flood or when land is cleared."
+      ],
+      "For example, heavy rain makes a river flow faster, so it carries more soil away. If people have cleared the trees on its banks, the bank erodes even faster. Rain, river and people are all linked.",
+      "Geographers use both ideas to explain a landform. They ask what processes linked together to shape it, and how it has changed over time."
+    ],
+    "remember": "Interconnection asks what links to shape a landform. Change asks how it altered over time.",
+    "a": {
+      "q": "A gorge was cut by a river over a very long time. Which idea does this slow cutting best show?",
+      "opts": [
+        "Change, as the landform formed over a long time span",
+        "Interconnection, as the river and the people are linked",
+        "Change, as landforms can only alter very slowly",
+        "Interconnection, as the river is the only process at work"
+      ],
+      "why": "The gorge formed over a long time, which is about change. The option about interconnection is tempting, but nothing in the question links several processes. Landforms can also change quickly, so slowly is not the only way.",
+      "clue": "The question is about how long the gorge took to form."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom studies a creek bank near Bendigo. Farmers cleared the trees, then a storm brought heavy rain, and the bank collapsed within days. Which statement explains the collapse using both ideas?",
+      "opts": [
+        "Clearing, rain and the creek linked, causing quick change",
+        "Rain alone caused quick change, so people were not involved",
+        "Clearing caused the collapse, and the rain was not linked",
+        "The bank fell because landforms only change very slowly"
+      ],
+      "why": "The clearing, the storm and the creek worked together, which is interconnection, and the bank altered within days, which is change. Blaming the rain alone ignores the link with the cleared trees.",
+      "clue": "Look for the answer that links several causes and notes how fast it happened."
+    }
+  },
+  "geo-geomorphological-hazard": {
+    "title": "What a geomorphological hazard is",
+    "card": [
+      "A geomorphological hazard is a threat to people that comes from processes in or on the Earth's crust. The crust is the rocky outer layer of the Earth.",
+      "Examples are earthquakes, volcanic eruptions, tsunamis and landslides. Each comes from rock or ground moving or changing, such as a slope giving way or the sea floor shifting to set off a tsunami.",
+      "Hazards that are the weather itself, such as floods, storms and heatwaves, are not geomorphological. A landslide set off by heavy rain still is, because the hazard is the ground moving.",
+      "Geomorphological hazards are most common along plate boundaries, where the Earth's plates meet and move against each other."
+    ],
+    "remember": "If the hazard is rock or ground moving or changing, it is geomorphological. They are most common along plate boundaries.",
+    "a": {
+      "q": "Which of these is a geomorphological hazard?",
+      "opts": [
+        "A landslide on a steep hillside",
+        "A severe storm with strong winds",
+        "A heatwave in a city",
+        "A flood after days of heavy rain"
+      ],
+      "why": "A landslide is rock and soil moving on the Earth's surface, so it comes from processes in or on the crust. The storm, heatwave and flood are the weather itself, so they are not geomorphological hazards.",
+      "clue": "Think about where each hazard comes from: the crust or the weather."
+    },
+    "b": {
+      "d": 3,
+      "q": "Hana reads that a town sits on a plate boundary. Why does this make her think the town may face geomorphological hazards?",
+      "opts": [
+        "These hazards are most common where plates meet",
+        "Plate boundaries are always hit by heavy storms",
+        "Towns near boundaries have more people than elsewhere",
+        "Plates meeting cause cyclones in the sky above"
+      ],
+      "why": "Plates meet and move against each other at boundaries, so crust processes such as earthquakes and eruptions are most common there. Storms and cyclones are weather, not crust processes, so they are not geomorphological hazards.",
+      "clue": "Think about what happens in the crust where plates meet."
+    }
+  },
+  "geo-earthquakes-vic": {
+    "title": "Earthquakes",
+    "card": [
+      "An earthquake is a shaking of the ground. It happens when rock along a fault, a crack in the Earth's crust, slips suddenly.",
+      "Stress builds up as rock on each side of a fault is pushed or pulled. When the rock finally gives way, the stored energy is released as waves that shake the ground.",
+      "Impacts can include collapsed buildings, landslides on steep slopes and fires from broken gas pipes and power lines.",
+      "Harm is usually worst where buildings are weak and many people live close together. The same shaking can cause far less damage where buildings are strong and fewer people live."
+    ],
+    "remember": "A sudden slip along a fault causes an earthquake. Weak buildings and dense populations make the harm worse.",
+    "a": {
+      "q": "Stress has built up in the crust near a fault. Which event then shakes the ground?",
+      "opts": [
+        "The rock along the fault slips suddenly",
+        "The rock along the fault slowly wears away",
+        "Heavy rain loosens soil on a nearby slope",
+        "Waves from the ocean hit the coast"
+      ],
+      "why": "When the stressed rock gives way and slips, the stored energy is released as waves that shake the ground. Slow wearing away of rock is erosion, which does not suddenly release energy.",
+      "clue": "Think about what happens along a crack in the crust."
+    },
+    "b": {
+      "d": 3,
+      "q": "One earthquake shakes four towns equally hard. Which town is likely to suffer the most harm?",
+      "opts": [
+        "Poorly built homes, with many people packed close",
+        "Well-built homes, with many people packed close",
+        "Poorly built homes, with a few farms spread apart",
+        "Well-built homes, with a few farms spread apart"
+      ],
+      "why": "Harm is usually worst where buildings are weak and many people live close together, and the town with poorly built homes and many people packed close has both. The town with poorly built homes but a few farms spread apart has fewer people near each building that might fall, so less harm is likely.",
+      "clue": "The card names two things that make harm worse."
+    }
+  },
+  "geo-volcanic-eruptions": {
+    "title": "Volcanic eruptions",
+    "card": [
+      "A volcano forms where magma, which is hot melted rock, rises through the Earth's crust. Many volcanoes form at plate boundaries.",
+      "The Pacific Ring of Fire is a belt of plate boundaries around the Pacific Ocean. It has many of the world's volcanoes.",
+      "Eruptions can bring lava, ash, gas and mudflows. Ash can cover farms and towns, and mudflows can bury land far from the volcano.",
+      "Fresh ash can harm crops. Over many years, though, ash and lava break down into soil rich in minerals, so volcanic soils are fertile. This is one reason people farm near volcanoes."
+    ],
+    "remember": "Eruptions bring lava, ash, gas and mudflows, but over time volcanic material makes fertile soil.",
+    "a": {
+      "q": "Why do some people choose to farm on land near a volcano?",
+      "opts": [
+        "Volcanic soils are rich in minerals",
+        "Ash lands on towns but misses farms",
+        "Mudflows bring water to nearby fields",
+        "Plate boundaries stop volcanoes erupting"
+      ],
+      "why": "Over many years, ash and lava break down into soil rich in minerals, so crops can grow well. The option about ash missing farms is wrong, because ash can cover farms as well as towns. Mudflows bury land rather than water it, and many volcanoes form at plate boundaries.",
+      "clue": "Think about what happens to ash and lava over time."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mt Kelara, a volcano, last erupted 300 years ago. Today, farms cover its lower slopes. Which statement best explains this?",
+      "opts": [
+        "Old ash and lava have broken down into fertile soil",
+        "Fresh ash feeds crops with minerals straight away",
+        "Ash from eruptions falls on towns but not on farms",
+        "Gas from eruptions warms the soil so crops grow"
+      ],
+      "why": "Over many years, ash and lava from past eruptions break down into soil rich in minerals, which suits farming. The option about fresh ash is wrong, because fresh ash can harm crops: the fertile soil forms as it breaks down over time.",
+      "clue": "Think about how long it takes ash and lava to become soil."
+    }
+  },
+  "geo-reducing-risk-geomorphological-hazards": {
+    "title": "Reducing the risk of hazards",
+    "card": [
+      "A hazard cannot always be stopped, but the harm it does can be cut. Communities do this by preparing before the event, acting during it and helping people afterwards.",
+      [
+        "Warning systems",
+        "detect a hazard and alert people in time to move. A tsunami warning system, for example, can send out alerts after an undersea earthquake."
+      ],
+      [
+        "Planning and buildings",
+        "Earthquake-resistant buildings are designed to flex and stay standing. Land-use planning keeps homes and schools away from high-risk places, such as steep slopes and coasts."
+      ],
+      [
+        "Drills and aid",
+        "Evacuation drills teach people where to go and what to do. Aid after the event, such as food, shelter and medical help, helps a community recover."
+      ]
+    ],
+    "remember": "Communities cut the harm from hazards by preparing, warning, planning and helping afterwards.",
+    "a": {
+      "q": "A coastal town holds regular practice runs so that residents know the route to high ground. Which method of reducing risk is this?",
+      "opts": ["Evacuation drills", "Land-use planning", "Earthquake-resistant buildings", "Aid after the event"],
+      "why": "Practice runs that teach people where to go and what to do are evacuation drills. Land-use planning is tempting, but it controls where buildings are placed rather than teaching people how to respond.",
+      "clue": "The residents are practising what to do."
+    },
+    "b": {
+      "d": 3,
+      "q": "Council in a hilly town bans new homes on steep slopes that have slid before. How does this reduce the harm from landslides?",
+      "opts": [
+        "It keeps people and buildings out of high-risk places",
+        "It alerts people in time to leave their homes",
+        "It helps the community recover after a landslide",
+        "It makes buildings flex and stay standing in a landslide"
+      ],
+      "why": "Banning homes on slopes that have slid before is land-use planning. It keeps people and buildings away from the hazard in the first place. A warning system alerts people, and aid helps recovery, but neither is what a ban on building does.",
+      "clue": "The ban decides where buildings can go."
+    }
+  },
+  "geo-urbanisation-it-happens": {
+    "title": "Urbanisation and why it happens",
+    "card": [
+      "Urbanisation is the growing share of a country's people who live in towns and cities. It is a change in the share, not just in the number of city dwellers.",
+      [
+        "Push factors",
+        "things that drive people out of rural areas, such as poverty, few jobs, and farmland that can no longer support a family."
+      ],
+      [
+        "Pull factors",
+        "things that draw people to cities, such as paid work, services like hospitals, and schools and universities."
+      ],
+      "Push and pull factors often work together. A person may leave a farm because of low income and move to a city because jobs are on offer there."
+    ],
+    "remember": "Rural hardship pushes people out, city work and services pull them in, and the urban share grows.",
+    "a": {
+      "q": "Which of these best describes urbanisation?",
+      "opts": [
+        "A growing share of people living in towns and cities",
+        "A city spreading out over more land each year",
+        "More people being born in cities than in rural areas",
+        "Towns and cities being built with taller buildings"
+      ],
+      "why": "Urbanisation is about the share of a country's people who live in towns and cities. A city spreading over more land is a different thing, because it describes the size of the city and not where people live.",
+      "clue": "Think about a whole country's people, not the size or look of one city."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sunita's family has farmed in rural India for years, but poor harvests have left them with little income. She moves to Pune to work in a hospital. Which pair correctly names the push and the pull?",
+      "opts": [
+        "Push: poor harvests and low income. Pull: hospital work",
+        "Push: hospital work. Pull: poor harvests and low income",
+        "Push: poor harvests and low income. Pull: farming",
+        "Push: hospital work. Pull: living in the countryside"
+      ],
+      "why": "Poor harvests and low income drove Sunita out of her rural area, so they are push factors. The hospital job in Pune drew her to the city, so it is a pull factor. The option that calls hospital work the push has the two swapped.",
+      "clue": "Push drives people away from where they live. Pull draws them to a new place."
+    }
+  },
+  "geo-impacts-rapid-urbanisation": {
+    "title": "Impacts of rapid urbanisation",
+    "card": [
+      "Rapid urbanisation means a city grows very fast as many people move in. It can bring benefits, such as more jobs and higher incomes.",
+      "It can also bring problems. Homes may not be built fast enough, so some people live in slums: crowded areas with poor housing and few services.",
+      "Other problems include traffic, air and water pollution, and water shortages. Cities that spread outwards can also take over farmland.",
+      "A megacity is a city of over 10 million people. These large cities tend to feel the pressures most, because so many people need homes, water and transport."
+    ],
+    "remember": "Fast city growth can bring jobs and incomes, but it can also strain housing, services and the environment.",
+    "a": {
+      "q": "Which of these is a benefit that rapid urbanisation can bring to a city?",
+      "opts": [
+        "More jobs and higher incomes",
+        "Less traffic on the roads",
+        "More farmland near the city",
+        "Cleaner air and water"
+      ],
+      "why": "Many people moving to a city can mean more work and higher incomes. The other three options are the reverse of what fast growth tends to bring. Traffic and pollution usually get worse, and farmland is often lost as the city spreads.",
+      "clue": "Think about why people move to cities in the first place."
+    },
+    "b": {
+      "d": 3,
+      "q": "A city in Asia has grown from 2 million to 12 million people in 30 years. Many families now live in crowded areas with poor housing. Why is this likely?",
+      "opts": [
+        "Homes were not built as fast as people arrived",
+        "Most people left the city to live in the country",
+        "Farmland spread into the city centre",
+        "The city has too few people to need more homes"
+      ],
+      "why": "When people arrive faster than homes and services can be built, some end up in slums. The city has grown, not shrunk, so a lack of people is wrong. It is the growth that creates the pressure.",
+      "clue": "Did the city grow or shrink, and what does that mean for housing?"
+    }
+  },
+  "geo-urbanisation-indonesia": {
+    "title": "Urbanisation in Indonesia",
+    "card": [
+      "Jakarta is the capital of Indonesia, on the island of Java. It grew fast as many people moved from rural areas to find work.",
+      "This rapid growth put heavy pressure on the city. Jakarta has bad flooding and heavy traffic.",
+      "Many people and businesses pump water out of the ground. As the water is removed, the land can slowly sink. Parts of Jakarta are sinking, which makes flooding worse.",
+      "These problems led Indonesia to build a new capital called Nusantara on the island of Borneo. The plan is to move government there and ease the pressure on Jakarta."
+    ],
+    "remember": "Jakarta's fast growth brought flooding, traffic and sinking land, so Indonesia is building a new capital, Nusantara.",
+    "a": {
+      "q": "Why is some of Jakarta sinking?",
+      "opts": [
+        "Groundwater is pumped out from under the city",
+        "Rivers have worn away the soil beneath the city",
+        "Heavy traffic has pressed down on the roads",
+        "Farmland around the city has been built over"
+      ],
+      "why": "When people and businesses pump water out of the ground, the land above can slowly sink. Traffic is a problem in Jakarta, but the card links the sinking to groundwater pumping.",
+      "clue": "Think about what is being taken out from under the ground."
+    },
+    "b": {
+      "d": 2,
+      "q": "Which statement best explains why Indonesia is building Nusantara on Borneo?",
+      "opts": [
+        "Jakarta's fast growth caused flooding and traffic problems",
+        "Jakarta has lost most of its people to rural areas",
+        "Borneo has more people than any other Indonesian island",
+        "Jakarta no longer has any jobs or services to offer"
+      ],
+      "why": "Jakarta grew fast and now faces flooding, traffic and sinking land, so a new capital is planned to ease the pressure. Jakarta did not lose its people: it grew as people moved in.",
+      "clue": "Think about what rapid growth did to Jakarta."
+    }
+  },
+  "geo-urbanisation-china": {
+    "title": "Urbanisation in China",
+    "card": [
+      "In 1980 most people in China lived in rural areas. Today most live in towns and cities. This change took only a few decades, which is very fast.",
+      "Factories were built in coastal cities such as Shenzhen and Shanghai. They offered jobs and higher wages than farming, so millions of rural people moved there for work.",
+      "The move helped the economy grow and raised the incomes of many families.",
+      "It also brought problems. Air pollution from factories and traffic, and crowded cities and housing, put pressure on people and services."
+    ],
+    "remember": "China urbanised fast as factory jobs drew rural people to coastal cities, with growth and pollution together.",
+    "a": {
+      "q": "Which best explains why millions of people in China moved to coastal cities?",
+      "opts": [
+        "Factories there offered jobs and higher wages",
+        "The government closed all farms in rural areas",
+        "Coastal cities had far fewer people than villages",
+        "Rural areas had too much rain for any farming"
+      ],
+      "why": "Factories in coastal cities offered work that paid more than farming, so people were drawn there. The idea that all farms were closed is wrong: the card says people moved for jobs and wages.",
+      "clue": "Why might someone choose to leave farming behind?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Mei leaves her family's village for a factory job in Shenzhen. Which problem is she most likely to find in the city?",
+      "opts": [
+        "Air pollution and crowded housing",
+        "A shortage of jobs in factories",
+        "Lower wages than she earned farming",
+        "Fewer people than in her village"
+      ],
+      "why": "Fast city growth in China brought pollution and crowding. A shortage of factory jobs is wrong, because factories were the reason people moved to coastal cities.",
+      "clue": "Think about what happens when many people and factories gather in one place."
+    }
+  },
+  "geo-internal-international-migration-vic": {
+    "title": "Internal and international migration",
+    "card": [
+      [
+        "Internal migration",
+        "Moving from one place to another within the same country, such as from a farm town to a city, or from one state to another. The distance moved does not decide the type."
+      ],
+      [
+        "International migration",
+        "Moving from one country to another, such as from Vietnam to Australia. The person crosses a national border."
+      ],
+      ["Push factors", "Things that make people want to leave a place, such as a lack of jobs, war or a drought."],
+      [
+        "Pull factors",
+        "Things that attract people to a new place, such as jobs, safety or good schools. Both kinds of migration are driven by push and pull factors."
+      ]
+    ],
+    "remember": "Internal stays inside a country, international crosses a border. Push and pull factors drive both.",
+    "a": {
+      "q": "Tariq moves from Ballarat to Perth for a new job. What type of migration is this, and why?",
+      "opts": [
+        "Internal migration, because he stays in Australia",
+        "International migration, because he moves to another state",
+        "Internal migration, because he moves for work",
+        "International migration, because he moves a long way"
+      ],
+      "why": "Ballarat and Perth are both in Australia, so Tariq does not cross a national border. That is what makes it internal migration. Moving for work is a pull factor, which drives both types, so it does not explain the type, and a state border is not a national border.",
+      "clue": "What decides the type: the reason, the distance, or the border?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Lena leaves her village in Kenya because of a long drought, and moves to Melbourne where a cousin has found her a job. Which pair of factors is at work?",
+      "opts": [
+        "Drought is a push factor and the job is a pull factor",
+        "Drought is a pull factor and the job is a push factor",
+        "Both the drought and the job are push factors",
+        "Both the drought and the job are pull factors"
+      ],
+      "why": "The drought makes Lena want to leave her village, so it is a push factor. The job attracts her to Melbourne, so it is a pull factor. The move is international, but push and pull factors drive both kinds of migration.",
+      "clue": "Which factor makes her leave, and which makes her choose Melbourne?"
+    }
+  },
+  "geo-migration-australia-s-cities": {
+    "title": "Migration and Australia's cities",
+    "card": [
+      "Many people move to Australia from other countries each year. Most of these migrants settle in the capital cities, not in small towns or the country.",
+      "Sydney and Melbourne receive the largest numbers of migrants. They are Australia's two biggest cities.",
+      "Cities attract migrants because they have many jobs, schools, hospitals and universities. Many also have communities of people from the migrant's home country, which helps newcomers settle in.",
+      "Migrants arriving from overseas add to a city's population. This is a large part of why Sydney and Melbourne keep growing."
+    ],
+    "remember": "Most migrants to Australia settle in capital cities, especially Sydney and Melbourne, and this helps those cities grow.",
+    "a": {
+      "q": "Where do most migrants to Australia choose to settle?",
+      "opts": [
+        "In the capital cities, especially Sydney and Melbourne",
+        "In small country towns near farming areas",
+        "In remote areas in the centre of Australia",
+        "In mining towns in the north of the country"
+      ],
+      "why": "Capital cities offer many jobs, services and communities of people from the migrant's home country. Small towns and remote areas have fewer of these, so far fewer migrants settle there.",
+      "clue": "Think about where jobs, schools and hospitals are found."
+    },
+    "b": {
+      "d": 2,
+      "q": "Melbourne's population has grown quickly over many years. How do migrants from overseas help explain this?",
+      "opts": [
+        "Many of them settle in Melbourne and add to its population",
+        "Many of them are born in Melbourne and then move overseas",
+        "Many of them pass through Melbourne and go to the country",
+        "Many of them settle in Melbourne and leave within a year"
+      ],
+      "why": "Migrants arriving from overseas add people to the cities where they settle, and Melbourne is one of the most popular. The other options suggest migrants do not stay, which would not make the city grow.",
+      "clue": "Growth means more people living in the city."
+    }
+  },
+  "geo-internal-migration-australia-vic": {
+    "title": "Internal migration in Australia",
+    "card": [
+      "Australians often move within their own country, between states and between cities, towns and the country. These moves are a form of internal migration.",
+      [
+        "Interstate move",
+        "a move from one state to another. Many people move to Queensland and Western Australia, often for a job, such as in mining or building, or for a warmer climate."
+      ],
+      [
+        "Sea change",
+        "a move from a big city to a town on the coast, for a slower pace of life, a beach lifestyle or cheaper housing."
+      ],
+      [
+        "Tree change",
+        "a move from a big city to a country town or inland area, for similar reasons such as space, quiet and lower costs."
+      ]
+    ],
+    "remember": "Australians move to other states for work or climate, and from big cities to the coast or the country for lifestyle.",
+    "a": {
+      "q": "Priya leaves her flat in Melbourne to live in a small coastal town in Victoria for a slower pace of life. What is this move called?",
+      "opts": ["A sea change", "A tree change", "An interstate move", "A move for work"],
+      "why": "Priya moves from a big city to a town on the coast for lifestyle reasons, so it is a sea change. A tree change is also a move from a city, but it is to a country or inland area, not the coast. She stays in Victoria, so it is not an interstate move.",
+      "clue": "Look at where she is moving to: the coast or inland?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Leo moves from Sydney to Perth to take a job at a mine in Western Australia. Which description fits his move best?",
+      "opts": [
+        "An interstate move for work",
+        "A sea change, as Perth is on the coast",
+        "A tree change, as mines are inland",
+        "An interstate move for a warmer climate"
+      ],
+      "why": "Leo moves from New South Wales to Western Australia to take a job, so it is an interstate move for work. Perth is on the coast, but it is a big city, not a coastal town, and he moves for a job rather than lifestyle, so it is not a sea change.",
+      "clue": "Why is Leo moving, and is Perth a small town?"
+    }
+  },
+  "geo-internal-migration-china-vic": {
+    "title": "Internal migration in China",
+    "card": [
+      "Since about 1980, hundreds of millions of people in China have moved from the countryside to cities. This is internal migration, because they stay inside China. It is one of the largest migrations in history.",
+      "Many moved to find work in factories, on building sites and in service jobs, such as shops, restaurants and delivery. Wages in cities were often higher than farm incomes. These are pull factors.",
+      "The hukou is China's household registration system. It records where a family is officially registered, and access to services such as public schools and health care has often depended on that place.",
+      "Many rural migrants have worked in cities without a city hukou. This has made it harder for them to use city services, and some have left children with relatives in their home village."
+    ],
+    "remember": "Rural Chinese moved to cities for work, and the hukou system shaped what services they could use there.",
+    "a": {
+      "q": "What is the hukou system?",
+      "opts": [
+        "A household registration system tied to a place",
+        "A government program that builds new factory towns",
+        "A rule that bans people from leaving their country",
+        "A tax paid by workers who move to a city"
+      ],
+      "why": "The hukou records where a family is officially registered, and services have often depended on that place. It does not build towns, ban travel or collect a tax.",
+      "clue": "Think about what it records about a family."
+    },
+    "b": {
+      "d": 3,
+      "q": "Wei moves from a farming village to a city factory in China. He keeps his village hukou, and his daughter cannot easily enrol in a city public school. What does this show?",
+      "opts": [
+        "The hukou can limit migrants' access to city services",
+        "Wei has made an international move between countries",
+        "The hukou gives migrants full access to city schools",
+        "Wei's hukou moved with him to the city automatically"
+      ],
+      "why": "Services such as public schools have often depended on the place of registration, so a village hukou can limit access in the city. The hukou does not give migrants full access, which is why his daughter cannot easily enrol. Wei stays inside China, so his move is not international.",
+      "clue": "Which option links the school problem to where he is registered?"
+    }
+  },
+  "geo-australia-s-urban-pattern-vic": {
+    "title": "Australia's urban pattern",
+    "card": [
+      "Australia is one of the most urbanised countries in the world. This means that most of its people live in towns and cities, not in rural areas.",
+      "Most Australians live in a few large capital cities, such as Sydney, Melbourne, Brisbane and Perth. Most of these cities are on or near the coast.",
+      "In every state, the capital is the largest city, and it is often many times bigger than the next largest. For example, Melbourne has about five million people, while Geelong and Ballarat are much smaller.",
+      "Large parts of the inland have very few people. The population is packed into a small share of the land, mainly along the coast."
+    ],
+    "remember": "Most Australians live in a few big capitals near the coast. Each is its state's largest city, often by far.",
+    "a": {
+      "q": "Which statement best describes where most Australians live?",
+      "opts": [
+        "In a few large capital cities near the coast",
+        "In many small towns spread across the inland",
+        "On farms and stations in rural areas",
+        "In several equal-sized cities across the country"
+      ],
+      "why": "Most Australians live in a few big capital cities, mostly near the coast. The inland has few people, so towns spread across it do not hold most of the population.",
+      "clue": "Think about the capitals and where they sit."
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia looks at a map of Victoria. Melbourne has about five million people. Geelong has a few hundred thousand. What does this show about Victoria?",
+      "opts": [
+        "The capital is far bigger than the next city",
+        "Victoria has no large cities at all",
+        "Geelong is nearly as big as Melbourne",
+        "Most Victorians live in the inland countryside"
+      ],
+      "why": "Melbourne is many times larger than Geelong, which matches the pattern of a capital far bigger than the next city. Geelong has only a few hundred thousand people, so it is not close to Melbourne in size.",
+      "clue": "Compare the two numbers."
+    }
+  },
+  "geo-urban-sprawl": {
+    "title": "Urban sprawl",
+    "card": [
+      "Urban sprawl is when a city spreads outward into new suburbs. These suburbs are low-density, which means few homes on each hectare of land, mostly houses with yards.",
+      "Sprawl often grows over farmland and bush on the edge of a city. Land that was used for growing food or as habitat for plants and animals is built on.",
+      "People in outer suburbs often live far from jobs, schools and shops. Trips get longer, and many people rely on cars.",
+      "Homes are spread out, so there are fewer people in each area. This makes it harder and more costly to provide services such as water pipes and schools, and to run public transport that enough people use."
+    ],
+    "remember": "Sprawl spreads a city outward with low-density suburbs, which uses up land and makes travel and services harder.",
+    "a": {
+      "q": "Which description best fits urban sprawl?",
+      "opts": [
+        "A city spreading outward in low-density suburbs",
+        "A city adding more flats in its centre",
+        "People moving from a city to a country town",
+        "A city planting more trees along its streets"
+      ],
+      "why": "Sprawl is outward growth into low-density suburbs on the city edge. Adding flats in the centre does the opposite, because it packs more people into the same area.",
+      "clue": "Think about which direction the city is growing and how many homes fit on each hectare."
+    },
+    "b": {
+      "d": 3,
+      "q": "A new suburb of houses with large yards is built on farmland 40 km from the centre of a city. Few buses reach it. Which problem is most likely to result from this sprawl?",
+      "opts": [
+        "Residents face long trips and rely on cars",
+        "Residents live too close to shops and jobs",
+        "Services are cheap to provide for so many people",
+        "Farmland near the city grows in area"
+      ],
+      "why": "The suburb is far from the centre and has low density, so trips are long and public transport is hard to provide. That leads to car use. The option about cheap services is wrong, because spread-out homes make services harder and more costly to supply.",
+      "clue": "Think about how far people must travel and how many people live in each area."
+    }
+  },
+  "geo-making-cities-more-sustainable": {
+    "title": "Making cities more sustainable",
+    "card": [
+      "A sustainable city meets the needs of people today without harming the environment or making life harder for future residents. Planners can use several actions to move a city in that direction.",
+      [
+        "Transport and homes",
+        "Better public transport, such as trains, trams and buses, can reduce car use. Homes closer to jobs and services shorten trips, so people spend less time and fuel travelling."
+      ],
+      [
+        "Buildings and waste",
+        "Energy-efficient buildings use less electricity for heating, cooling and lighting. Recycling turns waste into new products, so less rubbish goes to landfill."
+      ],
+      [
+        "Green space",
+        "Protected parks, bushland and waterways give habitat for wildlife and places to relax. They can also help keep a city cooler."
+      ]
+    ],
+    "remember": "Sustainable cities cut waste and travel and protect nature, using transport, housing, buildings, recycling and green space.",
+    "a": {
+      "q": "A council builds new apartments next to a train station and a large office area. How does this help make the city more sustainable?",
+      "opts": [
+        "Shorter trips mean people use less fuel and time",
+        "It adds more low-density suburbs on the city edge",
+        "It makes buildings use less electricity for lighting",
+        "It turns waste into new products instead of landfill"
+      ],
+      "why": "Homes close to jobs and public transport shorten trips, so people use less fuel. Energy-efficient buildings and recycling are also sustainable actions, but they are not what this change does.",
+      "clue": "Think about how far people need to travel each day."
+    },
+    "b": {
+      "d": 3,
+      "q": "A city plans to protect a bushland reserve and a creek instead of building houses on them. Which is a sustainability benefit of this choice?",
+      "opts": [
+        "It keeps wildlife habitat and places to relax",
+        "It cuts the electricity needed to heat buildings",
+        "It lets rubbish be turned into new products",
+        "It shortens the trips people make to work"
+      ],
+      "why": "Protected green space gives habitat for wildlife and places for people to relax. Cutting electricity use is about energy-efficient buildings, and turning rubbish into new products is recycling. Shorter work trips come from homes closer to jobs.",
+      "clue": "Which action is about nature, not buildings, waste or travel?"
+    }
+  },
+  "geo-cities-climate-change": {
+    "title": "Cities and climate change",
+    "card": [
+      "The urban heat island effect is when a city is hotter than the land around it. Dark roads and roofs soak up heat, and buildings and paving leave few plants to cool the air.",
+      "Climate change is making the world warmer, so it can make heat islands worse. Hot days in a city can become hotter and more dangerous for people.",
+      "Cities can adapt, which means changing to cope with a new problem. Street trees and shade cool the air. Light-coloured cool roofs reflect heat instead of soaking it up.",
+      "Climate change can also bring heavier rain. Flood-safe planning, such as keeping homes away from flood-prone land and leaving open ground to soak up water, lowers the risk."
+    ],
+    "remember": "Cities trap heat, and climate change can add to it. Trees, shade, cool roofs and flood-safe planning help cities adapt.",
+    "a": {
+      "q": "Why can the centre of a city be hotter than farmland nearby?",
+      "opts": [
+        "Dark roads and roofs soak up heat and few plants cool it",
+        "Cities sit closer to the sun than farmland does",
+        "Farmland is covered in dark surfaces that reflect heat away",
+        "People in a city give off more heat than machines do"
+      ],
+      "why": "Dark surfaces take in heat and there are fewer plants to cool the air, so the city heats up. Being close to the sun is not the reason, because the city and the farmland are about the same distance from it.",
+      "clue": "Think about what the ground is covered with."
+    },
+    "b": {
+      "d": 2,
+      "q": "A council in Melbourne wants to cool a hot shopping street. Which action would best reduce the urban heat island effect there?",
+      "opts": [
+        "Plant street trees and add shade over the footpath",
+        "Widen the road and lay darker asphalt",
+        "Build more car parks with open, unshaded surfaces",
+        "Remove awnings so that more sun reaches the street"
+      ],
+      "why": "Trees and shade cool the air and block the sun, which reduces heat in the street. Darker asphalt soaks up more heat, so it would make the heat island effect worse.",
+      "clue": "Think about what dark, bare surfaces do with the sun's heat."
+    }
+  },
+  "geo-understanding-urbanisation-through-geographical": {
+    "title": "Urbanisation and geographical concepts",
+    "card": [
+      [
+        "Space and place",
+        "Space is where cities grow and how they are spread out, such as along a coast or a river. Place is what a city is like, including its people, buildings, land and feel."
+      ],
+      [
+        "Interconnection",
+        "Cities link to other places. Rural areas send food, water and workers to a city. The city sends back goods, services and money."
+      ],
+      [
+        "Change",
+        "Change is how a city differs over time. Its population, size and land use can grow or shift across the years."
+      ],
+      [
+        "Sustainability",
+        "Sustainability asks whether a city's growth can last. It looks at whether the needs of people now can be met without harming the needs of people later."
+      ]
+    ],
+    "remember": "Use space, place, interconnection, change and sustainability as questions to ask about any city.",
+    "a": {
+      "q": "A student asks how farms outside a city supply it with food and how the city sends goods back. Which concept is this?",
+      "opts": ["Interconnection", "Place", "Change", "Space"],
+      "why": "Interconnection is about links between places, here a city and its rural areas. Space is tempting, but it is about where a city is and how it is spread out, not the links between places.",
+      "clue": "Look for the word that means links between places."
+    },
+    "b": {
+      "d": 3,
+      "q": "Geographers study Wyndham in Victoria. They compare maps from 1990 and today to see how its suburbs have spread. Which concept does this mainly show?",
+      "opts": ["Change", "Place", "Sustainability", "Interconnection"],
+      "why": "Comparing maps from two dates shows how the city has differed over time, which is change. Sustainability is tempting, but it asks whether growth can last, and the maps alone only show that growth has happened.",
+      "clue": "What does comparing two dates show about the city?"
+    }
+  },
+  "geo-map-scale-direction": {
+    "title": "Map scale and direction",
+    "card": [
+      [
+        "Scale",
+        "Scale shows how a distance on a map relates to the real distance on the ground. It can be a ratio, a line scale or words."
+      ],
+      [
+        "Ratio",
+        "A ratio of 1:50 000 means 1 unit on the map is 50 000 of the same unit on the ground. So 1 cm on the map is 50 000 cm, or 500 m, in real life."
+      ],
+      [
+        "Direction",
+        "A north arrow points to north on the map. The compass points are north, east, south and west, with north-east, south-east, south-west and north-west between them."
+      ],
+      [
+        "Using both",
+        "To find a real distance, measure the map distance, then use the scale to change it. To give a direction, say which compass point one place is from another."
+      ]
+    ],
+    "remember": "Scale turns map distance into real distance. The north arrow and compass points give direction.",
+    "a": {
+      "q": "A map has a scale of 1:50 000. Two towns are 4 cm apart on the map. How far apart are they in real life?",
+      "opts": ["2 km", "200 m", "20 km", "4 km"],
+      "why": "1 cm on the map is 500 m on the ground, so 4 cm is 4 × 500 m = 2000 m, or 2 km. 200 m is tempting, but it comes from reading 1 cm as 50 m.",
+      "clue": "First work out what 1 cm stands for in metres."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi's map of Bendigo has a scale of 1:25 000. The library is 6 cm north-east of the station on the map. Which is true?",
+      "opts": [
+        "It is 1.5 km from the station, to the north-east",
+        "It is 1.5 km from the station, to the south-west",
+        "It is 15 km from the station, to the north-east",
+        "It is 150 m from the station, to the north-east"
+      ],
+      "why": "1 cm is 25 000 cm, which is 250 m, so 6 cm is 1500 m, or 1.5 km. The library is north-east of the station, so it is not south-west. The option of 15 km mistakes the distance by a factor of ten.",
+      "clue": "Find what 1 cm stands for, then say which place the direction starts from."
+    }
+  },
+  "geo-grid-references-latitude-longitude": {
+    "title": "Grid references, latitude and longitude",
+    "card": [
+      [
+        "Area reference",
+        "a four-figure code that names one grid square by the two lines that meet at its bottom-left corner. Read the eastings (the vertical lines, numbered left to right) first, then the northings (the horizontal lines, numbered bottom to top)."
+      ],
+      [
+        "Grid reference",
+        "a six-figure code that pins down a point inside a square. Each half has three digits: the eastings first, then the northings. The first two digits of each half are the line number, and the third is tenths of the way to the next line."
+      ],
+      [
+        "Latitude",
+        "measures how far a place is north or south of the equator, in degrees. The equator is 0°, and the poles are 90° N and 90° S."
+      ],
+      [
+        "Longitude",
+        "measures how far a place is east or west of the prime meridian, in degrees. The prime meridian is 0° and runs through Greenwich in London. Latitude is given first, then longitude: Melbourne is about 38° S, 145° E."
+      ]
+    ],
+    "remember": "Grid references give eastings then northings. Latitude and longitude give degrees north or south, then east or west.",
+    "a": {
+      "q": "Jai is given the area reference 4552 on a topographic map. Which two grid lines meet at the bottom-left corner of that square?",
+      "opts": [
+        "Easting 45 and northing 52",
+        "Easting 52 and northing 45",
+        "Easting 46 and northing 53",
+        "Easting 44 and northing 51"
+      ],
+      "why": "Eastings come first, so the first two digits, 45, are the easting and the last two, 52, are the northing. The square is named by the lines at its bottom-left corner. Swapping them to easting 52 and northing 45 reverses the order, which is a common mistake.",
+      "clue": "Which half of the code is the easting?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Tess reads that a lighthouse is at 34° S, 151° E. Where is it on Earth?",
+      "opts": [
+        "South of the equator and east of the prime meridian",
+        "North of the equator and east of the prime meridian",
+        "South of the equator and west of the prime meridian",
+        "North of the equator and west of the prime meridian"
+      ],
+      "why": "S means south of the equator, and E means east of the prime meridian. The first number is latitude and the second is longitude, so 34° S is the latitude and 151° E is the longitude.",
+      "clue": "S and E tell you the direction from the equator and the prime meridian."
+    }
+  },
+  "geo-geospatial-technologies": {
+    "title": "Geospatial technologies",
+    "card": [
+      [
+        "GPS",
+        "The global positioning system uses signals from satellites to work out where a receiver is on Earth. A phone or a car navigation unit can use it to show your position."
+      ],
+      [
+        "Satellite images",
+        "Satellites orbiting Earth take pictures of the land and sea from above. Comparing images taken at different times shows change, such as a bushfire scar or a growing suburb."
+      ],
+      [
+        "GIS",
+        "A geographic information system (GIS) stores information about places in separate layers, such as roads, rivers and houses. The layers can be switched on and off and placed over each other on one map."
+      ],
+      "Layering lets geographers see how things relate. A GIS map of flood areas over a map of houses can show which homes are close to a river."
+    ],
+    "remember": "GPS finds position, satellite images show the land from above, and GIS layers information to show patterns.",
+    "a": {
+      "q": "Ava places a map of roads over a map of rivers on a computer, then switches the roads off again. Which technology is she using?",
+      "opts": [
+        "A geographic information system",
+        "The global positioning system",
+        "A satellite image of the area",
+        "A compass and a north arrow"
+      ],
+      "why": "A GIS stores information in separate layers that can be placed over each other and switched on and off. GPS is the most tempting wrong option, but it only uses satellite signals to work out a position.",
+      "clue": "Which tool can combine and hide different sets of information?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A council in Bendigo wants to know which homes are close to a creek that floods. Which tool would help most?",
+      "opts": [
+        "A GIS with layers for homes and flood areas",
+        "A GPS receiver to find the position of the creek",
+        "A single satellite image taken last year",
+        "A compass to find the direction of the creek"
+      ],
+      "why": "A GIS can place a layer of flood areas over a layer of homes, so the council can see which homes are close to the creek. A satellite image shows the land, but it does not store separate layers that can be combined.",
+      "clue": "Which tool can place one set of information over another?"
+    }
+  },
+  "geo-geographical-inquiry-questions": {
+    "title": "Geographical inquiry questions",
+    "card": [
+      "A geographical inquiry starts with a question. A good question can be answered by collecting and studying information about places.",
+      [
+        "What and where",
+        "These questions describe a feature and its location. For example: what is the land used for, and where are the wetlands in this region?"
+      ],
+      ["Why", "These questions look for reasons and causes. For example: why are most people living near the coast?"],
+      [
+        "Effects and actions",
+        "Effects questions ask how something affects people and places. Action questions ask what should be done. For example: how does a flood affect farms, and what should be done to reduce the damage?"
+      ]
+    ],
+    "remember": "Ask what and where, why, how it affects people and places, and what should be done.",
+    "a": {
+      "q": "Which question asks for the reason why something is where it is?",
+      "opts": [
+        "Why do most people in Victoria live near the coast?",
+        "Where are the largest cities in Victoria?",
+        "How does a bushfire affect a small town?",
+        "What should be done to protect a wetland?"
+      ],
+      "why": "A why question looks for causes or reasons. The where question only asks for locations. The other two ask about effects and about actions.",
+      "clue": "Look for the question that asks for a cause."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia is studying litter in a creek near her school in Geelong. Which question is an action question?",
+      "opts": [
+        "What should the council do to reduce litter in the creek?",
+        "How does litter in the creek harm the animals living there?",
+        "Where along the creek is the most litter found?",
+        "Why is there more litter near the shopping centre?"
+      ],
+      "why": "An action question asks what should be done. The effects question is tempting because it is about a problem, but it asks how people and places are affected, not what to do about it.",
+      "clue": "Which question asks what should be done?"
+    }
+  },
+  "geo-patterns-trends-relationships": {
+    "title": "Patterns, trends and relationships",
+    "card": [
+      [
+        "Pattern",
+        "how something is spread across space. For example, most of a country's people may live in a band along its coast."
+      ],
+      ["Trend", "a change over time. For example, a town's population may rise year after year."],
+      [
+        "Relationship",
+        "how two things change together. For example, towns with more rainfall may also have more farms."
+      ],
+      "To tell them apart, ask what the data shows: where things are (pattern), how they change over time (trend), or how one thing links to another (relationship)."
+    ],
+    "remember": "Pattern is where. Trend is when. Relationship is how two things link.",
+    "a": {
+      "q": "A map shows where a region's farms are. Most are clustered in its north-east corner. What does the map show?",
+      "opts": [
+        "A pattern, because it shows how farms are spread out",
+        "A trend, because it shows how farms change over time",
+        "A relationship, because it links farms to another factor",
+        "A trend, because the farms are grouped in one corner"
+      ],
+      "why": "The map shows where farms are across space, so it is a pattern. It shows only one thing, the farms, at one time, so there is no change over time for a trend and no second thing for a relationship.",
+      "clue": "Does the map show change over time, or spread across space?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia records the number of visitors to a Cairns beach each year from 2015 to 2024. The numbers rise each year. What has she found?",
+      "opts": [
+        "A trend, because visitor numbers change over time",
+        "A pattern, because visitor numbers are spread over space",
+        "A relationship, because visitors and years are both numbers",
+        "A pattern, because the numbers rise in a regular way"
+      ],
+      "why": "Visitor numbers changing from year to year is a change over time, so it is a trend. The rise is regular, which tempts some students to say pattern, but a pattern is about how things are spread across space.",
+      "clue": "Look at what the data is measured against: places or years?"
+    }
+  },
+  "geo-drawing-conclusions-choosing-actions": {
+    "title": "Drawing conclusions and choosing actions",
+    "card": [
+      "A conclusion is a statement that answers your inquiry question. A sound conclusion rests on the evidence you collected, not on a guess or a hunch.",
+      "A geographer also thinks about ethical values, such as fairness. A conclusion should consider whether people or places are treated fairly.",
+      "After a conclusion, a geographer may suggest an action, which is something to be done about the issue.",
+      "A good action weighs its environmental, economic and social effects. These are the effects on nature, on money and jobs, and on people and communities."
+    ],
+    "remember": "A sound conclusion rests on evidence and considers fairness. A good action weighs environmental, economic and social effects.",
+    "a": {
+      "q": "Which conclusion is best supported by evidence?",
+      "opts": [
+        "Our survey of 40 shoppers shows most walk to the market",
+        "I think most people in town probably walk to the market",
+        "Everyone knows that walking to the market is better",
+        "The market should be closed because I dislike the crowds"
+      ],
+      "why": "The conclusion from the survey of 40 shoppers rests on results that were collected. The one starting 'I think most people probably walk' is tempting because it sounds careful, but it is only a guess with no evidence behind it.",
+      "clue": "Which one points to something that was collected?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A council plans to build a new skate park beside a creek in Wodonga. Which question shows a geographer weighing the economic effect of this action?",
+      "opts": [
+        "How much will the skate park cost to build and run?",
+        "Will the creek and its wildlife be disturbed?",
+        "Will young people from all suburbs be able to reach it?",
+        "Will families feel safe and welcome there?"
+      ],
+      "why": "The cost to build and run the park is about money, so it is an economic effect. The question about the creek and its wildlife is tempting, but it is about nature, so it is environmental. The questions about young people reaching the park and families feeling welcome are about people and communities, so they are social.",
+      "clue": "Economic effects are about money and jobs."
+    }
+  },
+  "geo-where-world-s-biomes": {
+    "title": "Where the world's biomes are",
+    "card": [
+      "A biome is set mainly by its temperature and rainfall. Both change with latitude, which is how far a place is north or south of the equator.",
+      "Because of this, biomes form rough bands that run east to west around the globe. Mountains and ocean currents can break up these bands.",
+      ["Near the equator", "it is hot and wet all year, so tropical rainforests grow there."],
+      [
+        "Further out",
+        "deserts are common around 30 degrees north and south, where rainfall is low. Tundra lies near the poles, where it is very cold."
+      ]
+    ],
+    "remember": "Temperature and rainfall change with latitude, so biomes form bands from the equator to the poles.",
+    "a": {
+      "q": "Why do biomes form bands by latitude?",
+      "opts": [
+        "Temperature and rainfall change with latitude",
+        "Soil and rock types change with latitude",
+        "Plants and animals move along lines of latitude",
+        "Mountain ranges mostly run from east to west"
+      ],
+      "why": "Biomes depend mainly on temperature and rainfall, and both change with latitude. Soil, rock and animals do not set the bands. Mountains can break the bands up rather than make them.",
+      "clue": "Think about what a biome is mainly set by."
+    },
+    "b": {
+      "d": 3,
+      "q": "Lena studies a world biome map. Which biome is she most likely to find at about 30 degrees south, and why?",
+      "opts": [
+        "Desert, because rainfall is low at that latitude",
+        "Tundra, because it is very cold at that latitude",
+        "Tropical rainforest, because it is wet all year there",
+        "Desert, because it is very cold all year there"
+      ],
+      "why": "Deserts are common around 30 degrees north and south because rainfall there is low. Desert with the reason very cold is tempting, but cold is what makes tundra near the poles, not deserts at 30 degrees.",
+      "clue": "Check both the biome and the reason the card gives for it."
+    }
+  },
+  "geo-biomass-productivity": {
+    "title": "Biomass productivity",
+    "card": [
+      "Biomass productivity is how much plant matter a biome grows each year. Plants are the base of the food supply for animals in that biome.",
+      "Plants need light, warmth and water to grow. Where all three are plentiful, plants grow fast and in large amounts.",
+      "Warm, wet places such as tropical rainforests and wetlands grow the most plant matter each year.",
+      "Cold or dry biomes grow the least. Tundra is too cold for much of the year, and deserts have very little water."
+    ],
+    "remember": "Plants grow most where it is warm and wet, and least where it is cold or dry.",
+    "a": {
+      "q": "Which of these places grows the most plant matter in a year?",
+      "opts": ["Tropical rainforest", "Tundra", "Desert", "Cold, dry grassland"],
+      "why": "A tropical rainforest is warm and wet all year, so plants grow fast. Tundra is the most tempting wrong option, but it is too cold for much of the year, so its biomass productivity is low.",
+      "clue": "Think of the biome with both warmth and water."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two regions get similar sunshine. Region X has a wetland with water all year. Region Y is dry with little rain. Which statement about their biomass productivity is best?",
+      "opts": [
+        "X is higher because it has more water",
+        "Y is higher because dry air gives more light",
+        "They match because they get similar sunshine",
+        "Y is higher because plants there grow slowly"
+      ],
+      "why": "With similar sunshine, water decides the difference. Region X has plenty of water, so its plants grow more each year. Matching sunshine does not make them equal, because plants need water as well as light.",
+      "clue": "Light is equal, so look at what differs."
+    }
+  },
+  "geo-australia-s-biomes": {
+    "title": "Australia's biomes",
+    "card": [
+      "Australia has many biomes because it is large and its climate changes from place to place. Rainfall and temperature differ between the north, the inland and the south.",
+      [
+        "North",
+        "The north has tropical rainforest and savanna. These are the warmest parts of the country, and they get most of their rain in a wet season."
+      ],
+      [
+        "Inland",
+        "The inland has desert and shrubland. This is the driest part of Australia, with low and unreliable rainfall."
+      ],
+      [
+        "South",
+        "The south-east and south-west have temperate forest and grassland. These areas are cooler than the north and have milder, more regular rain."
+      ]
+    ],
+    "remember": "Australia's biomes change with climate: tropical in the north, dry inland, temperate in the south.",
+    "a": {
+      "q": "Which pair of biomes is found mainly in northern Australia?",
+      "opts": [
+        "Tropical rainforest and savanna",
+        "Desert and shrubland",
+        "Temperate forest and grassland",
+        "Tundra and temperate forest"
+      ],
+      "why": "The warm north, with a wet season, has tropical rainforest and savanna. Desert and shrubland are tempting, but they are found in the dry inland, not the north.",
+      "clue": "Think of the warmest part of the country, with a wet season."
+    },
+    "b": {
+      "d": 2,
+      "q": "Priya drives from Melbourne to the middle of Australia. Her trip passes from the temperate south-east into dry country with low, unreliable rain. Which biomes does she most likely see in the dry country?",
+      "opts": [
+        "Desert and shrubland",
+        "Tropical rainforest and savanna",
+        "Temperate forest and grassland",
+        "Tundra and tropical rainforest"
+      ],
+      "why": "Low and unreliable rainfall in the inland suits desert and shrubland. Temperate forest and grassland are tempting because she starts in the south-east, but those biomes have milder, more regular rain.",
+      "clue": "Which part of Australia is the driest?"
+    }
+  },
+  "geo-biomes-food-production": {
+    "title": "Biomes and food production",
+    "card": [
+      "Crops need fertile soil, reliable rain and a growing season that is warm enough. Biomes that have these conditions are the best places to grow food.",
+      "Many temperate grasslands and temperate forests have these conditions. Much of the world's grain, such as wheat and maize, is grown in these biomes.",
+      "Because the land grows crops so well, much of it has been cleared of its natural plants and changed into farmland. Few areas of these biomes are still close to their natural state.",
+      "Deserts are too dry and tundra is too cold to grow much food. Tropical rainforests are warm and wet, but their soils are often thin and low in nutrients."
+    ],
+    "remember": "Fertile soil and reliable rain make a biome good for farming, and many such biomes have been cleared for crops.",
+    "a": {
+      "q": "Why have so many temperate grasslands been turned into farmland?",
+      "opts": [
+        "Their fertile soils and reliable rain suit crops",
+        "Their cold climate stops crops from growing",
+        "Their soils are poor, so farmers must replace them",
+        "Their rainfall is too low for any natural plants"
+      ],
+      "why": "Fertile soil and reliable rain are what crops need, so farmers cleared these grasslands to grow grain. The cold, poor soil and low rainfall in the other options would make farming harder, not easier.",
+      "clue": "Think about what crops need to grow well."
+    },
+    "b": {
+      "d": 3,
+      "q": "A company wants to grow a large wheat crop. Which region would suit it best?",
+      "opts": [
+        "Temperate grassland: fertile soil, steady rain, cold winters",
+        "Hot desert: sandy soil, warm all year, very little rain",
+        "Tundra: thin soil, some rain, ground frozen most of the year",
+        "Tropical rainforest: thin soil, heavy rain, warm all year"
+      ],
+      "why": "The temperate grassland has fertile soil and steady rain, and its cold winters still leave a warm enough growing season. The rainforest is tempting because it is warm and wet, but its thin, nutrient-poor soil does not suit large grain crops.",
+      "clue": "Check each region against all three things crops need."
+    }
+  },
+  "geo-economic-factors-growing-crops": {
+    "title": "Economic factors in growing crops",
+    "card": [
+      [
+        "Prices",
+        "Farmers tend to grow crops that they expect to sell at a good price. If the price of a crop falls, some farmers may switch to another crop."
+      ],
+      [
+        "Costs",
+        "Farmers pay for labour (workers) and inputs such as seed, fertiliser, fuel and water. A crop that needs many workers or costly inputs leaves less profit."
+      ],
+      [
+        "Markets and transport",
+        "A crop must reach buyers. A farm far from a town, port or good road pays more to move its crop. A crop that spoils fast is hard to grow far from its market."
+      ],
+      [
+        "Rules and support",
+        "Trade rules, such as taxes on imports or limits on exports, change what a crop can earn. Government support, such as payments or cheap loans, can make a crop worth growing."
+      ]
+    ],
+    "remember": "Farmers choose crops by what they can earn after costs, and whether the crop can reach buyers.",
+    "a": {
+      "q": "The price of cotton falls, while the price of chickpeas rises. What is a farmer most likely to do?",
+      "opts": [
+        "Grow more chickpeas and less cotton",
+        "Grow more cotton and less chickpeas",
+        "Keep both crops because prices do not matter",
+        "Stop farming because chickpeas cost more"
+      ],
+      "why": "Farmers tend to grow crops they expect to sell at a good price, so a higher chickpea price makes chickpeas more attractive. Growing more of the cheaper crop would cut the farmer's likely earnings.",
+      "clue": "Which crop is now likely to earn more?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi farms in a remote valley with no sealed road to a town. Which crop is he least likely to choose?",
+      "opts": [
+        "Fresh strawberries that spoil within days",
+        "Dried beans that keep for many months",
+        "Wheat that can be stored in a silo",
+        "Oats that can be stored for a long time"
+      ],
+      "why": "Poor transport makes it costly and slow to reach buyers, and strawberries spoil fast. The other three crops keep well, so a slow trip to market matters much less.",
+      "clue": "Think about which crop cannot wait for a slow trip to market."
+    }
+  },
+  "geo-technology-crop-yields": {
+    "title": "Technology and crop yields",
+    "card": [
+      "Yield is the amount of food grown on each hectare of land. Farmers use technology to raise it.",
+      [
+        "Irrigation",
+        "supplies water to crops when rain is too low or too uncertain. Plants can then keep growing through dry spells."
+      ],
+      [
+        "Fertilisers and seeds",
+        "Fertilisers add nutrients to soil that crops have used up. New seed varieties are bred to give more grain, or to cope better with drought or disease."
+      ],
+      [
+        "Machinery and precision farming",
+        "Machines such as harvesters save time and labour. Precision farming uses GPS and sensors to apply water and fertiliser only where each part of a paddock needs it."
+      ]
+    ],
+    "remember": "Technology raises yield by giving crops water, nutrients, better seed and more exact care.",
+    "a": {
+      "q": "Which technology raises yield by adding nutrients that crops have used up?",
+      "opts": ["Fertiliser", "Irrigation", "A harvester", "A GPS guidance system"],
+      "why": "Fertiliser puts nutrients back into the soil so crops can grow well. Irrigation is the most tempting wrong option, but it supplies water, not nutrients.",
+      "clue": "Think about what the soil has lost."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya grows wheat near Horsham. Readings from her paddock show one corner is dry and the rest is moist, so she waters only that corner. Which technology is she using?",
+      "opts": ["Precision farming", "Drought-tolerant seed", "Labour-saving machinery", "Fertiliser to restore soil"],
+      "why": "Measuring each part of the paddock and giving water only where it is needed is precision farming. Drought-tolerant seed is tempting because the corner is dry, but that changes the plant itself, while Priya changed where the water went.",
+      "clue": "Did she change the plant, or where she put the water?"
+    }
+  },
+  "geo-green-revolution": {
+    "title": "The Green Revolution",
+    "card": [
+      "The Green Revolution was a big rise in grain harvests that began in the 1960s. It happened mainly in parts of Asia and Latin America.",
+      "Three changes drove it: high-yield seed varieties, chemical fertilisers and more irrigation. Together they let each hectare produce much more rice, wheat and maize.",
+      "Higher harvests meant more food for growing populations. Countries such as India grew far more wheat and rice than before.",
+      "It also brought costs. Heavy irrigation can overuse water, and fertilisers and constant cropping can damage the soil."
+    ],
+    "remember": "More grain from each hectare, with costs for water and soil.",
+    "a": {
+      "q": "Which change was part of the Green Revolution?",
+      "opts": [
+        "Planting high-yield seeds with fertiliser and irrigation",
+        "Moving crop farming to areas of colder climate",
+        "Replacing grain crops with livestock farming",
+        "Growing crops only for local village markets"
+      ],
+      "why": "The Green Revolution raised grain yields by combining high-yield seeds, fertilisers and irrigation. Moving to colder climates is wrong because the extra food came from changing farming methods, not from changing where crops were grown.",
+      "clue": "Think about what was added to each hectare of farmland."
+    },
+    "b": {
+      "d": 3,
+      "q": "A farming district in northern India used high-yield wheat, fertiliser and irrigation from bores. Harvests rose, but after many years the water table dropped. What does this show?",
+      "opts": [
+        "The yield gains came with a cost, as water was overused",
+        "The new seeds failed to raise the harvest at all",
+        "Irrigation was not part of the Green Revolution",
+        "The soil gained nutrients, so less water was needed"
+      ],
+      "why": "Harvests rose, which fits the Green Revolution, but heavy irrigation drew down the water. This is one of its costs. The claim that the seeds failed is wrong because the harvests did rise.",
+      "clue": "Look at what happened to both the harvest and the water."
+    }
+  },
+  "geo-farming-australia": {
+    "title": "Farming in Australia",
+    "card": [
+      [
+        "Wheat",
+        "Australia grows wheat in a belt inland of the coast, such as the Wheatbelt of Western Australia and the plains of western Victoria and New South Wales. These areas have fairly flat land and moderate rainfall, mostly in the cooler months."
+      ],
+      [
+        "Irrigation",
+        "The Murray-Darling Basin is Australia's main irrigation region. Water from its rivers is spread over crops such as rice, cotton and fruit in places where rain alone is too low or too unreliable."
+      ],
+      [
+        "Cattle",
+        "Beef cattle are run across the north, on very large stations. Much of the land is too dry or too rough for crops, but cattle can graze on it over a wide area."
+      ],
+      [
+        "Exports",
+        "Australia has a small population compared with its farm output, so it sells much of what it produces overseas. Wheat and beef are two products that are exported in large amounts."
+      ]
+    ],
+    "remember": "Each farming type suits the land and water of its region, and much of the output is exported.",
+    "a": {
+      "q": "Why are beef cattle run on large stations across northern Australia?",
+      "opts": [
+        "The land suits grazing over wide areas more than crops",
+        "The north has the most reliable irrigation water",
+        "The north has the flattest land and cool, wet winters",
+        "The north is close to most of the farm's customers"
+      ],
+      "why": "Much of the north is too dry or rough for crops, but cattle can graze it over a wide area. Reliable irrigation water is tempting, but irrigation is linked to the Murray-Darling Basin, not the north.",
+      "clue": "What can large, open land be used for if planting is hard?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia grows rice and cotton on a farm in the Murray-Darling Basin. Why does she rely on irrigation?",
+      "opts": [
+        "Rain alone is too low or unreliable for these crops",
+        "Her crops are sold overseas, so they must be irrigated",
+        "The land is too steep to hold water from the rivers",
+        "The Basin gets too much rain in the cooler months"
+      ],
+      "why": "Irrigation spreads river water over crops where rain alone is too low or unreliable. Selling overseas is tempting, but exports say where the food is sold, not how the crops are watered.",
+      "clue": "Ask what the crops need and where it would normally come from."
+    }
+  },
+  "geo-land-degradation-from-farming": {
+    "title": "Land degradation from farming",
+    "card": [
+      "Land degradation is when farmland gets worse and can grow less. Farming can cause it when it is done poorly.",
+      [
+        "Soil erosion",
+        "wind and water carry away topsoil, the fertile top layer. Clearing plants and overgrazing leave bare soil, so it is easily blown or washed away."
+      ],
+      [
+        "Salinity",
+        "salt rising to the surface. Clearing deep-rooted trees can let the water table rise and bring salt up with it. It can show as a white crust on the soil, and salty soil harms most crops."
+      ],
+      [
+        "Soil acidity",
+        "soil that becomes too acidic for many crops. It can build up over time with some farming practices, such as heavy use of certain fertilisers."
+      ]
+    ],
+    "remember": "Clearing, overgrazing and poor practices can erode, salt or acidify soil, so it grows less.",
+    "a": {
+      "q": "A farmer in north-east Victoria clears all the trees from a sloping paddock. Heavy rain then washes away the topsoil. Which type of land degradation is this?",
+      "opts": ["Soil erosion", "Salinity", "Soil acidity", "Overgrazing"],
+      "why": "Water carried away the topsoil, which is soil erosion. Overgrazing is a farming practice that can cause degradation, not a type of degradation itself, so it is the tempting wrong answer.",
+      "clue": "What happened to the topsoil?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Years after deep-rooted trees were cleared from a wheat paddock in the Wimmera, a white crust forms on the soil and yields fall. What has most likely happened?",
+      "opts": [
+        "A rising water table brought salt up to the surface",
+        "Wind blew the topsoil away, leaving pale subsoil",
+        "Fertiliser use built up acid in the soil over time",
+        "Heavy rain washed the topsoil down into the creek"
+      ],
+      "why": "Clearing deep-rooted trees can let the water table rise and bring salt with it. That is salinity, which can leave a white crust and harms most crops. Wind erosion also follows clearing, but it removes topsoil rather than leaving a crust on the surface.",
+      "clue": "Think about what clearing deep-rooted trees does to the water underground."
+    }
+  },
+  "geo-farming-water-use": {
+    "title": "Farming and water use",
+    "card": [
+      "Irrigation means watering crops and pasture with water taken from rivers, dams or underground. Farms need it where rain is too low or too uneven to grow crops.",
+      "Irrigated farming uses most of the water that Australia takes from its rivers. Cotton, rice, dairy pasture and orchards are common irrigated farm types.",
+      "Water taken for farms is no longer in the river. In dry years, when river flows are already low, this can leave too little for wetlands and wildlife.",
+      "Wetlands, fish and river red gums depend on river water. Less flow can dry out wetlands and harm the animals and plants that live there."
+    ],
+    "remember": "Farms take most of the river water Australia uses, and in dry years the rivers and wetlands can be left short.",
+    "a": {
+      "q": "Why can irrigated farming harm wetlands in a dry year?",
+      "opts": [
+        "Water taken for farms leaves less river flow to reach them",
+        "Irrigation adds extra water that floods the wetlands",
+        "Wetlands need dry conditions, which irrigation removes",
+        "Farms stop rain from falling over the wetlands"
+      ],
+      "why": "River flow is already low in a dry year, and water taken for farms is no longer in the river. Less flow reaches wetlands. Irrigation does not add water to a river, so flooding is the wrong cause.",
+      "clue": "Think about where irrigation water comes from."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dev grows rice on an irrigated farm beside a river in southern New South Wales. In a drought he takes his usual amount of river water. What is the most likely effect downstream?",
+      "opts": [
+        "Less water reaches downstream wetlands and wildlife",
+        "Downstream wetlands get more water than usual",
+        "River flow downstream is not affected at all",
+        "Downstream wildlife gains from the extra rain"
+      ],
+      "why": "Water Dev takes is removed from the river, so less flows on downstream. In a drought the river is already low, so wetlands and wildlife feel the loss most. Taking water cannot leave flow unchanged.",
+      "clue": "Compare the river just above Dev's farm with the river just below it."
+    }
+  },
+  "geo-economic-social-sustainability-farming": {
+    "title": "Economic and social sustainability of farming",
+    "card": [
+      [
+        "Economic",
+        "a farm needs to make a profit over many years, not just in good ones. Droughts cut harvests, and swings in prices change what crops and livestock earn."
+      ],
+      "Farms can get through bad years by spreading their risk, such as growing more than one crop or also keeping livestock, and by saving money in good years.",
+      [
+        "Social",
+        "rural towns need enough people to keep services such as schools, clinics and shops, and young people to work on farms and take them over."
+      ],
+      "Farming lasts only when both hold, and the two are linked. When farms earn less, families may leave, services can close, and the town becomes harder to live and farm in."
+    ],
+    "remember": "Farming lasts when farms can get through bad years and their towns keep people and services.",
+    "a": {
+      "q": "A wheat farmer puts money aside in good years to use in the next drought. Which part of farming's sustainability does this help?",
+      "opts": [
+        "Economic, as the farm can stay profitable over time",
+        "Economic, as it raises the price the wheat sells for",
+        "Social, as it keeps the town's school and clinic open",
+        "Environmental, as it protects the soil during drought"
+      ],
+      "why": "Saving in good years helps the farm get through a drought and stay profitable over many years, which is economic sustainability. It does not change the price wheat sells for, and it does not protect the soil.",
+      "clue": "The farmer is planning with money, not soil."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ben's farm near a Mallee town has stayed profitable through several dry years by keeping sheep as well as growing wheat. But the town's clinic has closed and most young people have moved away. Is farming in this area sustainable?",
+      "opts": [
+        "Not fully, as the town is losing its people and services",
+        "Yes, as Ben's farm is still making a profit over time",
+        "Yes, as a town's services do not affect its farms",
+        "Not fully, as a farm should never have a bad year"
+      ],
+      "why": "Farming lasts only when farms stay profitable and towns keep their people and services. Ben's farm is doing well, but without young people there may be no one to work on farms or take them over, so profit alone is not enough. A bad year is not the problem, as a farm needs a profit over many years, not in every year.",
+      "clue": "Check both parts: the farm and the town."
+    }
+  },
+  "geo-sustainable-farming-practices-vic": {
+    "title": "Sustainable farming practices",
+    "card": [
+      [
+        "No-till farming",
+        "seeds are sown without ploughing, so the soil is left covered by old crop stalks. This helps hold soil in place and keeps moisture in."
+      ],
+      [
+        "Crop rotation",
+        "different crops are grown in turn on the same paddock. This stops one crop using up the same nutrients every year."
+      ],
+      [
+        "Planting trees",
+        "trees and shrubs on a farm have roots that bind soil and slow wind and water. Their shade and shelter also help stock and crops."
+      ],
+      [
+        "Rotational grazing",
+        "stock are moved between paddocks so each one gets time to recover. Grass keeps its cover, so the soil is less likely to wash or blow away."
+      ]
+    ],
+    "remember": "Sustainable practices protect the soil and water that the farm depends on, so it can keep producing.",
+    "a": {
+      "q": "A farmer moves her sheep between paddocks every few weeks so the grass can regrow. Which practice is this?",
+      "opts": ["Rotational grazing", "No-till farming", "Crop rotation", "Planting trees"],
+      "why": "Moving stock between paddocks so each can recover is rotational grazing. It is not crop rotation, which changes the crops grown in a paddock, not where animals graze.",
+      "clue": "Think about what is being moved from paddock to paddock."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dan grows wheat near Horsham. Each year he sows without ploughing, leaving old stalks on the soil. Why does this help the land stay productive?",
+      "opts": [
+        "Stalks cover the soil, so less is lost and moisture stays",
+        "Stalks add a different crop, so nutrients are not used up",
+        "Stalks give the paddock time to recover from grazing",
+        "Stalks bind the soil with roots, so wind is slowed"
+      ],
+      "why": "In no-till farming the soil is not ploughed and stays covered by stalks, which protects it and keeps moisture in. Growing a different crop in turn is crop rotation, and Dan is not doing that here.",
+      "clue": "Focus on what is left on the soil surface and what it does."
+    }
+  },
+  "geo-food-security-vic": {
+    "title": "Food security",
+    "card": [
+      "Food security means everyone has reliable access to enough safe and nutritious food. It is about people, not only about how much food a country grows.",
+      [
+        "Available and affordable",
+        "Food must be available: enough is grown, imported or stored. It must also be affordable, so people can buy it with the money they have."
+      ],
+      [
+        "Used well",
+        "People need to use food well. That means safe food, clean water to prepare it, and a diet with enough nutrients."
+      ],
+      [
+        "Steady",
+        "Food must be steady over time. Access that is lost in a drought, a war or a price spike is not secure."
+      ]
+    ],
+    "remember": "Food security needs food that is available, affordable, used well and steady.",
+    "a": {
+      "q": "A country grows more than enough grain, but prices are so high that many families cannot buy it. Which part of food security is failing?",
+      "opts": ["Affordability", "Availability", "Steadiness over time", "Safe use of food"],
+      "why": "Plenty of grain is grown, so food is available. Families cannot pay for it, so it is not affordable. Availability is the tempting wrong answer, but it is about whether enough food exists, not whether people can buy it.",
+      "clue": "The food exists, but can people pay for it?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Village A has plenty of cheap rice all year, but its only water source is contaminated, and children often fall ill after meals. Which statement is correct?",
+      "opts": [
+        "Food is available and affordable, but not used well",
+        "Food is affordable and used well, but not available",
+        "Food is secure, because there is plenty of cheap rice",
+        "Food is available, but not affordable or steady"
+      ],
+      "why": "Rice is plentiful and cheap, so it is available and affordable. Contaminated water means the food is not prepared or used safely, so food security is still not met. Calling it secure is tempting, but having cheap food is only part of the idea.",
+      "clue": "Think about what happens to the rice before it is eaten."
+    }
+  },
+  "geo-population-growth-food-demand": {
+    "title": "Population growth and food demand",
+    "card": [
+      "The world's population is projected to approach 10 billion people by 2050. More people means more mouths to feed, so the demand for food rises.",
+      "Incomes are rising in many countries. As people earn more, they tend to eat more meat, dairy and eggs.",
+      "Meat needs more land, water and feed crops to produce than the same amount of plant foods. A person who eats more meat therefore adds more to the demand for farm resources.",
+      "Together, more people and richer diets mean that much more food will be needed by 2050 than is grown today."
+    ],
+    "remember": "More people and more meat in diets both push food demand up.",
+    "a": {
+      "q": "Why does a rise in incomes tend to increase the demand for farm resources?",
+      "opts": [
+        "People tend to eat more meat, which needs more land and feed",
+        "People tend to eat less food, so farmers grow more crops",
+        "People tend to move to cities, so farms need more workers",
+        "People tend to waste less, so farmers need more land"
+      ],
+      "why": "Wealthier people tend to eat more meat, and meat needs more land, water and feed crops than plant foods. Higher incomes do not make people eat less food, so the option saying people eat less is wrong.",
+      "clue": "Think about what richer people tend to add to their diets."
+    },
+    "b": {
+      "d": 3,
+      "q": "Country X's population stays the same to 2050, but its incomes rise and its people eat much more meat. What will happen to its demand for farm resources?",
+      "opts": [
+        "It will rise, because meat needs more land, water and feed",
+        "It will stay the same, as the population has not changed",
+        "It will fall, because richer people buy less food",
+        "It will rise, but only if the number of people also grows"
+      ],
+      "why": "Demand for farm resources can rise even without more people, because meat takes more land, water and feed crops to produce. The option saying demand stays the same is tempting, but it looks only at population and ignores diet.",
+      "clue": "Population is not the only thing that raises demand."
+    }
+  },
+  "geo-limits-producing-more-food": {
+    "title": "Limits on producing more food",
+    "card": [
+      "Growing more food is not as simple as farming more land. Most of the world's good farmland is already in use. Clearing the land that is left, such as rainforest, destroys habitats and releases stored carbon.",
+      "Water is scarce in many farming regions. Crops, especially irrigated ones, need a lot of it, and rivers and underground water can be used up faster than rain refills them.",
+      "Land degradation means soil loses its quality, through erosion, salt build-up or loss of nutrients. Degraded land grows less food, so farmland can be lost even when it is not built on.",
+      "Farmland also faces competition. Growing cities spread over farmland, and biofuel crops, which are grown to make fuel, use land that could grow food."
+    ],
+    "remember": "More food cannot simply come from more farmland: land is limited, water is scarce, soil degrades and other uses compete.",
+    "a": {
+      "q": "Why can the world not feed a growing population just by clearing more land for farms?",
+      "opts": [
+        "Most good farmland is already in use",
+        "Cleared land never grows any crops",
+        "Farmers prefer to use less land",
+        "Water is plentiful on all new land"
+      ],
+      "why": "Most of the best farmland is already farmed, so the land that remains is limited and clearing it brings costs such as lost habitat. Cleared land can grow crops, so saying it never does is wrong.",
+      "clue": "Think about how much good farmland is still unused."
+    },
+    "b": {
+      "d": 3,
+      "q": "Near a city in Victoria, a farm's soil has become salty and now grows far less wheat than it once did. Which limit on food production does this show?",
+      "opts": [
+        "Land degradation",
+        "Competition from biofuel crops",
+        "Spread of cities over farmland",
+        "Clearing of the last farmland"
+      ],
+      "why": "Salt build-up lowers soil quality, which is land degradation. The farm has not been built over or switched to fuel crops, so those options do not fit. The land is still there but grows less food.",
+      "clue": "The farm is still farmland, but its soil has changed."
+    }
+  },
+  "geo-climate-change-food-production": {
+    "title": "Climate change and food production",
+    "card": [
+      "Climate change is a long-term shift in temperature and weather patterns. Crops and livestock grow best within a limited range of temperature and rainfall.",
+      "Higher temperatures can stress crops and animals and shorten growing seasons. Changing rainfall, with more droughts in some places and more floods in others, can ruin harvests.",
+      "Rising seas can flood low-lying farmland near the coast. Salt water can also seep into the soil and water supplies, which makes crops harder to grow.",
+      "Regions that are already hot or dry have less room to cope with extra heat or less rain. Their harvests are at greater risk, and they may struggle to supply enough food."
+    ],
+    "remember": "Heat, uneven rain and rising seas can cut harvests, and hot or dry regions are at most risk.",
+    "a": {
+      "q": "How do rising sea levels threaten food production in a low-lying farming area on a coast?",
+      "opts": [
+        "Sea water floods fields and makes the soil too salty",
+        "Higher seas cool the air and shorten the growing season",
+        "Higher seas cause droughts by blocking rain from the coast",
+        "Higher seas carry ocean heat onto the nearby farms"
+      ],
+      "why": "Rising seas can flood low-lying coastal farmland, and salt water can seep into the soil and water supplies, which makes crops harder to grow. The option about a shorter growing season is wrong: it is higher temperatures, not rising seas, that can shorten growing seasons, and higher seas do not cool the air.",
+      "clue": "Think about what happens when the sea reaches the fields."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two regions each lose a little rainfall as the climate changes. Region X is already hot and dry. Region Y is cool and wet. Which statement is best supported?",
+      "opts": [
+        "Region X is at greater risk of falling harvests",
+        "Region Y is at greater risk of falling harvests",
+        "Both regions face exactly the same risk to harvests",
+        "Neither region faces any risk because rain still falls"
+      ],
+      "why": "A region that is already hot or dry has less room to cope with extra heat or less rain, so its harvests are at greater risk. Region Y has more margin, so a small loss of rain is less likely to ruin its crops.",
+      "clue": "Which region has less room to cope with a change?"
+    }
+  },
+  "geo-improving-food-security-vic": {
+    "title": "Improving food security",
+    "card": [
+      "Food is lost or wasted all along the chain, from farm storage to shops to home bins. Cutting this waste means more of the food already grown reaches people, with no new land needed.",
+      "Sustainable yield growth means getting more food from the same land without damaging it. Examples are better seeds, drip irrigation and rotating crops to protect the soil.",
+      "Fair trade rules can stop rich countries blocking farm exports from poorer ones. Ending conflict matters too, because war can destroy farms, close markets and block food supplies.",
+      "Helping poorer farmers, for example with loans, training, storage and roads to markets, lifts their harvests and incomes. No single step is enough alone, but together they can feed more people without harming the environment."
+    ],
+    "remember": "Waste less, grow more with care, trade fairly, keep the peace and back small farmers.",
+    "a": {
+      "q": "Which action raises yields sustainably?",
+      "opts": [
+        "Rotating crops to protect the soil",
+        "Clearing forest to plant more crops",
+        "Using more water than the land can supply",
+        "Growing one crop each year until soil is worn out"
+      ],
+      "why": "Rotating crops gets more food from the same land and protects the soil. Clearing forest adds food by taking new land and harming the environment, so it is not sustainable yield growth.",
+      "clue": "Look for more food from the same land, with no damage."
+    },
+    "b": {
+      "d": 3,
+      "q": "Many farmers in a poor region lose a lot of their harvest to rot before it reaches market. Which step would most directly cut this loss?",
+      "opts": [
+        "Building cool storage and better roads to markets",
+        "Clearing more land to grow extra crops",
+        "Asking farmers to grow crops for biofuel",
+        "Waiting for the region's rainfall to increase"
+      ],
+      "why": "Storage and roads keep food from spoiling and help it reach buyers, which cuts waste and helps poorer farmers. Clearing more land adds food but does nothing about the loss, and it can harm the environment.",
+      "clue": "The problem is food lost after harvest, not too little grown."
+    }
+  },
+  "geo-transport-connects-places": {
+    "title": "How transport connects places",
+    "card": [
+      "Transport moves people and goods between places. The main modes are air, road, rail and sea.",
+      "When transport gets faster and cheaper, people and goods can travel further for the same time and money.",
+      "This links places to jobs, markets and services far away. A worker can live in one town and commute to a job in another. A farmer can sell produce to buyers in distant cities or other countries.",
+      "Each mode suits different jobs. Sea carries bulky goods in large amounts. Air is fast but costly, so it suits light, urgent or high-value items. Road and rail link towns and cities by land."
+    ],
+    "remember": "Better transport links places, so jobs, markets and services can be reached from further away.",
+    "a": {
+      "q": "A new fast rail line opens between two regional towns. What is the most likely effect on the towns?",
+      "opts": [
+        "Workers can reach jobs in the other town more easily",
+        "The two towns will become identical in their industries",
+        "Travel between the towns will take longer than before",
+        "Farmers will find it harder to sell in the other town"
+      ],
+      "why": "Faster rail shortens the trip, so people can reach jobs and services in the other town more easily. It does not make the towns identical, because each keeps its own industries and features. It also makes it easier, not harder, for farmers to reach buyers there.",
+      "clue": "What does faster transport change about how far people and goods can go?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya grows cherries in the Yarra Valley and wants to sell them in Singapore within a day or two of picking. Which mode of transport best suits this?",
+      "opts": [
+        "Air freight, because it is fast over long distances",
+        "Sea freight, because it carries bulky goods in large amounts",
+        "Rail freight, because it links towns by land",
+        "Road freight, because it reaches every town"
+      ],
+      "why": "Cherries are light, high in value and spoil quickly, so fast air freight suits them. Sea freight carries large loads cheaply, but it is slow, so the fruit would spoil before it arrived. Road and rail cannot cross the sea to Singapore.",
+      "clue": "What matters most for fruit that spoils quickly and must cross the sea?"
+    }
+  },
+  "geo-shrinking-distances": {
+    "title": "Shrinking distances",
+    "card": [
+      "Distance can be measured in kilometres, but also in the time it takes to get somewhere or send a message. A place can stay the same distance away in kilometres while the time to reach it falls.",
+      "Faster transport and faster communication cut that time. Jet aircraft shortened trips that once took weeks by ship to a day or less. Phone and video calls let people talk with someone far away at once.",
+      "As these times fall, places feel closer together and the world feels smaller. Geographers call this time-space compression.",
+      "Time-space compression changes how far people and businesses can reach in the same amount of time. A trip, a message or an order that once took days can now take hours or seconds."
+    ],
+    "remember": "Time-space compression: less time to reach places, so the world feels smaller.",
+    "a": {
+      "q": "What does time-space compression describe?",
+      "opts": [
+        "The time to reach places falls, so the world feels smaller",
+        "The kilometres between places shrink as technology improves",
+        "Cities grow closer together as more people move into them",
+        "Goods become cheaper because they travel shorter distances"
+      ],
+      "why": "Time-space compression is about the time it takes to travel or communicate falling. The distance in kilometres between places does not change, so the option about kilometres shrinking is wrong.",
+      "clue": "Think about what falls: kilometres or time?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In the 1850s a letter from Melbourne to London took weeks by sailing ship. Today Mia in Melbourne video calls her cousin in London. Which change here is an example of time-space compression?",
+      "opts": [
+        "Contact now takes seconds rather than weeks",
+        "London is now fewer kilometres from Melbourne",
+        "Melbourne and London now share one time zone",
+        "Contact now costs less than a letter by ship"
+      ],
+      "why": "Time-space compression is the fall in the time it takes to reach a place, and contact has gone from weeks to seconds. Video calls may also cost less, but cost is not what time-space compression measures. The distance in kilometres has not changed at all.",
+      "clue": "Which way of measuring distance does the idea depend on?"
+    }
+  },
+  "geo-digital-technology-access-services": {
+    "title": "Digital technology and access to services",
+    "card": [
+      "The internet lets people use many services from a distance. They can shop, bank, study, see a doctor and work online.",
+      "A person in a small town can book a video appointment with a specialist in a city. A student can study a course taught by a school or university far away.",
+      "This changes how people use local shops and services. Some people buy online instead of in town, so local shops may lose customers. Other shops may sell online to reach buyers further away.",
+      "Using these services needs a device and a reliable internet connection."
+    ],
+    "remember": "The internet brings services to people from a distance, which can change how they use local shops and services.",
+    "a": {
+      "q": "Sam lives in a small town and used to drive to the city for a specialist. Now he sees the specialist by video call. What has digital technology done?",
+      "opts": [
+        "Let him reach a service without travelling to it",
+        "Moved the specialist to live in his town",
+        "Made the service free for everyone in his town",
+        "Stopped him from using any local services"
+      ],
+      "why": "A video call lets Sam use a city service from home, so he does not need to travel. It does not move the specialist or make the service free, and he may still use local services.",
+      "clue": "What no longer has to happen for Sam to see the specialist?"
+    },
+    "b": {
+      "d": 2,
+      "q": "More people in Leila's town now buy clothes online. What is the most likely effect on the town's clothing shop?",
+      "opts": [
+        "It is likely to lose some local customers to online sellers",
+        "It is likely to gain customers from the online sellers",
+        "It is likely to see no change, as online sales are separate",
+        "It is likely to lose customers only from outside the town"
+      ],
+      "why": "People in Leila's town who buy online are spending money that might have gone to the local shop, so it is likely to lose some customers. Online sales are not separate: each online purchase can replace a trip to the town's shop.",
+      "clue": "Where were these shoppers buying clothes before?"
+    }
+  },
+  "geo-digital-divide-vic": {
+    "title": "The digital divide",
+    "card": [
+      "The digital divide is the gap between people who have good internet access and people who have little or none. Access means a connection that is available, fast enough to use and affordable.",
+      [
+        "Between countries",
+        "Access differs from one country to another. Wealthier countries tend to have more people online and faster connections than many poorer countries."
+      ],
+      [
+        "Within countries",
+        "Access also differs inside one country. Remote areas and poorer households often have slow, costly or no connection, while cities usually have better options."
+      ],
+      "Causes can include low incomes and the high cost of building networks across large areas where few people live. Without access, people may find it harder to study, find work or reach services online."
+    ],
+    "remember": "The digital divide is an uneven gap in internet access, both between and within countries.",
+    "a": {
+      "q": "Which situation shows a digital divide inside one country?",
+      "opts": [
+        "A remote Australian town has slow internet, Perth has fast",
+        "One country has more internet users than a neighbouring one",
+        "A family in Hobart buys a new phone and streams a film",
+        "A city library offers free internet to all of its members"
+      ],
+      "why": "The divide within a country is a gap between places in the same country, here a remote town and a capital city. The comparison of two countries is a gap between countries, not within one.",
+      "clue": "Look for two places in the same country with different access."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia lives on a farm near Hopetoun in the Victorian Mallee. Her internet is slow and costly, so she struggles to join online classes. Which reason best explains why her access is poor?",
+      "opts": [
+        "Distance makes building fast networks costly for few people",
+        "Young people on farms are less interested in going online",
+        "Internet is just as slow in Melbourne as in the Mallee",
+        "Fast internet is only found in countries with high incomes"
+      ],
+      "why": "Poor access in remote areas is linked to the high cost of building networks across large areas where few people live. The option about high-income countries is wrong because the divide also exists inside countries, including wealthy ones such as Australia. Cities usually have better options than remote areas, so Melbourne is not just as slow.",
+      "clue": "Think about how many people live across a large remote area."
+    }
+  },
+  "geo-global-trade-manufactured-goods": {
+    "title": "Global trade in manufactured goods",
+    "card": [
+      "Manufactured goods are products made in factories, such as phones, clothes and cars. Many are now traded across the world.",
+      [
+        "Supply chain",
+        "the steps and places a product passes through, from raw materials and parts to assembly, transport and sale."
+      ],
+      "Many goods are made through a supply chain that crosses several countries. A phone might have its design in one country, its parts made in a second and its assembly in a third.",
+      "Firms often place parts making and assembly in Asia. Wages and other costs can be lower there, and there are large workforces to staff the factories."
+    ],
+    "remember": "Many goods are made in steps across several countries, often with parts and assembly in Asia.",
+    "a": {
+      "q": "What does a supply chain describe?",
+      "opts": [
+        "The steps and places a product passes through before sale",
+        "The number of shops that sell a product in one country",
+        "The tax a government charges on goods that are imported",
+        "The total amount of a product that a country exports"
+      ],
+      "why": "A supply chain follows a product from materials and parts through assembly, transport and sale. Counting shops, taxes or exports describes only one part of trade, not the path a product takes.",
+      "clue": "Think about the journey of a product, step by step."
+    },
+    "b": {
+      "d": 2,
+      "q": "A firm assembles bikes in Vietnam, using frames made in Taiwan and gears made in Japan. Which reason best explains why it assembles them in Vietnam?",
+      "opts": [
+        "Lower wages and a large workforce to staff the factories",
+        "Higher wages that attract the most skilled workers",
+        "A small workforce that is easier for the firm to manage",
+        "The frames and gears are made from metals mined there"
+      ],
+      "why": "Firms often place assembly in Asia because wages and other costs can be lower and large workforces can staff the factories. The metals idea is tempting, but the frames and gears are made in Taiwan and Japan, so local materials do not explain the choice. Higher wages would raise costs, not lower them.",
+      "clue": "Look at where the parts come from, then think about what assembly needs."
+    }
+  },
+  "geo-impacts-manufacturing-places-asia": {
+    "title": "Impacts of manufacturing in Asia",
+    "card": [
+      "Many factories in Asia make goods for export, such as clothes, phones and furniture. Countries such as China and Vietnam have many of them.",
+      [
+        "Benefits",
+        "Factories create jobs, often for people who moved from farms. Wages can be higher than in farming, and cities near factories grow as workers and services arrive."
+      ],
+      ["Costs", "Factories can pollute air and water. Some workplaces have long hours, low pay or unsafe conditions."],
+      "The same factory can bring both benefits and costs to a place. The mix differs from place to place and workplace to workplace."
+    ],
+    "remember": "Export factories can bring jobs, incomes and city growth, and can also bring pollution and poor conditions.",
+    "a": {
+      "q": "A new export factory zone opens near a city in Vietnam. Which change is a cost rather than a benefit?",
+      "opts": [
+        "Smoke from the zone dirties the air in nearby suburbs",
+        "New shops and services open to serve the workers",
+        "Former farm workers find paid jobs in the factories",
+        "Workers earn more in the zone than they did on farms"
+      ],
+      "why": "Smoke dirtying the air is pollution, which is a cost of factories. New shops and services opening is part of the city growing as workers arrive, which is a benefit, as are the new jobs and higher wages.",
+      "clue": "Which change harms the place or the people living there?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A town in southern China gains a large electronics factory. Workers earn more than on farms, but some work long hours in unsafe rooms. Which statement best describes the impact?",
+      "opts": [
+        "It brings both benefits and costs to the town",
+        "It brings benefits only, because incomes rose",
+        "It brings costs only, because conditions are unsafe",
+        "It brings neither, because the goods are exported"
+      ],
+      "why": "Higher incomes are a benefit, and long hours and unsafe rooms are a cost. Benefits only is wrong because it ignores the poor conditions that the town also faces.",
+      "clue": "Look for what the scenario says on each side."
+    }
+  },
+  "geo-impacts-trade-australia": {
+    "title": "Impacts of trade on Australia",
+    "card": [
+      "Trade has given Australian shoppers cheaper goods. Many clothes, appliances and electronics are now imported from countries where they cost less to make.",
+      "Cheaper imports made it hard for some local factories to compete. Many closed. Car making in Australia is one example: the last big car factories shut in 2017.",
+      "Jobs have moved towards services, such as health, education, retail and tourism. Some workers who lost factory jobs had to retrain or move to find new work.",
+      "Towns that relied on one factory can be changed a great deal. Some lose people and shops as workers leave, while larger cities with many services have tended to grow."
+    ],
+    "remember": "Imports made goods cheaper, but factory closures shifted jobs to services and changed some towns.",
+    "a": {
+      "q": "Which change is a result of cheaper imports for Australia?",
+      "opts": [
+        "Many local factories closed as they could not compete",
+        "Australia stopped buying goods from other countries",
+        "Wages in all Australian industries rose quickly",
+        "Services jobs became less common in Australian cities"
+      ],
+      "why": "Cheaper imported goods made it hard for local factories to compete on price, so many closed. Services jobs grew, not shrank, and Australia still imports many goods.",
+      "clue": "Think about what happens to a local maker when a cheaper product arrives from overseas."
+    },
+    "b": {
+      "d": 3,
+      "q": "A town in Victoria had one large factory making appliances. It closed after cheaper imported appliances took its customers. Which outcome is most likely for the town?",
+      "opts": [
+        "Some workers move away for work, and the town loses people",
+        "Some shoppers move in for cheaper goods, and the town grows",
+        "Many workers join a new local factory, and the town grows",
+        "Many service jobs open nearby, and the town grows"
+      ],
+      "why": "When a town's main employer closes, some workers may leave to find work elsewhere, so the town can lose people and shops. Service jobs have grown mostly in larger cities with many services, not in small towns that lost their factory.",
+      "clue": "Where do workers go when the only big local employer shuts?"
+    }
+  },
+  "geo-embodied-carbon-trade": {
+    "title": "Embodied carbon in trade",
+    "card": [
+      "Embodied carbon is the emissions released in making and moving a product. This covers mining, factory energy and shipping.",
+      "Emissions from making a product are counted in the country where it is made, not where it is used. Emissions from international shipping are reported separately, outside any one country's total.",
+      "So when a country imports goods, the emissions from making them appear in the exporting country's totals.",
+      "This can make a country that imports many goods look cleaner than its buying habits really are."
+    ],
+    "remember": "Making emissions count where a product is made, not where it is used.",
+    "a": {
+      "q": "A shop in Geelong sells a jacket made in Vietnam. Where are the emissions from making it counted?",
+      "opts": [
+        "In Vietnam, where it was made",
+        "In Australia, where it is sold",
+        "Split evenly between the two countries",
+        "In neither country, as it was traded"
+      ],
+      "why": "Emissions from making a product are counted in the country that made it, so they go in Vietnam's total. Australia is wrong because selling or using the jacket there does not move the making emissions into Australia's total.",
+      "clue": "Where did the factory stand?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Country X closes its factories and imports most of its goods from Asia. What is likely to happen to the emissions that X reports?",
+      "opts": [
+        "They fall, though its buying may not have changed",
+        "They rise, because it now buys more goods",
+        "They stay the same, because the goods are the same",
+        "They fall, because it now buys fewer goods"
+      ],
+      "why": "Emissions from making the goods are now counted in the exporting countries, so X's reported total falls. The last option is wrong because the scenario says nothing about buying less: the fall comes from where the goods are made.",
+      "clue": "Ask where the factory emissions are counted now."
+    }
+  },
+  "geo-trade-sustainability": {
+    "title": "Trade and sustainability",
+    "card": [
+      "Trade can spread cleaner technology. A country can buy solar panels or electric buses made elsewhere, which can help it cut its emissions.",
+      "Trade also makes goods cheap, such as fast fashion and electronics. Cheap goods are often bought in large numbers and thrown out quickly.",
+      "This adds to waste, because old clothes and devices pile up in landfill. Much of the waste can end up in other countries.",
+      "Making more goods also uses more energy, water and raw materials, and releases emissions. Much of this happens in the countries that make the goods."
+    ],
+    "remember": "Trade can spread clean technology, but cheap goods can add to waste, emissions and resource use abroad.",
+    "a": {
+      "q": "Why can trade in fast fashion harm sustainability?",
+      "opts": [
+        "Cheap clothes are bought and thrown out in large amounts",
+        "Trade stops countries from sharing any new technology",
+        "Clothes made overseas use no energy or water to produce",
+        "Fewer clothes are made when they are sold across borders"
+      ],
+      "why": "Cheap clothes encourage people to buy many items and discard them quickly. That adds to waste, and making them uses energy, water and raw materials. The option saying trade stops technology sharing is wrong, because trade can spread cleaner technology.",
+      "clue": "Think about what happens to cheap clothes after a few wears."
+    },
+    "b": {
+      "d": 2,
+      "q": "Which example shows trade helping sustainability?",
+      "opts": [
+        "A country buys imported solar panels to cut its emissions",
+        "A shop sells more cheap phones that people replace yearly",
+        "A factory uses more water to make extra shirts for export",
+        "Old electronics are shipped overseas and left in landfill"
+      ],
+      "why": "Imported solar panels are cleaner technology spread through trade, and they can help cut emissions. Cheap phones replaced every year add to waste, and the other two options add to resource use or landfill.",
+      "clue": "Look for the option that spreads cleaner technology."
+    }
+  },
+  "geo-impacts-tourism-places": {
+    "title": "Impacts of tourism on places",
+    "card": [
+      [
+        "Benefits",
+        "Tourism brings income and jobs to a place. Visitors spend money on hotels, food, tours and shops, and local people are paid to supply them."
+      ],
+      [
+        "Costs",
+        "Tourism can also cause problems. Places can become crowded, environments such as reefs and tracks can be damaged, and local prices for housing and food can rise. Local culture can also change as it is shaped to suit visitors."
+      ],
+      [
+        "Limits",
+        "Some places set a cap on visitor numbers, such as a daily limit on entry permits. This reduces crowding and wear on the environment."
+      ],
+      [
+        "Ecotourism",
+        "Ecotourism is travel that aims to protect the natural environment and support local people. Visitors are guided in small groups and money goes to conservation or the community."
+      ]
+    ],
+    "remember": "Tourism can bring income and jobs but may also cause crowding, damage and rising prices. Visitor limits and ecotourism help manage this.",
+    "a": {
+      "q": "A small coastal town fills with holiday renters each summer. Local workers can no longer afford rent. Which impact of tourism is this?",
+      "opts": ["Higher local prices", "Damage to the environment", "A change in local culture", "Crowding on the beaches"],
+      "why": "The problem is that rent costs more than local workers can pay, so it is a rise in local prices. Crowding is about too many people in a space, which is not what the town's workers are facing here.",
+      "clue": "Focus on what workers can no longer afford."
+    },
+    "b": {
+      "d": 3,
+      "q": "Rangers on a popular island track allow only 100 walkers a day, and each walker needs a permit. Which aim does this limit mainly serve?",
+      "opts": [
+        "Reducing crowding and wear on the track",
+        "Raising the price of local housing",
+        "Making visitors spend more in the shops",
+        "Changing local culture to suit visitors"
+      ],
+      "why": "A daily cap on walkers keeps numbers down, so the track is less crowded and less worn. It does not lift housing prices, and the card says culture and prices are among the costs that tourism can cause, not things a limit aims to produce.",
+      "clue": "Think about what a cap on numbers does to a track."
+    }
+  },
+  "geo-tourism-country": {
+    "title": "Tourism on Country",
+    "card": [
+      "Aboriginal and Torres Strait Islander Peoples run tours, art centres and cultural centres on their Country. Visitors learn about the land and its culture from the people whose Country it is.",
+      "They share culture on their own terms. The community decides which stories, places and practices visitors may learn about, and some knowledge is kept private.",
+      "Visitors are asked to respect sacred sites, places of deep cultural and spiritual meaning. This can mean staying on paths, keeping out of some areas and not taking photos.",
+      "Uluru is sacred to the Anangu, its Traditional Owners, who long asked visitors not to climb it. The climb closed in October 2019. Visitors can still walk around its base and join Anangu-led tours."
+    ],
+    "remember": "The people of Country decide what culture is shared, and visitors respect sacred places.",
+    "a": {
+      "q": "An Aboriginal-run tour shows visitors some rock art, but the guide says the meaning of one site will not be shared. What does this show?",
+      "opts": [
+        "The community is sharing culture on its own terms",
+        "The guide does not know the story of that site",
+        "The story has been lost, so it cannot be shared",
+        "The visitors chose which parts of culture to see"
+      ],
+      "why": "The community decides what visitors may learn, and some knowledge is kept private. A lost story is tempting, but the guide chose not to share it, which is different from not knowing it.",
+      "clue": "Who decides what visitors may learn?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Sam is visiting Uluru-Kata Tjuta National Park and wants to see Uluru up close. Which plan respects the wishes of the Anangu?",
+      "opts": [
+        "Walk around the base and join an Anangu-led tour",
+        "Climb early in the morning before many people arrive",
+        "Take photos of every site he passes on the base walk",
+        "Climb only part of the way up, then come back down"
+      ],
+      "why": "Walking around the base and joining an Anangu-led tour lets Sam see Uluru while respecting the Anangu. Photos of every site is tempting, but some sacred sites are not to be photographed.",
+      "clue": "Which plan keeps Sam off the rock and follows the site rules?"
+    }
+  },
+  "geo-spread-cultural-trends": {
+    "title": "Spread of cultural trends",
+    "card": [
+      "A cultural trend is a style of music, fashion or entertainment that many people take up for a time. Trends used to spread slowly, through radio, cinema, magazines and the movement of people.",
+      "Streaming services and social media now let songs, clips and styles reach people in many countries within hours or days. Anyone with a phone and an internet connection can share or watch them.",
+      "Because of this, a trend can start anywhere, such as a bedroom in Seoul or a small town in Nigeria. It does not have to begin in a big media centre like Los Angeles.",
+      "A trend that spreads widely can reach people far from where it began. Some places then share similar music, clothes and shows, though people may also adapt a trend to suit their own culture."
+    ],
+    "remember": "Streaming and social media let trends start anywhere and reach many places fast.",
+    "a": {
+      "q": "Why do music and fashion trends now spread around the world faster than they once did?",
+      "opts": [
+        "Streaming and social media share them quickly online",
+        "Radio and cinema now reach more countries than before",
+        "Governments agree which trends each country will adopt",
+        "More people now travel overseas to find new styles"
+      ],
+      "why": "Streaming and social media let people in many countries see songs and styles within hours or days, wherever they live. Radio, cinema and travel were the older, slower ways that trends spread, so they do not explain the new speed.",
+      "clue": "Think about what a phone and an internet connection let people do."
+    },
+    "b": {
+      "d": 2,
+      "q": "Tane, a teenager in Rotorua, posts a dance clip online. Within a week, students in Brazil and Japan are copying it. What does this show about cultural trends?",
+      "opts": [
+        "A small place can be the starting point of a global trend",
+        "Global trends begin in large cities, then reach small ones",
+        "Online trends spread most within the country they start in",
+        "A trend needs radio or TV coverage before it goes overseas"
+      ],
+      "why": "The dance began with one teenager in Rotorua and reached people on other continents through an online post. This shows a trend can begin outside a big media centre. The idea that trends start in large cities and move out to small ones is the old pattern, and this example runs the other way.",
+      "clue": "Where did the clip start, and how did it reach Brazil and Japan?"
+    }
+  },
+  "geo-spread-pandemics": {
+    "title": "Spread of pandemics",
+    "card": [
+      "A pandemic is a disease that spreads across many countries and continents. Disease travels with people, so more movement between places means faster spread.",
+      "Air travel can carry an infected person between continents in a day or less. The person may not show signs of illness until after they arrive.",
+      "Busy trade routes and large numbers of travellers also move disease. Well-connected cities, such as major airport hubs, are often reached first.",
+      "COVID-19 was first reported in Wuhan, China, in late 2019. By March 2020 it had reached every inhabited continent and was declared a pandemic."
+    ],
+    "remember": "The more connected a place is, the faster a disease can reach it, often reaching well-connected cities first.",
+    "a": {
+      "q": "Why can a disease now spread between continents in days rather than months?",
+      "opts": [
+        "Air travel moves people between continents very quickly",
+        "Diseases now grow faster than they did in the past",
+        "Cities have become much larger than before",
+        "Countries have stopped sharing information about disease"
+      ],
+      "why": "People carry disease with them, and air travel moves people across the world in hours. The size of cities matters less here than the speed and number of links between them.",
+      "clue": "Think about how quickly a person can now cross an ocean."
+    },
+    "b": {
+      "d": 3,
+      "q": "A new disease appears in a small farming village far from any airport. Which place is likely to see cases first, after the village?",
+      "opts": [
+        "A major airport city that many travellers pass through",
+        "A remote island with only one boat visit a month",
+        "A small town that has no roads to other places",
+        "A desert settlement with a few visitors each year"
+      ],
+      "why": "Disease travels with people, so a busy airport city with many travellers coming and going is likely to be reached first. The remote places have few links, so people carry the disease to them slowly. Being connected matters more than being remote or small.",
+      "clue": "Which place has the most travellers coming and going?"
+    }
+  },
+  "geo-spread-financial-crises": {
+    "title": "Spread of financial crises",
+    "card": [
+      "A financial crisis is a sudden shock to banks and money markets. Banks fail or stop lending, and people and firms lose savings and jobs.",
+      "Banks and economies are linked. Banks lend to each other across borders, invest in each other's countries and trade goods and services.",
+      "Because of these links, trouble in one country can spread. Banks that lose money in one place cut their lending in others, and falling demand hurts countries that sell to it.",
+      "The 2008 global financial crisis began with the United States housing and banking system. It spread worldwide, and many countries saw slower growth and rising unemployment."
+    ],
+    "remember": "Links between banks and economies let a crisis in one country spread to others.",
+    "a": {
+      "q": "Banks based in Country A lose a lot of money at home. How might this hurt firms in Country B?",
+      "opts": [
+        "The banks cut their lending to firms in Country B",
+        "The banks lend more in Country B to win back losses",
+        "Firms in Country B get cheaper loans from those banks",
+        "Firms in Country B are safe, as the losses stay in Country A"
+      ],
+      "why": "Banks that lose money in one place cut their lending in others, so firms in Country B find it harder to borrow. It is tempting to think the banks would lend more to make up their losses, but losing money leaves them less to lend.",
+      "clue": "After a big loss, does a bank have more or less to lend?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A large bank in Country A fails. Country B has a mining firm that sells most of its goods to Country A. What is the likely effect on Country B?",
+      "opts": [
+        "Falling demand from Country A cuts the firm's sales",
+        "Nothing, because the bank failed in another country",
+        "Country B's firm sells more goods to Country A",
+        "Country B's banks are the only ones to be affected"
+      ],
+      "why": "Country A's trouble lowers its spending, so it buys fewer goods from Country B. This spreads the crisis through trade. Distance does not protect Country B, because the two economies are linked.",
+      "clue": "Who buys the firm's goods, and what happens to their spending?"
+    }
+  },
+  "geo-environmental-functions-vic": {
+    "title": "Environmental functions",
+    "card": [
+      ["Supply", "Environments provide the resources people use, such as water, timber, soil, fish and minerals."],
+      [
+        "Absorb wastes",
+        "Environments take in wastes and break many of them down. Soil, water and air can process some wastes, but only up to a limit."
+      ],
+      ["Support life", "Environments keep living things going with clean air, fresh water and a stable climate."],
+      "The functions are linked. Damage to one function can harm the others. For example, smoke from burning rubbish can dirty the air that people and animals breathe."
+    ],
+    "remember": "Environments supply, absorb and support. Harm one function and the others can suffer.",
+    "a": {
+      "q": "A river gives a town its drinking water and also carries away treated wastewater. Which two environmental functions is the river performing?",
+      "opts": [
+        "Supplying a resource and absorbing wastes",
+        "Supplying a resource and supporting a stable climate",
+        "Absorbing wastes and supporting a stable climate",
+        "Supplying wastes and absorbing resources"
+      ],
+      "why": "Drinking water is a resource the environment supplies. Carrying away and diluting wastewater is absorbing wastes. The river is not described as affecting climate, so the options that include a stable climate do not fit.",
+      "clue": "One use takes something out. The other puts something in."
+    },
+    "b": {
+      "d": 3,
+      "q": "Farms upstream of a lake in Gippsland use a lot of fertiliser. Rain washes soil and fertiliser into the lake, and the water becomes unsafe for the town to drink. Which statement best explains this?",
+      "opts": [
+        "Too much waste to absorb harmed its supply of clean water",
+        "Too much water supplied harmed its ability to absorb waste",
+        "Too much waste to absorb harmed its stable climate",
+        "Its waste absorbing and water supply failed independently"
+      ],
+      "why": "The lake took in more soil and fertiliser than it could absorb, and that waste made its water unsafe, so its supply of clean drinking water was harmed. Saying the two failed independently misses the link: the waste caused the water problem. Nothing in the case is about climate.",
+      "clue": "Ask what made the town's water unsafe."
+    }
+  },
+  "geo-human-induced-environmental-change-vic": {
+    "title": "Human-induced environmental change",
+    "card": [
+      "Human-induced change is change to an environment that is caused by people, not by natural processes such as a lightning fire or a volcanic eruption.",
+      "Common causes are land clearing, pollution, overusing water, building, and burning fossil fuels such as coal, oil and gas.",
+      "Sustainability means using an environment in a way that still meets needs in the future. These changes can reduce the sustainability of a place.",
+      "For example, taking more water from a river than rain refills can dry out wetlands. Farms and towns that rely on the river may then struggle too."
+    ],
+    "remember": "Human-induced change comes from people's actions. It can reduce a place's sustainability.",
+    "a": {
+      "q": "Which of these is an example of human-induced environmental change?",
+      "opts": [
+        "Draining a wetland to build a housing estate",
+        "A river flooding after an unusually wet season",
+        "A volcano covering a valley with ash",
+        "Lightning starting a fire in a forest"
+      ],
+      "why": "People chose to drain the wetland, so the change is human-induced. The other three are natural events that happen without human action.",
+      "clue": "Which change happens because of a human decision?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Farmers near a river in Victoria take far more water than the rain refills, and the river begins to dry out. Why does this reduce the sustainability of the area?",
+      "opts": [
+        "Less water is left to meet the area's needs in later years",
+        "The farmers use the water for crops rather than for towns",
+        "The farms grow more food now than the area can sell",
+        "Water costs the farmers more during this dry season"
+      ],
+      "why": "Sustainability is about still meeting needs in the future. Taking more water than rain refills leaves less for later, so the place is less sustainable. A higher water cost this season is a problem now, but it does not explain what is left for the future.",
+      "clue": "Check what the card says sustainability is about."
+    }
+  },
+  "geo-land-clearing-biodiversity-loss": {
+    "title": "Land clearing and biodiversity loss",
+    "card": [
+      "Biodiversity is the variety of living things in a place, including plants, animals and microorganisms. A habitat is the place where a species finds its food, water and shelter.",
+      "Land clearing removes native vegetation, the plants that grew naturally in a place. It is done to make room for farms, towns and cities.",
+      "When native vegetation is removed, the habitat is destroyed. Species that depend on it lose food and shelter, so their numbers can fall and some may die out.",
+      "Australia has one of the highest rates of mammal extinction in the world. Habitat loss is one of the causes."
+    ],
+    "remember": "Clear native vegetation and habitat is lost, so species can decline or die out.",
+    "a": {
+      "q": "Why can clearing native bush for a new suburb cause native animals to decline?",
+      "opts": [
+        "Their habitat is destroyed, so they lose food and shelter",
+        "Their habitat is made larger, so they spread out too thinly",
+        "Their food supply grows, so they breed too quickly",
+        "Their habitat stays the same, but they are moved elsewhere"
+      ],
+      "why": "Native animals depend on native vegetation for food and shelter. When it is cleared, the habitat is gone and numbers can fall. Spreading out too thinly is wrong because clearing makes habitat smaller, not larger.",
+      "clue": "What do animals get from the native plants around them?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Farmers near Horsham clear most of a patch of native woodland to plant crops. What is the most likely effect on the native species that lived there?",
+      "opts": [
+        "Some will decline or die out because they lost their habitat",
+        "Most will increase because there is more open space",
+        "Most will be unaffected because they can eat the crops",
+        "Most will be unaffected because the woodland soil remains"
+      ],
+      "why": "The woodland was the habitat of the native species, so clearing it removes their food and shelter. Their numbers can fall and some may die out. More open space does not help them, because they depend on the native vegetation that was removed.",
+      "clue": "Think about what the woodland provided for the species living in it."
+    }
+  },
+  "geo-introduced-species": {
+    "title": "Introduced species",
+    "card": [
+      "An introduced species is a plant or animal brought by people from another place, on purpose or by accident. Rabbits, foxes, cats and cane toads are introduced to Australia.",
+      "Some introduced species spread fast. They can find plenty of food and have few predators or diseases to keep their numbers down.",
+      "They can harm native species by competing with them for food, water and shelter, or by eating them. Foxes and cats, for example, prey on small native animals.",
+      "They can also cause harm in other ways. Rabbit grazing can leave soil bare, and cane toads are poisonous to many native predators that try to eat them."
+    ],
+    "remember": "Introduced species can spread fast and harm natives and the land in many ways, such as competing, preying and poisoning.",
+    "a": {
+      "q": "What makes a plant or animal an introduced species in Australia?",
+      "opts": [
+        "People brought it from another place",
+        "It is found in only one part of Australia",
+        "It moved into a new area after a bushfire",
+        "It eats other animals to survive"
+      ],
+      "why": "An introduced species is one that people have brought from elsewhere, on purpose or by accident. Moving into a new area after a fire is natural movement, not introduction by people, so that tempting option is wrong.",
+      "clue": "Think about where it came from and who moved it."
+    },
+    "b": {
+      "d": 3,
+      "q": "Rabbits were released on a farm near Hamilton and their numbers grew quickly. They now eat the grasses that native wallabies feed on. Why are the rabbits harming the wallabies?",
+      "opts": [
+        "They outcompete the wallabies for food",
+        "They hunt and kill the wallabies",
+        "They bring in plants from other places",
+        "They are poisonous to the wallabies"
+      ],
+      "why": "The rabbits eat the same grasses, so there is less food for the wallabies. That is competition. The rabbits do not hunt wallabies, so the option about killing them is wrong, even though introduced predators such as foxes do harm natives that way.",
+      "clue": "What do the rabbits and wallabies both need?"
+    }
+  },
+  "geo-rivers-wetlands-as-environments-vic": {
+    "title": "Rivers and wetlands as environments",
+    "card": [
+      ["River", "a channel of flowing fresh water that drains the land and carries water towards a lake or the sea."],
+      [
+        "Wetland",
+        "low land that is covered by shallow water for part or all of the year, such as a marsh or a billabong."
+      ],
+      "Rivers and wetlands hold water and filter it. Plants and soil trap sediment and some pollutants, so the water that moves on is cleaner.",
+      "Wetlands soak up floodwater and release it slowly, which helps prevent floods. They also give homes to fish, birds and plants. Many native species need natural floods to breed."
+    ],
+    "remember": "Rivers and wetlands store and filter water, help prevent floods and are homes for wildlife that often rely on natural floods.",
+    "a": {
+      "q": "A wetland lies beside a town in Victoria. After heavy rain it fills with water and then drains slowly. Which role of the wetland does this show?",
+      "opts": [
+        "It helps prevent floods",
+        "It filters pollutants from water",
+        "It gives birds a place to nest",
+        "It helps fish breed after floods"
+      ],
+      "why": "Soaking up floodwater and releasing it slowly reduces the water that reaches the town at once, so it helps prevent floods. Filtering is a different role, because it is about cleaning the water, not about how fast the water moves.",
+      "clue": "Think about what happens to the speed and amount of water moving on."
+    },
+    "b": {
+      "d": 3,
+      "q": "Native waterbirds at a wetland in northern Victoria rely on natural floods to breed. This year is dry, and no flood reaches the wetland. What is most likely to happen?",
+      "opts": [
+        "Fewer waterbirds breed, as there is no flood",
+        "More waterbirds breed, as dry ground is safer for nests",
+        "Breeding rises, as no flood washes the nests away",
+        "Breeding is unchanged, as it follows the seasons"
+      ],
+      "why": "Many native species need natural floods to breed, so in a year with no flood, fewer of these waterbirds breed. Breeding does not simply stay the same with the seasons, because for these birds the flood, not the time of year, is what they need to breed.",
+      "clue": "What do these birds need before they breed?"
+    }
+  },
+  "geo-causes-river-decline-murray": {
+    "title": "Causes of river decline in the Murray-Darling Basin",
+    "card": [
+      [
+        "Water extraction",
+        "Taking water for irrigation and towns leaves less in the rivers of the Murray-Darling Basin, in south-eastern Australia. Less water flows along the rivers and into wetlands."
+      ],
+      [
+        "Dams and weirs",
+        "These hold water back and release it when people need it. This changes the natural pattern of flows, so the floods and low flows that native species rely on happen at the wrong times or not at all."
+      ],
+      [
+        "Land clearing",
+        "Removing native vegetation from the land beside rivers can let more soil and salt wash into them."
+      ],
+      [
+        "Drought",
+        "A drought is a long period of low rainfall, a natural event. It cuts the water entering the rivers and adds to the human pressures, which often act together."
+      ]
+    ],
+    "remember": "Too much water taken, changed flows, cleared land and drought all harm the Basin's rivers.",
+    "a": {
+      "q": "Which of these is a human action that has reduced the health of the Basin's rivers?",
+      "opts": [
+        "Taking water out of rivers for irrigation",
+        "A long period of low rainfall across the Basin",
+        "Natural floods spreading over a wetland",
+        "Native trees growing beside a river bank"
+      ],
+      "why": "Taking water for irrigation leaves less in the rivers, which harms their health. Drought also reduces river health, but it is a natural period of low rainfall, not an action people take.",
+      "clue": "Look for something people do, not something the weather does."
+    },
+    "b": {
+      "d": 3,
+      "q": "A dam on a Basin river holds back water in spring and releases it in summer for farms downstream. Why might this harm native fish?",
+      "opts": [
+        "It changes the natural timing of flows they rely on",
+        "It adds more water than the river has ever held",
+        "It stops farmers from taking any water from the river",
+        "It clears the native plants from the river bank"
+      ],
+      "why": "Dams and weirs change the natural pattern of flows. Native species rely on floods at certain times, so holding water back in spring can disrupt them. The dam does not clear land, and it supplies water to farms rather than stopping them from taking it.",
+      "clue": "Think about when the river would naturally flood."
+    }
+  },
+  "geo-consequences-river-decline": {
+    "title": "Consequences of river decline",
+    "card": [
+      "When river flows are low, water moves slowly and less fresh water arrives. Salt in the water and soil becomes more concentrated, so salinity can rise.",
+      "Warm, slow, nutrient-rich water can let blue-green algae multiply. Some blooms make toxins that can harm animals and people, and can make water unsafe to drink or use.",
+      "Low flows can also cut oxygen in the water and shrink the places where fish live, so fish kills may follow. Wetlands that depend on river water can dry out.",
+      "These changes can harm wildlife, farms that need clean water, towns that rely on the river and First Nations communities, whose culture and Country are linked to the rivers."
+    ],
+    "remember": "Low flows can bring salinity, algae, fish kills and drying wetlands, and these affect both nature and people.",
+    "a": {
+      "q": "Which change in a river is a direct result of low flows letting warm, slow water build up nutrients?",
+      "opts": [
+        "Blue-green algae blooms may form",
+        "Floodwater may spread over wetlands",
+        "Salt may be washed out of the soil",
+        "Fish may find more places to live"
+      ],
+      "why": "Warm, slow, nutrient-rich water can let blue-green algae multiply, and some blooms are toxic. The other options describe more water or healthier habitat, which are the opposite of what low flows bring.",
+      "clue": "Think about what grows in warm water that barely moves."
+    },
+    "b": {
+      "d": 3,
+      "q": "During a long dry spell, the river near the town of Wirrin, a made-up town, runs low and slow. Dead fish appear and the council warns residents not to use the water. Which explanation fits best?",
+      "opts": [
+        "Low oxygen and a toxic algal bloom in the slow water",
+        "Too much floodwater washing fish out of the river",
+        "Wetlands filling up and pushing fish onto the banks",
+        "Fresh water arriving faster and cooling the river"
+      ],
+      "why": "Low flows can cut oxygen and let toxic blue-green algae grow, which can cause fish kills and make water unsafe to use. The other options describe more water or faster flow, but this river is running low and slow.",
+      "clue": "Ask whether this river has more water or less."
+    }
+  },
+  "geo-threats-great-barrier-reef": {
+    "title": "Threats to the Great Barrier Reef",
+    "card": [
+      "The Great Barrier Reef is a huge system of coral reefs off the Queensland coast. It faces several threats at once, and some are made worse by human activity.",
+      [
+        "Warming seas",
+        "as the climate warms, so does the ocean. Hotter water stresses corals and can harm the reef across large areas."
+      ],
+      [
+        "Farm runoff",
+        "rain washes soil and fertiliser from farms into rivers and out to sea. The extra nutrients and cloudy water harm corals and can help crown-of-thorns starfish numbers grow."
+      ],
+      [
+        "Starfish and cyclones",
+        "crown-of-thorns starfish eat living coral. Stronger cyclones can break reef structures with waves and flood the water with runoff."
+      ]
+    ],
+    "remember": "Warming seas, farm runoff, starfish and cyclones all harm the reef, and some can make others worse.",
+    "a": {
+      "q": "Fertiliser from sugar cane farms in Queensland washes down a river after heavy rain and reaches the sea near the reef. Which threat is this?",
+      "opts": ["Farm runoff", "Warming seas", "Crown-of-thorns starfish", "Stronger cyclones"],
+      "why": "Soil and fertiliser carried from farmland by rain and rivers is farm runoff. Cyclones can cause heavy rain, but the threat here is the material washed off the land, not the storm.",
+      "clue": "Think about where the fertiliser comes from and how it gets to the sea."
+    },
+    "b": {
+      "d": 3,
+      "q": "After a wet year, rivers carry extra fertiliser to a reef near Mackay. Later, divers find more coral with its living tissue eaten away. What best explains the link?",
+      "opts": [
+        "Nutrients helped crown-of-thorns starfish numbers grow",
+        "Fertiliser warmed the sea water around the coral",
+        "Cloudy water made cyclones stronger over the reef",
+        "Nutrients made the coral grow too fast and die"
+      ],
+      "why": "Extra nutrients from farm runoff can help crown-of-thorns starfish numbers grow, and these starfish eat living coral. Warming seas come from a warming climate, not from fertiliser, so that option mixes up two separate threats.",
+      "clue": "Which threat eats living coral, and what helps it spread?"
+    }
+  },
+  "geo-coral-bleaching": {
+    "title": "Coral bleaching",
+    "card": [
+      "Corals are tiny animals. Many live with algae inside their tissue. The algae make food for the coral and give it its colour.",
+      "When the sea stays too warm for too long, the coral is stressed and pushes the algae out. Without them the coral loses its colour and turns white. This is called bleaching.",
+      "A bleached coral is still alive, but it has lost its main source of food. If the water cools soon enough, algae can return and the coral can recover.",
+      "Recovery takes time. If another warm spell comes before the coral has recovered, it is bleached again while still weak. Repeated bleaching can starve the coral until it dies."
+    ],
+    "remember": "Too much heat makes coral lose its algae and turn white. It may recover if the water cools, but repeated bleaching can kill it.",
+    "a": {
+      "q": "Why does a coral turn white during bleaching?",
+      "opts": [
+        "It pushes out the algae that feed and colour it",
+        "It is covered by a layer of white sand",
+        "Its algae grow too fast and bleach the tissue",
+        "It dies at once and its skeleton shows through"
+      ],
+      "why": "Warm water stresses the coral, which pushes out its algae, so it loses its colour and its food. The coral is not dead straight away, so the option about dying at once is wrong, because bleached coral can recover.",
+      "clue": "Think about what lives inside the coral and gives it colour."
+    },
+    "b": {
+      "d": 3,
+      "q": "A reef off Queensland bleaches in a hot summer. The sea cools and the coral starts to recover, but another heatwave arrives before it has fully recovered. Why is this second event more likely to kill coral?",
+      "opts": [
+        "It hits coral still weak from the first bleaching",
+        "The first event already killed the bleached coral",
+        "Coral loses its algae each time the sea cools",
+        "Its algae now turn white inside the coral tissue"
+      ],
+      "why": "Recovery takes time. The second heatwave strikes coral that has not yet regained its strength, so it is more likely to starve and die. The first event did not kill the coral, because it had started to recover once the water cooled.",
+      "clue": "Think about the state of the coral when the heat returns."
+    }
+  },
+  "geo-managing-great-barrier-reef": {
+    "title": "Managing the Great Barrier Reef",
+    "card": [
+      [
+        "Marine park",
+        "The Great Barrier Reef is protected as a marine park. The Great Barrier Reef Marine Park Authority, a federal government body, manages it with the Queensland Government."
+      ],
+      [
+        "Zoning",
+        "The park is split into zones with different rules. Some zones limit or ban fishing so that fish and coral can recover. Other zones allow more uses."
+      ],
+      [
+        "Local actions",
+        "Managers work with farmers to cut the soil and fertiliser that wash onto the reef. They also control crown-of-thorns starfish, which eat coral."
+      ],
+      [
+        "Global limit",
+        "These actions reduce local pressures. Warming seas come from global greenhouse gas emissions, so the reef's future depends most on cutting emissions worldwide."
+      ]
+    ],
+    "remember": "Local actions ease some pressures on the reef, but cutting global emissions matters most for its future.",
+    "a": {
+      "q": "What is the main purpose of the different zones in the Great Barrier Reef Marine Park?",
+      "opts": [
+        "To set different rules on fishing and other uses by area",
+        "To close every part of the reef to all boats and visitors",
+        "To track where crown-of-thorns starfish are spreading",
+        "To cool the water in each area so that coral can recover"
+      ],
+      "why": "Zones give different parts of the park different rules. Some limit or ban fishing so fish and coral can recover, while others allow more uses. Zones do not close the whole reef, and they cannot cool the water, because warming comes from global emissions.",
+      "clue": "Think about what changes as you move from one zone to the next."
+    },
+    "b": {
+      "d": 3,
+      "q": "Reef managers cut farm runoff and control starfish for years, but sea temperatures keep rising. Why does the reef's future still depend most on global action?",
+      "opts": [
+        "Warming seas come from emissions made all over the world",
+        "Runoff and starfish cause most of the warming in the sea",
+        "Local actions have made the reef's other threats worse",
+        "Australia's own emissions are the only cause of warming"
+      ],
+      "why": "Warming seas come from greenhouse gas emissions around the world, so reef managers cannot fix them locally. Cutting runoff and controlling starfish ease other pressures, but they do not cause or stop the warming.",
+      "clue": "Ask whether reef managers can reach the cause of the heat."
+    }
+  },
+  "geo-custodial-responsibility": {
+    "title": "Custodial responsibility",
+    "card": [
+      "For Aboriginal and Torres Strait Islander Peoples, Country is the land, waters and sky of a group, with its plants, animals, stories and law. People are part of Country.",
+      "Custodial responsibility is the duty to care for Country. It is passed down from Elders and ancestors, and handed on in turn to children.",
+      "The care looks ahead. People use Country for food and materials, but they take what they need so it stays healthy for the generations to come.",
+      "This care is guided by knowledge of seasons, plants, animals and water, built over tens of thousands of years and shared through stories, songs, ceremony and practice."
+    ],
+    "remember": "Caring for Country is a duty handed down, so it stays healthy for those who come next.",
+    "a": {
+      "q": "Which statement best describes custodial responsibility?",
+      "opts": [
+        "A duty to care for Country so it stays healthy in future",
+        "A duty to keep Country untouched and never use it at all",
+        "A set of rules that governments write for land managers",
+        "A freedom for each person to use Country as they choose"
+      ],
+      "why": "Custodial responsibility is a duty, passed down, to care for Country for the generations to come. Keeping Country untouched is tempting, but people do use Country for food and materials, taking what they need.",
+      "clue": "Think about who the care is for."
+    },
+    "b": {
+      "d": 3,
+      "q": "On a stretch of coast, Elders teach young people to leave the shellfish beds alone at certain times of year, so there will be plenty in years to come. Which idea does this show?",
+      "opts": [
+        "Looking after Country for the generations ahead",
+        "Keeping Country unchanged by never using it",
+        "Saving food now so it can be traded later on",
+        "Following the rules set out in a fishing licence"
+      ],
+      "why": "The Elders pass on knowledge so the shellfish stay plentiful for those who come later, which is caring for Country for future generations. The beds are only left at certain times, so this is not about never using Country.",
+      "clue": "Who will benefit from the shellfish being left alone?"
+    }
+  },
+  "geo-cultural-burning": {
+    "title": "Cultural burning",
+    "card": [
+      "Cultural burning is fire lit by Traditional Owners to care for Country. The fires are cool: they burn slowly, low to the ground and in patches.",
+      "Each burn is timed by reading Country: the plants, the weather and how damp the ground is. A fire lit at the wrong time of year can grow hot and spread.",
+      "Cool, patchy burns reduce fuel such as dry grass and leaf litter, so a later bushfire can be less intense. Unburnt patches shelter animals, and many plants regrow.",
+      "Colonisation stopped cultural burning in many places. Fire agencies in Victoria and other states now work with Traditional Owners to bring it back."
+    ],
+    "remember": "A cool, patchy fire at the right time of year cuts fuel while plants and animals carry on.",
+    "a": {
+      "q": "Why does a cultural burn leave some patches of ground unburnt?",
+      "opts": [
+        "Animals can shelter there during and after the fire",
+        "The fire can then burn hotter through the rest",
+        "Burning every patch would cost the crew too much",
+        "The crew can then see where to start the next burn"
+      ],
+      "why": "Leaving unburnt patches gives animals places to shelter while the fire passes and after it. A cultural burn is meant to stay cool, so a hotter fire through the rest is the opposite of its aim.",
+      "clue": "Think about what lives in the area being burnt."
+    },
+    "b": {
+      "d": 3,
+      "q": "Traditional Owners plan a burn on a grassland in western Victoria. On the day, it is hot and windy, and both the grass and the soil are very dry. What fits cultural burning?",
+      "opts": [
+        "Wait for a cooler time when the ground is still damp",
+        "Burn now, since the dry grass will catch more easily",
+        "Burn now, but only the patches nearest the road",
+        "Burn the whole grassland at once to clear all fuel"
+      ],
+      "why": "A cultural burn is timed by reading the weather and how damp the ground is, so the fire stays cool. On a hot, windy day with dry soil, a fire can grow hot and spread, even if only a small patch is lit.",
+      "clue": "What could a fire do on a hot, windy day?"
+    }
+  },
+  "geo-budj-bim-gunditjmara-aquaculture": {
+    "title": "Budj Bim and Gunditjmara aquaculture",
+    "card": [
+      "Budj Bim is a volcano in western Victoria, on Gunditjmara Country. Its lava flowed across the land tens of thousands of years ago and shaped a wide area of wetlands.",
+      "The Gunditjmara built channels, weirs and traps into the lava rock. These moved water and eels into ponds, where the eels were held and caught when needed.",
+      "This is aquaculture: raising and harvesting water animals in a managed system. Parts of the system at Budj Bim are more than 6,000 years old.",
+      "A steady supply of eels let families settle in one area, where they built stone huts. The Budj Bim Cultural Landscape was World Heritage listed in 2019."
+    ],
+    "remember": "The Gunditjmara shaped the lava wetlands into a managed eel system, now on the World Heritage list.",
+    "a": {
+      "q": "Why is the Gunditjmara system at Budj Bim called aquaculture?",
+      "opts": [
+        "Eels were moved, held and harvested in a managed system",
+        "Eels were caught by hand wherever they happened to be",
+        "Lava flows made wetlands where wild eels could live",
+        "Channels drained the wetlands to make dry land for crops"
+      ],
+      "why": "Aquaculture means raising and harvesting water animals in a managed system, and the channels, weirs and traps moved, held and caught eels. The lava flows made the wetlands, but wetlands on their own are not a managed system.",
+      "clue": "What makes farming different from just finding food?"
+    },
+    "b": {
+      "d": 3,
+      "q": "At Budj Bim, visitors can see stone eel traps and, close by, the stone bases of old huts. What do these two together suggest?",
+      "opts": [
+        "A reliable eel supply let families settle in one area",
+        "Families moved on once the eels in an area ran out",
+        "The channels drained the wetland so huts could be built",
+        "Eels were scarce, so people relied mostly on hunting"
+      ],
+      "why": "The traps gave a steady supply of eels, so families could stay in one area and build stone huts to live in. Moving on when the eels ran out is tempting, but the system was built to keep eels coming.",
+      "clue": "Why would people build stone huts next to a food source?"
+    }
+  },
+  "geo-indigenous-rangers-protected-areas": {
+    "title": "Indigenous rangers and protected areas",
+    "card": [
+      "Indigenous ranger groups are teams of Aboriginal and Torres Strait Islander people employed to care for land and sea Country. They control weeds and feral animals, manage fire and track wildlife.",
+      "Rangers combine traditional knowledge passed down from Elders with scientific tools such as drones, GPS tracking and data records. Each kind of knowledge adds to the other.",
+      "An Indigenous Protected Area (IPA) is land or sea that its Traditional Owners choose to dedicate to conservation, in an agreement with the Australian Government. It stays in their care.",
+      "IPAs make up about half the area of Australia's conservation estate, the network of land set aside to protect nature. Rangers do much of the work on them."
+    ],
+    "remember": "Rangers bring two kinds of knowledge to their work, and IPAs protect a large share of Australia's nature.",
+    "a": {
+      "q": "Who decides that an area will become an Indigenous Protected Area?",
+      "opts": [
+        "Its Traditional Owners, by choosing to dedicate it",
+        "A state government, by declaring a national park",
+        "A ranger group, by taking over land no one uses",
+        "Scientists, after finding rare species living there"
+      ],
+      "why": "An IPA is dedicated by its Traditional Owners, who agree with the Australian Government to manage it for conservation, and it stays in their care. A national park declared by a government is a different kind of protected area.",
+      "clue": "Whose land or sea is it?"
+    },
+    "b": {
+      "d": 2,
+      "q": "A ranger group uses Elders' knowledge of where feral pigs dig in a wetland, along with drone surveys, to plan where to set traps. What does this show?",
+      "opts": [
+        "Traditional and scientific knowledge used together",
+        "Scientific methods taking the place of Elders' knowledge",
+        "Traditional knowledge that drones cannot add to",
+        "Pest control that needs no knowledge of the place"
+      ],
+      "why": "The rangers use what Elders know about the wetland alongside drone surveys from science. Neither replaces the other, so the plan uses both kinds of knowledge together.",
+      "clue": "Count the kinds of knowledge the rangers use."
+    }
+  },
+  "geo-environmental-worldviews": {
+    "title": "Human-centred and earth-centred views",
+    "card": [
+      "A world view is the set of beliefs a person or group holds about how the world works and what matters in it. It shapes how they see nature.",
+      [
+        "Human-centred",
+        "nature is valued for what it gives people, such as timber, water, food and space to build. People are seen as separate from nature and able to use it."
+      ],
+      [
+        "Earth-centred",
+        "nature is valued for its own sake, whether or not it is useful to people. People are seen as one part of nature, not above it."
+      ],
+      "Most people hold a mix of views, and a person can value nature in both ways. The two views describe different starting points, not two fixed groups of people."
+    ],
+    "remember": "Human-centred: nature is valued for its use to people. Earth-centred: nature has worth in itself and people belong to it.",
+    "a": {
+      "q": "Which view of a wetland is earth-centred?",
+      "opts": [
+        "A wetland deserves protection because it has its own worth",
+        "A wetland should be protected because it cleans our water",
+        "A wetland should be drained to make room for new farms",
+        "A wetland is useful because tourists pay to visit it"
+      ],
+      "why": "An earth-centred view values nature for its own sake, not for what it gives people. The water-cleaning option is tempting, but it values the wetland for its benefit to people, which is human-centred.",
+      "clue": "Which reason would still hold if the place were of no use to people?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A council in Victoria's Otway Ranges wants to protect a patch of old forest. Which reason for protecting it is human-centred?",
+      "opts": [
+        "The forest will attract walkers and bring money to the town",
+        "The trees and animals have a right to exist for themselves",
+        "People are one part of the forest, just like the animals",
+        "The forest has worth whether or not anyone ever visits it"
+      ],
+      "why": "Protecting the forest for the money walkers bring values it for what it gives people, so it is human-centred. The other options value the forest for itself or see people as part of it, which is earth-centred. Protecting nature does not make a view earth-centred: the reason matters.",
+      "clue": "The action is the same in every option, so look at the reason given."
+    }
+  },
+  "geo-worldviews-support-sustainability": {
+    "title": "Worldviews and support for sustainability",
+    "card": [
+      "A worldview is the set of values and beliefs a person uses to judge what matters. People with different worldviews can look at the same environment and see different things.",
+      "Worldviews shape which actions people support. Someone who values a forest mainly for timber and jobs may back logging it. Someone who values it for its own sake may back protecting it.",
+      "So groups can disagree about the same plan, such as limiting development near a forest. They may agree on the facts and still disagree about what matters most.",
+      "Each side weighs the costs and benefits, such as jobs or habitat, in a different way. Knowing the worldviews behind a dispute helps explain why it happens."
+    ],
+    "remember": "Worldviews shape which actions people support, so groups can disagree over the same plan.",
+    "a": {
+      "q": "Two groups read the same report on a forest. One wants it logged and the other wants it protected. What best explains their disagreement?",
+      "opts": [
+        "They hold different worldviews about what matters",
+        "One group misunderstood the facts in the report",
+        "One group values the forest and the other does not",
+        "The report favoured one group over the other"
+      ],
+      "why": "Worldviews shape what people value, so groups can read the same facts and still want different actions. The tempting option is that one group got the facts wrong, but groups may agree on the facts and still disagree. Both groups value the forest, one for timber and jobs and the other for its own sake.",
+      "clue": "They can agree on the facts and still differ on what matters."
+    },
+    "b": {
+      "d": 3,
+      "q": "A builder wants to clear bushland near Bright for new houses, which would bring jobs. A bushwalking club wants the bushland kept as habitat for wildlife. Both groups accept the findings of a study of the facts. Is the study likely to end the dispute?",
+      "opts": [
+        "No, they may still weigh jobs and habitat differently",
+        "Yes, as shared facts would likely lead to a shared view",
+        "No, they may still disagree about what the study found",
+        "Yes, as the study would likely show which side is right"
+      ],
+      "why": "Both groups accept the facts, so the study cannot settle what is left. The builder puts jobs first and the club puts habitat first, so their worldviews keep them apart. The tempting idea that shared facts bring a shared view misses that values, not facts, divide them.",
+      "clue": "What is left to argue about once the facts are agreed?"
+    }
+  },
+  "geo-sustainability-as-geographical-concept": {
+    "title": "What sustainability means",
+    "card": [
+      "Sustainability means meeting people's needs now without harming the ability of environments and future generations to meet theirs.",
+      "It covers three areas: the environment, the economy and society. The environment is the natural world. The economy is how goods, services and jobs are produced. Society is the wellbeing of people and communities.",
+      "The three areas are linked. A choice that helps one area can harm another, so sustainable decisions try to weigh all three rather than ranking one above the others.",
+      "The idea looks ahead. A way of living is not sustainable if it uses up resources or damages ecosystems so that later generations are left with less."
+    ],
+    "remember": "Sustainability means meeting today's needs while leaving future generations able to meet theirs.",
+    "a": {
+      "q": "Which action is the best example of sustainability?",
+      "opts": [
+        "Fishing at a rate that lets fish stocks recover each year",
+        "Fishing as much as possible to maximise profit this year",
+        "Banning all fishing so that fish stocks are fully protected",
+        "Fishing only in places that are close to the port"
+      ],
+      "why": "Fishing at a rate that lets stocks recover meets present needs and keeps fish for the future. Maximising profit now may leave nothing for later generations. A ban on all fishing ignores the needs of people today, so it does not weigh all three areas.",
+      "clue": "Look for the choice that serves people now and later."
+    },
+    "b": {
+      "d": 3,
+      "q": "A council in regional Victoria clears a large area of bushland for a new factory. The factory brings many jobs, but the land cannot recover and local species lose their habitat. Which judgement about this decision is correct?",
+      "opts": [
+        "Not sustainable: later generations are left with less",
+        "Not sustainable: the environment ranks above jobs",
+        "Sustainable: jobs help both the economy and society",
+        "Sustainable: the harm falls on wildlife, not on people"
+      ],
+      "why": "The jobs help the economy and society now, but the lasting damage to the ecosystem leaves later generations with less, so the decision is not sustainable. It is tempting to say the environment outranks jobs, but sustainability weighs all three areas rather than ranking one first.",
+      "clue": "Think about the people who come after the factory is built."
+    }
+  },
+  "geo-judging-environmental-management": {
+    "title": "Judging environmental management",
+    "card": [
+      "A management strategy is a plan to deal with an environmental problem, such as flooding or a polluted river. Each option is judged on three kinds of criteria, and one that does well on one kind can do poorly on another.",
+      [
+        "Environmental",
+        "how it affects land, water, air and living things. Does it work for the environment, and will that last?"
+      ],
+      [
+        "Economic",
+        "what it costs to build and maintain, and the money it saves or earns. Does it pay off, and can it be paid for over time?"
+      ],
+      [
+        "Social",
+        "how it affects people's health, safety, jobs and way of life, and who benefits. Does it work for people, and will it keep their support?"
+      ]
+    ],
+    "remember": "Ask whether each option works and can last for the environment, for the budget and for people.",
+    "a": {
+      "q": "Why does a geographer judge each management option against several criteria before recommending one?",
+      "opts": [
+        "Doing well on one criterion can hide harm on another",
+        "Using all three criteria can remove a strategy's downsides",
+        "Each criterion ranks the options in the same order",
+        "Cost decides the choice, and the other criteria are extras"
+      ],
+      "why": "An option can look good on cost but harm the environment or people, and checking every criterion shows this. Comparing options does not remove downsides: the option chosen can still do poorly on some criteria.",
+      "clue": "Think about an option that is cheap but causes harm."
+    },
+    "b": {
+      "d": 3,
+      "q": "A council on the Great Ocean Road is deciding how to protect a coastal town from erosion. A sea wall would be expensive and may speed up erosion on nearby beaches. Which statement uses an economic criterion?",
+      "opts": [
+        "The sea wall costs a lot to build and maintain",
+        "The sea wall may speed up erosion on nearby beaches",
+        "The sea wall would keep homes safe for residents",
+        "The sea wall would change the habitat of shore birds"
+      ],
+      "why": "Cost to build and maintain is a money matter, so it is an economic criterion. Erosion on beaches and shore bird habitat are environmental effects. Safety for residents is social, which is the tempting option because homes also have a dollar value.",
+      "clue": "Homes are worth money, but what is that statement really about?"
+    }
+  },
+  "geo-income-per-person-as": {
+    "title": "Income per person as a measure",
+    "card": [
+      "Gross national income (GNI) is the total income earned by a country's people and businesses in a year, including income they earn from other countries.",
+      "GNI per person is GNI divided by the number of people. It shows the average income in a country.",
+      "It is an average, so it does not show how fairly income is shared. A few very rich people can raise it while many others stay poor.",
+      "It also says nothing directly about health or education. Two countries with the same GNI per person can differ in both."
+    ],
+    "remember": "GNI per person is an average income. It hides sharing, health and education.",
+    "a": {
+      "q": "What does GNI per person show about a country?",
+      "opts": [
+        "Its average income for each person",
+        "How equally income is shared among people",
+        "How long people in it usually live",
+        "How many children go to school in it"
+      ],
+      "why": "GNI per person divides total national income by the population, which gives an average income. It cannot show how income is shared, because an average hides differences between people.",
+      "clue": "Think of what you get when you divide a total by the number of people."
+    },
+    "b": {
+      "d": 3,
+      "q": "Over ten years, new mines in Country R made their owners much richer. The owners live in Country R, so their income counts in its GNI. Its GNI per person rose sharply, but most workers earned no more. How is this possible?",
+      "opts": [
+        "It is an average, so a few large gains can lift it",
+        "It shows the income of a typical worker in a country",
+        "It measures health and schooling as well as income",
+        "It divides GNI by the number of workers, not people"
+      ],
+      "why": "GNI per person is an average, so big gains for a few people can raise it even when most incomes stay flat. It is tempting to think it shows a typical worker's income, but an average hides how income is spread, which is why it rose here while most workers gained nothing.",
+      "clue": "What happens to an average when a few values grow a lot?"
+    }
+  },
+  "geo-other-measures-wellbeing-vic": {
+    "title": "Other measures of wellbeing",
+    "card": [
+      [
+        "Infant mortality",
+        "the number of babies who die before their first birthday, for every 1000 born alive. A high rate points to weak health care, nutrition and living conditions."
+      ],
+      [
+        "Literacy rate",
+        "the share of adults who can read and write. It shows how far people have had access to education."
+      ],
+      [
+        "Water and sanitation",
+        "the share of people with clean drinking water and safe toilets. Without them, disease spreads more easily."
+      ],
+      [
+        "Doctors per person",
+        "the number of doctors for every 1000 or 10 000 people. A low number suggests people may find it hard to get medical care."
+      ]
+    ],
+    "remember": "Each measure shows one side of wellbeing, so using several gives a fuller picture of how countries differ.",
+    "a": {
+      "q": "A country has a very high infant mortality rate. Which side of wellbeing does this measure mainly show?",
+      "opts": [
+        "Health and living conditions for young children",
+        "How many adults can read and write",
+        "How evenly income is shared between people",
+        "How many people own a mobile phone"
+      ],
+      "why": "Infant mortality counts babies who die before their first birthday, so it reflects health care, nutrition and living conditions. Literacy is tempting but it measures reading and writing in adults, which is a different side of wellbeing.",
+      "clue": "Think about what is being counted: babies who die."
+    },
+    "b": {
+      "d": 3,
+      "q": "Country A and Country B have the same adult literacy rate. In Country A, 95% of people have clean water and safe toilets. In Country B, only 50% do. What does this tell us?",
+      "opts": [
+        "Education access is similar, but B has weaker water access",
+        "Country A has more doctors per 1000 people than Country B",
+        "Country B has a higher infant mortality rate than Country A",
+        "Both countries have the same level of wellbeing overall"
+      ],
+      "why": "The equal literacy rates suggest similar access to education, but the water and sanitation figures differ, so B is weaker on that side. The infant mortality option is tempting, but the data given does not measure it, so it cannot be concluded. Using one measure alone would have hidden the difference.",
+      "clue": "Match each option to the measures the data actually gives."
+    }
+  },
+  "geo-differences-wellbeing-within-australia": {
+    "title": "Wellbeing in cities, regions and remote Australia",
+    "card": [
+      "Wellbeing in Australia is generally high, but it is not the same everywhere. On average, people in capital cities, such as Melbourne, have higher wellbeing than people in many remote and regional areas.",
+      "Remote areas often have lower average incomes and fewer jobs. Some regional towns do too. There are also often fewer services, such as hospitals, specialist doctors and schools.",
+      "Distance matters. A person in a remote or regional town may travel hundreds of kilometres for specialist care or for further study, such as TAFE or university.",
+      "On average, people in remote areas live shorter lives than people in capital cities. Lower incomes and harder access to services help explain this gap, though it does not apply to every person."
+    ],
+    "remember": "On average, remote and some regional areas often have lower incomes, fewer services and shorter lives than capital cities.",
+    "a": {
+      "q": "Why is wellbeing often lower in some remote and regional areas than in capital cities?",
+      "opts": [
+        "Lower incomes and fewer services, often far away",
+        "Higher incomes, but fewer people to share them with",
+        "More services, but each one costs more to use",
+        "Shorter lives, which then cause lower incomes"
+      ],
+      "why": "Remote and some regional areas often have lower incomes, fewer jobs and fewer services, and long distances make services harder to reach. The option about shorter lives reverses cause and effect: lower incomes and poor access help explain shorter lives, not the other way round.",
+      "clue": "Check how the card compares incomes and services outside capital cities."
+    },
+    "b": {
+      "d": 2,
+      "q": "Tom lives on a cattle station in outback Western Australia. Compared with someone living in Melbourne, what is Tom more likely to experience?",
+      "opts": [
+        "A long trip to see a specialist doctor",
+        "A higher average income than in Melbourne",
+        "A wider choice of schools close to home",
+        "A longer expected life than in Melbourne"
+      ],
+      "why": "Remote areas often have fewer services spread over long distances, so seeing a specialist can mean a long trip. Remote areas tend to have lower incomes, fewer schools and shorter lives on average, so the other options describe the opposite of the usual pattern.",
+      "clue": "Recall how remote areas compare with capital cities on income, services and life span."
+    }
+  },
+  "geo-wellbeing-differs-between-places": {
+    "title": "Why wellbeing differs between places",
+    "card": [
+      "Wellbeing is how well people's lives are going, including health, income, education and safety. It differs from place to place because people do not all have the same access to the things that support it.",
+      [
+        "Access",
+        "Jobs give income. Services such as health care and schools support health and learning. Clean water protects people from disease. Education leads to more skills and more choices."
+      ],
+      [
+        "Causes behind access",
+        "History, such as colonisation or past trade, can shape who holds wealth and services. Environment, such as drought, floods or distance, can make it harder to grow food or build roads. Conflict can destroy homes, schools and hospitals."
+      ],
+      [
+        "Government",
+        "Government choices decide where money is spent, such as on schools, clinics, water supply and roads. Two places with similar environments can have different wellbeing if their governments make different choices."
+      ]
+    ],
+    "remember": "Wellbeing differs where access to jobs, services, water and education differs, and history, environment, conflict and government choices all help to explain why.",
+    "a": {
+      "q": "Which of these best explains why wellbeing is often lower in a region with no clean water supply?",
+      "opts": [
+        "People are more exposed to disease, which harms health",
+        "People earn lower incomes because they work fewer hours",
+        "People choose to spend less time in school",
+        "People live too far from the sea to travel"
+      ],
+      "why": "Clean water protects people from disease, so a place without it tends to have poorer health. The income option is tempting, but the card does not link water to hours worked, and a lack of access is not a personal choice.",
+      "clue": "Think about what clean water protects people from."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two districts sit on either side of a state border. They share the same rainfall, soils and colonial history, and neither has had a war. Since 2000, District A has gained many clinics and schools, while District B has gained few. Which factor most likely explains the gap in wellbeing?",
+      "opts": [
+        "Different government choices about where to spend money",
+        "Different environments making roads harder to build",
+        "Different histories of colonisation and past trade",
+        "Conflict destroying schools and hospitals in District B"
+      ],
+      "why": "The case rules out environment, history and conflict, since the districts share rainfall, soils and history and neither has had a war. Being in different states, they have different governments deciding where to spend on clinics and schools, which changes access. Environment is tempting because it often matters, but here both districts have the same conditions.",
+      "clue": "Which causes does the case rule out, and what is left?"
+    }
+  },
+  "geo-aboriginal-torres-strait-islander-2": {
+    "title": "Aboriginal and Torres Strait Islander wellbeing",
+    "card": [
+      "On average, Aboriginal and Torres Strait Islander Peoples have a shorter life expectancy than other Australians. There are also gaps in health and in education.",
+      "These gaps are linked to dispossession, which is the removal of people from their land, and to past and present discrimination. They are not caused by who the people are.",
+      "Remoteness is also linked to the gaps. Many remote communities are far from hospitals, schools and jobs, so access to services can be harder.",
+      "The gaps are averages and they vary from place to place. Some communities and regions have smaller gaps than others, and many Aboriginal and Torres Strait Islander people have high wellbeing."
+    ],
+    "remember": "The gaps are averages linked to dispossession, discrimination and remoteness, and they differ between places.",
+    "a": {
+      "q": "Which statement about the wellbeing gaps for Aboriginal and Torres Strait Islander Peoples is correct?",
+      "opts": [
+        "They are averages and vary from place to place",
+        "They are the same in every community in Australia",
+        "They are caused only by living in remote areas",
+        "They show that wellbeing cannot be improved"
+      ],
+      "why": "The gaps are averages, and the size of the gap differs between places. Remoteness is one linked factor, but the card also names dispossession and discrimination, so remoteness is not the only link.",
+      "clue": "Can one national figure describe every single community?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A student says, \"Aboriginal and Torres Strait Islander Peoples have lower average life expectancy because of who they are.\" Which reply is best supported?",
+      "opts": [
+        "The gaps are linked to dispossession and discrimination",
+        "The gaps are linked only to the distance from cities",
+        "The gaps are linked to how many people live in each area",
+        "The gaps are linked only to choices each person makes"
+      ],
+      "why": "The gaps are linked to dispossession and discrimination, not to the identity of the people. Remoteness is also linked, but saying distance is the only link is wrong, because the card names other causes too.",
+      "clue": "Look for a cause that is about what happened to people, not who they are."
+    }
+  },
+  "geo-international-organisations": {
+    "title": "International organisations",
+    "card": [
+      "International organisations are groups set up by many countries working together. They fund and run programs to improve human wellbeing around the world.",
+      [
+        "United Nations",
+        "a global body of member countries. Its agencies run programs on food, education and children's needs, such as the World Food Programme and UNICEF."
+      ],
+      [
+        "World Health Organization",
+        "a United Nations agency that works on health. It helps countries fight disease, for example through vaccination programs."
+      ],
+      [
+        "World Bank",
+        "a body that lends money and gives grants to countries for development, such as building roads, schools and clean water systems."
+      ]
+    ],
+    "remember": "International organisations pool the efforts of many countries to fund and run wellbeing programs.",
+    "a": {
+      "q": "Which describes an international organisation?",
+      "opts": [
+        "A group of many countries that funds and runs programs",
+        "A charity that is run by one government alone",
+        "A local club that raises money for its own town",
+        "A company that sells health products for profit"
+      ],
+      "why": "International organisations are set up by many countries working together to fund and run programs. A body run by one government alone is not international, and a local club or a profit-making company does not match the card.",
+      "clue": "Think about who sets the organisation up."
+    },
+    "b": {
+      "d": 2,
+      "q": "A country has no safe water supply and wants to build pipes and water treatment plants. Which organisation could lend it money for this?",
+      "opts": ["The World Bank", "The World Health Organization", "UNICEF", "The World Food Programme"],
+      "why": "The World Bank lends money and gives grants for development projects such as clean water systems. The World Health Organization is the most tempting wrong choice, because water affects health, but its work is helping countries fight disease, for example through vaccination.",
+      "clue": "Which body lends money for development?"
+    }
+  },
+  "geo-non-government-organisations-vic": {
+    "title": "Non-government organisations",
+    "card": [
+      "A non-government organisation (NGO) is a group that is not part of any government. It works to improve people's lives rather than to make a profit.",
+      "NGOs raise money from donations, such as gifts from the public, and from sponsors, such as businesses. Some also receive grants from governments.",
+      "NGOs use this money to run aid and community projects that improve wellbeing. They often work at a local scale, directly with communities. Examples are clean water projects, schools and health clinics.",
+      "Oxfam and the Red Cross are NGOs. They are independent of governments and work with local communities in many countries, including in Asia and the Pacific."
+    ],
+    "remember": "NGOs are non-profit groups outside government that raise money and run programs to improve wellbeing.",
+    "a": {
+      "q": "Which description best fits an NGO such as Oxfam or the Red Cross?",
+      "opts": [
+        "A group outside government that runs programs for wellbeing",
+        "A government agency that collects taxes to fund programs",
+        "A business that sells goods to earn profit for its owners",
+        "A government department that sets laws for other countries"
+      ],
+      "why": "An NGO is not part of a government and works to improve lives, not to make a profit. A government agency is the tempting wrong answer, because it also funds programs, but it is part of a government.",
+      "clue": "Think about who runs the group and why it exists."
+    },
+    "b": {
+      "d": 2,
+      "q": "A group in regional Victoria collects donations from the public. It uses the money to build wells and a school in a village in Timor-Leste. Why is it an NGO?",
+      "opts": [
+        "It is outside government and works to improve wellbeing",
+        "It receives all of its money directly from taxes",
+        "It aims to make a profit from the village it helps",
+        "It was set up and run by the Timor-Leste government"
+      ],
+      "why": "The group is separate from any government and uses donations to run projects that improve wellbeing. The taxes option is wrong because this group is funded by public donations, so its money does not all come from taxes. Some NGOs do get government grants, but that is not what makes a group an NGO.",
+      "clue": "Look at who runs the group, where its money comes from and what it does."
+    }
+  },
+  "geo-australia-s-aid-program": {
+    "title": "Australia's aid program",
+    "card": [
+      "Australia's aid program is the help the Australian Government gives other countries to improve wellbeing. It can be money, goods, skills or services, paid for from the federal budget, which comes mostly from taxes.",
+      "Most of Australia's aid goes to countries in the Indo-Pacific region, which includes Southeast Asia and the Pacific islands. These are close neighbours, and many have lower incomes.",
+      "The aid is spent on health, education, disaster relief and economic growth. Examples are vaccination programs, teacher training, rebuilding after a cyclone, and roads and ports that help trade and jobs.",
+      "Government aid is one way to lift wellbeing in other countries. It is different from money that charities raise from the public."
+    ],
+    "remember": "Australia's aid program is government support, mostly to the Indo-Pacific, for health, education, disaster relief and economic growth.",
+    "a": {
+      "q": "Which situation is part of Australia's aid program?",
+      "opts": [
+        "The federal budget pays for a clinic in Vanuatu",
+        "A charity raises money for a clinic in Vanuatu",
+        "A Victorian council builds a local swimming pool",
+        "An Australian company opens a factory in Indonesia"
+      ],
+      "why": "Australia's aid program is paid for by the Australian Government from the federal budget, and a clinic in Vanuatu helps wellbeing in another country. The charity option is tempting, but money a charity raises from the public is not government aid.",
+      "clue": "Whose money pays for it, and where does it go?"
+    },
+    "b": {
+      "d": 3,
+      "q": "The federal budget pays for a new port in Tonga to help trade and jobs. Which area of aid is this, and who gives it?",
+      "opts": [
+        "Economic growth, given by the Australian Government",
+        "Economic growth, given by Australian charities",
+        "Disaster relief, given by the Australian Government",
+        "Education, given by Australian charities"
+      ],
+      "why": "A port that helps trade and jobs supports economic growth, and money from the federal budget means the Australian Government gives it. Disaster relief is tempting, but no disaster is described. Charities raise money from the public rather than spending the federal budget.",
+      "clue": "What does the port help, and whose money pays for it?"
+    }
+  },
+  "geo-reliable-sources-geographical-data": {
+    "title": "Reliable sources of geographical data",
+    "card": [
+      ["Recent", "the data is up to date. Old data may no longer describe a place that has changed."],
+      [
+        "Expert or official",
+        "it comes from a body that collects data as its job, such as a government agency, a university or a scientific organisation."
+      ],
+      [
+        "Evidence and no bias",
+        "it shows how the data was gathered and uses facts, not opinion. It does not leave out or twist facts to push one side."
+      ],
+      [
+        "Comparing sources",
+        "checking data against other sources. If several reliable sources agree, the data is more likely to be trusted. If they disagree, check the author, date and method of each to see which meets the tests above."
+      ]
+    ],
+    "remember": "A reliable source is recent, expert, backed by evidence and free of bias. Checking it against other sources adds confidence.",
+    "a": {
+      "q": "Which source of data on river water quality is most reliable?",
+      "opts": [
+        "A recent report by a state water authority, with its methods",
+        "A blog post by a local fan of the river, with no sources",
+        "An old pamphlet from a company that uses the river",
+        "A social media post by a person who visited once"
+      ],
+      "why": "The water authority is an official body, the report is recent, and it shows how the data was collected. The company pamphlet is tempting because it has data, but it is old and may be biased towards the company's interests.",
+      "clue": "Look for the source that is recent, official and shows its evidence."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya is researching rainfall in a town in north-west Victoria. Two sources disagree. Which step best helps her decide which one to trust?",
+      "opts": [
+        "Check each source's author, date and method of collection",
+        "Pick the source with the longest and most detailed text",
+        "Trust the source that most people have shared online",
+        "Go with the source that matches what she already thinks"
+      ],
+      "why": "Checking the author, date and method shows which source is expert, recent and backed by evidence. Length and popularity can be tempting, but a long or widely shared source can still be old or biased.",
+      "clue": "Think about the features of a reliable source, not how a source looks."
+    }
+  },
+  "geo-scatter-graphs-relationships": {
+    "title": "Scatter graphs and relationships",
+    "card": [
+      "A scatter graph plots two measures for many places. Each place is one dot, placed by its value on each measure.",
+      ["Positive relationship", "the dots slope upward. As one measure rises, the other tends to rise too."],
+      [
+        "Negative relationship",
+        "the dots slope downward. The two measures move in opposite directions: as one rises, the other tends to fall."
+      ],
+      "If the dots are scattered with no pattern, there is no relationship. A relationship shows a link, not a cause, because a third factor may affect both measures or the link may be chance."
+    ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "A scatter graph of two measures for 13 places, one dot each. The dots slope upward from left to right: as the first measure rises, the second tends to rise too. This is a positive relationship.",
+        "x": {"min": 0, "max": 10, "label": "First measure"},
+        "y": {"min": 0, "max": 9, "label": "Second measure"},
+        "items": [
+          {"type": "point", "at": [1, 1.8]},
+          {"type": "point", "at": [1.6, 1.2]},
+          {"type": "point", "at": [2.2, 2.9]},
+          {"type": "point", "at": [2.9, 2.2]},
+          {"type": "point", "at": [3.5, 3.6]},
+          {"type": "point", "at": [4.1, 3]},
+          {"type": "point", "at": [4.8, 4.6]},
+          {"type": "point", "at": [5.4, 3.9]},
+          {"type": "point", "at": [6.1, 5.4]},
+          {"type": "point", "at": [6.7, 4.9]},
+          {"type": "point", "at": [7.4, 6.3]},
+          {"type": "point", "at": [8.2, 6]},
+          {"type": "point", "at": [8.8, 7.4]}
+        ]
+      },
+      "3": {
+        "kind": "graph",
+        "alt": "A scatter graph of two measures for 13 places, one dot each. The dots slope downward from left to right: as the first measure rises, the second tends to fall. This is a negative relationship.",
+        "x": {"min": 0, "max": 10, "label": "First measure"},
+        "y": {"min": 0, "max": 9, "label": "Second measure"},
+        "items": [
+          {"type": "point", "at": [1, 7.2]},
+          {"type": "point", "at": [1.6, 7.8]},
+          {"type": "point", "at": [2.2, 6.1]},
+          {"type": "point", "at": [2.9, 6.8]},
+          {"type": "point", "at": [3.5, 5.4]},
+          {"type": "point", "at": [4.1, 6]},
+          {"type": "point", "at": [4.8, 4.4]},
+          {"type": "point", "at": [5.4, 5.1]},
+          {"type": "point", "at": [6.1, 3.6]},
+          {"type": "point", "at": [6.7, 4.1]},
+          {"type": "point", "at": [7.4, 2.7]},
+          {"type": "point", "at": [8.2, 3]},
+          {"type": "point", "at": [8.8, 1.6]}
+        ]
+      }
+    },
+    "remember": "A scatter graph shows whether two measures have a relationship. It does not show that one causes the other.",
+    "a": {
+      "q": "A scatter graph plots data for 30 countries. The dots run downward from left to right. What does this show about the two measures?",
+      "opts": [
+        "They have a negative relationship",
+        "They have a positive relationship",
+        "They have no relationship",
+        "One measure causes the other to fall"
+      ],
+      "why": "Dots that slope downward mean the measures move in opposite directions, which is a negative relationship. A downward slope shows a link only, so saying one measure causes the other goes beyond what the graph shows.",
+      "clue": "Look at the direction the dots slope."
+    },
+    "b": {
+      "d": 3,
+      "q": "A scatter graph of 40 Australian towns shows that towns with higher ice cream sales also have more sunburn cases. What can be concluded?",
+      "opts": [
+        "The measures rise together, but this does not prove a cause",
+        "Eating more ice cream causes people to get sunburnt",
+        "Sunburn cases cause ice cream sales to rise",
+        "The graph shows there is no link between the measures"
+      ],
+      "why": "The dots show a positive relationship, so the measures rise together. A relationship does not prove cause, and a third factor such as hot weather may affect both. Claiming ice cream causes sunburn treats a link as a cause.",
+      "clue": "Could something else, such as the weather, affect both measures?"
+    }
+  },
+  "geo-making-forecasts-from-trends": {
+    "title": "Making forecasts from trends",
+    "card": [
+      "A trend is the general direction data moves over time, such as rising, falling or staying steady. On a line graph, it shows as the overall slope of the line.",
+      "To make a forecast, extend the trend past the last data point and read off the likely value. This is a prediction of what may happen next, not a certain fact.",
+      "A forecast assumes that the pattern continues. If conditions change, such as new laws, a disaster or a shift in people's choices, the trend can change too.",
+      "The more data points a trend is based on, and the shorter the distance it is extended, the more confidence a geographer can place in the forecast."
+    ],
+    "remember": "A forecast extends a trend to say what may happen next, but changed conditions can change the result.",
+    "a": {
+      "q": "A geographer extends a line graph of a town's population from 2024 to 2030. What does this forecast assume?",
+      "opts": [
+        "That the pattern so far will continue",
+        "That conditions will change after 2024",
+        "That the trend will reverse after 2024",
+        "That the data before 2024 was wrong"
+      ],
+      "why": "Extending a trend only works if the pattern so far carries on, so a forecast assumes it continues. Changed conditions are the risk to a forecast, not what it assumes, because a change can break the trend.",
+      "clue": "What must stay the same for the extended line to be right?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A council forecasts that its coastal suburb will keep growing at the same rate for 20 years. Then a new law stops any more housing being built there. What should the council do with the forecast?",
+      "opts": [
+        "Review it, because conditions have changed",
+        "Keep it as it is, because the past trend was steady",
+        "Extend it to 40 years, because the trend is so steady",
+        "Throw it out, because forecasts are never useful"
+      ],
+      "why": "A forecast assumes the pattern continues. The new law changes the conditions, so the growth trend may not hold and the forecast should be reviewed. Keeping it because the past was steady ignores that changed conditions can change a trend.",
+      "clue": "Can the old pattern still carry on after the law?"
+    }
+  },
+  "geo-perspectives-ethical-values": {
+    "title": "Perspectives and ethical values",
+    "card": [
+      "A perspective is the way a person or group sees an issue. It is shaped by their interests, such as jobs or profit, and by their values, such as caring for nature.",
+      "Different groups can look at the same place or plan and reach different views. A farmer, a tourism operator and a local community group may each want something different from the same river.",
+      "An ethical value is a belief about what is right or fair, such as fairness to all groups or care for future generations. Geographers can use these values to judge who gains and who loses from a decision.",
+      "To justify a conclusion, geographers weigh the perspectives and values involved. They then explain why they favour one outcome, using evidence and naming the values behind their choice."
+    ],
+    "remember": "People see the same issue differently. A sound conclusion weighs those views and the values behind them.",
+    "a": {
+      "q": "Why might a fishing business and a conservation group disagree about a new marine park?",
+      "opts": [
+        "They have different interests and values",
+        "They are looking at different oceans",
+        "One group has no perspective on the issue",
+        "Only one group has real evidence available"
+      ],
+      "why": "A perspective comes from a group's interests and values. The fishing business may care about catch and income, and the conservation group about protecting nature. They can view the same park and still disagree.",
+      "clue": "Think about what each group cares about most."
+    },
+    "b": {
+      "d": 3,
+      "q": "A council plans a dam on a river in regional Victoria. Farmers downstream say it would cut their water, while the town upstream wants a secure supply. A geographer recommends sharing the water by need. Which ethical value is the geographer mainly using?",
+      "opts": [
+        "Fairness to all affected groups",
+        "Lowest cost to the council",
+        "Greatest profit for the farmers",
+        "Quickest time to build the dam"
+      ],
+      "why": "Sharing water by need weighs the claims of both groups, so it is based on fairness. Cost, profit and speed are interests or practical matters, not ethical values about what is right. They do not explain why the water is shared.",
+      "clue": "Which option is a belief about what is right, not a practical matter?"
+    }
   }
 };

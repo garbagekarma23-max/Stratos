@@ -1,0 +1,233 @@
+{
+ "id": "sci-carbon-cycle",
+ "title": "The carbon cycle",
+ "brief": "dd49dc182df2",
+ "shortlist": [
+  [
+   "sci-photosynthesis-respiration-carbon-cycle",
+   0.701
+  ],
+  [
+   "sci-capturing-carbon",
+   0.577
+  ],
+  [
+   "sci-combustion-carbon-stores",
+   0.561
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:56Z new, match",
+  "2026-11-12T12:44:23Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:54Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:08Z write: done",
+  "2026-11-12T15:35:12Z check: flagged",
+  "2026-11-12T15:42:26Z fix: suggested",
+  "2026-11-12T16:19:55Z autoreview: cleared with the fix (b wording, b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.00638,
+  "check": 0.0122,
+  "fix": 0.01726
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The best bank point covers only photosynthesis and respiration, while the new point also needs fire, volcanoes, weathering and burning fossil fuels moving carbon between the spheres, so it is a broader idea and no bank point fits.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The carbon cycle",
+  "card": [
+   "Carbon moves between the air, living things, water and rock. This movement is called the carbon cycle.",
+   [
+    "Photosynthesis",
+    "Plants and algae take carbon dioxide from the air and use it to make food. This moves carbon from the air into living things."
+   ],
+   [
+    "Respiration",
+    "Living things break down food for energy and release carbon dioxide. This returns carbon to the air. Fire and volcanoes also release carbon dioxide into the air."
+   ],
+   [
+    "Fossil fuels",
+    "Coal, oil and gas store carbon from long-dead organisms, underground. Burning them releases carbon dioxide into the air quickly. Weathering of rock also moves carbon, slowly."
+   ]
+  ],
+  "remember": "Photosynthesis removes carbon dioxide from the air. Respiration, fire, volcanoes and burning fuels put it back.",
+  "a": {
+   "q": "Which process takes carbon dioxide out of the air and puts the carbon into living things?",
+   "opts": [
+    "Photosynthesis",
+    "Respiration",
+    "Burning fossil fuels",
+    "Volcanic eruption"
+   ],
+   "why": "Photosynthesis uses carbon dioxide from the air to make food, so the carbon becomes part of the plant. Respiration is the tempting wrong answer, because it works the other way and releases carbon dioxide.",
+   "clue": "Which process do plants use to make food?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia's family burns coal in a power station near Morwell. What happens to the carbon stored in the coal?",
+   "opts": [
+    "It is released into the air as carbon dioxide",
+    "It is taken out of the air by the burning",
+    "It stays locked in the coal as it burns",
+    "It is absorbed straight into the rocks"
+   ],
+   "why": "Coal stores carbon from long-dead organisms. Burning it releases that carbon into the air as carbon dioxide. It does not stay in the coal, because burning breaks the coal down.",
+   "clue": "Burning is a way carbon moves into the air."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Photosynthesis",
+   "also_right": []
+  },
+  "b": {
+   "best": "It is released into the air as carbon dioxide",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "\"Mia's family burns coal in a power station near Morwell\" is confusing, since a family does not burn coal in a power station. Something like \"A power station near Morwell burns brown coal\" would be clearer."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue \"Burning is a way carbon moves into the air\" all but states the right option, so a student can answer without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct. Question b's scenario is oddly worded (a family burning coal in a power station), and its clue gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: \"Mia's family burns coal in a power station near Morwell\" is confusing, since a family does not burn coal in a power station. Something like \"A power station near Morwell burns brown coal\" would be clearer.",
+  "Question b, other: The clue \"Burning is a way carbon moves into the air\" all but states the right option, so a student can answer without knowing the idea."
+ ],
+ "proposal": {
+  "title": "The carbon cycle",
+  "card": [
+   "Carbon moves between the air, living things, water and rock. This movement is called the carbon cycle.",
+   [
+    "Photosynthesis",
+    "Plants and algae take carbon dioxide from the air and use it to make food. This moves carbon from the air into living things."
+   ],
+   [
+    "Respiration",
+    "Living things break down food for energy and release carbon dioxide. This returns carbon to the air. Fire and volcanoes also release carbon dioxide into the air."
+   ],
+   [
+    "Fossil fuels",
+    "Coal, oil and gas store carbon from long-dead organisms, underground. Burning them releases carbon dioxide into the air quickly. Weathering of rock also moves carbon, slowly."
+   ]
+  ],
+  "remember": "Photosynthesis removes carbon dioxide from the air. Respiration, fire, volcanoes and burning fuels put it back.",
+  "a": {
+   "q": "Which process takes carbon dioxide out of the air and puts the carbon into living things?",
+   "opts": [
+    "Photosynthesis",
+    "Respiration",
+    "Burning fossil fuels",
+    "Volcanic eruption"
+   ],
+   "why": "Photosynthesis uses carbon dioxide from the air to make food, so the carbon becomes part of the plant. Respiration is the tempting wrong answer, because it works the other way and releases carbon dioxide.",
+   "clue": "Which process do plants use to make food?"
+  },
+  "b": {
+   "d": 2,
+   "q": "A power station near Morwell burns brown coal. What happens to the carbon stored in the coal?",
+   "opts": [
+    "It is released into the air as carbon dioxide",
+    "It is taken out of the air by the burning",
+    "It stays locked in the coal as it burns",
+    "It is absorbed straight into the rocks"
+   ],
+   "why": "Coal stores carbon from long-dead organisms. Burning it releases that carbon into the air as carbon dioxide. It does not stay locked in the coal, because burning breaks the coal down.",
+   "clue": "Compare burning coal with what respiration does to food."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:55Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "\"Mia's family burns coal in a power station near Morwell\" is confusing, since a family does not burn coal in a power station. Something like \"A power station near Morwell burns brown coal\" would be clearer."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue \"Burning is a way carbon moves into the air\" all but states the right option, so a student can answer without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question b, wording: \"Mia's family burns coal in a power station near Morwell\" is confusing, since a family does not burn coal in a power station. Something like \"A power station near Morwell burns brown coal\" would be clearer.",
+   "Question b, other: The clue \"Burning is a way carbon moves into the air\" all but states the right option, so a student can answer without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "The carbon cycle",
+  "card": [
+   "Carbon moves between the air, living things, water and rock. This movement is called the carbon cycle.",
+   [
+    "Photosynthesis",
+    "Plants and algae take carbon dioxide from the air and use it to make food. This moves carbon from the air into living things."
+   ],
+   [
+    "Respiration",
+    "Living things break down food for energy and release carbon dioxide. This returns carbon to the air. Fire and volcanoes also release carbon dioxide into the air."
+   ],
+   [
+    "Fossil fuels",
+    "Coal, oil and gas store carbon from long-dead organisms, underground. Burning them releases carbon dioxide into the air quickly. Weathering of rock also moves carbon, slowly."
+   ]
+  ],
+  "remember": "Photosynthesis removes carbon dioxide from the air. Respiration, fire, volcanoes and burning fuels put it back.",
+  "a": {
+   "q": "Which process takes carbon dioxide out of the air and puts the carbon into living things?",
+   "opts": [
+    "Photosynthesis",
+    "Respiration",
+    "Burning fossil fuels",
+    "Volcanic eruption"
+   ],
+   "why": "Photosynthesis uses carbon dioxide from the air to make food, so the carbon becomes part of the plant. Respiration is the tempting wrong answer, because it works the other way and releases carbon dioxide.",
+   "clue": "Which process do plants use to make food?"
+  },
+  "b": {
+   "d": 2,
+   "q": "A power station near Morwell burns brown coal. What happens to the carbon stored in the coal?",
+   "opts": [
+    "It is released into the air as carbon dioxide",
+    "It is taken out of the air by the burning",
+    "It stays locked in the coal as it burns",
+    "It is absorbed straight into the rocks"
+   ],
+   "why": "Coal stores carbon from long-dead organisms. Burning it releases that carbon into the air as carbon dioxide. It does not stay locked in the coal, because burning breaks the coal down.",
+   "clue": "Compare burning coal with what respiration does to food."
+  }
+ },
+ "cleared_by": "auto"
+}

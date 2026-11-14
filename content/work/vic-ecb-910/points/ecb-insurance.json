@@ -1,0 +1,212 @@
+{
+ "id": "ecb-insurance",
+ "title": "Insurance",
+ "brief": "3584bc688d15",
+ "shortlist": [
+  [
+   "ecb-managing-financial-risk",
+   0.316
+  ],
+  [
+   "ecb-full-cost-car",
+   0.257
+  ],
+  [
+   "bus-worksafe-insurance",
+   0.237
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:45Z new, match",
+  "2026-11-12T12:44:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:33Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:25:56Z write: done",
+  "2026-11-12T15:35:03Z check: flagged",
+  "2026-11-12T15:42:21Z fix: suggested",
+  "2026-11-12T16:19:51Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.00612,
+  "check": 0.00912,
+  "fix": 0.01383
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, Managing financial risk, mentions insurance only briefly as one of four risk tools and never explains the premium or the excess, which the new Insurance point requires, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Insurance",
+  "card": [
+   "Insurance protects a person from a large loss they could not easily pay for alone. Common cases are a car crash, a house fire or illness.",
+   [
+    "Premium",
+    "the regular payment made to the insurer to keep the cover. It might be paid monthly or yearly."
+   ],
+   [
+    "Excess",
+    "the part of a claim the insured person pays first. The insurer pays the rest, up to the limits of the policy."
+   ],
+   "The premium is a small, certain cost. In return, the insured person avoids the risk of a large cost they cannot predict."
+  ],
+  "remember": "Pay a small premium now to protect against a large loss later. The excess is paid first by you.",
+  "a": {
+   "q": "Which of these is an insurance premium?",
+   "opts": [
+    "The regular payment made to keep the cover",
+    "The amount the insurer pays after a claim",
+    "The part of a claim the insured pays first",
+    "The loss caused by a car crash or fire"
+   ],
+   "why": "A premium is the regular payment to the insurer for cover. The part of a claim paid first by the insured is the excess, which is the most tempting mix-up.",
+   "clue": "Think of what you pay every month or year, before anything goes wrong."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's car is damaged in a crash in Geelong. The repair bill is $3000 and her policy has a $800 excess. How much does her insurer pay, and why?",
+   "opts": [
+    "$2200, because Priya pays the excess first",
+    "$800, because the insurer pays the excess first",
+    "$3000, because the premium covers the whole bill",
+    "$2200, because the premium is taken off the bill"
+   ],
+   "why": "Priya pays the excess of $800 first, so the insurer pays the rest: $3000 - $800 = $2200. The premium is the regular payment for cover, not an amount taken off a claim.",
+   "clue": "Who pays the excess first, the insured or the insurer?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The regular payment made to keep the cover",
+   "also_right": []
+  },
+  "b": {
+   "best": "$2200, because Priya pays the excess first",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "\"a $800 excess\" should read \"an $800 excess\" (said \"an eight hundred\")."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The content is accurate and both questions have one clear right answer. The only issue is a small grammar slip in question b: \"a $800 excess\" should be \"an $800 excess\"."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: \"a $800 excess\" should read \"an $800 excess\" (said \"an eight hundred\")."
+ ],
+ "proposal": {
+  "title": "Insurance",
+  "card": [
+   "Insurance protects a person from a large loss they could not easily pay for alone. Common cases are a car crash, a house fire or illness.",
+   [
+    "Premium",
+    "the regular payment made to the insurer to keep the cover. It might be paid monthly or yearly."
+   ],
+   [
+    "Excess",
+    "the part of a claim the insured person pays first. The insurer pays the rest, up to the limits of the policy."
+   ],
+   "The premium is a small, certain cost. In return, the insured person avoids the risk of a large cost they cannot predict."
+  ],
+  "remember": "Pay a small premium now to protect against a large loss later. The excess is paid first by you.",
+  "a": {
+   "q": "Which of these is an insurance premium?",
+   "opts": [
+    "The regular payment made to keep the cover",
+    "The amount the insurer pays after a claim",
+    "The part of a claim the insured pays first",
+    "The loss caused by a car crash or fire"
+   ],
+   "why": "A premium is the regular payment to the insurer for cover. The part of a claim paid first by the insured is the excess, which is the most tempting mix-up.",
+   "clue": "Think of what you pay every month or year, before anything goes wrong."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's car is damaged in a crash in Geelong. The repair bill is $3000 and her policy has an $800 excess. How much does her insurer pay, and why?",
+   "opts": [
+    "$2200, because Priya pays the excess first",
+    "$800, because the insurer pays the excess first",
+    "$3000, because the premium covers the whole bill",
+    "$2200, because the premium is taken off the bill"
+   ],
+   "why": "Priya pays the excess of $800 first, so the insurer pays the rest: $3000 - $800 = $2200. The premium is the regular payment for cover, not an amount taken off a claim.",
+   "clue": "Who pays the excess first, the insured or the insurer?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:51Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "\"a $800 excess\" should read \"an $800 excess\" (said \"an eight hundred\")."
+   }
+  ],
+  "flags": [
+   "Question b, wording: \"a $800 excess\" should read \"an $800 excess\" (said \"an eight hundred\")."
+  ]
+ },
+ "final": {
+  "title": "Insurance",
+  "card": [
+   "Insurance protects a person from a large loss they could not easily pay for alone. Common cases are a car crash, a house fire or illness.",
+   [
+    "Premium",
+    "the regular payment made to the insurer to keep the cover. It might be paid monthly or yearly."
+   ],
+   [
+    "Excess",
+    "the part of a claim the insured person pays first. The insurer pays the rest, up to the limits of the policy."
+   ],
+   "The premium is a small, certain cost. In return, the insured person avoids the risk of a large cost they cannot predict."
+  ],
+  "remember": "Pay a small premium now to protect against a large loss later. The excess is paid first by you.",
+  "a": {
+   "q": "Which of these is an insurance premium?",
+   "opts": [
+    "The regular payment made to keep the cover",
+    "The amount the insurer pays after a claim",
+    "The part of a claim the insured pays first",
+    "The loss caused by a car crash or fire"
+   ],
+   "why": "A premium is the regular payment to the insurer for cover. The part of a claim paid first by the insured is the excess, which is the most tempting mix-up.",
+   "clue": "Think of what you pay every month or year, before anything goes wrong."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's car is damaged in a crash in Geelong. The repair bill is $3000 and her policy has an $800 excess. How much does her insurer pay, and why?",
+   "opts": [
+    "$2200, because Priya pays the excess first",
+    "$800, because the insurer pays the excess first",
+    "$3000, because the premium covers the whole bill",
+    "$2200, because the premium is taken off the bill"
+   ],
+   "why": "Priya pays the excess of $800 first, so the insurer pays the rest: $3000 - $800 = $2200. The premium is the regular payment for cover, not an amount taken off a claim.",
+   "clue": "Who pays the excess first, the insured or the insurer?"
+  }
+ },
+ "cleared_by": "auto"
+}

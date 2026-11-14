@@ -1,0 +1,134 @@
+{
+ "id": "ecb-repair-replace-or-refund",
+ "title": "Repair, replace or refund",
+ "brief": "e668e56380d1",
+ "shortlist": [
+  [
+   "ecb-consumer-guarantees",
+   0.424
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:44Z new, match",
+  "2026-11-12T12:44:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:32Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:25:55Z write: done",
+  "2026-11-12T15:35:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00632,
+  "check": 0.00874
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card covers consumer guarantees in general but does not teach the major-versus-minor fault rule, the split of who chooses the remedy (buyer for major, seller for minor), or the point that a no-refunds sign cannot remove these rights, so it is related but not the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Repair, replace or refund",
+  "card": [
+   [
+    "Major fault",
+    "a serious problem. The product is unsafe, or it would not have been bought if the buyer had known. The buyer can choose a refund or a replacement."
+   ],
+   [
+    "Minor fault",
+    "a smaller problem that can be fixed in a reasonable time. The seller can choose to repair it, replace it or refund the buyer."
+   ],
+   "A seller cannot take these rights away with a sign such as \"no refunds\". The rights apply to a faulty product, even if the sign says otherwise.",
+   "These rights are for faults. They do not cover a buyer who simply changes their mind. A seller may choose to offer that, but the law does not make them."
+  ],
+  "remember": "Major fault: the buyer chooses. Minor fault: the seller chooses. A sign cannot remove these rights.",
+  "a": {
+   "q": "Who gets to choose between a refund and a replacement when a product has a major fault?",
+   "opts": [
+    "The buyer",
+    "The seller",
+    "The shop's manager",
+    "The product's maker"
+   ],
+   "why": "For a major fault the buyer chooses between a refund and a replacement. The seller chooses only for a minor fault, which is the most tempting wrong answer.",
+   "clue": "Think about how serious the fault is."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jaya buys a hairdryer in Geelong. A sign at the till says \"no refunds\". The hairdryer is unsafe and overheats on day one. What is Jaya's position?",
+   "opts": [
+    "She can choose a refund or a replacement",
+    "She must accept a repair, as the sign says",
+    "She has no rights, because she saw the sign",
+    "She can only get a refund if the seller agrees"
+   ],
+   "why": "An unsafe hairdryer has a major fault, so the buyer can choose a refund or replacement. A \"no refunds\" sign cannot remove this right, so seeing the sign does not change it.",
+   "clue": "Can a sign take away rights for a faulty product?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The buyer",
+   "also_right": []
+  },
+  "b": {
+   "best": "She can choose a refund or a replacement",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Repair, replace or refund",
+  "card": [
+   [
+    "Major fault",
+    "a serious problem. The product is unsafe, or it would not have been bought if the buyer had known. The buyer can choose a refund or a replacement."
+   ],
+   [
+    "Minor fault",
+    "a smaller problem that can be fixed in a reasonable time. The seller can choose to repair it, replace it or refund the buyer."
+   ],
+   "A seller cannot take these rights away with a sign such as \"no refunds\". The rights apply to a faulty product, even if the sign says otherwise.",
+   "These rights are for faults. They do not cover a buyer who simply changes their mind. A seller may choose to offer that, but the law does not make them."
+  ],
+  "remember": "Major fault: the buyer chooses. Minor fault: the seller chooses. A sign cannot remove these rights.",
+  "a": {
+   "q": "Who gets to choose between a refund and a replacement when a product has a major fault?",
+   "opts": [
+    "The buyer",
+    "The seller",
+    "The shop's manager",
+    "The product's maker"
+   ],
+   "why": "For a major fault the buyer chooses between a refund and a replacement. The seller chooses only for a minor fault, which is the most tempting wrong answer.",
+   "clue": "Think about how serious the fault is."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jaya buys a hairdryer in Geelong. A sign at the till says \"no refunds\". The hairdryer is unsafe and overheats on day one. What is Jaya's position?",
+   "opts": [
+    "She can choose a refund or a replacement",
+    "She must accept a repair, as the sign says",
+    "She has no rights, because she saw the sign",
+    "She can only get a refund if the seller agrees"
+   ],
+   "why": "An unsafe hairdryer has a major fault, so the buyer can choose a refund or replacement. A \"no refunds\" sign cannot remove this right, so seeing the sign does not change it.",
+   "clue": "Can a sign take away rights for a faulty product?"
+  }
+ },
+ "cleared_by": "checker"
+}

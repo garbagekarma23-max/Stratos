@@ -1,0 +1,221 @@
+{
+ "id": "sci-density-vic",
+ "title": "Density",
+ "brief": "871c4476bca3",
+ "shortlist": [
+  [
+   "geo-population-density",
+   0.279
+  ],
+  [
+   "sci-solids-liquids-gases",
+   0.253
+  ],
+  [
+   "geo-density-distance-from-city",
+   0.22
+  ],
+  [
+   "sci-changes-state",
+   0.207
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:55Z new, match",
+  "2026-11-12T12:44:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:52Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:07Z write: done",
+  "2026-11-12T15:35:11Z check: flagged",
+  "2026-11-12T15:42:25Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.006,
+  "check": 0.00825,
+  "fix": 0.01472,
+  "recheck": 0.00633
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches density as mass divided by volume: the population density point is about people per area, and the states-of-matter and changes-of-state points only touch on particle spacing and ice floating, not the density idea itself.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Density",
+  "card": [
+   "Density is how much mass is packed into a given volume. Density = mass ÷ volume, so it is often measured in g/cm³.",
+   "The more closely particles are packed, the more particles fit in the same volume, so the more mass there is. Solids are usually denser than liquids, and liquids are usually denser than gases.",
+   "Water has a density of about 1 g/cm³. An object with a density lower than the liquid it is in floats. An object with a higher density sinks.",
+   "Example: a block with a mass of 200 g and a volume of 50 cm³ has a density of 200 ÷ 50 = 4 g/cm³."
+  ],
+  "remember": "Density = mass ÷ volume. Less dense than the liquid means it floats.",
+  "a": {
+   "q": "A metal block has a mass of 300 g and a volume of 100 cm³. What is its density?",
+   "opts": [
+    "3 g/cm³",
+    "0.33 g/cm³",
+    "30 g/cm³",
+    "400 g/cm³"
+   ],
+   "why": "Density = mass ÷ volume = 300 ÷ 100 = 3 g/cm³. Dividing volume by mass gives 0.33, which is the wrong way round.",
+   "clue": "Mass goes on the top of the division."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia drops a wax ball with a density of 0.9 g/cm³ into a tank of water. What happens, and why?",
+   "opts": [
+    "It floats, because it is less dense than water",
+    "It sinks, because it is less dense than water",
+    "It floats, because it is more dense than water",
+    "It sinks, because it is more dense than water"
+   ],
+   "why": "Water has a density of about 1 g/cm³. The wax is less dense than the water, so it floats. The option that says it sinks has the right comparison but the wrong result.",
+   "clue": "Compare 0.9 with the density of water."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "3 g/cm³",
+   "also_right": []
+  },
+  "b": {
+   "best": "It floats, because it is less dense than water",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says 'The option that says it sinks has the right comparison but the wrong result', but two options say it sinks. Only 'It sinks, because it is less dense than water' has the right comparison, so the sentence is ambiguous."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct. One small problem: the why for (b) refers to 'the option that says it sinks' when two options say it sinks, so it should name the one meant."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The why says 'The option that says it sinks has the right comparison but the wrong result', but two options say it sinks. Only 'It sinks, because it is less dense than water' has the right comparison, so the sentence is ambiguous."
+ ],
+ "proposal": {
+  "title": "Density",
+  "card": [
+   "Density is how much mass is packed into a given volume. Density = mass ÷ volume. It is often measured in g/cm³.",
+   "The more closely particles are packed, the more particles fit in the same volume, so the more mass there is. Solids are usually denser than liquids, and liquids are usually denser than gases.",
+   "Water has a density of about 1 g/cm³. An object with a density lower than the liquid it is in floats. An object with a higher density sinks.",
+   "Example: a block with a mass of 200 g and a volume of 50 cm³ has a density of 200 ÷ 50 = 4 g/cm³."
+  ],
+  "remember": "Density = mass ÷ volume. Less dense than the liquid means it floats.",
+  "a": {
+   "q": "A metal block has a mass of 300 g and a volume of 100 cm³. What is its density?",
+   "opts": [
+    "3 g/cm³",
+    "0.33 g/cm³",
+    "30 g/cm³",
+    "400 g/cm³"
+   ],
+   "why": "Density = mass ÷ volume = 300 ÷ 100 = 3 g/cm³. Dividing volume by mass gives 0.33, which is the wrong way round.",
+   "clue": "Mass goes on the top of the division."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia drops a wax ball with a density of 0.9 g/cm³ into a tank of water. What happens, and why?",
+   "opts": [
+    "It floats, because it is less dense than water",
+    "It sinks, because it is less dense than water",
+    "It floats, because it is more dense than water",
+    "It sinks, because it is more dense than water"
+   ],
+   "why": "Water has a density of about 1 g/cm³, so wax at 0.9 g/cm³ is less dense and floats. The option 'It sinks, because it is less dense than water' gets the comparison right but the result wrong, because a less dense object floats.",
+   "clue": "Compare 0.9 with the density of water."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "3 g/cm³",
+    "also_right": []
+   },
+   "b": {
+    "best": "It floats, because it is less dense than water",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 16,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says 'The option that says it sinks has the right comparison but the wrong result', but two options say it sinks. Only 'It sinks, because it is less dense than water' has the right comparison, so the sentence is ambiguous."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The why says 'The option that says it sinks has the right comparison but the wrong result', but two options say it sinks. Only 'It sinks, because it is less dense than water' has the right comparison, so the sentence is ambiguous."
+  ]
+ },
+ "final": {
+  "title": "Density",
+  "card": [
+   "Density is how much mass is packed into a given volume. Density = mass ÷ volume. It is often measured in g/cm³.",
+   "The more closely particles are packed, the more particles fit in the same volume, so the more mass there is. Solids are usually denser than liquids, and liquids are usually denser than gases.",
+   "Water has a density of about 1 g/cm³. An object with a density lower than the liquid it is in floats. An object with a higher density sinks.",
+   "Example: a block with a mass of 200 g and a volume of 50 cm³ has a density of 200 ÷ 50 = 4 g/cm³."
+  ],
+  "remember": "Density = mass ÷ volume. Less dense than the liquid means it floats.",
+  "a": {
+   "q": "A metal block has a mass of 300 g and a volume of 100 cm³. What is its density?",
+   "opts": [
+    "3 g/cm³",
+    "0.33 g/cm³",
+    "30 g/cm³",
+    "400 g/cm³"
+   ],
+   "why": "Density = mass ÷ volume = 300 ÷ 100 = 3 g/cm³. Dividing volume by mass gives 0.33, which is the wrong way round.",
+   "clue": "Mass goes on the top of the division."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia drops a wax ball with a density of 0.9 g/cm³ into a tank of water. What happens, and why?",
+   "opts": [
+    "It floats, because it is less dense than water",
+    "It sinks, because it is less dense than water",
+    "It floats, because it is more dense than water",
+    "It sinks, because it is more dense than water"
+   ],
+   "why": "Water has a density of about 1 g/cm³, so wax at 0.9 g/cm³ is less dense and floats. The option 'It sinks, because it is less dense than water' gets the comparison right but the result wrong, because a less dense object floats.",
+   "clue": "Compare 0.9 with the density of water."
+  }
+ },
+ "cleared_by": "recheck"
+}
