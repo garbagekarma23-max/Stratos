@@ -22,16 +22,20 @@ const COURSE_LIST = [
   {id: 'edexcel', data: EDEXCEL, name: 'Economics, AS year', about: 'International A Level (Edexcel)'}
 ].concat(MADE_COURSES.map(c => ({id: c.id, data: c, name: c.row.name, about: c.row.about})));
 /* The heading a course is listed under on the subject sheet, and where that heading sorts. It comes from the course's
-   data, never its name: level if it has one, otherwise year (Year 11 before Year 12). The content pipeline writes
-   years and year into every course it makes, from the outline's years line, and level from its level line, such as
-   Units 1 and 2 for Victoria and Queensland, or Stage 1 for South Australia. A level sorts by its years (Units 1 and 2 are Year 11,
-   so they come before Units 3 and 4), and a level with no years after every year, AS before A level. Headings with
-   the same rank go in number order, so Units 1 and 2 comes before Units 3 and 4. */
+   data, never its name: level if it has one, otherwise year. The content pipeline writes years and year into every
+   course it makes, from the outline's years line, and level from its level line, such as Units 1 and 2 for Victoria and
+   Queensland, Levels 7 and 8 for the Victorian Curriculum, or Stage 1 for South Australia.
+   Headings sort by the last year they cover, so each year comes after the one before. With the same last year, a
+   heading for one year comes before one that spans two (Year 8, then Levels 7 and 8), and a plain year before a level
+   (Year 10, then Level 10A). So Victoria reads Year 7, Year 8, Levels 7 and 8, Year 9, Year 10, Level 10A, Levels 9 and
+   10, Units 1 and 2 (Year 11), Units 3 and 4 (Year 12). A heading with no years comes after every year: a plain year
+   first, then a level, AS before A level. Headings with the same rank go in name order. */
 const LEVELS = ['AS', 'A level'];
 function yearGroup(d) {
   const ys = (d.years || []).slice().sort((a, b) => a - b);
-  if (d.level) return {group: d.level, rank: ys.length ? ys[0] : 100 + Math.max(0, LEVELS.indexOf(d.level))};
-  return {group: d.year, rank: ys.length ? ys[0] : 99};
+  if (!ys.length) return d.level ? {group: d.level, rank: 100001 + Math.max(0, LEVELS.indexOf(d.level))} : {group: d.year, rank: 100000};
+  const last = ys[ys.length - 1], span = last - ys[0];
+  return {group: d.level || d.year, rank: last * 100 + span * 10 + (d.level ? 1 : 0)};
 }
 COURSE_LIST.forEach(c => Object.assign(c, yearGroup(c.data)));
 const CURRICULA = {
