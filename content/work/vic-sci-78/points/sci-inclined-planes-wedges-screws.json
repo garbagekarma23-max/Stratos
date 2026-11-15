@@ -16,7 +16,11 @@
   "2026-11-12T15:26:07Z write: done",
   "2026-11-12T15:35:11Z check: flagged",
   "2026-11-12T15:42:26Z fix: suggested",
-  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-15T16:10:53Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:48Z pictures: 1 picture turned down. Picture 1 (diagram at card 3): redo, high sure. The ramp is drawn short and steep (about 50 degrees), but the thread on the rod is a gentle slope (about 16 degrees) making eight turns, so it is not the same sloping edge wound around the rod as the card and the description say.; A 120 px wide ramp wrapped around a rod 34 px across would go round only about once, not eight times; draw the ramp long and shallow, with the same slope as the thread, so the picture shows that a screw is a long, gentle ramp.. Took out pictures/diagrams/ramp-wrapped-into-screw-thread.svg",
+  "2026-11-15T16:23:48Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:25:24Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -223,6 +227,13 @@
    ],
    "A gentler slope needs less force but a longer path. The load ends up at the same height either way."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/long-ramp-wrapped-into-screw-thread-v2.svg",
+    "alt": "At the top, a long, shallow right-angled triangle whose sloping edge is labelled ramp. An arrow labelled wrap around a rod points down to a rod, with the same gentle slope wound around it four times in a spiral, labelled screw thread."
+   }
+  },
   "remember": "Ramps, wedges and screws trade a longer path for less force.",
   "a": {
    "q": "Why is it easier to push a box up a long ramp than to lift it straight up onto a truck?",
@@ -246,15 +257,72 @@
    ],
    "why": "The thread of a screw is a ramp wound in a spiral around a central rod. Two ramps back to back describe a wedge, which is the most tempting wrong choice, as both are made from ramps.",
    "clue": "Trace the thread with your finger. Which way does it travel?"
-  },
-  "wants": [
-   {
-    "at": "card 3",
-    "kind": "diagram",
-    "brief": "A right-angled triangle labelled ramp, shown beside a rod with the same triangle wrapped around it as a spiral thread, labelled screw thread.",
-    "why": "It shows that a screw is a ramp wrapped around a rod."
-   }
-  ]
+  }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "diagram",
+   "brief": "A right-angled triangle labelled ramp, shown beside a rod with the same triangle wrapped around it as a spiral thread, labelled screw thread.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/ramp-wrapped-into-screw-thread.svg",
+     "alt": "On the left, a right-angled triangle whose sloping edge is labelled ramp. An arrow labelled wrap around points to a rod on the right, with the same sloping edge wound around it in a spiral, labelled screw thread."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:53Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": false,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The ramp is drawn short and steep (about 50 degrees), but the thread on the rod is a gentle slope (about 16 degrees) making eight turns, so it is not the same sloping edge wound around the rod as the card and the description say.",
+     "A 120 px wide ramp wrapped around a rod 34 px across would go round only about once, not eight times; draw the ramp long and shallow, with the same slope as the thread, so the picture shows that a screw is a long, gentle ramp."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:47Z"
+  },
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "diagram",
+   "brief": "A right-angled triangle labelled ramp, shown beside a rod with the same triangle wrapped around it as a spiral thread, labelled screw thread.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/long-ramp-wrapped-into-screw-thread-v2.svg",
+     "alt": "At the top, a long, shallow right-angled triangle whose sloping edge is labelled ramp. An arrow labelled wrap around a rod points down to a rod, with the same gentle slope wound around it four times in a spiral, labelled screw thread."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:23:48Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:25:23Z"
+  }
+ ]
 }

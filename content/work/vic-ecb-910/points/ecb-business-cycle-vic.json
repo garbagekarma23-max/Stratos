@@ -29,7 +29,9 @@
   "2026-11-12T12:22:44Z new, match",
   "2026-11-12T12:44:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-12T15:15:34Z write: done",
-  "2026-11-12T15:25:55Z check: passed, cleared"
+  "2026-11-12T15:25:55Z check: passed, cleared",
+  "2026-11-15T16:10:35Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:28Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -127,6 +129,13 @@
    ],
    "Indicators such as GDP growth, unemployment and inflation show which phase the economy is in. After a slowdown, growth picks up again and a new upswing begins."
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/business-cycle-boom-slowdown-wave.svg",
+    "alt": "A graph of real GDP against time. A wavy line rises and falls around a dashed, rising trend line. Its high points are labelled Boom and its low points Slowdown, and after each slowdown the line rises again."
+   }
+  },
   "remember": "The economy swings between booms and slowdowns, and indicators show which phase it is in.",
   "a": {
    "q": "Which set of changes in indicators best fits a boom?",
@@ -150,15 +159,39 @@
    ],
    "why": "Weaker growth and higher unemployment are signs of a slowdown. A boom would show faster growth and falling unemployment, the reverse of these figures.",
    "clue": "Look at which way growth and unemployment moved."
-  },
-  "wants": [
-   {
-    "at": "card 1",
-    "kind": "diagram",
-    "brief": "A wavy line of real GDP over time rising and falling around a rising trend. Label the high points 'Boom' and the low points 'Slowdown'. Label the axes 'Time' and 'Real GDP'.",
-    "why": "Seeing the ups and downs shows that growth is uneven."
-   }
-  ]
+  }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "diagram",
+   "brief": "A wavy line of real GDP over time rising and falling around a rising trend. Label the high points 'Boom' and the low points 'Slowdown'. Label the axes 'Time' and 'Real GDP'.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/business-cycle-boom-slowdown-wave.svg",
+     "alt": "A graph of real GDP against time. A wavy line rises and falls around a dashed, rising trend line. Its high points are labelled Boom and its low points Slowdown, and after each slowdown the line rises again."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:34Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:28Z"
+  }
+ ]
 }

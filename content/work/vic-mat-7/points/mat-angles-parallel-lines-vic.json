@@ -29,7 +29,9 @@
   "2026-11-12T12:22:53Z new, match",
   "2026-11-12T12:44:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-12T15:06:00Z write: done",
-  "2026-11-12T15:15:50Z check: passed, cleared"
+  "2026-11-12T15:15:50Z check: passed, cleared",
+  "2026-11-15T16:10:48Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:42Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -133,6 +135,13 @@
     "angles between the parallel lines, on the same side of the transversal. They add to \\(180^{\\circ}\\), so each is \\(180^{\\circ}\\) minus the other. Example: if one is \\(70^{\\circ}\\), the other is \\(180^{\\circ} - 70^{\\circ} = 110^{\\circ}\\). They form a C shape."
    ]
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/transversal-parallel-lines-f-z-c.svg",
+    "alt": "Two horizontal parallel lines, each marked with an arrow, crossed by a slanted transversal. At the top crossing the angles are a and b above the line and c and d below it, from left to right; at the bottom crossing they are e and f above and g and h below. Under it, three small copies each shade one pair and trace its shape: corresponding angles d and h form an F, so \\(d = h\\); alternate angles c and f form a Z, so \\(c = f\\); co-interior angles d and f form a C, so \\(d + f = 180^{\\circ}\\)."
+   }
+  },
   "remember": "Parallel lines: F is equal, Z is equal, C adds to \\(180^{\\circ}\\).",
   "a": {
    "q": "A transversal crosses two parallel lines. One co-interior angle is \\(65^{\\circ}\\). What is the other co-interior angle?",
@@ -156,15 +165,39 @@
    ],
    "why": "The Z shape means the two are alternate angles, and alternate angles are equal, so \\(x = 112^{\\circ}\\). \\(68^{\\circ}\\) is tempting, but that is what you get by treating them as co-interior angles and subtracting from \\(180^{\\circ}\\).",
    "clue": "A Z shape names one type of angle pair. Is it equal or does it add to 180?"
-  },
-  "wants": [
-   {
-    "at": "card 1",
-    "kind": "diagram",
-    "brief": "Two horizontal parallel lines marked with arrows, crossed by a slanted transversal. Label the eight angles with letters a to h. Colour one pair of corresponding angles, one pair of alternate angles and one pair of co-interior angles, each with a matching F, Z or C shape traced beside it.",
-    "why": "Seeing the F, Z and C shapes on one diagram helps students spot each type of angle pair."
-   }
-  ]
+  }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "diagram",
+   "brief": "Two horizontal parallel lines marked with arrows, crossed by a slanted transversal. Label the eight angles with letters a to h. Colour one pair of corresponding angles, one pair of alternate angles and one pair of co-interior angles, each with a matching F, Z or C shape traced beside it.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/transversal-parallel-lines-f-z-c.svg",
+     "alt": "Two horizontal parallel lines, each marked with an arrow, crossed by a slanted transversal. At the top crossing the angles are a and b above the line and c and d below it, from left to right; at the bottom crossing they are e and f above and g and h below. Under it, three small copies each shade one pair and trace its shape: corresponding angles d and h form an F, so \\(d = h\\); alternate angles c and f form a Z, so \\(c = f\\); co-interior angles d and f form a C, so \\(d + f = 180^{\\circ}\\)."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:48Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:41Z"
+  }
+ ]
 }

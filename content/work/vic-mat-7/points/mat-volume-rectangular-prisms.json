@@ -32,7 +32,9 @@
   "2026-11-12T15:15:50Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-12T15:26:05Z write: failed the content check, writing again",
   "2026-11-12T15:35:10Z write: done",
-  "2026-11-12T15:42:24Z check: passed, cleared"
+  "2026-11-12T15:42:24Z check: passed, cleared",
+  "2026-11-15T16:10:47Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:41Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -132,6 +134,13 @@
    "Worked example: a box is 5 cm long, 3 cm wide and 2 cm high. \\(V = 5 \\times 3 \\times 2 = 30\\), so the volume is \\(30 \\text{ cm}^{3}\\).",
    "All three lengths must be in the same unit before you multiply. The answer is then in that unit cubed. Area uses squared units such as \\(\\text{cm}^{2}\\)."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/rectangular-prism-length-width-height.svg",
+    "alt": "A box-shaped rectangular prism drawn in 3D, with its hidden edges dashed. The bottom front edge is labelled length (l), the front vertical edge is labelled height (h), and an edge going back from the front is labelled width (w)."
+   }
+  },
   "remember": "Multiply the three lengths. The answer is in cubic units.",
   "a": {
    "q": "A fish tank is 40 cm long, 20 cm wide and 25 cm high. What is its volume?",
@@ -155,15 +164,39 @@
    ],
    "why": "Change 2 m to 200 cm first. Then \\(V = 200 \\times 50 \\times 40 = 400{,}000\\), so the volume is \\(400{,}000 \\text{ cm}^{3}\\). Using 2 instead of 200 gives 4,000, which mixes units.",
    "clue": "Put every length in centimetres before multiplying."
-  },
-  "wants": [
-   {
-    "at": "card 2",
-    "kind": "diagram",
-    "brief": "A rectangular prism drawn in 3D with its three edges labelled length (l), width (w) and height (h).",
-    "why": "It shows which three measurements are multiplied to find the volume."
-   }
-  ]
+  }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "diagram",
+   "brief": "A rectangular prism drawn in 3D with its three edges labelled length (l), width (w) and height (h).",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/rectangular-prism-length-width-height.svg",
+     "alt": "A box-shaped rectangular prism drawn in 3D, with its hidden edges dashed. The bottom front edge is labelled length (l), the front vertical edge is labelled height (h), and an edge going back from the front is labelled width (w)."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:47Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:40Z"
+  }
+ ]
 }

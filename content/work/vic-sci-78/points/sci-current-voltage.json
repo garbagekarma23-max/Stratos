@@ -16,7 +16,9 @@
   "2026-11-12T15:26:07Z write: done",
   "2026-11-12T15:35:11Z check: flagged",
   "2026-11-12T15:42:25Z fix: suggested",
-  "2026-11-12T16:19:55Z autoreview: cleared with the fix (b other)"
+  "2026-11-12T16:19:55Z autoreview: cleared with the fix (b other)",
+  "2026-11-15T16:10:54Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:49Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -209,6 +211,13 @@
     "Circuits are drawn with standard symbols so that everyone can read them. A cell or battery, a globe, a switch and connecting wires each have their own symbol."
    ]
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/closed-circuit-cell-switch-globe.svg",
+    "alt": "A circuit diagram of one complete loop drawn with standard symbols: a cell, with its long line marked plus and its short thick line marked minus, a closed switch, a globe drawn as a circle with a cross, and connecting wires. Each symbol is labelled."
+   }
+  },
   "remember": "Current is the flow of charge, in amps. Voltage is the push, in volts.",
   "a": {
    "q": "Which pair correctly matches each quantity with its unit?",
@@ -232,15 +241,39 @@
    ],
    "why": "Charge flows only around a closed circuit, and an open switch makes a gap in the loop. The battery still gives a push, but with the loop broken there is no current. So the globe stays off.",
    "clue": "Is the loop still complete when the switch is open?"
-  },
-  "wants": [
-   {
-    "at": "card 4",
-    "kind": "diagram",
-    "brief": "A simple closed circuit drawn with standard symbols: a cell or battery, a globe, a closed switch and connecting wires in one loop. Label each symbol: cell or battery, globe, switch, wire.",
-    "why": "It shows the standard symbols and what a closed circuit loop looks like."
-   }
-  ]
+  }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "diagram",
+   "brief": "A simple closed circuit drawn with standard symbols: a cell or battery, a globe, a closed switch and connecting wires in one loop. Label each symbol: cell or battery, globe, switch, wire.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/closed-circuit-cell-switch-globe.svg",
+     "alt": "A circuit diagram of one complete loop drawn with standard symbols: a cell, with its long line marked plus and its short thick line marked minus, a closed switch, a globe drawn as a circle with a cross, and connecting wires. Each symbol is labelled."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:54Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:48Z"
+  }
+ ]
 }

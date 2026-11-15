@@ -37,7 +37,11 @@
   "2026-11-13T15:37:52Z claude-code write: done, waiting for the Claude Code check",
   "2026-11-13T15:44:54Z claude-code check: answered by a separate subagent",
   "2026-11-13T15:44:54Z check: for review (other-sensitive)",
-  "2026-11-13T16:11:26Z review: approved as written"
+  "2026-11-13T16:11:26Z review: approved as written",
+  "2026-11-15T16:10:42Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:35Z pictures: 1 picture turned down. Picture 1 (diagram at card 4): redo, high sure. Kokoda sits right on the line of the Owen Stanley Range's peaks, in the gap between the two groups of peak marks, so the whole Kokoda Track is drawn on the south side of the range and never visibly crosses it, while the card says the track crosses the range and the Japanese were pushed back over it.; Kokoda is in a valley on the north side of the main range, so the peak marks should run between Kokoda and Port Moresby, with the track drawn passing through or over them (for example with peaks on both sides of the track where it crosses the crest).. Took out pictures/diagrams/kokoda-track-papua-map.svg",
+  "2026-11-15T16:23:47Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:25:22Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -328,6 +332,13 @@
     "In July 1942 Japanese troops landed on Papua's north coast to cross the Owen Stanley Range by the Kokoda Track and take Port Moresby, a base close to northern Australia. Fighting in jungle and mud, Australians stopped them short of Port Moresby and from late September pushed them back over the range."
    ]
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/kokoda-track-papua-map-v2.svg",
+    "alt": "A map of eastern Papua and the tip of Cape York. Gona and Buna are on Papua's north coast, and Kokoda is inland from them, on the north side of the Owen Stanley Range, which is shown as a line of peaks along Papua. The Kokoda Track runs from Kokoda south over the range, between its peaks, to Port Moresby on the south coast. A few hundred kilometres across the Coral Sea is the tip of Cape York, labelled Australia. A scale bar shows 200 km."
+   }
+  },
   "remember": "Singapore's fall left thousands of Australians as prisoners of war. On the Kokoda Track, Australians stopped Japan short of Port Moresby.",
   "a": {
    "q": "How did thousands of Australian soldiers end up held by Japan early in 1942?",
@@ -351,15 +362,72 @@
    ],
    "why": "On the Kokoda Track, Australians fought in jungle and mud on Papua's mountains and pushed the Japanese back towards the north coast. The railway also ran through jungle, but the men there were prisoners, not soldiers pushing an enemy back. In Malaya and Singapore the Australians were the ones forced back.",
    "clue": "In which fighting were the Australians the side moving forward?"
-  },
-  "wants": [
-   {
-    "at": "card 4",
-    "kind": "diagram",
-    "brief": "A simple map of Papua and the far north of Australia. It shows the north coast of Papua with Buna and Gona, the village of Kokoda, the Owen Stanley Range, the Kokoda Track as a line from Kokoda over the range to Port Moresby on the south coast, and the tip of Cape York across the sea, labelled Australia.",
-    "why": "It shows where the track ran and how close Port Moresby was to Australia."
-   }
-  ]
+  }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "diagram",
+   "brief": "A simple map of Papua and the far north of Australia. It shows the north coast of Papua with Buna and Gona, the village of Kokoda, the Owen Stanley Range, the Kokoda Track as a line from Kokoda over the range to Port Moresby on the south coast, and the tip of Cape York across the sea, labelled Australia.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/kokoda-track-papua-map.svg",
+     "alt": "A map of eastern Papua and the tip of Cape York. Gona and Buna are on Papua's north coast, with Kokoda inland from them. The Kokoda Track runs from Kokoda south over the Owen Stanley Range, shown as a line of peaks along Papua, to Port Moresby on the south coast. A few hundred kilometres across the Coral Sea is the tip of Cape York, labelled Australia. A scale bar shows 200 km."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:42Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": false,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "Kokoda sits right on the line of the Owen Stanley Range's peaks, in the gap between the two groups of peak marks, so the whole Kokoda Track is drawn on the south side of the range and never visibly crosses it, while the card says the track crosses the range and the Japanese were pushed back over it.",
+     "Kokoda is in a valley on the north side of the main range, so the peak marks should run between Kokoda and Port Moresby, with the track drawn passing through or over them (for example with peaks on both sides of the track where it crosses the crest)."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:34Z"
+  },
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "diagram",
+   "brief": "A simple map of Papua and the far north of Australia. It shows the north coast of Papua with Buna and Gona, the village of Kokoda, the Owen Stanley Range, the Kokoda Track as a line from Kokoda over the range to Port Moresby on the south coast, and the tip of Cape York across the sea, labelled Australia.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/kokoda-track-papua-map-v2.svg",
+     "alt": "A map of eastern Papua and the tip of Cape York. Gona and Buna are on Papua's north coast, and Kokoda is inland from them, on the north side of the Owen Stanley Range, which is shown as a line of peaks along Papua. The Kokoda Track runs from Kokoda south over the range, between its peaks, to Port Moresby on the south coast. A few hundred kilometres across the Coral Sea is the tip of Cape York, labelled Australia. A scale bar shows 200 km."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:23:47Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:25:22Z"
+  }
+ ]
 }

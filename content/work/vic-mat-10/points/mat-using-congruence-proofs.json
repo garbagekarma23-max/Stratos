@@ -31,7 +31,9 @@
   "2026-11-12T15:15:47Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
   "2026-11-12T15:26:04Z write: failed the content check, writing again",
   "2026-11-12T15:35:09Z write: done",
-  "2026-11-12T15:42:24Z check: passed, cleared"
+  "2026-11-12T15:42:24Z check: passed, cleared",
+  "2026-11-15T16:10:43Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:36Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -134,6 +136,13 @@
     "In a parallelogram \\(ABCD\\), the diagonal \\(AC\\) splits it into \\(\\triangle ABC\\) and \\(\\triangle CDA\\). \\(AB = CD\\) and \\(BC = DA\\) (opposite sides), and \\(AC\\) is common. So the triangles are congruent (SSS), and \\(\\angle B = \\angle D\\) (corresponding angles in congruent triangles)."
    ]
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/parallelogram-abcd-diagonal-ac-congruent.svg",
+    "alt": "Parallelogram ABCD with A at the bottom left, B at the bottom right, C at the top right and D at the top left. Diagonal AC splits it into two shaded triangles, labelled triangle ABC and triangle CDA. AB and CD each have one tick, and BC and DA each have two ticks, to show they are equal."
+   }
+  },
   "remember": "Prove the triangles congruent first, then use their matching parts to prove the fact you want.",
   "a": {
    "q": "In a proof, triangles \\(PQR\\) and \\(XYZ\\) are shown to be congruent. Which reason then proves \\(\\angle Q = \\angle Y\\)?",
@@ -157,15 +166,39 @@
    ],
    "why": "The triangles have \\(AB = AD\\), \\(CB = CD\\) and the shared side \\(AC\\): three pairs of equal sides, so SSS. SAS is tempting because of the shared side, but no equal angle is given, so it cannot be used.",
    "clue": "Count the pairs of equal sides, and check whether any angle is given."
-  },
-  "wants": [
-   {
-    "at": "card 4",
-    "kind": "diagram",
-    "brief": "Parallelogram ABCD with diagonal AC drawn. Mark AB and CD with one tick, BC and DA with two ticks, and label the triangles ABC and CDA.",
-    "why": "It shows which two triangles are used and which sides are equal."
-   }
-  ]
+  }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "diagram",
+   "brief": "Parallelogram ABCD with diagonal AC drawn. Mark AB and CD with one tick, BC and DA with two ticks, and label the triangles ABC and CDA.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/parallelogram-abcd-diagonal-ac-congruent.svg",
+     "alt": "Parallelogram ABCD with A at the bottom left, B at the bottom right, C at the top right and D at the top left. Diagonal AC splits it into two shaded triangles, labelled triangle ABC and triangle CDA. AB and CD each have one tick, and BC and DA each have two ticks, to show they are equal."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:43Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:35Z"
+  }
+ ]
 }

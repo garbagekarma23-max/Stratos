@@ -30,7 +30,9 @@
   "2026-11-12T12:44:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-12T15:15:49Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-12T15:26:05Z write: done",
-  "2026-11-12T15:35:09Z check: passed, cleared"
+  "2026-11-12T15:35:09Z check: passed, cleared",
+  "2026-11-15T16:10:45Z pictures: 2 pictures waiting for the check",
+  "2026-11-15T16:19:38Z pictures: 2 pictures kept"
  ],
  "sent": {
   "match": 1,
@@ -133,6 +135,18 @@
    ],
    "Example: \\(AB\\) is a diameter and \\(C\\) is on the circle. Angle \\(ACB = 90^{\\circ}\\). If angle \\(CAB = 35^{\\circ}\\), the angles of triangle \\(ABC\\) add to \\(180^{\\circ}\\), so angle \\(ABC = 180^{\\circ} - 90^{\\circ} - 35^{\\circ} = 55^{\\circ}\\)."
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/angle-in-a-semicircle.svg",
+    "alt": "A circle with diameter AB drawn through its centre and point C on the circle. Triangle ABC is drawn, and the angle at C has a right-angle mark and is labelled 90°."
+   },
+   "2": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/angles-in-the-same-segment.svg",
+    "alt": "A circle with chord PQ. Points R and S are on the circle on the same side of PQ. Lines join R to P and Q and S to P and Q, and angles PRQ and PSQ are each marked with an arc and one tick, showing they are equal."
+   }
+  },
   "remember": "A diameter gives a right angle at the circumference. The same arc gives equal angles on the same side.",
   "a": {
    "q": "\\(PQ\\) is a diameter of a circle and \\(R\\) is a point on the circle. What is angle \\(PRQ\\)?",
@@ -156,21 +170,69 @@
    ],
    "why": "Angle \\(ACB = 90^{\\circ}\\) as it is in a semicircle. So angle \\(BAC = 180^{\\circ} - 90^{\\circ} - 28^{\\circ} = 62^{\\circ}\\). \\(152^{\\circ}\\) comes from forgetting the right angle.",
    "clue": "Find the angle at \\(C\\) first, then use the angles of a triangle."
-  },
-  "wants": [
-   {
-    "at": "card 1",
-    "kind": "diagram",
-    "brief": "A circle with diameter AB drawn through the centre and a point C on the circumference. Triangle ABC is drawn, with the angle at C marked with a right-angle symbol and labelled 90 degrees.",
-    "why": "It shows that the angle at the circumference stands on the diameter."
-   },
-   {
-    "at": "card 2",
-    "kind": "diagram",
-    "brief": "A circle with chord PQ. Two points R and S on the same side of the chord lie on the circumference. Lines from R to P and Q and from S to P and Q show angles PRQ and PSQ marked as equal.",
-    "why": "It shows two angles standing on the same arc in the same segment."
-   }
-  ]
+  }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "diagram",
+   "brief": "A circle with diameter AB drawn through the centre and a point C on the circumference. Triangle ABC is drawn, with the angle at C marked with a right-angle symbol and labelled 90 degrees.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/angle-in-a-semicircle.svg",
+     "alt": "A circle with diameter AB drawn through its centre and point C on the circle. Triangle ABC is drawn, and the angle at C has a right-angle mark and is labelled 90°."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:45Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:37Z"
+  },
+  {
+   "want": 2,
+   "at": "card 2",
+   "kind": "diagram",
+   "brief": "A circle with chord PQ. Two points R and S on the same side of the chord lie on the circumference. Lines from R to P and Q and from S to P and Q show angles PRQ and PSQ marked as equal.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/angles-in-the-same-segment.svg",
+     "alt": "A circle with chord PQ. Points R and S are on the circle on the same side of PQ. Lines join R to P and Q and S to P and Q, and angles PRQ and PSQ are each marked with an arc and one tick, showing they are equal."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:45Z",
+   "status": "kept",
+   "check": {
+    "want": 2,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:37Z"
+  }
+ ]
 }

@@ -32,7 +32,9 @@
   "2026-11-12T15:26:07Z write: done",
   "2026-11-12T15:35:11Z check: flagged",
   "2026-11-12T15:42:25Z fix: suggested",
-  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-15T16:10:50Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:44Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -212,6 +214,13 @@
    "So each level up has only about a tenth of the energy of the level below. The pyramid gets narrower towards the top.",
    "Little energy is left at the top, so there is only enough for a few top feeders. This is why food chains are short, often with four or five levels at most."
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/energy-pyramid-four-levels.svg",
+    "alt": "An energy pyramid of four stacked layers, widest at the bottom and narrowest at the top. From the bottom up: producers, animals that eat producers, animals that eat those, and top feeders. An arrow up the side is labelled less energy."
+   }
+  },
   "remember": "About a tenth of the energy passes up each level, so the pyramid narrows and food chains stay short.",
   "a": {
    "q": "Why does an energy pyramid get narrower towards the top?",
@@ -235,15 +244,39 @@
    ],
    "why": "Energy passes through four steps: grass to insects, insects to lizards, lizards to snakes, and snakes to hawks. Each step keeps about a tenth, so 10 000 falls to 1000, 100, 10, then 1. About 10 units is tempting, but it counts only three steps.",
    "clue": "Count the steps between the grass and the hawks."
-  },
-  "wants": [
-   {
-    "at": "card 1",
-    "kind": "diagram",
-    "brief": "An energy pyramid with four stacked layers, widest at the bottom and narrowest at the top. From bottom to top the layers are labelled producers, animals that eat producers, animals that eat those, and top feeders. An arrow on the side points upwards and is labelled less energy.",
-    "why": "The student sees the pyramid narrow as the energy available falls at each level."
-   }
-  ]
+  }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "diagram",
+   "brief": "An energy pyramid with four stacked layers, widest at the bottom and narrowest at the top. From bottom to top the layers are labelled producers, animals that eat producers, animals that eat those, and top feeders. An arrow on the side points upwards and is labelled less energy.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/energy-pyramid-four-levels.svg",
+     "alt": "An energy pyramid of four stacked layers, widest at the bottom and narrowest at the top. From the bottom up: producers, animals that eat producers, animals that eat those, and top feeders. An arrow up the side is labelled less energy."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:50Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:44Z"
+  }
+ ]
 }

@@ -21,7 +21,9 @@
   "2026-11-12T15:26:05Z write: done",
   "2026-11-12T15:35:10Z check: flagged",
   "2026-11-12T15:42:25Z fix: suggested",
-  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-15T16:10:47Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:40Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -226,6 +228,13 @@
    "Cut a triangle off one end and slide it to the other end. The shape becomes a rectangle with the same base and the same height, and no area is lost or added.",
    "So the area of a parallelogram is base \\(\\times\\) perpendicular height. Example: base 9 cm and height 4 cm give \\(9 \\times 4 = 36 \\text{ cm}^{2}\\)."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/parallelogram-cut-triangle-to-rectangle.svg",
+    "alt": "A parallelogram with its bottom side labelled base and a dashed line labelled perpendicular height, at a right angle to the base, from the top left corner. The shaded triangle to the left of the dashed line is cut off, and an arrow labelled slide the triangle across shows it moving to the right end, where a dashed outline shows it in its new place. The shape becomes a rectangle with the same base and the same height."
+   }
+  },
   "remember": "Area of a parallelogram is base times perpendicular height, not base times the slanted side.",
   "a": {
    "q": "Why does a parallelogram have the same area as a rectangle with its base and perpendicular height?",
@@ -249,15 +258,39 @@
    ],
    "why": "Area is base times perpendicular height, so \\(8 \\times 4 = 32 \\text{ m}^{2}\\). The tempting answer is \\(40 \\text{ m}^{2}\\), which uses the slanted side of 5 m instead of the perpendicular height.",
    "clue": "Which of the given lengths is at a right angle to the base?"
-  },
-  "wants": [
-   {
-    "at": "card 3",
-    "kind": "diagram",
-    "brief": "A parallelogram with its base labelled and its perpendicular height marked by a dashed line at a right angle to the base. A triangle at one end is shaded, with an arrow showing it moving to the other end to form a rectangle with the same base and height.",
-    "why": "It shows how cutting and moving a triangle turns a parallelogram into a rectangle with the same area."
-   }
-  ]
+  }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "diagram",
+   "brief": "A parallelogram with its base labelled and its perpendicular height marked by a dashed line at a right angle to the base. A triangle at one end is shaded, with an arrow showing it moving to the other end to form a rectangle with the same base and height.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/parallelogram-cut-triangle-to-rectangle.svg",
+     "alt": "A parallelogram with its bottom side labelled base and a dashed line labelled perpendicular height, at a right angle to the base, from the top left corner. The shaded triangle to the left of the dashed line is cut off, and an arrow labelled slide the triangle across shows it moving to the right end, where a dashed outline shows it in its new place. The shape becomes a rectangle with the same base and the same height."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:47Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:40Z"
+  }
+ ]
 }

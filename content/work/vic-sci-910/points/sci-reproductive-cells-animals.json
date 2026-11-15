@@ -31,7 +31,9 @@
   "2026-11-12T15:15:53Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-12T15:26:08Z write: failed the content check, writing again",
   "2026-11-12T15:35:12Z write: done",
-  "2026-11-12T15:42:26Z check: passed, cleared"
+  "2026-11-12T15:42:26Z check: passed, cleared",
+  "2026-11-15T16:10:54Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:50Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -131,6 +133,13 @@
    "Fertilisation is when a sperm cell and an egg cell join. The new cell has a full set of chromosomes.",
    "Each parent gives half of the offspring's chromosomes, so the offspring has a mix from both parents."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/sperm-egg-fertilisation.svg",
+    "alt": "A small sperm cell with a tail beside a much larger egg cell, which is filled with dots labelled food store. An arrow labelled fertilisation leads from both to a fertilised cell, whose nucleus is labelled half of the chromosomes from each parent."
+   }
+  },
   "remember": "Small swimming sperm meet a large egg with a food store, and each gives half the chromosomes.",
   "a": {
    "q": "Why is an egg cell much larger than a sperm cell?",
@@ -154,15 +163,39 @@
    ],
    "why": "Each reproductive cell carries half of the chromosomes, so the joey gets half from each parent. The egg is larger because of its food store, but size does not mean it gives more chromosomes.",
    "clue": "Does a bigger cell carry more of the chromosomes?"
-  },
-  "wants": [
-   {
-    "at": "card 3",
-    "kind": "diagram",
-    "brief": "A labelled diagram of a small sperm cell with a tail next to a much larger egg cell with a food store, with an arrow to a fertilised cell. Label: sperm cell, tail, egg cell, food store, fertilisation, half of the chromosomes from each parent.",
-    "why": "It shows the difference in size and shape between the two cells and how they join."
-   }
-  ]
+  }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "diagram",
+   "brief": "A labelled diagram of a small sperm cell with a tail next to a much larger egg cell with a food store, with an arrow to a fertilised cell. Label: sperm cell, tail, egg cell, food store, fertilisation, half of the chromosomes from each parent.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/sperm-egg-fertilisation.svg",
+     "alt": "A small sperm cell with a tail beside a much larger egg cell, which is filled with dots labelled food store. An arrow labelled fertilisation leads from both to a fertilised cell, whose nucleus is labelled half of the chromosomes from each parent."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:54Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:49Z"
+  }
+ ]
 }

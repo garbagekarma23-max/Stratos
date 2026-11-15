@@ -31,7 +31,11 @@
   "2026-11-12T15:15:52Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-12T15:26:07Z write: failed the content check, writing again",
   "2026-11-12T15:35:11Z write: done",
-  "2026-11-12T15:42:25Z check: passed, cleared"
+  "2026-11-12T15:42:25Z check: passed, cleared",
+  "2026-11-15T16:10:51Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:45Z pictures: 1 picture turned down. Picture 1 (diagram at card 3): redo, high sure. The bottom of the C in the Condenser label sits on the condenser's top outline, so move the label a few pixels up or right so it clears the line.. Took out pictures/diagrams/distillation-set-up.svg",
+  "2026-11-15T16:23:48Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:25:23Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -137,6 +141,13 @@
    ],
    "Evaporation keeps the solid and loses the liquid. Distillation keeps the liquid, and the solid stays behind in the flask."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/distillation-set-up-v2.svg",
+    "alt": "A flask of solution sits on a heat source, and a note says the solid stays here. Arrows show the gas moving from the flask along a tube through the condenser, a cooled tube with water flowing in at its lower end and out at its upper end. The tube ends over a beaker that collects the pure liquid."
+   }
+  },
   "remember": "Evaporation keeps the dissolved solid. Distillation collects the liquid.",
   "a": {
    "q": "Kai heats salty water in a dish until all the water has gone. What is left in the dish?",
@@ -160,15 +171,71 @@
    ],
    "why": "Distillation boils the water off and cools it back into a liquid, which is collected. Evaporation lets the water escape into the air, so it is lost and only the salt is left.",
    "clue": "Which method collects the liquid rather than losing it?"
-  },
-  "wants": [
-   {
-    "at": "card 3",
-    "kind": "diagram",
-    "brief": "A distillation set-up. A flask of salty solution sits on a heat source. A tube leads from the flask into a cooled tube, labelled condenser, and then into a collecting container labelled pure liquid. The flask is labelled solution, with the dissolved solid staying behind. Arrows show the gas moving along the tube.",
-    "why": "It shows how the liquid boils off, cools and is collected separately from the solid."
-   }
-  ]
+  }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "diagram",
+   "brief": "A distillation set-up. A flask of salty solution sits on a heat source. A tube leads from the flask into a cooled tube, labelled condenser, and then into a collecting container labelled pure liquid. The flask is labelled solution, with the dissolved solid staying behind. Arrows show the gas moving along the tube.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/distillation-set-up.svg",
+     "alt": "A flask of solution sits on a heat source, and a note says the solid stays here. Arrows show the gas moving from the flask along a tube through the condenser, a cooled tube with water flowing in at its lower end and out at its upper end. The tube ends over a beaker that collects the pure liquid."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:50Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "The bottom of the C in the Condenser label sits on the condenser's top outline, so move the label a few pixels up or right so it clears the line."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:45Z"
+  },
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "diagram",
+   "brief": "A distillation set-up. A flask of salty solution sits on a heat source. A tube leads from the flask into a cooled tube, labelled condenser, and then into a collecting container labelled pure liquid. The flask is labelled solution, with the dissolved solid staying behind. Arrows show the gas moving along the tube.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/distillation-set-up-v2.svg",
+     "alt": "A flask of solution sits on a heat source, and a note says the solid stays here. Arrows show the gas moving from the flask along a tube through the condenser, a cooled tube with water flowing in at its lower end and out at its upper end. The tube ends over a beaker that collects the pure liquid."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:23:48Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:25:23Z"
+  }
+ ]
 }

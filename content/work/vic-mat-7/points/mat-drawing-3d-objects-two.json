@@ -19,7 +19,9 @@
   "2026-11-12T15:26:05Z check: flagged",
   "2026-11-12T15:35:10Z fix: suggested",
   "2026-11-12T16:19:54Z autoreview: picked as a spot check. It would have been cleared with the fix (card wording)",
-  "2026-11-13T12:13:15Z claude-code review: approved with the fix (a spot check)"
+  "2026-11-13T12:13:15Z claude-code review: approved with the fix (a spot check)",
+  "2026-11-15T16:10:48Z pictures: 2 pictures waiting for the check",
+  "2026-11-15T16:19:42Z pictures: 2 pictures kept"
  ],
  "sent": {
   "match": 1,
@@ -216,6 +218,18 @@
    ],
    "Example: a tall box that is 2 cubes wide, 1 cube deep and 3 cubes high. Its front view is a rectangle 2 wide and 3 high. Its top view is a rectangle 2 wide and 1 deep."
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/cube-net-cross-and-cube.svg",
+    "alt": "On the left, a net of a cube: 6 squares in a cross shape, a column of 4 squares with one more square on each side of the second. An arrow labelled folds points to a cube on the right, drawn in 3D with its hidden edges dashed."
+   },
+   "3": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/isometric-box-2-wide-1-deep-3-high.svg",
+    "alt": "An isometric drawing on dot paper of a box made of cubes, 2 cubes wide, 1 cube deep and 3 cubes high. Three faces show at once: the front face is 2 cubes wide and 3 high, the side face is 1 cube deep and 3 high, and the top face is 2 by 1. The vertical edges are drawn as vertical lines."
+   }
+  },
   "remember": "A net unfolds the faces. Views show one side at a time. An isometric drawing shows three faces at once.",
   "a": {
    "q": "Which drawing of a solid shows its faces laid out flat so that they can be folded up to make it?",
@@ -239,21 +253,7 @@
    ],
    "why": "The top view shows the length and the depth, so it is 4 by 2. Looking down, the height of 3 is the distance in the direction you are looking, so it is hidden. A rectangle 4 long and 3 high is the front view, and three faces at once is an isometric drawing.",
    "clue": "Looking down, which measurement points away from you?"
-  },
-  "wants": [
-   {
-    "at": "card 1",
-    "kind": "diagram",
-    "brief": "A net of a cube made of 6 squares in a cross shape, next to the folded cube.",
-    "why": "It shows how the flat faces fold into a solid."
-   },
-   {
-    "at": "card 3",
-    "kind": "diagram",
-    "brief": "An isometric drawing on dot paper of a box 2 cubes wide, 1 cube deep and 3 cubes high, showing the front, side and top faces, with vertical edges drawn as vertical lines.",
-    "why": "It lets the student see three faces in one picture."
-   }
-  ]
+  }
  },
  "cleared_by": "claude-code",
  "claude_code": [
@@ -456,6 +456,68 @@
     "rewrites": 0
    },
    "after": "7122bc2462fea4b8"
+  }
+ ],
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "diagram",
+   "brief": "A net of a cube made of 6 squares in a cross shape, next to the folded cube.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/cube-net-cross-and-cube.svg",
+     "alt": "On the left, a net of a cube: 6 squares in a cross shape, a column of 4 squares with one more square on each side of the second. An arrow labelled folds points to a cube on the right, drawn in 3D with its hidden edges dashed."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:48Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:42Z"
+  },
+  {
+   "want": 2,
+   "at": "card 3",
+   "kind": "diagram",
+   "brief": "An isometric drawing on dot paper of a box 2 cubes wide, 1 cube deep and 3 cubes high, showing the front, side and top faces, with vertical edges drawn as vertical lines.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/isometric-box-2-wide-1-deep-3-high.svg",
+     "alt": "An isometric drawing on dot paper of a box made of cubes, 2 cubes wide, 1 cube deep and 3 cubes high. Three faces show at once: the front face is 2 cubes wide and 3 high, the side face is 1 cube deep and 3 high, and the top face is 2 by 1. The vertical edges are drawn as vertical lines."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:48Z",
+   "status": "kept",
+   "check": {
+    "want": 2,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:42Z"
   }
  ]
 }

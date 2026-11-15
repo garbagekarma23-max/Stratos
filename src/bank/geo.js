@@ -7361,6 +7361,13 @@ MADE_BANKS.geo = {
         "runoff is water flowing over the land surface towards rivers, lakes and the sea. Infiltration is water soaking down into the soil and rock."
       ]
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/water-cycle-six-processes-v2.svg",
+        "alt": "A side view of the water cycle. On the left is the ocean, then a river, then land rising to a hill with soil under it and a leafy tree on top. Arrows show evaporation rising from the ocean and the river, the vapour rising on into a cloud as condensation, transpiration rising from the tree's leaves, precipitation falling as rain from the cloud onto the hill, runoff flowing over the land surface down to the river, and infiltration soaking down into the soil."
+      }
+    },
     "remember": "Water keeps moving: up as vapour, down as precipitation, then across or into the land.",
     "a": {
       "q": "On a warm day, water vapour rises from a dam, cools high in the air and forms clouds. Which two processes are these, in order?",
@@ -7501,6 +7508,13 @@ MADE_BANKS.geo = {
         "a river that flows across northern India and is sacred to Hindus. People bathe in it and hold ceremonies on its banks, so its value is spiritual as well as practical."
       ]
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "image",
+        "src": "pictures/images/fisher-boat-mekong-river-laos.jpg",
+        "alt": "A photo of the wide Mekong River in southern Laos on a sunny afternoon. A fisher stands on a long, narrow wooden boat in the middle of the river, with other small boats moored by tree-lined banks and islands."
+      }
+    },
     "remember": "In Asia, water supports food, fishing and faith: monsoon rice, the Mekong's fish and the sacred Ganges.",
     "a": {
       "q": "Why do many rice farmers in South and South-East Asia depend on the monsoon?",
@@ -7534,6 +7548,13 @@ MADE_BANKS.geo = {
       "Groundwater is water stored in the soil and rock under the ground. Large stores of it lie under the inland.",
       "The Great Artesian Basin is one of these stores. It lies under parts of Queensland, South Australia, New South Wales and the Northern Territory."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/australia-yearly-rainfall-bands.svg",
+        "alt": "A map of Australia and Tasmania shaded by average yearly rainfall, with a legend reading wet, moderate, dry and arid. The north coast, the east coast, the far south-west corner and western Tasmania are wet, with moderate bands inland of them and over the rest of Tasmania. Much of the inland is dry or arid, with a large arid area across the centre and west."
+      }
+    },
     "remember": "Australia's water is unevenly spread: wet coasts in the north, east and Tasmania, a dry inland with groundwater below.",
     "a": {
       "q": "Why is Australia's water described as unevenly spread?",
@@ -8242,6 +8263,13 @@ MADE_BANKS.geo = {
         "a large, raised, flat area covering most of the west. It is the biggest of the three regions."
       ]
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/australia-three-landform-regions.svg",
+        "alt": "A map of Australia showing three landform regions. The Great Dividing Range is a band down the east coast, from Cape York to Victoria. The Central Lowlands lie in the middle, west of the range, and the Western Plateau covers most of the west. Tasmania is drawn but not shaded."
+      }
+    },
     "remember": "Australia is old, low and flat. Highlands lie in the east, lowlands in the middle and a plateau across the west.",
     "a": {
       "q": "Most of Australia is low and flat. What is the main reason for this?",
@@ -8400,6 +8428,13 @@ MADE_BANKS.geo = {
       ],
       "The shape of a river's landforms depends on where along its path they form. Steep land near the source cuts down, and gentler land further on bends, spreads and builds."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/river-landforms-source-to-mouth.svg",
+        "alt": "A river from source to mouth in three parts. Near the source: a V-shaped valley seen end on, with the river at the bottom of the V, and a waterfall where the river drops over a step in the land. Middle course, seen from above: the river swings from side to side in meanders, and further on a curved oxbow lake lies cut off beside the river. Near the mouth, seen from above: a flat floodplain beside the river, and a delta where the river splits into channels and spreads out into the sea."
+      }
+    },
     "remember": "Near the source rivers cut down. Further on they bend. Near the mouth they slow and build.",
     "a": {
       "q": "Which landform is a river most likely to build where it slows down near the sea?",
@@ -8540,6 +8575,13 @@ MADE_BANKS.geo = {
       ],
       "Hard structures can protect one place but move erosion elsewhere. A groyne traps sand, so the beach further along the coast may get less sand and wear away faster."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/sea-wall-and-groyne-trapping-sand.svg",
+        "alt": "Two views of a coast. Seen from above: land at the top, then a sandy beach, then the sea, with waves arriving at an angle. An arrow along the beach shows the direction sand moves, from left to right. A groyne is built from the beach out into the sea, and sand has built up on the side it comes from, so the beach is wide on that side and narrow on the other. Seen from the side: the land ends at a sea wall along the shore, and waves move towards the wall."
+      }
+    },
     "remember": "Hard engineering builds structures and can shift erosion elsewhere. Soft approaches work with natural processes.",
     "a": {
       "q": "Which of these is a soft approach to managing a coast?",
@@ -9304,6 +9346,18 @@ MADE_BANKS.geo = {
         "measures how far a place is east or west of the prime meridian, in degrees. The prime meridian is 0° and runs through Greenwich in London. Latitude is given first, then longitude: Melbourne is about 38° S, 145° E."
       ]
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/four-and-six-figure-grid-references.svg",
+        "alt": "A map grid with eastings 31 to 35 numbered left to right along the bottom and northings 66 to 69 numbered bottom to top up the side. The square whose bottom-left corner is where easting 32 and northing 67 meet is shaded and labelled 3267, with those two lines marked. A dot in another square is labelled 345 683, half way from easting 34 to 35 and three tenths of the way from northing 68 to 69, with tenths marked on the square's edges. Under the grid: area reference 3267 is easting 32, northing 67; grid reference 345 683 is easting 34.5, northing 68.3."
+      },
+      "4": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/latitude-and-longitude-lines-globes.svg",
+        "alt": "Two globes. The first, Latitude, has the equator across the middle marked 0°, with lines of latitude above and below it labelled 30° N and 60° N, and 30° S and 60° S, and the poles marked 90° N and 90° S. The second, Longitude, has the prime meridian from pole to pole marked 0°, with lines of longitude on either side labelled 30° W and 30° E, and West and East marked on each side."
+      }
+    },
     "remember": "Grid references give eastings then northings. Latitude and longitude give degrees north or south, then east or west.",
     "a": {
       "q": "Jai is given the area reference 4552 on a topographic map. Which two grid lines meet at the bottom-left corner of that square?",
@@ -9493,6 +9547,13 @@ MADE_BANKS.geo = {
         "deserts are common around 30 degrees north and south, where rainfall is low. Tundra lies near the poles, where it is very cold."
       ]
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/world-biome-bands-by-latitude.svg",
+        "alt": "A world map with lines at the North Pole (90°N), 30°N, the equator, 30°S and the South Pole (90°S). Tundra lies in a band in the far north. Deserts lie in bands around 30°N and 30°S, such as the Sahara, Arabia, southern Africa and central Australia. Tropical rainforest lies in a band along the equator, in South America, central Africa and South-East Asia."
+      }
+    },
     "remember": "Temperature and rainfall change with latitude, so biomes form bands from the equator to the poles.",
     "a": {
       "q": "Why do biomes form bands by latitude?",

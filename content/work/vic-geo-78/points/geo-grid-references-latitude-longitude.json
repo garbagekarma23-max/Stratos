@@ -20,7 +20,9 @@
   "2026-11-12T15:26:00Z write: done",
   "2026-11-12T15:35:06Z check: flagged",
   "2026-11-12T15:59:42Z fix: suggested",
-  "2026-11-12T17:07:11Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-12T17:07:11Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-15T16:10:38Z pictures: 2 pictures waiting for the check",
+  "2026-11-15T16:19:31Z pictures: 2 pictures kept"
  ],
  "sent": {
   "match": 1,
@@ -248,6 +250,18 @@
     "measures how far a place is east or west of the prime meridian, in degrees. The prime meridian is 0° and runs through Greenwich in London. Latitude is given first, then longitude: Melbourne is about 38° S, 145° E."
    ]
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/four-and-six-figure-grid-references.svg",
+    "alt": "A map grid with eastings 31 to 35 numbered left to right along the bottom and northings 66 to 69 numbered bottom to top up the side. The square whose bottom-left corner is where easting 32 and northing 67 meet is shaded and labelled 3267, with those two lines marked. A dot in another square is labelled 345 683, half way from easting 34 to 35 and three tenths of the way from northing 68 to 69, with tenths marked on the square's edges. Under the grid: area reference 3267 is easting 32, northing 67; grid reference 345 683 is easting 34.5, northing 68.3."
+   },
+   "4": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/latitude-and-longitude-lines-globes.svg",
+    "alt": "Two globes. The first, Latitude, has the equator across the middle marked 0°, with lines of latitude above and below it labelled 30° N and 60° N, and 30° S and 60° S, and the poles marked 90° N and 90° S. The second, Longitude, has the prime meridian from pole to pole marked 0°, with lines of longitude on either side labelled 30° W and 30° E, and West and East marked on each side."
+   }
+  },
   "remember": "Grid references give eastings then northings. Latitude and longitude give degrees north or south, then east or west.",
   "a": {
    "q": "Jai is given the area reference 4552 on a topographic map. Which two grid lines meet at the bottom-left corner of that square?",
@@ -271,21 +285,69 @@
    ],
    "why": "S means south of the equator, and E means east of the prime meridian. The first number is latitude and the second is longitude, so 34° S is the latitude and 151° E is the longitude.",
    "clue": "S and E tell you the direction from the equator and the prime meridian."
-  },
-  "wants": [
-   {
-    "at": "card 2",
-    "kind": "diagram",
-    "brief": "A simple map grid with vertical eastings lines numbered left to right and horizontal northings lines numbered bottom to top. One grid square is shaded and labelled as an area reference, with the lines at its bottom-left corner marked. A dot inside another square shows a point, with the eastings digits and northings digits marked beside it.",
-    "why": "It shows how eastings come before northings and how the third digit locates a point inside a square."
-   },
-   {
-    "at": "card 4",
-    "kind": "diagram",
-    "brief": "A globe or world map with the equator marked as 0° latitude, the prime meridian marked as 0° longitude, and lines of latitude labelled north and south and lines of longitude labelled east and west.",
-    "why": "It lets a student see which lines measure latitude and which measure longitude."
-   }
-  ]
+  }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "diagram",
+   "brief": "A simple map grid with vertical eastings lines numbered left to right and horizontal northings lines numbered bottom to top. One grid square is shaded and labelled as an area reference, with the lines at its bottom-left corner marked. A dot inside another square shows a point, with the eastings digits and northings digits marked beside it.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/four-and-six-figure-grid-references.svg",
+     "alt": "A map grid with eastings 31 to 35 numbered left to right along the bottom and northings 66 to 69 numbered bottom to top up the side. The square whose bottom-left corner is where easting 32 and northing 67 meet is shaded and labelled 3267, with those two lines marked. A dot in another square is labelled 345 683, half way from easting 34 to 35 and three tenths of the way from northing 68 to 69, with tenths marked on the square's edges. Under the grid: area reference 3267 is easting 32, northing 67; grid reference 345 683 is easting 34.5, northing 68.3."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:37Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:31Z"
+  },
+  {
+   "want": 2,
+   "at": "card 4",
+   "kind": "diagram",
+   "brief": "A globe or world map with the equator marked as 0° latitude, the prime meridian marked as 0° longitude, and lines of latitude labelled north and south and lines of longitude labelled east and west.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/latitude-and-longitude-lines-globes.svg",
+     "alt": "Two globes. The first, Latitude, has the equator across the middle marked 0°, with lines of latitude above and below it labelled 30° N and 60° N, and 30° S and 60° S, and the poles marked 90° N and 90° S. The second, Longitude, has the prime meridian from pole to pole marked 0°, with lines of longitude on either side labelled 30° W and 30° E, and West and East marked on each side."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:37Z",
+   "status": "kept",
+   "check": {
+    "want": 2,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:31Z"
+  }
+ ]
 }

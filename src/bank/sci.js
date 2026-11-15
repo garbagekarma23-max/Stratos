@@ -5513,6 +5513,13 @@ MADE_BANKS.sci = {
         "Ribosomes make proteins. Cytoplasm is the jelly-like fluid that holds all the organelles."
       ]
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/cell-organelles-labelled.svg",
+        "alt": "A cell with its parts labelled: the cell membrane as the thin outer layer, the nucleus as a large round part near the middle, mitochondria as small bean shapes with folded insides, ribosomes as tiny dots, and the cytoplasm filling the space between them."
+      }
+    },
     "remember": "Organelles are small parts inside a cell, and each one has its own job.",
     "a": {
       "q": "Which part of a cell releases energy for the cell to use?",
@@ -5553,6 +5560,13 @@ MADE_BANKS.sci = {
         "A mature plant cell has a large vacuole filled with fluid. It stores water and other substances. Animal cells lack a large vacuole like this."
       ]
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/plant-and-animal-cells-side-by-side.svg",
+        "alt": "A plant cell on the left and an animal cell on the right, with labels between them. Cell membrane, nucleus, mitochondria and cytoplasm point to both cells. Cell wall, chloroplasts and large vacuole point only to the plant cell, which has a stiff wall outside its membrane, chloroplasts and a large vacuole filling most of the cell."
+      }
+    },
     "remember": "Plant cells add a cell wall to the shared parts. Many also have chloroplasts and a large vacuole.",
     "a": {
       "q": "Which structure is found in plant cells but not in animal cells?",
@@ -5584,6 +5598,13 @@ MADE_BANKS.sci = {
       ],
       "A group of similar cells doing the same job is a tissue. Different tissues working together make an organ, such as the heart. Organs working together make an organ system, such as the circulatory system."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/nerve-cell-and-root-hair-cell.svg",
+        "alt": "Two cells side by side. The nerve cell is long and thin, with a branched end at each end. The root hair cell has a thin extension that reaches out from the cell between the particles of soil."
+      }
+    },
     "remember": "Cells make tissues, tissues make organs, organs make systems, and a cell's shape suits its job.",
     "a": {
       "q": "Which list shows the levels of organisation in order, from smallest to largest?",
@@ -5620,6 +5641,13 @@ MADE_BANKS.sci = {
       "Both have a large surface for gases to cross. A leaf is flat and thin. The lungs hold millions of alveoli.",
       "Both surfaces are also very thin, so gases only have a short distance to travel."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/gas-exchange-leaf-and-alveoli.svg",
+        "alt": "Top: a leaf cut across, thin and flat, with a stoma on its underside and an arrow showing carbon dioxide entering through it. Bottom: air coming in to a cluster of alveoli, with an arrow showing oxygen passing from an alveolus into a blood vessel beside them."
+      }
+    },
     "remember": "Stomata and alveoli let gases cross a large, thin surface.",
     "a": {
       "q": "A leaf takes in one gas to make sugars. A lung takes in one gas that passes into the blood. Which pair is right?",
@@ -5715,6 +5743,13 @@ MADE_BANKS.sci = {
       "So each level up has only about a tenth of the energy of the level below. The pyramid gets narrower towards the top.",
       "Little energy is left at the top, so there is only enough for a few top feeders. This is why food chains are short, often with four or five levels at most."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/energy-pyramid-four-levels.svg",
+        "alt": "An energy pyramid of four stacked layers, widest at the bottom and narrowest at the top. From the bottom up: producers, animals that eat producers, animals that eat those, and top feeders. An arrow up the side is labelled less energy."
+      }
+    },
     "remember": "About a tenth of the energy passes up each level, so the pyramid narrows and food chains stay short.",
     "a": {
       "q": "Why does an energy pyramid get narrower towards the top?",
@@ -5794,6 +5829,13 @@ MADE_BANKS.sci = {
         "the particles are far apart and move freely in all directions. The attraction between them is very weak, so a gas spreads out to fill its container and can be squashed into a smaller space."
       ]
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/particles-in-solid-liquid-gas-v2.svg",
+        "alt": "Three boxes of particles, all the same size. Solid: particles packed closely in rows. Liquid: particles close together but not in a pattern, filling the bottom of the box. Gas: a few particles far apart, each with an arrow showing it moving in a different direction."
+      }
+    },
     "remember": "Particles are always moving. Packing and freedom to move decide whether matter is a solid, liquid or gas.",
     "a": {
       "q": "Why can a gas be squashed into a smaller volume, while a solid cannot?",
@@ -6027,6 +6069,13 @@ MADE_BANKS.sci = {
       ],
       "Evaporation keeps the solid and loses the liquid. Distillation keeps the liquid, and the solid stays behind in the flask."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/distillation-set-up-v2.svg",
+        "alt": "A flask of solution sits on a heat source, and a note says the solid stays here. Arrows show the gas moving from the flask along a tube through the condenser, a cooled tube with water flowing in at its lower end and out at its upper end. The tube ends over a beaker that collects the pure liquid."
+      }
+    },
     "remember": "Evaporation keeps the dissolved solid. Distillation collects the liquid.",
     "a": {
       "q": "Kai heats salty water in a dish until all the water has gone. What is left in the dish?",
@@ -6060,6 +6109,13 @@ MADE_BANKS.sci = {
       "The solvent soaks up the paper and carries the substances in the spot with it. Each substance travels a different distance, so the substances end up as separate spots at different heights.",
       "A substance that moves a long way is carried easily by the solvent. A substance that moves only a short way is carried less easily. If an ink leaves two spots, it contains at least two dyes."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/paper-chromatography-before-after.svg",
+        "alt": "Two beakers. Before: a strip of paper hangs with its bottom edge in the solvent and a start spot of ink on a line just above the solvent. After: the solvent has soaked up the paper, the start line is empty, and three separated spots of different shades sit at different heights."
+      }
+    },
     "remember": "Chromatography separates dissolved substances because each one travels a different distance up the paper.",
     "a": {
       "q": "Why does chromatography separate the dyes in a black ink?",
@@ -6352,6 +6408,13 @@ MADE_BANKS.sci = {
       ["Cores", "The outer core is liquid metal. The inner core is solid metal and is the hottest, deepest layer."],
       "The crust and upper mantle are broken into large pieces called plates. Hot mantle rock circulates slowly beneath them, and the plates move by a few centimetres a year."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/earth-four-layers-cross-section.svg",
+        "alt": "Earth cut through the middle, showing four layers from the outside in: the crust, a thin outer layer; the mantle, a thick layer; the outer core, which is liquid; and the inner core at the centre, which is solid."
+      }
+    },
     "remember": "Earth has four layers, and the broken crust and upper mantle form plates that move slowly.",
     "a": {
       "q": "Which list gives Earth's layers in order from the surface to the centre?",
@@ -6394,6 +6457,13 @@ MADE_BANKS.sci = {
       ],
       "At a divergent boundary crust is made. At a convergent boundary crust is pushed down or folded up."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/divergent-and-convergent-boundaries.svg",
+        "alt": "Three cross-sections. Divergent: two plates move apart, with arrows pointing away from each other, hot rock rises from the mantle into the gap, and new crust forms at a mid-ocean ridge. Convergent: two plates push together, and one plate sinks beneath the other into the mantle. Convergent: two plates push together and the crust crumples up into mountains."
+      }
+    },
     "remember": "Apart: new crust forms. Together: one plate sinks or the crust crumples into mountains.",
     "a": {
       "q": "Two plates are moving apart under the ocean, and hot rock rises into the gap. What happens to the rock that rises?",
@@ -6427,6 +6497,13 @@ MADE_BANKS.sci = {
       "When the stress becomes too great, the rock slips suddenly. The stored energy is released as shaking, which is an earthquake.",
       "The San Andreas Fault in California is a transform boundary. The Pacific Plate and North American Plate slide past each other there."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/transform-boundary-top-view.svg",
+        "alt": "Two plates seen from above, meeting along a straight line labelled transform boundary. Plate A, on the left, has an arrow pointing up the page, and Plate B, on the right, has an arrow pointing down the page, so they slide past each other sideways."
+      }
+    },
     "remember": "Plates sliding past each other lock, build up stress, then slip suddenly as an earthquake.",
     "a": {
       "q": "Why do earthquakes happen along a transform boundary?",
@@ -6469,6 +6546,13 @@ MADE_BANKS.sci = {
         "rock beside a mid-ocean ridge is young and gets older with distance from the ridge, so new crust forms there and spreads out. This evidence led scientists to replace continental drift with plate tectonics."
       ]
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/south-america-africa-fit-fossils.svg",
+        "alt": "South America and Africa placed so that South America's east coast fits against Africa's west coast like jigsaw pieces. A shaded band labelled Fossils crosses the south of both continents and lines up across the join."
+      }
+    },
     "remember": "Matching coastlines, shared fossils and young rock at ridges all fit moving plates, so plate tectonics replaced continental drift.",
     "a": {
       "q": "Fossils of the same land plant are found in South America and Africa. Which idea does this best support?",
@@ -6705,6 +6789,13 @@ MADE_BANKS.sci = {
       ["Second class", "the load is between the fulcrum and the effort, as in a wheelbarrow."],
       ["Third class", "the effort is between the fulcrum and the load, as in tweezers."]
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/lever-classes-fulcrum-effort-load.svg",
+        "alt": "Three lever bars, one above the other. First class (seesaw): the fulcrum is in the middle, with the effort pushing down at one end and the load at the other end. Second class (wheelbarrow): the fulcrum is at one end, the load in the middle and the effort pushing up at the other end. Third class (tweezers): the fulcrum is at one end, the effort pushing up in the middle and the load at the other end."
+      }
+    },
     "remember": "The class of a lever depends on which of the three parts sits in the middle.",
     "a": {
       "q": "A nutcracker has its hinge at one end, the nut in the middle and your hand at the other end. Which part is in the middle?",
@@ -6747,6 +6838,13 @@ MADE_BANKS.sci = {
       ],
       "A gentler slope needs less force but a longer path. The load ends up at the same height either way."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/long-ramp-wrapped-into-screw-thread-v2.svg",
+        "alt": "At the top, a long, shallow right-angled triangle whose sloping edge is labelled ramp. An arrow labelled wrap around a rod points down to a rod, with the same gentle slope wound around it four times in a spiral, labelled screw thread."
+      }
+    },
     "remember": "Ramps, wedges and screws trade a longer path for less force.",
     "a": {
       "q": "Why is it easier to push a box up a long ramp than to lift it straight up onto a truck?",
@@ -6789,6 +6887,13 @@ MADE_BANKS.sci = {
       ],
       "A doorknob is a wheel and axle. You turn the wide knob with a small force, and the thin axle turns the latch with a bigger force. Turning the wheel moves its rim through a longer distance than the axle moves."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/fixed-and-moving-pulleys-effort-load.svg",
+        "alt": "Left: one fixed pulley hangs from a beam, with a rope over it, a load on one side and the effort pulling down on the other. Right: two pulleys, a fixed pulley on the beam and a moving pulley that holds the load. The rope runs from the beam down under the moving pulley, up over the fixed pulley and down to the effort, so two rope sections, numbered 1 and 2, hold the load."
+      }
+    },
     "remember": "A fixed pulley changes direction. More pulleys cut the effort. A wheel and axle makes a small force larger.",
     "a": {
       "q": "Kai hoists a flag up a pole by pulling down on a rope that runs over a single fixed pulley at the top. What does the pulley do?",
@@ -6861,6 +6966,13 @@ MADE_BANKS.sci = {
       "Forces that act in opposite directions work against each other. Forces that act the same way add together.",
       "The overall force is what is left after all the forces are combined. It points the way the bigger force acts. If the arrows are equal and opposite, there is no overall force."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/push-friction-overall-force-box.svg",
+        "alt": "A box on a flat surface. A long arrow labelled push starts on the box and points right. A shorter arrow labelled friction starts on the box and points left. Drawn separately below, a shorter arrow pointing right is labelled overall force; its length is the push arrow less the friction arrow."
+      }
+    },
     "remember": "Arrow direction shows which way a force acts, arrow length shows its size, and together they give the overall force.",
     "a": {
       "q": "On a force diagram, what does a longer arrow show?",
@@ -7144,6 +7256,13 @@ MADE_BANKS.sci = {
         "Circuits are drawn with standard symbols so that everyone can read them. A cell or battery, a globe, a switch and connecting wires each have their own symbol."
       ]
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/closed-circuit-cell-switch-globe.svg",
+        "alt": "A circuit diagram of one complete loop drawn with standard symbols: a cell, with its long line marked plus and its short thick line marked minus, a closed switch, a globe drawn as a circle with a cross, and connecting wires. Each symbol is labelled."
+      }
+    },
     "remember": "Current is the flow of charge, in amps. Voltage is the push, in volts.",
     "a": {
       "q": "Which pair correctly matches each quantity with its unit?",
@@ -7183,6 +7302,13 @@ MADE_BANKS.sci = {
       "In a series circuit, a break anywhere opens the one path, so every part stops working. If one globe in a string of series globes breaks, they all go out.",
       "In a parallel circuit, a break in one branch leaves the other branches closed. The globes on those branches keep working. This is one reason houses are wired with parallel circuits."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/series-and-parallel-three-globes.svg",
+        "alt": "Two circuit diagrams side by side. Left, the series circuit: a battery and three globes joined one after another in a single loop. Right, the parallel circuit: a battery with three globes, each on its own branch between the wire from one side of the battery and the wire from the other."
+      }
+    },
     "remember": "Series: one path, so one break stops every part. Parallel: separate paths, so the other parts keep working.",
     "a": {
       "q": "One globe in a circuit breaks and all the other globes go out. How must the globes be connected?",
@@ -7457,6 +7583,13 @@ MADE_BANKS.sci = {
       "Fertilisation is when a sperm cell and an egg cell join. The new cell has a full set of chromosomes.",
       "Each parent gives half of the offspring's chromosomes, so the offspring has a mix from both parents."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/sperm-egg-fertilisation.svg",
+        "alt": "A small sperm cell with a tail beside a much larger egg cell, which is filled with dots labelled food store. An arrow labelled fertilisation leads from both to a fertilised cell, whose nucleus is labelled half of the chromosomes from each parent."
+      }
+    },
     "remember": "Small swimming sperm meet a large egg with a food store, and each gives half the chromosomes.",
     "a": {
       "q": "Why is an egg cell much larger than a sperm cell?",
@@ -7496,6 +7629,13 @@ MADE_BANKS.sci = {
       ],
       "Each fertilised ovule becomes a seed. The ovary around the seeds grows into the fruit."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/flower-section-anther-stigma-ovary.svg",
+        "alt": "A cross-section of a flower. In the centre, the stigma sits on a stalk above the ovary, which holds ovules. On each side, a stamen rises with an anther at its tip, and petals spread out at the base. The stigma, anther, ovary and an ovule are labelled."
+      }
+    },
     "remember": "Pollen goes from anther to stigma, then fertilisation in the ovary makes seeds, and the ovary becomes the fruit.",
     "a": {
       "q": "After fertilisation in a flower, what does the ovary become?",
@@ -7529,6 +7669,13 @@ MADE_BANKS.sci = {
       "Neurons (nerve cells) carry fast electrical messages. A message passes from a receptor to the CNS, and then to an effector.",
       "An effector is a muscle or gland that carries out the response. A muscle may contract, and a gland may release a substance such as sweat."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/nervous-system-message-path.svg",
+        "alt": "A flow diagram from top to bottom: stimulus, then receptor (detects), then neurons carry the message to the central nervous system, the brain and spinal cord (processes), then neurons carry instructions to an effector, a muscle or gland (responds), then the response."
+      }
+    },
     "remember": "Receptor detects, neurons carry, CNS processes, effector responds.",
     "a": {
       "q": "Which part of the nervous system detects a stimulus?",
@@ -7557,6 +7704,13 @@ MADE_BANKS.sci = {
       "In many reflexes the message is passed on inside the spinal cord, without waiting for the brain. This makes the response quicker, which can protect the body from harm.",
       "The brain is told at about the same time, so you become aware of the event just after the response has begun."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/reflex-arc-spinal-cord.svg",
+        "alt": "A reflex arc. A receptor in the skin sends a message along a sensory neuron into the spinal cord. Inside the spinal cord the message is passed on to a motor neuron, which carries it out to a muscle, the effector. A short branch from the spinal cord points up, labelled to the brain."
+      }
+    },
     "remember": "A reflex is quick and automatic because the spinal cord can respond before the brain is aware.",
     "a": {
       "q": "Why can a reflex such as pulling a hand off a hot pan be so fast?",
@@ -7814,6 +7968,13 @@ MADE_BANKS.sci = {
       "Fossils in the oldest layers are mostly simple organisms. Fossils in younger layers include more varied organisms, and many look more like living species.",
       "This order shows that life has changed over millions of years. Fossils of intermediate forms, with features of two groups, show how one kind of organism could change into another."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/rock-layers-fossils-oldest-youngest.svg",
+        "alt": "A cross-section of sedimentary rock in three layers. The bottom layer, labelled oldest, holds a simple organism. The middle layer holds more varied fossils, a shell and a coiled shell. The top layer, labelled youngest, holds a fish skeleton, like a living species."
+      }
+    },
     "remember": "Rock layers give an order in time, and fossils in that order show how life has changed.",
     "a": {
       "q": "What does the order of fossils in rock layers show about life on Earth?",
@@ -8557,6 +8718,13 @@ MADE_BANKS.sci = {
       "Each type has uses. Radio waves carry broadcasts, microwaves heat food and carry phone signals, infrared is used in remote controls and heat cameras, and X-rays show bones.",
       "Each type has dangers. Ultraviolet can burn skin and damage cells. X-rays and gamma rays carry the most energy and can damage cells, so exposure is kept low and controlled."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/electromagnetic-spectrum-order.svg",
+        "alt": "A bar split into seven sections, from left to right: radio waves, microwaves, infrared, visible light, ultraviolet, X-rays and gamma rays. An arrow above the bar points right, labelled shorter wavelength, higher frequency, more energy."
+      }
+    },
     "remember": "Shorter wavelength means higher frequency and more energy. Uses and dangers differ by type.",
     "a": {
       "q": "Which list puts these waves in order from longest wavelength to shortest?",
@@ -8629,6 +8797,13 @@ MADE_BANKS.sci = {
       "A generator is built this way. A shaft spins the magnet or the coil, so the kinetic energy of the spinning part is transformed into electrical energy.",
       "In a power station, the shaft is turned by a turbine, a wheel with blades that spins when a moving fluid pushes on it. The turbine is joined to the generator."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/generator-magnet-shaft-wide-coil-lamp-v2.svg",
+        "alt": "A simple generator. A short bar magnet, north pole at the top and south pole at the bottom, is fixed to a shaft and spins inside a wide coil of wire, with turns above and below it. A curved arrow shows the shaft turning. The two ends of the coil are joined to a lamp in a complete circuit. The magnet, coil, shaft and lamp are labelled."
+      }
+    },
     "remember": "Spin a magnet and a coil past each other to induce an alternating current. Power stations use a turbine to do the spinning.",
     "a": {
       "q": "A student spins a magnet inside a coil that is joined to a small lamp in a complete circuit. What makes the current in the coil?",

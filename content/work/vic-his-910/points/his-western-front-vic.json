@@ -20,7 +20,9 @@
   "2026-11-12T15:26:03Z write: done",
   "2026-11-12T15:35:08Z check: flagged",
   "2026-11-12T15:42:24Z fix: suggested",
-  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-15T16:10:42Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:34Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -212,6 +214,13 @@
    "Machine guns could fire on troops crossing open ground, and artillery shelled trenches for days. Attackers were often cut down before they reached the enemy line.",
    "The losses were huge. At Fromelles and Pozières thousands of Australians were killed or wounded in a short time, and living conditions in the trenches were also very hard."
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/western-front-trenches-no-mans-land.svg",
+    "alt": "A side view of the Western Front. On the left is the Allied trench and on the right the German trench, each a deep cut in the ground with sandbags and barbed wire in front of it. The open ground between them, with shell holes, is labelled No man's land."
+   }
+  },
   "remember": "On the Western Front, machine guns and artillery made attacks across open ground extremely costly.",
   "a": {
    "q": "Why were attacks across no man's land so costly for Australian troops in 1916?",
@@ -235,15 +244,39 @@
    ],
    "why": "Fromelles and Pozières were both Western Front battles in northern France in 1916. The 1915 options mix them up with Gallipoli, which Australians had left before they reached the Western Front.",
    "clue": "Australians reached the Western Front after leaving Gallipoli."
-  },
-  "wants": [
-   {
-    "at": "card 1",
-    "kind": "diagram",
-    "brief": "A simple side view of the Western Front: two opposing lines of trenches labelled 'Allied trench' and 'German trench', with the ground between them labelled 'no man's land'.",
-    "why": "It shows what trenches and no man's land looked like, so the student can see why crossing open ground was dangerous."
-   }
-  ]
+  }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "diagram",
+   "brief": "A simple side view of the Western Front: two opposing lines of trenches labelled 'Allied trench' and 'German trench', with the ground between them labelled 'no man's land'.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/western-front-trenches-no-mans-land.svg",
+     "alt": "A side view of the Western Front. On the left is the Allied trench and on the right the German trench, each a deep cut in the ground with sandbags and barbed wire in front of it. The open ground between them, with shell holes, is labelled No man's land."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:42Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:34Z"
+  }
+ ]
 }

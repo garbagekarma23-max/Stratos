@@ -36,7 +36,9 @@
   "2026-11-13T06:06:33Z autoreject: rejected, to be written again (a wording, a other)",
   "2026-11-13T09:32:53Z claude-code write: done, waiting for the Claude Code check",
   "2026-11-13T10:40:35Z claude-code check: answered by a separate subagent",
-  "2026-11-13T10:40:35Z check: passed, cleared"
+  "2026-11-13T10:40:35Z check: passed, cleared",
+  "2026-11-15T16:10:38Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:32Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -431,6 +433,13 @@
     "deserts are common around 30 degrees north and south, where rainfall is low. Tundra lies near the poles, where it is very cold."
    ]
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/world-biome-bands-by-latitude.svg",
+    "alt": "A world map with lines at the North Pole (90°N), 30°N, the equator, 30°S and the South Pole (90°S). Tundra lies in a band in the far north. Deserts lie in bands around 30°N and 30°S, such as the Sahara, Arabia, southern Africa and central Australia. Tropical rainforest lies in a band along the equator, in South America, central Africa and South-East Asia."
+   }
+  },
   "remember": "Temperature and rainfall change with latitude, so biomes form bands from the equator to the poles.",
   "a": {
    "q": "Why do biomes form bands by latitude?",
@@ -454,15 +463,39 @@
    ],
    "why": "Deserts are common around 30 degrees north and south because rainfall there is low. Desert with the reason very cold is tempting, but cold is what makes tundra near the poles, not deserts at 30 degrees.",
    "clue": "Check both the biome and the reason the card gives for it."
-  },
-  "wants": [
-   {
-    "at": "card 2",
-    "kind": "diagram",
-    "brief": "A simple world map with latitude lines at the equator, 30 degrees north and south, and the poles. Horizontal bands are labelled: tundra near the poles, deserts around 30 degrees north and south, tropical rainforest along the equator.",
-    "why": "Seeing the bands on a map shows how biomes line up with latitude."
-   }
-  ]
+  }
  },
- "checked_by": "claude-code"
+ "checked_by": "claude-code",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "diagram",
+   "brief": "A simple world map with latitude lines at the equator, 30 degrees north and south, and the poles. Horizontal bands are labelled: tundra near the poles, deserts around 30 degrees north and south, tropical rainforest along the equator.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/world-biome-bands-by-latitude.svg",
+     "alt": "A world map with lines at the North Pole (90°N), 30°N, the equator, 30°S and the South Pole (90°S). Tundra lies in a band in the far north. Deserts lie in bands around 30°N and 30°S, such as the Sahara, Arabia, southern Africa and central Australia. Tropical rainforest lies in a band along the equator, in South America, central Africa and South-East Asia."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:38Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:31Z"
+  }
+ ]
 }

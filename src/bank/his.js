@@ -5303,6 +5303,13 @@ MADE_BANKS.his = {
       "Our evidence comes from bones, stone tools and the remains of camps. Scientists also study the DNA of people today and of ancient remains.",
       "Historians and scientists still debate the routes and the timing. New finds can change what they think."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/out-of-africa-human-migration-map.svg",
+        "alt": "A world map. A dot in East Africa marks where Homo sapiens first lived, and arrows spread out from Africa to Europe and to Asia, then from Asia to Australia, and from Asia across to North America and on to South America. A note says routes and dates are approximate and still debated."
+      }
+    },
     "remember": "Humans began in Africa and spread out over a very long time. The routes and dates are still debated.",
     "a": {
       "q": "Where did modern humans, Homo sapiens, first live?",
@@ -5418,6 +5425,13 @@ MADE_BANKS.his = {
         "to protect sites and objects from damage and decay, so the evidence is kept for people in the future."
       ]
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/excavation-soil-layers-older-newer.svg",
+        "alt": "A cross-section of an excavation site, with four soil layers stacked under the ground surface. A piece of pottery lies in the second layer, a bone in the third and a stone tool in the deepest layer. An arrow beside the layers points down from Newer, at the top layer, to Older, at the deepest layer."
+      }
+    },
     "remember": "Archaeologists dig, study and date finds, and conserve them so the evidence lasts.",
     "a": {
       "q": "At a dig, an archaeologist finds a coin in a deep layer and a clay pot in a layer above it. What does this suggest?",
@@ -5733,6 +5747,13 @@ MADE_BANKS.his = {
       "She built and restored many temples. The best known is her mortuary temple at Deir el-Bahari, which shows the Punt expedition on its walls.",
       "Later, many of her statues were broken and her name was chiselled off monuments. Historians think later rulers tried to erase her from the record, but they did not fully succeed."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "image",
+        "src": "pictures/images/hatshepsut-temple-deir-el-bahari.jpg",
+        "alt": "A photo of Hatshepsut's mortuary temple at Deir el-Bahari: two terraces, one above the other, each fronted by a long row of square columns, with standing statues along the upper row and a ramp up the middle, built against a steep cliff."
+      }
+    },
     "remember": "Hatshepsut ruled as pharaoh, traded with Punt and built temples, yet later rulers tried to erase her name.",
     "a": {
       "q": "What was the main result of Hatshepsut's expedition to Punt?",
@@ -5778,6 +5799,13 @@ MADE_BANKS.his = {
         "For centuries no one could read hieroglyphs. The Rosetta Stone has the same text in three scripts, including Greek, which scholars could read. In the 1820s Jean-François Champollion used it to decode hieroglyphs, opening Egypt's records to historians."
       ]
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "image",
+        "src": "pictures/images/rosetta-stone-british-museum.jpg",
+        "alt": "A photo of the Rosetta Stone, a broken slab of dark grey stone on display in the British Museum. Its face is carved with three bands of writing: Egyptian hieroglyphs at the top, a faster everyday Egyptian script in the middle, and Greek at the bottom."
+      }
+    },
     "remember": "Egypt's writing, monuments, maths and medicine left evidence, and the Rosetta Stone let historians read it.",
     "a": {
       "q": "Why was the Rosetta Stone so useful for decoding hieroglyphs?",
@@ -5959,6 +5987,13 @@ MADE_BANKS.his = {
       "The Olympic Games began as a religious festival to honour Zeus. Athletes from many Greek city-states competed at Olympia, and a truce protected people travelling to and from the Games.",
       "Greece also left ideas that are still used. Philosophers such as Socrates and Plato asked how people should live and be governed. Greek theatre created tragedy and comedy. Many countries today use democracy, an idea first tried in Greece."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "image",
+        "src": "pictures/images/parthenon-acropolis-athens.jpg",
+        "alt": "A photo of the Parthenon on the Acropolis in Athens, taken in 1978: a long marble temple with rows of columns on every side, partly ruined, standing on the rocky hilltop under a blue sky."
+      }
+    },
     "remember": "Greeks honoured many gods at temples and festivals, and their ideas in philosophy, theatre and democracy are still used today.",
     "a": {
       "q": "Why were the Olympic Games held in ancient Greece?",
@@ -7110,6 +7145,13 @@ MADE_BANKS.his = {
       "Pressure from family, friends and the community pushed many men to join. Men who stayed home could be shamed for not going.",
       "Some Aboriginal men enlisted too, even though rules meant to keep them out of the forces were in place. Some were accepted anyway, and some were turned away."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "image",
+        "src": "pictures/images/australia-has-promised-britain-50000-more-men-1915.jpg",
+        "alt": "An Australian recruiting poster from 1915. A kangaroo stands in front of a large 50,000 and a line of charging soldiers, under the words: Australia has promised Britain 50,000 more men. Will YOU help us keep that promise?"
+      }
+    },
     "remember": "Men enlisted for many reasons: loyalty, adventure, pay and pressure. Some Aboriginal men joined despite the rules.",
     "a": {
       "q": "Tom's parents were born in England. In 1914 he joins up because he feels it is his own duty to help defend the land they came from. Which reason for enlisting is this?",
@@ -7171,6 +7213,13 @@ MADE_BANKS.his = {
       "Machine guns could fire on troops crossing open ground, and artillery shelled trenches for days. Attackers were often cut down before they reached the enemy line.",
       "The losses were huge. At Fromelles and Pozières thousands of Australians were killed or wounded in a short time, and living conditions in the trenches were also very hard."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/western-front-trenches-no-mans-land.svg",
+        "alt": "A side view of the Western Front. On the left is the Allied trench and on the right the German trench, each a deep cut in the ground with sandbags and barbed wire in front of it. The open ground between them, with shell holes, is labelled No man's land."
+      }
+    },
     "remember": "On the Western Front, machine guns and artillery made attacks across open ground extremely costly.",
     "a": {
       "q": "Why were attacks across no man's land so costly for Australian troops in 1916?",
@@ -7241,6 +7290,13 @@ MADE_BANKS.his = {
         "In July 1942 Japanese troops landed on Papua's north coast to cross the Owen Stanley Range by the Kokoda Track and take Port Moresby, a base close to northern Australia. Fighting in jungle and mud, Australians stopped them short of Port Moresby and from late September pushed them back over the range."
       ]
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/kokoda-track-papua-map-v2.svg",
+        "alt": "A map of eastern Papua and the tip of Cape York. Gona and Buna are on Papua's north coast, and Kokoda is inland from them, on the north side of the Owen Stanley Range, which is shown as a line of peaks along Papua. The Kokoda Track runs from Kokoda south over the range, between its peaks, to Port Moresby on the south coast. A few hundred kilometres across the Coral Sea is the tip of Cape York, labelled Australia. A scale bar shows 200 km."
+      }
+    },
     "remember": "Singapore's fall left thousands of Australians as prisoners of war. On the Kokoda Track, Australians stopped Japan short of Port Moresby.",
     "a": {
       "q": "How did thousands of Australian soldiers end up held by Japan early in 1942?",
@@ -7626,6 +7682,13 @@ MADE_BANKS.his = {
       "Japan's rulers knew that Western ships and guns were far stronger than their own. Fearing defeat, they gave in. In 1854 they signed a treaty opening some ports to American ships, and more treaties with other powers followed.",
       "The treaties ended Japan's isolation. Many Japanese were angry that the shogun had given way to foreign pressure, and this anger weakened his rule."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "image",
+        "src": "pictures/images/perry-black-ships-japanese-print-1854.jpg",
+        "alt": "A Japanese print from 1854 about Commodore Perry's visit. On the right is a large black American steamship with a paddlewheel, tall masts and billowing smoke, beside a drawing of an American crewman. On the left, a map of the bay shows a line of American warships off the Japanese coast, with Japanese writing above listing the lords who guarded the coast."
+      }
+    },
     "remember": "Perry's warships in 1853 pressured Japan into opening its ports, ending about two centuries of near isolation.",
     "a": {
       "q": "Why did Japan's rulers agree to open their ports after Perry arrived in 1853?",

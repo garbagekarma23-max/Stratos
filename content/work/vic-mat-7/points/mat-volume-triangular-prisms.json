@@ -26,7 +26,9 @@
   "2026-11-12T15:35:10Z write: done",
   "2026-11-12T15:42:24Z check: flagged",
   "2026-11-12T15:45:43Z fix: suggested",
-  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-15T16:10:48Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:41Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -228,6 +230,13 @@
     "A triangle has base 6 cm and height 4 cm, and the prism is 10 cm long. Triangle area: \\(\\frac{1}{2} \\times 6 \\times 4 = 12\\) cm\\(^{2}\\). Volume: \\(12 \\times 10 = 120\\) cm\\(^{3}\\)."
    ]
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/triangular-prism-cross-section-length.svg",
+    "alt": "A right triangular prism lying on one of its rectangular faces, with its hidden edges dashed. The front triangle end is shaded and labelled cross-section. Its base is labelled b, and a dashed line from its top corner down to the base, with a right-angle mark, is labelled h. An arrow along the bottom edge between the two triangle ends is labelled length."
+   }
+  },
   "remember": "Find the area of the triangle end first, then multiply by the length of the prism.",
   "a": {
    "q": "A triangular prism has a triangle end with base 8 cm and height 3 cm. The prism is 9 cm long. What is its volume?",
@@ -251,15 +260,39 @@
    ],
    "why": "The triangle area is \\(\\frac{1}{2} \\times 10 \\times 3 = 15\\) cm\\(^{2}\\). The volume is \\(15 \\times 12 = 180\\) cm\\(^{3}\\). The option of \\(360\\) cm\\(^{3}\\) comes from leaving out the half, \\(15\\) cm\\(^{3}\\) stops after the triangle area, and \\(25\\) cm\\(^{3}\\) adds the measurements instead of multiplying.",
    "clue": "The length of the prism is not part of the triangle."
-  },
-  "wants": [
-   {
-    "at": "card 1",
-    "kind": "diagram",
-    "brief": "A right triangular prism lying on one of its rectangular faces. One triangle end is shaded and labelled cross-section. The base b and the perpendicular height h of the triangle are marked with a right angle symbol. The distance between the two triangle ends is marked length.",
-    "why": "It shows which triangle is the cross-section and which measure is the length."
-   }
-  ]
+  }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "diagram",
+   "brief": "A right triangular prism lying on one of its rectangular faces. One triangle end is shaded and labelled cross-section. The base b and the perpendicular height h of the triangle are marked with a right angle symbol. The distance between the two triangle ends is marked length.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/triangular-prism-cross-section-length.svg",
+     "alt": "A right triangular prism lying on one of its rectangular faces, with its hidden edges dashed. The front triangle end is shaded and labelled cross-section. Its base is labelled b, and a dashed line from its top corner down to the base, with a right-angle mark, is labelled h. An arrow along the bottom edge between the two triangle ends is labelled length."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:47Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:41Z"
+  }
+ ]
 }

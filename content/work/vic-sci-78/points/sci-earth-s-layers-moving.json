@@ -32,7 +32,9 @@
   "2026-11-12T15:26:06Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-12T15:35:11Z write: failed the content check, writing again",
   "2026-11-12T15:42:26Z write: done",
-  "2026-11-12T15:45:43Z check: passed, cleared"
+  "2026-11-12T15:45:43Z check: passed, cleared",
+  "2026-11-15T16:10:51Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:46Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -142,6 +144,13 @@
    ],
    "The crust and upper mantle are broken into large pieces called plates. Hot mantle rock circulates slowly beneath them, and the plates move by a few centimetres a year."
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/earth-four-layers-cross-section.svg",
+    "alt": "Earth cut through the middle, showing four layers from the outside in: the crust, a thin outer layer; the mantle, a thick layer; the outer core, which is liquid; and the inner core at the centre, which is solid."
+   }
+  },
   "remember": "Earth has four layers, and the broken crust and upper mantle form plates that move slowly.",
   "a": {
    "q": "Which list gives Earth's layers in order from the surface to the centre?",
@@ -165,15 +174,39 @@
    ],
    "why": "The plates are the crust and upper mantle, and they move as hot mantle rock circulates slowly beneath them. The outer core is liquid, but it lies below the mantle and is not what the plates sit on.",
    "clue": "Which layer sits directly under the crust?"
-  },
-  "wants": [
-   {
-    "at": "card 1",
-    "kind": "diagram",
-    "brief": "A cutaway of Earth showing four labelled layers from the outside in: crust (thin), mantle (thick), outer core (liquid) and inner core (solid).",
-    "why": "Seeing the layers in order helps students remember their positions and relative thickness."
-   }
-  ]
+  }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "diagram",
+   "brief": "A cutaway of Earth showing four labelled layers from the outside in: crust (thin), mantle (thick), outer core (liquid) and inner core (solid).",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/earth-four-layers-cross-section.svg",
+     "alt": "Earth cut through the middle, showing four layers from the outside in: the crust, a thin outer layer; the mantle, a thick layer; the outer core, which is liquid; and the inner core at the centre, which is solid."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:51Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:45Z"
+  }
+ ]
 }

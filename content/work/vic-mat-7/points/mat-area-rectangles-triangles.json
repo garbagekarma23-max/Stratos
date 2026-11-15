@@ -31,7 +31,9 @@
   "2026-11-12T15:06:00Z write: done",
   "2026-11-12T15:15:50Z check: flagged",
   "2026-11-12T15:26:05Z fix: suggested",
-  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-15T16:10:47Z pictures: 2 pictures waiting for the check",
+  "2026-11-15T16:19:40Z pictures: 2 pictures kept"
  ],
  "sent": {
   "match": 1,
@@ -252,6 +254,18 @@
     "A triangle has base 10 cm and perpendicular height 6 cm. Multiply \\(10 \\times 6 = 60\\), then halve it to get 30 square centimetres."
    ]
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/triangle-perpendicular-height-slanted-side.svg",
+    "alt": "A triangle with a horizontal side labelled base. A dashed vertical line from the top corner down to the base, with a right-angle mark where it meets the base, is labelled perpendicular height. The longer sloping side is labelled slanted side."
+   },
+   "3": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/triangle-half-of-rectangle.svg",
+    "alt": "A rectangle with its bottom edge labelled base and its left side labelled height. A shaded triangle has the same base, and its top corner touches the top edge of the rectangle. A dashed line from that corner down to the base splits the rectangle into two parts, and the triangle covers exactly half of each, leaving two clear triangles."
+   }
+  },
   "remember": "Triangle area is half of base times perpendicular height. Do not forget the half.",
   "a": {
    "q": "A rectangle is 9 cm long and 4 cm wide. What is its area?",
@@ -275,21 +289,69 @@
    ],
    "why": "Area is half the base times the perpendicular height: \\(\\frac{1}{2} \\times 12 \\times 5 = 30\\). Using the slanted side of 13 cm gives 78, but the slanted side is not the perpendicular height.",
    "clue": "Use the height that meets the base at a right angle."
-  },
-  "wants": [
-   {
-    "at": "card 2",
-    "kind": "diagram",
-    "brief": "A triangle with a horizontal base labelled base, a dashed vertical line from the top corner to the base labelled perpendicular height with a small right-angle mark, and one slanted side labelled slanted side.",
-    "why": "It shows which length is the perpendicular height and which is not."
-   },
-   {
-    "at": "card 3",
-    "kind": "diagram",
-    "brief": "A triangle whose top corner sits above its base, drawn inside a rectangle with the same base and the same height. The triangle is shaded and the two unshaded parts of the rectangle are left clear. Label the bottom edge base and the rectangle's side height.",
-    "why": "It lets students see that the triangle takes up exactly half of the rectangle."
-   }
-  ]
+  }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "diagram",
+   "brief": "A triangle with a horizontal base labelled base, a dashed vertical line from the top corner to the base labelled perpendicular height with a small right-angle mark, and one slanted side labelled slanted side.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/triangle-perpendicular-height-slanted-side.svg",
+     "alt": "A triangle with a horizontal side labelled base. A dashed vertical line from the top corner down to the base, with a right-angle mark where it meets the base, is labelled perpendicular height. The longer sloping side is labelled slanted side."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:47Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:40Z"
+  },
+  {
+   "want": 2,
+   "at": "card 3",
+   "kind": "diagram",
+   "brief": "A triangle whose top corner sits above its base, drawn inside a rectangle with the same base and the same height. The triangle is shaded and the two unshaded parts of the rectangle are left clear. Label the bottom edge base and the rectangle's side height.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/triangle-half-of-rectangle.svg",
+     "alt": "A rectangle with its bottom edge labelled base and its left side labelled height. A shaded triangle has the same base, and its top corner touches the top edge of the rectangle. A dashed line from that corner down to the base splits the rectangle into two parts, and the triangle covers exactly half of each, leaving two clear triangles."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:47Z",
+   "status": "kept",
+   "check": {
+    "want": 2,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:40Z"
+  }
+ ]
 }

@@ -15,7 +15,9 @@
   "2026-11-12T15:15:52Z write: done",
   "2026-11-12T15:26:06Z check: flagged",
   "2026-11-12T15:35:11Z fix: suggested",
-  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-15T16:10:50Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:44Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -212,6 +214,13 @@
    "Both have a large surface for gases to cross. A leaf is flat and thin. The lungs hold millions of alveoli.",
    "Both surfaces are also very thin, so gases only have a short distance to travel."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/gas-exchange-leaf-and-alveoli.svg",
+    "alt": "Top: a leaf cut across, thin and flat, with a stoma on its underside and an arrow showing carbon dioxide entering through it. Bottom: air coming in to a cluster of alveoli, with an arrow showing oxygen passing from an alveolus into a blood vessel beside them."
+   }
+  },
   "remember": "Stomata and alveoli let gases cross a large, thin surface.",
   "a": {
    "q": "A leaf takes in one gas to make sugars. A lung takes in one gas that passes into the blood. Which pair is right?",
@@ -235,15 +244,39 @@
    ],
    "why": "Millions of tiny sacs add up to a very large surface. Thinness is a different feature, as it is about how far gases travel, not how many sacs there are. Stomata are the holes in leaves, not part of the lungs.",
    "clue": "Many small sacs add up to how much area?"
-  },
-  "wants": [
-   {
-    "at": "card 3",
-    "kind": "diagram",
-    "brief": "Two labelled diagrams: a leaf cross-section showing a stoma on the underside with carbon dioxide entering, and a cluster of alveoli with oxygen entering a blood vessel.",
-    "why": "It shows where gases cross in each organ."
-   }
-  ]
+  }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "diagram",
+   "brief": "Two labelled diagrams: a leaf cross-section showing a stoma on the underside with carbon dioxide entering, and a cluster of alveoli with oxygen entering a blood vessel.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/gas-exchange-leaf-and-alveoli.svg",
+     "alt": "Top: a leaf cut across, thin and flat, with a stoma on its underside and an arrow showing carbon dioxide entering through it. Bottom: air coming in to a cluster of alveoli, with an arrow showing oxygen passing from an alveolus into a blood vessel beside them."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:50Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:44Z"
+  }
+ ]
 }

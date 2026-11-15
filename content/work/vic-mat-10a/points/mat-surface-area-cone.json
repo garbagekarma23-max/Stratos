@@ -29,7 +29,9 @@
   "2026-11-12T15:35:09Z write: done",
   "2026-11-12T15:59:43Z check: flagged",
   "2026-11-12T16:02:56Z fix: suggested",
-  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-15T16:10:44Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:37Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -213,6 +215,13 @@
    "The curved surface has area \\(\\pi r s\\), using \\(s\\), not \\(h\\). A closed cone also has a base of area \\(\\pi r^{2}\\), so \\(SA = \\pi r^{2} + \\pi r s\\).",
    "For example, a closed cone has radius 3 cm and height 4 cm. Then \\(s = \\sqrt{9 + 16} = 5\\). Base \\(9\\pi\\), curved \\(15\\pi\\), so the total is \\(24\\pi \\approx 75.4\\) cm\\(^{2}\\)."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/cone-radius-height-slant-height.svg",
+    "alt": "A cone. The vertical height h is a dashed line from the tip straight down to the centre of the circular base, and the radius r is a dashed line from the centre to the edge of the base, with a right-angle mark where they meet. The slant height s runs down the side of the cone from the tip to the same point on the edge, so r, h and s form a right-angled triangle."
+   }
+  },
   "remember": "Closed cone: \\(SA = \\pi r^{2} + \\pi r s\\), with the slant height \\(s\\), not \\(h\\).",
   "a": {
    "q": "A closed cone has radius 4 cm and slant height 7 cm. What is its total surface area, in terms of \\(\\pi\\)?",
@@ -236,15 +245,39 @@
    ],
    "why": "First find the slant height: \\(s = \\sqrt{36 + 64} = 10\\). Then \\(SA = 36\\pi + 60\\pi = 96\\pi\\). Using \\(h = 8\\) in place of the slant height gives \\(36\\pi + 48\\pi = 84\\pi\\), which is wrong.",
    "clue": "Which length does the formula need, and is it given?"
-  },
-  "wants": [
-   {
-    "at": "card 2",
-    "kind": "diagram",
-    "brief": "A cone with the radius \\(r\\) marked on the circular base from the centre to the edge, the slant height \\(s\\) marked along the side from the tip to the edge of the base, and the vertical height \\(h\\) marked as a dashed line from the tip straight down to the centre of the base. A small right-angle mark shows where \\(h\\) meets \\(r\\), so \\(r\\), \\(h\\) and \\(s\\) form a right-angled triangle.",
-    "why": "It shows the slant height apart from the vertical height and the right-angled triangle used to find it."
-   }
-  ]
+  }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "diagram",
+   "brief": "A cone with the radius \\(r\\) marked on the circular base from the centre to the edge, the slant height \\(s\\) marked along the side from the tip to the edge of the base, and the vertical height \\(h\\) marked as a dashed line from the tip straight down to the centre of the base. A small right-angle mark shows where \\(h\\) meets \\(r\\), so \\(r\\), \\(h\\) and \\(s\\) form a right-angled triangle.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/cone-radius-height-slant-height.svg",
+     "alt": "A cone. The vertical height h is a dashed line from the tip straight down to the centre of the circular base, and the radius r is a dashed line from the centre to the edge of the base, with a right-angle mark where they meet. The slant height s runs down the side of the cone from the tip to the same point on the edge, so r, h and s form a right-angled triangle."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:44Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:37Z"
+  }
+ ]
 }

@@ -6690,6 +6690,13 @@ MADE_BANKS.ecb = {
       "Businesses pay households income for each factor: rent for land, wages for labour, interest for capital and profit for enterprise.",
       "Households spend that income on goods and services from businesses. Businesses use this money to pay for resources again, so money flows in a loop."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/two-sector-circular-flow-households-businesses.svg",
+        "alt": "The two-sector circular flow model, with Households and Businesses in two boxes joined by two loops of arrows. Factors of production (land, labour, capital, enterprise) flow from households to businesses, and goods and services flow from businesses to households. In the money loop, businesses pay households income (rent, wages, interest, profit), and households spend it back at businesses."
+      }
+    },
     "remember": "Households earn rent, wages, interest and profit from businesses, then spend that income back at businesses.",
     "a": {
       "q": "Sam works at a café in Bendigo and spends his wages on a bike from a local shop. What does this show about money?",
@@ -6732,6 +6739,13 @@ MADE_BANKS.ecb = {
         "Households and businesses buy imports from other countries, so money flows out. Other countries buy exports, so money flows in."
       ]
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/five-sector-circular-flow-money.svg",
+        "alt": "The five-sector circular flow model, where each arrow is a flow of money. Businesses pay wages and other income to Households, and households spend on goods and services at businesses. Households and businesses pay taxes to Government, and government spending flows to businesses. Households put savings into Financial institutions, which make loans to businesses. Households and businesses pay for imports to the Overseas sector, and exports bring money from overseas to businesses."
+      }
+    },
     "remember": "Each new sector links to the flow in two directions: money goes to it and comes back from it.",
     "a": {
       "q": "Which pair of flows links households and businesses to the financial institutions sector?",
@@ -6905,6 +6919,13 @@ MADE_BANKS.ecb = {
       ],
       "Indicators such as GDP growth, unemployment and inflation show which phase the economy is in. After a slowdown, growth picks up again and a new upswing begins."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/business-cycle-boom-slowdown-wave.svg",
+        "alt": "A graph of real GDP against time. A wavy line rises and falls around a dashed, rising trend line. Its high points are labelled Boom and its low points Slowdown, and after each slowdown the line rises again."
+      }
+    },
     "remember": "The economy swings between booms and slowdowns, and indicators show which phase it is in.",
     "a": {
       "q": "Which set of changes in indicators best fits a boom?",

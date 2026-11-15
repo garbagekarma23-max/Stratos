@@ -19,7 +19,9 @@
   "2026-11-12T15:15:54Z write: done",
   "2026-11-12T15:26:07Z check: flagged",
   "2026-11-12T15:35:12Z fix: suggested",
-  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-15T16:10:56Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:51Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -198,6 +200,13 @@
    "Fossils in the oldest layers are mostly simple organisms. Fossils in younger layers include more varied organisms, and many look more like living species.",
    "This order shows that life has changed over millions of years. Fossils of intermediate forms, with features of two groups, show how one kind of organism could change into another."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/rock-layers-fossils-oldest-youngest.svg",
+    "alt": "A cross-section of sedimentary rock in three layers. The bottom layer, labelled oldest, holds a simple organism. The middle layer holds more varied fossils, a shell and a coiled shell. The top layer, labelled youngest, holds a fish skeleton, like a living species."
+   }
+  },
   "remember": "Rock layers give an order in time, and fossils in that order show how life has changed.",
   "a": {
    "q": "What does the order of fossils in rock layers show about life on Earth?",
@@ -221,15 +230,39 @@
    ],
    "why": "Lower layers are usually older, so the fossils run from the oldest at the bottom to the youngest at the top. Each layer holds different kinds of animals, so life in the area changed over time. The top layer is the youngest, not the oldest: looking like living animals points to a younger age.",
    "clue": "Which layer is usually the oldest, and do the fossils match from layer to layer?"
-  },
-  "wants": [
-   {
-    "at": "card 3",
-    "kind": "diagram",
-    "brief": "A cross-section of sedimentary rock in three layers. The bottom layer is labelled oldest and shows a simple organism fossil. The middle layer shows a more varied fossil. The top layer is labelled youngest and shows a fossil like a living species.",
-    "why": "It lets the student see that fossils change in order from older to younger layers."
-   }
-  ]
+  }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "diagram",
+   "brief": "A cross-section of sedimentary rock in three layers. The bottom layer is labelled oldest and shows a simple organism fossil. The middle layer shows a more varied fossil. The top layer is labelled youngest and shows a fossil like a living species.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/rock-layers-fossils-oldest-youngest.svg",
+     "alt": "A cross-section of sedimentary rock in three layers. The bottom layer, labelled oldest, holds a simple organism. The middle layer holds more varied fossils, a shell and a coiled shell. The top layer, labelled youngest, holds a fish skeleton, like a living species."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:55Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:51Z"
+  }
+ ]
 }

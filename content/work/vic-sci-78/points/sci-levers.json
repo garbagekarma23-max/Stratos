@@ -7,7 +7,9 @@
  "log": [
   "2026-11-12T12:22:55Z new, write",
   "2026-11-12T15:05:58Z write: done",
-  "2026-11-12T15:15:52Z check: passed, cleared"
+  "2026-11-12T15:15:52Z check: passed, cleared",
+  "2026-11-15T16:10:53Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:47Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 1,
@@ -101,6 +103,13 @@
     "the effort is between the fulcrum and the load, as in tweezers."
    ]
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/lever-classes-fulcrum-effort-load.svg",
+    "alt": "Three lever bars, one above the other. First class (seesaw): the fulcrum is in the middle, with the effort pushing down at one end and the load at the other end. Second class (wheelbarrow): the fulcrum is at one end, the load in the middle and the effort pushing up at the other end. Third class (tweezers): the fulcrum is at one end, the effort pushing up in the middle and the load at the other end."
+   }
+  },
   "remember": "The class of a lever depends on which of the three parts sits in the middle.",
   "a": {
    "q": "A nutcracker has its hinge at one end, the nut in the middle and your hand at the other end. Which part is in the middle?",
@@ -124,15 +133,39 @@
    ],
    "why": "The brick is the fulcrum, and it sits between the effort at the handle and the load under the blade. A fulcrum in the middle makes a first class lever, like a seesaw. Second class needs the load in the middle, and here the load is at the end.",
    "clue": "Name the part that sits between the other two."
-  },
-  "wants": [
-   {
-    "at": "card 4",
-    "kind": "diagram",
-    "brief": "Three side-by-side labelled bar diagrams of levers. First class: a seesaw with the fulcrum in the middle, effort at one end and load at the other. Second class: a wheelbarrow with the load in the middle, the fulcrum (wheel) at one end and effort (handles) at the other. Third class: tweezers with the effort in the middle, the fulcrum at one end and the load at the other. Label Fulcrum, Effort and Load on each.",
-    "why": "Seeing where the three parts sit makes the three classes easy to tell apart."
-   }
-  ]
+  }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "diagram",
+   "brief": "Three side-by-side labelled bar diagrams of levers. First class: a seesaw with the fulcrum in the middle, effort at one end and load at the other. Second class: a wheelbarrow with the load in the middle, the fulcrum (wheel) at one end and effort (handles) at the other. Third class: tweezers with the effort in the middle, the fulcrum at one end and the load at the other. Label Fulcrum, Effort and Load on each.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/lever-classes-fulcrum-effort-load.svg",
+     "alt": "Three lever bars, one above the other. First class (seesaw): the fulcrum is in the middle, with the effort pushing down at one end and the load at the other end. Second class (wheelbarrow): the fulcrum is at one end, the load in the middle and the effort pushing up at the other end. Third class (tweezers): the fulcrum is at one end, the effort pushing up in the middle and the load at the other end."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:52Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:47Z"
+  }
+ ]
 }

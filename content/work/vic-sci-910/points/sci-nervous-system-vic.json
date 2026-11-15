@@ -18,7 +18,9 @@
   "2026-11-12T12:44:23Z match: Claude Haiku 5.5 may adapt sci-nervous-system, but is not highly sure, so to the Opus match check",
   "2026-11-12T15:15:54Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
   "2026-11-12T15:26:08Z write: done",
-  "2026-11-12T15:35:12Z check: passed, cleared"
+  "2026-11-12T15:35:12Z check: passed, cleared",
+  "2026-11-15T16:10:55Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:50Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -117,6 +119,13 @@
    "Neurons (nerve cells) carry fast electrical messages. A message passes from a receptor to the CNS, and then to an effector.",
    "An effector is a muscle or gland that carries out the response. A muscle may contract, and a gland may release a substance such as sweat."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/nervous-system-message-path.svg",
+    "alt": "A flow diagram from top to bottom: stimulus, then receptor (detects), then neurons carry the message to the central nervous system, the brain and spinal cord (processes), then neurons carry instructions to an effector, a muscle or gland (responds), then the response."
+   }
+  },
   "remember": "Receptor detects, neurons carry, CNS processes, effector responds.",
   "a": {
    "q": "Which part of the nervous system detects a stimulus?",
@@ -140,15 +149,39 @@
    ],
    "why": "The nose detects the smell, so it is the receptor. The leg muscles carry out the response, so they are effectors. The brain is part of the CNS, which processes the message, so it is neither a receptor nor an effector.",
    "clue": "Which part detects the smell, and which part does the moving?"
-  },
-  "wants": [
-   {
-    "at": "card 3",
-    "kind": "diagram",
-    "brief": "A simple flow diagram of the path of a message: stimulus, receptor, neurons carrying the message to the central nervous system (brain and spinal cord), neurons carrying instructions to an effector (muscle or gland), response. Each stage is labelled with the words used in the card.",
-    "why": "It shows the order of the parts so students can see how a message travels."
-   }
-  ]
+  }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "diagram",
+   "brief": "A simple flow diagram of the path of a message: stimulus, receptor, neurons carrying the message to the central nervous system (brain and spinal cord), neurons carrying instructions to an effector (muscle or gland), response. Each stage is labelled with the words used in the card.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/nervous-system-message-path.svg",
+     "alt": "A flow diagram from top to bottom: stimulus, then receptor (detects), then neurons carry the message to the central nervous system, the brain and spinal cord (processes), then neurons carry instructions to an effector, a muscle or gland (responds), then the response."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:55Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:50Z"
+  }
+ ]
 }

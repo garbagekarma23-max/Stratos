@@ -18,7 +18,9 @@
   "2026-11-12T12:44:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-12T15:15:52Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-12T15:26:07Z write: done",
-  "2026-11-12T15:35:11Z check: passed, cleared"
+  "2026-11-12T15:35:11Z check: passed, cleared",
+  "2026-11-15T16:10:51Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:45Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -105,6 +107,13 @@
    "The solvent soaks up the paper and carries the substances in the spot with it. Each substance travels a different distance, so the substances end up as separate spots at different heights.",
    "A substance that moves a long way is carried easily by the solvent. A substance that moves only a short way is carried less easily. If an ink leaves two spots, it contains at least two dyes."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/paper-chromatography-before-after.svg",
+    "alt": "Two beakers. Before: a strip of paper hangs with its bottom edge in the solvent and a start spot of ink on a line just above the solvent. After: the solvent has soaked up the paper, the start line is empty, and three separated spots of different shades sit at different heights."
+   }
+  },
   "remember": "Chromatography separates dissolved substances because each one travels a different distance up the paper.",
   "a": {
    "q": "Why does chromatography separate the dyes in a black ink?",
@@ -128,15 +137,39 @@
    ],
    "why": "Two spots at different heights mean two substances travelled different distances. So the ink is a mixture of at least two dyes. A pure substance would leave only one spot.",
    "clue": "Count the spots left on the paper."
-  },
-  "wants": [
-   {
-    "at": "card 3",
-    "kind": "diagram",
-    "brief": "A strip of chromatography paper standing in a beaker with the bottom edge in the solvent. The starting spot is above the solvent level. After the run, three spots of different colours sit at different heights above the start line. Labels: paper, solvent, start spot, separated spots.",
-    "why": "It shows how the set-up works and how the dyes end up at different heights."
-   }
-  ]
+  }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "diagram",
+   "brief": "A strip of chromatography paper standing in a beaker with the bottom edge in the solvent. The starting spot is above the solvent level. After the run, three spots of different colours sit at different heights above the start line. Labels: paper, solvent, start spot, separated spots.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/paper-chromatography-before-after.svg",
+     "alt": "Two beakers. Before: a strip of paper hangs with its bottom edge in the solvent and a start spot of ink on a line just above the solvent. After: the solvent has soaked up the paper, the start line is empty, and three separated spots of different shades sit at different heights."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:51Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:45Z"
+  }
+ ]
 }
