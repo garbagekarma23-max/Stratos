@@ -5471,6 +5471,13 @@ MADE_BANKS.his = {
       ],
       "Much of Rome's world did not vanish. Roman law shaped later legal systems, Latin grew into languages such as Italian, French and Spanish, and Christianity stayed strong."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/roman-empire-split-395-ce.svg",
+        "alt": "A map of the Mediterranean and the lands around it, showing the Roman Empire in the later 300s CE in two halves. The Western Empire covers Britain, Gaul, Spain, Italy and North Africa, with Rome marked in Italy. The Eastern Empire covers Greece, the Balkans, Asia Minor, the eastern coast and Egypt, with Constantinople marked. A dashed line labelled The split runs between them."
+      }
+    },
     "remember": "Only the western half fell in 476 CE. The eastern half lasted to 1453, and Roman law, language and religion carried on.",
     "a": {
       "q": "Which statement about the Roman Empire is correct?",
@@ -5839,6 +5846,13 @@ MADE_BANKS.his = {
       "A city-state was a city and the farmland around it, and it ruled itself. Greeks shared a language and religion, but there was no single Greek country.",
       "Little of the land was good for farming. As populations grew, many Greeks traded by sea for food and goods, and some founded colonies around the Mediterranean and Black Sea."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/ancient-greece-mountains-sea-city-states.svg",
+        "alt": "A map of Greece and the Aegean Sea. Mountain symbols are spread across the mainland and the Peloponnese, and many islands sit in the Aegean Sea. Athens and Sparta are marked as separate city-states."
+      }
+    },
     "remember": "Greece's divided land gave it many self-ruling city-states, and poor farmland pushed Greeks to trade and found colonies.",
     "a": {
       "q": "Why did Greece develop many independent city-states rather than one united kingdom?",
@@ -5959,6 +5973,13 @@ MADE_BANKS.his = {
         "Sparta won the Peloponnesian War in 404 BCE. Athens was weakened by the long fighting, and the Greeks went from fighting a common enemy to fighting each other."
       ]
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/greece-persian-invasions-marathon-salamis.svg",
+        "alt": "A map of Greece and the Aegean Sea with Athens, Sparta and Marathon marked and the island of Salamis labelled beside Athens. Dashed arrows show the Persian invasions: one in 490 BCE across the Aegean Sea to Marathon, and one in 480 BCE around the north of the Aegean and south through Greece to Athens."
+      }
+    },
     "remember": "Greeks united against Persia and won. Then Athens and Sparta fought each other, and Sparta won.",
     "a": {
       "q": "Which statement best describes how the two wars were different?",
@@ -6072,6 +6093,13 @@ MADE_BANKS.his = {
       "Conquest was only the first step. Roman soldiers built roads and forts across new lands, so troops, messages and traders could travel quickly and rebellions could be met.",
       "Roman law also spread to conquered peoples. A shared set of rules helped Rome govern distant provinces and hold the empire together."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/roman-empire-117-ce-roads.svg",
+        "alt": "A map of the Roman Empire around 117 CE, shaded around the Mediterranean Sea, with Gaul, Spain, Greece, Egypt and North Africa labelled. Rome is marked in Italy, and lines for main Roman roads run from Rome into Gaul and Spain, and from Rome to the heel of Italy and on across Greece to the east."
+      }
+    },
     "remember": "Trained legions won the land. Roads, forts and Roman law helped Rome keep it.",
     "a": {
       "q": "Why were the roads that Roman soldiers built useful to Rome's rulers?",
@@ -7180,6 +7208,13 @@ MADE_BANKS.his = {
       "The landing did not go to plan. The troops were pinned down on steep, rough land, and the fighting turned into a long stalemate.",
       "The Allies never took the peninsula. The Anzacs left in December 1915 and the last Allied troops left in January 1916, after heavy losses on both sides, so the campaign failed."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/gallipoli-anzac-cove-landing.svg",
+        "alt": "A map of the Gallipoli peninsula between the Aegean Sea and the Dardanelles. Anzac Cove is marked on the Aegean coast, with an arrow from the sea labelled Landing, 25 April 1915. The high ground just inland of the cove is shaded and labelled."
+      }
+    },
     "remember": "Gallipoli was an Allied campaign against the Ottoman Empire. It began with the landing on 25 April 1915 and failed to take the peninsula.",
     "a": {
       "q": "What was the main aim of the Gallipoli campaign?",
