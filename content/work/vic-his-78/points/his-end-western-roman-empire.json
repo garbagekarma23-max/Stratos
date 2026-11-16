@@ -19,7 +19,9 @@
   "2026-11-12T15:15:45Z write: failed the content check, writing again",
   "2026-11-12T15:26:02Z write: done",
   "2026-11-12T15:35:07Z check: passed, cleared",
-  "2026-11-15T16:10:39Z pictures: no pictures, 1 want skipped (No free map on Wikimedia Commons fits and reads at 296 px. The clean two-colour maps of 395 CE (File:Roman-empire-395AD.svg, File:Westeastrome.png) have no labels at all: no names for the halves, no Italy or Constantinople and no label on the dividing line. The labelled ones are in Latin (File:Partition of the Roman Empire in 395 AD.png: Pars occidentalis, Pars orientis) or crowded with provinces and tiny names (File:The Roman Empire, AD 395.png), and the English 476 CE maps show the wrong date. A diagram drawn for Stratos would suit this better.)"
+  "2026-11-15T16:10:39Z pictures: no pictures, 1 want skipped (No free map on Wikimedia Commons fits and reads at 296 px. The clean two-colour maps of 395 CE (File:Roman-empire-395AD.svg, File:Westeastrome.png) have no labels at all: no names for the halves, no Italy or Constantinople and no label on the dividing line. The labelled ones are in Latin (File:Partition of the Roman Empire in 395 AD.png: Pars occidentalis, Pars orientis) or crowded with provinces and tiny names (File:The Roman Empire, AD 395.png), and the English 476 CE maps show the wrong date. A diagram drawn for Stratos would suit this better.)",
+  "2026-11-16T10:50:48Z pictures: the owner asked for a diagram at card 1",
+  "2026-11-16T11:08:39Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -141,7 +143,15 @@
    ],
    "why": "Roman law shaped later legal systems, Latin grew into several languages, and Christianity stayed strong. Only the western empire's rule ended in 476 CE, so the claim that everything vanished is wrong. The option saying Latin disappeared is tempting, but Latin lived on in languages such as Italian and French.",
    "clue": "Think about what carried on after the western emperor was removed."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A simple drawn map, not a photo or a copy of another map, with only the places named here and labels readable at 360 px. A map of the Mediterranean Sea and the lands around it with the Roman Empire around 395 CE shaded in two tones, the western half labelled Western Empire and the eastern half labelled Eastern Empire, a dashed line between them labelled the split, Italy and Rome labelled in the west, and Constantinople marked with a dot in the east.",
+    "why": "It shows the empire's two halves and where each was ruled from."
+   }
+  ]
  },
  "cleared_by": "checker",
  "pictures": [
@@ -156,6 +166,78 @@
    "why": "No free map on Wikimedia Commons fits and reads at 296 px. The clean two-colour maps of 395 CE (File:Roman-empire-395AD.svg, File:Westeastrome.png) have no labels at all: no names for the halves, no Italy or Constantinople and no label on the dividing line. The labelled ones are in Latin (File:Partition of the Roman Empire in 395 AD.png: Pars occidentalis, Pars orientis) or crowded with provinces and tiny names (File:The Roman Empire, AD 395.png), and the English 476 CE maps show the wrong date. A diagram drawn for Stratos would suit this better.",
    "by": "claude-code",
    "at_time": "2026-11-15T16:10:39Z"
+  }
+ ],
+ "picture_draft": {
+  "title": "The end of the Western Roman Empire",
+  "card": [
+   "In the later 300s CE the Roman Empire was split into a western half and an eastern half, each with its own emperor. The western half was ruled from Italy and the eastern half from Constantinople.",
+   [
+    "Western Empire",
+    "it ended in 476 CE, when a Germanic general, Odoacer, removed the last western emperor. Its lands in western Europe were then ruled by new kingdoms."
+   ],
+   [
+    "Eastern (Byzantine) Empire",
+    "it kept going for almost 1000 more years. It ended in 1453 CE, when the Ottomans captured Constantinople."
+   ],
+   "Much of Rome's world did not vanish. Roman law shaped later legal systems, Latin grew into languages such as Italian, French and Spanish, and Christianity stayed strong."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/roman-empire-split-395-ce.svg",
+    "alt": "A map of the Mediterranean and the lands around it, showing the Roman Empire in the later 300s CE in two halves. The Western Empire covers Britain, Gaul, Spain, Italy and North Africa, with Rome marked in Italy. The Eastern Empire covers Greece, the Balkans, Asia Minor, the eastern coast and Egypt, with Constantinople marked. A dashed line labelled The split runs between them."
+   }
+  },
+  "remember": "Only the western half fell in 476 CE. The eastern half lasted to 1453, and Roman law, language and religion carried on.",
+  "a": {
+   "q": "Which statement about the Roman Empire is correct?",
+   "opts": [
+    "The west ended in 476 CE and the east lasted to 1453",
+    "The east ended in 476 CE and the west lasted to 1453",
+    "Both halves ended in 476 CE, when Odoacer took power",
+    "Both halves lasted to 1453, when the Ottomans won"
+   ],
+   "why": "The western half ended in 476 CE, but the eastern half lasted until the Ottomans captured Constantinople in 1453. The tempting option that says both halves ended in 476 CE treats the whole empire as one, but only the western half fell then.",
+   "clue": "The empire had two halves, and they ended at different times."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student says, \"When Rome fell in 476 CE, everything Roman disappeared from Europe.\" Which reply is best?",
+   "opts": [
+    "Roman law, Latin and Christianity carried on after 476 CE",
+    "Only the Eastern Empire ended in 476 CE, not the Western",
+    "Latin disappeared in 476 CE, but Roman law carried on",
+    "Roman rule ended in the east in 476 CE, but not the west"
+   ],
+   "why": "Roman law shaped later legal systems, Latin grew into several languages, and Christianity stayed strong. Only the western empire's rule ended in 476 CE, so the claim that everything vanished is wrong. The option saying Latin disappeared is tempting, but Latin lived on in languages such as Italian and French.",
+   "clue": "Think about what carried on after the western emperor was removed."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A simple drawn map, not a photo or a copy of another map, with only the places named here and labels readable at 360 px. A map of the Mediterranean Sea and the lands around it with the Roman Empire around 395 CE shaded in two tones, the western half labelled Western Empire and the eastern half labelled Eastern Empire, a dashed line between them labelled the split, Italy and Rome labelled in the west, and Constantinople marked with a dot in the east.",
+    "why": "It shows the empire's two halves and where each was ruled from.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "diagram",
+   "brief": "A simple drawn map, not a photo or a copy of another map, with only the places named here and labels readable at 360 px. A map of the Mediterranean Sea and the lands around it with the Roman Empire around 395 CE shaded in two tones, the western half labelled Western Empire and the eastern half labelled Eastern Empire, a dashed line between them labelled the split, Italy and Rome labelled in the west, and Constantinople marked with a dot in the east.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/roman-empire-split-395-ce.svg",
+     "alt": "A map of the Mediterranean and the lands around it, showing the Roman Empire in the later 300s CE in two halves. The Western Empire covers Britain, Gaul, Spain, Italy and North Africa, with Rome marked in Italy. The Eastern Empire covers Greece, the Balkans, Asia Minor, the eastern coast and Egypt, with Constantinople marked. A dashed line labelled The split runs between them."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-16T11:08:39Z"
   }
  ]
 }

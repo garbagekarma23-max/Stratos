@@ -31,7 +31,9 @@
   "2026-11-12T15:15:42Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-12T15:26:01Z write: done",
   "2026-11-12T15:35:06Z check: passed, cleared",
-  "2026-11-15T16:10:38Z pictures: no pictures, 1 want skipped (No open-licence map of Australia's biomes on Wikimedia Commons fits: the simple biome maps are in French and group the biomes differently (tropical grassland and savanna spread over the south, no temperate forest or grassland), and the ecoregion maps show one region each or have small legends unreadable at 296 px. Ask again as a diagram drawn for Stratos with the card's six biomes.)"
+  "2026-11-15T16:10:38Z pictures: no pictures, 1 want skipped (No open-licence map of Australia's biomes on Wikimedia Commons fits: the simple biome maps are in French and group the biomes differently (tropical grassland and savanna spread over the south, no temperate forest or grassland), and the ecoregion maps show one region each or have small legends unreadable at 296 px. Ask again as a diagram drawn for Stratos with the card's six biomes.)",
+  "2026-11-16T10:50:48Z pictures: the owner asked for a diagram at card 1",
+  "2026-11-16T11:08:38Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -159,7 +161,15 @@
    ],
    "why": "Low and unreliable rainfall in the inland suits desert and shrubland. Temperate forest and grassland are tempting because she starts in the south-east, but those biomes have milder, more regular rain.",
    "clue": "Which part of Australia is the driest?"
-  }
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A simple drawn map, not a photo or a copy of another map, with only the places named here and labels readable at 360 px. A map of Australia's outline split into three broad zones matching the card: North labelled tropical rainforest and savanna, Inland labelled desert and shrubland, and the south-east and south-west labelled temperate forest and grassland. The zones are told apart by shading and labels written on the map, with no colour key.",
+    "why": "Students see where each group of biomes sits on the continent."
+   }
+  ]
  },
  "cleared_by": "checker",
  "pictures": [
@@ -174,6 +184,81 @@
    "why": "No open-licence map of Australia's biomes on Wikimedia Commons fits: the simple biome maps are in French and group the biomes differently (tropical grassland and savanna spread over the south, no temperate forest or grassland), and the ecoregion maps show one region each or have small legends unreadable at 296 px. Ask again as a diagram drawn for Stratos with the card's six biomes.",
    "by": "claude-code",
    "at_time": "2026-11-15T16:10:38Z"
+  }
+ ],
+ "picture_draft": {
+  "title": "Australia's biomes",
+  "card": [
+   "Australia has many biomes because it is large and its climate changes from place to place. Rainfall and temperature differ between the north, the inland and the south.",
+   [
+    "North",
+    "The north has tropical rainforest and savanna. These are the warmest parts of the country, and they get most of their rain in a wet season."
+   ],
+   [
+    "Inland",
+    "The inland has desert and shrubland. This is the driest part of Australia, with low and unreliable rainfall."
+   ],
+   [
+    "South",
+    "The south-east and south-west have temperate forest and grassland. These areas are cooler than the north and have milder, more regular rain."
+   ]
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/australia-biomes-north-inland-south.svg",
+    "alt": "A map of Australia in three zones. The north is labelled tropical rainforest and savanna. The large inland area is labelled desert and shrubland. The south-east and the south-west, including Tasmania, are labelled temperate forest and grassland."
+   }
+  },
+  "remember": "Australia's biomes change with climate: tropical in the north, dry inland, temperate in the south.",
+  "a": {
+   "q": "Which pair of biomes is found mainly in northern Australia?",
+   "opts": [
+    "Tropical rainforest and savanna",
+    "Desert and shrubland",
+    "Temperate forest and grassland",
+    "Tundra and temperate forest"
+   ],
+   "why": "The warm north, with a wet season, has tropical rainforest and savanna. Desert and shrubland are tempting, but they are found in the dry inland, not the north.",
+   "clue": "Think of the warmest part of the country, with a wet season."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya drives from Melbourne to the middle of Australia. Her trip passes from the temperate south-east into dry country with low, unreliable rain. Which biomes does she most likely see in the dry country?",
+   "opts": [
+    "Desert and shrubland",
+    "Tropical rainforest and savanna",
+    "Temperate forest and grassland",
+    "Tundra and tropical rainforest"
+   ],
+   "why": "Low and unreliable rainfall in the inland suits desert and shrubland. Temperate forest and grassland are tempting because she starts in the south-east, but those biomes have milder, more regular rain.",
+   "clue": "Which part of Australia is the driest?"
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A simple drawn map, not a photo or a copy of another map, with only the places named here and labels readable at 360 px. A map of Australia's outline split into three broad zones matching the card: North labelled tropical rainforest and savanna, Inland labelled desert and shrubland, and the south-east and south-west labelled temperate forest and grassland. The zones are told apart by shading and labels written on the map, with no colour key.",
+    "why": "Students see where each group of biomes sits on the continent.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "diagram",
+   "brief": "A simple drawn map, not a photo or a copy of another map, with only the places named here and labels readable at 360 px. A map of Australia's outline split into three broad zones matching the card: North labelled tropical rainforest and savanna, Inland labelled desert and shrubland, and the south-east and south-west labelled temperate forest and grassland. The zones are told apart by shading and labels written on the map, with no colour key.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/australia-biomes-north-inland-south.svg",
+     "alt": "A map of Australia in three zones. The north is labelled tropical rainforest and savanna. The large inland area is labelled desert and shrubland. The south-east and the south-west, including Tasmania, are labelled temperate forest and grassland."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-16T11:08:38Z"
   }
  ]
 }

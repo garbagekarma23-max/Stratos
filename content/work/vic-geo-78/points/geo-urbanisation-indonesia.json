@@ -20,7 +20,9 @@
   "2026-11-12T15:26:00Z write: failed the content check, writing again",
   "2026-11-12T15:35:06Z write: done",
   "2026-11-12T15:59:42Z check: passed, cleared",
-  "2026-11-15T16:10:37Z pictures: no pictures, 1 want skipped (No open-licence map on Wikimedia Commons marks Java and Borneo with Jakarta and Nusantara labelled. The closest (Indonesia future capital proposal.svg, 2016) shows several proposed sites from before Nusantara was chosen, and the Nusantara maps are detailed planning maps in Indonesian. Ask again as a diagram drawn for Stratos.)"
+  "2026-11-15T16:10:37Z pictures: no pictures, 1 want skipped (No open-licence map on Wikimedia Commons marks Java and Borneo with Jakarta and Nusantara labelled. The closest (Indonesia future capital proposal.svg, 2016) shows several proposed sites from before Nusantara was chosen, and the Nusantara maps are detailed planning maps in Indonesian. Ask again as a diagram drawn for Stratos.)",
+  "2026-11-16T10:50:47Z pictures: the owner asked for a diagram at card 4",
+  "2026-11-16T11:08:38Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -131,7 +133,15 @@
    ],
    "why": "Jakarta grew fast and now faces flooding, traffic and sinking land, so a new capital is planned to ease the pressure. Jakarta did not lose its people: it grew as people moved in.",
    "clue": "Think about what rapid growth did to Jakarta."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A simple drawn map, not a photo or a copy of another map, with only the places named here and labels readable at 360 px. A map of Indonesia's main islands with Java and Borneo labelled, Jakarta marked with a dot on Java, Nusantara marked with a dot on Borneo, and an arrow from Jakarta to Nusantara labelled new capital.",
+    "why": "It shows where the old capital and the new capital are."
+   }
+  ]
  },
  "cleared_by": "checker",
  "pictures": [
@@ -146,6 +156,72 @@
    "why": "No open-licence map on Wikimedia Commons marks Java and Borneo with Jakarta and Nusantara labelled. The closest (Indonesia future capital proposal.svg, 2016) shows several proposed sites from before Nusantara was chosen, and the Nusantara maps are detailed planning maps in Indonesian. Ask again as a diagram drawn for Stratos.",
    "by": "claude-code",
    "at_time": "2026-11-15T16:10:37Z"
+  }
+ ],
+ "picture_draft": {
+  "title": "Urbanisation in Indonesia",
+  "card": [
+   "Jakarta is the capital of Indonesia, on the island of Java. It grew fast as many people moved from rural areas to find work.",
+   "This rapid growth put heavy pressure on the city. Jakarta has bad flooding and heavy traffic.",
+   "Many people and businesses pump water out of the ground. As the water is removed, the land can slowly sink. Parts of Jakarta are sinking, which makes flooding worse.",
+   "These problems led Indonesia to build a new capital called Nusantara on the island of Borneo. The plan is to move government there and ease the pressure on Jakarta."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/indonesia-jakarta-to-nusantara.svg",
+    "alt": "A map of western Indonesia with Indonesia's islands shaded. Jakarta is marked on the island of Java, and Nusantara on the east coast of Borneo. An arrow labelled New capital runs from Jakarta across the Java Sea to Nusantara."
+   }
+  },
+  "remember": "Jakarta's fast growth brought flooding, traffic and sinking land, so Indonesia is building a new capital, Nusantara.",
+  "a": {
+   "q": "Why is some of Jakarta sinking?",
+   "opts": [
+    "Groundwater is pumped out from under the city",
+    "Rivers have worn away the soil beneath the city",
+    "Heavy traffic has pressed down on the roads",
+    "Farmland around the city has been built over"
+   ],
+   "why": "When people and businesses pump water out of the ground, the land above can slowly sink. Traffic is a problem in Jakarta, but the card links the sinking to groundwater pumping.",
+   "clue": "Think about what is being taken out from under the ground."
+  },
+  "b": {
+   "d": 2,
+   "q": "Which statement best explains why Indonesia is building Nusantara on Borneo?",
+   "opts": [
+    "Jakarta's fast growth caused flooding and traffic problems",
+    "Jakarta has lost most of its people to rural areas",
+    "Borneo has more people than any other Indonesian island",
+    "Jakarta no longer has any jobs or services to offer"
+   ],
+   "why": "Jakarta grew fast and now faces flooding, traffic and sinking land, so a new capital is planned to ease the pressure. Jakarta did not lose its people: it grew as people moved in.",
+   "clue": "Think about what rapid growth did to Jakarta."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A simple drawn map, not a photo or a copy of another map, with only the places named here and labels readable at 360 px. A map of Indonesia's main islands with Java and Borneo labelled, Jakarta marked with a dot on Java, Nusantara marked with a dot on Borneo, and an arrow from Jakarta to Nusantara labelled new capital.",
+    "why": "It shows where the old capital and the new capital are.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "diagram",
+   "brief": "A simple drawn map, not a photo or a copy of another map, with only the places named here and labels readable at 360 px. A map of Indonesia's main islands with Java and Borneo labelled, Jakarta marked with a dot on Java, Nusantara marked with a dot on Borneo, and an arrow from Jakarta to Nusantara labelled new capital.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/indonesia-jakarta-to-nusantara.svg",
+     "alt": "A map of western Indonesia with Indonesia's islands shaded. Jakarta is marked on the island of Java, and Nusantara on the east coast of Borneo. An arrow labelled New capital runs from Jakarta across the Java Sea to Nusantara."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-16T11:08:37Z"
   }
  ]
 }
