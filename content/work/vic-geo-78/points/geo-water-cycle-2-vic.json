@@ -31,7 +31,11 @@
   "2026-11-12T15:15:41Z write: done",
   "2026-11-12T15:25:59Z check: flagged",
   "2026-11-12T15:35:06Z fix: suggested",
-  "2026-11-12T17:07:11Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-12T17:07:11Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-15T16:10:35Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:29Z pictures: 1 picture turned down. Picture 1 (diagram at card 1): redo, high sure. The Runoff label sits below the slope line, inside the grey land, about 30 px from its arrow with the ground surface between them, so it reads as a flow under the ground; put it above the runoff arrow, on the surface side.; The runoff arrow floats about 13 px above the slope rather than running along the land surface; draw it on or just above the surface so it clearly shows water flowing over the land to the river.; The tree is a plain circle on a stick and reads as a sign or lollipop; draw it with a recognisable leafy canopy so transpiration from plant leaves is clear.; The description says arrows show condensation forming a cloud, but no arrow shows vapour going into the cloud; either add a short arrow into the cloud by the Condensation label or change the description.. Took out pictures/diagrams/water-cycle-six-processes.svg",
+  "2026-11-15T16:23:47Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:25:22Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -253,6 +257,13 @@
     "runoff is water flowing over the land surface towards rivers, lakes and the sea. Infiltration is water soaking down into the soil and rock."
    ]
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/water-cycle-six-processes-v2.svg",
+    "alt": "A side view of the water cycle. On the left is the ocean, then a river, then land rising to a hill with soil under it and a leafy tree on top. Arrows show evaporation rising from the ocean and the river, the vapour rising on into a cloud as condensation, transpiration rising from the tree's leaves, precipitation falling as rain from the cloud onto the hill, runoff flowing over the land surface down to the river, and infiltration soaking down into the soil."
+   }
+  },
   "remember": "Water keeps moving: up as vapour, down as precipitation, then across or into the land.",
   "a": {
    "q": "On a warm day, water vapour rises from a dam, cools high in the air and forms clouds. Which two processes are these, in order?",
@@ -276,15 +287,74 @@
    ],
    "why": "Water moving over the surface into the creek is runoff. Water soaking down into the soil is infiltration. The rain falling from the clouds is precipitation, but once it lands and flows across the paddock it is runoff.",
    "clue": "One flow stays on top of the ground. The other goes down into it."
-  },
-  "wants": [
-   {
-    "at": "card 1",
-    "kind": "diagram",
-    "brief": "A labelled water cycle diagram showing the ocean, a river, land with soil and plants, and clouds. Arrows and labels show evaporation from the ocean and river, transpiration from plant leaves, condensation forming clouds, precipitation falling as rain, runoff flowing over land to the river, and infiltration soaking into the soil.",
-    "why": "Seeing all six processes joined in one loop helps students understand how water moves."
-   }
-  ]
+  }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "diagram",
+   "brief": "A labelled water cycle diagram showing the ocean, a river, land with soil and plants, and clouds. Arrows and labels show evaporation from the ocean and river, transpiration from plant leaves, condensation forming clouds, precipitation falling as rain, runoff flowing over land to the river, and infiltration soaking into the soil.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/water-cycle-six-processes.svg",
+     "alt": "A side view of the water cycle. On the left is the ocean, then a river, then land rising to a hill with soil under it and a tree on top. Arrows show evaporation rising from the ocean and the river, transpiration rising from the tree, condensation forming a cloud, precipitation falling as rain from the cloud onto the hill, runoff flowing over the land down to the river, and infiltration soaking down into the soil."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:35Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": false,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The Runoff label sits below the slope line, inside the grey land, about 30 px from its arrow with the ground surface between them, so it reads as a flow under the ground; put it above the runoff arrow, on the surface side.",
+     "The runoff arrow floats about 13 px above the slope rather than running along the land surface; draw it on or just above the surface so it clearly shows water flowing over the land to the river.",
+     "The tree is a plain circle on a stick and reads as a sign or lollipop; draw it with a recognisable leafy canopy so transpiration from plant leaves is clear.",
+     "The description says arrows show condensation forming a cloud, but no arrow shows vapour going into the cloud; either add a short arrow into the cloud by the Condensation label or change the description."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:28Z"
+  },
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "diagram",
+   "brief": "A labelled water cycle diagram showing the ocean, a river, land with soil and plants, and clouds. Arrows and labels show evaporation from the ocean and river, transpiration from plant leaves, condensation forming clouds, precipitation falling as rain, runoff flowing over land to the river, and infiltration soaking into the soil.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/water-cycle-six-processes-v2.svg",
+     "alt": "A side view of the water cycle. On the left is the ocean, then a river, then land rising to a hill with soil under it and a leafy tree on top. Arrows show evaporation rising from the ocean and the river, the vapour rising on into a cloud as condensation, transpiration rising from the tree's leaves, precipitation falling as rain from the cloud onto the hill, runoff flowing over the land surface down to the river, and infiltration soaking down into the soil."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:23:47Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:25:21Z"
+  }
+ ]
 }

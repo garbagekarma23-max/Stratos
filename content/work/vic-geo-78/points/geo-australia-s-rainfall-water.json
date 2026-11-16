@@ -31,7 +31,9 @@
   "2026-11-12T15:15:41Z adapt: done",
   "2026-11-12T15:25:59Z check: flagged",
   "2026-11-12T15:35:06Z fix: suggested",
-  "2026-11-12T17:07:11Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-12T17:07:11Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-15T16:10:36Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:30Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -236,6 +238,13 @@
    "Groundwater is water stored in the soil and rock under the ground. Large stores of it lie under the inland.",
    "The Great Artesian Basin is one of these stores. It lies under parts of Queensland, South Australia, New South Wales and the Northern Territory."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/australia-yearly-rainfall-bands.svg",
+    "alt": "A map of Australia and Tasmania shaded by average yearly rainfall, with a legend reading wet, moderate, dry and arid. The north coast, the east coast, the far south-west corner and western Tasmania are wet, with moderate bands inland of them and over the rest of Tasmania. Much of the inland is dry or arid, with a large arid area across the centre and west."
+   }
+  },
   "remember": "Australia's water is unevenly spread: wet coasts in the north, east and Tasmania, a dry inland with groundwater below.",
   "a": {
    "q": "Why is Australia's water described as unevenly spread?",
@@ -259,15 +268,39 @@
    ],
    "why": "Large stores of groundwater lie under the inland, and the Great Artesian Basin lies under parts of Queensland. The inland gets little rain, so its surface water is scarce, which rules out a lake that stays full, rivers running high all year or a dam filled by local rain.",
    "clue": "Little rain means little water stays on the surface."
-  },
-  "wants": [
-   {
-    "at": "card 2",
-    "kind": "diagram",
-    "brief": "A simple map of Australia showing average yearly rainfall in a few shaded bands, from wet to arid. The north coast, the east coast and Tasmania are shaded as wet. Much of the inland is shaded as arid. A key reads: wet, moderate, dry, arid.",
-    "why": "Seeing the wet coasts and the dry inland on one map shows clearly why water is unevenly spread."
-   }
-  ]
+  }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "diagram",
+   "brief": "A simple map of Australia showing average yearly rainfall in a few shaded bands, from wet to arid. The north coast, the east coast and Tasmania are shaded as wet. Much of the inland is shaded as arid. A key reads: wet, moderate, dry, arid.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/australia-yearly-rainfall-bands.svg",
+     "alt": "A map of Australia and Tasmania shaded by average yearly rainfall, with a legend reading wet, moderate, dry and arid. The north coast, the east coast, the far south-west corner and western Tasmania are wet, with moderate bands inland of them and over the rest of Tasmania. Much of the inland is dry or arid, with a large arid area across the centre and west."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:36Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:29Z"
+  }
+ ]
 }

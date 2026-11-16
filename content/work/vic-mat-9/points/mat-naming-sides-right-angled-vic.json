@@ -32,7 +32,9 @@
   "2026-11-12T15:15:51Z write: done",
   "2026-11-12T15:26:06Z check: flagged",
   "2026-11-12T15:35:11Z fix: suggested",
-  "2026-11-12T16:19:54Z autoreview: cleared with the fix (a other)"
+  "2026-11-12T16:19:54Z autoreview: cleared with the fix (a other)",
+  "2026-11-15T16:10:49Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:42Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -216,6 +218,13 @@
    ],
    "Opposite and adjacent depend on the angle chosen. In a triangle ABC with the right angle at C, the side BC is opposite angle \\(A\\). If you use angle \\(B\\) instead, BC becomes the adjacent side."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/right-triangle-sides-named-from-angle-a.svg",
+    "alt": "A right-angled triangle ABC with the right angle at C marked by a small square, C at the bottom left, A at the bottom right and B directly above C. Angle A is marked with an arc. Side AB is labelled hypotenuse, side BC is labelled opposite, and side AC is labelled adjacent, each named from angle A."
+   }
+  },
   "remember": "The hypotenuse faces the right angle. Opposite and adjacent are named from the angle you use.",
   "a": {
    "q": "In a right-angled triangle, which side is the hypotenuse?",
@@ -239,15 +248,39 @@
    ],
    "why": "The adjacent side touches angle \\(R\\) and is not the hypotenuse. PR touches \\(R\\) but is the hypotenuse, since it faces the right angle at Q. PQ is the opposite side, as it does not touch \\(R\\).",
    "clue": "Find the hypotenuse first, then see which other side touches angle \\(R\\)."
-  },
-  "wants": [
-   {
-    "at": "card 4",
-    "kind": "diagram",
-    "brief": "A right-angled triangle ABC with the right angle at C marked by a small square. C is at the bottom left, A at the bottom right and B directly above C. Angle A is marked with an arc. Label side AB as hypotenuse, side BC as opposite angle A, and side AC as adjacent to angle A. Place each label beside its own side, clear of the vertex letters.",
-    "why": "Seeing the three sides named from angle A shows how the names depend on the chosen angle."
-   }
-  ]
+  }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "diagram",
+   "brief": "A right-angled triangle ABC with the right angle at C marked by a small square. C is at the bottom left, A at the bottom right and B directly above C. Angle A is marked with an arc. Label side AB as hypotenuse, side BC as opposite angle A, and side AC as adjacent to angle A. Place each label beside its own side, clear of the vertex letters.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/right-triangle-sides-named-from-angle-a.svg",
+     "alt": "A right-angled triangle ABC with the right angle at C marked by a small square, C at the bottom left, A at the bottom right and B directly above C. Angle A is marked with an arc. Side AB is labelled hypotenuse, side BC is labelled opposite, and side AC is labelled adjacent, each named from angle A."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:48Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:42Z"
+  }
+ ]
 }

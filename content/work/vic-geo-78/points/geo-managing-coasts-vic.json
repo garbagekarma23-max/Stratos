@@ -7,7 +7,9 @@
  "log": [
   "2026-11-12T12:22:48Z new, write",
   "2026-11-12T15:05:56Z write: done",
-  "2026-11-12T15:15:41Z check: passed, cleared"
+  "2026-11-12T15:15:41Z check: passed, cleared",
+  "2026-11-15T16:10:37Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:31Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 1,
@@ -95,6 +97,13 @@
    ],
    "Hard structures can protect one place but move erosion elsewhere. A groyne traps sand, so the beach further along the coast may get less sand and wear away faster."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/sea-wall-and-groyne-trapping-sand.svg",
+    "alt": "Two views of a coast. Seen from above: land at the top, then a sandy beach, then the sea, with waves arriving at an angle. An arrow along the beach shows the direction sand moves, from left to right. A groyne is built from the beach out into the sea, and sand has built up on the side it comes from, so the beach is wide on that side and narrow on the other. Seen from the side: the land ends at a sea wall along the shore, and waves move towards the wall."
+   }
+  },
   "remember": "Hard engineering builds structures and can shift erosion elsewhere. Soft approaches work with natural processes.",
   "a": {
    "q": "Which of these is a soft approach to managing a coast?",
@@ -118,15 +127,39 @@
    ],
    "why": "A groyne traps sand moving along the shore, so less sand reaches the next beach and it erodes faster. The groyne does not add sand. It also does not stop all waves from reaching the coast.",
    "clue": "Think about where the sand moving along the beach ends up."
-  },
-  "wants": [
-   {
-    "at": "card 2",
-    "kind": "diagram",
-    "brief": "A simple side-on and top-down diagram of a beach showing a sea wall along the shore and a groyne built out into the sea, with sand building up on one side of the groyne. Labels: sea wall, groyne, sand, waves, direction sand moves.",
-    "why": "It shows students how each hard structure sits on the coast and how a groyne traps sand."
-   }
-  ]
+  }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "diagram",
+   "brief": "A simple side-on and top-down diagram of a beach showing a sea wall along the shore and a groyne built out into the sea, with sand building up on one side of the groyne. Labels: sea wall, groyne, sand, waves, direction sand moves.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/sea-wall-and-groyne-trapping-sand.svg",
+     "alt": "Two views of a coast. Seen from above: land at the top, then a sandy beach, then the sea, with waves arriving at an angle. An arrow along the beach shows the direction sand moves, from left to right. A groyne is built from the beach out into the sea, and sand has built up on the side it comes from, so the beach is wide on that side and narrow on the other. Seen from the side: the land ends at a sea wall along the shore, and waves move towards the wall."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:37Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:31Z"
+  }
+ ]
 }

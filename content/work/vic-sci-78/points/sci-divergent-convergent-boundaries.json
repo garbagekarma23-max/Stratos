@@ -31,7 +31,9 @@
   "2026-11-12T15:15:52Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
   "2026-11-12T15:26:06Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-12T15:35:11Z write: done",
-  "2026-11-12T15:42:25Z check: passed, cleared"
+  "2026-11-12T15:42:25Z check: passed, cleared",
+  "2026-11-15T16:10:52Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:46Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -148,6 +150,13 @@
    ],
    "At a divergent boundary crust is made. At a convergent boundary crust is pushed down or folded up."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/divergent-and-convergent-boundaries.svg",
+    "alt": "Three cross-sections. Divergent: two plates move apart, with arrows pointing away from each other, hot rock rises from the mantle into the gap, and new crust forms at a mid-ocean ridge. Convergent: two plates push together, and one plate sinks beneath the other into the mantle. Convergent: two plates push together and the crust crumples up into mountains."
+   }
+  },
   "remember": "Apart: new crust forms. Together: one plate sinks or the crust crumples into mountains.",
   "a": {
    "q": "Two plates are moving apart under the ocean, and hot rock rises into the gap. What happens to the rock that rises?",
@@ -171,15 +180,39 @@
    ],
    "why": "Plates pushing together are convergent, and two continental plates crumple upwards into mountains, as in the Himalayas. A mid-ocean ridge is tempting because it is a boundary feature, but it forms where plates move apart.",
    "clue": "Pushing together or pulling apart?"
-  },
-  "wants": [
-   {
-    "at": "card 3",
-    "kind": "diagram",
-    "brief": "Two side-by-side cross-sections of Earth's crust. Left, labelled Divergent: two plates moving apart with hot mantle rock rising between them and new crust forming at a mid-ocean ridge. Right, labelled Convergent: two plates pushing together, one plate sinking beneath the other, and a second view where the crust crumples into mountains. Arrows show the direction each plate moves.",
-    "why": "Seeing the plate movements side by side makes the difference between moving apart and pushing together clear."
-   }
-  ]
+  }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "diagram",
+   "brief": "Two side-by-side cross-sections of Earth's crust. Left, labelled Divergent: two plates moving apart with hot mantle rock rising between them and new crust forming at a mid-ocean ridge. Right, labelled Convergent: two plates pushing together, one plate sinking beneath the other, and a second view where the crust crumples into mountains. Arrows show the direction each plate moves.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/divergent-and-convergent-boundaries.svg",
+     "alt": "Three cross-sections. Divergent: two plates move apart, with arrows pointing away from each other, hot rock rises from the mantle into the gap, and new crust forms at a mid-ocean ridge. Convergent: two plates push together, and one plate sinks beneath the other into the mantle. Convergent: two plates push together and the crust crumples up into mountains."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:51Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:46Z"
+  }
+ ]
 }

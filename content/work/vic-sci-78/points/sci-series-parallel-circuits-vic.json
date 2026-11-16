@@ -7,7 +7,9 @@
  "log": [
   "2026-11-12T12:22:55Z new, write",
   "2026-11-12T15:05:58Z write: done",
-  "2026-11-12T15:15:52Z check: passed, cleared"
+  "2026-11-12T15:15:52Z check: passed, cleared",
+  "2026-11-15T16:10:54Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:49Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 1,
@@ -95,6 +97,13 @@
    "In a series circuit, a break anywhere opens the one path, so every part stops working. If one globe in a string of series globes breaks, they all go out.",
    "In a parallel circuit, a break in one branch leaves the other branches closed. The globes on those branches keep working. This is one reason houses are wired with parallel circuits."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/series-and-parallel-three-globes.svg",
+    "alt": "Two circuit diagrams side by side. Left, the series circuit: a battery and three globes joined one after another in a single loop. Right, the parallel circuit: a battery with three globes, each on its own branch between the wire from one side of the battery and the wire from the other."
+   }
+  },
   "remember": "Series: one path, so one break stops every part. Parallel: separate paths, so the other parts keep working.",
   "a": {
    "q": "One globe in a circuit breaks and all the other globes go out. How must the globes be connected?",
@@ -118,15 +127,39 @@
    ],
    "why": "Each globe has its own path to the battery, so a break in one branch does not open the others. The tempting answer is that they go out, which is only true when the globes share one path in series.",
    "clue": "Each globe is on its own branch."
-  },
-  "wants": [
-   {
-    "at": "card 2",
-    "kind": "diagram",
-    "brief": "Two circuit diagrams side by side using standard symbols. Left, labelled Series circuit: a battery and three globes joined in one loop. Right, labelled Parallel circuit: a battery with three globes, each on its own branch between the two sides of the battery.",
-    "why": "Seeing one path against separate branches makes the difference clear."
-   }
-  ]
+  }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "diagram",
+   "brief": "Two circuit diagrams side by side using standard symbols. Left, labelled Series circuit: a battery and three globes joined in one loop. Right, labelled Parallel circuit: a battery with three globes, each on its own branch between the two sides of the battery.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/series-and-parallel-three-globes.svg",
+     "alt": "Two circuit diagrams side by side. Left, the series circuit: a battery and three globes joined one after another in a single loop. Right, the parallel circuit: a battery with three globes, each on its own branch between the wire from one side of the battery and the wire from the other."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:54Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:49Z"
+  }
+ ]
 }

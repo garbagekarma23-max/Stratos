@@ -30,7 +30,9 @@
   "2026-11-12T12:44:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-12T15:15:49Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-12T15:26:05Z write: done",
-  "2026-11-12T15:35:09Z check: passed, cleared"
+  "2026-11-12T15:35:09Z check: passed, cleared",
+  "2026-11-15T16:10:45Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:37Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -123,6 +125,13 @@
     "The angle at the centre is \\(80^{\\circ}\\). The angle at the circumference on the same arc is \\(80^{\\circ} \\div 2 = 40^{\\circ}\\)."
    ]
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/angle-at-centre-and-circumference.svg",
+    "alt": "A circle with centre O and points A, B and C on it, C on the major arc. Arc AB is marked at the bottom. Angle AOB at the centre is marked 80°, and angle ACB at the circumference, standing on the same arc AB, is marked 40°."
+   }
+  },
   "remember": "Centre angle \\(= 2 \\times\\) circumference angle, on the same arc.",
   "a": {
    "q": "An angle at the centre of a circle is \\(110^{\\circ}\\). What is the angle at the circumference on the same arc?",
@@ -146,15 +155,39 @@
    ],
    "why": "Both angles stand on arc AB, so the angle at the centre is twice the angle at the circumference: \\(2 \\times 34^{\\circ} = 68^{\\circ}\\). Halving to get \\(17^{\\circ}\\) is tempting, but the unknown angle is the one at the centre, so it is the larger.",
    "clue": "You are finding the centre angle, so it should be the bigger one."
-  },
-  "wants": [
-   {
-    "at": "card 3",
-    "kind": "diagram",
-    "brief": "A circle with centre O and points A and B on the circumference. Point C lies on the major arc. Draw the angle AOB at the centre, labelled 80 degrees, and the angle ACB at the circumference standing on the same arc AB, labelled 40 degrees. Label the arc AB.",
-    "why": "Seeing both angles stand on the same arc shows which angle is at the centre and which is at the circumference."
-   }
-  ]
+  }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "diagram",
+   "brief": "A circle with centre O and points A and B on the circumference. Point C lies on the major arc. Draw the angle AOB at the centre, labelled 80 degrees, and the angle ACB at the circumference standing on the same arc AB, labelled 40 degrees. Label the arc AB.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/angle-at-centre-and-circumference.svg",
+     "alt": "A circle with centre O and points A, B and C on it, C on the major arc. Arc AB is marked at the bottom. Angle AOB at the centre is marked 80°, and angle ACB at the circumference, standing on the same arc AB, is marked 40°."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:44Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:37Z"
+  }
+ ]
 }

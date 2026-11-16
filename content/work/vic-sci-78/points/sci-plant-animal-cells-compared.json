@@ -32,7 +32,9 @@
   "2026-11-12T15:26:07Z write: done",
   "2026-11-12T15:35:11Z check: flagged",
   "2026-11-12T15:42:26Z fix: suggested",
-  "2026-11-12T16:19:55Z autoreview: cleared with the fix (remember other)"
+  "2026-11-12T16:19:55Z autoreview: cleared with the fix (remember other)",
+  "2026-11-15T16:10:49Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:43Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -225,6 +227,13 @@
     "A mature plant cell has a large vacuole filled with fluid. It stores water and other substances. Animal cells lack a large vacuole like this."
    ]
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/plant-and-animal-cells-side-by-side.svg",
+    "alt": "A plant cell on the left and an animal cell on the right, with labels between them. Cell membrane, nucleus, mitochondria and cytoplasm point to both cells. Cell wall, chloroplasts and large vacuole point only to the plant cell, which has a stiff wall outside its membrane, chloroplasts and a large vacuole filling most of the cell."
+   }
+  },
   "remember": "Plant cells add a cell wall to the shared parts. Many also have chloroplasts and a large vacuole.",
   "a": {
    "q": "Which structure is found in plant cells but not in animal cells?",
@@ -248,15 +257,39 @@
    ],
    "why": "Animal cells have exactly these parts and lack a cell wall and chloroplasts, so it could be an animal cell. It cannot be said to be a plant cell, because plant cells have a cell wall.",
    "clue": "Check which parts are shared and which only plants have."
-  },
-  "wants": [
-   {
-    "at": "card 4",
-    "kind": "diagram",
-    "brief": "Two labelled cell diagrams side by side. Plant cell (a mature leaf cell): cell wall, cell membrane, cytoplasm, nucleus, mitochondria, chloroplasts, large vacuole. Animal cell: cell membrane, cytoplasm, nucleus, mitochondria.",
-    "why": "Seeing both cells together shows which parts are shared and which only the plant cell has."
-   }
-  ]
+  }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "diagram",
+   "brief": "Two labelled cell diagrams side by side. Plant cell (a mature leaf cell): cell wall, cell membrane, cytoplasm, nucleus, mitochondria, chloroplasts, large vacuole. Animal cell: cell membrane, cytoplasm, nucleus, mitochondria.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/plant-and-animal-cells-side-by-side.svg",
+     "alt": "A plant cell on the left and an animal cell on the right, with labels between them. Cell membrane, nucleus, mitochondria and cytoplasm point to both cells. Cell wall, chloroplasts and large vacuole point only to the plant cell, which has a stiff wall outside its membrane, chloroplasts and a large vacuole filling most of the cell."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:49Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:43Z"
+  }
+ ]
 }

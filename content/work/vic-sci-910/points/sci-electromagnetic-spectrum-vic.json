@@ -22,7 +22,9 @@
   "2026-11-12T12:44:23Z match: Claude Haiku 5.5 may adapt sci-electromagnetic-spectrum, but is not highly sure, so to the Opus match check",
   "2026-11-12T15:15:53Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
   "2026-11-12T15:26:08Z write: done",
-  "2026-11-12T15:35:12Z check: passed, cleared"
+  "2026-11-12T15:35:12Z check: passed, cleared",
+  "2026-11-15T16:10:56Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:51Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -120,6 +122,13 @@
    "Each type has uses. Radio waves carry broadcasts, microwaves heat food and carry phone signals, infrared is used in remote controls and heat cameras, and X-rays show bones.",
    "Each type has dangers. Ultraviolet can burn skin and damage cells. X-rays and gamma rays carry the most energy and can damage cells, so exposure is kept low and controlled."
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/electromagnetic-spectrum-order.svg",
+    "alt": "A bar split into seven sections, from left to right: radio waves, microwaves, infrared, visible light, ultraviolet, X-rays and gamma rays. An arrow above the bar points right, labelled shorter wavelength, higher frequency, more energy."
+   }
+  },
   "remember": "Shorter wavelength means higher frequency and more energy. Uses and dangers differ by type.",
   "a": {
    "q": "Which list puts these waves in order from longest wavelength to shortest?",
@@ -143,15 +152,39 @@
    ],
    "why": "X-rays have a shorter wavelength and higher frequency, so each wave carries more energy and can damage cells. Speed is not the reason, because all electromagnetic waves travel at the same speed in a vacuum.",
    "clue": "All the waves share one speed in a vacuum, so look at what differs."
-  },
-  "wants": [
-   {
-    "at": "card 1",
-    "kind": "diagram",
-    "brief": "A horizontal bar of the electromagnetic spectrum in seven labelled sections, in order: radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, gamma rays. An arrow along the top points to the right and is labelled shorter wavelength, higher frequency, more energy.",
-    "why": "It shows the order of the waves and how wavelength, frequency and energy change along the spectrum."
-   }
-  ]
+  }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "diagram",
+   "brief": "A horizontal bar of the electromagnetic spectrum in seven labelled sections, in order: radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, gamma rays. An arrow along the top points to the right and is labelled shorter wavelength, higher frequency, more energy.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/electromagnetic-spectrum-order.svg",
+     "alt": "A bar split into seven sections, from left to right: radio waves, microwaves, infrared, visible light, ultraviolet, X-rays and gamma rays. An arrow above the bar points right, labelled shorter wavelength, higher frequency, more energy."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:56Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:51Z"
+  }
+ ]
 }

@@ -21,7 +21,11 @@
   "2026-11-12T15:35:06Z check: flagged",
   "2026-11-12T15:59:42Z fix: suggested",
   "2026-11-12T17:07:10Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
-  "2026-11-13T12:13:14Z claude-code review: approved with the fix (a spot check)"
+  "2026-11-13T12:13:14Z claude-code review: approved with the fix (a spot check)",
+  "2026-11-15T16:10:37Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:31Z pictures: 1 picture turned down. Picture 1 (diagram at card 2): redo, high sure. The cave is drawn in the middle of the rock, set back from the cliff face that the waves and the arrow hit, with no water at its floor, so it does not show waves cutting a cave into the cliff as the card says.; The drawing mixes two views: the headland and its wave-cut cliff are a side profile with the sea only on the right, but the cave and the arch are drawn as holes in the face toward the viewer, which has no sea in front of it; draw the cave opening at the wave-attacked cliff at sea level, with water in it, so it reads as the same cave that then wears through to the arch.. Took out pictures/diagrams/headland-cave-arch-stack-sequence.svg",
+  "2026-11-15T16:23:47Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:25:22Z pictures: 1 picture turned down. Picture 1 (diagram at card 2): redo, high sure. The Cave panel cuts the hollow out of the seaward tip of the cliff, open to the sea, but the Arch panel shows that tip whole again with an enclosed opening further back, so the cave does not visibly wear through to become the arch as the card says.; Draw the cave as a dark hollow at the base of the rock in the same place the arch opening later appears, with the cliff outline left whole, so the four panels read as one headland changing over time.; In dark mode the cave hollow is filled lighter than the rock around it, so it reads less like a hollow; once redrawn, it should look darker than the rock or be shown by its outline in both modes.. Now waiting for you: diagram at card 2. Took out pictures/diagrams/headland-cave-arch-stack-sequence-v2.svg"
  ],
  "sent": {
   "match": 1,
@@ -291,7 +295,19 @@
     "at": "card 2",
     "kind": "diagram",
     "brief": "Four small side-by-side drawings of one headland with cliffs over time, labelled in order: headland, cave, arch, stack. Each shows waves hitting the rock at sea level, with the cave wearing through to an arch and then the top of the arch falling to leave a stack.",
-    "why": "Seeing the stages in order helps students follow how one landform turns into the next."
+    "why": "Seeing the stages in order helps students follow how one landform turns into the next.",
+    "tries": 2,
+    "notes": [
+     [
+      "The cave is drawn in the middle of the rock, set back from the cliff face that the waves and the arrow hit, with no water at its floor, so it does not show waves cutting a cave into the cliff as the card says.",
+      "The drawing mixes two views: the headland and its wave-cut cliff are a side profile with the sea only on the right, but the cave and the arch are drawn as holes in the face toward the viewer, which has no sea in front of it; draw the cave opening at the wave-attacked cliff at sea level, with water in it, so it reads as the same cave that then wears through to the arch."
+     ],
+     [
+      "The Cave panel cuts the hollow out of the seaward tip of the cliff, open to the sea, but the Arch panel shows that tip whole again with an enclosed opening further back, so the cave does not visibly wear through to become the arch as the card says.",
+      "Draw the cave as a dark hollow at the base of the rock in the same place the arch opening later appears, with the cliff outline left whole, so the four panels read as one headland changing over time.",
+      "In dark mode the cave hollow is filled lighter than the rock around it, so it reads less like a hollow; once redrawn, it should look darker than the rock or be shown by its outline in both modes."
+     ]
+    ]
    }
   ]
  },
@@ -541,6 +557,75 @@
     "rewrites": 0
    },
    "after": "1b9c858de8d8b627"
+  }
+ ],
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "diagram",
+   "brief": "Four small side-by-side drawings of one headland with cliffs over time, labelled in order: headland, cave, arch, stack. Each shows waves hitting the rock at sea level, with the cave wearing through to an arch and then the top of the arch falling to leave a stack.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/headland-cave-arch-stack-sequence.svg",
+     "alt": "Four drawings of the same headland over time, in order from left to right with arrows between them, each with waves hitting the rock at sea level. Headland: land sticking out into the sea, ending in a steep cliff. Cave: a hollow worn into the cliff at sea level. Arch: the hollow has worn right through, with rock still joining above the opening. Stack: the top has fallen, leaving a column of rock standing alone in the sea."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:36Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": false,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The cave is drawn in the middle of the rock, set back from the cliff face that the waves and the arrow hit, with no water at its floor, so it does not show waves cutting a cave into the cliff as the card says.",
+     "The drawing mixes two views: the headland and its wave-cut cliff are a side profile with the sea only on the right, but the cave and the arch are drawn as holes in the face toward the viewer, which has no sea in front of it; draw the cave opening at the wave-attacked cliff at sea level, with water in it, so it reads as the same cave that then wears through to the arch."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:30Z"
+  },
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "diagram",
+   "brief": "Four small side-by-side drawings of one headland with cliffs over time, labelled in order: headland, cave, arch, stack. Each shows waves hitting the rock at sea level, with the cave wearing through to an arch and then the top of the arch falling to leave a stack.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/headland-cave-arch-stack-sequence-v2.svg",
+     "alt": "Four side views of the same headland over time, in order from left to right with arrows between them. In each, the sea runs along the base of the rock and waves hit the cliff at sea level. Headland: land sticking out into the sea, ending in a steep cliff. Cave: the waves have cut a hollow into the base of the cliff, with water at its floor. Arch: the hollow has worn right through, leaving rock joining above an opening with sea beneath it. Stack: the top has fallen, leaving a column of rock standing alone in the sea."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:23:47Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": false,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The Cave panel cuts the hollow out of the seaward tip of the cliff, open to the sea, but the Arch panel shows that tip whole again with an enclosed opening further back, so the cave does not visibly wear through to become the arch as the card says.",
+     "Draw the cave as a dark hollow at the base of the rock in the same place the arch opening later appears, with the cliff outline left whole, so the four panels read as one headland changing over time.",
+     "In dark mode the cave hollow is filled lighter than the rock around it, so it reads less like a hollow; once redrawn, it should look darker than the rock or be shown by its outline in both modes."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:25:22Z"
   }
  ]
 }

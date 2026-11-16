@@ -26,7 +26,9 @@
   "2026-11-12T12:44:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-12T15:15:49Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-12T15:26:04Z write: done",
-  "2026-11-12T15:35:09Z check: passed, cleared"
+  "2026-11-12T15:35:09Z check: passed, cleared",
+  "2026-11-15T16:10:46Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:39Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -137,6 +139,13 @@
     "A circle has radius 13 cm. A chord is 5 cm from the centre. Half the chord is \\(\\sqrt{13^{2} - 5^{2}} = \\sqrt{144} = 12\\) cm, so the chord is 24 cm long."
    ]
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/perpendicular-from-centre-halves-chord.svg",
+    "alt": "A circle with centre O and a chord AB. A line from O meets AB at M with a right-angle mark at M. AM and MB each have one tick, showing they are equal."
+   }
+  },
   "remember": "Centre to chord at a right angle: it halves the chord. Equal chords sit equally far from the centre.",
   "a": {
    "q": "A line from the centre of a circle meets a chord at \\(90^{\\circ}\\). The chord is 18 cm long. How far is the meeting point from one end of the chord?",
@@ -160,15 +169,39 @@
    ],
    "why": "Half the chord is \\(\\sqrt{10^{2} - 6^{2}} = \\sqrt{64} = 8\\) cm, so the whole chord is 16 cm. The answer 8 cm is the tempting one, but it is only half the chord.",
    "clue": "Find half the chord first, using a right-angled triangle with the radius as its longest side."
-  },
-  "wants": [
-   {
-    "at": "card 2",
-    "kind": "diagram",
-    "brief": "A circle with centre O and a chord AB. A line from O meets AB at point M with a right angle marked at M. Mark AM and MB as equal with matching tick marks.",
-    "why": "It shows the perpendicular from the centre halving the chord."
-   }
-  ]
+  }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "diagram",
+   "brief": "A circle with centre O and a chord AB. A line from O meets AB at point M with a right angle marked at M. Mark AM and MB as equal with matching tick marks.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/perpendicular-from-centre-halves-chord.svg",
+     "alt": "A circle with centre O and a chord AB. A line from O meets AB at M with a right-angle mark at M. AM and MB each have one tick, showing they are equal."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:46Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:39Z"
+  }
+ ]
 }

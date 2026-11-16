@@ -24879,6 +24879,13 @@ MADE_BANKS.mat = {
         "In a parallelogram \\(ABCD\\), the diagonal \\(AC\\) splits it into \\(\\triangle ABC\\) and \\(\\triangle CDA\\). \\(AB = CD\\) and \\(BC = DA\\) (opposite sides), and \\(AC\\) is common. So the triangles are congruent (SSS), and \\(\\angle B = \\angle D\\) (corresponding angles in congruent triangles)."
       ]
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/parallelogram-abcd-diagonal-ac-congruent.svg",
+        "alt": "Parallelogram ABCD with A at the bottom left, B at the bottom right, C at the top right and D at the top left. Diagonal AC splits it into two shaded triangles, labelled triangle ABC and triangle CDA. AB and CD each have one tick, and BC and DA each have two ticks, to show they are equal."
+      }
+    },
     "remember": "Prove the triangles congruent first, then use their matching parts to prove the fact you want.",
     "a": {
       "q": "In a proof, triangles \\(PQR\\) and \\(XYZ\\) are shown to be congruent. Which reason then proves \\(\\angle Q = \\angle Y\\)?",
@@ -24924,6 +24931,13 @@ MADE_BANKS.mat = {
         "Paths model real routes. Vertices can be towns, depots or houses, and edges can be roads or delivery routes. A path shows a trip that can be made."
       ]
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/network-towns-a-to-d-and-town-e.svg",
+        "alt": "A network with vertices A, B, C and D in a line, joined by edges AB, BC and CD, each labelled road. Below them, vertex E stands alone with no edges, labelled Town E: no road."
+      }
+    },
     "remember": "Connected means every vertex can be reached from every other vertex along edges.",
     "a": {
       "q": "A network has vertices P, Q, R and S. The edges are PQ, QR and PR. Why is the network not connected?",
@@ -25318,6 +25332,13 @@ MADE_BANKS.mat = {
       "To find the probability of one outcome, multiply the probabilities along its path. For a fair coin, \\(P(\\text{HHT}) = \\frac{1}{2} \\times \\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{8}\\).",
       "To find the probability of an event with more than one outcome, find each path that fits and add their probabilities. Exactly two heads can happen as HHT, HTH or THH, so \\(P = 3 \\times \\frac{1}{8} = \\frac{3}{8}\\)."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/coin-three-tosses-tree-diagram.svg",
+        "alt": "A tree diagram for three tosses of a fair coin, with columns for toss 1, toss 2 and toss 3. Each toss splits every branch in two, H and T, and every branch is labelled with probability one half. The 8 paths end in the outcomes HHH, HHT, HTH, HTT, THH, THT, TTH and TTT, listed at the right."
+      }
+    },
     "remember": "Multiply along a path for one outcome. Add the paths that fit the event.",
     "a": {
       "q": "A fair coin is tossed three times. What is the probability of getting tails, then heads, then tails, in that order?",
@@ -26049,6 +26070,13 @@ MADE_BANKS.mat = {
         "A cone has radius 3 cm and height 4 cm. Then \\(V = \\frac{1}{3} \\times \\pi \\times 3^{2} \\times 4 = 12\\pi\\), which is about \\(37.7 \\text{ cm}^{3}\\)."
       ]
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/pyramid-prism-cone-cylinder-same-base-height.svg",
+        "alt": "Four solids in two pairs. A square pyramid stands beside a square prism with the same base and height, and a cone stands beside a cylinder with the same base and height. Each solid has its base labelled base and its height labelled h, with a dashed vertical line from the tip straight down to the base for h in the pyramid and the cone."
+      }
+    },
     "remember": "Pointed solid volume is one third of base area times height.",
     "a": {
       "q": "A square pyramid has base side 6 cm and perpendicular height 5 cm. What is its volume?",
@@ -26082,6 +26110,13 @@ MADE_BANKS.mat = {
       "The curved surface has area \\(\\pi r s\\), using \\(s\\), not \\(h\\). A closed cone also has a base of area \\(\\pi r^{2}\\), so \\(SA = \\pi r^{2} + \\pi r s\\).",
       "For example, a closed cone has radius 3 cm and height 4 cm. Then \\(s = \\sqrt{9 + 16} = 5\\). Base \\(9\\pi\\), curved \\(15\\pi\\), so the total is \\(24\\pi \\approx 75.4\\) cm\\(^{2}\\)."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/cone-radius-height-slant-height.svg",
+        "alt": "A cone. The vertical height h is a dashed line from the tip straight down to the centre of the circular base, and the radius r is a dashed line from the centre to the edge of the base, with a right-angle mark where they meet. The slant height s runs down the side of the cone from the tip to the same point on the edge, so r, h and s form a right-angled triangle."
+      }
+    },
     "remember": "Closed cone: \\(SA = \\pi r^{2} + \\pi r s\\), with the slant height \\(s\\), not \\(h\\).",
     "a": {
       "q": "A closed cone has radius 4 cm and slant height 7 cm. What is its total surface area, in terms of \\(\\pi\\)?",
@@ -26224,6 +26259,13 @@ MADE_BANKS.mat = {
         "The angle at the centre is \\(80^{\\circ}\\). The angle at the circumference on the same arc is \\(80^{\\circ} \\div 2 = 40^{\\circ}\\)."
       ]
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/angle-at-centre-and-circumference.svg",
+        "alt": "A circle with centre O and points A, B and C on it, C on the major arc. Arc AB is marked at the bottom. Angle AOB at the centre is marked 80°, and angle ACB at the circumference, standing on the same arc AB, is marked 40°."
+      }
+    },
     "remember": "Centre angle \\(= 2 \\times\\) circumference angle, on the same arc.",
     "a": {
       "q": "An angle at the centre of a circle is \\(110^{\\circ}\\). What is the angle at the circumference on the same arc?",
@@ -26252,6 +26294,18 @@ MADE_BANKS.mat = {
       ],
       "Example: \\(AB\\) is a diameter and \\(C\\) is on the circle. Angle \\(ACB = 90^{\\circ}\\). If angle \\(CAB = 35^{\\circ}\\), the angles of triangle \\(ABC\\) add to \\(180^{\\circ}\\), so angle \\(ABC = 180^{\\circ} - 90^{\\circ} - 35^{\\circ} = 55^{\\circ}\\)."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/angle-in-a-semicircle.svg",
+        "alt": "A circle with diameter AB drawn through its centre and point C on the circle. Triangle ABC is drawn, and the angle at C has a right-angle mark and is labelled 90°."
+      },
+      "2": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/angles-in-the-same-segment.svg",
+        "alt": "A circle with chord PQ. Points R and S are on the circle on the same side of PQ. Lines join R to P and Q and S to P and Q, and angles PRQ and PSQ are each marked with an arc and one tick, showing they are equal."
+      }
+    },
     "remember": "A diameter gives a right angle at the circumference. The same arc gives equal angles on the same side.",
     "a": {
       "q": "\\(PQ\\) is a diameter of a circle and \\(R\\) is a point on the circle. What is angle \\(PRQ\\)?",
@@ -26275,6 +26329,13 @@ MADE_BANKS.mat = {
       "Example: in cyclic quadrilateral \\(ABCD\\), angle \\(A = 70^{\\circ}\\). Angle \\(C\\) is opposite \\(A\\), so \\(C = 180^{\\circ} - 70^{\\circ} = 110^{\\circ}\\).",
       "Only opposite angles pair up. Angles at neighbouring vertices, such as \\(A\\) and \\(B\\), do not have to add to \\(180^{\\circ}\\)."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/cyclic-quadrilateral-opposite-angles.svg",
+        "alt": "A cyclic quadrilateral ABCD with all four vertices on a circle, in order A, B, C, D around it. The angle at A is marked with one arc and the opposite angle at C with two arcs."
+      }
+    },
     "remember": "In a cyclic quadrilateral, each pair of opposite angles is supplementary.",
     "a": {
       "q": "\\(PQRS\\) is a cyclic quadrilateral. Angle \\(P = 85^{\\circ}\\). What is angle \\(R\\), opposite \\(P\\)?",
@@ -26307,6 +26368,13 @@ MADE_BANKS.mat = {
       ],
       "Example: a circle has centre O and radius 5 cm, and \\(OP = 13\\) cm. Triangle OAP has its right angle at A, so \\(PA^{2} = 13^{2} - 5^{2} = 144\\). So \\(PA = 12\\) cm, and \\(PB = 12\\) cm too."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/two-tangents-from-an-outside-point.svg",
+        "alt": "A circle with centre O and a point P outside it. Tangents from P touch the circle at A and B. Radii OA and OB are drawn, each with a right-angle mark where it meets its tangent, and the interval OP is drawn. PA and PB each have one tick, showing they are equal in length."
+      }
+    },
     "remember": "The radius meets the tangent at \\(90^{\\circ}\\). Two tangents from one outside point are equal in length.",
     "a": {
       "q": "PA is a tangent to a circle with centre O, touching it at A. Angle AOP is \\(58^{\\circ}\\). What is angle APO?",
@@ -26342,6 +26410,13 @@ MADE_BANKS.mat = {
         "A circle has radius 13 cm. A chord is 5 cm from the centre. Half the chord is \\(\\sqrt{13^{2} - 5^{2}} = \\sqrt{144} = 12\\) cm, so the chord is 24 cm long."
       ]
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/perpendicular-from-centre-halves-chord.svg",
+        "alt": "A circle with centre O and a chord AB. A line from O meets AB at M with a right-angle mark at M. AM and MB each have one tick, showing they are equal."
+      }
+    },
     "remember": "Centre to chord at a right angle: it halves the chord. Equal chords sit equally far from the centre.",
     "a": {
       "q": "A line from the centre of a circle meets a chord at \\(90^{\\circ}\\). The chord is 18 cm long. How far is the meeting point from one end of the chord?",
@@ -26365,6 +26440,13 @@ MADE_BANKS.mat = {
       "That base diagonal is now a side of a second right-angled triangle, with the height 12 as the other side. The diagonal through the box is \\(\\sqrt{5^{2} + 12^{2}} = 13\\).",
       "To find the angle between that diagonal and the base, use the second triangle. \\(\\tan \\theta = \\frac{12}{5}\\), so \\(\\theta \\approx 67.4^{\\circ}\\)."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/box-base-diagonal-and-space-diagonal.svg",
+        "alt": "A box 4 long, 3 wide and 12 high, with hidden edges dashed. The diagonal across the base, 5, makes a shaded right-angled triangle with the sides 4 and 3. The diagonal through the box, 13, makes a second shaded right-angled triangle with the base diagonal 5 and the height 12. The angle \\(\\theta\\) is marked between the diagonal through the box and the base diagonal."
+      }
+    },
     "remember": "Find a right-angled triangle, work out one side at a time, and reuse each answer in the next triangle.",
     "a": {
       "q": "A box is 6 cm long, 8 cm wide and 24 cm high. What is the length of the diagonal across its base?",
@@ -27187,6 +27269,13 @@ MADE_BANKS.mat = {
       "Then adjust. Compare \\(4n\\) with the actual term. Add or subtract the number that makes them match. This is the constant.",
       "For example, matchsticks for 1, 2, 3 squares in a row: 4, 7, 10. The difference is 3, so start with \\(3n\\). For \\(n = 1\\), \\(3n = 3\\), but the term is 4, so add 1. The rule is \\(3n + 1\\)."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/matchstick-squares-in-a-row.svg",
+        "alt": "Three matchstick drawings side by side: step 1 is 1 square made of 4 matchsticks, step 2 is 2 squares in a row made of 7 matchsticks, and step 3 is 3 squares in a row made of 10 matchsticks. Squares next to each other share a matchstick, so each new square adds 3 matchsticks."
+      }
+    },
     "remember": "Rule: common difference times \\(n\\), then add or subtract the number that fixes the first term.",
     "a": {
       "q": "A pattern has terms 5, 9, 13, 17. What is the common difference?",
@@ -27222,6 +27311,18 @@ MADE_BANKS.mat = {
         "A triangle has base 10 cm and perpendicular height 6 cm. Multiply \\(10 \\times 6 = 60\\), then halve it to get 30 square centimetres."
       ]
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/triangle-perpendicular-height-slanted-side.svg",
+        "alt": "A triangle with a horizontal side labelled base. A dashed vertical line from the top corner down to the base, with a right-angle mark where it meets the base, is labelled perpendicular height. The longer sloping side is labelled slanted side."
+      },
+      "3": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/triangle-half-of-rectangle.svg",
+        "alt": "A rectangle with its bottom edge labelled base and its left side labelled height. A shaded triangle has the same base, and its top corner touches the top edge of the rectangle. A dashed line from that corner down to the base splits the rectangle into two parts, and the triangle covers exactly half of each, leaving two clear triangles."
+      }
+    },
     "remember": "Triangle area is half of base times perpendicular height. Do not forget the half.",
     "a": {
       "q": "A rectangle is 9 cm long and 4 cm wide. What is its area?",
@@ -27245,6 +27346,13 @@ MADE_BANKS.mat = {
       "Cut a triangle off one end and slide it to the other end. The shape becomes a rectangle with the same base and the same height, and no area is lost or added.",
       "So the area of a parallelogram is base \\(\\times\\) perpendicular height. Example: base 9 cm and height 4 cm give \\(9 \\times 4 = 36 \\text{ cm}^{2}\\)."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/parallelogram-cut-triangle-to-rectangle.svg",
+        "alt": "A parallelogram with its bottom side labelled base and a dashed line labelled perpendicular height, at a right angle to the base, from the top left corner. The shaded triangle to the left of the dashed line is cut off, and an arrow labelled slide the triangle across shows it moving to the right end, where a dashed outline shows it in its new place. The shape becomes a rectangle with the same base and the same height."
+      }
+    },
     "remember": "Area of a parallelogram is base times perpendicular height, not base times the slanted side.",
     "a": {
       "q": "Why does a parallelogram have the same area as a rectangle with its base and perpendicular height?",
@@ -27273,6 +27381,13 @@ MADE_BANKS.mat = {
       "Worked example: a box is 5 cm long, 3 cm wide and 2 cm high. \\(V = 5 \\times 3 \\times 2 = 30\\), so the volume is \\(30 \\text{ cm}^{3}\\).",
       "All three lengths must be in the same unit before you multiply. The answer is then in that unit cubed. Area uses squared units such as \\(\\text{cm}^{2}\\)."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/rectangular-prism-length-width-height.svg",
+        "alt": "A box-shaped rectangular prism drawn in 3D, with its hidden edges dashed. The bottom front edge is labelled length (l), the front vertical edge is labelled height (h), and an edge going back from the front is labelled width (w)."
+      }
+    },
     "remember": "Multiply the three lengths. The answer is in cubic units.",
     "a": {
       "q": "A fish tank is 40 cm long, 20 cm wide and 25 cm high. What is its volume?",
@@ -27309,6 +27424,13 @@ MADE_BANKS.mat = {
         "A triangle has base 6 cm and height 4 cm, and the prism is 10 cm long. Triangle area: \\(\\frac{1}{2} \\times 6 \\times 4 = 12\\) cm\\(^{2}\\). Volume: \\(12 \\times 10 = 120\\) cm\\(^{3}\\)."
       ]
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/triangular-prism-cross-section-length.svg",
+        "alt": "A right triangular prism lying on one of its rectangular faces, with its hidden edges dashed. The front triangle end is shaded and labelled cross-section. Its base is labelled b, and a dashed line from its top corner down to the base, with a right-angle mark, is labelled h. An arrow along the bottom edge between the two triangle ends is labelled length."
+      }
+    },
     "remember": "Find the area of the triangle end first, then multiply by the length of the prism.",
     "a": {
       "q": "A triangular prism has a triangle end with base 8 cm and height 3 cm. The prism is 9 cm long. What is its volume?",
@@ -27341,6 +27463,13 @@ MADE_BANKS.mat = {
         "angles between the parallel lines, on the same side of the transversal. They add to \\(180^{\\circ}\\), so each is \\(180^{\\circ}\\) minus the other. Example: if one is \\(70^{\\circ}\\), the other is \\(180^{\\circ} - 70^{\\circ} = 110^{\\circ}\\). They form a C shape."
       ]
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/transversal-parallel-lines-f-z-c.svg",
+        "alt": "Two horizontal parallel lines, each marked with an arrow, crossed by a slanted transversal. At the top crossing the angles are a and b above the line and c and d below it, from left to right; at the bottom crossing they are e and f above and g and h below. Under it, three small copies each shade one pair and trace its shape: corresponding angles d and h form an F, so \\(d = h\\); alternate angles c and f form a Z, so \\(c = f\\); co-interior angles d and f form a C, so \\(d + f = 180^{\\circ}\\)."
+      }
+    },
     "remember": "Parallel lines: F is equal, Z is equal, C adds to \\(180^{\\circ}\\).",
     "a": {
       "q": "A transversal crosses two parallel lines. One co-interior angle is \\(65^{\\circ}\\). What is the other co-interior angle?",
@@ -27396,6 +27525,18 @@ MADE_BANKS.mat = {
       ],
       "Example: a tall box that is 2 cubes wide, 1 cube deep and 3 cubes high. Its front view is a rectangle 2 wide and 3 high. Its top view is a rectangle 2 wide and 1 deep."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/cube-net-cross-and-cube.svg",
+        "alt": "On the left, a net of a cube: 6 squares in a cross shape, a column of 4 squares with one more square on each side of the second. An arrow labelled folds points to a cube on the right, drawn in 3D with its hidden edges dashed."
+      },
+      "3": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/isometric-box-2-wide-1-deep-3-high.svg",
+        "alt": "An isometric drawing on dot paper of a box made of cubes, 2 cubes wide, 1 cube deep and 3 cubes high. Three faces show at once: the front face is 2 cubes wide and 3 high, the side face is 1 cube deep and 3 high, and the top face is 2 by 1. The vertical edges are drawn as vertical lines."
+      }
+    },
     "remember": "A net unfolds the faces. Views show one side at a time. An isometric drawing shows three faces at once.",
     "a": {
       "q": "Which drawing of a solid shows its faces laid out flat so that they can be folded up to make it?",
@@ -28542,6 +28683,13 @@ MADE_BANKS.mat = {
       ["Adjacent", "The side next to the angle you are using that is not the hypotenuse. Adjacent means next to."],
       "Opposite and adjacent depend on the angle chosen. In a triangle ABC with the right angle at C, the side BC is opposite angle \\(A\\). If you use angle \\(B\\) instead, BC becomes the adjacent side."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/right-triangle-sides-named-from-angle-a.svg",
+        "alt": "A right-angled triangle ABC with the right angle at C marked by a small square, C at the bottom left, A at the bottom right and B directly above C. Angle A is marked with an arc. Side AB is labelled hypotenuse, side BC is labelled opposite, and side AC is labelled adjacent, each named from angle A."
+      }
+    },
     "remember": "The hypotenuse faces the right angle. Opposite and adjacent are named from the angle you use.",
     "a": {
       "q": "In a right-angled triangle, which side is the hypotenuse?",

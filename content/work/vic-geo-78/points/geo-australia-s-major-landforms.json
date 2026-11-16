@@ -20,7 +20,9 @@
   "2026-11-12T15:26:00Z write: done",
   "2026-11-12T15:35:06Z check: flagged",
   "2026-11-12T15:59:43Z fix: suggested",
-  "2026-11-12T17:07:11Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-12T17:07:11Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-15T16:10:36Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:30Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -227,6 +229,13 @@
     "a large, raised, flat area covering most of the west. It is the biggest of the three regions."
    ]
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/australia-three-landform-regions.svg",
+    "alt": "A map of Australia showing three landform regions. The Great Dividing Range is a band down the east coast, from Cape York to Victoria. The Central Lowlands lie in the middle, west of the range, and the Western Plateau covers most of the west. Tasmania is drawn but not shaded."
+   }
+  },
   "remember": "Australia is old, low and flat. Highlands lie in the east, lowlands in the middle and a plateau across the west.",
   "a": {
    "q": "Most of Australia is low and flat. What is the main reason for this?",
@@ -250,15 +259,39 @@
    ],
    "why": "The Great Dividing Range lies in the east, the Central Lowlands are in the middle and the Western Plateau covers most of the west. The reverse order is tempting, but it describes a trip from west to east.",
    "clue": "Start with the highlands in the east, then move west."
-  },
-  "wants": [
-   {
-    "at": "card 2",
-    "kind": "diagram",
-    "brief": "A simple map of Australia showing three labelled regions: the Great Dividing Range as a band of highlands down the east coast, the Central Lowlands in the middle, and the Western Plateau across most of the west.",
-    "why": "Seeing where each region sits helps students remember their order from east to west."
-   }
-  ]
+  }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "diagram",
+   "brief": "A simple map of Australia showing three labelled regions: the Great Dividing Range as a band of highlands down the east coast, the Central Lowlands in the middle, and the Western Plateau across most of the west.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/australia-three-landform-regions.svg",
+     "alt": "A map of Australia showing three landform regions. The Great Dividing Range is a band down the east coast, from Cape York to Victoria. The Central Lowlands lie in the middle, west of the range, and the Western Plateau covers most of the west. Tasmania is drawn but not shaded."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:36Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:30Z"
+  }
+ ]
 }

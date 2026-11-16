@@ -17,7 +17,9 @@
   "2026-11-12T15:35:11Z write: done",
   "2026-11-12T15:42:25Z check: flagged",
   "2026-11-12T15:45:43Z fix: suggested",
-  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-15T16:10:53Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:48Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -225,6 +227,13 @@
    ],
    "A doorknob is a wheel and axle. You turn the wide knob with a small force, and the thin axle turns the latch with a bigger force. Turning the wheel moves its rim through a longer distance than the axle moves."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/fixed-and-moving-pulleys-effort-load.svg",
+    "alt": "Left: one fixed pulley hangs from a beam, with a rope over it, a load on one side and the effort pulling down on the other. Right: two pulleys, a fixed pulley on the beam and a moving pulley that holds the load. The rope runs from the beam down under the moving pulley, up over the fixed pulley and down to the effort, so two rope sections, numbered 1 and 2, hold the load."
+   }
+  },
   "remember": "A fixed pulley changes direction. More pulleys cut the effort. A wheel and axle makes a small force larger.",
   "a": {
    "q": "Kai hoists a flag up a pole by pulling down on a rope that runs over a single fixed pulley at the top. What does the pulley do?",
@@ -248,15 +257,39 @@
    ],
    "why": "The wheel is wider than the axle, so a small force on its rim turns the axle with a larger force. The option with a large force on the axle has the forces the wrong way round: Priya pushes on the rim, and the axle is what gets the larger force. Sharing a load over more rope belongs to a system of pulleys, not a wheel and axle.",
    "clue": "Think about the doorknob: which part do your fingers turn?"
-  },
-  "wants": [
-   {
-    "at": "card 2",
-    "kind": "diagram",
-    "brief": "Two diagrams side by side. Left: a single fixed pulley fixed to a beam, with a rope over it, a load hanging on one side and an arrow labelled effort pulling down on the other. Right: a pulley system with two pulleys, one fixed to the beam and one moving with the load, with the rope sections holding the load marked and an arrow labelled effort. Label: fixed pulley, moving pulley, rope, load, effort.",
-    "why": "Seeing the rope sections helps students understand how more pulleys share the load."
-   }
-  ]
+  }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "diagram",
+   "brief": "Two diagrams side by side. Left: a single fixed pulley fixed to a beam, with a rope over it, a load hanging on one side and an arrow labelled effort pulling down on the other. Right: a pulley system with two pulleys, one fixed to the beam and one moving with the load, with the rope sections holding the load marked and an arrow labelled effort. Label: fixed pulley, moving pulley, rope, load, effort.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/fixed-and-moving-pulleys-effort-load.svg",
+     "alt": "Left: one fixed pulley hangs from a beam, with a rope over it, a load on one side and the effort pulling down on the other. Right: two pulleys, a fixed pulley on the beam and a moving pulley that holds the load. The rope runs from the beam down under the moving pulley, up over the fixed pulley and down to the effort, so two rope sections, numbered 1 and 2, hold the load."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:53Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:48Z"
+  }
+ ]
 }

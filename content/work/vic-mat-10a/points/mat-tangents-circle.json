@@ -36,7 +36,9 @@
   "2026-11-13T15:26:08Z review: rejected, to be written again",
   "2026-11-13T15:37:12Z claude-code write: done, waiting for the Claude Code check",
   "2026-11-13T15:44:54Z claude-code check: answered by a separate subagent",
-  "2026-11-13T15:44:54Z check: passed, cleared"
+  "2026-11-13T15:44:54Z check: passed, cleared",
+  "2026-11-15T16:10:46Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:39Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -345,6 +347,13 @@
    ],
    "Example: a circle has centre O and radius 5 cm, and \\(OP = 13\\) cm. Triangle OAP has its right angle at A, so \\(PA^{2} = 13^{2} - 5^{2} = 144\\). So \\(PA = 12\\) cm, and \\(PB = 12\\) cm too."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/two-tangents-from-an-outside-point.svg",
+    "alt": "A circle with centre O and a point P outside it. Tangents from P touch the circle at A and B. Radii OA and OB are drawn, each with a right-angle mark where it meets its tangent, and the interval OP is drawn. PA and PB each have one tick, showing they are equal in length."
+   }
+  },
   "remember": "The radius meets the tangent at \\(90^{\\circ}\\). Two tangents from one outside point are equal in length.",
   "a": {
    "q": "PA is a tangent to a circle with centre O, touching it at A. Angle AOP is \\(58^{\\circ}\\). What is angle APO?",
@@ -368,16 +377,40 @@
    ],
    "why": "Triangle OAP has a right angle at A, so \\(PA^{2} = 17^{2} - 8^{2} = 225\\) and \\(PA = 15\\) cm. Tangents from P are equal, so \\(PB = 15\\) cm and the total is 30 cm. The answer 15 cm stops after finding only PA.",
    "clue": "Use the right angle at A, then the equal tangents."
-  },
-  "wants": [
-   {
-    "at": "card 3",
-    "kind": "diagram",
-    "brief": "A circle with centre O and a point P outside it. Two tangents from P touch the circle at A and B. The radii OA and OB are drawn, each with a small right-angle mark where it meets its tangent. The interval OP is drawn. PA and PB each have one small equal-length tick. Label only O, A, B and P.",
-    "why": "Seeing both tangents, the two right angles and the triangles OAP and OBP shows where each rule applies."
-   }
-  ]
+  }
  },
  "cleared_by": "checker",
- "checked_by": "claude-code"
+ "checked_by": "claude-code",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "diagram",
+   "brief": "A circle with centre O and a point P outside it. Two tangents from P touch the circle at A and B. The radii OA and OB are drawn, each with a small right-angle mark where it meets its tangent. The interval OP is drawn. PA and PB each have one small equal-length tick. Label only O, A, B and P.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/two-tangents-from-an-outside-point.svg",
+     "alt": "A circle with centre O and a point P outside it. Tangents from P touch the circle at A and B. Radii OA and OB are drawn, each with a right-angle mark where it meets its tangent, and the interval OP is drawn. PA and PB each have one tick, showing they are equal in length."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:45Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:38Z"
+  }
+ ]
 }

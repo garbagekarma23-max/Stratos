@@ -29,7 +29,9 @@
   "2026-11-12T12:22:52Z new, match",
   "2026-11-12T12:44:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-12T15:15:48Z write: done",
-  "2026-11-12T15:26:03Z check: passed, cleared"
+  "2026-11-12T15:26:03Z check: passed, cleared",
+  "2026-11-15T16:10:44Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:36Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -139,6 +141,13 @@
     "Paths model real routes. Vertices can be towns, depots or houses, and edges can be roads or delivery routes. A path shows a trip that can be made."
    ]
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/network-towns-a-to-d-and-town-e.svg",
+    "alt": "A network with vertices A, B, C and D in a line, joined by edges AB, BC and CD, each labelled road. Below them, vertex E stands alone with no edges, labelled Town E: no road."
+   }
+  },
   "remember": "Connected means every vertex can be reached from every other vertex along edges.",
   "a": {
    "q": "A network has vertices P, Q, R and S. The edges are PQ, QR and PR. Why is the network not connected?",
@@ -162,15 +171,39 @@
    ],
    "why": "A path exists from A to D, but none reaches E. A connected network needs a path between every pair, so one unreachable vertex means it is not connected. Having some paths is not enough.",
    "clue": "One unreachable vertex is enough to break connection."
-  },
-  "wants": [
-   {
-    "at": "card 3",
-    "kind": "diagram",
-    "brief": "A network with vertices A, B, C, D joined by edges AB, BC and CD in a line, and a separate vertex E with no edges, labelled as a town with no road.",
-    "why": "It lets the student see why one unreachable vertex makes a network not connected."
-   }
-  ]
+  }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "diagram",
+   "brief": "A network with vertices A, B, C, D joined by edges AB, BC and CD in a line, and a separate vertex E with no edges, labelled as a town with no road.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/network-towns-a-to-d-and-town-e.svg",
+     "alt": "A network with vertices A, B, C and D in a line, joined by edges AB, BC and CD, each labelled road. Below them, vertex E stands alone with no edges, labelled Town E: no road."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:43Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:36Z"
+  }
+ ]
 }

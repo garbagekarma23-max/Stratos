@@ -14,7 +14,9 @@
   "2026-11-12T12:44:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-12T15:15:53Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-12T15:26:08Z write: done",
-  "2026-11-12T15:35:12Z check: passed, cleared"
+  "2026-11-12T15:35:12Z check: passed, cleared",
+  "2026-11-15T16:10:55Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:50Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -119,6 +121,13 @@
    ],
    "Each fertilised ovule becomes a seed. The ovary around the seeds grows into the fruit."
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/flower-section-anther-stigma-ovary.svg",
+    "alt": "A cross-section of a flower. In the centre, the stigma sits on a stalk above the ovary, which holds ovules. On each side, a stamen rises with an anther at its tip, and petals spread out at the base. The stigma, anther, ovary and an ovule are labelled."
+   }
+  },
   "remember": "Pollen goes from anther to stigma, then fertilisation in the ovary makes seeds, and the ovary becomes the fruit.",
   "a": {
    "q": "After fertilisation in a flower, what does the ovary become?",
@@ -142,15 +151,39 @@
    ],
    "why": "The yellow dust is pollen, and it must land on the stigma. From there the male cells reach the ovules in the ovary, where fertilisation happens. The anther is tempting, but it makes pollen rather than catching it.",
    "clue": "Which part is sticky and catches pollen?"
-  },
-  "wants": [
-   {
-    "at": "card 1",
-    "kind": "diagram",
-    "brief": "A labelled cross-section of a flower showing the anther, stigma and ovary with an ovule inside it, using the same names as the card.",
-    "why": "Seeing where each part sits helps the student follow pollen from anther to stigma and then to the ovary."
-   }
-  ]
+  }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "diagram",
+   "brief": "A labelled cross-section of a flower showing the anther, stigma and ovary with an ovule inside it, using the same names as the card.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/flower-section-anther-stigma-ovary.svg",
+     "alt": "A cross-section of a flower. In the centre, the stigma sits on a stalk above the ovary, which holds ovules. On each side, a stamen rises with an anther at its tip, and petals spread out at the base. The stigma, anther, ovary and an ovule are labelled."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:54Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:50Z"
+  }
+ ]
 }

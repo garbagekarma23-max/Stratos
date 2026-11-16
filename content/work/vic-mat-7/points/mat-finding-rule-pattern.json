@@ -23,7 +23,9 @@
   "2026-11-12T15:26:05Z write: done",
   "2026-11-12T15:35:10Z check: flagged",
   "2026-11-12T15:42:25Z fix: suggested",
-  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-15T16:10:47Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:40Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -199,6 +201,13 @@
    "Then adjust. Compare \\(4n\\) with the actual term. Add or subtract the number that makes them match. This is the constant.",
    "For example, matchsticks for 1, 2, 3 squares in a row: 4, 7, 10. The difference is 3, so start with \\(3n\\). For \\(n = 1\\), \\(3n = 3\\), but the term is 4, so add 1. The rule is \\(3n + 1\\)."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/matchstick-squares-in-a-row.svg",
+    "alt": "Three matchstick drawings side by side: step 1 is 1 square made of 4 matchsticks, step 2 is 2 squares in a row made of 7 matchsticks, and step 3 is 3 squares in a row made of 10 matchsticks. Squares next to each other share a matchstick, so each new square adds 3 matchsticks."
+   }
+  },
   "remember": "Rule: common difference times \\(n\\), then add or subtract the number that fixes the first term.",
   "a": {
    "q": "A pattern has terms 5, 9, 13, 17. What is the common difference?",
@@ -222,15 +231,39 @@
    ],
    "why": "The difference is 3, so start with \\(3n\\). At \\(n = 1\\), \\(3n = 3\\) but the term is 5, so add 2. The rule \\(3n + 5\\) is tempting, but it gives 8 for the first term.",
    "clue": "Check your rule by putting \\(n = 1\\) into it."
-  },
-  "wants": [
-   {
-    "at": "card 4",
-    "kind": "diagram",
-    "brief": "Three matchstick drawings side by side: 1 square, 2 squares in a row and 3 squares in a row, each square made of matchsticks with shared sides between squares in a row. Under each drawing, the step number and the matchstick count: step 1, 4 matchsticks; step 2, 7 matchsticks; step 3, 10 matchsticks.",
-    "why": "Seeing that each new square adds 3 matchsticks shows where the common difference comes from."
-   }
-  ]
+  }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "diagram",
+   "brief": "Three matchstick drawings side by side: 1 square, 2 squares in a row and 3 squares in a row, each square made of matchsticks with shared sides between squares in a row. Under each drawing, the step number and the matchstick count: step 1, 4 matchsticks; step 2, 7 matchsticks; step 3, 10 matchsticks.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/matchstick-squares-in-a-row.svg",
+     "alt": "Three matchstick drawings side by side: step 1 is 1 square made of 4 matchsticks, step 2 is 2 squares in a row made of 7 matchsticks, and step 3 is 3 squares in a row made of 10 matchsticks. Squares next to each other share a matchstick, so each new square adds 3 matchsticks."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:46Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:39Z"
+  }
+ ]
 }

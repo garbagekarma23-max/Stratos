@@ -9,7 +9,11 @@
   "2026-11-12T15:05:58Z write: done",
   "2026-11-12T15:15:53Z check: flagged",
   "2026-11-12T15:26:08Z fix: suggested",
-  "2026-11-12T17:07:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-12T17:07:13Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-15T16:10:56Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:52Z pictures: 1 picture turned down. Picture 1 (diagram at card 3): redo, high sure. The magnet could not spin as drawn: the shaft is horizontal, so the magnet turns end over end, but it is about twice as long as the coil is wide and its ends would hit the turns of the coil, which are wrapped closely round it.; Redraw it so the magnet can turn freely: make the coil's turns wider than the magnet is long, or put the coil beside the spinning magnet, keeping the N and S ends, the shaft and its turning arrow, and the lamp in a complete circuit.. Took out pictures/diagrams/generator-magnet-shaft-coil-lamp.svg",
+  "2026-11-15T16:23:49Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:25:24Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 1,
@@ -178,6 +182,13 @@
    "A generator is built this way. A shaft spins the magnet or the coil, so the kinetic energy of the spinning part is transformed into electrical energy.",
    "In a power station, the shaft is turned by a turbine, a wheel with blades that spins when a moving fluid pushes on it. The turbine is joined to the generator."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/generator-magnet-shaft-wide-coil-lamp-v2.svg",
+    "alt": "A simple generator. A short bar magnet, north pole at the top and south pole at the bottom, is fixed to a shaft and spins inside a wide coil of wire, with turns above and below it. A curved arrow shows the shaft turning. The two ends of the coil are joined to a lamp in a complete circuit. The magnet, coil, shaft and lamp are labelled."
+   }
+  },
   "remember": "Spin a magnet and a coil past each other to induce an alternating current. Power stations use a turbine to do the spinning.",
   "a": {
    "q": "A student spins a magnet inside a coil that is joined to a small lamp in a complete circuit. What makes the current in the coil?",
@@ -201,15 +212,72 @@
    ],
    "why": "A moving fluid pushes the turbine round, and it turns the shaft, which spins the magnet or coil in the generator. The current is induced in the generator, and the turbine does not store it. The spinning makes the current change direction again and again, so it does not flow one way.",
    "clue": "The turbine turns something. What does it turn?"
-  },
-  "wants": [
-   {
-    "at": "card 3",
-    "kind": "diagram",
-    "brief": "A simple generator: a bar magnet on a shaft spinning inside a coil of wire, with the coil joined to a lamp in a complete circuit. Label: magnet, coil, shaft, lamp.",
-    "why": "It shows that the moving magnet and the coil are the parts that make the current."
-   }
-  ]
+  }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "diagram",
+   "brief": "A simple generator: a bar magnet on a shaft spinning inside a coil of wire, with the coil joined to a lamp in a complete circuit. Label: magnet, coil, shaft, lamp.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/generator-magnet-shaft-coil-lamp.svg",
+     "alt": "A simple generator. A bar magnet, north pole at the top and south pole at the bottom, is fixed to a shaft and sits inside a coil of wire. A curved arrow shows the shaft spinning. The two ends of the coil are joined to a lamp in a complete circuit. The magnet, coil, shaft and lamp are labelled."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:56Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": false,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The magnet could not spin as drawn: the shaft is horizontal, so the magnet turns end over end, but it is about twice as long as the coil is wide and its ends would hit the turns of the coil, which are wrapped closely round it.",
+     "Redraw it so the magnet can turn freely: make the coil's turns wider than the magnet is long, or put the coil beside the spinning magnet, keeping the N and S ends, the shaft and its turning arrow, and the lamp in a complete circuit."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:51Z"
+  },
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "diagram",
+   "brief": "A simple generator: a bar magnet on a shaft spinning inside a coil of wire, with the coil joined to a lamp in a complete circuit. Label: magnet, coil, shaft, lamp.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/generator-magnet-shaft-wide-coil-lamp-v2.svg",
+     "alt": "A simple generator. A short bar magnet, north pole at the top and south pole at the bottom, is fixed to a shaft and spins inside a wide coil of wire, with turns above and below it. A curved arrow shows the shaft turning. The two ends of the coil are joined to a lamp in a complete circuit. The magnet, coil, shaft and lamp are labelled."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:23:48Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:25:24Z"
+  }
+ ]
 }

@@ -16,7 +16,9 @@
   "2026-11-12T15:26:00Z write: done",
   "2026-11-12T15:35:06Z check: flagged",
   "2026-11-12T15:59:42Z fix: suggested",
-  "2026-11-12T17:07:11Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-12T17:07:11Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-15T16:10:36Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:30Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -227,6 +229,13 @@
    ],
    "The shape of a river's landforms depends on where along its path they form. Steep land near the source cuts down, and gentler land further on bends, spreads and builds."
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/river-landforms-source-to-mouth.svg",
+    "alt": "A river from source to mouth in three parts. Near the source: a V-shaped valley seen end on, with the river at the bottom of the V, and a waterfall where the river drops over a step in the land. Middle course, seen from above: the river swings from side to side in meanders, and further on a curved oxbow lake lies cut off beside the river. Near the mouth, seen from above: a flat floodplain beside the river, and a delta where the river splits into channels and spreads out into the sea."
+   }
+  },
   "remember": "Near the source rivers cut down. Further on they bend. Near the mouth they slow and build.",
   "a": {
    "q": "Which landform is a river most likely to build where it slows down near the sea?",
@@ -250,15 +259,39 @@
    ],
    "why": "When a river floods, it spreads sediment over the flat land beside it, and this builds a floodplain. A delta is tempting because it is also built from sediment, but a delta forms where the river meets the sea, not on fields beside the river.",
    "clue": "Where is the mud being left: beside the river or where it meets the sea?"
-  },
-  "wants": [
-   {
-    "at": "card 1",
-    "kind": "diagram",
-    "brief": "A labelled diagram of a river from source to mouth. Near the source: V-shaped valley and waterfall. Middle course: meander and oxbow lake. Near the mouth: floodplain and delta.",
-    "why": "It shows where along a river each landform forms."
-   }
-  ]
+  }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "diagram",
+   "brief": "A labelled diagram of a river from source to mouth. Near the source: V-shaped valley and waterfall. Middle course: meander and oxbow lake. Near the mouth: floodplain and delta.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/river-landforms-source-to-mouth.svg",
+     "alt": "A river from source to mouth in three parts. Near the source: a V-shaped valley seen end on, with the river at the bottom of the V, and a waterfall where the river drops over a step in the land. Middle course, seen from above: the river swings from side to side in meanders, and further on a curved oxbow lake lies cut off beside the river. Near the mouth, seen from above: a flat floodplain beside the river, and a delta where the river splits into channels and spreads out into the sea."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:36Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:30Z"
+  }
+ ]
 }

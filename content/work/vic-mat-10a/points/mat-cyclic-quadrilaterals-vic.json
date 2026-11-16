@@ -10,7 +10,9 @@
   "2026-11-12T15:15:48Z check: flagged",
   "2026-11-12T15:26:04Z fix: suggested",
   "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
-  "2026-11-13T12:13:15Z claude-code review: approved with the fix (a spot check)"
+  "2026-11-13T12:13:15Z claude-code review: approved with the fix (a spot check)",
+  "2026-11-15T16:10:45Z pictures: 1 picture waiting for the check",
+  "2026-11-15T16:19:38Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 1,
@@ -168,6 +170,13 @@
    "Example: in cyclic quadrilateral \\(ABCD\\), angle \\(A = 70^{\\circ}\\). Angle \\(C\\) is opposite \\(A\\), so \\(C = 180^{\\circ} - 70^{\\circ} = 110^{\\circ}\\).",
    "Only opposite angles pair up. Angles at neighbouring vertices, such as \\(A\\) and \\(B\\), do not have to add to \\(180^{\\circ}\\)."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/cyclic-quadrilateral-opposite-angles.svg",
+    "alt": "A cyclic quadrilateral ABCD with all four vertices on a circle, in order A, B, C, D around it. The angle at A is marked with one arc and the opposite angle at C with two arcs."
+   }
+  },
   "remember": "In a cyclic quadrilateral, each pair of opposite angles is supplementary.",
   "a": {
    "q": "\\(PQRS\\) is a cyclic quadrilateral. Angle \\(P = 85^{\\circ}\\). What is angle \\(R\\), opposite \\(P\\)?",
@@ -191,15 +200,7 @@
    ],
    "why": "Opposite angles add to \\(180^{\\circ}\\), so \\(2x + x + 30^{\\circ} = 180^{\\circ}\\). Then \\(3x = 150^{\\circ}\\) and \\(x = 50^{\\circ}\\), so \\(A = 2 \\times 50^{\\circ} = 100^{\\circ}\\). The option \\(50^{\\circ}\\) is only the value of \\(x\\), and \\(80^{\\circ}\\) is angle \\(C\\), not angle \\(A\\).",
    "clue": "Add the two opposite angles and set the sum to \\(180^{\\circ}\\)."
-  },
-  "wants": [
-   {
-    "at": "card 2",
-    "kind": "diagram",
-    "brief": "A circle with a quadrilateral ABCD drawn inside it, all four vertices A, B, C and D on the circle. Angles at A and C (opposite vertices) are marked with arcs and labelled A and C.",
-    "why": "It shows what a cyclic quadrilateral looks like and which angles are opposite."
-   }
-  ]
+  }
  },
  "cleared_by": "claude-code",
  "claude_code": [
@@ -367,6 +368,38 @@
     "rewrites": 0
    },
    "after": "304a822df7f075f1"
+  }
+ ],
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "diagram",
+   "brief": "A circle with a quadrilateral ABCD drawn inside it, all four vertices A, B, C and D on the circle. Angles at A and C (opposite vertices) are marked with arcs and labelled A and C.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/cyclic-quadrilateral-opposite-angles.svg",
+     "alt": "A cyclic quadrilateral ABCD with all four vertices on a circle, in order A, B, C, D around it. The angle at A is marked with one arc and the opposite angle at C with two arcs."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-15T16:10:45Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-15T16:19:38Z"
   }
  ]
 }
