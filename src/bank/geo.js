@@ -7429,6 +7429,13 @@ MADE_BANKS.geo = {
       "So what happens upstream can change places downstream. Taking water, clearing land or adding pollution upstream can change the amount and quality of water further down.",
       "The Murray-Darling Basin is an example. Its rivers join many towns, farms and wetlands across several states, so the use of water in one part can affect people and ecosystems in another."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/murray-darling-basin-river-flow.svg",
+        "alt": "A map of south-eastern Australia with Queensland, New South Wales, Victoria and South Australia labelled and the Murray-Darling Basin shaded across all four. Arrows on the Darling River point downstream to where it joins the Murray River, and arrows on the Murray point west to the Murray mouth in South Australia."
+      }
+    },
     "remember": "Water flows carry more than water, so upstream actions can affect downstream places.",
     "a": {
       "q": "Why can a farm upstream affect a town downstream on the same river?",
@@ -8470,6 +8477,13 @@ MADE_BANKS.geo = {
         "Waves also drop sand on the coast. This builds beaches and spits (long strips of sand that stick out from the land). Wind can then blow dry sand from the beach into dunes, hills of sand behind it."
       ]
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/headland-crack-cave-arch-stack-side-view.svg",
+        "alt": "One headland seen side-on from the sea, drawn four times from left to right. In each, the land runs on to the mainland at the left and the sea runs along the base at one level. First a crack at the foot of the cliff, then a cave in the same place with the sea at its floor, then the cave worn right through to make an arch, a bridge of rock still joined to the land with sea under it, then the top of the arch fallen, leaving a stack standing alone in the sea beyond the end of the headland."
+      }
+    },
     "remember": "Waves wear headlands into cliffs, caves, arches and stacks. They drop sand to make beaches and spits, and wind can pile it into dunes.",
     "a": {
       "q": "A sea cave has worn right through a headland, leaving a bridge of rock over the water. What is this landform called?",
@@ -8907,6 +8921,13 @@ MADE_BANKS.geo = {
       "Many people and businesses pump water out of the ground. As the water is removed, the land can slowly sink. Parts of Jakarta are sinking, which makes flooding worse.",
       "These problems led Indonesia to build a new capital called Nusantara on the island of Borneo. The plan is to move government there and ease the pressure on Jakarta."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/indonesia-jakarta-to-nusantara.svg",
+        "alt": "A map of western Indonesia with Indonesia's islands shaded. Jakarta is marked on the island of Java, and Nusantara on the east coast of Borneo. An arrow labelled New capital runs from Jakarta across the Java Sea to Nusantara."
+      }
+    },
     "remember": "Jakarta's fast growth brought flooding, traffic and sinking land, so Indonesia is building a new capital, Nusantara.",
     "a": {
       "q": "Why is some of Jakarta sinking?",
@@ -9624,6 +9645,13 @@ MADE_BANKS.geo = {
         "The south-east and south-west have temperate forest and grassland. These areas are cooler than the north and have milder, more regular rain."
       ]
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/australia-biomes-north-inland-south.svg",
+        "alt": "A map of Australia in three zones. The north is labelled tropical rainforest and savanna. The large inland area is labelled desert and shrubland. The south-east and the south-west, including Tasmania, are labelled temperate forest and grassland."
+      }
+    },
     "remember": "Australia's biomes change with climate: tropical in the north, dry inland, temperate in the south.",
     "a": {
       "q": "Which pair of biomes is found mainly in northern Australia?",
@@ -9812,6 +9840,13 @@ MADE_BANKS.geo = {
         "Australia has a small population compared with its farm output, so it sells much of what it produces overseas. Wheat and beef are two products that are exported in large amounts."
       ]
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/australia-wheat-irrigation-cattle-map.svg",
+        "alt": "A map of Australia with its state borders. The north is shaded for beef cattle. The wheat belt is hatched in a band inland of the coast in Western Australia, and in a band from South Australia through western Victoria and New South Wales to southern Queensland. The Murray-Darling Basin, the irrigation region, is outlined in the south-east."
+      }
+    },
     "remember": "Each farming type suits the land and water of its region, and much of the output is exported.",
     "a": {
       "q": "Why are beef cattle run on large stations across northern Australia?",
@@ -11074,6 +11109,13 @@ MADE_BANKS.geo = {
       "This is aquaculture: raising and harvesting water animals in a managed system. Parts of the system at Budj Bim are more than 6,000 years old.",
       "A steady supply of eels let families settle in one area, where they built stone huts. The Budj Bim Cultural Landscape was World Heritage listed in 2019."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/budj-bim-channel-pond-weir-eel-trap.svg",
+        "alt": "A drawing from above of the Gunditjmara system at Budj Bim. Water and eels flow from a wetland along a stone-lined channel into a pond, where eels are held. Another channel leads on to a stone weir built across it, with a woven eel trap set in the gap in the weir. Arrows show the water and eels moving through."
+      }
+    },
     "remember": "The Gunditjmara shaped the lava wetlands into a managed eel system, now on the World Heritage list.",
     "a": {
       "q": "Why is the Gunditjmara system at Budj Bim called aquaculture?",
