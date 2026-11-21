@@ -9,7 +9,7 @@ The commands below are for PowerShell on Windows. They also work in Git Bash, so
 If you are Claude Code helping the owner with these steps:
 
 - Never ask for the API key, and never read, set, print or save it. The owner sets it in a PowerShell window of their own (step 5), and runs `run`, `run-many`, `recheck`, `rebalance` and the exact `estimate` there, with or without `--now`. When it is time, give them the command to paste.
-- You can run every other step: `status`, `estimate` (a rough one, with no key), `autoreview` and `autoreject` (they make no API calls), `recheck --dry-run` and `rebalance --dry-run` (rough estimates, with no key), the Claude Code steps, `review`, `publish`, the build, the checks and git.
+- You can run every other step: `status`, `estimate` (a rough one, with no key), `autoreview` and `autoreject` (they make no API calls), `feedback import` (step 15, no API calls), `recheck --dry-run` and `rebalance --dry-run` (rough estimates, with no key), the Claude Code steps, `review`, `publish`, the build, the checks and git.
 - `py content/pipeline.py review` keeps running until it is stopped: start it in the background, then tell the owner the address.
 - The Claude Code steps (`cc-write`, `cc-check` and `cc-review`, step 11, and `cc-picture` and `cc-picture-check`, step 14) make no API calls. Run them when the owner pastes their prompt. Never check a point yourself: each check goes to a new subagent that sees only its task file.
 - Never edit `src/bank/` or `src/courses/` by hand. A change to a point goes through the review page, then `publish`.
@@ -360,6 +360,7 @@ This opens http://localhost:8765 in your browser. Only this computer can open it
 - **Flagged**: the checker found a problem. On the left is the point as students would see it, with the right option marked. On the right are the checker's reasons and how sure it was. If it suggested a fix, **The fix** shows it with the changed words in blue.
 - **Possible match**: the bank already has a point that may teach the same idea, and neither Haiku nor Opus was highly sure, or it is a reuse about a sensitive topic or for an English course. It shows the bank point, which courses use it, what the model said and the changes it suggested. **Reuse** shares that point, and each student's progress on it, with the courses that already use it. **Adapt it** has a new point adapted from it on the next run, with those changes. **Write a new point** has one written for this course from scratch.
 - **Not written**: Claude declined to write it, or it failed three times.
+- **Student feedback**: students flagged it in the app with Could we improve this? (step 15). On the right are each student's reason, the part, their note, the course and the day.
 
 The buttons:
 - **Approve as written** and **Use the fix** clear the point.
@@ -599,6 +600,29 @@ Follow content/README.md step 14.
 ### The pilot
 
 Five pictures went through these steps, each checked by a fresh Opus subagent. Four were kept and published: a box plot with an outlier under the five-number summary example (`mat-five-number-summary-boxplots`, Victorian General Mathematics Units 1 and 2); a plant cell and an animal cell (`bio-plant-animal-cells-compared-2`, Biology Units 1 and 2); a series circuit (`phys-series-circuits`, Physics Units 1 and 2); and The Blood Vote, a 1916 anti-conscription leaflet (`his-conscription-referendums`, History Year 9). The map of the Murray-Darling Basin (`geo-water-use-murray-darling`, Geography Year 10) was turned down twice as a photo: the Murray-Darling Basin Authority's map for its small print and its credit, then Martyman's 2004 catchment map because its labels are 6 to 8 px on a phone. At your ask it became a diagram drawn for Stratos (the coast, the state borders, the ACT, the basin and the two rivers), turned down once (the ACT showed as a hole, the Darling ran past Bourke) and then kept. The cell diagram was redrawn with `--replace` so each part has a believable size; the old one stayed on the point through three turned-down tries, and publish took its file out once the new one was kept.
+
+## 15. Student feedback: Could we improve this?
+
+In the app, every Learn card and every answered question has a small "Could we improve this?" link. A student picks a reason (The answer is wrong, The question is unclear, There's a typo, or Something else), can add a note, and sends it. It goes to Supabase (`supabase/feedback.sql`) with only the point's id, which part, the reason, the note, the course and the app's version. Students can never read it back. No key or secret is needed for any of the steps below.
+
+1. **Download it.** In the Supabase dashboard, open **SQL Editor** and run `select * from moderation.feedback_by_point;`. It has one row per point, newest first, with how many students picked each reason, and `items`, every piece of feedback on the point. Press **Export** above the results, then **Download CSV**, and save the file, say as `feedback.csv` in your Downloads folder. (**Table Editor** shows the same view under the `moderation` schema, with its own CSV export.)
+2. **See what it would do.** In PowerShell, in the repository folder:
+
+       py content/pipeline.py feedback import $HOME\Downloads\feedback.csv --dry-run
+
+3. **Import it.** The same without `--dry-run`:
+
+       py content/pipeline.py feedback import $HOME\Downloads\feedback.csv
+
+   - A point the content pipeline made and you cleared goes back to your review list, as it is now, with the feedback beside it. Students keep seeing that version, and its chapter stays in the app, until you decide and publish again.
+   - Feedback on a point already waiting for you is added to it.
+   - A point being written or checked now keeps the feedback, which shows if the point comes to the review list.
+   - A point written by hand (NSW Economics, the Economics bank in `src/econ-points.js`, and Maths) is listed with its feedback, to change in `src/` yourself.
+   - Each piece of feedback has its own number, so importing the same file again, or a newer file with the old rows still in it, adds only what is new. Feedback you have already decided is never brought back.
+4. **Review.** Run `py content/pipeline.py review` (step 8). The point shows as **Student feedback**. **Approve as written** keeps it as it is. **Edit** changes it. **Reject and rewrite** has it written again on the next run, with your note (put in it what the students said). Each decision moves the feedback into the point's history.
+5. **Publish** each course you changed, as in step 9. A point you approved as written changes nothing in the app.
+
+Feedback is kept in Supabase for 12 months, then deleted.
 
 ## Writing an outline
 

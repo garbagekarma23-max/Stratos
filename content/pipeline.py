@@ -75,7 +75,7 @@ Running the same command again carries on from there. Nothing is sent twice unle
 
 The API key is read from the ANTHROPIC_API_KEY environment variable and never written anywhere or printed.
 """
-import argparse, copy, hashlib, http.server, json, math, os, queue, random, re, secrets, shutil, subprocess, sys, threading, time, urllib.parse
+import argparse, copy, csv, hashlib, http.server, json, math, os, queue, random, re, secrets, shutil, subprocess, sys, threading, time, urllib.parse
 from datetime import datetime, timezone
 from types import SimpleNamespace as NS
 
@@ -801,7 +801,7 @@ def reject(rec, rejected, note):
 def fresh(rec, course, d, pt):
     """Puts a point at its first step: reuse (named in the outline), match (the shortlist found bank points that may
     teach the same idea) or write."""
-    for k in DRAFT_KEYS + ['final', 'match', 'confirm', 'matched', 'shortlist', 'reuse', 'rejected', 'note', 'cleared_by', 'rewrites', 'autoreject']:
+    for k in DRAFT_KEYS + ['final', 'live', 'match', 'confirm', 'matched', 'shortlist', 'reuse', 'rejected', 'note', 'cleared_by', 'rewrites', 'autoreject']:
         rec.pop(k, None)
     if pt['reuse']:
         rec.update(stage='reuse', reuse=pt['reuse'])
@@ -1786,10 +1786,13 @@ def cmd_publish(args):
     repo, d, course, work = job.repo, job.d, job.course, job.work
     recs = {pt['id']: work.load(pt['id']) for pt in course['points']}
     units, ready, held = [], 0, []
+    # A point student feedback sent back to the review list (feedback import) keeps the version students see now,
+    # live, until it is cleared again, so its chapter is never held back while the owner looks at it.
+    ok = lambda r: r['stage'] in ('cleared', 'reuse') or bool(r.get('live'))
     for u in course['units']:
         chs = []
         for c in u['chapters']:
-            done = all(recs[p['id']]['stage'] in ('cleared', 'reuse') for p in c['points'])
+            done = all(ok(recs[p['id']]) for p in c['points'])
             ids = [recs[p['id']].get('reuse') or p['id'] for p in c['points']] if done else []
             if done and ids: ready += 1
             elif c['points']: held.append(c['title'])
@@ -1807,7 +1810,9 @@ def cmd_publish(args):
     for u in units:
         for c in u['chapters']:
             for pid in c['points']:
-                if recs.get(pid) and recs[pid]['stage'] == 'cleared': bank[pid] = {k: v for k, v in recs[pid]['final'].items() if k != 'wants'}
+                r = recs.get(pid)
+                if r and (r['stage'] == 'cleared' or r.get('live')):
+                    bank[pid] = {k: v for k, v in (r['final'] if r['stage'] == 'cleared' else r['live']).items() if k != 'wants'}
     chips = course['chips'] or [p['title'].lower() for p in course['points'] if recs[p['id']]['stage'] == 'cleared'][:5]
     # year is the course's heading on Home ("Economics, Units 1 and 2"), so a course with a level line uses it. level is
     # also what the subject sheet groups it under (yearGroup in src/places.js).
@@ -1835,6 +1840,9 @@ def cmd_publish(args):
     if out.returncode != 0:
         raise Stop('node check_content.mjs found problems:\n' + out.stdout[-3000:] + out.stderr[-2000:])
     say('node check_content.mjs: no problems found. Next: python3 build.py, the tests, then a pull request (content/README.md, step 9).')
+    # A point cleared again after student feedback has its new version in the bank now, so the old one is forgotten.
+    for r in recs.values():
+        if r and r['stage'] == 'cleared' and r.pop('live', None) is not None: work.put(r)
     work.state['published'] = now(); work.save()
 
 
@@ -2629,6 +2637,123 @@ def cmd_rebalance(args):
         say('Next: publish each course again, so the new options go into src/ (content/README.md, step 9).')
 
 
+# ---------- feedback from students: Could we improve this? ----------
+# Students flag a card or a question in the app (src/83-feedback.js). The owner downloads the feedback as CSV from
+# the Supabase dashboard (moderation.feedback_by_point, in supabase/feedback.sql) and runs
+#   python3 content/pipeline.py feedback import FILE
+# Each point the content pipeline made goes back to the review list with the feedback beside it. A cleared point keeps
+# its published version (live), so students still see it and its chapter stays in the app until the owner decides.
+# No API calls, keys or secrets. Importing the same file again adds nothing: each piece of feedback has its id.
+FEEDBACK_REASONS = {'wrong': 'The answer is wrong', 'unclear': 'The question is unclear', 'typo': 'There\u2019s a typo', 'other': 'Something else'}
+FEEDBACK_PART = re.compile(r'card|card ([1-9]|1[0-9]|20)|a|b|example|question')
+
+def part_words(part):
+    """Which part a piece of feedback is about, in words."""
+    if part == 'card': return 'the card'
+    if part.startswith('card '): return 'card line ' + part[5:]
+    return {'a': 'question a (the check question)', 'b': 'question b (the practice question)', 'example': 'the worked example', 'question': 'a question'}.get(part, part)
+
+def feedback_rows(path):
+    """The feedback in a CSV file: {point id: [{id, at, part, reason, note, course, version}]}, and the rows skipped.
+    It reads the view as the dashboard exports it (a point and its items as JSON), or one row per piece of feedback
+    (the table, with id, at, point, part, reason, note, course and version)."""
+    csv.field_size_limit(min(sys.maxsize, 2 ** 31 - 1))
+    try:
+        with open(path, encoding='utf-8-sig', newline='') as f: rows = list(csv.DictReader(f))
+    except (OSError, UnicodeDecodeError, csv.Error) as e:
+        raise Stop('Could not read ' + path + ': ' + str(e))
+    found, skipped = {}, []
+    def item(pid, x, where):
+        x = {k: (x.get(k) if x.get(k) not in ('', None, 'NULL', 'null') else None) for k in ('id', 'at', 'part', 'reason', 'note', 'course', 'version')}
+        if not re.fullmatch(r'[a-z0-9-]{1,80}', pid or '') or not x['id'] or x['reason'] not in FEEDBACK_REASONS or not FEEDBACK_PART.fullmatch(x['part'] or ''):
+            skipped.append(where); return
+        x['id'] = str(x['id']).strip()
+        if x['note']: x['note'] = str(x['note'])[:300]
+        found.setdefault(pid, [])
+        if all(y['id'] != x['id'] for y in found[pid]): found[pid].append(x)
+    for n, r in enumerate(rows, 2):
+        r = {(k or '').strip().lower(): (v.strip() if isinstance(v, str) else v) for k, v in r.items()}
+        pid = r.get('point')
+        if r.get('items'):
+            try: its = json.loads(r['items'])
+            except ValueError: skipped.append('line ' + str(n)); continue
+            for x in its if isinstance(its, list) else []:
+                if isinstance(x, dict): item(pid, x, 'line ' + str(n))
+        elif r.get('reason'):
+            item(pid, r, 'line ' + str(n))
+        else:
+            skipped.append('line ' + str(n))
+    if not rows or (not found and not skipped):
+        raise Stop(path + ' has no feedback in it. Download moderation.feedback_by_point as CSV (content/README.md, step 15).')
+    for pid in found: found[pid].sort(key=lambda x: x['at'] or '', reverse=True)
+    return found, skipped
+
+def feedback_owner(root, pid):
+    """The course and record of the point the content pipeline made with this id, or (None, None). Trials are left out."""
+    for cid in sorted(os.listdir(root)) if os.path.isdir(root) else []:
+        meta = read_json(os.path.join(root, cid, 'course.json'))
+        if not meta or meta.get('trial_of'): continue
+        rec = Work(root, cid).load(pid)
+        if rec and rec['stage'] != 'reuse': return cid, rec
+    return None, None
+
+def feedback_import(args, repo):
+    root = work_root(args, repo)
+    found, skipped = feedback_rows(args.file)
+    dry = args.dry_run
+    sent, added, waiting, by_hand, old = [], [], [], [], 0
+    for pid, items in sorted(found.items()):
+        cid, rec = feedback_owner(root, pid)
+        if not rec:
+            by_hand.append((pid, items)); continue
+        seen = {str(x.get('id')) for x in (rec.get('feedback') or []) + (rec.get('feedback_done') or [])}
+        new = [x for x in items if x['id'] not in seen]
+        old += len(items) - len(new)
+        if not new: continue
+        rec['feedback'] = sorted((rec.get('feedback') or []) + new, key=lambda x: x.get('at') or '', reverse=True)
+        words = ', '.join(sorted({FEEDBACK_REASONS[x['reason']].lower() for x in new}))
+        if rec['stage'] == 'cleared':
+            # Back to the review list, as it is now. Students keep seeing this version until it is cleared again.
+            rec['live'] = rec.get('live') or rec['final']
+            for k in DRAFT_KEYS + ['cleared_by']: rec.pop(k, None)
+            rec.update(stage='review', draft=copy.deepcopy(rec['final']), local=[])
+            log(rec, 'student feedback: back to the review list (' + many_of(len(new), 'piece') + ' of feedback: ' + words + ')')
+            sent.append((cid, pid, new))
+        elif rec['stage'] in ('review', 'match-review', 'failed'):
+            log(rec, 'student feedback added (' + many_of(len(new), 'piece') + ': ' + words + ')')
+            added.append((cid, pid, new))
+        else:
+            log(rec, 'student feedback added while it is ' + STAGE_WORDS.get(rec['stage'], rec['stage']))
+            waiting.append((cid, pid, new, rec['stage']))
+        if not dry: Work(root, cid).put(rec)
+    say(('Would import' if dry else 'Imported') + ' feedback from ' + args.file + ': ' + many_of(sum(len(v) for v in found.values()), 'piece') +
+        ' on ' + many_of(len(found), 'point') + '.')
+    def show(head, items):
+        say('  ' + head)
+        for x in items:
+            say('    ' + FEEDBACK_REASONS[x['reason']] + ', ' + part_words(x['part']) + (' (' + x['course'] + ')' if x.get('course') else '') + (': ' + x['note'] if x.get('note') else ''))
+    if sent:
+        say('\nBack to the review list (' + str(len(sent)) + '). Students see the published version until you decide:')
+        for cid, pid, new in sent: show(pid + ' in ' + cid, new)
+    if added:
+        say('\nAdded to points already waiting for you (' + str(len(added)) + '):')
+        for cid, pid, new in added: show(pid + ' in ' + cid, new)
+    if waiting:
+        say('\nKept with points being written or checked now (' + str(len(waiting)) + '). The feedback shows if the point comes to the review list:')
+        for cid, pid, new, stage in waiting: say('  ' + pid + ' in ' + cid + ', ' + STAGE_WORDS.get(stage, stage))
+    if by_hand:
+        say('\nNot made by the content pipeline (' + str(len(by_hand)) + '): NSW Economics, the Economics bank (econ-points.js) and Maths are written by hand. Change these in src/ yourself:')
+        for pid, items in by_hand: show(pid, items)
+    if old: say('\nAlready imported before, so left as they are: ' + many_of(old, 'piece') + '.')
+    if skipped: say('\nSkipped, not in the shape the dashboard exports: ' + ', '.join(skipped[:10]) + (' and ' + str(len(skipped) - 10) + ' more' if len(skipped) > 10 else '') + '.')
+    if dry: say('\nA dry run: nothing was changed.')
+    elif sent or added: say('\nNext: python3 content/pipeline.py review, then publish each course you change (content/README.md, step 15).')
+
+def cmd_feedback(args):
+    if args.action != 'import': raise Stop('Use: feedback import FILE')
+    feedback_import(args, args.repo or REPO)
+
+
 # ---------- the review page ----------
 def review_items(root, repo):
     """Every point waiting for the owner, in every course in the work folder. Trials are left out: they never publish."""
@@ -2659,6 +2784,7 @@ def review_items(root, repo):
                                   'recheck': recheck_item(rec.get('recheck')),
                                   'writtenBy': rec.get('written_by'), 'checkedBy': rec.get('checked_by'),
                                   'claudeCode': cc_left_item(rec),
+                                  'feedback': rec.get('feedback') or [], 'live': bool(rec.get('live')),
                                   'match': dict(match, point=bank_point(d, match['same']), usedIn=used_text(d, match['same']),
                                                 by=MODEL_NAMES.get(match.get('model'), '')) if match.get('same') else None})
         courses.append({'id': cid, 'name': meta['name'], 'counts': tally})
@@ -2701,6 +2827,9 @@ def decide_rec(rec, body, by='owner', content_check=None):
     def done(text):
         if spot and rec.get('auto'): rec['auto']['owner' if by == 'owner' else 'claude_code'] = action
         log(rec, ('review: ' if by == 'owner' else 'claude-code review: ') + text + (' (a spot check)' if spot else ''))
+        # Student feedback on the point is answered by this decision: it moves to the point's history.
+        if rec.get('feedback'):
+            rec.setdefault('feedback_done', []).extend(dict(x, decided=now(), decision=text, by=by) for x in rec.pop('feedback'))
         return {'ok': True, 'message': text}
     if rec['stage'] == 'match-review':
         m = rec.get('confirm') or rec.get('match') or {}
@@ -3798,6 +3927,10 @@ def main(argv=None):
     wp.add_argument('--brief', required=True, help='what it shows, with every label')
     wp.add_argument('--why', help='how it helps a student')
     wp.add_argument('--replace', action='store_true', help='ask for a new picture where the point already has one; the old one stays until the new one passes the check')
+    fb = sub.add_parser('feedback', help='send points students flagged in the app (a CSV from the Supabase dashboard) back to the review list, with no API calls')
+    fb.add_argument('action', choices=['import'])
+    fb.add_argument('file', help='the CSV of moderation.feedback_by_point, downloaded from the Supabase dashboard')
+    fb.add_argument('--dry-run', action='store_true', help='show what it would do, and change nothing')
     r = sub.add_parser('review', help='the review page, on this computer only')
     r.add_argument('--port', type=int, default=8765)
     r.add_argument('--no-browser', action='store_true')
@@ -3806,7 +3939,7 @@ def main(argv=None):
         {'estimate': cmd_estimate, 'status': cmd_status, 'run': cmd_run, 'run-many': cmd_run_many, 'publish': cmd_publish, 'review': cmd_review,
          'autoreview': cmd_autoreview, 'recheck': cmd_recheck, 'autoreject': cmd_autoreject, 'rebalance': cmd_rebalance,
          'cc-write': cmd_cc, 'cc-check': cmd_cc, 'cc-review': cmd_cc, 'cc-picture': cmd_cc, 'cc-picture-check': cmd_cc,
-         'want-picture': cmd_want_picture}[args.cmd](args)
+         'want-picture': cmd_want_picture, 'feedback': cmd_feedback}[args.cmd](args)
     except Stop as e:
         say(str(e))
         return 1
