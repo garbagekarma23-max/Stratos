@@ -199,12 +199,12 @@ function render() {
     if (x.courseName !== lastC) { nav += '<h2>' + esc(x.courseName) + '</h2>'; lastC = x.courseName; lastCh = ''; }
     if (x.chapter !== lastCh) { nav += '<h3>' + esc(x.chapter) + '</h3>'; lastCh = x.chapter; }
     nav += '<button type="button" data-i="' + i + '"' + (i === cur ? ' aria-current="true"' : '') + '>' + esc(x.title) + '<small>' +
-      (x.spot ? 'Spot check' : x.feedback.length && x.stage === 'review' && !x.flags.length ? 'Student feedback' :
-        ({review: 'Flagged', 'match-review': 'Possible match', failed: 'Not written'})[x.stage] + (x.feedback.length ? ', with student feedback' : '')) + '</small></button>';
+      (x.spot ? 'Spot check' : (x.feedback || []).length && x.stage === 'review' && !x.flags.length ? 'Student feedback' :
+        ({review: 'Flagged', 'match-review': 'Possible match', failed: 'Not written'})[x.stage] + ((x.feedback || []).length ? ', with student feedback' : '')) + '</small></button>';
   });
   let mid = '<p class="where">' + esc(it.courseName + '. ' + it.unit + '. ' + it.chapter) + '</p>';
   let side = '<div class="label">Your brief</div><p>' + esc(it.brief) + '</p>';
-  if (it.feedback.length) side += feedbackHtml(it);
+  if ((it.feedback || []).length) side += feedbackHtml(it);
   let acts = '';
   if (editing) {
     mid += formHtml(view === 'fix' && it.proposal ? it.proposal : it.draft);
