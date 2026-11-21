@@ -7,7 +7,7 @@
 // step now it has courses, while a state with none (Queensland, served with its courses taken out) says Courses coming; the courses for Victoria in
 // order (VIC_ORDER: each year's own courses, then the course that spans two years, Level 10A after Year 10, then Units 1
 // and 2 and Units 3 and 4), then the international courses; Home naming a course by its units; New South Wales still
-// grouped by year, with no Victorian course; Queensland's Australian Curriculum courses still Year 7 to Year 10; the
+// grouped by stage and year (Stage 4, Stage 5, Year 11, Year 12), with no Victorian course; Queensland's Australian Curriculum courses still Year 7 to Year 10; the
 // first-open course step in the same order; and the courses step at 360 px in light and dark with no sideways scroll.
 // Run: node units.mjs. Pass "shots" to also save the courses for Victoria at 390 by 844, light and dark, to tests/shots/.
 import { spawnSync } from 'child_process';
@@ -87,7 +87,7 @@ const wide = p => p.evaluate(() => document.documentElement.scrollWidth - window
   check((await text(p, '.subject')) === 'Testing, Units 3 and 4' && (await saved(p)).subject === 'tsv-units-34', 'Home names the course by its units', R);
   check((await text(p, '.hero .h1')) === 'Later chapter', 'and opens on its chapter', R);
 
-  // ---------- New South Wales is still grouped by year ----------
+  // ---------- New South Wales is still grouped by stage and year ----------
   await p.click('.subject'); await p.waitForTimeout(100);
   await p.click('[data-act="placechange"]'); await p.waitForTimeout(80);
   await p.click('[data-act="placenext"]'); await p.waitForTimeout(80);
@@ -95,8 +95,8 @@ const wide = p => p.evaluate(() => document.documentElement.scrollWidth - window
   await p.click('[data-act="placedone"]'); await p.waitForTimeout(100);
   const n = await grouped(p, '#sheetBody');
   const nswIds = n[0][1].flatMap(x => x[1]);
-  check(n[0][0] === 'New South Wales' && n[0][1].every(x => /^Year \d+$/.test(x[0])) && n[0][1].map(x => x[0]).join(',') === 'Year 11,Year 12' &&
-    nswIds.length === NSW.length && NSW.every(id => nswIds.includes(id)), 'New South Wales is still grouped by year, Year 11 then Year 12, with no Victorian course: ' + n[0][1].map(x => x[0]).join(','), R);
+  check(n[0][0] === 'New South Wales' && n[0][1].map(x => x[0]).join(',') === 'Stage 4 (Years 7 and 8),Stage 5 (Years 9 and 10),Year 11,Year 12' &&
+    nswIds.length === NSW.length && NSW.every(id => nswIds.includes(id)), 'New South Wales is still grouped by stage and year, Stage 4, Stage 5, Year 11 then Year 12, with no Victorian course: ' + n[0][1].map(x => x[0]).join(','), R);
   check(n[n.length - 1][0] === 'Open now' && n[n.length - 1][1][0][0] === 'Units 3 and 4', 'the Victorian course open now shows under Open now, under its units', R);
 
   // ---------- Queensland's Australian Curriculum courses are still by year ----------
