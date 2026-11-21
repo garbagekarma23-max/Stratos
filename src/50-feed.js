@@ -27,7 +27,7 @@ function qEl(S, i, learn) {
         '<span class="mk">' + IC.tick + IC.cross + '</span></button>').join('') +
     '</div>' + (figs ? FIG.optCredits(figs, it.perm) : '') +
     '<div class="note" hidden></div>' +
-    '<div class="foot">' + (acts ? '<div class="actions">' + acts + '</div>' : '') + '<button class="next" type="button" data-act="nextslide" hidden>Next' + IC.down + '</button></div>';
+    '<div class="foot">' + (acts ? '<div class="actions">' + acts + '</div>' : '') + '<button class="next" type="button" data-act="nextslide" hidden>Next' + IC.down + '</button>' + fbLink(it.p, it.k, true) + '</div>';
   return sec;
 }
 /* Show how a question turned out: mark the options and explain. */
@@ -56,6 +56,7 @@ function paintResolved(S, sec, i, learn) {
     note.innerHTML = '<p>Skipped. This one comes back at the end.</p>';
   }
   if (acts) acts.hidden = true;
+  fbShow(sec);
 }
 function paintClue(sec, q) {
   const note = $('.note', sec), b = $('[data-act="clue"]', sec);
@@ -153,7 +154,7 @@ function cardEl(i) {
     '<h2 class="ctitle">' + esc(p.title) + '</h2>' +
     '<div class="lines">' + cardHtml(p) + '</div>' +
     '<p class="rem"><b>Remember</b>' + tx(p.remember) + '</p>' +
-    '<div class="foot"><button class="next" type="button" data-act="nextslide">Check it' + IC.down + '</button></div>';
+    '<div class="foot"><button class="next" type="button" data-act="nextslide">Check it' + IC.down + '</button>' + fbLink(p.id, 'card') + '</div>';
   return sec;
 }
 function learnEndEl() {

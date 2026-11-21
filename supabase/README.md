@@ -418,6 +418,42 @@ Once the site is updated. Use A and B from step 13, friends.
 4. On A, sign out, answer a question, and sign in again. A's total has not changed: answers given while signed out
    never count.
 
+## 22. Add feedback (Could we improve this?)
+
+Do this once the pull request with `supabase/feedback.sql` is merged. Until then the app keeps each student's
+feedback on their phone and tries again later, because the function it asks for is not there yet.
+
+1. Open **SQL Editor** and start a new query.
+2. Paste the whole of `supabase/feedback.sql` and press **Run**. It should say Success. No rows returned. It needs
+   `week.sql` (step 20), which is in already: a piece of feedback must be on a point listed in `week_points`.
+3. Open **Table Editor**. There should be a new table, `feedback`, empty, not marked as unprotected. Under the
+   `moderation` schema there is a new view, `feedback_by_point`.
+4. In **Integrations**, then **Cron**, there should be a job called `stratos-feedback` that runs every day. It deletes
+   feedback older than 12 months. If it is missing, Cron was off: turn it on (step 12) and run `feedback.sql` again.
+5. Open **Advisors**, then **Security Advisor**. Expected, and nothing else new: "RLS enabled, no policy" on
+   `feedback` (only `add_feedback` reaches it), and the note about `security definer` functions. `add_feedback` is
+   the one function someone not signed in can call: it only adds a row, and can read nothing back.
+
+Running `feedback.sql` again later is safe. It keeps the feedback and puts the rules and the view back as written.
+
+What it keeps: the point's id, which part (a card line, or question a or b), the reason, the note, the course, the
+app's version and when. For a signed-in student, also the account's random id, only to count the limit of 20 a day.
+The view never shows it, and Delete account clears it. Nothing about a signed-out student is kept, so their limit is
+counted for everyone signed out together: 60 an hour and 300 a day.
+
+To read it: `select * from moderation.feedback_by_point;` in SQL Editor. To send the points back to the review list,
+download that as CSV and follow `content/README.md`, step 15.
+
+## 23. Check feedback
+
+Once the site is updated.
+
+1. Signed out, open Learn, tap **Could we improve this?** under a card, pick **There's a typo**, and press **Send**.
+   The toast says "Thanks. We'll take a look."
+2. In SQL Editor, run `select * from moderation.feedback_by_point;`. The point is there with `typo` 1.
+3. Sign in as A, answer a question, and send feedback on it with a note. Run the query again: the point has the
+   note in `items`, and nothing in the view says who sent it.
+
 ## If the project pauses
 
 A free project pauses after a week with no use. The app keeps working on each device while it is paused. Press

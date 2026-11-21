@@ -27,6 +27,7 @@ How the pieces fit:
   src/78-challenges.js challenges with real friends: starting, playing, the cards and the results
   src/79-live.js       who is online now, and the typing bubble and instant messages through Supabase Realtime
   src/80-intro.js      the intro: the word Stratos with the rocket flying round it, each time the app opens
+  src/83-feedback.js   Could we improve this?: the link under cards and answered questions, its sheet, and sending it
   src/84-merge.js      the part of the save that goes to an account, and how two copies are put together
   src/85-account.js    signing in by email and keeping progress in step with the account (optional)
   src/recordings.json  the three sound recordings, stored as text
@@ -40,16 +41,27 @@ How the pieces fit:
   vendor/supabase      the Supabase library, for accounts. Not copied in either: v2.html loads it only for a student
                        who signs in.
 """
-import fnmatch, glob, json, os, re, shutil, sys
+import fnmatch, glob, json, os, re, shutil, subprocess, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__)) + '/'
 SRC = HERE + 'src/'
 LAB = HERE + 'lab/'
 MARK = '/*REC*/{}/*REC-END*/'
 PICS = '/*PICS*/{"images": {}, "diagrams": {}}/*PICS-END*/'
+VERSION = "'__APP_VERSION__'"
+
+def version():
+    """The app's version, sent with each piece of feedback (src/83-feedback.js): the day of the last commit and its short
+    id, such as 2026-11-21.6b26180. Without git (or outside a git folder) it is dev."""
+    try:
+        out = subprocess.run(['git', 'log', '-1', '--format=%cd.%h', '--date=format:%Y-%m-%d'], cwd=HERE, capture_output=True, text=True, timeout=10)
+        v = out.stdout.strip().lower()
+        return v if out.returncode == 0 and re.fullmatch(r'[a-z0-9.-]{1,40}', v) else 'dev'
+    except (OSError, subprocess.SubprocessError):
+        return 'dev'
 JS = ['content.js', 'maths-content.js', 'econ-points.js', 'edexcel-content.js', 'made.js', 'MADE', 'places.js', 'lab/topics.js', 'lab/maths.js', 'lab/keypad.js', 'lab/sheet.js',
       '05-maths-text.js', '06-figure.js', '10-core.js', '15-maths-make.js', '20-sound.js', '30-shell.js', '40-home.js', '50-feed.js', '55-maths.js',
-      '60-practice.js', '62-maths-practice.js', '70-social.js', '75-friends.js', '76-week.js', '77-messages.js', '78-challenges.js', '79-live.js', '80-intro.js', '84-merge.js', '85-account.js', '90-boot.js']
+      '60-practice.js', '62-maths-practice.js', '70-social.js', '75-friends.js', '76-week.js', '77-messages.js', '78-challenges.js', '79-live.js', '80-intro.js', '83-feedback.js', '84-merge.js', '85-account.js', '90-boot.js']
 
 def read(name):
     """A file from src/, or from lab/ when its name starts with lab/, or any file by its full path."""
@@ -74,6 +86,8 @@ def parts(extra=None):
     assert script.count(PICS) == 1, 'the marker for the picture records is missing from 06-figure.js'
     pics = json.load(open(HERE + 'pictures/licences.json', encoding='utf8'))
     script = script.replace(PICS, '/*PICS*/' + json.dumps(pics, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/') + '/*PICS-END*/')
+    assert script.count(VERSION) == 1, 'the marker for the version is missing from 83-feedback.js'
+    script = script.replace(VERSION, "'" + version() + "'")
     head = read('head.html')
     m = re.match(r'<title>(.*?)</title>\n', head)
     assert m, 'head.html must start with the title'

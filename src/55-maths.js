@@ -49,7 +49,7 @@ function wexEl(i) {
     '<div class="wex-q"><span class="ask">' + esc(MATHS.ask) + '</span>' + mathsEq(ex.eq) + '</div>' +
     stepsHtml(ex.steps) +
     '<p class="rem"><b>Remember</b>' + esc(p.remember) + '</p>' +
-    '<div class="foot"><button class="next" type="button" data-act="nextslide">' + (L.items[i + 1] && L.items[i + 1].k === 'guided' ? 'Try one' : 'Check it') + IC.down + '</button></div>';
+    '<div class="foot"><button class="next" type="button" data-act="nextslide">' + (L.items[i + 1] && L.items[i + 1].k === 'guided' ? 'Try one' : 'Check it') + IC.down + '</button>' + fbLink(p.id, 'example') + '</div>';
   if (!mathsReady) loadMaths();
   return sec;
 }
@@ -83,7 +83,7 @@ function mqEl(i) {
     '<p class="mq-tip">' + (guided ? 'The first lines are written for you. Finish the working, then press Done.' : 'On your own now. Write each step, then press Done.') + '</p>' +
     '<ol class="work" aria-label="Your working"></ol>' +
     '<div class="note" hidden></div>' +
-    '<div class="foot"><button class="next" type="button" data-act="nextslide" hidden>Next' + IC.down + '</button></div>';
+    '<div class="foot"><button class="next" type="button" data-act="nextslide" hidden>Next' + IC.down + '</button>' + fbLink(p.id, 'question', true) + '</div>';
   if (!mathsReady) loadMaths();
   return sec;
 }
@@ -223,6 +223,7 @@ function mathsFinish(c, how) {
   L.res[c.i] = {o: how === 'right' ? (it.wrong ? 'fixed' : 'correct') : 'revealed'};
   if (pad && pad.el === $('.work', sec)) { pad.trim(); pad.lock(); }     /* no pad yet if Answer came before MathLive loaded */
   sec.classList.add('done');
+  fbShow(sec);
   $('.mq-head .act', sec).hidden = true;
   $('.mq-tip', sec).hidden = true;
   const end = document.createElement('li');

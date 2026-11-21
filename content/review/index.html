@@ -7,7 +7,7 @@
 <!-- The review page for the content pipeline. python3 content/pipeline.py review serves it on this computer only.
      It shows only the points waiting for the owner: flagged by the checker, a possible match in the bank (reuse it,
      adapt it, or write a new point), not
-     written, or a spot check from autoreview or recheck. Every decision is saved straight away in content/work. The Compare tab
+     written, a spot check from autoreview or recheck, or sent back by students' feedback (feedback import). Every decision is saved straight away in content/work. The Compare tab
      puts a trial run (run --as) next to its course, point by point, so the owner can judge whether cheaper settings
      keep the quality. -->
 <style>
@@ -199,10 +199,12 @@ function render() {
     if (x.courseName !== lastC) { nav += '<h2>' + esc(x.courseName) + '</h2>'; lastC = x.courseName; lastCh = ''; }
     if (x.chapter !== lastCh) { nav += '<h3>' + esc(x.chapter) + '</h3>'; lastCh = x.chapter; }
     nav += '<button type="button" data-i="' + i + '"' + (i === cur ? ' aria-current="true"' : '') + '>' + esc(x.title) + '<small>' +
-      (x.spot ? 'Spot check' : ({review: 'Flagged', 'match-review': 'Possible match', failed: 'Not written'})[x.stage]) + '</small></button>';
+      (x.spot ? 'Spot check' : x.feedback.length && x.stage === 'review' && !x.flags.length ? 'Student feedback' :
+        ({review: 'Flagged', 'match-review': 'Possible match', failed: 'Not written'})[x.stage] + (x.feedback.length ? ', with student feedback' : '')) + '</small></button>';
   });
   let mid = '<p class="where">' + esc(it.courseName + '. ' + it.unit + '. ' + it.chapter) + '</p>';
   let side = '<div class="label">Your brief</div><p>' + esc(it.brief) + '</p>';
+  if (it.feedback.length) side += feedbackHtml(it);
   let acts = '';
   if (editing) {
     mid += formHtml(view === 'fix' && it.proposal ? it.proposal : it.draft);
@@ -247,6 +249,16 @@ function render() {
   }
   if (message) acts += '<p class="msg' + (message.bad ? ' bad' : '') + '">' + esc(message.text) + (message.problems ? '<br>' + message.problems.map(esc).join('<br>') : '') + '</p>';
   $('#main').innerHTML = '<nav>' + nav + '</nav><section>' + mid + '</section><section class="pane">' + side + '</section><div class="actions">' + acts + '</div>';
+}
+
+/* Student feedback from Could we improve this? in the app (feedback import): each piece with its reason, the part it is
+   about, the note, the course and the day. */
+const FB_REASON = {wrong: 'The answer is wrong', unclear: 'The question is unclear', typo: 'There\u2019s a typo', other: 'Something else'};
+const fbPart = p => p === 'card' ? 'the card' : /^card /.test(p) ? 'card line ' + p.slice(5) : ({a: 'question a (the check question)', b: 'question b (the practice question)', example: 'the worked example', question: 'a question'})[p] || p;
+function feedbackHtml(it) {
+  return '<div class="label">Student feedback</div>' + it.feedback.map(x => '<div class="flag"><b>' + esc(FB_REASON[x.reason] || x.reason) + '</b>, ' + esc(fbPart(x.part)) +
+      (x.note ? '<br>' + esc(x.note) : '') + '<br><span class="small">' + esc([x.course, (x.at || '').slice(0, 10), x.version && 'version ' + x.version].filter(Boolean).join(', ')) + '</span></div>').join('') +
+    (it.live ? '<p class="small">Students see the published version until you decide. Approve as written keeps it as it is. Edit, or Reject and rewrite, changes it once you publish the course again.</p>' : '');
 }
 
 /* The Compare tab: a trial next to its course. a is the course, b is the trial. With the sides hidden, which side is
