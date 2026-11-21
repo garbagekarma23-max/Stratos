@@ -20,8 +20,250 @@
    0.267
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:47Z write: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.00651,
+  "check": 0.01381,
+  "fix": 0.01939,
+  "recheck": 0.00764
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The new point is about how a character is shaped by who focalises the story and how their words are reported, which the bank's point-of-view card (about narrator choice and what readers know) and characterisation card (about direct and indirect methods) only touch on as related ideas, not as the same teaching point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Building character through narration",
+  "card": [
+   [
+    "Focalisation",
+    "Focalisation is whose eyes and mind a story is seen through. A reader learns about a character from what the focaliser notices, assumes and leaves out."
+   ],
+   [
+    "Reported speech",
+    "A character's words can be given in direct speech, in quotation marks, or in indirect speech, where the narrator sums them up. Indirect speech can make a character seem less heard or less reliable."
+   ],
+   [
+    "Example",
+    "Tom is seen through his sister's eyes: \"Tom claimed he was just helping, as usual.\" The words \"claimed\" and \"as usual\" show her doubt, so the reader sees Tom as she does."
+   ],
+   [
+    "Effect",
+    "These choices shape character indirectly. The reader is guided to trust, pity or doubt a character without being told outright."
+   ]
+  ],
+  "remember": "How a story is focalised and how words are reported can shape a character as much as description.",
+  "a": {
+   "q": "Why might a writer tell a story through one character's eyes?",
+   "opts": [
+    "It shapes how the reader judges every character",
+    "It lets the narrator avoid describing anyone",
+    "It makes every character speak in direct speech",
+    "It shows the events from every character's view"
+   ],
+   "why": "Focalisation filters what the reader sees, so it guides how characters are judged. It does not give every view, because one mind controls what is noticed.",
+   "clue": "Think about what one person notices and leaves out."
+  },
+  "b": {
+   "d": 3,
+   "q": "In Mia's story, Ravi is seen through his teacher: \"Ravi muttered some excuse about homework, as he always did.\" What does this narration suggest about Ravi?",
+   "opts": [
+    "The teacher doubts him, so the reader may doubt him too",
+    "Ravi is honest, because his words are quoted exactly",
+    "Ravi is shy, because the narrator says he muttered",
+    "The narrator is neutral, as no opinion is given"
+   ],
+   "why": "The words \"some excuse\" and \"as he always did\" show the teacher's doubt, and the reader sees Ravi through it. The wrong option about shyness is tempting, but the phrasing points to doubt, and the words are summed up, not quoted.",
+   "clue": "Look at which words show the teacher's opinion."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It shapes how the reader judges every character",
+   "also_right": []
+  },
+  "b": {
+   "best": "The teacher doubts him, so the reader may doubt him too",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Look at which words show the teacher's opinion' gives the answer away, because the right option is the only one that mentions the teacher or an opinion."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says these choices shape a character 'as much as description', a comparison the card never makes. The card only says they shape character indirectly."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The content is accurate and both questions have one clear right answer. However, question b's clue points straight to the only option mentioning the teacher's opinion, and the remember line claims narration shapes character 'as much as' description, which the card does not say."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue 'Look at which words show the teacher's opinion' gives the answer away, because the right option is the only one that mentions the teacher or an opinion.",
+  "Remember, other: The remember line says these choices shape a character 'as much as description', a comparison the card never makes. The card only says they shape character indirectly."
+ ],
+ "proposal": {
+  "title": "Building character through narration",
+  "card": [
+   [
+    "Focalisation",
+    "Focalisation is whose eyes and mind a story is seen through. A reader learns about a character from what the focaliser notices, assumes and leaves out."
+   ],
+   [
+    "Reported speech",
+    "A character's words can be given in direct speech, in quotation marks, or in indirect speech, where the narrator sums them up. Indirect speech can make a character seem less heard or less reliable."
+   ],
+   [
+    "Example",
+    "Tom is seen through his sister's eyes: \"Tom claimed he was just helping, as usual.\" The words \"claimed\" and \"as usual\" show her doubt, so the reader sees Tom as she does."
+   ],
+   [
+    "Effect",
+    "These choices shape character indirectly. The reader is guided to trust, pity or doubt a character without being told outright."
+   ]
+  ],
+  "remember": "Who sees the story and how words are reported can guide how a reader judges a character.",
+  "a": {
+   "q": "Why might a writer tell a story through one character's eyes?",
+   "opts": [
+    "It shapes how the reader judges the characters",
+    "It lets the narrator avoid describing anyone",
+    "It makes every character speak in direct speech",
+    "It shows the events from every character's view"
+   ],
+   "why": "Focalisation filters what the reader sees, so it guides how characters are judged. It does not give every view, because one mind controls what is noticed.",
+   "clue": "Think about what one person notices and leaves out."
+  },
+  "b": {
+   "d": 3,
+   "q": "In Mia's story, Ravi is seen through his teacher: \"Ravi muttered some excuse about homework, as he always did.\" What does this narration suggest about Ravi?",
+   "opts": [
+    "The teacher doubts him, so the reader may doubt him too",
+    "Ravi is honest, because his words are quoted exactly",
+    "Ravi is lying, as the narrator states it outright",
+    "The narrator is neutral, as no opinion is given"
+   ],
+   "why": "The words \"some excuse\" and \"as he always did\" show the teacher's doubt, and the reader sees Ravi through it. The option about lying is tempting, but the narration never says so outright: it guides the reader to doubt him indirectly. His words are also summed up, not quoted.",
+   "clue": "Is \"some excuse\" a neutral way to report what Ravi said?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It shapes how the reader judges the characters",
+    "also_right": []
+   },
+   "b": {
+    "best": "The teacher doubts him, so the reader may doubt him too",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 15,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Look at which words show the teacher's opinion' gives the answer away, because the right option is the only one that mentions the teacher or an opinion."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says these choices shape a character 'as much as description', a comparison the card never makes. The card only says they shape character indirectly."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue 'Look at which words show the teacher's opinion' gives the answer away, because the right option is the only one that mentions the teacher or an opinion.",
+   "Remember, other: The remember line says these choices shape a character 'as much as description', a comparison the card never makes. The card only says they shape character indirectly."
+  ]
+ },
+ "final": {
+  "title": "Building character through narration",
+  "card": [
+   [
+    "Focalisation",
+    "Focalisation is whose eyes and mind a story is seen through. A reader learns about a character from what the focaliser notices, assumes and leaves out."
+   ],
+   [
+    "Reported speech",
+    "A character's words can be given in direct speech, in quotation marks, or in indirect speech, where the narrator sums them up. Indirect speech can make a character seem less heard or less reliable."
+   ],
+   [
+    "Example",
+    "Tom is seen through his sister's eyes: \"Tom claimed he was just helping, as usual.\" The words \"claimed\" and \"as usual\" show her doubt, so the reader sees Tom as she does."
+   ],
+   [
+    "Effect",
+    "These choices shape character indirectly. The reader is guided to trust, pity or doubt a character without being told outright."
+   ]
+  ],
+  "remember": "Who sees the story and how words are reported can guide how a reader judges a character.",
+  "a": {
+   "q": "Why might a writer tell a story through one character's eyes?",
+   "opts": [
+    "It shapes how the reader judges the characters",
+    "It lets the narrator avoid describing anyone",
+    "It makes every character speak in direct speech",
+    "It shows the events from every character's view"
+   ],
+   "why": "Focalisation filters what the reader sees, so it guides how characters are judged. It does not give every view, because one mind controls what is noticed.",
+   "clue": "Think about what one person notices and leaves out."
+  },
+  "b": {
+   "d": 3,
+   "q": "In Mia's story, Ravi is seen through his teacher: \"Ravi muttered some excuse about homework, as he always did.\" What does this narration suggest about Ravi?",
+   "opts": [
+    "The teacher doubts him, so the reader may doubt him too",
+    "Ravi is honest, because his words are quoted exactly",
+    "Ravi is lying, as the narrator states it outright",
+    "The narrator is neutral, as no opinion is given"
+   ],
+   "why": "The words \"some excuse\" and \"as he always did\" show the teacher's doubt, and the reader sees Ravi through it. The option about lying is tempting, but the narration never says so outright: it guides the reader to doubt him indirectly. His words are also summed up, not quoted.",
+   "clue": "Is \"some excuse\" a neutral way to report what Ravi said?"
+  }
+ },
+ "cleared_by": "recheck"
 }

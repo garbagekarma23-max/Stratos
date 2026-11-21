@@ -24,8 +24,540 @@
    0.224
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:54Z write: failed the content check, writing again",
+  "2026-11-20T12:35:53Z write: done",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.02167,
+  "check": 0.01453,
+  "fix": 0.03004,
+  "recheck": 0.00898
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The new point asks students to compare quadrilaterals by sides, angles and diagonals and to recognise that diagonals bisect each other or meet at right angles, but the closest bank point, Properties of quadrilaterals, proves parallelogram side and diagonal properties via congruent triangles at Year 8 depth, and Classifying quadrilaterals is only a broader sorting card, so neither matches exactly.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Properties of quadrilaterals",
+  "card": [
+   "A quadrilateral has four sides. Its four angles always add to \\(360^{\\circ}\\). If three angles are \\(90^{\\circ}\\), \\(100^{\\circ}\\) and \\(80^{\\circ}\\), the fourth is \\(360 - 270 = 90\\), so \\(90^{\\circ}\\).",
+   [
+    "Rectangle",
+    "opposite sides equal and parallel, and all four angles \\(90^{\\circ}\\). The diagonals are equal and bisect each other, which means they cut each other in half."
+   ],
+   [
+    "Rhombus",
+    "all four sides equal, and opposite sides parallel. The diagonals bisect each other at right angles, but they are not equal in length."
+   ],
+   [
+    "Parallelogram",
+    "opposite sides equal and parallel, and opposite angles equal. The diagonals bisect each other, but they are not equal and do not meet at right angles."
+   ]
+  ],
+  "remember": "Angles total \\(360^{\\circ}\\). Compare each shape's sides, angles and diagonals.",
+  "a": {
+   "q": "Which quadrilateral has diagonals that bisect each other at right angles?",
+   "opts": [
+    "Rhombus",
+    "Rectangle",
+    "Parallelogram",
+    "A shape with unequal sides"
+   ],
+   "why": "The diagonals of a rhombus cross at right angles and cut each other in half. A rectangle's diagonals bisect each other but do not meet at right angles.",
+   "clue": "Think of the shape with four equal sides."
+  },
+  "b": {
+   "d": 2,
+   "q": "A quadrilateral has angles of \\(70^{\\circ}\\), \\(110^{\\circ}\\) and \\(95^{\\circ}\\). What is its fourth angle?",
+   "opts": [
+    "\\(85^{\\circ}\\)",
+    "\\(95^{\\circ}\\)",
+    "\\(75^{\\circ}\\)",
+    "\\(105^{\\circ}\\)"
+   ],
+   "why": "The four angles of a quadrilateral add to \\(360^{\\circ}\\). The three known angles total \\(275^{\\circ}\\), and \\(360 - 275 = 85\\). Using \\(180^{\\circ}\\) as the total, the triangle sum, gives \\(95^{\\circ}\\)? No: that would be wrong, since \\(180 - 85\\) is not the method here.",
+   "clue": "The total for a quadrilateral is not \\(180^{\\circ}\\)."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Rhombus",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(85^{\\circ}\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The rhombus line says the diagonals 'are not equal in length'. A square is a rhombus and has equal diagonals, which contradicts point 3's family idea. It should say they are not necessarily equal."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The parallelogram line says the diagonals 'are not equal and do not meet at right angles'. Rectangles, rhombuses and squares are all parallelograms, so this is false as a general rule. It should say 'not necessarily'."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think of the shape with four equal sides' points straight to the rhombus, which the card defines that way, so it gives the answer away."
+   },
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "Why (a) says a rectangle's diagonals 'do not meet at right angles'. This is false for a square, which is a rectangle. It should say they do not in general."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) ends with a garbled, self-questioning sentence ('gives 95°? No: that would be wrong, since 180 − 85 is not the method here') that does not explain how 95° arises and would confuse students."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both intended answers are right (Rhombus; 85°). The card and why (a) state diagonal properties as absolute when squares, rectangles and rhombuses are special cases, question a's clue gives the answer away, and why (b) ends in a confusing garbled sentence."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The rhombus line says the diagonals 'are not equal in length'. A square is a rhombus and has equal diagonals, which contradicts point 3's family idea. It should say they are not necessarily equal.",
+  "Card, fact: The parallelogram line says the diagonals 'are not equal and do not meet at right angles'. Rectangles, rhombuses and squares are all parallelograms, so this is false as a general rule. It should say 'not necessarily'.",
+  "Question a, other: The clue 'Think of the shape with four equal sides' points straight to the rhombus, which the card defines that way, so it gives the answer away.",
+  "Question a, fact: Why (a) says a rectangle's diagonals 'do not meet at right angles'. This is false for a square, which is a rectangle. It should say they do not in general.",
+  "Question b, wording: Why (b) ends with a garbled, self-questioning sentence ('gives 95°? No: that would be wrong, since 180 − 85 is not the method here') that does not explain how 95° arises and would confuse students."
+ ],
+ "proposal": {
+  "title": "Properties of quadrilaterals",
+  "card": [
+   "A quadrilateral has four sides. Its four angles always add to \\(360^{\\circ}\\). If three angles are \\(90^{\\circ}\\), \\(100^{\\circ}\\) and \\(80^{\\circ}\\), the fourth is \\(360 - 270 = 90\\), so \\(90^{\\circ}\\).",
+   [
+    "Rectangle",
+    "opposite sides equal and parallel, and all four angles \\(90^{\\circ}\\). The diagonals are equal and bisect each other, which means they cut each other in half, but they do not necessarily meet at right angles."
+   ],
+   [
+    "Rhombus",
+    "all four sides equal, and opposite sides parallel. The diagonals always bisect each other at right angles, but they are not necessarily equal in length."
+   ],
+   [
+    "Parallelogram",
+    "opposite sides equal and parallel, and opposite angles equal. The diagonals bisect each other, but they are not necessarily equal and do not necessarily meet at right angles."
+   ]
+  ],
+  "remember": "Any quadrilateral's angles total \\(360^{\\circ}\\). Compare shapes by what their sides, angles and diagonals always do.",
+  "a": {
+   "q": "Which quadrilateral always has diagonals that bisect each other at right angles?",
+   "opts": [
+    "Rhombus",
+    "Rectangle",
+    "Parallelogram",
+    "Any quadrilateral"
+   ],
+   "why": "Every rhombus has diagonals that cut each other in half and cross at right angles. A rectangle's diagonals always bisect each other, but in general they do not meet at right angles, so the rectangle is ruled out.",
+   "clue": "Look for what the diagonals always do, not what they sometimes do."
+  },
+  "b": {
+   "d": 2,
+   "q": "A quadrilateral has angles of \\(70^{\\circ}\\), \\(110^{\\circ}\\) and \\(95^{\\circ}\\). What is its fourth angle?",
+   "opts": [
+    "\\(85^{\\circ}\\)",
+    "\\(95^{\\circ}\\)",
+    "\\(75^{\\circ}\\)",
+    "\\(105^{\\circ}\\)"
+   ],
+   "why": "The four angles of a quadrilateral add to \\(360^{\\circ}\\). The three known angles total \\(70 + 110 + 95 = 275\\), and \\(360 - 275 = 85\\), so the fourth angle is \\(85^{\\circ}\\). An answer of \\(95^{\\circ}\\) comes from adding the three angles wrongly to get 265.",
+   "clue": "Add the three angles carefully, then subtract from the quadrilateral total."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Rhombus",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(85^{\\circ}\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The rhombus line says the diagonals 'are not equal in length'. A square is a rhombus and has equal diagonals, which contradicts point 3's family idea. It should say they are not necessarily equal."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The parallelogram line says the diagonals 'are not equal and do not meet at right angles'. Rectangles, rhombuses and squares are all parallelograms, so this is false as a general rule. It should say 'not necessarily'."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think of the shape with four equal sides' points straight to the rhombus, which the card defines that way, so it gives the answer away."
+   },
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "Why (a) says a rectangle's diagonals 'do not meet at right angles'. This is false for a square, which is a rectangle. It should say they do not in general."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) ends with a garbled, self-questioning sentence ('gives 95°? No: that would be wrong, since 180 − 85 is not the method here') that does not explain how 95° arises and would confuse students."
+   }
+  ],
+  "flags": [
+   "Card, fact: The rhombus line says the diagonals 'are not equal in length'. A square is a rhombus and has equal diagonals, which contradicts point 3's family idea. It should say they are not necessarily equal.",
+   "Card, fact: The parallelogram line says the diagonals 'are not equal and do not meet at right angles'. Rectangles, rhombuses and squares are all parallelograms, so this is false as a general rule. It should say 'not necessarily'.",
+   "Question a, other: The clue 'Think of the shape with four equal sides' points straight to the rhombus, which the card defines that way, so it gives the answer away.",
+   "Question a, fact: Why (a) says a rectangle's diagonals 'do not meet at right angles'. This is false for a square, which is a rectangle. It should say they do not in general.",
+   "Question b, wording: Why (b) ends with a garbled, self-questioning sentence ('gives 95°? No: that would be wrong, since 180 − 85 is not the method here') that does not explain how 95° arises and would confuse students."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Properties of quadrilaterals",
+  "card": [
+   "A quadrilateral has four sides. Its four angles always add to \\(360^{\\circ}\\). If three angles are \\(90^{\\circ}\\), \\(100^{\\circ}\\) and \\(80^{\\circ}\\), the fourth is \\(360 - 270 = 90\\), so \\(90^{\\circ}\\).",
+   [
+    "Rectangle",
+    "opposite sides equal and parallel, and all four angles \\(90^{\\circ}\\). The diagonals are equal and bisect each other, which means they cut each other in half, but they do not necessarily meet at right angles."
+   ],
+   [
+    "Rhombus",
+    "all four sides equal, and opposite sides parallel. The diagonals always bisect each other at right angles, but they are not necessarily equal in length."
+   ],
+   [
+    "Parallelogram",
+    "opposite sides equal and parallel, and opposite angles equal. The diagonals bisect each other, but they are not necessarily equal and do not necessarily meet at right angles."
+   ]
+  ],
+  "remember": "Any quadrilateral's angles total \\(360^{\\circ}\\). Compare shapes by what their sides, angles and diagonals always do.",
+  "a": {
+   "q": "Which quadrilateral always has diagonals that bisect each other at right angles?",
+   "opts": [
+    "Rhombus",
+    "Rectangle",
+    "Parallelogram",
+    "Any quadrilateral"
+   ],
+   "why": "Every rhombus has diagonals that cut each other in half and cross at right angles. A rectangle's diagonals always bisect each other, but in general they do not meet at right angles, so the rectangle is ruled out.",
+   "clue": "Look for what the diagonals always do, not what they sometimes do."
+  },
+  "b": {
+   "d": 2,
+   "q": "A quadrilateral has angles of \\(70^{\\circ}\\), \\(110^{\\circ}\\) and \\(95^{\\circ}\\). What is its fourth angle?",
+   "opts": [
+    "\\(85^{\\circ}\\)",
+    "\\(95^{\\circ}\\)",
+    "\\(75^{\\circ}\\)",
+    "\\(105^{\\circ}\\)"
+   ],
+   "why": "The four angles of a quadrilateral add to \\(360^{\\circ}\\). The three known angles total \\(70 + 110 + 95 = 275\\), and \\(360 - 275 = 85\\), so the fourth angle is \\(85^{\\circ}\\). An answer of \\(95^{\\circ}\\) comes from adding the three angles wrongly to get 265.",
+   "clue": "Add the three angles carefully, then subtract from the quadrilateral total."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix answers every flag: the diagonal properties now say not necessarily, the clue no longer names the rhombus, and why (b) is now clear. Rhombus is the only shape whose diagonals always bisect at right angles, and 360 minus 275 is 85.",
+   "item": "e4903f485b8831f1",
+   "result": "decided",
+   "saved": {
+    "id": "mat-properties-quadrilaterals-nsw",
+    "title": "Properties of quadrilaterals",
+    "brief": "502fd974be81",
+    "shortlist": [
+     [
+      "mat-classifying-quadrilaterals",
+      0.604
+     ],
+     [
+      "mat-properties-quadrilaterals",
+      0.465
+     ],
+     [
+      "mat-angle-sum-triangle",
+      0.286
+     ],
+     [
+      "mat-angle-sum-polygons",
+      0.243
+     ],
+     [
+      "mat-classifying-triangles",
+      0.224
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00019,
+     "write": 0.02167,
+     "check": 0.01453,
+     "fix": 0.03004,
+     "recheck": 0.00898
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The new point asks students to compare quadrilaterals by sides, angles and diagonals and to recognise that diagonals bisect each other or meet at right angles, but the closest bank point, Properties of quadrilaterals, proves parallelogram side and diagonal properties via congruent triangles at Year 8 depth, and Classifying quadrilaterals is only a broader sorting card, so neither matches exactly.",
+     "model": "claude-haiku-5-5"
+    },
+    "draft": {
+     "title": "Properties of quadrilaterals",
+     "card": [
+      "A quadrilateral has four sides. Its four angles always add to \\(360^{\\circ}\\). If three angles are \\(90^{\\circ}\\), \\(100^{\\circ}\\) and \\(80^{\\circ}\\), the fourth is \\(360 - 270 = 90\\), so \\(90^{\\circ}\\).",
+      [
+       "Rectangle",
+       "opposite sides equal and parallel, and all four angles \\(90^{\\circ}\\). The diagonals are equal and bisect each other, which means they cut each other in half."
+      ],
+      [
+       "Rhombus",
+       "all four sides equal, and opposite sides parallel. The diagonals bisect each other at right angles, but they are not equal in length."
+      ],
+      [
+       "Parallelogram",
+       "opposite sides equal and parallel, and opposite angles equal. The diagonals bisect each other, but they are not equal and do not meet at right angles."
+      ]
+     ],
+     "remember": "Angles total \\(360^{\\circ}\\). Compare each shape's sides, angles and diagonals.",
+     "a": {
+      "q": "Which quadrilateral has diagonals that bisect each other at right angles?",
+      "opts": [
+       "Rhombus",
+       "Rectangle",
+       "Parallelogram",
+       "A shape with unequal sides"
+      ],
+      "why": "The diagonals of a rhombus cross at right angles and cut each other in half. A rectangle's diagonals bisect each other but do not meet at right angles.",
+      "clue": "Think of the shape with four equal sides."
+     },
+     "b": {
+      "d": 2,
+      "q": "A quadrilateral has angles of \\(70^{\\circ}\\), \\(110^{\\circ}\\) and \\(95^{\\circ}\\). What is its fourth angle?",
+      "opts": [
+       "\\(85^{\\circ}\\)",
+       "\\(95^{\\circ}\\)",
+       "\\(75^{\\circ}\\)",
+       "\\(105^{\\circ}\\)"
+      ],
+      "why": "The four angles of a quadrilateral add to \\(360^{\\circ}\\). The three known angles total \\(275^{\\circ}\\), and \\(360 - 275 = 85\\). Using \\(180^{\\circ}\\) as the total, the triangle sum, gives \\(95^{\\circ}\\)? No: that would be wrong, since \\(180 - 85\\) is not the method here.",
+      "clue": "The total for a quadrilateral is not \\(180^{\\circ}\\)."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Rhombus",
+      "also_right": []
+     },
+     "b": {
+      "best": "\\(85^{\\circ}\\)",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The rhombus line says the diagonals 'are not equal in length'. A square is a rhombus and has equal diagonals, which contradicts point 3's family idea. It should say they are not necessarily equal."
+      },
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The parallelogram line says the diagonals 'are not equal and do not meet at right angles'. Rectangles, rhombuses and squares are all parallelograms, so this is false as a general rule. It should say 'not necessarily'."
+      },
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue 'Think of the shape with four equal sides' points straight to the rhombus, which the card defines that way, so it gives the answer away."
+      },
+      {
+       "part": "a",
+       "kind": "fact",
+       "detail": "Why (a) says a rectangle's diagonals 'do not meet at right angles'. This is false for a square, which is a rectangle. It should say they do not in general."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "Why (b) ends with a garbled, self-questioning sentence ('gives 95°? No: that would be wrong, since 180 − 85 is not the method here') that does not explain how 95° arises and would confuse students."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both intended answers are right (Rhombus; 85°). The card and why (a) state diagonal properties as absolute when squares, rectangles and rhombuses are special cases, question a's clue gives the answer away, and why (b) ends in a confusing garbled sentence."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Card, fact: The rhombus line says the diagonals 'are not equal in length'. A square is a rhombus and has equal diagonals, which contradicts point 3's family idea. It should say they are not necessarily equal.",
+     "Card, fact: The parallelogram line says the diagonals 'are not equal and do not meet at right angles'. Rectangles, rhombuses and squares are all parallelograms, so this is false as a general rule. It should say 'not necessarily'.",
+     "Question a, other: The clue 'Think of the shape with four equal sides' points straight to the rhombus, which the card defines that way, so it gives the answer away.",
+     "Question a, fact: Why (a) says a rectangle's diagonals 'do not meet at right angles'. This is false for a square, which is a rectangle. It should say they do not in general.",
+     "Question b, wording: Why (b) ends with a garbled, self-questioning sentence ('gives 95°? No: that would be wrong, since 180 − 85 is not the method here') that does not explain how 95° arises and would confuse students."
+    ],
+    "proposal": {
+     "title": "Properties of quadrilaterals",
+     "card": [
+      "A quadrilateral has four sides. Its four angles always add to \\(360^{\\circ}\\). If three angles are \\(90^{\\circ}\\), \\(100^{\\circ}\\) and \\(80^{\\circ}\\), the fourth is \\(360 - 270 = 90\\), so \\(90^{\\circ}\\).",
+      [
+       "Rectangle",
+       "opposite sides equal and parallel, and all four angles \\(90^{\\circ}\\). The diagonals are equal and bisect each other, which means they cut each other in half, but they do not necessarily meet at right angles."
+      ],
+      [
+       "Rhombus",
+       "all four sides equal, and opposite sides parallel. The diagonals always bisect each other at right angles, but they are not necessarily equal in length."
+      ],
+      [
+       "Parallelogram",
+       "opposite sides equal and parallel, and opposite angles equal. The diagonals bisect each other, but they are not necessarily equal and do not necessarily meet at right angles."
+      ]
+     ],
+     "remember": "Any quadrilateral's angles total \\(360^{\\circ}\\). Compare shapes by what their sides, angles and diagonals always do.",
+     "a": {
+      "q": "Which quadrilateral always has diagonals that bisect each other at right angles?",
+      "opts": [
+       "Rhombus",
+       "Rectangle",
+       "Parallelogram",
+       "Any quadrilateral"
+      ],
+      "why": "Every rhombus has diagonals that cut each other in half and cross at right angles. A rectangle's diagonals always bisect each other, but in general they do not meet at right angles, so the rectangle is ruled out.",
+      "clue": "Look for what the diagonals always do, not what they sometimes do."
+     },
+     "b": {
+      "d": 2,
+      "q": "A quadrilateral has angles of \\(70^{\\circ}\\), \\(110^{\\circ}\\) and \\(95^{\\circ}\\). What is its fourth angle?",
+      "opts": [
+       "\\(85^{\\circ}\\)",
+       "\\(95^{\\circ}\\)",
+       "\\(75^{\\circ}\\)",
+       "\\(105^{\\circ}\\)"
+      ],
+      "why": "The four angles of a quadrilateral add to \\(360^{\\circ}\\). The three known angles total \\(70 + 110 + 95 = 275\\), and \\(360 - 275 = 85\\), so the fourth angle is \\(85^{\\circ}\\). An answer of \\(95^{\\circ}\\) comes from adding the three angles wrongly to get 265.",
+      "clue": "Add the three angles carefully, then subtract from the quadrilateral total."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "Rhombus",
+       "also_right": []
+      },
+      "b": {
+       "best": "\\(85^{\\circ}\\)",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-20T13:37:07Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The rhombus line says the diagonals 'are not equal in length'. A square is a rhombus and has equal diagonals, which contradicts point 3's family idea. It should say they are not necessarily equal."
+      },
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The parallelogram line says the diagonals 'are not equal and do not meet at right angles'. Rectangles, rhombuses and squares are all parallelograms, so this is false as a general rule. It should say 'not necessarily'."
+      },
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue 'Think of the shape with four equal sides' points straight to the rhombus, which the card defines that way, so it gives the answer away."
+      },
+      {
+       "part": "a",
+       "kind": "fact",
+       "detail": "Why (a) says a rectangle's diagonals 'do not meet at right angles'. This is false for a square, which is a rectangle. It should say they do not in general."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "Why (b) ends with a garbled, self-questioning sentence ('gives 95°? No: that would be wrong, since 180 − 85 is not the method here') that does not explain how 95° arises and would confuse students."
+      }
+     ],
+     "flags": [
+      "Card, fact: The rhombus line says the diagonals 'are not equal in length'. A square is a rhombus and has equal diagonals, which contradicts point 3's family idea. It should say they are not necessarily equal.",
+      "Card, fact: The parallelogram line says the diagonals 'are not equal and do not meet at right angles'. Rectangles, rhombuses and squares are all parallelograms, so this is false as a general rule. It should say 'not necessarily'.",
+      "Question a, other: The clue 'Think of the shape with four equal sides' points straight to the rhombus, which the card defines that way, so it gives the answer away.",
+      "Question a, fact: Why (a) says a rectangle's diagonals 'do not meet at right angles'. This is false for a square, which is a rectangle. It should say they do not in general.",
+      "Question b, wording: Why (b) ends with a garbled, self-questioning sentence ('gives 95°? No: that would be wrong, since 180 − 85 is not the method here') that does not explain how 95° arises and would confuse students."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "a89630943e39fe64"
+  }
  ]
 }

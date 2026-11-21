@@ -20,8 +20,283 @@
    0.222
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:58Z write: done",
+  "2026-11-20T12:45:00Z check: flagged",
+  "2026-11-20T12:53:29Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00752,
+  "check": 0.01173,
+  "fix": 0.02728,
+  "recheck": 0.00844
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers judging a claim's evidence, sample and who funded it, but it has nothing on graph scales or selected data that could mislead, which is a required part of this point, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Judging claims and sources",
+  "card": [
+   "Ask who made the claim and why. A source that gains money or fame from the claim may leave out evidence that goes against it.",
+   "Ask whether the evidence is good enough. A small or hand-picked sample may not match the whole group, so the claim may not hold for everyone.",
+   "Ask whether the data was selected. Showing only the results that support a claim, and hiding the rest, can mislead.",
+   "Check a graph's scale. If a bar chart's axis starts well above zero, small differences look large."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "chart",
+    "chart": "bar",
+    "alt": "A bar chart with a y-axis that starts at 90 and not at 0. Brand A has a value of 92 and Brand B has a value of 96, so Brand B's bar looks much taller than Brand A's.",
+    "bars": [
+     [
+      "Brand A",
+      92
+     ],
+     [
+      "Brand B",
+      96
+     ]
+    ],
+    "y": {
+     "min": 90,
+     "max": 98,
+     "step": 2,
+     "label": "Score"
+    },
+    "x": {
+     "label": "Brand"
+    },
+    "truncated": true
+   }
+  },
+  "remember": "Check who is speaking and why, how good the sample is, what data was left out, and how the graph is drawn.",
+  "a": {
+   "q": "A company that sells vitamin tablets says its tablets make people healthier. Which question best checks the source of this claim?",
+   "opts": [
+    "Does the company make money if people believe this?",
+    "How many tablets are in each packet?",
+    "Is the company's advertisement colourful?",
+    "Do other companies sell vitamin tablets too?"
+   ],
+   "why": "A company that earns money from the claim has a reason to show only evidence that supports it, so this question checks who made the claim and why. The question about other companies does not tell you whether this company's claim is fair.",
+   "clue": "Think about who gains if the claim is believed."
+  },
+  "b": {
+   "d": 3,
+   "q": "A bar chart in an advert for Brand B running shoes shows Brand B's bar about three times taller than Brand A's. The y-axis starts at 90, and the scores are 92 for A and 96 for B. What is the problem with the chart?",
+   "opts": [
+    "The axis starts at 90, so a small gap looks large",
+    "The chart has only two bars to compare",
+    "The scores are too high to be believed",
+    "Brand B's bar is the wrong colour"
+   ],
+   "why": "Starting the axis at 90 cuts off most of each bar, so a gap of 4 points looks huge. The number of bars is not the problem, because two bars can be compared fairly if the axis starts at zero.",
+   "clue": "Look at where the axis begins, then compare the two scores."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Does the company make money if people believe this?",
+   "also_right": []
+  },
+  "b": {
+   "best": "The axis starts at 90, so a small gap looks large",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem already says 'The y-axis starts at 90', and the right option repeats that phrase. It is also the longest option and the only one that gives a reason. A student can match it to the stem without understanding truncated axes. Consider leaving the axis start out of the stem, or making the distractors similar in length and form."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and the chart data check out: the bars are 2 and 6 units tall above 90, so B's bar is three times taller. One problem: in question b the stem names the axis start and the right option echoes it, which gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The stem already says 'The y-axis starts at 90', and the right option repeats that phrase. It is also the longest option and the only one that gives a reason. A student can match it to the stem without understanding truncated axes. Consider leaving the axis start out of the stem, or making the distractors similar in length and form."
+ ],
+ "proposal": {
+  "title": "Judging claims and sources",
+  "card": [
+   "Ask who made the claim and why. A source that gains money or fame from the claim may leave out evidence that goes against it.",
+   "Ask whether the evidence is good enough. A small or hand-picked sample may not match the whole group, so the claim may not hold for everyone.",
+   "Ask whether the data was selected. Showing only the results that support a claim, and hiding the rest, can mislead.",
+   "Check a graph's scale. If a bar chart's axis starts well above zero, small differences look large."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "chart",
+    "chart": "bar",
+    "alt": "A bar chart with a y-axis that starts at 90 and not at 0. Brand A has a value of 92 and Brand B has a value of 96, so Brand B's bar looks much taller than Brand A's.",
+    "bars": [
+     [
+      "Brand A",
+      92
+     ],
+     [
+      "Brand B",
+      96
+     ]
+    ],
+    "y": {
+     "min": 90,
+     "max": 98,
+     "step": 2,
+     "label": "Score"
+    },
+    "x": {
+     "label": "Brand"
+    },
+    "truncated": true
+   }
+  },
+  "remember": "Check who is speaking and why, how good the sample is, what data was left out, and how the graph is drawn.",
+  "a": {
+   "q": "A company that sells vitamin tablets says its tablets make people healthier. Which question checks who made the claim and why?",
+   "opts": [
+    "Does the company earn money if people believe it?",
+    "Did the study test enough people to be sure?",
+    "Did the advert leave out some of the results?",
+    "Does the advert's graph have its axis start at zero?"
+   ],
+   "why": "A company that earns money from the claim has a reason to show only evidence that supports it, so this question checks the source and its motive. Asking how many people were tested is a fair check too, but it checks the sample, not who made the claim.",
+   "clue": "Think about who gains if the claim is believed."
+  },
+  "b": {
+   "d": 3,
+   "q": "In an advert, Brand B running shoes score 96 and Brand A shoes score 92. Yet Brand B's bar is drawn about three times taller than Brand A's. Why do the bars look so different?",
+   "opts": [
+    "The y-axis starts well above zero",
+    "The y-axis stops well below 100",
+    "The chart shows only two brands",
+    "The bars are drawn too wide"
+   ],
+   "why": "Starting the axis well above zero, such as at 90, cuts off most of each bar, so a gap of 4 points looks huge. Where the axis stops at the top does not change how the bars compare, because both bars still start from the same low line.",
+   "clue": "A score of 96 is not three times a score of 92. Where would the bars have to begin?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Does the company earn money if people believe it?",
+    "also_right": []
+   },
+   "b": {
+    "best": "The y-axis starts well above zero",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The chart data (axis from 90, bars at 92 and 96) gives bar heights of 2 and 6, which matches the 'about three times taller' in question b."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem already says 'The y-axis starts at 90', and the right option repeats that phrase. It is also the longest option and the only one that gives a reason. A student can match it to the stem without understanding truncated axes. Consider leaving the axis start out of the stem, or making the distractors similar in length and form."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The stem already says 'The y-axis starts at 90', and the right option repeats that phrase. It is also the longest option and the only one that gives a reason. A student can match it to the stem without understanding truncated axes. Consider leaving the axis start out of the stem, or making the distractors similar in length and form."
+  ]
+ },
+ "final": {
+  "title": "Judging claims and sources",
+  "card": [
+   "Ask who made the claim and why. A source that gains money or fame from the claim may leave out evidence that goes against it.",
+   "Ask whether the evidence is good enough. A small or hand-picked sample may not match the whole group, so the claim may not hold for everyone.",
+   "Ask whether the data was selected. Showing only the results that support a claim, and hiding the rest, can mislead.",
+   "Check a graph's scale. If a bar chart's axis starts well above zero, small differences look large."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "chart",
+    "chart": "bar",
+    "alt": "A bar chart with a y-axis that starts at 90 and not at 0. Brand A has a value of 92 and Brand B has a value of 96, so Brand B's bar looks much taller than Brand A's.",
+    "bars": [
+     [
+      "Brand A",
+      92
+     ],
+     [
+      "Brand B",
+      96
+     ]
+    ],
+    "y": {
+     "min": 90,
+     "max": 98,
+     "step": 2,
+     "label": "Score"
+    },
+    "x": {
+     "label": "Brand"
+    },
+    "truncated": true
+   }
+  },
+  "remember": "Check who is speaking and why, how good the sample is, what data was left out, and how the graph is drawn.",
+  "a": {
+   "q": "A company that sells vitamin tablets says its tablets make people healthier. Which question checks who made the claim and why?",
+   "opts": [
+    "Does the company earn money if people believe it?",
+    "Did the study test enough people to be sure?",
+    "Did the advert leave out some of the results?",
+    "Does the advert's graph have its axis start at zero?"
+   ],
+   "why": "A company that earns money from the claim has a reason to show only evidence that supports it, so this question checks the source and its motive. Asking how many people were tested is a fair check too, but it checks the sample, not who made the claim.",
+   "clue": "Think about who gains if the claim is believed."
+  },
+  "b": {
+   "d": 3,
+   "q": "In an advert, Brand B running shoes score 96 and Brand A shoes score 92. Yet Brand B's bar is drawn about three times taller than Brand A's. Why do the bars look so different?",
+   "opts": [
+    "The y-axis starts well above zero",
+    "The y-axis stops well below 100",
+    "The chart shows only two brands",
+    "The bars are drawn too wide"
+   ],
+   "why": "Starting the axis well above zero, such as at 90, cuts off most of each bar, so a gap of 4 points looks huge. Where the axis stops at the top does not change how the bars compare, because both bars still start from the same low line.",
+   "clue": "A score of 96 is not three times a score of 92. Where would the bars have to begin?"
+  }
+ },
+ "cleared_by": "recheck"
 }

@@ -24,8 +24,140 @@
    0.231
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 says adapt mat-types-data-2 (2 changes)",
+  "2026-11-20T12:25:54Z adapt: done",
+  "2026-11-20T12:35:53Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00039,
+  "adapt": 0.00346,
+  "check": 0.00682
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-types-data-2",
+  "changes": [
+   "Change the Year 11 class in question a to a Year 7 or Year 8 class so the question suits Stage 4 students.",
+   "Replace the Bendigo coach in question b with a New South Wales location, such as a Sydney or regional NSW town, so the example is local to the course."
+  ],
+  "sure": "high",
+  "reason": "The bank point Types of data (Victoria) teaches the same nominal, ordinal, discrete and continuous distinctions, and only its Year 11 and Bendigo examples need changing for NSW Stage 4.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "mat-types-data-2",
+  "changes": [
+   "Change the Year 11 class in question a to a Year 7 or Year 8 class so the question suits Stage 4 students.",
+   "Replace the Bendigo coach in question b with a New South Wales location, such as a Sydney or regional NSW town, so the example is local to the course."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "a.q",
+   "b.q"
+  ]
+ },
+ "draft": {
+  "title": "Types of data",
+  "card": [
+   [
+    "Categorical",
+    "data sorted into groups or labels. Nominal data has no natural order, such as eye colour. Ordinal data has a natural order, such as shirt size (small, medium, large)."
+   ],
+   [
+    "Numerical",
+    "data that is a count or a measurement. Discrete data is counted and takes separate values, such as the number of pets. Continuous data is measured and can take any value in a range, such as height."
+   ],
+   "A quick test: if you can do sensible arithmetic with the values, the data is numerical. Postcodes are numbers, but adding them means nothing, so they are categorical.",
+   "Measured data stays continuous even when it is rounded. A height written as 172 cm has been rounded, but the true height could be any value close to it."
+  ],
+  "remember": "Categorical data names groups. Numerical data counts or measures. Ask: counted, measured, or just a label?",
+  "a": {
+   "q": "Each student in a Year 8 class counts how many siblings they have. What type of data is this?",
+   "opts": [
+    "Numerical, discrete",
+    "Numerical, continuous",
+    "Categorical, nominal",
+    "Categorical, ordinal"
+   ],
+   "why": "Siblings are counted, so the data is numerical and takes separate values: discrete. It is not continuous, because nobody has 1.5 siblings.",
+   "clue": "Is it counted or measured?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A coach in Parramatta times each runner over 100 m and rounds each time to the nearest tenth of a second. What type of data is this?",
+   "opts": [
+    "Numerical, continuous",
+    "Numerical, discrete",
+    "Categorical, ordinal",
+    "Categorical, nominal"
+   ],
+   "why": "Time is measured, so the data is numerical and continuous. Rounding to a tenth of a second makes the values look separate, but a runner's true time could be any value in a range, so it is not discrete.",
+   "clue": "Does rounding change how the time was found?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Numerical, discrete",
+   "also_right": []
+  },
+  "b": {
+   "best": "Numerical, continuous",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Types of data",
+  "card": [
+   [
+    "Categorical",
+    "data sorted into groups or labels. Nominal data has no natural order, such as eye colour. Ordinal data has a natural order, such as shirt size (small, medium, large)."
+   ],
+   [
+    "Numerical",
+    "data that is a count or a measurement. Discrete data is counted and takes separate values, such as the number of pets. Continuous data is measured and can take any value in a range, such as height."
+   ],
+   "A quick test: if you can do sensible arithmetic with the values, the data is numerical. Postcodes are numbers, but adding them means nothing, so they are categorical.",
+   "Measured data stays continuous even when it is rounded. A height written as 172 cm has been rounded, but the true height could be any value close to it."
+  ],
+  "remember": "Categorical data names groups. Numerical data counts or measures. Ask: counted, measured, or just a label?",
+  "a": {
+   "q": "Each student in a Year 8 class counts how many siblings they have. What type of data is this?",
+   "opts": [
+    "Numerical, discrete",
+    "Numerical, continuous",
+    "Categorical, nominal",
+    "Categorical, ordinal"
+   ],
+   "why": "Siblings are counted, so the data is numerical and takes separate values: discrete. It is not continuous, because nobody has 1.5 siblings.",
+   "clue": "Is it counted or measured?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A coach in Parramatta times each runner over 100 m and rounds each time to the nearest tenth of a second. What type of data is this?",
+   "opts": [
+    "Numerical, continuous",
+    "Numerical, discrete",
+    "Categorical, ordinal",
+    "Categorical, nominal"
+   ],
+   "why": "Time is measured, so the data is numerical and continuous. Rounding to a tenth of a second makes the values look separate, but a runner's true time could be any value in a range, so it is not discrete.",
+   "clue": "Does rounding change how the time was found?"
+  }
+ },
+ "cleared_by": "checker"
 }

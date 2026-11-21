@@ -16,8 +16,226 @@
    0.369
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:45Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:49Z write: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00662,
+  "check": 0.01268,
+  "fix": 0.02282,
+  "recheck": 0.00795
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points explains that volcanoes form where plates pull apart or one slides under another; they cover volcanic hazards, how volcanism builds landforms, and mountain building from plates pushing together.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "What causes volcanic eruptions",
+  "card": [
+   "Magma is molten rock beneath the Earth's surface. It is hot and lighter than the solid rock around it, so it can rise.",
+   "Magma often rises where two plates pull apart. The gap lets magma move up from below.",
+   "Magma also rises where one plate slides under another. The plate that sinks melts, and the new magma rises through the plate above.",
+   "A volcanic eruption happens when magma reaches the surface. It comes out as lava (molten rock on the surface), ash and gas."
+  ],
+  "remember": "Magma rises where plates pull apart or one slides under another, then erupts as lava, ash and gas.",
+  "a": {
+   "q": "What is an eruption of a volcano?",
+   "opts": [
+    "Magma reaching the surface as lava, ash and gas",
+    "Solid rock sliding down a steep slope after rain",
+    "Plates suddenly slipping and shaking the ground",
+    "Water rising from the sea floor as a huge wave"
+   ],
+   "why": "An eruption happens when magma reaches the surface and comes out as lava, ash and gas. Rock sliding down a slope is a different event, and so is the sudden slipping of plates.",
+   "clue": "Think about what comes out of the ground."
+  },
+  "b": {
+   "d": 2,
+   "q": "Near a coast, one plate slides under another. Why might a volcano form on the plate above?",
+   "opts": [
+    "The sinking plate melts and the new magma rises",
+    "The sinking plate pushes solid rock up as lava",
+    "The plates pull apart and sea water floods in",
+    "The plate above melts because it is lighter"
+   ],
+   "why": "The plate that sinks melts, and the new magma rises through the plate above. The magma, not solid rock, is what erupts. The plate above is not the one that melts.",
+   "clue": "Which plate goes down, and what happens to it?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A cross-section of one plate sliding under another. Label: plate sliding under, plate above, magma rising, volcano erupting with lava, ash and gas.",
+    "why": "It shows how a sinking plate leads to magma rising to a volcano."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Magma reaching the surface as lava, ash and gas",
+   "also_right": []
+  },
+  "b": {
+   "best": "The sinking plate melts and the new magma rises",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The card and why (b) say the sinking plate itself melts, and why (b) adds that 'the plate above is not the one that melts'. In current science, water released from the sinking plate mostly melts the mantle wedge above it, and the base of the overriding plate can melt too. 'The sinking plate melts' is a common school simplification, but stating flatly that the plate above does not melt is misleading. Consider wording like 'water from the sinking plate helps rock above it melt, and this magma rises'."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "Both questions have one clear answer that matches the card. However, the card and why (b) oversimplify subduction melting: in reality, water from the sinking plate mostly melts the mantle above it, and why (b) wrongly denies that the upper plate melts."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The card and why (b) say the sinking plate itself melts, and why (b) adds that 'the plate above is not the one that melts'. In current science, water released from the sinking plate mostly melts the mantle wedge above it, and the base of the overriding plate can melt too. 'The sinking plate melts' is a common school simplification, but stating flatly that the plate above does not melt is misleading. Consider wording like 'water from the sinking plate helps rock above it melt, and this magma rises'."
+ ],
+ "proposal": {
+  "title": "What causes volcanic eruptions",
+  "card": [
+   "Magma is molten rock beneath the Earth's surface. It is hot and lighter than the solid rock around it, so it can rise.",
+   "Magma often rises where two plates pull apart. The gap lets magma move up from below.",
+   "Magma also forms where one plate slides under another. Water from the sinking plate helps the rock above it melt, and this new magma rises.",
+   "A volcanic eruption happens when magma reaches the surface. It comes out as lava (molten rock on the surface), ash and gas."
+  ],
+  "remember": "Magma rises where plates pull apart or one slides under another, then erupts as lava, ash and gas.",
+  "a": {
+   "q": "What is an eruption of a volcano?",
+   "opts": [
+    "Magma reaching the surface as lava, ash and gas",
+    "Solid rock sliding down a steep slope after rain",
+    "Plates suddenly slipping and shaking the ground",
+    "Water rising from the sea floor as a huge wave"
+   ],
+   "why": "An eruption happens when magma reaches the surface and comes out as lava, ash and gas. Rock sliding down a slope is a different event, and so is the sudden slipping of plates.",
+   "clue": "Think about what comes out of the ground."
+  },
+  "b": {
+   "d": 2,
+   "q": "Near a coast, one plate slides under another. Why might a volcano form on the plate above?",
+   "opts": [
+    "Water from the sinking plate helps rock above it melt",
+    "The sinking plate pushes solid rock up as lava",
+    "The plates pull apart and let sea water flood in",
+    "Cold, heavy rock is squeezed up between the plates"
+   ],
+   "why": "As one plate sinks, water from it helps the rock above it melt. This hot, light magma rises and can erupt as a volcano. Solid rock is not pushed up as lava: lava is magma that has reached the surface.",
+   "clue": "Think about where the new magma comes from."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A cross-section of one plate sliding under another. Labels: plate sliding under, plate above, water from the sinking plate, rock melting above the sinking plate, magma rising, volcano erupting with lava, ash and gas.",
+    "why": "It shows how water from a sinking plate helps rock above it melt, and how that magma rises to a volcano."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Magma reaching the surface as lava, ash and gas",
+    "also_right": []
+   },
+   "b": {
+    "best": "Water from the sinking plate helps rock above it melt",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 17,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The card and why (b) say the sinking plate itself melts, and why (b) adds that 'the plate above is not the one that melts'. In current science, water released from the sinking plate mostly melts the mantle wedge above it, and the base of the overriding plate can melt too. 'The sinking plate melts' is a common school simplification, but stating flatly that the plate above does not melt is misleading. Consider wording like 'water from the sinking plate helps rock above it melt, and this magma rises'."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The card and why (b) say the sinking plate itself melts, and why (b) adds that 'the plate above is not the one that melts'. In current science, water released from the sinking plate mostly melts the mantle wedge above it, and the base of the overriding plate can melt too. 'The sinking plate melts' is a common school simplification, but stating flatly that the plate above does not melt is misleading. Consider wording like 'water from the sinking plate helps rock above it melt, and this magma rises'."
+  ]
+ },
+ "final": {
+  "title": "What causes volcanic eruptions",
+  "card": [
+   "Magma is molten rock beneath the Earth's surface. It is hot and lighter than the solid rock around it, so it can rise.",
+   "Magma often rises where two plates pull apart. The gap lets magma move up from below.",
+   "Magma also forms where one plate slides under another. Water from the sinking plate helps the rock above it melt, and this new magma rises.",
+   "A volcanic eruption happens when magma reaches the surface. It comes out as lava (molten rock on the surface), ash and gas."
+  ],
+  "remember": "Magma rises where plates pull apart or one slides under another, then erupts as lava, ash and gas.",
+  "a": {
+   "q": "What is an eruption of a volcano?",
+   "opts": [
+    "Magma reaching the surface as lava, ash and gas",
+    "Solid rock sliding down a steep slope after rain",
+    "Plates suddenly slipping and shaking the ground",
+    "Water rising from the sea floor as a huge wave"
+   ],
+   "why": "An eruption happens when magma reaches the surface and comes out as lava, ash and gas. Rock sliding down a slope is a different event, and so is the sudden slipping of plates.",
+   "clue": "Think about what comes out of the ground."
+  },
+  "b": {
+   "d": 2,
+   "q": "Near a coast, one plate slides under another. Why might a volcano form on the plate above?",
+   "opts": [
+    "Water from the sinking plate helps rock above it melt",
+    "The sinking plate pushes solid rock up as lava",
+    "The plates pull apart and let sea water flood in",
+    "Cold, heavy rock is squeezed up between the plates"
+   ],
+   "why": "As one plate sinks, water from it helps the rock above it melt. This hot, light magma rises and can erupt as a volcano. Solid rock is not pushed up as lava: lava is magma that has reached the surface.",
+   "clue": "Think about where the new magma comes from."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A cross-section of one plate sliding under another. Labels: plate sliding under, plate above, water from the sinking plate, rock melting above the sinking plate, magma rising, volcano erupting with lava, ash and gas.",
+    "why": "It shows how water from a sinking plate helps rock above it melt, and how that magma rises to a volcano."
+   }
+  ]
+ },
+ "cleared_by": "recheck"
 }

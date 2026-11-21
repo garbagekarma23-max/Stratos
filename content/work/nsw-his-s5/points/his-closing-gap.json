@@ -8,8 +8,171 @@
    0.296
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:52Z write: done",
+  "2026-11-20T12:35:52Z check: flagged",
+  "2026-11-20T12:44:57Z fix: suggested",
+  "2026-11-20T14:42:59Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "write": 0.01118,
+  "check": 0.01583,
+  "fix": 0.03807
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point covers the same gaps and Closing the Gap targets but is broader, adding causes like dispossession and a partnership model that the new point's brief does not mention, and it is framed as Geography rather than History, so a separate point fits better.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Closing the Gap",
+  "card": [
+   "Aboriginal and Torres Strait Islander people have lived on this continent for tens of thousands of years. Today there are still gaps between Aboriginal and non-Aboriginal Australians in health, education and life expectancy.",
+   "Closing the Gap began in 2008. Governments agreed to work toward targets that reduce these gaps.",
+   "Targets cover areas such as life expectancy, early childhood education and school completion. Progress is reported each year, so the public can see which targets are on track.",
+   "Some targets have been met and others have not. Later versions of the agreement gave Aboriginal and Torres Strait Islander organisations a larger role in decisions."
+  ],
+  "remember": "Closing the Gap, begun in 2008, sets targets to reduce gaps in health, education and life expectancy.",
+  "a": {
+   "q": "What is the main purpose of Closing the Gap?",
+   "opts": [
+    "To set targets that reduce gaps in health and education",
+    "To remove the need for any government reports",
+    "To give every Australian the same wage",
+    "To end all differences between all Australians"
+   ],
+   "why": "Closing the Gap sets targets to reduce gaps between Aboriginal and non-Aboriginal Australians in areas such as health and education. It is not a wage scheme.",
+   "clue": "Think about what the word gap refers to."
+  },
+  "b": {
+   "d": 2,
+   "q": "A report in 2020 shows one Closing the Gap target was met and another was not. What does this tell us?",
+   "opts": [
+    "Progress is uneven, so targets are checked each year",
+    "The whole program has failed",
+    "The gaps no longer exist",
+    "The program ended in 2020"
+   ],
+   "why": "Annual reporting shows which targets are on track and which are not, so progress can be uneven. One missed target does not mean the whole program has failed, and the gaps remain.",
+   "clue": "Reports check each target separately."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "To set targets that reduce gaps in health and education",
+   "also_right": []
+  },
+  "b": {
+   "best": "Progress is uneven, so targets are checked each year",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the longest and the only specific one. It repeats the remember line almost word for word, while the distractors (same wage, no government reports) are implausible. A student could pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option reverses cause and effect. Targets are not checked each year because progress is uneven; annual checking is what shows the uneven progress. It is also the longest option and the only one that gives a reason, so it stands out."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Setting the report in 2020 is confusing. In 2020 the original 2008 targets were replaced by the new National Agreement on Closing the Gap, so a student who knows this could find 'The program ended in 2020' partly plausible. Another year would avoid this."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "first-nations",
+  "summary": "The card's facts are accurate. In question b, the right option reverses cause and effect ('uneven, so targets are checked each year'), and the 2020 setting clashes with the replacement of the original agreement that year. In both questions the right option stands out as the longest and most specific."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Question a, wording: The right option is the longest and the only specific one. It repeats the remember line almost word for word, while the distractors (same wage, no government reports) are implausible. A student could pick it without knowing the idea.",
+  "Question b, wording: The right option reverses cause and effect. Targets are not checked each year because progress is uneven; annual checking is what shows the uneven progress. It is also the longest option and the only one that gives a reason, so it stands out.",
+  "Question b, other: Setting the report in 2020 is confusing. In 2020 the original 2008 targets were replaced by the new National Agreement on Closing the Gap, so a student who knows this could find 'The program ended in 2020' partly plausible. Another year would avoid this."
+ ],
+ "proposal": {
+  "title": "Closing the Gap",
+  "card": [
+   "Aboriginal and Torres Strait Islander people have lived on this continent for tens of thousands of years. Today gaps remain between Aboriginal and non-Aboriginal Australians in health, education and life expectancy.",
+   "A gap is the difference between the two groups' results. It narrows only when results for Aboriginal people improve faster than results for other Australians.",
+   "Closing the Gap began in 2008. Governments agreed to targets in areas such as life expectancy, early childhood education and school completion, and progress is reported each year.",
+   "Yearly reports show which targets are on track and which are not. In 2020 a new national agreement gave Aboriginal and Torres Strait Islander organisations a shared role in decisions."
+  ],
+  "remember": "Closing the Gap sets targets and reports on them yearly. A gap closes when Aboriginal results improve faster.",
+  "a": {
+   "q": "Which change would narrow the life expectancy gap that Closing the Gap measures?",
+   "opts": [
+    "Aboriginal life expectancy rises faster than others' does",
+    "Life expectancy rises by the same amount for everyone",
+    "Non-Aboriginal life expectancy rises the fastest",
+    "Average life expectancy across Australia rises"
+   ],
+   "why": "A gap is the difference between two groups, so it narrows only when Aboriginal life expectancy rises faster than everyone else's. If everyone gains the same amount, the difference stays the same, even though people live longer.",
+   "clue": "A gap is the difference between two numbers."
+  },
+  "b": {
+   "d": 2,
+   "q": "A yearly report in 2024 shows one Closing the Gap target on track and another not on track. What is the best conclusion?",
+   "opts": [
+    "Progress on the targets is uneven",
+    "Closing the Gap has failed overall",
+    "Most of the gaps have now closed",
+    "The off-track target will be dropped"
+   ],
+   "why": "Each target is reported on separately, so one can be on track while another is not. That shows uneven progress. One missed target does not mean the whole effort has failed, and the gaps still remain.",
+   "clue": "The report looks at each target on its own."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Closing the Gap",
+  "card": [
+   "Aboriginal and Torres Strait Islander people have lived on this continent for tens of thousands of years. Today gaps remain between Aboriginal and non-Aboriginal Australians in health, education and life expectancy.",
+   "A gap is the difference between the two groups' results. It narrows only when results for Aboriginal people improve faster than results for other Australians.",
+   "Closing the Gap began in 2008. Governments agreed to targets in areas such as life expectancy, early childhood education and school completion, and progress is reported each year.",
+   "Yearly reports show which targets are on track and which are not. In 2020 a new national agreement gave Aboriginal and Torres Strait Islander organisations a shared role in decisions."
+  ],
+  "remember": "Closing the Gap sets targets and reports on them yearly. A gap closes when Aboriginal results improve faster.",
+  "a": {
+   "q": "Which change would narrow the life expectancy gap that Closing the Gap measures?",
+   "opts": [
+    "Aboriginal life expectancy rises faster than others' does",
+    "Life expectancy rises by the same amount for everyone",
+    "Non-Aboriginal life expectancy rises the fastest",
+    "Average life expectancy across Australia rises"
+   ],
+   "why": "A gap is the difference between two groups, so it narrows only when Aboriginal life expectancy rises faster than everyone else's. If everyone gains the same amount, the difference stays the same, even though people live longer.",
+   "clue": "A gap is the difference between two numbers."
+  },
+  "b": {
+   "d": 2,
+   "q": "A yearly report in 2024 shows one Closing the Gap target on track and another not on track. What is the best conclusion?",
+   "opts": [
+    "Progress on the targets is uneven",
+    "Closing the Gap has failed overall",
+    "Most of the gaps have now closed",
+    "The off-track target will be dropped"
+   ],
+   "why": "Each target is reported on separately, so one can be on track while another is not. That shows uneven progress. One missed target does not mean the whole effort has failed, and the gaps still remain.",
+   "clue": "The report looks at each target on its own."
+  }
+ },
+ "cleared_by": "owner"
 }

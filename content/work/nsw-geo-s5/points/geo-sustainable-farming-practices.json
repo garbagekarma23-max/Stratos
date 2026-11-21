@@ -24,8 +24,200 @@
    0.247
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: done",
+  "2026-11-20T12:44:55Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:23:39Z autoreview: cleared with the fix (a other, card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00658,
+  "check": 0.01256,
+  "fix": 0.02297
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches sustainable farming practices as a single idea: improving-food-security is broader and covers trade and research, while farming-innovations frames the same methods as ways to work around environmental limits rather than to protect land for the future.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Sustainable farming practices",
+  "card": [
+   "Sustainable farming produces food now without wearing out the soil, water and land that future farmers will need.",
+   [
+    "Crop rotation",
+    "growing different crops in turn on the same paddock. It can help keep soil nutrients in balance and reduce pests and disease."
+   ],
+   [
+    "No-till farming",
+    "sowing seed without ploughing the soil first. Leaving the soil mostly undisturbed can reduce erosion and help the soil hold moisture."
+   ],
+   [
+    "Efficient irrigation",
+    "giving crops only the water they need, for example through drip lines that deliver water to the roots. Cutting food waste also helps, because less land and water is needed to feed the same number of people."
+   ]
+  ],
+  "remember": "Sustainable farming protects soil and water while still producing food, and wasting less food eases the pressure on both.",
+  "a": {
+   "q": "A farmer sows wheat straight into last year's stubble without ploughing. Which practice is this, and what is its main benefit?",
+   "opts": [
+    "No-till farming, which reduces soil erosion",
+    "Crop rotation, which balances soil nutrients",
+    "Efficient irrigation, which saves water for crops",
+    "Cutting food waste, which reduces land needed"
+   ],
+   "why": "Sowing seed without ploughing is no-till farming, and leaving the soil undisturbed can reduce erosion. Crop rotation is the tempting option, but it means changing the crop grown on a paddock from season to season, which the farmer is not doing here.",
+   "clue": "What has the farmer chosen not to do to the soil?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya grows vegetables near Griffith. She switches from watering whole paddocks with sprinklers to drip lines at the plant roots. Why is this more sustainable?",
+   "opts": [
+    "Plants get the water they need and less is wasted",
+    "Plants are grown in a different order each season",
+    "The soil is no longer ploughed before sowing",
+    "Less harvested food is thrown away after sale"
+   ],
+   "why": "Drip lines deliver water to the roots, so less water is lost and the water supply lasts longer. Changing the crop order is crop rotation, and skipping ploughing is no-till farming, so those options describe different practices.",
+   "clue": "Think about where the water goes with drip lines."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "No-till farming, which reduces soil erosion",
+   "also_right": []
+  },
+  "b": {
+   "best": "Plants get the water they need and less is wasted",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says the farmer is not changing the crop, but the question never says what grew last year. Sowing wheat into another crop's stubble would also be crop rotation. The why should say only that the defining action here is skipping ploughing."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "Cutting food waste is tucked into the efficient irrigation bullet. A student could read it as part of efficient irrigation rather than a separate practice. It would be clearer on its own line."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer and the facts are sound. Two small fixes: why (a) claims the farmer is not rotating crops, which the question does not establish, and food waste sits inside the irrigation bullet on the card."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The why says the farmer is not changing the crop, but the question never says what grew last year. Sowing wheat into another crop's stubble would also be crop rotation. The why should say only that the defining action here is skipping ploughing.",
+  "Card, wording: Cutting food waste is tucked into the efficient irrigation bullet. A student could read it as part of efficient irrigation rather than a separate practice. It would be clearer on its own line."
+ ],
+ "proposal": {
+  "title": "Sustainable farming practices",
+  "card": [
+   "Sustainable farming produces food now without wearing out the soil, water and land that future farmers will need.",
+   "Crop rotation means growing different crops in turn on the same paddock, which can keep soil nutrients balanced and reduce pests. No-till farming means sowing seed without ploughing, which can reduce erosion and help soil hold moisture.",
+   "Efficient irrigation gives crops only the water they need, for example through drip lines that deliver water straight to the roots.",
+   "Cutting food waste is a separate practice. When less food is thrown away, less land and water are needed to feed the same number of people."
+  ],
+  "remember": "Sustainable farming protects soil and water while still producing food, and wasting less food eases the pressure on both.",
+  "a": {
+   "q": "A farmer sows wheat straight into last year's stubble without ploughing. Which practice is this, and what is its main benefit?",
+   "opts": [
+    "No-till farming, which reduces soil erosion",
+    "Crop rotation, which balances soil nutrients",
+    "Efficient irrigation, which saves water for crops",
+    "Cutting food waste, which reduces land needed"
+   ],
+   "why": "The defining action here is sowing seed without ploughing, which is no-till farming. Leaving the soil undisturbed can reduce erosion. Crop rotation is the tempting option, but it is about which crops are grown in turn, and the question turns on skipping ploughing, not on the order of crops.",
+   "clue": "What has the farmer chosen not to do to the soil?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya grows vegetables near Griffith. She switches from watering whole paddocks with sprinklers to drip lines at the plant roots. Why is this more sustainable?",
+   "opts": [
+    "Plants get the water they need and less is wasted",
+    "Plants are grown in a different order each season",
+    "The soil is no longer ploughed before sowing",
+    "Less harvested food is thrown away after sale"
+   ],
+   "why": "Drip lines deliver water to the roots, so less water is lost and the water supply lasts longer. Changing the crop order is crop rotation, skipping ploughing is no-till farming, and throwing away less food is cutting food waste, so those options describe different practices.",
+   "clue": "Think about where the water goes with drip lines."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:39Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says the farmer is not changing the crop, but the question never says what grew last year. Sowing wheat into another crop's stubble would also be crop rotation. The why should say only that the defining action here is skipping ploughing."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "Cutting food waste is tucked into the efficient irrigation bullet. A student could read it as part of efficient irrigation rather than a separate practice. It would be clearer on its own line."
+   }
+  ],
+  "flags": [
+   "Question a, other: The why says the farmer is not changing the crop, but the question never says what grew last year. Sowing wheat into another crop's stubble would also be crop rotation. The why should say only that the defining action here is skipping ploughing.",
+   "Card, wording: Cutting food waste is tucked into the efficient irrigation bullet. A student could read it as part of efficient irrigation rather than a separate practice. It would be clearer on its own line."
+  ]
+ },
+ "final": {
+  "title": "Sustainable farming practices",
+  "card": [
+   "Sustainable farming produces food now without wearing out the soil, water and land that future farmers will need.",
+   "Crop rotation means growing different crops in turn on the same paddock, which can keep soil nutrients balanced and reduce pests. No-till farming means sowing seed without ploughing, which can reduce erosion and help soil hold moisture.",
+   "Efficient irrigation gives crops only the water they need, for example through drip lines that deliver water straight to the roots.",
+   "Cutting food waste is a separate practice. When less food is thrown away, less land and water are needed to feed the same number of people."
+  ],
+  "remember": "Sustainable farming protects soil and water while still producing food, and wasting less food eases the pressure on both.",
+  "a": {
+   "q": "A farmer sows wheat straight into last year's stubble without ploughing. Which practice is this, and what is its main benefit?",
+   "opts": [
+    "No-till farming, which reduces soil erosion",
+    "Crop rotation, which balances soil nutrients",
+    "Efficient irrigation, which saves water for crops",
+    "Cutting food waste, which reduces land needed"
+   ],
+   "why": "The defining action here is sowing seed without ploughing, which is no-till farming. Leaving the soil undisturbed can reduce erosion. Crop rotation is the tempting option, but it is about which crops are grown in turn, and the question turns on skipping ploughing, not on the order of crops.",
+   "clue": "What has the farmer chosen not to do to the soil?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya grows vegetables near Griffith. She switches from watering whole paddocks with sprinklers to drip lines at the plant roots. Why is this more sustainable?",
+   "opts": [
+    "Plants get the water they need and less is wasted",
+    "Plants are grown in a different order each season",
+    "The soil is no longer ploughed before sowing",
+    "Less harvested food is thrown away after sale"
+   ],
+   "why": "Drip lines deliver water to the roots, so less water is lost and the water supply lasts longer. Changing the crop order is crop rotation, skipping ploughing is no-till farming, and throwing away less food is cutting food waste, so those options describe different practices.",
+   "clue": "Think about where the water goes with drip lines."
+  }
+ },
+ "cleared_by": "auto"
 }

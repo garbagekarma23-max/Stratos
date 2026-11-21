@@ -3,8 +3,203 @@
  "title": "Enrolling and voting",
  "brief": "a1495394cb14",
  "shortlist": [],
- "stage": "write",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, write"
- ]
+  "2026-11-12T12:22:31Z new, write",
+  "2026-11-20T12:15:12Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:25:40Z write: done",
+  "2026-11-20T12:35:44Z check: flagged",
+  "2026-11-20T12:44:52Z fix: suggested",
+  "2026-11-20T13:37:05Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00608,
+  "check": 0.0118,
+  "fix": 0.01672,
+  "recheck": 0.01139
+ },
+ "draft": {
+  "title": "Enrolling and voting",
+  "card": [
+   "To vote in Australia, a person must be on the electoral roll. Putting your name on the roll is called enrolling.",
+   "Australian citizens must enrol once they turn 18. They can enrol from age 16, so they are ready when they turn 18.",
+   "Enrolled citizens aged 18 or over must vote in federal elections and in state and territory elections.",
+   "A person who moves house should update their enrolment, so that the roll shows where they now live."
+  ],
+  "remember": "Enrol at 18, or from 16 to be ready. Then vote in federal and state elections.",
+  "a": {
+   "q": "Priya is an Australian citizen who turns 16 next month. What can she do about the electoral roll?",
+   "opts": [
+    "Enrol now, so she is ready when she turns 18",
+    "Wait, because she cannot enrol until she is 18",
+    "Enrol now and vote in the next federal election",
+    "Wait, because only people aged 21 can enrol"
+   ],
+   "why": "Citizens can enrol from age 16, so Priya is ready when she turns 18. Enrolling at 16 does not allow her to vote yet, because the duty to vote applies from 18.",
+   "clue": "Think about the youngest age at which a citizen can enrol."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom is an Australian citizen who turned 18 last year. He moved from Bathurst to Newcastle and has not updated his enrolment. What should he do?",
+   "opts": [
+    "Update his enrolment to show his new address",
+    "Leave it, because he only has to enrol once",
+    "Wait until he turns 21 before he updates it",
+    "Update it only if he plans to vote in a state election"
+   ],
+   "why": "Tom should update his enrolment so the roll shows where he now lives. Enrolling once is not enough if his address changes, and the same roll is used for federal and state elections.",
+   "clue": "The roll needs to show where a person lives now."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Enrol now, so she is ready when she turns 18",
+   "also_right": []
+  },
+  "b": {
+   "best": "Update his enrolment to show his new address",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "Priya turns 16 next month, so she is 15 now. The card says citizens can enrol from age 16, so she cannot enrol now. The intended answer, 'Enrol now, so she is ready when she turns 18', is therefore wrong as written, and no option is strictly right. Change the stem to 'turned 16 last month' or 'has just turned 16'."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says 'Citizens can enrol from age 16', which contradicts the scenario: Priya is still 15 and has not reached that age."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "In question a Priya has not yet turned 16, so the intended answer 'Enrol now' contradicts the card's rule that citizens can enrol from 16, and no option is strictly correct. Fix the stem so she has already turned 16; the rest of the point checks out."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: Priya turns 16 next month, so she is 15 now. The card says citizens can enrol from age 16, so she cannot enrol now. The intended answer, 'Enrol now, so she is ready when she turns 18', is therefore wrong as written, and no option is strictly right. Change the stem to 'turned 16 last month' or 'has just turned 16'.",
+  "Question a, other: The why says 'Citizens can enrol from age 16', which contradicts the scenario: Priya is still 15 and has not reached that age."
+ ],
+ "proposal": {
+  "title": "Enrolling and voting",
+  "card": [
+   "To vote in Australia, a person must be on the electoral roll. Putting your name on the roll is called enrolling.",
+   "Australian citizens must enrol once they turn 18. They can enrol from age 16, so they are ready when they turn 18.",
+   "Enrolled citizens aged 18 or over must vote in federal elections and in state and territory elections.",
+   "A person who moves house should update their enrolment, so that the roll shows where they now live."
+  ],
+  "remember": "Enrol at 18, or from 16 to be ready. Then vote in federal and state elections.",
+  "a": {
+   "q": "Priya is an Australian citizen who has just turned 16. What can she do about the electoral roll?",
+   "opts": [
+    "Enrol now, so she is ready when she turns 18",
+    "Wait, because she cannot enrol until she is 18",
+    "Enrol now and vote in the next federal election",
+    "Wait, because only people aged 21 can enrol"
+   ],
+   "why": "Priya has just turned 16, the youngest age at which a citizen can enrol. Enrolling now means she is ready when she turns 18. It does not let her vote yet, because the duty to vote applies from 18.",
+   "clue": "Think about the youngest age at which a citizen can enrol."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom is an Australian citizen who turned 18 last year. He moved from Bathurst to Newcastle and has not updated his enrolment. What should he do?",
+   "opts": [
+    "Update his enrolment to show his new address",
+    "Leave it, because he only has to enrol once",
+    "Wait until he turns 21 before he updates it",
+    "Update it only if he plans to vote in a state election"
+   ],
+   "why": "Tom should update his enrolment so the roll shows where he now lives. Enrolling once is not enough when his address changes, and he must vote in both federal and state elections, so the update matters for every election, not just state ones.",
+   "clue": "The roll needs to show where a person lives now."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:05Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Enrol now, so she is ready when she turns 18",
+    "also_right": []
+   },
+   "b": {
+    "best": "Update his enrolment to show his new address",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:05Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "Priya turns 16 next month, so she is 15 now. The card says citizens can enrol from age 16, so she cannot enrol now. The intended answer, 'Enrol now, so she is ready when she turns 18', is therefore wrong as written, and no option is strictly right. Change the stem to 'turned 16 last month' or 'has just turned 16'."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says 'Citizens can enrol from age 16', which contradicts the scenario: Priya is still 15 and has not reached that age."
+   }
+  ],
+  "flags": [
+   "Question a, fact: Priya turns 16 next month, so she is 15 now. The card says citizens can enrol from age 16, so she cannot enrol now. The intended answer, 'Enrol now, so she is ready when she turns 18', is therefore wrong as written, and no option is strictly right. Change the stem to 'turned 16 last month' or 'has just turned 16'.",
+   "Question a, other: The why says 'Citizens can enrol from age 16', which contradicts the scenario: Priya is still 15 and has not reached that age."
+  ]
+ },
+ "final": {
+  "title": "Enrolling and voting",
+  "card": [
+   "To vote in Australia, a person must be on the electoral roll. Putting your name on the roll is called enrolling.",
+   "Australian citizens must enrol once they turn 18. They can enrol from age 16, so they are ready when they turn 18.",
+   "Enrolled citizens aged 18 or over must vote in federal elections and in state and territory elections.",
+   "A person who moves house should update their enrolment, so that the roll shows where they now live."
+  ],
+  "remember": "Enrol at 18, or from 16 to be ready. Then vote in federal and state elections.",
+  "a": {
+   "q": "Priya is an Australian citizen who has just turned 16. What can she do about the electoral roll?",
+   "opts": [
+    "Enrol now, so she is ready when she turns 18",
+    "Wait, because she cannot enrol until she is 18",
+    "Enrol now and vote in the next federal election",
+    "Wait, because only people aged 21 can enrol"
+   ],
+   "why": "Priya has just turned 16, the youngest age at which a citizen can enrol. Enrolling now means she is ready when she turns 18. It does not let her vote yet, because the duty to vote applies from 18.",
+   "clue": "Think about the youngest age at which a citizen can enrol."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom is an Australian citizen who turned 18 last year. He moved from Bathurst to Newcastle and has not updated his enrolment. What should he do?",
+   "opts": [
+    "Update his enrolment to show his new address",
+    "Leave it, because he only has to enrol once",
+    "Wait until he turns 21 before he updates it",
+    "Update it only if he plans to vote in a state election"
+   ],
+   "why": "Tom should update his enrolment so the roll shows where he now lives. Enrolling once is not enough when his address changes, and he must vote in both federal and state elections, so the update matters for every election, not just state ones.",
+   "clue": "The roll needs to show where a person lives now."
+  }
+ },
+ "cleared_by": "recheck"
 }

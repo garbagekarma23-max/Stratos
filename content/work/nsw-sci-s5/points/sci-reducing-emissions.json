@@ -20,8 +20,206 @@
    0.226
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:58Z write: done",
+  "2026-11-20T12:45:00Z check: flagged",
+  "2026-11-20T12:53:29Z fix: suggested",
+  "2026-11-20T13:23:46Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00686,
+  "check": 0.01265,
+  "fix": 0.01604
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches the new point's idea of comparing renewable energy, using less energy and carbon capture as ways to cut emissions, each with advantages and limits: the closest, Capturing carbon, covers only carbon capture by nature and machines, and the mitigation/adaptation point is a broader distinction.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Reducing emissions",
+  "card": [
+   "Emissions are greenhouse gases released into the air, mostly from burning fossil fuels. There are three main ways to cut them. Each has advantages and limits.",
+   [
+    "Renewable energy",
+    "Solar, wind and hydro power make electricity without burning fossil fuels, so they release very little carbon dioxide while running. Limits: solar and wind output changes with the weather and time of day, so storage or backup power is needed."
+   ],
+   [
+    "Using less energy",
+    "Better insulation, efficient appliances and less travel by car mean less fuel is burned. It can save money and can be done now. Limit: it only cuts emissions where people change habits or buy new equipment."
+   ],
+   [
+    "Carbon capture",
+    "Carbon dioxide is caught from a power station or factory and stored, often deep underground, so it does not enter the air. It lets existing plants keep running. Limits: it is costly, it uses extra energy, and the stored gas must be kept from leaking."
+   ]
+  ],
+  "remember": "Renewables, using less energy and carbon capture can all cut emissions, and each has limits.",
+  "a": {
+   "q": "Which action cuts emissions by using less energy?",
+   "opts": [
+    "Fitting insulation so a home needs less heating",
+    "Building a wind farm to supply a town",
+    "Storing a factory's carbon dioxide underground",
+    "Replacing a coal station with a hydro station"
+   ],
+   "why": "Insulation means less fuel is burned for heating, so it reduces the amount of energy used. A wind farm is renewable energy, not a cut in energy use. Storing carbon dioxide underground is carbon capture.",
+   "clue": "Which one lowers how much energy is needed?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A town in Queensland gets most of its power from a large solar farm. On some cloudy evenings the town still needs power from a gas station. Which limit of renewable energy does this show?",
+   "opts": [
+    "Solar output changes with weather and time of day",
+    "Solar farms release carbon dioxide while running",
+    "Solar power cannot be stored by any method",
+    "Solar farms need carbon dioxide to be captured"
+   ],
+   "why": "The town needs gas on cloudy evenings because solar output changes with the weather and time of day, so backup or storage is needed. Solar farms release very little carbon dioxide while running, so that option is wrong.",
+   "clue": "Think about what happens to sunlight on a cloudy evening."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Fitting insulation so a home needs less heating",
+   "also_right": []
+  },
+  "b": {
+   "best": "Solar output changes with weather and time of day",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "\"a gas station\" can be read as a petrol station (US usage); \"a gas-fired power station\" would be clearer for students."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Card, questions and explanations are accurate and match the chapter. One minor wording issue: question b says \"gas station\", which could be misread as a petrol station; \"gas-fired power station\" is clearer."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: \"a gas station\" can be read as a petrol station (US usage); \"a gas-fired power station\" would be clearer for students."
+ ],
+ "proposal": {
+  "title": "Reducing emissions",
+  "card": [
+   "Emissions are greenhouse gases released into the air, mostly from burning fossil fuels. There are three main ways to cut them. Each has advantages and limits.",
+   [
+    "Renewable energy",
+    "Solar, wind and hydro power make electricity without burning fossil fuels, so they release very little carbon dioxide while running. Limit: solar and wind output changes with the weather and time of day, so storage or backup power is needed."
+   ],
+   [
+    "Using less energy",
+    "Better insulation, efficient appliances and less travel by car mean less fuel is burned. It can save money and can be done now. Limit: it only cuts emissions where people change habits or buy new equipment."
+   ],
+   [
+    "Carbon capture",
+    "Carbon dioxide is caught from a power station or factory and stored, often deep underground, so it does not enter the air. It lets existing plants keep running. Limits: it is costly, it uses extra energy, and the stored gas must be kept from leaking."
+   ]
+  ],
+  "remember": "Renewables, using less energy and carbon capture can all cut emissions, and each has limits.",
+  "a": {
+   "q": "Which action cuts emissions by using less energy?",
+   "opts": [
+    "Fitting insulation so a home needs less heating",
+    "Building a wind farm to supply a town",
+    "Storing a factory's carbon dioxide underground",
+    "Replacing a coal station with a hydro station"
+   ],
+   "why": "Insulation means less fuel is burned for heating, so it reduces the amount of energy used. A wind farm is renewable energy, not a cut in energy use. Storing carbon dioxide underground is carbon capture.",
+   "clue": "Which one lowers how much energy is needed?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A town in Queensland gets most of its power from a large solar farm. On some cloudy evenings the town still needs power from a gas-fired power station. Which limit of renewable energy does this show?",
+   "opts": [
+    "Solar output changes with weather and time of day",
+    "Solar farms release carbon dioxide while running",
+    "Solar power cannot be stored by any method",
+    "Solar farms need carbon dioxide to be captured"
+   ],
+   "why": "The town needs gas on cloudy evenings because solar output changes with the weather and time of day, so backup or storage is needed. Solar farms release very little carbon dioxide while running, so that option is wrong.",
+   "clue": "Think about what happens to sunlight on a cloudy evening."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:46Z",
+  "rules": 1,
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "\"a gas station\" can be read as a petrol station (US usage); \"a gas-fired power station\" would be clearer for students."
+   }
+  ],
+  "flags": [
+   "Question b, wording: \"a gas station\" can be read as a petrol station (US usage); \"a gas-fired power station\" would be clearer for students."
+  ]
+ },
+ "final": {
+  "title": "Reducing emissions",
+  "card": [
+   "Emissions are greenhouse gases released into the air, mostly from burning fossil fuels. There are three main ways to cut them. Each has advantages and limits.",
+   [
+    "Renewable energy",
+    "Solar, wind and hydro power make electricity without burning fossil fuels, so they release very little carbon dioxide while running. Limit: solar and wind output changes with the weather and time of day, so storage or backup power is needed."
+   ],
+   [
+    "Using less energy",
+    "Better insulation, efficient appliances and less travel by car mean less fuel is burned. It can save money and can be done now. Limit: it only cuts emissions where people change habits or buy new equipment."
+   ],
+   [
+    "Carbon capture",
+    "Carbon dioxide is caught from a power station or factory and stored, often deep underground, so it does not enter the air. It lets existing plants keep running. Limits: it is costly, it uses extra energy, and the stored gas must be kept from leaking."
+   ]
+  ],
+  "remember": "Renewables, using less energy and carbon capture can all cut emissions, and each has limits.",
+  "a": {
+   "q": "Which action cuts emissions by using less energy?",
+   "opts": [
+    "Fitting insulation so a home needs less heating",
+    "Building a wind farm to supply a town",
+    "Storing a factory's carbon dioxide underground",
+    "Replacing a coal station with a hydro station"
+   ],
+   "why": "Insulation means less fuel is burned for heating, so it reduces the amount of energy used. A wind farm is renewable energy, not a cut in energy use. Storing carbon dioxide underground is carbon capture.",
+   "clue": "Which one lowers how much energy is needed?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A town in Queensland gets most of its power from a large solar farm. On some cloudy evenings the town still needs power from a gas-fired power station. Which limit of renewable energy does this show?",
+   "opts": [
+    "Solar output changes with weather and time of day",
+    "Solar farms release carbon dioxide while running",
+    "Solar power cannot be stored by any method",
+    "Solar farms need carbon dioxide to be captured"
+   ],
+   "why": "The town needs gas on cloudy evenings because solar output changes with the weather and time of day, so backup or storage is needed. Solar farms release very little carbon dioxide while running, so that option is wrong.",
+   "clue": "Think about what happens to sunlight on a cloudy evening."
+  }
+ },
+ "cleared_by": "auto"
 }

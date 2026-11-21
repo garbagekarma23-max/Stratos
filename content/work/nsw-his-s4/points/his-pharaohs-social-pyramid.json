@@ -8,8 +8,241 @@
    0.611
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 may adapt his-egypt-s-social-pyramid, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:49Z confirm: Claude Opus 5.5 may adapt his-egypt-s-social-pyramid, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt his-egypt-s-social-pyramid (2 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting his-egypt-s-social-pyramid on the next run",
+  "2026-11-20T14:12:38Z adapt: done",
+  "2026-11-20T14:20:02Z check: flagged",
+  "2026-11-20T14:26:14Z fix: suggested",
+  "2026-11-20T14:40:13Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "confirm": 0.00656,
+  "adapt": 0.00342,
+  "check": 0.00844,
+  "fix": 0.01646
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "his-egypt-s-social-pyramid",
+  "changes": [
+   "Add that the pharaoh was seen as a god-king, since the new point's brief names this and the bank card does not mention it."
+  ],
+  "sure": "medium",
+  "reason": "The bank card already teaches the same social pyramid in the same depth, but it leaves out the pharaoh's god-king status that the NSW brief requires, so one added sentence is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "his-egypt-s-social-pyramid",
+  "changes": [
+   "In the line about the pharaoh, say that Egyptians saw the pharaoh as a god-king, a living god as well as a ruler, since the NSW brief stresses this."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same Egyptian social pyramid at a suitable Years 7–8 depth, but it never says the pharaoh was seen as a god-king, which the brief stresses, so that line needs a small addition.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "his-egypt-s-social-pyramid",
+  "changes": [
+   "In the line about the pharaoh, say that Egyptians saw the pharaoh as a god-king, a living god as well as a ruler.",
+   "Take out the card line on women owning property, since the chapter's Daily life in ancient Egypt point teaches it."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card2",
+   "card4",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "owner",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same social pyramid in the brief's order at the right depth. It needs the pharaoh as a god-king, and its line on women owning property belongs to this chapter's daily life point.",
+   "item": "080e7b6397d26b2a",
+   "result": "decided",
+   "saved": {
+    "id": "his-pharaohs-social-pyramid",
+    "title": "Pharaohs and the social pyramid",
+    "brief": "ffad1b3dad8f",
+    "shortlist": [
+     [
+      "his-egypt-s-social-pyramid",
+      0.611
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00027,
+     "confirm": 0.00656
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "his-egypt-s-social-pyramid",
+     "changes": [
+      "Add that the pharaoh was seen as a god-king, since the new point's brief names this and the bank card does not mention it."
+     ],
+     "sure": "medium",
+     "reason": "The bank card already teaches the same social pyramid in the same depth, but it leaves out the pharaoh's god-king status that the NSW brief requires, so one added sentence is needed.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "his-egypt-s-social-pyramid",
+     "changes": [
+      "In the line about the pharaoh, say that Egyptians saw the pharaoh as a god-king, a living god as well as a ruler, since the NSW brief stresses this."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same Egyptian social pyramid at a suitable Years 7–8 depth, but it never says the pharaoh was seen as a god-king, which the brief stresses, so that line needs a small addition.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "154930906759c26a"
+  }
+ ],
+ "draft": {
+  "title": "Egypt's social pyramid",
+  "card": [
+   "Ancient Egyptian society was layered like a pyramid. Few people were at the top and most were at the bottom.",
+   "Egyptians saw the pharaoh as a god-king, a living god as well as a ruler. Below came viziers (the pharaoh's chief officials), priests and nobles.",
+   "Next came scribes, who could read and write, and craftworkers. Farmers and slaves were at the bottom, and farmers were the largest group.",
+   ""
+  ],
+  "remember": "Few held power at the top. Most people farmed or served at the bottom.",
+  "a": {
+   "q": "Who stood at the top of the social pyramid in ancient Egypt?",
+   "opts": [
+    "The pharaoh",
+    "The viziers",
+    "The priests",
+    "The nobles"
+   ],
+   "why": "The pharaoh ruled over everyone else. Viziers were powerful officials, but they served the pharaoh and ranked below the pharaoh.",
+   "clue": "Who ruled the whole land?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Ahmose lives in Egypt. He reads and writes records for a noble. Which group is he part of?",
+   "opts": [
+    "In the middle, among the scribes",
+    "Near the top, among the viziers",
+    "At the bottom, among the farmers",
+    "At the top, beside the pharaoh"
+   ],
+   "why": "Scribes could read and write, and they sat below the nobles and above farmers. Viziers were the pharaoh's chief officials, so a man keeping records for a noble is not one of them.",
+   "clue": "Which group was known for reading and writing?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The pharaoh",
+   "also_right": []
+  },
+  "b": {
+   "best": "In the middle, among the scribes",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card has an empty fourth bullet ('- ') with no text. It shows as a blank line and should be removed."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The content is accurate and both questions have one clear right answer. The only issue is an empty bullet line at the end of the card, which should be removed."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The card has an empty fourth bullet ('- ') with no text. It shows as a blank line and should be removed."
+ ],
+ "proposal": {
+  "title": "Egypt's social pyramid",
+  "card": [
+   "Ancient Egyptian society was layered like a pyramid. Few people were at the top and most were at the bottom.",
+   "Egyptians saw the pharaoh as a god-king, a living god as well as a ruler. Below came viziers (the pharaoh's chief officials), priests and nobles.",
+   "Next came scribes, who could read and write, and craftworkers. Farmers and slaves were at the bottom, and farmers were the largest group."
+  ],
+  "remember": "Pharaoh first, then viziers, priests and nobles, then scribes and craftworkers, then farmers and slaves.",
+  "a": {
+   "q": "Who stood at the top of the social pyramid in ancient Egypt?",
+   "opts": [
+    "The pharaoh",
+    "The viziers",
+    "The priests",
+    "The nobles"
+   ],
+   "why": "The pharaoh ruled over everyone else. Viziers were powerful officials, but they served the pharaoh and ranked below the pharaoh.",
+   "clue": "Who ruled the whole land?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Ahmose lives in Egypt. He reads and writes records for a noble. Which group is he part of?",
+   "opts": [
+    "In the middle, among the scribes",
+    "Near the top, among the viziers",
+    "At the bottom, among the farmers",
+    "At the top, beside the pharaoh"
+   ],
+   "why": "Scribes could read and write, and they sat below the nobles and above farmers. Viziers were the pharaoh's chief officials, so a man keeping records for a noble is not one of them.",
+   "clue": "Which group was known for reading and writing?"
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Egypt's social pyramid",
+  "card": [
+   "Ancient Egyptian society was layered like a pyramid. Few people were at the top and most were at the bottom.",
+   "Egyptians saw the pharaoh as a god-king, a living god as well as a ruler. Below came viziers (the pharaoh's chief officials), priests and nobles.",
+   "Next came scribes, who could read and write, and craftworkers. Farmers and slaves were at the bottom, and farmers were the largest group."
+  ],
+  "remember": "Pharaoh first, then viziers, priests and nobles, then scribes and craftworkers, then farmers and slaves.",
+  "a": {
+   "q": "Who stood at the top of the social pyramid in ancient Egypt?",
+   "opts": [
+    "The pharaoh",
+    "The viziers",
+    "The priests",
+    "The nobles"
+   ],
+   "why": "The pharaoh ruled over everyone else. Viziers were powerful officials, but they served the pharaoh and ranked below the pharaoh.",
+   "clue": "Who ruled the whole land?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Ahmose lives in Egypt. He reads and writes records for a noble. Which group is he part of?",
+   "opts": [
+    "In the middle, among the scribes",
+    "Near the top, among the viziers",
+    "At the bottom, among the farmers",
+    "At the top, beside the pharaoh"
+   ],
+   "why": "Scribes could read and write, and they sat below the nobles and above farmers. Viziers were the pharaoh's chief officials, so a man keeping records for a noble is not one of them.",
+   "clue": "Which group was known for reading and writing?"
+  }
+ }
 }

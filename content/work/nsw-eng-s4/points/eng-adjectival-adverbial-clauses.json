@@ -16,8 +16,225 @@
    0.31
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:41Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: kept for you (the fresh check was not highly sure; the fresh check found a problem)",
+  "2026-11-20T14:32:39Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00654,
+  "check": 0.01176,
+  "fix": 0.01833,
+  "recheck": 0.01383
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, Embedded clauses, covers only adjectival clauses that add detail to a noun, while the new point also teaches adverbial clauses (when, where, why, how) and how fronting them changes emphasis, so it is broader and no bank point fits.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Adjectival and adverbial clauses",
+  "card": [
+   [
+    "Adjectival clause",
+    "a subordinate clause that adds detail to a noun. It often starts with who, which or that. In \"The dog that barked all night is ours\", the clause describes the dog."
+   ],
+   [
+    "Adverbial clause",
+    "a subordinate clause that tells when, where, why or how something happens. In \"We ran inside because the rain began\", the clause tells why we ran."
+   ],
+   "An adjectival clause sits right after the noun it describes. An adverbial clause adds detail to the action, and it often starts with a word such as when, because, after or where.",
+   "An adverbial clause can move to the front of a sentence. \"When the bell rang, we left\" puts the time first, so it is stressed more than in \"We left when the bell rang\". A comma follows the clause at the front."
+  ],
+  "remember": "Adjectival clauses describe a noun. Adverbial clauses tell when, where, why or how, and can move to the front for emphasis.",
+  "a": {
+   "q": "In \"Mia met the girl who won the race\", what does the clause \"who won the race\" do?",
+   "opts": [
+    "It adds detail to the noun girl",
+    "It tells when Mia met the girl",
+    "It tells why Mia met the girl",
+    "It adds detail to the verb met"
+   ],
+   "why": "The clause starts with who and describes the girl, so it is adjectival. It does not tell when, why or how Mia met her, which is what an adverbial clause would do.",
+   "clue": "Ask which noun the clause tells you more about."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which sentence has an adverbial clause at the front, so the reason is stressed?",
+   "opts": [
+    "Because the creek flooded, we stayed home",
+    "We stayed home because the creek flooded",
+    "The creek that flooded was behind our house",
+    "We stayed in the house that Dad built"
+   ],
+   "why": "\"Because the creek flooded\" is an adverbial clause of reason, placed first. The second option has the same clause at the end, so it is not at the front. The last two options have clauses starting with that, which are adjectival.",
+   "clue": "Look for a reason clause that comes before the main part."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It adds detail to the noun girl",
+   "also_right": []
+  },
+  "b": {
+   "best": "Because the creek flooded, we stayed home",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Ask which noun the clause tells you more about' gives the answer away, because only one option mentions a noun."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) refers to 'the second option' and 'the last two options', but options are shown in random order. In the order shown here, the clause at the end is in the first option, so the explanation points to the wrong option. Name the sentences instead of their positions."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and answers are correct. The clue for question a gives the answer away, and why (b) refers to options by position, which breaks when the options are shuffled."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'Ask which noun the clause tells you more about' gives the answer away, because only one option mentions a noun.",
+  "Question b, other: Why (b) refers to 'the second option' and 'the last two options', but options are shown in random order. In the order shown here, the clause at the end is in the first option, so the explanation points to the wrong option. Name the sentences instead of their positions."
+ ],
+ "proposal": {
+  "title": "Adjectival and adverbial clauses",
+  "card": [
+   [
+    "Adjectival clause",
+    "a subordinate clause that adds detail to a noun. It often starts with who, which or that. In \"The dog that barked all night is ours\", the clause describes the dog."
+   ],
+   [
+    "Adverbial clause",
+    "a subordinate clause that tells when, where, why or how something happens. In \"We ran inside because the rain began\", the clause tells why we ran."
+   ],
+   "An adjectival clause sits right after the noun it describes. An adverbial clause adds detail to the action, and it often starts with a word such as when, because, after or where.",
+   "An adverbial clause can move to the front of a sentence. \"When the bell rang, we left\" puts the time first, so it is stressed more than in \"We left when the bell rang\". A comma follows the clause at the front."
+  ],
+  "remember": "Adjectival clauses describe a noun. Adverbial clauses tell when, where, why or how, and can move to the front for emphasis.",
+  "a": {
+   "q": "In \"Mia met the girl who won the race\", what does the clause \"who won the race\" do?",
+   "opts": [
+    "It adds detail about the girl",
+    "It tells when Mia met the girl",
+    "It tells why Mia met the girl",
+    "It tells how Mia met the girl"
+   ],
+   "why": "The clause starts with who and sits right after girl, so it is an adjectival clause that describes her. It does not tell when, why or how Mia met her, which is what an adverbial clause would do.",
+   "clue": "Look at the word the clause begins with."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which sentence has an adverbial clause at the front, so the reason is stressed?",
+   "opts": [
+    "Because the creek flooded, we stayed home",
+    "We stayed home because the creek flooded",
+    "The creek that flooded was behind our house",
+    "We stayed in the house that Dad built"
+   ],
+   "why": "In \"Because the creek flooded, we stayed home\", the adverbial clause of reason comes first, followed by a comma. In \"We stayed home because the creek flooded\", the same clause comes at the end, so the reason is not stressed. The sentences about the creek behind our house and the house Dad built use clauses starting with that, which are adjectival.",
+   "clue": "Look for a reason clause that comes before the main part."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "kept",
+  "why": [
+   "the fresh check was not highly sure",
+   "the fresh check found a problem"
+  ],
+  "check": {
+   "a": {
+    "best": "It adds detail about the girl",
+    "also_right": []
+   },
+   "b": {
+    "best": "Because the creek flooded, we stayed home",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "b",
+     "kind": "wording",
+     "detail": "The why says the reason is 'not stressed' when the clause comes at the end, but the card only says fronting stresses it 'more'. End position also carries emphasis (end focus), so the why should say the reason is stressed less, not that it is not stressed."
+    },
+    {
+     "part": "a",
+     "kind": "wording",
+     "detail": "The right option is the only one not built as 'It tells ...'. The three distractors match each other and echo the adverbial definition, so a student could pick the odd one out without knowing the idea."
+    }
+   ],
+   "sure": "medium",
+   "sensitive": "none",
+   "summary": "Both answers are correct and the card is accurate. Why (b) overstates by saying an end-placed reason is 'not stressed' rather than stressed less, and in question a the right option stands out as the only one not phrased 'It tells ...'."
+  },
+  "flags": [
+   "Question b, wording: The why says the reason is 'not stressed' when the clause comes at the end, but the card only says fronting stresses it 'more'. End position also carries emphasis (end focus), so the why should say the reason is stressed less, not that it is not stressed.",
+   "Question a, wording: The right option is the only one not built as 'It tells ...'. The three distractors match each other and echo the adverbial definition, so a student could pick the odd one out without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "Adjectival and adverbial clauses",
+  "card": [
+   [
+    "Adjectival clause",
+    "a subordinate clause that adds detail to a noun. It often starts with who, which or that. In \"The dog that barked all night is ours\", the clause describes the dog."
+   ],
+   [
+    "Adverbial clause",
+    "a subordinate clause that tells when, where, why or how something happens. In \"We ran inside because the rain began\", the clause tells why we ran."
+   ],
+   "An adjectival clause sits right after the noun it describes. An adverbial clause adds detail to the action, and it often starts with a word such as when, because, after or where.",
+   "An adverbial clause can move to the front of a sentence. \"When the bell rang, we left\" puts the time first, so it is stressed more than in \"We left when the bell rang\". A comma follows the clause at the front."
+  ],
+  "remember": "Adjectival clauses describe a noun. Adverbial clauses tell when, where, why or how, and can move to the front for emphasis.",
+  "a": {
+   "q": "In \"Mia met the girl who won the race\", what does the clause \"who won the race\" do?",
+   "opts": [
+    "It adds detail about the girl",
+    "It tells when Mia met the girl",
+    "It tells why Mia met the girl",
+    "It tells how Mia met the girl"
+   ],
+   "why": "The clause starts with who and sits right after girl, so it is an adjectival clause that describes her. It does not tell when, why or how Mia met her, which is what an adverbial clause would do.",
+   "clue": "Look at the word the clause begins with."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which sentence has an adverbial clause at the front, so the reason is stressed?",
+   "opts": [
+    "Because the creek flooded, we stayed home",
+    "We stayed home because the creek flooded",
+    "The creek that flooded was behind our house",
+    "We stayed in the house that Dad built"
+   ],
+   "why": "In \"Because the creek flooded, we stayed home\", the adverbial clause of reason comes first, followed by a comma. In \"We stayed home because the creek flooded\", the same clause comes at the end, so the reason is not stressed. The sentences about the creek behind our house and the house Dad built use clauses starting with that, which are adjectival.",
+   "clue": "Look for a reason clause that comes before the main part."
+  }
+ },
+ "cleared_by": "owner"
 }

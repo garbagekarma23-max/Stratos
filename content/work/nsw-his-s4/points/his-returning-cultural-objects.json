@@ -8,8 +8,163 @@
    0.415
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: failed the content check, writing again",
+  "2026-11-20T12:44:56Z write: done",
+  "2026-11-20T12:53:26Z check: flagged",
+  "2026-11-20T13:11:48Z fix: suggested",
+  "2026-11-20T14:40:10Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.01333,
+  "check": 0.0113,
+  "fix": 0.01483
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point is about getting community consent before researchers study remains, with return only as an example, whereas the new point is about the taking and return of cultural objects and remains, so it teaches a related but different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Returning cultural objects",
+  "card": [
+   "Cultural objects are things made or used by a people, such as carvings, tools, statues and sacred items. Ancestral remains are the bodies of people who lived long ago.",
+   "Many objects and ancestral remains were taken from the places and communities they came from. This often happened in colonial times, when one country ruled another.",
+   "Many were taken to museums and private collections far away, often in other countries. The communities they came from had little say in this.",
+   "Today some of these objects and remains are being returned to their communities. This is called repatriation. It can help a community look after its own heritage and honour its ancestors."
+  ],
+  "remember": "Many objects and remains were taken during colonial times. Some are now returned to their communities.",
+  "a": {
+   "q": "What is repatriation of cultural objects?",
+   "opts": [
+    "Returning objects or remains to the community they came from",
+    "Moving objects between museums so more people see them",
+    "Buying objects from a community so they can be displayed",
+    "Making copies of objects so the originals can be kept safe"
+   ],
+   "why": "Repatriation means sending objects or ancestral remains back to the communities they were taken from. Moving them between museums is different, because they stay away from their home communities.",
+   "clue": "Think about where the objects end up."
+  },
+  "b": {
+   "d": 2,
+   "q": "A carved wooden shield was taken from a village by a colonial officer in the 1880s. It has been in a museum overseas ever since. Why might the village ask for it back?",
+   "opts": [
+    "It was taken from their community and is part of their past",
+    "The museum has not looked after it and cannot display it",
+    "The shield is too old for anyone to be allowed to study",
+    "Colonial rule ended, so museums must now return all objects"
+   ],
+   "why": "The shield was taken from the village, and it is part of the community's heritage, so the village may want it returned. The last option is tempting, but the card says only that some objects are being returned, not that all must be.",
+   "clue": "Think about who the shield belongs to in the story."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Returning objects or remains to the community they came from",
+   "also_right": []
+  },
+  "b": {
+   "best": "It was taken from their community and is part of their past",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) calls the 'all objects must be returned' option 'the last option'. Options are shown in random order, and in this order the last option is 'The shield is too old for anyone to be allowed to study'. The why should name the option by its content, not its position."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "other-sensitive",
+  "summary": "The card and both questions are accurate, and each has one clear right answer. Why (b) refers to 'the last option', which does not match the shuffled order and points to the wrong option, so it should name the option by its content."
+ },
+ "sensitive": "other-sensitive",
+ "flags": [
+  "Question b, other: Why (b) calls the 'all objects must be returned' option 'the last option'. Options are shown in random order, and in this order the last option is 'The shield is too old for anyone to be allowed to study'. The why should name the option by its content, not its position."
+ ],
+ "proposal": {
+  "title": "Returning cultural objects",
+  "card": [
+   "Cultural objects are things made or used by a people, such as carvings, tools, statues and sacred items. Ancestral remains are the bodies of people who lived long ago.",
+   "Many objects and ancestral remains were taken from the places and communities they came from. This often happened in colonial times, when one country ruled another.",
+   "Many were taken to museums and private collections far away, often in other countries. The communities they came from had little say in this.",
+   "Today some of these objects and remains are being returned to their communities. This is called repatriation. It can help a community look after its own heritage and honour its ancestors."
+  ],
+  "remember": "Many objects and remains were taken during colonial times. Some are now returned to their communities.",
+  "a": {
+   "q": "What is repatriation of cultural objects?",
+   "opts": [
+    "Returning objects or remains to the community they came from",
+    "Moving objects between museums so more people see them",
+    "Buying objects from a community so they can be displayed",
+    "Making copies of objects so the originals can be kept safe"
+   ],
+   "why": "Repatriation means sending objects or ancestral remains back to the communities they were taken from. Moving them between museums is different, because they stay away from their home communities.",
+   "clue": "Think about where the objects end up."
+  },
+  "b": {
+   "d": 2,
+   "q": "A carved wooden shield was taken from a village by a colonial officer in the 1880s. It has been in a museum overseas ever since. Why might the village ask for it back?",
+   "opts": [
+    "It was taken from their community and is part of their past",
+    "The museum has not looked after it and cannot display it",
+    "The shield is too old for anyone to be allowed to study",
+    "Colonial rule ended, so museums must now return all objects"
+   ],
+   "why": "The shield was taken from the village, and it is part of the community's heritage, so the village may want it returned. The option saying museums must now return all objects is tempting, but the card says only that some objects are being returned, not that all must be.",
+   "clue": "Think about who the shield belongs to in the story."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Returning cultural objects",
+  "card": [
+   "Cultural objects are things made or used by a people, such as carvings, tools, statues and sacred items. Ancestral remains are the bodies of people who lived long ago.",
+   "Many objects and ancestral remains were taken from the places and communities they came from. This often happened in colonial times, when one country ruled another.",
+   "Many were taken to museums and private collections far away, often in other countries. The communities they came from had little say in this.",
+   "Today some of these objects and remains are being returned to their communities. This is called repatriation. It can help a community look after its own heritage and honour its ancestors."
+  ],
+  "remember": "Many objects and remains were taken during colonial times. Some are now returned to their communities.",
+  "a": {
+   "q": "What is repatriation of cultural objects?",
+   "opts": [
+    "Returning objects or remains to the community they came from",
+    "Moving objects between museums so more people see them",
+    "Buying objects from a community so they can be displayed",
+    "Making copies of objects so the originals can be kept safe"
+   ],
+   "why": "Repatriation means sending objects or ancestral remains back to the communities they were taken from. Moving them between museums is different, because they stay away from their home communities.",
+   "clue": "Think about where the objects end up."
+  },
+  "b": {
+   "d": 2,
+   "q": "A carved wooden shield was taken from a village by a colonial officer in the 1880s. It has been in a museum overseas ever since. Why might the village ask for it back?",
+   "opts": [
+    "It was taken from their community and is part of their past",
+    "The museum has not looked after it and cannot display it",
+    "The shield is too old for anyone to be allowed to study",
+    "Colonial rule ended, so museums must now return all objects"
+   ],
+   "why": "The shield was taken from the village, and it is part of the community's heritage, so the village may want it returned. The option saying museums must now return all objects is tempting, but the card says only that some objects are being returned, not that all must be.",
+   "clue": "Think about who the shield belongs to in the story."
+  }
+ },
+ "cleared_by": "owner"
 }

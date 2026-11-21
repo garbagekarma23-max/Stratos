@@ -24,8 +24,229 @@
    0.24
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: flagged",
+  "2026-11-20T12:53:23Z fix: suggested",
+  "2026-11-20T13:23:35Z autoreview: picked as a spot check. It would have been cleared with the fix (remember other)",
+  "2026-11-20T14:02:37Z claude-code review: left for you (it chose to leave it)",
+  "2026-11-20T14:31:16Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00036,
+  "write": 0.00619,
+  "check": 0.00982,
+  "fix": 0.01847
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank card covers influences only on major purchases and omits friends and family, social media and quality, while the ethics card covers only ethical concerns, so no existing point teaches the full set of influences at this depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "What influences consumer decisions",
+  "card": [
+   [
+    "Price and income",
+    "Price is what a good costs. Income is the money a person has to spend. A higher price or a lower income can lead a consumer to buy less, or to choose a cheaper option."
+   ],
+   [
+    "Quality",
+    "Quality is how well a product is made and how long it lasts. Some consumers pay more for a product they expect to last."
+   ],
+   [
+    "Advertising",
+    "Advertising is paid messages that try to persuade people to buy. It can make a product seem more appealing or more needed than it is."
+   ],
+   [
+    "Other influences",
+    "Friends and family, social media and ethical concerns also shape choices. Ethical concerns are beliefs about right and wrong, such as not buying from a business that treats workers badly."
+   ]
+  ],
+  "remember": "Many things can shape a purchase: money, the product, what others say and do, and personal values.",
+  "a": {
+   "q": "Zara wants new headphones. She skips a well-known brand and buys a cheaper pair because her part-time pay is low. Which influence is shaping her choice most?",
+   "opts": [
+    "Price and income",
+    "Advertising",
+    "Friends and family",
+    "Ethical concerns"
+   ],
+   "why": "Zara's choice is driven by how much money she has and how much the headphones cost. Nothing in the case says an advert, a friend or a belief about right and wrong changed her mind.",
+   "clue": "What does her low pay limit?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam sees many creators on his social media feed wearing a certain brand of trainers. He decides to buy a pair even though his old ones still fit. Which is the best description of what influenced him?",
+   "opts": [
+    "Social media, as he copied what others were wearing",
+    "Quality, as his old trainers had worn out",
+    "Ethical concerns, as he wanted to support a cause",
+    "Income, as he suddenly had more money to spend"
+   ],
+   "why": "Liam bought after seeing others wearing the brand online, so social media was the influence. His old trainers still fit, so quality is not the reason, and the case gives no sign of a cause or a change in income.",
+   "clue": "What did he see before he decided?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Price and income",
+   "also_right": []
+  },
+  "b": {
+   "best": "Social media, as he copied what others were wearing",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line sorts the influences into four neat groups (money, the product, what others say and do, personal values) that the card does not use. The card lumps friends and family, social media and ethical concerns under 'Other influences'. It is also unclear which group advertising belongs to."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and the card are accurate, and the intended answers are clearly right. The only issue is that the remember line regroups the influences in a way the card does not, leaving advertising without an obvious place."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The remember line sorts the influences into four neat groups (money, the product, what others say and do, personal values) that the card does not use. The card lumps friends and family, social media and ethical concerns under 'Other influences'. It is also unclear which group advertising belongs to."
+ ],
+ "proposal": {
+  "title": "What influences consumer decisions",
+  "card": [
+   [
+    "Price and income",
+    "Price is what a good costs. Income is the money a person has to spend. A higher price or a lower income can lead a consumer to buy less, or to choose a cheaper option."
+   ],
+   [
+    "Quality",
+    "Quality is how well a product is made and how long it lasts. Some consumers pay more for a product they expect to last."
+   ],
+   [
+    "Advertising",
+    "Advertising is paid messages that try to persuade people to buy. It can make a product seem more appealing or more needed than it is."
+   ],
+   [
+    "Other influences",
+    "Friends and family, and social media, can shape choices through what others buy, wear or recommend. Ethical concerns are beliefs about right and wrong, such as not buying from a business that treats workers badly."
+   ]
+  ],
+  "remember": "Price, income, quality, advertising, friends and family, social media and ethical concerns can all shape what a consumer buys.",
+  "a": {
+   "q": "Zara wants new headphones. She skips a well-known brand and buys a cheaper pair because her part-time pay is low. Which influence is shaping her choice most?",
+   "opts": [
+    "Price and income",
+    "Advertising",
+    "Friends and family",
+    "Ethical concerns"
+   ],
+   "why": "Zara's choice is driven by how much money she has and how much the headphones cost. Nothing in the case says an advert, a friend or a belief about right and wrong changed her mind.",
+   "clue": "What does her low pay limit?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam sees many creators on his social media feed wearing a certain brand of trainers. He decides to buy a pair even though his old ones still fit. Which is the best description of what influenced him?",
+   "opts": [
+    "Social media, as he copied what others were wearing",
+    "Quality, as his old trainers had worn out",
+    "Ethical concerns, as he wanted to support a cause",
+    "Income, as he suddenly had more money to spend"
+   ],
+   "why": "Liam bought after seeing others wearing the brand online, so social media was the influence. His old trainers still fit, so quality is not the reason, and the case gives no sign of a cause or a change in income.",
+   "clue": "What did he see before he decided?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:35Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line sorts the influences into four neat groups (money, the product, what others say and do, personal values) that the card does not use. The card lumps friends and family, social media and ethical concerns under 'Other influences'. It is also unclear which group advertising belongs to."
+   }
+  ],
+  "flags": [
+   "Remember, other: The remember line sorts the influences into four neat groups (money, the product, what others say and do, personal values) that the card does not use. The card lumps friends and family, social media and ethical concerns under 'Other influences'. It is also unclear which group advertising belongs to."
+  ],
+  "owner": "fix"
+ },
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "leave",
+   "sure": "medium",
+   "reason": "The fix answers the remember line problem and its facts are right, but in question b the right option (51 characters) is clearly the longest, over 5 characters above the wrong options' average of about 45. The owner can clear the fix and let rebalance even out the options, or ask for them to be rewritten.",
+   "item": "b865e97ab9372a70",
+   "result": "left"
+  }
+ ],
+ "final": {
+  "title": "What influences consumer decisions",
+  "card": [
+   [
+    "Price and income",
+    "Price is what a good costs. Income is the money a person has to spend. A higher price or a lower income can lead a consumer to buy less, or to choose a cheaper option."
+   ],
+   [
+    "Quality",
+    "Quality is how well a product is made and how long it lasts. Some consumers pay more for a product they expect to last."
+   ],
+   [
+    "Advertising",
+    "Advertising is paid messages that try to persuade people to buy. It can make a product seem more appealing or more needed than it is."
+   ],
+   [
+    "Other influences",
+    "Friends and family, and social media, can shape choices through what others buy, wear or recommend. Ethical concerns are beliefs about right and wrong, such as not buying from a business that treats workers badly."
+   ]
+  ],
+  "remember": "Price, income, quality, advertising, friends and family, social media and ethical concerns can all shape what a consumer buys.",
+  "a": {
+   "q": "Zara wants new headphones. She skips a well-known brand and buys a cheaper pair because her part-time pay is low. Which influence is shaping her choice most?",
+   "opts": [
+    "Price and income",
+    "Advertising",
+    "Friends and family",
+    "Ethical concerns"
+   ],
+   "why": "Zara's choice is driven by how much money she has and how much the headphones cost. Nothing in the case says an advert, a friend or a belief about right and wrong changed her mind.",
+   "clue": "What does her low pay limit?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam sees many creators on his social media feed wearing a certain brand of trainers. He decides to buy a pair even though his old ones still fit. Which is the best description of what influenced him?",
+   "opts": [
+    "Social media, as he copied what others were wearing",
+    "Quality, as his old trainers had worn out",
+    "Ethical concerns, as he wanted to support a cause",
+    "Income, as he suddenly had more money to spend"
+   ],
+   "why": "Liam bought after seeing others wearing the brand online, so social media was the influence. His old trainers still fit, so quality is not the reason, and the case gives no sign of a cause or a change in income.",
+   "clue": "What did he see before he decided?"
+  }
+ },
+ "cleared_by": "owner"
 }

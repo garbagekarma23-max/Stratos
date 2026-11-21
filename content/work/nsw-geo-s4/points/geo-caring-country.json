@@ -16,8 +16,160 @@
    0.256
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:46Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:49Z write: done",
+  "2026-11-20T12:44:54Z check: for review (first-nations)",
+  "2026-11-20T14:38:54Z review: rejected, to be written again",
+  "2026-11-20T14:58:19Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.00616,
+  "check": 0.00871
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers Traditional Owners' fire knowledge and joint management in Kakadu, but it does not teach the long history of care or protecting sacred sites, and its examples are not NSW-based, so it is narrower than the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Caring for Country",
+  "card": [
+   "Aboriginal Peoples have looked after Country for tens of thousands of years. This care is passed down through families and communities, and is part of cultural responsibility.",
+   [
+    "Cultural burning",
+    "the use of small, cool fires, lit with knowledge of the land and the season. It can clear undergrowth, help plants regrow and look after habitats."
+   ],
+   [
+    "Protecting sacred sites",
+    "places with special cultural or spiritual meaning are looked after and kept safe. Some are visited only by certain people, or only at certain times."
+   ],
+   "These practices rest on deep knowledge of plants, animals, water and seasons. Many land managers today work with Aboriginal people to use this knowledge."
+  ],
+  "remember": "Caring for Country is long-held knowledge put into action, for example through cultural burning and protecting sacred sites.",
+  "a": {
+   "q": "Which action is an example of caring for Country?",
+   "opts": [
+    "Lighting a small, cool fire to help plants regrow",
+    "Clearing land to build a large car park",
+    "Digging a mine where plants once grew",
+    "Letting visitors walk anywhere on the land"
+   ],
+   "why": "Cultural burning uses small, cool fires with knowledge of the land to help plants regrow and look after habitats. The other options change or open up the land without that care or knowledge.",
+   "clue": "Which one looks after the land using knowledge of it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A community near a river has a place with spiritual meaning for local Aboriginal people. Which action best protects this sacred site?",
+   "opts": [
+    "Keeping it safe and following the community's rules",
+    "Building a path to it so more people can visit",
+    "Moving its stones to a museum for safe keeping",
+    "Holding a public event there each year"
+   ],
+   "why": "Protecting a sacred site means looking after it and respecting who may visit and when. The other options may bring more people or change the place, which can harm its meaning.",
+   "clue": "Some sites are visited only by certain people or at certain times."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:19Z",
+   "step": "write",
+   "version": {
+    "title": "Caring for Country",
+    "card": [
+     "Aboriginal Peoples have managed and cared for Country for tens of thousands of years. Knowledge of plants, animals, water and seasons is passed down through families and communities.",
+     [
+      "Cultural burning",
+      "lighting small, cool fires at the right time of year, guided by knowledge of the land. Burning in patches clears dry fuel and helps many plants regrow."
+     ],
+     [
+      "Protecting sacred sites",
+      "keeping safe the places with special cultural or spiritual meaning. Some may be visited only by certain people, or only at certain times."
+     ],
+     "Caring for Country is a cultural responsibility. Today, many land managers work with Aboriginal communities to use this knowledge."
+    ],
+    "remember": "Caring for Country puts long-held knowledge into practice, such as cultural burning and protecting sacred sites.",
+    "a": {
+     "q": "Why are cultural burns lit as small, cool fires at chosen times of year?",
+     "opts": [
+      "To clear dry fuel in patches while plants can regrow",
+      "To clear all the bush at once for new farmland",
+      "To burn as hot as possible so nothing grows back",
+      "To make smoke that keeps visitors off the land"
+     ],
+     "why": "Small, cool fires at the right time clear dry fuel in patches and help many plants regrow. A hot fire that stops regrowth would work against the aim of caring for the land.",
+     "clue": "What does a gentle fire leave behind?"
+    },
+    "b": {
+     "d": 3,
+     "q": "A council plans a walking track through a sacred site. Local Aboriginal Elders say the site is for certain people to visit, not the public. Which plan best fits caring for Country?",
+     "opts": [
+      "Move the track away and follow the Elders' guidance",
+      "Keep the track and put up signs explaining the site",
+      "Keep the track open, but close it to walkers at night",
+      "Move the site's rocks so the track can pass through"
+     ],
+     "why": "Protecting a sacred site means keeping it safe and respecting who may visit it. Signs explain the site but still lead every walker through it, which goes against the Elders' guidance.",
+     "clue": "Who should decide who visits the site?"
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Caring for Country",
+  "card": [
+   "Aboriginal Peoples have managed and cared for Country for tens of thousands of years. Knowledge of plants, animals, water and seasons is passed down through families and communities.",
+   [
+    "Cultural burning",
+    "lighting small, cool fires at the right time of year, guided by knowledge of the land. Burning in patches clears dry fuel and helps many plants regrow."
+   ],
+   [
+    "Protecting sacred sites",
+    "keeping safe the places with special cultural or spiritual meaning. Some may be visited only by certain people, or only at certain times."
+   ],
+   "Caring for Country is a cultural responsibility. Today, many land managers work with Aboriginal communities to use this knowledge."
+  ],
+  "remember": "Caring for Country puts long-held knowledge into practice, such as cultural burning and protecting sacred sites.",
+  "a": {
+   "q": "Why are cultural burns lit as small, cool fires at chosen times of year?",
+   "opts": [
+    "To clear dry fuel in patches while plants can regrow",
+    "To clear all the bush at once for new farmland",
+    "To burn as hot as possible so nothing grows back",
+    "To make smoke that keeps visitors off the land"
+   ],
+   "why": "Small, cool fires at the right time clear dry fuel in patches and help many plants regrow. A hot fire that stops regrowth would work against the aim of caring for the land.",
+   "clue": "What does a gentle fire leave behind?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A council plans a walking track through a sacred site. Local Aboriginal Elders say the site is for certain people to visit, not the public. Which plan best fits caring for Country?",
+   "opts": [
+    "Move the track away and follow the Elders' guidance",
+    "Keep the track and put up signs explaining the site",
+    "Keep the track open, but close it to walkers at night",
+    "Move the site's rocks so the track can pass through"
+   ],
+   "why": "Protecting a sacred site means keeping it safe and respecting who may visit it. Signs explain the site but still lead every walker through it, which goes against the Elders' guidance.",
+   "clue": "Who should decide who visits the site?"
+  }
+ },
+ "local": []
 }

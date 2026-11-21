@@ -8,8 +8,200 @@
    0.233
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: done",
+  "2026-11-20T12:35:57Z check: flagged",
+  "2026-11-20T12:45:01Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 8e-05,
+  "write": 0.01107,
+  "check": 0.01103,
+  "fix": 0.02522,
+  "recheck": 0.00715
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers how Australia's trading partners and exports changed over time, not why mineral resources are finite or how mining damages land, water and habitats.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Australia's mineral resources",
+  "card": [
+   "Australia mines many minerals. Iron ore is used to make steel, bauxite is the ore of aluminium, and coal is burnt for energy or used in steelmaking.",
+   "These resources are finite. They formed over millions of years, so once a deposit is mined out, it is not replaced in any human lifetime.",
+   "Mining can damage land, water and habitats. Clearing land removes habitat, and waste rock or chemicals can pollute rivers and groundwater.",
+   "Mining companies can reduce harm by planning ahead, managing waste and rehabilitating the site, which means restoring the land after mining."
+  ],
+  "remember": "Minerals are finite, and mining can harm land, water and habitats.",
+  "a": {
+   "q": "Why are minerals such as iron ore called finite resources?",
+   "opts": [
+    "They form so slowly that mined deposits are not replaced",
+    "They can only be found in one part of Australia",
+    "They are used up faster than any other resource",
+    "They cannot be recycled once they have been mined"
+   ],
+   "why": "Minerals take millions of years to form, so a mined-out deposit is gone for human purposes. Where they are found and whether they can be recycled do not decide if a resource is finite.",
+   "clue": "Think about how long a deposit takes to form."
+  },
+  "b": {
+   "d": 3,
+   "q": "A new bauxite mine opens in a forest. Rain washes loose soil from the cleared area into a nearby creek. Which harm does this show most directly?",
+   "opts": [
+    "Damage to water, as the creek is polluted with sediment",
+    "Damage to land, as the mineral is now finite",
+    "Damage to habitat, as aluminium has been made",
+    "Damage to air, as coal has been burnt for energy"
+   ],
+   "why": "Soil washed into the creek changes the water and harms life in it, so water is damaged. The forest clearing also harms land and habitat, but the creek is what this example describes.",
+   "clue": "Where did the loose soil end up?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "They form so slowly that mined deposits are not replaced",
+   "also_right": []
+  },
+  "b": {
+   "best": "Damage to water, as the creek is polluted with sediment",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one whose reason matches the scenario and echoes the stem's 'creek'. The others give absurd reasons (coal burnt, mineral now finite, aluminium made), so a student can pick it without knowing the idea. Together with the clue, this gives the answer away."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts check out. Question b is too easy to guess, because its wrong options give reasons unrelated to the scenario and only the right option mentions the creek."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option is the only one whose reason matches the scenario and echoes the stem's 'creek'. The others give absurd reasons (coal burnt, mineral now finite, aluminium made), so a student can pick it without knowing the idea. Together with the clue, this gives the answer away."
+ ],
+ "proposal": {
+  "title": "Australia's mineral resources",
+  "card": [
+   "Australia mines many minerals. Iron ore is used to make steel, bauxite is the ore of aluminium, and coal is burnt for energy or used in steelmaking.",
+   "These resources are finite. They formed over millions of years, so once a deposit is mined out, it is not replaced in any human lifetime.",
+   "Mining can damage land, water and habitats. Clearing land removes habitat, and waste rock or chemicals can pollute rivers and groundwater.",
+   "Mining companies can reduce harm by planning ahead, managing waste and rehabilitating the site, which means restoring the land after mining."
+  ],
+  "remember": "Minerals are finite, and mining can harm land, water and habitats.",
+  "a": {
+   "q": "Why are minerals such as iron ore called finite resources?",
+   "opts": [
+    "They form so slowly that mined deposits are not replaced",
+    "They can only be found in one part of Australia",
+    "They are used up faster than any other resource",
+    "They cannot be recycled once they have been mined"
+   ],
+   "why": "Minerals take millions of years to form, so a mined-out deposit is gone for human purposes. Where they are found and whether they can be recycled do not decide if a resource is finite.",
+   "clue": "Think about how long a deposit takes to form."
+  },
+  "b": {
+   "d": 2,
+   "q": "Which of these effects of an iron ore mine is damage to water, rather than to land or habitat?",
+   "opts": [
+    "Chemicals from waste rock seep into nearby groundwater",
+    "Bushland is cleared, so birds lose their nesting habitat",
+    "The open pit leaves a deep hole in once-flat land",
+    "The ore body runs out and is not replaced in our lifetime"
+   ],
+   "why": "Chemicals seeping into groundwater pollute water under the ground, so this is damage to water. Clearing bushland harms habitat and the open pit harms land, while running out of ore shows the resource is finite, not that water is harmed.",
+   "clue": "Ask where each harm ends up."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "They form so slowly that mined deposits are not replaced",
+    "also_right": []
+   },
+   "b": {
+    "best": "Chemicals from waste rock seep into nearby groundwater",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one whose reason matches the scenario and echoes the stem's 'creek'. The others give absurd reasons (coal burnt, mineral now finite, aluminium made), so a student can pick it without knowing the idea. Together with the clue, this gives the answer away."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The right option is the only one whose reason matches the scenario and echoes the stem's 'creek'. The others give absurd reasons (coal burnt, mineral now finite, aluminium made), so a student can pick it without knowing the idea. Together with the clue, this gives the answer away."
+  ]
+ },
+ "final": {
+  "title": "Australia's mineral resources",
+  "card": [
+   "Australia mines many minerals. Iron ore is used to make steel, bauxite is the ore of aluminium, and coal is burnt for energy or used in steelmaking.",
+   "These resources are finite. They formed over millions of years, so once a deposit is mined out, it is not replaced in any human lifetime.",
+   "Mining can damage land, water and habitats. Clearing land removes habitat, and waste rock or chemicals can pollute rivers and groundwater.",
+   "Mining companies can reduce harm by planning ahead, managing waste and rehabilitating the site, which means restoring the land after mining."
+  ],
+  "remember": "Minerals are finite, and mining can harm land, water and habitats.",
+  "a": {
+   "q": "Why are minerals such as iron ore called finite resources?",
+   "opts": [
+    "They form so slowly that mined deposits are not replaced",
+    "They can only be found in one part of Australia",
+    "They are used up faster than any other resource",
+    "They cannot be recycled once they have been mined"
+   ],
+   "why": "Minerals take millions of years to form, so a mined-out deposit is gone for human purposes. Where they are found and whether they can be recycled do not decide if a resource is finite.",
+   "clue": "Think about how long a deposit takes to form."
+  },
+  "b": {
+   "d": 2,
+   "q": "Which of these effects of an iron ore mine is damage to water, rather than to land or habitat?",
+   "opts": [
+    "Chemicals from waste rock seep into nearby groundwater",
+    "Bushland is cleared, so birds lose their nesting habitat",
+    "The open pit leaves a deep hole in once-flat land",
+    "The ore body runs out and is not replaced in our lifetime"
+   ],
+   "why": "Chemicals seeping into groundwater pollute water under the ground, so this is damage to water. Clearing bushland harms habitat and the open pit harms land, while running out of ore shows the resource is finite, not that water is harmed.",
+   "clue": "Ask where each harm ends up."
+  }
+ },
+ "cleared_by": "recheck"
 }

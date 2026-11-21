@@ -24,8 +24,131 @@
    0.443
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:00Z write: failed the content check, writing again",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.01915,
+  "check": 0.00771
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point covers the whole new point: the earthquakes and volcanoes card omits mountains and the slow plate movement, and the boundary-types card omits the earthquakes and volcanoes, so each is narrower than the brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Moving plates",
+  "card": [
+   "Earth's outer layer of rock is called the crust. It is broken into large pieces called plates, which fit together like a cracked eggshell.",
+   "The plates move very slowly, only a few centimetres each year. They are carried on the hotter rock beneath them.",
+   "Plates can pull apart, which can make new crust. They can push together, which can build mountains. They can slide past each other.",
+   "The action where plates meet can cause earthquakes. Pulling apart and pushing together can also cause volcanoes."
+  ],
+  "remember": "Plates move slowly, and the action at their edges can cause earthquakes, volcanoes and mountains.",
+  "a": {
+   "q": "Which statement best describes Earth's plates?",
+   "opts": [
+    "Pieces of crust that move slowly over time",
+    "Pieces of crust that are fixed in place",
+    "Pieces of crust that move a few metres a day",
+    "Pieces of crust that float only in the oceans"
+   ],
+   "why": "The crust is broken into plates that move a few centimetres each year. They are not fixed, and they are far too slow to move metres in a day.",
+   "clue": "Think about how fast and how far plates move."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two plates near the coast of a country are pushing towards each other. Which result is most likely over millions of years?",
+   "opts": [
+    "A mountain range slowly builds up",
+    "The two plates become one fixed plate",
+    "A wide new ocean opens between them",
+    "The plates stop moving and earthquakes end"
+   ],
+   "why": "Plates that push together can build mountains. A new ocean opens where plates pull apart, which is the opposite movement. Plates keep moving, so earthquakes do not end.",
+   "clue": "Pushing together is the opposite of pulling apart."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A simple world map showing Earth's crust divided into plates, with the plate boundaries drawn as lines and arrows showing the direction each plate moves.",
+    "why": "It shows that the crust is broken into plates that move."
+   }
+  ]
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Pieces of crust that move slowly over time",
+   "also_right": []
+  },
+  "b": {
+   "best": "A mountain range slowly builds up",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Moving plates",
+  "card": [
+   "Earth's outer layer of rock is called the crust. It is broken into large pieces called plates, which fit together like a cracked eggshell.",
+   "The plates move very slowly, only a few centimetres each year. They are carried on the hotter rock beneath them.",
+   "Plates can pull apart, which can make new crust. They can push together, which can build mountains. They can slide past each other.",
+   "The action where plates meet can cause earthquakes. Pulling apart and pushing together can also cause volcanoes."
+  ],
+  "remember": "Plates move slowly, and the action at their edges can cause earthquakes, volcanoes and mountains.",
+  "a": {
+   "q": "Which statement best describes Earth's plates?",
+   "opts": [
+    "Pieces of crust that move slowly over time",
+    "Pieces of crust that are fixed in place",
+    "Pieces of crust that move a few metres a day",
+    "Pieces of crust that float only in the oceans"
+   ],
+   "why": "The crust is broken into plates that move a few centimetres each year. They are not fixed, and they are far too slow to move metres in a day.",
+   "clue": "Think about how fast and how far plates move."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two plates near the coast of a country are pushing towards each other. Which result is most likely over millions of years?",
+   "opts": [
+    "A mountain range slowly builds up",
+    "The two plates become one fixed plate",
+    "A wide new ocean opens between them",
+    "The plates stop moving and earthquakes end"
+   ],
+   "why": "Plates that push together can build mountains. A new ocean opens where plates pull apart, which is the opposite movement. Plates keep moving, so earthquakes do not end.",
+   "clue": "Pushing together is the opposite of pulling apart."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A simple world map showing Earth's crust divided into plates, with the plate boundaries drawn as lines and arrows showing the direction each plate moves.",
+    "why": "It shows that the crust is broken into plates that move."
+   }
+  ]
+ },
+ "cleared_by": "checker"
 }

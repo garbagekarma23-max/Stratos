@@ -24,8 +24,190 @@
    0.226
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:41Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: failed the content check, writing again",
+  "2026-11-20T12:44:53Z write: done",
+  "2026-11-20T12:53:24Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:23:37Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.01326,
+  "check": 0.00907,
+  "fix": 0.02121
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point covers both the types of evidence (facts, statistics, expert opinion, examples) and placing the strongest evidence to give a text authority, so the closest cards are only partial matches and the NSW point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Evidence and authority",
+  "card": [
+   [
+    "Fact",
+    "a statement that can be checked and shown to be true. Example: the school library has 12 000 books."
+   ],
+   [
+    "Statistic",
+    "a number that measures something. Example: 8 out of 10 students walk to school."
+   ],
+   [
+    "Expert opinion",
+    "a view from a person with real knowledge of the topic, such as a doctor talking about sleep. An example is a real case that shows the point in action."
+   ],
+   "Evidence gives a text authority when it comes from a reliable source, one that is accurate and in a position to know. The strongest evidence often goes where it has most impact, such as early to win attention or last to leave a strong final impression."
+  ],
+  "remember": "Good evidence from a reliable source makes a writer believable.",
+  "a": {
+   "q": "Which sentence uses a statistic to support an argument?",
+   "opts": [
+    "Nine out of ten Year 7 students sleep under eight hours",
+    "Many Year 7 students seem to be tired in class",
+    "Sleep is something that every young person needs",
+    "Our school should start later so students feel rested"
+   ],
+   "why": "A statistic is a number that measures something, and nine out of ten does that. The sentence about many students being tired is a general claim with no measurement, so it is not a statistic.",
+   "clue": "Look for the option that measures something with a number."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jaya argues that her town needs a new skate park. Which source would give her argument the most authority?",
+   "opts": [
+    "A council report counting injuries at current ramps",
+    "A post from a stranger saying skate parks are great",
+    "Her own feeling that skating is more fun than football",
+    "A rumour that another town built one last year"
+   ],
+   "why": "A council report is a reliable source in a position to know, and it gives facts and numbers that can be checked. A stranger's post is only an unsupported opinion, so it is tempting but weak.",
+   "clue": "Which source can be checked and is in a position to know?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Nine out of ten Year 7 students sleep under eight hours",
+   "also_right": []
+  },
+  "b": {
+   "best": "A council report counting injuries at current ramps",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The definition of an example ('An example is a real case that shows the point in action') sits inside the Expert opinion bullet. A student could read it as part of what expert opinion means. It should be its own bullet."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and have one clear right answer. One minor problem: the card defines 'example' inside the Expert opinion bullet instead of giving it its own line, which could confuse students."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The definition of an example ('An example is a real case that shows the point in action') sits inside the Expert opinion bullet. A student could read it as part of what expert opinion means. It should be its own bullet."
+ ],
+ "proposal": {
+  "title": "Evidence and authority",
+  "card": [
+   "Evidence is what backs up an argument. A fact is a statement that can be checked and shown to be true, such as Canberra being the capital of Australia.",
+   "A statistic is a number that measures something, such as 8 out of 10 students walking to school. Expert opinion is a view from someone with real knowledge of the topic, such as a doctor talking about sleep.",
+   "An example is a real case that shows the point in action, such as one student whose marks rose after more sleep.",
+   "Evidence gives a text authority when it comes from a reliable source, one that is accurate and in a position to know. The strongest evidence often goes early to win attention or last to leave a strong final impression."
+  ],
+  "remember": "Good evidence from a reliable source makes a writer believable.",
+  "a": {
+   "q": "Which sentence uses a statistic to support an argument?",
+   "opts": [
+    "Nine out of ten Year 7 students sleep under eight hours",
+    "Many Year 7 students seem to be tired in class",
+    "Sleep is something that every young person needs",
+    "Our school should start later so students feel rested"
+   ],
+   "why": "A statistic is a number that measures something, and nine out of ten does that. The sentence about many students being tired is a general claim with no measurement, so it is not a statistic.",
+   "clue": "Look for the option that measures something with a number."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jaya argues that her town needs a new skate park. Which source would give her argument the most authority?",
+   "opts": [
+    "A council report counting injuries at current ramps",
+    "A post from a stranger saying skate parks are great",
+    "Her own feeling that skating is more fun than football",
+    "A rumour that another town built one last year"
+   ],
+   "why": "A council report is a reliable source in a position to know, and it gives facts and numbers that can be checked. A stranger's post is only an unsupported opinion, so it is tempting but weak.",
+   "clue": "Which source can be checked and is in a position to know?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:37Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The definition of an example ('An example is a real case that shows the point in action') sits inside the Expert opinion bullet. A student could read it as part of what expert opinion means. It should be its own bullet."
+   }
+  ],
+  "flags": [
+   "Card, wording: The definition of an example ('An example is a real case that shows the point in action') sits inside the Expert opinion bullet. A student could read it as part of what expert opinion means. It should be its own bullet."
+  ]
+ },
+ "final": {
+  "title": "Evidence and authority",
+  "card": [
+   "Evidence is what backs up an argument. A fact is a statement that can be checked and shown to be true, such as Canberra being the capital of Australia.",
+   "A statistic is a number that measures something, such as 8 out of 10 students walking to school. Expert opinion is a view from someone with real knowledge of the topic, such as a doctor talking about sleep.",
+   "An example is a real case that shows the point in action, such as one student whose marks rose after more sleep.",
+   "Evidence gives a text authority when it comes from a reliable source, one that is accurate and in a position to know. The strongest evidence often goes early to win attention or last to leave a strong final impression."
+  ],
+  "remember": "Good evidence from a reliable source makes a writer believable.",
+  "a": {
+   "q": "Which sentence uses a statistic to support an argument?",
+   "opts": [
+    "Nine out of ten Year 7 students sleep under eight hours",
+    "Many Year 7 students seem to be tired in class",
+    "Sleep is something that every young person needs",
+    "Our school should start later so students feel rested"
+   ],
+   "why": "A statistic is a number that measures something, and nine out of ten does that. The sentence about many students being tired is a general claim with no measurement, so it is not a statistic.",
+   "clue": "Look for the option that measures something with a number."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jaya argues that her town needs a new skate park. Which source would give her argument the most authority?",
+   "opts": [
+    "A council report counting injuries at current ramps",
+    "A post from a stranger saying skate parks are great",
+    "Her own feeling that skating is more fun than football",
+    "A rumour that another town built one last year"
+   ],
+   "why": "A council report is a reliable source in a position to know, and it gives facts and numbers that can be checked. A stranger's post is only an unsupported opinion, so it is tempting but weak.",
+   "clue": "Which source can be checked and is in a position to know?"
+  }
+ },
+ "cleared_by": "auto"
 }

@@ -24,8 +24,409 @@
    0.267
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 says adapt mat-multiplying-dividing-integers (1 change)",
+  "2026-11-20T12:25:54Z adapt: failed the content check, writing again",
+  "2026-11-20T12:35:53Z adapt: done",
+  "2026-11-20T12:44:58Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:23:42Z autoreview: picked as a spot check. It would have been cleared with the fix (card other)",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "adapt": 0.01661,
+  "check": 0.01236,
+  "fix": 0.01837
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-multiplying-dividing-integers",
+  "changes": [
+   "Replace the Hobart diver example in question b with an example set in New South Wales, such as a place or context local to NSW students."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same sign rules for multiplying and dividing integers at the right depth, and only its Tasmanian Hobart example needs to be made local to NSW.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "mat-multiplying-dividing-integers",
+  "changes": [
+   "Replace the Hobart diver example in question b with an example set in New South Wales, such as a place or context local to NSW students."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "a.q",
+   "b.q"
+  ]
+ },
+ "draft": {
+  "title": "Multiplying and dividing integers",
+  "card": [
+   "Integers are whole numbers, positive, negative or zero. To multiply or divide, first look at the signs of the two numbers.",
+   [
+    "Same signs",
+    "the answer is positive. For example, \\(-6 \\times (-3) = 18\\) and \\(-20 \\div (-4) = 5\\)."
+   ],
+   [
+    "Different signs",
+    "the answer is negative. For example, \\(7 \\times (-2) = -14\\) and \\(20 \\div (-4) = -5\\)."
+   ],
+   "Work out the sign first, then multiply or divide the numbers as if they had no signs. Division uses the same sign rules as multiplication."
+  ],
+  "remember": "Same signs give a positive answer. Different signs give a negative answer.",
+  "a": {
+   "q": "A student multiplies \\(-8\\) by \\(-5\\). What is the product?",
+   "opts": [
+    "40",
+    "\\(-40\\)",
+    "\\(-13\\)",
+    "13"
+   ],
+   "why": "Both numbers are negative, so the signs are the same and the answer is positive. \\(8 \\times 5 = 40\\). The answer \\(-40\\) comes from forgetting that two negatives make a positive.",
+   "clue": "Check whether the two signs match."
+  },
+  "b": {
+   "d": 2,
+   "q": "A snorkeller at Bondi Beach dives at a steady rate. Her height changes by \\(-4\\) m each minute. What is the total change in her height over 6 minutes?",
+   "opts": [
+    "\\(-24\\) m",
+    "24 m",
+    "\\(-10\\) m",
+    "\\(-2\\) m"
+   ],
+   "why": "Six lots of \\(-4\\) m is \\(6 \\times (-4)\\). The signs are different, so the answer is negative, and \\(6 \\times 4 = 24\\), so the change is \\(-24\\) m. The answer 24 m drops the sign, and \\(-10\\) m adds the numbers instead of multiplying.",
+   "clue": "Each minute adds another \\(-4\\) m. How many minutes are there?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "40",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(-24\\) m",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The first card line defines integers ('whole numbers, positive, negative or zero'). That definition belongs to point 1 (Comparing and ordering integers), so this card should only mention integers, not define them."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The maths, both answers and both explanations are correct. The only problem is that the card re-defines integers, which belongs to point 1 of the chapter."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The first card line defines integers ('whole numbers, positive, negative or zero'). That definition belongs to point 1 (Comparing and ordering integers), so this card should only mention integers, not define them."
+ ],
+ "proposal": {
+  "title": "Multiplying and dividing integers",
+  "card": [
+   "To multiply or divide two integers, first look at their signs. Whether the signs match decides the sign of the answer.",
+   [
+    "Same signs",
+    "the answer is positive. For example, \\(-6 \\times (-4) = 24\\) and \\(-20 \\div (-4) = 5\\)."
+   ],
+   [
+    "Different signs",
+    "the answer is negative. For example, \\(7 \\times (-2) = -14\\) and \\(18 \\div (-3) = -6\\)."
+   ],
+   "Work out the sign first, then multiply or divide the numbers as if they had no signs. Division uses the same sign rules as multiplication."
+  ],
+  "remember": "Same signs give a positive answer. Different signs give a negative answer.",
+  "a": {
+   "q": "A student multiplies \\(-8\\) by \\(-5\\). What is the product?",
+   "opts": [
+    "40",
+    "\\(-40\\)",
+    "\\(-13\\)",
+    "13"
+   ],
+   "why": "Both numbers are negative, so the signs are the same and the answer is positive. \\(8 \\times 5 = 40\\). The answer \\(-40\\) comes from forgetting that two negatives make a positive.",
+   "clue": "Check whether the two signs match."
+  },
+  "b": {
+   "d": 2,
+   "q": "A scuba diver at Bondi Beach descends at a steady rate. Her height changes by \\(-4\\) m each minute. What is the total change in her height over 6 minutes?",
+   "opts": [
+    "\\(-24\\) m",
+    "24 m",
+    "\\(-10\\) m",
+    "\\(-1.5\\) m"
+   ],
+   "why": "Six lots of \\(-4\\) m is \\(6 \\times (-4)\\). The signs are different, so the answer is negative, and \\(6 \\times 4 = 24\\), so the change is \\(-24\\) m. The answer 24 m drops the sign, and \\(-10\\) m adds the numbers instead of multiplying.",
+   "clue": "Each minute adds another \\(-4\\) m. How many minutes are there?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:42Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The first card line defines integers ('whole numbers, positive, negative or zero'). That definition belongs to point 1 (Comparing and ordering integers), so this card should only mention integers, not define them."
+   }
+  ],
+  "flags": [
+   "Card, other: The first card line defines integers ('whole numbers, positive, negative or zero'). That definition belongs to point 1 (Comparing and ordering integers), so this card should only mention integers, not define them."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Multiplying and dividing integers",
+  "card": [
+   "To multiply or divide two integers, first look at their signs. Whether the signs match decides the sign of the answer.",
+   [
+    "Same signs",
+    "the answer is positive. For example, \\(-6 \\times (-4) = 24\\) and \\(-20 \\div (-4) = 5\\)."
+   ],
+   [
+    "Different signs",
+    "the answer is negative. For example, \\(7 \\times (-2) = -14\\) and \\(18 \\div (-3) = -6\\)."
+   ],
+   "Work out the sign first, then multiply or divide the numbers as if they had no signs. Division uses the same sign rules as multiplication."
+  ],
+  "remember": "Same signs give a positive answer. Different signs give a negative answer.",
+  "a": {
+   "q": "A student multiplies \\(-8\\) by \\(-5\\). What is the product?",
+   "opts": [
+    "40",
+    "\\(-40\\)",
+    "\\(-13\\)",
+    "13"
+   ],
+   "why": "Both numbers are negative, so the signs are the same and the answer is positive. \\(8 \\times 5 = 40\\). The answer \\(-40\\) comes from forgetting that two negatives make a positive.",
+   "clue": "Check whether the two signs match."
+  },
+  "b": {
+   "d": 2,
+   "q": "A scuba diver at Bondi Beach descends at a steady rate. Her height changes by \\(-4\\) m each minute. What is the total change in her height over 6 minutes?",
+   "opts": [
+    "\\(-24\\) m",
+    "24 m",
+    "\\(-10\\) m",
+    "\\(-1.5\\) m"
+   ],
+   "why": "Six lots of \\(-4\\) m is \\(6 \\times (-4)\\). The signs are different, so the answer is negative, and \\(6 \\times 4 = 24\\), so the change is \\(-24\\) m. The answer 24 m drops the sign, and \\(-10\\) m adds the numbers instead of multiplying.",
+   "clue": "Each minute adds another \\(-4\\) m. How many minutes are there?"
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix takes out the definition of integers that belongs to the first point, and uses the brief's examples. Every calculation is right (40, and 6 times negative 4 is negative 24), each question has one right option, and nothing new is wrong.",
+   "item": "2f1f3a371b818082",
+   "result": "decided",
+   "saved": {
+    "id": "mat-multiplying-dividing-integers-nsw",
+    "title": "Multiplying and dividing integers",
+    "brief": "32b093349938",
+    "shortlist": [
+     [
+      "mat-multiplying-dividing-integers",
+      0.751
+     ],
+     [
+      "mat-ordering-integers-number-line",
+      0.49
+     ],
+     [
+      "mat-operations-with-negative-fractions",
+      0.455
+     ],
+     [
+      "mat-adding-subtracting-integers",
+      0.404
+     ],
+     [
+      "mat-properties-operations-algebra",
+      0.267
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "adapt": 2,
+     "check": 1,
+     "fix": 1
+    },
+    "usd": {
+     "match": 0.00027,
+     "adapt": 0.01661,
+     "check": 0.01236,
+     "fix": 0.01837
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-multiplying-dividing-integers",
+     "changes": [
+      "Replace the Hobart diver example in question b with an example set in New South Wales, such as a place or context local to NSW students."
+     ],
+     "sure": "high",
+     "reason": "The bank point teaches the same sign rules for multiplying and dividing integers at the right depth, and only its Tasmanian Hobart example needs to be made local to NSW.",
+     "model": "claude-haiku-5-5"
+    },
+    "adapt": {
+     "from": "mat-multiplying-dividing-integers",
+     "changes": [
+      "Replace the Hobart diver example in question b with an example set in New South Wales, such as a place or context local to NSW students."
+     ],
+     "by": "Claude Haiku 5.5",
+     "parts": [
+      "a.q",
+      "b.q"
+     ]
+    },
+    "draft": {
+     "title": "Multiplying and dividing integers",
+     "card": [
+      "Integers are whole numbers, positive, negative or zero. To multiply or divide, first look at the signs of the two numbers.",
+      [
+       "Same signs",
+       "the answer is positive. For example, \\(-6 \\times (-3) = 18\\) and \\(-20 \\div (-4) = 5\\)."
+      ],
+      [
+       "Different signs",
+       "the answer is negative. For example, \\(7 \\times (-2) = -14\\) and \\(20 \\div (-4) = -5\\)."
+      ],
+      "Work out the sign first, then multiply or divide the numbers as if they had no signs. Division uses the same sign rules as multiplication."
+     ],
+     "remember": "Same signs give a positive answer. Different signs give a negative answer.",
+     "a": {
+      "q": "A student multiplies \\(-8\\) by \\(-5\\). What is the product?",
+      "opts": [
+       "40",
+       "\\(-40\\)",
+       "\\(-13\\)",
+       "13"
+      ],
+      "why": "Both numbers are negative, so the signs are the same and the answer is positive. \\(8 \\times 5 = 40\\). The answer \\(-40\\) comes from forgetting that two negatives make a positive.",
+      "clue": "Check whether the two signs match."
+     },
+     "b": {
+      "d": 2,
+      "q": "A snorkeller at Bondi Beach dives at a steady rate. Her height changes by \\(-4\\) m each minute. What is the total change in her height over 6 minutes?",
+      "opts": [
+       "\\(-24\\) m",
+       "24 m",
+       "\\(-10\\) m",
+       "\\(-2\\) m"
+      ],
+      "why": "Six lots of \\(-4\\) m is \\(6 \\times (-4)\\). The signs are different, so the answer is negative, and \\(6 \\times 4 = 24\\), so the change is \\(-24\\) m. The answer 24 m drops the sign, and \\(-10\\) m adds the numbers instead of multiplying.",
+      "clue": "Each minute adds another \\(-4\\) m. How many minutes are there?"
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "40",
+      "also_right": []
+     },
+     "b": {
+      "best": "\\(-24\\) m",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "other",
+       "detail": "The first card line defines integers ('whole numbers, positive, negative or zero'). That definition belongs to point 1 (Comparing and ordering integers), so this card should only mention integers, not define them."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The maths, both answers and both explanations are correct. The only problem is that the card re-defines integers, which belongs to point 1 of the chapter."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Card, other: The first card line defines integers ('whole numbers, positive, negative or zero'). That definition belongs to point 1 (Comparing and ordering integers), so this card should only mention integers, not define them."
+    ],
+    "proposal": {
+     "title": "Multiplying and dividing integers",
+     "card": [
+      "To multiply or divide two integers, first look at their signs. Whether the signs match decides the sign of the answer.",
+      [
+       "Same signs",
+       "the answer is positive. For example, \\(-6 \\times (-4) = 24\\) and \\(-20 \\div (-4) = 5\\)."
+      ],
+      [
+       "Different signs",
+       "the answer is negative. For example, \\(7 \\times (-2) = -14\\) and \\(18 \\div (-3) = -6\\)."
+      ],
+      "Work out the sign first, then multiply or divide the numbers as if they had no signs. Division uses the same sign rules as multiplication."
+     ],
+     "remember": "Same signs give a positive answer. Different signs give a negative answer.",
+     "a": {
+      "q": "A student multiplies \\(-8\\) by \\(-5\\). What is the product?",
+      "opts": [
+       "40",
+       "\\(-40\\)",
+       "\\(-13\\)",
+       "13"
+      ],
+      "why": "Both numbers are negative, so the signs are the same and the answer is positive. \\(8 \\times 5 = 40\\). The answer \\(-40\\) comes from forgetting that two negatives make a positive.",
+      "clue": "Check whether the two signs match."
+     },
+     "b": {
+      "d": 2,
+      "q": "A scuba diver at Bondi Beach descends at a steady rate. Her height changes by \\(-4\\) m each minute. What is the total change in her height over 6 minutes?",
+      "opts": [
+       "\\(-24\\) m",
+       "24 m",
+       "\\(-10\\) m",
+       "\\(-1.5\\) m"
+      ],
+      "why": "Six lots of \\(-4\\) m is \\(6 \\times (-4)\\). The signs are different, so the answer is negative, and \\(6 \\times 4 = 24\\), so the change is \\(-24\\) m. The answer 24 m drops the sign, and \\(-10\\) m adds the numbers instead of multiplying.",
+      "clue": "Each minute adds another \\(-4\\) m. How many minutes are there?"
+     }
+    },
+    "proposal_problems": [],
+    "auto": {
+     "at": "2026-11-20T13:23:42Z",
+     "rules": 1,
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "card",
+       "kind": "other",
+       "detail": "The first card line defines integers ('whole numbers, positive, negative or zero'). That definition belongs to point 1 (Comparing and ordering integers), so this card should only mention integers, not define them."
+      }
+     ],
+     "flags": [
+      "Card, other: The first card line defines integers ('whole numbers, positive, negative or zero'). That definition belongs to point 1 (Comparing and ordering integers), so this card should only mention integers, not define them."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "9f812056ca76b0d8"
+  }
  ]
 }

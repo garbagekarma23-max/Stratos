@@ -24,8 +24,43 @@
    0.305
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 may adapt mat-multiplying-dividing-fractions, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:55Z match: Claude Opus 5.5 says reuse mat-multiplying-dividing-fractions, with nothing more to write, check or review"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "confirm": 0.00763
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-multiplying-dividing-fractions",
+  "changes": [
+   "Question b uses a pizza context, which is not tied to the NSW syllabus; a local or neutral context such as a recipe or fence paint could be used instead if desired."
+  ],
+  "sure": "medium",
+  "reason": "The bank point covers the same multiplying and dividing fractions idea at a suitable depth with the reciprocal method, needing only a minor change to the question context for NSW Stage 4.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "mat-multiplying-dividing-fractions",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches exactly this idea (multiply tops and bottoms, divide by multiplying by the reciprocal, simplify) at a Year 7 depth that suits NSW Stage 4, and its questions and examples need no changes.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "mat-multiplying-dividing-fractions",
+ "matched": {
+  "verdict": "reuse",
+  "from": "mat-multiplying-dividing-fractions",
+  "by": "Claude Opus 5.5",
+  "at": "2026-11-20T12:25:55Z"
+ }
 }

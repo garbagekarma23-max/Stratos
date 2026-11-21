@@ -16,8 +16,127 @@
    0.206
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 may adapt his-perspectives-past, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:49Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:51Z write: done",
+  "2026-11-20T12:44:56Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "confirm": 0.00617,
+  "write": 0.01052,
+  "check": 0.00932
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "his-perspectives-past",
+  "changes": [
+   "The card's examples (pharaoh, farmer, Roman landowner and labourer) are ancient history from Years 7 and 8 in NSW, which is a different syllabus focus from the Stage 4 Ancient Worlds content, so the examples should be checked against the NSW Stage 4 focus and replaced with NSW-appropriate examples if needed.",
+   "The Remember line and question wording should be checked to match the NSW HI4-CPP-01 outcome wording on perspectives and the sources of different points of view."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same core idea of perspectives shaped by position, belief and time at a suitable Year 7 depth, but its examples and framing are from a different state's course and would need local adjustment for NSW Stage 4.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, his-perspectives-past, explains how people's place in society shaped their views, but it does not teach that a source shows only one point of view and may leave things out, so the card would need a new step.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Perspectives",
+  "card": [
+   "A perspective is the way a person sees an event. People in the past saw the same event differently.",
+   "Who a person was can shape what they saw. Age, job, wealth, gender and where they lived can all matter.",
+   "A source, such as a letter or a diary, is made by one person or group. It shows their point of view and may leave out what others saw.",
+   "To understand an event better, historians read sources from different people and compare them."
+  ],
+  "remember": "A source shows one point of view, so compare sources from different people.",
+  "a": {
+   "q": "Why can a historian not rely on one diary to understand a past event fully?",
+   "opts": [
+    "It shows one person's view and may leave things out",
+    "It must be false because it is old",
+    "It only describes events that did not happen",
+    "It shows what everyone at the time thought"
+   ],
+   "why": "A diary is written by one person, so it shows what that person saw and thought. Others may have seen the event differently. Being old does not make a source false.",
+   "clue": "Think about who wrote the diary."
+  },
+  "b": {
+   "d": 2,
+   "q": "A shipowner and a sailor both write about a long voyage. The shipowner says it went well, but the sailor describes hunger and hard work. What is the best explanation?",
+   "opts": [
+    "They had different roles, so they saw the voyage differently",
+    "One of them must have been lying",
+    "The sailor was not on the voyage",
+    "The shipowner knew more, so only his view counts"
+   ],
+   "why": "The shipowner and the sailor had different roles and so noticed different things. Both sources are useful when read together. Nothing says either one lied, and one view does not cancel the other.",
+   "clue": "Compare what each person's job was on the voyage."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It shows one person's view and may leave things out",
+   "also_right": []
+  },
+  "b": {
+   "best": "They had different roles, so they saw the voyage differently",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Perspectives",
+  "card": [
+   "A perspective is the way a person sees an event. People in the past saw the same event differently.",
+   "Who a person was can shape what they saw. Age, job, wealth, gender and where they lived can all matter.",
+   "A source, such as a letter or a diary, is made by one person or group. It shows their point of view and may leave out what others saw.",
+   "To understand an event better, historians read sources from different people and compare them."
+  ],
+  "remember": "A source shows one point of view, so compare sources from different people.",
+  "a": {
+   "q": "Why can a historian not rely on one diary to understand a past event fully?",
+   "opts": [
+    "It shows one person's view and may leave things out",
+    "It must be false because it is old",
+    "It only describes events that did not happen",
+    "It shows what everyone at the time thought"
+   ],
+   "why": "A diary is written by one person, so it shows what that person saw and thought. Others may have seen the event differently. Being old does not make a source false.",
+   "clue": "Think about who wrote the diary."
+  },
+  "b": {
+   "d": 2,
+   "q": "A shipowner and a sailor both write about a long voyage. The shipowner says it went well, but the sailor describes hunger and hard work. What is the best explanation?",
+   "opts": [
+    "They had different roles, so they saw the voyage differently",
+    "One of them must have been lying",
+    "The sailor was not on the voyage",
+    "The shipowner knew more, so only his view counts"
+   ],
+   "why": "The shipowner and the sailor had different roles and so noticed different things. Both sources are useful when read together. Nothing says either one lied, and one view does not cancel the other.",
+   "clue": "Compare what each person's job was on the voyage."
+  }
+ },
+ "cleared_by": "checker"
 }

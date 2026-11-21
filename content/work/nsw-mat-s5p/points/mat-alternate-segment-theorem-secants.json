@@ -16,8 +16,169 @@
    0.248
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:55Z write: failed the content check, writing again",
+  "2026-11-20T12:44:59Z write: done",
+  "2026-11-20T12:53:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.02039,
+  "check": 0.00766
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points covers circle geometry: the alternate segment theorem and the tangent-secant result are about angles and lengths in a circle, whereas the bank points only cover derivatives, tangent lines and normals on curves.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Alternate segment theorem and secants",
+  "card": [
+   [
+    "Alternate segment",
+    "The angle between a tangent and a chord equals the angle in the alternate segment. That is the angle at the circumference on the other side of the chord."
+   ],
+   [
+    "Example",
+    "A tangent at \\(A\\) and a chord \\(AB\\) make an angle of \\(40^{\\circ}\\). Any angle at the circumference standing on chord \\(AB\\), in the opposite segment, is also \\(40^{\\circ}\\)."
+   ],
+   [
+    "Secant",
+    "A secant is a line that cuts the circle at two points. A tangent from the same outside point touches the circle at one point."
+   ],
+   [
+    "Tangent and secant",
+    "The square of the tangent length equals the whole secant times its part outside the circle. Example: tangent 6, outside part 4, whole secant \\(x\\). Then \\(6^{2} = 4 \\times x\\), so \\(x = 9\\)."
+   ]
+  ],
+  "remember": "The tangent-chord angle equals the angle in the alternate segment. Tangent squared equals whole secant times outside part.",
+  "a": {
+   "q": "A tangent from point \\(P\\) is 12 cm long. A secant from \\(P\\) has an outside part of 8 cm. What is the whole secant length?",
+   "opts": [
+    "18 cm",
+    "1.5 cm",
+    "96 cm",
+    "10 cm"
+   ],
+   "why": "Tangent squared equals whole secant times outside part, so \\(12^{2} = 8 \\times x\\). That gives \\(144 = 8x\\) and \\(x = 18\\). Using 1.5 comes from dividing 12 by 8, which skips the squaring.",
+   "clue": "Square the tangent first, then divide by the outside part."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tangent at \\(T\\) meets chord \\(TS\\) at an angle of \\(55^{\\circ}\\). Point \\(R\\) is on the circle in the alternate segment. What is \\(\\angle TRS\\)?",
+   "opts": [
+    "\\(55^{\\circ}\\)",
+    "\\(110^{\\circ}\\)",
+    "\\(125^{\\circ}\\)",
+    "\\(35^{\\circ}\\)"
+   ],
+   "why": "The angle in the alternate segment equals the angle between the tangent and the chord, so \\(\\angle TRS = 55^{\\circ}\\). Doubling to \\(110^{\\circ}\\) treats it as an angle at the centre, which is a different theorem.",
+   "clue": "Match the angle between tangent and chord with the angle on the other side of the chord."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A circle with a tangent touching at point A and a chord AB. Mark the angle between the tangent and chord AB as 40 degrees. Mark point C on the circle in the opposite segment from that angle, and the angle ACB, also labelled 40 degrees.",
+    "why": "It shows which angle is in the alternate segment."
+   },
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A circle with outside point P. A tangent PT of length 6 touches the circle at T. A secant from P crosses the circle at X, nearer, then Y. PX is labelled 4 and the whole secant PY is labelled x.",
+    "why": "It shows the tangent, the outside part and the whole secant."
+   }
+  ]
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "18 cm",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(55^{\\circ}\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Alternate segment theorem and secants",
+  "card": [
+   [
+    "Alternate segment",
+    "The angle between a tangent and a chord equals the angle in the alternate segment. That is the angle at the circumference on the other side of the chord."
+   ],
+   [
+    "Example",
+    "A tangent at \\(A\\) and a chord \\(AB\\) make an angle of \\(40^{\\circ}\\). Any angle at the circumference standing on chord \\(AB\\), in the opposite segment, is also \\(40^{\\circ}\\)."
+   ],
+   [
+    "Secant",
+    "A secant is a line that cuts the circle at two points. A tangent from the same outside point touches the circle at one point."
+   ],
+   [
+    "Tangent and secant",
+    "The square of the tangent length equals the whole secant times its part outside the circle. Example: tangent 6, outside part 4, whole secant \\(x\\). Then \\(6^{2} = 4 \\times x\\), so \\(x = 9\\)."
+   ]
+  ],
+  "remember": "The tangent-chord angle equals the angle in the alternate segment. Tangent squared equals whole secant times outside part.",
+  "a": {
+   "q": "A tangent from point \\(P\\) is 12 cm long. A secant from \\(P\\) has an outside part of 8 cm. What is the whole secant length?",
+   "opts": [
+    "18 cm",
+    "1.5 cm",
+    "96 cm",
+    "10 cm"
+   ],
+   "why": "Tangent squared equals whole secant times outside part, so \\(12^{2} = 8 \\times x\\). That gives \\(144 = 8x\\) and \\(x = 18\\). Using 1.5 comes from dividing 12 by 8, which skips the squaring.",
+   "clue": "Square the tangent first, then divide by the outside part."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tangent at \\(T\\) meets chord \\(TS\\) at an angle of \\(55^{\\circ}\\). Point \\(R\\) is on the circle in the alternate segment. What is \\(\\angle TRS\\)?",
+   "opts": [
+    "\\(55^{\\circ}\\)",
+    "\\(110^{\\circ}\\)",
+    "\\(125^{\\circ}\\)",
+    "\\(35^{\\circ}\\)"
+   ],
+   "why": "The angle in the alternate segment equals the angle between the tangent and the chord, so \\(\\angle TRS = 55^{\\circ}\\). Doubling to \\(110^{\\circ}\\) treats it as an angle at the centre, which is a different theorem.",
+   "clue": "Match the angle between tangent and chord with the angle on the other side of the chord."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A circle with a tangent touching at point A and a chord AB. Mark the angle between the tangent and chord AB as 40 degrees. Mark point C on the circle in the opposite segment from that angle, and the angle ACB, also labelled 40 degrees.",
+    "why": "It shows which angle is in the alternate segment."
+   },
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A circle with outside point P. A tangent PT of length 6 touches the circle at T. A secant from P crosses the circle at X, nearer, then Y. PX is labelled 4 and the whole secant PY is labelled x.",
+    "why": "It shows the tangent, the outside part and the whole secant."
+   }
+  ]
+ },
+ "cleared_by": "checker"
 }

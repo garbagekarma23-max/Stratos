@@ -24,8 +24,140 @@
    0.224
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 may adapt geo-food-security-means, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:47Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:50Z write: failed the content check, writing again",
+  "2026-11-20T12:44:56Z write: done",
+  "2026-11-20T12:53:25Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "confirm": 0.00891,
+  "write": 0.0128,
+  "check": 0.00818
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-food-security-means",
+  "changes": [
+   "Add a sentence defining food insecurity as the situation when people do not always have enough safe and nutritious food, since the card never names the term."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same definition of food security at a suitable Year 9 depth, but it needs a short definition of food insecurity added to match the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, geo-food-security-means, is broader than this brief: it goes on to teach availability and access, and both of its questions test access. It also never defines food insecurity, which this brief needs, so a new point that teaches just the definition fits better.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "What food security is",
+  "card": [
+   [
+    "Food security",
+    "All people, at all times, have enough safe and nutritious food to live an active, healthy life."
+   ],
+   [
+    "Food insecurity",
+    "Some people do not have enough safe and nutritious food all the time. It can be short term or long term."
+   ],
+   "Food security is about more than how much food is grown. People need to be able to get the food, and it must be safe and nutritious.",
+   "A country can grow plenty of food and still have food insecurity. A family that cannot afford or reach that food is food insecure."
+  ],
+  "remember": "Food security is enough safe, nutritious food for everyone, all the time. Food insecurity is when people lack it.",
+  "a": {
+   "q": "Which situation best describes food security?",
+   "opts": [
+    "All people always have enough safe, nutritious food",
+    "A country grows more food than it needs",
+    "Most people in a country have enough food to eat",
+    "Food is cheap in shops for most of the year"
+   ],
+   "why": "Food security means all people, at all times, have enough safe and nutritious food. Having most people fed is tempting, but it leaves some people without enough, so it is not food security.",
+   "clue": "Think about who is covered and when."
+  },
+  "b": {
+   "d": 3,
+   "q": "Farmers near Dubbo grow huge wheat crops, and local shops are full of food. Jarrah's family has lost its income and often skips meals. What does this show?",
+   "opts": [
+    "Plenty of food nearby does not make every person food secure",
+    "Jarrah's family is food secure because food is in the shops",
+    "The area is food insecure only if farmers grow too little",
+    "Food insecurity happens only when food is unsafe to eat"
+   ],
+   "why": "Food security means all people have enough food, not just that food exists nearby. Jarrah's family cannot get enough food, so it is food insecure even though supply is high.",
+   "clue": "Does having food nearby mean every family can get enough?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "All people always have enough safe, nutritious food",
+   "also_right": []
+  },
+  "b": {
+   "best": "Plenty of food nearby does not make every person food secure",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "What food security is",
+  "card": [
+   [
+    "Food security",
+    "All people, at all times, have enough safe and nutritious food to live an active, healthy life."
+   ],
+   [
+    "Food insecurity",
+    "Some people do not have enough safe and nutritious food all the time. It can be short term or long term."
+   ],
+   "Food security is about more than how much food is grown. People need to be able to get the food, and it must be safe and nutritious.",
+   "A country can grow plenty of food and still have food insecurity. A family that cannot afford or reach that food is food insecure."
+  ],
+  "remember": "Food security is enough safe, nutritious food for everyone, all the time. Food insecurity is when people lack it.",
+  "a": {
+   "q": "Which situation best describes food security?",
+   "opts": [
+    "All people always have enough safe, nutritious food",
+    "A country grows more food than it needs",
+    "Most people in a country have enough food to eat",
+    "Food is cheap in shops for most of the year"
+   ],
+   "why": "Food security means all people, at all times, have enough safe and nutritious food. Having most people fed is tempting, but it leaves some people without enough, so it is not food security.",
+   "clue": "Think about who is covered and when."
+  },
+  "b": {
+   "d": 3,
+   "q": "Farmers near Dubbo grow huge wheat crops, and local shops are full of food. Jarrah's family has lost its income and often skips meals. What does this show?",
+   "opts": [
+    "Plenty of food nearby does not make every person food secure",
+    "Jarrah's family is food secure because food is in the shops",
+    "The area is food insecure only if farmers grow too little",
+    "Food insecurity happens only when food is unsafe to eat"
+   ],
+   "why": "Food security means all people have enough food, not just that food exists nearby. Jarrah's family cannot get enough food, so it is food insecure even though supply is high.",
+   "clue": "Does having food nearby mean every family can get enough?"
+  }
+ },
+ "cleared_by": "checker"
 }

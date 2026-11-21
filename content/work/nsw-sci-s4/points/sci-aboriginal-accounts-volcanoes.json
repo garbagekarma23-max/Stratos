@@ -12,8 +12,195 @@
    0.233
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:00Z write: done",
+  "2026-11-20T12:35:56Z check: flagged",
+  "2026-11-20T12:45:00Z fix: suggested",
+  "2026-11-20T14:44:52Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.01174,
+  "check": 0.01433,
+  "fix": 0.03899
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches the new idea: the earthquakes and volcanoes point covers plate-boundary mechanisms, and the Budj Bim history point covers Gunditjmara land and water management, not Aboriginal accounts of volcanic activity matching geology.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Aboriginal accounts of volcanoes",
+  "card": [
+   "Aboriginal and Torres Strait Islander peoples have lived in Australia for more than 60,000 years. Knowledge about Country is passed down through stories, songs and ceremony.",
+   "Some of these accounts describe volcanic activity, such as fire, ground shaking and new land forms being made.",
+   "Gunditjmara accounts from western Victoria tell of Budj Bim, an old volcano. Geologists have found that Budj Bim erupted about 30,000 years ago.",
+   "The accounts match what geologists have found in the rock. This shows that cultural accounts can record real events across a very long time."
+  ],
+  "remember": "Some Aboriginal accounts record volcanoes, and they match what geologists have found.",
+  "a": {
+   "q": "What do Gunditjmara accounts of Budj Bim show about cultural accounts?",
+   "opts": [
+    "They can record real volcanic events over long times",
+    "They are made up and cannot match real events",
+    "They were only written after geologists found the rock",
+    "They only describe events from the last few years"
+   ],
+   "why": "The accounts describe volcanic activity that matches the geologists' findings at Budj Bim. They were passed down by people over a very long time, so they are not recent or invented.",
+   "clue": "Look at how the accounts compare with the rock evidence."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student says that stories passed down by speaking cannot be good evidence about events thousands of years ago. Which reply best uses the Budj Bim example?",
+   "opts": [
+    "Spoken accounts of Budj Bim match the geological evidence",
+    "Spoken accounts are always more reliable than rock evidence",
+    "Spoken accounts replaced the need for any geology",
+    "Spoken accounts only matter after they are written down"
+   ],
+   "why": "The Gunditjmara accounts match what geologists found in the rock, so spoken accounts can record real events. They do not replace geology or make it unnecessary, and they do not need to be written to be useful.",
+   "clue": "Which reply uses the match with geologists' findings?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "image",
+    "brief": "A photo of Budj Bim (Mount Eccles) in western Victoria, showing the volcanic landscape and crater, from an openly licensed source.",
+    "why": "It shows the real place that the Gunditjmara accounts describe."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "They can record real volcanic events over long times",
+   "also_right": []
+  },
+  "b": {
+   "best": "Spoken accounts of Budj Bim match the geological evidence",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Budj Bim's eruption is now dated to about 37,000 years ago (argon-argon dating, Matchan et al. 2020). The older figure of about 30,000 years is out of date and should be updated."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one with the hedge 'can'. Every distractor is an extreme claim ('only', 'made up and cannot'), so a student could pick the answer without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one that names Budj Bim and geological evidence, and the clue ('uses the match with geologists' findings') points straight to it. The answer is given away."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "first-nations",
+  "summary": "The card gives Budj Bim's eruption as about 30,000 years ago, but current dating puts it at about 37,000 years. In both questions the right option is easy to spot: in (a) it is the only hedged option against extreme distractors, and in (b) the wording and clue give it away."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Card, fact: Budj Bim's eruption is now dated to about 37,000 years ago (argon-argon dating, Matchan et al. 2020). The older figure of about 30,000 years is out of date and should be updated.",
+  "Question a, wording: The right option is the only one with the hedge 'can'. Every distractor is an extreme claim ('only', 'made up and cannot'), so a student could pick the answer without knowing the idea.",
+  "Question b, wording: The right option is the only one that names Budj Bim and geological evidence, and the clue ('uses the match with geologists' findings') points straight to it. The answer is given away."
+ ],
+ "proposal": {
+  "title": "Aboriginal accounts of volcanoes",
+  "card": [
+   "Aboriginal and Torres Strait Islander peoples have lived in Australia for more than 60,000 years. Knowledge about Country is passed down through stories, songs and ceremony.",
+   "Some of these accounts describe volcanic activity, such as fire, ground shaking and new land forms being made.",
+   "Gunditjmara accounts from western Victoria tell of Budj Bim, a volcano that is no longer active. Geologists have dated its eruption to about 37,000 years ago.",
+   "The accounts match what geologists have found in the rock. This shows that cultural accounts can record real events across a very long time."
+  ],
+  "remember": "Some Aboriginal accounts record volcanoes, and they match what geologists have found.",
+  "a": {
+   "q": "What does the Budj Bim example show about Gunditjmara spoken accounts?",
+   "opts": [
+    "Spoken accounts kept a record of an ancient eruption",
+    "Spoken accounts described a volcano from recent centuries",
+    "Spoken accounts and the rock evidence disagree",
+    "Rock evidence shows Budj Bim has never erupted"
+   ],
+   "why": "The Gunditjmara accounts describe volcanic activity that matches the rock evidence at Budj Bim, so they kept a record of a real eruption. That eruption was about 37,000 years ago, not in recent centuries.",
+   "clue": "How old is the eruption the accounts describe?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A student says that stories passed down by speaking cannot be good evidence about events thousands of years ago. Which reply best answers the student?",
+   "opts": [
+    "Budj Bim stories match the rock evidence of an old eruption",
+    "Budj Bim stories tell of an eruption geologists cannot find",
+    "Budj Bim stories mean the rock no longer needs to be dated",
+    "Budj Bim rock shows the stories tell of a recent eruption"
+   ],
+   "why": "Geologists dated the Budj Bim eruption to about 37,000 years ago, and the Gunditjmara stories match that evidence. So spoken accounts can record real events from long ago. The stories do not replace geology: it is the match between the two that answers the student.",
+   "clue": "Think about how the two kinds of evidence compare."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "image",
+    "brief": "A photo of Budj Bim (Mount Eccles) in western Victoria, showing the volcano's crater and the volcanic land around it, from an openly licensed source.",
+    "why": "It shows the real place that the Gunditjmara accounts describe."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Aboriginal accounts of volcanoes",
+  "card": [
+   "Aboriginal and Torres Strait Islander peoples have lived in Australia for more than 60,000 years. Knowledge about Country is passed down through stories, songs and ceremony.",
+   "Some of these accounts describe volcanic activity, such as fire, ground shaking and new land forms being made.",
+   "Gunditjmara accounts from western Victoria tell of Budj Bim, a volcano that is no longer active. Geologists have dated its eruption to about 37,000 years ago.",
+   "The accounts match what geologists have found in the rock. This shows that cultural accounts can record real events across a very long time."
+  ],
+  "remember": "Some Aboriginal accounts record volcanoes, and they match what geologists have found.",
+  "a": {
+   "q": "What does the Budj Bim example show about Gunditjmara spoken accounts?",
+   "opts": [
+    "Spoken accounts kept a record of an ancient eruption",
+    "Spoken accounts described a volcano from recent centuries",
+    "Spoken accounts and the rock evidence disagree",
+    "Rock evidence shows Budj Bim has never erupted"
+   ],
+   "why": "The Gunditjmara accounts describe volcanic activity that matches the rock evidence at Budj Bim, so they kept a record of a real eruption. That eruption was about 37,000 years ago, not in recent centuries.",
+   "clue": "How old is the eruption the accounts describe?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A student says that stories passed down by speaking cannot be good evidence about events thousands of years ago. Which reply best answers the student?",
+   "opts": [
+    "Budj Bim stories match the rock evidence of an old eruption",
+    "Budj Bim stories tell of an eruption geologists cannot find",
+    "Budj Bim stories mean the rock no longer needs to be dated",
+    "Budj Bim rock shows the stories tell of a recent eruption"
+   ],
+   "why": "Geologists dated the Budj Bim eruption to about 37,000 years ago, and the Gunditjmara stories match that evidence. So spoken accounts can record real events from long ago. The stories do not replace geology: it is the match between the two that answers the student.",
+   "clue": "Think about how the two kinds of evidence compare."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "image",
+    "brief": "A photo of Budj Bim (Mount Eccles) in western Victoria, showing the volcano's crater and the volcanic land around it, from an openly licensed source.",
+    "why": "It shows the real place that the Gunditjmara accounts describe."
+   }
+  ]
+ },
+ "cleared_by": "owner"
 }

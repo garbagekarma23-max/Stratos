@@ -24,8 +24,204 @@
    0.227
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:46Z write: done",
+  "2026-11-20T12:35:48Z check: flagged",
+  "2026-11-20T12:44:55Z fix: suggested",
+  "2026-11-20T13:23:38Z autoreview: cleared with the fix (a wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.01094,
+  "check": 0.00778,
+  "fix": 0.0149
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Reasons people move to a place, covers only work, family and culture, and lifestyle, while the new point also needs cost of housing and climate, so it is narrower in scope and would need more than small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Why people live where they do",
+  "card": [
+   "People choose where to live for many reasons. Often they weigh up several reasons at once.",
+   [
+    "Family and jobs",
+    "people may live near relatives and friends, or move to a place where they can find work."
+   ],
+   [
+    "Housing and lifestyle",
+    "the cost of housing can decide which suburb or town a person can afford. Others choose a place for its lifestyle, such as living near the beach or in the country."
+   ],
+   [
+    "Climate and culture",
+    "some people prefer a warm or mild climate. Others stay in or return to a place because of cultural ties to it, such as connection to Country or to a community."
+   ]
+  ],
+  "remember": "People live where they do because of a mix of family, work, cost, lifestyle, climate and cultural ties.",
+  "a": {
+   "q": "Priya moves from a small town to Newcastle because she has been offered a job there. Which reason for choosing a place does this show?",
+   "opts": [
+    "Work",
+    "Climate",
+    "Cultural ties",
+    "Lifestyle"
+   ],
+   "why": "Priya moved because of a job offer, so work is the reason for her choice. Lifestyle is the most tempting wrong answer, but the story gives no sign she moved for the beach or the pace of life.",
+   "clue": "Look at why she was offered a move."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam and Lee want to live near the coast, but houses near the beach in their city cost far more than they can pay. They buy a home inland. What best explains their choice?",
+   "opts": [
+    "The cost of housing limited where they could live",
+    "Their family lives inland and they wanted to be near them",
+    "The inland climate suited them better than the coast",
+    "They have cultural ties to the inland area"
+   ],
+   "why": "They wanted a coastal lifestyle but could not afford it, so housing cost decided where they lived. Lifestyle is tempting, but it points to the coast, which is the place they did not choose.",
+   "clue": "What stopped them getting what they wanted?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Work",
+   "also_right": []
+  },
+  "b": {
+   "best": "The cost of housing limited where they could live",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The clue 'Look at why she was offered a move' is confusing. Priya was offered a job, not a move. Something like 'Look at what she was offered in Newcastle' would be clearer."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are accurate and match the card. The only problem is that question a's clue wrongly says Priya was 'offered a move' when she was offered a job."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The clue 'Look at why she was offered a move' is confusing. Priya was offered a job, not a move. Something like 'Look at what she was offered in Newcastle' would be clearer."
+ ],
+ "proposal": {
+  "title": "Why people live where they do",
+  "card": [
+   "People choose where to live for many reasons. Often they weigh up several reasons at once.",
+   [
+    "Family and jobs",
+    "people may live near relatives and friends, or move to a place where they can find work."
+   ],
+   [
+    "Housing and lifestyle",
+    "the cost of housing can decide which suburb or town a person can afford. Others choose a place for its lifestyle, such as living near the beach or in the country."
+   ],
+   [
+    "Climate and culture",
+    "some people prefer a warm or mild climate. Others stay in or return to a place because of cultural ties to it, such as connection to Country or to a community."
+   ]
+  ],
+  "remember": "Where people live often comes from a mix of family, work, cost, lifestyle, climate and cultural ties.",
+  "a": {
+   "q": "Priya moves from a small town to Newcastle because she has been offered a job there. Which reason for choosing a place does this show?",
+   "opts": [
+    "Work",
+    "Climate",
+    "Cultural ties",
+    "Lifestyle"
+   ],
+   "why": "Priya moved because of a job offer, so work is the reason for her choice. Lifestyle is the most tempting wrong answer, but the story gives no sign she moved for the beach or a different way of living.",
+   "clue": "Look at what she was offered in Newcastle."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam and Lee want to live near the coast, but houses near the beach in their city cost far more than they can pay. They buy a home inland. What best explains their choice?",
+   "opts": [
+    "The cost of housing limited where they could live",
+    "Their family lives inland and they wanted to be near them",
+    "The inland climate suited them better than the coast",
+    "They have cultural ties to the inland area"
+   ],
+   "why": "They wanted a coastal lifestyle but could not afford it, so housing cost decided where they lived. The story never mentions family, climate or cultural ties, so those options add reasons that are not there.",
+   "clue": "What stopped them getting what they wanted?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:38Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The clue 'Look at why she was offered a move' is confusing. Priya was offered a job, not a move. Something like 'Look at what she was offered in Newcastle' would be clearer."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The clue 'Look at why she was offered a move' is confusing. Priya was offered a job, not a move. Something like 'Look at what she was offered in Newcastle' would be clearer."
+  ]
+ },
+ "final": {
+  "title": "Why people live where they do",
+  "card": [
+   "People choose where to live for many reasons. Often they weigh up several reasons at once.",
+   [
+    "Family and jobs",
+    "people may live near relatives and friends, or move to a place where they can find work."
+   ],
+   [
+    "Housing and lifestyle",
+    "the cost of housing can decide which suburb or town a person can afford. Others choose a place for its lifestyle, such as living near the beach or in the country."
+   ],
+   [
+    "Climate and culture",
+    "some people prefer a warm or mild climate. Others stay in or return to a place because of cultural ties to it, such as connection to Country or to a community."
+   ]
+  ],
+  "remember": "Where people live often comes from a mix of family, work, cost, lifestyle, climate and cultural ties.",
+  "a": {
+   "q": "Priya moves from a small town to Newcastle because she has been offered a job there. Which reason for choosing a place does this show?",
+   "opts": [
+    "Work",
+    "Climate",
+    "Cultural ties",
+    "Lifestyle"
+   ],
+   "why": "Priya moved because of a job offer, so work is the reason for her choice. Lifestyle is the most tempting wrong answer, but the story gives no sign she moved for the beach or a different way of living.",
+   "clue": "Look at what she was offered in Newcastle."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam and Lee want to live near the coast, but houses near the beach in their city cost far more than they can pay. They buy a home inland. What best explains their choice?",
+   "opts": [
+    "The cost of housing limited where they could live",
+    "Their family lives inland and they wanted to be near them",
+    "The inland climate suited them better than the coast",
+    "They have cultural ties to the inland area"
+   ],
+   "why": "They wanted a coastal lifestyle but could not afford it, so housing cost decided where they lived. The story never mentions family, climate or cultural ties, so those options add reasons that are not there.",
+   "clue": "What stopped them getting what they wanted?"
+  }
+ },
+ "cleared_by": "auto"
 }

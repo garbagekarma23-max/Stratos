@@ -20,8 +20,43 @@
    0.205
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 may adapt geo-landscapes-landforms, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:47Z match: Claude Opus 5.5 says reuse geo-landscapes-landforms, with nothing more to write, check or review"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "confirm": 0.00661
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-landscapes-landforms",
+  "changes": [
+   "Change the Question b hiker example from Tasmania to a mountain area in New South Wales, such as the Blue Mountains, so the example is local to the NSW course."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same landscape and landform distinction at the right depth, but its Tasmania example should be made local to New South Wales.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "geo-landscapes-landforms",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the same landscape-versus-landform distinction at a Years 7–8 depth, and both questions work as they are for NSW students.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "geo-landscapes-landforms",
+ "matched": {
+  "verdict": "reuse",
+  "from": "geo-landscapes-landforms",
+  "by": "Claude Opus 5.5",
+  "at": "2026-11-20T12:25:47Z"
+ }
 }

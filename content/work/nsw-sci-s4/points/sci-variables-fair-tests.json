@@ -24,8 +24,133 @@
    0.242
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00609,
+  "check": 0.00802
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers independent, dependent and controlled variables but not the brief's observational study or repeat trials, so the new point teaches a broader idea and needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Variables and fair tests",
+  "card": [
+   [
+    "Independent",
+    "the one variable you change on purpose. Example: the amount of light a plant gets."
+   ],
+   [
+    "Dependent",
+    "the variable you measure to see the effect. Example: how tall the plant grows."
+   ],
+   [
+    "Controlled",
+    "all the other variables, which you keep the same so they do not affect the result. Example: the type of soil and the amount of water."
+   ],
+   "A fair test changes only one variable. Repeating the trials makes the results more reliable. An observational study watches things as they are and changes nothing."
+  ],
+  "remember": "Change one, measure one, keep the rest the same, and repeat.",
+  "a": {
+   "q": "Zara tests how the length of a pendulum affects how long it takes to swing 10 times. What is the dependent variable?",
+   "opts": [
+    "The time taken for 10 swings",
+    "The length of the pendulum",
+    "The mass of the weight on the string",
+    "The number of swings counted"
+   ],
+   "why": "The dependent variable is the one you measure to see the effect, which here is the time taken. The length of the pendulum is the one Zara changes, so it is the independent variable.",
+   "clue": "Which variable is measured to see what happened?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam tests whether warm water makes sugar dissolve faster. He uses 20 °C, 40 °C and 60 °C water, and a different amount of sugar in each cup. Why is this not a fair test?",
+   "opts": [
+    "The amount of sugar changes as well as the temperature",
+    "The water temperature is the only variable he changed",
+    "He measured the time that the sugar took to dissolve",
+    "He tested three water temperatures rather than just one"
+   ],
+   "why": "A fair test changes only one variable, so the amount of sugar must be kept the same. Changing the temperature is correct, because it is the independent variable. Using three temperatures is fine too, since they are all values of that one variable.",
+   "clue": "How many variables did Liam change on purpose?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The time taken for 10 swings",
+   "also_right": []
+  },
+  "b": {
+   "best": "The amount of sugar changes as well as the temperature",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Variables and fair tests",
+  "card": [
+   [
+    "Independent",
+    "the one variable you change on purpose. Example: the amount of light a plant gets."
+   ],
+   [
+    "Dependent",
+    "the variable you measure to see the effect. Example: how tall the plant grows."
+   ],
+   [
+    "Controlled",
+    "all the other variables, which you keep the same so they do not affect the result. Example: the type of soil and the amount of water."
+   ],
+   "A fair test changes only one variable. Repeating the trials makes the results more reliable. An observational study watches things as they are and changes nothing."
+  ],
+  "remember": "Change one, measure one, keep the rest the same, and repeat.",
+  "a": {
+   "q": "Zara tests how the length of a pendulum affects how long it takes to swing 10 times. What is the dependent variable?",
+   "opts": [
+    "The time taken for 10 swings",
+    "The length of the pendulum",
+    "The mass of the weight on the string",
+    "The number of swings counted"
+   ],
+   "why": "The dependent variable is the one you measure to see the effect, which here is the time taken. The length of the pendulum is the one Zara changes, so it is the independent variable.",
+   "clue": "Which variable is measured to see what happened?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam tests whether warm water makes sugar dissolve faster. He uses 20 °C, 40 °C and 60 °C water, and a different amount of sugar in each cup. Why is this not a fair test?",
+   "opts": [
+    "The amount of sugar changes as well as the temperature",
+    "The water temperature is the only variable he changed",
+    "He measured the time that the sugar took to dissolve",
+    "He tested three water temperatures rather than just one"
+   ],
+   "why": "A fair test changes only one variable, so the amount of sugar must be kept the same. Changing the temperature is correct, because it is the independent variable. Using three temperatures is fine too, since they are all values of that one variable.",
+   "clue": "How many variables did Liam change on purpose?"
+  }
+ },
+ "cleared_by": "checker"
 }

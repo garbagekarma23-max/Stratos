@@ -16,8 +16,433 @@
    0.261
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:46Z write: failed the content check, writing again",
+  "2026-11-20T12:35:49Z write: done",
+  "2026-11-20T12:44:55Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:02:37Z claude-code review: left for you (it chose to leave it)",
+  "2026-11-20T14:38:45Z review: approved as written (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "write": 0.02023,
+  "check": 0.01281,
+  "fix": 0.02597,
+  "recheck": 0.00843
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Tables and graphs, covers only line and column graphs for science, while this point also covers bar and picture graphs, so adding those would change the card's content rather than make a small adjustment.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Choosing and reading graphs",
+  "card": [
+   [
+    "Column and bar",
+    "These graphs use bars to compare amounts in separate categories, such as rainfall in different cities. Column graph bars stand upright. Bar graph bars lie sideways."
+   ],
+   [
+    "Line",
+    "A line graph joins points in order along the horizontal axis. It suits data that changes over time, such as a town's rainfall each month."
+   ],
+   [
+    "Picture",
+    "A picture graph uses small symbols to stand for a number of items. A legend beside it shows what one symbol means."
+   ],
+   [
+    "Reading",
+    "To read any graph, check the title, the axis labels, the units and the scale before you look at the shapes."
+   ]
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A line graph of monthly rainfall in a town. Rainfall rises from 20 mm in January to 80 mm in March, then falls to 40 mm in May.",
+    "x": {
+     "min": 0,
+     "max": 6,
+     "label": "Month (1 = January)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 100,
+     "label": "Rainfall (mm)",
+     "step": 20
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "R",
+      "points": [
+       [
+        1,
+        20
+       ],
+       [
+        2,
+        50
+       ],
+       [
+        3,
+        80
+       ],
+       [
+        4,
+        60
+       ],
+       [
+        5,
+        40
+       ]
+      ],
+      "label": "Rainfall",
+      "pos": "above-right",
+      "labelAt": 4
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       80
+      ],
+      "label": "Highest",
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
+  "remember": "Compare categories with columns or bars. Show change over time with a line.",
+  "a": {
+   "q": "Which graph best shows how a river's height changed each day for a month?",
+   "opts": [
+    "A line graph",
+    "A picture graph",
+    "A bar graph of one day",
+    "A column graph of the cities"
+   ],
+   "why": "A line graph joins points in order, so it shows change over time. A column graph compares separate categories, so it is tempting, but daily river heights are a series in order, not separate groups.",
+   "clue": "Which graph is best at showing change over time?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya has the number of students who travel to school by bus, car, bike or foot. Which graph suits this data best?",
+   "opts": [
+    "A column graph with one column for each way",
+    "A line graph joining bus, car, bike and foot",
+    "A line graph of travel over twelve months",
+    "A picture graph with no symbol meaning given"
+   ],
+   "why": "Bus, car, bike and foot are separate categories, so a column graph compares them well. A line graph joins points as if they were in order, which they are not here.",
+   "clue": "Are the ways of travelling in any order, or are they separate groups?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A line graph",
+   "also_right": []
+  },
+  "b": {
+   "best": "A column graph with one column for each way",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Two distractors are clearly off-topic: 'A column graph of the cities' and 'A bar graph of one day' do not match a river measured daily for a month. A student can rule them out without knowing which graph suits change over time. The why also calls the column graph 'tempting', which this option is not."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, graph data and alt agree, and both answers are sound. In question a, two distractors ('of the cities', 'of one day') are obviously irrelevant, which weakens the question and does not match the why's claim that the column graph is tempting."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: Two distractors are clearly off-topic: 'A column graph of the cities' and 'A bar graph of one day' do not match a river measured daily for a month. A student can rule them out without knowing which graph suits change over time. The why also calls the column graph 'tempting', which this option is not."
+ ],
+ "proposal": {
+  "title": "Choosing and reading graphs",
+  "card": [
+   [
+    "Column and bar",
+    "These graphs use bars to compare amounts in separate categories, such as rainfall in different cities. Column graph bars stand upright. Bar graph bars lie sideways."
+   ],
+   [
+    "Line",
+    "A line graph joins points in order along the horizontal axis. It suits data that changes over time, such as a town's rainfall each month."
+   ],
+   [
+    "Picture",
+    "A picture graph uses small symbols to stand for a number of items. A legend beside it shows what one symbol means."
+   ],
+   [
+    "Reading",
+    "To read any graph, check the title, the axis labels, the units and the scale before you look at the shapes."
+   ]
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A line graph of monthly rainfall in a town. Rainfall rises from 20 mm in January to 80 mm in March, then falls to 40 mm in May.",
+    "x": {
+     "min": 0,
+     "max": 6,
+     "label": "Month (1 = January)",
+     "step": 1,
+     "labelUnder": true
+    },
+    "y": {
+     "min": 0,
+     "max": 100,
+     "label": "Rainfall (mm)",
+     "step": 20
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "R",
+      "points": [
+       [
+        1,
+        20
+       ],
+       [
+        2,
+        50
+       ],
+       [
+        3,
+        80
+       ],
+       [
+        4,
+        60
+       ],
+       [
+        5,
+        40
+       ]
+      ],
+      "label": "Rainfall",
+      "pos": "above-right",
+      "labelAt": 4
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       80
+      ],
+      "on": [
+       "R"
+      ],
+      "label": "Highest",
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
+  "remember": "Compare categories with columns or bars. Show change over time with a line.",
+  "a": {
+   "q": "Which graph best shows how a river's height changed each day for a month?",
+   "opts": [
+    "A line graph",
+    "A column graph",
+    "A bar graph",
+    "A picture graph"
+   ],
+   "why": "A line graph joins points in order, so it shows how the height changes from day to day. A column graph is tempting because it can show amounts, but it compares separate categories, not a series that runs in order over time.",
+   "clue": "Which graph is best at showing change over time?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya has the number of students who travel to school by bus, car, bike or foot. Which graph suits this data, and why?",
+   "opts": [
+    "A column graph, as the ways are separate groups",
+    "A line graph, as the ways are joined in order",
+    "A line graph, as it shows change over time",
+    "A column graph, as the ways change over time"
+   ],
+   "why": "Bus, car, bike and foot are separate categories, so a column graph compares them well. A line graph joins points as if they ran in order, but these ways of travelling have no order and do not show change over time.",
+   "clue": "Are the ways of travelling in any order, or are they separate groups?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A line graph",
+    "also_right": []
+   },
+   "b": {
+    "best": "A column graph, as the ways are separate groups",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Two distractors are clearly off-topic: 'A column graph of the cities' and 'A bar graph of one day' do not match a river measured daily for a month. A student can rule them out without knowing which graph suits change over time. The why also calls the column graph 'tempting', which this option is not."
+   }
+  ],
+  "flags": [
+   "Question a, wording: Two distractors are clearly off-topic: 'A column graph of the cities' and 'A bar graph of one day' do not match a river measured daily for a month. A student can rule them out without knowing which graph suits change over time. The why also calls the column graph 'tempting', which this option is not."
+  ],
+  "owner": "approve"
+ },
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "leave",
+   "sure": "medium",
+   "reason": "The fix deals with the checker's problem and the graph matches its alt, but the card uses monthly rainfall as its line graph example, while geography climate graphs show monthly rainfall as columns. That example may clash with what students learn about climate graphs, so the owner should look.",
+   "item": "3e5aabe2ec6f7a8c",
+   "result": "left"
+  }
+ ],
+ "final": {
+  "title": "Choosing and reading graphs",
+  "card": [
+   [
+    "Column and bar",
+    "These graphs use bars to compare amounts in separate categories, such as rainfall in different cities. Column graph bars stand upright. Bar graph bars lie sideways."
+   ],
+   [
+    "Line",
+    "A line graph joins points in order along the horizontal axis. It suits data that changes over time, such as a town's rainfall each month."
+   ],
+   [
+    "Picture",
+    "A picture graph uses small symbols to stand for a number of items. A legend beside it shows what one symbol means."
+   ],
+   [
+    "Reading",
+    "To read any graph, check the title, the axis labels, the units and the scale before you look at the shapes."
+   ]
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A line graph of monthly rainfall in a town. Rainfall rises from 20 mm in January to 80 mm in March, then falls to 40 mm in May.",
+    "x": {
+     "min": 0,
+     "max": 6,
+     "label": "Month (1 = January)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 100,
+     "label": "Rainfall (mm)",
+     "step": 20
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "R",
+      "points": [
+       [
+        1,
+        20
+       ],
+       [
+        2,
+        50
+       ],
+       [
+        3,
+        80
+       ],
+       [
+        4,
+        60
+       ],
+       [
+        5,
+        40
+       ]
+      ],
+      "label": "Rainfall",
+      "pos": "above-right",
+      "labelAt": 4
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       80
+      ],
+      "label": "Highest",
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
+  "remember": "Compare categories with columns or bars. Show change over time with a line.",
+  "a": {
+   "q": "Which graph best shows how a river's height changed each day for a month?",
+   "opts": [
+    "A line graph",
+    "A picture graph",
+    "A bar graph of one day",
+    "A column graph of the cities"
+   ],
+   "why": "A line graph joins points in order, so it shows change over time. A column graph compares separate categories, so it is tempting, but daily river heights are a series in order, not separate groups.",
+   "clue": "Which graph is best at showing change over time?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya has the number of students who travel to school by bus, car, bike or foot. Which graph suits this data best?",
+   "opts": [
+    "A column graph with one column for each way",
+    "A line graph joining bus, car, bike and foot",
+    "A line graph of travel over twelve months",
+    "A picture graph with no symbol meaning given"
+   ],
+   "why": "Bus, car, bike and foot are separate categories, so a column graph compares them well. A line graph joins points as if they were in order, which they are not here.",
+   "clue": "Are the ways of travelling in any order, or are they separate groups?"
+  }
+ },
+ "cleared_by": "owner"
 }

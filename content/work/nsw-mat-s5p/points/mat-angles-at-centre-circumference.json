@@ -24,8 +24,367 @@
    0.318
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:56Z write: failed the content check, writing again",
+  "2026-11-20T12:44:59Z write: done (still fails the content check)",
+  "2026-11-20T12:53:28Z check: flagged",
+  "2026-11-20T13:00:00Z fix: suggested",
+  "2026-11-20T13:23:44Z autoreview: cleared with the fix (the content check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.0262,
+  "check": 0.01036,
+  "fix": 0.05633
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches circle theorems about angles at the centre and circumference; the closest, on angle-chasing with triangles and straight lines, does not cover arcs, centres or the semicircle result.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Angles at the centre and circumference",
+  "card": [
+   [
+    "Centre and circumference",
+    "An arc is part of a circle. Angles at the centre and at the circumference can both stand on the same arc. The angle at the centre is twice the angle at the circumference."
+   ],
+   [
+    "Semicircle",
+    "If the arc is a semicircle, the angle at the centre is \\(180^{\\circ}\\), so the angle at the circumference is half of that. An angle in a semicircle is a right angle."
+   ],
+   [
+    "Same arc",
+    "Angles at the circumference standing on the same arc are equal. Each one is half the angle at the centre on that arc."
+   ],
+   [
+    "Example",
+    "The angle at the centre on an arc is \\(80^{\\circ}\\). The angle at the circumference on the same arc is \\(80^{\\circ} \\div 2 = 40^{\\circ}\\)."
+   ]
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "A circle with centre O. Points A and B lie on the circle, and point C lies on the circle on the far side. Lines OA, OB, CA and CB are drawn. The angle at O is the angle at the centre and the angle at C is the angle at the circumference, both standing on arc AB.",
+    "x": {
+     "min": -6,
+     "max": 6
+    },
+    "y": {
+     "min": -6,
+     "max": 6
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "circle",
+      "centre": [
+       0,
+       0
+      ],
+      "r": 4,
+      "label": "circle",
+      "pos": "below-left"
+     },
+     {
+      "type": "curve",
+      "points": [
+       [
+        0,
+        0
+       ],
+       [
+        -4,
+        0
+       ]
+      ],
+      "label": "OA",
+      "pos": "below"
+     },
+     {
+      "type": "curve",
+      "points": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        4
+       ]
+      ],
+      "label": "OB",
+      "pos": "right"
+     },
+     {
+      "type": "curve",
+      "points": [
+       [
+        2.8284,
+        -2.8284
+       ],
+       [
+        -4,
+        0
+       ]
+      ],
+      "label": "CA",
+      "pos": "below-left"
+     },
+     {
+      "type": "curve",
+      "points": [
+       [
+        2.8284,
+        -2.8284
+       ],
+       [
+        0,
+        4
+       ]
+      ],
+      "label": "CB",
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "label": "O",
+      "pos": "above-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       -4,
+       0
+      ],
+      "label": "A",
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       4
+      ],
+      "label": "B",
+      "pos": "above"
+     },
+     {
+      "type": "point",
+      "at": [
+       2.8284,
+       -2.8284
+      ],
+      "label": "C",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Centre angle is double the circumference angle on the same arc.",
+  "a": {
+   "q": "O is the centre of a circle. Arc PQ makes an angle of \\(140^{\\circ}\\) at O. What angle does arc PQ make at a point R on the circumference?",
+   "opts": [
+    "\\(70^{\\circ}\\)",
+    "\\(280^{\\circ}\\)",
+    "\\(140^{\\circ}\\)",
+    "\\(35^{\\circ}\\)"
+   ],
+   "why": "The angle at the circumference is half the angle at the centre, so \\(140^{\\circ} \\div 2 = 70^{\\circ}\\). Doubling to get \\(280^{\\circ}\\) reverses the rule.",
+   "clue": "Which angle is the larger one?"
+  },
+  "b": {
+   "d": 3,
+   "q": "AB is a diameter of a circle. C is a point on the circle, and angle CAB is \\(35^{\\circ}\\). What is angle ABC?",
+   "opts": [
+    "\\(55^{\\circ}\\)",
+    "\\(35^{\\circ}\\)",
+    "\\(145^{\\circ}\\)",
+    "\\(70^{\\circ}\\)"
+   ],
+   "why": "Angle ACB is in a semicircle, so it is \\(90^{\\circ}\\). The angles of a triangle add to \\(180^{\\circ}\\), so angle ABC is \\(180^{\\circ} - 90^{\\circ} - 35^{\\circ} = 55^{\\circ}\\). Taking \\(35^{\\circ}\\) wrongly treats the triangle as having two equal angles.",
+   "clue": "Find the angle at C first."
+  }
+ },
+ "redone": true,
+ "local": [
+  "mat-angles-at-centre-circumference the figure on card line 1 has labels that run into each other: OA and CA. Move one with pos or labelAt",
+  "mat-angles-at-centre-circumference the figure on card line 1 has labels that run into each other: OA and A. Move one with pos or labelAt",
+  "mat-angles-at-centre-circumference the figure on card line 1 has labels that run into each other: OB and CB. Move one with pos or labelAt",
+  "mat-angles-at-centre-circumference the figure on card line 1 has labels that run into each other: CA and A. Move one with pos or labelAt",
+  "mat-angles-at-centre-circumference the figure on card line 1 has the label circle on a curve. Move it with pos or labelAt, or move the curve",
+  "mat-angles-at-centre-circumference the figure on card line 1 has the label OA on a curve. Move it with pos or labelAt, or move the curve",
+  "mat-angles-at-centre-circumference the figure on card line 1 has the label OB on a curve. Move it with pos or labelAt, or move the curve",
+  "mat-angles-at-centre-circumference the figure on card line 1 has the label CB on a curve. Move it with pos or labelAt, or move the curve"
+ ],
+ "check": {
+  "a": {
+   "best": "\\(70^{\\circ}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(55^{\\circ}\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Content check: mat-angles-at-centre-circumference the figure on card line 1 has labels that run into each other: OA and CA. Move one with pos or labelAt",
+  "Content check: mat-angles-at-centre-circumference the figure on card line 1 has labels that run into each other: OA and A. Move one with pos or labelAt",
+  "Content check: mat-angles-at-centre-circumference the figure on card line 1 has labels that run into each other: OB and CB. Move one with pos or labelAt",
+  "Content check: mat-angles-at-centre-circumference the figure on card line 1 has labels that run into each other: CA and A. Move one with pos or labelAt",
+  "Content check: mat-angles-at-centre-circumference the figure on card line 1 has the label circle on a curve. Move it with pos or labelAt, or move the curve",
+  "Content check: mat-angles-at-centre-circumference the figure on card line 1 has the label OA on a curve. Move it with pos or labelAt, or move the curve",
+  "Content check: mat-angles-at-centre-circumference the figure on card line 1 has the label OB on a curve. Move it with pos or labelAt, or move the curve",
+  "Content check: mat-angles-at-centre-circumference the figure on card line 1 has the label CB on a curve. Move it with pos or labelAt, or move the curve"
+ ],
+ "proposal": {
+  "title": "Angles at the centre and circumference",
+  "card": [
+   [
+    "Centre and circumference",
+    "An arc is part of a circle. An angle at the centre and an angle at the circumference can both stand on the same arc, with the point on the circumference on the rest of the circle. The angle at the centre is twice the angle at the circumference."
+   ],
+   [
+    "Semicircle",
+    "If the arc is a semicircle, the angle at the centre is \\(180^{\\circ}\\), so the angle at the circumference is half of that. An angle in a semicircle is a right angle."
+   ],
+   [
+    "Same arc",
+    "Angles at the circumference standing on the same arc are equal. Each one is half the angle at the centre on that arc."
+   ],
+   [
+    "Example",
+    "The angle at the centre on an arc is \\(80^{\\circ}\\). The angle at the circumference on the same arc is \\(80^{\\circ} \\div 2 = 40^{\\circ}\\)."
+   ]
+  ],
+  "remember": "Centre angle is double the circumference angle on the same arc.",
+  "a": {
+   "q": "O is the centre of a circle. Arc PQ makes an angle of \\(140^{\\circ}\\) at O. R is on the circle, away from arc PQ. What is angle PRQ?",
+   "opts": [
+    "\\(70^{\\circ}\\)",
+    "\\(280^{\\circ}\\)",
+    "\\(140^{\\circ}\\)",
+    "\\(35^{\\circ}\\)"
+   ],
+   "why": "The angle at the circumference is half the angle at the centre, so \\(140^{\\circ} \\div 2 = 70^{\\circ}\\). Doubling to get \\(280^{\\circ}\\) reverses the rule.",
+   "clue": "Which angle is the larger one?"
+  },
+  "b": {
+   "d": 3,
+   "q": "AB is a diameter of a circle. C is a point on the circle, and angle CAB is \\(35^{\\circ}\\). What is angle ABC?",
+   "opts": [
+    "\\(55^{\\circ}\\)",
+    "\\(35^{\\circ}\\)",
+    "\\(145^{\\circ}\\)",
+    "\\(70^{\\circ}\\)"
+   ],
+   "why": "Angle ACB is in a semicircle, so it is \\(90^{\\circ}\\). The angles of a triangle add to \\(180^{\\circ}\\), so angle ABC is \\(180^{\\circ} - 90^{\\circ} - 35^{\\circ} = 55^{\\circ}\\). Taking \\(35^{\\circ}\\) wrongly treats the triangle as having two equal angles.",
+   "clue": "Find the angle at C first."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A circle with centre O. Points A and B lie on the circle, with the minor arc AB shown slightly thicker and labelled arc AB. Point C lies on the circle on the far side, away from arc AB. Line segments OA, OB, CA and CB are drawn. The angle AOB at O is marked and labelled angle at the centre, 2x. The angle ACB at C is marked and labelled angle at the circumference, x. Label the points O, A, B and C.",
+    "why": "Seeing both angles standing on the same arc shows which angle is at the centre, which is at the circumference, and that the centre angle is the larger one."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:44Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [],
+  "flags": [
+   "Content check: mat-angles-at-centre-circumference the figure on card line 1 has labels that run into each other: OA and CA. Move one with pos or labelAt",
+   "Content check: mat-angles-at-centre-circumference the figure on card line 1 has labels that run into each other: OA and A. Move one with pos or labelAt",
+   "Content check: mat-angles-at-centre-circumference the figure on card line 1 has labels that run into each other: OB and CB. Move one with pos or labelAt",
+   "Content check: mat-angles-at-centre-circumference the figure on card line 1 has labels that run into each other: CA and A. Move one with pos or labelAt",
+   "Content check: mat-angles-at-centre-circumference the figure on card line 1 has the label circle on a curve. Move it with pos or labelAt, or move the curve",
+   "Content check: mat-angles-at-centre-circumference the figure on card line 1 has the label OA on a curve. Move it with pos or labelAt, or move the curve",
+   "Content check: mat-angles-at-centre-circumference the figure on card line 1 has the label OB on a curve. Move it with pos or labelAt, or move the curve",
+   "Content check: mat-angles-at-centre-circumference the figure on card line 1 has the label CB on a curve. Move it with pos or labelAt, or move the curve"
+  ]
+ },
+ "final": {
+  "title": "Angles at the centre and circumference",
+  "card": [
+   [
+    "Centre and circumference",
+    "An arc is part of a circle. An angle at the centre and an angle at the circumference can both stand on the same arc, with the point on the circumference on the rest of the circle. The angle at the centre is twice the angle at the circumference."
+   ],
+   [
+    "Semicircle",
+    "If the arc is a semicircle, the angle at the centre is \\(180^{\\circ}\\), so the angle at the circumference is half of that. An angle in a semicircle is a right angle."
+   ],
+   [
+    "Same arc",
+    "Angles at the circumference standing on the same arc are equal. Each one is half the angle at the centre on that arc."
+   ],
+   [
+    "Example",
+    "The angle at the centre on an arc is \\(80^{\\circ}\\). The angle at the circumference on the same arc is \\(80^{\\circ} \\div 2 = 40^{\\circ}\\)."
+   ]
+  ],
+  "remember": "Centre angle is double the circumference angle on the same arc.",
+  "a": {
+   "q": "O is the centre of a circle. Arc PQ makes an angle of \\(140^{\\circ}\\) at O. R is on the circle, away from arc PQ. What is angle PRQ?",
+   "opts": [
+    "\\(70^{\\circ}\\)",
+    "\\(280^{\\circ}\\)",
+    "\\(140^{\\circ}\\)",
+    "\\(35^{\\circ}\\)"
+   ],
+   "why": "The angle at the circumference is half the angle at the centre, so \\(140^{\\circ} \\div 2 = 70^{\\circ}\\). Doubling to get \\(280^{\\circ}\\) reverses the rule.",
+   "clue": "Which angle is the larger one?"
+  },
+  "b": {
+   "d": 3,
+   "q": "AB is a diameter of a circle. C is a point on the circle, and angle CAB is \\(35^{\\circ}\\). What is angle ABC?",
+   "opts": [
+    "\\(55^{\\circ}\\)",
+    "\\(35^{\\circ}\\)",
+    "\\(145^{\\circ}\\)",
+    "\\(70^{\\circ}\\)"
+   ],
+   "why": "Angle ACB is in a semicircle, so it is \\(90^{\\circ}\\). The angles of a triangle add to \\(180^{\\circ}\\), so angle ABC is \\(180^{\\circ} - 90^{\\circ} - 35^{\\circ} = 55^{\\circ}\\). Taking \\(35^{\\circ}\\) wrongly treats the triangle as having two equal angles.",
+   "clue": "Find the angle at C first."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A circle with centre O. Points A and B lie on the circle, with the minor arc AB shown slightly thicker and labelled arc AB. Point C lies on the circle on the far side, away from arc AB. Line segments OA, OB, CA and CB are drawn. The angle AOB at O is marked and labelled angle at the centre, 2x. The angle ACB at C is marked and labelled angle at the circumference, x. Label the points O, A, B and C.",
+    "why": "Seeing both angles standing on the same arc shows which angle is at the centre, which is at the circumference, and that the centre angle is the larger one."
+   }
+  ]
+ },
+ "cleared_by": "auto"
 }

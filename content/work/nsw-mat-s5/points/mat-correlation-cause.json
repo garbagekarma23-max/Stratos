@@ -20,8 +20,227 @@
    0.208
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 may adapt mat-correlation-causation, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:55Z confirm: Claude Opus 5.5 may adapt mat-correlation-causation, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt mat-correlation-causation (4 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting mat-correlation-causation on the next run",
+  "2026-11-20T14:12:39Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00037,
+  "confirm": 0.01121,
+  "adapt": 0.00465,
+  "check": 0.01102
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-correlation-causation",
+  "changes": [
+   "Replace the references to the value of r in the card with plain language about how strong the pattern looks, because r is not a Stage 5 term.",
+   "Rewrite the question a distractor 'The correlation is an error, as r cannot be positive here' without mentioning r.",
+   "Rewrite the question b distractor 'Pools and heat stroke are unrelated, so r must be 0' in plain words, such as 'Pools and heat stroke show no link at all'."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea at about the right depth, but its Year 12 wording relies on r, which the Stage 5 course does not use, so it needs small wording changes rather than being reused as is.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-correlation-causation",
+  "changes": [
+   "In the fourth card line, replace 'a scatterplot or a value of r' with 'a scatterplot or a strong trend', because Stage 5 core students describe correlation informally and do not use the coefficient r.",
+   "In question a, rewrite the distractor about r being positive so it does not mention r, for example 'The correlation is an error, as the trend cannot be positive here'.",
+   "In question b, rewrite the distractor about r being 0 so it does not mention r, for example 'Pools and heat stroke are unrelated, so the data must be wrong'."
+  ],
+  "sure": "medium",
+  "reason": "The NSW Year 12 point teaches exactly this idea, a strong relation without cause and a third factor driving both, at a simple depth that suits Years 9 and 10, but its mentions of the correlation coefficient r should be removed for Stage 5 core.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-correlation-causation",
+  "changes": [
+   "In the fourth card line, replace 'a scatterplot or a value of r' with 'a scatter plot or a strong trend'.",
+   "In question a, rewrite the distractor about r being positive so it does not mention r, and keep it clearly wrong.",
+   "In question b, rewrite the distractor about r being 0 so it does not mention r, and remove the last sentence of its why about r.",
+   "Write scatter plot as two words, as the other points in this chapter do."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card4",
+   "a.q",
+   "a.opt4",
+   "b.q",
+   "b.opt4",
+   "b.why"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches exactly this idea at a suitable depth, but it relies on the correlation coefficient \\(r\\), which Stage 5 core does not use. It also writes scatterplot where this chapter says scatter plot.",
+   "item": "643e856c1a663ddc",
+   "result": "decided",
+   "saved": {
+    "id": "mat-correlation-cause",
+    "title": "Correlation and cause",
+    "brief": "6ca91a5e792c",
+    "shortlist": [
+     [
+      "mat-correlation-causation",
+      0.34
+     ],
+     [
+      "mat-correlation-causation-2",
+      0.316
+     ],
+     [
+      "sci-correlation-causation",
+      0.294
+     ],
+     [
+      "mat-two-way-tables-categorical",
+      0.208
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00037,
+     "confirm": 0.01121
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-correlation-causation",
+     "changes": [
+      "Replace the references to the value of r in the card with plain language about how strong the pattern looks, because r is not a Stage 5 term.",
+      "Rewrite the question a distractor 'The correlation is an error, as r cannot be positive here' without mentioning r.",
+      "Rewrite the question b distractor 'Pools and heat stroke are unrelated, so r must be 0' in plain words, such as 'Pools and heat stroke show no link at all'."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same idea at about the right depth, but its Year 12 wording relies on r, which the Stage 5 course does not use, so it needs small wording changes rather than being reused as is.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-correlation-causation",
+     "changes": [
+      "In the fourth card line, replace 'a scatterplot or a value of r' with 'a scatterplot or a strong trend', because Stage 5 core students describe correlation informally and do not use the coefficient r.",
+      "In question a, rewrite the distractor about r being positive so it does not mention r, for example 'The correlation is an error, as the trend cannot be positive here'.",
+      "In question b, rewrite the distractor about r being 0 so it does not mention r, for example 'Pools and heat stroke are unrelated, so the data must be wrong'."
+     ],
+     "sure": "medium",
+     "reason": "The NSW Year 12 point teaches exactly this idea, a strong relation without cause and a third factor driving both, at a simple depth that suits Years 9 and 10, but its mentions of the correlation coefficient r should be removed for Stage 5 core.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "919dfd50edee9bc1"
+  }
+ ],
+ "draft": {
+  "title": "Correlation and causation",
+  "card": [
+   "Correlation means two variables move together. Causation means a change in one variable produces a change in the other.",
+   "A strong correlation does not prove causation. The data only shows that the variables move together, not why.",
+   [
+    "Third factor",
+    "a separate variable that affects both of the others and makes them move together. Ice cream sales and sunburn cases both rise in hot weather, so temperature is a third factor."
+   ],
+   "To claim causation, there needs to be more than a scatter plot or a strong trend. A reasonable explanation for how one variable affects the other is needed, and third factors need to be ruled out."
+  ],
+  "remember": "Moving together does not prove one causes the other. Look for a third factor.",
+  "a": {
+   "q": "A town finds that fires with more fire trucks sent to them also have more damage, and the trend is strong and positive. What is the best conclusion?",
+   "opts": [
+    "The correlation alone does not show trucks cause damage",
+    "Sending more fire trucks causes more damage to buildings",
+    "Damage causes fewer fire trucks to be sent to a fire",
+    "The trend is an error, as it cannot slope upwards here"
+   ],
+   "why": "A correlation shows only that the variables move together. A third factor, the size of the fire, probably leads to both more trucks and more damage. Saying the trucks cause the damage is the tempting mistake.",
+   "clue": "Think about what makes both numbers larger."
+  },
+  "b": {
+   "d": 3,
+   "q": "A city's data shows that suburbs with more swimming pools also have more cases of heat stroke. What is the most likely reason?",
+   "opts": [
+    "Hotter suburbs have more pools and more heat stroke",
+    "Owning a pool causes heat stroke in the owner",
+    "Heat stroke leads people to build pools at home",
+    "Pools and heat stroke are unrelated, so there is no pattern"
+   ],
+   "why": "Hot weather is a third factor that could lead to both more pools and more heat stroke. Claiming pools cause heat stroke treats the correlation as causation.",
+   "clue": "Look for a separate factor that affects both variables."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The correlation alone does not show trucks cause damage",
+   "also_right": []
+  },
+  "b": {
+   "best": "Hotter suburbs have more pools and more heat stroke",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Correlation and causation",
+  "card": [
+   "Correlation means two variables move together. Causation means a change in one variable produces a change in the other.",
+   "A strong correlation does not prove causation. The data only shows that the variables move together, not why.",
+   [
+    "Third factor",
+    "a separate variable that affects both of the others and makes them move together. Ice cream sales and sunburn cases both rise in hot weather, so temperature is a third factor."
+   ],
+   "To claim causation, there needs to be more than a scatter plot or a strong trend. A reasonable explanation for how one variable affects the other is needed, and third factors need to be ruled out."
+  ],
+  "remember": "Moving together does not prove one causes the other. Look for a third factor.",
+  "a": {
+   "q": "A town finds that fires with more fire trucks sent to them also have more damage, and the trend is strong and positive. What is the best conclusion?",
+   "opts": [
+    "The correlation alone does not show trucks cause damage",
+    "Sending more fire trucks causes more damage to buildings",
+    "Damage causes fewer fire trucks to be sent to a fire",
+    "The trend is an error, as it cannot slope upwards here"
+   ],
+   "why": "A correlation shows only that the variables move together. A third factor, the size of the fire, probably leads to both more trucks and more damage. Saying the trucks cause the damage is the tempting mistake.",
+   "clue": "Think about what makes both numbers larger."
+  },
+  "b": {
+   "d": 3,
+   "q": "A city's data shows that suburbs with more swimming pools also have more cases of heat stroke. What is the most likely reason?",
+   "opts": [
+    "Hotter suburbs have more pools and more heat stroke",
+    "Owning a pool causes heat stroke in the owner",
+    "Heat stroke leads people to build pools at home",
+    "Pools and heat stroke are unrelated, so there is no pattern"
+   ],
+   "why": "Hot weather is a third factor that could lead to both more pools and more heat stroke. Claiming pools cause heat stroke treats the correlation as causation.",
+   "clue": "Look for a separate factor that affects both variables."
+  }
+ }
 }

@@ -24,8 +24,48 @@
    0.276
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 may adapt geo-murray-darling-basin-plan, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:47Z confirm: Claude Opus 5.5 may adapt geo-murray-darling-basin-plan, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:39:46Z review: reusing geo-murray-darling-basin-plan"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00041,
+  "confirm": 0.01212
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-murray-darling-basin-plan",
+  "changes": [
+   "Add a sentence that First Nations groups hold their own views on how basin water should be shared, such as wanting a real say and cultural flows.",
+   "Add an example from a New South Wales basin town or river, such as one on the Darling or Murray, so the card suits a NSW course."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same Basin Plan ideas at the right depth, but it omits First Nations views and needs a NSW example, so it needs small additions rather than a full rewrite.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "geo-murray-darling-basin-plan",
+  "changes": [
+   "Add First Nations groups to the bullet on differing views, for example that many First Nations groups say they have been left out of decisions and want water to care for Country, alongside the views of irrigators and towns.",
+   "Use the term Aboriginal and Torres Strait Islander peoples or First Nations peoples in line with the NSW syllabus wording."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same Basin Plan idea of limits, environmental flows and conflicting views at a Year 9–10 depth, but it should add the First Nations perspective that the brief names.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "geo-murray-darling-basin-plan",
+ "matched": {
+  "verdict": "reuse",
+  "from": "geo-murray-darling-basin-plan",
+  "by": "owner",
+  "at": "2026-11-20T14:39:46Z"
+ }
 }

@@ -12,8 +12,222 @@
    0.356
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:58Z write: failed the content check, writing again",
+  "2026-11-20T12:45:01Z write: done",
+  "2026-11-20T12:53:29Z check: flagged",
+  "2026-11-20T13:00:01Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.01313,
+  "check": 0.0124,
+  "fix": 0.02042,
+  "recheck": 0.0087
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the difference between weather and climate or the natural drivers of climate; the closest, Evidence of climate change, is about evidence of human-driven warming, and the ocean currents point covers only one driver.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Weather and climate",
+  "card": [
+   [
+    "Weather",
+    "the conditions in one place over hours or days, such as temperature, rain, wind and cloud. It can change quickly."
+   ],
+   [
+    "Climate",
+    "the average pattern of weather in a place over 30 years or more. It is found by collecting weather records for a long time."
+   ],
+   "Natural processes shape climate. Ocean currents move heat around the planet, and large volcanic eruptions can put ash and gas into the air.",
+   "One hot day or one wet week is weather. It does not on its own show that the climate has changed."
+  ],
+  "remember": "Weather is short term. Climate is the long term average.",
+  "a": {
+   "q": "Which of these statements is about climate?",
+   "opts": [
+    "Hobart has averaged 600 mm of rain a year for 40 years",
+    "Hobart had heavy rain and strong winds on Tuesday",
+    "Hobart had its coldest morning of the week today",
+    "Hobart will have a sunny weekend, with light winds"
+   ],
+   "why": "An average over 40 years describes a long term pattern, so it is climate. The other three describe conditions over hours or days, which is weather.",
+   "clue": "Look for the statement that covers the longest time."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya lives in Broken Hill. It had a record hot week in January. She says this proves the climate there has changed. What is the best reply?",
+   "opts": [
+    "A hot week is weather, and climate is a 30 year average",
+    "A hot week is climate, because it is a record for the town",
+    "Climate can only change when a volcano erupts nearby",
+    "Climate is the weather on any one day, so Priya is right"
+   ],
+   "why": "A single hot week is weather, as it covers only days. Climate is an average over 30 years or more, so one week cannot show a change. The second option is tempting, but a record is still a short term event.",
+   "clue": "How long is a week compared with the time needed to describe climate?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Hobart has averaged 600 mm of rain a year for 40 years",
+   "also_right": []
+  },
+  "b": {
+   "best": "A hot week is weather, and climate is a 30 year average",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one with precise figures (600 mm, 40 years) and is clearly the longest, so a student could pick it without knowing the idea. The clue, which points to the longest time span, makes this worse."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers check out. In question a, the right option stands out as the only one with numbers and the longest wording, and the clue points straight to it."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option is the only one with precise figures (600 mm, 40 years) and is clearly the longest, so a student could pick it without knowing the idea. The clue, which points to the longest time span, makes this worse."
+ ],
+ "proposal": {
+  "title": "Weather and climate",
+  "card": [
+   [
+    "Weather",
+    "the conditions in one place over hours or days, such as temperature, rain, wind and cloud. It can change quickly."
+   ],
+   [
+    "Climate",
+    "the average pattern of weather in a place over 30 years or more. It is found by collecting weather records for a long time."
+   ],
+   "Natural processes shape climate. Ocean currents move heat around the planet, and large volcanic eruptions can put ash and gas into the air.",
+   "One hot day or one wet week is weather. It does not on its own show that the climate has changed."
+  ],
+  "remember": "Weather is short term. Climate is the long term average.",
+  "a": {
+   "q": "Mia looks at weather records for her town. Which record describes the town's climate?",
+   "opts": [
+    "Rain averaged 600 mm a year from 1991 to 2020",
+    "Rain totalled 60 mm over three stormy days last week",
+    "It reached 38°C on the hottest day of 2024",
+    "Winds averaged 40 km/h across Sunday afternoon"
+   ],
+   "why": "An average taken over 30 years describes the long term pattern, so it is climate. The wind record is tempting because it is also an average, but it covers only one afternoon, so it is weather. The 2024 record names a year but describes a single day.",
+   "clue": "Check how long a span of time each record covers."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya lives in Broken Hill. It had a record hot week in January. She says this proves the climate there has changed. What is the best reply?",
+   "opts": [
+    "A hot week is weather, and climate is a 30 year average",
+    "A hot week is climate, because it is a record for the town",
+    "Climate can only change when a volcano erupts nearby",
+    "Climate is the weather on any one day, so Priya is right"
+   ],
+   "why": "A single hot week is weather, as it covers only days. Climate is an average over 30 years or more, so one week cannot show a change. The second option is tempting, but a record is still a short term event.",
+   "clue": "How long is a week compared with the time needed to describe climate?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Rain averaged 600 mm a year from 1991 to 2020",
+    "also_right": []
+   },
+   "b": {
+    "best": "A hot week is weather, and climate is a 30 year average",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one with precise figures (600 mm, 40 years) and is clearly the longest, so a student could pick it without knowing the idea. The clue, which points to the longest time span, makes this worse."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The right option is the only one with precise figures (600 mm, 40 years) and is clearly the longest, so a student could pick it without knowing the idea. The clue, which points to the longest time span, makes this worse."
+  ]
+ },
+ "final": {
+  "title": "Weather and climate",
+  "card": [
+   [
+    "Weather",
+    "the conditions in one place over hours or days, such as temperature, rain, wind and cloud. It can change quickly."
+   ],
+   [
+    "Climate",
+    "the average pattern of weather in a place over 30 years or more. It is found by collecting weather records for a long time."
+   ],
+   "Natural processes shape climate. Ocean currents move heat around the planet, and large volcanic eruptions can put ash and gas into the air.",
+   "One hot day or one wet week is weather. It does not on its own show that the climate has changed."
+  ],
+  "remember": "Weather is short term. Climate is the long term average.",
+  "a": {
+   "q": "Mia looks at weather records for her town. Which record describes the town's climate?",
+   "opts": [
+    "Rain averaged 600 mm a year from 1991 to 2020",
+    "Rain totalled 60 mm over three stormy days last week",
+    "It reached 38°C on the hottest day of 2024",
+    "Winds averaged 40 km/h across Sunday afternoon"
+   ],
+   "why": "An average taken over 30 years describes the long term pattern, so it is climate. The wind record is tempting because it is also an average, but it covers only one afternoon, so it is weather. The 2024 record names a year but describes a single day.",
+   "clue": "Check how long a span of time each record covers."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya lives in Broken Hill. It had a record hot week in January. She says this proves the climate there has changed. What is the best reply?",
+   "opts": [
+    "A hot week is weather, and climate is a 30 year average",
+    "A hot week is climate, because it is a record for the town",
+    "Climate can only change when a volcano erupts nearby",
+    "Climate is the weather on any one day, so Priya is right"
+   ],
+   "why": "A single hot week is weather, as it covers only days. Climate is an average over 30 years or more, so one week cannot show a change. The second option is tempting, but a record is still a short term event.",
+   "clue": "How long is a week compared with the time needed to describe climate?"
+  }
+ },
+ "cleared_by": "recheck"
 }

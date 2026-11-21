@@ -24,8 +24,115 @@
    0.207
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:53Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:53Z write: done",
+  "2026-11-20T12:44:57Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00032,
+  "write": 0.00684,
+  "check": 0.01001
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest card, mat-choosing-measure-centre, covers how an outlier moves the mean and median but is about choosing a measure of centre and never mentions the effect on range, which the new point requires, so a new point is the safer match.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The effect of an outlier",
+  "card": [
+   "An outlier is a value that is far from the rest of the data. For example, in the scores 6, 7, 7, 8, 9 and 40, the score 40 is an outlier.",
+   "An outlier pulls the mean towards it. Without the 40, the mean is \\(\\frac{37}{5} = 7.4\\). With the 40, the mean is \\(\\frac{77}{6} \\approx 12.8\\).",
+   "An outlier changes the range a lot. The range is \\(9 - 6 = 3\\) without the 40, and \\(40 - 6 = 34\\) with it.",
+   "An outlier barely moves the median. The median is 7 without the 40, and \\(\\frac{7 + 8}{2} = 7.5\\) with it."
+  ],
+  "remember": "An outlier pulls the mean and stretches the range, but the median hardly moves.",
+  "a": {
+   "q": "The ages of five friends are 12, 13, 13, 14 and 13. A 60 year old joins them. Which measure changes the least?",
+   "opts": [
+    "The median",
+    "The mean",
+    "The range",
+    "The total of the ages"
+   ],
+   "why": "The median goes from 13 to 13, so it does not change at all. The mean jumps from 13 to about 20.8 and the range goes from 2 to 48. The mean is the tempting choice, but it is pulled towards the outlier.",
+   "clue": "Find each measure before and after the 60 joins."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leila's quiz marks are 14, 15, 15, 16 and 15. She then scores 2 on a sixth quiz. Which statement is correct?",
+   "opts": [
+    "The mean falls by more than the median",
+    "The median falls by more than the mean",
+    "The mean and median fall by the same amount",
+    "The range stays the same as before"
+   ],
+   "why": "The mean goes from 15 to \\(\\frac{77}{6} \\approx 12.8\\), a fall of about 2.2. The median goes from 15 to 15, so it does not fall. The range grows from 2 to 14, so it does not stay the same.",
+   "clue": "Work out the mean and median both before and after the 2."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The median",
+   "also_right": []
+  },
+  "b": {
+   "best": "The mean falls by more than the median",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card's working is correct (mean 7.4 to about 12.8, range 3 to 34, median 7 to 7.5), and both questions have exactly one right answer that matches the explanations."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The effect of an outlier",
+  "card": [
+   "An outlier is a value that is far from the rest of the data. For example, in the scores 6, 7, 7, 8, 9 and 40, the score 40 is an outlier.",
+   "An outlier pulls the mean towards it. Without the 40, the mean is \\(\\frac{37}{5} = 7.4\\). With the 40, the mean is \\(\\frac{77}{6} \\approx 12.8\\).",
+   "An outlier changes the range a lot. The range is \\(9 - 6 = 3\\) without the 40, and \\(40 - 6 = 34\\) with it.",
+   "An outlier barely moves the median. The median is 7 without the 40, and \\(\\frac{7 + 8}{2} = 7.5\\) with it."
+  ],
+  "remember": "An outlier pulls the mean and stretches the range, but the median hardly moves.",
+  "a": {
+   "q": "The ages of five friends are 12, 13, 13, 14 and 13. A 60 year old joins them. Which measure changes the least?",
+   "opts": [
+    "The median",
+    "The mean",
+    "The range",
+    "The total of the ages"
+   ],
+   "why": "The median goes from 13 to 13, so it does not change at all. The mean jumps from 13 to about 20.8 and the range goes from 2 to 48. The mean is the tempting choice, but it is pulled towards the outlier.",
+   "clue": "Find each measure before and after the 60 joins."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leila's quiz marks are 14, 15, 15, 16 and 15. She then scores 2 on a sixth quiz. Which statement is correct?",
+   "opts": [
+    "The mean falls by more than the median",
+    "The median falls by more than the mean",
+    "The mean and median fall by the same amount",
+    "The range stays the same as before"
+   ],
+   "why": "The mean goes from 15 to \\(\\frac{77}{6} \\approx 12.8\\), a fall of about 2.2. The median goes from 15 to 15, so it does not fall. The range grows from 2 to 14, so it does not stay the same.",
+   "clue": "Work out the mean and median both before and after the 2."
+  }
+ },
+ "cleared_by": "checker"
 }

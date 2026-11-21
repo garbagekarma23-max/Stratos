@@ -24,8 +24,131 @@
    0.287
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "write": 0.00699,
+  "check": 0.00689
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches relative dating of fossils by rock layer: the sedimentary rock card only mentions oldest layers at the bottom while explaining how rock forms, and the archaeology card applies the same principle to artefacts in a History course, so a Science point needs a new card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Relative dating of rock layers",
+  "card": [
+   "Sedimentary rock forms in layers. Each new layer of sediment settles on top of the layers already there.",
+   "In layers that have not been disturbed, the lowest layer is the oldest and the top layer is the youngest.",
+   "Fossils lie in the layer where the living thing was buried. A fossil in a lower layer is older than a fossil in a layer above it.",
+   "This is relative dating. It tells us which is older or younger, but it does not give an age in years."
+  ],
+  "remember": "In undisturbed layers, lower means older. Relative dating gives order, not years.",
+  "a": {
+   "q": "A cliff has three undisturbed layers of sedimentary rock. Layer X is at the top, layer Y is in the middle and layer Z is at the bottom. Which layer is the oldest?",
+   "opts": [
+    "Layer Z, because it is at the bottom",
+    "Layer X, because it is at the top",
+    "Layer Y, because it is in the middle",
+    "They are the same age, as they are in one cliff"
+   ],
+   "why": "New sediment settles on top of older sediment, so in undisturbed layers the bottom layer formed first. Layer X is the youngest, not the oldest, because it was laid down last.",
+   "clue": "Which layer was laid down first?"
+  },
+  "b": {
+   "d": 2,
+   "q": "At a quarry near Dubbo, Sam finds a shell fossil in a lower layer and a fish fossil in a higher layer. The layers are undisturbed. What can Sam conclude?",
+   "opts": [
+    "The shell is older than the fish",
+    "The fish is older than the shell",
+    "The shell is 200 million years old",
+    "The shell and fish lived at the same time"
+   ],
+   "why": "The lower layer is older, so the shell fossil in it is older than the fish fossil above it. Relative dating cannot give an age in years, so the claim of 200 million years cannot be made from the layers alone.",
+   "clue": "Lower layers are older, and relative dating only gives order."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A cross-section of four flat, undisturbed horizontal layers of sedimentary rock stacked on each other. Label the top layer 'Youngest' and the bottom layer 'Oldest'. Show an arrow beside the stack pointing down labelled 'Older'.",
+    "why": "Seeing the layers stacked shows why the bottom layer formed first."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Layer Z, because it is at the bottom",
+   "also_right": []
+  },
+  "b": {
+   "best": "The shell is older than the fish",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Relative dating of rock layers",
+  "card": [
+   "Sedimentary rock forms in layers. Each new layer of sediment settles on top of the layers already there.",
+   "In layers that have not been disturbed, the lowest layer is the oldest and the top layer is the youngest.",
+   "Fossils lie in the layer where the living thing was buried. A fossil in a lower layer is older than a fossil in a layer above it.",
+   "This is relative dating. It tells us which is older or younger, but it does not give an age in years."
+  ],
+  "remember": "In undisturbed layers, lower means older. Relative dating gives order, not years.",
+  "a": {
+   "q": "A cliff has three undisturbed layers of sedimentary rock. Layer X is at the top, layer Y is in the middle and layer Z is at the bottom. Which layer is the oldest?",
+   "opts": [
+    "Layer Z, because it is at the bottom",
+    "Layer X, because it is at the top",
+    "Layer Y, because it is in the middle",
+    "They are the same age, as they are in one cliff"
+   ],
+   "why": "New sediment settles on top of older sediment, so in undisturbed layers the bottom layer formed first. Layer X is the youngest, not the oldest, because it was laid down last.",
+   "clue": "Which layer was laid down first?"
+  },
+  "b": {
+   "d": 2,
+   "q": "At a quarry near Dubbo, Sam finds a shell fossil in a lower layer and a fish fossil in a higher layer. The layers are undisturbed. What can Sam conclude?",
+   "opts": [
+    "The shell is older than the fish",
+    "The fish is older than the shell",
+    "The shell is 200 million years old",
+    "The shell and fish lived at the same time"
+   ],
+   "why": "The lower layer is older, so the shell fossil in it is older than the fish fossil above it. Relative dating cannot give an age in years, so the claim of 200 million years cannot be made from the layers alone.",
+   "clue": "Lower layers are older, and relative dating only gives order."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A cross-section of four flat, undisturbed horizontal layers of sedimentary rock stacked on each other. Label the top layer 'Youngest' and the bottom layer 'Oldest'. Show an arrow beside the stack pointing down labelled 'Older'.",
+    "why": "Seeing the layers stacked shows why the bottom layer formed first."
+   }
+  ]
+ },
+ "cleared_by": "checker"
 }

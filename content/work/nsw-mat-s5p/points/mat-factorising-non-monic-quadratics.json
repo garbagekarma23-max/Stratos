@@ -24,8 +24,115 @@
    0.209
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:56Z write: done",
+  "2026-11-20T12:44:59Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "write": 0.00808,
+  "check": 0.00954
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, Factorising monic quadratics, only covers x² terms with coefficient 1, while this point needs the extra step of splitting the middle term or using the cross method for a non-monic quadratic, so it is a different technique and needs a new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Factorising non-monic quadratics",
+  "card": [
+   "A non-monic quadratic has an \\(x^{2}\\) term with a coefficient other than 1, such as \\(2x^{2} + 7x + 3\\). Always take out any common factor first.",
+   "For \\(ax^{2} + bx + c\\), find two numbers that multiply to \\(a \\times c\\) and add to \\(b\\). For \\(2x^{2} + 7x + 3\\), \\(a \\times c = 6\\) and \\(b = 7\\), so the numbers are 1 and 6.",
+   "Split the middle term: \\(2x^{2} + x + 6x + 3\\). Factorise the first pair and the last pair: \\(x(2x + 1) + 3(2x + 1)\\).",
+   "Take out the common bracket: \\((2x + 1)(x + 3)\\). Check by expanding: \\(2x^{2} + 6x + x + 3 = 2x^{2} + 7x + 3\\)."
+  ],
+  "remember": "Find two numbers that multiply to \\(a \\times c\\) and add to \\(b\\), split the middle term, then take out the common bracket.",
+  "a": {
+   "q": "Which pair of numbers is used to split the middle term of \\(3x^{2} + 10x + 8\\)?",
+   "opts": [
+    "4 and 6",
+    "2 and 4",
+    "1 and 8",
+    "5 and 5"
+   ],
+   "why": "Here \\(a \\times c = 3 \\times 8 = 24\\) and \\(b = 10\\). The numbers 4 and 6 multiply to 24 and add to 10. The pair 1 and 8 multiplies to 8, which is just \\(c\\), but \\(a\\) must be included.",
+   "clue": "Multiply the \\(x^{2}\\) coefficient by the constant first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which is the correct factorisation of \\(6x^{2} + 13x + 5\\)?",
+   "opts": [
+    "\\((2x + 1)(3x + 5)\\)",
+    "\\((2x + 5)(3x + 1)\\)",
+    "\\((6x + 1)(x + 5)\\)",
+    "\\((2x + 1)(3x + 6)\\)"
+   ],
+   "why": "\\(a \\times c = 30\\), and 3 and 10 multiply to 30 and add to 13. So \\(6x^{2} + 3x + 10x + 5 = 3x(2x + 1) + 5(2x + 1) = (2x + 1)(3x + 5)\\). The option \\((2x + 5)(3x + 1)\\) has the right terms in the wrong places: it expands to \\(6x^{2} + 17x + 5\\).",
+   "clue": "Expand each option and compare the middle term with \\(13x\\)."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "4 and 6",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\((2x + 1)(3x + 5)\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both questions have exactly one correct option, and the card, the explanations and all the expansions check out."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Factorising non-monic quadratics",
+  "card": [
+   "A non-monic quadratic has an \\(x^{2}\\) term with a coefficient other than 1, such as \\(2x^{2} + 7x + 3\\). Always take out any common factor first.",
+   "For \\(ax^{2} + bx + c\\), find two numbers that multiply to \\(a \\times c\\) and add to \\(b\\). For \\(2x^{2} + 7x + 3\\), \\(a \\times c = 6\\) and \\(b = 7\\), so the numbers are 1 and 6.",
+   "Split the middle term: \\(2x^{2} + x + 6x + 3\\). Factorise the first pair and the last pair: \\(x(2x + 1) + 3(2x + 1)\\).",
+   "Take out the common bracket: \\((2x + 1)(x + 3)\\). Check by expanding: \\(2x^{2} + 6x + x + 3 = 2x^{2} + 7x + 3\\)."
+  ],
+  "remember": "Find two numbers that multiply to \\(a \\times c\\) and add to \\(b\\), split the middle term, then take out the common bracket.",
+  "a": {
+   "q": "Which pair of numbers is used to split the middle term of \\(3x^{2} + 10x + 8\\)?",
+   "opts": [
+    "4 and 6",
+    "2 and 4",
+    "1 and 8",
+    "5 and 5"
+   ],
+   "why": "Here \\(a \\times c = 3 \\times 8 = 24\\) and \\(b = 10\\). The numbers 4 and 6 multiply to 24 and add to 10. The pair 1 and 8 multiplies to 8, which is just \\(c\\), but \\(a\\) must be included.",
+   "clue": "Multiply the \\(x^{2}\\) coefficient by the constant first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which is the correct factorisation of \\(6x^{2} + 13x + 5\\)?",
+   "opts": [
+    "\\((2x + 1)(3x + 5)\\)",
+    "\\((2x + 5)(3x + 1)\\)",
+    "\\((6x + 1)(x + 5)\\)",
+    "\\((2x + 1)(3x + 6)\\)"
+   ],
+   "why": "\\(a \\times c = 30\\), and 3 and 10 multiply to 30 and add to 13. So \\(6x^{2} + 3x + 10x + 5 = 3x(2x + 1) + 5(2x + 1) = (2x + 1)(3x + 5)\\). The option \\((2x + 5)(3x + 1)\\) has the right terms in the wrong places: it expands to \\(6x^{2} + 17x + 5\\).",
+   "clue": "Expand each option and compare the middle term with \\(13x\\)."
+  }
+ },
+ "cleared_by": "checker"
 }

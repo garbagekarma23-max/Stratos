@@ -24,8 +24,255 @@
    0.253
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 may adapt his-writing-historical-explanation, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:51Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:52Z write: failed the content check, writing again",
+  "2026-11-20T12:44:57Z write: done",
+  "2026-11-20T12:53:26Z check: flagged",
+  "2026-11-20T12:59:59Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00043,
+  "confirm": 0.01122,
+  "write": 0.01364,
+  "check": 0.01279,
+  "fix": 0.0219,
+  "recheck": 0.00835
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "his-writing-historical-explanation",
+  "changes": [
+   "Rename the opening 'clear point' to 'clear thesis' so the card uses the term the new point's brief uses.",
+   "Check that the examples and wording suit Stage 5 students in Years 9 and 10, since the card was written for Year 8."
+  ],
+  "sure": "medium",
+  "reason": "This card already teaches the full structure of a historical argument (a clear opening claim, sourced evidence, explaining how the evidence supports it, and linking back), but it uses 'point' rather than 'thesis' and was written for Year 8.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Writing a historical explanation, teaches a single Year 8 point-evidence-explain paragraph, and the thesis point covers only the thesis, so neither teaches a whole Stage 5 argument where a thesis is backed by several points, each with source evidence and explanation.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Building a historical argument",
+  "card": [
+   [
+    "Thesis",
+    "A thesis is the clear answer your argument gives to the question. It is a claim that can be argued, not just a fact."
+   ],
+   [
+    "Evidence",
+    "Each point in the argument is backed by evidence from a source, such as a quotation, a figure or a detail from an image."
+   ],
+   [
+    "Explanation",
+    "After the evidence, explain how it proves the point and links back to the thesis. Evidence left unexplained does not argue anything."
+   ],
+   "A strong argument repeats this pattern for each point: make the point, give evidence, explain it. The conclusion then returns to the thesis."
+  ],
+  "remember": "Thesis, then evidence for each point, then an explanation of how the evidence proves it.",
+  "a": {
+   "q": "A student writes: \"Here is a diary entry from a convict in 1830.\" She does not say what it shows. What is missing from her paragraph?",
+   "opts": [
+    "An explanation of how the evidence proves the point",
+    "A thesis that states a fact",
+    "A longer quotation from the same diary",
+    "A different source from another century"
+   ],
+   "why": "Evidence only helps an argument when the writer explains how it proves the point. Without that, the reader does not know what the diary entry shows. A longer quotation would still be unexplained.",
+   "clue": "What links the evidence back to the point being made?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which sentence is the best thesis for an essay on why many people left Ireland for Australia in the 1840s?",
+   "opts": [
+    "The Great Famine was the main cause of Irish emigration",
+    "Many Irish people emigrated to Australia in the 1840s",
+    "This essay will talk about Irish emigration to Australia",
+    "Ships carried emigrants from Ireland to Sydney and Melbourne"
+   ],
+   "why": "The first option gives a clear answer to the question that can be argued and supported with evidence. The second is a fact that needs no argument. The third only names the topic and the fourth is a detail, so neither answers the question.",
+   "clue": "A thesis answers the question with a claim that can be argued."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "An explanation of how the evidence proves the point",
+   "also_right": []
+  },
+  "b": {
+   "best": "The Great Famine was the main cause of Irish emigration",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why mislabels the options. It calls the second option ('This essay will talk about Irish emigration to Australia') a fact, but that option only names the topic. It says the third option only names the topic, but the third ('Many Irish people emigrated to Australia in the 1840s') is the plain fact. The two descriptions are swapped."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem says 'She does not say what it shows', which all but names the missing explanation. A student can pick the answer without knowing the thesis–evidence–explanation pattern."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are sound. However, the why for question b swaps its descriptions of the second and third options, and question a's stem largely gives its answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The why mislabels the options. It calls the second option ('This essay will talk about Irish emigration to Australia') a fact, but that option only names the topic. It says the third option only names the topic, but the third ('Many Irish people emigrated to Australia in the 1840s') is the plain fact. The two descriptions are swapped.",
+  "Question a, wording: The stem says 'She does not say what it shows', which all but names the missing explanation. A student can pick the answer without knowing the thesis–evidence–explanation pattern."
+ ],
+ "proposal": {
+  "title": "Building a historical argument",
+  "card": [
+   [
+    "Thesis",
+    "A thesis is the clear answer your argument gives to the question. It is a claim that can be argued, not just a fact."
+   ],
+   [
+    "Evidence",
+    "Each point in the argument is backed by evidence from a source, such as a quotation, a figure or a detail from an image."
+   ],
+   [
+    "Explanation",
+    "After the evidence, explain how it proves the point and links back to the thesis. Evidence left unexplained does not argue anything."
+   ],
+   "A strong argument repeats this pattern for each point: make the point, give evidence, explain it. The conclusion then returns to the thesis."
+  ],
+  "remember": "Thesis, then evidence for each point, then an explanation of how the evidence proves it.",
+  "a": {
+   "q": "A student's paragraph opens with her point: convicts in the 1830s were often punished harshly. She then quotes a convict's letter describing a flogging. Her paragraph ends there. What is missing?",
+   "opts": [
+    "An explanation of how the letter supports her point",
+    "A thesis that states a plain fact about convicts",
+    "A second quotation from the same convict's letter",
+    "A source written by a historian instead of a convict"
+   ],
+   "why": "She has made a point and given evidence, but she has not explained how the letter proves the point. Unexplained evidence does not argue anything. Adding a second quotation would only give the reader more evidence that is still unexplained.",
+   "clue": "Think of the three-step pattern. Which step has she skipped?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which sentence is the best thesis for an essay on why many people left Ireland for Australia in the 1840s?",
+   "opts": [
+    "The Great Famine was the main cause of Irish emigration",
+    "Many Irish people emigrated to Australia in the 1840s",
+    "This essay will talk about Irish emigration to Australia",
+    "Some Irish emigrants were given assisted passages to Sydney"
+   ],
+   "why": "Saying the Great Famine was the main cause gives a clear answer to the question that can be argued and backed with evidence. The sentence that many Irish people emigrated in the 1840s is a plain fact that needs no argument. The sentence beginning \"This essay will talk about\" only names the topic, and the one about assisted passages is a detail, so none of these answers why people left.",
+   "clue": "A thesis answers the question with a claim that can be argued."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "An explanation of how the letter supports her point",
+    "also_right": []
+   },
+   "b": {
+    "best": "The Great Famine was the main cause of Irish emigration",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why mislabels the options. It calls the second option ('This essay will talk about Irish emigration to Australia') a fact, but that option only names the topic. It says the third option only names the topic, but the third ('Many Irish people emigrated to Australia in the 1840s') is the plain fact. The two descriptions are swapped."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem says 'She does not say what it shows', which all but names the missing explanation. A student can pick the answer without knowing the thesis–evidence–explanation pattern."
+   }
+  ],
+  "flags": [
+   "Question b, other: The why mislabels the options. It calls the second option ('This essay will talk about Irish emigration to Australia') a fact, but that option only names the topic. It says the third option only names the topic, but the third ('Many Irish people emigrated to Australia in the 1840s') is the plain fact. The two descriptions are swapped.",
+   "Question a, wording: The stem says 'She does not say what it shows', which all but names the missing explanation. A student can pick the answer without knowing the thesis–evidence–explanation pattern."
+  ]
+ },
+ "final": {
+  "title": "Building a historical argument",
+  "card": [
+   [
+    "Thesis",
+    "A thesis is the clear answer your argument gives to the question. It is a claim that can be argued, not just a fact."
+   ],
+   [
+    "Evidence",
+    "Each point in the argument is backed by evidence from a source, such as a quotation, a figure or a detail from an image."
+   ],
+   [
+    "Explanation",
+    "After the evidence, explain how it proves the point and links back to the thesis. Evidence left unexplained does not argue anything."
+   ],
+   "A strong argument repeats this pattern for each point: make the point, give evidence, explain it. The conclusion then returns to the thesis."
+  ],
+  "remember": "Thesis, then evidence for each point, then an explanation of how the evidence proves it.",
+  "a": {
+   "q": "A student's paragraph opens with her point: convicts in the 1830s were often punished harshly. She then quotes a convict's letter describing a flogging. Her paragraph ends there. What is missing?",
+   "opts": [
+    "An explanation of how the letter supports her point",
+    "A thesis that states a plain fact about convicts",
+    "A second quotation from the same convict's letter",
+    "A source written by a historian instead of a convict"
+   ],
+   "why": "She has made a point and given evidence, but she has not explained how the letter proves the point. Unexplained evidence does not argue anything. Adding a second quotation would only give the reader more evidence that is still unexplained.",
+   "clue": "Think of the three-step pattern. Which step has she skipped?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which sentence is the best thesis for an essay on why many people left Ireland for Australia in the 1840s?",
+   "opts": [
+    "The Great Famine was the main cause of Irish emigration",
+    "Many Irish people emigrated to Australia in the 1840s",
+    "This essay will talk about Irish emigration to Australia",
+    "Some Irish emigrants were given assisted passages to Sydney"
+   ],
+   "why": "Saying the Great Famine was the main cause gives a clear answer to the question that can be argued and backed with evidence. The sentence that many Irish people emigrated in the 1840s is a plain fact that needs no argument. The sentence beginning \"This essay will talk about\" only names the topic, and the one about assisted passages is a detail, so none of these answers why people left.",
+   "clue": "A thesis answers the question with a claim that can be argued."
+  }
+ },
+ "cleared_by": "recheck"
 }

@@ -24,8 +24,195 @@
    0.321
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:56Z write: failed the content check, writing again",
+  "2026-11-20T12:44:59Z write: done",
+  "2026-11-20T12:53:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00044,
+  "write": 0.02147,
+  "check": 0.00931
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, mat-circles, is written for Year 11 and adds completing the square, which is beyond the Stage 5 brief, and its second question depends on that method, so it would need a change of depth rather than a small adjustment; mat-circles-ellipses is broader because it also covers ellipses.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Circles on the Cartesian plane",
+  "card": [
+   "A circle is all the points a fixed distance, the radius \\(r\\), from its centre. A circle with centre \\((0, 0)\\) has equation \\(x^{2} + y^{2} = r^{2}\\).",
+   "Example: \\(x^{2} + y^{2} = 25\\) has centre \\((0, 0)\\). Here \\(r^{2} = 25\\), so the radius is \\(r = 5\\), not 25.",
+   "A circle with centre \\((h, k)\\) has equation \\((x - h)^{2} + (y - k)^{2} = r^{2}\\). The signs inside the brackets are the opposite of the centre's coordinates.",
+   "Example: \\((x - 3)^{2} + (y + 2)^{2} = 16\\) has centre \\((3, -2)\\) and radius 4. Here \\(y + 2\\) is \\(y - (-2)\\)."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The circle \\(x^{2} + y^{2} = 25\\) with centre \\((0, 0)\\) and radius 5. It crosses the axes at \\((5, 0)\\), \\((-5, 0)\\), \\((0, 5)\\) and \\((0, -5)\\).",
+    "x": {
+     "min": -8,
+     "max": 8,
+     "label": "\\(x\\)",
+     "step": 2
+    },
+    "y": {
+     "min": -8,
+     "max": 8,
+     "label": "\\(y\\)",
+     "step": 2
+    },
+    "grid": true,
+    "equal": true,
+    "items": [
+     {
+      "type": "circle",
+      "centre": [
+       0,
+       0
+      ],
+      "r": 5
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "label": "\\((0, 0)\\)",
+      "pos": "above-right"
+     }
+    ]
+   }
+  },
+  "remember": "Read the centre from the brackets with the signs flipped, and the radius as the square root of the right side.",
+  "a": {
+   "q": "What are the centre and radius of \\((x - 1)^{2} + (y - 4)^{2} = 9\\)?",
+   "opts": [
+    "Centre \\((1, 4)\\), radius 3",
+    "Centre \\((1, 4)\\), radius 9",
+    "Centre \\((-1, -4)\\), radius 3",
+    "Centre \\((-1, -4)\\), radius 9"
+   ],
+   "why": "The brackets are \\(x - 1\\) and \\(y - 4\\), so the centre is \\((1, 4)\\). The right side is \\(r^{2} = 9\\), so the radius is 3. Radius 9 forgets to take the square root.",
+   "clue": "Flip the signs for the centre, and take a square root for the radius."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which equation is the circle with centre \\((-2, 5)\\) and radius 6?",
+   "opts": [
+    "\\((x + 2)^{2} + (y - 5)^{2} = 36\\)",
+    "\\((x - 2)^{2} + (y + 5)^{2} = 36\\)",
+    "\\((x + 2)^{2} + (y - 5)^{2} = 6\\)",
+    "\\((x - 2)^{2} + (y + 5)^{2} = 6\\)"
+   ],
+   "why": "With \\(h = -2\\) and \\(k = 5\\), the brackets are \\(x - (-2) = x + 2\\) and \\(y - 5\\). The right side is \\(r^{2} = 6^{2} = 36\\). The options ending in 6 forget to square the radius.",
+   "clue": "The right side is the radius squared, and the signs in the brackets are opposite to the centre."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Centre \\((1, 4)\\), radius 3",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\((x + 2)^{2} + (y - 5)^{2} = 36\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Circles on the Cartesian plane",
+  "card": [
+   "A circle is all the points a fixed distance, the radius \\(r\\), from its centre. A circle with centre \\((0, 0)\\) has equation \\(x^{2} + y^{2} = r^{2}\\).",
+   "Example: \\(x^{2} + y^{2} = 25\\) has centre \\((0, 0)\\). Here \\(r^{2} = 25\\), so the radius is \\(r = 5\\), not 25.",
+   "A circle with centre \\((h, k)\\) has equation \\((x - h)^{2} + (y - k)^{2} = r^{2}\\). The signs inside the brackets are the opposite of the centre's coordinates.",
+   "Example: \\((x - 3)^{2} + (y + 2)^{2} = 16\\) has centre \\((3, -2)\\) and radius 4. Here \\(y + 2\\) is \\(y - (-2)\\)."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The circle \\(x^{2} + y^{2} = 25\\) with centre \\((0, 0)\\) and radius 5. It crosses the axes at \\((5, 0)\\), \\((-5, 0)\\), \\((0, 5)\\) and \\((0, -5)\\).",
+    "x": {
+     "min": -8,
+     "max": 8,
+     "label": "\\(x\\)",
+     "step": 2
+    },
+    "y": {
+     "min": -8,
+     "max": 8,
+     "label": "\\(y\\)",
+     "step": 2
+    },
+    "grid": true,
+    "equal": true,
+    "items": [
+     {
+      "type": "circle",
+      "centre": [
+       0,
+       0
+      ],
+      "r": 5
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "label": "\\((0, 0)\\)",
+      "pos": "above-right"
+     }
+    ]
+   }
+  },
+  "remember": "Read the centre from the brackets with the signs flipped, and the radius as the square root of the right side.",
+  "a": {
+   "q": "What are the centre and radius of \\((x - 1)^{2} + (y - 4)^{2} = 9\\)?",
+   "opts": [
+    "Centre \\((1, 4)\\), radius 3",
+    "Centre \\((1, 4)\\), radius 9",
+    "Centre \\((-1, -4)\\), radius 3",
+    "Centre \\((-1, -4)\\), radius 9"
+   ],
+   "why": "The brackets are \\(x - 1\\) and \\(y - 4\\), so the centre is \\((1, 4)\\). The right side is \\(r^{2} = 9\\), so the radius is 3. Radius 9 forgets to take the square root.",
+   "clue": "Flip the signs for the centre, and take a square root for the radius."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which equation is the circle with centre \\((-2, 5)\\) and radius 6?",
+   "opts": [
+    "\\((x + 2)^{2} + (y - 5)^{2} = 36\\)",
+    "\\((x - 2)^{2} + (y + 5)^{2} = 36\\)",
+    "\\((x + 2)^{2} + (y - 5)^{2} = 6\\)",
+    "\\((x - 2)^{2} + (y + 5)^{2} = 6\\)"
+   ],
+   "why": "With \\(h = -2\\) and \\(k = 5\\), the brackets are \\(x - (-2) = x + 2\\) and \\(y - 5\\). The right side is \\(r^{2} = 6^{2} = 36\\). The options ending in 6 forget to square the radius.",
+   "clue": "The right side is the radius squared, and the signs in the brackets are opposite to the centre."
+  }
+ },
+ "cleared_by": "checker"
 }

@@ -8,8 +8,202 @@
    0.205
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: failed the content check, writing again",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T13:37:05Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 6e-05,
+  "write": 0.01849,
+  "check": 0.01284,
+  "fix": 0.01963,
+  "recheck": 0.00959
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers government enterprises in business ownership, not how parties, independents and majorities form government in a House of Representatives, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Forming government",
+  "card": [
+   "Australians vote for a member for each seat in the House of Representatives. There are 150 seats, so a majority is 76 seats.",
+   "The party, or the coalition of parties, that has a majority in the House of Representatives forms government. Its leader becomes Prime Minister.",
+   "Independents belong to no party. Sometimes no party or coalition wins 76 seats. This is called a hung parliament.",
+   "In a hung parliament, a party can form a minority government if enough independents or small parties promise to support it on votes about whether it can stay in power. It can then pass laws only with their help."
+  ],
+  "remember": "Government is formed by whoever can win the support of a majority in the House of Representatives.",
+  "a": {
+   "q": "After an election, the Orange Party holds 81 of the 150 seats in the House of Representatives. What happens?",
+   "opts": [
+    "It forms government, as it has a majority of seats",
+    "It must ask independents to back it before it can govern",
+    "It forms a minority government with a hung parliament",
+    "It cannot govern until it wins a majority of the Senate"
+   ],
+   "why": "A majority in the House of Representatives is 76 seats or more, and 81 is above that. So the Orange Party forms government by itself. A hung parliament happens only when no party or coalition reaches 76.",
+   "clue": "Compare 81 with the number needed for a majority."
+  },
+  "b": {
+   "d": 3,
+   "q": "At an election, the Blue Party wins 70 seats, the Green Alliance wins 68, and 12 seats go to independents and small parties. What is the most likely way a government is formed?",
+   "opts": [
+    "A party wins the support of enough independents to govern",
+    "The party with the most seats governs without anyone's help",
+    "The two largest parties must form a coalition together",
+    "A new election is held straight away to choose a winner"
+   ],
+   "why": "No party has 76 seats, so this is a hung parliament. A party can form a minority government if enough independents back it. Having the most seats is not enough by itself, as 70 is short of a majority.",
+   "clue": "Does 70 seats reach a majority of 150?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It forms government, as it has a majority of seats",
+   "also_right": []
+  },
+  "b": {
+   "best": "A party wins the support of enough independents to govern",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"It can then pass laws only with their help\" is not accurate. A minority government can also pass a bill with the opposition's votes, and every bill must pass the Senate too. Better: \"It usually needs their votes, or other members' votes, to pass laws in the House.\""
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and have one clear answer. The card's last line wrongly says a minority government can pass laws only with independents' help: the opposition could also vote for a bill, and the Senate must pass it too."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: \"It can then pass laws only with their help\" is not accurate. A minority government can also pass a bill with the opposition's votes, and every bill must pass the Senate too. Better: \"It usually needs their votes, or other members' votes, to pass laws in the House.\""
+ ],
+ "proposal": {
+  "title": "Parties, independents and forming government",
+  "card": [
+   "Australians vote for a member for each seat in the House of Representatives. There are 150 seats, so a majority is 76 seats.",
+   "The party, or the coalition of parties, that has a majority in the House of Representatives forms government. Its leader becomes Prime Minister.",
+   "Independents are members who belong to no party. Sometimes no party or coalition wins 76 seats. This is called a hung parliament.",
+   "In a hung parliament, a party can form a minority government if enough independents or small parties agree to support it on votes about whether it stays in power. It usually needs their votes, or other members' votes, to pass laws in the House."
+  ],
+  "remember": "Government is formed by whoever can win the support of a majority in the House of Representatives.",
+  "a": {
+   "q": "After an election, the Orange Party holds 81 of the 150 seats in the House of Representatives. What happens?",
+   "opts": [
+    "It forms government, as it has a majority of seats",
+    "It must ask independents to back it before it can govern",
+    "It forms a minority government with a hung parliament",
+    "It cannot govern until it wins a majority of the Senate"
+   ],
+   "why": "A majority in the House of Representatives is 76 seats or more, and 81 is above that. So the Orange Party forms government by itself. A hung parliament happens only when no party or coalition reaches 76.",
+   "clue": "Compare 81 with the number needed for a majority."
+  },
+  "b": {
+   "d": 3,
+   "q": "At an election, the Blue Party wins 70 seats, the Green Alliance wins 68, and 12 seats go to independents and small parties. What is the most likely way a government is formed?",
+   "opts": [
+    "A party wins the support of enough independents to govern",
+    "The party with the most seats governs without anyone's help",
+    "The two largest parties must form a coalition together",
+    "A new election is held straight away to choose a winner"
+   ],
+   "why": "No party has 76 seats, so this is a hung parliament. A party can form a minority government if enough independents or small parties back it. Having the most seats is not enough by itself, as 70 is short of a majority.",
+   "clue": "Does 70 seats reach a majority of 150?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:05Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It forms government, as it has a majority of seats",
+    "also_right": []
+   },
+   "b": {
+    "best": "A party wins the support of enough independents to govern",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:05Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"It can then pass laws only with their help\" is not accurate. A minority government can also pass a bill with the opposition's votes, and every bill must pass the Senate too. Better: \"It usually needs their votes, or other members' votes, to pass laws in the House.\""
+   }
+  ],
+  "flags": [
+   "Card, fact: \"It can then pass laws only with their help\" is not accurate. A minority government can also pass a bill with the opposition's votes, and every bill must pass the Senate too. Better: \"It usually needs their votes, or other members' votes, to pass laws in the House.\""
+  ]
+ },
+ "final": {
+  "title": "Parties, independents and forming government",
+  "card": [
+   "Australians vote for a member for each seat in the House of Representatives. There are 150 seats, so a majority is 76 seats.",
+   "The party, or the coalition of parties, that has a majority in the House of Representatives forms government. Its leader becomes Prime Minister.",
+   "Independents are members who belong to no party. Sometimes no party or coalition wins 76 seats. This is called a hung parliament.",
+   "In a hung parliament, a party can form a minority government if enough independents or small parties agree to support it on votes about whether it stays in power. It usually needs their votes, or other members' votes, to pass laws in the House."
+  ],
+  "remember": "Government is formed by whoever can win the support of a majority in the House of Representatives.",
+  "a": {
+   "q": "After an election, the Orange Party holds 81 of the 150 seats in the House of Representatives. What happens?",
+   "opts": [
+    "It forms government, as it has a majority of seats",
+    "It must ask independents to back it before it can govern",
+    "It forms a minority government with a hung parliament",
+    "It cannot govern until it wins a majority of the Senate"
+   ],
+   "why": "A majority in the House of Representatives is 76 seats or more, and 81 is above that. So the Orange Party forms government by itself. A hung parliament happens only when no party or coalition reaches 76.",
+   "clue": "Compare 81 with the number needed for a majority."
+  },
+  "b": {
+   "d": 3,
+   "q": "At an election, the Blue Party wins 70 seats, the Green Alliance wins 68, and 12 seats go to independents and small parties. What is the most likely way a government is formed?",
+   "opts": [
+    "A party wins the support of enough independents to govern",
+    "The party with the most seats governs without anyone's help",
+    "The two largest parties must form a coalition together",
+    "A new election is held straight away to choose a winner"
+   ],
+   "why": "No party has 76 seats, so this is a hung parliament. A party can form a minority government if enough independents or small parties back it. Having the most seats is not enough by itself, as 70 is short of a majority.",
+   "clue": "Does 70 seats reach a majority of 150?"
+  }
+ },
+ "cleared_by": "recheck"
 }

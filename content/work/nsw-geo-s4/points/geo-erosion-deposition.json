@@ -20,8 +20,250 @@
    0.206
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 may adapt geo-erosion-transportation-deposition, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:45Z confirm: Claude Opus 5.5 may adapt geo-erosion-transportation-deposition, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt geo-erosion-transportation-deposition (2 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting geo-erosion-transportation-deposition on the next run",
+  "2026-11-20T14:12:37Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "confirm": 0.01097,
+  "adapt": 0.00661,
+  "check": 0.00764
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-erosion-transportation-deposition",
+  "changes": [
+   "Add deltas as a deposition landform example, since the new point names deltas and the card lists only beaches and sand dunes.",
+   "Replace the Twelve Apostles in Victoria with a coastal erosion example from New South Wales, so the card is local to the NSW course.",
+   "Check that the Question b pillar example is also localised to a NSW coastline rather than Port Campbell in Victoria."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same erosion and deposition idea at a suitable depth, but it needs a delta example added and its Victorian coastal examples swapped for NSW ones.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "geo-erosion-transportation-deposition",
+  "changes": [
+   "Add deltas alongside beaches and sand dunes as an example of a landform built by deposition, to match the brief.",
+   "Consider swapping the Victorian examples (Twelve Apostles, Port Campbell) for a New South Wales coastal example of wave erosion, such as a sea stack or cliff on the NSW coast."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same erosion, transport and deposition idea at a Years 7–8 depth, and needs only a delta example and possibly a more local NSW coastal example.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "geo-erosion-transportation-deposition",
+  "changes": [
+   "Add deltas, with beaches, as landforms built by deposition, to match the brief.",
+   "Keep weathering out of the card, since it is its own point in this chapter, and keep the wave erosion example accurate if it is changed to a New South Wales place."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "title",
+   "card1",
+   "card2 label",
+   "card2",
+   "card3",
+   "card4",
+   "remember",
+   "a.q",
+   "a.opt1",
+   "a.opt2",
+   "a.opt3",
+   "a.opt4",
+   "a.why",
+   "a.clue",
+   "b.q",
+   "b.opt1",
+   "b.opt2",
+   "b.opt3",
+   "b.opt4",
+   "b.why",
+   "b.clue"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches erosion, transport and deposition at the right depth for Years 7 and 8, but the brief names deltas as a landform built by deposition, which the card does not have.",
+   "item": "51531fed072227e6",
+   "result": "decided",
+   "saved": {
+    "id": "geo-erosion-deposition",
+    "title": "Erosion and deposition",
+    "brief": "f29aecb3e81b",
+    "shortlist": [
+     [
+      "geo-erosion-transportation-deposition",
+      0.634
+     ],
+     [
+      "geo-landscapes-landforms",
+      0.248
+     ],
+     [
+      "geo-rock-types-landforms",
+      0.211
+     ],
+     [
+      "geo-land-clearing-erosion",
+      0.206
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00034,
+     "confirm": 0.01097
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "geo-erosion-transportation-deposition",
+     "changes": [
+      "Add deltas as a deposition landform example, since the new point names deltas and the card lists only beaches and sand dunes.",
+      "Replace the Twelve Apostles in Victoria with a coastal erosion example from New South Wales, so the card is local to the NSW course.",
+      "Check that the Question b pillar example is also localised to a NSW coastline rather than Port Campbell in Victoria."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same erosion and deposition idea at a suitable depth, but it needs a delta example added and its Victorian coastal examples swapped for NSW ones.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "geo-erosion-transportation-deposition",
+     "changes": [
+      "Add deltas alongside beaches and sand dunes as an example of a landform built by deposition, to match the brief.",
+      "Consider swapping the Victorian examples (Twelve Apostles, Port Campbell) for a New South Wales coastal example of wave erosion, such as a sea stack or cliff on the NSW coast."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same erosion, transport and deposition idea at a Years 7–8 depth, and needs only a delta example and possibly a more local NSW coastal example.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "22267f0f89e84936"
+  }
+ ],
+ "draft": {
+  "title": "Erosion and deposition",
+  "card": [
+   [
+    "Erosion",
+    "the wearing away and carrying off of rock and soil by water, wind, waves and ice. Moving agents scrape, hit and carry material away from where it was."
+   ],
+   [
+    "Carrying",
+    "the movement of eroded pieces from one place to another. Rivers, wind, waves and glaciers all carry material."
+   ],
+   [
+    "Deposition",
+    "the dropping of material when the agent slows down or loses energy. This builds landforms such as beaches, sand dunes and deltas."
+   ],
+   "A delta forms where a river slows as it meets the sea or a lake and drops its load. Waves also erode coasts. They wear away the base of a cliff, so the cliff retreats."
+  ],
+  "remember": "Erosion takes material away. Deposition drops it and builds landforms such as beaches and deltas.",
+  "a": {
+   "q": "A river carries mud and sand to the sea. It slows and drops the load, building a fan of new land at its mouth. Which process built it?",
+   "opts": [
+    "Deposition",
+    "Erosion",
+    "Uplift",
+    "Wearing away of the river bank"
+   ],
+   "why": "The river slowed and lost energy, so it dropped its load. Dropping material builds land, and a delta forms this way. Erosion takes material away, so it does not build a delta.",
+   "clue": "What happened to the sand and mud when the river slowed?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Waves hit the base of a sea cliff for many years. The cliff slowly moves back and loses rock. Which process is mainly at work?",
+   "opts": [
+    "Erosion by waves",
+    "Deposition of sand by waves",
+    "Building of a delta by a river",
+    "Formation of a beach"
+   ],
+   "why": "Waves wear away the base of the cliff and carry the rock off, so the cliff retreats. Deposition, beaches and deltas all add material, so they do not make a cliff retreat.",
+   "clue": "Was material taken away or added?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Deposition",
+   "also_right": []
+  },
+  "b": {
+   "best": "Erosion by waves",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Erosion and deposition",
+  "card": [
+   [
+    "Erosion",
+    "the wearing away and carrying off of rock and soil by water, wind, waves and ice. Moving agents scrape, hit and carry material away from where it was."
+   ],
+   [
+    "Carrying",
+    "the movement of eroded pieces from one place to another. Rivers, wind, waves and glaciers all carry material."
+   ],
+   [
+    "Deposition",
+    "the dropping of material when the agent slows down or loses energy. This builds landforms such as beaches, sand dunes and deltas."
+   ],
+   "A delta forms where a river slows as it meets the sea or a lake and drops its load. Waves also erode coasts. They wear away the base of a cliff, so the cliff retreats."
+  ],
+  "remember": "Erosion takes material away. Deposition drops it and builds landforms such as beaches and deltas.",
+  "a": {
+   "q": "A river carries mud and sand to the sea. It slows and drops the load, building a fan of new land at its mouth. Which process built it?",
+   "opts": [
+    "Deposition",
+    "Erosion",
+    "Uplift",
+    "Wearing away of the river bank"
+   ],
+   "why": "The river slowed and lost energy, so it dropped its load. Dropping material builds land, and a delta forms this way. Erosion takes material away, so it does not build a delta.",
+   "clue": "What happened to the sand and mud when the river slowed?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Waves hit the base of a sea cliff for many years. The cliff slowly moves back and loses rock. Which process is mainly at work?",
+   "opts": [
+    "Erosion by waves",
+    "Deposition of sand by waves",
+    "Building of a delta by a river",
+    "Formation of a beach"
+   ],
+   "why": "Waves wear away the base of the cliff and carry the rock off, so the cliff retreats. Deposition, beaches and deltas all add material, so they do not make a cliff retreat.",
+   "clue": "Was material taken away or added?"
+  }
+ }
 }

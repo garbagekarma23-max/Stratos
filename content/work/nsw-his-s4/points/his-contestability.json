@@ -12,8 +12,268 @@
    0.265
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 may adapt his-historical-interpretations, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:49Z confirm: Claude Opus 5.5 may adapt his-historical-interpretations, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt his-historical-interpretations (3 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting his-historical-interpretations on the next run",
+  "2026-11-20T14:12:38Z adapt: done",
+  "2026-11-20T14:20:02Z check: flagged",
+  "2026-11-20T14:26:14Z fix: suggested",
+  "2026-11-20T14:40:00Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "confirm": 0.00896,
+  "adapt": 0.00713,
+  "check": 0.0107,
+  "fix": 0.0205
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "his-historical-interpretations",
+  "changes": [
+   "Add a card line stating that historians and archaeologists can reach different conclusions because they draw on different kinds of evidence and use different methods, such as archaeological digs compared with written records."
+  ],
+  "sure": "medium",
+  "reason": "The Year 7 card teaches the same idea at a suitable depth, but it focuses on reading the same evidence differently and does not clearly cover different evidence and methods, so it needs one added line.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "his-historical-interpretations",
+  "changes": [
+   "Name the idea with the NSW syllabus term 'contestability' and say plainly that history is open to debate.",
+   "Mention that archaeologists, as well as historians, can reach different conclusions about the same past.",
+   "Add different methods alongside different evidence as a reason conclusions differ."
+  ],
+  "sure": "medium",
+  "reason": "The Year 7 interpretations card already teaches, at the right depth and with ancient-world examples, that historians reach different views from evidence; it only needs the NSW term 'contestability' and a mention of archaeologists and their methods.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "his-historical-interpretations",
+  "changes": [
+   "Name the idea with the NSW syllabus term contestability, and say plainly that this makes history open to debate.",
+   "Say that archaeologists, as well as historians, can reach different conclusions about the same past.",
+   "Give different methods, as well as different evidence, as a reason conclusions differ."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "title",
+   "card1",
+   "card2",
+   "card3",
+   "card4",
+   "remember",
+   "a.q",
+   "a.opt1",
+   "a.opt2",
+   "a.opt3",
+   "a.opt4",
+   "a.why",
+   "a.clue",
+   "b.q",
+   "b.opt1",
+   "b.opt2",
+   "b.opt3",
+   "b.opt4",
+   "b.why",
+   "b.clue"
+  ]
+ },
+ "cleared_by": "owner",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same idea at the right depth: historians reach different views of the same past from the evidence. It needs the NSW term contestability, archaeologists, and different methods as well as evidence.",
+   "item": "d2f699bc01e4f729",
+   "result": "decided",
+   "saved": {
+    "id": "his-contestability",
+    "title": "Contestability",
+    "brief": "d466e67f197f",
+    "shortlist": [
+     [
+      "his-historical-interpretations",
+      0.285
+     ],
+     [
+      "his-contested-interpretations",
+      0.265
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.0003,
+     "confirm": 0.00896
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "his-historical-interpretations",
+     "changes": [
+      "Add a card line stating that historians and archaeologists can reach different conclusions because they draw on different kinds of evidence and use different methods, such as archaeological digs compared with written records."
+     ],
+     "sure": "medium",
+     "reason": "The Year 7 card teaches the same idea at a suitable depth, but it focuses on reading the same evidence differently and does not clearly cover different evidence and methods, so it needs one added line.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "his-historical-interpretations",
+     "changes": [
+      "Name the idea with the NSW syllabus term 'contestability' and say plainly that history is open to debate.",
+      "Mention that archaeologists, as well as historians, can reach different conclusions about the same past.",
+      "Add different methods alongside different evidence as a reason conclusions differ."
+     ],
+     "sure": "medium",
+     "reason": "The Year 7 interpretations card already teaches, at the right depth and with ancient-world examples, that historians reach different views from evidence; it only needs the NSW term 'contestability' and a mention of archaeologists and their methods.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "998562be312d5356"
+  }
+ ],
+ "draft": {
+  "title": "Contestability",
+  "card": [
+   "Contestability means the past can be explained in more than one way. This makes history open to debate. An interpretation is an explanation built from evidence. It is not the past itself.",
+   "Historians and archaeologists can reach different conclusions about the same past. They may use different evidence, such as texts or objects. They may also use different methods, such as close reading or digging a site.",
+   "Historians and archaeologists may ask different questions, give some sources more weight, or fill gaps in the evidence with different ideas. New evidence can also change a conclusion.",
+   "A good interpretation is based on evidence and can be explained with it. Comparing interpretations shows how historians and archaeologists reached their views."
+  ],
+  "remember": "Contestability means history is open to debate, because historians and archaeologists use different evidence and methods and can reach different conclusions.",
+  "a": {
+   "q": "An archaeologist and a historian study the same ancient site. They reach different conclusions. What does this show about history?",
+   "opts": [
+    "History is contestable, so it is open to debate",
+    "One of them must have made up their evidence",
+    "Conclusions about the past have no link to evidence",
+    "Evidence is useless if experts disagree about it"
+   ],
+   "why": "History is contestable. Archaeologists and historians may use different evidence and methods, or ask different questions, so they can reach different conclusions. It does not mean anyone invented evidence or that conclusions ignore evidence.",
+   "clue": "Think about what each expert might use and ask."
+  },
+  "b": {
+   "d": 3,
+   "q": "Archaeologists thought an Egyptian town was built by a king for his priests. Then workers' tools, bakeries and homes were found. Why might they now revise this view?",
+   "opts": [
+    "The new evidence may not fit the earlier explanation",
+    "The earlier explanation was not an interpretation at all",
+    "Experts always replace old views with new ones",
+    "The tools proved what the king had planned to do"
+   ],
+   "why": "New evidence can lead experts to revise a conclusion when it does not fit the earlier explanation. Here, the homes and bakeries suggest ordinary workers lived there. Experts do not always replace old views, because new evidence may also support them.",
+   "clue": "Ask whether the new finds match the old explanation."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "History is contestable, so it is open to debate",
+   "also_right": []
+  },
+  "b": {
+   "best": "The new evidence may not fit the earlier explanation",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one with a hedged qualifier ('may'), while the distractors are absolute or plainly wrong ('always', 'proved', 'not an interpretation at all'). A student could pick it by test-taking strategy without knowing the idea. Consider hedging one or two distractors too."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate and match the chapter. In question b the right option stands out as the only hedged ('may') choice, so a student could guess it without knowing the idea."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option is the only one with a hedged qualifier ('may'), while the distractors are absolute or plainly wrong ('always', 'proved', 'not an interpretation at all'). A student could pick it by test-taking strategy without knowing the idea. Consider hedging one or two distractors too."
+ ],
+ "proposal": {
+  "title": "Contestability",
+  "card": [
+   "Contestability means the past can be explained in more than one way. This makes history open to debate. An interpretation is an explanation built from evidence. It is not the past itself.",
+   "Historians and archaeologists can reach different conclusions about the same past. They may use different evidence, such as texts or objects. They may also use different methods, such as close reading or digging a site.",
+   "Historians and archaeologists may ask different questions, give some sources more weight, or fill gaps in the evidence with different ideas. New evidence can also change a conclusion.",
+   "A good interpretation is based on evidence and can be explained with it. Comparing interpretations shows how historians and archaeologists reached their views."
+  ],
+  "remember": "Different evidence and methods can lead to different conclusions, and each good one rests on evidence.",
+  "a": {
+   "q": "An archaeologist and a historian study the same ancient site. They reach different conclusions. What does this show?",
+   "opts": [
+    "The past can be explained in more than one way",
+    "One of them must have made up their evidence",
+    "Conclusions about the past have no link to evidence",
+    "Evidence is useless if experts disagree about it"
+   ],
+   "why": "The past is contestable. Archaeologists and historians may use different evidence and methods, or ask different questions, so they can reach different conclusions. It does not mean anyone invented evidence or that conclusions ignore evidence.",
+   "clue": "Think about what each expert might use and ask."
+  },
+  "b": {
+   "d": 3,
+   "q": "Archaeologists thought an ancient Egyptian town was built by a king for his priests. Then workers' tools, bakeries and homes were found. Why might they now revise this view?",
+   "opts": [
+    "The new finds may not fit the earlier explanation",
+    "Experts may drop old views simply because they are old",
+    "The tools may prove what the king had planned to build",
+    "Experts may just want to disagree with earlier experts"
+   ],
+   "why": "New evidence can change a conclusion when it does not fit the earlier explanation. The homes and bakeries suggest ordinary workers lived there, not just priests. A view is not dropped for being old or to disagree with others, because a good interpretation rests on evidence.",
+   "clue": "Ask whether the new finds match the old explanation."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Contestability",
+  "card": [
+   "Contestability means the past can be explained in more than one way. This makes history open to debate. An interpretation is an explanation built from evidence. It is not the past itself.",
+   "Historians and archaeologists can reach different conclusions about the same past. They may use different evidence, such as texts or objects. They may also use different methods, such as close reading or digging a site.",
+   "Historians and archaeologists may ask different questions, give some sources more weight, or fill gaps in the evidence with different ideas. New evidence can also change a conclusion.",
+   "A good interpretation is based on evidence and can be explained with it. Comparing interpretations shows how historians and archaeologists reached their views."
+  ],
+  "remember": "Different evidence and methods can lead to different conclusions, and each good one rests on evidence.",
+  "a": {
+   "q": "An archaeologist and a historian study the same ancient site. They reach different conclusions. What does this show?",
+   "opts": [
+    "The past can be explained in more than one way",
+    "One of them must have made up their evidence",
+    "Conclusions about the past have no link to evidence",
+    "Evidence is useless if experts disagree about it"
+   ],
+   "why": "The past is contestable. Archaeologists and historians may use different evidence and methods, or ask different questions, so they can reach different conclusions. It does not mean anyone invented evidence or that conclusions ignore evidence.",
+   "clue": "Think about what each expert might use and ask."
+  },
+  "b": {
+   "d": 3,
+   "q": "Archaeologists thought an ancient Egyptian town was built by a king for his priests. Then workers' tools, bakeries and homes were found. Why might they now revise this view?",
+   "opts": [
+    "The new finds may not fit the earlier explanation",
+    "Experts may drop old views simply because they are old",
+    "The tools may prove what the king had planned to build",
+    "Experts may just want to disagree with earlier experts"
+   ],
+   "why": "New evidence can change a conclusion when it does not fit the earlier explanation. The homes and bakeries suggest ordinary workers lived there, not just priests. A view is not dropped for being old or to disagree with others, because a good interpretation rests on evidence.",
+   "clue": "Ask whether the new finds match the old explanation."
+  }
+ }
 }

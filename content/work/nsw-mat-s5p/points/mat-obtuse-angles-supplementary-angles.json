@@ -24,8 +24,117 @@
    0.294
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:56Z write: failed the content check, writing again",
+  "2026-11-20T12:44:59Z write: done",
+  "2026-11-20T12:53:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.02051,
+  "check": 0.00992
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the supplementary-angle identities sin(180° − θ) = sin θ, cos(180° − θ) = −cos θ and sin θ = cos(90° − θ); the sine rule and area cards only mention the obtuse partner in passing while teaching other ideas.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Obtuse angles and supplementary angles",
+  "card": [
+   "An obtuse angle is between \\(90^{\\circ}\\) and \\(180^{\\circ}\\). Its supplement is \\(180^{\\circ} - \\theta\\), and the two angles add to \\(180^{\\circ}\\).",
+   "On the unit circle, the angles \\(\\theta\\) and \\(180^{\\circ} - \\theta\\) give points mirrored across the y-axis. They have the same height and opposite x-values.",
+   "So \\(\\sin(180^{\\circ} - \\theta) = \\sin \\theta\\) and \\(\\cos(180^{\\circ} - \\theta) = -\\cos \\theta\\). An obtuse angle has a positive sine and a negative cosine. Example: \\(\\sin 150^{\\circ} = \\sin 30^{\\circ} = \\frac{1}{2}\\), and \\(\\cos 150^{\\circ} = -\\cos 30^{\\circ}\\).",
+   "For complementary angles, which add to \\(90^{\\circ}\\), \\(\\sin \\theta = \\cos(90^{\\circ} - \\theta)\\). Example: \\(\\sin 20^{\\circ} = \\cos 70^{\\circ}\\)."
+  ],
+  "remember": "Sine stays the same and cosine changes sign when you use \\(180^{\\circ}\\) minus the angle.",
+  "a": {
+   "q": "Which statement about \\(140^{\\circ}\\) is correct?",
+   "opts": [
+    "\\(\\sin 140^{\\circ}\\) is positive and \\(\\cos 140^{\\circ}\\) is negative",
+    "\\(\\sin 140^{\\circ}\\) is negative and \\(\\cos 140^{\\circ}\\) is positive",
+    "Both \\(\\sin 140^{\\circ}\\) and \\(\\cos 140^{\\circ}\\) are positive",
+    "Both \\(\\sin 140^{\\circ}\\) and \\(\\cos 140^{\\circ}\\) are negative"
+   ],
+   "why": "An obtuse angle has a positive sine and a negative cosine, because its point is above the x-axis and to the left of the y-axis. The option with the signs swapped confuses which coordinate is which.",
+   "clue": "Sine is the height of the point. Cosine is its x-value."
+  },
+  "b": {
+   "d": 3,
+   "q": "Given that \\(\\sin 35^{\\circ} \\approx 0.57\\), which of these is also about 0.57?",
+   "opts": [
+    "\\(\\sin 145^{\\circ}\\)",
+    "\\(\\cos 145^{\\circ}\\)",
+    "\\(\\cos 35^{\\circ}\\)",
+    "\\(\\sin 55^{\\circ}\\)"
+   ],
+   "why": "The supplement of \\(35^{\\circ}\\) is \\(145^{\\circ}\\), and \\(\\sin 145^{\\circ} = \\sin 35^{\\circ}\\). \\(\\cos 145^{\\circ}\\) is \\(-\\cos 35^{\\circ}\\), which is negative, so it is a tempting but wrong choice. \\(\\sin 55^{\\circ} = \\cos 35^{\\circ}\\), which is not 0.57.",
+   "clue": "Find the supplement of \\(35^{\\circ}\\), and check the sign."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(\\sin 140^{\\circ}\\) is positive and \\(\\cos 140^{\\circ}\\) is negative",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(\\sin 145^{\\circ}\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Obtuse angles and supplementary angles",
+  "card": [
+   "An obtuse angle is between \\(90^{\\circ}\\) and \\(180^{\\circ}\\). Its supplement is \\(180^{\\circ} - \\theta\\), and the two angles add to \\(180^{\\circ}\\).",
+   "On the unit circle, the angles \\(\\theta\\) and \\(180^{\\circ} - \\theta\\) give points mirrored across the y-axis. They have the same height and opposite x-values.",
+   "So \\(\\sin(180^{\\circ} - \\theta) = \\sin \\theta\\) and \\(\\cos(180^{\\circ} - \\theta) = -\\cos \\theta\\). An obtuse angle has a positive sine and a negative cosine. Example: \\(\\sin 150^{\\circ} = \\sin 30^{\\circ} = \\frac{1}{2}\\), and \\(\\cos 150^{\\circ} = -\\cos 30^{\\circ}\\).",
+   "For complementary angles, which add to \\(90^{\\circ}\\), \\(\\sin \\theta = \\cos(90^{\\circ} - \\theta)\\). Example: \\(\\sin 20^{\\circ} = \\cos 70^{\\circ}\\)."
+  ],
+  "remember": "Sine stays the same and cosine changes sign when you use \\(180^{\\circ}\\) minus the angle.",
+  "a": {
+   "q": "Which statement about \\(140^{\\circ}\\) is correct?",
+   "opts": [
+    "\\(\\sin 140^{\\circ}\\) is positive and \\(\\cos 140^{\\circ}\\) is negative",
+    "\\(\\sin 140^{\\circ}\\) is negative and \\(\\cos 140^{\\circ}\\) is positive",
+    "Both \\(\\sin 140^{\\circ}\\) and \\(\\cos 140^{\\circ}\\) are positive",
+    "Both \\(\\sin 140^{\\circ}\\) and \\(\\cos 140^{\\circ}\\) are negative"
+   ],
+   "why": "An obtuse angle has a positive sine and a negative cosine, because its point is above the x-axis and to the left of the y-axis. The option with the signs swapped confuses which coordinate is which.",
+   "clue": "Sine is the height of the point. Cosine is its x-value."
+  },
+  "b": {
+   "d": 3,
+   "q": "Given that \\(\\sin 35^{\\circ} \\approx 0.57\\), which of these is also about 0.57?",
+   "opts": [
+    "\\(\\sin 145^{\\circ}\\)",
+    "\\(\\cos 145^{\\circ}\\)",
+    "\\(\\cos 35^{\\circ}\\)",
+    "\\(\\sin 55^{\\circ}\\)"
+   ],
+   "why": "The supplement of \\(35^{\\circ}\\) is \\(145^{\\circ}\\), and \\(\\sin 145^{\\circ} = \\sin 35^{\\circ}\\). \\(\\cos 145^{\\circ}\\) is \\(-\\cos 35^{\\circ}\\), which is negative, so it is a tempting but wrong choice. \\(\\sin 55^{\\circ} = \\cos 35^{\\circ}\\), which is not 0.57.",
+   "clue": "Find the supplement of \\(35^{\\circ}\\), and check the sign."
+  }
+ },
+ "cleared_by": "checker"
 }

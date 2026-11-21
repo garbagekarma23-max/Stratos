@@ -24,8 +24,430 @@
    0.228
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:44Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:48Z write: failed the content check, writing again",
+  "2026-11-20T12:44:54Z write: done (still fails the content check)",
+  "2026-11-20T13:11:47Z check: flagged",
+  "2026-11-20T13:17:56Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (a other)",
+  "2026-11-20T13:44:55Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "write": 0.0132,
+  "check": 0.01122,
+  "fix": 0.0234,
+  "recheck": 0.01225
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches all four parts of the brief, as the closest match, ecb-relevant-reliable-sources, is a Year 8 card that centres on relevance and omits purpose, and fixing that would mean adding a new criterion and changing the depth, so a new point is the safer choice.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The clue 'Ask why the company made the page' all but names the purpose check, so a student can pick the answer without applying the four checks.",
+ "rejected": {
+  "title": "Judging sources",
+  "card": [
+   [
+    "Author",
+    "the writer is named and has expertise in the topic, such as a climate scientist writing about climate."
+   ],
+   [
+    "Date",
+    "the source is recent enough for the topic. Facts about technology or health can go out of date quickly."
+   ],
+   [
+    "Purpose",
+    "the source is not made only to sell or persuade. A company page praising its own product is trying to sell."
+   ],
+   [
+    "Support",
+    "other sources back up its claims. If no other source agrees, be careful. A reliable source passes all four checks, not just one."
+   ]
+  ],
+  "remember": "Check author, date, purpose and support. A source you can trust passes all four.",
+  "a": {
+   "q": "Zane finds a page saying a new drink makes students smarter. A named nutrition scientist who works for the drink company wrote it. Which check does the page fail most clearly?",
+   "opts": [
+    "Purpose, because it is made to sell the drink",
+    "Date, because the drink is new",
+    "Author, because a scientist wrote it",
+    "Support, because the drink is popular"
+   ],
+   "why": "The page comes from the company that sells the drink, so its purpose is to sell. The writer is named and has expertise, so the author check is not the problem. Being popular is not the same as other sources backing up the claim.",
+   "clue": "Ask why the company made the page."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is writing about a recent rise in teen sleep problems. Which source should she trust most?",
+   "opts": [
+    "A named sleep expert's page from last year, citing studies",
+    "An unsigned blog post from last year, citing no studies",
+    "A named sleep expert's page from 1995, citing no studies",
+    "A mattress seller's page from last year, citing studies"
+   ],
+   "why": "The named sleep expert's page from last year passes all four checks: a named expert, a recent date, a purpose of informing, and support from studies. The mattress seller's page cites studies, but its purpose is to sell, so it fails the purpose check.",
+   "clue": "Check all four things, not only the one that looks good."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: The clue 'Ask why the company made the page' all but names the purpose check, so a student can pick the answer without applying the four checks."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Judging sources",
+     "card": [
+      "Before you use a source in your planning, ask if it can be trusted. A reliable source passes four checks: author, date, purpose and support.",
+      [
+       "Author",
+       "the writer is named and has expertise in the topic, such as a scientist writing about climate. Date: the source is recent enough for the topic, as facts about technology or health can go out of date quickly."
+      ],
+      [
+       "Purpose",
+       "the source is not made only to sell or persuade. A company page praising its own product is trying to sell."
+      ],
+      [
+       "Support",
+       "other sources back up its claims. If no other source agrees, be careful."
+      ]
+     ],
+     "remember": "Check the author, the date, the purpose and whether other sources agree.",
+     "a": {
+      "q": "Zane finds a page that says a new drink makes students smarter. It is written by the company that sells the drink. Which check does the page fail most clearly?",
+      "opts": [
+       "Purpose, because it is made to sell the drink",
+       "Date, because the drink is new",
+       "Author, because a company wrote it",
+       "Support, because the drink is popular"
+      ],
+      "why": "The company wrote the page to sell its drink, so its purpose is not neutral. Being new does not make a page out of date, and being popular is not the same as other sources supporting the claim.",
+      "clue": "Ask why the company made the page."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya is writing about a rise in teen sleep problems. Which source should she trust most?",
+      "opts": [
+       "A named sleep expert, written last year, with cited studies",
+       "An unsigned blog, written last year, with no cited sources",
+       "A named sleep expert, written long ago, with no cited sources",
+       "A mattress seller's page, written last year, with cited studies"
+      ],
+      "why": "The first source has a named expert, a recent date, a purpose of informing, and support from other studies. The mattress page cites studies, but the seller's purpose is to sell, so it fails the purpose check.",
+      "clue": "Check all four things, not only the one that looks good."
+     }
+    },
+    "redone": true,
+    "local": [
+     "eng-judging-sourcesb option is 61 characters: A named sleep expert, written long ago, with no cited sources",
+     "eng-judging-sourcesb option is 63 characters: A mattress seller's page, written last year, with cited studies"
+    ],
+    "check": {
+     "a": {
+      "best": "Purpose, because it is made to sell the drink",
+      "also_right": []
+     },
+     "b": {
+      "best": "A named sleep expert, written last year, with cited studies",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "Why (b) says 'The first source has a named expert…', but the options are shown in random order, so 'the first source' may point to the wrong option. In the order given here it is the mattress seller's page. The why should name the source, for example 'The named sleep expert's page written last year…', rather than refer to its position."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Card and questions are accurate and match the four checks. The one problem is that Why (b) calls the right answer 'the first source', which will not match the shuffled option order and could confuse students."
+    },
+    "flags": [
+     "Question b, other: Why (b) says 'The first source has a named expert…', but the options are shown in random order, so 'the first source' may point to the wrong option. In the order given here it is the mattress seller's page. The why should name the source, for example 'The named sleep expert's page written last year…', rather than refer to its position.",
+     "Content check: eng-judging-sourcesb option is 61 characters: A named sleep expert, written long ago, with no cited sources",
+     "Content check: eng-judging-sourcesb option is 63 characters: A mattress seller's page, written last year, with cited studies"
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Judging sources",
+     "card": [
+      [
+       "Author",
+       "the writer is named and has expertise in the topic, such as a climate scientist writing about climate."
+      ],
+      [
+       "Date",
+       "the source is recent enough for the topic. Facts about technology or health can go out of date quickly."
+      ],
+      [
+       "Purpose",
+       "the source is not made only to sell or persuade. A company page praising its own product is trying to sell."
+      ],
+      [
+       "Support",
+       "other sources back up its claims. If no other source agrees, be careful. A reliable source passes all four checks, not just one."
+      ]
+     ],
+     "remember": "Check author, date, purpose and support. A source you can trust passes all four.",
+     "a": {
+      "q": "Zane finds a page saying a new drink makes students smarter. A named nutrition scientist who works for the drink company wrote it. Which check does the page fail most clearly?",
+      "opts": [
+       "Purpose, because it is made to sell the drink",
+       "Date, because the drink is new",
+       "Author, because a scientist wrote it",
+       "Support, because the drink is popular"
+      ],
+      "why": "The page comes from the company that sells the drink, so its purpose is to sell. The writer is named and has expertise, so the author check is not the problem. Being popular is not the same as other sources backing up the claim.",
+      "clue": "Ask why the company made the page."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya is writing about a recent rise in teen sleep problems. Which source should she trust most?",
+      "opts": [
+       "A named sleep expert's page from last year, citing studies",
+       "An unsigned blog post from last year, citing no studies",
+       "A named sleep expert's page from 1995, citing no studies",
+       "A mattress seller's page from last year, citing studies"
+      ],
+      "why": "The named sleep expert's page from last year passes all four checks: a named expert, a recent date, a purpose of informing, and support from studies. The mattress seller's page cites studies, but its purpose is to sell, so it fails the purpose check.",
+      "clue": "Check all four things, not only the one that looks good."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:06Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Purpose, because it is made to sell the drink",
+       "also_right": []
+      },
+      "b": {
+       "best": "A named sleep expert's page from last year, citing studies",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The clue 'Ask why the company made the page' all but names the purpose check, so a student can pick the answer without applying the four checks."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The content is accurate and both questions have one clear right answer. The only issue is that question a's clue effectively gives away 'Purpose' as the answer."
+     },
+     "flags": [
+      "Question a, other: The clue 'Ask why the company made the page' all but names the purpose check, so a student can pick the answer without applying the four checks."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:55Z",
+   "step": "write",
+   "version": {
+    "title": "Judging sources",
+    "card": [
+     [
+      "Author",
+      "the writer is named and has expertise in the topic, such as a climate scientist writing about climate."
+     ],
+     [
+      "Date",
+      "the source is recent enough for the topic. Facts about technology or health can go out of date quickly."
+     ],
+     [
+      "Purpose",
+      "the source is not made only to sell or persuade. A company page praising its own product is trying to sell."
+     ],
+     [
+      "Support",
+      "other sources back up its claims. If no other source agrees, be careful. A reliable source passes all four checks, not just one."
+     ]
+    ],
+    "remember": "Check author, date, purpose and support. A source you can trust passes all four.",
+    "a": {
+     "q": "Zane finds a page on a drink company's website saying its new drink makes students smarter. A named nutrition scientist who works for the company wrote it. Which check does the page fail most clearly?",
+     "opts": [
+      "Purpose, because the company sells the drink",
+      "Date, because the drink has just come out",
+      "Author, because the writer is a scientist",
+      "Support, because many students buy the drink"
+     ],
+     "why": "The page is on the website of the company that sells the drink, so its purpose is to sell. The writer is named and has expertise, so the author check is not the problem. Many students buying the drink is not the same as other sources backing up the claim.",
+     "clue": "Run all four checks. Which one shows a clear problem?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Priya is writing about a recent rise in teen sleep problems. Which source should she trust most?",
+     "opts": [
+      "A named sleep expert's page from last year, citing studies",
+      "An unsigned blog post from last year, citing no studies",
+      "A named sleep expert's page from 1995, citing no studies",
+      "A mattress seller's page from last year, citing studies"
+     ],
+     "why": "The named sleep expert's page from last year passes all four checks: a named expert, a recent date, a purpose of informing, and support from studies. The mattress seller's page cites studies, but its purpose is to sell, so it fails the purpose check.",
+     "clue": "Check all four things, not only the one that looks good."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Purpose, because the company sells the drink",
+     "also_right": []
+    },
+    "b": {
+     "best": "A named sleep expert's page from last year, citing studies",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Judging sources",
+  "card": [
+   [
+    "Author",
+    "the writer is named and has expertise in the topic, such as a climate scientist writing about climate."
+   ],
+   [
+    "Date",
+    "the source is recent enough for the topic. Facts about technology or health can go out of date quickly."
+   ],
+   [
+    "Purpose",
+    "the source is not made only to sell or persuade. A company page praising its own product is trying to sell."
+   ],
+   [
+    "Support",
+    "other sources back up its claims. If no other source agrees, be careful. A reliable source passes all four checks, not just one."
+   ]
+  ],
+  "remember": "Check author, date, purpose and support. A source you can trust passes all four.",
+  "a": {
+   "q": "Zane finds a page on a drink company's website saying its new drink makes students smarter. A named nutrition scientist who works for the company wrote it. Which check does the page fail most clearly?",
+   "opts": [
+    "Purpose, because the company sells the drink",
+    "Date, because the drink has just come out",
+    "Author, because the writer is a scientist",
+    "Support, because many students buy the drink"
+   ],
+   "why": "The page is on the website of the company that sells the drink, so its purpose is to sell. The writer is named and has expertise, so the author check is not the problem. Many students buying the drink is not the same as other sources backing up the claim.",
+   "clue": "Run all four checks. Which one shows a clear problem?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is writing about a recent rise in teen sleep problems. Which source should she trust most?",
+   "opts": [
+    "A named sleep expert's page from last year, citing studies",
+    "An unsigned blog post from last year, citing no studies",
+    "A named sleep expert's page from 1995, citing no studies",
+    "A mattress seller's page from last year, citing studies"
+   ],
+   "why": "The named sleep expert's page from last year passes all four checks: a named expert, a recent date, a purpose of informing, and support from studies. The mattress seller's page cites studies, but its purpose is to sell, so it fails the purpose check.",
+   "clue": "Check all four things, not only the one that looks good."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Purpose, because the company sells the drink",
+   "also_right": []
+  },
+  "b": {
+   "best": "A named sleep expert's page from last year, citing studies",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Judging sources",
+  "card": [
+   [
+    "Author",
+    "the writer is named and has expertise in the topic, such as a climate scientist writing about climate."
+   ],
+   [
+    "Date",
+    "the source is recent enough for the topic. Facts about technology or health can go out of date quickly."
+   ],
+   [
+    "Purpose",
+    "the source is not made only to sell or persuade. A company page praising its own product is trying to sell."
+   ],
+   [
+    "Support",
+    "other sources back up its claims. If no other source agrees, be careful. A reliable source passes all four checks, not just one."
+   ]
+  ],
+  "remember": "Check author, date, purpose and support. A source you can trust passes all four.",
+  "a": {
+   "q": "Zane finds a page on a drink company's website saying its new drink makes students smarter. A named nutrition scientist who works for the company wrote it. Which check does the page fail most clearly?",
+   "opts": [
+    "Purpose, because the company sells the drink",
+    "Date, because the drink has just come out",
+    "Author, because the writer is a scientist",
+    "Support, because many students buy the drink"
+   ],
+   "why": "The page is on the website of the company that sells the drink, so its purpose is to sell. The writer is named and has expertise, so the author check is not the problem. Many students buying the drink is not the same as other sources backing up the claim.",
+   "clue": "Run all four checks. Which one shows a clear problem?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is writing about a recent rise in teen sleep problems. Which source should she trust most?",
+   "opts": [
+    "A named sleep expert's page from last year, citing studies",
+    "An unsigned blog post from last year, citing no studies",
+    "A named sleep expert's page from 1995, citing no studies",
+    "A mattress seller's page from last year, citing studies"
+   ],
+   "why": "The named sleep expert's page from last year passes all four checks: a named expert, a recent date, a purpose of informing, and support from studies. The mattress seller's page cites studies, but its purpose is to sell, so it fails the purpose check.",
+   "clue": "Check all four things, not only the one that looks good."
+  }
+ },
+ "checked_by": "claude-code"
 }

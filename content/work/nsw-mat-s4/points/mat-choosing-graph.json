@@ -24,8 +24,453 @@
    0.214
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 says adapt mat-choosing-display (4 changes)",
+  "2026-11-20T12:25:54Z adapt: done",
+  "2026-11-20T12:35:53Z check: flagged",
+  "2026-11-20T12:44:58Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (remember wording)",
+  "2026-11-20T13:44:56Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00044,
+  "adapt": 0.00692,
+  "check": 0.0126,
+  "fix": 0.0288,
+  "recheck": 0.01184
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-choosing-display",
+  "changes": [
+   "Rename 'bar chart' to 'column graph' throughout the card and its questions, which is the term the NSW syllabus uses.",
+   "Replace the Hobart council example in question b with a New South Wales place, such as a Sydney or Newcastle council.",
+   "Remove or de-emphasise the pie chart and dot plot, which the brief does not ask for, and name the histogram as the display for grouped numerical data.",
+   "Replace the Year 9 framing with examples suited to Stage 4 students in Years 7 and 8."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same display-choice idea at a suitable depth, but it uses 'bar chart' instead of the NSW term 'column graph', has a Tasmanian example, and includes pie charts and dot plots beyond the brief, so it needs small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Remember, wording: The remember line says categories, grouped numbers and change over time each 'need' a particular graph. The card only says each graph 'suits' that data, and other displays such as dot plots can also be used, so 'need' is too absolute.",
+ "rejected": {
+  "title": "Choosing a graph",
+  "card": [
+   [
+    "Column graph",
+    "suits categorical data, such as favourite sport or type of pet. Each category gets its own column, and the height shows how many fall in it."
+   ],
+   [
+    "Histogram",
+    "suits numerical data grouped into classes, such as heights in classes of 150 to 160 cm, 160 to 170 cm and so on. The columns touch, because each class runs into the next."
+   ],
+   [
+    "Line graph",
+    "suits data that changes over time, such as a town's rainfall each month. The line keeps the times in order and shows the trend. Sorting the values into classes or categories loses that order."
+   ],
+   "To choose, ask what type of data you have and what you want to show. Example: students' ways of getting to school (walk, cycle or bus) are categories, so a column graph suits them."
+  ],
+  "remember": "Categories need a column graph, grouped numbers need a histogram, change over time needs a line graph.",
+  "a": {
+   "q": "Priya records the colour of every car that passes her school gate in Parramatta. Which graph suits this data?",
+   "opts": [
+    "A column graph, as colours are categories",
+    "A histogram, as cars can be counted",
+    "A line graph, as cars pass over time",
+    "A histogram, as colours form groups"
+   ],
+   "why": "Car colours are categories, so a column graph with one column per colour suits them. A histogram, as cars can be counted, is tempting, but a histogram is for numerical data grouped into classes, such as heights, and colours are not numbers.",
+   "clue": "Can colours be put into number classes like 150 to 160?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A Newcastle council has the city's mean temperature for each month over three years. It wants to show how the temperature changed across that time. Which graph suits this best?",
+   "opts": [
+    "A line graph of the mean temperature for each month",
+    "A histogram of the 36 monthly mean temperatures",
+    "A column graph counting hot, mild and cold months",
+    "A column graph of the average for each season"
+   ],
+   "why": "The aim is to show change over time, so a line graph keeps the months in order and shows the trend. Temperature is numerical, which makes a histogram tempting, but sorting the values into classes loses the order of the months. The column graphs group the months into categories, which loses that order too.",
+   "clue": "Which display keeps the months in their order?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Remember, wording: The remember line says categories, grouped numbers and change over time each 'need' a particular graph. The card only says each graph 'suits' that data, and other displays such as dot plots can also be used, so 'need' is too absolute."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Choosing a graph",
+     "card": [
+      [
+       "Categorical",
+       "data sorts things into groups, such as favourite sport or type of pet. A column graph suits it."
+      ],
+      [
+       "Numerical",
+       "data is a count or a measurement, such as height or test score. When the values are grouped into classes, a histogram suits it and shows how the values spread out."
+      ],
+      [
+       "Over time",
+       "A line graph suits data that changes over time, such as a town's rainfall each month. The line keeps the times in order and shows the trend. A histogram would lose that order."
+      ],
+      "To choose a graph, first ask what type of data you have and what you want to show. Example: each student's way of getting to school (walk, cycle or bus) is categorical. A column graph shows how many students fall in each group."
+     ],
+     "remember": "Match the graph to the data: groups, grouped numbers or change over time.",
+     "a": {
+      "q": "Priya records the colour of every car that passes her school gate in Parramatta. Which describes the data and a graph that suits it?",
+      "opts": [
+       "Categorical, so a column graph",
+       "Numerical, so a histogram",
+       "Categorical, so a histogram",
+       "Numerical, so a line graph"
+      ],
+      "why": "Car colour sorts cars into groups, so it is categorical data and a column graph suits it. The option with a histogram names the data type correctly, but a histogram is for grouped numerical data, so it does not suit colours.",
+      "clue": "Is a colour a group or a measurement?"
+     },
+     "b": {
+      "d": 3,
+      "q": "A Newcastle council has the city's mean daily temperature for each month over three years. It wants to show how the temperature changed across that time. Which graph suits this best?",
+      "opts": [
+       "A line graph",
+       "A histogram",
+       "A column graph of the colours seen",
+       "A column graph with one column for each type of weather"
+      ],
+      "why": "The data is recorded over time and the aim is to show change, so a line graph keeps the months in order and shows the trend. Temperature is numerical, which makes a histogram tempting, but it would lose the order of the months.",
+      "clue": "Which display keeps the months in order?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Categorical, so a column graph",
+      "also_right": []
+     },
+     "b": {
+      "best": "A line graph",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "other",
+       "detail": "The card defines categorical data ('sorts things into groups') and numerical data ('a count or a measurement'), which belong to point 1 (Categorical and numerical data). This point should only mention them."
+      },
+      {
+       "part": "b",
+       "kind": "level",
+       "detail": "Two distractors are implausible. 'A column graph of the colours seen' has nothing to do with temperature data, and 'one column for each type of weather' does not match the data described. This makes the question too easy to answer without understanding the idea."
+      },
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "Why (a) refers to 'The option with a histogram' that 'names the data type correctly', but two options use a histogram ('Numerical, so a histogram' and 'Categorical, so a histogram'). The reference is ambiguous and should name the 'Categorical, so a histogram' option."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both answers are correct (column graph for car colour, line graph for temperature over time). The card re-defines categorical and numerical data from point 1, question b has implausible distractors, and why (a) refers ambiguously to 'the option with a histogram' when two options use one."
+    },
+    "flags": [
+     "Card, other: The card defines categorical data ('sorts things into groups') and numerical data ('a count or a measurement'), which belong to point 1 (Categorical and numerical data). This point should only mention them.",
+     "Question b, level: Two distractors are implausible. 'A column graph of the colours seen' has nothing to do with temperature data, and 'one column for each type of weather' does not match the data described. This makes the question too easy to answer without understanding the idea.",
+     "Question a, wording: Why (a) refers to 'The option with a histogram' that 'names the data type correctly', but two options use a histogram ('Numerical, so a histogram' and 'Categorical, so a histogram'). The reference is ambiguous and should name the 'Categorical, so a histogram' option."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Choosing a graph",
+     "card": [
+      [
+       "Column graph",
+       "suits categorical data, such as favourite sport or type of pet. Each category gets its own column, and the height shows how many fall in it."
+      ],
+      [
+       "Histogram",
+       "suits numerical data grouped into classes, such as heights in classes of 150 to 160 cm, 160 to 170 cm and so on. The columns touch, because each class runs into the next."
+      ],
+      [
+       "Line graph",
+       "suits data that changes over time, such as a town's rainfall each month. The line keeps the times in order and shows the trend. Sorting the values into classes or categories loses that order."
+      ],
+      "To choose, ask what type of data you have and what you want to show. Example: students' ways of getting to school (walk, cycle or bus) are categories, so a column graph suits them."
+     ],
+     "remember": "Categories need a column graph, grouped numbers need a histogram, change over time needs a line graph.",
+     "a": {
+      "q": "Priya records the colour of every car that passes her school gate in Parramatta. Which graph suits this data?",
+      "opts": [
+       "A column graph, as colours are categories",
+       "A histogram, as cars can be counted",
+       "A line graph, as cars pass over time",
+       "A histogram, as colours form groups"
+      ],
+      "why": "Car colours are categories, so a column graph with one column per colour suits them. A histogram, as cars can be counted, is tempting, but a histogram is for numerical data grouped into classes, such as heights, and colours are not numbers.",
+      "clue": "Can colours be put into number classes like 150 to 160?"
+     },
+     "b": {
+      "d": 3,
+      "q": "A Newcastle council has the city's mean temperature for each month over three years. It wants to show how the temperature changed across that time. Which graph suits this best?",
+      "opts": [
+       "A line graph of the mean temperature for each month",
+       "A histogram of the 36 monthly mean temperatures",
+       "A column graph counting hot, mild and cold months",
+       "A column graph of the average for each season"
+      ],
+      "why": "The aim is to show change over time, so a line graph keeps the months in order and shows the trend. Temperature is numerical, which makes a histogram tempting, but sorting the values into classes loses the order of the months. The column graphs group the months into categories, which loses that order too.",
+      "clue": "Which display keeps the months in their order?"
+     }
+    },
+    "proposal_problems": [],
+    "adapt": {
+     "from": "mat-choosing-display",
+     "changes": [
+      "Rename 'bar chart' to 'column graph' throughout the card and its questions, which is the term the NSW syllabus uses.",
+      "Replace the Hobart council example in question b with a New South Wales place, such as a Sydney or Newcastle council.",
+      "Remove or de-emphasise the pie chart and dot plot, which the brief does not ask for, and name the histogram as the display for grouped numerical data.",
+      "Replace the Year 9 framing with examples suited to Stage 4 students in Years 7 and 8."
+     ],
+     "by": "Claude Haiku 5.5",
+     "parts": [
+      "title",
+      "card1",
+      "card2",
+      "card3",
+      "card4",
+      "remember",
+      "a.q",
+      "a.opt1",
+      "a.opt2",
+      "a.opt3",
+      "a.opt4",
+      "a.why",
+      "b.q",
+      "b.opt1",
+      "b.opt2",
+      "b.opt3",
+      "b.opt4",
+      "b.why"
+     ]
+    },
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "A column graph, as colours are categories",
+       "also_right": []
+      },
+      "b": {
+       "best": "A line graph of the mean temperature for each month",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "remember",
+        "kind": "wording",
+        "detail": "The remember line says categories, grouped numbers and change over time each 'need' a particular graph. The card only says each graph 'suits' that data, and other displays such as dot plots can also be used, so 'need' is too absolute."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are sound, and each has one clear right answer. The remember line says each type of data 'needs' a particular graph, but the card only says 'suits', so it should be softened."
+     },
+     "flags": [
+      "Remember, wording: The remember line says categories, grouped numbers and change over time each 'need' a particular graph. The card only says each graph 'suits' that data, and other displays such as dot plots can also be used, so 'need' is too absolute."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:56Z",
+   "step": "write",
+   "version": {
+    "title": "Choosing a graph",
+    "card": [
+     [
+      "Column graph",
+      "suits categorical data, such as favourite sport or type of pet. Each category gets its own column, and the height shows how many fall in it."
+     ],
+     [
+      "Histogram",
+      "suits numerical data grouped into classes, such as heights in classes of 150 to 160 cm, 160 to 170 cm and so on. The columns touch, because each class runs into the next."
+     ],
+     [
+      "Line graph",
+      "suits data that changes over time, such as a town's rainfall each month. The line keeps the times in order and shows the trend. Sorting the values into classes or categories loses that order."
+     ],
+     "To choose, ask what type of data you have and what you want to show. Example: students' ways of getting to school (walk, cycle or bus) are categories, so a column graph suits them."
+    ],
+    "remember": "Categories suit a column graph, grouped numbers suit a histogram, and change over time suits a line graph.",
+    "a": {
+     "q": "Priya records the colour of every car that passes her school gate in Parramatta. Which graph suits this data?",
+     "opts": [
+      "A column graph, as colours are categories",
+      "A histogram, as cars can be counted",
+      "A line graph, as cars pass over time",
+      "A histogram, as colours form groups"
+     ],
+     "why": "Car colours are categories, so a column graph with one column per colour suits them. A histogram, as cars can be counted, is tempting, but a histogram is for numerical data grouped into classes, such as heights, and colours are not numbers.",
+     "clue": "Can colours be put into number classes like 150 to 160?"
+    },
+    "b": {
+     "d": 3,
+     "q": "A Newcastle council has the city's mean temperature for each month over three years. It wants to show how the temperature changed across that time. Which graph suits this best?",
+     "opts": [
+      "A line graph of the mean temperature for each month",
+      "A histogram of the 36 monthly mean temperatures",
+      "A column graph counting hot, mild and cold months",
+      "A column graph of the average for each season"
+     ],
+     "why": "The aim is to show change over time, so a line graph keeps the months in order and shows the trend. Temperature is numerical, which makes a histogram tempting, but sorting the values into classes loses the order of the months. The column graphs group the months into categories, which loses that order too.",
+     "clue": "Which display keeps the months in their order?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "A column graph, as colours are categories",
+     "also_right": []
+    },
+    "b": {
+     "best": "A line graph of the mean temperature for each month",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Choosing a graph",
+  "card": [
+   [
+    "Column graph",
+    "suits categorical data, such as favourite sport or type of pet. Each category gets its own column, and the height shows how many fall in it."
+   ],
+   [
+    "Histogram",
+    "suits numerical data grouped into classes, such as heights in classes of 150 to 160 cm, 160 to 170 cm and so on. The columns touch, because each class runs into the next."
+   ],
+   [
+    "Line graph",
+    "suits data that changes over time, such as a town's rainfall each month. The line keeps the times in order and shows the trend. Sorting the values into classes or categories loses that order."
+   ],
+   "To choose, ask what type of data you have and what you want to show. Example: students' ways of getting to school (walk, cycle or bus) are categories, so a column graph suits them."
+  ],
+  "remember": "Categories suit a column graph, grouped numbers suit a histogram, and change over time suits a line graph.",
+  "a": {
+   "q": "Priya records the colour of every car that passes her school gate in Parramatta. Which graph suits this data?",
+   "opts": [
+    "A column graph, as colours are categories",
+    "A histogram, as cars can be counted",
+    "A line graph, as cars pass over time",
+    "A histogram, as colours form groups"
+   ],
+   "why": "Car colours are categories, so a column graph with one column per colour suits them. A histogram, as cars can be counted, is tempting, but a histogram is for numerical data grouped into classes, such as heights, and colours are not numbers.",
+   "clue": "Can colours be put into number classes like 150 to 160?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A Newcastle council has the city's mean temperature for each month over three years. It wants to show how the temperature changed across that time. Which graph suits this best?",
+   "opts": [
+    "A line graph of the mean temperature for each month",
+    "A histogram of the 36 monthly mean temperatures",
+    "A column graph counting hot, mild and cold months",
+    "A column graph of the average for each season"
+   ],
+   "why": "The aim is to show change over time, so a line graph keeps the months in order and shows the trend. Temperature is numerical, which makes a histogram tempting, but sorting the values into classes loses the order of the months. The column graphs group the months into categories, which loses that order too.",
+   "clue": "Which display keeps the months in their order?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A column graph, as colours are categories",
+   "also_right": []
+  },
+  "b": {
+   "best": "A line graph of the mean temperature for each month",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Choosing a graph",
+  "card": [
+   [
+    "Column graph",
+    "suits categorical data, such as favourite sport or type of pet. Each category gets its own column, and the height shows how many fall in it."
+   ],
+   [
+    "Histogram",
+    "suits numerical data grouped into classes, such as heights in classes of 150 to 160 cm, 160 to 170 cm and so on. The columns touch, because each class runs into the next."
+   ],
+   [
+    "Line graph",
+    "suits data that changes over time, such as a town's rainfall each month. The line keeps the times in order and shows the trend. Sorting the values into classes or categories loses that order."
+   ],
+   "To choose, ask what type of data you have and what you want to show. Example: students' ways of getting to school (walk, cycle or bus) are categories, so a column graph suits them."
+  ],
+  "remember": "Categories suit a column graph, grouped numbers suit a histogram, and change over time suits a line graph.",
+  "a": {
+   "q": "Priya records the colour of every car that passes her school gate in Parramatta. Which graph suits this data?",
+   "opts": [
+    "A column graph, as colours are categories",
+    "A histogram, as cars can be counted",
+    "A line graph, as cars pass over time",
+    "A histogram, as colours form groups"
+   ],
+   "why": "Car colours are categories, so a column graph with one column per colour suits them. A histogram, as cars can be counted, is tempting, but a histogram is for numerical data grouped into classes, such as heights, and colours are not numbers.",
+   "clue": "Can colours be put into number classes like 150 to 160?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A Newcastle council has the city's mean temperature for each month over three years. It wants to show how the temperature changed across that time. Which graph suits this best?",
+   "opts": [
+    "A line graph of the mean temperature for each month",
+    "A histogram of the 36 monthly mean temperatures",
+    "A column graph counting hot, mild and cold months",
+    "A column graph of the average for each season"
+   ],
+   "why": "The aim is to show change over time, so a line graph keeps the months in order and shows the trend. Temperature is numerical, which makes a histogram tempting, but sorting the values into classes loses the order of the months. The column graphs group the months into categories, which loses that order too.",
+   "clue": "Which display keeps the months in their order?"
+  }
+ },
+ "checked_by": "claude-code"
 }

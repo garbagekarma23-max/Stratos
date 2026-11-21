@@ -8,8 +8,217 @@
    0.372
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:42Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: failed the content check, writing again",
+  "2026-11-20T12:44:53Z write: done",
+  "2026-11-20T12:53:24Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:23:37Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.01381,
+  "check": 0.01334,
+  "fix": 0.0234
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point covers the parts of a narrative's structure but not the brief's idea that the resolution can meet or surprise the reader's expectations, which would need a new step, so a new point is the safer choice.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Narrative structure",
+  "card": [
+   [
+    "Orientation",
+    "the opening, which introduces the characters, setting and situation. Nothing has gone wrong yet."
+   ],
+   [
+    "Complication",
+    "the problem that disturbs the situation and sets the story moving."
+   ],
+   [
+    "Rising action",
+    "the events that follow, as the problem grows harder and the tension builds."
+   ],
+   [
+    "Climax and resolution",
+    "The climax is the peak of tension, where the problem is faced. The resolution is how the story settles afterwards."
+   ]
+  ],
+  "remember": "A story moves from setup to problem to peak to outcome, and the resolution can meet or surprise what a reader expects.",
+  "a": {
+   "q": "In a story, a girl called Zara moves to a new town. On her first day, her bike is stolen and she must find it before the school bike race. Which part of the structure is the stolen bike?",
+   "opts": [
+    "The complication",
+    "The orientation",
+    "The climax",
+    "The resolution"
+   ],
+   "why": "The theft is the problem that disturbs Zara's situation and sets the story moving, so it is the complication. The orientation is the earlier part that introduces Zara and her new town, before anything goes wrong.",
+   "clue": "Which part is the problem that starts the story moving?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo's team is trying to win a robot contest. Readers expect a win, since the team trained hard. In the resolution, the robot breaks and they lose, but they learn to work together. How does the resolution treat the reader's expectations?",
+   "opts": [
+    "It surprises them, because the team does not win",
+    "It meets them, because the team trained hard and so wins",
+    "It is the climax, because the robot breaks at that point",
+    "It is the orientation, because it shows the team as a group"
+   ],
+   "why": "Readers expected a win, and the resolution gives a loss instead, so it surprises them. The breakdown might look like a climax, but the resolution is how the story settles after the peak.",
+   "clue": "Compare the expected ending with the one the story gives."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The complication",
+   "also_right": []
+  },
+  "b": {
+   "best": "It surprises them, because the team does not win",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says the robot breaks 'in the resolution', but the breakdown in a contest is the peak of tension, which the card calls the climax. This blurs the climax/resolution distinction the card teaches. The why makes it worse: it says the breakdown 'might look like a climax' but is not one, which contradicts the card's definition of the climax as the peak where the problem is faced. Better wording: 'At the climax the robot breaks and they lose; in the resolution they learn to work together.'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are clear and correct. Question b's stem puts the robot breaking in the resolution, and its why denies that this is the climax, which muddles the climax/resolution distinction the card teaches."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The stem says the robot breaks 'in the resolution', but the breakdown in a contest is the peak of tension, which the card calls the climax. This blurs the climax/resolution distinction the card teaches. The why makes it worse: it says the breakdown 'might look like a climax' but is not one, which contradicts the card's definition of the climax as the peak where the problem is faced. Better wording: 'At the climax the robot breaks and they lose; in the resolution they learn to work together.'"
+ ],
+ "proposal": {
+  "title": "Narrative structure",
+  "card": [
+   [
+    "Orientation",
+    "the opening, which introduces the characters, setting and situation. Nothing has gone wrong yet."
+   ],
+   [
+    "Complication",
+    "the problem that disturbs the situation and sets the story moving."
+   ],
+   [
+    "Rising action",
+    "the events that follow, as the problem grows harder and the tension builds."
+   ],
+   [
+    "Climax and resolution",
+    "The climax is the peak of tension, where the problem is faced. The resolution settles the story afterwards, and it can meet or surprise what a reader expects."
+   ]
+  ],
+  "remember": "Setup, problem, rising tension, peak, then outcome. The ending can meet or surprise a reader's expectations.",
+  "a": {
+   "q": "In a story, a girl called Zara moves to a new town. On her first day, her bike is stolen and she must find it before the school bike race. Which part of the structure is the stolen bike?",
+   "opts": [
+    "The complication",
+    "The orientation",
+    "The climax",
+    "The resolution"
+   ],
+   "why": "The theft is the problem that disturbs Zara's situation and sets the story moving, so it is the complication. The orientation is the earlier part that introduces Zara and her new town, before anything goes wrong.",
+   "clue": "Which part is the problem that starts the story moving?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo's team trains hard for a robot contest, so readers expect a win. At the climax, the robot breaks and they lose. In the resolution, they learn to work together. How does the ending treat the reader's expectations?",
+   "opts": [
+    "It surprises them, because the team does not win",
+    "It meets them, because the team trains hard and wins",
+    "It meets them, because the team learns to work together",
+    "It meets them, because the robot works as planned"
+   ],
+   "why": "Readers expected a win, but the team loses at the climax and the story settles on a lesson instead, so the ending surprises them. Learning to work together was not what readers expected, so it does not meet their expectations.",
+   "clue": "Compare the ending readers expected with the one the story gives."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:37Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says the robot breaks 'in the resolution', but the breakdown in a contest is the peak of tension, which the card calls the climax. This blurs the climax/resolution distinction the card teaches. The why makes it worse: it says the breakdown 'might look like a climax' but is not one, which contradicts the card's definition of the climax as the peak where the problem is faced. Better wording: 'At the climax the robot breaks and they lose; in the resolution they learn to work together.'"
+   }
+  ],
+  "flags": [
+   "Question b, wording: The stem says the robot breaks 'in the resolution', but the breakdown in a contest is the peak of tension, which the card calls the climax. This blurs the climax/resolution distinction the card teaches. The why makes it worse: it says the breakdown 'might look like a climax' but is not one, which contradicts the card's definition of the climax as the peak where the problem is faced. Better wording: 'At the climax the robot breaks and they lose; in the resolution they learn to work together.'"
+  ]
+ },
+ "final": {
+  "title": "Narrative structure",
+  "card": [
+   [
+    "Orientation",
+    "the opening, which introduces the characters, setting and situation. Nothing has gone wrong yet."
+   ],
+   [
+    "Complication",
+    "the problem that disturbs the situation and sets the story moving."
+   ],
+   [
+    "Rising action",
+    "the events that follow, as the problem grows harder and the tension builds."
+   ],
+   [
+    "Climax and resolution",
+    "The climax is the peak of tension, where the problem is faced. The resolution settles the story afterwards, and it can meet or surprise what a reader expects."
+   ]
+  ],
+  "remember": "Setup, problem, rising tension, peak, then outcome. The ending can meet or surprise a reader's expectations.",
+  "a": {
+   "q": "In a story, a girl called Zara moves to a new town. On her first day, her bike is stolen and she must find it before the school bike race. Which part of the structure is the stolen bike?",
+   "opts": [
+    "The complication",
+    "The orientation",
+    "The climax",
+    "The resolution"
+   ],
+   "why": "The theft is the problem that disturbs Zara's situation and sets the story moving, so it is the complication. The orientation is the earlier part that introduces Zara and her new town, before anything goes wrong.",
+   "clue": "Which part is the problem that starts the story moving?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo's team trains hard for a robot contest, so readers expect a win. At the climax, the robot breaks and they lose. In the resolution, they learn to work together. How does the ending treat the reader's expectations?",
+   "opts": [
+    "It surprises them, because the team does not win",
+    "It meets them, because the team trains hard and wins",
+    "It meets them, because the team learns to work together",
+    "It meets them, because the robot works as planned"
+   ],
+   "why": "Readers expected a win, but the team loses at the climax and the story settles on a lesson instead, so the ending surprises them. Learning to work together was not what readers expected, so it does not meet their expectations.",
+   "clue": "Compare the ending readers expected with the one the story gives."
+  }
+ },
+ "cleared_by": "auto"
 }

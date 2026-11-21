@@ -20,8 +20,188 @@
    0.206
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 says reuse eng-structure-persuasive-essay, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:42Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:46Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T13:23:37Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00038,
+  "confirm": 0.00854,
+  "write": 0.00642,
+  "check": 0.01012,
+  "fix": 0.01686
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "eng-structure-persuasive-essay",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The Year 8 persuasive essay card explains that a conclusion restates the position in fresh words, sums up the case and adds no new argument, which matches the new Stage 4 point at a suitable depth, though it covers conclusions only as one part of a wider structure card.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank's 'Conclusions' point teaches the same idea but at Year 11 depth, built around thesis statements and literary quotations, and the other English points cover whole-essay structure more broadly, so none fits a Stage 4 point on conclusions alone.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Conclusions",
+  "card": [
+   "A conclusion is the last paragraph of an analytical or persuasive text. It draws the argument together so the reader finishes with a clear sense of the writer's position.",
+   "It restates the position in fresh words. Do not copy whole sentences from the introduction. Say the same idea in a new way.",
+   "It sums up the main reasons in a short, connected way. It does not go back over every piece of evidence.",
+   "It adds no new points. A new reason or new evidence belongs in a body paragraph, where it can be explained. Adding one at the end leaves the argument unfinished."
+  ],
+  "remember": "A conclusion pulls the argument together and restates the position in new words, with nothing new added.",
+  "a": {
+   "q": "Which is the best job for the last paragraph of an essay arguing that schools should start later?",
+   "opts": [
+    "Draw the reasons together and restate the position",
+    "Introduce a new reason that has not been discussed",
+    "Copy the opening sentences word for word",
+    "Explain one piece of evidence in more detail"
+   ],
+   "why": "A conclusion pulls the argument together and leaves the reader clear about the writer's position. A new reason is tempting, but it should have been argued in a body paragraph, so adding it here leaves it unexplained.",
+   "clue": "Think about what the reader should be left with at the end."
+  },
+  "b": {
+   "d": 3,
+   "q": "Zara's introduction said: \"Schools should ban phones in class.\" She is writing her conclusion. Which sentence fits best?",
+   "opts": [
+    "Overall, classrooms work better when phones stay away",
+    "Schools should ban phones in class",
+    "Phones also cause problems on school buses",
+    "One study found that marks rose after a phone ban"
+   ],
+   "why": "The first option restates her position in fresh words and sums up the argument. The second repeats the introduction's sentence exactly. The third adds a new point, and the fourth gives new evidence, which belongs in a body paragraph.",
+   "clue": "Look for the option that says the same idea in different words."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Draw the reasons together and restate the position",
+   "also_right": []
+  },
+  "b": {
+   "best": "Overall, classrooms work better when phones stay away",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) names options by position ('first', 'second', 'third', 'fourth'), but the options are shown in random order. Here the second option is the new point about buses and the third is the exact copy, so the why contradicts what students see. Refer to each option by its content instead."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are sound. Why (b) refers to options by position, which does not match the shuffled order (it calls the second option the exact copy when that is the third), so it should name options by content."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) names options by position ('first', 'second', 'third', 'fourth'), but the options are shown in random order. Here the second option is the new point about buses and the third is the exact copy, so the why contradicts what students see. Refer to each option by its content instead."
+ ],
+ "proposal": {
+  "title": "Conclusions",
+  "card": [
+   "A conclusion is the last paragraph of an analytical or persuasive text. It draws the argument together so the reader finishes with a clear sense of the writer's position.",
+   "It restates the position in fresh words. Do not copy whole sentences from the introduction. Say the same idea in a new way.",
+   "It sums up the main reasons in a short, connected way. It does not go back over every piece of evidence.",
+   "It adds no new points. A new reason or new evidence belongs in a body paragraph, where it can be explained. Adding one at the end leaves the argument unfinished."
+  ],
+  "remember": "A conclusion pulls the argument together and restates the position in new words, with nothing new added.",
+  "a": {
+   "q": "Which is the best job for the last paragraph of an essay arguing that schools should start later?",
+   "opts": [
+    "Draw the reasons together and restate the position",
+    "Introduce a new reason that has not been discussed",
+    "Copy the opening sentences word for word",
+    "Explain one piece of evidence in more detail"
+   ],
+   "why": "A conclusion pulls the argument together and leaves the reader clear about the writer's position. A new reason is tempting, but it should have been argued in a body paragraph, so adding it here leaves it unexplained.",
+   "clue": "Think about what the reader should be left with at the end."
+  },
+  "b": {
+   "d": 3,
+   "q": "Zara's introduction said: \"Schools should ban phones in class.\" Her body paragraphs argued that phones distract students. Which sentence best fits her conclusion?",
+   "opts": [
+    "Overall, classrooms work better when phones stay away",
+    "Schools should ban phones in class",
+    "Phones also cause problems on school buses",
+    "One study found that marks rose after a phone ban"
+   ],
+   "why": "Saying classrooms work better when phones stay away restates her position in fresh words and sums up her argument. Repeating that schools should ban phones in class copies the introduction's sentence exactly. The point about buses and the study about marks are both new, so they belong in a body paragraph.",
+   "clue": "Look for the sentence that says the same idea in different words."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:37Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) names options by position ('first', 'second', 'third', 'fourth'), but the options are shown in random order. Here the second option is the new point about buses and the third is the exact copy, so the why contradicts what students see. Refer to each option by its content instead."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) names options by position ('first', 'second', 'third', 'fourth'), but the options are shown in random order. Here the second option is the new point about buses and the third is the exact copy, so the why contradicts what students see. Refer to each option by its content instead."
+  ]
+ },
+ "final": {
+  "title": "Conclusions",
+  "card": [
+   "A conclusion is the last paragraph of an analytical or persuasive text. It draws the argument together so the reader finishes with a clear sense of the writer's position.",
+   "It restates the position in fresh words. Do not copy whole sentences from the introduction. Say the same idea in a new way.",
+   "It sums up the main reasons in a short, connected way. It does not go back over every piece of evidence.",
+   "It adds no new points. A new reason or new evidence belongs in a body paragraph, where it can be explained. Adding one at the end leaves the argument unfinished."
+  ],
+  "remember": "A conclusion pulls the argument together and restates the position in new words, with nothing new added.",
+  "a": {
+   "q": "Which is the best job for the last paragraph of an essay arguing that schools should start later?",
+   "opts": [
+    "Draw the reasons together and restate the position",
+    "Introduce a new reason that has not been discussed",
+    "Copy the opening sentences word for word",
+    "Explain one piece of evidence in more detail"
+   ],
+   "why": "A conclusion pulls the argument together and leaves the reader clear about the writer's position. A new reason is tempting, but it should have been argued in a body paragraph, so adding it here leaves it unexplained.",
+   "clue": "Think about what the reader should be left with at the end."
+  },
+  "b": {
+   "d": 3,
+   "q": "Zara's introduction said: \"Schools should ban phones in class.\" Her body paragraphs argued that phones distract students. Which sentence best fits her conclusion?",
+   "opts": [
+    "Overall, classrooms work better when phones stay away",
+    "Schools should ban phones in class",
+    "Phones also cause problems on school buses",
+    "One study found that marks rose after a phone ban"
+   ],
+   "why": "Saying classrooms work better when phones stay away restates her position in fresh words and sums up her argument. Repeating that schools should ban phones in class copies the introduction's sentence exactly. The point about buses and the study about marks are both new, so they belong in a body paragraph.",
+   "clue": "Look for the sentence that says the same idea in different words."
+  }
+ },
+ "cleared_by": "auto"
 }

@@ -24,8 +24,115 @@
    0.261
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:55Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:54Z write: done",
+  "2026-11-20T12:44:58Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "write": 0.00769,
+  "check": 0.00996
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Adding and subtracting fractions, teaches only number fractions at Year 7 depth, and adding algebraic fractions with pronumerals in the numerator would need new steps, so the new point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Adding and subtracting algebraic fractions",
+  "card": [
+   "Algebraic fractions are added and subtracted like number fractions. You can only add or subtract once the denominators are the same.",
+   "To find a common denominator, use a common multiple of the denominators. For \\(\\frac{x}{3}\\) and \\(\\frac{x}{4}\\), use 12.",
+   "Rewrite each fraction with that denominator by multiplying its top and bottom by the same number: \\(\\frac{x}{3} = \\frac{4x}{12}\\) and \\(\\frac{x}{4} = \\frac{3x}{12}\\).",
+   "Add or subtract the numerators and keep the denominator: \\(\\frac{x}{3} + \\frac{x}{4} = \\frac{4x + 3x}{12} = \\frac{7x}{12}\\). The denominator does not change."
+  ],
+  "remember": "Match the denominators first, then add or subtract only the numerators.",
+  "a": {
+   "q": "What is \\(\\frac{x}{3} + \\frac{x}{4}\\) written as one fraction?",
+   "opts": [
+    "\\(\\frac{7x}{12}\\)",
+    "\\(\\frac{2x}{7}\\)",
+    "\\(\\frac{7x}{7}\\)",
+    "\\(\\frac{x}{12}\\)"
+   ],
+   "why": "The common denominator is 12, so the sum is \\(\\frac{4x + 3x}{12} = \\frac{7x}{12}\\). Adding the denominators to get 7 is tempting, but denominators are matched, never added.",
+   "clue": "Write both fractions with denominator 12 first."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is \\(\\frac{2x}{3} - \\frac{x}{5}\\) written as one fraction?",
+   "opts": [
+    "\\(\\frac{7x}{15}\\)",
+    "\\(\\frac{x}{2}\\)",
+    "\\(\\frac{x}{15}\\)",
+    "\\(\\frac{3x}{15}\\)"
+   ],
+   "why": "The common denominator is 15. \\(\\frac{2x}{3} = \\frac{10x}{15}\\) and \\(\\frac{x}{5} = \\frac{3x}{15}\\), so the difference is \\(\\frac{10x - 3x}{15} = \\frac{7x}{15}\\). Subtracting the tops and bottoms separately gives a wrong answer.",
+   "clue": "Change both fractions to fifteenths before subtracting."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(\\frac{7x}{12}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(\\frac{7x}{15}\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Adding and subtracting algebraic fractions",
+  "card": [
+   "Algebraic fractions are added and subtracted like number fractions. You can only add or subtract once the denominators are the same.",
+   "To find a common denominator, use a common multiple of the denominators. For \\(\\frac{x}{3}\\) and \\(\\frac{x}{4}\\), use 12.",
+   "Rewrite each fraction with that denominator by multiplying its top and bottom by the same number: \\(\\frac{x}{3} = \\frac{4x}{12}\\) and \\(\\frac{x}{4} = \\frac{3x}{12}\\).",
+   "Add or subtract the numerators and keep the denominator: \\(\\frac{x}{3} + \\frac{x}{4} = \\frac{4x + 3x}{12} = \\frac{7x}{12}\\). The denominator does not change."
+  ],
+  "remember": "Match the denominators first, then add or subtract only the numerators.",
+  "a": {
+   "q": "What is \\(\\frac{x}{3} + \\frac{x}{4}\\) written as one fraction?",
+   "opts": [
+    "\\(\\frac{7x}{12}\\)",
+    "\\(\\frac{2x}{7}\\)",
+    "\\(\\frac{7x}{7}\\)",
+    "\\(\\frac{x}{12}\\)"
+   ],
+   "why": "The common denominator is 12, so the sum is \\(\\frac{4x + 3x}{12} = \\frac{7x}{12}\\). Adding the denominators to get 7 is tempting, but denominators are matched, never added.",
+   "clue": "Write both fractions with denominator 12 first."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is \\(\\frac{2x}{3} - \\frac{x}{5}\\) written as one fraction?",
+   "opts": [
+    "\\(\\frac{7x}{15}\\)",
+    "\\(\\frac{x}{2}\\)",
+    "\\(\\frac{x}{15}\\)",
+    "\\(\\frac{3x}{15}\\)"
+   ],
+   "why": "The common denominator is 15. \\(\\frac{2x}{3} = \\frac{10x}{15}\\) and \\(\\frac{x}{5} = \\frac{3x}{15}\\), so the difference is \\(\\frac{10x - 3x}{15} = \\frac{7x}{15}\\). Subtracting the tops and bottoms separately gives a wrong answer.",
+   "clue": "Change both fractions to fifteenths before subtracting."
+  }
+ },
+ "cleared_by": "checker"
 }

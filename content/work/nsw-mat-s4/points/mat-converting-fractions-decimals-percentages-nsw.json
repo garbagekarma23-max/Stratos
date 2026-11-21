@@ -24,8 +24,113 @@
    0.363
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:54Z write: done",
+  "2026-11-20T12:35:53Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00036,
+  "write": 0.01255,
+  "check": 0.00575
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point covers the same three-way conversion but is broader, adding a number line section on negative fractions and a question on it that goes beyond the brief, so a new point is the safer match.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Converting fractions, decimals and percentages",
+  "card": [
+   "A percentage is a fraction out of 100. The symbol % means \\(\\frac{1}{100}\\), so \\(7\\% = \\frac{7}{100} = 0.07\\).",
+   "To change a percentage to a decimal, divide by 100. To change a decimal to a percentage, multiply by 100.",
+   "To change a fraction to a decimal, divide the top by the bottom. Then multiply by 100 for a percentage.",
+   "Example: \\(\\frac{3}{8}\\) means \\(3 \\div 8 = 0.375\\). Then \\(0.375 \\times 100 = 37.5\\), so \\(\\frac{3}{8} = 0.375 = 37.5\\%\\)."
+  ],
+  "remember": "Divide by 100 to go from a percentage to a decimal. Multiply by 100 to go back.",
+  "a": {
+   "q": "Which decimal is the same as \\(45\\%\\)?",
+   "opts": [
+    "\\(0.45\\)",
+    "\\(4.5\\)",
+    "\\(0.045\\)",
+    "\\(45\\)"
+   ],
+   "why": "Divide by 100 to change a percentage to a decimal, so \\(45 \\div 100 = 0.45\\). Choosing \\(4.5\\) comes from dividing by 10 instead of 100.",
+   "clue": "Percent means out of 100."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia scored \\(\\frac{7}{20}\\) on a quiz. What is her score as a percentage?",
+   "opts": [
+    "\\(35\\%\\)",
+    "\\(3.5\\%\\)",
+    "\\(14\\%\\)",
+    "\\(0.35\\%\\)"
+   ],
+   "why": "Divide to get \\(7 \\div 20 = 0.35\\), then multiply by 100 to get \\(35\\%\\). The answer \\(0.35\\%\\) is tempting, but it leaves out the step of multiplying by 100.",
+   "clue": "Divide the top by the bottom first, then multiply by 100."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(0.45\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(35\\%\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Converting fractions, decimals and percentages",
+  "card": [
+   "A percentage is a fraction out of 100. The symbol % means \\(\\frac{1}{100}\\), so \\(7\\% = \\frac{7}{100} = 0.07\\).",
+   "To change a percentage to a decimal, divide by 100. To change a decimal to a percentage, multiply by 100.",
+   "To change a fraction to a decimal, divide the top by the bottom. Then multiply by 100 for a percentage.",
+   "Example: \\(\\frac{3}{8}\\) means \\(3 \\div 8 = 0.375\\). Then \\(0.375 \\times 100 = 37.5\\), so \\(\\frac{3}{8} = 0.375 = 37.5\\%\\)."
+  ],
+  "remember": "Divide by 100 to go from a percentage to a decimal. Multiply by 100 to go back.",
+  "a": {
+   "q": "Which decimal is the same as \\(45\\%\\)?",
+   "opts": [
+    "\\(0.45\\)",
+    "\\(4.5\\)",
+    "\\(0.045\\)",
+    "\\(45\\)"
+   ],
+   "why": "Divide by 100 to change a percentage to a decimal, so \\(45 \\div 100 = 0.45\\). Choosing \\(4.5\\) comes from dividing by 10 instead of 100.",
+   "clue": "Percent means out of 100."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia scored \\(\\frac{7}{20}\\) on a quiz. What is her score as a percentage?",
+   "opts": [
+    "\\(35\\%\\)",
+    "\\(3.5\\%\\)",
+    "\\(14\\%\\)",
+    "\\(0.35\\%\\)"
+   ],
+   "why": "Divide to get \\(7 \\div 20 = 0.35\\), then multiply by 100 to get \\(35\\%\\). The answer \\(0.35\\%\\) is tempting, but it leaves out the step of multiplying by 100.",
+   "clue": "Divide the top by the bottom first, then multiply by 100."
+  }
+ },
+ "cleared_by": "checker"
 }

@@ -24,8 +24,133 @@
    0.453
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.00628,
+  "check": 0.00752
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No single bank point covers all three rock types and the idea that rocks are made of minerals; the matches (metamorphic, igneous, sedimentary) each teach only one type at more depth, and the rock cycle is broader, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Igneous, sedimentary and metamorphic rocks",
+  "card": [
+   "Rocks are made of minerals. A mineral is a solid substance that forms naturally in the Earth, such as quartz. Most rocks are a mixture of minerals.",
+   [
+    "Igneous",
+    "forms when hot melted rock, called magma, cools and hardens. Granite and basalt are examples."
+   ],
+   [
+    "Sedimentary",
+    "forms when pieces of rock and other material, called sediment, settle in layers and are pressed together. Sandstone is an example."
+   ],
+   [
+    "Metamorphic",
+    "forms when an existing rock is changed by heat and pressure, without melting completely. Marble and slate are examples."
+   ]
+  ],
+  "remember": "Igneous rock comes from cooled magma, sedimentary from pressed layers of sediment, and metamorphic from rock changed by heat and pressure.",
+  "a": {
+   "q": "A rock is made of layers of sand grains that were pressed together over a long time. Which type of rock is it?",
+   "opts": [
+    "Sedimentary",
+    "Igneous",
+    "Metamorphic",
+    "A mineral"
+   ],
+   "why": "Sand is sediment, and rock made of pressed layers of sediment is sedimentary. It is not igneous, because that type forms from cooled magma and not from settled grains.",
+   "clue": "Think about what the layers of grains were before they were pressed."
+  },
+  "b": {
+   "d": 3,
+   "q": "Limestone is a sedimentary rock. Deep underground, heat and pressure change it into marble without melting it completely. What type of rock is marble?",
+   "opts": [
+    "Metamorphic, because heat and pressure changed it",
+    "Sedimentary, because it began as a sedimentary rock",
+    "Igneous, because heat was needed to change it",
+    "Metamorphic, because it was formed from magma"
+   ],
+   "why": "Marble is metamorphic because an existing rock was changed by heat and pressure. It is not igneous, because the limestone did not melt completely and cool as magma.",
+   "clue": "Ask how the rock formed now, not what it was before."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Sedimentary",
+   "also_right": []
+  },
+  "b": {
+   "best": "Metamorphic, because heat and pressure changed it",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Igneous, sedimentary and metamorphic rocks",
+  "card": [
+   "Rocks are made of minerals. A mineral is a solid substance that forms naturally in the Earth, such as quartz. Most rocks are a mixture of minerals.",
+   [
+    "Igneous",
+    "forms when hot melted rock, called magma, cools and hardens. Granite and basalt are examples."
+   ],
+   [
+    "Sedimentary",
+    "forms when pieces of rock and other material, called sediment, settle in layers and are pressed together. Sandstone is an example."
+   ],
+   [
+    "Metamorphic",
+    "forms when an existing rock is changed by heat and pressure, without melting completely. Marble and slate are examples."
+   ]
+  ],
+  "remember": "Igneous rock comes from cooled magma, sedimentary from pressed layers of sediment, and metamorphic from rock changed by heat and pressure.",
+  "a": {
+   "q": "A rock is made of layers of sand grains that were pressed together over a long time. Which type of rock is it?",
+   "opts": [
+    "Sedimentary",
+    "Igneous",
+    "Metamorphic",
+    "A mineral"
+   ],
+   "why": "Sand is sediment, and rock made of pressed layers of sediment is sedimentary. It is not igneous, because that type forms from cooled magma and not from settled grains.",
+   "clue": "Think about what the layers of grains were before they were pressed."
+  },
+  "b": {
+   "d": 3,
+   "q": "Limestone is a sedimentary rock. Deep underground, heat and pressure change it into marble without melting it completely. What type of rock is marble?",
+   "opts": [
+    "Metamorphic, because heat and pressure changed it",
+    "Sedimentary, because it began as a sedimentary rock",
+    "Igneous, because heat was needed to change it",
+    "Metamorphic, because it was formed from magma"
+   ],
+   "why": "Marble is metamorphic because an existing rock was changed by heat and pressure. It is not igneous, because the limestone did not melt completely and cool as magma.",
+   "clue": "Ask how the rock formed now, not what it was before."
+  }
+ },
+ "cleared_by": "checker"
 }

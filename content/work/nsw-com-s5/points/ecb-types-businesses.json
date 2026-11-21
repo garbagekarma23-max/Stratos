@@ -24,8 +24,137 @@
    0.237
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: done",
+  "2026-11-20T12:35:44Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.01053,
+  "check": 0.00843
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No single bank point covers the whole brief: the closest, bus-sole-traders-partnerships, covers only sole traders and partnerships at Year 11 depth and omits companies and business size, while bus-size-business covers only size, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Types of businesses",
+  "card": [
+   [
+    "Sole trader",
+    "A business owned and run by one person. The owner keeps all the profit and is personally responsible for its debts."
+   ],
+   [
+    "Partnership",
+    "A business owned by two or more people who share the work, the profit and the risk."
+   ],
+   [
+    "Company",
+    "A business that is a separate legal entity from its owners, who are called shareholders. It can own property and be sued in its own name."
+   ],
+   [
+    "Size",
+    "Businesses are also small, medium or large, judged by things such as how many staff they employ and how much they sell. A business can be, for example, a small company or a large company."
+   ]
+  ],
+  "remember": "Ownership type (sole trader, partnership, company) is one question and size is another.",
+  "a": {
+   "q": "Priya owns and runs a bike repair shop by herself. She keeps all the profit. What type of business is it?",
+   "opts": [
+    "A sole trader",
+    "A partnership",
+    "A company",
+    "A franchise"
+   ],
+   "why": "One owner who runs the business and keeps all the profit is a sole trader. It is not a partnership, which needs two or more owners.",
+   "clue": "Count how many owners there are."
+  },
+  "b": {
+   "d": 3,
+   "q": "A company called Bright Tiles Pty Ltd is sued after a faulty job. Which feature of companies explains why the case is against the business itself?",
+   "opts": [
+    "It is a separate legal entity from its owners",
+    "It is owned by two or more partners",
+    "It always has many staff",
+    "Its owner keeps all the profit"
+   ],
+   "why": "A company is a separate legal entity, so it can be sued in its own name. Sharing ownership between partners describes a partnership, not why a company is sued.",
+   "clue": "Think about who the law treats as the business."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A sole trader",
+   "also_right": []
+  },
+  "b": {
+   "best": "It is a separate legal entity from its owners",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Types of businesses",
+  "card": [
+   [
+    "Sole trader",
+    "A business owned and run by one person. The owner keeps all the profit and is personally responsible for its debts."
+   ],
+   [
+    "Partnership",
+    "A business owned by two or more people who share the work, the profit and the risk."
+   ],
+   [
+    "Company",
+    "A business that is a separate legal entity from its owners, who are called shareholders. It can own property and be sued in its own name."
+   ],
+   [
+    "Size",
+    "Businesses are also small, medium or large, judged by things such as how many staff they employ and how much they sell. A business can be, for example, a small company or a large company."
+   ]
+  ],
+  "remember": "Ownership type (sole trader, partnership, company) is one question and size is another.",
+  "a": {
+   "q": "Priya owns and runs a bike repair shop by herself. She keeps all the profit. What type of business is it?",
+   "opts": [
+    "A sole trader",
+    "A partnership",
+    "A company",
+    "A franchise"
+   ],
+   "why": "One owner who runs the business and keeps all the profit is a sole trader. It is not a partnership, which needs two or more owners.",
+   "clue": "Count how many owners there are."
+  },
+  "b": {
+   "d": 3,
+   "q": "A company called Bright Tiles Pty Ltd is sued after a faulty job. Which feature of companies explains why the case is against the business itself?",
+   "opts": [
+    "It is a separate legal entity from its owners",
+    "It is owned by two or more partners",
+    "It always has many staff",
+    "Its owner keeps all the profit"
+   ],
+   "why": "A company is a separate legal entity, so it can be sued in its own name. Sharing ownership between partners describes a partnership, not why a company is sued.",
+   "clue": "Think about who the law treats as the business."
+  }
+ },
+ "cleared_by": "checker"
 }

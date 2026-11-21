@@ -24,8 +24,229 @@
    0.253
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 may adapt sci-model-atom-changed, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:59Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:57Z write: failed the content check, writing again",
+  "2026-11-20T12:45:00Z write: done",
+  "2026-11-20T12:53:28Z check: flagged",
+  "2026-11-20T13:00:00Z fix: suggested",
+  "2026-11-20T13:23:45Z autoreview: cleared with the fix (a wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "confirm": 0.00821,
+  "write": 0.01391,
+  "check": 0.01162,
+  "fix": 0.01777
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "sci-model-atom-changed",
+  "changes": [
+   "Remove or reword the Year 9 framing so the card suits Stage 4 (Years 7 and 8) rather than an upper-secondary level, and check that the depth matches the NSW Stage 4 expectation of describing how models changed with evidence.",
+   "Use the NSW Science 7-10 terminology for the model and the evidence, aligned with the SC4-PRT-01 outcome wording, for example describing the Dalton solid ball and Bohr electron shells as part of the sequence."
+  ],
+  "sure": "medium",
+  "reason": "The bank card covers Thomson, Rutherford and Chadwick but not Dalton's solid ball or Bohr's electron shells, which the new point requires, so it needs changes rather than reuse.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point traces Thomson, Rutherford and Chadwick, but this point needs Dalton's solid ball and Bohr's electron shells instead of Chadwick's neutron, so the card would need new steps and a different sequence.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Changing models of the atom",
+  "card": [
+   [
+    "Dalton",
+    "In the early 1800s, John Dalton pictured atoms as tiny solid balls with nothing inside them. Each element had its own kind of ball."
+   ],
+   [
+    "Thomson",
+    "In 1897, J. J. Thomson found tiny negative particles inside atoms, now called electrons. His model showed an atom as a positive ball with electrons spread through it."
+   ],
+   [
+    "Rutherford",
+    "In 1911, Rutherford's team fired particles at thin gold foil. Most went straight through, but a few bounced back. This showed an atom has a tiny, dense, positive nucleus and is mostly empty space."
+   ],
+   [
+    "Bohr",
+    "In 1913, Niels Bohr said electrons move around the nucleus in set shells. A model changes when new experiments give evidence that it cannot explain."
+   ]
+  ],
+  "remember": "Each new model of the atom was built to fit new experimental evidence.",
+  "a": {
+   "q": "Why did scientists change the model of the atom over time?",
+   "opts": [
+    "New experiments gave evidence the old model could not fit",
+    "Older scientists were proven to have made no observations",
+    "Atoms themselves changed their structure over the years",
+    "Newer models were simply drawn with more detail and colour"
+   ],
+   "why": "A model is kept only while it fits the evidence. When new experiments showed something it could not explain, scientists changed the model. Atoms themselves did not change, only our ideas about them.",
+   "clue": "Think about what experiments produce."
+  },
+  "b": {
+   "d": 3,
+   "q": "In Rutherford's gold foil experiment, most particles passed straight through the foil but a few bounced back. What did this show?",
+   "opts": [
+    "Atoms are mostly empty space with a tiny dense nucleus",
+    "Atoms are solid balls with nothing inside them",
+    "Atoms are positive balls with electrons spread through",
+    "Electrons move around the nucleus in set shells"
+   ],
+   "why": "Most particles went through, so atoms are mostly empty space. A few bounced back, so there must be a tiny, dense, positive centre. The solid ball and spread-out electron models could not explain these results.",
+   "clue": "What would make a few particles bounce back?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "New experiments gave evidence the old model could not fit",
+   "also_right": []
+  },
+  "b": {
+   "best": "Atoms are mostly empty space with a tiny dense nucleus",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Why (a) says 'A model is kept only while it fits the evidence'. That is more absolute than the card, which only says a model changes when new evidence cannot be explained. Models with known limits, such as Bohr's, are still kept and used."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both questions are sound, and each has one clear right answer. The only issue is a minor overstatement in why (a): 'kept only while it fits the evidence' goes further than the card."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: Why (a) says 'A model is kept only while it fits the evidence'. That is more absolute than the card, which only says a model changes when new evidence cannot be explained. Models with known limits, such as Bohr's, are still kept and used."
+ ],
+ "proposal": {
+  "title": "Changing models of the atom",
+  "card": [
+   [
+    "Dalton",
+    "In the early 1800s, John Dalton pictured atoms as tiny solid balls with nothing inside them. Each element had its own kind of ball."
+   ],
+   [
+    "Thomson",
+    "In 1897, J. J. Thomson found tiny negative particles inside atoms, now called electrons. His model showed an atom as a positive ball with electrons spread through it."
+   ],
+   [
+    "Rutherford",
+    "In 1911, Rutherford's team fired particles at thin gold foil. Most went straight through, but a few bounced back. This showed an atom has a tiny, dense, positive nucleus and is mostly empty space."
+   ],
+   [
+    "Bohr",
+    "In 1913, Niels Bohr said electrons move around the nucleus in set shells. A model changes when new experiments give evidence that it cannot explain."
+   ]
+  ],
+  "remember": "Each new model of the atom was built to fit new experimental evidence.",
+  "a": {
+   "q": "Why did scientists change the model of the atom over time?",
+   "opts": [
+    "New experiments gave evidence the old model could not fit",
+    "Older scientists were proven to have made no observations",
+    "Atoms themselves changed their structure over the years",
+    "Newer models were simply drawn with more detail and colour"
+   ],
+   "why": "Scientists changed the model when new experiments gave results it could not explain. For example, Thomson found electrons inside atoms, which Dalton's solid ball could not explain. Atoms themselves did not change, only our ideas about them.",
+   "clue": "Think about what experiments produce."
+  },
+  "b": {
+   "d": 3,
+   "q": "In Rutherford's gold foil experiment, most particles passed straight through the foil but a few bounced back. What did this show?",
+   "opts": [
+    "Atoms are mostly empty space with a tiny dense nucleus",
+    "Atoms are solid balls with nothing inside them",
+    "Atoms are positive balls with electrons spread through",
+    "Electrons move around the nucleus in set shells"
+   ],
+   "why": "Most particles went through, so atoms are mostly empty space. A few bounced back, so there must be a tiny, dense, positive centre. The solid ball and spread-out electron models could not explain these results.",
+   "clue": "What would make a few particles bounce back?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:45Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Why (a) says 'A model is kept only while it fits the evidence'. That is more absolute than the card, which only says a model changes when new evidence cannot be explained. Models with known limits, such as Bohr's, are still kept and used."
+   }
+  ],
+  "flags": [
+   "Question a, wording: Why (a) says 'A model is kept only while it fits the evidence'. That is more absolute than the card, which only says a model changes when new evidence cannot be explained. Models with known limits, such as Bohr's, are still kept and used."
+  ]
+ },
+ "final": {
+  "title": "Changing models of the atom",
+  "card": [
+   [
+    "Dalton",
+    "In the early 1800s, John Dalton pictured atoms as tiny solid balls with nothing inside them. Each element had its own kind of ball."
+   ],
+   [
+    "Thomson",
+    "In 1897, J. J. Thomson found tiny negative particles inside atoms, now called electrons. His model showed an atom as a positive ball with electrons spread through it."
+   ],
+   [
+    "Rutherford",
+    "In 1911, Rutherford's team fired particles at thin gold foil. Most went straight through, but a few bounced back. This showed an atom has a tiny, dense, positive nucleus and is mostly empty space."
+   ],
+   [
+    "Bohr",
+    "In 1913, Niels Bohr said electrons move around the nucleus in set shells. A model changes when new experiments give evidence that it cannot explain."
+   ]
+  ],
+  "remember": "Each new model of the atom was built to fit new experimental evidence.",
+  "a": {
+   "q": "Why did scientists change the model of the atom over time?",
+   "opts": [
+    "New experiments gave evidence the old model could not fit",
+    "Older scientists were proven to have made no observations",
+    "Atoms themselves changed their structure over the years",
+    "Newer models were simply drawn with more detail and colour"
+   ],
+   "why": "Scientists changed the model when new experiments gave results it could not explain. For example, Thomson found electrons inside atoms, which Dalton's solid ball could not explain. Atoms themselves did not change, only our ideas about them.",
+   "clue": "Think about what experiments produce."
+  },
+  "b": {
+   "d": 3,
+   "q": "In Rutherford's gold foil experiment, most particles passed straight through the foil but a few bounced back. What did this show?",
+   "opts": [
+    "Atoms are mostly empty space with a tiny dense nucleus",
+    "Atoms are solid balls with nothing inside them",
+    "Atoms are positive balls with electrons spread through",
+    "Electrons move around the nucleus in set shells"
+   ],
+   "why": "Most particles went through, so atoms are mostly empty space. A few bounced back, so there must be a tiny, dense, positive centre. The solid ball and spread-out electron models could not explain these results.",
+   "clue": "What would make a few particles bounce back?"
+  }
+ },
+ "cleared_by": "auto"
 }

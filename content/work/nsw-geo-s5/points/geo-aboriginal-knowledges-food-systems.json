@@ -24,8 +24,169 @@
    0.212
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: failed the content check, writing again",
+  "2026-11-20T12:44:56Z write: done",
+  "2026-11-20T12:53:25Z check: flagged",
+  "2026-11-20T12:59:59Z fix: suggested",
+  "2026-11-20T14:39:16Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.01477,
+  "check": 0.01282,
+  "fix": 0.02021
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches Aboriginal knowledge of growing, harvesting and storing native foods as a basis for building food systems; the closest, Bush foods and changed biomes, covers biome change and yam daisy, which is related but a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Aboriginal knowledges and food systems",
+  "card": [
+   "Aboriginal Peoples have lived on and cared for Country for tens of thousands of years. They developed detailed knowledge of the plants and animals in each region.",
+   "Many Aboriginal Peoples grew, harvested and stored native foods such as grains, tubers and seeds. Examples include native millet, murnong (yam daisy) and grass seeds that were ground into flour.",
+   "This knowledge was built up over a very long time and passed on through generations. It includes when plants are ready to harvest, how to prepare them and how to store them.",
+   "Native plants are suited to Australia's soils and variable climate. This knowledge can help build food systems that suit the Australian environment, when it is used with the permission and leadership of Aboriginal communities."
+  ],
+  "remember": "Aboriginal knowledge of native foods is thousands of years old and can help shape food systems suited to Australia.",
+  "a": {
+   "q": "Why can Aboriginal knowledge of native foods help build food systems suited to Australia?",
+   "opts": [
+    "It was built up over a very long time on Australian land",
+    "It is based on crops that were first brought from overseas",
+    "It was developed only in the last few decades of farming",
+    "It uses farming methods that suit every climate in the world"
+   ],
+   "why": "The knowledge was developed over thousands of years in Australian conditions, so it fits the soils and climate. The other options are wrong because the foods are native, the knowledge is very old, and it was shaped by Australian conditions, not by every climate.",
+   "clue": "Think about where and for how long the knowledge was developed."
+  },
+  "b": {
+   "d": 2,
+   "q": "A council in western NSW plans a community garden. It asks a local Aboriginal group to share knowledge of native grasses and tubers that suit the region. What is the main reason for this choice?",
+   "opts": [
+    "Native foods are suited to local soils and climate",
+    "Native foods always grow faster than imported crops",
+    "Native foods need no care or knowledge to grow",
+    "Native foods can be grown only in western NSW"
+   ],
+   "why": "Native plants have adapted to local soils and variable climate, and Aboriginal knowledge shows how to grow, harvest and store them. The claim that they always grow faster goes beyond the card, and the plants still need knowledge to use well.",
+   "clue": "Which option is about how well the plants fit the place?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It was built up over a very long time on Australian land",
+   "also_right": []
+  },
+  "b": {
+   "best": "Native foods are suited to local soils and climate",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue ('Which option is about how well the plants fit the place?') points straight at the right option, so a student can answer without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Each wrong option uses an absolute ('only', 'always', 'no care'), and the right option is the only one without one. The answer stands out by pattern alone."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "first-nations",
+  "summary": "The card and the answers are accurate. In question b, the clue nearly names the answer, and the wrong options all use absolutes ('only', 'always', 'no care'), so the right option is easy to spot without knowing the idea."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Question b, other: The clue ('Which option is about how well the plants fit the place?') points straight at the right option, so a student can answer without knowing the idea.",
+  "Question b, wording: Each wrong option uses an absolute ('only', 'always', 'no care'), and the right option is the only one without one. The answer stands out by pattern alone."
+ ],
+ "proposal": {
+  "title": "Aboriginal knowledges and food systems",
+  "card": [
+   "Aboriginal Peoples have lived on and cared for Country for tens of thousands of years. They developed detailed knowledge of the plants and animals in each region.",
+   "Many Aboriginal Peoples grew, harvested and stored native foods such as grains, tubers and seeds. Examples include native millet, murnong (yam daisy) and grass seeds that were ground into flour.",
+   "This knowledge was built up over a very long time and passed on through generations. It includes when plants are ready to harvest, how to prepare them and how to store them.",
+   "Native plants are suited to Australia's soils and variable climate. This knowledge can help build food systems that suit the Australian environment, when it is used with the permission and leadership of Aboriginal communities."
+  ],
+  "remember": "Aboriginal knowledge of native foods is thousands of years old and can help shape food systems suited to Australia.",
+  "a": {
+   "q": "Why can Aboriginal knowledge of native foods help build food systems suited to Australia?",
+   "opts": [
+    "It was built up over a very long time on Australian land",
+    "It is based on crops that were first brought from overseas",
+    "It was developed in recent decades by modern farmers",
+    "It was copied from farming methods used in Europe"
+   ],
+   "why": "The knowledge was developed over thousands of years in Australian conditions, so it fits local soils and climate. The foods are native, not brought from overseas, and the knowledge is very old and passed on through generations, not recent or borrowed from Europe.",
+   "clue": "Think about where and for how long the knowledge was developed."
+  },
+  "b": {
+   "d": 2,
+   "q": "A council in western NSW plans a community garden. With the local Aboriginal group's agreement, it asks them to share knowledge of native grasses and tubers. What is the main reason for this choice?",
+   "opts": [
+    "Native plants are suited to the region's soils and climate",
+    "Native plants were first brought to the region from overseas",
+    "Native grasses were first grown here by European settlers",
+    "The group's knowledge is recent and untested on local land"
+   ],
+   "why": "Native plants are suited to Australian soils and variable climate, and Aboriginal knowledge shows how to grow, harvest and store them. Native plants did not come from overseas, and Aboriginal Peoples grew and harvested them long before European settlers arrived, building their knowledge over thousands of years.",
+   "clue": "Think about who grew these plants first, and for how long."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Aboriginal knowledges and food systems",
+  "card": [
+   "Aboriginal Peoples have lived on and cared for Country for tens of thousands of years. They developed detailed knowledge of the plants and animals in each region.",
+   "Many Aboriginal Peoples grew, harvested and stored native foods such as grains, tubers and seeds. Examples include native millet, murnong (yam daisy) and grass seeds that were ground into flour.",
+   "This knowledge was built up over a very long time and passed on through generations. It includes when plants are ready to harvest, how to prepare them and how to store them.",
+   "Native plants are suited to Australia's soils and variable climate. This knowledge can help build food systems that suit the Australian environment, when it is used with the permission and leadership of Aboriginal communities."
+  ],
+  "remember": "Aboriginal knowledge of native foods is thousands of years old and can help shape food systems suited to Australia.",
+  "a": {
+   "q": "Why can Aboriginal knowledge of native foods help build food systems suited to Australia?",
+   "opts": [
+    "It was built up over a very long time on Australian land",
+    "It is based on crops that were first brought from overseas",
+    "It was developed in recent decades by modern farmers",
+    "It was copied from farming methods used in Europe"
+   ],
+   "why": "The knowledge was developed over thousands of years in Australian conditions, so it fits local soils and climate. The foods are native, not brought from overseas, and the knowledge is very old and passed on through generations, not recent or borrowed from Europe.",
+   "clue": "Think about where and for how long the knowledge was developed."
+  },
+  "b": {
+   "d": 2,
+   "q": "A council in western NSW plans a community garden. With the local Aboriginal group's agreement, it asks them to share knowledge of native grasses and tubers. What is the main reason for this choice?",
+   "opts": [
+    "Native plants are suited to the region's soils and climate",
+    "Native plants were first brought to the region from overseas",
+    "Native grasses were first grown here by European settlers",
+    "The group's knowledge is recent and untested on local land"
+   ],
+   "why": "Native plants are suited to Australian soils and variable climate, and Aboriginal knowledge shows how to grow, harvest and store them. Native plants did not come from overseas, and Aboriginal Peoples grew and harvested them long before European settlers arrived, building their knowledge over thousands of years.",
+   "clue": "Think about who grew these plants first, and for how long."
+  }
+ },
+ "cleared_by": "owner"
 }

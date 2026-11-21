@@ -24,8 +24,419 @@
    0.244
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: failed the content check, writing again",
+  "2026-11-20T12:44:52Z write: done (still fails the content check)",
+  "2026-11-20T12:53:23Z check: flagged",
+  "2026-11-20T12:59:58Z fix: suggested",
+  "2026-11-20T13:37:05Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (remember fact)",
+  "2026-11-20T13:44:55Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "write": 0.01421,
+  "check": 0.01491,
+  "fix": 0.02729,
+  "recheck": 0.01477
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, ecb-consumer-guarantees, is written for Year 7 and covers safety, description and reasonable lifespan but not acceptable quality or fit for purpose, so matching it would need a change of depth and content rather than small edits.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Remember, fact: 'three guarantees' suggests the ACL has only three guarantees for goods. It has more, including matching a sample or demonstration model, clear title, undisturbed possession, spare parts and repair facilities, and express warranties. The line should say these are three of the main guarantees.",
+ "rejected": {
+  "title": "Consumer guarantees",
+  "card": [
+   "The Australian Consumer Law (ACL) gives consumers automatic rights, called consumer guarantees, when they buy goods. No store policy or sign can take them away, and the buyer does not pay extra for them.",
+   [
+    "Acceptable quality",
+    "Goods must be safe, work properly, last a reasonable time, look right and do what such goods are normally used for, given the price and what they are."
+   ],
+   [
+    "Fit for purpose",
+    "Goods must suit any particular purpose the buyer told the seller about, or that the seller said they would suit."
+   ],
+   [
+    "Match description",
+    "Goods must match what the seller said, or what the label, packaging, sample or advertisement showed."
+   ]
+  ],
+  "remember": "Quality, purpose and description: three guarantees that no store policy can remove.",
+  "a": {
+   "q": "Zoe buys a new kettle in Newcastle. She tells the seller nothing special about how she will use it. It stops working after two days. Which consumer guarantee is most clearly broken?",
+   "opts": [
+    "Acceptable quality, because it failed far too soon",
+    "Match description, because it was not advertised",
+    "Fit for purpose, because kettles are for boiling water",
+    "None, because the store gave no written warranty"
+   ],
+   "why": "A new kettle should work properly, do its normal job and last a reasonable time, so the guarantee of acceptable quality is broken. Fit for purpose is about a particular purpose the buyer told the seller about, and Zoe named none. A written warranty is not needed, because the guarantees apply automatically.",
+   "clue": "Which guarantee covers what goods are normally used for?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam buys a tent in Orange. A sign on the shop wall says no refunds on camping gear. The tent leaks in light rain, though its label says waterproof. What is the position?",
+   "opts": [
+    "The sign cannot remove the match description guarantee",
+    "The sign is valid, because Sam saw it before buying",
+    "The guarantees apply only if Sam paid for extra cover",
+    "The guarantees are void, as camping gear is used outdoors"
+   ],
+   "why": "The tent does not match its description, as the label said waterproof. Consumer guarantees apply whatever the store's own policy says, so a no refunds sign cannot take them away. Seeing the sign before buying does not change this.",
+   "clue": "Does a store's own sign override the law?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Remember, fact: 'three guarantees' suggests the ACL has only three guarantees for goods. It has more, including matching a sample or demonstration model, clear title, undisturbed possession, spare parts and repair facilities, and express warranties. The line should say these are three of the main guarantees."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Consumer guarantees",
+     "card": [
+      "The Australian Consumer Law (ACL) gives consumers automatic rights when they buy goods. These rights are called consumer guarantees. The business does not have to offer them and the buyer does not have to pay extra.",
+      [
+       "Acceptable quality",
+       "Goods must be safe, work properly, last a reasonable time and look right, given the price and what they are."
+      ],
+      [
+       "Fit for purpose",
+       "Goods must do what they are normally used for, and any particular job the buyer told the seller about."
+      ],
+      [
+       "Match description",
+       "Goods must match what the seller said, or what the label, packaging, sample or advertisement showed."
+      ]
+     ],
+     "remember": "Goods must be of acceptable quality, fit for purpose and match their description, whatever the store's policy says.",
+     "a": {
+      "q": "Zoe buys a new kettle in Newcastle. It stops working after two days. Which consumer guarantee is most clearly broken?",
+      "opts": [
+       "Acceptable quality, because it failed far too soon",
+       "Match description, because it was not advertised",
+       "Fit for purpose, because Zoe did not tell the seller",
+       "None, because the store gave no written warranty"
+      ],
+      "why": "A new kettle should work properly and last a reasonable time, so the guarantee of acceptable quality is broken. A written warranty is not needed, because the guarantees apply automatically.",
+      "clue": "Think about how long a new kettle should last."
+     },
+     "b": {
+      "d": 3,
+      "q": "Sam buys a tent in Orange. A sign on the shop wall says no refunds on camping gear. The tent leaks in light rain, though its label says waterproof. What is the position?",
+      "opts": [
+       "The sign cannot remove Sam's guarantee that it matches its label",
+       "The sign is valid, because Sam saw it before he bought the tent",
+       "The guarantees apply only if Sam paid for extra cover on the tent",
+       "The guarantees are void, because camping gear is used outdoors"
+      ],
+      "why": "The tent does not match its description, as the label said waterproof. Consumer guarantees apply whatever the store's own policy says, so a no refunds sign cannot take them away. Seeing the sign before buying does not change this.",
+      "clue": "Does a store's own sign override the law?"
+     }
+    },
+    "redone": true,
+    "local": [
+     "ecb-consumer-guarantees-nswb option is 64 characters: The sign cannot remove Sam's guarantee that it matches its label",
+     "ecb-consumer-guarantees-nswb option is 63 characters: The sign is valid, because Sam saw it before he bought the tent",
+     "ecb-consumer-guarantees-nswb option is 65 characters: The guarantees apply only if Sam paid for extra cover on the tent",
+     "ecb-consumer-guarantees-nswb option is 62 characters: The guarantees are void, because camping gear is used outdoors"
+    ],
+    "check": {
+     "a": {
+      "best": "Acceptable quality, because it failed far too soon",
+      "also_right": []
+     },
+     "b": {
+      "best": "The sign cannot remove Sam's guarantee that it matches its label",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card says 'fit for purpose' covers what goods are normally used for. Under the ACL, being fit for the purposes goods are commonly supplied for is part of acceptable quality (s54). Fit for purpose (s55) covers a particular purpose the buyer made known, or that the business said the goods would be fit for. This overlap also makes the kettle in question a seem to break fit for purpose under the card's own definition."
+      }
+     ],
+     "sure": "medium",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer, and the explanations agree with the card. The card's definition of 'fit for purpose' wrongly includes normal use, which the ACL places under acceptable quality, so it should be limited to a purpose the buyer told the seller about or the seller promised."
+    },
+    "flags": [
+     "Card, fact: The card says 'fit for purpose' covers what goods are normally used for. Under the ACL, being fit for the purposes goods are commonly supplied for is part of acceptable quality (s54). Fit for purpose (s55) covers a particular purpose the buyer made known, or that the business said the goods would be fit for. This overlap also makes the kettle in question a seem to break fit for purpose under the card's own definition.",
+     "Content check: ecb-consumer-guarantees-nswb option is 64 characters: The sign cannot remove Sam's guarantee that it matches its label",
+     "Content check: ecb-consumer-guarantees-nswb option is 63 characters: The sign is valid, because Sam saw it before he bought the tent",
+     "Content check: ecb-consumer-guarantees-nswb option is 65 characters: The guarantees apply only if Sam paid for extra cover on the tent",
+     "Content check: ecb-consumer-guarantees-nswb option is 62 characters: The guarantees are void, because camping gear is used outdoors"
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Consumer guarantees",
+     "card": [
+      "The Australian Consumer Law (ACL) gives consumers automatic rights, called consumer guarantees, when they buy goods. No store policy or sign can take them away, and the buyer does not pay extra for them.",
+      [
+       "Acceptable quality",
+       "Goods must be safe, work properly, last a reasonable time, look right and do what such goods are normally used for, given the price and what they are."
+      ],
+      [
+       "Fit for purpose",
+       "Goods must suit any particular purpose the buyer told the seller about, or that the seller said they would suit."
+      ],
+      [
+       "Match description",
+       "Goods must match what the seller said, or what the label, packaging, sample or advertisement showed."
+      ]
+     ],
+     "remember": "Quality, purpose and description: three guarantees that no store policy can remove.",
+     "a": {
+      "q": "Zoe buys a new kettle in Newcastle. She tells the seller nothing special about how she will use it. It stops working after two days. Which consumer guarantee is most clearly broken?",
+      "opts": [
+       "Acceptable quality, because it failed far too soon",
+       "Match description, because it was not advertised",
+       "Fit for purpose, because kettles are for boiling water",
+       "None, because the store gave no written warranty"
+      ],
+      "why": "A new kettle should work properly, do its normal job and last a reasonable time, so the guarantee of acceptable quality is broken. Fit for purpose is about a particular purpose the buyer told the seller about, and Zoe named none. A written warranty is not needed, because the guarantees apply automatically.",
+      "clue": "Which guarantee covers what goods are normally used for?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Sam buys a tent in Orange. A sign on the shop wall says no refunds on camping gear. The tent leaks in light rain, though its label says waterproof. What is the position?",
+      "opts": [
+       "The sign cannot remove the match description guarantee",
+       "The sign is valid, because Sam saw it before buying",
+       "The guarantees apply only if Sam paid for extra cover",
+       "The guarantees are void, as camping gear is used outdoors"
+      ],
+      "why": "The tent does not match its description, as the label said waterproof. Consumer guarantees apply whatever the store's own policy says, so a no refunds sign cannot take them away. Seeing the sign before buying does not change this.",
+      "clue": "Does a store's own sign override the law?"
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:05Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Acceptable quality, because it failed far too soon",
+       "also_right": []
+      },
+      "b": {
+       "best": "The sign cannot remove the match description guarantee",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "remember",
+        "kind": "fact",
+        "detail": "'three guarantees' suggests the ACL has only three guarantees for goods. It has more, including matching a sample or demonstration model, clear title, undisturbed possession, spare parts and repair facilities, and express warranties. The line should say these are three of the main guarantees."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions and their explanations are correct. The remember line calls quality, purpose and description 'three guarantees', which suggests these are the only consumer guarantees under the ACL; it should say they are three of the main ones."
+     },
+     "flags": [
+      "Remember, fact: 'three guarantees' suggests the ACL has only three guarantees for goods. It has more, including matching a sample or demonstration model, clear title, undisturbed possession, spare parts and repair facilities, and express warranties. The line should say these are three of the main guarantees."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:55Z",
+   "step": "write",
+   "version": {
+    "title": "Consumer guarantees",
+    "card": [
+     "The Australian Consumer Law (ACL) gives consumers automatic rights, called consumer guarantees, when they buy goods. No store policy or sign can take them away, and the buyer does not pay extra for them.",
+     [
+      "Acceptable quality",
+      "Goods must be safe, work properly, last a reasonable time, look right and do what such goods are normally used for, given the price and what they are."
+     ],
+     [
+      "Fit for purpose",
+      "Goods must suit any particular purpose the buyer told the seller about, or that the seller said they would suit."
+     ],
+     [
+      "Match description",
+      "Goods must match what the seller said, or what the label, packaging, sample or advertisement showed."
+     ]
+    ],
+    "remember": "Quality, purpose and description are three of the main guarantees, and no store policy can remove them.",
+    "a": {
+     "q": "Zoe buys a new kettle in Newcastle. She tells the seller nothing special about how she will use it. It stops working after two days. Which consumer guarantee is most clearly broken?",
+     "opts": [
+      "Acceptable quality, because it failed far too soon",
+      "Match description, because it was not advertised",
+      "Fit for purpose, because kettles are for boiling water",
+      "None, because the store gave no written warranty"
+     ],
+     "why": "A new kettle should work properly, do its normal job and last a reasonable time, so the guarantee of acceptable quality is broken. Fit for purpose is about a particular purpose the buyer told the seller about, and Zoe named none. A written warranty is not needed, because the guarantees apply automatically.",
+     "clue": "Which guarantee covers what goods are normally used for?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Sam buys a tent in Orange. A sign on the shop wall says no refunds on camping gear. The tent leaks in light rain, though its label says waterproof. What is the position?",
+     "opts": [
+      "The sign cannot remove the match description guarantee",
+      "The sign is valid, because Sam saw it before buying",
+      "The guarantees apply only if Sam paid for extra cover",
+      "The guarantees are void, as camping gear is used outdoors"
+     ],
+     "why": "The tent does not match its description, as the label said waterproof. Consumer guarantees apply whatever the store's own policy says, so a no refunds sign cannot take them away. Seeing the sign before buying does not change this.",
+     "clue": "Does a store's own sign override the law?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Acceptable quality, because it failed far too soon",
+     "also_right": []
+    },
+    "b": {
+     "best": "The sign cannot remove the match description guarantee",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Consumer guarantees",
+  "card": [
+   "The Australian Consumer Law (ACL) gives consumers automatic rights, called consumer guarantees, when they buy goods. No store policy or sign can take them away, and the buyer does not pay extra for them.",
+   [
+    "Acceptable quality",
+    "Goods must be safe, work properly, last a reasonable time, look right and do what such goods are normally used for, given the price and what they are."
+   ],
+   [
+    "Fit for purpose",
+    "Goods must suit any particular purpose the buyer told the seller about, or that the seller said they would suit."
+   ],
+   [
+    "Match description",
+    "Goods must match what the seller said, or what the label, packaging, sample or advertisement showed."
+   ]
+  ],
+  "remember": "Quality, purpose and description are three of the main guarantees, and no store policy can remove them.",
+  "a": {
+   "q": "Zoe buys a new kettle in Newcastle. She tells the seller nothing special about how she will use it. It stops working after two days. Which consumer guarantee is most clearly broken?",
+   "opts": [
+    "Acceptable quality, because it failed far too soon",
+    "Match description, because it was not advertised",
+    "Fit for purpose, because kettles are for boiling water",
+    "None, because the store gave no written warranty"
+   ],
+   "why": "A new kettle should work properly, do its normal job and last a reasonable time, so the guarantee of acceptable quality is broken. Fit for purpose is about a particular purpose the buyer told the seller about, and Zoe named none. A written warranty is not needed, because the guarantees apply automatically.",
+   "clue": "Which guarantee covers what goods are normally used for?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam buys a tent in Orange. A sign on the shop wall says no refunds on camping gear. The tent leaks in light rain, though its label says waterproof. What is the position?",
+   "opts": [
+    "The sign cannot remove the match description guarantee",
+    "The sign is valid, because Sam saw it before buying",
+    "The guarantees apply only if Sam paid for extra cover",
+    "The guarantees are void, as camping gear is used outdoors"
+   ],
+   "why": "The tent does not match its description, as the label said waterproof. Consumer guarantees apply whatever the store's own policy says, so a no refunds sign cannot take them away. Seeing the sign before buying does not change this.",
+   "clue": "Does a store's own sign override the law?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Acceptable quality, because it failed far too soon",
+   "also_right": []
+  },
+  "b": {
+   "best": "The sign cannot remove the match description guarantee",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Consumer guarantees",
+  "card": [
+   "The Australian Consumer Law (ACL) gives consumers automatic rights, called consumer guarantees, when they buy goods. No store policy or sign can take them away, and the buyer does not pay extra for them.",
+   [
+    "Acceptable quality",
+    "Goods must be safe, work properly, last a reasonable time, look right and do what such goods are normally used for, given the price and what they are."
+   ],
+   [
+    "Fit for purpose",
+    "Goods must suit any particular purpose the buyer told the seller about, or that the seller said they would suit."
+   ],
+   [
+    "Match description",
+    "Goods must match what the seller said, or what the label, packaging, sample or advertisement showed."
+   ]
+  ],
+  "remember": "Quality, purpose and description are three of the main guarantees, and no store policy can remove them.",
+  "a": {
+   "q": "Zoe buys a new kettle in Newcastle. She tells the seller nothing special about how she will use it. It stops working after two days. Which consumer guarantee is most clearly broken?",
+   "opts": [
+    "Acceptable quality, because it failed far too soon",
+    "Match description, because it was not advertised",
+    "Fit for purpose, because kettles are for boiling water",
+    "None, because the store gave no written warranty"
+   ],
+   "why": "A new kettle should work properly, do its normal job and last a reasonable time, so the guarantee of acceptable quality is broken. Fit for purpose is about a particular purpose the buyer told the seller about, and Zoe named none. A written warranty is not needed, because the guarantees apply automatically.",
+   "clue": "Which guarantee covers what goods are normally used for?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam buys a tent in Orange. A sign on the shop wall says no refunds on camping gear. The tent leaks in light rain, though its label says waterproof. What is the position?",
+   "opts": [
+    "The sign cannot remove the match description guarantee",
+    "The sign is valid, because Sam saw it before buying",
+    "The guarantees apply only if Sam paid for extra cover",
+    "The guarantees are void, as camping gear is used outdoors"
+   ],
+   "why": "The tent does not match its description, as the label said waterproof. Consumer guarantees apply whatever the store's own policy says, so a no refunds sign cannot take them away. Seeing the sign before buying does not change this.",
+   "clue": "Does a store's own sign override the law?"
+  }
+ },
+ "checked_by": "claude-code"
 }

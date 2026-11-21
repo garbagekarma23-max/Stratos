@@ -24,8 +24,236 @@
    0.242
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: done",
+  "2026-11-20T12:35:55Z check: flagged",
+  "2026-11-20T12:44:59Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0004,
+  "write": 0.01972,
+  "check": 0.01446,
+  "fix": 0.02293,
+  "recheck": 0.01042
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches finding right-angled triangles inside a solid: the closest, mat-problems-with-two-right, covers two flat triangles that share a side, while the 3D card uses sine and cosine rules, which this point does not need.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Trigonometry in three dimensions",
+  "card": [
+   "A solid is made of flat shapes. Find a right-angled triangle inside it, redraw it flat, and solve it with Pythagoras' theorem or trigonometry.",
+   "Start with the base. A box with a base 3 cm by 4 cm has a base diagonal of \\(\\sqrt{3^{2} + 4^{2}} = 5\\) cm.",
+   "Then use a second triangle that stands upright. Its sides are the base diagonal and the height. If the box is 12 cm high, the longest diagonal is \\(\\sqrt{5^{2} + 12^{2}} = 13\\) cm.",
+   "For the angle between that diagonal and the base, use the same upright triangle: \\(\\tan \\theta = \\frac{12}{5}\\), so \\(\\theta \\approx 67.4^{\\circ}\\)."
+  ],
+  "remember": "Solve one right-angled triangle at a time, and use each answer in the next.",
+  "a": {
+   "q": "A box has a base 9 cm by 12 cm and is 8 cm high. How long is the diagonal from one corner to the opposite corner?",
+   "opts": [
+    "17 cm",
+    "15 cm",
+    "29 cm",
+    "14.4 cm"
+   ],
+   "why": "The base diagonal is \\(\\sqrt{9^{2} + 12^{2}} = 15\\) cm. The upright triangle then gives \\(\\sqrt{15^{2} + 8^{2}} = \\sqrt{289} = 17\\) cm. Stopping at 15 cm only finds the diagonal of the base.",
+   "clue": "Find the diagonal of the base first."
+  },
+  "b": {
+   "d": 3,
+   "q": "A storage box in Cairns has a base 5 m by 12 m and is 6 m high. What is the angle between its longest diagonal and the base, to the nearest tenth of a degree?",
+   "opts": [
+    "24.8°",
+    "26.6°",
+    "50.2°",
+    "65.2°"
+   ],
+   "why": "The base diagonal is \\(\\sqrt{5^{2} + 12^{2}} = 13\\) m. The angle is in the upright triangle, so \\(\\tan \\theta = \\frac{6}{13}\\) and \\(\\theta \\approx 24.8^{\\circ}\\). Using 12 instead of 13 gives the angle to a base edge, not to the base.",
+   "clue": "The angle sits at the base end of the diagonal, so the base side is the base diagonal."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A box drawn in three dimensions with a base 3 cm by 4 cm and height 12 cm. The base diagonal of 5 cm is marked, and the upright right-angled triangle formed by the base diagonal, the 12 cm edge and the 13 cm longest diagonal is shaded.",
+    "why": "It lets the student see the two right-angled triangles inside the solid."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "17 cm",
+   "also_right": []
+  },
+  "b": {
+   "best": "24.8°",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says using 12 instead of 13 'gives the angle to a base edge'. That is false. tan θ = 6/12 gives the angle between a side face's diagonal and its 12 m edge (about 26.6°). The angle between the longest diagonal and the 12 m base edge is about 33.1° (cos θ = 12/√205)."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'A solid is made of flat shapes' is not true of all solids: cylinders, cones and spheres have curved surfaces. It should be limited, for example to 'A box or prism is made of flat faces'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct: 17 cm for (a) and 24.8° for (b). The why for (b) wrongly says the 6/12 distractor gives the angle to a base edge; it is really the angle of a side-face diagonal. The card's opening line also overstates that every solid is made of flat shapes."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The why says using 12 instead of 13 'gives the angle to a base edge'. That is false. tan θ = 6/12 gives the angle between a side face's diagonal and its 12 m edge (about 26.6°). The angle between the longest diagonal and the 12 m base edge is about 33.1° (cos θ = 12/√205).",
+  "Card, fact: 'A solid is made of flat shapes' is not true of all solids: cylinders, cones and spheres have curved surfaces. It should be limited, for example to 'A box or prism is made of flat faces'."
+ ],
+ "proposal": {
+  "title": "Trigonometry in three dimensions",
+  "card": [
+   "A box or prism has flat faces. Find a right-angled triangle inside it, redraw it flat, and solve it with Pythagoras' theorem or trigonometry.",
+   "Start with the base. A box with a base 3 cm by 4 cm has a base diagonal of \\(\\sqrt{3^{2} + 4^{2}} = 5\\) cm.",
+   "Then use a second triangle that stands upright. Its sides are the base diagonal and the height. If the box is 12 cm high, the longest diagonal is \\(\\sqrt{5^{2} + 12^{2}} = 13\\) cm.",
+   "For the angle between that diagonal and the base, use the same upright triangle: \\(\\tan \\theta = \\frac{12}{5}\\), so \\(\\theta \\approx 67.4^{\\circ}\\)."
+  ],
+  "remember": "Solve one right-angled triangle at a time, and use each answer in the next.",
+  "a": {
+   "q": "A box has a base 9 cm by 12 cm and is 8 cm high. How long is the diagonal from one corner to the opposite corner?",
+   "opts": [
+    "17 cm",
+    "15 cm",
+    "29 cm",
+    "14.4 cm"
+   ],
+   "why": "The base diagonal is \\(\\sqrt{9^{2} + 12^{2}} = 15\\) cm. The upright triangle then gives \\(\\sqrt{15^{2} + 8^{2}} = \\sqrt{289} = 17\\) cm. Stopping at 15 cm only finds the diagonal of the base.",
+   "clue": "Find the diagonal of the base first."
+  },
+  "b": {
+   "d": 3,
+   "q": "A storage box in Cairns has a base 5 m by 12 m and is 6 m high. What is the angle between its longest diagonal and the base, to the nearest tenth of a degree?",
+   "opts": [
+    "\\(24.8^{\\circ}\\)",
+    "\\(26.6^{\\circ}\\)",
+    "\\(50.2^{\\circ}\\)",
+    "\\(65.2^{\\circ}\\)"
+   ],
+   "why": "The base diagonal is \\(\\sqrt{5^{2} + 12^{2}} = 13\\) m. The angle is in the upright triangle, so \\(\\tan \\theta = \\frac{6}{13}\\) and \\(\\theta \\approx 24.8^{\\circ}\\). Using the 12 m edge in place of the 13 m base diagonal gives about \\(26.6^{\\circ}\\), an angle inside a side face, not the angle to the base.",
+   "clue": "The angle sits at the base end of the diagonal, so the base side is the base diagonal."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A box drawn in three dimensions with a base 3 cm by 4 cm and height 12 cm. The base diagonal of 5 cm is marked, and the upright right-angled triangle formed by the base diagonal, the 12 cm edge and the 13 cm longest diagonal is shaded.",
+    "why": "It lets the student see the two right-angled triangles inside the solid."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "17 cm",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(24.8^{\\circ}\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out (17 cm and 24.8°), the distractors match the common errors the explanations name, and the card's worked example is correct."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says using 12 instead of 13 'gives the angle to a base edge'. That is false. tan θ = 6/12 gives the angle between a side face's diagonal and its 12 m edge (about 26.6°). The angle between the longest diagonal and the 12 m base edge is about 33.1° (cos θ = 12/√205)."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'A solid is made of flat shapes' is not true of all solids: cylinders, cones and spheres have curved surfaces. It should be limited, for example to 'A box or prism is made of flat faces'."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The why says using 12 instead of 13 'gives the angle to a base edge'. That is false. tan θ = 6/12 gives the angle between a side face's diagonal and its 12 m edge (about 26.6°). The angle between the longest diagonal and the 12 m base edge is about 33.1° (cos θ = 12/√205).",
+   "Card, fact: 'A solid is made of flat shapes' is not true of all solids: cylinders, cones and spheres have curved surfaces. It should be limited, for example to 'A box or prism is made of flat faces'."
+  ]
+ },
+ "final": {
+  "title": "Trigonometry in three dimensions",
+  "card": [
+   "A box or prism has flat faces. Find a right-angled triangle inside it, redraw it flat, and solve it with Pythagoras' theorem or trigonometry.",
+   "Start with the base. A box with a base 3 cm by 4 cm has a base diagonal of \\(\\sqrt{3^{2} + 4^{2}} = 5\\) cm.",
+   "Then use a second triangle that stands upright. Its sides are the base diagonal and the height. If the box is 12 cm high, the longest diagonal is \\(\\sqrt{5^{2} + 12^{2}} = 13\\) cm.",
+   "For the angle between that diagonal and the base, use the same upright triangle: \\(\\tan \\theta = \\frac{12}{5}\\), so \\(\\theta \\approx 67.4^{\\circ}\\)."
+  ],
+  "remember": "Solve one right-angled triangle at a time, and use each answer in the next.",
+  "a": {
+   "q": "A box has a base 9 cm by 12 cm and is 8 cm high. How long is the diagonal from one corner to the opposite corner?",
+   "opts": [
+    "17 cm",
+    "15 cm",
+    "29 cm",
+    "14.4 cm"
+   ],
+   "why": "The base diagonal is \\(\\sqrt{9^{2} + 12^{2}} = 15\\) cm. The upright triangle then gives \\(\\sqrt{15^{2} + 8^{2}} = \\sqrt{289} = 17\\) cm. Stopping at 15 cm only finds the diagonal of the base.",
+   "clue": "Find the diagonal of the base first."
+  },
+  "b": {
+   "d": 3,
+   "q": "A storage box in Cairns has a base 5 m by 12 m and is 6 m high. What is the angle between its longest diagonal and the base, to the nearest tenth of a degree?",
+   "opts": [
+    "\\(24.8^{\\circ}\\)",
+    "\\(26.6^{\\circ}\\)",
+    "\\(50.2^{\\circ}\\)",
+    "\\(65.2^{\\circ}\\)"
+   ],
+   "why": "The base diagonal is \\(\\sqrt{5^{2} + 12^{2}} = 13\\) m. The angle is in the upright triangle, so \\(\\tan \\theta = \\frac{6}{13}\\) and \\(\\theta \\approx 24.8^{\\circ}\\). Using the 12 m edge in place of the 13 m base diagonal gives about \\(26.6^{\\circ}\\), an angle inside a side face, not the angle to the base.",
+   "clue": "The angle sits at the base end of the diagonal, so the base side is the base diagonal."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A box drawn in three dimensions with a base 3 cm by 4 cm and height 12 cm. The base diagonal of 5 cm is marked, and the upright right-angled triangle formed by the base diagonal, the 12 cm edge and the 13 cm longest diagonal is shaded.",
+    "why": "It lets the student see the two right-angled triangles inside the solid."
+   }
+  ]
+ },
+ "cleared_by": "recheck"
 }

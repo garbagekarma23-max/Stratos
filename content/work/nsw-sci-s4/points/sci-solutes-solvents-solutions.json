@@ -12,8 +12,133 @@
    0.206
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.00592,
+  "check": 0.00659
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point covers solute, solvent and solution but never defines soluble or insoluble, which the new point's brief requires, so it would teach less than the brief asks for and adding those terms would change the card's content beyond small edits.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Solutes, solvents and solutions",
+  "card": [
+   [
+    "Solute",
+    "the substance that dissolves, such as salt or sugar."
+   ],
+   [
+    "Solvent",
+    "the substance that does the dissolving. Water is the solvent in most everyday solutions."
+   ],
+   [
+    "Solution",
+    "the mixture that forms when a solute dissolves in a solvent. The solute spreads out evenly, so the solution looks the same all through."
+   ],
+   "A substance that dissolves in a solvent is soluble. One that does not dissolve is insoluble. Sugar is soluble in water, but sand is insoluble in water."
+  ],
+  "remember": "Solute plus solvent makes a solution. Soluble means it dissolves.",
+  "a": {
+   "q": "Mia stirs a spoon of sugar into a glass of water until the sugar disappears. Which part of the solution is the water?",
+   "opts": [
+    "The solvent",
+    "The solute",
+    "The solution",
+    "The soluble part"
+   ],
+   "why": "Water does the dissolving, so it is the solvent. The sugar is the solute because it is the substance that dissolves. The solution is the whole mixture of both.",
+   "clue": "Which substance does the dissolving?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom stirs sand into one glass of water and salt into another. The salt vanishes and the sand sinks. What does this show?",
+   "opts": [
+    "Salt is soluble in water and sand is insoluble",
+    "Salt is insoluble in water and sand is soluble",
+    "Salt is the solvent and the water is the solute",
+    "Both salt and sand have made a solution with water"
+   ],
+   "why": "The salt dissolved, so it is soluble, and it makes a solution with the water. The sand did not dissolve, so it is insoluble. Sinking to the bottom shows it stayed as separate grains and no solution formed.",
+   "clue": "Which substance dissolved, and which did not?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The solvent",
+   "also_right": []
+  },
+  "b": {
+   "best": "Salt is soluble in water and sand is insoluble",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Solutes, solvents and solutions",
+  "card": [
+   [
+    "Solute",
+    "the substance that dissolves, such as salt or sugar."
+   ],
+   [
+    "Solvent",
+    "the substance that does the dissolving. Water is the solvent in most everyday solutions."
+   ],
+   [
+    "Solution",
+    "the mixture that forms when a solute dissolves in a solvent. The solute spreads out evenly, so the solution looks the same all through."
+   ],
+   "A substance that dissolves in a solvent is soluble. One that does not dissolve is insoluble. Sugar is soluble in water, but sand is insoluble in water."
+  ],
+  "remember": "Solute plus solvent makes a solution. Soluble means it dissolves.",
+  "a": {
+   "q": "Mia stirs a spoon of sugar into a glass of water until the sugar disappears. Which part of the solution is the water?",
+   "opts": [
+    "The solvent",
+    "The solute",
+    "The solution",
+    "The soluble part"
+   ],
+   "why": "Water does the dissolving, so it is the solvent. The sugar is the solute because it is the substance that dissolves. The solution is the whole mixture of both.",
+   "clue": "Which substance does the dissolving?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom stirs sand into one glass of water and salt into another. The salt vanishes and the sand sinks. What does this show?",
+   "opts": [
+    "Salt is soluble in water and sand is insoluble",
+    "Salt is insoluble in water and sand is soluble",
+    "Salt is the solvent and the water is the solute",
+    "Both salt and sand have made a solution with water"
+   ],
+   "why": "The salt dissolved, so it is soluble, and it makes a solution with the water. The sand did not dissolve, so it is insoluble. Sinking to the bottom shows it stayed as separate grains and no solution formed.",
+   "clue": "Which substance dissolved, and which did not?"
+  }
+ },
+ "cleared_by": "checker"
 }

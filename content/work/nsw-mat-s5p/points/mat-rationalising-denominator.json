@@ -24,8 +24,121 @@
    0.2
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:56Z write: done",
+  "2026-11-20T12:44:59Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.00803,
+  "check": 0.00941
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches rationalising a surd denominator; the closest matches cover adding fractions, complex conjugates (a related but different idea for Victorian Units 1 and 2), equations with fractions and partial fractions, none of which fit this Stage 5 surds point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Rationalising the denominator",
+  "card": [
+   "A fraction with a surd in the denominator, such as \\(\\frac{6}{\\sqrt{3}}\\), is not in simplest form. Rationalising means rewriting it so the denominator is a whole number.",
+   "Multiply the top and bottom by the surd in the denominator. This is the same as multiplying by 1, so the value does not change.",
+   "The denominator becomes a whole number, because \\(\\sqrt{a} \\times \\sqrt{a} = a\\). The numerator is multiplied by the same surd.",
+   [
+    "Example",
+    "\\(\\frac{6}{\\sqrt{3}} = \\frac{6 \\times \\sqrt{3}}{\\sqrt{3} \\times \\sqrt{3}} = \\frac{6\\sqrt{3}}{3} = 2\\sqrt{3}\\). Divide the whole numbers at the end if you can."
+   ]
+  ],
+  "remember": "Multiply top and bottom by the denominator's surd, so the bottom becomes a whole number.",
+  "a": {
+   "q": "Which step rationalises the denominator of \\(\\frac{10}{\\sqrt{5}}\\)?",
+   "opts": [
+    "Multiply the top and bottom by \\(\\sqrt{5}\\)",
+    "Multiply the top only by \\(\\sqrt{5}\\)",
+    "Multiply the top and bottom by 5",
+    "Divide the top and bottom by \\(\\sqrt{5}\\)"
+   ],
+   "why": "Multiplying the top and bottom by \\(\\sqrt{5}\\) keeps the value the same and makes the bottom \\(\\sqrt{5} \\times \\sqrt{5} = 5\\). Multiplying only the top changes the value of the fraction.",
+   "clue": "Multiply by a fraction equal to 1, using the surd on the bottom."
+  },
+  "b": {
+   "d": 2,
+   "q": "Rationalise the denominator of \\(\\frac{12}{\\sqrt{6}}\\) and simplify.",
+   "opts": [
+    "\\(2\\sqrt{6}\\)",
+    "\\(12\\sqrt{6}\\)",
+    "\\(\\frac{\\sqrt{6}}{2}\\)",
+    "\\(\\frac{12\\sqrt{6}}{36}\\)"
+   ],
+   "why": "\\(\\frac{12}{\\sqrt{6}} = \\frac{12\\sqrt{6}}{6} = 2\\sqrt{6}\\). Leaving it as \\(12\\sqrt{6}\\) forgets to divide by the new denominator 6.",
+   "clue": "After multiplying, the denominator is 6. Divide 12 by it."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Multiply the top and bottom by \\(\\sqrt{5}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(2\\sqrt{6}\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Rationalising the denominator",
+  "card": [
+   "A fraction with a surd in the denominator, such as \\(\\frac{6}{\\sqrt{3}}\\), is not in simplest form. Rationalising means rewriting it so the denominator is a whole number.",
+   "Multiply the top and bottom by the surd in the denominator. This is the same as multiplying by 1, so the value does not change.",
+   "The denominator becomes a whole number, because \\(\\sqrt{a} \\times \\sqrt{a} = a\\). The numerator is multiplied by the same surd.",
+   [
+    "Example",
+    "\\(\\frac{6}{\\sqrt{3}} = \\frac{6 \\times \\sqrt{3}}{\\sqrt{3} \\times \\sqrt{3}} = \\frac{6\\sqrt{3}}{3} = 2\\sqrt{3}\\). Divide the whole numbers at the end if you can."
+   ]
+  ],
+  "remember": "Multiply top and bottom by the denominator's surd, so the bottom becomes a whole number.",
+  "a": {
+   "q": "Which step rationalises the denominator of \\(\\frac{10}{\\sqrt{5}}\\)?",
+   "opts": [
+    "Multiply the top and bottom by \\(\\sqrt{5}\\)",
+    "Multiply the top only by \\(\\sqrt{5}\\)",
+    "Multiply the top and bottom by 5",
+    "Divide the top and bottom by \\(\\sqrt{5}\\)"
+   ],
+   "why": "Multiplying the top and bottom by \\(\\sqrt{5}\\) keeps the value the same and makes the bottom \\(\\sqrt{5} \\times \\sqrt{5} = 5\\). Multiplying only the top changes the value of the fraction.",
+   "clue": "Multiply by a fraction equal to 1, using the surd on the bottom."
+  },
+  "b": {
+   "d": 2,
+   "q": "Rationalise the denominator of \\(\\frac{12}{\\sqrt{6}}\\) and simplify.",
+   "opts": [
+    "\\(2\\sqrt{6}\\)",
+    "\\(12\\sqrt{6}\\)",
+    "\\(\\frac{\\sqrt{6}}{2}\\)",
+    "\\(\\frac{12\\sqrt{6}}{36}\\)"
+   ],
+   "why": "\\(\\frac{12}{\\sqrt{6}} = \\frac{12\\sqrt{6}}{6} = 2\\sqrt{6}\\). Leaving it as \\(12\\sqrt{6}\\) forgets to divide by the new denominator 6.",
+   "clue": "After multiplying, the denominator is 6. Divide 12 by it."
+  }
+ },
+ "cleared_by": "checker"
 }

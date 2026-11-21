@@ -24,8 +24,141 @@
    0.207
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 may adapt eco-basic-economic-problem, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:40Z match: Claude Opus 5.5 says adapt eco-basic-economic-problem (1 change)",
+  "2026-11-20T12:35:45Z adapt: failed the content check, writing again",
+  "2026-11-20T12:44:52Z adapt: done",
+  "2026-11-20T12:53:23Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "confirm": 0.00972,
+  "adapt": 0.01313,
+  "check": 0.00877
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "eco-basic-economic-problem",
+  "changes": [
+   "Replace the Victorian town of Marlow council example in question b with a New South Wales example, such as a Sydney or regional NSW council deciding how to use one vacant block."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea (unlimited wants, limited resources, and the what, how and who questions) at a suitable level, but its question b uses a Victorian council example that should be made local to NSW.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "eco-basic-economic-problem",
+  "changes": [
+   "In question b, replace the Victorian town of Marlow with a New South Wales town so the example is local to the course."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches exactly this idea (unlimited wants, limited resources, and the what, how and for whom questions) at a depth that suits Years 9 and 10, and only its Victorian example needs a New South Wales setting.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "eco-basic-economic-problem",
+  "changes": [
+   "In question b, replace the Victorian town of Marlow with a New South Wales town so the example is local to the course."
+  ],
+  "by": "Claude Opus 5.5",
+  "parts": [
+   "a.q",
+   "b.q"
+  ]
+ },
+ "draft": {
+  "title": "The basic economic problem",
+  "card": [
+   "Wants are unlimited. People always want more goods and services than they have. Resources are limited, so they are scarce.",
+   "Scarcity is the gap between unlimited wants and limited resources. Every society faces it, rich or poor, so choices must be made.",
+   "Scarcity forces three questions. What and how much should be made? How should it be made? Who gets what is made?",
+   "The how question is about methods, such as using more workers or more machines. The who question is about how output is shared among people."
+  ],
+  "remember": "Unlimited wants meet limited resources, so every society must answer what, how and who.",
+  "a": {
+   "q": "What is the main reason scarcity is a problem for all societies, rich or poor?",
+   "opts": [
+    "Wants are unlimited but resources are limited",
+    "Resources are unlimited but wants are limited",
+    "Poor societies have too few goods to share",
+    "Governments choose to make some goods rare"
+   ],
+   "why": "Scarcity comes from unlimited wants meeting limited resources. It is not only a problem of poor societies, because rich societies still cannot meet every want.",
+   "clue": "Think about the gap between wants and resources."
+  },
+  "b": {
+   "d": 3,
+   "q": "Orange, a town in New South Wales, has one vacant block of land. The council is deciding whether to build a library or a sports centre on it. Which economic question is the council answering?",
+   "opts": [
+    "What to make, given limited resources",
+    "How to make it, given limited resources",
+    "Who gets it, given limited resources",
+    "How to remove scarcity in the town"
+   ],
+   "why": "The council is choosing which good to make, so it is answering the what question. It is not choosing a method of production or who receives the output, and choosing between two uses of the land does not remove scarcity.",
+   "clue": "Is the council choosing a good, a method or a group of people?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Wants are unlimited but resources are limited",
+   "also_right": []
+  },
+  "b": {
+   "best": "What to make, given limited resources",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The basic economic problem",
+  "card": [
+   "Wants are unlimited. People always want more goods and services than they have. Resources are limited, so they are scarce.",
+   "Scarcity is the gap between unlimited wants and limited resources. Every society faces it, rich or poor, so choices must be made.",
+   "Scarcity forces three questions. What and how much should be made? How should it be made? Who gets what is made?",
+   "The how question is about methods, such as using more workers or more machines. The who question is about how output is shared among people."
+  ],
+  "remember": "Unlimited wants meet limited resources, so every society must answer what, how and who.",
+  "a": {
+   "q": "What is the main reason scarcity is a problem for all societies, rich or poor?",
+   "opts": [
+    "Wants are unlimited but resources are limited",
+    "Resources are unlimited but wants are limited",
+    "Poor societies have too few goods to share",
+    "Governments choose to make some goods rare"
+   ],
+   "why": "Scarcity comes from unlimited wants meeting limited resources. It is not only a problem of poor societies, because rich societies still cannot meet every want.",
+   "clue": "Think about the gap between wants and resources."
+  },
+  "b": {
+   "d": 3,
+   "q": "Orange, a town in New South Wales, has one vacant block of land. The council is deciding whether to build a library or a sports centre on it. Which economic question is the council answering?",
+   "opts": [
+    "What to make, given limited resources",
+    "How to make it, given limited resources",
+    "Who gets it, given limited resources",
+    "How to remove scarcity in the town"
+   ],
+   "why": "The council is choosing which good to make, so it is answering the what question. It is not choosing a method of production or who receives the output, and choosing between two uses of the land does not remove scarcity.",
+   "clue": "Is the council choosing a good, a method or a group of people?"
+  }
+ },
+ "cleared_by": "checker"
 }

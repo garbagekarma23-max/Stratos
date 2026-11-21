@@ -24,8 +24,239 @@
    0.277
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:48Z write: done",
+  "2026-11-20T12:35:49Z check: flagged",
+  "2026-11-20T12:44:56Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.01103,
+  "check": 0.01356,
+  "fix": 0.02086,
+  "recheck": 0.0075
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, geo-urban-remote-australia, covers lower wellbeing, incomes and services in remote areas, but it does not teach the brief's trade-off of city jobs and services against higher living costs and rural space and community, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Living in urban, rural and remote places",
+  "card": [
+   [
+    "Urban",
+    "in cities and large towns. People have many jobs, schools, hospitals and shops close by. Housing and living costs are usually higher, and there is more traffic and crowding."
+   ],
+   [
+    "Rural",
+    "in farming areas and small towns. There is more open space and often a close community. Services such as specialist doctors can be further away."
+   ],
+   [
+    "Remote",
+    "far from large towns, with very few people. Services are the fewest here, and people may travel long distances or use online services for school and health."
+   ],
+   "Each type of place has benefits and costs. What suits a person depends on their job, family and what they value."
+  ],
+  "remember": "Cities offer jobs and services at a higher cost. Rural and remote places offer space and community, with fewer services.",
+  "a": {
+   "q": "Which is most likely to be a challenge of living in a remote place?",
+   "opts": [
+    "Long distances to reach services",
+    "Very high rents and house prices",
+    "Heavy traffic on most roads",
+    "Crowded public transport"
+   ],
+   "why": "Remote places have few people and few services, so travel to reach them can be long. High rents, traffic and crowded transport are more typical of cities.",
+   "clue": "Remote means far from large towns."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam works as a nurse and wants a wide choice of jobs and a hospital nearby. Which place suits Sam best, and what is the likely cost?",
+   "opts": [
+    "A city, but with higher living costs",
+    "A remote place, but with higher living costs",
+    "A city, but with fewer services nearby",
+    "A remote place, but with fewer jobs to choose from"
+   ],
+   "why": "Cities have many jobs and hospitals close by, but costs such as housing are usually higher. A remote place has fewer jobs and services, so it does not meet what Sam wants, even though it offers space.",
+   "clue": "Match what Sam wants to where jobs and hospitals are found."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Long distances to reach services",
+   "also_right": []
+  },
+  "b": {
+   "best": "A city, but with higher living costs",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The Urban line says living costs are usually higher in cities. In Australia that holds for housing, but everyday costs such as food, fuel and transport are often higher in remote places. Narrow it to housing costs, or say that remote places can have high costs for goods."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says rural and remote places both offer community and gives city costs as simply higher. The card only says rural areas often have a close community, says nothing about community in remote places, and says city costs are usually higher. The line sorts the ideas more neatly than the card does."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "Both questions work and each has a single clear answer. The card's claim that living costs are usually higher in cities overlooks the high cost of goods in remote Australia, and the remember line drops 'usually' and gives remote places a community the card does not mention."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The Urban line says living costs are usually higher in cities. In Australia that holds for housing, but everyday costs such as food, fuel and transport are often higher in remote places. Narrow it to housing costs, or say that remote places can have high costs for goods.",
+  "Remember, other: The remember line says rural and remote places both offer community and gives city costs as simply higher. The card only says rural areas often have a close community, says nothing about community in remote places, and says city costs are usually higher. The line sorts the ideas more neatly than the card does."
+ ],
+ "proposal": {
+  "title": "Living in urban, rural and remote places",
+  "card": [
+   [
+    "Urban",
+    "in cities and large towns. People have many jobs, schools, hospitals and shops close by. Housing usually costs more, and there is more traffic and crowding."
+   ],
+   [
+    "Rural",
+    "in farming areas and small towns. There is more open space and often a close community. Services such as specialist doctors can be further away."
+   ],
+   [
+    "Remote",
+    "far from large towns, with very few people. Services are fewest here, so people may travel long distances. Food and fuel can cost more because they are carried a long way."
+   ],
+   "Each type of place has benefits and costs. What suits a person depends on their job, family and what they value."
+  ],
+  "remember": "Cities have more jobs and services but dearer housing. The further a place is from a city, the fewer services it tends to have.",
+  "a": {
+   "q": "Which is most likely to be a challenge of living in a remote place?",
+   "opts": [
+    "Long distances to reach services",
+    "Very high rents and house prices",
+    "Heavy traffic on most roads",
+    "Crowded public transport"
+   ],
+   "why": "Remote places have few people and few services, so travel to reach them can be long. High rents, traffic and crowded transport are more typical of cities.",
+   "clue": "Remote means far from large towns."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam works as a nurse and wants a wide choice of jobs and a hospital nearby. Which place suits Sam best, and what is the likely cost?",
+   "opts": [
+    "A city, but with higher housing costs",
+    "A remote place, but with higher housing costs",
+    "A city, but with fewer services nearby",
+    "A remote place, but with fewer jobs nearby"
+   ],
+   "why": "Cities have many jobs and hospitals close by, but housing usually costs more. A remote place has the fewest jobs and services, so it does not give Sam what Sam wants.",
+   "clue": "Match what Sam wants to where jobs and hospitals are found."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Long distances to reach services",
+    "also_right": []
+   },
+   "b": {
+    "best": "A city, but with higher housing costs",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The Urban line says living costs are usually higher in cities. In Australia that holds for housing, but everyday costs such as food, fuel and transport are often higher in remote places. Narrow it to housing costs, or say that remote places can have high costs for goods."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says rural and remote places both offer community and gives city costs as simply higher. The card only says rural areas often have a close community, says nothing about community in remote places, and says city costs are usually higher. The line sorts the ideas more neatly than the card does."
+   }
+  ],
+  "flags": [
+   "Card, fact: The Urban line says living costs are usually higher in cities. In Australia that holds for housing, but everyday costs such as food, fuel and transport are often higher in remote places. Narrow it to housing costs, or say that remote places can have high costs for goods.",
+   "Remember, other: The remember line says rural and remote places both offer community and gives city costs as simply higher. The card only says rural areas often have a close community, says nothing about community in remote places, and says city costs are usually higher. The line sorts the ideas more neatly than the card does."
+  ]
+ },
+ "final": {
+  "title": "Living in urban, rural and remote places",
+  "card": [
+   [
+    "Urban",
+    "in cities and large towns. People have many jobs, schools, hospitals and shops close by. Housing usually costs more, and there is more traffic and crowding."
+   ],
+   [
+    "Rural",
+    "in farming areas and small towns. There is more open space and often a close community. Services such as specialist doctors can be further away."
+   ],
+   [
+    "Remote",
+    "far from large towns, with very few people. Services are fewest here, so people may travel long distances. Food and fuel can cost more because they are carried a long way."
+   ],
+   "Each type of place has benefits and costs. What suits a person depends on their job, family and what they value."
+  ],
+  "remember": "Cities have more jobs and services but dearer housing. The further a place is from a city, the fewer services it tends to have.",
+  "a": {
+   "q": "Which is most likely to be a challenge of living in a remote place?",
+   "opts": [
+    "Long distances to reach services",
+    "Very high rents and house prices",
+    "Heavy traffic on most roads",
+    "Crowded public transport"
+   ],
+   "why": "Remote places have few people and few services, so travel to reach them can be long. High rents, traffic and crowded transport are more typical of cities.",
+   "clue": "Remote means far from large towns."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam works as a nurse and wants a wide choice of jobs and a hospital nearby. Which place suits Sam best, and what is the likely cost?",
+   "opts": [
+    "A city, but with higher housing costs",
+    "A remote place, but with higher housing costs",
+    "A city, but with fewer services nearby",
+    "A remote place, but with fewer jobs nearby"
+   ],
+   "why": "Cities have many jobs and hospitals close by, but housing usually costs more. A remote place has the fewest jobs and services, so it does not give Sam what Sam wants.",
+   "clue": "Match what Sam wants to where jobs and hospitals are found."
+  }
+ },
+ "cleared_by": "recheck"
 }

@@ -8,8 +8,262 @@
    0.203
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 may adapt his-populate-or-perish, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:51Z confirm: Claude Opus 5.5 may adapt his-populate-or-perish, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z claude-code review: match rejected, to be written",
+  "2026-11-20T14:12:38Z write: done",
+  "2026-11-20T14:20:02Z check: flagged",
+  "2026-11-20T14:26:14Z fix: suggested",
+  "2026-11-20T14:43:03Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "confirm": 0.00667,
+  "write": 0.01807,
+  "check": 0.01452,
+  "fix": 0.0236
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "his-populate-or-perish",
+  "changes": [
+   "Add the Snowy Mountains Scheme as a named example of the big projects migrants worked on, since the NSW brief names it and the card only says big projects."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same post-war migration idea at a suitable depth, but it needs the Snowy Mountains Scheme added as the example the brief asks for.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "his-populate-or-perish",
+  "changes": [
+   "Name the Snowy Mountains Scheme in NSW as the example of a big project that many post-war migrants worked on, in place of the general phrase 'big projects'."
+  ],
+  "sure": "medium",
+  "reason": "The bank point already teaches who came after WWII (British assisted migrants, displaced persons and other Europeans) and why, so it only needs the Snowy Mountains Scheme added as the local example of migrant work.",
+  "model": "claude-opus-5-5"
+ },
+ "match_rejected": true,
+ "cleared_by": "owner",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "new",
+   "sure": "high",
+   "reason": "The bank point teaches Populate or perish, Calwell's program and why it began, which is its own point in this chapter. The brief here is narrower, about who came and the work they did, such as the Snowy Mountains Scheme, so it should be written new.",
+   "item": "a6c515eba00ed7d8",
+   "result": "decided",
+   "saved": {
+    "id": "his-post-war-migrants",
+    "title": "Post-war migrants",
+    "brief": "935cc68e9272",
+    "shortlist": [
+     [
+      "his-populate-or-perish",
+      0.203
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00021,
+     "confirm": 0.00667
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "his-populate-or-perish",
+     "changes": [
+      "Add the Snowy Mountains Scheme as a named example of the big projects migrants worked on, since the NSW brief names it and the card only says big projects."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same post-war migration idea at a suitable depth, but it needs the Snowy Mountains Scheme added as the example the brief asks for.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "his-populate-or-perish",
+     "changes": [
+      "Name the Snowy Mountains Scheme in NSW as the example of a big project that many post-war migrants worked on, in place of the general phrase 'big projects'."
+     ],
+     "sure": "medium",
+     "reason": "The bank point already teaches who came after WWII (British assisted migrants, displaced persons and other Europeans) and why, so it only needs the Snowy Mountains Scheme added as the local example of migrant work.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "2e8aeead7ed9d87f"
+  }
+ ],
+ "draft": {
+  "title": "Post-war migrants",
+  "card": [
+   [
+    "Displaced persons",
+    "People left homeless or stateless by WWII, many from eastern and central Europe. From 1947 Australia accepted tens of thousands, and many were refugees from war-torn Europe."
+   ],
+   [
+    "British migrants",
+    "The largest group of post-war arrivals came from Britain. Many came on the assisted passage scheme, where the government paid part of the fare."
+   ],
+   [
+    "European migrants",
+    "Later, many people came from southern Europe, including Italy and Greece. They came to find work and a better life, and many had family already here."
+   ],
+   "Many migrants worked on big building projects. The Snowy Mountains Scheme, which began in 1949, hired workers from dozens of countries to build dams, tunnels and power stations."
+  ],
+  "remember": "After WWII, people from Britain and Europe came to Australia, and many worked on projects such as the Snowy Mountains Scheme.",
+  "a": {
+   "q": "Which group of people were displaced persons who came to Australia after WWII?",
+   "opts": [
+    "People left homeless by the war, mostly from Europe",
+    "People who paid their own fare from Britain to settle",
+    "People who came to Australia to join the gold rush",
+    "People sent to Australia as convicts by British courts"
+   ],
+   "why": "Displaced persons were people left homeless or stateless by WWII, and many came from eastern and central Europe. British migrants who used assisted passage are a different group, because they were not displaced by the war.",
+   "clue": "Think about what the war did to their homes."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tomas left a camp for displaced people in Europe in 1949 and came to Australia. He found a job at the Snowy Mountains Scheme. What did the Scheme show about post-war migration?",
+   "opts": [
+    "Migrants did much of the work on big national projects",
+    "Migrants were barred from working on government projects",
+    "Only British migrants could get work in Australia",
+    "Migrants worked only on farms in country areas"
+   ],
+   "why": "The Snowy Mountains Scheme hired workers from many countries, so migrants did much of the work on a big national project. It was not limited to British migrants, because workers came from dozens of countries.",
+   "clue": "The Scheme hired workers from dozens of countries."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "People left homeless by the war, mostly from Europe",
+   "also_right": []
+  },
+  "b": {
+   "best": "Migrants did much of the work on big national projects",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says Australia accepted 'tens of thousands' of displaced persons from 1947. About 170,000 arrived between 1947 and the early 1950s, so this understates the scale. 'More than 170,000' would be accurate."
+   },
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "Two of the wrong options (convicts sent by British courts, and the gold rush) belong to the 1700s and 1800s. They are plainly wrong for a question about after WWII. With the clue about homes echoing 'homeless', a Year 9–10 student can pick the answer without knowing what displaced persons were."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both intended answers are correct. The card understates the number of displaced persons as 'tens of thousands' when it was about 170,000. Question a is too easy because two of its wrong options come from the wrong century."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says Australia accepted 'tens of thousands' of displaced persons from 1947. About 170,000 arrived between 1947 and the early 1950s, so this understates the scale. 'More than 170,000' would be accurate.",
+  "Question a, level: Two of the wrong options (convicts sent by British courts, and the gold rush) belong to the 1700s and 1800s. They are plainly wrong for a question about after WWII. With the clue about homes echoing 'homeless', a Year 9–10 student can pick the answer without knowing what displaced persons were."
+ ],
+ "proposal": {
+  "title": "Post-war migrants",
+  "card": [
+   [
+    "Displaced persons",
+    "People left homeless or stateless by WWII, many from eastern and central Europe, who often waited in camps. From 1947, more than 170,000 of them came to Australia."
+   ],
+   [
+    "British migrants",
+    "The largest group of post-war arrivals came from Britain. Many came on the assisted passage scheme, where the government paid part of the fare."
+   ],
+   [
+    "European migrants",
+    "Later, many people came from southern Europe, including Italy and Greece. They came to find work and a better life, and many had family already here."
+   ],
+   "Many migrants worked on big building projects. The Snowy Mountains Scheme, which began in 1949, hired workers from dozens of countries to build dams, tunnels and power stations."
+  ],
+  "remember": "After WWII, people from Britain and Europe came to Australia, and many worked on projects such as the Snowy Mountains Scheme.",
+  "a": {
+   "q": "Which of these post-war arrivals best fits the term displaced person?",
+   "opts": [
+    "A Latvian left stateless by the war, living in a camp",
+    "A Londoner who came on an assisted passage for a new job",
+    "An Italian who came in the 1950s to join family here",
+    "A Greek who came in the 1960s to find factory work"
+   ],
+   "why": "Displaced persons were people left homeless or stateless by WWII, and many waited in camps in Europe. The Londoner is a British migrant who chose to move for work with help on the fare, so the war had not taken away their home.",
+   "clue": "Focus on why each person left, not on where they came from."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tomas left a camp for displaced people in Europe in 1949 and came to Australia. He found a job at the Snowy Mountains Scheme. What did the Scheme show about post-war migration?",
+   "opts": [
+    "Migrants did much of the work on big national projects",
+    "Migrants were barred from working on government projects",
+    "Only British migrants could get work in Australia",
+    "Migrants worked only on farms in country areas"
+   ],
+   "why": "The Snowy Mountains Scheme hired workers from many countries, so migrants did much of the work on a big national project. It was not limited to British migrants, because workers came from dozens of countries.",
+   "clue": "Think about who the Scheme hired to build its dams and tunnels."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Post-war migrants",
+  "card": [
+   [
+    "Displaced persons",
+    "People left homeless or stateless by WWII, many from eastern and central Europe, who often waited in camps. From 1947, more than 170,000 of them came to Australia."
+   ],
+   [
+    "British migrants",
+    "The largest group of post-war arrivals came from Britain. Many came on the assisted passage scheme, where the government paid part of the fare."
+   ],
+   [
+    "European migrants",
+    "Later, many people came from southern Europe, including Italy and Greece. They came to find work and a better life, and many had family already here."
+   ],
+   "Many migrants worked on big building projects. The Snowy Mountains Scheme, which began in 1949, hired workers from dozens of countries to build dams, tunnels and power stations."
+  ],
+  "remember": "After WWII, people from Britain and Europe came to Australia, and many worked on projects such as the Snowy Mountains Scheme.",
+  "a": {
+   "q": "Which of these post-war arrivals best fits the term displaced person?",
+   "opts": [
+    "A Latvian left stateless by the war, living in a camp",
+    "A Londoner who came on an assisted passage for a new job",
+    "An Italian who came in the 1950s to join family here",
+    "A Greek who came in the 1960s to find factory work"
+   ],
+   "why": "Displaced persons were people left homeless or stateless by WWII, and many waited in camps in Europe. The Londoner is a British migrant who chose to move for work with help on the fare, so the war had not taken away their home.",
+   "clue": "Focus on why each person left, not on where they came from."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tomas left a camp for displaced people in Europe in 1949 and came to Australia. He found a job at the Snowy Mountains Scheme. What did the Scheme show about post-war migration?",
+   "opts": [
+    "Migrants did much of the work on big national projects",
+    "Migrants were barred from working on government projects",
+    "Only British migrants could get work in Australia",
+    "Migrants worked only on farms in country areas"
+   ],
+   "why": "The Snowy Mountains Scheme hired workers from many countries, so migrants did much of the work on a big national project. It was not limited to British migrants, because workers came from dozens of countries.",
+   "clue": "Think about who the Scheme hired to build its dams and tunnels."
+  }
+ }
 }

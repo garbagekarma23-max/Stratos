@@ -12,8 +12,181 @@
    0.216
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:48Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:23:37Z autoreview: picked as a spot check. It would have been cleared with the fix (a wording)",
+  "2026-11-20T14:33:44Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00602,
+  "check": 0.00936,
+  "fix": 0.01531
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches the online dimension in the brief, and the closest one, Language and identity, is written for Year 7 and covers only general slang, local sayings and idioms, so adapting it would mean adding a new idea and changing its depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Language and identity online",
+  "card": [
+   "The way people speak and write shows who they are. It can also show which groups they belong to, such as a school, a team or a fan community.",
+   "Groups often share words, phrases and styles that outsiders may not know. Using them can signal that you are part of the group.",
+   "Online platforms create new words and ways of writing, such as abbreviations, memes, hashtags and emoji. People use them to signal identity.",
+   "A writer or speaker may change their language to suit the audience. A person might post differently in a gaming chat than in an email to a teacher."
+  ],
+  "remember": "Language choices can signal who we are and which group we belong to, online as well as face to face.",
+  "a": {
+   "q": "Why might a gaming community use its own slang in its chat?",
+   "opts": [
+    "It signals that the speaker belongs to the group",
+    "It makes the messages longer and more formal",
+    "It shows the speaker is writing to a teacher",
+    "It stops anyone else from ever joining the chat"
+   ],
+   "why": "Shared slang can mark someone as part of a group, because members know it and outsiders may not. It does not stop others joining: it only signals who already belongs.",
+   "clue": "Think about what shared words say about the people using them."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya writes relaxed posts full of slang and emoji on her fan forum. Her email to a museum is formal and has none. What does this show?",
+   "opts": [
+    "She adapts her language to suit the audience",
+    "She has two different identities that are unrelated",
+    "She does not know how to write formally",
+    "Online language is always less correct than email"
+   ],
+   "why": "Priya changes her language for different audiences, and each style can signal a different side of who she is. Her forum posts do not show she cannot write formally, because she clearly can when the audience calls for it.",
+   "clue": "She writes well in both places, but for different readers."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It signals that the speaker belongs to the group",
+   "also_right": []
+  },
+  "b": {
+   "best": "She adapts her language to suit the audience",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why says shared slang 'only signals who already belongs', but the card says such words 'can signal' group membership. 'Only' overstates it, since shared slang can also exclude outsiders or build a sense of belonging."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are sound and have one clear right answer each. The only problem is the why for question a: 'only signals who already belongs' overstates the card's 'can signal'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The why says shared slang 'only signals who already belongs', but the card says such words 'can signal' group membership. 'Only' overstates it, since shared slang can also exclude outsiders or build a sense of belonging."
+ ],
+ "proposal": {
+  "title": "Language and identity online",
+  "card": [
+   "The way people speak and write shows who they are. It can also show which groups they belong to, such as a school, a team or a fan community.",
+   "Groups often share words, phrases and styles that outsiders may not know. Using them can signal that you are part of the group.",
+   "Online platforms create new words and ways of writing, such as abbreviations, memes, hashtags and emoji. People use them to signal identity.",
+   "A writer or speaker may change their language to suit the audience. A person might post differently in a gaming chat than in an email to a teacher."
+  ],
+  "remember": "Language choices can signal who we are and which group we belong to, online as well as face to face.",
+  "a": {
+   "q": "Why might a gaming community use its own slang in its chat?",
+   "opts": [
+    "It signals that the speaker belongs to the group",
+    "It makes the messages longer and more formal",
+    "It shows the speaker is writing to a teacher",
+    "It stops anyone else from ever joining the chat"
+   ],
+   "why": "Shared slang can mark someone as part of a group, because members know it and outsiders may not. Outsiders can still join and learn the words, so the slang does not stop anyone from ever joining.",
+   "clue": "Think about what shared words say about the people using them."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya writes relaxed posts full of slang and emoji on her fan forum. Her email to a museum is formal and has none. What does this show?",
+   "opts": [
+    "She adapts her language to suit the audience",
+    "She has two different identities that are unrelated",
+    "She does not know how to write formally",
+    "Online language is always less correct than email"
+   ],
+   "why": "Priya changes her language for different audiences, and each style can signal a different side of who she is. Her forum posts do not show she cannot write formally, because she clearly can when the audience calls for it.",
+   "clue": "She writes well in both places, but for different readers."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:37Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why says shared slang 'only signals who already belongs', but the card says such words 'can signal' group membership. 'Only' overstates it, since shared slang can also exclude outsiders or build a sense of belonging."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The why says shared slang 'only signals who already belongs', but the card says such words 'can signal' group membership. 'Only' overstates it, since shared slang can also exclude outsiders or build a sense of belonging."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Language and identity online",
+  "card": [
+   "The way people speak and write shows who they are. It can also show which groups they belong to, such as a school, a team or a fan community.",
+   "Groups often share words, phrases and styles that outsiders may not know. Using them can signal that you are part of the group.",
+   "Online platforms create new words and ways of writing, such as abbreviations, memes, hashtags and emoji. People use them to signal identity.",
+   "A writer or speaker may change their language to suit the audience. A person might post differently in a gaming chat than in an email to a teacher."
+  ],
+  "remember": "Language choices can signal who we are and which group we belong to, online as well as face to face.",
+  "a": {
+   "q": "Why might a gaming community use its own slang in its chat?",
+   "opts": [
+    "It signals that the speaker belongs to the group",
+    "It makes the messages longer and more formal",
+    "It shows the speaker is writing to a teacher",
+    "It stops anyone else from ever joining the chat"
+   ],
+   "why": "Shared slang can mark someone as part of a group, because members know it and outsiders may not. Outsiders can still join and learn the words, so the slang does not stop anyone from ever joining.",
+   "clue": "Think about what shared words say about the people using them."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya writes relaxed posts full of slang and emoji on her fan forum. Her email to a museum is formal and has none. What does this show?",
+   "opts": [
+    "She adapts her language to suit the audience",
+    "She has two different identities that are unrelated",
+    "She does not know how to write formally",
+    "Online language is always less correct than email"
+   ],
+   "why": "Priya changes her language for different audiences, and each style can signal a different side of who she is. Her forum posts do not show she cannot write formally, because she clearly can when the audience calls for it.",
+   "clue": "She writes well in both places, but for different readers."
+  }
+ },
+ "cleared_by": "owner"
 }

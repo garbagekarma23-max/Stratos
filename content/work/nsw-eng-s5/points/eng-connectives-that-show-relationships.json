@@ -12,8 +12,224 @@
    0.369
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:48Z write: failed the content check, writing again",
+  "2026-11-20T12:44:54Z write: done",
+  "2026-11-20T13:11:47Z check: flagged",
+  "2026-11-20T13:17:56Z fix: suggested",
+  "2026-11-20T14:38:19Z review: rejected, to be written again",
+  "2026-11-20T14:58:18Z claude-code write: failed the content check, to be written once more",
+  "2026-11-20T14:59:14Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.01245,
+  "check": 0.01082,
+  "fix": 0.01903
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers adding, opposing and result connectives but has no section on illustration connectives such as for example, so adding that would change its content rather than make a small adjustment.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Connectives that show relationships",
+  "card": [
+   "A connective is a word or phrase that links ideas. It tells the reader how one idea relates to the next.",
+   [
+    "However",
+    "shows contrast. The second idea goes against the first, as in \"The park is small. However, it is always busy.\""
+   ],
+   [
+    "Therefore",
+    "shows cause and effect. The second idea is a result of the first, as in \"The bus was late. Therefore, Sam missed the start.\""
+   ],
+   [
+    "For example",
+    "shows illustration. The second idea is a case of the first. Moreover adds weight: it gives another point that supports the same claim."
+   ]
+  ],
+  "remember": "Pick the connective that matches how the two ideas really relate.",
+  "a": {
+   "q": "Lena trained hard every morning for months. The next sentence says she won the regional final. Which connective best begins that sentence?",
+   "opts": [
+    "Therefore",
+    "However",
+    "For example",
+    "In contrast"
+   ],
+   "why": "Her training led to her win, so the second idea is a result of the first. That is cause and effect, which therefore shows. However would wrongly suggest the win went against her training.",
+   "clue": "Is the win a result of the training?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Omar argues that his school should plant more trees. His next sentence gives a second reason: shade cools the playground on hot days. Which connective should begin it?",
+   "opts": [
+    "Moreover",
+    "However",
+    "Therefore",
+    "In contrast"
+   ],
+   "why": "Omar is piling up support for one claim, so he needs a connective that adds weight, which is moreover. Therefore is tempting, but the shade is not a result of the claim. It is another reason for it.",
+   "clue": "Is the second sentence a result, or one more reason?"
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:18Z",
+   "step": "write",
+   "version": {
+    "title": "Connectives that show relationships",
+    "card": [
+     "Connectives such as however and therefore link ideas across sentences. Each one tells the reader how the next idea relates to the last.",
+     [
+      "However",
+      "signals contrast: the next idea goes against the last. \"The park is small. However, it is always busy.\""
+     ],
+     [
+      "Therefore",
+      "signals cause and effect: the next idea is a result of the last. \"The bus broke down. Therefore, the class arrived late.\""
+     ],
+     [
+      "For example, moreover",
+      "for example introduces a case of the last idea. Moreover adds another point that supports the same claim."
+     ]
+    ],
+    "remember": "Choose the connective that matches how the two ideas really relate.",
+    "a": {
+     "q": "Fill the gap: \"The bridge was closed for repairs. ___, buses had to take a longer route.\" Which connective fits best?",
+     "opts": [
+      "Therefore",
+      "However",
+      "For example",
+      "Despite this"
+     ],
+     "why": "The longer route is a result of the bridge closing, so the link is cause and effect, which therefore signals. However and despite this would wrongly suggest the second idea goes against the first.",
+     "clue": "Did the closure cause the longer route?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Priya argues that her school should have a longer lunch break, since it gives time to eat. Her next sentence adds that students would also focus better in class. Which connective should begin it?",
+     "opts": [
+      "Moreover",
+      "Therefore",
+      "However",
+      "For example"
+     ],
+     "why": "Better focus is a second reason for the same claim, so moreover, which adds a supporting point, fits. Therefore is tempting, but better focus is not a result of having time to eat. It is another reason for the longer break.",
+     "clue": "Is the new sentence a result, or one more reason?"
+    }
+   },
+   "problems": [
+    "eng-connectives-that-show-relationships quotes more than 10 words: \"The bridge was closed for repairs. ___, buses had to take a longer route.\""
+   ]
+  },
+  {
+   "at": "2026-11-20T14:59:14Z",
+   "step": "write",
+   "version": {
+    "title": "Connectives that show relationships",
+    "card": [
+     "Connectives such as however and therefore link ideas across sentences. Each one tells the reader how the next idea relates to the last.",
+     [
+      "However",
+      "signals contrast: the next idea goes against the last. \"The park is small. However, it is always busy.\""
+     ],
+     [
+      "Therefore",
+      "signals cause and effect: the next idea is a result of the last. \"The bus broke down. Therefore, the class arrived late.\""
+     ],
+     [
+      "For example, moreover",
+      "for example introduces a case of the last idea. Moreover adds another point that supports the same claim."
+     ]
+    ],
+    "remember": "Choose the connective that matches how the two ideas really relate.",
+    "a": {
+     "q": "Fill the gap: \"The bridge was closed. ___, buses took a longer route.\" Which connective fits best?",
+     "opts": [
+      "Therefore",
+      "However",
+      "For example",
+      "Despite this"
+     ],
+     "why": "The longer route is a result of the bridge closing, so the link is cause and effect, which therefore signals. However and despite this would wrongly suggest the second idea goes against the first.",
+     "clue": "Did the closure cause the longer route?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Priya argues that her school should have a longer lunch break, since it gives time to eat. Her next sentence adds that students would also focus better in class. Which connective should begin it?",
+     "opts": [
+      "Moreover",
+      "Therefore",
+      "However",
+      "For example"
+     ],
+     "why": "Better focus is a second reason for the same claim, so moreover, which adds a supporting point, fits. Therefore is tempting, but better focus is not a result of having time to eat. It is another reason for the longer break.",
+     "clue": "Is the new sentence a result, or one more reason?"
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Connectives that show relationships",
+  "card": [
+   "Connectives such as however and therefore link ideas across sentences. Each one tells the reader how the next idea relates to the last.",
+   [
+    "However",
+    "signals contrast: the next idea goes against the last. \"The park is small. However, it is always busy.\""
+   ],
+   [
+    "Therefore",
+    "signals cause and effect: the next idea is a result of the last. \"The bus broke down. Therefore, the class arrived late.\""
+   ],
+   [
+    "For example, moreover",
+    "for example introduces a case of the last idea. Moreover adds another point that supports the same claim."
+   ]
+  ],
+  "remember": "Choose the connective that matches how the two ideas really relate.",
+  "a": {
+   "q": "Fill the gap: \"The bridge was closed. ___, buses took a longer route.\" Which connective fits best?",
+   "opts": [
+    "Therefore",
+    "However",
+    "For example",
+    "Despite this"
+   ],
+   "why": "The longer route is a result of the bridge closing, so the link is cause and effect, which therefore signals. However and despite this would wrongly suggest the second idea goes against the first.",
+   "clue": "Did the closure cause the longer route?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya argues that her school should have a longer lunch break, since it gives time to eat. Her next sentence adds that students would also focus better in class. Which connective should begin it?",
+   "opts": [
+    "Moreover",
+    "Therefore",
+    "However",
+    "For example"
+   ],
+   "why": "Better focus is a second reason for the same claim, so moreover, which adds a supporting point, fits. Therefore is tempting, but better focus is not a result of having time to eat. It is another reason for the longer break.",
+   "clue": "Is the new sentence a result, or one more reason?"
+  }
+ },
+ "redone": true,
+ "local": []
 }

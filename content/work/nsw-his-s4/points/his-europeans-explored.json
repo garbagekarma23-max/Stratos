@@ -8,8 +8,229 @@
    0.218
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: done",
+  "2026-11-20T12:44:56Z check: flagged",
+  "2026-11-20T12:53:26Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.00664,
+  "check": 0.00977,
+  "fix": 0.01845,
+  "recheck": 0.00765
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point covers only the search for sea routes to Asia and the voyages of Columbus and da Gama, while the new brief also covers land, converts and better ships and navigation tools, so it is broader and a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Why Europeans explored",
+  "card": [
+   "From the 1400s, European powers sent ships across the oceans. Their rulers and merchants wanted to find new lands and new routes.",
+   [
+    "Trade and wealth",
+    "Spices, silk and gold were prized in Europe. Rulers wanted to buy them more cheaply, or to find them at the source, and so gain wealth."
+   ],
+   [
+    "Land and converts",
+    "Rulers also wanted new land to control. Many wanted to spread Christianity by winning converts, people who change to a new religion."
+   ],
+   [
+    "Better tools",
+    "Stronger ships could carry more cargo over long distances. Tools such as the compass and the astrolabe helped sailors find their way. These made long voyages possible. They did not cause the voyages."
+   ]
+  ],
+  "remember": "Europeans explored for trade, wealth, land and converts, and better ships and tools made it possible.",
+  "a": {
+   "q": "Which of these was a reason European powers sent ships to explore from the 1400s?",
+   "opts": [
+    "To find new sources of spices, silk and gold",
+    "To spread the compass to people who lacked it",
+    "To find new lands for sailors to hold as private farms",
+    "To test whether better ships could cross oceans"
+   ],
+   "why": "Rulers and merchants wanted wealth from trade, so they searched for goods at their source. The other options mix up the reasons with the tools. Ships and navigation tools made voyages possible, but they were not the purpose.",
+   "clue": "Think about what rulers and merchants wanted to gain."
+  },
+  "b": {
+   "d": 3,
+   "q": "In the 1400s, a Portuguese ruler pays for a ship to sail along unknown coasts. His crew carries a compass and an astrolabe. What did these tools do?",
+   "opts": [
+    "Helped sailors find their way on long voyages",
+    "Gave the ruler a reason to want new land",
+    "Made the ruler want to win converts abroad",
+    "Showed sailors where spices were grown"
+   ],
+   "why": "The compass and astrolabe helped sailors find their way, which made long voyages possible. They did not give rulers their reasons for exploring. Wealth, land and converts were the reasons, and the tools only helped carry them out.",
+   "clue": "Ask whether a tool is a reason to go, or a help in getting there."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "To find new sources of spices, silk and gold",
+   "also_right": []
+  },
+  "b": {
+   "best": "Helped sailors find their way on long voyages",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 'The other options mix up the reasons with the tools', but the option about sailors holding new lands as private farms has nothing to do with tools. It is wrong because the land was for rulers to control. The why does not explain that distractor."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate, and each question has one clear right answer. One minor issue: the explanation for question a says every wrong option confuses reasons with tools, which does not fit the 'private farms' option."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) says 'The other options mix up the reasons with the tools', but the option about sailors holding new lands as private farms has nothing to do with tools. It is wrong because the land was for rulers to control. The why does not explain that distractor."
+ ],
+ "proposal": {
+  "title": "Why Europeans explored",
+  "card": [
+   "From the 1400s, European powers sent ships across the oceans. Their rulers and merchants wanted to find new lands and new routes.",
+   [
+    "Trade and wealth",
+    "Spices, silk and gold were prized in Europe. Rulers wanted to buy them more cheaply, or to find them at the source, and so gain wealth."
+   ],
+   [
+    "Land and converts",
+    "Rulers also wanted new land to control. Many wanted to spread Christianity by winning converts, people who change to a new religion."
+   ],
+   [
+    "Better tools",
+    "Stronger ships could carry more cargo over long distances. Tools such as the compass and the astrolabe helped sailors find their way. These made long voyages possible. They did not cause the voyages."
+   ]
+  ],
+  "remember": "Europeans explored for trade, wealth, land and converts, and better ships and tools made it possible.",
+  "a": {
+   "q": "Which of these was a reason European powers sent ships to explore from the 1400s?",
+   "opts": [
+    "To find new sources of spices, silk and gold",
+    "To spread the compass to people who lacked it",
+    "To find new lands for sailors to hold as private farms",
+    "To test whether better ships could cross oceans"
+   ],
+   "why": "Rulers and merchants wanted wealth from trade, so they searched for spices, silk and gold at their source. New land was wanted for rulers to control, not as private farms for sailors. The compass and better ships were tools that made voyages possible, not the purpose of them.",
+   "clue": "Think about what rulers and merchants wanted to gain."
+  },
+  "b": {
+   "d": 3,
+   "q": "In the 1400s, a Portuguese ruler pays for a ship to sail along unknown coasts. His crew carries a compass and an astrolabe. What did these tools do?",
+   "opts": [
+    "Helped sailors find their way on long voyages",
+    "Gave the ruler a reason to want new land",
+    "Made the ruler want to win converts abroad",
+    "Showed sailors where spices were grown"
+   ],
+   "why": "The compass and astrolabe helped sailors find their way, which made long voyages possible. They did not give rulers their reasons for exploring. Wealth, land and converts were the reasons, and the tools only helped carry them out.",
+   "clue": "Ask whether a tool is a reason to go, or a help in getting there."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "To find new sources of spices, silk and gold",
+    "also_right": []
+   },
+   "b": {
+    "best": "Helped sailors find their way on long voyages",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 'The other options mix up the reasons with the tools', but the option about sailors holding new lands as private farms has nothing to do with tools. It is wrong because the land was for rulers to control. The why does not explain that distractor."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) says 'The other options mix up the reasons with the tools', but the option about sailors holding new lands as private farms has nothing to do with tools. It is wrong because the land was for rulers to control. The why does not explain that distractor."
+  ]
+ },
+ "final": {
+  "title": "Why Europeans explored",
+  "card": [
+   "From the 1400s, European powers sent ships across the oceans. Their rulers and merchants wanted to find new lands and new routes.",
+   [
+    "Trade and wealth",
+    "Spices, silk and gold were prized in Europe. Rulers wanted to buy them more cheaply, or to find them at the source, and so gain wealth."
+   ],
+   [
+    "Land and converts",
+    "Rulers also wanted new land to control. Many wanted to spread Christianity by winning converts, people who change to a new religion."
+   ],
+   [
+    "Better tools",
+    "Stronger ships could carry more cargo over long distances. Tools such as the compass and the astrolabe helped sailors find their way. These made long voyages possible. They did not cause the voyages."
+   ]
+  ],
+  "remember": "Europeans explored for trade, wealth, land and converts, and better ships and tools made it possible.",
+  "a": {
+   "q": "Which of these was a reason European powers sent ships to explore from the 1400s?",
+   "opts": [
+    "To find new sources of spices, silk and gold",
+    "To spread the compass to people who lacked it",
+    "To find new lands for sailors to hold as private farms",
+    "To test whether better ships could cross oceans"
+   ],
+   "why": "Rulers and merchants wanted wealth from trade, so they searched for spices, silk and gold at their source. New land was wanted for rulers to control, not as private farms for sailors. The compass and better ships were tools that made voyages possible, not the purpose of them.",
+   "clue": "Think about what rulers and merchants wanted to gain."
+  },
+  "b": {
+   "d": 3,
+   "q": "In the 1400s, a Portuguese ruler pays for a ship to sail along unknown coasts. His crew carries a compass and an astrolabe. What did these tools do?",
+   "opts": [
+    "Helped sailors find their way on long voyages",
+    "Gave the ruler a reason to want new land",
+    "Made the ruler want to win converts abroad",
+    "Showed sailors where spices were grown"
+   ],
+   "why": "The compass and astrolabe helped sailors find their way, which made long voyages possible. They did not give rulers their reasons for exploring. Wealth, land and converts were the reasons, and the tools only helped carry them out.",
+   "clue": "Ask whether a tool is a reason to go, or a help in getting there."
+  }
+ },
+ "cleared_by": "recheck"
 }

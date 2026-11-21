@@ -12,8 +12,179 @@
    0.292
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:58Z write: done",
+  "2026-11-20T12:45:00Z check: flagged",
+  "2026-11-20T12:53:29Z fix: suggested",
+  "2026-11-20T13:23:46Z autoreview: cleared with the fix (remember other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.0067,
+  "check": 0.01268,
+  "fix": 0.02073
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank's evidence card covers how scientists detect climate change, while the new point is about its impacts on the water cycle and ecosystems, which no bank point teaches.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Impacts of climate change",
+  "card": [
+   "Satellites, ocean buoys and weather stations collect data over many years. The data show that Earth is warming and that the climate is changing.",
+   "Sea levels are rising for two reasons: ice on land melts and flows into the sea, and warmer ocean water expands. Oceans are also warmer, and sea ice and glaciers are shrinking.",
+   "Climate change alters the water cycle. A warmer atmosphere holds more water vapour, so some places get heavier rain and others get longer droughts.",
+   "Ecosystems come under stress when their conditions change faster than living things can adapt. Warmer ocean water can cause coral bleaching, where corals lose the algae that live in them."
+  ],
+  "remember": "Data show rising seas, warmer oceans and less ice, and these changes alter rainfall patterns and stress ecosystems.",
+  "a": {
+   "q": "Which pair of changes both help to explain why sea levels are rising?",
+   "opts": [
+    "Land ice melting and ocean water expanding as it warms",
+    "Sea ice melting and ocean water becoming saltier",
+    "Heavier rainfall and ocean water cooling and sinking",
+    "Longer droughts and glaciers growing on land"
+   ],
+   "why": "Melting land ice adds water to the sea, and warm water takes up more space than cool water. Sea ice melting is not the answer here because the card links the rise to ice on land and to expanding water, and saltier water is not given as a cause.",
+   "clue": "Think about water added and water that takes up more space."
+  },
+  "b": {
+   "d": 3,
+   "q": "Scientists studying a reef off Queensland record ocean water that is warmer than usual for several weeks. Many corals lose the algae that live in them. Which idea does this best show?",
+   "opts": [
+    "Ecosystems are stressed when conditions change too fast",
+    "The water cycle is speeding up over the reef",
+    "Sea levels are rising because ice is melting on land",
+    "Satellites are warming the ocean surface"
+   ],
+   "why": "The reef's conditions changed faster than the corals could adapt, so the ecosystem is under stress. The water cycle and sea level rise are also effects of climate change, but neither describes corals losing their algae.",
+   "clue": "The corals are reacting to a change in their surroundings."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Land ice melting and ocean water expanding as it warms",
+   "also_right": []
+  },
+  "b": {
+   "best": "Ecosystems are stressed when conditions change too fast",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says rising seas, warmer oceans and less ice ('these changes') alter rainfall patterns and stress ecosystems. The card says climate change alters the water cycle because a warmer atmosphere holds more water vapour. It does not say rising seas or shrinking ice change rainfall, so the remember line states a causal link the card does not teach."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and the card are accurate. The remember line wrongly says rising seas and shrinking ice cause rainfall changes, a link the card does not make; the card links rainfall changes to a warmer atmosphere holding more water vapour."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The remember line says rising seas, warmer oceans and less ice ('these changes') alter rainfall patterns and stress ecosystems. The card says climate change alters the water cycle because a warmer atmosphere holds more water vapour. It does not say rising seas or shrinking ice change rainfall, so the remember line states a causal link the card does not teach."
+ ],
+ "proposal": {
+  "title": "Impacts of climate change",
+  "card": [
+   "Satellites, ocean buoys and weather stations collect data over many years. The data show that Earth is warming and that the climate is changing.",
+   "Sea levels are rising for two reasons: ice on land melts and flows into the sea, and warmer ocean water expands. Oceans are also warmer, and sea ice and glaciers are shrinking.",
+   "Climate change alters the water cycle. A warmer atmosphere holds more water vapour, so some places get heavier rain and others get longer droughts.",
+   "Ecosystems come under stress when their conditions change faster than living things can adapt. Warmer ocean water can cause coral bleaching, where corals lose the algae that live in them."
+  ],
+  "remember": "Data show rising seas, warmer oceans and shrinking ice. Climate change also alters the water cycle and puts ecosystems under stress.",
+  "a": {
+   "q": "Which pair of changes both help to explain why sea levels are rising?",
+   "opts": [
+    "Land ice melting and ocean water expanding as it warms",
+    "Sea ice melting and ocean water becoming saltier",
+    "Heavier rainfall and ocean water cooling and sinking",
+    "Longer droughts and glaciers growing on land"
+   ],
+   "why": "Melting land ice adds water to the sea, and warm water takes up more space than cool water. The option with sea ice is tempting, but the card gives melting ice on land and expanding water as the causes, and saltier water is not a cause.",
+   "clue": "Think about water added and water that takes up more space."
+  },
+  "b": {
+   "d": 3,
+   "q": "Scientists studying a reef off Queensland record ocean water that is warmer than usual for several weeks. Many corals lose the algae that live in them. Which idea does this best show?",
+   "opts": [
+    "Ecosystems are stressed when conditions change too fast",
+    "The water cycle is speeding up over the reef",
+    "Sea levels are rising because ice is melting on land",
+    "Corals can adapt quickly to any change in water"
+   ],
+   "why": "The reef's conditions changed faster than the corals could adapt, so the ecosystem is under stress. The water cycle and sea level rise are also effects of climate change, but neither describes corals losing their algae.",
+   "clue": "The corals are reacting to a change in their surroundings."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:46Z",
+  "rules": 1,
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says rising seas, warmer oceans and less ice ('these changes') alter rainfall patterns and stress ecosystems. The card says climate change alters the water cycle because a warmer atmosphere holds more water vapour. It does not say rising seas or shrinking ice change rainfall, so the remember line states a causal link the card does not teach."
+   }
+  ],
+  "flags": [
+   "Remember, other: The remember line says rising seas, warmer oceans and less ice ('these changes') alter rainfall patterns and stress ecosystems. The card says climate change alters the water cycle because a warmer atmosphere holds more water vapour. It does not say rising seas or shrinking ice change rainfall, so the remember line states a causal link the card does not teach."
+  ]
+ },
+ "final": {
+  "title": "Impacts of climate change",
+  "card": [
+   "Satellites, ocean buoys and weather stations collect data over many years. The data show that Earth is warming and that the climate is changing.",
+   "Sea levels are rising for two reasons: ice on land melts and flows into the sea, and warmer ocean water expands. Oceans are also warmer, and sea ice and glaciers are shrinking.",
+   "Climate change alters the water cycle. A warmer atmosphere holds more water vapour, so some places get heavier rain and others get longer droughts.",
+   "Ecosystems come under stress when their conditions change faster than living things can adapt. Warmer ocean water can cause coral bleaching, where corals lose the algae that live in them."
+  ],
+  "remember": "Data show rising seas, warmer oceans and shrinking ice. Climate change also alters the water cycle and puts ecosystems under stress.",
+  "a": {
+   "q": "Which pair of changes both help to explain why sea levels are rising?",
+   "opts": [
+    "Land ice melting and ocean water expanding as it warms",
+    "Sea ice melting and ocean water becoming saltier",
+    "Heavier rainfall and ocean water cooling and sinking",
+    "Longer droughts and glaciers growing on land"
+   ],
+   "why": "Melting land ice adds water to the sea, and warm water takes up more space than cool water. The option with sea ice is tempting, but the card gives melting ice on land and expanding water as the causes, and saltier water is not a cause.",
+   "clue": "Think about water added and water that takes up more space."
+  },
+  "b": {
+   "d": 3,
+   "q": "Scientists studying a reef off Queensland record ocean water that is warmer than usual for several weeks. Many corals lose the algae that live in them. Which idea does this best show?",
+   "opts": [
+    "Ecosystems are stressed when conditions change too fast",
+    "The water cycle is speeding up over the reef",
+    "Sea levels are rising because ice is melting on land",
+    "Corals can adapt quickly to any change in water"
+   ],
+   "why": "The reef's conditions changed faster than the corals could adapt, so the ecosystem is under stress. The water cycle and sea level rise are also effects of climate change, but neither describes corals losing their algae.",
+   "clue": "The corals are reacting to a change in their surroundings."
+  }
+ },
+ "cleared_by": "auto"
 }

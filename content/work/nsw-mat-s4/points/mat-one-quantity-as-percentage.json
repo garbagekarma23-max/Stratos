@@ -24,8 +24,113 @@
    0.295
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:54Z write: done",
+  "2026-11-20T12:35:53Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.01255,
+  "check": 0.00764
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches finding what percentage one quantity is of another (part over whole, then times 100); they cover finding a percentage of an amount, converting fractions to percentages, and increases or discounts.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "One quantity as a percentage of another",
+  "card": [
+   "To write one quantity as a percentage of another, put the part over the whole as a fraction. The whole is the amount you are comparing against.",
+   "Both amounts must be in the same units. Change one first if they are not, such as metres to centimetres.",
+   "Multiply the fraction by 100 to get the percentage: \\(\\frac{\\text{part}}{\\text{whole}} \\times 100\\).",
+   "Example: 18 of 24 students walk to school. \\(\\frac{18}{24} \\times 100 = 75\\), so \\(75\\%\\) walk."
+  ],
+  "remember": "Part over whole, in the same units, then times 100.",
+  "a": {
+   "q": "Jack saves $30 of the $120 he earns. What percentage of his earnings does he save?",
+   "opts": [
+    "\\(25\\%\\)",
+    "\\(400\\%\\)",
+    "\\(30\\%\\)",
+    "\\(4\\%\\)"
+   ],
+   "why": "The part is 30 and the whole is 120, so \\(\\frac{30}{120} \\times 100 = 25\\%\\). The answer \\(400\\%\\) comes from putting the whole over the part.",
+   "clue": "Which amount is the whole?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A ribbon is 2 m long. Priya cuts off a piece 50 cm long. What percentage of the ribbon is the piece?",
+   "opts": [
+    "\\(25\\%\\)",
+    "\\(2500\\%\\)",
+    "\\(40\\%\\)",
+    "\\(50\\%\\)"
+   ],
+   "why": "Change 2 m to 200 cm first, so the units match. Then \\(\\frac{50}{200} \\times 100 = 25\\%\\). Using \\(\\frac{50}{100}\\) gives \\(50\\%\\), which ignores that the ribbon is 200 cm long.",
+   "clue": "Write both lengths in centimetres."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(25\\%\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(25\\%\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "One quantity as a percentage of another",
+  "card": [
+   "To write one quantity as a percentage of another, put the part over the whole as a fraction. The whole is the amount you are comparing against.",
+   "Both amounts must be in the same units. Change one first if they are not, such as metres to centimetres.",
+   "Multiply the fraction by 100 to get the percentage: \\(\\frac{\\text{part}}{\\text{whole}} \\times 100\\).",
+   "Example: 18 of 24 students walk to school. \\(\\frac{18}{24} \\times 100 = 75\\), so \\(75\\%\\) walk."
+  ],
+  "remember": "Part over whole, in the same units, then times 100.",
+  "a": {
+   "q": "Jack saves $30 of the $120 he earns. What percentage of his earnings does he save?",
+   "opts": [
+    "\\(25\\%\\)",
+    "\\(400\\%\\)",
+    "\\(30\\%\\)",
+    "\\(4\\%\\)"
+   ],
+   "why": "The part is 30 and the whole is 120, so \\(\\frac{30}{120} \\times 100 = 25\\%\\). The answer \\(400\\%\\) comes from putting the whole over the part.",
+   "clue": "Which amount is the whole?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A ribbon is 2 m long. Priya cuts off a piece 50 cm long. What percentage of the ribbon is the piece?",
+   "opts": [
+    "\\(25\\%\\)",
+    "\\(2500\\%\\)",
+    "\\(40\\%\\)",
+    "\\(50\\%\\)"
+   ],
+   "why": "Change 2 m to 200 cm first, so the units match. Then \\(\\frac{50}{200} \\times 100 = 25\\%\\). Using \\(\\frac{50}{100}\\) gives \\(50\\%\\), which ignores that the ribbon is 200 cm long.",
+   "clue": "Write both lengths in centimetres."
+  }
+ },
+ "cleared_by": "checker"
 }

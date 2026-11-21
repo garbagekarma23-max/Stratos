@@ -24,8 +24,115 @@
    0.317
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: failed the content check, writing again",
+  "2026-11-20T12:35:58Z write: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "write": 0.01919,
+  "check": 0.00705
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, sci-alleles-genotype-phenotype, covers alleles, dominance and genotype/phenotype but has no Punnett square, which the brief requires, and adding one would be a new step, while the Punnett-square card (bio-monohybrid-crosses) goes beyond the brief into ratios and probability without covering the dominance basics.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Dominant and recessive alleles",
+  "card": [
+   "Each trait is controlled by two alleles, which are versions of a gene. One allele comes from each parent.",
+   "A dominant allele shows in the offspring when it is present, written as a capital letter such as T. A recessive allele, written as a small letter such as t, shows only when there is no dominant allele.",
+   "The pair of alleles is the genotype, such as Tt. The trait that can be seen is the phenotype. Tt and TT both show the dominant trait, and only tt shows the recessive one.",
+   "A Punnett square predicts the chances of each genotype in offspring. Put one parent's alleles along the top and the other's down the side, then fill in each box. For Tt × Tt, the boxes give TT, Tt, Tt and tt, so 1 in 4 is tt."
+  ],
+  "remember": "A dominant allele hides a recessive one, and a Punnett square gives the chances.",
+  "a": {
+   "q": "Freckles (F) are dominant to no freckles (f) in a certain mouse. A mouse has the genotype Ff. What does its phenotype show?",
+   "opts": [
+    "Freckles, as F is dominant",
+    "No freckles, as f is present",
+    "Half freckled, as it has one of each",
+    "Freckles on one side only"
+   ],
+   "why": "The dominant allele F shows whenever it is present, so an Ff mouse has freckles. The recessive f is still in its genotype, but it is hidden and does not blend with F.",
+   "clue": "Which allele shows when both are present?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Black fur (B) is dominant to brown fur (b) in a rabbit. Two black rabbits that are both Bb are bred. What is the chance that a kitten has brown fur?",
+   "opts": [
+    "1 in 4",
+    "1 in 2",
+    "3 in 4",
+    "0, as both parents are black"
+   ],
+   "why": "A Punnett square for Bb × Bb gives BB, Bb, Bb and bb. Only bb is brown, so the chance is 1 in 4. Both parents are black, but each carries a recessive allele that can pass on.",
+   "clue": "Fill in the four boxes of the Punnett square."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Freckles, as F is dominant",
+   "also_right": []
+  },
+  "b": {
+   "best": "1 in 4",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Dominant and recessive alleles",
+  "card": [
+   "Each trait is controlled by two alleles, which are versions of a gene. One allele comes from each parent.",
+   "A dominant allele shows in the offspring when it is present, written as a capital letter such as T. A recessive allele, written as a small letter such as t, shows only when there is no dominant allele.",
+   "The pair of alleles is the genotype, such as Tt. The trait that can be seen is the phenotype. Tt and TT both show the dominant trait, and only tt shows the recessive one.",
+   "A Punnett square predicts the chances of each genotype in offspring. Put one parent's alleles along the top and the other's down the side, then fill in each box. For Tt × Tt, the boxes give TT, Tt, Tt and tt, so 1 in 4 is tt."
+  ],
+  "remember": "A dominant allele hides a recessive one, and a Punnett square gives the chances.",
+  "a": {
+   "q": "Freckles (F) are dominant to no freckles (f) in a certain mouse. A mouse has the genotype Ff. What does its phenotype show?",
+   "opts": [
+    "Freckles, as F is dominant",
+    "No freckles, as f is present",
+    "Half freckled, as it has one of each",
+    "Freckles on one side only"
+   ],
+   "why": "The dominant allele F shows whenever it is present, so an Ff mouse has freckles. The recessive f is still in its genotype, but it is hidden and does not blend with F.",
+   "clue": "Which allele shows when both are present?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Black fur (B) is dominant to brown fur (b) in a rabbit. Two black rabbits that are both Bb are bred. What is the chance that a kitten has brown fur?",
+   "opts": [
+    "1 in 4",
+    "1 in 2",
+    "3 in 4",
+    "0, as both parents are black"
+   ],
+   "why": "A Punnett square for Bb × Bb gives BB, Bb, Bb and bb. Only bb is brown, so the chance is 1 in 4. Both parents are black, but each carries a recessive allele that can pass on.",
+   "clue": "Fill in the four boxes of the Punnett square."
+  }
+ },
+ "cleared_by": "checker"
 }

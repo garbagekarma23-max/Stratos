@@ -24,8 +24,270 @@
    0.208
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 may adapt mat-scale-maps, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:55Z confirm: Claude Opus 5.5 may reuse mat-scale-maps, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt mat-scale-maps (3 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting mat-scale-maps on the next run",
+  "2026-11-20T14:12:39Z adapt: done",
+  "2026-11-20T14:20:02Z check: flagged",
+  "2026-11-20T14:26:15Z fix: suggested",
+  "2026-11-20T14:43:47Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00037,
+  "confirm": 0.01144,
+  "adapt": 0.00619,
+  "check": 0.01254,
+  "fix": 0.0249
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-scale-maps",
+  "changes": [
+   "Write large numbers with spaces as thousands separators (for example 50 000 and 25 000) instead of commas, to match NSW and Australian Stage 5 notation."
+  ],
+  "sure": "medium",
+  "reason": "The Victorian card teaches the same map-scale idea at the same depth, but its number formatting differs from NSW style, so it needs a small adjustment.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "mat-scale-maps",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches the same map-scale idea at a Year 9–10 depth, using a 1:50,000 example that converts centimetres on the map to real distances. It suits NSW Stage 5 as written, though it only shows map-to-real conversions, not real-to-map.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-scale-maps",
+  "changes": [
+   "Add converting a real distance to a map distance: change the real distance to centimetres, then divide by the scale number.",
+   "State that on a 1:50,000 map, 1 cm is 50,000 cm, which is 500 m, as the brief says.",
+   "Make one of the two questions a real distance to map distance conversion."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card1",
+   "card3",
+   "card4",
+   "remember",
+   "a.q",
+   "a.opt1",
+   "a.opt2",
+   "a.opt3",
+   "a.opt4",
+   "a.why",
+   "a.clue",
+   "b.q"
+  ]
+ },
+ "cleared_by": "owner",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same map scale idea and its sums are right, but it only goes from map to real distance. The brief asks for converting both ways, and for 1 cm on a 1 to 50,000 map being 500 m.",
+   "item": "5ca2e6ab26bff432",
+   "result": "decided",
+   "saved": {
+    "id": "mat-scale-drawings-maps",
+    "title": "Scale drawings and maps",
+    "brief": "88976ebecbf4",
+    "shortlist": [
+     [
+      "mat-scale-maps",
+      0.697
+     ],
+     [
+      "mat-direct-proportion-scale",
+      0.262
+     ],
+     [
+      "mat-scale-drawings-plans",
+      0.239
+     ],
+     [
+      "mat-logarithmic-scales",
+      0.227
+     ],
+     [
+      "mat-reading-plans-diagrams",
+      0.208
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00037,
+     "confirm": 0.01144
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-scale-maps",
+     "changes": [
+      "Write large numbers with spaces as thousands separators (for example 50 000 and 25 000) instead of commas, to match NSW and Australian Stage 5 notation."
+     ],
+     "sure": "medium",
+     "reason": "The Victorian card teaches the same map-scale idea at the same depth, but its number formatting differs from NSW style, so it needs a small adjustment.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "reuse",
+     "same": "mat-scale-maps",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The bank point teaches the same map-scale idea at a Year 9–10 depth, using a 1:50,000 example that converts centimetres on the map to real distances. It suits NSW Stage 5 as written, though it only shows map-to-real conversions, not real-to-map.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "e692b705fc474281"
+  }
+ ],
+ "draft": {
+  "title": "Scale and maps",
+  "card": [
+   "A map scale such as 1:50,000 means 1 unit on the map is 50,000 of the same unit in real life. So 1 cm on the map is 50,000 cm, which is 500 m on the ground.",
+   "To find a real distance, measure the map distance and multiply by the second number in the scale. Then change the units to something sensible.",
+   "Useful changes: 100 cm \\(=\\) 1 m, 1000 m \\(=\\) 1 km, and 100,000 cm \\(=\\) 1 km. So on a 1:50,000 map, 2 cm on the map is 100,000 cm, which is 1 km.",
+   "To go from real to map, change the real distance to cm, then divide by the scale number. On a 1:50,000 map, 3 km is 300,000 cm. \\(300{,}000 \\div 50{,}000 = 6\\) cm on the map."
+  ],
+  "remember": "Map to real: multiply by the scale number. Real to map: change to cm, then divide by the scale number.",
+  "a": {
+   "q": "A walking track is 3 km long in real life. How long is it on a 1:50,000 map?",
+   "opts": [
+    "6 cm",
+    "60 cm",
+    "0.6 cm",
+    "150 cm"
+   ],
+   "why": "3 km is 300,000 cm. \\(300{,}000 \\div 50{,}000 = 6\\) cm. The option 60 cm comes from changing 3 km to only 30,000 cm, a unit mistake. The option 150 cm comes from multiplying instead of dividing.",
+   "clue": "Change km to cm first, then divide by 50,000."
+  },
+  "b": {
+   "d": 3,
+   "q": "On a 1:25,000 map, a campsite and a lake are 7.2 cm apart. How far apart are they in real life?",
+   "opts": [
+    "1.8 km",
+    "18 km",
+    "180 m",
+    "3.6 km"
+   ],
+   "why": "\\(7.2 \\times 25{,}000 = 180{,}000\\) cm. Dividing by 100,000 gives 1.8 km. The option 18 km comes from dividing by 10,000, which mixes up the cm to km change.",
+   "clue": "Multiply by 25,000, then use 100,000 cm \\(=\\) 1 km."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "6 cm",
+   "also_right": []
+  },
+  "b": {
+   "best": "1.8 km",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why for (a) is wrong about the distractors. Changing 3 km to 30,000 cm gives 30,000 ÷ 50,000 = 0.6 cm, not 60 cm. 60 cm comes from using 3,000,000 cm, one zero too many. Also, multiplying gives 3 × 50,000, which is not 150 cm, so the 150 cm explanation does not hold either."
+   },
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "Question a is the card's own worked example word for word: 3 km on a 1:50,000 map is 6 cm. Students can answer it from memory without applying the method. Use a different distance or scale."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct (6 cm and 1.8 km). The why for (a) misexplains its distractors: 30,000 cm gives 0.6 cm, not 60 cm, and the 150 cm explanation does not work. Question a also just repeats the card's worked example."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The why for (a) is wrong about the distractors. Changing 3 km to 30,000 cm gives 30,000 ÷ 50,000 = 0.6 cm, not 60 cm. 60 cm comes from using 3,000,000 cm, one zero too many. Also, multiplying gives 3 × 50,000, which is not 150 cm, so the 150 cm explanation does not hold either.",
+  "Question a, level: Question a is the card's own worked example word for word: 3 km on a 1:50,000 map is 6 cm. Students can answer it from memory without applying the method. Use a different distance or scale."
+ ],
+ "proposal": {
+  "title": "Scale drawings and maps",
+  "card": [
+   "A scale on a map or scale drawing, such as 1:50,000, means 1 unit on the map is 50,000 of the same unit in real life. So 1 cm on the map is 50,000 cm, which is 500 m on the ground.",
+   "To find a real distance, measure the map distance and multiply by the second number in the scale. Then change the units to something sensible.",
+   "Useful changes: 100 cm \\(=\\) 1 m, 1000 m \\(=\\) 1 km, and 100,000 cm \\(=\\) 1 km. So on a 1:50,000 map, 2 cm on the map is 100,000 cm, which is 1 km.",
+   "To go from real to map, change the real distance to cm, then divide by the scale number. On a 1:50,000 map, 3 km is 300,000 cm. \\(300{,}000 \\div 50{,}000 = 6\\) cm on the map."
+  ],
+  "remember": "Map to real: multiply by the scale number. Real to map: change to cm, then divide by the scale number.",
+  "a": {
+   "q": "A walking track is 2 km long in real life. How long is it on a 1:40,000 map?",
+   "opts": [
+    "5 cm",
+    "50 cm",
+    "0.5 cm",
+    "0.05 cm"
+   ],
+   "why": "2 km is 200,000 cm, and \\(200{,}000 \\div 40{,}000 = 5\\) cm. The option 0.05 cm comes from stopping at metres: \\(2000 \\div 40{,}000 = 0.05\\). The option 50 cm comes from writing 2 km as 2,000,000 cm, one zero too many.",
+   "clue": "Change km all the way to cm before you divide."
+  },
+  "b": {
+   "d": 3,
+   "q": "On a 1:25,000 map, a campsite and a lake are 7.2 cm apart. How far apart are they in real life?",
+   "opts": [
+    "1.8 km",
+    "18 km",
+    "180 m",
+    "3.6 km"
+   ],
+   "why": "\\(7.2 \\times 25{,}000 = 180{,}000\\) cm. Dividing by 100,000 gives 1.8 km. The option 18 km comes from dividing by 10,000, which mixes up the cm to km change.",
+   "clue": "Multiply by 25,000, then use 100,000 cm \\(=\\) 1 km."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Scale drawings and maps",
+  "card": [
+   "A scale on a map or scale drawing, such as 1:50,000, means 1 unit on the map is 50,000 of the same unit in real life. So 1 cm on the map is 50,000 cm, which is 500 m on the ground.",
+   "To find a real distance, measure the map distance and multiply by the second number in the scale. Then change the units to something sensible.",
+   "Useful changes: 100 cm \\(=\\) 1 m, 1000 m \\(=\\) 1 km, and 100,000 cm \\(=\\) 1 km. So on a 1:50,000 map, 2 cm on the map is 100,000 cm, which is 1 km.",
+   "To go from real to map, change the real distance to cm, then divide by the scale number. On a 1:50,000 map, 3 km is 300,000 cm. \\(300{,}000 \\div 50{,}000 = 6\\) cm on the map."
+  ],
+  "remember": "Map to real: multiply by the scale number. Real to map: change to cm, then divide by the scale number.",
+  "a": {
+   "q": "A walking track is 2 km long in real life. How long is it on a 1:40,000 map?",
+   "opts": [
+    "5 cm",
+    "50 cm",
+    "0.5 cm",
+    "0.05 cm"
+   ],
+   "why": "2 km is 200,000 cm, and \\(200{,}000 \\div 40{,}000 = 5\\) cm. The option 0.05 cm comes from stopping at metres: \\(2000 \\div 40{,}000 = 0.05\\). The option 50 cm comes from writing 2 km as 2,000,000 cm, one zero too many.",
+   "clue": "Change km all the way to cm before you divide."
+  },
+  "b": {
+   "d": 3,
+   "q": "On a 1:25,000 map, a campsite and a lake are 7.2 cm apart. How far apart are they in real life?",
+   "opts": [
+    "1.8 km",
+    "18 km",
+    "180 m",
+    "3.6 km"
+   ],
+   "why": "\\(7.2 \\times 25{,}000 = 180{,}000\\) cm. Dividing by 100,000 gives 1.8 km. The option 18 km comes from dividing by 10,000, which mixes up the cm to km change.",
+   "clue": "Multiply by 25,000, then use 100,000 cm \\(=\\) 1 km."
+  }
+ }
 }

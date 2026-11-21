@@ -24,8 +24,115 @@
    0.319
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:55Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:54Z write: done",
+  "2026-11-20T12:44:58Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00036,
+  "write": 0.00677,
+  "check": 0.00742
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Equations with algebraic fractions, is broader: it teaches finding a lowest common denominator across several fractions and its questions use two fractions, so it does not match the single-fraction clearing this point needs.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Equations with a fraction",
+  "card": [
+   "A fraction bar means divide. In \\(\\frac{x + 4}{3} = 5\\), the whole top, \\(x + 4\\), is divided by 3.",
+   "To clear the fraction, multiply both sides by the denominator. The denominator is the bottom number, here 3. This undoes the divide.",
+   "Worked example: \\(\\frac{x + 4}{3} = 5\\). Multiply both sides by 3 to get \\(x + 4 = 15\\). Then subtract 4 from both sides to get \\(x = 11\\).",
+   "Check by substituting. \\(\\frac{11 + 4}{3} = \\frac{15}{3} = 5\\), so the answer is right."
+  ],
+  "remember": "Multiply both sides by the denominator first, then solve what is left.",
+  "a": {
+   "q": "What is the first step to solve \\(\\frac{x - 2}{5} = 4\\)?",
+   "opts": [
+    "Multiply both sides by 5",
+    "Add 2 to both sides",
+    "Divide both sides by 5",
+    "Subtract 5 from both sides"
+   ],
+   "why": "The top is divided by 5, so multiplying both sides by 5 undoes it and gives \\(x - 2 = 20\\). Dividing by 5 would divide again and make the fraction harder to clear.",
+   "clue": "Undo a divide with the opposite operation."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia solves \\(\\frac{x + 6}{4} = 3\\). What is the value of \\(x\\)?",
+   "opts": [
+    "\\(x = 6\\)",
+    "\\(x = 18\\)",
+    "\\(x = -3\\)",
+    "\\(x = 9\\)"
+   ],
+   "why": "Multiply both sides by 4 to get \\(x + 6 = 12\\), then subtract 6 to get \\(x = 6\\). The answer \\(x = 18\\) comes from adding 6 instead of subtracting it.",
+   "clue": "Clear the fraction, then undo the plus 6."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Multiply both sides by 5",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(x = 6\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Equations with a fraction",
+  "card": [
+   "A fraction bar means divide. In \\(\\frac{x + 4}{3} = 5\\), the whole top, \\(x + 4\\), is divided by 3.",
+   "To clear the fraction, multiply both sides by the denominator. The denominator is the bottom number, here 3. This undoes the divide.",
+   "Worked example: \\(\\frac{x + 4}{3} = 5\\). Multiply both sides by 3 to get \\(x + 4 = 15\\). Then subtract 4 from both sides to get \\(x = 11\\).",
+   "Check by substituting. \\(\\frac{11 + 4}{3} = \\frac{15}{3} = 5\\), so the answer is right."
+  ],
+  "remember": "Multiply both sides by the denominator first, then solve what is left.",
+  "a": {
+   "q": "What is the first step to solve \\(\\frac{x - 2}{5} = 4\\)?",
+   "opts": [
+    "Multiply both sides by 5",
+    "Add 2 to both sides",
+    "Divide both sides by 5",
+    "Subtract 5 from both sides"
+   ],
+   "why": "The top is divided by 5, so multiplying both sides by 5 undoes it and gives \\(x - 2 = 20\\). Dividing by 5 would divide again and make the fraction harder to clear.",
+   "clue": "Undo a divide with the opposite operation."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia solves \\(\\frac{x + 6}{4} = 3\\). What is the value of \\(x\\)?",
+   "opts": [
+    "\\(x = 6\\)",
+    "\\(x = 18\\)",
+    "\\(x = -3\\)",
+    "\\(x = 9\\)"
+   ],
+   "why": "Multiply both sides by 4 to get \\(x + 6 = 12\\), then subtract 6 to get \\(x = 6\\). The answer \\(x = 18\\) comes from adding 6 instead of subtracting it.",
+   "clue": "Clear the fraction, then undo the plus 6."
+  }
+ },
+ "cleared_by": "checker"
 }

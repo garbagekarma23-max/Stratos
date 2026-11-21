@@ -24,8 +24,211 @@
    0.443
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:52Z write: done",
+  "2026-11-20T12:35:52Z check: flagged",
+  "2026-11-20T12:44:57Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: kept for you (the fresh check named a sensitive topic)",
+  "2026-11-20T14:42:55Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.01118,
+  "check": 0.01192,
+  "fix": 0.02764,
+  "recheck": 0.01108
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, The women's movement, covers the international second-wave movement in general terms and does not teach the Australian campaigns, the 1969 and 1972 equal pay decisions, the end of the marriage bar or the Sex Discrimination Act 1984, so it is broader than the new point and would need more than small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The women's movement in Australia",
+  "card": [
+   "From the 1960s, women in Australia campaigned for equal treatment at work. Many used protests, unions, lobbying and court cases.",
+   [
+    "Equal pay",
+    "Women were often paid less than men for the same work. The Arbitration Commission made decisions in 1969 and 1972 that moved Australia toward equal pay."
+   ],
+   [
+    "Marriage bar",
+    "Married women had been barred from permanent jobs in the Commonwealth public service. The campaign to end this ban succeeded in 1966."
+   ],
+   [
+    "Sex Discrimination Act",
+    "The Sex Discrimination Act 1984 made it unlawful to treat people unfairly because of their sex. It covers areas such as work, and later reforms built on it."
+   ]
+  ],
+  "remember": "Women's campaigns led to equal pay decisions, the end of the marriage bar and a law against sex discrimination.",
+  "a": {
+   "q": "Before the marriage bar ended, what rule applied to women in the Commonwealth public service?",
+   "opts": [
+    "Married women could not hold permanent jobs",
+    "Women could not be paid any wage at all",
+    "Women could only work in unions",
+    "Married women had to be paid more than men"
+   ],
+   "why": "The marriage bar stopped married women from keeping permanent public service jobs, so many had to resign when they married. It was about who could hold a job, not about wages alone.",
+   "clue": "The bar was linked to a woman's marital status."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is a clerk in Parramatta in 1990. Her manager pays her less than a male clerk because she is a woman. Which law makes this unlawful?",
+   "opts": [
+    "The Sex Discrimination Act 1984",
+    "The 1969 equal pay decision alone",
+    "The ban on married women in public service jobs",
+    "The 1972 decision on marriage"
+   ],
+   "why": "The Sex Discrimination Act 1984 made unfair treatment because of sex unlawful, which covers Priya's case. The ban on married women was a rule that was ended, not a protection, so it does not apply.",
+   "clue": "Look for the law passed in the 1980s about unfair treatment because of sex."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Married women could not hold permanent jobs",
+   "also_right": []
+  },
+  "b": {
+   "best": "The Sex Discrimination Act 1984",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue ('the law passed in the 1980s about unfair treatment because of sex') matches only one option, the Sex Discrimination Act 1984. A student can pick it without understanding the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts check out: the 1969 and 1972 equal pay decisions, the end of the Commonwealth marriage bar in 1966, and the Sex Discrimination Act 1984. The only problem is that question b's clue effectively names the answer."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue ('the law passed in the 1980s about unfair treatment because of sex') matches only one option, the Sex Discrimination Act 1984. A student can pick it without understanding the idea."
+ ],
+ "proposal": {
+  "title": "The women's movement in Australia",
+  "card": [
+   "From the 1960s, women in Australia campaigned for equal treatment at work. They used protests, unions, lobbying and cases before the Arbitration Commission, which set wages.",
+   [
+    "Equal pay",
+    "Women were often paid less than men. In 1969 the Arbitration Commission granted equal pay for equal work, and in 1972 it widened this to equal pay for work of equal value. Both decisions were about pay rates."
+   ],
+   [
+    "Marriage bar",
+    "Married women had been barred from permanent jobs in the Commonwealth public service, so many had to resign when they married. The campaign to end this ban succeeded in 1966."
+   ],
+   [
+    "Sex Discrimination Act",
+    "The Sex Discrimination Act 1984 made it unlawful to treat people unfairly because of their sex. It covers areas such as work, including hiring and promotion, and education."
+   ]
+  ],
+  "remember": "Women's campaigns won equal pay decisions, ended the marriage bar and gained a law against sex discrimination.",
+  "a": {
+   "q": "Before 1966, why did many women in the Commonwealth public service resign when they married?",
+   "opts": [
+    "Married women were barred from permanent jobs",
+    "The 1969 equal pay decision required it",
+    "The Sex Discrimination Act 1984 required it",
+    "Married women had to be paid more than men"
+   ],
+   "why": "The marriage bar stopped married women from holding permanent public service jobs, so many had to leave when they married. The equal pay decision and the Sex Discrimination Act came after 1966, and both aimed to make treatment fairer, not to push women out.",
+   "clue": "Check the dates: what was in place before 1966?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1990, Priya, who is single, works for a Sydney company. Her manager refuses to promote her because she is a woman. Which reform made this unlawful?",
+   "opts": [
+    "The Sex Discrimination Act 1984",
+    "The 1972 equal pay decision",
+    "The 1969 equal pay decision",
+    "The end of the marriage bar in 1966"
+   ],
+   "why": "The Sex Discrimination Act 1984 made unfair treatment because of sex unlawful at work, including in promotion. The equal pay decisions are tempting, but they set pay rates and did not cover promotion. The marriage bar was about married women in the public service.",
+   "clue": "Priya's problem is not about her pay rate or her marriage."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "kept",
+  "why": [
+   "the fresh check named a sensitive topic"
+  ],
+  "check": {
+   "a": {
+    "best": "Married women were barred from permanent jobs",
+    "also_right": []
+   },
+   "b": {
+    "best": "The Sex Discrimination Act 1984",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "other-sensitive",
+   "summary": "No problems found. The dates (marriage bar ended 1966, equal pay decisions in 1969 and 1972, Sex Discrimination Act 1984) are correct, and both questions have one clear right answer."
+  },
+  "flags": []
+ },
+ "final": {
+  "title": "The women's movement in Australia",
+  "card": [
+   "From the 1960s, women in Australia campaigned for equal treatment at work. They used protests, unions, lobbying and cases before the Arbitration Commission, which set wages.",
+   [
+    "Equal pay",
+    "Women were often paid less than men. In 1969 the Arbitration Commission granted equal pay for equal work, and in 1972 it widened this to equal pay for work of equal value. Both decisions were about pay rates."
+   ],
+   [
+    "Marriage bar",
+    "Married women had been barred from permanent jobs in the Commonwealth public service, so many had to resign when they married. The campaign to end this ban succeeded in 1966."
+   ],
+   [
+    "Sex Discrimination Act",
+    "The Sex Discrimination Act 1984 made it unlawful to treat people unfairly because of their sex. It covers areas such as work, including hiring and promotion, and education."
+   ]
+  ],
+  "remember": "Women's campaigns won equal pay decisions, ended the marriage bar and gained a law against sex discrimination.",
+  "a": {
+   "q": "Before 1966, why did many women in the Commonwealth public service resign when they married?",
+   "opts": [
+    "Married women were barred from permanent jobs",
+    "The 1969 equal pay decision required it",
+    "The Sex Discrimination Act 1984 required it",
+    "Married women had to be paid more than men"
+   ],
+   "why": "The marriage bar stopped married women from holding permanent public service jobs, so many had to leave when they married. The equal pay decision and the Sex Discrimination Act came after 1966, and both aimed to make treatment fairer, not to push women out.",
+   "clue": "Check the dates: what was in place before 1966?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1990, Priya, who is single, works for a Sydney company. Her manager refuses to promote her because she is a woman. Which reform made this unlawful?",
+   "opts": [
+    "The Sex Discrimination Act 1984",
+    "The 1972 equal pay decision",
+    "The 1969 equal pay decision",
+    "The end of the marriage bar in 1966"
+   ],
+   "why": "The Sex Discrimination Act 1984 made unfair treatment because of sex unlawful at work, including in promotion. The equal pay decisions are tempting, but they set pay rates and did not cover promotion. The marriage bar was about married women in the public service.",
+   "clue": "Priya's problem is not about her pay rate or her marriage."
+  }
+ },
+ "cleared_by": "owner"
 }

@@ -24,8 +24,258 @@
    0.235
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:58Z write: failed the content check, writing again",
+  "2026-11-20T12:45:01Z write: done",
+  "2026-11-20T12:53:29Z check: flagged",
+  "2026-11-20T13:00:01Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.01767,
+  "check": 0.01064,
+  "fix": 0.02535,
+  "recheck": 0.00653
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the distinction between transverse waves (particles move at right angles to the wave) and longitudinal waves (particles move along the wave); the closest cards cover wave parts, sound as a vibration, or transverse waves only in passing within a different depth and syllabus.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Transverse and longitudinal waves",
+  "card": [
+   "In a wave, particles of the medium move only a small distance and return. The wave carries energy along, but the particles do not travel with it.",
+   [
+    "Transverse",
+    "the particles move at right angles to the direction the wave travels. A wave on a rope shaken up and down is an example. It has crests (highest points) and troughs (lowest points)."
+   ],
+   [
+    "Longitudinal",
+    "the particles move back and forth along the direction the wave travels. Sound is an example. It has compressions, where particles are squeezed together, and rarefactions, where they are spread apart."
+   ],
+   "To classify a wave, ask which way the particles move compared with the way the energy travels. Right angles means transverse. Along the same line means longitudinal."
+  ],
+  "remember": "Transverse: particles move at right angles to the wave. Longitudinal: particles move along it.",
+  "a": {
+   "q": "A student shakes one end of a long spring up and down. The wave travels along the spring and the coils move up and down. What type of wave is this?",
+   "opts": [
+    "Transverse, as the coils move at right angles to the wave",
+    "Longitudinal, as the coils move at right angles to the wave",
+    "Transverse, as the coils move along the wave's direction",
+    "Longitudinal, as the coils move along the wave's direction"
+   ],
+   "why": "The wave travels along the spring, but the coils move up and down, which is at right angles to that direction. That makes it a transverse wave. A spring can carry either type, so the way the coils move decides it, not the fact that it is a spring.",
+   "clue": "Compare the way the coils move with the way the wave travels."
+  },
+  "b": {
+   "d": 3,
+   "q": "A speaker in a hall plays a note. A tiny piece of dust in the air near the speaker is seen moving a little forward and back, in line with the direction the sound travels. What does this show?",
+   "opts": [
+    "Sound is longitudinal, and dust stays near its place",
+    "Sound is transverse, and dust stays near its place",
+    "Sound is longitudinal, and dust is carried across the hall",
+    "Sound is transverse, and dust is carried across the hall"
+   ],
+   "why": "Movement back and forth along the wave's direction means a longitudinal wave. The dust moves a small distance and returns, so the wave carries energy but does not carry the dust across the hall. Calling it transverse is tempting only if the dust is thought to move sideways, and it does not.",
+   "clue": "Which way does the dust move compared with the sound, and does it end up far away?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "Two labelled wave diagrams side by side. Transverse: a rope wave with crest and trough labelled, an arrow showing wave direction to the right and a double arrow showing particle movement up and down. Longitudinal: a spring or row of dots with compression and rarefaction labelled, an arrow showing wave direction to the right and a double arrow showing particle movement left and right.",
+    "why": "Seeing the particle direction against the wave direction makes the difference between the two types clear."
+   }
+  ]
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Transverse, as the coils move at right angles to the wave",
+   "also_right": []
+  },
+  "b": {
+   "best": "Sound is longitudinal, and dust stays near its place",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The first bullet explains that the wave carries energy while the particles do not travel with it. That is the idea of point 1 (Mechanical and electromagnetic waves: waves carry energy without carrying matter), explained here rather than only mentioned."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Half of each option tests whether the dust is carried across the hall. That is point 1's idea that waves carry energy, not matter, rather than this point's transverse/longitudinal classification."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The physics and both answers are correct. The card's first bullet and half of question b teach and test the 'energy without matter' idea that belongs to point 1, so consider cutting it back to a mention."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The first bullet explains that the wave carries energy while the particles do not travel with it. That is the idea of point 1 (Mechanical and electromagnetic waves: waves carry energy without carrying matter), explained here rather than only mentioned.",
+  "Question b, other: Half of each option tests whether the dust is carried across the hall. That is point 1's idea that waves carry energy, not matter, rather than this point's transverse/longitudinal classification."
+ ],
+ "proposal": {
+  "title": "Transverse and longitudinal waves",
+  "card": [
+   "Many waves travel by making the particles of a medium, such as air, water or a rope, vibrate. These waves can be sorted by the direction the particles vibrate.",
+   [
+    "Transverse",
+    "the particles move at right angles to the direction the wave travels. A wave on a rope shaken up and down is an example. It has crests (highest points) and troughs (lowest points)."
+   ],
+   [
+    "Longitudinal",
+    "the particles move back and forth along the direction the wave travels. Sound is an example. It has compressions, where particles are squeezed together, and rarefactions, where they are spread apart."
+   ],
+   "To classify a wave, compare the way the particles move with the way the wave travels. Right angles means transverse. Along the same line means longitudinal."
+  ],
+  "remember": "Transverse: particles move at right angles to the wave. Longitudinal: particles move along it.",
+  "a": {
+   "q": "A student shakes one end of a long spring up and down. The wave travels along the spring and the coils move up and down. What type of wave is this?",
+   "opts": [
+    "Transverse, as the coils move at right angles to the wave",
+    "Longitudinal, as the coils move at right angles to the wave",
+    "Transverse, as the coils move along the wave's direction",
+    "Longitudinal, as the coils move along the wave's direction"
+   ],
+   "why": "The wave travels along the spring, but the coils move up and down, which is at right angles to that direction. That makes it a transverse wave. A spring can carry either type, so the way the coils move decides it, not the fact that it is a spring.",
+   "clue": "Compare the way the coils move with the way the wave travels."
+  },
+  "b": {
+   "d": 3,
+   "q": "A speaker in a hall plays a note. A tiny piece of dust in the air near it moves forward and back, in line with the direction the sound travels. Which describes this sound wave?",
+   "opts": [
+    "Longitudinal, with compressions and rarefactions",
+    "Transverse, with compressions and rarefactions",
+    "Longitudinal, with crests and troughs",
+    "Transverse, with crests and troughs"
+   ],
+   "why": "The dust, like the air particles around it, moves back and forth along the direction the sound travels, so the wave is longitudinal. A longitudinal wave has compressions and rarefactions, where particles are squeezed together and spread apart. Crests and troughs belong to transverse waves, so pairing them with a longitudinal wave mixes up the two types.",
+   "clue": "Which way does the dust move compared with the sound, and which features go with that type?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "Two labelled wave diagrams side by side. Transverse: a rope wave with crest and trough labelled, an arrow showing wave direction to the right and a double arrow showing particle movement up and down. Longitudinal: a spring or row of dots with compression and rarefaction labelled, an arrow showing wave direction to the right and a double arrow showing particle movement left and right.",
+    "why": "Seeing the particle direction against the wave direction makes the difference between the two types clear."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Transverse, as the coils move at right angles to the wave",
+    "also_right": []
+   },
+   "b": {
+    "best": "Longitudinal, with compressions and rarefactions",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The first bullet explains that the wave carries energy while the particles do not travel with it. That is the idea of point 1 (Mechanical and electromagnetic waves: waves carry energy without carrying matter), explained here rather than only mentioned."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Half of each option tests whether the dust is carried across the hall. That is point 1's idea that waves carry energy, not matter, rather than this point's transverse/longitudinal classification."
+   }
+  ],
+  "flags": [
+   "Card, other: The first bullet explains that the wave carries energy while the particles do not travel with it. That is the idea of point 1 (Mechanical and electromagnetic waves: waves carry energy without carrying matter), explained here rather than only mentioned.",
+   "Question b, other: Half of each option tests whether the dust is carried across the hall. That is point 1's idea that waves carry energy, not matter, rather than this point's transverse/longitudinal classification."
+  ]
+ },
+ "final": {
+  "title": "Transverse and longitudinal waves",
+  "card": [
+   "Many waves travel by making the particles of a medium, such as air, water or a rope, vibrate. These waves can be sorted by the direction the particles vibrate.",
+   [
+    "Transverse",
+    "the particles move at right angles to the direction the wave travels. A wave on a rope shaken up and down is an example. It has crests (highest points) and troughs (lowest points)."
+   ],
+   [
+    "Longitudinal",
+    "the particles move back and forth along the direction the wave travels. Sound is an example. It has compressions, where particles are squeezed together, and rarefactions, where they are spread apart."
+   ],
+   "To classify a wave, compare the way the particles move with the way the wave travels. Right angles means transverse. Along the same line means longitudinal."
+  ],
+  "remember": "Transverse: particles move at right angles to the wave. Longitudinal: particles move along it.",
+  "a": {
+   "q": "A student shakes one end of a long spring up and down. The wave travels along the spring and the coils move up and down. What type of wave is this?",
+   "opts": [
+    "Transverse, as the coils move at right angles to the wave",
+    "Longitudinal, as the coils move at right angles to the wave",
+    "Transverse, as the coils move along the wave's direction",
+    "Longitudinal, as the coils move along the wave's direction"
+   ],
+   "why": "The wave travels along the spring, but the coils move up and down, which is at right angles to that direction. That makes it a transverse wave. A spring can carry either type, so the way the coils move decides it, not the fact that it is a spring.",
+   "clue": "Compare the way the coils move with the way the wave travels."
+  },
+  "b": {
+   "d": 3,
+   "q": "A speaker in a hall plays a note. A tiny piece of dust in the air near it moves forward and back, in line with the direction the sound travels. Which describes this sound wave?",
+   "opts": [
+    "Longitudinal, with compressions and rarefactions",
+    "Transverse, with compressions and rarefactions",
+    "Longitudinal, with crests and troughs",
+    "Transverse, with crests and troughs"
+   ],
+   "why": "The dust, like the air particles around it, moves back and forth along the direction the sound travels, so the wave is longitudinal. A longitudinal wave has compressions and rarefactions, where particles are squeezed together and spread apart. Crests and troughs belong to transverse waves, so pairing them with a longitudinal wave mixes up the two types.",
+   "clue": "Which way does the dust move compared with the sound, and which features go with that type?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "Two labelled wave diagrams side by side. Transverse: a rope wave with crest and trough labelled, an arrow showing wave direction to the right and a double arrow showing particle movement up and down. Longitudinal: a spring or row of dots with compression and rarefaction labelled, an arrow showing wave direction to the right and a double arrow showing particle movement left and right.",
+    "why": "Seeing the particle direction against the wave direction makes the difference between the two types clear."
+   }
+  ]
+ },
+ "cleared_by": "recheck"
 }

@@ -24,8 +24,127 @@
    0.387
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 may adapt sci-efficiency-sankey-diagrams, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:26:01Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:58Z write: done",
+  "2026-11-20T12:45:01Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00039,
+  "confirm": 0.00899,
+  "write": 0.00666,
+  "check": 0.01011
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "sci-efficiency-sankey-diagrams",
+  "changes": [
+   "Add a plain statement that the total energy out equals the energy in, since the card only implies this through the Sankey diagram section.",
+   "Drop or de-emphasise the Sankey diagram material and Question b, which the new point's brief does not cover."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same efficiency formula at a suitable Year 9 depth, but it needs small changes to state the energy conservation idea explicitly and to remove the Sankey diagram focus the new brief does not ask for.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank points teach efficiency alongside extra ideas, Sankey diagrams in one and power at senior level in the other, and one question in each tests that extra idea, so neither matches this point on wasted energy and percentage efficiency.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Energy efficiency",
+  "card": [
+   "Energy cannot be created or destroyed. In any device, the total energy out equals the energy in.",
+   "Only some of the energy out is useful. The rest is wasted, often as heat, and it spreads into the surroundings.",
+   "Efficiency = useful energy out ÷ total energy in × 100%. It is a percentage.",
+   "For example, a lamp takes in 50 J and gives out 10 J as light. The light is useful, so its efficiency is 10 ÷ 50 × 100% = 20%. The other 40 J is wasted."
+  ],
+  "remember": "Energy out always equals energy in. Efficiency is the useful part as a percentage of the input.",
+  "a": {
+   "q": "A motor takes in 200 J of electrical energy. It gives out 150 J as movement, and the rest as heat and sound. What happens to the other 50 J?",
+   "opts": [
+    "It is wasted energy, not destroyed",
+    "It is destroyed inside the motor",
+    "It is stored as extra useful movement",
+    "It is not counted in the total energy"
+   ],
+   "why": "Energy is never destroyed, so the 50 J still exists as heat and sound in the surroundings. It is wasted because it is not the useful movement. Saying it is destroyed is wrong, because total energy out still equals 200 J.",
+   "clue": "Total energy out must equal total energy in."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev tests two heaters in his Dubbo classroom. Heater X takes in 400 J and gives out 360 J as useful heat. Heater Y takes in 500 J and gives out 400 J as useful heat. Which statement is correct?",
+   "opts": [
+    "X is more efficient, at 90% compared with 80%",
+    "Y is more efficient, at 80% compared with 90%",
+    "Y is more efficient, as it gives out more heat",
+    "X is more efficient, as it wastes more energy"
+   ],
+   "why": "X: 360 ÷ 400 × 100% = 90%. Y: 400 ÷ 500 × 100% = 80%. Y gives out more useful energy, but it also takes in more, so the amount out alone does not show which is more efficient.",
+   "clue": "Work out useful out ÷ total in for each heater."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It is wasted energy, not destroyed",
+   "also_right": []
+  },
+  "b": {
+   "best": "X is more efficient, at 90% compared with 80%",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Energy efficiency",
+  "card": [
+   "Energy cannot be created or destroyed. In any device, the total energy out equals the energy in.",
+   "Only some of the energy out is useful. The rest is wasted, often as heat, and it spreads into the surroundings.",
+   "Efficiency = useful energy out ÷ total energy in × 100%. It is a percentage.",
+   "For example, a lamp takes in 50 J and gives out 10 J as light. The light is useful, so its efficiency is 10 ÷ 50 × 100% = 20%. The other 40 J is wasted."
+  ],
+  "remember": "Energy out always equals energy in. Efficiency is the useful part as a percentage of the input.",
+  "a": {
+   "q": "A motor takes in 200 J of electrical energy. It gives out 150 J as movement, and the rest as heat and sound. What happens to the other 50 J?",
+   "opts": [
+    "It is wasted energy, not destroyed",
+    "It is destroyed inside the motor",
+    "It is stored as extra useful movement",
+    "It is not counted in the total energy"
+   ],
+   "why": "Energy is never destroyed, so the 50 J still exists as heat and sound in the surroundings. It is wasted because it is not the useful movement. Saying it is destroyed is wrong, because total energy out still equals 200 J.",
+   "clue": "Total energy out must equal total energy in."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev tests two heaters in his Dubbo classroom. Heater X takes in 400 J and gives out 360 J as useful heat. Heater Y takes in 500 J and gives out 400 J as useful heat. Which statement is correct?",
+   "opts": [
+    "X is more efficient, at 90% compared with 80%",
+    "Y is more efficient, at 80% compared with 90%",
+    "Y is more efficient, as it gives out more heat",
+    "X is more efficient, as it wastes more energy"
+   ],
+   "why": "X: 360 ÷ 400 × 100% = 90%. Y: 400 ÷ 500 × 100% = 80%. Y gives out more useful energy, but it also takes in more, so the amount out alone does not show which is more efficient.",
+   "clue": "Work out useful out ÷ total in for each heater."
+  }
+ },
+ "cleared_by": "checker"
 }

@@ -12,8 +12,356 @@
    0.225
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:51Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:52Z write: failed the content check, writing again",
+  "2026-11-20T12:44:57Z write: done",
+  "2026-11-20T12:53:26Z check: flagged",
+  "2026-11-20T12:59:59Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (card fact)",
+  "2026-11-20T13:44:56Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.01362,
+  "check": 0.01216,
+  "fix": 0.01855,
+  "recheck": 0.01133
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches the American Revolution's causes or the Declaration of Independence's claims about rights; the first covers only convict transportation and the second covers the military war, so neither teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, fact: The card says the Declaration said 'all people' have rights. The Declaration actually says 'all men are created equal'. In practice it did not extend these rights to enslaved people, women or Indigenous peoples, so 'all people' overstates what the source says. Use 'all men' or note the original wording.",
+ "rejected": {
+  "title": "The American Revolution",
+  "card": [
+   "In the 1700s, thirteen British colonies lined the east coast of North America. Many colonists were angry that Britain taxed them while they had no members in the British Parliament.",
+   "From 1775 to 1783 the colonies fought a war against Britain. They won, and the United States of America became an independent country.",
+   "In 1776 the colonies issued the Declaration of Independence. It announced that they were breaking from Britain.",
+   "The Declaration said all people have rights to life, liberty and the pursuit of happiness. It argued that a government gets its power from the people it rules and can be changed if it fails to protect these rights."
+  ],
+  "remember": "The colonies fought Britain from 1775 to 1783 and claimed rights to life, liberty and the pursuit of happiness.",
+  "a": {
+   "q": "Which statement best describes the American Revolution?",
+   "opts": [
+    "Colonies fought a war to break free from British rule",
+    "Britain fought a war to gain new colonies in America",
+    "Colonists fought to win seats in the British Parliament",
+    "Colonists fought a war against each other over taxes"
+   ],
+   "why": "The thirteen colonies fought Britain from 1775 to 1783, and in 1776 they declared independence. The Parliament option is tempting because colonists were angry at having no members in Parliament, but the colonies came to seek independence, not seats in Parliament.",
+   "clue": "Think about who fought whom, and what the colonies became."
+  },
+  "b": {
+   "d": 2,
+   "q": "Why was the Declaration of Independence important to the colonists' cause?",
+   "opts": [
+    "It announced their break from Britain and claimed rights",
+    "It ended the war and signed a peace with Britain",
+    "It set up a new king to rule the independent country",
+    "It gave Britain the right to tax the colonies directly"
+   ],
+   "why": "The Declaration of 1776 announced that the colonies were breaking from Britain and claimed rights to life, liberty and the pursuit of happiness. It did not end the war, which carried on until 1783.",
+   "clue": "The Declaration came in 1776, while the war was still going."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, fact: The card says the Declaration said 'all people' have rights. The Declaration actually says 'all men are created equal'. In practice it did not extend these rights to enslaved people, women or Indigenous peoples, so 'all people' overstates what the source says. Use 'all men' or note the original wording."
+   ],
+   "saved": {
+    "draft": {
+     "title": "The American Revolution",
+     "card": [
+      "In the 1700s, thirteen British colonies lined the east coast of North America. Many colonists were angry that Britain taxed them while they had no members in the British Parliament.",
+      "From 1775 to 1783 the colonies fought a war against Britain. They won, and the United States of America became an independent country.",
+      "In 1776 the colonies issued the Declaration of Independence. It announced that they were breaking from Britain.",
+      "The Declaration said all people have rights to life, liberty and the pursuit of happiness. It argued that a government gets its power from the people it rules and can be changed if it fails to protect these rights."
+     ],
+     "remember": "The colonies fought Britain from 1775 to 1783 and claimed rights to life, liberty and the pursuit of happiness.",
+     "a": {
+      "q": "Which statement best describes the American Revolution?",
+      "opts": [
+       "Colonies fought a war to break free from British rule",
+       "Britain fought a war to gain new colonies in America",
+       "Colonists fought to win seats in the British Parliament",
+       "Colonists fought a war against each other over taxes"
+      ],
+      "why": "The thirteen colonies fought Britain from 1775 to 1783 to become independent. The tempting option about Parliament is wrong because the colonists did not want to stay in the empire. They wanted to rule themselves.",
+      "clue": "Think about who fought whom, and what the colonies wanted to become."
+     },
+     "b": {
+      "d": 2,
+      "q": "Why was the Declaration of Independence important to the colonists' cause?",
+      "opts": [
+       "It announced their break from Britain and claimed rights",
+       "It ended the war and made peace with Britain",
+       "It set up a king to rule the new country",
+       "It gave Britain the right to tax the colonies"
+      ],
+      "why": "The Declaration of 1776 announced that the colonies were breaking from Britain and claimed rights to life, liberty and the pursuit of happiness. It did not end the war, which carried on until 1783.",
+      "clue": "The Declaration came in 1776, while the war was still going."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Colonies fought a war to break free from British rule",
+      "also_right": []
+     },
+     "b": {
+      "best": "It announced their break from Britain and claimed rights",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "fact",
+       "detail": "The why says flatly that 'the colonists did not want to stay in the empire'. Many colonists were Loyalists, and when fighting began in 1775 many Patriots still sought their rights within the empire. Independence was not declared until 1776. Say 'the colonies came to seek independence' or 'many colonists wanted to rule themselves' instead."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions are sound and have one clear answer. The only problem is in the why for question a, which overstates that the colonists did not want to stay in the empire; many were Loyalists, and independence was not the aim when the war began in 1775."
+    },
+    "flags": [
+     "Question a, fact: The why says flatly that 'the colonists did not want to stay in the empire'. Many colonists were Loyalists, and when fighting began in 1775 many Patriots still sought their rights within the empire. Independence was not declared until 1776. Say 'the colonies came to seek independence' or 'many colonists wanted to rule themselves' instead."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "The American Revolution",
+     "card": [
+      "In the 1700s, thirteen British colonies lined the east coast of North America. Many colonists were angry that Britain taxed them while they had no members in the British Parliament.",
+      "From 1775 to 1783 the colonies fought a war against Britain. They won, and the United States of America became an independent country.",
+      "In 1776 the colonies issued the Declaration of Independence. It announced that they were breaking from Britain.",
+      "The Declaration said all people have rights to life, liberty and the pursuit of happiness. It argued that a government gets its power from the people it rules and can be changed if it fails to protect these rights."
+     ],
+     "remember": "The colonies fought Britain from 1775 to 1783 and claimed rights to life, liberty and the pursuit of happiness.",
+     "a": {
+      "q": "Which statement best describes the American Revolution?",
+      "opts": [
+       "Colonies fought a war to break free from British rule",
+       "Britain fought a war to gain new colonies in America",
+       "Colonists fought to win seats in the British Parliament",
+       "Colonists fought a war against each other over taxes"
+      ],
+      "why": "The thirteen colonies fought Britain from 1775 to 1783, and in 1776 they declared independence. The Parliament option is tempting because colonists were angry at having no members in Parliament, but the colonies came to seek independence, not seats in Parliament.",
+      "clue": "Think about who fought whom, and what the colonies became."
+     },
+     "b": {
+      "d": 2,
+      "q": "Why was the Declaration of Independence important to the colonists' cause?",
+      "opts": [
+       "It announced their break from Britain and claimed rights",
+       "It ended the war and signed a peace with Britain",
+       "It set up a new king to rule the independent country",
+       "It gave Britain the right to tax the colonies directly"
+      ],
+      "why": "The Declaration of 1776 announced that the colonies were breaking from Britain and claimed rights to life, liberty and the pursuit of happiness. It did not end the war, which carried on until 1783.",
+      "clue": "The Declaration came in 1776, while the war was still going."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Colonies fought a war to break free from British rule",
+       "also_right": []
+      },
+      "b": {
+       "best": "It announced their break from Britain and claimed rights",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "fact",
+        "detail": "The card says the Declaration said 'all people' have rights. The Declaration actually says 'all men are created equal'. In practice it did not extend these rights to enslaved people, women or Indigenous peoples, so 'all people' overstates what the source says. Use 'all men' or note the original wording."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions have one clear right answer, and the dates, causes and outcome are correct. One problem: the card says the Declaration gave rights to 'all people', but its words are 'all men', and it did not cover enslaved people or women."
+     },
+     "flags": [
+      "Card, fact: The card says the Declaration said 'all people' have rights. The Declaration actually says 'all men are created equal'. In practice it did not extend these rights to enslaved people, women or Indigenous peoples, so 'all people' overstates what the source says. Use 'all men' or note the original wording."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:56Z",
+   "step": "write",
+   "version": {
+    "title": "The American Revolution",
+    "card": [
+     "In the 1700s, thirteen British colonies lined the east coast of North America. Many colonists were angry that Britain taxed them while they had no members in the British Parliament.",
+     "From 1775 to 1783 the colonies fought a war against Britain. They won, and the United States of America became an independent country.",
+     "In 1776 the colonies issued the Declaration of Independence. It announced their break from Britain and argued that a government gets its power from the people it rules.",
+     "The Declaration said \"all men are created equal\", with rights to life, liberty and the pursuit of happiness. In practice, these rights were not given to enslaved people, women or Native Americans."
+    ],
+    "remember": "The colonies fought Britain from 1775 to 1783 and claimed rights to life, liberty and the pursuit of happiness.",
+    "a": {
+     "q": "Which statement best describes the American Revolution?",
+     "opts": [
+      "Colonies fought a war to break free from British rule",
+      "Britain fought a war to gain new colonies in America",
+      "Colonists fought to win seats in the British Parliament",
+      "Colonists fought a war against each other over taxes"
+     ],
+     "why": "The thirteen colonies fought Britain from 1775 to 1783, and in 1776 they declared independence. The Parliament option is tempting because colonists were angry at having no members in Parliament, but the colonies came to seek independence, not seats in Parliament.",
+     "clue": "Think about who fought whom, and what the colonies became."
+    },
+    "b": {
+     "d": 2,
+     "q": "Why was the Declaration of Independence important to the colonists' cause?",
+     "opts": [
+      "It announced their break from Britain and claimed rights",
+      "It ended the war and set out a peace deal with Britain",
+      "It set up a new king to rule over the independent country",
+      "It gave Britain the right to tax the colonies directly"
+     ],
+     "why": "The Declaration of 1776 announced that the colonies were breaking from Britain and claimed rights to life, liberty and the pursuit of happiness. It did not end the war, which carried on until 1783.",
+     "clue": "The Declaration came in 1776, while the war was still going."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Colonies fought a war to break free from British rule",
+     "also_right": []
+    },
+    "b": {
+     "best": "It announced their break from Britain and claimed rights",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "The American Revolution",
+  "card": [
+   "In the 1700s, thirteen British colonies lined the east coast of North America. Many colonists were angry that Britain taxed them while they had no members in the British Parliament.",
+   "From 1775 to 1783 the colonies fought a war against Britain. They won, and the United States of America became an independent country.",
+   "In 1776 the colonies issued the Declaration of Independence. It announced their break from Britain and argued that a government gets its power from the people it rules.",
+   "The Declaration said \"all men are created equal\", with rights to life, liberty and the pursuit of happiness. In practice, these rights were not given to enslaved people, women or Native Americans."
+  ],
+  "remember": "The colonies fought Britain from 1775 to 1783 and claimed rights to life, liberty and the pursuit of happiness.",
+  "a": {
+   "q": "Which statement best describes the American Revolution?",
+   "opts": [
+    "Colonies fought a war to break free from British rule",
+    "Britain fought a war to gain new colonies in America",
+    "Colonists fought to win seats in the British Parliament",
+    "Colonists fought a war against each other over taxes"
+   ],
+   "why": "The thirteen colonies fought Britain from 1775 to 1783, and in 1776 they declared independence. The Parliament option is tempting because colonists were angry at having no members in Parliament, but the colonies came to seek independence, not seats in Parliament.",
+   "clue": "Think about who fought whom, and what the colonies became."
+  },
+  "b": {
+   "d": 2,
+   "q": "Why was the Declaration of Independence important to the colonists' cause?",
+   "opts": [
+    "It announced their break from Britain and claimed rights",
+    "It ended the war and set out a peace deal with Britain",
+    "It set up a new king to rule over the independent country",
+    "It gave Britain the right to tax the colonies directly"
+   ],
+   "why": "The Declaration of 1776 announced that the colonies were breaking from Britain and claimed rights to life, liberty and the pursuit of happiness. It did not end the war, which carried on until 1783.",
+   "clue": "The Declaration came in 1776, while the war was still going."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Colonies fought a war to break free from British rule",
+   "also_right": []
+  },
+  "b": {
+   "best": "It announced their break from Britain and claimed rights",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The American Revolution",
+  "card": [
+   "In the 1700s, thirteen British colonies lined the east coast of North America. Many colonists were angry that Britain taxed them while they had no members in the British Parliament.",
+   "From 1775 to 1783 the colonies fought a war against Britain. They won, and the United States of America became an independent country.",
+   "In 1776 the colonies issued the Declaration of Independence. It announced their break from Britain and argued that a government gets its power from the people it rules.",
+   "The Declaration said \"all men are created equal\", with rights to life, liberty and the pursuit of happiness. In practice, these rights were not given to enslaved people, women or Native Americans."
+  ],
+  "remember": "The colonies fought Britain from 1775 to 1783 and claimed rights to life, liberty and the pursuit of happiness.",
+  "a": {
+   "q": "Which statement best describes the American Revolution?",
+   "opts": [
+    "Colonies fought a war to break free from British rule",
+    "Britain fought a war to gain new colonies in America",
+    "Colonists fought to win seats in the British Parliament",
+    "Colonists fought a war against each other over taxes"
+   ],
+   "why": "The thirteen colonies fought Britain from 1775 to 1783, and in 1776 they declared independence. The Parliament option is tempting because colonists were angry at having no members in Parliament, but the colonies came to seek independence, not seats in Parliament.",
+   "clue": "Think about who fought whom, and what the colonies became."
+  },
+  "b": {
+   "d": 2,
+   "q": "Why was the Declaration of Independence important to the colonists' cause?",
+   "opts": [
+    "It announced their break from Britain and claimed rights",
+    "It ended the war and set out a peace deal with Britain",
+    "It set up a new king to rule over the independent country",
+    "It gave Britain the right to tax the colonies directly"
+   ],
+   "why": "The Declaration of 1776 announced that the colonies were breaking from Britain and claimed rights to life, liberty and the pursuit of happiness. It did not end the war, which carried on until 1783.",
+   "clue": "The Declaration came in 1776, while the war was still going."
+  }
+ },
+ "checked_by": "claude-code"
 }

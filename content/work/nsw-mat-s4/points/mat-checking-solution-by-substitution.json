@@ -12,8 +12,119 @@
    0.211
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:54Z write: done",
+  "2026-11-20T12:35:53Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.01309,
+  "check": 0.00858
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches checking a solution by substitution: one solves quadratics by reading x-intercepts from a graph at Year 9 depth, and the other solves simultaneous equations by substitution at Year 10 depth, so no existing point matches this Stage 4 idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Checking a solution by substitution",
+  "card": [
+   "To check a solution, put it back into the original equation in place of the letter. Work out the left side and the right side separately.",
+   "If both sides are equal, the solution is right. If they are not equal, the solution is wrong and you need to solve again.",
+   "Always use the original equation, not your working. Then a mistake made earlier cannot hide.",
+   [
+    "Example",
+    "Is \\(x = 6\\) a solution of \\(3x - 5 = 13\\)? Left side: \\(3 \\times 6 - 5 = 18 - 5 = 13\\). Right side: \\(13\\). Both sides are equal, so \\(x = 6\\) is correct."
+   ]
+  ],
+  "remember": "A solution is right only when both sides of the original equation come out equal.",
+  "a": {
+   "q": "Which value of \\(x\\) is a solution of \\(2x + 4 = 18\\)?",
+   "opts": [
+    "\\(x = 7\\)",
+    "\\(x = 11\\)",
+    "\\(x = 9\\)",
+    "\\(x = 5\\)"
+   ],
+   "why": "Put \\(x = 7\\) in: \\(2 \\times 7 + 4 = 14 + 4 = 18\\), which equals the right side. For \\(x = 11\\), the left side is \\(26\\), not \\(18\\). That value comes from adding 4 to 7 by mistake instead of checking.",
+   "clue": "Put each value in and see if the left side equals 18."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia solved \\(5x - 3 = 22\\) and got \\(x = 4\\). She checks it. What does she find?",
+   "opts": [
+    "The left side is 17, so her answer is wrong",
+    "Both sides are 22, so her answer is right",
+    "The left side is 17, so her answer is right",
+    "The left side is 20, so her answer is wrong"
+   ],
+   "why": "Put \\(x = 4\\) in: \\(5 \\times 4 - 3 = 20 - 3 = 17\\). The right side is \\(22\\), so the sides are not equal and the answer is wrong. The correct solution is \\(x = 5\\).",
+   "clue": "Work out \\(5 \\times 4 - 3\\) and compare it with 22."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(x = 7\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "The left side is 17, so her answer is wrong",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Checking a solution by substitution",
+  "card": [
+   "To check a solution, put it back into the original equation in place of the letter. Work out the left side and the right side separately.",
+   "If both sides are equal, the solution is right. If they are not equal, the solution is wrong and you need to solve again.",
+   "Always use the original equation, not your working. Then a mistake made earlier cannot hide.",
+   [
+    "Example",
+    "Is \\(x = 6\\) a solution of \\(3x - 5 = 13\\)? Left side: \\(3 \\times 6 - 5 = 18 - 5 = 13\\). Right side: \\(13\\). Both sides are equal, so \\(x = 6\\) is correct."
+   ]
+  ],
+  "remember": "A solution is right only when both sides of the original equation come out equal.",
+  "a": {
+   "q": "Which value of \\(x\\) is a solution of \\(2x + 4 = 18\\)?",
+   "opts": [
+    "\\(x = 7\\)",
+    "\\(x = 11\\)",
+    "\\(x = 9\\)",
+    "\\(x = 5\\)"
+   ],
+   "why": "Put \\(x = 7\\) in: \\(2 \\times 7 + 4 = 14 + 4 = 18\\), which equals the right side. For \\(x = 11\\), the left side is \\(26\\), not \\(18\\). That value comes from adding 4 to 7 by mistake instead of checking.",
+   "clue": "Put each value in and see if the left side equals 18."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia solved \\(5x - 3 = 22\\) and got \\(x = 4\\). She checks it. What does she find?",
+   "opts": [
+    "The left side is 17, so her answer is wrong",
+    "Both sides are 22, so her answer is right",
+    "The left side is 17, so her answer is right",
+    "The left side is 20, so her answer is wrong"
+   ],
+   "why": "Put \\(x = 4\\) in: \\(5 \\times 4 - 3 = 20 - 3 = 17\\). The right side is \\(22\\), so the sides are not equal and the answer is wrong. The correct solution is \\(x = 5\\).",
+   "clue": "Work out \\(5 \\times 4 - 3\\) and compare it with 22."
+  }
+ },
+ "cleared_by": "checker"
 }

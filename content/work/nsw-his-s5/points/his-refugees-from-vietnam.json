@@ -16,8 +16,143 @@
    0.219
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:51Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:52Z write: failed the content check, writing again",
+  "2026-11-20T12:44:57Z write: done",
+  "2026-11-20T12:53:26Z check: for review (other-sensitive)",
+  "2026-11-20T14:43:13Z review: rejected, to be written again",
+  "2026-11-20T14:58:19Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.01456,
+  "check": 0.01041
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the post-1975 Vietnamese refugee flight and resettlement as its main idea: the White Australia policy card only mentions refugees in passing, and the Year 12 conflict card is broader and at a different depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Refugees from Vietnam",
+  "card": [
+   "The Vietnam War ended in April 1975, when North Vietnam took control of the south. Many people feared punishment or hardship under the new government, and some left the country.",
+   "A refugee is a person who flees their country because of a well-founded fear of harm and cannot safely return. Many Vietnamese refugees left in small, crowded boats, and the journey could be dangerous.",
+   "Many refugees reached camps in nearby countries in South-East Asia, where they waited while other countries decided whether to accept them.",
+   "Australia accepted tens of thousands of Vietnamese refugees in the years after 1975. They settled in cities such as Sydney and Melbourne, and many built new lives here."
+  ],
+  "remember": "Many Vietnamese people fled after 1975, often by boat, waited in camps, and tens of thousands resettled in Australia.",
+  "a": {
+   "q": "Why were many Vietnamese people described as refugees after 1975?",
+   "opts": [
+    "They fled out of fear of harm and could not safely return",
+    "They came to Australia to work on large building projects",
+    "They were invited by the government to grow the population",
+    "They left Vietnam to join family who had already moved"
+   ],
+   "why": "A refugee flees because of a well-founded fear of harm and cannot safely return. Moving for work is a different reason for migrating, and it does not describe people forced to flee after the war.",
+   "clue": "Think about whether they left by choice or to escape danger."
+  },
+  "b": {
+   "d": 2,
+   "q": "Linh left Vietnam by boat in 1979 and stayed in a camp in South-East Asia. What was she most likely waiting for in the camp?",
+   "opts": [
+    "A decision from another country on taking her in",
+    "Permission from the Vietnamese government to return home",
+    "A job on a major project in the country where the camp was",
+    "A ship to carry her straight to a new home in Australia"
+   ],
+   "why": "Camps were places where refugees waited while other countries decided whether to accept them. Linh could not safely return to Vietnam, so waiting for permission to go back does not fit. Australia was only one of the countries that might accept her.",
+   "clue": "The camps were a waiting place, not a final home."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:19Z",
+   "step": "write",
+   "version": {
+    "title": "Refugees from Vietnam",
+    "card": [
+     "The Vietnam War ended in April 1975, when communist North Vietnam took control of the South. Many people in the South feared prison, punishment or hardship under the new government.",
+     "A refugee is someone who flees their country because of a well-founded fear of persecution and cannot safely go back. Many Vietnamese fled in small, crowded boats, and many died at sea.",
+     "Many reached refugee camps in nearby countries, such as Malaysia and Thailand. There they waited, often for years, for another country to accept them.",
+     "From the late 1970s, Australia resettled tens of thousands of Vietnamese refugees, most of them from the camps. Only a small number of boats sailed all the way to Australia."
+    ],
+    "remember": "Fear drove many Vietnamese to flee after 1975, and most who came to Australia came through the camps.",
+    "a": {
+     "q": "What makes a person a refugee rather than another kind of migrant?",
+     "opts": [
+      "They flee a fear of persecution and cannot safely return",
+      "They move to a new country to find better-paid work",
+      "They are invited by a government to grow its population",
+      "They move to join family who already live overseas"
+     ],
+     "why": "A refugee flees a well-founded fear of persecution and cannot safely go back. Moving for work or to join family is migration by choice, not escape from danger.",
+     "clue": "Did they leave by choice, or to escape danger?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Minh fled Vietnam by boat in 1979 and reached a camp in Malaysia. Two years later he arrived in Sydney. How did he most likely get there?",
+     "opts": [
+      "Australia accepted him from the camp and resettled him",
+      "He sailed on to Sydney in the same small boat",
+      "Vietnam's new government sent him on to Australia",
+      "He went home first, then applied to migrate"
+     ],
+     "why": "Refugees in the camps waited for another country to accept them, and Australia resettled most of its Vietnamese refugees from the camps. Only a small number of boats sailed all the way to Australia.",
+     "clue": "What were the camps for?"
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Refugees from Vietnam",
+  "card": [
+   "The Vietnam War ended in April 1975, when communist North Vietnam took control of the South. Many people in the South feared prison, punishment or hardship under the new government.",
+   "A refugee is someone who flees their country because of a well-founded fear of persecution and cannot safely go back. Many Vietnamese fled in small, crowded boats, and many died at sea.",
+   "Many reached refugee camps in nearby countries, such as Malaysia and Thailand. There they waited, often for years, for another country to accept them.",
+   "From the late 1970s, Australia resettled tens of thousands of Vietnamese refugees, most of them from the camps. Only a small number of boats sailed all the way to Australia."
+  ],
+  "remember": "Fear drove many Vietnamese to flee after 1975, and most who came to Australia came through the camps.",
+  "a": {
+   "q": "What makes a person a refugee rather than another kind of migrant?",
+   "opts": [
+    "They flee a fear of persecution and cannot safely return",
+    "They move to a new country to find better-paid work",
+    "They are invited by a government to grow its population",
+    "They move to join family who already live overseas"
+   ],
+   "why": "A refugee flees a well-founded fear of persecution and cannot safely go back. Moving for work or to join family is migration by choice, not escape from danger.",
+   "clue": "Did they leave by choice, or to escape danger?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Minh fled Vietnam by boat in 1979 and reached a camp in Malaysia. Two years later he arrived in Sydney. How did he most likely get there?",
+   "opts": [
+    "Australia accepted him from the camp and resettled him",
+    "He sailed on to Sydney in the same small boat",
+    "Vietnam's new government sent him on to Australia",
+    "He went home first, then applied to migrate"
+   ],
+   "why": "Refugees in the camps waited for another country to accept them, and Australia resettled most of its Vietnamese refugees from the camps. Only a small number of boats sailed all the way to Australia.",
+   "clue": "What were the camps for?"
+  }
+ },
+ "local": []
 }

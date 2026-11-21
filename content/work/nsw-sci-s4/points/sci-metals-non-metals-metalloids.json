@@ -12,8 +12,131 @@
    0.202
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:00Z write: done",
+  "2026-11-20T12:35:56Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "write": 0.01096,
+  "check": 0.00781
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point covers only metals and non-metals and is written for Year 10, while this point also teaches metalloids and must suit Stage 4, so it is broader than the bank card and needs a new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Metals, non-metals and metalloids",
+  "card": [
+   [
+    "Metals",
+    "Metals are shiny, conduct heat and electricity, and can be bent or hammered without breaking. Copper and iron are metals."
+   ],
+   [
+    "Non-metals",
+    "Most non-metals are dull and do not conduct heat or electricity well. Solid ones tend to break when hit. Sulfur and oxygen are non-metals."
+   ],
+   [
+    "Metalloids",
+    "Metalloids have some properties of each group. Silicon is shiny like a metal, but it conducts electricity only a little and it is brittle."
+   ],
+   "The properties of a material decide how it is used. Copper is used in wires because it conducts electricity and bends easily."
+  ],
+  "remember": "Metals conduct and bend, most non-metals do not, and metalloids sit in between.",
+  "a": {
+   "q": "A solid element is dull, snaps when hit with a hammer and does not conduct electricity. What is it most likely to be?",
+   "opts": [
+    "A non-metal",
+    "A metal",
+    "A metalloid",
+    "A metal that has rusted"
+   ],
+   "why": "Dull, brittle and not conducting are properties of most non-metals. A metal would be shiny and would bend, and a metalloid would conduct a little.",
+   "clue": "Think about which group does not conduct."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya needs a material for the handle of a cooking pot. It must not carry heat to her hand. Which property should she look for?",
+   "opts": [
+    "Poor conduction of heat",
+    "Good conduction of heat",
+    "Shininess",
+    "Ability to bend without breaking"
+   ],
+   "why": "A handle should stop heat reaching the hand, so the material must conduct heat poorly. Metals conduct heat well, which is why they suit the pot itself but not the handle.",
+   "clue": "The handle should do the opposite of the pot."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A non-metal",
+   "also_right": []
+  },
+  "b": {
+   "best": "Poor conduction of heat",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Metals, non-metals and metalloids",
+  "card": [
+   [
+    "Metals",
+    "Metals are shiny, conduct heat and electricity, and can be bent or hammered without breaking. Copper and iron are metals."
+   ],
+   [
+    "Non-metals",
+    "Most non-metals are dull and do not conduct heat or electricity well. Solid ones tend to break when hit. Sulfur and oxygen are non-metals."
+   ],
+   [
+    "Metalloids",
+    "Metalloids have some properties of each group. Silicon is shiny like a metal, but it conducts electricity only a little and it is brittle."
+   ],
+   "The properties of a material decide how it is used. Copper is used in wires because it conducts electricity and bends easily."
+  ],
+  "remember": "Metals conduct and bend, most non-metals do not, and metalloids sit in between.",
+  "a": {
+   "q": "A solid element is dull, snaps when hit with a hammer and does not conduct electricity. What is it most likely to be?",
+   "opts": [
+    "A non-metal",
+    "A metal",
+    "A metalloid",
+    "A metal that has rusted"
+   ],
+   "why": "Dull, brittle and not conducting are properties of most non-metals. A metal would be shiny and would bend, and a metalloid would conduct a little.",
+   "clue": "Think about which group does not conduct."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya needs a material for the handle of a cooking pot. It must not carry heat to her hand. Which property should she look for?",
+   "opts": [
+    "Poor conduction of heat",
+    "Good conduction of heat",
+    "Shininess",
+    "Ability to bend without breaking"
+   ],
+   "why": "A handle should stop heat reaching the hand, so the material must conduct heat poorly. Metals conduct heat well, which is why they suit the pot itself but not the handle.",
+   "clue": "The handle should do the opposite of the pot."
+  }
+ },
+ "cleared_by": "checker"
 }

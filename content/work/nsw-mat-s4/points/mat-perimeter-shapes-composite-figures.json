@@ -12,8 +12,264 @@
    0.209
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:54Z write: done",
+  "2026-11-20T12:35:53Z check: flagged",
+  "2026-11-20T12:44:58Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.01245,
+  "check": 0.01852,
+  "fix": 0.04015,
+  "recheck": 0.00806
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-area-perimeter-composite-shapes, is broader than the new point because it also teaches area and triangle area, and one of its two questions asks for area, so it is not a fair match for a perimeter-only point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Perimeter of composite figures",
+  "card": [
+   "Perimeter is the distance around the outside of a shape. Add the lengths of all its outside edges, and give the answer in units of length such as cm or m.",
+   "A rectangle with length \\(l\\) and width \\(w\\) has two sides of each length. Its perimeter is \\(2l + 2w\\).",
+   "A composite figure is made from simpler shapes joined together. Work out any missing side lengths first, using the sides you are given.",
+   "Example: an L-shape has outside sides 10, 6, 4, 3, 6 and 3 cm, going around. Add every outside edge: \\(10 + 6 + 4 + 3 + 6 + 3 = 32\\) cm. Edges inside the figure are not counted."
+  ],
+  "remember": "Find the missing sides, then add every outside edge once.",
+  "a": {
+   "q": "A rectangular garden bed is 7 m long and 3 m wide. What is its perimeter?",
+   "opts": [
+    "20 m",
+    "10 m",
+    "21 m",
+    "13 m"
+   ],
+   "why": "A rectangle has two lengths and two widths, so \\(7 + 3 + 7 + 3 = 20\\) m. Adding only one length and one width gives 10 m, which is only half the distance around.",
+   "clue": "Count every side of the rectangle, not just two."
+  },
+  "b": {
+   "d": 3,
+   "q": "An L-shaped courtyard in Orange has outside sides 12 m, 5 m, 7 m, 3 m, 5 m and a last side of unknown length, going around. The last side is the one that completes the shape back to the start. What is the perimeter?",
+   "opts": [
+    "34 m",
+    "29 m",
+    "27 m",
+    "24 m"
+   ],
+   "why": "Picture the L as a 12 m by 8 m rectangle, with sides 12 and 8 meeting at one corner. Then the missing side is 8 m and \\(12 + 5 + 7 + 3 + 5 + 8 = 40\\) m. This does not match the sides given, so the shape must be read with care.",
+   "clue": "Check that the sides match before adding."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "20 m",
+   "also_right": []
+  },
+  "b": {
+   "best": "34 m",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Read as an L-shape (one rectangle of 12 by 8 with a 7 by 3 notch removed), the missing side is 8 m and the perimeter is 40 m, which is not among the options. The why itself gets 40 m, so the intended answer is missing."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "With no diagram or turn directions, the sides 12, 5, 7, 3, 5 fit two valid L-shapes. The missing side can be 8 m (perimeter 40 m) or 2 m (perimeter 34 m), so the question is ambiguous. Only 34 m among the options can be defended. Add a diagram and make sure the correct total is an option."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why ends 'This does not match the sides given, so the shape must be read with care', which is confusing. It names no answer among the options and contradicts the sum it has just worked out."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue 'Check that the sides match before adding' is vague, and a student cannot act on it without a diagram."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b is broken. The why's answer of 40 m is not an option, and without a diagram the side list also fits an L-shape with perimeter 34 m, so the question is ambiguous. Question b needs a diagram and a correct option; the rest of the point is fine."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: Read as an L-shape (one rectangle of 12 by 8 with a 7 by 3 notch removed), the missing side is 8 m and the perimeter is 40 m, which is not among the options. The why itself gets 40 m, so the intended answer is missing.",
+  "Question b, wording: With no diagram or turn directions, the sides 12, 5, 7, 3, 5 fit two valid L-shapes. The missing side can be 8 m (perimeter 40 m) or 2 m (perimeter 34 m), so the question is ambiguous. Only 34 m among the options can be defended. Add a diagram and make sure the correct total is an option.",
+  "Question b, other: The why ends 'This does not match the sides given, so the shape must be read with care', which is confusing. It names no answer among the options and contradicts the sum it has just worked out.",
+  "Question b, wording: The clue 'Check that the sides match before adding' is vague, and a student cannot act on it without a diagram."
+ ],
+ "proposal": {
+  "title": "Perimeter of composite figures",
+  "card": [
+   "Perimeter is the distance around the outside of a shape. Add the lengths of all its outside edges, and give the answer in units of length such as cm or m.",
+   "A rectangle with length \\(l\\) and width \\(w\\) has two sides of each length. Its perimeter is \\(2l + 2w\\).",
+   "A composite figure is made from simpler shapes joined together. Find any missing side first. In an L-shape, the two shorter sides that run one way add up to the long side opposite them.",
+   "Example: an L-shape is 10 cm along the bottom and 6 cm up the right. The top is 4 cm and the left is 3 cm. The missing sides are \\(6 - 3 = 3\\) cm and \\(10 - 4 = 6\\) cm, so the perimeter is \\(10 + 6 + 4 + 3 + 6 + 3 = 32\\) cm."
+  ],
+  "remember": "Find the missing sides first, then add every outside edge once.",
+  "a": {
+   "q": "A rectangular garden bed is 7 m long and 3 m wide. What is its perimeter?",
+   "opts": [
+    "20 m",
+    "10 m",
+    "21 m",
+    "13 m"
+   ],
+   "why": "A rectangle has two lengths and two widths, so \\(7 + 3 + 7 + 3 = 20\\) m. Adding only one length and one width gives 10 m, which is only half the distance around.",
+   "clue": "Count every side of the rectangle, not just two."
+  },
+  "b": {
+   "d": 3,
+   "q": "An L-shaped courtyard in Orange is 12 m along the bottom and 8 m up the right side. Its top edge is 5 m and its left side is 3 m. The other two sides are not labelled. What is its perimeter?",
+   "opts": [
+    "40 m",
+    "28 m",
+    "35 m",
+    "61 m"
+   ],
+   "why": "The missing vertical side is \\(8 - 3 = 5\\) m and the missing horizontal side is \\(12 - 5 = 7\\) m. Then \\(12 + 8 + 5 + 5 + 7 + 3 = 40\\) m. Adding only the four labelled sides gives 28 m, which leaves out two outside edges.",
+   "clue": "Use the long sides to find the two unlabelled sides."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "An L-shape drawn as a rectangle with its top-left corner cut away. The bottom edge is labelled 10 cm, the right edge 6 cm, the top edge 4 cm and the left edge 3 cm. The two inner edges, a short vertical step and a horizontal ledge where the corner was cut away, are each labelled with a question mark.",
+    "why": "It shows the student which sides are missing and which longer sides they come from."
+   },
+   {
+    "at": "b",
+    "kind": "diagram",
+    "brief": "An L-shaped courtyard drawn as a rectangle with its top-left corner cut away. The bottom edge is labelled 12 m, the right edge 8 m, the top edge 5 m and the left edge 3 m. The two inner edges, a vertical step and a horizontal ledge where the corner was cut away, have no labels.",
+    "why": "It fixes where each given side sits, so there is only one possible shape and one perimeter."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "20 m",
+    "also_right": []
+   },
+   "b": {
+    "best": "40 m",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Read as an L-shape (one rectangle of 12 by 8 with a 7 by 3 notch removed), the missing side is 8 m and the perimeter is 40 m, which is not among the options. The why itself gets 40 m, so the intended answer is missing."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "With no diagram or turn directions, the sides 12, 5, 7, 3, 5 fit two valid L-shapes. The missing side can be 8 m (perimeter 40 m) or 2 m (perimeter 34 m), so the question is ambiguous. Only 34 m among the options can be defended. Add a diagram and make sure the correct total is an option."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why ends 'This does not match the sides given, so the shape must be read with care', which is confusing. It names no answer among the options and contradicts the sum it has just worked out."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue 'Check that the sides match before adding' is vague, and a student cannot act on it without a diagram."
+   }
+  ],
+  "flags": [
+   "Question b, fact: Read as an L-shape (one rectangle of 12 by 8 with a 7 by 3 notch removed), the missing side is 8 m and the perimeter is 40 m, which is not among the options. The why itself gets 40 m, so the intended answer is missing.",
+   "Question b, wording: With no diagram or turn directions, the sides 12, 5, 7, 3, 5 fit two valid L-shapes. The missing side can be 8 m (perimeter 40 m) or 2 m (perimeter 34 m), so the question is ambiguous. Only 34 m among the options can be defended. Add a diagram and make sure the correct total is an option.",
+   "Question b, other: The why ends 'This does not match the sides given, so the shape must be read with care', which is confusing. It names no answer among the options and contradicts the sum it has just worked out.",
+   "Question b, wording: The clue 'Check that the sides match before adding' is vague, and a student cannot act on it without a diagram."
+  ]
+ },
+ "final": {
+  "title": "Perimeter of composite figures",
+  "card": [
+   "Perimeter is the distance around the outside of a shape. Add the lengths of all its outside edges, and give the answer in units of length such as cm or m.",
+   "A rectangle with length \\(l\\) and width \\(w\\) has two sides of each length. Its perimeter is \\(2l + 2w\\).",
+   "A composite figure is made from simpler shapes joined together. Find any missing side first. In an L-shape, the two shorter sides that run one way add up to the long side opposite them.",
+   "Example: an L-shape is 10 cm along the bottom and 6 cm up the right. The top is 4 cm and the left is 3 cm. The missing sides are \\(6 - 3 = 3\\) cm and \\(10 - 4 = 6\\) cm, so the perimeter is \\(10 + 6 + 4 + 3 + 6 + 3 = 32\\) cm."
+  ],
+  "remember": "Find the missing sides first, then add every outside edge once.",
+  "a": {
+   "q": "A rectangular garden bed is 7 m long and 3 m wide. What is its perimeter?",
+   "opts": [
+    "20 m",
+    "10 m",
+    "21 m",
+    "13 m"
+   ],
+   "why": "A rectangle has two lengths and two widths, so \\(7 + 3 + 7 + 3 = 20\\) m. Adding only one length and one width gives 10 m, which is only half the distance around.",
+   "clue": "Count every side of the rectangle, not just two."
+  },
+  "b": {
+   "d": 3,
+   "q": "An L-shaped courtyard in Orange is 12 m along the bottom and 8 m up the right side. Its top edge is 5 m and its left side is 3 m. The other two sides are not labelled. What is its perimeter?",
+   "opts": [
+    "40 m",
+    "28 m",
+    "35 m",
+    "61 m"
+   ],
+   "why": "The missing vertical side is \\(8 - 3 = 5\\) m and the missing horizontal side is \\(12 - 5 = 7\\) m. Then \\(12 + 8 + 5 + 5 + 7 + 3 = 40\\) m. Adding only the four labelled sides gives 28 m, which leaves out two outside edges.",
+   "clue": "Use the long sides to find the two unlabelled sides."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "An L-shape drawn as a rectangle with its top-left corner cut away. The bottom edge is labelled 10 cm, the right edge 6 cm, the top edge 4 cm and the left edge 3 cm. The two inner edges, a short vertical step and a horizontal ledge where the corner was cut away, are each labelled with a question mark.",
+    "why": "It shows the student which sides are missing and which longer sides they come from."
+   },
+   {
+    "at": "b",
+    "kind": "diagram",
+    "brief": "An L-shaped courtyard drawn as a rectangle with its top-left corner cut away. The bottom edge is labelled 12 m, the right edge 8 m, the top edge 5 m and the left edge 3 m. The two inner edges, a vertical step and a horizontal ledge where the corner was cut away, have no labels.",
+    "why": "It fixes where each given side sits, so there is only one possible shape and one perimeter."
+   }
+  ]
+ },
+ "cleared_by": "recheck"
 }

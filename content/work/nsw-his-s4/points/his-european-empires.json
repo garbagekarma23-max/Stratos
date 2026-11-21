@@ -20,8 +20,197 @@
    0.202
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: done",
+  "2026-11-20T12:44:56Z check: flagged",
+  "2026-11-20T12:53:26Z fix: suggested",
+  "2026-11-20T14:40:39Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00718,
+  "check": 0.01868,
+  "fix": 0.02071
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, his-voyages-discovery, covers only the early voyages of Columbus and da Gama and the contact that followed, while the new point needs the wider empire-building of five powers across several regions, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "European empires",
+  "card": [
+   "An empire is a group of lands and peoples controlled by one powerful state. From the 1500s, several European countries built empires far from home.",
+   "Spain and Portugal led the way. Spain took large parts of the Americas. Portugal set up trading posts along the coasts of Africa and Asia, and took Brazil in South America.",
+   "The Netherlands, France and Britain followed. The Dutch were strong in parts of Asia, such as the East Indies. France and Britain claimed lands in North America, and Britain also took lands in Asia, Africa and the Pacific.",
+   "Empires took land and resources, such as gold, silver, spices, sugar and farmland. Control of these lands often cost the people who already lived there their land and their freedom."
+  ],
+  "remember": "European empires spread across four regions and took land and resources from the people who lived there.",
+  "a": {
+   "q": "What was an empire, as built by European powers from the 1500s?",
+   "opts": [
+    "Lands and peoples far away controlled by one state",
+    "A group of European countries that shared one ruler",
+    "A trade deal made between two European countries",
+    "A settlement run by the people who lived there"
+   ],
+   "why": "An empire was a set of lands and peoples controlled by one powerful state, often far from its home country. The tempting option about sharing one ruler is wrong because each empire was built by a single state, such as Spain or Britain, and not by a group of countries.",
+   "clue": "Think about one state controlling places far from home."
+  },
+  "b": {
+   "d": 2,
+   "q": "In the 1600s, a ship from the Netherlands sails to the East Indies and returns carrying spices. What does this show about European empires?",
+   "opts": [
+    "They took resources from lands far from Europe",
+    "They only traded with lands close to Europe",
+    "They left the land to the people who lived there",
+    "They were built only in the Americas"
+   ],
+   "why": "Spices came from lands in Asia, far from Europe, and the Dutch took them back home. This shows empires took resources from distant lands. The option about the Americas is wrong because empires also spread across Africa, Asia and the Pacific.",
+   "clue": "Where did the spices come from, and where did they go?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "image",
+    "brief": "A world map showing the main areas claimed by Spain, Portugal, the Netherlands, France and Britain by the 1700s, with each empire labelled and the Americas, Africa, Asia and the Pacific visible.",
+    "why": "It lets students see how far across the world the empires reached."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Lands and peoples far away controlled by one state",
+   "also_right": []
+  },
+  "b": {
+   "best": "They took resources from lands far from Europe",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue ('one state controlling places far from home') repeats the right option almost word for word, so students can pick it without knowing the idea."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line sorts the empires into 'four regions', but the card never groups them that way. It only lists places (the Americas, Brazil, North America, Africa, Asia, the East Indies, the Pacific)."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'From the 1500s' with 'Spain and Portugal led the way' is slightly misleading. Portugal was setting up trading posts along the African coast in the 1400s (for example Ceuta in 1415), which also clashes with point 1's 'From the 1400s'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "other-sensitive",
+  "summary": "Both answers are correct and the explanations agree with them. However, question a's clue gives the answer away, the remember line adds a 'four regions' grouping the card does not make, and 'from the 1500s' understates Portugal's 1400s start."
+ },
+ "sensitive": "other-sensitive",
+ "flags": [
+  "Question a, other: The clue ('one state controlling places far from home') repeats the right option almost word for word, so students can pick it without knowing the idea.",
+  "Remember, other: The remember line sorts the empires into 'four regions', but the card never groups them that way. It only lists places (the Americas, Brazil, North America, Africa, Asia, the East Indies, the Pacific).",
+  "Card, fact: 'From the 1500s' with 'Spain and Portugal led the way' is slightly misleading. Portugal was setting up trading posts along the African coast in the 1400s (for example Ceuta in 1415), which also clashes with point 1's 'From the 1400s'."
+ ],
+ "proposal": {
+  "title": "European empires",
+  "card": [
+   "An empire is a group of lands and peoples controlled by one powerful state. From the 1400s, several European countries began to build empires far from home.",
+   "Portugal began in the 1400s, setting up trading posts along the coast of Africa and later in Asia. It also took Brazil in South America. From the 1490s, Spain took large parts of the Americas.",
+   "The Netherlands, France and Britain followed. The Dutch were strong in parts of Asia, such as the East Indies. France and Britain claimed lands in North America, and Britain also took lands in Asia, Africa and the Pacific.",
+   "Empires took land and resources, such as gold, silver, spices, sugar and farmland. Control of these lands often cost the people who already lived there their land and their freedom."
+  ],
+  "remember": "European empires reached across the world, often taking land and resources from the people who already lived there.",
+  "a": {
+   "q": "What was an empire, as built by European powers?",
+   "opts": [
+    "Lands and peoples far away controlled by one state",
+    "A group of European countries that shared one ruler",
+    "A trade deal made between two European countries",
+    "A settlement run by the people who lived there"
+   ],
+   "why": "An empire was a set of lands and peoples controlled by one powerful state, often far from its home country. The option about sharing one ruler is wrong because each empire was built by a single state, such as Spain or Britain, and not by a group of countries.",
+   "clue": "Who held the power over the lands in an empire?"
+  },
+  "b": {
+   "d": 2,
+   "q": "In the 1600s, a ship from the Netherlands sails to the East Indies and returns carrying spices. What does this show about European empires?",
+   "opts": [
+    "They took resources from lands far from Europe",
+    "They only traded with lands close to Europe",
+    "They left the land to the people who lived there",
+    "They were built only in the Americas"
+   ],
+   "why": "Spices came from lands in Asia, far from Europe, and the Dutch took them back home. This shows empires took resources from distant lands. The option about the Americas is wrong because empires also spread across Africa, Asia and the Pacific.",
+   "clue": "Where did the spices come from, and where did they go?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "image",
+    "brief": "A world map showing the main areas claimed by Spain, Portugal, the Netherlands, France and Britain by the 1700s, with each empire labelled and the Americas, Africa, Asia and the Pacific visible.",
+    "why": "It lets students see how far across the world the empires reached."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "European empires",
+  "card": [
+   "An empire is a group of lands and peoples controlled by one powerful state. From the 1400s, several European countries began to build empires far from home.",
+   "Portugal began in the 1400s, setting up trading posts along the coast of Africa and later in Asia. It also took Brazil in South America. From the 1490s, Spain took large parts of the Americas.",
+   "The Netherlands, France and Britain followed. The Dutch were strong in parts of Asia, such as the East Indies. France and Britain claimed lands in North America, and Britain also took lands in Asia, Africa and the Pacific.",
+   "Empires took land and resources, such as gold, silver, spices, sugar and farmland. Control of these lands often cost the people who already lived there their land and their freedom."
+  ],
+  "remember": "European empires reached across the world, often taking land and resources from the people who already lived there.",
+  "a": {
+   "q": "What was an empire, as built by European powers?",
+   "opts": [
+    "Lands and peoples far away controlled by one state",
+    "A group of European countries that shared one ruler",
+    "A trade deal made between two European countries",
+    "A settlement run by the people who lived there"
+   ],
+   "why": "An empire was a set of lands and peoples controlled by one powerful state, often far from its home country. The option about sharing one ruler is wrong because each empire was built by a single state, such as Spain or Britain, and not by a group of countries.",
+   "clue": "Who held the power over the lands in an empire?"
+  },
+  "b": {
+   "d": 2,
+   "q": "In the 1600s, a ship from the Netherlands sails to the East Indies and returns carrying spices. What does this show about European empires?",
+   "opts": [
+    "They took resources from lands far from Europe",
+    "They only traded with lands close to Europe",
+    "They left the land to the people who lived there",
+    "They were built only in the Americas"
+   ],
+   "why": "Spices came from lands in Asia, far from Europe, and the Dutch took them back home. This shows empires took resources from distant lands. The option about the Americas is wrong because empires also spread across Africa, Asia and the Pacific.",
+   "clue": "Where did the spices come from, and where did they go?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "image",
+    "brief": "A world map showing the main areas claimed by Spain, Portugal, the Netherlands, France and Britain by the 1700s, with each empire labelled and the Americas, Africa, Asia and the Pacific visible.",
+    "why": "It lets students see how far across the world the empires reached."
+   }
+  ]
+ },
+ "cleared_by": "owner"
 }

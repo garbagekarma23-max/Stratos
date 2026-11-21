@@ -24,8 +24,489 @@
    0.525
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:56Z write: done",
+  "2026-11-20T12:35:53Z check: flagged",
+  "2026-11-20T12:44:59Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.00779,
+  "check": 0.00937,
+  "fix": 0.0211,
+  "recheck": 0.00687
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, mat-trigonometric-ratios, does cover naming the sides, but it also teaches the sine, cosine and tangent ratios, so it is broader than this point, which only names the sides.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Naming the sides of a right-angled triangle",
+  "card": [
+   [
+    "Hypotenuse",
+    "The hypotenuse is the side opposite the right angle. It is always the longest side."
+   ],
+   [
+    "Opposite",
+    "The opposite side is directly across from the angle you are using. It does not touch that angle."
+   ],
+   [
+    "Adjacent",
+    "The adjacent side is next to the angle you are using. It is the side that touches the angle and is not the hypotenuse."
+   ],
+   "Example: in triangle \\(ABC\\), the right angle is at \\(C\\). The hypotenuse is \\(AB\\). For angle \\(A\\), the opposite side is \\(BC\\) and the adjacent side is \\(AC\\). For angle \\(B\\), they swap."
+  ],
+  "remember": "The hypotenuse stays the same. Opposite and adjacent change with the angle you choose.",
+  "a": {
+   "q": "In triangle \\(PQR\\), the right angle is at \\(Q\\). Which side is the hypotenuse?",
+   "opts": [
+    "\\(PR\\)",
+    "\\(PQ\\)",
+    "\\(QR\\)",
+    "The longest side next to angle \\(P\\)"
+   ],
+   "why": "The hypotenuse is opposite the right angle. The right angle is at \\(Q\\), so the side across from it is \\(PR\\). \\(PQ\\) touches the right angle, so it cannot be the hypotenuse.",
+   "clue": "Which side is across from the right angle?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In triangle \\(DEF\\), the right angle is at \\(E\\). Taking angle \\(F\\) as the angle you are using, which side is the opposite side?",
+   "opts": [
+    "\\(DE\\)",
+    "\\(EF\\)",
+    "\\(DF\\)",
+    "\\(FE\\) and \\(FD\\)"
+   ],
+   "why": "The opposite side is across from angle \\(F\\), so it is \\(DE\\). \\(EF\\) is tempting, but it touches angle \\(F\\), so it is the adjacent side. \\(DF\\) is the hypotenuse.",
+   "clue": "Find the side that does not touch angle \\(F\\) and is not across from the right angle."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A right-angled triangle ABC with the right angle at C, marked with a small square. Angle A is marked with an arc. Side AB is labelled hypotenuse, side BC is labelled opposite, and side AC is labelled adjacent, all for angle A.",
+    "why": "Seeing the sides placed around angle A shows which side is opposite and which is adjacent."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(PR\\)",
+   "also_right": [
+    "The longest side next to angle \\(P\\)"
+   ]
+  },
+  "b": {
+   "best": "\\(DE\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The distractor 'The longest side next to angle \\(P\\)' is also correct. The sides touching \\(P\\) are \\(PQ\\) and \\(PR\\), and the longer of them is \\(PR\\), the hypotenuse. A student who picks it is marked wrong for a true answer, and the why does not address this option. Replace it with a clearly wrong option."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question a has a second correct option: 'The longest side next to angle \\(P\\)' is \\(PR\\), the hypotenuse, so it needs replacing. The card, the remember line and question b are correct."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a: the checker says “The longest side next to angle \\(P\\)” could also be right.",
+  "Question a, other: The distractor 'The longest side next to angle \\(P\\)' is also correct. The sides touching \\(P\\) are \\(PQ\\) and \\(PR\\), and the longer of them is \\(PR\\), the hypotenuse. A student who picks it is marked wrong for a true answer, and the why does not address this option. Replace it with a clearly wrong option."
+ ],
+ "proposal": {
+  "title": "Naming the sides of a right-angled triangle",
+  "card": [
+   [
+    "Hypotenuse",
+    "The hypotenuse is the side opposite the right angle. It is always the longest side."
+   ],
+   [
+    "Opposite",
+    "The opposite side is directly across from the angle you are using. It does not touch that angle."
+   ],
+   [
+    "Adjacent",
+    "The adjacent side is next to the angle you are using. It is the side that touches the angle and is not the hypotenuse."
+   ],
+   "Example: in triangle \\(ABC\\), the right angle is at \\(C\\). The hypotenuse is \\(AB\\). For angle \\(A\\), the opposite side is \\(BC\\) and the adjacent side is \\(AC\\). For angle \\(B\\), they swap."
+  ],
+  "remember": "The hypotenuse stays the same. Opposite and adjacent change with the angle you choose.",
+  "a": {
+   "q": "In triangle \\(PQR\\), the right angle is at \\(Q\\). Which side is the hypotenuse?",
+   "opts": [
+    "\\(PR\\)",
+    "\\(PQ\\)",
+    "\\(QR\\)",
+    "\\(PQ\\) and \\(QR\\)"
+   ],
+   "why": "The hypotenuse is the one side opposite the right angle. The right angle is at \\(Q\\), so the side across from it is \\(PR\\). \\(PQ\\) and \\(QR\\) both touch the right angle, so neither of them is the hypotenuse.",
+   "clue": "Which side is across from the right angle?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In triangle \\(DEF\\), the right angle is at \\(E\\). Taking angle \\(F\\) as the angle you are using, which side is the opposite side?",
+   "opts": [
+    "\\(DE\\)",
+    "\\(EF\\)",
+    "\\(DF\\)",
+    "\\(FE\\) and \\(FD\\)"
+   ],
+   "why": "The opposite side is across from angle \\(F\\), so it is \\(DE\\). \\(EF\\) is tempting, but it touches angle \\(F\\), so it is the adjacent side. \\(DF\\) is the hypotenuse.",
+   "clue": "Find the side that does not touch angle \\(F\\) and is not across from the right angle."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A right-angled triangle ABC with the right angle at C, marked with a small square. Angle A is marked with an arc. Side AB is labelled hypotenuse, side BC is labelled opposite, and side AC is labelled adjacent, all for angle A.",
+    "why": "Seeing the sides placed around angle A shows which side is opposite and which is adjacent."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(PR\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(DE\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The distractor 'The longest side next to angle \\(P\\)' is also correct. The sides touching \\(P\\) are \\(PQ\\) and \\(PR\\), and the longer of them is \\(PR\\), the hypotenuse. A student who picks it is marked wrong for a true answer, and the why does not address this option. Replace it with a clearly wrong option."
+   }
+  ],
+  "flags": [
+   "Question a: the checker says “The longest side next to angle \\(P\\)” could also be right.",
+   "Question a, other: The distractor 'The longest side next to angle \\(P\\)' is also correct. The sides touching \\(P\\) are \\(PQ\\) and \\(PR\\), and the longer of them is \\(PR\\), the hypotenuse. A student who picks it is marked wrong for a true answer, and the why does not address this option. Replace it with a clearly wrong option."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Naming the sides of a right-angled triangle",
+  "card": [
+   [
+    "Hypotenuse",
+    "The hypotenuse is the side opposite the right angle. It is always the longest side."
+   ],
+   [
+    "Opposite",
+    "The opposite side is directly across from the angle you are using. It does not touch that angle."
+   ],
+   [
+    "Adjacent",
+    "The adjacent side is next to the angle you are using. It is the side that touches the angle and is not the hypotenuse."
+   ],
+   "Example: in triangle \\(ABC\\), the right angle is at \\(C\\). The hypotenuse is \\(AB\\). For angle \\(A\\), the opposite side is \\(BC\\) and the adjacent side is \\(AC\\). For angle \\(B\\), they swap."
+  ],
+  "remember": "The hypotenuse stays the same. Opposite and adjacent change with the angle you choose.",
+  "a": {
+   "q": "In triangle \\(PQR\\), the right angle is at \\(Q\\). Which side is the hypotenuse?",
+   "opts": [
+    "\\(PR\\)",
+    "\\(PQ\\)",
+    "\\(QR\\)",
+    "\\(PQ\\) and \\(QR\\)"
+   ],
+   "why": "The hypotenuse is the one side opposite the right angle. The right angle is at \\(Q\\), so the side across from it is \\(PR\\). \\(PQ\\) and \\(QR\\) both touch the right angle, so neither of them is the hypotenuse.",
+   "clue": "Which side is across from the right angle?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In triangle \\(DEF\\), the right angle is at \\(E\\). Taking angle \\(F\\) as the angle you are using, which side is the opposite side?",
+   "opts": [
+    "\\(DE\\)",
+    "\\(EF\\)",
+    "\\(DF\\)",
+    "\\(FE\\) and \\(FD\\)"
+   ],
+   "why": "The opposite side is across from angle \\(F\\), so it is \\(DE\\). \\(EF\\) is tempting, but it touches angle \\(F\\), so it is the adjacent side. \\(DF\\) is the hypotenuse.",
+   "clue": "Find the side that does not touch angle \\(F\\) and is not across from the right angle."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A right-angled triangle ABC with the right angle at C, marked with a small square. Angle A is marked with an arc. Side AB is labelled hypotenuse, side BC is labelled opposite, and side AC is labelled adjacent, all for angle A.",
+    "why": "Seeing the sides placed around angle A shows which side is opposite and which is adjacent."
+   }
+  ]
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The original question a had a second right option, since the longest side next to angle P is PR. The fix swaps it for 'PQ and QR', which is clearly wrong, and the rest of the point is right.",
+   "item": "fad161bbc0ca3c01",
+   "result": "decided",
+   "saved": {
+    "id": "mat-naming-sides-right-angled",
+    "title": "Naming the sides of a right-angled triangle",
+    "brief": "9915bc9c225f",
+    "shortlist": [
+     [
+      "mat-trigonometric-ratios",
+      0.697
+     ],
+     [
+      "mat-right-angled-trigonometry",
+      0.664
+     ],
+     [
+      "mat-problems-with-two-right",
+      0.594
+     ],
+     [
+      "mat-finding-side-with-trigonometry",
+      0.529
+     ],
+     [
+      "mat-finding-angle-with-trigonometry",
+      0.525
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 1,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00027,
+     "write": 0.00779,
+     "check": 0.00937,
+     "fix": 0.0211,
+     "recheck": 0.00687
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "high",
+     "reason": "The closest bank point, mat-trigonometric-ratios, does cover naming the sides, but it also teaches the sine, cosine and tangent ratios, so it is broader than this point, which only names the sides.",
+     "model": "claude-haiku-5-5"
+    },
+    "draft": {
+     "title": "Naming the sides of a right-angled triangle",
+     "card": [
+      [
+       "Hypotenuse",
+       "The hypotenuse is the side opposite the right angle. It is always the longest side."
+      ],
+      [
+       "Opposite",
+       "The opposite side is directly across from the angle you are using. It does not touch that angle."
+      ],
+      [
+       "Adjacent",
+       "The adjacent side is next to the angle you are using. It is the side that touches the angle and is not the hypotenuse."
+      ],
+      "Example: in triangle \\(ABC\\), the right angle is at \\(C\\). The hypotenuse is \\(AB\\). For angle \\(A\\), the opposite side is \\(BC\\) and the adjacent side is \\(AC\\). For angle \\(B\\), they swap."
+     ],
+     "remember": "The hypotenuse stays the same. Opposite and adjacent change with the angle you choose.",
+     "a": {
+      "q": "In triangle \\(PQR\\), the right angle is at \\(Q\\). Which side is the hypotenuse?",
+      "opts": [
+       "\\(PR\\)",
+       "\\(PQ\\)",
+       "\\(QR\\)",
+       "The longest side next to angle \\(P\\)"
+      ],
+      "why": "The hypotenuse is opposite the right angle. The right angle is at \\(Q\\), so the side across from it is \\(PR\\). \\(PQ\\) touches the right angle, so it cannot be the hypotenuse.",
+      "clue": "Which side is across from the right angle?"
+     },
+     "b": {
+      "d": 3,
+      "q": "In triangle \\(DEF\\), the right angle is at \\(E\\). Taking angle \\(F\\) as the angle you are using, which side is the opposite side?",
+      "opts": [
+       "\\(DE\\)",
+       "\\(EF\\)",
+       "\\(DF\\)",
+       "\\(FE\\) and \\(FD\\)"
+      ],
+      "why": "The opposite side is across from angle \\(F\\), so it is \\(DE\\). \\(EF\\) is tempting, but it touches angle \\(F\\), so it is the adjacent side. \\(DF\\) is the hypotenuse.",
+      "clue": "Find the side that does not touch angle \\(F\\) and is not across from the right angle."
+     },
+     "wants": [
+      {
+       "at": "card 4",
+       "kind": "diagram",
+       "brief": "A right-angled triangle ABC with the right angle at C, marked with a small square. Angle A is marked with an arc. Side AB is labelled hypotenuse, side BC is labelled opposite, and side AC is labelled adjacent, all for angle A.",
+       "why": "Seeing the sides placed around angle A shows which side is opposite and which is adjacent."
+      }
+     ]
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "\\(PR\\)",
+      "also_right": [
+       "The longest side next to angle \\(P\\)"
+      ]
+     },
+     "b": {
+      "best": "\\(DE\\)",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The distractor 'The longest side next to angle \\(P\\)' is also correct. The sides touching \\(P\\) are \\(PQ\\) and \\(PR\\), and the longer of them is \\(PR\\), the hypotenuse. A student who picks it is marked wrong for a true answer, and the why does not address this option. Replace it with a clearly wrong option."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Question a has a second correct option: 'The longest side next to angle \\(P\\)' is \\(PR\\), the hypotenuse, so it needs replacing. The card, the remember line and question b are correct."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a: the checker says “The longest side next to angle \\(P\\)” could also be right.",
+     "Question a, other: The distractor 'The longest side next to angle \\(P\\)' is also correct. The sides touching \\(P\\) are \\(PQ\\) and \\(PR\\), and the longer of them is \\(PR\\), the hypotenuse. A student who picks it is marked wrong for a true answer, and the why does not address this option. Replace it with a clearly wrong option."
+    ],
+    "proposal": {
+     "title": "Naming the sides of a right-angled triangle",
+     "card": [
+      [
+       "Hypotenuse",
+       "The hypotenuse is the side opposite the right angle. It is always the longest side."
+      ],
+      [
+       "Opposite",
+       "The opposite side is directly across from the angle you are using. It does not touch that angle."
+      ],
+      [
+       "Adjacent",
+       "The adjacent side is next to the angle you are using. It is the side that touches the angle and is not the hypotenuse."
+      ],
+      "Example: in triangle \\(ABC\\), the right angle is at \\(C\\). The hypotenuse is \\(AB\\). For angle \\(A\\), the opposite side is \\(BC\\) and the adjacent side is \\(AC\\). For angle \\(B\\), they swap."
+     ],
+     "remember": "The hypotenuse stays the same. Opposite and adjacent change with the angle you choose.",
+     "a": {
+      "q": "In triangle \\(PQR\\), the right angle is at \\(Q\\). Which side is the hypotenuse?",
+      "opts": [
+       "\\(PR\\)",
+       "\\(PQ\\)",
+       "\\(QR\\)",
+       "\\(PQ\\) and \\(QR\\)"
+      ],
+      "why": "The hypotenuse is the one side opposite the right angle. The right angle is at \\(Q\\), so the side across from it is \\(PR\\). \\(PQ\\) and \\(QR\\) both touch the right angle, so neither of them is the hypotenuse.",
+      "clue": "Which side is across from the right angle?"
+     },
+     "b": {
+      "d": 3,
+      "q": "In triangle \\(DEF\\), the right angle is at \\(E\\). Taking angle \\(F\\) as the angle you are using, which side is the opposite side?",
+      "opts": [
+       "\\(DE\\)",
+       "\\(EF\\)",
+       "\\(DF\\)",
+       "\\(FE\\) and \\(FD\\)"
+      ],
+      "why": "The opposite side is across from angle \\(F\\), so it is \\(DE\\). \\(EF\\) is tempting, but it touches angle \\(F\\), so it is the adjacent side. \\(DF\\) is the hypotenuse.",
+      "clue": "Find the side that does not touch angle \\(F\\) and is not across from the right angle."
+     },
+     "wants": [
+      {
+       "at": "card 4",
+       "kind": "diagram",
+       "brief": "A right-angled triangle ABC with the right angle at C, marked with a small square. Angle A is marked with an arc. Side AB is labelled hypotenuse, side BC is labelled opposite, and side AC is labelled adjacent, all for angle A.",
+       "why": "Seeing the sides placed around angle A shows which side is opposite and which is adjacent."
+      }
+     ]
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "\\(PR\\)",
+       "also_right": []
+      },
+      "b": {
+       "best": "\\(DE\\)",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-20T13:37:07Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 11,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The distractor 'The longest side next to angle \\(P\\)' is also correct. The sides touching \\(P\\) are \\(PQ\\) and \\(PR\\), and the longer of them is \\(PR\\), the hypotenuse. A student who picks it is marked wrong for a true answer, and the why does not address this option. Replace it with a clearly wrong option."
+      }
+     ],
+     "flags": [
+      "Question a: the checker says “The longest side next to angle \\(P\\)” could also be right.",
+      "Question a, other: The distractor 'The longest side next to angle \\(P\\)' is also correct. The sides touching \\(P\\) are \\(PQ\\) and \\(PR\\), and the longer of them is \\(PR\\), the hypotenuse. A student who picks it is marked wrong for a true answer, and the why does not address this option. Replace it with a clearly wrong option."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "2a4c439af8f6bdbc"
+  }
  ]
 }

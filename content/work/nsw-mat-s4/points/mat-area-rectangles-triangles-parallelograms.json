@@ -20,8 +20,166 @@
    0.207
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 says reuse mat-area-triangles-parallelograms, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:53Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:53Z write: failed the content check, writing again",
+  "2026-11-20T12:44:58Z write: done",
+  "2026-11-20T12:53:27Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "confirm": 0.00757,
+  "write": 0.01896,
+  "check": 0.00626
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-area-triangles-parallelograms",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the same area formulas for parallelograms and triangles at the right Stage 4 depth, and its wording and examples suit an NSW Year 7 and 8 course without changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point teaches only triangles and parallelograms, while this point also covers the area of rectangles, so it is broader and needs its own card.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Area of rectangles, triangles and parallelograms",
+  "card": [
+   [
+    "Area",
+    "Area is the amount of flat space inside a shape. It is measured in square units, such as square centimetres (\\(\\text{cm}^{2}\\))."
+   ],
+   [
+    "Rectangle",
+    "Area is length times width: \\(A = l \\times w\\). A rectangle 8 cm long and 5 cm wide has area \\(8 \\times 5 = 40\\ \\text{cm}^{2}\\)."
+   ],
+   [
+    "Parallelogram",
+    "Area is base times perpendicular height: \\(A = b \\times h\\). The height is measured at right angles to the base, not along the slanted side."
+   ],
+   [
+    "Triangle",
+    "Area is half of base times perpendicular height: \\(A = \\frac{1}{2} \\times b \\times h\\). With base 10 cm and height 6 cm, \\(A = \\frac{1}{2} \\times 10 \\times 6 = 30\\ \\text{cm}^{2}\\)."
+   ]
+  ],
+  "remember": "Use the perpendicular height. A triangle is half of base times height.",
+  "a": {
+   "q": "A triangle has a base of 12 cm and a perpendicular height of 5 cm. What is its area?",
+   "opts": [
+    "\\(30\\ \\text{cm}^{2}\\)",
+    "\\(60\\ \\text{cm}^{2}\\)",
+    "\\(17\\ \\text{cm}^{2}\\)",
+    "\\(34\\ \\text{cm}^{2}\\)"
+   ],
+   "why": "\\(A = \\frac{1}{2} \\times 12 \\times 5 = 30\\ \\text{cm}^{2}\\). The answer \\(60\\ \\text{cm}^{2}\\) is tempting, but it leaves out the half.",
+   "clue": "Multiply base by height, then take half."
+  },
+  "b": {
+   "d": 3,
+   "q": "A parallelogram-shaped garden bed has a base of 9 m. Its slanted side is 6 m and its perpendicular height is 4 m. What is its area?",
+   "opts": [
+    "\\(36\\ \\text{m}^{2}\\)",
+    "\\(54\\ \\text{m}^{2}\\)",
+    "\\(18\\ \\text{m}^{2}\\)",
+    "\\(27\\ \\text{m}^{2}\\)"
+   ],
+   "why": "Area is base times perpendicular height: \\(9 \\times 4 = 36\\ \\text{m}^{2}\\). The slanted side of 6 m is not the height, so \\(9 \\times 6 = 54\\) is wrong.",
+   "clue": "Which length meets the base at a right angle?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A parallelogram with base b along the bottom, a slanted side, and a dashed vertical line from the top edge down to the base marked with a right angle and labelled perpendicular height h.",
+    "why": "It shows that the height is measured at right angles to the base, not along the slanted side."
+   }
+  ]
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(30\\ \\text{cm}^{2}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(36\\ \\text{m}^{2}\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Area of rectangles, triangles and parallelograms",
+  "card": [
+   [
+    "Area",
+    "Area is the amount of flat space inside a shape. It is measured in square units, such as square centimetres (\\(\\text{cm}^{2}\\))."
+   ],
+   [
+    "Rectangle",
+    "Area is length times width: \\(A = l \\times w\\). A rectangle 8 cm long and 5 cm wide has area \\(8 \\times 5 = 40\\ \\text{cm}^{2}\\)."
+   ],
+   [
+    "Parallelogram",
+    "Area is base times perpendicular height: \\(A = b \\times h\\). The height is measured at right angles to the base, not along the slanted side."
+   ],
+   [
+    "Triangle",
+    "Area is half of base times perpendicular height: \\(A = \\frac{1}{2} \\times b \\times h\\). With base 10 cm and height 6 cm, \\(A = \\frac{1}{2} \\times 10 \\times 6 = 30\\ \\text{cm}^{2}\\)."
+   ]
+  ],
+  "remember": "Use the perpendicular height. A triangle is half of base times height.",
+  "a": {
+   "q": "A triangle has a base of 12 cm and a perpendicular height of 5 cm. What is its area?",
+   "opts": [
+    "\\(30\\ \\text{cm}^{2}\\)",
+    "\\(60\\ \\text{cm}^{2}\\)",
+    "\\(17\\ \\text{cm}^{2}\\)",
+    "\\(34\\ \\text{cm}^{2}\\)"
+   ],
+   "why": "\\(A = \\frac{1}{2} \\times 12 \\times 5 = 30\\ \\text{cm}^{2}\\). The answer \\(60\\ \\text{cm}^{2}\\) is tempting, but it leaves out the half.",
+   "clue": "Multiply base by height, then take half."
+  },
+  "b": {
+   "d": 3,
+   "q": "A parallelogram-shaped garden bed has a base of 9 m. Its slanted side is 6 m and its perpendicular height is 4 m. What is its area?",
+   "opts": [
+    "\\(36\\ \\text{m}^{2}\\)",
+    "\\(54\\ \\text{m}^{2}\\)",
+    "\\(18\\ \\text{m}^{2}\\)",
+    "\\(27\\ \\text{m}^{2}\\)"
+   ],
+   "why": "Area is base times perpendicular height: \\(9 \\times 4 = 36\\ \\text{m}^{2}\\). The slanted side of 6 m is not the height, so \\(9 \\times 6 = 54\\) is wrong.",
+   "clue": "Which length meets the base at a right angle?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A parallelogram with base b along the bottom, a slanted side, and a dashed vertical line from the top edge down to the base marked with a right angle and labelled perpendicular height h.",
+    "why": "It shows that the height is measured at right angles to the base, not along the slanted side."
+   }
+  ]
+ },
+ "cleared_by": "checker"
 }

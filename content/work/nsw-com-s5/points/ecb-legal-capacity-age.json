@@ -16,8 +16,366 @@
    0.201
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: failed the content check, writing again",
+  "2026-11-20T12:44:52Z write: done (still fails the content check)",
+  "2026-11-20T12:53:23Z check: flagged",
+  "2026-11-20T12:59:58Z fix: suggested",
+  "2026-11-20T13:37:05Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (a other, a wording)",
+  "2026-11-20T13:44:55Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.01399,
+  "check": 0.01107,
+  "fix": 0.01839,
+  "recheck": 0.0103
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches legal capacity (the age at which the law grants rights and duties such as working, driving and voting), so the new point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The clue 'Think about what the law assumes about older people' echoes the right option ('It assumes older people can take more responsibility') almost word for word, so a student can match it without knowing the idea.\n- Question a, wording: The question asks why rights have different ages, but the intended answer explains why the law uses age at all. The card does not say why voting and driving have different ages, so the question and answer do not quite match.",
+ "rejected": {
+  "title": "Legal capacity and age",
+  "card": [
+   "Legal capacity is a person's ability to hold legal rights and duties. It lets a person do things the law recognises, such as make a binding contract or be responsible for their actions.",
+   "The law grants many rights and duties by age. A person gains them as they grow older, because the law assumes older people are better able to make decisions and take responsibility.",
+   "In New South Wales, a person must be 16 to get a learner licence and 18 to vote in elections. The law also limits the work children can do, such as through safety rules and limits on some kinds of jobs.",
+   "Each right has its own age, so a person can have some rights before others. Having one right, such as a learner licence, does not give a person another, such as the vote."
+  ],
+  "remember": "The law grants legal rights and duties as people reach set ages.",
+  "a": {
+   "q": "Why does the law set different ages for rights such as voting and driving?",
+   "opts": [
+    "It assumes older people can take more responsibility",
+    "It says people under 18 have no legal rights",
+    "It gives all rights at birth and removes them later",
+    "It lets each person pick the age they gain a right"
+   ],
+   "why": "The law uses age as a guide to when people can handle the duties that come with a right. It does not take away all rights from young people, so the option saying under 18s have no legal rights is wrong.",
+   "clue": "Think about what the law assumes about older people."
+  },
+  "b": {
+   "d": 2,
+   "q": "Jaya is 17 and lives in Wagga Wagga. She wants to vote in the next state election. What is the legal position?",
+   "opts": [
+    "She cannot vote yet, because the voting age is 18",
+    "She can vote, because she can already hold a learner licence",
+    "She can vote, because she already has a part-time job",
+    "She can vote if her parents give written permission"
+   ],
+   "why": "Voting is a right the law grants at 18, so Jaya has to wait. Being able to hold a learner licence or having a job does not give her the right to vote, because each right has its own age.",
+   "clue": "Each right has its own age set by law."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: The clue 'Think about what the law assumes about older people' echoes the right option ('It assumes older people can take more responsibility') almost word for word, so a student can match it without knowing the idea.",
+    "Question a, wording: The question asks why rights have different ages, but the intended answer explains why the law uses age at all. The card does not say why voting and driving have different ages, so the question and answer do not quite match."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Legal capacity and age",
+     "card": [
+      "Legal capacity is a person's ability to hold legal rights and duties. It lets a person do things the law recognises, such as make a binding contract or be responsible for their actions.",
+      "The law grants many rights and duties by age. A person gains them as they grow older, because the law assumes older people are better able to make decisions and take responsibility.",
+      "In New South Wales, a person must be 16 to get a learner licence and 18 to vote in elections. Work is also regulated by age: there is a minimum age for most jobs, and the law limits the work children can do.",
+      "Each right has its own age, so a person can have some rights before others. Having one right, such as a learner licence, does not give a person another, such as the vote."
+     ],
+     "remember": "The law grants legal rights and duties as people reach set ages.",
+     "a": {
+      "q": "Why does the law set different ages for rights such as voting and driving?",
+      "opts": [
+       "It assumes people gain more ability to take on duties with age",
+       "It says people under 18 have no legal rights",
+       "It gives all rights at birth and removes them later",
+       "It lets each person pick the age they gain a right"
+      ],
+      "why": "The law uses age as a guide to when people can handle the duties that come with a right. It does not take away all rights from young people, so the option saying under 18s have no legal rights is wrong.",
+      "clue": "Think about what the law assumes about older people."
+     },
+     "b": {
+      "d": 2,
+      "q": "Jaya is 17 and lives in Wagga Wagga. She wants to vote in the next state election. What is the legal position?",
+      "opts": [
+       "She cannot vote yet, because the voting age is 18",
+       "She can vote, because she can already hold a learner licence",
+       "She can vote, because she is old enough to work",
+       "She can vote if her parents give written permission"
+      ],
+      "why": "Voting is a right the law grants at 18, so Jaya has to wait. Being able to hold a learner licence or to work does not give her the right to vote, because each right has its own age.",
+      "clue": "Each right has its own age set by law."
+     }
+    },
+    "redone": true,
+    "local": [
+     "ecb-legal-capacity-agea option is 62 characters: It assumes people gain more ability to take on duties with age"
+    ],
+    "check": {
+     "a": {
+      "best": "It assumes people gain more ability to take on duties with age",
+      "also_right": []
+     },
+     "b": {
+      "best": "She cannot vote yet, because the voting age is 18",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card says 'there is a minimum age for most jobs'. NSW has no general minimum working age. Child employment is limited only in some areas, such as entertainment and door-to-door sales, and through rules on hours and safety. The line should say the law limits the work children can do without claiming a minimum age for most jobs."
+      }
+     ],
+     "sure": "medium",
+     "sensitive": "none",
+     "summary": "The card wrongly says NSW has a minimum age for most jobs. NSW has no general minimum working age; it only restricts certain kinds of child employment. Both questions and their explanations are otherwise sound."
+    },
+    "flags": [
+     "Card, fact: The card says 'there is a minimum age for most jobs'. NSW has no general minimum working age. Child employment is limited only in some areas, such as entertainment and door-to-door sales, and through rules on hours and safety. The line should say the law limits the work children can do without claiming a minimum age for most jobs.",
+     "Content check: ecb-legal-capacity-agea option is 62 characters: It assumes people gain more ability to take on duties with age"
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Legal capacity and age",
+     "card": [
+      "Legal capacity is a person's ability to hold legal rights and duties. It lets a person do things the law recognises, such as make a binding contract or be responsible for their actions.",
+      "The law grants many rights and duties by age. A person gains them as they grow older, because the law assumes older people are better able to make decisions and take responsibility.",
+      "In New South Wales, a person must be 16 to get a learner licence and 18 to vote in elections. The law also limits the work children can do, such as through safety rules and limits on some kinds of jobs.",
+      "Each right has its own age, so a person can have some rights before others. Having one right, such as a learner licence, does not give a person another, such as the vote."
+     ],
+     "remember": "The law grants legal rights and duties as people reach set ages.",
+     "a": {
+      "q": "Why does the law set different ages for rights such as voting and driving?",
+      "opts": [
+       "It assumes older people can take more responsibility",
+       "It says people under 18 have no legal rights",
+       "It gives all rights at birth and removes them later",
+       "It lets each person pick the age they gain a right"
+      ],
+      "why": "The law uses age as a guide to when people can handle the duties that come with a right. It does not take away all rights from young people, so the option saying under 18s have no legal rights is wrong.",
+      "clue": "Think about what the law assumes about older people."
+     },
+     "b": {
+      "d": 2,
+      "q": "Jaya is 17 and lives in Wagga Wagga. She wants to vote in the next state election. What is the legal position?",
+      "opts": [
+       "She cannot vote yet, because the voting age is 18",
+       "She can vote, because she can already hold a learner licence",
+       "She can vote, because she already has a part-time job",
+       "She can vote if her parents give written permission"
+      ],
+      "why": "Voting is a right the law grants at 18, so Jaya has to wait. Being able to hold a learner licence or having a job does not give her the right to vote, because each right has its own age.",
+      "clue": "Each right has its own age set by law."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:05Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "It assumes older people can take more responsibility",
+       "also_right": []
+      },
+      "b": {
+       "best": "She cannot vote yet, because the voting age is 18",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The clue 'Think about what the law assumes about older people' echoes the right option ('It assumes older people can take more responsibility') almost word for word, so a student can match it without knowing the idea."
+       },
+       {
+        "part": "a",
+        "kind": "wording",
+        "detail": "The question asks why rights have different ages, but the intended answer explains why the law uses age at all. The card does not say why voting and driving have different ages, so the question and answer do not quite match."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts check out: a learner licence at 16 and voting at 18 in NSW. In question a, the clue gives the answer away almost word for word, and the question asks about 'different ages' while the answer only explains why the law uses age at all."
+     },
+     "flags": [
+      "Question a, other: The clue 'Think about what the law assumes about older people' echoes the right option ('It assumes older people can take more responsibility') almost word for word, so a student can match it without knowing the idea.",
+      "Question a, wording: The question asks why rights have different ages, but the intended answer explains why the law uses age at all. The card does not say why voting and driving have different ages, so the question and answer do not quite match."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:55Z",
+   "step": "write",
+   "version": {
+    "title": "Legal capacity and age",
+    "card": [
+     "Legal capacity is a person's ability to hold legal rights and duties. It lets a person do things the law recognises, such as make a binding contract or be responsible for their actions.",
+     "The law grants many rights and duties by age. A person gains them as they grow older, because the law assumes older people are better able to make decisions and take responsibility.",
+     "In New South Wales, a person must be 16 to get a learner licence and 18 to vote in elections. The law also limits the work children can do, such as through safety rules and limits on some kinds of jobs.",
+     "Each right has its own age, so a person can have some rights before others. Having one right, such as a learner licence, does not give a person another, such as the vote."
+    ],
+    "remember": "The law grants legal rights and duties as people reach set ages.",
+    "a": {
+     "q": "Why does the law tie rights such as voting and driving to a person's age?",
+     "opts": [
+      "It uses age as a guide to readiness for duties",
+      "It says people under 18 have no legal rights",
+      "It gives all rights at birth and removes them later",
+      "It lets each person pick the age they gain a right"
+     ],
+     "why": "The law uses age as a guide to when people are ready to make decisions and take on the duties that come with a right. It does not take away all rights from young people, so the option saying under 18s have no legal rights is wrong.",
+     "clue": "Think about what changes for a person as they grow up."
+    },
+    "b": {
+     "d": 2,
+     "q": "Jaya is 17 and lives in Wagga Wagga. She wants to vote in the next state election. What is the legal position?",
+     "opts": [
+      "She cannot vote yet, because the voting age is 18",
+      "She can vote, because she can already hold a learner licence",
+      "She can vote, because she already has a part-time job",
+      "She can vote if her parents give written permission"
+     ],
+     "why": "Voting is a right the law grants at 18, so Jaya has to wait. Being able to hold a learner licence or having a job does not give her the right to vote, because each right has its own age.",
+     "clue": "Each right has its own age set by law."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "It uses age as a guide to readiness for duties",
+     "also_right": []
+    },
+    "b": {
+     "best": "She cannot vote yet, because the voting age is 18",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Legal capacity and age",
+  "card": [
+   "Legal capacity is a person's ability to hold legal rights and duties. It lets a person do things the law recognises, such as make a binding contract or be responsible for their actions.",
+   "The law grants many rights and duties by age. A person gains them as they grow older, because the law assumes older people are better able to make decisions and take responsibility.",
+   "In New South Wales, a person must be 16 to get a learner licence and 18 to vote in elections. The law also limits the work children can do, such as through safety rules and limits on some kinds of jobs.",
+   "Each right has its own age, so a person can have some rights before others. Having one right, such as a learner licence, does not give a person another, such as the vote."
+  ],
+  "remember": "The law grants legal rights and duties as people reach set ages.",
+  "a": {
+   "q": "Why does the law tie rights such as voting and driving to a person's age?",
+   "opts": [
+    "It uses age as a guide to readiness for duties",
+    "It says people under 18 have no legal rights",
+    "It gives all rights at birth and removes them later",
+    "It lets each person pick the age they gain a right"
+   ],
+   "why": "The law uses age as a guide to when people are ready to make decisions and take on the duties that come with a right. It does not take away all rights from young people, so the option saying under 18s have no legal rights is wrong.",
+   "clue": "Think about what changes for a person as they grow up."
+  },
+  "b": {
+   "d": 2,
+   "q": "Jaya is 17 and lives in Wagga Wagga. She wants to vote in the next state election. What is the legal position?",
+   "opts": [
+    "She cannot vote yet, because the voting age is 18",
+    "She can vote, because she can already hold a learner licence",
+    "She can vote, because she already has a part-time job",
+    "She can vote if her parents give written permission"
+   ],
+   "why": "Voting is a right the law grants at 18, so Jaya has to wait. Being able to hold a learner licence or having a job does not give her the right to vote, because each right has its own age.",
+   "clue": "Each right has its own age set by law."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It uses age as a guide to readiness for duties",
+   "also_right": []
+  },
+  "b": {
+   "best": "She cannot vote yet, because the voting age is 18",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Legal capacity and age",
+  "card": [
+   "Legal capacity is a person's ability to hold legal rights and duties. It lets a person do things the law recognises, such as make a binding contract or be responsible for their actions.",
+   "The law grants many rights and duties by age. A person gains them as they grow older, because the law assumes older people are better able to make decisions and take responsibility.",
+   "In New South Wales, a person must be 16 to get a learner licence and 18 to vote in elections. The law also limits the work children can do, such as through safety rules and limits on some kinds of jobs.",
+   "Each right has its own age, so a person can have some rights before others. Having one right, such as a learner licence, does not give a person another, such as the vote."
+  ],
+  "remember": "The law grants legal rights and duties as people reach set ages.",
+  "a": {
+   "q": "Why does the law tie rights such as voting and driving to a person's age?",
+   "opts": [
+    "It uses age as a guide to readiness for duties",
+    "It says people under 18 have no legal rights",
+    "It gives all rights at birth and removes them later",
+    "It lets each person pick the age they gain a right"
+   ],
+   "why": "The law uses age as a guide to when people are ready to make decisions and take on the duties that come with a right. It does not take away all rights from young people, so the option saying under 18s have no legal rights is wrong.",
+   "clue": "Think about what changes for a person as they grow up."
+  },
+  "b": {
+   "d": 2,
+   "q": "Jaya is 17 and lives in Wagga Wagga. She wants to vote in the next state election. What is the legal position?",
+   "opts": [
+    "She cannot vote yet, because the voting age is 18",
+    "She can vote, because she can already hold a learner licence",
+    "She can vote, because she already has a part-time job",
+    "She can vote if her parents give written permission"
+   ],
+   "why": "Voting is a right the law grants at 18, so Jaya has to wait. Being able to hold a learner licence or having a job does not give her the right to vote, because each right has its own age.",
+   "clue": "Each right has its own age set by law."
+  }
+ },
+ "checked_by": "claude-code"
 }

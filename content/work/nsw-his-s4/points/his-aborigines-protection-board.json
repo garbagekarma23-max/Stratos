@@ -8,8 +8,173 @@
    0.244
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:50Z write: failed the content check, writing again",
+  "2026-11-20T12:35:51Z write: done",
+  "2026-11-20T12:44:56Z check: flagged",
+  "2026-11-20T12:53:26Z fix: suggested",
+  "2026-11-20T14:41:10Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.01847,
+  "check": 0.01413,
+  "fix": 0.02056
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point 'Protection policies' covers protection laws in general across several states, while the new point is about one specific NSW body, the Aborigines Protection Board, with its 1883 founding and 1915 power to remove children without a court hearing, so it is a related but narrower and more specific idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The Aborigines Protection Board",
+  "card": [
+   "The NSW Government set up the Aborigines Protection Board in 1883. It was meant to protect Aboriginal people, but it mostly controlled their lives.",
+   "The Board decided where many Aboriginal people could live, often on reserves, and where and whether they could work.",
+   "From 1915, the Board could remove Aboriginal children from their families without a court hearing. Families had no chance to argue against it in court.",
+   "Many children were sent to training homes or to work for others. Families were broken up, and these removals caused lasting grief and loss of culture."
+  ],
+  "remember": "The Board, set up in 1883, controlled Aboriginal lives, and from 1915 it could remove children without a court hearing.",
+  "a": {
+   "q": "What new power did the Aborigines Protection Board gain in 1915?",
+   "opts": [
+    "Removing children without a court hearing",
+    "Setting up the first missions in NSW",
+    "Ordering Aboriginal people to leave Australia",
+    "Giving Aboriginal families land of their choice"
+   ],
+   "why": "From 1915 the Board could take children without going to court, so families could not challenge it. The Board controlled where people lived and worked, but it did not set up missions or give families land of their choice.",
+   "clue": "Think about what happened to children and who had to approve it."
+  },
+  "b": {
+   "d": 2,
+   "q": "In 1920, an officer of the Board takes a child from her family in a NSW town. What did the law at that time require before this?",
+   "opts": [
+    "Nothing, as no court hearing was needed",
+    "A hearing before a judge",
+    "The family's written permission",
+    "A vote of the local council"
+   ],
+   "why": "After 1915 the Board could remove children without a court hearing. A judge, family permission or a council vote was not needed, which is why families could not challenge it.",
+   "clue": "Remember what the 1915 change took away."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Removing children without a court hearing",
+   "also_right": []
+  },
+  "b": {
+   "best": "Nothing, as no court hearing was needed",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option 'Nothing, as no court hearing was needed' goes further than the card. The card says only that no court hearing was needed. Under the 1915 amendment the Board still had to judge removal to be in the child's moral or physical welfare. 'Nothing' could teach that no condition at all applied. Better: 'No court hearing; the Board could decide itself.'"
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one with a reason attached ('as no court hearing was needed'). It stands out from the short options and repeats the card's key phrase, so a student could pick it without knowing the idea."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says families 'could not challenge it', which is broader than the card. The card says families had no chance to argue against it in court. Why (b) repeats the same broader claim."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "first-nations",
+  "summary": "The card's facts are accurate. Question b's right option stands out by length and wording, and 'Nothing' overstates the card, which says only that no court hearing was needed. The whys say families 'could not challenge' removals, which goes beyond 'in court'."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Question b, wording: The right option 'Nothing, as no court hearing was needed' goes further than the card. The card says only that no court hearing was needed. Under the 1915 amendment the Board still had to judge removal to be in the child's moral or physical welfare. 'Nothing' could teach that no condition at all applied. Better: 'No court hearing; the Board could decide itself.'",
+  "Question b, wording: The right option is the only one with a reason attached ('as no court hearing was needed'). It stands out from the short options and repeats the card's key phrase, so a student could pick it without knowing the idea.",
+  "Question a, other: The why says families 'could not challenge it', which is broader than the card. The card says families had no chance to argue against it in court. Why (b) repeats the same broader claim."
+ ],
+ "proposal": {
+  "title": "The Aborigines Protection Board",
+  "card": [
+   "The NSW Government set up the Aborigines Protection Board in 1883. It was meant to protect Aboriginal people, but it mostly controlled their lives.",
+   "The Board decided where many Aboriginal people could live, often on reserves, and where and whether they could work.",
+   "From 1915, the Board could remove Aboriginal children from their families if it decided this was for the child's welfare. It did not need a court hearing, so families had no chance to argue their case before a judge.",
+   "Many children were sent to training homes or to work for others. Families were broken up, and these removals caused lasting grief and loss of culture."
+  ],
+  "remember": "The Board, set up in 1883, controlled Aboriginal lives, and from 1915 it could remove children without a court hearing.",
+  "a": {
+   "q": "What new power did the Aborigines Protection Board gain in 1915?",
+   "opts": [
+    "Removing children without a court hearing",
+    "Setting up the first missions in NSW",
+    "Ordering Aboriginal people to leave Australia",
+    "Giving Aboriginal families land of their choice"
+   ],
+   "why": "From 1915 the Board could take children without going to court, so families had no chance to argue their case before a judge. The Board controlled where people lived and worked, but it did not set up missions or give families land of their choice.",
+   "clue": "Think about what happened to children and who had to approve it."
+  },
+  "b": {
+   "d": 2,
+   "q": "In 1920, an officer of the Board takes a child from her family in a NSW town. Under the law at that time, who decided the child could be removed?",
+   "opts": [
+    "The Board itself, without going to court",
+    "A judge, after hearing from the family",
+    "The child's parents, by signing a form",
+    "The local council, by holding a vote"
+   ],
+   "why": "After 1915 the Board could decide to remove a child itself if it judged this was for the child's welfare, with no court hearing. A judge was not needed, so the family had no chance to argue their case in court, and no parent's signature or council vote was required.",
+   "clue": "Remember what the 1915 change took away."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "The Aborigines Protection Board",
+  "card": [
+   "The NSW Government set up the Aborigines Protection Board in 1883. It was meant to protect Aboriginal people, but it mostly controlled their lives.",
+   "The Board decided where many Aboriginal people could live, often on reserves, and where and whether they could work.",
+   "From 1915, the Board could remove Aboriginal children from their families if it decided this was for the child's welfare. It did not need a court hearing, so families had no chance to argue their case before a judge.",
+   "Many children were sent to training homes or to work for others. Families were broken up, and these removals caused lasting grief and loss of culture."
+  ],
+  "remember": "The Board, set up in 1883, controlled Aboriginal lives, and from 1915 it could remove children without a court hearing.",
+  "a": {
+   "q": "What new power did the Aborigines Protection Board gain in 1915?",
+   "opts": [
+    "Removing children without a court hearing",
+    "Setting up the first missions in NSW",
+    "Ordering Aboriginal people to leave Australia",
+    "Giving Aboriginal families land of their choice"
+   ],
+   "why": "From 1915 the Board could take children without going to court, so families had no chance to argue their case before a judge. The Board controlled where people lived and worked, but it did not set up missions or give families land of their choice.",
+   "clue": "Think about what happened to children and who had to approve it."
+  },
+  "b": {
+   "d": 2,
+   "q": "In 1920, an officer of the Board takes a child from her family in a NSW town. Under the law at that time, who decided the child could be removed?",
+   "opts": [
+    "The Board itself, without going to court",
+    "A judge, after hearing from the family",
+    "The child's parents, by signing a form",
+    "The local council, by holding a vote"
+   ],
+   "why": "After 1915 the Board could decide to remove a child itself if it judged this was for the child's welfare, with no court hearing. A judge was not needed, so the family had no chance to argue their case in court, and no parent's signature or council vote was required.",
+   "clue": "Remember what the 1915 change took away."
+  }
+ },
+ "cleared_by": "owner"
 }

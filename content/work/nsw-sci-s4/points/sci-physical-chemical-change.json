@@ -16,8 +16,244 @@
    0.479
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:00Z write: done",
+  "2026-11-20T12:35:56Z check: flagged",
+  "2026-11-20T12:45:00Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:44:49Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.0109,
+  "check": 0.01371,
+  "fix": 0.02195,
+  "recheck": 0.00886
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No single bank point teaches the physical-versus-chemical distinction the brief describes: the chemical-change and physical-change points each cover only one side, and the signs point covers evidence for a reaction rather than the comparison itself.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Physical and chemical change",
+  "card": [
+   [
+    "Physical change",
+    "A change in shape, size or state, such as melting or dissolving. No new substance is made, and the change can often be reversed."
+   ],
+   [
+    "Chemical change",
+    "A change that makes one or more new substances. The new substances have different properties from the ones you started with."
+   ],
+   "Signs of a chemical change include a colour change, gas bubbles, light or a solid forming in a liquid (a precipitate).",
+   "A sign is a clue, not proof. Boiling water makes bubbles, but they are only water vapour, so it is still a physical change."
+  ],
+  "remember": "Physical change: no new substance. Chemical change: a new substance is made.",
+  "a": {
+   "q": "Which change is a chemical change?",
+   "opts": [
+    "A candle burning and giving off light",
+    "A candle melting into a puddle of wax",
+    "A candle being cut into small pieces",
+    "A candle wax hardening as it cools"
+   ],
+   "why": "Burning makes new substances and gives off light. Melting, cutting and hardening only change the state or shape of the wax, so no new substance is made.",
+   "clue": "Which change makes something new?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya drops a tablet into water and sees many bubbles. Later, she sees bubbles in a pot of water on the stove. Which statement is correct?",
+   "opts": [
+    "The tablet is a chemical change and the pot is physical",
+    "Both are chemical changes because both make bubbles",
+    "The tablet is a physical change and the pot is chemical",
+    "Both are physical changes because no solid is formed"
+   ],
+   "why": "Bubbles from a tablet are a new gas, so a new substance is made. Bubbles in boiling water are only water vapour, so no new substance is made. Bubbles alone do not prove a chemical change.",
+   "clue": "Ask what the bubbles are made of."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A candle burning and giving off light",
+   "also_right": []
+  },
+  "b": {
+   "best": "The tablet is a chemical change and the pot is physical",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Only the right option includes a sign of chemical change ('giving off light'), so a student can pick it by matching the card's list of signs rather than by knowing that burning makes new substances."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The question never says what the tablet is or that it is effervescent, yet the answer depends on knowing its bubbles are a new gas. The card says bubbles are a clue, not proof, so a student is left concluding 'chemical' from bubbles alone. Say it is a fizzy (effervescent) tablet that reacts with water to make carbon dioxide."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The options call objects changes ('The tablet is a chemical change', 'the pot is physical'). Better: 'The tablet fizzing is a chemical change and the water boiling is a physical change.'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct. In (a), only the right option names a sign ('giving off light'), which hints at the answer. In (b), the question never says the tablet reacts to make a gas, which goes against the card's point that bubbles are not proof, and the options loosely call a tablet and a pot 'changes'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: Only the right option includes a sign of chemical change ('giving off light'), so a student can pick it by matching the card's list of signs rather than by knowing that burning makes new substances.",
+  "Question b, other: The question never says what the tablet is or that it is effervescent, yet the answer depends on knowing its bubbles are a new gas. The card says bubbles are a clue, not proof, so a student is left concluding 'chemical' from bubbles alone. Say it is a fizzy (effervescent) tablet that reacts with water to make carbon dioxide.",
+  "Question b, wording: The options call objects changes ('The tablet is a chemical change', 'the pot is physical'). Better: 'The tablet fizzing is a chemical change and the water boiling is a physical change.'"
+ ],
+ "proposal": {
+  "title": "Physical and chemical change",
+  "card": [
+   [
+    "Physical change",
+    "A change in shape, size or state, such as melting or dissolving. No new substance is made, and the change can often be reversed."
+   ],
+   [
+    "Chemical change",
+    "A change that makes one or more new substances, such as iron rusting. The new substances have different properties from the ones you started with."
+   ],
+   "Signs of a chemical change include a colour change, gas bubbles, light or a solid forming in a liquid (a precipitate).",
+   "A sign is a clue, not proof. Boiling water makes bubbles, but they are only water vapour, so it is still a physical change."
+  ],
+  "remember": "The test is always the same: ask whether a new substance has been made.",
+  "a": {
+   "q": "Which change is a chemical change?",
+   "opts": [
+    "Wood burning to leave ash and smoke",
+    "Ice melting to leave a puddle of water",
+    "Salt dissolving to leave clear salty water",
+    "Glass shattering to leave sharp pieces"
+   ],
+   "why": "Ash and smoke are new substances with different properties from wood, so burning is a chemical change. Melted ice is still water and dissolved salt is still salt, so those changes make nothing new.",
+   "clue": "Is what is left the same substance you started with?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya drops a fizzy tablet into water, and it reacts with the water to make carbon dioxide gas. Later, she sees bubbles in a pot of water boiling on the stove. Which statement is correct?",
+   "opts": [
+    "Fizzing is a chemical change, boiling is a physical change",
+    "Both are chemical changes, as both make gas bubbles",
+    "Fizzing is a physical change, boiling is a chemical change",
+    "Both are physical changes, as no solid is formed"
+   ],
+   "why": "The fizzing tablet makes carbon dioxide, a new substance, so it is a chemical change. The bubbles in boiling water are only water vapour, so no new substance is made. Bubbles alone do not prove a chemical change.",
+   "clue": "Ask what each set of bubbles is made of."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Wood burning to leave ash and smoke",
+    "also_right": []
+   },
+   "b": {
+    "best": "Fizzing is a chemical change, boiling is a physical change",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Only the right option includes a sign of chemical change ('giving off light'), so a student can pick it by matching the card's list of signs rather than by knowing that burning makes new substances."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The question never says what the tablet is or that it is effervescent, yet the answer depends on knowing its bubbles are a new gas. The card says bubbles are a clue, not proof, so a student is left concluding 'chemical' from bubbles alone. Say it is a fizzy (effervescent) tablet that reacts with water to make carbon dioxide."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The options call objects changes ('The tablet is a chemical change', 'the pot is physical'). Better: 'The tablet fizzing is a chemical change and the water boiling is a physical change.'"
+   }
+  ],
+  "flags": [
+   "Question a, wording: Only the right option includes a sign of chemical change ('giving off light'), so a student can pick it by matching the card's list of signs rather than by knowing that burning makes new substances.",
+   "Question b, other: The question never says what the tablet is or that it is effervescent, yet the answer depends on knowing its bubbles are a new gas. The card says bubbles are a clue, not proof, so a student is left concluding 'chemical' from bubbles alone. Say it is a fizzy (effervescent) tablet that reacts with water to make carbon dioxide.",
+   "Question b, wording: The options call objects changes ('The tablet is a chemical change', 'the pot is physical'). Better: 'The tablet fizzing is a chemical change and the water boiling is a physical change.'"
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Physical and chemical change",
+  "card": [
+   [
+    "Physical change",
+    "A change in shape, size or state, such as melting or dissolving. No new substance is made, and the change can often be reversed."
+   ],
+   [
+    "Chemical change",
+    "A change that makes one or more new substances, such as iron rusting. The new substances have different properties from the ones you started with."
+   ],
+   "Signs of a chemical change include a colour change, gas bubbles, light or a solid forming in a liquid (a precipitate).",
+   "A sign is a clue, not proof. Boiling water makes bubbles, but they are only water vapour, so it is still a physical change."
+  ],
+  "remember": "The test is always the same: ask whether a new substance has been made.",
+  "a": {
+   "q": "Which change is a chemical change?",
+   "opts": [
+    "Wood burning to leave ash and smoke",
+    "Ice melting to leave a puddle of water",
+    "Salt dissolving to leave clear salty water",
+    "Glass shattering to leave sharp pieces"
+   ],
+   "why": "Ash and smoke are new substances with different properties from wood, so burning is a chemical change. Melted ice is still water and dissolved salt is still salt, so those changes make nothing new.",
+   "clue": "Is what is left the same substance you started with?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya drops a fizzy tablet into water, and it reacts with the water to make carbon dioxide gas. Later, she sees bubbles in a pot of water boiling on the stove. Which statement is correct?",
+   "opts": [
+    "Fizzing is a chemical change, boiling is a physical change",
+    "Both are chemical changes, as both make gas bubbles",
+    "Fizzing is a physical change, boiling is a chemical change",
+    "Both are physical changes, as no solid is formed"
+   ],
+   "why": "The fizzing tablet makes carbon dioxide, a new substance, so it is a chemical change. The bubbles in boiling water are only water vapour, so no new substance is made. Bubbles alone do not prove a chemical change.",
+   "clue": "Ask what each set of bubbles is made of."
+  }
+ },
+ "cleared_by": "owner"
 }

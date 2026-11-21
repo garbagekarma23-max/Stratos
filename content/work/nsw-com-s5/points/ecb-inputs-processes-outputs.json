@@ -24,8 +24,230 @@
    0.255
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 may adapt bus-inputs-processes-outputs, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:40Z confirm: Claude Opus 5.5 may adapt bus-inputs-processes-outputs, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt bus-inputs-processes-outputs (1 change)",
+  "2026-11-20T14:02:37Z claude-code review: adapting bus-inputs-processes-outputs on the next run",
+  "2026-11-20T14:12:37Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "confirm": 0.00949,
+  "adapt": 0.00297,
+  "check": 0.00694
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "bus-inputs-processes-outputs",
+  "changes": [
+   "Change the town in question b from Ballarat, Victoria to a New South Wales town, such as Orange or Bathurst, so the example is local to the course.",
+   "Check whether the Stage 5 Commerce syllabus uses the term 'operations'; if not, use 'production' or 'making goods and services' in the first card line."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same inputs, processes and outputs idea at a suitable level, but its Victorian bakery example needs a NSW location and its terminology may need to match the NSW syllabus.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "bus-inputs-processes-outputs",
+  "changes": [
+   "Change the Ballarat bakery in question b to a town in New South Wales, such as Orange or Wagga Wagga, so the example is local to the course."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same input, process and output idea in plain terms that suit Years 9 and 10, so it only needs a local NSW example in place of the Victorian town.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "bus-inputs-processes-outputs",
+  "changes": [
+   "Change Priya's bakery in question b from Ballarat to a New South Wales town, such as Orange or Wagga Wagga."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches inputs, processes and outputs in plain terms that suit Years 9 and 10, matching the brief. Only the Victorian town in question b needs to become a NSW one.",
+   "item": "eb6028f15b5a8103",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-inputs-processes-outputs",
+    "title": "Inputs, processes and outputs",
+    "brief": "a9bc58919513",
+    "shortlist": [
+     [
+      "bus-inputs-processes-outputs",
+      0.51
+     ],
+     [
+      "bus-systems-approach",
+      0.35
+     ],
+     [
+      "ecb-productivity",
+      0.286
+     ],
+     [
+      "bus-inputs-operations",
+      0.269
+     ],
+     [
+      "mat-relations-functions",
+      0.255
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00031,
+     "confirm": 0.00949
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "bus-inputs-processes-outputs",
+     "changes": [
+      "Change the town in question b from Ballarat, Victoria to a New South Wales town, such as Orange or Bathurst, so the example is local to the course.",
+      "Check whether the Stage 5 Commerce syllabus uses the term 'operations'; if not, use 'production' or 'making goods and services' in the first card line."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same inputs, processes and outputs idea at a suitable level, but its Victorian bakery example needs a NSW location and its terminology may need to match the NSW syllabus.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "bus-inputs-processes-outputs",
+     "changes": [
+      "Change the Ballarat bakery in question b to a town in New South Wales, such as Orange or Wagga Wagga, so the example is local to the course."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same input, process and output idea in plain terms that suit Years 9 and 10, so it only needs a local NSW example in place of the Victorian town.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "6b3f65fea2bb0a2e"
+  }
+ ],
+ "draft": {
+  "title": "Inputs, processes and outputs",
+  "card": [
+   "Operations is the part of a business that makes its goods or delivers its services. It turns inputs into outputs.",
+   [
+    "Inputs",
+    "the resources put into operations, such as materials, labour, equipment, energy and money."
+   ],
+   [
+    "Processes",
+    "the activities that change the inputs into outputs, such as cutting, assembling, cooking or advising a client. Good processes add value."
+   ],
+   [
+    "Outputs",
+    "the finished goods or services that go to customers. Value is added when the output is worth more to the customer than the inputs that went into it."
+   ]
+  ],
+  "remember": "Inputs go in, processes change them, outputs come out, and good processes add value.",
+  "a": {
+   "q": "A furniture workshop makes chairs. Which of these is a process?",
+   "opts": [
+    "Sanding and assembling timber into chairs",
+    "Timber bought from a timber supplier",
+    "Finished chairs sent to a furniture shop",
+    "The wages paid to the workshop's workers"
+   ],
+   "why": "Sanding and assembling are activities that change inputs into outputs. Timber and wages are resources put in, so they are inputs. The finished chairs are outputs.",
+   "clue": "Look for the activity that changes one thing into another."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya owns a bakery in Orange, NSW. She buys flour and butter, and her staff mix and bake them into loaves for customers. Which option sorts these items correctly?",
+   "opts": [
+    "Flour is an input, baking is a process, loaves are outputs",
+    "Flour is a process, baking is an input, loaves are outputs",
+    "Flour is an input, baking is an output, loaves are a process",
+    "Flour and loaves are both inputs, baking is an output"
+   ],
+   "why": "Flour is a resource put in, so it is an input, and baking changes it, so it is a process. The loaves are what customers receive, so they are outputs. Baking may seem like an output because it is the last step, but it is an activity, not the finished product.",
+   "clue": "Ask what is put in, what is done to it, and what comes out."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Sanding and assembling timber into chairs",
+   "also_right": []
+  },
+  "b": {
+   "best": "Flour is an input, baking is a process, loaves are outputs",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Inputs, processes and outputs",
+  "card": [
+   "Operations is the part of a business that makes its goods or delivers its services. It turns inputs into outputs.",
+   [
+    "Inputs",
+    "the resources put into operations, such as materials, labour, equipment, energy and money."
+   ],
+   [
+    "Processes",
+    "the activities that change the inputs into outputs, such as cutting, assembling, cooking or advising a client. Good processes add value."
+   ],
+   [
+    "Outputs",
+    "the finished goods or services that go to customers. Value is added when the output is worth more to the customer than the inputs that went into it."
+   ]
+  ],
+  "remember": "Inputs go in, processes change them, outputs come out, and good processes add value.",
+  "a": {
+   "q": "A furniture workshop makes chairs. Which of these is a process?",
+   "opts": [
+    "Sanding and assembling timber into chairs",
+    "Timber bought from a timber supplier",
+    "Finished chairs sent to a furniture shop",
+    "The wages paid to the workshop's workers"
+   ],
+   "why": "Sanding and assembling are activities that change inputs into outputs. Timber and wages are resources put in, so they are inputs. The finished chairs are outputs.",
+   "clue": "Look for the activity that changes one thing into another."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya owns a bakery in Orange, NSW. She buys flour and butter, and her staff mix and bake them into loaves for customers. Which option sorts these items correctly?",
+   "opts": [
+    "Flour is an input, baking is a process, loaves are outputs",
+    "Flour is a process, baking is an input, loaves are outputs",
+    "Flour is an input, baking is an output, loaves are a process",
+    "Flour and loaves are both inputs, baking is an output"
+   ],
+   "why": "Flour is a resource put in, so it is an input, and baking changes it, so it is a process. The loaves are what customers receive, so they are outputs. Baking may seem like an output because it is the last step, but it is an activity, not the finished product.",
+   "clue": "Ask what is put in, what is done to it, and what comes out."
+  }
+ }
 }

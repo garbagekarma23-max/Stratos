@@ -24,8 +24,44 @@
    0.289
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 says reuse eng-building-strong-paragraph, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:42Z confirm: Claude Opus 5.5 may adapt eng-building-strong-paragraph, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:33:26Z review: reusing eng-building-strong-paragraph"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00042,
+  "confirm": 0.01119
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "eng-building-strong-paragraph",
+  "changes": [],
+  "sure": "medium",
+  "reason": "This Year 8 card teaches the same paragraph structure as the new point: a topic sentence stating one main point, then evidence, then explanation, then a link back to the claim, at a depth that suits Stage 4.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "eng-building-strong-paragraph",
+  "changes": [
+   "Change the last step so the closing sentence links back to the question or the overall argument, not only to the paragraph's claim, as the brief asks."
+  ],
+  "sure": "medium",
+  "reason": "The Year 8 'Building a strong paragraph' card teaches the same sequence (topic sentence, evidence, explanation, link) at a depth that suits Years 7 and 8, but its closing link should point back to the question or argument as the brief describes.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "eng-building-strong-paragraph",
+ "matched": {
+  "verdict": "reuse",
+  "from": "eng-building-strong-paragraph",
+  "by": "owner",
+  "at": "2026-11-20T14:33:26Z"
+ }
 }

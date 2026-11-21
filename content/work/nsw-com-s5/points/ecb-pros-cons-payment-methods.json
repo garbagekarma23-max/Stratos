@@ -8,8 +8,238 @@
    0.205
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: flagged",
+  "2026-11-20T12:53:23Z fix: suggested",
+  "2026-11-20T13:37:05Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 8e-05,
+  "write": 0.00625,
+  "check": 0.00947,
+  "fix": 0.02027,
+  "recheck": 0.01479
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank card covers cash versus credit transactions and accounts receivable and payable for businesses in Victoria, not the consumer payment methods (debit, credit, buy now pay later, cash) with their interest, fees and tracking trade-offs that this Stage 5 Commerce point teaches.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Pros and cons of payment methods",
+  "card": [
+   [
+    "Debit card",
+    "Spends money you already have in your bank account. You cannot spend more than your balance, though some accounts allow a small overdraft, so there is no debt to repay."
+   ],
+   [
+    "Credit card",
+    "Borrows money from the card provider, which you must repay. If you do not pay the full balance by the due date, interest is usually charged. Late fees may also apply."
+   ],
+   [
+    "Buy now pay later",
+    "Lets you take a product now and pay it off in instalments. It borrows money too. Missed payments can bring late fees, and it can tempt people to buy more than they can afford."
+   ],
+   [
+    "Cash",
+    "Physical notes and coins. It is easy to track, because you can see what is left in your wallet. It is also easy to lose or have stolen, and it cannot be recovered like a card can."
+   ]
+  ],
+  "remember": "Debit spends your own money. Credit and buy now pay later borrow it, so costs can be added. Cash is easy to track but easy to lose.",
+  "a": {
+   "q": "Which payment method spends money the buyer already has in their bank account?",
+   "opts": [
+    "Debit card",
+    "Credit card",
+    "Buy now pay later",
+    "Credit card with a high limit"
+   ],
+   "why": "A debit card takes money straight from your own account, so no debt is created. Credit cards and buy now pay later both borrow money that must be repaid, and a higher limit only means more can be borrowed.",
+   "clue": "Which one does not create a debt?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jaya buys a $300 jacket with a credit card. She forgets to pay the full balance by the due date. What is the most likely result?",
+   "opts": [
+    "Interest is charged on what she owes",
+    "The $300 is taken from her bank account at once",
+    "Her cash is lost because the card was not paid",
+    "She pays nothing extra because the card is borrowed"
+   ],
+   "why": "A credit card borrows money, so unpaid balances usually attract interest, and late fees may also apply. The money is not taken from her account straight away, which is how a debit card works.",
+   "clue": "Think about what happens to borrowed money that is not repaid on time."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Debit card",
+   "also_right": []
+  },
+  "b": {
+   "best": "Interest is charged on what she owes",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The debit card line says some accounts allow a small overdraft, 'so there is no debt to repay'. An overdraft is borrowed money that must be repaid, so the sentence contradicts itself. Either drop the overdraft clause or say there is no debt unless an overdraft is used."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The debit card line contradicts itself: it mentions overdrafts but then says there is no debt to repay, and an overdraft is a debt. Both questions and their explanations are otherwise sound."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The debit card line says some accounts allow a small overdraft, 'so there is no debt to repay'. An overdraft is borrowed money that must be repaid, so the sentence contradicts itself. Either drop the overdraft clause or say there is no debt unless an overdraft is used."
+ ],
+ "proposal": {
+  "title": "Pros and cons of payment methods",
+  "card": [
+   [
+    "Debit card",
+    "Spends money you already have in your bank account. You usually cannot spend more than your balance, so there is no debt to repay unless you use an overdraft, which is a small loan from the bank."
+   ],
+   [
+    "Credit card",
+    "Borrows money from the card provider, which you must repay. If you do not pay the full balance by the due date, interest is usually charged. Late fees may also apply."
+   ],
+   [
+    "Buy now pay later",
+    "Lets you take a product now and pay it off in instalments. It borrows money too. Missed payments can bring late fees, and it can tempt people to buy more than they can afford."
+   ],
+   [
+    "Cash",
+    "Physical notes and coins. It is easy to track, because you can see what is left in your wallet. It is also easy to lose or have stolen, and it cannot be recovered like a card can."
+   ]
+  ],
+  "remember": "Debit spends your own money. Credit and buy now pay later borrow it, so interest and fees can be added. Cash is easy to track but easy to lose.",
+  "a": {
+   "q": "Leo taps a card to pay for groceries, and the money comes straight out of his own savings account. Which payment method is he using?",
+   "opts": [
+    "Debit card",
+    "Credit card",
+    "Buy now pay later",
+    "Cash"
+   ],
+   "why": "A debit card takes money straight from your own account, so no debt is created. A credit card also uses a tapped card, but it borrows money from the card provider that Leo would repay later.",
+   "clue": "Whose money is being spent at the checkout?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jaya buys a $300 jacket with a credit card. She forgets to pay the full balance by the due date. What is the most likely result?",
+   "opts": [
+    "Interest is charged on what she owes",
+    "The $300 is taken from her bank account at once",
+    "The jacket price is split into set instalments",
+    "She pays nothing extra because the card is borrowed"
+   ],
+   "why": "A credit card borrows money, so an unpaid balance usually attracts interest, and late fees may also apply. Taking the money from her account straight away is how a debit card works, not a credit card.",
+   "clue": "Think about what happens to borrowed money that is not repaid on time."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:05Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Debit card",
+    "also_right": []
+   },
+   "b": {
+    "best": "Interest is charged on what she owes",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:05Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The debit card line says some accounts allow a small overdraft, 'so there is no debt to repay'. An overdraft is borrowed money that must be repaid, so the sentence contradicts itself. Either drop the overdraft clause or say there is no debt unless an overdraft is used."
+   }
+  ],
+  "flags": [
+   "Card, fact: The debit card line says some accounts allow a small overdraft, 'so there is no debt to repay'. An overdraft is borrowed money that must be repaid, so the sentence contradicts itself. Either drop the overdraft clause or say there is no debt unless an overdraft is used."
+  ]
+ },
+ "final": {
+  "title": "Pros and cons of payment methods",
+  "card": [
+   [
+    "Debit card",
+    "Spends money you already have in your bank account. You usually cannot spend more than your balance, so there is no debt to repay unless you use an overdraft, which is a small loan from the bank."
+   ],
+   [
+    "Credit card",
+    "Borrows money from the card provider, which you must repay. If you do not pay the full balance by the due date, interest is usually charged. Late fees may also apply."
+   ],
+   [
+    "Buy now pay later",
+    "Lets you take a product now and pay it off in instalments. It borrows money too. Missed payments can bring late fees, and it can tempt people to buy more than they can afford."
+   ],
+   [
+    "Cash",
+    "Physical notes and coins. It is easy to track, because you can see what is left in your wallet. It is also easy to lose or have stolen, and it cannot be recovered like a card can."
+   ]
+  ],
+  "remember": "Debit spends your own money. Credit and buy now pay later borrow it, so interest and fees can be added. Cash is easy to track but easy to lose.",
+  "a": {
+   "q": "Leo taps a card to pay for groceries, and the money comes straight out of his own savings account. Which payment method is he using?",
+   "opts": [
+    "Debit card",
+    "Credit card",
+    "Buy now pay later",
+    "Cash"
+   ],
+   "why": "A debit card takes money straight from your own account, so no debt is created. A credit card also uses a tapped card, but it borrows money from the card provider that Leo would repay later.",
+   "clue": "Whose money is being spent at the checkout?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jaya buys a $300 jacket with a credit card. She forgets to pay the full balance by the due date. What is the most likely result?",
+   "opts": [
+    "Interest is charged on what she owes",
+    "The $300 is taken from her bank account at once",
+    "The jacket price is split into set instalments",
+    "She pays nothing extra because the card is borrowed"
+   ],
+   "why": "A credit card borrows money, so an unpaid balance usually attracts interest, and late fees may also apply. Taking the money from her account straight away is how a debit card works, not a credit card.",
+   "clue": "Think about what happens to borrowed money that is not repaid on time."
+  }
+ },
+ "cleared_by": "recheck"
 }

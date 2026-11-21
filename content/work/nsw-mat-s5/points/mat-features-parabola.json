@@ -24,8 +24,420 @@
    0.322
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:55Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:54Z write: failed the content check, writing again",
+  "2026-11-20T12:44:59Z write: done (still fails the content check)",
+  "2026-11-20T12:53:27Z check: flagged",
+  "2026-11-20T13:00:00Z fix: suggested",
+  "2026-11-20T13:23:43Z autoreview: cleared with the fix (the content check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00049,
+  "write": 0.02327,
+  "check": 0.00986,
+  "fix": 0.02908
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point covers reading the vertex, axis of symmetry and both kinds of intercept from a graph or table: the closest, Graphing parabolas, covers only y = x² and its turning point, while Quadratic graphs uses vertex form and algebraic solving beyond this brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Features of a parabola",
+  "card": [
+   [
+    "Vertex",
+    "the turning point of the parabola, its highest or lowest point. It is the lowest point when the parabola is concave up and the highest when it is concave down."
+   ],
+   [
+    "Axis of symmetry",
+    "the vertical line through the vertex. It splits the parabola into two mirror halves. In a table, equal y-values sit the same distance either side of it."
+   ],
+   [
+    "Intercepts",
+    "the y-intercept is where the curve crosses the y-axis, at \\(x = 0\\). The x-intercepts are where it crosses the x-axis, at \\(y = 0\\). There can be two, one or none."
+   ],
+   [
+    "Example",
+    "For \\(y = x^{2} - 4\\), the vertex is \\((0, -4)\\), the axis of symmetry is \\(x = 0\\), the y-intercept is \\(-4\\), and the x-intercepts are \\(x = -2\\) and \\(x = 2\\)."
+   ]
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The parabola \\(y = x^{2} - 4\\), concave up, with vertex \\((0, -4)\\), crossing the x-axis at \\(x = -2\\) and \\(x = 2\\) and the y-axis at \\(-4\\).",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -6,
+     "max": 6,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2} - 4",
+      "label": "\\(y = x^{2} - 4\\)",
+      "labelAt": 3.2,
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       -2,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\((-2, 0)\\)",
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\((2, 0)\\)",
+      "pos": "above-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       -4
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point",
+      "label": "\\((0, -4)\\)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "The vertex is the turning point, the axis of symmetry runs through it, and the intercepts are where the curve meets the axes.",
+  "a": {
+   "q": "A parabola has a table of values with \\(y = 5\\) at both \\(x = 1\\) and \\(x = 5\\). Which line is its axis of symmetry?",
+   "opts": [
+    "\\(x = 3\\)",
+    "\\(x = 5\\)",
+    "\\(y = 5\\)",
+    "\\(x = 1\\)"
+   ],
+   "why": "Equal y-values sit the same distance either side of the axis, so the axis is halfway between \\(x = 1\\) and \\(x = 5\\), at \\(x = 3\\). The line \\(y = 5\\) is horizontal, but the axis of symmetry is vertical.",
+   "clue": "The axis is halfway between the two x-values."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's parabola is \\(y = 9 - x^{2}\\). It is concave down. What are its vertex and y-intercept?",
+   "opts": [
+    "Vertex \\((0, 9)\\), y-intercept 9",
+    "Vertex \\((0, 9)\\), y-intercept 3",
+    "Vertex \\((0, 3)\\), y-intercept 9",
+    "Vertex \\((0, 3)\\), y-intercept 3"
+   ],
+   "why": "At \\(x = 0\\), \\(y = 9 - 0 = 9\\). This is the y-intercept, and it is also the highest point, so it is the vertex \\((0, 9)\\). The value 3 is an x-intercept, found where \\(y = 0\\), not the y-intercept.",
+   "clue": "Put \\(x = 0\\) into the equation."
+  }
+ },
+ "redone": true,
+ "local": [
+  "mat-features-parabola the figure on card line 4 has the label \\((-2, 0)\\) on a curve. Move it with pos or labelAt, or move the curve",
+  "mat-features-parabola the figure on card line 4 has the label \\((2, 0)\\) on a curve. Move it with pos or labelAt, or move the curve"
+ ],
+ "check": {
+  "a": {
+   "best": "\\(x = 3\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "Vertex \\((0, 9)\\), y-intercept 9",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Content check: mat-features-parabola the figure on card line 4 has the label \\((-2, 0)\\) on a curve. Move it with pos or labelAt, or move the curve",
+  "Content check: mat-features-parabola the figure on card line 4 has the label \\((2, 0)\\) on a curve. Move it with pos or labelAt, or move the curve"
+ ],
+ "proposal": {
+  "title": "Features of a parabola",
+  "card": [
+   [
+    "Vertex",
+    "the turning point of the parabola, its highest or lowest point. It is the lowest point when the parabola is concave up and the highest when it is concave down."
+   ],
+   [
+    "Axis of symmetry",
+    "the vertical line through the vertex. It splits the parabola into two mirror halves. In a table, equal y-values sit the same distance either side of it."
+   ],
+   [
+    "Intercepts",
+    "the y-intercept is where the curve crosses the y-axis, at \\(x = 0\\). The x-intercepts are where it crosses the x-axis, at \\(y = 0\\). There can be two, one or none."
+   ],
+   [
+    "Example",
+    "For \\(y = x^{2} - 4\\), the vertex is \\((0, -4)\\), the axis of symmetry is \\(x = 0\\), the y-intercept is \\(-4\\), and the x-intercepts are \\(x = -2\\) and \\(x = 2\\)."
+   ]
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The parabola \\(y = x^{2} - 4\\), concave up, with vertex \\((0, -4)\\), crossing the x-axis at \\(x = -2\\) and \\(x = 2\\) and the y-axis at \\(-4\\).",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -6,
+     "max": 6,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2} - 4",
+      "label": "\\(y = x^{2} - 4\\)",
+      "labelAt": 2.8,
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       -2,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\((-2, 0)\\)",
+      "pos": "below-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\((2, 0)\\)",
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       -4
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point",
+      "label": "\\((0, -4)\\)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "The vertex is the turning point, the axis of symmetry runs through it, and the intercepts are where the curve meets the axes.",
+  "a": {
+   "q": "A parabola has a table of values with \\(y = 5\\) at both \\(x = 1\\) and \\(x = 5\\). Which line is its axis of symmetry?",
+   "opts": [
+    "\\(x = 3\\)",
+    "\\(x = 5\\)",
+    "\\(y = 5\\)",
+    "\\(x = 1\\)"
+   ],
+   "why": "Equal y-values sit the same distance either side of the axis, so the axis is halfway between \\(x = 1\\) and \\(x = 5\\), at \\(x = 3\\). The line \\(y = 5\\) is horizontal, but the axis of symmetry is vertical.",
+   "clue": "The axis is halfway between the two x-values."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's parabola is \\(y = 9 - x^{2}\\). It is concave down. What are its vertex and y-intercept?",
+   "opts": [
+    "Vertex \\((0, 9)\\), y-intercept 9",
+    "Vertex \\((0, 9)\\), y-intercept 3",
+    "Vertex \\((0, 3)\\), y-intercept 9",
+    "Vertex \\((0, 3)\\), y-intercept 3"
+   ],
+   "why": "At \\(x = 0\\), \\(y = 9 - 0 = 9\\). This is the y-intercept, and it is also the highest point, so it is the vertex \\((0, 9)\\). The value 3 is an x-intercept, found where \\(y = 0\\), not the y-intercept.",
+   "clue": "Put \\(x = 0\\) into the equation."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:43Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [],
+  "flags": [
+   "Content check: mat-features-parabola the figure on card line 4 has the label \\((-2, 0)\\) on a curve. Move it with pos or labelAt, or move the curve",
+   "Content check: mat-features-parabola the figure on card line 4 has the label \\((2, 0)\\) on a curve. Move it with pos or labelAt, or move the curve"
+  ]
+ },
+ "final": {
+  "title": "Features of a parabola",
+  "card": [
+   [
+    "Vertex",
+    "the turning point of the parabola, its highest or lowest point. It is the lowest point when the parabola is concave up and the highest when it is concave down."
+   ],
+   [
+    "Axis of symmetry",
+    "the vertical line through the vertex. It splits the parabola into two mirror halves. In a table, equal y-values sit the same distance either side of it."
+   ],
+   [
+    "Intercepts",
+    "the y-intercept is where the curve crosses the y-axis, at \\(x = 0\\). The x-intercepts are where it crosses the x-axis, at \\(y = 0\\). There can be two, one or none."
+   ],
+   [
+    "Example",
+    "For \\(y = x^{2} - 4\\), the vertex is \\((0, -4)\\), the axis of symmetry is \\(x = 0\\), the y-intercept is \\(-4\\), and the x-intercepts are \\(x = -2\\) and \\(x = 2\\)."
+   ]
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The parabola \\(y = x^{2} - 4\\), concave up, with vertex \\((0, -4)\\), crossing the x-axis at \\(x = -2\\) and \\(x = 2\\) and the y-axis at \\(-4\\).",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -6,
+     "max": 6,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2} - 4",
+      "label": "\\(y = x^{2} - 4\\)",
+      "labelAt": 2.8,
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       -2,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\((-2, 0)\\)",
+      "pos": "below-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\((2, 0)\\)",
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       -4
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point",
+      "label": "\\((0, -4)\\)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "The vertex is the turning point, the axis of symmetry runs through it, and the intercepts are where the curve meets the axes.",
+  "a": {
+   "q": "A parabola has a table of values with \\(y = 5\\) at both \\(x = 1\\) and \\(x = 5\\). Which line is its axis of symmetry?",
+   "opts": [
+    "\\(x = 3\\)",
+    "\\(x = 5\\)",
+    "\\(y = 5\\)",
+    "\\(x = 1\\)"
+   ],
+   "why": "Equal y-values sit the same distance either side of the axis, so the axis is halfway between \\(x = 1\\) and \\(x = 5\\), at \\(x = 3\\). The line \\(y = 5\\) is horizontal, but the axis of symmetry is vertical.",
+   "clue": "The axis is halfway between the two x-values."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's parabola is \\(y = 9 - x^{2}\\). It is concave down. What are its vertex and y-intercept?",
+   "opts": [
+    "Vertex \\((0, 9)\\), y-intercept 9",
+    "Vertex \\((0, 9)\\), y-intercept 3",
+    "Vertex \\((0, 3)\\), y-intercept 9",
+    "Vertex \\((0, 3)\\), y-intercept 3"
+   ],
+   "why": "At \\(x = 0\\), \\(y = 9 - 0 = 9\\). This is the y-intercept, and it is also the highest point, so it is the vertex \\((0, 9)\\). The value 3 is an x-intercept, found where \\(y = 0\\), not the y-intercept.",
+   "clue": "Put \\(x = 0\\) into the equation."
+  }
+ },
+ "cleared_by": "auto"
 }

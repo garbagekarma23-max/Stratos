@@ -12,8 +12,218 @@
    0.202
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:11Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T13:23:35Z autoreview: cleared with the fix (b other, a wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 8e-05,
+  "write": 0.00562,
+  "check": 0.01042,
+  "fix": 0.01481
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches the three levels of government and what each one is responsible for; one is about government-owned enterprises and the other about why governments collect tax.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Three levels of government",
+  "card": [
+   [
+    "Federal",
+    "the national government, based in Canberra. It handles matters for the whole country, such as defence, immigration and Medicare."
+   ],
+   [
+    "State",
+    "the government of a state, such as New South Wales. It handles matters such as public schools, police and hospitals."
+   ],
+   [
+    "Local",
+    "a council that serves a town, city or shire. It handles matters such as rubbish collection, local roads and parks."
+   ],
+   "Each level looks after the matters that suit its size. Citizens deal with all three levels in daily life."
+  ],
+  "remember": "Federal covers the whole nation, state covers a state, and local covers a community.",
+  "a": {
+   "q": "Which matter is mainly handled by a local council?",
+   "opts": [
+    "Collecting household rubbish",
+    "Running the nation's defence force",
+    "Managing public school teaching",
+    "Running the state police force"
+   ],
+   "why": "Rubbish collection serves a local community, so it is a council matter. Police are a state matter, which makes that option tempting, but a council does not run them.",
+   "clue": "Think about what serves one town or suburb."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya lives in Newcastle. Her street has a damaged footpath and her brother needs a place at a public high school. Which levels of government mainly handle each matter, in that order?",
+   "opts": [
+    "Local council, then state government",
+    "State government, then local council",
+    "Federal government, then state government",
+    "Local council, then federal government"
+   ],
+   "why": "Footpaths and local roads are looked after by the council, and public schools are run by the state government. Federal government is tempting for schools because it is the biggest level, but the card places schools with the state.",
+   "clue": "Footpaths serve a neighbourhood, and schools are a state matter."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Collecting household rubbish",
+   "also_right": []
+  },
+  "b": {
+   "best": "Local council, then state government",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue gives the answer away. 'Schools are a state matter' states half the answer outright, and 'footpaths serve a neighbourhood' points straight to the council, so a student can answer without knowing the idea."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Two distractors name their own level ('the nation's defence force', 'the state police force'), so a student can rule them out from the wording alone, without knowing which level handles what."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and the intended answers are correct. Question b's clue gives away the answer by saying schools are a state matter, and question a's distractors name their own level of government, which makes them easy to rule out."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue gives the answer away. 'Schools are a state matter' states half the answer outright, and 'footpaths serve a neighbourhood' points straight to the council, so a student can answer without knowing the idea.",
+  "Question a, wording: Two distractors name their own level ('the nation's defence force', 'the state police force'), so a student can rule them out from the wording alone, without knowing which level handles what."
+ ],
+ "proposal": {
+  "title": "Three levels of government",
+  "card": [
+   [
+    "Federal",
+    "the national government, based in Canberra. It handles matters for the whole country, such as defence, immigration and Medicare."
+   ],
+   [
+    "State",
+    "the government of a state, such as New South Wales. It handles matters such as public schools, police and hospitals."
+   ],
+   [
+    "Local",
+    "a council that serves a town, city or shire. It handles matters such as rubbish collection, local roads, footpaths and parks."
+   ],
+   "Each level looks after the matters that suit its size. Citizens deal with all three levels in daily life."
+  ],
+  "remember": "Federal covers the whole nation, state covers a state, and local covers a community.",
+  "a": {
+   "q": "Which matter is mainly handled by a local council?",
+   "opts": [
+    "Collecting household rubbish",
+    "Running the defence force",
+    "Running public schools",
+    "Running the police force"
+   ],
+   "why": "Rubbish collection serves a local community, so it is a council matter. Police work in every town, which makes that option tempting, but police are run by the state government, not a council.",
+   "clue": "Which service is organised street by street?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya lives in Newcastle. Her street has a damaged footpath and her brother needs a place at a public high school. Which levels of government mainly handle each matter, in that order?",
+   "opts": [
+    "Local council, then state government",
+    "State government, then local council",
+    "Federal government, then state government",
+    "Local council, then federal government"
+   ],
+   "why": "Footpaths are looked after by the local council, and public schools are run by the state government. Federal government is tempting for schools because it is the biggest level, but the card places schools with the state.",
+   "clue": "Match each matter to the size of the area it serves."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:35Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue gives the answer away. 'Schools are a state matter' states half the answer outright, and 'footpaths serve a neighbourhood' points straight to the council, so a student can answer without knowing the idea."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Two distractors name their own level ('the nation's defence force', 'the state police force'), so a student can rule them out from the wording alone, without knowing which level handles what."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue gives the answer away. 'Schools are a state matter' states half the answer outright, and 'footpaths serve a neighbourhood' points straight to the council, so a student can answer without knowing the idea.",
+   "Question a, wording: Two distractors name their own level ('the nation's defence force', 'the state police force'), so a student can rule them out from the wording alone, without knowing which level handles what."
+  ]
+ },
+ "final": {
+  "title": "Three levels of government",
+  "card": [
+   [
+    "Federal",
+    "the national government, based in Canberra. It handles matters for the whole country, such as defence, immigration and Medicare."
+   ],
+   [
+    "State",
+    "the government of a state, such as New South Wales. It handles matters such as public schools, police and hospitals."
+   ],
+   [
+    "Local",
+    "a council that serves a town, city or shire. It handles matters such as rubbish collection, local roads, footpaths and parks."
+   ],
+   "Each level looks after the matters that suit its size. Citizens deal with all three levels in daily life."
+  ],
+  "remember": "Federal covers the whole nation, state covers a state, and local covers a community.",
+  "a": {
+   "q": "Which matter is mainly handled by a local council?",
+   "opts": [
+    "Collecting household rubbish",
+    "Running the defence force",
+    "Running public schools",
+    "Running the police force"
+   ],
+   "why": "Rubbish collection serves a local community, so it is a council matter. Police work in every town, which makes that option tempting, but police are run by the state government, not a council.",
+   "clue": "Which service is organised street by street?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya lives in Newcastle. Her street has a damaged footpath and her brother needs a place at a public high school. Which levels of government mainly handle each matter, in that order?",
+   "opts": [
+    "Local council, then state government",
+    "State government, then local council",
+    "Federal government, then state government",
+    "Local council, then federal government"
+   ],
+   "why": "Footpaths are looked after by the local council, and public schools are run by the state government. Federal government is tempting for schools because it is the biggest level, but the card places schools with the state.",
+   "clue": "Match each matter to the size of the area it serves."
+  }
+ },
+ "cleared_by": "auto"
 }

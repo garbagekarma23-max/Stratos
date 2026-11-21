@@ -24,8 +24,253 @@
    0.235
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 may adapt mat-tests-congruent-triangles, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:57Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:55Z write: done",
+  "2026-11-20T12:44:59Z check: flagged",
+  "2026-11-20T12:53:28Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00043,
+  "confirm": 0.01072,
+  "write": 0.00756,
+  "check": 0.01499,
+  "fix": 0.02349,
+  "recheck": 0.00844
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-tests-congruent-triangles",
+  "changes": [
+   "Add a card line stating that three equal angles (AAA) do not prove triangles congruent, because the triangles can differ in size.",
+   "Add a card line stating that two equal sides with an angle that is not between them (SSA) do not prove triangles congruent, and include a question on this case."
+  ],
+  "sure": "medium",
+  "reason": "The bank card covers the same four congruence tests at a suitable depth, but it does not teach the two invalid cases (AAA and SSA) that the new point requires, so it needs those additions.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-tests-congruent-triangles, teaches the SSS, SAS, AAS and RHS tests, but it never explains why AAA and two sides with a non-included angle do not prove congruence, and the brief asks for that. Adding it would mean a new step on the card rather than a small change, so this needs a new point.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Congruent triangles",
+  "card": [
+   "Congruent figures are exactly the same shape and size. One can be moved onto the other by sliding, turning or flipping it, so matching sides and angles are equal.",
+   [
+    "SSS and SAS",
+    "SSS: all three sides are equal. SAS: two sides and the angle between them are equal."
+   ],
+   [
+    "AAS and RHS",
+    "AAS: two angles and a side are equal, with the side in the same place in both triangles. RHS: both have a right angle, and the hypotenuse and one other side are equal."
+   ],
+   [
+    "Not enough",
+    "AAA is not a test: triangles with equal angles can be different sizes. Two sides and an angle that is not between them is not a test either."
+   ]
+  ],
+  "remember": "Congruent triangles match in shape and size. Check them with SSS, SAS, AAS or RHS.",
+  "a": {
+   "q": "Triangle ABC has \\(AB = 5\\) cm, \\(BC = 7\\) cm and \\(\\angle B = 40^{\\circ}\\). Triangle PQR has \\(PQ = 5\\) cm, \\(QR = 7\\) cm and \\(\\angle Q = 40^{\\circ}\\). Which test shows they are congruent?",
+   "opts": [
+    "SAS",
+    "SSS",
+    "AAS",
+    "RHS"
+   ],
+   "why": "The equal angle is between the two equal sides in each triangle, so the test is SAS. SSS is tempting, but the third side of each triangle is not given.",
+   "clue": "Where does the angle sit compared with the two sides?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Triangle DEF has \\(DE = 6\\) cm, \\(EF = 9\\) cm and \\(\\angle D = 30^{\\circ}\\). Triangle XYZ has \\(XY = 6\\) cm, \\(YZ = 9\\) cm and \\(\\angle X = 30^{\\circ}\\). Are they shown to be congruent?",
+   "opts": [
+    "No, the angle is not between the two equal sides",
+    "Yes, by SAS",
+    "Yes, by SSS",
+    "No, because only one angle is equal"
+   ],
+   "why": "In each triangle the 30° angle is at the end of the 6 cm side, but it is not between the 6 cm and 9 cm sides. Two sides and an angle that is not between them is not a congruence test. SAS looks tempting, but it needs the angle between the sides.",
+   "clue": "Find the side that lies opposite the given angle."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "SAS",
+   "also_right": []
+  },
+  "b": {
+   "best": "No, the angle is not between the two equal sides",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The example is the non-ambiguous case. The side opposite the 30° angle (EF = 9 cm) is longer than the adjacent side (DE = 6 cm), so only one triangle fits these measurements and DEF and XYZ really are congruent, just not by a listed test. A careful student could be misled that such triangles might differ. Use an ambiguous case instead, such as EF = YZ = 4 cm, where 6 sin 30° = 3 < 4 < 6 gives two possible triangles."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue 'Find the side that lies opposite the given angle' points students at the wrong feature. The key idea is that the angle is not between the two given sides. In this data, the side opposite the angle being the longer one is exactly what makes the triangle unique."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b uses a two-sides-and-a-non-included-angle case where the side opposite the angle is the longer one, so the triangles are actually congruent, even though no listed test proves it. Change the numbers to an ambiguous case (for example EF = YZ = 4 cm) and fix the clue. Question a is fine."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The example is the non-ambiguous case. The side opposite the 30° angle (EF = 9 cm) is longer than the adjacent side (DE = 6 cm), so only one triangle fits these measurements and DEF and XYZ really are congruent, just not by a listed test. A careful student could be misled that such triangles might differ. Use an ambiguous case instead, such as EF = YZ = 4 cm, where 6 sin 30° = 3 < 4 < 6 gives two possible triangles.",
+  "Question b, wording: The clue 'Find the side that lies opposite the given angle' points students at the wrong feature. The key idea is that the angle is not between the two given sides. In this data, the side opposite the angle being the longer one is exactly what makes the triangle unique."
+ ],
+ "proposal": {
+  "title": "Congruent triangles",
+  "card": [
+   "Congruent figures are exactly the same shape and size. One can be moved onto the other by sliding, turning or flipping it, so matching sides and angles are equal.",
+   [
+    "SSS and SAS",
+    "SSS: all three sides are equal. SAS: two sides and the angle between them are equal."
+   ],
+   [
+    "AAS and RHS",
+    "AAS: two angles and a side are equal, with the side in the same place in both triangles. RHS: both have a right angle, and the hypotenuse and one other side are equal."
+   ],
+   [
+    "Not enough",
+    "AAA is not a test: triangles with equal angles can be different sizes. Two sides and an angle that is not between them is not a test either: two different triangles can sometimes fit those measurements."
+   ]
+  ],
+  "remember": "Congruent triangles match in shape and size. Check them with SSS, SAS, AAS or RHS.",
+  "a": {
+   "q": "Triangle ABC has \\(AB = 5\\) cm, \\(BC = 7\\) cm and \\(\\angle B = 40^{\\circ}\\). Triangle PQR has \\(PQ = 5\\) cm, \\(QR = 7\\) cm and \\(\\angle Q = 40^{\\circ}\\). Which test shows they are congruent?",
+   "opts": [
+    "SAS",
+    "SSS",
+    "AAS",
+    "RHS"
+   ],
+   "why": "The equal angle is between the two equal sides in each triangle, so the test is SAS. SSS is tempting, but the third side of each triangle is not given.",
+   "clue": "Where does the angle sit compared with the two sides?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Triangle DEF has \\(DE = 6\\) cm, \\(EF = 4\\) cm and \\(\\angle D = 30^{\\circ}\\). Triangle XYZ has \\(XY = 6\\) cm, \\(YZ = 4\\) cm and \\(\\angle X = 30^{\\circ}\\). Are they shown to be congruent?",
+   "opts": [
+    "No, as the angle is not between the two sides",
+    "Yes, by SAS, as two sides and an angle are equal",
+    "Yes, by SSS, as the two given sides are equal",
+    "Yes, by AAS, as an angle and two sides match"
+   ],
+   "why": "The angle at D is formed by sides DE and DF, so it is not between DE and EF. Two sides and an angle that is not between them is not a test, and here two different triangles fit these measurements. SAS is tempting, but it needs the angle between the two given sides.",
+   "clue": "Which two sides meet to form the angle at D?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "SAS",
+    "also_right": []
+   },
+   "b": {
+    "best": "No, as the angle is not between the two sides",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. In (a) the 40° angle is between the two given sides in both triangles, so the test is SAS. In (b) the angle at D is not between DE and EF, and since 6 sin 30° = 3 < 4 < 6, two different triangles really do fit these measurements."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 14,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The example is the non-ambiguous case. The side opposite the 30° angle (EF = 9 cm) is longer than the adjacent side (DE = 6 cm), so only one triangle fits these measurements and DEF and XYZ really are congruent, just not by a listed test. A careful student could be misled that such triangles might differ. Use an ambiguous case instead, such as EF = YZ = 4 cm, where 6 sin 30° = 3 < 4 < 6 gives two possible triangles."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue 'Find the side that lies opposite the given angle' points students at the wrong feature. The key idea is that the angle is not between the two given sides. In this data, the side opposite the angle being the longer one is exactly what makes the triangle unique."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The example is the non-ambiguous case. The side opposite the 30° angle (EF = 9 cm) is longer than the adjacent side (DE = 6 cm), so only one triangle fits these measurements and DEF and XYZ really are congruent, just not by a listed test. A careful student could be misled that such triangles might differ. Use an ambiguous case instead, such as EF = YZ = 4 cm, where 6 sin 30° = 3 < 4 < 6 gives two possible triangles.",
+   "Question b, wording: The clue 'Find the side that lies opposite the given angle' points students at the wrong feature. The key idea is that the angle is not between the two given sides. In this data, the side opposite the angle being the longer one is exactly what makes the triangle unique."
+  ]
+ },
+ "final": {
+  "title": "Congruent triangles",
+  "card": [
+   "Congruent figures are exactly the same shape and size. One can be moved onto the other by sliding, turning or flipping it, so matching sides and angles are equal.",
+   [
+    "SSS and SAS",
+    "SSS: all three sides are equal. SAS: two sides and the angle between them are equal."
+   ],
+   [
+    "AAS and RHS",
+    "AAS: two angles and a side are equal, with the side in the same place in both triangles. RHS: both have a right angle, and the hypotenuse and one other side are equal."
+   ],
+   [
+    "Not enough",
+    "AAA is not a test: triangles with equal angles can be different sizes. Two sides and an angle that is not between them is not a test either: two different triangles can sometimes fit those measurements."
+   ]
+  ],
+  "remember": "Congruent triangles match in shape and size. Check them with SSS, SAS, AAS or RHS.",
+  "a": {
+   "q": "Triangle ABC has \\(AB = 5\\) cm, \\(BC = 7\\) cm and \\(\\angle B = 40^{\\circ}\\). Triangle PQR has \\(PQ = 5\\) cm, \\(QR = 7\\) cm and \\(\\angle Q = 40^{\\circ}\\). Which test shows they are congruent?",
+   "opts": [
+    "SAS",
+    "SSS",
+    "AAS",
+    "RHS"
+   ],
+   "why": "The equal angle is between the two equal sides in each triangle, so the test is SAS. SSS is tempting, but the third side of each triangle is not given.",
+   "clue": "Where does the angle sit compared with the two sides?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Triangle DEF has \\(DE = 6\\) cm, \\(EF = 4\\) cm and \\(\\angle D = 30^{\\circ}\\). Triangle XYZ has \\(XY = 6\\) cm, \\(YZ = 4\\) cm and \\(\\angle X = 30^{\\circ}\\). Are they shown to be congruent?",
+   "opts": [
+    "No, as the angle is not between the two sides",
+    "Yes, by SAS, as two sides and an angle are equal",
+    "Yes, by SSS, as the two given sides are equal",
+    "Yes, by AAS, as an angle and two sides match"
+   ],
+   "why": "The angle at D is formed by sides DE and DF, so it is not between DE and EF. Two sides and an angle that is not between them is not a test, and here two different triangles fit these measurements. SAS is tempting, but it needs the angle between the two given sides.",
+   "clue": "Which two sides meet to form the angle at D?"
+  }
+ },
+ "cleared_by": "recheck"
 }

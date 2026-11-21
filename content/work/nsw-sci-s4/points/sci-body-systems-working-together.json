@@ -12,8 +12,117 @@
    0.226
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: failed the content check, writing again",
+  "2026-11-20T12:45:00Z write: done",
+  "2026-11-20T12:53:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.01404,
+  "check": 0.0107
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches that damage to one body system, such as a blocked artery, affects the others: the organisation card covers how cells build into organ systems, and the circulatory card covers how blood moves, so both are related rather than the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Body systems working together",
+  "card": [
+   "Body systems do not work alone. Each one depends on others to do its job, so the body works as one whole.",
+   "The circulatory system carries blood to every part of the body. Blood brings oxygen and nutrients to cells and takes wastes away. Every other system needs this supply.",
+   "If one organ or system is damaged, other systems can be affected too. A blocked artery stops blood reaching part of the body, so the cells there get less oxygen and nutrients.",
+   "The cells that go short may work poorly or die. This can harm the organs they belong to and the whole body."
+  ],
+  "remember": "Body systems depend on each other, so damage in one place can affect the whole body.",
+  "a": {
+   "q": "Why can a blocked artery in the leg harm the leg muscles?",
+   "opts": [
+    "Muscle cells get too little oxygen and nutrients",
+    "The muscle cells cannot make any blood of their own",
+    "The leg bones stop supporting the muscles",
+    "The stomach cannot break down food for the muscles"
+   ],
+   "why": "Arteries carry blood to body parts. When one is blocked, the muscle cells get less oxygen and nutrients, so they work poorly. The stomach still breaks food down, but the products cannot reach the muscle cells without blood.",
+   "clue": "Think about what blood carries to cells."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam has a blocked artery that supplies his heart muscle. Which statement best explains why this affects his whole body?",
+   "opts": [
+    "The heart gets too little oxygen and pumps less blood",
+    "The heart stops making oxygen for the lungs to use",
+    "The heart cannot send nutrients to the stomach",
+    "The heart stops the blood vessels from carrying blood"
+   ],
+   "why": "The heart is also made of cells that need oxygen from blood. If its supply is cut, it may pump less well, and then every other system gets less blood. The heart does not make oxygen, so the second option is wrong.",
+   "clue": "The heart needs its own blood supply to pump blood to the rest of the body."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Muscle cells get too little oxygen and nutrients",
+   "also_right": []
+  },
+  "b": {
+   "best": "The heart gets too little oxygen and pumps less blood",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Body systems working together",
+  "card": [
+   "Body systems do not work alone. Each one depends on others to do its job, so the body works as one whole.",
+   "The circulatory system carries blood to every part of the body. Blood brings oxygen and nutrients to cells and takes wastes away. Every other system needs this supply.",
+   "If one organ or system is damaged, other systems can be affected too. A blocked artery stops blood reaching part of the body, so the cells there get less oxygen and nutrients.",
+   "The cells that go short may work poorly or die. This can harm the organs they belong to and the whole body."
+  ],
+  "remember": "Body systems depend on each other, so damage in one place can affect the whole body.",
+  "a": {
+   "q": "Why can a blocked artery in the leg harm the leg muscles?",
+   "opts": [
+    "Muscle cells get too little oxygen and nutrients",
+    "The muscle cells cannot make any blood of their own",
+    "The leg bones stop supporting the muscles",
+    "The stomach cannot break down food for the muscles"
+   ],
+   "why": "Arteries carry blood to body parts. When one is blocked, the muscle cells get less oxygen and nutrients, so they work poorly. The stomach still breaks food down, but the products cannot reach the muscle cells without blood.",
+   "clue": "Think about what blood carries to cells."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam has a blocked artery that supplies his heart muscle. Which statement best explains why this affects his whole body?",
+   "opts": [
+    "The heart gets too little oxygen and pumps less blood",
+    "The heart stops making oxygen for the lungs to use",
+    "The heart cannot send nutrients to the stomach",
+    "The heart stops the blood vessels from carrying blood"
+   ],
+   "why": "The heart is also made of cells that need oxygen from blood. If its supply is cut, it may pump less well, and then every other system gets less blood. The heart does not make oxygen, so the second option is wrong.",
+   "clue": "The heart needs its own blood supply to pump blood to the rest of the body."
+  }
+ },
+ "cleared_by": "checker"
 }

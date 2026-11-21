@@ -16,8 +16,220 @@
    0.23
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: flagged",
+  "2026-11-20T12:53:23Z fix: suggested",
+  "2026-11-20T13:37:05Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.00575,
+  "check": 0.00915,
+  "fix": 0.01741,
+  "recheck": 0.007
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers bicameral structure and how both houses check bills, but it does not teach that the House of Representatives forms government and starts most laws or that the Senate represents the states, and its Legal Studies depth goes beyond Stage 5.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The two houses of federal parliament",
+  "card": [
+   "The federal parliament has two houses: the House of Representatives and the Senate. A bill (a proposed law) usually has to pass both before it becomes law.",
+   [
+    "House of Representatives",
+    "the party or group of parties with the support of most of its members forms the government. Most bills start here."
+   ],
+   [
+    "Senate",
+    "it reviews bills that come from the House of Representatives and can pass, change or reject them. Each state has the same number of senators, so it represents the states."
+   ],
+   "Because the government may not hold most seats in the Senate, it can need support from other parties there to pass its bills."
+  ],
+  "remember": "The House of Representatives forms the government. The Senate reviews bills and represents the states.",
+  "a": {
+   "q": "Which house of federal parliament is where the government is formed?",
+   "opts": [
+    "The House of Representatives",
+    "The Senate",
+    "Both houses, by a joint vote",
+    "Neither, as the High Court forms it"
+   ],
+   "why": "The party or group with the support of most members of the House of Representatives forms the government. The Senate reviews bills and represents the states, but it does not form the government.",
+   "clue": "Think about which house the party with most members controls."
+  },
+  "b": {
+   "d": 3,
+   "q": "A bill from the government passes the House of Representatives, but the Senate votes to change it. What does this show about the Senate?",
+   "opts": [
+    "It reviews bills and can change them",
+    "It forms the government after each election",
+    "It starts every bill in federal parliament",
+    "It has the same number of members from each party"
+   ],
+   "why": "The Senate reviews bills from the House of Representatives, and it can pass, change or reject them. Forming the government is a job of the House of Representatives, so that option is wrong even though the Senate is a powerful house.",
+   "clue": "What does the Senate do with a bill it receives?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The House of Representatives",
+   "also_right": []
+  },
+  "b": {
+   "best": "It reviews bills and can change them",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says the Senate 'votes to change' the bill, and the right option is the only one that repeats 'change', so a student can match the words without knowing what the Senate does."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and the intended answers are correct. In question b, the right option repeats 'change' from the stem, which gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The stem says the Senate 'votes to change' the bill, and the right option is the only one that repeats 'change', so a student can match the words without knowing what the Senate does."
+ ],
+ "proposal": {
+  "title": "The two houses of federal parliament",
+  "card": [
+   "The federal parliament has two houses: the House of Representatives and the Senate. A bill (a proposed law) usually has to pass both before it becomes law.",
+   [
+    "House of Representatives",
+    "the party or group of parties with the support of most of its members forms the government. Most bills start here."
+   ],
+   [
+    "Senate",
+    "it reviews bills that come from the House of Representatives and can pass, change or reject them. Each state has the same number of senators, so it represents the states."
+   ],
+   "Because the government may not hold most seats in the Senate, it can need support from other parties there to pass its bills."
+  ],
+  "remember": "The House of Representatives forms the government. The Senate reviews bills and represents the states.",
+  "a": {
+   "q": "Which house of federal parliament is where the government is formed?",
+   "opts": [
+    "The House of Representatives",
+    "The Senate",
+    "Both houses, by a joint vote",
+    "Neither, as the High Court forms it"
+   ],
+   "why": "The party or group with the support of most members of the House of Representatives forms the government. The Senate reviews bills and represents the states, but it does not form the government.",
+   "clue": "Think about which house the party with most members controls."
+  },
+  "b": {
+   "d": 3,
+   "q": "A government bill passes the House of Representatives. Senators then vote to add a new rule to the bill before they pass it. What does this show about the Senate?",
+   "opts": [
+    "It checks bills from the other house and can alter them",
+    "It forms the government after each federal election",
+    "It starts most of the bills in federal parliament",
+    "It has the same number of senators from each party"
+   ],
+   "why": "The Senate reviews bills that come from the House of Representatives, and it can pass, change or reject them. Adding a rule is a change made during that review. Most bills start in the House of Representatives, not the Senate, so the option about starting bills is wrong.",
+   "clue": "Where did this bill come from before it reached the Senate?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:05Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The House of Representatives",
+    "also_right": []
+   },
+   "b": {
+    "best": "It checks bills from the other house and can alter them",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:05Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says the Senate 'votes to change' the bill, and the right option is the only one that repeats 'change', so a student can match the words without knowing what the Senate does."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The stem says the Senate 'votes to change' the bill, and the right option is the only one that repeats 'change', so a student can match the words without knowing what the Senate does."
+  ]
+ },
+ "final": {
+  "title": "The two houses of federal parliament",
+  "card": [
+   "The federal parliament has two houses: the House of Representatives and the Senate. A bill (a proposed law) usually has to pass both before it becomes law.",
+   [
+    "House of Representatives",
+    "the party or group of parties with the support of most of its members forms the government. Most bills start here."
+   ],
+   [
+    "Senate",
+    "it reviews bills that come from the House of Representatives and can pass, change or reject them. Each state has the same number of senators, so it represents the states."
+   ],
+   "Because the government may not hold most seats in the Senate, it can need support from other parties there to pass its bills."
+  ],
+  "remember": "The House of Representatives forms the government. The Senate reviews bills and represents the states.",
+  "a": {
+   "q": "Which house of federal parliament is where the government is formed?",
+   "opts": [
+    "The House of Representatives",
+    "The Senate",
+    "Both houses, by a joint vote",
+    "Neither, as the High Court forms it"
+   ],
+   "why": "The party or group with the support of most members of the House of Representatives forms the government. The Senate reviews bills and represents the states, but it does not form the government.",
+   "clue": "Think about which house the party with most members controls."
+  },
+  "b": {
+   "d": 3,
+   "q": "A government bill passes the House of Representatives. Senators then vote to add a new rule to the bill before they pass it. What does this show about the Senate?",
+   "opts": [
+    "It checks bills from the other house and can alter them",
+    "It forms the government after each federal election",
+    "It starts most of the bills in federal parliament",
+    "It has the same number of senators from each party"
+   ],
+   "why": "The Senate reviews bills that come from the House of Representatives, and it can pass, change or reject them. Adding a rule is a change made during that review. Most bills start in the House of Representatives, not the Senate, so the option about starting bills is wrong.",
+   "clue": "Where did this bill come from before it reached the Senate?"
+  }
+ },
+ "cleared_by": "recheck"
 }

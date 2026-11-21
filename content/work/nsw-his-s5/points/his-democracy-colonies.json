@@ -12,8 +12,215 @@
    0.23
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:51Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:52Z write: done",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:23:40Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.01215,
+  "check": 0.01454,
+  "fix": 0.01894
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches the 1850s colonial parliaments, secret ballot and male suffrage in Australia: the Federation point covers the 1901 union of the colonies, and the 1763 point covers the thirteen American colonies.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Democracy in the colonies",
+  "card": [
+   [
+    "Own parliaments",
+    "In the 1850s, colonies such as New South Wales, Victoria, South Australia and Tasmania gained their own parliaments. These made laws for the colony, instead of the British government doing it all."
+   ],
+   [
+    "Votes for men",
+    "Most adult men in the colonies could vote. This was a wider right to vote than in Britain at the time. Women could not vote."
+   ],
+   [
+    "Secret ballot",
+    "In a secret ballot, voters mark their choice in private. Before this, people often called out their vote in public, so others could pressure them. Victoria and South Australia used the secret ballot in 1856, among the first places in the world to do so."
+   ],
+   [
+    "Why it mattered",
+    "Self-government, a wide male vote and a secret ballot meant ordinary men had more say in who made the laws."
+   ]
+  ],
+  "remember": "The 1850s colonies gained parliaments, gave most men the vote and used the secret ballot.",
+  "a": {
+   "q": "What was the main purpose of the secret ballot?",
+   "opts": [
+    "To let voters choose without pressure from others",
+    "To let women vote in colonial elections for the first time",
+    "To give the colonies control over their own laws",
+    "To make voting compulsory for all adult men"
+   ],
+   "why": "A secret ballot means no one can see how a person voted, so they cannot be pressured. Gaining parliaments is a different change, and women could not vote in the 1850s.",
+   "clue": "Think about what changed from calling out a vote in public."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom is a farm worker in Victoria in 1857. His boss wants him to vote for a certain candidate. How did the secret ballot protect Tom's choice?",
+   "opts": [
+    "He marked his vote in private, so his boss could not see it",
+    "The British government counted his vote on his behalf",
+    "He was excused from voting if his boss disagreed",
+    "His vote was announced aloud so everyone knew it was fair"
+   ],
+   "why": "With a secret ballot Tom's choice stayed private, so his boss could not check it or punish him. Calling votes out in public was the old method that allowed pressure.",
+   "clue": "Who can see a vote that is marked in private?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "To let voters choose without pressure from others",
+   "also_right": []
+  },
+  "b": {
+   "best": "He marked his vote in private, so his boss could not see it",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Who can see a vote that is marked in private?' repeats the exact wording of the right option ('marked his vote in private'), so a student can match the words without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts check out and both questions have one clear right answer. Question b's clue repeats the right option's wording ('marked ... in private'), which gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue 'Who can see a vote that is marked in private?' repeats the exact wording of the right option ('marked his vote in private'), so a student can match the words without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Democracy in the colonies",
+  "card": [
+   [
+    "Own parliaments",
+    "In the 1850s, colonies such as New South Wales, Victoria, South Australia and Tasmania gained their own parliaments. These made laws for the colony, instead of the British government doing it all."
+   ],
+   [
+    "Votes for men",
+    "By the late 1850s, South Australia, Victoria and New South Wales let most adult men vote. This was a wider right to vote than in Britain at the time. Women could not vote."
+   ],
+   [
+    "Secret ballot",
+    "In a secret ballot, voters mark their choice in private. Before this, people often called out their vote in public, so others could pressure them. Victoria and South Australia used the secret ballot in 1856, among the first places in the world to do so."
+   ],
+   [
+    "Why it mattered",
+    "Self-government, a wide male vote and a secret ballot meant ordinary men had more say in who made the laws."
+   ]
+  ],
+  "remember": "The 1850s colonies gained parliaments, gave most men the vote and used the secret ballot.",
+  "a": {
+   "q": "What was the main purpose of the secret ballot?",
+   "opts": [
+    "To let voters choose without pressure from others",
+    "To let women vote in colonial elections for the first time",
+    "To give the colonies control over their own laws",
+    "To make voting compulsory for all adult men"
+   ],
+   "why": "A secret ballot means no one can see how a person voted, so they cannot be pressured. Gaining parliaments is a different change, and women could not vote in the 1850s.",
+   "clue": "Think about what changed from calling out a vote in public."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom is a farm worker in Victoria in 1857. His boss wants him to vote for a certain candidate. How did the secret ballot protect Tom's choice?",
+   "opts": [
+    "He marked his vote in private, so his boss could not see it",
+    "The British government counted his vote on his behalf",
+    "He was excused from voting if his boss disagreed",
+    "His vote was announced aloud so everyone knew it was fair"
+   ],
+   "why": "With a secret ballot Tom's choice stayed private, so his boss could not check it or punish him. Calling votes out in public was the old method that allowed pressure.",
+   "clue": "Think about what Tom's boss could find out after the election."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:40Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Who can see a vote that is marked in private?' repeats the exact wording of the right option ('marked his vote in private'), so a student can match the words without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue 'Who can see a vote that is marked in private?' repeats the exact wording of the right option ('marked his vote in private'), so a student can match the words without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "Democracy in the colonies",
+  "card": [
+   [
+    "Own parliaments",
+    "In the 1850s, colonies such as New South Wales, Victoria, South Australia and Tasmania gained their own parliaments. These made laws for the colony, instead of the British government doing it all."
+   ],
+   [
+    "Votes for men",
+    "By the late 1850s, South Australia, Victoria and New South Wales let most adult men vote. This was a wider right to vote than in Britain at the time. Women could not vote."
+   ],
+   [
+    "Secret ballot",
+    "In a secret ballot, voters mark their choice in private. Before this, people often called out their vote in public, so others could pressure them. Victoria and South Australia used the secret ballot in 1856, among the first places in the world to do so."
+   ],
+   [
+    "Why it mattered",
+    "Self-government, a wide male vote and a secret ballot meant ordinary men had more say in who made the laws."
+   ]
+  ],
+  "remember": "The 1850s colonies gained parliaments, gave most men the vote and used the secret ballot.",
+  "a": {
+   "q": "What was the main purpose of the secret ballot?",
+   "opts": [
+    "To let voters choose without pressure from others",
+    "To let women vote in colonial elections for the first time",
+    "To give the colonies control over their own laws",
+    "To make voting compulsory for all adult men"
+   ],
+   "why": "A secret ballot means no one can see how a person voted, so they cannot be pressured. Gaining parliaments is a different change, and women could not vote in the 1850s.",
+   "clue": "Think about what changed from calling out a vote in public."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom is a farm worker in Victoria in 1857. His boss wants him to vote for a certain candidate. How did the secret ballot protect Tom's choice?",
+   "opts": [
+    "He marked his vote in private, so his boss could not see it",
+    "The British government counted his vote on his behalf",
+    "He was excused from voting if his boss disagreed",
+    "His vote was announced aloud so everyone knew it was fair"
+   ],
+   "why": "With a secret ballot Tom's choice stayed private, so his boss could not check it or punish him. Calling votes out in public was the old method that allowed pressure.",
+   "clue": "Think about what Tom's boss could find out after the election."
+  }
+ },
+ "cleared_by": "auto"
 }

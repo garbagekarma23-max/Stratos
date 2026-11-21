@@ -24,8 +24,384 @@
    0.291
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 may adapt mat-gradient-as-rate-change, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:57Z confirm: Claude Opus 5.5 may adapt mat-gradient-as-rate-change, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt mat-gradient-as-rate-change (3 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting mat-gradient-as-rate-change on the next run",
+  "2026-11-20T14:12:39Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0005,
+  "confirm": 0.01564,
+  "adapt": 0.0069,
+  "check": 0.00868
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-gradient-as-rate-change",
+  "changes": [
+   "Add a sentence stating that a straight line has the same gradient at every point, so its rate of change is constant."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches gradient as a rate at a suitable depth, but it does not say that a straight-line graph means a constant rate, so one sentence needs adding.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-gradient-as-rate-change",
+  "changes": [
+   "Add a plain statement that a straight-line graph means the rate of change is constant, the same at every point, so any two points on the line give the same rate."
+  ],
+  "sure": "medium",
+  "reason": "The bank point already teaches gradient as a rate, at a level suited to Years 9 and 10, and its tank-filling question fits, but it never says outright that a straight line means a constant rate, which this brief stresses.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-gradient-as-rate-change",
+  "changes": [
+   "Add a plain statement that a straight-line graph means the rate of change is constant, so any two points on the line give the same rate.",
+   "Replace question a, a bare gradient from two points, with a question about a constant rate in context, such as what a straight-line graph tells you about the rate.",
+   "Keep the working of rise and run brief, since gradient is taught before this course, and lead with the rate and its units."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "title",
+   "card1",
+   "card2",
+   "card3",
+   "remember",
+   "a.q",
+   "a.opt1",
+   "a.opt2",
+   "a.opt3",
+   "a.opt4",
+   "a.why",
+   "a.clue",
+   "b.q",
+   "b.why"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches gradient as a rate with the right sums, and its graph data matches its card. But it never says a straight line means a constant rate, which is the point of the brief, and question a is a bare gradient sum with no rate in it.",
+   "item": "824f0c88896613f9",
+   "result": "decided",
+   "saved": {
+    "id": "mat-constant-rates-change",
+    "title": "Constant rates of change",
+    "brief": "921198d756c2",
+    "shortlist": [
+     [
+      "mat-gradient-as-rate-change",
+      0.397
+     ],
+     [
+      "mat-rates-context",
+      0.369
+     ],
+     [
+      "mat-average-rate-change",
+      0.366
+     ],
+     [
+      "mat-rates-best-buys",
+      0.317
+     ],
+     [
+      "mat-linear-models-2",
+      0.291
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.0005,
+     "confirm": 0.01564
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-gradient-as-rate-change",
+     "changes": [
+      "Add a sentence stating that a straight line has the same gradient at every point, so its rate of change is constant."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches gradient as a rate at a suitable depth, but it does not say that a straight-line graph means a constant rate, so one sentence needs adding.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-gradient-as-rate-change",
+     "changes": [
+      "Add a plain statement that a straight-line graph means the rate of change is constant, the same at every point, so any two points on the line give the same rate."
+     ],
+     "sure": "medium",
+     "reason": "The bank point already teaches gradient as a rate, at a level suited to Years 9 and 10, and its tank-filling question fits, but it never says outright that a straight line means a constant rate, which this brief stresses.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "ff34d33df15b7729"
+  }
+ ],
+ "draft": {
+  "title": "Constant rates of change",
+  "card": [
+   "A straight-line graph means the rate of change is constant. Any two points on the line give the same rate.",
+   "The rate is the gradient of the line. It is the change in \\(y\\) for each 1 unit of \\(x\\). Its unit is the \\(y\\) unit per \\(x\\) unit, such as litres per minute.",
+   "To find it, pick two points. \\(\\text{Rate} = \\text{rise} \\div \\text{run}\\), with both changes taken in the same order.",
+   "Example: a graph of money earned ($) against hours worked passes through (2, 30) and (5, 75). \\(\\text{Rise} = 75 - 30 = 45\\). \\(\\text{Run} = 5 - 2 = 3\\). \\(\\text{Gradient} = 45 \\div 3 = 15\\), so the rate is $15 per hour."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A line graph of money earned in dollars against hours worked. The line passes through \\((2, 30)\\) and \\((5, 75)\\). From \\((2, 30)\\), a run of 3 across and a rise of 45 up reach \\((5, 75)\\), so the gradient is \\(45 \\div 3 = 15\\), or $15 per hour.",
+    "x": {
+     "min": 0,
+     "max": 6.5,
+     "label": "Hours",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 100,
+     "label": "Money ($)",
+     "step": 20
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "15x",
+      "domain": [
+       0,
+       6.5
+      ]
+     },
+     {
+      "type": "arrow",
+      "from": [
+       2,
+       30
+      ],
+      "to": [
+       5,
+       30
+      ],
+      "label": "run 3",
+      "pos": "below"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       5,
+       30
+      ],
+      "to": [
+       5,
+       75
+      ],
+      "label": "rise 45",
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       30
+      ],
+      "label": "\\((2, 30)\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       75
+      ],
+      "label": "\\((5, 75)\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "A straight line means a constant rate of change. The rate is the gradient, in \\(y\\) units per \\(x\\) unit.",
+  "a": {
+   "q": "A graph of distance against time is a straight line. What does this tell you about the speed?",
+   "opts": [
+    "It is constant",
+    "It keeps increasing",
+    "It keeps decreasing",
+    "It is zero"
+   ],
+   "why": "A straight line has the same gradient everywhere, so the rate of change is constant. Any two points on the line give the same speed.",
+   "clue": "Think about the gradient of a straight line."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya fills a pool. The graph of litres in the pool against minutes is a straight line through (2, 50) and (6, 130). What is the rate of filling?",
+   "opts": [
+    "20 litres per minute",
+    "80 litres per minute",
+    "25 litres per minute",
+    "0.05 litres per minute"
+   ],
+   "why": "The rate is constant, so use any two points. \\(\\text{Rise} = 130 - 50 = 80\\) litres and \\(\\text{run} = 6 - 2 = 4\\) minutes, so the rate is \\(80 \\div 4 = 20\\) litres per minute. The answer 80 is only the rise.",
+   "clue": "Find the rise and the run first, then divide."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It is constant",
+   "also_right": []
+  },
+  "b": {
+   "best": "20 litres per minute",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Constant rates of change",
+  "card": [
+   "A straight-line graph means the rate of change is constant. Any two points on the line give the same rate.",
+   "The rate is the gradient of the line. It is the change in \\(y\\) for each 1 unit of \\(x\\). Its unit is the \\(y\\) unit per \\(x\\) unit, such as litres per minute.",
+   "To find it, pick two points. \\(\\text{Rate} = \\text{rise} \\div \\text{run}\\), with both changes taken in the same order.",
+   "Example: a graph of money earned ($) against hours worked passes through (2, 30) and (5, 75). \\(\\text{Rise} = 75 - 30 = 45\\). \\(\\text{Run} = 5 - 2 = 3\\). \\(\\text{Gradient} = 45 \\div 3 = 15\\), so the rate is $15 per hour."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A line graph of money earned in dollars against hours worked. The line passes through \\((2, 30)\\) and \\((5, 75)\\). From \\((2, 30)\\), a run of 3 across and a rise of 45 up reach \\((5, 75)\\), so the gradient is \\(45 \\div 3 = 15\\), or $15 per hour.",
+    "x": {
+     "min": 0,
+     "max": 6.5,
+     "label": "Hours",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 100,
+     "label": "Money ($)",
+     "step": 20
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "15x",
+      "domain": [
+       0,
+       6.5
+      ]
+     },
+     {
+      "type": "arrow",
+      "from": [
+       2,
+       30
+      ],
+      "to": [
+       5,
+       30
+      ],
+      "label": "run 3",
+      "pos": "below"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       5,
+       30
+      ],
+      "to": [
+       5,
+       75
+      ],
+      "label": "rise 45",
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       30
+      ],
+      "label": "\\((2, 30)\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       75
+      ],
+      "label": "\\((5, 75)\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "A straight line means a constant rate of change. The rate is the gradient, in \\(y\\) units per \\(x\\) unit.",
+  "a": {
+   "q": "A graph of distance against time is a straight line. What does this tell you about the speed?",
+   "opts": [
+    "It is constant",
+    "It keeps increasing",
+    "It keeps decreasing",
+    "It is zero"
+   ],
+   "why": "A straight line has the same gradient everywhere, so the rate of change is constant. Any two points on the line give the same speed.",
+   "clue": "Think about the gradient of a straight line."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya fills a pool. The graph of litres in the pool against minutes is a straight line through (2, 50) and (6, 130). What is the rate of filling?",
+   "opts": [
+    "20 litres per minute",
+    "80 litres per minute",
+    "25 litres per minute",
+    "0.05 litres per minute"
+   ],
+   "why": "The rate is constant, so use any two points. \\(\\text{Rise} = 130 - 50 = 80\\) litres and \\(\\text{run} = 6 - 2 = 4\\) minutes, so the rate is \\(80 \\div 4 = 20\\) litres per minute. The answer 80 is only the rise.",
+   "clue": "Find the rise and the run first, then divide."
+  }
+ }
 }

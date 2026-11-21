@@ -8,8 +8,197 @@
    0.392
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:51Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:52Z write: done",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:23:40Z autoreview: cleared with the fix (a wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00649,
+  "check": 0.01471,
+  "fix": 0.01873
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers only the siege of Tobruk, while the new point also requires the failed defence of Greece and Crete in 1941, so it is narrower than the brief and no bank point teaches the whole idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "North Africa and Crete",
+  "card": [
+   "In 1940 and 1941, Australian soldiers fought in North Africa as part of the British Empire's forces. They fought Italian and then German troops in Libya and Egypt.",
+   [
+    "Tobruk",
+    "Tobruk was a port in Libya. In 1941, Australians held it for months while German and Italian forces surrounded it. This is called the siege of Tobruk."
+   ],
+   [
+    "Greece and Crete",
+    "In April 1941, Australians were sent to help defend Greece, and then Crete, a Greek island. German forces won both campaigns, and the Allied troops had to withdraw."
+   ],
+   "Many Australians were killed, wounded or captured in these campaigns. They were fought in the Mediterranean region, far from Australia."
+  ],
+  "remember": "In 1941 Australians held Tobruk in North Africa, but could not hold Greece or Crete.",
+  "a": {
+   "q": "What happened to the Australians who fought in Greece and Crete in 1941?",
+   "opts": [
+    "German forces won, and the Allies had to withdraw",
+    "They held the islands against German attacks",
+    "They were withdrawn after Italy surrendered",
+    "They captured the islands from Italian forces"
+   ],
+   "why": "Germany won the campaigns in Greece and Crete, so the Allied troops had to withdraw. Holding out against attack describes Tobruk, not Greece and Crete.",
+   "clue": "Think about which side won these campaigns."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which statement best compares the siege of Tobruk with the defence of Greece and Crete?",
+   "opts": [
+    "Tobruk was held for months, but Greece and Crete were lost",
+    "Greece and Crete were held, but Tobruk was lost",
+    "All three places were lost to German forces in 1941",
+    "All three places were held until the war ended"
+   ],
+   "why": "At Tobruk, Australians held a surrounded port for months in 1941. In Greece and Crete, German forces won and the Allies withdrew. The option saying all three were lost is tempting, but it ignores that Tobruk held.",
+   "clue": "Which place was a siege that the defenders survived?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "German forces won, and the Allies had to withdraw",
+   "also_right": []
+  },
+  "b": {
+   "best": "Tobruk was held for months, but Greece and Crete were lost",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Two distractors ('They held the islands…', 'They captured the islands…') call Greece and Crete 'the islands', but Greece is mainly a mainland country and the card describes only Crete as an island. This could leave students thinking Greece is an island."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts check out and both questions have one clear right answer. In question a, two distractors wrongly call Greece and Crete 'the islands', though only Crete is an island."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: Two distractors ('They held the islands…', 'They captured the islands…') call Greece and Crete 'the islands', but Greece is mainly a mainland country and the card describes only Crete as an island. This could leave students thinking Greece is an island."
+ ],
+ "proposal": {
+  "title": "North Africa and Crete",
+  "card": [
+   "In 1940 and 1941, Australian soldiers fought in North Africa as part of the British Empire's forces. They fought Italian and then German troops in Libya and Egypt.",
+   [
+    "Tobruk",
+    "Tobruk was a port in Libya. In 1941, Australians held it for months while German and Italian forces surrounded it. This is called the siege of Tobruk."
+   ],
+   [
+    "Greece and Crete",
+    "In April 1941, Germany invaded Greece. Australians helped defend mainland Greece and then Crete, a Greek island. German forces won both campaigns, and the Allied troops had to withdraw."
+   ],
+   "Many Australians were killed, wounded or captured in these campaigns. They were fought in the Mediterranean region, far from Australia."
+  ],
+  "remember": "In 1941 Australians held Tobruk in North Africa, but could not hold Greece or Crete.",
+  "a": {
+   "q": "What happened to the Australians who fought in Greece and Crete in 1941?",
+   "opts": [
+    "German forces won, and the Allies had to withdraw",
+    "They held both places against German attacks",
+    "They were withdrawn after Italy surrendered",
+    "They captured both places from Italian forces"
+   ],
+   "why": "Germany won the campaigns in Greece and Crete, so the Allied troops had to withdraw. Holding out against attack describes Tobruk, not Greece and Crete.",
+   "clue": "Think about which side won these campaigns."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which statement best compares the siege of Tobruk with the defence of Greece and Crete?",
+   "opts": [
+    "Tobruk was held for months, but Greece and Crete were lost",
+    "Greece and Crete were held, but Tobruk was lost",
+    "All three places were lost to German forces in 1941",
+    "All three places were held until the war ended"
+   ],
+   "why": "At Tobruk, Australians held a surrounded port for months in 1941. In Greece and Crete, German forces won and the Allies withdrew. The option saying all three were lost is tempting, but it ignores that Tobruk held.",
+   "clue": "Which place was a siege that the defenders survived?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:40Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Two distractors ('They held the islands…', 'They captured the islands…') call Greece and Crete 'the islands', but Greece is mainly a mainland country and the card describes only Crete as an island. This could leave students thinking Greece is an island."
+   }
+  ],
+  "flags": [
+   "Question a, wording: Two distractors ('They held the islands…', 'They captured the islands…') call Greece and Crete 'the islands', but Greece is mainly a mainland country and the card describes only Crete as an island. This could leave students thinking Greece is an island."
+  ]
+ },
+ "final": {
+  "title": "North Africa and Crete",
+  "card": [
+   "In 1940 and 1941, Australian soldiers fought in North Africa as part of the British Empire's forces. They fought Italian and then German troops in Libya and Egypt.",
+   [
+    "Tobruk",
+    "Tobruk was a port in Libya. In 1941, Australians held it for months while German and Italian forces surrounded it. This is called the siege of Tobruk."
+   ],
+   [
+    "Greece and Crete",
+    "In April 1941, Germany invaded Greece. Australians helped defend mainland Greece and then Crete, a Greek island. German forces won both campaigns, and the Allied troops had to withdraw."
+   ],
+   "Many Australians were killed, wounded or captured in these campaigns. They were fought in the Mediterranean region, far from Australia."
+  ],
+  "remember": "In 1941 Australians held Tobruk in North Africa, but could not hold Greece or Crete.",
+  "a": {
+   "q": "What happened to the Australians who fought in Greece and Crete in 1941?",
+   "opts": [
+    "German forces won, and the Allies had to withdraw",
+    "They held both places against German attacks",
+    "They were withdrawn after Italy surrendered",
+    "They captured both places from Italian forces"
+   ],
+   "why": "Germany won the campaigns in Greece and Crete, so the Allied troops had to withdraw. Holding out against attack describes Tobruk, not Greece and Crete.",
+   "clue": "Think about which side won these campaigns."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which statement best compares the siege of Tobruk with the defence of Greece and Crete?",
+   "opts": [
+    "Tobruk was held for months, but Greece and Crete were lost",
+    "Greece and Crete were held, but Tobruk was lost",
+    "All three places were lost to German forces in 1941",
+    "All three places were held until the war ended"
+   ],
+   "why": "At Tobruk, Australians held a surrounded port for months in 1941. In Greece and Crete, German forces won and the Allies withdrew. The option saying all three were lost is tempting, but it ignores that Tobruk held.",
+   "clue": "Which place was a siege that the defenders survived?"
+  }
+ },
+ "cleared_by": "auto"
 }

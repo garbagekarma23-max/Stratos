@@ -12,8 +12,115 @@
    0.206
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:45Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:49Z write: done",
+  "2026-11-20T12:44:54Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.00642,
+  "check": 0.00818
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point explains what causes tropical cyclones: the flood point only defines a cyclone and covers floods and storm surges, and the hazard point covers what makes a natural hazard in general.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "What causes tropical cyclones",
+  "card": [
+   "A tropical cyclone is a large, spinning storm with very strong winds and heavy rain. It forms over warm tropical seas.",
+   "Warm sea water evaporates, so the air above it becomes warm and moist. This air rises.",
+   "As the moist air rises, it cools and forms thick storm clouds. More warm, moist air flows in below to replace it, and the storm keeps being fed.",
+   "The Earth's spin makes the storm turn. A cyclone usually weakens once it moves over cooler water or over land, because the warm sea no longer feeds it."
+  ],
+  "remember": "Warm sea and rising moist air feed a spinning storm. Cut off from the warm sea, it weakens.",
+  "a": {
+   "q": "Why does a warm tropical sea help a cyclone to form?",
+   "opts": [
+    "It adds warm, moist air that rises and feeds the storm",
+    "It makes the air above it cold and dry and pushes it down",
+    "It stops the Earth's spin so the storm can stay still",
+    "It carries the storm clouds in from the cooler land"
+   ],
+   "why": "Warm water evaporates into the air above it. This warm, moist air rises and feeds the storm. Cold, dry air would not give the storm the moisture it needs.",
+   "clue": "Think about what warm water does to the air above it."
+  },
+  "b": {
+   "d": 3,
+   "q": "A cyclone off the coast of Queensland moves inland over dry land. What is most likely to happen to it, and why?",
+   "opts": [
+    "It weakens, because it is cut off from the warm sea",
+    "It strengthens, because the land is warmer than the sea",
+    "It weakens, because the Earth's spin stops over land",
+    "It strengthens, because dry air rises faster than moist air"
+   ],
+   "why": "A cyclone is fed by warm, moist air rising from a warm sea. Over land it loses that supply, so it usually weakens. The Earth's spin does not stop over land, so that reason is wrong.",
+   "clue": "What feeds the storm, and is it still there over land?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It adds warm, moist air that rises and feeds the storm",
+   "also_right": []
+  },
+  "b": {
+   "best": "It weakens, because it is cut off from the warm sea",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "What causes tropical cyclones",
+  "card": [
+   "A tropical cyclone is a large, spinning storm with very strong winds and heavy rain. It forms over warm tropical seas.",
+   "Warm sea water evaporates, so the air above it becomes warm and moist. This air rises.",
+   "As the moist air rises, it cools and forms thick storm clouds. More warm, moist air flows in below to replace it, and the storm keeps being fed.",
+   "The Earth's spin makes the storm turn. A cyclone usually weakens once it moves over cooler water or over land, because the warm sea no longer feeds it."
+  ],
+  "remember": "Warm sea and rising moist air feed a spinning storm. Cut off from the warm sea, it weakens.",
+  "a": {
+   "q": "Why does a warm tropical sea help a cyclone to form?",
+   "opts": [
+    "It adds warm, moist air that rises and feeds the storm",
+    "It makes the air above it cold and dry and pushes it down",
+    "It stops the Earth's spin so the storm can stay still",
+    "It carries the storm clouds in from the cooler land"
+   ],
+   "why": "Warm water evaporates into the air above it. This warm, moist air rises and feeds the storm. Cold, dry air would not give the storm the moisture it needs.",
+   "clue": "Think about what warm water does to the air above it."
+  },
+  "b": {
+   "d": 3,
+   "q": "A cyclone off the coast of Queensland moves inland over dry land. What is most likely to happen to it, and why?",
+   "opts": [
+    "It weakens, because it is cut off from the warm sea",
+    "It strengthens, because the land is warmer than the sea",
+    "It weakens, because the Earth's spin stops over land",
+    "It strengthens, because dry air rises faster than moist air"
+   ],
+   "why": "A cyclone is fed by warm, moist air rising from a warm sea. Over land it loses that supply, so it usually weakens. The Earth's spin does not stop over land, so that reason is wrong.",
+   "clue": "What feeds the storm, and is it still there over land?"
+  }
+ },
+ "cleared_by": "checker"
 }

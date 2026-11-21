@@ -12,8 +12,163 @@
    0.231
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: failed the content check, writing again",
+  "2026-11-20T12:44:56Z write: done",
+  "2026-11-20T12:53:25Z check: flagged",
+  "2026-11-20T12:59:59Z fix: suggested",
+  "2026-11-20T14:39:25Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.01391,
+  "check": 0.01184,
+  "fix": 0.02135
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card explains Care for Country and its use in land and fire management, but it does not teach planning diverse communities or restoring waterways and native plants in new suburbs, and its NSW use is at Year 11 depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Planning with Country and diverse communities",
+  "card": [
+   "Aboriginal and Torres Strait Islander peoples have cared for Country for tens of thousands of years. Country means the land, waters, plants, animals and sky, and the connections between them.",
+   "This knowledge can guide how a city is planned. Planners can work with local Aboriginal communities and Elders to learn how land and water have been cared for in that place.",
+   "In a new suburb, this can mean restoring a creek instead of piping it underground. It can also mean planting native species that suit the local soil and climate.",
+   "Planning also needs to include the views of other diverse communities, such as migrants, older people and people with disability. Each group may need different services and spaces."
+  ],
+  "remember": "Good planning listens to many communities, including Aboriginal knowledges of caring for Country.",
+  "a": {
+   "q": "Which action is an example of planning a new suburb with Aboriginal knowledges of caring for Country?",
+   "opts": [
+    "Restoring a creek and planting local native species",
+    "Building a larger shopping centre beside the main road",
+    "Covering a creek with pipes to make more room for houses",
+    "Planting imported trees chosen for fast growth"
+   ],
+   "why": "Restoring a creek and planting local native species uses knowledge about how a place has been cared for over a long time. Piping a creek removes the waterway, so it does not care for Country.",
+   "clue": "Which action looks after the local waters and plants?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A council plans a new suburb in Western Sydney. It wants the plan to include Aboriginal knowledges. Which step would best do this?",
+   "opts": [
+    "Work with local Aboriginal Elders on caring for the creek",
+    "Name the streets after plants and then use standard designs",
+    "Use the same plan as another suburb in a different region",
+    "Ask only the developers to decide where the parks go"
+   ],
+   "why": "Working with local Elders brings in knowledge about that particular place, such as its waterways. Naming streets after plants is only a label. It does not change how the land and water are cared for.",
+   "clue": "Which step involves people who hold knowledge of this place?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Restoring a creek and planting local native species",
+   "also_right": []
+  },
+  "b": {
+   "best": "Work with local Aboriginal Elders on caring for the creek",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one that mentions Aboriginal people. It echoes 'Aboriginal knowledges' in the question, so a student can pick it by word-matching. It also refers to 'the creek', which the question never introduces."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "first-nations",
+  "summary": "The facts and answers are sound. In question b, the right option is the only one naming Aboriginal people, which echoes the stem and gives the answer away. It also mentions 'the creek' without the question setting one up."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Question b, wording: The right option is the only one that mentions Aboriginal people. It echoes 'Aboriginal knowledges' in the question, so a student can pick it by word-matching. It also refers to 'the creek', which the question never introduces."
+ ],
+ "proposal": {
+  "title": "Planning with Country and diverse communities",
+  "card": [
+   "Aboriginal and Torres Strait Islander peoples have cared for Country for tens of thousands of years. Country means the land, waters, plants, animals and sky, and the connections between them.",
+   "This knowledge can guide how a city is planned. Planners can work with local Aboriginal communities and Elders to learn how land and water have been cared for in that place.",
+   "In a new suburb, this can mean restoring a creek instead of piping it underground. It can also mean planting native species that suit the local soil and climate.",
+   "Planning also needs to include the views of other diverse communities, such as migrants, older people and people with disability. Each group may need different services and spaces."
+  ],
+  "remember": "Good planning listens to many communities, including Aboriginal knowledges of caring for Country.",
+  "a": {
+   "q": "Which action is an example of planning a new suburb with Aboriginal knowledges of caring for Country?",
+   "opts": [
+    "Restoring a creek and planting local native species",
+    "Building a larger shopping centre beside the main road",
+    "Covering a creek with pipes to make more room for houses",
+    "Planting imported trees chosen for fast growth"
+   ],
+   "why": "Restoring a creek and planting local native species uses knowledge about how a place has been cared for over a long time. Piping a creek removes the waterway, so it does not care for Country.",
+   "clue": "Which action looks after the local waters and plants?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A council is planning a new suburb in Western Sydney, on land with a creek running through it. It wants the plan to care for Country. Which step would best do this?",
+   "opts": [
+    "Learn from local Elders about this creek and its plants",
+    "Ask Elders to sign off on a plan to pipe the creek",
+    "Copy the creek design from a suburb in another state",
+    "Let developers choose where the creek is moved to"
+   ],
+   "why": "Learning from local Elders brings in knowledge of this particular place, such as how its waters and plants have been cared for. Asking Elders only to approve a finished plan does not use their knowledge, and piping the creek removes the waterway instead of caring for it.",
+   "clue": "Which step draws on knowledge of this particular place?"
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Planning with Country and diverse communities",
+  "card": [
+   "Aboriginal and Torres Strait Islander peoples have cared for Country for tens of thousands of years. Country means the land, waters, plants, animals and sky, and the connections between them.",
+   "This knowledge can guide how a city is planned. Planners can work with local Aboriginal communities and Elders to learn how land and water have been cared for in that place.",
+   "In a new suburb, this can mean restoring a creek instead of piping it underground. It can also mean planting native species that suit the local soil and climate.",
+   "Planning also needs to include the views of other diverse communities, such as migrants, older people and people with disability. Each group may need different services and spaces."
+  ],
+  "remember": "Good planning listens to many communities, including Aboriginal knowledges of caring for Country.",
+  "a": {
+   "q": "Which action is an example of planning a new suburb with Aboriginal knowledges of caring for Country?",
+   "opts": [
+    "Restoring a creek and planting local native species",
+    "Building a larger shopping centre beside the main road",
+    "Covering a creek with pipes to make more room for houses",
+    "Planting imported trees chosen for fast growth"
+   ],
+   "why": "Restoring a creek and planting local native species uses knowledge about how a place has been cared for over a long time. Piping a creek removes the waterway, so it does not care for Country.",
+   "clue": "Which action looks after the local waters and plants?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A council is planning a new suburb in Western Sydney, on land with a creek running through it. It wants the plan to care for Country. Which step would best do this?",
+   "opts": [
+    "Learn from local Elders about this creek and its plants",
+    "Ask Elders to sign off on a plan to pipe the creek",
+    "Copy the creek design from a suburb in another state",
+    "Let developers choose where the creek is moved to"
+   ],
+   "why": "Learning from local Elders brings in knowledge of this particular place, such as how its waters and plants have been cared for. Asking Elders only to approve a finished plan does not use their knowledge, and piping the creek removes the waterway instead of caring for it.",
+   "clue": "Which step draws on knowledge of this particular place?"
+  }
+ },
+ "cleared_by": "owner"
 }

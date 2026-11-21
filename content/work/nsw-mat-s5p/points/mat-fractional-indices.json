@@ -24,8 +24,399 @@
    0.228
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:56Z write: done",
+  "2026-11-20T12:44:59Z check: flagged",
+  "2026-11-20T12:53:28Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00803,
+  "check": 0.00916,
+  "fix": 0.01851,
+  "recheck": 0.0072
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches fractional indices or the link between fractional index form and root form; the closest cards cover integer index laws, negative indices and exponential equations, which are related but not the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Fractional indices",
+  "card": [
+   "A power of \\(\\frac{1}{2}\\) means a square root, and a power of \\(\\frac{1}{3}\\) means a cube root. So \\(x^{\\frac{1}{2}} = \\sqrt{x}\\) and \\(x^{\\frac{1}{3}} = \\sqrt[3]{x}\\).",
+   "For any whole number \\(n\\), \\(x^{\\frac{1}{n}}\\) is the \\(n\\)th root of \\(x\\). For example, \\(16^{\\frac{1}{4}} = 2\\), because \\(2^{4} = 16\\).",
+   "For a power such as \\(\\frac{m}{n}\\), the bottom number is the root and the top number is the power: \\(x^{\\frac{m}{n}} = (\\sqrt[n]{x})^{m}\\). Take the root first, as it keeps the numbers small.",
+   "Worked example: \\(8^{\\frac{2}{3}} = (\\sqrt[3]{8})^{2} = 2^{2} = 4\\). To go back, \\(\\sqrt[3]{y^{2}}\\) is written \\(y^{\\frac{2}{3}}\\)."
+  ],
+  "remember": "In a fractional index, the bottom number is the root and the top number is the power.",
+  "a": {
+   "q": "What is the value of \\(27^{\\frac{2}{3}}\\)?",
+   "opts": [
+    "\\(9\\)",
+    "\\(18\\)",
+    "\\(6\\)",
+    "\\(729\\)"
+   ],
+   "why": "The bottom number 3 is the cube root: \\(\\sqrt[3]{27} = 3\\). The top number 2 is the power: \\(3^{2} = 9\\). Multiplying 27 by \\(\\frac{2}{3}\\) to get 18 mixes up an index with a multiplier.",
+   "clue": "Take the cube root first, then square it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which expression is the same as \\(\\sqrt[5]{a^{3}}\\)?",
+   "opts": [
+    "\\(a^{\\frac{3}{5}}\\)",
+    "\\(a^{\\frac{5}{3}}\\)",
+    "\\(a^{15}\\)",
+    "\\(a^{\\frac{1}{8}}\\)"
+   ],
+   "why": "The root is 5, so it goes on the bottom of the index. The power is 3, so it goes on top, giving \\(a^{\\frac{3}{5}}\\). Writing \\(a^{\\frac{5}{3}}\\) swaps the root and the power.",
+   "clue": "Which number is the root, and where does the root go?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(9\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(a^{\\frac{3}{5}}\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"For any whole number \\(n\\)\" includes \\(n = 0\\), where \\(x^{\\frac{1}{0}}\\) is undefined, and \\(n = 1\\), which is not a root. It would be safer to say \"for a whole number \\(n\\) of 2 or more\"."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct and have one clear answer (9 and \\(a^{\\frac{3}{5}}\\)). The only issue is a small card imprecision: \"any whole number \\(n\\)\" should exclude 0 and 1."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: \"For any whole number \\(n\\)\" includes \\(n = 0\\), where \\(x^{\\frac{1}{0}}\\) is undefined, and \\(n = 1\\), which is not a root. It would be safer to say \"for a whole number \\(n\\) of 2 or more\"."
+ ],
+ "proposal": {
+  "title": "Fractional indices",
+  "card": [
+   "A power of \\(\\frac{1}{2}\\) means a square root, and a power of \\(\\frac{1}{3}\\) means a cube root. So \\(x^{\\frac{1}{2}} = \\sqrt{x}\\) and \\(x^{\\frac{1}{3}} = \\sqrt[3]{x}\\).",
+   "For a whole number \\(n\\) of 2 or more, \\(x^{\\frac{1}{n}}\\) is the \\(n\\)th root of \\(x\\). For example, \\(16^{\\frac{1}{4}} = 2\\), because \\(2^{4} = 16\\).",
+   "For an index such as \\(\\frac{m}{n}\\), the bottom number is the root and the top number is the power: \\(x^{\\frac{m}{n}} = (\\sqrt[n]{x})^{m}\\). Take the root first, as it keeps the numbers small.",
+   "Worked example: \\(8^{\\frac{2}{3}} = (\\sqrt[3]{8})^{2}\\), which is \\(2^{2} = 4\\). To go back, \\(\\sqrt[3]{y^{2}}\\) is written \\(y^{\\frac{2}{3}}\\)."
+  ],
+  "remember": "In a fractional index, the bottom number is the root and the top number is the power.",
+  "a": {
+   "q": "What is the value of \\(27^{\\frac{2}{3}}\\)?",
+   "opts": [
+    "\\(9\\)",
+    "\\(18\\)",
+    "\\(6\\)",
+    "\\(729\\)"
+   ],
+   "why": "The bottom number 3 is the cube root: \\(\\sqrt[3]{27} = 3\\). The top number 2 is the power: \\(3^{2} = 9\\). Multiplying 27 by \\(\\frac{2}{3}\\) to get 18 mixes up an index with a multiplier.",
+   "clue": "Take the cube root first, then square it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which expression is the same as \\(\\sqrt[5]{a^{3}}\\)?",
+   "opts": [
+    "\\(a^{\\frac{3}{5}}\\)",
+    "\\(a^{\\frac{5}{3}}\\)",
+    "\\(a^{15}\\)",
+    "\\(a^{\\frac{1}{8}}\\)"
+   ],
+   "why": "The root is 5, so it goes on the bottom of the index. The power is 3, so it goes on top, giving \\(a^{\\frac{3}{5}}\\). Writing \\(a^{\\frac{5}{3}}\\) swaps the root and the power.",
+   "clue": "Which number is the root, and where does the root go?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(9\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(a^{\\frac{3}{5}}\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"For any whole number \\(n\\)\" includes \\(n = 0\\), where \\(x^{\\frac{1}{0}}\\) is undefined, and \\(n = 1\\), which is not a root. It would be safer to say \"for a whole number \\(n\\) of 2 or more\"."
+   }
+  ],
+  "flags": [
+   "Card, fact: \"For any whole number \\(n\\)\" includes \\(n = 0\\), where \\(x^{\\frac{1}{0}}\\) is undefined, and \\(n = 1\\), which is not a root. It would be safer to say \"for a whole number \\(n\\) of 2 or more\"."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Fractional indices",
+  "card": [
+   "A power of \\(\\frac{1}{2}\\) means a square root, and a power of \\(\\frac{1}{3}\\) means a cube root. So \\(x^{\\frac{1}{2}} = \\sqrt{x}\\) and \\(x^{\\frac{1}{3}} = \\sqrt[3]{x}\\).",
+   "For a whole number \\(n\\) of 2 or more, \\(x^{\\frac{1}{n}}\\) is the \\(n\\)th root of \\(x\\). For example, \\(16^{\\frac{1}{4}} = 2\\), because \\(2^{4} = 16\\).",
+   "For an index such as \\(\\frac{m}{n}\\), the bottom number is the root and the top number is the power: \\(x^{\\frac{m}{n}} = (\\sqrt[n]{x})^{m}\\). Take the root first, as it keeps the numbers small.",
+   "Worked example: \\(8^{\\frac{2}{3}} = (\\sqrt[3]{8})^{2}\\), which is \\(2^{2} = 4\\). To go back, \\(\\sqrt[3]{y^{2}}\\) is written \\(y^{\\frac{2}{3}}\\)."
+  ],
+  "remember": "In a fractional index, the bottom number is the root and the top number is the power.",
+  "a": {
+   "q": "What is the value of \\(27^{\\frac{2}{3}}\\)?",
+   "opts": [
+    "\\(9\\)",
+    "\\(18\\)",
+    "\\(6\\)",
+    "\\(729\\)"
+   ],
+   "why": "The bottom number 3 is the cube root: \\(\\sqrt[3]{27} = 3\\). The top number 2 is the power: \\(3^{2} = 9\\). Multiplying 27 by \\(\\frac{2}{3}\\) to get 18 mixes up an index with a multiplier.",
+   "clue": "Take the cube root first, then square it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which expression is the same as \\(\\sqrt[5]{a^{3}}\\)?",
+   "opts": [
+    "\\(a^{\\frac{3}{5}}\\)",
+    "\\(a^{\\frac{5}{3}}\\)",
+    "\\(a^{15}\\)",
+    "\\(a^{\\frac{1}{8}}\\)"
+   ],
+   "why": "The root is 5, so it goes on the bottom of the index. The power is 3, so it goes on top, giving \\(a^{\\frac{3}{5}}\\). Writing \\(a^{\\frac{5}{3}}\\) swaps the root and the power.",
+   "clue": "Which number is the root, and where does the root go?"
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix limits the nth root rule to whole numbers of 2 or more, which answers the only problem named. Both answers check out: \\(27^{\\frac{2}{3}} = 9\\) and the fifth root of \\(a^{3}\\) is \\(a^{\\frac{3}{5}}\\).",
+   "item": "ab8ec45f72b3a468",
+   "result": "decided",
+   "saved": {
+    "id": "mat-fractional-indices",
+    "title": "Fractional indices",
+    "brief": "26ba99772d40",
+    "shortlist": [
+     [
+      "mat-simplifying-with-index-laws",
+      0.302
+     ],
+     [
+      "mat-index-laws-with-variables",
+      0.272
+     ],
+     [
+      "mat-imaginary-unit",
+      0.254
+     ],
+     [
+      "mat-negative-indices",
+      0.234
+     ],
+     [
+      "mat-solving-simple-exponential-equations",
+      0.228
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00018,
+     "write": 0.00803,
+     "check": 0.00916,
+     "fix": 0.01851,
+     "recheck": 0.0072
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "high",
+     "reason": "None of the bank points teaches fractional indices or the link between fractional index form and root form; the closest cards cover integer index laws, negative indices and exponential equations, which are related but not the same idea.",
+     "model": "claude-haiku-5-5"
+    },
+    "alone": true,
+    "draft": {
+     "title": "Fractional indices",
+     "card": [
+      "A power of \\(\\frac{1}{2}\\) means a square root, and a power of \\(\\frac{1}{3}\\) means a cube root. So \\(x^{\\frac{1}{2}} = \\sqrt{x}\\) and \\(x^{\\frac{1}{3}} = \\sqrt[3]{x}\\).",
+      "For any whole number \\(n\\), \\(x^{\\frac{1}{n}}\\) is the \\(n\\)th root of \\(x\\). For example, \\(16^{\\frac{1}{4}} = 2\\), because \\(2^{4} = 16\\).",
+      "For a power such as \\(\\frac{m}{n}\\), the bottom number is the root and the top number is the power: \\(x^{\\frac{m}{n}} = (\\sqrt[n]{x})^{m}\\). Take the root first, as it keeps the numbers small.",
+      "Worked example: \\(8^{\\frac{2}{3}} = (\\sqrt[3]{8})^{2} = 2^{2} = 4\\). To go back, \\(\\sqrt[3]{y^{2}}\\) is written \\(y^{\\frac{2}{3}}\\)."
+     ],
+     "remember": "In a fractional index, the bottom number is the root and the top number is the power.",
+     "a": {
+      "q": "What is the value of \\(27^{\\frac{2}{3}}\\)?",
+      "opts": [
+       "\\(9\\)",
+       "\\(18\\)",
+       "\\(6\\)",
+       "\\(729\\)"
+      ],
+      "why": "The bottom number 3 is the cube root: \\(\\sqrt[3]{27} = 3\\). The top number 2 is the power: \\(3^{2} = 9\\). Multiplying 27 by \\(\\frac{2}{3}\\) to get 18 mixes up an index with a multiplier.",
+      "clue": "Take the cube root first, then square it."
+     },
+     "b": {
+      "d": 3,
+      "q": "Which expression is the same as \\(\\sqrt[5]{a^{3}}\\)?",
+      "opts": [
+       "\\(a^{\\frac{3}{5}}\\)",
+       "\\(a^{\\frac{5}{3}}\\)",
+       "\\(a^{15}\\)",
+       "\\(a^{\\frac{1}{8}}\\)"
+      ],
+      "why": "The root is 5, so it goes on the bottom of the index. The power is 3, so it goes on top, giving \\(a^{\\frac{3}{5}}\\). Writing \\(a^{\\frac{5}{3}}\\) swaps the root and the power.",
+      "clue": "Which number is the root, and where does the root go?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "\\(9\\)",
+      "also_right": []
+     },
+     "b": {
+      "best": "\\(a^{\\frac{3}{5}}\\)",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "\"For any whole number \\(n\\)\" includes \\(n = 0\\), where \\(x^{\\frac{1}{0}}\\) is undefined, and \\(n = 1\\), which is not a root. It would be safer to say \"for a whole number \\(n\\) of 2 or more\"."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions are correct and have one clear answer (9 and \\(a^{\\frac{3}{5}}\\)). The only issue is a small card imprecision: \"any whole number \\(n\\)\" should exclude 0 and 1."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Card, fact: \"For any whole number \\(n\\)\" includes \\(n = 0\\), where \\(x^{\\frac{1}{0}}\\) is undefined, and \\(n = 1\\), which is not a root. It would be safer to say \"for a whole number \\(n\\) of 2 or more\"."
+    ],
+    "proposal": {
+     "title": "Fractional indices",
+     "card": [
+      "A power of \\(\\frac{1}{2}\\) means a square root, and a power of \\(\\frac{1}{3}\\) means a cube root. So \\(x^{\\frac{1}{2}} = \\sqrt{x}\\) and \\(x^{\\frac{1}{3}} = \\sqrt[3]{x}\\).",
+      "For a whole number \\(n\\) of 2 or more, \\(x^{\\frac{1}{n}}\\) is the \\(n\\)th root of \\(x\\). For example, \\(16^{\\frac{1}{4}} = 2\\), because \\(2^{4} = 16\\).",
+      "For an index such as \\(\\frac{m}{n}\\), the bottom number is the root and the top number is the power: \\(x^{\\frac{m}{n}} = (\\sqrt[n]{x})^{m}\\). Take the root first, as it keeps the numbers small.",
+      "Worked example: \\(8^{\\frac{2}{3}} = (\\sqrt[3]{8})^{2}\\), which is \\(2^{2} = 4\\). To go back, \\(\\sqrt[3]{y^{2}}\\) is written \\(y^{\\frac{2}{3}}\\)."
+     ],
+     "remember": "In a fractional index, the bottom number is the root and the top number is the power.",
+     "a": {
+      "q": "What is the value of \\(27^{\\frac{2}{3}}\\)?",
+      "opts": [
+       "\\(9\\)",
+       "\\(18\\)",
+       "\\(6\\)",
+       "\\(729\\)"
+      ],
+      "why": "The bottom number 3 is the cube root: \\(\\sqrt[3]{27} = 3\\). The top number 2 is the power: \\(3^{2} = 9\\). Multiplying 27 by \\(\\frac{2}{3}\\) to get 18 mixes up an index with a multiplier.",
+      "clue": "Take the cube root first, then square it."
+     },
+     "b": {
+      "d": 3,
+      "q": "Which expression is the same as \\(\\sqrt[5]{a^{3}}\\)?",
+      "opts": [
+       "\\(a^{\\frac{3}{5}}\\)",
+       "\\(a^{\\frac{5}{3}}\\)",
+       "\\(a^{15}\\)",
+       "\\(a^{\\frac{1}{8}}\\)"
+      ],
+      "why": "The root is 5, so it goes on the bottom of the index. The power is 3, so it goes on top, giving \\(a^{\\frac{3}{5}}\\). Writing \\(a^{\\frac{5}{3}}\\) swaps the root and the power.",
+      "clue": "Which number is the root, and where does the root go?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "\\(9\\)",
+       "also_right": []
+      },
+      "b": {
+       "best": "\\(a^{\\frac{3}{5}}\\)",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-20T13:37:07Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "\"For any whole number \\(n\\)\" includes \\(n = 0\\), where \\(x^{\\frac{1}{0}}\\) is undefined, and \\(n = 1\\), which is not a root. It would be safer to say \"for a whole number \\(n\\) of 2 or more\"."
+      }
+     ],
+     "flags": [
+      "Card, fact: \"For any whole number \\(n\\)\" includes \\(n = 0\\), where \\(x^{\\frac{1}{0}}\\) is undefined, and \\(n = 1\\), which is not a root. It would be safer to say \"for a whole number \\(n\\) of 2 or more\"."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "46ae41d615fd8b23"
+  }
  ]
 }

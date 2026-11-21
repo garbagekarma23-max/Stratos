@@ -16,8 +16,131 @@
    0.28
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 says adapt geo-interconnection (1 change)",
+  "2026-11-20T12:25:46Z adapt: failed the content check, writing again",
+  "2026-11-20T12:35:49Z adapt: done",
+  "2026-11-20T12:44:54Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "adapt": 0.00821,
+  "check": 0.0076
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-interconnection",
+  "changes": [
+   "Replace the Western Australian wheat and drought example in question b with a New South Wales example, such as drought affecting wheat or grain farms in western NSW, so the example is local to the course."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same idea at a suitable Year 7 depth, and it only needs its Western Australian example made local to New South Wales.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "geo-interconnection",
+  "changes": [
+   "Replace the Western Australian wheat and drought example in question b with a New South Wales example, such as drought affecting wheat or grain farms in western NSW, so the example is local to the course."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "a.q",
+   "b.q",
+   "b.opt3",
+   "b.why",
+   "b.clue"
+  ]
+ },
+ "draft": {
+  "title": "Interconnection",
+  "card": [
+   "Interconnection means that people, places and environments are linked to one another. What happens in one can affect the others.",
+   "The links can join places that are far apart. A change in one place can have effects in another place a long way away.",
+   "Links can be made by people, such as trade, travel and the sending of information. They can also be made by nature, such as rivers carrying water downstream.",
+   "To study a problem, geographers ask what is linked to it and how a change in one part may reach other parts."
+  ],
+  "remember": "Places, people and environments are linked, so a change in one can reach another.",
+  "a": {
+   "q": "Which situation is the clearest case of interconnection?",
+   "opts": [
+    "Rain in the hills raises a river that floods a town below",
+    "A town has a library, a park and a swimming pool",
+    "A town sits 200 km from the nearest city",
+    "A town is much older than the one beside it"
+   ],
+   "why": "The rain in the hills changes the river, and that change affects a town in another place. The other options describe a town's features, its distance or its age, but none shows a change in one place affecting another.",
+   "clue": "Look for a change in one place that reaches another place."
+  },
+  "b": {
+   "d": 3,
+   "q": "A drought cuts the wheat harvest on farms in western New South Wales. Bakeries in a distant country then pay more for flour made from that wheat. Why is this interconnection?",
+   "opts": [
+    "A change in one place affected people in another place",
+    "The two places both grow wheat for flour each year",
+    "The farms and the bakeries are close to one another",
+    "The drought was caused by people in the other country"
+   ],
+   "why": "The drought changed the harvest in one place, and that change reached bakeries far away through trade. The link does not need both places to grow wheat, and the farms and bakeries are far apart, not close. Who caused the drought is not stated and is not what makes this interconnection.",
+   "clue": "Follow the change from the farms to the bakeries."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Rain in the hills raises a river that floods a town below",
+   "also_right": []
+  },
+  "b": {
+   "best": "A change in one place affected people in another place",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Interconnection",
+  "card": [
+   "Interconnection means that people, places and environments are linked to one another. What happens in one can affect the others.",
+   "The links can join places that are far apart. A change in one place can have effects in another place a long way away.",
+   "Links can be made by people, such as trade, travel and the sending of information. They can also be made by nature, such as rivers carrying water downstream.",
+   "To study a problem, geographers ask what is linked to it and how a change in one part may reach other parts."
+  ],
+  "remember": "Places, people and environments are linked, so a change in one can reach another.",
+  "a": {
+   "q": "Which situation is the clearest case of interconnection?",
+   "opts": [
+    "Rain in the hills raises a river that floods a town below",
+    "A town has a library, a park and a swimming pool",
+    "A town sits 200 km from the nearest city",
+    "A town is much older than the one beside it"
+   ],
+   "why": "The rain in the hills changes the river, and that change affects a town in another place. The other options describe a town's features, its distance or its age, but none shows a change in one place affecting another.",
+   "clue": "Look for a change in one place that reaches another place."
+  },
+  "b": {
+   "d": 3,
+   "q": "A drought cuts the wheat harvest on farms in western New South Wales. Bakeries in a distant country then pay more for flour made from that wheat. Why is this interconnection?",
+   "opts": [
+    "A change in one place affected people in another place",
+    "The two places both grow wheat for flour each year",
+    "The farms and the bakeries are close to one another",
+    "The drought was caused by people in the other country"
+   ],
+   "why": "The drought changed the harvest in one place, and that change reached bakeries far away through trade. The link does not need both places to grow wheat, and the farms and bakeries are far apart, not close. Who caused the drought is not stated and is not what makes this interconnection.",
+   "clue": "Follow the change from the farms to the bakeries."
+  }
+ },
+ "cleared_by": "checker"
 }

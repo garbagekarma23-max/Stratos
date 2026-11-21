@@ -12,8 +12,125 @@
    0.403
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:46Z write: done",
+  "2026-11-20T12:35:48Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00624,
+  "check": 0.0063
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank's map conventions card only says the scale links map distance to ground distance as one of six map parts, while the new point teaches the skill of converting a measured distance using a line or ratio scale, and the scale-of-study card is about geographic extent rather than map scale.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Measuring distance with a map scale",
+  "card": [
+   "A map scale links a distance on the map to the real distance on the ground. It lets you work out how far apart two places really are.",
+   [
+    "Line scale",
+    "a bar marked in kilometres or metres. Measure the map distance with a ruler, then lay it along the bar to read the real distance."
+   ],
+   [
+    "Ratio scale",
+    "written like 1:50 000. One unit on the map stands for 50 000 of the same unit on the ground. So 1 cm on the map is 50 000 cm, which is 500 m."
+   ],
+   "To use a ratio scale, measure the map distance, multiply it by the second number, then change the units. For example, 4 cm on a 1:50 000 map is 200 000 cm, which is 2 km."
+  ],
+  "remember": "Measure on the map, then use the scale to turn it into the real distance.",
+  "a": {
+   "q": "A map has a ratio scale of 1:25 000. What does 1 cm on the map stand for?",
+   "opts": [
+    "25 000 cm on the ground",
+    "25 000 m on the ground",
+    "2500 cm on the ground",
+    "1 km on the ground"
+   ],
+   "why": "In a ratio scale, 1 unit on the map is 25 000 of the same unit on the ground, so 1 cm is 25 000 cm. The option with metres mixes up the units, because the units on both sides of the ratio are the same.",
+   "clue": "Both sides of the ratio use the same unit."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya measures 6 cm between a campsite and a lookout on a map with a scale of 1:50 000. How far apart are they on the ground?",
+   "opts": [
+    "3 km",
+    "300 m",
+    "30 km",
+    "6 km"
+   ],
+   "why": "6 cm × 50 000 = 300 000 cm, which is 3000 m or 3 km. The answer of 300 m comes from a slip when changing units, and 30 km is a slip in the other direction.",
+   "clue": "Multiply by 50 000, then change centimetres to kilometres."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "25 000 cm on the ground",
+   "also_right": []
+  },
+  "b": {
+   "best": "3 km",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Measuring distance with a map scale",
+  "card": [
+   "A map scale links a distance on the map to the real distance on the ground. It lets you work out how far apart two places really are.",
+   [
+    "Line scale",
+    "a bar marked in kilometres or metres. Measure the map distance with a ruler, then lay it along the bar to read the real distance."
+   ],
+   [
+    "Ratio scale",
+    "written like 1:50 000. One unit on the map stands for 50 000 of the same unit on the ground. So 1 cm on the map is 50 000 cm, which is 500 m."
+   ],
+   "To use a ratio scale, measure the map distance, multiply it by the second number, then change the units. For example, 4 cm on a 1:50 000 map is 200 000 cm, which is 2 km."
+  ],
+  "remember": "Measure on the map, then use the scale to turn it into the real distance.",
+  "a": {
+   "q": "A map has a ratio scale of 1:25 000. What does 1 cm on the map stand for?",
+   "opts": [
+    "25 000 cm on the ground",
+    "25 000 m on the ground",
+    "2500 cm on the ground",
+    "1 km on the ground"
+   ],
+   "why": "In a ratio scale, 1 unit on the map is 25 000 of the same unit on the ground, so 1 cm is 25 000 cm. The option with metres mixes up the units, because the units on both sides of the ratio are the same.",
+   "clue": "Both sides of the ratio use the same unit."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya measures 6 cm between a campsite and a lookout on a map with a scale of 1:50 000. How far apart are they on the ground?",
+   "opts": [
+    "3 km",
+    "300 m",
+    "30 km",
+    "6 km"
+   ],
+   "why": "6 cm × 50 000 = 300 000 cm, which is 3000 m or 3 km. The answer of 300 m comes from a slip when changing units, and 30 km is a slip in the other direction.",
+   "clue": "Multiply by 50 000, then change centimetres to kilometres."
+  }
+ },
+ "cleared_by": "checker"
 }

@@ -20,8 +20,131 @@
    0.218
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:46Z write: done",
+  "2026-11-20T12:35:48Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.0108,
+  "check": 0.00669
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, geo-landscapes-landforms, teaches the difference between a landscape and a landform, not the set of landscape types with their own landforms, and it does not cover riverine or volcanic landscapes, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Types of landscapes",
+  "card": [
+   "Landscapes can be grouped into types by their main features. Six common types are mountain, coastal, riverine, desert, rainforest and volcanic landscapes.",
+   [
+    "Mountain",
+    "high, steep land with peaks and valleys. Coastal landscapes are found where land meets the sea, with landforms such as cliffs and beaches."
+   ],
+   [
+    "Riverine",
+    "shaped by rivers and the land beside them, with landforms such as floodplains and meanders. Desert landscapes are very dry, with landforms such as sand dunes."
+   ],
+   [
+    "Rainforest",
+    "dense, tall forest in a wet climate. Volcanic landscapes are shaped by lava and ash from volcanoes, with landforms such as craters and cones."
+   ]
+  ],
+  "remember": "Each type of landscape has its own main features and its own landforms.",
+  "a": {
+   "q": "A landscape has sand dunes and very little rain. Which type of landscape is it?",
+   "opts": [
+    "Desert",
+    "Riverine",
+    "Coastal",
+    "Volcanic"
+   ],
+   "why": "Sand dunes and very dry conditions are features of a desert landscape. A coastal landscape can have sand too, but it is found where land meets the sea, and this one is described by its dryness.",
+   "clue": "Think about the amount of water in the area."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya visits a place with a wide, flat floodplain and a river that curves in large meanders. Which type of landscape is it?",
+   "opts": [
+    "Riverine",
+    "Coastal",
+    "Mountain",
+    "Rainforest"
+   ],
+   "why": "Floodplains and meanders are landforms made by a river, so this is a riverine landscape. A rainforest can also have rivers, but it is defined by dense, tall forest in a wet climate, which is not what Priya describes.",
+   "clue": "What shaped the floodplain and the meanders?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Desert",
+   "also_right": []
+  },
+  "b": {
+   "best": "Riverine",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Types of landscapes",
+  "card": [
+   "Landscapes can be grouped into types by their main features. Six common types are mountain, coastal, riverine, desert, rainforest and volcanic landscapes.",
+   [
+    "Mountain",
+    "high, steep land with peaks and valleys. Coastal landscapes are found where land meets the sea, with landforms such as cliffs and beaches."
+   ],
+   [
+    "Riverine",
+    "shaped by rivers and the land beside them, with landforms such as floodplains and meanders. Desert landscapes are very dry, with landforms such as sand dunes."
+   ],
+   [
+    "Rainforest",
+    "dense, tall forest in a wet climate. Volcanic landscapes are shaped by lava and ash from volcanoes, with landforms such as craters and cones."
+   ]
+  ],
+  "remember": "Each type of landscape has its own main features and its own landforms.",
+  "a": {
+   "q": "A landscape has sand dunes and very little rain. Which type of landscape is it?",
+   "opts": [
+    "Desert",
+    "Riverine",
+    "Coastal",
+    "Volcanic"
+   ],
+   "why": "Sand dunes and very dry conditions are features of a desert landscape. A coastal landscape can have sand too, but it is found where land meets the sea, and this one is described by its dryness.",
+   "clue": "Think about the amount of water in the area."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya visits a place with a wide, flat floodplain and a river that curves in large meanders. Which type of landscape is it?",
+   "opts": [
+    "Riverine",
+    "Coastal",
+    "Mountain",
+    "Rainforest"
+   ],
+   "why": "Floodplains and meanders are landforms made by a river, so this is a riverine landscape. A rainforest can also have rivers, but it is defined by dense, tall forest in a wet climate, which is not what Priya describes.",
+   "clue": "What shaped the floodplain and the meanders?"
+  }
+ },
+ "cleared_by": "checker"
 }

@@ -12,8 +12,241 @@
    0.214
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: flagged",
+  "2026-11-20T12:53:29Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.00625,
+  "check": 0.01415,
+  "fix": 0.01681,
+  "recheck": 0.00804
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches the seven characteristics of living things (movement, respiration, sensitivity, growth, reproduction, excretion, nutrition); both are about why and how living things are classified.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Characteristics of living things",
+  "card": [
+   "Scientists use seven characteristics to decide if something is alive. Living things move, respire, are sensitive, grow, reproduce, excrete and need nutrition.",
+   [
+    "Respire",
+    "to release energy from food inside cells. Many living things use oxygen to do this."
+   ],
+   [
+    "Sensitive",
+    "able to detect changes in the surroundings and respond. A sunflower turning towards light is an example."
+   ],
+   [
+    "Excrete",
+    "to get rid of wastes made by the body's own cells, such as carbon dioxide. This is different from nutrition, which is taking in food."
+   ]
+  ],
+  "remember": "A living thing does all seven: move, respire, sense, grow, reproduce, excrete and need nutrition.",
+  "a": {
+   "q": "A kangaroo breathes out carbon dioxide made by its cells. Which characteristic of living things does this show?",
+   "opts": [
+    "Excretion, removing wastes made by the body",
+    "Nutrition, taking in food for energy",
+    "Sensitivity, detecting a change in surroundings",
+    "Growth, getting bigger over time"
+   ],
+   "why": "Carbon dioxide is a waste made by the body's cells, and getting rid of it is excretion. Nutrition is tempting, but that is taking in food, not removing wastes.",
+   "clue": "Is the kangaroo taking something in or getting rid of something?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam leaves a pot plant in a dark cupboard. After a week its stem has bent towards a crack of light under the door. Which characteristic does this show?",
+   "opts": [
+    "Being sensitive to its surroundings",
+    "Reproduction",
+    "Excretion of wastes",
+    "Respiration"
+   ],
+   "why": "The plant detected light and responded by bending towards it, which is sensitivity. Respiration is tempting because all living things respire, but it is a process inside cells that releases energy, and it does not explain bending towards light.",
+   "clue": "What did the plant detect, and how did it respond?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Excretion, removing wastes made by the body",
+   "also_right": []
+  },
+  "b": {
+   "best": "Being sensitive to its surroundings",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option, 'Being sensitive to its surroundings', is clearly the longest and most detailed of the options ('Respiration', 'Reproduction', 'Excretion of wastes'), so a student could pick it without knowing the idea."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "'A living thing does all seven' is a stronger claim than the card makes. The card only lists the characteristics scientists use. Some living things, such as sterile mules or worker bees, do not reproduce, so the line overstates the idea. Word it as the card does, e.g. 'Living things show seven characteristics...'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct and the explanations match the card. In question b the right option stands out as the longest, and the remember line overstates the card by saying every living thing does all seven."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option, 'Being sensitive to its surroundings', is clearly the longest and most detailed of the options ('Respiration', 'Reproduction', 'Excretion of wastes'), so a student could pick it without knowing the idea.",
+  "Remember, other: 'A living thing does all seven' is a stronger claim than the card makes. The card only lists the characteristics scientists use. Some living things, such as sterile mules or worker bees, do not reproduce, so the line overstates the idea. Word it as the card does, e.g. 'Living things show seven characteristics...'."
+ ],
+ "proposal": {
+  "title": "Characteristics of living things",
+  "card": [
+   "Scientists use seven characteristics to decide if something is alive. Living things move, respire, are sensitive, grow, reproduce, excrete and need nutrition.",
+   [
+    "Respire",
+    "to release energy from food inside cells. Many living things use oxygen to do this."
+   ],
+   [
+    "Sensitive",
+    "able to detect changes in the surroundings and respond. A sunflower turning towards light is an example."
+   ],
+   [
+    "Excrete",
+    "to get rid of wastes made by the body's own cells, such as carbon dioxide. This is different from nutrition, which is taking in food."
+   ]
+  ],
+  "remember": "Living things show seven characteristics. MRS GREN helps you recall them: move, respire, sense, grow, reproduce, excrete, nutrition.",
+  "a": {
+   "q": "A kangaroo breathes out carbon dioxide made by its cells. Which characteristic of living things does this show?",
+   "opts": [
+    "Excretion, removing wastes made by the body",
+    "Nutrition, taking in food for energy",
+    "Sensitivity, detecting a change in surroundings",
+    "Growth, getting bigger over time"
+   ],
+   "why": "Carbon dioxide is a waste made by the body's cells, and getting rid of it is excretion. Nutrition is tempting, but that is taking in food, not removing wastes.",
+   "clue": "Is the kangaroo taking something in or getting rid of something?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam leaves a pot plant in a dark cupboard. After a week its stem has bent towards a crack of light under the door. Which characteristic does this show?",
+   "opts": [
+    "Sensitivity",
+    "Reproduction",
+    "Excretion",
+    "Respiration"
+   ],
+   "why": "The plant detected light and responded by bending towards it, which is sensitivity. Respiration is tempting because all living things respire, but it is a process inside cells that releases energy, and it does not explain bending towards light.",
+   "clue": "What did the plant detect, and how did it respond?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Excretion, removing wastes made by the body",
+    "also_right": []
+   },
+   "b": {
+    "best": "Sensitivity",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option, 'Being sensitive to its surroundings', is clearly the longest and most detailed of the options ('Respiration', 'Reproduction', 'Excretion of wastes'), so a student could pick it without knowing the idea."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "'A living thing does all seven' is a stronger claim than the card makes. The card only lists the characteristics scientists use. Some living things, such as sterile mules or worker bees, do not reproduce, so the line overstates the idea. Word it as the card does, e.g. 'Living things show seven characteristics...'."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The right option, 'Being sensitive to its surroundings', is clearly the longest and most detailed of the options ('Respiration', 'Reproduction', 'Excretion of wastes'), so a student could pick it without knowing the idea.",
+   "Remember, other: 'A living thing does all seven' is a stronger claim than the card makes. The card only lists the characteristics scientists use. Some living things, such as sterile mules or worker bees, do not reproduce, so the line overstates the idea. Word it as the card does, e.g. 'Living things show seven characteristics...'."
+  ]
+ },
+ "final": {
+  "title": "Characteristics of living things",
+  "card": [
+   "Scientists use seven characteristics to decide if something is alive. Living things move, respire, are sensitive, grow, reproduce, excrete and need nutrition.",
+   [
+    "Respire",
+    "to release energy from food inside cells. Many living things use oxygen to do this."
+   ],
+   [
+    "Sensitive",
+    "able to detect changes in the surroundings and respond. A sunflower turning towards light is an example."
+   ],
+   [
+    "Excrete",
+    "to get rid of wastes made by the body's own cells, such as carbon dioxide. This is different from nutrition, which is taking in food."
+   ]
+  ],
+  "remember": "Living things show seven characteristics. MRS GREN helps you recall them: move, respire, sense, grow, reproduce, excrete, nutrition.",
+  "a": {
+   "q": "A kangaroo breathes out carbon dioxide made by its cells. Which characteristic of living things does this show?",
+   "opts": [
+    "Excretion, removing wastes made by the body",
+    "Nutrition, taking in food for energy",
+    "Sensitivity, detecting a change in surroundings",
+    "Growth, getting bigger over time"
+   ],
+   "why": "Carbon dioxide is a waste made by the body's cells, and getting rid of it is excretion. Nutrition is tempting, but that is taking in food, not removing wastes.",
+   "clue": "Is the kangaroo taking something in or getting rid of something?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam leaves a pot plant in a dark cupboard. After a week its stem has bent towards a crack of light under the door. Which characteristic does this show?",
+   "opts": [
+    "Sensitivity",
+    "Reproduction",
+    "Excretion",
+    "Respiration"
+   ],
+   "why": "The plant detected light and responded by bending towards it, which is sensitivity. Respiration is tempting because all living things respire, but it is a process inside cells that releases energy, and it does not explain bending towards light.",
+   "clue": "What did the plant detect, and how did it respond?"
+  }
+ },
+ "cleared_by": "recheck"
 }

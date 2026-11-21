@@ -24,8 +24,415 @@
    0.211
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:45Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:49Z write: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (a wording, b wording)",
+  "2026-11-20T13:44:55Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.0058,
+  "check": 0.01038,
+  "fix": 0.01939,
+  "recheck": 0.01341
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point covers all five ways in the brief: the closest, geo-strategies-improve-liveability, covers public spaces, paths and waste services but not affordable housing or safer streets, and adding those would change the content rather than make a small adjustment.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, wording: The right option says 'shady trees', echoing the stem's 'nowhere shady', so a student can match the word without knowing that trees give shade and cool an area. Consider 'Planting street trees and opening green space'.\n- Question b, wording: The right option's 'safe crossings' echoes the stem's 'feel unsafe', so a student can match on the word 'safe' rather than on the idea that lighting improves safety at night.",
+ "rejected": {
+  "title": "Ways to improve liveability",
+  "card": [
+   "Liveability is how well a place meets the needs of the people who live there. A place can be made more liveable by changing things in it.",
+   [
+    "Transport",
+    "Better buses, trains, footpaths and bike paths help people get to school, work and shops more easily."
+   ],
+   [
+    "Parks and trees",
+    "Parks, green space and street trees give people places to play and relax. Trees also give shade and help keep an area cooler."
+   ],
+   [
+    "Other ways",
+    "Safer streets (such as better lighting and safe crossings), affordable housing and community facilities (such as libraries and sports centres) also make a place more liveable."
+   ]
+  ],
+  "remember": "Liveability improves when a place gets better transport, green space, safety, housing and facilities.",
+  "a": {
+   "q": "People in a new housing estate say summer days are very hot and there is nowhere shady to sit outside. Which change would best help them?",
+   "opts": [
+    "Planting shady trees and opening green space",
+    "Adding an extra bus route to the city",
+    "Building more affordable homes nearby",
+    "Putting brighter lights along the footpaths"
+   ],
+   "why": "Trees give shade and help keep an area cooler, and green space gives people somewhere to relax outside. Brighter lights make streets safer at night, but they do nothing about heat or shade.",
+   "clue": "Focus on the problem the residents describe: heat and no shade."
+  },
+  "b": {
+   "d": 2,
+   "q": "Many people in the town of Tallowbrook say they feel unsafe walking home after dark. Which change would best improve liveability for them?",
+   "opts": [
+    "Better street lighting and safe crossings",
+    "A new weekend bus timetable for the town",
+    "More affordable rental homes in the town",
+    "A larger library with more computers"
+   ],
+   "why": "Better lighting and safe crossings make streets safer, which deals with the problem people describe. Affordable homes, a library and buses can improve liveability in other ways, but they do not fix feeling unsafe at night.",
+   "clue": "Match the change to the problem the residents describe."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, wording: The right option says 'shady trees', echoing the stem's 'nowhere shady', so a student can match the word without knowing that trees give shade and cool an area. Consider 'Planting street trees and opening green space'.",
+    "Question b, wording: The right option's 'safe crossings' echoes the stem's 'feel unsafe', so a student can match on the word 'safe' rather than on the idea that lighting improves safety at night."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Ways to improve liveability",
+     "card": [
+      "Liveability is how well a place meets the needs of the people who live there. A place can be made more liveable by changing things in it.",
+      [
+       "Transport",
+       "Better buses, trains, footpaths and bike paths help people get to school, work and shops more easily."
+      ],
+      [
+       "Parks and trees",
+       "Parks, green space and street trees give people places to play and relax. Trees also give shade and help keep an area cooler."
+      ],
+      [
+       "Other ways",
+       "Safer streets (such as better lighting and safe crossings), affordable housing and community facilities (such as libraries and sports centres) also make a place more liveable."
+      ]
+     ],
+     "remember": "Liveability improves when a place gets better transport, green space, safety, housing and facilities.",
+     "a": {
+      "q": "A council plants street trees and builds a new park in a suburb. Which way of improving liveability is this?",
+      "opts": [
+       "Adding parks and trees",
+       "Improving public transport",
+       "Making housing more affordable",
+       "Building a community facility"
+      ],
+      "why": "Street trees and a park are green space, which gives people shade and places to relax. A park is not a community facility such as a library or sports centre, so that option is not the best fit.",
+      "clue": "Think about what trees and parks add to an area."
+     },
+     "b": {
+      "d": 2,
+      "q": "Many people in the town of Corrigan say they feel unsafe walking home after dark. Which change would best improve liveability for them?",
+      "opts": [
+       "Better street lighting and safe crossings",
+       "A new bus timetable for weekends",
+       "More affordable rental homes",
+       "A larger library with more books"
+      ],
+      "why": "Better lighting and safe crossings make streets safer, which deals with the problem people describe. Affordable homes, a library and buses can improve liveability in other ways, but they do not fix feeling unsafe at night.",
+      "clue": "Match the change to the problem the residents describe."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Adding parks and trees",
+      "also_right": []
+     },
+     "b": {
+      "best": "Better street lighting and safe crossings",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The stem names 'street trees' and 'a new park', and the right option is 'Adding parks and trees'. A student can match the words without understanding the idea, and the clue ('what trees and parks add') points to the same match."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts are accurate and both intended answers are right. In question a, the stem repeats the right option's words ('trees', 'park'), so a student can answer by word-matching alone."
+    },
+    "flags": [
+     "Question a, wording: The stem names 'street trees' and 'a new park', and the right option is 'Adding parks and trees'. A student can match the words without understanding the idea, and the clue ('what trees and parks add') points to the same match."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Ways to improve liveability",
+     "card": [
+      "Liveability is how well a place meets the needs of the people who live there. A place can be made more liveable by changing things in it.",
+      [
+       "Transport",
+       "Better buses, trains, footpaths and bike paths help people get to school, work and shops more easily."
+      ],
+      [
+       "Parks and trees",
+       "Parks, green space and street trees give people places to play and relax. Trees also give shade and help keep an area cooler."
+      ],
+      [
+       "Other ways",
+       "Safer streets (such as better lighting and safe crossings), affordable housing and community facilities (such as libraries and sports centres) also make a place more liveable."
+      ]
+     ],
+     "remember": "Liveability improves when a place gets better transport, green space, safety, housing and facilities.",
+     "a": {
+      "q": "People in a new housing estate say summer days are very hot and there is nowhere shady to sit outside. Which change would best help them?",
+      "opts": [
+       "Planting shady trees and opening green space",
+       "Adding an extra bus route to the city",
+       "Building more affordable homes nearby",
+       "Putting brighter lights along the footpaths"
+      ],
+      "why": "Trees give shade and help keep an area cooler, and green space gives people somewhere to relax outside. Brighter lights make streets safer at night, but they do nothing about heat or shade.",
+      "clue": "Focus on the problem the residents describe: heat and no shade."
+     },
+     "b": {
+      "d": 2,
+      "q": "Many people in the town of Tallowbrook say they feel unsafe walking home after dark. Which change would best improve liveability for them?",
+      "opts": [
+       "Better street lighting and safe crossings",
+       "A new weekend bus timetable for the town",
+       "More affordable rental homes in the town",
+       "A larger library with more computers"
+      ],
+      "why": "Better lighting and safe crossings make streets safer, which deals with the problem people describe. Affordable homes, a library and buses can improve liveability in other ways, but they do not fix feeling unsafe at night.",
+      "clue": "Match the change to the problem the residents describe."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:06Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Planting shady trees and opening green space",
+       "also_right": []
+      },
+      "b": {
+       "best": "Better street lighting and safe crossings",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "wording",
+        "detail": "The right option says 'shady trees', echoing the stem's 'nowhere shady', so a student can match the word without knowing that trees give shade and cool an area. Consider 'Planting street trees and opening green space'."
+       },
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The right option's 'safe crossings' echoes the stem's 'feel unsafe', so a student can match on the word 'safe' rather than on the idea that lighting improves safety at night."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and answers are accurate, but in both questions the right option repeats a key word from the stem ('shady', 'safe'), which lets students match words instead of applying the idea."
+     },
+     "flags": [
+      "Question a, wording: The right option says 'shady trees', echoing the stem's 'nowhere shady', so a student can match the word without knowing that trees give shade and cool an area. Consider 'Planting street trees and opening green space'.",
+      "Question b, wording: The right option's 'safe crossings' echoes the stem's 'feel unsafe', so a student can match on the word 'safe' rather than on the idea that lighting improves safety at night."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:55Z",
+   "step": "write",
+   "version": {
+    "title": "Ways to improve liveability",
+    "card": [
+     "Liveability is how well a place meets the needs of the people who live there. A place can be made more liveable by changing things in it.",
+     [
+      "Transport",
+      "Better buses, trains, footpaths and bike paths help people get to school, work and shops more easily."
+     ],
+     [
+      "Parks and trees",
+      "Parks, green space and street trees give people places to play and relax. Trees also give shade and help keep an area cooler."
+     ],
+     [
+      "Other ways",
+      "Safer streets (such as better lighting and safe crossings), affordable housing and community facilities (such as libraries and sports centres) also make a place more liveable."
+     ]
+    ],
+    "remember": "Liveability improves when a place gets better transport, green space, safety, housing and facilities.",
+    "a": {
+     "q": "People in a new housing estate say summer days are very hot and there is nowhere shady to sit outside. Which change would best help them?",
+     "opts": [
+      "Planting trees and opening green space",
+      "Adding an extra bus route to the city",
+      "Building more affordable homes nearby",
+      "Putting brighter lights along the footpaths"
+     ],
+     "why": "Trees give shade and help keep an area cooler, and green space gives people somewhere to relax outside. Brighter lights make streets safer at night, but they do nothing about heat or shade.",
+     "clue": "Focus on the problem the residents describe: heat and no shade."
+    },
+    "b": {
+     "d": 2,
+     "q": "Many people in the town of Tallowbrook say they feel unsafe walking home after dark. Which change would best improve liveability for them?",
+     "opts": [
+      "Better lighting on streets and walkways",
+      "A new weekend bus timetable for the town",
+      "More affordable rental homes in the town",
+      "A larger library with more computers"
+     ],
+     "why": "Better lighting makes streets safer at night, which deals with the problem people describe. Affordable homes, a library and buses can improve liveability in other ways, but they do not fix feeling unsafe at night.",
+     "clue": "Match the change to the problem the residents describe."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Planting trees and opening green space",
+     "also_right": []
+    },
+    "b": {
+     "best": "Better lighting on streets and walkways",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Ways to improve liveability",
+  "card": [
+   "Liveability is how well a place meets the needs of the people who live there. A place can be made more liveable by changing things in it.",
+   [
+    "Transport",
+    "Better buses, trains, footpaths and bike paths help people get to school, work and shops more easily."
+   ],
+   [
+    "Parks and trees",
+    "Parks, green space and street trees give people places to play and relax. Trees also give shade and help keep an area cooler."
+   ],
+   [
+    "Other ways",
+    "Safer streets (such as better lighting and safe crossings), affordable housing and community facilities (such as libraries and sports centres) also make a place more liveable."
+   ]
+  ],
+  "remember": "Liveability improves when a place gets better transport, green space, safety, housing and facilities.",
+  "a": {
+   "q": "People in a new housing estate say summer days are very hot and there is nowhere shady to sit outside. Which change would best help them?",
+   "opts": [
+    "Planting trees and opening green space",
+    "Adding an extra bus route to the city",
+    "Building more affordable homes nearby",
+    "Putting brighter lights along the footpaths"
+   ],
+   "why": "Trees give shade and help keep an area cooler, and green space gives people somewhere to relax outside. Brighter lights make streets safer at night, but they do nothing about heat or shade.",
+   "clue": "Focus on the problem the residents describe: heat and no shade."
+  },
+  "b": {
+   "d": 2,
+   "q": "Many people in the town of Tallowbrook say they feel unsafe walking home after dark. Which change would best improve liveability for them?",
+   "opts": [
+    "Better lighting on streets and walkways",
+    "A new weekend bus timetable for the town",
+    "More affordable rental homes in the town",
+    "A larger library with more computers"
+   ],
+   "why": "Better lighting makes streets safer at night, which deals with the problem people describe. Affordable homes, a library and buses can improve liveability in other ways, but they do not fix feeling unsafe at night.",
+   "clue": "Match the change to the problem the residents describe."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Planting trees and opening green space",
+   "also_right": []
+  },
+  "b": {
+   "best": "Better lighting on streets and walkways",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Ways to improve liveability",
+  "card": [
+   "Liveability is how well a place meets the needs of the people who live there. A place can be made more liveable by changing things in it.",
+   [
+    "Transport",
+    "Better buses, trains, footpaths and bike paths help people get to school, work and shops more easily."
+   ],
+   [
+    "Parks and trees",
+    "Parks, green space and street trees give people places to play and relax. Trees also give shade and help keep an area cooler."
+   ],
+   [
+    "Other ways",
+    "Safer streets (such as better lighting and safe crossings), affordable housing and community facilities (such as libraries and sports centres) also make a place more liveable."
+   ]
+  ],
+  "remember": "Liveability improves when a place gets better transport, green space, safety, housing and facilities.",
+  "a": {
+   "q": "People in a new housing estate say summer days are very hot and there is nowhere shady to sit outside. Which change would best help them?",
+   "opts": [
+    "Planting trees and opening green space",
+    "Adding an extra bus route to the city",
+    "Building more affordable homes nearby",
+    "Putting brighter lights along the footpaths"
+   ],
+   "why": "Trees give shade and help keep an area cooler, and green space gives people somewhere to relax outside. Brighter lights make streets safer at night, but they do nothing about heat or shade.",
+   "clue": "Focus on the problem the residents describe: heat and no shade."
+  },
+  "b": {
+   "d": 2,
+   "q": "Many people in the town of Tallowbrook say they feel unsafe walking home after dark. Which change would best improve liveability for them?",
+   "opts": [
+    "Better lighting on streets and walkways",
+    "A new weekend bus timetable for the town",
+    "More affordable rental homes in the town",
+    "A larger library with more computers"
+   ],
+   "why": "Better lighting makes streets safer at night, which deals with the problem people describe. Affordable homes, a library and buses can improve liveability in other ways, but they do not fix feeling unsafe at night.",
+   "clue": "Match the change to the problem the residents describe."
+  }
+ },
+ "checked_by": "claude-code"
 }

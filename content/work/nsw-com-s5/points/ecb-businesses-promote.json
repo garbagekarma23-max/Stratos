@@ -20,8 +20,133 @@
    0.207
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00602,
+  "check": 0.00787
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches why businesses promote their goods and services; the closest, Branding, covers brand identity and recognition, which is related but not the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Why businesses promote",
+  "card": [
+   "Promotion is how a business communicates with customers about its goods and services. Businesses do it for three main purposes.",
+   [
+    "Inform",
+    "tell customers that a product exists, what it does, where to buy it and what it costs. This matters most for new products."
+   ],
+   [
+    "Persuade",
+    "give customers reasons to choose this product over a rival's, so that they buy it."
+   ],
+   [
+    "Remind",
+    "keep the brand in customers' minds so they remember it when they next buy."
+   ]
+  ],
+  "remember": "Promotion informs customers, persuades them to buy and reminds them the brand is there.",
+  "a": {
+   "q": "A bakery in Orange has sold bread for 20 years. It runs a short radio ad that just repeats its name and slogan. What is the main purpose?",
+   "opts": [
+    "To remind customers the brand exists",
+    "To inform customers about a new product",
+    "To persuade customers to leave a rival",
+    "To tell customers where the bakery is"
+   ],
+   "why": "The ad adds no new facts and gives no reasons to switch. It only repeats the name and slogan, so it reminds. Informing is tempting, but the bakery has nothing new to tell.",
+   "clue": "What new facts does the ad give?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's new gym opens in Wagga Wagga next month. Her flyer lists the address, opening hours and membership prices. Which purpose does it mainly serve?",
+   "opts": [
+    "To inform locals that the gym exists and its details",
+    "To remind locals of a gym they already use",
+    "To persuade locals that her gym beats a rival's",
+    "To remind locals to renew their memberships"
+   ],
+   "why": "The gym is new, so people need to learn it exists. The flyer gives facts like address, hours and prices, so it informs. It does not argue why her gym is better, so persuading is not the main purpose.",
+   "clue": "Do locals know the gym exists yet?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "To remind customers the brand exists",
+   "also_right": []
+  },
+  "b": {
+   "best": "To inform locals that the gym exists and its details",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Why businesses promote",
+  "card": [
+   "Promotion is how a business communicates with customers about its goods and services. Businesses do it for three main purposes.",
+   [
+    "Inform",
+    "tell customers that a product exists, what it does, where to buy it and what it costs. This matters most for new products."
+   ],
+   [
+    "Persuade",
+    "give customers reasons to choose this product over a rival's, so that they buy it."
+   ],
+   [
+    "Remind",
+    "keep the brand in customers' minds so they remember it when they next buy."
+   ]
+  ],
+  "remember": "Promotion informs customers, persuades them to buy and reminds them the brand is there.",
+  "a": {
+   "q": "A bakery in Orange has sold bread for 20 years. It runs a short radio ad that just repeats its name and slogan. What is the main purpose?",
+   "opts": [
+    "To remind customers the brand exists",
+    "To inform customers about a new product",
+    "To persuade customers to leave a rival",
+    "To tell customers where the bakery is"
+   ],
+   "why": "The ad adds no new facts and gives no reasons to switch. It only repeats the name and slogan, so it reminds. Informing is tempting, but the bakery has nothing new to tell.",
+   "clue": "What new facts does the ad give?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's new gym opens in Wagga Wagga next month. Her flyer lists the address, opening hours and membership prices. Which purpose does it mainly serve?",
+   "opts": [
+    "To inform locals that the gym exists and its details",
+    "To remind locals of a gym they already use",
+    "To persuade locals that her gym beats a rival's",
+    "To remind locals to renew their memberships"
+   ],
+   "why": "The gym is new, so people need to learn it exists. The flyer gives facts like address, hours and prices, so it informs. It does not argue why her gym is better, so persuading is not the main purpose.",
+   "clue": "Do locals know the gym exists yet?"
+  }
+ },
+ "cleared_by": "checker"
 }

@@ -24,8 +24,133 @@
    0.35
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:47Z write: done",
+  "2026-11-20T12:44:53Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00654,
+  "check": 0.00741
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches testing a text's authority by checking its sources or using a second text to challenge its claims; the closest points cover comparing treatments of an idea and testing interpretations against the text itself, which are related but not the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Questioning a text's authority",
+  "card": [
+   "A text's authority is how much a reader trusts it as a source of truth or expert opinion. That trust is not fixed. A reader can test it.",
+   [
+    "Check the sources",
+    "Ask who wrote the text and what they base their claims on. Named experts, data and original records give a text more authority than claims with no support."
+   ],
+   [
+    "Compare texts",
+    "Read other texts on the same topic. If they agree, the claims gain support. If they differ, the reader must weigh which is better supported."
+   ],
+   [
+    "Challenge",
+    "A second text can challenge the first by offering different evidence or a different view. This can weaken the first text's authority in the reader's eyes."
+   ]
+  ],
+  "remember": "Authority is tested, not assumed: check the sources, compare with other texts, and see whether another text challenges the claims.",
+  "a": {
+   "q": "A blog post claims a new school bus route will halve travel times. Which action best tests the blog's authority?",
+   "opts": [
+    "Check what evidence the blog gives for its claim",
+    "Count how many times the blog repeats its claim",
+    "Read the blog again to see if it sounds confident",
+    "Share the blog to see how many people agree"
+   ],
+   "why": "Checking the evidence tests whether the claim is supported, which is what authority rests on. Confident wording can sound convincing, but it does not show that the claim has sources behind it.",
+   "clue": "Look for the option that tests the support behind the claim."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya reads an article by a local council saying a new library is cheap to run. Later she reads a report from an independent auditor with different cost figures. What has the second text done?",
+   "opts": [
+    "Challenged the first text's claim with different evidence",
+    "Proved the first text was written by someone untrustworthy",
+    "Confirmed the first text by repeating its main argument",
+    "Replaced the first text, so it no longer needs checking"
+   ],
+   "why": "The auditor's report offers different figures, so it challenges the council's claim and may weaken its authority. It does not prove the council is untrustworthy. Priya must still weigh which text has better support.",
+   "clue": "The second text gives different figures. What does that do to the first claim?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Check what evidence the blog gives for its claim",
+   "also_right": []
+  },
+  "b": {
+   "best": "Challenged the first text's claim with different evidence",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Questioning a text's authority",
+  "card": [
+   "A text's authority is how much a reader trusts it as a source of truth or expert opinion. That trust is not fixed. A reader can test it.",
+   [
+    "Check the sources",
+    "Ask who wrote the text and what they base their claims on. Named experts, data and original records give a text more authority than claims with no support."
+   ],
+   [
+    "Compare texts",
+    "Read other texts on the same topic. If they agree, the claims gain support. If they differ, the reader must weigh which is better supported."
+   ],
+   [
+    "Challenge",
+    "A second text can challenge the first by offering different evidence or a different view. This can weaken the first text's authority in the reader's eyes."
+   ]
+  ],
+  "remember": "Authority is tested, not assumed: check the sources, compare with other texts, and see whether another text challenges the claims.",
+  "a": {
+   "q": "A blog post claims a new school bus route will halve travel times. Which action best tests the blog's authority?",
+   "opts": [
+    "Check what evidence the blog gives for its claim",
+    "Count how many times the blog repeats its claim",
+    "Read the blog again to see if it sounds confident",
+    "Share the blog to see how many people agree"
+   ],
+   "why": "Checking the evidence tests whether the claim is supported, which is what authority rests on. Confident wording can sound convincing, but it does not show that the claim has sources behind it.",
+   "clue": "Look for the option that tests the support behind the claim."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya reads an article by a local council saying a new library is cheap to run. Later she reads a report from an independent auditor with different cost figures. What has the second text done?",
+   "opts": [
+    "Challenged the first text's claim with different evidence",
+    "Proved the first text was written by someone untrustworthy",
+    "Confirmed the first text by repeating its main argument",
+    "Replaced the first text, so it no longer needs checking"
+   ],
+   "why": "The auditor's report offers different figures, so it challenges the council's claim and may weaken its authority. It does not prove the council is untrustworthy. Priya must still weigh which text has better support.",
+   "clue": "The second text gives different figures. What does that do to the first claim?"
+  }
+ },
+ "cleared_by": "checker"
 }

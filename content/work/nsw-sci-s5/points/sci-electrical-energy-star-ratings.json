@@ -24,8 +24,115 @@
    0.215
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:58Z write: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.0062,
+  "check": 0.00759
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches that appliance energy use depends on power and running time or how energy star ratings compare efficiency; the closest, conservation of energy, covers energy transfer in general but not this idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Electrical energy and star ratings",
+  "card": [
+   "Power is how fast an appliance transfers electrical energy. It is measured in watts (W), and 1000 W is 1 kilowatt (kW).",
+   "Energy used = power × time. With power in kW and time in hours, the energy is in kilowatt hours (kWh). A 2 kW heater running for 3 hours uses 6 kWh.",
+   "So an appliance uses more energy the higher its power and the longer it runs. A low power appliance left on for a long time can use more than a high power one used briefly.",
+   "Energy star ratings compare similar appliances, such as two fridges of the same size. More stars means the appliance does the same job using less energy."
+  ],
+  "remember": "Energy = power × time. More stars means less energy for the same job.",
+  "a": {
+   "q": "A 0.5 kW oven runs for 4 hours. How much energy does it use?",
+   "opts": [
+    "2 kWh",
+    "8 kWh",
+    "0.125 kWh",
+    "4.5 kWh"
+   ],
+   "why": "Energy = power × time = 0.5 kW × 4 h = 2 kWh. Dividing power by time gives 0.125, but the card says to multiply them.",
+   "clue": "Multiply power in kW by time in hours."
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam is choosing between two fridges of the same size. Fridge X has 4 stars and fridge Y has 2 stars. Which statement is correct?",
+   "opts": [
+    "X uses less energy than Y to do the same job",
+    "X has a lower power rating than Y in watts",
+    "X is bigger than Y, so it keeps food colder",
+    "X uses less energy than Y only if it runs longer"
+   ],
+   "why": "Star ratings compare how little energy similar appliances use for the same job, so more stars means less energy used. The rating does not tell you the power in watts or the size, and running longer would use more energy, not less.",
+   "clue": "Stars compare energy used for the same job."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2 kWh",
+   "also_right": []
+  },
+  "b": {
+   "best": "X uses less energy than Y to do the same job",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Electrical energy and star ratings",
+  "card": [
+   "Power is how fast an appliance transfers electrical energy. It is measured in watts (W), and 1000 W is 1 kilowatt (kW).",
+   "Energy used = power × time. With power in kW and time in hours, the energy is in kilowatt hours (kWh). A 2 kW heater running for 3 hours uses 6 kWh.",
+   "So an appliance uses more energy the higher its power and the longer it runs. A low power appliance left on for a long time can use more than a high power one used briefly.",
+   "Energy star ratings compare similar appliances, such as two fridges of the same size. More stars means the appliance does the same job using less energy."
+  ],
+  "remember": "Energy = power × time. More stars means less energy for the same job.",
+  "a": {
+   "q": "A 0.5 kW oven runs for 4 hours. How much energy does it use?",
+   "opts": [
+    "2 kWh",
+    "8 kWh",
+    "0.125 kWh",
+    "4.5 kWh"
+   ],
+   "why": "Energy = power × time = 0.5 kW × 4 h = 2 kWh. Dividing power by time gives 0.125, but the card says to multiply them.",
+   "clue": "Multiply power in kW by time in hours."
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam is choosing between two fridges of the same size. Fridge X has 4 stars and fridge Y has 2 stars. Which statement is correct?",
+   "opts": [
+    "X uses less energy than Y to do the same job",
+    "X has a lower power rating than Y in watts",
+    "X is bigger than Y, so it keeps food colder",
+    "X uses less energy than Y only if it runs longer"
+   ],
+   "why": "Star ratings compare how little energy similar appliances use for the same job, so more stars means less energy used. The rating does not tell you the power in watts or the size, and running longer would use more energy, not less.",
+   "clue": "Stars compare energy used for the same job."
+  }
+ },
+ "cleared_by": "checker"
 }

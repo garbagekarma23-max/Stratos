@@ -24,8 +24,115 @@
    0.216
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:45Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:49Z write: done",
+  "2026-11-20T12:44:54Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.0057,
+  "check": 0.01345
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, Trade links places, explains what trade is and how it links places at different scales, but it never explains why places trade, which is the new point's idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Why places trade",
+  "card": [
+   "No place can make everything its people need or want. Climate, land, resources and skills differ from place to place.",
+   "So places make and sell the things they are good at making. This is how they earn money from trade.",
+   "They then buy the things they cannot make, or cannot make well. Trade lets people get goods and services from far away.",
+   "For example, a country with lots of sunny farmland can grow and sell fruit. It may buy machinery from a country with factories and skilled workers."
+  ],
+  "remember": "Places sell what they make well and buy what they lack.",
+  "a": {
+   "q": "Which sentence best explains why places trade?",
+   "opts": [
+    "No place can make everything its people need",
+    "Every place makes the same things in different amounts",
+    "Trade is the only way a place can earn money",
+    "Places trade so they never need to make anything"
+   ],
+   "why": "Places differ in climate, resources and skills, so none can make everything. Trade fills the gaps. It is not true that places stop making things, because they still sell what they make well.",
+   "clue": "Think about what a place cannot do by itself."
+  },
+  "b": {
+   "d": 2,
+   "q": "Kiri's island has warm, wet weather and grows lots of bananas, but it has no oil. What is the most likely trade pattern for the island?",
+   "opts": [
+    "Sell bananas and buy oil from elsewhere",
+    "Sell oil and buy bananas from elsewhere",
+    "Sell bananas and buy more bananas",
+    "Make its own oil so it does not need to trade"
+   ],
+   "why": "The island makes bananas well, so it can sell them. It lacks oil, so it buys it from other places. Making its own oil does not work, because it has no oil to use.",
+   "clue": "What does the island make well, and what does it lack?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "No place can make everything its people need",
+   "also_right": []
+  },
+  "b": {
+   "best": "Sell bananas and buy oil from elsewhere",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Why places trade",
+  "card": [
+   "No place can make everything its people need or want. Climate, land, resources and skills differ from place to place.",
+   "So places make and sell the things they are good at making. This is how they earn money from trade.",
+   "They then buy the things they cannot make, or cannot make well. Trade lets people get goods and services from far away.",
+   "For example, a country with lots of sunny farmland can grow and sell fruit. It may buy machinery from a country with factories and skilled workers."
+  ],
+  "remember": "Places sell what they make well and buy what they lack.",
+  "a": {
+   "q": "Which sentence best explains why places trade?",
+   "opts": [
+    "No place can make everything its people need",
+    "Every place makes the same things in different amounts",
+    "Trade is the only way a place can earn money",
+    "Places trade so they never need to make anything"
+   ],
+   "why": "Places differ in climate, resources and skills, so none can make everything. Trade fills the gaps. It is not true that places stop making things, because they still sell what they make well.",
+   "clue": "Think about what a place cannot do by itself."
+  },
+  "b": {
+   "d": 2,
+   "q": "Kiri's island has warm, wet weather and grows lots of bananas, but it has no oil. What is the most likely trade pattern for the island?",
+   "opts": [
+    "Sell bananas and buy oil from elsewhere",
+    "Sell oil and buy bananas from elsewhere",
+    "Sell bananas and buy more bananas",
+    "Make its own oil so it does not need to trade"
+   ],
+   "why": "The island makes bananas well, so it can sell them. It lacks oil, so it buys it from other places. Making its own oil does not work, because it has no oil to use.",
+   "clue": "What does the island make well, and what does it lack?"
+  }
+ },
+ "cleared_by": "checker"
 }

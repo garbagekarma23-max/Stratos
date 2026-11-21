@@ -20,8 +20,198 @@
    0.217
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:47Z write: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: kept for you (the fresh check named a sensitive topic)",
+  "2026-11-20T14:34:17Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00646,
+  "check": 0.01485,
+  "fix": 0.02192,
+  "recheck": 0.01207
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches the specific idea that genre conventions carry values about who gets to be the hero; the closest points cover conventions and subversion in general, or values in a text, without linking genre conventions to what a text assumes about the world.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Genre and values",
+  "card": [
+   "A genre is a group of texts that share conventions, such as the typical characters, settings, plots and endings of a western, a fairy tale or a crime story.",
+   "Conventions are not neutral. Each one can carry a value, a belief about what matters or who deserves respect. Who becomes the hero, who is the villain and who is left out all send a message.",
+   "For example, a genre that always makes a lone, strong man the hero can suggest that problems are best solved by individuals and force, not by groups talking together.",
+   "To read for values, ask what the conventions repeat. Who is shown as good, who is shown as dangerous, and what does the ending reward? The answers show what the text assumes about the world."
+  ],
+  "remember": "Genre conventions can carry values, so noticing who is the hero and what is rewarded shows what a text assumes.",
+  "a": {
+   "q": "Why does noticing who is the hero in a genre help a reader?",
+   "opts": [
+    "It shows what the genre assumes about who matters",
+    "It proves the author's own life was like the story",
+    "It shows the plot must follow the same steps each time",
+    "It tells the reader which texts were written first"
+   ],
+   "why": "Choosing the hero is a convention that can carry a value, so it shows what the text assumes about the world. Saying the plot must follow set steps describes the convention itself, not the value it carries.",
+   "clue": "Think about what a repeated choice can suggest about the world."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a series of adventure stories set in a colony, the explorers are always the heroes, and the local people appear only as helpers or threats. What does this convention most likely assume?",
+   "opts": [
+    "That the outsiders' view of events is the one that counts",
+    "That adventure stories must be set in faraway places",
+    "That local people are always the villains in the genre",
+    "That the explorers in real history were all heroic"
+   ],
+   "why": "Making outsiders the heroes and locals helpers or threats suggests the outsiders' view matters most. The villain option is too strong, because the card says conventions can carry values, not that they always do one thing.",
+   "clue": "Ask whose point of view the story treats as most important."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It shows what the genre assumes about who matters",
+   "also_right": []
+  },
+  "b": {
+   "best": "That the outsiders' view of events is the one that counts",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Every wrong option carries an absolute word ('always', 'all', 'must') and the right option has none, so a student can pick the answer by rejecting overstatements without knowing the idea."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Two wrong options use absolute words ('must', 'proves') and the right option has none, which partly signals the answer."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says the villain option is wrong because conventions only 'can' carry values. The clearer reason is that the stem says local people appear as helpers or threats, so they are not always villains. The stated reasoning may confuse students."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have clear, correct answers that match the card. The wrong options rely on absolute words like 'always', 'all' and 'must', which give the right answers away. The why for (b) also explains the villain option's error in a confusing way."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: Every wrong option carries an absolute word ('always', 'all', 'must') and the right option has none, so a student can pick the answer by rejecting overstatements without knowing the idea.",
+  "Question a, wording: Two wrong options use absolute words ('must', 'proves') and the right option has none, which partly signals the answer.",
+  "Question b, other: Why (b) says the villain option is wrong because conventions only 'can' carry values. The clearer reason is that the stem says local people appear as helpers or threats, so they are not always villains. The stated reasoning may confuse students."
+ ],
+ "proposal": {
+  "title": "Genre and values",
+  "card": [
+   "A genre is a group of texts that share conventions, such as the typical characters, settings, plots and endings of a western, a fairy tale or a crime story.",
+   "Conventions are not neutral. Each one can carry a value, a belief about what matters or who deserves respect. Who becomes the hero, who is the villain and who is left out all send a message.",
+   "For example, a genre that always makes a lone, strong man the hero can suggest that problems are best solved by individuals and force, not by groups talking together.",
+   "To read for values, ask what the conventions repeat. Who is shown as good, who is shown as dangerous, and what does the ending reward? The answers show what the text assumes about the world."
+  ],
+  "remember": "Genre conventions can carry values, so noticing who is the hero and what is rewarded shows what a text assumes.",
+  "a": {
+   "q": "Why does noticing who is the hero in a genre help a reader?",
+   "opts": [
+    "It shows what the genre assumes about who matters",
+    "It shows what the author's own life was like",
+    "It shows which steps the plot follows in each text",
+    "It shows which texts in the genre came first"
+   ],
+   "why": "Who gets to be the hero is a convention that can carry a value, so it shows what the text assumes about who matters. Tracking the plot's steps only describes the convention itself, not the value it carries.",
+   "clue": "Think about what a repeated choice can suggest about the world."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a series of adventure stories set in a colony, the explorers are always the heroes, and the local people appear only as helpers or threats. What does this convention most likely assume?",
+   "opts": [
+    "That the outsiders' view of events is the one that counts",
+    "That local people are the villains of these stories",
+    "That adventure stories work best in faraway places",
+    "That life in the colony was safe and peaceful for all"
+   ],
+   "why": "Making the explorers the heroes, with locals as helpers or threats, treats the outsiders' view as the one that counts. The villain option does not fit, because the question says local people also appear as helpers, so they are not simply villains.",
+   "clue": "Ask whose point of view the story treats as most important."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "kept",
+  "why": [
+   "the fresh check named a sensitive topic"
+  ],
+  "check": {
+   "a": {
+    "best": "It shows what the genre assumes about who matters",
+    "also_right": []
+   },
+   "b": {
+    "best": "That the outsiders' view of events is the one that counts",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "first-nations",
+   "summary": "No problems found. Question b deals with how colonised local peoples are portrayed, so the owner may want to check it is handled with care."
+  },
+  "flags": []
+ },
+ "final": {
+  "title": "Genre and values",
+  "card": [
+   "A genre is a group of texts that share conventions, such as the typical characters, settings, plots and endings of a western, a fairy tale or a crime story.",
+   "Conventions are not neutral. Each one can carry a value, a belief about what matters or who deserves respect. Who becomes the hero, who is the villain and who is left out all send a message.",
+   "For example, a genre that always makes a lone, strong man the hero can suggest that problems are best solved by individuals and force, not by groups talking together.",
+   "To read for values, ask what the conventions repeat. Who is shown as good, who is shown as dangerous, and what does the ending reward? The answers show what the text assumes about the world."
+  ],
+  "remember": "Genre conventions can carry values, so noticing who is the hero and what is rewarded shows what a text assumes.",
+  "a": {
+   "q": "Why does noticing who is the hero in a genre help a reader?",
+   "opts": [
+    "It shows what the genre assumes about who matters",
+    "It shows what the author's own life was like",
+    "It shows which steps the plot follows in each text",
+    "It shows which texts in the genre came first"
+   ],
+   "why": "Who gets to be the hero is a convention that can carry a value, so it shows what the text assumes about who matters. Tracking the plot's steps only describes the convention itself, not the value it carries.",
+   "clue": "Think about what a repeated choice can suggest about the world."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a series of adventure stories set in a colony, the explorers are always the heroes, and the local people appear only as helpers or threats. What does this convention most likely assume?",
+   "opts": [
+    "That the outsiders' view of events is the one that counts",
+    "That local people are the villains of these stories",
+    "That adventure stories work best in faraway places",
+    "That life in the colony was safe and peaceful for all"
+   ],
+   "why": "Making the explorers the heroes, with locals as helpers or threats, treats the outsiders' view as the one that counts. The villain option does not fit, because the question says local people also appear as helpers, so they are not simply villains.",
+   "clue": "Ask whose point of view the story treats as most important."
+  }
+ },
+ "cleared_by": "owner"
 }

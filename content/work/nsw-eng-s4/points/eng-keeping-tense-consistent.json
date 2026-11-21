@@ -8,8 +8,415 @@
    0.745
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:42Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: failed the content check, writing again",
+  "2026-11-20T12:44:53Z write: done (still fails the content check)",
+  "2026-11-20T12:53:24Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-20T13:44:55Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: flagged",
+  "2026-11-20T13:56:50Z fix: suggested",
+  "2026-11-20T14:33:13Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 2,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.01464,
+  "check": 0.01361,
+  "fix": 0.07035,
+  "recheck": 0.0112
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers staying in one tense, but it does not teach choosing a tense to suit the purpose, such as present tense for analysing a text, which the new point's brief requires.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The word being repeated, storm, is not marked off with quotation marks in the question or any option. 'The poet repeats storm to show…' can read awkwardly to Year 7 students. Writing 'repeats the word \"storm\"' would be clearer.",
+ "rejected": {
+  "title": "Keeping tense consistent",
+  "card": [
+   "Tense shows when something happens. Past tense is for what has already happened (she opened the door). Present tense is for what is happening now or is always true (she opens the door).",
+   "Choose the tense that suits your purpose. A story about an event is often told in the past tense. When you analyse a text, use the present tense: the writer creates tension, the poem repeats a word.",
+   "Once you choose a tense, stay in it. Switching without a reason confuses the reader. In \"The writer builds fear and then she described the storm\", the verb should be describes.",
+   "Change tense only when the time really changes. Analysing in the present, you can still use the past for an earlier time the text looks back on: the poet describes the beach where she played as a child."
+  ],
+  "remember": "Pick a tense that suits the purpose, and stay in it unless the time changes.",
+  "a": {
+   "q": "A student is analysing a short story. Which sentence keeps its tense consistent in the usual way for analysis?",
+   "opts": [
+    "The author uses short sentences, and this builds tension",
+    "The author used short sentences, and this builds tension",
+    "The author uses short sentences, and this built tension",
+    "The author used short sentences, and this will build tension"
+   ],
+   "why": "Both verbs, uses and builds, are in the present tense, which suits analysing a text. The other options switch tense in the middle with no change in time, which is the mistake the card warns about.",
+   "clue": "Look for the sentence where every verb is in the same tense."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jai is analysing a poem about a storm the poet lived through as a girl. Which sentence uses tense correctly?",
+   "opts": [
+    "The poet repeats storm to show the fear she felt then",
+    "The poet repeated storm to show the fear she felt then",
+    "The poet repeats storm, which showed the fear she felt then",
+    "The poet repeats storm to show the fear she feels then"
+   ],
+   "why": "Repeats and show describe what the poem does, so they are in the present tense for analysis. Felt is past because the storm happened years earlier, which is a real change in time. Feels then is the tempting slip: it puts an earlier time in the present tense.",
+   "clue": "Which verbs describe the poem, and which describe the storm years ago?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "owner",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The word being repeated, storm, is not marked off with quotation marks in the question or any option. 'The poet repeats storm to show…' can read awkwardly to Year 7 students. Writing 'repeats the word \"storm\"' would be clearer."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Keeping tense consistent",
+     "card": [
+      "Tense shows when something happens. Past tense is for what has already happened (she opened the door). Present tense is for what is happening now or is always true (she opens the door).",
+      "Choose the tense that suits your purpose. A story about an event is often told in the past tense. When you analyse a text, use the present tense: the writer creates tension, the poem repeats a word.",
+      "Once you choose a tense, stay in it. Switching without a reason confuses the reader. In \"The writer builds fear and then she described the storm\", the verb should be describes.",
+      "Change tense only when the time really changes. Writing about a text in the present, you can still use the past for an earlier event: the writer builds suspense after the hero left home."
+     ],
+     "remember": "Pick a tense that suits the purpose, and stay in it unless the time changes.",
+     "a": {
+      "q": "A student is analysing a short story. Which sentence keeps its tense consistent in the usual way for analysis?",
+      "opts": [
+       "The author uses short sentences, and this builds tension",
+       "The author used short sentences, and this builds tension",
+       "The author uses short sentences, and this built tension",
+       "The author used short sentences, and this will build tension"
+      ],
+      "why": "Both verbs, uses and builds, are in the present tense, which suits analysing a text. The other options switch tense in the middle with no change in time, which is the mistake the card warns about.",
+      "clue": "Look for the sentence where every verb is in the same tense."
+     },
+     "b": {
+      "d": 3,
+      "q": "Jai is writing about a poem. Which sentence changes tense for a good reason?",
+      "opts": [
+       "The poet repeats storm, which shows the fear she felt as a child",
+       "The poet repeated storm, which shows the fear she feels now",
+       "The poet repeats storm, which showed the fear she feels now",
+       "The poet repeated storm, which shows the fear she felt then"
+      ],
+      "why": "The analysis uses the present tense (repeats, shows), and the past tense felt refers to an earlier time, when she was a child. That is a real change in time. The other options switch tense with no change in time.",
+      "clue": "Only one verb talks about an earlier time. The others analyse the poem."
+     }
+    },
+    "redone": true,
+    "local": [
+     "eng-keeping-tense-consistentb option is 64 characters: The poet repeats storm, which shows the fear she felt as a child"
+    ],
+    "check": {
+     "a": {
+      "best": "The author uses short sentences, and this builds tension",
+      "also_right": []
+     },
+     "b": {
+      "best": "The poet repeats storm, which shows the fear she felt as a child",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option stands out. It is the only one with the precise detail 'as a child', which signals the earlier time, so a student could pick it without knowing the idea. The clue ('Only one verb talks about an earlier time') then points straight to it."
+      },
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "The example 'the writer builds suspense after the hero left home' is confusing. In literary analysis, events within the story are usually also described in the present tense ('after the hero leaves home'). Using a plot event as the 'earlier time' blurs the convention the card has just taught. An event before the text's time frame would be a clearer example."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both answers are clear and correct. Question b's right option gives itself away with the only time detail ('as a child'), and the card's example of a past-tense plot event clashes with the usual present-tense convention for story events."
+    },
+    "flags": [
+     "Question b, wording: The right option stands out. It is the only one with the precise detail 'as a child', which signals the earlier time, so a student could pick it without knowing the idea. The clue ('Only one verb talks about an earlier time') then points straight to it.",
+     "Card, wording: The example 'the writer builds suspense after the hero left home' is confusing. In literary analysis, events within the story are usually also described in the present tense ('after the hero leaves home'). Using a plot event as the 'earlier time' blurs the convention the card has just taught. An event before the text's time frame would be a clearer example.",
+     "Content check: eng-keeping-tense-consistentb option is 64 characters: The poet repeats storm, which shows the fear she felt as a child"
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Keeping tense consistent",
+     "card": [
+      "Tense shows when something happens. Past tense is for what has already happened (she opened the door). Present tense is for what is happening now or is always true (she opens the door).",
+      "Choose the tense that suits your purpose. A story about an event is often told in the past tense. When you analyse a text, use the present tense: the writer creates tension, the poem repeats a word.",
+      "Once you choose a tense, stay in it. Switching without a reason confuses the reader. In \"The writer builds fear and then she described the storm\", the verb should be describes.",
+      "Change tense only when the time really changes. Analysing in the present, you can still use the past for an earlier time the text looks back on: the poet describes the beach where she played as a child."
+     ],
+     "remember": "Pick a tense that suits the purpose, and stay in it unless the time changes.",
+     "a": {
+      "q": "A student is analysing a short story. Which sentence keeps its tense consistent in the usual way for analysis?",
+      "opts": [
+       "The author uses short sentences, and this builds tension",
+       "The author used short sentences, and this builds tension",
+       "The author uses short sentences, and this built tension",
+       "The author used short sentences, and this will build tension"
+      ],
+      "why": "Both verbs, uses and builds, are in the present tense, which suits analysing a text. The other options switch tense in the middle with no change in time, which is the mistake the card warns about.",
+      "clue": "Look for the sentence where every verb is in the same tense."
+     },
+     "b": {
+      "d": 3,
+      "q": "Jai is analysing a poem about a storm the poet lived through as a girl. Which sentence uses tense correctly?",
+      "opts": [
+       "The poet repeats storm to show the fear she felt then",
+       "The poet repeated storm to show the fear she felt then",
+       "The poet repeats storm, which showed the fear she felt then",
+       "The poet repeats storm to show the fear she feels then"
+      ],
+      "why": "Repeats and show describe what the poem does, so they are in the present tense for analysis. Felt is past because the storm happened years earlier, which is a real change in time. Feels then is the tempting slip: it puts an earlier time in the present tense.",
+      "clue": "Which verbs describe the poem, and which describe the storm years ago?"
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:06Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "The author uses short sentences, and this builds tension",
+       "also_right": []
+      },
+      "b": {
+       "best": "The poet repeats storm to show the fear she felt then",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The word being repeated, storm, is not marked off with quotation marks in the question or any option. 'The poet repeats storm to show…' can read awkwardly to Year 7 students. Writing 'repeats the word \"storm\"' would be clearer."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both questions are accurate, and each question has exactly one defensible answer. The only issue is a minor wording one: the repeated word 'storm' in question b should be in quotation marks."
+     },
+     "flags": [
+      "Question b, wording: The word being repeated, storm, is not marked off with quotation marks in the question or any option. 'The poet repeats storm to show…' can read awkwardly to Year 7 students. Writing 'repeats the word \"storm\"' would be clearer."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:55Z",
+   "step": "write",
+   "version": {
+    "title": "Keeping tense consistent",
+    "card": [
+     "Tense shows when something happens. Past tense is for what has already happened (she opened the door). Present tense is for what is happening now or is always true (she opens the door).",
+     "Choose the tense that suits your purpose. A story about an event is often told in the past tense. When you analyse a text, use the present tense: the writer creates tension, the poem repeats a word.",
+     "Once you choose a tense, stay in it. Switching without a reason confuses the reader. In \"The writer builds fear and then she described the storm\", the verb should be describes.",
+     "Change tense only when the time really changes. Analysing in the present, you can still use the past for an earlier time the text looks back on: the poet describes the beach where she played as a child."
+    ],
+    "remember": "Pick a tense that suits the purpose, and stay in it unless the time changes.",
+    "a": {
+     "q": "A student is analysing a short story. Which sentence keeps its tense consistent in the usual way for analysis?",
+     "opts": [
+      "The author uses short sentences, and this builds tension",
+      "The author used short sentences, and this builds tension",
+      "The author uses short sentences, and this built tension",
+      "The author used short sentences, and this will build tension"
+     ],
+     "why": "Both verbs, uses and builds, are in the present tense, which suits analysing a text. The other options switch tense in the middle with no change in time, which is the mistake the card warns about.",
+     "clue": "Look for the sentence where every verb is in the same tense."
+    },
+    "b": {
+     "d": 3,
+     "q": "Jai is analysing a poem about a storm the poet lived through as a girl. The poem repeats the word \"storm\". Which sentence uses tense correctly?",
+     "opts": [
+      "The poet repeats \"storm\" to show the fear she felt then",
+      "The poet repeated \"storm\" to show the fear she felt then",
+      "The poet repeats \"storm\" and showed the fear she felt then",
+      "The poet repeats \"storm\" to show the fear she feels then"
+     ],
+     "why": "Repeats describes what the poem does, so it is in the present tense, as analysis needs. Felt is past because the storm happened years earlier, which is a real change in time. Feels then is the tempting slip: it puts an earlier time in the present tense.",
+     "clue": "Which verb describes the poem, and which describes the storm years ago?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "The author uses short sentences, and this builds tension",
+     "also_right": []
+    },
+    "b": {
+     "best": "The poet repeats \"storm\" to show the fear she felt then",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "b",
+      "kind": "wording",
+      "detail": "The stem asks which sentence \"uses tense correctly\", but \"The poet repeated \"storm\" to show the fear she felt then\" is grammatical and consistent in itself; it is only wrong by the convention of present tense for analysis. Question a says \"in the usual way for analysis\"; question b would be clearer with the same words, such as \"Which sentence uses tense in the usual way for analysis?\""
+     }
+    ],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "The card, remember line and both answers are right. Question b's stem says \"uses tense correctly\", which a student could argue fits the all-past option too; wording it as \"in the usual way for analysis\", as question a does, would remove the doubt."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Keeping tense consistent",
+  "card": [
+   "Tense shows when something happens. Past tense is for what has already happened (she opened the door). Present tense is for what is happening now or is always true (she opens the door).",
+   "Choose the tense that suits your purpose. A story about an event is often told in the past tense. When you analyse a text, use the present tense: the writer creates tension, the poem repeats a word.",
+   "Once you choose a tense, stay in it. Switching without a reason confuses the reader. In \"The writer builds fear and then she described the storm\", the verb should be describes.",
+   "Change tense only when the time really changes. Analysing in the present, you can still use the past for an earlier time the text looks back on: the poet describes the beach where she played as a child."
+  ],
+  "remember": "Pick a tense that suits the purpose, and stay in it unless the time changes.",
+  "a": {
+   "q": "A student is analysing a short story. Which sentence keeps its tense consistent in the usual way for analysis?",
+   "opts": [
+    "The author uses short sentences, and this builds tension",
+    "The author used short sentences, and this builds tension",
+    "The author uses short sentences, and this built tension",
+    "The author used short sentences, and this will build tension"
+   ],
+   "why": "Both verbs, uses and builds, are in the present tense, which suits analysing a text. The other options switch tense in the middle with no change in time, which is the mistake the card warns about.",
+   "clue": "Look for the sentence where every verb is in the same tense."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jai is analysing a poem about a storm the poet lived through as a girl. The poem repeats the word \"storm\". Which sentence uses tense correctly?",
+   "opts": [
+    "The poet repeats \"storm\" to show the fear she felt then",
+    "The poet repeated \"storm\" to show the fear she felt then",
+    "The poet repeats \"storm\" and showed the fear she felt then",
+    "The poet repeats \"storm\" to show the fear she feels then"
+   ],
+   "why": "Repeats describes what the poem does, so it is in the present tense, as analysis needs. Felt is past because the storm happened years earlier, which is a real change in time. Feels then is the tempting slip: it puts an earlier time in the present tense.",
+   "clue": "Which verb describes the poem, and which describes the storm years ago?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The author uses short sentences, and this builds tension",
+   "also_right": []
+  },
+  "b": {
+   "best": "The poet repeats \"storm\" to show the fear she felt then",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem asks which sentence \"uses tense correctly\", but \"The poet repeated \"storm\" to show the fear she felt then\" is grammatical and consistent in itself; it is only wrong by the convention of present tense for analysis. Question a says \"in the usual way for analysis\"; question b would be clearer with the same words, such as \"Which sentence uses tense in the usual way for analysis?\""
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, remember line and both answers are right. Question b's stem says \"uses tense correctly\", which a student could argue fits the all-past option too; wording it as \"in the usual way for analysis\", as question a does, would remove the doubt."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The stem asks which sentence \"uses tense correctly\", but \"The poet repeated \"storm\" to show the fear she felt then\" is grammatical and consistent in itself; it is only wrong by the convention of present tense for analysis. Question a says \"in the usual way for analysis\"; question b would be clearer with the same words, such as \"Which sentence uses tense in the usual way for analysis?\""
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Keeping tense consistent",
+  "card": [
+   "Tense shows when something happens. Past tense is for what has already happened (she opened the door). Present tense is for what is happening now or is always true (she opens the door).",
+   "Choose the tense that suits your purpose. A story about an event is often told in the past tense. When you analyse a text, use the present tense: the writer creates tension, the poem repeats a word.",
+   "Once you choose a tense, stay in it. Switching without a reason confuses the reader. In \"The writer builds fear and then she described the storm\", the verb should be describes.",
+   "Change tense only when the time really changes. Analysing in the present, you can still use the past for an earlier time the text looks back on: the poet describes the beach where she played as a child."
+  ],
+  "remember": "Pick a tense that suits the purpose, and stay in it unless the time changes.",
+  "a": {
+   "q": "A student is analysing a short story. Which sentence keeps its tense consistent in the usual way for analysis?",
+   "opts": [
+    "The author uses short sentences, and this builds tension",
+    "The author used short sentences, and this builds tension",
+    "The author uses short sentences, and this built tension",
+    "The author used short sentences, and this will build tension"
+   ],
+   "why": "Both verbs, uses and builds, are in the present tense, which suits analysing a text. The other options switch tense in the middle with no change in time, which is the mistake the card warns about.",
+   "clue": "Look for the sentence where every verb is in the same tense."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jai is analysing a poem about a storm the poet lived through as a girl. The poem repeats the word \"storm\". Which sentence uses tense in the usual way for analysis?",
+   "opts": [
+    "The poet repeats \"storm\" to show the fear she felt then",
+    "The poet repeated \"storm\" to show the fear she felt then",
+    "The poet repeats \"storm\" and showed the fear she felt then",
+    "The poet repeats \"storm\" to show the fear she feels then"
+   ],
+   "why": "Repeats describes what the poem does, so it is in the present tense, as analysis needs. Felt is past because the storm happened years earlier, which is a real change in time. Feels then is the tempting slip: it puts an earlier time in the present tense.",
+   "clue": "Which verb describes the poem, and which describes the storm years ago?"
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Keeping tense consistent",
+  "card": [
+   "Tense shows when something happens. Past tense is for what has already happened (she opened the door). Present tense is for what is happening now or is always true (she opens the door).",
+   "Choose the tense that suits your purpose. A story about an event is often told in the past tense. When you analyse a text, use the present tense: the writer creates tension, the poem repeats a word.",
+   "Once you choose a tense, stay in it. Switching without a reason confuses the reader. In \"The writer builds fear and then she described the storm\", the verb should be describes.",
+   "Change tense only when the time really changes. Analysing in the present, you can still use the past for an earlier time the text looks back on: the poet describes the beach where she played as a child."
+  ],
+  "remember": "Pick a tense that suits the purpose, and stay in it unless the time changes.",
+  "a": {
+   "q": "A student is analysing a short story. Which sentence keeps its tense consistent in the usual way for analysis?",
+   "opts": [
+    "The author uses short sentences, and this builds tension",
+    "The author used short sentences, and this builds tension",
+    "The author uses short sentences, and this built tension",
+    "The author used short sentences, and this will build tension"
+   ],
+   "why": "Both verbs, uses and builds, are in the present tense, which suits analysing a text. The other options switch tense in the middle with no change in time, which is the mistake the card warns about.",
+   "clue": "Look for the sentence where every verb is in the same tense."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jai is analysing a poem about a storm the poet lived through as a girl. The poem repeats the word \"storm\". Which sentence uses tense in the usual way for analysis?",
+   "opts": [
+    "The poet repeats \"storm\" to show the fear she felt then",
+    "The poet repeated \"storm\" to show the fear she felt then",
+    "The poet repeats \"storm\" and showed the fear she felt then",
+    "The poet repeats \"storm\" to show the fear she feels then"
+   ],
+   "why": "Repeats describes what the poem does, so it is in the present tense, as analysis needs. Felt is past because the storm happened years earlier, which is a real change in time. Feels then is the tempting slip: it puts an earlier time in the present tense.",
+   "clue": "Which verb describes the poem, and which describes the storm years ago?"
+  }
+ }
 }

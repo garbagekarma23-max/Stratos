@@ -24,8 +24,214 @@
    0.395
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:54Z write: failed the content check, writing again",
+  "2026-11-20T12:35:53Z write: done",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.02342,
+  "check": 0.00899,
+  "fix": 0.02329,
+  "recheck": 0.00832
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest card, Angle sum of a triangle, covers only the 180° sum and lacks the exterior angle idea, while the proofs card is Year 10 proof work at a different depth, so no bank point teaches this brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Angle sum and exterior angle of a triangle",
+  "card": [
+   "The three angles inside a triangle always add to \\(180^{\\circ}\\). This is true for every triangle, whatever its shape or size.",
+   "To find a missing angle, add the two known angles and take the total from \\(180^{\\circ}\\). For angles of \\(50^{\\circ}\\) and \\(60^{\\circ}\\), the third is \\(180 - 110 = 70\\), so \\(70^{\\circ}\\).",
+   "An exterior angle is made by extending one side of the triangle past a corner. It sits outside the triangle, next to the interior angle at that corner.",
+   "An exterior angle equals the sum of the two opposite interior angles, the ones not at its corner. If those two are \\(50^{\\circ}\\) and \\(60^{\\circ}\\), the exterior angle is \\(110^{\\circ}\\)."
+  ],
+  "remember": "Interior angles add to \\(180^{\\circ}\\). An exterior angle is the sum of the two opposite interior angles.",
+  "a": {
+   "q": "A triangle has angles of \\(35^{\\circ}\\) and \\(85^{\\circ}\\). What is the third angle?",
+   "opts": [
+    "\\(60^{\\circ}\\)",
+    "\\(120^{\\circ}\\)",
+    "\\(50^{\\circ}\\)",
+    "\\(95^{\\circ}\\)"
+   ],
+   "why": "The angles add to \\(180^{\\circ}\\). Add \\(35^{\\circ}\\) and \\(85^{\\circ}\\) to get \\(120^{\\circ}\\), then \\(180 - 120 = 60\\). The option \\(120^{\\circ}\\) is only the total of the two known angles, so the step of taking it from \\(180^{\\circ}\\) was missed.",
+   "clue": "Add the two known angles, then take the total from 180."
+  },
+  "b": {
+   "d": 3,
+   "q": "In triangle PQR, the interior angles at P and Q are \\(48^{\\circ}\\) and \\(67^{\\circ}\\). Side RQ is extended past Q. What is the exterior angle at Q?",
+   "opts": [
+    "\\(115^{\\circ}\\)",
+    "\\(113^{\\circ}\\)",
+    "\\(65^{\\circ}\\)",
+    "\\(132^{\\circ}\\)"
+   ],
+   "why": "The exterior angle at Q equals the two opposite interior angles, at P and R. The angle at R is \\(180 - 48 - 67 = 65\\), so the exterior angle is \\(48 + 65 = 113\\). Adding the angles at P and Q gives \\(115^{\\circ}\\), but Q is not opposite its own exterior angle.",
+   "clue": "Find the angle at R first, then use the two angles not at Q."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A triangle ABC with side BC extended past C. Interior angles at A, B and C are marked. The exterior angle at C, outside the triangle between the extension and side AC, is marked. The angles at A and B are labelled as the two opposite interior angles.",
+    "why": "It shows which angle is exterior and which two interior angles are opposite it."
+   }
+  ]
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(60^{\\circ}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(113^{\\circ}\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker picked “\\(113^{\\circ}\\)”, not the writer’s answer “\\(115^{\\circ}\\)”."
+ ],
+ "proposal": {
+  "title": "Angle sum and exterior angle of a triangle",
+  "card": [
+   "The three angles inside a triangle always add to \\(180^{\\circ}\\). This is true for every triangle, whatever its shape or size.",
+   "To find a missing angle, add the two known angles and take the total from \\(180^{\\circ}\\). For angles of \\(50^{\\circ}\\) and \\(60^{\\circ}\\), the third is \\(180 - 110 = 70\\), so \\(70^{\\circ}\\).",
+   "An exterior angle is made by extending one side of the triangle past a corner. It sits outside the triangle, next to the interior angle at that corner.",
+   "An exterior angle equals the sum of the two opposite interior angles, the ones not at its corner. If those two are \\(50^{\\circ}\\) and \\(60^{\\circ}\\), the exterior angle is \\(110^{\\circ}\\)."
+  ],
+  "remember": "Interior angles add to \\(180^{\\circ}\\). An exterior angle is the sum of the two opposite interior angles.",
+  "a": {
+   "q": "A triangle has angles of \\(35^{\\circ}\\) and \\(85^{\\circ}\\). What is the third angle?",
+   "opts": [
+    "\\(60^{\\circ}\\)",
+    "\\(120^{\\circ}\\)",
+    "\\(50^{\\circ}\\)",
+    "\\(95^{\\circ}\\)"
+   ],
+   "why": "The angles add to \\(180^{\\circ}\\). Add \\(35^{\\circ}\\) and \\(85^{\\circ}\\) to get \\(120^{\\circ}\\), then \\(180 - 120 = 60\\). The option \\(120^{\\circ}\\) is only the total of the two known angles, so the step of taking it from \\(180^{\\circ}\\) was missed.",
+   "clue": "Add the two known angles, then take the total from 180."
+  },
+  "b": {
+   "d": 3,
+   "q": "In triangle PQR, the interior angles at P and Q are \\(48^{\\circ}\\) and \\(67^{\\circ}\\). Side RQ is extended past Q. What is the exterior angle at Q?",
+   "opts": [
+    "\\(113^{\\circ}\\)",
+    "\\(115^{\\circ}\\)",
+    "\\(65^{\\circ}\\)",
+    "\\(132^{\\circ}\\)"
+   ],
+   "why": "The exterior angle at Q equals the sum of the two opposite interior angles, at P and R. The angle at R is \\(180 - 48 - 67 = 65\\), so the exterior angle is \\(48 + 65 = 113\\), which is \\(113^{\\circ}\\). Adding the angles at P and Q gives \\(115^{\\circ}\\), but the angle at Q is at the exterior angle's own corner, so it is not one of the opposite angles.",
+   "clue": "Find the angle at R first, then use the two angles not at Q."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A triangle ABC with side BC extended past C. Interior angles at A, B and C are marked. The exterior angle at C, outside the triangle between the extension and side AC, is marked. The angles at A and B are labelled as the two opposite interior angles.",
+    "why": "It shows which angle is exterior and which two interior angles are opposite it."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(60^{\\circ}\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(113^{\\circ}\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [],
+  "flags": [
+   "Question b: the checker picked “\\(113^{\\circ}\\)”, not the writer’s answer “\\(115^{\\circ}\\)”."
+  ]
+ },
+ "final": {
+  "title": "Angle sum and exterior angle of a triangle",
+  "card": [
+   "The three angles inside a triangle always add to \\(180^{\\circ}\\). This is true for every triangle, whatever its shape or size.",
+   "To find a missing angle, add the two known angles and take the total from \\(180^{\\circ}\\). For angles of \\(50^{\\circ}\\) and \\(60^{\\circ}\\), the third is \\(180 - 110 = 70\\), so \\(70^{\\circ}\\).",
+   "An exterior angle is made by extending one side of the triangle past a corner. It sits outside the triangle, next to the interior angle at that corner.",
+   "An exterior angle equals the sum of the two opposite interior angles, the ones not at its corner. If those two are \\(50^{\\circ}\\) and \\(60^{\\circ}\\), the exterior angle is \\(110^{\\circ}\\)."
+  ],
+  "remember": "Interior angles add to \\(180^{\\circ}\\). An exterior angle is the sum of the two opposite interior angles.",
+  "a": {
+   "q": "A triangle has angles of \\(35^{\\circ}\\) and \\(85^{\\circ}\\). What is the third angle?",
+   "opts": [
+    "\\(60^{\\circ}\\)",
+    "\\(120^{\\circ}\\)",
+    "\\(50^{\\circ}\\)",
+    "\\(95^{\\circ}\\)"
+   ],
+   "why": "The angles add to \\(180^{\\circ}\\). Add \\(35^{\\circ}\\) and \\(85^{\\circ}\\) to get \\(120^{\\circ}\\), then \\(180 - 120 = 60\\). The option \\(120^{\\circ}\\) is only the total of the two known angles, so the step of taking it from \\(180^{\\circ}\\) was missed.",
+   "clue": "Add the two known angles, then take the total from 180."
+  },
+  "b": {
+   "d": 3,
+   "q": "In triangle PQR, the interior angles at P and Q are \\(48^{\\circ}\\) and \\(67^{\\circ}\\). Side RQ is extended past Q. What is the exterior angle at Q?",
+   "opts": [
+    "\\(113^{\\circ}\\)",
+    "\\(115^{\\circ}\\)",
+    "\\(65^{\\circ}\\)",
+    "\\(132^{\\circ}\\)"
+   ],
+   "why": "The exterior angle at Q equals the sum of the two opposite interior angles, at P and R. The angle at R is \\(180 - 48 - 67 = 65\\), so the exterior angle is \\(48 + 65 = 113\\), which is \\(113^{\\circ}\\). Adding the angles at P and Q gives \\(115^{\\circ}\\), but the angle at Q is at the exterior angle's own corner, so it is not one of the opposite angles.",
+   "clue": "Find the angle at R first, then use the two angles not at Q."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A triangle ABC with side BC extended past C. Interior angles at A, B and C are marked. The exterior angle at C, outside the triangle between the extension and side AC, is marked. The angles at A and B are labelled as the two opposite interior angles.",
+    "why": "It shows which angle is exterior and which two interior angles are opposite it."
+   }
+  ]
+ },
+ "cleared_by": "recheck"
 }

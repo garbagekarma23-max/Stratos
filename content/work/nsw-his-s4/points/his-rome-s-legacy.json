@@ -12,8 +12,229 @@
    0.251
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: done",
+  "2026-11-20T12:44:56Z check: flagged",
+  "2026-11-20T12:53:26Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.0063,
+  "check": 0.01203,
+  "fix": 0.02261,
+  "recheck": 0.00757
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches Rome's legacy (roads, aqueducts, Roman law, Latin roots and ideas about government); the army and family/slavery points cover different ideas.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Rome's legacy",
+  "card": [
+   "A legacy is something a society leaves behind that later people keep using or building on. Ancient Rome left many legacies.",
+   [
+    "Buildings and roads",
+    "Romans built long, paved roads and aqueducts, which carried water to towns by channels and bridges. Many Roman roads and some aqueducts are still visible today."
+   ],
+   [
+    "Law and government",
+    "Roman law included ideas such as a person being innocent until proved guilty, and written laws open to all. Later societies drew on Roman ideas about government, such as elected officials and a senate."
+   ],
+   [
+    "Language",
+    "Romans spoke Latin. Many modern languages, such as Italian, French and Spanish, grew from Latin. English has also borrowed thousands of Latin words."
+   ]
+  ],
+  "remember": "Rome's legacy is what later societies kept: roads, aqueducts, law, Latin and ideas about government.",
+  "a": {
+   "q": "Why is the Latin language part of Rome's legacy?",
+   "opts": [
+    "Languages such as French and Spanish grew from it",
+    "Romans forced every country to speak it today",
+    "It is still the main language of Italy now",
+    "It was invented by the Senate to rule provinces"
+   ],
+   "why": "Latin is a legacy because later people kept using and building on it: French, Spanish and Italian grew from it. The claim that Italy speaks Latin is wrong, because Italians speak Italian, which developed from Latin.",
+   "clue": "A legacy is something later people built on."
+  },
+  "b": {
+   "d": 3,
+   "q": "A town in modern Spain has a stone bridge that carries water channels, built by Romans nearly 2000 years ago. Which legacy of Rome does it show best?",
+   "opts": [
+    "An aqueduct, which carried water to towns",
+    "A paved road, which linked distant towns",
+    "A Roman law, which was written for all",
+    "A Latin word, which later languages borrowed"
+   ],
+   "why": "A structure that carries water along channels on a bridge is an aqueduct. A road also links places, but it carries people and goods, not water.",
+   "clue": "Think about what the bridge carries."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Languages such as French and Spanish grew from it",
+   "also_right": []
+  },
+  "b": {
+   "best": "An aqueduct, which carried water to towns",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says the bridge 'carries water channels', and the right option is the only one that mentions water ('carried water to towns'). The clue 'Think about what the bridge carries' adds to this, so a student can match the word 'water' without knowing what an aqueduct is."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, the remember line and question a are accurate and suit Years 7 and 8. In question b, the right option is the only one that mentions water, which the stem and clue also stress, so students can pick it by matching words."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The stem says the bridge 'carries water channels', and the right option is the only one that mentions water ('carried water to towns'). The clue 'Think about what the bridge carries' adds to this, so a student can match the word 'water' without knowing what an aqueduct is."
+ ],
+ "proposal": {
+  "title": "Rome's legacy",
+  "card": [
+   "A legacy is something a society leaves behind that later people keep using or building on. Ancient Rome left many legacies.",
+   [
+    "Buildings and roads",
+    "Romans built long, paved roads and aqueducts, which carried water to towns by channels and bridges. Many Roman roads and some aqueducts are still visible today."
+   ],
+   [
+    "Law and government",
+    "Roman law included ideas such as a person being innocent until proved guilty, and written laws open to all. Later societies drew on Roman ideas about government, such as elected officials and a senate."
+   ],
+   [
+    "Language",
+    "Romans spoke Latin. Many modern languages, such as Italian, French and Spanish, grew from Latin. English has also borrowed thousands of Latin words."
+   ]
+  ],
+  "remember": "Rome's legacy is what later societies kept: roads, aqueducts, law, Latin and ideas about government.",
+  "a": {
+   "q": "Why is the Latin language part of Rome's legacy?",
+   "opts": [
+    "Languages such as French and Spanish grew from it",
+    "Romans forced every country to speak it today",
+    "It is still the main language of Italy now",
+    "It was invented by the Senate to rule provinces"
+   ],
+   "why": "Latin is a legacy because later people kept using and building on it: French, Spanish and Italian grew from it. The claim that Italy speaks Latin is wrong, because Italians speak Italian, which developed from Latin.",
+   "clue": "A legacy is something later people built on."
+  },
+  "b": {
+   "d": 3,
+   "q": "A Roman town in what is now Spain grew too big for its wells. Engineers found a fresh spring in the hills 15 km away. Which Roman structure would they build to supply the town?",
+   "opts": [
+    "An aqueduct",
+    "A paved road",
+    "A senate house",
+    "A written law code"
+   ],
+   "why": "Aqueducts carried water to towns over long distances, using channels and bridges. A paved road also crossed long distances, but it carried people and goods, so it could not supply the town from the spring.",
+   "clue": "Think about what each structure was built to carry."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Languages such as French and Spanish grew from it",
+    "also_right": []
+   },
+   "b": {
+    "best": "An aqueduct",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says the bridge 'carries water channels', and the right option is the only one that mentions water ('carried water to towns'). The clue 'Think about what the bridge carries' adds to this, so a student can match the word 'water' without knowing what an aqueduct is."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The stem says the bridge 'carries water channels', and the right option is the only one that mentions water ('carried water to towns'). The clue 'Think about what the bridge carries' adds to this, so a student can match the word 'water' without knowing what an aqueduct is."
+  ]
+ },
+ "final": {
+  "title": "Rome's legacy",
+  "card": [
+   "A legacy is something a society leaves behind that later people keep using or building on. Ancient Rome left many legacies.",
+   [
+    "Buildings and roads",
+    "Romans built long, paved roads and aqueducts, which carried water to towns by channels and bridges. Many Roman roads and some aqueducts are still visible today."
+   ],
+   [
+    "Law and government",
+    "Roman law included ideas such as a person being innocent until proved guilty, and written laws open to all. Later societies drew on Roman ideas about government, such as elected officials and a senate."
+   ],
+   [
+    "Language",
+    "Romans spoke Latin. Many modern languages, such as Italian, French and Spanish, grew from Latin. English has also borrowed thousands of Latin words."
+   ]
+  ],
+  "remember": "Rome's legacy is what later societies kept: roads, aqueducts, law, Latin and ideas about government.",
+  "a": {
+   "q": "Why is the Latin language part of Rome's legacy?",
+   "opts": [
+    "Languages such as French and Spanish grew from it",
+    "Romans forced every country to speak it today",
+    "It is still the main language of Italy now",
+    "It was invented by the Senate to rule provinces"
+   ],
+   "why": "Latin is a legacy because later people kept using and building on it: French, Spanish and Italian grew from it. The claim that Italy speaks Latin is wrong, because Italians speak Italian, which developed from Latin.",
+   "clue": "A legacy is something later people built on."
+  },
+  "b": {
+   "d": 3,
+   "q": "A Roman town in what is now Spain grew too big for its wells. Engineers found a fresh spring in the hills 15 km away. Which Roman structure would they build to supply the town?",
+   "opts": [
+    "An aqueduct",
+    "A paved road",
+    "A senate house",
+    "A written law code"
+   ],
+   "why": "Aqueducts carried water to towns over long distances, using channels and bridges. A paved road also crossed long distances, but it carried people and goods, so it could not supply the town from the spring.",
+   "clue": "Think about what each structure was built to carry."
+  }
+ },
+ "cleared_by": "recheck"
 }

@@ -8,8 +8,204 @@
    0.209
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: done",
+  "2026-11-20T12:35:57Z check: flagged",
+  "2026-11-20T12:45:01Z fix: suggested",
+  "2026-11-20T13:23:46Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.01105,
+  "check": 0.01042,
+  "fix": 0.01477
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers only refraction at a senior depth with Snell's law and refractive index calculations, while the new point is a Stage 5 card covering reflection, refraction and absorption together, so no bank point matches it.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Reflection, refraction and absorption",
+  "card": [
+   [
+    "Reflection",
+    "Light bounces off a surface. A smooth, shiny surface such as a mirror reflects light in a clear, regular way, so we see an image."
+   ],
+   [
+    "Refraction",
+    "Light bends when it passes from one material into another, such as from air into water. This happens because light changes speed in the new material."
+   ],
+   [
+    "Absorption",
+    "A surface takes in some of the light that hits it and changes its energy, often into heat. Dark surfaces absorb more light than light-coloured ones."
+   ],
+   "One surface can do more than one of these. Light hitting a pond is partly reflected, partly absorbed and partly refracted as it enters the water."
+  ],
+  "remember": "Reflection bounces light, refraction bends it, and absorption takes it in.",
+  "a": {
+   "q": "A straw in a glass of water looks bent at the water's surface. Which process causes this?",
+   "opts": [
+    "Refraction",
+    "Reflection",
+    "Absorption",
+    "Emission"
+   ],
+   "why": "Light bends as it passes between water and air, which changes how the straw looks. Reflection is light bouncing off a surface, which does not bend the path of light through a material.",
+   "clue": "Think about light moving from one material into another."
+  },
+  "b": {
+   "d": 2,
+   "q": "Liam wears a black shirt and a white shirt on a sunny day. Why does the black shirt feel hotter?",
+   "opts": [
+    "It absorbs more light and changes it to heat",
+    "It reflects more light and so gains more heat",
+    "It refracts more light into the skin",
+    "It absorbs less light than the white shirt"
+   ],
+   "why": "Dark surfaces take in more of the light that hits them, and that energy becomes heat. The tempting idea that it reflects more is wrong: the white shirt reflects more light, so it stays cooler.",
+   "clue": "Which colour takes in more light, and where does that energy go?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Refraction",
+   "also_right": []
+  },
+  "b": {
+   "best": "It absorbs more light and changes it to heat",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "\"Liam wears a black shirt and a white shirt on a sunny day\" reads as if he wears both at once, perhaps layered. It should say he wears them on different days, or compare two people, so the comparison is clear."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct. One small wording issue: question b's setup reads as if Liam wears both shirts at the same time."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: \"Liam wears a black shirt and a white shirt on a sunny day\" reads as if he wears both at once, perhaps layered. It should say he wears them on different days, or compare two people, so the comparison is clear."
+ ],
+ "proposal": {
+  "title": "Reflection, refraction and absorption",
+  "card": [
+   [
+    "Reflection",
+    "Light bounces off a surface. A smooth, shiny surface such as a mirror reflects light in a clear, regular way, so we see an image."
+   ],
+   [
+    "Refraction",
+    "Light bends when it passes from one material into another, such as from air into water. This happens because light changes speed in the new material."
+   ],
+   [
+    "Absorption",
+    "A surface takes in some of the light that hits it and changes its energy, often into heat. Dark surfaces absorb more light than light-coloured ones."
+   ],
+   "One surface can do more than one of these. Light hitting a pond is partly reflected, partly absorbed and partly refracted as it enters the water."
+  ],
+  "remember": "Reflection bounces light, refraction bends it, and absorption takes it in.",
+  "a": {
+   "q": "A straw in a glass of water looks bent at the water's surface. Which process causes this?",
+   "opts": [
+    "Refraction",
+    "Reflection",
+    "Absorption",
+    "Emission"
+   ],
+   "why": "Light bends as it passes between water and air, which changes how the straw looks. Reflection is light bouncing off a surface, which does not bend the path of light through a material.",
+   "clue": "Think about light moving from one material into another."
+  },
+  "b": {
+   "d": 2,
+   "q": "Liam and Ava stand side by side in the same sun. Liam's shirt is black and Ava's is white. Why does Liam's shirt feel hotter?",
+   "opts": [
+    "It absorbs more light and changes it to heat",
+    "It reflects more light and so gains more heat",
+    "It refracts more light into the skin",
+    "It absorbs less light than the white shirt"
+   ],
+   "why": "Dark surfaces take in more of the light that hits them, and that energy becomes heat. The tempting idea that the black shirt reflects more is wrong: Ava's white shirt reflects more light, so it stays cooler.",
+   "clue": "Which colour takes in more light, and where does that energy go?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:46Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "\"Liam wears a black shirt and a white shirt on a sunny day\" reads as if he wears both at once, perhaps layered. It should say he wears them on different days, or compare two people, so the comparison is clear."
+   }
+  ],
+  "flags": [
+   "Question b, wording: \"Liam wears a black shirt and a white shirt on a sunny day\" reads as if he wears both at once, perhaps layered. It should say he wears them on different days, or compare two people, so the comparison is clear."
+  ]
+ },
+ "final": {
+  "title": "Reflection, refraction and absorption",
+  "card": [
+   [
+    "Reflection",
+    "Light bounces off a surface. A smooth, shiny surface such as a mirror reflects light in a clear, regular way, so we see an image."
+   ],
+   [
+    "Refraction",
+    "Light bends when it passes from one material into another, such as from air into water. This happens because light changes speed in the new material."
+   ],
+   [
+    "Absorption",
+    "A surface takes in some of the light that hits it and changes its energy, often into heat. Dark surfaces absorb more light than light-coloured ones."
+   ],
+   "One surface can do more than one of these. Light hitting a pond is partly reflected, partly absorbed and partly refracted as it enters the water."
+  ],
+  "remember": "Reflection bounces light, refraction bends it, and absorption takes it in.",
+  "a": {
+   "q": "A straw in a glass of water looks bent at the water's surface. Which process causes this?",
+   "opts": [
+    "Refraction",
+    "Reflection",
+    "Absorption",
+    "Emission"
+   ],
+   "why": "Light bends as it passes between water and air, which changes how the straw looks. Reflection is light bouncing off a surface, which does not bend the path of light through a material.",
+   "clue": "Think about light moving from one material into another."
+  },
+  "b": {
+   "d": 2,
+   "q": "Liam and Ava stand side by side in the same sun. Liam's shirt is black and Ava's is white. Why does Liam's shirt feel hotter?",
+   "opts": [
+    "It absorbs more light and changes it to heat",
+    "It reflects more light and so gains more heat",
+    "It refracts more light into the skin",
+    "It absorbs less light than the white shirt"
+   ],
+   "why": "Dark surfaces take in more of the light that hits them, and that energy becomes heat. The tempting idea that the black shirt reflects more is wrong: Ava's white shirt reflects more light, so it stays cooler.",
+   "clue": "Which colour takes in more light, and where does that energy go?"
+  }
+ },
+ "cleared_by": "auto"
 }

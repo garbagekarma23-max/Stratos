@@ -24,8 +24,200 @@
    0.276
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: done",
+  "2026-11-20T12:35:55Z check: flagged",
+  "2026-11-20T12:44:59Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.01296,
+  "check": 0.00987,
+  "fix": 0.04561,
+  "recheck": 0.00576
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches solving a simple cubic equation by isolating x cubed and taking the cube root, and the closest ones cover simultaneous equations, exponentials or parametric curves instead.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Simple cubic equations",
+  "card": [
+   "A simple cubic equation has a cube such as \\(x^{3}\\) and no other power of \\(x\\). Solve it by isolating \\(x^{3}\\), then taking the cube root of both sides.",
+   "Worked example: \\(2x^{3} = 54\\). Divide by 2 to get \\(x^{3} = 27\\). Then \\(x = \\sqrt[3]{27} = 3\\).",
+   "A negative number has a real cube root. For \\(x^{3} = -8\\), the answer is \\(x = -2\\), because \\((-2) \\times (-2) \\times (-2) = -8\\).",
+   "Unlike \\(x^{2} = 9\\), which has two answers, \\(x^{3} = k\\) has only one real answer. Check by cubing your answer."
+  ],
+  "remember": "Isolate the cube, then take the cube root. There is one real answer.",
+  "a": {
+   "q": "What is the solution of \\(x^{3} + 5 = 13\\)?",
+   "opts": [
+    "\\(x = 2\\)",
+    "\\(x = 8\\)",
+    "\\(x = \\sqrt[3]{18}\\)",
+    "\\(x = \\pm 2\\)"
+   ],
+   "why": "Subtract 5 to get \\(x^{3} = 8\\), so \\(x = \\sqrt[3]{8} = 2\\). The option \\(\\pm 2\\) is wrong because a cube equation has only one real answer: \\((-2)^{3} = -8\\), not 8.",
+   "clue": "Subtract 5 first, then take the cube root."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya says the cubic \\(3x^{3} = -81\\) has no real solution because 81 is not negative. What is the correct solution?",
+   "opts": [
+    "\\(x = -3\\)",
+    "\\(x = 3\\)",
+    "\\(x = -27\\)",
+    "\\(x = \\pm 3\\)"
+   ],
+   "why": "Divide by 3 to get \\(x^{3} = -27\\). Then \\(x = \\sqrt[3]{-27} = -3\\), since \\((-3)^{3} = -27\\). Priya is wrong because a negative number does have a real cube root.",
+   "clue": "Divide by 3, then ask which number cubed gives \\(-27\\)."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(x = 2\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(x = -3\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Priya's reasoning is garbled. The equation gives \\(x^{3} = -27\\), a negative number, yet she is quoted as saying there is no real solution 'because 81 is not negative'. The why says her error is thinking a negative number has no real cube root, so the stem should say she reasons that \\(-81\\) (or \\(-27\\)) is negative."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Card, remember line and answers are correct (a: x = 2, b: x = −3). Question b states Priya's reasoning confusingly ('because 81 is not negative'), and this does not match the misconception the why describes. It should say she thinks a negative number has no real cube root."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: Priya's reasoning is garbled. The equation gives \\(x^{3} = -27\\), a negative number, yet she is quoted as saying there is no real solution 'because 81 is not negative'. The why says her error is thinking a negative number has no real cube root, so the stem should say she reasons that \\(-81\\) (or \\(-27\\)) is negative."
+ ],
+ "proposal": {
+  "title": "Simple cubic equations",
+  "card": [
+   "A simple cubic equation has a cube such as \\(x^{3}\\) and no other power of \\(x\\). Solve it by isolating \\(x^{3}\\), then taking the cube root of both sides.",
+   "Worked example: \\(2x^{3} = 54\\). Divide by 2 to get \\(x^{3} = 27\\). Then \\(x = \\sqrt[3]{27} = 3\\).",
+   "A negative number has a real cube root. For \\(x^{3} = -8\\), the answer is \\(x = -2\\), because \\((-2) \\times (-2) \\times (-2) = -8\\).",
+   "Unlike \\(x^{2} = 9\\), which has two answers, \\(x^{3} = k\\) has only one real answer. Check by cubing your answer."
+  ],
+  "remember": "Isolate the cube, then take the cube root. There is one real answer.",
+  "a": {
+   "q": "What is the solution of \\(x^{3} + 5 = 13\\)?",
+   "opts": [
+    "\\(x = 2\\)",
+    "\\(x = 8\\)",
+    "\\(x = \\sqrt[3]{18}\\)",
+    "\\(x = \\pm 2\\)"
+   ],
+   "why": "Subtract 5 to get \\(x^{3} = 8\\), so \\(x = \\sqrt[3]{8} = 2\\). The option \\(\\pm 2\\) is wrong because a cube equation has only one real answer: \\((-2)^{3} = -8\\), not 8.",
+   "clue": "Subtract 5 first, then take the cube root."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya solves \\(3x^{3} = -81\\). She divides by 3 to get \\(x^{3} = -27\\), then says there is no real solution because \\(-27\\) is negative. What is the correct solution?",
+   "opts": [
+    "\\(x = -3\\)",
+    "\\(x = 3\\)",
+    "\\(x = -27\\)",
+    "\\(x = \\pm 3\\)"
+   ],
+   "why": "From \\(x^{3} = -27\\), \\(x = \\sqrt[3]{-27} = -3\\), since \\((-3)^{3} = -27\\). Priya is wrong because a negative number does have a real cube root. The answer \\(x = 3\\) is wrong because \\(3^{3} = 27\\), not \\(-27\\).",
+   "clue": "Which number, cubed, gives \\(-27\\)?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(x = 2\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(x = -3\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Priya's reasoning is garbled. The equation gives \\(x^{3} = -27\\), a negative number, yet she is quoted as saying there is no real solution 'because 81 is not negative'. The why says her error is thinking a negative number has no real cube root, so the stem should say she reasons that \\(-81\\) (or \\(-27\\)) is negative."
+   }
+  ],
+  "flags": [
+   "Question b, wording: Priya's reasoning is garbled. The equation gives \\(x^{3} = -27\\), a negative number, yet she is quoted as saying there is no real solution 'because 81 is not negative'. The why says her error is thinking a negative number has no real cube root, so the stem should say she reasons that \\(-81\\) (or \\(-27\\)) is negative."
+  ]
+ },
+ "final": {
+  "title": "Simple cubic equations",
+  "card": [
+   "A simple cubic equation has a cube such as \\(x^{3}\\) and no other power of \\(x\\). Solve it by isolating \\(x^{3}\\), then taking the cube root of both sides.",
+   "Worked example: \\(2x^{3} = 54\\). Divide by 2 to get \\(x^{3} = 27\\). Then \\(x = \\sqrt[3]{27} = 3\\).",
+   "A negative number has a real cube root. For \\(x^{3} = -8\\), the answer is \\(x = -2\\), because \\((-2) \\times (-2) \\times (-2) = -8\\).",
+   "Unlike \\(x^{2} = 9\\), which has two answers, \\(x^{3} = k\\) has only one real answer. Check by cubing your answer."
+  ],
+  "remember": "Isolate the cube, then take the cube root. There is one real answer.",
+  "a": {
+   "q": "What is the solution of \\(x^{3} + 5 = 13\\)?",
+   "opts": [
+    "\\(x = 2\\)",
+    "\\(x = 8\\)",
+    "\\(x = \\sqrt[3]{18}\\)",
+    "\\(x = \\pm 2\\)"
+   ],
+   "why": "Subtract 5 to get \\(x^{3} = 8\\), so \\(x = \\sqrt[3]{8} = 2\\). The option \\(\\pm 2\\) is wrong because a cube equation has only one real answer: \\((-2)^{3} = -8\\), not 8.",
+   "clue": "Subtract 5 first, then take the cube root."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya solves \\(3x^{3} = -81\\). She divides by 3 to get \\(x^{3} = -27\\), then says there is no real solution because \\(-27\\) is negative. What is the correct solution?",
+   "opts": [
+    "\\(x = -3\\)",
+    "\\(x = 3\\)",
+    "\\(x = -27\\)",
+    "\\(x = \\pm 3\\)"
+   ],
+   "why": "From \\(x^{3} = -27\\), \\(x = \\sqrt[3]{-27} = -3\\), since \\((-3)^{3} = -27\\). Priya is wrong because a negative number does have a real cube root. The answer \\(x = 3\\) is wrong because \\(3^{3} = 27\\), not \\(-27\\).",
+   "clue": "Which number, cubed, gives \\(-27\\)?"
+  }
+ },
+ "cleared_by": "recheck"
 }

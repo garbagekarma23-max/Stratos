@@ -8,8 +8,352 @@
    0.285
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:42Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: failed the content check, writing again",
+  "2026-11-20T12:44:53Z write: done (still fails the content check)",
+  "2026-11-20T12:53:24Z check: flagged",
+  "2026-11-20T13:11:46Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (a other)",
+  "2026-11-20T13:44:55Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.01345,
+  "check": 0.00924,
+  "fix": 0.01712,
+  "recheck": 0.00968
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point only defines story-element terms such as narrator, setting and theme, while the new point is about naming techniques like simile and first person and then explaining their effect, which the bank point does not teach.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: Why (a) refers to options by position ('the second option', 'the last option'). The options are shown in random order, so these references may point to the wrong options for students. It should name the options by their content instead.",
+ "rejected": {
+  "title": "Naming techniques in analysis",
+  "card": [
+   "Metalanguage is the set of terms we use to talk about language. Simile, personification, first person and alliteration are all metalanguage.",
+   "Naming a technique precisely is better than a vague label. Saying \"the writer uses a simile\" tells a reader more than \"the writer uses description\".",
+   "Naming is only the first step. Analysis also explains the effect: what the technique makes a reader think, feel or picture.",
+   "A clear sentence of analysis does both. Example: The simile in \"quiet as a held breath\" makes the room feel tense."
+  ],
+  "remember": "Name the technique precisely, then explain its effect on the reader.",
+  "a": {
+   "q": "Which sentence of analysis uses metalanguage and explains an effect?",
+   "opts": [
+    "The personification of the wind makes the night menacing",
+    "The writer uses nice words to make the night feel scary",
+    "The wind howls in the night and the writer describes it well",
+    "The writer uses personification, a technique used in English"
+   ],
+   "why": "It names the technique (personification) and says what it does to the reader. The second option gives an effect but does not name a technique. The last option names one but gives no effect.",
+   "clue": "Look for a precise term and a reason it matters to the reader."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia writes: \"The writer uses a metaphor.\" What should she add to turn this into analysis?",
+   "opts": [
+    "What the metaphor makes the reader feel or picture",
+    "A second technique name, such as simile, as well",
+    "A retelling of the part of the story it appears in",
+    "A comment that the metaphor is a good choice"
+   ],
+   "why": "Analysis needs the effect of the technique on the reader. Adding a second name or retelling the story does not explain an effect. Saying it is good is vague and gives no reason.",
+   "clue": "Naming is the first step. What is the second?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: Why (a) refers to options by position ('the second option', 'the last option'). The options are shown in random order, so these references may point to the wrong options for students. It should name the options by their content instead."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Naming techniques in analysis",
+     "card": [
+      "Metalanguage is the set of terms we use to talk about language. Simile, first person and alliteration are all metalanguage.",
+      "Naming a technique precisely is better than a vague label. Saying \"the writer uses a simile\" tells a reader more than \"the writer uses description\".",
+      "Naming is only the first step. Analysis also explains the effect: what the technique makes a reader think, feel or picture.",
+      "A clear sentence of analysis does both. Example: The simile in \"quiet as a held breath\" makes the room feel tense."
+     ],
+     "remember": "Name the technique precisely, then explain its effect on the reader.",
+     "a": {
+      "q": "Which sentence of analysis uses metalanguage and explains an effect?",
+      "opts": [
+       "The personification of the wind makes the night feel menacing",
+       "The writer uses nice words to make the night feel scary",
+       "The wind howls in the night and the writer describes it well",
+       "The writer uses personification, a technique used in English"
+      ],
+      "why": "It names the technique (personification) and says what it does to the reader. The second option does not name a technique. The last option names one but gives no effect.",
+      "clue": "Look for a precise term and a reason it matters to the reader."
+     },
+     "b": {
+      "d": 2,
+      "q": "Mia writes: \"The writer uses a metaphor.\" What should she add to turn this into analysis?",
+      "opts": [
+       "What the metaphor makes the reader feel or picture",
+       "A second technique name, such as simile, as well",
+       "A retelling of the part of the story it appears in",
+       "A comment that the metaphor is a good choice"
+      ],
+      "why": "Analysis needs the effect of the technique on the reader. Adding a second name or retelling the story does not explain an effect. Saying it is good is vague and gives no reason.",
+      "clue": "Naming is the first step. What is the second?"
+     }
+    },
+    "redone": true,
+    "local": [
+     "eng-naming-techniques-analysisa option is 61 characters: The personification of the wind makes the night feel menacing"
+    ],
+    "check": {
+     "a": {
+      "best": "The personification of the wind makes the night feel menacing",
+      "also_right": []
+     },
+     "b": {
+      "best": "What the metaphor makes the reader feel or picture",
+      "also_right": []
+     },
+     "problems": [],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "No problems found."
+    },
+    "flags": [
+     "Content check: eng-naming-techniques-analysisa option is 61 characters: The personification of the wind makes the night feel menacing"
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Naming techniques in analysis",
+     "card": [
+      "Metalanguage is the set of terms we use to talk about language. Simile, personification, first person and alliteration are all metalanguage.",
+      "Naming a technique precisely is better than a vague label. Saying \"the writer uses a simile\" tells a reader more than \"the writer uses description\".",
+      "Naming is only the first step. Analysis also explains the effect: what the technique makes a reader think, feel or picture.",
+      "A clear sentence of analysis does both. Example: The simile in \"quiet as a held breath\" makes the room feel tense."
+     ],
+     "remember": "Name the technique precisely, then explain its effect on the reader.",
+     "a": {
+      "q": "Which sentence of analysis uses metalanguage and explains an effect?",
+      "opts": [
+       "The personification of the wind makes the night menacing",
+       "The writer uses nice words to make the night feel scary",
+       "The wind howls in the night and the writer describes it well",
+       "The writer uses personification, a technique used in English"
+      ],
+      "why": "It names the technique (personification) and says what it does to the reader. The second option gives an effect but does not name a technique. The last option names one but gives no effect.",
+      "clue": "Look for a precise term and a reason it matters to the reader."
+     },
+     "b": {
+      "d": 2,
+      "q": "Mia writes: \"The writer uses a metaphor.\" What should she add to turn this into analysis?",
+      "opts": [
+       "What the metaphor makes the reader feel or picture",
+       "A second technique name, such as simile, as well",
+       "A retelling of the part of the story it appears in",
+       "A comment that the metaphor is a good choice"
+      ],
+      "why": "Analysis needs the effect of the technique on the reader. Adding a second name or retelling the story does not explain an effect. Saying it is good is vague and gives no reason.",
+      "clue": "Naming is the first step. What is the second?"
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:06Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "The personification of the wind makes the night menacing",
+       "also_right": []
+      },
+      "b": {
+       "best": "What the metaphor makes the reader feel or picture",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "Why (a) refers to options by position ('the second option', 'the last option'). The options are shown in random order, so these references may point to the wrong options for students. It should name the options by their content instead."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and questions are accurate and suit Years 7 and 8. The only issue is that why (a) refers to options by position, which may not match the shuffled order students see."
+     },
+     "flags": [
+      "Question a, other: Why (a) refers to options by position ('the second option', 'the last option'). The options are shown in random order, so these references may point to the wrong options for students. It should name the options by their content instead."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:55Z",
+   "step": "write",
+   "version": {
+    "title": "Naming techniques in analysis",
+    "card": [
+     "Metalanguage is the set of terms we use to talk about language. Simile, personification, first person and alliteration are all metalanguage.",
+     "Naming a technique precisely is better than a vague label. Saying \"the writer uses a simile\" tells a reader more than \"the writer uses description\".",
+     "Naming is only the first step. Analysis also explains the effect: what the technique makes a reader think, feel or picture.",
+     "A clear sentence of analysis does both. Example: The simile in \"quiet as a held breath\" makes the room feel tense."
+    ],
+    "remember": "Name the technique precisely, then explain its effect on the reader.",
+    "a": {
+     "q": "Which sentence of analysis uses metalanguage and explains an effect?",
+     "opts": [
+      "The personification of the wind makes the night menacing",
+      "The writer uses nice words to make the night feel scary",
+      "The wind howls in the night and the writer describes it well",
+      "The writer uses personification, a technique used in English"
+     ],
+     "why": "The sentence about the personification of the wind names the technique and says what it does to the reader. The sentence about nice words gives an effect but names no technique. The sentence calling personification a technique used in English names one but gives no effect.",
+     "clue": "Look for a precise term and a reason it matters to the reader."
+    },
+    "b": {
+     "d": 2,
+     "q": "Mia writes: \"The writer uses a metaphor.\" What should she add to turn this into analysis?",
+     "opts": [
+      "What the metaphor makes the reader feel or picture",
+      "A second technique name, such as simile, as well",
+      "A retelling of the part of the story it appears in",
+      "A comment that the metaphor is a good choice"
+     ],
+     "why": "Analysis needs the effect of the technique on the reader. Adding a second name or retelling the story does not explain an effect. Saying it is good is vague and gives no reason.",
+     "clue": "Naming is the first step. What is the second?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "The personification of the wind makes the night menacing",
+     "also_right": []
+    },
+    "b": {
+     "best": "What the metaphor makes the reader feel or picture",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Naming techniques in analysis",
+  "card": [
+   "Metalanguage is the set of terms we use to talk about language. Simile, personification, first person and alliteration are all metalanguage.",
+   "Naming a technique precisely is better than a vague label. Saying \"the writer uses a simile\" tells a reader more than \"the writer uses description\".",
+   "Naming is only the first step. Analysis also explains the effect: what the technique makes a reader think, feel or picture.",
+   "A clear sentence of analysis does both. Example: The simile in \"quiet as a held breath\" makes the room feel tense."
+  ],
+  "remember": "Name the technique precisely, then explain its effect on the reader.",
+  "a": {
+   "q": "Which sentence of analysis uses metalanguage and explains an effect?",
+   "opts": [
+    "The personification of the wind makes the night menacing",
+    "The writer uses nice words to make the night feel scary",
+    "The wind howls in the night and the writer describes it well",
+    "The writer uses personification, a technique used in English"
+   ],
+   "why": "The sentence about the personification of the wind names the technique and says what it does to the reader. The sentence about nice words gives an effect but names no technique. The sentence calling personification a technique used in English names one but gives no effect.",
+   "clue": "Look for a precise term and a reason it matters to the reader."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia writes: \"The writer uses a metaphor.\" What should she add to turn this into analysis?",
+   "opts": [
+    "What the metaphor makes the reader feel or picture",
+    "A second technique name, such as simile, as well",
+    "A retelling of the part of the story it appears in",
+    "A comment that the metaphor is a good choice"
+   ],
+   "why": "Analysis needs the effect of the technique on the reader. Adding a second name or retelling the story does not explain an effect. Saying it is good is vague and gives no reason.",
+   "clue": "Naming is the first step. What is the second?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The personification of the wind makes the night menacing",
+   "also_right": []
+  },
+  "b": {
+   "best": "What the metaphor makes the reader feel or picture",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Naming techniques in analysis",
+  "card": [
+   "Metalanguage is the set of terms we use to talk about language. Simile, personification, first person and alliteration are all metalanguage.",
+   "Naming a technique precisely is better than a vague label. Saying \"the writer uses a simile\" tells a reader more than \"the writer uses description\".",
+   "Naming is only the first step. Analysis also explains the effect: what the technique makes a reader think, feel or picture.",
+   "A clear sentence of analysis does both. Example: The simile in \"quiet as a held breath\" makes the room feel tense."
+  ],
+  "remember": "Name the technique precisely, then explain its effect on the reader.",
+  "a": {
+   "q": "Which sentence of analysis uses metalanguage and explains an effect?",
+   "opts": [
+    "The personification of the wind makes the night menacing",
+    "The writer uses nice words to make the night feel scary",
+    "The wind howls in the night and the writer describes it well",
+    "The writer uses personification, a technique used in English"
+   ],
+   "why": "The sentence about the personification of the wind names the technique and says what it does to the reader. The sentence about nice words gives an effect but names no technique. The sentence calling personification a technique used in English names one but gives no effect.",
+   "clue": "Look for a precise term and a reason it matters to the reader."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia writes: \"The writer uses a metaphor.\" What should she add to turn this into analysis?",
+   "opts": [
+    "What the metaphor makes the reader feel or picture",
+    "A second technique name, such as simile, as well",
+    "A retelling of the part of the story it appears in",
+    "A comment that the metaphor is a good choice"
+   ],
+   "why": "Analysis needs the effect of the technique on the reader. Adding a second name or retelling the story does not explain an effect. Saying it is good is vague and gives no reason.",
+   "clue": "Naming is the first step. What is the second?"
+  }
+ },
+ "checked_by": "claude-code"
 }

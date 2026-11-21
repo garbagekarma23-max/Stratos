@@ -24,8 +24,227 @@
    0.217
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: flagged",
+  "2026-11-20T12:53:23Z fix: suggested",
+  "2026-11-20T13:23:35Z autoreview: cleared with the fix (remember other, b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.00604,
+  "check": 0.01534,
+  "fix": 0.02002
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The brief covers several tools at once, including laws and regulation and the Reserve Bank's interest rates, which none of the bank points teach, so each bank point is only a narrower or related part of it.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "How governments intervene",
+  "card": [
+   [
+    "Budget",
+    "The government raises money through taxes and spends it on things such as health, schools and roads. Changing taxes and spending changes how much money moves through the economy."
+   ],
+   [
+    "Laws and regulation",
+    "Governments make rules that businesses and people must follow, such as consumer protection laws and limits on pollution. Rules set the standards for how the market works."
+   ],
+   [
+    "Payments",
+    "The government pays money to people, such as the Age Pension and JobSeeker. These payments support people's incomes and are paid for from tax."
+   ],
+   [
+    "Interest rates",
+    "The Reserve Bank of Australia is not part of the budget. It sets the cash rate, which influences the interest rates banks charge on loans."
+   ]
+  ],
+  "remember": "Governments act through the budget, laws, payments and, with the Reserve Bank, interest rates.",
+  "a": {
+   "q": "Which action is the Reserve Bank of Australia responsible for?",
+   "opts": [
+    "Setting the cash rate that influences loan interest rates",
+    "Setting the rate of income tax paid by workers",
+    "Deciding how much is spent on public hospitals",
+    "Passing laws that protect consumers from false claims"
+   ],
+   "why": "The Reserve Bank sets the cash rate, which influences the interest rates banks charge on loans. Income tax and spending are decided through the budget, and consumer laws are made by governments.",
+   "clue": "Think about who is not part of the budget."
+  },
+  "b": {
+   "d": 2,
+   "q": "A state government makes a rule that a factory must limit the pollution it puts into a river. Which way of intervening is this?",
+   "opts": [
+    "Laws and regulation",
+    "Spending in the budget",
+    "Welfare payments",
+    "Setting interest rates"
+   ],
+   "why": "A rule that businesses must follow is a law or regulation. It is not spending or a payment, because the government is not handing over money, and it is not an interest rate decision.",
+   "clue": "The factory must follow a rule."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Setting the cash rate that influences loan interest rates",
+   "also_right": []
+  },
+  "b": {
+   "best": "Laws and regulation",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "\"Governments act ... with the Reserve Bank, interest rates\" suggests governments set interest rates jointly with the RBA. The card and the chapter point say the Reserve Bank sets the cash rate itself, separate from the budget. The RBA is independent of the government."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says the government \"makes a rule\" and the clue repeats \"must follow a rule\". Both echo the card's wording for laws and regulation (\"rules that businesses and people must follow\"), so students can match words instead of understanding the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts are correct and both answers are clear. The remember line suggests governments set interest rates together with the Reserve Bank, which goes against the card, and question b's stem and clue give the answer away by repeating the word \"rule\"."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: \"Governments act ... with the Reserve Bank, interest rates\" suggests governments set interest rates jointly with the RBA. The card and the chapter point say the Reserve Bank sets the cash rate itself, separate from the budget. The RBA is independent of the government.",
+  "Question b, wording: The stem says the government \"makes a rule\" and the clue repeats \"must follow a rule\". Both echo the card's wording for laws and regulation (\"rules that businesses and people must follow\"), so students can match words instead of understanding the idea."
+ ],
+ "proposal": {
+  "title": "How governments intervene",
+  "card": [
+   [
+    "Budget",
+    "The government raises money through taxes and spends it on things such as health, schools and roads. Changing taxes and spending changes how much money moves through the economy."
+   ],
+   [
+    "Laws and regulation",
+    "Governments make rules that businesses and people must follow, such as consumer protection laws and limits on pollution. Rules set the standards for how the market works."
+   ],
+   [
+    "Payments",
+    "The government pays money to people, such as the Age Pension and JobSeeker. These payments support people's incomes and are paid for from tax."
+   ],
+   [
+    "Interest rates",
+    "The Reserve Bank of Australia is not part of the budget and makes its decisions independently of the government. It sets the cash rate, which influences the interest rates banks charge on loans."
+   ]
+  ],
+  "remember": "Governments use the budget, laws and payments. The Reserve Bank sets the cash rate on its own.",
+  "a": {
+   "q": "Which action is the Reserve Bank of Australia responsible for?",
+   "opts": [
+    "Setting the cash rate that influences loan interest rates",
+    "Setting the rate of income tax paid by workers",
+    "Deciding how much is spent on public hospitals",
+    "Passing laws that protect consumers from false claims"
+   ],
+   "why": "The Reserve Bank sets the cash rate, which influences the interest rates banks charge on loans. Income tax and spending are decided by the government through the budget, and consumer laws are made by governments.",
+   "clue": "Think about who is not part of the budget."
+  },
+  "b": {
+   "d": 2,
+   "q": "A state government stops cafés from handing out single-use plastic straws to customers. Which way of intervening is this?",
+   "opts": [
+    "Laws and regulation",
+    "Spending in the budget",
+    "Welfare payments",
+    "Setting interest rates"
+   ],
+   "why": "The government is setting what cafés are allowed to do, which is regulation. It is not spending or a welfare payment, because no money is handed over, and the Reserve Bank's cash rate has nothing to do with straws.",
+   "clue": "Is the government handing over money, or setting what is allowed?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:35Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "\"Governments act ... with the Reserve Bank, interest rates\" suggests governments set interest rates jointly with the RBA. The card and the chapter point say the Reserve Bank sets the cash rate itself, separate from the budget. The RBA is independent of the government."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says the government \"makes a rule\" and the clue repeats \"must follow a rule\". Both echo the card's wording for laws and regulation (\"rules that businesses and people must follow\"), so students can match words instead of understanding the idea."
+   }
+  ],
+  "flags": [
+   "Remember, other: \"Governments act ... with the Reserve Bank, interest rates\" suggests governments set interest rates jointly with the RBA. The card and the chapter point say the Reserve Bank sets the cash rate itself, separate from the budget. The RBA is independent of the government.",
+   "Question b, wording: The stem says the government \"makes a rule\" and the clue repeats \"must follow a rule\". Both echo the card's wording for laws and regulation (\"rules that businesses and people must follow\"), so students can match words instead of understanding the idea."
+  ]
+ },
+ "final": {
+  "title": "How governments intervene",
+  "card": [
+   [
+    "Budget",
+    "The government raises money through taxes and spends it on things such as health, schools and roads. Changing taxes and spending changes how much money moves through the economy."
+   ],
+   [
+    "Laws and regulation",
+    "Governments make rules that businesses and people must follow, such as consumer protection laws and limits on pollution. Rules set the standards for how the market works."
+   ],
+   [
+    "Payments",
+    "The government pays money to people, such as the Age Pension and JobSeeker. These payments support people's incomes and are paid for from tax."
+   ],
+   [
+    "Interest rates",
+    "The Reserve Bank of Australia is not part of the budget and makes its decisions independently of the government. It sets the cash rate, which influences the interest rates banks charge on loans."
+   ]
+  ],
+  "remember": "Governments use the budget, laws and payments. The Reserve Bank sets the cash rate on its own.",
+  "a": {
+   "q": "Which action is the Reserve Bank of Australia responsible for?",
+   "opts": [
+    "Setting the cash rate that influences loan interest rates",
+    "Setting the rate of income tax paid by workers",
+    "Deciding how much is spent on public hospitals",
+    "Passing laws that protect consumers from false claims"
+   ],
+   "why": "The Reserve Bank sets the cash rate, which influences the interest rates banks charge on loans. Income tax and spending are decided by the government through the budget, and consumer laws are made by governments.",
+   "clue": "Think about who is not part of the budget."
+  },
+  "b": {
+   "d": 2,
+   "q": "A state government stops cafés from handing out single-use plastic straws to customers. Which way of intervening is this?",
+   "opts": [
+    "Laws and regulation",
+    "Spending in the budget",
+    "Welfare payments",
+    "Setting interest rates"
+   ],
+   "why": "The government is setting what cafés are allowed to do, which is regulation. It is not spending or a welfare payment, because no money is handed over, and the Reserve Bank's cash rate has nothing to do with straws.",
+   "clue": "Is the government handing over money, or setting what is allowed?"
+  }
+ },
+ "cleared_by": "auto"
 }

@@ -16,8 +16,241 @@
    0.218
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:51Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:52Z write: done",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00687,
+  "check": 0.0163,
+  "fix": 0.02844,
+  "recheck": 0.01041
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches how anger over the peace treaties and the Great Depression helped fascism, Nazism and communism gain power; the closest card, on the causes of the Second World War, is broader and centres on Germany and Hitler rather than extremist movements across Italy, Germany and the Soviet Union.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Extremism between the wars",
+  "card": [
+   "Extremist movements are groups with extreme political ideas that want to change a country sharply, often by force. Several gained power in Europe after the First World War.",
+   [
+    "Peace treaties",
+    "Many people felt the peace treaties of 1919 were unfair. In Germany, anger at the Treaty of Versailles, and at the blame and reparations it brought, helped extremist leaders win support."
+   ],
+   [
+    "Great Depression",
+    "The Great Depression began in 1929. Banks and businesses failed and millions of people lost their jobs. Frightened and desperate people were more willing to back movements that promised quick change."
+   ],
+   [
+    "Movements",
+    "Fascism took power in Italy, Nazism in Germany and communism in the Soviet Union. Each promised to fix hardship and restore national strength or build a new society. These movements gained power in different ways and at different times."
+   ]
+  ],
+  "remember": "Anger at the peace treaties and hardship in the Great Depression helped extremist movements gain support and power.",
+  "a": {
+   "q": "Why did the Great Depression help extremist movements gain support in Europe?",
+   "opts": [
+    "Hardship made people more willing to back radical promises",
+    "Governments gave extremist groups money to end unemployment",
+    "Peace treaties had ended all unemployment in Europe",
+    "People had stopped caring about politics altogether"
+   ],
+   "why": "Job losses and fear made many people look for movements that promised quick change. The Depression did not end unemployment or politics, and governments did not fund extremists to fix it.",
+   "clue": "Think about how desperate people respond to promises of change."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1932, a German factory worker out of work for two years joins a rally for a party that promises to tear up the Treaty of Versailles and give everyone jobs. Which two things most help explain the appeal of this party?",
+   "opts": [
+    "Anger at the peace treaty and hardship in the Depression",
+    "Prosperity under the League of Nations and low unemployment",
+    "Fear of Italian fascism and a wish to join the Soviet Union",
+    "Reparations ending and a rise in Germany's national pride"
+   ],
+   "why": "The worker has lost a job, which links to the Depression, and the party attacks the Treaty of Versailles, which links to anger at the peace. The other options describe good times or events that do not match the case, such as reparations ending.",
+   "clue": "Match each detail in the story to a cause on the card."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Hardship made people more willing to back radical promises",
+   "also_right": []
+  },
+  "b": {
+   "best": "Anger at the peace treaty and hardship in the Depression",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says several extremist movements 'gained power in Europe after the First World War', then lists communism in the Soviet Union. The Bolsheviks seized power in Russia in November 1917, during the war. That was before the 1919 peace treaties and long before the Depression."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says anger at the treaties and the Depression helped extremist movements gain power. It drops the card's caveat that the movements gained power 'in different ways and at different times', so students may apply both causes to Soviet communism (1917) and Italian fascism (1922), which came to power before the Depression."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and explanations are sound. However, the card wrongly places Soviet communism's rise after the First World War (the Bolsheviks took power in 1917), and the remember line implies the treaties and the Depression explain every listed movement's rise to power."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says several extremist movements 'gained power in Europe after the First World War', then lists communism in the Soviet Union. The Bolsheviks seized power in Russia in November 1917, during the war. That was before the 1919 peace treaties and long before the Depression.",
+  "Remember, other: The remember line says anger at the treaties and the Depression helped extremist movements gain power. It drops the card's caveat that the movements gained power 'in different ways and at different times', so students may apply both causes to Soviet communism (1917) and Italian fascism (1922), which came to power before the Depression."
+ ],
+ "proposal": {
+  "title": "Extremism between the wars",
+  "card": [
+   "Extremist movements want to change a country sharply, often by force, and reject democracy. Several ruled in Europe between the wars, but they came to power at different times and for different reasons.",
+   [
+    "Peace treaties",
+    "Many people felt the peace treaties of 1919 were unfair. Italians felt cheated of land they had been promised, and Germans resented the blame and reparations in the Treaty of Versailles."
+   ],
+   [
+    "Great Depression",
+    "The Great Depression began in 1929, and millions of people lost their jobs. Desperate people were more willing to back movements that promised quick change, which helped the Nazis win mass support in Germany."
+   ],
+   [
+    "Timing",
+    "Communists seized power in Russia in 1917, during the war, and later formed the Soviet Union. Fascists took power in Italy in 1922, before the Depression, and the Nazis took power in Germany in 1933."
+   ]
+  ],
+  "remember": "Treaty anger and the Depression fed extremism, but each movement rose at its own time: Russia 1917, Italy 1922, Germany 1933.",
+  "a": {
+   "q": "Why did the Great Depression help extremist movements gain support in Germany?",
+   "opts": [
+    "Hardship made people more willing to back radical promises",
+    "Governments gave extremist groups money to end unemployment",
+    "Rising wages made people want even bigger reforms",
+    "People had stopped caring about politics altogether"
+   ],
+   "why": "Job losses and fear made many people look for movements that promised quick change. The Depression brought falling incomes, not rising wages, and governments did not fund extremists to fix unemployment.",
+   "clue": "Think about how desperate people respond to promises of change."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1932, a German factory worker out of work for two years joins a rally for a party that promises to tear up the Treaty of Versailles and give everyone jobs. What best explains the party's appeal to him?",
+   "opts": [
+    "Anger at the treaty and hardship in the Depression",
+    "Anger at the treaty and a boom in German factory jobs",
+    "Pride in the treaty and hardship in the Depression",
+    "Pride in the treaty and a boom in German factory jobs"
+   ],
+   "why": "The worker has been jobless for two years, which links to the Depression, and the party attacks the Treaty of Versailles, which many Germans resented. Options with a jobs boom or pride in the treaty do not match his situation or German feeling about the treaty.",
+   "clue": "Check each half of the option against a detail in the story."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Hardship made people more willing to back radical promises",
+    "also_right": []
+   },
+   "b": {
+    "best": "Anger at the treaty and hardship in the Depression",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says several extremist movements 'gained power in Europe after the First World War', then lists communism in the Soviet Union. The Bolsheviks seized power in Russia in November 1917, during the war. That was before the 1919 peace treaties and long before the Depression."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says anger at the treaties and the Depression helped extremist movements gain power. It drops the card's caveat that the movements gained power 'in different ways and at different times', so students may apply both causes to Soviet communism (1917) and Italian fascism (1922), which came to power before the Depression."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card says several extremist movements 'gained power in Europe after the First World War', then lists communism in the Soviet Union. The Bolsheviks seized power in Russia in November 1917, during the war. That was before the 1919 peace treaties and long before the Depression.",
+   "Remember, other: The remember line says anger at the treaties and the Depression helped extremist movements gain power. It drops the card's caveat that the movements gained power 'in different ways and at different times', so students may apply both causes to Soviet communism (1917) and Italian fascism (1922), which came to power before the Depression."
+  ]
+ },
+ "final": {
+  "title": "Extremism between the wars",
+  "card": [
+   "Extremist movements want to change a country sharply, often by force, and reject democracy. Several ruled in Europe between the wars, but they came to power at different times and for different reasons.",
+   [
+    "Peace treaties",
+    "Many people felt the peace treaties of 1919 were unfair. Italians felt cheated of land they had been promised, and Germans resented the blame and reparations in the Treaty of Versailles."
+   ],
+   [
+    "Great Depression",
+    "The Great Depression began in 1929, and millions of people lost their jobs. Desperate people were more willing to back movements that promised quick change, which helped the Nazis win mass support in Germany."
+   ],
+   [
+    "Timing",
+    "Communists seized power in Russia in 1917, during the war, and later formed the Soviet Union. Fascists took power in Italy in 1922, before the Depression, and the Nazis took power in Germany in 1933."
+   ]
+  ],
+  "remember": "Treaty anger and the Depression fed extremism, but each movement rose at its own time: Russia 1917, Italy 1922, Germany 1933.",
+  "a": {
+   "q": "Why did the Great Depression help extremist movements gain support in Germany?",
+   "opts": [
+    "Hardship made people more willing to back radical promises",
+    "Governments gave extremist groups money to end unemployment",
+    "Rising wages made people want even bigger reforms",
+    "People had stopped caring about politics altogether"
+   ],
+   "why": "Job losses and fear made many people look for movements that promised quick change. The Depression brought falling incomes, not rising wages, and governments did not fund extremists to fix unemployment.",
+   "clue": "Think about how desperate people respond to promises of change."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1932, a German factory worker out of work for two years joins a rally for a party that promises to tear up the Treaty of Versailles and give everyone jobs. What best explains the party's appeal to him?",
+   "opts": [
+    "Anger at the treaty and hardship in the Depression",
+    "Anger at the treaty and a boom in German factory jobs",
+    "Pride in the treaty and hardship in the Depression",
+    "Pride in the treaty and a boom in German factory jobs"
+   ],
+   "why": "The worker has been jobless for two years, which links to the Depression, and the party attacks the Treaty of Versailles, which many Germans resented. Options with a jobs boom or pride in the treaty do not match his situation or German feeling about the treaty.",
+   "clue": "Check each half of the option against a detail in the story."
+  }
+ },
+ "cleared_by": "recheck"
 }

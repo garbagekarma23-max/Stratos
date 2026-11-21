@@ -24,8 +24,265 @@
    0.29
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 may adapt mat-rounding-decimals, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:53Z confirm: Claude Opus 5.5 may adapt mat-rounding-decimals, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt mat-rounding-decimals (1 change)",
+  "2026-11-20T14:02:37Z claude-code review: adapting mat-rounding-decimals on the next run",
+  "2026-11-20T14:12:39Z adapt: done",
+  "2026-11-20T14:20:02Z check: flagged",
+  "2026-11-20T14:26:14Z fix: suggested",
+  "2026-11-20T14:43:20Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "confirm": 0.01254,
+  "adapt": 0.00474,
+  "check": 0.01463,
+  "fix": 0.05616
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-rounding-decimals",
+  "changes": [
+   "Add a plain sentence explaining that a rounded answer is an approximation of the exact value, not the exact value itself, since the card currently only shows the rounding steps and the reasonableness check."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same rounding-by-next-digit idea at the right Year 7 depth, but it does not yet explain why a rounded answer is an approximation, which the brief asks for.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-rounding-decimals",
+  "changes": [
+   "Add a line saying that a rounded answer is an approximation, not the exact value, and show it with the approximately equal sign, for example 3.476 ≈ 3.5."
+  ],
+  "sure": "medium",
+  "reason": "The bank point already teaches rounding to a given number of decimal places with the 5-or-more rule at Year 7 depth, but it needs a short line explaining that a rounded answer is only an approximation, as the brief asks.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-rounding-decimals",
+  "changes": [
+   "Add a line saying a rounded answer is an approximation, close to but not equal to the exact value, shown with the approximately equal sign in LaTeX, such as \\(3.476 \\approx 3.5\\)."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card4",
+   "card3",
+   "remember",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "owner",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches rounding to decimal places with the 5 or more rule at the right depth and both answers are right (6.38, and 8 times 4 is 32), but it does not say why a rounded answer is an approximation, which the brief asks for.",
+   "item": "e98878782d088efb",
+   "result": "decided",
+   "saved": {
+    "id": "mat-rounding-decimals-nsw",
+    "title": "Rounding decimals",
+    "brief": "ee644c759548",
+    "shortlist": [
+     [
+      "mat-rounding-decimals",
+      0.765
+     ],
+     [
+      "mat-terminating-recurring-decimals",
+      0.379
+     ],
+     [
+      "mat-rounding-errors-repeated-calculations",
+      0.353
+     ],
+     [
+      "mat-converting-fractions-decimals-percentages",
+      0.3
+     ],
+     [
+      "mat-operations-with-negative-fractions",
+      0.29
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00031,
+     "confirm": 0.01254
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-rounding-decimals",
+     "changes": [
+      "Add a plain sentence explaining that a rounded answer is an approximation of the exact value, not the exact value itself, since the card currently only shows the rounding steps and the reasonableness check."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same rounding-by-next-digit idea at the right Year 7 depth, but it does not yet explain why a rounded answer is an approximation, which the brief asks for.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-rounding-decimals",
+     "changes": [
+      "Add a line saying that a rounded answer is an approximation, not the exact value, and show it with the approximately equal sign, for example 3.476 ≈ 3.5."
+     ],
+     "sure": "medium",
+     "reason": "The bank point already teaches rounding to a given number of decimal places with the 5-or-more rule at Year 7 depth, but it needs a short line explaining that a rounded answer is only an approximation, as the brief asks.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "0c9e191482b2b357"
+  }
+ ],
+ "draft": {
+  "title": "Rounding decimals",
+  "card": [
+   "To round to a given number of decimal places, find the last digit you are keeping. Then look at the digit right after it.",
+   "If the next digit is 5 or more, round up: add 1 to the last digit you keep. If it is 4 or less, leave the last digit as it is. Then drop all the digits after it.",
+   "Example: round 3.476 to 1 decimal place. The last digit kept is 4. The next digit is 7, so round up. The answer is 3.5.",
+   "A rounded answer is an approximation. It is close to the exact value, but not equal to it. We write \\(3.476 \\approx 3.5\\), using the approximately equal sign."
+  ],
+  "remember": "Look at the next digit: 5 or more rounds up, 4 or less stays. A rounded answer is an approximation, so use \\(\\approx\\).",
+  "a": {
+   "q": "Round 6.382 to 2 decimal places. What is the answer?",
+   "opts": [
+    "6.38",
+    "6.39",
+    "6.4",
+    "6.3"
+   ],
+   "why": "The last digit kept is 8 and the next digit is 2. Since 2 is 4 or less, the 8 stays and the answer is 6.38. Rounding up to 6.39 looks at the wrong digit, as the 8 is not the digit that decides.",
+   "clue": "Only the digit right after the last one you keep decides."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia rounds 7.8 and 4.1 to the nearest whole number to check that 31.98 is a reasonable answer to \\(7.8 \\times 4.1\\). Which check is correct?",
+   "opts": [
+    "\\(8 \\times 4 = 32\\), so 31.98 is reasonable",
+    "\\(7 \\times 4 = 28\\), so 31.98 is reasonable",
+    "\\(8 \\times 4 = 32\\), so 31.98 is too small",
+    "\\(8 \\times 5 = 40\\), so 31.98 is too small"
+   ],
+   "why": "7.8 rounds to 8 and 4.1 rounds to 4, so the estimate is \\(8 \\times 4 = 32\\). The answer 31.98 is very close to 32, so it is reasonable. The check using \\(7 \\times 4\\) reaches the right conclusion with a wrong estimate, because the 8 after the 7 means 7.8 rounds up.",
+   "clue": "Round each number first, then compare the estimate with 31.98."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "6.38",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(8 \\times 4 = 32\\), so 31.98 is reasonable",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says a rounded answer is 'close to the exact value, but not equal to it'. That is not always true. For example, 6.380 rounded to 2 decimal places is 6.38, which equals the exact value. It should say it is usually or may not be equal."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The card only teaches rounding to a number of decimal places. It never teaches rounding to the nearest whole number, or using a rounded estimate to check whether an answer is reasonable. The question relies on both."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct (6.38, and 8 × 4 = 32 shows 31.98 is reasonable). The card wrongly says a rounded value is never equal to the exact value. Question b needs estimation and rounding to whole numbers, which the card does not teach."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says a rounded answer is 'close to the exact value, but not equal to it'. That is not always true. For example, 6.380 rounded to 2 decimal places is 6.38, which equals the exact value. It should say it is usually or may not be equal.",
+  "Question b, level: The card only teaches rounding to a number of decimal places. It never teaches rounding to the nearest whole number, or using a rounded estimate to check whether an answer is reasonable. The question relies on both."
+ ],
+ "proposal": {
+  "title": "Rounding decimals",
+  "card": [
+   "To round, find the last digit you are keeping and look at the digit right after it. If that digit is 5 or more, add 1 to the last digit kept. If it is 4 or less, leave it, then drop the rest.",
+   "Example: round 3.476 to 1 decimal place. The digit after the 4 is 7, so round up. The answer is 3.5.",
+   "If you round up a 9, it becomes 0 and you carry 1 to the digit on its left. So 5.97 to 1 decimal place is 6.0, and the 0 stays to show 1 decimal place.",
+   "A rounded answer is an approximation. It is close to the exact value, but it may not be equal to it. We write \\(3.476 \\approx 3.5\\), using the approximately equal sign."
+  ],
+  "remember": "Look at the next digit: 5 or more rounds up, 4 or less stays. A rounded answer is an approximation, so use \\(\\approx\\).",
+  "a": {
+   "q": "Round 6.382 to 2 decimal places. What is the answer?",
+   "opts": [
+    "6.38",
+    "6.39",
+    "6.4",
+    "6.3"
+   ],
+   "why": "The last digit kept is 8 and the next digit is 2. Since 2 is 4 or less, the 8 stays and the answer is 6.38. Rounding up to 6.39 looks at the wrong digit, as the 8 is not the digit that decides.",
+   "clue": "Only the digit right after the last one you keep decides."
+  },
+  "b": {
+   "d": 3,
+   "q": "A parcel weighs 4.598 kg. What is its mass rounded to 2 decimal places?",
+   "opts": [
+    "4.60 kg",
+    "4.59 kg",
+    "4.510 kg",
+    "4.50 kg"
+   ],
+   "why": "The last digit kept is 9 and the next digit is 8, so round up. The 9 becomes 0 and 1 carries to the 5, giving 4.60 kg. Writing 4.59 kg ignores the 8, and 4.510 kg adds 1 to the 9 without carrying.",
+   "clue": "What happens when you add 1 to a 9?"
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Rounding decimals",
+  "card": [
+   "To round, find the last digit you are keeping and look at the digit right after it. If that digit is 5 or more, add 1 to the last digit kept. If it is 4 or less, leave it, then drop the rest.",
+   "Example: round 3.476 to 1 decimal place. The digit after the 4 is 7, so round up. The answer is 3.5.",
+   "If you round up a 9, it becomes 0 and you carry 1 to the digit on its left. So 5.97 to 1 decimal place is 6.0, and the 0 stays to show 1 decimal place.",
+   "A rounded answer is an approximation. It is close to the exact value, but it may not be equal to it. We write \\(3.476 \\approx 3.5\\), using the approximately equal sign."
+  ],
+  "remember": "Look at the next digit: 5 or more rounds up, 4 or less stays. A rounded answer is an approximation, so use \\(\\approx\\).",
+  "a": {
+   "q": "Round 6.382 to 2 decimal places. What is the answer?",
+   "opts": [
+    "6.38",
+    "6.39",
+    "6.4",
+    "6.3"
+   ],
+   "why": "The last digit kept is 8 and the next digit is 2. Since 2 is 4 or less, the 8 stays and the answer is 6.38. Rounding up to 6.39 looks at the wrong digit, as the 8 is not the digit that decides.",
+   "clue": "Only the digit right after the last one you keep decides."
+  },
+  "b": {
+   "d": 3,
+   "q": "A parcel weighs 4.598 kg. What is its mass rounded to 2 decimal places?",
+   "opts": [
+    "4.60 kg",
+    "4.59 kg",
+    "4.510 kg",
+    "4.50 kg"
+   ],
+   "why": "The last digit kept is 9 and the next digit is 8, so round up. The 9 becomes 0 and 1 carries to the 5, giving 4.60 kg. Writing 4.59 kg ignores the 8, and 4.510 kg adds 1 to the 9 without carrying.",
+   "clue": "What happens when you add 1 to a 9?"
+  }
+ }
 }

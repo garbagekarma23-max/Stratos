@@ -24,8 +24,218 @@
    0.246
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:55Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:54Z write: done",
+  "2026-11-20T12:44:58Z check: flagged",
+  "2026-11-20T12:53:28Z fix: suggested",
+  "2026-11-20T13:23:43Z autoreview: cleared with the fix (remember other, b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00043,
+  "write": 0.00768,
+  "check": 0.01477,
+  "fix": 0.02091
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Choosing a linear, quadratic or exponential model, covers tables and graphs but not recognising the kind from an equation, which this point's brief asks for, so adding that step is more than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Linear, quadratic or exponential",
+  "card": [
+   [
+    "Linear",
+    "Equal steps in \\(x\\) give equal differences in \\(y\\). The graph is a straight line, such as \\(y = 3x + 1\\)."
+   ],
+   [
+    "Quadratic",
+    "The differences in \\(y\\) are not equal, but the differences between those differences are. The graph is a parabola, such as \\(y = x^{2} + 1\\)."
+   ],
+   [
+    "Exponential",
+    "Equal steps in \\(x\\) give equal ratios in \\(y\\): each \\(y\\) is the one before multiplied by the same number. The variable is in the power, such as \\(y = 2^{x}\\)."
+   ],
+   "Example: \\(y\\) values 2, 6, 18, 54. The differences are 4, 12, 36, which are not equal. The ratios are \\(6 \\div 2 = 3\\), \\(18 \\div 6 = 3\\) and \\(54 \\div 18 = 3\\), so it is exponential."
+  ],
+  "remember": "Check the differences first, then the ratios: the pattern that stays equal names the kind.",
+  "a": {
+   "q": "For \\(x = 0, 1, 2, 3\\), a table gives \\(y = 5, 8, 11, 14\\). Which kind of relationship is it?",
+   "opts": [
+    "Linear, because the differences are all 3",
+    "Exponential, because \\(y\\) keeps getting bigger",
+    "Quadratic, because the differences are all 3",
+    "Exponential, because the ratios are all 3"
+   ],
+   "why": "Each step adds 3, so the differences are equal and the relationship is linear. A rising \\(y\\) does not make it exponential, since the ratios \\(8 \\div 5\\) and \\(11 \\div 8\\) are not equal.",
+   "clue": "Subtract each \\(y\\) from the next one."
+  },
+  "b": {
+   "d": 3,
+   "q": "For \\(x = 0, 1, 2, 3\\), a table gives \\(y = 1, 2, 5, 10\\). Which kind of relationship is it?",
+   "opts": [
+    "Quadratic, because the second differences are equal",
+    "Linear, because \\(y\\) rises at every step",
+    "Exponential, because \\(y\\) rises faster each step",
+    "Exponential, because the ratios are all equal"
+   ],
+   "why": "The differences are 1, 3, 5, which are not equal, but the differences between them are all 2. That makes it quadratic. Rising faster is not enough for exponential, because the ratios 2, 2.5 and 2 are not equal.",
+   "clue": "Find the differences, then find the differences of those."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Linear, because the differences are all 3",
+   "also_right": []
+  },
+  "b": {
+   "best": "Quadratic, because the second differences are equal",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says to check the differences, then the ratios, and that the pattern that stays equal names the kind. It never mentions the differences of the differences, so it gives no way to name a quadratic. A student following it on question b would find neither pattern equal and get no answer, which contradicts the card's quadratic test."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option uses the term 'second differences', which the card never uses; the card says 'the differences between those differences'. The clue helps, but the card should name the term so students can match it."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers check out: question a is linear (differences of 3), and question b is quadratic (differences 1, 3, 5 with second differences of 2). The remember line leaves out the second-difference test for quadratics, and question b uses the term 'second differences', which the card never introduces."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The remember line says to check the differences, then the ratios, and that the pattern that stays equal names the kind. It never mentions the differences of the differences, so it gives no way to name a quadratic. A student following it on question b would find neither pattern equal and get no answer, which contradicts the card's quadratic test.",
+  "Question b, wording: The right option uses the term 'second differences', which the card never uses; the card says 'the differences between those differences'. The clue helps, but the card should name the term so students can match it."
+ ],
+ "proposal": {
+  "title": "Linear, quadratic or exponential",
+  "card": [
+   [
+    "Linear",
+    "Equal steps in \\(x\\) give equal differences in \\(y\\). The graph is a straight line, such as \\(y = 3x + 1\\)."
+   ],
+   [
+    "Quadratic",
+    "The differences in \\(y\\) are not equal, but the differences between those differences, called second differences, are equal. The graph is a parabola, such as \\(y = x^{2} + 1\\)."
+   ],
+   [
+    "Exponential",
+    "Equal steps in \\(x\\) give equal ratios in \\(y\\): each \\(y\\) is the one before multiplied by the same number. The variable is in the power, such as \\(y = 2^{x}\\)."
+   ],
+   "Example: \\(y\\) values 2, 6, 18, 54. The differences are 4, 12, 36, which are not equal. The ratios are \\(6 \\div 2 = 3\\), \\(18 \\div 6 = 3\\) and \\(54 \\div 18 = 3\\), so it is exponential."
+  ],
+  "remember": "Equal differences mean linear, equal second differences mean quadratic, and equal ratios mean exponential.",
+  "a": {
+   "q": "For \\(x = 0, 1, 2, 3\\), a table gives \\(y = 5, 8, 11, 14\\). Which kind of relationship is it?",
+   "opts": [
+    "Linear, because the differences are all 3",
+    "Exponential, because \\(y\\) keeps getting bigger",
+    "Quadratic, because the differences are all 3",
+    "Exponential, because the ratios are all 3"
+   ],
+   "why": "Each step adds 3, so the differences are equal and the relationship is linear. A rising \\(y\\) does not make it exponential, since the ratios \\(8 \\div 5\\) and \\(11 \\div 8\\) are not equal.",
+   "clue": "Subtract each \\(y\\) from the next one."
+  },
+  "b": {
+   "d": 3,
+   "q": "For \\(x = 0, 1, 2, 3\\), a table gives \\(y = 1, 2, 5, 10\\). Which kind of relationship is it?",
+   "opts": [
+    "Quadratic, because the second differences are equal",
+    "Linear, because \\(y\\) goes up at every single step",
+    "Exponential, because \\(y\\) rises faster at each step",
+    "Exponential, because the ratios of the \\(y\\) values are equal"
+   ],
+   "why": "The differences are 1, 3, 5, which are not equal, but the second differences are all 2. That makes it quadratic. Rising faster is not enough for exponential, because the ratios 2, 2.5 and 2 are not equal.",
+   "clue": "Find the differences, then find the differences of those."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:43Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says to check the differences, then the ratios, and that the pattern that stays equal names the kind. It never mentions the differences of the differences, so it gives no way to name a quadratic. A student following it on question b would find neither pattern equal and get no answer, which contradicts the card's quadratic test."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option uses the term 'second differences', which the card never uses; the card says 'the differences between those differences'. The clue helps, but the card should name the term so students can match it."
+   }
+  ],
+  "flags": [
+   "Remember, other: The remember line says to check the differences, then the ratios, and that the pattern that stays equal names the kind. It never mentions the differences of the differences, so it gives no way to name a quadratic. A student following it on question b would find neither pattern equal and get no answer, which contradicts the card's quadratic test.",
+   "Question b, wording: The right option uses the term 'second differences', which the card never uses; the card says 'the differences between those differences'. The clue helps, but the card should name the term so students can match it."
+  ]
+ },
+ "final": {
+  "title": "Linear, quadratic or exponential",
+  "card": [
+   [
+    "Linear",
+    "Equal steps in \\(x\\) give equal differences in \\(y\\). The graph is a straight line, such as \\(y = 3x + 1\\)."
+   ],
+   [
+    "Quadratic",
+    "The differences in \\(y\\) are not equal, but the differences between those differences, called second differences, are equal. The graph is a parabola, such as \\(y = x^{2} + 1\\)."
+   ],
+   [
+    "Exponential",
+    "Equal steps in \\(x\\) give equal ratios in \\(y\\): each \\(y\\) is the one before multiplied by the same number. The variable is in the power, such as \\(y = 2^{x}\\)."
+   ],
+   "Example: \\(y\\) values 2, 6, 18, 54. The differences are 4, 12, 36, which are not equal. The ratios are \\(6 \\div 2 = 3\\), \\(18 \\div 6 = 3\\) and \\(54 \\div 18 = 3\\), so it is exponential."
+  ],
+  "remember": "Equal differences mean linear, equal second differences mean quadratic, and equal ratios mean exponential.",
+  "a": {
+   "q": "For \\(x = 0, 1, 2, 3\\), a table gives \\(y = 5, 8, 11, 14\\). Which kind of relationship is it?",
+   "opts": [
+    "Linear, because the differences are all 3",
+    "Exponential, because \\(y\\) keeps getting bigger",
+    "Quadratic, because the differences are all 3",
+    "Exponential, because the ratios are all 3"
+   ],
+   "why": "Each step adds 3, so the differences are equal and the relationship is linear. A rising \\(y\\) does not make it exponential, since the ratios \\(8 \\div 5\\) and \\(11 \\div 8\\) are not equal.",
+   "clue": "Subtract each \\(y\\) from the next one."
+  },
+  "b": {
+   "d": 3,
+   "q": "For \\(x = 0, 1, 2, 3\\), a table gives \\(y = 1, 2, 5, 10\\). Which kind of relationship is it?",
+   "opts": [
+    "Quadratic, because the second differences are equal",
+    "Linear, because \\(y\\) goes up at every single step",
+    "Exponential, because \\(y\\) rises faster at each step",
+    "Exponential, because the ratios of the \\(y\\) values are equal"
+   ],
+   "why": "The differences are 1, 3, 5, which are not equal, but the second differences are all 2. That makes it quadratic. Rising faster is not enough for exponential, because the ratios 2, 2.5 and 2 are not equal.",
+   "clue": "Find the differences, then find the differences of those."
+  }
+ },
+ "cleared_by": "auto"
 }

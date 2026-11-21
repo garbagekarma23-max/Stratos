@@ -24,8 +24,127 @@
    0.204
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:47Z write: done",
+  "2026-11-20T12:44:54Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.01789,
+  "check": 0.00698
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches the distinction between the real author and the speaker or narrator as a persona; they only explain how voice is built from diction, rhythm and attitude.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Author and persona",
+  "card": [
+   [
+    "Author",
+    "The author is the real person who wrote the text. They live outside the text and make choices about what goes in it."
+   ],
+   [
+    "Persona",
+    "A persona is the voice that speaks inside the text, such as a poem's speaker or a story's narrator. It is a character the author creates."
+   ],
+   "A persona can differ from the author in age, gender, beliefs or experience. A poet in her fifties can write as a nervous ten-year-old.",
+   "In analysis, name the persona for the feelings and views in the text: write that the speaker feels, not that the poet feels. Claims about the real author need evidence from outside the text."
+  ],
+  "remember": "The voice in the text is a persona made by the author, so say the speaker feels.",
+  "a": {
+   "q": "In a poem, the speaker is a lonely soldier far from home. Who is the soldier?",
+   "opts": [
+    "A persona created by the poet",
+    "The real poet, who is a soldier",
+    "The audience reading the poem",
+    "A second author of the poem"
+   ],
+   "why": "The soldier is the voice inside the poem, so the soldier is a persona the poet has created. It is tempting to say the poet is the soldier, but the card says a persona can differ from the author in experience, so we cannot assume that.",
+   "clue": "Is the voice inside the poem the same as the person who wrote it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A student writes about a poem narrated by a grieving child: \"The poet is heartbroken at losing her parent.\" What is the best way to fix this sentence?",
+   "opts": [
+    "Say the speaker is heartbroken at losing a parent",
+    "Say the poet is clearly heartbroken at losing a parent",
+    "Say the reader is heartbroken at losing a parent",
+    "Say the poem is heartbroken at losing a parent"
+   ],
+   "why": "The grief belongs to the voice inside the poem, so the speaker is the one to name. The poet's own feelings cannot be known from the poem alone, so the original sentence claims too much and adding clearly does not fix that.",
+   "clue": "Who is the voice speaking inside the text?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A persona created by the poet",
+   "also_right": []
+  },
+  "b": {
+   "best": "Say the speaker is heartbroken at losing a parent",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Author and persona",
+  "card": [
+   [
+    "Author",
+    "The author is the real person who wrote the text. They live outside the text and make choices about what goes in it."
+   ],
+   [
+    "Persona",
+    "A persona is the voice that speaks inside the text, such as a poem's speaker or a story's narrator. It is a character the author creates."
+   ],
+   "A persona can differ from the author in age, gender, beliefs or experience. A poet in her fifties can write as a nervous ten-year-old.",
+   "In analysis, name the persona for the feelings and views in the text: write that the speaker feels, not that the poet feels. Claims about the real author need evidence from outside the text."
+  ],
+  "remember": "The voice in the text is a persona made by the author, so say the speaker feels.",
+  "a": {
+   "q": "In a poem, the speaker is a lonely soldier far from home. Who is the soldier?",
+   "opts": [
+    "A persona created by the poet",
+    "The real poet, who is a soldier",
+    "The audience reading the poem",
+    "A second author of the poem"
+   ],
+   "why": "The soldier is the voice inside the poem, so the soldier is a persona the poet has created. It is tempting to say the poet is the soldier, but the card says a persona can differ from the author in experience, so we cannot assume that.",
+   "clue": "Is the voice inside the poem the same as the person who wrote it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A student writes about a poem narrated by a grieving child: \"The poet is heartbroken at losing her parent.\" What is the best way to fix this sentence?",
+   "opts": [
+    "Say the speaker is heartbroken at losing a parent",
+    "Say the poet is clearly heartbroken at losing a parent",
+    "Say the reader is heartbroken at losing a parent",
+    "Say the poem is heartbroken at losing a parent"
+   ],
+   "why": "The grief belongs to the voice inside the poem, so the speaker is the one to name. The poet's own feelings cannot be known from the poem alone, so the original sentence claims too much and adding clearly does not fix that.",
+   "clue": "Who is the voice speaking inside the text?"
+  }
+ },
+ "cleared_by": "checker"
 }

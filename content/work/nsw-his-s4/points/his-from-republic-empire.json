@@ -12,8 +12,217 @@
    0.43
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: failed the content check, writing again",
+  "2026-11-20T12:44:56Z write: done",
+  "2026-11-20T12:53:26Z check: flagged",
+  "2026-11-20T13:11:48Z fix: suggested",
+  "2026-11-20T13:23:39Z autoreview: cleared with the fix (a wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00038,
+  "write": 0.01402,
+  "check": 0.01185,
+  "fix": 0.01767
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point covers Caesar's murder and Augustus well, but it is narrower than the brief: it does not explain the Republic's consuls and Senate before the civil wars, and its questions focus on Caesar's murder, which the brief does not mention.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "From republic to empire",
+  "card": [
+   [
+    "Republic",
+    "Rome was a republic for about 500 years. Two consuls were elected each year to lead, and the Senate, a council of powerful men, advised them and made the big decisions."
+   ],
+   [
+    "Civil wars",
+    "In the 1st century BCE, powerful generals fought each other in civil wars, which are wars between people of the same state. Julius Caesar won one of these wars and became dictator, a ruler with almost total power."
+   ],
+   [
+    "Caesar's end",
+    "In 44 BCE, a group of senators killed Caesar. They said they wanted to protect the republic, but more civil wars followed."
+   ],
+   [
+    "Empire",
+    "Caesar's adopted son Octavian won the last of these wars. In 27 BCE he took the name Augustus and became the first emperor, and Rome became an empire ruled by one person."
+   ]
+  ],
+  "remember": "Rome moved from elected leaders and the Senate to rule by one emperor after years of civil war.",
+  "a": {
+   "q": "How was Rome governed before it had emperors?",
+   "opts": [
+    "By elected consuls and the Senate",
+    "By one emperor chosen by the army",
+    "By a dictator who ruled for life",
+    "By kings from one family"
+   ],
+   "why": "In the republic, two consuls were elected each year and the Senate advised them and made decisions. Rule by one person came later, when Augustus became emperor. A dictator such as Caesar held power only at the end of the republic.",
+   "clue": "Think about who led Rome for about 500 years before Augustus."
+  },
+  "b": {
+   "d": 3,
+   "q": "Why did Rome stop being a republic and become an empire?",
+   "opts": [
+    "Civil wars ended with Augustus taking sole power",
+    "Caesar's killers created the empire as they planned",
+    "Voters chose Augustus to be emperor in an election",
+    "Foreign armies conquered the Senate and took over"
+   ],
+   "why": "Years of civil wars between powerful men ended when Octavian won and became Augustus, the first emperor. Caesar's killers said they wanted to save the republic, so the empire was not their plan, even though their act led to more wars.",
+   "clue": "Look at what Octavian did after the last civil war."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "By elected consuls and the Senate",
+   "also_right": []
+  },
+  "b": {
+   "best": "Civil wars ended with Augustus taking sole power",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "'Before it had emperors' also covers the time of the kings, who ruled before the republic, and Caesar's brief life dictatorship. 'By kings from one family' and 'By a dictator who ruled for life' then look partly defensible. Ask 'How was Rome governed during the republic?' instead."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts check out. Question a's wording ('before it had emperors') also takes in the earlier period of kings and Caesar's life dictatorship, so it should ask about the republic directly."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: 'Before it had emperors' also covers the time of the kings, who ruled before the republic, and Caesar's brief life dictatorship. 'By kings from one family' and 'By a dictator who ruled for life' then look partly defensible. Ask 'How was Rome governed during the republic?' instead."
+ ],
+ "proposal": {
+  "title": "From republic to empire",
+  "card": [
+   [
+    "Republic",
+    "Rome was a republic for about 500 years. Two consuls were elected each year to lead, and the Senate, a council of powerful men, advised them and had great power over decisions."
+   ],
+   [
+    "Civil wars",
+    "In the 1st century BCE, powerful generals fought each other in civil wars, which are wars between people of the same state. Julius Caesar won one of these wars and became dictator, a ruler with almost total power."
+   ],
+   [
+    "Caesar's end",
+    "In 44 BCE, a group of senators killed Caesar. They said they wanted to protect the republic, but more civil wars followed."
+   ],
+   [
+    "Empire",
+    "Caesar's adopted son Octavian won the last of these wars. In 27 BCE he took the name Augustus and became the first emperor, and Rome became an empire ruled by one person."
+   ]
+  ],
+  "remember": "Rome moved from elected leaders and the Senate to rule by one emperor after years of civil war.",
+  "a": {
+   "q": "How was Rome governed during the republic?",
+   "opts": [
+    "By elected consuls and the Senate",
+    "By one emperor chosen by the army",
+    "By kings who passed power to their sons",
+    "By priests who spoke for the gods"
+   ],
+   "why": "In the republic, two consuls were elected each year, and the Senate advised them and had great power over decisions. Rule by one emperor came only after the republic ended, when Augustus took power in 27 BCE.",
+   "clue": "Think about who was elected each year and who advised them."
+  },
+  "b": {
+   "d": 3,
+   "q": "Why did Rome stop being a republic and become an empire?",
+   "opts": [
+    "Civil wars ended with Augustus taking sole power",
+    "Caesar's killers created the empire as they planned",
+    "Voters chose Augustus to be emperor in an election",
+    "Foreign armies conquered the Senate and took over"
+   ],
+   "why": "Years of civil wars between powerful men ended when Octavian won and became Augustus, the first emperor. Caesar's killers said they wanted to save the republic, so the empire was not their plan, even though their act led to more wars.",
+   "clue": "Look at what Octavian did after the last civil war."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:39Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "'Before it had emperors' also covers the time of the kings, who ruled before the republic, and Caesar's brief life dictatorship. 'By kings from one family' and 'By a dictator who ruled for life' then look partly defensible. Ask 'How was Rome governed during the republic?' instead."
+   }
+  ],
+  "flags": [
+   "Question a, wording: 'Before it had emperors' also covers the time of the kings, who ruled before the republic, and Caesar's brief life dictatorship. 'By kings from one family' and 'By a dictator who ruled for life' then look partly defensible. Ask 'How was Rome governed during the republic?' instead."
+  ]
+ },
+ "final": {
+  "title": "From republic to empire",
+  "card": [
+   [
+    "Republic",
+    "Rome was a republic for about 500 years. Two consuls were elected each year to lead, and the Senate, a council of powerful men, advised them and had great power over decisions."
+   ],
+   [
+    "Civil wars",
+    "In the 1st century BCE, powerful generals fought each other in civil wars, which are wars between people of the same state. Julius Caesar won one of these wars and became dictator, a ruler with almost total power."
+   ],
+   [
+    "Caesar's end",
+    "In 44 BCE, a group of senators killed Caesar. They said they wanted to protect the republic, but more civil wars followed."
+   ],
+   [
+    "Empire",
+    "Caesar's adopted son Octavian won the last of these wars. In 27 BCE he took the name Augustus and became the first emperor, and Rome became an empire ruled by one person."
+   ]
+  ],
+  "remember": "Rome moved from elected leaders and the Senate to rule by one emperor after years of civil war.",
+  "a": {
+   "q": "How was Rome governed during the republic?",
+   "opts": [
+    "By elected consuls and the Senate",
+    "By one emperor chosen by the army",
+    "By kings who passed power to their sons",
+    "By priests who spoke for the gods"
+   ],
+   "why": "In the republic, two consuls were elected each year, and the Senate advised them and had great power over decisions. Rule by one emperor came only after the republic ended, when Augustus took power in 27 BCE.",
+   "clue": "Think about who was elected each year and who advised them."
+  },
+  "b": {
+   "d": 3,
+   "q": "Why did Rome stop being a republic and become an empire?",
+   "opts": [
+    "Civil wars ended with Augustus taking sole power",
+    "Caesar's killers created the empire as they planned",
+    "Voters chose Augustus to be emperor in an election",
+    "Foreign armies conquered the Senate and took over"
+   ],
+   "why": "Years of civil wars between powerful men ended when Octavian won and became Augustus, the first emperor. Caesar's killers said they wanted to save the republic, so the empire was not their plan, even though their act led to more wars.",
+   "clue": "Look at what Octavian did after the last civil war."
+  }
+ },
+ "cleared_by": "auto"
 }

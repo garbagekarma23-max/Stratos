@@ -24,8 +24,129 @@
    0.272
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:55Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:54Z write: failed the content check, writing again",
+  "2026-11-20T12:44:59Z write: done",
+  "2026-11-20T12:53:27Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.01662,
+  "check": 0.00858
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches solving linear equations needing up to three inverse operations with brackets at Stage 5; the closest, mat-solving-linear-equations, is a Year 11 card with a different depth and only covers simple one- and two-step cases, while the simultaneous and parametric points teach different ideas.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Three-step equations",
+  "card": [
+   "To solve an equation, undo each operation with its inverse, and do the same to both sides. Adding and subtracting undo each other. Multiplying and dividing undo each other.",
+   "Undo the adding or subtracting first, then the multiplying or dividing. With a bracket, divide both sides by the number outside it, then undo the rest.",
+   [
+    "Example",
+    "Solve \\(2(x + 3) - 4 = 12\\). Add 4: \\(2(x + 3) = 16\\). Divide by 2: \\(x + 3 = 8\\). Subtract 3: \\(x = 5\\)."
+   ],
+   [
+    "Check",
+    "Put \\(x = 5\\) back in: \\(2(5 + 3) - 4 = 16 - 4 = 12\\). It matches, so the answer is right."
+   ]
+  ],
+  "remember": "Undo the adding or subtracting first, then the multiplying or dividing, doing the same to both sides.",
+  "a": {
+   "q": "What is the solution of \\(3(x - 2) + 5 = 20\\)?",
+   "opts": [
+    "\\(x = 7\\)",
+    "\\(x = 3\\)",
+    "\\(x = 9\\)",
+    "\\(x = 5\\)"
+   ],
+   "why": "Subtract 5: \\(3(x - 2) = 15\\). Divide by 3: \\(x - 2 = 5\\), so \\(x = 7\\). The tempting \\(x = 3\\) comes from subtracting 2 instead of adding it back.",
+   "clue": "Subtract 5 first, then divide by 3."
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam solves \\(4(x + 1) - 6 = 14\\). His first line is \\(4(x + 1) = 8\\). What did he do wrong, and what is the correct solution?",
+   "opts": [
+    "He subtracted 6 instead of adding it; \\(x = 4\\)",
+    "He subtracted 6 instead of adding it; \\(x = 1\\)",
+    "He added 6 but should have subtracted it; \\(x = 4\\)",
+    "He divided by 4 too early; \\(x = 1\\)"
+   ],
+   "why": "The \\(-6\\) is undone by adding 6, giving \\(4(x + 1) = 20\\). Dividing by 4 gives \\(x + 1 = 5\\), so \\(x = 4\\). Using \\(x = 1\\) follows from his wrong line \\(4(x + 1) = 8\\), so it keeps his error.",
+   "clue": "Undoing a subtraction means adding."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(x = 7\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "He subtracted 6 instead of adding it; \\(x = 4\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Three-step equations",
+  "card": [
+   "To solve an equation, undo each operation with its inverse, and do the same to both sides. Adding and subtracting undo each other. Multiplying and dividing undo each other.",
+   "Undo the adding or subtracting first, then the multiplying or dividing. With a bracket, divide both sides by the number outside it, then undo the rest.",
+   [
+    "Example",
+    "Solve \\(2(x + 3) - 4 = 12\\). Add 4: \\(2(x + 3) = 16\\). Divide by 2: \\(x + 3 = 8\\). Subtract 3: \\(x = 5\\)."
+   ],
+   [
+    "Check",
+    "Put \\(x = 5\\) back in: \\(2(5 + 3) - 4 = 16 - 4 = 12\\). It matches, so the answer is right."
+   ]
+  ],
+  "remember": "Undo the adding or subtracting first, then the multiplying or dividing, doing the same to both sides.",
+  "a": {
+   "q": "What is the solution of \\(3(x - 2) + 5 = 20\\)?",
+   "opts": [
+    "\\(x = 7\\)",
+    "\\(x = 3\\)",
+    "\\(x = 9\\)",
+    "\\(x = 5\\)"
+   ],
+   "why": "Subtract 5: \\(3(x - 2) = 15\\). Divide by 3: \\(x - 2 = 5\\), so \\(x = 7\\). The tempting \\(x = 3\\) comes from subtracting 2 instead of adding it back.",
+   "clue": "Subtract 5 first, then divide by 3."
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam solves \\(4(x + 1) - 6 = 14\\). His first line is \\(4(x + 1) = 8\\). What did he do wrong, and what is the correct solution?",
+   "opts": [
+    "He subtracted 6 instead of adding it; \\(x = 4\\)",
+    "He subtracted 6 instead of adding it; \\(x = 1\\)",
+    "He added 6 but should have subtracted it; \\(x = 4\\)",
+    "He divided by 4 too early; \\(x = 1\\)"
+   ],
+   "why": "The \\(-6\\) is undone by adding 6, giving \\(4(x + 1) = 20\\). Dividing by 4 gives \\(x + 1 = 5\\), so \\(x = 4\\). Using \\(x = 1\\) follows from his wrong line \\(4(x + 1) = 8\\), so it keeps his error.",
+   "clue": "Undoing a subtraction means adding."
+  }
+ },
+ "cleared_by": "checker"
 }

@@ -20,8 +20,206 @@
    0.206
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:48Z write: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:23:37Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.00647,
+  "check": 0.014,
+  "fix": 0.0257
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, Experimenting with punctuation, covers omitting or bending marks such as speech marks and dashes, while the new point teaches deliberate use of colons and semicolons for effect, which no bank point covers.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Punctuation for effect",
+  "card": [
+   [
+    "Colon",
+    "A colon sets up a reveal. The reader pauses, then gets the answer or the surprise. Example: Mia opened the door and saw it: an empty room."
+   ],
+   [
+    "Semicolon",
+    "A semicolon joins two related ideas and balances them. Example: The town was loud by day; it was silent by night."
+   ],
+   [
+    "Ellipsis",
+    "An ellipsis (three dots) shows a pause or a thought left unfinished. Example: I thought we could try, but maybe..."
+   ],
+   "Each mark changes how a reader moves through a sentence: a colon builds towards a reveal, a semicolon sets two ideas side by side, and an ellipsis slows the pace and leaves a gap."
+  ],
+  "remember": "Colon: reveal. Semicolon: balance. Ellipsis: pause or unfinished thought.",
+  "a": {
+   "q": "Which sentence uses a colon to set up a reveal?",
+   "opts": [
+    "Jon lifted the lid and found it: his lost watch",
+    "Jon lifted the lid: and found his lost watch",
+    "Jon lifted the lid; he found his lost watch",
+    "Jon lifted the lid and found... his lost watch"
+   ],
+   "why": "The words before the colon form a full statement, and the colon then delivers the thing found. The semicolon option balances two ideas instead of revealing one, and the ellipsis option only slows the sentence.",
+   "clue": "Look for the mark that points the reader towards a surprise at the end."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya writes: The sea was calm at dawn; by noon it was wild. What effect does her semicolon create?",
+   "opts": [
+    "It balances two related ideas side by side",
+    "It builds towards a single surprising reveal",
+    "It shows a thought left unfinished",
+    "It makes the reader pause as if unsure"
+   ],
+   "why": "The semicolon joins two related ideas and sets them against each other, calm and wild. It is not a reveal, because the second part does not name something held back. It is not an ellipsis effect, because both ideas are complete.",
+   "clue": "Both halves are complete ideas that sit as a pair."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Jon lifted the lid and found it: his lost watch",
+   "also_right": []
+  },
+  "b": {
+   "best": "It balances two related ideas side by side",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says flatly that 'A colon sets up a reveal', but the chapter point says a colon 'can' set up a reveal. Colons also introduce lists and explanations, so students may come away thinking a reveal is a colon's only use. 'A colon can set up a reveal' would be safer."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer, and the explanations match the card. The one minor issue is that the card says a colon 'sets up' a reveal rather than 'can set up' one, which may suggest that is a colon's only use."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The card says flatly that 'A colon sets up a reveal', but the chapter point says a colon 'can' set up a reveal. Colons also introduce lists and explanations, so students may come away thinking a reveal is a colon's only use. 'A colon can set up a reveal' would be safer."
+ ],
+ "proposal": {
+  "title": "Punctuation for effect",
+  "card": [
+   [
+    "Colon",
+    "A colon can set up a reveal, making the reader pause before the answer or the surprise. Example: Mia opened the door and saw it: an empty room."
+   ],
+   [
+    "Semicolon",
+    "A semicolon can join two related, complete ideas and balance them. Example: The town was loud by day; it was silent by night."
+   ],
+   [
+    "Ellipsis",
+    "An ellipsis (three dots) can show a pause or a thought left unfinished. Example: I thought we could try, but maybe..."
+   ],
+   "Colons also introduce lists and explanations, so not every colon is a reveal. Each mark changes how a reader moves through a sentence."
+  ],
+  "remember": "Pick the mark for its effect: a colon can reveal, a semicolon can balance, an ellipsis can trail off.",
+  "a": {
+   "q": "Which sentence uses a colon to set up a reveal?",
+   "opts": [
+    "Jon lifted the lid and found it: his lost watch",
+    "Jon packed three things: a torch, a map and a watch",
+    "Jon lifted the lid; he found his lost watch",
+    "Jon lifted the lid and found... his lost watch"
+   ],
+   "why": "In the first sentence the colon holds back what Jon found, then delivers it as a surprise. The list sentence also uses a colon, but it introduces items rather than revealing something held back. The other two use a semicolon and an ellipsis, not a colon.",
+   "clue": "Not every colon reveals something. Which one holds back a surprise?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya writes: The sea was calm at dawn; by noon it was wild. What effect does her semicolon create?",
+   "opts": [
+    "It balances two related ideas side by side",
+    "It builds towards a single surprising reveal",
+    "It shows a thought left unfinished",
+    "It makes the reader pause as if unsure"
+   ],
+   "why": "The semicolon joins two related, complete ideas and sets them against each other: calm and wild. It is not a reveal, because the second part does not deliver something held back. It is not an ellipsis effect, because neither idea is left unfinished or trails off.",
+   "clue": "Both halves are complete ideas that sit as a pair."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:37Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says flatly that 'A colon sets up a reveal', but the chapter point says a colon 'can' set up a reveal. Colons also introduce lists and explanations, so students may come away thinking a reveal is a colon's only use. 'A colon can set up a reveal' would be safer."
+   }
+  ],
+  "flags": [
+   "Card, wording: The card says flatly that 'A colon sets up a reveal', but the chapter point says a colon 'can' set up a reveal. Colons also introduce lists and explanations, so students may come away thinking a reveal is a colon's only use. 'A colon can set up a reveal' would be safer."
+  ]
+ },
+ "final": {
+  "title": "Punctuation for effect",
+  "card": [
+   [
+    "Colon",
+    "A colon can set up a reveal, making the reader pause before the answer or the surprise. Example: Mia opened the door and saw it: an empty room."
+   ],
+   [
+    "Semicolon",
+    "A semicolon can join two related, complete ideas and balance them. Example: The town was loud by day; it was silent by night."
+   ],
+   [
+    "Ellipsis",
+    "An ellipsis (three dots) can show a pause or a thought left unfinished. Example: I thought we could try, but maybe..."
+   ],
+   "Colons also introduce lists and explanations, so not every colon is a reveal. Each mark changes how a reader moves through a sentence."
+  ],
+  "remember": "Pick the mark for its effect: a colon can reveal, a semicolon can balance, an ellipsis can trail off.",
+  "a": {
+   "q": "Which sentence uses a colon to set up a reveal?",
+   "opts": [
+    "Jon lifted the lid and found it: his lost watch",
+    "Jon packed three things: a torch, a map and a watch",
+    "Jon lifted the lid; he found his lost watch",
+    "Jon lifted the lid and found... his lost watch"
+   ],
+   "why": "In the first sentence the colon holds back what Jon found, then delivers it as a surprise. The list sentence also uses a colon, but it introduces items rather than revealing something held back. The other two use a semicolon and an ellipsis, not a colon.",
+   "clue": "Not every colon reveals something. Which one holds back a surprise?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya writes: The sea was calm at dawn; by noon it was wild. What effect does her semicolon create?",
+   "opts": [
+    "It balances two related ideas side by side",
+    "It builds towards a single surprising reveal",
+    "It shows a thought left unfinished",
+    "It makes the reader pause as if unsure"
+   ],
+   "why": "The semicolon joins two related, complete ideas and sets them against each other: calm and wild. It is not a reveal, because the second part does not deliver something held back. It is not an ellipsis effect, because neither idea is left unfinished or trails off.",
+   "clue": "Both halves are complete ideas that sit as a pair."
+  }
+ },
+ "cleared_by": "auto"
 }

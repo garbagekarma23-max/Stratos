@@ -20,8 +20,408 @@
    0.226
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (b other)",
+  "2026-11-20T13:44:55Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.00633,
+  "check": 0.0108,
+  "fix": 0.02221,
+  "recheck": 0.01204
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point covers the rights of young people stopped or questioned by police, such as being told why and having an adult present, or the duty to give name and address; the closest cards cover general police powers, the right to silence, or the Young Offenders Act diversion options, which are different ideas.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, other: The clue ('Some details may have to be given, but he can still ask questions') paraphrases the right option almost word for word. A student could pick it without knowing the idea.",
+ "rejected": {
+  "title": "Young people and the police",
+  "card": [
+   "Police have powers to stop, question and search people, but young people also have rights when police deal with them. Police must act within the law.",
+   [
+    "Right to know why",
+    "A young person who is stopped can ask why. Police should explain the reason for stopping, questioning or searching them."
+   ],
+   [
+    "Right to an adult",
+    "A young person who is questioned about an offence has the right to have a support person, such as a parent, present. They can also ask to speak to a lawyer."
+   ],
+   [
+    "Name and address",
+    "A young person may have to give their name and address when police ask in certain situations, such as when police suspect they have committed an offence. Beyond that, they do not have to answer questions and can stay silent."
+   ]
+  ],
+  "remember": "Young people can ask why they are stopped and ask for an adult, but may have to give their name and address.",
+  "a": {
+   "q": "Police stop Jess, who is 15, in a park and want to question her about a break-in. What is one right she has?",
+   "opts": [
+    "To have a support person present while she is questioned",
+    "To refuse to give her name and address in every case",
+    "To be let go as soon as she says she is innocent",
+    "To stop police asking questions until she turns 18"
+   ],
+   "why": "A young person questioned about an offence can have a support person, such as a parent, present. Refusing her name and address is tempting because she can stay silent on other questions, but when police suspect an offence she may have to give those details.",
+   "clue": "Remember the one thing she may still have to tell police."
+  },
+  "b": {
+   "d": 3,
+   "q": "Police in Newcastle stop Tom, 16, because they suspect he took part in a theft. Which action by Tom is within his rights?",
+   "opts": [
+    "Asking why he was stopped and giving his name and address",
+    "Giving a false name and address to protect his friends",
+    "Refusing to give his name and address in all situations",
+    "Giving his name and address only if his parents are there"
+   ],
+   "why": "Tom can ask why he was stopped, and when police suspect an offence he may have to give his name and address. Refusing or lying is not within his rights, even though he can stay silent on other questions.",
+   "clue": "Some details may have to be given, but he can still ask questions."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, other: The clue ('Some details may have to be given, but he can still ask questions') paraphrases the right option almost word for word. A student could pick it without knowing the idea."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Young people and the police",
+     "card": [
+      "Police have powers to stop, question and search people, but young people also have rights when police deal with them. Police must act within the law.",
+      [
+       "Right to know why",
+       "A young person who is stopped can ask why. Police should explain the reason for stopping, questioning or searching them."
+      ],
+      [
+       "Right to an adult",
+       "A young person who is questioned about an offence has the right to have a support person, such as a parent, present. They can also ask to speak to a lawyer."
+      ],
+      [
+       "Name and address",
+       "A young person may have to give their name and address when police ask in certain situations, such as when police suspect they have committed an offence. Beyond that, they do not have to answer questions and can stay silent."
+      ]
+     ],
+     "remember": "Young people can ask why they are stopped and ask for an adult, but may have to give their name and address.",
+     "a": {
+      "q": "Police stop Jess, who is 15, in a park and want to question her about a break-in. What is one right she has?",
+      "opts": [
+       "To have a support person with her during questioning",
+       "To refuse to say anything, including her name and address",
+       "To leave at once without being told why she was stopped",
+       "To be questioned only by police officers aged over 30"
+      ],
+      "why": "A young person questioned about an offence can have a support person, such as a parent, present. She may still have to give her name and address, so she cannot refuse everything.",
+      "clue": "Think about who can sit beside a young person during questioning."
+     },
+     "b": {
+      "d": 3,
+      "q": "Police in Newcastle stop Tom, 16, because they suspect he took part in a theft. Which action by Tom is within his rights?",
+      "opts": [
+       "Asking why he was stopped and giving his name and address",
+       "Giving a false name and address to protect his friends",
+       "Refusing to give his name and address in all situations",
+       "Giving his name and address only if his parents are there"
+      ],
+      "why": "Tom can ask why he was stopped, and when police suspect an offence he may have to give his name and address. Refusing or lying is not within his rights, even though he can stay silent on other questions.",
+      "clue": "Some details may have to be given, but he can still ask questions."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "To have a support person with her during questioning",
+      "also_right": []
+     },
+     "b": {
+      "best": "Asking why he was stopped and giving his name and address",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue 'Think about who can sit beside a young person during questioning' points straight at the support-person option, so a student can pick it without knowing the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both answers are accurate for NSW. The only problem is that question a's clue all but names the right option."
+    },
+    "flags": [
+     "Question a, other: The clue 'Think about who can sit beside a young person during questioning' points straight at the support-person option, so a student can pick it without knowing the idea."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Young people and the police",
+     "card": [
+      "Police have powers to stop, question and search people, but young people also have rights when police deal with them. Police must act within the law.",
+      [
+       "Right to know why",
+       "A young person who is stopped can ask why. Police should explain the reason for stopping, questioning or searching them."
+      ],
+      [
+       "Right to an adult",
+       "A young person who is questioned about an offence has the right to have a support person, such as a parent, present. They can also ask to speak to a lawyer."
+      ],
+      [
+       "Name and address",
+       "A young person may have to give their name and address when police ask in certain situations, such as when police suspect they have committed an offence. Beyond that, they do not have to answer questions and can stay silent."
+      ]
+     ],
+     "remember": "Young people can ask why they are stopped and ask for an adult, but may have to give their name and address.",
+     "a": {
+      "q": "Police stop Jess, who is 15, in a park and want to question her about a break-in. What is one right she has?",
+      "opts": [
+       "To have a support person present while she is questioned",
+       "To refuse to give her name and address in every case",
+       "To be let go as soon as she says she is innocent",
+       "To stop police asking questions until she turns 18"
+      ],
+      "why": "A young person questioned about an offence can have a support person, such as a parent, present. Refusing her name and address is tempting because she can stay silent on other questions, but when police suspect an offence she may have to give those details.",
+      "clue": "Remember the one thing she may still have to tell police."
+     },
+     "b": {
+      "d": 3,
+      "q": "Police in Newcastle stop Tom, 16, because they suspect he took part in a theft. Which action by Tom is within his rights?",
+      "opts": [
+       "Asking why he was stopped and giving his name and address",
+       "Giving a false name and address to protect his friends",
+       "Refusing to give his name and address in all situations",
+       "Giving his name and address only if his parents are there"
+      ],
+      "why": "Tom can ask why he was stopped, and when police suspect an offence he may have to give his name and address. Refusing or lying is not within his rights, even though he can stay silent on other questions.",
+      "clue": "Some details may have to be given, but he can still ask questions."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:06Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "To have a support person present while she is questioned",
+       "also_right": []
+      },
+      "b": {
+       "best": "Asking why he was stopped and giving his name and address",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "The clue ('Some details may have to be given, but he can still ask questions') paraphrases the right option almost word for word. A student could pick it without knowing the idea."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both answers agree with NSW law on young people's rights with police. The only problem is that question b's clue restates the right option and gives the answer away."
+     },
+     "flags": [
+      "Question b, other: The clue ('Some details may have to be given, but he can still ask questions') paraphrases the right option almost word for word. A student could pick it without knowing the idea."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:55Z",
+   "step": "write",
+   "version": {
+    "title": "Young people and the police",
+    "card": [
+     "Police have powers to stop, question and search people, but young people also have rights when police deal with them. Police must act within the law.",
+     [
+      "Right to know why",
+      "A young person who is stopped can ask why. Police should explain the reason for stopping, questioning or searching them."
+     ],
+     [
+      "Right to an adult",
+      "A young person who is questioned about an offence has the right to have a support person, such as a parent, present. They can also ask to speak to a lawyer."
+     ],
+     [
+      "Name and address",
+      "A young person may have to give their name and address when police ask in certain situations, such as when police suspect they have committed an offence. Beyond that, they do not have to answer questions and can stay silent."
+     ]
+    ],
+    "remember": "Young people can ask why they are stopped and ask for an adult, but may have to give their name and address.",
+    "a": {
+     "q": "Police stop Jess, who is 15, in a park and want to question her about a break-in. What is one right she has?",
+     "opts": [
+      "To have a support person present during questioning",
+      "To refuse to give her name and address in every case",
+      "To be let go as soon as she says she is innocent",
+      "To stop police asking questions until she turns 18"
+     ],
+     "why": "A young person questioned about an offence can have a support person, such as a parent, present. Refusing her name and address is tempting because she can stay silent on other questions, but when police suspect an offence she may have to give those details.",
+     "clue": "Remember the one thing she may still have to tell police."
+    },
+    "b": {
+     "d": 3,
+     "q": "Police in Newcastle stop Tom, 16, because they suspect he took part in a theft. Which action by Tom is within his rights?",
+     "opts": [
+      "Asking why he was stopped and giving his name and address",
+      "Giving a false name and address to protect his friends",
+      "Refusing to give his name and address in all situations",
+      "Giving his name and address only if his parents are there"
+     ],
+     "why": "Tom can ask why he was stopped, and when police suspect an offence he may have to give his name and address. Refusing or lying is not within his rights, even though he can stay silent on other questions.",
+     "clue": "Check each option against all four lines of the card, not just one."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "To have a support person present during questioning",
+     "also_right": []
+    },
+    "b": {
+     "best": "Asking why he was stopped and giving his name and address",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Young people and the police",
+  "card": [
+   "Police have powers to stop, question and search people, but young people also have rights when police deal with them. Police must act within the law.",
+   [
+    "Right to know why",
+    "A young person who is stopped can ask why. Police should explain the reason for stopping, questioning or searching them."
+   ],
+   [
+    "Right to an adult",
+    "A young person who is questioned about an offence has the right to have a support person, such as a parent, present. They can also ask to speak to a lawyer."
+   ],
+   [
+    "Name and address",
+    "A young person may have to give their name and address when police ask in certain situations, such as when police suspect they have committed an offence. Beyond that, they do not have to answer questions and can stay silent."
+   ]
+  ],
+  "remember": "Young people can ask why they are stopped and ask for an adult, but may have to give their name and address.",
+  "a": {
+   "q": "Police stop Jess, who is 15, in a park and want to question her about a break-in. What is one right she has?",
+   "opts": [
+    "To have a support person present during questioning",
+    "To refuse to give her name and address in every case",
+    "To be let go as soon as she says she is innocent",
+    "To stop police asking questions until she turns 18"
+   ],
+   "why": "A young person questioned about an offence can have a support person, such as a parent, present. Refusing her name and address is tempting because she can stay silent on other questions, but when police suspect an offence she may have to give those details.",
+   "clue": "Remember the one thing she may still have to tell police."
+  },
+  "b": {
+   "d": 3,
+   "q": "Police in Newcastle stop Tom, 16, because they suspect he took part in a theft. Which action by Tom is within his rights?",
+   "opts": [
+    "Asking why he was stopped and giving his name and address",
+    "Giving a false name and address to protect his friends",
+    "Refusing to give his name and address in all situations",
+    "Giving his name and address only if his parents are there"
+   ],
+   "why": "Tom can ask why he was stopped, and when police suspect an offence he may have to give his name and address. Refusing or lying is not within his rights, even though he can stay silent on other questions.",
+   "clue": "Check each option against all four lines of the card, not just one."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "To have a support person present during questioning",
+   "also_right": []
+  },
+  "b": {
+   "best": "Asking why he was stopped and giving his name and address",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Young people and the police",
+  "card": [
+   "Police have powers to stop, question and search people, but young people also have rights when police deal with them. Police must act within the law.",
+   [
+    "Right to know why",
+    "A young person who is stopped can ask why. Police should explain the reason for stopping, questioning or searching them."
+   ],
+   [
+    "Right to an adult",
+    "A young person who is questioned about an offence has the right to have a support person, such as a parent, present. They can also ask to speak to a lawyer."
+   ],
+   [
+    "Name and address",
+    "A young person may have to give their name and address when police ask in certain situations, such as when police suspect they have committed an offence. Beyond that, they do not have to answer questions and can stay silent."
+   ]
+  ],
+  "remember": "Young people can ask why they are stopped and ask for an adult, but may have to give their name and address.",
+  "a": {
+   "q": "Police stop Jess, who is 15, in a park and want to question her about a break-in. What is one right she has?",
+   "opts": [
+    "To have a support person present during questioning",
+    "To refuse to give her name and address in every case",
+    "To be let go as soon as she says she is innocent",
+    "To stop police asking questions until she turns 18"
+   ],
+   "why": "A young person questioned about an offence can have a support person, such as a parent, present. Refusing her name and address is tempting because she can stay silent on other questions, but when police suspect an offence she may have to give those details.",
+   "clue": "Remember the one thing she may still have to tell police."
+  },
+  "b": {
+   "d": 3,
+   "q": "Police in Newcastle stop Tom, 16, because they suspect he took part in a theft. Which action by Tom is within his rights?",
+   "opts": [
+    "Asking why he was stopped and giving his name and address",
+    "Giving a false name and address to protect his friends",
+    "Refusing to give his name and address in all situations",
+    "Giving his name and address only if his parents are there"
+   ],
+   "why": "Tom can ask why he was stopped, and when police suspect an offence he may have to give his name and address. Refusing or lying is not within his rights, even though he can stay silent on other questions.",
+   "clue": "Check each option against all four lines of the card, not just one."
+  }
+ },
+ "checked_by": "claude-code"
 }

@@ -24,8 +24,139 @@
    0.211
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:39Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.00577,
+  "check": 0.00723
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, ecb-ways-invest, covers shares, property, managed funds, super and term deposits, but it does not teach bonds, and adding a card on bonds is more than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Types of investments",
+  "card": [
+   [
+    "Bank deposit",
+    "Money kept in an account at a bank or similar institution, which pays interest. A term deposit locks the money away for a set time."
+   ],
+   [
+    "Shares",
+    "A share is a small part of ownership in a company. Investors may earn dividends (a share of profit) or gain if the share price rises."
+   ],
+   [
+    "Property",
+    "Land or buildings, such as a house or a shop. Investors may earn rent or gain if the property's value rises."
+   ],
+   [
+    "Others",
+    "A bond is a loan to a government or company that pays interest. A managed fund pools many people's money, and professionals invest it. Superannuation is money saved during working life for retirement, and it is often invested in shares, property and bonds."
+   ]
+  ],
+  "remember": "Investments differ in what you own or lend: a deposit, a company share, property, a bond, a pooled fund or retirement savings.",
+  "a": {
+   "q": "Tom buys a share in an Australian company. What does he now own?",
+   "opts": [
+    "A small part of the company",
+    "A loan the company must repay him",
+    "A fixed term of interest payments",
+    "A part of a pool of properties"
+   ],
+   "why": "A share is part ownership of a company, so Tom owns a small part of it. A loan to a company that pays interest is a bond, not a share.",
+   "clue": "Think about owning part of a business, not lending to it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya lends money to the government and is paid regular interest. Which investment is this?",
+   "opts": [
+    "A bond",
+    "A share",
+    "A managed fund",
+    "A property investment"
+   ],
+   "why": "A bond is a loan to a government or company that pays interest. A share is tempting because it can also pay money, but a share is part ownership of a company, not a loan.",
+   "clue": "Priya is a lender, not an owner."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A small part of the company",
+   "also_right": []
+  },
+  "b": {
+   "best": "A bond",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Types of investments",
+  "card": [
+   [
+    "Bank deposit",
+    "Money kept in an account at a bank or similar institution, which pays interest. A term deposit locks the money away for a set time."
+   ],
+   [
+    "Shares",
+    "A share is a small part of ownership in a company. Investors may earn dividends (a share of profit) or gain if the share price rises."
+   ],
+   [
+    "Property",
+    "Land or buildings, such as a house or a shop. Investors may earn rent or gain if the property's value rises."
+   ],
+   [
+    "Others",
+    "A bond is a loan to a government or company that pays interest. A managed fund pools many people's money, and professionals invest it. Superannuation is money saved during working life for retirement, and it is often invested in shares, property and bonds."
+   ]
+  ],
+  "remember": "Investments differ in what you own or lend: a deposit, a company share, property, a bond, a pooled fund or retirement savings.",
+  "a": {
+   "q": "Tom buys a share in an Australian company. What does he now own?",
+   "opts": [
+    "A small part of the company",
+    "A loan the company must repay him",
+    "A fixed term of interest payments",
+    "A part of a pool of properties"
+   ],
+   "why": "A share is part ownership of a company, so Tom owns a small part of it. A loan to a company that pays interest is a bond, not a share.",
+   "clue": "Think about owning part of a business, not lending to it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya lends money to the government and is paid regular interest. Which investment is this?",
+   "opts": [
+    "A bond",
+    "A share",
+    "A managed fund",
+    "A property investment"
+   ],
+   "why": "A bond is a loan to a government or company that pays interest. A share is tempting because it can also pay money, but a share is part ownership of a company, not a loan.",
+   "clue": "Priya is a lender, not an owner."
+  }
+ },
+ "cleared_by": "checker"
 }

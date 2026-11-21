@@ -24,8 +24,190 @@
    0.297
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 may adapt mat-experiments-theory, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:53Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:53Z write: done",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:23:42Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00039,
+  "confirm": 0.01133,
+  "write": 0.00715,
+  "check": 0.0095,
+  "fix": 0.01823
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-experiments-theory",
+  "changes": [
+   "Name the idea as experimental probability, the term the NSW syllabus uses, alongside the card's relative frequency wording."
+  ],
+  "sure": "medium",
+  "reason": "The card teaches the same idea, that relative frequency from trials tends toward theoretical probability as trials increase, at a suitable depth, and only its terminology needs a small adjustment for the NSW syllabus.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The new point both defines relative frequency and shows it nearing the theoretical probability with more trials, but no bank point teaches both. 'Experiments and theory' covers only the convergence and never defines relative frequency, 'Expected and relative frequency' adds expected frequency, and the Year 9 point is about estimating probabilities with no theoretical value to compare against.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Experimental probability",
+  "card": [
+   "Experimental probability is found by doing an experiment, or by collecting results. Each go is called a trial.",
+   "Relative frequency \\(=\\) number of times the event happened \\(\\div\\) total number of trials. It can be written as a fraction, a decimal or a percentage.",
+   "Example: Ravi flips a drawing pin 40 times. It lands point up 28 times. The relative frequency of point up is \\(\\frac{28}{40} = 0.7\\).",
+   "Results vary from one experiment to the next. The more trials there are, the closer the relative frequency tends to get to the theoretical probability."
+  ],
+  "remember": "Relative frequency is the number of times it happened out of the number of trials. More trials usually bring it closer to the theoretical probability.",
+  "a": {
+   "q": "Priya spins a spinner 50 times and it lands on red 18 times. What is the relative frequency of red?",
+   "opts": [
+    "\\(\\frac{18}{50}\\)",
+    "\\(\\frac{50}{18}\\)",
+    "\\(\\frac{18}{32}\\)",
+    "\\(\\frac{32}{50}\\)"
+   ],
+   "why": "Relative frequency is the number of times red happened over the number of trials, so \\(\\frac{18}{50}\\). The option \\(\\frac{18}{32}\\) uses the 32 spins that were not red as the total, but the total is all 50 trials.",
+   "clue": "The total is every spin, not just some of them."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom drops a cup 20 times and it lands upside down 5 times. His sister drops it 200 times and it lands upside down 62 times. Whose result is likely to be closer to the theoretical probability?",
+   "opts": [
+    "His sister's, because she did more trials",
+    "Tom's, because his result is a simpler fraction",
+    "Both are equally close, as each is a real result",
+    "Tom's, because he did fewer trials"
+   ],
+   "why": "With more trials, the relative frequency tends to get closer to the theoretical probability, so his sister's result is likely to be closer. Tom's \\(\\frac{5}{20}\\) is a simpler fraction, but that has nothing to do with how reliable it is.",
+   "clue": "Think about which experiment had more trials."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(\\frac{18}{50}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "His sister's, because she did more trials",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Think about which experiment had more trials' points straight at the only option that mentions more trials, so a student can pick it without understanding why more trials help."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, the questions and the explanations are accurate and match the syllabus. The only issue is that the clue for question b all but gives away the answer."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue 'Think about which experiment had more trials' points straight at the only option that mentions more trials, so a student can pick it without understanding why more trials help."
+ ],
+ "proposal": {
+  "title": "Experimental probability",
+  "card": [
+   "Experimental probability is found by doing an experiment, or by collecting results. Each go is called a trial.",
+   "Relative frequency \\(=\\) number of times the event happened \\(\\div\\) total number of trials. It can be written as a fraction, a decimal or a percentage.",
+   "Example: Ravi flips a drawing pin 40 times. It lands point up 28 times. The relative frequency of point up is \\(\\frac{28}{40} = 0.7\\).",
+   "Results vary from one experiment to the next. The more trials there are, the closer the relative frequency tends to get to the theoretical probability."
+  ],
+  "remember": "Relative frequency is the number of times it happened out of the number of trials. More trials usually bring it closer to the theoretical probability.",
+  "a": {
+   "q": "Priya spins a spinner 50 times and it lands on red 18 times. What is the relative frequency of red?",
+   "opts": [
+    "\\(\\frac{18}{50}\\)",
+    "\\(\\frac{50}{18}\\)",
+    "\\(\\frac{18}{32}\\)",
+    "\\(\\frac{32}{50}\\)"
+   ],
+   "why": "Relative frequency is the number of times red happened over the number of trials, so \\(\\frac{18}{50}\\). The option \\(\\frac{18}{32}\\) uses the 32 spins that were not red as the total, but the total is all 50 trials.",
+   "clue": "The total is every spin, not just some of them."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom drops a cup 20 times and it lands upside down 5 times. His sister drops it 200 times and it lands upside down 62 times. Whose result is likely to be closer to the theoretical probability?",
+   "opts": [
+    "His sister's, because she did more trials",
+    "Tom's, because his result is a simpler fraction",
+    "Both equally, because each is a real result",
+    "Tom's, because fewer trials means fewer mistakes"
+   ],
+   "why": "Results vary from one experiment to the next, and with more trials the relative frequency tends to get closer to the theoretical probability. So his sister's result is likely to be closer. Tom's \\(\\frac{5}{20}\\) is a simpler fraction, but that has nothing to do with how close it is likely to be.",
+   "clue": "Which result would change less if the experiment were done again?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:42Z",
+  "rules": 1,
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Think about which experiment had more trials' points straight at the only option that mentions more trials, so a student can pick it without understanding why more trials help."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue 'Think about which experiment had more trials' points straight at the only option that mentions more trials, so a student can pick it without understanding why more trials help."
+  ]
+ },
+ "final": {
+  "title": "Experimental probability",
+  "card": [
+   "Experimental probability is found by doing an experiment, or by collecting results. Each go is called a trial.",
+   "Relative frequency \\(=\\) number of times the event happened \\(\\div\\) total number of trials. It can be written as a fraction, a decimal or a percentage.",
+   "Example: Ravi flips a drawing pin 40 times. It lands point up 28 times. The relative frequency of point up is \\(\\frac{28}{40} = 0.7\\).",
+   "Results vary from one experiment to the next. The more trials there are, the closer the relative frequency tends to get to the theoretical probability."
+  ],
+  "remember": "Relative frequency is the number of times it happened out of the number of trials. More trials usually bring it closer to the theoretical probability.",
+  "a": {
+   "q": "Priya spins a spinner 50 times and it lands on red 18 times. What is the relative frequency of red?",
+   "opts": [
+    "\\(\\frac{18}{50}\\)",
+    "\\(\\frac{50}{18}\\)",
+    "\\(\\frac{18}{32}\\)",
+    "\\(\\frac{32}{50}\\)"
+   ],
+   "why": "Relative frequency is the number of times red happened over the number of trials, so \\(\\frac{18}{50}\\). The option \\(\\frac{18}{32}\\) uses the 32 spins that were not red as the total, but the total is all 50 trials.",
+   "clue": "The total is every spin, not just some of them."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom drops a cup 20 times and it lands upside down 5 times. His sister drops it 200 times and it lands upside down 62 times. Whose result is likely to be closer to the theoretical probability?",
+   "opts": [
+    "His sister's, because she did more trials",
+    "Tom's, because his result is a simpler fraction",
+    "Both equally, because each is a real result",
+    "Tom's, because fewer trials means fewer mistakes"
+   ],
+   "why": "Results vary from one experiment to the next, and with more trials the relative frequency tends to get closer to the theoretical probability. So his sister's result is likely to be closer. Tom's \\(\\frac{5}{20}\\) is a simpler fraction, but that has nothing to do with how close it is likely to be.",
+   "clue": "Which result would change less if the experiment were done again?"
+  }
+ },
+ "cleared_by": "auto"
 }

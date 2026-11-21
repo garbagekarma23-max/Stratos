@@ -12,8 +12,227 @@
    0.217
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:50Z write: done",
+  "2026-11-20T12:35:50Z check: flagged",
+  "2026-11-20T12:44:56Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.00657,
+  "check": 0.01255,
+  "fix": 0.02044,
+  "recheck": 0.00885
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank's Renaissance card covers only the revival of ancient learning and art and does not mention the Reformation, Martin Luther in 1517, or the split of the Church, so the new point teaches an idea the bank lacks.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The Renaissance and the Reformation",
+  "card": [
+   [
+    "Renaissance",
+    "A period from about the 1300s to the 1600s, starting in Italy. People took a new interest in the learning and art of ancient Greece and Rome. Artists and thinkers also looked more closely at the human world."
+   ],
+   [
+    "Printing",
+    "Printing with movable type spread in Europe from the mid 1400s. Books and ideas could be copied faster and cheaper than by hand."
+   ],
+   [
+    "Reformation",
+    "In 1517 a German monk, Martin Luther, publicly criticised some practices of the Catholic Church. His ideas spread, and many people left to form new Protestant churches."
+   ],
+   "The Reformation split the Church in Western Europe into Catholic and Protestant groups. The two movements were different: one was about learning and art, the other about religion."
+  ],
+  "remember": "Renaissance: a revival of ancient learning and art. Reformation: a split in the Church that began in 1517.",
+  "a": {
+   "q": "Which event is part of the Reformation?",
+   "opts": [
+    "Martin Luther criticised Church practices in 1517",
+    "Italian artists studied the art of ancient Rome",
+    "Printers began to produce books with movable type",
+    "Scholars in Italy read ancient Greek writings"
+   ],
+   "why": "The Reformation was a religious movement that began when Luther criticised the Church in 1517. Studying ancient Rome and Greece belongs to the Renaissance, and it is the most tempting wrong choice because it also happened in Europe in the same long period.",
+   "clue": "Which one is about religion and the Church?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya says the Reformation was a revival of interest in ancient Greek and Roman art. What is wrong with her statement?",
+   "opts": [
+    "That describes the Renaissance, not the Reformation",
+    "It was a revival of ancient art, but not Roman art",
+    "The Reformation took place before the Renaissance",
+    "The Reformation was a revival, but only of learning"
+   ],
+   "why": "A revival of ancient learning and art is the Renaissance. The Reformation was a religious split in the Church in Western Europe. Placing the Reformation as a revival of learning mixes up the two movements.",
+   "clue": "Which movement was about the Church?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Martin Luther criticised Church practices in 1517",
+   "also_right": []
+  },
+  "b": {
+   "best": "That describes the Renaissance, not the Reformation",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one with a precise detail (the date 1517) and the only one naming Luther, so it stands out from the other options. A student could pick it without understanding what the Reformation was."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct. One minor issue: in question a, the right option stands out because it alone has a name and a date (1517)."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option is the only one with a precise detail (the date 1517) and the only one naming Luther, so it stands out from the other options. A student could pick it without understanding what the Reformation was."
+ ],
+ "proposal": {
+  "title": "The Renaissance and the Reformation",
+  "card": [
+   [
+    "Renaissance",
+    "A period from about the 1300s to the 1600s, starting in Italy. People took a new interest in the learning and art of ancient Greece and Rome. Artists and thinkers also looked more closely at the human world."
+   ],
+   [
+    "Printing",
+    "Printing with movable type spread in Europe from the mid 1400s. Books and ideas could be copied faster and cheaper than by hand."
+   ],
+   [
+    "Reformation",
+    "In 1517 a German monk, Martin Luther, publicly criticised some practices of the Catholic Church. His ideas spread, and many people left to form new Protestant churches."
+   ],
+   "The Reformation split the Church in Western Europe into Catholic and Protestant groups. The two movements were different: one was about learning and art, the other about religion."
+  ],
+  "remember": "Renaissance: a revival of ancient learning and art. Reformation: a split in the Church that began in 1517.",
+  "a": {
+   "q": "Which of these events is part of the Reformation?",
+   "opts": [
+    "German towns set up new Protestant churches",
+    "Italian painters copied the styles of Roman art",
+    "Scholars in Florence studied ancient Greek books",
+    "Architects in Rome built domes like ancient temples"
+   ],
+   "why": "The Reformation was a religious movement in which people left the Catholic Church and formed Protestant churches. Studying ancient Greek books is the most tempting wrong choice, but reviving ancient learning belongs to the Renaissance, as do the painters and architects.",
+   "clue": "Which one is about religion and the Church?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya says the Reformation was a revival of interest in ancient Greek and Roman art. What is wrong with her statement?",
+   "opts": [
+    "That describes the Renaissance, not the Reformation",
+    "It was a revival of ancient art, but not Roman art",
+    "The Reformation took place before the Renaissance",
+    "The Reformation was a revival, but only of learning"
+   ],
+   "why": "A revival of ancient learning and art is the Renaissance. The Reformation was about religion: it split the Church in Western Europe. Saying it was a revival of learning only is tempting, but it still mixes up the two movements.",
+   "clue": "Which movement was about the Church?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "German towns set up new Protestant churches",
+    "also_right": []
+   },
+   "b": {
+    "best": "That describes the Renaissance, not the Reformation",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one with a precise detail (the date 1517) and the only one naming Luther, so it stands out from the other options. A student could pick it without understanding what the Reformation was."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The right option is the only one with a precise detail (the date 1517) and the only one naming Luther, so it stands out from the other options. A student could pick it without understanding what the Reformation was."
+  ]
+ },
+ "final": {
+  "title": "The Renaissance and the Reformation",
+  "card": [
+   [
+    "Renaissance",
+    "A period from about the 1300s to the 1600s, starting in Italy. People took a new interest in the learning and art of ancient Greece and Rome. Artists and thinkers also looked more closely at the human world."
+   ],
+   [
+    "Printing",
+    "Printing with movable type spread in Europe from the mid 1400s. Books and ideas could be copied faster and cheaper than by hand."
+   ],
+   [
+    "Reformation",
+    "In 1517 a German monk, Martin Luther, publicly criticised some practices of the Catholic Church. His ideas spread, and many people left to form new Protestant churches."
+   ],
+   "The Reformation split the Church in Western Europe into Catholic and Protestant groups. The two movements were different: one was about learning and art, the other about religion."
+  ],
+  "remember": "Renaissance: a revival of ancient learning and art. Reformation: a split in the Church that began in 1517.",
+  "a": {
+   "q": "Which of these events is part of the Reformation?",
+   "opts": [
+    "German towns set up new Protestant churches",
+    "Italian painters copied the styles of Roman art",
+    "Scholars in Florence studied ancient Greek books",
+    "Architects in Rome built domes like ancient temples"
+   ],
+   "why": "The Reformation was a religious movement in which people left the Catholic Church and formed Protestant churches. Studying ancient Greek books is the most tempting wrong choice, but reviving ancient learning belongs to the Renaissance, as do the painters and architects.",
+   "clue": "Which one is about religion and the Church?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya says the Reformation was a revival of interest in ancient Greek and Roman art. What is wrong with her statement?",
+   "opts": [
+    "That describes the Renaissance, not the Reformation",
+    "It was a revival of ancient art, but not Roman art",
+    "The Reformation took place before the Renaissance",
+    "The Reformation was a revival, but only of learning"
+   ],
+   "why": "A revival of ancient learning and art is the Renaissance. The Reformation was about religion: it split the Church in Western Europe. Saying it was a revival of learning only is tempting, but it still mixes up the two movements.",
+   "clue": "Which movement was about the Church?"
+  }
+ },
+ "cleared_by": "recheck"
 }

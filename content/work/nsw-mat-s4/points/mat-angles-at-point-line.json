@@ -24,8 +24,267 @@
    0.397
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:53Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:53Z write: failed the content check, writing again",
+  "2026-11-20T12:44:58Z write: done",
+  "2026-11-20T12:53:27Z check: flagged",
+  "2026-11-20T12:59:59Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.01865,
+  "check": 0.01373,
+  "fix": 0.02543,
+  "recheck": 0.00608
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches angles on a straight line, angles at a point, or vertically opposite angles; the closest, the triangle angle sum, is a related but different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Angles at a point and on a line",
+  "card": [
+   [
+    "On a line",
+    "Angles on a straight line add to \\(180^{\\circ}\\). If one angle is \\(50^{\\circ}\\), the angle beside it on the line is \\(180^{\\circ} - 50^{\\circ} = 130^{\\circ}\\)."
+   ],
+   [
+    "At a point",
+    "Angles around a point add to \\(360^{\\circ}\\), a full turn. If three angles at a point are \\(100^{\\circ}\\), \\(120^{\\circ}\\) and \\(90^{\\circ}\\), the fourth is \\(360^{\\circ} - 310^{\\circ} = 50^{\\circ}\\)."
+   ],
+   [
+    "Vertically opposite",
+    "When two straight lines cross, the angles facing each other across the crossing point are equal. They are called vertically opposite angles."
+   ],
+   "The two lines make four angles. Each angle and its neighbour lie on a straight line, so they add to \\(180^{\\circ}\\)."
+  ],
+  "remember": "Line: 180. Point: 360. Vertically opposite angles are equal.",
+  "a": {
+   "q": "Two angles lie on a straight line. One is \\(65^{\\circ}\\). What is the other?",
+   "opts": [
+    "\\(115^{\\circ}\\)",
+    "\\(295^{\\circ}\\)",
+    "\\(25^{\\circ}\\)",
+    "\\(65^{\\circ}\\)"
+   ],
+   "why": "Angles on a straight line add to \\(180^{\\circ}\\), so the other is \\(180^{\\circ} - 65^{\\circ} = 115^{\\circ}\\). Using \\(360^{\\circ}\\) gives \\(295^{\\circ}\\), but that rule is for angles at a point, not on a line.",
+   "clue": "A straight line is half a full turn."
+  },
+  "b": {
+   "d": 3,
+   "q": "Four angles meet at a point: \\(90^{\\circ}\\), \\(110^{\\circ}\\), \\(x\\) and \\(2x\\). What is the value of \\(x\\)?",
+   "opts": [
+    "\\(53^{\\circ}\\)",
+    "\\(160^{\\circ}\\)",
+    "\\(80^{\\circ}\\)",
+    "\\(27^{\\circ}\\)"
+   ],
+   "why": "Angles at a point add to \\(360^{\\circ}\\), so \\(3x = 360^{\\circ} - 200^{\\circ} = 160^{\\circ}\\). Then \\(x\\) is \\(160^{\\circ} \\div 3\\), about \\(53^{\\circ}\\). The value \\(160^{\\circ}\\) is \\(3x\\), not \\(x\\).",
+   "clue": "Add the known angles first, then share what is left."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "Two straight lines crossing at a point, making four angles. One pair of vertically opposite angles is marked with matching arcs, and the other pair with double arcs.",
+    "why": "It shows which angles face each other across the crossing point."
+   }
+  ]
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(115^{\\circ}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(53^{\\circ}\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The exact answer is \\(x = 160^{\\circ} \\div 3 = 53\\tfrac{1}{3}^{\\circ}\\), so the option \\(53^{\\circ}\\) is not 'the value of x'. The question never asks students to round, yet the why says 'about \\(53^{\\circ}\\)'. Change the known angles so x is a whole number (for example \\(90^{\\circ}\\) and \\(120^{\\circ}\\) give \\(3x = 150^{\\circ}\\), \\(x = 50^{\\circ}\\)), or ask for x to the nearest degree."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The question needs students to combine \\(x + 2x = 3x\\) and solve \\(3x = 160^{\\circ}\\), but the card only shows subtracting known angles. Algebra is not taught here, and the clue 'share what is left' is vague about splitting in the ratio 1:2."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question a is correct. In question b the exact answer is \\(53\\tfrac{1}{3}^{\\circ}\\), so the option \\(53^{\\circ}\\) is only approximate and the question never asks for rounding. Use angles that give a whole-number x. The question also relies on algebra the card does not teach."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The exact answer is \\(x = 160^{\\circ} \\div 3 = 53\\tfrac{1}{3}^{\\circ}\\), so the option \\(53^{\\circ}\\) is not 'the value of x'. The question never asks students to round, yet the why says 'about \\(53^{\\circ}\\)'. Change the known angles so x is a whole number (for example \\(90^{\\circ}\\) and \\(120^{\\circ}\\) give \\(3x = 150^{\\circ}\\), \\(x = 50^{\\circ}\\)), or ask for x to the nearest degree.",
+  "Question b, level: The question needs students to combine \\(x + 2x = 3x\\) and solve \\(3x = 160^{\\circ}\\), but the card only shows subtracting known angles. Algebra is not taught here, and the clue 'share what is left' is vague about splitting in the ratio 1:2."
+ ],
+ "proposal": {
+  "title": "Angles at a point and on a line",
+  "card": [
+   [
+    "On a line",
+    "Angles on a straight line add to \\(180^{\\circ}\\). If one angle is \\(50^{\\circ}\\), the angle beside it on the line is \\(180^{\\circ} - 50^{\\circ} = 130^{\\circ}\\)."
+   ],
+   [
+    "At a point",
+    "Angles around a point add to \\(360^{\\circ}\\), a full turn. If three angles at a point are \\(100^{\\circ}\\), \\(120^{\\circ}\\) and \\(90^{\\circ}\\), the fourth is \\(360^{\\circ} - 310^{\\circ} = 50^{\\circ}\\)."
+   ],
+   [
+    "Vertically opposite",
+    "When two straight lines cross, the angles facing each other across the crossing point are equal. They are called vertically opposite angles."
+   ],
+   "The two lines make four angles. Each angle and its neighbour lie on a straight line, so they add to \\(180^{\\circ}\\)."
+  ],
+  "remember": "On a line, angles add to \\(180^{\\circ}\\). At a point, they add to \\(360^{\\circ}\\). Vertically opposite angles are equal.",
+  "a": {
+   "q": "Two angles lie on a straight line. One is \\(65^{\\circ}\\). What is the other?",
+   "opts": [
+    "\\(115^{\\circ}\\)",
+    "\\(295^{\\circ}\\)",
+    "\\(25^{\\circ}\\)",
+    "\\(65^{\\circ}\\)"
+   ],
+   "why": "Angles on a straight line add to \\(180^{\\circ}\\), so the other is \\(180^{\\circ} - 65^{\\circ} = 115^{\\circ}\\). Using \\(360^{\\circ}\\) gives \\(295^{\\circ}\\), but that rule is for angles at a point, not on a line.",
+   "clue": "A straight line is half a full turn."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two straight lines cross. One of the four angles is \\(40^{\\circ}\\). What is the size of the angle beside it?",
+   "opts": [
+    "\\(140^{\\circ}\\)",
+    "\\(40^{\\circ}\\)",
+    "\\(320^{\\circ}\\)",
+    "\\(50^{\\circ}\\)"
+   ],
+   "why": "The angle beside it lies on the same straight line, so the two add to \\(180^{\\circ}\\): \\(180^{\\circ} - 40^{\\circ} = 140^{\\circ}\\). The angle equal to \\(40^{\\circ}\\) is the vertically opposite one, which faces it across the crossing point, not the one beside it.",
+   "clue": "The angle beside it shares a straight line with it."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "Two straight lines crossing at a point, making four angles. One pair of vertically opposite angles is marked with matching single arcs, and the other pair with double arcs.",
+    "why": "It shows which angles face each other across the crossing point."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(115^{\\circ}\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(140^{\\circ}\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The exact answer is \\(x = 160^{\\circ} \\div 3 = 53\\tfrac{1}{3}^{\\circ}\\), so the option \\(53^{\\circ}\\) is not 'the value of x'. The question never asks students to round, yet the why says 'about \\(53^{\\circ}\\)'. Change the known angles so x is a whole number (for example \\(90^{\\circ}\\) and \\(120^{\\circ}\\) give \\(3x = 150^{\\circ}\\), \\(x = 50^{\\circ}\\)), or ask for x to the nearest degree."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The question needs students to combine \\(x + 2x = 3x\\) and solve \\(3x = 160^{\\circ}\\), but the card only shows subtracting known angles. Algebra is not taught here, and the clue 'share what is left' is vague about splitting in the ratio 1:2."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The exact answer is \\(x = 160^{\\circ} \\div 3 = 53\\tfrac{1}{3}^{\\circ}\\), so the option \\(53^{\\circ}\\) is not 'the value of x'. The question never asks students to round, yet the why says 'about \\(53^{\\circ}\\)'. Change the known angles so x is a whole number (for example \\(90^{\\circ}\\) and \\(120^{\\circ}\\) give \\(3x = 150^{\\circ}\\), \\(x = 50^{\\circ}\\)), or ask for x to the nearest degree.",
+   "Question b, level: The question needs students to combine \\(x + 2x = 3x\\) and solve \\(3x = 160^{\\circ}\\), but the card only shows subtracting known angles. Algebra is not taught here, and the clue 'share what is left' is vague about splitting in the ratio 1:2."
+  ]
+ },
+ "final": {
+  "title": "Angles at a point and on a line",
+  "card": [
+   [
+    "On a line",
+    "Angles on a straight line add to \\(180^{\\circ}\\). If one angle is \\(50^{\\circ}\\), the angle beside it on the line is \\(180^{\\circ} - 50^{\\circ} = 130^{\\circ}\\)."
+   ],
+   [
+    "At a point",
+    "Angles around a point add to \\(360^{\\circ}\\), a full turn. If three angles at a point are \\(100^{\\circ}\\), \\(120^{\\circ}\\) and \\(90^{\\circ}\\), the fourth is \\(360^{\\circ} - 310^{\\circ} = 50^{\\circ}\\)."
+   ],
+   [
+    "Vertically opposite",
+    "When two straight lines cross, the angles facing each other across the crossing point are equal. They are called vertically opposite angles."
+   ],
+   "The two lines make four angles. Each angle and its neighbour lie on a straight line, so they add to \\(180^{\\circ}\\)."
+  ],
+  "remember": "On a line, angles add to \\(180^{\\circ}\\). At a point, they add to \\(360^{\\circ}\\). Vertically opposite angles are equal.",
+  "a": {
+   "q": "Two angles lie on a straight line. One is \\(65^{\\circ}\\). What is the other?",
+   "opts": [
+    "\\(115^{\\circ}\\)",
+    "\\(295^{\\circ}\\)",
+    "\\(25^{\\circ}\\)",
+    "\\(65^{\\circ}\\)"
+   ],
+   "why": "Angles on a straight line add to \\(180^{\\circ}\\), so the other is \\(180^{\\circ} - 65^{\\circ} = 115^{\\circ}\\). Using \\(360^{\\circ}\\) gives \\(295^{\\circ}\\), but that rule is for angles at a point, not on a line.",
+   "clue": "A straight line is half a full turn."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two straight lines cross. One of the four angles is \\(40^{\\circ}\\). What is the size of the angle beside it?",
+   "opts": [
+    "\\(140^{\\circ}\\)",
+    "\\(40^{\\circ}\\)",
+    "\\(320^{\\circ}\\)",
+    "\\(50^{\\circ}\\)"
+   ],
+   "why": "The angle beside it lies on the same straight line, so the two add to \\(180^{\\circ}\\): \\(180^{\\circ} - 40^{\\circ} = 140^{\\circ}\\). The angle equal to \\(40^{\\circ}\\) is the vertically opposite one, which faces it across the crossing point, not the one beside it.",
+   "clue": "The angle beside it shares a straight line with it."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "Two straight lines crossing at a point, making four angles. One pair of vertically opposite angles is marked with matching single arcs, and the other pair with double arcs.",
+    "why": "It shows which angles face each other across the crossing point."
+   }
+  ]
+ },
+ "cleared_by": "recheck"
 }

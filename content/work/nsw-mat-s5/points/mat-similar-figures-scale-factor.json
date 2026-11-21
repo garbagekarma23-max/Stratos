@@ -20,8 +20,113 @@
    0.253
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:56Z write: done",
+  "2026-11-20T12:35:54Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00042,
+  "write": 0.01274,
+  "check": 0.00853
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank points cover similarity and scale factor but go further than this point's brief: they add finding missing sides and the triangle similarity tests, and the Year 8 card sits at a lower depth than Stage 5, so none matches exactly.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Similar figures and scale factor",
+  "card": [
+   "Similar figures have the same shape but can be different sizes. Their matching angles are equal.",
+   "Matching sides are in the same ratio. Every side of one figure is the same number of times longer than the matching side of the other.",
+   "That number is the scale factor. Scale factor \\(=\\) new length \\(\\div\\) original length.",
+   "Example: a rectangle 4 cm by 6 cm and a rectangle 12 cm by 18 cm. Each side is multiplied by \\(12 \\div 4 = 3\\) and \\(18 \\div 6 = 3\\), so the scale factor is 3."
+  ],
+  "remember": "Similar figures have equal angles, and every matching side is multiplied by the same scale factor.",
+  "a": {
+   "q": "A photo is 10 cm wide and 15 cm tall. An enlargement is 30 cm wide and 45 cm tall. What is the scale factor from the photo to the enlargement?",
+   "opts": [
+    "3",
+    "20",
+    "30",
+    "\\(\\frac{1}{3}\\)"
+   ],
+   "why": "Scale factor \\(=\\) 30 \\(\\div\\) 10 \\(=\\) 3, and 45 \\(\\div\\) 15 \\(=\\) 3 as well. The option \\(\\frac{1}{3}\\) comes from dividing the wrong way round: that would be the scale factor from the enlargement back to the photo.",
+   "clue": "Divide a new length by the matching original length."
+  },
+  "b": {
+   "d": 3,
+   "q": "Rectangle A is 5 cm by 8 cm. Which rectangle is similar to A?",
+   "opts": [
+    "10 cm by 16 cm",
+    "10 cm by 13 cm",
+    "9 cm by 12 cm",
+    "7 cm by 10 cm"
+   ],
+   "why": "10 cm by 16 cm has both sides multiplied by 2, so the sides are in the same ratio. For 10 cm by 13 cm, 5 is multiplied by 2 but 8 is not, so adding 5 to each side does not keep the shape.",
+   "clue": "Check that both sides are multiplied by the same number."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "3",
+   "also_right": []
+  },
+  "b": {
+   "best": "10 cm by 16 cm",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Similar figures and scale factor",
+  "card": [
+   "Similar figures have the same shape but can be different sizes. Their matching angles are equal.",
+   "Matching sides are in the same ratio. Every side of one figure is the same number of times longer than the matching side of the other.",
+   "That number is the scale factor. Scale factor \\(=\\) new length \\(\\div\\) original length.",
+   "Example: a rectangle 4 cm by 6 cm and a rectangle 12 cm by 18 cm. Each side is multiplied by \\(12 \\div 4 = 3\\) and \\(18 \\div 6 = 3\\), so the scale factor is 3."
+  ],
+  "remember": "Similar figures have equal angles, and every matching side is multiplied by the same scale factor.",
+  "a": {
+   "q": "A photo is 10 cm wide and 15 cm tall. An enlargement is 30 cm wide and 45 cm tall. What is the scale factor from the photo to the enlargement?",
+   "opts": [
+    "3",
+    "20",
+    "30",
+    "\\(\\frac{1}{3}\\)"
+   ],
+   "why": "Scale factor \\(=\\) 30 \\(\\div\\) 10 \\(=\\) 3, and 45 \\(\\div\\) 15 \\(=\\) 3 as well. The option \\(\\frac{1}{3}\\) comes from dividing the wrong way round: that would be the scale factor from the enlargement back to the photo.",
+   "clue": "Divide a new length by the matching original length."
+  },
+  "b": {
+   "d": 3,
+   "q": "Rectangle A is 5 cm by 8 cm. Which rectangle is similar to A?",
+   "opts": [
+    "10 cm by 16 cm",
+    "10 cm by 13 cm",
+    "9 cm by 12 cm",
+    "7 cm by 10 cm"
+   ],
+   "why": "10 cm by 16 cm has both sides multiplied by 2, so the sides are in the same ratio. For 10 cm by 13 cm, 5 is multiplied by 2 but 8 is not, so adding 5 to each side does not keep the shape.",
+   "clue": "Check that both sides are multiplied by the same number."
+  }
+ },
+ "cleared_by": "checker"
 }

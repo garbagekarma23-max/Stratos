@@ -8,8 +8,240 @@
    0.299
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:58Z write: failed the content check, writing again",
+  "2026-11-20T12:45:01Z write: done",
+  "2026-11-20T12:53:29Z check: flagged",
+  "2026-11-20T13:00:01Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.01427,
+  "check": 0.01276,
+  "fix": 0.02645,
+  "recheck": 0.00985
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point covers the same idea but is written at Year 7 depth with primary-level examples such as bean plants and sugar, and a change of depth is not a small change, so a new point for Stage 5 is the safer match.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Hypotheses and investigable questions",
+  "card": [
+   [
+    "Investigable question",
+    "a question that can be answered by collecting data, such as by measuring or counting. It often asks how changing one thing affects another."
+   ],
+   [
+    "Not investigable",
+    "a question about opinion or taste, such as which colour is nicest, cannot be answered with measurements. Neither can a question about what someone should do."
+   ],
+   [
+    "Hypothesis",
+    "a testable explanation that predicts what will happen if it is right. It is often written as: if we change this, then that will happen, because of this reason."
+   ],
+   [
+    "Testing it",
+    "an investigation collects data to test the hypothesis. The data may support it or not. A hypothesis must be able to be shown wrong."
+   ]
+  ],
+  "remember": "Investigable questions can be answered with data. A hypothesis is a testable prediction with a reason.",
+  "a": {
+   "q": "A class wants to plan an experiment. Which question could they answer by collecting data?",
+   "opts": [
+    "How does water temperature affect how fast sugar dissolves?",
+    "Which flavour of ice cream tastes the nicest?",
+    "Should schools have longer lunch breaks?",
+    "Is blue a better colour than green for a uniform?"
+   ],
+   "why": "Dissolving time can be measured at different water temperatures, so data can answer the question. The other three depend on opinion or on what people think should happen, so measurements cannot settle them.",
+   "clue": "Which question could you answer by measuring something?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia grows bean plants in a Dubbo school garden. She thinks plants given more sunlight will grow taller, because they can make more food. Which is the best hypothesis for her investigation?",
+   "opts": [
+    "If bean plants get more sunlight, they will grow taller",
+    "Do bean plants grow taller in more sunlight?",
+    "Bean plants are the nicest plants to grow at school",
+    "Sunlight is important for all of the living things"
+   ],
+   "why": "This one predicts what will happen if the idea is right, and it can be tested by measuring height. The question asks something but makes no prediction. The other two are an opinion and a vague claim that cannot be tested.",
+   "clue": "A hypothesis states a prediction rather than asking something."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "How does water temperature affect how fast sugar dissolves?",
+   "also_right": []
+  },
+  "b": {
+   "best": "If bean plants get more sunlight, they will grow taller",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The card and the remember line say a hypothesis includes a reason ('because of this reason', 'a testable prediction with a reason'). The stem even gives Mia's reason ('because they can make more food'), but the intended answer leaves it out. This clashes with what the card teaches. The right option should add 'because they can make more food'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are clear and correct. However, the intended hypothesis in question b leaves out the reason that the card and remember line say a hypothesis should include, even though the stem supplies it. That option should add 'because they can make more food'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The card and the remember line say a hypothesis includes a reason ('because of this reason', 'a testable prediction with a reason'). The stem even gives Mia's reason ('because they can make more food'), but the intended answer leaves it out. This clashes with what the card teaches. The right option should add 'because they can make more food'."
+ ],
+ "proposal": {
+  "title": "Hypotheses and investigable questions",
+  "card": [
+   [
+    "Investigable question",
+    "a question that can be answered by collecting data, such as by measuring or counting. It often asks how changing one thing affects another."
+   ],
+   [
+    "Not investigable",
+    "a question about opinion or taste, such as which colour is nicest, cannot be answered with measurements. Neither can a question about what someone should do."
+   ],
+   [
+    "Hypothesis",
+    "a testable explanation that predicts what will happen if it is right. It is often written as: if we change this, then that will happen, because of this reason."
+   ],
+   [
+    "Testing it",
+    "an investigation collects data to test the hypothesis. The data may support it or not. A hypothesis must be able to be shown wrong."
+   ]
+  ],
+  "remember": "Investigable questions can be answered with data. A hypothesis is a testable prediction with a reason.",
+  "a": {
+   "q": "A class wants to plan an experiment. Which question could they answer by collecting data?",
+   "opts": [
+    "How does water temperature affect how fast sugar dissolves?",
+    "Which flavour of ice cream tastes the nicest?",
+    "Should schools have longer lunch breaks?",
+    "Is blue a better colour than green for a uniform?"
+   ],
+   "why": "Dissolving time can be measured at different water temperatures, so data can answer the question. The other three depend on opinion or on what people think should happen, so measurements cannot settle them.",
+   "clue": "Which question could you answer by measuring something?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia grows bean plants in a Dubbo school garden. She thinks plants given more sunlight will grow taller, because they can make more food. Which is the best hypothesis for her investigation?",
+   "opts": [
+    "Beans in more light grow taller because they make more food",
+    "Do beans grow taller in more light as they make more food?",
+    "Beans are the nicest plants to grow because they grow fast",
+    "Beans grow better in more light because they feel happier"
+   ],
+   "why": "This one predicts what will happen, gives Mia's reason, and can be tested by measuring height. The question form asks something but makes no prediction. The other two rest on an opinion and on feelings, which cannot be measured or shown wrong.",
+   "clue": "Look for a prediction with a reason that data could test."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "How does water temperature affect how fast sugar dissolves?",
+    "also_right": []
+   },
+   "b": {
+    "best": "Beans in more light grow taller because they make more food",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The card and the remember line say a hypothesis includes a reason ('because of this reason', 'a testable prediction with a reason'). The stem even gives Mia's reason ('because they can make more food'), but the intended answer leaves it out. This clashes with what the card teaches. The right option should add 'because they can make more food'."
+   }
+  ],
+  "flags": [
+   "Question b, other: The card and the remember line say a hypothesis includes a reason ('because of this reason', 'a testable prediction with a reason'). The stem even gives Mia's reason ('because they can make more food'), but the intended answer leaves it out. This clashes with what the card teaches. The right option should add 'because they can make more food'."
+  ]
+ },
+ "final": {
+  "title": "Hypotheses and investigable questions",
+  "card": [
+   [
+    "Investigable question",
+    "a question that can be answered by collecting data, such as by measuring or counting. It often asks how changing one thing affects another."
+   ],
+   [
+    "Not investigable",
+    "a question about opinion or taste, such as which colour is nicest, cannot be answered with measurements. Neither can a question about what someone should do."
+   ],
+   [
+    "Hypothesis",
+    "a testable explanation that predicts what will happen if it is right. It is often written as: if we change this, then that will happen, because of this reason."
+   ],
+   [
+    "Testing it",
+    "an investigation collects data to test the hypothesis. The data may support it or not. A hypothesis must be able to be shown wrong."
+   ]
+  ],
+  "remember": "Investigable questions can be answered with data. A hypothesis is a testable prediction with a reason.",
+  "a": {
+   "q": "A class wants to plan an experiment. Which question could they answer by collecting data?",
+   "opts": [
+    "How does water temperature affect how fast sugar dissolves?",
+    "Which flavour of ice cream tastes the nicest?",
+    "Should schools have longer lunch breaks?",
+    "Is blue a better colour than green for a uniform?"
+   ],
+   "why": "Dissolving time can be measured at different water temperatures, so data can answer the question. The other three depend on opinion or on what people think should happen, so measurements cannot settle them.",
+   "clue": "Which question could you answer by measuring something?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia grows bean plants in a Dubbo school garden. She thinks plants given more sunlight will grow taller, because they can make more food. Which is the best hypothesis for her investigation?",
+   "opts": [
+    "Beans in more light grow taller because they make more food",
+    "Do beans grow taller in more light as they make more food?",
+    "Beans are the nicest plants to grow because they grow fast",
+    "Beans grow better in more light because they feel happier"
+   ],
+   "why": "This one predicts what will happen, gives Mia's reason, and can be tested by measuring height. The question form asks something but makes no prediction. The other two rest on an opinion and on feelings, which cannot be measured or shown wrong.",
+   "clue": "Look for a prediction with a reason that data could test."
+  }
+ },
+ "cleared_by": "recheck"
 }

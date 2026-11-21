@@ -12,8 +12,133 @@
    0.21
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:55Z write: done",
+  "2026-11-20T12:44:59Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00865,
+  "check": 0.01217
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point covers gradient, midpoint and distance together, plus using them to prove shape facts, while the bank points each cover only one of these formulas (gradient or midpoint) and neither covers distance or shape proofs, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Coordinate geometry formulas",
+  "card": [
+   [
+    "Gradient",
+    "The gradient between \\((x_{1}, y_{1})\\) and \\((x_{2}, y_{2})\\) is \\(m = \\frac{y_{2} - y_{1}}{x_{2} - x_{1}}\\). Parallel lines have equal gradients."
+   ],
+   [
+    "Midpoint",
+    "The midpoint is the average of the x values and the average of the y values: \\(\\left(\\frac{x_{1} + x_{2}}{2}, \\frac{y_{1} + y_{2}}{2}\\right)\\)."
+   ],
+   [
+    "Distance",
+    "The distance is \\(d = \\sqrt{(x_{2} - x_{1})^{2} + (y_{2} - y_{1})^{2}}\\). It comes from Pythagoras' theorem."
+   ],
+   "Example: \\(A(1, 2)\\) and \\(B(7, 10)\\). The gradient is \\(\\frac{8}{6} = \\frac{4}{3}\\), the midpoint is \\((4, 6)\\), and the distance is \\(\\sqrt{36 + 64} = 10\\). A quadrilateral is a parallelogram if both pairs of opposite sides have equal gradients."
+  ],
+  "remember": "Gradient is rise over run, midpoint is the average, and distance is Pythagoras. Equal gradients mean parallel.",
+  "a": {
+   "q": "What is the midpoint of the interval joining \\(P(-2, 3)\\) and \\(Q(6, 9)\\)?",
+   "opts": [
+    "\\((2, 6)\\)",
+    "\\((4, 3)\\)",
+    "\\((4, 6)\\)",
+    "\\((2, 3)\\)"
+   ],
+   "why": "Average the x values: \\(\\frac{-2 + 6}{2} = 2\\). Average the y values: \\(\\frac{3 + 9}{2} = 6\\). The tempting \\((4, 6)\\) comes from forgetting that \\(-2\\) is negative when adding.",
+   "clue": "Add the two x values, then halve. Take care with the sign."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia plots \\(A(0, 0)\\), \\(B(4, 1)\\), \\(C(6, 4)\\) and \\(D(2, 3)\\) on a map of a park. Which fact shows that \\(ABCD\\) is a parallelogram?",
+   "opts": [
+    "Both pairs of opposite sides have equal gradients",
+    "\\(AB\\) and \\(BC\\) have equal lengths",
+    "The gradients of \\(AB\\) and \\(BC\\) are equal",
+    "Only one pair of opposite sides has equal gradients"
+   ],
+   "why": "The gradients are: \\(AB = \\frac{1}{4}\\), \\(DC = \\frac{1}{4}\\), \\(BC = \\frac{3}{2}\\) and \\(AD = \\frac{3}{2}\\). So both pairs of opposite sides are parallel. Equal gradients of neighbouring sides would put them on one line, not make a parallelogram.",
+   "clue": "Parallel sides have equal gradients. Check opposite sides."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\((2, 6)\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "Both pairs of opposite sides have equal gradients",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card's example values are correct, and both answers check out: the midpoint is (2, 6), and the gradients are AB = DC = 1/4 and BC = AD = 3/2."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Coordinate geometry formulas",
+  "card": [
+   [
+    "Gradient",
+    "The gradient between \\((x_{1}, y_{1})\\) and \\((x_{2}, y_{2})\\) is \\(m = \\frac{y_{2} - y_{1}}{x_{2} - x_{1}}\\). Parallel lines have equal gradients."
+   ],
+   [
+    "Midpoint",
+    "The midpoint is the average of the x values and the average of the y values: \\(\\left(\\frac{x_{1} + x_{2}}{2}, \\frac{y_{1} + y_{2}}{2}\\right)\\)."
+   ],
+   [
+    "Distance",
+    "The distance is \\(d = \\sqrt{(x_{2} - x_{1})^{2} + (y_{2} - y_{1})^{2}}\\). It comes from Pythagoras' theorem."
+   ],
+   "Example: \\(A(1, 2)\\) and \\(B(7, 10)\\). The gradient is \\(\\frac{8}{6} = \\frac{4}{3}\\), the midpoint is \\((4, 6)\\), and the distance is \\(\\sqrt{36 + 64} = 10\\). A quadrilateral is a parallelogram if both pairs of opposite sides have equal gradients."
+  ],
+  "remember": "Gradient is rise over run, midpoint is the average, and distance is Pythagoras. Equal gradients mean parallel.",
+  "a": {
+   "q": "What is the midpoint of the interval joining \\(P(-2, 3)\\) and \\(Q(6, 9)\\)?",
+   "opts": [
+    "\\((2, 6)\\)",
+    "\\((4, 3)\\)",
+    "\\((4, 6)\\)",
+    "\\((2, 3)\\)"
+   ],
+   "why": "Average the x values: \\(\\frac{-2 + 6}{2} = 2\\). Average the y values: \\(\\frac{3 + 9}{2} = 6\\). The tempting \\((4, 6)\\) comes from forgetting that \\(-2\\) is negative when adding.",
+   "clue": "Add the two x values, then halve. Take care with the sign."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia plots \\(A(0, 0)\\), \\(B(4, 1)\\), \\(C(6, 4)\\) and \\(D(2, 3)\\) on a map of a park. Which fact shows that \\(ABCD\\) is a parallelogram?",
+   "opts": [
+    "Both pairs of opposite sides have equal gradients",
+    "\\(AB\\) and \\(BC\\) have equal lengths",
+    "The gradients of \\(AB\\) and \\(BC\\) are equal",
+    "Only one pair of opposite sides has equal gradients"
+   ],
+   "why": "The gradients are: \\(AB = \\frac{1}{4}\\), \\(DC = \\frac{1}{4}\\), \\(BC = \\frac{3}{2}\\) and \\(AD = \\frac{3}{2}\\). So both pairs of opposite sides are parallel. Equal gradients of neighbouring sides would put them on one line, not make a parallelogram.",
+   "clue": "Parallel sides have equal gradients. Check opposite sides."
+  }
+ },
+ "cleared_by": "checker"
 }

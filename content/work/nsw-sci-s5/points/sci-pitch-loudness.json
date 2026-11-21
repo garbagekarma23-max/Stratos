@@ -12,8 +12,195 @@
    0.229
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: done",
+  "2026-11-20T12:35:57Z check: flagged",
+  "2026-11-20T12:45:01Z fix: suggested",
+  "2026-11-20T13:23:46Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.01105,
+  "check": 0.00864,
+  "fix": 0.01692
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Parts of a wave, covers pitch from frequency but not loudness from amplitude for sound, and it is broader, centred on wavelength, so it does not teach the same idea as the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Pitch and loudness",
+  "card": [
+   "Sound is a wave made by a vibrating object. It travels through a material as compressions, where particles are squashed together, and rarefactions, where they are spread apart.",
+   [
+    "Frequency and pitch",
+    "Frequency is the number of vibrations each second, measured in hertz (Hz). A higher frequency gives a higher pitch."
+   ],
+   [
+    "Amplitude and loudness",
+    "Amplitude is the size of the vibration. A larger amplitude carries more energy and gives a louder sound."
+   ],
+   "Pitch and loudness are separate. Plucking a guitar string harder makes the note louder, but the pitch stays the same."
+  ],
+  "remember": "Frequency sets the pitch. Amplitude sets the loudness.",
+  "a": {
+   "q": "A flute player plays a note with a higher frequency than before, at the same effort. What does a listener hear?",
+   "opts": [
+    "A higher pitch",
+    "A louder sound",
+    "A lower pitch",
+    "A quieter sound"
+   ],
+   "why": "Higher frequency means more vibrations each second, which is heard as a higher pitch. Loudness depends on amplitude, which did not change here, so the sound is not louder.",
+   "clue": "Frequency is linked to one of the two features of sound."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya hits a drum softly, then hits the same drum much harder. Which change happens in the sound waves?",
+   "opts": [
+    "The amplitude increases and the frequency stays the same",
+    "The frequency increases and the amplitude stays the same",
+    "Both the frequency and the amplitude increase",
+    "The amplitude increases and the frequency decreases"
+   ],
+   "why": "A harder hit makes the drum skin vibrate with a larger amplitude, so the sound is louder. The same drum skin still vibrates at about the same rate, so the pitch and frequency stay the same. Louder does not mean higher pitched.",
+   "clue": "Hitting harder changes how big the vibration is, not how fast it repeats."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A higher pitch",
+   "also_right": []
+  },
+  "b": {
+   "best": "The amplitude increases and the frequency stays the same",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue for b ('changes how big the vibration is, not how fast it repeats') says outright that amplitude changes and frequency does not, so a student can pick the answer without knowing which quantity is which."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct. The only issue is that question b's clue states the answer almost directly, so it should be made less revealing."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue for b ('changes how big the vibration is, not how fast it repeats') says outright that amplitude changes and frequency does not, so a student can pick the answer without knowing which quantity is which."
+ ],
+ "proposal": {
+  "title": "Pitch and loudness",
+  "card": [
+   "Sound is a wave made by a vibrating object. It travels through a material as compressions, where particles are squashed together, and rarefactions, where they are spread apart.",
+   [
+    "Frequency and pitch",
+    "Frequency is the number of vibrations each second, measured in hertz (Hz). A higher frequency gives a higher pitch."
+   ],
+   [
+    "Amplitude and loudness",
+    "Amplitude is the size of the vibration. A larger amplitude carries more energy and gives a louder sound."
+   ],
+   "Pitch and loudness are separate. Plucking a guitar string harder makes the note louder, but the pitch stays the same."
+  ],
+  "remember": "Frequency sets the pitch. Amplitude sets the loudness.",
+  "a": {
+   "q": "A flute player raises the frequency of her note but blows with the same effort as before. What does a listener hear?",
+   "opts": [
+    "A higher pitch",
+    "A louder sound",
+    "A lower pitch",
+    "A quieter sound"
+   ],
+   "why": "A higher frequency means more vibrations each second, which is heard as a higher pitch. Loudness depends on amplitude, which did not change here, so the sound is not louder.",
+   "clue": "Frequency is linked to one of the two features of sound."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya hits a drum softly, then hits the same drum much harder. Which change happens in the sound waves?",
+   "opts": [
+    "The amplitude increases and the frequency stays the same",
+    "The frequency increases and the amplitude stays the same",
+    "Both the frequency and the amplitude increase",
+    "The amplitude increases and the frequency decreases"
+   ],
+   "why": "A harder hit makes the drum skin vibrate with a larger amplitude, so the sound is louder. The same drum skin still vibrates at about the same rate, so the frequency and pitch stay the same. Louder does not mean higher pitched.",
+   "clue": "First decide what a listener notices, then link it to a wave property."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:46Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue for b ('changes how big the vibration is, not how fast it repeats') says outright that amplitude changes and frequency does not, so a student can pick the answer without knowing which quantity is which."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue for b ('changes how big the vibration is, not how fast it repeats') says outright that amplitude changes and frequency does not, so a student can pick the answer without knowing which quantity is which."
+  ]
+ },
+ "final": {
+  "title": "Pitch and loudness",
+  "card": [
+   "Sound is a wave made by a vibrating object. It travels through a material as compressions, where particles are squashed together, and rarefactions, where they are spread apart.",
+   [
+    "Frequency and pitch",
+    "Frequency is the number of vibrations each second, measured in hertz (Hz). A higher frequency gives a higher pitch."
+   ],
+   [
+    "Amplitude and loudness",
+    "Amplitude is the size of the vibration. A larger amplitude carries more energy and gives a louder sound."
+   ],
+   "Pitch and loudness are separate. Plucking a guitar string harder makes the note louder, but the pitch stays the same."
+  ],
+  "remember": "Frequency sets the pitch. Amplitude sets the loudness.",
+  "a": {
+   "q": "A flute player raises the frequency of her note but blows with the same effort as before. What does a listener hear?",
+   "opts": [
+    "A higher pitch",
+    "A louder sound",
+    "A lower pitch",
+    "A quieter sound"
+   ],
+   "why": "A higher frequency means more vibrations each second, which is heard as a higher pitch. Loudness depends on amplitude, which did not change here, so the sound is not louder.",
+   "clue": "Frequency is linked to one of the two features of sound."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya hits a drum softly, then hits the same drum much harder. Which change happens in the sound waves?",
+   "opts": [
+    "The amplitude increases and the frequency stays the same",
+    "The frequency increases and the amplitude stays the same",
+    "Both the frequency and the amplitude increase",
+    "The amplitude increases and the frequency decreases"
+   ],
+   "why": "A harder hit makes the drum skin vibrate with a larger amplitude, so the sound is louder. The same drum skin still vibrates at about the same rate, so the frequency and pitch stay the same. Louder does not mean higher pitched.",
+   "clue": "First decide what a listener notices, then link it to a wave property."
+  }
+ },
+ "cleared_by": "auto"
 }

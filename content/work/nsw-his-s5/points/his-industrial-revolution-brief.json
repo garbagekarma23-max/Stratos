@@ -16,8 +16,216 @@
    0.234
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:51Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:52Z write: failed the content check, writing again",
+  "2026-11-20T12:44:57Z write: done",
+  "2026-11-20T12:53:26Z check: flagged",
+  "2026-11-20T12:59:59Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.01365,
+  "check": 0.00928,
+  "fix": 0.01544,
+  "recheck": 0.00679
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, his-it-began-britain, is mainly about why the Industrial Revolution began in Britain (resources, money, farming), which is broader than the new point's brief on what the shift was from about 1750 and the move to cities, so it is not the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The Industrial Revolution in brief",
+  "card": [
+   "The Industrial Revolution began in Britain from about 1750. Before it, most goods were made by hand, often at home or in small workshops.",
+   "Over the next decades, machines took over much of this work. Machines were large and costly, so they were housed in factories, where many workers ran them.",
+   "Factories needed many workers, so many people left farms and villages to find jobs. Towns grew quickly into large cities.",
+   "So the change had two sides: how goods were made shifted from hand to machine, and where people lived and worked shifted from the countryside to the city."
+  ],
+  "remember": "Hand to machine, and countryside to city: Britain from about 1750.",
+  "a": {
+   "q": "Which change best describes the start of the Industrial Revolution in Britain?",
+   "opts": [
+    "Goods began to be made by machines in factories",
+    "Goods began to be made by hand in small workshops",
+    "Farm work began to replace factory work in cities",
+    "Britain began to stop trading goods with other places"
+   ],
+   "why": "The Industrial Revolution was a move from hand production to machines housed in factories. Making goods by hand in workshops describes the way things were done before it, so it is the reverse of the change.",
+   "clue": "Think about what changed from the way goods were made before 1750."
+  },
+  "b": {
+   "d": 2,
+   "q": "In 1820, Tom leaves his family's farm in a village in northern England and takes a job running a machine in a large factory. Why does Tom's move fit the Industrial Revolution?",
+   "opts": [
+    "Factories needed many workers, so people moved to towns",
+    "Farms had been banned, so people had to move to towns",
+    "Hand work had grown, so people moved to towns to find it",
+    "Towns were small and quiet, so people moved there for peace"
+   ],
+   "why": "Machines in factories needed many workers, and this drew people from the countryside to find jobs in growing towns and cities. Hand work did not grow: machines took over much of it, so the third option has the change the wrong way round.",
+   "clue": "Ask what factories needed in order to run their machines."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Goods began to be made by machines in factories",
+   "also_right": []
+  },
+  "b": {
+   "best": "Factories needed many workers, so people moved to towns",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) calls the hand-work option 'the third option', but options appear in random order (here it is fourth), so the reference can point students to the wrong option. Name the option by its content instead."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue 'Ask what factories needed' echoes the opening words of the right option ('Factories needed many workers'), so a student can match it without understanding the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and answers are accurate. Why (b) refers to 'the third option' even though option order is randomised, and the clue for b echoes the right option's wording."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) calls the hand-work option 'the third option', but options appear in random order (here it is fourth), so the reference can point students to the wrong option. Name the option by its content instead.",
+  "Question b, wording: The clue 'Ask what factories needed' echoes the opening words of the right option ('Factories needed many workers'), so a student can match it without understanding the idea."
+ ],
+ "proposal": {
+  "title": "The Industrial Revolution in brief",
+  "card": [
+   "The Industrial Revolution began in Britain from about 1750. Before it, most goods were made by hand, often at home or in small workshops.",
+   "Over the next decades, machines took over much of this work. Machines were large and costly, so they were housed in factories, where many workers ran them.",
+   "Factories needed many workers, so many people left farms and villages to find jobs. Towns grew quickly into large cities.",
+   "So the change had two sides: how goods were made shifted from hand to machine, and where people lived and worked shifted from the countryside to the city."
+  ],
+  "remember": "Hand to machine, and countryside to city: Britain from about 1750.",
+  "a": {
+   "q": "Which change best describes the start of the Industrial Revolution in Britain?",
+   "opts": [
+    "Goods began to be made by machines in factories",
+    "Goods began to be made by hand in small workshops",
+    "Farm work began to replace factory work in cities",
+    "Britain began to stop trading goods with other places"
+   ],
+   "why": "The Industrial Revolution was a move from hand production to machines housed in factories. Making goods by hand in workshops describes the way things were done before it, so it is the reverse of the change.",
+   "clue": "Think about what changed from the way goods were made before 1750."
+  },
+  "b": {
+   "d": 2,
+   "q": "In 1820, Tom leaves his family's farm in a village in northern England and takes a job running a machine in a large factory. Why does Tom's move fit the Industrial Revolution?",
+   "opts": [
+    "Factories needed many workers, so people moved to towns",
+    "Farms had been banned, so people had to move to towns",
+    "Hand work had grown, so people moved to towns to find it",
+    "Towns were small and quiet, so people moved there for peace"
+   ],
+   "why": "Machines in factories needed many workers, and this drew people from the countryside to find jobs in growing towns and cities. Hand work did not grow: machines took over much of it, so the option saying hand work had grown has the change the wrong way round.",
+   "clue": "Think about why towns grew so quickly in this period."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Goods began to be made by machines in factories",
+    "also_right": []
+   },
+   "b": {
+    "best": "Factories needed many workers, so people moved to towns",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) calls the hand-work option 'the third option', but options appear in random order (here it is fourth), so the reference can point students to the wrong option. Name the option by its content instead."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue 'Ask what factories needed' echoes the opening words of the right option ('Factories needed many workers'), so a student can match it without understanding the idea."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) calls the hand-work option 'the third option', but options appear in random order (here it is fourth), so the reference can point students to the wrong option. Name the option by its content instead.",
+   "Question b, wording: The clue 'Ask what factories needed' echoes the opening words of the right option ('Factories needed many workers'), so a student can match it without understanding the idea."
+  ]
+ },
+ "final": {
+  "title": "The Industrial Revolution in brief",
+  "card": [
+   "The Industrial Revolution began in Britain from about 1750. Before it, most goods were made by hand, often at home or in small workshops.",
+   "Over the next decades, machines took over much of this work. Machines were large and costly, so they were housed in factories, where many workers ran them.",
+   "Factories needed many workers, so many people left farms and villages to find jobs. Towns grew quickly into large cities.",
+   "So the change had two sides: how goods were made shifted from hand to machine, and where people lived and worked shifted from the countryside to the city."
+  ],
+  "remember": "Hand to machine, and countryside to city: Britain from about 1750.",
+  "a": {
+   "q": "Which change best describes the start of the Industrial Revolution in Britain?",
+   "opts": [
+    "Goods began to be made by machines in factories",
+    "Goods began to be made by hand in small workshops",
+    "Farm work began to replace factory work in cities",
+    "Britain began to stop trading goods with other places"
+   ],
+   "why": "The Industrial Revolution was a move from hand production to machines housed in factories. Making goods by hand in workshops describes the way things were done before it, so it is the reverse of the change.",
+   "clue": "Think about what changed from the way goods were made before 1750."
+  },
+  "b": {
+   "d": 2,
+   "q": "In 1820, Tom leaves his family's farm in a village in northern England and takes a job running a machine in a large factory. Why does Tom's move fit the Industrial Revolution?",
+   "opts": [
+    "Factories needed many workers, so people moved to towns",
+    "Farms had been banned, so people had to move to towns",
+    "Hand work had grown, so people moved to towns to find it",
+    "Towns were small and quiet, so people moved there for peace"
+   ],
+   "why": "Machines in factories needed many workers, and this drew people from the countryside to find jobs in growing towns and cities. Hand work did not grow: machines took over much of it, so the option saying hand work had grown has the change the wrong way round.",
+   "clue": "Think about why towns grew so quickly in this period."
+  }
+ },
+ "cleared_by": "recheck"
 }

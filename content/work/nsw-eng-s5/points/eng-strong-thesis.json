@@ -24,8 +24,44 @@
    0.241
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 may adapt eng-writing-thesis, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:43Z confirm: Claude Opus 5.5 may reuse eng-writing-thesis, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:38:23Z review: reusing eng-writing-thesis"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00032,
+  "confirm": 0.01084
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "eng-writing-thesis",
+  "changes": [
+   "Add a line saying that a thesis also previews the main points the essay will develop, since the brief requires this and the card only says the rest of the essay proves it."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same idea of an arguable answer to the question at a suitable depth, but it does not cover the brief's requirement that the thesis sets up the essay's main points.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "eng-writing-thesis",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point already teaches that a thesis is an arguable answer to the question rather than a fact, topic or plot summary, and that the rest of the essay proves it, at a depth that suits Years 9 and 10. Its literary examples fit NSW Stage 5 English, though it only lightly covers how a thesis sets up the essay's points.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "eng-writing-thesis",
+ "matched": {
+  "verdict": "reuse",
+  "from": "eng-writing-thesis",
+  "by": "owner",
+  "at": "2026-11-20T14:38:23Z"
+ }
 }

@@ -12,8 +12,428 @@
    0.215
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: failed the content check, writing again",
+  "2026-11-20T12:45:00Z write: done (still fails the content check)",
+  "2026-11-20T12:53:28Z check: flagged",
+  "2026-11-20T13:00:01Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "write": 0.01337,
+  "check": 0.01365,
+  "fix": 0.02524,
+  "recheck": 0.00948
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches the distinction between a scientific law (a pattern) and a theory (an explanation); both are about how evidence changes ideas, so they are related but not the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Theories and laws",
+  "card": [
+   [
+    "Law",
+    "A scientific law describes a pattern that is seen every time under the same conditions. It tells us what happens, but not why."
+   ],
+   [
+    "Theory",
+    "A scientific theory explains why something happens. It is built on a large body of evidence gathered by many scientists."
+   ],
+   "For example, a law says that a dropped ball always falls towards the ground. The theory of gravity explains why it falls.",
+   "A theory does not become a law when it is proven. Laws and theories do different jobs. Either can change when new evidence appears."
+  ],
+  "remember": "A law describes what happens. A theory explains why. Both can change with new evidence.",
+  "a": {
+   "q": "Which statement is a scientific theory rather than a law?",
+   "opts": [
+    "Matter is made of moving particles, which explains smells spreading",
+    "Water always boils at a lower temperature on a high mountain",
+    "A metal bar always gets longer when it is heated",
+    "A rolling ball always slows down on rough ground"
+   ],
+   "why": "A theory explains why something happens. The statement about moving particles gives a reason for smells spreading. The other three only describe a pattern that happens every time, so they are laws.",
+   "clue": "Look for the statement that gives a reason, not just a pattern."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ana says: \"A theory is just a guess. When it has enough evidence, it turns into a law.\" Which reply is correct?",
+   "opts": [
+    "A theory explains why and a law describes what",
+    "A theory is a weak idea that becomes a law when proven",
+    "A theory cannot change, but a law can change with evidence",
+    "A law is more certain than a theory because it is simpler"
+   ],
+   "why": "Theories and laws do different jobs: a law describes a pattern and a theory explains why. One does not grow into the other. The idea that a theory becomes a law is a common mistake, and it ignores that a theory is built on a large body of evidence.",
+   "clue": "Think about what each one does, not how strong it is."
+  }
+ },
+ "redone": true,
+ "local": [
+  "sci-theories-lawsa option is 67 characters: Matter is made of moving particles, which explains smells spreading"
+ ],
+ "check": {
+  "a": {
+   "best": "Matter is made of moving particles, which explains smells spreading",
+   "also_right": []
+  },
+  "b": {
+   "best": "A theory explains why and a law describes what",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one containing the word 'explains' and the only one without 'always', and it is the longest. A student can match it to 'a theory explains why' without understanding the idea, and the clue makes it more obvious still."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are sound. In question a, the right option stands out as the only one saying 'explains' and the only one without 'always', so students can pick it by surface matching."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option is the only one containing the word 'explains' and the only one without 'always', and it is the longest. A student can match it to 'a theory explains why' without understanding the idea, and the clue makes it more obvious still.",
+  "Content check: sci-theories-lawsa option is 67 characters: Matter is made of moving particles, which explains smells spreading"
+ ],
+ "proposal": {
+  "title": "Theories and laws",
+  "card": [
+   [
+    "Law",
+    "A scientific law describes a pattern that is seen every time under the same conditions. It tells us what happens, but not why."
+   ],
+   [
+    "Theory",
+    "A scientific theory explains why something happens. It is built on a large body of evidence gathered by many scientists."
+   ],
+   "For example, a law says that a dropped ball always falls towards the ground. The theory of gravity explains why it falls.",
+   "A theory does not become a law when it is proven. Laws and theories do different jobs. Either can change when new evidence appears."
+  ],
+  "remember": "A law describes what happens. A theory explains why. Both can change with new evidence.",
+  "a": {
+   "q": "Scientists find that every metal they test gets longer when heated. They write: \"Metals get longer when heated.\" What is this statement?",
+   "opts": [
+    "A law, because it describes what happens, not why",
+    "A theory, because it explains why metals expand",
+    "A theory, because many scientists have tested it",
+    "A law, because laws are proven and can never change"
+   ],
+   "why": "The statement describes a pattern seen every time, but gives no reason for it, so it is a law. Being tested by many scientists does not make it a theory: a theory must explain why. Laws can also change with new evidence.",
+   "clue": "Does the statement give a reason, or only a pattern?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Ana says: \"A theory is just a guess. When it has enough evidence, it turns into a law.\" Is Ana right?",
+   "opts": [
+    "No, laws and theories do different jobs in science",
+    "Yes, a theory becomes a law once it is fully proven",
+    "No, a law becomes a theory once scientists explain it",
+    "Yes, but a law can still change while a theory cannot"
+   ],
+   "why": "A law describes a pattern and a theory explains why it happens, so one does not grow into the other. A theory is not a guess either: it is built on a large body of evidence from many scientists. Both laws and theories can change when new evidence appears.",
+   "clue": "Think about what each one does, not how strong it is."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A law, because it describes what happens, not why",
+    "also_right": []
+   },
+   "b": {
+    "best": "No, laws and theories do different jobs in science",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one containing the word 'explains' and the only one without 'always', and it is the longest. A student can match it to 'a theory explains why' without understanding the idea, and the clue makes it more obvious still."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The right option is the only one containing the word 'explains' and the only one without 'always', and it is the longest. A student can match it to 'a theory explains why' without understanding the idea, and the clue makes it more obvious still.",
+   "Content check: sci-theories-lawsa option is 67 characters: Matter is made of moving particles, which explains smells spreading"
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Theories and laws",
+  "card": [
+   [
+    "Law",
+    "A scientific law describes a pattern that is seen every time under the same conditions. It tells us what happens, but not why."
+   ],
+   [
+    "Theory",
+    "A scientific theory explains why something happens. It is built on a large body of evidence gathered by many scientists."
+   ],
+   "For example, a law says that a dropped ball always falls towards the ground. The theory of gravity explains why it falls.",
+   "A theory does not become a law when it is proven. Laws and theories do different jobs. Either can change when new evidence appears."
+  ],
+  "remember": "A law describes what happens. A theory explains why. Both can change with new evidence.",
+  "a": {
+   "q": "Scientists find that every metal they test gets longer when heated. They write: \"Metals get longer when heated.\" What is this statement?",
+   "opts": [
+    "A law, because it describes what happens, not why",
+    "A theory, because it explains why metals expand",
+    "A theory, because many scientists have tested it",
+    "A law, because laws are proven and can never change"
+   ],
+   "why": "The statement describes a pattern seen every time, but gives no reason for it, so it is a law. Being tested by many scientists does not make it a theory: a theory must explain why. Laws can also change with new evidence.",
+   "clue": "Does the statement give a reason, or only a pattern?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Ana says: \"A theory is just a guess. When it has enough evidence, it turns into a law.\" Is Ana right?",
+   "opts": [
+    "No, laws and theories do different jobs in science",
+    "Yes, a theory becomes a law once it is fully proven",
+    "No, a law becomes a theory once scientists explain it",
+    "Yes, but a law can still change while a theory cannot"
+   ],
+   "why": "A law describes a pattern and a theory explains why it happens, so one does not grow into the other. A theory is not a guess either: it is built on a large body of evidence from many scientists. Both laws and theories can change when new evidence appears.",
+   "clue": "Think about what each one does, not how strong it is."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix replaces question a with one where the right option no longer stands out by its words or length, and every option in both questions is short enough. Each question has one right answer, first, and the facts match the card.",
+   "item": "b6a78ba18adb5de8",
+   "result": "decided",
+   "saved": {
+    "id": "sci-theories-laws",
+    "title": "Theories and laws",
+    "brief": "f37e2092a7c6",
+    "shortlist": [
+     [
+      "sci-new-evidence-changes-science",
+      0.445
+     ],
+     [
+      "sci-models-matter-change-over",
+      0.215
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 3,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00013,
+     "write": 0.01337,
+     "check": 0.01365,
+     "fix": 0.02524,
+     "recheck": 0.00948
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "high",
+     "reason": "Neither bank point teaches the distinction between a scientific law (a pattern) and a theory (an explanation); both are about how evidence changes ideas, so they are related but not the same idea.",
+     "model": "claude-haiku-5-5"
+    },
+    "alone": true,
+    "draft": {
+     "title": "Theories and laws",
+     "card": [
+      [
+       "Law",
+       "A scientific law describes a pattern that is seen every time under the same conditions. It tells us what happens, but not why."
+      ],
+      [
+       "Theory",
+       "A scientific theory explains why something happens. It is built on a large body of evidence gathered by many scientists."
+      ],
+      "For example, a law says that a dropped ball always falls towards the ground. The theory of gravity explains why it falls.",
+      "A theory does not become a law when it is proven. Laws and theories do different jobs. Either can change when new evidence appears."
+     ],
+     "remember": "A law describes what happens. A theory explains why. Both can change with new evidence.",
+     "a": {
+      "q": "Which statement is a scientific theory rather than a law?",
+      "opts": [
+       "Matter is made of moving particles, which explains smells spreading",
+       "Water always boils at a lower temperature on a high mountain",
+       "A metal bar always gets longer when it is heated",
+       "A rolling ball always slows down on rough ground"
+      ],
+      "why": "A theory explains why something happens. The statement about moving particles gives a reason for smells spreading. The other three only describe a pattern that happens every time, so they are laws.",
+      "clue": "Look for the statement that gives a reason, not just a pattern."
+     },
+     "b": {
+      "d": 3,
+      "q": "Ana says: \"A theory is just a guess. When it has enough evidence, it turns into a law.\" Which reply is correct?",
+      "opts": [
+       "A theory explains why and a law describes what",
+       "A theory is a weak idea that becomes a law when proven",
+       "A theory cannot change, but a law can change with evidence",
+       "A law is more certain than a theory because it is simpler"
+      ],
+      "why": "Theories and laws do different jobs: a law describes a pattern and a theory explains why. One does not grow into the other. The idea that a theory becomes a law is a common mistake, and it ignores that a theory is built on a large body of evidence.",
+      "clue": "Think about what each one does, not how strong it is."
+     }
+    },
+    "redone": true,
+    "local": [
+     "sci-theories-lawsa option is 67 characters: Matter is made of moving particles, which explains smells spreading"
+    ],
+    "check": {
+     "a": {
+      "best": "Matter is made of moving particles, which explains smells spreading",
+      "also_right": []
+     },
+     "b": {
+      "best": "A theory explains why and a law describes what",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The right option is the only one containing the word 'explains' and the only one without 'always', and it is the longest. A student can match it to 'a theory explains why' without understanding the idea, and the clue makes it more obvious still."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and answers are sound. In question a, the right option stands out as the only one saying 'explains' and the only one without 'always', so students can pick it by surface matching."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a, wording: The right option is the only one containing the word 'explains' and the only one without 'always', and it is the longest. A student can match it to 'a theory explains why' without understanding the idea, and the clue makes it more obvious still.",
+     "Content check: sci-theories-lawsa option is 67 characters: Matter is made of moving particles, which explains smells spreading"
+    ],
+    "proposal": {
+     "title": "Theories and laws",
+     "card": [
+      [
+       "Law",
+       "A scientific law describes a pattern that is seen every time under the same conditions. It tells us what happens, but not why."
+      ],
+      [
+       "Theory",
+       "A scientific theory explains why something happens. It is built on a large body of evidence gathered by many scientists."
+      ],
+      "For example, a law says that a dropped ball always falls towards the ground. The theory of gravity explains why it falls.",
+      "A theory does not become a law when it is proven. Laws and theories do different jobs. Either can change when new evidence appears."
+     ],
+     "remember": "A law describes what happens. A theory explains why. Both can change with new evidence.",
+     "a": {
+      "q": "Scientists find that every metal they test gets longer when heated. They write: \"Metals get longer when heated.\" What is this statement?",
+      "opts": [
+       "A law, because it describes what happens, not why",
+       "A theory, because it explains why metals expand",
+       "A theory, because many scientists have tested it",
+       "A law, because laws are proven and can never change"
+      ],
+      "why": "The statement describes a pattern seen every time, but gives no reason for it, so it is a law. Being tested by many scientists does not make it a theory: a theory must explain why. Laws can also change with new evidence.",
+      "clue": "Does the statement give a reason, or only a pattern?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Ana says: \"A theory is just a guess. When it has enough evidence, it turns into a law.\" Is Ana right?",
+      "opts": [
+       "No, laws and theories do different jobs in science",
+       "Yes, a theory becomes a law once it is fully proven",
+       "No, a law becomes a theory once scientists explain it",
+       "Yes, but a law can still change while a theory cannot"
+      ],
+      "why": "A law describes a pattern and a theory explains why it happens, so one does not grow into the other. A theory is not a guess either: it is built on a large body of evidence from many scientists. Both laws and theories can change when new evidence appears.",
+      "clue": "Think about what each one does, not how strong it is."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:08Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "A law, because it describes what happens, not why",
+       "also_right": []
+      },
+      "b": {
+       "best": "No, laws and theories do different jobs in science",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-20T13:37:08Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 11,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The right option is the only one containing the word 'explains' and the only one without 'always', and it is the longest. A student can match it to 'a theory explains why' without understanding the idea, and the clue makes it more obvious still."
+      }
+     ],
+     "flags": [
+      "Question a, wording: The right option is the only one containing the word 'explains' and the only one without 'always', and it is the longest. A student can match it to 'a theory explains why' without understanding the idea, and the clue makes it more obvious still.",
+      "Content check: sci-theories-lawsa option is 67 characters: Matter is made of moving particles, which explains smells spreading"
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "7a88cae7d1c53493"
+  }
  ]
 }

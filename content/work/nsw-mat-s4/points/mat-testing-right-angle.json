@@ -24,8 +24,200 @@
    0.305
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:54Z write: done",
+  "2026-11-20T12:35:53Z check: flagged",
+  "2026-11-20T12:44:58Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.01363,
+  "check": 0.01269,
+  "fix": 0.02679,
+  "recheck": 0.00919
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The new point is about testing whether a triangle is right-angled using the converse of Pythagoras' theorem and Pythagorean triads, whereas none of the bank points teach that idea; they all apply the theorem to find a missing side or distance.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Testing for a right angle",
+  "card": [
+   "If a triangle is right-angled, the square of its longest side equals the sum of the squares of the other two sides. The reverse is also true.",
+   "To test a triangle, find the longest side and square it. Then square the other two sides and add them. If the two results are equal, there is a right angle. If not, there is none.",
+   "Example: sides 7, 24 and 25. Longest side: \\(25^{2} = 625\\). Others: \\(7^{2} + 24^{2} = 49 + 576 = 625\\). They match, so the triangle is right-angled.",
+   "Three whole numbers that pass this test are called a Pythagorean triad. Two common ones are 3, 4, 5 and 5, 12, 13."
+  ],
+  "remember": "Square the longest side and compare it with the sum of the other two squares. Equal means a right angle.",
+  "a": {
+   "q": "A triangle has sides 9 cm, 12 cm and 15 cm. Which statement is correct?",
+   "opts": [
+    "It is right-angled, as \\(9^{2} + 12^{2} = 15^{2}\\)",
+    "It is not right-angled, as \\(9 + 12 \\ne 15\\)",
+    "It is not right-angled, as \\(9^{2} + 15^{2} \\ne 12^{2}\\)",
+    "It is right-angled, as \\(9 + 12 > 15\\)"
+   ],
+   "why": "\\(9^{2} + 12^{2} = 81 + 144 = 225\\), and \\(15^{2} = 225\\). The squares match, so there is a right angle. Adding the sides without squaring them does not test for a right angle.",
+   "clue": "Square each side first, and start with the longest."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya cuts three timber pieces for a garden bed frame: 8 m, 15 m and 17 m. She wants a square corner. Which is the best conclusion?",
+   "opts": [
+    "It works, as \\(8^{2} + 15^{2} = 289 = 17^{2}\\)",
+    "It fails, as \\(8^{2} + 17^{2} \\ne 15^{2}\\)",
+    "It fails, as \\(8 + 15 \\ne 17\\)",
+    "It works, as \\(15^{2} + 17^{2} = 8^{2}\\)"
+   ],
+   "why": "The longest side is 17, and \\(17^{2} = 289\\). The others give \\(64 + 225 = 289\\), so the triangle has a right angle. The second option wrongly puts a shorter side on its own, when the longest side must be the one squared and compared.",
+   "clue": "Which side is the longest? Square it first."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It is right-angled, as \\(9^{2} + 12^{2} = 15^{2}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "It works, as \\(8^{2} + 15^{2} = 289 = 17^{2}\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option stands out. It is the longest and the only one with a worked value (= 289 =), so a student could pick it without doing the test."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and the intended answers are correct. In question b, the right option stands out as the longest and the only one showing a calculated value (289), which gives it away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option stands out. It is the longest and the only one with a worked value (= 289 =), so a student could pick it without doing the test."
+ ],
+ "proposal": {
+  "title": "Testing for a right angle",
+  "card": [
+   "If a triangle is right-angled, the square of its longest side equals the sum of the squares of the other two sides. The reverse is also true.",
+   "To test a triangle, find the longest side and square it. Then square the other two sides and add them. If the two results are equal, there is a right angle. If not, there is none.",
+   "Example: sides 7, 24 and 25. Longest side: \\(25^{2} = 625\\). Others: \\(7^{2} + 24^{2} = 49 + 576 = 625\\). They match, so the triangle is right-angled.",
+   "Three whole numbers that pass this test are called a Pythagorean triad. Two common ones are 3, 4, 5 and 5, 12, 13."
+  ],
+  "remember": "Square the longest side and compare it with the sum of the other two squares. Equal means a right angle.",
+  "a": {
+   "q": "A triangle has sides 9 cm, 12 cm and 15 cm. Which statement is correct?",
+   "opts": [
+    "It is right-angled, as \\(9^{2} + 12^{2} = 15^{2}\\)",
+    "It is not right-angled, as \\(9 + 12 \\ne 15\\)",
+    "It is not right-angled, as \\(9^{2} + 15^{2} \\ne 12^{2}\\)",
+    "It is right-angled, as \\(9 + 12 > 15\\)"
+   ],
+   "why": "\\(9^{2} + 12^{2} = 81 + 144 = 225\\), and \\(15^{2} = 225\\). The squares match, so there is a right angle. Adding the sides without squaring them does not test for a right angle.",
+   "clue": "Square each side first, and start with the longest."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya marks out a triangle with rope to check a corner of a shed slab. The sides are 8 m, 15 m and 17 m. Does the triangle have a right angle?",
+   "opts": [
+    "Yes, as \\(8^{2} + 15^{2} = 17^{2}\\)",
+    "No, as \\(8^{2} + 17^{2} \\ne 15^{2}\\)",
+    "No, as \\(15^{2} + 17^{2} \\ne 8^{2}\\)",
+    "Yes, as \\(8 + 15 > 17\\)"
+   ],
+   "why": "The longest side is 17, and \\(17^{2} = 289\\). The other two give \\(64 + 225 = 289\\), so the squares match and there is a right angle. The statement \\(8^{2} + 17^{2} \\ne 15^{2}\\) is true, but it compares the wrong side: the longest side is the one that must be squared on its own.",
+   "clue": "Which side is the longest? That is the one to square on its own."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It is right-angled, as \\(9^{2} + 12^{2} = 15^{2}\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "Yes, as \\(8^{2} + 15^{2} = 17^{2}\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option stands out. It is the longest and the only one with a worked value (= 289 =), so a student could pick it without doing the test."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The right option stands out. It is the longest and the only one with a worked value (= 289 =), so a student could pick it without doing the test."
+  ]
+ },
+ "final": {
+  "title": "Testing for a right angle",
+  "card": [
+   "If a triangle is right-angled, the square of its longest side equals the sum of the squares of the other two sides. The reverse is also true.",
+   "To test a triangle, find the longest side and square it. Then square the other two sides and add them. If the two results are equal, there is a right angle. If not, there is none.",
+   "Example: sides 7, 24 and 25. Longest side: \\(25^{2} = 625\\). Others: \\(7^{2} + 24^{2} = 49 + 576 = 625\\). They match, so the triangle is right-angled.",
+   "Three whole numbers that pass this test are called a Pythagorean triad. Two common ones are 3, 4, 5 and 5, 12, 13."
+  ],
+  "remember": "Square the longest side and compare it with the sum of the other two squares. Equal means a right angle.",
+  "a": {
+   "q": "A triangle has sides 9 cm, 12 cm and 15 cm. Which statement is correct?",
+   "opts": [
+    "It is right-angled, as \\(9^{2} + 12^{2} = 15^{2}\\)",
+    "It is not right-angled, as \\(9 + 12 \\ne 15\\)",
+    "It is not right-angled, as \\(9^{2} + 15^{2} \\ne 12^{2}\\)",
+    "It is right-angled, as \\(9 + 12 > 15\\)"
+   ],
+   "why": "\\(9^{2} + 12^{2} = 81 + 144 = 225\\), and \\(15^{2} = 225\\). The squares match, so there is a right angle. Adding the sides without squaring them does not test for a right angle.",
+   "clue": "Square each side first, and start with the longest."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya marks out a triangle with rope to check a corner of a shed slab. The sides are 8 m, 15 m and 17 m. Does the triangle have a right angle?",
+   "opts": [
+    "Yes, as \\(8^{2} + 15^{2} = 17^{2}\\)",
+    "No, as \\(8^{2} + 17^{2} \\ne 15^{2}\\)",
+    "No, as \\(15^{2} + 17^{2} \\ne 8^{2}\\)",
+    "Yes, as \\(8 + 15 > 17\\)"
+   ],
+   "why": "The longest side is 17, and \\(17^{2} = 289\\). The other two give \\(64 + 225 = 289\\), so the squares match and there is a right angle. The statement \\(8^{2} + 17^{2} \\ne 15^{2}\\) is true, but it compares the wrong side: the longest side is the one that must be squared on its own.",
+   "clue": "Which side is the longest? That is the one to square on its own."
+  }
+ },
+ "cleared_by": "recheck"
 }

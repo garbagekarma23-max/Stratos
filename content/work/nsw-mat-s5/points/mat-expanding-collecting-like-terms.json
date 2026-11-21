@@ -24,8 +24,405 @@
    0.334
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:55Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:54Z write: done",
+  "2026-11-20T12:44:58Z check: flagged",
+  "2026-11-20T12:53:28Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00708,
+  "check": 0.01054,
+  "fix": 0.01898,
+  "recheck": 0.00751
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest card, Expanding brackets, covers expanding a single bracket but not expanding several brackets and then collecting like terms, and the other cards cover different ideas (binomial products, equations, perfect squares), so none teaches this point as it is.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Expanding and collecting like terms",
+  "card": [
+   "To expand, multiply every term inside the brackets by the number outside. So \\(3(x + 2) = 3x + 6\\).",
+   "A negative sign outside the brackets multiplies every term inside, and it changes each sign. So \\(-2(x - 5) = -2x + 10\\).",
+   "Like terms have the same pronumeral part. Add or subtract their coefficients: \\(3x\\) and \\(-2x\\) are like terms, but \\(x\\) and 7 are not.",
+   [
+    "Worked example",
+    "\\(3(x + 2) - 2(x - 5)\\) becomes \\(3x + 6 - 2x + 10\\), which is \\(x + 16\\)."
+   ]
+  ],
+  "remember": "Expand each bracket first, with the sign that sits in front of it, then collect like terms.",
+  "a": {
+   "q": "What is \\(-2(x - 5)\\) when expanded?",
+   "opts": [
+    "\\(-2x + 10\\)",
+    "\\(-2x - 10\\)",
+    "\\(2x - 10\\)",
+    "\\(-2x - 5\\)"
+   ],
+   "why": "The \\(-2\\) multiplies both terms: \\(-2 \\times x = -2x\\) and \\(-2 \\times -5 = +10\\). The tempting \\(-2x - 10\\) forgets that a negative times a negative is positive.",
+   "clue": "Multiply \\(-5\\) by \\(-2\\) as well."
+  },
+  "b": {
+   "d": 3,
+   "q": "Simplify \\(4(x + 3) - 3(x - 2)\\).",
+   "opts": [
+    "\\(x + 18\\)",
+    "\\(x + 6\\)",
+    "\\(7x + 18\\)",
+    "\\(x - 6\\)"
+   ],
+   "why": "Expanding gives \\(4x + 12 - 3x + 6\\). Collecting like terms gives \\(x + 18\\). The tempting \\(x + 6\\) comes from writing \\(-3 \\times -2\\) as \\(-6\\), so the second sign is wrong.",
+   "clue": "Expand each bracket, then collect the \\(x\\) terms and the numbers."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(-2x + 10\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(x + 18\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "Question a asks for exactly the example the card works out, -2(x - 5) = -2x + 10. It tests recall of the card rather than the skill. A different bracket, such as -3(x - 4), would test the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The maths in the card, both questions and both explanations is correct. The only issue is that question a repeats the card's own example word for word, so it tests memory rather than the skill."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, level: Question a asks for exactly the example the card works out, -2(x - 5) = -2x + 10. It tests recall of the card rather than the skill. A different bracket, such as -3(x - 4), would test the idea."
+ ],
+ "proposal": {
+  "title": "Expanding and collecting like terms",
+  "card": [
+   "To expand, multiply every term inside the brackets by the number outside. So \\(3(x + 2) = 3x + 6\\).",
+   "A negative number outside the brackets multiplies every term inside, and it changes each sign. So \\(-2(x - 5) = -2x + 10\\).",
+   "Like terms have the same pronumeral part. Add or subtract their coefficients: \\(3x\\) and \\(-2x\\) are like terms, but \\(x\\) and 7 are not.",
+   "Worked example: \\(3(x + 2) - 2(x - 5)\\) becomes \\(3x + 6 - 2x + 10\\), which is \\(x + 16\\)."
+  ],
+  "remember": "Expand each bracket first, with the sign that sits in front of it, then collect like terms.",
+  "a": {
+   "q": "What is \\(-3(x - 4)\\) when expanded?",
+   "opts": [
+    "\\(-3x + 12\\)",
+    "\\(-3x - 12\\)",
+    "\\(3x - 12\\)",
+    "\\(-3x - 4\\)"
+   ],
+   "why": "The \\(-3\\) multiplies both terms: \\(-3 \\times x = -3x\\) and \\(-3 \\times -4 = +12\\). The tempting \\(-3x - 12\\) forgets that a negative times a negative is positive.",
+   "clue": "Multiply \\(-4\\) by \\(-3\\) as well."
+  },
+  "b": {
+   "d": 3,
+   "q": "Simplify \\(4(x + 3) - 3(x - 2)\\).",
+   "opts": [
+    "\\(x + 18\\)",
+    "\\(x + 6\\)",
+    "\\(7x + 18\\)",
+    "\\(x + 9\\)"
+   ],
+   "why": "Expanding gives \\(4x + 12 - 3x + 6\\). Collecting like terms gives \\(x + 18\\). The tempting \\(x + 6\\) comes from writing \\(-3 \\times -2\\) as \\(-6\\), so the second sign is wrong.",
+   "clue": "Expand each bracket, then collect the \\(x\\) terms and the numbers."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(-3x + 12\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(x + 18\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "Question a asks for exactly the example the card works out, -2(x - 5) = -2x + 10. It tests recall of the card rather than the skill. A different bracket, such as -3(x - 4), would test the idea."
+   }
+  ],
+  "flags": [
+   "Question a, level: Question a asks for exactly the example the card works out, -2(x - 5) = -2x + 10. It tests recall of the card rather than the skill. A different bracket, such as -3(x - 4), would test the idea."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Expanding and collecting like terms",
+  "card": [
+   "To expand, multiply every term inside the brackets by the number outside. So \\(3(x + 2) = 3x + 6\\).",
+   "A negative number outside the brackets multiplies every term inside, and it changes each sign. So \\(-2(x - 5) = -2x + 10\\).",
+   "Like terms have the same pronumeral part. Add or subtract their coefficients: \\(3x\\) and \\(-2x\\) are like terms, but \\(x\\) and 7 are not.",
+   "Worked example: \\(3(x + 2) - 2(x - 5)\\) becomes \\(3x + 6 - 2x + 10\\), which is \\(x + 16\\)."
+  ],
+  "remember": "Expand each bracket first, with the sign that sits in front of it, then collect like terms.",
+  "a": {
+   "q": "What is \\(-3(x - 4)\\) when expanded?",
+   "opts": [
+    "\\(-3x + 12\\)",
+    "\\(-3x - 12\\)",
+    "\\(3x - 12\\)",
+    "\\(-3x - 4\\)"
+   ],
+   "why": "The \\(-3\\) multiplies both terms: \\(-3 \\times x = -3x\\) and \\(-3 \\times -4 = +12\\). The tempting \\(-3x - 12\\) forgets that a negative times a negative is positive.",
+   "clue": "Multiply \\(-4\\) by \\(-3\\) as well."
+  },
+  "b": {
+   "d": 3,
+   "q": "Simplify \\(4(x + 3) - 3(x - 2)\\).",
+   "opts": [
+    "\\(x + 18\\)",
+    "\\(x + 6\\)",
+    "\\(7x + 18\\)",
+    "\\(x + 9\\)"
+   ],
+   "why": "Expanding gives \\(4x + 12 - 3x + 6\\). Collecting like terms gives \\(x + 18\\). The tempting \\(x + 6\\) comes from writing \\(-3 \\times -2\\) as \\(-6\\), so the second sign is wrong.",
+   "clue": "Expand each bracket, then collect the \\(x\\) terms and the numbers."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix replaces question a, which repeated the card's example, with \\(-3(x - 4) = -3x + 12\\), and every option and sum checks out. Question b still gives \\(x + 18\\) with only wrong distractors.",
+   "item": "6e1d12527ca15bd1",
+   "result": "decided",
+   "saved": {
+    "id": "mat-expanding-collecting-like-terms",
+    "title": "Expanding and collecting like terms",
+    "brief": "952ff77d8d31",
+    "shortlist": [
+     [
+      "mat-expanding-binomial-products",
+      0.619
+     ],
+     [
+      "mat-expanding-brackets",
+      0.538
+     ],
+     [
+      "mat-equations-with-brackets-variables",
+      0.404
+     ],
+     [
+      "mat-collecting-like-terms",
+      0.365
+     ],
+     [
+      "mat-perfect-squares-difference-two",
+      0.334
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00026,
+     "write": 0.00708,
+     "check": 0.01054,
+     "fix": 0.01898,
+     "recheck": 0.00751
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The closest card, Expanding brackets, covers expanding a single bracket but not expanding several brackets and then collecting like terms, and the other cards cover different ideas (binomial products, equations, perfect squares), so none teaches this point as it is.",
+     "model": "claude-haiku-5-5"
+    },
+    "alone": true,
+    "draft": {
+     "title": "Expanding and collecting like terms",
+     "card": [
+      "To expand, multiply every term inside the brackets by the number outside. So \\(3(x + 2) = 3x + 6\\).",
+      "A negative sign outside the brackets multiplies every term inside, and it changes each sign. So \\(-2(x - 5) = -2x + 10\\).",
+      "Like terms have the same pronumeral part. Add or subtract their coefficients: \\(3x\\) and \\(-2x\\) are like terms, but \\(x\\) and 7 are not.",
+      [
+       "Worked example",
+       "\\(3(x + 2) - 2(x - 5)\\) becomes \\(3x + 6 - 2x + 10\\), which is \\(x + 16\\)."
+      ]
+     ],
+     "remember": "Expand each bracket first, with the sign that sits in front of it, then collect like terms.",
+     "a": {
+      "q": "What is \\(-2(x - 5)\\) when expanded?",
+      "opts": [
+       "\\(-2x + 10\\)",
+       "\\(-2x - 10\\)",
+       "\\(2x - 10\\)",
+       "\\(-2x - 5\\)"
+      ],
+      "why": "The \\(-2\\) multiplies both terms: \\(-2 \\times x = -2x\\) and \\(-2 \\times -5 = +10\\). The tempting \\(-2x - 10\\) forgets that a negative times a negative is positive.",
+      "clue": "Multiply \\(-5\\) by \\(-2\\) as well."
+     },
+     "b": {
+      "d": 3,
+      "q": "Simplify \\(4(x + 3) - 3(x - 2)\\).",
+      "opts": [
+       "\\(x + 18\\)",
+       "\\(x + 6\\)",
+       "\\(7x + 18\\)",
+       "\\(x - 6\\)"
+      ],
+      "why": "Expanding gives \\(4x + 12 - 3x + 6\\). Collecting like terms gives \\(x + 18\\). The tempting \\(x + 6\\) comes from writing \\(-3 \\times -2\\) as \\(-6\\), so the second sign is wrong.",
+      "clue": "Expand each bracket, then collect the \\(x\\) terms and the numbers."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "\\(-2x + 10\\)",
+      "also_right": []
+     },
+     "b": {
+      "best": "\\(x + 18\\)",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "level",
+       "detail": "Question a asks for exactly the example the card works out, -2(x - 5) = -2x + 10. It tests recall of the card rather than the skill. A different bracket, such as -3(x - 4), would test the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The maths in the card, both questions and both explanations is correct. The only issue is that question a repeats the card's own example word for word, so it tests memory rather than the skill."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a, level: Question a asks for exactly the example the card works out, -2(x - 5) = -2x + 10. It tests recall of the card rather than the skill. A different bracket, such as -3(x - 4), would test the idea."
+    ],
+    "proposal": {
+     "title": "Expanding and collecting like terms",
+     "card": [
+      "To expand, multiply every term inside the brackets by the number outside. So \\(3(x + 2) = 3x + 6\\).",
+      "A negative number outside the brackets multiplies every term inside, and it changes each sign. So \\(-2(x - 5) = -2x + 10\\).",
+      "Like terms have the same pronumeral part. Add or subtract their coefficients: \\(3x\\) and \\(-2x\\) are like terms, but \\(x\\) and 7 are not.",
+      "Worked example: \\(3(x + 2) - 2(x - 5)\\) becomes \\(3x + 6 - 2x + 10\\), which is \\(x + 16\\)."
+     ],
+     "remember": "Expand each bracket first, with the sign that sits in front of it, then collect like terms.",
+     "a": {
+      "q": "What is \\(-3(x - 4)\\) when expanded?",
+      "opts": [
+       "\\(-3x + 12\\)",
+       "\\(-3x - 12\\)",
+       "\\(3x - 12\\)",
+       "\\(-3x - 4\\)"
+      ],
+      "why": "The \\(-3\\) multiplies both terms: \\(-3 \\times x = -3x\\) and \\(-3 \\times -4 = +12\\). The tempting \\(-3x - 12\\) forgets that a negative times a negative is positive.",
+      "clue": "Multiply \\(-4\\) by \\(-3\\) as well."
+     },
+     "b": {
+      "d": 3,
+      "q": "Simplify \\(4(x + 3) - 3(x - 2)\\).",
+      "opts": [
+       "\\(x + 18\\)",
+       "\\(x + 6\\)",
+       "\\(7x + 18\\)",
+       "\\(x + 9\\)"
+      ],
+      "why": "Expanding gives \\(4x + 12 - 3x + 6\\). Collecting like terms gives \\(x + 18\\). The tempting \\(x + 6\\) comes from writing \\(-3 \\times -2\\) as \\(-6\\), so the second sign is wrong.",
+      "clue": "Expand each bracket, then collect the \\(x\\) terms and the numbers."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "\\(-3x + 12\\)",
+       "also_right": []
+      },
+      "b": {
+       "best": "\\(x + 18\\)",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-20T13:37:07Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "a",
+       "kind": "level",
+       "detail": "Question a asks for exactly the example the card works out, -2(x - 5) = -2x + 10. It tests recall of the card rather than the skill. A different bracket, such as -3(x - 4), would test the idea."
+      }
+     ],
+     "flags": [
+      "Question a, level: Question a asks for exactly the example the card works out, -2(x - 5) = -2x + 10. It tests recall of the card rather than the skill. A different bracket, such as -3(x - 4), would test the idea."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "1f1aba49b445f65c"
+  }
  ]
 }

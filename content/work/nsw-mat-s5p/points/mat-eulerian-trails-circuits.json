@@ -24,8 +24,256 @@
    0.224
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 may adapt mat-connected-networks-paths, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:57Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:56Z write: done",
+  "2026-11-20T12:44:59Z check: flagged",
+  "2026-11-20T12:53:28Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00045,
+  "confirm": 0.01332,
+  "write": 0.00698,
+  "check": 0.01656,
+  "fix": 0.03023,
+  "recheck": 0.01164
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-connected-networks-paths",
+  "changes": [
+   "Rename \"Euler path\" to \"Eulerian trail\" and use \"trail\" rather than \"path\" for a route that uses every edge once, since the NSW course treats a path as a route that repeats no vertex.",
+   "Add that a trail finishing where it started, which occurs when every vertex has even degree, is an Eulerian circuit."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same odd-vertex test at a suitable Year 10 depth, but it calls the edge-once route a \"path\", which clashes with the NSW meaning of path, so its terms need adjusting.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank points are broader: two also teach Hamiltonian paths, and the Year 10 one also teaches connectedness and calls the idea an 'Euler path' with no circuit, so none teaches just Eulerian trails and circuits with Königsberg as the NSW point needs.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Eulerian trails and circuits",
+  "card": [
+   [
+    "Eulerian trail",
+    "a walk along the edges of a network that uses every edge exactly once. Vertices can be visited more than once."
+   ],
+   [
+    "Eulerian circuit",
+    "an Eulerian trail that ends at the vertex where it started."
+   ],
+   "A connected network has an Eulerian trail when 0 or 2 of its vertices have odd degree. The degree of a vertex is the number of edges that meet there.",
+   "With 0 odd vertices there is a circuit, and it can start anywhere. With 2 odd vertices the trail must start at one odd vertex and end at the other. With any other number of odd vertices there is no trail."
+  ],
+  "remember": "Count the odd vertices: 0 or 2 means a trail exists, and anything else means none.",
+  "a": {
+   "q": "A connected network has vertices with degrees 2, 3, 3, 4 and 4. Which statement is true?",
+   "opts": [
+    "It has an Eulerian trail starting at a degree 3 vertex",
+    "It has an Eulerian circuit starting at any vertex",
+    "It has an Eulerian trail starting at a degree 4 vertex",
+    "It has no Eulerian trail, as it has two odd vertices"
+   ],
+   "why": "Two vertices have odd degree (the two with degree 3), so a trail exists and it must start at one of them. There is no circuit, because a circuit needs 0 odd vertices. The last option is wrong because two odd vertices allow a trail.",
+   "clue": "Count the vertices with odd degree first."
+  },
+  "b": {
+   "d": 3,
+   "q": "A town has 4 islands joined by 5 bridges. The degrees of the islands are 3, 3, 3 and 1. Can a walk cross every bridge exactly once?",
+   "opts": [
+    "No, because four islands have odd degree",
+    "Yes, because the degrees add to 10",
+    "Yes, because there are more bridges than islands",
+    "No, because one island has degree 1"
+   ],
+   "why": "Four vertices have odd degree. A trail needs 0 or 2 odd vertices, so no such walk exists. A vertex of degree 1 is not a problem on its own: it can be the start or end of a trail.",
+   "clue": "Count how many degrees are odd, then compare with 0 or 2."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It has an Eulerian trail starting at a degree 3 vertex",
+   "also_right": []
+  },
+  "b": {
+   "best": "No, because four islands have odd degree",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 'The last option is wrong because two odd vertices allow a trail', but the options are shuffled. The last option shown is 'starting at a degree 4 vertex', which that reason does not fit. The why should name the option ('no Eulerian trail'). It should also explain why a trail cannot start at a degree 4 vertex."
+   },
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines degree ('the number of edges that meet there'), which is taught in point 1 (Vertices, edges and degree). It should only be mentioned here."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line drops the card's condition that the network must be connected. It states the rule more broadly than the card does."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct. Why (a) points to 'the last option', which no longer matches the shuffled order. The card re-defines degree from point 1, and the remember line leaves out the 'connected' condition."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) says 'The last option is wrong because two odd vertices allow a trail', but the options are shuffled. The last option shown is 'starting at a degree 4 vertex', which that reason does not fit. The why should name the option ('no Eulerian trail'). It should also explain why a trail cannot start at a degree 4 vertex.",
+  "Card, other: The card defines degree ('the number of edges that meet there'), which is taught in point 1 (Vertices, edges and degree). It should only be mentioned here.",
+  "Remember, other: The remember line drops the card's condition that the network must be connected. It states the rule more broadly than the card does."
+ ],
+ "proposal": {
+  "title": "Eulerian trails and circuits",
+  "card": [
+   [
+    "Eulerian trail",
+    "a walk along the edges of a network that uses every edge exactly once. Vertices can be visited more than once."
+   ],
+   [
+    "Eulerian circuit",
+    "an Eulerian trail that ends at the vertex where it started."
+   ],
+   "A connected network has an Eulerian trail when 0 or 2 of its vertices have odd degree, and no trail otherwise. Königsberg's 7 bridges joined 4 land areas, all of odd degree, so no walk could cross each bridge once.",
+   "With 0 odd vertices there is a circuit, and it can start at any vertex. With 2 odd vertices the trail must start at one odd vertex and end at the other."
+  ],
+  "remember": "In a connected network, count the odd vertices: 0 or 2 means a trail exists, and any other number means none.",
+  "a": {
+   "q": "A connected network has vertices with degrees 2, 3, 3, 4 and 4. Which statement is true?",
+   "opts": [
+    "It has an Eulerian trail starting at a degree 3 vertex",
+    "It has an Eulerian circuit starting at any vertex",
+    "It has an Eulerian trail starting at a degree 4 vertex",
+    "It has no Eulerian trail, as it has two odd vertices"
+   ],
+   "why": "Only the two degree 3 vertices are odd, so a trail exists, and it must start at one of them and end at the other. That rules out starting at a degree 4 vertex, and there is no circuit, which needs 0 odd vertices. The 'no Eulerian trail' option is wrong because 2 odd vertices allow a trail.",
+   "clue": "Count the vertices with odd degree first."
+  },
+  "b": {
+   "d": 3,
+   "q": "A town has 4 islands joined by 5 bridges. The degrees of the islands are 3, 3, 3 and 1. Can a walk cross every bridge exactly once?",
+   "opts": [
+    "No, because four islands have odd degree",
+    "Yes, because the degrees add to 10",
+    "Yes, because there are more bridges than islands",
+    "No, because one island has degree 1"
+   ],
+   "why": "All four islands have odd degree. A trail needs 0 or 2 odd vertices, so no such walk exists. A vertex of degree 1 is not a problem on its own: it can be the start or end of a trail.",
+   "clue": "Count how many degrees are odd, then compare with 0 or 2."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It has an Eulerian trail starting at a degree 3 vertex",
+    "also_right": []
+   },
+   "b": {
+    "best": "No, because four islands have odd degree",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 'The last option is wrong because two odd vertices allow a trail', but the options are shuffled. The last option shown is 'starting at a degree 4 vertex', which that reason does not fit. The why should name the option ('no Eulerian trail'). It should also explain why a trail cannot start at a degree 4 vertex."
+   },
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines degree ('the number of edges that meet there'), which is taught in point 1 (Vertices, edges and degree). It should only be mentioned here."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line drops the card's condition that the network must be connected. It states the rule more broadly than the card does."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) says 'The last option is wrong because two odd vertices allow a trail', but the options are shuffled. The last option shown is 'starting at a degree 4 vertex', which that reason does not fit. The why should name the option ('no Eulerian trail'). It should also explain why a trail cannot start at a degree 4 vertex.",
+   "Card, other: The card defines degree ('the number of edges that meet there'), which is taught in point 1 (Vertices, edges and degree). It should only be mentioned here.",
+   "Remember, other: The remember line drops the card's condition that the network must be connected. It states the rule more broadly than the card does."
+  ]
+ },
+ "final": {
+  "title": "Eulerian trails and circuits",
+  "card": [
+   [
+    "Eulerian trail",
+    "a walk along the edges of a network that uses every edge exactly once. Vertices can be visited more than once."
+   ],
+   [
+    "Eulerian circuit",
+    "an Eulerian trail that ends at the vertex where it started."
+   ],
+   "A connected network has an Eulerian trail when 0 or 2 of its vertices have odd degree, and no trail otherwise. Königsberg's 7 bridges joined 4 land areas, all of odd degree, so no walk could cross each bridge once.",
+   "With 0 odd vertices there is a circuit, and it can start at any vertex. With 2 odd vertices the trail must start at one odd vertex and end at the other."
+  ],
+  "remember": "In a connected network, count the odd vertices: 0 or 2 means a trail exists, and any other number means none.",
+  "a": {
+   "q": "A connected network has vertices with degrees 2, 3, 3, 4 and 4. Which statement is true?",
+   "opts": [
+    "It has an Eulerian trail starting at a degree 3 vertex",
+    "It has an Eulerian circuit starting at any vertex",
+    "It has an Eulerian trail starting at a degree 4 vertex",
+    "It has no Eulerian trail, as it has two odd vertices"
+   ],
+   "why": "Only the two degree 3 vertices are odd, so a trail exists, and it must start at one of them and end at the other. That rules out starting at a degree 4 vertex, and there is no circuit, which needs 0 odd vertices. The 'no Eulerian trail' option is wrong because 2 odd vertices allow a trail.",
+   "clue": "Count the vertices with odd degree first."
+  },
+  "b": {
+   "d": 3,
+   "q": "A town has 4 islands joined by 5 bridges. The degrees of the islands are 3, 3, 3 and 1. Can a walk cross every bridge exactly once?",
+   "opts": [
+    "No, because four islands have odd degree",
+    "Yes, because the degrees add to 10",
+    "Yes, because there are more bridges than islands",
+    "No, because one island has degree 1"
+   ],
+   "why": "All four islands have odd degree. A trail needs 0 or 2 odd vertices, so no such walk exists. A vertex of degree 1 is not a problem on its own: it can be the start or end of a trail.",
+   "clue": "Count how many degrees are odd, then compare with 0 or 2."
+  }
+ },
+ "cleared_by": "recheck"
 }

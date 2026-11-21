@@ -24,8 +24,366 @@
    0.222
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T13:37:05Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (a fact)",
+  "2026-11-20T13:44:55Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.0058,
+  "check": 0.01442,
+  "fix": 0.02179,
+  "recheck": 0.00975
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the United Nations Convention on the Rights of the Child or children's rights; the closest, Types of rights, only sorts rights generally and is at Year 12 depth, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, fact: Why (a) calls the right to a say 'one of the four rights the Convention protects'. The Convention sets out many more rights than these four, such as play, identity and protection from exploitation. The card lists examples, not a complete set, so this line teaches students something false.",
+ "rejected": {
+  "title": "Children's rights",
+  "card": [
+   "A right is something a person is entitled to have or do. Children have human rights as people, and they also need extra protection because they are young and can be vulnerable.",
+   "The United Nations Convention on the Rights of the Child is an international agreement. It sets out special protections for everyone under 18.",
+   "It protects a child's right to safety, education, health care and a say in matters that affect them.",
+   "Australia signed the Convention and then ratified it in December 1990. Ratifying it is what commits the Australian Government to respect and protect these rights."
+  ],
+  "remember": "The Convention protects children's safety, education, health and a say, and Australia has ratified it.",
+  "a": {
+   "q": "Which of these is a right protected by the Convention on the Rights of the Child?",
+   "opts": [
+    "The right to be heard on decisions about their life",
+    "The right to be paid the same wage as an adult",
+    "The right to own a mobile phone from age 12",
+    "The right to free tickets to sports and concerts"
+   ],
+   "why": "Being heard on decisions about their life is the right to a say, one of the four rights the Convention protects. Equal adult pay may sound fair, but it is not one of the rights the Convention sets out, and neither are phones or free tickets.",
+   "clue": "Which option fits safety, education, health or a say?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Jin, aged 10, lives in Wagga Wagga. Her family cannot afford a doctor, and she misses out on treatment for a sore ear. Which right in the Convention is most affected?",
+   "opts": [
+    "The right to health care",
+    "The right to a say",
+    "The right to education",
+    "The right to safety"
+   ],
+   "why": "Missing out on treatment for an illness affects Jin's right to health care. The right to safety is tempting, but the problem here is access to medical treatment, not protection from harm.",
+   "clue": "What does Jin need that a doctor provides?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, fact: Why (a) calls the right to a say 'one of the four rights the Convention protects'. The Convention sets out many more rights than these four, such as play, identity and protection from exploitation. The card lists examples, not a complete set, so this line teaches students something false."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Children's rights",
+     "card": [
+      "A right is something a person is entitled to have or do. Children have rights because they are young and depend on adults.",
+      "The United Nations Convention on the Rights of the Child is an international agreement. It sets out the rights of everyone under 18.",
+      "It protects a child's right to safety, education, health care and a say in matters that affect them.",
+      "Australia signed the Convention. This means the Australian Government has promised to respect these rights."
+     ],
+     "remember": "The Convention protects children's safety, education, health and a say, and Australia has signed it.",
+     "a": {
+      "q": "Which of these is a right protected by the Convention on the Rights of the Child?",
+      "opts": [
+       "The right to be heard on matters that affect them",
+       "The right to vote in federal elections",
+       "The right to leave school at any age",
+       "The right to hold a driver licence"
+      ],
+      "why": "The Convention protects a child's right to a say in matters that affect them. Voting and driving are not rights it sets out, and it protects education rather than leaving school at any age.",
+      "clue": "Think of the four rights on the card: safety, education, health and a say."
+     },
+     "b": {
+      "d": 2,
+      "q": "Jin, aged 10, lives in Wagga Wagga. Her family cannot afford a doctor, and she misses out on treatment for a sore ear. Which right in the Convention is most affected?",
+      "opts": [
+       "The right to health care",
+       "The right to a say",
+       "The right to education",
+       "The right to safety"
+      ],
+      "why": "Missing out on treatment for an illness affects Jin's right to health care. The right to safety is tempting, but the problem here is access to medical treatment, not protection from harm.",
+      "clue": "What does Jin need that a doctor provides?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "The right to be heard on matters that affect them",
+      "also_right": []
+     },
+     "b": {
+      "best": "The right to health care",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "'Australia signed the Convention. This means the Australian Government has promised to respect these rights' is imprecise. Signing alone does not bind a country. Australia ratified the Convention in December 1990, and ratification is what commits the government. The card could say Australia signed and ratified it."
+      },
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "'Children have rights because they are young and depend on adults' could suggest that children's rights come from dependence. Children have human rights as people, and the Convention adds special protections because they are young and vulnerable."
+      },
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The right option is clearly the longest and the only one with a qualifying phrase ('on matters that affect them'), so it stands out from the short distractors."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both answers are clear and match the explanations. The card says signing means a promise, but ratification (1990) is what binds Australia. The card's reason why children have rights is slightly misleading, and the right option in question a stands out as the longest."
+    },
+    "flags": [
+     "Card, fact: 'Australia signed the Convention. This means the Australian Government has promised to respect these rights' is imprecise. Signing alone does not bind a country. Australia ratified the Convention in December 1990, and ratification is what commits the government. The card could say Australia signed and ratified it.",
+     "Card, wording: 'Children have rights because they are young and depend on adults' could suggest that children's rights come from dependence. Children have human rights as people, and the Convention adds special protections because they are young and vulnerable.",
+     "Question a, wording: The right option is clearly the longest and the only one with a qualifying phrase ('on matters that affect them'), so it stands out from the short distractors."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Children's rights",
+     "card": [
+      "A right is something a person is entitled to have or do. Children have human rights as people, and they also need extra protection because they are young and can be vulnerable.",
+      "The United Nations Convention on the Rights of the Child is an international agreement. It sets out special protections for everyone under 18.",
+      "It protects a child's right to safety, education, health care and a say in matters that affect them.",
+      "Australia signed the Convention and then ratified it in December 1990. Ratifying it is what commits the Australian Government to respect and protect these rights."
+     ],
+     "remember": "The Convention protects children's safety, education, health and a say, and Australia has ratified it.",
+     "a": {
+      "q": "Which of these is a right protected by the Convention on the Rights of the Child?",
+      "opts": [
+       "The right to be heard on decisions about their life",
+       "The right to be paid the same wage as an adult",
+       "The right to own a mobile phone from age 12",
+       "The right to free tickets to sports and concerts"
+      ],
+      "why": "Being heard on decisions about their life is the right to a say, one of the four rights the Convention protects. Equal adult pay may sound fair, but it is not one of the rights the Convention sets out, and neither are phones or free tickets.",
+      "clue": "Which option fits safety, education, health or a say?"
+     },
+     "b": {
+      "d": 2,
+      "q": "Jin, aged 10, lives in Wagga Wagga. Her family cannot afford a doctor, and she misses out on treatment for a sore ear. Which right in the Convention is most affected?",
+      "opts": [
+       "The right to health care",
+       "The right to a say",
+       "The right to education",
+       "The right to safety"
+      ],
+      "why": "Missing out on treatment for an illness affects Jin's right to health care. The right to safety is tempting, but the problem here is access to medical treatment, not protection from harm.",
+      "clue": "What does Jin need that a doctor provides?"
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:05Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "The right to be heard on decisions about their life",
+       "also_right": []
+      },
+      "b": {
+       "best": "The right to health care",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "fact",
+        "detail": "Why (a) calls the right to a say 'one of the four rights the Convention protects'. The Convention sets out many more rights than these four, such as play, identity and protection from exploitation. The card lists examples, not a complete set, so this line teaches students something false."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both questions are accurate: Australia signed the Convention and ratified it in December 1990. However, why (a) wrongly says the Convention protects only four rights, which should be reworded, for example to 'one of the rights the Convention protects'."
+     },
+     "flags": [
+      "Question a, fact: Why (a) calls the right to a say 'one of the four rights the Convention protects'. The Convention sets out many more rights than these four, such as play, identity and protection from exploitation. The card lists examples, not a complete set, so this line teaches students something false."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:55Z",
+   "step": "write",
+   "version": {
+    "title": "Children's rights",
+    "card": [
+     "A right is something a person is entitled to have or do. Children have human rights as people, and they also need extra protection because they are young and can be vulnerable.",
+     "The United Nations Convention on the Rights of the Child is an international agreement. It sets out special protections for everyone under 18.",
+     "It sets out many rights. Among them are a child's right to safety, education, health care and a say in matters that affect them.",
+     "Australia signed the Convention and then ratified it in December 1990. Ratifying it is what commits the Australian Government to respect and protect these rights."
+    ],
+    "remember": "The Convention protects rights such as safety, education, health and a say, and Australia has ratified it.",
+    "a": {
+     "q": "Which of these is a right protected by the Convention on the Rights of the Child?",
+     "opts": [
+      "The right to be heard on decisions about them",
+      "The right to be paid the same wage as an adult",
+      "The right to own a mobile phone from age 12",
+      "The right to free tickets to sports and concerts"
+     ],
+     "why": "Being heard on decisions about their life is the right to a say, one of the rights the Convention protects. Equal adult pay may sound fair, but it is not a right the Convention sets out, and neither are phones or free tickets.",
+     "clue": "Which option fits safety, education, health or a say?"
+    },
+    "b": {
+     "d": 2,
+     "q": "Jin, aged 10, lives in Wagga Wagga. Her family cannot afford a doctor, and she misses out on treatment for a sore ear. Which right in the Convention is most affected?",
+     "opts": [
+      "The right to health care",
+      "The right to a say",
+      "The right to education",
+      "The right to safety"
+     ],
+     "why": "Missing out on treatment for an illness affects Jin's right to health care. The right to safety is tempting, but the problem here is access to medical treatment, not protection from harm.",
+     "clue": "What does Jin need that a doctor provides?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "The right to be heard on decisions about them",
+     "also_right": []
+    },
+    "b": {
+     "best": "The right to health care",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Children's rights",
+  "card": [
+   "A right is something a person is entitled to have or do. Children have human rights as people, and they also need extra protection because they are young and can be vulnerable.",
+   "The United Nations Convention on the Rights of the Child is an international agreement. It sets out special protections for everyone under 18.",
+   "It sets out many rights. Among them are a child's right to safety, education, health care and a say in matters that affect them.",
+   "Australia signed the Convention and then ratified it in December 1990. Ratifying it is what commits the Australian Government to respect and protect these rights."
+  ],
+  "remember": "The Convention protects rights such as safety, education, health and a say, and Australia has ratified it.",
+  "a": {
+   "q": "Which of these is a right protected by the Convention on the Rights of the Child?",
+   "opts": [
+    "The right to be heard on decisions about them",
+    "The right to be paid the same wage as an adult",
+    "The right to own a mobile phone from age 12",
+    "The right to free tickets to sports and concerts"
+   ],
+   "why": "Being heard on decisions about their life is the right to a say, one of the rights the Convention protects. Equal adult pay may sound fair, but it is not a right the Convention sets out, and neither are phones or free tickets.",
+   "clue": "Which option fits safety, education, health or a say?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Jin, aged 10, lives in Wagga Wagga. Her family cannot afford a doctor, and she misses out on treatment for a sore ear. Which right in the Convention is most affected?",
+   "opts": [
+    "The right to health care",
+    "The right to a say",
+    "The right to education",
+    "The right to safety"
+   ],
+   "why": "Missing out on treatment for an illness affects Jin's right to health care. The right to safety is tempting, but the problem here is access to medical treatment, not protection from harm.",
+   "clue": "What does Jin need that a doctor provides?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The right to be heard on decisions about them",
+   "also_right": []
+  },
+  "b": {
+   "best": "The right to health care",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Children's rights",
+  "card": [
+   "A right is something a person is entitled to have or do. Children have human rights as people, and they also need extra protection because they are young and can be vulnerable.",
+   "The United Nations Convention on the Rights of the Child is an international agreement. It sets out special protections for everyone under 18.",
+   "It sets out many rights. Among them are a child's right to safety, education, health care and a say in matters that affect them.",
+   "Australia signed the Convention and then ratified it in December 1990. Ratifying it is what commits the Australian Government to respect and protect these rights."
+  ],
+  "remember": "The Convention protects rights such as safety, education, health and a say, and Australia has ratified it.",
+  "a": {
+   "q": "Which of these is a right protected by the Convention on the Rights of the Child?",
+   "opts": [
+    "The right to be heard on decisions about them",
+    "The right to be paid the same wage as an adult",
+    "The right to own a mobile phone from age 12",
+    "The right to free tickets to sports and concerts"
+   ],
+   "why": "Being heard on decisions about their life is the right to a say, one of the rights the Convention protects. Equal adult pay may sound fair, but it is not a right the Convention sets out, and neither are phones or free tickets.",
+   "clue": "Which option fits safety, education, health or a say?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Jin, aged 10, lives in Wagga Wagga. Her family cannot afford a doctor, and she misses out on treatment for a sore ear. Which right in the Convention is most affected?",
+   "opts": [
+    "The right to health care",
+    "The right to a say",
+    "The right to education",
+    "The right to safety"
+   ],
+   "why": "Missing out on treatment for an illness affects Jin's right to health care. The right to safety is tempting, but the problem here is access to medical treatment, not protection from harm.",
+   "clue": "What does Jin need that a doctor provides?"
+  }
+ },
+ "checked_by": "claude-code"
 }

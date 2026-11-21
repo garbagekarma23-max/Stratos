@@ -24,8 +24,319 @@
    0.231
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:56Z write: failed the content check, writing again",
+  "2026-11-20T12:44:59Z write: done (still fails the content check)",
+  "2026-11-20T12:53:28Z check: flagged",
+  "2026-11-20T13:00:00Z fix: suggested",
+  "2026-11-20T14:44:04Z review: rejected, to be written again",
+  "2026-11-20T14:58:20Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00052,
+  "write": 0.0271,
+  "check": 0.01347,
+  "fix": 0.0421
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank's unit circle card teaches the same idea but is written for Year 11 and does not cover angles up to 360°, so its depth does not clearly suit a Stage 5 Years 9 and 10 course.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Trigonometry on the unit circle",
+  "card": [
+   "The unit circle has radius 1 and its centre at the origin. Take a point on it, at an angle \\(\\theta\\) measured anticlockwise from the positive x-axis.",
+   "The x-coordinate of the point is \\(\\cos \\theta\\). The y-coordinate is \\(\\sin \\theta\\). So the point is \\((\\cos \\theta, \\sin \\theta)\\).",
+   "This works for any angle up to 360\\(^{\\circ}\\). In the second quadrant, x is negative, so \\(\\cos \\theta\\) is negative. Below the x-axis, y is negative, so \\(\\sin \\theta\\) is negative.",
+   "Example: at 90\\(^{\\circ}\\) the point is \\((0, 1)\\), so \\(\\cos 90^{\\circ} = 0\\) and \\(\\sin 90^{\\circ} = 1\\). At 180\\(^{\\circ}\\) the point is \\((-1, 0)\\), so \\(\\cos 180^{\\circ} = -1\\)."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The unit circle with a point P at 60 degrees from the positive x-axis. A radius of length 1 joins the centre to P. P has x-coordinate cos theta and y-coordinate sin theta, marked by dashed lines to the axes.",
+    "x": {
+     "min": -1.5,
+     "max": 1.5,
+     "label": "\\(x\\)",
+     "step": 0.5,
+     "nums": false
+    },
+    "y": {
+     "min": -1.5,
+     "max": 1.5,
+     "label": "\\(y\\)",
+     "step": 0.5,
+     "nums": false
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "circle",
+      "centre": [
+       0,
+       0
+      ],
+      "r": 1,
+      "label": "unit circle",
+      "pos": "below-left"
+     },
+     {
+      "type": "curve",
+      "id": "r",
+      "points": [
+       [
+        0,
+        0
+       ],
+       [
+        0.5,
+        0.866025
+       ]
+      ],
+      "label": "\\(r = 1\\)",
+      "pos": "above-left"
+     },
+     {
+      "type": "guide",
+      "at": [
+       0.5,
+       0.866025
+      ],
+      "xLabel": "\\(\\cos \\theta\\)",
+      "yLabel": "\\(\\sin \\theta\\)"
+     },
+     {
+      "type": "point",
+      "at": [
+       0.5,
+       0.866025
+      ],
+      "label": "P",
+      "pos": "above-right"
+     }
+    ]
+   }
+  },
+  "remember": "On the unit circle, the point at angle \\(\\theta\\) is \\((\\cos \\theta, \\sin \\theta)\\), so the signs follow the quadrant.",
+  "a": {
+   "q": "A point on the unit circle at angle \\(\\theta\\) has coordinates \\((0.6, 0.8)\\). What is \\(\\sin \\theta\\)?",
+   "opts": [
+    "\\(0.8\\)",
+    "\\(0.6\\)",
+    "\\(1\\)",
+    "\\(\\frac{4}{3}\\)"
+   ],
+   "why": "The y-coordinate of the point is \\(\\sin \\theta\\), so \\(\\sin \\theta = 0.8\\). The value 0.6 is the x-coordinate, which is \\(\\cos \\theta\\), so it is the tempting swap.",
+   "clue": "Which coordinate gives the sine?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A point on the unit circle is at \\(270^{\\circ}\\) from the positive x-axis. It is at \\((0, -1)\\). What are \\(\\cos 270^{\\circ}\\) and \\(\\sin 270^{\\circ}\\)?",
+   "opts": [
+    "\\(\\cos = 0\\) and \\(\\sin = -1\\)",
+    "\\(\\cos = -1\\) and \\(\\sin = 0\\)",
+    "\\(\\cos = 0\\) and \\(\\sin = 1\\)",
+    "\\(\\cos = 1\\) and \\(\\sin = -1\\)"
+   ],
+   "why": "The x-coordinate is 0, so \\(\\cos 270^{\\circ} = 0\\). The y-coordinate is \\(-1\\), so \\(\\sin 270^{\\circ} = -1\\). Swapping the coordinates gives the tempting second option.",
+   "clue": "Read the x-coordinate first, then the y-coordinate."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:20Z",
+   "step": "write",
+   "version": {
+    "title": "Trigonometry on the unit circle",
+    "card": [
+     "The unit circle has radius 1 and its centre at the origin. Measure an angle \\(\\theta\\) anticlockwise from the positive x-axis to a point \\(P\\) on the circle.",
+     "The x-coordinate of \\(P\\) is \\(\\cos \\theta\\) and its y-coordinate is \\(\\sin \\theta\\), so \\(P\\) is the point \\((\\cos \\theta, \\sin \\theta)\\).",
+     "This defines sine and cosine for any angle from \\(0^{\\circ}\\) to \\(360^{\\circ}\\). Left of the y-axis, \\(\\cos \\theta\\) is negative. Below the x-axis, \\(\\sin \\theta\\) is negative.",
+     "Example: at \\(90^{\\circ}\\), \\(P\\) is \\((0, 1)\\), so \\(\\cos 90^{\\circ} = 0\\) and \\(\\sin 90^{\\circ} = 1\\)."
+    ],
+    "cardFigs": {
+     "2": {
+      "kind": "graph",
+      "alt": "The unit circle, centred at the origin with radius 1. A point P on the circle in the first quadrant has dashed guides to the axes: its x-coordinate is \\(\\cos \\theta\\) and its y-coordinate is \\(\\sin \\theta\\).",
+      "x": {
+       "min": -1.5,
+       "max": 1.5,
+       "label": "\\(x\\)",
+       "step": 0.5,
+       "nums": false
+      },
+      "y": {
+       "min": -1.5,
+       "max": 1.5,
+       "label": "\\(y\\)",
+       "step": 0.5,
+       "nums": false
+      },
+      "equal": true,
+      "items": [
+       {
+        "type": "circle",
+        "id": "c",
+        "centre": [
+         0,
+         0
+        ],
+        "r": 1
+       },
+       {
+        "type": "guide",
+        "at": [
+         0.8,
+         0.6
+        ],
+        "xLabel": "\\(\\cos \\theta\\)",
+        "yLabel": "\\(\\sin \\theta\\)"
+       },
+       {
+        "type": "point",
+        "at": [
+         0.8,
+         0.6
+        ],
+        "on": [
+         "c"
+        ],
+        "label": "P",
+        "pos": "above-right"
+       }
+      ]
+     }
+    },
+    "remember": "Cosine is across and sine is up: they are the coordinates of the point on the unit circle.",
+    "a": {
+     "q": "A point on the unit circle at angle \\(\\theta\\) is \\((-0.6, 0.8)\\). What is \\(\\cos \\theta\\)?",
+     "opts": [
+      "\\(-0.6\\)",
+      "\\(0.8\\)",
+      "\\(0.6\\)",
+      "\\(-0.8\\)"
+     ],
+     "why": "The x-coordinate is \\(\\cos \\theta\\), so \\(\\cos \\theta = -0.6\\). The value \\(0.8\\) is the y-coordinate, which is \\(\\sin \\theta\\).",
+     "clue": "Which coordinate gives the cosine?"
+    },
+    "b": {
+     "d": 3,
+     "q": "\\(P\\) is the point on the unit circle at \\(180^{\\circ}\\). What are \\(\\cos 180^{\\circ}\\) and \\(\\sin 180^{\\circ}\\)?",
+     "opts": [
+      "\\(\\cos 180^{\\circ} = -1\\) and \\(\\sin 180^{\\circ} = 0\\)",
+      "\\(\\cos 180^{\\circ} = 0\\) and \\(\\sin 180^{\\circ} = -1\\)",
+      "\\(\\cos 180^{\\circ} = 1\\) and \\(\\sin 180^{\\circ} = 0\\)",
+      "\\(\\cos 180^{\\circ} = 0\\) and \\(\\sin 180^{\\circ} = 1\\)"
+     ],
+     "why": "At \\(180^{\\circ}\\), \\(P\\) has turned halfway round to \\((-1, 0)\\). Its x-coordinate gives \\(\\cos 180^{\\circ} = -1\\), and its y-coordinate gives \\(\\sin 180^{\\circ} = 0\\). Swapping them reads the coordinates the wrong way round.",
+     "clue": "Where is the point half a turn from \\((1, 0)\\)?"
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Trigonometry on the unit circle",
+  "card": [
+   "The unit circle has radius 1 and its centre at the origin. Measure an angle \\(\\theta\\) anticlockwise from the positive x-axis to a point \\(P\\) on the circle.",
+   "The x-coordinate of \\(P\\) is \\(\\cos \\theta\\) and its y-coordinate is \\(\\sin \\theta\\), so \\(P\\) is the point \\((\\cos \\theta, \\sin \\theta)\\).",
+   "This defines sine and cosine for any angle from \\(0^{\\circ}\\) to \\(360^{\\circ}\\). Left of the y-axis, \\(\\cos \\theta\\) is negative. Below the x-axis, \\(\\sin \\theta\\) is negative.",
+   "Example: at \\(90^{\\circ}\\), \\(P\\) is \\((0, 1)\\), so \\(\\cos 90^{\\circ} = 0\\) and \\(\\sin 90^{\\circ} = 1\\)."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The unit circle, centred at the origin with radius 1. A point P on the circle in the first quadrant has dashed guides to the axes: its x-coordinate is \\(\\cos \\theta\\) and its y-coordinate is \\(\\sin \\theta\\).",
+    "x": {
+     "min": -1.5,
+     "max": 1.5,
+     "label": "\\(x\\)",
+     "step": 0.5,
+     "nums": false
+    },
+    "y": {
+     "min": -1.5,
+     "max": 1.5,
+     "label": "\\(y\\)",
+     "step": 0.5,
+     "nums": false
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "circle",
+      "id": "c",
+      "centre": [
+       0,
+       0
+      ],
+      "r": 1
+     },
+     {
+      "type": "guide",
+      "at": [
+       0.8,
+       0.6
+      ],
+      "xLabel": "\\(\\cos \\theta\\)",
+      "yLabel": "\\(\\sin \\theta\\)"
+     },
+     {
+      "type": "point",
+      "at": [
+       0.8,
+       0.6
+      ],
+      "on": [
+       "c"
+      ],
+      "label": "P",
+      "pos": "above-right"
+     }
+    ]
+   }
+  },
+  "remember": "Cosine is across and sine is up: they are the coordinates of the point on the unit circle.",
+  "a": {
+   "q": "A point on the unit circle at angle \\(\\theta\\) is \\((-0.6, 0.8)\\). What is \\(\\cos \\theta\\)?",
+   "opts": [
+    "\\(-0.6\\)",
+    "\\(0.8\\)",
+    "\\(0.6\\)",
+    "\\(-0.8\\)"
+   ],
+   "why": "The x-coordinate is \\(\\cos \\theta\\), so \\(\\cos \\theta = -0.6\\). The value \\(0.8\\) is the y-coordinate, which is \\(\\sin \\theta\\).",
+   "clue": "Which coordinate gives the cosine?"
+  },
+  "b": {
+   "d": 3,
+   "q": "\\(P\\) is the point on the unit circle at \\(180^{\\circ}\\). What are \\(\\cos 180^{\\circ}\\) and \\(\\sin 180^{\\circ}\\)?",
+   "opts": [
+    "\\(\\cos 180^{\\circ} = -1\\) and \\(\\sin 180^{\\circ} = 0\\)",
+    "\\(\\cos 180^{\\circ} = 0\\) and \\(\\sin 180^{\\circ} = -1\\)",
+    "\\(\\cos 180^{\\circ} = 1\\) and \\(\\sin 180^{\\circ} = 0\\)",
+    "\\(\\cos 180^{\\circ} = 0\\) and \\(\\sin 180^{\\circ} = 1\\)"
+   ],
+   "why": "At \\(180^{\\circ}\\), \\(P\\) has turned halfway round to \\((-1, 0)\\). Its x-coordinate gives \\(\\cos 180^{\\circ} = -1\\), and its y-coordinate gives \\(\\sin 180^{\\circ} = 0\\). Swapping them reads the coordinates the wrong way round.",
+   "clue": "Where is the point half a turn from \\((1, 0)\\)?"
+  }
+ },
+ "local": []
 }

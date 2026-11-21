@@ -16,8 +16,141 @@
    0.222
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 may adapt sci-changes-that-disrupt-ecosystems, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:59Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:57Z write: failed the content check, writing again",
+  "2026-11-20T12:45:00Z write: done",
+  "2026-11-20T12:53:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "confirm": 0.00459,
+  "write": 0.01374,
+  "check": 0.00678
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "sci-changes-that-disrupt-ecosystems",
+  "changes": [
+   "The card's introduced species example (cane toad in Australia) should be extended to include the European rabbit, matching the brief's examples, and the point should name competing, eating and poisoning as the three ways an introduced species affects natives.",
+   "The card's wording should cover poisoning of native species, which the brief includes but the card does not mention."
+  ],
+  "sure": "medium",
+  "reason": "The bank point covers introduced species in an Australian food-web context at a suitable Stage 4 depth, but it only mentions eating and competing, not poisoning, and its examples differ slightly from the brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point covers several kinds of ecosystem disruption, with introduced species as only one part and neither question testing it, so it is broader than this point on introduced species and their effects on native populations.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Introduced species",
+  "card": [
+   "An introduced species is a species brought into an ecosystem where it did not live before. People bring them in on purpose or by accident.",
+   "Native species are the ones that belong in an ecosystem. An introduced species can change their numbers, because the native species have not lived alongside it before.",
+   [
+    "Competing",
+    "the introduced species uses the same food, water or shelter as a native species. European rabbits eat plants that native animals also need."
+   ],
+   [
+    "Eating or poisoning",
+    "the introduced species preys on native species or is poisonous to them. Cane toads carry poison, and native predators that eat them can die."
+   ]
+  ],
+  "remember": "An introduced species can change native populations by competing with, eating or poisoning them.",
+  "a": {
+   "q": "What is an introduced species?",
+   "opts": [
+    "A species brought into a place it did not live before",
+    "A species that has lived in a place for a very long time",
+    "A species that has become rare in a place",
+    "A species that feeds only on the plants of a place"
+   ],
+   "why": "An introduced species is one that has been brought into a new ecosystem by people, on purpose or by accident. A native species belongs there, so a species that has lived there for a long time is not introduced.",
+   "clue": "Think about where the species lived before."
+  },
+  "b": {
+   "d": 3,
+   "q": "Cane toads are poisonous. In a billabong in the Northern Territory, many native goannas die after eating cane toads. How have the toads changed the goanna population?",
+   "opts": [
+    "By poisoning them, which lowers their numbers",
+    "By competing with them for food, which lowers their numbers",
+    "By eating them, which lowers their numbers",
+    "By sharing the habitat, which raises their numbers"
+   ],
+   "why": "The goannas die because the toads carry poison, so the toads change the population by poisoning. Competing is a tempting answer, but it means using the same food or shelter, and the goannas here are dying from eating the toads, not from a shortage of resources.",
+   "clue": "Look at what happens to the goannas after they eat the toads."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A species brought into a place it did not live before",
+   "also_right": []
+  },
+  "b": {
+   "best": "By poisoning them, which lowers their numbers",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Introduced species",
+  "card": [
+   "An introduced species is a species brought into an ecosystem where it did not live before. People bring them in on purpose or by accident.",
+   "Native species are the ones that belong in an ecosystem. An introduced species can change their numbers, because the native species have not lived alongside it before.",
+   [
+    "Competing",
+    "the introduced species uses the same food, water or shelter as a native species. European rabbits eat plants that native animals also need."
+   ],
+   [
+    "Eating or poisoning",
+    "the introduced species preys on native species or is poisonous to them. Cane toads carry poison, and native predators that eat them can die."
+   ]
+  ],
+  "remember": "An introduced species can change native populations by competing with, eating or poisoning them.",
+  "a": {
+   "q": "What is an introduced species?",
+   "opts": [
+    "A species brought into a place it did not live before",
+    "A species that has lived in a place for a very long time",
+    "A species that has become rare in a place",
+    "A species that feeds only on the plants of a place"
+   ],
+   "why": "An introduced species is one that has been brought into a new ecosystem by people, on purpose or by accident. A native species belongs there, so a species that has lived there for a long time is not introduced.",
+   "clue": "Think about where the species lived before."
+  },
+  "b": {
+   "d": 3,
+   "q": "Cane toads are poisonous. In a billabong in the Northern Territory, many native goannas die after eating cane toads. How have the toads changed the goanna population?",
+   "opts": [
+    "By poisoning them, which lowers their numbers",
+    "By competing with them for food, which lowers their numbers",
+    "By eating them, which lowers their numbers",
+    "By sharing the habitat, which raises their numbers"
+   ],
+   "why": "The goannas die because the toads carry poison, so the toads change the population by poisoning. Competing is a tempting answer, but it means using the same food or shelter, and the goannas here are dying from eating the toads, not from a shortage of resources.",
+   "clue": "Look at what happens to the goannas after they eat the toads."
+  }
+ },
+ "cleared_by": "checker"
 }

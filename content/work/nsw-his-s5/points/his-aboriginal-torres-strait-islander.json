@@ -20,8 +20,159 @@
    0.2
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:52Z write: done",
+  "2026-11-20T12:35:52Z check: flagged",
+  "2026-11-20T12:44:57Z fix: suggested",
+  "2026-11-20T14:41:59Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00041,
+  "write": 0.01108,
+  "check": 0.01286,
+  "fix": 0.02295
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers First Nations service and the Torres Strait Light Infantry Battalion, but it does not teach the scout, labourer and coast watcher roles the new point names, and those would need a new card rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Aboriginal and Torres Strait Islander service",
+  "card": [
+   "Aboriginal and Torres Strait Islander people served in Australia's forces in World War II. Some enlisted in the army, navy and air force, even though many faced racial discrimination.",
+   "The Torres Strait Light Infantry Battalion was formed in 1943. Its soldiers were Torres Strait Islander men, and they helped defend the northern islands against a possible Japanese attack.",
+   "Many served in other ways. Some worked as scouts who used their knowledge of the land, and others as labourers who built and carried supplies for the war effort.",
+   "Some people acted as coast watchers. They watched the northern coast and sea and reported enemy ships and aircraft."
+  ],
+  "remember": "Aboriginal and Torres Strait Islander people served as soldiers, scouts, labourers and coast watchers.",
+  "a": {
+   "q": "Which unit was made up of Torres Strait Islander soldiers?",
+   "opts": [
+    "The Torres Strait Light Infantry Battalion",
+    "The Australian Women's Army Service",
+    "The Volunteer Defence Corps",
+    "The Civil Constructional Corps"
+   ],
+   "why": "The Torres Strait Light Infantry Battalion was formed in 1943 from Torres Strait Islander men to help defend the northern islands. The other units are not described on the card as Torres Strait Islander units.",
+   "clue": "Look for the unit named after the region."
+  },
+  "b": {
+   "d": 2,
+   "q": "Jimmy was part of a group that watched the northern coast and reported enemy ships and aircraft. What was his role?",
+   "opts": [
+    "Coast watcher",
+    "Labourer",
+    "Scout",
+    "Infantry soldier"
+   ],
+   "why": "Reporting enemy ships and aircraft seen from the coast was the work of a coast watcher. A scout used knowledge of the land, and a labourer built and carried supplies, so those do not fit.",
+   "clue": "Think about who was watching the sea."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The Torres Strait Light Infantry Battalion",
+   "also_right": []
+  },
+  "b": {
+   "best": "Coast watcher",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The question says 'Torres Strait Islander soldiers' and only one option contains 'Torres Strait', so a student can match the words without knowing the idea. The clue ('the unit named after the region') makes this even easier."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "first-nations",
+  "summary": "The facts check out and both intended answers are correct. Question a can be answered by matching 'Torres Strait' in the question to the option, and its clue spells this out, so it barely tests the idea."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Question a, wording: The question says 'Torres Strait Islander soldiers' and only one option contains 'Torres Strait', so a student can match the words without knowing the idea. The clue ('the unit named after the region') makes this even easier."
+ ],
+ "proposal": {
+  "title": "Aboriginal and Torres Strait Islander service",
+  "card": [
+   "Aboriginal and Torres Strait Islander people served in Australia's forces in World War II. Some enlisted in the army, navy and air force, even though many faced racial discrimination.",
+   "The Torres Strait Light Infantry Battalion was formed in 1943. Most of its soldiers were Torres Strait Islander men, and they helped defend Australia's northern islands against a possible Japanese attack.",
+   "Many served in other ways. Scouts used their knowledge of the land to guide patrols through the bush. Labourers built camps and roads and carried supplies for the war effort.",
+   "Some people acted as coast watchers. They kept watch over the northern coast and sea and sent reports, often by radio, when they saw enemy ships or aircraft."
+  ],
+  "remember": "Aboriginal and Torres Strait Islander people served as soldiers, scouts, labourers and coast watchers.",
+  "a": {
+   "q": "Why was the Torres Strait Light Infantry Battalion formed in 1943?",
+   "opts": [
+    "To defend Australia's northern islands against Japan",
+    "To fight German forces in North Africa and Europe",
+    "To build roads and airstrips in the Northern Territory",
+    "To guard ports in southern Australia from attack"
+   ],
+   "why": "The battalion was formed to help defend Australia's northern islands against a possible Japanese attack. Building roads and carrying supplies was the work of labourers, not the purpose of this fighting unit.",
+   "clue": "Think about which enemy threatened Australia's north."
+  },
+  "b": {
+   "d": 2,
+   "q": "Jimmy spent months on a lonely headland in the Northern Territory. He sent radio reports whenever he saw Japanese planes or boats. What was his role?",
+   "opts": [
+    "Coast watcher",
+    "Scout",
+    "Labourer",
+    "Infantry soldier"
+   ],
+   "why": "Keeping watch over the sea and reporting enemy ships and aircraft by radio was the work of a coast watcher. A scout used knowledge of the land to guide patrols through the bush, which is not what Jimmy did.",
+   "clue": "Was Jimmy guiding people, or watching and reporting?"
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Aboriginal and Torres Strait Islander service",
+  "card": [
+   "Aboriginal and Torres Strait Islander people served in Australia's forces in World War II. Some enlisted in the army, navy and air force, even though many faced racial discrimination.",
+   "The Torres Strait Light Infantry Battalion was formed in 1943. Most of its soldiers were Torres Strait Islander men, and they helped defend Australia's northern islands against a possible Japanese attack.",
+   "Many served in other ways. Scouts used their knowledge of the land to guide patrols through the bush. Labourers built camps and roads and carried supplies for the war effort.",
+   "Some people acted as coast watchers. They kept watch over the northern coast and sea and sent reports, often by radio, when they saw enemy ships or aircraft."
+  ],
+  "remember": "Aboriginal and Torres Strait Islander people served as soldiers, scouts, labourers and coast watchers.",
+  "a": {
+   "q": "Why was the Torres Strait Light Infantry Battalion formed in 1943?",
+   "opts": [
+    "To defend Australia's northern islands against Japan",
+    "To fight German forces in North Africa and Europe",
+    "To build roads and airstrips in the Northern Territory",
+    "To guard ports in southern Australia from attack"
+   ],
+   "why": "The battalion was formed to help defend Australia's northern islands against a possible Japanese attack. Building roads and carrying supplies was the work of labourers, not the purpose of this fighting unit.",
+   "clue": "Think about which enemy threatened Australia's north."
+  },
+  "b": {
+   "d": 2,
+   "q": "Jimmy spent months on a lonely headland in the Northern Territory. He sent radio reports whenever he saw Japanese planes or boats. What was his role?",
+   "opts": [
+    "Coast watcher",
+    "Scout",
+    "Labourer",
+    "Infantry soldier"
+   ],
+   "why": "Keeping watch over the sea and reporting enemy ships and aircraft by radio was the work of a coast watcher. A scout used knowledge of the land to guide patrols through the bush, which is not what Jimmy did.",
+   "clue": "Was Jimmy guiding people, or watching and reporting?"
+  }
+ },
+ "cleared_by": "owner"
 }

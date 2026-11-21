@@ -24,8 +24,258 @@
    0.301
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 may adapt sci-validity, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:26:00Z confirm: Claude Opus 5.5 may adapt bio-accuracy-precision-validity-biology, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt bio-accuracy-precision-validity-biology (4 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting bio-accuracy-precision-validity-biology on the next run",
+  "2026-11-20T14:12:40Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "confirm": 0.01513,
+  "adapt": 0.0064,
+  "check": 0.00809
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "sci-validity",
+  "changes": [
+   "Add reliability and accuracy to the card, since the new point covers all three ideas (validity, reliability and accuracy), which the validity-only card does not teach.",
+   "Replace the Year 9 depth with a Stage 5 treatment that includes the NSW terms and the SC5-WS-03 and SC5-WS-06 outcomes."
+  ],
+  "sure": "low",
+  "reason": "The bank's validity card matches only one of the three ideas in the new point, so it needs added content on reliability and accuracy, which is more than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "bio-accuracy-precision-validity-biology",
+  "changes": [
+   "Replace the term 'precision'/'precise' with 'reliability'/'reliable' throughout the card, remember line and question a, as the NSW Stage 5 syllabus uses reliability for results that come out the same when repeated.",
+   "Reword the reliability line to describe repeating the test or trials and getting consistent results, rather than only measurements being close together.",
+   "Re-title the point 'Validity, reliability and accuracy' to match the NSW syllabus terms."
+  ],
+  "sure": "medium",
+  "reason": "The biology card teaches the same three ideas at a level that suits Years 9 and 10, including controlling variables for validity, but it uses the Victorian term 'precision' where NSW Stage 5 uses 'reliability', so the wording needs to change.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "bio-accuracy-precision-validity-biology",
+  "changes": [
+   "Replace precision and precise with reliability and reliable throughout the card, the remember line and question a.",
+   "Describe reliability as results that come out the same, or very close, when the test is repeated, rather than only measurements being close together.",
+   "Say that a valid test controls the other variables, keeping everything the same except the one being tested, to match the brief.",
+   "Retitle the point Validity, reliability and accuracy."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "title",
+   "card2 label",
+   "card2",
+   "card3",
+   "card4",
+   "remember",
+   "a.q",
+   "a.opt1",
+   "a.opt2",
+   "a.opt3",
+   "a.opt4",
+   "a.why",
+   "a.clue",
+   "b.q",
+   "b.opt3",
+   "b.why",
+   "b.clue"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches accuracy and validity at the right depth, but it uses precision where the NSW syllabus and the brief use reliability. Swapping the term and the way repeat trials are described is a small change.",
+   "item": "128080ab82068a4c",
+   "result": "decided",
+   "saved": {
+    "id": "sci-validity-reliability-accuracy",
+    "title": "Validity, reliability and accuracy",
+    "brief": "27bb08ac9c4a",
+    "shortlist": [
+     [
+      "sci-validity",
+      0.484
+     ],
+     [
+      "chem-accuracy-precision-validity",
+      0.32
+     ],
+     [
+      "bio-accuracy-precision-validity-biology",
+      0.318
+     ],
+     [
+      "phys-accuracy-precision-validity-physics",
+      0.318
+     ],
+     [
+      "pe-reliable-valid-assessment",
+      0.301
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.0002,
+     "confirm": 0.01513
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "sci-validity",
+     "changes": [
+      "Add reliability and accuracy to the card, since the new point covers all three ideas (validity, reliability and accuracy), which the validity-only card does not teach.",
+      "Replace the Year 9 depth with a Stage 5 treatment that includes the NSW terms and the SC5-WS-03 and SC5-WS-06 outcomes."
+     ],
+     "sure": "low",
+     "reason": "The bank's validity card matches only one of the three ideas in the new point, so it needs added content on reliability and accuracy, which is more than a small change.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "bio-accuracy-precision-validity-biology",
+     "changes": [
+      "Replace the term 'precision'/'precise' with 'reliability'/'reliable' throughout the card, remember line and question a, as the NSW Stage 5 syllabus uses reliability for results that come out the same when repeated.",
+      "Reword the reliability line to describe repeating the test or trials and getting consistent results, rather than only measurements being close together.",
+      "Re-title the point 'Validity, reliability and accuracy' to match the NSW syllabus terms."
+     ],
+     "sure": "medium",
+     "reason": "The biology card teaches the same three ideas at a level that suits Years 9 and 10, including controlling variables for validity, but it uses the Victorian term 'precision' where NSW Stage 5 uses 'reliability', so the wording needs to change.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "0609de5527b544b7"
+  }
+ ],
+ "draft": {
+  "title": "Validity, reliability and accuracy",
+  "card": [
+   [
+    "Accuracy",
+    "is how close a measurement is to the true value. A scale reading 50.0 g for a 50.0 g mass is accurate."
+   ],
+   [
+    "Reliability",
+    "is whether results come out the same, or very close, when the test is repeated. Results can be reliable but not accurate."
+   ],
+   [
+    "Validity",
+    "is whether a test measures what it aims to measure. A valid test controls the other variables, keeping everything the same except the one being tested."
+   ],
+   [
+    "Link",
+    "A result can be reliable and still be off target. A test can have accurate tools but not be valid if it measures the wrong thing or other variables change."
+   ]
+  ],
+  "remember": "Accurate is close to the true value. Reliable is the same when repeated. Valid is measuring what you meant to, with other variables controlled.",
+  "a": {
+   "q": "A student repeats a water temperature test three times and gets 24.1, 24.0 and 24.2 °C. The water is truly 20.0 °C. What describes these results?",
+   "opts": [
+    "Reliable but not accurate",
+    "Accurate but not reliable",
+    "Both accurate and reliable",
+    "Neither accurate nor reliable"
+   ],
+   "why": "The results are almost the same each time, so they are reliable. They are not close to the true value of 20.0 °C, so they are not accurate.",
+   "clue": "Compare the repeats with each other, then with the true value."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam tests whether fertiliser makes bean plants grow taller. He puts the fertilised plants on a sunny bench and the others on a dark shelf. Why is his test not valid?",
+   "opts": [
+    "Light also differs, so height may not be due to fertiliser",
+    "His height measurements are not close to the true value",
+    "His repeated results do not come out the same",
+    "He used too few types of fertiliser in the investigation"
+   ],
+   "why": "A valid test controls the other variables, so only the factor being tested changes. Light also changed, so Sam cannot tell whether fertiliser or light caused the difference. Accuracy is about closeness to the true value, which is a different idea.",
+   "clue": "Count how many variables changed between the two groups."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Reliable but not accurate",
+   "also_right": []
+  },
+  "b": {
+   "best": "Light also differs, so height may not be due to fertiliser",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Validity, reliability and accuracy",
+  "card": [
+   [
+    "Accuracy",
+    "is how close a measurement is to the true value. A scale reading 50.0 g for a 50.0 g mass is accurate."
+   ],
+   [
+    "Reliability",
+    "is whether results come out the same, or very close, when the test is repeated. Results can be reliable but not accurate."
+   ],
+   [
+    "Validity",
+    "is whether a test measures what it aims to measure. A valid test controls the other variables, keeping everything the same except the one being tested."
+   ],
+   [
+    "Link",
+    "A result can be reliable and still be off target. A test can have accurate tools but not be valid if it measures the wrong thing or other variables change."
+   ]
+  ],
+  "remember": "Accurate is close to the true value. Reliable is the same when repeated. Valid is measuring what you meant to, with other variables controlled.",
+  "a": {
+   "q": "A student repeats a water temperature test three times and gets 24.1, 24.0 and 24.2 °C. The water is truly 20.0 °C. What describes these results?",
+   "opts": [
+    "Reliable but not accurate",
+    "Accurate but not reliable",
+    "Both accurate and reliable",
+    "Neither accurate nor reliable"
+   ],
+   "why": "The results are almost the same each time, so they are reliable. They are not close to the true value of 20.0 °C, so they are not accurate.",
+   "clue": "Compare the repeats with each other, then with the true value."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam tests whether fertiliser makes bean plants grow taller. He puts the fertilised plants on a sunny bench and the others on a dark shelf. Why is his test not valid?",
+   "opts": [
+    "Light also differs, so height may not be due to fertiliser",
+    "His height measurements are not close to the true value",
+    "His repeated results do not come out the same",
+    "He used too few types of fertiliser in the investigation"
+   ],
+   "why": "A valid test controls the other variables, so only the factor being tested changes. Light also changed, so Sam cannot tell whether fertiliser or light caused the difference. Accuracy is about closeness to the true value, which is a different idea.",
+   "clue": "Count how many variables changed between the two groups."
+  }
+ }
 }

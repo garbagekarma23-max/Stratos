@@ -8,8 +8,200 @@
    0.391
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 may adapt mat-writing-algebraic-expressions, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:53Z confirm: Claude Opus 5.5 may adapt mat-writing-algebraic-expressions, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt mat-writing-algebraic-expressions (1 change)",
+  "2026-11-20T14:02:37Z claude-code review: adapting mat-writing-algebraic-expressions on the next run",
+  "2026-11-20T14:12:39Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "confirm": 0.00473,
+  "adapt": 0.00572,
+  "check": 0.00897
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-writing-algebraic-expressions",
+  "changes": [
+   "Replace the term \"variable\" with \"pronumeral\", the term the NSW Stage 4 syllabus uses, throughout the card."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea at a suitable depth, but it uses the term \"variable\" where the NSW syllabus uses \"pronumeral\", so it needs that wording change.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-writing-algebraic-expressions",
+  "changes": [
+   "Use the term pronumeral instead of variable throughout the card, defining a pronumeral as a letter that stands for a number, to match the brief and NSW usage."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea of turning words into expressions like 2n + 5 at a Year 7 depth, but it should call the letters pronumerals as this course's brief does.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-writing-algebraic-expressions",
+  "changes": [
+   "Use pronumeral in place of variable throughout, and define a pronumeral as a letter that stands for a number, as the brief does."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "title",
+   "card1",
+   "card2",
+   "card4",
+   "remember",
+   "a.q",
+   "a.why",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same idea at the right depth and both answers are right, but it defines a variable where the brief and this course use pronumeral.",
+   "item": "f4c52930057cff2f",
+   "result": "decided",
+   "saved": {
+    "id": "mat-pronumerals-writing-expressions",
+    "title": "Pronumerals and writing expressions",
+    "brief": "53ec6a938526",
+    "shortlist": [
+     [
+      "mat-writing-algebraic-expressions",
+      0.391
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00022,
+     "confirm": 0.00473
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-writing-algebraic-expressions",
+     "changes": [
+      "Replace the term \"variable\" with \"pronumeral\", the term the NSW Stage 4 syllabus uses, throughout the card."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same idea at a suitable depth, but it uses the term \"variable\" where the NSW syllabus uses \"pronumeral\", so it needs that wording change.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-writing-algebraic-expressions",
+     "changes": [
+      "Use the term pronumeral instead of variable throughout the card, defining a pronumeral as a letter that stands for a number, to match the brief and NSW usage."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same idea of turning words into expressions like 2n + 5 at a Year 7 depth, but it should call the letters pronumerals as this course's brief does.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "8336dbeecb333e58"
+  }
+ ],
+ "draft": {
+  "title": "Pronumerals and writing expressions",
+  "card": [
+   "A pronumeral is a letter, such as \\(n\\), that stands for a number. The number may be unknown or may change. An expression uses pronumerals, numbers and operations, such as \\(2n + 5\\).",
+   "Leave out the \\(\\times\\) sign between a number and a pronumeral. Write \\(3 \\times n\\) as \\(3n\\), and write the number first.",
+   "Words give the operations: more than means add, less than means subtract, double means \\(\\times 2\\) and half means \\(\\div 2\\). Take care with order: 5 less than \\(n\\) is \\(n - 5\\), not \\(5 - n\\).",
+   "Use brackets when an operation applies to a whole sum or difference. Example: 4 more than a number, then all tripled, is \\(3(n + 4)\\). Without brackets, \\(3n + 4\\) would only triple the pronumeral \\(n\\)."
+  ],
+  "remember": "Turn each phrase into its operation, check the order, and use brackets for a whole group. A pronumeral is just a letter for a number.",
+  "a": {
+   "q": "Which expression shows 5 more than twice the number \\(n\\)?",
+   "opts": [
+    "\\(2n + 5\\)",
+    "\\(2(n + 5)\\)",
+    "\\(5n + 2\\)",
+    "\\(n + 10\\)"
+   ],
+   "why": "Twice the number is \\(2n\\), and 5 more than that is \\(2n + 5\\). The option \\(2(n + 5)\\) adds 5 first and then doubles the whole sum, which is a different expression.",
+   "clue": "Double the number first, then add 5."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya has \\(n\\) stickers. She is given 3 more, then shares all of them equally between 2 friends. Which expression gives each friend's share?",
+   "opts": [
+    "\\((n + 3) \\div 2\\)",
+    "\\(n + 3 \\div 2\\)",
+    "\\(2(n + 3)\\)",
+    "\\((n - 3) \\div 2\\)"
+   ],
+   "why": "The 3 is added before sharing, so the whole sum \\(n + 3\\) is divided by 2. Without brackets, \\(n + 3 \\div 2\\) would divide only the 3 by 2.",
+   "clue": "The sharing applies to the total, not just the 3."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(2n + 5\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\((n + 3) \\div 2\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Pronumerals and writing expressions",
+  "card": [
+   "A pronumeral is a letter, such as \\(n\\), that stands for a number. The number may be unknown or may change. An expression uses pronumerals, numbers and operations, such as \\(2n + 5\\).",
+   "Leave out the \\(\\times\\) sign between a number and a pronumeral. Write \\(3 \\times n\\) as \\(3n\\), and write the number first.",
+   "Words give the operations: more than means add, less than means subtract, double means \\(\\times 2\\) and half means \\(\\div 2\\). Take care with order: 5 less than \\(n\\) is \\(n - 5\\), not \\(5 - n\\).",
+   "Use brackets when an operation applies to a whole sum or difference. Example: 4 more than a number, then all tripled, is \\(3(n + 4)\\). Without brackets, \\(3n + 4\\) would only triple the pronumeral \\(n\\)."
+  ],
+  "remember": "Turn each phrase into its operation, check the order, and use brackets for a whole group. A pronumeral is just a letter for a number.",
+  "a": {
+   "q": "Which expression shows 5 more than twice the number \\(n\\)?",
+   "opts": [
+    "\\(2n + 5\\)",
+    "\\(2(n + 5)\\)",
+    "\\(5n + 2\\)",
+    "\\(n + 10\\)"
+   ],
+   "why": "Twice the number is \\(2n\\), and 5 more than that is \\(2n + 5\\). The option \\(2(n + 5)\\) adds 5 first and then doubles the whole sum, which is a different expression.",
+   "clue": "Double the number first, then add 5."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya has \\(n\\) stickers. She is given 3 more, then shares all of them equally between 2 friends. Which expression gives each friend's share?",
+   "opts": [
+    "\\((n + 3) \\div 2\\)",
+    "\\(n + 3 \\div 2\\)",
+    "\\(2(n + 3)\\)",
+    "\\((n - 3) \\div 2\\)"
+   ],
+   "why": "The 3 is added before sharing, so the whole sum \\(n + 3\\) is divided by 2. Without brackets, \\(n + 3 \\div 2\\) would divide only the 3 by 2.",
+   "clue": "The sharing applies to the total, not just the 3."
+  }
+ }
 }

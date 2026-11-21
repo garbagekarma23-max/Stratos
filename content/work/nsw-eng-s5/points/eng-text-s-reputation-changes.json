@@ -24,8 +24,354 @@
    0.294
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:47Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (card fact)",
+  "2026-11-20T13:44:55Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.0061,
+  "check": 0.01075,
+  "fix": 0.0253,
+  "recheck": 0.01041
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "None of the bank points teaches that a text's reputation is praised or criticised on first appearance and judged differently later; the closest ones cover readers' changing values and context, which is related but not the same idea of reception and critical reputation over time.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, fact: The card states flatly that 'the words of the text stay the same'. Texts are sometimes revised or edited after publication, for example later editions or the 2023 edits to Roald Dahl's books. A qualifier such as 'usually' or 'in most cases' would avoid teaching an absolute that is not always true. The why for (a) relies on the same absolute claim.",
+ "rejected": {
+  "title": "How a text's reputation changes",
+  "card": [
+   "A text's reputation is how it is judged by readers and critics. It can be praised or criticised when it first appears.",
+   "Later readers can judge the same text differently. A text once ignored may be praised, and a text once admired may be questioned.",
+   "The words of the text stay the same, so the text itself has not got better or worse. What changes is the readers: their values, their world and the questions they ask.",
+   "To explain a change in reputation, ask what the first audience valued and what later audiences value. Then link that difference to how each judged the text."
+  ],
+  "remember": "The text stays the same. Its reputation moves with the readers who judge it.",
+  "a": {
+   "q": "Lena wants to explain why a novel mocked by critics in 1930 is praised today. What should she do first?",
+   "opts": [
+    "Compare what readers valued in 1930 and what they value now",
+    "Find the parts of the novel that were rewritten after 1930",
+    "Decide whether the 1930 critics were poor judges of writing",
+    "Check whether the novel has improved as it has aged"
+   ],
+   "why": "A change in reputation comes from the readers, so Lena should compare what each audience valued and link that to their judgements. Looking for rewritten parts or an improved novel is tempting but wrong, because the words of the text stay the same.",
+   "clue": "Which has changed since 1930: the novel or the people reading it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1950, a play about a young woman who leaves her family to work in the city was criticised as improper. Audiences today praise it as bold. Which comment best explains the shift?",
+   "opts": [
+    "Today's audiences value women's independence more",
+    "The play was changed to suit audiences today",
+    "Audiences in 1950 disliked all plays about cities",
+    "The play has become better written since 1950"
+   ],
+   "why": "The change comes from what each audience valued: 1950 audiences judged the woman's choice by their own values, and today's audiences judge it by different ones. The option about better writing is tempting but wrong, because the text itself has not changed.",
+   "clue": "Compare what each audience valued, not the play itself."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, fact: The card states flatly that 'the words of the text stay the same'. Texts are sometimes revised or edited after publication, for example later editions or the 2023 edits to Roald Dahl's books. A qualifier such as 'usually' or 'in most cases' would avoid teaching an absolute that is not always true. The why for (a) relies on the same absolute claim."
+   ],
+   "saved": {
+    "draft": {
+     "title": "How a text's reputation changes",
+     "card": [
+      "A text's reputation is how it is judged by readers and critics. It can be praised or criticised when it first appears.",
+      "Later readers can judge the same text differently. A text once ignored may be praised, and a text once admired may be questioned.",
+      "The words of the text stay the same. What changes is the readers: their values, their world and the questions they ask.",
+      "To explain a change in reputation, ask what the first audience valued and what later audiences value. Then link that difference to how each judged the text."
+     ],
+     "remember": "A text's words stay put, but its reputation can shift as readers' values and contexts change.",
+     "a": {
+      "q": "A novel was mocked by critics when it was published in 1930. Readers today praise it. What best explains the change?",
+      "opts": [
+       "Readers' values and contexts have changed",
+       "The words of the novel have been rewritten",
+       "Critics in 1930 had not read the novel",
+       "Praise is always given to older texts"
+      ],
+      "why": "The text is the same, but later readers bring different values and a different world to it. The tempting option about rewriting is wrong because the card says the words stay the same.",
+      "clue": "Ask who has changed: the text or its readers?"
+     },
+     "b": {
+      "d": 3,
+      "q": "In 1950, a play about a young woman who leaves her family to work in the city was criticised as improper. Audiences today praise it as bold. Which comment best explains the shift?",
+      "opts": [
+       "Today's audiences value women's independence more",
+       "The play was changed to suit audiences today",
+       "Audiences in 1950 disliked all plays about cities",
+       "The play has become better written since 1950"
+      ],
+      "why": "The change comes from what each audience valued: 1950 audiences judged the woman's choice by their own values, and today's audiences judge it by different ones. The option about better writing is tempting but wrong, because the text itself has not changed.",
+      "clue": "Compare what each audience valued, not the play itself."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Readers' values and contexts have changed",
+      "also_right": []
+     },
+     "b": {
+      "best": "Today's audiences value women's independence more",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "level",
+       "detail": "The right option repeats the remember line almost word for word ('readers' values and contexts change'). The distractors are implausible (critics had not read it, praise is always given to older texts, the words were rewritten). A Year 9–10 student can pick the answer by matching words, without understanding the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and the intended answers are correct. Question a is very easy: its right option echoes the remember line and its distractors are implausible, so consider stronger distractors."
+    },
+    "flags": [
+     "Question a, level: The right option repeats the remember line almost word for word ('readers' values and contexts change'). The distractors are implausible (critics had not read it, praise is always given to older texts, the words were rewritten). A Year 9–10 student can pick the answer by matching words, without understanding the idea."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "How a text's reputation changes",
+     "card": [
+      "A text's reputation is how it is judged by readers and critics. It can be praised or criticised when it first appears.",
+      "Later readers can judge the same text differently. A text once ignored may be praised, and a text once admired may be questioned.",
+      "The words of the text stay the same, so the text itself has not got better or worse. What changes is the readers: their values, their world and the questions they ask.",
+      "To explain a change in reputation, ask what the first audience valued and what later audiences value. Then link that difference to how each judged the text."
+     ],
+     "remember": "The text stays the same. Its reputation moves with the readers who judge it.",
+     "a": {
+      "q": "Lena wants to explain why a novel mocked by critics in 1930 is praised today. What should she do first?",
+      "opts": [
+       "Compare what readers valued in 1930 and what they value now",
+       "Find the parts of the novel that were rewritten after 1930",
+       "Decide whether the 1930 critics were poor judges of writing",
+       "Check whether the novel has improved as it has aged"
+      ],
+      "why": "A change in reputation comes from the readers, so Lena should compare what each audience valued and link that to their judgements. Looking for rewritten parts or an improved novel is tempting but wrong, because the words of the text stay the same.",
+      "clue": "Which has changed since 1930: the novel or the people reading it?"
+     },
+     "b": {
+      "d": 3,
+      "q": "In 1950, a play about a young woman who leaves her family to work in the city was criticised as improper. Audiences today praise it as bold. Which comment best explains the shift?",
+      "opts": [
+       "Today's audiences value women's independence more",
+       "The play was changed to suit audiences today",
+       "Audiences in 1950 disliked all plays about cities",
+       "The play has become better written since 1950"
+      ],
+      "why": "The change comes from what each audience valued: 1950 audiences judged the woman's choice by their own values, and today's audiences judge it by different ones. The option about better writing is tempting but wrong, because the text itself has not changed.",
+      "clue": "Compare what each audience valued, not the play itself."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:06Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Compare what readers valued in 1930 and what they value now",
+       "also_right": []
+      },
+      "b": {
+       "best": "Today's audiences value women's independence more",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "fact",
+        "detail": "The card states flatly that 'the words of the text stay the same'. Texts are sometimes revised or edited after publication, for example later editions or the 2023 edits to Roald Dahl's books. A qualifier such as 'usually' or 'in most cases' would avoid teaching an absolute that is not always true. The why for (a) relies on the same absolute claim."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are sound, each with one clear answer. One small issue: the card says a text's words always stay the same, but texts are sometimes revised or edited, so the claim needs a qualifier."
+     },
+     "flags": [
+      "Card, fact: The card states flatly that 'the words of the text stay the same'. Texts are sometimes revised or edited after publication, for example later editions or the 2023 edits to Roald Dahl's books. A qualifier such as 'usually' or 'in most cases' would avoid teaching an absolute that is not always true. The why for (a) relies on the same absolute claim."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:55Z",
+   "step": "write",
+   "version": {
+    "title": "How a text's reputation changes",
+    "card": [
+     "A text's reputation is how it is judged by readers and critics. It can be praised or criticised when it first appears.",
+     "Later readers can judge the same text differently. A text once ignored may be praised, and a text once admired may be questioned.",
+     "In most cases the words of the text stay the same, so the text itself has not got better or worse. What changes is the readers: their values, their world and the questions they ask.",
+     "To explain a change in reputation, ask what the first audience valued and what later audiences value. Then link that difference to how each judged the text."
+    ],
+    "remember": "The words usually stay the same. Reputation moves with the readers who judge them.",
+    "a": {
+     "q": "Lena wants to explain why a novel mocked by critics in 1930 is praised today. Its words have not changed since 1930. What should she do first?",
+     "opts": [
+      "Compare what readers valued in 1930 and what they value now",
+      "Find the parts of the novel that were rewritten after 1930",
+      "Decide whether the 1930 critics were poor judges of writing",
+      "Check whether the novel has improved as it has aged"
+     ],
+     "why": "A change in reputation comes from the readers, so Lena should compare what each audience valued and link that to their judgements. Looking for rewritten parts or an improved novel is tempting, but this novel's words have not changed since 1930.",
+     "clue": "Which has changed since 1930: the novel or the people reading it?"
+    },
+    "b": {
+     "d": 3,
+     "q": "In 1950, a play about a young woman who leaves her family to work in the city was criticised as improper. Its script has not changed, and audiences today praise it as bold. Which comment best explains the shift?",
+     "opts": [
+      "Today's audiences value women's independence more",
+      "The play was changed to suit audiences today",
+      "Audiences in 1950 disliked plays set in cities",
+      "The play has become better written since 1950"
+     ],
+     "why": "The change comes from what each audience valued: 1950 audiences judged the woman's choice by their own values, and today's audiences judge it by different ones. The option about better writing is tempting but wrong, because the script has not changed.",
+     "clue": "Compare what each audience valued, not the play itself."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Compare what readers valued in 1930 and what they value now",
+     "also_right": []
+    },
+    "b": {
+     "best": "Today's audiences value women's independence more",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "How a text's reputation changes",
+  "card": [
+   "A text's reputation is how it is judged by readers and critics. It can be praised or criticised when it first appears.",
+   "Later readers can judge the same text differently. A text once ignored may be praised, and a text once admired may be questioned.",
+   "In most cases the words of the text stay the same, so the text itself has not got better or worse. What changes is the readers: their values, their world and the questions they ask.",
+   "To explain a change in reputation, ask what the first audience valued and what later audiences value. Then link that difference to how each judged the text."
+  ],
+  "remember": "The words usually stay the same. Reputation moves with the readers who judge them.",
+  "a": {
+   "q": "Lena wants to explain why a novel mocked by critics in 1930 is praised today. Its words have not changed since 1930. What should she do first?",
+   "opts": [
+    "Compare what readers valued in 1930 and what they value now",
+    "Find the parts of the novel that were rewritten after 1930",
+    "Decide whether the 1930 critics were poor judges of writing",
+    "Check whether the novel has improved as it has aged"
+   ],
+   "why": "A change in reputation comes from the readers, so Lena should compare what each audience valued and link that to their judgements. Looking for rewritten parts or an improved novel is tempting, but this novel's words have not changed since 1930.",
+   "clue": "Which has changed since 1930: the novel or the people reading it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1950, a play about a young woman who leaves her family to work in the city was criticised as improper. Its script has not changed, and audiences today praise it as bold. Which comment best explains the shift?",
+   "opts": [
+    "Today's audiences value women's independence more",
+    "The play was changed to suit audiences today",
+    "Audiences in 1950 disliked plays set in cities",
+    "The play has become better written since 1950"
+   ],
+   "why": "The change comes from what each audience valued: 1950 audiences judged the woman's choice by their own values, and today's audiences judge it by different ones. The option about better writing is tempting but wrong, because the script has not changed.",
+   "clue": "Compare what each audience valued, not the play itself."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Compare what readers valued in 1930 and what they value now",
+   "also_right": []
+  },
+  "b": {
+   "best": "Today's audiences value women's independence more",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "How a text's reputation changes",
+  "card": [
+   "A text's reputation is how it is judged by readers and critics. It can be praised or criticised when it first appears.",
+   "Later readers can judge the same text differently. A text once ignored may be praised, and a text once admired may be questioned.",
+   "In most cases the words of the text stay the same, so the text itself has not got better or worse. What changes is the readers: their values, their world and the questions they ask.",
+   "To explain a change in reputation, ask what the first audience valued and what later audiences value. Then link that difference to how each judged the text."
+  ],
+  "remember": "The words usually stay the same. Reputation moves with the readers who judge them.",
+  "a": {
+   "q": "Lena wants to explain why a novel mocked by critics in 1930 is praised today. Its words have not changed since 1930. What should she do first?",
+   "opts": [
+    "Compare what readers valued in 1930 and what they value now",
+    "Find the parts of the novel that were rewritten after 1930",
+    "Decide whether the 1930 critics were poor judges of writing",
+    "Check whether the novel has improved as it has aged"
+   ],
+   "why": "A change in reputation comes from the readers, so Lena should compare what each audience valued and link that to their judgements. Looking for rewritten parts or an improved novel is tempting, but this novel's words have not changed since 1930.",
+   "clue": "Which has changed since 1930: the novel or the people reading it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1950, a play about a young woman who leaves her family to work in the city was criticised as improper. Its script has not changed, and audiences today praise it as bold. Which comment best explains the shift?",
+   "opts": [
+    "Today's audiences value women's independence more",
+    "The play was changed to suit audiences today",
+    "Audiences in 1950 disliked plays set in cities",
+    "The play has become better written since 1950"
+   ],
+   "why": "The change comes from what each audience valued: 1950 audiences judged the woman's choice by their own values, and today's audiences judge it by different ones. The option about better writing is tempting but wrong, because the script has not changed.",
+   "clue": "Compare what each audience valued, not the play itself."
+  }
+ },
+ "checked_by": "claude-code"
 }

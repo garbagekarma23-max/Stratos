@@ -16,8 +16,141 @@
    0.208
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: done",
+  "2026-11-20T12:35:57Z check: for review (first-nations)",
+  "2026-11-20T14:45:07Z review: rejected, to be written again",
+  "2026-11-20T14:58:20Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.01148,
+  "check": 0.00845
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches Aboriginal and Torres Strait Islander plant medicines: the ecosystem card covers cultural burning, the health card covers holistic views of health, and the history card covers rights campaigns.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Aboriginal and Torres Strait Islander plant medicines",
+  "card": [
+   "Aboriginal and Torres Strait Islander Peoples have used plants to prevent and treat illness for a very long time. This knowledge is passed down through generations.",
+   "The Bundjalung people of northern New South Wales have used tea tree leaves. The leaves were applied to wounds and used for coughs.",
+   "This knowledge belongs to the Peoples who hold it. It should be respected and shared only with the permission of those Peoples.",
+   "Plant medicines are one example of Aboriginal and Torres Strait Islander Peoples' deep knowledge of Country and its plants."
+  ],
+  "remember": "Aboriginal and Torres Strait Islander Peoples have long used plants as medicine, such as Bundjalung tea tree leaves for wounds and coughs.",
+  "a": {
+   "q": "How did Bundjalung people use tea tree leaves?",
+   "opts": [
+    "On wounds and for coughs",
+    "To make clothing and tools",
+    "To stop crops growing in dry years",
+    "To mark paths between campsites"
+   ],
+   "why": "Bundjalung people used tea tree leaves as medicine, on wounds and for coughs. The other options are not uses described for tea tree leaves here.",
+   "clue": "Think about illness and injury."
+  },
+  "b": {
+   "d": 2,
+   "q": "A class is studying plant medicines. Which approach shows respect for Aboriginal and Torres Strait Islander knowledge?",
+   "opts": [
+    "Learn it from the Peoples who hold it, with permission",
+    "Copy it into a poster and claim it as the class's idea",
+    "Test it and then say the knowledge is now science's",
+    "Share it online without asking the people who hold it"
+   ],
+   "why": "The knowledge belongs to the Peoples who hold it, so it is respectful to learn and share it with their permission. Claiming it or sharing it without asking ignores their ownership.",
+   "clue": "Who owns the knowledge?"
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:20Z",
+   "step": "write",
+   "version": {
+    "title": "Aboriginal and Torres Strait Islander plant medicines",
+    "card": [
+     "Aboriginal and Torres Strait Islander Peoples have used plants to prevent and treat illness for thousands of years. The knowledge comes from long, careful observation, passed down through generations.",
+     "The Bundjalung people of northern NSW crushed tea tree leaves and put them on wounds. They also breathed in the scent of the crushed leaves to ease coughs and colds.",
+     "Scientists later found that tea tree oil can kill many bacteria and fungi. This helps explain why the leaves helped wounds heal, and the oil is now sold around the world.",
+     "This knowledge belongs to the communities who hold it. Using it respectfully means asking permission and recognising where it comes from."
+    ],
+    "remember": "Tea tree shows how long observation of plants found medicines that science later explained.",
+    "a": {
+     "q": "What does the Bundjalung use of tea tree leaves show about how this knowledge was gained?",
+     "opts": [
+      "It came from long, careful observation of plants",
+      "It came from a laboratory test of tea tree oil",
+      "It came from guessing, with no link to results",
+      "It was copied from medicines brought from Europe"
+     ],
+     "why": "Aboriginal plant medicine knowledge comes from long, careful observation, passed down through generations. Laboratory tests of tea tree oil came much later and explained why it works.",
+     "clue": "Which came first: the use or the laboratory test?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Scientists find that tea tree oil kills bacteria that infect wounds. How does this relate to the Bundjalung use of the leaves?",
+     "opts": [
+      "It helps explain why the leaves worked on wounds",
+      "It shows the Bundjalung use was a lucky guess",
+      "It means the knowledge now belongs to scientists",
+      "It shows the leaves did nothing until oil was sold"
+     ],
+     "why": "Killing bacteria helps explain why crushed leaves on a wound helped it heal, which matches what the Bundjalung had long observed. The science explains the knowledge, but the knowledge still belongs to the communities who hold it.",
+     "clue": "Does the new finding agree with the old use?"
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Aboriginal and Torres Strait Islander plant medicines",
+  "card": [
+   "Aboriginal and Torres Strait Islander Peoples have used plants to prevent and treat illness for thousands of years. The knowledge comes from long, careful observation, passed down through generations.",
+   "The Bundjalung people of northern NSW crushed tea tree leaves and put them on wounds. They also breathed in the scent of the crushed leaves to ease coughs and colds.",
+   "Scientists later found that tea tree oil can kill many bacteria and fungi. This helps explain why the leaves helped wounds heal, and the oil is now sold around the world.",
+   "This knowledge belongs to the communities who hold it. Using it respectfully means asking permission and recognising where it comes from."
+  ],
+  "remember": "Tea tree shows how long observation of plants found medicines that science later explained.",
+  "a": {
+   "q": "What does the Bundjalung use of tea tree leaves show about how this knowledge was gained?",
+   "opts": [
+    "It came from long, careful observation of plants",
+    "It came from a laboratory test of tea tree oil",
+    "It came from guessing, with no link to results",
+    "It was copied from medicines brought from Europe"
+   ],
+   "why": "Aboriginal plant medicine knowledge comes from long, careful observation, passed down through generations. Laboratory tests of tea tree oil came much later and explained why it works.",
+   "clue": "Which came first: the use or the laboratory test?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Scientists find that tea tree oil kills bacteria that infect wounds. How does this relate to the Bundjalung use of the leaves?",
+   "opts": [
+    "It helps explain why the leaves worked on wounds",
+    "It shows the Bundjalung use was a lucky guess",
+    "It means the knowledge now belongs to scientists",
+    "It shows the leaves did nothing until oil was sold"
+   ],
+   "why": "Killing bacteria helps explain why crushed leaves on a wound helped it heal, which matches what the Bundjalung had long observed. The science explains the knowledge, but the knowledge still belongs to the communities who hold it.",
+   "clue": "Does the new finding agree with the old use?"
+  }
+ },
+ "local": []
 }

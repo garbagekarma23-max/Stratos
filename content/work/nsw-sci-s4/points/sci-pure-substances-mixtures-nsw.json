@@ -24,8 +24,279 @@
    0.279
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 may adapt sci-pure-substances-mixtures, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:59Z confirm: Claude Opus 5.5 may adapt sci-pure-substances-mixtures, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt sci-pure-substances-mixtures (2 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting sci-pure-substances-mixtures on the next run",
+  "2026-11-20T14:12:40Z adapt: done",
+  "2026-11-20T14:20:02Z check: flagged",
+  "2026-11-20T14:26:15Z fix: suggested",
+  "2026-11-20T14:44:40Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00036,
+  "confirm": 0.01098,
+  "adapt": 0.00342,
+  "check": 0.0103,
+  "fix": 0.01519
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "sci-pure-substances-mixtures",
+  "changes": [
+   "Name elements and compounds as the two kinds of pure substance, since the new brief teaches them as such and the card does not mention either term."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same pure substance versus mixture idea at a suitable Year 7 depth, but it needs a small wording change to name elements and compounds as the pure substances the NSW brief covers.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "sci-pure-substances-mixtures",
+  "changes": [
+   "State on the card that elements and compounds are both pure substances, as the NSW brief frames pure substances that way.",
+   "Say that the substances in a mixture are not chemically joined, to match the brief's wording."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same pure-substance and mixture idea at a Year 7–8 depth, but it never names elements and compounds as the two kinds of pure substance, which the NSW brief includes.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "sci-pure-substances-mixtures",
+  "changes": [
+   "State on the card that elements and compounds are both pure substances, each with one kind of particle, naming them only and not defining them in depth.",
+   "Say that the substances in a mixture are not chemically joined, to match the brief's wording."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card1",
+   "card2",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "owner",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same idea at the right depth, but it never names elements and compounds as the two kinds of pure substance, which the brief asks for. That is a small change.",
+   "item": "6f7ddad7d29870a8",
+   "result": "decided",
+   "saved": {
+    "id": "sci-pure-substances-mixtures-nsw",
+    "title": "Pure substances and mixtures",
+    "brief": "5472ec0cb549",
+    "shortlist": [
+     [
+      "sci-pure-substances-mixtures",
+      0.859
+     ],
+     [
+      "sci-telling-elements-compounds-mixtures",
+      0.448
+     ],
+     [
+      "sci-distillation-chromatography",
+      0.315
+     ],
+     [
+      "sci-chemical-changes",
+      0.3
+     ],
+     [
+      "sci-molecules-compounds",
+      0.279
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00036,
+     "confirm": 0.01098
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "sci-pure-substances-mixtures",
+     "changes": [
+      "Name elements and compounds as the two kinds of pure substance, since the new brief teaches them as such and the card does not mention either term."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same pure substance versus mixture idea at a suitable Year 7 depth, but it needs a small wording change to name elements and compounds as the pure substances the NSW brief covers.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "sci-pure-substances-mixtures",
+     "changes": [
+      "State on the card that elements and compounds are both pure substances, as the NSW brief frames pure substances that way.",
+      "Say that the substances in a mixture are not chemically joined, to match the brief's wording."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same pure-substance and mixture idea at a Year 7–8 depth, but it never names elements and compounds as the two kinds of pure substance, which the NSW brief includes.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "75d26cca75e2d331"
+  }
+ ],
+ "draft": {
+  "title": "Pure substances and mixtures",
+  "card": [
+   [
+    "Pure substance",
+    "Elements and compounds are both pure substances. Each has only one kind of particle. Distilled water is pure, because every particle in it is a water particle."
+   ],
+   [
+    "Mixture",
+    "It has two or more substances mixed together but not chemically joined. Each substance keeps its own properties."
+   ],
+   "Because the substances in a mixture are not joined, they can be separated by physical means. Examples are sieving, picking out pieces or filtering.",
+   "A pure substance cannot be split into other substances by physical means. Air, sea water and soil are mixtures."
+  ],
+  "remember": "Pure: one kind of particle. Mixture: two or more, and a physical method can separate them.",
+  "a": {
+   "q": "Which one of these samples is a pure substance?",
+   "opts": [
+    "A sample of distilled water",
+    "A glass of sea water",
+    "A spoonful of garden soil",
+    "A sample of clean air"
+   ],
+   "why": "Distilled water has only one kind of particle, so it is pure. Sea water has salt mixed in with the water, so it is a mixture even though it looks clear.",
+   "clue": "Look for the one with only one kind of particle."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia mixes sand and iron filings in a tray. She then uses a magnet to lift out the iron. What does this show?",
+   "opts": [
+    "A mixture formed, so a physical method can separate it",
+    "A pure substance formed, so a magnet can separate it",
+    "They were joined, so the magnet broke them apart",
+    "A mixture formed, so only a chemical change can split it"
+   ],
+   "why": "The sand and iron were only mixed, not joined, so a magnet could pull them apart. This is a physical method. Stirring did not make a pure substance, because two kinds of particle were still present.",
+   "clue": "Did stirring join the two substances or only mix them?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A sample of distilled water",
+   "also_right": []
+  },
+  "b": {
+   "best": "A mixture formed, so a physical method can separate it",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue and the why talk about 'stirring', but the question only says Mia 'mixes' the sand and iron filings. Use 'mixing' so students are not left wondering when stirring happened."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and the intended answers are correct. One small wording mismatch: question b's clue and why mention 'stirring', which the question never describes."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The clue and the why talk about 'stirring', but the question only says Mia 'mixes' the sand and iron filings. Use 'mixing' so students are not left wondering when stirring happened."
+ ],
+ "proposal": {
+  "title": "Pure substances and mixtures",
+  "card": [
+   [
+    "Pure substance",
+    "Elements and compounds are both pure substances. Each has only one kind of particle. Distilled water is pure, because every particle in it is a water particle."
+   ],
+   [
+    "Mixture",
+    "It has two or more substances mixed together but not chemically joined. Each substance keeps its own properties."
+   ],
+   "Because the substances in a mixture are not joined, they can be separated by physical means. Examples are sieving, picking out pieces or filtering.",
+   "A pure substance cannot be split into other substances by physical means. Air, sea water and soil are mixtures."
+  ],
+  "remember": "Pure: one kind of particle. Mixture: two or more, and a physical method can separate them.",
+  "a": {
+   "q": "Which one of these samples is a pure substance?",
+   "opts": [
+    "A sample of distilled water",
+    "A glass of sea water",
+    "A spoonful of garden soil",
+    "A sample of clean air"
+   ],
+   "why": "Distilled water has only one kind of particle, so it is pure. Sea water has salt mixed in with the water, so it is a mixture even though it looks clear.",
+   "clue": "Look for the one with only one kind of particle."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia mixes sand and iron filings in a tray. She then uses a magnet to lift out the iron. What does this show?",
+   "opts": [
+    "A mixture formed, so a physical method can separate it",
+    "A pure substance formed, so a magnet can separate it",
+    "They were joined, so the magnet broke them apart",
+    "A mixture formed, so only a chemical change can split it"
+   ],
+   "why": "The sand and iron were only mixed, not joined, so a magnet could pull them apart. Using a magnet is a physical method. Mixing did not make a pure substance, because two kinds of particle were still present.",
+   "clue": "Did mixing join the two substances or leave each one as it was?"
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Pure substances and mixtures",
+  "card": [
+   [
+    "Pure substance",
+    "Elements and compounds are both pure substances. Each has only one kind of particle. Distilled water is pure, because every particle in it is a water particle."
+   ],
+   [
+    "Mixture",
+    "It has two or more substances mixed together but not chemically joined. Each substance keeps its own properties."
+   ],
+   "Because the substances in a mixture are not joined, they can be separated by physical means. Examples are sieving, picking out pieces or filtering.",
+   "A pure substance cannot be split into other substances by physical means. Air, sea water and soil are mixtures."
+  ],
+  "remember": "Pure: one kind of particle. Mixture: two or more, and a physical method can separate them.",
+  "a": {
+   "q": "Which one of these samples is a pure substance?",
+   "opts": [
+    "A sample of distilled water",
+    "A glass of sea water",
+    "A spoonful of garden soil",
+    "A sample of clean air"
+   ],
+   "why": "Distilled water has only one kind of particle, so it is pure. Sea water has salt mixed in with the water, so it is a mixture even though it looks clear.",
+   "clue": "Look for the one with only one kind of particle."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia mixes sand and iron filings in a tray. She then uses a magnet to lift out the iron. What does this show?",
+   "opts": [
+    "A mixture formed, so a physical method can separate it",
+    "A pure substance formed, so a magnet can separate it",
+    "They were joined, so the magnet broke them apart",
+    "A mixture formed, so only a chemical change can split it"
+   ],
+   "why": "The sand and iron were only mixed, not joined, so a magnet could pull them apart. Using a magnet is a physical method. Mixing did not make a pure substance, because two kinds of particle were still present.",
+   "clue": "Did mixing join the two substances or leave each one as it was?"
+  }
+ }
 }

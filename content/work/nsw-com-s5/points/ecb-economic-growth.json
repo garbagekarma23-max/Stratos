@@ -24,8 +24,44 @@
    0.297
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 may adapt ecb-economic-growth-gdp, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:41Z match: Claude Opus 5.5 says reuse ecb-economic-growth-gdp, with nothing more to write, check or review"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00045,
+  "confirm": 0.00716
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "ecb-economic-growth-gdp",
+  "changes": [
+   "Reword the definition so growth is measured by the change in GDP, as the brief states, rather than insisting that growth is always measured with real GDP.",
+   "Check the card's GDP and percentage-change wording against the NSW Commerce Stage 5 syllabus terms and examples."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same idea of economic growth as rising GDP at a suitable Year 10 depth, but it frames growth around real GDP, which the brief does not, so it needs small wording changes for NSW Commerce.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "ecb-economic-growth-gdp",
+  "changes": [],
+  "sure": "high",
+  "reason": "The Year 10 Economics and Business point already teaches economic growth as rising GDP at a Year 9–10 depth, and its examples and questions carry no state-specific content, so it suits NSW Stage 5 Commerce as it is.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "ecb-economic-growth-gdp",
+ "matched": {
+  "verdict": "reuse",
+  "from": "ecb-economic-growth-gdp",
+  "by": "Claude Opus 5.5",
+  "at": "2026-11-20T12:25:41Z"
+ }
 }

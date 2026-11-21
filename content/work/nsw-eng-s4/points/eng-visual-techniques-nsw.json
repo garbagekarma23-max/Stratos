@@ -12,8 +12,238 @@
    0.271
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:41Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00676,
+  "check": 0.01,
+  "fix": 0.02125,
+  "recheck": 0.00847
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank's vectors card covers only lines and gaze, while the new point also needs salience, colour and framing, so no bank point teaches the same idea in full.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Visual techniques",
+  "card": [
+   [
+    "Salience",
+    "the part of an image the eye goes to first. Size, bright colour, sharp focus and a central position can all make something salient."
+   ],
+   [
+    "Colour",
+    "colour can set a mood or draw attention. Warm colours such as red and orange often feel energetic or urgent. Cool colours such as blue often feel calm or distant."
+   ],
+   [
+    "Framing",
+    "how close the subject is and how much of the scene is shown. A close-up brings the viewer near a face. A wide shot shows the setting around a person."
+   ],
+   [
+    "Vectors and gaze",
+    "vectors are lines, such as an arm, a road or a pointing finger, that lead the eye along a path. Gaze is where a person in the image looks. It can lead the eye to an object, or look straight out at the viewer."
+   ]
+  ],
+  "remember": "Visual techniques guide where a viewer looks first, what they feel and where their eye travels next.",
+  "a": {
+   "q": "A poster for a school swimming carnival has a huge, bright yellow swimmer at its centre and small grey text at the edges. What is the swimmer an example of?",
+   "opts": [
+    "Salience, because the eye goes there first",
+    "Framing, because the text is at the edges",
+    "A vector, because the swimmer is in the centre",
+    "Gaze, because the swimmer is bright yellow"
+   ],
+   "why": "The swimmer is large, bright and central, so the eye goes there first. That is salience. Framing is about how close or wide the shot is, not about which part is noticed first.",
+   "clue": "Ask which part the eye reaches first."
+  },
+  "b": {
+   "d": 3,
+   "q": "A poster for a charity shows a girl in the middle of the image looking at a bowl of food on the right. Viewers' eyes move from her face to the bowl. Which technique leads their eyes to the bowl?",
+   "opts": [
+    "Her gaze, which points towards the bowl",
+    "Colour, because the girl's face is warm",
+    "Framing, because the bowl is on the right",
+    "Salience, because the bowl is the first thing seen"
+   ],
+   "why": "The girl looks at the bowl, so her gaze leads the viewer's eye there. The eye went to her face first, so she is the salient part, not the bowl. Framing is about how close the shot is, not about which way a person looks.",
+   "clue": "Think about where the girl is looking."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Salience, because the eye goes there first",
+   "also_right": []
+  },
+  "b": {
+   "best": "Her gaze, which points towards the bowl",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option stands out. It is the only one not written as 'Technique, because…', and it echoes the stem's 'looking at'. The clue 'Think about where the girl is looking' then points straight to it, so a student could pick it without knowing what gaze is."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question a are accurate. In question b the right option is phrased differently from the others and repeats the stem's wording, so the answer is easy to guess without knowing the idea."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option stands out. It is the only one not written as 'Technique, because…', and it echoes the stem's 'looking at'. The clue 'Think about where the girl is looking' then points straight to it, so a student could pick it without knowing what gaze is."
+ ],
+ "proposal": {
+  "title": "Visual techniques",
+  "card": [
+   [
+    "Salience",
+    "the part of an image the eye goes to first. Size, bright colour, sharp focus and a central position can all make something salient."
+   ],
+   [
+    "Colour",
+    "colour can set a mood or draw attention. Warm colours such as red and orange often feel energetic or urgent. Cool colours such as blue often feel calm or distant."
+   ],
+   [
+    "Framing",
+    "how close the subject is and how much of the scene is shown. A close-up brings the viewer near a face. A wide shot shows the setting around a person."
+   ],
+   [
+    "Vectors and gaze",
+    "vectors are lines, such as an arm, a road or a pointing finger, that lead the eye along a path. Gaze is where a person in the image looks. It can lead the eye to an object, or look straight out at the viewer."
+   ]
+  ],
+  "remember": "Visual techniques guide where a viewer looks first, what they feel and where their eye travels next.",
+  "a": {
+   "q": "A poster for a school swimming carnival has a huge, bright yellow swimmer at its centre and small grey text at the edges. What is the swimmer an example of?",
+   "opts": [
+    "Salience, because the eye goes there first",
+    "Framing, because the text is at the edges",
+    "A vector, because the swimmer is in the centre",
+    "Gaze, because the swimmer is bright yellow"
+   ],
+   "why": "The swimmer is large, bright and central, so the eye goes there first. That is salience. Framing is about how close or wide the shot is, not about which part is noticed first.",
+   "clue": "Ask which part the eye reaches first."
+  },
+  "b": {
+   "d": 3,
+   "q": "A charity poster shows a girl's face in the centre and a bowl of food on the right. Her eyes are fixed on the bowl. Viewers notice her face first, then the bowl. Which technique moves their eyes to the bowl?",
+   "opts": [
+    "Gaze, because the girl's eyes point to the bowl",
+    "Colour, because the girl's face is in warm tones",
+    "Framing, because the bowl sits on the right side",
+    "Salience, because the bowl is the first thing seen"
+   ],
+   "why": "The girl's eyes are on the bowl, so her gaze carries the viewer's eye there. Salience is tempting, but the eye went to her face first, so the face is the salient part, not the bowl. Framing is about how close the shot is, not which way a person looks.",
+   "clue": "Salience explains the first stop, not the second."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Salience, because the eye goes there first",
+    "also_right": []
+   },
+   "b": {
+    "best": "Gaze, because the girl's eyes point to the bowl",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 18,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option stands out. It is the only one not written as 'Technique, because…', and it echoes the stem's 'looking at'. The clue 'Think about where the girl is looking' then points straight to it, so a student could pick it without knowing what gaze is."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The right option stands out. It is the only one not written as 'Technique, because…', and it echoes the stem's 'looking at'. The clue 'Think about where the girl is looking' then points straight to it, so a student could pick it without knowing what gaze is."
+  ]
+ },
+ "final": {
+  "title": "Visual techniques",
+  "card": [
+   [
+    "Salience",
+    "the part of an image the eye goes to first. Size, bright colour, sharp focus and a central position can all make something salient."
+   ],
+   [
+    "Colour",
+    "colour can set a mood or draw attention. Warm colours such as red and orange often feel energetic or urgent. Cool colours such as blue often feel calm or distant."
+   ],
+   [
+    "Framing",
+    "how close the subject is and how much of the scene is shown. A close-up brings the viewer near a face. A wide shot shows the setting around a person."
+   ],
+   [
+    "Vectors and gaze",
+    "vectors are lines, such as an arm, a road or a pointing finger, that lead the eye along a path. Gaze is where a person in the image looks. It can lead the eye to an object, or look straight out at the viewer."
+   ]
+  ],
+  "remember": "Visual techniques guide where a viewer looks first, what they feel and where their eye travels next.",
+  "a": {
+   "q": "A poster for a school swimming carnival has a huge, bright yellow swimmer at its centre and small grey text at the edges. What is the swimmer an example of?",
+   "opts": [
+    "Salience, because the eye goes there first",
+    "Framing, because the text is at the edges",
+    "A vector, because the swimmer is in the centre",
+    "Gaze, because the swimmer is bright yellow"
+   ],
+   "why": "The swimmer is large, bright and central, so the eye goes there first. That is salience. Framing is about how close or wide the shot is, not about which part is noticed first.",
+   "clue": "Ask which part the eye reaches first."
+  },
+  "b": {
+   "d": 3,
+   "q": "A charity poster shows a girl's face in the centre and a bowl of food on the right. Her eyes are fixed on the bowl. Viewers notice her face first, then the bowl. Which technique moves their eyes to the bowl?",
+   "opts": [
+    "Gaze, because the girl's eyes point to the bowl",
+    "Colour, because the girl's face is in warm tones",
+    "Framing, because the bowl sits on the right side",
+    "Salience, because the bowl is the first thing seen"
+   ],
+   "why": "The girl's eyes are on the bowl, so her gaze carries the viewer's eye there. Salience is tempting, but the eye went to her face first, so the face is the salient part, not the bowl. Framing is about how close the shot is, not which way a person looks.",
+   "clue": "Salience explains the first stop, not the second."
+  }
+ },
+ "cleared_by": "recheck"
 }

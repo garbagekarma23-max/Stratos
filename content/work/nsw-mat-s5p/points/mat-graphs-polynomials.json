@@ -24,8 +24,749 @@
    0.309
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:58Z write: failed the content check, writing again",
+  "2026-11-20T12:35:56Z write: done",
+  "2026-11-20T12:44:59Z check: flagged",
+  "2026-11-20T12:53:28Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00051,
+  "write": 0.02844,
+  "check": 0.01347,
+  "fix": 0.02492,
+  "recheck": 0.01107
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-cubic-polynomial-graphs, is written for Year 11 and also covers y-intercepts, end behaviour and cubed factors, which go beyond this Stage 5 point's brief, so it is broader and at a different depth rather than an exact or small-change match.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Graphs of polynomials",
+  "card": [
+   "Each factor of a polynomial gives an x-intercept. For \\(y = (x + 1)(x - 3)\\), the intercepts are at \\(x = -1\\) and \\(x = 3\\).",
+   "A single root is from a factor that appears once. The curve crosses the x-axis there.",
+   "A double root is from a factor that is squared, such as \\((x - 2)^{2}\\). The curve touches the x-axis there and turns back.",
+   "The y-intercept is found by putting \\(x = 0\\). For a positive leading coefficient, the right end of the curve goes up."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "The curve \\(y = (x + 1)(x - 2)^{2}\\). It crosses the x-axis at \\(x = -1\\), touches it at \\(x = 2\\), and crosses the y-axis at \\(y = 4\\).",
+    "x": {
+     "min": -3,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -10,
+     "max": 10,
+     "label": "\\(y\\)",
+     "step": 2,
+     "nums": false
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "(x + 1)(x - 2)^{2}",
+      "domain": [
+       -1.5,
+       3.3
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       -1,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\(-1\\)",
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\(2\\)",
+      "pos": "below"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       4
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\(4\\)",
+      "pos": "above"
+     }
+    ]
+   }
+  },
+  "remember": "A single root crosses the axis. A double root touches it and turns back.",
+  "a": {
+   "q": "The curve \\(y = (x - 4)^{2}(x + 1)\\) meets the x-axis at \\(x = 4\\). What does the curve do there?",
+   "opts": [
+    "Touches the axis and turns back",
+    "Crosses the axis",
+    "Stops at the axis",
+    "Crosses the axis twice"
+   ],
+   "why": "The factor \\((x - 4)\\) is squared, so \\(x = 4\\) is a double root and the curve touches the axis and turns back. A crossing happens only at a single root such as \\(x = -1\\).",
+   "clue": "Look at the power on the factor \\((x - 4)\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia sketches \\(y = (x - 1)(x + 3)^{2}\\). Where does her curve cross the y-axis?",
+   "opts": [
+    "\\(y = -9\\)",
+    "\\(y = 9\\)",
+    "\\(y = 3\\)",
+    "\\(y = -3\\)"
+   ],
+   "why": "Put \\(x = 0\\): \\((0 - 1)(0 + 3)^{2} = -1 \\times 9 = -9\\). The answer \\(9\\) comes from forgetting the sign of the factor \\((x - 1)\\).",
+   "clue": "Substitute \\(x = 0\\) and keep the sign of each factor."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Touches the axis and turns back",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(y = -9\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says 'A crossing happens only at a single root'. This is not true in general: a curve also crosses at a root from a cubed factor, such as \\((x - 4)^{3}\\). The card only says a single root crosses, so the 'only' overstates it. Reword, for example: 'At a single root such as \\(x = -1\\), the curve crosses instead.'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, the graph and both questions are correct. One small issue: the why for (a) says a crossing happens 'only' at a single root, which is false for cubed factors and should be reworded."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: The why says 'A crossing happens only at a single root'. This is not true in general: a curve also crosses at a root from a cubed factor, such as \\((x - 4)^{3}\\). The card only says a single root crosses, so the 'only' overstates it. Reword, for example: 'At a single root such as \\(x = -1\\), the curve crosses instead.'"
+ ],
+ "proposal": {
+  "title": "Graphs of polynomials",
+  "card": [
+   "Each factor of a polynomial gives an x-intercept. For \\(y = (x + 1)(x - 3)\\), the intercepts are at \\(x = -1\\) and \\(x = 3\\).",
+   "A single root is from a factor that appears once. The curve crosses the x-axis there.",
+   "A double root is from a factor that is squared, such as \\((x - 2)^{2}\\). The curve touches the x-axis there and turns back.",
+   "The y-intercept is found by putting \\(x = 0\\). For a positive leading coefficient, the right end of the curve goes up."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "The curve \\(y = (x + 1)(x - 2)^{2}\\). It crosses the x-axis at \\(x = -1\\), touches it at \\(x = 2\\), and crosses the y-axis at \\(y = 4\\).",
+    "x": {
+     "min": -3,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -10,
+     "max": 10,
+     "label": "\\(y\\)",
+     "step": 2,
+     "nums": false
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "(x + 1)(x - 2)^{2}",
+      "domain": [
+       -1.5,
+       3.3
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       -1,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\(-1\\)",
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\(2\\)",
+      "pos": "below"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       4
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\(4\\)",
+      "pos": "above"
+     }
+    ]
+   }
+  },
+  "remember": "A single root crosses the axis. A double root touches it and turns back.",
+  "a": {
+   "q": "The curve \\(y = (x - 4)^{2}(x + 1)\\) meets the x-axis at \\(x = 4\\). What does the curve do there?",
+   "opts": [
+    "Touches the axis and turns back",
+    "Crosses the axis",
+    "Stops at the axis",
+    "Crosses the axis twice"
+   ],
+   "why": "The factor \\((x - 4)\\) is squared, so \\(x = 4\\) is a double root and the curve touches the axis and turns back. At a single root such as \\(x = -1\\), the curve crosses instead.",
+   "clue": "Look at the power on the factor \\((x - 4)\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia sketches \\(y = (x - 1)(x + 3)^{2}\\). Where does her curve cross the y-axis?",
+   "opts": [
+    "\\(y = -9\\)",
+    "\\(y = 9\\)",
+    "\\(y = 3\\)",
+    "\\(y = -3\\)"
+   ],
+   "why": "Put \\(x = 0\\): \\((0 - 1)(0 + 3)^{2} = -1 \\times 9 = -9\\). The answer \\(9\\) comes from forgetting the sign of the factor \\((x - 1)\\).",
+   "clue": "Substitute \\(x = 0\\) and keep the sign of each factor."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Touches the axis and turns back",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(y = -9\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The graph data matches its alt: the intercepts are at x = -1 and x = 2, and the y-intercept is 4. Both intended answers are correct."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says 'A crossing happens only at a single root'. This is not true in general: a curve also crosses at a root from a cubed factor, such as \\((x - 4)^{3}\\). The card only says a single root crosses, so the 'only' overstates it. Reword, for example: 'At a single root such as \\(x = -1\\), the curve crosses instead.'"
+   }
+  ],
+  "flags": [
+   "Question a, fact: The why says 'A crossing happens only at a single root'. This is not true in general: a curve also crosses at a root from a cubed factor, such as \\((x - 4)^{3}\\). The card only says a single root crosses, so the 'only' overstates it. Reword, for example: 'At a single root such as \\(x = -1\\), the curve crosses instead.'"
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Graphs of polynomials",
+  "card": [
+   "Each factor of a polynomial gives an x-intercept. For \\(y = (x + 1)(x - 3)\\), the intercepts are at \\(x = -1\\) and \\(x = 3\\).",
+   "A single root is from a factor that appears once. The curve crosses the x-axis there.",
+   "A double root is from a factor that is squared, such as \\((x - 2)^{2}\\). The curve touches the x-axis there and turns back.",
+   "The y-intercept is found by putting \\(x = 0\\). For a positive leading coefficient, the right end of the curve goes up."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "The curve \\(y = (x + 1)(x - 2)^{2}\\). It crosses the x-axis at \\(x = -1\\), touches it at \\(x = 2\\), and crosses the y-axis at \\(y = 4\\).",
+    "x": {
+     "min": -3,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -10,
+     "max": 10,
+     "label": "\\(y\\)",
+     "step": 2,
+     "nums": false
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "(x + 1)(x - 2)^{2}",
+      "domain": [
+       -1.5,
+       3.3
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       -1,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\(-1\\)",
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\(2\\)",
+      "pos": "below"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       4
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\(4\\)",
+      "pos": "above"
+     }
+    ]
+   }
+  },
+  "remember": "A single root crosses the axis. A double root touches it and turns back.",
+  "a": {
+   "q": "The curve \\(y = (x - 4)^{2}(x + 1)\\) meets the x-axis at \\(x = 4\\). What does the curve do there?",
+   "opts": [
+    "Touches the axis and turns back",
+    "Crosses the axis",
+    "Stops at the axis",
+    "Crosses the axis twice"
+   ],
+   "why": "The factor \\((x - 4)\\) is squared, so \\(x = 4\\) is a double root and the curve touches the axis and turns back. At a single root such as \\(x = -1\\), the curve crosses instead.",
+   "clue": "Look at the power on the factor \\((x - 4)\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia sketches \\(y = (x - 1)(x + 3)^{2}\\). Where does her curve cross the y-axis?",
+   "opts": [
+    "\\(y = -9\\)",
+    "\\(y = 9\\)",
+    "\\(y = 3\\)",
+    "\\(y = -3\\)"
+   ],
+   "why": "Put \\(x = 0\\): \\((0 - 1)(0 + 3)^{2} = -1 \\times 9 = -9\\). The answer \\(9\\) comes from forgetting the sign of the factor \\((x - 1)\\).",
+   "clue": "Substitute \\(x = 0\\) and keep the sign of each factor."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix drops the false 'only' from question a's why, the one problem named. The graph of \\(y = (x + 1)(x - 2)^{2}\\) crosses at \\(-1\\), touches at 2 and meets the y-axis at 4, as its alt says, and question b's \\(-9\\) is right.",
+   "item": "061b570609198e33",
+   "result": "decided",
+   "saved": {
+    "id": "mat-graphs-polynomials",
+    "title": "Graphs of polynomials",
+    "brief": "4cc6718dd542",
+    "shortlist": [
+     [
+      "mat-cubic-polynomial-graphs",
+      0.514
+     ],
+     [
+      "mat-solving-polynomial-equations",
+      0.419
+     ],
+     [
+      "mat-cubic-quartic-graphs",
+      0.354
+     ],
+     [
+      "mat-factorising-polynomials-over-c",
+      0.352
+     ],
+     [
+      "mat-polynomial-equations-unit-3",
+      0.309
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00051,
+     "write": 0.02844,
+     "check": 0.01347,
+     "fix": 0.02492,
+     "recheck": 0.01107
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The closest bank point, mat-cubic-polynomial-graphs, is written for Year 11 and also covers y-intercepts, end behaviour and cubed factors, which go beyond this Stage 5 point's brief, so it is broader and at a different depth rather than an exact or small-change match.",
+     "model": "claude-haiku-5-5"
+    },
+    "draft": {
+     "title": "Graphs of polynomials",
+     "card": [
+      "Each factor of a polynomial gives an x-intercept. For \\(y = (x + 1)(x - 3)\\), the intercepts are at \\(x = -1\\) and \\(x = 3\\).",
+      "A single root is from a factor that appears once. The curve crosses the x-axis there.",
+      "A double root is from a factor that is squared, such as \\((x - 2)^{2}\\). The curve touches the x-axis there and turns back.",
+      "The y-intercept is found by putting \\(x = 0\\). For a positive leading coefficient, the right end of the curve goes up."
+     ],
+     "cardFigs": {
+      "3": {
+       "kind": "graph",
+       "alt": "The curve \\(y = (x + 1)(x - 2)^{2}\\). It crosses the x-axis at \\(x = -1\\), touches it at \\(x = 2\\), and crosses the y-axis at \\(y = 4\\).",
+       "x": {
+        "min": -3,
+        "max": 4,
+        "label": "\\(x\\)",
+        "step": 1,
+        "nums": false
+       },
+       "y": {
+        "min": -10,
+        "max": 10,
+        "label": "\\(y\\)",
+        "step": 2,
+        "nums": false
+       },
+       "items": [
+        {
+         "type": "fn",
+         "id": "f",
+         "expr": "(x + 1)(x - 2)^{2}",
+         "domain": [
+          -1.5,
+          3.3
+         ]
+        },
+        {
+         "type": "point",
+         "at": [
+          -1,
+          0
+         ],
+         "on": [
+          "f"
+         ],
+         "is": "x-intercept",
+         "label": "\\(-1\\)",
+         "pos": "above-left"
+        },
+        {
+         "type": "point",
+         "at": [
+          2,
+          0
+         ],
+         "on": [
+          "f"
+         ],
+         "is": "x-intercept",
+         "label": "\\(2\\)",
+         "pos": "below"
+        },
+        {
+         "type": "point",
+         "at": [
+          0,
+          4
+         ],
+         "on": [
+          "f"
+         ],
+         "is": "y-intercept",
+         "label": "\\(4\\)",
+         "pos": "above"
+        }
+       ]
+      }
+     },
+     "remember": "A single root crosses the axis. A double root touches it and turns back.",
+     "a": {
+      "q": "The curve \\(y = (x - 4)^{2}(x + 1)\\) meets the x-axis at \\(x = 4\\). What does the curve do there?",
+      "opts": [
+       "Touches the axis and turns back",
+       "Crosses the axis",
+       "Stops at the axis",
+       "Crosses the axis twice"
+      ],
+      "why": "The factor \\((x - 4)\\) is squared, so \\(x = 4\\) is a double root and the curve touches the axis and turns back. A crossing happens only at a single root such as \\(x = -1\\).",
+      "clue": "Look at the power on the factor \\((x - 4)\\)."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia sketches \\(y = (x - 1)(x + 3)^{2}\\). Where does her curve cross the y-axis?",
+      "opts": [
+       "\\(y = -9\\)",
+       "\\(y = 9\\)",
+       "\\(y = 3\\)",
+       "\\(y = -3\\)"
+      ],
+      "why": "Put \\(x = 0\\): \\((0 - 1)(0 + 3)^{2} = -1 \\times 9 = -9\\). The answer \\(9\\) comes from forgetting the sign of the factor \\((x - 1)\\).",
+      "clue": "Substitute \\(x = 0\\) and keep the sign of each factor."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Touches the axis and turns back",
+      "also_right": []
+     },
+     "b": {
+      "best": "\\(y = -9\\)",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "fact",
+       "detail": "The why says 'A crossing happens only at a single root'. This is not true in general: a curve also crosses at a root from a cubed factor, such as \\((x - 4)^{3}\\). The card only says a single root crosses, so the 'only' overstates it. Reword, for example: 'At a single root such as \\(x = -1\\), the curve crosses instead.'"
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card, the graph and both questions are correct. One small issue: the why for (a) says a crossing happens 'only' at a single root, which is false for cubed factors and should be reworded."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a, fact: The why says 'A crossing happens only at a single root'. This is not true in general: a curve also crosses at a root from a cubed factor, such as \\((x - 4)^{3}\\). The card only says a single root crosses, so the 'only' overstates it. Reword, for example: 'At a single root such as \\(x = -1\\), the curve crosses instead.'"
+    ],
+    "proposal": {
+     "title": "Graphs of polynomials",
+     "card": [
+      "Each factor of a polynomial gives an x-intercept. For \\(y = (x + 1)(x - 3)\\), the intercepts are at \\(x = -1\\) and \\(x = 3\\).",
+      "A single root is from a factor that appears once. The curve crosses the x-axis there.",
+      "A double root is from a factor that is squared, such as \\((x - 2)^{2}\\). The curve touches the x-axis there and turns back.",
+      "The y-intercept is found by putting \\(x = 0\\). For a positive leading coefficient, the right end of the curve goes up."
+     ],
+     "cardFigs": {
+      "3": {
+       "kind": "graph",
+       "alt": "The curve \\(y = (x + 1)(x - 2)^{2}\\). It crosses the x-axis at \\(x = -1\\), touches it at \\(x = 2\\), and crosses the y-axis at \\(y = 4\\).",
+       "x": {
+        "min": -3,
+        "max": 4,
+        "label": "\\(x\\)",
+        "step": 1,
+        "nums": false
+       },
+       "y": {
+        "min": -10,
+        "max": 10,
+        "label": "\\(y\\)",
+        "step": 2,
+        "nums": false
+       },
+       "items": [
+        {
+         "type": "fn",
+         "id": "f",
+         "expr": "(x + 1)(x - 2)^{2}",
+         "domain": [
+          -1.5,
+          3.3
+         ]
+        },
+        {
+         "type": "point",
+         "at": [
+          -1,
+          0
+         ],
+         "on": [
+          "f"
+         ],
+         "is": "x-intercept",
+         "label": "\\(-1\\)",
+         "pos": "above-left"
+        },
+        {
+         "type": "point",
+         "at": [
+          2,
+          0
+         ],
+         "on": [
+          "f"
+         ],
+         "is": "x-intercept",
+         "label": "\\(2\\)",
+         "pos": "below"
+        },
+        {
+         "type": "point",
+         "at": [
+          0,
+          4
+         ],
+         "on": [
+          "f"
+         ],
+         "is": "y-intercept",
+         "label": "\\(4\\)",
+         "pos": "above"
+        }
+       ]
+      }
+     },
+     "remember": "A single root crosses the axis. A double root touches it and turns back.",
+     "a": {
+      "q": "The curve \\(y = (x - 4)^{2}(x + 1)\\) meets the x-axis at \\(x = 4\\). What does the curve do there?",
+      "opts": [
+       "Touches the axis and turns back",
+       "Crosses the axis",
+       "Stops at the axis",
+       "Crosses the axis twice"
+      ],
+      "why": "The factor \\((x - 4)\\) is squared, so \\(x = 4\\) is a double root and the curve touches the axis and turns back. At a single root such as \\(x = -1\\), the curve crosses instead.",
+      "clue": "Look at the power on the factor \\((x - 4)\\)."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia sketches \\(y = (x - 1)(x + 3)^{2}\\). Where does her curve cross the y-axis?",
+      "opts": [
+       "\\(y = -9\\)",
+       "\\(y = 9\\)",
+       "\\(y = 3\\)",
+       "\\(y = -3\\)"
+      ],
+      "why": "Put \\(x = 0\\): \\((0 - 1)(0 + 3)^{2} = -1 \\times 9 = -9\\). The answer \\(9\\) comes from forgetting the sign of the factor \\((x - 1)\\).",
+      "clue": "Substitute \\(x = 0\\) and keep the sign of each factor."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:08Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "Touches the axis and turns back",
+       "also_right": []
+      },
+      "b": {
+       "best": "\\(y = -9\\)",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found. The graph data matches its alt: the intercepts are at x = -1 and x = 2, and the y-intercept is 4. Both intended answers are correct."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-20T13:37:08Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 11,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "a",
+       "kind": "fact",
+       "detail": "The why says 'A crossing happens only at a single root'. This is not true in general: a curve also crosses at a root from a cubed factor, such as \\((x - 4)^{3}\\). The card only says a single root crosses, so the 'only' overstates it. Reword, for example: 'At a single root such as \\(x = -1\\), the curve crosses instead.'"
+      }
+     ],
+     "flags": [
+      "Question a, fact: The why says 'A crossing happens only at a single root'. This is not true in general: a curve also crosses at a root from a cubed factor, such as \\((x - 4)^{3}\\). The card only says a single root crosses, so the 'only' overstates it. Reword, for example: 'At a single root such as \\(x = -1\\), the curve crosses instead.'"
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "fef5a7afcb9d3865"
+  }
  ]
 }

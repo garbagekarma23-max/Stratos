@@ -24,8 +24,213 @@
    0.28
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: done",
+  "2026-11-20T12:35:44Z check: flagged",
+  "2026-11-20T12:44:52Z fix: suggested",
+  "2026-11-20T13:23:35Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.01053,
+  "check": 0.0078,
+  "fix": 0.014
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the range of goals a business typically aims for (profit, growth, market share, service, social and environmental goals) at Stage 5 depth; the closest matches cover goal-setting and decisions, vision and mission at Year 11, government trade-offs, or the definition of a business.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The goals of a business",
+  "card": [
+   [
+    "Profit",
+    "Profit is the money left after all costs are paid out of revenue. Most businesses aim to make a profit so they can pay owners and keep operating."
+   ],
+   [
+    "Growth",
+    "Growth means getting bigger, for example by selling more, hiring more staff or opening new shops."
+   ],
+   [
+    "Market share",
+    "Market share is the part of total sales in a market that one business wins from its competitors."
+   ],
+   [
+    "Other goals",
+    "Some businesses also aim for good customer service, or for social or environmental goals, such as hiring local people or cutting waste."
+   ]
+  ],
+  "remember": "Profit is a common goal, but businesses may also aim for growth, market share, service and social or environmental goals.",
+  "a": {
+   "q": "Mia's café in Dubbo sells more coffee than the other cafés in town. Which goal is she mainly achieving?",
+   "opts": [
+    "A larger market share",
+    "A higher level of profit",
+    "A social goal",
+    "An environmental goal"
+   ],
+   "why": "Winning a bigger part of the town's coffee sales from competitors is market share. Profit would depend on costs as well as sales, and the case says nothing about costs.",
+   "clue": "Think about her sales compared with the other cafés."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tane's bakery in Hobart switches to compostable bags, even though they cost more. Which goal does this show?",
+   "opts": [
+    "An environmental goal",
+    "A profit goal",
+    "A growth goal",
+    "A market share goal"
+   ],
+   "why": "Compostable bags aim to cut waste, which is an environmental goal. It is tempting to call it a profit goal, but the bags cost more, so it does not help profit.",
+   "clue": "Look at what the bags do for the environment, not for costs."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A larger market share",
+   "also_right": []
+  },
+  "b": {
+   "best": "An environmental goal",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Look at what the bags do for the environment, not for costs' names the environment directly. It points straight to the option 'An environmental goal', so a student can answer without understanding the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and the card are correct. Question b's clue says 'environment' outright, which gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue 'Look at what the bags do for the environment, not for costs' names the environment directly. It points straight to the option 'An environmental goal', so a student can answer without understanding the idea."
+ ],
+ "proposal": {
+  "title": "The goals of a business",
+  "card": [
+   [
+    "Profit",
+    "Profit is the money left after all costs are paid out of revenue. Most businesses aim to make a profit so they can pay owners and keep operating."
+   ],
+   [
+    "Growth",
+    "Growth means getting bigger, for example by selling more, hiring more staff or opening new shops."
+   ],
+   [
+    "Market share",
+    "Market share is the part of total sales in a market that one business wins from its competitors."
+   ],
+   [
+    "Other goals",
+    "Some businesses also aim for good customer service, or for social or environmental goals, such as hiring local people or cutting waste."
+   ]
+  ],
+  "remember": "Profit is a common goal, but businesses may also aim for growth, market share, service and social or environmental goals.",
+  "a": {
+   "q": "Mia's café in Dubbo sells more coffee than the other cafés in town. Which goal is she mainly achieving?",
+   "opts": [
+    "A larger market share",
+    "A higher level of profit",
+    "A social goal",
+    "An environmental goal"
+   ],
+   "why": "Winning a bigger part of the town's coffee sales from competitors is market share. Profit would depend on costs as well as sales, and the case says nothing about costs.",
+   "clue": "Think about her sales compared with the other cafés."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tane's bakery in Hobart switches to compostable bags, even though they cost more. Which goal does this show?",
+   "opts": [
+    "An environmental goal",
+    "A profit goal",
+    "A growth goal",
+    "A market share goal"
+   ],
+   "why": "Compostable bags aim to cut waste, which is an environmental goal. It is tempting to call it a profit goal, but the bags cost more, so the switch is not aimed at profit.",
+   "clue": "The switch adds to costs, so what else could it be for?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:35Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Look at what the bags do for the environment, not for costs' names the environment directly. It points straight to the option 'An environmental goal', so a student can answer without understanding the idea."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue 'Look at what the bags do for the environment, not for costs' names the environment directly. It points straight to the option 'An environmental goal', so a student can answer without understanding the idea."
+  ]
+ },
+ "final": {
+  "title": "The goals of a business",
+  "card": [
+   [
+    "Profit",
+    "Profit is the money left after all costs are paid out of revenue. Most businesses aim to make a profit so they can pay owners and keep operating."
+   ],
+   [
+    "Growth",
+    "Growth means getting bigger, for example by selling more, hiring more staff or opening new shops."
+   ],
+   [
+    "Market share",
+    "Market share is the part of total sales in a market that one business wins from its competitors."
+   ],
+   [
+    "Other goals",
+    "Some businesses also aim for good customer service, or for social or environmental goals, such as hiring local people or cutting waste."
+   ]
+  ],
+  "remember": "Profit is a common goal, but businesses may also aim for growth, market share, service and social or environmental goals.",
+  "a": {
+   "q": "Mia's café in Dubbo sells more coffee than the other cafés in town. Which goal is she mainly achieving?",
+   "opts": [
+    "A larger market share",
+    "A higher level of profit",
+    "A social goal",
+    "An environmental goal"
+   ],
+   "why": "Winning a bigger part of the town's coffee sales from competitors is market share. Profit would depend on costs as well as sales, and the case says nothing about costs.",
+   "clue": "Think about her sales compared with the other cafés."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tane's bakery in Hobart switches to compostable bags, even though they cost more. Which goal does this show?",
+   "opts": [
+    "An environmental goal",
+    "A profit goal",
+    "A growth goal",
+    "A market share goal"
+   ],
+   "why": "Compostable bags aim to cut waste, which is an environmental goal. It is tempting to call it a profit goal, but the bags cost more, so the switch is not aimed at profit.",
+   "clue": "The switch adds to costs, so what else could it be for?"
+  }
+ },
+ "cleared_by": "auto"
 }

@@ -24,8 +24,137 @@
    0.33
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:46Z write: done",
+  "2026-11-20T12:35:48Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.01043,
+  "check": 0.00746
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches the list of fresh water sources the brief asks for: geo-forms-water covers where Earth's water is held, and geo-managing-water-sustainably covers managing supply, so both are related but a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Sources of water",
+  "card": [
+   [
+    "Natural sources",
+    "Fresh water comes from rivers, lakes and groundwater. Groundwater is water stored under the ground, which people reach with bores and wells."
+   ],
+   [
+    "Dams",
+    "A dam is a wall built across a river to hold back water in a large store. The stored water can be used when rain is low."
+   ],
+   [
+    "Rainwater tanks",
+    "Rainwater tanks collect rain from a roof. Households can use the water for gardens and some other jobs."
+   ],
+   [
+    "Made or reused",
+    "Desalination plants remove salt from seawater to make fresh water. Recycled water is used water that has been treated so it can be used again."
+   ]
+  ],
+  "remember": "Water comes from rivers, lakes, dams and groundwater, and also from tanks, desalination and recycling.",
+  "a": {
+   "q": "A town in the outback drills a bore and pumps up water from under the ground. What is its source?",
+   "opts": [
+    "Groundwater",
+    "A rainwater tank",
+    "Recycled water",
+    "A desalination plant"
+   ],
+   "why": "Water stored under the ground is groundwater, and a bore reaches it. Recycled water is treated used water, which is not what is pumped from a bore.",
+   "clue": "Where is the water being taken from?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A coastal city treats seawater to remove the salt and adds it to its supply. Which source is this?",
+   "opts": [
+    "A desalination plant",
+    "Recycled water",
+    "A dam",
+    "Groundwater"
+   ],
+   "why": "Removing salt from seawater is desalination. Recycled water is tempting because it is also treated, but it starts as used water, not seawater.",
+   "clue": "What is taken out of the water?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Groundwater",
+   "also_right": []
+  },
+  "b": {
+   "best": "A desalination plant",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Sources of water",
+  "card": [
+   [
+    "Natural sources",
+    "Fresh water comes from rivers, lakes and groundwater. Groundwater is water stored under the ground, which people reach with bores and wells."
+   ],
+   [
+    "Dams",
+    "A dam is a wall built across a river to hold back water in a large store. The stored water can be used when rain is low."
+   ],
+   [
+    "Rainwater tanks",
+    "Rainwater tanks collect rain from a roof. Households can use the water for gardens and some other jobs."
+   ],
+   [
+    "Made or reused",
+    "Desalination plants remove salt from seawater to make fresh water. Recycled water is used water that has been treated so it can be used again."
+   ]
+  ],
+  "remember": "Water comes from rivers, lakes, dams and groundwater, and also from tanks, desalination and recycling.",
+  "a": {
+   "q": "A town in the outback drills a bore and pumps up water from under the ground. What is its source?",
+   "opts": [
+    "Groundwater",
+    "A rainwater tank",
+    "Recycled water",
+    "A desalination plant"
+   ],
+   "why": "Water stored under the ground is groundwater, and a bore reaches it. Recycled water is treated used water, which is not what is pumped from a bore.",
+   "clue": "Where is the water being taken from?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A coastal city treats seawater to remove the salt and adds it to its supply. Which source is this?",
+   "opts": [
+    "A desalination plant",
+    "Recycled water",
+    "A dam",
+    "Groundwater"
+   ],
+   "why": "Removing salt from seawater is desalination. Recycled water is tempting because it is also treated, but it starts as used water, not seawater.",
+   "clue": "What is taken out of the water?"
+  }
+ },
+ "cleared_by": "checker"
 }

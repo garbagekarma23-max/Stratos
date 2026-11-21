@@ -24,8 +24,242 @@
    0.226
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:55Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:54Z write: done",
+  "2026-11-20T12:44:58Z check: flagged",
+  "2026-11-20T12:53:28Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.00812,
+  "check": 0.0138,
+  "fix": 0.02346,
+  "recheck": 0.01314
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches multiplying or dividing algebraic fractions; the closest, mat-multiplying-dividing-fractions, covers only numeric fractions at Year 7 depth and lacks the cancelling of common algebraic factors, so adapting it would need a new step and a change of depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Multiplying and dividing algebraic fractions",
+  "card": [
+   [
+    "Multiply",
+    "Multiply the numerators, then multiply the denominators. Cancel any common factor first to keep the numbers small."
+   ],
+   [
+    "Example",
+    "\\(\\frac{3x}{4} \\times \\frac{8}{9}\\): cancel 3 with 9 and 4 with 8. This gives \\(\\frac{x}{1} \\times \\frac{2}{3}\\), which is \\(\\frac{2x}{3}\\)."
+   ],
+   [
+    "Divide",
+    "To divide, flip the second fraction (find its reciprocal) and multiply. Only the fraction after the \\(\\div\\) sign is flipped."
+   ],
+   [
+    "Example",
+    "\\(\\frac{5a}{6} \\div \\frac{10}{3}\\) becomes \\(\\frac{5a}{6} \\times \\frac{3}{10}\\). Cancel 5 with 10 and 3 with 6 to get \\(\\frac{a}{4}\\)."
+   ]
+  ],
+  "remember": "Cancel common factors, then multiply across. For division, flip the second fraction and multiply.",
+  "a": {
+   "q": "What is \\(\\frac{2x}{5} \\times \\frac{10}{7}\\) in simplest form?",
+   "opts": [
+    "\\(\\frac{4x}{7}\\)",
+    "\\(\\frac{20x}{12}\\)",
+    "\\(\\frac{4x}{35}\\)",
+    "\\(\\frac{7x}{5}\\)"
+   ],
+   "why": "Cancel 5 with 10 to get \\(\\frac{2x}{1} \\times \\frac{2}{7} = \\frac{4x}{7}\\). The option \\(\\frac{4x}{35}\\) comes from cancelling only the 10 and forgetting to divide the 5.",
+   "clue": "Cancel the 5 and the 10 first, then multiply across."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia simplifies \\(\\frac{3m}{8} \\div \\frac{9}{4}\\). What is her correct answer?",
+   "opts": [
+    "\\(\\frac{m}{6}\\)",
+    "\\(\\frac{3m}{2}\\)",
+    "\\(\\frac{27m}{32}\\)",
+    "\\(\\frac{3m}{18}\\)"
+   ],
+   "why": "Flip the second fraction: \\(\\frac{3m}{8} \\times \\frac{4}{9}\\). Cancel 3 with 9 and 4 with 8 to get \\(\\frac{m}{2} \\times \\frac{1}{3} = \\frac{m}{6}\\). The option \\(\\frac{27m}{32}\\) comes from multiplying without flipping.",
+   "clue": "Flip only the fraction after the \\(\\div\\) sign."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(\\frac{4x}{7}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(\\frac{m}{6}\\)",
+   "also_right": [
+    "\\(\\frac{3m}{18}\\)"
+   ]
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The option \\(\\frac{3m}{18}\\) is equal to \\(\\frac{m}{6}\\), just not simplified. The question asks for her 'correct answer' and never says 'in simplest form', so a student could defend \\(\\frac{3m}{18}\\) as correct. Add 'in simplest form', as question a does, or replace this distractor with an unequal value."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, both worked examples and question a are correct. In question b, the distractor \\(\\frac{3m}{18}\\) equals the intended answer \\(\\frac{m}{6}\\) and the question does not ask for simplest form, so two options are defensible."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker says “\\(\\frac{3m}{18}\\)” could also be right.",
+  "Question b, wording: The option \\(\\frac{3m}{18}\\) is equal to \\(\\frac{m}{6}\\), just not simplified. The question asks for her 'correct answer' and never says 'in simplest form', so a student could defend \\(\\frac{3m}{18}\\) as correct. Add 'in simplest form', as question a does, or replace this distractor with an unequal value."
+ ],
+ "proposal": {
+  "title": "Multiplying and dividing algebraic fractions",
+  "card": [
+   [
+    "Multiply",
+    "Multiply the numerators, then multiply the denominators. Cancel any common factor first to keep the numbers small."
+   ],
+   [
+    "Example",
+    "\\(\\frac{3x}{4} \\times \\frac{8}{9}\\): cancel 3 with 9 and 4 with 8. This gives \\(\\frac{x}{1} \\times \\frac{2}{3}\\), which is \\(\\frac{2x}{3}\\)."
+   ],
+   [
+    "Divide",
+    "To divide, flip the second fraction (find its reciprocal) and multiply. Only the fraction after the \\(\\div\\) sign is flipped."
+   ],
+   [
+    "Example",
+    "\\(\\frac{5a}{6} \\div \\frac{10}{3}\\) becomes \\(\\frac{5a}{6} \\times \\frac{3}{10}\\). Cancel 5 with 10 and 3 with 6 to get \\(\\frac{a}{4}\\)."
+   ]
+  ],
+  "remember": "Cancel common factors, then multiply across. For division, flip the second fraction and multiply.",
+  "a": {
+   "q": "What is \\(\\frac{2x}{5} \\times \\frac{10}{7}\\) in simplest form?",
+   "opts": [
+    "\\(\\frac{4x}{7}\\)",
+    "\\(\\frac{20x}{12}\\)",
+    "\\(\\frac{4x}{35}\\)",
+    "\\(\\frac{7x}{5}\\)"
+   ],
+   "why": "Cancel 5 with 10 to get \\(\\frac{2x}{1} \\times \\frac{2}{7} = \\frac{4x}{7}\\). The option \\(\\frac{4x}{35}\\) comes from cancelling only the 10 and forgetting to divide the 5.",
+   "clue": "Cancel the 5 and the 10 first, then multiply across."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia simplifies \\(\\frac{3m}{8} \\div \\frac{9}{4}\\). What is the correct answer in simplest form?",
+   "opts": [
+    "\\(\\frac{m}{6}\\)",
+    "\\(\\frac{3m}{2}\\)",
+    "\\(\\frac{27m}{32}\\)",
+    "\\(\\frac{6}{m}\\)"
+   ],
+   "why": "Flip the second fraction: \\(\\frac{3m}{8} \\times \\frac{4}{9}\\). Cancel 3 with 9 and 4 with 8 to get \\(\\frac{m}{2} \\times \\frac{1}{3} = \\frac{m}{6}\\). The option \\(\\frac{27m}{32}\\) comes from multiplying without flipping, and \\(\\frac{6}{m}\\) comes from flipping the first fraction instead of the second.",
+   "clue": "Flip only the fraction after the \\(\\div\\) sign."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(\\frac{4x}{7}\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(\\frac{m}{6}\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The option \\(\\frac{3m}{18}\\) is equal to \\(\\frac{m}{6}\\), just not simplified. The question asks for her 'correct answer' and never says 'in simplest form', so a student could defend \\(\\frac{3m}{18}\\) as correct. Add 'in simplest form', as question a does, or replace this distractor with an unequal value."
+   }
+  ],
+  "flags": [
+   "Question b: the checker says “\\(\\frac{3m}{18}\\)” could also be right.",
+   "Question b, wording: The option \\(\\frac{3m}{18}\\) is equal to \\(\\frac{m}{6}\\), just not simplified. The question asks for her 'correct answer' and never says 'in simplest form', so a student could defend \\(\\frac{3m}{18}\\) as correct. Add 'in simplest form', as question a does, or replace this distractor with an unequal value."
+  ]
+ },
+ "final": {
+  "title": "Multiplying and dividing algebraic fractions",
+  "card": [
+   [
+    "Multiply",
+    "Multiply the numerators, then multiply the denominators. Cancel any common factor first to keep the numbers small."
+   ],
+   [
+    "Example",
+    "\\(\\frac{3x}{4} \\times \\frac{8}{9}\\): cancel 3 with 9 and 4 with 8. This gives \\(\\frac{x}{1} \\times \\frac{2}{3}\\), which is \\(\\frac{2x}{3}\\)."
+   ],
+   [
+    "Divide",
+    "To divide, flip the second fraction (find its reciprocal) and multiply. Only the fraction after the \\(\\div\\) sign is flipped."
+   ],
+   [
+    "Example",
+    "\\(\\frac{5a}{6} \\div \\frac{10}{3}\\) becomes \\(\\frac{5a}{6} \\times \\frac{3}{10}\\). Cancel 5 with 10 and 3 with 6 to get \\(\\frac{a}{4}\\)."
+   ]
+  ],
+  "remember": "Cancel common factors, then multiply across. For division, flip the second fraction and multiply.",
+  "a": {
+   "q": "What is \\(\\frac{2x}{5} \\times \\frac{10}{7}\\) in simplest form?",
+   "opts": [
+    "\\(\\frac{4x}{7}\\)",
+    "\\(\\frac{20x}{12}\\)",
+    "\\(\\frac{4x}{35}\\)",
+    "\\(\\frac{7x}{5}\\)"
+   ],
+   "why": "Cancel 5 with 10 to get \\(\\frac{2x}{1} \\times \\frac{2}{7} = \\frac{4x}{7}\\). The option \\(\\frac{4x}{35}\\) comes from cancelling only the 10 and forgetting to divide the 5.",
+   "clue": "Cancel the 5 and the 10 first, then multiply across."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia simplifies \\(\\frac{3m}{8} \\div \\frac{9}{4}\\). What is the correct answer in simplest form?",
+   "opts": [
+    "\\(\\frac{m}{6}\\)",
+    "\\(\\frac{3m}{2}\\)",
+    "\\(\\frac{27m}{32}\\)",
+    "\\(\\frac{6}{m}\\)"
+   ],
+   "why": "Flip the second fraction: \\(\\frac{3m}{8} \\times \\frac{4}{9}\\). Cancel 3 with 9 and 4 with 8 to get \\(\\frac{m}{2} \\times \\frac{1}{3} = \\frac{m}{6}\\). The option \\(\\frac{27m}{32}\\) comes from multiplying without flipping, and \\(\\frac{6}{m}\\) comes from flipping the first fraction instead of the second.",
+   "clue": "Flip only the fraction after the \\(\\div\\) sign."
+  }
+ },
+ "cleared_by": "recheck"
 }

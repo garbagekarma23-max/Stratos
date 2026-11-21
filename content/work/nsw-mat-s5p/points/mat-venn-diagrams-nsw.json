@@ -24,8 +24,239 @@
    0.211
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: failed the content check, writing again",
+  "2026-11-20T12:35:56Z write: done",
+  "2026-11-20T12:44:59Z check: flagged",
+  "2026-11-20T12:53:28Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00036,
+  "write": 0.02104,
+  "check": 0.01226,
+  "fix": 0.02934,
+  "recheck": 0.00737
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest card, Venn diagrams for Year 8, covers only and/or, not the not-and-outside-every-circle reading the new point requires, and the other candidates are Year 11 or Victorian cards at a different depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Venn diagrams",
+  "card": [
+   "A Venn diagram uses overlapping circles inside a box. Each circle holds the outcomes for one event. The box holds every outcome in the sample space.",
+   [
+    "And",
+    "the overlap, where an outcome is in both circles."
+   ],
+   [
+    "Or",
+    "everything in at least one of the circles, including the overlap."
+   ],
+   [
+    "Not",
+    "everything outside a circle. The region inside the box but outside every circle is neither event. Example: 30 students, 12 play netball, 9 play soccer, 4 play both. Neither is \\(30 - (8 + 4 + 5) = 13\\)."
+   ]
+  ],
+  "remember": "Fill the overlap first, then the rest of each circle, then the outside. Probability is the count in a region over the total.",
+  "a": {
+   "q": "In a Year 9 class of 30, 12 play netball, 9 play soccer and 4 play both. How many play neither sport?",
+   "opts": [
+    "13",
+    "17",
+    "9",
+    "21"
+   ],
+   "why": "Netball only is \\(12 - 4 = 8\\) and soccer only is \\(9 - 4 = 5\\). Netball or soccer is \\(8 + 4 + 5 = 17\\) students, so neither is \\(30 - 17 = 13\\). Adding \\(12 + 9 = 21\\) counts the 4 who play both twice.",
+   "clue": "Count each student once, then subtract from 30."
+  },
+  "b": {
+   "d": 3,
+   "q": "Of 40 people at a Dubbo gym, 18 use the pool, 15 use the weights room and 6 use both. A person is chosen at random. What is the probability they use the pool or the weights room?",
+   "opts": [
+    "\\(\\frac{27}{40}\\)",
+    "\\(\\frac{33}{40}\\)",
+    "\\(\\frac{21}{40}\\)",
+    "\\(\\frac{13}{40}\\)"
+   ],
+   "why": "Pool only is 12 and weights only is 9. Pool or weights is \\(12 + 6 + 9 = 27\\) people, so the probability is \\(\\frac{27}{40}\\). Adding \\(18 + 15 = 33\\) counts the 6 in both twice.",
+   "clue": "The overlap should be counted only once."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "13",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(\\frac{27}{40}\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "Question a uses exactly the same numbers and context as the card's worked example (30 students, 12 netball, 9 soccer, 4 both), and the card already gives the answer 13. Students can recall it without applying the idea. Use different numbers."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The worked example writes \\(30 - (8 + 4 + 5)\\) but never says where 8 and 5 come from (netball only \\(12 - 4\\), soccer only \\(9 - 4\\)). A Year 9 student may not follow the step."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct (13 and 27/40). However, question a copies the card's worked example word for word, so it tests recall rather than understanding. The card's example also skips showing how 8 and 5 are found."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, level: Question a uses exactly the same numbers and context as the card's worked example (30 students, 12 netball, 9 soccer, 4 both), and the card already gives the answer 13. Students can recall it without applying the idea. Use different numbers.",
+  "Card, wording: The worked example writes \\(30 - (8 + 4 + 5)\\) but never says where 8 and 5 come from (netball only \\(12 - 4\\), soccer only \\(9 - 4\\)). A Year 9 student may not follow the step."
+ ],
+ "proposal": {
+  "title": "Venn diagrams",
+  "card": [
+   "A Venn diagram has overlapping circles inside a box. Each circle holds the outcomes of one event. The box holds every outcome in the sample space, and the region outside every circle is neither event.",
+   "\\(A\\) and \\(B\\) is the overlap, in both circles. \\(A\\) or \\(B\\) is everything in at least one circle, with the overlap counted once. Not \\(A\\) is everything outside circle \\(A\\).",
+   "Fill the overlap first, then subtract it from each circle's total to get the only parts. Example: of 30 students, 12 play netball, 9 play soccer and 4 play both. Netball only is \\(12 - 4 = 8\\) and soccer only is \\(9 - 4 = 5\\).",
+   "Neither is \\(30 - (8 + 4 + 5) = 13\\). A probability is the count in a region over the total, so \\(P(\\text{neither}) = \\frac{13}{30}\\)."
+  ],
+  "remember": "Count the overlap once. Probability is the count in a region over the total.",
+  "a": {
+   "q": "In a group of 32 students, 15 study French, 11 study Japanese and 5 study both. How many study neither language?",
+   "opts": [
+    "11",
+    "6",
+    "16",
+    "21"
+   ],
+   "why": "French only is \\(15 - 5 = 10\\) and Japanese only is \\(11 - 5 = 6\\). At least one language is \\(10 + 5 + 6 = 21\\), so neither is \\(32 - 21 = 11\\). Subtracting \\(15 + 11 = 26\\) gives 6, which counts the 5 in both twice.",
+   "clue": "Find the only parts first, and count each student once."
+  },
+  "b": {
+   "d": 3,
+   "q": "Of 40 people at a Dubbo gym, 18 use the pool, 15 use the weights room and 6 use both. A person is chosen at random. What is the probability they use the pool or the weights room?",
+   "opts": [
+    "\\(\\frac{27}{40}\\)",
+    "\\(\\frac{33}{40}\\)",
+    "\\(\\frac{21}{40}\\)",
+    "\\(\\frac{13}{40}\\)"
+   ],
+   "why": "Pool only is \\(18 - 6 = 12\\) and weights only is \\(15 - 6 = 9\\). Pool or weights is \\(12 + 6 + 9 = 27\\) people, so the probability is \\(\\frac{27}{40}\\). Adding \\(18 + 15 = 33\\) counts the 6 in both twice.",
+   "clue": "Or includes the overlap, but only once."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A rectangle labelled Students (30) holding two overlapping circles labelled Netball and Soccer. The netball only region shows 8, the overlap shows 4, the soccer only region shows 5, and the region inside the rectangle but outside both circles shows 13.",
+    "why": "Seeing each count in its own region shows why the overlap is counted once and where neither sits."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "11",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(\\frac{27}{40}\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "Question a uses exactly the same numbers and context as the card's worked example (30 students, 12 netball, 9 soccer, 4 both), and the card already gives the answer 13. Students can recall it without applying the idea. Use different numbers."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The worked example writes \\(30 - (8 + 4 + 5)\\) but never says where 8 and 5 come from (netball only \\(12 - 4\\), soccer only \\(9 - 4\\)). A Year 9 student may not follow the step."
+   }
+  ],
+  "flags": [
+   "Question a, level: Question a uses exactly the same numbers and context as the card's worked example (30 students, 12 netball, 9 soccer, 4 both), and the card already gives the answer 13. Students can recall it without applying the idea. Use different numbers.",
+   "Card, wording: The worked example writes \\(30 - (8 + 4 + 5)\\) but never says where 8 and 5 come from (netball only \\(12 - 4\\), soccer only \\(9 - 4\\)). A Year 9 student may not follow the step."
+  ]
+ },
+ "final": {
+  "title": "Venn diagrams",
+  "card": [
+   "A Venn diagram has overlapping circles inside a box. Each circle holds the outcomes of one event. The box holds every outcome in the sample space, and the region outside every circle is neither event.",
+   "\\(A\\) and \\(B\\) is the overlap, in both circles. \\(A\\) or \\(B\\) is everything in at least one circle, with the overlap counted once. Not \\(A\\) is everything outside circle \\(A\\).",
+   "Fill the overlap first, then subtract it from each circle's total to get the only parts. Example: of 30 students, 12 play netball, 9 play soccer and 4 play both. Netball only is \\(12 - 4 = 8\\) and soccer only is \\(9 - 4 = 5\\).",
+   "Neither is \\(30 - (8 + 4 + 5) = 13\\). A probability is the count in a region over the total, so \\(P(\\text{neither}) = \\frac{13}{30}\\)."
+  ],
+  "remember": "Count the overlap once. Probability is the count in a region over the total.",
+  "a": {
+   "q": "In a group of 32 students, 15 study French, 11 study Japanese and 5 study both. How many study neither language?",
+   "opts": [
+    "11",
+    "6",
+    "16",
+    "21"
+   ],
+   "why": "French only is \\(15 - 5 = 10\\) and Japanese only is \\(11 - 5 = 6\\). At least one language is \\(10 + 5 + 6 = 21\\), so neither is \\(32 - 21 = 11\\). Subtracting \\(15 + 11 = 26\\) gives 6, which counts the 5 in both twice.",
+   "clue": "Find the only parts first, and count each student once."
+  },
+  "b": {
+   "d": 3,
+   "q": "Of 40 people at a Dubbo gym, 18 use the pool, 15 use the weights room and 6 use both. A person is chosen at random. What is the probability they use the pool or the weights room?",
+   "opts": [
+    "\\(\\frac{27}{40}\\)",
+    "\\(\\frac{33}{40}\\)",
+    "\\(\\frac{21}{40}\\)",
+    "\\(\\frac{13}{40}\\)"
+   ],
+   "why": "Pool only is \\(18 - 6 = 12\\) and weights only is \\(15 - 6 = 9\\). Pool or weights is \\(12 + 6 + 9 = 27\\) people, so the probability is \\(\\frac{27}{40}\\). Adding \\(18 + 15 = 33\\) counts the 6 in both twice.",
+   "clue": "Or includes the overlap, but only once."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A rectangle labelled Students (30) holding two overlapping circles labelled Netball and Soccer. The netball only region shows 8, the overlap shows 4, the soccer only region shows 5, and the region inside the rectangle but outside both circles shows 13.",
+    "why": "Seeing each count in its own region shows why the overlap is counted once and where neither sits."
+   }
+  ]
+ },
+ "cleared_by": "recheck"
 }

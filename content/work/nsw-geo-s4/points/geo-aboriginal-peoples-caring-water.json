@@ -20,8 +20,209 @@
    0.205
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 may adapt geo-water-first-nations-australians, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:45Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:49Z write: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T14:39:10Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00032,
+  "confirm": 0.01038,
+  "write": 0.01146,
+  "check": 0.01343,
+  "fix": 0.02117
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-water-first-nations-australians",
+  "changes": [
+   "Add the Brewarrina fish traps as a local NSW example of knowledge-guided care for a river.",
+   "Extend the card to say that Aboriginal Peoples actively care for rivers, waterholes and wetlands, not only that these places carry cultural meaning."
+  ],
+  "sure": "medium",
+  "reason": "The bank point covers Country and the cultural meaning of water places, which is the same core idea, but it needs a NSW example and a clearer statement of the active care practice.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point is about why water places hold cultural and spiritual meaning tied to Country, while this point teaches how Aboriginal Peoples actively care for water places using knowledge passed down, shown through the Brewarrina fish traps, so it needs a different emphasis and new questions rather than small edits.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Aboriginal Peoples caring for water Country",
+  "card": [
+   "Country is the land, waters, plants, animals and sky that Aboriginal Peoples belong to and have a duty to look after. Rivers, waterholes and wetlands are part of Country.",
+   "Aboriginal Peoples care for water using knowledge passed down over many generations. This includes knowing where water is found and how to use it carefully.",
+   "The Brewarrina fish traps are on the Barwon River (Baaka) in New South Wales. They are stone traps built by Aboriginal Peoples and used to catch fish.",
+   "The traps are still a place for gathering. They show how people have used a river over a very long time while keeping it healthy."
+  ],
+  "remember": "Water is part of Country, and Aboriginal Peoples care for it using knowledge handed down over generations.",
+  "a": {
+   "q": "What does it mean to say a waterhole is part of Country?",
+   "opts": [
+    "It belongs with the land and people, who care for it",
+    "It is only a source of drinking water for people",
+    "It is a place owned by the government alone",
+    "It is a feature that people can use up freely"
+   ],
+   "why": "Country links people, land and water, and people have a duty to look after it. Seeing a waterhole only as a supply of water leaves out that link.",
+   "clue": "Country includes both the places and the duty of care."
+  },
+  "b": {
+   "d": 2,
+   "q": "A teacher shows the Brewarrina fish traps to her class. What do they best show about Aboriginal Peoples and water?",
+   "opts": [
+    "Knowledge of rivers has been used for many generations",
+    "Rivers were not used until recent times",
+    "Fish were caught by machines on the river",
+    "The Barwon River has always had the same flow"
+   ],
+   "why": "The stone traps were built and used by Aboriginal Peoples, with knowledge passed down over generations. The other options are not supported by the traps.",
+   "clue": "Think about who built the traps and how long they have been used."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "image",
+    "brief": "A photo of the Brewarrina fish traps (Baaka) on the Barwon River in New South Wales, showing the stone arrangement in the river, from a source with an open licence.",
+    "why": "Seeing the stone traps helps students picture how the river was used and cared for."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It belongs with the land and people, who care for it",
+   "also_right": []
+  },
+  "b": {
+   "best": "Knowledge of rivers has been used for many generations",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card calls the Barwon River 'Baaka'. Baaka is the Barkindji name for the Darling River, not the Barwon. Brewarrina (Baiame's Ngunnhu, Ngemba Country) is on the Barwon. Remove the '(Baaka)' or give the correct local name, confirmed with the community."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option says the waterhole 'belongs with the land and people', but the card says Aboriginal Peoples belong to Country, not that Country belongs with people. The wording is awkward and slightly reverses the card's idea."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Two distractors carry absolute words ('only', 'alone') and a third is plainly careless ('use up freely'). The right option is the only one with no such cue, so a student can pick it by elimination without knowing the idea."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "first-nations",
+  "summary": "The card wrongly gives 'Baaka' (the Barkindji name for the Darling) as the name of the Barwon River at Brewarrina. Question a's right option is awkwardly worded against the card's idea of belonging to Country, and the absolute words in its distractors make the answer easy to guess."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Card, fact: The card calls the Barwon River 'Baaka'. Baaka is the Barkindji name for the Darling River, not the Barwon. Brewarrina (Baiame's Ngunnhu, Ngemba Country) is on the Barwon. Remove the '(Baaka)' or give the correct local name, confirmed with the community.",
+  "Question a, wording: The right option says the waterhole 'belongs with the land and people', but the card says Aboriginal Peoples belong to Country, not that Country belongs with people. The wording is awkward and slightly reverses the card's idea.",
+  "Question a, wording: Two distractors carry absolute words ('only', 'alone') and a third is plainly careless ('use up freely'). The right option is the only one with no such cue, so a student can pick it by elimination without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Aboriginal Peoples caring for water Country",
+  "card": [
+   "Country is the land, waters, plants, animals and sky that Aboriginal Peoples belong to and have a duty to look after. Rivers, waterholes and wetlands are part of Country.",
+   "Aboriginal Peoples care for water using knowledge passed down over many generations. This includes knowing where water is found and how to use it carefully.",
+   "The Brewarrina fish traps, known as Baiame's Ngunnhu, are on the Barwon River in Ngemba Country, New South Wales. They are stone traps built by Aboriginal Peoples to catch fish.",
+   "The traps are still a place for gathering. They show how people have used a river over a very long time while keeping it healthy."
+  ],
+  "remember": "Water is part of Country, and Aboriginal Peoples care for it using knowledge handed down over generations.",
+  "a": {
+   "q": "What does it mean to say a waterhole is part of Country?",
+   "opts": [
+    "It is part of the place its people belong to and care for",
+    "It is a natural feature kept separate from people's lives",
+    "It is a place people visit but have no duty to look after",
+    "It is an area the government sets aside for wildlife"
+   ],
+   "why": "Country is the land and waters that Aboriginal Peoples belong to and have a duty to look after, so a waterhole is linked to its people through that duty of care. Seeing it as a feature separate from people misses that link.",
+   "clue": "Think about how people and Country are connected."
+  },
+  "b": {
+   "d": 2,
+   "q": "A teacher shows the Brewarrina fish traps to her class. What do they best show about Aboriginal Peoples and water?",
+   "opts": [
+    "Knowledge of rivers has been used for many generations",
+    "Rivers were not used until recent times",
+    "Fish were caught by machines on the river",
+    "The Barwon River has always had the same flow"
+   ],
+   "why": "The stone traps were built and used by Aboriginal Peoples, guided by knowledge passed down over generations. The idea that rivers were not used until recent times is wrong, because the traps show use of the river over a very long time.",
+   "clue": "Think about who built the traps and how long they have been used."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "image",
+    "brief": "A photo of the Brewarrina fish traps (Baiame's Ngunnhu) on the Barwon River in New South Wales, showing the stone walls and ponds in the river, from a source with an open licence.",
+    "why": "Seeing the stone traps helps students picture how the river was used and cared for."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Aboriginal Peoples caring for water Country",
+  "card": [
+   "Country is the land, waters, plants, animals and sky that Aboriginal Peoples belong to and have a duty to look after. Rivers, waterholes and wetlands are part of Country.",
+   "Aboriginal Peoples care for water using knowledge passed down over many generations. This includes knowing where water is found and how to use it carefully.",
+   "The Brewarrina fish traps, known as Baiame's Ngunnhu, are on the Barwon River in Ngemba Country, New South Wales. They are stone traps built by Aboriginal Peoples to catch fish.",
+   "The traps are still a place for gathering. They show how people have used a river over a very long time while keeping it healthy."
+  ],
+  "remember": "Water is part of Country, and Aboriginal Peoples care for it using knowledge handed down over generations.",
+  "a": {
+   "q": "What does it mean to say a waterhole is part of Country?",
+   "opts": [
+    "It is part of the place its people belong to and care for",
+    "It is a natural feature kept separate from people's lives",
+    "It is a place people visit but have no duty to look after",
+    "It is an area the government sets aside for wildlife"
+   ],
+   "why": "Country is the land and waters that Aboriginal Peoples belong to and have a duty to look after, so a waterhole is linked to its people through that duty of care. Seeing it as a feature separate from people misses that link.",
+   "clue": "Think about how people and Country are connected."
+  },
+  "b": {
+   "d": 2,
+   "q": "A teacher shows the Brewarrina fish traps to her class. What do they best show about Aboriginal Peoples and water?",
+   "opts": [
+    "Knowledge of rivers has been used for many generations",
+    "Rivers were not used until recent times",
+    "Fish were caught by machines on the river",
+    "The Barwon River has always had the same flow"
+   ],
+   "why": "The stone traps were built and used by Aboriginal Peoples, guided by knowledge passed down over generations. The idea that rivers were not used until recent times is wrong, because the traps show use of the river over a very long time.",
+   "clue": "Think about who built the traps and how long they have been used."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "image",
+    "brief": "A photo of the Brewarrina fish traps (Baiame's Ngunnhu) on the Barwon River in New South Wales, showing the stone walls and ponds in the river, from a source with an open licence.",
+    "why": "Seeing the stone traps helps students picture how the river was used and cared for."
+   }
+  ]
+ },
+ "cleared_by": "owner"
 }

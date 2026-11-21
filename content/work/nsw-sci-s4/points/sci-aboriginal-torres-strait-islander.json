@@ -20,8 +20,51 @@
    0.213
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 may adapt sci-first-nations-australians-knowledge, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:59Z confirm: Claude Opus 5.5 may adapt sci-first-nations-australians-knowledge, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:44:25Z review: reusing sci-first-nations-australians-knowledge"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00042,
+  "confirm": 0.01205
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "sci-first-nations-australians-knowledge",
+  "changes": [
+   "Add the Emu in the Sky example, a dark-cloud constellation whose position in the sky signals seasonal change, so the card matches the owner's brief for NSW.",
+   "Mention that the Moon's phases are linked to tides, as the brief describes, so the card covers both the lunar and star-based calendar examples the brief names.",
+   "Add NSW-specific context so the example of Nations and Country is local to New South Wales students."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same idea of First Nations sky and seasonal calendars at the right Year 7 depth, but it lacks the Emu in the Sky example and NSW local context the brief asks for.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "sci-first-nations-australians-knowledge",
+  "changes": [
+   "Use the NSW syllabus wording 'Aboriginal and Torres Strait Islander Peoples' in place of 'First Nations Australians'.",
+   "Add the Emu in the Sky as a named example of a star pattern whose position signals a seasonal change, such as emus laying eggs.",
+   "State plainly that the Moon's phases were linked to the tides, and add weather changes to what the sky signs predict.",
+   "Swap question b's tree-flowering example for a sky-based one, such as the Emu in the Sky's position signalling a change in animal behaviour, so both questions fit an astronomy point."
+  ],
+  "sure": "medium",
+  "reason": "The bank point already teaches that Aboriginal and Torres Strait Islander Peoples use Moon phases and star positions to predict tides and seasons, but it needs NSW terminology, the Emu in the Sky example and a sky-focused question to fit this point.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "sci-first-nations-australians-knowledge",
+ "matched": {
+  "verdict": "reuse",
+  "from": "sci-first-nations-australians-knowledge",
+  "by": "owner",
+  "at": "2026-11-20T14:44:25Z"
+ }
 }

@@ -24,8 +24,211 @@
    0.26
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:58Z write: done",
+  "2026-11-20T12:45:00Z check: flagged",
+  "2026-11-20T12:53:29Z fix: suggested",
+  "2026-11-20T13:23:46Z autoreview: picked as a spot check. It would have been cleared with the fix (b wording)",
+  "2026-11-20T14:02:37Z claude-code review: left for you (it chose to leave it)",
+  "2026-11-20T14:44:56Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.0066,
+  "check": 0.0102,
+  "fix": 0.01611
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches the contrast between science and pseudoscience; the closest, How science corrects itself, covers only how science checks and revises its own ideas, which is related but not the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Science and pseudoscience",
+  "card": [
+   [
+    "Science",
+    "Science tests claims against evidence. Others can repeat the tests, and the claim is changed or dropped if the evidence does not support it."
+   ],
+   [
+    "Pseudoscience",
+    "Pseudoscience uses science-sounding words and looks scientific, but it avoids fair tests. It does not change its claims when evidence goes against them."
+   ],
+   "Pseudoscience often relies on stories, such as \"it worked for my cousin\", and on claims that cannot be tested at all. A story about one person is not a fair test.",
+   "Ask two questions of any claim: Can it be tested? What happens to the claim when a test goes against it?"
+  ],
+  "remember": "Science follows the evidence. Pseudoscience avoids tests and does not change.",
+  "a": {
+   "q": "Which feature best shows that a claim is science rather than pseudoscience?",
+   "opts": [
+    "It is tested, and changed if the evidence disagrees",
+    "It uses technical words and scientific-looking terms",
+    "It is supported by many personal stories of success",
+    "It has been believed by many people for a long time"
+   ],
+   "why": "Science tests claims and changes them when the evidence does not fit. Technical words can be copied by pseudoscience, so they do not show that a claim has been tested.",
+   "clue": "Think about what is done with the claim when a test goes against it."
+  },
+  "b": {
+   "d": 3,
+   "q": "A company says its \"energy bracelet\" improves balance. It shows the buyer's glowing reviews, uses terms such as \"quantum frequency\", and says any failed test was \"unfair\". Why is this pseudoscience?",
+   "opts": [
+    "It relies on stories and rejects tests that go against it",
+    "It is sold by a company that wants to make money",
+    "It has not yet been tested by any other scientists",
+    "It uses words that most people do not understand"
+   ],
+   "why": "The claim rests on reviews and dismisses tests that do not support it, so it will not change when evidence goes against it. Science-sounding words do not make it scientific, and a profit motive alone does not make a claim pseudoscience.",
+   "clue": "Look at what the company does when a test goes against its claim."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It is tested, and changed if the evidence disagrees",
+   "also_right": []
+  },
+  "b": {
+   "best": "It relies on stories and rejects tests that go against it",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "\"the buyer's glowing reviews\" reads as one buyer's reviews; it most likely means buyers' reviews (reviews from many buyers), so the apostrophe should be fixed to avoid confusion."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clearly right answer that matches the card and the explanations. The only issue is a small apostrophe error in question b (\"buyer's\" should probably be \"buyers'\")."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: \"the buyer's glowing reviews\" reads as one buyer's reviews; it most likely means buyers' reviews (reviews from many buyers), so the apostrophe should be fixed to avoid confusion."
+ ],
+ "proposal": {
+  "title": "Science and pseudoscience",
+  "card": [
+   [
+    "Science",
+    "Science tests claims against evidence. Others can repeat the tests, and the claim is changed or dropped if the evidence does not support it."
+   ],
+   [
+    "Pseudoscience",
+    "Pseudoscience uses science-sounding words and looks scientific, but it avoids fair tests. It does not change its claims when evidence goes against them."
+   ],
+   "Pseudoscience often relies on stories, such as \"it worked for my cousin\", and on claims that cannot be tested at all. A story about one person is not a fair test.",
+   "Ask two questions of any claim: Can it be tested? What happens to the claim when a test goes against it?"
+  ],
+  "remember": "Science follows the evidence. Pseudoscience avoids tests and does not change.",
+  "a": {
+   "q": "Which feature best shows that a claim is science rather than pseudoscience?",
+   "opts": [
+    "It is tested, and changed if the evidence disagrees",
+    "It uses technical words and scientific-looking terms",
+    "It is supported by many personal stories of success",
+    "It has been believed by many people for a long time"
+   ],
+   "why": "Science tests claims and changes them when the evidence does not fit. Technical words can be copied by pseudoscience, so they do not show that a claim has been tested.",
+   "clue": "Think about what is done with the claim when a test goes against it."
+  },
+  "b": {
+   "d": 3,
+   "q": "A company says its \"energy bracelet\" improves balance. It shows glowing reviews from buyers, uses terms such as \"quantum frequency\", and says any failed test was \"unfair\". Why is this pseudoscience?",
+   "opts": [
+    "It relies on stories and rejects tests that go against it",
+    "It is sold by a company that wants to make money",
+    "It has not yet been tested by any other scientists",
+    "It uses words that most people do not understand"
+   ],
+   "why": "The claim rests on reviews and dismisses tests that do not support it, so it will not change when evidence goes against it. Science-sounding words do not make it scientific, and a profit motive alone does not make a claim pseudoscience.",
+   "clue": "Look at what the company does when a test goes against its claim."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:46Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "\"the buyer's glowing reviews\" reads as one buyer's reviews; it most likely means buyers' reviews (reviews from many buyers), so the apostrophe should be fixed to avoid confusion."
+   }
+  ],
+  "flags": [
+   "Question b, wording: \"the buyer's glowing reviews\" reads as one buyer's reviews; it most likely means buyers' reviews (reviews from many buyers), so the apostrophe should be fixed to avoid confusion."
+  ],
+  "owner": "fix"
+ },
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "leave",
+   "sure": "medium",
+   "reason": "The fix corrects the apostrophe, but in question b the right option is clearly the longest (57 characters against about 49 for the others) and the only one naming two features. That stands out, so it needs shorter or longer options first.",
+   "item": "418550f0f7167f71",
+   "result": "left"
+  }
+ ],
+ "final": {
+  "title": "Science and pseudoscience",
+  "card": [
+   [
+    "Science",
+    "Science tests claims against evidence. Others can repeat the tests, and the claim is changed or dropped if the evidence does not support it."
+   ],
+   [
+    "Pseudoscience",
+    "Pseudoscience uses science-sounding words and looks scientific, but it avoids fair tests. It does not change its claims when evidence goes against them."
+   ],
+   "Pseudoscience often relies on stories, such as \"it worked for my cousin\", and on claims that cannot be tested at all. A story about one person is not a fair test.",
+   "Ask two questions of any claim: Can it be tested? What happens to the claim when a test goes against it?"
+  ],
+  "remember": "Science follows the evidence. Pseudoscience avoids tests and does not change.",
+  "a": {
+   "q": "Which feature best shows that a claim is science rather than pseudoscience?",
+   "opts": [
+    "It is tested, and changed if the evidence disagrees",
+    "It uses technical words and scientific-looking terms",
+    "It is supported by many personal stories of success",
+    "It has been believed by many people for a long time"
+   ],
+   "why": "Science tests claims and changes them when the evidence does not fit. Technical words can be copied by pseudoscience, so they do not show that a claim has been tested.",
+   "clue": "Think about what is done with the claim when a test goes against it."
+  },
+  "b": {
+   "d": 3,
+   "q": "A company says its \"energy bracelet\" improves balance. It shows glowing reviews from buyers, uses terms such as \"quantum frequency\", and says any failed test was \"unfair\". Why is this pseudoscience?",
+   "opts": [
+    "It relies on stories and rejects tests that go against it",
+    "It is sold by a company that wants to make money",
+    "It has not yet been tested by any other scientists",
+    "It uses words that most people do not understand"
+   ],
+   "why": "The claim rests on reviews and dismisses tests that do not support it, so it will not change when evidence goes against it. Science-sounding words do not make it scientific, and a profit motive alone does not make a claim pseudoscience.",
+   "clue": "Look at what the company does when a test goes against its claim."
+  }
+ },
+ "cleared_by": "owner"
 }

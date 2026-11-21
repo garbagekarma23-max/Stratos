@@ -24,8 +24,135 @@
    0.254
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:56Z write: failed the content check, writing again",
+  "2026-11-20T12:44:59Z write: done",
+  "2026-11-20T12:53:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.01727,
+  "check": 0.00753
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches the surface area of a sphere or the curved surface of a hemisphere; the closest, the cylinder card, covers different solids and formulas.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Surface area of a sphere",
+  "card": [
+   "A sphere is a perfectly round solid. Every point on its surface is the same distance, the radius \\(r\\), from its centre.",
+   [
+    "Formula",
+    "The surface area of a sphere is \\(A = 4\\pi r^{2}\\). Square the radius first, then multiply by \\(4\\pi\\)."
+   ],
+   [
+    "Hemisphere",
+    "A hemisphere is half a sphere. Its curved surface is half of \\(4\\pi r^{2}\\), which is \\(2\\pi r^{2}\\)."
+   ],
+   [
+    "Example",
+    "A ball has radius 5 cm. \\(A = 4 \\times \\pi \\times 5^{2} = 100\\pi\\), which is about \\(314.2\\) cm\\(^{2}\\). Area is measured in square units."
+   ]
+  ],
+  "remember": "Sphere: \\(4\\pi r^{2}\\). Curved surface of a hemisphere: half of that.",
+  "a": {
+   "q": "A sphere has radius 3 cm. What is its surface area, to 1 decimal place?",
+   "opts": [
+    "\\(113.1\\) cm\\(^{2}\\)",
+    "\\(37.7\\) cm\\(^{2}\\)",
+    "\\(28.3\\) cm\\(^{2}\\)",
+    "\\(339.3\\) cm\\(^{2}\\)"
+   ],
+   "why": "\\(A = 4\\pi r^{2} = 4 \\times \\pi \\times 3^{2} = 36\\pi\\), which is about \\(113.1\\) cm\\(^{2}\\). The option \\(37.7\\) comes from using \\(4\\pi \\times 3\\), which forgets to square the radius.",
+   "clue": "Square the radius before multiplying by \\(4\\pi\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "A dome on a building is a hemisphere with radius 10 m. Its curved roof is to be painted. What area needs paint, to the nearest square metre?",
+   "opts": [
+    "\\(628\\) m\\(^{2}\\)",
+    "\\(1257\\) m\\(^{2}\\)",
+    "\\(314\\) m\\(^{2}\\)",
+    "\\(942\\) m\\(^{2}\\)"
+   ],
+   "why": "The curved surface of a hemisphere is \\(2\\pi r^{2} = 2 \\times \\pi \\times 10^{2} = 200\\pi\\), which is about \\(628\\) m\\(^{2}\\). The option \\(1257\\) is the whole sphere, which is twice as much as the dome's curved roof.",
+   "clue": "Only half of the sphere's surface is the roof."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(113.1\\) cm\\(^{2}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(628\\) m\\(^{2}\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Surface area of a sphere",
+  "card": [
+   "A sphere is a perfectly round solid. Every point on its surface is the same distance, the radius \\(r\\), from its centre.",
+   [
+    "Formula",
+    "The surface area of a sphere is \\(A = 4\\pi r^{2}\\). Square the radius first, then multiply by \\(4\\pi\\)."
+   ],
+   [
+    "Hemisphere",
+    "A hemisphere is half a sphere. Its curved surface is half of \\(4\\pi r^{2}\\), which is \\(2\\pi r^{2}\\)."
+   ],
+   [
+    "Example",
+    "A ball has radius 5 cm. \\(A = 4 \\times \\pi \\times 5^{2} = 100\\pi\\), which is about \\(314.2\\) cm\\(^{2}\\). Area is measured in square units."
+   ]
+  ],
+  "remember": "Sphere: \\(4\\pi r^{2}\\). Curved surface of a hemisphere: half of that.",
+  "a": {
+   "q": "A sphere has radius 3 cm. What is its surface area, to 1 decimal place?",
+   "opts": [
+    "\\(113.1\\) cm\\(^{2}\\)",
+    "\\(37.7\\) cm\\(^{2}\\)",
+    "\\(28.3\\) cm\\(^{2}\\)",
+    "\\(339.3\\) cm\\(^{2}\\)"
+   ],
+   "why": "\\(A = 4\\pi r^{2} = 4 \\times \\pi \\times 3^{2} = 36\\pi\\), which is about \\(113.1\\) cm\\(^{2}\\). The option \\(37.7\\) comes from using \\(4\\pi \\times 3\\), which forgets to square the radius.",
+   "clue": "Square the radius before multiplying by \\(4\\pi\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "A dome on a building is a hemisphere with radius 10 m. Its curved roof is to be painted. What area needs paint, to the nearest square metre?",
+   "opts": [
+    "\\(628\\) m\\(^{2}\\)",
+    "\\(1257\\) m\\(^{2}\\)",
+    "\\(314\\) m\\(^{2}\\)",
+    "\\(942\\) m\\(^{2}\\)"
+   ],
+   "why": "The curved surface of a hemisphere is \\(2\\pi r^{2} = 2 \\times \\pi \\times 10^{2} = 200\\pi\\), which is about \\(628\\) m\\(^{2}\\). The option \\(1257\\) is the whole sphere, which is twice as much as the dome's curved roof.",
+   "clue": "Only half of the sphere's surface is the roof."
+  }
+ },
+ "cleared_by": "checker"
 }

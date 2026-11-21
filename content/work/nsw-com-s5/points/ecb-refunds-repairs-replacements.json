@@ -8,8 +8,127 @@
    0.285
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.00622,
+  "check": 0.01111
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank card says a consumer can always choose a repair, replacement or refund, but the new point teaches that a major fault gives the consumer the choice of refund or replacement while a minor fault lets the business repair first, a rule the card does not cover.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Refunds, repairs and replacements",
+  "card": [
+   "If goods fail a consumer guarantee, the Australian Consumer Law gives the buyer a remedy. The remedy depends on whether the fault is major or minor.",
+   [
+    "Major fault",
+    "a serious problem, such as one that makes the goods unsafe or means a reasonable buyer would not have bought them. The consumer chooses a refund or a replacement."
+   ],
+   [
+    "Minor fault",
+    "a smaller problem that can be fixed. The business chooses whether to repair the goods, replace them or give a refund. Usually the business fixes it first."
+   ],
+   "If a business does not fix a minor fault in a reasonable time, the consumer can then ask for a refund or replacement. A store cannot refuse just because it has a \"no refunds\" sign."
+  ],
+  "remember": "Major fault: the consumer chooses refund or replacement. Minor fault: the business can repair first.",
+  "a": {
+   "q": "Who chooses between a refund and a replacement when goods have a major fault?",
+   "opts": [
+    "The consumer",
+    "The business",
+    "The manufacturer",
+    "NSW Fair Trading"
+   ],
+   "why": "For a major fault, the consumer picks a refund or a replacement. The business picks only for a minor fault, where it can choose to repair the goods first.",
+   "clue": "Think about who gets the choice when the fault is serious."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya buys a pair of headphones in Penrith. A week later the left speaker crackles, but they still work. The store offers to repair them. What is the best description of this?",
+   "opts": [
+    "A minor fault, so the store may repair first",
+    "A major fault, so Priya must get a refund",
+    "A minor fault, so Priya must accept a refund",
+    "A major fault, so the store may repair first"
+   ],
+   "why": "The headphones still work and the problem can be fixed, so it is a minor fault. The business can choose to repair first. It would be a major fault only if the problem were serious, and then Priya would choose.",
+   "clue": "The headphones still work and can be fixed."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The consumer",
+   "also_right": []
+  },
+  "b": {
+   "best": "A minor fault, so the store may repair first",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Refunds, repairs and replacements",
+  "card": [
+   "If goods fail a consumer guarantee, the Australian Consumer Law gives the buyer a remedy. The remedy depends on whether the fault is major or minor.",
+   [
+    "Major fault",
+    "a serious problem, such as one that makes the goods unsafe or means a reasonable buyer would not have bought them. The consumer chooses a refund or a replacement."
+   ],
+   [
+    "Minor fault",
+    "a smaller problem that can be fixed. The business chooses whether to repair the goods, replace them or give a refund. Usually the business fixes it first."
+   ],
+   "If a business does not fix a minor fault in a reasonable time, the consumer can then ask for a refund or replacement. A store cannot refuse just because it has a \"no refunds\" sign."
+  ],
+  "remember": "Major fault: the consumer chooses refund or replacement. Minor fault: the business can repair first.",
+  "a": {
+   "q": "Who chooses between a refund and a replacement when goods have a major fault?",
+   "opts": [
+    "The consumer",
+    "The business",
+    "The manufacturer",
+    "NSW Fair Trading"
+   ],
+   "why": "For a major fault, the consumer picks a refund or a replacement. The business picks only for a minor fault, where it can choose to repair the goods first.",
+   "clue": "Think about who gets the choice when the fault is serious."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya buys a pair of headphones in Penrith. A week later the left speaker crackles, but they still work. The store offers to repair them. What is the best description of this?",
+   "opts": [
+    "A minor fault, so the store may repair first",
+    "A major fault, so Priya must get a refund",
+    "A minor fault, so Priya must accept a refund",
+    "A major fault, so the store may repair first"
+   ],
+   "why": "The headphones still work and the problem can be fixed, so it is a minor fault. The business can choose to repair first. It would be a major fault only if the problem were serious, and then Priya would choose.",
+   "clue": "The headphones still work and can be fixed."
+  }
+ },
+ "cleared_by": "checker"
 }

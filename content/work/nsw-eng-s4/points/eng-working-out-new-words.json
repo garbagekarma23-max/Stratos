@@ -24,8 +24,218 @@
    0.282
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:42Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: failed the content check, writing again",
+  "2026-11-20T12:44:53Z write: done",
+  "2026-11-20T12:53:24Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T14:31:45Z review: rejected, to be written again",
+  "2026-11-20T14:58:18Z claude-code write: failed the content check, to be written once more",
+  "2026-11-20T14:59:14Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.01307,
+  "check": 0.01035,
+  "fix": 0.04079
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches using the sentence around an unfamiliar word as a clue, and the closest card (prefixes, suffixes and base words) covers word parts only, so adapting it would need a new step rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Working out new words",
+  "card": [
+   [
+    "Context clues",
+    "The words around an unfamiliar word often hint at its meaning. Look for a definition, a reason, an example or a word with the opposite meaning nearby."
+   ],
+   [
+    "Word parts",
+    "Many words are built from parts. A prefix comes at the start, a root carries the main meaning, and a suffix comes at the end."
+   ],
+   [
+    "Example",
+    "In the word unhappy, the prefix un- means not, and the root is happy. So unhappy means not happy."
+   ],
+   [
+    "Check",
+    "Put your guess in place of the new word and reread the sentence. If it makes sense, your guess is probably close. A dictionary can confirm it."
+   ]
+  ],
+  "remember": "Use the sentence around a word and the word's parts to work out what it means, then check that the guess fits.",
+  "a": {
+   "q": "Which part of the word \"unsafe\" tells you it means \"not safe\"?",
+   "opts": [
+    "The prefix un-",
+    "The root safe",
+    "A suffix at the end",
+    "The whole sentence around it"
+   ],
+   "why": "The prefix un- comes at the start and means not, so unsafe means not safe. The root safe carries the main meaning, but it does not add the idea of not.",
+   "clue": "Look at the start of the word."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia read: \"The path was treacherous, so Sam walked slowly.\" He tested each step in case he slipped. What does \"treacherous\" most likely mean?",
+   "opts": [
+    "Dangerous",
+    "Pleasant",
+    "Very short",
+    "Well lit"
+   ],
+   "why": "Sam walks slowly and tests each step in case he slips, which hints that the path is dangerous. A pleasant path would not need such care, so that option does not fit the clues.",
+   "clue": "What does Sam's careful walking tell you about the path?"
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:18Z",
+   "step": "write",
+   "version": {
+    "title": "Working out new words",
+    "card": [
+     [
+      "Context clues",
+      "the words around a new word often hint at its meaning. Look nearby for a definition, an example, a reason or a word with the opposite meaning."
+     ],
+     [
+      "Word parts",
+      "many words are built from parts. A prefix comes at the start, the root carries the main meaning, and a suffix comes at the end."
+     ],
+     "Knowing common parts helps. The prefix re- means again, so rebuild means build again. The suffix -less means without, so fearless means without fear.",
+     "Use both kinds of clue, then test your guess. Put it in place of the word and reread. If the sentence still makes sense, the guess is likely close."
+    ],
+    "remember": "Read the words around it, break it into parts, then test your guess in the sentence.",
+    "a": {
+     "q": "What does the word \"speechless\" most likely mean?",
+     "opts": [
+      "Unable to say anything",
+      "Giving a long speech",
+      "Speaking once again",
+      "Speaking very quietly"
+     ],
+     "why": "The root is speech and the suffix -less means without, so speechless means without speech. Speaking once again would need the prefix re-, which this word does not have.",
+     "clue": "Split off the ending and think about what it means."
+    },
+    "b": {
+     "d": 3,
+     "q": "Read: \"Unlike his gregarious sister, who chats to everyone at parties, Tom likes to sit quietly on his own.\" What does \"gregarious\" most likely mean?",
+     "opts": [
+      "Enjoys being with other people",
+      "Prefers being on their own",
+      "Feels nervous at parties",
+      "Talks in a very loud voice"
+     ],
+     "why": "Unlike signals a contrast with Tom, who sits quietly alone, and the detail that she chats to everyone supports it. So gregarious means enjoying company. Preferring to be alone describes Tom, not his sister.",
+     "clue": "What does the word unlike tell you about the sister and Tom?"
+    }
+   },
+   "problems": [
+    "eng-working-out-new-words quotes more than 10 words: \"Unlike his gregarious sister, who chats to everyone at parties, Tom likes to sit quietly on his own.\""
+   ]
+  },
+  {
+   "at": "2026-11-20T14:59:14Z",
+   "step": "write",
+   "version": {
+    "title": "Working out new words",
+    "card": [
+     [
+      "Context clues",
+      "the words around a new word often hint at its meaning. Look nearby for a definition, an example, a reason or a word with the opposite meaning."
+     ],
+     [
+      "Word parts",
+      "many words are built from parts. A prefix comes at the start, the root carries the main meaning, and a suffix comes at the end."
+     ],
+     "Knowing common parts helps. The prefix re- means again, so rebuild means build again. The suffix -less means without, so fearless means without fear.",
+     "Use both kinds of clue, then test your guess. Put it in place of the word and reread. If the sentence still makes sense, the guess is likely close."
+    ],
+    "remember": "Read the words around it, break it into parts, then test your guess in the sentence.",
+    "a": {
+     "q": "What does the word \"speechless\" most likely mean?",
+     "opts": [
+      "Unable to say anything",
+      "Giving a long speech",
+      "Speaking once again",
+      "Speaking very quietly"
+     ],
+     "why": "The root is speech and the suffix -less means without, so speechless means without speech. Speaking once again would need the prefix re-, which this word does not have.",
+     "clue": "Split off the ending and think about what it means."
+    },
+    "b": {
+     "d": 3,
+     "q": "Tom's sister chats to everyone at parties. A story says: \"Unlike his gregarious sister, Tom sits quietly alone.\" What does \"gregarious\" most likely mean?",
+     "opts": [
+      "Enjoys being with other people",
+      "Prefers being on their own",
+      "Feels nervous at parties",
+      "Talks in a very loud voice"
+     ],
+     "why": "Unlike signals a contrast with Tom, who sits quietly alone, and the detail that she chats to everyone supports it. So gregarious means enjoying company. Preferring to be alone describes Tom, not his sister.",
+     "clue": "What does the word unlike tell you about the sister and Tom?"
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Working out new words",
+  "card": [
+   [
+    "Context clues",
+    "the words around a new word often hint at its meaning. Look nearby for a definition, an example, a reason or a word with the opposite meaning."
+   ],
+   [
+    "Word parts",
+    "many words are built from parts. A prefix comes at the start, the root carries the main meaning, and a suffix comes at the end."
+   ],
+   "Knowing common parts helps. The prefix re- means again, so rebuild means build again. The suffix -less means without, so fearless means without fear.",
+   "Use both kinds of clue, then test your guess. Put it in place of the word and reread. If the sentence still makes sense, the guess is likely close."
+  ],
+  "remember": "Read the words around it, break it into parts, then test your guess in the sentence.",
+  "a": {
+   "q": "What does the word \"speechless\" most likely mean?",
+   "opts": [
+    "Unable to say anything",
+    "Giving a long speech",
+    "Speaking once again",
+    "Speaking very quietly"
+   ],
+   "why": "The root is speech and the suffix -less means without, so speechless means without speech. Speaking once again would need the prefix re-, which this word does not have.",
+   "clue": "Split off the ending and think about what it means."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom's sister chats to everyone at parties. A story says: \"Unlike his gregarious sister, Tom sits quietly alone.\" What does \"gregarious\" most likely mean?",
+   "opts": [
+    "Enjoys being with other people",
+    "Prefers being on their own",
+    "Feels nervous at parties",
+    "Talks in a very loud voice"
+   ],
+   "why": "Unlike signals a contrast with Tom, who sits quietly alone, and the detail that she chats to everyone supports it. So gregarious means enjoying company. Preferring to be alone describes Tom, not his sister.",
+   "clue": "What does the word unlike tell you about the sister and Tom?"
+  }
+ },
+ "redone": true,
+ "local": []
 }

@@ -24,8 +24,201 @@
    0.327
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 may adapt mat-rational-irrational-numbers, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:53Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:53Z write: failed the content check, writing again",
+  "2026-11-20T12:44:58Z write: done",
+  "2026-11-20T12:53:27Z check: flagged",
+  "2026-11-20T12:59:59Z fix: suggested",
+  "2026-11-20T14:43:28Z review: rejected, to be written again",
+  "2026-11-20T14:58:20Z claude-code write: failed the content check, to be written once more",
+  "2026-11-20T14:59:15Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00044,
+  "confirm": 0.00883,
+  "write": 0.02277,
+  "check": 0.01379,
+  "fix": 0.02434
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-rational-irrational-numbers",
+  "changes": [
+   "Add the dot or bar notation for recurring digits, for example 0.\\overline{6} for 2/3, since the new point uses this notation and the card does not show it.",
+   "Add a sentence that dividing a fraction gives either a terminating decimal or a recurring decimal, so students see the link to fractions directly."
+  ],
+  "sure": "medium",
+  "reason": "The rational and irrational card covers irrational numbers such as pi and square roots and the idea that repeating decimals are rational, but it does not teach the dot or bar notation for recurring digits, so it needs those additions to fit the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The new point combines terminating and recurring decimals with a first look at irrational numbers. The closest bank card covers only terminating and recurring decimals, and adding irrationals would mean a new idea, while the rational and irrational card centres on fraction definitions and perfect squares, so neither matches as it stands.",
+  "model": "claude-opus-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Recurring decimals and irrational numbers",
+  "card": [
+   "Dividing the top of a fraction by its bottom gives a decimal. It either stops or repeats forever. For example, \\(\\frac{3}{8} = 0.375\\) stops.",
+   "A recurring decimal has digits that repeat for ever. A bar goes over the repeating block. So \\(\\frac{1}{3} = 0.333\\ldots\\) is written \\(0.\\overline{3}\\), and \\(\\frac{1}{7} = 0.\\overline{142857}\\).",
+   "Terminating and recurring decimals both come from fractions. An irrational number cannot be written as a fraction of whole numbers.",
+   "The decimal of an irrational number never ends and never repeats. Examples are \\(\\pi = 3.14159\\ldots\\) and \\(\\sqrt{2} = 1.41421\\ldots\\)"
+  ],
+  "remember": "A decimal that stops or repeats comes from a fraction. One that never ends and never repeats is irrational.",
+  "a": {
+   "q": "Which decimal is irrational?",
+   "opts": [
+    "\\(\\pi = 3.14159\\ldots\\), which never ends or repeats",
+    "\\(0.\\overline{6}\\), which repeats the digit 6",
+    "\\(0.125\\), which stops after three places",
+    "\\(0.\\overline{27}\\), which repeats the block 27"
+   ],
+   "why": "The decimal of \\(\\pi\\) never ends and never repeats, so it is irrational. \\(0.\\overline{6}\\) goes on for ever, but it repeats, so it comes from a fraction.",
+   "clue": "Which one has no end and no repeating pattern?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mei uses a calculator to find \\(\\frac{5}{11}\\) and gets \\(0.454545\\ldots\\) How is it written, and what type of number is it?",
+   "opts": [
+    "\\(0.\\overline{45}\\), a recurring decimal",
+    "\\(0.\\overline{45}\\), an irrational number",
+    "\\(0.\\overline{4}\\), a recurring decimal",
+    "0.45, a terminating decimal"
+   ],
+   "why": "The block 45 repeats, so the bar goes over both digits. It comes from a fraction, so it is recurring and not irrational. Writing \\(0.\\overline{4}\\) would mean only the 4 repeats.",
+   "clue": "Which digits repeat, and can the number be written as a fraction?"
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:20Z",
+   "step": "write",
+   "version": {
+    "title": "Recurring decimals and irrational numbers",
+    "card": [
+     "Dividing a fraction's numerator by its denominator gives a decimal. A terminating decimal stops, such as \\(\\frac{3}{8} = 0.375\\).",
+     "A recurring decimal repeats digits for ever. A bar goes over just the digits that repeat (some books use dots): \\(\\frac{4}{11} = 0.3636...\\) is written \\(0.\\overline{36}\\).",
+     "Terminating and recurring decimals can both be written as fractions. An irrational number cannot be written as a fraction of whole numbers.",
+     "So the decimal of an irrational number never ends and never repeats, such as \\(\\pi = 3.14159...\\) and \\(\\sqrt{2} = 1.41421...\\)"
+    ],
+    "remember": "If a decimal stops or repeats, it is a fraction. If it never ends and never repeats, it is irrational.",
+    "a": {
+     "q": "Which of these numbers is irrational?",
+     "opts": [
+      "\\(\\sqrt{2}\\)",
+      "\\(0.\\overline{6}\\)",
+      "\\(\\frac{22}{7}\\)",
+      "\\(0.125\\)"
+     ],
+     "why": "\\(\\sqrt{2}\\) cannot be written as a fraction of whole numbers, and its decimal never ends or repeats. \\(\\frac{22}{7}\\) is close to \\(\\pi\\), but it is a fraction, so it is not irrational.",
+     "clue": "Which one cannot be written as a fraction?"
+    },
+    "b": {
+     "d": 3,
+     "q": "How is \\(\\frac{5}{6}\\) written as a recurring decimal?",
+     "opts": [
+      "\\(0.8\\overline{3}\\)",
+      "\\(0.\\overline{83}\\)",
+      "\\(0.\\overline{8}\\)",
+      "\\(0.83\\)"
+     ],
+     "why": "\\(5 \\div 6 = 0.8333...\\): the 8 appears once, and only the 3 repeats, so the bar goes over the 3 alone. \\(0.\\overline{83}\\) would mean \\(0.8383...\\), a different number.",
+     "clue": "Which digit keeps repeating after the division?"
+    }
+   },
+   "problems": [
+    "mat-recurring-decimals-irrational-numbersa asks the same question, word for word, as mat-real-number-systema: Which of these numbers is irrational? Word it differently."
+   ]
+  },
+  {
+   "at": "2026-11-20T14:59:15Z",
+   "step": "write",
+   "version": {
+    "title": "Recurring decimals and irrational numbers",
+    "card": [
+     "Dividing a fraction's numerator by its denominator gives a decimal. A terminating decimal stops, such as \\(\\frac{3}{8} = 0.375\\).",
+     "A recurring decimal repeats digits for ever. A bar goes over just the digits that repeat (some books use dots): \\(\\frac{4}{11} = 0.3636...\\) is written \\(0.\\overline{36}\\).",
+     "Terminating and recurring decimals can both be written as fractions. An irrational number cannot be written as a fraction of whole numbers.",
+     "So the decimal of an irrational number never ends and never repeats, such as \\(\\pi = 3.14159...\\) and \\(\\sqrt{2} = 1.41421...\\)"
+    ],
+    "remember": "If a decimal stops or repeats, it is a fraction. If it never ends and never repeats, it is irrational.",
+    "a": {
+     "q": "Only one of these four cannot be written as a fraction of whole numbers. Which is it?",
+     "opts": [
+      "\\(\\sqrt{2}\\)",
+      "\\(0.\\overline{6}\\)",
+      "\\(\\frac{22}{7}\\)",
+      "\\(0.125\\)"
+     ],
+     "why": "\\(\\sqrt{2}\\) is irrational: its decimal never ends or repeats, so it is not a fraction of whole numbers. \\(\\frac{22}{7}\\) is close to \\(\\pi\\), but it is already a fraction.",
+     "clue": "Which one has a decimal that never ends and never repeats?"
+    },
+    "b": {
+     "d": 3,
+     "q": "How is \\(\\frac{5}{6}\\) written as a recurring decimal?",
+     "opts": [
+      "\\(0.8\\overline{3}\\)",
+      "\\(0.\\overline{83}\\)",
+      "\\(0.\\overline{8}\\)",
+      "\\(0.83\\)"
+     ],
+     "why": "\\(5 \\div 6 = 0.8333...\\): the 8 appears once, and only the 3 repeats, so the bar goes over the 3 alone. \\(0.\\overline{83}\\) would mean \\(0.8383...\\), a different number.",
+     "clue": "Which digit keeps repeating after the division?"
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Recurring decimals and irrational numbers",
+  "card": [
+   "Dividing a fraction's numerator by its denominator gives a decimal. A terminating decimal stops, such as \\(\\frac{3}{8} = 0.375\\).",
+   "A recurring decimal repeats digits for ever. A bar goes over just the digits that repeat (some books use dots): \\(\\frac{4}{11} = 0.3636...\\) is written \\(0.\\overline{36}\\).",
+   "Terminating and recurring decimals can both be written as fractions. An irrational number cannot be written as a fraction of whole numbers.",
+   "So the decimal of an irrational number never ends and never repeats, such as \\(\\pi = 3.14159...\\) and \\(\\sqrt{2} = 1.41421...\\)"
+  ],
+  "remember": "If a decimal stops or repeats, it is a fraction. If it never ends and never repeats, it is irrational.",
+  "a": {
+   "q": "Only one of these four cannot be written as a fraction of whole numbers. Which is it?",
+   "opts": [
+    "\\(\\sqrt{2}\\)",
+    "\\(0.\\overline{6}\\)",
+    "\\(\\frac{22}{7}\\)",
+    "\\(0.125\\)"
+   ],
+   "why": "\\(\\sqrt{2}\\) is irrational: its decimal never ends or repeats, so it is not a fraction of whole numbers. \\(\\frac{22}{7}\\) is close to \\(\\pi\\), but it is already a fraction.",
+   "clue": "Which one has a decimal that never ends and never repeats?"
+  },
+  "b": {
+   "d": 3,
+   "q": "How is \\(\\frac{5}{6}\\) written as a recurring decimal?",
+   "opts": [
+    "\\(0.8\\overline{3}\\)",
+    "\\(0.\\overline{83}\\)",
+    "\\(0.\\overline{8}\\)",
+    "\\(0.83\\)"
+   ],
+   "why": "\\(5 \\div 6 = 0.8333...\\): the 8 appears once, and only the 3 repeats, so the bar goes over the 3 alone. \\(0.\\overline{83}\\) would mean \\(0.8383...\\), a different number.",
+   "clue": "Which digit keeps repeating after the division?"
+  }
+ },
+ "redone": true,
+ "local": []
 }

@@ -12,8 +12,169 @@
    0.343
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: done",
+  "2026-11-20T12:44:56Z check: for review (other-sensitive)",
+  "2026-11-20T14:40:18Z review: rejected, to be written again",
+  "2026-11-20T14:58:19Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00571,
+  "check": 0.01058
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches the whole brief: the Republic point covers government and only touches patricians and plebeians, and the families point covers the household and slaves but not the social classes or women's political rights, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Roman society",
+  "card": [
+   [
+    "Patricians",
+    "the old, wealthy families of Rome. For much of the republic, they held most of the power and the top jobs in government."
+   ],
+   [
+    "Plebeians",
+    "the ordinary free citizens, such as farmers, craftworkers and traders. Most were not rich. Over time they won more political rights."
+   ],
+   [
+    "Slaves",
+    "people who were owned by others and had no freedom. They did hard work on farms, in mines and in homes, and could be bought and sold."
+   ],
+   "Women had few political rights. They could not vote or hold office. In the family, the father led the household and held authority over its members."
+  ],
+  "remember": "Rome had three social groups, with power held mostly by men, and each father led his own household.",
+  "a": {
+   "q": "Which group in Roman society was made up of ordinary free citizens, such as farmers and traders?",
+   "opts": [
+    "Plebeians",
+    "Patricians",
+    "Slaves",
+    "Consuls"
+   ],
+   "why": "Plebeians were free citizens who were not from the old, wealthy families. Patricians were those wealthy families, so they are not the ordinary citizens.",
+   "clue": "They were free, but they were not from the old wealthy families."
+  },
+  "b": {
+   "d": 2,
+   "q": "Livia lives in Rome and is the wife of a citizen. Which statement about her place in society is correct?",
+   "opts": [
+    "She could not vote or hold political office",
+    "She could vote but could not own a household",
+    "She could hold office if her father agreed",
+    "She led her household instead of her husband"
+   ],
+   "why": "Women in Rome had few political rights, so they could not vote or hold office. The father led the household, so the idea that Livia led it in place of her husband is wrong.",
+   "clue": "Think about who had political rights and who led the household."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:19Z",
+   "step": "write",
+   "version": {
+    "title": "Roman society",
+    "card": [
+     [
+      "Patricians",
+      "a small group of old, wealthy families. In the early republic, they held most of the top jobs in government and religion."
+     ],
+     [
+      "Plebeians",
+      "most of Rome's free citizens, such as farmers, craftworkers and traders. Most were not rich, and over time they won more political rights."
+     ],
+     [
+      "Slaves",
+      "people owned by others, with no freedom and no rights as citizens. They worked in homes, on farms and in mines, and could be bought and sold."
+     ],
+     "Women could not vote or hold public office. The father, called the paterfamilias, led the household and held legal power over his children, even when they were adults."
+    ],
+    "remember": "Birth and freedom set a Roman's place, and men held the power in public life and at home.",
+    "a": {
+     "q": "What set a plebeian apart from a slave in Rome?",
+     "opts": [
+      "A plebeian was free, while a slave was owned",
+      "A plebeian was rich, while a slave was poor",
+      "A plebeian came from an old, wealthy family",
+      "A plebeian could not vote, while a slave could"
+     ],
+     "why": "Plebeians were free citizens, while slaves were owned by others and could be bought and sold. Most plebeians were not rich, so wealth is not what set them apart.",
+     "clue": "Think about freedom, not money."
+    },
+    "b": {
+     "d": 3,
+     "q": "Gaius is 25 and married, and his father is still alive. In a Roman family, who led the household?",
+     "opts": [
+      "His father, the paterfamilias",
+      "Gaius, since he is now married",
+      "His mother, who ran the home",
+      "The eldest slave of the house"
+     ],
+     "why": "The father, called the paterfamilias, led the household and held legal power over his children, even when they were adults. Marrying did not end his father's power over Gaius.",
+     "clue": "Does growing up end a Roman father's power?"
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Roman society",
+  "card": [
+   [
+    "Patricians",
+    "a small group of old, wealthy families. In the early republic, they held most of the top jobs in government and religion."
+   ],
+   [
+    "Plebeians",
+    "most of Rome's free citizens, such as farmers, craftworkers and traders. Most were not rich, and over time they won more political rights."
+   ],
+   [
+    "Slaves",
+    "people owned by others, with no freedom and no rights as citizens. They worked in homes, on farms and in mines, and could be bought and sold."
+   ],
+   "Women could not vote or hold public office. The father, called the paterfamilias, led the household and held legal power over his children, even when they were adults."
+  ],
+  "remember": "Birth and freedom set a Roman's place, and men held the power in public life and at home.",
+  "a": {
+   "q": "What set a plebeian apart from a slave in Rome?",
+   "opts": [
+    "A plebeian was free, while a slave was owned",
+    "A plebeian was rich, while a slave was poor",
+    "A plebeian came from an old, wealthy family",
+    "A plebeian could not vote, while a slave could"
+   ],
+   "why": "Plebeians were free citizens, while slaves were owned by others and could be bought and sold. Most plebeians were not rich, so wealth is not what set them apart.",
+   "clue": "Think about freedom, not money."
+  },
+  "b": {
+   "d": 3,
+   "q": "Gaius is 25 and married, and his father is still alive. In a Roman family, who led the household?",
+   "opts": [
+    "His father, the paterfamilias",
+    "Gaius, since he is now married",
+    "His mother, who ran the home",
+    "The eldest slave of the house"
+   ],
+   "why": "The father, called the paterfamilias, led the household and held legal power over his children, even when they were adults. Marrying did not end his father's power over Gaius.",
+   "clue": "Does growing up end a Roman father's power?"
+  }
+ },
+ "local": []
 }

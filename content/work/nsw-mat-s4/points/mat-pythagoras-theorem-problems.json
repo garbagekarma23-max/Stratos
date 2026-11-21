@@ -16,8 +16,201 @@
    0.258
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:54Z write: done",
+  "2026-11-20T12:35:53Z check: flagged",
+  "2026-11-20T12:44:58Z fix: suggested",
+  "2026-11-20T13:23:42Z autoreview: cleared with the fix (card other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.01363,
+  "check": 0.01184,
+  "fix": 0.02082
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches the step this point needs, which is reading a worded problem, drawing a diagram and picking out the right-angled triangle; the closest cards only show how to find a hypotenuse or a shorter side once the triangle is given.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Pythagoras' theorem in problems",
+  "card": [
+   "For a worded problem, draw a diagram first. Label the lengths you know and mark the unknown with a letter.",
+   "Look for a right-angled triangle. A ladder on a wall, the ground and the wall make one. A rectangle's diagonal cuts it into two.",
+   "Decide whether the unknown is the hypotenuse, the side opposite the right angle, or a shorter side. Then use \\(c^{2} = a^{2} + b^{2}\\), where \\(c\\) is the hypotenuse.",
+   "Example: a rectangle is 9 m by 12 m. Its diagonal is the hypotenuse, so \\(d^{2} = 81 + 144 = 225\\), and \\(d = 15\\) m."
+  ],
+  "remember": "Draw the diagram, find the right-angled triangle, then decide if the unknown is the hypotenuse.",
+  "a": {
+   "q": "A phone screen is 6 cm wide and 8 cm tall. How long is its diagonal?",
+   "opts": [
+    "10 cm",
+    "14 cm",
+    "7 cm",
+    "28 cm"
+   ],
+   "why": "The diagonal is the hypotenuse, so \\(d^{2} = 6^{2} + 8^{2} = 100\\), and \\(d = 10\\) cm. Adding 6 and 8 to get 14 forgets to square and then take the square root.",
+   "clue": "The diagonal is opposite the right angle."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo leans a 5 m ladder against a wall. Its foot is 3 m from the wall on flat ground. How high up the wall does it reach?",
+   "opts": [
+    "4 m",
+    "8 m",
+    "\\(\\sqrt{34}\\) m",
+    "2 m"
+   ],
+   "why": "The ladder is the hypotenuse, so the height is a shorter side: \\(h^{2} = 5^{2} - 3^{2} = 16\\), and \\(h = 4\\) m. Adding the squares to get \\(\\sqrt{34}\\) treats the ladder as a shorter side.",
+   "clue": "Is the ladder the hypotenuse or a shorter side?"
+  },
+  "wants": [
+   {
+    "at": "b",
+    "kind": "diagram",
+    "brief": "A right-angled triangle formed by a wall, flat ground and a ladder. The ladder is labelled 5 m, the ground distance from the wall to the foot of the ladder is labelled 3 m, and the height up the wall is labelled h. The right angle is marked where the wall meets the ground.",
+    "why": "It shows the triangle hidden in the worded problem and which side is the hypotenuse."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "10 cm",
+   "also_right": []
+  },
+  "b": {
+   "best": "4 m",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines the hypotenuse ('the side opposite the right angle'), which is point 1's idea. It is only a brief reminder, but it could be cut down to just naming the hypotenuse."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers check out (10 cm and 4 m), and the explanations agree with them. The only minor issue is that the card restates the definition of the hypotenuse, which belongs to point 1."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The card defines the hypotenuse ('the side opposite the right angle'), which is point 1's idea. It is only a brief reminder, but it could be cut down to just naming the hypotenuse."
+ ],
+ "proposal": {
+  "title": "Pythagoras' theorem in problems",
+  "card": [
+   "For a worded problem, draw a diagram first. Label the lengths you know and mark the unknown with a letter.",
+   "Look for a right-angled triangle. A ladder on a wall, the ground and the wall make one, with the ladder as the hypotenuse. A rectangle's diagonal cuts it into two.",
+   "Decide whether the unknown is the hypotenuse or a shorter side. Then use \\(c^{2} = a^{2} + b^{2}\\), where \\(c\\) is the hypotenuse.",
+   "Example: a rectangle is 9 m by 12 m. Its diagonal is the hypotenuse, so \\(d^{2} = 81 + 144 = 225\\), and \\(d = 15\\) m."
+  ],
+  "remember": "Draw the diagram, find the right-angled triangle, then decide if the unknown is the hypotenuse.",
+  "a": {
+   "q": "A phone screen is 6 cm wide and 8 cm tall. How long is its diagonal?",
+   "opts": [
+    "10 cm",
+    "14 cm",
+    "7 cm",
+    "28 cm"
+   ],
+   "why": "The diagonal is the hypotenuse, so \\(d^{2} = 6^{2} + 8^{2} = 100\\), and \\(d = 10\\) cm. Adding 6 and 8 to get 14 forgets to square and then take the square root.",
+   "clue": "The diagonal splits the screen into two right-angled triangles."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo leans a 5 m ladder against a wall. Its foot is 3 m from the wall on flat ground. How high up the wall does it reach?",
+   "opts": [
+    "4 m",
+    "8 m",
+    "\\(\\sqrt{34}\\) m",
+    "2 m"
+   ],
+   "why": "The ladder is the hypotenuse, so the height is a shorter side: \\(h^{2} = 5^{2} - 3^{2} = 16\\), and \\(h = 4\\) m. Adding the squares to get \\(\\sqrt{34}\\) treats the ladder as a shorter side.",
+   "clue": "Is the ladder the hypotenuse or a shorter side?"
+  },
+  "wants": [
+   {
+    "at": "b",
+    "kind": "diagram",
+    "brief": "A right-angled triangle formed by a wall, flat ground and a ladder. The ladder is labelled 5 m, the ground distance from the wall to the foot of the ladder is labelled 3 m, and the height up the wall is labelled h. The right angle is marked where the wall meets the ground.",
+    "why": "It shows the triangle hidden in the worded problem and which side is the hypotenuse."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:42Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines the hypotenuse ('the side opposite the right angle'), which is point 1's idea. It is only a brief reminder, but it could be cut down to just naming the hypotenuse."
+   }
+  ],
+  "flags": [
+   "Card, other: The card defines the hypotenuse ('the side opposite the right angle'), which is point 1's idea. It is only a brief reminder, but it could be cut down to just naming the hypotenuse."
+  ]
+ },
+ "final": {
+  "title": "Pythagoras' theorem in problems",
+  "card": [
+   "For a worded problem, draw a diagram first. Label the lengths you know and mark the unknown with a letter.",
+   "Look for a right-angled triangle. A ladder on a wall, the ground and the wall make one, with the ladder as the hypotenuse. A rectangle's diagonal cuts it into two.",
+   "Decide whether the unknown is the hypotenuse or a shorter side. Then use \\(c^{2} = a^{2} + b^{2}\\), where \\(c\\) is the hypotenuse.",
+   "Example: a rectangle is 9 m by 12 m. Its diagonal is the hypotenuse, so \\(d^{2} = 81 + 144 = 225\\), and \\(d = 15\\) m."
+  ],
+  "remember": "Draw the diagram, find the right-angled triangle, then decide if the unknown is the hypotenuse.",
+  "a": {
+   "q": "A phone screen is 6 cm wide and 8 cm tall. How long is its diagonal?",
+   "opts": [
+    "10 cm",
+    "14 cm",
+    "7 cm",
+    "28 cm"
+   ],
+   "why": "The diagonal is the hypotenuse, so \\(d^{2} = 6^{2} + 8^{2} = 100\\), and \\(d = 10\\) cm. Adding 6 and 8 to get 14 forgets to square and then take the square root.",
+   "clue": "The diagonal splits the screen into two right-angled triangles."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo leans a 5 m ladder against a wall. Its foot is 3 m from the wall on flat ground. How high up the wall does it reach?",
+   "opts": [
+    "4 m",
+    "8 m",
+    "\\(\\sqrt{34}\\) m",
+    "2 m"
+   ],
+   "why": "The ladder is the hypotenuse, so the height is a shorter side: \\(h^{2} = 5^{2} - 3^{2} = 16\\), and \\(h = 4\\) m. Adding the squares to get \\(\\sqrt{34}\\) treats the ladder as a shorter side.",
+   "clue": "Is the ladder the hypotenuse or a shorter side?"
+  },
+  "wants": [
+   {
+    "at": "b",
+    "kind": "diagram",
+    "brief": "A right-angled triangle formed by a wall, flat ground and a ladder. The ladder is labelled 5 m, the ground distance from the wall to the foot of the ladder is labelled 3 m, and the height up the wall is labelled h. The right angle is marked where the wall meets the ground.",
+    "why": "It shows the triangle hidden in the worded problem and which side is the hypotenuse."
+   }
+  ]
+ },
+ "cleared_by": "auto"
 }

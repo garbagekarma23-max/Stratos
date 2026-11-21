@@ -12,8 +12,362 @@
    0.378
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:46Z write: done",
+  "2026-11-20T12:35:48Z check: flagged",
+  "2026-11-20T12:44:55Z fix: suggested",
+  "2026-11-20T13:23:38Z autoreview: picked as a spot check. It would have been cleared with the fix (a wording, b wording)",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.01125,
+  "check": 0.01245,
+  "fix": 0.01868
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point covers how human activities such as mining, farming, dams and land clearing change landforms, so no existing point teaches this idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "People changing landscapes",
+  "card": [
+   "People change landforms through their activities. Four common ones are mining, farming, building dams and clearing land.",
+   "Mining can dig out hills or make deep pits in the ground. Building a dam floods a valley behind a wall and makes a lake.",
+   "Clearing land removes trees and plants whose roots hold soil in place. Farming can also leave soil bare, so rain and wind can wash or blow it away.",
+   "Natural processes such as river erosion can take thousands of years. People can change a landscape in months or years, so they often change it faster."
+  ],
+  "remember": "Mining, farming, dams and clearing change landforms, often faster than natural processes.",
+  "a": {
+   "q": "Why can clearing land make soil easier to wash away?",
+   "opts": [
+    "Roots that held the soil in place are removed",
+    "Cleared land always receives more rainfall",
+    "Removing plants makes the soil heavier",
+    "Clearing land forms a dam across the valley"
+   ],
+   "why": "Plant roots hold soil together, so once the plants are gone rain can carry the soil away. Clearing does not change how much rain falls.",
+   "clue": "Think about what plant roots do in the soil."
+  },
+  "b": {
+   "d": 2,
+   "q": "A council builds a dam across a valley near Bathurst and a lake forms behind it. What does this show about people and landforms?",
+   "opts": [
+    "People can change a landform within a few years",
+    "People can only change landforms very slowly",
+    "Dams change landforms only through erosion",
+    "Dams cannot change the shape of a valley"
+   ],
+   "why": "A valley was flooded to make a lake in a short time, so people changed the landform quickly. Natural erosion can take thousands of years, so slow change is the wrong idea here.",
+   "clue": "Compare how long the dam took with how long natural erosion takes."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Roots that held the soil in place are removed",
+   "also_right": []
+  },
+  "b": {
+   "best": "People can change a landform within a few years",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The distractor 'Cleared land always receives more rainfall' uses 'always', which a test-wise student can rule out without knowing the idea. The card uses 'can'."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Two distractors use 'only' ('Dams change landforms only through erosion', 'People can only change landforms very slowly'). The right option is the only one that matches the card's 'can' wording, so a student could pick it by eliminating the absolutes."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and intended answers are correct. The only issue is that absolute words ('always', 'only') in the distractors for both questions make the right answers easy to pick by elimination."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The distractor 'Cleared land always receives more rainfall' uses 'always', which a test-wise student can rule out without knowing the idea. The card uses 'can'.",
+  "Question b, wording: Two distractors use 'only' ('Dams change landforms only through erosion', 'People can only change landforms very slowly'). The right option is the only one that matches the card's 'can' wording, so a student could pick it by eliminating the absolutes."
+ ],
+ "proposal": {
+  "title": "People changing landscapes",
+  "card": [
+   "People change landforms through their activities. Four common ones are mining, farming, building dams and clearing land.",
+   "Mining can dig out hills or make deep pits in the ground. Building a dam floods a valley behind a wall and makes a lake.",
+   "Clearing land removes trees and plants whose roots hold soil in place. Farming can also leave soil bare, so rain and wind can wash or blow it away.",
+   "Natural processes such as river erosion can take thousands of years. People can change a landscape in months or years, so they can change it faster than nature does."
+  ],
+  "remember": "Mining, farming, dams and clearing change landforms, sometimes faster than nature.",
+  "a": {
+   "q": "Why can clearing land make soil easier to wash away?",
+   "opts": [
+    "Roots that held the soil in place are removed",
+    "Removing plants makes the soil much heavier",
+    "Clearing land digs deep pits in the ground",
+    "Removing plants adds extra sand to the soil"
+   ],
+   "why": "Plant roots hold soil together, so once the plants are gone, rain can carry the soil away. Digging deep pits is what mining does, not clearing, and it does not explain why soil washes away.",
+   "clue": "Think about what plant roots do in the soil."
+  },
+  "b": {
+   "d": 2,
+   "q": "A council builds a dam across a valley near Bathurst and a lake forms behind it. What does this show about people and landforms?",
+   "opts": [
+    "People can change a landform within a few years",
+    "People change landforms as slowly as rivers do",
+    "Dams change landforms by pushing up mountains",
+    "Dams make valleys deeper by cutting into rock"
+   ],
+   "why": "A valley was flooded to make a lake in a short time, so people changed the landform quickly. River erosion can take thousands of years, so saying people work as slowly as rivers misses the point.",
+   "clue": "Compare how long the dam took with how long natural erosion takes."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:38Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The distractor 'Cleared land always receives more rainfall' uses 'always', which a test-wise student can rule out without knowing the idea. The card uses 'can'."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Two distractors use 'only' ('Dams change landforms only through erosion', 'People can only change landforms very slowly'). The right option is the only one that matches the card's 'can' wording, so a student could pick it by eliminating the absolutes."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The distractor 'Cleared land always receives more rainfall' uses 'always', which a test-wise student can rule out without knowing the idea. The card uses 'can'.",
+   "Question b, wording: Two distractors use 'only' ('Dams change landforms only through erosion', 'People can only change landforms very slowly'). The right option is the only one that matches the card's 'can' wording, so a student could pick it by eliminating the absolutes."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "People changing landscapes",
+  "card": [
+   "People change landforms through their activities. Four common ones are mining, farming, building dams and clearing land.",
+   "Mining can dig out hills or make deep pits in the ground. Building a dam floods a valley behind a wall and makes a lake.",
+   "Clearing land removes trees and plants whose roots hold soil in place. Farming can also leave soil bare, so rain and wind can wash or blow it away.",
+   "Natural processes such as river erosion can take thousands of years. People can change a landscape in months or years, so they can change it faster than nature does."
+  ],
+  "remember": "Mining, farming, dams and clearing change landforms, sometimes faster than nature.",
+  "a": {
+   "q": "Why can clearing land make soil easier to wash away?",
+   "opts": [
+    "Roots that held the soil in place are removed",
+    "Removing plants makes the soil much heavier",
+    "Clearing land digs deep pits in the ground",
+    "Removing plants adds extra sand to the soil"
+   ],
+   "why": "Plant roots hold soil together, so once the plants are gone, rain can carry the soil away. Digging deep pits is what mining does, not clearing, and it does not explain why soil washes away.",
+   "clue": "Think about what plant roots do in the soil."
+  },
+  "b": {
+   "d": 2,
+   "q": "A council builds a dam across a valley near Bathurst and a lake forms behind it. What does this show about people and landforms?",
+   "opts": [
+    "People can change a landform within a few years",
+    "People change landforms as slowly as rivers do",
+    "Dams change landforms by pushing up mountains",
+    "Dams make valleys deeper by cutting into rock"
+   ],
+   "why": "A valley was flooded to make a lake in a short time, so people changed the landform quickly. River erosion can take thousands of years, so saying people work as slowly as rivers misses the point.",
+   "clue": "Compare how long the dam took with how long natural erosion takes."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix removes the absolute words from the wrong options in both questions, as the checker asked, and the card and remember line now say sometimes, matching the brief. The facts are right, each question has one right answer and it is not the longest.",
+   "item": "63d93e1459792602",
+   "result": "decided",
+   "saved": {
+    "id": "geo-people-changing-landscapes",
+    "title": "People changing landscapes",
+    "brief": "3fdb98b29ae2",
+    "shortlist": [
+     [
+      "geo-landscapes-landforms",
+      0.588
+     ],
+     [
+      "geo-types-landscape",
+      0.378
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 1,
+     "check": 1,
+     "fix": 1
+    },
+    "usd": {
+     "match": 9e-05,
+     "write": 0.01125,
+     "check": 0.01245,
+     "fix": 0.01868
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "high",
+     "reason": "Neither bank point covers how human activities such as mining, farming, dams and land clearing change landforms, so no existing point teaches this idea.",
+     "model": "claude-haiku-5-5"
+    },
+    "draft": {
+     "title": "People changing landscapes",
+     "card": [
+      "People change landforms through their activities. Four common ones are mining, farming, building dams and clearing land.",
+      "Mining can dig out hills or make deep pits in the ground. Building a dam floods a valley behind a wall and makes a lake.",
+      "Clearing land removes trees and plants whose roots hold soil in place. Farming can also leave soil bare, so rain and wind can wash or blow it away.",
+      "Natural processes such as river erosion can take thousands of years. People can change a landscape in months or years, so they often change it faster."
+     ],
+     "remember": "Mining, farming, dams and clearing change landforms, often faster than natural processes.",
+     "a": {
+      "q": "Why can clearing land make soil easier to wash away?",
+      "opts": [
+       "Roots that held the soil in place are removed",
+       "Cleared land always receives more rainfall",
+       "Removing plants makes the soil heavier",
+       "Clearing land forms a dam across the valley"
+      ],
+      "why": "Plant roots hold soil together, so once the plants are gone rain can carry the soil away. Clearing does not change how much rain falls.",
+      "clue": "Think about what plant roots do in the soil."
+     },
+     "b": {
+      "d": 2,
+      "q": "A council builds a dam across a valley near Bathurst and a lake forms behind it. What does this show about people and landforms?",
+      "opts": [
+       "People can change a landform within a few years",
+       "People can only change landforms very slowly",
+       "Dams change landforms only through erosion",
+       "Dams cannot change the shape of a valley"
+      ],
+      "why": "A valley was flooded to make a lake in a short time, so people changed the landform quickly. Natural erosion can take thousands of years, so slow change is the wrong idea here.",
+      "clue": "Compare how long the dam took with how long natural erosion takes."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Roots that held the soil in place are removed",
+      "also_right": []
+     },
+     "b": {
+      "best": "People can change a landform within a few years",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The distractor 'Cleared land always receives more rainfall' uses 'always', which a test-wise student can rule out without knowing the idea. The card uses 'can'."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "Two distractors use 'only' ('Dams change landforms only through erosion', 'People can only change landforms very slowly'). The right option is the only one that matches the card's 'can' wording, so a student could pick it by eliminating the absolutes."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and intended answers are correct. The only issue is that absolute words ('always', 'only') in the distractors for both questions make the right answers easy to pick by elimination."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a, wording: The distractor 'Cleared land always receives more rainfall' uses 'always', which a test-wise student can rule out without knowing the idea. The card uses 'can'.",
+     "Question b, wording: Two distractors use 'only' ('Dams change landforms only through erosion', 'People can only change landforms very slowly'). The right option is the only one that matches the card's 'can' wording, so a student could pick it by eliminating the absolutes."
+    ],
+    "proposal": {
+     "title": "People changing landscapes",
+     "card": [
+      "People change landforms through their activities. Four common ones are mining, farming, building dams and clearing land.",
+      "Mining can dig out hills or make deep pits in the ground. Building a dam floods a valley behind a wall and makes a lake.",
+      "Clearing land removes trees and plants whose roots hold soil in place. Farming can also leave soil bare, so rain and wind can wash or blow it away.",
+      "Natural processes such as river erosion can take thousands of years. People can change a landscape in months or years, so they can change it faster than nature does."
+     ],
+     "remember": "Mining, farming, dams and clearing change landforms, sometimes faster than nature.",
+     "a": {
+      "q": "Why can clearing land make soil easier to wash away?",
+      "opts": [
+       "Roots that held the soil in place are removed",
+       "Removing plants makes the soil much heavier",
+       "Clearing land digs deep pits in the ground",
+       "Removing plants adds extra sand to the soil"
+      ],
+      "why": "Plant roots hold soil together, so once the plants are gone, rain can carry the soil away. Digging deep pits is what mining does, not clearing, and it does not explain why soil washes away.",
+      "clue": "Think about what plant roots do in the soil."
+     },
+     "b": {
+      "d": 2,
+      "q": "A council builds a dam across a valley near Bathurst and a lake forms behind it. What does this show about people and landforms?",
+      "opts": [
+       "People can change a landform within a few years",
+       "People change landforms as slowly as rivers do",
+       "Dams change landforms by pushing up mountains",
+       "Dams make valleys deeper by cutting into rock"
+      ],
+      "why": "A valley was flooded to make a lake in a short time, so people changed the landform quickly. River erosion can take thousands of years, so saying people work as slowly as rivers misses the point.",
+      "clue": "Compare how long the dam took with how long natural erosion takes."
+     }
+    },
+    "proposal_problems": [],
+    "auto": {
+     "at": "2026-11-20T13:23:38Z",
+     "rules": 1,
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The distractor 'Cleared land always receives more rainfall' uses 'always', which a test-wise student can rule out without knowing the idea. The card uses 'can'."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "Two distractors use 'only' ('Dams change landforms only through erosion', 'People can only change landforms very slowly'). The right option is the only one that matches the card's 'can' wording, so a student could pick it by eliminating the absolutes."
+      }
+     ],
+     "flags": [
+      "Question a, wording: The distractor 'Cleared land always receives more rainfall' uses 'always', which a test-wise student can rule out without knowing the idea. The card uses 'can'.",
+      "Question b, wording: Two distractors use 'only' ('Dams change landforms only through erosion', 'People can only change landforms very slowly'). The right option is the only one that matches the card's 'can' wording, so a student could pick it by eliminating the absolutes."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "dc4e95ec31e1dee5"
+  }
  ]
 }

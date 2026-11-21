@@ -16,8 +16,220 @@
    0.251
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 may adapt eng-narrators-reliability, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:44Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:47Z write: failed the content check, writing again",
+  "2026-11-20T12:44:54Z write: done",
+  "2026-11-20T13:11:47Z check: flagged",
+  "2026-11-20T13:17:56Z fix: suggested",
+  "2026-11-20T13:23:37Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "confirm": 0.00554,
+  "write": 0.01423,
+  "check": 0.01327,
+  "fix": 0.01946
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "eng-narrators-reliability",
+  "changes": [
+   "Add to the unreliable narrator definition that a narrator may misunderstand events, not only lie or be biased, as the brief states.",
+   "Trim or set aside the first-person and third-person overview, since the new point is about unreliability alone."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea of unreliable narrators at a suitable depth, but it leaves out misunderstanding as a cause and carries extra material on narrator types that the new point does not need.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, eng-narrators-reliability, is broader: it also teaches first and third person narration and one of its questions tests only narrator person, so no bank point teaches unreliable narrators on their own as this brief asks.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Unreliable narrators",
+  "card": [
+   "An unreliable narrator is a narrator the reader cannot fully trust. Their account may be wrong, or it may leave out facts.",
+   [
+    "Lies",
+    "the narrator knowingly gives a false account to hide something or to look good."
+   ],
+   [
+    "Misunderstands",
+    "the narrator is honest but lacks the knowledge or maturity to read events correctly, such as a young child."
+   ],
+   [
+    "Biased",
+    "the narrator's strong feelings or self-interest twist how they describe people and events."
+   ]
+  ],
+  "remember": "Look for the gap between what the narrator claims and what the details show.",
+  "a": {
+   "q": "A narrator says she is the most popular girl in school. Yet every scene shows classmates avoiding her. What does this gap suggest?",
+   "opts": [
+    "The narrator may be unreliable",
+    "The narrator knows every character's thoughts",
+    "The narrator is a reliable guide to events",
+    "The narrator is the real author of the story"
+   ],
+   "why": "The narrator's claim is contradicted by what the scenes show. Readers spot unreliability by noticing a gap like this. The narrator is not a reliable guide, because the details do not support her claim.",
+   "clue": "Compare what she says with what the scenes show."
+  },
+  "b": {
+   "d": 3,
+   "q": "Eight-year-old Sam says his uncle is just resting on the couch each afternoon. Details show empty bottles and angry neighbours. Why is Sam unreliable?",
+   "opts": [
+    "He is honest but misunderstands what he sees",
+    "He knows the truth and lies to protect his uncle",
+    "He holds strong feelings that twist what he tells",
+    "He knows the truth and hides it to look good"
+   ],
+   "why": "Sam seems honest but is too young to read the signs, so he misunderstands events. Lying is tempting, but nothing suggests he knows the truth and hides it. Bias would show strong feelings that twist his account, and Sam shows none.",
+   "clue": "Does Sam seem to know the truth and hide it, or simply not see it?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The narrator may be unreliable",
+   "also_right": []
+  },
+  "b": {
+   "best": "He is honest but misunderstands what he sees",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Does Sam seem to know the truth and hide it, or simply not see it?' all but states the answer: 'simply not see it' points straight to the misunderstanding option, so a student can answer without applying the card's categories."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct. Question b's clue nearly gives the answer away by framing the choice as hiding the truth versus 'simply not seeing it'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue 'Does Sam seem to know the truth and hide it, or simply not see it?' all but states the answer: 'simply not see it' points straight to the misunderstanding option, so a student can answer without applying the card's categories."
+ ],
+ "proposal": {
+  "title": "Unreliable narrators",
+  "card": [
+   "An unreliable narrator is a narrator the reader cannot fully trust. Readers spot one by noticing gaps between what the narrator says and what the details show.",
+   [
+    "Lies",
+    "the narrator knowingly gives a false account to hide something or to look good."
+   ],
+   [
+    "Misunderstands",
+    "the narrator is honest but lacks the knowledge or maturity to read events correctly, such as a young child."
+   ],
+   [
+    "Biased",
+    "the narrator's strong feelings or self-interest twist how they describe people and events."
+   ]
+  ],
+  "remember": "When the details and the narrator disagree, trust the details, then ask why: lies, misunderstanding or bias.",
+  "a": {
+   "q": "A narrator says she is the most popular girl in school. Yet every scene shows classmates avoiding her. What does this gap suggest?",
+   "opts": [
+    "The narrator may be unreliable",
+    "The narrator knows every character's thoughts",
+    "The narrator is a reliable guide to events",
+    "The narrator is the real author of the story"
+   ],
+   "why": "The narrator's claim is contradicted by what the scenes show. Readers spot unreliability by noticing a gap like this. She is not a reliable guide, because the details do not support her claim.",
+   "clue": "Compare what she says with what the scenes show."
+  },
+  "b": {
+   "d": 3,
+   "q": "Eight-year-old Sam says his uncle is just resting on the couch each afternoon. Details show empty bottles and angry neighbours. Why is Sam unreliable?",
+   "opts": [
+    "He is honest but misunderstands what he sees",
+    "He knows the truth and lies to protect his uncle",
+    "He holds strong feelings that twist what he tells",
+    "He knows the truth and hides it to look good"
+   ],
+   "why": "Sam seems honest but is too young to read the signs, so he misunderstands events. Lying is tempting, but nothing suggests he knows the truth and hides it. Bias would show strong feelings that twist his account, and Sam shows none.",
+   "clue": "Think about Sam's age and what the card says about it."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:37Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Does Sam seem to know the truth and hide it, or simply not see it?' all but states the answer: 'simply not see it' points straight to the misunderstanding option, so a student can answer without applying the card's categories."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue 'Does Sam seem to know the truth and hide it, or simply not see it?' all but states the answer: 'simply not see it' points straight to the misunderstanding option, so a student can answer without applying the card's categories."
+  ]
+ },
+ "final": {
+  "title": "Unreliable narrators",
+  "card": [
+   "An unreliable narrator is a narrator the reader cannot fully trust. Readers spot one by noticing gaps between what the narrator says and what the details show.",
+   [
+    "Lies",
+    "the narrator knowingly gives a false account to hide something or to look good."
+   ],
+   [
+    "Misunderstands",
+    "the narrator is honest but lacks the knowledge or maturity to read events correctly, such as a young child."
+   ],
+   [
+    "Biased",
+    "the narrator's strong feelings or self-interest twist how they describe people and events."
+   ]
+  ],
+  "remember": "When the details and the narrator disagree, trust the details, then ask why: lies, misunderstanding or bias.",
+  "a": {
+   "q": "A narrator says she is the most popular girl in school. Yet every scene shows classmates avoiding her. What does this gap suggest?",
+   "opts": [
+    "The narrator may be unreliable",
+    "The narrator knows every character's thoughts",
+    "The narrator is a reliable guide to events",
+    "The narrator is the real author of the story"
+   ],
+   "why": "The narrator's claim is contradicted by what the scenes show. Readers spot unreliability by noticing a gap like this. She is not a reliable guide, because the details do not support her claim.",
+   "clue": "Compare what she says with what the scenes show."
+  },
+  "b": {
+   "d": 3,
+   "q": "Eight-year-old Sam says his uncle is just resting on the couch each afternoon. Details show empty bottles and angry neighbours. Why is Sam unreliable?",
+   "opts": [
+    "He is honest but misunderstands what he sees",
+    "He knows the truth and lies to protect his uncle",
+    "He holds strong feelings that twist what he tells",
+    "He knows the truth and hides it to look good"
+   ],
+   "why": "Sam seems honest but is too young to read the signs, so he misunderstands events. Lying is tempting, but nothing suggests he knows the truth and hides it. Bias would show strong feelings that twist his account, and Sam shows none.",
+   "clue": "Think about Sam's age and what the card says about it."
+  }
+ },
+ "cleared_by": "auto"
 }

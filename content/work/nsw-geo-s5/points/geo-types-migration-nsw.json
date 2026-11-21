@@ -24,8 +24,141 @@
    0.243
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: failed the content check, writing again",
+  "2026-11-20T12:44:56Z write: done",
+  "2026-11-20T12:53:25Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.01228,
+  "check": 0.00761
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The brief covers two dimensions, internal versus international and voluntary versus forced, and no single bank point teaches both; the closest points each cover only one of them.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Types of migration",
+  "card": [
+   [
+    "Internal",
+    "a move within one country, such as from a farm to a city in the same country. The person does not cross a national border."
+   ],
+   [
+    "International",
+    "a move from one country to another. The person crosses a national border."
+   ],
+   [
+    "Voluntary",
+    "people choose to move, for example to take a job or to study."
+   ],
+   [
+    "Forced",
+    "people have to leave because their safety or life is at risk, as with refugees who flee war or persecution."
+   ]
+  ],
+  "remember": "Internal or international depends on crossing a border. Voluntary or forced depends on whether the person had a choice.",
+  "a": {
+   "q": "Which person has migrated without leaving their own country?",
+   "opts": [
+    "A family moves from Broken Hill to Sydney",
+    "A family moves from Sydney to Auckland",
+    "A nurse moves from Manila to Perth",
+    "A student moves from Seoul to Melbourne"
+   ],
+   "why": "Broken Hill and Sydney are both in Australia, so no national border is crossed and the move is internal. The other three moves cross a border, so they are international.",
+   "clue": "Does the person stay in the same country?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Amira's village in Syria was destroyed in a war. She fled to Jordan with her children. How is her move best described?",
+   "opts": [
+    "International and forced",
+    "International and voluntary",
+    "Internal and forced",
+    "Internal and voluntary"
+   ],
+   "why": "She crossed from Syria into Jordan, so the move is international. She left because her safety was at risk, so it is forced. Internal is tempting only if you think of a village move, but she crossed a border.",
+   "clue": "Ask two questions: did she cross a border, and did she have a choice?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A family moves from Broken Hill to Sydney",
+   "also_right": []
+  },
+  "b": {
+   "best": "International and forced",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Types of migration",
+  "card": [
+   [
+    "Internal",
+    "a move within one country, such as from a farm to a city in the same country. The person does not cross a national border."
+   ],
+   [
+    "International",
+    "a move from one country to another. The person crosses a national border."
+   ],
+   [
+    "Voluntary",
+    "people choose to move, for example to take a job or to study."
+   ],
+   [
+    "Forced",
+    "people have to leave because their safety or life is at risk, as with refugees who flee war or persecution."
+   ]
+  ],
+  "remember": "Internal or international depends on crossing a border. Voluntary or forced depends on whether the person had a choice.",
+  "a": {
+   "q": "Which person has migrated without leaving their own country?",
+   "opts": [
+    "A family moves from Broken Hill to Sydney",
+    "A family moves from Sydney to Auckland",
+    "A nurse moves from Manila to Perth",
+    "A student moves from Seoul to Melbourne"
+   ],
+   "why": "Broken Hill and Sydney are both in Australia, so no national border is crossed and the move is internal. The other three moves cross a border, so they are international.",
+   "clue": "Does the person stay in the same country?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Amira's village in Syria was destroyed in a war. She fled to Jordan with her children. How is her move best described?",
+   "opts": [
+    "International and forced",
+    "International and voluntary",
+    "Internal and forced",
+    "Internal and voluntary"
+   ],
+   "why": "She crossed from Syria into Jordan, so the move is international. She left because her safety was at risk, so it is forced. Internal is tempting only if you think of a village move, but she crossed a border.",
+   "clue": "Ask two questions: did she cross a border, and did she have a choice?"
+  }
+ },
+ "cleared_by": "checker"
 }

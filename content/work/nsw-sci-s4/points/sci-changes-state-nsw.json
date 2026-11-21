@@ -12,8 +12,393 @@
    0.265
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:00Z write: done",
+  "2026-11-20T12:35:56Z check: flagged",
+  "2026-11-20T12:45:00Z fix: suggested",
+  "2026-11-20T13:23:45Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.01185,
+  "check": 0.0133,
+  "fix": 0.02159
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers the particle explanation of melting, freezing, boiling and condensing, but it does not teach that temperature stays level on a heating graph during a state change, which the brief requires, and it does not name evaporating, so matching it would need a new idea rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Changes of state",
+  "card": [
+   [
+    "Heating",
+    "Melting (solid to liquid), evaporating or boiling (liquid to gas) happen when particles gain energy. Particles move faster and break free from their neighbours."
+   ],
+   [
+    "Cooling",
+    "Condensing (gas to liquid) and freezing (liquid to solid) happen when particles lose energy. They slow down and pull closer together."
+   ],
+   "Evaporation happens at the surface of a liquid at many temperatures. Boiling happens throughout the liquid at its boiling point.",
+   "On a heating graph, the temperature stays level while a substance changes state. The energy added is used to separate particles, not to speed them up."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A heating graph of temperature against time. The line rises, goes flat during melting, rises again, goes flat during boiling, then rises again.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Time"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Temperature"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "T",
+      "points": [
+       [
+        0,
+        1
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        4,
+        3
+       ],
+       [
+        6,
+        7
+       ],
+       [
+        8,
+        7
+       ],
+       [
+        10,
+        9
+       ]
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       3,
+       3
+      ],
+      "label": "melting",
+      "pos": "below-right"
+     },
+     {
+      "type": "text",
+      "at": [
+       7,
+       7
+      ],
+      "label": "boiling",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Gaining energy lets particles move apart. Losing energy lets them move closer.",
+  "a": {
+   "q": "Steam from a kettle touches a cold window and turns into drops of water. What happens to the particles?",
+   "opts": [
+    "They lose energy and move closer together",
+    "They gain energy and move closer together",
+    "They lose energy and move further apart",
+    "They gain energy and move further apart"
+   ],
+   "why": "Condensing is a gas changing to a liquid. The particles lose energy, slow down and move closer. Gaining energy would make them move apart, as in boiling.",
+   "clue": "Cooling takes energy away from the particles."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam heats ice and records its temperature. While the ice is melting, the thermometer reading stays at 0 °C. What explains this?",
+   "opts": [
+    "The energy added is used to separate particles",
+    "The ice has stopped gaining any energy",
+    "The particles are vibrating faster and faster",
+    "The heater is not warm enough to heat ice"
+   ],
+   "why": "During a change of state, the added energy is used to pull particles apart, so the temperature stays level. The ice is still gaining energy, so the second option is wrong.",
+   "clue": "Think about where the added energy goes during melting."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "They lose energy and move closer together",
+   "also_right": []
+  },
+  "b": {
+   "best": "The energy added is used to separate particles",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The first card line says particles 'move faster and break free' during melting and boiling. The heating-graph line then says the energy during a change of state separates particles 'not to speed them up'. A student following the first line could defend 'The particles are vibrating faster and faster' in question b. The first line should make clear that particles speed up as the substance heats, and break free during the change of state."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The questions, answers, graph and explanations are correct. The first card line says particles move faster during melting and boiling, which clashes with the later line that energy during a change of state does not speed particles up, and could make a wrong option in question b look right."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The first card line says particles 'move faster and break free' during melting and boiling. The heating-graph line then says the energy during a change of state separates particles 'not to speed them up'. A student following the first line could defend 'The particles are vibrating faster and faster' in question b. The first line should make clear that particles speed up as the substance heats, and break free during the change of state."
+ ],
+ "proposal": {
+  "title": "Changes of state",
+  "card": [
+   [
+    "Heating",
+    "Melting (solid to liquid), evaporating and boiling (liquid to gas) happen when particles gain energy. As a substance heats up, its particles speed up. During the change of state, the energy breaks them free from their neighbours."
+   ],
+   [
+    "Cooling",
+    "Condensing (gas to liquid) and freezing (liquid to solid) happen when particles lose energy. As a substance cools, its particles slow down. During the change of state, they pull closer together."
+   ],
+   "Evaporation happens at the surface of a liquid at many temperatures. Boiling happens throughout the liquid at its boiling point.",
+   "On a heating graph, the temperature stays level while a substance changes state. The energy added is used to separate particles, not to speed them up."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A heating graph of temperature against time. The line rises, goes flat during melting, rises again, goes flat during boiling, then rises again.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Time"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Temperature"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "T",
+      "points": [
+       [
+        0,
+        1
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        4,
+        3
+       ],
+       [
+        6,
+        7
+       ],
+       [
+        8,
+        7
+       ],
+       [
+        10,
+        9
+       ]
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       3,
+       3
+      ],
+      "label": "melting",
+      "pos": "below-right"
+     },
+     {
+      "type": "text",
+      "at": [
+       7,
+       7
+      ],
+      "label": "boiling",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Gaining energy lets particles move apart. Losing energy lets them move closer. The temperature stays level during a change of state.",
+  "a": {
+   "q": "Steam from a kettle touches a cold window and turns into drops of water. What happens to the particles?",
+   "opts": [
+    "They lose energy and move closer together",
+    "They gain energy and move closer together",
+    "They lose energy and move further apart",
+    "They gain energy and move further apart"
+   ],
+   "why": "Condensing is a gas changing to a liquid. The particles lose energy to the cold window and pull closer together. Gaining energy would make them move apart, as in boiling.",
+   "clue": "The cold window takes energy away from the particles."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam heats ice and records its temperature. While the ice is melting, the thermometer reading stays at 0 °C. What explains this?",
+   "opts": [
+    "The energy added is used to separate particles",
+    "The ice has stopped gaining any energy",
+    "The particles are vibrating faster and faster",
+    "The heater is not warm enough to heat ice"
+   ],
+   "why": "During a change of state, the added energy is used to pull particles apart rather than speed them up, so the temperature stays level. The ice is still gaining energy, so the second option is wrong. If the particles were speeding up, the temperature would rise.",
+   "clue": "Think about where the added energy goes during melting."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:45Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The first card line says particles 'move faster and break free' during melting and boiling. The heating-graph line then says the energy during a change of state separates particles 'not to speed them up'. A student following the first line could defend 'The particles are vibrating faster and faster' in question b. The first line should make clear that particles speed up as the substance heats, and break free during the change of state."
+   }
+  ],
+  "flags": [
+   "Card, wording: The first card line says particles 'move faster and break free' during melting and boiling. The heating-graph line then says the energy during a change of state separates particles 'not to speed them up'. A student following the first line could defend 'The particles are vibrating faster and faster' in question b. The first line should make clear that particles speed up as the substance heats, and break free during the change of state."
+  ]
+ },
+ "final": {
+  "title": "Changes of state",
+  "card": [
+   [
+    "Heating",
+    "Melting (solid to liquid), evaporating and boiling (liquid to gas) happen when particles gain energy. As a substance heats up, its particles speed up. During the change of state, the energy breaks them free from their neighbours."
+   ],
+   [
+    "Cooling",
+    "Condensing (gas to liquid) and freezing (liquid to solid) happen when particles lose energy. As a substance cools, its particles slow down. During the change of state, they pull closer together."
+   ],
+   "Evaporation happens at the surface of a liquid at many temperatures. Boiling happens throughout the liquid at its boiling point.",
+   "On a heating graph, the temperature stays level while a substance changes state. The energy added is used to separate particles, not to speed them up."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A heating graph of temperature against time. The line rises, goes flat during melting, rises again, goes flat during boiling, then rises again.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Time"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Temperature"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "T",
+      "points": [
+       [
+        0,
+        1
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        4,
+        3
+       ],
+       [
+        6,
+        7
+       ],
+       [
+        8,
+        7
+       ],
+       [
+        10,
+        9
+       ]
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       3,
+       3
+      ],
+      "label": "melting",
+      "pos": "below-right"
+     },
+     {
+      "type": "text",
+      "at": [
+       7,
+       7
+      ],
+      "label": "boiling",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Gaining energy lets particles move apart. Losing energy lets them move closer. The temperature stays level during a change of state.",
+  "a": {
+   "q": "Steam from a kettle touches a cold window and turns into drops of water. What happens to the particles?",
+   "opts": [
+    "They lose energy and move closer together",
+    "They gain energy and move closer together",
+    "They lose energy and move further apart",
+    "They gain energy and move further apart"
+   ],
+   "why": "Condensing is a gas changing to a liquid. The particles lose energy to the cold window and pull closer together. Gaining energy would make them move apart, as in boiling.",
+   "clue": "The cold window takes energy away from the particles."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam heats ice and records its temperature. While the ice is melting, the thermometer reading stays at 0 °C. What explains this?",
+   "opts": [
+    "The energy added is used to separate particles",
+    "The ice has stopped gaining any energy",
+    "The particles are vibrating faster and faster",
+    "The heater is not warm enough to heat ice"
+   ],
+   "why": "During a change of state, the added energy is used to pull particles apart rather than speed them up, so the temperature stays level. The ice is still gaining energy, so the second option is wrong. If the particles were speeding up, the temperature would rise.",
+   "clue": "Think about where the added energy goes during melting."
+  }
+ },
+ "cleared_by": "auto"
 }

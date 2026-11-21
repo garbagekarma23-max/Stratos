@@ -24,8 +24,229 @@
    0.206
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:45Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:49Z write: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.00614,
+  "check": 0.01128,
+  "fix": 0.01693,
+  "recheck": 0.00865
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches how climate, landforms, water and green space affect liveability; the closest, on natural hazards, covers only one part of the brief and is narrower.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Physical influences on liveability",
+  "card": [
+   "Physical influences are features of the natural environment. They affect how comfortable and safe a place is to live in.",
+   [
+    "Climate",
+    "the usual weather of a place over many years. Extreme heat, cold or rainfall can make daily life harder, while mild weather can make it easier."
+   ],
+   [
+    "Natural hazards",
+    "events such as floods, bushfires and cyclones that can harm people and property. Places that face them often have a lower liveability for safety."
+   ],
+   [
+    "Landforms, water and green space",
+    "Steep or rugged land can make building and travel harder. A reliable water supply and nearby parks, bushland or beaches can make a place more pleasant to live in."
+   ]
+  ],
+  "remember": "Natural features such as weather, hazards, land, water and green space shape how comfortable and safe a place is.",
+  "a": {
+   "q": "Which of these is a physical influence on the liveability of a town?",
+   "opts": [
+    "How often the town is hit by floods",
+    "How many cars use its main road",
+    "How expensive its houses are",
+    "How loud its night-time traffic is"
+   ],
+   "why": "Floods are a natural hazard, which is part of the natural environment. Traffic, housing costs and noise from cars come from human activity, so they are not physical influences.",
+   "clue": "Look for the one that comes from nature, not from people."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two towns in NSW have the same shops and schools. Town A has a river that sometimes floods homes. Town B has a reliable water supply and a large park. Why might Town B be seen as more liveable?",
+   "opts": [
+    "It has fewer natural hazards and more green space",
+    "It has more services and facilities than Town A",
+    "It has a stronger sense of connection among families",
+    "It has lower crime and less traffic than Town A"
+   ],
+   "why": "Town B has a reliable water supply and a park, and it does not face flood danger. These are physical influences on comfort and safety. The question says the services are the same, so services cannot explain the difference.",
+   "clue": "The shops and schools are the same, so look at the natural features."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "How often the town is hit by floods",
+   "also_right": []
+  },
+  "b": {
+   "best": "It has fewer natural hazards and more green space",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem never says Town B is free of floods or other hazards. It only says Town B has a reliable water supply and a park. Both the right option ('fewer natural hazards') and the why ('it does not face flood danger') rely on an unstated inference. Adding something like 'Town B does not flood' to the stem would fix this."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The content is accurate and both answers are clear. One minor issue: question b's stem does not actually say Town B avoids floods, yet the right option and the why assume it does."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The stem never says Town B is free of floods or other hazards. It only says Town B has a reliable water supply and a park. Both the right option ('fewer natural hazards') and the why ('it does not face flood danger') rely on an unstated inference. Adding something like 'Town B does not flood' to the stem would fix this."
+ ],
+ "proposal": {
+  "title": "Physical influences on liveability",
+  "card": [
+   "Physical influences are features of the natural environment. They affect how comfortable and safe a place is to live in.",
+   [
+    "Climate",
+    "the usual weather of a place over many years. Extreme heat, cold or rainfall can make daily life harder, while mild weather can make it easier."
+   ],
+   [
+    "Natural hazards",
+    "events such as floods, bushfires and cyclones that can harm people and property. Places that face them are often seen as less safe to live in."
+   ],
+   [
+    "Landforms, water and green space",
+    "Steep or rugged land can make building and travel harder. A reliable water supply and nearby parks, bushland or beaches can make a place more pleasant to live in."
+   ]
+  ],
+  "remember": "Natural features such as weather, hazards, land, water and green space shape how comfortable and safe a place is.",
+  "a": {
+   "q": "Which of these is a physical influence on the liveability of a town?",
+   "opts": [
+    "How often the town is hit by floods",
+    "How many cars use its main road",
+    "How expensive its houses are",
+    "How loud its night-time traffic is"
+   ],
+   "why": "Floods are a natural hazard, which is part of the natural environment. Traffic, housing costs and noise from cars come from human activity, so they are not physical influences.",
+   "clue": "Look for the one that comes from nature, not from people."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two towns in NSW have the same shops and schools. Town A has a river that sometimes floods homes, and few parks. Town B does not flood and has a large park. Why might Town B be seen as more liveable?",
+   "opts": [
+    "It faces less flood risk and has more green space",
+    "It has more services and facilities than Town A",
+    "It has a stronger sense of connection among families",
+    "It has lower crime and less traffic than Town A"
+   ],
+   "why": "Town B does not flood and has a large park, while Town A floods and has few parks. Flood risk and green space are physical influences on comfort and safety. The shops and schools are the same, so services cannot explain the difference.",
+   "clue": "The shops and schools are the same, so look at the natural features."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "How often the town is hit by floods",
+    "also_right": []
+   },
+   "b": {
+    "best": "It faces less flood risk and has more green space",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 18,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem never says Town B is free of floods or other hazards. It only says Town B has a reliable water supply and a park. Both the right option ('fewer natural hazards') and the why ('it does not face flood danger') rely on an unstated inference. Adding something like 'Town B does not flood' to the stem would fix this."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The stem never says Town B is free of floods or other hazards. It only says Town B has a reliable water supply and a park. Both the right option ('fewer natural hazards') and the why ('it does not face flood danger') rely on an unstated inference. Adding something like 'Town B does not flood' to the stem would fix this."
+  ]
+ },
+ "final": {
+  "title": "Physical influences on liveability",
+  "card": [
+   "Physical influences are features of the natural environment. They affect how comfortable and safe a place is to live in.",
+   [
+    "Climate",
+    "the usual weather of a place over many years. Extreme heat, cold or rainfall can make daily life harder, while mild weather can make it easier."
+   ],
+   [
+    "Natural hazards",
+    "events such as floods, bushfires and cyclones that can harm people and property. Places that face them are often seen as less safe to live in."
+   ],
+   [
+    "Landforms, water and green space",
+    "Steep or rugged land can make building and travel harder. A reliable water supply and nearby parks, bushland or beaches can make a place more pleasant to live in."
+   ]
+  ],
+  "remember": "Natural features such as weather, hazards, land, water and green space shape how comfortable and safe a place is.",
+  "a": {
+   "q": "Which of these is a physical influence on the liveability of a town?",
+   "opts": [
+    "How often the town is hit by floods",
+    "How many cars use its main road",
+    "How expensive its houses are",
+    "How loud its night-time traffic is"
+   ],
+   "why": "Floods are a natural hazard, which is part of the natural environment. Traffic, housing costs and noise from cars come from human activity, so they are not physical influences.",
+   "clue": "Look for the one that comes from nature, not from people."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two towns in NSW have the same shops and schools. Town A has a river that sometimes floods homes, and few parks. Town B does not flood and has a large park. Why might Town B be seen as more liveable?",
+   "opts": [
+    "It faces less flood risk and has more green space",
+    "It has more services and facilities than Town A",
+    "It has a stronger sense of connection among families",
+    "It has lower crime and less traffic than Town A"
+   ],
+   "why": "Town B does not flood and has a large park, while Town A floods and has few parks. Flood risk and green space are physical influences on comfort and safety. The shops and schools are the same, so services cannot explain the difference.",
+   "clue": "The shops and schools are the same, so look at the natural features."
+  }
+ },
+ "cleared_by": "recheck"
 }

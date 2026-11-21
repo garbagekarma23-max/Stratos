@@ -24,8 +24,243 @@
    0.24
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:55Z write: failed the content check, writing again",
+  "2026-11-20T12:44:59Z write: done (still fails the content check)",
+  "2026-11-20T12:53:28Z check: flagged",
+  "2026-11-20T13:00:00Z fix: suggested",
+  "2026-11-20T14:44:17Z review: rejected, to be written again",
+  "2026-11-20T14:58:20Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00043,
+  "write": 0.02238,
+  "check": 0.0111,
+  "fix": 0.03325
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches that a tangent is perpendicular to the radius or that two tangents from an external point are equal; they cover tangent gradients, normals and graphs of trig functions instead.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Tangent properties",
+  "card": [
+   "A tangent is a line that touches a circle at exactly one point. That point is called the point of contact.",
+   "A tangent is perpendicular to the radius drawn to the point of contact. The angle between them is \\(90^{\\circ}\\).",
+   "Two tangents can be drawn to a circle from a point outside it. The two tangents are equal in length, measured from the outside point to each point of contact.",
+   "Example: tangent \\(PA\\) is 12 cm and the radius \\(OA\\) is 5 cm. Angle \\(OAP\\) is \\(90^{\\circ}\\), so \\(OP^{2} = 12^{2} + 5^{2} = 169\\), and \\(OP = 13\\) cm."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A circle with centre O at the origin and radius 3. A horizontal tangent line touches the circle at the point P, (0, 3). The radius from O to P is vertical, so it meets the tangent at a right angle.",
+    "x": {
+     "min": -5,
+     "max": 5,
+     "label": ""
+    },
+    "y": {
+     "min": -5,
+     "max": 5,
+     "label": ""
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "circle",
+      "centre": [
+       0,
+       0
+      ],
+      "r": 3,
+      "label": "circle",
+      "pos": "below-left"
+     },
+     {
+      "type": "curve",
+      "id": "T",
+      "points": [
+       [
+        -4,
+        3
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "label": "tangent",
+      "pos": "above",
+      "labelAt": 2.5
+     },
+     {
+      "type": "curve",
+      "id": "R",
+      "points": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        3
+       ]
+      ],
+      "label": "radius",
+      "pos": "left",
+      "labelAt": 0
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "label": "O",
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       3
+      ],
+      "label": "P",
+      "pos": "above-right"
+     }
+    ]
+   }
+  },
+  "remember": "A tangent meets the radius at a right angle, and tangents from one outside point are equal.",
+  "a": {
+   "q": "A tangent touches a circle at \\(T\\). The centre is \\(O\\). What is the size of angle \\(OTP\\), where \\(P\\) is another point on the tangent?",
+   "opts": [
+    "\\(90^{\\circ}\\)",
+    "\\(45^{\\circ}\\)",
+    "\\(180^{\\circ}\\)",
+    "\\(60^{\\circ}\\)"
+   ],
+   "why": "The radius \\(OT\\) meets the tangent at the point of contact at a right angle, so the angle is \\(90^{\\circ}\\). \\(180^{\\circ}\\) is tempting, but that is the angle along a straight line, not the angle between the radius and the tangent.",
+   "clue": "Think about how the radius meets the tangent at the point of contact."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tangents \\(PA\\) and \\(PB\\) are drawn from \\(P\\) to a circle with centre \\(O\\). Radius \\(OA\\) is 6 cm and \\(OP\\) is 10 cm. What is the length of \\(PB\\)?",
+   "opts": [
+    "8 cm",
+    "6 cm",
+    "4 cm",
+    "\\(\\sqrt{136}\\) cm"
+   ],
+   "why": "Angle \\(OAP\\) is \\(90^{\\circ}\\), so \\(PA^{2} = 10^{2} - 6^{2} = 64\\) and \\(PA = 8\\) cm. Tangents from one point are equal, so \\(PB = 8\\) cm. \\(\\sqrt{136}\\) comes from adding the squares instead of subtracting, but \\(OP\\) is the longest side.",
+   "clue": "The longest side of the right-angled triangle is \\(OP\\)."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:20Z",
+   "step": "write",
+   "version": {
+    "title": "Tangent properties",
+    "card": [
+     "A tangent is a line that touches a circle at exactly one point, called the point of contact.",
+     "A tangent is perpendicular to the radius at the point of contact, so they meet at \\(90^{\\circ}\\).",
+     "From a point outside a circle, two tangents can be drawn. They are equal in length, measured from the outside point to each point of contact.",
+     "Example: radius \\(OA\\) is 5 cm and \\(OP\\) is 13 cm. Angle \\(OAP\\) is \\(90^{\\circ}\\), so \\(PA^{2} = 13^{2} - 5^{2} = 144\\) and \\(PA = 12\\) cm."
+    ],
+    "remember": "Radius and tangent meet at a right angle, and two tangents from one point are equal.",
+    "a": {
+     "q": "Radius \\(OT\\) meets a tangent at \\(T\\), and \\(P\\) is another point on the tangent. Angle \\(TOP\\) is \\(35^{\\circ}\\). What is angle \\(OPT\\)?",
+     "opts": [
+      "\\(55^{\\circ}\\)",
+      "\\(145^{\\circ}\\)",
+      "\\(35^{\\circ}\\)",
+      "\\(125^{\\circ}\\)"
+     ],
+     "why": "The radius meets the tangent at \\(90^{\\circ}\\), so angle \\(OTP\\) is \\(90^{\\circ}\\). The angles of triangle \\(OTP\\) add to \\(180^{\\circ}\\), so angle \\(OPT\\) is \\(180 - 90 - 35 = 55\\) degrees. The answer \\(145^{\\circ}\\) forgets the right angle.",
+     "clue": "What is the angle between the radius and the tangent?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Tangents from \\(P\\) touch a circle at \\(A\\) and \\(B\\). \\(PA = 3x + 2\\) cm and \\(PB = 5x - 6\\) cm. What is the value of \\(x\\)?",
+     "opts": [
+      "\\(4\\)",
+      "\\(14\\)",
+      "\\(1\\)",
+      "\\(-4\\)"
+     ],
+     "why": "Tangents from one outside point are equal, so \\(3x + 2 = 5x - 6\\). Then \\(8 = 2x\\), so \\(x = 4\\), and each tangent is 14 cm. The answer 14 is the length, not \\(x\\).",
+     "clue": "Which two lengths must be equal?"
+    },
+    "wants": [
+     {
+      "at": "card 3",
+      "kind": "diagram",
+      "brief": "A circle with centre O. From a point P outside the circle, two tangents touch the circle at A and B. Radii OA and OB are drawn, with a right-angle mark at A and at B. PA and PB carry matching tick marks to show they are equal.",
+      "why": "Seeing both tangents with their right angles shows both properties in one picture."
+     }
+    ]
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Tangent properties",
+  "card": [
+   "A tangent is a line that touches a circle at exactly one point, called the point of contact.",
+   "A tangent is perpendicular to the radius at the point of contact, so they meet at \\(90^{\\circ}\\).",
+   "From a point outside a circle, two tangents can be drawn. They are equal in length, measured from the outside point to each point of contact.",
+   "Example: radius \\(OA\\) is 5 cm and \\(OP\\) is 13 cm. Angle \\(OAP\\) is \\(90^{\\circ}\\), so \\(PA^{2} = 13^{2} - 5^{2} = 144\\) and \\(PA = 12\\) cm."
+  ],
+  "remember": "Radius and tangent meet at a right angle, and two tangents from one point are equal.",
+  "a": {
+   "q": "Radius \\(OT\\) meets a tangent at \\(T\\), and \\(P\\) is another point on the tangent. Angle \\(TOP\\) is \\(35^{\\circ}\\). What is angle \\(OPT\\)?",
+   "opts": [
+    "\\(55^{\\circ}\\)",
+    "\\(145^{\\circ}\\)",
+    "\\(35^{\\circ}\\)",
+    "\\(125^{\\circ}\\)"
+   ],
+   "why": "The radius meets the tangent at \\(90^{\\circ}\\), so angle \\(OTP\\) is \\(90^{\\circ}\\). The angles of triangle \\(OTP\\) add to \\(180^{\\circ}\\), so angle \\(OPT\\) is \\(180 - 90 - 35 = 55\\) degrees. The answer \\(145^{\\circ}\\) forgets the right angle.",
+   "clue": "What is the angle between the radius and the tangent?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tangents from \\(P\\) touch a circle at \\(A\\) and \\(B\\). \\(PA = 3x + 2\\) cm and \\(PB = 5x - 6\\) cm. What is the value of \\(x\\)?",
+   "opts": [
+    "\\(4\\)",
+    "\\(14\\)",
+    "\\(1\\)",
+    "\\(-4\\)"
+   ],
+   "why": "Tangents from one outside point are equal, so \\(3x + 2 = 5x - 6\\). Then \\(8 = 2x\\), so \\(x = 4\\), and each tangent is 14 cm. The answer 14 is the length, not \\(x\\).",
+   "clue": "Which two lengths must be equal?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A circle with centre O. From a point P outside the circle, two tangents touch the circle at A and B. Radii OA and OB are drawn, with a right-angle mark at A and at B. PA and PB carry matching tick marks to show they are equal.",
+    "why": "Seeing both tangents with their right angles shows both properties in one picture."
+   }
+  ]
+ },
+ "local": []
 }

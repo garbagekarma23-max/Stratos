@@ -8,8 +8,195 @@
    0.223
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:02Z write: done",
+  "2026-11-20T12:35:57Z check: flagged",
+  "2026-11-20T12:45:01Z fix: suggested",
+  "2026-11-20T13:23:46Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.01091,
+  "check": 0.01262,
+  "fix": 0.02205
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point only defines renewable and non-renewable resources in general, while the new point compares how electricity is generated from each source on cost, emissions and reliability, so it teaches a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Generating electricity",
+  "card": [
+   "Most electricity is made when a turbine spins a generator. Different energy sources spin the turbine in different ways.",
+   [
+    "Non-renewable",
+    "coal and gas. They are burnt to make steam or hot gas, and they will run out because they take millions of years to form."
+   ],
+   [
+    "Renewable",
+    "solar, wind and hydro. The sun, wind and flowing water are not used up, so they can keep being used."
+   ],
+   "Each source has costs and benefits. Burning coal and gas releases carbon dioxide, but they can run day and night. Solar and wind release none while running, but they depend on the weather."
+  ],
+  "remember": "Every source has trade-offs in cost, emissions and reliability.",
+  "a": {
+   "q": "Why is coal called a non-renewable energy source?",
+   "opts": [
+    "It is used up much faster than it can form",
+    "It cannot be used to spin a turbine",
+    "It only works when the weather is suitable",
+    "It is too costly to use in any power station"
+   ],
+   "why": "Coal took millions of years to form, so once it is burnt it cannot be replaced in a useful time. Coal does spin turbines through steam, so that option is wrong.",
+   "clue": "Think about how long coal takes to form."
+  },
+  "b": {
+   "d": 3,
+   "q": "A town in the Snowy Mountains wants power that gives off no carbon dioxide while running and does not depend on sunshine or wind. Water can be stored behind a dam. Which choice fits best?",
+   "opts": [
+    "Hydro power, using water released through turbines",
+    "Solar power, using panels on the dam wall",
+    "Gas power, using a gas-fired power station",
+    "Wind power, using turbines along the ridge"
+   ],
+   "why": "Stored water can be released when power is needed, so hydro does not depend on sunshine or wind and gives off no carbon dioxide while running. Solar and wind depend on the weather, and gas releases carbon dioxide.",
+   "clue": "Which source can be stored and used on demand?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It is used up much faster than it can form",
+   "also_right": []
+  },
+  "b": {
+   "best": "Hydro power, using water released through turbines",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The first line says different energy sources spin the turbine in different ways, and solar is then listed as a source. This suggests solar panels spin a turbine, but solar photovoltaic panels make electricity directly without one. A short note that solar panels are the exception would prevent the misconception."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and have one clear right answer. The card could imply that solar panels spin a turbine; it should note that photovoltaic panels make electricity without one."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The first line says different energy sources spin the turbine in different ways, and solar is then listed as a source. This suggests solar panels spin a turbine, but solar photovoltaic panels make electricity directly without one. A short note that solar panels are the exception would prevent the misconception."
+ ],
+ "proposal": {
+  "title": "Generating electricity",
+  "card": [
+   "Most electricity is made when a turbine spins a generator, and each source spins it in its own way. Solar panels are the exception: they turn sunlight straight into electricity, with no turbine.",
+   [
+    "Non-renewable",
+    "coal and gas. They are burnt to make steam or hot gas, and they will run out because they take millions of years to form."
+   ],
+   [
+    "Renewable",
+    "solar, wind and hydro. Sunlight, wind and flowing water are not used up. Hydro can store water behind a dam and release it when power is needed."
+   ],
+   "Burning coal and gas releases carbon dioxide, but these stations can run day and night. Solar, wind and hydro release none while running, but solar and wind depend on the weather."
+  ],
+  "remember": "Each source has trade-offs, so no single source is best on every count.",
+  "a": {
+   "q": "Why is coal called a non-renewable energy source?",
+   "opts": [
+    "It is used up much faster than it can form",
+    "It cannot be used to spin a turbine",
+    "It only works when the weather is suitable",
+    "It is too costly to use in any power station"
+   ],
+   "why": "Coal took millions of years to form, so once it is burnt it cannot be replaced in a useful time. Coal does spin turbines through steam, so that option is wrong.",
+   "clue": "Think about how long coal takes to form."
+  },
+  "b": {
+   "d": 3,
+   "q": "A town in the Snowy Mountains wants power that gives off no carbon dioxide while running and does not depend on sunshine or wind. Water can be stored behind a dam. Which choice fits best?",
+   "opts": [
+    "Hydro power, using water released through turbines",
+    "Solar power, using panels on the dam wall",
+    "Gas power, using a gas-fired power station",
+    "Wind power, using turbines along the ridge"
+   ],
+   "why": "Stored water can be released when power is needed, so hydro does not depend on sunshine or wind and gives off no carbon dioxide while running. Solar and wind depend on the weather, and gas releases carbon dioxide when burnt.",
+   "clue": "Which source can be stored and used on demand?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:46Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The first line says different energy sources spin the turbine in different ways, and solar is then listed as a source. This suggests solar panels spin a turbine, but solar photovoltaic panels make electricity directly without one. A short note that solar panels are the exception would prevent the misconception."
+   }
+  ],
+  "flags": [
+   "Card, wording: The first line says different energy sources spin the turbine in different ways, and solar is then listed as a source. This suggests solar panels spin a turbine, but solar photovoltaic panels make electricity directly without one. A short note that solar panels are the exception would prevent the misconception."
+  ]
+ },
+ "final": {
+  "title": "Generating electricity",
+  "card": [
+   "Most electricity is made when a turbine spins a generator, and each source spins it in its own way. Solar panels are the exception: they turn sunlight straight into electricity, with no turbine.",
+   [
+    "Non-renewable",
+    "coal and gas. They are burnt to make steam or hot gas, and they will run out because they take millions of years to form."
+   ],
+   [
+    "Renewable",
+    "solar, wind and hydro. Sunlight, wind and flowing water are not used up. Hydro can store water behind a dam and release it when power is needed."
+   ],
+   "Burning coal and gas releases carbon dioxide, but these stations can run day and night. Solar, wind and hydro release none while running, but solar and wind depend on the weather."
+  ],
+  "remember": "Each source has trade-offs, so no single source is best on every count.",
+  "a": {
+   "q": "Why is coal called a non-renewable energy source?",
+   "opts": [
+    "It is used up much faster than it can form",
+    "It cannot be used to spin a turbine",
+    "It only works when the weather is suitable",
+    "It is too costly to use in any power station"
+   ],
+   "why": "Coal took millions of years to form, so once it is burnt it cannot be replaced in a useful time. Coal does spin turbines through steam, so that option is wrong.",
+   "clue": "Think about how long coal takes to form."
+  },
+  "b": {
+   "d": 3,
+   "q": "A town in the Snowy Mountains wants power that gives off no carbon dioxide while running and does not depend on sunshine or wind. Water can be stored behind a dam. Which choice fits best?",
+   "opts": [
+    "Hydro power, using water released through turbines",
+    "Solar power, using panels on the dam wall",
+    "Gas power, using a gas-fired power station",
+    "Wind power, using turbines along the ridge"
+   ],
+   "why": "Stored water can be released when power is needed, so hydro does not depend on sunshine or wind and gives off no carbon dioxide while running. Solar and wind depend on the weather, and gas releases carbon dioxide when burnt.",
+   "clue": "Which source can be stored and used on demand?"
+  }
+ },
+ "cleared_by": "auto"
 }

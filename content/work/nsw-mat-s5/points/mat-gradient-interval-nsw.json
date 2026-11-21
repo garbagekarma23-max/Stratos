@@ -24,8 +24,233 @@
    0.387
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 may adapt mat-gradient-interval, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:55Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:54Z write: done",
+  "2026-11-20T12:44:58Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00036,
+  "confirm": 0.01565,
+  "write": 0.00915,
+  "check": 0.00877
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-gradient-interval",
+  "changes": [
+   "The card uses the Queensland-style subtraction example and notation; the NSW Stage 5 point should use the NSW Stage 5 terms and wording for gradient, including the statement that a vertical line has no gradient and a horizontal line has gradient 0, which the bank card omits.",
+   "The worked example and questions should be checked against the NSW Stage 5 Coordinate geometry context, and the card should be adjusted to cover horizontal and vertical lines as the new brief requires."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same core idea of gradient as rise over run at a suitable depth, but it lacks the horizontal and vertical line cases the new brief asks for, so it needs a small addition rather than being used as is.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-gradient-interval, teaches rise over run and positive and negative gradients, but it says nothing about horizontal lines having gradient 0 or vertical lines having no gradient; adding those cases would be extra content, not a small change, so this needs a new point.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Gradient of an interval",
+  "card": [
+   "Gradient measures how steep an interval is. Gradient \\(=\\) rise \\(\\div\\) run, where the rise is the change up or down and the run is the change across.",
+   "Worked example: from \\(A(1, 2)\\) to \\(B(5, 10)\\), the rise is \\(10 - 2 = 8\\) and the run is \\(5 - 1 = 4\\). The gradient is \\(\\frac{8}{4} = 2\\).",
+   "Going right, an interval that slopes up has a positive gradient. One that slopes down has a negative gradient, because the rise is negative.",
+   "A horizontal interval has rise 0, so its gradient is 0. A vertical interval has run 0, and you cannot divide by 0, so it has no gradient."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "An interval from A(1, 2) to B(5, 10) sloping up to the right. The run is 4 across and the rise is 8 up.",
+    "x": {
+     "min": -1,
+     "max": 8,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -1,
+     "max": 12,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "AB",
+      "points": [
+       [
+        1,
+        2
+       ],
+       [
+        5,
+        10
+       ]
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       2
+      ],
+      "label": "\\(A(1, 2)\\)",
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       10
+      ],
+      "label": "\\(B(5, 10)\\)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Gradient is rise over run: up is positive, down is negative.",
+  "a": {
+   "q": "An interval joins \\(P(2, 9)\\) and \\(Q(6, 1)\\). What is its gradient?",
+   "opts": [
+    "\\(-2\\)",
+    "\\(2\\)",
+    "\\(-\\frac{1}{2}\\)",
+    "\\(\\frac{1}{2}\\)"
+   ],
+   "why": "The rise is \\(1 - 9 = -8\\) and the run is \\(6 - 2 = 4\\), so the gradient is \\(\\frac{-8}{4} = -2\\). The interval slopes down to the right, so the gradient is negative. Choosing \\(2\\) drops that sign.",
+   "clue": "Which way does the interval go as you move right?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which interval has no gradient?",
+   "opts": [
+    "From \\((3, 1)\\) to \\((3, 7)\\)",
+    "From \\((1, 3)\\) to \\((7, 3)\\)",
+    "From \\((0, 0)\\) to \\((4, 4)\\)",
+    "From \\((5, 2)\\) to \\((1, 6)\\)"
+   ],
+   "why": "From \\((3, 1)\\) to \\((3, 7)\\) the run is \\(3 - 3 = 0\\), so the interval is vertical and has no gradient. The horizontal interval is tempting, but its rise is 0, so its gradient is 0, which is a gradient.",
+   "clue": "Check which interval has a run of zero."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(-2\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "From \\((3, 1)\\) to \\((3, 7)\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Gradient of an interval",
+  "card": [
+   "Gradient measures how steep an interval is. Gradient \\(=\\) rise \\(\\div\\) run, where the rise is the change up or down and the run is the change across.",
+   "Worked example: from \\(A(1, 2)\\) to \\(B(5, 10)\\), the rise is \\(10 - 2 = 8\\) and the run is \\(5 - 1 = 4\\). The gradient is \\(\\frac{8}{4} = 2\\).",
+   "Going right, an interval that slopes up has a positive gradient. One that slopes down has a negative gradient, because the rise is negative.",
+   "A horizontal interval has rise 0, so its gradient is 0. A vertical interval has run 0, and you cannot divide by 0, so it has no gradient."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "An interval from A(1, 2) to B(5, 10) sloping up to the right. The run is 4 across and the rise is 8 up.",
+    "x": {
+     "min": -1,
+     "max": 8,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -1,
+     "max": 12,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "AB",
+      "points": [
+       [
+        1,
+        2
+       ],
+       [
+        5,
+        10
+       ]
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       2
+      ],
+      "label": "\\(A(1, 2)\\)",
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       10
+      ],
+      "label": "\\(B(5, 10)\\)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Gradient is rise over run: up is positive, down is negative.",
+  "a": {
+   "q": "An interval joins \\(P(2, 9)\\) and \\(Q(6, 1)\\). What is its gradient?",
+   "opts": [
+    "\\(-2\\)",
+    "\\(2\\)",
+    "\\(-\\frac{1}{2}\\)",
+    "\\(\\frac{1}{2}\\)"
+   ],
+   "why": "The rise is \\(1 - 9 = -8\\) and the run is \\(6 - 2 = 4\\), so the gradient is \\(\\frac{-8}{4} = -2\\). The interval slopes down to the right, so the gradient is negative. Choosing \\(2\\) drops that sign.",
+   "clue": "Which way does the interval go as you move right?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which interval has no gradient?",
+   "opts": [
+    "From \\((3, 1)\\) to \\((3, 7)\\)",
+    "From \\((1, 3)\\) to \\((7, 3)\\)",
+    "From \\((0, 0)\\) to \\((4, 4)\\)",
+    "From \\((5, 2)\\) to \\((1, 6)\\)"
+   ],
+   "why": "From \\((3, 1)\\) to \\((3, 7)\\) the run is \\(3 - 3 = 0\\), so the interval is vertical and has no gradient. The horizontal interval is tempting, but its rise is 0, so its gradient is 0, which is a gradient.",
+   "clue": "Check which interval has a run of zero."
+  }
+ },
+ "cleared_by": "checker"
 }

@@ -24,8 +24,141 @@
    0.301
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:56Z write: done",
+  "2026-11-20T12:35:54Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00036,
+  "write": 0.00772,
+  "check": 0.00675
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-listing-outcomes-compound-events, teaches the same listing of outcomes with trees and tables, but it also teaches finding probabilities and its second question tests that, which goes beyond this point's brief, so a new point is the safer match.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Tree diagrams and tables of outcomes",
+  "card": [
+   "A multistage experiment has two or more steps, such as tossing a coin and then rolling a die. A list of every possible result is called the sample space.",
+   [
+    "Tree diagram",
+    "Each step is a set of branches. Follow each path from left to right to list one outcome. Tossing a coin then a die gives H1, H2, H3, H4, H5, H6, T1, T2, T3, T4, T5 and T6."
+   ],
+   [
+    "Table of outcomes",
+    "For two steps, put the results of step 1 down the side and step 2 along the top. Each cell is one outcome."
+   ],
+   "Count the outcomes by multiplying. A coin has 2 results and a die has 6, so there are \\(2 \\times 6 = 12\\) outcomes. Three steps work the same way: multiply all three counts."
+  ],
+  "remember": "List every path or cell so no outcome is missed. The number of outcomes is the product of the results at each step.",
+  "a": {
+   "q": "A spinner has 3 equal sections: red, blue and green. It is spun and then a coin is tossed. How many outcomes are in the sample space?",
+   "opts": [
+    "\\(6\\)",
+    "\\(5\\)",
+    "\\(9\\)",
+    "\\(3\\)"
+   ],
+   "why": "The spinner has 3 results and the coin has 2, so there are \\(3 \\times 2 = 6\\) outcomes. Adding gives 5, but each spinner result can pair with both coin results, so the counts are multiplied.",
+   "clue": "Each spinner result pairs with every coin result."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena tosses a coin three times and lists the outcomes with a tree diagram. How many outcomes have exactly two heads?",
+   "opts": [
+    "\\(3\\)",
+    "\\(2\\)",
+    "\\(4\\)",
+    "\\(8\\)"
+   ],
+   "why": "There are \\(2 \\times 2 \\times 2 = 8\\) outcomes in total. The ones with exactly two heads are HHT, HTH and THH, which is 3. The number 8 is the whole sample space, not just the outcomes with two heads.",
+   "clue": "List all the paths, then pick out those with two H."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A tree diagram for tossing a coin then rolling a die. Two first branches labelled H and T. From each, six branches labelled 1, 2, 3, 4, 5, 6. The end of each path is labelled with its outcome, such as H1 and T6.",
+    "why": "It shows how each path gives one outcome and how the branches spread out."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(6\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(3\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Tree diagrams and tables of outcomes",
+  "card": [
+   "A multistage experiment has two or more steps, such as tossing a coin and then rolling a die. A list of every possible result is called the sample space.",
+   [
+    "Tree diagram",
+    "Each step is a set of branches. Follow each path from left to right to list one outcome. Tossing a coin then a die gives H1, H2, H3, H4, H5, H6, T1, T2, T3, T4, T5 and T6."
+   ],
+   [
+    "Table of outcomes",
+    "For two steps, put the results of step 1 down the side and step 2 along the top. Each cell is one outcome."
+   ],
+   "Count the outcomes by multiplying. A coin has 2 results and a die has 6, so there are \\(2 \\times 6 = 12\\) outcomes. Three steps work the same way: multiply all three counts."
+  ],
+  "remember": "List every path or cell so no outcome is missed. The number of outcomes is the product of the results at each step.",
+  "a": {
+   "q": "A spinner has 3 equal sections: red, blue and green. It is spun and then a coin is tossed. How many outcomes are in the sample space?",
+   "opts": [
+    "\\(6\\)",
+    "\\(5\\)",
+    "\\(9\\)",
+    "\\(3\\)"
+   ],
+   "why": "The spinner has 3 results and the coin has 2, so there are \\(3 \\times 2 = 6\\) outcomes. Adding gives 5, but each spinner result can pair with both coin results, so the counts are multiplied.",
+   "clue": "Each spinner result pairs with every coin result."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena tosses a coin three times and lists the outcomes with a tree diagram. How many outcomes have exactly two heads?",
+   "opts": [
+    "\\(3\\)",
+    "\\(2\\)",
+    "\\(4\\)",
+    "\\(8\\)"
+   ],
+   "why": "There are \\(2 \\times 2 \\times 2 = 8\\) outcomes in total. The ones with exactly two heads are HHT, HTH and THH, which is 3. The number 8 is the whole sample space, not just the outcomes with two heads.",
+   "clue": "List all the paths, then pick out those with two H."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A tree diagram for tossing a coin then rolling a die. Two first branches labelled H and T. From each, six branches labelled 1, 2, 3, 4, 5, 6. The end of each path is labelled with its outcome, such as H1 and T6.",
+    "why": "It shows how each path gives one outcome and how the branches spread out."
+   }
+  ]
+ },
+ "cleared_by": "checker"
 }

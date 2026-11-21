@@ -8,8 +8,226 @@
    0.264
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: done",
+  "2026-11-20T12:44:55Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.007,
+  "check": 0.00931,
+  "fix": 0.01967,
+  "recheck": 0.00644
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point covers true bearings as three-figure angles but does not teach the 16-point compass (NNE, WSW and so on), which the new point requires, so it is a narrower match and a new point is safer.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The 16-point compass and bearings",
+  "card": [
+   "The 4 main compass points are north, east, south and west. Adding north-east, south-east, south-west and north-west gives 8 points.",
+   "The 16-point compass splits the gaps again. It adds names such as NNE (north-north-east) and WSW (west-south-west). Each name is the two nearest points, with the closer main point said first.",
+   "A bearing gives a direction as an angle from 0 to 360 degrees. It is measured clockwise from north, so north is 0, east is 90, south is 180 and west is 270.",
+   "A bearing is usually written with three figures, such as 045 degrees for north-east. To find one on a map, put the centre of a protractor on the start point, line it up with north, and read the angle clockwise to the place you want."
+  ],
+  "remember": "A bearing is an angle from 0 to 360 degrees, measured clockwise from north.",
+  "a": {
+   "q": "A hiker walks due east. What is the bearing of her direction?",
+   "opts": [
+    "090 degrees",
+    "180 degrees",
+    "270 degrees",
+    "045 degrees"
+   ],
+   "why": "Bearings start at north (0) and turn clockwise, and east is a quarter of a full turn, so 90 degrees. 270 degrees is west, which comes from turning the wrong way.",
+   "clue": "Turn clockwise from north by a quarter of a full circle."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia stands at the lookout in Katoomba and sees a waterfall on a bearing of 225 degrees. In which direction is the waterfall?",
+   "opts": [
+    "South-west",
+    "North-west",
+    "South-east",
+    "North-east"
+   ],
+   "why": "225 is halfway between south (180) and west (270), so the waterfall is to the south-west. North-west is 315 degrees, which is a tempting guess if the angle is wrongly measured anticlockwise from north.",
+   "clue": "Find which two main points 225 lies between."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A compass rose with a circle marked in degrees. North is labelled 0, east 90, south 180 and west 270. A curved arrow runs clockwise from north to show the direction of measurement. The 16 compass points are marked around the circle, including NNE and WSW.",
+    "why": "It shows the 16 points and how bearings are measured clockwise from north in one view."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "090 degrees",
+   "also_right": []
+  },
+  "b": {
+   "best": "South-west",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says north-west (315 degrees) is what you get if 225 is wrongly measured anticlockwise from north. Measuring 225 degrees anticlockwise from north actually lands on south-east, not north-west. The explanation of the distractor is wrong and should be rewritten, for example pointing to south-east as the anticlockwise error."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have correct answers (090 degrees and south-west). The why for question b wrongly says an anticlockwise error gives north-west, when it actually gives south-east."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The why says north-west (315 degrees) is what you get if 225 is wrongly measured anticlockwise from north. Measuring 225 degrees anticlockwise from north actually lands on south-east, not north-west. The explanation of the distractor is wrong and should be rewritten, for example pointing to south-east as the anticlockwise error."
+ ],
+ "proposal": {
+  "title": "The 16-point compass and bearings",
+  "card": [
+   "The 4 main compass points are north, east, south and west. Adding north-east, south-east, south-west and north-west gives 8 points.",
+   "The 16-point compass adds a point halfway between each pair of those 8. Its name puts the nearest of north, east, south or west first, so NNE (north-north-east) lies between N and NE, and WSW (west-south-west) between W and SW.",
+   "A bearing gives a direction as an angle from 0 to 360 degrees. It is measured clockwise from north, so north is 0, east is 90, south is 180 and west is 270.",
+   "A bearing is usually written with three figures, such as 045 degrees for north-east. To find one on a map, put the centre of a protractor on the start point, line it up with north, and read the angle clockwise to the place you want."
+  ],
+  "remember": "A bearing is an angle from 0 to 360 degrees, measured clockwise from north.",
+  "a": {
+   "q": "A hiker walks due east. What is the bearing of her direction?",
+   "opts": [
+    "090 degrees",
+    "180 degrees",
+    "270 degrees",
+    "045 degrees"
+   ],
+   "why": "Bearings start at north (0) and turn clockwise, and east is a quarter of a full turn, so 90 degrees. 270 degrees is west, which comes from turning the wrong way.",
+   "clue": "Turn clockwise from north by a quarter of a full circle."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia stands at the lookout in Katoomba and sees a waterfall on a bearing of 225 degrees. In which direction is the waterfall?",
+   "opts": [
+    "South-west",
+    "North-west",
+    "South-east",
+    "North-east"
+   ],
+   "why": "225 is halfway between south (180) and west (270), so the waterfall is to the south-west. South-east is the tempting error: turning 225 degrees anticlockwise from north lands on south-east, which is 135 degrees as a bearing.",
+   "clue": "Find which two main points 225 lies between."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A compass rose with a circle marked in degrees. North is labelled 0, east 90, south 180 and west 270. A curved arrow runs clockwise from north to show the direction of measurement. The 16 compass points are marked around the circle, including NNE and WSW.",
+    "why": "It shows the 16 points and how bearings are measured clockwise from north in one view."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "090 degrees",
+    "also_right": []
+   },
+   "b": {
+    "best": "South-west",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says north-west (315 degrees) is what you get if 225 is wrongly measured anticlockwise from north. Measuring 225 degrees anticlockwise from north actually lands on south-east, not north-west. The explanation of the distractor is wrong and should be rewritten, for example pointing to south-east as the anticlockwise error."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The why says north-west (315 degrees) is what you get if 225 is wrongly measured anticlockwise from north. Measuring 225 degrees anticlockwise from north actually lands on south-east, not north-west. The explanation of the distractor is wrong and should be rewritten, for example pointing to south-east as the anticlockwise error."
+  ]
+ },
+ "final": {
+  "title": "The 16-point compass and bearings",
+  "card": [
+   "The 4 main compass points are north, east, south and west. Adding north-east, south-east, south-west and north-west gives 8 points.",
+   "The 16-point compass adds a point halfway between each pair of those 8. Its name puts the nearest of north, east, south or west first, so NNE (north-north-east) lies between N and NE, and WSW (west-south-west) between W and SW.",
+   "A bearing gives a direction as an angle from 0 to 360 degrees. It is measured clockwise from north, so north is 0, east is 90, south is 180 and west is 270.",
+   "A bearing is usually written with three figures, such as 045 degrees for north-east. To find one on a map, put the centre of a protractor on the start point, line it up with north, and read the angle clockwise to the place you want."
+  ],
+  "remember": "A bearing is an angle from 0 to 360 degrees, measured clockwise from north.",
+  "a": {
+   "q": "A hiker walks due east. What is the bearing of her direction?",
+   "opts": [
+    "090 degrees",
+    "180 degrees",
+    "270 degrees",
+    "045 degrees"
+   ],
+   "why": "Bearings start at north (0) and turn clockwise, and east is a quarter of a full turn, so 90 degrees. 270 degrees is west, which comes from turning the wrong way.",
+   "clue": "Turn clockwise from north by a quarter of a full circle."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia stands at the lookout in Katoomba and sees a waterfall on a bearing of 225 degrees. In which direction is the waterfall?",
+   "opts": [
+    "South-west",
+    "North-west",
+    "South-east",
+    "North-east"
+   ],
+   "why": "225 is halfway between south (180) and west (270), so the waterfall is to the south-west. South-east is the tempting error: turning 225 degrees anticlockwise from north lands on south-east, which is 135 degrees as a bearing.",
+   "clue": "Find which two main points 225 lies between."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A compass rose with a circle marked in degrees. North is labelled 0, east 90, south 180 and west 270. A curved arrow runs clockwise from north to show the direction of measurement. The 16 compass points are marked around the circle, including NNE and WSW.",
+    "why": "It shows the 16 points and how bearings are measured clockwise from north in one view."
+   }
+  ]
+ },
+ "cleared_by": "recheck"
 }

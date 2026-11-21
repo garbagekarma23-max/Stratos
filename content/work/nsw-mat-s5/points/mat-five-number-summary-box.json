@@ -20,8 +20,377 @@
    0.275
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 may adapt mat-box-plots, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:55Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:54Z write: done",
+  "2026-11-20T12:44:58Z check: flagged",
+  "2026-11-20T12:53:28Z fix: suggested",
+  "2026-11-20T13:23:43Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00048,
+  "confirm": 0.01232,
+  "write": 0.01747,
+  "check": 0.01674,
+  "fix": 0.02786
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-box-plots",
+  "changes": [
+   "Introduce Q1 and Q3 as the lower quartile and upper quartile, the names the NSW Stage 5 syllabus uses, and show the five-number summary in that wording.",
+   "Replace the Darwin bus routes in question b with a travel or timing example set in New South Wales, since the card's examples should be local to the course."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches drawing and comparing box plots from the five-number summary at a suitable depth, but it needs small wording and locale changes for NSW and does not show how to find the quartiles.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point matches this exact idea at this depth: one covers the five-number summary and IQR but not drawing the plot, two others centre on comparing data sets or on range and IQR, and the Victorian card adds outlier fences that go beyond this Stage 5 core point.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "The five-number summary and box plots",
+  "card": [
+   [
+    "Five-number summary",
+    "Five values describe a data set: the minimum, the lower quartile \\(Q_{1}\\), the median, the upper quartile \\(Q_{3}\\) and the maximum. They are listed in order from smallest to largest."
+   ],
+   [
+    "Example",
+    "For 3, 5, 6, 8, 9, 12, 14 the median is 8. The halves either side give \\(Q_{1} = 5\\) and \\(Q_{3} = 12\\). The summary is 3, 5, 8, 12, 14."
+   ],
+   [
+    "Box plot",
+    "A box plot draws the summary above a number line. The box runs from \\(Q_{1}\\) to \\(Q_{3}\\), a line inside it marks the median, and whiskers reach out to the minimum and maximum."
+   ],
+   "Each of the four parts, whisker, lower box, upper box and whisker, holds about a quarter of the data. A long part means the values in it are spread out. A short part means they are close together."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "chart",
+    "chart": "box",
+    "alt": "A box plot on a number line. The whiskers run from 3 to 14. The box runs from 5 to 12 with the median line at 8.",
+    "x": {
+     "min": 0,
+     "max": 16,
+     "step": 2,
+     "label": "Value"
+    },
+    "sets": [
+     {
+      "data": [
+       3,
+       5,
+       6,
+       8,
+       9,
+       12,
+       14
+      ]
+     }
+    ],
+    "stats": {
+     "median": 8,
+     "q1": 5,
+     "q3": 12
+    }
+   }
+  },
+  "remember": "A box plot shows the five-number summary: the box holds the middle half of the data.",
+  "a": {
+   "q": "What is the five-number summary of 4, 6, 7, 9, 10, 12, 15?",
+   "opts": [
+    "4, 6, 9, 12, 15",
+    "4, 7, 9, 10, 15",
+    "4, 6, 9, 12, 11",
+    "4, 6, 8, 12, 15"
+   ],
+   "why": "The data is already in order. The minimum is 4, the median is 9 and the maximum is 15. The halves 4, 6, 7 and 10, 12, 15 give \\(Q_{1} = 6\\) and \\(Q_{3} = 12\\). The option ending in 11 gives the range, not the maximum.",
+   "clue": "List the smallest value, the three middle markers in order, then the largest value."
+  },
+  "b": {
+   "d": 2,
+   "q": "A box plot of daily bus delays for a route in Orange has whiskers from 2 to 18 minutes. Its box runs from 5 to 11 minutes with the median line at 8. Which statement is true?",
+   "opts": [
+    "About half the delays were between 5 and 11 minutes",
+    "About half the delays were between 2 and 18 minutes",
+    "The average delay was exactly 8 minutes",
+    "Three quarters of the delays were below 8 minutes"
+   ],
+   "why": "The box runs from \\(Q_{1}\\) to \\(Q_{3}\\), so it holds the middle half of the delays. The whiskers reach the minimum and maximum, so they cover all the delays, not half. The line marks the median, which is not the average.",
+   "clue": "What fraction of the data lies inside the box?",
+   "fig": {
+    "kind": "chart",
+    "chart": "box",
+    "alt": "A box plot of bus delays. The whiskers run from 2 to 18 minutes. The box runs from 5 to 11 with the median line at 8.",
+    "x": {
+     "min": 0,
+     "max": 20,
+     "step": 2,
+     "label": "Delay (minutes)"
+    },
+    "sets": [
+     {
+      "five": [
+       2,
+       5,
+       8,
+       11,
+       18
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "4, 6, 9, 12, 15",
+   "also_right": []
+  },
+  "b": {
+   "best": "About half the delays were between 5 and 11 minutes",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The distractor 'The average delay was exactly 8 minutes' and the why's 'the median, which is not the average' use 'average' loosely. The median is itself a measure of centre and is sometimes called an average, so a careful student could be confused. Saying 'mean' instead of 'average' would remove the ambiguity."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, chart, worked example and answers all check out (question a: 4, 6, 9, 12, 15; question b: about half between 5 and 11). One minor wording issue: question b and its why say 'average' where 'mean' would be clearer, since the median is also a kind of average."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The distractor 'The average delay was exactly 8 minutes' and the why's 'the median, which is not the average' use 'average' loosely. The median is itself a measure of centre and is sometimes called an average, so a careful student could be confused. Saying 'mean' instead of 'average' would remove the ambiguity."
+ ],
+ "proposal": {
+  "title": "The five-number summary and box plots",
+  "card": [
+   [
+    "Five-number summary",
+    "Five values describe a data set: the minimum, the lower quartile \\(Q_{1}\\), the median, the upper quartile \\(Q_{3}\\) and the maximum. They are listed in order from smallest to largest."
+   ],
+   [
+    "Example",
+    "For 3, 5, 6, 8, 9, 12, 14 the median is 8. The halves either side give \\(Q_{1} = 5\\) and \\(Q_{3} = 12\\). The summary is 3, 5, 8, 12, 14."
+   ],
+   [
+    "Box plot",
+    "A box plot draws the summary above a number line. The box runs from \\(Q_{1}\\) to \\(Q_{3}\\), a line inside it marks the median, and whiskers reach out to the minimum and maximum."
+   ],
+   "Each of the four parts, whisker, lower box, upper box and whisker, holds about a quarter of the data. A long part means the values in it are spread out. A short part means they are close together."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "chart",
+    "chart": "box",
+    "alt": "A box plot on a number line. The whiskers run from 3 to 14. The box runs from 5 to 12 with the median line at 8.",
+    "x": {
+     "min": 0,
+     "max": 16,
+     "step": 2,
+     "label": "Value"
+    },
+    "sets": [
+     {
+      "data": [
+       3,
+       5,
+       6,
+       8,
+       9,
+       12,
+       14
+      ]
+     }
+    ],
+    "stats": {
+     "median": 8,
+     "q1": 5,
+     "q3": 12
+    }
+   }
+  },
+  "remember": "A box plot shows the five-number summary: the box holds the middle half of the data.",
+  "a": {
+   "q": "What is the five-number summary of 4, 6, 7, 9, 10, 12, 15?",
+   "opts": [
+    "4, 6, 9, 12, 15",
+    "4, 7, 9, 10, 15",
+    "4, 6, 9, 12, 11",
+    "4, 6, 8, 12, 15"
+   ],
+   "why": "The data is already in order. The minimum is 4, the median is 9 and the maximum is 15. The halves 4, 6, 7 and 10, 12, 15 give \\(Q_{1} = 6\\) and \\(Q_{3} = 12\\). The option ending in 11 gives the range, not the maximum.",
+   "clue": "List the smallest value, the three middle markers in order, then the largest value."
+  },
+  "b": {
+   "d": 2,
+   "q": "A box plot of daily bus delays for a route in Orange has whiskers from 2 to 18 minutes. Its box runs from 5 to 11 minutes with the median line at 8. Which statement is true?",
+   "opts": [
+    "About half the delays were between 5 and 11 minutes",
+    "About half the delays were between 2 and 18 minutes",
+    "About half the delays were between 11 and 18 minutes",
+    "Three quarters of the delays were below 8 minutes"
+   ],
+   "why": "The box runs from \\(Q_{1}\\) to \\(Q_{3}\\), so it holds the middle half of the delays. The whiskers reach the minimum and maximum, so 2 to 18 covers all the delays, and the upper whisker from 11 to 18 holds only about a quarter. The line at 8 is the median, so about half the delays were below 8, not three quarters.",
+   "clue": "What fraction of the data lies inside the box?",
+   "fig": {
+    "kind": "chart",
+    "chart": "box",
+    "alt": "A box plot of bus delays. The whiskers run from 2 to 18 minutes. The box runs from 5 to 11 with the median line at 8.",
+    "x": {
+     "min": 0,
+     "max": 20,
+     "step": 2,
+     "label": "Delay (minutes)"
+    },
+    "sets": [
+     {
+      "five": [
+       2,
+       5,
+       8,
+       11,
+       18
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:43Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The distractor 'The average delay was exactly 8 minutes' and the why's 'the median, which is not the average' use 'average' loosely. The median is itself a measure of centre and is sometimes called an average, so a careful student could be confused. Saying 'mean' instead of 'average' would remove the ambiguity."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The distractor 'The average delay was exactly 8 minutes' and the why's 'the median, which is not the average' use 'average' loosely. The median is itself a measure of centre and is sometimes called an average, so a careful student could be confused. Saying 'mean' instead of 'average' would remove the ambiguity."
+  ]
+ },
+ "final": {
+  "title": "The five-number summary and box plots",
+  "card": [
+   [
+    "Five-number summary",
+    "Five values describe a data set: the minimum, the lower quartile \\(Q_{1}\\), the median, the upper quartile \\(Q_{3}\\) and the maximum. They are listed in order from smallest to largest."
+   ],
+   [
+    "Example",
+    "For 3, 5, 6, 8, 9, 12, 14 the median is 8. The halves either side give \\(Q_{1} = 5\\) and \\(Q_{3} = 12\\). The summary is 3, 5, 8, 12, 14."
+   ],
+   [
+    "Box plot",
+    "A box plot draws the summary above a number line. The box runs from \\(Q_{1}\\) to \\(Q_{3}\\), a line inside it marks the median, and whiskers reach out to the minimum and maximum."
+   ],
+   "Each of the four parts, whisker, lower box, upper box and whisker, holds about a quarter of the data. A long part means the values in it are spread out. A short part means they are close together."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "chart",
+    "chart": "box",
+    "alt": "A box plot on a number line. The whiskers run from 3 to 14. The box runs from 5 to 12 with the median line at 8.",
+    "x": {
+     "min": 0,
+     "max": 16,
+     "step": 2,
+     "label": "Value"
+    },
+    "sets": [
+     {
+      "data": [
+       3,
+       5,
+       6,
+       8,
+       9,
+       12,
+       14
+      ]
+     }
+    ],
+    "stats": {
+     "median": 8,
+     "q1": 5,
+     "q3": 12
+    }
+   }
+  },
+  "remember": "A box plot shows the five-number summary: the box holds the middle half of the data.",
+  "a": {
+   "q": "What is the five-number summary of 4, 6, 7, 9, 10, 12, 15?",
+   "opts": [
+    "4, 6, 9, 12, 15",
+    "4, 7, 9, 10, 15",
+    "4, 6, 9, 12, 11",
+    "4, 6, 8, 12, 15"
+   ],
+   "why": "The data is already in order. The minimum is 4, the median is 9 and the maximum is 15. The halves 4, 6, 7 and 10, 12, 15 give \\(Q_{1} = 6\\) and \\(Q_{3} = 12\\). The option ending in 11 gives the range, not the maximum.",
+   "clue": "List the smallest value, the three middle markers in order, then the largest value."
+  },
+  "b": {
+   "d": 2,
+   "q": "A box plot of daily bus delays for a route in Orange has whiskers from 2 to 18 minutes. Its box runs from 5 to 11 minutes with the median line at 8. Which statement is true?",
+   "opts": [
+    "About half the delays were between 5 and 11 minutes",
+    "About half the delays were between 2 and 18 minutes",
+    "About half the delays were between 11 and 18 minutes",
+    "Three quarters of the delays were below 8 minutes"
+   ],
+   "why": "The box runs from \\(Q_{1}\\) to \\(Q_{3}\\), so it holds the middle half of the delays. The whiskers reach the minimum and maximum, so 2 to 18 covers all the delays, and the upper whisker from 11 to 18 holds only about a quarter. The line at 8 is the median, so about half the delays were below 8, not three quarters.",
+   "clue": "What fraction of the data lies inside the box?",
+   "fig": {
+    "kind": "chart",
+    "chart": "box",
+    "alt": "A box plot of bus delays. The whiskers run from 2 to 18 minutes. The box runs from 5 to 11 with the median line at 8.",
+    "x": {
+     "min": 0,
+     "max": 20,
+     "step": 2,
+     "label": "Delay (minutes)"
+    },
+    "sets": [
+     {
+      "five": [
+       2,
+       5,
+       8,
+       11,
+       18
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "cleared_by": "auto"
 }

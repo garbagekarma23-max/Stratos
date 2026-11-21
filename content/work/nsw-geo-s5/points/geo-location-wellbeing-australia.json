@@ -24,8 +24,112 @@
    0.306
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 may adapt geo-urban-remote-australia, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:47Z confirm: Claude Opus 5.5 may reuse geo-urban-remote-australia, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z claude-code review: reusing geo-urban-remote-australia"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "confirm": 0.01042
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-urban-remote-australia",
+  "changes": [
+   "Question b's example of a cattle station in outback Western Australia should be changed to a remote location in New South Wales, such as the Far West, so the example is local to the NSW course."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea of lower wellbeing in remote Australia at the right depth, but its Western Australia example should be made local to New South Wales.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "geo-urban-remote-australia",
+  "changes": [],
+  "sure": "medium",
+  "reason": "This bank point teaches the same idea at a Year 10 depth: wellbeing is lower in remote Australia, with fewer jobs, health services and schools than in the cities, and its Western Australian example still suits a national Australian topic for NSW students.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "geo-urban-remote-australia",
+ "matched": {
+  "verdict": "reuse",
+  "from": "geo-urban-remote-australia",
+  "by": "claude-code",
+  "at": "2026-11-20T14:02:37Z"
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "reuse",
+   "sure": "high",
+   "reason": "The bank point teaches exactly the brief: wellbeing is often lower in remote Australia, with lower incomes and fewer jobs, health services and schools than the cities. Its hedged claims are right, its outback example suits a national topic, and nothing needs changing.",
+   "item": "ff75ce3b69ced254",
+   "result": "decided",
+   "saved": {
+    "id": "geo-location-wellbeing-australia",
+    "title": "Location and wellbeing in Australia",
+    "brief": "23c0ede938cc",
+    "shortlist": [
+     [
+      "geo-urban-remote-australia",
+      0.46
+     ],
+     [
+      "geo-human-wellbeing-development",
+      0.444
+     ],
+     [
+      "geo-wellbeing-within-india",
+      0.44
+     ],
+     [
+      "geo-causes-wellbeing-differences",
+      0.381
+     ],
+     [
+      "geo-reducing-regional-inequality",
+      0.306
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00034,
+     "confirm": 0.01042
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "geo-urban-remote-australia",
+     "changes": [
+      "Question b's example of a cattle station in outback Western Australia should be changed to a remote location in New South Wales, such as the Far West, so the example is local to the NSW course."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same idea of lower wellbeing in remote Australia at the right depth, but its Western Australia example should be made local to New South Wales.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "reuse",
+     "same": "geo-urban-remote-australia",
+     "changes": [],
+     "sure": "medium",
+     "reason": "This bank point teaches the same idea at a Year 10 depth: wellbeing is lower in remote Australia, with fewer jobs, health services and schools than in the cities, and its Western Australian example still suits a national Australian topic for NSW students.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "ef4786e0c7949c3a"
+  }
  ]
 }

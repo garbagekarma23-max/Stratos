@@ -24,8 +24,228 @@
    0.443
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: failed the content check, writing again",
+  "2026-11-20T12:44:56Z write: done",
+  "2026-11-20T12:53:26Z check: flagged",
+  "2026-11-20T13:11:48Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.01369,
+  "check": 0.01355,
+  "fix": 0.05122,
+  "recheck": 0.00899
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No single bank point teaches both steps the new point combines: asking who made a source, when, why and for whom, and then judging its reliability and usefulness for a question. The closest points each cover only one half, so a new point is the safer match.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Asking questions of a source",
+  "card": [
+   "A source is only evidence once you question it. Ask who made it, when they made it, why they made it and who it was made for.",
+   "The answers help you judge reliability. A source is more reliable when its maker saw the events, made it close to the time, and had no reason to bend the truth.",
+   "Usefulness is different from reliability. A source is useful if it helps answer your question, even if it is biased or tells only one side.",
+   "A poster made to get people to join an army may not give a fair view of war. It is still useful for a question about how a government tried to persuade people."
+  ],
+  "remember": "Ask who, when, why and for whom, then judge reliability and usefulness for your question.",
+  "a": {
+   "q": "A historian asks, \"Why was this diary written, and who was it written for?\" What is the historian trying to work out?",
+   "opts": [
+    "Whether the maker had a purpose that shaped the source",
+    "Whether the source is a primary or secondary source",
+    "Which century the source was made in",
+    "How much the source cost to make"
+   ],
+   "why": "Asking why and for whom shows the maker's purpose and audience, and these can shape what a source says. Knowing whether a source is primary or secondary is a different step, because it depends on when the source was made.",
+   "clue": "Think about the reason the maker had for creating it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is studying how a town celebrated the end of a war. She finds a newspaper from that week with a very one-sided article praising the town's leaders. Which statement about the article is best?",
+   "opts": [
+    "It may be biased, but it helps show how leaders were praised",
+    "It is useless, because a biased source cannot be evidence",
+    "It is fully reliable, because it was made at the time",
+    "It is not useful, because newspapers are secondary sources"
+   ],
+   "why": "The article was made at the time, but its one-sided view means it may not be fair. It still helps answer a question about how leaders were praised. Bias lowers reliability, but it does not make a source useless.",
+   "clue": "A source can be useful for one question even if it is not fair."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Whether the maker had a purpose that shaped the source",
+   "also_right": []
+  },
+  "b": {
+   "best": "It may be biased, but it helps show how leaders were praised",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one with a hedge ('may be biased'). Every distractor uses an absolute word ('useless', 'fully reliable', 'not useful'), so a student could pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Priya's question is how the town celebrated the end of the war, but the right option and the why speak of 'how leaders were praised'. This does not quite match her stated question, which could confuse a careful student about what usefulness means for her inquiry."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why explains how primary and secondary sources differ ('it depends on when the source was made'), which belongs to point 1. It should only mention the idea, not explain it."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The content is accurate. In question b the right option is the only hedged one and the others are absolutes, which gives the answer away, and the option and why talk about praising leaders rather than Priya's question about the town's celebration. The why for a also briefly explains primary versus secondary sources, which belongs to point 1."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option is the only one with a hedge ('may be biased'). Every distractor uses an absolute word ('useless', 'fully reliable', 'not useful'), so a student could pick it without knowing the idea.",
+  "Question b, wording: Priya's question is how the town celebrated the end of the war, but the right option and the why speak of 'how leaders were praised'. This does not quite match her stated question, which could confuse a careful student about what usefulness means for her inquiry.",
+  "Question a, other: The why explains how primary and secondary sources differ ('it depends on when the source was made'), which belongs to point 1. It should only mention the idea, not explain it."
+ ],
+ "proposal": {
+  "title": "Asking questions of a source",
+  "card": [
+   "A source is only evidence once you question it. Ask who made it, when they made it, why they made it (its purpose) and who it was made for (its audience).",
+   "The answers help you judge reliability. A source is more reliable when its maker saw the events, made it close to the time, and had no reason to bend the truth.",
+   "Usefulness is different from reliability. A source is useful if it helps answer your question, even if it is biased or tells only one side.",
+   "A poster made to get people to join an army may not give a fair view of war. It is still useful for a question about how a government tried to persuade people."
+  ],
+  "remember": "Ask who, when, why and for whom, then judge reliability and usefulness for your question.",
+  "a": {
+   "q": "A historian asks, \"Why was this diary written, and who was it written for?\" What is the historian trying to work out?",
+   "opts": [
+    "What purpose and audience may have shaped the diary",
+    "Whether the diarist saw the events firsthand",
+    "How long after the events the diary was written",
+    "Whether the diary answers the historian's question"
+   ],
+   "why": "Asking why and for whom reveals the maker's purpose and audience, and these can shape what a diary says. Whether the diarist saw the events is a who question, and how long after the events it was written is a when question.",
+   "clue": "Match each question word to what it tells you."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is studying how a town celebrated the end of a war. She finds a newspaper report from that week describing the parade. It praises the mayor and leaves out people who did not join in. Which statement about the report is best?",
+   "opts": [
+    "Useful, though its report of events is one-sided",
+    "Not useful for her question, as its view is one-sided",
+    "Useful, and reliable because it was made that week",
+    "Not useful, because its writer wrote it for local readers"
+   ],
+   "why": "The report describes the parade from that week, so it helps answer Priya's question about how the town celebrated. Its praise and what it leaves out make it one-sided and less reliable, but bias does not make a source useless. Being made at the time is not enough on its own to make it reliable.",
+   "clue": "Keep usefulness and reliability apart."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "What purpose and audience may have shaped the diary",
+    "also_right": []
+   },
+   "b": {
+    "best": "Useful, though its report of events is one-sided",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one with a hedge ('may be biased'). Every distractor uses an absolute word ('useless', 'fully reliable', 'not useful'), so a student could pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Priya's question is how the town celebrated the end of the war, but the right option and the why speak of 'how leaders were praised'. This does not quite match her stated question, which could confuse a careful student about what usefulness means for her inquiry."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why explains how primary and secondary sources differ ('it depends on when the source was made'), which belongs to point 1. It should only mention the idea, not explain it."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The right option is the only one with a hedge ('may be biased'). Every distractor uses an absolute word ('useless', 'fully reliable', 'not useful'), so a student could pick it without knowing the idea.",
+   "Question b, wording: Priya's question is how the town celebrated the end of the war, but the right option and the why speak of 'how leaders were praised'. This does not quite match her stated question, which could confuse a careful student about what usefulness means for her inquiry.",
+   "Question a, other: The why explains how primary and secondary sources differ ('it depends on when the source was made'), which belongs to point 1. It should only mention the idea, not explain it."
+  ]
+ },
+ "final": {
+  "title": "Asking questions of a source",
+  "card": [
+   "A source is only evidence once you question it. Ask who made it, when they made it, why they made it (its purpose) and who it was made for (its audience).",
+   "The answers help you judge reliability. A source is more reliable when its maker saw the events, made it close to the time, and had no reason to bend the truth.",
+   "Usefulness is different from reliability. A source is useful if it helps answer your question, even if it is biased or tells only one side.",
+   "A poster made to get people to join an army may not give a fair view of war. It is still useful for a question about how a government tried to persuade people."
+  ],
+  "remember": "Ask who, when, why and for whom, then judge reliability and usefulness for your question.",
+  "a": {
+   "q": "A historian asks, \"Why was this diary written, and who was it written for?\" What is the historian trying to work out?",
+   "opts": [
+    "What purpose and audience may have shaped the diary",
+    "Whether the diarist saw the events firsthand",
+    "How long after the events the diary was written",
+    "Whether the diary answers the historian's question"
+   ],
+   "why": "Asking why and for whom reveals the maker's purpose and audience, and these can shape what a diary says. Whether the diarist saw the events is a who question, and how long after the events it was written is a when question.",
+   "clue": "Match each question word to what it tells you."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is studying how a town celebrated the end of a war. She finds a newspaper report from that week describing the parade. It praises the mayor and leaves out people who did not join in. Which statement about the report is best?",
+   "opts": [
+    "Useful, though its report of events is one-sided",
+    "Not useful for her question, as its view is one-sided",
+    "Useful, and reliable because it was made that week",
+    "Not useful, because its writer wrote it for local readers"
+   ],
+   "why": "The report describes the parade from that week, so it helps answer Priya's question about how the town celebrated. Its praise and what it leaves out make it one-sided and less reliable, but bias does not make a source useless. Being made at the time is not enough on its own to make it reliable.",
+   "clue": "Keep usefulness and reliability apart."
+  }
+ },
+ "cleared_by": "recheck"
 }

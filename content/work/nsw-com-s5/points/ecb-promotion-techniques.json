@@ -8,8 +8,227 @@
    0.256
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T13:23:35Z autoreview: cleared with the fix (card wording, a other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.00589,
+  "check": 0.0089,
+  "fix": 0.02103
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point is written for Year 12 Business Studies and centres on the promotion mix, while the new Stage 5 point is a simpler introduction that also names influencers, which the bank card does not cover, so it would need a change of depth and content rather than small edits.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Promotion techniques",
+  "card": [
+   [
+    "Advertising",
+    "paid messages in media such as TV, radio, print and online. The business controls what is said and where it appears."
+   ],
+   [
+    "Social media and influencers",
+    "posts, videos and pages on social platforms, including people with large followings who feature a product."
+   ],
+   [
+    "Sales promotion",
+    "short-term offers that encourage a quick purchase, such as discounts, free samples, competitions and loyalty points."
+   ],
+   [
+    "Personal selling",
+    "a salesperson speaks with a customer directly, answers questions and helps them choose. Publicity is unpaid media coverage of a business, such as a news story about a new store."
+   ]
+  ],
+  "remember": "Businesses can mix paid messages, online content, special offers, face-to-face selling and media coverage to reach customers.",
+  "a": {
+   "q": "A shoe shop in Parramatta offers 30% off all sandals for one weekend only. Which technique is this?",
+   "opts": [
+    "Sales promotion",
+    "Personal selling",
+    "Publicity",
+    "Advertising on radio"
+   ],
+   "why": "A discount that runs for a short time to prompt a quick purchase is a sales promotion. Advertising is a paid message in the media. The offer is not advertising in itself, even though the shop may advertise it.",
+   "clue": "Think about a short-term offer that encourages buying now."
+  },
+  "b": {
+   "d": 3,
+   "q": "A local newspaper writes a story about Ava's new bakery in Orange after a reporter visited. Ava did not pay for it. What is this?",
+   "opts": [
+    "Publicity",
+    "Advertising",
+    "Sales promotion",
+    "Personal selling"
+   ],
+   "why": "Unpaid media coverage of a business is publicity. It is tempting to call it advertising because it appears in the media, but advertising is paid for and the business controls the message.",
+   "clue": "Who paid for the story?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Sales promotion",
+   "also_right": []
+  },
+  "b": {
+   "best": "Publicity",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "Publicity is defined inside the 'Personal selling' bullet, so a student could read it as a kind of personal selling. It needs its own bullet."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'a short-term offer that encourages buying now' repeats the card's definition of sales promotion almost word for word. A student can match it to the answer without understanding the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both intended answers are correct. Publicity is folded into the personal selling bullet on the card, and question a's clue restates the sales promotion definition, which gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: Publicity is defined inside the 'Personal selling' bullet, so a student could read it as a kind of personal selling. It needs its own bullet.",
+  "Question a, other: The clue 'a short-term offer that encourages buying now' repeats the card's definition of sales promotion almost word for word. A student can match it to the answer without understanding the idea."
+ ],
+ "proposal": {
+  "title": "Promotion techniques",
+  "card": [
+   [
+    "Advertising",
+    "paid messages on TV, radio, print, websites and social media, including influencers paid to feature a product. The business controls what is said and where it appears."
+   ],
+   [
+    "Sales promotion",
+    "short-term offers that encourage a quick purchase, such as discounts, free samples, competitions and loyalty points."
+   ],
+   [
+    "Personal selling",
+    "a salesperson speaks with a customer directly, answers questions and helps them choose."
+   ],
+   [
+    "Publicity",
+    "unpaid media coverage of a business, such as a news story about a new store. The business does not control what is said."
+   ]
+  ],
+  "remember": "Businesses can mix paid messages, special offers, face-to-face selling and free media coverage to reach customers.",
+  "a": {
+   "q": "A shoe shop in Parramatta offers 30% off all sandals for one weekend only. Which technique is this?",
+   "opts": [
+    "Sales promotion",
+    "Personal selling",
+    "Publicity",
+    "Advertising"
+   ],
+   "why": "A discount that runs for a short time to prompt a quick purchase is a sales promotion. Advertising is a paid message in the media. The offer is not advertising in itself, even though the shop may advertise it.",
+   "clue": "Is the shop changing its message, or changing the deal itself?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A local newspaper writes a story about Ava's new bakery in Orange after a reporter visited. Ava did not pay for it. What is this?",
+   "opts": [
+    "Publicity",
+    "Advertising",
+    "Sales promotion",
+    "Personal selling"
+   ],
+   "why": "Unpaid media coverage of a business is publicity. It is tempting to call it advertising because it appears in the media, but advertising is paid for and the business controls the message.",
+   "clue": "Who paid for the story?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:35Z",
+  "rules": 1,
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "Publicity is defined inside the 'Personal selling' bullet, so a student could read it as a kind of personal selling. It needs its own bullet."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'a short-term offer that encourages buying now' repeats the card's definition of sales promotion almost word for word. A student can match it to the answer without understanding the idea."
+   }
+  ],
+  "flags": [
+   "Card, wording: Publicity is defined inside the 'Personal selling' bullet, so a student could read it as a kind of personal selling. It needs its own bullet.",
+   "Question a, other: The clue 'a short-term offer that encourages buying now' repeats the card's definition of sales promotion almost word for word. A student can match it to the answer without understanding the idea."
+  ]
+ },
+ "final": {
+  "title": "Promotion techniques",
+  "card": [
+   [
+    "Advertising",
+    "paid messages on TV, radio, print, websites and social media, including influencers paid to feature a product. The business controls what is said and where it appears."
+   ],
+   [
+    "Sales promotion",
+    "short-term offers that encourage a quick purchase, such as discounts, free samples, competitions and loyalty points."
+   ],
+   [
+    "Personal selling",
+    "a salesperson speaks with a customer directly, answers questions and helps them choose."
+   ],
+   [
+    "Publicity",
+    "unpaid media coverage of a business, such as a news story about a new store. The business does not control what is said."
+   ]
+  ],
+  "remember": "Businesses can mix paid messages, special offers, face-to-face selling and free media coverage to reach customers.",
+  "a": {
+   "q": "A shoe shop in Parramatta offers 30% off all sandals for one weekend only. Which technique is this?",
+   "opts": [
+    "Sales promotion",
+    "Personal selling",
+    "Publicity",
+    "Advertising"
+   ],
+   "why": "A discount that runs for a short time to prompt a quick purchase is a sales promotion. Advertising is a paid message in the media. The offer is not advertising in itself, even though the shop may advertise it.",
+   "clue": "Is the shop changing its message, or changing the deal itself?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A local newspaper writes a story about Ava's new bakery in Orange after a reporter visited. Ava did not pay for it. What is this?",
+   "opts": [
+    "Publicity",
+    "Advertising",
+    "Sales promotion",
+    "Personal selling"
+   ],
+   "why": "Unpaid media coverage of a business is publicity. It is tempting to call it advertising because it appears in the media, but advertising is paid for and the business controls the message.",
+   "clue": "Who paid for the story?"
+  }
+ },
+ "cleared_by": "auto"
 }

@@ -20,8 +20,217 @@
    0.206
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:42Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T13:23:37Z autoreview: picked as a spot check. It would have been cleared with the fix (a other)",
+  "2026-11-20T14:32:04Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.00627,
+  "check": 0.00892,
+  "fix": 0.01459
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the flat versus round distinction; the closest, eng-characterisation, is written for Year 11 and covers only static and dynamic characters, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Flat, round, static and dynamic characters",
+  "card": [
+   [
+    "Flat",
+    "a character with only one or two traits, who is easy to sum up. A shopkeeper who is only ever grumpy is flat."
+   ],
+   [
+    "Round",
+    "a complex character with many traits, who may have strengths, flaws and mixed feelings. A reader can be surprised by what a round character does."
+   ],
+   [
+    "Static",
+    "a character who stays the same from the start of the story to the end. Their beliefs and behaviour do not change in any important way."
+   ],
+   [
+    "Dynamic",
+    "a character who changes through the story, often because of what happens to them. A boy who begins selfish and ends up generous is dynamic."
+   ]
+  ],
+  "remember": "Flat and round describe how many traits a character has. Static and dynamic describe whether they change.",
+  "a": {
+   "q": "Which description fits a dynamic character?",
+   "opts": [
+    "Zara starts the story shy and ends it confident",
+    "Zara is shy in every chapter and never changes",
+    "Zara is described only as being a loud person",
+    "Zara has many different traits, good and bad"
+   ],
+   "why": "A dynamic character changes through the story, and Zara moves from shy to confident. The last option describes a round character, which is about how complex someone is, not about whether they change.",
+   "clue": "Look for the character whose personality is different at the end."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a story, Mr Ellis is a kind teacher who is also easily angered and secretly afraid of failing. He is the same person on the last page as on the first. How is he best described?",
+   "opts": [
+    "Round and static",
+    "Flat and static",
+    "Round and dynamic",
+    "Flat and dynamic"
+   ],
+   "why": "Mr Ellis has many traits, including mixed ones, so he is round. He does not change by the end, so he is static. Flat is the tempting wrong answer, but a flat character has only one or two traits.",
+   "clue": "Answer two questions: how many traits, and does he change?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Zara starts the story shy and ends it confident",
+   "also_right": []
+  },
+  "b": {
+   "best": "Round and static",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 'The last option describes a round character', but options are shown in a random order, so 'the last option' may point to a different option. It should name the option ('Zara has many different traits, good and bad') instead of its position."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate, and the intended answers are right. One fix is needed: why (a) refers to 'the last option', which will be wrong once the options are shuffled."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) says 'The last option describes a round character', but options are shown in a random order, so 'the last option' may point to a different option. It should name the option ('Zara has many different traits, good and bad') instead of its position."
+ ],
+ "proposal": {
+  "title": "Flat, round, static and dynamic characters",
+  "card": [
+   [
+    "Flat",
+    "a character with only one or two traits, who is easy to sum up. A shopkeeper who is only ever grumpy is flat."
+   ],
+   [
+    "Round",
+    "a complex character with many traits, who may have strengths, flaws and mixed feelings. A reader can be surprised by what a round character does."
+   ],
+   [
+    "Static",
+    "a character who stays the same from the start of the story to the end. Their beliefs and behaviour do not change in any important way."
+   ],
+   [
+    "Dynamic",
+    "a character who changes through the story, often because of what happens to them. A boy who begins selfish and ends up generous is dynamic."
+   ]
+  ],
+  "remember": "Flat and round describe how many traits a character has. Static and dynamic describe whether they change.",
+  "a": {
+   "q": "Which description fits a dynamic character?",
+   "opts": [
+    "Zara starts the story shy and ends it confident",
+    "Zara is shy in every chapter and never changes",
+    "Zara is described only as being a loud person",
+    "Zara has many different traits, good and bad"
+   ],
+   "why": "A dynamic character changes through the story, and Zara moves from shy to confident. The option where Zara has many different traits, good and bad, describes a round character. That is about how complex someone is, not about whether they change.",
+   "clue": "Look for the character whose personality is different at the end."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a story, Mr Ellis is a kind teacher who is also easily angered and secretly afraid of failing. He is the same person on the last page as on the first. How is he best described?",
+   "opts": [
+    "Round and static",
+    "Flat and static",
+    "Round and dynamic",
+    "Flat and dynamic"
+   ],
+   "why": "Mr Ellis has many traits, including mixed ones, so he is round. He does not change by the end, so he is static. Flat is the tempting wrong answer, but a flat character has only one or two traits.",
+   "clue": "Answer two questions: how many traits, and does he change?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:37Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 'The last option describes a round character', but options are shown in a random order, so 'the last option' may point to a different option. It should name the option ('Zara has many different traits, good and bad') instead of its position."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) says 'The last option describes a round character', but options are shown in a random order, so 'the last option' may point to a different option. It should name the option ('Zara has many different traits, good and bad') instead of its position."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Flat, round, static and dynamic characters",
+  "card": [
+   [
+    "Flat",
+    "a character with only one or two traits, who is easy to sum up. A shopkeeper who is only ever grumpy is flat."
+   ],
+   [
+    "Round",
+    "a complex character with many traits, who may have strengths, flaws and mixed feelings. A reader can be surprised by what a round character does."
+   ],
+   [
+    "Static",
+    "a character who stays the same from the start of the story to the end. Their beliefs and behaviour do not change in any important way."
+   ],
+   [
+    "Dynamic",
+    "a character who changes through the story, often because of what happens to them. A boy who begins selfish and ends up generous is dynamic."
+   ]
+  ],
+  "remember": "Flat and round describe how many traits a character has. Static and dynamic describe whether they change.",
+  "a": {
+   "q": "Which description fits a dynamic character?",
+   "opts": [
+    "Zara starts the story shy and ends it confident",
+    "Zara is shy in every chapter and never changes",
+    "Zara is described only as being a loud person",
+    "Zara has many different traits, good and bad"
+   ],
+   "why": "A dynamic character changes through the story, and Zara moves from shy to confident. The option where Zara has many different traits, good and bad, describes a round character. That is about how complex someone is, not about whether they change.",
+   "clue": "Look for the character whose personality is different at the end."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a story, Mr Ellis is a kind teacher who is also easily angered and secretly afraid of failing. He is the same person on the last page as on the first. How is he best described?",
+   "opts": [
+    "Round and static",
+    "Flat and static",
+    "Round and dynamic",
+    "Flat and dynamic"
+   ],
+   "why": "Mr Ellis has many traits, including mixed ones, so he is round. He does not change by the end, so he is static. Flat is the tempting wrong answer, but a flat character has only one or two traits.",
+   "clue": "Answer two questions: how many traits, and does he change?"
+  }
+ },
+ "cleared_by": "owner"
 }

@@ -16,8 +16,141 @@
    0.221
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:02Z write: done",
+  "2026-11-20T12:35:57Z check: for review (first-nations)",
+  "2026-11-20T14:45:23Z review: rejected, to be written again",
+  "2026-11-20T14:58:20Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00662,
+  "check": 0.00923
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points cover rock art as evidence of past species and environmental change; they are about the rock cycle, metamorphic rock and rock use, so a new point is needed for the evolution topic.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Aboriginal rock art as a record of change",
+  "card": [
+   "Aboriginal peoples have painted and engraved rock art for many thousands of years. Some of it shows the animals and plants that lived near the artists at the time.",
+   "Some rock art in Arnhem Land shows animals that no longer live there, such as the thylacine. The thylacine, also called the Tasmanian tiger, is now extinct, and it disappeared from the mainland thousands of years ago.",
+   "If an animal appears in art but is not found in that area today, the art is evidence that the local animals have changed. It can show where an animal once lived.",
+   "Rock art is one way Aboriginal peoples have recorded knowledge of Country across a very long time. Scientists can use it with other evidence, such as fossils, to study how living things in an area have changed."
+  ],
+  "remember": "Rock art can record animals and plants that once lived in an area, and so show how they have changed over thousands of years.",
+  "a": {
+   "q": "Rock art in Arnhem Land shows a thylacine, an animal no longer found there. What can this art tell us?",
+   "opts": [
+    "Thylacines once lived in that area",
+    "Thylacines live there today in secret",
+    "The artists never saw the animals they drew",
+    "Thylacines have always lived only in Tasmania"
+   ],
+   "why": "The art shows an animal that is no longer in the area, so it is evidence that thylacines once lived there. The option about Tasmania is tempting, but the art points to a wider past range than that.",
+   "clue": "Think about what the artists were likely to paint."
+  },
+  "b": {
+   "d": 2,
+   "q": "A scientist finds rock art of an animal in a region where it is not found today. Why is this art useful to the scientist?",
+   "opts": [
+    "It is evidence of how local animals have changed",
+    "It proves the animal will return to the region",
+    "It shows how the animal's DNA was altered",
+    "It shows the animal was never in the region"
+   ],
+   "why": "Art of an animal that is absent today suggests it once lived there, so it records a change in the local animals. It does not show that the animal will return, because it only tells us about the past.",
+   "clue": "The art records the past, not the future."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:20Z",
+   "step": "write",
+   "version": {
+    "title": "Aboriginal rock art as a record of change",
+    "card": [
+     "Aboriginal people have painted and engraved rock art for many thousands of years. Much of it shows the animals and plants the artists knew in their area.",
+     "Some rock art in Arnhem Land, in the Northern Territory, shows the thylacine. Thylacines disappeared from mainland Australia about 3,000 years ago, and the last known one died in Tasmania in 1936.",
+     "An animal painted in an area where it no longer lives is evidence that it once lived there. The art records a change in the area's animals over time.",
+     "Scientists can use rock art alongside other evidence, such as fossils, to build a fuller picture of how plants and animals in an area have changed."
+    ],
+    "remember": "Rock art can record what lived in an area long ago, so it shows how life there has changed.",
+    "a": {
+     "q": "Rock art in Arnhem Land shows a thylacine, but no thylacines live there now. What does this art suggest?",
+     "opts": [
+      "Thylacines once lived in Arnhem Land",
+      "Thylacines were brought there from Tasmania",
+      "Thylacines still live there, unseen, today",
+      "The artists drew an animal they imagined"
+     ],
+     "why": "Artists painted animals they knew in their area, so the art suggests thylacines once lived in Arnhem Land. They disappeared from the mainland about 3,000 years ago, so the art records a change in the local animals.",
+     "clue": "What did the artists usually paint?"
+    },
+    "b": {
+     "d": 3,
+     "q": "A rock painting of a thylacine in Arnhem Land is dated to about 5,000 years ago. Other evidence shows thylacines vanished from the mainland about 3,000 years ago. What do the two together show?",
+     "opts": [
+      "Thylacines lived in Arnhem Land, then died out there",
+      "Thylacines first arrived in Arnhem Land 3,000 years ago",
+      "The painting is wrong, since the other evidence disagrees",
+      "Thylacines lived in Arnhem Land until the year 1936"
+     ],
+     "why": "The painting shows thylacines lived there 5,000 years ago, and the other evidence shows they had gone from the mainland by about 3,000 years ago. The two agree and record a change in the area's animals. 1936 is when the last known thylacine died, in Tasmania.",
+     "clue": "Put the two dates in order."
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Aboriginal rock art as a record of change",
+  "card": [
+   "Aboriginal people have painted and engraved rock art for many thousands of years. Much of it shows the animals and plants the artists knew in their area.",
+   "Some rock art in Arnhem Land, in the Northern Territory, shows the thylacine. Thylacines disappeared from mainland Australia about 3,000 years ago, and the last known one died in Tasmania in 1936.",
+   "An animal painted in an area where it no longer lives is evidence that it once lived there. The art records a change in the area's animals over time.",
+   "Scientists can use rock art alongside other evidence, such as fossils, to build a fuller picture of how plants and animals in an area have changed."
+  ],
+  "remember": "Rock art can record what lived in an area long ago, so it shows how life there has changed.",
+  "a": {
+   "q": "Rock art in Arnhem Land shows a thylacine, but no thylacines live there now. What does this art suggest?",
+   "opts": [
+    "Thylacines once lived in Arnhem Land",
+    "Thylacines were brought there from Tasmania",
+    "Thylacines still live there, unseen, today",
+    "The artists drew an animal they imagined"
+   ],
+   "why": "Artists painted animals they knew in their area, so the art suggests thylacines once lived in Arnhem Land. They disappeared from the mainland about 3,000 years ago, so the art records a change in the local animals.",
+   "clue": "What did the artists usually paint?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A rock painting of a thylacine in Arnhem Land is dated to about 5,000 years ago. Other evidence shows thylacines vanished from the mainland about 3,000 years ago. What do the two together show?",
+   "opts": [
+    "Thylacines lived in Arnhem Land, then died out there",
+    "Thylacines first arrived in Arnhem Land 3,000 years ago",
+    "The painting is wrong, since the other evidence disagrees",
+    "Thylacines lived in Arnhem Land until the year 1936"
+   ],
+   "why": "The painting shows thylacines lived there 5,000 years ago, and the other evidence shows they had gone from the mainland by about 3,000 years ago. The two agree and record a change in the area's animals. 1936 is when the last known thylacine died, in Tasmania.",
+   "clue": "Put the two dates in order."
+  }
+ },
+ "local": []
 }

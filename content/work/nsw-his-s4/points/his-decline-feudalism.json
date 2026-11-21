@@ -16,8 +16,200 @@
    0.203
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:50Z write: done",
+  "2026-11-20T12:35:51Z check: flagged",
+  "2026-11-20T12:44:56Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.00652,
+  "check": 0.01317,
+  "fix": 0.01577,
+  "recheck": 0.00732
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, his-effects-black-death, covers only the Black Death's labour shortage and weakened feudalism, but the new point also needs the growth of trade, towns and a middle class, which is a different idea and not a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The decline of feudalism",
+  "card": [
+   "In 1347 to 1351 the Black Death, a deadly plague, killed a very large share of Europe's people. Many of the dead were peasants who worked the land.",
+   "With so many workers gone, those who survived were hard to replace. They could ask for wages and move to find better pay, which weakened the lord's hold over them.",
+   "As trade grew, towns grew too. Merchants and craftworkers in towns earned money, and they formed a new middle class that did not fit the old feudal order.",
+   "Feudalism rested on land and labour owed to a lord. As paid work and money from trade became more common, feudalism weakened."
+  ],
+  "remember": "Fewer workers after the plague and more money from trade weakened feudalism.",
+  "a": {
+   "q": "Why did survivors of the Black Death have more power over their lords?",
+   "opts": [
+    "Workers were scarce, so they could ask for wages",
+    "The king gave peasants land after the plague",
+    "Lords no longer needed any land to be farmed",
+    "The Church forced lords to free all their peasants"
+   ],
+   "why": "So many workers had died that lords struggled to find others, so survivors could ask for wages. The lords still wanted their land farmed, so the second idea is wrong, and the card does not say the king gave land.",
+   "clue": "Think about what happens when there are fewer workers than jobs."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1400, Tom leaves his lord's manor for a town, where he earns coins as a baker's helper. Which change in Europe does his move best show?",
+   "opts": [
+    "Paid work in towns was drawing people from feudal ties",
+    "Lords were gaining more control over their peasants",
+    "The Black Death was returning to kill more workers",
+    "Peasants were giving more of their produce to lords"
+   ],
+   "why": "Tom leaves land and labour owed to a lord for paid work in a town, which shows feudalism weakening as trade and towns grew. The plague helped make workers scarce, but Tom's move shows the pull of town work, not a return of the plague.",
+   "clue": "Look at what Tom now gets paid in, and where he works."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Workers were scarce, so they could ask for wages",
+   "also_right": []
+  },
+  "b": {
+   "best": "Paid work in towns was drawing people from feudal ties",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 'the second idea is wrong' when explaining 'Lords no longer needed any land to be farmed'. Because options are shuffled, a student may read 'the second idea' as the second option shown, which is the correct answer. The why should name the option by its content, not its position."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate and well matched. The only problem is Why (a), which refers to 'the second idea' by position; with shuffled options this could point students to the correct answer and call it wrong."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) says 'the second idea is wrong' when explaining 'Lords no longer needed any land to be farmed'. Because options are shuffled, a student may read 'the second idea' as the second option shown, which is the correct answer. The why should name the option by its content, not its position."
+ ],
+ "proposal": {
+  "title": "The decline of feudalism",
+  "card": [
+   "In 1347 to 1351 the Black Death, a deadly plague, killed a very large share of Europe's people. Many of the dead were peasants who worked the land.",
+   "With so many workers gone, those who survived were hard to replace. They could ask for wages and move to find better pay, which weakened the lord's hold over them.",
+   "As trade grew, towns grew too. Merchants and craftworkers in towns earned money, and they formed a new middle class that did not fit the old feudal order.",
+   "Feudalism rested on land and labour owed to a lord. As paid work and money from trade became more common, feudalism weakened."
+  ],
+  "remember": "Fewer workers after the plague and more money from trade weakened feudalism.",
+  "a": {
+   "q": "Why did survivors of the Black Death have more power over their lords?",
+   "opts": [
+    "Workers were scarce, so they could ask for wages",
+    "The king gave peasants land after the plague",
+    "Lords no longer needed any land to be farmed",
+    "The Church forced lords to free all their peasants"
+   ],
+   "why": "So many workers had died that lords struggled to find others, so survivors could ask for wages. Lords still needed their land farmed, which is exactly why scarce workers had power, so the idea that lords no longer needed land farmed is wrong.",
+   "clue": "Think about what happens when there are fewer workers than jobs."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1400, Tom leaves his lord's manor for a town, where he earns coins as a baker's helper. Which change in Europe does his move best show?",
+   "opts": [
+    "Paid work in towns was drawing people from feudal ties",
+    "Lords were gaining more control over their peasants",
+    "The Black Death was returning to kill more workers",
+    "Peasants were giving more of their produce to lords"
+   ],
+   "why": "Tom leaves land and labour owed to a lord for paid work in a town, which shows feudalism weakening as trade and towns grew. The plague helped make workers scarce, but Tom's move shows the pull of town work, not a return of the plague.",
+   "clue": "Look at what Tom now gets paid in, and where he works."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Workers were scarce, so they could ask for wages",
+    "also_right": []
+   },
+   "b": {
+    "best": "Paid work in towns was drawing people from feudal ties",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 13,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 'the second idea is wrong' when explaining 'Lords no longer needed any land to be farmed'. Because options are shuffled, a student may read 'the second idea' as the second option shown, which is the correct answer. The why should name the option by its content, not its position."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) says 'the second idea is wrong' when explaining 'Lords no longer needed any land to be farmed'. Because options are shuffled, a student may read 'the second idea' as the second option shown, which is the correct answer. The why should name the option by its content, not its position."
+  ]
+ },
+ "final": {
+  "title": "The decline of feudalism",
+  "card": [
+   "In 1347 to 1351 the Black Death, a deadly plague, killed a very large share of Europe's people. Many of the dead were peasants who worked the land.",
+   "With so many workers gone, those who survived were hard to replace. They could ask for wages and move to find better pay, which weakened the lord's hold over them.",
+   "As trade grew, towns grew too. Merchants and craftworkers in towns earned money, and they formed a new middle class that did not fit the old feudal order.",
+   "Feudalism rested on land and labour owed to a lord. As paid work and money from trade became more common, feudalism weakened."
+  ],
+  "remember": "Fewer workers after the plague and more money from trade weakened feudalism.",
+  "a": {
+   "q": "Why did survivors of the Black Death have more power over their lords?",
+   "opts": [
+    "Workers were scarce, so they could ask for wages",
+    "The king gave peasants land after the plague",
+    "Lords no longer needed any land to be farmed",
+    "The Church forced lords to free all their peasants"
+   ],
+   "why": "So many workers had died that lords struggled to find others, so survivors could ask for wages. Lords still needed their land farmed, which is exactly why scarce workers had power, so the idea that lords no longer needed land farmed is wrong.",
+   "clue": "Think about what happens when there are fewer workers than jobs."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1400, Tom leaves his lord's manor for a town, where he earns coins as a baker's helper. Which change in Europe does his move best show?",
+   "opts": [
+    "Paid work in towns was drawing people from feudal ties",
+    "Lords were gaining more control over their peasants",
+    "The Black Death was returning to kill more workers",
+    "Peasants were giving more of their produce to lords"
+   ],
+   "why": "Tom leaves land and labour owed to a lord for paid work in a town, which shows feudalism weakening as trade and towns grew. The plague helped make workers scarce, but Tom's move shows the pull of town work, not a return of the plague.",
+   "clue": "Look at what Tom now gets paid in, and where he works."
+  }
+ },
+ "cleared_by": "recheck"
 }

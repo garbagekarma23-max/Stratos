@@ -24,8 +24,115 @@
    0.235
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: failed the content check, writing again",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.01796,
+  "check": 0.00691
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, leg-changing-constitution, is written for senior Victorian Legal Studies and goes well beyond the brief into section 128, absolute majorities and the deadlock procedure, so it is not a small adaptation for a Stage 5 Commerce course.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Referendums",
+  "card": [
+   "The Constitution is the set of rules that sets up Australia's government. It can be changed only by a referendum, which is a vote of all enrolled voters.",
+   "Parliament first passes a bill that proposes the change. Then voters are asked to answer yes or no to it.",
+   "To pass, a referendum needs a double majority. First, a majority of voters across the whole nation must vote yes.",
+   "Second, a majority of voters must vote yes in at least four of the six states. Voters in the territories count in the national total only."
+  ],
+  "remember": "A referendum passes only with a national majority and a majority in at least four states.",
+  "a": {
+   "q": "Which result would meet the double majority test for a referendum to pass?",
+   "opts": [
+    "A national yes majority and yes majorities in four states",
+    "A national yes majority and yes majorities in two states",
+    "Yes majorities in four states but a national no majority",
+    "A yes majority in the House and in the Senate"
+   ],
+   "why": "The double majority has two parts: a majority of all voters and a majority in at least four states. Two states is not enough, and a House and Senate vote is how Parliament passes bills, not how voters change the Constitution.",
+   "clue": "Both tests must be met at the same time."
+  },
+  "b": {
+   "d": 3,
+   "q": "A proposed change gets a yes vote from 55% of voters nationally, but only three states vote yes. What is the result?",
+   "opts": [
+    "It fails, as only three states voted yes",
+    "It passes, as a national majority voted yes",
+    "It passes, as three states is nearly enough",
+    "It goes back to Parliament, which can then pass it"
+   ],
+   "why": "A national majority is only one of the two tests. A majority in at least four states is also needed, and three is not enough. So the change fails, however large the national yes vote is.",
+   "clue": "Check both tests, not just the national vote."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A national yes majority and yes majorities in four states",
+   "also_right": []
+  },
+  "b": {
+   "best": "It fails, as only three states voted yes",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Referendums",
+  "card": [
+   "The Constitution is the set of rules that sets up Australia's government. It can be changed only by a referendum, which is a vote of all enrolled voters.",
+   "Parliament first passes a bill that proposes the change. Then voters are asked to answer yes or no to it.",
+   "To pass, a referendum needs a double majority. First, a majority of voters across the whole nation must vote yes.",
+   "Second, a majority of voters must vote yes in at least four of the six states. Voters in the territories count in the national total only."
+  ],
+  "remember": "A referendum passes only with a national majority and a majority in at least four states.",
+  "a": {
+   "q": "Which result would meet the double majority test for a referendum to pass?",
+   "opts": [
+    "A national yes majority and yes majorities in four states",
+    "A national yes majority and yes majorities in two states",
+    "Yes majorities in four states but a national no majority",
+    "A yes majority in the House and in the Senate"
+   ],
+   "why": "The double majority has two parts: a majority of all voters and a majority in at least four states. Two states is not enough, and a House and Senate vote is how Parliament passes bills, not how voters change the Constitution.",
+   "clue": "Both tests must be met at the same time."
+  },
+  "b": {
+   "d": 3,
+   "q": "A proposed change gets a yes vote from 55% of voters nationally, but only three states vote yes. What is the result?",
+   "opts": [
+    "It fails, as only three states voted yes",
+    "It passes, as a national majority voted yes",
+    "It passes, as three states is nearly enough",
+    "It goes back to Parliament, which can then pass it"
+   ],
+   "why": "A national majority is only one of the two tests. A majority in at least four states is also needed, and three is not enough. So the change fails, however large the national yes vote is.",
+   "clue": "Check both tests, not just the national vote."
+  }
+ },
+ "cleared_by": "checker"
 }

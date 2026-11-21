@@ -24,8 +24,193 @@
    0.21
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 may adapt sci-negative-feedback, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:26:01Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:58Z write: failed the content check, writing again",
+  "2026-11-20T12:45:01Z write: done",
+  "2026-11-20T12:53:29Z check: flagged",
+  "2026-11-20T13:00:01Z fix: suggested",
+  "2026-11-20T13:23:46Z autoreview: cleared with the fix (a other)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00045,
+  "confirm": 0.01207,
+  "write": 0.01307,
+  "check": 0.00853,
+  "fix": 0.01446
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "sci-negative-feedback",
+  "changes": [
+   "Replace the Hobart, Tasmania setting in question b with a New South Wales location.",
+   "Add the term homeostasis and a one-line definition to the card, since the new point is named homeostasis and the bank card only teaches negative feedback."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same mechanism, negative feedback keeping conditions steady at a suitable Year 9 depth, but it never names homeostasis and its example is set in Tasmania, so it needs small changes to fit this NSW course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest Year 9 point teaches only the negative feedback mechanism, without the idea of homeostasis or blood glucose, while the bank's homeostasis points are senior Biology cards that go deeper, using receptor, control centre, effector and set point.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Homeostasis",
+  "card": [
+   "Homeostasis is the body keeping its internal conditions steady, even when the outside world changes. Body temperature and blood glucose (sugar) are two examples.",
+   "Cells work best within a narrow range of conditions. If temperature or glucose drifts too far from that range, cells can stop working properly.",
+   "The body uses negative feedback. A receptor detects a change, and the body responds in a way that reverses the change and brings the condition back towards normal.",
+   "For example, if the body gets too hot, sweating and wider skin blood vessels help it lose heat. If it gets too cold, shivering helps it make heat."
+  ],
+  "remember": "Homeostasis keeps conditions steady by using feedback that reverses a change.",
+  "a": {
+   "q": "Which best describes homeostasis?",
+   "opts": [
+    "Keeping internal conditions steady as the outside changes",
+    "Keeping the outside environment the same as the body",
+    "Making the body's conditions rise as far as they can",
+    "Sending messages from the brain to the muscles"
+   ],
+   "why": "Homeostasis is about keeping the body's internal conditions steady. It does not control the outside environment, and the aim is a steady range, not a maximum.",
+   "clue": "Think of what stays the same inside while the outside changes."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam runs on a hot day and his body temperature starts to rise. His skin sweats and his skin blood vessels widen. How do these responses show homeostasis?",
+   "opts": [
+    "They reverse the rise and bring temperature back to normal",
+    "They raise his temperature further so cells work faster",
+    "They keep the outside air at a steady temperature",
+    "They stop his receptors from detecting the change"
+   ],
+   "why": "Sweating and wider blood vessels help the body lose heat, so they reverse the rise. This is negative feedback. Making the change bigger would move the body further from its normal range.",
+   "clue": "Does the response push the change further or undo it?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Keeping internal conditions steady as the outside changes",
+   "also_right": []
+  },
+  "b": {
+   "best": "They reverse the rise and bring temperature back to normal",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'what stays the same inside while the outside changes' nearly restates the right option ('Keeping internal conditions steady as the outside changes'). A student could match the wording without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The content is accurate and both questions have one clear right answer. The only issue is that question a's clue nearly restates the right option."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'what stays the same inside while the outside changes' nearly restates the right option ('Keeping internal conditions steady as the outside changes'). A student could match the wording without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Homeostasis",
+  "card": [
+   "Homeostasis is the body keeping its internal conditions steady, even when the outside world changes. Body temperature and blood glucose (sugar) are two examples.",
+   "Cells work best within a narrow range of conditions. If temperature or glucose drifts too far from that range, cells can stop working properly.",
+   "The body uses negative feedback. A receptor detects a change, and the body responds in a way that reverses the change and brings the condition back towards normal.",
+   "For example, if the body gets too hot, sweating and wider skin blood vessels help it lose heat. If it gets too cold, shivering helps it make heat."
+  ],
+  "remember": "Homeostasis keeps conditions steady by using feedback that reverses a change.",
+  "a": {
+   "q": "Which best describes homeostasis?",
+   "opts": [
+    "Keeping internal conditions steady as the outside changes",
+    "Keeping the outside environment the same as the body",
+    "Making the body's conditions rise as far as they can",
+    "Sending messages from the brain to the muscles"
+   ],
+   "why": "Homeostasis is about keeping the body's internal conditions steady. It does not control the outside environment, and the aim is a steady range, not a maximum.",
+   "clue": "Think about why cells need conditions to stay within a range."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam runs on a hot day and his body temperature starts to rise. His skin sweats and his skin blood vessels widen. How do these responses show homeostasis?",
+   "opts": [
+    "They reverse the rise and bring temperature back to normal",
+    "They raise his temperature further so cells work faster",
+    "They keep the outside air at a steady temperature",
+    "They stop his receptors from detecting the change"
+   ],
+   "why": "Sweating and wider blood vessels help the body lose heat, so they reverse the rise. This is negative feedback. Making the change bigger would move the body further from its normal range.",
+   "clue": "Does the response push the change further or undo it?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:46Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'what stays the same inside while the outside changes' nearly restates the right option ('Keeping internal conditions steady as the outside changes'). A student could match the wording without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue 'what stays the same inside while the outside changes' nearly restates the right option ('Keeping internal conditions steady as the outside changes'). A student could match the wording without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "Homeostasis",
+  "card": [
+   "Homeostasis is the body keeping its internal conditions steady, even when the outside world changes. Body temperature and blood glucose (sugar) are two examples.",
+   "Cells work best within a narrow range of conditions. If temperature or glucose drifts too far from that range, cells can stop working properly.",
+   "The body uses negative feedback. A receptor detects a change, and the body responds in a way that reverses the change and brings the condition back towards normal.",
+   "For example, if the body gets too hot, sweating and wider skin blood vessels help it lose heat. If it gets too cold, shivering helps it make heat."
+  ],
+  "remember": "Homeostasis keeps conditions steady by using feedback that reverses a change.",
+  "a": {
+   "q": "Which best describes homeostasis?",
+   "opts": [
+    "Keeping internal conditions steady as the outside changes",
+    "Keeping the outside environment the same as the body",
+    "Making the body's conditions rise as far as they can",
+    "Sending messages from the brain to the muscles"
+   ],
+   "why": "Homeostasis is about keeping the body's internal conditions steady. It does not control the outside environment, and the aim is a steady range, not a maximum.",
+   "clue": "Think about why cells need conditions to stay within a range."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam runs on a hot day and his body temperature starts to rise. His skin sweats and his skin blood vessels widen. How do these responses show homeostasis?",
+   "opts": [
+    "They reverse the rise and bring temperature back to normal",
+    "They raise his temperature further so cells work faster",
+    "They keep the outside air at a steady temperature",
+    "They stop his receptors from detecting the change"
+   ],
+   "why": "Sweating and wider blood vessels help the body lose heat, so they reverse the rise. This is negative feedback. Making the change bigger would move the body further from its normal range.",
+   "clue": "Does the response push the change further or undo it?"
+  }
+ },
+ "cleared_by": "auto"
 }

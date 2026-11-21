@@ -16,8 +16,131 @@
    0.328
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:58Z write: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00039,
+  "write": 0.00681,
+  "check": 0.00637
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank card, chem-metallic-bonding, is written for Year 11 chemistry, using terms like lattice and delocalised electrons and describing the electrons as given up rather than shared, which is too deep and differently framed for a Stage 5 point, so a new point is the safer choice.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Metallic bonding",
+  "card": [
+   "Metal atoms hold their outer electrons loosely. In a metal, these electrons come away from the atoms and are shared by the whole piece of metal.",
+   "This leaves positive ions packed in a regular pattern. They sit in a sea of shared electrons that can move. The attraction between the ions and the electrons is a metallic bond.",
+   "Metals conduct electricity because the electrons can move through the metal and carry charge.",
+   "Metals can be bent or hammered into shape because the layers of ions can slide past each other. The sea of electrons keeps holding the ions together as they move."
+  ],
+  "remember": "Metals have positive ions in a moving sea of shared electrons.",
+  "a": {
+   "q": "Which part of a copper wire carries the electric charge when it conducts electricity?",
+   "opts": [
+    "Electrons that move between the ions",
+    "Positive ions that move along the wire",
+    "Atoms that swap places with each other",
+    "Molecules that share pairs of electrons"
+   ],
+   "why": "The outer electrons are shared by the whole metal and are free to move, so they carry the charge. The positive ions stay packed in their pattern, so they do not carry it along the wire.",
+   "clue": "Which particles in a metal are free to move?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jin hits a small piece of silver with a hammer and it flattens without breaking. Why does the silver change shape instead of shattering?",
+   "opts": [
+    "Layers of ions slide while shared electrons hold them",
+    "Electrons are pushed out, so the ions drift apart",
+    "Pairs of atoms share electrons and stretch in the metal",
+    "Negative ions are pulled past positive ions in layers"
+   ],
+   "why": "The layers of positive ions can slide past each other, and the sea of shared electrons keeps holding them together. The electrons are not pushed out, so the metal does not fall apart.",
+   "clue": "Think about what stays between the ions as the layers move."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A regular pattern of circles labelled positive ions, surrounded by small dots labelled shared electrons that can move, with short arrows on a few dots to show they move between the ions.",
+    "why": "It shows the sea of shared electrons around the positive ions, which is hard to picture from words alone."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Electrons that move between the ions",
+   "also_right": []
+  },
+  "b": {
+   "best": "Layers of ions slide while shared electrons hold them",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Metallic bonding",
+  "card": [
+   "Metal atoms hold their outer electrons loosely. In a metal, these electrons come away from the atoms and are shared by the whole piece of metal.",
+   "This leaves positive ions packed in a regular pattern. They sit in a sea of shared electrons that can move. The attraction between the ions and the electrons is a metallic bond.",
+   "Metals conduct electricity because the electrons can move through the metal and carry charge.",
+   "Metals can be bent or hammered into shape because the layers of ions can slide past each other. The sea of electrons keeps holding the ions together as they move."
+  ],
+  "remember": "Metals have positive ions in a moving sea of shared electrons.",
+  "a": {
+   "q": "Which part of a copper wire carries the electric charge when it conducts electricity?",
+   "opts": [
+    "Electrons that move between the ions",
+    "Positive ions that move along the wire",
+    "Atoms that swap places with each other",
+    "Molecules that share pairs of electrons"
+   ],
+   "why": "The outer electrons are shared by the whole metal and are free to move, so they carry the charge. The positive ions stay packed in their pattern, so they do not carry it along the wire.",
+   "clue": "Which particles in a metal are free to move?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jin hits a small piece of silver with a hammer and it flattens without breaking. Why does the silver change shape instead of shattering?",
+   "opts": [
+    "Layers of ions slide while shared electrons hold them",
+    "Electrons are pushed out, so the ions drift apart",
+    "Pairs of atoms share electrons and stretch in the metal",
+    "Negative ions are pulled past positive ions in layers"
+   ],
+   "why": "The layers of positive ions can slide past each other, and the sea of shared electrons keeps holding them together. The electrons are not pushed out, so the metal does not fall apart.",
+   "clue": "Think about what stays between the ions as the layers move."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A regular pattern of circles labelled positive ions, surrounded by small dots labelled shared electrons that can move, with short arrows on a few dots to show they move between the ions.",
+    "why": "It shows the sea of shared electrons around the positive ions, which is hard to picture from words alone."
+   }
+  ]
+ },
+ "cleared_by": "checker"
 }

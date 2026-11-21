@@ -16,8 +16,167 @@
    0.241
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T14:31:26Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.00651,
+  "check": 0.01183,
+  "fix": 0.01668
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers circle sentencing but is broader, also teaching restorative justice, and is written at Year 12 Legal Studies depth, so it does not match this single Stage 5 Commerce point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Circle sentencing",
+  "card": [
+   "Circle sentencing is a way of deciding the sentence for an Aboriginal person who has pleaded guilty or been found guilty. It is used in some NSW Local Courts, and the offender must agree to take part.",
+   "The people sit in a circle instead of at the usual court tables. The magistrate, Aboriginal Elders, the offender, the victim if they choose to come, and other community members all take part.",
+   "Everyone in the circle can speak about the offence, its effects and what the sentence should be. The magistrate still makes the final decision.",
+   "The process involves the Aboriginal community in the sentence. It aims to make the offender face the harm done and to repair the relationship with the community."
+  ],
+  "remember": "In circle sentencing, Elders and community members help the magistrate decide the sentence, and the magistrate makes the final decision.",
+  "a": {
+   "q": "Who makes the final decision on the sentence in circle sentencing?",
+   "opts": [
+    "The magistrate, after hearing the circle",
+    "The Elders, who vote on the sentence",
+    "The victim, who chooses the punishment",
+    "The offender, who proposes their own sentence"
+   ],
+   "why": "Elders and community members speak and give their views, but the magistrate still makes the final decision. The Elders have an important voice, but they do not replace the magistrate.",
+   "clue": "Who is the court officer in the circle?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jarrah, an Aboriginal teenager in a NSW town, has pleaded guilty to a offence and agrees to circle sentencing. Which describes what will happen?",
+   "opts": [
+    "Elders and community members help the magistrate decide",
+    "A jury of twelve people decides the sentence",
+    "A neutral person helps him and the victim reach a deal",
+    "The police officer who arrested him chooses the sentence"
+   ],
+   "why": "In circle sentencing, Elders and community members join the magistrate and help decide the sentence. A neutral person helping two sides reach a deal describes mediation, which is a different process and does not set a sentence.",
+   "clue": "Think about who sits in the circle with the magistrate."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The magistrate, after hearing the circle",
+   "also_right": []
+  },
+  "b": {
+   "best": "Elders and community members help the magistrate decide",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Circle sentencing in NSW is run in the Local Court for adult Aboriginal offenders. A young person under 18 would go to the Children's Court, which has its own Youth Koori Court. Calling Jarrah a 'teenager' suggests a juvenile and may teach students that circle sentencing applies to under-18s. Make him an adult (for example, 'a 19-year-old')."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Grammar error: 'pleaded guilty to a offence' should read 'an offence'."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "first-nations",
+  "summary": "Question b calls Jarrah a 'teenager', but NSW circle sentencing is for adults in the Local Court, so make him clearly an adult. Also fix 'a offence' to 'an offence'."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Question b, fact: Circle sentencing in NSW is run in the Local Court for adult Aboriginal offenders. A young person under 18 would go to the Children's Court, which has its own Youth Koori Court. Calling Jarrah a 'teenager' suggests a juvenile and may teach students that circle sentencing applies to under-18s. Make him an adult (for example, 'a 19-year-old').",
+  "Question b, wording: Grammar error: 'pleaded guilty to a offence' should read 'an offence'."
+ ],
+ "proposal": {
+  "title": "Circle sentencing",
+  "card": [
+   "Circle sentencing is a way of deciding the sentence for an adult Aboriginal person who has pleaded guilty or been found guilty. It is used in some NSW Local Courts, and the offender must agree to take part.",
+   "The people sit in a circle instead of at the usual court tables. The magistrate, Aboriginal Elders, the offender, the victim if they choose to come, and other community members all take part.",
+   "Everyone in the circle can speak about the offence, its effects and what the sentence should be. The magistrate still makes the final decision.",
+   "The process involves the Aboriginal community in the sentence. It aims to make the offender face the harm done and to repair the relationship with the community."
+  ],
+  "remember": "In circle sentencing, Elders and community members help the magistrate decide the sentence, and the magistrate makes the final decision.",
+  "a": {
+   "q": "Who makes the final decision on the sentence in circle sentencing?",
+   "opts": [
+    "The magistrate, after hearing the circle",
+    "The Elders, who vote on the sentence",
+    "The victim, who chooses the punishment",
+    "The offender, who proposes their own sentence"
+   ],
+   "why": "Elders and community members speak and give their views, but the magistrate still makes the final decision. The Elders have an important voice, but they do not replace the magistrate.",
+   "clue": "Who is the court officer in the circle?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jarrah, a 19-year-old Aboriginal man in a NSW town, has pleaded guilty to an offence and agrees to circle sentencing. Which describes what will happen?",
+   "opts": [
+    "Elders and community members help the magistrate decide",
+    "A jury of twelve people decides the sentence",
+    "A neutral person helps him and the victim reach a deal",
+    "The police officer who arrested him chooses the sentence"
+   ],
+   "why": "In circle sentencing, Elders and community members join the magistrate and help decide the sentence. A neutral person helping two sides reach a deal describes mediation, which is a different process and does not set a sentence.",
+   "clue": "Think about who sits in the circle with the magistrate."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Circle sentencing",
+  "card": [
+   "Circle sentencing is a way of deciding the sentence for an adult Aboriginal person who has pleaded guilty or been found guilty. It is used in some NSW Local Courts, and the offender must agree to take part.",
+   "The people sit in a circle instead of at the usual court tables. The magistrate, Aboriginal Elders, the offender, the victim if they choose to come, and other community members all take part.",
+   "Everyone in the circle can speak about the offence, its effects and what the sentence should be. The magistrate still makes the final decision.",
+   "The process involves the Aboriginal community in the sentence. It aims to make the offender face the harm done and to repair the relationship with the community."
+  ],
+  "remember": "In circle sentencing, Elders and community members help the magistrate decide the sentence, and the magistrate makes the final decision.",
+  "a": {
+   "q": "Who makes the final decision on the sentence in circle sentencing?",
+   "opts": [
+    "The magistrate, after hearing the circle",
+    "The Elders, who vote on the sentence",
+    "The victim, who chooses the punishment",
+    "The offender, who proposes their own sentence"
+   ],
+   "why": "Elders and community members speak and give their views, but the magistrate still makes the final decision. The Elders have an important voice, but they do not replace the magistrate.",
+   "clue": "Who is the court officer in the circle?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jarrah, a 19-year-old Aboriginal man in a NSW town, has pleaded guilty to an offence and agrees to circle sentencing. Which describes what will happen?",
+   "opts": [
+    "Elders and community members help the magistrate decide",
+    "A jury of twelve people decides the sentence",
+    "A neutral person helps him and the victim reach a deal",
+    "The police officer who arrested him chooses the sentence"
+   ],
+   "why": "In circle sentencing, Elders and community members join the magistrate and help decide the sentence. A neutral person helping two sides reach a deal describes mediation, which is a different process and does not set a sentence.",
+   "clue": "Think about who sits in the circle with the magistrate."
+  }
+ },
+ "cleared_by": "owner"
 }

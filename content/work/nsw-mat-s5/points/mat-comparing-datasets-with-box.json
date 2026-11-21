@@ -24,8 +24,304 @@
    0.223
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 may adapt mat-box-plots, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:55Z confirm: Claude Opus 5.5 may adapt mat-comparing-distributions, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt mat-comparing-distributions (4 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting mat-comparing-distributions on the next run",
+  "2026-11-20T14:12:39Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00042,
+  "confirm": 0.0154,
+  "adapt": 0.01476,
+  "check": 0.00781
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-box-plots",
+  "changes": [
+   "Replace the Darwin bus routes example in question b with an example set in New South Wales, such as Sydney or regional NSW bus or train travel times."
+  ],
+  "sure": "medium",
+  "reason": "The bank point already teaches comparing two box plots on one scale by medians and spreads, which matches the brief, but its second question uses a Darwin example that should be local to NSW.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-comparing-distributions",
+  "changes": [
+   "Change the Geelong cafés in question b to a New South Wales place.",
+   "Write 'box plots' instead of 'boxplots' throughout to match the NSW syllabus wording.",
+   "Drop the passing mention of back-to-back stem plots so the card stays on box plots.",
+   "Add a line saying a smaller IQR means the group is more consistent, and that a higher median usually means the group did better, in context."
+  ],
+  "sure": "medium",
+  "reason": "This bank point teaches comparing medians and IQRs on parallel box plots at a depth that suits Years 9–10, and needs only local wording and a place change, plus one plain line on consistency.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-comparing-distributions",
+  "changes": [
+   "Write box plots instead of boxplots everywhere, including the chart's alt and both questions.",
+   "Drop the mention of back-to-back stem plots so the card stays on box plots.",
+   "Add a line that a smaller IQR means the group is more consistent, and that a higher median usually means the group did better when higher scores are better.",
+   "Change the Geelong cafés in question b to a New South Wales place."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card1",
+   "card4",
+   "card3 fig",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches comparing medians and IQRs on parallel box plots, and its chart data matches its alt and card. It needs NSW wording, the stem plot mention dropped, a NSW place, and the brief's ideas of which group did better and which is more consistent.",
+   "item": "e9ea3a8c4dcbb152",
+   "result": "decided",
+   "saved": {
+    "id": "mat-comparing-datasets-with-box",
+    "title": "Comparing datasets with box plots",
+    "brief": "cad0eb46767d",
+    "shortlist": [
+     [
+      "mat-box-plots",
+      0.644
+     ],
+     [
+      "mat-spread-box-plots",
+      0.324
+     ],
+     [
+      "mat-comparing-data-sets",
+      0.287
+     ],
+     [
+      "mat-comparing-data-sets-2",
+      0.275
+     ],
+     [
+      "mat-comparing-distributions",
+      0.223
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00042,
+     "confirm": 0.0154
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-box-plots",
+     "changes": [
+      "Replace the Darwin bus routes example in question b with an example set in New South Wales, such as Sydney or regional NSW bus or train travel times."
+     ],
+     "sure": "medium",
+     "reason": "The bank point already teaches comparing two box plots on one scale by medians and spreads, which matches the brief, but its second question uses a Darwin example that should be local to NSW.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-comparing-distributions",
+     "changes": [
+      "Change the Geelong cafés in question b to a New South Wales place.",
+      "Write 'box plots' instead of 'boxplots' throughout to match the NSW syllabus wording.",
+      "Drop the passing mention of back-to-back stem plots so the card stays on box plots.",
+      "Add a line saying a smaller IQR means the group is more consistent, and that a higher median usually means the group did better, in context."
+     ],
+     "sure": "medium",
+     "reason": "This bank point teaches comparing medians and IQRs on parallel box plots at a depth that suits Years 9–10, and needs only local wording and a place change, plus one plain line on consistency.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "5cdff5b62c7b6b05"
+  }
+ ],
+ "draft": {
+  "title": "Comparing distributions",
+  "card": [
+   "To compare groups, look at the same variable in each group. Parallel box plots sit on one scale, one above the other.",
+   [
+    "Centre",
+    "Compare the medians. Example: group A has median 62 and group B has median 55. Group A is centred 7 higher."
+   ],
+   [
+    "Spread",
+    "Compare the IQRs. A larger IQR means the middle half of the data is more spread out. Example: A has IQR 10 and B has IQR 18, so B is more spread out."
+   ],
+   "A smaller IQR means the group is more consistent. When higher scores are better, a higher median usually means the group did better. Write the comparison in context, and take care with the range, as one extreme value can stretch it."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "chart",
+    "chart": "box",
+    "alt": "Parallel box plots on one scale. Group A: median 62, box from 57 to 67 (IQR 10), whiskers from 45 to 78. Group B: median 55, box from 46 to 64 (IQR 18), whiskers from 35 to 80. A is centred higher, and B is more spread out.",
+    "x": {
+     "min": 30,
+     "max": 85,
+     "label": "Score",
+     "step": 5
+    },
+    "sets": [
+     {
+      "label": "A",
+      "five": [
+       45,
+       57,
+       62,
+       67,
+       78
+      ]
+     },
+     {
+      "label": "B",
+      "five": [
+       35,
+       46,
+       55,
+       64,
+       80
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "Compare medians for centre and IQRs for spread, in context.",
+  "a": {
+   "q": "Two classes sit the same test, shown as parallel box plots. Class P has median 70 and IQR 8. Class Q has median 70 and IQR 20. What is the best comparison?",
+   "opts": [
+    "Same centre, but Q's scores are more spread out",
+    "Same centre, but P's scores are more spread out",
+    "Q has a higher centre and a wider spread",
+    "P has a higher centre and a narrower spread"
+   ],
+   "why": "Both medians are 70, so the centres are the same. Q's IQR of 20 is larger than P's IQR of 8, so Q is more spread out. Saying P is more spread out reverses what a larger IQR means.",
+   "clue": "Compare the medians first, then the IQRs."
+  },
+  "b": {
+   "d": 3,
+   "q": "Parallel box plots show daily sales (in dollars) at two Newcastle cafés. Café X: median 400, IQR 120, range 500. Café Y: median 360, IQR 200, range 380. Using medians and IQRs, which comparison is correct?",
+   "opts": [
+    "X is centred higher, and Y is more spread out",
+    "X is centred higher, and X is more spread out",
+    "Y is centred higher, and Y is more spread out",
+    "Y is centred higher, and X is more spread out"
+   ],
+   "why": "X's median of 400 is higher than Y's 360, so X is centred higher. Y's IQR of 200 is larger than X's 120, so Y's middle half is more spread out. X's larger range is tempting, but one extreme day can stretch the range.",
+   "clue": "Ignore the ranges and compare the IQRs."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Same centre, but Q's scores are more spread out",
+   "also_right": []
+  },
+  "b": {
+   "best": "X is centred higher, and Y is more spread out",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Comparing distributions",
+  "card": [
+   "To compare groups, look at the same variable in each group. Parallel box plots sit on one scale, one above the other.",
+   [
+    "Centre",
+    "Compare the medians. Example: group A has median 62 and group B has median 55. Group A is centred 7 higher."
+   ],
+   [
+    "Spread",
+    "Compare the IQRs. A larger IQR means the middle half of the data is more spread out. Example: A has IQR 10 and B has IQR 18, so B is more spread out."
+   ],
+   "A smaller IQR means the group is more consistent. When higher scores are better, a higher median usually means the group did better. Write the comparison in context, and take care with the range, as one extreme value can stretch it."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "chart",
+    "chart": "box",
+    "alt": "Parallel box plots on one scale. Group A: median 62, box from 57 to 67 (IQR 10), whiskers from 45 to 78. Group B: median 55, box from 46 to 64 (IQR 18), whiskers from 35 to 80. A is centred higher, and B is more spread out.",
+    "x": {
+     "min": 30,
+     "max": 85,
+     "label": "Score",
+     "step": 5
+    },
+    "sets": [
+     {
+      "label": "A",
+      "five": [
+       45,
+       57,
+       62,
+       67,
+       78
+      ]
+     },
+     {
+      "label": "B",
+      "five": [
+       35,
+       46,
+       55,
+       64,
+       80
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "Compare medians for centre and IQRs for spread, in context.",
+  "a": {
+   "q": "Two classes sit the same test, shown as parallel box plots. Class P has median 70 and IQR 8. Class Q has median 70 and IQR 20. What is the best comparison?",
+   "opts": [
+    "Same centre, but Q's scores are more spread out",
+    "Same centre, but P's scores are more spread out",
+    "Q has a higher centre and a wider spread",
+    "P has a higher centre and a narrower spread"
+   ],
+   "why": "Both medians are 70, so the centres are the same. Q's IQR of 20 is larger than P's IQR of 8, so Q is more spread out. Saying P is more spread out reverses what a larger IQR means.",
+   "clue": "Compare the medians first, then the IQRs."
+  },
+  "b": {
+   "d": 3,
+   "q": "Parallel box plots show daily sales (in dollars) at two Newcastle cafés. Café X: median 400, IQR 120, range 500. Café Y: median 360, IQR 200, range 380. Using medians and IQRs, which comparison is correct?",
+   "opts": [
+    "X is centred higher, and Y is more spread out",
+    "X is centred higher, and X is more spread out",
+    "Y is centred higher, and Y is more spread out",
+    "Y is centred higher, and X is more spread out"
+   ],
+   "why": "X's median of 400 is higher than Y's 360, so X is centred higher. Y's IQR of 200 is larger than X's 120, so Y's middle half is more spread out. X's larger range is tempting, but one extreme day can stretch the range.",
+   "clue": "Ignore the ranges and compare the IQRs."
+  }
+ }
 }

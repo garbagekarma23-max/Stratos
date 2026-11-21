@@ -8,8 +8,137 @@
    0.466
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:46Z write: done",
+  "2026-11-20T12:35:48Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.01143,
+  "check": 0.0078
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point only covers aerial and satellite images for comparing change over time, and it does not teach how GPS uses satellites to find an exact location, so the new point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Satellite images and GPS",
+  "card": [
+   [
+    "Satellite image",
+    "A satellite image is a view of Earth's surface taken from above by a satellite in space. It shows land, water, roads and towns."
+   ],
+   [
+    "Change",
+    "Images of the same place taken in different years can be compared. This shows how it has changed, such as a forest cleared or a city grown."
+   ],
+   [
+    "GPS",
+    "GPS stands for Global Positioning System. A GPS receiver uses signals from satellites to work out its exact location on Earth."
+   ],
+   [
+    "Use",
+    "A phone with GPS can show where you are on a map. Satellite images show what a place looks like, and GPS shows where something is."
+   ]
+  ],
+  "remember": "Satellite images show places and change from above. GPS finds an exact location.",
+  "a": {
+   "q": "Which tool uses signals from satellites to find where a hiker is standing?",
+   "opts": [
+    "GPS",
+    "A column graph",
+    "A picture graph",
+    "A field sketch"
+   ],
+   "why": "A GPS receiver works out its location from satellite signals. A field sketch is drawn by hand, so it cannot find a location this way.",
+   "clue": "Which tool has Global Positioning in its name?"
+  },
+  "b": {
+   "d": 2,
+   "q": "A council wants to see how the bushland around Orange changed over ten years. What should it compare?",
+   "opts": [
+    "Satellite images of the area from different years",
+    "One GPS reading taken today",
+    "A single picture graph of its roads",
+    "A photo of a street taken from the ground"
+   ],
+   "why": "Satellite images of the same place from different years show change over time. One GPS reading gives only a location, so it cannot show how land changed.",
+   "clue": "Which choice shows the same area at different times?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "GPS",
+   "also_right": []
+  },
+  "b": {
+   "best": "Satellite images of the area from different years",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Satellite images and GPS",
+  "card": [
+   [
+    "Satellite image",
+    "A satellite image is a view of Earth's surface taken from above by a satellite in space. It shows land, water, roads and towns."
+   ],
+   [
+    "Change",
+    "Images of the same place taken in different years can be compared. This shows how it has changed, such as a forest cleared or a city grown."
+   ],
+   [
+    "GPS",
+    "GPS stands for Global Positioning System. A GPS receiver uses signals from satellites to work out its exact location on Earth."
+   ],
+   [
+    "Use",
+    "A phone with GPS can show where you are on a map. Satellite images show what a place looks like, and GPS shows where something is."
+   ]
+  ],
+  "remember": "Satellite images show places and change from above. GPS finds an exact location.",
+  "a": {
+   "q": "Which tool uses signals from satellites to find where a hiker is standing?",
+   "opts": [
+    "GPS",
+    "A column graph",
+    "A picture graph",
+    "A field sketch"
+   ],
+   "why": "A GPS receiver works out its location from satellite signals. A field sketch is drawn by hand, so it cannot find a location this way.",
+   "clue": "Which tool has Global Positioning in its name?"
+  },
+  "b": {
+   "d": 2,
+   "q": "A council wants to see how the bushland around Orange changed over ten years. What should it compare?",
+   "opts": [
+    "Satellite images of the area from different years",
+    "One GPS reading taken today",
+    "A single picture graph of its roads",
+    "A photo of a street taken from the ground"
+   ],
+   "why": "Satellite images of the same place from different years show change over time. One GPS reading gives only a location, so it cannot show how land changed.",
+   "clue": "Which choice shows the same area at different times?"
+  }
+ },
+ "cleared_by": "checker"
 }

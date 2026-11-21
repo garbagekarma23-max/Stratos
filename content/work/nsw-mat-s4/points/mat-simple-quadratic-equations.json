@@ -24,8 +24,205 @@
    0.227
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:54Z write: failed the content check, writing again",
+  "2026-11-20T12:35:53Z write: done",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.02183,
+  "check": 0.01224,
+  "fix": 0.02129,
+  "recheck": 0.00744
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches solving x² = k by square roots, which gives two solutions (positive and negative); the closest, solving quadratics by factorising, uses a different method and depth, and the linear equation cards only cover inverse operations.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Simple quadratic equations",
+  "card": [
+   "An equation such as \\(x^{2} = 49\\) asks: which numbers, when squared, give 49? Squaring means multiplying a number by itself.",
+   "Both \\(7 \\times 7 = 49\\) and \\((-7) \\times (-7) = 49\\), because a negative times a negative is positive. So there are two solutions.",
+   "Take the square root of the number and write both signs: \\(x = \\sqrt{49}\\) or \\(x = -\\sqrt{49}\\). This gives \\(x = 7\\) or \\(x = -7\\).",
+   [
+    "Example",
+    "Solve \\(x^{2} = 25\\). Since \\(5^{2} = 25\\) and \\((-5)^{2} = 25\\), the solutions are \\(x = 5\\) and \\(x = -5\\)."
+   ]
+  ],
+  "remember": "A squared letter equal to a positive number has a positive and a negative solution.",
+  "a": {
+   "q": "What are the solutions of \\(x^{2} = 36\\)?",
+   "opts": [
+    "\\(x = 6\\) and \\(x = -6\\)",
+    "\\(x = 6\\) only",
+    "\\(x = 18\\) and \\(x = -18\\)",
+    "\\(x = 9\\) and \\(x = -9\\)"
+   ],
+   "why": "Both \\(6^{2}\\) and \\((-6)^{2}\\) equal 36, so there are two solutions. Giving only \\(x = 6\\) forgets that squaring a negative number also gives a positive.",
+   "clue": "Which numbers multiplied by themselves give 36?"
+  },
+  "b": {
+   "d": 2,
+   "q": "A square garden bed in Orange has an area of 81 square metres, written \\(s^{2} = 81\\). Its side length \\(s\\) is a length. Which statement is correct?",
+   "opts": [
+    "Two solutions exist, but only \\(s = 9\\) can be a length",
+    "Only one solution exists, which is \\(s = 9\\)",
+    "Two solutions exist, and both can be lengths",
+    "Two solutions exist: \\(s = 40.5\\) and \\(s = -40.5\\)"
+   ],
+   "why": "The equation \\(s^{2} = 81\\) has two solutions, \\(s = 9\\) and \\(s = -9\\). A length cannot be negative, so only \\(s = 9\\) fits the garden. It is still wrong to say the equation has just one solution.",
+   "clue": "Solve the equation first, then ask which answers a length can be."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(x = 6\\) and \\(x = -6\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "Two solutions exist, but only \\(s = 9\\) can be a length",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The options say 'solutions exist' without saying 'of the equation'. A student could defend 'Only one solution exists, which is s = 9' as true of the garden problem. Saying 'The equation has two solutions…' would remove the ambiguity."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question a are correct. In question b, the options do not say whether 'solutions' means solutions of the equation or of the garden problem, so 'only one solution' could be defended."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The options say 'solutions exist' without saying 'of the equation'. A student could defend 'Only one solution exists, which is s = 9' as true of the garden problem. Saying 'The equation has two solutions…' would remove the ambiguity."
+ ],
+ "proposal": {
+  "title": "Simple quadratic equations",
+  "card": [
+   "An equation such as \\(x^{2} = 49\\) asks: which numbers, when squared, give 49? Squaring means multiplying a number by itself.",
+   "Both \\(7 \\times 7 = 49\\) and \\((-7) \\times (-7) = 49\\), because a negative times a negative is positive. So there are two solutions.",
+   "Take the square root of the number and write both signs: \\(x = \\sqrt{49}\\) or \\(x = -\\sqrt{49}\\). This gives \\(x = 7\\) or \\(x = -7\\).",
+   "For example, \\(x^{2} = 25\\) gives \\(x = 5\\) or \\(x = -5\\). If \\(x\\) stands for a length, only \\(x = 5\\) fits, since a length cannot be negative, but the equation still has two solutions."
+  ],
+  "remember": "A squared letter equal to a positive number has a positive and a negative solution.",
+  "a": {
+   "q": "What are the solutions of \\(x^{2} = 36\\)?",
+   "opts": [
+    "\\(x = 6\\) and \\(x = -6\\)",
+    "\\(x = 6\\) only",
+    "\\(x = 18\\) and \\(x = -18\\)",
+    "\\(x = 9\\) and \\(x = -9\\)"
+   ],
+   "why": "Both \\(6^{2}\\) and \\((-6)^{2}\\) equal 36, so there are two solutions. Giving only \\(x = 6\\) forgets that squaring a negative number also gives a positive.",
+   "clue": "Which numbers multiplied by themselves give 36?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A square garden bed in Orange has an area of 81 square metres, written \\(s^{2} = 81\\). Its side length is \\(s\\) metres. Which statement is correct?",
+   "opts": [
+    "The equation has two solutions, but only \\(s = 9\\) is a length",
+    "The equation has only one solution, which is \\(s = 9\\)",
+    "The equation has two solutions, and both can be lengths",
+    "The equation has two solutions: \\(s = 40.5\\) and \\(s = -40.5\\)"
+   ],
+   "why": "The equation \\(s^{2} = 81\\) has two solutions, \\(s = 9\\) and \\(s = -9\\). A length cannot be negative, so only \\(s = 9\\) fits the garden. It is still wrong to say the equation has only one solution, because \\((-9)^{2} = 81\\) too.",
+   "clue": "Solve the equation first, then ask which answers a length can be."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(x = 6\\) and \\(x = -6\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "The equation has two solutions, but only \\(s = 9\\) is a length",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The options say 'solutions exist' without saying 'of the equation'. A student could defend 'Only one solution exists, which is s = 9' as true of the garden problem. Saying 'The equation has two solutions…' would remove the ambiguity."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The options say 'solutions exist' without saying 'of the equation'. A student could defend 'Only one solution exists, which is s = 9' as true of the garden problem. Saying 'The equation has two solutions…' would remove the ambiguity."
+  ]
+ },
+ "final": {
+  "title": "Simple quadratic equations",
+  "card": [
+   "An equation such as \\(x^{2} = 49\\) asks: which numbers, when squared, give 49? Squaring means multiplying a number by itself.",
+   "Both \\(7 \\times 7 = 49\\) and \\((-7) \\times (-7) = 49\\), because a negative times a negative is positive. So there are two solutions.",
+   "Take the square root of the number and write both signs: \\(x = \\sqrt{49}\\) or \\(x = -\\sqrt{49}\\). This gives \\(x = 7\\) or \\(x = -7\\).",
+   "For example, \\(x^{2} = 25\\) gives \\(x = 5\\) or \\(x = -5\\). If \\(x\\) stands for a length, only \\(x = 5\\) fits, since a length cannot be negative, but the equation still has two solutions."
+  ],
+  "remember": "A squared letter equal to a positive number has a positive and a negative solution.",
+  "a": {
+   "q": "What are the solutions of \\(x^{2} = 36\\)?",
+   "opts": [
+    "\\(x = 6\\) and \\(x = -6\\)",
+    "\\(x = 6\\) only",
+    "\\(x = 18\\) and \\(x = -18\\)",
+    "\\(x = 9\\) and \\(x = -9\\)"
+   ],
+   "why": "Both \\(6^{2}\\) and \\((-6)^{2}\\) equal 36, so there are two solutions. Giving only \\(x = 6\\) forgets that squaring a negative number also gives a positive.",
+   "clue": "Which numbers multiplied by themselves give 36?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A square garden bed in Orange has an area of 81 square metres, written \\(s^{2} = 81\\). Its side length is \\(s\\) metres. Which statement is correct?",
+   "opts": [
+    "The equation has two solutions, but only \\(s = 9\\) is a length",
+    "The equation has only one solution, which is \\(s = 9\\)",
+    "The equation has two solutions, and both can be lengths",
+    "The equation has two solutions: \\(s = 40.5\\) and \\(s = -40.5\\)"
+   ],
+   "why": "The equation \\(s^{2} = 81\\) has two solutions, \\(s = 9\\) and \\(s = -9\\). A length cannot be negative, so only \\(s = 9\\) fits the garden. It is still wrong to say the equation has only one solution, because \\((-9)^{2} = 81\\) too.",
+   "clue": "Solve the equation first, then ask which answers a length can be."
+  }
+ },
+ "cleared_by": "recheck"
 }

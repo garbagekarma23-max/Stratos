@@ -24,8 +24,401 @@
    0.302
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 says reuse ecb-cost-borrowing, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:40Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:45Z write: failed the content check, writing again",
+  "2026-11-20T12:44:52Z write: done",
+  "2026-11-20T12:53:23Z check: flagged",
+  "2026-11-20T12:59:58Z fix: suggested",
+  "2026-11-20T13:37:05Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-20T13:44:55Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00037,
+  "confirm": 0.01317,
+  "write": 0.01815,
+  "check": 0.00905,
+  "fix": 0.02814,
+  "recheck": 0.01061
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "ecb-cost-borrowing",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point 'The cost of borrowing' teaches the same idea (interest, fees and term decide what a loan costs) at a suitable Year 9-10 depth, and its questions are fair for a NSW Stage 5 student, though it does not name personal loans, credit cards or home loans.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, ecb-cost-borrowing, covers how interest, fees and term set a loan's cost, but it never covers the ways people borrow (personal loans, credit cards and home loans), so the new point is broader and adding that would be new content rather than a small change.",
+  "model": "claude-opus-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: Two distractors, 'Both terms mean the same total interest' and 'The term has no effect on the total interest', say the same thing. A student can rule out both because they cannot both be the single right answer, which leaves a 50/50 guess.",
+ "rejected": {
+  "title": "Borrowing money",
+  "card": [
+   "Borrowing means using someone else's money now and paying it back later, with interest. Interest is the extra amount the borrower pays the lender for the loan.",
+   [
+    "Personal loan",
+    "a set amount borrowed for a purpose such as a car, repaid in regular instalments over a fixed time."
+   ],
+   [
+    "Credit card",
+    "a card that lets you borrow up to a limit when you buy things. You are charged interest on any amount you do not repay in time."
+   ],
+   "A home loan is a large loan to buy property, usually repaid over many years. A loan's real cost depends on its interest rate, fees and term (how long it takes to repay), and at the same rate a longer term means more interest in total."
+  ],
+  "remember": "A loan costs the amount borrowed plus interest and fees, and a longer term lets more interest build up.",
+  "a": {
+   "q": "Which of these is the best description of interest on a loan?",
+   "opts": [
+    "The extra amount paid to the lender for borrowing",
+    "The amount borrowed from the lender at the start",
+    "A fee paid once to open the loan account",
+    "The time the borrower has to repay the loan"
+   ],
+   "why": "Interest is the extra the borrower pays the lender for using their money. The amount borrowed is not extra, and the time to repay is the term, so those options describe other ideas.",
+   "clue": "Think about what the lender gets on top of being repaid."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tariq can repay a $10,000 personal loan over 2 years or 5 years, at the same interest rate and with the same fees. Which statement is correct?",
+   "opts": [
+    "The 5 year term means more interest in total",
+    "The 5 year term means less interest in total",
+    "Both terms mean the same total interest",
+    "The term has no effect on the total interest"
+   ],
+   "why": "With the same rate and fees, a longer term gives interest more time to be charged on the money still owed, so the total interest is higher. The 5 year repayments are smaller each time, which can make it look cheaper, but it costs more overall.",
+   "clue": "Think about how long money is still owed."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: Two distractors, 'Both terms mean the same total interest' and 'The term has no effect on the total interest', say the same thing. A student can rule out both because they cannot both be the single right answer, which leaves a 50/50 guess."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Borrowing money",
+     "card": [
+      "Borrowing means using someone else's money now and paying it back later, with interest. Interest is the extra amount the borrower pays the lender for the loan.",
+      [
+       "Personal loan",
+       "a set amount borrowed for a purpose such as a car, repaid in regular instalments over a fixed time."
+      ],
+      [
+       "Credit card",
+       "a card that lets you borrow up to a limit when you buy things. You are charged interest on any amount you do not repay in time."
+      ],
+      "A home loan is a large loan to buy property, usually repaid over many years. The real cost of any loan depends on the interest rate, any fees, and the term (how long it takes to repay). A longer term usually means more interest paid in total."
+     ],
+     "remember": "A loan costs the amount borrowed plus interest and fees, and the term affects how much interest builds up.",
+     "a": {
+      "q": "Which of these is the best description of interest on a loan?",
+      "opts": [
+       "The extra amount paid to the lender for borrowing",
+       "The amount borrowed from the lender at the start",
+       "A fee paid once to open the loan account",
+       "The time the borrower has to repay the loan"
+      ],
+      "why": "Interest is the extra the borrower pays the lender for using their money. The amount borrowed is not extra, and the time to repay is the term, so those options describe other ideas.",
+      "clue": "Think about what the lender gets on top of being repaid."
+     },
+     "b": {
+      "d": 3,
+      "q": "Tariq can repay a $10,000 personal loan over 2 years or 5 years, at the same interest rate and with the same fees. Which statement is correct?",
+      "opts": [
+       "The 5 year term usually means more interest in total",
+       "The 5 year term means less interest in total",
+       "Both terms cost the same in total interest",
+       "The term has no effect on what the loan costs"
+      ],
+      "why": "A longer term gives interest more time to be charged on the money still owed, so the total interest is usually higher. Smaller repayments can look cheaper, but that does not make the loan cheaper overall.",
+      "clue": "Think about how long money is still owed."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "The extra amount paid to the lender for borrowing",
+      "also_right": []
+     },
+     "b": {
+      "best": "The 5 year term usually means more interest in total",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is the only one with a qualifier ('usually'), so a student could pick it as the hedged answer without knowing the idea. Consider giving a distractor a similar qualifier, for example 'The 5 year term usually means less interest in total'."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card, remember line and answers are accurate. In question b, only the right option says 'usually', which hints at the answer."
+    },
+    "flags": [
+     "Question b, wording: The right option is the only one with a qualifier ('usually'), so a student could pick it as the hedged answer without knowing the idea. Consider giving a distractor a similar qualifier, for example 'The 5 year term usually means less interest in total'."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Borrowing money",
+     "card": [
+      "Borrowing means using someone else's money now and paying it back later, with interest. Interest is the extra amount the borrower pays the lender for the loan.",
+      [
+       "Personal loan",
+       "a set amount borrowed for a purpose such as a car, repaid in regular instalments over a fixed time."
+      ],
+      [
+       "Credit card",
+       "a card that lets you borrow up to a limit when you buy things. You are charged interest on any amount you do not repay in time."
+      ],
+      "A home loan is a large loan to buy property, usually repaid over many years. A loan's real cost depends on its interest rate, fees and term (how long it takes to repay), and at the same rate a longer term means more interest in total."
+     ],
+     "remember": "A loan costs the amount borrowed plus interest and fees, and a longer term lets more interest build up.",
+     "a": {
+      "q": "Which of these is the best description of interest on a loan?",
+      "opts": [
+       "The extra amount paid to the lender for borrowing",
+       "The amount borrowed from the lender at the start",
+       "A fee paid once to open the loan account",
+       "The time the borrower has to repay the loan"
+      ],
+      "why": "Interest is the extra the borrower pays the lender for using their money. The amount borrowed is not extra, and the time to repay is the term, so those options describe other ideas.",
+      "clue": "Think about what the lender gets on top of being repaid."
+     },
+     "b": {
+      "d": 3,
+      "q": "Tariq can repay a $10,000 personal loan over 2 years or 5 years, at the same interest rate and with the same fees. Which statement is correct?",
+      "opts": [
+       "The 5 year term means more interest in total",
+       "The 5 year term means less interest in total",
+       "Both terms mean the same total interest",
+       "The term has no effect on the total interest"
+      ],
+      "why": "With the same rate and fees, a longer term gives interest more time to be charged on the money still owed, so the total interest is higher. The 5 year repayments are smaller each time, which can make it look cheaper, but it costs more overall.",
+      "clue": "Think about how long money is still owed."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:05Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "The extra amount paid to the lender for borrowing",
+       "also_right": []
+      },
+      "b": {
+       "best": "The 5 year term means more interest in total",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "Two distractors, 'Both terms mean the same total interest' and 'The term has no effect on the total interest', say the same thing. A student can rule out both because they cannot both be the single right answer, which leaves a 50/50 guess."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts are accurate and the answers are clear. In question b, two wrong options mean the same thing, so a student can rule them out together without knowing the idea."
+     },
+     "flags": [
+      "Question b, wording: Two distractors, 'Both terms mean the same total interest' and 'The term has no effect on the total interest', say the same thing. A student can rule out both because they cannot both be the single right answer, which leaves a 50/50 guess."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:55Z",
+   "step": "write",
+   "version": {
+    "title": "Borrowing money",
+    "card": [
+     "Borrowing means using someone else's money now and paying it back later, with interest. Interest is the extra amount the borrower pays the lender for the loan.",
+     [
+      "Personal loan",
+      "a set amount borrowed for a purpose such as a car, repaid in regular instalments over a fixed time. Spreading the loan over a longer time makes each instalment smaller."
+     ],
+     [
+      "Credit card",
+      "a card that lets you borrow up to a limit when you buy things. You are charged interest on any amount you do not repay in time."
+     ],
+     "A home loan is a large loan to buy property, usually repaid over many years. A loan's real cost depends on its interest rate, fees and term (how long it takes to repay), and at the same rate a longer term means more interest in total."
+    ],
+    "remember": "A loan costs the amount borrowed plus interest and fees, and a longer term lets more interest build up.",
+    "a": {
+     "q": "Which of these is the best description of interest on a loan?",
+     "opts": [
+      "The extra amount paid to the lender for borrowing",
+      "The amount borrowed from the lender at the start",
+      "A fee paid once to the lender to open the loan",
+      "The time the borrower has to repay the loan"
+     ],
+     "why": "Interest is the extra the borrower pays the lender for using their money. The amount borrowed is not extra, and the time to repay is the term, so those options describe other ideas.",
+     "clue": "Think about what the lender gets on top of being repaid."
+    },
+    "b": {
+     "d": 3,
+     "q": "Tariq can repay a $10,000 personal loan over 2 years or 5 years, at the same interest rate and with the same fees. What does choosing the 5 year term mean for him?",
+     "opts": [
+      "Smaller repayments, but more interest in total",
+      "Smaller repayments, and less interest in total",
+      "Bigger repayments, and more interest in total",
+      "Bigger repayments, but less interest in total"
+     ],
+     "why": "Spreading the loan over 5 years makes each repayment smaller, but the money is owed for longer, so interest is charged for longer and the total is higher. The smaller repayments can make the longer term look cheaper, but it costs more overall.",
+     "clue": "Think about how long money is still owed."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "The extra amount paid to the lender for borrowing",
+     "also_right": []
+    },
+    "b": {
+     "best": "Smaller repayments, but more interest in total",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Borrowing money",
+  "card": [
+   "Borrowing means using someone else's money now and paying it back later, with interest. Interest is the extra amount the borrower pays the lender for the loan.",
+   [
+    "Personal loan",
+    "a set amount borrowed for a purpose such as a car, repaid in regular instalments over a fixed time. Spreading the loan over a longer time makes each instalment smaller."
+   ],
+   [
+    "Credit card",
+    "a card that lets you borrow up to a limit when you buy things. You are charged interest on any amount you do not repay in time."
+   ],
+   "A home loan is a large loan to buy property, usually repaid over many years. A loan's real cost depends on its interest rate, fees and term (how long it takes to repay), and at the same rate a longer term means more interest in total."
+  ],
+  "remember": "A loan costs the amount borrowed plus interest and fees, and a longer term lets more interest build up.",
+  "a": {
+   "q": "Which of these is the best description of interest on a loan?",
+   "opts": [
+    "The extra amount paid to the lender for borrowing",
+    "The amount borrowed from the lender at the start",
+    "A fee paid once to the lender to open the loan",
+    "The time the borrower has to repay the loan"
+   ],
+   "why": "Interest is the extra the borrower pays the lender for using their money. The amount borrowed is not extra, and the time to repay is the term, so those options describe other ideas.",
+   "clue": "Think about what the lender gets on top of being repaid."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tariq can repay a $10,000 personal loan over 2 years or 5 years, at the same interest rate and with the same fees. What does choosing the 5 year term mean for him?",
+   "opts": [
+    "Smaller repayments, but more interest in total",
+    "Smaller repayments, and less interest in total",
+    "Bigger repayments, and more interest in total",
+    "Bigger repayments, but less interest in total"
+   ],
+   "why": "Spreading the loan over 5 years makes each repayment smaller, but the money is owed for longer, so interest is charged for longer and the total is higher. The smaller repayments can make the longer term look cheaper, but it costs more overall.",
+   "clue": "Think about how long money is still owed."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The extra amount paid to the lender for borrowing",
+   "also_right": []
+  },
+  "b": {
+   "best": "Smaller repayments, but more interest in total",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Borrowing money",
+  "card": [
+   "Borrowing means using someone else's money now and paying it back later, with interest. Interest is the extra amount the borrower pays the lender for the loan.",
+   [
+    "Personal loan",
+    "a set amount borrowed for a purpose such as a car, repaid in regular instalments over a fixed time. Spreading the loan over a longer time makes each instalment smaller."
+   ],
+   [
+    "Credit card",
+    "a card that lets you borrow up to a limit when you buy things. You are charged interest on any amount you do not repay in time."
+   ],
+   "A home loan is a large loan to buy property, usually repaid over many years. A loan's real cost depends on its interest rate, fees and term (how long it takes to repay), and at the same rate a longer term means more interest in total."
+  ],
+  "remember": "A loan costs the amount borrowed plus interest and fees, and a longer term lets more interest build up.",
+  "a": {
+   "q": "Which of these is the best description of interest on a loan?",
+   "opts": [
+    "The extra amount paid to the lender for borrowing",
+    "The amount borrowed from the lender at the start",
+    "A fee paid once to the lender to open the loan",
+    "The time the borrower has to repay the loan"
+   ],
+   "why": "Interest is the extra the borrower pays the lender for using their money. The amount borrowed is not extra, and the time to repay is the term, so those options describe other ideas.",
+   "clue": "Think about what the lender gets on top of being repaid."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tariq can repay a $10,000 personal loan over 2 years or 5 years, at the same interest rate and with the same fees. What does choosing the 5 year term mean for him?",
+   "opts": [
+    "Smaller repayments, but more interest in total",
+    "Smaller repayments, and less interest in total",
+    "Bigger repayments, and more interest in total",
+    "Bigger repayments, but less interest in total"
+   ],
+   "why": "Spreading the loan over 5 years makes each repayment smaller, but the money is owed for longer, so interest is charged for longer and the total is higher. The smaller repayments can make the longer term look cheaper, but it costs more overall.",
+   "clue": "Think about how long money is still owed."
+  }
+ },
+ "checked_by": "claude-code"
 }

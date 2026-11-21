@@ -24,8 +24,188 @@
    0.303
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: flagged",
+  "2026-11-20T12:53:23Z fix: suggested",
+  "2026-11-20T14:31:19Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.00646,
+  "check": 0.00921,
+  "fix": 0.02116
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches how entrepreneurs contribute to society; the closest, Entrepreneurs and change, covers responding to changing conditions and only mentions jobs in passing, and the First Nations point covers a specific business rather than the wider contribution.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Entrepreneurs' contribution to society",
+  "card": [
+   "An entrepreneur starts a new business or builds a new idea into a business. Their work can help society in several ways.",
+   [
+    "Jobs",
+    "A new business often hires staff. Those workers earn incomes and spend them in the community, which can help other businesses too."
+   ],
+   [
+    "Products and ways of working",
+    "Entrepreneurs can bring new goods and services to customers. They can also find new ways of working, such as a faster delivery method or a new way to sell online."
+   ],
+   [
+    "Community and culture",
+    "Some Aboriginal and Torres Strait Islander entrepreneurs build businesses on their culture and community, such as sharing bush foods or running cultural tours. These businesses can create jobs and keep culture strong, and the community often shares in the benefits."
+   ]
+  ],
+  "remember": "Entrepreneurs can create jobs, new products and new ways of working, and some build businesses on culture and community.",
+  "a": {
+   "q": "Ava starts a bakery in Orange and hires four local people. Which contribution to society does this show most directly?",
+   "opts": [
+    "Creating jobs in the community",
+    "Inventing a new way of working",
+    "Building a business on culture",
+    "Providing a new type of product"
+   ],
+   "why": "Hiring four local people creates jobs, and those workers earn incomes they can spend locally. The scenario does not mention a new product or a new method, so a new way of working is the tempting but wrong option.",
+   "clue": "Look at what Ava does for local people."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom runs tours on his Country in New South Wales, where he shares stories and food from his community. He employs two young people from the community. Which statement best describes his contribution to society?",
+   "opts": [
+    "He creates jobs and builds a business on culture",
+    "He creates jobs but offers nothing based on culture",
+    "He builds on culture but creates no jobs for others",
+    "He brings in a new way of working only"
+   ],
+   "why": "Tom employs two young people, which creates jobs, and his tours are built on culture and community. Both parts of the answer fit the scenario. The option about a new way of working only ignores both of these.",
+   "clue": "Check the scenario for both jobs and culture."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Creating jobs in the community",
+   "also_right": []
+  },
+  "b": {
+   "best": "He creates jobs and builds a business on culture",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue 'Check the scenario for both jobs and culture' points straight to the only option that names both jobs and culture, so a student could pick it without understanding the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "first-nations",
+  "summary": "The card and both answers are accurate. Question b's clue gives the answer away by telling students to look for both jobs and culture, which only the right option mentions."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Question b, wording: The clue 'Check the scenario for both jobs and culture' points straight to the only option that names both jobs and culture, so a student could pick it without understanding the idea."
+ ],
+ "proposal": {
+  "title": "Entrepreneurs' contribution to society",
+  "card": [
+   "An entrepreneur starts a new business or builds a new idea into a business. Their work can help society in several ways.",
+   [
+    "Jobs",
+    "A new business often hires staff. Those workers earn incomes and spend them in the community, which can help other businesses too."
+   ],
+   [
+    "Products and ways of working",
+    "Entrepreneurs can bring new goods and services to customers. They can also find new ways of working, such as a faster delivery method or a new way to sell online."
+   ],
+   [
+    "Community and culture",
+    "Some Aboriginal and Torres Strait Islander entrepreneurs build businesses on their culture and community, such as sharing bush foods or running cultural tours. These businesses can create jobs and keep culture strong, and the community often shares in the benefits."
+   ]
+  ],
+  "remember": "Entrepreneurs can create jobs, new products and new ways of working, and some build businesses on culture and community.",
+  "a": {
+   "q": "Ava starts a bakery in Orange and hires four local people. Which contribution to society does this show most directly?",
+   "opts": [
+    "Creating jobs in the community",
+    "Inventing a new way of working",
+    "Building a business on culture",
+    "Providing a new type of product"
+   ],
+   "why": "Hiring four local people creates jobs, and those workers earn incomes they can spend locally. The scenario does not mention a new product or a new method, so a new way of working is the tempting but wrong option.",
+   "clue": "Look at what Ava does for local people."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom runs tours on his Country in New South Wales, where he shares stories and food from his community. He employs two young people from the community. Which statement best describes how his business helps society?",
+   "opts": [
+    "It creates local jobs and helps keep culture strong",
+    "It helps keep culture strong but creates no jobs",
+    "It creates local jobs but has no link to culture",
+    "It is built on a new way of selling online"
+   ],
+   "why": "Tom employs two young people, which creates jobs, and his tours share stories and food from his community, which helps keep culture strong. The options that say no jobs or no link to culture each miss one part of what Tom does. The scenario says nothing about selling online.",
+   "clue": "Test each part of an option against what Tom actually does."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Entrepreneurs' contribution to society",
+  "card": [
+   "An entrepreneur starts a new business or builds a new idea into a business. Their work can help society in several ways.",
+   [
+    "Jobs",
+    "A new business often hires staff. Those workers earn incomes and spend them in the community, which can help other businesses too."
+   ],
+   [
+    "Products and ways of working",
+    "Entrepreneurs can bring new goods and services to customers. They can also find new ways of working, such as a faster delivery method or a new way to sell online."
+   ],
+   [
+    "Community and culture",
+    "Some Aboriginal and Torres Strait Islander entrepreneurs build businesses on their culture and community, such as sharing bush foods or running cultural tours. These businesses can create jobs and keep culture strong, and the community often shares in the benefits."
+   ]
+  ],
+  "remember": "Entrepreneurs can create jobs, new products and new ways of working, and some build businesses on culture and community.",
+  "a": {
+   "q": "Ava starts a bakery in Orange and hires four local people. Which contribution to society does this show most directly?",
+   "opts": [
+    "Creating jobs in the community",
+    "Inventing a new way of working",
+    "Building a business on culture",
+    "Providing a new type of product"
+   ],
+   "why": "Hiring four local people creates jobs, and those workers earn incomes they can spend locally. The scenario does not mention a new product or a new method, so a new way of working is the tempting but wrong option.",
+   "clue": "Look at what Ava does for local people."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom runs tours on his Country in New South Wales, where he shares stories and food from his community. He employs two young people from the community. Which statement best describes how his business helps society?",
+   "opts": [
+    "It creates local jobs and helps keep culture strong",
+    "It helps keep culture strong but creates no jobs",
+    "It creates local jobs but has no link to culture",
+    "It is built on a new way of selling online"
+   ],
+   "why": "Tom employs two young people, which creates jobs, and his tours share stories and food from his community, which helps keep culture strong. The options that say no jobs or no link to culture each miss one part of what Tom does. The scenario says nothing about selling online.",
+   "clue": "Test each part of an option against what Tom actually does."
+  }
+ },
+ "cleared_by": "owner"
 }

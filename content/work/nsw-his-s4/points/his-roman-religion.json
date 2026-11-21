@@ -12,8 +12,197 @@
    0.246
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: done",
+  "2026-11-20T12:44:56Z check: flagged",
+  "2026-11-20T12:53:26Z fix: suggested",
+  "2026-11-20T13:23:39Z autoreview: cleared with the fix (a other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.00598,
+  "check": 0.00939,
+  "fix": 0.01753
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches Roman religion: the fall of the Western Empire covers Christianity only in passing and the Republic card covers government, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Roman religion",
+  "card": [
+   "Romans were polytheists, which means they worshipped many gods. Jupiter was the king of the gods, Mars was the god of war and Venus was the goddess of love.",
+   [
+    "Public worship",
+    "priests led festivals and made offerings at temples on behalf of the city. Romans believed that keeping the gods happy kept Rome safe."
+   ],
+   [
+    "Home worship",
+    "each household made offerings to its own gods at a small shrine. The father usually led these prayers."
+   ],
+   "Christianity began in the eastern part of the empire and spread along Roman roads and sea routes. At first Christians were often punished. In the 300s CE it became the official religion of the empire."
+  ],
+  "remember": "Romans worshipped many gods in temples and at home. Christianity spread through the empire and became its official religion in the 300s CE.",
+  "a": {
+   "q": "Why are the Romans called polytheists?",
+   "opts": [
+    "They worshipped many gods",
+    "They worshipped one god",
+    "They worshipped only their emperor",
+    "They did not worship any gods"
+   ],
+   "why": "Polytheist means a person who worships many gods, and Romans honoured gods such as Jupiter, Mars and Venus. Worshipping one god is monotheism, which is the opposite idea.",
+   "clue": "Think about what poly means: many."
+  },
+  "b": {
+   "d": 2,
+   "q": "Livia lives in Rome in the 200s CE. Each morning her family leaves a small offering at a shrine in their house. What does this show?",
+   "opts": [
+    "Romans also worshipped their gods at home",
+    "Romans only worshipped their gods at home",
+    "Livia's family were early Christians",
+    "Livia's family were temple priests"
+   ],
+   "why": "Households made offerings at their own shrines, so worship happened at home as well as in public. It was not the only place, because priests also led worship at temples.",
+   "clue": "Look at where the offering is left."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "They worshipped many gods",
+   "also_right": []
+  },
+  "b": {
+   "best": "Romans also worshipped their gods at home",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about what poly means: many' gives the answer away. The only option containing 'many' is the right one, so a student can answer without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts check out and both intended answers are correct. Question a's clue gives the answer away by defining 'poly' as 'many', which matches only the right option."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'Think about what poly means: many' gives the answer away. The only option containing 'many' is the right one, so a student can answer without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Roman religion",
+  "card": [
+   "Romans were polytheists, which means they worshipped many gods. Jupiter was the king of the gods, Mars was the god of war and Venus was the goddess of love.",
+   [
+    "Public worship",
+    "priests led festivals and made offerings at temples on behalf of the city. Romans believed that keeping the gods happy kept Rome safe."
+   ],
+   [
+    "Home worship",
+    "each household made offerings to its own gods at a small shrine. The father usually led these prayers."
+   ],
+   "Christianity began in the eastern part of the empire and spread along Roman roads and sea routes. At first Christians were often punished. In the 300s CE it became the official religion of the empire."
+  ],
+  "remember": "Romans worshipped many gods in temples and at home. Christianity spread through the empire and became its official religion in the 300s CE.",
+  "a": {
+   "q": "Why are the Romans called polytheists?",
+   "opts": [
+    "They worshipped many gods",
+    "They worshipped one god",
+    "They worshipped only their emperor",
+    "They did not worship any gods"
+   ],
+   "why": "Polytheist means a person who worships many gods, and Romans honoured gods such as Jupiter, Mars and Venus. Worshipping one god is monotheism, which is the opposite idea.",
+   "clue": "Jupiter, Mars and Venus were all Roman gods."
+  },
+  "b": {
+   "d": 2,
+   "q": "Livia lives in Rome in the 200s CE. Each morning her family leaves a small offering at a shrine in their house. What does this show?",
+   "opts": [
+    "Romans also worshipped their gods at home",
+    "Romans only worshipped their gods at home",
+    "Livia's family were early Christians",
+    "Livia's family were temple priests"
+   ],
+   "why": "Households made offerings at their own shrines, so worship happened at home as well as in public. It was not the only place, because priests also led worship at temples.",
+   "clue": "Look at where the offering is left."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:39Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about what poly means: many' gives the answer away. The only option containing 'many' is the right one, so a student can answer without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue 'Think about what poly means: many' gives the answer away. The only option containing 'many' is the right one, so a student can answer without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "Roman religion",
+  "card": [
+   "Romans were polytheists, which means they worshipped many gods. Jupiter was the king of the gods, Mars was the god of war and Venus was the goddess of love.",
+   [
+    "Public worship",
+    "priests led festivals and made offerings at temples on behalf of the city. Romans believed that keeping the gods happy kept Rome safe."
+   ],
+   [
+    "Home worship",
+    "each household made offerings to its own gods at a small shrine. The father usually led these prayers."
+   ],
+   "Christianity began in the eastern part of the empire and spread along Roman roads and sea routes. At first Christians were often punished. In the 300s CE it became the official religion of the empire."
+  ],
+  "remember": "Romans worshipped many gods in temples and at home. Christianity spread through the empire and became its official religion in the 300s CE.",
+  "a": {
+   "q": "Why are the Romans called polytheists?",
+   "opts": [
+    "They worshipped many gods",
+    "They worshipped one god",
+    "They worshipped only their emperor",
+    "They did not worship any gods"
+   ],
+   "why": "Polytheist means a person who worships many gods, and Romans honoured gods such as Jupiter, Mars and Venus. Worshipping one god is monotheism, which is the opposite idea.",
+   "clue": "Jupiter, Mars and Venus were all Roman gods."
+  },
+  "b": {
+   "d": 2,
+   "q": "Livia lives in Rome in the 200s CE. Each morning her family leaves a small offering at a shrine in their house. What does this show?",
+   "opts": [
+    "Romans also worshipped their gods at home",
+    "Romans only worshipped their gods at home",
+    "Livia's family were early Christians",
+    "Livia's family were temple priests"
+   ],
+   "why": "Households made offerings at their own shrines, so worship happened at home as well as in public. It was not the only place, because priests also led worship at temples.",
+   "clue": "Look at where the offering is left."
+  }
+ },
+ "cleared_by": "auto"
 }

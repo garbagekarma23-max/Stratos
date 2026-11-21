@@ -20,8 +20,222 @@
    0.265
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:41Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: failed the content check, writing again",
+  "2026-11-20T12:44:53Z write: done",
+  "2026-11-20T12:53:24Z check: flagged",
+  "2026-11-20T13:11:46Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.01346,
+  "check": 0.00926,
+  "fix": 0.01523,
+  "recheck": 0.00651
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches simile and metaphor alone at Stage 4 depth: the Year 7 point also covers personification, the Year 8 point focuses on evaluating reviews, and the NSW Year 11 point adds extended metaphor and is pitched too advanced, so a new point is safer.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Simile and metaphor",
+  "card": [
+   [
+    "Simile",
+    "compares two things using like or as. For example, \"The new puppy was as bouncy as a spring.\""
+   ],
+   [
+    "Metaphor",
+    "says one thing is another, without like or as. For example, \"The puppy was a spring, bouncing across the grass.\""
+   ],
+   "Both carry a quality from one thing to the other. The puppy is not a real spring, but it takes on the spring's bounce.",
+   "This helps a reader see the first thing in a new way. A writer picks the comparison to suit the picture or mood they want."
+  ],
+  "remember": "A simile says like or as. A metaphor says it is. Both borrow a quality.",
+  "a": {
+   "q": "Tom describes his school's lunchtime. Which of his sentences compares two things by saying one is the other?",
+   "opts": [
+    "The playground was a zoo at lunchtime",
+    "The playground was as loud as a zoo",
+    "The playground sounded like a zoo",
+    "The playground was very noisy at lunchtime"
+   ],
+   "why": "The first sentence says the playground is a zoo, with no like or as, so it is a metaphor. The second and third are similes because they use as and like. The last one describes the noise plainly and compares nothing.",
+   "clue": "Look for the sentence that says one thing is another."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya writes: \"Grandpa's hands were old maps, lined with roads.\" What is the effect of this comparison?",
+   "opts": [
+    "It shows his hands are marked with many lines",
+    "It shows his hands are as large as a map",
+    "It shows his hands are used to guide people",
+    "It shows his hands are cold and made of paper"
+   ],
+   "why": "The metaphor carries the lines on a map to the lines on his skin, so the reader sees his hands as marked with age. It does not say his hands are literally maps, and it does not use like or as, so it is not a simile.",
+   "clue": "What does a map have a lot of that hands might also have?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The playground was a zoo at lunchtime",
+   "also_right": []
+  },
+  "b": {
+   "best": "It shows his hands are marked with many lines",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) refers to options by position ('The first sentence', 'The second and third', 'The last one'), but options are shown in random order. In the order shown here, the metaphor is last and the plain sentence is first, so the explanation would point students to the wrong sentences."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct. Why (a) describes the options by their position (first, last), which will not match the shuffled order students see, so it should name each sentence instead."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) refers to options by position ('The first sentence', 'The second and third', 'The last one'), but options are shown in random order. In the order shown here, the metaphor is last and the plain sentence is first, so the explanation would point students to the wrong sentences."
+ ],
+ "proposal": {
+  "title": "Simile and metaphor",
+  "card": [
+   [
+    "Simile",
+    "compares two things using like or as. For example, \"The new puppy was as bouncy as a spring.\""
+   ],
+   [
+    "Metaphor",
+    "says one thing is another, without like or as. For example, \"The puppy was a spring, bouncing across the grass.\""
+   ],
+   "Both carry a quality from one thing to the other. The puppy is not a real spring, but it takes on the spring's bounce.",
+   "This helps a reader see the first thing in a new way. A writer picks the comparison to suit the picture or mood they want."
+  ],
+  "remember": "A simile says like or as. A metaphor says it is. Both borrow a quality.",
+  "a": {
+   "q": "Tom describes his school's lunchtime. Which of his sentences compares two things by saying one is the other?",
+   "opts": [
+    "The playground was a zoo at lunchtime",
+    "The playground was as loud as a zoo",
+    "The playground sounded like a zoo",
+    "The playground was very noisy at lunchtime"
+   ],
+   "why": "Saying the playground was a zoo, with no like or as, makes it a metaphor. The sentences with \"as loud as\" and \"sounded like\" are similes, because they use as and like. Saying it was very noisy describes the noise plainly and compares nothing.",
+   "clue": "Look for the sentence that says one thing is another."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya writes: \"Grandpa's hands were old maps, lined with roads.\" What is the effect of this comparison?",
+   "opts": [
+    "It shows his hands are marked with many lines",
+    "It shows his hands are as large as a map",
+    "It shows his hands are used to guide people",
+    "It shows his hands are cold and made of paper"
+   ],
+   "why": "The metaphor carries the lines of roads on a map to the lines on his skin, so the reader sees his hands as marked with age. The comparison is about the lines, not the size of a map, and his hands are not literally made of paper.",
+   "clue": "What does a map have a lot of that hands might also have?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The playground was a zoo at lunchtime",
+    "also_right": []
+   },
+   "b": {
+    "best": "It shows his hands are marked with many lines",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) refers to options by position ('The first sentence', 'The second and third', 'The last one'), but options are shown in random order. In the order shown here, the metaphor is last and the plain sentence is first, so the explanation would point students to the wrong sentences."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) refers to options by position ('The first sentence', 'The second and third', 'The last one'), but options are shown in random order. In the order shown here, the metaphor is last and the plain sentence is first, so the explanation would point students to the wrong sentences."
+  ]
+ },
+ "final": {
+  "title": "Simile and metaphor",
+  "card": [
+   [
+    "Simile",
+    "compares two things using like or as. For example, \"The new puppy was as bouncy as a spring.\""
+   ],
+   [
+    "Metaphor",
+    "says one thing is another, without like or as. For example, \"The puppy was a spring, bouncing across the grass.\""
+   ],
+   "Both carry a quality from one thing to the other. The puppy is not a real spring, but it takes on the spring's bounce.",
+   "This helps a reader see the first thing in a new way. A writer picks the comparison to suit the picture or mood they want."
+  ],
+  "remember": "A simile says like or as. A metaphor says it is. Both borrow a quality.",
+  "a": {
+   "q": "Tom describes his school's lunchtime. Which of his sentences compares two things by saying one is the other?",
+   "opts": [
+    "The playground was a zoo at lunchtime",
+    "The playground was as loud as a zoo",
+    "The playground sounded like a zoo",
+    "The playground was very noisy at lunchtime"
+   ],
+   "why": "Saying the playground was a zoo, with no like or as, makes it a metaphor. The sentences with \"as loud as\" and \"sounded like\" are similes, because they use as and like. Saying it was very noisy describes the noise plainly and compares nothing.",
+   "clue": "Look for the sentence that says one thing is another."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya writes: \"Grandpa's hands were old maps, lined with roads.\" What is the effect of this comparison?",
+   "opts": [
+    "It shows his hands are marked with many lines",
+    "It shows his hands are as large as a map",
+    "It shows his hands are used to guide people",
+    "It shows his hands are cold and made of paper"
+   ],
+   "why": "The metaphor carries the lines of roads on a map to the lines on his skin, so the reader sees his hands as marked with age. The comparison is about the lines, not the size of a map, and his hands are not literally made of paper.",
+   "clue": "What does a map have a lot of that hands might also have?"
+  }
+ },
+ "cleared_by": "recheck"
 }

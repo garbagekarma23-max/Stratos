@@ -16,8 +16,127 @@
    0.274
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00562,
+  "check": 0.00634
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, bus-roles-workplace-relations, covers unions and employer associations only as one part of a broader card on employees, HR managers and the Fair Work Commission, and it is written for senior Victorian Business Management units, so it is not the same idea at the right scope and depth for Stage 5 Commerce.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Unions and employer groups",
+  "card": [
+   [
+    "Trade union",
+    "an organisation of workers. It represents its members when dealing with employers, for example on pay, safety and conditions at work."
+   ],
+   [
+    "Employer association",
+    "an organisation of businesses. It represents its members when dealing with unions and governments, for example on costs, rules and workplace laws."
+   ],
+   "Both are groups that people or businesses choose to join, often by paying a fee. Together they let many members speak with one voice instead of each acting alone.",
+   "A union can speak for workers in talks with an employer, such as a request for safer equipment. An employer association can speak for businesses in an industry, such as on a proposed change to workplace laws."
+  ],
+  "remember": "Unions speak for workers. Employer associations speak for businesses.",
+  "a": {
+   "q": "Which body represents the interests of its members who are workers?",
+   "opts": [
+    "A trade union",
+    "An employer association",
+    "A single business owner",
+    "A government department"
+   ],
+   "why": "A trade union is an organisation of workers that represents them when dealing with employers. An employer association is the tempting wrong answer, because it represents businesses, not workers.",
+   "clue": "Think about who the members of each group are."
+  },
+  "b": {
+   "d": 2,
+   "q": "Several bakery owners in Newcastle join together to tell a government inquiry how a proposed workplace law would affect their costs. Which type of group are they acting through?",
+   "opts": [
+    "An employer association",
+    "A trade union",
+    "A group of casual workers",
+    "A volunteer group"
+   ],
+   "why": "The bakery owners are businesses, and an employer association represents businesses when they deal with governments. A trade union is tempting because it also speaks for a group, but its members are workers, not business owners.",
+   "clue": "Who are the members of this group: workers or businesses?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A trade union",
+   "also_right": []
+  },
+  "b": {
+   "best": "An employer association",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Unions and employer groups",
+  "card": [
+   [
+    "Trade union",
+    "an organisation of workers. It represents its members when dealing with employers, for example on pay, safety and conditions at work."
+   ],
+   [
+    "Employer association",
+    "an organisation of businesses. It represents its members when dealing with unions and governments, for example on costs, rules and workplace laws."
+   ],
+   "Both are groups that people or businesses choose to join, often by paying a fee. Together they let many members speak with one voice instead of each acting alone.",
+   "A union can speak for workers in talks with an employer, such as a request for safer equipment. An employer association can speak for businesses in an industry, such as on a proposed change to workplace laws."
+  ],
+  "remember": "Unions speak for workers. Employer associations speak for businesses.",
+  "a": {
+   "q": "Which body represents the interests of its members who are workers?",
+   "opts": [
+    "A trade union",
+    "An employer association",
+    "A single business owner",
+    "A government department"
+   ],
+   "why": "A trade union is an organisation of workers that represents them when dealing with employers. An employer association is the tempting wrong answer, because it represents businesses, not workers.",
+   "clue": "Think about who the members of each group are."
+  },
+  "b": {
+   "d": 2,
+   "q": "Several bakery owners in Newcastle join together to tell a government inquiry how a proposed workplace law would affect their costs. Which type of group are they acting through?",
+   "opts": [
+    "An employer association",
+    "A trade union",
+    "A group of casual workers",
+    "A volunteer group"
+   ],
+   "why": "The bakery owners are businesses, and an employer association represents businesses when they deal with governments. A trade union is tempting because it also speaks for a group, but its members are workers, not business owners.",
+   "clue": "Who are the members of this group: workers or businesses?"
+  }
+ },
+ "cleared_by": "checker"
 }

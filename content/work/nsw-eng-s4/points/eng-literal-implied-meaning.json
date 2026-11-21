@@ -8,8 +8,141 @@
    0.366
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 may adapt eng-stated-implied-meanings, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:42Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:46Z write: failed the content check, writing again",
+  "2026-11-20T12:44:53Z write: done",
+  "2026-11-20T12:53:24Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "confirm": 0.00451,
+  "write": 0.01319,
+  "check": 0.0092
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "eng-stated-implied-meanings",
+  "changes": [
+   "Rename 'stated' meaning as 'literal' throughout the card, remember line and questions to match the NSW Stage 4 syllabus wording.",
+   "Rewrite question b's wrong-answer options and stem so they say 'literal meaning' where they currently say 'stated' (for example, 'Repeating a literal meaning that Ms Lee stated directly' becomes 'Repeating a literal meaning that Ms Lee gave in plain words')."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same literal-versus-implied idea at a suitable depth for Stage 4, but it uses 'stated' where this NSW course uses 'literal', so it needs wording changes rather than a full new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches stated and implied meaning in spoken exchanges, including how a listener supports or challenges a meaning, while the new point teaches literal and implied meaning in written texts, inferred from details such as a character's actions, so it is a related but different idea.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Literal and implied meaning",
+  "card": [
+   [
+    "Literal meaning",
+    "This is what a text says on the surface. It is the plain meaning of the words."
+   ],
+   [
+    "Implied meaning",
+    "This is what a reader works out from details the text does not state outright. The reader infers it."
+   ],
+   "Example: \"I'm fine,\" said Leo, and he slammed the door. Literally, Leo says he is fine. The slammed door implies he is angry or upset.",
+   "To find implied meaning, look at actions, tone and word choices, and ask what they suggest beyond the words themselves."
+  ],
+  "remember": "Literal is what the words say. Implied is what the details suggest.",
+  "a": {
+   "q": "Priya says, \"I don't mind,\" but she stares at the floor and her voice shakes. What is the implied meaning?",
+   "opts": [
+    "She is actually upset about something",
+    "She is looking at the floor for fun",
+    "She does not mind at all",
+    "She has dropped something on the floor"
+   ],
+   "why": "Her words literally say she does not mind. Her stare and shaky voice imply she is upset. The option that she does not mind repeats only the literal meaning and ignores the details.",
+   "clue": "Look at what she does, not only what she says."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia writes that Sam reached the stop just as the bus left. He then looked at his watch and sighed. Which is an implied meaning?",
+   "opts": [
+    "Sam is frustrated that he missed the bus",
+    "Sam reached the bus stop",
+    "The bus left from the stop",
+    "Sam looked at his watch"
+   ],
+   "why": "The text never says Sam is frustrated, but the missed bus and his sigh suggest it. The other three options state events the text says directly, so they are literal meanings.",
+   "clue": "Which option is not stated directly in the text?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "She is actually upset about something",
+   "also_right": []
+  },
+  "b": {
+   "best": "Sam is frustrated that he missed the bus",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Literal and implied meaning",
+  "card": [
+   [
+    "Literal meaning",
+    "This is what a text says on the surface. It is the plain meaning of the words."
+   ],
+   [
+    "Implied meaning",
+    "This is what a reader works out from details the text does not state outright. The reader infers it."
+   ],
+   "Example: \"I'm fine,\" said Leo, and he slammed the door. Literally, Leo says he is fine. The slammed door implies he is angry or upset.",
+   "To find implied meaning, look at actions, tone and word choices, and ask what they suggest beyond the words themselves."
+  ],
+  "remember": "Literal is what the words say. Implied is what the details suggest.",
+  "a": {
+   "q": "Priya says, \"I don't mind,\" but she stares at the floor and her voice shakes. What is the implied meaning?",
+   "opts": [
+    "She is actually upset about something",
+    "She is looking at the floor for fun",
+    "She does not mind at all",
+    "She has dropped something on the floor"
+   ],
+   "why": "Her words literally say she does not mind. Her stare and shaky voice imply she is upset. The option that she does not mind repeats only the literal meaning and ignores the details.",
+   "clue": "Look at what she does, not only what she says."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia writes that Sam reached the stop just as the bus left. He then looked at his watch and sighed. Which is an implied meaning?",
+   "opts": [
+    "Sam is frustrated that he missed the bus",
+    "Sam reached the bus stop",
+    "The bus left from the stop",
+    "Sam looked at his watch"
+   ],
+   "why": "The text never says Sam is frustrated, but the missed bus and his sigh suggest it. The other three options state events the text says directly, so they are literal meanings.",
+   "clue": "Which option is not stated directly in the text?"
+  }
+ },
+ "cleared_by": "checker"
 }

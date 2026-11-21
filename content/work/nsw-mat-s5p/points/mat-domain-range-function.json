@@ -24,8 +24,125 @@
    0.3
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:58Z write: done",
+  "2026-11-20T12:35:55Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00041,
+  "write": 0.01266,
+  "check": 0.00781
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-domain-range, teaches the same idea but at Year 11 depth, using square-root and fraction domain restrictions that go beyond what a Years 9 and 10 Stage 5 path would need, so it is not a suitable match.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Domain and range of a function",
+  "card": [
+   [
+    "Domain",
+    "every \\(x\\) value the function allows as an input."
+   ],
+   [
+    "Range",
+    "every \\(y\\) value the function produces as an output."
+   ],
+   "From a rule: a function such as \\(\\frac{1}{x}\\) cannot divide by zero, so \\(x \\ne 0\\). A function such as \\(\\sqrt{x}\\) needs \\(x \\ge 0\\).",
+   "Worked example: for \\(y = x^{2} + 1\\), any \\(x\\) works, so the domain is all real numbers. As \\(x^{2} \\ge 0\\), we get \\(y \\ge 1\\), so the range is \\(y \\ge 1\\)."
+  ],
+  "remember": "Domain is the allowed inputs, \\(x\\). Range is the outputs produced, \\(y\\).",
+  "a": {
+   "q": "What is the domain of \\(y = \\sqrt{x}\\)?",
+   "opts": [
+    "\\(x \\ge 0\\)",
+    "\\(x > 0\\)",
+    "\\(x \\le 0\\)",
+    "\\(y \\ge 0\\)"
+   ],
+   "why": "The square root of a negative number is not a real number, so \\(x\\) must be 0 or more. \\(y \\ge 0\\) is the range, not the domain, since it lists outputs.",
+   "clue": "Which \\(x\\) values give a real square root?"
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the range of \\(y = x^{2} - 3\\)?",
+   "opts": [
+    "\\(y \\ge -3\\)",
+    "\\(y \\ge 3\\)",
+    "\\(y \\le -3\\)",
+    "All real numbers"
+   ],
+   "why": "Since \\(x^{2} \\ge 0\\), the smallest output is \\(0 - 3 = -3\\), and outputs grow without limit. All real numbers is the domain, not the range, because \\(y\\) can never go below \\(-3\\).",
+   "clue": "Find the smallest value \\(x^{2}\\) can take."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(x \\ge 0\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(y \\ge -3\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Domain and range of a function",
+  "card": [
+   [
+    "Domain",
+    "every \\(x\\) value the function allows as an input."
+   ],
+   [
+    "Range",
+    "every \\(y\\) value the function produces as an output."
+   ],
+   "From a rule: a function such as \\(\\frac{1}{x}\\) cannot divide by zero, so \\(x \\ne 0\\). A function such as \\(\\sqrt{x}\\) needs \\(x \\ge 0\\).",
+   "Worked example: for \\(y = x^{2} + 1\\), any \\(x\\) works, so the domain is all real numbers. As \\(x^{2} \\ge 0\\), we get \\(y \\ge 1\\), so the range is \\(y \\ge 1\\)."
+  ],
+  "remember": "Domain is the allowed inputs, \\(x\\). Range is the outputs produced, \\(y\\).",
+  "a": {
+   "q": "What is the domain of \\(y = \\sqrt{x}\\)?",
+   "opts": [
+    "\\(x \\ge 0\\)",
+    "\\(x > 0\\)",
+    "\\(x \\le 0\\)",
+    "\\(y \\ge 0\\)"
+   ],
+   "why": "The square root of a negative number is not a real number, so \\(x\\) must be 0 or more. \\(y \\ge 0\\) is the range, not the domain, since it lists outputs.",
+   "clue": "Which \\(x\\) values give a real square root?"
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the range of \\(y = x^{2} - 3\\)?",
+   "opts": [
+    "\\(y \\ge -3\\)",
+    "\\(y \\ge 3\\)",
+    "\\(y \\le -3\\)",
+    "All real numbers"
+   ],
+   "why": "Since \\(x^{2} \\ge 0\\), the smallest output is \\(0 - 3 = -3\\), and outputs grow without limit. All real numbers is the domain, not the range, because \\(y\\) can never go below \\(-3\\).",
+   "clue": "Find the smallest value \\(x^{2}\\) can take."
+  }
+ },
+ "cleared_by": "checker"
 }

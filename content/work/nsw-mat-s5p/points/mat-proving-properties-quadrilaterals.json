@@ -24,8 +24,289 @@
    0.203
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 may adapt mat-properties-quadrilaterals, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:57Z confirm: Claude Opus 5.5 may reuse mat-properties-quadrilaterals, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt mat-properties-quadrilaterals (2 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting mat-properties-quadrilaterals on the next run",
+  "2026-11-20T14:12:39Z adapt: failed the content check, writing again",
+  "2026-11-20T14:20:02Z adapt: done",
+  "2026-11-20T14:26:15Z check: flagged",
+  "2026-11-20T14:29:21Z fix: suggested",
+  "2026-11-20T14:44:08Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00051,
+  "confirm": 0.01338,
+  "adapt": 0.02545,
+  "check": 0.01249,
+  "fix": 0.02964
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-properties-quadrilaterals",
+  "changes": [
+   "Reword the card's explanation into the formal reason-by-reason proof format expected in NSW Stage 5 paths, naming each congruence test as the NSW syllabus does.",
+   "Pitch the card's wording at Years 9 and 10 rather than Year 8, keeping the same parallelogram proof."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same congruent-triangle proof of the parallelogram properties, but it is written for Year 8 and uses test names and proof wording that need to suit this NSW Years 9 and 10 course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "mat-properties-quadrilaterals",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point already uses congruent triangles to prove that a parallelogram's opposite sides are equal and its diagonals bisect each other, which is exactly this idea, and its AAS reasoning and questions suit NSW Stage 5. It was written for Year 8, and its questions test using the facts more than writing the proof, which is why I am only fairly sure.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-properties-quadrilaterals",
+  "changes": [
+   "Give each step of the proof its reason, as NSW proofs do: alternate angles are equal because \\(AB \\parallel DC\\) and \\(AD \\parallel BC\\), and \\(AC\\) is a common side.",
+   "Replace both questions with ones that test the proof, such as which reason shows two angles equal or which congruence test the triangles meet, rather than finding a length from the facts."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card1",
+   "card2",
+   "card3",
+   "card4",
+   "a.q",
+   "a.opt1",
+   "a.opt2",
+   "a.opt3",
+   "a.opt4",
+   "a.why",
+   "a.clue",
+   "b.q",
+   "b.opt1",
+   "b.opt2",
+   "b.opt3",
+   "b.opt4",
+   "b.why",
+   "b.clue"
+  ]
+ },
+ "cleared_by": "owner",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank card proves the same two parallelogram facts with congruent triangles, which matches the brief. But it is a Year 8 point whose questions only use the facts to find a length, so they need to test the proof at Stage 5 paths depth.",
+   "item": "87e8e571f6f120c0",
+   "result": "decided",
+   "saved": {
+    "id": "mat-proving-properties-quadrilaterals",
+    "title": "Proving properties of quadrilaterals",
+    "brief": "3ba0a357443b",
+    "shortlist": [
+     [
+      "mat-properties-quadrilaterals",
+      0.616
+     ],
+     [
+      "mat-proving-triangles-congruent",
+      0.363
+     ],
+     [
+      "mat-classifying-quadrilaterals",
+      0.291
+     ],
+     [
+      "mat-tests-congruent-triangles",
+      0.248
+     ],
+     [
+      "mat-proof-with-vectors",
+      0.203
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00051,
+     "confirm": 0.01338
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-properties-quadrilaterals",
+     "changes": [
+      "Reword the card's explanation into the formal reason-by-reason proof format expected in NSW Stage 5 paths, naming each congruence test as the NSW syllabus does.",
+      "Pitch the card's wording at Years 9 and 10 rather than Year 8, keeping the same parallelogram proof."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same congruent-triangle proof of the parallelogram properties, but it is written for Year 8 and uses test names and proof wording that need to suit this NSW Years 9 and 10 course.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "reuse",
+     "same": "mat-properties-quadrilaterals",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The bank point already uses congruent triangles to prove that a parallelogram's opposite sides are equal and its diagonals bisect each other, which is exactly this idea, and its AAS reasoning and questions suit NSW Stage 5. It was written for Year 8, and its questions test using the facts more than writing the proof, which is why I am only fairly sure.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "0f2e40429ab67b30"
+  }
+ ],
+ "draft": {
+  "title": "Properties of quadrilaterals",
+  "card": [
+   "A parallelogram has \\(AB \\parallel DC\\) and \\(AD \\parallel BC\\). In parallelogram ABCD, diagonal AC splits it into triangles ABC and CDA.",
+   "In triangles ABC and CDA: \\(\\angle BAC = \\angle DCA\\) (alternate angles, \\(AB \\parallel DC\\)). \\(\\angle BCA = \\angle DAC\\) (alternate angles, \\(AD \\parallel BC\\)). AC is a common side. So the triangles are congruent (AAS).",
+   "Matching sides of congruent triangles are equal. So \\(AB = CD\\) and \\(AD = BC\\) (matching sides of congruent triangles). Opposite sides are equal.",
+   "The diagonals meet at M. In triangles AMB and CMD, alternate angles are equal (\\(AB \\parallel DC\\)), and \\(AB = CD\\) from above. The triangles are congruent (AAS), so \\(AM = CM\\) and \\(BM = DM\\): the diagonals bisect each other."
+  ],
+  "remember": "Congruent triangles inside a parallelogram explain why its opposite sides are equal and its diagonals bisect each other.",
+  "a": {
+   "q": "In the proof that \\(\\angle BAC = \\angle DCA\\) in parallelogram ABCD, which reason is given?",
+   "opts": [
+    "Alternate angles, \\(AB \\parallel DC\\)",
+    "Co-interior angles, \\(AB \\parallel DC\\)",
+    "Vertically opposite angles",
+    "Angles in a triangle add to \\(180^{\\circ}\\)"
+   ],
+   "why": "AC cuts the parallel lines AB and DC, so the angles on opposite sides of AC are alternate angles and are equal. Co-interior angles would add to \\(180^{\\circ}\\), not be equal.",
+   "clue": "AC crosses two parallel lines. Which angle pair is it?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Triangles ABC and CDA in a parallelogram have two pairs of equal angles and share side AC. Which test shows they are congruent?",
+   "opts": [
+    "AAS",
+    "SSS",
+    "SAS",
+    "RHS"
+   ],
+   "why": "There are two pairs of equal angles and one common side, so the test is AAS. SSS and SAS need sides given. RHS needs a right angle.",
+   "clue": "Count the equal angles and the equal side."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Alternate angles, \\(AB \\parallel DC\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "AAS",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The diagonals step says only 'alternate angles are equal' without naming the pairs (\\(\\angle MAB = \\angle MCD\\), \\(\\angle MBA = \\angle MDC\\)). A point that teaches giving a reason for each matching angle should name both pairs, or students may not see which angles are meant."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct and match the card, and the explanations are accurate. One minor issue: the diagonals proof on the card says 'alternate angles are equal' without naming which angle pairs."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The diagonals step says only 'alternate angles are equal' without naming the pairs (\\(\\angle MAB = \\angle MCD\\), \\(\\angle MBA = \\angle MDC\\)). A point that teaches giving a reason for each matching angle should name both pairs, or students may not see which angles are meant."
+ ],
+ "proposal": {
+  "title": "Proving properties of quadrilaterals",
+  "card": [
+   "A parallelogram has both pairs of opposite sides parallel. In parallelogram ABCD, AB is parallel to DC and AD is parallel to BC. Diagonal AC splits it into triangles ABC and CDA.",
+   "In triangles ABC and CDA: angle BAC equals angle DCA (alternate angles, AB parallel to DC). Angle BCA equals angle DAC (alternate angles, AD parallel to BC). AC is a common side. So the triangles are congruent (AAS).",
+   "Matching sides of congruent triangles are equal. So \\(AB = CD\\) and \\(AD = BC\\) (matching sides of congruent triangles). The opposite sides of a parallelogram are equal.",
+   "The diagonals meet at M. In triangles AMB and CMD: angle MAB equals angle MCD and angle MBA equals angle MDC (both alternate angles, AB parallel to DC), and \\(AB = CD\\) (proved above). So the triangles are congruent (AAS), giving \\(AM = CM\\) and \\(BM = DM\\): the diagonals bisect each other."
+  ],
+  "remember": "Congruent triangles inside a parallelogram explain why its opposite sides are equal and its diagonals bisect each other.",
+  "a": {
+   "q": "In the proof that angle BAC equals angle DCA in parallelogram ABCD, which reason is given?",
+   "opts": [
+    "Alternate angles, AB parallel to DC",
+    "Co-interior angles, AB parallel to DC",
+    "Vertically opposite angles at A and C",
+    "Angles in a triangle add to \\(180^{\\circ}\\)"
+   ],
+   "why": "AC cuts the parallel lines AB and DC, and the two angles sit on opposite sides of AC, so they are alternate angles and are equal. Co-interior angles add to \\(180^{\\circ}\\), so they would not give equal angles.",
+   "clue": "AC crosses two parallel lines. Which angle pair is equal?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Triangles ABC and CDA in a parallelogram have two pairs of equal angles and share side AC. Which test shows they are congruent?",
+   "opts": [
+    "AAS",
+    "SSS",
+    "SAS",
+    "RHS"
+   ],
+   "why": "There are two pairs of equal angles and one equal side, so the test is AAS. SSS needs three pairs of sides and SAS needs two pairs of sides. RHS needs a right angle.",
+   "clue": "Count the equal angles and the equal sides."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "Parallelogram ABCD with A at bottom left, B at bottom right, C at top right and D at top left. Arrow marks show AB parallel to DC and double arrow marks show AD parallel to BC. Both diagonals AC and BD are drawn, meeting at a point labelled M. No angles or equal sides are marked.",
+    "why": "Seeing the vertices, the parallel sides and the diagonals lets students follow which triangles and angles each step of the proof names."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Proving properties of quadrilaterals",
+  "card": [
+   "A parallelogram has both pairs of opposite sides parallel. In parallelogram ABCD, AB is parallel to DC and AD is parallel to BC. Diagonal AC splits it into triangles ABC and CDA.",
+   "In triangles ABC and CDA: angle BAC equals angle DCA (alternate angles, AB parallel to DC). Angle BCA equals angle DAC (alternate angles, AD parallel to BC). AC is a common side. So the triangles are congruent (AAS).",
+   "Matching sides of congruent triangles are equal. So \\(AB = CD\\) and \\(AD = BC\\) (matching sides of congruent triangles). The opposite sides of a parallelogram are equal.",
+   "The diagonals meet at M. In triangles AMB and CMD: angle MAB equals angle MCD and angle MBA equals angle MDC (both alternate angles, AB parallel to DC), and \\(AB = CD\\) (proved above). So the triangles are congruent (AAS), giving \\(AM = CM\\) and \\(BM = DM\\): the diagonals bisect each other."
+  ],
+  "remember": "Congruent triangles inside a parallelogram explain why its opposite sides are equal and its diagonals bisect each other.",
+  "a": {
+   "q": "In the proof that angle BAC equals angle DCA in parallelogram ABCD, which reason is given?",
+   "opts": [
+    "Alternate angles, AB parallel to DC",
+    "Co-interior angles, AB parallel to DC",
+    "Vertically opposite angles at A and C",
+    "Angles in a triangle add to \\(180^{\\circ}\\)"
+   ],
+   "why": "AC cuts the parallel lines AB and DC, and the two angles sit on opposite sides of AC, so they are alternate angles and are equal. Co-interior angles add to \\(180^{\\circ}\\), so they would not give equal angles.",
+   "clue": "AC crosses two parallel lines. Which angle pair is equal?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Triangles ABC and CDA in a parallelogram have two pairs of equal angles and share side AC. Which test shows they are congruent?",
+   "opts": [
+    "AAS",
+    "SSS",
+    "SAS",
+    "RHS"
+   ],
+   "why": "There are two pairs of equal angles and one equal side, so the test is AAS. SSS needs three pairs of sides and SAS needs two pairs of sides. RHS needs a right angle.",
+   "clue": "Count the equal angles and the equal sides."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "Parallelogram ABCD with A at bottom left, B at bottom right, C at top right and D at top left. Arrow marks show AB parallel to DC and double arrow marks show AD parallel to BC. Both diagonals AC and BD are drawn, meeting at a point labelled M. No angles or equal sides are marked.",
+    "why": "Seeing the vertices, the parallel sides and the diagonals lets students follow which triangles and angles each step of the proof names."
+   }
+  ]
+ }
 }

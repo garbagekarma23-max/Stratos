@@ -24,8 +24,130 @@
    0.237
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 says adapt mat-finding-angle-with-trigonometry (2 changes)",
+  "2026-11-20T12:25:56Z adapt: done",
+  "2026-11-20T12:35:54Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00037,
+  "adapt": 0.00509,
+  "check": 0.01179
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-finding-angle-with-trigonometry",
+  "changes": [
+   "Add a line telling students to set the calculator to degree mode before using the inverse function, since the card does not say so.",
+   "Replace the Hobart driveway in question b with an example set in New South Wales or another local setting."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same idea at the same Year 9 depth, but it needs a degree-mode instruction and a local example for NSW.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "mat-finding-angle-with-trigonometry",
+  "changes": [
+   "Add a line telling students to set the calculator to degree mode before using the inverse function, since the card does not say so.",
+   "Replace the Hobart driveway in question b with an example set in New South Wales or another local setting."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "card3",
+   "a.q",
+   "b.q",
+   "b.why"
+  ]
+ },
+ "draft": {
+  "title": "Finding an angle with trigonometry",
+  "card": [
+   "When you know two sides of a right-angled triangle, you can find an angle. Start by naming the two known sides from the angle you want: opposite, adjacent or hypotenuse.",
+   "Choose sin, cos or tan, whichever ratio uses both of your known sides. Divide one side by the other to get a number.",
+   "Set your calculator to degree mode first. Then use the inverse function (\\(\\sin^{-1}\\), \\(\\cos^{-1}\\) or \\(\\tan^{-1}\\)) to turn that number into the angle. It must match the ratio you chose.",
+   "Example: opposite \\(= 3\\) and adjacent \\(= 4\\), so use tan. \\(\\tan \\theta = \\frac{3}{4} = 0.75\\), so \\(\\theta = \\tan^{-1}(0.75) \\approx 36.9^{\\circ}\\)."
+  ],
+  "remember": "Divide the two known sides, then use the matching inverse function to get the angle.",
+  "a": {
+   "q": "A 10 m ladder rests against a wall and reaches 5 m up the wall. What angle does the ladder make with the ground?",
+   "opts": [
+    "30°",
+    "60°",
+    "26.6°",
+    "63.4°"
+   ],
+   "why": "The wall height is opposite the angle and the ladder is the hypotenuse, so use sin. \\(\\sin \\theta = \\frac{5}{10} = 0.5\\), so \\(\\theta = \\sin^{-1}(0.5) = 30^{\\circ}\\). Using \\(\\tan^{-1}(0.5)\\) gives 26.6°, but tan needs the adjacent side, which is not given.",
+   "clue": "Which two sides do you know, seen from the angle at the ground?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A steep path up a hill in the Blue Mountains rises 1.2 m over a flat distance of 5 m. What is its angle of slope, to one decimal place?",
+   "opts": [
+    "13.5°",
+    "13.9°",
+    "76.5°",
+    "76.1°"
+   ],
+   "why": "The rise is opposite the angle and the flat distance is adjacent, so use tan. \\(\\tan \\theta = \\frac{1.2}{5} = 0.24\\), so \\(\\theta = \\tan^{-1}(0.24) \\approx 13.5^{\\circ}\\). Using \\(\\sin^{-1}(0.24)\\) gives 13.9°, but the 5 m is not the hypotenuse.",
+   "clue": "The rise and the flat distance are opposite and adjacent."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "30°",
+   "also_right": []
+  },
+  "b": {
+   "best": "13.5°",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. In (a), sin⁻¹(0.5) = 30°. In (b), tan⁻¹(0.24) ≈ 13.5°, and the distractors are the wrong-ratio and complementary-angle errors, which suits the point."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Finding an angle with trigonometry",
+  "card": [
+   "When you know two sides of a right-angled triangle, you can find an angle. Start by naming the two known sides from the angle you want: opposite, adjacent or hypotenuse.",
+   "Choose sin, cos or tan, whichever ratio uses both of your known sides. Divide one side by the other to get a number.",
+   "Set your calculator to degree mode first. Then use the inverse function (\\(\\sin^{-1}\\), \\(\\cos^{-1}\\) or \\(\\tan^{-1}\\)) to turn that number into the angle. It must match the ratio you chose.",
+   "Example: opposite \\(= 3\\) and adjacent \\(= 4\\), so use tan. \\(\\tan \\theta = \\frac{3}{4} = 0.75\\), so \\(\\theta = \\tan^{-1}(0.75) \\approx 36.9^{\\circ}\\)."
+  ],
+  "remember": "Divide the two known sides, then use the matching inverse function to get the angle.",
+  "a": {
+   "q": "A 10 m ladder rests against a wall and reaches 5 m up the wall. What angle does the ladder make with the ground?",
+   "opts": [
+    "30°",
+    "60°",
+    "26.6°",
+    "63.4°"
+   ],
+   "why": "The wall height is opposite the angle and the ladder is the hypotenuse, so use sin. \\(\\sin \\theta = \\frac{5}{10} = 0.5\\), so \\(\\theta = \\sin^{-1}(0.5) = 30^{\\circ}\\). Using \\(\\tan^{-1}(0.5)\\) gives 26.6°, but tan needs the adjacent side, which is not given.",
+   "clue": "Which two sides do you know, seen from the angle at the ground?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A steep path up a hill in the Blue Mountains rises 1.2 m over a flat distance of 5 m. What is its angle of slope, to one decimal place?",
+   "opts": [
+    "13.5°",
+    "13.9°",
+    "76.5°",
+    "76.1°"
+   ],
+   "why": "The rise is opposite the angle and the flat distance is adjacent, so use tan. \\(\\tan \\theta = \\frac{1.2}{5} = 0.24\\), so \\(\\theta = \\tan^{-1}(0.24) \\approx 13.5^{\\circ}\\). Using \\(\\sin^{-1}(0.24)\\) gives 13.9°, but the 5 m is not the hypotenuse.",
+   "clue": "The rise and the flat distance are opposite and adjacent."
+  }
+ },
+ "cleared_by": "checker"
 }

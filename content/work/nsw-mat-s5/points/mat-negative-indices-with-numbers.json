@@ -24,8 +24,369 @@
    0.357
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 says reuse mat-negative-indices, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:55Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:54Z write: done",
+  "2026-11-20T12:44:58Z check: flagged",
+  "2026-11-20T12:53:28Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (remember wording)",
+  "2026-11-20T13:44:57Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "confirm": 0.00935,
+  "write": 0.00745,
+  "check": 0.01254,
+  "fix": 0.02039,
+  "recheck": 0.01043
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-negative-indices",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches the same rule, a^-n = 1/a^n, with the same 2^-3 = 1/8 example and fair questions at this depth, though it shows the fraction form more than converting back to a negative index.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank's negative indices point also covers variables with a coefficient (its second question is about 4x⁻³), and it does not teach turning fractions back into negative indices, so it is broader than this numbers-only point and differs from it in scope.",
+  "model": "claude-opus-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Remember, wording: 'A negative index flips the number to its reciprocal' could be read as flipping the base alone (so 2^{-3} = 1/2). The card says it is the reciprocal of the power with a positive index, a^{-n} = 1/a^{n}. Saying 'gives the reciprocal of the power with a positive index' would be clearer.",
+ "rejected": {
+  "title": "Negative indices with numbers",
+  "card": [
+   "A negative index means the reciprocal. The reciprocal of a number is 1 divided by that number. So \\(a^{-n} = \\frac{1}{a^{n}}\\).",
+   "Worked example: \\(2^{-3} = \\frac{1}{2^{3}}\\), which is \\(\\frac{1}{8}\\). The negative sign does not make the answer negative.",
+   "To go back, write a fraction with 1 on top as a power with a negative index. For example, \\(\\frac{1}{5^{2}} = 5^{-2}\\). Also, \\(\\frac{1}{49} = \\frac{1}{7^{2}}\\), which is \\(7^{-2}\\).",
+   "Do not multiply the base by the index. \\(3^{-2}\\) is \\(\\frac{1}{3^{2}} = \\frac{1}{9}\\), not \\(3 \\times (-2) = -6\\)."
+  ],
+  "remember": "A negative index flips the number to its reciprocal. It does not make the value negative.",
+  "a": {
+   "q": "What is \\(4^{-3}\\) as a fraction?",
+   "opts": [
+    "\\(\\frac{1}{64}\\)",
+    "\\(-\\frac{1}{64}\\)",
+    "\\(\\frac{1}{12}\\)",
+    "\\(-12\\)"
+   ],
+   "why": "A negative index means the reciprocal, so \\(4^{-3} = \\frac{1}{4^{3}}\\), which is \\(\\frac{1}{64}\\). The tempting option \\(-\\frac{1}{64}\\) treats the negative index as making the value negative, but it only gives the reciprocal.",
+   "clue": "Write 1 over the power with a positive index."
+  },
+  "b": {
+   "d": 2,
+   "q": "Which power of 10 equals \\(\\frac{1}{1000}\\)?",
+   "opts": [
+    "\\(10^{-3}\\)",
+    "\\(10^{3}\\)",
+    "\\(10^{-4}\\)",
+    "\\(-10^{3}\\)"
+   ],
+   "why": "\\(1000 = 10^{3}\\), so \\(\\frac{1}{1000} = \\frac{1}{10^{3}}\\), which is \\(10^{-3}\\). The option \\(10^{-4}\\) counts the zeros plus one by mistake. The option \\(10^{3}\\) is 1000 itself, not its reciprocal.",
+   "clue": "Write 1000 as a power of 10 first."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Remember, wording: 'A negative index flips the number to its reciprocal' could be read as flipping the base alone (so 2^{-3} = 1/2). The card says it is the reciprocal of the power with a positive index, a^{-n} = 1/a^{n}. Saying 'gives the reciprocal of the power with a positive index' would be clearer."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Negative indices with numbers",
+     "card": [
+      "A negative index means the reciprocal. The reciprocal of a number is 1 divided by that number. So \\(a^{-n} = \\frac{1}{a^{n}}\\).",
+      "Worked example: \\(2^{-3} = \\frac{1}{2^{3}}\\), which is \\(\\frac{1}{8}\\). The negative sign does not make the answer negative.",
+      "To go back, write a fraction with 1 on top as a power with a negative index. For example, \\(\\frac{1}{5^{2}} = 5^{-2}\\) and \\(\\frac{1}{49} = \\frac{1}{7^{2}} = 7^{-2}\\).",
+      "The negative index applies to the base only. \\(3^{-2} = \\frac{1}{3^{2}} = \\frac{1}{9}\\), not \\(3 \\times (-2)\\)."
+     ],
+     "remember": "A negative index flips the number to its reciprocal. It does not make the value negative.",
+     "a": {
+      "q": "What is \\(3^{-2}\\) as a fraction?",
+      "opts": [
+       "\\(\\frac{1}{9}\\)",
+       "\\(-\\frac{1}{9}\\)",
+       "\\(\\frac{1}{6}\\)",
+       "\\(-9\\)"
+      ],
+      "why": "A negative index means the reciprocal, so \\(3^{-2} = \\frac{1}{3^{2}} = \\frac{1}{9}\\). The tempting option \\(-9\\) treats the negative index as making the value negative, but it only flips the number.",
+      "clue": "Write 1 over the power with a positive index."
+     },
+     "b": {
+      "d": 2,
+      "q": "Which power of 10 equals \\(\\frac{1}{1000}\\)?",
+      "opts": [
+       "\\(10^{-3}\\)",
+       "\\(10^{3}\\)",
+       "\\(10^{-4}\\)",
+       "\\(-10^{3}\\)"
+      ],
+      "why": "\\(1000 = 10^{3}\\), so \\(\\frac{1}{1000} = \\frac{1}{10^{3}} = 10^{-3}\\). The option \\(10^{-4}\\) counts the zeros plus one by mistake. The option \\(10^{3}\\) is 1000 itself, not its reciprocal.",
+      "clue": "Write 1000 as a power of 10 first."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "\\(\\frac{1}{9}\\)",
+      "also_right": []
+     },
+     "b": {
+      "best": "\\(10^{-3}\\)",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "The last card line says 'The negative index applies to the base only', but its example contrasts \\(3^{-2}\\) with \\(3 \\times (-2)\\). That is a different mistake (multiplying base and index), not a question of what the index applies to. The heading sentence does not match its example and could confuse students, for instance about \\(-3^{2}\\)."
+      },
+      {
+       "part": "a",
+       "kind": "level",
+       "detail": "Question a asks for \\(3^{-2}\\), which is exactly the worked example in the card's last line (\\(3^{-2} = \\frac{1}{9}\\)). It tests recall of the card rather than whether the student can use the idea. A different base or index would test understanding."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The maths and the intended answers are correct. The card's last line has a heading ('applies to the base only') that does not match its example, and question a repeats the card's worked example \\(3^{-2}\\) word for word."
+    },
+    "flags": [
+     "Card, wording: The last card line says 'The negative index applies to the base only', but its example contrasts \\(3^{-2}\\) with \\(3 \\times (-2)\\). That is a different mistake (multiplying base and index), not a question of what the index applies to. The heading sentence does not match its example and could confuse students, for instance about \\(-3^{2}\\).",
+     "Question a, level: Question a asks for \\(3^{-2}\\), which is exactly the worked example in the card's last line (\\(3^{-2} = \\frac{1}{9}\\)). It tests recall of the card rather than whether the student can use the idea. A different base or index would test understanding."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Negative indices with numbers",
+     "card": [
+      "A negative index means the reciprocal. The reciprocal of a number is 1 divided by that number. So \\(a^{-n} = \\frac{1}{a^{n}}\\).",
+      "Worked example: \\(2^{-3} = \\frac{1}{2^{3}}\\), which is \\(\\frac{1}{8}\\). The negative sign does not make the answer negative.",
+      "To go back, write a fraction with 1 on top as a power with a negative index. For example, \\(\\frac{1}{5^{2}} = 5^{-2}\\). Also, \\(\\frac{1}{49} = \\frac{1}{7^{2}}\\), which is \\(7^{-2}\\).",
+      "Do not multiply the base by the index. \\(3^{-2}\\) is \\(\\frac{1}{3^{2}} = \\frac{1}{9}\\), not \\(3 \\times (-2) = -6\\)."
+     ],
+     "remember": "A negative index flips the number to its reciprocal. It does not make the value negative.",
+     "a": {
+      "q": "What is \\(4^{-3}\\) as a fraction?",
+      "opts": [
+       "\\(\\frac{1}{64}\\)",
+       "\\(-\\frac{1}{64}\\)",
+       "\\(\\frac{1}{12}\\)",
+       "\\(-12\\)"
+      ],
+      "why": "A negative index means the reciprocal, so \\(4^{-3} = \\frac{1}{4^{3}}\\), which is \\(\\frac{1}{64}\\). The tempting option \\(-\\frac{1}{64}\\) treats the negative index as making the value negative, but it only gives the reciprocal.",
+      "clue": "Write 1 over the power with a positive index."
+     },
+     "b": {
+      "d": 2,
+      "q": "Which power of 10 equals \\(\\frac{1}{1000}\\)?",
+      "opts": [
+       "\\(10^{-3}\\)",
+       "\\(10^{3}\\)",
+       "\\(10^{-4}\\)",
+       "\\(-10^{3}\\)"
+      ],
+      "why": "\\(1000 = 10^{3}\\), so \\(\\frac{1}{1000} = \\frac{1}{10^{3}}\\), which is \\(10^{-3}\\). The option \\(10^{-4}\\) counts the zeros plus one by mistake. The option \\(10^{3}\\) is 1000 itself, not its reciprocal.",
+      "clue": "Write 1000 as a power of 10 first."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "\\(\\frac{1}{64}\\)",
+       "also_right": []
+      },
+      "b": {
+       "best": "\\(10^{-3}\\)",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "remember",
+        "kind": "wording",
+        "detail": "'A negative index flips the number to its reciprocal' could be read as flipping the base alone (so 2^{-3} = 1/2). The card says it is the reciprocal of the power with a positive index, a^{-n} = 1/a^{n}. Saying 'gives the reciprocal of the power with a positive index' would be clearer."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts, answers and explanations are all correct. The only issue is that the remember line could be misread as taking the reciprocal of the base alone rather than of the whole power."
+     },
+     "flags": [
+      "Remember, wording: 'A negative index flips the number to its reciprocal' could be read as flipping the base alone (so 2^{-3} = 1/2). The card says it is the reciprocal of the power with a positive index, a^{-n} = 1/a^{n}. Saying 'gives the reciprocal of the power with a positive index' would be clearer."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:57Z",
+   "step": "write",
+   "version": {
+    "title": "Negative indices with numbers",
+    "card": [
+     "A negative index means the reciprocal. The reciprocal of a number is 1 divided by that number. So \\(a^{-n} = \\frac{1}{a^{n}}\\).",
+     "Worked example: \\(2^{-3} = \\frac{1}{2^{3}}\\), which is \\(\\frac{1}{8}\\). The negative sign does not make the answer negative.",
+     "To go back, write a fraction with 1 on top as a power with a negative index. For example, \\(\\frac{1}{5^{2}} = 5^{-2}\\). Also, \\(\\frac{1}{49} = \\frac{1}{7^{2}}\\), which is \\(7^{-2}\\).",
+     "Do not multiply the base by the index. \\(3^{-2}\\) is \\(\\frac{1}{3^{2}} = \\frac{1}{9}\\), not \\(3 \\times (-2) = -6\\)."
+    ],
+    "remember": "A negative index gives the reciprocal of the power with a positive index. It does not make the value negative.",
+    "a": {
+     "q": "What is \\(4^{-3}\\) as a fraction?",
+     "opts": [
+      "\\(\\frac{1}{64}\\)",
+      "\\(-\\frac{1}{64}\\)",
+      "\\(\\frac{1}{12}\\)",
+      "\\(-12\\)"
+     ],
+     "why": "A negative index means the reciprocal, so \\(4^{-3} = \\frac{1}{4^{3}}\\), which is \\(\\frac{1}{64}\\). The tempting option \\(-\\frac{1}{64}\\) treats the negative index as making the value negative, but it only gives the reciprocal.",
+     "clue": "Write 1 over the power with a positive index."
+    },
+    "b": {
+     "d": 2,
+     "q": "Which power of 10 equals \\(\\frac{1}{1000}\\)?",
+     "opts": [
+      "\\(10^{-3}\\)",
+      "\\(10^{3}\\)",
+      "\\(10^{-4}\\)",
+      "\\(-10^{3}\\)"
+     ],
+     "why": "\\(1000 = 10^{3}\\), so \\(\\frac{1}{1000} = \\frac{1}{10^{3}}\\), which is \\(10^{-3}\\). The option \\(10^{-4}\\) counts the zeros plus one by mistake. The option \\(10^{3}\\) is 1000 itself, not its reciprocal.",
+     "clue": "Write 1000 as a power of 10 first."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "\\(\\frac{1}{64}\\)",
+     "also_right": []
+    },
+    "b": {
+     "best": "\\(10^{-3}\\)",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Negative indices with numbers",
+  "card": [
+   "A negative index means the reciprocal. The reciprocal of a number is 1 divided by that number. So \\(a^{-n} = \\frac{1}{a^{n}}\\).",
+   "Worked example: \\(2^{-3} = \\frac{1}{2^{3}}\\), which is \\(\\frac{1}{8}\\). The negative sign does not make the answer negative.",
+   "To go back, write a fraction with 1 on top as a power with a negative index. For example, \\(\\frac{1}{5^{2}} = 5^{-2}\\). Also, \\(\\frac{1}{49} = \\frac{1}{7^{2}}\\), which is \\(7^{-2}\\).",
+   "Do not multiply the base by the index. \\(3^{-2}\\) is \\(\\frac{1}{3^{2}} = \\frac{1}{9}\\), not \\(3 \\times (-2) = -6\\)."
+  ],
+  "remember": "A negative index gives the reciprocal of the power with a positive index. It does not make the value negative.",
+  "a": {
+   "q": "What is \\(4^{-3}\\) as a fraction?",
+   "opts": [
+    "\\(\\frac{1}{64}\\)",
+    "\\(-\\frac{1}{64}\\)",
+    "\\(\\frac{1}{12}\\)",
+    "\\(-12\\)"
+   ],
+   "why": "A negative index means the reciprocal, so \\(4^{-3} = \\frac{1}{4^{3}}\\), which is \\(\\frac{1}{64}\\). The tempting option \\(-\\frac{1}{64}\\) treats the negative index as making the value negative, but it only gives the reciprocal.",
+   "clue": "Write 1 over the power with a positive index."
+  },
+  "b": {
+   "d": 2,
+   "q": "Which power of 10 equals \\(\\frac{1}{1000}\\)?",
+   "opts": [
+    "\\(10^{-3}\\)",
+    "\\(10^{3}\\)",
+    "\\(10^{-4}\\)",
+    "\\(-10^{3}\\)"
+   ],
+   "why": "\\(1000 = 10^{3}\\), so \\(\\frac{1}{1000} = \\frac{1}{10^{3}}\\), which is \\(10^{-3}\\). The option \\(10^{-4}\\) counts the zeros plus one by mistake. The option \\(10^{3}\\) is 1000 itself, not its reciprocal.",
+   "clue": "Write 1000 as a power of 10 first."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(\\frac{1}{64}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(10^{-3}\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Negative indices with numbers",
+  "card": [
+   "A negative index means the reciprocal. The reciprocal of a number is 1 divided by that number. So \\(a^{-n} = \\frac{1}{a^{n}}\\).",
+   "Worked example: \\(2^{-3} = \\frac{1}{2^{3}}\\), which is \\(\\frac{1}{8}\\). The negative sign does not make the answer negative.",
+   "To go back, write a fraction with 1 on top as a power with a negative index. For example, \\(\\frac{1}{5^{2}} = 5^{-2}\\). Also, \\(\\frac{1}{49} = \\frac{1}{7^{2}}\\), which is \\(7^{-2}\\).",
+   "Do not multiply the base by the index. \\(3^{-2}\\) is \\(\\frac{1}{3^{2}} = \\frac{1}{9}\\), not \\(3 \\times (-2) = -6\\)."
+  ],
+  "remember": "A negative index gives the reciprocal of the power with a positive index. It does not make the value negative.",
+  "a": {
+   "q": "What is \\(4^{-3}\\) as a fraction?",
+   "opts": [
+    "\\(\\frac{1}{64}\\)",
+    "\\(-\\frac{1}{64}\\)",
+    "\\(\\frac{1}{12}\\)",
+    "\\(-12\\)"
+   ],
+   "why": "A negative index means the reciprocal, so \\(4^{-3} = \\frac{1}{4^{3}}\\), which is \\(\\frac{1}{64}\\). The tempting option \\(-\\frac{1}{64}\\) treats the negative index as making the value negative, but it only gives the reciprocal.",
+   "clue": "Write 1 over the power with a positive index."
+  },
+  "b": {
+   "d": 2,
+   "q": "Which power of 10 equals \\(\\frac{1}{1000}\\)?",
+   "opts": [
+    "\\(10^{-3}\\)",
+    "\\(10^{3}\\)",
+    "\\(10^{-4}\\)",
+    "\\(-10^{3}\\)"
+   ],
+   "why": "\\(1000 = 10^{3}\\), so \\(\\frac{1}{1000} = \\frac{1}{10^{3}}\\), which is \\(10^{-3}\\). The option \\(10^{-4}\\) counts the zeros plus one by mistake. The option \\(10^{3}\\) is 1000 itself, not its reciprocal.",
+   "clue": "Write 1000 as a power of 10 first."
+  }
+ },
+ "checked_by": "claude-code"
 }

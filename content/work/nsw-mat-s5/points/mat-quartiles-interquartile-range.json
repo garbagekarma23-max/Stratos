@@ -8,8 +8,220 @@
    0.299
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:56Z write: done",
+  "2026-11-20T12:35:54Z check: flagged",
+  "2026-11-20T12:44:59Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "write": 0.01281,
+  "check": 0.01137,
+  "fix": 0.02107,
+  "recheck": 0.00768
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point is broader than the new point: it teaches the full five-number summary (minimum, maximum and the quartiles) and is built around it, while the new point covers only quartiles and the IQR, so it is closer to a related point than the same one.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Quartiles and interquartile range",
+  "card": [
+   "Put the data in order from smallest to largest. The median is the middle value. It splits the data into a lower half and an upper half.",
+   [
+    "Lower quartile",
+    "\\(Q_{1}\\) is the median of the lower half. When the number of values is odd, leave the overall median out of both halves."
+   ],
+   [
+    "Upper quartile",
+    "\\(Q_{3}\\) is the median of the upper half. Together with the median, \\(Q_{1}\\) and \\(Q_{3}\\) split the data into four equal parts."
+   ],
+   "The interquartile range is \\(\\text{IQR} = Q_{3} - Q_{1}\\). It is the spread of the middle half of the data. Example: for 2, 4, 5, 7, 8, 10, 12, the median is 7, \\(Q_{1} = 4\\) and \\(Q_{3} = 10\\), so the IQR is \\(10 - 4 = 6\\)."
+  ],
+  "remember": "Order the data, find the median of each half, then subtract: \\(Q_{3} - Q_{1}\\).",
+  "a": {
+   "q": "What does the interquartile range measure?",
+   "opts": [
+    "The spread of the middle half of the data",
+    "The spread from the smallest to the largest value",
+    "The average distance of values from the mean",
+    "The middle value of the ordered data"
+   ],
+   "why": "The IQR is \\(Q_{3} - Q_{1}\\), which covers the middle half of the data. The range is the spread from smallest to largest, which is a different measure.",
+   "clue": "Think about which values \\(Q_{1}\\) and \\(Q_{3}\\) sit between."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia times her laps at a pool in Dubbo, in seconds: 31, 33, 34, 36, 38, 41, 45, 47. What is the interquartile range?",
+   "opts": [
+    "\\(12\\)",
+    "\\(16\\)",
+    "\\(7\\)",
+    "\\(14\\)"
+   ],
+   "why": "The data has 8 values, so the lower half is 31, 33, 34, 36 and \\(Q_{1} = 33.5\\). The upper half is 38, 41, 45, 47 and \\(Q_{3} = 43\\). The IQR is \\(43 - 33.5 = 9.5\\), not the range \\(47 - 31 = 16\\).",
+   "clue": "Split the 8 values into two halves of 4 and find the median of each."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The spread of the middle half of the data",
+   "also_right": []
+  },
+  "b": {
+   "best": "None of the options: the correct IQR is 9.5",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "For 31, 33, 34, 36, 38, 41, 45, 47: Q1 = 33.5, Q3 = 43, so the IQR is 9.5. None of the options (7, 16, 14, 12) is 9.5, so the question has no right answer. The why gives 9.5, which contradicts the option list. Add 9.5 as an option, or change the data so the IQR matches one of the options."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b has no correct option: the IQR of Mia's lap times is 9.5 (as the why says), but the options are 7, 16, 14 and 12. The card and question a are fine."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker picked “None of the options: the correct IQR is 9.5”, not the writer’s answer “\\(12\\)”.",
+  "Question b, fact: For 31, 33, 34, 36, 38, 41, 45, 47: Q1 = 33.5, Q3 = 43, so the IQR is 9.5. None of the options (7, 16, 14, 12) is 9.5, so the question has no right answer. The why gives 9.5, which contradicts the option list. Add 9.5 as an option, or change the data so the IQR matches one of the options."
+ ],
+ "proposal": {
+  "title": "Quartiles and interquartile range",
+  "card": [
+   "Put the data in order from smallest to largest. The median is the middle value. It splits the data into a lower half and an upper half.",
+   [
+    "Lower quartile",
+    "\\(Q_{1}\\) is the median of the lower half. When the number of values is odd, leave the overall median out of both halves. When it is even, split the values into two equal halves."
+   ],
+   [
+    "Upper quartile",
+    "\\(Q_{3}\\) is the median of the upper half. Together with the median, \\(Q_{1}\\) and \\(Q_{3}\\) split the data into four equal parts."
+   ],
+   "The interquartile range is \\(\\text{IQR} = Q_{3} - Q_{1}\\). It is the spread of the middle half of the data. Example: for 2, 4, 5, 7, 8, 10, 12, the median is 7, \\(Q_{1} = 4\\) and \\(Q_{3} = 10\\), so the IQR is \\(10 - 4 = 6\\)."
+  ],
+  "remember": "Order the data, find the median of each half, then subtract: \\(Q_{3} - Q_{1}\\).",
+  "a": {
+   "q": "What does the interquartile range measure?",
+   "opts": [
+    "The spread of the middle half of the data",
+    "The spread from the smallest to the largest value",
+    "The average distance of values from the mean",
+    "The middle value of the ordered data"
+   ],
+   "why": "The IQR is \\(Q_{3} - Q_{1}\\), which covers the middle half of the data. The spread from smallest to largest is the range, which is a different measure.",
+   "clue": "Think about which values \\(Q_{1}\\) and \\(Q_{3}\\) sit between."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia times her laps at a pool in Dubbo, in seconds: 31, 33, 35, 36, 38, 41, 45, 47. What is the interquartile range?",
+   "opts": [
+    "\\(9\\)",
+    "\\(16\\)",
+    "\\(12\\)",
+    "\\(6\\)"
+   ],
+   "why": "The data has 8 values, so the lower half is 31, 33, 35, 36 and \\(Q_{1} = 34\\). The upper half is 38, 41, 45, 47 and \\(Q_{3} = 43\\). The IQR is \\(43 - 34 = 9\\), not the range \\(47 - 31 = 16\\).",
+   "clue": "Split the 8 values into two halves of 4 and find the median of each."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The spread of the middle half of the data",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(9\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card example (Q1 = 4, Q3 = 10, IQR = 6) and question b (Q1 = 34, Q3 = 43, IQR = 9) both check out."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "For 31, 33, 34, 36, 38, 41, 45, 47: Q1 = 33.5, Q3 = 43, so the IQR is 9.5. None of the options (7, 16, 14, 12) is 9.5, so the question has no right answer. The why gives 9.5, which contradicts the option list. Add 9.5 as an option, or change the data so the IQR matches one of the options."
+   }
+  ],
+  "flags": [
+   "Question b: the checker picked “None of the options: the correct IQR is 9.5”, not the writer’s answer “\\(12\\)”.",
+   "Question b, fact: For 31, 33, 34, 36, 38, 41, 45, 47: Q1 = 33.5, Q3 = 43, so the IQR is 9.5. None of the options (7, 16, 14, 12) is 9.5, so the question has no right answer. The why gives 9.5, which contradicts the option list. Add 9.5 as an option, or change the data so the IQR matches one of the options."
+  ]
+ },
+ "final": {
+  "title": "Quartiles and interquartile range",
+  "card": [
+   "Put the data in order from smallest to largest. The median is the middle value. It splits the data into a lower half and an upper half.",
+   [
+    "Lower quartile",
+    "\\(Q_{1}\\) is the median of the lower half. When the number of values is odd, leave the overall median out of both halves. When it is even, split the values into two equal halves."
+   ],
+   [
+    "Upper quartile",
+    "\\(Q_{3}\\) is the median of the upper half. Together with the median, \\(Q_{1}\\) and \\(Q_{3}\\) split the data into four equal parts."
+   ],
+   "The interquartile range is \\(\\text{IQR} = Q_{3} - Q_{1}\\). It is the spread of the middle half of the data. Example: for 2, 4, 5, 7, 8, 10, 12, the median is 7, \\(Q_{1} = 4\\) and \\(Q_{3} = 10\\), so the IQR is \\(10 - 4 = 6\\)."
+  ],
+  "remember": "Order the data, find the median of each half, then subtract: \\(Q_{3} - Q_{1}\\).",
+  "a": {
+   "q": "What does the interquartile range measure?",
+   "opts": [
+    "The spread of the middle half of the data",
+    "The spread from the smallest to the largest value",
+    "The average distance of values from the mean",
+    "The middle value of the ordered data"
+   ],
+   "why": "The IQR is \\(Q_{3} - Q_{1}\\), which covers the middle half of the data. The spread from smallest to largest is the range, which is a different measure.",
+   "clue": "Think about which values \\(Q_{1}\\) and \\(Q_{3}\\) sit between."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia times her laps at a pool in Dubbo, in seconds: 31, 33, 35, 36, 38, 41, 45, 47. What is the interquartile range?",
+   "opts": [
+    "\\(9\\)",
+    "\\(16\\)",
+    "\\(12\\)",
+    "\\(6\\)"
+   ],
+   "why": "The data has 8 values, so the lower half is 31, 33, 35, 36 and \\(Q_{1} = 34\\). The upper half is 38, 41, 45, 47 and \\(Q_{3} = 43\\). The IQR is \\(43 - 34 = 9\\), not the range \\(47 - 31 = 16\\).",
+   "clue": "Split the 8 values into two halves of 4 and find the median of each."
+  }
+ },
+ "cleared_by": "recheck"
 }

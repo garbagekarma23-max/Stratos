@@ -16,8 +16,238 @@
    0.233
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:42Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00636,
+  "check": 0.01156,
+  "fix": 0.01699,
+  "recheck": 0.00982
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, Using brackets, covers only brackets, while the new point also teaches commas in lists, after introductory clauses and around extra information, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Commas and brackets",
+  "card": [
+   [
+    "List",
+    "Commas separate items in a list: Mia packed a hat, a drink bottle and a towel. The comma before \"and\" is usually left out in Australian school writing."
+   ],
+   [
+    "Introductory clause",
+    "A comma follows an opening clause that comes before the main clause: When the bell rang, the students left. The main clause is the part that could stand alone as a sentence."
+   ],
+   [
+    "Extra information",
+    "A pair of commas can mark off extra information in the middle of a sentence: Mr Lee, our coach, was late. Take the extra part out and the sentence still makes sense."
+   ],
+   [
+    "Brackets",
+    "Brackets also hold extra information the sentence could do without: The match (which was postponed twice) finally began. Brackets always come in pairs."
+   ]
+  ],
+  "remember": "Commas separate, follow openers and mark off extras. Brackets hold extras the sentence can do without.",
+  "a": {
+   "q": "Which sentence uses commas correctly?",
+   "opts": [
+    "Jess bought apples, pears and plums",
+    "Jess bought, apples pears and plums",
+    "Jess, bought apples pears, and plums",
+    "Jess bought apples pears, and, plums"
+   ],
+   "why": "A comma goes between each item in a list, and \"and\" joins the last two. The other options put commas in the middle of a item group or after the verb, where they do not separate items.",
+   "clue": "Which one puts a comma between the items, not before them?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which sentence punctuates the extra information correctly?",
+   "opts": [
+    "Our dog Biscuit, a kelpie, loves the beach",
+    "Our dog Biscuit, a kelpie loves the beach",
+    "Our dog Biscuit a kelpie, loves the beach",
+    "Our dog, Biscuit a kelpie, loves the beach"
+   ],
+   "why": "The extra information \"a kelpie\" needs a comma before and after it, so the pair marks it off. The other options use only one comma or put the commas in the wrong places, so the extra part is not properly marked off.",
+   "clue": "Extra information needs a comma on both sides."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Jess bought apples, pears and plums",
+   "also_right": []
+  },
+  "b": {
+   "best": "Our dog Biscuit, a kelpie, loves the beach",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Why (a) has a grammar slip and is unclear: \"in the middle of a item group\" should be \"an item\", and \"item group\" is a confusing phrase. It also says the wrong options put commas \"after the verb\", but one of them puts the comma after the subject (\"Jess, bought\"), not after the verb."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate, and each question has exactly one right answer. The only fix needed is in Why (a): change \"a item group\" to clear wording, and correct its description of where the wrong commas fall."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: Why (a) has a grammar slip and is unclear: \"in the middle of a item group\" should be \"an item\", and \"item group\" is a confusing phrase. It also says the wrong options put commas \"after the verb\", but one of them puts the comma after the subject (\"Jess, bought\"), not after the verb."
+ ],
+ "proposal": {
+  "title": "Commas and brackets",
+  "card": [
+   [
+    "List",
+    "Commas separate items in a list: Mia packed a hat, a drink bottle and a towel. The comma before \"and\" is usually left out in Australian school writing."
+   ],
+   [
+    "Introductory clause",
+    "A comma follows an opening clause that comes before the main clause: When the bell rang, the students left. The main clause is the part that could stand alone as a sentence."
+   ],
+   [
+    "Extra information",
+    "A pair of commas can mark off extra information in the middle of a sentence: Mr Lee, our coach, was late. Take the extra part out and the sentence still makes sense."
+   ],
+   [
+    "Brackets",
+    "Brackets also hold extra information the sentence could do without: The match (which was postponed twice) finally began. Brackets always come in pairs."
+   ]
+  ],
+  "remember": "Commas separate, follow openers and mark off extras. Brackets hold extras the sentence can do without.",
+  "a": {
+   "q": "Which sentence uses commas correctly?",
+   "opts": [
+    "Jess bought apples, pears and plums",
+    "Jess bought, apples pears and plums",
+    "Jess, bought apples pears, and plums",
+    "Jess bought apples pears, and, plums"
+   ],
+   "why": "A comma goes between the items in a list, and \"and\" joins the last two. The other options put a comma after the subject, after the verb or around \"and\", and none has a comma between apples and pears.",
+   "clue": "Which one puts a comma between the items, not before them?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which sentence punctuates the extra information correctly?",
+   "opts": [
+    "Our dog Biscuit, a kelpie, loves the beach",
+    "Our dog Biscuit, a kelpie loves the beach",
+    "Our dog Biscuit a kelpie, loves the beach",
+    "Our dog, Biscuit a kelpie, loves the beach"
+   ],
+   "why": "The extra information \"a kelpie\" needs a comma before and after it, so the pair marks it off. The other options use only one comma or put the commas in the wrong places, so the extra part is not properly marked off.",
+   "clue": "Extra information needs a comma on both sides."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Jess bought apples, pears and plums",
+    "also_right": []
+   },
+   "b": {
+    "best": "Our dog Biscuit, a kelpie, loves the beach",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Why (a) has a grammar slip and is unclear: \"in the middle of a item group\" should be \"an item\", and \"item group\" is a confusing phrase. It also says the wrong options put commas \"after the verb\", but one of them puts the comma after the subject (\"Jess, bought\"), not after the verb."
+   }
+  ],
+  "flags": [
+   "Question a, wording: Why (a) has a grammar slip and is unclear: \"in the middle of a item group\" should be \"an item\", and \"item group\" is a confusing phrase. It also says the wrong options put commas \"after the verb\", but one of them puts the comma after the subject (\"Jess, bought\"), not after the verb."
+  ]
+ },
+ "final": {
+  "title": "Commas and brackets",
+  "card": [
+   [
+    "List",
+    "Commas separate items in a list: Mia packed a hat, a drink bottle and a towel. The comma before \"and\" is usually left out in Australian school writing."
+   ],
+   [
+    "Introductory clause",
+    "A comma follows an opening clause that comes before the main clause: When the bell rang, the students left. The main clause is the part that could stand alone as a sentence."
+   ],
+   [
+    "Extra information",
+    "A pair of commas can mark off extra information in the middle of a sentence: Mr Lee, our coach, was late. Take the extra part out and the sentence still makes sense."
+   ],
+   [
+    "Brackets",
+    "Brackets also hold extra information the sentence could do without: The match (which was postponed twice) finally began. Brackets always come in pairs."
+   ]
+  ],
+  "remember": "Commas separate, follow openers and mark off extras. Brackets hold extras the sentence can do without.",
+  "a": {
+   "q": "Which sentence uses commas correctly?",
+   "opts": [
+    "Jess bought apples, pears and plums",
+    "Jess bought, apples pears and plums",
+    "Jess, bought apples pears, and plums",
+    "Jess bought apples pears, and, plums"
+   ],
+   "why": "A comma goes between the items in a list, and \"and\" joins the last two. The other options put a comma after the subject, after the verb or around \"and\", and none has a comma between apples and pears.",
+   "clue": "Which one puts a comma between the items, not before them?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which sentence punctuates the extra information correctly?",
+   "opts": [
+    "Our dog Biscuit, a kelpie, loves the beach",
+    "Our dog Biscuit, a kelpie loves the beach",
+    "Our dog Biscuit a kelpie, loves the beach",
+    "Our dog, Biscuit a kelpie, loves the beach"
+   ],
+   "why": "The extra information \"a kelpie\" needs a comma before and after it, so the pair marks it off. The other options use only one comma or put the commas in the wrong places, so the extra part is not properly marked off.",
+   "clue": "Extra information needs a comma on both sides."
+  }
+ },
+ "cleared_by": "recheck"
 }

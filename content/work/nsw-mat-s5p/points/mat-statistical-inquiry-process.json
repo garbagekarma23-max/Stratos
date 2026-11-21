@@ -20,8 +20,227 @@
    0.221
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 may adapt mat-statistical-investigation-process, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:57Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:55Z write: done",
+  "2026-11-20T12:44:59Z check: flagged",
+  "2026-11-20T12:53:28Z fix: suggested",
+  "2026-11-20T13:23:44Z autoreview: cleared with the fix (a wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "confirm": 0.01191,
+  "write": 0.00639,
+  "check": 0.01038,
+  "fix": 0.01557
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-statistical-investigation-process",
+  "changes": [
+   "Add a step on planning how to collect the data, such as deciding what to measure and who to survey, since the brief names planning and the card goes straight from the question to collecting.",
+   "Change the examples from Year 11 students to Years 9 and 10 students so they suit the Stage 5 course."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same question, collect, analyse and conclude process at a suitable level, but it is written for Year 11 and leaves out the planning step the Stage 5 point requires.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point teaches the investigation process as question, collect, display, analyse, conclude, but it has no step for planning how to collect data, which this brief and the Stage 5 inquiry cycle need, so matching it would mean adding a new step rather than making a small change.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "The statistical inquiry process",
+  "card": [
+   [
+    "Pose",
+    "Start with a clear question that data can answer, such as \"How many hours do Year 9 students at our school sleep on school nights?\""
+   ],
+   [
+    "Plan",
+    "Decide what data you need, who you will collect it from and how, such as a short survey with one question about hours of sleep."
+   ],
+   [
+    "Collect",
+    "Gather the data by following the plan and record it carefully, in a table or spreadsheet."
+   ],
+   [
+    "Analyse and report",
+    "Analyse the data with a graph and with measures such as the mean or median. Then report a conclusion that answers the original question."
+   ]
+  ],
+  "remember": "A statistical inquiry runs from a question, to a plan, to data, to analysis, to a conclusion that answers the question.",
+  "a": {
+   "q": "Mia wants to find out how long students at her school spend travelling to school. She writes a survey form and decides which students to ask. Which step is she doing?",
+   "opts": [
+    "Planning how to collect the data",
+    "Posing the question",
+    "Analysing the data",
+    "Reporting the conclusion"
+   ],
+   "why": "Writing the survey form and deciding who to ask is planning how to collect the data. Posing the question comes earlier, when Mia decides what she wants to find out.",
+   "clue": "She has not collected any answers yet."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom asks \"Do students at my school walk or ride to school?\" He collects the answers and draws a graph. What should he do next to finish the inquiry?",
+   "opts": [
+    "Write a conclusion that answers his question",
+    "Change the question to match the graph",
+    "Collect the data again with a new plan",
+    "Pose a second question about sport"
+   ],
+   "why": "The graph is the analysis. The inquiry ends with a conclusion that answers the original question, such as whether most students walk or ride. Collecting again or changing the question is not needed.",
+   "clue": "The last step goes back to the question he first asked."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Planning how to collect the data",
+   "also_right": []
+  },
+  "b": {
+   "best": "Write a conclusion that answers his question",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option, 'Planning how to collect the data', is clearly the longest and the only one with extra detail. The others are two or three words each, so a student could pick it without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct. In question a, the right option is clearly longer than the others and stands out, which could give the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option, 'Planning how to collect the data', is clearly the longest and the only one with extra detail. The others are two or three words each, so a student could pick it without knowing the idea."
+ ],
+ "proposal": {
+  "title": "The statistical inquiry process",
+  "card": [
+   [
+    "Pose",
+    "Start with a clear question that data can answer, such as \"How many hours do Year 9 students at our school sleep on school nights?\""
+   ],
+   [
+    "Plan",
+    "Decide what data you need, who you will collect it from and how, such as a short survey with one question about hours of sleep."
+   ],
+   [
+    "Collect",
+    "Gather the data by following the plan and record it carefully, in a table or spreadsheet."
+   ],
+   [
+    "Analyse and report",
+    "Analyse the data with a graph and with measures such as the mean or median. Then report a conclusion that answers the original question."
+   ]
+  ],
+  "remember": "A statistical inquiry runs from a question, to a plan, to data, to analysis, to a conclusion that answers the question.",
+  "a": {
+   "q": "Mia wants to find out how long students at her school spend travelling to school. She writes a survey form and decides which students to ask. Which step is she doing?",
+   "opts": [
+    "Planning how to collect the data",
+    "Posing the question to investigate",
+    "Analysing the data that was collected",
+    "Reporting a conclusion from the data"
+   ],
+   "why": "Writing the survey form and deciding who to ask is planning how to collect the data. Posing the question comes earlier, when Mia decides what she wants to find out. She has no answers yet, so she cannot analyse or report.",
+   "clue": "She has not collected any answers yet."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom asks \"Do students at my school walk or ride to school?\" He collects the answers and draws a graph. What should he do next to finish the inquiry?",
+   "opts": [
+    "Write a conclusion that answers his question",
+    "Change the question to match the graph",
+    "Collect the data again with a new plan",
+    "Pose a second question about sport"
+   ],
+   "why": "The graph is the analysis. The inquiry ends with a conclusion that answers the original question, such as whether most students walk or ride. Collecting again or changing the question is not needed.",
+   "clue": "The last step goes back to the question he first asked."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:44Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option, 'Planning how to collect the data', is clearly the longest and the only one with extra detail. The others are two or three words each, so a student could pick it without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The right option, 'Planning how to collect the data', is clearly the longest and the only one with extra detail. The others are two or three words each, so a student could pick it without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "The statistical inquiry process",
+  "card": [
+   [
+    "Pose",
+    "Start with a clear question that data can answer, such as \"How many hours do Year 9 students at our school sleep on school nights?\""
+   ],
+   [
+    "Plan",
+    "Decide what data you need, who you will collect it from and how, such as a short survey with one question about hours of sleep."
+   ],
+   [
+    "Collect",
+    "Gather the data by following the plan and record it carefully, in a table or spreadsheet."
+   ],
+   [
+    "Analyse and report",
+    "Analyse the data with a graph and with measures such as the mean or median. Then report a conclusion that answers the original question."
+   ]
+  ],
+  "remember": "A statistical inquiry runs from a question, to a plan, to data, to analysis, to a conclusion that answers the question.",
+  "a": {
+   "q": "Mia wants to find out how long students at her school spend travelling to school. She writes a survey form and decides which students to ask. Which step is she doing?",
+   "opts": [
+    "Planning how to collect the data",
+    "Posing the question to investigate",
+    "Analysing the data that was collected",
+    "Reporting a conclusion from the data"
+   ],
+   "why": "Writing the survey form and deciding who to ask is planning how to collect the data. Posing the question comes earlier, when Mia decides what she wants to find out. She has no answers yet, so she cannot analyse or report.",
+   "clue": "She has not collected any answers yet."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom asks \"Do students at my school walk or ride to school?\" He collects the answers and draws a graph. What should he do next to finish the inquiry?",
+   "opts": [
+    "Write a conclusion that answers his question",
+    "Change the question to match the graph",
+    "Collect the data again with a new plan",
+    "Pose a second question about sport"
+   ],
+   "why": "The graph is the analysis. The inquiry ends with a conclusion that answers the original question, such as whether most students walk or ride. Collecting again or changing the question is not needed.",
+   "clue": "The last step goes back to the question he first asked."
+  }
+ },
+ "cleared_by": "auto"
 }

@@ -24,8 +24,238 @@
    0.259
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 may adapt sci-balanced-unbalanced-forces, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:59Z confirm: Claude Opus 5.5 may reuse sci-balanced-unbalanced-forces, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt sci-balanced-unbalanced-forces (2 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting sci-balanced-unbalanced-forces on the next run",
+  "2026-11-20T14:12:40Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00041,
+  "confirm": 0.01254,
+  "adapt": 0.00594,
+  "check": 0.00937
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "sci-balanced-unbalanced-forces",
+  "changes": [
+   "Add a card line explaining that force arrows show the size and direction of each force on a diagram, since the brief teaches this and the card does not."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same balanced and unbalanced forces idea at a suitable Year 7 depth, but it does not cover the force arrows that the NSW brief includes, so it needs a small addition.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "sci-balanced-unbalanced-forces",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches the same Year 7 idea: balanced forces leave motion unchanged and unbalanced forces make an object start, stop, speed up, slow down or turn. Its examples and questions suit NSW Stage 4. The brief's mention of force arrows is only a lead-in, and force arrows are already taught in the separate force point.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "sci-balanced-unbalanced-forces",
+  "changes": [
+   "Add a card line saying force arrows show each force acting on an object, with the arrow's length showing the size of the force and its direction showing which way the force acts.",
+   "Make one of the two questions ask students to read force arrows to decide whether the forces are balanced or unbalanced."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card2",
+   "card2 label",
+   "card3",
+   "card3 label",
+   "card4",
+   "card4 label",
+   "remember",
+   "a.q",
+   "a.opt1",
+   "a.opt2",
+   "a.opt3",
+   "a.opt4",
+   "a.why",
+   "a.clue",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches balanced and unbalanced forces at the right depth, but it never mentions force arrows, which the brief asks for. No other point in this NSW chapter teaches force arrows, so the point needs a line on them.",
+   "item": "190d0e439c657c49",
+   "result": "decided",
+   "saved": {
+    "id": "sci-balanced-unbalanced-forces-nsw",
+    "title": "Balanced and unbalanced forces",
+    "brief": "a27354c175e0",
+    "shortlist": [
+     [
+      "sci-balanced-unbalanced-forces",
+      0.84
+     ],
+     [
+      "sci-force",
+      0.561
+     ],
+     [
+      "sci-newton-s-first-law",
+      0.377
+     ],
+     [
+      "sci-mass-effect-force",
+      0.374
+     ],
+     [
+      "sci-simple-machines",
+      0.259
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00041,
+     "confirm": 0.01254
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "sci-balanced-unbalanced-forces",
+     "changes": [
+      "Add a card line explaining that force arrows show the size and direction of each force on a diagram, since the brief teaches this and the card does not."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same balanced and unbalanced forces idea at a suitable Year 7 depth, but it does not cover the force arrows that the NSW brief includes, so it needs a small addition.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "reuse",
+     "same": "sci-balanced-unbalanced-forces",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The bank point teaches the same Year 7 idea: balanced forces leave motion unchanged and unbalanced forces make an object start, stop, speed up, slow down or turn. Its examples and questions suit NSW Stage 4. The brief's mention of force arrows is only a lead-in, and force arrows are already taught in the separate force point.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "27197e04036bbf60"
+  }
+ ],
+ "draft": {
+  "title": "Balanced and unbalanced forces",
+  "card": [
+   "Several forces can act on an object at once. What matters is the total effect of all of them together.",
+   [
+    "Force arrows",
+    "Force arrows show each force acting on an object. The length of an arrow shows the size of the force, and its direction shows which way the force acts."
+   ],
+   [
+    "Balanced forces",
+    "forces that are equal in size and opposite in direction, so they cancel out. An object at rest stays still, and a moving object keeps moving at the same speed in the same direction."
+   ],
+   [
+    "Unbalanced forces",
+    "forces that do not cancel out. The object starts moving, stops, speeds up, slows down or changes direction."
+   ]
+  ],
+  "remember": "Read the arrows. Equal arrows in opposite directions are balanced and the motion stays the same. Unequal arrows are unbalanced and change the motion.",
+  "a": {
+   "q": "A force diagram of a box on a floor shows an arrow of 20 N to the right and an arrow of 35 N to the left. What do the arrows show?",
+   "opts": [
+    "Unbalanced forces, so the box changes its motion",
+    "Balanced forces, so the box changes its motion",
+    "Balanced forces, so the box keeps its motion the same",
+    "Unbalanced forces, so the box keeps its motion the same"
+   ],
+   "why": "The arrows point in opposite directions but are different lengths, so they do not cancel. Unbalanced forces change the motion. Here the bigger force is to the left, so the box is pushed that way.",
+   "clue": "Are the two arrows the same length?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Two teams pull on opposite ends of a rope with equal force, and the rope does not move. Team A then pulls harder while Team B stays the same. What happens to the rope?",
+   "opts": [
+    "It moves towards Team A because the forces are unbalanced",
+    "It stays still because the forces are still balanced",
+    "It moves towards Team B because the forces are unbalanced",
+    "It stays still because the forces are unbalanced"
+   ],
+   "why": "At first the equal, opposite pulls cancel, so the rope stays still. When Team A pulls harder the forces no longer cancel, so the rope starts to move in the direction of the bigger force, towards Team A. Team B's pull is smaller, so the rope does not go that way.",
+   "clue": "Which team now has the bigger pull?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Unbalanced forces, so the box changes its motion",
+   "also_right": []
+  },
+  "b": {
+   "best": "It moves towards Team A because the forces are unbalanced",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Balanced and unbalanced forces",
+  "card": [
+   "Several forces can act on an object at once. What matters is the total effect of all of them together.",
+   [
+    "Force arrows",
+    "Force arrows show each force acting on an object. The length of an arrow shows the size of the force, and its direction shows which way the force acts."
+   ],
+   [
+    "Balanced forces",
+    "forces that are equal in size and opposite in direction, so they cancel out. An object at rest stays still, and a moving object keeps moving at the same speed in the same direction."
+   ],
+   [
+    "Unbalanced forces",
+    "forces that do not cancel out. The object starts moving, stops, speeds up, slows down or changes direction."
+   ]
+  ],
+  "remember": "Read the arrows. Equal arrows in opposite directions are balanced and the motion stays the same. Unequal arrows are unbalanced and change the motion.",
+  "a": {
+   "q": "A force diagram of a box on a floor shows an arrow of 20 N to the right and an arrow of 35 N to the left. What do the arrows show?",
+   "opts": [
+    "Unbalanced forces, so the box changes its motion",
+    "Balanced forces, so the box changes its motion",
+    "Balanced forces, so the box keeps its motion the same",
+    "Unbalanced forces, so the box keeps its motion the same"
+   ],
+   "why": "The arrows point in opposite directions but are different lengths, so they do not cancel. Unbalanced forces change the motion. Here the bigger force is to the left, so the box is pushed that way.",
+   "clue": "Are the two arrows the same length?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Two teams pull on opposite ends of a rope with equal force, and the rope does not move. Team A then pulls harder while Team B stays the same. What happens to the rope?",
+   "opts": [
+    "It moves towards Team A because the forces are unbalanced",
+    "It stays still because the forces are still balanced",
+    "It moves towards Team B because the forces are unbalanced",
+    "It stays still because the forces are unbalanced"
+   ],
+   "why": "At first the equal, opposite pulls cancel, so the rope stays still. When Team A pulls harder the forces no longer cancel, so the rope starts to move in the direction of the bigger force, towards Team A. Team B's pull is smaller, so the rope does not go that way.",
+   "clue": "Which team now has the bigger pull?"
+  }
+ }
 }

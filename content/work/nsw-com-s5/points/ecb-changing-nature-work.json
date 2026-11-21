@@ -8,8 +8,238 @@
    0.243
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: flagged",
+  "2026-11-20T12:53:23Z fix: suggested",
+  "2026-11-20T13:37:05Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.00606,
+  "check": 0.00972,
+  "fix": 0.02102,
+  "recheck": 0.0065
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers casual and gig work conditions such as pay, leave and flexibility, while the new point is about how automation, AI, working from home and gig work are changing jobs and the skills they need, so it is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The changing nature of work",
+  "card": [
+   [
+    "Automation",
+    "Machines or software do tasks that people once did, such as self-serve checkouts or robots in a factory. Some jobs shrink, and new jobs appear to build and run the machines."
+   ],
+   [
+    "Artificial intelligence",
+    "Artificial intelligence (AI) is software that can do tasks that seem to need thinking, such as sorting data or writing a first draft. It changes the tasks within many jobs, not only factory jobs."
+   ],
+   [
+    "Working from home",
+    "Better internet and online tools let many people do their jobs away from the workplace. This can save travel time and change how teams meet and share work."
+   ],
+   [
+    "Gig work",
+    "Gig work is short jobs paid one at a time, often arranged through an app, such as food delivery. Gig workers choose when to work, but the amount of work and pay can change from week to week."
+   ]
+  ],
+  "remember": "New technology and new ways of working change jobs, and so the skills workers need change too.",
+  "a": {
+   "q": "A supermarket in Orange replaces most staffed checkouts with self-serve machines. Which change in work does this show?",
+   "opts": [
+    "Automation",
+    "Gig work",
+    "Working from home",
+    "Volunteering"
+   ],
+   "why": "Machines now do a task that cashiers once did, which is automation. It is not gig work, because the jobs are not short tasks arranged through an app.",
+   "clue": "Who or what is now doing the task?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tariq in Wollongong delivers meals using an app. He accepts jobs when he wants and is paid for each delivery. Which change in work does this best show?",
+   "opts": [
+    "Gig work, paid one job at a time",
+    "Automation, as machines do the delivery",
+    "Working from home using online tools",
+    "Artificial intelligence writing his work"
+   ],
+   "why": "Tariq is paid for each short job arranged through an app, which is gig work. Apps are technology, but they do not make this automation, because a person still does the delivery.",
+   "clue": "Look at how Tariq is paid and how he finds his jobs."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Automation",
+   "also_right": []
+  },
+  "b": {
+   "best": "Gig work, paid one job at a time",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option adds 'paid one job at a time', which repeats both the stem's 'paid for each delivery' and the card's definition of gig work. A student can match the stem to this option without knowing what gig work is. The other options' added details plainly contradict the stem."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question a are accurate. In question b, the right option repeats the stem's key detail ('paid one job at a time'), so the answer can be picked by matching words rather than knowing the idea."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option adds 'paid one job at a time', which repeats both the stem's 'paid for each delivery' and the card's definition of gig work. A student can match the stem to this option without knowing what gig work is. The other options' added details plainly contradict the stem."
+ ],
+ "proposal": {
+  "title": "The changing nature of work",
+  "card": [
+   [
+    "Automation",
+    "Machines or software do tasks that people once did, such as self-serve checkouts or robots in a factory. Some jobs shrink, and new jobs appear to build and run the machines."
+   ],
+   [
+    "Artificial intelligence",
+    "Artificial intelligence (AI) is software that can do tasks that seem to need thinking, such as sorting data or writing a first draft. It changes the tasks within many jobs, so workers may need new skills, such as checking what AI produces."
+   ],
+   [
+    "Working from home",
+    "Better internet and online tools let many people do their jobs away from the workplace. This can save travel time and change how teams meet and share work."
+   ],
+   [
+    "Gig work",
+    "Gig work is short jobs paid one at a time, often arranged through an app, such as food delivery. Gig workers choose when to work, but the amount of work and pay can change from week to week."
+   ]
+  ],
+  "remember": "New technology and new ways of working change jobs, and so the skills workers need change too.",
+  "a": {
+   "q": "A supermarket in Orange replaces most staffed checkouts with self-serve machines. Which change in work does this show?",
+   "opts": [
+    "Automation",
+    "Gig work",
+    "Working from home",
+    "Artificial intelligence"
+   ],
+   "why": "Machines now do a task that cashiers once did, which is automation. It is not gig work, because the jobs are not short tasks arranged through an app.",
+   "clue": "Who or what is now doing the task?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Tariq in Wollongong uses an app to pick up meal deliveries on weekends. Some weeks he gets many jobs, and other weeks only a few. Which change in work does this best show?",
+   "opts": [
+    "Gig work",
+    "Automation",
+    "Working from home",
+    "Artificial intelligence"
+   ],
+   "why": "Tariq does short delivery jobs arranged through an app, and his amount of work changes from week to week, which is gig work. The app is technology, but this is not automation, because a person, not a machine, still does the delivery.",
+   "clue": "Think about how Tariq finds his jobs and who does them."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:05Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Automation",
+    "also_right": []
+   },
+   "b": {
+    "best": "Gig work",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:05Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option adds 'paid one job at a time', which repeats both the stem's 'paid for each delivery' and the card's definition of gig work. A student can match the stem to this option without knowing what gig work is. The other options' added details plainly contradict the stem."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The right option adds 'paid one job at a time', which repeats both the stem's 'paid for each delivery' and the card's definition of gig work. A student can match the stem to this option without knowing what gig work is. The other options' added details plainly contradict the stem."
+  ]
+ },
+ "final": {
+  "title": "The changing nature of work",
+  "card": [
+   [
+    "Automation",
+    "Machines or software do tasks that people once did, such as self-serve checkouts or robots in a factory. Some jobs shrink, and new jobs appear to build and run the machines."
+   ],
+   [
+    "Artificial intelligence",
+    "Artificial intelligence (AI) is software that can do tasks that seem to need thinking, such as sorting data or writing a first draft. It changes the tasks within many jobs, so workers may need new skills, such as checking what AI produces."
+   ],
+   [
+    "Working from home",
+    "Better internet and online tools let many people do their jobs away from the workplace. This can save travel time and change how teams meet and share work."
+   ],
+   [
+    "Gig work",
+    "Gig work is short jobs paid one at a time, often arranged through an app, such as food delivery. Gig workers choose when to work, but the amount of work and pay can change from week to week."
+   ]
+  ],
+  "remember": "New technology and new ways of working change jobs, and so the skills workers need change too.",
+  "a": {
+   "q": "A supermarket in Orange replaces most staffed checkouts with self-serve machines. Which change in work does this show?",
+   "opts": [
+    "Automation",
+    "Gig work",
+    "Working from home",
+    "Artificial intelligence"
+   ],
+   "why": "Machines now do a task that cashiers once did, which is automation. It is not gig work, because the jobs are not short tasks arranged through an app.",
+   "clue": "Who or what is now doing the task?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Tariq in Wollongong uses an app to pick up meal deliveries on weekends. Some weeks he gets many jobs, and other weeks only a few. Which change in work does this best show?",
+   "opts": [
+    "Gig work",
+    "Automation",
+    "Working from home",
+    "Artificial intelligence"
+   ],
+   "why": "Tariq does short delivery jobs arranged through an app, and his amount of work changes from week to week, which is gig work. The app is technology, but this is not automation, because a person, not a machine, still does the delivery.",
+   "clue": "Think about how Tariq finds his jobs and who does them."
+  }
+ },
+ "cleared_by": "recheck"
 }

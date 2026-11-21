@@ -24,8 +24,186 @@
    0.244
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:54Z write: failed the content check, writing again",
+  "2026-11-20T12:35:53Z write: done (still fails the content check)",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:23:42Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.02422,
+  "check": 0.01152,
+  "fix": 0.02371
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches converting between cubic units or the 1 m³ = 1000 L relationship; they focus on prism and cylinder volume, with capacity only as a side note, so the new point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Volume and capacity units",
+  "card": [
+   "Volume is the space a solid takes up, in cubic units such as \\(\\text{cm}^{3}\\) and \\(\\text{m}^{3}\\). Capacity is how much a container holds, in units such as mL and L.",
+   "\\(1 \\text{ cm}^{3} = 1\\) mL, and \\(1 \\text{ m}^{3} = 1000\\) L. Also \\(1\\) L \\(= 1000\\) mL, so \\(1\\) L \\(= 1000 \\text{ cm}^{3}\\).",
+   "Cubic units change by more than length units do. Since \\(1\\) m \\(= 100\\) cm, we get \\(1 \\text{ m}^{3} = 100 \\times 100 \\times 100 = 1{,}000{,}000 \\text{ cm}^{3}\\).",
+   [
+    "Example",
+    "A tank holds 3 L. Since \\(1\\) L \\(= 1000\\) mL, it holds \\(3 \\times 1000 = 3000\\) mL, which is \\(3000 \\text{ cm}^{3}\\)."
+   ]
+  ],
+  "remember": "\\(1 \\text{ cm}^{3} = 1\\) mL and \\(1 \\text{ m}^{3} = 1000\\) L. A cubic unit changes by the length factor cubed.",
+  "a": {
+   "q": "A fish tank holds 12 L of water. What is this in \\(\\text{cm}^{3}\\)?",
+   "opts": [
+    "\\(12{,}000 \\text{ cm}^{3}\\)",
+    "\\(1200 \\text{ cm}^{3}\\)",
+    "\\(120 \\text{ cm}^{3}\\)",
+    "\\(12 \\text{ cm}^{3}\\)"
+   ],
+   "why": "\\(1\\) L \\(= 1000\\) mL and \\(1\\) mL \\(= 1 \\text{ cm}^{3}\\), so \\(12\\) L \\(= 12 \\times 1000 = 12{,}000 \\text{ cm}^{3}\\). Multiplying by only 100 would give 1200, which treats the litre like a length conversion.",
+   "clue": "Change litres to millilitres first."
+  },
+  "b": {
+   "d": 3,
+   "q": "A swimming pool has a volume of \\(45 \\text{ m}^{3}\\). How many litres of water does it hold when full?",
+   "opts": [
+    "45,000 L",
+    "4500 L",
+    "450 L",
+    "45,000,000 L"
+   ],
+   "why": "\\(1 \\text{ m}^{3} = 1000\\) L, so \\(45 \\text{ m}^{3} = 45 \\times 1000 = 45{,}000\\) L. The option 45,000,000 comes from using \\(1{,}000{,}000\\) cm³ per m³, which gives cm³ and not litres.",
+   "clue": "One cubic metre holds 1000 litres."
+  }
+ },
+ "redone": true,
+ "local": [
+  "mat-volume-capacity-units writes maths as plain text, a maths symbol outside \\( \\) (² ³ √ ≤ ≥ ≠ ± × ÷ − π θ ∞ ∫ Σ Δ and the like), in: \\(1 \\text{ m}^{3} = 1000\\) L, so \\(45 \\text{ m}^{3} = 45 \\times 1000 = 45{,}000\\) L. The option 45,000,000 comes from using \\(1{,}000{,}000\\) cm³ per m³, which gives cm³ and not litres. Write the maths in LaTeX between \\( and \\)."
+ ],
+ "check": {
+  "a": {
+   "best": "\\(12{,}000 \\text{ cm}^{3}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "45,000 L",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) writes 'cm³' in plain text with a superscript ³ instead of LaTeX, e.g. \\(1{,}000{,}000 \\text{ cm}^{3}\\)."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, the questions and the intended answers (12,000 cm³ and 45,000 L) are all correct. The only problem is that why (b) writes 'cm³' as plain text instead of LaTeX."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: Why (b) writes 'cm³' in plain text with a superscript ³ instead of LaTeX, e.g. \\(1{,}000{,}000 \\text{ cm}^{3}\\).",
+  "Content check: mat-volume-capacity-units writes maths as plain text, a maths symbol outside \\( \\) (² ³ √ ≤ ≥ ≠ ± × ÷ − π θ ∞ ∫ Σ Δ and the like), in: \\(1 \\text{ m}^{3} = 1000\\) L, so \\(45 \\text{ m}^{3} = 45 \\times 1000 = 45{,}000\\) L. The option 45,000,000 comes from using \\(1{,}000{,}000\\) cm³ per m³, which gives cm³ and not litres. Write the maths in LaTeX between \\( and \\)."
+ ],
+ "proposal": {
+  "title": "Volume and capacity units",
+  "card": [
+   "Volume is the space a solid takes up, in cubic units such as \\(\\text{cm}^{3}\\) and \\(\\text{m}^{3}\\). Capacity is how much a container holds, in units such as mL and L.",
+   "\\(1 \\text{ cm}^{3} = 1\\) mL, and \\(1 \\text{ m}^{3} = 1000\\) L. Also \\(1\\) L \\(= 1000\\) mL, so \\(1\\) L \\(= 1000 \\text{ cm}^{3}\\).",
+   "Cubic units change by more than length units do. Since \\(1\\) m \\(= 100\\) cm, \\(1 \\text{ m}^{3}\\) is \\(100 \\times 100 \\times 100\\), which is \\(1{,}000{,}000 \\text{ cm}^{3}\\).",
+   "For example, a jug holds 3 L. Since \\(1\\) L \\(= 1000\\) mL, it holds \\(3 \\times 1000 = 3000\\) mL, which is \\(3000 \\text{ cm}^{3}\\)."
+  ],
+  "remember": "Litres link to cubic units through mL and \\(\\text{m}^{3}\\). A cubic unit changes by the length factor cubed.",
+  "a": {
+   "q": "A fish tank holds 12 L of water. What is this in \\(\\text{cm}^{3}\\)?",
+   "opts": [
+    "\\(12{,}000 \\text{ cm}^{3}\\)",
+    "\\(1200 \\text{ cm}^{3}\\)",
+    "\\(120 \\text{ cm}^{3}\\)",
+    "\\(12 \\text{ cm}^{3}\\)"
+   ],
+   "why": "\\(1\\) L \\(= 1000\\) mL and \\(1\\) mL \\(= 1 \\text{ cm}^{3}\\), so \\(12\\) L is \\(12 \\times 1000 = 12{,}000 \\text{ cm}^{3}\\). Multiplying by only 100 would give 1200, which treats the litre like a length conversion.",
+   "clue": "Change litres to millilitres first."
+  },
+  "b": {
+   "d": 3,
+   "q": "A swimming pool has a volume of \\(45 \\text{ m}^{3}\\). How many litres of water does it hold when full?",
+   "opts": [
+    "45,000 L",
+    "4500 L",
+    "450 L",
+    "45,000,000 L"
+   ],
+   "why": "\\(1 \\text{ m}^{3} = 1000\\) L, so the pool holds \\(45 \\times 1000 = 45{,}000\\) L. The option 45,000,000 comes from using \\(1{,}000{,}000 \\text{ cm}^{3}\\) in each \\(\\text{m}^{3}\\), which gives the volume in \\(\\text{cm}^{3}\\), not in litres.",
+   "clue": "One cubic metre holds 1000 litres."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:42Z",
+  "rules": 1,
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) writes 'cm³' in plain text with a superscript ³ instead of LaTeX, e.g. \\(1{,}000{,}000 \\text{ cm}^{3}\\)."
+   }
+  ],
+  "flags": [
+   "Question b, wording: Why (b) writes 'cm³' in plain text with a superscript ³ instead of LaTeX, e.g. \\(1{,}000{,}000 \\text{ cm}^{3}\\).",
+   "Content check: mat-volume-capacity-units writes maths as plain text, a maths symbol outside \\( \\) (² ³ √ ≤ ≥ ≠ ± × ÷ − π θ ∞ ∫ Σ Δ and the like), in: \\(1 \\text{ m}^{3} = 1000\\) L, so \\(45 \\text{ m}^{3} = 45 \\times 1000 = 45{,}000\\) L. The option 45,000,000 comes from using \\(1{,}000{,}000\\) cm³ per m³, which gives cm³ and not litres. Write the maths in LaTeX between \\( and \\)."
+  ]
+ },
+ "final": {
+  "title": "Volume and capacity units",
+  "card": [
+   "Volume is the space a solid takes up, in cubic units such as \\(\\text{cm}^{3}\\) and \\(\\text{m}^{3}\\). Capacity is how much a container holds, in units such as mL and L.",
+   "\\(1 \\text{ cm}^{3} = 1\\) mL, and \\(1 \\text{ m}^{3} = 1000\\) L. Also \\(1\\) L \\(= 1000\\) mL, so \\(1\\) L \\(= 1000 \\text{ cm}^{3}\\).",
+   "Cubic units change by more than length units do. Since \\(1\\) m \\(= 100\\) cm, \\(1 \\text{ m}^{3}\\) is \\(100 \\times 100 \\times 100\\), which is \\(1{,}000{,}000 \\text{ cm}^{3}\\).",
+   "For example, a jug holds 3 L. Since \\(1\\) L \\(= 1000\\) mL, it holds \\(3 \\times 1000 = 3000\\) mL, which is \\(3000 \\text{ cm}^{3}\\)."
+  ],
+  "remember": "Litres link to cubic units through mL and \\(\\text{m}^{3}\\). A cubic unit changes by the length factor cubed.",
+  "a": {
+   "q": "A fish tank holds 12 L of water. What is this in \\(\\text{cm}^{3}\\)?",
+   "opts": [
+    "\\(12{,}000 \\text{ cm}^{3}\\)",
+    "\\(1200 \\text{ cm}^{3}\\)",
+    "\\(120 \\text{ cm}^{3}\\)",
+    "\\(12 \\text{ cm}^{3}\\)"
+   ],
+   "why": "\\(1\\) L \\(= 1000\\) mL and \\(1\\) mL \\(= 1 \\text{ cm}^{3}\\), so \\(12\\) L is \\(12 \\times 1000 = 12{,}000 \\text{ cm}^{3}\\). Multiplying by only 100 would give 1200, which treats the litre like a length conversion.",
+   "clue": "Change litres to millilitres first."
+  },
+  "b": {
+   "d": 3,
+   "q": "A swimming pool has a volume of \\(45 \\text{ m}^{3}\\). How many litres of water does it hold when full?",
+   "opts": [
+    "45,000 L",
+    "4500 L",
+    "450 L",
+    "45,000,000 L"
+   ],
+   "why": "\\(1 \\text{ m}^{3} = 1000\\) L, so the pool holds \\(45 \\times 1000 = 45{,}000\\) L. The option 45,000,000 comes from using \\(1{,}000{,}000 \\text{ cm}^{3}\\) in each \\(\\text{m}^{3}\\), which gives the volume in \\(\\text{cm}^{3}\\), not in litres.",
+   "clue": "One cubic metre holds 1000 litres."
+  }
+ },
+ "cleared_by": "auto"
 }

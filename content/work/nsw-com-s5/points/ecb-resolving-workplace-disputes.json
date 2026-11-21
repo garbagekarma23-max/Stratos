@@ -20,8 +20,114 @@
    0.238
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 may adapt bus-resolving-disputes, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:40Z confirm: Claude Opus 5.5 may reuse bus-resolving-disputes, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z claude-code review: reusing bus-resolving-disputes"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00045,
+  "confirm": 0.00825
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "bus-resolving-disputes",
+  "changes": [
+   "Show the escalation order the brief describes: grievance procedure, then negotiation, then mediation with a neutral third party, then arbitration by the Fair Work Commission.",
+   "Present mediation as a stage before the Fair Work Commission is involved, rather than only as a separate definition.",
+   "Clarify that the Commission's conciliation role is the step that helps the parties reach agreement, and that arbitration is the step where it makes a binding decision.",
+   "Simplify the wording so the depth suits Stage 5 Years 9 and 10 rather than Year 12 Business Studies."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea of workplace dispute resolution at a similar basic depth, but it needs its steps reordered and its wording simplified to match the brief's escalation path for Stage 5.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "bus-resolving-disputes",
+  "changes": [],
+  "sure": "medium",
+  "reason": "This bank point already teaches the grievance procedure, negotiation, mediation and Fair Work Commission arbitration at a plain depth. Its NSW and Fair Work Commission context and both questions suit Years 9 and 10 Commerce as they are.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "bus-resolving-disputes",
+ "matched": {
+  "verdict": "reuse",
+  "from": "bus-resolving-disputes",
+  "by": "claude-code",
+  "at": "2026-11-20T14:02:37Z"
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "reuse",
+   "sure": "high",
+   "reason": "The bank point already teaches the grievance procedure, negotiation, mediation and Fair Work Commission arbitration in plain words, and is already used in NSW Business Studies. Its terms, body and examples are right for NSW Stage 5 Commerce, so nothing needs to change.",
+   "item": "ae7a26ddb5dfeb88",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-resolving-workplace-disputes",
+    "title": "Resolving workplace disputes",
+    "brief": "4e39552cbe45",
+    "shortlist": [
+     [
+      "bus-resolving-disputes",
+      0.34
+     ],
+     [
+      "leg-justice-civil-disputes",
+      0.259
+     ],
+     [
+      "bus-workplace-disputes",
+      0.253
+     ],
+     [
+      "leg-mediation-conciliation-arbitration",
+      0.238
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00045,
+     "confirm": 0.00825
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "bus-resolving-disputes",
+     "changes": [
+      "Show the escalation order the brief describes: grievance procedure, then negotiation, then mediation with a neutral third party, then arbitration by the Fair Work Commission.",
+      "Present mediation as a stage before the Fair Work Commission is involved, rather than only as a separate definition.",
+      "Clarify that the Commission's conciliation role is the step that helps the parties reach agreement, and that arbitration is the step where it makes a binding decision.",
+      "Simplify the wording so the depth suits Stage 5 Years 9 and 10 rather than Year 12 Business Studies."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same idea of workplace dispute resolution at a similar basic depth, but it needs its steps reordered and its wording simplified to match the brief's escalation path for Stage 5.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "reuse",
+     "same": "bus-resolving-disputes",
+     "changes": [],
+     "sure": "medium",
+     "reason": "This bank point already teaches the grievance procedure, negotiation, mediation and Fair Work Commission arbitration at a plain depth. Its NSW and Fair Work Commission context and both questions suit Years 9 and 10 Commerce as they are.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "3cfdc1bcdf7b69e9"
+  }
  ]
 }

@@ -24,8 +24,394 @@
    0.297
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: failed the content check, writing again",
+  "2026-11-20T12:35:56Z write: done (still fails the content check)",
+  "2026-11-20T12:44:59Z check: flagged",
+  "2026-11-20T12:53:28Z fix: suggested",
+  "2026-11-20T13:23:44Z autoreview: cleared with the fix (the content check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.02363,
+  "check": 0.01113,
+  "fix": 0.03468
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers solving exponential equations by taking logs, but it does not teach that a log graph is the exponential graph reflected in y = x, which the new point requires, and adding that idea would be more than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Solving exponential equations",
+  "card": [
+   "In an exponential equation the unknown is in the index, such as \\(3^{x} = 20\\). If the two sides cannot be written with the same base, take logs of both sides.",
+   "The log law for a power lets the index come down: \\(\\log (3^{x}) = x \\log 3\\). So \\(3^{x} = 20\\) becomes \\(x \\log 3 = \\log 20\\).",
+   "Divide both sides by \\(\\log 3\\). Then \\(x = \\frac{\\log 20}{\\log 3} \\approx 2.73\\). Check: \\(3^{2.73} \\approx 20\\).",
+   "The graph of \\(y = \\log_{2} x\\) is the graph of \\(y = 2^{x}\\) reflected in the line \\(y = x\\). A point \\((a, b)\\) on one graph matches \\((b, a)\\) on the other."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The curves y = 2 to the power x and y = log base 2 of x, with the dashed line y = x between them. The point (3, 8) is on the exponential curve and (8, 3) is on the log curve.",
+    "x": {
+     "min": -2,
+     "max": 10,
+     "label": "\\(x\\)",
+     "step": 2
+    },
+    "y": {
+     "min": -2,
+     "max": 10,
+     "label": "\\(y\\)",
+     "step": 2
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2^{x}",
+      "label": "\\(y = 2^{x}\\)",
+      "labelAt": 2,
+      "pos": "left"
+     },
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "\\log_{2} x",
+      "domain": [
+       0.1,
+       10
+      ],
+      "label": "\\(y = \\log_{2} x\\)",
+      "labelAt": 5,
+      "pos": "below-right"
+     },
+     {
+      "type": "fn",
+      "id": "h",
+      "expr": "x",
+      "label": "\\(y = x\\)",
+      "labelAt": 6.5,
+      "pos": "above-left",
+      "style": "dash"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       8
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((3, 8)\\)",
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       8,
+       3
+      ],
+      "on": [
+       "g"
+      ],
+      "label": "\\((8, 3)\\)",
+      "pos": "below"
+     }
+    ]
+   }
+  },
+  "remember": "Take logs of both sides, bring the index down, then divide.",
+  "a": {
+   "q": "Which step correctly solves \\(5^{x} = 12\\) after taking logs of both sides?",
+   "opts": [
+    "\\(x = \\frac{\\log 12}{\\log 5}\\)",
+    "\\(x = \\log 12 - \\log 5\\)",
+    "\\(x = \\frac{\\log 5}{\\log 12}\\)",
+    "\\(x = \\frac{12}{5}\\)"
+   ],
+   "why": "Taking logs gives \\(x \\log 5 = \\log 12\\), so divide by \\(\\log 5\\). Subtracting the logs would be the quotient law, which is a different step and gives the log of \\(\\frac{12}{5}\\), not the value of \\(x\\).",
+   "clue": "Bring the index down, then divide by the log that multiplies \\(x\\)."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia solves \\(4^{x} = 50\\). What is \\(x\\), correct to 2 decimal places?",
+   "opts": [
+    "\\(2.82\\)",
+    "\\(12.50\\)",
+    "\\(0.35\\)",
+    "\\(46.00\\)"
+   ],
+   "why": "\\(x = \\frac{\\log 50}{\\log 4} \\approx \\frac{1.699}{0.602} \\approx 2.82\\). The answer \\(0.35\\) comes from dividing the wrong way round, with \\(\\log 4\\) on top.",
+   "clue": "Put \\(\\log 50\\) on top and \\(\\log 4\\) underneath."
+  }
+ },
+ "redone": true,
+ "local": [
+  "mat-solving-exponential-equations-2-nsw the figure on card line 4 has the label \\((8, 3)\\) on a curve. Move it with pos or labelAt, or move the curve",
+  "mat-solving-exponential-equations-2-nsw writes maths as plain text, an equals sign or < > outside \\( \\), in: The curves y = 2 to the power x and y = log base 2 of x, with the dashed line y = x between them. The point (3, 8) is on the exponential curve and (8, 3) is on the log curve. Write the maths in LaTeX between \\( and \\)."
+ ],
+ "check": {
+  "a": {
+   "best": "\\(x = \\frac{\\log 12}{\\log 5}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(2.82\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The worked example, the graph data and both answers (log 12 / log 5, and 2.82) check out, and the explanations agree with the card."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Content check: mat-solving-exponential-equations-2-nsw the figure on card line 4 has the label \\((8, 3)\\) on a curve. Move it with pos or labelAt, or move the curve",
+  "Content check: mat-solving-exponential-equations-2-nsw writes maths as plain text, an equals sign or < > outside \\( \\), in: The curves y = 2 to the power x and y = log base 2 of x, with the dashed line y = x between them. The point (3, 8) is on the exponential curve and (8, 3) is on the log curve. Write the maths in LaTeX between \\( and \\)."
+ ],
+ "proposal": {
+  "title": "Solving exponential equations",
+  "card": [
+   "In an exponential equation the unknown is in the index, such as \\(3^{x} = 20\\). If the two sides cannot be written with the same base, take logs of both sides.",
+   "The log law for a power lets the index come down: \\(\\log (3^{x}) = x \\log 3\\). So \\(3^{x} = 20\\) becomes \\(x \\log 3 = \\log 20\\).",
+   "Divide both sides by \\(\\log 3\\). Then \\(x = \\frac{\\log 20}{\\log 3} \\approx 2.73\\). Check: \\(3^{2.73} \\approx 20\\).",
+   "The graph of \\(y = \\log_{2} x\\) is the graph of \\(y = 2^{x}\\) reflected in the line \\(y = x\\). A point \\((a, b)\\) on one graph matches \\((b, a)\\) on the other."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The curves \\(y = 2^{x}\\) and \\(y = \\log_{2} x\\), with the dotted line \\(y = x\\) between them. The point \\((3, 8)\\) is on the exponential curve and the point \\((8, 3)\\) is on the log curve, each the reflection of the other in \\(y = x\\).",
+    "x": {
+     "min": -2,
+     "max": 10,
+     "label": "\\(x\\)",
+     "step": 2
+    },
+    "y": {
+     "min": -2,
+     "max": 10,
+     "label": "\\(y\\)",
+     "step": 2
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2^{x}",
+      "label": "\\(y = 2^{x}\\)",
+      "labelAt": 2,
+      "pos": "left"
+     },
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "\\log_{2} x",
+      "domain": [
+       0.1,
+       10
+      ],
+      "label": "\\(y = \\log_{2} x\\)",
+      "labelAt": 5,
+      "pos": "below-right"
+     },
+     {
+      "type": "fn",
+      "id": "h",
+      "expr": "x",
+      "label": "\\(y = x\\)",
+      "labelAt": 6.5,
+      "pos": "above-left",
+      "style": "dot"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       8
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((3, 8)\\)",
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       8,
+       3
+      ],
+      "on": [
+       "g"
+      ],
+      "label": "\\((8, 3)\\)",
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
+  "remember": "Take logs of both sides, bring the index down, then divide.",
+  "a": {
+   "q": "Which step correctly solves \\(5^{x} = 12\\) after taking logs of both sides?",
+   "opts": [
+    "\\(x = \\frac{\\log 12}{\\log 5}\\)",
+    "\\(x = \\log 12 - \\log 5\\)",
+    "\\(x = \\frac{\\log 5}{\\log 12}\\)",
+    "\\(x = \\frac{12}{5}\\)"
+   ],
+   "why": "Taking logs gives \\(x \\log 5 = \\log 12\\), so divide by \\(\\log 5\\). Subtracting the logs would be the quotient law, which is a different step and gives the log of \\(\\frac{12}{5}\\), not the value of \\(x\\).",
+   "clue": "Bring the index down, then divide by the log that multiplies \\(x\\)."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia solves \\(4^{x} = 50\\). What is \\(x\\), correct to 2 decimal places?",
+   "opts": [
+    "\\(2.82\\)",
+    "\\(12.50\\)",
+    "\\(0.35\\)",
+    "\\(46.00\\)"
+   ],
+   "why": "\\(x = \\frac{\\log 50}{\\log 4} \\approx \\frac{1.699}{0.602} \\approx 2.82\\). The answer \\(0.35\\) comes from dividing the wrong way round, with \\(\\log 4\\) on top.",
+   "clue": "Put \\(\\log 50\\) on top and \\(\\log 4\\) underneath."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:44Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [],
+  "flags": [
+   "Content check: mat-solving-exponential-equations-2-nsw the figure on card line 4 has the label \\((8, 3)\\) on a curve. Move it with pos or labelAt, or move the curve",
+   "Content check: mat-solving-exponential-equations-2-nsw writes maths as plain text, an equals sign or < > outside \\( \\), in: The curves y = 2 to the power x and y = log base 2 of x, with the dashed line y = x between them. The point (3, 8) is on the exponential curve and (8, 3) is on the log curve. Write the maths in LaTeX between \\( and \\)."
+  ]
+ },
+ "final": {
+  "title": "Solving exponential equations",
+  "card": [
+   "In an exponential equation the unknown is in the index, such as \\(3^{x} = 20\\). If the two sides cannot be written with the same base, take logs of both sides.",
+   "The log law for a power lets the index come down: \\(\\log (3^{x}) = x \\log 3\\). So \\(3^{x} = 20\\) becomes \\(x \\log 3 = \\log 20\\).",
+   "Divide both sides by \\(\\log 3\\). Then \\(x = \\frac{\\log 20}{\\log 3} \\approx 2.73\\). Check: \\(3^{2.73} \\approx 20\\).",
+   "The graph of \\(y = \\log_{2} x\\) is the graph of \\(y = 2^{x}\\) reflected in the line \\(y = x\\). A point \\((a, b)\\) on one graph matches \\((b, a)\\) on the other."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The curves \\(y = 2^{x}\\) and \\(y = \\log_{2} x\\), with the dotted line \\(y = x\\) between them. The point \\((3, 8)\\) is on the exponential curve and the point \\((8, 3)\\) is on the log curve, each the reflection of the other in \\(y = x\\).",
+    "x": {
+     "min": -2,
+     "max": 10,
+     "label": "\\(x\\)",
+     "step": 2
+    },
+    "y": {
+     "min": -2,
+     "max": 10,
+     "label": "\\(y\\)",
+     "step": 2
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2^{x}",
+      "label": "\\(y = 2^{x}\\)",
+      "labelAt": 2,
+      "pos": "left"
+     },
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "\\log_{2} x",
+      "domain": [
+       0.1,
+       10
+      ],
+      "label": "\\(y = \\log_{2} x\\)",
+      "labelAt": 5,
+      "pos": "below-right"
+     },
+     {
+      "type": "fn",
+      "id": "h",
+      "expr": "x",
+      "label": "\\(y = x\\)",
+      "labelAt": 6.5,
+      "pos": "above-left",
+      "style": "dot"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       8
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((3, 8)\\)",
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       8,
+       3
+      ],
+      "on": [
+       "g"
+      ],
+      "label": "\\((8, 3)\\)",
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
+  "remember": "Take logs of both sides, bring the index down, then divide.",
+  "a": {
+   "q": "Which step correctly solves \\(5^{x} = 12\\) after taking logs of both sides?",
+   "opts": [
+    "\\(x = \\frac{\\log 12}{\\log 5}\\)",
+    "\\(x = \\log 12 - \\log 5\\)",
+    "\\(x = \\frac{\\log 5}{\\log 12}\\)",
+    "\\(x = \\frac{12}{5}\\)"
+   ],
+   "why": "Taking logs gives \\(x \\log 5 = \\log 12\\), so divide by \\(\\log 5\\). Subtracting the logs would be the quotient law, which is a different step and gives the log of \\(\\frac{12}{5}\\), not the value of \\(x\\).",
+   "clue": "Bring the index down, then divide by the log that multiplies \\(x\\)."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia solves \\(4^{x} = 50\\). What is \\(x\\), correct to 2 decimal places?",
+   "opts": [
+    "\\(2.82\\)",
+    "\\(12.50\\)",
+    "\\(0.35\\)",
+    "\\(46.00\\)"
+   ],
+   "why": "\\(x = \\frac{\\log 50}{\\log 4} \\approx \\frac{1.699}{0.602} \\approx 2.82\\). The answer \\(0.35\\) comes from dividing the wrong way round, with \\(\\log 4\\) on top.",
+   "clue": "Put \\(\\log 50\\) on top and \\(\\log 4\\) underneath."
+  }
+ },
+ "cleared_by": "auto"
 }

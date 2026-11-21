@@ -12,8 +12,185 @@
    0.264
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:52Z write: failed the content check, writing again",
+  "2026-11-20T12:35:52Z write: done",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T14:42:02Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.01798,
+  "check": 0.01463,
+  "fix": 0.02662
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, Wartime government controls, covers rationing, manpower, censorship and internment together, so it is broader than the new point's focus on internment alone, and the German Australians card is about the First World War, not WWII.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Internment of enemy aliens",
+  "card": [
+   "An enemy alien was a person living in a country at war with the country of their birth or background. In Australia, people of German, Italian and Japanese background were seen this way.",
+   "Many of them were suspected of being a possible danger to Australia. This was often based on their background, not on anything they had done.",
+   "Internment means holding people in a camp without a trial. Thousands of people in Australia were held in internment camps during the war.",
+   "Some of those interned had lived in Australia for years, and some families were separated."
+  ],
+  "remember": "Thousands of people were interned because of their German, Italian or Japanese background.",
+  "a": {
+   "q": "Why were many people in Australia held in internment camps in WWII?",
+   "opts": [
+    "Their background linked them to an enemy country",
+    "They had refused to join the Australian army",
+    "They had been tried and found guilty of spying",
+    "They had broken government rationing rules"
+   ],
+   "why": "People of German, Italian and Japanese background were seen as enemy aliens because of the countries they came from. Many were held without a trial, so a guilty verdict for spying is wrong.",
+   "clue": "Think about where they or their families came from."
+  },
+  "b": {
+   "d": 3,
+   "q": "Marco came to Australia from Italy years before the war and ran a fruit shop in Perth. In 1940 he was taken to a camp. What does this show about internment?",
+   "opts": [
+    "People could be interned because of their background",
+    "Only people who had been caught spying were interned",
+    "Only people who had just arrived in Australia were interned",
+    "Internment was only for people of Japanese background"
+   ],
+   "why": "Marco had lived in Australia for years and was held because he was of Italian background, which shows that background could be enough. The idea that only spies were held is wrong, because many people were held without a trial.",
+   "clue": "Look at why Marco was taken, not what he did."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Their background linked them to an enemy country",
+   "also_right": []
+  },
+  "b": {
+   "best": "People could be interned because of their background",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one with a hedge ('could'), while all three wrong options use 'only'. A student can pick the answer by spotting the absolutes, without knowing the idea."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about where they or their families came from' points straight to the only option about background, so it gives the answer away."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Look at why Marco was taken, not what he did' rules out every option about actions, which leaves only the background option. It gives the answer away."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says the thousands were interned because of their background. The card says suspicion was 'often' based on background, so the remember line states the cause more absolutely than the card does."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why's reasoning is weak. Being held without a trial does not by itself show that people were not spies. It would be clearer to say that Marco had done nothing wrong and was held for his background."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "other-sensitive",
+  "summary": "The facts are sound, but both clues give the answer away. In question b, the right option stands out as the only hedged one against three 'only' distractors. The remember line and why (b) slightly overstate or weaken the card's reasoning."
+ },
+ "sensitive": "other-sensitive",
+ "flags": [
+  "Question b, wording: The right option is the only one with a hedge ('could'), while all three wrong options use 'only'. A student can pick the answer by spotting the absolutes, without knowing the idea.",
+  "Question a, other: The clue 'Think about where they or their families came from' points straight to the only option about background, so it gives the answer away.",
+  "Question b, other: The clue 'Look at why Marco was taken, not what he did' rules out every option about actions, which leaves only the background option. It gives the answer away.",
+  "Remember, other: The remember line says the thousands were interned because of their background. The card says suspicion was 'often' based on background, so the remember line states the cause more absolutely than the card does.",
+  "Question b, other: The why's reasoning is weak. Being held without a trial does not by itself show that people were not spies. It would be clearer to say that Marco had done nothing wrong and was held for his background."
+ ],
+ "proposal": {
+  "title": "Internment of enemy aliens",
+  "card": [
+   "An enemy alien was a person living in a country at war with the country of their birth or background. In Australia, people of German, Italian and Japanese background were seen this way.",
+   "Many of them were suspected of being a possible danger to Australia. This was often based on their background, not on anything they had done.",
+   "Internment means holding people in a camp without a trial. Thousands of people in Australia were held in internment camps during the war.",
+   "Some of those interned had lived in Australia for years, and some families were separated."
+  ],
+  "remember": "Internment held people without a trial, often for their background rather than their actions.",
+  "a": {
+   "q": "What did it mean for an enemy alien in Australia to be interned in WWII?",
+   "opts": [
+    "Being held in a camp without a trial",
+    "Being held in a prison after a trial",
+    "Being sent back to their country of birth",
+    "Being made to pay a fine to the government"
+   ],
+   "why": "Internment meant being held in a camp without a trial. Being held after a trial is wrong, because internment did not need a court to find a person guilty of anything.",
+   "clue": "Internment kept people inside Australia."
+  },
+  "b": {
+   "d": 3,
+   "q": "Marco came to Australia from Italy years before the war and ran a fruit shop in Perth. He had broken no laws. In 1940 he was taken to a camp. What does his case show could lead to internment?",
+   "opts": [
+    "An Italian background, even after years living here",
+    "A conviction for spying, after a trial in court",
+    "Arriving in Australia only a short time before",
+    "Refusing to do the war work the government set"
+   ],
+   "why": "Marco had lived in Australia for years and had done nothing wrong, yet he was held in a camp. His Italian background was enough. A spying conviction does not fit, because Marco broke no laws and internment did not need a trial.",
+   "clue": "Check each option against the facts given about Marco."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Internment of enemy aliens",
+  "card": [
+   "An enemy alien was a person living in a country at war with the country of their birth or background. In Australia, people of German, Italian and Japanese background were seen this way.",
+   "Many of them were suspected of being a possible danger to Australia. This was often based on their background, not on anything they had done.",
+   "Internment means holding people in a camp without a trial. Thousands of people in Australia were held in internment camps during the war.",
+   "Some of those interned had lived in Australia for years, and some families were separated."
+  ],
+  "remember": "Internment held people without a trial, often for their background rather than their actions.",
+  "a": {
+   "q": "What did it mean for an enemy alien in Australia to be interned in WWII?",
+   "opts": [
+    "Being held in a camp without a trial",
+    "Being held in a prison after a trial",
+    "Being sent back to their country of birth",
+    "Being made to pay a fine to the government"
+   ],
+   "why": "Internment meant being held in a camp without a trial. Being held after a trial is wrong, because internment did not need a court to find a person guilty of anything.",
+   "clue": "Internment kept people inside Australia."
+  },
+  "b": {
+   "d": 3,
+   "q": "Marco came to Australia from Italy years before the war and ran a fruit shop in Perth. He had broken no laws. In 1940 he was taken to a camp. What does his case show could lead to internment?",
+   "opts": [
+    "An Italian background, even after years living here",
+    "A conviction for spying, after a trial in court",
+    "Arriving in Australia only a short time before",
+    "Refusing to do the war work the government set"
+   ],
+   "why": "Marco had lived in Australia for years and had done nothing wrong, yet he was held in a camp. His Italian background was enough. A spying conviction does not fit, because Marco broke no laws and internment did not need a trial.",
+   "clue": "Check each option against the facts given about Marco."
+  }
+ },
+ "cleared_by": "owner"
 }

@@ -24,8 +24,226 @@
    0.233
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:48Z write: failed the content check, writing again",
+  "2026-11-20T12:44:54Z write: done (still fails the content check)",
+  "2026-11-20T13:11:47Z check: flagged",
+  "2026-11-20T13:17:56Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.01512,
+  "check": 0.01147,
+  "fix": 0.01767,
+  "recheck": 0.0099
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches the objective-versus-subjective register choices an argument makes; they all cover narrative or literary voice (diction, rhythm, point of view), so this point needs a new card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Blending subjective and objective voice",
+  "card": [
+   [
+    "Objective voice",
+    "presents facts, figures and evidence in a neutral tone. It avoids personal feelings and sounds fair and informed."
+   ],
+   [
+    "Subjective voice",
+    "gives the writer's own opinion or feelings. It uses first person (I, we), emotive words and judgements such as shameful or wonderful."
+   ],
+   "Writers of arguments move between the two. Objective voice can build trust in the facts. Subjective voice can move the reader to feel or agree.",
+   "For example, a writer states that most local pools open fewer than four days a week, then adds: \"It is a disgrace.\" The first sentence is objective and the second is subjective."
+  ],
+  "remember": "Objective voice gives evidence in a neutral tone. Subjective voice gives opinion. Arguments often use both for effect.",
+  "a": {
+   "q": "Which sentence from a newspaper opinion piece is written in an objective voice?",
+   "opts": [
+    "The council recorded 112 road accidents on Elm Street last year",
+    "Elm Street is a deadly trap that the council simply ignores",
+    "I am sick of watching drivers speed along Elm Street",
+    "Anyone who cares about children must fix Elm Street now"
+   ],
+   "why": "The first option states a recorded figure in a neutral tone. The others use emotive words, I, or a judgement about what people should do, so they are subjective.",
+   "clue": "Look for the sentence with no feelings or opinion in it."
+  },
+  "b": {
+   "d": 3,
+   "q": "A writer opens an argument about school canteens with two sentences of statistics on student health, then writes: \"I find this shameful.\" What is the most likely effect of this move?",
+   "opts": [
+    "The evidence earns trust, then the opinion sways feelings",
+    "The opinion earns trust, then the evidence sways feelings",
+    "Both parts are objective, so the tone stays neutral",
+    "Both parts are subjective, so the writer sounds biased"
+   ],
+   "why": "The statistics are objective and make the writer seem informed. The sentence with I and shameful is subjective and pushes the reader to share the feeling. The reverse is wrong, because the opinion is not what builds trust in the facts.",
+   "clue": "Decide which sentence is evidence and which is opinion, then think about what each does."
+  }
+ },
+ "redone": true,
+ "local": [
+  "eng-blending-subjective-objective-voicea option is 63 characters: The council recorded 112 road accidents on Elm Street last year"
+ ],
+ "check": {
+  "a": {
+   "best": "The council recorded 112 road accidents on Elm Street last year",
+   "also_right": []
+  },
+  "b": {
+   "best": "The evidence earns trust, then the opinion sways feelings",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) calls the right answer \"The first option\", but the options are shown in random order (here it is last), so the explanation points students to the wrong sentence. Name the sentence instead, for example \"The sentence about 112 recorded accidents\"."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate and fit Years 9 and 10. Why (a) refers to \"the first option\", which will point to the wrong sentence once the options are shuffled. Reword it to name the sentence."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) calls the right answer \"The first option\", but the options are shown in random order (here it is last), so the explanation points students to the wrong sentence. Name the sentence instead, for example \"The sentence about 112 recorded accidents\".",
+  "Content check: eng-blending-subjective-objective-voicea option is 63 characters: The council recorded 112 road accidents on Elm Street last year"
+ ],
+ "proposal": {
+  "title": "Blending subjective and objective voice",
+  "card": [
+   [
+    "Objective voice",
+    "presents facts, figures and evidence in a neutral tone. It avoids personal feelings and sounds fair and informed."
+   ],
+   [
+    "Subjective voice",
+    "gives the writer's own opinion or feelings. It uses first person (I, we), emotive words and judgements such as shameful or wonderful."
+   ],
+   "Writers of arguments move between the two. Objective voice can build trust in the facts. Subjective voice can move the reader to feel or agree.",
+   "For example, a writer states that most local pools open fewer than four days a week, then adds: \"It is a disgrace.\" The first sentence is objective and the second is subjective."
+  ],
+  "remember": "Objective voice gives evidence in a neutral tone. Subjective voice gives opinion. Arguments often use both for effect.",
+  "a": {
+   "q": "Which sentence from a newspaper opinion piece is written in an objective voice?",
+   "opts": [
+    "Council data shows 112 crashes on Elm Street last year",
+    "Elm Street is a deadly trap that the council simply ignores",
+    "I am sick of watching drivers speed along Elm Street",
+    "Anyone who cares about children must fix Elm Street now"
+   ],
+   "why": "The sentence about 112 crashes reports council data in a neutral tone. The others use emotive words such as deadly trap, the word I, or a judgement about what people must do, so they are subjective.",
+   "clue": "Look for the sentence with no feelings or opinion in it."
+  },
+  "b": {
+   "d": 3,
+   "q": "A writer opens an argument about school canteens with two sentences of statistics on student health, then writes: \"I find this shameful.\" What is the most likely effect of this move?",
+   "opts": [
+    "The evidence earns trust, then the opinion sways feelings",
+    "The opinion earns trust, then the evidence sways feelings",
+    "Both parts are objective, so the tone stays neutral",
+    "Both parts are subjective, so the writer sounds biased"
+   ],
+   "why": "The statistics are objective and make the writer seem informed. The sentence with I and shameful is subjective and pushes the reader to share the feeling. The reverse is wrong, because the opinion is not what builds trust in the facts.",
+   "clue": "Decide which sentence is evidence and which is opinion, then think about what each does."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Council data shows 112 crashes on Elm Street last year",
+    "also_right": []
+   },
+   "b": {
+    "best": "The evidence earns trust, then the opinion sways feelings",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 14,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) calls the right answer \"The first option\", but the options are shown in random order (here it is last), so the explanation points students to the wrong sentence. Name the sentence instead, for example \"The sentence about 112 recorded accidents\"."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) calls the right answer \"The first option\", but the options are shown in random order (here it is last), so the explanation points students to the wrong sentence. Name the sentence instead, for example \"The sentence about 112 recorded accidents\".",
+   "Content check: eng-blending-subjective-objective-voicea option is 63 characters: The council recorded 112 road accidents on Elm Street last year"
+  ]
+ },
+ "final": {
+  "title": "Blending subjective and objective voice",
+  "card": [
+   [
+    "Objective voice",
+    "presents facts, figures and evidence in a neutral tone. It avoids personal feelings and sounds fair and informed."
+   ],
+   [
+    "Subjective voice",
+    "gives the writer's own opinion or feelings. It uses first person (I, we), emotive words and judgements such as shameful or wonderful."
+   ],
+   "Writers of arguments move between the two. Objective voice can build trust in the facts. Subjective voice can move the reader to feel or agree.",
+   "For example, a writer states that most local pools open fewer than four days a week, then adds: \"It is a disgrace.\" The first sentence is objective and the second is subjective."
+  ],
+  "remember": "Objective voice gives evidence in a neutral tone. Subjective voice gives opinion. Arguments often use both for effect.",
+  "a": {
+   "q": "Which sentence from a newspaper opinion piece is written in an objective voice?",
+   "opts": [
+    "Council data shows 112 crashes on Elm Street last year",
+    "Elm Street is a deadly trap that the council simply ignores",
+    "I am sick of watching drivers speed along Elm Street",
+    "Anyone who cares about children must fix Elm Street now"
+   ],
+   "why": "The sentence about 112 crashes reports council data in a neutral tone. The others use emotive words such as deadly trap, the word I, or a judgement about what people must do, so they are subjective.",
+   "clue": "Look for the sentence with no feelings or opinion in it."
+  },
+  "b": {
+   "d": 3,
+   "q": "A writer opens an argument about school canteens with two sentences of statistics on student health, then writes: \"I find this shameful.\" What is the most likely effect of this move?",
+   "opts": [
+    "The evidence earns trust, then the opinion sways feelings",
+    "The opinion earns trust, then the evidence sways feelings",
+    "Both parts are objective, so the tone stays neutral",
+    "Both parts are subjective, so the writer sounds biased"
+   ],
+   "why": "The statistics are objective and make the writer seem informed. The sentence with I and shameful is subjective and pushes the reader to share the feeling. The reverse is wrong, because the opinion is not what builds trust in the facts.",
+   "clue": "Decide which sentence is evidence and which is opinion, then think about what each does."
+  }
+ },
+ "cleared_by": "recheck"
 }

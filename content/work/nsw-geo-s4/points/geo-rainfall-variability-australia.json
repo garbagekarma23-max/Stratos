@@ -8,8 +8,204 @@
    0.212
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:45Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:49Z write: failed the content check, writing again",
+  "2026-11-20T12:44:55Z write: done",
+  "2026-11-20T12:53:24Z check: flagged",
+  "2026-11-20T12:59:58Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.01303,
+  "check": 0.0108,
+  "fix": 0.01866,
+  "recheck": 0.01115
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches only drought as a slow build-up of dry weather, while the new point is about rainfall variability across Australia, including both droughts and floods and the continent's general dryness, so it is a broader idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Rainfall variability in Australia",
+  "card": [
+   "Australia is the driest inhabited continent. Much of the land, especially the inland, gets little rain.",
+   "Rainfall variability means how much rainfall changes from year to year. In Australia it changes a lot.",
+   "A run of years with much less rain than usual can bring drought. A year with heavy rain can bring floods.",
+   "So the same place can have a drought in one period and floods in another. Both are part of life in Australia."
+  ],
+  "remember": "Australia is dry, and its rainfall swings from year to year, so droughts and floods both happen.",
+  "a": {
+   "q": "What does rainfall variability mean?",
+   "opts": [
+    "How much rainfall changes from year to year",
+    "How much rain falls in one wet season",
+    "How far rain travels across a continent",
+    "How rainfall is stored in dams and tanks"
+   ],
+   "why": "Variability is about change over time. A place with high variability can have a very wet year and a very dry year. Describing one season only tells you the amount of rain, not how much it changes.",
+   "clue": "Think of the words vary and change."
+  },
+  "b": {
+   "d": 3,
+   "q": "A farm near Walgett has several dry years that cause drought. Then one year of heavy rain floods the paddocks. What does this show about Australia?",
+   "opts": [
+    "Its rainfall changes a lot, so droughts and floods happen",
+    "Its rainfall is steady, so droughts and floods never happen",
+    "Its rainfall is high, so droughts are very rare",
+    "Its rainfall falls only in summer, so floods are usual"
+   ],
+   "why": "The farm had too little rain, then too much. That is a big change from year to year, which is high rainfall variability. Droughts and floods are both possible in the same place, so a steady or high rainfall does not fit.",
+   "clue": "The same farm had both dry years and a flood."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "How much rainfall changes from year to year",
+   "also_right": []
+  },
+  "b": {
+   "best": "Its rainfall changes a lot, so droughts and floods happen",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The clue 'Think of the words vary and change' points straight to the only option containing 'changes', so a student can pick it by matching words without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts are correct and both answers are clear. Question a's clue gives the answer away by naming 'change', a word that appears only in the right option."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The clue 'Think of the words vary and change' points straight to the only option containing 'changes', so a student can pick it by matching words without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Rainfall variability in Australia",
+  "card": [
+   "Australia is the driest inhabited continent. Much of the land, especially the inland, gets little rain.",
+   "Rainfall variability means how much rainfall changes from year to year. In Australia it changes a lot.",
+   "A run of years with much less rain than usual can bring drought. A year with heavy rain can bring floods.",
+   "So the same place can have a drought in one period and floods in another. Both are part of life in Australia."
+  ],
+  "remember": "Australia is dry, and its rainfall swings from year to year, so droughts and floods both happen.",
+  "a": {
+   "q": "Which rainfall record shows high rainfall variability?",
+   "opts": [
+    "200 mm in one year, then 900 mm the next year",
+    "Close to 500 mm of rain falls in every year",
+    "Most rain falls in the same three months each year",
+    "About 1500 mm of rain falls in an average year"
+   ],
+   "why": "Rainfall variability is how much rainfall changes from year to year, and a jump from 200 mm to 900 mm is a big change. Rain that falls in the same months each year is a pattern that repeats, so it does not show big swings between years.",
+   "clue": "Compare one year's total with the next year's."
+  },
+  "b": {
+   "d": 3,
+   "q": "A farm near Walgett has several dry years that cause drought. Then one year of heavy rain floods the paddocks. What does this show about Australia?",
+   "opts": [
+    "Its rainfall changes a lot, so droughts and floods happen",
+    "Its rainfall is steady, so droughts and floods never happen",
+    "Its rainfall is high, so droughts are very rare",
+    "Its rainfall falls only in summer, so floods are usual"
+   ],
+   "why": "The farm had too little rain, then too much. That is a big change from year to year, which is high rainfall variability. Droughts and floods are both possible in the same place, so a steady or high rainfall does not fit.",
+   "clue": "The same farm had both dry years and a flood."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "200 mm in one year, then 900 mm the next year",
+    "also_right": []
+   },
+   "b": {
+    "best": "Its rainfall changes a lot, so droughts and floods happen",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The clue 'Think of the words vary and change' points straight to the only option containing 'changes', so a student can pick it by matching words without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The clue 'Think of the words vary and change' points straight to the only option containing 'changes', so a student can pick it by matching words without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "Rainfall variability in Australia",
+  "card": [
+   "Australia is the driest inhabited continent. Much of the land, especially the inland, gets little rain.",
+   "Rainfall variability means how much rainfall changes from year to year. In Australia it changes a lot.",
+   "A run of years with much less rain than usual can bring drought. A year with heavy rain can bring floods.",
+   "So the same place can have a drought in one period and floods in another. Both are part of life in Australia."
+  ],
+  "remember": "Australia is dry, and its rainfall swings from year to year, so droughts and floods both happen.",
+  "a": {
+   "q": "Which rainfall record shows high rainfall variability?",
+   "opts": [
+    "200 mm in one year, then 900 mm the next year",
+    "Close to 500 mm of rain falls in every year",
+    "Most rain falls in the same three months each year",
+    "About 1500 mm of rain falls in an average year"
+   ],
+   "why": "Rainfall variability is how much rainfall changes from year to year, and a jump from 200 mm to 900 mm is a big change. Rain that falls in the same months each year is a pattern that repeats, so it does not show big swings between years.",
+   "clue": "Compare one year's total with the next year's."
+  },
+  "b": {
+   "d": 3,
+   "q": "A farm near Walgett has several dry years that cause drought. Then one year of heavy rain floods the paddocks. What does this show about Australia?",
+   "opts": [
+    "Its rainfall changes a lot, so droughts and floods happen",
+    "Its rainfall is steady, so droughts and floods never happen",
+    "Its rainfall is high, so droughts are very rare",
+    "Its rainfall falls only in summer, so floods are usual"
+   ],
+   "why": "The farm had too little rain, then too much. That is a big change from year to year, which is high rainfall variability. Droughts and floods are both possible in the same place, so a steady or high rainfall does not fit.",
+   "clue": "The same farm had both dry years and a flood."
+  }
+ },
+ "cleared_by": "recheck"
 }

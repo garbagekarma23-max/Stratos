@@ -12,8 +12,199 @@
    0.202
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: failed the content check, writing again",
+  "2026-11-20T12:44:56Z write: done",
+  "2026-11-20T12:53:25Z check: flagged",
+  "2026-11-20T12:59:59Z fix: suggested",
+  "2026-11-20T13:23:39Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.01371,
+  "check": 0.00949,
+  "fix": 0.01645
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches that people judge wellbeing initiatives differently, such as by whether aid reaches those in need or whether locals had a say; they only define wellbeing and development and explain causes of wellbeing gaps.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Perspectives on wellbeing initiatives",
+  "card": [
+   "A perspective is the view a person or group takes, shaped by their position, values and experience. Different people can judge the same wellbeing initiative differently.",
+   [
+    "Reaching those in need",
+    "one way to judge an initiative is whether the help gets to the people who need it most. Some help may be used up on costs, or stop in places that are easier to reach."
+   ],
+   [
+    "Local say",
+    "another way is whether local people had a say in planning it. An initiative designed with a community is more likely to suit its needs and customs."
+   ],
+   "Other perspectives include cost, how long the benefits last and who gains. A donor, a government and a village may each reach a different judgement."
+  ],
+  "remember": "People judge initiatives from their own perspective, such as who it reaches and who had a say.",
+  "a": {
+   "q": "Why might two groups judge the same wellbeing initiative differently?",
+   "opts": [
+    "Their perspectives differ, shaped by position and values",
+    "Only one group has correct facts about the project",
+    "An initiative has the same effect on every community",
+    "Judgements depend on the cost of the initiative alone"
+   ],
+   "why": "A perspective is shaped by a person's position, values and experience, so groups can reach different judgements. The idea that cost alone decides is tempting, but the card lists several things people consider.",
+   "clue": "Think about what shapes a perspective."
+  },
+  "b": {
+   "d": 3,
+   "q": "A foreign charity builds a water tank in a remote village without asking residents where it should go. The tank is placed far from most homes. Which concern would villagers most likely raise?",
+   "opts": [
+    "Locals had no say in planning, so it does not suit them",
+    "The tank is costly to the donors who paid for it",
+    "The charity has not told other countries about the project",
+    "The tank gives benefits that will last for many years"
+   ],
+   "why": "The villagers were not asked, and the tank is far from most homes, so it does not suit their needs. Donor cost is a different perspective and is not what the villagers would raise here.",
+   "clue": "Look at who made the decision about where the tank went."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Their perspectives differ, shaped by position and values",
+   "also_right": []
+  },
+  "b": {
+   "best": "Locals had no say in planning, so it does not suit them",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The last line says 'Other perspectives include cost, how long the benefits last and who gains', but the first line defines a perspective as the view a person or group takes. Cost, how long benefits last and who gains are criteria for judging, not perspectives. A student may confuse the two. Better: 'Other things people weigh include…'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and have one clear answer. The card's last line calls cost, how long benefits last and who gains 'perspectives', which clashes with its own definition of a perspective as a person's or group's view."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The last line says 'Other perspectives include cost, how long the benefits last and who gains', but the first line defines a perspective as the view a person or group takes. Cost, how long benefits last and who gains are criteria for judging, not perspectives. A student may confuse the two. Better: 'Other things people weigh include…'."
+ ],
+ "proposal": {
+  "title": "Perspectives on wellbeing initiatives",
+  "card": [
+   "A perspective is the view a person or group takes, shaped by their position, values and experience. Different people can judge the same wellbeing initiative differently.",
+   [
+    "Reaching those in need",
+    "one way to judge an initiative is whether the help gets to the people who need it most. Some help may be used up on costs, or stop in places that are easier to reach."
+   ],
+   [
+    "Local say",
+    "another way is whether local people had a say in planning it. An initiative designed with a community is more likely to suit its needs and customs."
+   ],
+   "Other things people weigh include cost, how long the benefits last and who gains. A donor, a government and a village may each reach a different judgement."
+  ],
+  "remember": "People judge initiatives from their own perspective, weighing things such as who it reaches and who had a say.",
+  "a": {
+   "q": "Why might two groups judge the same wellbeing initiative differently?",
+   "opts": [
+    "Their perspectives differ, shaped by position and values",
+    "Only one group has correct facts about the project",
+    "An initiative has the same effect on every community",
+    "Judgements depend on the cost of the initiative alone"
+   ],
+   "why": "A perspective is shaped by a person's position, values and experience, so groups can reach different judgements. The idea that cost alone decides is tempting, but the card lists several things people weigh.",
+   "clue": "Think about what shapes a perspective."
+  },
+  "b": {
+   "d": 3,
+   "q": "A foreign charity builds a water tank in a remote village without asking residents where it should go. The tank is placed far from most homes. Which concern would villagers most likely raise?",
+   "opts": [
+    "Locals had no say in planning, so it does not suit them",
+    "The tank is costly to the donors who paid for it",
+    "The charity has not told other countries about the project",
+    "The tank gives benefits that will last for many years"
+   ],
+   "why": "The villagers were not asked, and the tank is far from most homes, so it does not suit their needs. Cost to donors is a different concern, and it falls on the donors, not the villagers.",
+   "clue": "Look at who made the decision about where the tank went."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:39Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The last line says 'Other perspectives include cost, how long the benefits last and who gains', but the first line defines a perspective as the view a person or group takes. Cost, how long benefits last and who gains are criteria for judging, not perspectives. A student may confuse the two. Better: 'Other things people weigh include…'."
+   }
+  ],
+  "flags": [
+   "Card, wording: The last line says 'Other perspectives include cost, how long the benefits last and who gains', but the first line defines a perspective as the view a person or group takes. Cost, how long benefits last and who gains are criteria for judging, not perspectives. A student may confuse the two. Better: 'Other things people weigh include…'."
+  ]
+ },
+ "final": {
+  "title": "Perspectives on wellbeing initiatives",
+  "card": [
+   "A perspective is the view a person or group takes, shaped by their position, values and experience. Different people can judge the same wellbeing initiative differently.",
+   [
+    "Reaching those in need",
+    "one way to judge an initiative is whether the help gets to the people who need it most. Some help may be used up on costs, or stop in places that are easier to reach."
+   ],
+   [
+    "Local say",
+    "another way is whether local people had a say in planning it. An initiative designed with a community is more likely to suit its needs and customs."
+   ],
+   "Other things people weigh include cost, how long the benefits last and who gains. A donor, a government and a village may each reach a different judgement."
+  ],
+  "remember": "People judge initiatives from their own perspective, weighing things such as who it reaches and who had a say.",
+  "a": {
+   "q": "Why might two groups judge the same wellbeing initiative differently?",
+   "opts": [
+    "Their perspectives differ, shaped by position and values",
+    "Only one group has correct facts about the project",
+    "An initiative has the same effect on every community",
+    "Judgements depend on the cost of the initiative alone"
+   ],
+   "why": "A perspective is shaped by a person's position, values and experience, so groups can reach different judgements. The idea that cost alone decides is tempting, but the card lists several things people weigh.",
+   "clue": "Think about what shapes a perspective."
+  },
+  "b": {
+   "d": 3,
+   "q": "A foreign charity builds a water tank in a remote village without asking residents where it should go. The tank is placed far from most homes. Which concern would villagers most likely raise?",
+   "opts": [
+    "Locals had no say in planning, so it does not suit them",
+    "The tank is costly to the donors who paid for it",
+    "The charity has not told other countries about the project",
+    "The tank gives benefits that will last for many years"
+   ],
+   "why": "The villagers were not asked, and the tank is far from most homes, so it does not suit their needs. Cost to donors is a different concern, and it falls on the donors, not the villagers.",
+   "clue": "Look at who made the decision about where the tank went."
+  }
+ },
+ "cleared_by": "auto"
 }

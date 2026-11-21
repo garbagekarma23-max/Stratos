@@ -24,8 +24,202 @@
    0.216
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:51Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:52Z write: done",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00032,
+  "write": 0.00649,
+  "check": 0.01466,
+  "fix": 0.02177,
+  "recheck": 0.00843
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, his-war-begins-europe, covers Menzies announcing Australia's entry into war in 1939 but is broader, focusing on Germany's invasion of Poland and blitzkrieg, and it does not cover why Australians enlisted in WWII, which the new point includes, so no bank point teaches this idea as it stands.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Australia enters the war",
+  "card": [
+   "Britain declared war on Germany on 3 September 1939, after Germany invaded Poland. That evening Prime Minister Robert Menzies announced on radio that Australia was also at war.",
+   "Menzies spoke of Britain and Australia as bound together. He said that because Britain was at war, Australia was at war too. Australia did not make a separate declaration.",
+   "Many Australians saw themselves as British in heritage and loyalty, and many thought Britain's cause was Australia's cause.",
+   "People enlisted for many reasons. Some felt loyal to Britain, some wanted adventure, some needed a wage after the hard years of the 1930s, and some felt a duty to fight against Nazi Germany."
+  ],
+  "remember": "Australia was at war because Britain was, and people enlisted for many different reasons.",
+  "a": {
+   "q": "Why did Menzies announce in 1939 that Australia was at war?",
+   "opts": [
+    "Britain had declared war on Germany",
+    "Germany had attacked the Australian mainland",
+    "Japan had bombed Darwin",
+    "Parliament had voted to join the United States"
+   ],
+   "why": "Menzies said Australia was at war because Britain was, after Britain declared war on Germany. Japan bombed Darwin in 1942, so it cannot explain a decision made in 1939.",
+   "clue": "Think about whose declaration came first."
+  },
+  "b": {
+   "d": 2,
+   "q": "Jack, a young farm worker in Wagga Wagga, enlisted in 1939 because he had been out of steady work for years and wanted a regular wage. What does his case show?",
+   "opts": [
+    "People enlisted for personal reasons as well as loyalty",
+    "Everyone enlisted only out of loyalty to Britain",
+    "Enlisting was compulsory for all young men",
+    "Only unemployed men chose to enlist"
+   ],
+   "why": "Jack's reason was money, not loyalty to Britain, so it shows people had different reasons for enlisting. The option saying everyone acted from loyalty is wrong because the card lists several reasons.",
+   "clue": "Look at the reason Jack gave."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Britain had declared war on Germany",
+   "also_right": []
+  },
+  "b": {
+   "best": "People enlisted for personal reasons as well as loyalty",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The three wrong options all use absolutes ('Everyone… only', 'Only', 'compulsory for all'), while the right option is the only hedged one. A student can pick it by spotting the absolutes, without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts check out: 3 September 1939, Menzies' broadcast that evening, and no separate Australian declaration. Question b's right answer stands out as the only option without an absolute ('only', 'everyone', 'all'), so students can guess it."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The three wrong options all use absolutes ('Everyone… only', 'Only', 'compulsory for all'), while the right option is the only hedged one. A student can pick it by spotting the absolutes, without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Australia enters the war",
+  "card": [
+   "Britain declared war on Germany on 3 September 1939, after Germany invaded Poland. That evening Prime Minister Robert Menzies announced on radio that Australia was also at war.",
+   "Menzies spoke of Britain and Australia as bound together. He said that because Britain was at war, Australia was at war too. Australia did not make a separate declaration.",
+   "Many Australians saw themselves as British in heritage and loyalty, and many thought Britain's cause was Australia's cause.",
+   "People enlisted for many reasons. Some felt loyal to Britain, some wanted adventure, some needed a wage after the hard years of the 1930s, and some felt a duty to fight against Nazi Germany."
+  ],
+  "remember": "Australia was at war because Britain was, and people enlisted for many different reasons.",
+  "a": {
+   "q": "Why did Menzies announce in 1939 that Australia was at war?",
+   "opts": [
+    "Britain had declared war on Germany",
+    "Germany had attacked the Australian mainland",
+    "The League of Nations had ordered it to fight",
+    "Parliament had first voted on its own declaration"
+   ],
+   "why": "Menzies said Australia was at war because Britain was, after Britain declared war on Germany. Australia did not make a separate declaration, so there was no vote on its own declaration before the announcement.",
+   "clue": "Think about whose declaration came first."
+  },
+  "b": {
+   "d": 2,
+   "q": "Jack, a farm hand near Wagga Wagga, found little work through the Depression. In 1939 he enlisted so he could send money home to his family. Which reason for enlisting does his case show?",
+   "opts": [
+    "Needing a regular wage",
+    "Loyalty to Britain",
+    "Wanting adventure overseas",
+    "A duty to fight Nazi Germany"
+   ],
+   "why": "Jack enlisted so he could earn money after years with little work, which is the need for a wage. Loyalty to Britain was a common reason, but nothing in Jack's case points to it.",
+   "clue": "Look at what Jack wanted to do for his family."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Britain had declared war on Germany",
+    "also_right": []
+   },
+   "b": {
+    "best": "Needing a regular wage",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The three wrong options all use absolutes ('Everyone… only', 'Only', 'compulsory for all'), while the right option is the only hedged one. A student can pick it by spotting the absolutes, without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The three wrong options all use absolutes ('Everyone… only', 'Only', 'compulsory for all'), while the right option is the only hedged one. A student can pick it by spotting the absolutes, without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "Australia enters the war",
+  "card": [
+   "Britain declared war on Germany on 3 September 1939, after Germany invaded Poland. That evening Prime Minister Robert Menzies announced on radio that Australia was also at war.",
+   "Menzies spoke of Britain and Australia as bound together. He said that because Britain was at war, Australia was at war too. Australia did not make a separate declaration.",
+   "Many Australians saw themselves as British in heritage and loyalty, and many thought Britain's cause was Australia's cause.",
+   "People enlisted for many reasons. Some felt loyal to Britain, some wanted adventure, some needed a wage after the hard years of the 1930s, and some felt a duty to fight against Nazi Germany."
+  ],
+  "remember": "Australia was at war because Britain was, and people enlisted for many different reasons.",
+  "a": {
+   "q": "Why did Menzies announce in 1939 that Australia was at war?",
+   "opts": [
+    "Britain had declared war on Germany",
+    "Germany had attacked the Australian mainland",
+    "The League of Nations had ordered it to fight",
+    "Parliament had first voted on its own declaration"
+   ],
+   "why": "Menzies said Australia was at war because Britain was, after Britain declared war on Germany. Australia did not make a separate declaration, so there was no vote on its own declaration before the announcement.",
+   "clue": "Think about whose declaration came first."
+  },
+  "b": {
+   "d": 2,
+   "q": "Jack, a farm hand near Wagga Wagga, found little work through the Depression. In 1939 he enlisted so he could send money home to his family. Which reason for enlisting does his case show?",
+   "opts": [
+    "Needing a regular wage",
+    "Loyalty to Britain",
+    "Wanting adventure overseas",
+    "A duty to fight Nazi Germany"
+   ],
+   "why": "Jack enlisted so he could earn money after years with little work, which is the need for a wage. Loyalty to Britain was a common reason, but nothing in Jack's case points to it.",
+   "clue": "Look at what Jack wanted to do for his family."
+  }
+ },
+ "cleared_by": "recheck"
 }

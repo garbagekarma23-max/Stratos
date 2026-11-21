@@ -24,8 +24,300 @@
    0.238
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:55Z write: failed the content check, writing again",
+  "2026-11-20T12:44:59Z write: done (still fails the content check)",
+  "2026-11-20T12:53:28Z check: flagged",
+  "2026-11-20T13:00:00Z fix: suggested",
+  "2026-11-20T13:23:44Z autoreview: cleared with the fix (the content check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00039,
+  "write": 0.03483,
+  "check": 0.01005,
+  "fix": 0.02608
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches the general turning point form y = a(x - h)² + k with vertex (h, k) as the main idea for NSW Stage 5; the closest, mat-changing-parabola, covers only a, and c shifts, and mat-quadratic-graphs is a broader Victorian Units 1 and 2 card that also covers intercepts and concavity, so it is not the same depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Transforming parabolas",
+  "card": [
+   "A parabola can be written as \\(y = a(x - h)^{2} + k\\). Its vertex, the turning point, is the point \\((h, k)\\).",
+   "Changing \\(h\\) moves the parabola sideways. Changing \\(k\\) moves it up or down. The shape stays the same.",
+   "The number \\(a\\) stretches or flips the parabola. If \\(a\\) is negative, it flips and is concave down. If \\(a\\) is positive, it is concave up.",
+   "Example: \\(y = -(x - 3)^{2} + 2\\) has \\(h = 3\\), \\(k = 2\\) and \\(a = -1\\). Its vertex is \\((3, 2)\\) and it is concave down. Note that \\(x - 3\\) gives \\(h = 3\\), not \\(-3\\)."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The parabola \\(y = -(x - 3)^{2} + 2\\), concave down, with its vertex at \\((3, 2)\\).",
+    "x": {
+     "min": -3,
+     "max": 9,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -6,
+     "max": 4,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "-(x - 3)^{2} + 2",
+      "label": "\\(y = -(x - 3)^{2} + 2\\)",
+      "labelAt": 0.5,
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       2
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point",
+      "label": "\\((3, 2)\\)",
+      "pos": "above"
+     }
+    ]
+   }
+  },
+  "remember": "In \\(y = a(x - h)^{2} + k\\), read the vertex \\((h, k)\\) and use \\(a\\) to see the flip.",
+  "a": {
+   "q": "What is the vertex of \\(y = (x - 4)^{2} + 5\\)?",
+   "opts": [
+    "\\((4, 5)\\)",
+    "\\((-4, 5)\\)",
+    "\\((4, -5)\\)",
+    "\\((5, 4)\\)"
+   ],
+   "why": "The equation matches \\(y = a(x - h)^{2} + k\\) with \\(h = 4\\) and \\(k = 5\\), so the vertex is \\((4, 5)\\). The option \\((-4, 5)\\) is tempting because of the minus sign, but \\(x - 4\\) means \\(h = 4\\).",
+   "clue": "Match the equation to \\(a(x - h)^{2} + k\\) and read \\(h\\) and \\(k\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "The parabola \\(y = x^{2}\\) is changed to \\(y = -(x + 2)^{2} - 3\\). Which describes the change?",
+   "opts": [
+    "Flipped, then moved 2 left and 3 down",
+    "Flipped, then moved 2 right and 3 down",
+    "Flipped, then moved 2 left and 3 up",
+    "Not flipped, moved 2 left and 3 down"
+   ],
+   "why": "The negative sign makes \\(a = -1\\), so it flips. Writing \\(x + 2\\) as \\(x - (-2)\\) gives \\(h = -2\\), which is 2 left, and \\(k = -3\\) is 3 down. Moving 2 right is the common mistake of reading the sign of \\(h\\) the wrong way.",
+   "clue": "Find the vertex \\((h, k)\\), then check the sign of \\(a\\)."
+  }
+ },
+ "redone": true,
+ "local": [
+  "mat-transforming-parabolas the figure on card line 4 has a label that does not fit inside the graph: \\(y = -(x - 3)^{2} + 2\\). Move it with pos or labelAt, or widen the axes",
+  "mat-transforming-parabolas the figure on card line 4 has labels that run into each other: −4 and \\(y = -(x - 3)^{2} + 2\\). Move one with pos or labelAt"
+ ],
+ "check": {
+  "a": {
+   "best": "\\((4, 5)\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "Flipped, then moved 2 left and 3 down",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Content check: mat-transforming-parabolas the figure on card line 4 has a label that does not fit inside the graph: \\(y = -(x - 3)^{2} + 2\\). Move it with pos or labelAt, or widen the axes",
+  "Content check: mat-transforming-parabolas the figure on card line 4 has labels that run into each other: −4 and \\(y = -(x - 3)^{2} + 2\\). Move one with pos or labelAt"
+ ],
+ "proposal": {
+  "title": "Transforming parabolas",
+  "card": [
+   "A parabola can be written as \\(y = a(x - h)^{2} + k\\). Its vertex, the turning point, is the point \\((h, k)\\).",
+   "Changing \\(h\\) moves the parabola sideways. Changing \\(k\\) moves it up or down. The shape stays the same.",
+   "The number \\(a\\) stretches or flips the parabola. If \\(a\\) is negative, it flips and is concave down. If \\(a\\) is positive, it is concave up.",
+   "Example: \\(y = -(x - 3)^{2} + 2\\) has \\(h = 3\\), \\(k = 2\\) and \\(a = -1\\). Its vertex is \\((3, 2)\\) and it is concave down. Note that \\(x - 3\\) gives \\(h = 3\\), not \\(-3\\)."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The parabola \\(y = -(x - 3)^{2} + 2\\), concave down, with its vertex at \\((3, 2)\\).",
+    "x": {
+     "min": -2,
+     "max": 10,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -6,
+     "max": 5,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "-(x - 3)^{2} + 2",
+      "label": "\\(y = -(x - 3)^{2} + 2\\)",
+      "labelAt": 4.2,
+      "pos": "above-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       2
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point",
+      "label": "\\((3, 2)\\)",
+      "pos": "above"
+     }
+    ]
+   }
+  },
+  "remember": "In \\(y = a(x - h)^{2} + k\\), read the vertex \\((h, k)\\) and use \\(a\\) to see the flip.",
+  "a": {
+   "q": "What is the vertex of \\(y = (x - 4)^{2} + 5\\)?",
+   "opts": [
+    "\\((4, 5)\\)",
+    "\\((-4, 5)\\)",
+    "\\((4, -5)\\)",
+    "\\((5, 4)\\)"
+   ],
+   "why": "The equation matches \\(y = a(x - h)^{2} + k\\) with \\(h = 4\\) and \\(k = 5\\), so the vertex is \\((4, 5)\\). The option \\((-4, 5)\\) is tempting because of the minus sign, but \\(x - 4\\) means \\(h = 4\\).",
+   "clue": "Match the equation to \\(a(x - h)^{2} + k\\) and read \\(h\\) and \\(k\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "The parabola \\(y = x^{2}\\) is changed to \\(y = -(x + 2)^{2} - 3\\). Which describes the change?",
+   "opts": [
+    "Flipped, then moved 2 left and 3 down",
+    "Flipped, then moved 2 right and 3 down",
+    "Flipped, then moved 2 left and 3 up",
+    "Not flipped, moved 2 left and 3 down"
+   ],
+   "why": "The negative sign makes \\(a = -1\\), so it flips. Writing \\(x + 2\\) as \\(x - (-2)\\) gives \\(h = -2\\), which is 2 left, and \\(k = -3\\) is 3 down. Moving 2 right is the common mistake of reading the sign of \\(h\\) the wrong way.",
+   "clue": "Find the vertex \\((h, k)\\), then check the sign of \\(a\\)."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:44Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [],
+  "flags": [
+   "Content check: mat-transforming-parabolas the figure on card line 4 has a label that does not fit inside the graph: \\(y = -(x - 3)^{2} + 2\\). Move it with pos or labelAt, or widen the axes",
+   "Content check: mat-transforming-parabolas the figure on card line 4 has labels that run into each other: −4 and \\(y = -(x - 3)^{2} + 2\\). Move one with pos or labelAt"
+  ]
+ },
+ "final": {
+  "title": "Transforming parabolas",
+  "card": [
+   "A parabola can be written as \\(y = a(x - h)^{2} + k\\). Its vertex, the turning point, is the point \\((h, k)\\).",
+   "Changing \\(h\\) moves the parabola sideways. Changing \\(k\\) moves it up or down. The shape stays the same.",
+   "The number \\(a\\) stretches or flips the parabola. If \\(a\\) is negative, it flips and is concave down. If \\(a\\) is positive, it is concave up.",
+   "Example: \\(y = -(x - 3)^{2} + 2\\) has \\(h = 3\\), \\(k = 2\\) and \\(a = -1\\). Its vertex is \\((3, 2)\\) and it is concave down. Note that \\(x - 3\\) gives \\(h = 3\\), not \\(-3\\)."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The parabola \\(y = -(x - 3)^{2} + 2\\), concave down, with its vertex at \\((3, 2)\\).",
+    "x": {
+     "min": -2,
+     "max": 10,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -6,
+     "max": 5,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "-(x - 3)^{2} + 2",
+      "label": "\\(y = -(x - 3)^{2} + 2\\)",
+      "labelAt": 4.2,
+      "pos": "above-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       2
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point",
+      "label": "\\((3, 2)\\)",
+      "pos": "above"
+     }
+    ]
+   }
+  },
+  "remember": "In \\(y = a(x - h)^{2} + k\\), read the vertex \\((h, k)\\) and use \\(a\\) to see the flip.",
+  "a": {
+   "q": "What is the vertex of \\(y = (x - 4)^{2} + 5\\)?",
+   "opts": [
+    "\\((4, 5)\\)",
+    "\\((-4, 5)\\)",
+    "\\((4, -5)\\)",
+    "\\((5, 4)\\)"
+   ],
+   "why": "The equation matches \\(y = a(x - h)^{2} + k\\) with \\(h = 4\\) and \\(k = 5\\), so the vertex is \\((4, 5)\\). The option \\((-4, 5)\\) is tempting because of the minus sign, but \\(x - 4\\) means \\(h = 4\\).",
+   "clue": "Match the equation to \\(a(x - h)^{2} + k\\) and read \\(h\\) and \\(k\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "The parabola \\(y = x^{2}\\) is changed to \\(y = -(x + 2)^{2} - 3\\). Which describes the change?",
+   "opts": [
+    "Flipped, then moved 2 left and 3 down",
+    "Flipped, then moved 2 right and 3 down",
+    "Flipped, then moved 2 left and 3 up",
+    "Not flipped, moved 2 left and 3 down"
+   ],
+   "why": "The negative sign makes \\(a = -1\\), so it flips. Writing \\(x + 2\\) as \\(x - (-2)\\) gives \\(h = -2\\), which is 2 left, and \\(k = -3\\) is 3 down. Moving 2 right is the common mistake of reading the sign of \\(h\\) the wrong way.",
+   "clue": "Find the vertex \\((h, k)\\), then check the sign of \\(a\\)."
+  }
+ },
+ "cleared_by": "auto"
 }

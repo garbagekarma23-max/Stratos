@@ -8,8 +8,194 @@
    0.213
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:47Z write: failed the content check, writing again",
+  "2026-11-20T12:44:54Z write: done (still fails the content check)",
+  "2026-11-20T13:11:47Z check: flagged",
+  "2026-11-20T13:17:56Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.01424,
+  "check": 0.00804,
+  "fix": 0.01674,
+  "recheck": 0.00728
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches narrator types and unreliable narrators, not metafiction, which is writing that draws attention to itself as a text, and it is pitched at Year 11 rather than Stage 5.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Metafiction",
+  "card": [
+   "Metafiction is writing that draws attention to the fact that it is a made-up text. It reminds the reader that they are reading a story.",
+   "Common methods include a narrator who speaks to the reader about how the story is being told, a character who knows they are in a story, or a text that comments on its own plot or writing.",
+   "Here is an invented example. A narrator stops mid-scene to say she could end the chapter now, but readers would complain, so she will let Tom find his keys. The narrator talks about the choice of ending, so the story points to itself.",
+   "The effect is to break the illusion that the story is a real window onto events. It can make readers think about how stories are built, why they are told and how much they should trust the teller."
+  ],
+  "remember": "Metafiction makes the reader notice the story as a story.",
+  "a": {
+   "q": "Which of these is an example of metafiction?",
+   "opts": [
+    "A narrator admits she is unsure how to end the story",
+    "A narrator describes a storm in vivid detail",
+    "A character recalls a childhood summer by the sea",
+    "A narrator tells the story through one character's eyes"
+   ],
+   "why": "The narrator talks about the work of writing the ending, so the text draws attention to being a text. The other options tell their stories without commenting on how the story is made, even when they use detail or a close viewpoint.",
+   "clue": "Which narrator talks about the story itself, not what happens in it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In Priya's short story, the narrator pauses to admit that a better writer would give this scene a clearer setting, and tells the reader to imagine one. What is the main effect of this on the reader?",
+   "opts": [
+    "It reminds the reader that the story is being constructed",
+    "It makes the setting feel more real and detailed",
+    "It builds suspense about what happens next",
+    "It shows the narrator is a character in the action"
+   ],
+   "why": "The narrator comments on how the scene is written, so the reader is reminded that this is a made-up text. The comment gives no setting details, so it does not make the scene feel more real. It also says nothing about future events, so it does not build suspense.",
+   "clue": "Look at what the narrator is talking about: the events, or the writing?"
+  }
+ },
+ "redone": true,
+ "local": [
+  "eng-metafiction banned word in: Here is an invented example. A narrator stops mid-scene to say she could end the chapter now, but readers would complain, so she will let Tom find his keys. The narrator talks about the choice of ending, so the story points to itself."
+ ],
+ "check": {
+  "a": {
+   "best": "A narrator admits she is unsure how to end the story",
+   "also_right": []
+  },
+  "b": {
+   "best": "It reminds the reader that the story is being constructed",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Content check: eng-metafiction banned word in: Here is an invented example. A narrator stops mid-scene to say she could end the chapter now, but readers would complain, so she will let Tom find his keys. The narrator talks about the choice of ending, so the story points to itself."
+ ],
+ "proposal": {
+  "title": "Metafiction",
+  "card": [
+   "Metafiction is writing that draws attention to the fact that it is a made-up text. It reminds the reader that they are reading a story.",
+   "Common methods include a narrator who speaks to the reader about how the story is being told, a character who knows they are in a story, or a text that comments on its own plot or writing.",
+   "Here is an invented example. A narrator stops mid-scene to say she could end the chapter now, but readers would complain, so she will let Tom find his lost phone. The narrator talks about the choice of ending, so the story points to itself.",
+   "The effect is to break the illusion that the story is a real window onto events. It can make readers think about how stories are built, why they are told and how much they should trust the teller."
+  ],
+  "remember": "Metafiction makes the reader notice the story as a story.",
+  "a": {
+   "q": "Which of these is an example of metafiction?",
+   "opts": [
+    "A narrator admits she is unsure how to end the story",
+    "A narrator describes a storm in vivid detail",
+    "A character recalls a childhood summer by the sea",
+    "A narrator tells the story through one character's eyes"
+   ],
+   "why": "The narrator talks about the work of writing the ending, so the text draws attention to being a text. The other options tell their stories without commenting on how the story is made, even when they use detail or a close viewpoint.",
+   "clue": "Which narrator talks about the story itself, not what happens in it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In Priya's short story, the narrator pauses to admit that a better writer would give this scene a clearer setting, and tells the reader to imagine one. What is the main effect of this on the reader?",
+   "opts": [
+    "It reminds the reader that the story is being made up",
+    "It makes the setting feel more real and detailed",
+    "It builds suspense about what happens next",
+    "It shows the narrator is a character in the action"
+   ],
+   "why": "The narrator comments on how the scene is written, so the reader is reminded that this is a made-up text. The comment gives no setting details, so it does not make the scene feel more real. It also says nothing about future events, so it does not build suspense.",
+   "clue": "Look at what the narrator is talking about: the events, or the writing?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A narrator admits she is unsure how to end the story",
+    "also_right": []
+   },
+   "b": {
+    "best": "It reminds the reader that the story is being made up",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [],
+  "flags": [
+   "Content check: eng-metafiction banned word in: Here is an invented example. A narrator stops mid-scene to say she could end the chapter now, but readers would complain, so she will let Tom find his keys. The narrator talks about the choice of ending, so the story points to itself."
+  ]
+ },
+ "final": {
+  "title": "Metafiction",
+  "card": [
+   "Metafiction is writing that draws attention to the fact that it is a made-up text. It reminds the reader that they are reading a story.",
+   "Common methods include a narrator who speaks to the reader about how the story is being told, a character who knows they are in a story, or a text that comments on its own plot or writing.",
+   "Here is an invented example. A narrator stops mid-scene to say she could end the chapter now, but readers would complain, so she will let Tom find his lost phone. The narrator talks about the choice of ending, so the story points to itself.",
+   "The effect is to break the illusion that the story is a real window onto events. It can make readers think about how stories are built, why they are told and how much they should trust the teller."
+  ],
+  "remember": "Metafiction makes the reader notice the story as a story.",
+  "a": {
+   "q": "Which of these is an example of metafiction?",
+   "opts": [
+    "A narrator admits she is unsure how to end the story",
+    "A narrator describes a storm in vivid detail",
+    "A character recalls a childhood summer by the sea",
+    "A narrator tells the story through one character's eyes"
+   ],
+   "why": "The narrator talks about the work of writing the ending, so the text draws attention to being a text. The other options tell their stories without commenting on how the story is made, even when they use detail or a close viewpoint.",
+   "clue": "Which narrator talks about the story itself, not what happens in it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In Priya's short story, the narrator pauses to admit that a better writer would give this scene a clearer setting, and tells the reader to imagine one. What is the main effect of this on the reader?",
+   "opts": [
+    "It reminds the reader that the story is being made up",
+    "It makes the setting feel more real and detailed",
+    "It builds suspense about what happens next",
+    "It shows the narrator is a character in the action"
+   ],
+   "why": "The narrator comments on how the scene is written, so the reader is reminded that this is a made-up text. The comment gives no setting details, so it does not make the scene feel more real. It also says nothing about future events, so it does not build suspense.",
+   "clue": "Look at what the narrator is talking about: the events, or the writing?"
+  }
+ },
+ "cleared_by": "recheck"
 }

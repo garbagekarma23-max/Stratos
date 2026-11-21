@@ -16,8 +16,264 @@
    0.205
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 may adapt his-wartime-government-controls, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:51Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:52Z write: failed the content check, writing again",
+  "2026-11-20T12:44:57Z write: done",
+  "2026-11-20T12:53:26Z check: flagged",
+  "2026-11-20T12:59:59Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "confirm": 0.00611,
+  "write": 0.01415,
+  "check": 0.01308,
+  "fix": 0.01947,
+  "recheck": 0.00807
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "his-wartime-government-controls",
+  "changes": [
+   "The card covers rationing, manpower, censorship and internment in one point, while the new point focuses on rationing, censorship and direction into war work, so the internment section should be removed or set aside for this point.",
+   "The card's examples and the Adelaide newspaper and Fremantle references are drawn from other states, so the examples should be made local to New South Wales, such as Sydney newspapers and NSW war work."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same wartime controls at the right depth, but it covers internment too and uses examples that should be localised for New South Wales students.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers rationing, manpower and censorship but also teaches internment, and one of its questions tests internment, so it is broader than this brief and would need more than small changes to fit.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Government controls",
+  "card": [
+   [
+    "War effort",
+    "In WWII the Australian government took wide powers to put the nation's people and resources behind the war. This effort is called total war."
+   ],
+   [
+    "Rationing",
+    "Some goods were limited so there was enough for the forces. Food such as tea, butter and meat, and clothing, were rationed. People used coupons to buy their share."
+   ],
+   [
+    "Censorship",
+    "The government controlled what newspapers and radio could report. News that might help the enemy or lower morale, such as ship losses or bombing damage, could be cut or changed."
+   ],
+   [
+    "Manpower direction",
+    "The government could direct people into jobs that the war needed, such as factory or farm work. It did this to supply the forces and the nation."
+   ]
+  ],
+  "remember": "Rationing, censorship and directed work gave the government control of goods, news and labour.",
+  "a": {
+   "q": "Why did the government ration tea, butter and clothing in WWII?",
+   "opts": [
+    "To make sure enough supplies were left for the war effort",
+    "To stop people from hearing news that could help the enemy",
+    "To move workers from their usual jobs into war industries",
+    "To raise money by taxing goods that people wanted most"
+   ],
+   "why": "Rationing limited how much each person could buy, so supplies were left for the forces and the war effort. Censorship is the control of news, not goods, so the second option describes a different control.",
+   "clue": "Think about who else needed these goods."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1942 a newspaper in Brisbane is told it cannot print the details of a ship sunk near the coast. Which government control is this, and what is its main reason?",
+   "opts": [
+    "Censorship, to keep news from the enemy and protect morale",
+    "Rationing, to save paper so supplies last for the forces",
+    "Manpower direction, to move journalists into war industries",
+    "Rationing, to make sure each person gets a fair news share"
+   ],
+   "why": "Stopping a paper from printing certain news is censorship. Its aim was to keep useful information from the enemy and to protect morale. Rationing limits goods bought with coupons, and the paper-saving option confuses a limit on goods with a limit on content.",
+   "clue": "The government is controlling what is said, not what is bought."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "To make sure enough supplies were left for the war effort",
+   "also_right": []
+  },
+  "b": {
+   "best": "Censorship, to keep news from the enemy and protect morale",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 'the second option' is censorship, but options are shown in random order. In the order given, the second option is the taxation one and the censorship option is third, so the reference can point to the wrong option. Name the option by its content instead."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'controlling what is said, not what is bought' rules out both rationing options and points straight to censorship, since manpower direction is plainly not about what is said. It nearly gives the answer away."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are sound. Why (a) refers to 'the second option' by position, which breaks when options are shuffled, and the clue for question b nearly gives away the answer."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) says 'the second option' is censorship, but options are shown in random order. In the order given, the second option is the taxation one and the censorship option is third, so the reference can point to the wrong option. Name the option by its content instead.",
+  "Question b, other: The clue 'controlling what is said, not what is bought' rules out both rationing options and points straight to censorship, since manpower direction is plainly not about what is said. It nearly gives the answer away."
+ ],
+ "proposal": {
+  "title": "Government controls",
+  "card": [
+   [
+    "War effort",
+    "In WWII the Australian government took wide powers to put the nation's people and resources behind the war. This effort is called total war."
+   ],
+   [
+    "Rationing",
+    "Some goods were limited so there was enough for the forces. Food such as tea, butter and meat, and clothing, were rationed. People used coupons to buy their share."
+   ],
+   [
+    "Censorship",
+    "The government controlled what newspapers and radio could report. News that might help the enemy or lower morale, such as ship losses or bombing damage, could be cut or changed."
+   ],
+   [
+    "Manpower direction",
+    "The government could direct people into jobs that the war needed, such as factory or farm work. It did this to supply the forces and the nation."
+   ]
+  ],
+  "remember": "Rationing, censorship and directed work gave the government control of goods, news and labour.",
+  "a": {
+   "q": "Why did the government ration tea, butter and clothing in WWII?",
+   "opts": [
+    "To make sure enough supplies were left for the war effort",
+    "To stop people from hearing news that could help the enemy",
+    "To move workers from their usual jobs into war industries",
+    "To raise money by taxing goods that people wanted most"
+   ],
+   "why": "Rationing limited how much each person could buy, so supplies were left for the forces and the war effort. Stopping news that could help the enemy describes censorship, which controlled news, not goods.",
+   "clue": "Think about who else needed these goods."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1942 a newspaper in Brisbane is told it cannot print the details of a ship sunk near the coast. Which government control is this, and what is its main reason?",
+   "opts": [
+    "Censorship, to keep news from the enemy and protect morale",
+    "Rationing, to save paper so supplies last for the forces",
+    "Manpower direction, to move journalists into war industries",
+    "Censorship, to save newsprint for more important war news"
+   ],
+   "why": "Stopping a paper from printing certain news is censorship. Its aim was to keep useful information from the enemy and to protect morale. The newsprint and paper-saving options confuse a limit on goods with a limit on what can be reported.",
+   "clue": "Think about who else might learn something from a printed report."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "To make sure enough supplies were left for the war effort",
+    "also_right": []
+   },
+   "b": {
+    "best": "Censorship, to keep news from the enemy and protect morale",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 'the second option' is censorship, but options are shown in random order. In the order given, the second option is the taxation one and the censorship option is third, so the reference can point to the wrong option. Name the option by its content instead."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'controlling what is said, not what is bought' rules out both rationing options and points straight to censorship, since manpower direction is plainly not about what is said. It nearly gives the answer away."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) says 'the second option' is censorship, but options are shown in random order. In the order given, the second option is the taxation one and the censorship option is third, so the reference can point to the wrong option. Name the option by its content instead.",
+   "Question b, other: The clue 'controlling what is said, not what is bought' rules out both rationing options and points straight to censorship, since manpower direction is plainly not about what is said. It nearly gives the answer away."
+  ]
+ },
+ "final": {
+  "title": "Government controls",
+  "card": [
+   [
+    "War effort",
+    "In WWII the Australian government took wide powers to put the nation's people and resources behind the war. This effort is called total war."
+   ],
+   [
+    "Rationing",
+    "Some goods were limited so there was enough for the forces. Food such as tea, butter and meat, and clothing, were rationed. People used coupons to buy their share."
+   ],
+   [
+    "Censorship",
+    "The government controlled what newspapers and radio could report. News that might help the enemy or lower morale, such as ship losses or bombing damage, could be cut or changed."
+   ],
+   [
+    "Manpower direction",
+    "The government could direct people into jobs that the war needed, such as factory or farm work. It did this to supply the forces and the nation."
+   ]
+  ],
+  "remember": "Rationing, censorship and directed work gave the government control of goods, news and labour.",
+  "a": {
+   "q": "Why did the government ration tea, butter and clothing in WWII?",
+   "opts": [
+    "To make sure enough supplies were left for the war effort",
+    "To stop people from hearing news that could help the enemy",
+    "To move workers from their usual jobs into war industries",
+    "To raise money by taxing goods that people wanted most"
+   ],
+   "why": "Rationing limited how much each person could buy, so supplies were left for the forces and the war effort. Stopping news that could help the enemy describes censorship, which controlled news, not goods.",
+   "clue": "Think about who else needed these goods."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1942 a newspaper in Brisbane is told it cannot print the details of a ship sunk near the coast. Which government control is this, and what is its main reason?",
+   "opts": [
+    "Censorship, to keep news from the enemy and protect morale",
+    "Rationing, to save paper so supplies last for the forces",
+    "Manpower direction, to move journalists into war industries",
+    "Censorship, to save newsprint for more important war news"
+   ],
+   "why": "Stopping a paper from printing certain news is censorship. Its aim was to keep useful information from the enemy and to protect morale. The newsprint and paper-saving options confuse a limit on goods with a limit on what can be reported.",
+   "clue": "Think about who else might learn something from a printed report."
+  }
+ },
+ "cleared_by": "recheck"
 }

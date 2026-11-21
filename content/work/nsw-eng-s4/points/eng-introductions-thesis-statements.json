@@ -20,8 +20,202 @@
    0.227
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:42Z write: failed the content check, writing again",
+  "2026-11-20T12:35:46Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.01786,
+  "check": 0.00904,
+  "fix": 0.0136,
+  "recheck": 0.00607
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches the introduction-with-thesis idea at Stage 4 depth: the introductions card lacks a thesis, the thesis cards are for History Year 9 or Year 10 literary essays, and the persuasive essay card covers the whole essay structure rather than introductions and thesis statements.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Introductions and thesis statements",
+  "card": [
+   "An introduction is the opening of a text. It orients the reader to the topic, so they know what the text is about.",
+   "An introduction also gives a thesis. A thesis is a clear statement of the writer's position or argument.",
+   "The rest of the text supports the thesis. Each paragraph should help prove it.",
+   "A thesis takes a stand, such as \"Homework should be limited to one hour a night.\" A topic alone, such as \"This essay is about homework\", is not a thesis."
+  ],
+  "remember": "A good introduction sets up the topic and states a clear position.",
+  "a": {
+   "q": "What does a thesis statement do in an introduction?",
+   "opts": [
+    "States the writer's position for the text to support",
+    "Lists every piece of evidence the text will use",
+    "Tells the reader the topic without taking a side",
+    "Retells the story of how the writer chose the topic"
+   ],
+   "why": "A thesis is the writer's clear position, and the rest of the text supports it. Naming the topic only orients the reader. It does not state a position, so it is not a thesis.",
+   "clue": "The rest of the text has to back it up."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which sentence is the best thesis for an essay about school canteens?",
+   "opts": [
+    "Canteens should sell more fruit to help students learn",
+    "This essay will talk about what school canteens sell",
+    "Many schools in Australia have a canteen for students",
+    "What does a canteen sell, and who decides the menu?"
+   ],
+   "why": "The first sentence takes a clear position and gives a reason the essay can support. The second only announces the topic. The third is a fact and the fourth is a question, so neither states a position.",
+   "clue": "Pick the one that takes a side."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "States the writer's position for the text to support",
+   "also_right": []
+  },
+  "b": {
+   "best": "Canteens should sell more fruit to help students learn",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) refers to options by position ('The first sentence', 'The second', 'the third', 'the fourth'), but options are shown in random order. As displayed, the first option is the fact and the third is the thesis, so the explanation would point students to the wrong sentences. Refer to each option by its wording instead."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and match the card. The why for question b names options by position ('first', 'second', and so on), which will not match the shuffled order students see, so it should refer to each option by its wording."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) refers to options by position ('The first sentence', 'The second', 'the third', 'the fourth'), but options are shown in random order. As displayed, the first option is the fact and the third is the thesis, so the explanation would point students to the wrong sentences. Refer to each option by its wording instead."
+ ],
+ "proposal": {
+  "title": "Introductions and thesis statements",
+  "card": [
+   "An introduction is the opening of a text. It orients the reader to the topic, so they know what the text is about.",
+   "An introduction also gives a thesis. A thesis is a clear statement of the writer's position or argument.",
+   "The rest of the text supports the thesis. Each paragraph should help prove it.",
+   "A thesis takes a stand, such as \"Homework should be limited to one hour a night.\" A topic alone, such as \"This essay is about homework\", is not a thesis."
+  ],
+  "remember": "A good introduction sets up the topic and states a clear position.",
+  "a": {
+   "q": "What does a thesis statement do in an introduction?",
+   "opts": [
+    "States the writer's position for the text to support",
+    "Lists every piece of evidence the text will use",
+    "Tells the reader the topic without taking a side",
+    "Retells the story of how the writer chose the topic"
+   ],
+   "why": "A thesis is the writer's clear position, and the rest of the text supports it. Naming the topic only orients the reader. It does not state a position, so it is not a thesis.",
+   "clue": "The rest of the text has to back it up."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which sentence is the best thesis for an essay about school canteens?",
+   "opts": [
+    "Canteens should sell more fruit to help students learn",
+    "This essay will talk about what school canteens sell",
+    "Many schools in Australia have a canteen for students",
+    "What does a canteen sell, and who decides the menu?"
+   ],
+   "why": "The sentence saying canteens should sell more fruit takes a clear position and gives a reason the essay can support. The sentence saying the essay will talk about canteens only announces the topic. The fact that many schools have a canteen and the question about the menu do not state a position either.",
+   "clue": "Pick the one that takes a side."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "States the writer's position for the text to support",
+    "also_right": []
+   },
+   "b": {
+    "best": "Canteens should sell more fruit to help students learn",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) refers to options by position ('The first sentence', 'The second', 'the third', 'the fourth'), but options are shown in random order. As displayed, the first option is the fact and the third is the thesis, so the explanation would point students to the wrong sentences. Refer to each option by its wording instead."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) refers to options by position ('The first sentence', 'The second', 'the third', 'the fourth'), but options are shown in random order. As displayed, the first option is the fact and the third is the thesis, so the explanation would point students to the wrong sentences. Refer to each option by its wording instead."
+  ]
+ },
+ "final": {
+  "title": "Introductions and thesis statements",
+  "card": [
+   "An introduction is the opening of a text. It orients the reader to the topic, so they know what the text is about.",
+   "An introduction also gives a thesis. A thesis is a clear statement of the writer's position or argument.",
+   "The rest of the text supports the thesis. Each paragraph should help prove it.",
+   "A thesis takes a stand, such as \"Homework should be limited to one hour a night.\" A topic alone, such as \"This essay is about homework\", is not a thesis."
+  ],
+  "remember": "A good introduction sets up the topic and states a clear position.",
+  "a": {
+   "q": "What does a thesis statement do in an introduction?",
+   "opts": [
+    "States the writer's position for the text to support",
+    "Lists every piece of evidence the text will use",
+    "Tells the reader the topic without taking a side",
+    "Retells the story of how the writer chose the topic"
+   ],
+   "why": "A thesis is the writer's clear position, and the rest of the text supports it. Naming the topic only orients the reader. It does not state a position, so it is not a thesis.",
+   "clue": "The rest of the text has to back it up."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which sentence is the best thesis for an essay about school canteens?",
+   "opts": [
+    "Canteens should sell more fruit to help students learn",
+    "This essay will talk about what school canteens sell",
+    "Many schools in Australia have a canteen for students",
+    "What does a canteen sell, and who decides the menu?"
+   ],
+   "why": "The sentence saying canteens should sell more fruit takes a clear position and gives a reason the essay can support. The sentence saying the essay will talk about canteens only announces the topic. The fact that many schools have a canteen and the question about the menu do not state a position either.",
+   "clue": "Pick the one that takes a side."
+  }
+ },
+ "cleared_by": "recheck"
 }

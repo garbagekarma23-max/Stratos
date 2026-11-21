@@ -20,8 +20,242 @@
    0.212
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:00Z write: done",
+  "2026-11-20T12:35:56Z check: flagged",
+  "2026-11-20T12:45:00Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.01096,
+  "check": 0.01059,
+  "fix": 0.0157,
+  "recheck": 0.00684
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest card, chem-periodic-table-s-layout, covers groups and periods but is written at Year 10 depth, with atomic number ordering and f-block rows, and it does not teach predicting reactivity from an element's position, which is the main idea of the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Groups and periods",
+  "card": [
+   [
+    "Group",
+    "A group is a column of the periodic table. Elements in the same group have similar properties."
+   ],
+   [
+    "Period",
+    "A period is a row of the periodic table. Moving across a period, the properties change step by step."
+   ],
+   "The periodic table has 18 groups. Group 1 holds very reactive metals such as lithium, sodium and potassium.",
+   "An element's place in the table lets us predict its properties. If we know how sodium reacts, we can expect potassium, in the same group, to react in a similar way."
+  ],
+  "remember": "Groups are columns with similar elements. Periods are rows.",
+  "a": {
+   "q": "Lithium and sodium are in the same group. What does this tell us?",
+   "opts": [
+    "They have similar properties",
+    "They have exactly the same properties",
+    "They are in the same row",
+    "They are both non-metals"
+   ],
+   "why": "Elements in a group are similar, so we can predict one from the other. They are not identical, and a group is a column, not a row.",
+   "clue": "Think about what a column tells you."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom reads that rubidium is in Group 1, below potassium. A teacher asks him to predict how it reacts. What is the best prediction?",
+   "opts": [
+    "It is a reactive metal like potassium",
+    "It is an unreactive non-metal",
+    "It reacts exactly like potassium",
+    "It is in the same period as potassium"
+   ],
+   "why": "Group 1 elements are very reactive metals, so rubidium should be similar to potassium. It is not identical. Elements in a group are in different periods.",
+   "clue": "Use the group to predict."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A simple periodic table outline with one column shaded and labelled group, and one row shaded and labelled period.",
+    "why": "It shows students which direction is a group and which is a period."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "They have similar properties",
+   "also_right": []
+  },
+  "b": {
+   "best": "It is a reactive metal like potassium",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) says 'Group 1 elements are very reactive metals', but hydrogen is usually placed in Group 1 and is not a metal. The card is more careful ('holds very reactive metals such as...'). Better: 'Rubidium, like potassium, is a very reactive Group 1 metal.'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct, with clear single answers. One small problem: why (b) says all Group 1 elements are very reactive metals, which ignores hydrogen."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: Why (b) says 'Group 1 elements are very reactive metals', but hydrogen is usually placed in Group 1 and is not a metal. The card is more careful ('holds very reactive metals such as...'). Better: 'Rubidium, like potassium, is a very reactive Group 1 metal.'"
+ ],
+ "proposal": {
+  "title": "Groups and periods",
+  "card": [
+   [
+    "Group",
+    "A group is a column of the periodic table. Elements in the same group have similar properties."
+   ],
+   [
+    "Period",
+    "A period is a row of the periodic table. Moving across a period, the properties change step by step."
+   ],
+   "The periodic table has 18 groups. Group 1 holds very reactive metals such as lithium, sodium and potassium.",
+   "An element's place in the table lets us predict its properties. If we know how sodium reacts, we can expect potassium, in the same group, to react in a similar way."
+  ],
+  "remember": "Groups are columns with similar elements. Periods are rows.",
+  "a": {
+   "q": "Lithium and sodium are in the same group. What does this tell us?",
+   "opts": [
+    "They have similar properties",
+    "They have exactly the same properties",
+    "They are in the same row",
+    "They are both non-metals"
+   ],
+   "why": "Elements in a group are similar, so we can predict one from the other. They are not identical, and a group is a column, not a row.",
+   "clue": "Think about what a column tells you."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom reads that rubidium is in Group 1, below potassium. A teacher asks him to predict how it reacts. What is the best prediction?",
+   "opts": [
+    "It is a reactive metal like potassium",
+    "It is an unreactive non-metal",
+    "It reacts exactly like potassium",
+    "It is in the same period as potassium"
+   ],
+   "why": "Rubidium, like potassium, is a very reactive Group 1 metal, so it should react in a similar way. Similar does not mean exactly the same. Sitting below potassium puts rubidium in the next row, so it is in a different period.",
+   "clue": "Use the group to predict."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A simple periodic table outline with one column shaded and labelled group, and one row shaded and labelled period.",
+    "why": "It shows students which direction is a group and which is a period."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "They have similar properties",
+    "also_right": []
+   },
+   "b": {
+    "best": "It is a reactive metal like potassium",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) says 'Group 1 elements are very reactive metals', but hydrogen is usually placed in Group 1 and is not a metal. The card is more careful ('holds very reactive metals such as...'). Better: 'Rubidium, like potassium, is a very reactive Group 1 metal.'"
+   }
+  ],
+  "flags": [
+   "Question b, fact: Why (b) says 'Group 1 elements are very reactive metals', but hydrogen is usually placed in Group 1 and is not a metal. The card is more careful ('holds very reactive metals such as...'). Better: 'Rubidium, like potassium, is a very reactive Group 1 metal.'"
+  ]
+ },
+ "final": {
+  "title": "Groups and periods",
+  "card": [
+   [
+    "Group",
+    "A group is a column of the periodic table. Elements in the same group have similar properties."
+   ],
+   [
+    "Period",
+    "A period is a row of the periodic table. Moving across a period, the properties change step by step."
+   ],
+   "The periodic table has 18 groups. Group 1 holds very reactive metals such as lithium, sodium and potassium.",
+   "An element's place in the table lets us predict its properties. If we know how sodium reacts, we can expect potassium, in the same group, to react in a similar way."
+  ],
+  "remember": "Groups are columns with similar elements. Periods are rows.",
+  "a": {
+   "q": "Lithium and sodium are in the same group. What does this tell us?",
+   "opts": [
+    "They have similar properties",
+    "They have exactly the same properties",
+    "They are in the same row",
+    "They are both non-metals"
+   ],
+   "why": "Elements in a group are similar, so we can predict one from the other. They are not identical, and a group is a column, not a row.",
+   "clue": "Think about what a column tells you."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom reads that rubidium is in Group 1, below potassium. A teacher asks him to predict how it reacts. What is the best prediction?",
+   "opts": [
+    "It is a reactive metal like potassium",
+    "It is an unreactive non-metal",
+    "It reacts exactly like potassium",
+    "It is in the same period as potassium"
+   ],
+   "why": "Rubidium, like potassium, is a very reactive Group 1 metal, so it should react in a similar way. Similar does not mean exactly the same. Sitting below potassium puts rubidium in the next row, so it is in a different period.",
+   "clue": "Use the group to predict."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A simple periodic table outline with one column shaded and labelled group, and one row shaded and labelled period.",
+    "why": "It shows students which direction is a group and which is a period."
+   }
+  ]
+ },
+ "cleared_by": "recheck"
 }

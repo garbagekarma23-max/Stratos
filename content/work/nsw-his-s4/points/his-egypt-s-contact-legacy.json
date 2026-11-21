@@ -8,8 +8,361 @@
    0.532
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: done",
+  "2026-11-20T12:44:56Z check: flagged",
+  "2026-11-20T12:53:26Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (b wording, remember other)",
+  "2026-11-20T13:44:56Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00683,
+  "check": 0.01224,
+  "fix": 0.02485,
+  "recheck": 0.01761
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point covers Egypt's wars and the Hittite peace treaty but not the trade contact or the legacy of writing, building and medicine that the new point also requires, so it teaches only part of the brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The three wrong options share one pattern ('… that scholars/historians/people still read/study/visit today'). The right option is the only one without it, so a student could pick it as the odd one out without knowing the idea.\n- Remember, other: The remember line defines contact as 'how Egypt dealt with others in its own time' and sets it against legacy. The card never defines contact this way, so the remember line splits the two ideas more neatly than the card teaches.",
+ "rejected": {
+  "title": "Egypt's contact and legacy",
+  "card": [
+   "Egypt traded with neighbours such as Nubia and the Near East. It also fought them, and some of its pharaohs led armies into lands beyond Egypt.",
+   "Egypt and the Hittites, a powerful people in what is now Turkey, fought over lands in the Near East. Around 1259 BCE they signed a peace treaty, one of the earliest known in history.",
+   "A legacy is what a society leaves behind that people still use or learn from. Egypt's legacy includes hieroglyphic writing, large stone building, and medical knowledge recorded on papyrus.",
+   "Contact with other peoples could bring goods and ideas into Egypt, and Egyptian ideas could spread outwards too."
+  ],
+  "remember": "Contact is how Egypt dealt with others in its own time. Legacy is what it left for people after.",
+  "a": {
+   "q": "What is meant by the legacy of ancient Egypt?",
+   "opts": [
+    "What Egypt left behind that people still learn from",
+    "The land Egypt won from its neighbours in war",
+    "The goods Egypt sold to other peoples in trade",
+    "The gods Egyptians worshipped in their temples"
+   ],
+   "why": "A legacy is what a society leaves behind that later people still use or learn from, such as writing, building and medicine. Conquered land and trade goods belong to Egypt's contact with others, not to what it left behind.",
+   "clue": "Think about what lasts after a society has gone."
+  },
+  "b": {
+   "d": 2,
+   "q": "Liam is sorting facts about ancient Egypt under two headings, contact and legacy. Which fact belongs under contact?",
+   "opts": [
+    "Egypt and the Hittites agreed to a peace treaty",
+    "Hieroglyphs that scholars can still read today",
+    "Stone buildings that people still visit today",
+    "Medical texts on papyrus that historians study"
+   ],
+   "why": "The treaty was an agreement between Egypt and a neighbouring people, so it is part of Egypt's contact with others. Hieroglyphs, stone buildings and medical texts are things Egypt left behind that people still learn from, so they belong under legacy.",
+   "clue": "Which fact is about Egypt dealing with another people?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The three wrong options share one pattern ('… that scholars/historians/people still read/study/visit today'). The right option is the only one without it, so a student could pick it as the odd one out without knowing the idea.",
+    "Remember, other: The remember line defines contact as 'how Egypt dealt with others in its own time' and sets it against legacy. The card never defines contact this way, so the remember line splits the two ideas more neatly than the card teaches."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Egypt's contact and legacy",
+     "card": [
+      "Egypt traded with neighbours such as Nubia and the Near East. It also fought them, and some of its pharaohs led armies into lands beyond Egypt.",
+      "Egypt and the Hittites, a powerful people in what is now Turkey, fought over lands in the Near East. Around 1259 BCE they signed a peace treaty, one of the earliest known in history.",
+      "A legacy is what a society leaves behind that people still use or learn from. Egypt's legacy includes hieroglyphic writing, large stone building, and medical knowledge recorded on papyrus.",
+      "Contact with other peoples could bring goods and ideas into Egypt, and Egyptian ideas could spread outwards too."
+     ],
+     "remember": "Egypt traded and fought with neighbours, made an early peace treaty with the Hittites, and left a legacy in writing, building and medicine.",
+     "a": {
+      "q": "What is meant by the legacy of ancient Egypt?",
+      "opts": [
+       "What Egypt left behind that people still learn from",
+       "The land Egypt won from its neighbours in war",
+       "The goods Egypt sold to other peoples in trade",
+       "The gods Egyptians worshipped in their temples"
+      ],
+      "why": "A legacy is what a society leaves behind that later people still use or learn from, such as writing, building and medicine. Conquered land and trade goods belong to Egypt's contact with others, not to what it left behind.",
+      "clue": "Think about what lasts after a society has gone."
+     },
+     "b": {
+      "d": 3,
+      "q": "Egypt and the Hittites fought over lands for many years, then signed a treaty around 1259 BCE. What does this treaty show about Egypt's contact with neighbours?",
+      "opts": [
+       "Contact could include peace agreements as well as war",
+       "Egypt only ever dealt with its neighbours through war",
+       "Egypt traded with the Hittites but never fought them",
+       "The Hittites ruled Egypt after the treaty was signed"
+      ],
+      "why": "The treaty shows that after fighting, two powers could agree to peace, so contact was not only war. The wrong option about war only is tempting, but the card says Egypt also traded and made peace.",
+      "clue": "The treaty came after fighting. What kind of contact is a treaty?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "What Egypt left behind that people still learn from",
+      "also_right": []
+     },
+     "b": {
+      "best": "Contact could include peace agreements as well as war",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The stem already says Egypt and the Hittites fought and then signed a treaty. That rules out two distractors without any knowledge: 'Egypt traded with the Hittites but never fought them' contradicts the stem, and 'Egypt only ever dealt with its neighbours through war' is undone by the treaty the stem names. The right option is little more than a restatement of the stem."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card, the remember line and question a are accurate; the Egyptian–Hittite treaty of about 1259 BCE is correctly dated and described. Question b is too easy to guess, because its own stem rules out two of the distractors."
+    },
+    "flags": [
+     "Question b, wording: The stem already says Egypt and the Hittites fought and then signed a treaty. That rules out two distractors without any knowledge: 'Egypt traded with the Hittites but never fought them' contradicts the stem, and 'Egypt only ever dealt with its neighbours through war' is undone by the treaty the stem names. The right option is little more than a restatement of the stem."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Egypt's contact and legacy",
+     "card": [
+      "Egypt traded with neighbours such as Nubia and the Near East. It also fought them, and some of its pharaohs led armies into lands beyond Egypt.",
+      "Egypt and the Hittites, a powerful people in what is now Turkey, fought over lands in the Near East. Around 1259 BCE they signed a peace treaty, one of the earliest known in history.",
+      "A legacy is what a society leaves behind that people still use or learn from. Egypt's legacy includes hieroglyphic writing, large stone building, and medical knowledge recorded on papyrus.",
+      "Contact with other peoples could bring goods and ideas into Egypt, and Egyptian ideas could spread outwards too."
+     ],
+     "remember": "Contact is how Egypt dealt with others in its own time. Legacy is what it left for people after.",
+     "a": {
+      "q": "What is meant by the legacy of ancient Egypt?",
+      "opts": [
+       "What Egypt left behind that people still learn from",
+       "The land Egypt won from its neighbours in war",
+       "The goods Egypt sold to other peoples in trade",
+       "The gods Egyptians worshipped in their temples"
+      ],
+      "why": "A legacy is what a society leaves behind that later people still use or learn from, such as writing, building and medicine. Conquered land and trade goods belong to Egypt's contact with others, not to what it left behind.",
+      "clue": "Think about what lasts after a society has gone."
+     },
+     "b": {
+      "d": 2,
+      "q": "Liam is sorting facts about ancient Egypt under two headings, contact and legacy. Which fact belongs under contact?",
+      "opts": [
+       "Egypt and the Hittites agreed to a peace treaty",
+       "Hieroglyphs that scholars can still read today",
+       "Stone buildings that people still visit today",
+       "Medical texts on papyrus that historians study"
+      ],
+      "why": "The treaty was an agreement between Egypt and a neighbouring people, so it is part of Egypt's contact with others. Hieroglyphs, stone buildings and medical texts are things Egypt left behind that people still learn from, so they belong under legacy.",
+      "clue": "Which fact is about Egypt dealing with another people?"
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "What Egypt left behind that people still learn from",
+       "also_right": []
+      },
+      "b": {
+       "best": "Egypt and the Hittites agreed to a peace treaty",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The three wrong options share one pattern ('… that scholars/historians/people still read/study/visit today'). The right option is the only one without it, so a student could pick it as the odd one out without knowing the idea."
+       },
+       {
+        "part": "remember",
+        "kind": "other",
+        "detail": "The remember line defines contact as 'how Egypt dealt with others in its own time' and sets it against legacy. The card never defines contact this way, so the remember line splits the two ideas more neatly than the card teaches."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts are correct, including the Egyptian–Hittite treaty of about 1259 BCE, and both answers are sound. In question b, the right option stands out because the three wrong options share the same 'still … today' pattern. The remember line also gives a definition of contact that the card does not teach."
+     },
+     "flags": [
+      "Question b, wording: The three wrong options share one pattern ('… that scholars/historians/people still read/study/visit today'). The right option is the only one without it, so a student could pick it as the odd one out without knowing the idea.",
+      "Remember, other: The remember line defines contact as 'how Egypt dealt with others in its own time' and sets it against legacy. The card never defines contact this way, so the remember line splits the two ideas more neatly than the card teaches."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:56Z",
+   "step": "write",
+   "version": {
+    "title": "Egypt's contact and legacy",
+    "card": [
+     "Contact means a society's dealings with other peoples, such as trade, war and agreements. Egypt traded with neighbours such as Nubia and the Near East, and some of its pharaohs led armies into lands beyond Egypt.",
+     "Egypt and the Hittites, a powerful people in what is now Turkey, fought over lands in the Near East. Around 1259 BCE they signed a peace treaty, one of the earliest known in history.",
+     "A legacy is what a society leaves behind that people still use or learn from. Egypt's legacy includes hieroglyphic writing, large stone building, and medical knowledge recorded on papyrus.",
+     "Contact with other peoples could bring goods and ideas into Egypt, and Egyptian ideas could spread outwards too."
+    ],
+    "remember": "Egypt dealt with others through trade, war and treaties. Its legacy includes the writing, building and medicine people still learn from.",
+    "a": {
+     "q": "What is meant by the legacy of ancient Egypt?",
+     "opts": [
+      "What Egypt left behind that people still learn from",
+      "The land Egypt won from its neighbours in its wars",
+      "The goods Egypt sold to other peoples through trade",
+      "The gods Egyptians worshipped in their many temples"
+     ],
+     "why": "A legacy is what a society leaves behind that later people still use or learn from, such as writing, building and medicine. Conquered land and trade goods belong to Egypt's contact with others, not to what it left behind.",
+     "clue": "Think about what lasts after a society has gone."
+    },
+    "b": {
+     "d": 2,
+     "q": "Liam is sorting facts about ancient Egypt under two headings, contact and legacy. Which fact belongs under contact?",
+     "opts": [
+      "Egypt signed a peace treaty with the Hittites",
+      "Egyptians wrote in hieroglyphs on stone and papyrus",
+      "Egyptian doctors wrote down treatments on papyrus",
+      "Egyptians built large temples out of stone"
+     ],
+     "why": "The treaty was an agreement between Egypt and a neighbouring people, so it is part of Egypt's dealings with others. Hieroglyphic writing, medical knowledge and stone building are part of what Egypt left behind, so they belong under legacy.",
+     "clue": "Which fact is about Egypt dealing with another people?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "What Egypt left behind that people still learn from",
+     "also_right": []
+    },
+    "b": {
+     "best": "Egypt signed a peace treaty with the Hittites",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Egypt's contact and legacy",
+  "card": [
+   "Contact means a society's dealings with other peoples, such as trade, war and agreements. Egypt traded with neighbours such as Nubia and the Near East, and some of its pharaohs led armies into lands beyond Egypt.",
+   "Egypt and the Hittites, a powerful people in what is now Turkey, fought over lands in the Near East. Around 1259 BCE they signed a peace treaty, one of the earliest known in history.",
+   "A legacy is what a society leaves behind that people still use or learn from. Egypt's legacy includes hieroglyphic writing, large stone building, and medical knowledge recorded on papyrus.",
+   "Contact with other peoples could bring goods and ideas into Egypt, and Egyptian ideas could spread outwards too."
+  ],
+  "remember": "Egypt dealt with others through trade, war and treaties. Its legacy includes the writing, building and medicine people still learn from.",
+  "a": {
+   "q": "What is meant by the legacy of ancient Egypt?",
+   "opts": [
+    "What Egypt left behind that people still learn from",
+    "The land Egypt won from its neighbours in its wars",
+    "The goods Egypt sold to other peoples through trade",
+    "The gods Egyptians worshipped in their many temples"
+   ],
+   "why": "A legacy is what a society leaves behind that later people still use or learn from, such as writing, building and medicine. Conquered land and trade goods belong to Egypt's contact with others, not to what it left behind.",
+   "clue": "Think about what lasts after a society has gone."
+  },
+  "b": {
+   "d": 2,
+   "q": "Liam is sorting facts about ancient Egypt under two headings, contact and legacy. Which fact belongs under contact?",
+   "opts": [
+    "Egypt signed a peace treaty with the Hittites",
+    "Egyptians wrote in hieroglyphs on stone and papyrus",
+    "Egyptian doctors wrote down treatments on papyrus",
+    "Egyptians built large temples out of stone"
+   ],
+   "why": "The treaty was an agreement between Egypt and a neighbouring people, so it is part of Egypt's dealings with others. Hieroglyphic writing, medical knowledge and stone building are part of what Egypt left behind, so they belong under legacy.",
+   "clue": "Which fact is about Egypt dealing with another people?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "What Egypt left behind that people still learn from",
+   "also_right": []
+  },
+  "b": {
+   "best": "Egypt signed a peace treaty with the Hittites",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Egypt's contact and legacy",
+  "card": [
+   "Contact means a society's dealings with other peoples, such as trade, war and agreements. Egypt traded with neighbours such as Nubia and the Near East, and some of its pharaohs led armies into lands beyond Egypt.",
+   "Egypt and the Hittites, a powerful people in what is now Turkey, fought over lands in the Near East. Around 1259 BCE they signed a peace treaty, one of the earliest known in history.",
+   "A legacy is what a society leaves behind that people still use or learn from. Egypt's legacy includes hieroglyphic writing, large stone building, and medical knowledge recorded on papyrus.",
+   "Contact with other peoples could bring goods and ideas into Egypt, and Egyptian ideas could spread outwards too."
+  ],
+  "remember": "Egypt dealt with others through trade, war and treaties. Its legacy includes the writing, building and medicine people still learn from.",
+  "a": {
+   "q": "What is meant by the legacy of ancient Egypt?",
+   "opts": [
+    "What Egypt left behind that people still learn from",
+    "The land Egypt won from its neighbours in its wars",
+    "The goods Egypt sold to other peoples through trade",
+    "The gods Egyptians worshipped in their many temples"
+   ],
+   "why": "A legacy is what a society leaves behind that later people still use or learn from, such as writing, building and medicine. Conquered land and trade goods belong to Egypt's contact with others, not to what it left behind.",
+   "clue": "Think about what lasts after a society has gone."
+  },
+  "b": {
+   "d": 2,
+   "q": "Liam is sorting facts about ancient Egypt under two headings, contact and legacy. Which fact belongs under contact?",
+   "opts": [
+    "Egypt signed a peace treaty with the Hittites",
+    "Egyptians wrote in hieroglyphs on stone and papyrus",
+    "Egyptian doctors wrote down treatments on papyrus",
+    "Egyptians built large temples out of stone"
+   ],
+   "why": "The treaty was an agreement between Egypt and a neighbouring people, so it is part of Egypt's dealings with others. Hieroglyphic writing, medical knowledge and stone building are part of what Egypt left behind, so they belong under legacy.",
+   "clue": "Which fact is about Egypt dealing with another people?"
+  }
+ },
+ "checked_by": "claude-code"
 }

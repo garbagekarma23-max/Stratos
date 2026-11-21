@@ -20,8 +20,135 @@
    0.202
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:45Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:49Z write: failed the content check, writing again",
+  "2026-11-20T12:44:55Z write: done",
+  "2026-11-20T12:53:24Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.01696,
+  "check": 0.00801
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches goods moving by road, rail, sea or air; the closest points only cover how transport gives people access to services, so they are related rather than the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Transport connecting people to goods",
+  "card": [
+   "Transport moves people and goods from one place to another. This connects people to things they need, such as food, fuel and medicine, even when those things are made far away.",
+   [
+    "Roads",
+    "Trucks and vans move goods door to door and can reach almost any town. They are flexible, but they carry smaller loads than trains or ships."
+   ],
+   [
+    "Railways",
+    "Trains haul heavy loads, such as grain, coal and containers, over long distances on fixed tracks."
+   ],
+   [
+    "Shipping and planes",
+    "Ships carry very large loads between countries at a low cost for each item, but slowly. Planes are fast but cost more, so they suit light, high-priced or perishable goods."
+   ]
+  ],
+  "remember": "Each type of transport suits different goods, and together they connect places to what people need.",
+  "a": {
+   "q": "Why are ships widely used to carry goods between countries?",
+   "opts": [
+    "They carry very large loads at a low cost for each item",
+    "They are the fastest way to move goods between countries",
+    "They can deliver goods straight to any house or shop",
+    "They run on fixed tracks that link every large town"
+   ],
+   "why": "Ships carry huge loads, so the cost for each item is low, even though they are slow. The fastest option is a plane, not a ship, which makes the speed answer tempting but wrong.",
+   "clue": "Think about size of load and cost, not speed."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a flower shop in Orange. Fresh roses must reach her from a farm in Colombia within a few days. Which transport suits this best, and why?",
+   "opts": [
+    "Planes, because they are fast and roses spoil quickly",
+    "Ships, because they carry roses at the lowest cost",
+    "Railways, because trains run on fixed tracks to Orange",
+    "Roads, because trucks can cross the ocean to the farm"
+   ],
+   "why": "Roses are perishable, so speed matters more than low cost. Planes are fast, so they suit this case. Ships are cheaper, but they are too slow and the roses would spoil before arriving.",
+   "clue": "Fresh flowers spoil quickly, so what matters most?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "They carry very large loads at a low cost for each item",
+   "also_right": []
+  },
+  "b": {
+   "best": "Planes, because they are fast and roses spoil quickly",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Transport connecting people to goods",
+  "card": [
+   "Transport moves people and goods from one place to another. This connects people to things they need, such as food, fuel and medicine, even when those things are made far away.",
+   [
+    "Roads",
+    "Trucks and vans move goods door to door and can reach almost any town. They are flexible, but they carry smaller loads than trains or ships."
+   ],
+   [
+    "Railways",
+    "Trains haul heavy loads, such as grain, coal and containers, over long distances on fixed tracks."
+   ],
+   [
+    "Shipping and planes",
+    "Ships carry very large loads between countries at a low cost for each item, but slowly. Planes are fast but cost more, so they suit light, high-priced or perishable goods."
+   ]
+  ],
+  "remember": "Each type of transport suits different goods, and together they connect places to what people need.",
+  "a": {
+   "q": "Why are ships widely used to carry goods between countries?",
+   "opts": [
+    "They carry very large loads at a low cost for each item",
+    "They are the fastest way to move goods between countries",
+    "They can deliver goods straight to any house or shop",
+    "They run on fixed tracks that link every large town"
+   ],
+   "why": "Ships carry huge loads, so the cost for each item is low, even though they are slow. The fastest option is a plane, not a ship, which makes the speed answer tempting but wrong.",
+   "clue": "Think about size of load and cost, not speed."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a flower shop in Orange. Fresh roses must reach her from a farm in Colombia within a few days. Which transport suits this best, and why?",
+   "opts": [
+    "Planes, because they are fast and roses spoil quickly",
+    "Ships, because they carry roses at the lowest cost",
+    "Railways, because trains run on fixed tracks to Orange",
+    "Roads, because trucks can cross the ocean to the farm"
+   ],
+   "why": "Roses are perishable, so speed matters more than low cost. Planes are fast, so they suit this case. Ships are cheaper, but they are too slow and the roses would spoil before arriving.",
+   "clue": "Fresh flowers spoil quickly, so what matters most?"
+  }
+ },
+ "cleared_by": "checker"
 }

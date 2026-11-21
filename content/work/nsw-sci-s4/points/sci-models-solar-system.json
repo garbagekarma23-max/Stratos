@@ -20,8 +20,440 @@
    0.24
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:00Z write: done",
+  "2026-11-20T12:35:56Z check: flagged",
+  "2026-11-20T12:45:00Z fix: suggested",
+  "2026-11-20T13:23:45Z autoreview: picked as a spot check. It would have been cleared with the fix (remember wording, a wording)",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.00763,
+  "check": 0.01194,
+  "fix": 0.0194
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the Earth-centred to Sun-centred solar system model; the closest, on how atomic models changed, is about atoms, so it would teach a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Models of the solar system",
+  "card": [
+   [
+    "Earth-centred model",
+    "This model put Earth at the centre, with the Sun, Moon, planets and stars moving around it. It matched what people see: the Sun appears to cross the sky while Earth feels still."
+   ],
+   [
+    "Sun-centred model",
+    "This model puts the Sun at the centre, with Earth and the other planets orbiting it. Earth is one planet among several."
+   ],
+   "A scientific model is changed when new evidence does not fit it. In 1610 Galileo used a telescope to see four moons orbiting Jupiter and the phases of Venus. Not everything orbited Earth, and the Earth-centred model could not explain Venus's phases.",
+   "As more evidence fitted the Sun-centred model, scientists accepted it in place of the old one. Models can be replaced when better evidence appears."
+  ],
+  "remember": "Models are tested against evidence. When evidence does not fit, the model is replaced.",
+  "a": {
+   "q": "Why did scientists move from the Earth-centred model to the Sun-centred model?",
+   "opts": [
+    "New observations did not fit the Earth-centred model",
+    "The Sun-centred model was older and more trusted",
+    "People could feel Earth moving around the Sun",
+    "Telescopes showed that Earth is the biggest planet"
+   ],
+   "why": "Galileo's telescope observations, such as the moons of Jupiter, did not fit the Earth-centred model. A model is replaced when evidence does not fit it. People cannot feel Earth moving, and the old model matched what we see, so that was not the reason.",
+   "clue": "Think about what Galileo's telescope showed."
+  },
+  "b": {
+   "d": 3,
+   "q": "Galileo saw four moons orbiting Jupiter. Why was this a problem for the Earth-centred model?",
+   "opts": [
+    "It showed that not everything orbits Earth",
+    "It showed that Jupiter is larger than Earth",
+    "It showed that Jupiter orbits the Sun",
+    "It showed that the Moon does not orbit Earth"
+   ],
+   "why": "The Earth-centred model said everything moved around Earth. Moons orbiting Jupiter showed that something else was a centre of orbit, which did not fit. It did not prove the Sun-centred model alone, and it said nothing about the Earth's Moon.",
+   "clue": "What did the old model say everything orbited?"
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "Two side-by-side diagrams. Left: Earth-centred model, with Earth at the centre and the Moon, Sun and planets on circles around it. Right: Sun-centred model, with the Sun at the centre and Earth and the other planets on circles around it, the Moon orbiting Earth. Label each model.",
+    "why": "Seeing the two models side by side shows what changed between them."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "New observations did not fit the Earth-centred model",
+   "also_right": []
+  },
+  "b": {
+   "best": "It showed that not everything orbits Earth",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "The remember line says 'When evidence does not fit, the model is replaced', which is stronger than the card's 'Models can be replaced' and its 'a scientific model is changed'. Models are often revised rather than thrown out. Better: 'the model may be changed or replaced.'"
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Why (a) says 'A model is replaced when evidence does not fit it', making this sound automatic where the card says models 'can be replaced'. Soften it to match the card."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and the facts check out. The remember line and why (a) say a model 'is replaced' when evidence does not fit, which overstates the card's 'can be replaced' or 'changed'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, wording: The remember line says 'When evidence does not fit, the model is replaced', which is stronger than the card's 'Models can be replaced' and its 'a scientific model is changed'. Models are often revised rather than thrown out. Better: 'the model may be changed or replaced.'",
+  "Question a, wording: Why (a) says 'A model is replaced when evidence does not fit it', making this sound automatic where the card says models 'can be replaced'. Soften it to match the card."
+ ],
+ "proposal": {
+  "title": "Models of the solar system",
+  "card": [
+   [
+    "Earth-centred model",
+    "This model put Earth at the centre, with the Sun, Moon, planets and stars moving around it. It matched what people see: the Sun appears to cross the sky while Earth feels still."
+   ],
+   [
+    "Sun-centred model",
+    "This model puts the Sun at the centre, with Earth and the other planets orbiting it. Earth is one planet among several."
+   ],
+   "A scientific model can be changed when new evidence does not fit it. In 1610 Galileo used a telescope to see four moons orbiting Jupiter and the phases of Venus. Not everything orbited Earth, and the Earth-centred model could not explain Venus's phases.",
+   "As more evidence fitted the Sun-centred model, scientists accepted it in place of the old one. Models can be replaced when better evidence appears."
+  ],
+  "remember": "Models are tested against evidence. When evidence does not fit, the model may be changed or replaced.",
+  "a": {
+   "q": "Why did scientists move from the Earth-centred model to the Sun-centred model?",
+   "opts": [
+    "New observations did not fit the Earth-centred model",
+    "The Sun-centred model was older and more trusted",
+    "People could feel Earth moving around the Sun",
+    "Telescopes showed that Earth is the biggest planet"
+   ],
+   "why": "Galileo's telescope observations, such as the moons of Jupiter, did not fit the Earth-centred model. When evidence does not fit a model, the model may be changed or replaced. People cannot feel Earth moving, and the old model matched what we see, so that was not the reason.",
+   "clue": "Think about what Galileo's telescope showed."
+  },
+  "b": {
+   "d": 3,
+   "q": "Galileo saw four moons orbiting Jupiter. Why was this a problem for the Earth-centred model?",
+   "opts": [
+    "It showed that not everything orbits Earth",
+    "It showed that Jupiter is larger than Earth",
+    "It showed that Jupiter orbits the Sun",
+    "It showed that the Moon does not orbit Earth"
+   ],
+   "why": "The Earth-centred model said everything moved around Earth. Moons orbiting Jupiter showed that something else was a centre of orbit, which did not fit. Seeing those moons did not show where Jupiter itself travels, and it said nothing about Earth's Moon.",
+   "clue": "What did the old model say everything orbited?"
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "Two side-by-side diagrams. Left: Earth-centred model, with Earth at the centre and the Moon, Sun and planets on circles around it. Right: Sun-centred model, with the Sun at the centre and Earth and the other planets on circles around it, the Moon orbiting Earth. Label each model.",
+    "why": "Seeing the two models side by side shows what changed between them."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:45Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "The remember line says 'When evidence does not fit, the model is replaced', which is stronger than the card's 'Models can be replaced' and its 'a scientific model is changed'. Models are often revised rather than thrown out. Better: 'the model may be changed or replaced.'"
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Why (a) says 'A model is replaced when evidence does not fit it', making this sound automatic where the card says models 'can be replaced'. Soften it to match the card."
+   }
+  ],
+  "flags": [
+   "Remember, wording: The remember line says 'When evidence does not fit, the model is replaced', which is stronger than the card's 'Models can be replaced' and its 'a scientific model is changed'. Models are often revised rather than thrown out. Better: 'the model may be changed or replaced.'",
+   "Question a, wording: Why (a) says 'A model is replaced when evidence does not fit it', making this sound automatic where the card says models 'can be replaced'. Soften it to match the card."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Models of the solar system",
+  "card": [
+   [
+    "Earth-centred model",
+    "This model put Earth at the centre, with the Sun, Moon, planets and stars moving around it. It matched what people see: the Sun appears to cross the sky while Earth feels still."
+   ],
+   [
+    "Sun-centred model",
+    "This model puts the Sun at the centre, with Earth and the other planets orbiting it. Earth is one planet among several."
+   ],
+   "A scientific model can be changed when new evidence does not fit it. In 1610 Galileo used a telescope to see four moons orbiting Jupiter and the phases of Venus. Not everything orbited Earth, and the Earth-centred model could not explain Venus's phases.",
+   "As more evidence fitted the Sun-centred model, scientists accepted it in place of the old one. Models can be replaced when better evidence appears."
+  ],
+  "remember": "Models are tested against evidence. When evidence does not fit, the model may be changed or replaced.",
+  "a": {
+   "q": "Why did scientists move from the Earth-centred model to the Sun-centred model?",
+   "opts": [
+    "New observations did not fit the Earth-centred model",
+    "The Sun-centred model was older and more trusted",
+    "People could feel Earth moving around the Sun",
+    "Telescopes showed that Earth is the biggest planet"
+   ],
+   "why": "Galileo's telescope observations, such as the moons of Jupiter, did not fit the Earth-centred model. When evidence does not fit a model, the model may be changed or replaced. People cannot feel Earth moving, and the old model matched what we see, so that was not the reason.",
+   "clue": "Think about what Galileo's telescope showed."
+  },
+  "b": {
+   "d": 3,
+   "q": "Galileo saw four moons orbiting Jupiter. Why was this a problem for the Earth-centred model?",
+   "opts": [
+    "It showed that not everything orbits Earth",
+    "It showed that Jupiter is larger than Earth",
+    "It showed that Jupiter orbits the Sun",
+    "It showed that the Moon does not orbit Earth"
+   ],
+   "why": "The Earth-centred model said everything moved around Earth. Moons orbiting Jupiter showed that something else was a centre of orbit, which did not fit. Seeing those moons did not show where Jupiter itself travels, and it said nothing about Earth's Moon.",
+   "clue": "What did the old model say everything orbited?"
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "Two side-by-side diagrams. Left: Earth-centred model, with Earth at the centre and the Moon, Sun and planets on circles around it. Right: Sun-centred model, with the Sun at the centre and Earth and the other planets on circles around it, the Moon orbiting Earth. Label each model.",
+    "why": "Seeing the two models side by side shows what changed between them."
+   }
+  ]
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix softens the card, remember line and why (a) to say a model may be changed or replaced, which answers both flags. The facts about Galileo in 1610 are right and both questions keep one clear right answer.",
+   "item": "8dda81f16193707d",
+   "result": "decided",
+   "saved": {
+    "id": "sci-models-solar-system",
+    "title": "Models of the solar system",
+    "brief": "f07fe7beca12",
+    "shortlist": [
+     [
+      "sci-models-matter-change-over",
+      0.384
+     ],
+     [
+      "sci-wave-particle-models-light",
+      0.284
+     ],
+     [
+      "sci-solar-lunar-eclipses",
+      0.271
+     ],
+     [
+      "sci-model-atom-changed",
+      0.24
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 1,
+     "check": 1,
+     "fix": 1
+    },
+    "usd": {
+     "match": 0.00022,
+     "write": 0.00763,
+     "check": 0.01194,
+     "fix": 0.0194
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "high",
+     "reason": "No bank point teaches the Earth-centred to Sun-centred solar system model; the closest, on how atomic models changed, is about atoms, so it would teach a different idea.",
+     "model": "claude-haiku-5-5"
+    },
+    "draft": {
+     "title": "Models of the solar system",
+     "card": [
+      [
+       "Earth-centred model",
+       "This model put Earth at the centre, with the Sun, Moon, planets and stars moving around it. It matched what people see: the Sun appears to cross the sky while Earth feels still."
+      ],
+      [
+       "Sun-centred model",
+       "This model puts the Sun at the centre, with Earth and the other planets orbiting it. Earth is one planet among several."
+      ],
+      "A scientific model is changed when new evidence does not fit it. In 1610 Galileo used a telescope to see four moons orbiting Jupiter and the phases of Venus. Not everything orbited Earth, and the Earth-centred model could not explain Venus's phases.",
+      "As more evidence fitted the Sun-centred model, scientists accepted it in place of the old one. Models can be replaced when better evidence appears."
+     ],
+     "remember": "Models are tested against evidence. When evidence does not fit, the model is replaced.",
+     "a": {
+      "q": "Why did scientists move from the Earth-centred model to the Sun-centred model?",
+      "opts": [
+       "New observations did not fit the Earth-centred model",
+       "The Sun-centred model was older and more trusted",
+       "People could feel Earth moving around the Sun",
+       "Telescopes showed that Earth is the biggest planet"
+      ],
+      "why": "Galileo's telescope observations, such as the moons of Jupiter, did not fit the Earth-centred model. A model is replaced when evidence does not fit it. People cannot feel Earth moving, and the old model matched what we see, so that was not the reason.",
+      "clue": "Think about what Galileo's telescope showed."
+     },
+     "b": {
+      "d": 3,
+      "q": "Galileo saw four moons orbiting Jupiter. Why was this a problem for the Earth-centred model?",
+      "opts": [
+       "It showed that not everything orbits Earth",
+       "It showed that Jupiter is larger than Earth",
+       "It showed that Jupiter orbits the Sun",
+       "It showed that the Moon does not orbit Earth"
+      ],
+      "why": "The Earth-centred model said everything moved around Earth. Moons orbiting Jupiter showed that something else was a centre of orbit, which did not fit. It did not prove the Sun-centred model alone, and it said nothing about the Earth's Moon.",
+      "clue": "What did the old model say everything orbited?"
+     },
+     "wants": [
+      {
+       "at": "card 1",
+       "kind": "diagram",
+       "brief": "Two side-by-side diagrams. Left: Earth-centred model, with Earth at the centre and the Moon, Sun and planets on circles around it. Right: Sun-centred model, with the Sun at the centre and Earth and the other planets on circles around it, the Moon orbiting Earth. Label each model.",
+       "why": "Seeing the two models side by side shows what changed between them."
+      }
+     ]
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "New observations did not fit the Earth-centred model",
+      "also_right": []
+     },
+     "b": {
+      "best": "It showed that not everything orbits Earth",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "remember",
+       "kind": "wording",
+       "detail": "The remember line says 'When evidence does not fit, the model is replaced', which is stronger than the card's 'Models can be replaced' and its 'a scientific model is changed'. Models are often revised rather than thrown out. Better: 'the model may be changed or replaced.'"
+      },
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "Why (a) says 'A model is replaced when evidence does not fit it', making this sound automatic where the card says models 'can be replaced'. Soften it to match the card."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions are sound and the facts check out. The remember line and why (a) say a model 'is replaced' when evidence does not fit, which overstates the card's 'can be replaced' or 'changed'."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Remember, wording: The remember line says 'When evidence does not fit, the model is replaced', which is stronger than the card's 'Models can be replaced' and its 'a scientific model is changed'. Models are often revised rather than thrown out. Better: 'the model may be changed or replaced.'",
+     "Question a, wording: Why (a) says 'A model is replaced when evidence does not fit it', making this sound automatic where the card says models 'can be replaced'. Soften it to match the card."
+    ],
+    "proposal": {
+     "title": "Models of the solar system",
+     "card": [
+      [
+       "Earth-centred model",
+       "This model put Earth at the centre, with the Sun, Moon, planets and stars moving around it. It matched what people see: the Sun appears to cross the sky while Earth feels still."
+      ],
+      [
+       "Sun-centred model",
+       "This model puts the Sun at the centre, with Earth and the other planets orbiting it. Earth is one planet among several."
+      ],
+      "A scientific model can be changed when new evidence does not fit it. In 1610 Galileo used a telescope to see four moons orbiting Jupiter and the phases of Venus. Not everything orbited Earth, and the Earth-centred model could not explain Venus's phases.",
+      "As more evidence fitted the Sun-centred model, scientists accepted it in place of the old one. Models can be replaced when better evidence appears."
+     ],
+     "remember": "Models are tested against evidence. When evidence does not fit, the model may be changed or replaced.",
+     "a": {
+      "q": "Why did scientists move from the Earth-centred model to the Sun-centred model?",
+      "opts": [
+       "New observations did not fit the Earth-centred model",
+       "The Sun-centred model was older and more trusted",
+       "People could feel Earth moving around the Sun",
+       "Telescopes showed that Earth is the biggest planet"
+      ],
+      "why": "Galileo's telescope observations, such as the moons of Jupiter, did not fit the Earth-centred model. When evidence does not fit a model, the model may be changed or replaced. People cannot feel Earth moving, and the old model matched what we see, so that was not the reason.",
+      "clue": "Think about what Galileo's telescope showed."
+     },
+     "b": {
+      "d": 3,
+      "q": "Galileo saw four moons orbiting Jupiter. Why was this a problem for the Earth-centred model?",
+      "opts": [
+       "It showed that not everything orbits Earth",
+       "It showed that Jupiter is larger than Earth",
+       "It showed that Jupiter orbits the Sun",
+       "It showed that the Moon does not orbit Earth"
+      ],
+      "why": "The Earth-centred model said everything moved around Earth. Moons orbiting Jupiter showed that something else was a centre of orbit, which did not fit. Seeing those moons did not show where Jupiter itself travels, and it said nothing about Earth's Moon.",
+      "clue": "What did the old model say everything orbited?"
+     },
+     "wants": [
+      {
+       "at": "card 1",
+       "kind": "diagram",
+       "brief": "Two side-by-side diagrams. Left: Earth-centred model, with Earth at the centre and the Moon, Sun and planets on circles around it. Right: Sun-centred model, with the Sun at the centre and Earth and the other planets on circles around it, the Moon orbiting Earth. Label each model.",
+       "why": "Seeing the two models side by side shows what changed between them."
+      }
+     ]
+    },
+    "proposal_problems": [],
+    "auto": {
+     "at": "2026-11-20T13:23:45Z",
+     "rules": 1,
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "remember",
+       "kind": "wording",
+       "detail": "The remember line says 'When evidence does not fit, the model is replaced', which is stronger than the card's 'Models can be replaced' and its 'a scientific model is changed'. Models are often revised rather than thrown out. Better: 'the model may be changed or replaced.'"
+      },
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "Why (a) says 'A model is replaced when evidence does not fit it', making this sound automatic where the card says models 'can be replaced'. Soften it to match the card."
+      }
+     ],
+     "flags": [
+      "Remember, wording: The remember line says 'When evidence does not fit, the model is replaced', which is stronger than the card's 'Models can be replaced' and its 'a scientific model is changed'. Models are often revised rather than thrown out. Better: 'the model may be changed or replaced.'",
+      "Question a, wording: Why (a) says 'A model is replaced when evidence does not fit it', making this sound automatic where the card says models 'can be replaced'. Soften it to match the card."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "0af0d5e90a9d1a80"
+  }
  ]
 }

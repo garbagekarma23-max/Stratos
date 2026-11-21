@@ -24,8 +24,163 @@
    0.258
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:47Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T14:33:37Z review: rejected, to be written again",
+  "2026-11-20T14:58:18Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00625,
+  "check": 0.01097,
+  "fix": 0.01927
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches parallel narratives or how two story layers comment on each other; the closest, Narrative structure, mentions frame stories only briefly as a way of bending plot shape, and it is written for Year 11 depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Frame and parallel narratives",
+  "card": [
+   [
+    "Frame narrative",
+    "one story is placed inside another. For example, a grandmother tells her grandchildren a tale, and the tale is the main part of the text."
+   ],
+   [
+    "Parallel narratives",
+    "two story lines run side by side and the text moves between them. They may follow different characters, places or times."
+   ],
+   "In both, the stories can comment on each other. A reader compares them and sees ideas that one story alone would not show.",
+   "The outer story of a frame often shapes how we read the inner one. In parallel narratives, the links and contrasts between the two lines build meaning."
+  ],
+  "remember": "Frame: a story inside a story. Parallel: two stories side by side. Both let one story comment on the other.",
+  "a": {
+   "q": "A novel opens with a sailor telling a stranger about a storm. Most of the book is the story he tells. What is this structure?",
+   "opts": [
+    "A frame narrative",
+    "A parallel narrative",
+    "A nonlinear narrative",
+    "A character profile"
+   ],
+   "why": "The sailor's tale sits inside the scene where he speaks to the stranger, so one story is placed inside another. Parallel narratives would instead give two story lines that run side by side, with no story inside the other.",
+   "clue": "Is one story held inside the other?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A film alternates between Ana, a refugee crossing a sea in 2015, and Tom, a sailor lost at sea in 1850. Neither story is told inside the other. How does this structure build meaning?",
+   "opts": [
+    "The two lines let the viewer compare their struggles",
+    "The outer story explains the inner story's ending",
+    "One story is a tale told by the other character",
+    "The film shows one story line from two angles"
+   ],
+   "why": "This is parallel narrative: two separate lines that run side by side. Meaning comes from comparing them, such as shared danger across different times. It is not a frame, because neither story is told within the other.",
+   "clue": "Ask whether either story is told inside the other."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:18Z",
+   "step": "write",
+   "version": {
+    "title": "Frame and parallel narratives",
+    "card": [
+     [
+      "Frame narrative",
+      "one story sits inside another. An outer story, such as a woman reading her late father's letters, holds an inner story, the events in the letters, which fills most of the text."
+     ],
+     [
+      "Parallel narratives",
+      "two story lines run side by side, and the text moves back and forth between them. They may follow different characters, places or times."
+     ],
+     "In a frame, the outer story shapes how we read the inner one: who is telling it, why they tell it, and what they think of it now.",
+     "In parallel narratives, readers look for links and contrasts between the two lines. Each story comments on the other, building meaning that neither holds alone."
+    ],
+    "remember": "Nested or side by side, two stories add layers of meaning to each other.",
+    "a": {
+     "q": "A novel opens with an old miner telling a reporter about a cave-in. Most of the book is the story he tells, and it ends back in the interview. What is this structure?",
+     "opts": [
+      "A frame narrative",
+      "Parallel narratives",
+      "A nonlinear text",
+      "A short story collection"
+     ],
+     "why": "The cave-in story sits inside the interview, which opens and closes the book, so one story is held inside another. Parallel narratives would run two lines side by side, with neither told inside the other.",
+     "clue": "Is one story held inside the other?"
+    },
+    "b": {
+     "d": 3,
+     "q": "A film cuts back and forth between Mai, a girl fleeing a flood in 2022, and Henry, a farmer facing drought in 1902. How does this structure build meaning?",
+     "opts": [
+      "Viewers compare the two lines and see links between them",
+      "Mai tells Henry's story, so hers frames and explains his",
+      "Each line is a separate film with no bearing on the other",
+      "Viewers pick which line to follow, so the order changes"
+     ],
+     "why": "The film runs two lines side by side, so it uses parallel narratives. Meaning comes from comparing them, such as two people facing extreme weather over a century apart. Nothing shows Mai telling Henry's story, so it is not a frame.",
+     "clue": "Is either story told by a character in the other?"
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Frame and parallel narratives",
+  "card": [
+   [
+    "Frame narrative",
+    "one story sits inside another. An outer story, such as a woman reading her late father's letters, holds an inner story, the events in the letters, which fills most of the text."
+   ],
+   [
+    "Parallel narratives",
+    "two story lines run side by side, and the text moves back and forth between them. They may follow different characters, places or times."
+   ],
+   "In a frame, the outer story shapes how we read the inner one: who is telling it, why they tell it, and what they think of it now.",
+   "In parallel narratives, readers look for links and contrasts between the two lines. Each story comments on the other, building meaning that neither holds alone."
+  ],
+  "remember": "Nested or side by side, two stories add layers of meaning to each other.",
+  "a": {
+   "q": "A novel opens with an old miner telling a reporter about a cave-in. Most of the book is the story he tells, and it ends back in the interview. What is this structure?",
+   "opts": [
+    "A frame narrative",
+    "Parallel narratives",
+    "A nonlinear text",
+    "A short story collection"
+   ],
+   "why": "The cave-in story sits inside the interview, which opens and closes the book, so one story is held inside another. Parallel narratives would run two lines side by side, with neither told inside the other.",
+   "clue": "Is one story held inside the other?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A film cuts back and forth between Mai, a girl fleeing a flood in 2022, and Henry, a farmer facing drought in 1902. How does this structure build meaning?",
+   "opts": [
+    "Viewers compare the two lines and see links between them",
+    "Mai tells Henry's story, so hers frames and explains his",
+    "Each line is a separate film with no bearing on the other",
+    "Viewers pick which line to follow, so the order changes"
+   ],
+   "why": "The film runs two lines side by side, so it uses parallel narratives. Meaning comes from comparing them, such as two people facing extreme weather over a century apart. Nothing shows Mai telling Henry's story, so it is not a frame.",
+   "clue": "Is either story told by a character in the other?"
+  }
+ },
+ "local": []
 }

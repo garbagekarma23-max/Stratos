@@ -8,8 +8,220 @@
    0.338
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:51Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:52Z write: failed the content check, writing again",
+  "2026-11-20T12:44:57Z write: done (still fails the content check)",
+  "2026-11-20T12:53:26Z check: flagged",
+  "2026-11-20T12:59:59Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.01418,
+  "check": 0.01448,
+  "fix": 0.02119,
+  "recheck": 0.01125
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers the historical events and reasons leading to Federation in 1901, while the new point teaches how power is divided between the Commonwealth and the states under the Constitution, so it is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Australia's system of government",
+  "card": [
+   "Before 1901 each colony governed itself. At Federation the colonies became states and joined to form the Commonwealth of Australia. Power was shared between the Commonwealth and the states.",
+   "The Constitution is the written set of rules for this sharing. It lists what the Commonwealth parliament can make laws about, such as defence and trade with other countries.",
+   "The Commonwealth has three parts. The parliament makes laws, the government carries them out, and the courts, including the High Court, decide disputes about the law and the Constitution.",
+   "The states kept their own parliaments. The NSW Parliament still makes laws on state matters, such as public schools and public hospitals."
+  ],
+  "remember": "The Constitution shares power between the Commonwealth and the states, and each has its own parliament.",
+  "a": {
+   "q": "What does the Constitution do in Australia's system of government?",
+   "opts": [
+    "Sets out how power is shared between the Commonwealth and states",
+    "Gives all law-making power to the Commonwealth parliament",
+    "Replaces the state parliaments with one national parliament",
+    "Lets the High Court make the laws for each state"
+   ],
+   "why": "The Constitution is the written set of rules that shares power between the Commonwealth and the states. It does not give the Commonwealth all power, because the states kept their own parliaments.",
+   "clue": "Think about what was shared at Federation, and what the states kept."
+  },
+  "b": {
+   "d": 2,
+   "q": "A student in Newcastle asks who makes laws about the running of her public high school. Which answer is correct?",
+   "opts": [
+    "The NSW Parliament, because schools are a state matter",
+    "The High Court, because it decides disputes about laws",
+    "The Commonwealth parliament, because it makes all laws",
+    "The Constitution, because it makes the laws itself"
+   ],
+   "why": "The states kept their own parliaments for state matters such as public schools, so the NSW Parliament makes these laws. The Commonwealth parliament does not make all laws, only those the Constitution allows.",
+   "clue": "Which parliament did NSW keep for state matters?"
+  }
+ },
+ "redone": true,
+ "local": [
+  "his-australia-s-system-governmenta option is 64 characters: Sets out how power is shared between the Commonwealth and states"
+ ],
+ "check": {
+  "a": {
+   "best": "Sets out how power is shared between the Commonwealth and states",
+   "also_right": []
+  },
+  "b": {
+   "best": "The NSW Parliament, because schools are a state matter",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about what was shared at Federation' points straight to the only option containing the word 'shared', so it nearly gives the answer away."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Which parliament did NSW keep for state matters?' all but states the answer, and only the right option uses the card's phrase 'state matter'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, remember line, questions and explanations are accurate and match the intended answers. The only issue is that both clues come close to giving the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'Think about what was shared at Federation' points straight to the only option containing the word 'shared', so it nearly gives the answer away.",
+  "Question b, other: The clue 'Which parliament did NSW keep for state matters?' all but states the answer, and only the right option uses the card's phrase 'state matter'.",
+  "Content check: his-australia-s-system-governmenta option is 64 characters: Sets out how power is shared between the Commonwealth and states"
+ ],
+ "proposal": {
+  "title": "Australia's system of government",
+  "card": [
+   "Before 1901 each colony governed itself. At Federation the colonies became states and joined to form the Commonwealth of Australia. Power was shared between the Commonwealth and the states.",
+   "The Constitution is the written set of rules for this sharing. It lists what the Commonwealth parliament can make laws about, such as defence and trade with other countries.",
+   "The Commonwealth has three parts. The parliament makes laws, the government carries them out, and the courts, including the High Court, decide disputes about the law and the Constitution.",
+   "The states kept their own parliaments. The NSW Parliament still makes laws on state matters, such as public schools and public hospitals."
+  ],
+  "remember": "The Constitution shares power between the Commonwealth and the states, and each has its own parliament.",
+  "a": {
+   "q": "What does the Constitution do in Australia's system of government?",
+   "opts": [
+    "Divides power between the Commonwealth and the states",
+    "Gives all law-making power to the Commonwealth parliament",
+    "Replaces the state parliaments with one national parliament",
+    "Lets the High Court make the laws for each state"
+   ],
+   "why": "The Constitution is the written set of rules that divides power between the Commonwealth and the states. It does not give the Commonwealth all power, because the states kept their own parliaments.",
+   "clue": "Did the states keep any law-making power after 1901?"
+  },
+  "b": {
+   "d": 2,
+   "q": "A student in Newcastle asks who makes laws about the running of her public high school. Which answer is correct?",
+   "opts": [
+    "The NSW Parliament, as schools are left to the states",
+    "The High Court, as it decides disputes about the law",
+    "The Commonwealth parliament, as it makes every law",
+    "The Constitution, as it lists every law for schools"
+   ],
+   "why": "Public schools are a state matter, so the NSW Parliament makes laws about them. The Commonwealth parliament does not make every law, only those on the matters the Constitution lists, such as defence.",
+   "clue": "Look at the card's examples of what each parliament makes laws about."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Divides power between the Commonwealth and the states",
+    "also_right": []
+   },
+   "b": {
+    "best": "The NSW Parliament, as schools are left to the states",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about what was shared at Federation' points straight to the only option containing the word 'shared', so it nearly gives the answer away."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Which parliament did NSW keep for state matters?' all but states the answer, and only the right option uses the card's phrase 'state matter'."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue 'Think about what was shared at Federation' points straight to the only option containing the word 'shared', so it nearly gives the answer away.",
+   "Question b, other: The clue 'Which parliament did NSW keep for state matters?' all but states the answer, and only the right option uses the card's phrase 'state matter'.",
+   "Content check: his-australia-s-system-governmenta option is 64 characters: Sets out how power is shared between the Commonwealth and states"
+  ]
+ },
+ "final": {
+  "title": "Australia's system of government",
+  "card": [
+   "Before 1901 each colony governed itself. At Federation the colonies became states and joined to form the Commonwealth of Australia. Power was shared between the Commonwealth and the states.",
+   "The Constitution is the written set of rules for this sharing. It lists what the Commonwealth parliament can make laws about, such as defence and trade with other countries.",
+   "The Commonwealth has three parts. The parliament makes laws, the government carries them out, and the courts, including the High Court, decide disputes about the law and the Constitution.",
+   "The states kept their own parliaments. The NSW Parliament still makes laws on state matters, such as public schools and public hospitals."
+  ],
+  "remember": "The Constitution shares power between the Commonwealth and the states, and each has its own parliament.",
+  "a": {
+   "q": "What does the Constitution do in Australia's system of government?",
+   "opts": [
+    "Divides power between the Commonwealth and the states",
+    "Gives all law-making power to the Commonwealth parliament",
+    "Replaces the state parliaments with one national parliament",
+    "Lets the High Court make the laws for each state"
+   ],
+   "why": "The Constitution is the written set of rules that divides power between the Commonwealth and the states. It does not give the Commonwealth all power, because the states kept their own parliaments.",
+   "clue": "Did the states keep any law-making power after 1901?"
+  },
+  "b": {
+   "d": 2,
+   "q": "A student in Newcastle asks who makes laws about the running of her public high school. Which answer is correct?",
+   "opts": [
+    "The NSW Parliament, as schools are left to the states",
+    "The High Court, as it decides disputes about the law",
+    "The Commonwealth parliament, as it makes every law",
+    "The Constitution, as it lists every law for schools"
+   ],
+   "why": "Public schools are a state matter, so the NSW Parliament makes laws about them. The Commonwealth parliament does not make every law, only those on the matters the Constitution lists, such as defence.",
+   "clue": "Look at the card's examples of what each parliament makes laws about."
+  }
+ },
+ "cleared_by": "recheck"
 }

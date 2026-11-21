@@ -20,8 +20,215 @@
    0.205
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:44Z write: failed the content check, writing again",
+  "2026-11-20T12:35:48Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:23:37Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.01334,
+  "check": 0.0077,
+  "fix": 0.01683
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank points cover either voice choices (eng-persuasion-spoken-texts, which is about persuasion at Victorian Units 1 and 2 depth) or signposting within speech structure (eng-structuring-speech), but none teaches delivery with both voice and signposting for remembering a spoken argument at Stage 5.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Delivering a speech",
+  "card": [
+   [
+    "Intonation",
+    "the rise and fall of the voice. A rising tone can show a question or doubt, and a falling tone can sound firm and final."
+   ],
+   [
+    "Emphasis",
+    "stressing one word more strongly than the others. In \"We need you to act\", stressing you puts the weight on you."
+   ],
+   [
+    "Pause",
+    "a short silence. It gives the audience time to take in a point, or makes the next words stand out."
+   ],
+   [
+    "Pace",
+    "the speed of speaking. Slowing down can mark an important point, and a quicker pace can build energy. Signposting phrases such as firstly, next and finally tell listeners where they are in the argument."
+   ]
+  ],
+  "remember": "Voice choices and signposting can help listeners follow an argument and remember it.",
+  "a": {
+   "q": "A speaker says that her town needs trees, not car parks. She stresses the word trees more than the words around it. Which technique is this?",
+   "opts": [
+    "Emphasis",
+    "Pace",
+    "Pause",
+    "Signposting"
+   ],
+   "why": "Stressing one word more strongly than the others is emphasis. Pace is about speed, so it is the most tempting wrong option, but she has not changed her speed.",
+   "clue": "She makes one word stronger than the rest."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi gives a speech to his class. He begins with \"Firstly\", moves on with \"Next\", and ends with \"Finally\". Why do these words help a listener?",
+   "opts": [
+    "They show where the argument is up to",
+    "They make his voice rise and fall more",
+    "They slow down the speed of his speech",
+    "They stress the most important word in each line"
+   ],
+   "why": "Phrases such as firstly and finally are signposts. They tell listeners where they are in the argument, and a listener cannot reread a speech. They do not change the voice or the speed themselves, which is what intonation and pace do.",
+   "clue": "Think about what a listener cannot do with a spoken speech."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Emphasis",
+   "also_right": []
+  },
+  "b": {
+   "best": "They show where the argument is up to",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "Signposting is tucked into the end of the Pace bullet rather than given its own line. A student could read it as part of pace, though question b treats it as a separate technique."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct and clear. The only issue is that signposting sits inside the Pace bullet on the card, so it could be confused with pace; it should have its own line."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: Signposting is tucked into the end of the Pace bullet rather than given its own line. A student could read it as part of pace, though question b treats it as a separate technique."
+ ],
+ "proposal": {
+  "title": "Delivering a speech",
+  "card": [
+   [
+    "Intonation",
+    "the rise and fall of the voice. A rising tone can show a question or doubt, and a falling tone can sound firm and final."
+   ],
+   [
+    "Emphasis",
+    "stressing one word more strongly than the others. In \"We need you to act\", stressing you puts the weight on you."
+   ],
+   [
+    "Pause and pace",
+    "a pause is a short silence that gives listeners time to take in a point, or makes the next words stand out. Pace is the speed of speaking: slowing down can mark an important point, and speeding up can build energy."
+   ],
+   [
+    "Signposting",
+    "phrases such as firstly, next and finally. They tell listeners where they are in the argument, which helps because a listener cannot go back and reread a speech."
+   ]
+  ],
+  "remember": "Voice choices and signposting can help listeners follow an argument and remember it.",
+  "a": {
+   "q": "A speaker says that her town needs trees, not car parks. She stresses the word trees more than the words around it. Which technique is this?",
+   "opts": [
+    "Emphasis",
+    "Pace",
+    "Pause",
+    "Signposting"
+   ],
+   "why": "Stressing one word more strongly than the others is emphasis. Pace is the most tempting wrong option, but pace is about speed, and she has not changed how fast she speaks.",
+   "clue": "She makes one word stronger than the rest."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi gives a speech to his class. He begins with \"Firstly\", moves on with \"Next\", and ends with \"Finally\". Why do these words help a listener?",
+   "opts": [
+    "They show where the argument is up to",
+    "They make his voice rise and fall more",
+    "They slow down the speed of his speech",
+    "They stress the most important word"
+   ],
+   "why": "Firstly, next and finally are signposting phrases. They tell listeners where they are in the argument, which matters because a listener cannot reread a speech. The words do not change the voice or the speed themselves, which is what intonation and pace do.",
+   "clue": "Think about what a listener cannot do with a spoken speech."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:37Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "Signposting is tucked into the end of the Pace bullet rather than given its own line. A student could read it as part of pace, though question b treats it as a separate technique."
+   }
+  ],
+  "flags": [
+   "Card, wording: Signposting is tucked into the end of the Pace bullet rather than given its own line. A student could read it as part of pace, though question b treats it as a separate technique."
+  ]
+ },
+ "final": {
+  "title": "Delivering a speech",
+  "card": [
+   [
+    "Intonation",
+    "the rise and fall of the voice. A rising tone can show a question or doubt, and a falling tone can sound firm and final."
+   ],
+   [
+    "Emphasis",
+    "stressing one word more strongly than the others. In \"We need you to act\", stressing you puts the weight on you."
+   ],
+   [
+    "Pause and pace",
+    "a pause is a short silence that gives listeners time to take in a point, or makes the next words stand out. Pace is the speed of speaking: slowing down can mark an important point, and speeding up can build energy."
+   ],
+   [
+    "Signposting",
+    "phrases such as firstly, next and finally. They tell listeners where they are in the argument, which helps because a listener cannot go back and reread a speech."
+   ]
+  ],
+  "remember": "Voice choices and signposting can help listeners follow an argument and remember it.",
+  "a": {
+   "q": "A speaker says that her town needs trees, not car parks. She stresses the word trees more than the words around it. Which technique is this?",
+   "opts": [
+    "Emphasis",
+    "Pace",
+    "Pause",
+    "Signposting"
+   ],
+   "why": "Stressing one word more strongly than the others is emphasis. Pace is the most tempting wrong option, but pace is about speed, and she has not changed how fast she speaks.",
+   "clue": "She makes one word stronger than the rest."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi gives a speech to his class. He begins with \"Firstly\", moves on with \"Next\", and ends with \"Finally\". Why do these words help a listener?",
+   "opts": [
+    "They show where the argument is up to",
+    "They make his voice rise and fall more",
+    "They slow down the speed of his speech",
+    "They stress the most important word"
+   ],
+   "why": "Firstly, next and finally are signposting phrases. They tell listeners where they are in the argument, which matters because a listener cannot reread a speech. The words do not change the voice or the speed themselves, which is what intonation and pace do.",
+   "clue": "Think about what a listener cannot do with a spoken speech."
+  }
+ },
+ "cleared_by": "auto"
 }

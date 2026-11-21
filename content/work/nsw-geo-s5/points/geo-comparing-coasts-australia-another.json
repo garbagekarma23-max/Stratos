@@ -12,8 +12,418 @@
    0.204
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:48Z write: done",
+  "2026-11-20T12:35:49Z check: flagged",
+  "2026-11-20T12:44:56Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (remember other)",
+  "2026-11-20T13:44:56Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00635,
+  "check": 0.01329,
+  "fix": 0.03186,
+  "recheck": 0.01235
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point covers coastal hazards such as rising seas or how a country's wealth shapes its response; both are about urban population patterns in Australia and the United States.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Remember, other: \"Rising seas threaten rich and poor coasts alike\" suggests the threat is equal everywhere. The card shows it is not: only a small share of Australians live on high-risk land, while much of Bangladesh is flat and near sea level with millions of people on the coast. The card only says wealth does not change how much the sea rises.",
+ "rejected": {
+  "title": "Comparing coasts in Australia and another country",
+  "card": [
+   [
+    "Shared threat",
+    "Coastal towns in Australia and low-lying countries such as Bangladesh both face rising seas. Higher seas let storm surges and floods reach further inland."
+   ],
+   [
+    "Australia",
+    "Australia is a wealthy country. Most Australians live near the coast, but only a small share of them live on land low enough to be at high risk. Councils and governments can pay for sea walls, beach sand and planning rules that keep buildings back."
+   ],
+   [
+    "Bangladesh",
+    "Bangladesh is a lower income country. Much of its land is flat and close to sea level, and millions of people live near the coast. It has less money to build large defences."
+   ],
+   "Wealth does not change how much the sea rises. It changes how far a place can respond. Lower income places can still use cheaper steps, such as early warnings and cyclone shelters on higher ground, which have saved many lives in Bangladesh."
+  ],
+  "remember": "Rising seas threaten rich and poor coasts alike. Wealth shapes the response, not the threat.",
+  "a": {
+   "q": "Which statement best describes how wealth affects a coastal town facing rising seas?",
+   "opts": [
+    "It changes how far the town can respond to the threat",
+    "It reduces how much the sea rises along the town's coast",
+    "It decides whether the town is at risk from the sea",
+    "It matters after a flood rather than before one"
+   ],
+   "why": "Wealth pays for responses such as sea walls, sand and planning rules, so it shapes how far a town can respond. It does not change how much the sea rises, so a wealthy town still faces the threat.",
+   "clue": "Separate the threat itself from what people do about it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Rina plans for a low-lying coastal district in Bangladesh. Her district cannot afford a long sea wall. Which response best fits the idea on the card?",
+   "opts": [
+    "Use early warnings and shelters on higher ground",
+    "Wait until the district can afford a long sea wall",
+    "Expect a smaller threat than a wealthy town faces",
+    "Accept that a poorer district cannot reduce harm"
+   ],
+   "why": "Lower income places can still respond with cheaper steps, such as early warnings and cyclone shelters, which have saved many lives. Waiting for a sea wall is tempting, but it leaves people unprotected while cheaper steps could help now.",
+   "clue": "Think about responses that protect people, not just land."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Remember, other: \"Rising seas threaten rich and poor coasts alike\" suggests the threat is equal everywhere. The card shows it is not: only a small share of Australians live on high-risk land, while much of Bangladesh is flat and near sea level with millions of people on the coast. The card only says wealth does not change how much the sea rises."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Comparing coasts in Australia and Bangladesh",
+     "card": [
+      [
+       "Shared threat",
+       "Coastal towns in Australia and low-lying countries such as Bangladesh both face rising seas. Higher seas make storm surges and flooding reach further inland."
+      ],
+      [
+       "Australia",
+       "Australia is a wealthy country with a small share of its people on the coast at high risk. Councils and governments can pay for sea walls, beach sand and planning rules that keep buildings back."
+      ],
+      [
+       "Bangladesh",
+       "Bangladesh is a lower income country. Much of its land is flat and close to sea level, and millions of people live near the coast. It has less money to build large defences."
+      ],
+      "Wealth does not change the threat. It changes how far a place can respond, such as by building defences, warning people early and moving people to safer ground."
+     ],
+     "remember": "Both coasts face rising seas, but wealth shapes how they can respond.",
+     "a": {
+      "q": "What is the main reason Australian coastal towns can often respond to rising seas more easily than coastal areas of Bangladesh?",
+      "opts": [
+       "They have more money to spend on defences",
+       "They face no threat from rising seas",
+       "Their coastline is higher than the sea everywhere",
+       "They have no storms that cause flooding"
+      ],
+      "why": "Wealth lets governments and councils pay for defences, sand and planning. Australia is not free of the threat, because rising seas affect its coast too.",
+      "clue": "Think about what each place can afford."
+     },
+     "b": {
+      "d": 3,
+      "q": "Two coastal towns face the same rise in sea level. Town A is in a wealthy country. Town B is in a low-lying country with less money. What is the most likely difference?",
+      "opts": [
+       "Town A can better afford defences and planning",
+       "Town B faces a smaller threat from the sea",
+       "Town A has no need to plan for flooding",
+       "Town B has more money to move people away"
+      ],
+      "why": "The threat is the same, but wealth shapes how far each town can respond. Town A can more easily pay for defences and planning. Town A still has to plan for flooding, so that option is wrong.",
+      "clue": "The threat is shared. What differs is the money to respond."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "They have more money to spend on defences",
+      "also_right": []
+     },
+     "b": {
+      "best": "Town A can better afford defences and planning",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "\"Australia is a wealthy country with a small share of its people on the coast at high risk\" can be read as saying few Australians live on the coast. In fact most Australians live near the coast. Reword to make clear that only a small share of coastal residents are at high risk."
+      },
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue \"Think about what each place can afford\" points straight at the money option, and every distractor is an absolute (\"no threat\", \"no storms\", \"everywhere\"). A student can pick the answer without knowing the idea."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue \"What differs is the money to respond\" all but states the answer, and the remaining distractors rest on absolutes or a reversed wealth claim, so the question is easy to answer without understanding."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and answers are correct. The card's Australia line is ambiguous: it could suggest few Australians live on the coast. Both clues, together with absolute distractors, largely give the answers away."
+    },
+    "flags": [
+     "Card, wording: \"Australia is a wealthy country with a small share of its people on the coast at high risk\" can be read as saying few Australians live on the coast. In fact most Australians live near the coast. Reword to make clear that only a small share of coastal residents are at high risk.",
+     "Question a, other: The clue \"Think about what each place can afford\" points straight at the money option, and every distractor is an absolute (\"no threat\", \"no storms\", \"everywhere\"). A student can pick the answer without knowing the idea.",
+     "Question b, other: The clue \"What differs is the money to respond\" all but states the answer, and the remaining distractors rest on absolutes or a reversed wealth claim, so the question is easy to answer without understanding."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Comparing coasts in Australia and another country",
+     "card": [
+      [
+       "Shared threat",
+       "Coastal towns in Australia and low-lying countries such as Bangladesh both face rising seas. Higher seas let storm surges and floods reach further inland."
+      ],
+      [
+       "Australia",
+       "Australia is a wealthy country. Most Australians live near the coast, but only a small share of them live on land low enough to be at high risk. Councils and governments can pay for sea walls, beach sand and planning rules that keep buildings back."
+      ],
+      [
+       "Bangladesh",
+       "Bangladesh is a lower income country. Much of its land is flat and close to sea level, and millions of people live near the coast. It has less money to build large defences."
+      ],
+      "Wealth does not change how much the sea rises. It changes how far a place can respond. Lower income places can still use cheaper steps, such as early warnings and cyclone shelters on higher ground, which have saved many lives in Bangladesh."
+     ],
+     "remember": "Rising seas threaten rich and poor coasts alike. Wealth shapes the response, not the threat.",
+     "a": {
+      "q": "Which statement best describes how wealth affects a coastal town facing rising seas?",
+      "opts": [
+       "It changes how far the town can respond to the threat",
+       "It reduces how much the sea rises along the town's coast",
+       "It decides whether the town is at risk from the sea",
+       "It matters after a flood rather than before one"
+      ],
+      "why": "Wealth pays for responses such as sea walls, sand and planning rules, so it shapes how far a town can respond. It does not change how much the sea rises, so a wealthy town still faces the threat.",
+      "clue": "Separate the threat itself from what people do about it."
+     },
+     "b": {
+      "d": 3,
+      "q": "Rina plans for a low-lying coastal district in Bangladesh. Her district cannot afford a long sea wall. Which response best fits the idea on the card?",
+      "opts": [
+       "Use early warnings and shelters on higher ground",
+       "Wait until the district can afford a long sea wall",
+       "Expect a smaller threat than a wealthy town faces",
+       "Accept that a poorer district cannot reduce harm"
+      ],
+      "why": "Lower income places can still respond with cheaper steps, such as early warnings and cyclone shelters, which have saved many lives. Waiting for a sea wall is tempting, but it leaves people unprotected while cheaper steps could help now.",
+      "clue": "Think about responses that protect people, not just land."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "It changes how far the town can respond to the threat",
+       "also_right": []
+      },
+      "b": {
+       "best": "Use early warnings and shelters on higher ground",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "remember",
+        "kind": "other",
+        "detail": "\"Rising seas threaten rich and poor coasts alike\" suggests the threat is equal everywhere. The card shows it is not: only a small share of Australians live on high-risk land, while much of Bangladesh is flat and near sea level with millions of people on the coast. The card only says wealth does not change how much the sea rises."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are sound and have one clear right answer. The remember line's \"threaten rich and poor coasts alike\" overstates the card, which shows Bangladesh far more exposed than Australia. It could be reworded to say wealth does not change how much the sea rises."
+     },
+     "flags": [
+      "Remember, other: \"Rising seas threaten rich and poor coasts alike\" suggests the threat is equal everywhere. The card shows it is not: only a small share of Australians live on high-risk land, while much of Bangladesh is flat and near sea level with millions of people on the coast. The card only says wealth does not change how much the sea rises."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:56Z",
+   "step": "write",
+   "version": {
+    "title": "Comparing coasts in Australia and another country",
+    "card": [
+     [
+      "Shared threat",
+      "Coastal towns in Australia and low-lying countries such as Bangladesh both face rising seas. Higher seas let storm surges and floods reach further inland."
+     ],
+     [
+      "Australia",
+      "Australia is a wealthy country. Most Australians live near the coast, but only a small share of them live on land low enough to be at high risk. Councils and governments can pay for sea walls, beach sand and planning rules that keep buildings back."
+     ],
+     [
+      "Bangladesh",
+      "Bangladesh is a lower income country. Much of its land is flat and close to sea level, and millions of people live near the coast. It has less money to build large defences."
+     ],
+     "Wealth does not change how much the sea rises. It changes how far a place can respond. Lower income places can still use cheaper steps, such as early warnings and cyclone shelters on higher ground, which have saved many lives in Bangladesh."
+    ],
+    "remember": "Both countries face rising seas. Wealth does not stop the sea rising, but it shapes how far each can respond.",
+    "a": {
+     "q": "Which statement best describes how wealth affects a coastal town facing rising seas?",
+     "opts": [
+      "It changes how far the town can respond to the threat",
+      "It reduces how much the sea rises along the town's coast",
+      "It decides whether the town is at risk from the sea",
+      "It matters after a flood rather than before one"
+     ],
+     "why": "Wealth pays for responses such as sea walls, sand and planning rules, so it shapes how far a town can respond. It does not change how much the sea rises, so a wealthy town still faces the threat.",
+     "clue": "Separate the threat itself from what people do about it."
+    },
+    "b": {
+     "d": 3,
+     "q": "Rina plans for a low-lying coastal district in Bangladesh. Her district cannot afford a long sea wall. Which response best fits the idea on the card?",
+     "opts": [
+      "Use early warnings and shelters on higher ground",
+      "Wait until the district can afford a long sea wall",
+      "Expect a smaller threat than a wealthy town faces",
+      "Accept that a poorer district cannot reduce harm"
+     ],
+     "why": "Lower income places can still respond with cheaper steps, such as early warnings and cyclone shelters, which have saved many lives. Waiting for a sea wall is tempting, but it leaves people unprotected while cheaper steps could help now.",
+     "clue": "Think about responses that protect people, not just land."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "It changes how far the town can respond to the threat",
+     "also_right": []
+    },
+    "b": {
+     "best": "Use early warnings and shelters on higher ground",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Comparing coasts in Australia and another country",
+  "card": [
+   [
+    "Shared threat",
+    "Coastal towns in Australia and low-lying countries such as Bangladesh both face rising seas. Higher seas let storm surges and floods reach further inland."
+   ],
+   [
+    "Australia",
+    "Australia is a wealthy country. Most Australians live near the coast, but only a small share of them live on land low enough to be at high risk. Councils and governments can pay for sea walls, beach sand and planning rules that keep buildings back."
+   ],
+   [
+    "Bangladesh",
+    "Bangladesh is a lower income country. Much of its land is flat and close to sea level, and millions of people live near the coast. It has less money to build large defences."
+   ],
+   "Wealth does not change how much the sea rises. It changes how far a place can respond. Lower income places can still use cheaper steps, such as early warnings and cyclone shelters on higher ground, which have saved many lives in Bangladesh."
+  ],
+  "remember": "Both countries face rising seas. Wealth does not stop the sea rising, but it shapes how far each can respond.",
+  "a": {
+   "q": "Which statement best describes how wealth affects a coastal town facing rising seas?",
+   "opts": [
+    "It changes how far the town can respond to the threat",
+    "It reduces how much the sea rises along the town's coast",
+    "It decides whether the town is at risk from the sea",
+    "It matters after a flood rather than before one"
+   ],
+   "why": "Wealth pays for responses such as sea walls, sand and planning rules, so it shapes how far a town can respond. It does not change how much the sea rises, so a wealthy town still faces the threat.",
+   "clue": "Separate the threat itself from what people do about it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Rina plans for a low-lying coastal district in Bangladesh. Her district cannot afford a long sea wall. Which response best fits the idea on the card?",
+   "opts": [
+    "Use early warnings and shelters on higher ground",
+    "Wait until the district can afford a long sea wall",
+    "Expect a smaller threat than a wealthy town faces",
+    "Accept that a poorer district cannot reduce harm"
+   ],
+   "why": "Lower income places can still respond with cheaper steps, such as early warnings and cyclone shelters, which have saved many lives. Waiting for a sea wall is tempting, but it leaves people unprotected while cheaper steps could help now.",
+   "clue": "Think about responses that protect people, not just land."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It changes how far the town can respond to the threat",
+   "also_right": []
+  },
+  "b": {
+   "best": "Use early warnings and shelters on higher ground",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Comparing coasts in Australia and another country",
+  "card": [
+   [
+    "Shared threat",
+    "Coastal towns in Australia and low-lying countries such as Bangladesh both face rising seas. Higher seas let storm surges and floods reach further inland."
+   ],
+   [
+    "Australia",
+    "Australia is a wealthy country. Most Australians live near the coast, but only a small share of them live on land low enough to be at high risk. Councils and governments can pay for sea walls, beach sand and planning rules that keep buildings back."
+   ],
+   [
+    "Bangladesh",
+    "Bangladesh is a lower income country. Much of its land is flat and close to sea level, and millions of people live near the coast. It has less money to build large defences."
+   ],
+   "Wealth does not change how much the sea rises. It changes how far a place can respond. Lower income places can still use cheaper steps, such as early warnings and cyclone shelters on higher ground, which have saved many lives in Bangladesh."
+  ],
+  "remember": "Both countries face rising seas. Wealth does not stop the sea rising, but it shapes how far each can respond.",
+  "a": {
+   "q": "Which statement best describes how wealth affects a coastal town facing rising seas?",
+   "opts": [
+    "It changes how far the town can respond to the threat",
+    "It reduces how much the sea rises along the town's coast",
+    "It decides whether the town is at risk from the sea",
+    "It matters after a flood rather than before one"
+   ],
+   "why": "Wealth pays for responses such as sea walls, sand and planning rules, so it shapes how far a town can respond. It does not change how much the sea rises, so a wealthy town still faces the threat.",
+   "clue": "Separate the threat itself from what people do about it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Rina plans for a low-lying coastal district in Bangladesh. Her district cannot afford a long sea wall. Which response best fits the idea on the card?",
+   "opts": [
+    "Use early warnings and shelters on higher ground",
+    "Wait until the district can afford a long sea wall",
+    "Expect a smaller threat than a wealthy town faces",
+    "Accept that a poorer district cannot reduce harm"
+   ],
+   "why": "Lower income places can still respond with cheaper steps, such as early warnings and cyclone shelters, which have saved many lives. Waiting for a sea wall is tempting, but it leaves people unprotected while cheaper steps could help now.",
+   "clue": "Think about responses that protect people, not just land."
+  }
+ },
+ "checked_by": "claude-code"
 }

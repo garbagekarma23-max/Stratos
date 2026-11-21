@@ -24,8 +24,220 @@
    0.223
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:44Z write: done",
+  "2026-11-20T12:44:52Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.00583,
+  "check": 0.01171,
+  "fix": 0.01675,
+  "recheck": 0.00782
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-wages-salaries-2, covers hourly pay, penalty rates and a generic payslip with gross, deductions and net, but it does not teach tax taken out, super paid as a separate item, or the yearly income statement that this point needs, so no existing point matches closely enough to adapt.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Reading a payslip",
+  "card": [
+   "A payslip is a record of one pay period. It shows the hours worked and the pay rate, such as the dollars paid for each hour.",
+   [
+    "Gross pay",
+    "the total earned before anything is taken out. For hourly work, it is hours worked × pay rate."
+   ],
+   [
+    "Net pay",
+    "the money paid to the worker after tax is taken out. Net pay = gross pay - tax. It is often called take-home pay."
+   ],
+   "The payslip also shows super, which is money the employer pays into the worker's super fund. It is not part of net pay. At the end of the year, an income statement totals the pay and tax for the whole year."
+  ],
+  "remember": "Gross is before tax, net is after tax, and super goes to a fund, not to the worker's pay.",
+  "a": {
+   "q": "Ravi's payslip shows gross pay of $800 and tax of $120. What is his net pay?",
+   "opts": [
+    "$680",
+    "$920",
+    "$800",
+    "$120"
+   ],
+   "why": "Net pay is gross pay minus tax, so $800 - $120 = $680. Adding the tax gives $920, but tax is taken out of gross pay, not added to it.",
+   "clue": "Net pay is what is left after tax is taken out."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia works 20 hours in a fortnight at $25 an hour. Her employer takes out $60 in tax and pays $55 into her super fund. What is her net pay?",
+   "opts": [
+    "$440",
+    "$385",
+    "$500",
+    "$495"
+   ],
+   "why": "Gross pay is 20 × $25 = $500. Net pay is gross pay minus tax, so $500 - $60 = $440. The super is paid by the employer into a fund and is not taken from net pay, so it is not subtracted here.",
+   "clue": "Find gross pay first, then take out only the tax."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$680",
+   "also_right": []
+  },
+  "b": {
+   "best": "$440",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card defines net pay as gross pay minus tax (\"Net pay = gross pay - tax\"). Net pay is gross pay minus all deductions, such as tax, salary sacrifice or union fees. Phrasing it as \"after tax and any other deductions\" would avoid teaching that tax is the only possible deduction."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct ($680 and $440), and the explanations match the card. One minor issue: the card defines net pay as gross minus tax only, but on real payslips net pay is gross minus all deductions."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card defines net pay as gross pay minus tax (\"Net pay = gross pay - tax\"). Net pay is gross pay minus all deductions, such as tax, salary sacrifice or union fees. Phrasing it as \"after tax and any other deductions\" would avoid teaching that tax is the only possible deduction."
+ ],
+ "proposal": {
+  "title": "Reading a payslip",
+  "card": [
+   "A payslip is a record of one pay period. It shows the hours worked and the pay rate, such as the dollars paid for each hour.",
+   [
+    "Gross pay",
+    "the total earned before anything is taken out. For hourly work, it is hours worked × pay rate."
+   ],
+   [
+    "Net pay",
+    "the money paid to the worker after tax and any other deductions, such as union fees, are taken out. Net pay = gross pay - all deductions. It is often called take-home pay."
+   ],
+   "The payslip also shows super, which is money the employer pays into the worker's super fund. Employer super is not part of net pay. At the end of the year, an income statement totals the pay and tax for the whole year."
+  ],
+  "remember": "Gross is before deductions, net is after them, and employer super goes to a fund, not into take-home pay.",
+  "a": {
+   "q": "Ravi's payslip shows gross pay of $800 and tax of $120. Tax is his only deduction. What is his net pay?",
+   "opts": [
+    "$680",
+    "$920",
+    "$800",
+    "$120"
+   ],
+   "why": "Net pay is gross pay minus all deductions. Tax is Ravi's only deduction, so $800 - $120 = $680. Adding the tax gives $920, but deductions are taken out of gross pay, not added to it.",
+   "clue": "Net pay is what is left after deductions are taken out."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia works 20 hours in a fortnight at $25 an hour. Her employer takes out $60 in tax, her only deduction, and pays $55 into her super fund. What is her net pay?",
+   "opts": [
+    "$440",
+    "$385",
+    "$500",
+    "$495"
+   ],
+   "why": "Gross pay is 20 × $25 = $500. Tax is the only deduction, so net pay is $500 - $60 = $440. The employer pays the super into a fund, so it is not part of net pay and is not subtracted here.",
+   "clue": "Find gross pay first, then take out only the deductions."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "$680",
+    "also_right": []
+   },
+   "b": {
+    "best": "$440",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out ($800 − $120 = $680; 20 × $25 = $500, then $500 − $60 = $440), and the card correctly keeps employer super out of net pay."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 13,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card defines net pay as gross pay minus tax (\"Net pay = gross pay - tax\"). Net pay is gross pay minus all deductions, such as tax, salary sacrifice or union fees. Phrasing it as \"after tax and any other deductions\" would avoid teaching that tax is the only possible deduction."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card defines net pay as gross pay minus tax (\"Net pay = gross pay - tax\"). Net pay is gross pay minus all deductions, such as tax, salary sacrifice or union fees. Phrasing it as \"after tax and any other deductions\" would avoid teaching that tax is the only possible deduction."
+  ]
+ },
+ "final": {
+  "title": "Reading a payslip",
+  "card": [
+   "A payslip is a record of one pay period. It shows the hours worked and the pay rate, such as the dollars paid for each hour.",
+   [
+    "Gross pay",
+    "the total earned before anything is taken out. For hourly work, it is hours worked × pay rate."
+   ],
+   [
+    "Net pay",
+    "the money paid to the worker after tax and any other deductions, such as union fees, are taken out. Net pay = gross pay - all deductions. It is often called take-home pay."
+   ],
+   "The payslip also shows super, which is money the employer pays into the worker's super fund. Employer super is not part of net pay. At the end of the year, an income statement totals the pay and tax for the whole year."
+  ],
+  "remember": "Gross is before deductions, net is after them, and employer super goes to a fund, not into take-home pay.",
+  "a": {
+   "q": "Ravi's payslip shows gross pay of $800 and tax of $120. Tax is his only deduction. What is his net pay?",
+   "opts": [
+    "$680",
+    "$920",
+    "$800",
+    "$120"
+   ],
+   "why": "Net pay is gross pay minus all deductions. Tax is Ravi's only deduction, so $800 - $120 = $680. Adding the tax gives $920, but deductions are taken out of gross pay, not added to it.",
+   "clue": "Net pay is what is left after deductions are taken out."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia works 20 hours in a fortnight at $25 an hour. Her employer takes out $60 in tax, her only deduction, and pays $55 into her super fund. What is her net pay?",
+   "opts": [
+    "$440",
+    "$385",
+    "$500",
+    "$495"
+   ],
+   "why": "Gross pay is 20 × $25 = $500. Tax is the only deduction, so net pay is $500 - $60 = $440. The employer pays the super into a fund, so it is not part of net pay and is not subtracted here.",
+   "clue": "Find gross pay first, then take out only the deductions."
+  }
+ },
+ "cleared_by": "recheck"
 }

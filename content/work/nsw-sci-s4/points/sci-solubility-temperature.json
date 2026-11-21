@@ -8,8 +8,250 @@
    0.407
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: flagged",
+  "2026-11-20T12:53:29Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 8e-05,
+  "write": 0.00614,
+  "check": 0.0158,
+  "fix": 0.02134,
+  "recheck": 0.00796
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point only defines solutions, solutes and solvents, while the new point teaches solubility and how it changes with temperature, which is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Solubility and temperature",
+  "card": [
+   "Solubility is how much solute dissolves in a set amount of solvent, such as 100 g of water. A solute that is very soluble has a high solubility.",
+   "Solubility depends on the solute, the solvent and the temperature. A different solute can have a different solubility in the same water.",
+   "For most solids, solubility rises as the water gets hotter. More sugar dissolves in 100 g of hot water than in 100 g of cold water.",
+   "To compare solubilities fairly, keep the amount of solvent the same and change only the temperature."
+  ],
+  "remember": "Solubility is how much dissolves in a set amount of solvent. For most solids it rises with temperature.",
+  "a": {
+   "q": "Which statement best describes the solubility of a solid?",
+   "opts": [
+    "How much of it dissolves in a set amount of solvent",
+    "How fast it dissolves when the water is stirred",
+    "How much solution forms when it is added to water",
+    "How much solvent is needed to see it disappear"
+   ],
+   "why": "Solubility is the amount of solute that dissolves in a set amount of solvent. Speed of dissolving is a different thing, so the stirring option is wrong, because it describes how fast and not how much.",
+   "clue": "Think about how much dissolves, not how quickly."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ravi stirs salt into 100 g of cold water until no more dissolves. He then heats the water to 60 °C. For most solids, what would he expect to happen?",
+   "opts": [
+    "More salt can dissolve in the hot water",
+    "Less salt can dissolve in the hot water",
+    "The same amount of salt can dissolve in it",
+    "The salt becomes a liquid and the water is lost"
+   ],
+   "why": "For most solids, solubility rises as the water gets hotter, so more can dissolve at 60 °C. The option saying less dissolves reverses cause and effect between heat and solubility.",
+   "clue": "Hot water usually holds more of a solid."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "How much of it dissolves in a set amount of solvent",
+   "also_right": []
+  },
+  "b": {
+   "best": "More salt can dissolve in the hot water",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Salt (sodium chloride) is a well-known solid whose solubility barely changes with temperature (about 36 g to 37 g per 100 g of water from 0 °C to 60 °C). It is a poor example for 'more dissolves in hot water', and a student who knows this could defend 'The same amount of salt can dissolve in it'. Use sugar or copper sulfate instead."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Hot water usually holds more of a solid' states the answer outright."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about how much dissolves, not how quickly' nearly quotes the right option, so a student can match the wording without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says the 'less dissolves' option 'reverses cause and effect between heat and solubility'. That is not what it does: it gets the direction of the relationship wrong, so the why is confusing."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'To compare solubilities fairly, keep the amount of solvent the same and change only the temperature' reads as a general rule. Yet the card has just said that different solutes have different solubilities, and comparing solutes means changing the solute and keeping the temperature fixed. It should say this is how to compare solubility at different temperatures."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b uses salt, whose solubility hardly changes with temperature, so 'the same amount' is defensible; it should use sugar. Both clues give the answers away, the why for b misdescribes the wrong option as a cause-and-effect reversal, and the card's fair-test line is worded too generally."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: Salt (sodium chloride) is a well-known solid whose solubility barely changes with temperature (about 36 g to 37 g per 100 g of water from 0 °C to 60 °C). It is a poor example for 'more dissolves in hot water', and a student who knows this could defend 'The same amount of salt can dissolve in it'. Use sugar or copper sulfate instead.",
+  "Question b, other: The clue 'Hot water usually holds more of a solid' states the answer outright.",
+  "Question a, other: The clue 'Think about how much dissolves, not how quickly' nearly quotes the right option, so a student can match the wording without knowing the idea.",
+  "Question b, other: The why says the 'less dissolves' option 'reverses cause and effect between heat and solubility'. That is not what it does: it gets the direction of the relationship wrong, so the why is confusing.",
+  "Card, wording: 'To compare solubilities fairly, keep the amount of solvent the same and change only the temperature' reads as a general rule. Yet the card has just said that different solutes have different solubilities, and comparing solutes means changing the solute and keeping the temperature fixed. It should say this is how to compare solubility at different temperatures."
+ ],
+ "proposal": {
+  "title": "Solubility and temperature",
+  "card": [
+   "Solubility is how much solute dissolves in a set amount of solvent, such as 100 g of water. A solute that is very soluble has a high solubility.",
+   "Solubility depends on the solute, the solvent and the temperature. A different solute can have a different solubility in the same water.",
+   "For most solids, solubility rises as the water gets hotter. More sugar dissolves in 100 g of hot water than in 100 g of cold water.",
+   "To compare solubility at different temperatures, use the same solute and the same amount of solvent. Change only the temperature."
+  ],
+  "remember": "Solubility is how much dissolves in a set amount of solvent. For most solids it rises with temperature.",
+  "a": {
+   "q": "Which statement best describes the solubility of a solid?",
+   "opts": [
+    "How much of it dissolves in a set amount of solvent",
+    "How fast it dissolves when the water is stirred",
+    "How much solution forms when it is added to water",
+    "How much solvent is needed to see it disappear"
+   ],
+   "why": "Solubility is the amount of solute that dissolves in a set amount of solvent. The stirring option is wrong because it describes how fast a solid dissolves, not how much of it can dissolve.",
+   "clue": "Stirring changes one of these things but not solubility."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ravi stirs copper sulfate into 100 g of cold water until no more dissolves. He then heats the water to 60 °C. For most solids, what would he expect to happen?",
+   "opts": [
+    "More copper sulfate can dissolve in the hot water",
+    "Less copper sulfate can dissolve in the hot water",
+    "The same amount of copper sulfate can dissolve in it",
+    "The dissolved copper sulfate comes back out as a solid"
+   ],
+   "why": "Copper sulfate behaves like most solids: its solubility rises as the water gets hotter, so more can dissolve at 60 °C. The option saying less dissolves gets the direction of the change backwards.",
+   "clue": "Look at what the card says changes for most solids as water warms."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "How much of it dissolves in a set amount of solvent",
+    "also_right": []
+   },
+   "b": {
+    "best": "More copper sulfate can dissolve in the hot water",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Salt (sodium chloride) is a well-known solid whose solubility barely changes with temperature (about 36 g to 37 g per 100 g of water from 0 °C to 60 °C). It is a poor example for 'more dissolves in hot water', and a student who knows this could defend 'The same amount of salt can dissolve in it'. Use sugar or copper sulfate instead."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Hot water usually holds more of a solid' states the answer outright."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about how much dissolves, not how quickly' nearly quotes the right option, so a student can match the wording without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says the 'less dissolves' option 'reverses cause and effect between heat and solubility'. That is not what it does: it gets the direction of the relationship wrong, so the why is confusing."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'To compare solubilities fairly, keep the amount of solvent the same and change only the temperature' reads as a general rule. Yet the card has just said that different solutes have different solubilities, and comparing solutes means changing the solute and keeping the temperature fixed. It should say this is how to compare solubility at different temperatures."
+   }
+  ],
+  "flags": [
+   "Question b, fact: Salt (sodium chloride) is a well-known solid whose solubility barely changes with temperature (about 36 g to 37 g per 100 g of water from 0 °C to 60 °C). It is a poor example for 'more dissolves in hot water', and a student who knows this could defend 'The same amount of salt can dissolve in it'. Use sugar or copper sulfate instead.",
+   "Question b, other: The clue 'Hot water usually holds more of a solid' states the answer outright.",
+   "Question a, other: The clue 'Think about how much dissolves, not how quickly' nearly quotes the right option, so a student can match the wording without knowing the idea.",
+   "Question b, other: The why says the 'less dissolves' option 'reverses cause and effect between heat and solubility'. That is not what it does: it gets the direction of the relationship wrong, so the why is confusing.",
+   "Card, wording: 'To compare solubilities fairly, keep the amount of solvent the same and change only the temperature' reads as a general rule. Yet the card has just said that different solutes have different solubilities, and comparing solutes means changing the solute and keeping the temperature fixed. It should say this is how to compare solubility at different temperatures."
+  ]
+ },
+ "final": {
+  "title": "Solubility and temperature",
+  "card": [
+   "Solubility is how much solute dissolves in a set amount of solvent, such as 100 g of water. A solute that is very soluble has a high solubility.",
+   "Solubility depends on the solute, the solvent and the temperature. A different solute can have a different solubility in the same water.",
+   "For most solids, solubility rises as the water gets hotter. More sugar dissolves in 100 g of hot water than in 100 g of cold water.",
+   "To compare solubility at different temperatures, use the same solute and the same amount of solvent. Change only the temperature."
+  ],
+  "remember": "Solubility is how much dissolves in a set amount of solvent. For most solids it rises with temperature.",
+  "a": {
+   "q": "Which statement best describes the solubility of a solid?",
+   "opts": [
+    "How much of it dissolves in a set amount of solvent",
+    "How fast it dissolves when the water is stirred",
+    "How much solution forms when it is added to water",
+    "How much solvent is needed to see it disappear"
+   ],
+   "why": "Solubility is the amount of solute that dissolves in a set amount of solvent. The stirring option is wrong because it describes how fast a solid dissolves, not how much of it can dissolve.",
+   "clue": "Stirring changes one of these things but not solubility."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ravi stirs copper sulfate into 100 g of cold water until no more dissolves. He then heats the water to 60 °C. For most solids, what would he expect to happen?",
+   "opts": [
+    "More copper sulfate can dissolve in the hot water",
+    "Less copper sulfate can dissolve in the hot water",
+    "The same amount of copper sulfate can dissolve in it",
+    "The dissolved copper sulfate comes back out as a solid"
+   ],
+   "why": "Copper sulfate behaves like most solids: its solubility rises as the water gets hotter, so more can dissolve at 60 °C. The option saying less dissolves gets the direction of the change backwards.",
+   "clue": "Look at what the card says changes for most solids as water warms."
+  }
+ },
+ "cleared_by": "recheck"
 }

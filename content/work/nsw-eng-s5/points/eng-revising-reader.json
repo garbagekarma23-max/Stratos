@@ -12,8 +12,135 @@
    0.232
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:44Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:47Z write: failed the content check, writing again",
+  "2026-11-20T12:44:54Z write: done",
+  "2026-11-20T13:11:47Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.01321,
+  "check": 0.01306
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "Neither bank point teaches the same idea: the new point is a focused reader-rereading step (finding unclear parts, missing evidence and cuts before polishing), while the bank points cover broader revise-versus-polish drafting or a set of sentence-level revision techniques, so a new point fits better.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Revising for a reader",
+  "card": [
+   "Revising means rereading your draft as your audience would. Read it as someone who has not seen your plan and knows only what is on the page.",
+   [
+    "Unclear",
+    "mark any sentence where a reader might have to stop and guess what you mean. Fix these first."
+   ],
+   [
+    "Needs evidence",
+    "mark any claim a reader could doubt. Add an example, a fact or a quotation to support it."
+   ],
+   [
+    "Can be cut",
+    "mark any part that repeats a point or does not help your purpose. Taking it out makes the piece stronger."
+   ]
+  ],
+  "remember": "Revise for the reader first: clear, supported and focused. Polish the wording last.",
+  "a": {
+   "q": "Which action is revising for a reader?",
+   "opts": [
+    "Marking a doubtful claim and adding an example",
+    "Replacing plain words with longer words to sound formal",
+    "Checking each comma and apostrophe is in the right place",
+    "Changing the font and spacing so the page looks neat"
+   ],
+   "why": "Revising means rereading as the audience and finding where they would doubt a claim, so an example is added. Swapping words and fixing punctuation are polishing the language, which comes later.",
+   "clue": "Which action starts from what the reader needs?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Ayla rereads her speech about a school canteen. She sees that two paragraphs make the same point and that one claim has no support. What should she do before polishing her word choices?",
+   "opts": [
+    "Cut one repeated paragraph and add support for the claim",
+    "Add more adjectives to the repeated paragraphs",
+    "Fix the spelling and then read it aloud once",
+    "Keep both paragraphs so the speech is longer"
+   ],
+   "why": "Cutting repeated material and supporting the doubtful claim are revision for a reader, and they come first. Adding adjectives and fixing spelling are polishing, so they come after the bigger problems are fixed.",
+   "clue": "Fix what the reader would question or skip before touching the wording."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Marking a doubtful claim and adding an example",
+   "also_right": []
+  },
+  "b": {
+   "best": "Cut one repeated paragraph and add support for the claim",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Revising for a reader",
+  "card": [
+   "Revising means rereading your draft as your audience would. Read it as someone who has not seen your plan and knows only what is on the page.",
+   [
+    "Unclear",
+    "mark any sentence where a reader might have to stop and guess what you mean. Fix these first."
+   ],
+   [
+    "Needs evidence",
+    "mark any claim a reader could doubt. Add an example, a fact or a quotation to support it."
+   ],
+   [
+    "Can be cut",
+    "mark any part that repeats a point or does not help your purpose. Taking it out makes the piece stronger."
+   ]
+  ],
+  "remember": "Revise for the reader first: clear, supported and focused. Polish the wording last.",
+  "a": {
+   "q": "Which action is revising for a reader?",
+   "opts": [
+    "Marking a doubtful claim and adding an example",
+    "Replacing plain words with longer words to sound formal",
+    "Checking each comma and apostrophe is in the right place",
+    "Changing the font and spacing so the page looks neat"
+   ],
+   "why": "Revising means rereading as the audience and finding where they would doubt a claim, so an example is added. Swapping words and fixing punctuation are polishing the language, which comes later.",
+   "clue": "Which action starts from what the reader needs?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Ayla rereads her speech about a school canteen. She sees that two paragraphs make the same point and that one claim has no support. What should she do before polishing her word choices?",
+   "opts": [
+    "Cut one repeated paragraph and add support for the claim",
+    "Add more adjectives to the repeated paragraphs",
+    "Fix the spelling and then read it aloud once",
+    "Keep both paragraphs so the speech is longer"
+   ],
+   "why": "Cutting repeated material and supporting the doubtful claim are revision for a reader, and they come first. Adding adjectives and fixing spelling are polishing, so they come after the bigger problems are fixed.",
+   "clue": "Fix what the reader would question or skip before touching the wording."
+  }
+ },
+ "cleared_by": "checker"
 }

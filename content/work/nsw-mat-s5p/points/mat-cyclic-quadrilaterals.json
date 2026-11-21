@@ -24,8 +24,131 @@
    0.215
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:56Z write: done",
+  "2026-11-20T12:44:59Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00885,
+  "check": 0.0096
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches cyclic quadrilaterals; the closest, Proofs with angle properties, only covers general angle-chaining facts and not the opposite-angle or exterior-angle results for a quadrilateral inscribed in a circle.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Cyclic quadrilaterals",
+  "card": [
+   "A cyclic quadrilateral is a four-sided shape with all four vertices on one circle.",
+   "Opposite angles of a cyclic quadrilateral add to \\(180^{\\circ}\\). So if one angle is \\(100^{\\circ}\\), the angle opposite it is \\(80^{\\circ}\\).",
+   "An exterior angle is formed by extending one side. It equals the interior angle opposite it, the one not next to it.",
+   "Example: in cyclic quadrilateral \\(ABCD\\), \\(\\angle A = 75^{\\circ}\\) and \\(\\angle B = 110^{\\circ}\\). Then \\(\\angle C = 180^{\\circ} - 75^{\\circ} = 105^{\\circ}\\) and \\(\\angle D = 180^{\\circ} - 110^{\\circ} = 70^{\\circ}\\)."
+  ],
+  "remember": "In a cyclic quadrilateral, opposite angles are supplementary, and an exterior angle matches the opposite interior angle.",
+  "a": {
+   "q": "\\(PQRS\\) is a cyclic quadrilateral with \\(\\angle P = 68^{\\circ}\\). What is \\(\\angle R\\), the angle opposite \\(P\\)?",
+   "opts": [
+    "\\(112^{\\circ}\\)",
+    "\\(68^{\\circ}\\)",
+    "\\(22^{\\circ}\\)",
+    "\\(292^{\\circ}\\)"
+   ],
+   "why": "Opposite angles add to \\(180^{\\circ}\\), so \\(\\angle R = 180^{\\circ} - 68^{\\circ} = 112^{\\circ}\\). Choosing \\(68^{\\circ}\\) wrongly treats opposite angles as equal.",
+   "clue": "Opposite angles add to a straight angle."
+  },
+  "b": {
+   "d": 3,
+   "q": "\\(ABCD\\) is a cyclic quadrilateral. Side \\(AB\\) is extended past \\(B\\) to a point \\(E\\). If \\(\\angle ADC = 84^{\\circ}\\), what is \\(\\angle CBE\\)?",
+   "opts": [
+    "\\(84^{\\circ}\\)",
+    "\\(96^{\\circ}\\)",
+    "\\(42^{\\circ}\\)",
+    "\\(180^{\\circ}\\)"
+   ],
+   "why": "The exterior angle \\(CBE\\) equals the opposite interior angle \\(ADC\\), so it is \\(84^{\\circ}\\). Choosing \\(96^{\\circ}\\) finds the interior angle \\(ABC\\) instead of the exterior one.",
+   "clue": "Which interior angle is not next to the exterior angle?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A circle with cyclic quadrilateral ABCD inscribed. Side AB is extended past B to point E. Label the exterior angle CBE and mark the opposite interior angle ADC.",
+    "why": "It shows which interior angle is opposite the exterior angle."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(112^{\\circ}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(84^{\\circ}\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Cyclic quadrilaterals",
+  "card": [
+   "A cyclic quadrilateral is a four-sided shape with all four vertices on one circle.",
+   "Opposite angles of a cyclic quadrilateral add to \\(180^{\\circ}\\). So if one angle is \\(100^{\\circ}\\), the angle opposite it is \\(80^{\\circ}\\).",
+   "An exterior angle is formed by extending one side. It equals the interior angle opposite it, the one not next to it.",
+   "Example: in cyclic quadrilateral \\(ABCD\\), \\(\\angle A = 75^{\\circ}\\) and \\(\\angle B = 110^{\\circ}\\). Then \\(\\angle C = 180^{\\circ} - 75^{\\circ} = 105^{\\circ}\\) and \\(\\angle D = 180^{\\circ} - 110^{\\circ} = 70^{\\circ}\\)."
+  ],
+  "remember": "In a cyclic quadrilateral, opposite angles are supplementary, and an exterior angle matches the opposite interior angle.",
+  "a": {
+   "q": "\\(PQRS\\) is a cyclic quadrilateral with \\(\\angle P = 68^{\\circ}\\). What is \\(\\angle R\\), the angle opposite \\(P\\)?",
+   "opts": [
+    "\\(112^{\\circ}\\)",
+    "\\(68^{\\circ}\\)",
+    "\\(22^{\\circ}\\)",
+    "\\(292^{\\circ}\\)"
+   ],
+   "why": "Opposite angles add to \\(180^{\\circ}\\), so \\(\\angle R = 180^{\\circ} - 68^{\\circ} = 112^{\\circ}\\). Choosing \\(68^{\\circ}\\) wrongly treats opposite angles as equal.",
+   "clue": "Opposite angles add to a straight angle."
+  },
+  "b": {
+   "d": 3,
+   "q": "\\(ABCD\\) is a cyclic quadrilateral. Side \\(AB\\) is extended past \\(B\\) to a point \\(E\\). If \\(\\angle ADC = 84^{\\circ}\\), what is \\(\\angle CBE\\)?",
+   "opts": [
+    "\\(84^{\\circ}\\)",
+    "\\(96^{\\circ}\\)",
+    "\\(42^{\\circ}\\)",
+    "\\(180^{\\circ}\\)"
+   ],
+   "why": "The exterior angle \\(CBE\\) equals the opposite interior angle \\(ADC\\), so it is \\(84^{\\circ}\\). Choosing \\(96^{\\circ}\\) finds the interior angle \\(ABC\\) instead of the exterior one.",
+   "clue": "Which interior angle is not next to the exterior angle?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A circle with cyclic quadrilateral ABCD inscribed. Side AB is extended past B to point E. Label the exterior angle CBE and mark the opposite interior angle ADC.",
+    "why": "It shows which interior angle is opposite the exterior angle."
+   }
+  ]
+ },
+ "cleared_by": "checker"
 }

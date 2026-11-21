@@ -8,8 +8,113 @@
    0.384
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:48Z write: done",
+  "2026-11-20T12:35:49Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.01092,
+  "check": 0.00872
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers only the first four steps at Year 11 depth and leaves out proposing action and evaluating how well it worked, so it does not teach the same full list of steps for Stage 5.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Steps of a geographical inquiry",
+  "card": [
+   "A geographical inquiry starts with a question and a plan. The question says what you want to find out. The plan says how you will find it out.",
+   "Next you collect information, then process it. Processing means turning raw information into something you can read, such as a table, graph or map.",
+   "Then you draw conclusions that answer the question, using the processed information. After that you propose action: what people could do in response to what you found.",
+   "The last step is to evaluate how well the inquiry worked. The steps follow this order, from question to evaluation."
+  ],
+  "remember": "Question and plan, collect, process, conclude, propose action, then evaluate.",
+  "a": {
+   "q": "A class has collected pedestrian counts on paper tally sheets. They now turn the counts into a column graph. Which step is this?",
+   "opts": [
+    "Processing the information",
+    "Collecting the information",
+    "Drawing conclusions",
+    "Proposing action"
+   ],
+   "why": "Turning raw counts into a graph is processing, because it makes the information easier to read. It is not collecting, which was already done when the tallies were made.",
+   "clue": "The raw counts already exist. What is being done to them?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi's class studies litter at Bondi Beach. They have a question, a plan, a set of litter counts and a graph of the counts. What should they do next?",
+   "opts": [
+    "Draw conclusions that answer the question",
+    "Collect more litter counts",
+    "Evaluate how well the inquiry worked",
+    "Propose action to reduce the litter"
+   ],
+   "why": "The counts are collected and processed, so the next step is to draw conclusions that answer the question. Proposing action comes after conclusions, because the action should respond to what the class found out.",
+   "clue": "What must be known before anyone can suggest action?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Processing the information",
+   "also_right": []
+  },
+  "b": {
+   "best": "Draw conclusions that answer the question",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Steps of a geographical inquiry",
+  "card": [
+   "A geographical inquiry starts with a question and a plan. The question says what you want to find out. The plan says how you will find it out.",
+   "Next you collect information, then process it. Processing means turning raw information into something you can read, such as a table, graph or map.",
+   "Then you draw conclusions that answer the question, using the processed information. After that you propose action: what people could do in response to what you found.",
+   "The last step is to evaluate how well the inquiry worked. The steps follow this order, from question to evaluation."
+  ],
+  "remember": "Question and plan, collect, process, conclude, propose action, then evaluate.",
+  "a": {
+   "q": "A class has collected pedestrian counts on paper tally sheets. They now turn the counts into a column graph. Which step is this?",
+   "opts": [
+    "Processing the information",
+    "Collecting the information",
+    "Drawing conclusions",
+    "Proposing action"
+   ],
+   "why": "Turning raw counts into a graph is processing, because it makes the information easier to read. It is not collecting, which was already done when the tallies were made.",
+   "clue": "The raw counts already exist. What is being done to them?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi's class studies litter at Bondi Beach. They have a question, a plan, a set of litter counts and a graph of the counts. What should they do next?",
+   "opts": [
+    "Draw conclusions that answer the question",
+    "Collect more litter counts",
+    "Evaluate how well the inquiry worked",
+    "Propose action to reduce the litter"
+   ],
+   "why": "The counts are collected and processed, so the next step is to draw conclusions that answer the question. Proposing action comes after conclusions, because the action should respond to what the class found out.",
+   "clue": "What must be known before anyone can suggest action?"
+  }
+ },
+ "cleared_by": "checker"
 }

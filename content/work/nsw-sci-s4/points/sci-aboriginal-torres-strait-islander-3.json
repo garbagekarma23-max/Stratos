@@ -8,8 +8,179 @@
    0.315
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: flagged",
+  "2026-11-20T12:53:29Z fix: suggested",
+  "2026-11-20T14:44:43Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00651,
+  "check": 0.00947,
+  "fix": 0.01954
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches how to choose a separation method from a differing property, and mentions yandying only as a passing example, while the new point is about the specific First Nations practices of grinding, sieving and soaking seeds to remove toxins, so it is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Aboriginal and Torres Strait Islander separation methods",
+  "card": [
+   "Aboriginal and Torres Strait Islander Peoples have used separation methods for tens of thousands of years. They developed them through close knowledge of Country and passed them on through generations.",
+   [
+    "Grinding and sieving",
+    "Some seeds were ground between stones to make flour. The flour could then be shaken or sifted through a woven dish or basket to separate fine flour from larger bits of husk."
+   ],
+   [
+    "Soaking and washing",
+    "Some seeds and nuts contain toxins that can make people sick. Soaking them in water or washing them with water draws out the toxins, so the food is safe to eat."
+   ],
+   "These methods separate parts of a mixture by using a difference in a property. Particle size is the property for sieving. Toxins that dissolve in water are the property for soaking and washing."
+  ],
+  "remember": "Long-used methods such as sieving and washing separate mixtures using differences in particle size or in what dissolves in water.",
+  "a": {
+   "q": "Why does soaking and washing some seeds in water make them safer to eat?",
+   "opts": [
+    "The toxins dissolve in the water and are washed away",
+    "The water makes the seeds larger so toxins fall out",
+    "The water turns the toxins into harmless flour",
+    "The water boils off the seeds and leaves toxins behind"
+   ],
+   "why": "Some toxins dissolve in water, so soaking and washing carries them out of the seeds. The water does not make the seeds larger or change the toxins into flour.",
+   "clue": "Think about what happens to a substance that dissolves in water."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ground seeds are shaken through a woven basket so that fine flour falls through and larger husk pieces stay behind. Which property is used to separate them?",
+   "opts": [
+    "Particle size",
+    "Boiling point",
+    "Colour",
+    "Ability to dissolve in water"
+   ],
+   "why": "The fine flour is small enough to pass through the gaps in the basket, and the husk pieces are too big. Dissolving in water is used in soaking and washing, but no water is used here.",
+   "clue": "What stops the husk from passing through the gaps?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The toxins dissolve in the water and are washed away",
+   "also_right": []
+  },
+  "b": {
+   "best": "Particle size",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"Toxins that dissolve in water are the property for soaking and washing\" calls the toxins a property. The property is solubility (whether a substance dissolves in water), which could confuse students about what a property is."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "first-nations",
+  "summary": "Both questions are sound and their answers match the card. One card line wrongly calls the toxins themselves the property used in soaking and washing; the property is solubility in water."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Card, wording: \"Toxins that dissolve in water are the property for soaking and washing\" calls the toxins a property. The property is solubility (whether a substance dissolves in water), which could confuse students about what a property is."
+ ],
+ "proposal": {
+  "title": "Aboriginal and Torres Strait Islander separation methods",
+  "card": [
+   "Aboriginal and Torres Strait Islander Peoples have used separation methods for tens of thousands of years. They developed them through close knowledge of Country and passed them on through generations.",
+   [
+    "Grinding and sieving",
+    "Some seeds are ground between stones to make flour. The flour can then be shaken or sifted through a woven dish or basket to separate fine flour from larger bits of husk."
+   ],
+   [
+    "Soaking and washing",
+    "Some seeds and nuts contain toxins that can make people sick. Soaking them in water or washing them with water draws out the toxins, so the food is safe to eat."
+   ],
+   "Each method uses a difference in a property. Sieving uses particle size. Soaking and washing use solubility, which is whether a substance dissolves in water: the toxins dissolve and are carried away."
+  ],
+  "remember": "Sieving separates by particle size. Soaking and washing separate by solubility, as the toxins dissolve in water.",
+  "a": {
+   "q": "Why does soaking and washing some seeds in water make them safer to eat?",
+   "opts": [
+    "The toxins dissolve in the water and are washed away",
+    "The water makes the seeds swell so the toxins fall out",
+    "The water changes the toxins into harmless flour",
+    "The water makes the toxins evaporate into the air"
+   ],
+   "why": "The toxins are soluble, so they dissolve in the water and are carried out of the seeds. The water does not make the toxins evaporate: evaporation needs heat, and soaking uses water to dissolve them.",
+   "clue": "Think about what happens to a substance that dissolves in water."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ground seeds are shaken through a woven basket so that fine flour falls through and larger husk pieces stay behind. Which property is used to separate them?",
+   "opts": [
+    "Particle size",
+    "Boiling point",
+    "Colour",
+    "Solubility in water"
+   ],
+   "why": "The fine flour is small enough to pass through the gaps in the basket, and the husk pieces are too big. Solubility is used in soaking and washing, but no water is used here.",
+   "clue": "What stops the husk from passing through the gaps?"
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Aboriginal and Torres Strait Islander separation methods",
+  "card": [
+   "Aboriginal and Torres Strait Islander Peoples have used separation methods for tens of thousands of years. They developed them through close knowledge of Country and passed them on through generations.",
+   [
+    "Grinding and sieving",
+    "Some seeds are ground between stones to make flour. The flour can then be shaken or sifted through a woven dish or basket to separate fine flour from larger bits of husk."
+   ],
+   [
+    "Soaking and washing",
+    "Some seeds and nuts contain toxins that can make people sick. Soaking them in water or washing them with water draws out the toxins, so the food is safe to eat."
+   ],
+   "Each method uses a difference in a property. Sieving uses particle size. Soaking and washing use solubility, which is whether a substance dissolves in water: the toxins dissolve and are carried away."
+  ],
+  "remember": "Sieving separates by particle size. Soaking and washing separate by solubility, as the toxins dissolve in water.",
+  "a": {
+   "q": "Why does soaking and washing some seeds in water make them safer to eat?",
+   "opts": [
+    "The toxins dissolve in the water and are washed away",
+    "The water makes the seeds swell so the toxins fall out",
+    "The water changes the toxins into harmless flour",
+    "The water makes the toxins evaporate into the air"
+   ],
+   "why": "The toxins are soluble, so they dissolve in the water and are carried out of the seeds. The water does not make the toxins evaporate: evaporation needs heat, and soaking uses water to dissolve them.",
+   "clue": "Think about what happens to a substance that dissolves in water."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ground seeds are shaken through a woven basket so that fine flour falls through and larger husk pieces stay behind. Which property is used to separate them?",
+   "opts": [
+    "Particle size",
+    "Boiling point",
+    "Colour",
+    "Solubility in water"
+   ],
+   "why": "The fine flour is small enough to pass through the gaps in the basket, and the husk pieces are too big. Solubility is used in soaking and washing, but no water is used here.",
+   "clue": "What stops the husk from passing through the gaps?"
+  }
+ },
+ "cleared_by": "owner"
 }

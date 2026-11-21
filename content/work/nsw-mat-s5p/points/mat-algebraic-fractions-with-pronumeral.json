@@ -24,8 +24,239 @@
    0.215
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: done",
+  "2026-11-20T12:35:55Z check: flagged",
+  "2026-11-20T12:44:59Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.00844,
+  "check": 0.01291,
+  "fix": 0.02561,
+  "recheck": 0.00837
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches adding, subtracting, multiplying or dividing algebraic fractions with pronumeral denominators; the closest, equations with algebraic fractions, solves equations by clearing denominators, and the numeric fraction card covers only number denominators.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Algebraic fractions with pronumerals",
+  "card": [
+   [
+    "Add and subtract",
+    "Write each fraction with the same denominator, then add or subtract the numerators. For \\(\\frac{3}{x} + \\frac{2}{5x}\\), the common denominator is \\(5x\\)."
+   ],
+   "Multiply the top and bottom of \\(\\frac{3}{x}\\) by 5 to get \\(\\frac{15}{5x}\\). Then \\(\\frac{15}{5x} + \\frac{2}{5x} = \\frac{17}{5x}\\).",
+   [
+    "Multiply",
+    "Multiply the numerators, multiply the denominators, then cancel common factors. So \\(\\frac{4}{x} \\times \\frac{x}{8} = \\frac{4x}{8x} = \\frac{1}{2}\\)."
+   ],
+   [
+    "Divide",
+    "Flip the second fraction and multiply. So \\(\\frac{3}{x} \\div \\frac{6}{5x} = \\frac{3}{x} \\times \\frac{5x}{6} = \\frac{5}{2}\\)."
+   ]
+  ],
+  "remember": "Add or subtract over a common denominator. Multiply across, and divide by flipping.",
+  "a": {
+   "q": "What is \\(\\frac{3}{x} + \\frac{2}{5x}\\) as a single fraction?",
+   "opts": [
+    "\\(\\frac{17}{5x}\\)",
+    "\\(\\frac{5}{6x}\\)",
+    "\\(\\frac{5}{5x}\\)",
+    "\\(\\frac{6}{5x}\\)"
+   ],
+   "why": "The common denominator is \\(5x\\), so \\(\\frac{3}{x}\\) becomes \\(\\frac{15}{5x}\\), and \\(15 + 2 = 17\\). Adding the numerators and denominators separately gives \\(\\frac{5}{6x}\\), which is a common mistake.",
+   "clue": "Write \\(\\frac{3}{x}\\) with denominator \\(5x\\) first."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is \\(\\frac{5}{2x} - \\frac{1}{3x}\\) as a single fraction?",
+   "opts": [
+    "\\(\\frac{13}{6x}\\)",
+    "\\(\\frac{4}{6x}\\)",
+    "\\(\\frac{3}{5x}\\)",
+    "\\(\\frac{7}{6x}\\)"
+   ],
+   "why": "The common denominator is \\(6x\\). Then \\(\\frac{5}{2x} = \\frac{15}{6x}\\) and \\(\\frac{1}{3x} = \\frac{2}{6x}\\), so the answer is \\(\\frac{15 - 2}{6x} = \\frac{13}{6x}\\). Subtracting only the numerators over the old denominators gives wrong results such as \\(\\frac{4}{6x}\\).",
+   "clue": "Find a number that both 2 and 3 divide into, and keep the \\(x\\)."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(\\frac{17}{5x}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(\\frac{13}{6x}\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "Question a is the card's worked example, word for word, with the answer \\(\\frac{17}{5x}\\) printed on the card. A student can match it from memory without applying the method. Use a different sum, such as \\(\\frac{2}{x} + \\frac{3}{4x}\\)."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says \\(\\frac{4}{6x}\\) comes from 'subtracting only the numerators over the old denominators'. But \\(\\frac{4}{6x}\\) puts \\(5 - 1\\) over the new denominator \\(6x\\), not the old ones, so the description does not match the error it names."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "All the maths is correct and both answers are uniquely right. Question a repeats the card's worked example exactly, so it tests recall rather than the method. The why for b describes the \\(\\frac{4}{6x}\\) mistake inaccurately."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, level: Question a is the card's worked example, word for word, with the answer \\(\\frac{17}{5x}\\) printed on the card. A student can match it from memory without applying the method. Use a different sum, such as \\(\\frac{2}{x} + \\frac{3}{4x}\\).",
+  "Question b, other: The why says \\(\\frac{4}{6x}\\) comes from 'subtracting only the numerators over the old denominators'. But \\(\\frac{4}{6x}\\) puts \\(5 - 1\\) over the new denominator \\(6x\\), not the old ones, so the description does not match the error it names."
+ ],
+ "proposal": {
+  "title": "Algebraic fractions with pronumerals",
+  "card": [
+   [
+    "Add and subtract",
+    "Write each fraction with the same denominator, then add or subtract the numerators. For \\(\\frac{3}{x} + \\frac{2}{5x}\\), the common denominator is \\(5x\\)."
+   ],
+   "Multiply the top and bottom of \\(\\frac{3}{x}\\) by 5 to get \\(\\frac{15}{5x}\\). Then \\(\\frac{15}{5x} + \\frac{2}{5x} = \\frac{17}{5x}\\).",
+   [
+    "Multiply",
+    "Multiply the numerators, multiply the denominators, then cancel common factors. So \\(\\frac{4}{x} \\times \\frac{x}{8} = \\frac{4x}{8x} = \\frac{1}{2}\\)."
+   ],
+   [
+    "Divide",
+    "Flip the second fraction and multiply. So \\(\\frac{3}{x} \\div \\frac{6}{5x} = \\frac{3}{x} \\times \\frac{5x}{6} = \\frac{5}{2}\\)."
+   ]
+  ],
+  "remember": "Add or subtract over a common denominator. Multiply across, and divide by flipping.",
+  "a": {
+   "q": "What is \\(\\frac{2}{x} + \\frac{3}{4x}\\) as a single fraction?",
+   "opts": [
+    "\\(\\frac{11}{4x}\\)",
+    "\\(\\frac{5}{5x}\\)",
+    "\\(\\frac{5}{4x}\\)",
+    "\\(\\frac{11}{4x^{2}}\\)"
+   ],
+   "why": "The common denominator is \\(4x\\), so \\(\\frac{2}{x}\\) becomes \\(\\frac{8}{4x}\\), and \\(8 + 3 = 11\\). Adding the numerators without first multiplying 2 by 4 gives \\(\\frac{5}{4x}\\), which is a common mistake.",
+   "clue": "Write \\(\\frac{2}{x}\\) with denominator \\(4x\\) first."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is \\(\\frac{5}{2x} - \\frac{1}{3x}\\) as a single fraction?",
+   "opts": [
+    "\\(\\frac{13}{6x}\\)",
+    "\\(\\frac{4}{6x}\\)",
+    "\\(\\frac{17}{6x}\\)",
+    "\\(\\frac{7}{6x}\\)"
+   ],
+   "why": "The common denominator is \\(6x\\). Then \\(\\frac{5}{2x} = \\frac{15}{6x}\\) and \\(\\frac{1}{3x} = \\frac{2}{6x}\\), so the answer is \\(\\frac{15 - 2}{6x} = \\frac{13}{6x}\\). Putting \\(5 - 1\\) over \\(6x\\) without changing the numerators gives \\(\\frac{4}{6x}\\), which is wrong.",
+   "clue": "Find a number that both 2 and 3 divide into, and keep the \\(x\\)."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(\\frac{11}{4x}\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(\\frac{13}{6x}\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 16,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "Question a is the card's worked example, word for word, with the answer \\(\\frac{17}{5x}\\) printed on the card. A student can match it from memory without applying the method. Use a different sum, such as \\(\\frac{2}{x} + \\frac{3}{4x}\\)."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says \\(\\frac{4}{6x}\\) comes from 'subtracting only the numerators over the old denominators'. But \\(\\frac{4}{6x}\\) puts \\(5 - 1\\) over the new denominator \\(6x\\), not the old ones, so the description does not match the error it names."
+   }
+  ],
+  "flags": [
+   "Question a, level: Question a is the card's worked example, word for word, with the answer \\(\\frac{17}{5x}\\) printed on the card. A student can match it from memory without applying the method. Use a different sum, such as \\(\\frac{2}{x} + \\frac{3}{4x}\\).",
+   "Question b, other: The why says \\(\\frac{4}{6x}\\) comes from 'subtracting only the numerators over the old denominators'. But \\(\\frac{4}{6x}\\) puts \\(5 - 1\\) over the new denominator \\(6x\\), not the old ones, so the description does not match the error it names."
+  ]
+ },
+ "final": {
+  "title": "Algebraic fractions with pronumerals",
+  "card": [
+   [
+    "Add and subtract",
+    "Write each fraction with the same denominator, then add or subtract the numerators. For \\(\\frac{3}{x} + \\frac{2}{5x}\\), the common denominator is \\(5x\\)."
+   ],
+   "Multiply the top and bottom of \\(\\frac{3}{x}\\) by 5 to get \\(\\frac{15}{5x}\\). Then \\(\\frac{15}{5x} + \\frac{2}{5x} = \\frac{17}{5x}\\).",
+   [
+    "Multiply",
+    "Multiply the numerators, multiply the denominators, then cancel common factors. So \\(\\frac{4}{x} \\times \\frac{x}{8} = \\frac{4x}{8x} = \\frac{1}{2}\\)."
+   ],
+   [
+    "Divide",
+    "Flip the second fraction and multiply. So \\(\\frac{3}{x} \\div \\frac{6}{5x} = \\frac{3}{x} \\times \\frac{5x}{6} = \\frac{5}{2}\\)."
+   ]
+  ],
+  "remember": "Add or subtract over a common denominator. Multiply across, and divide by flipping.",
+  "a": {
+   "q": "What is \\(\\frac{2}{x} + \\frac{3}{4x}\\) as a single fraction?",
+   "opts": [
+    "\\(\\frac{11}{4x}\\)",
+    "\\(\\frac{5}{5x}\\)",
+    "\\(\\frac{5}{4x}\\)",
+    "\\(\\frac{11}{4x^{2}}\\)"
+   ],
+   "why": "The common denominator is \\(4x\\), so \\(\\frac{2}{x}\\) becomes \\(\\frac{8}{4x}\\), and \\(8 + 3 = 11\\). Adding the numerators without first multiplying 2 by 4 gives \\(\\frac{5}{4x}\\), which is a common mistake.",
+   "clue": "Write \\(\\frac{2}{x}\\) with denominator \\(4x\\) first."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is \\(\\frac{5}{2x} - \\frac{1}{3x}\\) as a single fraction?",
+   "opts": [
+    "\\(\\frac{13}{6x}\\)",
+    "\\(\\frac{4}{6x}\\)",
+    "\\(\\frac{17}{6x}\\)",
+    "\\(\\frac{7}{6x}\\)"
+   ],
+   "why": "The common denominator is \\(6x\\). Then \\(\\frac{5}{2x} = \\frac{15}{6x}\\) and \\(\\frac{1}{3x} = \\frac{2}{6x}\\), so the answer is \\(\\frac{15 - 2}{6x} = \\frac{13}{6x}\\). Putting \\(5 - 1\\) over \\(6x\\) without changing the numerators gives \\(\\frac{4}{6x}\\), which is wrong.",
+   "clue": "Find a number that both 2 and 3 divide into, and keep the \\(x\\)."
+  }
+ },
+ "cleared_by": "recheck"
 }

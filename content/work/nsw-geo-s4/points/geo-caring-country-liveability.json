@@ -20,8 +20,169 @@
    0.274
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:45Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:49Z write: failed the content check, writing again",
+  "2026-11-20T12:44:55Z write: done",
+  "2026-11-20T12:53:24Z check: flagged",
+  "2026-11-20T12:59:58Z fix: suggested",
+  "2026-11-20T14:39:07Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.0138,
+  "check": 0.01091,
+  "fix": 0.02296
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches Caring for Country as a way to improve liveability; geo-connection-country covers what Country means and how connection is kept, which is related but narrower and not about liveability.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Caring for Country and liveability",
+  "card": [
+   "For Aboriginal peoples, Country means the land, waters, sky and living things of a place, and the connections between them. It includes people's responsibilities to look after it.",
+   "Caring for Country means looking after these places and keeping culture strong. It can include protecting sacred sites, caring for waterways and teaching young people about the land.",
+   "This can support the health, culture and wellbeing of Aboriginal communities. Being on Country and caring for it can help people feel connected and strong.",
+   "Knowledge of Country has been built up over a very long time. It can help make places better for everyone, for example by guiding how land and water are looked after and how parks and public spaces are planned."
+  ],
+  "remember": "Caring for Country supports Aboriginal communities, and knowledge of Country can help make places better for everyone.",
+  "a": {
+   "q": "Which of these is an example of caring for Country?",
+   "opts": [
+    "Elders teaching young people to look after a river",
+    "A council building a new car park on a wetland",
+    "A company selling land by the coast to buyers",
+    "A school planting trees only for shade in summer"
+   ],
+   "why": "Caring for Country means looking after land and waters and passing on cultural knowledge. Elders teaching young people to look after a river does both. Planting trees may help a place, but it is not described here as looking after Country and keeping culture strong.",
+   "clue": "Look for looking after land or water and passing on knowledge."
+  },
+  "b": {
+   "d": 3,
+   "q": "A council near a creek asks local Aboriginal people how the creek has been cared for over time. It uses this knowledge to plan a new park beside the creek. What does this show?",
+   "opts": [
+    "Knowledge of Country can make places better for everyone",
+    "Only Aboriginal people can use the park the council plans",
+    "Caring for Country only matters within Aboriginal groups",
+    "The council must follow the advice of one group on all plans"
+   ],
+   "why": "The council uses knowledge of Country to plan a park that people across the area can enjoy. The tempting option about only Aboriginal groups is wrong because the card says this knowledge can also help everyone.",
+   "clue": "Who gets to enjoy the new park?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Elders teaching young people to look after a river",
+   "also_right": []
+  },
+  "b": {
+   "best": "Knowledge of Country can make places better for everyone",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option repeats the remember line almost word for word and is the only option without an absolute word. The three wrong options all use 'only' or 'must', so a student can pick the answer without knowing the idea."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The distractor 'A school planting trees only for shade in summer' uses 'only' to make it wrong, which flags it as a distractor rather than testing understanding."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "first-nations",
+  "summary": "The card is accurate and both intended answers are correct. In question b the right option copies the remember line and the distractors all use 'only' or 'must', so the answer is easy to guess. Question a's tree-planting distractor also leans on 'only'."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Question b, wording: The right option repeats the remember line almost word for word and is the only option without an absolute word. The three wrong options all use 'only' or 'must', so a student can pick the answer without knowing the idea.",
+  "Question a, wording: The distractor 'A school planting trees only for shade in summer' uses 'only' to make it wrong, which flags it as a distractor rather than testing understanding."
+ ],
+ "proposal": {
+  "title": "Caring for Country and liveability",
+  "card": [
+   "For Aboriginal peoples, Country means the land, waters, sky and living things of a place, and the connections between them. It includes people's responsibilities to look after it.",
+   "Caring for Country means looking after these places and keeping culture strong. It can include protecting sacred sites, caring for waterways and teaching young people about the land.",
+   "This can support the health, culture and wellbeing of Aboriginal communities. Being on Country and caring for it can help people feel connected and strong.",
+   "Knowledge of Country has been built up over a very long time. It can help make places better for everyone, for example by guiding how land and water are looked after and how parks and public spaces are planned."
+  ],
+  "remember": "Caring for Country supports Aboriginal communities, and knowledge of Country can help make places better for everyone.",
+  "a": {
+   "q": "Which of these is an example of caring for Country?",
+   "opts": [
+    "Elders teaching young people to look after a river",
+    "A council building a new car park on a wetland",
+    "A company selling land by the coast to buyers",
+    "Visitors climbing over the rocks at a sacred site"
+   ],
+   "why": "Caring for Country means looking after land and waters and passing on cultural knowledge. Elders teaching young people to look after a river does both. Climbing over a sacred site takes place on Country, but it does not protect the site, and protecting sacred sites is part of caring for Country.",
+   "clue": "Look for looking after land or water and passing on knowledge."
+  },
+  "b": {
+   "d": 3,
+   "q": "A council near a creek asks local Aboriginal people how the creek has been cared for over time. It uses this knowledge to plan a new park beside the creek. What does this show?",
+   "opts": [
+    "Knowledge of Country can guide plans that help all locals",
+    "The council is handing control of the park to Elders",
+    "The creek will be returned to how it was before 1788",
+    "Caring for Country means keeping people away from creeks"
+   ],
+   "why": "The council uses knowledge of Country to plan a park that people across the area can use, so the knowledge helps the whole community. The option about Elders taking control is tempting, but the council only asked for advice and still made the plan itself.",
+   "clue": "Who will be able to use the new park?"
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Caring for Country and liveability",
+  "card": [
+   "For Aboriginal peoples, Country means the land, waters, sky and living things of a place, and the connections between them. It includes people's responsibilities to look after it.",
+   "Caring for Country means looking after these places and keeping culture strong. It can include protecting sacred sites, caring for waterways and teaching young people about the land.",
+   "This can support the health, culture and wellbeing of Aboriginal communities. Being on Country and caring for it can help people feel connected and strong.",
+   "Knowledge of Country has been built up over a very long time. It can help make places better for everyone, for example by guiding how land and water are looked after and how parks and public spaces are planned."
+  ],
+  "remember": "Caring for Country supports Aboriginal communities, and knowledge of Country can help make places better for everyone.",
+  "a": {
+   "q": "Which of these is an example of caring for Country?",
+   "opts": [
+    "Elders teaching young people to look after a river",
+    "A council building a new car park on a wetland",
+    "A company selling land by the coast to buyers",
+    "Visitors climbing over the rocks at a sacred site"
+   ],
+   "why": "Caring for Country means looking after land and waters and passing on cultural knowledge. Elders teaching young people to look after a river does both. Climbing over a sacred site takes place on Country, but it does not protect the site, and protecting sacred sites is part of caring for Country.",
+   "clue": "Look for looking after land or water and passing on knowledge."
+  },
+  "b": {
+   "d": 3,
+   "q": "A council near a creek asks local Aboriginal people how the creek has been cared for over time. It uses this knowledge to plan a new park beside the creek. What does this show?",
+   "opts": [
+    "Knowledge of Country can guide plans that help all locals",
+    "The council is handing control of the park to Elders",
+    "The creek will be returned to how it was before 1788",
+    "Caring for Country means keeping people away from creeks"
+   ],
+   "why": "The council uses knowledge of Country to plan a park that people across the area can use, so the knowledge helps the whole community. The option about Elders taking control is tempting, but the council only asked for advice and still made the plan itself.",
+   "clue": "Who will be able to use the new park?"
+  }
+ },
+ "cleared_by": "owner"
 }

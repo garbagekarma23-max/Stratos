@@ -3,8 +3,413 @@
  "title": "Threats to coastal environments",
  "brief": "41723c695511",
  "shortlist": [],
- "stage": "write",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, write"
- ]
+  "2026-11-12T12:22:35Z new, write",
+  "2026-11-20T12:15:16Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:25:48Z write: failed the content check, writing again",
+  "2026-11-20T12:35:50Z write: done",
+  "2026-11-20T12:44:55Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (remember other, a other, b other)",
+  "2026-11-20T13:44:56Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.01458,
+  "check": 0.01372,
+  "fix": 0.02063,
+  "recheck": 0.01553
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Remember, other: The remember line says building, storms and rising seas 'can add to each other', but the card presents each threat separately and never says they combine. It also sorts threats neatly into 'people' and 'nature', which the card only implies.\n- Question a, other: The clue 'Think about what plant roots do to loose sand' names roots, and the right option is the only one that mentions roots, so the clue gives the answer away.\n- Question b, other: The clue 'Ask what the beach needs room to do' echoes the word 'room', which appears only in the right option, so the clue gives the answer away.",
+ "rejected": {
+  "title": "Threats to coastal environments",
+  "card": [
+   "Coasts are always changing, but people can speed up the change or make its effects worse. A threat is anything that damages a coastal environment or puts it at risk.",
+   [
+    "Building and dunes",
+    "Houses, roads and car parks built close to the shore leave beaches no room to move. Walking across dunes and clearing dune plants removes the roots that hold sand in place, so wind and waves can wear the dunes away."
+   ],
+   [
+    "Sea level and storms",
+    "Rising sea levels put the water line higher up the shore, so waves reach further inland. Storm waves can strip sand from a beach in a few hours and cut into dunes and cliffs."
+   ],
+   [
+    "Pollution",
+    "Litter, oil and runoff from streets and farms wash into coastal waters. This can harm marine life, such as fish and seabirds, and make beaches unsafe for swimming."
+   ]
+  ],
+  "remember": "Threats to coasts come from people and from nature, and building, storms and rising seas can add to each other.",
+  "a": {
+   "q": "A council lets people walk across a dune, and the dune plants die. Why does this threaten the beach?",
+   "opts": [
+    "Without roots to hold it, wind and waves can move the sand",
+    "Plant leaves make the sea level rise on that beach",
+    "Dead plants make storm waves form further out at sea",
+    "Dead plants make the water too polluted to swim in"
+   ],
+   "why": "Dune plant roots bind the sand together. Without them, wind and waves can carry the sand away. Pollution is a different threat, and it is not the result of plants dying.",
+   "clue": "Think about what plant roots do to loose sand."
+  },
+  "b": {
+   "d": 3,
+   "q": "Houses are built right behind the dunes at a beach in Port Macquarie. A severe storm then strikes. Why are these houses at greater risk?",
+   "opts": [
+    "The beach has no room to move back, so waves reach them",
+    "The storm waves are larger because houses are near the shore",
+    "The houses cause the sea level to rise around them",
+    "The houses make the sand wash in from the open sea"
+   ],
+   "why": "Building close to the shore leaves a beach with no space to move, and storm waves can cut into the dunes and reach the houses. The houses do not make waves larger or raise the sea level. They only put people and property in the way of the waves.",
+   "clue": "Ask what the beach needs room to do."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Remember, other: The remember line says building, storms and rising seas 'can add to each other', but the card presents each threat separately and never says they combine. It also sorts threats neatly into 'people' and 'nature', which the card only implies.",
+    "Question a, other: The clue 'Think about what plant roots do to loose sand' names roots, and the right option is the only one that mentions roots, so the clue gives the answer away.",
+    "Question b, other: The clue 'Ask what the beach needs room to do' echoes the word 'room', which appears only in the right option, so the clue gives the answer away."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Threats to coastal environments",
+     "card": [
+      "Coasts are always changing, but people can speed up the change or make its effects worse. A threat is anything that damages a coastal environment or puts it at risk.",
+      [
+       "Building and dunes",
+       "Houses, roads and car parks built close to the shore leave beaches no room to move. Walking across dunes and clearing dune plants removes the roots that hold sand in place, so wind and waves can wear the dunes away."
+      ],
+      [
+       "Sea level and storms",
+       "Rising sea levels put the water line higher up the shore, so waves reach further inland. Storm waves can strip sand from a beach in a few hours and cut into dunes and cliffs."
+      ],
+      [
+       "Pollution",
+       "Litter, oil and runoff from streets and farms wash into coastal waters. This can harm marine life, such as fish and seabirds, and make beaches unsafe for swimming."
+      ]
+     ],
+     "remember": "Threats to coasts come from people and from nature, and building, storms and rising seas can add to each other.",
+     "a": {
+      "q": "A council lets people walk across a dune, and the dune plants die. Why does this threaten the beach?",
+      "opts": [
+       "Plant roots hold the sand, so wind and waves can remove it",
+       "Plant leaves make the sea level rise on that beach",
+       "Dead plants make storm waves form further out at sea",
+       "Dead plants make the water too polluted to swim in"
+      ],
+      "why": "Dune plant roots bind the sand together. Without them, wind and waves can carry the sand away. Pollution is a different threat, and it is not the result of plants dying.",
+      "clue": "Think about what plant roots do to loose sand."
+     },
+     "b": {
+      "d": 3,
+      "q": "Houses are built right behind the dunes at a beach in Port Macquarie. A severe storm then strikes. Why are these houses at greater risk?",
+      "opts": [
+       "The beach has no room to move back, so waves reach them",
+       "The storm waves are larger because houses are near the shore",
+       "The houses cause the sea level to rise around them",
+       "The houses make the sand wash in from the open sea"
+      ],
+      "why": "Building close to the shore leaves a beach with no space to move, and storm waves can cut into the dunes and reach the houses. The houses do not make waves larger or raise the sea level. They only put people and property in the way of the waves.",
+      "clue": "Ask what the beach needs room to do."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Plant roots hold the sand, so wind and waves can remove it",
+      "also_right": []
+     },
+     "b": {
+      "best": "The beach has no room to move back, so waves reach them",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The right option reads 'Plant roots hold the sand, so wind and waves can remove it', which as written says the roots holding the sand is why it can be removed. It leaves out the key step, for example 'Plant roots hold the sand, so without them wind and waves can remove it'."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts check out and each question has one clear answer. The right option in question a is worded illogically: it says roots hold the sand 'so' wind can remove it, and should add 'without them'."
+    },
+    "flags": [
+     "Question a, wording: The right option reads 'Plant roots hold the sand, so wind and waves can remove it', which as written says the roots holding the sand is why it can be removed. It leaves out the key step, for example 'Plant roots hold the sand, so without them wind and waves can remove it'."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Threats to coastal environments",
+     "card": [
+      "Coasts are always changing, but people can speed up the change or make its effects worse. A threat is anything that damages a coastal environment or puts it at risk.",
+      [
+       "Building and dunes",
+       "Houses, roads and car parks built close to the shore leave beaches no room to move. Walking across dunes and clearing dune plants removes the roots that hold sand in place, so wind and waves can wear the dunes away."
+      ],
+      [
+       "Sea level and storms",
+       "Rising sea levels put the water line higher up the shore, so waves reach further inland. Storm waves can strip sand from a beach in a few hours and cut into dunes and cliffs."
+      ],
+      [
+       "Pollution",
+       "Litter, oil and runoff from streets and farms wash into coastal waters. This can harm marine life, such as fish and seabirds, and make beaches unsafe for swimming."
+      ]
+     ],
+     "remember": "Threats to coasts come from people and from nature, and building, storms and rising seas can add to each other.",
+     "a": {
+      "q": "A council lets people walk across a dune, and the dune plants die. Why does this threaten the beach?",
+      "opts": [
+       "Without roots to hold it, wind and waves can move the sand",
+       "Plant leaves make the sea level rise on that beach",
+       "Dead plants make storm waves form further out at sea",
+       "Dead plants make the water too polluted to swim in"
+      ],
+      "why": "Dune plant roots bind the sand together. Without them, wind and waves can carry the sand away. Pollution is a different threat, and it is not the result of plants dying.",
+      "clue": "Think about what plant roots do to loose sand."
+     },
+     "b": {
+      "d": 3,
+      "q": "Houses are built right behind the dunes at a beach in Port Macquarie. A severe storm then strikes. Why are these houses at greater risk?",
+      "opts": [
+       "The beach has no room to move back, so waves reach them",
+       "The storm waves are larger because houses are near the shore",
+       "The houses cause the sea level to rise around them",
+       "The houses make the sand wash in from the open sea"
+      ],
+      "why": "Building close to the shore leaves a beach with no space to move, and storm waves can cut into the dunes and reach the houses. The houses do not make waves larger or raise the sea level. They only put people and property in the way of the waves.",
+      "clue": "Ask what the beach needs room to do."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Without roots to hold it, wind and waves can move the sand",
+       "also_right": []
+      },
+      "b": {
+       "best": "The beach has no room to move back, so waves reach them",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "remember",
+        "kind": "other",
+        "detail": "The remember line says building, storms and rising seas 'can add to each other', but the card presents each threat separately and never says they combine. It also sorts threats neatly into 'people' and 'nature', which the card only implies."
+       },
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The clue 'Think about what plant roots do to loose sand' names roots, and the right option is the only one that mentions roots, so the clue gives the answer away."
+       },
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "The clue 'Ask what the beach needs room to do' echoes the word 'room', which appears only in the right option, so the clue gives the answer away."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts and answers are sound. Both clues repeat a key word found only in the right option, and the remember line claims the threats 'add to each other', which the card does not teach."
+     },
+     "flags": [
+      "Remember, other: The remember line says building, storms and rising seas 'can add to each other', but the card presents each threat separately and never says they combine. It also sorts threats neatly into 'people' and 'nature', which the card only implies.",
+      "Question a, other: The clue 'Think about what plant roots do to loose sand' names roots, and the right option is the only one that mentions roots, so the clue gives the answer away.",
+      "Question b, other: The clue 'Ask what the beach needs room to do' echoes the word 'room', which appears only in the right option, so the clue gives the answer away."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:56Z",
+   "step": "write",
+   "version": {
+    "title": "Threats to coastal environments",
+    "card": [
+     "Coasts are always changing, but people can speed up the change or make its effects worse. A threat is anything that damages a coastal environment or puts it at risk.",
+     [
+      "Building and dunes",
+      "Houses, roads and car parks built close to the shore leave beaches no room to move. Walking across dunes and clearing dune plants removes the roots that hold sand in place, so wind and waves can wear the dunes away."
+     ],
+     [
+      "Sea level and storms",
+      "Rising sea levels put the water line higher up the shore, so waves reach further inland. Storm waves can strip sand from a beach in a few hours and cut into dunes and cliffs."
+     ],
+     [
+      "Pollution",
+      "Litter, oil and runoff from streets and farms wash into coastal waters. This can harm marine life, such as fish and seabirds, and make beaches unsafe for swimming."
+     ]
+    ],
+    "remember": "Building near the shore, lost dune plants, rising seas, storms and pollution can each damage a coast or put it at risk.",
+    "a": {
+     "q": "A council lets people walk across a dune, and the dune plants die. Why does this threaten the beach?",
+     "opts": [
+      "Without roots to hold it, wind and waves can move the sand",
+      "Losing the plants makes the sea level rise on that beach",
+      "Dead plants make bigger storm waves form further out at sea",
+      "Dead plants rot and make the water too polluted to swim in"
+     ],
+     "why": "Dune plant roots bind the sand together. Without them, wind and waves can carry the sand away. Pollution is a different threat, and it is not the result of plants dying.",
+     "clue": "What were the plants doing for the dune while they were alive?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Houses are built right behind the dunes at a beach in Port Macquarie. A severe storm then strikes. Why are these houses at greater risk?",
+     "opts": [
+      "The beach has no room to move back, so waves reach them",
+      "The storm waves are larger because houses are near the shore",
+      "The houses cause the sea level to rise around them",
+      "The houses make the sand wash in from the open sea"
+     ],
+     "why": "Building close to the shore leaves a beach with no space to move, and storm waves can cut into the dunes and reach the houses. The houses do not make waves larger or raise the sea level. They put people and property in the way of the waves.",
+     "clue": "Think about what a storm does to the dunes in front of the houses."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Without roots to hold it, wind and waves can move the sand",
+     "also_right": []
+    },
+    "b": {
+     "best": "The beach has no room to move back, so waves reach them",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Threats to coastal environments",
+  "card": [
+   "Coasts are always changing, but people can speed up the change or make its effects worse. A threat is anything that damages a coastal environment or puts it at risk.",
+   [
+    "Building and dunes",
+    "Houses, roads and car parks built close to the shore leave beaches no room to move. Walking across dunes and clearing dune plants removes the roots that hold sand in place, so wind and waves can wear the dunes away."
+   ],
+   [
+    "Sea level and storms",
+    "Rising sea levels put the water line higher up the shore, so waves reach further inland. Storm waves can strip sand from a beach in a few hours and cut into dunes and cliffs."
+   ],
+   [
+    "Pollution",
+    "Litter, oil and runoff from streets and farms wash into coastal waters. This can harm marine life, such as fish and seabirds, and make beaches unsafe for swimming."
+   ]
+  ],
+  "remember": "Building near the shore, lost dune plants, rising seas, storms and pollution can each damage a coast or put it at risk.",
+  "a": {
+   "q": "A council lets people walk across a dune, and the dune plants die. Why does this threaten the beach?",
+   "opts": [
+    "Without roots to hold it, wind and waves can move the sand",
+    "Losing the plants makes the sea level rise on that beach",
+    "Dead plants make bigger storm waves form further out at sea",
+    "Dead plants rot and make the water too polluted to swim in"
+   ],
+   "why": "Dune plant roots bind the sand together. Without them, wind and waves can carry the sand away. Pollution is a different threat, and it is not the result of plants dying.",
+   "clue": "What were the plants doing for the dune while they were alive?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Houses are built right behind the dunes at a beach in Port Macquarie. A severe storm then strikes. Why are these houses at greater risk?",
+   "opts": [
+    "The beach has no room to move back, so waves reach them",
+    "The storm waves are larger because houses are near the shore",
+    "The houses cause the sea level to rise around them",
+    "The houses make the sand wash in from the open sea"
+   ],
+   "why": "Building close to the shore leaves a beach with no space to move, and storm waves can cut into the dunes and reach the houses. The houses do not make waves larger or raise the sea level. They put people and property in the way of the waves.",
+   "clue": "Think about what a storm does to the dunes in front of the houses."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Without roots to hold it, wind and waves can move the sand",
+   "also_right": []
+  },
+  "b": {
+   "best": "The beach has no room to move back, so waves reach them",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Threats to coastal environments",
+  "card": [
+   "Coasts are always changing, but people can speed up the change or make its effects worse. A threat is anything that damages a coastal environment or puts it at risk.",
+   [
+    "Building and dunes",
+    "Houses, roads and car parks built close to the shore leave beaches no room to move. Walking across dunes and clearing dune plants removes the roots that hold sand in place, so wind and waves can wear the dunes away."
+   ],
+   [
+    "Sea level and storms",
+    "Rising sea levels put the water line higher up the shore, so waves reach further inland. Storm waves can strip sand from a beach in a few hours and cut into dunes and cliffs."
+   ],
+   [
+    "Pollution",
+    "Litter, oil and runoff from streets and farms wash into coastal waters. This can harm marine life, such as fish and seabirds, and make beaches unsafe for swimming."
+   ]
+  ],
+  "remember": "Building near the shore, lost dune plants, rising seas, storms and pollution can each damage a coast or put it at risk.",
+  "a": {
+   "q": "A council lets people walk across a dune, and the dune plants die. Why does this threaten the beach?",
+   "opts": [
+    "Without roots to hold it, wind and waves can move the sand",
+    "Losing the plants makes the sea level rise on that beach",
+    "Dead plants make bigger storm waves form further out at sea",
+    "Dead plants rot and make the water too polluted to swim in"
+   ],
+   "why": "Dune plant roots bind the sand together. Without them, wind and waves can carry the sand away. Pollution is a different threat, and it is not the result of plants dying.",
+   "clue": "What were the plants doing for the dune while they were alive?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Houses are built right behind the dunes at a beach in Port Macquarie. A severe storm then strikes. Why are these houses at greater risk?",
+   "opts": [
+    "The beach has no room to move back, so waves reach them",
+    "The storm waves are larger because houses are near the shore",
+    "The houses cause the sea level to rise around them",
+    "The houses make the sand wash in from the open sea"
+   ],
+   "why": "Building close to the shore leaves a beach with no space to move, and storm waves can cut into the dunes and reach the houses. The houses do not make waves larger or raise the sea level. They put people and property in the way of the waves.",
+   "clue": "Think about what a storm does to the dunes in front of the houses."
+  }
+ },
+ "checked_by": "claude-code"
 }

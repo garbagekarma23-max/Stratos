@@ -24,8 +24,115 @@
    0.455
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.00618,
+  "check": 0.00797
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, ecb-governments-collect-tax, covers why tax is paid for shared services but not that income tax rises with income, and the other matches only cover part of the brief at different depths, so a new point is the safer fit.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Why we pay tax",
+  "card": [
+   "A tax is money that people and businesses must pay to the government. Governments in Australia collect taxes at the federal, state and local levels.",
+   "Tax pays for public services that many people use, such as schools, hospitals, roads and welfare payments. Welfare payments support people who cannot fully support themselves, for example some people who are unemployed or retired.",
+   "Income tax is a tax on the money a person earns. In Australia, income tax rises with income: people who earn more pay a higher share of their income in tax.",
+   "This means tax is shared out by ability to pay. A person on a high income pays more tax than a person on a low income, and both can use the same public services."
+  ],
+  "remember": "Tax pays for public services, and income tax takes a higher share from people who earn more.",
+  "a": {
+   "q": "What is the main reason governments collect taxes?",
+   "opts": [
+    "To pay for public services such as schools and roads",
+    "To pay every worker the same amount of wages",
+    "To stop people from earning more money",
+    "To pay for goods that only taxpayers can use"
+   ],
+   "why": "Taxes give the government money to provide public services such as schools, hospitals, roads and welfare. Tax is not aimed at stopping people earning more, and public services are not limited to those who pay tax.",
+   "clue": "Think about what the government spends tax money on."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya earns $120 000 a year and Tom earns $40 000. Which statement about their income tax is correct?",
+   "opts": [
+    "Priya pays a higher share of her income in tax than Tom",
+    "Priya and Tom pay the same share of their income in tax",
+    "Tom pays a higher share of his income in tax than Priya",
+    "Only Tom can use public services such as hospitals"
+   ],
+   "why": "Income tax rises with income, so Priya, who earns more, pays a higher share of her income in tax. The tempting wrong answer is that they pay the same share, but a higher income means a higher share. Both can use public services.",
+   "clue": "Income tax rises as income rises."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "To pay for public services such as schools and roads",
+   "also_right": []
+  },
+  "b": {
+   "best": "Priya pays a higher share of her income in tax than Tom",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Why we pay tax",
+  "card": [
+   "A tax is money that people and businesses must pay to the government. Governments in Australia collect taxes at the federal, state and local levels.",
+   "Tax pays for public services that many people use, such as schools, hospitals, roads and welfare payments. Welfare payments support people who cannot fully support themselves, for example some people who are unemployed or retired.",
+   "Income tax is a tax on the money a person earns. In Australia, income tax rises with income: people who earn more pay a higher share of their income in tax.",
+   "This means tax is shared out by ability to pay. A person on a high income pays more tax than a person on a low income, and both can use the same public services."
+  ],
+  "remember": "Tax pays for public services, and income tax takes a higher share from people who earn more.",
+  "a": {
+   "q": "What is the main reason governments collect taxes?",
+   "opts": [
+    "To pay for public services such as schools and roads",
+    "To pay every worker the same amount of wages",
+    "To stop people from earning more money",
+    "To pay for goods that only taxpayers can use"
+   ],
+   "why": "Taxes give the government money to provide public services such as schools, hospitals, roads and welfare. Tax is not aimed at stopping people earning more, and public services are not limited to those who pay tax.",
+   "clue": "Think about what the government spends tax money on."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya earns $120 000 a year and Tom earns $40 000. Which statement about their income tax is correct?",
+   "opts": [
+    "Priya pays a higher share of her income in tax than Tom",
+    "Priya and Tom pay the same share of their income in tax",
+    "Tom pays a higher share of his income in tax than Priya",
+    "Only Tom can use public services such as hospitals"
+   ],
+   "why": "Income tax rises with income, so Priya, who earns more, pays a higher share of her income in tax. The tempting wrong answer is that they pay the same share, but a higher income means a higher share. Both can use public services.",
+   "clue": "Income tax rises as income rises."
+  }
+ },
+ "cleared_by": "checker"
 }

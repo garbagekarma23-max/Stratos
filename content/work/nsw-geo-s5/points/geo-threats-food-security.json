@@ -24,8 +24,396 @@
    0.209
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: done",
+  "2026-11-20T12:44:55Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (b level)",
+  "2026-11-20T13:44:56Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.00607,
+  "check": 0.0108,
+  "fix": 0.02261,
+  "recheck": 0.0127
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point covers a broad list of threats to food security (poverty, conflict, drought, climate change, land degradation, food waste and rising prices), and no bank point covers that full set; the closest ones, such as the food security meaning card, the pressures on future supply card and the land degradation card, each cover only part of it.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, level: The wrong options are weak and easy to rule out (food waste is not mentioned, and 'prices decide supply' does not make sense). A student can pick the right answer without understanding how threats combine.",
+ "rejected": {
+  "title": "Threats to food security",
+  "card": [
+   "Food security needs enough food to be available and people to be able to get it. A threat is anything that reduces the supply of food or stops people from getting it.",
+   [
+    "Supply threats",
+    "Drought, climate change and land degradation can cut how much food farms produce. Land degradation is the loss of soil quality, so land grows less. Food waste means food that is grown but never eaten."
+   ],
+   [
+    "Access threats",
+    "Poverty can leave people unable to afford food. Rising prices make food cost more. Conflict can destroy farms and block food from reaching people."
+   ],
+   "Threats often act together. For example, a drought can cut harvests, which can push prices up, and poor families are hit first."
+  ],
+  "remember": "Threats can cut the supply of food or stop people getting it, and they often act together.",
+  "a": {
+   "q": "Supermarkets near Mai's home in Wollongong are well stocked, and food prices have not changed. Since her parent lost a job, her family cannot buy enough food. Which threat explains this?",
+   "opts": [
+    "Poverty, as the family can no longer afford food",
+    "Rising prices, as food now costs the family more",
+    "Drought, as nearby farms are growing less food",
+    "Land degradation, as the soil now grows less food"
+   ],
+   "why": "The shops have plenty of food and prices are the same, so the problem is access: the family has less money to buy food. Rising prices is tempting, but the case says prices have not changed. Drought and land degradation cut supply, and supply here is fine.",
+   "clue": "Is the problem the food in the shops, or the family's money?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A region in East Africa has a long drought, and then fighting breaks out. Farms are abandoned and food prices climb. Which statement best describes what is happening?",
+   "opts": [
+    "Several threats are acting together to reduce food security",
+    "Only drought is a threat, as conflict does not affect food",
+    "Food security is unaffected, as prices decide supply",
+    "The region has a food waste problem, not a supply problem"
+   ],
+   "why": "Drought can cut harvests and conflict can stop farming and block food, while higher prices make food harder to afford. These threats act together. Food waste is a different threat and is not described in the case.",
+   "clue": "Count how many threats the scenario describes."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, level: The wrong options are weak and easy to rule out (food waste is not mentioned, and 'prices decide supply' does not make sense). A student can pick the right answer without understanding how threats combine."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Threats to food security",
+     "card": [
+      "Food security needs enough food to be available and people to be able to get it. A threat is anything that reduces the supply of food or stops people from getting it.",
+      [
+       "Supply threats",
+       "Drought, climate change and land degradation can cut how much food farms produce. Land degradation is the loss of soil quality, so land grows less. Food waste means food that is grown but never eaten."
+      ],
+      [
+       "Access threats",
+       "Poverty can leave people unable to afford food. Rising prices make food cost more. Conflict can destroy farms and block food from reaching people."
+      ],
+      "Threats often act together. For example, a drought can cut harvests, which can push prices up, and poor families are hit first."
+     ],
+     "remember": "Threats can cut the supply of food or stop people getting it, and they often act together.",
+     "a": {
+      "q": "Which of these is a threat to food security because it makes food harder to afford?",
+      "opts": [
+       "Rising food prices",
+       "Crop rotation on farms",
+       "A good wheat harvest",
+       "Efficient irrigation"
+      ],
+      "why": "Rising prices make food cost more, so poorer people may not be able to buy enough. The other options help produce food or describe plentiful supply, so they do not make food harder to afford.",
+      "clue": "Which option makes food cost more?"
+     },
+     "b": {
+      "d": 3,
+      "q": "A region in East Africa has a long drought, and then fighting breaks out. Farms are abandoned and food prices climb. Which statement best describes what is happening?",
+      "opts": [
+       "Several threats are acting together to reduce food security",
+       "Only drought is a threat, as conflict does not affect food",
+       "Food security is unaffected, as prices decide supply",
+       "The region has a food waste problem, not a supply problem"
+      ],
+      "why": "Drought can cut harvests and conflict can stop farming and block food, while higher prices make food harder to afford. These threats act together. Food waste is a different threat and is not described in the case.",
+      "clue": "Count how many threats the scenario describes."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Rising food prices",
+      "also_right": []
+     },
+     "b": {
+      "best": "Several threats are acting together to reduce food security",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The clue ('Which option makes food cost more?') repeats the card's line 'Rising prices make food cost more', so it hands students the answer."
+      },
+      {
+       "part": "a",
+       "kind": "level",
+       "detail": "The three wrong options (crop rotation, a good harvest, efficient irrigation) are plainly not threats, so a student can pick the answer without knowing why prices affect access. This is too easy for Years 9 and 10."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and answers are accurate. In question a, the clue repeats the card's wording and the wrong options are obviously not threats, so the question is too easy and the clue gives the answer away."
+    },
+    "flags": [
+     "Question a, wording: The clue ('Which option makes food cost more?') repeats the card's line 'Rising prices make food cost more', so it hands students the answer.",
+     "Question a, level: The three wrong options (crop rotation, a good harvest, efficient irrigation) are plainly not threats, so a student can pick the answer without knowing why prices affect access. This is too easy for Years 9 and 10."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Threats to food security",
+     "card": [
+      "Food security needs enough food to be available and people to be able to get it. A threat is anything that reduces the supply of food or stops people from getting it.",
+      [
+       "Supply threats",
+       "Drought, climate change and land degradation can cut how much food farms produce. Land degradation is the loss of soil quality, so land grows less. Food waste means food that is grown but never eaten."
+      ],
+      [
+       "Access threats",
+       "Poverty can leave people unable to afford food. Rising prices make food cost more. Conflict can destroy farms and block food from reaching people."
+      ],
+      "Threats often act together. For example, a drought can cut harvests, which can push prices up, and poor families are hit first."
+     ],
+     "remember": "Threats can cut the supply of food or stop people getting it, and they often act together.",
+     "a": {
+      "q": "Supermarkets near Mai's home in Wollongong are well stocked, and food prices have not changed. Since her parent lost a job, her family cannot buy enough food. Which threat explains this?",
+      "opts": [
+       "Poverty, as the family can no longer afford food",
+       "Rising prices, as food now costs the family more",
+       "Drought, as nearby farms are growing less food",
+       "Land degradation, as the soil now grows less food"
+      ],
+      "why": "The shops have plenty of food and prices are the same, so the problem is access: the family has less money to buy food. Rising prices is tempting, but the case says prices have not changed. Drought and land degradation cut supply, and supply here is fine.",
+      "clue": "Is the problem the food in the shops, or the family's money?"
+     },
+     "b": {
+      "d": 3,
+      "q": "A region in East Africa has a long drought, and then fighting breaks out. Farms are abandoned and food prices climb. Which statement best describes what is happening?",
+      "opts": [
+       "Several threats are acting together to reduce food security",
+       "Only drought is a threat, as conflict does not affect food",
+       "Food security is unaffected, as prices decide supply",
+       "The region has a food waste problem, not a supply problem"
+      ],
+      "why": "Drought can cut harvests and conflict can stop farming and block food, while higher prices make food harder to afford. These threats act together. Food waste is a different threat and is not described in the case.",
+      "clue": "Count how many threats the scenario describes."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Poverty, as the family can no longer afford food",
+       "also_right": []
+      },
+      "b": {
+       "best": "Several threats are acting together to reduce food security",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "level",
+        "detail": "The wrong options are weak and easy to rule out (food waste is not mentioned, and 'prices decide supply' does not make sense). A student can pick the right answer without understanding how threats combine."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card, the remember line and question a are accurate and match the explanations. Question b is right but easy, because its wrong options are not believable."
+     },
+     "flags": [
+      "Question b, level: The wrong options are weak and easy to rule out (food waste is not mentioned, and 'prices decide supply' does not make sense). A student can pick the right answer without understanding how threats combine."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:56Z",
+   "step": "write",
+   "version": {
+    "title": "Threats to food security",
+    "card": [
+     "Food security needs enough food to be available and people to be able to get it. A threat is anything that reduces the supply of food or stops people from getting it.",
+     [
+      "Supply threats",
+      "Drought, climate change and land degradation can cut how much food farms produce. Land degradation is the loss of soil quality, so land grows less. Food waste means food that is grown but never eaten."
+     ],
+     [
+      "Access threats",
+      "Poverty can leave people unable to afford food. Rising prices make food cost more. Conflict can destroy farms and block food from reaching people."
+     ],
+     "Threats often act together. For example, a drought can cut harvests, which can push prices up, and poor families are hit first."
+    ],
+    "remember": "Threats can cut the supply of food or stop people getting it, and they often act together.",
+    "a": {
+     "q": "Supermarkets near Mai's home in Wollongong are well stocked, and food prices have not changed. Since her parent lost a job, her family cannot buy enough food. Which threat explains this?",
+     "opts": [
+      "Poverty, as the family can no longer afford food",
+      "Rising prices, as food now costs the family more",
+      "Drought, as nearby farms are growing less food",
+      "Land degradation, as the soil now grows less food"
+     ],
+     "why": "The shops have plenty of food and prices are the same, so the problem is access: the family has less money to buy food. Rising prices is tempting, but the case says prices have not changed. Drought and land degradation cut supply, and supply here is fine.",
+     "clue": "Is the problem the food in the shops, or the family's money?"
+    },
+    "b": {
+     "d": 3,
+     "q": "A region in East Africa has a long drought, and then fighting breaks out. Farms are abandoned and food prices climb. Which statement best describes what is happening?",
+     "opts": [
+      "Threats to both supply and access are acting together",
+      "Supply is cut, but people's access to food is unaffected",
+      "Access is cut by high prices, but supply is unaffected",
+      "The threats cancel out, as higher prices pay farmers more"
+     ],
+     "why": "The drought and the abandoned farms cut the supply of food. Conflict can block food from reaching people, and rising prices make food harder to afford, so access is hit too. Picking supply or access alone misses part of the case.",
+     "clue": "Sort each event in the case into supply or access."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Poverty, as the family can no longer afford food",
+     "also_right": []
+    },
+    "b": {
+     "best": "Threats to both supply and access are acting together",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Threats to food security",
+  "card": [
+   "Food security needs enough food to be available and people to be able to get it. A threat is anything that reduces the supply of food or stops people from getting it.",
+   [
+    "Supply threats",
+    "Drought, climate change and land degradation can cut how much food farms produce. Land degradation is the loss of soil quality, so land grows less. Food waste means food that is grown but never eaten."
+   ],
+   [
+    "Access threats",
+    "Poverty can leave people unable to afford food. Rising prices make food cost more. Conflict can destroy farms and block food from reaching people."
+   ],
+   "Threats often act together. For example, a drought can cut harvests, which can push prices up, and poor families are hit first."
+  ],
+  "remember": "Threats can cut the supply of food or stop people getting it, and they often act together.",
+  "a": {
+   "q": "Supermarkets near Mai's home in Wollongong are well stocked, and food prices have not changed. Since her parent lost a job, her family cannot buy enough food. Which threat explains this?",
+   "opts": [
+    "Poverty, as the family can no longer afford food",
+    "Rising prices, as food now costs the family more",
+    "Drought, as nearby farms are growing less food",
+    "Land degradation, as the soil now grows less food"
+   ],
+   "why": "The shops have plenty of food and prices are the same, so the problem is access: the family has less money to buy food. Rising prices is tempting, but the case says prices have not changed. Drought and land degradation cut supply, and supply here is fine.",
+   "clue": "Is the problem the food in the shops, or the family's money?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A region in East Africa has a long drought, and then fighting breaks out. Farms are abandoned and food prices climb. Which statement best describes what is happening?",
+   "opts": [
+    "Threats to both supply and access are acting together",
+    "Supply is cut, but people's access to food is unaffected",
+    "Access is cut by high prices, but supply is unaffected",
+    "The threats cancel out, as higher prices pay farmers more"
+   ],
+   "why": "The drought and the abandoned farms cut the supply of food. Conflict can block food from reaching people, and rising prices make food harder to afford, so access is hit too. Picking supply or access alone misses part of the case.",
+   "clue": "Sort each event in the case into supply or access."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Poverty, as the family can no longer afford food",
+   "also_right": []
+  },
+  "b": {
+   "best": "Threats to both supply and access are acting together",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Threats to food security",
+  "card": [
+   "Food security needs enough food to be available and people to be able to get it. A threat is anything that reduces the supply of food or stops people from getting it.",
+   [
+    "Supply threats",
+    "Drought, climate change and land degradation can cut how much food farms produce. Land degradation is the loss of soil quality, so land grows less. Food waste means food that is grown but never eaten."
+   ],
+   [
+    "Access threats",
+    "Poverty can leave people unable to afford food. Rising prices make food cost more. Conflict can destroy farms and block food from reaching people."
+   ],
+   "Threats often act together. For example, a drought can cut harvests, which can push prices up, and poor families are hit first."
+  ],
+  "remember": "Threats can cut the supply of food or stop people getting it, and they often act together.",
+  "a": {
+   "q": "Supermarkets near Mai's home in Wollongong are well stocked, and food prices have not changed. Since her parent lost a job, her family cannot buy enough food. Which threat explains this?",
+   "opts": [
+    "Poverty, as the family can no longer afford food",
+    "Rising prices, as food now costs the family more",
+    "Drought, as nearby farms are growing less food",
+    "Land degradation, as the soil now grows less food"
+   ],
+   "why": "The shops have plenty of food and prices are the same, so the problem is access: the family has less money to buy food. Rising prices is tempting, but the case says prices have not changed. Drought and land degradation cut supply, and supply here is fine.",
+   "clue": "Is the problem the food in the shops, or the family's money?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A region in East Africa has a long drought, and then fighting breaks out. Farms are abandoned and food prices climb. Which statement best describes what is happening?",
+   "opts": [
+    "Threats to both supply and access are acting together",
+    "Supply is cut, but people's access to food is unaffected",
+    "Access is cut by high prices, but supply is unaffected",
+    "The threats cancel out, as higher prices pay farmers more"
+   ],
+   "why": "The drought and the abandoned farms cut the supply of food. Conflict can block food from reaching people, and rising prices make food harder to afford, so access is hit too. Picking supply or access alone misses part of the case.",
+   "clue": "Sort each event in the case into supply or access."
+  }
+ },
+ "checked_by": "claude-code"
 }

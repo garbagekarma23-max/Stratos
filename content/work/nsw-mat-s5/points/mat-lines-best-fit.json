@@ -12,8 +12,502 @@
    0.253
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 may adapt mat-lines-good-fit, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:55Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:54Z write: failed the content check, writing again",
+  "2026-11-20T12:44:59Z write: done (still fails the content check)",
+  "2026-11-20T12:53:27Z check: flagged",
+  "2026-11-20T13:00:00Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "confirm": 0.0077,
+  "write": 0.02896,
+  "check": 0.01357,
+  "fix": 0.03262,
+  "recheck": 0.01088
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-lines-good-fit",
+  "changes": [
+   "Rename \"line of good fit\" to \"line of best fit\", the term the NSW Stage 5 syllabus uses.",
+   "Add a note that predictions beyond the range of the data are less reliable, since the card does not cover this caution."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same idea of drawing a line by eye with points balanced either side, but it uses Victorian terminology and omits the required caution about predicting beyond the data.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The Victorian 'line of good fit' card covers drawing by eye and reading off predictions, but it never teaches taking care when predicting beyond the data, which this brief requires. Adding that would be a new step rather than a small change, so a new point is safer.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Lines of best fit",
+  "card": [
+   "A line of best fit is a straight line drawn through a scatter plot to follow its trend. It is used when the correlation is clear.",
+   "Draw it by eye so that about as many points are above it as below it. It does not need to pass through any point.",
+   "To predict, read across from a value on the horizontal axis to the line, then to the vertical axis.",
+   "A prediction inside the range of the data is fairly reliable. A prediction beyond the data is much less reliable, as the trend may not continue."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A scatter plot of eight points with a rising line of best fit through the middle. Four points lie above the line and four lie below it.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Hours",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 12,
+     "label": "Score",
+     "step": 1
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x + 1",
+      "domain": [
+       0,
+       9
+      ],
+      "label": "Line of best fit",
+      "labelAt": 3,
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       2.5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       2
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       4.5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       4
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       6.5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       6
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       7,
+       8.5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       8,
+       8
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "A line of best fit follows the trend. Trust predictions inside the data more than those beyond it.",
+  "a": {
+   "q": "Which describes a well-drawn line of best fit?",
+   "opts": [
+    "It follows the trend, with points above and below",
+    "It passes through the first and last points",
+    "It passes through as many points as possible",
+    "It has all the points on one side of it"
+   ],
+   "why": "A line of best fit follows the trend and has about as many points above as below. Passing through the most points is tempting, but the line does not need to touch any point.",
+   "clue": "Think about balance: points on both sides."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia plots the age of used cars (1 to 8 years) against their price and draws a line of best fit. Which prediction is most reliable?",
+   "opts": [
+    "The price of a 5-year-old car",
+    "The price of a 12-year-old car",
+    "The price of a 15-year-old car",
+    "The price of a 20-year-old car"
+   ],
+   "why": "A car aged 5 years is inside the range of the data, 1 to 8 years. The other ages are beyond the data, so the trend may not continue there.",
+   "clue": "Which age lies within the data Mia collected?"
+  }
+ },
+ "redone": true,
+ "local": [
+  "mat-lines-best-fit the figure on card line 2 has a label that does not fit inside the graph: Line of best fit. Move it with pos or labelAt, or widen the axes",
+  "mat-lines-best-fit the figure on card line 2 has labels that run into each other: 4 and Line of best fit. Move one with pos or labelAt",
+  "mat-lines-best-fit the figure on card line 2 has labels that run into each other: 5 and Line of best fit. Move one with pos or labelAt"
+ ],
+ "check": {
+  "a": {
+   "best": "It follows the trend, with points above and below",
+   "also_right": []
+  },
+  "b": {
+   "best": "The price of a 5-year-old car",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about balance: points on both sides' names the one feature that only the right option has, so a student can pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Which age lies within the data Mia collected?' tells the student the rule to apply. Only one option (5 years) is within 1 to 8, so the clue all but gives the answer."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, graph (y = x + 1 with four points above and four below) and answers are correct. Both clues nearly give the answer away and could be made less direct."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'Think about balance: points on both sides' names the one feature that only the right option has, so a student can pick it without knowing the idea.",
+  "Question b, other: The clue 'Which age lies within the data Mia collected?' tells the student the rule to apply. Only one option (5 years) is within 1 to 8, so the clue all but gives the answer.",
+  "Content check: mat-lines-best-fit the figure on card line 2 has a label that does not fit inside the graph: Line of best fit. Move it with pos or labelAt, or widen the axes",
+  "Content check: mat-lines-best-fit the figure on card line 2 has labels that run into each other: 4 and Line of best fit. Move one with pos or labelAt",
+  "Content check: mat-lines-best-fit the figure on card line 2 has labels that run into each other: 5 and Line of best fit. Move one with pos or labelAt"
+ ],
+ "proposal": {
+  "title": "Lines of best fit",
+  "card": [
+   "A line of best fit is a straight line drawn through a scatter plot to follow its trend. It is used when the correlation is clear.",
+   "Draw it by eye so that about as many points are above it as below it. It does not need to pass through any point.",
+   "To predict, read across from a value on the horizontal axis to the line, then to the vertical axis.",
+   "A prediction inside the range of the data is fairly reliable. A prediction beyond the data is much less reliable, as the trend may not continue."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A scatter plot of hours against score with eight points and a rising line of best fit through the middle. Four points lie above the line and four lie below it.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Hours",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 12,
+     "label": "Score",
+     "step": 1
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x + 1",
+      "domain": [
+       0,
+       9
+      ],
+      "label": "Line of best fit",
+      "labelAt": 9,
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       2.5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       2
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       4.5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       4
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       6.5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       6
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       7,
+       8.5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       8,
+       8
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "A line of best fit follows the trend. Trust predictions inside the data more than those beyond it.",
+  "a": {
+   "q": "Which describes a well-drawn line of best fit?",
+   "opts": [
+    "About as many points lie above it as below it",
+    "It passes through the first and last points",
+    "It passes through as many points as possible",
+    "It joins every point in order from left to right"
+   ],
+   "why": "A line of best fit follows the trend, with about as many points above it as below it. Passing through the most points is tempting, but the line does not need to touch any point at all.",
+   "clue": "Does the line need to touch any of the points?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia plots the age of used cars (1 to 8 years) against their price and draws a line of best fit. Which prediction is most reliable?",
+   "opts": [
+    "The price of a 5-year-old car",
+    "The price of a 12-year-old car",
+    "The price of a 15-year-old car",
+    "The price of a 20-year-old car"
+   ],
+   "why": "A car aged 5 years is inside the range of the data, 1 to 8 years, where the line is backed by real points. The other ages are beyond the data, so the trend may not continue there.",
+   "clue": "Where is the line supported by cars Mia actually measured?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "About as many points lie above it as below it",
+    "also_right": []
+   },
+   "b": {
+    "best": "The price of a 5-year-old car",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The graph data matches the alt, with the line y = x + 1 and four points above and four below it, and both questions and explanations agree with the card."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about balance: points on both sides' names the one feature that only the right option has, so a student can pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Which age lies within the data Mia collected?' tells the student the rule to apply. Only one option (5 years) is within 1 to 8, so the clue all but gives the answer."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue 'Think about balance: points on both sides' names the one feature that only the right option has, so a student can pick it without knowing the idea.",
+   "Question b, other: The clue 'Which age lies within the data Mia collected?' tells the student the rule to apply. Only one option (5 years) is within 1 to 8, so the clue all but gives the answer.",
+   "Content check: mat-lines-best-fit the figure on card line 2 has a label that does not fit inside the graph: Line of best fit. Move it with pos or labelAt, or widen the axes",
+   "Content check: mat-lines-best-fit the figure on card line 2 has labels that run into each other: 4 and Line of best fit. Move one with pos or labelAt",
+   "Content check: mat-lines-best-fit the figure on card line 2 has labels that run into each other: 5 and Line of best fit. Move one with pos or labelAt"
+  ]
+ },
+ "final": {
+  "title": "Lines of best fit",
+  "card": [
+   "A line of best fit is a straight line drawn through a scatter plot to follow its trend. It is used when the correlation is clear.",
+   "Draw it by eye so that about as many points are above it as below it. It does not need to pass through any point.",
+   "To predict, read across from a value on the horizontal axis to the line, then to the vertical axis.",
+   "A prediction inside the range of the data is fairly reliable. A prediction beyond the data is much less reliable, as the trend may not continue."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A scatter plot of hours against score with eight points and a rising line of best fit through the middle. Four points lie above the line and four lie below it.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Hours",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 12,
+     "label": "Score",
+     "step": 1
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x + 1",
+      "domain": [
+       0,
+       9
+      ],
+      "label": "Line of best fit",
+      "labelAt": 9,
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       2.5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       2
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       4.5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       4
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       6.5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       6
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       7,
+       8.5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       8,
+       8
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "A line of best fit follows the trend. Trust predictions inside the data more than those beyond it.",
+  "a": {
+   "q": "Which describes a well-drawn line of best fit?",
+   "opts": [
+    "About as many points lie above it as below it",
+    "It passes through the first and last points",
+    "It passes through as many points as possible",
+    "It joins every point in order from left to right"
+   ],
+   "why": "A line of best fit follows the trend, with about as many points above it as below it. Passing through the most points is tempting, but the line does not need to touch any point at all.",
+   "clue": "Does the line need to touch any of the points?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia plots the age of used cars (1 to 8 years) against their price and draws a line of best fit. Which prediction is most reliable?",
+   "opts": [
+    "The price of a 5-year-old car",
+    "The price of a 12-year-old car",
+    "The price of a 15-year-old car",
+    "The price of a 20-year-old car"
+   ],
+   "why": "A car aged 5 years is inside the range of the data, 1 to 8 years, where the line is backed by real points. The other ages are beyond the data, so the trend may not continue there.",
+   "clue": "Where is the line supported by cars Mia actually measured?"
+  }
+ },
+ "cleared_by": "recheck"
 }

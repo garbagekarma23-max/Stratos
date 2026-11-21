@@ -24,8 +24,223 @@
    0.364
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 may adapt ecb-young-people-tax, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:40Z confirm: Claude Opus 5.5 may adapt ecb-young-people-tax, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt ecb-young-people-tax (2 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting ecb-young-people-tax on the next run",
+  "2026-11-20T14:12:37Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00038,
+  "confirm": 0.00957,
+  "adapt": 0.00396,
+  "check": 0.01156
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "ecb-young-people-tax",
+  "changes": [
+   "Present the card for all workers rather than only young people starting a job, since the new point covers workers generally.",
+   "Name the Australian Taxation Office (ATO) instead of 'the tax office', matching how the new point and NSW course refer to it.",
+   "Move Question b's example from Noah in Perth to a New South Wales setting, such as a job in Sydney or Newcastle.",
+   "Add that each worker lodges a tax return every year, not only after starting a job, to match the brief."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same TFN and tax return idea at about the right depth, but it is framed around young people in a Western Australian example and needs small wording and location changes for this NSW course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "ecb-young-people-tax",
+  "changes": [
+   "Name the Australian Taxation Office (ATO) on the card instead of just 'the tax office', as the brief does.",
+   "Move the bakery in question b from Perth to a New South Wales town, such as Sydney or Newcastle."
+  ],
+  "sure": "medium",
+  "reason": "The bank point already teaches tax file numbers, tax taken from pay and the yearly tax return at a level that suits Years 9 and 10, so it only needs to name the ATO and use a local NSW example.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "ecb-young-people-tax",
+  "changes": [
+   "Name the Australian Taxation Office (ATO) on the card in place of 'the tax office', and title the point 'Tax file numbers and tax returns'.",
+   "Move Noah's bakery in question b from Perth to a New South Wales place, such as Newcastle."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "title",
+   "card1",
+   "card3",
+   "a.q",
+   "b.q",
+   "b.opt3"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the tax file number, tax taken from pay and the yearly tax return at a depth that suits Years 9 and 10. It needs the ATO named, as the brief does, and a NSW place.",
+   "item": "026ad2ef2703f8e6",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-tax-file-numbers-tax",
+    "title": "Tax file numbers and tax returns",
+    "brief": "a2e2dae512bd",
+    "shortlist": [
+     [
+      "ecb-young-people-tax",
+      0.605
+     ],
+     [
+      "bus-taxation-business",
+      0.557
+     ],
+     [
+      "ecb-progressive-taxation",
+      0.414
+     ],
+     [
+      "ecb-governments-collect-tax",
+      0.379
+     ],
+     [
+      "ecb-income-tax",
+      0.364
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00038,
+     "confirm": 0.00957
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "ecb-young-people-tax",
+     "changes": [
+      "Present the card for all workers rather than only young people starting a job, since the new point covers workers generally.",
+      "Name the Australian Taxation Office (ATO) instead of 'the tax office', matching how the new point and NSW course refer to it.",
+      "Move Question b's example from Noah in Perth to a New South Wales setting, such as a job in Sydney or Newcastle.",
+      "Add that each worker lodges a tax return every year, not only after starting a job, to match the brief."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches the same TFN and tax return idea at about the right depth, but it is framed around young people in a Western Australian example and needs small wording and location changes for this NSW course.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "ecb-young-people-tax",
+     "changes": [
+      "Name the Australian Taxation Office (ATO) on the card instead of just 'the tax office', as the brief does.",
+      "Move the bakery in question b from Perth to a New South Wales town, such as Sydney or Newcastle."
+     ],
+     "sure": "medium",
+     "reason": "The bank point already teaches tax file numbers, tax taken from pay and the yearly tax return at a level that suits Years 9 and 10, so it only needs to name the ATO and use a local NSW example.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "158d5432ef6b3a4b"
+  }
+ ],
+ "draft": {
+  "title": "Tax file numbers and tax returns",
+  "card": [
+   "A young person who starts a job needs a tax file number (TFN). It is a personal number that the Australian Taxation Office (ATO) uses to keep track of their tax.",
+   "When they start the job, the worker gives their TFN to their employer. The employer then takes tax out of each pay and sends it to the government.",
+   "The tax year ends on 30 June. After that date, the worker lodges their own tax return with the ATO, which tells the ATO what they earned and what tax was paid.",
+   "If the tax taken from their pay was more than the tax they owed for the year, the worker may get the difference back as a refund."
+  ],
+  "remember": "Your employer takes tax from each pay, and your tax return after 30 June can show whether you paid too much.",
+  "a": {
+   "q": "A Year 10 student works part time and lodges a tax return. Why might they get money back?",
+   "opts": [
+    "More tax came out of their pay than they owed for the year",
+    "Their employer took no tax at all out of their pay that year",
+    "They gave their employer their tax file number when hired",
+    "They lodged their tax return early, before the 30 June date"
+   ],
+   "why": "A refund is the difference when the tax taken from pay is more than the tax owed. If no tax was taken out, there would be nothing to give back. Giving a TFN to an employer is a normal step, not a reason for a refund.",
+   "clue": "Compare what was taken from pay with what was owed."
+  },
+  "b": {
+   "d": 2,
+   "q": "Noah, aged 15, starts a job at a bakery in Newcastle. What should he do with his tax file number when he starts?",
+   "opts": [
+    "Give it to the bakery so tax can be taken from his pay",
+    "Keep it to himself until he lodges a tax return in July",
+    "Use it to pay his own tax to the ATO each week",
+    "Give it to the bakery so it can lodge his tax return"
+   ],
+   "why": "A new worker gives their TFN to their employer, and the employer takes tax from each pay. The bakery does not lodge Noah's return for him: he lodges his own after 30 June.",
+   "clue": "Who takes the tax out of each pay, and who lodges the return?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "More tax came out of their pay than they owed for the year",
+   "also_right": []
+  },
+  "b": {
+   "best": "Give it to the bakery so tax can be taken from his pay",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Tax file numbers and tax returns",
+  "card": [
+   "A young person who starts a job needs a tax file number (TFN). It is a personal number that the Australian Taxation Office (ATO) uses to keep track of their tax.",
+   "When they start the job, the worker gives their TFN to their employer. The employer then takes tax out of each pay and sends it to the government.",
+   "The tax year ends on 30 June. After that date, the worker lodges their own tax return with the ATO, which tells the ATO what they earned and what tax was paid.",
+   "If the tax taken from their pay was more than the tax they owed for the year, the worker may get the difference back as a refund."
+  ],
+  "remember": "Your employer takes tax from each pay, and your tax return after 30 June can show whether you paid too much.",
+  "a": {
+   "q": "A Year 10 student works part time and lodges a tax return. Why might they get money back?",
+   "opts": [
+    "More tax came out of their pay than they owed for the year",
+    "Their employer took no tax at all out of their pay that year",
+    "They gave their employer their tax file number when hired",
+    "They lodged their tax return early, before the 30 June date"
+   ],
+   "why": "A refund is the difference when the tax taken from pay is more than the tax owed. If no tax was taken out, there would be nothing to give back. Giving a TFN to an employer is a normal step, not a reason for a refund.",
+   "clue": "Compare what was taken from pay with what was owed."
+  },
+  "b": {
+   "d": 2,
+   "q": "Noah, aged 15, starts a job at a bakery in Newcastle. What should he do with his tax file number when he starts?",
+   "opts": [
+    "Give it to the bakery so tax can be taken from his pay",
+    "Keep it to himself until he lodges a tax return in July",
+    "Use it to pay his own tax to the ATO each week",
+    "Give it to the bakery so it can lodge his tax return"
+   ],
+   "why": "A new worker gives their TFN to their employer, and the employer takes tax from each pay. The bakery does not lodge Noah's return for him: he lodges his own after 30 June.",
+   "clue": "Who takes the tax out of each pay, and who lodges the return?"
+  }
+ }
 }

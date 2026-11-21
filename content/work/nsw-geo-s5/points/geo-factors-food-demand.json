@@ -20,8 +20,133 @@
    0.239
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: done",
+  "2026-11-20T12:44:55Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00631,
+  "check": 0.01108
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches what drives food demand, such as population, rising incomes and changing diets; they cover food security, bush foods, improving security and supply pressures instead.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Factors in food demand",
+  "card": [
+   "Food demand is the amount of food people want and are able to buy. It is not the same as food supply, which is how much is produced.",
+   [
+    "Population",
+    "more people need more food. When a country's population grows, total demand for food grows too."
+   ],
+   [
+    "Rising incomes",
+    "as people earn more, they can afford more food and a wider range of it. Many families buy more meat, dairy and processed foods."
+   ],
+   [
+    "Changing diets",
+    "tastes and habits shift over time. Across Asia, many people now eat more meat and dairy than in the past. These foods take more land, feed and water to produce than grain, so demand for farm resources grows faster than demand for food alone."
+   ]
+  ],
+  "remember": "Demand for food rises with more people, higher incomes and diets that include more meat and dairy.",
+  "a": {
+   "q": "Incomes rise in a growing Asian city, and families start buying more meat and dairy. What does this show?",
+   "opts": [
+    "Demand for food is rising as incomes and diets change",
+    "Supply of food is rising because farms produce more",
+    "Demand for food is falling because families are wealthier",
+    "Demand is unchanged because the population is the same"
+   ],
+   "why": "Higher incomes let families afford more food, and a shift to meat and dairy is a change in diet. Both raise demand. The supply option is tempting, but supply is about how much is produced, not what people want to buy.",
+   "clue": "Is this about what people want to buy, or what farms produce?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A country's population stays about the same for ten years. Its food demand still rises sharply. Which is the most likely reason?",
+   "opts": [
+    "Incomes rise and people eat more meat and dairy",
+    "Farmers clear more land and grow more crops",
+    "The number of people in the country has grown",
+    "Irrigation brings water to more farms"
+   ],
+   "why": "With a steady population, demand can still rise when incomes grow and diets shift towards meat and dairy. Clearing land and irrigation are about supply, not demand. Population growth is ruled out because the population stayed about the same.",
+   "clue": "The number of people has not changed, so look at what each person wants to buy."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Demand for food is rising as incomes and diets change",
+   "also_right": []
+  },
+  "b": {
+   "best": "Incomes rise and people eat more meat and dairy",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Factors in food demand",
+  "card": [
+   "Food demand is the amount of food people want and are able to buy. It is not the same as food supply, which is how much is produced.",
+   [
+    "Population",
+    "more people need more food. When a country's population grows, total demand for food grows too."
+   ],
+   [
+    "Rising incomes",
+    "as people earn more, they can afford more food and a wider range of it. Many families buy more meat, dairy and processed foods."
+   ],
+   [
+    "Changing diets",
+    "tastes and habits shift over time. Across Asia, many people now eat more meat and dairy than in the past. These foods take more land, feed and water to produce than grain, so demand for farm resources grows faster than demand for food alone."
+   ]
+  ],
+  "remember": "Demand for food rises with more people, higher incomes and diets that include more meat and dairy.",
+  "a": {
+   "q": "Incomes rise in a growing Asian city, and families start buying more meat and dairy. What does this show?",
+   "opts": [
+    "Demand for food is rising as incomes and diets change",
+    "Supply of food is rising because farms produce more",
+    "Demand for food is falling because families are wealthier",
+    "Demand is unchanged because the population is the same"
+   ],
+   "why": "Higher incomes let families afford more food, and a shift to meat and dairy is a change in diet. Both raise demand. The supply option is tempting, but supply is about how much is produced, not what people want to buy.",
+   "clue": "Is this about what people want to buy, or what farms produce?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A country's population stays about the same for ten years. Its food demand still rises sharply. Which is the most likely reason?",
+   "opts": [
+    "Incomes rise and people eat more meat and dairy",
+    "Farmers clear more land and grow more crops",
+    "The number of people in the country has grown",
+    "Irrigation brings water to more farms"
+   ],
+   "why": "With a steady population, demand can still rise when incomes grow and diets shift towards meat and dairy. Clearing land and irrigation are about supply, not demand. Population growth is ruled out because the population stayed about the same.",
+   "clue": "The number of people has not changed, so look at what each person wants to buy."
+  }
+ },
+ "cleared_by": "checker"
 }

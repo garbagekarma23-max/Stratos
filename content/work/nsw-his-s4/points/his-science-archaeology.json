@@ -16,8 +16,390 @@
    0.21
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: done",
+  "2026-11-20T12:44:56Z check: flagged",
+  "2026-11-20T12:53:26Z fix: suggested",
+  "2026-11-20T13:23:39Z autoreview: picked as a spot check. It would have been cleared with the fix (a wording)",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0004,
+  "write": 0.00637,
+  "check": 0.00924,
+  "fix": 0.01595
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, his-science-ancient-past, covers radiocarbon dating, DNA testing and CT scans, but the new point also names ground-scanning radar, which the card does not teach, so the card would need new content rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Science in archaeology",
+  "card": [
+   "Archaeologists study the remains of past people, such as bones, tools and buildings. Science helps them find out how old things are and what they can tell us.",
+   [
+    "Radiocarbon dating",
+    "Living things take in carbon, including a rare form called carbon-14. After death the carbon-14 slowly breaks down, so measuring how much is left shows roughly how old the remains are."
+   ],
+   [
+    "DNA testing",
+    "DNA is the material in cells that carries genetic information. Testing DNA from bones can show how people were related to each other and to people today."
+   ],
+   [
+    "Ground-scanning radar",
+    "This sends radio waves into the ground and records the echoes. It can show buried walls or graves without digging, so a site is less disturbed."
+   ]
+  ],
+  "remember": "Science lets archaeologists date and study remains, and radar lets them look underground without digging.",
+  "a": {
+   "q": "An archaeologist wants to find out how old a wooden beam from an ancient house is. Which method measures the carbon-14 left in it?",
+   "opts": [
+    "Radiocarbon dating",
+    "DNA testing",
+    "Ground-scanning radar",
+    "Digging a new trench"
+   ],
+   "why": "Wood comes from a living tree, so it took in carbon-14. Measuring how much is left shows its approximate age. DNA testing looks at genetic information, not age from carbon.",
+   "clue": "Think about which method has the word carbon in its name."
+  },
+  "b": {
+   "d": 3,
+   "q": "A team thinks walls of an ancient town lie under a farm paddock. The farmer wants the soil left mostly undisturbed. Which method should the team use first?",
+   "opts": [
+    "Ground-scanning radar",
+    "Radiocarbon dating",
+    "DNA testing",
+    "Digging up the whole paddock"
+   ],
+   "why": "Radar can show buried walls from the surface without digging. Radiocarbon dating and DNA testing need a sample of remains, and there is nothing to sample until something is found. Digging the whole paddock would disturb the soil, which is what the farmer wants to avoid.",
+   "clue": "Which method can look underground without digging?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Radiocarbon dating",
+   "also_right": []
+  },
+  "b": {
+   "best": "Ground-scanning radar",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem asks which method 'measures the carbon-14 left in it', and only one option, 'Radiocarbon dating', contains the word carbon. A student can match words without understanding the idea. The clue then says so outright. Rephrase the stem to describe the goal, such as finding the age of once-living material, without naming carbon-14."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts are accurate. Question a gives its answer away because the stem mentions carbon-14 and only 'Radiocarbon dating' shares that word, so it tests word-matching rather than understanding."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The stem asks which method 'measures the carbon-14 left in it', and only one option, 'Radiocarbon dating', contains the word carbon. A student can match words without understanding the idea. The clue then says so outright. Rephrase the stem to describe the goal, such as finding the age of once-living material, without naming carbon-14."
+ ],
+ "proposal": {
+  "title": "Science in archaeology",
+  "card": [
+   "Archaeologists study the remains of past people, such as bones, tools and buildings. Science helps them find out how old things are and what they can tell us.",
+   [
+    "Radiocarbon dating",
+    "Living things take in carbon, including a rare form called carbon-14. After death the carbon-14 slowly breaks down, so measuring how much is left shows roughly how old the remains are."
+   ],
+   [
+    "DNA testing",
+    "DNA is the material in cells that carries genetic information. Testing DNA from bones can show how people were related to each other and to people today."
+   ],
+   [
+    "Ground-scanning radar",
+    "This sends radio waves into the ground and records the echoes. It can show buried walls or graves without digging, so a site is less disturbed."
+   ]
+  ],
+  "remember": "Science lets archaeologists date and study remains, and radar lets them look underground without digging.",
+  "a": {
+   "q": "An archaeologist wants to find out roughly how old a wooden beam from an ancient house is. Which method should she use?",
+   "opts": [
+    "Radiocarbon dating",
+    "DNA testing",
+    "Ground-scanning radar",
+    "Digging a new trench"
+   ],
+   "why": "Wood comes from a tree that was once alive, so it took in carbon-14, and measuring how much is left shows its rough age. DNA testing shows how living things were related, not how old they are. Radar finds buried things but does not date them.",
+   "clue": "The beam came from something that was once alive."
+  },
+  "b": {
+   "d": 3,
+   "q": "A team thinks walls of an ancient town lie under a farm paddock. The farmer wants the soil left mostly undisturbed. Which method should the team use first?",
+   "opts": [
+    "Ground-scanning radar",
+    "Radiocarbon dating",
+    "DNA testing",
+    "Digging up the whole paddock"
+   ],
+   "why": "Radar can show buried walls from the surface without digging. Radiocarbon dating and DNA testing need a sample of remains, and there is nothing to sample until something is found. Digging the whole paddock would disturb the soil, which is what the farmer wants to avoid.",
+   "clue": "Which method can look underground without digging?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:39Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem asks which method 'measures the carbon-14 left in it', and only one option, 'Radiocarbon dating', contains the word carbon. A student can match words without understanding the idea. The clue then says so outright. Rephrase the stem to describe the goal, such as finding the age of once-living material, without naming carbon-14."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The stem asks which method 'measures the carbon-14 left in it', and only one option, 'Radiocarbon dating', contains the word carbon. A student can match words without understanding the idea. The clue then says so outright. Rephrase the stem to describe the goal, such as finding the age of once-living material, without naming carbon-14."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Science in archaeology",
+  "card": [
+   "Archaeologists study the remains of past people, such as bones, tools and buildings. Science helps them find out how old things are and what they can tell us.",
+   [
+    "Radiocarbon dating",
+    "Living things take in carbon, including a rare form called carbon-14. After death the carbon-14 slowly breaks down, so measuring how much is left shows roughly how old the remains are."
+   ],
+   [
+    "DNA testing",
+    "DNA is the material in cells that carries genetic information. Testing DNA from bones can show how people were related to each other and to people today."
+   ],
+   [
+    "Ground-scanning radar",
+    "This sends radio waves into the ground and records the echoes. It can show buried walls or graves without digging, so a site is less disturbed."
+   ]
+  ],
+  "remember": "Science lets archaeologists date and study remains, and radar lets them look underground without digging.",
+  "a": {
+   "q": "An archaeologist wants to find out roughly how old a wooden beam from an ancient house is. Which method should she use?",
+   "opts": [
+    "Radiocarbon dating",
+    "DNA testing",
+    "Ground-scanning radar",
+    "Digging a new trench"
+   ],
+   "why": "Wood comes from a tree that was once alive, so it took in carbon-14, and measuring how much is left shows its rough age. DNA testing shows how living things were related, not how old they are. Radar finds buried things but does not date them.",
+   "clue": "The beam came from something that was once alive."
+  },
+  "b": {
+   "d": 3,
+   "q": "A team thinks walls of an ancient town lie under a farm paddock. The farmer wants the soil left mostly undisturbed. Which method should the team use first?",
+   "opts": [
+    "Ground-scanning radar",
+    "Radiocarbon dating",
+    "DNA testing",
+    "Digging up the whole paddock"
+   ],
+   "why": "Radar can show buried walls from the surface without digging. Radiocarbon dating and DNA testing need a sample of remains, and there is nothing to sample until something is found. Digging the whole paddock would disturb the soil, which is what the farmer wants to avoid.",
+   "clue": "Which method can look underground without digging?"
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix takes carbon-14 out of question a's stem and clue, so the answer can no longer be matched by the word carbon. The facts are right and each question has one clear answer.",
+   "item": "d465d92129949d27",
+   "result": "decided",
+   "saved": {
+    "id": "his-science-archaeology",
+    "title": "Science in archaeology",
+    "brief": "02ad7006c771",
+    "shortlist": [
+     [
+      "his-science-ancient-past",
+      0.346
+     ],
+     [
+      "his-archaeology-stratigraphy",
+      0.232
+     ],
+     [
+      "sci-science-communication",
+      0.21
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 1
+    },
+    "usd": {
+     "match": 0.0004,
+     "write": 0.00637,
+     "check": 0.00924,
+     "fix": 0.01595
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The closest bank point, his-science-ancient-past, covers radiocarbon dating, DNA testing and CT scans, but the new point also names ground-scanning radar, which the card does not teach, so the card would need new content rather than a small change.",
+     "model": "claude-haiku-5-5"
+    },
+    "alone": true,
+    "draft": {
+     "title": "Science in archaeology",
+     "card": [
+      "Archaeologists study the remains of past people, such as bones, tools and buildings. Science helps them find out how old things are and what they can tell us.",
+      [
+       "Radiocarbon dating",
+       "Living things take in carbon, including a rare form called carbon-14. After death the carbon-14 slowly breaks down, so measuring how much is left shows roughly how old the remains are."
+      ],
+      [
+       "DNA testing",
+       "DNA is the material in cells that carries genetic information. Testing DNA from bones can show how people were related to each other and to people today."
+      ],
+      [
+       "Ground-scanning radar",
+       "This sends radio waves into the ground and records the echoes. It can show buried walls or graves without digging, so a site is less disturbed."
+      ]
+     ],
+     "remember": "Science lets archaeologists date and study remains, and radar lets them look underground without digging.",
+     "a": {
+      "q": "An archaeologist wants to find out how old a wooden beam from an ancient house is. Which method measures the carbon-14 left in it?",
+      "opts": [
+       "Radiocarbon dating",
+       "DNA testing",
+       "Ground-scanning radar",
+       "Digging a new trench"
+      ],
+      "why": "Wood comes from a living tree, so it took in carbon-14. Measuring how much is left shows its approximate age. DNA testing looks at genetic information, not age from carbon.",
+      "clue": "Think about which method has the word carbon in its name."
+     },
+     "b": {
+      "d": 3,
+      "q": "A team thinks walls of an ancient town lie under a farm paddock. The farmer wants the soil left mostly undisturbed. Which method should the team use first?",
+      "opts": [
+       "Ground-scanning radar",
+       "Radiocarbon dating",
+       "DNA testing",
+       "Digging up the whole paddock"
+      ],
+      "why": "Radar can show buried walls from the surface without digging. Radiocarbon dating and DNA testing need a sample of remains, and there is nothing to sample until something is found. Digging the whole paddock would disturb the soil, which is what the farmer wants to avoid.",
+      "clue": "Which method can look underground without digging?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Radiocarbon dating",
+      "also_right": []
+     },
+     "b": {
+      "best": "Ground-scanning radar",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The stem asks which method 'measures the carbon-14 left in it', and only one option, 'Radiocarbon dating', contains the word carbon. A student can match words without understanding the idea. The clue then says so outright. Rephrase the stem to describe the goal, such as finding the age of once-living material, without naming carbon-14."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts are accurate. Question a gives its answer away because the stem mentions carbon-14 and only 'Radiocarbon dating' shares that word, so it tests word-matching rather than understanding."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a, wording: The stem asks which method 'measures the carbon-14 left in it', and only one option, 'Radiocarbon dating', contains the word carbon. A student can match words without understanding the idea. The clue then says so outright. Rephrase the stem to describe the goal, such as finding the age of once-living material, without naming carbon-14."
+    ],
+    "proposal": {
+     "title": "Science in archaeology",
+     "card": [
+      "Archaeologists study the remains of past people, such as bones, tools and buildings. Science helps them find out how old things are and what they can tell us.",
+      [
+       "Radiocarbon dating",
+       "Living things take in carbon, including a rare form called carbon-14. After death the carbon-14 slowly breaks down, so measuring how much is left shows roughly how old the remains are."
+      ],
+      [
+       "DNA testing",
+       "DNA is the material in cells that carries genetic information. Testing DNA from bones can show how people were related to each other and to people today."
+      ],
+      [
+       "Ground-scanning radar",
+       "This sends radio waves into the ground and records the echoes. It can show buried walls or graves without digging, so a site is less disturbed."
+      ]
+     ],
+     "remember": "Science lets archaeologists date and study remains, and radar lets them look underground without digging.",
+     "a": {
+      "q": "An archaeologist wants to find out roughly how old a wooden beam from an ancient house is. Which method should she use?",
+      "opts": [
+       "Radiocarbon dating",
+       "DNA testing",
+       "Ground-scanning radar",
+       "Digging a new trench"
+      ],
+      "why": "Wood comes from a tree that was once alive, so it took in carbon-14, and measuring how much is left shows its rough age. DNA testing shows how living things were related, not how old they are. Radar finds buried things but does not date them.",
+      "clue": "The beam came from something that was once alive."
+     },
+     "b": {
+      "d": 3,
+      "q": "A team thinks walls of an ancient town lie under a farm paddock. The farmer wants the soil left mostly undisturbed. Which method should the team use first?",
+      "opts": [
+       "Ground-scanning radar",
+       "Radiocarbon dating",
+       "DNA testing",
+       "Digging up the whole paddock"
+      ],
+      "why": "Radar can show buried walls from the surface without digging. Radiocarbon dating and DNA testing need a sample of remains, and there is nothing to sample until something is found. Digging the whole paddock would disturb the soil, which is what the farmer wants to avoid.",
+      "clue": "Which method can look underground without digging?"
+     }
+    },
+    "proposal_problems": [],
+    "auto": {
+     "at": "2026-11-20T13:23:39Z",
+     "rules": 1,
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The stem asks which method 'measures the carbon-14 left in it', and only one option, 'Radiocarbon dating', contains the word carbon. A student can match words without understanding the idea. The clue then says so outright. Rephrase the stem to describe the goal, such as finding the age of once-living material, without naming carbon-14."
+      }
+     ],
+     "flags": [
+      "Question a, wording: The stem asks which method 'measures the carbon-14 left in it', and only one option, 'Radiocarbon dating', contains the word carbon. A student can match words without understanding the idea. The clue then says so outright. Rephrase the stem to describe the goal, such as finding the age of once-living material, without naming carbon-14."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "c06b088f7bea7b25"
+  }
  ]
 }

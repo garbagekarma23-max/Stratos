@@ -20,8 +20,265 @@
    0.251
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 says reuse sci-protons-neutrons-electrons, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:59Z confirm: Claude Opus 5.5 may reuse sci-protons-neutrons-electrons, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt sci-protons-neutrons-electrons (1 change)",
+  "2026-11-20T14:02:37Z claude-code review: adapting sci-protons-neutrons-electrons on the next run",
+  "2026-11-20T14:12:40Z adapt: done",
+  "2026-11-20T14:20:02Z check: flagged",
+  "2026-11-20T14:26:15Z fix: suggested",
+  "2026-11-20T14:44:46Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00032,
+  "confirm": 0.00884,
+  "adapt": 0.00422,
+  "check": 0.00935,
+  "fix": 0.01743
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "sci-protons-neutrons-electrons",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches the same protons, neutrons and electrons idea at a level that suits Stage 4, and both its questions are fair for Years 7 and 8 in NSW, though its Year 9 label means the depth match is a judgement call.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "sci-protons-neutrons-electrons",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea at a simple depth that suits Years 7 and 8: positive protons and neutral neutrons in the nucleus, with negative electrons moving around it. Both questions are fair for NSW Stage 4 students, though the card does not restate the brief's opening line that an atom is the smallest part of an element.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "sci-protons-neutrons-electrons",
+  "changes": [
+   "Add a card line saying an atom is the smallest part of an element that still has the properties of that element."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card1 label",
+   "card1",
+   "card2 label",
+   "card2",
+   "card3 label",
+   "card3",
+   "card4 label",
+   "card4",
+   "remember",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "owner",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the three particles and where they are at the right depth, but it never says an atom is the smallest part of an element, which the brief opens with. One added line covers it.",
+   "item": "34e000357877859e",
+   "result": "decided",
+   "saved": {
+    "id": "sci-protons-neutrons-electrons-nsw",
+    "title": "Protons, neutrons and electrons",
+    "brief": "ac1d5bdfedb6",
+    "shortlist": [
+     [
+      "sci-protons-neutrons-electrons",
+      0.74
+     ],
+     [
+      "sci-atomic-number-mass-number",
+      0.411
+     ],
+     [
+      "sci-model-atom-changed",
+      0.388
+     ],
+     [
+      "sci-atoms-elements",
+      0.251
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00032,
+     "confirm": 0.00884
+    },
+    "match": {
+     "verdict": "reuse",
+     "same": "sci-protons-neutrons-electrons",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The bank point teaches the same protons, neutrons and electrons idea at a level that suits Stage 4, and both its questions are fair for Years 7 and 8 in NSW, though its Year 9 label means the depth match is a judgement call.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "reuse",
+     "same": "sci-protons-neutrons-electrons",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The bank point teaches the same idea at a simple depth that suits Years 7 and 8: positive protons and neutral neutrons in the nucleus, with negative electrons moving around it. Both questions are fair for NSW Stage 4 students, though the card does not restate the brief's opening line that an atom is the smallest part of an element.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "e53466af292533ec"
+  }
+ ],
+ "draft": {
+  "title": "Protons, neutrons and electrons",
+  "card": [
+   [
+    "Atom",
+    "the smallest part of an element that still has the properties of that element."
+   ],
+   [
+    "Proton",
+    "a particle with a positive charge. It sits in the nucleus, the small centre of the atom."
+   ],
+   [
+    "Neutron",
+    "a particle with no charge. It also sits in the nucleus."
+   ],
+   [
+    "Electron",
+    "a particle with a negative charge. It moves around the nucleus and is far lighter than a proton or neutron."
+   ]
+  ],
+  "remember": "An atom is the smallest part of an element. The nucleus holds the positive protons and the neutral neutrons. The light, negative electrons move around it.",
+  "a": {
+   "q": "Which two types of particle make up the nucleus of an atom?",
+   "opts": [
+    "Protons and neutrons",
+    "Protons and electrons",
+    "Neutrons and electrons",
+    "Electrons only"
+   ],
+   "why": "Protons and neutrons are the heavier particles that sit in the nucleus. Protons and electrons can seem right because both have a charge, but electrons move around the nucleus rather than sitting in it.",
+   "clue": "Go through the three particles and recall where each one is."
+  },
+  "b": {
+   "d": 3,
+   "q": "A neutral sodium atom has 11 protons. How many electrons does it have, and what is the reason?",
+   "opts": [
+    "11, so the charges cancel out",
+    "11, because electrons sit in the nucleus",
+    "12, so there is one more than the protons",
+    "0, because the atom has no overall charge"
+   ],
+   "why": "A neutral atom has equal numbers of positive protons and negative electrons, so 11 electrons cancel the charge of 11 protons. No overall charge does not mean no electrons, because the charges balance.",
+   "clue": "Neutral means the positive and negative charges are balanced."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Protons and neutrons",
+   "also_right": []
+  },
+  "b": {
+   "best": "11, so the charges cancel out",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The card never says that a proton and an electron carry equal and opposite charges, or that a neutral atom has equal numbers of protons and electrons. Students need that idea to answer, and only the clue supplies part of it. The card should add a line that a neutral atom has as many electrons as protons, so the charges balance."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct. Question b relies on the idea that a neutral atom has equal numbers of protons and electrons, which the card does not teach; add it to the card."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, level: The card never says that a proton and an electron carry equal and opposite charges, or that a neutral atom has equal numbers of protons and electrons. Students need that idea to answer, and only the clue supplies part of it. The card should add a line that a neutral atom has as many electrons as protons, so the charges balance."
+ ],
+ "proposal": {
+  "title": "Protons, neutrons and electrons",
+  "card": [
+   "An atom is the smallest part of an element that still has the properties of that element. At its centre is a tiny core called the nucleus.",
+   "The nucleus holds protons, which have a positive charge, and neutrons, which have no charge.",
+   "Electrons have a negative charge. They move around the nucleus and are far lighter than protons or neutrons.",
+   "A proton and an electron carry equal and opposite charges. A neutral atom has as many electrons as protons, so the charges cancel out."
+  ],
+  "remember": "Positive protons and neutral neutrons sit in the nucleus. Negative electrons move around it, matching the protons in a neutral atom.",
+  "a": {
+   "q": "Which two types of particle make up the nucleus of an atom?",
+   "opts": [
+    "Protons and neutrons",
+    "Protons and electrons",
+    "Neutrons and electrons",
+    "Electrons only"
+   ],
+   "why": "Protons and neutrons are the heavier particles that sit in the nucleus. Protons and electrons can seem right because both have a charge, but electrons move around the nucleus rather than sitting in it.",
+   "clue": "Go through the three particles and recall where each one is."
+  },
+  "b": {
+   "d": 3,
+   "q": "A neutral sodium atom has 11 protons. How many electrons does it have, and what is the reason?",
+   "opts": [
+    "11, so the charges cancel out",
+    "11, because electrons sit in the nucleus",
+    "12, so there is one more than the protons",
+    "0, because the atom has no overall charge"
+   ],
+   "why": "A neutral atom has as many negative electrons as positive protons, so 11 electrons cancel the charge of 11 protons. No overall charge does not mean no electrons: it means the charges balance.",
+   "clue": "Neutral means the positive and negative charges are balanced."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Protons, neutrons and electrons",
+  "card": [
+   "An atom is the smallest part of an element that still has the properties of that element. At its centre is a tiny core called the nucleus.",
+   "The nucleus holds protons, which have a positive charge, and neutrons, which have no charge.",
+   "Electrons have a negative charge. They move around the nucleus and are far lighter than protons or neutrons.",
+   "A proton and an electron carry equal and opposite charges. A neutral atom has as many electrons as protons, so the charges cancel out."
+  ],
+  "remember": "Positive protons and neutral neutrons sit in the nucleus. Negative electrons move around it, matching the protons in a neutral atom.",
+  "a": {
+   "q": "Which two types of particle make up the nucleus of an atom?",
+   "opts": [
+    "Protons and neutrons",
+    "Protons and electrons",
+    "Neutrons and electrons",
+    "Electrons only"
+   ],
+   "why": "Protons and neutrons are the heavier particles that sit in the nucleus. Protons and electrons can seem right because both have a charge, but electrons move around the nucleus rather than sitting in it.",
+   "clue": "Go through the three particles and recall where each one is."
+  },
+  "b": {
+   "d": 3,
+   "q": "A neutral sodium atom has 11 protons. How many electrons does it have, and what is the reason?",
+   "opts": [
+    "11, so the charges cancel out",
+    "11, because electrons sit in the nucleus",
+    "12, so there is one more than the protons",
+    "0, because the atom has no overall charge"
+   ],
+   "why": "A neutral atom has as many negative electrons as positive protons, so 11 electrons cancel the charge of 11 protons. No overall charge does not mean no electrons: it means the charges balance.",
+   "clue": "Neutral means the positive and negative charges are balanced."
+  }
+ }
 }

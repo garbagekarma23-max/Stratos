@@ -24,8 +24,202 @@
    0.248
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:45Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:49Z write: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.00569,
+  "check": 0.00854,
+  "fix": 0.01402,
+  "recheck": 0.00668
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank points cover access to services through distance, transport and internet, but none covers income or access to goods, which the new point requires, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Access to goods and services",
+  "card": [
+   "Access means being able to get a good or service when you need it. Not everyone has the same access.",
+   "Income matters because people need money to buy things. Distance and transport matter because a shop, clinic or school that is far away is harder to reach, especially with no car or public transport.",
+   "Internet access matters because many services, such as online learning, banking and streaming, need a connection. Slow or no internet can limit these.",
+   "Where people live affects all of these. Cities usually have more shops and services close by. Remote places often have fewer and further apart, so people may travel far or wait for deliveries."
+  ],
+  "remember": "Money, distance, transport, internet and location can all change what people are able to get.",
+  "a": {
+   "q": "Which of these is a reason a family on a remote farm may have less access to services?",
+   "opts": [
+    "The nearest clinic and school are very far away",
+    "They live where many shops are close together",
+    "They can reach services quickly on public transport",
+    "They have the same choice of services as city people"
+   ],
+   "why": "A long distance to a clinic or school makes services harder to reach. The other options describe the easy access that is more common in cities.",
+   "clue": "Think about how far people must travel."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam lives in a country town with a slow internet connection. Which service is he most likely to find hard to use?",
+   "opts": [
+    "Online classes that need a strong connection",
+    "A local bakery in his town",
+    "A bus that runs past his house",
+    "A doctor visit in a nearby clinic"
+   ],
+   "why": "Online classes need a good connection, and Sam's is slow. The bakery, bus and clinic do not depend on the internet, so his slow connection does not limit them.",
+   "clue": "Which service depends on the internet?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The nearest clinic and school are very far away",
+   "also_right": []
+  },
+  "b": {
+   "best": "Online classes that need a strong connection",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is clearly the longest. It is the only one with a qualifying detail ('that need a strong connection'), which echoes 'slow internet connection' in the stem, so a student could pick it without knowing the idea. Shorten it to 'Online classes', or give the other options similar detail."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question a are accurate and fit the level. In question b, the right option stands out because it is the longest and echoes the stem's wording about the connection, so it gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option is clearly the longest. It is the only one with a qualifying detail ('that need a strong connection'), which echoes 'slow internet connection' in the stem, so a student could pick it without knowing the idea. Shorten it to 'Online classes', or give the other options similar detail."
+ ],
+ "proposal": {
+  "title": "Access to goods and services",
+  "card": [
+   "Access means being able to get a good or service when you need it. Not everyone has the same access.",
+   "Income matters because people need money to buy things. Distance and transport matter because a shop, clinic or school that is far away is harder to reach, especially with no car or public transport.",
+   "Internet access matters because many services, such as online learning, banking and streaming, need a connection. Slow or no internet can limit these.",
+   "Where people live affects all of these. Cities usually have more shops and services close by. Remote places often have fewer and further apart, so people may travel far or wait for deliveries."
+  ],
+  "remember": "Money, distance, transport, internet and location can all change what people are able to get.",
+  "a": {
+   "q": "Which of these is a reason a family on a remote farm may have less access to services?",
+   "opts": [
+    "The nearest clinic and school are very far away",
+    "They live where many shops are close together",
+    "They can reach services quickly on public transport",
+    "They have the same choice of services as city people"
+   ],
+   "why": "A long distance to a clinic or school makes services harder to reach. The other options describe the easy access that is more common in cities.",
+   "clue": "Think about how far people must travel."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam lives in a country town with a slow internet connection. Which service is he most likely to find hard to use?",
+   "opts": [
+    "Online classes from a school in Sydney",
+    "A haircut at the barber in his town",
+    "The bus that stops outside his house",
+    "A check-up at the clinic down the road"
+   ],
+   "why": "Online classes need a good connection to stream lessons, and Sam's is slow. The haircut, bus and check-up happen in person, so his slow internet does not limit them.",
+   "clue": "Which service depends on the internet?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The nearest clinic and school are very far away",
+    "also_right": []
+   },
+   "b": {
+    "best": "Online classes from a school in Sydney",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is clearly the longest. It is the only one with a qualifying detail ('that need a strong connection'), which echoes 'slow internet connection' in the stem, so a student could pick it without knowing the idea. Shorten it to 'Online classes', or give the other options similar detail."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The right option is clearly the longest. It is the only one with a qualifying detail ('that need a strong connection'), which echoes 'slow internet connection' in the stem, so a student could pick it without knowing the idea. Shorten it to 'Online classes', or give the other options similar detail."
+  ]
+ },
+ "final": {
+  "title": "Access to goods and services",
+  "card": [
+   "Access means being able to get a good or service when you need it. Not everyone has the same access.",
+   "Income matters because people need money to buy things. Distance and transport matter because a shop, clinic or school that is far away is harder to reach, especially with no car or public transport.",
+   "Internet access matters because many services, such as online learning, banking and streaming, need a connection. Slow or no internet can limit these.",
+   "Where people live affects all of these. Cities usually have more shops and services close by. Remote places often have fewer and further apart, so people may travel far or wait for deliveries."
+  ],
+  "remember": "Money, distance, transport, internet and location can all change what people are able to get.",
+  "a": {
+   "q": "Which of these is a reason a family on a remote farm may have less access to services?",
+   "opts": [
+    "The nearest clinic and school are very far away",
+    "They live where many shops are close together",
+    "They can reach services quickly on public transport",
+    "They have the same choice of services as city people"
+   ],
+   "why": "A long distance to a clinic or school makes services harder to reach. The other options describe the easy access that is more common in cities.",
+   "clue": "Think about how far people must travel."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam lives in a country town with a slow internet connection. Which service is he most likely to find hard to use?",
+   "opts": [
+    "Online classes from a school in Sydney",
+    "A haircut at the barber in his town",
+    "The bus that stops outside his house",
+    "A check-up at the clinic down the road"
+   ],
+   "why": "Online classes need a good connection to stream lessons, and Sam's is slow. The haircut, bus and check-up happen in person, so his slow internet does not limit them.",
+   "clue": "Which service depends on the internet?"
+  }
+ },
+ "cleared_by": "recheck"
 }

@@ -24,8 +24,227 @@
    0.254
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: done",
+  "2026-11-20T12:35:55Z check: flagged",
+  "2026-11-20T12:44:59Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.00927,
+  "check": 0.01291,
+  "fix": 0.0325,
+  "recheck": 0.00988
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches proving triangles similar with written reasons; the closest cards only find missing sides using a scale factor or state similarity without a formal proof, so the proof step is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Similar triangle proofs",
+  "card": [
+   "Two triangles are similar if they have the same shape but not always the same size. Matching angles are equal and matching sides are in the same ratio.",
+   "To prove similarity, give a reason for each fact. Use a test: two pairs of equal angles (AA), three pairs of sides in the same ratio, or two pairs of sides in the same ratio with equal angles between them.",
+   "Write the triangles with matching vertices in the same order. Then matching sides are in proportion, and you can use that to find a length.",
+   [
+    "Example",
+    "In \\(\\triangle ABC\\) and \\(\\triangle ADE\\), \\(DE \\parallel BC\\) with \\(D\\) on \\(AB\\) and \\(E\\) on \\(AC\\). Angle \\(A\\) is shared. Angle \\(ADE =\\) angle \\(ABC\\) (corresponding angles, parallel lines). So \\(\\triangle ADE \\sim \\triangle ABC\\) (AA)."
+   ]
+  ],
+  "remember": "Give a reason for equal angles or ratios, name the test, then use matching sides in proportion.",
+  "a": {
+   "q": "Triangles \\(PQR\\) and \\(XYZ\\) have \\(\\angle P = \\angle X = 40^{\\circ}\\) and \\(\\angle Q = \\angle Y = 65^{\\circ}\\). Which test shows they are similar?",
+   "opts": [
+    "Two pairs of equal angles (AA)",
+    "Three pairs of equal sides (SSS)",
+    "Right angle, hypotenuse, side (RHS)",
+    "Two sides and the included angle equal (SAS)"
+   ],
+   "why": "Two pairs of angles are given as equal, so the AA test proves the triangles similar. The congruence tests need equal sides, and no side lengths are given, so they cannot be used.",
+   "clue": "Only angles are given. Which test uses only angles?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In \\(\\triangle ABC\\), \\(D\\) is on \\(AB\\) and \\(E\\) is on \\(AC\\), with \\(DE \\parallel BC\\). \\(AD = 4\\) cm, \\(AB = 10\\) cm and \\(BC = 15\\) cm. What is \\(DE\\)?",
+   "opts": [
+    "6 cm",
+    "3.75 cm",
+    "9 cm",
+    "2.5 cm"
+   ],
+   "why": "\\(\\triangle ADE \\sim \\triangle ABC\\) by AA, so \\(\\frac{DE}{BC} = \\frac{AD}{AB} = \\frac{4}{10}\\). Then \\(DE = \\frac{4}{10} \\times 15 = 6\\). Using \\(\\frac{15 \\times 4}{...}\\) the wrong way round, such as \\(10 \\div 4 \\times 15\\) or \\(\\frac{4}{15}\\times 10\\), matches the wrong sides.",
+   "clue": "Match \\(DE\\) with \\(BC\\), and \\(AD\\) with \\(AB\\)."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "Triangle ABC with D on AB and E on AC, and segment DE drawn parallel to BC. Label the vertices A, B, C, D, E and mark DE and BC with matching parallel arrows. Angle A is marked as shared.",
+    "why": "It lets the student see the shared angle and the parallel lines that give the equal angles."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Two pairs of equal angles (AA)",
+   "also_right": []
+  },
+  "b": {
+   "best": "6 cm",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) contains a broken fragment, \\(\\frac{15 \\times 4}{...}\\), with a literal '...' as the denominator, which the app would draw as a meaningless fraction. Its 'wrong way round' examples (10 ÷ 4 × 15 = 37.5 and 4/15 × 10 ≈ 2.67) also match none of the given distractors (2.5, 9, 3.75), so it does not explain why students would choose the wrong options."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct: AA for (a) and DE = 6 cm for (b). The explanation for (b) has a broken LaTeX fragment with '...' and describes wrong methods that do not match the actual distractors, so it needs rewriting."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: Why (b) contains a broken fragment, \\(\\frac{15 \\times 4}{...}\\), with a literal '...' as the denominator, which the app would draw as a meaningless fraction. Its 'wrong way round' examples (10 ÷ 4 × 15 = 37.5 and 4/15 × 10 ≈ 2.67) also match none of the given distractors (2.5, 9, 3.75), so it does not explain why students would choose the wrong options."
+ ],
+ "proposal": {
+  "title": "Similar triangle proofs",
+  "card": [
+   "Two triangles are similar if they have the same shape but not always the same size. Matching angles are equal and matching sides are in the same ratio.",
+   "To prove similarity, give a reason for each fact. Use a test: two pairs of equal angles (AA), three pairs of sides in the same ratio, or two pairs of sides in the same ratio with equal angles between them.",
+   "Write the triangles with matching vertices in the same order. Then matching sides are in proportion, and you can use that to find a length.",
+   "Example: in \\(\\triangle ABC\\), \\(D\\) is on \\(AB\\), \\(E\\) is on \\(AC\\) and \\(DE \\parallel BC\\). Angle \\(A\\) is shared, and angle \\(ADE =\\) angle \\(ABC\\) (corresponding angles, parallel lines). So \\(\\triangle ADE \\sim \\triangle ABC\\) (AA), and \\(\\frac{AD}{AB} = \\frac{DE}{BC}\\)."
+  ],
+  "remember": "Give a reason for equal angles or ratios, name the test, then use matching sides in proportion.",
+  "a": {
+   "q": "Triangles \\(PQR\\) and \\(XYZ\\) have \\(\\angle P = \\angle X = 40^{\\circ}\\) and \\(\\angle Q = \\angle Y = 65^{\\circ}\\). Which test shows they are similar?",
+   "opts": [
+    "Two pairs of equal angles (AA)",
+    "Three pairs of equal sides (SSS)",
+    "Right angle, hypotenuse, side (RHS)",
+    "Two sides and the included angle equal (SAS)"
+   ],
+   "why": "Two pairs of angles are given as equal, so the AA test proves the triangles similar. The other tests need side lengths, and none are given, so they cannot be used.",
+   "clue": "Only angles are given. Which test uses only angles?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In \\(\\triangle ABC\\), \\(D\\) is on \\(AB\\) and \\(E\\) is on \\(AC\\), with \\(DE \\parallel BC\\). \\(AD = 4\\) cm, \\(AB = 10\\) cm and \\(BC = 15\\) cm. What is \\(DE\\)?",
+   "opts": [
+    "6 cm",
+    "10 cm",
+    "9 cm",
+    "37.5 cm"
+   ],
+   "why": "\\(\\triangle ADE \\sim \\triangle ABC\\) (AA), so \\(\\frac{DE}{BC} = \\frac{AD}{AB} = \\frac{4}{10}\\), and \\(DE = \\frac{4}{10} \\times 15 = 6\\) cm. Using \\(DB = 6\\) in place of \\(AB\\) gives \\(\\frac{4}{6} \\times 15 = 10\\), but \\(DB\\) is not a side of either triangle. Using \\(\\frac{6}{10}\\) gives 9, and turning the ratio upside down gives \\(\\frac{10}{4} \\times 15 = 37.5\\).",
+   "clue": "Match \\(DE\\) with \\(BC\\), and \\(AD\\) with the whole side \\(AB\\)."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "Triangle ABC with D on AB and E on AC, and segment DE drawn parallel to BC. Label the vertices A, B, C, D, E and mark DE and BC with matching parallel arrows. Angle A is marked as shared, and angles ADE and ABC are marked as equal.",
+    "why": "It lets the student see the shared angle and the parallel lines that give the equal angles."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Two pairs of equal angles (AA)",
+    "also_right": []
+   },
+   "b": {
+    "best": "6 cm",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 13,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) contains a broken fragment, \\(\\frac{15 \\times 4}{...}\\), with a literal '...' as the denominator, which the app would draw as a meaningless fraction. Its 'wrong way round' examples (10 ÷ 4 × 15 = 37.5 and 4/15 × 10 ≈ 2.67) also match none of the given distractors (2.5, 9, 3.75), so it does not explain why students would choose the wrong options."
+   }
+  ],
+  "flags": [
+   "Question b, wording: Why (b) contains a broken fragment, \\(\\frac{15 \\times 4}{...}\\), with a literal '...' as the denominator, which the app would draw as a meaningless fraction. Its 'wrong way round' examples (10 ÷ 4 × 15 = 37.5 and 4/15 × 10 ≈ 2.67) also match none of the given distractors (2.5, 9, 3.75), so it does not explain why students would choose the wrong options."
+  ]
+ },
+ "final": {
+  "title": "Similar triangle proofs",
+  "card": [
+   "Two triangles are similar if they have the same shape but not always the same size. Matching angles are equal and matching sides are in the same ratio.",
+   "To prove similarity, give a reason for each fact. Use a test: two pairs of equal angles (AA), three pairs of sides in the same ratio, or two pairs of sides in the same ratio with equal angles between them.",
+   "Write the triangles with matching vertices in the same order. Then matching sides are in proportion, and you can use that to find a length.",
+   "Example: in \\(\\triangle ABC\\), \\(D\\) is on \\(AB\\), \\(E\\) is on \\(AC\\) and \\(DE \\parallel BC\\). Angle \\(A\\) is shared, and angle \\(ADE =\\) angle \\(ABC\\) (corresponding angles, parallel lines). So \\(\\triangle ADE \\sim \\triangle ABC\\) (AA), and \\(\\frac{AD}{AB} = \\frac{DE}{BC}\\)."
+  ],
+  "remember": "Give a reason for equal angles or ratios, name the test, then use matching sides in proportion.",
+  "a": {
+   "q": "Triangles \\(PQR\\) and \\(XYZ\\) have \\(\\angle P = \\angle X = 40^{\\circ}\\) and \\(\\angle Q = \\angle Y = 65^{\\circ}\\). Which test shows they are similar?",
+   "opts": [
+    "Two pairs of equal angles (AA)",
+    "Three pairs of equal sides (SSS)",
+    "Right angle, hypotenuse, side (RHS)",
+    "Two sides and the included angle equal (SAS)"
+   ],
+   "why": "Two pairs of angles are given as equal, so the AA test proves the triangles similar. The other tests need side lengths, and none are given, so they cannot be used.",
+   "clue": "Only angles are given. Which test uses only angles?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In \\(\\triangle ABC\\), \\(D\\) is on \\(AB\\) and \\(E\\) is on \\(AC\\), with \\(DE \\parallel BC\\). \\(AD = 4\\) cm, \\(AB = 10\\) cm and \\(BC = 15\\) cm. What is \\(DE\\)?",
+   "opts": [
+    "6 cm",
+    "10 cm",
+    "9 cm",
+    "37.5 cm"
+   ],
+   "why": "\\(\\triangle ADE \\sim \\triangle ABC\\) (AA), so \\(\\frac{DE}{BC} = \\frac{AD}{AB} = \\frac{4}{10}\\), and \\(DE = \\frac{4}{10} \\times 15 = 6\\) cm. Using \\(DB = 6\\) in place of \\(AB\\) gives \\(\\frac{4}{6} \\times 15 = 10\\), but \\(DB\\) is not a side of either triangle. Using \\(\\frac{6}{10}\\) gives 9, and turning the ratio upside down gives \\(\\frac{10}{4} \\times 15 = 37.5\\).",
+   "clue": "Match \\(DE\\) with \\(BC\\), and \\(AD\\) with the whole side \\(AB\\)."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "Triangle ABC with D on AB and E on AC, and segment DE drawn parallel to BC. Label the vertices A, B, C, D, E and mark DE and BC with matching parallel arrows. Angle A is marked as shared, and angles ADE and ABC are marked as equal.",
+    "why": "It lets the student see the shared angle and the parallel lines that give the equal angles."
+   }
+  ]
+ },
+ "cleared_by": "recheck"
 }

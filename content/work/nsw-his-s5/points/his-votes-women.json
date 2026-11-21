@@ -24,8 +24,143 @@
    0.33
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:51Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:52Z write: failed the content check, writing again",
+  "2026-11-20T12:44:57Z write: done",
+  "2026-11-20T12:53:26Z check: for review (first-nations)",
+  "2026-11-20T14:41:35Z review: rejected, to be written again",
+  "2026-11-20T14:58:19Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00036,
+  "write": 0.01531,
+  "check": 0.01498
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, his-votes-women-early-reforms, covers the same 1902 federal vote but is broader, adding South Australia's 1894 vote, the aged pension and the basic wage, and its exclusion note omits people of Asian and Pacific background, so a new point is the safer match.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Votes for women",
+  "card": [
+   "The Commonwealth Franchise Act 1902 gave most women the right to vote in federal elections. It also gave them the right to stand as candidates. Australia was one of the first countries to do this.",
+   "Women in South Australia had won both rights in 1894, and women in Western Australia gained the vote in 1899. Women in the other colonies had no vote at that time. The 1902 Act extended the vote to women across the whole nation.",
+   "The Act did not give the vote to everyone. It left out most Aboriginal people. It also left out many people of Asian and Pacific background, who were barred from the vote because of their race.",
+   "So the Act widened democracy for many women, but it still excluded people because of their race. Aboriginal people gained a fuller right to vote in federal elections only in 1962."
+  ],
+  "remember": "The 1902 Act gave most women the federal vote, but race still shut many people out.",
+  "a": {
+   "q": "Which statement best describes the Commonwealth Franchise Act 1902?",
+   "opts": [
+    "It gave most women federal votes but excluded many on race",
+    "It gave every adult in Australia the right to vote federally",
+    "It let women vote but not stand for federal election",
+    "It gave the vote to women in South Australia only"
+   ],
+   "why": "The Act let most women vote and stand in federal elections, but it left out most Aboriginal people and many people of Asian and Pacific background. It did not cover every adult, so the claim that everyone gained the vote is wrong.",
+   "clue": "Think about who gained rights and who was left out."
+  },
+  "b": {
+   "d": 3,
+   "q": "Wiradjuri woman Dora lived in New South Wales in 1903. Her neighbour Edith, a white woman, could enrol to vote in federal elections. Why was Dora most likely unable to?",
+   "opts": [
+    "The 1902 Act left out most Aboriginal people",
+    "The 1902 Act gave the vote only to women who owned land",
+    "The 1902 Act let women vote only in South Australia",
+    "The 1902 Act stopped women in NSW from voting federally"
+   ],
+   "why": "The Act gave most women the federal vote but excluded most Aboriginal people, so race decided who could enrol. The idea that only land-owning women could vote is tempting, but the card says the exclusion was based on race.",
+   "clue": "The Act widened democracy for many, but not on equal terms."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:19Z",
+   "step": "write",
+   "version": {
+    "title": "Votes for women",
+    "card": [
+     "The Commonwealth Franchise Act 1902 gave most women aged 21 and over the right to vote in federal elections and to stand for the federal parliament.",
+     "Australia was one of the first countries to give women both rights nationally. South Australian women had already won them in their colony in 1894.",
+     "The Act was not equal for all. Because of their race, it left out most Aboriginal people, and many people of Asian and Pacific Islander background.",
+     "Aboriginal people did not gain a full right to vote in federal elections until 1962. The Act widened democracy, but not for everyone."
+    ],
+    "remember": "In 1902 most women won the federal vote, but race still shut many people out.",
+    "a": {
+     "q": "Which statement best describes the Commonwealth Franchise Act 1902?",
+     "opts": [
+      "It gave most women the federal vote, with race-based limits",
+      "It gave every adult in Australia the federal vote",
+      "It let women vote in federal elections but not stand",
+      "It gave Aboriginal people a full federal vote"
+     ],
+     "why": "The Act let most women vote and stand in federal elections, but it left out most Aboriginal people and many people of Asian and Pacific Islander background. So it did not give every adult the vote.",
+     "clue": "Think about who gained the vote and who was left out."
+    },
+    "b": {
+     "d": 3,
+     "q": "A historian says the 1902 Act was a win for democracy in Australia. Which fact best shows the limits of that claim?",
+     "opts": [
+      "The Act left most Aboriginal people without the vote",
+      "South Australian women had voted since 1894",
+      "Women could stand for the federal parliament too",
+      "Australia was among the first to give women both rights"
+     ],
+     "why": "The Act widened the vote for most women, but it left out most Aboriginal people and many others because of their race. The other facts support the claim rather than show its limits.",
+     "clue": "Which fact shows who was still left out?"
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Votes for women",
+  "card": [
+   "The Commonwealth Franchise Act 1902 gave most women aged 21 and over the right to vote in federal elections and to stand for the federal parliament.",
+   "Australia was one of the first countries to give women both rights nationally. South Australian women had already won them in their colony in 1894.",
+   "The Act was not equal for all. Because of their race, it left out most Aboriginal people, and many people of Asian and Pacific Islander background.",
+   "Aboriginal people did not gain a full right to vote in federal elections until 1962. The Act widened democracy, but not for everyone."
+  ],
+  "remember": "In 1902 most women won the federal vote, but race still shut many people out.",
+  "a": {
+   "q": "Which statement best describes the Commonwealth Franchise Act 1902?",
+   "opts": [
+    "It gave most women the federal vote, with race-based limits",
+    "It gave every adult in Australia the federal vote",
+    "It let women vote in federal elections but not stand",
+    "It gave Aboriginal people a full federal vote"
+   ],
+   "why": "The Act let most women vote and stand in federal elections, but it left out most Aboriginal people and many people of Asian and Pacific Islander background. So it did not give every adult the vote.",
+   "clue": "Think about who gained the vote and who was left out."
+  },
+  "b": {
+   "d": 3,
+   "q": "A historian says the 1902 Act was a win for democracy in Australia. Which fact best shows the limits of that claim?",
+   "opts": [
+    "The Act left most Aboriginal people without the vote",
+    "South Australian women had voted since 1894",
+    "Women could stand for the federal parliament too",
+    "Australia was among the first to give women both rights"
+   ],
+   "why": "The Act widened the vote for most women, but it left out most Aboriginal people and many others because of their race. The other facts support the claim rather than show its limits.",
+   "clue": "Which fact shows who was still left out?"
+  }
+ },
+ "local": []
 }

@@ -8,8 +8,354 @@
    0.403
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:51Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:52Z write: done",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-20T13:44:56Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.00655,
+  "check": 0.01329,
+  "fix": 0.01977,
+  "recheck": 0.0133
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point is mainly about ending the White Australia policy and only defines multiculturalism in one line, without covering its adoption as official policy by the Whitlam and Fraser governments in the 1970s, so it does not teach the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The right option is the only one that names a time span ('until the mid-1960s') matching the 1960 date in the question. A student could match the dates and pick it without understanding assimilation. Consider adding a time detail to the distractors too, or removing it from the right option.",
+ "rejected": {
+  "title": "Multiculturalism",
+  "card": [
+   "Multiculturalism is the idea that people from many cultural backgrounds can live in one country and keep their own cultures and languages. It is also a government policy.",
+   "From the late 1940s to the mid-1960s, governments expected migrants to assimilate: to give up their old ways and become like the British-background majority. From the mid-1960s, a policy of integration accepted that migrants might keep some of their culture.",
+   "In the 1970s the Whitlam government and then the Fraser government made multiculturalism official policy. Both supported migrants to keep their cultures and languages.",
+   "Support included services for migrants, such as interpreters, and programs to share different cultures. One example is the Special Broadcasting Service (SBS), which broadcasts in many languages."
+  ],
+  "remember": "Multiculturalism backs migrants to keep their cultures and languages, and it became official policy in the 1970s.",
+  "a": {
+   "q": "What did the official policy of multiculturalism support migrants to do?",
+   "opts": [
+    "Keep their cultures and languages while living in Australia",
+    "Give up their old ways and copy the majority culture",
+    "Live apart from other Australians in separate communities",
+    "Return to their countries of origin after a few years"
+   ],
+   "why": "Multiculturalism supported migrants to keep their cultures and languages as part of Australian life. Giving up old ways describes assimilation, the policy from the late 1940s to the mid-1960s.",
+   "clue": "Think about what the earlier policies asked of migrants."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1960, a council officer in Sydney tells a new Greek family to stop speaking Greek in public and to adopt local habits quickly. Which policy idea does this fit best?",
+   "opts": [
+    "Assimilation, the policy until the mid-1960s",
+    "Multiculturalism, as adopted by the Whitlam government",
+    "Multiculturalism, as adopted by the Fraser government",
+    "A policy to support migrants to keep their languages"
+   ],
+   "why": "The officer expects the family to give up its old ways and become like the majority. That is assimilation, the policy from the late 1940s to the mid-1960s. Multiculturalism came in the 1970s and backed migrants to keep their cultures and languages.",
+   "clue": "Check the date and what the family is told to give up."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The right option is the only one that names a time span ('until the mid-1960s') matching the 1960 date in the question. A student could match the dates and pick it without understanding assimilation. Consider adding a time detail to the distractors too, or removing it from the right option."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Multiculturalism",
+     "card": [
+      "Multiculturalism is the idea that people from many cultural backgrounds can live in one country and keep their own cultures and languages. It is also a government policy.",
+      "Before the 1970s, Australian governments expected migrants to assimilate. This meant giving up their old ways and becoming like the British-background majority.",
+      "In the 1970s the Whitlam government and then the Fraser government made multiculturalism official policy. Both supported migrants to keep their cultures and languages.",
+      "Support included services for migrants, such as interpreters, and programs to share different cultures. One example is the Special Broadcasting Service (SBS), which broadcasts in many languages."
+     ],
+     "remember": "Multiculturalism backs migrants to keep their cultures and languages, and it became official policy in the 1970s.",
+     "a": {
+      "q": "What did the official policy of multiculturalism support migrants to do?",
+      "opts": [
+       "Keep their cultures and languages while living in Australia",
+       "Give up their old ways and copy the majority culture",
+       "Live apart from other Australians in separate communities",
+       "Return to their countries of origin after a few years"
+      ],
+      "why": "Multiculturalism supported migrants to keep their cultures and languages as part of Australian life. Giving up old ways describes assimilation, which was the earlier expectation.",
+      "clue": "Think about what the policy replaced."
+     },
+     "b": {
+      "d": 3,
+      "q": "In 1960, a council officer in Sydney tells a new Greek family to stop speaking Greek in public and to adopt local habits quickly. Which policy idea does this fit best?",
+      "opts": [
+       "Assimilation, the expectation before the 1970s",
+       "Multiculturalism, as adopted by the Whitlam government",
+       "Multiculturalism, as adopted by the Fraser government",
+       "A policy to support migrants to keep their languages"
+      ],
+      "why": "The officer expects the family to give up its old ways and become like the majority. That is assimilation, which was the usual expectation before the 1970s. Multiculturalism came later and backed migrants to keep their cultures and languages.",
+      "clue": "Check the date and what the family is told to give up."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Keep their cultures and languages while living in Australia",
+      "also_right": []
+     },
+     "b": {
+      "best": "Assimilation, the expectation before the 1970s",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "'Before the 1970s, Australian governments expected migrants to assimilate' oversimplifies. Assimilation was the policy from the late 1940s to the mid-1960s. From about the mid-1960s governments moved to a policy of integration before multiculturalism in the 1970s. Consider 'Until the mid-1960s' or a brief mention of integration."
+      }
+     ],
+     "sure": "medium",
+     "sensitive": "none",
+     "summary": "Both questions are sound and the intended answers are correct. The card says assimilation lasted until the 1970s, which skips the 1960s shift to integration; a small rewording would fix this."
+    },
+    "flags": [
+     "Card, fact: 'Before the 1970s, Australian governments expected migrants to assimilate' oversimplifies. Assimilation was the policy from the late 1940s to the mid-1960s. From about the mid-1960s governments moved to a policy of integration before multiculturalism in the 1970s. Consider 'Until the mid-1960s' or a brief mention of integration."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Multiculturalism",
+     "card": [
+      "Multiculturalism is the idea that people from many cultural backgrounds can live in one country and keep their own cultures and languages. It is also a government policy.",
+      "From the late 1940s to the mid-1960s, governments expected migrants to assimilate: to give up their old ways and become like the British-background majority. From the mid-1960s, a policy of integration accepted that migrants might keep some of their culture.",
+      "In the 1970s the Whitlam government and then the Fraser government made multiculturalism official policy. Both supported migrants to keep their cultures and languages.",
+      "Support included services for migrants, such as interpreters, and programs to share different cultures. One example is the Special Broadcasting Service (SBS), which broadcasts in many languages."
+     ],
+     "remember": "Multiculturalism backs migrants to keep their cultures and languages, and it became official policy in the 1970s.",
+     "a": {
+      "q": "What did the official policy of multiculturalism support migrants to do?",
+      "opts": [
+       "Keep their cultures and languages while living in Australia",
+       "Give up their old ways and copy the majority culture",
+       "Live apart from other Australians in separate communities",
+       "Return to their countries of origin after a few years"
+      ],
+      "why": "Multiculturalism supported migrants to keep their cultures and languages as part of Australian life. Giving up old ways describes assimilation, the policy from the late 1940s to the mid-1960s.",
+      "clue": "Think about what the earlier policies asked of migrants."
+     },
+     "b": {
+      "d": 3,
+      "q": "In 1960, a council officer in Sydney tells a new Greek family to stop speaking Greek in public and to adopt local habits quickly. Which policy idea does this fit best?",
+      "opts": [
+       "Assimilation, the policy until the mid-1960s",
+       "Multiculturalism, as adopted by the Whitlam government",
+       "Multiculturalism, as adopted by the Fraser government",
+       "A policy to support migrants to keep their languages"
+      ],
+      "why": "The officer expects the family to give up its old ways and become like the majority. That is assimilation, the policy from the late 1940s to the mid-1960s. Multiculturalism came in the 1970s and backed migrants to keep their cultures and languages.",
+      "clue": "Check the date and what the family is told to give up."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Keep their cultures and languages while living in Australia",
+       "also_right": []
+      },
+      "b": {
+       "best": "Assimilation, the policy until the mid-1960s",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The right option is the only one that names a time span ('until the mid-1960s') matching the 1960 date in the question. A student could match the dates and pick it without understanding assimilation. Consider adding a time detail to the distractors too, or removing it from the right option."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts check out, and both questions have one clear right answer. One minor issue: question b's right option gives away the answer by being the only one with a date span that matches 1960."
+     },
+     "flags": [
+      "Question b, wording: The right option is the only one that names a time span ('until the mid-1960s') matching the 1960 date in the question. A student could match the dates and pick it without understanding assimilation. Consider adding a time detail to the distractors too, or removing it from the right option."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:56Z",
+   "step": "write",
+   "version": {
+    "title": "Multiculturalism",
+    "card": [
+     "Multiculturalism is the idea that people from many cultural backgrounds can live in one country and keep their own cultures and languages. It is also a government policy.",
+     "From the late 1940s to the mid-1960s, governments expected migrants to assimilate: to give up their old ways and become like the British-background majority. From the mid-1960s, a policy of integration accepted that migrants might keep some of their culture.",
+     "In the 1970s the Whitlam government and then the Fraser government made multiculturalism official policy. Both supported migrants to keep their cultures and languages.",
+     "Support included services for migrants, such as interpreters, and programs to share different cultures. One example is the Special Broadcasting Service (SBS), which broadcasts in many languages."
+    ],
+    "remember": "Multiculturalism backs migrants to keep their cultures and languages, and it became official policy in the 1970s.",
+    "a": {
+     "q": "What did the official policy of multiculturalism support migrants to do?",
+     "opts": [
+      "Keep their own cultures and languages in Australia",
+      "Give up their old ways and copy the majority culture",
+      "Live apart from other Australians in separate communities",
+      "Return to their countries of origin after a few years"
+     ],
+     "why": "Multiculturalism supported migrants to keep their cultures and languages as part of Australian life. Giving up old ways describes assimilation, the policy from the late 1940s to the mid-1960s.",
+     "clue": "Think about what the earlier policies asked of migrants."
+    },
+    "b": {
+     "d": 3,
+     "q": "In 1960, a council officer in Sydney tells a new Greek family to stop speaking Greek in public and to adopt local habits quickly. Which policy idea does this fit best?",
+     "opts": [
+      "Assimilation, asking migrants to become like the majority",
+      "Integration, accepting that migrants keep some culture",
+      "Multiculturalism, backing migrants to keep their languages",
+      "Multiculturalism, asking migrants to adopt local habits"
+     ],
+     "why": "The officer expects the family to give up its old ways and become like the majority. That is assimilation, the policy from the late 1940s to the mid-1960s. Integration and multiculturalism came later and accepted or backed migrants keeping their cultures, so neither asked them to drop their language.",
+     "clue": "Check the date and what the family is told to give up."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Keep their own cultures and languages in Australia",
+     "also_right": []
+    },
+    "b": {
+     "best": "Assimilation, asking migrants to become like the majority",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Multiculturalism",
+  "card": [
+   "Multiculturalism is the idea that people from many cultural backgrounds can live in one country and keep their own cultures and languages. It is also a government policy.",
+   "From the late 1940s to the mid-1960s, governments expected migrants to assimilate: to give up their old ways and become like the British-background majority. From the mid-1960s, a policy of integration accepted that migrants might keep some of their culture.",
+   "In the 1970s the Whitlam government and then the Fraser government made multiculturalism official policy. Both supported migrants to keep their cultures and languages.",
+   "Support included services for migrants, such as interpreters, and programs to share different cultures. One example is the Special Broadcasting Service (SBS), which broadcasts in many languages."
+  ],
+  "remember": "Multiculturalism backs migrants to keep their cultures and languages, and it became official policy in the 1970s.",
+  "a": {
+   "q": "What did the official policy of multiculturalism support migrants to do?",
+   "opts": [
+    "Keep their own cultures and languages in Australia",
+    "Give up their old ways and copy the majority culture",
+    "Live apart from other Australians in separate communities",
+    "Return to their countries of origin after a few years"
+   ],
+   "why": "Multiculturalism supported migrants to keep their cultures and languages as part of Australian life. Giving up old ways describes assimilation, the policy from the late 1940s to the mid-1960s.",
+   "clue": "Think about what the earlier policies asked of migrants."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1960, a council officer in Sydney tells a new Greek family to stop speaking Greek in public and to adopt local habits quickly. Which policy idea does this fit best?",
+   "opts": [
+    "Assimilation, asking migrants to become like the majority",
+    "Integration, accepting that migrants keep some culture",
+    "Multiculturalism, backing migrants to keep their languages",
+    "Multiculturalism, asking migrants to adopt local habits"
+   ],
+   "why": "The officer expects the family to give up its old ways and become like the majority. That is assimilation, the policy from the late 1940s to the mid-1960s. Integration and multiculturalism came later and accepted or backed migrants keeping their cultures, so neither asked them to drop their language.",
+   "clue": "Check the date and what the family is told to give up."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Keep their own cultures and languages in Australia",
+   "also_right": []
+  },
+  "b": {
+   "best": "Assimilation, asking migrants to become like the majority",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Multiculturalism",
+  "card": [
+   "Multiculturalism is the idea that people from many cultural backgrounds can live in one country and keep their own cultures and languages. It is also a government policy.",
+   "From the late 1940s to the mid-1960s, governments expected migrants to assimilate: to give up their old ways and become like the British-background majority. From the mid-1960s, a policy of integration accepted that migrants might keep some of their culture.",
+   "In the 1970s the Whitlam government and then the Fraser government made multiculturalism official policy. Both supported migrants to keep their cultures and languages.",
+   "Support included services for migrants, such as interpreters, and programs to share different cultures. One example is the Special Broadcasting Service (SBS), which broadcasts in many languages."
+  ],
+  "remember": "Multiculturalism backs migrants to keep their cultures and languages, and it became official policy in the 1970s.",
+  "a": {
+   "q": "What did the official policy of multiculturalism support migrants to do?",
+   "opts": [
+    "Keep their own cultures and languages in Australia",
+    "Give up their old ways and copy the majority culture",
+    "Live apart from other Australians in separate communities",
+    "Return to their countries of origin after a few years"
+   ],
+   "why": "Multiculturalism supported migrants to keep their cultures and languages as part of Australian life. Giving up old ways describes assimilation, the policy from the late 1940s to the mid-1960s.",
+   "clue": "Think about what the earlier policies asked of migrants."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1960, a council officer in Sydney tells a new Greek family to stop speaking Greek in public and to adopt local habits quickly. Which policy idea does this fit best?",
+   "opts": [
+    "Assimilation, asking migrants to become like the majority",
+    "Integration, accepting that migrants keep some culture",
+    "Multiculturalism, backing migrants to keep their languages",
+    "Multiculturalism, asking migrants to adopt local habits"
+   ],
+   "why": "The officer expects the family to give up its old ways and become like the majority. That is assimilation, the policy from the late 1940s to the mid-1960s. Integration and multiculturalism came later and accepted or backed migrants keeping their cultures, so neither asked them to drop their language.",
+   "clue": "Check the date and what the family is told to give up."
+  }
+ },
+ "checked_by": "claude-code"
 }

@@ -24,8 +24,127 @@
    0.33
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:55Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:54Z write: done",
+  "2026-11-20T12:44:58Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00058,
+  "write": 0.00704,
+  "check": 0.00895
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Exponential models, goes beyond this brief by adding doubling-time and half-life formulas with fractional exponents, which is a change of depth rather than a small adjustment, so a new point is safer than a wrong match.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Exponential growth and decay",
+  "card": [
+   "In an exponential pattern, the amount is multiplied by the same number each step. That number is called the multiplier.",
+   [
+    "Growth",
+    "the multiplier is greater than 1, so the amount gets bigger each step. A population that rises by 10% each year has a multiplier of 1.1."
+   ],
+   [
+    "Decay",
+    "the multiplier is between 0 and 1, so the amount gets smaller each step. A drink whose excess heat falls by 20% each minute has a multiplier of 0.8."
+   ],
+   "Example: 200 bacteria double every hour. After 1 hour there are \\(200 \\times 2 = 400\\). After 2 hours there are \\(400 \\times 2 = 800\\). The multiplier is 2, so this is growth."
+  ],
+  "remember": "Multiplier above 1 gives growth. Multiplier between 0 and 1 gives decay.",
+  "a": {
+   "q": "A town's population is multiplied by 1.05 each year. Which describes this?",
+   "opts": [
+    "Exponential growth, as the multiplier is above 1",
+    "Exponential decay, as the multiplier is above 1",
+    "Exponential growth, as the multiplier is below 1",
+    "Exponential decay, as the multiplier is below 1"
+   ],
+   "why": "The multiplier 1.05 is greater than 1, so the population gets bigger each year. That is growth. Decay needs a multiplier between 0 and 1.",
+   "clue": "Is the multiplier bigger or smaller than 1?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A car is worth $20,000. Its value is multiplied by 0.9 each year. What is it worth after 2 years?",
+   "opts": [
+    "$16,200",
+    "$16,000",
+    "$18,000",
+    "$14,000"
+   ],
+   "why": "Each year the value is multiplied by 0.9. After 1 year it is \\(20{,}000 \\times 0.9 = 18{,}000\\), and after 2 years it is \\(18{,}000 \\times 0.9 = 16{,}200\\). Taking off 10% of the starting value twice gives $16,000, but the second 10% is taken from the new, smaller value.",
+   "clue": "Multiply by 0.9 twice, using the new value each time."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Exponential growth, as the multiplier is above 1",
+   "also_right": []
+  },
+  "b": {
+   "best": "$16,200",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card's multipliers (1.1 for a 10% rise, 0.8 for a 20% fall) are correct, and both questions and explanations agree with it (20,000 × 0.9 × 0.9 = 16,200)."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Exponential growth and decay",
+  "card": [
+   "In an exponential pattern, the amount is multiplied by the same number each step. That number is called the multiplier.",
+   [
+    "Growth",
+    "the multiplier is greater than 1, so the amount gets bigger each step. A population that rises by 10% each year has a multiplier of 1.1."
+   ],
+   [
+    "Decay",
+    "the multiplier is between 0 and 1, so the amount gets smaller each step. A drink whose excess heat falls by 20% each minute has a multiplier of 0.8."
+   ],
+   "Example: 200 bacteria double every hour. After 1 hour there are \\(200 \\times 2 = 400\\). After 2 hours there are \\(400 \\times 2 = 800\\). The multiplier is 2, so this is growth."
+  ],
+  "remember": "Multiplier above 1 gives growth. Multiplier between 0 and 1 gives decay.",
+  "a": {
+   "q": "A town's population is multiplied by 1.05 each year. Which describes this?",
+   "opts": [
+    "Exponential growth, as the multiplier is above 1",
+    "Exponential decay, as the multiplier is above 1",
+    "Exponential growth, as the multiplier is below 1",
+    "Exponential decay, as the multiplier is below 1"
+   ],
+   "why": "The multiplier 1.05 is greater than 1, so the population gets bigger each year. That is growth. Decay needs a multiplier between 0 and 1.",
+   "clue": "Is the multiplier bigger or smaller than 1?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A car is worth $20,000. Its value is multiplied by 0.9 each year. What is it worth after 2 years?",
+   "opts": [
+    "$16,200",
+    "$16,000",
+    "$18,000",
+    "$14,000"
+   ],
+   "why": "Each year the value is multiplied by 0.9. After 1 year it is \\(20{,}000 \\times 0.9 = 18{,}000\\), and after 2 years it is \\(18{,}000 \\times 0.9 = 16{,}200\\). Taking off 10% of the starting value twice gives $16,000, but the second 10% is taken from the new, smaller value.",
+   "clue": "Multiply by 0.9 twice, using the new value each time."
+  }
+ },
+ "cleared_by": "checker"
 }

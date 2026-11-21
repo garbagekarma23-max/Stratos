@@ -8,8 +8,230 @@
    0.36
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:46Z write: done",
+  "2026-11-20T12:35:48Z check: flagged",
+  "2026-11-20T12:44:55Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.0055,
+  "check": 0.0104,
+  "fix": 0.01463,
+  "recheck": 0.00646
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point defines the environment as the living and non-living world and never mentions built surroundings or natural processes changing it, so it teaches a different definition from the brief, and fixing that would mean rewriting the core idea rather than making a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Environment as a geographical idea",
+  "card": [
+   "In geography, the environment is the surroundings that people live in. It includes natural features such as rivers, soil, plants and weather.",
+   "The environment also includes built features that people have made, such as roads, houses, farms and dams.",
+   [
+    "Natural processes",
+    "change the environment without people, for example a flood that moves soil along a river or a storm that wears away a beach."
+   ],
+   [
+    "Human activity",
+    "changes the environment too, for example clearing bushland for a new suburb or building a dam across a river."
+   ]
+  ],
+  "remember": "The environment is the natural and built surroundings, and both nature and people change it.",
+  "a": {
+   "q": "Which of these is part of the built environment?",
+   "opts": [
+    "A highway through a valley",
+    "A river that flows to the sea",
+    "A bush fire started by lightning",
+    "A sandy beach shaped by waves"
+   ],
+   "why": "A highway was made by people, so it is a built feature of the environment. The river, the lightning fire and the beach come from natural processes, so they are natural features.",
+   "clue": "Which one was made by people?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Heavy rain in Lismore causes a river to flood and wash away a layer of soil from a paddock. What has changed the environment?",
+   "opts": [
+    "A natural process",
+    "Human activity",
+    "Both, as people built the paddock",
+    "Neither, as the paddock stays the same"
+   ],
+   "why": "Rain and flooding are natural processes, and they changed the soil without any action by people. Option three is tempting because people built the paddock, but the change in the soil here was caused by the flood.",
+   "clue": "Did people do anything to cause the soil to move?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A highway through a valley",
+   "also_right": []
+  },
+  "b": {
+   "best": "A natural process",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says 'Option three is tempting because people built the paddock', but options are shown in random order. In this order that option ('Both, as people built the paddock') is fourth, so the reference points students to the wrong option. Name the option by its text instead."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Why (a) calls the lightning-started bush fire a natural feature. A bush fire is a natural process or event, not a feature like a river or beach, and the card itself treats floods and storms as processes. This could blur the card's split between features and processes."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are clear and match the card. Why (b) refers to 'option three', which is wrong once the options are shuffled, and why (a) loosely calls a bush fire a natural 'feature' rather than a process."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) says 'Option three is tempting because people built the paddock', but options are shown in random order. In this order that option ('Both, as people built the paddock') is fourth, so the reference points students to the wrong option. Name the option by its text instead.",
+  "Question a, wording: Why (a) calls the lightning-started bush fire a natural feature. A bush fire is a natural process or event, not a feature like a river or beach, and the card itself treats floods and storms as processes. This could blur the card's split between features and processes."
+ ],
+ "proposal": {
+  "title": "Environment as a geographical idea",
+  "card": [
+   "In geography, the environment is the surroundings that people live in. It includes natural features such as rivers, soil, plants and weather.",
+   "The environment also includes built features that people have made, such as roads, houses, farms and dams.",
+   [
+    "Natural processes",
+    "change the environment without people, for example a flood that moves soil along a river or a storm that wears away a beach."
+   ],
+   [
+    "Human activity",
+    "changes the environment too, for example clearing bushland for a new suburb or building a dam across a river."
+   ]
+  ],
+  "remember": "The environment is the natural and built surroundings, and both nature and people change it.",
+  "a": {
+   "q": "Which of these is part of the built environment?",
+   "opts": [
+    "A highway through a valley",
+    "A river that flows to the sea",
+    "A forest growing on a hillside",
+    "A sandy beach shaped by waves"
+   ],
+   "why": "A highway was made by people, so it is a built feature of the environment. The river, the forest and the beach were not made by people, so they are natural features.",
+   "clue": "Which one was made by people?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Heavy rain in Lismore causes a river to flood and wash away a layer of soil from a paddock. What has changed the environment?",
+   "opts": [
+    "A natural process",
+    "Human activity",
+    "Both, as people built the paddock",
+    "Neither, as the paddock stays the same"
+   ],
+   "why": "Rain and flooding are natural processes, and they moved the soil without any action by people. The option 'Both, as people built the paddock' is tempting because a farm is a built feature, but the change to the soil here was caused by the flood.",
+   "clue": "Did people do anything to cause the soil to move?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A highway through a valley",
+    "also_right": []
+   },
+   "b": {
+    "best": "A natural process",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 13,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says 'Option three is tempting because people built the paddock', but options are shown in random order. In this order that option ('Both, as people built the paddock') is fourth, so the reference points students to the wrong option. Name the option by its text instead."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Why (a) calls the lightning-started bush fire a natural feature. A bush fire is a natural process or event, not a feature like a river or beach, and the card itself treats floods and storms as processes. This could blur the card's split between features and processes."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) says 'Option three is tempting because people built the paddock', but options are shown in random order. In this order that option ('Both, as people built the paddock') is fourth, so the reference points students to the wrong option. Name the option by its text instead.",
+   "Question a, wording: Why (a) calls the lightning-started bush fire a natural feature. A bush fire is a natural process or event, not a feature like a river or beach, and the card itself treats floods and storms as processes. This could blur the card's split between features and processes."
+  ]
+ },
+ "final": {
+  "title": "Environment as a geographical idea",
+  "card": [
+   "In geography, the environment is the surroundings that people live in. It includes natural features such as rivers, soil, plants and weather.",
+   "The environment also includes built features that people have made, such as roads, houses, farms and dams.",
+   [
+    "Natural processes",
+    "change the environment without people, for example a flood that moves soil along a river or a storm that wears away a beach."
+   ],
+   [
+    "Human activity",
+    "changes the environment too, for example clearing bushland for a new suburb or building a dam across a river."
+   ]
+  ],
+  "remember": "The environment is the natural and built surroundings, and both nature and people change it.",
+  "a": {
+   "q": "Which of these is part of the built environment?",
+   "opts": [
+    "A highway through a valley",
+    "A river that flows to the sea",
+    "A forest growing on a hillside",
+    "A sandy beach shaped by waves"
+   ],
+   "why": "A highway was made by people, so it is a built feature of the environment. The river, the forest and the beach were not made by people, so they are natural features.",
+   "clue": "Which one was made by people?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Heavy rain in Lismore causes a river to flood and wash away a layer of soil from a paddock. What has changed the environment?",
+   "opts": [
+    "A natural process",
+    "Human activity",
+    "Both, as people built the paddock",
+    "Neither, as the paddock stays the same"
+   ],
+   "why": "Rain and flooding are natural processes, and they moved the soil without any action by people. The option 'Both, as people built the paddock' is tempting because a farm is a built feature, but the change to the soil here was caused by the flood.",
+   "clue": "Did people do anything to cause the soil to move?"
+  }
+ },
+ "cleared_by": "recheck"
 }

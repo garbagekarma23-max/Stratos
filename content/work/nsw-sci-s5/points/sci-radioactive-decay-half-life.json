@@ -24,8 +24,123 @@
    0.226
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:58Z write: failed the content check, writing again",
+  "2026-11-20T12:45:01Z write: done",
+  "2026-11-20T12:53:29Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "write": 0.01375,
+  "check": 0.00788
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No single bank point teaches both halves of this brief: the alpha, beta and gamma card covers emission types but not half-life, and the half-life cards cover half-life without the radiation types, while the radiocarbon card adds dating beyond the brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Radioactive decay and half-life",
+  "card": [
+   "Some atoms have an unstable nucleus. It gives off energy or particles to become more stable. This is radioactive decay.",
+   [
+    "Alpha",
+    "a particle of two protons and two neutrons. Beta is a fast electron from the nucleus. Gamma is a burst of energy, not a particle."
+   ],
+   "Alpha is stopped by paper and beta by thin aluminium. Gamma is only reduced by thick lead or concrete.",
+   "Half-life is the time for half the atoms in a sample to decay. The decay of one atom cannot be predicted, but a large sample follows a steady pattern. After one half-life, half the unstable atoms are left. After two, a quarter are left."
+  ],
+  "remember": "Unstable nuclei decay by giving off alpha, beta or gamma radiation. Half-life is the time for half the atoms to decay.",
+  "a": {
+   "q": "What does the half-life of a radioactive sample tell you?",
+   "opts": [
+    "The time for half its unstable atoms to decay",
+    "The time for all its unstable atoms to decay",
+    "The time for its radiation to be halved by lead",
+    "The time for each atom to lose half its mass"
+   ],
+   "why": "Half-life is the time for half the unstable atoms in a sample to decay. It does not mean all atoms decay in two half-lives, because only half of the remaining atoms decay in each half-life.",
+   "clue": "Think about how many atoms have decayed, not how long one atom lasts."
+  },
+  "b": {
+   "d": 3,
+   "q": "A sample of a radioisotope has a half-life of 6 hours. Mia starts with 80 g of the isotope. How much is left after 12 hours?",
+   "opts": [
+    "20 g",
+    "40 g",
+    "0 g",
+    "60 g"
+   ],
+   "why": "12 hours is two half-lives. The amount halves from 80 g to 40 g, then from 40 g to 20 g. The tempting answer of 40 g forgets the second half-life.",
+   "clue": "Work out how many half-lives fit into 12 hours."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The time for half its unstable atoms to decay",
+   "also_right": []
+  },
+  "b": {
+   "best": "20 g",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Radioactive decay and half-life",
+  "card": [
+   "Some atoms have an unstable nucleus. It gives off energy or particles to become more stable. This is radioactive decay.",
+   [
+    "Alpha",
+    "a particle of two protons and two neutrons. Beta is a fast electron from the nucleus. Gamma is a burst of energy, not a particle."
+   ],
+   "Alpha is stopped by paper and beta by thin aluminium. Gamma is only reduced by thick lead or concrete.",
+   "Half-life is the time for half the atoms in a sample to decay. The decay of one atom cannot be predicted, but a large sample follows a steady pattern. After one half-life, half the unstable atoms are left. After two, a quarter are left."
+  ],
+  "remember": "Unstable nuclei decay by giving off alpha, beta or gamma radiation. Half-life is the time for half the atoms to decay.",
+  "a": {
+   "q": "What does the half-life of a radioactive sample tell you?",
+   "opts": [
+    "The time for half its unstable atoms to decay",
+    "The time for all its unstable atoms to decay",
+    "The time for its radiation to be halved by lead",
+    "The time for each atom to lose half its mass"
+   ],
+   "why": "Half-life is the time for half the unstable atoms in a sample to decay. It does not mean all atoms decay in two half-lives, because only half of the remaining atoms decay in each half-life.",
+   "clue": "Think about how many atoms have decayed, not how long one atom lasts."
+  },
+  "b": {
+   "d": 3,
+   "q": "A sample of a radioisotope has a half-life of 6 hours. Mia starts with 80 g of the isotope. How much is left after 12 hours?",
+   "opts": [
+    "20 g",
+    "40 g",
+    "0 g",
+    "60 g"
+   ],
+   "why": "12 hours is two half-lives. The amount halves from 80 g to 40 g, then from 40 g to 20 g. The tempting answer of 40 g forgets the second half-life.",
+   "clue": "Work out how many half-lives fit into 12 hours."
+  }
+ },
+ "cleared_by": "checker"
 }

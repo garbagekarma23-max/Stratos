@@ -12,8 +12,181 @@
    0.249
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: flagged",
+  "2026-11-20T12:53:29Z fix: suggested",
+  "2026-11-20T14:44:36Z review: rejected, to be written again",
+  "2026-11-20T14:58:20Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.00602,
+  "check": 0.01201,
+  "fix": 0.0183
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers xylem and phloem transport well, but the new point also requires the support role of stems, which that card does not teach, so a new point is the safer match.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Plant transport and support",
+  "card": [
+   [
+    "Roots",
+    "take up water and minerals from the soil. They also anchor the plant in the ground."
+   ],
+   [
+    "Xylem",
+    "tubes that carry water, and the minerals dissolved in it, up from the roots to the stem and leaves."
+   ],
+   [
+    "Phloem",
+    "tubes that carry sugars made in the leaves to other parts of the plant, such as roots and fruits."
+   ],
+   [
+    "Stems",
+    "hold the leaves up towards the light. The xylem and phloem run through the stem, linking the roots and the leaves."
+   ]
+  ],
+  "remember": "Xylem moves water up from the roots. Phloem moves sugars from the leaves. Stems hold the plant up.",
+  "a": {
+   "q": "Which part of a plant carries sugars made in the leaves to the rest of the plant?",
+   "opts": [
+    "Phloem",
+    "Xylem",
+    "Roots",
+    "Stem"
+   ],
+   "why": "Phloem tubes carry sugars from the leaves to other parts of the plant. Xylem is the most tempting wrong answer, but it carries water and minerals up from the roots.",
+   "clue": "Which tubes move sugars rather than water?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya cuts the bark and phloem in a ring around a tree branch. The xylem inside is left unharmed. What is most likely to happen to the leaves beyond the cut?",
+   "opts": [
+    "They still get water, but sugars cannot leave them",
+    "They get no water, but sugars can still leave them",
+    "They get no water and sugars cannot leave them",
+    "They still get water and sugars still leave them"
+   ],
+   "why": "The xylem is unharmed, so water and minerals can still travel up to the leaves. The phloem is cut, so sugars made in those leaves cannot be carried away to other parts of the plant.",
+   "clue": "Which tubes were cut, and what do they carry?"
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:20Z",
+   "step": "write",
+   "version": {
+    "title": "Plant transport and support",
+    "card": [
+     [
+      "Roots",
+      "take in water and dissolved minerals from the soil, mostly through tiny root hairs. They also anchor the plant in the ground."
+     ],
+     [
+      "Xylem",
+      "tubes that carry water and minerals up from the roots, through the stem, to the leaves."
+     ],
+     [
+      "Phloem",
+      "tubes that carry sugars made in the leaves to the parts that use or store them, such as growing tips, roots and fruit."
+     ],
+     [
+      "Stems",
+      "hold the leaves up towards the light. The xylem and phloem run through the stem, linking the roots and the leaves."
+     ]
+    ],
+    "remember": "Water goes up in the xylem, sugars move out of the leaves in the phloem, and the stem holds it all up.",
+    "a": {
+     "q": "A carrot stores sugar in its root, but the sugar is made in its leaves. How does the sugar reach the root?",
+     "opts": [
+      "Through the phloem",
+      "Through the xylem",
+      "Through the root hairs",
+      "Through water in the soil"
+     ],
+     "why": "Sugars made in the leaves travel in the phloem to the parts that store them, such as the carrot's root. Xylem carries water up from the roots, the other way.",
+     "clue": "Which tubes carry sugars?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Celery stalks are stood in water mixed with blue food dye. A day later, thin blue lines run up the stalks to the leaves. Which tubes carried the dye?",
+     "opts": [
+      "The xylem, which carries water up",
+      "The phloem, which carries sugars up",
+      "The phloem, which carries water up",
+      "The root hairs, which carry dye up"
+     ],
+     "why": "The dye travels with the water, and water moves up the stalk in the xylem. Phloem carries sugars made in the leaves, not water taken in from below.",
+     "clue": "What does the dye travel with?"
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Plant transport and support",
+  "card": [
+   [
+    "Roots",
+    "take in water and dissolved minerals from the soil, mostly through tiny root hairs. They also anchor the plant in the ground."
+   ],
+   [
+    "Xylem",
+    "tubes that carry water and minerals up from the roots, through the stem, to the leaves."
+   ],
+   [
+    "Phloem",
+    "tubes that carry sugars made in the leaves to the parts that use or store them, such as growing tips, roots and fruit."
+   ],
+   [
+    "Stems",
+    "hold the leaves up towards the light. The xylem and phloem run through the stem, linking the roots and the leaves."
+   ]
+  ],
+  "remember": "Water goes up in the xylem, sugars move out of the leaves in the phloem, and the stem holds it all up.",
+  "a": {
+   "q": "A carrot stores sugar in its root, but the sugar is made in its leaves. How does the sugar reach the root?",
+   "opts": [
+    "Through the phloem",
+    "Through the xylem",
+    "Through the root hairs",
+    "Through water in the soil"
+   ],
+   "why": "Sugars made in the leaves travel in the phloem to the parts that store them, such as the carrot's root. Xylem carries water up from the roots, the other way.",
+   "clue": "Which tubes carry sugars?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Celery stalks are stood in water mixed with blue food dye. A day later, thin blue lines run up the stalks to the leaves. Which tubes carried the dye?",
+   "opts": [
+    "The xylem, which carries water up",
+    "The phloem, which carries sugars up",
+    "The phloem, which carries water up",
+    "The root hairs, which carry dye up"
+   ],
+   "why": "The dye travels with the water, and water moves up the stalk in the xylem. Phloem carries sugars made in the leaves, not water taken in from below.",
+   "clue": "What does the dye travel with?"
+  }
+ },
+ "local": []
 }

@@ -12,8 +12,207 @@
    0.221
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 may adapt geo-layers-gis, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:45Z confirm: Claude Opus 5.5 may adapt geo-layers-gis, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt geo-layers-gis (2 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting geo-layers-gis on the next run",
+  "2026-11-20T14:12:37Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "confirm": 0.0071,
+  "adapt": 0.00424,
+  "check": 0.0098
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-layers-gis",
+  "changes": [
+   "Change the Tasmania setting in question b to a New South Wales location, so the example is local to the NSW course.",
+   "Check that the card's depth suits Stage 4 students in Years 7 and 8, since it was written for Year 9."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea of layering data in a GIS to spot patterns, but its example is set in Tasmania and it was written for Year 9, so it needs a local example and a depth check for Years 7 and 8.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "geo-layers-gis",
+  "changes": [
+   "Set question b in a New South Wales location instead of Tasmania, for example a NSW farming region, so the example is local to the course.",
+   "Add population to the list of example layers on the card, alongside roads and rivers, to match the brief."
+  ],
+  "sure": "medium",
+  "reason": "The Year 9 'Layers in a GIS' point teaches the same idea of overlaying data layers on one digital map to compare patterns, at a depth that suits Years 7 and 8, and only needs a NSW example and population added as a layer.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "geo-layers-gis",
+  "changes": [
+   "Add roads, rivers and population to the card's example layers, to match the brief.",
+   "Set question b in a New South Wales place instead of Tasmania, and reword both questions."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card2",
+   "a.q",
+   "b.q",
+   "b.opt1",
+   "b.opt3",
+   "b.why"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same idea of layering data on one digital map to compare patterns, at a depth that suits Years 7 and 8, and only needs the brief's layers added.",
+   "item": "972f63bbff0fdab1",
+   "result": "decided",
+   "saved": {
+    "id": "geo-geographic-information-systems",
+    "title": "Geographic information systems",
+    "brief": "aa54c0e2e717",
+    "shortlist": [
+     [
+      "geo-layers-gis",
+      0.386
+     ],
+     [
+      "geo-maps-spatial-technologies",
+      0.221
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00024,
+     "confirm": 0.0071
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "geo-layers-gis",
+     "changes": [
+      "Change the Tasmania setting in question b to a New South Wales location, so the example is local to the NSW course.",
+      "Check that the card's depth suits Stage 4 students in Years 7 and 8, since it was written for Year 9."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same idea of layering data in a GIS to spot patterns, but its example is set in Tasmania and it was written for Year 9, so it needs a local example and a depth check for Years 7 and 8.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "geo-layers-gis",
+     "changes": [
+      "Set question b in a New South Wales location instead of Tasmania, for example a NSW farming region, so the example is local to the course.",
+      "Add population to the list of example layers on the card, alongside roads and rivers, to match the brief."
+     ],
+     "sure": "medium",
+     "reason": "The Year 9 'Layers in a GIS' point teaches the same idea of overlaying data layers on one digital map to compare patterns, at a depth that suits Years 7 and 8, and only needs a NSW example and population added as a layer.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "72c13d6115c19d3d"
+  }
+ ],
+ "draft": {
+  "title": "Layers in a GIS",
+  "card": [
+   "A geographical information system (GIS) is software that stores geographical data. It keeps each type of data as its own map layer.",
+   "Layers can show different things for the same area, such as roads, rivers, population, soils or rainfall. Each layer can be switched on or off.",
+   "Laying one layer over another lets you compare them. You can look for places where features match up or overlap, which may show a pattern.",
+   "A pattern shows that two things occur in the same places. It does not prove that one causes the other, so more evidence may be needed."
+  ],
+  "remember": "A GIS keeps each type of data as a layer, and overlaying layers helps you spot patterns.",
+  "a": {
+   "q": "A GIS has a layer for rivers and a layer for farms. What can you do by placing one layer over the other?",
+   "opts": [
+    "See whether farms tend to be close to rivers",
+    "Show that rivers are the cause of the farms",
+    "Combine rivers and farms into a single layer",
+    "Measure how much rain falls on each farm"
+   ],
+   "why": "Overlaying layers lets you compare where two things are, so you can see whether farms cluster near rivers. It does not prove rivers caused the farms, because a pattern only shows that things occur in the same places.",
+   "clue": "Overlaying lets you compare where things are."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia uses a GIS in the Riverina, NSW. She overlays a layer of wheat farms on a layer of annual rainfall. Most farms sit in areas with moderate rainfall. What can she conclude?",
+   "opts": [
+    "There is a pattern linking wheat farms and rainfall",
+    "Rainfall alone has caused the farms to be there",
+    "Farms in the Riverina only exist in moderate rainfall",
+    "The rainfall layer has been changed by the farm layer"
+   ],
+   "why": "Overlaying the layers shows that the farms and moderate rainfall occur in the same places, which is a pattern. It does not prove rainfall alone caused the farms, because other layers such as rivers or roads could also matter.",
+   "clue": "A match in location shows a pattern, not a cause."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "See whether farms tend to be close to rivers",
+   "also_right": []
+  },
+  "b": {
+   "best": "There is a pattern linking wheat farms and rainfall",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Layers in a GIS",
+  "card": [
+   "A geographical information system (GIS) is software that stores geographical data. It keeps each type of data as its own map layer.",
+   "Layers can show different things for the same area, such as roads, rivers, population, soils or rainfall. Each layer can be switched on or off.",
+   "Laying one layer over another lets you compare them. You can look for places where features match up or overlap, which may show a pattern.",
+   "A pattern shows that two things occur in the same places. It does not prove that one causes the other, so more evidence may be needed."
+  ],
+  "remember": "A GIS keeps each type of data as a layer, and overlaying layers helps you spot patterns.",
+  "a": {
+   "q": "A GIS has a layer for rivers and a layer for farms. What can you do by placing one layer over the other?",
+   "opts": [
+    "See whether farms tend to be close to rivers",
+    "Show that rivers are the cause of the farms",
+    "Combine rivers and farms into a single layer",
+    "Measure how much rain falls on each farm"
+   ],
+   "why": "Overlaying layers lets you compare where two things are, so you can see whether farms cluster near rivers. It does not prove rivers caused the farms, because a pattern only shows that things occur in the same places.",
+   "clue": "Overlaying lets you compare where things are."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia uses a GIS in the Riverina, NSW. She overlays a layer of wheat farms on a layer of annual rainfall. Most farms sit in areas with moderate rainfall. What can she conclude?",
+   "opts": [
+    "There is a pattern linking wheat farms and rainfall",
+    "Rainfall alone has caused the farms to be there",
+    "Farms in the Riverina only exist in moderate rainfall",
+    "The rainfall layer has been changed by the farm layer"
+   ],
+   "why": "Overlaying the layers shows that the farms and moderate rainfall occur in the same places, which is a pattern. It does not prove rainfall alone caused the farms, because other layers such as rivers or roads could also matter.",
+   "clue": "A match in location shows a pattern, not a cause."
+  }
+ }
 }

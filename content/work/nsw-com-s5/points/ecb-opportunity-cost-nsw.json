@@ -16,8 +16,213 @@
    0.237
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 may adapt eco-opportunity-cost, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:40Z confirm: Claude Opus 5.5 may adapt eco-opportunity-cost, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt eco-opportunity-cost (2 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting eco-opportunity-cost on the next run",
+  "2026-11-20T14:12:37Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "confirm": 0.00723,
+  "adapt": 0.005,
+  "check": 0.00929
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "eco-opportunity-cost",
+  "changes": [
+   "Replace the Victorian economics context and Ballarat council example with a NSW Stage 5 example, such as a student choosing between a paid shift and study.",
+   "Adjust the cost-benefit analysis and trade-off wording to the depth of the NSW Commerce Stage 5 Foundations of economics content, keeping the point at a Year 9 and 10 level."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same core idea of opportunity cost as the next best option given up, but its Victorian examples and extra cost-benefit material need localising and trimming for NSW Stage 5 Commerce.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "eco-opportunity-cost",
+  "changes": [
+   "Change the Ballarat council in question b to a New South Wales council, such as Dubbo or Wollongong, so the example is local to the course."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches opportunity cost as the next best option given up, at a depth that suits Years 9 and 10, with fair questions; only the Victorian place in one question needs a NSW example.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "eco-opportunity-cost",
+  "changes": [
+   "Change the Ballarat council in question b to a New South Wales council, such as Dubbo or Wollongong.",
+   "Add the brief's example to the card: a student who studies instead of working a shift gives up the wage they would have earned, if working was the next best option."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card2",
+   "a.q",
+   "a.opt1",
+   "a.opt2",
+   "a.opt3",
+   "a.opt4",
+   "a.why",
+   "a.clue",
+   "b.q",
+   "b.why"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches opportunity cost as the single next best option given up, at a depth that suits Years 9 and 10. It needs a NSW place in question b and the brief's example of a wage given up to study.",
+   "item": "ba64769cb9c2e3db",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-opportunity-cost-nsw",
+    "title": "Opportunity cost",
+    "brief": "38eeed140755",
+    "shortlist": [
+     [
+      "eco-opportunity-cost",
+      0.559
+     ],
+     [
+      "bus-sources-business-ideas",
+      0.262
+     ],
+     [
+      "e-scarcity",
+      0.237
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00015,
+     "confirm": 0.00723
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "eco-opportunity-cost",
+     "changes": [
+      "Replace the Victorian economics context and Ballarat council example with a NSW Stage 5 example, such as a student choosing between a paid shift and study.",
+      "Adjust the cost-benefit analysis and trade-off wording to the depth of the NSW Commerce Stage 5 Foundations of economics content, keeping the point at a Year 9 and 10 level."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same core idea of opportunity cost as the next best option given up, but its Victorian examples and extra cost-benefit material need localising and trimming for NSW Stage 5 Commerce.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "eco-opportunity-cost",
+     "changes": [
+      "Change the Ballarat council in question b to a New South Wales council, such as Dubbo or Wollongong, so the example is local to the course."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches opportunity cost as the next best option given up, at a depth that suits Years 9 and 10, with fair questions; only the Victorian place in one question needs a NSW example.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "7b6d5db38d07cd79"
+  }
+ ],
+ "draft": {
+  "title": "Opportunity cost",
+  "card": [
+   "Resources are scarce, so choosing one option means giving up others. Opportunity cost is the value of the next best option given up.",
+   "It is only the single next best option, not every option left behind. It is not always money: time, land or effort can be what is given up. A student who studies instead of working a shift gives up the wage they would have earned, if working was the next best option.",
+   "A trade-off is the act of giving up one thing to get another. Weighing the opportunity cost shows what each choice really costs.",
+   "In a cost-benefit analysis, a person or government compares the costs and benefits of a choice. A choice is worth making when its benefits outweigh its costs, including the opportunity cost."
+  ],
+  "remember": "Every choice has a cost: the next best option you gave up.",
+  "a": {
+   "q": "Mia has a free Saturday. She could work a shift for $120, go to the beach, or study. She chooses the beach and ranks studying second. What is her opportunity cost?",
+   "opts": [
+    "The study time she gave up",
+    "The $120 she would have earned",
+    "The study time and the $120 together",
+    "The cost of getting to the beach"
+   ],
+   "why": "Opportunity cost is the next best option given up, and for Mia that is studying. The $120 shift was a third choice, so it is not counted. Adding it would count more than the single next best option.",
+   "clue": "Which option did she rank second?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Dubbo council has land for one project. It could build a library, which it ranks first, a car park, which it ranks second, or a skate park, which it ranks third. What is the opportunity cost of choosing the library?",
+   "opts": [
+    "The car park",
+    "The skate park",
+    "The car park and the skate park",
+    "Nothing, as the library was its first choice"
+   ],
+   "why": "The opportunity cost is the next best option given up, which is the car park. The skate park is also given up but ranks lower, so it is not counted. Choosing the best option still has an opportunity cost, because something is given up.",
+   "clue": "Does making the best choice mean nothing at all is given up?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The study time she gave up",
+   "also_right": []
+  },
+  "b": {
+   "best": "The car park",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Opportunity cost",
+  "card": [
+   "Resources are scarce, so choosing one option means giving up others. Opportunity cost is the value of the next best option given up.",
+   "It is only the single next best option, not every option left behind. It is not always money: time, land or effort can be what is given up. A student who studies instead of working a shift gives up the wage they would have earned, if working was the next best option.",
+   "A trade-off is the act of giving up one thing to get another. Weighing the opportunity cost shows what each choice really costs.",
+   "In a cost-benefit analysis, a person or government compares the costs and benefits of a choice. A choice is worth making when its benefits outweigh its costs, including the opportunity cost."
+  ],
+  "remember": "Every choice has a cost: the next best option you gave up.",
+  "a": {
+   "q": "Mia has a free Saturday. She could work a shift for $120, go to the beach, or study. She chooses the beach and ranks studying second. What is her opportunity cost?",
+   "opts": [
+    "The study time she gave up",
+    "The $120 she would have earned",
+    "The study time and the $120 together",
+    "The cost of getting to the beach"
+   ],
+   "why": "Opportunity cost is the next best option given up, and for Mia that is studying. The $120 shift was a third choice, so it is not counted. Adding it would count more than the single next best option.",
+   "clue": "Which option did she rank second?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Dubbo council has land for one project. It could build a library, which it ranks first, a car park, which it ranks second, or a skate park, which it ranks third. What is the opportunity cost of choosing the library?",
+   "opts": [
+    "The car park",
+    "The skate park",
+    "The car park and the skate park",
+    "Nothing, as the library was its first choice"
+   ],
+   "why": "The opportunity cost is the next best option given up, which is the car park. The skate park is also given up but ranks lower, so it is not counted. Choosing the best option still has an opportunity cost, because something is given up.",
+   "clue": "Does making the best choice mean nothing at all is given up?"
+  }
+ }
 }

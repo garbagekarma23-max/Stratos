@@ -12,8 +12,207 @@
    0.208
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:58Z write: failed the content check, writing again",
+  "2026-11-20T12:45:01Z write: done (still fails the content check)",
+  "2026-11-20T12:53:29Z check: flagged",
+  "2026-11-20T13:00:01Z fix: suggested",
+  "2026-11-20T13:23:46Z autoreview: cleared with the fix (the content check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.0151,
+  "check": 0.00942,
+  "fix": 0.023
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point covers the ionic side of the brief, which needs high melting points and conduction when dissolved for ionic compounds, and the closest covalent points teach only molecular and network properties at a different scope.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Properties from bonding",
+  "card": [
+   [
+    "Ionic",
+    "Strong attractions between oppositely charged ions hold the solid together. Ionic compounds have high melting points and are hard but brittle."
+   ],
+   [
+    "Conduction",
+    "Ionic compounds do not conduct as solids, because the ions are locked in place. They conduct when dissolved in water or melted, because the ions are then free to move."
+   ],
+   [
+    "Covalent",
+    "Many covalent substances are made of separate molecules. The attractions between molecules are weak and easy to overcome, so they often have low melting points. Molecules have no charged particles free to move, so they usually do not conduct."
+   ],
+   [
+    "Uses",
+    "Properties decide uses. Wax is a covalent substance that melts easily, so it suits candles. Salt, an ionic compound, has a high melting point and dissolves in water to conduct."
+   ]
+  ],
+  "remember": "Ionic: high melting point, conducts only when dissolved or melted. Covalent molecules: often low melting point, usually no conduction.",
+  "a": {
+   "q": "Why does solid sodium chloride not conduct electricity, while a solution of it does?",
+   "opts": [
+    "Its ions cannot move in the solid but can in solution",
+    "Its electrons cannot move in the solid but can in solution",
+    "Its molecules are packed close in solid, spread in solution",
+    "Its atoms have no charge in the solid but gain it in solution"
+   ],
+   "why": "Sodium chloride is made of ions. In the solid they cannot move, but in water they are free to move and carry charge. The option about electrons is tempting, but the charge carriers here are ions.",
+   "clue": "What particles carry the charge, and can they move?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam tests two white solids. Solid X melts at 800 °C and its solution conducts. Solid Y melts at 60 °C and its solution does not conduct. What does this suggest about X and Y?",
+   "opts": [
+    "X is ionic and Y is made of covalent molecules",
+    "X is made of covalent molecules and Y is ionic",
+    "Both X and Y are ionic compounds",
+    "Both X and Y are made of covalent molecules"
+   ],
+   "why": "A high melting point and a solution that conducts match an ionic compound. A low melting point and no conduction match covalent molecules. Reversing them is tempting if you think strong bonds mean low melting points, but strong attractions between ions need much more heat to break.",
+   "clue": "Match each test result to ions or molecules."
+  }
+ },
+ "redone": true,
+ "local": [
+  "sci-properties-from-bondinga option is 61 characters: Its atoms have no charge in the solid but gain it in solution"
+ ],
+ "check": {
+  "a": {
+   "best": "Its ions cannot move in the solid but can in solution",
+   "also_right": []
+  },
+  "b": {
+   "best": "X is ionic and Y is made of covalent molecules",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Content check: sci-properties-from-bondinga option is 61 characters: Its atoms have no charge in the solid but gain it in solution"
+ ],
+ "proposal": {
+  "title": "Properties from bonding",
+  "card": [
+   [
+    "Ionic",
+    "Strong attractions between oppositely charged ions hold the solid together. Ionic compounds have high melting points and are hard but brittle."
+   ],
+   [
+    "Conduction",
+    "Ionic compounds do not conduct as solids, because the ions are locked in place. They conduct when dissolved in water or melted, because the ions are then free to move."
+   ],
+   [
+    "Covalent",
+    "Many covalent substances are separate molecules with weak attractions between them, so they often have low melting points. With no charged particles free to move, they usually do not conduct."
+   ],
+   [
+    "Uses",
+    "Properties decide uses: wax is covalent and melts easily, so it suits candles. Salt is ionic, has a high melting point and conducts when dissolved in water."
+   ]
+  ],
+  "remember": "Ionic: high melting point, conducts only when dissolved or melted. Covalent molecules: often low melting point, usually no conduction.",
+  "a": {
+   "q": "Why does solid sodium chloride not conduct electricity, while a solution of it does?",
+   "opts": [
+    "Its ions cannot move in the solid but can in solution",
+    "Its electrons cannot move in the solid but can in solution",
+    "Its molecules are packed close in solid, spread in solution",
+    "Its atoms are neutral in the solid but charged in solution"
+   ],
+   "why": "Sodium chloride is made of ions. In the solid they are locked in place, but in water they are free to move and carry charge. The option about electrons is tempting, but the charge carriers here are ions.",
+   "clue": "What particles carry the charge, and can they move?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam tests two white solids. Solid X melts at 800 °C and its solution conducts. Solid Y melts at 60 °C and its solution does not conduct. What does this suggest about X and Y?",
+   "opts": [
+    "X is ionic and Y is made of covalent molecules",
+    "X is made of covalent molecules and Y is ionic",
+    "Both X and Y are ionic compounds",
+    "Both X and Y are made of covalent molecules"
+   ],
+   "why": "A high melting point and a solution that conducts match an ionic compound. A low melting point and no conduction match covalent molecules. Swapping them is a common mix-up, but strong attractions between ions need much more heat to overcome than the weak attractions between molecules.",
+   "clue": "Match each test result to ions or molecules."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:46Z",
+  "rules": 1,
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [],
+  "flags": [
+   "Content check: sci-properties-from-bondinga option is 61 characters: Its atoms have no charge in the solid but gain it in solution"
+  ]
+ },
+ "final": {
+  "title": "Properties from bonding",
+  "card": [
+   [
+    "Ionic",
+    "Strong attractions between oppositely charged ions hold the solid together. Ionic compounds have high melting points and are hard but brittle."
+   ],
+   [
+    "Conduction",
+    "Ionic compounds do not conduct as solids, because the ions are locked in place. They conduct when dissolved in water or melted, because the ions are then free to move."
+   ],
+   [
+    "Covalent",
+    "Many covalent substances are separate molecules with weak attractions between them, so they often have low melting points. With no charged particles free to move, they usually do not conduct."
+   ],
+   [
+    "Uses",
+    "Properties decide uses: wax is covalent and melts easily, so it suits candles. Salt is ionic, has a high melting point and conducts when dissolved in water."
+   ]
+  ],
+  "remember": "Ionic: high melting point, conducts only when dissolved or melted. Covalent molecules: often low melting point, usually no conduction.",
+  "a": {
+   "q": "Why does solid sodium chloride not conduct electricity, while a solution of it does?",
+   "opts": [
+    "Its ions cannot move in the solid but can in solution",
+    "Its electrons cannot move in the solid but can in solution",
+    "Its molecules are packed close in solid, spread in solution",
+    "Its atoms are neutral in the solid but charged in solution"
+   ],
+   "why": "Sodium chloride is made of ions. In the solid they are locked in place, but in water they are free to move and carry charge. The option about electrons is tempting, but the charge carriers here are ions.",
+   "clue": "What particles carry the charge, and can they move?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam tests two white solids. Solid X melts at 800 °C and its solution conducts. Solid Y melts at 60 °C and its solution does not conduct. What does this suggest about X and Y?",
+   "opts": [
+    "X is ionic and Y is made of covalent molecules",
+    "X is made of covalent molecules and Y is ionic",
+    "Both X and Y are ionic compounds",
+    "Both X and Y are made of covalent molecules"
+   ],
+   "why": "A high melting point and a solution that conducts match an ionic compound. A low melting point and no conduction match covalent molecules. Swapping them is a common mix-up, but strong attractions between ions need much more heat to overcome than the weak attractions between molecules.",
+   "clue": "Match each test result to ions or molecules."
+  }
+ },
+ "cleared_by": "auto"
 }

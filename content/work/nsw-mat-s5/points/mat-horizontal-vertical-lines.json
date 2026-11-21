@@ -24,8 +24,289 @@
    0.315
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:56Z write: failed the content check, writing again",
+  "2026-11-20T12:35:54Z write: done",
+  "2026-11-20T12:44:58Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "write": 0.02185,
+  "check": 0.01014
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the equations of horizontal and vertical lines (y = c and x = c); mat-linear-functions covers parallel gradients but is broader and does not include these equations, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Horizontal and vertical lines",
+  "card": [
+   [
+    "Horizontal",
+    "Every point on a horizontal line has the same y value, so its equation is \\(y = c\\). The line \\(y = 3\\) passes through \\((-2, 3)\\) and \\((5, 3)\\)."
+   ],
+   [
+    "Vertical",
+    "Every point on a vertical line has the same x value, so its equation is \\(x = c\\). The line \\(x = 2\\) passes through \\((2, -2)\\) and \\((2, 4)\\)."
+   ],
+   "A horizontal line has gradient 0. A vertical line has no gradient. The equation \\(y = c\\) names the height of the line, and \\(x = c\\) names where it crosses the x-axis.",
+   "Parallel lines have the same gradient. All horizontal lines are parallel to each other, and so are all vertical lines."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "The horizontal line \\(y = 3\\) passing through the points \\((-2, 3)\\) and \\((5, 3)\\), and the vertical line \\(x = 2\\) passing through the points \\((2, -2)\\) and \\((2, 4)\\).",
+    "x": {
+     "min": -4,
+     "max": 7,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -4,
+     "max": 6,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "h",
+      "points": [
+       [
+        -4,
+        3
+       ],
+       [
+        7,
+        3
+       ]
+      ],
+      "label": "\\(y = 3\\)",
+      "pos": "above",
+      "labelAt": 6
+     },
+     {
+      "type": "curve",
+      "id": "v",
+      "points": [
+       [
+        2,
+        -4
+       ],
+       [
+        2,
+        6
+       ]
+      ],
+      "label": "\\(x = 2\\)",
+      "pos": "right",
+      "labelAt": 2
+     },
+     {
+      "type": "point",
+      "at": [
+       -2,
+       3
+      ],
+      "on": [
+       "h"
+      ],
+      "label": "\\((-2, 3)\\)",
+      "pos": "above"
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       3
+      ],
+      "on": [
+       "h"
+      ],
+      "label": "\\((5, 3)\\)",
+      "pos": "below"
+     }
+    ]
+   }
+  },
+  "remember": "\\(y = c\\) is a flat line at height \\(c\\). \\(x = c\\) is an upright line through \\(x = c\\).",
+  "a": {
+   "q": "Which line passes through the points \\((4, -1)\\) and \\((4, 6)\\)?",
+   "opts": [
+    "\\(x = 4\\)",
+    "\\(y = 4\\)",
+    "\\(x = -1\\)",
+    "\\(y = 6\\)"
+   ],
+   "why": "Both points have an x value of 4, so the line is vertical with equation \\(x = 4\\). The option \\(y = 4\\) mixes up the two axes: it is a horizontal line through height 4.",
+   "clue": "Which coordinate is the same in both points?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's garden fence is the line \\(y = -2\\). A second fence is parallel to it and passes through \\((3, 5)\\). What is the equation of the second fence?",
+   "opts": [
+    "\\(y = 5\\)",
+    "\\(x = 3\\)",
+    "\\(y = 3\\)",
+    "\\(x = 5\\)"
+   ],
+   "why": "The line \\(y = -2\\) is horizontal, so a parallel line is also horizontal. Every point on it has the same y value, which is 5 here, so it is \\(y = 5\\). The option \\(x = 3\\) is a vertical line, which is not parallel to a horizontal one.",
+   "clue": "A horizontal line has the same y value everywhere."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(x = 4\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(y = 5\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Horizontal and vertical lines",
+  "card": [
+   [
+    "Horizontal",
+    "Every point on a horizontal line has the same y value, so its equation is \\(y = c\\). The line \\(y = 3\\) passes through \\((-2, 3)\\) and \\((5, 3)\\)."
+   ],
+   [
+    "Vertical",
+    "Every point on a vertical line has the same x value, so its equation is \\(x = c\\). The line \\(x = 2\\) passes through \\((2, -2)\\) and \\((2, 4)\\)."
+   ],
+   "A horizontal line has gradient 0. A vertical line has no gradient. The equation \\(y = c\\) names the height of the line, and \\(x = c\\) names where it crosses the x-axis.",
+   "Parallel lines have the same gradient. All horizontal lines are parallel to each other, and so are all vertical lines."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "The horizontal line \\(y = 3\\) passing through the points \\((-2, 3)\\) and \\((5, 3)\\), and the vertical line \\(x = 2\\) passing through the points \\((2, -2)\\) and \\((2, 4)\\).",
+    "x": {
+     "min": -4,
+     "max": 7,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -4,
+     "max": 6,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "h",
+      "points": [
+       [
+        -4,
+        3
+       ],
+       [
+        7,
+        3
+       ]
+      ],
+      "label": "\\(y = 3\\)",
+      "pos": "above",
+      "labelAt": 6
+     },
+     {
+      "type": "curve",
+      "id": "v",
+      "points": [
+       [
+        2,
+        -4
+       ],
+       [
+        2,
+        6
+       ]
+      ],
+      "label": "\\(x = 2\\)",
+      "pos": "right",
+      "labelAt": 2
+     },
+     {
+      "type": "point",
+      "at": [
+       -2,
+       3
+      ],
+      "on": [
+       "h"
+      ],
+      "label": "\\((-2, 3)\\)",
+      "pos": "above"
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       3
+      ],
+      "on": [
+       "h"
+      ],
+      "label": "\\((5, 3)\\)",
+      "pos": "below"
+     }
+    ]
+   }
+  },
+  "remember": "\\(y = c\\) is a flat line at height \\(c\\). \\(x = c\\) is an upright line through \\(x = c\\).",
+  "a": {
+   "q": "Which line passes through the points \\((4, -1)\\) and \\((4, 6)\\)?",
+   "opts": [
+    "\\(x = 4\\)",
+    "\\(y = 4\\)",
+    "\\(x = -1\\)",
+    "\\(y = 6\\)"
+   ],
+   "why": "Both points have an x value of 4, so the line is vertical with equation \\(x = 4\\). The option \\(y = 4\\) mixes up the two axes: it is a horizontal line through height 4.",
+   "clue": "Which coordinate is the same in both points?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's garden fence is the line \\(y = -2\\). A second fence is parallel to it and passes through \\((3, 5)\\). What is the equation of the second fence?",
+   "opts": [
+    "\\(y = 5\\)",
+    "\\(x = 3\\)",
+    "\\(y = 3\\)",
+    "\\(x = 5\\)"
+   ],
+   "why": "The line \\(y = -2\\) is horizontal, so a parallel line is also horizontal. Every point on it has the same y value, which is 5 here, so it is \\(y = 5\\). The option \\(x = 3\\) is a vertical line, which is not parallel to a horizontal one.",
+   "clue": "A horizontal line has the same y value everywhere."
+  }
+ },
+ "cleared_by": "checker"
 }

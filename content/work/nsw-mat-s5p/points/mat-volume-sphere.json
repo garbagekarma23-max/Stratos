@@ -24,8 +24,133 @@
    0.218
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:56Z write: failed the content check, writing again",
+  "2026-11-20T12:44:59Z write: done",
+  "2026-11-20T12:53:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.02029,
+  "check": 0.00782
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the volume of a sphere; the closest cards cover cylinders and composite prisms and cylinders, which do not use the 4/3 πr³ formula.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Volume of a sphere",
+  "card": [
+   "The volume of a sphere with radius \\(r\\) is \\(V = \\frac{4}{3}\\pi r^{3}\\). The radius is cubed, not squared, because volume is measured in cubic units.",
+   "Example: a ball has radius 3 cm. \\(V = \\frac{4}{3} \\times \\pi \\times 3^{3}\\), which is \\(\\frac{4}{3} \\times \\pi \\times 27 = 36\\pi\\). That is about \\(113.1\\) \\(\\text{cm}^{3}\\).",
+   "If you are given the diameter, halve it to find the radius before you cube it.",
+   "A hemisphere is half a sphere, so its volume is \\(\\frac{2}{3}\\pi r^{3}\\). For a solid made of parts, such as a cylinder with a hemisphere on top, find each volume and add them."
+  ],
+  "remember": "Sphere volume uses \\(r^{3}\\). Halve a diameter first, and add the volumes of the parts of a combined solid.",
+  "a": {
+   "q": "What is the exact volume of a sphere with radius 6 cm?",
+   "opts": [
+    "\\(288\\pi\\) \\(\\text{cm}^{3}\\)",
+    "\\(144\\pi\\) \\(\\text{cm}^{3}\\)",
+    "\\(48\\pi\\) \\(\\text{cm}^{3}\\)",
+    "\\(864\\pi\\) \\(\\text{cm}^{3}\\)"
+   ],
+   "why": "\\(V = \\frac{4}{3}\\pi \\times 6^{3} = \\frac{4}{3}\\pi \\times 216 = 288\\pi\\). Squaring the radius instead gives \\(\\frac{4}{3}\\pi \\times 36 = 48\\pi\\), which is wrong because volume needs the cube.",
+   "clue": "Cube the radius, then multiply by \\(\\frac{4}{3}\\pi\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "A toy is a cylinder of radius 3 cm and height 10 cm with a hemisphere of radius 3 cm fixed on top. What is its exact volume?",
+   "opts": [
+    "\\(108\\pi\\) \\(\\text{cm}^{3}\\)",
+    "\\(90\\pi\\) \\(\\text{cm}^{3}\\)",
+    "\\(126\\pi\\) \\(\\text{cm}^{3}\\)",
+    "\\(72\\pi\\) \\(\\text{cm}^{3}\\)"
+   ],
+   "why": "Cylinder: \\(\\pi \\times 3^{2} \\times 10 = 90\\pi\\). Hemisphere: \\(\\frac{2}{3}\\pi \\times 27 = 18\\pi\\). The total is \\(108\\pi\\). Using a whole sphere, \\(36\\pi\\), would give \\(126\\pi\\), but only half a sphere is on top.",
+   "clue": "The top is half a sphere, so halve the sphere volume."
+  },
+  "wants": [
+   {
+    "at": "b",
+    "kind": "diagram",
+    "brief": "A toy made of a cylinder with a hemisphere on top. Label the cylinder's radius 3 cm and height 10 cm, and the hemisphere's radius 3 cm.",
+    "why": "It shows how the solid is built from a cylinder and half a sphere."
+   }
+  ]
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(288\\pi\\) \\(\\text{cm}^{3}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(108\\pi\\) \\(\\text{cm}^{3}\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Volume of a sphere",
+  "card": [
+   "The volume of a sphere with radius \\(r\\) is \\(V = \\frac{4}{3}\\pi r^{3}\\). The radius is cubed, not squared, because volume is measured in cubic units.",
+   "Example: a ball has radius 3 cm. \\(V = \\frac{4}{3} \\times \\pi \\times 3^{3}\\), which is \\(\\frac{4}{3} \\times \\pi \\times 27 = 36\\pi\\). That is about \\(113.1\\) \\(\\text{cm}^{3}\\).",
+   "If you are given the diameter, halve it to find the radius before you cube it.",
+   "A hemisphere is half a sphere, so its volume is \\(\\frac{2}{3}\\pi r^{3}\\). For a solid made of parts, such as a cylinder with a hemisphere on top, find each volume and add them."
+  ],
+  "remember": "Sphere volume uses \\(r^{3}\\). Halve a diameter first, and add the volumes of the parts of a combined solid.",
+  "a": {
+   "q": "What is the exact volume of a sphere with radius 6 cm?",
+   "opts": [
+    "\\(288\\pi\\) \\(\\text{cm}^{3}\\)",
+    "\\(144\\pi\\) \\(\\text{cm}^{3}\\)",
+    "\\(48\\pi\\) \\(\\text{cm}^{3}\\)",
+    "\\(864\\pi\\) \\(\\text{cm}^{3}\\)"
+   ],
+   "why": "\\(V = \\frac{4}{3}\\pi \\times 6^{3} = \\frac{4}{3}\\pi \\times 216 = 288\\pi\\). Squaring the radius instead gives \\(\\frac{4}{3}\\pi \\times 36 = 48\\pi\\), which is wrong because volume needs the cube.",
+   "clue": "Cube the radius, then multiply by \\(\\frac{4}{3}\\pi\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "A toy is a cylinder of radius 3 cm and height 10 cm with a hemisphere of radius 3 cm fixed on top. What is its exact volume?",
+   "opts": [
+    "\\(108\\pi\\) \\(\\text{cm}^{3}\\)",
+    "\\(90\\pi\\) \\(\\text{cm}^{3}\\)",
+    "\\(126\\pi\\) \\(\\text{cm}^{3}\\)",
+    "\\(72\\pi\\) \\(\\text{cm}^{3}\\)"
+   ],
+   "why": "Cylinder: \\(\\pi \\times 3^{2} \\times 10 = 90\\pi\\). Hemisphere: \\(\\frac{2}{3}\\pi \\times 27 = 18\\pi\\). The total is \\(108\\pi\\). Using a whole sphere, \\(36\\pi\\), would give \\(126\\pi\\), but only half a sphere is on top.",
+   "clue": "The top is half a sphere, so halve the sphere volume."
+  },
+  "wants": [
+   {
+    "at": "b",
+    "kind": "diagram",
+    "brief": "A toy made of a cylinder with a hemisphere on top. Label the cylinder's radius 3 cm and height 10 cm, and the hemisphere's radius 3 cm.",
+    "why": "It shows how the solid is built from a cylinder and half a sphere."
+   }
+  ]
+ },
+ "cleared_by": "checker"
 }

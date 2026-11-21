@@ -8,8 +8,200 @@
    0.257
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: flagged",
+  "2026-11-20T12:53:29Z fix: suggested",
+  "2026-11-20T14:44:29Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.00623,
+  "check": 0.0136,
+  "fix": 0.01875
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point is broader than the new point: it centres on habitat, season and relationships, and its questions test those, while the new point is about classifying by uses, forms and functions grounded in knowledge of Country.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Aboriginal and Torres Strait Islander classification",
+  "card": [
+   "Aboriginal and Torres Strait Islander Peoples have classified plants and animals for many thousands of years. Their systems come from deep knowledge of Country, built up and passed on over generations.",
+   [
+    "Uses",
+    "a plant or animal can be grouped by how it is used, such as for food, medicine, tools or shelter."
+   ],
+   [
+    "Forms",
+    "a plant or animal can be grouped by how it looks, such as its shape, size or the kind of place it grows or lives."
+   ],
+   [
+    "Functions",
+    "a plant or animal can be grouped by the role it plays, such as a plant that shows when a food source is ready or a season is changing."
+   ]
+  ],
+  "remember": "Aboriginal and Torres Strait Islander classification groups living things by uses, forms and functions, using knowledge of Country passed down over generations.",
+  "a": {
+   "q": "A community groups some plants together because their leaves are used to treat skin sores. Which kind of grouping is this?",
+   "opts": [
+    "By use",
+    "By form",
+    "By scientific name",
+    "By kingdom"
+   ],
+   "why": "The plants are grouped by what they are used for, which is medicine. Grouping by form would depend on how the plants look, not on what they do for people.",
+   "clue": "Think about what the leaves are used for."
+  },
+  "b": {
+   "d": 3,
+   "q": "Elders teach that a tree's flowering shows when a fish is ready to be caught nearby. Why does this show a classification built on knowledge of Country?",
+   "opts": [
+    "It links living things by the role they play in a season",
+    "It sorts the tree and the fish by their scientific names",
+    "It groups the two living things by their body shape alone",
+    "It works only for a tree, never for an animal"
+   ],
+   "why": "The tree is linked to the fish by its role as a sign of the season, which is a function. This knowledge comes from watching Country over generations. Grouping by shape would only look at how things appear.",
+   "clue": "Ask what the flowering tells people."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "By use",
+   "also_right": []
+  },
+  "b": {
+   "best": "It links living things by the role they play in a season",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem asks why the example shows a classification built on knowledge of Country, but the intended answer only says what kind of grouping it is (by role, or function). The question and its answer do not match, which may confuse students."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The distractor 'It works only for a tree, never for an animal' uses 'only' and 'never'. This makes it obviously wrong, so the right option stands out more easily."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The Forms line includes 'the kind of place it grows or lives' as a feature of how a plant or animal looks. Habitat is not part of an organism's form, which is its physical appearance, so this blurs the meaning of form."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "first-nations",
+  "summary": "Both answers are clear (a: by use; b: role in a season). Question b's stem asks 'why' but the answer only names the grouping type, and one distractor uses 'only'/'never'. The card's Forms line wrongly counts habitat as part of how an organism looks."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Question b, wording: The stem asks why the example shows a classification built on knowledge of Country, but the intended answer only says what kind of grouping it is (by role, or function). The question and its answer do not match, which may confuse students.",
+  "Question b, wording: The distractor 'It works only for a tree, never for an animal' uses 'only' and 'never'. This makes it obviously wrong, so the right option stands out more easily.",
+  "Card, fact: The Forms line includes 'the kind of place it grows or lives' as a feature of how a plant or animal looks. Habitat is not part of an organism's form, which is its physical appearance, so this blurs the meaning of form."
+ ],
+ "proposal": {
+  "title": "Aboriginal and Torres Strait Islander classification",
+  "card": [
+   "Aboriginal and Torres Strait Islander Peoples have classified plants and animals for many thousands of years. Their systems come from deep knowledge of Country, built up and passed on over generations.",
+   [
+    "Uses",
+    "a plant or animal can be grouped by how it is used, such as for food, medicine, tools or shelter."
+   ],
+   [
+    "Forms",
+    "a plant or animal can be grouped by how it looks, such as its shape, size, colour, or the kind of leaves, bark, fur or scales it has."
+   ],
+   [
+    "Functions",
+    "a plant or animal can be grouped by the role it plays, such as a plant whose flowering shows that a food source is ready or a season is changing."
+   ]
+  ],
+  "remember": "Living things can be grouped by what they are used for, how they look and the role they play, using knowledge of Country.",
+  "a": {
+   "q": "A community groups some plants together because their leaves are used to treat skin sores. Which kind of grouping is this?",
+   "opts": [
+    "By use",
+    "By form",
+    "By scientific name",
+    "By kingdom"
+   ],
+   "why": "The plants are grouped by what people use them for, which is medicine. Grouping by form would depend on how the plants look, such as their shape or colour, not on what they are used for.",
+   "clue": "Think about what people do with the leaves."
+  },
+  "b": {
+   "d": 3,
+   "q": "Elders teach that when a certain tree flowers, a type of fish is ready to be caught nearby. Which kind of grouping does this show?",
+   "opts": [
+    "By function: the tree's role as a sign of the season",
+    "By use: the tree is used as a tool to catch fish",
+    "By form: the tree and the fish have a similar shape",
+    "By scientific name: the tree and fish share a genus"
+   ],
+   "why": "The tree is linked to the fish by the role its flowering plays, as a sign that a season has come and a food source is ready. That is grouping by function. It is not grouping by use, because the tree itself is not used for food, medicine, tools or shelter here.",
+   "clue": "Ask what the flowering tells people, not what the tree is made into."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Aboriginal and Torres Strait Islander classification",
+  "card": [
+   "Aboriginal and Torres Strait Islander Peoples have classified plants and animals for many thousands of years. Their systems come from deep knowledge of Country, built up and passed on over generations.",
+   [
+    "Uses",
+    "a plant or animal can be grouped by how it is used, such as for food, medicine, tools or shelter."
+   ],
+   [
+    "Forms",
+    "a plant or animal can be grouped by how it looks, such as its shape, size, colour, or the kind of leaves, bark, fur or scales it has."
+   ],
+   [
+    "Functions",
+    "a plant or animal can be grouped by the role it plays, such as a plant whose flowering shows that a food source is ready or a season is changing."
+   ]
+  ],
+  "remember": "Living things can be grouped by what they are used for, how they look and the role they play, using knowledge of Country.",
+  "a": {
+   "q": "A community groups some plants together because their leaves are used to treat skin sores. Which kind of grouping is this?",
+   "opts": [
+    "By use",
+    "By form",
+    "By scientific name",
+    "By kingdom"
+   ],
+   "why": "The plants are grouped by what people use them for, which is medicine. Grouping by form would depend on how the plants look, such as their shape or colour, not on what they are used for.",
+   "clue": "Think about what people do with the leaves."
+  },
+  "b": {
+   "d": 3,
+   "q": "Elders teach that when a certain tree flowers, a type of fish is ready to be caught nearby. Which kind of grouping does this show?",
+   "opts": [
+    "By function: the tree's role as a sign of the season",
+    "By use: the tree is used as a tool to catch fish",
+    "By form: the tree and the fish have a similar shape",
+    "By scientific name: the tree and fish share a genus"
+   ],
+   "why": "The tree is linked to the fish by the role its flowering plays, as a sign that a season has come and a food source is ready. That is grouping by function. It is not grouping by use, because the tree itself is not used for food, medicine, tools or shelter here.",
+   "clue": "Ask what the flowering tells people, not what the tree is made into."
+  }
+ },
+ "cleared_by": "owner"
 }

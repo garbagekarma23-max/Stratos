@@ -24,8 +24,228 @@
    0.347
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:44Z write: failed the content check, writing again",
+  "2026-11-20T12:35:48Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:38:27Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00039,
+  "write": 0.01884,
+  "check": 0.01312,
+  "fix": 0.01828,
+  "recheck": 0.00753
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Topic sentences, covers linking each topic sentence to the thesis, but not the brief's requirement that the argument builds from one paragraph to the next, which only appears in the Year 12 card on developing an argument across paragraphs at a deeper level, so no bank point fits without adding a new step.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Sustaining an argument",
+  "card": [
+   "A thesis states the writer's position. Each body paragraph then develops one part of that position.",
+   "A topic sentence opens a body paragraph. It names the paragraph's main point and links back to the thesis, often by repeating its main ideas in new words.",
+   "The rest of the paragraph stays on that point. Evidence and analysis support the topic sentence, so nothing drifts away from the thesis.",
+   "The paragraphs also link to each other. Each one can build on the last, for example by adding a new reason or a stronger consequence, so the argument grows instead of repeating."
+  ],
+  "remember": "Every topic sentence points back to the thesis and moves the argument forward.",
+  "a": {
+   "q": "What is the main job of a topic sentence in a body paragraph?",
+   "opts": [
+    "To state the paragraph's point and link it to the thesis",
+    "To give a summary of the whole text being studied",
+    "To list every piece of evidence the paragraph will use",
+    "To restate the question in the writer's own words"
+   ],
+   "why": "A topic sentence tells the reader what the paragraph will argue and how it connects to the thesis. A plot summary or a list of evidence does not do that, and the evidence belongs later in the paragraph.",
+   "clue": "Think about what links each paragraph to the thesis."
+  },
+  "b": {
+   "d": 3,
+   "q": "Zara's thesis is that social media makes teenagers more informed but less focused. Her first paragraph covers being informed. Which topic sentence best opens her second paragraph?",
+   "opts": [
+    "Yet constant alerts also split teenagers' attention",
+    "Many teenagers use social media on phones every day",
+    "Social media apps began with websites from the 2000s",
+    "Teenagers also enjoy videos, games and chatting online"
+   ],
+   "why": "The first option returns to the 'less focused' half of the thesis and builds on a paragraph about being informed. The others stay on the topic of social media, but they do not develop either part of Zara's position.",
+   "clue": "Which sentence picks up a part of the thesis rather than just the topic?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "To state the paragraph's point and link it to the thesis",
+   "also_right": []
+  },
+  "b": {
+   "best": "Yet constant alerts also split teenagers' attention",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) calls the right answer 'The first option', but options are shown in random order, so students may be pointed to the wrong sentence. Name the sentence instead, e.g. 'Yet constant alerts also split teenagers' attention'."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The clue 'Think about what links each paragraph to the thesis' gives the answer away, because only one option mentions the thesis."
+   },
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "The remember line says every topic sentence 'moves the argument forward', but the card only says each paragraph 'can' build on the last. The remember line is firmer than the card."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The answers are sound, but why (b) refers to 'The first option' even though options are shuffled. Question a's clue gives the answer away, and the remember line states as a rule what the card says 'can' happen."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) calls the right answer 'The first option', but options are shown in random order, so students may be pointed to the wrong sentence. Name the sentence instead, e.g. 'Yet constant alerts also split teenagers' attention'.",
+  "Question a, wording: The clue 'Think about what links each paragraph to the thesis' gives the answer away, because only one option mentions the thesis.",
+  "Remember, wording: The remember line says every topic sentence 'moves the argument forward', but the card only says each paragraph 'can' build on the last. The remember line is firmer than the card."
+ ],
+ "proposal": {
+  "title": "Sustaining an argument",
+  "card": [
+   "A thesis states the writer's position. Each body paragraph then develops one part of that position.",
+   "A topic sentence opens a body paragraph. It names the paragraph's main point and links back to the thesis, often by repeating its main ideas in new words.",
+   "The rest of the paragraph stays on that point. Evidence and analysis support the topic sentence, so nothing drifts away from the thesis.",
+   "The paragraphs also link to each other. Each one can build on the last, for example by adding a new reason or a stronger consequence, so the argument grows instead of repeating."
+  ],
+  "remember": "Every topic sentence points back to the thesis, and each paragraph can build on the one before it.",
+  "a": {
+   "q": "What is the main job of a topic sentence in a body paragraph?",
+   "opts": [
+    "To state the paragraph's point and link it to the thesis",
+    "To give a summary of the whole text being studied",
+    "To list every piece of evidence the paragraph will use",
+    "To restate the question in the writer's own words"
+   ],
+   "why": "A topic sentence tells the reader what the paragraph will argue and how it connects to the thesis. A summary or a list of evidence does not do that, and the evidence belongs later in the paragraph.",
+   "clue": "What does a reader need to know first about each paragraph?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Zara's thesis is that social media makes teenagers more informed but less focused. Her first paragraph covers being informed. Which topic sentence best opens her second paragraph?",
+   "opts": [
+    "Yet constant alerts also split teenagers' attention",
+    "Many teenagers use social media on phones every day",
+    "Social media apps began with websites from the 2000s",
+    "Teenagers also enjoy videos, games and chatting online"
+   ],
+   "why": "'Yet constant alerts also split teenagers' attention' returns to the 'less focused' half of the thesis, and 'Yet' builds on the paragraph about being informed. The sentence about videos, games and chatting is tempting because it uses 'also', but it adds a new topic, not a part of Zara's position.",
+   "clue": "Which sentence picks up a part of the thesis rather than just the topic?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "To state the paragraph's point and link it to the thesis",
+    "also_right": []
+   },
+   "b": {
+    "best": "Yet constant alerts also split teenagers' attention",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) calls the right answer 'The first option', but options are shown in random order, so students may be pointed to the wrong sentence. Name the sentence instead, e.g. 'Yet constant alerts also split teenagers' attention'."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The clue 'Think about what links each paragraph to the thesis' gives the answer away, because only one option mentions the thesis."
+   },
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "The remember line says every topic sentence 'moves the argument forward', but the card only says each paragraph 'can' build on the last. The remember line is firmer than the card."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) calls the right answer 'The first option', but options are shown in random order, so students may be pointed to the wrong sentence. Name the sentence instead, e.g. 'Yet constant alerts also split teenagers' attention'.",
+   "Question a, wording: The clue 'Think about what links each paragraph to the thesis' gives the answer away, because only one option mentions the thesis.",
+   "Remember, wording: The remember line says every topic sentence 'moves the argument forward', but the card only says each paragraph 'can' build on the last. The remember line is firmer than the card."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Sustaining an argument",
+  "card": [
+   "A thesis states the writer's position. Each body paragraph then develops one part of that position.",
+   "A topic sentence opens a body paragraph. It names the paragraph's main point and links back to the thesis, often by repeating its main ideas in new words.",
+   "The rest of the paragraph stays on that point. Evidence and analysis support the topic sentence, so nothing drifts away from the thesis.",
+   "The paragraphs also link to each other. Each one can build on the last, for example by adding a new reason or a stronger consequence, so the argument grows instead of repeating."
+  ],
+  "remember": "Every topic sentence points back to the thesis, and each paragraph can build on the one before it.",
+  "a": {
+   "q": "What is the main job of a topic sentence in a body paragraph?",
+   "opts": [
+    "To state the paragraph's point and link it to the thesis",
+    "To give a summary of the whole text being studied",
+    "To list every piece of evidence the paragraph will use",
+    "To restate the question in the writer's own words"
+   ],
+   "why": "A topic sentence tells the reader what the paragraph will argue and how it connects to the thesis. A summary or a list of evidence does not do that, and the evidence belongs later in the paragraph.",
+   "clue": "What does a reader need to know first about each paragraph?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Zara's thesis is that social media makes teenagers more informed but less focused. Her first paragraph covers being informed. Which topic sentence best opens her second paragraph?",
+   "opts": [
+    "Yet constant alerts also split teenagers' attention",
+    "Many teenagers use social media on phones every day",
+    "Social media apps began with websites from the 2000s",
+    "Teenagers also enjoy videos, games and chatting online"
+   ],
+   "why": "'Yet constant alerts also split teenagers' attention' returns to the 'less focused' half of the thesis, and 'Yet' builds on the paragraph about being informed. The sentence about videos, games and chatting is tempting because it uses 'also', but it adds a new topic, not a part of Zara's position.",
+   "clue": "Which sentence picks up a part of the thesis rather than just the topic?"
+  }
+ },
+ "cleared_by": "owner"
 }

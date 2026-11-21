@@ -24,8 +24,224 @@
    0.413
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: done",
+  "2026-11-20T12:35:55Z check: flagged",
+  "2026-11-20T12:44:59Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00042,
+  "write": 0.01972,
+  "check": 0.01252,
+  "fix": 0.02733,
+  "recheck": 0.00875
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank card, mat-sine-rule, teaches the same rule but goes further into the ambiguous case and finding obtuse angles, and its second question tests that, which is beyond this Stage 5 point, so it is a broader match rather than one that fits with small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The sine rule",
+  "card": [
+   "In triangle ABC, side \\(a\\) is opposite angle \\(A\\), side \\(b\\) is opposite angle \\(B\\), and side \\(c\\) is opposite angle \\(C\\).",
+   "The sine rule says \\(\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C}\\). Each side divided by the sine of its opposite angle gives the same value.",
+   "Use it when you know a side and its opposite angle, plus one more side or angle. To find a side, put the unknown side on top: \\(\\frac{b}{\\sin B} = \\frac{a}{\\sin A}\\).",
+   "Example: \\(A = 30^{\\circ}\\), \\(B = 45^{\\circ}\\) and \\(a = 8\\) cm. Then \\(b = \\frac{8 \\sin 45^{\\circ}}{\\sin 30^{\\circ}} \\approx 11.3\\) cm."
+  ],
+  "remember": "Match each side with the sine of the angle opposite it.",
+  "a": {
+   "q": "In triangle PQR, \\(p = 7\\) cm, \\(P = 35^{\\circ}\\) and \\(Q = 62^{\\circ}\\). Which line gives the length of \\(q\\)?",
+   "opts": [
+    "\\(q = \\frac{7 \\sin 62^{\\circ}}{\\sin 35^{\\circ}}\\)",
+    "\\(q = \\frac{7 \\sin 35^{\\circ}}{\\sin 62^{\\circ}}\\)",
+    "\\(q = 7 \\sin 35^{\\circ} \\times \\sin 62^{\\circ}\\)",
+    "\\(q = \\frac{\\sin 62^{\\circ}}{7 \\sin 35^{\\circ}}\\)"
+   ],
+   "why": "Side \\(p\\) is opposite \\(P\\) and side \\(q\\) is opposite \\(Q\\), so \\(\\frac{q}{\\sin 62^{\\circ}} = \\frac{7}{\\sin 35^{\\circ}}\\). Multiplying both sides by \\(\\sin 62^{\\circ}\\) gives the first option. The second option swaps the two angles.",
+   "clue": "Write the rule with \\(q\\) on top, then multiply both sides."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom surveys a triangular paddock. One side is 120 m and is opposite an angle of \\(50^{\\circ}\\). The side \\(x\\) is opposite an angle of \\(70^{\\circ}\\). How long is \\(x\\), to the nearest 0.1 m?",
+   "opts": [
+    "147.2 m",
+    "97.8 m",
+    "135.7 m",
+    "168.0 m"
+   ],
+   "why": "\\(\\frac{x}{\\sin 70^{\\circ}} = \\frac{120}{\\sin 50^{\\circ}}\\), so \\(x = \\frac{120 \\sin 70^{\\circ}}{\\sin 50^{\\circ}} \\approx 147.2\\) m. Putting \\(\\sin 50^{\\circ}\\) on top gives 97.8 m, which pairs each side with the wrong angle.",
+   "clue": "The larger angle is opposite the longer side."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A triangle ABC with vertices labelled A, B and C. The side opposite A is labelled a, the side opposite B is labelled b, and the side opposite C is labelled c. Each angle is marked at its vertex.",
+    "why": "It shows which side is opposite which angle."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(q = \\frac{7 \\sin 62^{\\circ}}{\\sin 35^{\\circ}}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "147.2 m",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) names options by position ('gives the first option', 'the second option swaps the two angles'), but the options are shuffled. As shown, the first option is the product 7 sin 35° × sin 62°, which is wrong, and the swapped-angle option is the third, not the second. The why should name the option by its content, e.g. q = 7 sin 62° / sin 35°."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, the worked example and both answers are correct (q = 7 sin 62°/sin 35°; x ≈ 147.2 m). The only problem is that why (a) refers to options by position ('first', 'second'), which does not match the displayed order and would point students to a wrong option."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) names options by position ('gives the first option', 'the second option swaps the two angles'), but the options are shuffled. As shown, the first option is the product 7 sin 35° × sin 62°, which is wrong, and the swapped-angle option is the third, not the second. The why should name the option by its content, e.g. q = 7 sin 62° / sin 35°."
+ ],
+ "proposal": {
+  "title": "The sine rule",
+  "card": [
+   "In triangle ABC, side \\(a\\) is opposite angle \\(A\\), side \\(b\\) is opposite angle \\(B\\), and side \\(c\\) is opposite angle \\(C\\).",
+   "The sine rule says \\(\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C}\\). Each side divided by the sine of its opposite angle gives the same value.",
+   "Use it when you know a side and its opposite angle, plus one more side or angle. To find a side, put the unknown side on top: \\(\\frac{b}{\\sin B} = \\frac{a}{\\sin A}\\).",
+   "Example: \\(A = 30^{\\circ}\\), \\(B = 45^{\\circ}\\) and \\(a = 8\\) cm. Then \\(b = \\frac{8 \\sin 45^{\\circ}}{\\sin 30^{\\circ}} \\approx 11.3\\) cm."
+  ],
+  "remember": "Match each side with the sine of the angle opposite it.",
+  "a": {
+   "q": "In triangle PQR, \\(p = 7\\) cm, \\(P = 35^{\\circ}\\) and \\(Q = 62^{\\circ}\\). Which line gives the length of \\(q\\)?",
+   "opts": [
+    "\\(q = \\frac{7 \\sin 62^{\\circ}}{\\sin 35^{\\circ}}\\)",
+    "\\(q = \\frac{7 \\sin 35^{\\circ}}{\\sin 62^{\\circ}}\\)",
+    "\\(q = 7 \\sin 35^{\\circ} \\times \\sin 62^{\\circ}\\)",
+    "\\(q = \\frac{\\sin 62^{\\circ}}{7 \\sin 35^{\\circ}}\\)"
+   ],
+   "why": "Side \\(p\\) is opposite \\(P\\) and side \\(q\\) is opposite \\(Q\\), so \\(\\frac{q}{\\sin 62^{\\circ}} = \\frac{7}{\\sin 35^{\\circ}}\\). Multiplying both sides by \\(\\sin 62^{\\circ}\\) gives \\(q = \\frac{7 \\sin 62^{\\circ}}{\\sin 35^{\\circ}}\\). The line with \\(\\sin 35^{\\circ}\\) on top pairs each side with the wrong angle.",
+   "clue": "Write the rule with \\(q\\) on top, then multiply both sides."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom surveys a triangular paddock. One side is 120 m and is opposite an angle of \\(50^{\\circ}\\). The side \\(x\\) is opposite an angle of \\(70^{\\circ}\\). How long is \\(x\\), to the nearest 0.1 m?",
+   "opts": [
+    "147.2 m",
+    "97.8 m",
+    "112.8 m",
+    "156.7 m"
+   ],
+   "why": "\\(\\frac{x}{\\sin 70^{\\circ}} = \\frac{120}{\\sin 50^{\\circ}}\\), so \\(x = \\frac{120 \\sin 70^{\\circ}}{\\sin 50^{\\circ}} \\approx 147.2\\) m. Putting \\(\\sin 50^{\\circ}\\) on top gives 97.8 m, which pairs each side with the wrong angle. The answer 156.7 m forgets to multiply by \\(\\sin 70^{\\circ}\\).",
+   "clue": "Pair \\(x\\) with the sine of the angle opposite it."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A triangle ABC with vertices labelled A, B and C. The side opposite A is labelled a, the side opposite B is labelled b, and the side opposite C is labelled c. Each angle is marked at its vertex.",
+    "why": "It shows which side is opposite which angle."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(q = \\frac{7 \\sin 62^{\\circ}}{\\sin 35^{\\circ}}\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "147.2 m",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) names options by position ('gives the first option', 'the second option swaps the two angles'), but the options are shuffled. As shown, the first option is the product 7 sin 35° × sin 62°, which is wrong, and the swapped-angle option is the third, not the second. The why should name the option by its content, e.g. q = 7 sin 62° / sin 35°."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) names options by position ('gives the first option', 'the second option swaps the two angles'), but the options are shuffled. As shown, the first option is the product 7 sin 35° × sin 62°, which is wrong, and the swapped-angle option is the third, not the second. The why should name the option by its content, e.g. q = 7 sin 62° / sin 35°."
+  ]
+ },
+ "final": {
+  "title": "The sine rule",
+  "card": [
+   "In triangle ABC, side \\(a\\) is opposite angle \\(A\\), side \\(b\\) is opposite angle \\(B\\), and side \\(c\\) is opposite angle \\(C\\).",
+   "The sine rule says \\(\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C}\\). Each side divided by the sine of its opposite angle gives the same value.",
+   "Use it when you know a side and its opposite angle, plus one more side or angle. To find a side, put the unknown side on top: \\(\\frac{b}{\\sin B} = \\frac{a}{\\sin A}\\).",
+   "Example: \\(A = 30^{\\circ}\\), \\(B = 45^{\\circ}\\) and \\(a = 8\\) cm. Then \\(b = \\frac{8 \\sin 45^{\\circ}}{\\sin 30^{\\circ}} \\approx 11.3\\) cm."
+  ],
+  "remember": "Match each side with the sine of the angle opposite it.",
+  "a": {
+   "q": "In triangle PQR, \\(p = 7\\) cm, \\(P = 35^{\\circ}\\) and \\(Q = 62^{\\circ}\\). Which line gives the length of \\(q\\)?",
+   "opts": [
+    "\\(q = \\frac{7 \\sin 62^{\\circ}}{\\sin 35^{\\circ}}\\)",
+    "\\(q = \\frac{7 \\sin 35^{\\circ}}{\\sin 62^{\\circ}}\\)",
+    "\\(q = 7 \\sin 35^{\\circ} \\times \\sin 62^{\\circ}\\)",
+    "\\(q = \\frac{\\sin 62^{\\circ}}{7 \\sin 35^{\\circ}}\\)"
+   ],
+   "why": "Side \\(p\\) is opposite \\(P\\) and side \\(q\\) is opposite \\(Q\\), so \\(\\frac{q}{\\sin 62^{\\circ}} = \\frac{7}{\\sin 35^{\\circ}}\\). Multiplying both sides by \\(\\sin 62^{\\circ}\\) gives \\(q = \\frac{7 \\sin 62^{\\circ}}{\\sin 35^{\\circ}}\\). The line with \\(\\sin 35^{\\circ}\\) on top pairs each side with the wrong angle.",
+   "clue": "Write the rule with \\(q\\) on top, then multiply both sides."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom surveys a triangular paddock. One side is 120 m and is opposite an angle of \\(50^{\\circ}\\). The side \\(x\\) is opposite an angle of \\(70^{\\circ}\\). How long is \\(x\\), to the nearest 0.1 m?",
+   "opts": [
+    "147.2 m",
+    "97.8 m",
+    "112.8 m",
+    "156.7 m"
+   ],
+   "why": "\\(\\frac{x}{\\sin 70^{\\circ}} = \\frac{120}{\\sin 50^{\\circ}}\\), so \\(x = \\frac{120 \\sin 70^{\\circ}}{\\sin 50^{\\circ}} \\approx 147.2\\) m. Putting \\(\\sin 50^{\\circ}\\) on top gives 97.8 m, which pairs each side with the wrong angle. The answer 156.7 m forgets to multiply by \\(\\sin 70^{\\circ}\\).",
+   "clue": "Pair \\(x\\) with the sine of the angle opposite it."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A triangle ABC with vertices labelled A, B and C. The side opposite A is labelled a, the side opposite B is labelled b, and the side opposite C is labelled c. Each angle is marked at its vertex.",
+    "why": "It shows which side is opposite which angle."
+   }
+  ]
+ },
+ "cleared_by": "recheck"
 }

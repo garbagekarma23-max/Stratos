@@ -16,8 +16,229 @@
    0.207
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: done",
+  "2026-11-20T12:44:55Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00595,
+  "check": 0.01248,
+  "fix": 0.01554,
+  "recheck": 0.00862
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches how natural processes such as weather, erosion, fire, floods and plate movement change environments over time; the closest, geo-natural-hazards, is about when a process threatens people, and the others cover interconnection and the general definition of environment.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Natural processes that change environments",
+  "card": [
+   "Natural processes happen without people causing them. They change environments, sometimes slowly over thousands of years and sometimes in a few hours.",
+   [
+    "Weather and erosion",
+    "Wind, rain and waves wear away rock and soil and carry it elsewhere. Over time this can shape valleys, gullies and coastlines."
+   ],
+   [
+    "Fire and floods",
+    "Bushfires can burn away plants and change which species grow back. Floods spread water and sediment over land, and can reshape river channels."
+   ],
+   [
+    "Plate movement",
+    "Earth's plates move slowly and can cause earthquakes, volcanoes and the building of mountains. A sudden event such as an eruption can change a landscape quickly."
+   ]
+  ],
+  "remember": "Natural processes, from slow erosion to sudden floods, fires and plate movement, change environments with no human cause.",
+  "a": {
+   "q": "Which of these is an example of a natural process changing an environment?",
+   "opts": [
+    "Floodwater reshaping the channel of a river",
+    "A farmer clearing bushland for crops",
+    "A town building a dam across a creek",
+    "A factory releasing smoke into the air"
+   ],
+   "why": "A flood is a natural process that can reshape a river channel without any human cause. The other three are actions by people, so they are not natural processes.",
+   "clue": "Which change would still happen if no people were involved?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Waves along a sandstone coast near Port Macquarie slowly wear back the cliffs over hundreds of years. Which process is changing this coast?",
+   "opts": [
+    "Erosion",
+    "Plate movement",
+    "Bushfire",
+    "Flooding"
+   ],
+   "why": "Waves wearing away rock and carrying material elsewhere is erosion. Plate movement works by moving Earth's crust, such as in earthquakes, not by waves wearing rock away.",
+   "clue": "What do waves do to rock over a long time?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Floodwater reshaping the channel of a river",
+   "also_right": []
+  },
+  "b": {
+   "best": "Erosion",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The coast near Port Macquarie is not a sandstone coast. Its rocky headlands are mostly older rocks such as serpentinite, basalt and metamorphic rock, while sandstone cliffs are typical of the Sydney region. Name a place with sandstone cliffs (such as Sydney's coast) or drop 'sandstone'."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "Both questions are correct and the card is accurate. The only problem is in question b, which calls the coast near Port Macquarie sandstone; that is likely wrong, so change the place or the rock type."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The coast near Port Macquarie is not a sandstone coast. Its rocky headlands are mostly older rocks such as serpentinite, basalt and metamorphic rock, while sandstone cliffs are typical of the Sydney region. Name a place with sandstone cliffs (such as Sydney's coast) or drop 'sandstone'."
+ ],
+ "proposal": {
+  "title": "Natural processes that change environments",
+  "card": [
+   "Natural processes happen without people causing them. They change environments, sometimes slowly over thousands of years and sometimes in a few hours.",
+   [
+    "Weather and erosion",
+    "Wind, rain and waves wear away rock and soil and carry it elsewhere. Over time this can shape valleys, gullies and coastlines."
+   ],
+   [
+    "Fire and floods",
+    "Bushfires can burn away plants and change which species grow back. Floods spread water and sediment over land, and can reshape river channels."
+   ],
+   [
+    "Plate movement",
+    "Earth's plates move slowly and can cause earthquakes, volcanoes and the building of mountains. A sudden event such as an eruption can change a landscape quickly."
+   ]
+  ],
+  "remember": "Natural processes, from slow erosion to sudden floods and eruptions, change environments with no human cause.",
+  "a": {
+   "q": "Which of these is an example of a natural process changing an environment?",
+   "opts": [
+    "Floodwater reshaping the channel of a river",
+    "A farmer clearing bushland for crops",
+    "A town building a dam across a creek",
+    "A factory releasing smoke into the air"
+   ],
+   "why": "A flood is a natural process that can reshape a river channel without any human cause. The other three are actions by people, so they are not natural processes.",
+   "clue": "Which change would still happen if no people were involved?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Waves slowly wear back the sandstone cliffs on Sydney's coast over hundreds of years. Which process is changing this coast?",
+   "opts": [
+    "Erosion",
+    "Plate movement",
+    "Bushfire",
+    "Flooding"
+   ],
+   "why": "Waves wearing away rock and carrying material elsewhere is erosion. Plate movement works by moving Earth's crust, such as in earthquakes, not by waves wearing rock away.",
+   "clue": "What do waves do to rock over a long time?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Floodwater reshaping the channel of a river",
+    "also_right": []
+   },
+   "b": {
+    "best": "Erosion",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The coast near Port Macquarie is not a sandstone coast. Its rocky headlands are mostly older rocks such as serpentinite, basalt and metamorphic rock, while sandstone cliffs are typical of the Sydney region. Name a place with sandstone cliffs (such as Sydney's coast) or drop 'sandstone'."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The coast near Port Macquarie is not a sandstone coast. Its rocky headlands are mostly older rocks such as serpentinite, basalt and metamorphic rock, while sandstone cliffs are typical of the Sydney region. Name a place with sandstone cliffs (such as Sydney's coast) or drop 'sandstone'."
+  ]
+ },
+ "final": {
+  "title": "Natural processes that change environments",
+  "card": [
+   "Natural processes happen without people causing them. They change environments, sometimes slowly over thousands of years and sometimes in a few hours.",
+   [
+    "Weather and erosion",
+    "Wind, rain and waves wear away rock and soil and carry it elsewhere. Over time this can shape valleys, gullies and coastlines."
+   ],
+   [
+    "Fire and floods",
+    "Bushfires can burn away plants and change which species grow back. Floods spread water and sediment over land, and can reshape river channels."
+   ],
+   [
+    "Plate movement",
+    "Earth's plates move slowly and can cause earthquakes, volcanoes and the building of mountains. A sudden event such as an eruption can change a landscape quickly."
+   ]
+  ],
+  "remember": "Natural processes, from slow erosion to sudden floods and eruptions, change environments with no human cause.",
+  "a": {
+   "q": "Which of these is an example of a natural process changing an environment?",
+   "opts": [
+    "Floodwater reshaping the channel of a river",
+    "A farmer clearing bushland for crops",
+    "A town building a dam across a creek",
+    "A factory releasing smoke into the air"
+   ],
+   "why": "A flood is a natural process that can reshape a river channel without any human cause. The other three are actions by people, so they are not natural processes.",
+   "clue": "Which change would still happen if no people were involved?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Waves slowly wear back the sandstone cliffs on Sydney's coast over hundreds of years. Which process is changing this coast?",
+   "opts": [
+    "Erosion",
+    "Plate movement",
+    "Bushfire",
+    "Flooding"
+   ],
+   "why": "Waves wearing away rock and carrying material elsewhere is erosion. Plate movement works by moving Earth's crust, such as in earthquakes, not by waves wearing rock away.",
+   "clue": "What do waves do to rock over a long time?"
+  }
+ },
+ "cleared_by": "recheck"
 }

@@ -24,8 +24,235 @@
    0.213
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 may adapt leg-mediation-conciliation-arbitration, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:40Z confirm: Claude Opus 5.5 may adapt leg-mediation-conciliation-arbitration, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt leg-mediation-conciliation-arbitration (2 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting leg-mediation-conciliation-arbitration on the next run",
+  "2026-11-20T14:12:37Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "confirm": 0.01167,
+  "adapt": 0.00381,
+  "check": 0.00706
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "leg-mediation-conciliation-arbitration",
+  "changes": [
+   "Add a sentence stating that mediation, conciliation and arbitration are usually faster, cheaper and less stressful than going to court, since the card does not currently cover these benefits.",
+   "Pitch the wording at Stage 5 (Years 9 and 10) level, since the card was written for senior Victorian Legal Studies."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same three methods and the same difference in who controls the outcome, but it lacks the faster, cheaper and less stressful benefits in the brief and is written at a senior level.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "leg-mediation-conciliation-arbitration",
+  "changes": [
+   "Call these methods 'alternative dispute resolution (ADR)', the term the NSW Commerce syllabus uses.",
+   "Add a short line in the card's existing 'outside a courtroom' sentence saying ADR is often faster, cheaper and less stressful than going to court."
+  ],
+  "sure": "medium",
+  "reason": "The bank point already teaches mediation, conciliation and arbitration as ways to settle disputes outside court, at a level and with questions that suit Years 9 and 10. It only needs the NSW term 'ADR' and a brief mention of why people choose it over court.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "leg-mediation-conciliation-arbitration",
+  "changes": [
+   "Title the point 'Alternative dispute resolution' and call these methods alternative dispute resolution (ADR) on the card.",
+   "In the 'outside a courtroom' line, add that ADR is often faster, cheaper and less stressful than going to court."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "title",
+   "card4",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches mediation, conciliation and arbitration as ways to settle disputes outside court, in plain words that suit Years 9 and 10. It needs the term alternative dispute resolution and the brief's reasons for choosing it over court.",
+   "item": "4a34ade79e0c1b92",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-alternative-dispute-resolution",
+    "title": "Alternative dispute resolution",
+    "brief": "e1538ddf92e4",
+    "shortlist": [
+     [
+      "leg-mediation-conciliation-arbitration",
+      0.251
+     ],
+     [
+      "leg-bodies-that-settle-disputes",
+      0.249
+     ],
+     [
+      "leg-courts-civil-disputes",
+      0.244
+     ],
+     [
+      "leg-justice-civil-disputes",
+      0.233
+     ],
+     [
+      "bus-workplace-disputes",
+      0.213
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00034,
+     "confirm": 0.01167
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "leg-mediation-conciliation-arbitration",
+     "changes": [
+      "Add a sentence stating that mediation, conciliation and arbitration are usually faster, cheaper and less stressful than going to court, since the card does not currently cover these benefits.",
+      "Pitch the wording at Stage 5 (Years 9 and 10) level, since the card was written for senior Victorian Legal Studies."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches the same three methods and the same difference in who controls the outcome, but it lacks the faster, cheaper and less stressful benefits in the brief and is written at a senior level.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "leg-mediation-conciliation-arbitration",
+     "changes": [
+      "Call these methods 'alternative dispute resolution (ADR)', the term the NSW Commerce syllabus uses.",
+      "Add a short line in the card's existing 'outside a courtroom' sentence saying ADR is often faster, cheaper and less stressful than going to court."
+     ],
+     "sure": "medium",
+     "reason": "The bank point already teaches mediation, conciliation and arbitration as ways to settle disputes outside court, at a level and with questions that suit Years 9 and 10. It only needs the NSW term 'ADR' and a brief mention of why people choose it over court.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "d60ff5b3c582f486"
+  }
+ ],
+ "draft": {
+  "title": "Alternative dispute resolution",
+  "card": [
+   [
+    "Mediation",
+    "a neutral third person helps the parties talk and reach their own agreement. The mediator does not give advice on the outcome or decide it."
+   ],
+   [
+    "Conciliation",
+    "a neutral third person also helps the parties talk, and may suggest options for settling. The parties still make the final decision."
+   ],
+   [
+    "Arbitration",
+    "a neutral third person, the arbitrator, hears both sides and makes a decision. The decision is binding, so the parties must follow it."
+   ],
+   "These are forms of alternative dispute resolution (ADR), used outside a courtroom. ADR is often faster, cheaper and less stressful than going to court. The main difference is who controls the outcome: the parties, or the third person."
+  ],
+  "remember": "Mediation and conciliation leave the decision with the parties. In arbitration the third person decides.",
+  "a": {
+   "q": "Two neighbours argue over a fence. A neutral person helps them talk and suggests ways to settle, but the neighbours make the final choice. Which ADR method is this?",
+   "opts": [
+    "Conciliation",
+    "Mediation",
+    "Arbitration",
+    "A court hearing"
+   ],
+   "why": "The neutral person suggests options, which is what separates conciliation from mediation. The neighbours still decide, so it is not arbitration, where the third person makes the decision.",
+   "clue": "Who suggests options, and who decides?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya and a builder send their bill dispute to an arbitrator. Priya dislikes the decision. What is her position?",
+   "opts": [
+    "She is bound by the outcome and has to follow it",
+    "She can reject it and keep negotiating with the builder",
+    "She can ignore it, as the parties make the final decision",
+    "She has to follow it only if the builder also agrees to it"
+   ],
+   "why": "In arbitration the third person makes the decision, and it is binding on both parties. Saying the parties make the final decision is true of mediation and conciliation, not arbitration.",
+   "clue": "In this method, who controls the outcome?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Conciliation",
+   "also_right": []
+  },
+  "b": {
+   "best": "She is bound by the outcome and has to follow it",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Alternative dispute resolution",
+  "card": [
+   [
+    "Mediation",
+    "a neutral third person helps the parties talk and reach their own agreement. The mediator does not give advice on the outcome or decide it."
+   ],
+   [
+    "Conciliation",
+    "a neutral third person also helps the parties talk, and may suggest options for settling. The parties still make the final decision."
+   ],
+   [
+    "Arbitration",
+    "a neutral third person, the arbitrator, hears both sides and makes a decision. The decision is binding, so the parties must follow it."
+   ],
+   "These are forms of alternative dispute resolution (ADR), used outside a courtroom. ADR is often faster, cheaper and less stressful than going to court. The main difference is who controls the outcome: the parties, or the third person."
+  ],
+  "remember": "Mediation and conciliation leave the decision with the parties. In arbitration the third person decides.",
+  "a": {
+   "q": "Two neighbours argue over a fence. A neutral person helps them talk and suggests ways to settle, but the neighbours make the final choice. Which ADR method is this?",
+   "opts": [
+    "Conciliation",
+    "Mediation",
+    "Arbitration",
+    "A court hearing"
+   ],
+   "why": "The neutral person suggests options, which is what separates conciliation from mediation. The neighbours still decide, so it is not arbitration, where the third person makes the decision.",
+   "clue": "Who suggests options, and who decides?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya and a builder send their bill dispute to an arbitrator. Priya dislikes the decision. What is her position?",
+   "opts": [
+    "She is bound by the outcome and has to follow it",
+    "She can reject it and keep negotiating with the builder",
+    "She can ignore it, as the parties make the final decision",
+    "She has to follow it only if the builder also agrees to it"
+   ],
+   "why": "In arbitration the third person makes the decision, and it is binding on both parties. Saying the parties make the final decision is true of mediation and conciliation, not arbitration.",
+   "clue": "In this method, who controls the outcome?"
+  }
+ }
 }

@@ -8,8 +8,204 @@
    0.512
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:48Z write: done",
+  "2026-11-20T12:35:49Z check: flagged",
+  "2026-11-20T12:44:56Z fix: suggested",
+  "2026-11-20T13:23:39Z autoreview: cleared with the fix (a wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.01089,
+  "check": 0.01234,
+  "fix": 0.01459
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches the same prevention, mitigation and preparedness idea, but it is written as a Year 7 card with examples from other states, and the Stage 5 course needs a card pitched at its depth with NSW-based examples, so a new point is the safer match.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Prevention, mitigation and preparedness",
+  "card": [
+   [
+    "Prevention",
+    "stops harm before it starts. For example, a council bans building on a floodplain."
+   ],
+   [
+    "Mitigation",
+    "reduces the effects of harm that may still happen. For example, a levee reduces how far floodwater spreads."
+   ],
+   [
+    "Preparedness",
+    "gets people ready to respond when harm happens. For example, a family practises a bushfire evacuation plan."
+   ],
+   "The three work together. Each acts at a different point: before the harm, in limiting its effects, and in readiness to respond."
+  ],
+  "remember": "Prevention stops it, mitigation reduces it, preparedness readies people to respond.",
+  "a": {
+   "q": "A town in the Hunter plants no new homes in an area prone to landslides. Which approach is this?",
+   "opts": [
+    "Prevention",
+    "Mitigation",
+    "Preparedness",
+    "Response"
+   ],
+   "why": "Keeping homes out of the area stops the harm before it starts, so it is prevention. Mitigation would reduce the effects on homes already there.",
+   "clue": "Does it stop the harm before it starts?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A school in Lismore runs a flood drill so students know where to go. Which approach is this?",
+   "opts": [
+    "Preparedness, as it readies people to respond",
+    "Prevention, as it stops floods from happening",
+    "Mitigation, as it reduces how much water falls",
+    "Prevention, as it removes homes from the floodplain"
+   ],
+   "why": "A drill gets people ready to respond when a flood happens, so it is preparedness. It does not stop the flood or change how much water arrives, so it is not prevention or mitigation.",
+   "clue": "Does the drill change the flood, or the people's readiness?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Prevention",
+   "also_right": []
+  },
+  "b": {
+   "best": "Preparedness, as it readies people to respond",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "\"plants no new homes\" is confusing: homes are not planted. It should read something like \"allows no new homes\" or \"bans new homes\" in an area prone to landslides."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The content and answers are correct. Question a's wording \"plants no new homes\" is confusing and should say the town allows or permits no new homes."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: \"plants no new homes\" is confusing: homes are not planted. It should read something like \"allows no new homes\" or \"bans new homes\" in an area prone to landslides."
+ ],
+ "proposal": {
+  "title": "Prevention, mitigation and preparedness",
+  "card": [
+   [
+    "Prevention",
+    "stops harm before it starts. For example, a council bans building on a floodplain."
+   ],
+   [
+    "Mitigation",
+    "reduces the effects of harm that may still happen. For example, a levee reduces how far floodwater spreads."
+   ],
+   [
+    "Preparedness",
+    "gets people ready to respond when harm happens. For example, a family practises a bushfire evacuation plan."
+   ],
+   "The three work together. Each acts at a different point: before the harm, in limiting its effects, and in readiness to respond."
+  ],
+  "remember": "Prevention stops it, mitigation reduces it, preparedness readies people to respond.",
+  "a": {
+   "q": "A town in the Hunter allows no new homes on a hillside prone to landslides. Which approach is this?",
+   "opts": [
+    "Prevention",
+    "Mitigation",
+    "Preparedness",
+    "Response"
+   ],
+   "why": "Keeping new homes off the hillside stops the harm to them before it starts, so it is prevention. Mitigation would reduce the effects of a landslide on homes already there.",
+   "clue": "Does it stop the harm before it starts?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A school in Lismore runs a flood drill so students know where to go. Which approach is this?",
+   "opts": [
+    "Preparedness, as it readies people to respond",
+    "Prevention, as it stops floods from happening",
+    "Mitigation, as it reduces how much water falls",
+    "Prevention, as it removes homes from the floodplain"
+   ],
+   "why": "A drill gets people ready to respond when a flood happens, so it is preparedness. It does not stop the flood or change how much water arrives, so it is not prevention or mitigation.",
+   "clue": "Does the drill change the flood, or the people's readiness?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:39Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "\"plants no new homes\" is confusing: homes are not planted. It should read something like \"allows no new homes\" or \"bans new homes\" in an area prone to landslides."
+   }
+  ],
+  "flags": [
+   "Question a, wording: \"plants no new homes\" is confusing: homes are not planted. It should read something like \"allows no new homes\" or \"bans new homes\" in an area prone to landslides."
+  ]
+ },
+ "final": {
+  "title": "Prevention, mitigation and preparedness",
+  "card": [
+   [
+    "Prevention",
+    "stops harm before it starts. For example, a council bans building on a floodplain."
+   ],
+   [
+    "Mitigation",
+    "reduces the effects of harm that may still happen. For example, a levee reduces how far floodwater spreads."
+   ],
+   [
+    "Preparedness",
+    "gets people ready to respond when harm happens. For example, a family practises a bushfire evacuation plan."
+   ],
+   "The three work together. Each acts at a different point: before the harm, in limiting its effects, and in readiness to respond."
+  ],
+  "remember": "Prevention stops it, mitigation reduces it, preparedness readies people to respond.",
+  "a": {
+   "q": "A town in the Hunter allows no new homes on a hillside prone to landslides. Which approach is this?",
+   "opts": [
+    "Prevention",
+    "Mitigation",
+    "Preparedness",
+    "Response"
+   ],
+   "why": "Keeping new homes off the hillside stops the harm to them before it starts, so it is prevention. Mitigation would reduce the effects of a landslide on homes already there.",
+   "clue": "Does it stop the harm before it starts?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A school in Lismore runs a flood drill so students know where to go. Which approach is this?",
+   "opts": [
+    "Preparedness, as it readies people to respond",
+    "Prevention, as it stops floods from happening",
+    "Mitigation, as it reduces how much water falls",
+    "Prevention, as it removes homes from the floodplain"
+   ],
+   "why": "A drill gets people ready to respond when a flood happens, so it is preparedness. It does not stop the flood or change how much water arrives, so it is not prevention or mitigation.",
+   "clue": "Does the drill change the flood, or the people's readiness?"
+  }
+ },
+ "cleared_by": "auto"
 }

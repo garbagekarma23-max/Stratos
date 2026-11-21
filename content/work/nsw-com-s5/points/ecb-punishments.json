@@ -12,8 +12,212 @@
    0.205
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T13:23:35Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.00608,
+  "check": 0.01014,
+  "fix": 0.01882
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "Both bank points are Year 12 or VCE Legal Studies cards using terms like retribution, denunciation and incapacitation, and they are pitched at a deeper level than the Stage 5 Commerce brief, which also covers fines and community service; fitting them would need a change of depth, not a small adjustment, so a new point is the safer choice.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Punishments",
+  "card": [
+   "A court can give a range of punishments, such as a fine, community service or time in prison. The court chooses one that suits the crime and the offender.",
+   [
+    "Deterrence",
+    "a punishment aims to put people off committing a crime. It can put off the offender (specific) or other people (general)."
+   ],
+   [
+    "Protection",
+    "a punishment aims to keep the community safe. Prison does this by keeping an offender away from the public."
+   ],
+   [
+    "Rehabilitation",
+    "a punishment aims to help the offender change, so they do not offend again. Disapproval is the other aim: it shows the community does not accept the act."
+   ]
+  ],
+  "remember": "Punishments can deter, protect, rehabilitate and show disapproval.",
+  "a": {
+   "q": "A court orders a man to do 100 hours of community service so he can learn job skills and stay out of trouble. Which aim is the court mainly pursuing?",
+   "opts": [
+    "Rehabilitation",
+    "Deterrence",
+    "Protection of society",
+    "Showing disapproval"
+   ],
+   "why": "The order aims to help the man change so he does not offend again, which is rehabilitation. Deterrence is about putting people off a crime through fear of the punishment, and the aim here is to build skills.",
+   "clue": "Which aim is about helping the offender change?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A magistrate gives a driver a large fine for dangerous driving, hoping other drivers hear about it and drive more carefully. Which aim is this mainly?",
+   "opts": [
+    "General deterrence",
+    "Specific deterrence",
+    "Rehabilitation",
+    "Protection of society"
+   ],
+   "why": "The aim is to put off other drivers who hear of the fine, so it is general deterrence. Specific deterrence is aimed at the offender, so it is the most tempting wrong answer, but here the hope is to influence other people.",
+   "clue": "Who is the punishment meant to put off: the offender or others?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Rehabilitation",
+   "also_right": []
+  },
+  "b": {
+   "best": "General deterrence",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The fourth bullet puts disapproval inside the rehabilitation bullet ('Disapproval is the other aim'). A student could link the two aims, or miss disapproval as a separate aim. It should have its own line, like the other three aims."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound, with one clearly right answer each. Disapproval is tucked into the rehabilitation bullet on the card, which could blur the two aims and is worth splitting into its own line."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The fourth bullet puts disapproval inside the rehabilitation bullet ('Disapproval is the other aim'). A student could link the two aims, or miss disapproval as a separate aim. It should have its own line, like the other three aims."
+ ],
+ "proposal": {
+  "title": "Punishments",
+  "card": [
+   [
+    "Deterrence",
+    "punishments such as a fine, community service or prison aim to put people off crime. Specific deterrence aims at the offender, and general deterrence aims at other people."
+   ],
+   [
+    "Protection",
+    "a punishment aims to keep the community safe. Prison does this by keeping an offender away from the public."
+   ],
+   [
+    "Rehabilitation",
+    "a punishment aims to help the offender change, so they do not offend again. Training, counselling or treatment can help them do this."
+   ],
+   [
+    "Disapproval",
+    "a punishment shows that the community does not accept the act. A more serious crime can draw a harsher punishment to show stronger disapproval."
+   ]
+  ],
+  "remember": "One punishment can serve several aims: to deter, protect, rehabilitate and show disapproval.",
+  "a": {
+   "q": "A court orders a man to do 100 hours of community service so he can learn job skills and stay out of trouble. Which aim is the court mainly pursuing?",
+   "opts": [
+    "Rehabilitation",
+    "Deterrence",
+    "Protection of society",
+    "Showing disapproval"
+   ],
+   "why": "The order aims to help the man change so he does not offend again, which is rehabilitation. Deterrence is about putting people off a crime, but the aim here is to build his skills.",
+   "clue": "Which aim is about helping the offender change?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A magistrate gives a driver a large fine for dangerous driving, hoping other drivers hear about it and drive more carefully. Which aim is this mainly?",
+   "opts": [
+    "General deterrence",
+    "Specific deterrence",
+    "Rehabilitation",
+    "Protection of society"
+   ],
+   "why": "The aim is to put off other drivers who hear of the fine, so it is general deterrence. Specific deterrence is aimed at the offender, so it is the most tempting wrong answer, but here the hope is to influence other people.",
+   "clue": "Who is the punishment meant to put off: the offender or others?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:35Z",
+  "rules": 1,
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The fourth bullet puts disapproval inside the rehabilitation bullet ('Disapproval is the other aim'). A student could link the two aims, or miss disapproval as a separate aim. It should have its own line, like the other three aims."
+   }
+  ],
+  "flags": [
+   "Card, wording: The fourth bullet puts disapproval inside the rehabilitation bullet ('Disapproval is the other aim'). A student could link the two aims, or miss disapproval as a separate aim. It should have its own line, like the other three aims."
+  ]
+ },
+ "final": {
+  "title": "Punishments",
+  "card": [
+   [
+    "Deterrence",
+    "punishments such as a fine, community service or prison aim to put people off crime. Specific deterrence aims at the offender, and general deterrence aims at other people."
+   ],
+   [
+    "Protection",
+    "a punishment aims to keep the community safe. Prison does this by keeping an offender away from the public."
+   ],
+   [
+    "Rehabilitation",
+    "a punishment aims to help the offender change, so they do not offend again. Training, counselling or treatment can help them do this."
+   ],
+   [
+    "Disapproval",
+    "a punishment shows that the community does not accept the act. A more serious crime can draw a harsher punishment to show stronger disapproval."
+   ]
+  ],
+  "remember": "One punishment can serve several aims: to deter, protect, rehabilitate and show disapproval.",
+  "a": {
+   "q": "A court orders a man to do 100 hours of community service so he can learn job skills and stay out of trouble. Which aim is the court mainly pursuing?",
+   "opts": [
+    "Rehabilitation",
+    "Deterrence",
+    "Protection of society",
+    "Showing disapproval"
+   ],
+   "why": "The order aims to help the man change so he does not offend again, which is rehabilitation. Deterrence is about putting people off a crime, but the aim here is to build his skills.",
+   "clue": "Which aim is about helping the offender change?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A magistrate gives a driver a large fine for dangerous driving, hoping other drivers hear about it and drive more carefully. Which aim is this mainly?",
+   "opts": [
+    "General deterrence",
+    "Specific deterrence",
+    "Rehabilitation",
+    "Protection of society"
+   ],
+   "why": "The aim is to put off other drivers who hear of the fine, so it is general deterrence. Specific deterrence is aimed at the offender, so it is the most tempting wrong answer, but here the hope is to influence other people.",
+   "clue": "Who is the punishment meant to put off: the offender or others?"
+  }
+ },
+ "cleared_by": "auto"
 }

@@ -16,8 +16,220 @@
    0.266
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:41Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: done",
+  "2026-11-20T12:44:52Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.00639,
+  "check": 0.01403,
+  "fix": 0.02419,
+  "recheck": 0.00978
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point covers both the symbol and the motif in this brief: the literature symbol card is pitched at Year 9 and lacks motif, and the motif card is pitched at Year 11 and lacks symbol, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Symbol and motif",
+  "card": [
+   [
+    "Symbol",
+    "An object or image that stands for a bigger idea. A cracked mirror in a story might stand for a broken sense of self."
+   ],
+   [
+    "Motif",
+    "An image or idea that returns again and again through a text. A motif is the repeating pattern, not a single object."
+   ],
+   "A symbol can appear once and still carry weight. A motif needs several appearances, and each one adds to the same picture in the reader's mind.",
+   "A motif builds a theme, the main idea a text explores. If an empty chair keeps appearing in scene after scene, the motif of loss builds a theme about grief."
+  ],
+  "remember": "A symbol stands for a bigger idea. A motif repeats to build a theme.",
+  "a": {
+   "q": "In a short story, a paper boat is pushed out onto a pond, and the writer shows it as a sign of Ravi's hope to leave his town. What is the paper boat?",
+   "opts": [
+    "A symbol",
+    "A motif",
+    "A simile",
+    "A theme"
+   ],
+   "why": "The boat is an object that stands for a bigger idea, Ravi's hope of leaving. That makes it a symbol. It is not yet a motif, because a motif needs to return several times through the text.",
+   "clue": "Does the object stand for a bigger idea?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a novel, Mia's grandmother is shown with a clock in the opening chapter, a stopped clock appears in the middle, and a clock chimes in the last chapter. What does the repeated clock most likely build?",
+   "opts": [
+    "A motif that builds a theme about time",
+    "A symbol that appears only once in the text",
+    "A hyperbole that stretches the truth",
+    "A theme that is the same as the clock"
+   ],
+   "why": "The clock returns through the text, so it forms a motif, and each return adds to a theme about time. It is not a single symbol appearing once. The theme is the idea explored, not the object that repeats.",
+   "clue": "Count how many times the clock appears."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A symbol",
+   "also_right": []
+  },
+  "b": {
+   "best": "A motif that builds a theme about time",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem asks what the repeated clock 'builds', but the intended answer is a motif, which the clock forms rather than builds. The card says the motif is what builds the theme. The distractors are also easy to rule out: 'appears only once' contradicts the stem and 'a theme that is the same as the clock' is nonsensical, so students can pick the answer without knowing the idea. Consider asking 'What does the repeated clock form?' with stronger distractors."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question a are sound. In question b, the stem says the clock 'builds' a motif, which clashes with the card, and the weak distractors make the answer easy to guess."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The stem asks what the repeated clock 'builds', but the intended answer is a motif, which the clock forms rather than builds. The card says the motif is what builds the theme. The distractors are also easy to rule out: 'appears only once' contradicts the stem and 'a theme that is the same as the clock' is nonsensical, so students can pick the answer without knowing the idea. Consider asking 'What does the repeated clock form?' with stronger distractors."
+ ],
+ "proposal": {
+  "title": "Symbol and motif",
+  "card": [
+   [
+    "Symbol",
+    "An object or image that stands for a bigger idea. A cracked mirror in a story might stand for a broken sense of self."
+   ],
+   [
+    "Motif",
+    "An image or idea that returns again and again through a text. A motif is the repeating pattern, not a single object."
+   ],
+   "A symbol can appear once and still carry meaning. A motif needs several appearances, and each one adds to the same picture in the reader's mind.",
+   "A motif builds a theme, the main idea a text explores. If an empty chair keeps appearing in scene after scene, that motif can build a theme about grief."
+  ],
+  "remember": "A symbol stands for a bigger idea. A motif repeats to build a theme.",
+  "a": {
+   "q": "In a short story, a paper boat is pushed out onto a pond, and the writer shows it as a sign of Ravi's hope to leave his town. What is the paper boat?",
+   "opts": [
+    "A symbol",
+    "A motif",
+    "A theme",
+    "A setting"
+   ],
+   "why": "The boat is an object that stands for a bigger idea, Ravi's hope of leaving. That makes it a symbol. It is not a motif, because a motif needs to return several times through the text.",
+   "clue": "Does the object stand for a bigger idea?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a novel, a clock appears in the first chapter, a stopped clock appears in the middle, and a clock chimes in the last chapter. Which statement best describes the clock?",
+   "opts": [
+    "A motif, as it returns and builds a theme about time",
+    "A theme, as it is the main idea the novel explores",
+    "A symbol only, as each clock is a separate object",
+    "A motif, as it stands for time in a single chapter"
+   ],
+   "why": "The clock keeps returning across the novel, so together the clocks form a motif, and each return adds to a theme about time. Treating each clock as a separate object misses the repeating pattern. The clock is not the theme itself: the theme is the idea the clocks build.",
+   "clue": "Look at how the clock shows up across the whole novel."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A symbol",
+    "also_right": []
+   },
+   "b": {
+    "best": "A motif, as it returns and builds a theme about time",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 16,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem asks what the repeated clock 'builds', but the intended answer is a motif, which the clock forms rather than builds. The card says the motif is what builds the theme. The distractors are also easy to rule out: 'appears only once' contradicts the stem and 'a theme that is the same as the clock' is nonsensical, so students can pick the answer without knowing the idea. Consider asking 'What does the repeated clock form?' with stronger distractors."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The stem asks what the repeated clock 'builds', but the intended answer is a motif, which the clock forms rather than builds. The card says the motif is what builds the theme. The distractors are also easy to rule out: 'appears only once' contradicts the stem and 'a theme that is the same as the clock' is nonsensical, so students can pick the answer without knowing the idea. Consider asking 'What does the repeated clock form?' with stronger distractors."
+  ]
+ },
+ "final": {
+  "title": "Symbol and motif",
+  "card": [
+   [
+    "Symbol",
+    "An object or image that stands for a bigger idea. A cracked mirror in a story might stand for a broken sense of self."
+   ],
+   [
+    "Motif",
+    "An image or idea that returns again and again through a text. A motif is the repeating pattern, not a single object."
+   ],
+   "A symbol can appear once and still carry meaning. A motif needs several appearances, and each one adds to the same picture in the reader's mind.",
+   "A motif builds a theme, the main idea a text explores. If an empty chair keeps appearing in scene after scene, that motif can build a theme about grief."
+  ],
+  "remember": "A symbol stands for a bigger idea. A motif repeats to build a theme.",
+  "a": {
+   "q": "In a short story, a paper boat is pushed out onto a pond, and the writer shows it as a sign of Ravi's hope to leave his town. What is the paper boat?",
+   "opts": [
+    "A symbol",
+    "A motif",
+    "A theme",
+    "A setting"
+   ],
+   "why": "The boat is an object that stands for a bigger idea, Ravi's hope of leaving. That makes it a symbol. It is not a motif, because a motif needs to return several times through the text.",
+   "clue": "Does the object stand for a bigger idea?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a novel, a clock appears in the first chapter, a stopped clock appears in the middle, and a clock chimes in the last chapter. Which statement best describes the clock?",
+   "opts": [
+    "A motif, as it returns and builds a theme about time",
+    "A theme, as it is the main idea the novel explores",
+    "A symbol only, as each clock is a separate object",
+    "A motif, as it stands for time in a single chapter"
+   ],
+   "why": "The clock keeps returning across the novel, so together the clocks form a motif, and each return adds to a theme about time. Treating each clock as a separate object misses the repeating pattern. The clock is not the theme itself: the theme is the idea the clocks build.",
+   "clue": "Look at how the clock shows up across the whole novel."
+  }
+ },
+ "cleared_by": "recheck"
 }

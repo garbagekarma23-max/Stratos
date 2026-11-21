@@ -20,8 +20,135 @@
    0.237
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:48Z write: failed the content check, writing again",
+  "2026-11-20T12:44:54Z write: done",
+  "2026-11-20T13:11:47Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.01392,
+  "check": 0.00859
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point eng-logic-reasoning-flaws covers only personal attack and hasty generalisation, while the new point asks for personal attack, false choice and slippery slope, so no single bank point teaches the same set of ideas.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Logical fallacies",
+  "card": [
+   "A logical fallacy is a flaw in reasoning. The argument may sound convincing, but its conclusion does not follow from what is offered as support.",
+   [
+    "Attacking the person",
+    "going after the speaker's character instead of answering their argument. Example: \"Ignore Sam on school hours, he failed maths.\""
+   ],
+   [
+    "False choice",
+    "claiming there are only two options when there are more. Example: \"Ban phones or students learn nothing.\""
+   ],
+   [
+    "Slippery slope",
+    "claiming one small step will lead to a chain of extreme results, without showing why. Example: \"One free dress day and uniforms vanish.\""
+   ]
+  ],
+  "remember": "A fallacy sounds like reasoning but does not prove its claim, so test the link between the support and the conclusion.",
+  "a": {
+   "q": "A student says Ms Tran's idea for a longer lunch break is worthless because she is always late to class. Which fallacy is this?",
+   "opts": [
+    "Attacking the person",
+    "A false choice",
+    "A slippery slope",
+    "A fair use of evidence"
+   ],
+   "why": "The speaker dismisses the idea by going after Ms Tran's habits, not by answering the case for a longer break. A slippery slope would predict a chain of extreme results, and nothing here does that.",
+   "clue": "Does the speaker answer the idea, or go after the person?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A blogger says the council must build a new car park or the town centre will die. No other options are mentioned. Why is this argument weak?",
+   "opts": [
+    "It ignores other options, such as better buses",
+    "It attacks the people who want a car park",
+    "It predicts a chain of events with no proof",
+    "It uses facts that cannot be checked"
+   ],
+   "why": "The blogger gives only two choices when others could exist, such as better public transport. That is a false choice. The town centre dying is stated as certain, but the weakness is the missing options, not a chain of steps leading to it.",
+   "clue": "Count how many options the blogger allows."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Attacking the person",
+   "also_right": []
+  },
+  "b": {
+   "best": "It ignores other options, such as better buses",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Logical fallacies",
+  "card": [
+   "A logical fallacy is a flaw in reasoning. The argument may sound convincing, but its conclusion does not follow from what is offered as support.",
+   [
+    "Attacking the person",
+    "going after the speaker's character instead of answering their argument. Example: \"Ignore Sam on school hours, he failed maths.\""
+   ],
+   [
+    "False choice",
+    "claiming there are only two options when there are more. Example: \"Ban phones or students learn nothing.\""
+   ],
+   [
+    "Slippery slope",
+    "claiming one small step will lead to a chain of extreme results, without showing why. Example: \"One free dress day and uniforms vanish.\""
+   ]
+  ],
+  "remember": "A fallacy sounds like reasoning but does not prove its claim, so test the link between the support and the conclusion.",
+  "a": {
+   "q": "A student says Ms Tran's idea for a longer lunch break is worthless because she is always late to class. Which fallacy is this?",
+   "opts": [
+    "Attacking the person",
+    "A false choice",
+    "A slippery slope",
+    "A fair use of evidence"
+   ],
+   "why": "The speaker dismisses the idea by going after Ms Tran's habits, not by answering the case for a longer break. A slippery slope would predict a chain of extreme results, and nothing here does that.",
+   "clue": "Does the speaker answer the idea, or go after the person?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A blogger says the council must build a new car park or the town centre will die. No other options are mentioned. Why is this argument weak?",
+   "opts": [
+    "It ignores other options, such as better buses",
+    "It attacks the people who want a car park",
+    "It predicts a chain of events with no proof",
+    "It uses facts that cannot be checked"
+   ],
+   "why": "The blogger gives only two choices when others could exist, such as better public transport. That is a false choice. The town centre dying is stated as certain, but the weakness is the missing options, not a chain of steps leading to it.",
+   "clue": "Count how many options the blogger allows."
+  }
+ },
+ "cleared_by": "checker"
 }

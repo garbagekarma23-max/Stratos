@@ -20,8 +20,202 @@
    0.201
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:45Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:49Z write: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.00592,
+  "check": 0.01122,
+  "fix": 0.01585,
+  "recheck": 0.00758
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, What liveability means, defines liveability in general terms and does not teach how specific human factors such as crime, traffic, pollution, noise, housing costs and jobs influence it, so it is broader than the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Human influences on liveability",
+  "card": [
+   "Human influences on liveability come from what people do and build, not from nature. They can make a place more or less pleasant, safe and affordable to live in.",
+   "Crime, traffic, pollution and noise can lower liveability. People may feel less safe, breathe dirtier air, lose sleep or spend longer getting around.",
+   "Housing costs matter too. When rent and house prices are high, fewer people can afford to live in a place, even if it is pleasant.",
+   "Job opportunities can raise liveability, because people can earn an income close to home. Few jobs can lower it, as people may have to travel far or move away."
+  ],
+  "remember": "Human influences are what people do and build: crime, traffic, pollution, noise, housing costs and jobs.",
+  "a": {
+   "q": "Which of these is a human influence on liveability?",
+   "opts": [
+    "Heavy traffic on the main road through a town",
+    "A river that floods after heavy rain",
+    "A hot and dry climate in summer",
+    "A steep hill that makes building hard"
+   ],
+   "why": "Traffic comes from what people do and build, so it is a human influence. The flood, the climate and the hill are features of nature, so they are not human influences. Nature shapes them, not people.",
+   "clue": "Which one is caused by people, not by nature?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Few businesses in Narrabri's town centre have opened in recent years, and many young people leave to find work. Which human influence is lowering liveability?",
+   "opts": [
+    "Limited job opportunities",
+    "High levels of traffic noise",
+    "Rising air pollution",
+    "High rates of crime"
+   ],
+   "why": "Few jobs lead people to move away to find work, so limited job opportunities are the human influence here. Noise, pollution and crime can lower liveability too, but the case does not mention them.",
+   "clue": "Why would young people leave to find work?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Heavy traffic on the main road through a town",
+   "also_right": []
+  },
+  "b": {
+   "best": "Limited job opportunities",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The scenario makes a specific claim about a real NSW town (few new businesses in Narrabri's town centre in recent years). This may not be accurate, given recent projects such as Inland Rail and the Northern NSW Inland Port. Use a fictional town, or a claim that can be checked."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate and at the right level, and the intended answers are correct. The only concern is that question b states an unverified economic claim about the real town of Narrabri; a fictional town would be safer."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The scenario makes a specific claim about a real NSW town (few new businesses in Narrabri's town centre in recent years). This may not be accurate, given recent projects such as Inland Rail and the Northern NSW Inland Port. Use a fictional town, or a claim that can be checked."
+ ],
+ "proposal": {
+  "title": "Human influences on liveability",
+  "card": [
+   "Human influences on liveability come from what people do and build, not from nature. They can make a place more or less pleasant, safe and affordable to live in.",
+   "Crime, traffic, pollution and noise can lower liveability. People may feel less safe, breathe dirtier air, lose sleep or spend longer getting around.",
+   "Housing costs matter too. When rent and house prices are high, fewer people can afford to live in a place, even if it is pleasant.",
+   "Job opportunities can raise liveability, because people can earn an income close to home. Few jobs can lower it, as people may have to travel far or move away."
+  ],
+  "remember": "Human influences are what people do and build: crime, traffic, pollution, noise, housing costs and jobs.",
+  "a": {
+   "q": "Which of these is a human influence on liveability?",
+   "opts": [
+    "Heavy traffic on the main road through a town",
+    "A river that floods after heavy rain",
+    "A hot and dry climate in summer",
+    "A steep hill that makes building hard"
+   ],
+   "why": "Traffic comes from what people do and build, so it is a human influence. The flood, the climate and the hill are features of nature, so they are not human influences.",
+   "clue": "Which one is caused by people, not by nature?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tarrin is a small inland town with low rents and quiet streets. Few new businesses open there, and many young people move away to find work. Which human influence is lowering its liveability?",
+   "opts": [
+    "Limited job opportunities",
+    "High housing costs",
+    "Heavy traffic",
+    "Rising air pollution"
+   ],
+   "why": "Young people leave because there is little work close to home, so limited job opportunities lower liveability here. Housing costs are not the problem, because rents are low, and the quiet streets rule out heavy traffic.",
+   "clue": "Which detail in the case is a problem, not a good thing?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Heavy traffic on the main road through a town",
+    "also_right": []
+   },
+   "b": {
+    "best": "Limited job opportunities",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The scenario makes a specific claim about a real NSW town (few new businesses in Narrabri's town centre in recent years). This may not be accurate, given recent projects such as Inland Rail and the Northern NSW Inland Port. Use a fictional town, or a claim that can be checked."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The scenario makes a specific claim about a real NSW town (few new businesses in Narrabri's town centre in recent years). This may not be accurate, given recent projects such as Inland Rail and the Northern NSW Inland Port. Use a fictional town, or a claim that can be checked."
+  ]
+ },
+ "final": {
+  "title": "Human influences on liveability",
+  "card": [
+   "Human influences on liveability come from what people do and build, not from nature. They can make a place more or less pleasant, safe and affordable to live in.",
+   "Crime, traffic, pollution and noise can lower liveability. People may feel less safe, breathe dirtier air, lose sleep or spend longer getting around.",
+   "Housing costs matter too. When rent and house prices are high, fewer people can afford to live in a place, even if it is pleasant.",
+   "Job opportunities can raise liveability, because people can earn an income close to home. Few jobs can lower it, as people may have to travel far or move away."
+  ],
+  "remember": "Human influences are what people do and build: crime, traffic, pollution, noise, housing costs and jobs.",
+  "a": {
+   "q": "Which of these is a human influence on liveability?",
+   "opts": [
+    "Heavy traffic on the main road through a town",
+    "A river that floods after heavy rain",
+    "A hot and dry climate in summer",
+    "A steep hill that makes building hard"
+   ],
+   "why": "Traffic comes from what people do and build, so it is a human influence. The flood, the climate and the hill are features of nature, so they are not human influences.",
+   "clue": "Which one is caused by people, not by nature?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tarrin is a small inland town with low rents and quiet streets. Few new businesses open there, and many young people move away to find work. Which human influence is lowering its liveability?",
+   "opts": [
+    "Limited job opportunities",
+    "High housing costs",
+    "Heavy traffic",
+    "Rising air pollution"
+   ],
+   "why": "Young people leave because there is little work close to home, so limited job opportunities lower liveability here. Housing costs are not the problem, because rents are low, and the quiet streets rule out heavy traffic.",
+   "clue": "Which detail in the case is a problem, not a good thing?"
+  }
+ },
+ "cleared_by": "recheck"
 }

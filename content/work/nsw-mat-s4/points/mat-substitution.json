@@ -8,8 +8,380 @@
    0.348
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:54Z write: done",
+  "2026-11-20T12:35:53Z check: flagged",
+  "2026-11-20T12:44:58Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 8e-05,
+  "write": 0.01256,
+  "check": 0.01049,
+  "fix": 0.01824,
+  "recheck": 0.00714
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches writing algebraic expressions from words, while the new point teaches substituting values into existing expressions and evaluating them, which is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Substitution",
+  "card": [
+   "To substitute, replace each pronumeral with its value. Put the value in brackets so a negative sign is not lost.",
+   "Then work out the expression using the order of operations: brackets, powers, then multiplication and division, then addition and subtraction.",
+   "A power applies only to the pronumeral next to it. In \\(3a^{2}\\), only \\(a\\) is squared, not the 3.",
+   "Example: find \\(3a^{2}\\) when \\(a = -2\\). Write \\(3 \\times (-2)^{2}\\), which is \\(3 \\times 4 = 12\\)."
+  ],
+  "remember": "Replace with brackets, then follow the order of operations.",
+  "a": {
+   "q": "Find the value of \\(2x + 5\\) when \\(x = -3\\).",
+   "opts": [
+    "\\(-1\\)",
+    "\\(11\\)",
+    "\\(-11\\)",
+    "\\(1\\)"
+   ],
+   "why": "Substitute to get \\(2 \\times (-3) + 5 = -6 + 5 = -1\\). The answer \\(11\\) comes from treating \\(2 \\times (-3)\\) as \\(6\\), losing the negative sign.",
+   "clue": "Multiply first, then add 5."
+  },
+  "b": {
+   "d": 3,
+   "q": "Find the value of \\(4 - 2n^{2}\\) when \\(n = -3\\).",
+   "opts": [
+    "\\(-14\\)",
+    "\\(40\\)",
+    "\\(22\\)",
+    "\\(-32\\)"
+   ],
+   "why": "Powers come before multiplication: \\(n^{2} = (-3)^{2} = 9\\), then \\(4 - 2 \\times 9 = 4 - 18 = -14\\). The answer \\(40\\) comes from squaring \\(-3\\) as \\(-9\\) and then getting \\(4 + 18\\) wrongly, not 4 minus 18.",
+   "clue": "Square the number first, then multiply by 2, then subtract from 4."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(-1\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(-14\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says 40 comes from squaring -3 as -9 and then getting 4 + 18. But 4 + 18 = 22, which is a different option, so the explanation does not produce 40. The 40 distractor actually comes from squaring 2n as (2 × -3)² = 36 and then adding to get 4 + 36. The why should explain 22 that way, or explain 40 correctly."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clearly correct answer (-1 and -14). The why for (b) explains the distractor 40 with working that actually gives 22, so it needs correcting."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The why says 40 comes from squaring -3 as -9 and then getting 4 + 18. But 4 + 18 = 22, which is a different option, so the explanation does not produce 40. The 40 distractor actually comes from squaring 2n as (2 × -3)² = 36 and then adding to get 4 + 36. The why should explain 22 that way, or explain 40 correctly."
+ ],
+ "proposal": {
+  "title": "Substitution",
+  "card": [
+   "To substitute, replace each pronumeral with its value. Put the value in brackets so a negative sign is not lost.",
+   "Then work out the expression using the order of operations: brackets, powers, then multiplication and division, then addition and subtraction.",
+   "A power applies only to the pronumeral next to it. In \\(3a^{2}\\), only \\(a\\) is squared, not the 3.",
+   "Example: find \\(3a^{2}\\) when \\(a = -2\\). Write \\(3 \\times (-2)^{2}\\), which is \\(3 \\times 4 = 12\\)."
+  ],
+  "remember": "Replace with brackets, then follow the order of operations.",
+  "a": {
+   "q": "Find the value of \\(2x + 5\\) when \\(x = -3\\).",
+   "opts": [
+    "\\(-1\\)",
+    "\\(11\\)",
+    "\\(-11\\)",
+    "\\(1\\)"
+   ],
+   "why": "Substitute to get \\(2 \\times (-3) + 5 = -6 + 5 = -1\\). The answer \\(11\\) comes from treating \\(2 \\times (-3)\\) as \\(6\\), losing the negative sign.",
+   "clue": "Multiply first, then add 5."
+  },
+  "b": {
+   "d": 3,
+   "q": "Find the value of \\(4 - 2n^{2}\\) when \\(n = -3\\).",
+   "opts": [
+    "\\(-14\\)",
+    "\\(40\\)",
+    "\\(22\\)",
+    "\\(-32\\)"
+   ],
+   "why": "Powers come before multiplication: \\((-3)^{2} = 9\\), then \\(4 - 2 \\times 9 = 4 - 18 = -14\\). The answer \\(22\\) comes from squaring \\(-3\\) as \\(-9\\), which turns the working into \\(4 + 18\\). Squaring the 2 as well, as \\((-6)^{2} = 36\\), gives \\(4 - 36 = -32\\).",
+   "clue": "Square the number first, then multiply by 2, then subtract from 4."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(-1\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(-14\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says 40 comes from squaring -3 as -9 and then getting 4 + 18. But 4 + 18 = 22, which is a different option, so the explanation does not produce 40. The 40 distractor actually comes from squaring 2n as (2 × -3)² = 36 and then adding to get 4 + 36. The why should explain 22 that way, or explain 40 correctly."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The why says 40 comes from squaring -3 as -9 and then getting 4 + 18. But 4 + 18 = 22, which is a different option, so the explanation does not produce 40. The 40 distractor actually comes from squaring 2n as (2 × -3)² = 36 and then adding to get 4 + 36. The why should explain 22 that way, or explain 40 correctly."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Substitution",
+  "card": [
+   "To substitute, replace each pronumeral with its value. Put the value in brackets so a negative sign is not lost.",
+   "Then work out the expression using the order of operations: brackets, powers, then multiplication and division, then addition and subtraction.",
+   "A power applies only to the pronumeral next to it. In \\(3a^{2}\\), only \\(a\\) is squared, not the 3.",
+   "Example: find \\(3a^{2}\\) when \\(a = -2\\). Write \\(3 \\times (-2)^{2}\\), which is \\(3 \\times 4 = 12\\)."
+  ],
+  "remember": "Replace with brackets, then follow the order of operations.",
+  "a": {
+   "q": "Find the value of \\(2x + 5\\) when \\(x = -3\\).",
+   "opts": [
+    "\\(-1\\)",
+    "\\(11\\)",
+    "\\(-11\\)",
+    "\\(1\\)"
+   ],
+   "why": "Substitute to get \\(2 \\times (-3) + 5 = -6 + 5 = -1\\). The answer \\(11\\) comes from treating \\(2 \\times (-3)\\) as \\(6\\), losing the negative sign.",
+   "clue": "Multiply first, then add 5."
+  },
+  "b": {
+   "d": 3,
+   "q": "Find the value of \\(4 - 2n^{2}\\) when \\(n = -3\\).",
+   "opts": [
+    "\\(-14\\)",
+    "\\(40\\)",
+    "\\(22\\)",
+    "\\(-32\\)"
+   ],
+   "why": "Powers come before multiplication: \\((-3)^{2} = 9\\), then \\(4 - 2 \\times 9 = 4 - 18 = -14\\). The answer \\(22\\) comes from squaring \\(-3\\) as \\(-9\\), which turns the working into \\(4 + 18\\). Squaring the 2 as well, as \\((-6)^{2} = 36\\), gives \\(4 - 36 = -32\\).",
+   "clue": "Square the number first, then multiply by 2, then subtract from 4."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix corrects why (b): squaring negative 3 as negative 9 gives 4 + 18 = 22, and squaring negative 6 gives 4 - 36 = -32. The right answers, negative 1 and negative 14, are unchanged and correct.",
+   "item": "d043ce5137605ac9",
+   "result": "decided",
+   "saved": {
+    "id": "mat-substitution",
+    "title": "Substitution",
+    "brief": "3a299b75903e",
+    "shortlist": [
+     [
+      "mat-writing-algebraic-expressions",
+      0.348
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 1,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 8e-05,
+     "write": 0.01256,
+     "check": 0.01049,
+     "fix": 0.01824,
+     "recheck": 0.00714
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "high",
+     "reason": "The bank point teaches writing algebraic expressions from words, while the new point teaches substituting values into existing expressions and evaluating them, which is a different idea.",
+     "model": "claude-haiku-5-5"
+    },
+    "draft": {
+     "title": "Substitution",
+     "card": [
+      "To substitute, replace each pronumeral with its value. Put the value in brackets so a negative sign is not lost.",
+      "Then work out the expression using the order of operations: brackets, powers, then multiplication and division, then addition and subtraction.",
+      "A power applies only to the pronumeral next to it. In \\(3a^{2}\\), only \\(a\\) is squared, not the 3.",
+      "Example: find \\(3a^{2}\\) when \\(a = -2\\). Write \\(3 \\times (-2)^{2}\\), which is \\(3 \\times 4 = 12\\)."
+     ],
+     "remember": "Replace with brackets, then follow the order of operations.",
+     "a": {
+      "q": "Find the value of \\(2x + 5\\) when \\(x = -3\\).",
+      "opts": [
+       "\\(-1\\)",
+       "\\(11\\)",
+       "\\(-11\\)",
+       "\\(1\\)"
+      ],
+      "why": "Substitute to get \\(2 \\times (-3) + 5 = -6 + 5 = -1\\). The answer \\(11\\) comes from treating \\(2 \\times (-3)\\) as \\(6\\), losing the negative sign.",
+      "clue": "Multiply first, then add 5."
+     },
+     "b": {
+      "d": 3,
+      "q": "Find the value of \\(4 - 2n^{2}\\) when \\(n = -3\\).",
+      "opts": [
+       "\\(-14\\)",
+       "\\(40\\)",
+       "\\(22\\)",
+       "\\(-32\\)"
+      ],
+      "why": "Powers come before multiplication: \\(n^{2} = (-3)^{2} = 9\\), then \\(4 - 2 \\times 9 = 4 - 18 = -14\\). The answer \\(40\\) comes from squaring \\(-3\\) as \\(-9\\) and then getting \\(4 + 18\\) wrongly, not 4 minus 18.",
+      "clue": "Square the number first, then multiply by 2, then subtract from 4."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "\\(-1\\)",
+      "also_right": []
+     },
+     "b": {
+      "best": "\\(-14\\)",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The why says 40 comes from squaring -3 as -9 and then getting 4 + 18. But 4 + 18 = 22, which is a different option, so the explanation does not produce 40. The 40 distractor actually comes from squaring 2n as (2 × -3)² = 36 and then adding to get 4 + 36. The why should explain 22 that way, or explain 40 correctly."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one clearly correct answer (-1 and -14). The why for (b) explains the distractor 40 with working that actually gives 22, so it needs correcting."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question b, fact: The why says 40 comes from squaring -3 as -9 and then getting 4 + 18. But 4 + 18 = 22, which is a different option, so the explanation does not produce 40. The 40 distractor actually comes from squaring 2n as (2 × -3)² = 36 and then adding to get 4 + 36. The why should explain 22 that way, or explain 40 correctly."
+    ],
+    "proposal": {
+     "title": "Substitution",
+     "card": [
+      "To substitute, replace each pronumeral with its value. Put the value in brackets so a negative sign is not lost.",
+      "Then work out the expression using the order of operations: brackets, powers, then multiplication and division, then addition and subtraction.",
+      "A power applies only to the pronumeral next to it. In \\(3a^{2}\\), only \\(a\\) is squared, not the 3.",
+      "Example: find \\(3a^{2}\\) when \\(a = -2\\). Write \\(3 \\times (-2)^{2}\\), which is \\(3 \\times 4 = 12\\)."
+     ],
+     "remember": "Replace with brackets, then follow the order of operations.",
+     "a": {
+      "q": "Find the value of \\(2x + 5\\) when \\(x = -3\\).",
+      "opts": [
+       "\\(-1\\)",
+       "\\(11\\)",
+       "\\(-11\\)",
+       "\\(1\\)"
+      ],
+      "why": "Substitute to get \\(2 \\times (-3) + 5 = -6 + 5 = -1\\). The answer \\(11\\) comes from treating \\(2 \\times (-3)\\) as \\(6\\), losing the negative sign.",
+      "clue": "Multiply first, then add 5."
+     },
+     "b": {
+      "d": 3,
+      "q": "Find the value of \\(4 - 2n^{2}\\) when \\(n = -3\\).",
+      "opts": [
+       "\\(-14\\)",
+       "\\(40\\)",
+       "\\(22\\)",
+       "\\(-32\\)"
+      ],
+      "why": "Powers come before multiplication: \\((-3)^{2} = 9\\), then \\(4 - 2 \\times 9 = 4 - 18 = -14\\). The answer \\(22\\) comes from squaring \\(-3\\) as \\(-9\\), which turns the working into \\(4 + 18\\). Squaring the 2 as well, as \\((-6)^{2} = 36\\), gives \\(4 - 36 = -32\\).",
+      "clue": "Square the number first, then multiply by 2, then subtract from 4."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "\\(-1\\)",
+       "also_right": []
+      },
+      "b": {
+       "best": "\\(-14\\)",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-20T13:37:07Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 11,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The why says 40 comes from squaring -3 as -9 and then getting 4 + 18. But 4 + 18 = 22, which is a different option, so the explanation does not produce 40. The 40 distractor actually comes from squaring 2n as (2 × -3)² = 36 and then adding to get 4 + 36. The why should explain 22 that way, or explain 40 correctly."
+      }
+     ],
+     "flags": [
+      "Question b, fact: The why says 40 comes from squaring -3 as -9 and then getting 4 + 18. But 4 + 18 = 22, which is a different option, so the explanation does not produce 40. The 40 distractor actually comes from squaring 2n as (2 × -3)² = 36 and then adding to get 4 + 36. The why should explain 22 that way, or explain 40 correctly."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "17a96f5d0e5a761a"
+  }
  ]
 }

@@ -16,8 +16,234 @@
    0.322
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 may adapt geo-causes-wellbeing-differences, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:47Z confirm: Claude Opus 5.5 may adapt geo-causes-wellbeing-differences, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt geo-causes-wellbeing-differences (3 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting geo-causes-wellbeing-differences on the next run",
+  "2026-11-20T14:12:38Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "confirm": 0.00862,
+  "adapt": 0.00489,
+  "check": 0.00675
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-causes-wellbeing-differences",
+  "changes": [
+   "Add climate as an explicit environmental factor that shapes wellbeing, alongside the card's existing point about resources.",
+   "Name education and internet access directly as examples, since the card currently mentions them only in passing within services and technology."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea of several interacting causes behind wellbeing differences, and only needs climate and a clearer naming of education and internet access to match the new brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "geo-causes-wellbeing-differences",
+  "changes": [
+   "Group the causes under the NSW syllabus headings of environmental, economic, social and technological factors, so the card uses the same labels students will meet.",
+   "Add climate alongside land, water and minerals as an example of an environmental factor, to match the brief."
+  ],
+  "sure": "medium",
+  "reason": "The bank point already teaches how resources, jobs, services and technology work together to cause wellbeing differences, at a Year 9–10 depth, and only needs relabelling to the NSW factor categories and a climate example.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "geo-causes-wellbeing-differences",
+  "changes": [
+   "Group the causes under environmental, economic, social and technological factors, as the brief names them.",
+   "Add climate as an example of an environmental factor, next to land, water and minerals.",
+   "Use internet access as the example of a technological factor, as the brief does."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card1",
+   "card2",
+   "card3",
+   "card4",
+   "card2 label",
+   "card3 label",
+   "card4 label",
+   "remember",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same causes of wellbeing differences at the right depth, but groups them as resources, services, technology and government rather than the brief's environmental, economic, social and technological factors, and has no climate example.",
+   "item": "4715f22eae84652f",
+   "result": "decided",
+   "saved": {
+    "id": "geo-factors-behind-variations-wellbeing",
+    "title": "Factors behind variations in wellbeing",
+    "brief": "2e8681592b96",
+    "shortlist": [
+     [
+      "geo-human-wellbeing-development",
+      0.379
+     ],
+     [
+      "geo-causes-wellbeing-differences",
+      0.344
+     ],
+     [
+      "geo-wellbeing-within-india",
+      0.322
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00026,
+     "confirm": 0.00862
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "geo-causes-wellbeing-differences",
+     "changes": [
+      "Add climate as an explicit environmental factor that shapes wellbeing, alongside the card's existing point about resources.",
+      "Name education and internet access directly as examples, since the card currently mentions them only in passing within services and technology."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same idea of several interacting causes behind wellbeing differences, and only needs climate and a clearer naming of education and internet access to match the new brief.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "geo-causes-wellbeing-differences",
+     "changes": [
+      "Group the causes under the NSW syllabus headings of environmental, economic, social and technological factors, so the card uses the same labels students will meet.",
+      "Add climate alongside land, water and minerals as an example of an environmental factor, to match the brief."
+     ],
+     "sure": "medium",
+     "reason": "The bank point already teaches how resources, jobs, services and technology work together to cause wellbeing differences, at a Year 9–10 depth, and only needs relabelling to the NSW factor categories and a climate example.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "fb5545fd3e79bbed"
+  }
+ ],
+ "draft": {
+  "title": "Causes of wellbeing differences",
+  "card": [
+   "Wellbeing is how well people live: their health, education, income and safety. It differs between countries and within them. Causes fall into four groups: environmental, economic, social and technological. They work together to shape it.",
+   [
+    "Environmental",
+    "Environmental factors matter. Climate, fertile land, clean water and minerals give a place more to build on, if it can use them well."
+   ],
+   [
+    "Economic and social",
+    "Economic and social factors matter. Jobs and income let families pay for food, housing and care. Education and health services help people learn skills and live longer."
+   ],
+   [
+    "Technological",
+    "Technological factors matter too. Internet access can lift output and open up services such as online schooling and health advice. Where access is poor, gaps can widen."
+   ]
+  ],
+  "remember": "Wellbeing gaps come from environmental, economic, social and technological factors working together, not from one alone.",
+  "a": {
+   "q": "A small town's mine shuts and hundreds of workers lose their jobs. Which effect on the town's wellbeing is most likely?",
+   "opts": [
+    "Wellbeing falls, as households lose their income",
+    "Wellbeing rises, as workers now have more free time",
+    "Wellbeing holds steady, as the minerals are still there",
+    "Wellbeing rises, as the land is no longer being mined"
+   ],
+   "why": "Jobs bring income, and income pays for food, housing and care, so losing jobs is likely to lower wellbeing. The minerals still being in the ground does not keep wellbeing steady, because a place gains from resources when it can use them well.",
+   "clue": "Trace what losing work means for a household."
+  },
+  "b": {
+   "d": 3,
+   "q": "Country Z has rich mineral deposits, yet most people earn little and live far from clinics. Which explanation fits best?",
+   "opts": [
+    "Its mineral wealth may not be reaching services and jobs",
+    "It may need to find more minerals before wellbeing rises",
+    "Its wellbeing may be low because it lacks natural resources",
+    "Its wellbeing may be judged by minerals, not by health"
+   ],
+   "why": "Resources give a place more to build on if it can use them well, for example by spending mineral income on clinics and jobs. Here the wealth may not be reaching people. Finding more minerals is tempting, but Country Z already has plenty, so more would not change how they are used.",
+   "clue": "Country Z has the resources. What might stop people gaining from them?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Wellbeing falls, as households lose their income",
+   "also_right": []
+  },
+  "b": {
+   "best": "Its mineral wealth may not be reaching services and jobs",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Causes of wellbeing differences",
+  "card": [
+   "Wellbeing is how well people live: their health, education, income and safety. It differs between countries and within them. Causes fall into four groups: environmental, economic, social and technological. They work together to shape it.",
+   [
+    "Environmental",
+    "Environmental factors matter. Climate, fertile land, clean water and minerals give a place more to build on, if it can use them well."
+   ],
+   [
+    "Economic and social",
+    "Economic and social factors matter. Jobs and income let families pay for food, housing and care. Education and health services help people learn skills and live longer."
+   ],
+   [
+    "Technological",
+    "Technological factors matter too. Internet access can lift output and open up services such as online schooling and health advice. Where access is poor, gaps can widen."
+   ]
+  ],
+  "remember": "Wellbeing gaps come from environmental, economic, social and technological factors working together, not from one alone.",
+  "a": {
+   "q": "A small town's mine shuts and hundreds of workers lose their jobs. Which effect on the town's wellbeing is most likely?",
+   "opts": [
+    "Wellbeing falls, as households lose their income",
+    "Wellbeing rises, as workers now have more free time",
+    "Wellbeing holds steady, as the minerals are still there",
+    "Wellbeing rises, as the land is no longer being mined"
+   ],
+   "why": "Jobs bring income, and income pays for food, housing and care, so losing jobs is likely to lower wellbeing. The minerals still being in the ground does not keep wellbeing steady, because a place gains from resources when it can use them well.",
+   "clue": "Trace what losing work means for a household."
+  },
+  "b": {
+   "d": 3,
+   "q": "Country Z has rich mineral deposits, yet most people earn little and live far from clinics. Which explanation fits best?",
+   "opts": [
+    "Its mineral wealth may not be reaching services and jobs",
+    "It may need to find more minerals before wellbeing rises",
+    "Its wellbeing may be low because it lacks natural resources",
+    "Its wellbeing may be judged by minerals, not by health"
+   ],
+   "why": "Resources give a place more to build on if it can use them well, for example by spending mineral income on clinics and jobs. Here the wealth may not be reaching people. Finding more minerals is tempting, but Country Z already has plenty, so more would not change how they are used.",
+   "clue": "Country Z has the resources. What might stop people gaining from them?"
+  }
+ }
 }

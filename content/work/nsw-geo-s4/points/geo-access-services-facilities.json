@@ -24,8 +24,227 @@
    0.257
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 may adapt geo-access-services, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:45Z confirm: Claude Opus 5.5 may adapt geo-access-services, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt geo-access-services (3 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting geo-access-services on the next run",
+  "2026-11-20T14:12:37Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "confirm": 0.0103,
+  "adapt": 0.00532,
+  "check": 0.00791
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-access-services",
+  "changes": [
+   "Add public transport and internet access to the card as examples of services, since the brief names them and the card currently lists only hospitals, schools and shops.",
+   "Replace the Northern Territory example in question b with a remote place in New South Wales so the example is local to the NSW course."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea of services being concentrated in cities and harder to reach in remote places, at the right Year 7 depth, but it needs a small addition of public transport and internet examples and a NSW-based example.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "geo-access-services",
+  "changes": [
+   "Add public transport and internet access to the card's list of services, alongside schools, hospitals and shops, and note that remote places often have fewer of these too.",
+   "Optionally make the remote example in question b a place in New South Wales, such as a farm in the far west of the state, instead of the Northern Territory."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same Year 7 idea that services make a place more liveable and remote places have fewer of them, but it needs public transport and internet access added to match this brief.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "geo-access-services",
+  "changes": [
+   "Add public transport and internet access to the card's services, with schools, hospitals and shops, and say remote places often have fewer of these too.",
+   "Mention liveability without defining it again, since this course defines it in its own point in Chapter 1.",
+   "Set question b on a remote farm in New South Wales instead of the Northern Territory."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "title",
+   "card1",
+   "card2",
+   "card3",
+   "card4",
+   "remember",
+   "a.q",
+   "b.q",
+   "b.opt1",
+   "b.opt2",
+   "b.opt3",
+   "b.opt4",
+   "b.why"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same idea that services make a place more liveable and remote places have fewer of them, but it needs public transport and internet access added to match the brief.",
+   "item": "53ea15cc07dcfe24",
+   "result": "decided",
+   "saved": {
+    "id": "geo-access-services-facilities",
+    "title": "Access to services and facilities",
+    "brief": "c8be5fb7be72",
+    "shortlist": [
+     [
+      "geo-access-services",
+      0.515
+     ],
+     [
+      "geo-transport-technology-access",
+      0.425
+     ],
+     [
+      "geo-transport-access",
+      0.419
+     ],
+     [
+      "geo-liveability-means",
+      0.329
+     ],
+     [
+      "geo-digital-divide",
+      0.257
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00034,
+     "confirm": 0.0103
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "geo-access-services",
+     "changes": [
+      "Add public transport and internet access to the card as examples of services, since the brief names them and the card currently lists only hospitals, schools and shops.",
+      "Replace the Northern Territory example in question b with a remote place in New South Wales so the example is local to the NSW course."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same idea of services being concentrated in cities and harder to reach in remote places, at the right Year 7 depth, but it needs a small addition of public transport and internet examples and a NSW-based example.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "geo-access-services",
+     "changes": [
+      "Add public transport and internet access to the card's list of services, alongside schools, hospitals and shops, and note that remote places often have fewer of these too.",
+      "Optionally make the remote example in question b a place in New South Wales, such as a farm in the far west of the state, instead of the Northern Territory."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same Year 7 idea that services make a place more liveable and remote places have fewer of them, but it needs public transport and internet access added to match this brief.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "5a958c89e863a966"
+  }
+ ],
+ "draft": {
+  "title": "Access to services and facilities",
+  "card": [
+   "Services and facilities are things a community uses, such as schools, hospitals and shops. Most are found in cities, where many people live close together.",
+   "Public transport and internet access are services too. Buses, trains and a good connection help people reach work, school and help. Remote places often have fewer of these as well.",
+   "Smaller and remote places have fewer services, because there are fewer people to use them. People there often travel a long way to reach a hospital, a high school or a large shop.",
+   "Easy access to services adds to a place's liveability. Long trips, few buses or a weak internet connection can make a place less liveable."
+  ],
+  "remember": "Services gather where many people live, so people far from cities often have fewer of them and travel further.",
+  "a": {
+   "q": "What is the main reason a remote town often has fewer services than a city?",
+   "opts": [
+    "Fewer people live there to use the services",
+    "The services there are too cheap to run",
+    "People in remote places do not need services",
+    "Cities have more land for the services"
+   ],
+   "why": "Services are usually built where many people can use them, so they cluster in cities. Remote places have fewer people, so they have fewer services. People there still need services, which is why they travel.",
+   "clue": "Think about how many people live in each kind of place."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia's family lives on a remote farm in New South Wales. The nearest hospital is a long drive away. How does this most affect how liveable her home is?",
+   "opts": [
+    "Reaching medical help takes longer and is harder",
+    "Mia's family has more services close by",
+    "Mia's family has no need of medical help",
+    "The farm is easier to reach from the city"
+   ],
+   "why": "A long trip to a hospital makes it harder to get help quickly, which lowers liveability. Having services close by is the opposite of Mia's case. Families in remote places still need medical care.",
+   "clue": "Think about what a long drive means in an emergency."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Fewer people live there to use the services",
+   "also_right": []
+  },
+  "b": {
+   "best": "Reaching medical help takes longer and is harder",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Access to services and facilities",
+  "card": [
+   "Services and facilities are things a community uses, such as schools, hospitals and shops. Most are found in cities, where many people live close together.",
+   "Public transport and internet access are services too. Buses, trains and a good connection help people reach work, school and help. Remote places often have fewer of these as well.",
+   "Smaller and remote places have fewer services, because there are fewer people to use them. People there often travel a long way to reach a hospital, a high school or a large shop.",
+   "Easy access to services adds to a place's liveability. Long trips, few buses or a weak internet connection can make a place less liveable."
+  ],
+  "remember": "Services gather where many people live, so people far from cities often have fewer of them and travel further.",
+  "a": {
+   "q": "What is the main reason a remote town often has fewer services than a city?",
+   "opts": [
+    "Fewer people live there to use the services",
+    "The services there are too cheap to run",
+    "People in remote places do not need services",
+    "Cities have more land for the services"
+   ],
+   "why": "Services are usually built where many people can use them, so they cluster in cities. Remote places have fewer people, so they have fewer services. People there still need services, which is why they travel.",
+   "clue": "Think about how many people live in each kind of place."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia's family lives on a remote farm in New South Wales. The nearest hospital is a long drive away. How does this most affect how liveable her home is?",
+   "opts": [
+    "Reaching medical help takes longer and is harder",
+    "Mia's family has more services close by",
+    "Mia's family has no need of medical help",
+    "The farm is easier to reach from the city"
+   ],
+   "why": "A long trip to a hospital makes it harder to get help quickly, which lowers liveability. Having services close by is the opposite of Mia's case. Families in remote places still need medical care.",
+   "clue": "Think about what a long drive means in an emergency."
+  }
+ }
 }

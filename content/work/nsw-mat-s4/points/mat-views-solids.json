@@ -20,8 +20,424 @@
    0.204
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:54Z write: done",
+  "2026-11-20T12:35:52Z check: flagged",
+  "2026-11-20T12:44:58Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (card fact)",
+  "2026-11-20T13:44:56Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.01311,
+  "check": 0.01057,
+  "fix": 0.02164,
+  "recheck": 0.00857
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-nets-views-objects, covers views only as one part of a card that also teaches nets and perspective drawings, and it never asks students to match a solid to its views, so it is broader than the new point and no bank point teaches views of prisms and composite solids on its own.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, fact: 'The front view shows how tall each column is' is not quite right. When columns stand one behind another, the front view shows only the tallest column at each position across. It does not show the height of every column. Students matching a solid to its views could be misled.",
+ "rejected": {
+  "title": "Views of solids",
+  "card": [
+   "A solid looks different from different sides. We draw three views: the front view, the side view and the top view.",
+   "Each view shows what you see when you look straight at the solid from that direction. The front view is from the front, the side view is from one side, and the top view is from directly above.",
+   "For a solid built from cubes, count the cubes you can see in each view as squares. A square in the top view shows a column of cubes, and the front view shows how tall each column is.",
+   [
+    "Example",
+    "A rectangular prism is 4 cubes long, 2 cubes wide and 3 cubes tall. Its top view is a rectangle 4 squares by 2 squares. Its front view is a rectangle 4 squares by 3 squares."
+   ]
+  ],
+  "remember": "Each view is a flat picture of what you see looking straight at the solid from one direction.",
+  "a": {
+   "q": "A rectangular prism is 5 cubes long, 2 cubes wide and 3 cubes tall. What shape is its top view, with the length across the page?",
+   "opts": [
+    "A rectangle 5 squares by 2 squares",
+    "A rectangle 5 squares by 3 squares",
+    "A rectangle 2 squares by 3 squares",
+    "A rectangle 3 squares by 2 squares"
+   ],
+   "why": "The top view is what you see from directly above, so it shows the length and the width: 5 by 2. The height of 3 only shows up in the front and side views. The option with 5 by 3 is the front view.",
+   "clue": "Looking from above, which two measurements can you see?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jonah puts 4 cubes in a row along the ground. Then he stacks 2 more cubes, one on each of the two cubes at the left end, as seen from the front. What is the front view?",
+   "opts": [
+    "4 squares in the bottom row, 2 squares above on the left",
+    "4 squares in the bottom row, 2 squares above on the right",
+    "4 squares in the bottom row, 4 squares above them",
+    "2 squares in the bottom row, 4 squares above them"
+   ],
+   "why": "The bottom row is 4 cubes long, so the front view has 4 squares in a row. The 2 extra cubes sit on the left end as seen from the front, so they appear above on the left. Putting them on the right shows the solid from the back, not the front.",
+   "clue": "Picture standing in front of the solid. Where does the second layer sit?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A solid built from unit cubes: a bottom layer of 3 cubes in a row and a second layer of 1 cube on the left end. Beside it, three labelled flat views: front view (3 squares along the bottom and 1 square above the left square, making the left column 2 squares tall), side view (a column of 2 squares) and top view (a row of 3 squares).",
+    "why": "It shows how each view is a flat picture of the same solid."
+   }
+  ]
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, fact: 'The front view shows how tall each column is' is not quite right. When columns stand one behind another, the front view shows only the tallest column at each position across. It does not show the height of every column. Students matching a solid to its views could be misled."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Views of solids",
+     "card": [
+      "A solid looks different from different sides. We draw three views: the front view, the side view and the top view.",
+      "Each view shows what you see when you look straight at the solid from that direction. The front view is from the front, the side view is from one side, and the top view is from directly above.",
+      "For a solid built from cubes, count the cubes you can see in each view as squares. A square in the top view shows a column of cubes, and the front view shows how tall each column is.",
+      [
+       "Example",
+       "A rectangular prism is 4 cubes long, 2 cubes wide and 3 cubes tall. Its top view is a rectangle 4 squares by 2 squares. Its front view is a rectangle 4 squares by 3 squares."
+      ]
+     ],
+     "remember": "Each view is a flat picture of what you see looking straight at the solid from one direction.",
+     "a": {
+      "q": "A rectangular prism is 5 cubes long, 2 cubes wide and 3 cubes tall. What shape is its top view, with the length across the page?",
+      "opts": [
+       "A rectangle 5 squares by 2 squares",
+       "A rectangle 5 squares by 3 squares",
+       "A rectangle 2 squares by 3 squares",
+       "A rectangle 3 squares by 2 squares"
+      ],
+      "why": "The top view is what you see from directly above, so it shows the length and the width: 5 by 2. The height of 3 only shows up in the front and side views. The option with 5 by 3 is the front view.",
+      "clue": "Looking from above, which two measurements can you see?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Jonah builds a tower of 4 cubes in a row, each cube on its own. Then he stacks a second layer of 2 cubes on the left two cubes. Looking from the front, what is the front view?",
+      "opts": [
+       "4 squares in the bottom row, 2 squares above on the left",
+       "4 squares in the bottom row, 2 squares above on the right",
+       "4 squares in the bottom row, 4 squares above",
+       "2 squares in the bottom row, 4 squares above"
+      ],
+      "why": "The bottom layer is 4 cubes long, so the front view has 4 squares in a row. The 2 cubes on top sit on the left two cubes, so they appear above on the left. Showing 4 squares above would count cubes that are not there.",
+      "clue": "Draw the bottom row first, then place the top squares above the left end."
+     },
+     "wants": [
+      {
+       "at": "card 3",
+       "kind": "diagram",
+       "brief": "A solid built from unit cubes: a bottom layer of 3 cubes in a row and a second layer of 1 cube on the left end. Beside it, three labelled flat views: front view (an L-shaped set of squares, 3 along the bottom and 2 high on the left), side view (a column of 2 squares) and top view (a row of 3 squares).",
+       "why": "It shows how each view is a flat picture of the same solid."
+      }
+     ]
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "A rectangle 5 squares by 2 squares",
+      "also_right": []
+     },
+     "b": {
+      "best": "4 squares in the bottom row, 2 squares above on the left",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The stem says 'a tower of 4 cubes in a row, each cube on its own'. A tower usually means a vertical stack, and 'each cube on its own' is unclear, so a student may picture the solid wrongly. Say instead 'puts 4 cubes in a row along the ground'."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue says 'place the top squares above the left end', which gives away the left/right choice. That choice is the only difference between the right option and the closest distractor."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both answers check out: a's top view is 5 by 2, and b's front view has 2 squares above on the left. In b, the word 'tower' and 'each cube on its own' make the solid confusing, and the clue gives the answer away."
+    },
+    "flags": [
+     "Question b, wording: The stem says 'a tower of 4 cubes in a row, each cube on its own'. A tower usually means a vertical stack, and 'each cube on its own' is unclear, so a student may picture the solid wrongly. Say instead 'puts 4 cubes in a row along the ground'.",
+     "Question b, other: The clue says 'place the top squares above the left end', which gives away the left/right choice. That choice is the only difference between the right option and the closest distractor."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Views of solids",
+     "card": [
+      "A solid looks different from different sides. We draw three views: the front view, the side view and the top view.",
+      "Each view shows what you see when you look straight at the solid from that direction. The front view is from the front, the side view is from one side, and the top view is from directly above.",
+      "For a solid built from cubes, count the cubes you can see in each view as squares. A square in the top view shows a column of cubes, and the front view shows how tall each column is.",
+      [
+       "Example",
+       "A rectangular prism is 4 cubes long, 2 cubes wide and 3 cubes tall. Its top view is a rectangle 4 squares by 2 squares. Its front view is a rectangle 4 squares by 3 squares."
+      ]
+     ],
+     "remember": "Each view is a flat picture of what you see looking straight at the solid from one direction.",
+     "a": {
+      "q": "A rectangular prism is 5 cubes long, 2 cubes wide and 3 cubes tall. What shape is its top view, with the length across the page?",
+      "opts": [
+       "A rectangle 5 squares by 2 squares",
+       "A rectangle 5 squares by 3 squares",
+       "A rectangle 2 squares by 3 squares",
+       "A rectangle 3 squares by 2 squares"
+      ],
+      "why": "The top view is what you see from directly above, so it shows the length and the width: 5 by 2. The height of 3 only shows up in the front and side views. The option with 5 by 3 is the front view.",
+      "clue": "Looking from above, which two measurements can you see?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Jonah puts 4 cubes in a row along the ground. Then he stacks 2 more cubes, one on each of the two cubes at the left end, as seen from the front. What is the front view?",
+      "opts": [
+       "4 squares in the bottom row, 2 squares above on the left",
+       "4 squares in the bottom row, 2 squares above on the right",
+       "4 squares in the bottom row, 4 squares above them",
+       "2 squares in the bottom row, 4 squares above them"
+      ],
+      "why": "The bottom row is 4 cubes long, so the front view has 4 squares in a row. The 2 extra cubes sit on the left end as seen from the front, so they appear above on the left. Putting them on the right shows the solid from the back, not the front.",
+      "clue": "Picture standing in front of the solid. Where does the second layer sit?"
+     },
+     "wants": [
+      {
+       "at": "card 3",
+       "kind": "diagram",
+       "brief": "A solid built from unit cubes: a bottom layer of 3 cubes in a row and a second layer of 1 cube on the left end. Beside it, three labelled flat views: front view (3 squares along the bottom and 1 square above the left square, making the left column 2 squares tall), side view (a column of 2 squares) and top view (a row of 3 squares).",
+       "why": "It shows how each view is a flat picture of the same solid."
+      }
+     ]
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "A rectangle 5 squares by 2 squares",
+       "also_right": []
+      },
+      "b": {
+       "best": "4 squares in the bottom row, 2 squares above on the left",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "fact",
+        "detail": "'The front view shows how tall each column is' is not quite right. When columns stand one behind another, the front view shows only the tallest column at each position across. It does not show the height of every column. Students matching a solid to its views could be misled."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are correct and have one clear answer. One card line overstates what the front view shows: it gives the tallest column at each position across, not the height of every column."
+     },
+     "flags": [
+      "Card, fact: 'The front view shows how tall each column is' is not quite right. When columns stand one behind another, the front view shows only the tallest column at each position across. It does not show the height of every column. Students matching a solid to its views could be misled."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:56Z",
+   "step": "write",
+   "version": {
+    "title": "Views of solids",
+    "card": [
+     "A solid looks different from different sides. We draw three views: the front view, the side view and the top view.",
+     "Each view shows what you see when you look straight at the solid from that direction. The front view is from the front, the side view is from one side, and the top view is from directly above.",
+     "For a solid built from cubes, draw each cube face you can see as a square. A square in the top view marks a column of cubes. The front view shows the tallest column at each place across, as shorter columns behind it are hidden.",
+     [
+      "Example",
+      "A rectangular prism is 4 cubes long, 2 cubes wide and 3 cubes tall. Its top view is a rectangle 4 squares by 2 squares. Its front view is a rectangle 4 squares by 3 squares."
+     ]
+    ],
+    "remember": "Each view is a flat picture of what you see looking straight at the solid from one direction.",
+    "a": {
+     "q": "A rectangular prism is 5 cubes long, 2 cubes wide and 3 cubes tall. What shape is its top view, with the length across the page?",
+     "opts": [
+      "A rectangle 5 squares by 2 squares",
+      "A rectangle 5 squares by 3 squares",
+      "A rectangle 2 squares by 3 squares",
+      "A rectangle 3 squares by 2 squares"
+     ],
+     "why": "The top view is what you see from directly above, so it shows the length and the width: 5 by 2. The height of 3 only shows up in the front and side views. The option with 5 by 3 is the front view.",
+     "clue": "Looking from above, which two measurements can you see?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Jonah puts 4 cubes in a row along the ground. Then he stacks 2 more cubes, one on each of the two cubes at the left end, as seen from the front. What is the front view?",
+     "opts": [
+      "4 squares in the bottom row, 2 squares above on the left",
+      "4 squares in the bottom row, 2 squares above on the right",
+      "4 squares in the bottom row, 4 squares above them",
+      "2 squares in the bottom row, 4 squares above them"
+     ],
+     "why": "The bottom row is 4 cubes long, so the front view has 4 squares in a row. The 2 extra cubes sit on the left end as seen from the front, so they appear above on the left. Putting them on the right shows the solid from the back, not the front.",
+     "clue": "Picture standing in front of the solid. Where does the second layer sit?"
+    },
+    "wants": [
+     {
+      "at": "card 3",
+      "kind": "diagram",
+      "brief": "A solid built from unit cubes: a bottom layer of 3 cubes in a row and a second layer of 1 cube on the left end. Beside it, three labelled flat views: front view (3 squares along the bottom and 1 square above the left square, making the left column 2 squares tall), side view (a column of 2 squares) and top view (a row of 3 squares).",
+      "why": "It shows how each view is a flat picture of the same solid."
+     }
+    ]
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "A rectangle 5 squares by 2 squares",
+     "also_right": []
+    },
+    "b": {
+     "best": "4 squares in the bottom row, 2 squares above on the left",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Views of solids",
+  "card": [
+   "A solid looks different from different sides. We draw three views: the front view, the side view and the top view.",
+   "Each view shows what you see when you look straight at the solid from that direction. The front view is from the front, the side view is from one side, and the top view is from directly above.",
+   "For a solid built from cubes, draw each cube face you can see as a square. A square in the top view marks a column of cubes. The front view shows the tallest column at each place across, as shorter columns behind it are hidden.",
+   [
+    "Example",
+    "A rectangular prism is 4 cubes long, 2 cubes wide and 3 cubes tall. Its top view is a rectangle 4 squares by 2 squares. Its front view is a rectangle 4 squares by 3 squares."
+   ]
+  ],
+  "remember": "Each view is a flat picture of what you see looking straight at the solid from one direction.",
+  "a": {
+   "q": "A rectangular prism is 5 cubes long, 2 cubes wide and 3 cubes tall. What shape is its top view, with the length across the page?",
+   "opts": [
+    "A rectangle 5 squares by 2 squares",
+    "A rectangle 5 squares by 3 squares",
+    "A rectangle 2 squares by 3 squares",
+    "A rectangle 3 squares by 2 squares"
+   ],
+   "why": "The top view is what you see from directly above, so it shows the length and the width: 5 by 2. The height of 3 only shows up in the front and side views. The option with 5 by 3 is the front view.",
+   "clue": "Looking from above, which two measurements can you see?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jonah puts 4 cubes in a row along the ground. Then he stacks 2 more cubes, one on each of the two cubes at the left end, as seen from the front. What is the front view?",
+   "opts": [
+    "4 squares in the bottom row, 2 squares above on the left",
+    "4 squares in the bottom row, 2 squares above on the right",
+    "4 squares in the bottom row, 4 squares above them",
+    "2 squares in the bottom row, 4 squares above them"
+   ],
+   "why": "The bottom row is 4 cubes long, so the front view has 4 squares in a row. The 2 extra cubes sit on the left end as seen from the front, so they appear above on the left. Putting them on the right shows the solid from the back, not the front.",
+   "clue": "Picture standing in front of the solid. Where does the second layer sit?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A solid built from unit cubes: a bottom layer of 3 cubes in a row and a second layer of 1 cube on the left end. Beside it, three labelled flat views: front view (3 squares along the bottom and 1 square above the left square, making the left column 2 squares tall), side view (a column of 2 squares) and top view (a row of 3 squares).",
+    "why": "It shows how each view is a flat picture of the same solid."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A rectangle 5 squares by 2 squares",
+   "also_right": []
+  },
+  "b": {
+   "best": "4 squares in the bottom row, 2 squares above on the left",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Views of solids",
+  "card": [
+   "A solid looks different from different sides. We draw three views: the front view, the side view and the top view.",
+   "Each view shows what you see when you look straight at the solid from that direction. The front view is from the front, the side view is from one side, and the top view is from directly above.",
+   "For a solid built from cubes, draw each cube face you can see as a square. A square in the top view marks a column of cubes. The front view shows the tallest column at each place across, as shorter columns behind it are hidden.",
+   [
+    "Example",
+    "A rectangular prism is 4 cubes long, 2 cubes wide and 3 cubes tall. Its top view is a rectangle 4 squares by 2 squares. Its front view is a rectangle 4 squares by 3 squares."
+   ]
+  ],
+  "remember": "Each view is a flat picture of what you see looking straight at the solid from one direction.",
+  "a": {
+   "q": "A rectangular prism is 5 cubes long, 2 cubes wide and 3 cubes tall. What shape is its top view, with the length across the page?",
+   "opts": [
+    "A rectangle 5 squares by 2 squares",
+    "A rectangle 5 squares by 3 squares",
+    "A rectangle 2 squares by 3 squares",
+    "A rectangle 3 squares by 2 squares"
+   ],
+   "why": "The top view is what you see from directly above, so it shows the length and the width: 5 by 2. The height of 3 only shows up in the front and side views. The option with 5 by 3 is the front view.",
+   "clue": "Looking from above, which two measurements can you see?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jonah puts 4 cubes in a row along the ground. Then he stacks 2 more cubes, one on each of the two cubes at the left end, as seen from the front. What is the front view?",
+   "opts": [
+    "4 squares in the bottom row, 2 squares above on the left",
+    "4 squares in the bottom row, 2 squares above on the right",
+    "4 squares in the bottom row, 4 squares above them",
+    "2 squares in the bottom row, 4 squares above them"
+   ],
+   "why": "The bottom row is 4 cubes long, so the front view has 4 squares in a row. The 2 extra cubes sit on the left end as seen from the front, so they appear above on the left. Putting them on the right shows the solid from the back, not the front.",
+   "clue": "Picture standing in front of the solid. Where does the second layer sit?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A solid built from unit cubes: a bottom layer of 3 cubes in a row and a second layer of 1 cube on the left end. Beside it, three labelled flat views: front view (3 squares along the bottom and 1 square above the left square, making the left column 2 squares tall), side view (a column of 2 squares) and top view (a row of 3 squares).",
+    "why": "It shows how each view is a flat picture of the same solid."
+   }
+  ]
+ },
+ "checked_by": "claude-code"
 }

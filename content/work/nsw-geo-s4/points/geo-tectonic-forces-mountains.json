@@ -24,8 +24,400 @@
    0.212
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:46Z write: done",
+  "2026-11-20T12:35:48Z check: flagged",
+  "2026-11-20T12:44:55Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (a other)",
+  "2026-11-20T13:44:55Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "write": 0.01125,
+  "check": 0.01297,
+  "fix": 0.02141,
+  "recheck": 0.0108
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, geo-plate-tectonics-mountain-building, covers plates pushing together to build mountains but says nothing about volcanoes, which the new point also teaches, so adding that idea would be more than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The clue 'Think about what squeezing does to layers of rock' repeats 'squeezing', the word that appears only in the right option. A student can match the word and pick the answer without knowing the idea.",
+ "rejected": {
+  "title": "Tectonic forces and mountains",
+  "card": [
+   "The Earth's crust is broken into large pieces called plates. They move very slowly, only a few centimetres a year.",
+   "Where two plates push together, the rock at the edges is squeezed. Layers of rock can be crumpled and folded upwards over millions of years to form mountains.",
+   "Where one plate is forced down under another, rock can melt deep below. This melted rock can rise to the surface and erupt, forming volcanoes.",
+   "The Himalayas formed where the Indian Plate pushed into the Eurasian Plate. The mountains are still rising slowly today."
+  ],
+  "remember": "Plates move slowly. Where they push together, rock can fold up into mountains and volcanoes can form.",
+  "a": {
+   "q": "What builds mountains where two plates of the Earth's crust push together?",
+   "opts": [
+    "Squeezing that folds rock layers upwards",
+    "Wind and rain wearing rock layers away",
+    "Rivers dropping layers of sediment",
+    "Plates pulling apart as the crust cools"
+   ],
+   "why": "Pushing plates squeeze the rock at their edges, folding the layers upwards into mountains over millions of years. Wind and rain wear rock down, so they lower the land rather than build mountains.",
+   "clue": "Think about what squeezing does to layers of rock."
+  },
+  "b": {
+   "d": 3,
+   "q": "Scientists find that a mountain range has formed where two plates are pushing together. Which statement about how it formed is correct?",
+   "opts": [
+    "It built up slowly over millions of years",
+    "It formed suddenly in a single year",
+    "It formed when plates pulled far apart",
+    "It formed because rivers piled up sediment"
+   ],
+   "why": "Plates move only a few centimetres a year, so folding rock into mountains takes millions of years. Rivers can drop sediment, but here it is the pushing plates that fold rock up into mountains.",
+   "clue": "Plates move only a few centimetres a year."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A cross-section of two plates of the Earth's crust, each labelled 'Plate', pushing towards each other, with arrows showing the push and the rock layers folded upwards into a mountain between them.",
+    "why": "It shows how pushing plates fold rock up into mountains."
+   }
+  ]
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: The clue 'Think about what squeezing does to layers of rock' repeats 'squeezing', the word that appears only in the right option. A student can match the word and pick the answer without knowing the idea."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Tectonic forces and mountains",
+     "card": [
+      "The Earth's crust is broken into large pieces called plates. They move very slowly, only a few centimetres a year.",
+      "Where two plates push together, the rock at the edges is squeezed. Layers of rock can be crumpled and folded upwards over millions of years to form mountains.",
+      "Where one plate is forced down under another, rock can melt deep below. This melted rock can rise to the surface and erupt, forming volcanoes.",
+      "The Himalayas formed where the Indian Plate pushed into the Eurasian Plate. The mountains are still rising slowly today."
+     ],
+     "remember": "Plates move slowly. Where they push together, rock folds up into mountains and volcanoes can form.",
+     "a": {
+      "q": "What happens where two plates of the Earth's crust push together?",
+      "opts": [
+       "Rock can be folded upwards into mountains",
+       "Rock is worn away by wind into flat plains",
+       "Rivers deposit sediment to build mountains",
+       "The plates stop moving and the crust cools"
+      ],
+      "why": "Pushing plates squeeze and fold rock upwards, which builds mountains over millions of years. Wind wears rock down, so it does not explain mountain building.",
+      "clue": "Think about what squeezing does to layers of rock."
+     },
+     "b": {
+      "d": 3,
+      "q": "Scientists find that a mountain range has formed where two plates are pushing together. Which statement about how it formed is correct?",
+      "opts": [
+       "It built up slowly over millions of years",
+       "It formed suddenly in a single year",
+       "It formed when plates pulled far apart",
+       "It formed because rivers piled up sediment"
+      ],
+      "why": "Plates move only a few centimetres a year, so folding rock into mountains takes millions of years. Rivers can drop sediment, but the card says pushing plates build the mountains.",
+      "clue": "Plates move only a few centimetres a year."
+     },
+     "wants": [
+      {
+       "at": "card 2",
+       "kind": "diagram",
+       "brief": "A cross-section of two plates of the Earth's crust labelled 'Plate' pushing towards each other, with arrows showing the push and the rock layers folded upwards into a mountain between them.",
+       "why": "It shows how pushing plates fold rock up into mountains."
+      }
+     ]
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Rock can be folded upwards into mountains",
+      "also_right": []
+     },
+     "b": {
+      "best": "It built up slowly over millions of years",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The right option is the only one with a qualifier ('can'), matching the card's hedged wording. The distractors are flat statements, so a test-wise student could pick it without knowing the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts are correct and the intended answers are right. In question a, the right option alone carries the qualifier 'can', which could give it away; consider hedging a distractor too."
+    },
+    "flags": [
+     "Question a, wording: The right option is the only one with a qualifier ('can'), matching the card's hedged wording. The distractors are flat statements, so a test-wise student could pick it without knowing the idea."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Tectonic forces and mountains",
+     "card": [
+      "The Earth's crust is broken into large pieces called plates. They move very slowly, only a few centimetres a year.",
+      "Where two plates push together, the rock at the edges is squeezed. Layers of rock can be crumpled and folded upwards over millions of years to form mountains.",
+      "Where one plate is forced down under another, rock can melt deep below. This melted rock can rise to the surface and erupt, forming volcanoes.",
+      "The Himalayas formed where the Indian Plate pushed into the Eurasian Plate. The mountains are still rising slowly today."
+     ],
+     "remember": "Plates move slowly. Where they push together, rock can fold up into mountains and volcanoes can form.",
+     "a": {
+      "q": "What builds mountains where two plates of the Earth's crust push together?",
+      "opts": [
+       "Squeezing that folds rock layers upwards",
+       "Wind and rain wearing rock layers away",
+       "Rivers dropping layers of sediment",
+       "Plates pulling apart as the crust cools"
+      ],
+      "why": "Pushing plates squeeze the rock at their edges, folding the layers upwards into mountains over millions of years. Wind and rain wear rock down, so they lower the land rather than build mountains.",
+      "clue": "Think about what squeezing does to layers of rock."
+     },
+     "b": {
+      "d": 3,
+      "q": "Scientists find that a mountain range has formed where two plates are pushing together. Which statement about how it formed is correct?",
+      "opts": [
+       "It built up slowly over millions of years",
+       "It formed suddenly in a single year",
+       "It formed when plates pulled far apart",
+       "It formed because rivers piled up sediment"
+      ],
+      "why": "Plates move only a few centimetres a year, so folding rock into mountains takes millions of years. Rivers can drop sediment, but here it is the pushing plates that fold rock up into mountains.",
+      "clue": "Plates move only a few centimetres a year."
+     },
+     "wants": [
+      {
+       "at": "card 2",
+       "kind": "diagram",
+       "brief": "A cross-section of two plates of the Earth's crust, each labelled 'Plate', pushing towards each other, with arrows showing the push and the rock layers folded upwards into a mountain between them.",
+       "why": "It shows how pushing plates fold rock up into mountains."
+      }
+     ]
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:06Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Squeezing that folds rock layers upwards",
+       "also_right": []
+      },
+      "b": {
+       "best": "It built up slowly over millions of years",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The clue 'Think about what squeezing does to layers of rock' repeats 'squeezing', the word that appears only in the right option. A student can match the word and pick the answer without knowing the idea."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts and answers are correct. The clue for question a gives the answer away by using 'squeezing', the key word of the right option."
+     },
+     "flags": [
+      "Question a, other: The clue 'Think about what squeezing does to layers of rock' repeats 'squeezing', the word that appears only in the right option. A student can match the word and pick the answer without knowing the idea."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:55Z",
+   "step": "write",
+   "version": {
+    "title": "Tectonic forces and mountains",
+    "card": [
+     "The Earth's crust is broken into large pieces called plates. They move very slowly, only a few centimetres a year.",
+     "Where two plates push together, the rock at the edges is squeezed. Layers of rock can be crumpled and folded upwards over millions of years to form mountains.",
+     "Where one plate is forced down under another, rock can melt deep below. This melted rock can rise to the surface and erupt, forming volcanoes.",
+     "The Himalayas formed where the Indian Plate pushed into the Eurasian Plate. The mountains are still rising slowly today."
+    ],
+    "remember": "Plates move slowly. Where they push together, rock can fold up into mountains and volcanoes can form.",
+    "a": {
+     "q": "What builds mountains where two plates of the Earth's crust push together?",
+     "opts": [
+      "Squeezing that folds rock layers upwards",
+      "Wind and rain wearing rock layers away",
+      "Rivers dropping layers of sediment",
+      "Plates pulling apart as the crust cools"
+     ],
+     "why": "Pushing plates squeeze the rock at their edges, folding the layers upwards into mountains over millions of years. Wind and rain wear rock down, so they lower the land rather than build mountains.",
+     "clue": "Does the land get built up or worn down where plates meet?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Scientists find that a mountain range has formed where two plates are pushing together. Which statement about how it formed is correct?",
+     "opts": [
+      "It built up slowly over millions of years",
+      "It formed suddenly in a single year",
+      "It formed when plates pulled far apart",
+      "It formed because rivers piled up sediment"
+     ],
+     "why": "Plates move only a few centimetres a year, so folding rock into mountains takes millions of years. Rivers can drop sediment, but here it is the pushing plates that fold rock up into mountains.",
+     "clue": "Plates move only a few centimetres a year."
+    },
+    "wants": [
+     {
+      "at": "card 2",
+      "kind": "diagram",
+      "brief": "A cross-section of two plates of the Earth's crust, each labelled 'Plate', pushing towards each other, with arrows showing the push and the rock layers folded upwards into a mountain between them.",
+      "why": "It shows how pushing plates fold rock up into mountains."
+     }
+    ]
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Squeezing that folds rock layers upwards",
+     "also_right": []
+    },
+    "b": {
+     "best": "It built up slowly over millions of years",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Tectonic forces and mountains",
+  "card": [
+   "The Earth's crust is broken into large pieces called plates. They move very slowly, only a few centimetres a year.",
+   "Where two plates push together, the rock at the edges is squeezed. Layers of rock can be crumpled and folded upwards over millions of years to form mountains.",
+   "Where one plate is forced down under another, rock can melt deep below. This melted rock can rise to the surface and erupt, forming volcanoes.",
+   "The Himalayas formed where the Indian Plate pushed into the Eurasian Plate. The mountains are still rising slowly today."
+  ],
+  "remember": "Plates move slowly. Where they push together, rock can fold up into mountains and volcanoes can form.",
+  "a": {
+   "q": "What builds mountains where two plates of the Earth's crust push together?",
+   "opts": [
+    "Squeezing that folds rock layers upwards",
+    "Wind and rain wearing rock layers away",
+    "Rivers dropping layers of sediment",
+    "Plates pulling apart as the crust cools"
+   ],
+   "why": "Pushing plates squeeze the rock at their edges, folding the layers upwards into mountains over millions of years. Wind and rain wear rock down, so they lower the land rather than build mountains.",
+   "clue": "Does the land get built up or worn down where plates meet?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Scientists find that a mountain range has formed where two plates are pushing together. Which statement about how it formed is correct?",
+   "opts": [
+    "It built up slowly over millions of years",
+    "It formed suddenly in a single year",
+    "It formed when plates pulled far apart",
+    "It formed because rivers piled up sediment"
+   ],
+   "why": "Plates move only a few centimetres a year, so folding rock into mountains takes millions of years. Rivers can drop sediment, but here it is the pushing plates that fold rock up into mountains.",
+   "clue": "Plates move only a few centimetres a year."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A cross-section of two plates of the Earth's crust, each labelled 'Plate', pushing towards each other, with arrows showing the push and the rock layers folded upwards into a mountain between them.",
+    "why": "It shows how pushing plates fold rock up into mountains."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Squeezing that folds rock layers upwards",
+   "also_right": []
+  },
+  "b": {
+   "best": "It built up slowly over millions of years",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Tectonic forces and mountains",
+  "card": [
+   "The Earth's crust is broken into large pieces called plates. They move very slowly, only a few centimetres a year.",
+   "Where two plates push together, the rock at the edges is squeezed. Layers of rock can be crumpled and folded upwards over millions of years to form mountains.",
+   "Where one plate is forced down under another, rock can melt deep below. This melted rock can rise to the surface and erupt, forming volcanoes.",
+   "The Himalayas formed where the Indian Plate pushed into the Eurasian Plate. The mountains are still rising slowly today."
+  ],
+  "remember": "Plates move slowly. Where they push together, rock can fold up into mountains and volcanoes can form.",
+  "a": {
+   "q": "What builds mountains where two plates of the Earth's crust push together?",
+   "opts": [
+    "Squeezing that folds rock layers upwards",
+    "Wind and rain wearing rock layers away",
+    "Rivers dropping layers of sediment",
+    "Plates pulling apart as the crust cools"
+   ],
+   "why": "Pushing plates squeeze the rock at their edges, folding the layers upwards into mountains over millions of years. Wind and rain wear rock down, so they lower the land rather than build mountains.",
+   "clue": "Does the land get built up or worn down where plates meet?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Scientists find that a mountain range has formed where two plates are pushing together. Which statement about how it formed is correct?",
+   "opts": [
+    "It built up slowly over millions of years",
+    "It formed suddenly in a single year",
+    "It formed when plates pulled far apart",
+    "It formed because rivers piled up sediment"
+   ],
+   "why": "Plates move only a few centimetres a year, so folding rock into mountains takes millions of years. Rivers can drop sediment, but here it is the pushing plates that fold rock up into mountains.",
+   "clue": "Plates move only a few centimetres a year."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A cross-section of two plates of the Earth's crust, each labelled 'Plate', pushing towards each other, with arrows showing the push and the rock layers folded upwards into a mountain between them.",
+    "why": "It shows how pushing plates fold rock up into mountains."
+   }
+  ]
+ },
+ "checked_by": "claude-code"
 }

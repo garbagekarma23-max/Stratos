@@ -8,8 +8,241 @@
    0.671
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 may adapt his-steam-power-factories, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:51Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:52Z write: done",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "confirm": 0.00441,
+  "write": 0.00653,
+  "check": 0.01346,
+  "fix": 0.02028,
+  "recheck": 0.01346
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "his-steam-power-factories",
+  "changes": [
+   "Name spinning and weaving machines explicitly in the card, since the brief teaches them and the card only mentions machines for cotton cloth.",
+   "Check that the card's examples and wording suit the NSW Stage 5 syllabus, since the card was written for a different state's Year 9 course."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same steam power and factories idea at a suitable depth, but it needs the spinning and weaving machines named and a check against the NSW syllabus.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point covers steam power and factories, but this new point is broader: it also teaches the spinning and weaving machines and gives railways a real role in how goods were moved, so it would need new content rather than small changes.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Steam power and new inventions",
+  "card": [
+   [
+    "Steam engine",
+    "A machine that burns coal to heat water and make steam, which drives moving parts. Thomas Newcomen built an early engine to pump water out of mines. James Watt later improved it so it used less coal."
+   ],
+   [
+    "Machines",
+    "Spinning machines such as the spinning jenny made thread faster than hand spinning. Power looms wove thread into cloth. Later, steam could drive them, so work was no longer tied to rivers or to hand tools."
+   ],
+   [
+    "Railways",
+    "Steam locomotives ran on iron rails. Early lines carried coal, and by the 1830s trains carried goods and passengers between Britain's towns and ports."
+   ],
+   "Together these changed how goods were made and moved. Machines made large amounts of cloth and other goods quickly. Railways carried them to buyers far away."
+  ],
+  "remember": "Steam engines and machines changed how goods were made. Railways changed how they were moved.",
+  "a": {
+   "q": "What was the main effect of spinning and weaving machines on how cloth was made?",
+   "opts": [
+    "Large amounts were made much faster than by hand",
+    "Cloth was made only in people's homes",
+    "Less thread was needed to make each metre",
+    "Cloth could be made without any workers"
+   ],
+   "why": "Machines spun thread and wove cloth far faster than hand work, so much more cloth was made. Machines still needed workers to run them, so the option about no workers is wrong.",
+   "clue": "Think about speed compared with hand spinning."
+  },
+  "b": {
+   "d": 3,
+   "q": "A mill owner in Lancashire in the 1830s wants to sell cloth in a port town far away. Which invention most directly helps him move it there?",
+   "opts": [
+    "The steam locomotive on iron rails",
+    "The spinning jenny",
+    "The power loom",
+    "Watt's improved steam engine"
+   ],
+   "why": "Locomotives on railways carried goods between towns and ports, so they changed how goods were moved. The spinning jenny and power loom helped make thread and cloth, not move it. Watt's engine mainly made power more efficient.",
+   "clue": "Which invention is about moving goods, not making them?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Large amounts were made much faster than by hand",
+   "also_right": []
+  },
+  "b": {
+   "best": "The steam locomotive on iron rails",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the longest and the only one with an added detail ('on iron rails'), and it is the only transport option, so a student can pick it without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts check out and both intended answers are right. In question b, the right option stands out as the longest and most detailed, and it is the only transport option."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option is the longest and the only one with an added detail ('on iron rails'), and it is the only transport option, so a student can pick it without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Steam power and new inventions",
+  "card": [
+   [
+    "Steam engine",
+    "A machine that burns coal to heat water and make steam, which drives moving parts. Thomas Newcomen built an early engine to pump water out of mines. James Watt later improved it so it used less coal."
+   ],
+   [
+    "Machines",
+    "Spinning machines such as the spinning jenny made thread faster than hand spinning. Power looms wove thread into cloth. Later, steam could drive them, so work was no longer tied to rivers or to hand tools."
+   ],
+   [
+    "Railways",
+    "Steam locomotives ran on iron rails. Early lines carried coal, and by the 1830s trains carried goods and passengers between Britain's towns and ports."
+   ],
+   "Together these changed how goods were made and moved. Machines made large amounts of cloth and other goods quickly. Railways carried them to buyers far away."
+  ],
+  "remember": "Steam engines and machines changed how goods were made. Railways changed how they were moved.",
+  "a": {
+   "q": "What was the main effect of spinning and weaving machines on how cloth was made?",
+   "opts": [
+    "Large amounts were made much faster than by hand",
+    "Cloth was made only in people's homes",
+    "Less thread was needed to make each metre",
+    "Cloth could be made without any workers"
+   ],
+   "why": "Machines spun thread and wove cloth far faster than hand work, so much more cloth was made. Machines still needed workers to run them, so the option about no workers is wrong.",
+   "clue": "Think about speed compared with hand spinning."
+  },
+  "b": {
+   "d": 2,
+   "q": "In the 1830s, a Lancashire mill owner starts sending his cloth by railway to a distant port. What does this change most directly?",
+   "opts": [
+    "How his cloth gets to buyers",
+    "How fast his thread is spun",
+    "How his looms are powered",
+    "How much coal his engine burns"
+   ],
+   "why": "Railways changed how goods were moved, carrying them between towns and ports to buyers far away. The looms option is tempting because steam drove both trains and looms, but a steam engine in the mill changed how cloth was made, not how it was moved.",
+   "clue": "Is the railway about making the cloth or about what happens after?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Large amounts were made much faster than by hand",
+    "also_right": []
+   },
+   "b": {
+    "best": "How his cloth gets to buyers",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The facts about Newcomen, Watt, the spinning jenny, power looms and early railways are accurate, and both questions have one clear right answer that matches the card and the explanations."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the longest and the only one with an added detail ('on iron rails'), and it is the only transport option, so a student can pick it without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The right option is the longest and the only one with an added detail ('on iron rails'), and it is the only transport option, so a student can pick it without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "Steam power and new inventions",
+  "card": [
+   [
+    "Steam engine",
+    "A machine that burns coal to heat water and make steam, which drives moving parts. Thomas Newcomen built an early engine to pump water out of mines. James Watt later improved it so it used less coal."
+   ],
+   [
+    "Machines",
+    "Spinning machines such as the spinning jenny made thread faster than hand spinning. Power looms wove thread into cloth. Later, steam could drive them, so work was no longer tied to rivers or to hand tools."
+   ],
+   [
+    "Railways",
+    "Steam locomotives ran on iron rails. Early lines carried coal, and by the 1830s trains carried goods and passengers between Britain's towns and ports."
+   ],
+   "Together these changed how goods were made and moved. Machines made large amounts of cloth and other goods quickly. Railways carried them to buyers far away."
+  ],
+  "remember": "Steam engines and machines changed how goods were made. Railways changed how they were moved.",
+  "a": {
+   "q": "What was the main effect of spinning and weaving machines on how cloth was made?",
+   "opts": [
+    "Large amounts were made much faster than by hand",
+    "Cloth was made only in people's homes",
+    "Less thread was needed to make each metre",
+    "Cloth could be made without any workers"
+   ],
+   "why": "Machines spun thread and wove cloth far faster than hand work, so much more cloth was made. Machines still needed workers to run them, so the option about no workers is wrong.",
+   "clue": "Think about speed compared with hand spinning."
+  },
+  "b": {
+   "d": 2,
+   "q": "In the 1830s, a Lancashire mill owner starts sending his cloth by railway to a distant port. What does this change most directly?",
+   "opts": [
+    "How his cloth gets to buyers",
+    "How fast his thread is spun",
+    "How his looms are powered",
+    "How much coal his engine burns"
+   ],
+   "why": "Railways changed how goods were moved, carrying them between towns and ports to buyers far away. The looms option is tempting because steam drove both trains and looms, but a steam engine in the mill changed how cloth was made, not how it was moved.",
+   "clue": "Is the railway about making the cloth or about what happens after?"
+  }
+ },
+ "cleared_by": "recheck"
 }

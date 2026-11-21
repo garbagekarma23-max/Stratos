@@ -12,8 +12,163 @@
    0.222
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:51Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:52Z write: failed the content check, writing again",
+  "2026-11-20T12:44:57Z write: done",
+  "2026-11-20T12:53:26Z check: flagged",
+  "2026-11-20T12:59:59Z fix: suggested",
+  "2026-11-20T14:42:08Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.01461,
+  "check": 0.01076,
+  "fix": 0.02831
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest card, mod-holocaust, covers the genocide and its stages well, but the brief also asks the point to teach that some survivors rebuilt their lives in Australia, which no bank card covers, so this needs a new point rather than a small adaptation.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The Holocaust",
+  "card": [
+   "The Holocaust was the systematic, state-organised murder of about six million Jewish people by Nazi Germany and its collaborators. Most of the killing took place during World War II.",
+   "The Nazis also persecuted and murdered other groups, including Roma, disabled people and others they targeted for who they were or what they believed. Jewish people were targeted as a whole people.",
+   "The killing was planned and carried out by the government, using laws, police, camps and transport. It was not random violence or a side effect of fighting.",
+   "Some survivors later rebuilt their lives in Australia. They arrived after the war, having lost family, homes and communities in Europe."
+  ],
+  "remember": "The Holocaust was planned state murder of Jewish people and other groups, and some survivors later came to Australia.",
+  "a": {
+   "q": "Which statement best describes the Holocaust?",
+   "opts": [
+    "The Nazi state planned the murder of Jewish people",
+    "Jewish people died mainly in battles between armies",
+    "Jewish people died mostly from wartime food shortages",
+    "Jewish people were killed in riots the state did not plan"
+   ],
+   "why": "The Holocaust was organised by the Nazi state, using laws, police, camps and transport. It was not a result of battles, shortages or unplanned riots. Battle deaths are the most tempting wrong answer, but the killing was not a side effect of fighting.",
+   "clue": "Think about who planned the killing."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tomas is a Holocaust survivor who lost his family in Europe and moved to Melbourne after the war. What does his story show?",
+   "opts": [
+    "Some survivors rebuilt their lives in Australia",
+    "Survivors were all sent to Australia by the Nazis",
+    "Only people who left Europe before the war survived",
+    "Jewish life ended in every country of the world"
+   ],
+   "why": "Some survivors came to Australia after the war and began new lives, even though they had lost family and community. The other options are wrong: the Nazis did not send survivors to Australia, and survivors were not only those who had left Europe earlier.",
+   "clue": "Look at what the card says about survivors and Australia."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The Nazi state planned the murder of Jewish people",
+   "also_right": []
+  },
+  "b": {
+   "best": "Some survivors rebuilt their lives in Australia",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only hedged one ('Some'), while every distractor uses an absolute ('Only', 'all', 'every'). The stem also restates the answer almost word for word (survivor, moved to Melbourne after the war). A student could pick it without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "other-sensitive",
+  "summary": "The facts are accurate and question a is sound. In question b the right answer stands out: it is the only option without an absolute word and it echoes the stem, so it is easy to guess."
+ },
+ "sensitive": "other-sensitive",
+ "flags": [
+  "Question b, wording: The right option is the only hedged one ('Some'), while every distractor uses an absolute ('Only', 'all', 'every'). The stem also restates the answer almost word for word (survivor, moved to Melbourne after the war). A student could pick it without knowing the idea."
+ ],
+ "proposal": {
+  "title": "The Holocaust",
+  "card": [
+   "The Holocaust was the systematic, state-organised murder of about six million Jewish people by Nazi Germany and its collaborators. Most of the killing took place during World War II.",
+   "The Nazis also persecuted and murdered other groups, including Roma, disabled people and others they targeted for who they were or what they believed. Jewish people were targeted as a whole people.",
+   "The killing was planned and carried out by the government, using laws, police, camps and transport. It was not random violence or a side effect of fighting.",
+   "Some survivors later rebuilt their lives in Australia. They arrived after the war, having lost family, homes and communities in Europe."
+  ],
+  "remember": "The Holocaust was planned state murder of Jewish people and other groups, and some survivors later came to Australia.",
+  "a": {
+   "q": "Which statement best describes the Holocaust?",
+   "opts": [
+    "The Nazi state planned the murder of Jewish people",
+    "Jewish people died mainly in battles between armies",
+    "Jewish people died mostly from wartime food shortages",
+    "Jewish people were killed in riots the state did not plan"
+   ],
+   "why": "The Holocaust was organised by the Nazi state, using laws, police, camps and transport. It was not a result of battles, shortages or unplanned riots. Battle deaths are the most tempting wrong answer, but the killing was not a side effect of fighting.",
+   "clue": "Think about who planned the killing."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ruth was born into a Jewish family in Poland. In 1942 German police took her parents by train to a camp, where they were murdered. Ruth survived and settled in Sydney in 1949. What does her parents' fate show?",
+   "opts": [
+    "It was a planned killing run by the Nazi government",
+    "It was a side effect of fighting between the armies",
+    "It was violence by mobs acting without any orders",
+    "It was a punishment for fighting against Germany"
+   ],
+   "why": "Police, trains and a camp were all used, so the government planned and ran the killing. Her parents were not soldiers, so their deaths were not a side effect of battle or a punishment for fighting. They were targeted because they were Jewish.",
+   "clue": "Who used the police, the trains and the camp?"
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "The Holocaust",
+  "card": [
+   "The Holocaust was the systematic, state-organised murder of about six million Jewish people by Nazi Germany and its collaborators. Most of the killing took place during World War II.",
+   "The Nazis also persecuted and murdered other groups, including Roma, disabled people and others they targeted for who they were or what they believed. Jewish people were targeted as a whole people.",
+   "The killing was planned and carried out by the government, using laws, police, camps and transport. It was not random violence or a side effect of fighting.",
+   "Some survivors later rebuilt their lives in Australia. They arrived after the war, having lost family, homes and communities in Europe."
+  ],
+  "remember": "The Holocaust was planned state murder of Jewish people and other groups, and some survivors later came to Australia.",
+  "a": {
+   "q": "Which statement best describes the Holocaust?",
+   "opts": [
+    "The Nazi state planned the murder of Jewish people",
+    "Jewish people died mainly in battles between armies",
+    "Jewish people died mostly from wartime food shortages",
+    "Jewish people were killed in riots the state did not plan"
+   ],
+   "why": "The Holocaust was organised by the Nazi state, using laws, police, camps and transport. It was not a result of battles, shortages or unplanned riots. Battle deaths are the most tempting wrong answer, but the killing was not a side effect of fighting.",
+   "clue": "Think about who planned the killing."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ruth was born into a Jewish family in Poland. In 1942 German police took her parents by train to a camp, where they were murdered. Ruth survived and settled in Sydney in 1949. What does her parents' fate show?",
+   "opts": [
+    "It was a planned killing run by the Nazi government",
+    "It was a side effect of fighting between the armies",
+    "It was violence by mobs acting without any orders",
+    "It was a punishment for fighting against Germany"
+   ],
+   "why": "Police, trains and a camp were all used, so the government planned and ran the killing. Her parents were not soldiers, so their deaths were not a side effect of battle or a punishment for fighting. They were targeted because they were Jewish.",
+   "clue": "Who used the police, the trains and the camp?"
+  }
+ },
+ "cleared_by": "owner"
 }

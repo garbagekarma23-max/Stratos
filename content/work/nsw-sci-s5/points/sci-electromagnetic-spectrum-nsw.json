@@ -16,8 +16,250 @@
    0.235
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 may adapt sci-electromagnetic-spectrum, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:26:01Z confirm: Claude Opus 5.5 may reuse sci-electromagnetic-spectrum, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt sci-electromagnetic-spectrum (3 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting sci-electromagnetic-spectrum on the next run",
+  "2026-11-20T14:12:40Z adapt: done",
+  "2026-11-20T14:20:02Z check: flagged",
+  "2026-11-20T14:26:16Z fix: suggested",
+  "2026-11-20T14:45:02Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00037,
+  "confirm": 0.00919,
+  "adapt": 0.00504,
+  "check": 0.01317,
+  "fix": 0.02132
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "sci-electromagnetic-spectrum",
+  "changes": [
+   "Add a sentence or two linking the spectrum regions to their everyday uses, such as radio for communication, microwaves for cooking and communication, infrared for heating and remote controls, and X-rays and gamma rays for medical imaging and treatment, so the card covers uses as well as risks."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same spectrum at a suitable Year 9 depth and covers the energy-linked risks, but it gives few uses, so it needs a small addition for this brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "sci-electromagnetic-spectrum",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The Year 9 bank point teaches the same spectrum idea at a Stage 5 depth. It gives the order of the bands, shows that shorter wavelength means higher energy, and links that to the cell damage from ultraviolet, X-rays and gamma rays and to X-rays passing through tissue; its questions suit NSW Years 9 and 10, though it says less about everyday uses than the brief suggests.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "sci-electromagnetic-spectrum",
+  "changes": [
+   "Add a card line giving a common use of each band, such as radio waves for broadcasting, microwaves for cooking and mobile phones, infrared for remote controls and heaters, ultraviolet for sterilising, X-rays for imaging bones and gamma rays for treating cancer.",
+   "Say plainly that the higher energy of ultraviolet, X-rays and gamma rays decides both their uses and their risks, to match the brief.",
+   "Only mention that electromagnetic waves travel through a vacuum, since the Mechanical and electromagnetic waves point in this chapter teaches that."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card1",
+   "card3",
+   "card4",
+   "remember",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "owner",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the order of the spectrum and its risks at the right depth, but the brief asks for uses as well, and the card gives almost none. Adding the main uses is a small change.",
+   "item": "f3c8764c22eaf55a",
+   "result": "decided",
+   "saved": {
+    "id": "sci-electromagnetic-spectrum-nsw",
+    "title": "The electromagnetic spectrum",
+    "brief": "dcc2e6141a92",
+    "shortlist": [
+     [
+      "sci-electromagnetic-spectrum",
+      0.797
+     ],
+     [
+      "phys-electromagnetic-spectrum-2",
+      0.352
+     ],
+     [
+      "phys-electromagnetic-spectrum",
+      0.235
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00037,
+     "confirm": 0.00919
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "sci-electromagnetic-spectrum",
+     "changes": [
+      "Add a sentence or two linking the spectrum regions to their everyday uses, such as radio for communication, microwaves for cooking and communication, infrared for heating and remote controls, and X-rays and gamma rays for medical imaging and treatment, so the card covers uses as well as risks."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same spectrum at a suitable Year 9 depth and covers the energy-linked risks, but it gives few uses, so it needs a small addition for this brief.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "reuse",
+     "same": "sci-electromagnetic-spectrum",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The Year 9 bank point teaches the same spectrum idea at a Stage 5 depth. It gives the order of the bands, shows that shorter wavelength means higher energy, and links that to the cell damage from ultraviolet, X-rays and gamma rays and to X-rays passing through tissue; its questions suit NSW Years 9 and 10, though it says less about everyday uses than the brief suggests.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "6de4e0975c78ac00"
+  }
+ ],
+ "draft": {
+  "title": "The electromagnetic spectrum",
+  "card": [
+   "Visible light is one part of a family of waves called the electromagnetic spectrum. All of these waves carry energy and can travel through a vacuum.",
+   "In order from longest wavelength to shortest, the family is radio waves, microwaves, infrared, visible light, ultraviolet, X-rays and gamma rays.",
+   "Moving along the spectrum from radio waves to gamma rays, the wavelength gets shorter and the frequency gets higher. Higher-frequency waves carry more energy. Ultraviolet, X-rays and gamma rays have the most energy, and this decides both their uses and their risks.",
+   "Each band has common uses. Radio waves are used for broadcasting. Microwaves are used for cooking and mobile phones. Infrared is used for remote controls and heaters. Ultraviolet is used for sterilising. X-rays are used for imaging bones. Gamma rays are used for treating cancer."
+  ],
+  "remember": "Light is one kind of electromagnetic wave. The kinds differ in wavelength, frequency and energy. High energy decides the uses and the risks of ultraviolet, X-rays and gamma rays.",
+  "a": {
+   "q": "Which statement about visible light is correct?",
+   "opts": [
+    "It is one of several kinds of electromagnetic wave",
+    "It is the only kind of wave that can cross a vacuum",
+    "It has the shortest wavelength in the spectrum",
+    "It moves faster than radio waves through a vacuum"
+   ],
+   "why": "Visible light sits in a family with radio waves, X-rays and others. All of them can cross a vacuum and all travel at the same speed there, so light is not special in either way. Gamma rays, not visible light, have the shortest wavelength.",
+   "clue": "Think about which waves are in the same family as light."
+  },
+  "b": {
+   "d": 3,
+   "q": "The Sun sends other electromagnetic waves to Earth as well as visible light. Which comparison with visible light is correct?",
+   "opts": [
+    "Ultraviolet has a shorter wavelength than visible light",
+    "Ultraviolet has a longer wavelength than visible light",
+    "Infrared has a higher frequency than visible light",
+    "Infrared moves faster than visible light through space"
+   ],
+   "why": "Ultraviolet lies past violet in the spectrum, so its wavelength is shorter than visible light's. Infrared lies on the other side, with a longer wavelength and a lower frequency, and all electromagnetic waves travel at the same speed in a vacuum.",
+   "clue": "Recall the order of the spectrum and which way wavelength changes along it."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It is one of several kinds of electromagnetic wave",
+   "also_right": []
+  },
+  "b": {
+   "best": "Ultraviolet has a shorter wavelength than visible light",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "The distractor 'It moves faster than radio waves through a vacuum' can only be ruled out by knowing that all electromagnetic waves travel at the same speed in a vacuum. The card never says this, yet the why relies on it. Question b's distractor 'Infrared moves faster than visible light through space' has the same gap. The card should add a line saying all electromagnetic waves travel at the same speed in a vacuum."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer and the facts are correct. One gap: the card never says that all electromagnetic waves travel at the same speed in a vacuum, but the speed distractors and the whys depend on it."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, level: The distractor 'It moves faster than radio waves through a vacuum' can only be ruled out by knowing that all electromagnetic waves travel at the same speed in a vacuum. The card never says this, yet the why relies on it. Question b's distractor 'Infrared moves faster than visible light through space' has the same gap. The card should add a line saying all electromagnetic waves travel at the same speed in a vacuum."
+ ],
+ "proposal": {
+  "title": "The electromagnetic spectrum",
+  "card": [
+   "Visible light is one part of a family of waves called the electromagnetic spectrum. All of these waves carry energy, can cross a vacuum and travel at the same speed there.",
+   "In order from longest wavelength to shortest, the family is radio waves, microwaves, infrared, visible light, ultraviolet, X-rays and gamma rays.",
+   "From radio waves to gamma rays, the wavelength gets shorter, the frequency gets higher and the energy gets greater. Ultraviolet, X-rays and gamma rays carry the most energy, so they can damage living cells.",
+   "Each band has common uses: radio waves for broadcasting, microwaves for cooking and mobile phones, infrared for remote controls and heaters, ultraviolet for sterilising, X-rays for imaging bones and gamma rays for treating cancer."
+  ],
+  "remember": "The kinds of electromagnetic wave differ in wavelength, frequency and energy, not in speed through a vacuum. Their energy decides their uses and risks.",
+  "a": {
+   "q": "Which statement about visible light is correct?",
+   "opts": [
+    "It is one of several kinds of electromagnetic wave",
+    "It is the only kind of wave that can cross a vacuum",
+    "It has the shortest wavelength in the spectrum",
+    "It moves faster than radio waves through a vacuum"
+   ],
+   "why": "Visible light sits in a family with radio waves, X-rays and others. All of them can cross a vacuum and all travel at the same speed there, so light is not special in either way. Gamma rays, not visible light, have the shortest wavelength.",
+   "clue": "Think about which waves are in the same family as light."
+  },
+  "b": {
+   "d": 3,
+   "q": "The Sun sends other electromagnetic waves to Earth as well as visible light. Which comparison with visible light is correct?",
+   "opts": [
+    "Ultraviolet has a shorter wavelength than visible light",
+    "Ultraviolet has a longer wavelength than visible light",
+    "Infrared has a higher frequency than visible light",
+    "Infrared moves faster than visible light through space"
+   ],
+   "why": "Ultraviolet comes after visible light in the order, so its wavelength is shorter. Infrared comes before visible light, with a longer wavelength and a lower frequency, and all electromagnetic waves travel at the same speed in a vacuum.",
+   "clue": "Recall the order of the spectrum and which way wavelength changes along it."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "The electromagnetic spectrum",
+  "card": [
+   "Visible light is one part of a family of waves called the electromagnetic spectrum. All of these waves carry energy, can cross a vacuum and travel at the same speed there.",
+   "In order from longest wavelength to shortest, the family is radio waves, microwaves, infrared, visible light, ultraviolet, X-rays and gamma rays.",
+   "From radio waves to gamma rays, the wavelength gets shorter, the frequency gets higher and the energy gets greater. Ultraviolet, X-rays and gamma rays carry the most energy, so they can damage living cells.",
+   "Each band has common uses: radio waves for broadcasting, microwaves for cooking and mobile phones, infrared for remote controls and heaters, ultraviolet for sterilising, X-rays for imaging bones and gamma rays for treating cancer."
+  ],
+  "remember": "The kinds of electromagnetic wave differ in wavelength, frequency and energy, not in speed through a vacuum. Their energy decides their uses and risks.",
+  "a": {
+   "q": "Which statement about visible light is correct?",
+   "opts": [
+    "It is one of several kinds of electromagnetic wave",
+    "It is the only kind of wave that can cross a vacuum",
+    "It has the shortest wavelength in the spectrum",
+    "It moves faster than radio waves through a vacuum"
+   ],
+   "why": "Visible light sits in a family with radio waves, X-rays and others. All of them can cross a vacuum and all travel at the same speed there, so light is not special in either way. Gamma rays, not visible light, have the shortest wavelength.",
+   "clue": "Think about which waves are in the same family as light."
+  },
+  "b": {
+   "d": 3,
+   "q": "The Sun sends other electromagnetic waves to Earth as well as visible light. Which comparison with visible light is correct?",
+   "opts": [
+    "Ultraviolet has a shorter wavelength than visible light",
+    "Ultraviolet has a longer wavelength than visible light",
+    "Infrared has a higher frequency than visible light",
+    "Infrared moves faster than visible light through space"
+   ],
+   "why": "Ultraviolet comes after visible light in the order, so its wavelength is shorter. Infrared comes before visible light, with a longer wavelength and a lower frequency, and all electromagnetic waves travel at the same speed in a vacuum.",
+   "clue": "Recall the order of the spectrum and which way wavelength changes along it."
+  }
+ }
 }

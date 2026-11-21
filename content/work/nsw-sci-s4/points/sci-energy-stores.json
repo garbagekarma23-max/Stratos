@@ -24,8 +24,200 @@
    0.381
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: flagged",
+  "2026-11-20T12:53:29Z fix: suggested",
+  "2026-11-20T13:23:45Z autoreview: cleared with the fix (a wording, b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "write": 0.00564,
+  "check": 0.01183,
+  "fix": 0.01923
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers kinetic, gravitational, elastic and chemical energy but never presents thermal energy as a store, and it describes heat only as the movement of particles, so a new point is safer than a close match.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Energy stores",
+  "card": [
+   "Energy is the ability to make things change or move. It can be held in a store until it is used.",
+   [
+    "Kinetic",
+    "energy stored in a moving object. The faster or heavier the object, the more it has. A cyclist rolling downhill has kinetic energy."
+   ],
+   [
+    "Gravitational potential",
+    "energy stored in an object because of its height above the ground. A book on a high shelf has more than the same book on a low shelf."
+   ],
+   [
+    "Elastic",
+    "energy stored in an object that is stretched or squashed, such as a stretched rubber band. Chemical energy is stored in food and fuel, and thermal energy is stored in hot objects."
+   ]
+  ],
+  "remember": "Energy can be stored in motion, height, stretching or squashing, chemicals and heat.",
+  "a": {
+   "q": "A ball is held 2 m above the floor and not moving. Which energy store does it have the most of?",
+   "opts": [
+    "Gravitational potential",
+    "Kinetic",
+    "Elastic",
+    "Chemical"
+   ],
+   "why": "The ball has energy because of its height above the ground, which is gravitational potential energy. It is not moving, so it has no kinetic energy yet.",
+   "clue": "Think about why the ball would fall if let go."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia pulls back the string of a bow and holds the arrow still. Which energy store is increasing in the bent bow?",
+   "opts": [
+    "Elastic",
+    "Kinetic",
+    "Thermal",
+    "Chemical"
+   ],
+   "why": "The bow is bent out of shape, so it stores elastic energy. The tempting answer is kinetic, but the bow and arrow are not moving while held still.",
+   "clue": "What has happened to the shape of the bow?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Gravitational potential",
+   "also_right": []
+  },
+  "b": {
+   "best": "Elastic",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "'Which energy store does it have the most of?' is not strictly true. A ball's chemical and thermal stores hold far more than the roughly 10 J of gravitational potential energy at 2 m. Ask instead which store it has because of its height."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question says Mia 'holds the arrow still' but asks which store is 'increasing'. While the bow is held still, its elastic store is constant; it increased only while she pulled the string back. Reword, for example 'As Mia pulls back the string, which energy store increases in the bow?'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card is accurate. Question a's 'the most of' is scientifically loose, because chemical and thermal stores are far larger. Question b asks what is 'increasing' while the bow is held still, when the elastic store is then constant."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: 'Which energy store does it have the most of?' is not strictly true. A ball's chemical and thermal stores hold far more than the roughly 10 J of gravitational potential energy at 2 m. Ask instead which store it has because of its height.",
+  "Question b, wording: The question says Mia 'holds the arrow still' but asks which store is 'increasing'. While the bow is held still, its elastic store is constant; it increased only while she pulled the string back. Reword, for example 'As Mia pulls back the string, which energy store increases in the bow?'"
+ ],
+ "proposal": {
+  "title": "Energy stores",
+  "card": [
+   "Energy is the ability to make things change or move. It can be held in a store until it is used.",
+   "Kinetic energy is stored in a moving object. The faster or heavier the object, the more it has. A cyclist rolling downhill has kinetic energy.",
+   "Gravitational potential energy is stored in an object because of its height above the ground. A book on a high shelf has more than the same book on a low shelf.",
+   "Elastic energy is stored in an object that is stretched or squashed, such as a stretched rubber band. Chemical energy is stored in food and fuel, and thermal energy is stored in hot objects."
+  ],
+  "remember": "Energy can be stored in motion, height, stretching or squashing, chemicals and heat.",
+  "a": {
+   "q": "A ball is held 2 m above the floor and is not moving. Which energy store does it have because of its height?",
+   "opts": [
+    "Gravitational potential",
+    "Kinetic",
+    "Elastic",
+    "Thermal"
+   ],
+   "why": "Energy stored because of height above the ground is gravitational potential energy. Kinetic is tempting, but the ball is not moving, so it has no kinetic energy yet.",
+   "clue": "Think about why the ball would fall if let go."
+  },
+  "b": {
+   "d": 2,
+   "q": "As Mia pulls back the string of her bow, the bow bends. Which energy store increases in the bow?",
+   "opts": [
+    "Elastic",
+    "Kinetic",
+    "Thermal",
+    "Chemical"
+   ],
+   "why": "The bow is bent further out of shape as Mia pulls, so its elastic store increases. Chemical is tempting, but chemical energy is stored in Mia's muscles, and that store goes down as she pulls.",
+   "clue": "What is happening to the shape of the bow?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:45Z",
+  "rules": 1,
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "'Which energy store does it have the most of?' is not strictly true. A ball's chemical and thermal stores hold far more than the roughly 10 J of gravitational potential energy at 2 m. Ask instead which store it has because of its height."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question says Mia 'holds the arrow still' but asks which store is 'increasing'. While the bow is held still, its elastic store is constant; it increased only while she pulled the string back. Reword, for example 'As Mia pulls back the string, which energy store increases in the bow?'"
+   }
+  ],
+  "flags": [
+   "Question a, wording: 'Which energy store does it have the most of?' is not strictly true. A ball's chemical and thermal stores hold far more than the roughly 10 J of gravitational potential energy at 2 m. Ask instead which store it has because of its height.",
+   "Question b, wording: The question says Mia 'holds the arrow still' but asks which store is 'increasing'. While the bow is held still, its elastic store is constant; it increased only while she pulled the string back. Reword, for example 'As Mia pulls back the string, which energy store increases in the bow?'"
+  ]
+ },
+ "final": {
+  "title": "Energy stores",
+  "card": [
+   "Energy is the ability to make things change or move. It can be held in a store until it is used.",
+   "Kinetic energy is stored in a moving object. The faster or heavier the object, the more it has. A cyclist rolling downhill has kinetic energy.",
+   "Gravitational potential energy is stored in an object because of its height above the ground. A book on a high shelf has more than the same book on a low shelf.",
+   "Elastic energy is stored in an object that is stretched or squashed, such as a stretched rubber band. Chemical energy is stored in food and fuel, and thermal energy is stored in hot objects."
+  ],
+  "remember": "Energy can be stored in motion, height, stretching or squashing, chemicals and heat.",
+  "a": {
+   "q": "A ball is held 2 m above the floor and is not moving. Which energy store does it have because of its height?",
+   "opts": [
+    "Gravitational potential",
+    "Kinetic",
+    "Elastic",
+    "Thermal"
+   ],
+   "why": "Energy stored because of height above the ground is gravitational potential energy. Kinetic is tempting, but the ball is not moving, so it has no kinetic energy yet.",
+   "clue": "Think about why the ball would fall if let go."
+  },
+  "b": {
+   "d": 2,
+   "q": "As Mia pulls back the string of her bow, the bow bends. Which energy store increases in the bow?",
+   "opts": [
+    "Elastic",
+    "Kinetic",
+    "Thermal",
+    "Chemical"
+   ],
+   "why": "The bow is bent further out of shape as Mia pulls, so its elastic store increases. Chemical is tempting, but chemical energy is stored in Mia's muscles, and that store goes down as she pulls.",
+   "clue": "What is happening to the shape of the bow?"
+  }
+ },
+ "cleared_by": "auto"
 }

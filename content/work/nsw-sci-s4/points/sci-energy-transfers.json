@@ -24,8 +24,229 @@
    0.235
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: flagged",
+  "2026-11-20T12:53:29Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00662,
+  "check": 0.01157,
+  "fix": 0.01738,
+  "recheck": 0.00891
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches all three ways heat moves (conduction, convection and radiation); the closest, the conduction card, covers only conduction and is pitched at Year 9, and the energy transfer card is about transfer versus transformation rather than heat transfer.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Energy transfers",
+  "card": [
+   [
+    "Conduction",
+    "Heat passes through a solid from particle to particle. Hot particles shake harder and pass this movement to the particles next to them, as when a metal spoon warms in hot soup."
+   ],
+   [
+    "Convection",
+    "Heat moves through a liquid or a gas as the fluid itself moves. Warmer fluid is less dense and rises, and cooler fluid sinks to take its place."
+   ],
+   [
+    "Radiation",
+    "Heat travels as waves and needs no matter to move through. This is how sunlight crosses empty space to reach Earth."
+   ],
+   "Heat always moves from a warmer place to a cooler place. More than one kind of transfer can happen at the same time."
+  ],
+  "remember": "Conduction passes heat through solids, convection through moving fluids, and radiation needs no matter.",
+  "a": {
+   "q": "Ravi leaves a metal spoon in a hot pot of soup. Soon the handle feels warm. How did the heat reach the handle?",
+   "opts": [
+    "Conduction, from particle to particle in the metal",
+    "Convection, as the metal spoon moved upwards",
+    "Radiation, as heat waves travelled through the metal",
+    "Convection, as warm metal particles rose in the spoon"
+   ],
+   "why": "A spoon is a solid, so heat passes along it from particle to particle. This is conduction. Convection is tempting, but it needs a fluid that moves, and the particles in a solid stay in place.",
+   "clue": "Is the spoon a solid or a fluid?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena sits near a campfire in Dubbo. Her hands feel warm even though the air between her and the fire is cool. Which transfer warms her hands most directly, and why?",
+   "opts": [
+    "Radiation, because heat waves reach her without matter",
+    "Conduction, because the air touches both the fire and her",
+    "Convection, because warm air always rises to her hands",
+    "Conduction, because heat passes along the cool air to her"
+   ],
+   "why": "Heat travels as waves from the fire to her hands, so it is radiation. Warm air does rise from a fire, so convection is tempting. But rising air moves upwards, not sideways to her hands, and radiation does not need the air to be warm.",
+   "clue": "Think about how heat can cross space where the air stays cool."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Conduction, from particle to particle in the metal",
+   "also_right": []
+  },
+  "b": {
+   "best": "Radiation, because heat waves reach her without matter",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option says the heat waves 'reach her without matter', but there is air between Lena and the fire. Radiation does not need matter, yet here it passes through air. Wording such as 'without needing matter' or 'without heating the air' would be more accurate."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate. In question b, the right option's phrase 'reach her without matter' slightly misstates the setting, because air lies between Lena and the fire; 'without needing matter' would be clearer."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option says the heat waves 'reach her without matter', but there is air between Lena and the fire. Radiation does not need matter, yet here it passes through air. Wording such as 'without needing matter' or 'without heating the air' would be more accurate."
+ ],
+ "proposal": {
+  "title": "Energy transfers",
+  "card": [
+   [
+    "Conduction",
+    "Heat passes through a solid from particle to particle. Hot particles shake harder and pass this movement to the particles next to them, as when a metal spoon warms in hot soup."
+   ],
+   [
+    "Convection",
+    "Heat moves through a liquid or a gas as the fluid itself moves. Warmer fluid is less dense and rises, and cooler fluid sinks to take its place."
+   ],
+   [
+    "Radiation",
+    "Heat travels as waves and needs no matter to move through. This is how sunlight crosses empty space to reach Earth."
+   ],
+   "Heat always moves from a warmer place to a cooler place. More than one kind of transfer can happen at the same time."
+  ],
+  "remember": "Conduction passes heat through solids, convection through moving fluids, and radiation needs no matter.",
+  "a": {
+   "q": "Ravi leaves a metal spoon in a hot pot of soup. Soon the handle feels warm. How did the heat reach the handle?",
+   "opts": [
+    "Conduction, from particle to particle in the metal",
+    "Convection, as the metal spoon moved upwards",
+    "Radiation, as heat waves travelled through the metal",
+    "Convection, as warm metal particles rose in the spoon"
+   ],
+   "why": "A spoon is a solid, so heat passes along it from particle to particle. This is conduction. Convection is tempting, but it needs a fluid that moves, and the particles in a solid stay in place.",
+   "clue": "Is the spoon a solid or a fluid?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena sits near a campfire in Dubbo. Her hands feel warm even though the air between her and the fire is cool. Which transfer warms her hands most directly, and why?",
+   "opts": [
+    "Radiation, as heat waves travel without needing matter",
+    "Conduction, because the air touches both the fire and her",
+    "Convection, because warm air always rises to her hands",
+    "Conduction, because heat passes along the cool air to her"
+   ],
+   "why": "Heat travels as waves from the fire to her hands, so it is radiation. The waves pass through the air without needing it to carry the heat, which is why the air can stay cool. Convection is tempting because warm air rises from a fire, but rising air moves upwards, not sideways to her hands.",
+   "clue": "Think about how heat can cross space where the air stays cool."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Conduction, from particle to particle in the metal",
+    "also_right": []
+   },
+   "b": {
+    "best": "Radiation, as heat waves travel without needing matter",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option says the heat waves 'reach her without matter', but there is air between Lena and the fire. Radiation does not need matter, yet here it passes through air. Wording such as 'without needing matter' or 'without heating the air' would be more accurate."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The right option says the heat waves 'reach her without matter', but there is air between Lena and the fire. Radiation does not need matter, yet here it passes through air. Wording such as 'without needing matter' or 'without heating the air' would be more accurate."
+  ]
+ },
+ "final": {
+  "title": "Energy transfers",
+  "card": [
+   [
+    "Conduction",
+    "Heat passes through a solid from particle to particle. Hot particles shake harder and pass this movement to the particles next to them, as when a metal spoon warms in hot soup."
+   ],
+   [
+    "Convection",
+    "Heat moves through a liquid or a gas as the fluid itself moves. Warmer fluid is less dense and rises, and cooler fluid sinks to take its place."
+   ],
+   [
+    "Radiation",
+    "Heat travels as waves and needs no matter to move through. This is how sunlight crosses empty space to reach Earth."
+   ],
+   "Heat always moves from a warmer place to a cooler place. More than one kind of transfer can happen at the same time."
+  ],
+  "remember": "Conduction passes heat through solids, convection through moving fluids, and radiation needs no matter.",
+  "a": {
+   "q": "Ravi leaves a metal spoon in a hot pot of soup. Soon the handle feels warm. How did the heat reach the handle?",
+   "opts": [
+    "Conduction, from particle to particle in the metal",
+    "Convection, as the metal spoon moved upwards",
+    "Radiation, as heat waves travelled through the metal",
+    "Convection, as warm metal particles rose in the spoon"
+   ],
+   "why": "A spoon is a solid, so heat passes along it from particle to particle. This is conduction. Convection is tempting, but it needs a fluid that moves, and the particles in a solid stay in place.",
+   "clue": "Is the spoon a solid or a fluid?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena sits near a campfire in Dubbo. Her hands feel warm even though the air between her and the fire is cool. Which transfer warms her hands most directly, and why?",
+   "opts": [
+    "Radiation, as heat waves travel without needing matter",
+    "Conduction, because the air touches both the fire and her",
+    "Convection, because warm air always rises to her hands",
+    "Conduction, because heat passes along the cool air to her"
+   ],
+   "why": "Heat travels as waves from the fire to her hands, so it is radiation. The waves pass through the air without needing it to carry the heat, which is why the air can stay cool. Convection is tempting because warm air rises from a fire, but rising air moves upwards, not sideways to her hands.",
+   "clue": "Think about how heat can cross space where the air stays cool."
+  }
+ },
+ "cleared_by": "recheck"
 }

@@ -24,8 +24,222 @@
    0.203
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 says reuse mat-factorising-by-highest-common, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:57Z confirm: Claude Opus 5.5 may adapt mat-factorising-by-highest-common, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt mat-factorising-by-highest-common (3 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting mat-factorising-by-highest-common on the next run",
+  "2026-11-20T14:12:39Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00041,
+  "confirm": 0.01512,
+  "adapt": 0.00729,
+  "check": 0.00802
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-factorising-by-highest-common",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point already teaches taking out a highest common factor that includes pronumerals, checked by expanding, at a depth that suits this course, and its terms and examples need no NSW-specific changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-factorising-by-highest-common",
+  "changes": [
+   "Use the NSW term 'pronumeral' in place of 'variable'.",
+   "Make the worked example a common factor with more than one pronumeral, such as 6x²y − 9xy = 3xy(2x − 3), and check it by expanding, instead of the numbers-only 8x + 12.",
+   "Replace question a (12x + 18, a numbers-only factor) with one that takes out an algebraic factor, such as 8a²b + 12ab = 4ab(2a + 3)."
+  ],
+  "sure": "medium",
+  "reason": "The bank card already teaches taking out the highest common factor, including pronumerals, and checking by expanding, but it leans on number-only examples, so it needs examples and a question that take out a factor with pronumerals at the Stage 5 level.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-factorising-by-highest-common",
+  "changes": [
+   "Say pronumeral instead of variable throughout, including the clue in question b.",
+   "Make the worked example a common factor with more than one pronumeral, such as \\(6x^{2}y - 9xy = 3xy(2x - 3)\\), checked by expanding, in place of \\(8x + 12\\).",
+   "Replace question a, which takes out only a number, with one that takes out an algebraic factor with more than one pronumeral, such as \\(8a^{2}b + 12ab = 4ab(2a + 3)\\)."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "title",
+   "card2",
+   "card4",
+   "a.q",
+   "a.opt1",
+   "a.opt2",
+   "a.opt3",
+   "a.opt4",
+   "a.why",
+   "a.clue",
+   "b.q",
+   "b.clue"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches taking out the highest common factor and checking by expanding, with right answers, but it is a Year 8 point led by number-only examples. The brief asks for a factor with more than one pronumeral, and NSW says pronumeral, not variable.",
+   "item": "1baf8f2e4fc3ec7f",
+   "result": "decided",
+   "saved": {
+    "id": "mat-factorising-out-algebraic-factor",
+    "title": "Factorising out an algebraic factor",
+    "brief": "9f7d2da0d2a2",
+    "shortlist": [
+     [
+      "mat-expanding-factorising-as-reverse",
+      0.511
+     ],
+     [
+      "mat-expanding-factorising",
+      0.376
+     ],
+     [
+      "mat-factorising-by-highest-common",
+      0.355
+     ],
+     [
+      "mat-factorising-monic-quadratics",
+      0.233
+     ],
+     [
+      "mat-solving-quadratics-by-factorising",
+      0.203
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00041,
+     "confirm": 0.01512
+    },
+    "match": {
+     "verdict": "reuse",
+     "same": "mat-factorising-by-highest-common",
+     "changes": [],
+     "sure": "high",
+     "reason": "The bank point already teaches taking out a highest common factor that includes pronumerals, checked by expanding, at a depth that suits this course, and its terms and examples need no NSW-specific changes.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-factorising-by-highest-common",
+     "changes": [
+      "Use the NSW term 'pronumeral' in place of 'variable'.",
+      "Make the worked example a common factor with more than one pronumeral, such as 6x²y − 9xy = 3xy(2x − 3), and check it by expanding, instead of the numbers-only 8x + 12.",
+      "Replace question a (12x + 18, a numbers-only factor) with one that takes out an algebraic factor, such as 8a²b + 12ab = 4ab(2a + 3)."
+     ],
+     "sure": "medium",
+     "reason": "The bank card already teaches taking out the highest common factor, including pronumerals, and checking by expanding, but it leans on number-only examples, so it needs examples and a question that take out a factor with pronumerals at the Stage 5 level.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "066bc1551eaff5ae"
+  }
+ ],
+ "draft": {
+  "title": "Factorising out an algebraic factor",
+  "card": [
+   "Factorising is the reverse of expanding. It writes an expression as a product: a common factor multiplied by a bracket.",
+   "The highest common factor (HCF) is the largest number, pronumeral, or product of them that divides every term. For \\(6x^{2}y\\) and \\(9xy\\), the HCF is \\(3xy\\). For \\(6x^{2}\\) and \\(9x\\), it is \\(3x\\), so \\(6x^{2} + 9x = 3x(2x + 3)\\).",
+   "To factorise, find the HCF, write it outside the bracket, then divide each term by it to get what goes inside.",
+   "Example: \\(6x^{2}y - 9xy\\). The HCF is \\(3xy\\). \\(6x^{2}y \\div 3xy = 2x\\) and \\(9xy \\div 3xy = 3\\), so \\(6x^{2}y - 9xy = 3xy(2x - 3)\\). Expand to check: \\(3xy \\times 2x - 3xy \\times 3 = 6x^{2}y - 9xy\\)."
+  ],
+  "remember": "Take out the HCF, then check by expanding the brackets.",
+  "a": {
+   "q": "Factorise \\(8a^{2}b + 12ab\\) by taking out the HCF.",
+   "opts": [
+    "\\(4ab(2a + 3)\\)",
+    "\\(4(2a^{2}b + 3ab)\\)",
+    "\\(ab(8a + 12)\\)",
+    "\\(4ab(2a + 12)\\)"
+   ],
+   "why": "The HCF of \\(8a^{2}b\\) and \\(12ab\\) is \\(4ab\\). \\(8a^{2}b \\div 4ab = 2a\\) and \\(12ab \\div 4ab = 3\\), so the answer is \\(4ab(2a + 3)\\). \\(4(2a^{2}b + 3ab)\\) is tempting, but \\(ab\\) is still common inside the bracket, so 4 is not the HCF.",
+   "clue": "Find the number and the pronumerals that divide both terms."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia takes out the HCF from \\(10x^{2} + 15x\\). What does she write?",
+   "opts": [
+    "\\(5x(2x + 3)\\)",
+    "\\(5(2x^{2} + 3x)\\)",
+    "\\(x(10x + 15)\\)",
+    "\\(5x(2x + 15)\\)"
+   ],
+   "why": "The HCF of \\(10x^{2}\\) and \\(15x\\) is \\(5x\\). \\(10x^{2} \\div 5x = 2x\\) and \\(15x \\div 5x = 3\\), so the answer is \\(5x(2x + 3)\\). \\(5(2x^{2} + 3x)\\) is tempting, but it leaves a common factor of \\(x\\) inside the bracket, so 5 is not the HCF.",
+   "clue": "Both terms share a number and a pronumeral. Take out both."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(4ab(2a + 3)\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(5x(2x + 3)\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Factorising out an algebraic factor",
+  "card": [
+   "Factorising is the reverse of expanding. It writes an expression as a product: a common factor multiplied by a bracket.",
+   "The highest common factor (HCF) is the largest number, pronumeral, or product of them that divides every term. For \\(6x^{2}y\\) and \\(9xy\\), the HCF is \\(3xy\\). For \\(6x^{2}\\) and \\(9x\\), it is \\(3x\\), so \\(6x^{2} + 9x = 3x(2x + 3)\\).",
+   "To factorise, find the HCF, write it outside the bracket, then divide each term by it to get what goes inside.",
+   "Example: \\(6x^{2}y - 9xy\\). The HCF is \\(3xy\\). \\(6x^{2}y \\div 3xy = 2x\\) and \\(9xy \\div 3xy = 3\\), so \\(6x^{2}y - 9xy = 3xy(2x - 3)\\). Expand to check: \\(3xy \\times 2x - 3xy \\times 3 = 6x^{2}y - 9xy\\)."
+  ],
+  "remember": "Take out the HCF, then check by expanding the brackets.",
+  "a": {
+   "q": "Factorise \\(8a^{2}b + 12ab\\) by taking out the HCF.",
+   "opts": [
+    "\\(4ab(2a + 3)\\)",
+    "\\(4(2a^{2}b + 3ab)\\)",
+    "\\(ab(8a + 12)\\)",
+    "\\(4ab(2a + 12)\\)"
+   ],
+   "why": "The HCF of \\(8a^{2}b\\) and \\(12ab\\) is \\(4ab\\). \\(8a^{2}b \\div 4ab = 2a\\) and \\(12ab \\div 4ab = 3\\), so the answer is \\(4ab(2a + 3)\\). \\(4(2a^{2}b + 3ab)\\) is tempting, but \\(ab\\) is still common inside the bracket, so 4 is not the HCF.",
+   "clue": "Find the number and the pronumerals that divide both terms."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia takes out the HCF from \\(10x^{2} + 15x\\). What does she write?",
+   "opts": [
+    "\\(5x(2x + 3)\\)",
+    "\\(5(2x^{2} + 3x)\\)",
+    "\\(x(10x + 15)\\)",
+    "\\(5x(2x + 15)\\)"
+   ],
+   "why": "The HCF of \\(10x^{2}\\) and \\(15x\\) is \\(5x\\). \\(10x^{2} \\div 5x = 2x\\) and \\(15x \\div 5x = 3\\), so the answer is \\(5x(2x + 3)\\). \\(5(2x^{2} + 3x)\\) is tempting, but it leaves a common factor of \\(x\\) inside the bracket, so 5 is not the HCF.",
+   "clue": "Both terms share a number and a pronumeral. Take out both."
+  }
+ }
 }

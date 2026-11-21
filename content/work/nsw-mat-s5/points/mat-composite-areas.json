@@ -24,8 +24,131 @@
    0.402
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:56Z write: failed the content check, writing again",
+  "2026-11-20T12:35:55Z write: done",
+  "2026-11-20T12:44:58Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0004,
+  "write": 0.03189,
+  "check": 0.00914
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point covers composite areas with rectangles, triangles, trapeziums and parts of circles at Stage 5 depth: the closest cards either omit trapeziums and sectors or are broader topics such as full perimeter and area, or 3D surface area, so a new point fits better.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Composite areas",
+  "card": [
+   "A composite shape is made of simpler shapes, such as rectangles, triangles, trapeziums and parts of circles. Split it up, find each area, then add them.",
+   "If a piece is cut out of a shape, find the area of the whole shape and subtract the area of the piece.",
+   "Use \\(A = lw\\) for a rectangle, \\(A = \\frac{1}{2}bh\\) for a triangle and \\(A = \\pi r^{2}\\) for a circle. A semicircle is half a circle. The radius is half the diameter.",
+   "Example: a 10 m by 6 m rectangle has a semicircle of diameter 6 m on one end. Area \\(= 60 + \\frac{1}{2} \\times \\pi \\times 3^{2} \\approx 74.1 \\text{ m}^{2}\\)."
+  ],
+  "remember": "Add the parts that join on. Subtract the parts that are cut out.",
+  "a": {
+   "q": "A rectangle 8 m by 5 m has a triangle cut out of it. The triangle has base 4 m and height 3 m. What is the area left?",
+   "opts": [
+    "\\(34 \\text{ m}^{2}\\)",
+    "\\(46 \\text{ m}^{2}\\)",
+    "\\(28 \\text{ m}^{2}\\)",
+    "\\(52 \\text{ m}^{2}\\)"
+   ],
+   "why": "The rectangle is \\(8 \\times 5 = 40 \\text{ m}^{2}\\) and the triangle is \\(\\frac{1}{2} \\times 4 \\times 3 = 6 \\text{ m}^{2}\\). The piece is cut out, so \\(40 - 6 = 34 \\text{ m}^{2}\\). Adding gives \\(46 \\text{ m}^{2}\\), which treats the cut-out as extra area.",
+   "clue": "Is the triangle added to the rectangle or taken from it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's rectangular lawn in Dubbo is 10 m by 6 m. It has a circular pond of diameter 4 m in it. What is the area of grass, to one decimal place?",
+   "opts": [
+    "\\(47.4 \\text{ m}^{2}\\)",
+    "\\(72.6 \\text{ m}^{2}\\)",
+    "\\(9.7 \\text{ m}^{2}\\)",
+    "\\(53.7 \\text{ m}^{2}\\)"
+   ],
+   "why": "The pond has radius 2 m, so its area is \\(\\pi \\times 2^{2} \\approx 12.57 \\text{ m}^{2}\\). Grass area \\(= 60 - 12.57 \\approx 47.4 \\text{ m}^{2}\\). Using 4 m as the radius gives \\(9.7 \\text{ m}^{2}\\), which is the tempting mistake.",
+   "clue": "The formula needs the radius, not the diameter."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A rectangle 10 m long and 6 m wide with a semicircle of diameter 6 m joined to one 6 m end. The rectangle, the semicircle and all lengths are labelled.",
+    "why": "It shows how the shape splits into a rectangle and a semicircle that are added."
+   }
+  ]
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(34 \\text{ m}^{2}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(47.4 \\text{ m}^{2}\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Composite areas",
+  "card": [
+   "A composite shape is made of simpler shapes, such as rectangles, triangles, trapeziums and parts of circles. Split it up, find each area, then add them.",
+   "If a piece is cut out of a shape, find the area of the whole shape and subtract the area of the piece.",
+   "Use \\(A = lw\\) for a rectangle, \\(A = \\frac{1}{2}bh\\) for a triangle and \\(A = \\pi r^{2}\\) for a circle. A semicircle is half a circle. The radius is half the diameter.",
+   "Example: a 10 m by 6 m rectangle has a semicircle of diameter 6 m on one end. Area \\(= 60 + \\frac{1}{2} \\times \\pi \\times 3^{2} \\approx 74.1 \\text{ m}^{2}\\)."
+  ],
+  "remember": "Add the parts that join on. Subtract the parts that are cut out.",
+  "a": {
+   "q": "A rectangle 8 m by 5 m has a triangle cut out of it. The triangle has base 4 m and height 3 m. What is the area left?",
+   "opts": [
+    "\\(34 \\text{ m}^{2}\\)",
+    "\\(46 \\text{ m}^{2}\\)",
+    "\\(28 \\text{ m}^{2}\\)",
+    "\\(52 \\text{ m}^{2}\\)"
+   ],
+   "why": "The rectangle is \\(8 \\times 5 = 40 \\text{ m}^{2}\\) and the triangle is \\(\\frac{1}{2} \\times 4 \\times 3 = 6 \\text{ m}^{2}\\). The piece is cut out, so \\(40 - 6 = 34 \\text{ m}^{2}\\). Adding gives \\(46 \\text{ m}^{2}\\), which treats the cut-out as extra area.",
+   "clue": "Is the triangle added to the rectangle or taken from it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's rectangular lawn in Dubbo is 10 m by 6 m. It has a circular pond of diameter 4 m in it. What is the area of grass, to one decimal place?",
+   "opts": [
+    "\\(47.4 \\text{ m}^{2}\\)",
+    "\\(72.6 \\text{ m}^{2}\\)",
+    "\\(9.7 \\text{ m}^{2}\\)",
+    "\\(53.7 \\text{ m}^{2}\\)"
+   ],
+   "why": "The pond has radius 2 m, so its area is \\(\\pi \\times 2^{2} \\approx 12.57 \\text{ m}^{2}\\). Grass area \\(= 60 - 12.57 \\approx 47.4 \\text{ m}^{2}\\). Using 4 m as the radius gives \\(9.7 \\text{ m}^{2}\\), which is the tempting mistake.",
+   "clue": "The formula needs the radius, not the diameter."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A rectangle 10 m long and 6 m wide with a semicircle of diameter 6 m joined to one 6 m end. The rectangle, the semicircle and all lengths are labelled.",
+    "why": "It shows how the shape splits into a rectangle and a semicircle that are added."
+   }
+  ]
+ },
+ "cleared_by": "checker"
 }

@@ -24,8 +24,202 @@
    0.365
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:56Z write: done",
+  "2026-11-20T12:44:59Z check: flagged",
+  "2026-11-20T12:53:28Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "write": 0.008,
+  "check": 0.01202,
+  "fix": 0.01881,
+  "recheck": 0.00714
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card 'Negative indices' covers rewriting negative indices as reciprocals, but the new point also requires applying the index laws to expressions with negative indices and giving positive-index answers, which the card does not teach.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Negative indices with pronumerals",
+  "card": [
+   "A negative index means a reciprocal. \\(x^{-n} = \\frac{1}{x^{n}}\\). The index moves the power to the other side of the fraction line, and the sign of the index changes.",
+   "A number in front is not affected. In \\(3x^{-2}\\), only \\(x\\) has the index \\(-2\\). So \\(3x^{-2} = \\frac{3}{x^{2}}\\), not \\(\\frac{1}{3x^{2}}\\).",
+   "The index laws still work with negative indices. Multiplying adds the indices, and dividing subtracts them. \\(x^{5} \\times x^{-8} = x^{-3}\\).",
+   "Finish with positive indices. Example: \\(\\frac{6x^{2}}{2x^{5}} = 3x^{2-5} = 3x^{-3}\\), which is \\(\\frac{3}{x^{3}}\\)."
+  ],
+  "remember": "A negative index means the power belongs on the other side of the fraction line, and only the pronumeral moves.",
+  "a": {
+   "q": "Which expression is \\(5y^{-3}\\) written with a positive index?",
+   "opts": [
+    "\\(\\frac{5}{y^{3}}\\)",
+    "\\(\\frac{1}{5y^{3}}\\)",
+    "\\(-5y^{3}\\)",
+    "\\(\\frac{1}{(5y)^{3}}\\)"
+   ],
+   "why": "Only \\(y\\) has the index \\(-3\\), so only \\(y^{3}\\) moves to the denominator and the 5 stays on top. \\(\\frac{1}{5y^{3}}\\) is tempting, but it wrongly moves the 5 as well.",
+   "clue": "Which part of the term has the negative index?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Simplify \\(\\frac{12a^{3}}{4a^{7}}\\), giving the answer with a positive index.",
+   "opts": [
+    "\\(\\frac{3}{a^{4}}\\)",
+    "\\(3a^{4}\\)",
+    "\\(\\frac{1}{3a^{4}}\\)",
+    "\\(\\frac{3}{a^{10}}\\)"
+   ],
+   "why": "Divide the numbers: \\(12 \\div 4 = 3\\). Subtract the indices: \\(3 - 7 = -4\\), so we get \\(3a^{-4} = \\frac{3}{a^{4}}\\). \\(3a^{4}\\) comes from subtracting the indices the wrong way round.",
+   "clue": "Subtract the index on the bottom from the index on top, then fix the sign."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(\\frac{5}{y^{3}}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(\\frac{3}{a^{4}}\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "'Only the pronumeral moves' overgeneralises the card. The card says only the base that carries the negative index moves (in 3x^{-2}, the 3 stays). A student could wrongly apply the line to (5y)^{-3} or 2^{-3}, where the number does move, or to terms like x^{-2}y^{3}, where not every pronumeral moves."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and their answers are correct. The remember line 'only the pronumeral moves' overgeneralises: it is the base with the negative index that moves, which can be a number or a bracket."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: 'Only the pronumeral moves' overgeneralises the card. The card says only the base that carries the negative index moves (in 3x^{-2}, the 3 stays). A student could wrongly apply the line to (5y)^{-3} or 2^{-3}, where the number does move, or to terms like x^{-2}y^{3}, where not every pronumeral moves."
+ ],
+ "proposal": {
+  "title": "Negative indices with pronumerals",
+  "card": [
+   "A negative index means a reciprocal: \\(x^{-n} = \\frac{1}{x^{n}}\\). The power moves to the other side of the fraction line, and the sign of its index changes.",
+   "Only the base that carries the negative index moves. In \\(3x^{-2}\\), only \\(x\\) has the index \\(-2\\), so \\(3x^{-2} = \\frac{3}{x^{2}}\\), not \\(\\frac{1}{3x^{2}}\\).",
+   "The index laws still work with negative indices. Multiplying adds the indices, and dividing subtracts them: \\(x^{5} \\times x^{-8} = x^{-3}\\).",
+   "Finish with positive indices. Example: \\(\\frac{6x^{2}}{2x^{5}} = 3x^{2-5}\\), which is \\(3x^{-3} = \\frac{3}{x^{3}}\\)."
+  ],
+  "remember": "Move just the base with the negative index across the fraction line, and give final answers with positive indices.",
+  "a": {
+   "q": "Which expression is \\(5y^{-3}\\) written with a positive index?",
+   "opts": [
+    "\\(\\frac{5}{y^{3}}\\)",
+    "\\(\\frac{1}{5y^{3}}\\)",
+    "\\(-5y^{3}\\)",
+    "\\(\\frac{1}{(5y)^{3}}\\)"
+   ],
+   "why": "Only \\(y\\) has the index \\(-3\\), so only \\(y^{3}\\) moves to the denominator and the 5 stays on top. \\(\\frac{1}{5y^{3}}\\) is tempting, but it wrongly moves the 5 as well.",
+   "clue": "Which part of the term has the negative index?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Simplify \\(\\frac{12a^{3}}{4a^{7}}\\), giving the answer with a positive index.",
+   "opts": [
+    "\\(\\frac{3}{a^{4}}\\)",
+    "\\(3a^{4}\\)",
+    "\\(\\frac{1}{3a^{4}}\\)",
+    "\\(\\frac{3}{a^{10}}\\)"
+   ],
+   "why": "Divide the numbers: \\(12 \\div 4 = 3\\). Subtract the indices: \\(3 - 7 = -4\\), so the result is \\(3a^{-4} = \\frac{3}{a^{4}}\\). \\(3a^{4}\\) comes from subtracting the indices the wrong way round.",
+   "clue": "Subtract the index on the bottom from the index on top, then fix the sign."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(\\frac{5}{y^{3}}\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(\\frac{3}{a^{4}}\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "'Only the pronumeral moves' overgeneralises the card. The card says only the base that carries the negative index moves (in 3x^{-2}, the 3 stays). A student could wrongly apply the line to (5y)^{-3} or 2^{-3}, where the number does move, or to terms like x^{-2}y^{3}, where not every pronumeral moves."
+   }
+  ],
+  "flags": [
+   "Remember, other: 'Only the pronumeral moves' overgeneralises the card. The card says only the base that carries the negative index moves (in 3x^{-2}, the 3 stays). A student could wrongly apply the line to (5y)^{-3} or 2^{-3}, where the number does move, or to terms like x^{-2}y^{3}, where not every pronumeral moves."
+  ]
+ },
+ "final": {
+  "title": "Negative indices with pronumerals",
+  "card": [
+   "A negative index means a reciprocal: \\(x^{-n} = \\frac{1}{x^{n}}\\). The power moves to the other side of the fraction line, and the sign of its index changes.",
+   "Only the base that carries the negative index moves. In \\(3x^{-2}\\), only \\(x\\) has the index \\(-2\\), so \\(3x^{-2} = \\frac{3}{x^{2}}\\), not \\(\\frac{1}{3x^{2}}\\).",
+   "The index laws still work with negative indices. Multiplying adds the indices, and dividing subtracts them: \\(x^{5} \\times x^{-8} = x^{-3}\\).",
+   "Finish with positive indices. Example: \\(\\frac{6x^{2}}{2x^{5}} = 3x^{2-5}\\), which is \\(3x^{-3} = \\frac{3}{x^{3}}\\)."
+  ],
+  "remember": "Move just the base with the negative index across the fraction line, and give final answers with positive indices.",
+  "a": {
+   "q": "Which expression is \\(5y^{-3}\\) written with a positive index?",
+   "opts": [
+    "\\(\\frac{5}{y^{3}}\\)",
+    "\\(\\frac{1}{5y^{3}}\\)",
+    "\\(-5y^{3}\\)",
+    "\\(\\frac{1}{(5y)^{3}}\\)"
+   ],
+   "why": "Only \\(y\\) has the index \\(-3\\), so only \\(y^{3}\\) moves to the denominator and the 5 stays on top. \\(\\frac{1}{5y^{3}}\\) is tempting, but it wrongly moves the 5 as well.",
+   "clue": "Which part of the term has the negative index?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Simplify \\(\\frac{12a^{3}}{4a^{7}}\\), giving the answer with a positive index.",
+   "opts": [
+    "\\(\\frac{3}{a^{4}}\\)",
+    "\\(3a^{4}\\)",
+    "\\(\\frac{1}{3a^{4}}\\)",
+    "\\(\\frac{3}{a^{10}}\\)"
+   ],
+   "why": "Divide the numbers: \\(12 \\div 4 = 3\\). Subtract the indices: \\(3 - 7 = -4\\), so the result is \\(3a^{-4} = \\frac{3}{a^{4}}\\). \\(3a^{4}\\) comes from subtracting the indices the wrong way round.",
+   "clue": "Subtract the index on the bottom from the index on top, then fix the sign."
+  }
+ },
+ "cleared_by": "recheck"
 }

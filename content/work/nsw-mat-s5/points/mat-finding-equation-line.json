@@ -24,8 +24,369 @@
    0.424
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:55Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:54Z write: failed the content check, writing again",
+  "2026-11-20T12:44:59Z write: done (still fails the content check)",
+  "2026-11-20T12:53:27Z check: flagged",
+  "2026-11-20T13:00:00Z fix: suggested",
+  "2026-11-20T13:23:43Z autoreview: cleared with the fix (the content check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.02164,
+  "check": 0.00806,
+  "fix": 0.03102
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches finding the equation of a line from a graph or from a gradient and a point; they cover simultaneous equations and parametric equations, which are different ideas.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Finding the equation of a line",
+  "card": [
+   "To write a line as \\(y = mx + c\\), you need the gradient \\(m\\) and the y-intercept \\(c\\). The y-intercept is where the line crosses the y-axis.",
+   [
+    "From a graph",
+    "Read \\(c\\) where the line crosses the y-axis. Pick two clear points, then find \\(m\\) as rise \\(\\div\\) run."
+   ],
+   [
+    "From a point",
+    "Put \\(m\\) and the point's \\(x\\) and \\(y\\) into \\(y = mx + c\\), then solve for \\(c\\). Example: \\(m = 3\\) and the point \\((2, 5)\\) give \\(5 = 3 \\times 2 + c\\), so \\(c = -1\\)."
+   ],
+   "Then write the equation with both numbers in place. In the example, the line is \\(y = 3x - 1\\). In the graph above, the rise is 4 and the run is 2, so \\(m = 2\\), \\(c = 1\\) and \\(y = 2x + 1\\)."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A straight line through the points (0, 1) and (2, 5), crossing the y-axis at 1 and rising 4 units for every 2 units across.",
+    "x": {
+     "min": -3,
+     "max": 6,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -3,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2x + 1",
+      "domain": [
+       -1,
+       3.5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       1
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, 1)\\)",
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       5
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((2, 5)\\)",
+      "pos": "right"
+     }
+    ]
+   }
+  },
+  "remember": "Find \\(m\\) from rise over run, find \\(c\\) from the y-axis or by substituting a point, then write \\(y = mx + c\\).",
+  "a": {
+   "q": "A line has gradient 4 and passes through the point \\((3, 7)\\). What is its equation?",
+   "opts": [
+    "\\(y = 4x - 5\\)",
+    "\\(y = 4x + 5\\)",
+    "\\(y = 4x + 7\\)",
+    "\\(y = 4x + 19\\)"
+   ],
+   "why": "Substituting gives \\(7 = 4 \\times 3 + c\\), so \\(7 = 12 + c\\) and \\(c = -5\\). Using \\(c = 5\\) comes from subtracting the wrong way round.",
+   "clue": "Put \\(x = 3\\) and \\(y = 7\\) into \\(y = mx + c\\) and solve for \\(c\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "A line passes through \\((0, 4)\\) and \\((2, 0)\\). What is its equation?",
+   "opts": [
+    "\\(y = -2x + 4\\)",
+    "\\(y = 2x + 4\\)",
+    "\\(y = -\\frac{1}{2}x + 4\\)",
+    "\\(y = -2x + 2\\)"
+   ],
+   "why": "The line crosses the y-axis at 4, so \\(c = 4\\). The rise is \\(0 - 4 = -4\\) over a run of 2, so \\(m = -2\\). Using \\(m = 2\\) ignores that the line falls as it goes right.",
+   "clue": "Does the line rise or fall as \\(x\\) increases?"
+  }
+ },
+ "redone": true,
+ "local": [
+  "mat-finding-equation-line the figure on card line 2 has labels that run into each other: 1 and \\((0, 1)\\). Move one with pos or labelAt",
+  "mat-finding-equation-line the figure on card line 2 has the axis number −1 on a curve. Move it with pos or labelAt, change the axes or the step, or use nums: false",
+  "mat-finding-equation-line the figure on card line 2 has the axis number 1 on a curve. Move it with pos or labelAt, change the axes or the step, or use nums: false",
+  "mat-finding-equation-line the figure on card line 2 has the label \\((0, 1)\\) on a curve. Move it with pos or labelAt, or move the curve",
+  "mat-finding-equation-line the figure on card line 2 has the label \\((2, 5)\\) on a curve. Move it with pos or labelAt, or move the curve"
+ ],
+ "check": {
+  "a": {
+   "best": "\\(y = 4x - 5\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(y = -2x + 4\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Content check: mat-finding-equation-line the figure on card line 2 has labels that run into each other: 1 and \\((0, 1)\\). Move one with pos or labelAt",
+  "Content check: mat-finding-equation-line the figure on card line 2 has the axis number −1 on a curve. Move it with pos or labelAt, change the axes or the step, or use nums: false",
+  "Content check: mat-finding-equation-line the figure on card line 2 has the axis number 1 on a curve. Move it with pos or labelAt, change the axes or the step, or use nums: false",
+  "Content check: mat-finding-equation-line the figure on card line 2 has the label \\((0, 1)\\) on a curve. Move it with pos or labelAt, or move the curve",
+  "Content check: mat-finding-equation-line the figure on card line 2 has the label \\((2, 5)\\) on a curve. Move it with pos or labelAt, or move the curve"
+ ],
+ "proposal": {
+  "title": "Finding the equation of a line",
+  "card": [
+   "To write a line as \\(y = mx + c\\), you need the gradient \\(m\\) and the y-intercept \\(c\\). The y-intercept is where the line crosses the y-axis.",
+   [
+    "From a graph",
+    "Read \\(c\\) where the line crosses the y-axis. Pick two clear points, then find \\(m\\) as rise \\(\\div\\) run."
+   ],
+   [
+    "From a point",
+    "Put \\(m\\) and the point's \\(x\\) and \\(y\\) into \\(y = mx + c\\), then solve for \\(c\\). Example: \\(m = 3\\) and the point \\((2, 5)\\) give \\(5 = 3 \\times 2 + c\\), so \\(c = -1\\)."
+   ],
+   "Then write the equation with both numbers in place. In the example, the line is \\(y = 3x - 1\\). In the graph above, the rise is 4 and the run is 2, so \\(m = 2\\), \\(c = 1\\) and \\(y = 2x + 1\\)."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A straight line on a grid through the points (0, 1) and (2, 5). It crosses the y-axis at (0, 1) and rises 4 units for every 2 units across.",
+    "x": {
+     "min": -3,
+     "max": 6,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -3,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2x + 1",
+      "domain": [
+       -1.5,
+       3.5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       1
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, 1)\\)",
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       5
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((2, 5)\\)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Find \\(m\\) from rise over run, find \\(c\\) from the y-axis or by substituting a point, then write \\(y = mx + c\\).",
+  "a": {
+   "q": "A line has gradient 4 and passes through the point \\((3, 7)\\). What is its equation?",
+   "opts": [
+    "\\(y = 4x - 5\\)",
+    "\\(y = 4x + 5\\)",
+    "\\(y = 4x + 7\\)",
+    "\\(y = 4x + 19\\)"
+   ],
+   "why": "Substituting gives \\(7 = 4 \\times 3 + c\\), so \\(7 = 12 + c\\) and \\(c = -5\\). Using \\(c = 5\\) comes from subtracting the wrong way round.",
+   "clue": "Put \\(x = 3\\) and \\(y = 7\\) into \\(y = mx + c\\) and solve for \\(c\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "A line passes through \\((0, 4)\\) and \\((2, 0)\\). What is its equation?",
+   "opts": [
+    "\\(y = -2x + 4\\)",
+    "\\(y = 2x + 4\\)",
+    "\\(y = -\\frac{1}{2}x + 4\\)",
+    "\\(y = -2x + 2\\)"
+   ],
+   "why": "The line crosses the y-axis at 4, so \\(c = 4\\). The rise is \\(0 - 4 = -4\\) over a run of 2, so \\(m = -2\\). Using \\(m = 2\\) ignores that the line falls as it goes right.",
+   "clue": "Does the line rise or fall as \\(x\\) increases?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:43Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [],
+  "flags": [
+   "Content check: mat-finding-equation-line the figure on card line 2 has labels that run into each other: 1 and \\((0, 1)\\). Move one with pos or labelAt",
+   "Content check: mat-finding-equation-line the figure on card line 2 has the axis number −1 on a curve. Move it with pos or labelAt, change the axes or the step, or use nums: false",
+   "Content check: mat-finding-equation-line the figure on card line 2 has the axis number 1 on a curve. Move it with pos or labelAt, change the axes or the step, or use nums: false",
+   "Content check: mat-finding-equation-line the figure on card line 2 has the label \\((0, 1)\\) on a curve. Move it with pos or labelAt, or move the curve",
+   "Content check: mat-finding-equation-line the figure on card line 2 has the label \\((2, 5)\\) on a curve. Move it with pos or labelAt, or move the curve"
+  ]
+ },
+ "final": {
+  "title": "Finding the equation of a line",
+  "card": [
+   "To write a line as \\(y = mx + c\\), you need the gradient \\(m\\) and the y-intercept \\(c\\). The y-intercept is where the line crosses the y-axis.",
+   [
+    "From a graph",
+    "Read \\(c\\) where the line crosses the y-axis. Pick two clear points, then find \\(m\\) as rise \\(\\div\\) run."
+   ],
+   [
+    "From a point",
+    "Put \\(m\\) and the point's \\(x\\) and \\(y\\) into \\(y = mx + c\\), then solve for \\(c\\). Example: \\(m = 3\\) and the point \\((2, 5)\\) give \\(5 = 3 \\times 2 + c\\), so \\(c = -1\\)."
+   ],
+   "Then write the equation with both numbers in place. In the example, the line is \\(y = 3x - 1\\). In the graph above, the rise is 4 and the run is 2, so \\(m = 2\\), \\(c = 1\\) and \\(y = 2x + 1\\)."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A straight line on a grid through the points (0, 1) and (2, 5). It crosses the y-axis at (0, 1) and rises 4 units for every 2 units across.",
+    "x": {
+     "min": -3,
+     "max": 6,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -3,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2x + 1",
+      "domain": [
+       -1.5,
+       3.5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       1
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, 1)\\)",
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       5
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((2, 5)\\)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Find \\(m\\) from rise over run, find \\(c\\) from the y-axis or by substituting a point, then write \\(y = mx + c\\).",
+  "a": {
+   "q": "A line has gradient 4 and passes through the point \\((3, 7)\\). What is its equation?",
+   "opts": [
+    "\\(y = 4x - 5\\)",
+    "\\(y = 4x + 5\\)",
+    "\\(y = 4x + 7\\)",
+    "\\(y = 4x + 19\\)"
+   ],
+   "why": "Substituting gives \\(7 = 4 \\times 3 + c\\), so \\(7 = 12 + c\\) and \\(c = -5\\). Using \\(c = 5\\) comes from subtracting the wrong way round.",
+   "clue": "Put \\(x = 3\\) and \\(y = 7\\) into \\(y = mx + c\\) and solve for \\(c\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "A line passes through \\((0, 4)\\) and \\((2, 0)\\). What is its equation?",
+   "opts": [
+    "\\(y = -2x + 4\\)",
+    "\\(y = 2x + 4\\)",
+    "\\(y = -\\frac{1}{2}x + 4\\)",
+    "\\(y = -2x + 2\\)"
+   ],
+   "why": "The line crosses the y-axis at 4, so \\(c = 4\\). The rise is \\(0 - 4 = -4\\) over a run of 2, so \\(m = -2\\). Using \\(m = 2\\) ignores that the line falls as it goes right.",
+   "clue": "Does the line rise or fall as \\(x\\) increases?"
+  }
+ },
+ "cleared_by": "auto"
 }

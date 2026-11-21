@@ -24,8 +24,200 @@
    0.244
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:56Z write: done",
+  "2026-11-20T12:35:54Z check: flagged",
+  "2026-11-20T12:44:59Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.0128,
+  "check": 0.01117,
+  "fix": 0.01911,
+  "recheck": 0.00848
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The two closest bank points each teach only half of the brief, one for large numbers and one for small numbers, and no single point covers both directions, so a new point is the safer match.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Scientific notation",
+  "card": [
+   "A number in scientific notation is written as \\(a \\times 10^{n}\\). Here \\(a\\) is at least 1 and less than 10, and \\(n\\) is a whole number.",
+   "To write a large number: move the decimal point until the number is from 1 to less than 10. Count the moves. That count is a positive power of 10.",
+   "Example: \\(52{,}000\\) becomes \\(5.2\\) after 4 moves left, so it is \\(5.2 \\times 10^{4}\\).",
+   "For a small number between 0 and 1, the point moves right and the power is negative. For example, \\(0.0007 = 7 \\times 10^{-4}\\). To go back, move the point the other way."
+  ],
+  "remember": "Write a number from 1 to less than 10 times a power of 10. Large numbers have a positive power, small numbers a negative power.",
+  "a": {
+   "q": "Which is \\(36{,}000\\) in scientific notation?",
+   "opts": [
+    "\\(3.6 \\times 10^{4}\\)",
+    "\\(36 \\times 10^{3}\\)",
+    "\\(3.6 \\times 10^{3}\\)",
+    "\\(3.6 \\times 10^{-4}\\)"
+   ],
+   "why": "Moving the point 4 places left gives \\(3.6\\), so the power is 4. \\(36 \\times 10^{3}\\) has the right value, but 36 is not from 1 to less than 10, so it is not scientific notation.",
+   "clue": "Count how many places the point moves to get 3.6."
+  },
+  "b": {
+   "d": 3,
+   "q": "A bacterium in a lab measures \\(0.0000045\\) m long. Which is this length in scientific notation?",
+   "opts": [
+    "\\(4.5 \\times 10^{-6}\\) m",
+    "\\(4.5 \\times 10^{6}\\) m",
+    "\\(4.5 \\times 10^{-5}\\) m",
+    "\\(45 \\times 10^{-7}\\) m"
+   ],
+   "why": "The point moves 6 places right to give \\(4.5\\), and the number is less than 1, so the power is \\(-6\\). The option with \\(10^{-5}\\) comes from counting one move too few.",
+   "clue": "Count each place the point moves, including the one next to the 4."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(3.6 \\times 10^{4}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(4.5 \\times 10^{-6}\\) m",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says n is a 'whole number', but in Australian usage whole numbers are 0, 1, 2, … and exclude negatives. The same card then uses negative powers such as \\(10^{-4}\\). It should say n is an integer."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and their answers are correct. The card calls the power n a 'whole number', which excludes the negative powers it then uses; it should say 'integer'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says n is a 'whole number', but in Australian usage whole numbers are 0, 1, 2, … and exclude negatives. The same card then uses negative powers such as \\(10^{-4}\\). It should say n is an integer."
+ ],
+ "proposal": {
+  "title": "Scientific notation",
+  "card": [
+   "A number in scientific notation is written as \\(a \\times 10^{n}\\). Here \\(a\\) is at least 1 and less than 10, and \\(n\\) is an integer, such as 3, 0 or \\(-4\\).",
+   "To write a large number, move the decimal point until the number is from 1 to less than 10. Count the moves. That count is a positive power of 10.",
+   "Example: \\(52{,}000\\) becomes \\(5.2\\) after 4 moves left, so it is \\(5.2 \\times 10^{4}\\).",
+   "For a small number between 0 and 1, the point moves right and the power is negative. For example, \\(0.0007 = 7 \\times 10^{-4}\\). To go back to an ordinary number, move the point the other way."
+  ],
+  "remember": "Write a number from 1 to less than 10 times a power of 10. Numbers of 10 or more have a positive power, and numbers between 0 and 1 have a negative power.",
+  "a": {
+   "q": "Which is \\(36{,}000\\) in scientific notation?",
+   "opts": [
+    "\\(3.6 \\times 10^{4}\\)",
+    "\\(36 \\times 10^{3}\\)",
+    "\\(3.6 \\times 10^{3}\\)",
+    "\\(3.6 \\times 10^{-4}\\)"
+   ],
+   "why": "Moving the point 4 places left gives \\(3.6\\), so the power is 4. \\(36 \\times 10^{3}\\) has the right value, but 36 is not from 1 to less than 10, so it is not scientific notation.",
+   "clue": "Count how many places the point moves to get 3.6."
+  },
+  "b": {
+   "d": 3,
+   "q": "A bacterium in a lab measures \\(0.0000045\\) m long. Which is this length in scientific notation?",
+   "opts": [
+    "\\(4.5 \\times 10^{-6}\\) m",
+    "\\(4.5 \\times 10^{6}\\) m",
+    "\\(4.5 \\times 10^{-5}\\) m",
+    "\\(45 \\times 10^{-7}\\) m"
+   ],
+   "why": "The point moves 6 places right to give \\(4.5\\), and the number is less than 1, so the power is \\(-6\\). The option with \\(10^{-5}\\) comes from counting one move too few.",
+   "clue": "Count each place the point moves, including the one past the 4."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(3.6 \\times 10^{4}\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(4.5 \\times 10^{-6}\\) m",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says n is a 'whole number', but in Australian usage whole numbers are 0, 1, 2, … and exclude negatives. The same card then uses negative powers such as \\(10^{-4}\\). It should say n is an integer."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card says n is a 'whole number', but in Australian usage whole numbers are 0, 1, 2, … and exclude negatives. The same card then uses negative powers such as \\(10^{-4}\\). It should say n is an integer."
+  ]
+ },
+ "final": {
+  "title": "Scientific notation",
+  "card": [
+   "A number in scientific notation is written as \\(a \\times 10^{n}\\). Here \\(a\\) is at least 1 and less than 10, and \\(n\\) is an integer, such as 3, 0 or \\(-4\\).",
+   "To write a large number, move the decimal point until the number is from 1 to less than 10. Count the moves. That count is a positive power of 10.",
+   "Example: \\(52{,}000\\) becomes \\(5.2\\) after 4 moves left, so it is \\(5.2 \\times 10^{4}\\).",
+   "For a small number between 0 and 1, the point moves right and the power is negative. For example, \\(0.0007 = 7 \\times 10^{-4}\\). To go back to an ordinary number, move the point the other way."
+  ],
+  "remember": "Write a number from 1 to less than 10 times a power of 10. Numbers of 10 or more have a positive power, and numbers between 0 and 1 have a negative power.",
+  "a": {
+   "q": "Which is \\(36{,}000\\) in scientific notation?",
+   "opts": [
+    "\\(3.6 \\times 10^{4}\\)",
+    "\\(36 \\times 10^{3}\\)",
+    "\\(3.6 \\times 10^{3}\\)",
+    "\\(3.6 \\times 10^{-4}\\)"
+   ],
+   "why": "Moving the point 4 places left gives \\(3.6\\), so the power is 4. \\(36 \\times 10^{3}\\) has the right value, but 36 is not from 1 to less than 10, so it is not scientific notation.",
+   "clue": "Count how many places the point moves to get 3.6."
+  },
+  "b": {
+   "d": 3,
+   "q": "A bacterium in a lab measures \\(0.0000045\\) m long. Which is this length in scientific notation?",
+   "opts": [
+    "\\(4.5 \\times 10^{-6}\\) m",
+    "\\(4.5 \\times 10^{6}\\) m",
+    "\\(4.5 \\times 10^{-5}\\) m",
+    "\\(45 \\times 10^{-7}\\) m"
+   ],
+   "why": "The point moves 6 places right to give \\(4.5\\), and the number is less than 1, so the power is \\(-6\\). The option with \\(10^{-5}\\) comes from counting one move too few.",
+   "clue": "Count each place the point moves, including the one past the 4."
+  }
+ },
+ "cleared_by": "recheck"
 }

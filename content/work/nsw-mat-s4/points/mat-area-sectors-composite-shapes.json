@@ -20,8 +20,238 @@
    0.205
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:54Z write: failed the content check, writing again",
+  "2026-11-20T12:35:53Z write: done",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.03086,
+  "check": 0.0105,
+  "fix": 0.02277,
+  "recheck": 0.00764
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers only composite shapes and lacks the sector idea, while the point that includes sectors is broader, covers perimeter and circumference too, and is pitched at a Units 1 and 2 depth rather than Stage 4.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Area of sectors and composite shapes",
+  "card": [
+   [
+    "Sector",
+    "A sector is a slice of a circle, cut by two radii. Its area is the fraction \\(\\frac{\\text{angle}}{360}\\) of the whole circle's area \\(\\pi r^{2}\\)."
+   ],
+   [
+    "Example",
+    "A sector has radius 6 cm and angle \\(90^{\\circ}\\). The circle's area is \\(\\pi \\times 6^{2} = 36\\pi\\). The sector is \\(\\frac{90}{360} = \\frac{1}{4}\\) of that, which is \\(9\\pi \\approx 28.3\\) cm\\(^{2}\\)."
+   ],
+   [
+    "Composite shape",
+    "A composite shape is made of simple shapes joined together. Split it into rectangles, triangles, circles or sectors, find each area, then add them."
+   ],
+   [
+    "Subtracting",
+    "If a shape has a piece cut out, such as a hole, find the area of the whole shape and subtract the area of the piece removed."
+   ]
+  ],
+  "remember": "Sector: the angle fraction of the circle. Composite: split it, then add or subtract.",
+  "a": {
+   "q": "A sector has radius 10 cm and angle \\(72^{\\circ}\\). What fraction of the circle's area is the sector?",
+   "opts": [
+    "\\(\\frac{1}{5}\\)",
+    "\\(\\frac{1}{4}\\)",
+    "\\(\\frac{72}{100}\\)",
+    "\\(\\frac{1}{3}\\)"
+   ],
+   "why": "The fraction is \\(\\frac{72}{360}\\), which simplifies to \\(\\frac{1}{5}\\). Using the radius 10 as the divisor, as in \\(\\frac{72}{100}\\), is tempting, but the angle is compared with \\(360^{\\circ}\\).",
+   "clue": "Divide the angle by the angle in a full circle."
+  },
+  "b": {
+   "d": 3,
+   "q": "A rectangular lawn is 8 m by 5 m. A circular pond of radius 1 m is cut out of it. Which gives the lawn's area, in square metres?",
+   "opts": [
+    "\\(40 - \\pi\\)",
+    "\\(40 + \\pi\\)",
+    "\\(40 - 2\\pi\\)",
+    "\\(40 - 4\\pi\\)"
+   ],
+   "why": "The rectangle is \\(8 \\times 5 = 40\\). The pond is \\(\\pi \\times 1^{2} = \\pi\\), and it is removed, so subtract it. \\(40 - 2\\pi\\) is the mistake of using the diameter in place of the radius squared.",
+   "clue": "The pond is a piece taken out of the rectangle."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(\\frac{1}{5}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(40 - \\pi\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says the distractor \\(\\frac{72}{100}\\) comes from 'using the radius 10 as the divisor', but 100 is the radius squared, not the radius 10. The explanation of the mistake does not match the option and could confuse students."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct (1/5 and 40 − π), and the card is accurate. One problem: the why for (a) says the 72/100 distractor uses the radius 10 as the divisor, but 100 is the radius squared."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The why says the distractor \\(\\frac{72}{100}\\) comes from 'using the radius 10 as the divisor', but 100 is the radius squared, not the radius 10. The explanation of the mistake does not match the option and could confuse students."
+ ],
+ "proposal": {
+  "title": "Area of sectors and composite shapes",
+  "card": [
+   [
+    "Sector",
+    "A sector is a slice of a circle, cut by two radii. Its area is the fraction \\(\\frac{\\text{angle}}{360}\\) of the whole circle's area \\(\\pi r^{2}\\)."
+   ],
+   [
+    "Example",
+    "A sector has radius 6 cm and angle \\(90^{\\circ}\\). The circle's area is \\(\\pi \\times 6^{2} = 36\\pi\\). The sector is \\(\\frac{90}{360} = \\frac{1}{4}\\) of that, which is \\(9\\pi \\approx 28.3\\) cm\\(^{2}\\)."
+   ],
+   [
+    "Composite shape",
+    "A composite shape is made of simple shapes joined together. Split it into rectangles, triangles, circles or sectors, find each area, then add them."
+   ],
+   [
+    "Subtracting",
+    "If a shape has a piece cut out, such as a hole, find the area of the whole shape and subtract the area of the piece removed."
+   ]
+  ],
+  "remember": "Sector: the angle fraction of the circle. Composite: split it, then add or subtract.",
+  "a": {
+   "q": "A sector has radius 10 cm and angle \\(72^{\\circ}\\). What fraction of the circle's area is the sector?",
+   "opts": [
+    "\\(\\frac{1}{5}\\)",
+    "\\(\\frac{1}{4}\\)",
+    "\\(\\frac{72}{100}\\)",
+    "\\(\\frac{1}{3}\\)"
+   ],
+   "why": "The fraction is \\(\\frac{72}{360}\\), which simplifies to \\(\\frac{1}{5}\\). The option \\(\\frac{72}{100}\\) treats the angle like a percentage, but a full circle is \\(360^{\\circ}\\), not 100. The radius does not change the fraction.",
+   "clue": "Divide the angle by the angle in a full circle."
+  },
+  "b": {
+   "d": 3,
+   "q": "A rectangular lawn is 8 m by 5 m. A circular pond of radius 1 m is cut out of it. Which gives the lawn's area, in square metres?",
+   "opts": [
+    "\\(40 - \\pi\\)",
+    "\\(40 + \\pi\\)",
+    "\\(40 - 2\\pi\\)",
+    "\\(40 - 4\\pi\\)"
+   ],
+   "why": "The rectangle is \\(8 \\times 5 = 40\\). The pond is \\(\\pi \\times 1^{2} = \\pi\\), and it is removed, so subtract it. \\(40 + \\pi\\) adds the pond, but the pond is taken away, and \\(40 - 4\\pi\\) uses the diameter 2 in place of the radius.",
+   "clue": "The pond is a piece taken out of the rectangle."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(\\frac{1}{5}\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(40 - \\pi\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says the distractor \\(\\frac{72}{100}\\) comes from 'using the radius 10 as the divisor', but 100 is the radius squared, not the radius 10. The explanation of the mistake does not match the option and could confuse students."
+   }
+  ],
+  "flags": [
+   "Question a, other: The why says the distractor \\(\\frac{72}{100}\\) comes from 'using the radius 10 as the divisor', but 100 is the radius squared, not the radius 10. The explanation of the mistake does not match the option and could confuse students."
+  ]
+ },
+ "final": {
+  "title": "Area of sectors and composite shapes",
+  "card": [
+   [
+    "Sector",
+    "A sector is a slice of a circle, cut by two radii. Its area is the fraction \\(\\frac{\\text{angle}}{360}\\) of the whole circle's area \\(\\pi r^{2}\\)."
+   ],
+   [
+    "Example",
+    "A sector has radius 6 cm and angle \\(90^{\\circ}\\). The circle's area is \\(\\pi \\times 6^{2} = 36\\pi\\). The sector is \\(\\frac{90}{360} = \\frac{1}{4}\\) of that, which is \\(9\\pi \\approx 28.3\\) cm\\(^{2}\\)."
+   ],
+   [
+    "Composite shape",
+    "A composite shape is made of simple shapes joined together. Split it into rectangles, triangles, circles or sectors, find each area, then add them."
+   ],
+   [
+    "Subtracting",
+    "If a shape has a piece cut out, such as a hole, find the area of the whole shape and subtract the area of the piece removed."
+   ]
+  ],
+  "remember": "Sector: the angle fraction of the circle. Composite: split it, then add or subtract.",
+  "a": {
+   "q": "A sector has radius 10 cm and angle \\(72^{\\circ}\\). What fraction of the circle's area is the sector?",
+   "opts": [
+    "\\(\\frac{1}{5}\\)",
+    "\\(\\frac{1}{4}\\)",
+    "\\(\\frac{72}{100}\\)",
+    "\\(\\frac{1}{3}\\)"
+   ],
+   "why": "The fraction is \\(\\frac{72}{360}\\), which simplifies to \\(\\frac{1}{5}\\). The option \\(\\frac{72}{100}\\) treats the angle like a percentage, but a full circle is \\(360^{\\circ}\\), not 100. The radius does not change the fraction.",
+   "clue": "Divide the angle by the angle in a full circle."
+  },
+  "b": {
+   "d": 3,
+   "q": "A rectangular lawn is 8 m by 5 m. A circular pond of radius 1 m is cut out of it. Which gives the lawn's area, in square metres?",
+   "opts": [
+    "\\(40 - \\pi\\)",
+    "\\(40 + \\pi\\)",
+    "\\(40 - 2\\pi\\)",
+    "\\(40 - 4\\pi\\)"
+   ],
+   "why": "The rectangle is \\(8 \\times 5 = 40\\). The pond is \\(\\pi \\times 1^{2} = \\pi\\), and it is removed, so subtract it. \\(40 + \\pi\\) adds the pond, but the pond is taken away, and \\(40 - 4\\pi\\) uses the diameter 2 in place of the radius.",
+   "clue": "The pond is a piece taken out of the rectangle."
+  }
+ },
+ "cleared_by": "recheck"
 }

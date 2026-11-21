@@ -12,8 +12,254 @@
    0.228
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:42Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: failed the content check, writing again",
+  "2026-11-20T12:44:53Z write: done (still fails the content check)",
+  "2026-11-20T12:53:24Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.01377,
+  "check": 0.0114,
+  "fix": 0.01892,
+  "recheck": 0.0069
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Characterisation, is labelled for Year 11 and also teaches dynamic and static characters, which goes beyond this Stage 4 point on direct and indirect characterisation, so it is broader and at a different depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Direct and indirect characterisation",
+  "card": [
+   [
+    "Direct",
+    "the writer tells the reader what a character is like. Example: \"Leo was a generous boy.\""
+   ],
+   [
+    "Indirect",
+    "the writer shows what a character is like and lets the reader work it out. Example: Leo hands half his lunch to a classmate who forgot theirs."
+   ],
+   "Indirect characterisation can use what a character says, does and thinks, and how other characters react to them.",
+   "Direct characterisation is quick and clear. Indirect characterisation asks the reader to infer, so it can feel more lifelike."
+  ],
+  "remember": "Direct tells you the trait. Indirect shows you clues so you can work it out.",
+  "a": {
+   "q": "Which sentence is an example of direct characterisation?",
+   "opts": [
+    "Priya was a shy and nervous girl",
+    "Priya stared at her shoes and whispered her name",
+    "Priya's classmates leaned in to hear her speak",
+    "Priya thought, \"Please don't pick me\""
+   ],
+   "why": "The first sentence states outright what Priya is like. The others show her shyness through what she does, how others react and what she thinks, so the reader has to infer it.",
+   "clue": "Which one simply tells you the trait?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a story, Mr Okafor sighs, checks his watch and snaps at a student who asks a question. Which statement is correct?",
+   "opts": [
+    "This is indirect characterisation of an impatient teacher",
+    "This is direct characterisation of an impatient teacher",
+    "This is direct characterisation because it names a person",
+    "This is indirect because it uses only what he says",
+    "This is indirect characterisation because it uses dialogue only"
+   ],
+   "why": "The writer never states that he is impatient. His actions and words show it, so the reader infers it. The last option is tempting, but indirect characterisation also uses actions, not only dialogue.",
+   "clue": "Does the writer ever name the trait?"
+  }
+ },
+ "redone": true,
+ "local": [
+  "eng-direct-indirect-characterisationb needs four different options",
+  "eng-direct-indirect-characterisationb option is 63 characters: This is indirect characterisation because it uses dialogue only"
+ ],
+ "check": {
+  "a": {
+   "best": "Priya was a shy and nervous girl",
+   "also_right": []
+  },
+  "b": {
+   "best": "This is indirect characterisation of an impatient teacher",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 'The first sentence states outright what Priya is like', but options are shown in random order, so 'first' may not point to the direct-characterisation sentence and can confuse students. Name the sentence instead."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says 'The last option is tempting' to mean the 'dialogue only' distractor, but options are shuffled. In the order shown, the last option is actually the correct answer. Refer to the option by its content."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Two distractors mean the same thing ('indirect characterisation because it uses dialogue only' and 'indirect because it uses only what he says'). This wastes an option, and a student can rule both out together. Replace one with a distinct distractor."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The content and answers are correct. Both explanations refer to options by position ('first', 'last'), which breaks when the options are shuffled. Question b also has two distractors that say the same thing."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) says 'The first sentence states outright what Priya is like', but options are shown in random order, so 'first' may not point to the direct-characterisation sentence and can confuse students. Name the sentence instead.",
+  "Question b, other: Why (b) says 'The last option is tempting' to mean the 'dialogue only' distractor, but options are shuffled. In the order shown, the last option is actually the correct answer. Refer to the option by its content.",
+  "Question b, wording: Two distractors mean the same thing ('indirect characterisation because it uses dialogue only' and 'indirect because it uses only what he says'). This wastes an option, and a student can rule both out together. Replace one with a distinct distractor.",
+  "Content check: eng-direct-indirect-characterisationb needs four different options",
+  "Content check: eng-direct-indirect-characterisationb option is 63 characters: This is indirect characterisation because it uses dialogue only"
+ ],
+ "proposal": {
+  "title": "Direct and indirect characterisation",
+  "card": [
+   [
+    "Direct",
+    "the writer tells the reader what a character is like. Example: \"Leo was a generous boy.\""
+   ],
+   [
+    "Indirect",
+    "the writer shows what a character is like and lets the reader work it out. Example: Leo hands half his lunch to a classmate who forgot theirs."
+   ],
+   "Indirect characterisation can use what a character says, does and thinks, and how other characters react to them.",
+   "Direct characterisation is quick and clear. Indirect characterisation asks the reader to infer, so it can feel more lifelike."
+  ],
+  "remember": "Direct tells you the trait. Indirect shows you clues so you can work it out.",
+  "a": {
+   "q": "Which sentence is an example of direct characterisation?",
+   "opts": [
+    "Priya was a shy and nervous girl",
+    "Priya stared at her shoes and whispered her name",
+    "Priya's classmates leaned in to hear her speak",
+    "Priya thought, \"Please don't pick me\""
+   ],
+   "why": "The sentence calling Priya a shy and nervous girl states outright what she is like. The others show her shyness through what she does, how others react and what she thinks, so the reader has to infer it.",
+   "clue": "Which one simply tells you the trait?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a story, Mr Okafor sighs, checks his watch and snaps at a student who asks a question. Which statement about this characterisation is correct?",
+   "opts": [
+    "Indirect, because his actions and words show impatience",
+    "Direct, because the writer states that he is impatient",
+    "Direct, because the writer names the character",
+    "Indirect, because it relies on his speech alone"
+   ],
+   "why": "The writer never states that he is impatient. His actions and words show it, so the reader infers it. The option about speech alone is tempting, but this passage also uses his actions, and indirect characterisation is not limited to what a character says.",
+   "clue": "Does the writer ever name the trait?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Priya was a shy and nervous girl",
+    "also_right": []
+   },
+   "b": {
+    "best": "Indirect, because his actions and words show impatience",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 20,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 'The first sentence states outright what Priya is like', but options are shown in random order, so 'first' may not point to the direct-characterisation sentence and can confuse students. Name the sentence instead."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says 'The last option is tempting' to mean the 'dialogue only' distractor, but options are shuffled. In the order shown, the last option is actually the correct answer. Refer to the option by its content."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Two distractors mean the same thing ('indirect characterisation because it uses dialogue only' and 'indirect because it uses only what he says'). This wastes an option, and a student can rule both out together. Replace one with a distinct distractor."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) says 'The first sentence states outright what Priya is like', but options are shown in random order, so 'first' may not point to the direct-characterisation sentence and can confuse students. Name the sentence instead.",
+   "Question b, other: Why (b) says 'The last option is tempting' to mean the 'dialogue only' distractor, but options are shuffled. In the order shown, the last option is actually the correct answer. Refer to the option by its content.",
+   "Question b, wording: Two distractors mean the same thing ('indirect characterisation because it uses dialogue only' and 'indirect because it uses only what he says'). This wastes an option, and a student can rule both out together. Replace one with a distinct distractor.",
+   "Content check: eng-direct-indirect-characterisationb needs four different options",
+   "Content check: eng-direct-indirect-characterisationb option is 63 characters: This is indirect characterisation because it uses dialogue only"
+  ]
+ },
+ "final": {
+  "title": "Direct and indirect characterisation",
+  "card": [
+   [
+    "Direct",
+    "the writer tells the reader what a character is like. Example: \"Leo was a generous boy.\""
+   ],
+   [
+    "Indirect",
+    "the writer shows what a character is like and lets the reader work it out. Example: Leo hands half his lunch to a classmate who forgot theirs."
+   ],
+   "Indirect characterisation can use what a character says, does and thinks, and how other characters react to them.",
+   "Direct characterisation is quick and clear. Indirect characterisation asks the reader to infer, so it can feel more lifelike."
+  ],
+  "remember": "Direct tells you the trait. Indirect shows you clues so you can work it out.",
+  "a": {
+   "q": "Which sentence is an example of direct characterisation?",
+   "opts": [
+    "Priya was a shy and nervous girl",
+    "Priya stared at her shoes and whispered her name",
+    "Priya's classmates leaned in to hear her speak",
+    "Priya thought, \"Please don't pick me\""
+   ],
+   "why": "The sentence calling Priya a shy and nervous girl states outright what she is like. The others show her shyness through what she does, how others react and what she thinks, so the reader has to infer it.",
+   "clue": "Which one simply tells you the trait?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a story, Mr Okafor sighs, checks his watch and snaps at a student who asks a question. Which statement about this characterisation is correct?",
+   "opts": [
+    "Indirect, because his actions and words show impatience",
+    "Direct, because the writer states that he is impatient",
+    "Direct, because the writer names the character",
+    "Indirect, because it relies on his speech alone"
+   ],
+   "why": "The writer never states that he is impatient. His actions and words show it, so the reader infers it. The option about speech alone is tempting, but this passage also uses his actions, and indirect characterisation is not limited to what a character says.",
+   "clue": "Does the writer ever name the trait?"
+  }
+ },
+ "cleared_by": "recheck"
 }

@@ -24,8 +24,206 @@
    0.381
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: done",
+  "2026-11-20T12:44:55Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:23:39Z autoreview: cleared with the fix (remember other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.00615,
+  "check": 0.01041,
+  "fix": 0.01648
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, geo-changing-biomes-grow-more, covers irrigation, terracing and fertiliser but not clearing vegetation or draining wetlands, and it adds pesticides and seed breeding, so it is not the same point and would need more than small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Changing biomes to grow more food",
+  "card": [
+   "A biome is a large area with a similar climate, soil, plants and animals. People change biomes so that more food can be grown on the land.",
+   [
+    "Clearing and draining",
+    "Clearing vegetation removes trees and shrubs to make room for crops or grazing. Draining wetlands removes standing water so the wet ground can be farmed."
+   ],
+   [
+    "Irrigating and terracing",
+    "Irrigating brings water to dry land through channels, pipes or sprinklers. Terracing cuts flat steps into a steep slope so crops can be planted on it."
+   ],
+   [
+    "Fertilisers",
+    "Adding fertilisers puts extra nutrients into the soil. This helps crops grow better on soil that is poor in nutrients."
+   ]
+  ],
+  "remember": "People change biomes to grow more food by changing the plants, water, slope or soil.",
+  "a": {
+   "q": "Which change to a biome is terracing?",
+   "opts": [
+    "Cutting flat steps into a steep hillside to plant crops",
+    "Bringing water to dry land through channels and pipes",
+    "Removing trees and shrubs to make room for grazing",
+    "Adding extra nutrients to soil that is poor in them"
+   ],
+   "why": "Terracing cuts flat steps into a slope so crops can be planted on it. Irrigating is the tempting wrong option, because it also helps crops grow, but it changes the water supply, not the shape of the slope.",
+   "clue": "Think about what is done to the shape of the land."
+  },
+  "b": {
+   "d": 2,
+   "q": "Dev farms on a dry plain. He builds channels to carry water from a nearby river to his paddocks. Which change is he making to the biome?",
+   "opts": [
+    "Irrigating the land",
+    "Terracing the land",
+    "Draining a wetland",
+    "Clearing vegetation"
+   ],
+   "why": "Dev is bringing water to dry land, which is irrigating. Draining a wetland is the opposite, because it removes water from wet ground.",
+   "clue": "Is water being added to the land or taken away?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Cutting flat steps into a steep hillside to plant crops",
+   "also_right": []
+  },
+  "b": {
+   "best": "Irrigating the land",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line sorts the changes by plants, water, slope and soil, which is neater than the card. The card pairs clearing with draining and irrigating with terracing, so each pair mixes those categories."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both questions are correct. The only problem is that the remember line groups the changes (plants, water, slope, soil) more neatly than the card's own pairings."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The remember line sorts the changes by plants, water, slope and soil, which is neater than the card. The card pairs clearing with draining and irrigating with terracing, so each pair mixes those categories."
+ ],
+ "proposal": {
+  "title": "Changing biomes to grow more food",
+  "card": [
+   "A biome is a large area with a similar climate, soil, plants and animals. People change biomes so that more food can be grown on the land.",
+   [
+    "Clearing and draining",
+    "Clearing vegetation removes trees and shrubs to make room for crops or grazing. Draining wetlands removes standing water so the wet ground can be farmed."
+   ],
+   [
+    "Irrigating and terracing",
+    "Irrigating brings water to dry land through channels, pipes or sprinklers. Terracing cuts flat steps into a steep slope so crops can be planted on it."
+   ],
+   [
+    "Fertilisers",
+    "Adding fertilisers puts extra nutrients into the soil. This helps crops grow better on soil that is poor in nutrients."
+   ]
+  ],
+  "remember": "Clearing, draining, irrigating, terracing and adding fertilisers all alter a biome so it can grow more food.",
+  "a": {
+   "q": "Which change to a biome is terracing?",
+   "opts": [
+    "Cutting flat steps into a steep hillside to plant crops",
+    "Bringing water to dry land through channels and pipes",
+    "Removing trees and shrubs to make room for grazing",
+    "Adding extra nutrients to soil that is poor in them"
+   ],
+   "why": "Terracing cuts flat steps into a slope so crops can be planted on it. Irrigating is the tempting wrong option, because it also helps crops grow, but it changes the water supply, not the shape of the slope.",
+   "clue": "Think about what is done to the shape of the land."
+  },
+  "b": {
+   "d": 2,
+   "q": "Dev farms on a dry plain. He builds channels to carry water from a nearby river to his paddocks. Which change is he making to the biome?",
+   "opts": [
+    "Irrigating the land",
+    "Terracing the land",
+    "Draining a wetland",
+    "Clearing vegetation"
+   ],
+   "why": "Dev is bringing water to dry land, which is irrigating. Draining a wetland is the opposite, because it removes water from wet ground.",
+   "clue": "Is water being added to the land or taken away?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:39Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line sorts the changes by plants, water, slope and soil, which is neater than the card. The card pairs clearing with draining and irrigating with terracing, so each pair mixes those categories."
+   }
+  ],
+  "flags": [
+   "Remember, other: The remember line sorts the changes by plants, water, slope and soil, which is neater than the card. The card pairs clearing with draining and irrigating with terracing, so each pair mixes those categories."
+  ]
+ },
+ "final": {
+  "title": "Changing biomes to grow more food",
+  "card": [
+   "A biome is a large area with a similar climate, soil, plants and animals. People change biomes so that more food can be grown on the land.",
+   [
+    "Clearing and draining",
+    "Clearing vegetation removes trees and shrubs to make room for crops or grazing. Draining wetlands removes standing water so the wet ground can be farmed."
+   ],
+   [
+    "Irrigating and terracing",
+    "Irrigating brings water to dry land through channels, pipes or sprinklers. Terracing cuts flat steps into a steep slope so crops can be planted on it."
+   ],
+   [
+    "Fertilisers",
+    "Adding fertilisers puts extra nutrients into the soil. This helps crops grow better on soil that is poor in nutrients."
+   ]
+  ],
+  "remember": "Clearing, draining, irrigating, terracing and adding fertilisers all alter a biome so it can grow more food.",
+  "a": {
+   "q": "Which change to a biome is terracing?",
+   "opts": [
+    "Cutting flat steps into a steep hillside to plant crops",
+    "Bringing water to dry land through channels and pipes",
+    "Removing trees and shrubs to make room for grazing",
+    "Adding extra nutrients to soil that is poor in them"
+   ],
+   "why": "Terracing cuts flat steps into a slope so crops can be planted on it. Irrigating is the tempting wrong option, because it also helps crops grow, but it changes the water supply, not the shape of the slope.",
+   "clue": "Think about what is done to the shape of the land."
+  },
+  "b": {
+   "d": 2,
+   "q": "Dev farms on a dry plain. He builds channels to carry water from a nearby river to his paddocks. Which change is he making to the biome?",
+   "opts": [
+    "Irrigating the land",
+    "Terracing the land",
+    "Draining a wetland",
+    "Clearing vegetation"
+   ],
+   "why": "Dev is bringing water to dry land, which is irrigating. Draining a wetland is the opposite, because it removes water from wet ground.",
+   "clue": "Is water being added to the land or taken away?"
+  }
+ },
+ "cleared_by": "auto"
 }

@@ -12,8 +12,47 @@
    0.216
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 may adapt geo-aboriginal-torres-strait-islander, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:47Z confirm: Claude Opus 5.5 may adapt geo-aboriginal-torres-strait-islander, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:39:37Z review: reusing geo-aboriginal-torres-strait-islander"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "confirm": 0.00887
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-aboriginal-torres-strait-islander",
+  "changes": [
+   "Introduce the term custodianship alongside Country, since the NSW Stage 5 syllabus frames the idea as custodianship and the card only describes a duty of care.",
+   "Replace or add a New South Wales example of cultural burning or Indigenous ranger work, so the point is local to the NSW course."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea of Aboriginal care for Country through cultural burning and rangers at a suitable depth, but it needs the syllabus term custodianship and a local NSW example.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "geo-aboriginal-torres-strait-islander",
+  "changes": [
+   "Use the term 'custodianship' (Aboriginal people as custodians of Country), which the NSW Stage 5 point names, alongside the existing idea of a duty to look after Country."
+  ],
+  "sure": "medium",
+  "reason": "The bank point 'Care for Country' already teaches the duty to care for Country through cultural burning and Indigenous rangers at a Year 9–10 depth, and its questions suit NSW. It only needs to name this responsibility as custodianship, the term the new point uses.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "geo-aboriginal-torres-strait-islander",
+ "matched": {
+  "verdict": "reuse",
+  "from": "geo-aboriginal-torres-strait-islander",
+  "by": "owner",
+  "at": "2026-11-20T14:39:37Z"
+ }
 }

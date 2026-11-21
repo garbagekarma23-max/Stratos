@@ -16,8 +16,127 @@
    0.207
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:58Z write: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.00672,
+  "check": 0.00833
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point matches this Stage 5 point: the brief covers both fission and fusion at an introductory level, including power station waste, while the closest bank point (phys-fission-fusion) is Year 12 depth with binding energy per nucleon and a graph, and the other two cover only fusion or only fission.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Fission and fusion",
+  "card": [
+   [
+    "Fission",
+    "A heavy nucleus, such as uranium, splits into smaller nuclei. Nuclear power stations use fission, and they leave radioactive waste that must be stored safely."
+   ],
+   [
+    "Fusion",
+    "Light nuclei, such as hydrogen, join to form a heavier nucleus. Fusion is how the Sun releases energy."
+   ],
+   "Both reactions change the nucleus, not just the outer electrons. This is why they release huge amounts of energy compared with chemical reactions.",
+   "To tell them apart, ask what happens to the nucleus. If one big nucleus breaks into smaller ones, it is fission. If small nuclei combine into a bigger one, it is fusion."
+  ],
+  "remember": "Fission splits a heavy nucleus. Fusion joins light nuclei. Both release huge amounts of energy.",
+  "a": {
+   "q": "Which description matches a nuclear fission reaction?",
+   "opts": [
+    "A uranium nucleus splits into smaller nuclei",
+    "Two hydrogen nuclei join to form a helium nucleus",
+    "A nucleus gains electrons to form a negative ion",
+    "Two atoms share electrons to form a molecule"
+   ],
+   "why": "Fission is the splitting of a heavy nucleus such as uranium into smaller nuclei. Two hydrogen nuclei joining is fusion, which is the most tempting wrong option because it is also a nuclear reaction.",
+   "clue": "Fission means splitting."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dr Lee compares two reactions. In Reaction X, a large nucleus breaks into two smaller ones. In Reaction Y, small nuclei combine into a larger one. Which statement is correct?",
+   "opts": [
+    "X is used in power stations and Y happens in the Sun",
+    "Y is used in power stations and X happens in the Sun",
+    "X releases energy but Y does not release any",
+    "X and Y both leave no radioactive waste at all"
+   ],
+   "why": "X is fission, which nuclear power stations use, and Y is fusion, which powers the Sun. The swapped option is tempting but reverses the two reactions. Both release huge amounts of energy, so the option saying only one does is wrong.",
+   "clue": "Work out which reaction splits and which joins."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A uranium nucleus splits into smaller nuclei",
+   "also_right": []
+  },
+  "b": {
+   "best": "X is used in power stations and Y happens in the Sun",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Fission and fusion",
+  "card": [
+   [
+    "Fission",
+    "A heavy nucleus, such as uranium, splits into smaller nuclei. Nuclear power stations use fission, and they leave radioactive waste that must be stored safely."
+   ],
+   [
+    "Fusion",
+    "Light nuclei, such as hydrogen, join to form a heavier nucleus. Fusion is how the Sun releases energy."
+   ],
+   "Both reactions change the nucleus, not just the outer electrons. This is why they release huge amounts of energy compared with chemical reactions.",
+   "To tell them apart, ask what happens to the nucleus. If one big nucleus breaks into smaller ones, it is fission. If small nuclei combine into a bigger one, it is fusion."
+  ],
+  "remember": "Fission splits a heavy nucleus. Fusion joins light nuclei. Both release huge amounts of energy.",
+  "a": {
+   "q": "Which description matches a nuclear fission reaction?",
+   "opts": [
+    "A uranium nucleus splits into smaller nuclei",
+    "Two hydrogen nuclei join to form a helium nucleus",
+    "A nucleus gains electrons to form a negative ion",
+    "Two atoms share electrons to form a molecule"
+   ],
+   "why": "Fission is the splitting of a heavy nucleus such as uranium into smaller nuclei. Two hydrogen nuclei joining is fusion, which is the most tempting wrong option because it is also a nuclear reaction.",
+   "clue": "Fission means splitting."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dr Lee compares two reactions. In Reaction X, a large nucleus breaks into two smaller ones. In Reaction Y, small nuclei combine into a larger one. Which statement is correct?",
+   "opts": [
+    "X is used in power stations and Y happens in the Sun",
+    "Y is used in power stations and X happens in the Sun",
+    "X releases energy but Y does not release any",
+    "X and Y both leave no radioactive waste at all"
+   ],
+   "why": "X is fission, which nuclear power stations use, and Y is fusion, which powers the Sun. The swapped option is tempting but reverses the two reactions. Both release huge amounts of energy, so the option saying only one does is wrong.",
+   "clue": "Work out which reaction splits and which joins."
+  }
+ },
+ "cleared_by": "checker"
 }
