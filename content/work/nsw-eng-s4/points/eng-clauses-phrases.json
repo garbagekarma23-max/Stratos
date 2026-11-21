@@ -24,8 +24,139 @@
    0.206
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:41Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: done",
+  "2026-11-20T12:44:53Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00603,
+  "check": 0.00748
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches the distinction between clauses and phrases; the closest, the simple, compound and complex sentences point, only defines a clause as a group with a verb and never covers phrases or the requirement for a subject.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Clauses and phrases",
+  "card": [
+   [
+    "Clause",
+    "a group of words with a subject and a verb. The subject is who or what does the action, and the verb is the action or state. In \"Mia sang\", Mia is the subject and sang is the verb."
+   ],
+   [
+    "Phrase",
+    "a group of words that does not have both a subject and a verb. \"After lunch\" and \"the tall boy\" are phrases."
+   ],
+   [
+    "Main clause",
+    "a clause that makes sense on its own. \"The bus arrived\" is a main clause."
+   ],
+   [
+    "Subordinate clause",
+    "a clause that depends on a main clause and does not make sense alone. In \"The bus arrived when the rain stopped\", \"when the rain stopped\" is subordinate."
+   ]
+  ],
+  "remember": "A clause has a subject and a verb. A phrase does not have both.",
+  "a": {
+   "q": "Which group of words is a clause?",
+   "opts": [
+    "The dog barked",
+    "Under the old bridge",
+    "The very hungry dog",
+    "Barking loudly at night"
+   ],
+   "why": "\"The dog barked\" has a subject, the dog, and a verb, barked. The other three have no subject and verb together, so they are phrases. \"Barking loudly at night\" is tempting, but it has no subject.",
+   "clue": "Look for who or what, plus an action."
+  },
+  "b": {
+   "d": 3,
+   "q": "Read: \"Leo packed his bag before the bell rang.\" Which words are a subordinate clause?",
+   "opts": [
+    "before the bell rang",
+    "Leo packed his bag",
+    "his bag",
+    "before the bell"
+   ],
+   "why": "\"Before the bell rang\" has a subject, the bell, and a verb, rang, but it depends on the main clause and does not make sense alone. \"Before the bell\" is only a phrase, because it has no verb.",
+   "clue": "Find the words with their own subject and verb that cannot stand alone."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The dog barked",
+   "also_right": []
+  },
+  "b": {
+   "best": "before the bell rang",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Clauses and phrases",
+  "card": [
+   [
+    "Clause",
+    "a group of words with a subject and a verb. The subject is who or what does the action, and the verb is the action or state. In \"Mia sang\", Mia is the subject and sang is the verb."
+   ],
+   [
+    "Phrase",
+    "a group of words that does not have both a subject and a verb. \"After lunch\" and \"the tall boy\" are phrases."
+   ],
+   [
+    "Main clause",
+    "a clause that makes sense on its own. \"The bus arrived\" is a main clause."
+   ],
+   [
+    "Subordinate clause",
+    "a clause that depends on a main clause and does not make sense alone. In \"The bus arrived when the rain stopped\", \"when the rain stopped\" is subordinate."
+   ]
+  ],
+  "remember": "A clause has a subject and a verb. A phrase does not have both.",
+  "a": {
+   "q": "Which group of words is a clause?",
+   "opts": [
+    "The dog barked",
+    "Under the old bridge",
+    "The very hungry dog",
+    "Barking loudly at night"
+   ],
+   "why": "\"The dog barked\" has a subject, the dog, and a verb, barked. The other three have no subject and verb together, so they are phrases. \"Barking loudly at night\" is tempting, but it has no subject.",
+   "clue": "Look for who or what, plus an action."
+  },
+  "b": {
+   "d": 3,
+   "q": "Read: \"Leo packed his bag before the bell rang.\" Which words are a subordinate clause?",
+   "opts": [
+    "before the bell rang",
+    "Leo packed his bag",
+    "his bag",
+    "before the bell"
+   ],
+   "why": "\"Before the bell rang\" has a subject, the bell, and a verb, rang, but it depends on the main clause and does not make sense alone. \"Before the bell\" is only a phrase, because it has no verb.",
+   "clue": "Find the words with their own subject and verb that cannot stand alone."
+  }
+ },
+ "cleared_by": "checker"
 }

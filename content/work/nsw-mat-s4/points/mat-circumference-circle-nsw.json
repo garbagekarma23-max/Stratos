@@ -16,8 +16,206 @@
    0.307
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 says reuse mat-circumference-circle, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:53Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:53Z write: done",
+  "2026-11-20T12:44:58Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:23:42Z autoreview: cleared with the fix (card other)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "confirm": 0.01084,
+  "write": 0.00709,
+  "check": 0.01018,
+  "fix": 0.02126
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-circumference-circle",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the same idea at a suitable depth: circumference as pi times the diameter or 2 times pi times the radius, with fair questions and no terms, laws or examples that conflict with NSW Stage 4.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The new point teaches pi as circumference divided by diameter together with both formulas C = πd and C = 2πr, which makes it broader than either bank point: one gives the formulas without defining pi as that ratio, and the other defines pi but only uses circumference ≈ 3.14 × diameter.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Circumference of a circle",
+  "card": [
+   "The circumference is the distance around a circle. For every circle, the circumference divided by the diameter is the same number. That number is pi, written \\(\\pi\\).",
+   "Pi is a little more than 3. We use \\(\\pi \\approx 3.14\\), or the \\(\\pi\\) button on a calculator for a more exact answer.",
+   [
+    "Diameter",
+    "\\(C = \\pi \\times d\\). The diameter is the width of the circle through its centre."
+   ],
+   [
+    "Radius",
+    "\\(C = 2 \\times \\pi \\times r\\). The radius is half the diameter, so double it first. Example: for \\(r = 5\\) cm, \\(C = 2 \\times \\pi \\times 5 = 10\\pi \\approx 31.4\\) cm."
+   ]
+  ],
+  "remember": "Circumference is \\(\\pi\\) times the diameter, or \\(2\\) times \\(\\pi\\) times the radius.",
+  "a": {
+   "q": "A round pond has a diameter of 10 m. Using \\(\\pi \\approx 3.14\\), what is its circumference?",
+   "opts": [
+    "31.4 m",
+    "62.8 m",
+    "314 m",
+    "78.5 m"
+   ],
+   "why": "Use \\(C = \\pi \\times d\\), so \\(C = 3.14 \\times 10 = 31.4\\) m. The answer 62.8 m comes from doubling the diameter as if it were a radius.",
+   "clue": "The diameter is given, so use it directly."
+  },
+  "b": {
+   "d": 3,
+   "q": "A round clock has a radius of 20 cm. Ribbon is wrapped once around its edge. Using \\(\\pi \\approx 3.14\\), how much ribbon is needed?",
+   "opts": [
+    "125.6 cm",
+    "62.8 cm",
+    "1256 cm",
+    "251.2 cm"
+   ],
+   "why": "Use \\(C = 2 \\times \\pi \\times r = 2 \\times 3.14 \\times 20 = 125.6\\) cm. The answer 62.8 cm comes from using \\(\\pi \\times r\\), which skips the doubling.",
+   "clue": "The distance around the edge is the circumference. Is 20 cm the radius or the diameter?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "31.4 m",
+   "also_right": []
+  },
+  "b": {
+   "best": "125.6 cm",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines diameter ('the width of the circle through its centre') and explains the radius as half the diameter. These belong to point 2 (Parts of a circle), so here they should only be mentioned, not defined."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and their explanations are correct (31.4 m and 125.6 cm). The only issue is that the card defines diameter and radius, which belong to the Parts of a circle point."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The card defines diameter ('the width of the circle through its centre') and explains the radius as half the diameter. These belong to point 2 (Parts of a circle), so here they should only be mentioned, not defined."
+ ],
+ "proposal": {
+  "title": "Circumference of a circle",
+  "card": [
+   "The circumference is the distance around a circle. For every circle, the circumference divided by the diameter is the same number. That number is pi, written \\(\\pi\\).",
+   "Pi is a little more than 3. We use \\(\\pi \\approx 3.14\\), or the \\(\\pi\\) button on a calculator for a more exact answer.",
+   [
+    "Diameter given",
+    "Use \\(C = \\pi \\times d\\). Multiply the diameter by \\(\\pi\\)."
+   ],
+   [
+    "Radius given",
+    "Use \\(C = 2 \\times \\pi \\times r\\). Multiply the radius by 2 and by \\(\\pi\\). Example: for a radius of 5 cm, \\(C = 2 \\times \\pi \\times 5\\), which is \\(10\\pi \\approx 31.4\\) cm."
+   ]
+  ],
+  "remember": "Circumference is \\(\\pi\\) times the diameter, or \\(2\\) times \\(\\pi\\) times the radius.",
+  "a": {
+   "q": "A round pond has a diameter of 10 m. Using \\(\\pi \\approx 3.14\\), what is its circumference?",
+   "opts": [
+    "31.4 m",
+    "62.8 m",
+    "314 m",
+    "78.5 m"
+   ],
+   "why": "Use \\(C = \\pi \\times d\\), so \\(C = 3.14 \\times 10 = 31.4\\) m. The answer 62.8 m comes from using \\(C = 2 \\times \\pi \\times r\\) with the diameter in place of the radius.",
+   "clue": "The diameter is given, so use the diameter formula."
+  },
+  "b": {
+   "d": 3,
+   "q": "A round clock has a radius of 20 cm. Ribbon is wrapped once around its edge. Using \\(\\pi \\approx 3.14\\), how much ribbon is needed?",
+   "opts": [
+    "125.6 cm",
+    "62.8 cm",
+    "1256 cm",
+    "251.2 cm"
+   ],
+   "why": "Use \\(C = 2 \\times \\pi \\times r\\), so \\(C = 2 \\times 3.14 \\times 20 = 125.6\\) cm. The answer 62.8 cm comes from \\(\\pi \\times r\\), which skips multiplying by 2.",
+   "clue": "The distance around the edge is the circumference. Is 20 cm the radius or the diameter?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:42Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines diameter ('the width of the circle through its centre') and explains the radius as half the diameter. These belong to point 2 (Parts of a circle), so here they should only be mentioned, not defined."
+   }
+  ],
+  "flags": [
+   "Card, other: The card defines diameter ('the width of the circle through its centre') and explains the radius as half the diameter. These belong to point 2 (Parts of a circle), so here they should only be mentioned, not defined."
+  ]
+ },
+ "final": {
+  "title": "Circumference of a circle",
+  "card": [
+   "The circumference is the distance around a circle. For every circle, the circumference divided by the diameter is the same number. That number is pi, written \\(\\pi\\).",
+   "Pi is a little more than 3. We use \\(\\pi \\approx 3.14\\), or the \\(\\pi\\) button on a calculator for a more exact answer.",
+   [
+    "Diameter given",
+    "Use \\(C = \\pi \\times d\\). Multiply the diameter by \\(\\pi\\)."
+   ],
+   [
+    "Radius given",
+    "Use \\(C = 2 \\times \\pi \\times r\\). Multiply the radius by 2 and by \\(\\pi\\). Example: for a radius of 5 cm, \\(C = 2 \\times \\pi \\times 5\\), which is \\(10\\pi \\approx 31.4\\) cm."
+   ]
+  ],
+  "remember": "Circumference is \\(\\pi\\) times the diameter, or \\(2\\) times \\(\\pi\\) times the radius.",
+  "a": {
+   "q": "A round pond has a diameter of 10 m. Using \\(\\pi \\approx 3.14\\), what is its circumference?",
+   "opts": [
+    "31.4 m",
+    "62.8 m",
+    "314 m",
+    "78.5 m"
+   ],
+   "why": "Use \\(C = \\pi \\times d\\), so \\(C = 3.14 \\times 10 = 31.4\\) m. The answer 62.8 m comes from using \\(C = 2 \\times \\pi \\times r\\) with the diameter in place of the radius.",
+   "clue": "The diameter is given, so use the diameter formula."
+  },
+  "b": {
+   "d": 3,
+   "q": "A round clock has a radius of 20 cm. Ribbon is wrapped once around its edge. Using \\(\\pi \\approx 3.14\\), how much ribbon is needed?",
+   "opts": [
+    "125.6 cm",
+    "62.8 cm",
+    "1256 cm",
+    "251.2 cm"
+   ],
+   "why": "Use \\(C = 2 \\times \\pi \\times r\\), so \\(C = 2 \\times 3.14 \\times 20 = 125.6\\) cm. The answer 62.8 cm comes from \\(\\pi \\times r\\), which skips multiplying by 2.",
+   "clue": "The distance around the edge is the circumference. Is 20 cm the radius or the diameter?"
+  }
+ },
+ "cleared_by": "auto"
 }

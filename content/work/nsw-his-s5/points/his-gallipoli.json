@@ -16,8 +16,251 @@
    0.209
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 says reuse his-gallipoli-campaign, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:51Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:52Z write: failed the content check, writing again",
+  "2026-11-20T12:44:57Z write: done",
+  "2026-11-20T12:53:26Z check: flagged",
+  "2026-11-20T12:59:59Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:02:37Z claude-code review: left for you (it chose to leave it)",
+  "2026-11-20T14:41:38Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "confirm": 0.00635,
+  "write": 0.01936,
+  "check": 0.01312,
+  "fix": 0.01988,
+  "recheck": 0.00949
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "his-gallipoli-campaign",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The campaign point covers the eight-month stalemate, the harsh conditions, the heavy Australian deaths and the secret evacuation, which matches the brief, and nothing in it is out of place for NSW Stage 5.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The brief covers the whole of Gallipoli, from the 25 April landing to the withdrawal eight months later, but the bank splits this into two narrower points: one on the landing and one on the stalemate and evacuation, so neither matches on its own.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Gallipoli",
+  "card": [
+   "On 25 April 1915 Australian and New Zealand troops landed at Gallipoli, a peninsula in Turkey. The Ottoman Empire, Turkey's ruler, was fighting on Germany's side.",
+   "The Allies hoped to open a sea route to Russia and knock the Ottoman Empire out of the war. The troops landed on a steep, narrow beach, later called Anzac Cove.",
+   "Ottoman defenders held the high ground above the beach. The Allies could not break out, and the fighting became a stalemate.",
+   "After about eight months and heavy losses on both sides, the Allies withdrew in December 1915. The campaign failed to reach its aims."
+  ],
+  "remember": "Gallipoli was a failed Allied campaign that began on 25 April 1915 and ended in withdrawal.",
+  "a": {
+   "q": "What was the outcome of the Gallipoli campaign for the Allies?",
+   "opts": [
+    "They withdrew after months of fighting, their aims unmet",
+    "They captured the peninsula and reached Russia by sea",
+    "They won a quick victory in the first week of fighting",
+    "They signed a peace treaty with the Ottoman Empire"
+   ],
+   "why": "The Ottoman defenders held the high ground, the fighting stalled, and the Allies left in December 1915. The campaign did not succeed.",
+   "clue": "Think about who held the high ground."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia reads a letter from a soldier who landed at Anzac Cove in April 1915. In which country was he fighting?",
+   "opts": [
+    "Turkey",
+    "France",
+    "Belgium",
+    "Egypt"
+   ],
+   "why": "Gallipoli is a peninsula in Turkey, then part of the Ottoman Empire. France and Belgium were the sites of the Western Front, a different theatre.",
+   "clue": "Where is the Gallipoli peninsula?"
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "image",
+    "brief": "A map showing the Gallipoli peninsula in Turkey, with Anzac Cove and the Dardanelles labelled.",
+    "why": "It shows students where the landing took place."
+   }
+  ]
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "They withdrew after months of fighting, their aims unmet",
+   "also_right": []
+  },
+  "b": {
+   "best": "Turkey",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'The Allies withdrew in December 1915' is imprecise. Anzac and Suvla were evacuated in December 1915, but the British and French at Cape Helles did not leave until 9 January 1916. Better: 'the Anzacs withdrew in December 1915' or 'the last Allied troops left in January 1916'. Why (a) repeats the claim."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and questions are accurate apart from one detail: the card (and why a) says the Allies withdrew in December 1915, but the final Allied evacuation from Cape Helles was in January 1916. Only the Anzac and Suvla withdrawal was in December."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: 'The Allies withdrew in December 1915' is imprecise. Anzac and Suvla were evacuated in December 1915, but the British and French at Cape Helles did not leave until 9 January 1916. Better: 'the Anzacs withdrew in December 1915' or 'the last Allied troops left in January 1916'. Why (a) repeats the claim."
+ ],
+ "proposal": {
+  "title": "Gallipoli",
+  "card": [
+   "On 25 April 1915 Australian and New Zealand troops landed at Gallipoli, a peninsula in Turkey. The Ottoman Empire, which ruled Turkey, was fighting on Germany's side.",
+   "The Allies hoped to open a sea route to Russia and knock the Ottoman Empire out of the war. The troops landed on a steep, narrow beach, later called Anzac Cove.",
+   "Ottoman defenders held the high ground above the beach. The Allies could not break out, and the fighting became a stalemate.",
+   "After about eight months and heavy losses on both sides, the Anzacs withdrew in December 1915. The last Allied troops left in January 1916, and the campaign failed to reach its aims."
+  ],
+  "remember": "Gallipoli was a failed Allied campaign that began on 25 April 1915 and ended in withdrawal.",
+  "a": {
+   "q": "What was the outcome of the Gallipoli campaign for the Allies?",
+   "opts": [
+    "They withdrew after months of fighting, their aims unmet",
+    "They captured the peninsula and reached Russia by sea",
+    "They won a quick victory in the first week of fighting",
+    "They signed a peace treaty with the Ottoman Empire"
+   ],
+   "why": "The Ottoman defenders held the high ground and the fighting stalled. The Anzacs withdrew in December 1915 and the last Allied troops left in January 1916, so the campaign did not succeed. The Allies never opened the sea route to Russia.",
+   "clue": "Think about who held the high ground."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia reads a letter from a soldier who landed at Anzac Cove in April 1915. In which country was he fighting?",
+   "opts": [
+    "Turkey",
+    "France",
+    "Belgium",
+    "Egypt"
+   ],
+   "why": "Anzac Cove is on the Gallipoli peninsula, which is in Turkey, then ruled by the Ottoman Empire. France and Belgium were where Australians fought on the Western Front, a different part of the war.",
+   "clue": "Where is the Gallipoli peninsula?"
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "image",
+    "brief": "A map showing the Gallipoli peninsula in Turkey, with Anzac Cove and the Dardanelles labelled.",
+    "why": "It shows students where the landing took place."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "They withdrew after months of fighting, their aims unmet",
+    "also_right": []
+   },
+   "b": {
+    "best": "Turkey",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'The Allies withdrew in December 1915' is imprecise. Anzac and Suvla were evacuated in December 1915, but the British and French at Cape Helles did not leave until 9 January 1916. Better: 'the Anzacs withdrew in December 1915' or 'the last Allied troops left in January 1916'. Why (a) repeats the claim."
+   }
+  ],
+  "flags": [
+   "Card, fact: 'The Allies withdrew in December 1915' is imprecise. Anzac and Suvla were evacuated in December 1915, but the British and French at Cape Helles did not leave until 9 January 1916. Better: 'the Anzacs withdrew in December 1915' or 'the last Allied troops left in January 1916'. Why (a) repeats the claim."
+  ],
+  "owner": "fix"
+ },
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "leave",
+   "sure": "medium",
+   "reason": "Gallipoli is a war campaign and the card deals with fighting and heavy losses, so it goes to the owner. The fix's dates for the withdrawal look right.",
+   "item": "c9339df5351de2ac",
+   "result": "left"
+  }
+ ],
+ "final": {
+  "title": "Gallipoli",
+  "card": [
+   "On 25 April 1915 Australian and New Zealand troops landed at Gallipoli, a peninsula in Turkey. The Ottoman Empire, which ruled Turkey, was fighting on Germany's side.",
+   "The Allies hoped to open a sea route to Russia and knock the Ottoman Empire out of the war. The troops landed on a steep, narrow beach, later called Anzac Cove.",
+   "Ottoman defenders held the high ground above the beach. The Allies could not break out, and the fighting became a stalemate.",
+   "After about eight months and heavy losses on both sides, the Anzacs withdrew in December 1915. The last Allied troops left in January 1916, and the campaign failed to reach its aims."
+  ],
+  "remember": "Gallipoli was a failed Allied campaign that began on 25 April 1915 and ended in withdrawal.",
+  "a": {
+   "q": "What was the outcome of the Gallipoli campaign for the Allies?",
+   "opts": [
+    "They withdrew after months of fighting, their aims unmet",
+    "They captured the peninsula and reached Russia by sea",
+    "They won a quick victory in the first week of fighting",
+    "They signed a peace treaty with the Ottoman Empire"
+   ],
+   "why": "The Ottoman defenders held the high ground and the fighting stalled. The Anzacs withdrew in December 1915 and the last Allied troops left in January 1916, so the campaign did not succeed. The Allies never opened the sea route to Russia.",
+   "clue": "Think about who held the high ground."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia reads a letter from a soldier who landed at Anzac Cove in April 1915. In which country was he fighting?",
+   "opts": [
+    "Turkey",
+    "France",
+    "Belgium",
+    "Egypt"
+   ],
+   "why": "Anzac Cove is on the Gallipoli peninsula, which is in Turkey, then ruled by the Ottoman Empire. France and Belgium were where Australians fought on the Western Front, a different part of the war.",
+   "clue": "Where is the Gallipoli peninsula?"
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "image",
+    "brief": "A map showing the Gallipoli peninsula in Turkey, with Anzac Cove and the Dardanelles labelled.",
+    "why": "It shows students where the landing took place."
+   }
+  ]
+ },
+ "cleared_by": "owner"
 }

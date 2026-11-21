@@ -12,8 +12,390 @@
    0.236
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: done",
+  "2026-11-20T12:44:55Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (a other)",
+  "2026-11-20T13:44:56Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.00595,
+  "check": 0.01062,
+  "fix": 0.01662,
+  "recheck": 0.00873
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches the effects of migration on origin and destination places; the types-of-migration point covers categories of movement and the push-pull point covers causes, and the Year 11 depth does not match the Stage 5 brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The why for (a) defines pull factors ('the things that draw people to a place'), which belongs to point 1. Here it should only be mentioned, e.g. 'Pull factors are not money sent home.'",
+ "rejected": {
+  "title": "Effects of migration on origin and destination",
+  "card": [
+   "The origin is the place migrants leave. The destination is the place they move to. Migration changes both.",
+   [
+    "Origin",
+    "Migrants often send part of their pay home as remittances, which families can spend on food, school fees and housing. The origin can also lose young and skilled workers, such as nurses and engineers."
+   ],
+   [
+    "Destination",
+    "Migrants can fill job gaps, such as in farming, building and health care. They also pay taxes and spend money in local shops."
+   ],
+   "The effects depend on who moves and how many. A place that loses many skilled workers may struggle to run its services."
+  ],
+  "remember": "Origin: money comes in but workers can leave. Destination: job gaps can be filled.",
+  "a": {
+   "q": "Migrants from a village in the Philippines work overseas and send part of their pay to their families. What is this money called?",
+   "opts": [
+    "Remittances",
+    "Pull factors",
+    "Job gaps",
+    "Taxes"
+   ],
+   "why": "Money that migrants send home to family is called remittances. Pull factors are the things that draw people to a place, so they are not the money itself.",
+   "clue": "Think of money sent back to the origin."
+  },
+  "b": {
+   "d": 3,
+   "q": "Many young nurses leave a small town in Ghana for hospitals in another country. Which effect is most likely for the town they left?",
+   "opts": [
+    "Its health services may struggle to find enough staff",
+    "Its hospitals may fill with skilled workers from abroad",
+    "Its job gaps may be filled by the nurses who left",
+    "Its health services may improve with fewer patients"
+   ],
+   "why": "The origin loses skilled workers, so it can have trouble running services such as health care. Filling job gaps is an effect on the destination, where the nurses now work, not on the town they left.",
+   "clue": "Ask who is leaving, and what the town still needs."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: The why for (a) defines pull factors ('the things that draw people to a place'), which belongs to point 1. Here it should only be mentioned, e.g. 'Pull factors are not money sent home.'"
+   ],
+   "saved": {
+    "draft": {
+     "title": "Effects of migration on origin and destination",
+     "card": [
+      "The origin is the place migrants leave. The destination is the place they move to. Migration changes both.",
+      [
+       "Origin",
+       "Migrants often send part of their pay home. This money is called remittances, and families can use it for food, school fees and housing. The origin can also lose young and skilled workers, such as nurses and engineers."
+      ],
+      [
+       "Destination",
+       "Migrants can fill job gaps, such as in farming, building and health care. They also pay taxes and spend money in local shops."
+      ],
+      "The effects depend on who moves and how many. A place that loses many skilled workers may struggle to run its services."
+     ],
+     "remember": "Origin: money comes in but workers can leave. Destination: job gaps can be filled.",
+     "a": {
+      "q": "Migrants from a village in the Philippines work overseas and send part of their pay to their families. What is this money called?",
+      "opts": [
+       "Remittances",
+       "Pull factors",
+       "Job gaps",
+       "Taxes"
+      ],
+      "why": "Money that migrants send home to family is called remittances. Pull factors are the things that draw people to a place, so they are not the money itself.",
+      "clue": "Think of money sent back to the origin."
+     },
+     "b": {
+      "d": 3,
+      "q": "Many young nurses leave a small town in Ghana for hospitals in another country. Which effect is most likely for the town they left?",
+      "opts": [
+       "Its health services may struggle to find enough staff",
+       "Its hospitals will fill with skilled workers from abroad",
+       "Its population will grow because of the young people",
+       "Its health services will improve because of fewer patients"
+      ],
+      "why": "The origin loses skilled workers, so it can have trouble running services such as health care. The nurses may send money home, but that does not replace the staff the town has lost.",
+      "clue": "Ask who is leaving, and what the town still needs."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Remittances",
+      "also_right": []
+     },
+     "b": {
+      "best": "Its health services may struggle to find enough staff",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is the only one with the hedge 'may'. The three wrong options all say 'will', so a student could pick the answer from the wording alone."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and answers check out. In question b, the right option is the only one using 'may' while the others say 'will', which hints at the answer."
+    },
+    "flags": [
+     "Question b, wording: The right option is the only one with the hedge 'may'. The three wrong options all say 'will', so a student could pick the answer from the wording alone."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Effects of migration on origin and destination",
+     "card": [
+      "The origin is the place migrants leave. The destination is the place they move to. Migration changes both.",
+      [
+       "Origin",
+       "Migrants often send part of their pay home as remittances, which families can spend on food, school fees and housing. The origin can also lose young and skilled workers, such as nurses and engineers."
+      ],
+      [
+       "Destination",
+       "Migrants can fill job gaps, such as in farming, building and health care. They also pay taxes and spend money in local shops."
+      ],
+      "The effects depend on who moves and how many. A place that loses many skilled workers may struggle to run its services."
+     ],
+     "remember": "Origin: money comes in but workers can leave. Destination: job gaps can be filled.",
+     "a": {
+      "q": "Migrants from a village in the Philippines work overseas and send part of their pay to their families. What is this money called?",
+      "opts": [
+       "Remittances",
+       "Pull factors",
+       "Job gaps",
+       "Taxes"
+      ],
+      "why": "Money that migrants send home to family is called remittances. Pull factors are the things that draw people to a place, so they are not the money itself.",
+      "clue": "Think of money sent back to the origin."
+     },
+     "b": {
+      "d": 3,
+      "q": "Many young nurses leave a small town in Ghana for hospitals in another country. Which effect is most likely for the town they left?",
+      "opts": [
+       "Its health services may struggle to find enough staff",
+       "Its hospitals may fill with skilled workers from abroad",
+       "Its job gaps may be filled by the nurses who left",
+       "Its health services may improve with fewer patients"
+      ],
+      "why": "The origin loses skilled workers, so it can have trouble running services such as health care. Filling job gaps is an effect on the destination, where the nurses now work, not on the town they left.",
+      "clue": "Ask who is leaving, and what the town still needs."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Remittances",
+       "also_right": []
+      },
+      "b": {
+       "best": "Its health services may struggle to find enough staff",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The why for (a) defines pull factors ('the things that draw people to a place'), which belongs to point 1. Here it should only be mentioned, e.g. 'Pull factors are not money sent home.'"
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both questions are accurate, and each question has one clear answer. One minor issue: the why for (a) explains pull factors, which belongs to point 1."
+     },
+     "flags": [
+      "Question a, other: The why for (a) defines pull factors ('the things that draw people to a place'), which belongs to point 1. Here it should only be mentioned, e.g. 'Pull factors are not money sent home.'"
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:56Z",
+   "step": "write",
+   "version": {
+    "title": "Effects of migration on origin and destination",
+    "card": [
+     "The origin is the place migrants leave. The destination is the place they move to. Migration changes both.",
+     [
+      "Origin",
+      "Migrants often send part of their pay home as remittances, which families can spend on food, school fees and housing. The origin can also lose young and skilled workers, such as nurses and engineers."
+     ],
+     [
+      "Destination",
+      "Migrants can fill job gaps, such as in farming, building and health care. They also pay taxes and spend money in local shops."
+     ],
+     "The effects depend on who moves and how many. A place that loses many skilled workers may struggle to run its services."
+    ],
+    "remember": "Origin: money comes in but workers can leave. Destination: job gaps can be filled.",
+    "a": {
+     "q": "Migrants from a village in the Philippines work overseas and send part of their pay to their families. What is this money called?",
+     "opts": [
+      "Remittances",
+      "Pull factors",
+      "Job gaps",
+      "Taxes"
+     ],
+     "why": "Money that migrants send home to family is called remittances. Pull factors are not money sent home, and job gaps and taxes belong to the destination, where migrants work and pay tax.",
+     "clue": "Think of money sent back to the origin."
+    },
+    "b": {
+     "d": 3,
+     "q": "Many young nurses leave a small town in Ghana for hospitals in another country. Which effect is most likely for the town they left?",
+     "opts": [
+      "Its health services may struggle to find enough staff",
+      "Its hospitals may fill with skilled workers from abroad",
+      "Its job gaps may be filled by the nurses who left",
+      "Its health services may improve with fewer patients"
+     ],
+     "why": "The origin loses skilled workers, so it can have trouble running services such as health care. Filling job gaps is an effect on the destination, where the nurses now work, not on the town they left.",
+     "clue": "Ask who is leaving, and what the town still needs."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Remittances",
+     "also_right": []
+    },
+    "b": {
+     "best": "Its health services may struggle to find enough staff",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Effects of migration on origin and destination",
+  "card": [
+   "The origin is the place migrants leave. The destination is the place they move to. Migration changes both.",
+   [
+    "Origin",
+    "Migrants often send part of their pay home as remittances, which families can spend on food, school fees and housing. The origin can also lose young and skilled workers, such as nurses and engineers."
+   ],
+   [
+    "Destination",
+    "Migrants can fill job gaps, such as in farming, building and health care. They also pay taxes and spend money in local shops."
+   ],
+   "The effects depend on who moves and how many. A place that loses many skilled workers may struggle to run its services."
+  ],
+  "remember": "Origin: money comes in but workers can leave. Destination: job gaps can be filled.",
+  "a": {
+   "q": "Migrants from a village in the Philippines work overseas and send part of their pay to their families. What is this money called?",
+   "opts": [
+    "Remittances",
+    "Pull factors",
+    "Job gaps",
+    "Taxes"
+   ],
+   "why": "Money that migrants send home to family is called remittances. Pull factors are not money sent home, and job gaps and taxes belong to the destination, where migrants work and pay tax.",
+   "clue": "Think of money sent back to the origin."
+  },
+  "b": {
+   "d": 3,
+   "q": "Many young nurses leave a small town in Ghana for hospitals in another country. Which effect is most likely for the town they left?",
+   "opts": [
+    "Its health services may struggle to find enough staff",
+    "Its hospitals may fill with skilled workers from abroad",
+    "Its job gaps may be filled by the nurses who left",
+    "Its health services may improve with fewer patients"
+   ],
+   "why": "The origin loses skilled workers, so it can have trouble running services such as health care. Filling job gaps is an effect on the destination, where the nurses now work, not on the town they left.",
+   "clue": "Ask who is leaving, and what the town still needs."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Remittances",
+   "also_right": []
+  },
+  "b": {
+   "best": "Its health services may struggle to find enough staff",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Effects of migration on origin and destination",
+  "card": [
+   "The origin is the place migrants leave. The destination is the place they move to. Migration changes both.",
+   [
+    "Origin",
+    "Migrants often send part of their pay home as remittances, which families can spend on food, school fees and housing. The origin can also lose young and skilled workers, such as nurses and engineers."
+   ],
+   [
+    "Destination",
+    "Migrants can fill job gaps, such as in farming, building and health care. They also pay taxes and spend money in local shops."
+   ],
+   "The effects depend on who moves and how many. A place that loses many skilled workers may struggle to run its services."
+  ],
+  "remember": "Origin: money comes in but workers can leave. Destination: job gaps can be filled.",
+  "a": {
+   "q": "Migrants from a village in the Philippines work overseas and send part of their pay to their families. What is this money called?",
+   "opts": [
+    "Remittances",
+    "Pull factors",
+    "Job gaps",
+    "Taxes"
+   ],
+   "why": "Money that migrants send home to family is called remittances. Pull factors are not money sent home, and job gaps and taxes belong to the destination, where migrants work and pay tax.",
+   "clue": "Think of money sent back to the origin."
+  },
+  "b": {
+   "d": 3,
+   "q": "Many young nurses leave a small town in Ghana for hospitals in another country. Which effect is most likely for the town they left?",
+   "opts": [
+    "Its health services may struggle to find enough staff",
+    "Its hospitals may fill with skilled workers from abroad",
+    "Its job gaps may be filled by the nurses who left",
+    "Its health services may improve with fewer patients"
+   ],
+   "why": "The origin loses skilled workers, so it can have trouble running services such as health care. Filling job gaps is an effect on the destination, where the nurses now work, not on the town they left.",
+   "clue": "Ask who is leaving, and what the town still needs."
+  }
+ },
+ "checked_by": "claude-code"
 }

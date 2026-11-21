@@ -24,8 +24,211 @@
    0.373
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 may adapt mat-area-any-triangle, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:57Z confirm: Claude Opus 5.5 may reuse mat-area-any-triangle, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt mat-area-any-triangle (2 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting mat-area-any-triangle on the next run",
+  "2026-11-20T14:12:39Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00056,
+  "confirm": 0.01201,
+  "adapt": 0.00502,
+  "check": 0.00845
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-area-any-triangle",
+  "changes": [
+   "Leave out the note about the obtuse angle 180° − C when finding an angle from an area, since it goes beyond the Stage 5 Paths point.",
+   "Use the NSW Stage 5 Paths wording and notation for the area formula and angle symbol in place of the Victoria and Year 11/12 phrasing."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same area formula, ½ab sin C, at about the right depth, but its obtuse-angle note goes beyond Stage 5 and its wording comes from other courses.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "mat-area-any-triangle",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches the same area rule, ½ab sin C, at a depth that suits the NSW Stage 5 paths trigonometry outcome, and both questions are fair for these students as they stand.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-area-any-triangle",
+  "changes": [
+   "Remove the sentence about the obtuse angle \\(180^{\\circ} - C\\) also fitting from the last card line, and keep finding an acute angle with the inverse sine.",
+   "Remove the mention of 150° from question b's why, keeping the question about an acute angle."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card4",
+   "a.q",
+   "b.q",
+   "b.why"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same area rule and its sums are right, but its last card line and question b's why use \\(\\sin C = \\sin(180^{\\circ} - C)\\). In this course that fact is its own point in the next chapter, Obtuse angles and supplementary angles, so it should not be taught here.",
+   "item": "83267e3d93306c03",
+   "result": "decided",
+   "saved": {
+    "id": "mat-area-any-triangle-2",
+    "title": "Area of any triangle",
+    "brief": "5072fb3dd5d7",
+    "shortlist": [
+     [
+      "mat-area-any-triangle",
+      0.684
+     ],
+     [
+      "mat-sine-cosine-rules",
+      0.445
+     ],
+     [
+      "mat-sine-cosine-rules-three",
+      0.44
+     ],
+     [
+      "mat-problems-with-two-right",
+      0.4
+     ],
+     [
+      "mat-finding-sides-similar-triangles",
+      0.373
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00056,
+     "confirm": 0.01201
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-area-any-triangle",
+     "changes": [
+      "Leave out the note about the obtuse angle 180° − C when finding an angle from an area, since it goes beyond the Stage 5 Paths point.",
+      "Use the NSW Stage 5 Paths wording and notation for the area formula and angle symbol in place of the Victoria and Year 11/12 phrasing."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches the same area formula, ½ab sin C, at about the right depth, but its obtuse-angle note goes beyond Stage 5 and its wording comes from other courses.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "reuse",
+     "same": "mat-area-any-triangle",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The bank point teaches the same area rule, ½ab sin C, at a depth that suits the NSW Stage 5 paths trigonometry outcome, and both questions are fair for these students as they stand.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "46b08afce0b0b567"
+  }
+ ],
+ "draft": {
+  "title": "Area of any triangle",
+  "card": [
+   "\\(\\text{Area} = \\frac{1}{2}ab \\sin C\\). Here \\(a\\) and \\(b\\) are two sides, and \\(C\\) is the angle between them.",
+   "It works for any triangle, because \\(a \\sin C\\) acts as the height. You do not need to measure the height.",
+   "Example: sides 8 cm and 5 cm with 30° between them. \\(\\text{Area} = \\frac{1}{2} \\times 8 \\times 5 \\times \\sin 30^{\\circ} = 20 \\times 0.5 = 10 \\text{ cm}^{2}\\).",
+   "To find an angle from a known area, rearrange to \\(\\sin C = \\frac{2 \\times \\text{Area}}{ab}\\) and take the inverse sine."
+  ],
+  "remember": "Half the product of two sides, times the sine of the angle between them.",
+  "a": {
+   "q": "A triangular garden bed has two edges of 9 m and 12 m that meet at an angle of 40°. What is its area, to 1 decimal place?",
+   "opts": [
+    "\\(34.7 \\text{ m}^{2}\\)",
+    "\\(41.4 \\text{ m}^{2}\\)",
+    "\\(69.4 \\text{ m}^{2}\\)",
+    "\\(108.0 \\text{ m}^{2}\\)"
+   ],
+   "why": "\\(\\text{Area} = \\frac{1}{2} \\times 9 \\times 12 \\times \\sin 40^{\\circ}\\), which is \\(54 \\times 0.6428 = 34.7 \\text{ m}^{2}\\). Using \\(\\cos 40^{\\circ}\\) gives \\(41.4 \\text{ m}^{2}\\), which uses the wrong ratio.",
+   "clue": "Half, times both sides, times the sine."
+  },
+  "b": {
+   "d": 3,
+   "q": "A triangle has an area of \\(20 \\text{ cm}^{2}\\). Two sides measure 8 cm and 10 cm, and the angle \\(C\\) between them is acute. What is \\(C\\)?",
+   "opts": [
+    "30°",
+    "14.5°",
+    "60°",
+    "7.2°"
+   ],
+   "why": "\\(20 = \\frac{1}{2} \\times 8 \\times 10 \\times \\sin C = 40 \\sin C\\), so \\(\\sin C = 0.5\\) and \\(C = 30^{\\circ}\\). Forgetting the \\(\\frac{1}{2}\\) gives \\(\\sin C = 0.25\\), which is 14.5°.",
+   "clue": "Write the area formula, then solve for \\(\\sin C\\)."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(34.7 \\text{ m}^{2}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "30°",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Area of any triangle",
+  "card": [
+   "\\(\\text{Area} = \\frac{1}{2}ab \\sin C\\). Here \\(a\\) and \\(b\\) are two sides, and \\(C\\) is the angle between them.",
+   "It works for any triangle, because \\(a \\sin C\\) acts as the height. You do not need to measure the height.",
+   "Example: sides 8 cm and 5 cm with 30° between them. \\(\\text{Area} = \\frac{1}{2} \\times 8 \\times 5 \\times \\sin 30^{\\circ} = 20 \\times 0.5 = 10 \\text{ cm}^{2}\\).",
+   "To find an angle from a known area, rearrange to \\(\\sin C = \\frac{2 \\times \\text{Area}}{ab}\\) and take the inverse sine."
+  ],
+  "remember": "Half the product of two sides, times the sine of the angle between them.",
+  "a": {
+   "q": "A triangular garden bed has two edges of 9 m and 12 m that meet at an angle of 40°. What is its area, to 1 decimal place?",
+   "opts": [
+    "\\(34.7 \\text{ m}^{2}\\)",
+    "\\(41.4 \\text{ m}^{2}\\)",
+    "\\(69.4 \\text{ m}^{2}\\)",
+    "\\(108.0 \\text{ m}^{2}\\)"
+   ],
+   "why": "\\(\\text{Area} = \\frac{1}{2} \\times 9 \\times 12 \\times \\sin 40^{\\circ}\\), which is \\(54 \\times 0.6428 = 34.7 \\text{ m}^{2}\\). Using \\(\\cos 40^{\\circ}\\) gives \\(41.4 \\text{ m}^{2}\\), which uses the wrong ratio.",
+   "clue": "Half, times both sides, times the sine."
+  },
+  "b": {
+   "d": 3,
+   "q": "A triangle has an area of \\(20 \\text{ cm}^{2}\\). Two sides measure 8 cm and 10 cm, and the angle \\(C\\) between them is acute. What is \\(C\\)?",
+   "opts": [
+    "30°",
+    "14.5°",
+    "60°",
+    "7.2°"
+   ],
+   "why": "\\(20 = \\frac{1}{2} \\times 8 \\times 10 \\times \\sin C = 40 \\sin C\\), so \\(\\sin C = 0.5\\) and \\(C = 30^{\\circ}\\). Forgetting the \\(\\frac{1}{2}\\) gives \\(\\sin C = 0.25\\), which is 14.5°.",
+   "clue": "Write the area formula, then solve for \\(\\sin C\\)."
+  }
+ }
 }

@@ -8,8 +8,46 @@
    0.528
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 may adapt eng-ethos-pathos-logos, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:42Z confirm: Claude Opus 5.5 may adapt eng-ethos-pathos-logos, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:32:27Z review: reusing eng-ethos-pathos-logos"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "confirm": 0.00551
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "eng-ethos-pathos-logos",
+  "changes": [
+   "Change the place in question b from a Tasmanian rally to a rally or community event in New South Wales so the example is local to the course."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same three appeals at a suitable basic depth, and its questions are fair, but its second question names a Tasmanian rally, which should be made local to New South Wales.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "eng-ethos-pathos-logos",
+  "changes": [
+   "Change the Tasmanian rally in question b to a New South Wales setting, such as a rally in Sydney, so the example is local to the course."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same three appeals at a simple depth that suits Years 7 and 8, and only needs its Tasmanian example made local to New South Wales.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "eng-ethos-pathos-logos",
+ "matched": {
+  "verdict": "reuse",
+  "from": "eng-ethos-pathos-logos",
+  "by": "owner",
+  "at": "2026-11-20T14:32:27Z"
+ }
 }

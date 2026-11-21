@@ -12,8 +12,374 @@
    0.402
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 may adapt his-perspectives-past, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:41Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:46Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (a wording, b wording)",
+  "2026-11-20T13:44:55Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "confirm": 0.0067,
+  "write": 0.00661,
+  "check": 0.01063,
+  "fix": 0.01916,
+  "recheck": 0.01125
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "his-perspectives-past",
+  "changes": [
+   "Replace the ancient Egypt pharaoh and farmer example with a pair of characters from a text the course studies, so the card is about characters rather than historical people.",
+   "Replace the ancient Rome drought example in question b with a similar pair of characters and an event from a text, so both questions are fair for an English student.",
+   "Reframe the card's wording from people living in the past to characters in a text, so it reads as a literary idea rather than a history lesson."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same core idea, that a person's background, values and position shape how they see the same event, at a suitable depth for Years 7 and 8, but its examples are historical and would need changing to characters in a text for English.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The English bank point is about how texts build a perspective through inclusion, omission and word choice, which is a different idea. The History point shares the core idea but is built around historical sources and accounts, so it would need fully rewritten examples and questions about characters, which is more than a small change.",
+  "model": "claude-opus-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, wording: The distractor 'One of them must have watched a different play' uses 'must', while the card says people 'can' see an event differently. The absolute word makes the option easy to rule out without knowing the idea.\n- Question b, wording: The distractor 'Only one of the two views of the fire can be true' uses 'only', while the card says 'can'. The absolute word makes the option easy to rule out without knowing the idea.",
+ "rejected": {
+  "title": "Perspective",
+  "card": [
+   "A perspective is a way of seeing the world. It is shaped by a person's experiences, values and background.",
+   "Two people can live through the same event and see it very differently, because each brings a different set of experiences and values to it.",
+   "In a text, a character's perspective shows in what they notice, what they say and how they feel about what happens. The composer can place two perspectives side by side.",
+   "A perspective is not the same as a fact about the event. It is how one person understands the event."
+  ],
+  "remember": "A perspective is one person's way of seeing, shaped by who they are and what they have lived.",
+  "a": {
+   "q": "Two students watch the same school play. Jai loves acting and thinks it was thrilling. Lena is shy and found it stressful to watch. Why do they see the play differently?",
+   "opts": [
+    "Their experiences and values shape how they see it",
+    "One of them must have watched a different play",
+    "One of them is wrong about what happened on stage",
+    "The play had two different meanings for the audience"
+   ],
+   "why": "Jai and Lena saw the same play, but each brings different experiences and feelings to it. That is what shapes a perspective. Saying one is wrong is tempting, but a perspective is a way of seeing, not a fact that can be wrong.",
+   "clue": "Think about what each student brings to the play."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a story, a bushfire threatens a town. Mr Cho, a farmer who has lost crops before, sees it as another hard test to get through. His granddaughter Pia, who has never seen a fire, sees it as terrifying. What does this show?",
+   "opts": [
+    "Each one's past shapes how they see the same fire",
+    "Mr Cho is braver than Pia simply by nature",
+    "Pia has misjudged how dangerous the fire really is",
+    "Only one of the two views of the fire can be true"
+   ],
+   "why": "Both characters face the same fire, but Mr Cho's past losses and Pia's lack of experience lead them to see it differently. That is perspective. Calling Mr Cho braver by nature is tempting, but the story points to what each has lived through, not a fixed trait.",
+   "clue": "Look at what each character has lived through before."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, wording: The distractor 'One of them must have watched a different play' uses 'must', while the card says people 'can' see an event differently. The absolute word makes the option easy to rule out without knowing the idea.",
+    "Question b, wording: The distractor 'Only one of the two views of the fire can be true' uses 'only', while the card says 'can'. The absolute word makes the option easy to rule out without knowing the idea."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Perspective",
+     "card": [
+      "A perspective is a way of seeing the world. It is shaped by a person's experiences, values and background.",
+      "Two people can live through the same event and see it very differently, because each brings a different set of experiences and values to it.",
+      "In a text, a character's perspective shows in what they notice, what they say and how they feel about what happens. The composer can place two perspectives side by side.",
+      "A perspective is not the same as a fact about the event. It is how one person understands the event."
+     ],
+     "remember": "A perspective is one person's way of seeing, shaped by who they are and what they have lived.",
+     "a": {
+      "q": "Two students watch the same school play. Jai loves acting and thinks it was thrilling. Lena is shy and found it stressful to watch. Why do they see the play differently?",
+      "opts": [
+       "Their experiences and values shape how they see it",
+       "One of them must have watched a different play",
+       "One of them is wrong about what happened on stage",
+       "The play had two different meanings for the audience"
+      ],
+      "why": "Jai and Lena saw the same play, but each brings different experiences and feelings to it. That is what shapes a perspective. Saying one is wrong is tempting, but a perspective is a way of seeing, not a fact that can be wrong.",
+      "clue": "Think about what each student brings to the play."
+     },
+     "b": {
+      "d": 3,
+      "q": "In a story, a bushfire threatens a town. Mr Cho, a farmer who has lost crops before, sees it as another hard test to get through. His granddaughter Pia, who has never seen a fire, sees it as terrifying. What does this show?",
+      "opts": [
+       "Past experience shapes how each person sees the event",
+       "Mr Cho is braver than Pia by nature",
+       "Pia has misunderstood what the fire is",
+       "The fire changed between the two scenes"
+      ],
+      "why": "Both characters face the same fire, but Mr Cho's past losses and Pia's lack of experience lead them to see it differently. That is perspective. Calling Mr Cho braver by nature is tempting, but the example points to experience, not a fixed trait.",
+      "clue": "Look at what each character has lived through before."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Their experiences and values shape how they see it",
+      "also_right": []
+     },
+     "b": {
+      "best": "Past experience shapes how each person sees the event",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is clearly the longest and the only one that restates the card's general idea, so a student could pick it without knowing the concept."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both answers are accurate. In question b the right option stands out as the longest and most general, which gives it away."
+    },
+    "flags": [
+     "Question b, wording: The right option is clearly the longest and the only one that restates the card's general idea, so a student could pick it without knowing the concept."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Perspective",
+     "card": [
+      "A perspective is a way of seeing the world. It is shaped by a person's experiences, values and background.",
+      "Two people can live through the same event and see it very differently, because each brings a different set of experiences and values to it.",
+      "In a text, a character's perspective shows in what they notice, what they say and how they feel about what happens. The composer can place two perspectives side by side.",
+      "A perspective is not the same as a fact about the event. It is how one person understands the event."
+     ],
+     "remember": "A perspective is one person's way of seeing, shaped by who they are and what they have lived.",
+     "a": {
+      "q": "Two students watch the same school play. Jai loves acting and thinks it was thrilling. Lena is shy and found it stressful to watch. Why do they see the play differently?",
+      "opts": [
+       "Their experiences and values shape how they see it",
+       "One of them must have watched a different play",
+       "One of them is wrong about what happened on stage",
+       "The play had two different meanings for the audience"
+      ],
+      "why": "Jai and Lena saw the same play, but each brings different experiences and feelings to it. That is what shapes a perspective. Saying one is wrong is tempting, but a perspective is a way of seeing, not a fact that can be wrong.",
+      "clue": "Think about what each student brings to the play."
+     },
+     "b": {
+      "d": 3,
+      "q": "In a story, a bushfire threatens a town. Mr Cho, a farmer who has lost crops before, sees it as another hard test to get through. His granddaughter Pia, who has never seen a fire, sees it as terrifying. What does this show?",
+      "opts": [
+       "Each one's past shapes how they see the same fire",
+       "Mr Cho is braver than Pia simply by nature",
+       "Pia has misjudged how dangerous the fire really is",
+       "Only one of the two views of the fire can be true"
+      ],
+      "why": "Both characters face the same fire, but Mr Cho's past losses and Pia's lack of experience lead them to see it differently. That is perspective. Calling Mr Cho braver by nature is tempting, but the story points to what each has lived through, not a fixed trait.",
+      "clue": "Look at what each character has lived through before."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:06Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Their experiences and values shape how they see it",
+       "also_right": []
+      },
+      "b": {
+       "best": "Each one's past shapes how they see the same fire",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "wording",
+        "detail": "The distractor 'One of them must have watched a different play' uses 'must', while the card says people 'can' see an event differently. The absolute word makes the option easy to rule out without knowing the idea."
+       },
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The distractor 'Only one of the two views of the fire can be true' uses 'only', while the card says 'can'. The absolute word makes the option easy to rule out without knowing the idea."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The content is accurate and both intended answers are correct. Two distractors use absolute words ('must', 'only') against the card's 'can', which makes them easy to rule out."
+     },
+     "flags": [
+      "Question a, wording: The distractor 'One of them must have watched a different play' uses 'must', while the card says people 'can' see an event differently. The absolute word makes the option easy to rule out without knowing the idea.",
+      "Question b, wording: The distractor 'Only one of the two views of the fire can be true' uses 'only', while the card says 'can'. The absolute word makes the option easy to rule out without knowing the idea."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:55Z",
+   "step": "write",
+   "version": {
+    "title": "Perspective",
+    "card": [
+     "A perspective is a way of seeing the world. It is shaped by a person's experiences, values and background.",
+     "Two people can live through the same event and see it very differently, because each brings a different set of experiences and values to it.",
+     "In a text, a character's perspective shows in what they notice, what they say and how they feel about what happens. The composer can place two perspectives side by side.",
+     "A perspective is not the same as a fact about the event. It is how one person understands the event."
+    ],
+    "remember": "A perspective is one person's way of seeing, shaped by who they are and what they have lived.",
+    "a": {
+     "q": "Two students watch the same school play. Jai loves acting and thinks it was thrilling. Lena is shy and found it stressful to watch. Why do they see the play differently?",
+     "opts": [
+      "Their experiences and values shape how they see it",
+      "One of them paid less attention to the play",
+      "One of them is wrong about what happened on stage",
+      "The play had two different meanings for the audience"
+     ],
+     "why": "Jai and Lena saw the same play, but each brings different experiences and feelings to it. That is what shapes a perspective. Saying one is wrong is tempting, but a perspective is a way of seeing, not a fact that can be wrong.",
+     "clue": "Think about what each student brings to the play."
+    },
+    "b": {
+     "d": 3,
+     "q": "In a story, a bushfire threatens a town. Mr Cho, a farmer who has lost crops before, sees it as another hard test to get through. His granddaughter Pia, who is seeing a fire for the first time, sees it as terrifying. What does this show?",
+     "opts": [
+      "Each one's past shapes how they see the same fire",
+      "Mr Cho is braver than Pia simply by nature",
+      "Pia has misjudged how dangerous the fire really is",
+      "Each view is a fact about how dangerous the fire is"
+     ],
+     "why": "Both characters face the same fire, but Mr Cho's past losses and Pia's lack of experience lead them to see it differently. That is perspective, a way of seeing rather than a fact about the fire. Calling Mr Cho braver by nature is tempting, but the story points to what each has lived through, not a fixed trait.",
+     "clue": "Look at what each character has lived through before."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Their experiences and values shape how they see it",
+     "also_right": []
+    },
+    "b": {
+     "best": "Each one's past shapes how they see the same fire",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Perspective",
+  "card": [
+   "A perspective is a way of seeing the world. It is shaped by a person's experiences, values and background.",
+   "Two people can live through the same event and see it very differently, because each brings a different set of experiences and values to it.",
+   "In a text, a character's perspective shows in what they notice, what they say and how they feel about what happens. The composer can place two perspectives side by side.",
+   "A perspective is not the same as a fact about the event. It is how one person understands the event."
+  ],
+  "remember": "A perspective is one person's way of seeing, shaped by who they are and what they have lived.",
+  "a": {
+   "q": "Two students watch the same school play. Jai loves acting and thinks it was thrilling. Lena is shy and found it stressful to watch. Why do they see the play differently?",
+   "opts": [
+    "Their experiences and values shape how they see it",
+    "One of them paid less attention to the play",
+    "One of them is wrong about what happened on stage",
+    "The play had two different meanings for the audience"
+   ],
+   "why": "Jai and Lena saw the same play, but each brings different experiences and feelings to it. That is what shapes a perspective. Saying one is wrong is tempting, but a perspective is a way of seeing, not a fact that can be wrong.",
+   "clue": "Think about what each student brings to the play."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a story, a bushfire threatens a town. Mr Cho, a farmer who has lost crops before, sees it as another hard test to get through. His granddaughter Pia, who is seeing a fire for the first time, sees it as terrifying. What does this show?",
+   "opts": [
+    "Each one's past shapes how they see the same fire",
+    "Mr Cho is braver than Pia simply by nature",
+    "Pia has misjudged how dangerous the fire really is",
+    "Each view is a fact about how dangerous the fire is"
+   ],
+   "why": "Both characters face the same fire, but Mr Cho's past losses and Pia's lack of experience lead them to see it differently. That is perspective, a way of seeing rather than a fact about the fire. Calling Mr Cho braver by nature is tempting, but the story points to what each has lived through, not a fixed trait.",
+   "clue": "Look at what each character has lived through before."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Their experiences and values shape how they see it",
+   "also_right": []
+  },
+  "b": {
+   "best": "Each one's past shapes how they see the same fire",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Perspective",
+  "card": [
+   "A perspective is a way of seeing the world. It is shaped by a person's experiences, values and background.",
+   "Two people can live through the same event and see it very differently, because each brings a different set of experiences and values to it.",
+   "In a text, a character's perspective shows in what they notice, what they say and how they feel about what happens. The composer can place two perspectives side by side.",
+   "A perspective is not the same as a fact about the event. It is how one person understands the event."
+  ],
+  "remember": "A perspective is one person's way of seeing, shaped by who they are and what they have lived.",
+  "a": {
+   "q": "Two students watch the same school play. Jai loves acting and thinks it was thrilling. Lena is shy and found it stressful to watch. Why do they see the play differently?",
+   "opts": [
+    "Their experiences and values shape how they see it",
+    "One of them paid less attention to the play",
+    "One of them is wrong about what happened on stage",
+    "The play had two different meanings for the audience"
+   ],
+   "why": "Jai and Lena saw the same play, but each brings different experiences and feelings to it. That is what shapes a perspective. Saying one is wrong is tempting, but a perspective is a way of seeing, not a fact that can be wrong.",
+   "clue": "Think about what each student brings to the play."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a story, a bushfire threatens a town. Mr Cho, a farmer who has lost crops before, sees it as another hard test to get through. His granddaughter Pia, who is seeing a fire for the first time, sees it as terrifying. What does this show?",
+   "opts": [
+    "Each one's past shapes how they see the same fire",
+    "Mr Cho is braver than Pia simply by nature",
+    "Pia has misjudged how dangerous the fire really is",
+    "Each view is a fact about how dangerous the fire is"
+   ],
+   "why": "Both characters face the same fire, but Mr Cho's past losses and Pia's lack of experience lead them to see it differently. That is perspective, a way of seeing rather than a fact about the fire. Calling Mr Cho braver by nature is tempting, but the story points to what each has lived through, not a fixed trait.",
+   "clue": "Look at what each character has lived through before."
+  }
+ },
+ "checked_by": "claude-code"
 }

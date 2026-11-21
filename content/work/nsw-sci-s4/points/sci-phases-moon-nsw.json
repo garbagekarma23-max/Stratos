@@ -20,8 +20,128 @@
    0.24
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 says adapt sci-phases-moon (1 change)",
+  "2026-11-20T12:25:59Z adapt: failed the content check, writing again",
+  "2026-11-20T12:35:57Z adapt: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "adapt": 0.01337,
+  "check": 0.00912
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "sci-phases-moon",
+  "changes": [
+   "Change the location in question b from Darwin to a New South Wales place such as Sydney, so the example is local to the NSW course."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same idea at the right depth for Stage 4, and it needs only a local example change for NSW.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "sci-phases-moon",
+  "changes": [
+   "Change the location in question b from Darwin to a New South Wales place such as Sydney, so the example is local to the NSW course."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "a.q",
+   "b.q"
+  ]
+ },
+ "draft": {
+  "title": "Phases of the moon",
+  "card": [
+   "The moon does not make its own light. It shines because its surface reflects sunlight.",
+   "The sun always lights half of the moon, the half facing it. The other half is dark.",
+   "As the moon orbits the Earth, we see a different amount of its lit half. The full cycle of phases takes about 29.5 days, roughly a month.",
+   "At new moon we see almost none of the lit half. At full moon we see all of it. The shape then shrinks back to new moon, and the cycle repeats."
+  ],
+  "remember": "The moon's phases come from how much of its lit half we can see as it orbits.",
+  "a": {
+   "q": "Over about two weeks, the moon goes from a thin crescent to a full moon. Why does its shape seem to change like this?",
+   "opts": [
+    "We see more of the moon's lit half as it orbits",
+    "The Earth's shadow covers less of the moon",
+    "The moon makes more light as it moves",
+    "The sun lights more of the moon's surface"
+   ],
+   "why": "The sun always lights half of the moon. As the moon orbits, we see more of that lit half from Earth. Earth's shadow is not the cause of phases, and the moon makes no light of its own.",
+   "clue": "Think about which half is lit and what we can see of it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya looks up at the moon from her home in Sydney. One night it is a full moon. About how long until she sees the next full moon?",
+   "opts": [
+    "About a month",
+    "About two weeks",
+    "About a week",
+    "About a year"
+   ],
+   "why": "Full moon to full moon is one whole cycle of phases, which takes about 29.5 days, roughly a month. After about two weeks she would be halfway through the cycle and see a new moon, not a full one.",
+   "clue": "Going from full moon back to full moon is one whole cycle."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "We see more of the moon's lit half as it orbits",
+   "also_right": []
+  },
+  "b": {
+   "best": "About a month",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Phases of the moon",
+  "card": [
+   "The moon does not make its own light. It shines because its surface reflects sunlight.",
+   "The sun always lights half of the moon, the half facing it. The other half is dark.",
+   "As the moon orbits the Earth, we see a different amount of its lit half. The full cycle of phases takes about 29.5 days, roughly a month.",
+   "At new moon we see almost none of the lit half. At full moon we see all of it. The shape then shrinks back to new moon, and the cycle repeats."
+  ],
+  "remember": "The moon's phases come from how much of its lit half we can see as it orbits.",
+  "a": {
+   "q": "Over about two weeks, the moon goes from a thin crescent to a full moon. Why does its shape seem to change like this?",
+   "opts": [
+    "We see more of the moon's lit half as it orbits",
+    "The Earth's shadow covers less of the moon",
+    "The moon makes more light as it moves",
+    "The sun lights more of the moon's surface"
+   ],
+   "why": "The sun always lights half of the moon. As the moon orbits, we see more of that lit half from Earth. Earth's shadow is not the cause of phases, and the moon makes no light of its own.",
+   "clue": "Think about which half is lit and what we can see of it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya looks up at the moon from her home in Sydney. One night it is a full moon. About how long until she sees the next full moon?",
+   "opts": [
+    "About a month",
+    "About two weeks",
+    "About a week",
+    "About a year"
+   ],
+   "why": "Full moon to full moon is one whole cycle of phases, which takes about 29.5 days, roughly a month. After about two weeks she would be halfway through the cycle and see a new moon, not a full one.",
+   "clue": "Going from full moon back to full moon is one whole cycle."
+  }
+ },
+ "cleared_by": "checker"
 }

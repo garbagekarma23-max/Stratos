@@ -27,11 +27,13 @@ const text = (p, sel) => p.locator(sel).first().textContent();
   await p.click('[data-act="placenext"]'); await p.waitForTimeout(80);
   await p.click('[data-act="placedone"]'); await p.waitForTimeout(80);
   const row = p.locator('.pick[data-sub="tst-course"]');
-  // The courses are grouped by year from their data. The test course is Year 9, so it has the first group to itself.
-  const firstYr = await p.locator('#sheetBody .yr').first().textContent();
-  const nsw = await p.locator('#sheetBody .picks').first().locator('.pick').evaluateAll(els => els.map(e => e.dataset.sub));
+  // The courses are grouped by year from their data. The test course is Year 9, so it has a group to itself, after
+  // NSW's Stage 4 (Years 7 and 8) and before Stage 5 (Years 9 and 10).
+  const yrs = await p.locator('#sheetBody .yr').allTextContents();
+  const nsw = await p.locator('#sheetBody .yr').nth(yrs.indexOf('Year 9')).evaluate(h => [...h.nextElementSibling.querySelectorAll('.pick')].map(e => e.dataset.sub));
   const allNsw = await p.locator('#sheetBody .unit').first().evaluate(h => { const ids = []; for (let el = h.nextElementSibling; el && !el.classList.contains('unit'); el = el.nextElementSibling) el.querySelectorAll('.pick').forEach(b => ids.push(b.dataset.sub)); return ids; });
-  check(firstYr === 'Year 9' && nsw.join(',') === 'tst-course' && allNsw.length === NSW_MADE.length + 2 && ['eco', 'maths'].concat(NSW_MADE).every(id => allNsw.includes(id)), 'the made course is listed under New South Wales, under Year 9 from its data', R);
+  check(yrs.indexOf('Year 9') > yrs.indexOf('Stage 4 (Years 7 and 8)') && yrs.indexOf('Year 9') < yrs.indexOf('Stage 5 (Years 9 and 10)') && nsw.join(',') === 'tst-course' &&
+    allNsw.length === NSW_MADE.length + 2 && ['eco', 'maths'].concat(NSW_MADE).every(id => allNsw.includes(id)), 'the made course is listed under New South Wales, under Year 9 from its data, between Stage 4 and Stage 5: ' + yrs.join(','), R);
   check((await row.locator('.t').textContent()) === 'Testing, Year 9NSW, Test topic' + COURSE.note, 'its row has its name, its line and its note', R);
   await row.click(); await p.waitForTimeout(200);
   check((await text(p, '.subject')) === 'Testing, Year 9' && (await text(p, '.cnote')) === COURSE.note, 'Home names the course, with its note under it', R);

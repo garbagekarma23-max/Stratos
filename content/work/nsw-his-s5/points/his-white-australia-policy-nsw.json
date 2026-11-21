@@ -12,8 +12,45 @@
    0.328
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 may adapt mod-white-australia, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:52Z match: Claude Opus 5.5 says reuse mod-white-australia, but its topic always comes to you",
+  "2026-11-20T14:41:30Z review: reusing mod-white-australia"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "confirm": 0.00417
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mod-white-australia",
+  "changes": [
+   "Replace the card's wording 'non-European migrants' with the brief's framing of people who were not white, to match how this course frames the policy.",
+   "Check the card's language about race against the NSW Stage 5 syllabus wording before publishing."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same dictation-test idea at a suitable Stage 5 depth, but its terms about who was excluded differ slightly from the brief, so it needs a small wording change.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "mod-white-australia",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches exactly this idea: the 1901 Act, its dictation test and its lasting effect on migration. It sits at a Year 9 depth, and nothing in it is specific to another state, so it suits NSW Stage 5 as it is.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "mod-white-australia",
+ "matched": {
+  "verdict": "reuse",
+  "from": "mod-white-australia",
+  "by": "owner",
+  "at": "2026-11-20T14:41:30Z"
+ }
 }

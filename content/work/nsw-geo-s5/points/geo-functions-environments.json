@@ -20,8 +20,47 @@
    0.207
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 may adapt geo-environmental-functions, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:47Z confirm: Claude Opus 5.5 may adapt geo-environmental-functions, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:39:28Z review: reusing geo-environmental-functions"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "confirm": 0.01143
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-environmental-functions",
+  "changes": [
+   "Change the Question b example from a Tasmanian council piping sewage into the sea to a New South Wales place, such as a Sydney or Wollongong council discharging treated sewage into the ocean, so the example is local to the course."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same four functions at a suitable depth, but its question example is set in Tasmania and should be localised to New South Wales, and its spiritual-meaning function goes beyond the brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "geo-environmental-functions",
+  "changes": [
+   "Change the Tasmanian council in question b to a New South Wales example, such as a Sydney coastal council piping treated sewage into the sea.",
+   "Drop the spiritual meaning function from the card and the remember line so it matches the brief's three functions, and replace the 'sacred mountain' and 'Holding spiritual meaning' options with other wrong answers."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same functions of environments (resources, absorbing wastes and life-supporting services) at a Year 9–10 depth, but it adds a fourth function the brief leaves out and uses a Tasmanian example, so it needs small changes for NSW.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "geo-environmental-functions",
+ "matched": {
+  "verdict": "reuse",
+  "from": "geo-environmental-functions",
+  "by": "owner",
+  "at": "2026-11-20T14:39:28Z"
+ }
 }

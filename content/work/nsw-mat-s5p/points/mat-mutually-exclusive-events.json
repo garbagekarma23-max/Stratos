@@ -24,8 +24,273 @@
    0.207
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 may adapt mat-addition-rule, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:57Z confirm: Claude Opus 5.5 may adapt mat-addition-rule, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt mat-addition-rule (3 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting mat-addition-rule on the next run",
+  "2026-11-20T14:12:39Z adapt: done",
+  "2026-11-20T14:20:02Z check: flagged",
+  "2026-11-20T14:26:15Z fix: suggested",
+  "2026-11-20T14:44:22Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00047,
+  "confirm": 0.01307,
+  "adapt": 0.00718,
+  "check": 0.01103,
+  "fix": 0.01846
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-addition-rule",
+  "changes": [
+   "Replace the Pr(A ∪ B) and Pr(A ∩ B) notation with P(A or B) and P(A and B), which is the notation the NSW Stage 5 course uses.",
+   "Change the Ballarat school example in question b to a school in New South Wales.",
+   "Add a plain statement that mutually exclusive events cannot both happen, so the overlap is zero and P(A or B) = P(A) + P(B)."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same addition rule and its mutually exclusive case, but it uses Victorian notation and a Ballarat example, so it needs small wording changes for this NSW course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-addition-rule",
+  "changes": [
+   "Write probabilities as P(...) instead of Pr(...), as the NSW syllabus uses P.",
+   "Replace the set notation A ∪ B and A ∩ B with 'A or B' and 'A and B', since NSW Stage 5 uses the words rather than set notation.",
+   "Change the Ballarat school in question b to a New South Wales place."
+  ],
+  "sure": "medium",
+  "reason": "The addition rule point teaches the same idea: add for mutually exclusive events, otherwise subtract the overlap. It needs NSW notation and a local example, and the Year 11 level of the card is a fair stretch for Stage 5 paths.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-addition-rule",
+  "changes": [
+   "Write probabilities as \\(P(A)\\) instead of \\(\\text{Pr}(A)\\) throughout.",
+   "Replace \\(A \\cup B\\) and \\(A \\cap B\\) with the words A or B and A and B, as NSW Stage 5 does.",
+   "Change the Ballarat school in question b to a New South Wales place."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "title",
+   "card1",
+   "card2",
+   "card3",
+   "card4",
+   "a.q",
+   "a.why",
+   "b.q",
+   "b.why"
+  ]
+ },
+ "cleared_by": "owner",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same rule and its sums are right, but it uses the Victorian \\(\\text{Pr}\\) notation and set notation, and a Victorian place. The brief writes P(A or B), as NSW Stage 5 does.",
+   "item": "8249b0dd172cfdfc",
+   "result": "decided",
+   "saved": {
+    "id": "mat-mutually-exclusive-events",
+    "title": "Mutually exclusive events",
+    "brief": "068620d7a973",
+    "shortlist": [
+     [
+      "mat-inclusive-or-exclusive-or",
+      0.417
+     ],
+     [
+      "mat-addition-rule",
+      0.37
+     ],
+     [
+      "mat-venn-diagrams",
+      0.228
+     ],
+     [
+      "mat-venn-diagrams-set-notation",
+      0.222
+     ],
+     [
+      "mat-language-conditional-probability",
+      0.207
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00047,
+     "confirm": 0.01307
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-addition-rule",
+     "changes": [
+      "Replace the Pr(A ∪ B) and Pr(A ∩ B) notation with P(A or B) and P(A and B), which is the notation the NSW Stage 5 course uses.",
+      "Change the Ballarat school example in question b to a school in New South Wales.",
+      "Add a plain statement that mutually exclusive events cannot both happen, so the overlap is zero and P(A or B) = P(A) + P(B)."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches the same addition rule and its mutually exclusive case, but it uses Victorian notation and a Ballarat example, so it needs small wording changes for this NSW course.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-addition-rule",
+     "changes": [
+      "Write probabilities as P(...) instead of Pr(...), as the NSW syllabus uses P.",
+      "Replace the set notation A ∪ B and A ∩ B with 'A or B' and 'A and B', since NSW Stage 5 uses the words rather than set notation.",
+      "Change the Ballarat school in question b to a New South Wales place."
+     ],
+     "sure": "medium",
+     "reason": "The addition rule point teaches the same idea: add for mutually exclusive events, otherwise subtract the overlap. It needs NSW notation and a local example, and the Year 11 level of the card is a fair stretch for Stage 5 paths.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "cb2bec7351b8e932"
+  }
+ ],
+ "draft": {
+  "title": "Mutually exclusive events and the addition rule",
+  "card": [
+   "\\(P(A \\text{ or } B)\\) is the chance that \\(A\\) happens, or \\(B\\) happens, or both. The rule is \\(P(A \\text{ or } B) = P(A) + P(B) - P(A \\text{ and } B)\\).",
+   "We subtract \\(P(A \\text{ and } B)\\) because outcomes in both \\(A\\) and \\(B\\) are counted twice when we add \\(P(A)\\) and \\(P(B)\\).",
+   "Mutually exclusive events cannot happen together, so \\(P(A \\text{ and } B) = 0\\). Then \\(P(A \\text{ or } B) = P(A) + P(B)\\).",
+   "Example: \\(P(A) = 0.5\\), \\(P(B) = 0.4\\) and \\(P(A \\text{ and } B) = 0.2\\). Then \\(P(A \\text{ or } B) = 0.5 + 0.4 - 0.2 = 0.7\\)."
+  ],
+  "remember": "Add the two chances, then take away the overlap so it is counted once.",
+  "a": {
+   "q": "Suppose \\(P(A) = 0.6\\), \\(P(B) = 0.3\\) and \\(P(A \\text{ and } B) = 0.1\\). Find \\(P(A \\text{ or } B)\\).",
+   "opts": [
+    "0.8",
+    "0.9",
+    "0.7",
+    "0.18"
+   ],
+   "why": "\\(P(A \\text{ or } B) = 0.6 + 0.3 - 0.1 = 0.8\\). Adding only \\(P(A)\\) and \\(P(B)\\) gives 0.9, which counts the overlap twice.",
+   "clue": "Take away the overlap once."
+  },
+  "b": {
+   "d": 3,
+   "q": "At a school in Parramatta, the chance a student plays netball is 0.35 and the chance a student plays chess is 0.15. No student does both. What is the chance a student plays netball or chess?",
+   "opts": [
+    "0.50",
+    "0.20",
+    "0.0525",
+    "0.4475"
+   ],
+   "why": "No student does both, so the events are mutually exclusive and \\(P(A \\text{ and } B) = 0\\). Then \\(P(A \\text{ or } B) = 0.35 + 0.15 = 0.50\\). The product 0.0525 is not used here, because the rule adds the chances.",
+   "clue": "If no one does both, what is the overlap?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "0.8",
+   "also_right": []
+  },
+  "b": {
+   "best": "0.50",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) writes P(A and B) and P(A or B) without saying that A is netball and B is chess. The question never names events A and B, so the link may confuse some students."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, remember line and both answers (0.8 and 0.50) are correct, and the distractors are sound. One minor issue: the explanation for (b) uses A and B without linking them to netball and chess."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: Why (b) writes P(A and B) and P(A or B) without saying that A is netball and B is chess. The question never names events A and B, so the link may confuse some students."
+ ],
+ "proposal": {
+  "title": "Mutually exclusive events",
+  "card": [
+   "\\(P(A \\text{ or } B)\\) is the chance that \\(A\\) happens, or \\(B\\) happens, or both. The rule is \\(P(A \\text{ or } B) = P(A) + P(B) - P(A \\text{ and } B)\\).",
+   "We subtract \\(P(A \\text{ and } B)\\) because outcomes in both \\(A\\) and \\(B\\) are counted twice when we add \\(P(A)\\) and \\(P(B)\\).",
+   "Mutually exclusive events cannot happen together, so \\(P(A \\text{ and } B) = 0\\). Then \\(P(A \\text{ or } B) = P(A) + P(B)\\).",
+   "Example: \\(P(A) = 0.5\\), \\(P(B) = 0.4\\) and \\(P(A \\text{ and } B) = 0.2\\). Then \\(P(A \\text{ or } B) = 0.5 + 0.4 - 0.2 = 0.7\\)."
+  ],
+  "remember": "Add the two chances, then take away the overlap so it is counted once.",
+  "a": {
+   "q": "Suppose \\(P(A) = 0.6\\), \\(P(B) = 0.3\\) and \\(P(A \\text{ and } B) = 0.1\\). Find \\(P(A \\text{ or } B)\\).",
+   "opts": [
+    "0.8",
+    "0.9",
+    "0.7",
+    "0.18"
+   ],
+   "why": "\\(P(A \\text{ or } B) = 0.6 + 0.3 - 0.1 = 0.8\\). Adding only \\(P(A)\\) and \\(P(B)\\) gives 0.9, which counts the overlap twice.",
+   "clue": "Take away the overlap once."
+  },
+  "b": {
+   "d": 3,
+   "q": "At a school in Parramatta, the chance a student plays netball is 0.35 and the chance a student plays chess is 0.15. No student does both. What is the chance a student plays netball or chess?",
+   "opts": [
+    "0.50",
+    "0.20",
+    "0.0525",
+    "0.4475"
+   ],
+   "why": "No student does both, so playing netball and playing chess are mutually exclusive, and the chance of doing both is 0. So the chance of netball or chess is \\(0.35 + 0.15 = 0.50\\). The answer 0.0525 multiplies the two chances, but the rule adds them.",
+   "clue": "If no one does both, what is the overlap?"
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Mutually exclusive events",
+  "card": [
+   "\\(P(A \\text{ or } B)\\) is the chance that \\(A\\) happens, or \\(B\\) happens, or both. The rule is \\(P(A \\text{ or } B) = P(A) + P(B) - P(A \\text{ and } B)\\).",
+   "We subtract \\(P(A \\text{ and } B)\\) because outcomes in both \\(A\\) and \\(B\\) are counted twice when we add \\(P(A)\\) and \\(P(B)\\).",
+   "Mutually exclusive events cannot happen together, so \\(P(A \\text{ and } B) = 0\\). Then \\(P(A \\text{ or } B) = P(A) + P(B)\\).",
+   "Example: \\(P(A) = 0.5\\), \\(P(B) = 0.4\\) and \\(P(A \\text{ and } B) = 0.2\\). Then \\(P(A \\text{ or } B) = 0.5 + 0.4 - 0.2 = 0.7\\)."
+  ],
+  "remember": "Add the two chances, then take away the overlap so it is counted once.",
+  "a": {
+   "q": "Suppose \\(P(A) = 0.6\\), \\(P(B) = 0.3\\) and \\(P(A \\text{ and } B) = 0.1\\). Find \\(P(A \\text{ or } B)\\).",
+   "opts": [
+    "0.8",
+    "0.9",
+    "0.7",
+    "0.18"
+   ],
+   "why": "\\(P(A \\text{ or } B) = 0.6 + 0.3 - 0.1 = 0.8\\). Adding only \\(P(A)\\) and \\(P(B)\\) gives 0.9, which counts the overlap twice.",
+   "clue": "Take away the overlap once."
+  },
+  "b": {
+   "d": 3,
+   "q": "At a school in Parramatta, the chance a student plays netball is 0.35 and the chance a student plays chess is 0.15. No student does both. What is the chance a student plays netball or chess?",
+   "opts": [
+    "0.50",
+    "0.20",
+    "0.0525",
+    "0.4475"
+   ],
+   "why": "No student does both, so playing netball and playing chess are mutually exclusive, and the chance of doing both is 0. So the chance of netball or chess is \\(0.35 + 0.15 = 0.50\\). The answer 0.0525 multiplies the two chances, but the rule adds them.",
+   "clue": "If no one does both, what is the overlap?"
+  }
+ }
 }

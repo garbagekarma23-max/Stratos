@@ -8,8 +8,175 @@
    0.657
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:54Z write: done",
+  "2026-11-20T12:35:53Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00809,
+  "check": 0.00531
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers plotting (x, y) points and the four quadrants, but it never teaches naming a quadrant from the signs of the coordinates, which the new point requires, and adding that step would change the card rather than adjust it.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The Cartesian plane",
+  "card": [
+   "The Cartesian plane has a horizontal x-axis and a vertical y-axis. They cross at the origin, \\((0, 0)\\).",
+   "A point is written \\((x, y)\\). Go across first (right is positive, left is negative). Then go up or down (up is positive, down is negative).",
+   "The axes split the plane into four quadrants. Quadrant 1 is top right. Then go anticlockwise: quadrant 2 is top left, quadrant 3 is bottom left, quadrant 4 is bottom right.",
+   "The signs of the coordinates name the quadrant. For example, \\((-4, 3)\\) has a negative \\(x\\) and a positive \\(y\\), so it is in quadrant 2."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A Cartesian plane with the point \\((3, -2)\\) marked. It is 3 units right of the origin and 2 units below the x-axis.",
+    "x": {
+     "min": -5,
+     "max": 5,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -5,
+     "max": 5,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "equal": true,
+    "items": [
+     {
+      "type": "point",
+      "at": [
+       3,
+       -2
+      ],
+      "label": "\\((3, -2)\\)",
+      "pos": "above-right"
+     }
+    ]
+   }
+  },
+  "remember": "Write \\((x, y)\\): across first, then up or down. The signs tell you the quadrant.",
+  "a": {
+   "q": "Which point is 5 units to the left of the origin and 2 units up?",
+   "opts": [
+    "\\((-5, 2)\\)",
+    "\\((5, -2)\\)",
+    "\\((2, -5)\\)",
+    "\\((-2, 5)\\)"
+   ],
+   "why": "Left is negative for \\(x\\) and up is positive for \\(y\\), and \\(x\\) is written first, so the point is \\((-5, 2)\\). \\((-2, 5)\\) is tempting but swaps the order of the coordinates.",
+   "clue": "Across comes first, and left is negative."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia plots the point \\((-6, -1)\\) on a Cartesian plane. Which quadrant is it in?",
+   "opts": [
+    "Quadrant 3",
+    "Quadrant 1",
+    "Quadrant 2",
+    "Quadrant 4"
+   ],
+   "why": "Both coordinates are negative, so the point is left of the y-axis and below the x-axis. That is quadrant 3, the bottom left. Quadrant 2 is wrong because it needs a positive \\(y\\) value.",
+   "clue": "Check the sign of each coordinate, then count anticlockwise from the top right."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\((-5, 2)\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "Quadrant 3",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The Cartesian plane",
+  "card": [
+   "The Cartesian plane has a horizontal x-axis and a vertical y-axis. They cross at the origin, \\((0, 0)\\).",
+   "A point is written \\((x, y)\\). Go across first (right is positive, left is negative). Then go up or down (up is positive, down is negative).",
+   "The axes split the plane into four quadrants. Quadrant 1 is top right. Then go anticlockwise: quadrant 2 is top left, quadrant 3 is bottom left, quadrant 4 is bottom right.",
+   "The signs of the coordinates name the quadrant. For example, \\((-4, 3)\\) has a negative \\(x\\) and a positive \\(y\\), so it is in quadrant 2."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A Cartesian plane with the point \\((3, -2)\\) marked. It is 3 units right of the origin and 2 units below the x-axis.",
+    "x": {
+     "min": -5,
+     "max": 5,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -5,
+     "max": 5,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "equal": true,
+    "items": [
+     {
+      "type": "point",
+      "at": [
+       3,
+       -2
+      ],
+      "label": "\\((3, -2)\\)",
+      "pos": "above-right"
+     }
+    ]
+   }
+  },
+  "remember": "Write \\((x, y)\\): across first, then up or down. The signs tell you the quadrant.",
+  "a": {
+   "q": "Which point is 5 units to the left of the origin and 2 units up?",
+   "opts": [
+    "\\((-5, 2)\\)",
+    "\\((5, -2)\\)",
+    "\\((2, -5)\\)",
+    "\\((-2, 5)\\)"
+   ],
+   "why": "Left is negative for \\(x\\) and up is positive for \\(y\\), and \\(x\\) is written first, so the point is \\((-5, 2)\\). \\((-2, 5)\\) is tempting but swaps the order of the coordinates.",
+   "clue": "Across comes first, and left is negative."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia plots the point \\((-6, -1)\\) on a Cartesian plane. Which quadrant is it in?",
+   "opts": [
+    "Quadrant 3",
+    "Quadrant 1",
+    "Quadrant 2",
+    "Quadrant 4"
+   ],
+   "why": "Both coordinates are negative, so the point is left of the y-axis and below the x-axis. That is quadrant 3, the bottom left. Quadrant 2 is wrong because it needs a positive \\(y\\) value.",
+   "clue": "Check the sign of each coordinate, then count anticlockwise from the top right."
+  }
+ },
+ "cleared_by": "checker"
 }

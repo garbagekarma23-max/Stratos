@@ -20,8 +20,206 @@
    0.229
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:42Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: failed the content check, writing again",
+  "2026-11-20T12:44:53Z write: done",
+  "2026-11-20T12:53:24Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:33:20Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "write": 0.01393,
+  "check": 0.01241,
+  "fix": 0.01839,
+  "recheck": 0.01147
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank points teach using quotations as evidence and explaining them, which is broader than this point's narrower focus on punctuating quotations and weaving them into a sentence, so a new point fits better.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Punctuating quotations",
+  "card": [
+   "Quotation marks go around the exact words taken from a text. Every word inside them must match the original, with nothing changed.",
+   "A short quotation can be woven into your own sentence. Example: Mia describes the old house as \"silent and cold\" when she first enters.",
+   "The sentence must still read smoothly with the quotation in it. Your words and the quoted words need to fit together grammatically.",
+   "Your own ideas and explanations stay outside the quotation marks. Only the borrowed words go inside them."
+  ],
+  "remember": "Put the exact borrowed words in quotation marks, and fit them into your own sentence.",
+  "a": {
+   "q": "Why are quotation marks placed around words in an essay?",
+   "opts": [
+    "They show the words were copied exactly from the text",
+    "They show the words are the writer's own opinion",
+    "They show the words are the most important in the essay",
+    "They show the words have been put into simpler language"
+   ],
+   "why": "Quotation marks tell the reader the words are the exact words of the text. Marking your own opinion or simpler wording this way would mislead the reader, because those are not borrowed.",
+   "clue": "Think about whose words are inside the marks."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom's story says he felt \"nervous and alone\" on his first day. Which sentence weaves these exact words into the writer's own sentence correctly?",
+   "opts": [
+    "On his first day, Tom feels \"nervous and alone\" at school",
+    "On his first day, Tom feels, \"nervous and alone\" at school",
+    "On his first day, Tom feels nervous and alone \"at school",
+    "On his first day, Tom \"feels nervous\" and alone at school"
+   ],
+   "why": "The first option puts only the borrowed words inside the marks, and the whole sentence reads smoothly. The second adds a comma that breaks the flow. The third opens a quotation mark but never closes it, and the fourth leaves out part of the borrowed words and includes a word that is not part of the quotation.",
+   "clue": "Which one has the marks around exactly the borrowed words and nothing else?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "They show the words were copied exactly from the text",
+   "also_right": []
+  },
+  "b": {
+   "best": "On his first day, Tom feels \"nervous and alone\" at school",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) names options by position ('the first option', 'the second', and so on), but options are shown in random order, so these labels will not match what students see. Its descriptions also fit the wrong options. The one that 'leaves out part of the borrowed words and includes a word that is not part of the quotation' is the 'feels nervous' option. The one that 'opens a quotation mark but never closes it' is the 'at school' option, not the third. Rewrite the why so it describes each option by its content."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clearly right answer and the card is accurate. Why (b) refers to options by position, which won't match the shuffled order, and mismatches its descriptions to the options, so it needs rewriting to name options by content."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) names options by position ('the first option', 'the second', and so on), but options are shown in random order, so these labels will not match what students see. Its descriptions also fit the wrong options. The one that 'leaves out part of the borrowed words and includes a word that is not part of the quotation' is the 'feels nervous' option. The one that 'opens a quotation mark but never closes it' is the 'at school' option, not the third. Rewrite the why so it describes each option by its content."
+ ],
+ "proposal": {
+  "title": "Punctuating quotations",
+  "card": [
+   "Quotation marks go around the exact words taken from a text. Every word inside them must match the original, with nothing changed.",
+   "A short quotation can be woven into your own sentence. Example: Mia describes the old house as \"silent and cold\" when she first enters.",
+   "The sentence must still read smoothly with the quotation in it. Your words and the quoted words fit together grammatically, with no extra comma breaking them apart.",
+   "Your own ideas and explanations stay outside the quotation marks. Only the borrowed words go inside them, with a mark at the start and the end."
+  ],
+  "remember": "Put the exact borrowed words in quotation marks, and fit them into your own sentence.",
+  "a": {
+   "q": "Why are quotation marks placed around words in an essay?",
+   "opts": [
+    "They show the words were copied exactly from the text",
+    "They show the words are the writer's own opinion",
+    "They show the words are the most important in the essay",
+    "They show the words have been put into simpler language"
+   ],
+   "why": "Quotation marks tell the reader the words are the exact words of the text. Your own opinion or simpler wording is not borrowed, so marking it this way would mislead the reader. The marks show where words came from, not how important they are.",
+   "clue": "Think about whose words are inside the marks."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom's story says he felt \"nervous and alone\" on his first day. Which sentence weaves these exact words into the writer's own sentence correctly?",
+   "opts": [
+    "On his first day, Tom feels \"nervous and alone\" at school",
+    "On his first day, Tom feels, \"nervous and alone\" at school",
+    "On his first day, Tom feels nervous and alone \"at school",
+    "On his first day, Tom \"feels nervous\" and alone at school"
+   ],
+   "why": "The correct sentence puts only nervous and alone inside the marks, and it reads smoothly. The version with a comma after feels breaks the sentence apart for no reason. The version that wraps feels nervous leaves out part of the borrowed words and adds feels, which Tom's story did not use. The version with a mark before at school opens a quotation that never closes, around words that were not borrowed.",
+   "clue": "Which one has the marks around exactly the borrowed words and nothing else?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "They show the words were copied exactly from the text",
+    "also_right": []
+   },
+   "b": {
+    "best": "On his first day, Tom feels \"nervous and alone\" at school",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) names options by position ('the first option', 'the second', and so on), but options are shown in random order, so these labels will not match what students see. Its descriptions also fit the wrong options. The one that 'leaves out part of the borrowed words and includes a word that is not part of the quotation' is the 'feels nervous' option. The one that 'opens a quotation mark but never closes it' is the 'at school' option, not the third. Rewrite the why so it describes each option by its content."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) names options by position ('the first option', 'the second', and so on), but options are shown in random order, so these labels will not match what students see. Its descriptions also fit the wrong options. The one that 'leaves out part of the borrowed words and includes a word that is not part of the quotation' is the 'feels nervous' option. The one that 'opens a quotation mark but never closes it' is the 'at school' option, not the third. Rewrite the why so it describes each option by its content."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Punctuating quotations",
+  "card": [
+   "Quotation marks go around the exact words taken from a text. Every word inside them must match the original, with nothing changed.",
+   "A short quotation can be woven into your own sentence. Example: Mia describes the old house as \"silent and cold\" when she first enters.",
+   "The sentence must still read smoothly with the quotation in it. Your words and the quoted words fit together grammatically, with no extra comma breaking them apart.",
+   "Your own ideas and explanations stay outside the quotation marks. Only the borrowed words go inside them, with a mark at the start and the end."
+  ],
+  "remember": "Put the exact borrowed words in quotation marks, and fit them into your own sentence.",
+  "a": {
+   "q": "Why are quotation marks placed around words in an essay?",
+   "opts": [
+    "They show the words were copied exactly from the text",
+    "They show the words are the writer's own opinion",
+    "They show the words are the most important in the essay",
+    "They show the words have been put into simpler language"
+   ],
+   "why": "Quotation marks tell the reader the words are the exact words of the text. Your own opinion or simpler wording is not borrowed, so marking it this way would mislead the reader. The marks show where words came from, not how important they are.",
+   "clue": "Think about whose words are inside the marks."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom's story says he felt \"nervous and alone\" on his first day. Which sentence weaves these exact words into the writer's own sentence correctly?",
+   "opts": [
+    "On his first day, Tom feels \"nervous and alone\" at school",
+    "On his first day, Tom feels, \"nervous and alone\" at school",
+    "On his first day, Tom feels nervous and alone \"at school",
+    "On his first day, Tom \"feels nervous\" and alone at school"
+   ],
+   "why": "The correct sentence puts only nervous and alone inside the marks, and it reads smoothly. The version with a comma after feels breaks the sentence apart for no reason. The version that wraps feels nervous leaves out part of the borrowed words and adds feels, which Tom's story did not use. The version with a mark before at school opens a quotation that never closes, around words that were not borrowed.",
+   "clue": "Which one has the marks around exactly the borrowed words and nothing else?"
+  }
+ },
+ "cleared_by": "owner"
 }

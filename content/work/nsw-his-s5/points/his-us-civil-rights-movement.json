@@ -8,8 +8,142 @@
    0.278
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:52Z write: failed the content check, writing again",
+  "2026-11-20T12:35:52Z write: done",
+  "2026-11-20T12:44:57Z check: for review (first-nations)",
+  "2026-11-20T14:42:27Z review: rejected, to be written again",
+  "2026-11-20T14:58:19Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.01876,
+  "check": 0.0114
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers the US civil rights movement in more depth than this Stage 5 brief and says nothing about its influence on Australian activists, which is a required part of the new point, so the match would need a new idea rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "The US civil rights movement",
+  "card": [
+   "Segregation meant keeping people apart by race. In the southern United States, laws kept Black and white people separate in schools, buses and restaurants, and African Americans were treated unequally.",
+   "African Americans and their supporters used protests and boycotts to challenge segregation. A boycott is a refusal to use or buy something as a form of protest.",
+   "In 1955 and 1956, Black residents of Montgomery, Alabama, boycotted the city buses. Martin Luther King Jr was a leader of the movement and urged non-violent protest.",
+   "The movement drew world attention. It helped inspire activists in Australia, who used similar methods, such as protest and public pressure, to challenge racial discrimination against Aboriginal people."
+  ],
+  "remember": "Protests and boycotts challenged segregation in the US, and they inspired Australian activists.",
+  "a": {
+   "q": "What was a boycott in the US civil rights movement?",
+   "opts": [
+    "Refusing to use something as a form of protest",
+    "Taking a law to court to have it changed",
+    "Marching to the capital city to meet leaders",
+    "Asking the government for a public vote"
+   ],
+   "why": "A boycott is a refusal to use or buy something, such as the Montgomery buses, to put pressure on those who profit. Marches and court cases were also used, but they are not boycotts.",
+   "clue": "Think of what Montgomery residents stopped doing."
+  },
+  "b": {
+   "d": 3,
+   "q": "Aboriginal activists in a NSW town in the 1960s read about the Montgomery bus boycott. Why did the US movement matter to them?",
+   "opts": [
+    "It showed that public protest could press for change",
+    "It showed that Australian laws matched American laws",
+    "It showed that segregation had already ended here",
+    "It showed that only violence could change unfair laws"
+   ],
+   "why": "The US movement showed that organised, non-violent protest could draw attention to racial discrimination and press for change. The card does not say Australian laws matched American laws, and the movement was known for non-violent methods.",
+   "clue": "Focus on what the methods showed, not on matching the two countries exactly."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:19Z",
+   "step": "write",
+   "version": {
+    "title": "The US civil rights movement",
+    "card": [
+     "In the southern United States, segregation laws kept Black and white Americans apart in schools, buses, restaurants and more, and African Americans were treated unequally.",
+     "African Americans organised to end segregation through protests, marches and boycotts. A boycott is refusing to use or buy something to put pressure on those who profit from it.",
+     "In 1955, Black residents of Montgomery, Alabama, began a boycott of the city's buses that lasted over a year. Martin Luther King Jr led it and urged non-violent protest.",
+     "News of the movement spread around the world. It inspired Aboriginal activists and their supporters in Australia to use similar methods against racial discrimination."
+    ],
+    "remember": "Organised, non-violent protest challenged segregation in the US and inspired activists in Australia.",
+    "a": {
+     "q": "Why did a bus boycott put pressure on the city of Montgomery?",
+     "opts": [
+      "The bus service lost the fares Black passengers paid",
+      "The boycott made it illegal to run segregated buses",
+      "Protesters took over the buses and drove them away",
+      "The city was forced to hold a vote on its bus laws"
+     ],
+     "why": "A boycott works by refusing to use or buy something, so those who profit lose money. When Black residents stopped riding, the buses lost their fares. The boycott did not make segregation illegal by itself.",
+     "clue": "Who loses money when riders stay away?"
+    },
+    "b": {
+     "d": 3,
+     "q": "In the 1960s, Aboriginal activists in NSW followed news of protests in the US. What did the US movement most likely show them?",
+     "opts": [
+      "Organised, peaceful protest could press for change",
+      "Segregation in Australia had already been ended",
+      "Change would come from waiting, not from protest",
+      "Protest could work in the US but not elsewhere"
+     ],
+     "why": "The US movement showed that organised, non-violent protest could draw attention to racial discrimination and press for change. Its example spread and inspired activists in Australia to use similar methods.",
+     "clue": "What did the US activists do that others could copy?"
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "The US civil rights movement",
+  "card": [
+   "In the southern United States, segregation laws kept Black and white Americans apart in schools, buses, restaurants and more, and African Americans were treated unequally.",
+   "African Americans organised to end segregation through protests, marches and boycotts. A boycott is refusing to use or buy something to put pressure on those who profit from it.",
+   "In 1955, Black residents of Montgomery, Alabama, began a boycott of the city's buses that lasted over a year. Martin Luther King Jr led it and urged non-violent protest.",
+   "News of the movement spread around the world. It inspired Aboriginal activists and their supporters in Australia to use similar methods against racial discrimination."
+  ],
+  "remember": "Organised, non-violent protest challenged segregation in the US and inspired activists in Australia.",
+  "a": {
+   "q": "Why did a bus boycott put pressure on the city of Montgomery?",
+   "opts": [
+    "The bus service lost the fares Black passengers paid",
+    "The boycott made it illegal to run segregated buses",
+    "Protesters took over the buses and drove them away",
+    "The city was forced to hold a vote on its bus laws"
+   ],
+   "why": "A boycott works by refusing to use or buy something, so those who profit lose money. When Black residents stopped riding, the buses lost their fares. The boycott did not make segregation illegal by itself.",
+   "clue": "Who loses money when riders stay away?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In the 1960s, Aboriginal activists in NSW followed news of protests in the US. What did the US movement most likely show them?",
+   "opts": [
+    "Organised, peaceful protest could press for change",
+    "Segregation in Australia had already been ended",
+    "Change would come from waiting, not from protest",
+    "Protest could work in the US but not elsewhere"
+   ],
+   "why": "The US movement showed that organised, non-violent protest could draw attention to racial discrimination and press for change. Its example spread and inspired activists in Australia to use similar methods.",
+   "clue": "What did the US activists do that others could copy?"
+  }
+ },
+ "local": []
 }

@@ -24,8 +24,145 @@
    0.269
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:53Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:53Z write: failed the content check, writing again",
+  "2026-11-20T12:44:58Z write: done",
+  "2026-11-20T12:53:27Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.0175,
+  "check": 0.00687
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches three-letter angle naming, the geometry marks for equal sides, equal angles and parallel lines, or the full set of angle types; the closest card, classifying triangles, covers only triangle types and is narrower, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Naming angles and geometry notation",
+  "card": [
+   "An angle is named with three letters, and the middle letter is the vertex, where the two arms meet. In \\(\\angle ABC\\), the vertex is \\(B\\), and the arms are \\(BA\\) and \\(BC\\).",
+   "Marks on a diagram show what is equal or parallel. The same number of small dashes on two sides means those sides are equal in length. The same number of small arcs on two angles means those angles are equal. Matching arrowheads on two lines mean the lines are parallel.",
+   [
+    "Types by size",
+    "Acute is less than \\(90^{\\circ}\\). Right is exactly \\(90^{\\circ}\\). Obtuse is more than \\(90^{\\circ}\\) and less than \\(180^{\\circ}\\)."
+   ],
+   [
+    "Larger angles",
+    "Straight is exactly \\(180^{\\circ}\\). Reflex is more than \\(180^{\\circ}\\) and less than \\(360^{\\circ}\\). A revolution is exactly \\(360^{\\circ}\\)."
+   ]
+  ],
+  "remember": "The middle letter is the vertex. Equal marks match, and angle names depend on size.",
+  "a": {
+   "q": "In \\(\\angle PQR\\), which letter is the vertex?",
+   "opts": [
+    "\\(Q\\)",
+    "\\(P\\)",
+    "\\(R\\)",
+    "\\(P\\) and \\(R\\) together"
+   ],
+   "why": "The vertex is always the middle letter, so it is \\(Q\\). \\(P\\) and \\(R\\) are points on the two arms, and the first letter is not the vertex.",
+   "clue": "Look at the letter in the middle."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jai measures an angle in a roof frame at \\(215^{\\circ}\\). What type of angle is it?",
+   "opts": [
+    "Reflex",
+    "Obtuse",
+    "Straight",
+    "Revolution"
+   ],
+   "why": "An angle of \\(215^{\\circ}\\) is more than \\(180^{\\circ}\\) and less than \\(360^{\\circ}\\), so it is reflex. It is not obtuse, because obtuse angles stop below \\(180^{\\circ}\\).",
+   "clue": "Compare \\(215^{\\circ}\\) with \\(180^{\\circ}\\) and \\(360^{\\circ}\\)."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A quadrilateral with two opposite sides each marked with one small dash, two angles each marked with a double arc, and two other sides each marked with a single arrowhead to show they are parallel.",
+    "why": "It lets the student see what dash, arc and arrowhead marks look like on a diagram."
+   }
+  ]
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(Q\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "Reflex",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Naming angles and geometry notation",
+  "card": [
+   "An angle is named with three letters, and the middle letter is the vertex, where the two arms meet. In \\(\\angle ABC\\), the vertex is \\(B\\), and the arms are \\(BA\\) and \\(BC\\).",
+   "Marks on a diagram show what is equal or parallel. The same number of small dashes on two sides means those sides are equal in length. The same number of small arcs on two angles means those angles are equal. Matching arrowheads on two lines mean the lines are parallel.",
+   [
+    "Types by size",
+    "Acute is less than \\(90^{\\circ}\\). Right is exactly \\(90^{\\circ}\\). Obtuse is more than \\(90^{\\circ}\\) and less than \\(180^{\\circ}\\)."
+   ],
+   [
+    "Larger angles",
+    "Straight is exactly \\(180^{\\circ}\\). Reflex is more than \\(180^{\\circ}\\) and less than \\(360^{\\circ}\\). A revolution is exactly \\(360^{\\circ}\\)."
+   ]
+  ],
+  "remember": "The middle letter is the vertex. Equal marks match, and angle names depend on size.",
+  "a": {
+   "q": "In \\(\\angle PQR\\), which letter is the vertex?",
+   "opts": [
+    "\\(Q\\)",
+    "\\(P\\)",
+    "\\(R\\)",
+    "\\(P\\) and \\(R\\) together"
+   ],
+   "why": "The vertex is always the middle letter, so it is \\(Q\\). \\(P\\) and \\(R\\) are points on the two arms, and the first letter is not the vertex.",
+   "clue": "Look at the letter in the middle."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jai measures an angle in a roof frame at \\(215^{\\circ}\\). What type of angle is it?",
+   "opts": [
+    "Reflex",
+    "Obtuse",
+    "Straight",
+    "Revolution"
+   ],
+   "why": "An angle of \\(215^{\\circ}\\) is more than \\(180^{\\circ}\\) and less than \\(360^{\\circ}\\), so it is reflex. It is not obtuse, because obtuse angles stop below \\(180^{\\circ}\\).",
+   "clue": "Compare \\(215^{\\circ}\\) with \\(180^{\\circ}\\) and \\(360^{\\circ}\\)."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A quadrilateral with two opposite sides each marked with one small dash, two angles each marked with a double arc, and two other sides each marked with a single arrowhead to show they are parallel.",
+    "why": "It lets the student see what dash, arc and arrowhead marks look like on a diagram."
+   }
+  ]
+ },
+ "cleared_by": "checker"
 }

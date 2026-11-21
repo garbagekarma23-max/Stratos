@@ -24,8 +24,131 @@
    0.26
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "write": 0.00756,
+  "check": 0.00828
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, sci-distillation-chromatography, covers distillation only as separating a solvent from a dissolved solid and is bundled with chromatography, so it does not teach the brief's second case of separating liquids with different boiling points, and fixing that would change the card's scope rather than make small edits.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Distillation",
+  "card": [
+   "Distillation separates a liquid from other substances by boiling it. The vapour is then cooled so it turns back into a liquid.",
+   "Cooling vapour into a liquid is called condensing. A condenser is a tube kept cold, so the vapour condenses inside it. The liquid collected is called the distillate.",
+   "Distillation can separate a liquid from a dissolved solid. When salty water is boiled, only the water becomes vapour, and the salt stays behind in the flask.",
+   "Distillation can also separate two liquids that have different boiling points. The liquid with the lower boiling point turns to vapour first and is collected first."
+  ],
+  "remember": "Boil, then cool the vapour. The liquid that boils first is collected first.",
+  "a": {
+   "q": "Salty water is boiled and the vapour is cooled in a condenser. What is collected in the beaker, and what stays in the flask?",
+   "opts": [
+    "Pure water is collected, and salt stays in the flask",
+    "Salt is collected, and water stays in the flask",
+    "Salty water is collected, and nothing stays in the flask",
+    "Water vapour is collected, and salt stays in the flask"
+   ],
+   "why": "The water boils off, is cooled in the condenser and drips into the beaker as liquid water. The salt does not boil, so it stays in the flask. Water vapour is not collected, because it has been cooled back into a liquid.",
+   "clue": "Which part of the mixture turns into vapour?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Liquid X boils at 65 °C and liquid Y boils at 100 °C. A mixture of X and Y is heated slowly and kept at about 70 °C. What is collected from the condenser?",
+   "opts": [
+    "Mostly liquid X, because it boils first",
+    "Mostly liquid Y, because it boils first",
+    "A mix of X and Y, because both are hot",
+    "Nothing, because neither liquid has boiled yet"
+   ],
+   "why": "At 70 °C liquid X is above its boiling point, so it turns to vapour and condenses in the condenser. Liquid Y is below its boiling point of 100 °C, so most of it stays in the flask. Both liquids being warm does not mean both boil.",
+   "clue": "Which liquid has reached its boiling point at 70 °C?"
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A simple distillation setup. A flask of salty water sits above a heat source. A tube leads from the flask to a condenser with cold water flowing around it. The condenser drips into a beaker. Label: flask, heat, vapour, condenser, cold water, distillate, beaker.",
+    "why": "It shows where boiling, condensing and collecting happen in the apparatus."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Pure water is collected, and salt stays in the flask",
+   "also_right": []
+  },
+  "b": {
+   "best": "Mostly liquid X, because it boils first",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Distillation",
+  "card": [
+   "Distillation separates a liquid from other substances by boiling it. The vapour is then cooled so it turns back into a liquid.",
+   "Cooling vapour into a liquid is called condensing. A condenser is a tube kept cold, so the vapour condenses inside it. The liquid collected is called the distillate.",
+   "Distillation can separate a liquid from a dissolved solid. When salty water is boiled, only the water becomes vapour, and the salt stays behind in the flask.",
+   "Distillation can also separate two liquids that have different boiling points. The liquid with the lower boiling point turns to vapour first and is collected first."
+  ],
+  "remember": "Boil, then cool the vapour. The liquid that boils first is collected first.",
+  "a": {
+   "q": "Salty water is boiled and the vapour is cooled in a condenser. What is collected in the beaker, and what stays in the flask?",
+   "opts": [
+    "Pure water is collected, and salt stays in the flask",
+    "Salt is collected, and water stays in the flask",
+    "Salty water is collected, and nothing stays in the flask",
+    "Water vapour is collected, and salt stays in the flask"
+   ],
+   "why": "The water boils off, is cooled in the condenser and drips into the beaker as liquid water. The salt does not boil, so it stays in the flask. Water vapour is not collected, because it has been cooled back into a liquid.",
+   "clue": "Which part of the mixture turns into vapour?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Liquid X boils at 65 °C and liquid Y boils at 100 °C. A mixture of X and Y is heated slowly and kept at about 70 °C. What is collected from the condenser?",
+   "opts": [
+    "Mostly liquid X, because it boils first",
+    "Mostly liquid Y, because it boils first",
+    "A mix of X and Y, because both are hot",
+    "Nothing, because neither liquid has boiled yet"
+   ],
+   "why": "At 70 °C liquid X is above its boiling point, so it turns to vapour and condenses in the condenser. Liquid Y is below its boiling point of 100 °C, so most of it stays in the flask. Both liquids being warm does not mean both boil.",
+   "clue": "Which liquid has reached its boiling point at 70 °C?"
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A simple distillation setup. A flask of salty water sits above a heat source. A tube leads from the flask to a condenser with cold water flowing around it. The condenser drips into a beaker. Label: flask, heat, vapour, condenser, cold water, distillate, beaker.",
+    "why": "It shows where boiling, condensing and collecting happen in the apparatus."
+   }
+  ]
+ },
+ "cleared_by": "checker"
 }

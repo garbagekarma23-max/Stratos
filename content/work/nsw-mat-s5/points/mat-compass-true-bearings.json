@@ -20,8 +20,155 @@
    0.41
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:56Z write: failed the content check, writing again",
+  "2026-11-20T12:35:54Z write: done",
+  "2026-11-20T12:44:58Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00047,
+  "write": 0.02161,
+  "check": 0.00788
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches compass bearings at Stage 5 depth: the Year 10 card covers only true bearings, and the Year 12 card covers both but at a higher level with conversion formulas and °T notation.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Compass and true bearings",
+  "card": [
+   [
+    "Compass bearing",
+    "It starts from north or south, then turns east or west by an angle. S40°E means start facing south, then turn 40° towards east."
+   ],
+   [
+    "True bearing",
+    "It is measured clockwise from north and written with three digits. East is 090°, south is 180° and west is 270°."
+   ],
+   [
+    "Converting",
+    "S40°E is 40° east of south. South is 180°, and turning towards east takes you back round to 140°. So S40°E is 140°."
+   ],
+   [
+    "Another case",
+    "N30°W is 30° west of north. Going anticlockwise from north gives \\(360^{\\circ} - 30^{\\circ} = 330^{\\circ}\\). So N30°W is the true bearing 330°."
+   ]
+  ],
+  "remember": "True bearings go clockwise from north in three digits. Compass bearings start from north or south.",
+  "a": {
+   "q": "What is the true bearing for the compass bearing S40°E?",
+   "opts": [
+    "140°",
+    "040°",
+    "220°",
+    "320°"
+   ],
+   "why": "South is 180°. Turning 40° towards east means going back 40° from 180°, which gives 140°. 220° is wrong because it turns towards west instead.",
+   "clue": "South is 180°. Is east before or after south going clockwise from north?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A hiker in the Blue Mountains walks on a true bearing of 250°. What is this as a compass bearing?",
+   "opts": [
+    "S70°W",
+    "S20°W",
+    "N70°W",
+    "S70°E"
+   ],
+   "why": "250° is between 180° (south) and 270° (west), so the direction is south-west. It is \\(250^{\\circ} - 180^{\\circ} = 70^{\\circ}\\) past south towards west, so S70°W. S20°W is wrong because 20° is the angle from west, not from south.",
+   "clue": "Which quarter is 250° in, and how far is it from south?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A compass rose with north at the top. A point at the centre with a ray pointing south-east, marked with the 40° angle from south towards east, labelled S40°E. A curved clockwise arrow from north round to the ray, labelled 140°.",
+    "why": "It shows the same direction as a compass bearing and as a true bearing."
+   }
+  ]
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "140°",
+   "also_right": []
+  },
+  "b": {
+   "best": "S70°W",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The conversions are all correct: S40°E is 140°, N30°W is 330° and 250° is S70°W."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Compass and true bearings",
+  "card": [
+   [
+    "Compass bearing",
+    "It starts from north or south, then turns east or west by an angle. S40°E means start facing south, then turn 40° towards east."
+   ],
+   [
+    "True bearing",
+    "It is measured clockwise from north and written with three digits. East is 090°, south is 180° and west is 270°."
+   ],
+   [
+    "Converting",
+    "S40°E is 40° east of south. South is 180°, and turning towards east takes you back round to 140°. So S40°E is 140°."
+   ],
+   [
+    "Another case",
+    "N30°W is 30° west of north. Going anticlockwise from north gives \\(360^{\\circ} - 30^{\\circ} = 330^{\\circ}\\). So N30°W is the true bearing 330°."
+   ]
+  ],
+  "remember": "True bearings go clockwise from north in three digits. Compass bearings start from north or south.",
+  "a": {
+   "q": "What is the true bearing for the compass bearing S40°E?",
+   "opts": [
+    "140°",
+    "040°",
+    "220°",
+    "320°"
+   ],
+   "why": "South is 180°. Turning 40° towards east means going back 40° from 180°, which gives 140°. 220° is wrong because it turns towards west instead.",
+   "clue": "South is 180°. Is east before or after south going clockwise from north?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A hiker in the Blue Mountains walks on a true bearing of 250°. What is this as a compass bearing?",
+   "opts": [
+    "S70°W",
+    "S20°W",
+    "N70°W",
+    "S70°E"
+   ],
+   "why": "250° is between 180° (south) and 270° (west), so the direction is south-west. It is \\(250^{\\circ} - 180^{\\circ} = 70^{\\circ}\\) past south towards west, so S70°W. S20°W is wrong because 20° is the angle from west, not from south.",
+   "clue": "Which quarter is 250° in, and how far is it from south?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A compass rose with north at the top. A point at the centre with a ray pointing south-east, marked with the 40° angle from south towards east, labelled S40°E. A curved clockwise arrow from north round to the ray, labelled 140°.",
+    "why": "It shows the same direction as a compass bearing and as a true bearing."
+   }
+  ]
+ },
+ "cleared_by": "checker"
 }

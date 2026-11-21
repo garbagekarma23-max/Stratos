@@ -24,8 +24,206 @@
    0.235
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:42Z write: failed the content check, writing again",
+  "2026-11-20T12:35:46Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T13:23:37Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "write": 0.01822,
+  "check": 0.01038,
+  "fix": 0.03988
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Text purposes, covers the same three purposes but also teaches reflective and analytical texts, so it is broader than this point and a new point is the safer match.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Three purposes for writing",
+  "card": [
+   [
+    "Imaginative",
+    "These texts entertain and explore experience. A short story or a poem is an example. They often use characters, a setting and vivid description."
+   ],
+   [
+    "Informative",
+    "These texts explain or report facts. A news report or a science article is an example. They use clear, factual language and an order that is easy to follow."
+   ],
+   [
+    "Persuasive",
+    "These texts argue for a view and try to move the reader to agree. A speech or an opinion piece is an example. They use reasons, evidence and strong word choices."
+   ],
+   "A writer first decides the purpose. The purpose then shapes the structure and the language. One text can sometimes mix purposes, but one is usually the main aim."
+  ],
+  "remember": "Ask what the writer wants to do: entertain, explain or convince.",
+  "a": {
+   "q": "Zara writes a text to explain how bees make honey, using facts and clear steps. What is its main purpose?",
+   "opts": [
+    "To inform",
+    "To entertain",
+    "To persuade",
+    "To explore a feeling"
+   ],
+   "why": "The text explains facts in a clear order, so its purpose is to inform. It is not persuasive, because it does not argue for a view or try to change what the reader thinks.",
+   "clue": "Is she telling a story, arguing, or explaining facts?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam writes a short text saying his school must plant more trees. He gives two reasons about shade and clean air, then asks readers to sign his petition. What is its main purpose?",
+   "opts": [
+    "To persuade readers to support a view",
+    "To inform readers about how trees grow",
+    "To entertain readers with a made-up story",
+    "To explore a character's memory of a school"
+   ],
+   "why": "Liam argues that the school must act, gives reasons and asks readers to sign. That makes it persuasive. It mentions facts about trees, but facts used to support a view do not make the text informative.",
+   "clue": "Look at what Liam asks the reader to do."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "To inform",
+   "also_right": []
+  },
+  "b": {
+   "best": "To persuade readers to support a view",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) says facts used to support a view 'do not make the text informative', but the card says one text can mix purposes. 'Do not make informing its main purpose' would fit the card better."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer and agree with the card. One minor point: the why for b says the facts 'do not make the text informative', which slightly clashes with the card's note that texts can mix purposes."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: Why (b) says facts used to support a view 'do not make the text informative', but the card says one text can mix purposes. 'Do not make informing its main purpose' would fit the card better."
+ ],
+ "proposal": {
+  "title": "Three purposes for writing",
+  "card": [
+   [
+    "Imaginative",
+    "These texts entertain and explore experience. A short story or a poem is an example. They often use characters, a setting and vivid description."
+   ],
+   [
+    "Informative",
+    "These texts explain or report facts. A news report or a science article is an example. They use clear, factual language and an order that is easy to follow."
+   ],
+   [
+    "Persuasive",
+    "These texts argue for a view and try to move the reader to agree. A speech or an opinion piece is an example. They use reasons, evidence and strong word choices."
+   ],
+   "A writer first decides the purpose. The purpose then shapes the structure and the language. One text can sometimes mix purposes, but one is usually the main aim."
+  ],
+  "remember": "Ask what the writer wants to do: entertain, explain or convince.",
+  "a": {
+   "q": "Zara writes a text to explain how bees make honey, using facts and clear steps. What is its main purpose?",
+   "opts": [
+    "To inform",
+    "To entertain",
+    "To persuade",
+    "To explore a feeling"
+   ],
+   "why": "The text explains facts in a clear order, so its purpose is to inform. It is not persuasive, because it does not argue for a view or try to change what the reader thinks.",
+   "clue": "Is she telling a story, arguing, or explaining facts?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam writes a short text saying his school must plant more trees. He gives two reasons about shade and clean air, then asks readers to sign his petition. What is its main purpose?",
+   "opts": [
+    "To persuade readers to support a view",
+    "To inform readers about how trees grow",
+    "To entertain readers with a made-up story",
+    "To explore a character's memory of a school"
+   ],
+   "why": "Liam argues that the school must act, gives reasons and asks readers to sign, so the text is persuasive. It mentions facts about shade and clean air, but they support his view, so informing is not its main purpose.",
+   "clue": "Look at what Liam asks the reader to do."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:37Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) says facts used to support a view 'do not make the text informative', but the card says one text can mix purposes. 'Do not make informing its main purpose' would fit the card better."
+   }
+  ],
+  "flags": [
+   "Question b, wording: Why (b) says facts used to support a view 'do not make the text informative', but the card says one text can mix purposes. 'Do not make informing its main purpose' would fit the card better."
+  ]
+ },
+ "final": {
+  "title": "Three purposes for writing",
+  "card": [
+   [
+    "Imaginative",
+    "These texts entertain and explore experience. A short story or a poem is an example. They often use characters, a setting and vivid description."
+   ],
+   [
+    "Informative",
+    "These texts explain or report facts. A news report or a science article is an example. They use clear, factual language and an order that is easy to follow."
+   ],
+   [
+    "Persuasive",
+    "These texts argue for a view and try to move the reader to agree. A speech or an opinion piece is an example. They use reasons, evidence and strong word choices."
+   ],
+   "A writer first decides the purpose. The purpose then shapes the structure and the language. One text can sometimes mix purposes, but one is usually the main aim."
+  ],
+  "remember": "Ask what the writer wants to do: entertain, explain or convince.",
+  "a": {
+   "q": "Zara writes a text to explain how bees make honey, using facts and clear steps. What is its main purpose?",
+   "opts": [
+    "To inform",
+    "To entertain",
+    "To persuade",
+    "To explore a feeling"
+   ],
+   "why": "The text explains facts in a clear order, so its purpose is to inform. It is not persuasive, because it does not argue for a view or try to change what the reader thinks.",
+   "clue": "Is she telling a story, arguing, or explaining facts?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam writes a short text saying his school must plant more trees. He gives two reasons about shade and clean air, then asks readers to sign his petition. What is its main purpose?",
+   "opts": [
+    "To persuade readers to support a view",
+    "To inform readers about how trees grow",
+    "To entertain readers with a made-up story",
+    "To explore a character's memory of a school"
+   ],
+   "why": "Liam argues that the school must act, gives reasons and asks readers to sign, so the text is persuasive. It mentions facts about shade and clean air, but they support his view, so informing is not its main purpose.",
+   "clue": "Look at what Liam asks the reader to do."
+  }
+ },
+ "cleared_by": "auto"
 }

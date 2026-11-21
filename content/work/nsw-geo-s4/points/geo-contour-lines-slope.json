@@ -12,8 +12,225 @@
    0.43
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 says adapt geo-contour-lines (1 change)",
+  "2026-11-20T12:25:46Z adapt: failed the content check, writing again",
+  "2026-11-20T12:35:49Z adapt: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "adapt": 0.01567,
+  "check": 0.00948,
+  "fix": 0.01437,
+  "recheck": 0.00577
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-contour-lines",
+  "changes": [
+   "Replace the Alice Springs example in question b with a hill or place in New South Wales so the example is local to the NSW course."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same contour-line and slope idea at the right depth for Years 7 and 8, and only its Northern Territory example needs to be made local to NSW.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "geo-contour-lines",
+  "changes": [
+   "Replace the Alice Springs example in question b with a hill or place in New South Wales so the example is local to the NSW course."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "a.q",
+   "a.opt1",
+   "a.opt2",
+   "a.opt3",
+   "a.opt4",
+   "a.why",
+   "a.clue",
+   "b.q",
+   "b.opt1",
+   "b.opt2",
+   "b.opt3",
+   "b.opt4"
+  ]
+ },
+ "draft": {
+  "title": "Contour lines",
+  "card": [
+   "A topographic map shows the shape of the land. A contour line is a line that joins places of the same height above sea level.",
+   "Every point on one contour line is at the same height. Numbers written on the lines give that height in metres.",
+   "Where contour lines are close together, the land is steep because the height changes over a short distance.",
+   "Where contour lines are far apart, the land is gentle because the height changes slowly over a long distance."
+  ],
+  "remember": "Close lines mean a steep slope. Wide gaps mean a gentle slope.",
+  "a": {
+   "q": "A student traces one contour line on a topographic map. What is true of every point along that line?",
+   "opts": [
+    "They are all at the same height above sea level",
+    "They are all the same distance from the coast",
+    "They all have the same steepness of slope",
+    "They all have the same type of vegetation"
+   ],
+   "why": "A contour line joins points of equal height above sea level. Steepness is shown by how close the lines are to each other, not by what one line joins.",
+   "clue": "Think about what the number on the line tells you."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam studies a map of Mount Kosciuszko in the Snowy Mountains, NSW. The contour lines are very close together on the eastern side and far apart on the western side. What does this show?",
+   "opts": [
+    "The east side is steep and the west side is gentle",
+    "The east side is gentle and the west side is steep",
+    "The east side is higher than the west side",
+    "The east side is flat and the west side is a cliff"
+   ],
+   "why": "Lines close together show that height changes quickly, so the land is steep. Lines far apart show a gentle slope. The spacing shows steepness, not which side is higher.",
+   "clue": "Close lines mean the height changes over a short distance."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "They are all at the same height above sea level",
+   "also_right": []
+  },
+  "b": {
+   "best": "The east side is steep and the west side is gentle",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The question uses a real place, Mount Kosciuszko, but reverses its real terrain. The western side of the Main Range (the Western Fall into the Geehi valley) is the steep side, and the eastern side slopes more gently. As written, the question would teach students a false fact about Kosciuszko. Use a made-up hill, or swap the sides."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "The card and question a are correct. Question b reverses the real terrain of Mount Kosciuszko, whose western side is the steep one, so it should use a made-up hill or swap east and west."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The question uses a real place, Mount Kosciuszko, but reverses its real terrain. The western side of the Main Range (the Western Fall into the Geehi valley) is the steep side, and the eastern side slopes more gently. As written, the question would teach students a false fact about Kosciuszko. Use a made-up hill, or swap the sides."
+ ],
+ "proposal": {
+  "title": "Contour lines and slope",
+  "card": [
+   "A topographic map shows the shape of the land. A contour line is a line that joins places of the same height above sea level.",
+   "Every point on one contour line is at the same height. Numbers written on the lines give that height in metres.",
+   "Where contour lines are close together, the land is steep because the height changes over a short distance.",
+   "Where contour lines are far apart, the land is gentle because the height changes slowly over a long distance."
+  ],
+  "remember": "Close lines mean a steep slope. Wide gaps mean a gentle slope.",
+  "a": {
+   "q": "A student traces one contour line on a topographic map. What is true of every point along that line?",
+   "opts": [
+    "They are all at the same height above sea level",
+    "They are all the same distance from the coast",
+    "They all have the same steepness of slope",
+    "They all have the same type of vegetation"
+   ],
+   "why": "A contour line joins points of equal height above sea level. Steepness is shown by how close the lines are to each other, not by what one line joins.",
+   "clue": "Think about what the number on the line tells you."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam studies a topographic map of Bindara Hill, a hill on a farm near Mudgee. The contour lines are very close together on its eastern side and far apart on its western side. What does this show?",
+   "opts": [
+    "The east side is steep and the west side is gentle",
+    "The east side is gentle and the west side is steep",
+    "The east side is higher than the west side",
+    "The east side is flat and the west side is a cliff"
+   ],
+   "why": "Lines close together show that height changes quickly, so the east side is steep. Lines far apart show a gentle slope on the west. The spacing shows steepness, not which side is higher.",
+   "clue": "Close lines mean the height changes over a short distance."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "They are all at the same height above sea level",
+    "also_right": []
+   },
+   "b": {
+    "best": "The east side is steep and the west side is gentle",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 19,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The question uses a real place, Mount Kosciuszko, but reverses its real terrain. The western side of the Main Range (the Western Fall into the Geehi valley) is the steep side, and the eastern side slopes more gently. As written, the question would teach students a false fact about Kosciuszko. Use a made-up hill, or swap the sides."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The question uses a real place, Mount Kosciuszko, but reverses its real terrain. The western side of the Main Range (the Western Fall into the Geehi valley) is the steep side, and the eastern side slopes more gently. As written, the question would teach students a false fact about Kosciuszko. Use a made-up hill, or swap the sides."
+  ]
+ },
+ "final": {
+  "title": "Contour lines and slope",
+  "card": [
+   "A topographic map shows the shape of the land. A contour line is a line that joins places of the same height above sea level.",
+   "Every point on one contour line is at the same height. Numbers written on the lines give that height in metres.",
+   "Where contour lines are close together, the land is steep because the height changes over a short distance.",
+   "Where contour lines are far apart, the land is gentle because the height changes slowly over a long distance."
+  ],
+  "remember": "Close lines mean a steep slope. Wide gaps mean a gentle slope.",
+  "a": {
+   "q": "A student traces one contour line on a topographic map. What is true of every point along that line?",
+   "opts": [
+    "They are all at the same height above sea level",
+    "They are all the same distance from the coast",
+    "They all have the same steepness of slope",
+    "They all have the same type of vegetation"
+   ],
+   "why": "A contour line joins points of equal height above sea level. Steepness is shown by how close the lines are to each other, not by what one line joins.",
+   "clue": "Think about what the number on the line tells you."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam studies a topographic map of Bindara Hill, a hill on a farm near Mudgee. The contour lines are very close together on its eastern side and far apart on its western side. What does this show?",
+   "opts": [
+    "The east side is steep and the west side is gentle",
+    "The east side is gentle and the west side is steep",
+    "The east side is higher than the west side",
+    "The east side is flat and the west side is a cliff"
+   ],
+   "why": "Lines close together show that height changes quickly, so the east side is steep. Lines far apart show a gentle slope on the west. The spacing shows steepness, not which side is higher.",
+   "clue": "Close lines mean the height changes over a short distance."
+  }
+ },
+ "cleared_by": "recheck"
 }

@@ -24,8 +24,421 @@
    0.202
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:46Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:49Z write: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (card wording, b wording)",
+  "2026-11-20T13:44:55Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.00607,
+  "check": 0.01568,
+  "fix": 0.02579,
+  "recheck": 0.01377
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches how landscapes are protected at local, national and global scales; the closest, geo-scale-2, covers the general idea of scale, and the others cover landform types, climate, First Nations land management or Australian geography.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, wording: The National line says 'A country can protect landscapes through national parks' and then says a NSW national park is set aside by the state government. It does not explain why state action counts as the national scale, so Year 7 students may be confused about scale versus level of government.\n- Question b, wording: The stem says the rainforest is 'judged by UNESCO to be of great value to all people' but never says it was given World Heritage listing. A student must infer the listing, which the card treats as the step that adds global protection.",
+ "rejected": {
+  "title": "Protecting landscapes at different scales",
+  "card": [
+   [
+    "Local",
+    "A local council can protect landscapes in its area. It may set aside a bushland reserve, look after a beach or limit building near a creek."
+   ],
+   [
+    "National",
+    "A country can protect landscapes through national parks. In New South Wales, a national park is set aside by the state government to protect its natural and cultural features."
+   ],
+   [
+    "Global",
+    "A place of great value to all people can be given World Heritage listing. The listing is made by the United Nations body UNESCO. The Blue Mountains and the Great Barrier Reef are listed places in Australia."
+   ],
+   "One landscape can be protected at more than one scale at once. The Blue Mountains are national parks and also a World Heritage area. A listing adds protection. It does not replace the national park."
+  ],
+  "remember": "Councils protect locally, national parks nationally and World Heritage globally, and one place can have more than one.",
+  "a": {
+   "q": "A council sets aside a small bushland reserve beside a creek in its suburb. Who is protecting it, and at what scale?",
+   "opts": [
+    "A council, at the local scale",
+    "A state government, at the national scale",
+    "UNESCO, at the global scale",
+    "A council, at the national scale"
+   ],
+   "why": "A council looks after its own area, so this is protection at the local scale. A council reserve is not a national park, so it is not national protection, even though it is a protected area.",
+   "clue": "Think about how large an area a council looks after."
+  },
+  "b": {
+   "d": 3,
+   "q": "A rainforest in a New South Wales national park is later judged by UNESCO to be of great value to all people. At what scales is it now protected?",
+   "opts": [
+    "National and global",
+    "Global only",
+    "National only",
+    "Local and national"
+   ],
+   "why": "The national park protects it at the national scale, and UNESCO's decision gives it World Heritage listing at the global scale. Global only is tempting, but a listing adds protection and does not replace the national park.",
+   "clue": "Does the national park disappear when UNESCO acts?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, wording: The National line says 'A country can protect landscapes through national parks' and then says a NSW national park is set aside by the state government. It does not explain why state action counts as the national scale, so Year 7 students may be confused about scale versus level of government.",
+    "Question b, wording: The stem says the rainforest is 'judged by UNESCO to be of great value to all people' but never says it was given World Heritage listing. A student must infer the listing, which the card treats as the step that adds global protection."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Protecting landscapes at different scales",
+     "card": [
+      [
+       "Local",
+       "A local council can protect landscapes in its area. It may set aside a bushland reserve, look after a beach or limit building near a creek."
+      ],
+      [
+       "National",
+       "A country can protect landscapes through national parks. In New South Wales, a national park is set aside by the state government to protect its natural and cultural features."
+      ],
+      [
+       "Global",
+       "A place of great value to all people can be given World Heritage listing. The listing is made by the United Nations body UNESCO. The Blue Mountains and the Great Barrier Reef are listed places in Australia."
+      ],
+      "Protection can work at more than one scale. A landscape can be a local reserve, part of a national park or a World Heritage area, depending on how far its value reaches."
+     ],
+     "remember": "Councils protect local landscapes, national parks protect landscapes for a country, and World Heritage listing protects landscapes of value to the world.",
+     "a": {
+      "q": "A council sets aside a small bushland reserve beside a creek in its suburb. At what scale is this landscape being protected?",
+      "opts": [
+       "Local",
+       "National",
+       "Global",
+       "Regional trade"
+      ],
+      "why": "The council is protecting a small area within its own suburb, so the scale is local. National protection would be through a national park, and global protection would be World Heritage listing.",
+      "clue": "Think about who is looking after the reserve."
+     },
+     "b": {
+      "d": 3,
+      "q": "A coastal rainforest is valued by people around the world, and UNESCO adds it to a list so that it is protected for everyone. Which kind of protection is this?",
+      "opts": [
+       "World Heritage listing",
+       "A local council reserve",
+       "A national park",
+       "A private farm fence"
+      ],
+      "why": "UNESCO listing a place because it is valued by people around the world is World Heritage listing, which works at the global scale. A national park is tempting, but it is set aside by a government for its own country, not by UNESCO.",
+      "clue": "Which group named in the question is not a council or a country?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Local",
+      "also_right": []
+     },
+     "b": {
+      "best": "World Heritage listing",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The stem says UNESCO 'adds it to a list', which echoes the right option 'World Heritage listing'. A student could match the words without knowing the idea."
+      },
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "The last line says a landscape can be a local reserve, part of a national park 'or' a World Heritage area, 'depending on how far its value reaches'. This suggests each place has only one level, yet the line opens by saying protection works at more than one scale, and the Blue Mountains are both national parks and a World Heritage area."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts are correct. In question b, the stem's 'adds it to a list' gives away 'World Heritage listing'. The card's last line could suggest a place is protected at only one scale, when the Blue Mountains are both national parks and a World Heritage area."
+    },
+    "flags": [
+     "Question b, wording: The stem says UNESCO 'adds it to a list', which echoes the right option 'World Heritage listing'. A student could match the words without knowing the idea.",
+     "Card, wording: The last line says a landscape can be a local reserve, part of a national park 'or' a World Heritage area, 'depending on how far its value reaches'. This suggests each place has only one level, yet the line opens by saying protection works at more than one scale, and the Blue Mountains are both national parks and a World Heritage area."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Protecting landscapes at different scales",
+     "card": [
+      [
+       "Local",
+       "A local council can protect landscapes in its area. It may set aside a bushland reserve, look after a beach or limit building near a creek."
+      ],
+      [
+       "National",
+       "A country can protect landscapes through national parks. In New South Wales, a national park is set aside by the state government to protect its natural and cultural features."
+      ],
+      [
+       "Global",
+       "A place of great value to all people can be given World Heritage listing. The listing is made by the United Nations body UNESCO. The Blue Mountains and the Great Barrier Reef are listed places in Australia."
+      ],
+      "One landscape can be protected at more than one scale at once. The Blue Mountains are national parks and also a World Heritage area. A listing adds protection. It does not replace the national park."
+     ],
+     "remember": "Councils protect locally, national parks nationally and World Heritage globally, and one place can have more than one.",
+     "a": {
+      "q": "A council sets aside a small bushland reserve beside a creek in its suburb. Who is protecting it, and at what scale?",
+      "opts": [
+       "A council, at the local scale",
+       "A state government, at the national scale",
+       "UNESCO, at the global scale",
+       "A council, at the national scale"
+      ],
+      "why": "A council looks after its own area, so this is protection at the local scale. A council reserve is not a national park, so it is not national protection, even though it is a protected area.",
+      "clue": "Think about how large an area a council looks after."
+     },
+     "b": {
+      "d": 3,
+      "q": "A rainforest in a New South Wales national park is later judged by UNESCO to be of great value to all people. At what scales is it now protected?",
+      "opts": [
+       "National and global",
+       "Global only",
+       "National only",
+       "Local and national"
+      ],
+      "why": "The national park protects it at the national scale, and UNESCO's decision gives it World Heritage listing at the global scale. Global only is tempting, but a listing adds protection and does not replace the national park.",
+      "clue": "Does the national park disappear when UNESCO acts?"
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:06Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "A council, at the local scale",
+       "also_right": []
+      },
+      "b": {
+       "best": "National and global",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "wording",
+        "detail": "The National line says 'A country can protect landscapes through national parks' and then says a NSW national park is set aside by the state government. It does not explain why state action counts as the national scale, so Year 7 students may be confused about scale versus level of government."
+       },
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The stem says the rainforest is 'judged by UNESCO to be of great value to all people' but never says it was given World Heritage listing. A student must infer the listing, which the card treats as the step that adds global protection."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions have one clear right answer and the facts are sound at this level. The card mixes 'a country' with 'the state government' for national parks without explaining it, and question b should say the rainforest was given World Heritage listing, not just judged valuable."
+     },
+     "flags": [
+      "Card, wording: The National line says 'A country can protect landscapes through national parks' and then says a NSW national park is set aside by the state government. It does not explain why state action counts as the national scale, so Year 7 students may be confused about scale versus level of government.",
+      "Question b, wording: The stem says the rainforest is 'judged by UNESCO to be of great value to all people' but never says it was given World Heritage listing. A student must infer the listing, which the card treats as the step that adds global protection."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:55Z",
+   "step": "write",
+   "version": {
+    "title": "Protecting landscapes at different scales",
+    "card": [
+     [
+      "Local",
+      "A local council can protect landscapes in its area. It may set aside a bushland reserve, look after a beach or limit building near a creek."
+     ],
+     [
+      "National",
+      "National parks protect landscapes at the national scale, for people from all over Australia. In New South Wales the state government runs them. The scale is about who a place is kept for, not which government acts."
+     ],
+     [
+      "Global",
+      "A place of great value to all people can be given World Heritage listing. The listing is made by the United Nations body UNESCO. The Blue Mountains and the Great Barrier Reef are listed places in Australia."
+     ],
+     "One landscape can be protected at more than one scale at once. The Blue Mountains are national parks and also a World Heritage area. A listing adds protection. It does not replace the national park."
+    ],
+    "remember": "Councils protect locally, national parks nationally and World Heritage globally, and one place can have more than one.",
+    "a": {
+     "q": "A council sets aside a small bushland reserve beside a creek in its suburb. Who is protecting it, and at what scale?",
+     "opts": [
+      "A council, at the local scale",
+      "A state government, at the national scale",
+      "UNESCO, at the global scale",
+      "A council, at the national scale"
+     ],
+     "why": "A council looks after its own area, so this is protection at the local scale. A council reserve is not a national park, so it is not national protection, even though it is a protected area.",
+     "clue": "Think about how large an area a council looks after."
+    },
+    "b": {
+     "d": 3,
+     "q": "A rainforest in a New South Wales national park is later given World Heritage listing by UNESCO. At what scales is it now protected?",
+     "opts": [
+      "National and global",
+      "Global only",
+      "National only",
+      "Local and national"
+     ],
+     "why": "The national park protects it at the national scale, and the World Heritage listing protects it at the global scale. Global only is tempting, but a listing adds protection and does not replace the national park.",
+     "clue": "Does the national park disappear when the listing is made?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "A council, at the local scale",
+     "also_right": []
+    },
+    "b": {
+     "best": "National and global",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Protecting landscapes at different scales",
+  "card": [
+   [
+    "Local",
+    "A local council can protect landscapes in its area. It may set aside a bushland reserve, look after a beach or limit building near a creek."
+   ],
+   [
+    "National",
+    "National parks protect landscapes at the national scale, for people from all over Australia. In New South Wales the state government runs them. The scale is about who a place is kept for, not which government acts."
+   ],
+   [
+    "Global",
+    "A place of great value to all people can be given World Heritage listing. The listing is made by the United Nations body UNESCO. The Blue Mountains and the Great Barrier Reef are listed places in Australia."
+   ],
+   "One landscape can be protected at more than one scale at once. The Blue Mountains are national parks and also a World Heritage area. A listing adds protection. It does not replace the national park."
+  ],
+  "remember": "Councils protect locally, national parks nationally and World Heritage globally, and one place can have more than one.",
+  "a": {
+   "q": "A council sets aside a small bushland reserve beside a creek in its suburb. Who is protecting it, and at what scale?",
+   "opts": [
+    "A council, at the local scale",
+    "A state government, at the national scale",
+    "UNESCO, at the global scale",
+    "A council, at the national scale"
+   ],
+   "why": "A council looks after its own area, so this is protection at the local scale. A council reserve is not a national park, so it is not national protection, even though it is a protected area.",
+   "clue": "Think about how large an area a council looks after."
+  },
+  "b": {
+   "d": 3,
+   "q": "A rainforest in a New South Wales national park is later given World Heritage listing by UNESCO. At what scales is it now protected?",
+   "opts": [
+    "National and global",
+    "Global only",
+    "National only",
+    "Local and national"
+   ],
+   "why": "The national park protects it at the national scale, and the World Heritage listing protects it at the global scale. Global only is tempting, but a listing adds protection and does not replace the national park.",
+   "clue": "Does the national park disappear when the listing is made?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A council, at the local scale",
+   "also_right": []
+  },
+  "b": {
+   "best": "National and global",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Protecting landscapes at different scales",
+  "card": [
+   [
+    "Local",
+    "A local council can protect landscapes in its area. It may set aside a bushland reserve, look after a beach or limit building near a creek."
+   ],
+   [
+    "National",
+    "National parks protect landscapes at the national scale, for people from all over Australia. In New South Wales the state government runs them. The scale is about who a place is kept for, not which government acts."
+   ],
+   [
+    "Global",
+    "A place of great value to all people can be given World Heritage listing. The listing is made by the United Nations body UNESCO. The Blue Mountains and the Great Barrier Reef are listed places in Australia."
+   ],
+   "One landscape can be protected at more than one scale at once. The Blue Mountains are national parks and also a World Heritage area. A listing adds protection. It does not replace the national park."
+  ],
+  "remember": "Councils protect locally, national parks nationally and World Heritage globally, and one place can have more than one.",
+  "a": {
+   "q": "A council sets aside a small bushland reserve beside a creek in its suburb. Who is protecting it, and at what scale?",
+   "opts": [
+    "A council, at the local scale",
+    "A state government, at the national scale",
+    "UNESCO, at the global scale",
+    "A council, at the national scale"
+   ],
+   "why": "A council looks after its own area, so this is protection at the local scale. A council reserve is not a national park, so it is not national protection, even though it is a protected area.",
+   "clue": "Think about how large an area a council looks after."
+  },
+  "b": {
+   "d": 3,
+   "q": "A rainforest in a New South Wales national park is later given World Heritage listing by UNESCO. At what scales is it now protected?",
+   "opts": [
+    "National and global",
+    "Global only",
+    "National only",
+    "Local and national"
+   ],
+   "why": "The national park protects it at the national scale, and the World Heritage listing protects it at the global scale. Global only is tempting, but a listing adds protection and does not replace the national park.",
+   "clue": "Does the national park disappear when the listing is made?"
+  }
+ },
+ "checked_by": "claude-code"
 }

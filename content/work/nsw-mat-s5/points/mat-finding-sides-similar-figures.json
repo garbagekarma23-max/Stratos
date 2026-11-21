@@ -24,8 +24,200 @@
    0.288
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:56Z write: done",
+  "2026-11-20T12:35:54Z check: flagged",
+  "2026-11-20T12:44:59Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00042,
+  "write": 0.01274,
+  "check": 0.01321,
+  "fix": 0.03033,
+  "recheck": 0.00768
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-finding-sides-similar-triangles, teaches the same method but only for triangles, while the new point covers similar figures in general, so it is narrower than the point needed and a new point is the safer match.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Finding sides in similar figures",
+  "card": [
+   "First match the corresponding sides. They sit in the same position in each figure, such as the shortest side or the side opposite the same angle.",
+   "Find the scale factor from a pair of matching sides where both lengths are known. Divide the new length by the original length.",
+   "To find an unknown side, multiply by the scale factor if going to the larger figure. Divide by it if going to the smaller figure.",
+   "Example: two similar triangles have matching sides of 4 cm and 10 cm. The scale factor is \\(10 \\div 4 = 2.5\\). A 6 cm side in the small triangle matches \\(6 \\times 2.5 = 15\\) cm in the large one."
+  ],
+  "remember": "Find the scale factor from a known pair, then multiply or divide to reach the unknown side.",
+  "a": {
+   "q": "Two similar triangles have matching sides of 6 cm and 15 cm. Another side of the smaller triangle is 8 cm. What is the matching side of the larger triangle?",
+   "opts": [
+    "20 cm",
+    "17 cm",
+    "3.2 cm",
+    "12 cm"
+   ],
+   "why": "The scale factor is \\(15 \\div 6 = 2.5\\), so the side is \\(8 \\times 2.5 = 20\\) cm. Adding 9 to get 17 cm treats the difference between 6 and 15 as the rule, but similar figures use multiplication.",
+   "clue": "Find the scale factor first, then multiply."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia has a model boat 24 cm long with a sail 18 cm tall. The real boat is similar and its sail is 3.6 m tall. How long is the real boat?",
+   "opts": [
+    "4.8 m",
+    "4.2 m",
+    "0.72 m",
+    "3.84 m"
+   ],
+   "why": "Sail to sail: \\(3.6 \\div 0.18 = 20\\), after changing 18 cm to 0.18 m. The real length is \\(24 \\times 20 = 480\\) cm, which is 4.8 m. Using 18 and 3.6 without changing units gives a wrong scale factor.",
+   "clue": "Put both sail heights in the same unit before dividing."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "20 cm",
+   "also_right": []
+  },
+  "b": {
+   "best": "4.8 m",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The unit mistake the clue and why warn about still leads to the right option. Using 18 and 3.6 without converting gives a scale factor of 3.6 ÷ 18 = 0.2, and 24 × 0.2 = 4.8, which matches '4.8 m'. A student who skips the conversion picks the right answer for the wrong reason. The why implies this mistake gives a wrong answer, which is misleading. Change the numbers so the unconverted method lands on a distractor."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question a are correct. In question b, the unit mistake the clue warns about (3.6 ÷ 18 = 0.2, then 24 × 0.2 = 4.8) still reaches the right option, so the question does not test unit conversion and the why misleads; change the numbers."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The unit mistake the clue and why warn about still leads to the right option. Using 18 and 3.6 without converting gives a scale factor of 3.6 ÷ 18 = 0.2, and 24 × 0.2 = 4.8, which matches '4.8 m'. A student who skips the conversion picks the right answer for the wrong reason. The why implies this mistake gives a wrong answer, which is misleading. Change the numbers so the unconverted method lands on a distractor."
+ ],
+ "proposal": {
+  "title": "Finding sides in similar figures",
+  "card": [
+   "First match the corresponding sides. They sit in the same position in each figure, such as the shortest side or the side opposite the same angle.",
+   "Find the scale factor from a pair of matching sides where both lengths are known. Put both in the same unit, then divide the larger length by the smaller.",
+   "To find an unknown side, multiply by the scale factor if going to the larger figure. Divide by it if going to the smaller figure.",
+   "Example: two similar triangles have matching sides of 4 cm and 10 cm. The scale factor is \\(10 \\div 4 = 2.5\\). A 6 cm side in the small triangle matches \\(6 \\times 2.5 = 15\\) cm in the large one."
+  ],
+  "remember": "Find the scale factor from a known pair, then multiply or divide to reach the unknown side.",
+  "a": {
+   "q": "Two similar triangles have matching sides of 6 cm and 15 cm. Another side of the smaller triangle is 8 cm. What is the matching side of the larger triangle?",
+   "opts": [
+    "20 cm",
+    "17 cm",
+    "3.2 cm",
+    "12 cm"
+   ],
+   "why": "The scale factor is \\(15 \\div 6 = 2.5\\), so the side is \\(8 \\times 2.5 = 20\\) cm. Adding 9 to get 17 cm treats the difference between 6 and 15 as the rule, but similar figures use multiplication.",
+   "clue": "Find the scale factor first, then multiply."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia has a model boat 24 cm long with a sail 18 cm tall. The real boat is similar and its sail is 4.5 m tall. How long is the real boat, in centimetres?",
+   "opts": [
+    "600 cm",
+    "6 cm",
+    "60 cm",
+    "456 cm"
+   ],
+   "why": "Change 4.5 m to 450 cm. Sail to sail, the scale factor is \\(450 \\div 18 = 25\\), so the real boat is \\(24 \\times 25 = 600\\) cm. Dividing 4.5 by 18 without converting gives 0.25 and an answer of 6, but that 6 is in metres, so 6 cm is wrong.",
+   "clue": "Put both sail heights in centimetres before dividing."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "20 cm",
+    "also_right": []
+   },
+   "b": {
+    "best": "600 cm",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The unit mistake the clue and why warn about still leads to the right option. Using 18 and 3.6 without converting gives a scale factor of 3.6 ÷ 18 = 0.2, and 24 × 0.2 = 4.8, which matches '4.8 m'. A student who skips the conversion picks the right answer for the wrong reason. The why implies this mistake gives a wrong answer, which is misleading. Change the numbers so the unconverted method lands on a distractor."
+   }
+  ],
+  "flags": [
+   "Question b, other: The unit mistake the clue and why warn about still leads to the right option. Using 18 and 3.6 without converting gives a scale factor of 3.6 ÷ 18 = 0.2, and 24 × 0.2 = 4.8, which matches '4.8 m'. A student who skips the conversion picks the right answer for the wrong reason. The why implies this mistake gives a wrong answer, which is misleading. Change the numbers so the unconverted method lands on a distractor."
+  ]
+ },
+ "final": {
+  "title": "Finding sides in similar figures",
+  "card": [
+   "First match the corresponding sides. They sit in the same position in each figure, such as the shortest side or the side opposite the same angle.",
+   "Find the scale factor from a pair of matching sides where both lengths are known. Put both in the same unit, then divide the larger length by the smaller.",
+   "To find an unknown side, multiply by the scale factor if going to the larger figure. Divide by it if going to the smaller figure.",
+   "Example: two similar triangles have matching sides of 4 cm and 10 cm. The scale factor is \\(10 \\div 4 = 2.5\\). A 6 cm side in the small triangle matches \\(6 \\times 2.5 = 15\\) cm in the large one."
+  ],
+  "remember": "Find the scale factor from a known pair, then multiply or divide to reach the unknown side.",
+  "a": {
+   "q": "Two similar triangles have matching sides of 6 cm and 15 cm. Another side of the smaller triangle is 8 cm. What is the matching side of the larger triangle?",
+   "opts": [
+    "20 cm",
+    "17 cm",
+    "3.2 cm",
+    "12 cm"
+   ],
+   "why": "The scale factor is \\(15 \\div 6 = 2.5\\), so the side is \\(8 \\times 2.5 = 20\\) cm. Adding 9 to get 17 cm treats the difference between 6 and 15 as the rule, but similar figures use multiplication.",
+   "clue": "Find the scale factor first, then multiply."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia has a model boat 24 cm long with a sail 18 cm tall. The real boat is similar and its sail is 4.5 m tall. How long is the real boat, in centimetres?",
+   "opts": [
+    "600 cm",
+    "6 cm",
+    "60 cm",
+    "456 cm"
+   ],
+   "why": "Change 4.5 m to 450 cm. Sail to sail, the scale factor is \\(450 \\div 18 = 25\\), so the real boat is \\(24 \\times 25 = 600\\) cm. Dividing 4.5 by 18 without converting gives 0.25 and an answer of 6, but that 6 is in metres, so 6 cm is wrong.",
+   "clue": "Put both sail heights in centimetres before dividing."
+  }
+ },
+ "cleared_by": "recheck"
 }

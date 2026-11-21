@@ -29165,5 +29165,4552 @@ MADE_BANKS.mat = {
       "why": "One of 4 equal sectors gives a chance of \\(\\frac{1}{4}\\). A coin gives \\(\\frac{1}{2}\\), a die gives \\(\\frac{1}{6}\\) for a single face, and a 3-sector spinner gives \\(\\frac{1}{3}\\).",
       "clue": "Find the device where the late outcome has chance \\(\\frac{1}{4}\\)."
     }
+  },
+  "mat-multiplying-dividing-integers-nsw": {
+    "title": "Multiplying and dividing integers",
+    "card": [
+      "To multiply or divide two integers, first look at their signs. Whether the signs match decides the sign of the answer.",
+      ["Same signs", "the answer is positive. For example, \\(-6 \\times (-4) = 24\\) and \\(-20 \\div (-4) = 5\\)."],
+      [
+        "Different signs",
+        "the answer is negative. For example, \\(7 \\times (-2) = -14\\) and \\(18 \\div (-3) = -6\\)."
+      ],
+      "Work out the sign first, then multiply or divide the numbers as if they had no signs. Division uses the same sign rules as multiplication."
+    ],
+    "remember": "Same signs give a positive answer. Different signs give a negative answer.",
+    "a": {
+      "q": "A student multiplies \\(-8\\) by \\(-5\\). What is the product?",
+      "opts": ["40", "\\(-40\\)", "\\(-13\\)", "13"],
+      "why": "Both numbers are negative, so the signs are the same and the answer is positive. \\(8 \\times 5 = 40\\). The answer \\(-40\\) comes from forgetting that two negatives make a positive.",
+      "clue": "Check whether the two signs match."
+    },
+    "b": {
+      "d": 2,
+      "q": "A scuba diver at Bondi Beach descends at a steady rate. Her height changes by \\(-4\\) m each minute. What is the total change in her height over 6 minutes?",
+      "opts": ["\\(-24\\) m", "24 m", "\\(-10\\) m", "\\(-1.5\\) m"],
+      "why": "Six lots of \\(-4\\) m is \\(6 \\times (-4)\\). The signs are different, so the answer is negative, and \\(6 \\times 4 = 24\\), so the change is \\(-24\\) m. The answer 24 m drops the sign, and \\(-10\\) m adds the numbers instead of multiplying.",
+      "clue": "Each minute adds another \\(-4\\) m. How many minutes are there?"
+    }
+  },
+  "mat-order-operations-with-integers": {
+    "title": "Order of operations with integers",
+    "card": [
+      "Work in this order: brackets first, then powers, then multiplying and dividing from left to right, then adding and subtracting from left to right.",
+      "Multiplying and dividing share one step, and so do adding and subtracting. Within a step, work from left to right.",
+      "Keep each negative sign with its number. Use the sign rules from multiplying and dividing integers: same signs give a positive, different signs give a negative.",
+      [
+        "Example",
+        "\\(4 - 3 \\times (2 - 5)\\). Brackets: \\(2 - 5 = -3\\). Multiply: \\(3 \\times (-3) = -9\\). Subtract: \\(4 - (-9) = 13\\)."
+      ]
+    ],
+    "remember": "Brackets, powers, then multiply and divide, then add and subtract, left to right.",
+    "a": {
+      "q": "What is the value of \\(2 + 3 \\times (-4)\\)?",
+      "opts": ["\\(-10\\)", "\\(-20\\)", "\\(14\\)", "\\(20\\)"],
+      "why": "Multiply before adding: \\(3 \\times (-4) = -12\\), then \\(2 + (-12) = -10\\). Adding first gives \\(5 \\times (-4) = -20\\), which breaks the order.",
+      "clue": "Which operation comes first, adding or multiplying?"
+    },
+    "b": {
+      "d": 3,
+      "q": "What is the value of \\(10 - 6 \\div 2 \\times (-3)\\)?",
+      "opts": ["\\(19\\)", "\\(1\\)", "\\(11\\)", "\\(-6\\)"],
+      "why": "Divide and multiply from left to right: \\(6 \\div 2 = 3\\), then \\(3 \\times (-3) = -9\\), so \\(10 - (-9) = 19\\). Writing \\(10 - 9 = 1\\) drops the negative sign of \\(-9\\). Doing \\(2 \\times (-3)\\) first gives \\(10 - (-1) = 11\\), and subtracting first gives \\(-6\\).",
+      "clue": "Divide and multiply from the left before you subtract."
+    }
+  },
+  "mat-converting-fractions-decimals-percentages-nsw": {
+    "title": "Converting fractions, decimals and percentages",
+    "card": [
+      "A percentage is a fraction out of 100. The symbol % means \\(\\frac{1}{100}\\), so \\(7\\% = \\frac{7}{100} = 0.07\\).",
+      "To change a percentage to a decimal, divide by 100. To change a decimal to a percentage, multiply by 100.",
+      "To change a fraction to a decimal, divide the top by the bottom. Then multiply by 100 for a percentage.",
+      "Example: \\(\\frac{3}{8}\\) means \\(3 \\div 8 = 0.375\\). Then \\(0.375 \\times 100 = 37.5\\), so \\(\\frac{3}{8} = 0.375 = 37.5\\%\\)."
+    ],
+    "remember": "Divide by 100 to go from a percentage to a decimal. Multiply by 100 to go back.",
+    "a": {
+      "q": "Which decimal is the same as \\(45\\%\\)?",
+      "opts": ["\\(0.45\\)", "\\(4.5\\)", "\\(0.045\\)", "\\(45\\)"],
+      "why": "Divide by 100 to change a percentage to a decimal, so \\(45 \\div 100 = 0.45\\). Choosing \\(4.5\\) comes from dividing by 10 instead of 100.",
+      "clue": "Percent means out of 100."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia scored \\(\\frac{7}{20}\\) on a quiz. What is her score as a percentage?",
+      "opts": ["\\(35\\%\\)", "\\(3.5\\%\\)", "\\(14\\%\\)", "\\(0.35\\%\\)"],
+      "why": "Divide to get \\(7 \\div 20 = 0.35\\), then multiply by 100 to get \\(35\\%\\). The answer \\(0.35\\%\\) is tempting, but it leaves out the step of multiplying by 100.",
+      "clue": "Divide the top by the bottom first, then multiply by 100."
+    }
+  },
+  "mat-one-quantity-as-percentage": {
+    "title": "One quantity as a percentage of another",
+    "card": [
+      "To write one quantity as a percentage of another, put the part over the whole as a fraction. The whole is the amount you are comparing against.",
+      "Both amounts must be in the same units. Change one first if they are not, such as metres to centimetres.",
+      "Multiply the fraction by 100 to get the percentage: \\(\\frac{\\text{part}}{\\text{whole}} \\times 100\\).",
+      "Example: 18 of 24 students walk to school. \\(\\frac{18}{24} \\times 100 = 75\\), so \\(75\\%\\) walk."
+    ],
+    "remember": "Part over whole, in the same units, then times 100.",
+    "a": {
+      "q": "Jack saves $30 of the $120 he earns. What percentage of his earnings does he save?",
+      "opts": ["\\(25\\%\\)", "\\(400\\%\\)", "\\(30\\%\\)", "\\(4\\%\\)"],
+      "why": "The part is 30 and the whole is 120, so \\(\\frac{30}{120} \\times 100 = 25\\%\\). The answer \\(400\\%\\) comes from putting the whole over the part.",
+      "clue": "Which amount is the whole?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A ribbon is 2 m long. Priya cuts off a piece 50 cm long. What percentage of the ribbon is the piece?",
+      "opts": ["\\(25\\%\\)", "\\(2500\\%\\)", "\\(40\\%\\)", "\\(50\\%\\)"],
+      "why": "Change 2 m to 200 cm first, so the units match. Then \\(\\frac{50}{200} \\times 100 = 25\\%\\). Using \\(\\frac{50}{100}\\) gives \\(50\\%\\), which ignores that the ribbon is 200 cm long.",
+      "clue": "Write both lengths in centimetres."
+    }
+  },
+  "mat-percentage-increase-decrease-2-nsw": {
+    "title": "Percentage increase and decrease",
+    "card": [
+      "A discount is a percentage decrease. A mark-up is a percentage increase. To change an amount in one step, multiply by a single factor. The factor is the new amount as a decimal fraction of the original.",
+      [
+        "Increase",
+        "Add the percentage to 100%, then write it as a decimal. A mark-up of 15% is \\(100\\% + 15\\% = 115\\%\\), so the factor is 1.15."
+      ],
+      [
+        "Decrease",
+        "Take the percentage from 100%, then write it as a decimal. A 20% discount is \\(100\\% - 20\\% = 80\\%\\), so the factor is 0.8."
+      ],
+      "Adding 10% GST is an increase of 10%, so multiply by 1.1. A $60 jacket with GST added costs \\(60 \\times 1.1 = \\$66\\)."
+    ],
+    "remember": "Increase: 100% plus the change. Decrease: 100% minus the change. Then multiply.",
+    "a": {
+      "q": "A shop gives 30% off. Which factor do you multiply the price by?",
+      "opts": ["0.7", "0.3", "1.3", "0.03"],
+      "why": "A 30% decrease leaves \\(100\\% - 30\\% = 70\\%\\), which is 0.7. The factor 0.3 is tempting, but multiplying by 0.3 leaves only 30% of the amount, so it is a 70% decrease.",
+      "clue": "Work out what percentage is left after the decrease."
+    },
+    "b": {
+      "d": 2,
+      "q": "A gym fee is $40 a week before a 15% mark-up. What is the new weekly fee?",
+      "opts": ["$46", "$55", "$41.50", "$6"],
+      "why": "The factor is 1.15, so \\(40 \\times 1.15 = \\$46\\). The answer $6 is only the increase (15% of 40), not the new fee.",
+      "clue": "The question asks for the new fee, not the size of the rise."
+    }
+  },
+  "mat-rates-unit-rates": {
+    "title": "Rates and best buys",
+    "card": [
+      "A rate compares two quantities with different units. Speed in km/h and price in $/kg are rates. The word per means for each one.",
+      "To find a unit rate, divide the quantity in the rate's first unit by the quantity in its second unit. For $/kg, divide dollars by kilograms: $21 for 6 kg of apples is \\(\\$21 \\div 6 = \\$3.50\\) per kg.",
+      "To compare two deals, find the unit rate of each in the same unit. The deal with the lower price per unit is the better buy.",
+      "Unit rates also find totals. At 80 km/h, a car travels \\(80 \\times 2.5 = 200\\) km in 2.5 hours."
+    ],
+    "remember": "Divide to get a rate per one unit, then compare the unit rates.",
+    "a": {
+      "q": "A cyclist in Newcastle rides 45 km in 3 hours at a steady pace. What is her speed in km/h?",
+      "opts": ["15 km/h", "135 km/h", "48 km/h", "42 km/h"],
+      "why": "For km/h, divide kilometres by hours: \\(45 \\div 3 = 15\\) km/h. Multiplying to get 135 is the tempting mistake, but a rate per hour is found by dividing.",
+      "clue": "Which unit comes first in km/h?"
+    },
+    "b": {
+      "d": 3,
+      "q": "At a shop in Dubbo, 5 kg of rice costs $12.50 and 3 kg costs $8.40. Which is the better buy, and why?",
+      "opts": [
+        "5 kg, at $2.50 per kg",
+        "3 kg, at $2.80 per kg",
+        "Both, as they cost the same per kg",
+        "3 kg, because it costs less in total"
+      ],
+      "why": "5 kg costs \\(\\$12.50 \\div 5 = \\$2.50\\) per kg. 3 kg costs \\(\\$8.40 \\div 3 = \\$2.80\\) per kg. The 5 kg bag has the lower price per kg. The lower total for 3 kg is tempting, but it buys less rice.",
+      "clue": "Find the price per kg for both bags."
+    }
+  },
+  "mat-distance-time-graphs": {
+    "title": "Distance-time graphs",
+    "card": [
+      "A distance-time graph has time across the bottom and distance from the start up the side. Each point shows how far from the start something is at that time.",
+      "A steeper line means a faster speed. A flat line means no movement, because the distance from the start is not changing.",
+      "To find a speed, divide a distance by the time it took: speed \\(=\\) distance \\(\\div\\) time. Use any two points on a straight part of the line.",
+      "For example, Ava rides 10 km in the first 2 hours, then stops for 1 hour. Her speed is \\(10 \\div 2 = 5\\) km/h, then 0 km/h while the line is flat."
+    ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A distance-time graph for Ava. The line rises from \\((0, 0)\\) to \\((2, 10)\\), then is flat from \\((2, 10)\\) to \\((3, 10)\\).",
+        "x": {"min": 0, "max": 4, "label": "Time (h)", "step": 1},
+        "y": {"min": 0, "max": 12, "label": "Distance (km)", "step": 2},
+        "grid": true,
+        "items": [
+          {
+            "type": "curve",
+            "id": "A",
+            "points": [[0, 0], [2, 10], [3, 10]],
+            "label": "Ava",
+            "pos": "above-left",
+            "labelAt": 1
+          },
+          {"type": "point", "at": [2, 10], "on": ["A"], "label": "\\((2, 10)\\)", "pos": "above"}
+        ]
+      }
+    },
+    "remember": "Steeper means faster, flat means stopped, and speed is distance divided by time.",
+    "a": {
+      "q": "On a distance-time graph, what does a flat line show?",
+      "opts": [
+        "The object is not moving",
+        "The object is moving slowly",
+        "The object is moving at a steady speed",
+        "The object is going back to the start"
+      ],
+      "why": "A flat line means the distance from the start does not change while time passes, so the object is not moving. A slow object would still show a line that rises, just not steeply.",
+      "clue": "What happens to the distance as time goes on?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Leo walks 6 km in 2 hours, rests, then walks 6 km more in 1 hour. Which part of the graph is steeper, and what is the speed there?",
+      "opts": [
+        "The second part, at 6 km/h",
+        "The first part, at 3 km/h",
+        "The second part, at 3 km/h",
+        "The first part, at 6 km/h"
+      ],
+      "why": "The first part is \\(6 \\div 2 = 3\\) km/h. The second part is \\(6 \\div 1 = 6\\) km/h. The distance is the same, but the second part takes less time, so it is faster and steeper.",
+      "clue": "Divide each distance by its own time and compare."
+    }
+  },
+  "mat-pronumerals-writing-expressions": {
+    "title": "Pronumerals and writing expressions",
+    "card": [
+      "A pronumeral is a letter, such as \\(n\\), that stands for a number. The number may be unknown or may change. An expression uses pronumerals, numbers and operations, such as \\(2n + 5\\).",
+      "Leave out the \\(\\times\\) sign between a number and a pronumeral. Write \\(3 \\times n\\) as \\(3n\\), and write the number first.",
+      "Words give the operations: more than means add, less than means subtract, double means \\(\\times 2\\) and half means \\(\\div 2\\). Take care with order: 5 less than \\(n\\) is \\(n - 5\\), not \\(5 - n\\).",
+      "Use brackets when an operation applies to a whole sum or difference. Example: 4 more than a number, then all tripled, is \\(3(n + 4)\\). Without brackets, \\(3n + 4\\) would only triple the pronumeral \\(n\\)."
+    ],
+    "remember": "Turn each phrase into its operation, check the order, and use brackets for a whole group. A pronumeral is just a letter for a number.",
+    "a": {
+      "q": "Which expression shows 5 more than twice the number \\(n\\)?",
+      "opts": ["\\(2n + 5\\)", "\\(2(n + 5)\\)", "\\(5n + 2\\)", "\\(n + 10\\)"],
+      "why": "Twice the number is \\(2n\\), and 5 more than that is \\(2n + 5\\). The option \\(2(n + 5)\\) adds 5 first and then doubles the whole sum, which is a different expression.",
+      "clue": "Double the number first, then add 5."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya has \\(n\\) stickers. She is given 3 more, then shares all of them equally between 2 friends. Which expression gives each friend's share?",
+      "opts": ["\\((n + 3) \\div 2\\)", "\\(n + 3 \\div 2\\)", "\\(2(n + 3)\\)", "\\((n - 3) \\div 2\\)"],
+      "why": "The 3 is added before sharing, so the whole sum \\(n + 3\\) is divided by 2. Without brackets, \\(n + 3 \\div 2\\) would divide only the 3 by 2.",
+      "clue": "The sharing applies to the total, not just the 3."
+    }
+  },
+  "mat-substitution": {
+    "title": "Substitution",
+    "card": [
+      "To substitute, replace each pronumeral with its value. Put the value in brackets so a negative sign is not lost.",
+      "Then work out the expression using the order of operations: brackets, powers, then multiplication and division, then addition and subtraction.",
+      "A power applies only to the pronumeral next to it. In \\(3a^{2}\\), only \\(a\\) is squared, not the 3.",
+      "Example: find \\(3a^{2}\\) when \\(a = -2\\). Write \\(3 \\times (-2)^{2}\\), which is \\(3 \\times 4 = 12\\)."
+    ],
+    "remember": "Replace with brackets, then follow the order of operations.",
+    "a": {
+      "q": "Find the value of \\(2x + 5\\) when \\(x = -3\\).",
+      "opts": ["\\(-1\\)", "\\(11\\)", "\\(-11\\)", "\\(1\\)"],
+      "why": "Substitute to get \\(2 \\times (-3) + 5 = -6 + 5 = -1\\). The answer \\(11\\) comes from treating \\(2 \\times (-3)\\) as \\(6\\), losing the negative sign.",
+      "clue": "Multiply first, then add 5."
+    },
+    "b": {
+      "d": 3,
+      "q": "Find the value of \\(4 - 2n^{2}\\) when \\(n = -3\\).",
+      "opts": ["\\(-14\\)", "\\(40\\)", "\\(22\\)", "\\(-32\\)"],
+      "why": "Powers come before multiplication: \\((-3)^{2} = 9\\), then \\(4 - 2 \\times 9 = 4 - 18 = -14\\). The answer \\(22\\) comes from squaring \\(-3\\) as \\(-9\\), which turns the working into \\(4 + 18\\). Squaring the 2 as well, as \\((-6)^{2} = 36\\), gives \\(4 - 36 = -32\\).",
+      "clue": "Square the number first, then multiply by 2, then subtract from 4."
+    }
+  },
+  "mat-adding-subtracting-like-terms": {
+    "title": "Collecting like terms",
+    "card": [
+      "A term is a number, a pronumeral, or numbers and pronumerals multiplied together, such as 7, \\(y\\), \\(3x\\), \\(3x^{2}\\) or \\(ab\\). The number in front of the pronumeral part is its coefficient.",
+      "Like terms have the same pronumerals with the same powers. \\(3x\\) and \\(-5x\\) are like terms. \\(3x\\) and \\(3x^{2}\\) are not, because the powers differ. \\(3x\\) and \\(3y\\) are not, because the pronumerals differ.",
+      "Only like terms can be added or subtracted. Add or subtract the coefficients and keep the pronumeral part the same. The sign in front of a term belongs to that term, and a lone \\(x\\) means \\(1x\\).",
+      "Example: \\(5x + 2y - 3x + 4y\\). The \\(x\\) terms give \\(5x - 3x = 2x\\). The \\(y\\) terms give \\(2y + 4y = 6y\\). So the answer is \\(2x + 6y\\)."
+    ],
+    "remember": "Add or subtract the coefficients of like terms, and leave unlike terms apart.",
+    "a": {
+      "q": "Simplify \\(7a + 2b - 4a + b\\).",
+      "opts": ["\\(3a + 3b\\)", "\\(3a + 2b\\)", "\\(11a + 3b\\)", "\\(6ab\\)"],
+      "why": "The \\(a\\) terms give \\(7a - 4a = 3a\\). The \\(b\\) terms give \\(2b + b = 3b\\), because a lone \\(b\\) means \\(1b\\). Writing \\(3a + 2b\\) leaves out the lone \\(b\\) as if it were worth nothing.",
+      "clue": "A lone \\(b\\) has a coefficient of 1."
+    },
+    "b": {
+      "d": 3,
+      "q": "Zara collects like terms in \\(6m^{2} + 4m - 2m^{2} + m\\). What answer should she get?",
+      "opts": ["\\(4m^{2} + 5m\\)", "\\(4m^{2} + 3m\\)", "\\(8m^{2} + 5m\\)", "\\(9m^{2}\\)"],
+      "why": "The \\(m^{2}\\) terms give \\(6m^{2} - 2m^{2} = 4m^{2}\\), and the \\(m\\) terms give \\(4m + m = 5m\\). The answer \\(4m^{2} + 3m\\) comes from a sign slip: the \\(m\\) term has a plus in front, so it is added, not subtracted. \\(m^{2}\\) and \\(m\\) are not like terms, so they stay apart.",
+      "clue": "Check the sign and the power on each term before combining."
+    }
+  },
+  "mat-multiplying-dividing-algebraic-terms": {
+    "title": "Multiplying and dividing algebraic terms",
+    "card": [
+      "To multiply terms, multiply the numbers first, then the pronumerals. So \\(3a \\times 4b = 12ab\\).",
+      "Same pronumerals multiply to a power: \\(a \\times a = a^{2}\\). So \\(2x \\times 5x = 10x^{2}\\).",
+      "To divide terms, write them as a fraction and cancel common factors from the top and bottom.",
+      "Example: \\(12xy \\div 4x = \\frac{12xy}{4x}\\). Divide 12 by 4 to get 3, and cancel \\(x\\), leaving \\(3y\\)."
+    ],
+    "remember": "Multiply numbers then pronumerals. To divide, cancel like a fraction.",
+    "a": {
+      "q": "Simplify \\(5m \\times 2n\\).",
+      "opts": ["\\(10mn\\)", "\\(7mn\\)", "\\(10m + n\\)", "\\(10m^{2}n\\)"],
+      "why": "Multiply the numbers: \\(5 \\times 2 = 10\\). Then the pronumerals: \\(m \\times n = mn\\). Adding the numbers to get \\(7mn\\) mixes up multiplying with adding.",
+      "clue": "Multiply the numbers, then write the letters together."
+    },
+    "b": {
+      "d": 3,
+      "q": "Simplify \\(18ab \\div 6b\\).",
+      "opts": ["\\(3a\\)", "\\(3ab\\)", "\\(12a\\)", "\\(3b\\)"],
+      "why": "Write \\(\\frac{18ab}{6b}\\). Divide 18 by 6 to get 3, and cancel \\(b\\), leaving \\(3a\\). The answer \\(3ab\\) forgets that \\(b\\) is on the bottom as well.",
+      "clue": "Which pronumeral appears on both the top and the bottom?"
+    }
+  },
+  "mat-factorising-with-common-factor": {
+    "title": "Factorising by the highest common factor",
+    "card": [
+      "Factorising is the reverse of expanding. It writes an expression as a product: a common factor multiplied by a bracket.",
+      "The highest common factor (HCF) is the largest number, pronumeral, or product of them that divides every term. For \\(8x\\) and 12, the HCF is 4. For \\(6x^{2}\\) and \\(9x\\), it is \\(3x\\), so \\(6x^{2} + 9x = 3x(2x + 3)\\).",
+      "To factorise, find the HCF, write it outside the bracket, then divide each term by it to get what goes inside.",
+      "Example: \\(8x + 12\\). The HCF is 4. \\(8x \\div 4 = 2x\\) and \\(12 \\div 4 = 3\\), so \\(8x + 12 = 4(2x + 3)\\). Expand the answer to check: \\(4 \\times 2x + 4 \\times 3 = 8x + 12\\)."
+    ],
+    "remember": "Take out the HCF, then check by expanding the brackets.",
+    "a": {
+      "q": "Which option shows \\(12x + 18\\) fully factorised?",
+      "opts": ["\\(6(2x + 3)\\)", "\\(3(4x + 6)\\)", "\\(2(6x + 9)\\)", "\\(6(2x + 18)\\)"],
+      "why": "The HCF of 12 and 18 is 6. \\(12x \\div 6 = 2x\\) and \\(18 \\div 6 = 3\\), so the answer is \\(6(2x + 3)\\). \\(3(4x + 6)\\) is tempting, but 3 is a common factor, not the highest, so the bracket can still be factorised.",
+      "clue": "Find the largest number that divides both 12 and 18."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia takes out the HCF of \\(10x^{2} + 15x\\). What does she get?",
+      "opts": ["\\(5x(2x + 3)\\)", "\\(5(2x^{2} + 3x)\\)", "\\(x(10x + 15)\\)", "\\(5x(2x + 15)\\)"],
+      "why": "The HCF of \\(10x^{2}\\) and \\(15x\\) is \\(5x\\). \\(10x^{2} \\div 5x = 2x\\) and \\(15x \\div 5x = 3\\), so the answer is \\(5x(2x + 3)\\). \\(5(2x^{2} + 3x)\\) is tempting, but it leaves a common factor of \\(x\\) inside the bracket, so 5 is not the HCF.",
+      "clue": "Both terms share a number and a pronumeral. Take out both."
+    }
+  },
+  "mat-square-roots-cube-roots": {
+    "title": "Square roots and cube roots",
+    "card": [
+      [
+        "Square root",
+        "A square root undoes squaring. Since \\(7^{2} = 49\\), we write \\(\\sqrt{49} = 7\\). It asks: which number multiplied by itself gives 49?"
+      ],
+      [
+        "Cube root",
+        "A cube root undoes cubing. Since \\(4^{3} = 64\\), we write \\(\\sqrt[3]{64} = 4\\). It asks: which number multiplied by itself three times gives 64?"
+      ],
+      "Perfect squares are 1, 4, 9, 16, 25 and so on. Perfect cubes are 1, 8, 27, 64, 125 and so on. Their roots are whole numbers.",
+      [
+        "Estimating",
+        "For other numbers, find the two perfect squares either side. \\(\\sqrt{40}\\) lies between \\(\\sqrt{36} = 6\\) and \\(\\sqrt{49} = 7\\), so it is between 6 and 7. Cube roots work the same way with perfect cubes."
+      ]
+    ],
+    "remember": "A root undoes a power. For other numbers, trap the root between the roots of the nearest perfect squares or cubes.",
+    "a": {
+      "q": "What is the value of \\(\\sqrt[3]{125}\\)?",
+      "opts": ["\\(5\\)", "\\(25\\)", "\\(15\\)", "\\(125\\)"],
+      "why": "\\(5 \\times 5 \\times 5 = 125\\), so the cube root of 125 is 5. The option 25 comes from squaring 5 instead of cubing it, but \\(25^{3}\\) is far larger than 125.",
+      "clue": "Which number multiplied by itself three times gives 125?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia is tiling a square courtyard with an area of 70 square metres. Between which two whole numbers does the side length, \\(\\sqrt{70}\\), lie?",
+      "opts": ["8 and 9", "7 and 8", "9 and 10", "35 and 36"],
+      "why": "\\(8^{2} = 64\\) and \\(9^{2} = 81\\), and 70 is between 64 and 81. So \\(\\sqrt{70}\\) is between 8 and 9. Using 7 and 8 is tempting, but \\(8^{2} = 64\\) is still less than 70.",
+      "clue": "Find the perfect squares just below and just above 70."
+    }
+  },
+  "mat-checking-solution-by-substitution": {
+    "title": "Checking a solution by substitution",
+    "card": [
+      "To check a solution, put it back into the original equation in place of the letter. Work out the left side and the right side separately.",
+      "If both sides are equal, the solution is right. If they are not equal, the solution is wrong and you need to solve again.",
+      "Always use the original equation, not your working. Then a mistake made earlier cannot hide.",
+      [
+        "Example",
+        "Is \\(x = 6\\) a solution of \\(3x - 5 = 13\\)? Left side: \\(3 \\times 6 - 5 = 18 - 5 = 13\\). Right side: \\(13\\). Both sides are equal, so \\(x = 6\\) is correct."
+      ]
+    ],
+    "remember": "A solution is right only when both sides of the original equation come out equal.",
+    "a": {
+      "q": "Which value of \\(x\\) is a solution of \\(2x + 4 = 18\\)?",
+      "opts": ["\\(x = 7\\)", "\\(x = 11\\)", "\\(x = 9\\)", "\\(x = 5\\)"],
+      "why": "Put \\(x = 7\\) in: \\(2 \\times 7 + 4 = 14 + 4 = 18\\), which equals the right side. For \\(x = 11\\), the left side is \\(26\\), not \\(18\\). That value comes from adding 4 to 7 by mistake instead of checking.",
+      "clue": "Put each value in and see if the left side equals 18."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia solved \\(5x - 3 = 22\\) and got \\(x = 4\\). She checks it. What does she find?",
+      "opts": [
+        "The left side is 17, so her answer is wrong",
+        "Both sides are 22, so her answer is right",
+        "The left side is 17, so her answer is right",
+        "The left side is 20, so her answer is wrong"
+      ],
+      "why": "Put \\(x = 4\\) in: \\(5 \\times 4 - 3 = 20 - 3 = 17\\). The right side is \\(22\\), so the sides are not equal and the answer is wrong. The correct solution is \\(x = 5\\).",
+      "clue": "Work out \\(5 \\times 4 - 3\\) and compare it with 22."
+    }
+  },
+  "mat-simple-quadratic-equations": {
+    "title": "Simple quadratic equations",
+    "card": [
+      "An equation such as \\(x^{2} = 49\\) asks: which numbers, when squared, give 49? Squaring means multiplying a number by itself.",
+      "Both \\(7 \\times 7 = 49\\) and \\((-7) \\times (-7) = 49\\), because a negative times a negative is positive. So there are two solutions.",
+      "Take the square root of the number and write both signs: \\(x = \\sqrt{49}\\) or \\(x = -\\sqrt{49}\\). This gives \\(x = 7\\) or \\(x = -7\\).",
+      "For example, \\(x^{2} = 25\\) gives \\(x = 5\\) or \\(x = -5\\). If \\(x\\) stands for a length, only \\(x = 5\\) fits, since a length cannot be negative, but the equation still has two solutions."
+    ],
+    "remember": "A squared letter equal to a positive number has a positive and a negative solution.",
+    "a": {
+      "q": "What are the solutions of \\(x^{2} = 36\\)?",
+      "opts": [
+        "\\(x = 6\\) and \\(x = -6\\)",
+        "\\(x = 6\\) only",
+        "\\(x = 18\\) and \\(x = -18\\)",
+        "\\(x = 9\\) and \\(x = -9\\)"
+      ],
+      "why": "Both \\(6^{2}\\) and \\((-6)^{2}\\) equal 36, so there are two solutions. Giving only \\(x = 6\\) forgets that squaring a negative number also gives a positive.",
+      "clue": "Which numbers multiplied by themselves give 36?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A square garden bed in Orange has an area of 81 square metres, written \\(s^{2} = 81\\). Its side length is \\(s\\) metres. Which statement is correct?",
+      "opts": [
+        "The equation has two solutions, but only \\(s = 9\\) is a length",
+        "The equation has only one solution, which is \\(s = 9\\)",
+        "The equation has two solutions, and both can be lengths",
+        "The equation has two solutions: \\(s = 40.5\\) and \\(s = -40.5\\)"
+      ],
+      "why": "The equation \\(s^{2} = 81\\) has two solutions, \\(s = 9\\) and \\(s = -9\\). A length cannot be negative, so only \\(s = 9\\) fits the garden. It is still wrong to say the equation has only one solution, because \\((-9)^{2} = 81\\) too.",
+      "clue": "Solve the equation first, then ask which answers a length can be."
+    }
+  },
+  "mat-cartesian-plane": {
+    "title": "The Cartesian plane",
+    "card": [
+      "The Cartesian plane has a horizontal x-axis and a vertical y-axis. They cross at the origin, \\((0, 0)\\).",
+      "A point is written \\((x, y)\\). Go across first (right is positive, left is negative). Then go up or down (up is positive, down is negative).",
+      "The axes split the plane into four quadrants. Quadrant 1 is top right. Then go anticlockwise: quadrant 2 is top left, quadrant 3 is bottom left, quadrant 4 is bottom right.",
+      "The signs of the coordinates name the quadrant. For example, \\((-4, 3)\\) has a negative \\(x\\) and a positive \\(y\\), so it is in quadrant 2."
+    ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "A Cartesian plane with the point \\((3, -2)\\) marked. It is 3 units right of the origin and 2 units below the x-axis.",
+        "x": {"min": -5, "max": 5, "label": "\\(x\\)", "step": 1},
+        "y": {"min": -5, "max": 5, "label": "\\(y\\)", "step": 1},
+        "grid": true,
+        "equal": true,
+        "items": [{"type": "point", "at": [3, -2], "label": "\\((3, -2)\\)", "pos": "above-right"}]
+      }
+    },
+    "remember": "Write \\((x, y)\\): across first, then up or down. The signs tell you the quadrant.",
+    "a": {
+      "q": "Which point is 5 units to the left of the origin and 2 units up?",
+      "opts": ["\\((-5, 2)\\)", "\\((5, -2)\\)", "\\((2, -5)\\)", "\\((-2, 5)\\)"],
+      "why": "Left is negative for \\(x\\) and up is positive for \\(y\\), and \\(x\\) is written first, so the point is \\((-5, 2)\\). \\((-2, 5)\\) is tempting but swaps the order of the coordinates.",
+      "clue": "Across comes first, and left is negative."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia plots the point \\((-6, -1)\\) on a Cartesian plane. Which quadrant is it in?",
+      "opts": ["Quadrant 3", "Quadrant 1", "Quadrant 2", "Quadrant 4"],
+      "why": "Both coordinates are negative, so the point is left of the y-axis and below the x-axis. That is quadrant 3, the bottom left. Quadrant 2 is wrong because it needs a positive \\(y\\) value.",
+      "clue": "Check the sign of each coordinate, then count anticlockwise from the top right."
+    }
+  },
+  "mat-perimeter-shapes-composite-figures": {
+    "title": "Perimeter of composite figures",
+    "card": [
+      "Perimeter is the distance around the outside of a shape. Add the lengths of all its outside edges, and give the answer in units of length such as cm or m.",
+      "A rectangle with length \\(l\\) and width \\(w\\) has two sides of each length. Its perimeter is \\(2l + 2w\\).",
+      "A composite figure is made from simpler shapes joined together. Find any missing side first. In an L-shape, the two shorter sides that run one way add up to the long side opposite them.",
+      "Example: an L-shape is 10 cm along the bottom and 6 cm up the right. The top is 4 cm and the left is 3 cm. The missing sides are \\(6 - 3 = 3\\) cm and \\(10 - 4 = 6\\) cm, so the perimeter is \\(10 + 6 + 4 + 3 + 6 + 3 = 32\\) cm."
+    ],
+    "remember": "Find the missing sides first, then add every outside edge once.",
+    "a": {
+      "q": "A rectangular garden bed is 7 m long and 3 m wide. What is its perimeter?",
+      "opts": ["20 m", "10 m", "21 m", "13 m"],
+      "why": "A rectangle has two lengths and two widths, so \\(7 + 3 + 7 + 3 = 20\\) m. Adding only one length and one width gives 10 m, which is only half the distance around.",
+      "clue": "Count every side of the rectangle, not just two."
+    },
+    "b": {
+      "d": 3,
+      "q": "An L-shaped courtyard in Orange is 12 m along the bottom and 8 m up the right side. Its top edge is 5 m and its left side is 3 m. The other two sides are not labelled. What is its perimeter?",
+      "opts": ["40 m", "28 m", "35 m", "61 m"],
+      "why": "The missing vertical side is \\(8 - 3 = 5\\) m and the missing horizontal side is \\(12 - 5 = 7\\) m. Then \\(12 + 8 + 5 + 5 + 7 + 3 = 40\\) m. Adding only the four labelled sides gives 28 m, which leaves out two outside edges.",
+      "clue": "Use the long sides to find the two unlabelled sides."
+    }
+  },
+  "mat-parts-circle": {
+    "title": "Parts of a circle",
+    "card": [
+      "The centre is the middle point, the same distance from every point on the circle. The circumference is the distance around the circle, and an arc is part of it.",
+      "A radius goes from the centre to the circle. A diameter goes through the centre from one side to the other, so it is twice the radius: \\(d = 2r\\).",
+      "A chord is a straight line joining two points on the circle. A tangent is a straight line that touches the circle at one point only.",
+      "A sector is the region between two radii and an arc, like a pizza slice. A segment is the region between a chord and an arc."
+    ],
+    "remember": "Lines: radius, diameter, chord, tangent. Regions: sector and segment. And \\(d = 2r\\).",
+    "a": {
+      "q": "A circle has a radius of 6 cm. What is its diameter?",
+      "opts": ["12 cm", "3 cm", "6 cm", "36 cm"],
+      "why": "The diameter is twice the radius, so \\(2 \\times 6 = 12\\) cm. Halving the radius to get 3 cm mixes up the radius and the diameter.",
+      "clue": "The diameter goes all the way across, through the centre."
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia cuts a round pizza along a straight line that does not pass through the centre. The smaller piece between the cut and the crust is which part of a circle?",
+      "opts": ["A segment", "A sector", "A tangent", "A diameter"],
+      "why": "The straight cut joins two points on the circle, so it is a chord, and the region between a chord and an arc is a segment. A sector would need two cuts from the centre, each along a radius.",
+      "clue": "The cut is a chord. What region does a chord make?"
+    }
+  },
+  "mat-circumference-circle-nsw": {
+    "title": "Circumference of a circle",
+    "card": [
+      "The circumference is the distance around a circle. For every circle, the circumference divided by the diameter is the same number. That number is pi, written \\(\\pi\\).",
+      "Pi is a little more than 3. We use \\(\\pi \\approx 3.14\\), or the \\(\\pi\\) button on a calculator for a more exact answer.",
+      ["Diameter given", "Use \\(C = \\pi \\times d\\). Multiply the diameter by \\(\\pi\\)."],
+      [
+        "Radius given",
+        "Use \\(C = 2 \\times \\pi \\times r\\). Multiply the radius by 2 and by \\(\\pi\\). Example: for a radius of 5 cm, \\(C = 2 \\times \\pi \\times 5\\), which is \\(10\\pi \\approx 31.4\\) cm."
+      ]
+    ],
+    "remember": "Circumference is \\(\\pi\\) times the diameter, or \\(2\\) times \\(\\pi\\) times the radius.",
+    "a": {
+      "q": "A round pond has a diameter of 10 m. Using \\(\\pi \\approx 3.14\\), what is its circumference?",
+      "opts": ["31.4 m", "62.8 m", "314 m", "78.5 m"],
+      "why": "Use \\(C = \\pi \\times d\\), so \\(C = 3.14 \\times 10 = 31.4\\) m. The answer 62.8 m comes from using \\(C = 2 \\times \\pi \\times r\\) with the diameter in place of the radius.",
+      "clue": "The diameter is given, so use the diameter formula."
+    },
+    "b": {
+      "d": 3,
+      "q": "A round clock has a radius of 20 cm. Ribbon is wrapped once around its edge. Using \\(\\pi \\approx 3.14\\), how much ribbon is needed?",
+      "opts": ["125.6 cm", "62.8 cm", "1256 cm", "251.2 cm"],
+      "why": "Use \\(C = 2 \\times \\pi \\times r\\), so \\(C = 2 \\times 3.14 \\times 20 = 125.6\\) cm. The answer 62.8 cm comes from \\(\\pi \\times r\\), which skips multiplying by 2.",
+      "clue": "The distance around the edge is the circumference. Is 20 cm the radius or the diameter?"
+    }
+  },
+  "mat-hypotenuse-pythagoras-theorem": {
+    "title": "The hypotenuse and Pythagoras' theorem",
+    "card": [
+      "In a right-angled triangle, the hypotenuse is the side opposite the right angle. It is always the longest side.",
+      "Pythagoras' theorem links the three sides. The square on the hypotenuse equals the sum of the squares on the other two sides.",
+      "If the hypotenuse is \\(c\\) and the other sides are \\(a\\) and \\(b\\), then \\(c^{2} = a^{2} + b^{2}\\).",
+      "For example, a triangle has shorter sides 3 and 4, and hypotenuse 5. Check: \\(3^{2} + 4^{2} = 9 + 16 = 25\\), and \\(5^{2} = 25\\)."
+    ],
+    "remember": "The hypotenuse faces the right angle, and its square equals the sum of the other two squares.",
+    "a": {
+      "q": "A triangle has a right angle at corner B. Which side lies directly across from corner B, and so is the hypotenuse?",
+      "opts": [
+        "The side joining the other two corners",
+        "A side that touches corner B",
+        "The shortest side of the triangle",
+        "The side drawn along the bottom"
+      ],
+      "why": "The hypotenuse is opposite the right angle, so it joins the two corners that are not the right angle. The sides touching corner B are the two shorter sides. Which side sits at the bottom depends only on how the triangle is turned.",
+      "clue": "Find the right angle, then look across the triangle."
+    },
+    "b": {
+      "d": 3,
+      "q": "A right-angled triangle has sides 5, 12 and 13. Which equation is correct for it?",
+      "opts": [
+        "\\(13^{2} = 5^{2} + 12^{2}\\)",
+        "\\(12^{2} = 5^{2} + 13^{2}\\)",
+        "\\(5^{2} = 12^{2} + 13^{2}\\)",
+        "\\(13 = 5 + 12\\)"
+      ],
+      "why": "The hypotenuse is the longest side, 13, so its square is on its own: \\(169 = 25 + 144\\). The equation \\(13 = 5 + 12\\) adds the sides without squaring them, and \\(5 + 12 = 17\\), not 13.",
+      "clue": "Put the longest side on its own, and square every side."
+    }
+  },
+  "mat-testing-right-angle": {
+    "title": "Testing for a right angle",
+    "card": [
+      "If a triangle is right-angled, the square of its longest side equals the sum of the squares of the other two sides. The reverse is also true.",
+      "To test a triangle, find the longest side and square it. Then square the other two sides and add them. If the two results are equal, there is a right angle. If not, there is none.",
+      "Example: sides 7, 24 and 25. Longest side: \\(25^{2} = 625\\). Others: \\(7^{2} + 24^{2} = 49 + 576 = 625\\). They match, so the triangle is right-angled.",
+      "Three whole numbers that pass this test are called a Pythagorean triad. Two common ones are 3, 4, 5 and 5, 12, 13."
+    ],
+    "remember": "Square the longest side and compare it with the sum of the other two squares. Equal means a right angle.",
+    "a": {
+      "q": "A triangle has sides 9 cm, 12 cm and 15 cm. Which statement is correct?",
+      "opts": [
+        "It is right-angled, as \\(9^{2} + 12^{2} = 15^{2}\\)",
+        "It is not right-angled, as \\(9 + 12 \\ne 15\\)",
+        "It is not right-angled, as \\(9^{2} + 15^{2} \\ne 12^{2}\\)",
+        "It is right-angled, as \\(9 + 12 > 15\\)"
+      ],
+      "why": "\\(9^{2} + 12^{2} = 81 + 144 = 225\\), and \\(15^{2} = 225\\). The squares match, so there is a right angle. Adding the sides without squaring them does not test for a right angle.",
+      "clue": "Square each side first, and start with the longest."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya marks out a triangle with rope to check a corner of a shed slab. The sides are 8 m, 15 m and 17 m. Does the triangle have a right angle?",
+      "opts": [
+        "Yes, as \\(8^{2} + 15^{2} = 17^{2}\\)",
+        "No, as \\(8^{2} + 17^{2} \\ne 15^{2}\\)",
+        "No, as \\(15^{2} + 17^{2} \\ne 8^{2}\\)",
+        "Yes, as \\(8 + 15 > 17\\)"
+      ],
+      "why": "The longest side is 17, and \\(17^{2} = 289\\). The other two give \\(64 + 225 = 289\\), so the squares match and there is a right angle. The statement \\(8^{2} + 17^{2} \\ne 15^{2}\\) is true, but it compares the wrong side: the longest side is the one that must be squared on its own.",
+      "clue": "Which side is the longest? That is the one to square on its own."
+    }
+  },
+  "mat-pythagoras-theorem-problems": {
+    "title": "Pythagoras' theorem in problems",
+    "card": [
+      "For a worded problem, draw a diagram first. Label the lengths you know and mark the unknown with a letter.",
+      "Look for a right-angled triangle. A ladder on a wall, the ground and the wall make one, with the ladder as the hypotenuse. A rectangle's diagonal cuts it into two.",
+      "Decide whether the unknown is the hypotenuse or a shorter side. Then use \\(c^{2} = a^{2} + b^{2}\\), where \\(c\\) is the hypotenuse.",
+      "Example: a rectangle is 9 m by 12 m. Its diagonal is the hypotenuse, so \\(d^{2} = 81 + 144 = 225\\), and \\(d = 15\\) m."
+    ],
+    "remember": "Draw the diagram, find the right-angled triangle, then decide if the unknown is the hypotenuse.",
+    "a": {
+      "q": "A phone screen is 6 cm wide and 8 cm tall. How long is its diagonal?",
+      "opts": ["10 cm", "14 cm", "7 cm", "28 cm"],
+      "why": "The diagonal is the hypotenuse, so \\(d^{2} = 6^{2} + 8^{2} = 100\\), and \\(d = 10\\) cm. Adding 6 and 8 to get 14 forgets to square and then take the square root.",
+      "clue": "The diagonal splits the screen into two right-angled triangles."
+    },
+    "b": {
+      "d": 3,
+      "q": "Leo leans a 5 m ladder against a wall. Its foot is 3 m from the wall on flat ground. How high up the wall does it reach?",
+      "opts": ["4 m", "8 m", "\\(\\sqrt{34}\\) m", "2 m"],
+      "why": "The ladder is the hypotenuse, so the height is a shorter side: \\(h^{2} = 5^{2} - 3^{2} = 16\\), and \\(h = 4\\) m. Adding the squares to get \\(\\sqrt{34}\\) treats the ladder as a shorter side.",
+      "clue": "Is the ladder the hypotenuse or a shorter side?"
+    }
+  },
+  "mat-area-rectangles-triangles-parallelograms": {
+    "title": "Area of rectangles, triangles and parallelograms",
+    "card": [
+      [
+        "Area",
+        "Area is the amount of flat space inside a shape. It is measured in square units, such as square centimetres (\\(\\text{cm}^{2}\\))."
+      ],
+      [
+        "Rectangle",
+        "Area is length times width: \\(A = l \\times w\\). A rectangle 8 cm long and 5 cm wide has area \\(8 \\times 5 = 40\\ \\text{cm}^{2}\\)."
+      ],
+      [
+        "Parallelogram",
+        "Area is base times perpendicular height: \\(A = b \\times h\\). The height is measured at right angles to the base, not along the slanted side."
+      ],
+      [
+        "Triangle",
+        "Area is half of base times perpendicular height: \\(A = \\frac{1}{2} \\times b \\times h\\). With base 10 cm and height 6 cm, \\(A = \\frac{1}{2} \\times 10 \\times 6 = 30\\ \\text{cm}^{2}\\)."
+      ]
+    ],
+    "remember": "Use the perpendicular height. A triangle is half of base times height.",
+    "a": {
+      "q": "A triangle has a base of 12 cm and a perpendicular height of 5 cm. What is its area?",
+      "opts": [
+        "\\(30\\ \\text{cm}^{2}\\)",
+        "\\(60\\ \\text{cm}^{2}\\)",
+        "\\(17\\ \\text{cm}^{2}\\)",
+        "\\(34\\ \\text{cm}^{2}\\)"
+      ],
+      "why": "\\(A = \\frac{1}{2} \\times 12 \\times 5 = 30\\ \\text{cm}^{2}\\). The answer \\(60\\ \\text{cm}^{2}\\) is tempting, but it leaves out the half.",
+      "clue": "Multiply base by height, then take half."
+    },
+    "b": {
+      "d": 3,
+      "q": "A parallelogram-shaped garden bed has a base of 9 m. Its slanted side is 6 m and its perpendicular height is 4 m. What is its area?",
+      "opts": ["\\(36\\ \\text{m}^{2}\\)", "\\(54\\ \\text{m}^{2}\\)", "\\(18\\ \\text{m}^{2}\\)", "\\(27\\ \\text{m}^{2}\\)"],
+      "why": "Area is base times perpendicular height: \\(9 \\times 4 = 36\\ \\text{m}^{2}\\). The slanted side of 6 m is not the height, so \\(9 \\times 6 = 54\\) is wrong.",
+      "clue": "Which length meets the base at a right angle?"
+    }
+  },
+  "mat-area-sectors-composite-shapes": {
+    "title": "Area of sectors and composite shapes",
+    "card": [
+      [
+        "Sector",
+        "A sector is a slice of a circle, cut by two radii. Its area is the fraction \\(\\frac{\\text{angle}}{360}\\) of the whole circle's area \\(\\pi r^{2}\\)."
+      ],
+      [
+        "Example",
+        "A sector has radius 6 cm and angle \\(90^{\\circ}\\). The circle's area is \\(\\pi \\times 6^{2} = 36\\pi\\). The sector is \\(\\frac{90}{360} = \\frac{1}{4}\\) of that, which is \\(9\\pi \\approx 28.3\\) cm\\(^{2}\\)."
+      ],
+      [
+        "Composite shape",
+        "A composite shape is made of simple shapes joined together. Split it into rectangles, triangles, circles or sectors, find each area, then add them."
+      ],
+      [
+        "Subtracting",
+        "If a shape has a piece cut out, such as a hole, find the area of the whole shape and subtract the area of the piece removed."
+      ]
+    ],
+    "remember": "Sector: the angle fraction of the circle. Composite: split it, then add or subtract.",
+    "a": {
+      "q": "A sector has radius 10 cm and angle \\(72^{\\circ}\\). What fraction of the circle's area is the sector?",
+      "opts": ["\\(\\frac{1}{5}\\)", "\\(\\frac{1}{4}\\)", "\\(\\frac{72}{100}\\)", "\\(\\frac{1}{3}\\)"],
+      "why": "The fraction is \\(\\frac{72}{360}\\), which simplifies to \\(\\frac{1}{5}\\). The option \\(\\frac{72}{100}\\) treats the angle like a percentage, but a full circle is \\(360^{\\circ}\\), not 100. The radius does not change the fraction.",
+      "clue": "Divide the angle by the angle in a full circle."
+    },
+    "b": {
+      "d": 3,
+      "q": "A rectangular lawn is 8 m by 5 m. A circular pond of radius 1 m is cut out of it. Which gives the lawn's area, in square metres?",
+      "opts": ["\\(40 - \\pi\\)", "\\(40 + \\pi\\)", "\\(40 - 2\\pi\\)", "\\(40 - 4\\pi\\)"],
+      "why": "The rectangle is \\(8 \\times 5 = 40\\). The pond is \\(\\pi \\times 1^{2} = \\pi\\), and it is removed, so subtract it. \\(40 + \\pi\\) adds the pond, but the pond is taken away, and \\(40 - 4\\pi\\) uses the diameter 2 in place of the radius.",
+      "clue": "The pond is a piece taken out of the rectangle."
+    }
+  },
+  "mat-converting-units-area": {
+    "title": "Converting units of area",
+    "card": [
+      "Area units are squared, so the length conversion is squared too. Since \\(1 \\text{ cm} = 10 \\text{ mm}\\), a square \\(1 \\text{ cm}\\) by \\(1 \\text{ cm}\\) is \\(10 \\text{ mm}\\) by \\(10 \\text{ mm}\\). So \\(1 \\text{ cm}^{2} = 100 \\text{ mm}^{2}\\).",
+      "In the same way, \\(1 \\text{ m} = 100 \\text{ cm}\\) gives \\(1 \\text{ m}^{2} = 10{,}000 \\text{ cm}^{2}\\). Also, \\(1 \\text{ km} = 1000 \\text{ m}\\) gives \\(1 \\text{ km}^{2} = 1{,}000{,}000 \\text{ m}^{2}\\). A hectare (ha) is a unit for land, and \\(1 \\text{ ha} = 10{,}000 \\text{ m}^{2}\\).",
+      "To go to a smaller unit, multiply. To go to a larger unit, divide. Example: \\(3 \\text{ m}^{2} = 3 \\times 10{,}000 = 30{,}000 \\text{ cm}^{2}\\).",
+      "Choose a unit that suits the size. Use \\(\\text{mm}^{2}\\) or \\(\\text{cm}^{2}\\) for small things such as a stamp, \\(\\text{m}^{2}\\) for a room, ha for a farm or a park, and \\(\\text{km}^{2}\\) for a large region."
+    ],
+    "remember": "Square the length conversion: \\(1 \\text{ cm}^{2} = 100 \\text{ mm}^{2}\\), and \\(1 \\text{ m}^{2} = 10{,}000 \\text{ cm}^{2}\\).",
+    "a": {
+      "q": "Which is the same as \\(5 \\text{ cm}^{2}\\)?",
+      "opts": [
+        "\\(500 \\text{ mm}^{2}\\)",
+        "\\(50 \\text{ mm}^{2}\\)",
+        "\\(5000 \\text{ mm}^{2}\\)",
+        "\\(0.5 \\text{ mm}^{2}\\)"
+      ],
+      "why": "Going from \\(\\text{cm}^{2}\\) to the smaller \\(\\text{mm}^{2}\\), multiply by 100: \\(5 \\times 100 = 500\\). Multiplying by 10 gives 50, which is the length conversion and forgets that area is squared.",
+      "clue": "How many \\(\\text{mm}^{2}\\) are in \\(1 \\text{ cm}^{2}\\)?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's farm in Dubbo has an area of \\(80{,}000 \\text{ m}^{2}\\). What is this in hectares?",
+      "opts": ["8 ha", "80 ha", "0.8 ha", "800 ha"],
+      "why": "One hectare is \\(10{,}000 \\text{ m}^{2}\\), so divide: \\(80{,}000 \\div 10{,}000 = 8\\). Going to a larger unit means dividing, so multiplying would give a much bigger number, which is wrong.",
+      "clue": "You are changing to a larger unit, so divide."
+    }
+  },
+  "mat-views-solids": {
+    "title": "Views of solids",
+    "card": [
+      "A solid looks different from different sides. We draw three views: the front view, the side view and the top view.",
+      "Each view shows what you see when you look straight at the solid from that direction. The front view is from the front, the side view is from one side, and the top view is from directly above.",
+      "For a solid built from cubes, draw each cube face you can see as a square. A square in the top view marks a column of cubes. The front view shows the tallest column at each place across, as shorter columns behind it are hidden.",
+      [
+        "Example",
+        "A rectangular prism is 4 cubes long, 2 cubes wide and 3 cubes tall. Its top view is a rectangle 4 squares by 2 squares. Its front view is a rectangle 4 squares by 3 squares."
+      ]
+    ],
+    "remember": "Each view is a flat picture of what you see looking straight at the solid from one direction.",
+    "a": {
+      "q": "A rectangular prism is 5 cubes long, 2 cubes wide and 3 cubes tall. What shape is its top view, with the length across the page?",
+      "opts": [
+        "A rectangle 5 squares by 2 squares",
+        "A rectangle 5 squares by 3 squares",
+        "A rectangle 2 squares by 3 squares",
+        "A rectangle 3 squares by 2 squares"
+      ],
+      "why": "The top view is what you see from directly above, so it shows the length and the width: 5 by 2. The height of 3 only shows up in the front and side views. The option with 5 by 3 is the front view.",
+      "clue": "Looking from above, which two measurements can you see?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Jonah puts 4 cubes in a row along the ground. Then he stacks 2 more cubes, one on each of the two cubes at the left end, as seen from the front. What is the front view?",
+      "opts": [
+        "4 squares in the bottom row, 2 squares above on the left",
+        "4 squares in the bottom row, 2 squares above on the right",
+        "4 squares in the bottom row, 4 squares above them",
+        "2 squares in the bottom row, 4 squares above them"
+      ],
+      "why": "The bottom row is 4 cubes long, so the front view has 4 squares in a row. The 2 extra cubes sit on the left end as seen from the front, so they appear above on the left. Putting them on the right shows the solid from the back, not the front.",
+      "clue": "Picture standing in front of the solid. Where does the second layer sit?"
+    }
+  },
+  "mat-volume-prism": {
+    "title": "Volume of a prism",
+    "card": [
+      "Volume is the amount of space inside a solid. It is measured in cubic units, such as \\(\\text{cm}^{3}\\).",
+      "A right prism has the same cross-section all the way along its length. Volume \\(=\\) area of cross-section \\(\\times\\) length (or height). In symbols, \\(V = Ah\\), where \\(A\\) is the area of the cross-section and \\(h\\) is the length or height of the prism. It works for any prism.",
+      [
+        "Rectangular prism",
+        "The cross-section is a rectangle, so volume \\(=\\) length \\(\\times\\) width \\(\\times\\) height."
+      ],
+      [
+        "Triangular prism",
+        "The cross-section is a triangle. Example: triangle area \\(6 \\text{ cm}^{2}\\) and length 10 cm gives volume \\(6 \\times 10 = 60 \\text{ cm}^{3}\\)."
+      ]
+    ],
+    "remember": "For any prism, \\(V = Ah\\): cross-section area times length or height, in cubic units.",
+    "a": {
+      "q": "A prism has a rectangular cross-section 5 cm by 4 cm. It is 3 cm high. What is its volume?",
+      "opts": ["\\(60 \\text{ cm}^{3}\\)", "\\(12 \\text{ cm}^{3}\\)", "\\(47 \\text{ cm}^{3}\\)", "\\(94 \\text{ cm}^{3}\\)"],
+      "why": "The cross-section area is \\(5 \\times 4 = 20 \\text{ cm}^{2}\\). Then \\(V = Ah = 20 \\times 3 = 60 \\text{ cm}^{3}\\). Adding the lengths to get 12 is a common mistake, but volume needs multiplying.",
+      "clue": "Multiply all three measurements."
+    },
+    "b": {
+      "d": 3,
+      "q": "A triangular prism has an end of area \\(2 \\text{ m}^{2}\\) and a length of 3 m. Use \\(V = Ah\\) to find its volume.",
+      "opts": ["\\(6 \\text{ m}^{3}\\)", "\\(5 \\text{ m}^{3}\\)", "\\(3 \\text{ m}^{3}\\)", "\\(12 \\text{ m}^{3}\\)"],
+      "why": "The triangular end is the cross-section, so \\(A = 2\\) and \\(h = 3\\). Then \\(V = 2 \\times 3 = 6 \\text{ m}^{3}\\). Adding 2 and 3 gives 5, which is not how volume works.",
+      "clue": "The triangle's area is already worked out."
+    }
+  },
+  "mat-volume-capacity-units": {
+    "title": "Volume and capacity units",
+    "card": [
+      "Volume is the space a solid takes up, in cubic units such as \\(\\text{cm}^{3}\\) and \\(\\text{m}^{3}\\). Capacity is how much a container holds, in units such as mL and L.",
+      "\\(1 \\text{ cm}^{3} = 1\\) mL, and \\(1 \\text{ m}^{3} = 1000\\) L. Also \\(1\\) L \\(= 1000\\) mL, so \\(1\\) L \\(= 1000 \\text{ cm}^{3}\\).",
+      "Cubic units change by more than length units do. Since \\(1\\) m \\(= 100\\) cm, \\(1 \\text{ m}^{3}\\) is \\(100 \\times 100 \\times 100\\), which is \\(1{,}000{,}000 \\text{ cm}^{3}\\).",
+      "For example, a jug holds 3 L. Since \\(1\\) L \\(= 1000\\) mL, it holds \\(3 \\times 1000 = 3000\\) mL, which is \\(3000 \\text{ cm}^{3}\\)."
+    ],
+    "remember": "Litres link to cubic units through mL and \\(\\text{m}^{3}\\). A cubic unit changes by the length factor cubed.",
+    "a": {
+      "q": "A fish tank holds 12 L of water. What is this in \\(\\text{cm}^{3}\\)?",
+      "opts": [
+        "\\(12{,}000 \\text{ cm}^{3}\\)",
+        "\\(1200 \\text{ cm}^{3}\\)",
+        "\\(120 \\text{ cm}^{3}\\)",
+        "\\(12 \\text{ cm}^{3}\\)"
+      ],
+      "why": "\\(1\\) L \\(= 1000\\) mL and \\(1\\) mL \\(= 1 \\text{ cm}^{3}\\), so \\(12\\) L is \\(12 \\times 1000 = 12{,}000 \\text{ cm}^{3}\\). Multiplying by only 100 would give 1200, which treats the litre like a length conversion.",
+      "clue": "Change litres to millilitres first."
+    },
+    "b": {
+      "d": 3,
+      "q": "A swimming pool has a volume of \\(45 \\text{ m}^{3}\\). How many litres of water does it hold when full?",
+      "opts": ["45,000 L", "4500 L", "450 L", "45,000,000 L"],
+      "why": "\\(1 \\text{ m}^{3} = 1000\\) L, so the pool holds \\(45 \\times 1000 = 45{,}000\\) L. The option 45,000,000 comes from using \\(1{,}000{,}000 \\text{ cm}^{3}\\) in each \\(\\text{m}^{3}\\), which gives the volume in \\(\\text{cm}^{3}\\), not in litres.",
+      "clue": "One cubic metre holds 1000 litres."
+    }
+  },
+  "mat-naming-angles-geometry-notation": {
+    "title": "Naming angles and geometry notation",
+    "card": [
+      "An angle is named with three letters, and the middle letter is the vertex, where the two arms meet. In \\(\\angle ABC\\), the vertex is \\(B\\), and the arms are \\(BA\\) and \\(BC\\).",
+      "Marks on a diagram show what is equal or parallel. The same number of small dashes on two sides means those sides are equal in length. The same number of small arcs on two angles means those angles are equal. Matching arrowheads on two lines mean the lines are parallel.",
+      [
+        "Types by size",
+        "Acute is less than \\(90^{\\circ}\\). Right is exactly \\(90^{\\circ}\\). Obtuse is more than \\(90^{\\circ}\\) and less than \\(180^{\\circ}\\)."
+      ],
+      [
+        "Larger angles",
+        "Straight is exactly \\(180^{\\circ}\\). Reflex is more than \\(180^{\\circ}\\) and less than \\(360^{\\circ}\\). A revolution is exactly \\(360^{\\circ}\\)."
+      ]
+    ],
+    "remember": "The middle letter is the vertex. Equal marks match, and angle names depend on size.",
+    "a": {
+      "q": "In \\(\\angle PQR\\), which letter is the vertex?",
+      "opts": ["\\(Q\\)", "\\(P\\)", "\\(R\\)", "\\(P\\) and \\(R\\) together"],
+      "why": "The vertex is always the middle letter, so it is \\(Q\\). \\(P\\) and \\(R\\) are points on the two arms, and the first letter is not the vertex.",
+      "clue": "Look at the letter in the middle."
+    },
+    "b": {
+      "d": 3,
+      "q": "Jai measures an angle in a roof frame at \\(215^{\\circ}\\). What type of angle is it?",
+      "opts": ["Reflex", "Obtuse", "Straight", "Revolution"],
+      "why": "An angle of \\(215^{\\circ}\\) is more than \\(180^{\\circ}\\) and less than \\(360^{\\circ}\\), so it is reflex. It is not obtuse, because obtuse angles stop below \\(180^{\\circ}\\).",
+      "clue": "Compare \\(215^{\\circ}\\) with \\(180^{\\circ}\\) and \\(360^{\\circ}\\)."
+    }
+  },
+  "mat-angles-at-point-line": {
+    "title": "Angles at a point and on a line",
+    "card": [
+      [
+        "On a line",
+        "Angles on a straight line add to \\(180^{\\circ}\\). If one angle is \\(50^{\\circ}\\), the angle beside it on the line is \\(180^{\\circ} - 50^{\\circ} = 130^{\\circ}\\)."
+      ],
+      [
+        "At a point",
+        "Angles around a point add to \\(360^{\\circ}\\), a full turn. If three angles at a point are \\(100^{\\circ}\\), \\(120^{\\circ}\\) and \\(90^{\\circ}\\), the fourth is \\(360^{\\circ} - 310^{\\circ} = 50^{\\circ}\\)."
+      ],
+      [
+        "Vertically opposite",
+        "When two straight lines cross, the angles facing each other across the crossing point are equal. They are called vertically opposite angles."
+      ],
+      "The two lines make four angles. Each angle and its neighbour lie on a straight line, so they add to \\(180^{\\circ}\\)."
+    ],
+    "remember": "On a line, angles add to \\(180^{\\circ}\\). At a point, they add to \\(360^{\\circ}\\). Vertically opposite angles are equal.",
+    "a": {
+      "q": "Two angles lie on a straight line. One is \\(65^{\\circ}\\). What is the other?",
+      "opts": ["\\(115^{\\circ}\\)", "\\(295^{\\circ}\\)", "\\(25^{\\circ}\\)", "\\(65^{\\circ}\\)"],
+      "why": "Angles on a straight line add to \\(180^{\\circ}\\), so the other is \\(180^{\\circ} - 65^{\\circ} = 115^{\\circ}\\). Using \\(360^{\\circ}\\) gives \\(295^{\\circ}\\), but that rule is for angles at a point, not on a line.",
+      "clue": "A straight line is half a full turn."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two straight lines cross. One of the four angles is \\(40^{\\circ}\\). What is the size of the angle beside it?",
+      "opts": ["\\(140^{\\circ}\\)", "\\(40^{\\circ}\\)", "\\(320^{\\circ}\\)", "\\(50^{\\circ}\\)"],
+      "why": "The angle beside it lies on the same straight line, so the two add to \\(180^{\\circ}\\): \\(180^{\\circ} - 40^{\\circ} = 140^{\\circ}\\). The angle equal to \\(40^{\\circ}\\) is the vertically opposite one, which faces it across the crossing point, not the one beside it.",
+      "clue": "The angle beside it shares a straight line with it."
+    }
+  },
+  "mat-angles-parallel-lines": {
+    "title": "Angles and parallel lines",
+    "card": [
+      [
+        "Transversal",
+        "A transversal is a line that crosses two or more other lines. When it crosses two parallel lines, it makes eight angles, and some of them are linked."
+      ],
+      [
+        "Corresponding",
+        "angles in matching positions at the two crossings, such as both above the line and both to the right of the transversal (an F shape). They are equal."
+      ],
+      [
+        "Alternate",
+        "angles on opposite sides of the transversal and between the parallel lines (a Z shape). They are equal."
+      ],
+      [
+        "Co-interior",
+        "angles on the same side of the transversal and between the parallel lines (a C shape). They add to \\(180^{\\circ}\\). Example: if one is \\(70^{\\circ}\\), the other is \\(180^{\\circ} - 70^{\\circ} = 110^{\\circ}\\)."
+      ]
+    ],
+    "remember": "Parallel lines: F angles are equal, Z angles are equal, C angles add to \\(180^{\\circ}\\).",
+    "a": {
+      "q": "Two parallel lines are cut by a transversal. Between the lines, on the same side of the transversal, one angle is \\(65^{\\circ}\\). What is the other angle on that side?",
+      "opts": ["\\(115^{\\circ}\\)", "\\(65^{\\circ}\\)", "\\(25^{\\circ}\\)", "\\(295^{\\circ}\\)"],
+      "why": "These are co-interior angles, which add to \\(180^{\\circ}\\), so the other is \\(180^{\\circ} - 65^{\\circ} = 115^{\\circ}\\). The answer \\(65^{\\circ}\\) treats them as equal, which is true for corresponding and alternate angles but not co-interior angles.",
+      "clue": "Same side and between the lines makes a C shape."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two parallel fences are crossed by a path. One angle between the path and the upper fence is \\(48^{\\circ}\\). The alternate angle is between the path and the lower fence. What is its size?",
+      "opts": ["\\(48^{\\circ}\\)", "\\(132^{\\circ}\\)", "\\(42^{\\circ}\\)", "\\(312^{\\circ}\\)"],
+      "why": "Alternate angles between parallel lines are equal, so the angle is \\(48^{\\circ}\\). The answer \\(132^{\\circ}\\) comes from using the co-interior rule, which applies to angles on the same side of the path, not opposite sides.",
+      "clue": "Alternate angles make a Z shape."
+    }
+  },
+  "mat-giving-reasons-angles": {
+    "title": "Giving reasons for angles",
+    "card": [
+      "To find an unknown angle, work in steps. Write each step as a statement, its working and a reason in brackets. The reason names the angle rule you used.",
+      "The reasons you can use are: angles on a straight line add to \\(180^{\\circ}\\), angles at a point add to \\(360^{\\circ}\\), vertically opposite angles are equal, and for parallel lines corresponding angles are equal, alternate angles are equal and co-interior angles add to \\(180^{\\circ}\\).",
+      "For example, AOB is a straight line and \\(\\angle AOC = 110^{\\circ}\\). Then \\(\\angle COB = 180^{\\circ} - 110^{\\circ} = 70^{\\circ}\\) (angles on a straight line add to \\(180^{\\circ}\\)).",
+      "To show two lines are parallel, work backwards. They are parallel if a transversal makes equal corresponding angles, equal alternate angles, or co-interior angles that add to \\(180^{\\circ}\\). State the angles, then the rule."
+    ],
+    "remember": "Every step needs a reason, and an angle pair that fits a parallel-line rule shows the lines are parallel.",
+    "a": {
+      "q": "Straight lines AB and CD cross at O. If \\(\\angle AOC = 70^{\\circ}\\), which reason gives \\(\\angle BOD = 70^{\\circ}\\)?",
+      "opts": [
+        "Vertically opposite angles are equal",
+        "Angles on a straight line add to \\(180^{\\circ}\\)",
+        "Corresponding angles are equal",
+        "Angles at a point add to \\(360^{\\circ}\\)"
+      ],
+      "why": "\\(\\angle BOD\\) lies directly across the crossing point from \\(\\angle AOC\\), so the two are vertically opposite and equal. Angles on a straight line would give \\(110^{\\circ}\\) for a neighbouring angle, not \\(70^{\\circ}\\) for this one.",
+      "clue": "Where is \\(\\angle BOD\\) compared with \\(\\angle AOC\\)?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A transversal crosses lines PQ and RS. Between the lines, on the same side of the transversal, the angles are \\(112^{\\circ}\\) and \\(68^{\\circ}\\). What can be said about PQ and RS?",
+      "opts": [
+        "Parallel, as co-interior angles add to \\(180^{\\circ}\\)",
+        "Not parallel, as the two angles are unequal",
+        "Parallel, as co-interior angles are equal",
+        "Parallel, as alternate angles are equal"
+      ],
+      "why": "These are co-interior angles and \\(112^{\\circ} + 68^{\\circ} = 180^{\\circ}\\), so the lines are parallel. Unequal angles do not show the lines are not parallel, because co-interior angles on parallel lines add to \\(180^{\\circ}\\), so they need not be equal.",
+      "clue": "Add the two angles and compare with a rule."
+    }
+  },
+  "mat-classifying-triangles-nsw": {
+    "title": "Classifying triangles",
+    "card": [
+      [
+        "By sides",
+        "An equilateral triangle has 3 equal sides. An isosceles triangle has at least 2 equal sides. A scalene triangle has no equal sides."
+      ],
+      [
+        "By angles",
+        "An acute-angled triangle has 3 angles less than 90°. A right-angled triangle has one angle of exactly 90°. An obtuse-angled triangle has one angle greater than 90°."
+      ],
+      "A triangle can have at most one right angle or one obtuse angle. The next point shows why, using the angle sum.",
+      [
+        "Example",
+        "A triangle has angles 50°, 50° and 80°. All are less than 90°, so it is acute-angled. Two angles are equal, so two sides are equal, so it is isosceles."
+      ]
+    ],
+    "remember": "Name a triangle by its sides and by its angles. Each name answers a different question.",
+    "a": {
+      "q": "A triangle has sides of 6 cm, 8 cm and 10 cm. What is it called, going by its sides?",
+      "opts": ["Scalene", "Isosceles", "Equilateral", "Right-angled"],
+      "why": "All three sides are different lengths, so the triangle is scalene. It is not isosceles, because that needs at least 2 equal sides. Right-angled describes an angle, not a side.",
+      "clue": "Compare the three side lengths. Are any equal?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A triangle has angles of 30°, 30° and 120°. What is it called by its angles, and by its sides?",
+      "opts": [
+        "Obtuse-angled and isosceles",
+        "Obtuse-angled and scalene",
+        "Acute-angled and isosceles",
+        "Acute-angled and equilateral"
+      ],
+      "why": "The 120° angle is greater than 90°, so the triangle is obtuse-angled. Two angles are equal, so two sides are equal, which makes it isosceles. It is not acute-angled, because one angle is over 90°.",
+      "clue": "Look for an angle over 90°, then for equal angles."
+    }
+  },
+  "mat-angle-sum-exterior-angle": {
+    "title": "Angle sum and exterior angle of a triangle",
+    "card": [
+      "The three angles inside a triangle always add to \\(180^{\\circ}\\). This is true for every triangle, whatever its shape or size.",
+      "To find a missing angle, add the two known angles and take the total from \\(180^{\\circ}\\). For angles of \\(50^{\\circ}\\) and \\(60^{\\circ}\\), the third is \\(180 - 110 = 70\\), so \\(70^{\\circ}\\).",
+      "An exterior angle is made by extending one side of the triangle past a corner. It sits outside the triangle, next to the interior angle at that corner.",
+      "An exterior angle equals the sum of the two opposite interior angles, the ones not at its corner. If those two are \\(50^{\\circ}\\) and \\(60^{\\circ}\\), the exterior angle is \\(110^{\\circ}\\)."
+    ],
+    "remember": "Interior angles add to \\(180^{\\circ}\\). An exterior angle is the sum of the two opposite interior angles.",
+    "a": {
+      "q": "A triangle has angles of \\(35^{\\circ}\\) and \\(85^{\\circ}\\). What is the third angle?",
+      "opts": ["\\(60^{\\circ}\\)", "\\(120^{\\circ}\\)", "\\(50^{\\circ}\\)", "\\(95^{\\circ}\\)"],
+      "why": "The angles add to \\(180^{\\circ}\\). Add \\(35^{\\circ}\\) and \\(85^{\\circ}\\) to get \\(120^{\\circ}\\), then \\(180 - 120 = 60\\). The option \\(120^{\\circ}\\) is only the total of the two known angles, so the step of taking it from \\(180^{\\circ}\\) was missed.",
+      "clue": "Add the two known angles, then take the total from 180."
+    },
+    "b": {
+      "d": 3,
+      "q": "In triangle PQR, the interior angles at P and Q are \\(48^{\\circ}\\) and \\(67^{\\circ}\\). Side RQ is extended past Q. What is the exterior angle at Q?",
+      "opts": ["\\(113^{\\circ}\\)", "\\(115^{\\circ}\\)", "\\(65^{\\circ}\\)", "\\(132^{\\circ}\\)"],
+      "why": "The exterior angle at Q equals the sum of the two opposite interior angles, at P and R. The angle at R is \\(180 - 48 - 67 = 65\\), so the exterior angle is \\(48 + 65 = 113\\), which is \\(113^{\\circ}\\). Adding the angles at P and Q gives \\(115^{\\circ}\\), but the angle at Q is at the exterior angle's own corner, so it is not one of the opposite angles.",
+      "clue": "Find the angle at R first, then use the two angles not at Q."
+    }
+  },
+  "mat-properties-quadrilaterals-nsw": {
+    "title": "Properties of quadrilaterals",
+    "card": [
+      "A quadrilateral has four sides. Its four angles always add to \\(360^{\\circ}\\). If three angles are \\(90^{\\circ}\\), \\(100^{\\circ}\\) and \\(80^{\\circ}\\), the fourth is \\(360 - 270 = 90\\), so \\(90^{\\circ}\\).",
+      [
+        "Rectangle",
+        "opposite sides equal and parallel, and all four angles \\(90^{\\circ}\\). The diagonals are equal and bisect each other, which means they cut each other in half, but they do not necessarily meet at right angles."
+      ],
+      [
+        "Rhombus",
+        "all four sides equal, and opposite sides parallel. The diagonals always bisect each other at right angles, but they are not necessarily equal in length."
+      ],
+      [
+        "Parallelogram",
+        "opposite sides equal and parallel, and opposite angles equal. The diagonals bisect each other, but they are not necessarily equal and do not necessarily meet at right angles."
+      ]
+    ],
+    "remember": "Any quadrilateral's angles total \\(360^{\\circ}\\). Compare shapes by what their sides, angles and diagonals always do.",
+    "a": {
+      "q": "Which quadrilateral always has diagonals that bisect each other at right angles?",
+      "opts": ["Rhombus", "Rectangle", "Parallelogram", "Any quadrilateral"],
+      "why": "Every rhombus has diagonals that cut each other in half and cross at right angles. A rectangle's diagonals always bisect each other, but in general they do not meet at right angles, so the rectangle is ruled out.",
+      "clue": "Look for what the diagonals always do, not what they sometimes do."
+    },
+    "b": {
+      "d": 2,
+      "q": "A quadrilateral has angles of \\(70^{\\circ}\\), \\(110^{\\circ}\\) and \\(95^{\\circ}\\). What is its fourth angle?",
+      "opts": ["\\(85^{\\circ}\\)", "\\(95^{\\circ}\\)", "\\(75^{\\circ}\\)", "\\(105^{\\circ}\\)"],
+      "why": "The four angles of a quadrilateral add to \\(360^{\\circ}\\). The three known angles total \\(70 + 110 + 95 = 275\\), and \\(360 - 275 = 85\\), so the fourth angle is \\(85^{\\circ}\\). An answer of \\(95^{\\circ}\\) comes from adding the three angles wrongly to get 265.",
+      "clue": "Add the three angles carefully, then subtract from the quadrilateral total."
+    }
+  },
+  "mat-categorical-numerical-data-nsw": {
+    "title": "Types of data",
+    "card": [
+      [
+        "Categorical",
+        "data sorted into groups or labels. Nominal data has no natural order, such as eye colour. Ordinal data has a natural order, such as shirt size (small, medium, large)."
+      ],
+      [
+        "Numerical",
+        "data that is a count or a measurement. Discrete data is counted and takes separate values, such as the number of pets. Continuous data is measured and can take any value in a range, such as height."
+      ],
+      "A quick test: if you can do sensible arithmetic with the values, the data is numerical. Postcodes are numbers, but adding them means nothing, so they are categorical.",
+      "Measured data stays continuous even when it is rounded. A height written as 172 cm has been rounded, but the true height could be any value close to it."
+    ],
+    "remember": "Categorical data names groups. Numerical data counts or measures. Ask: counted, measured, or just a label?",
+    "a": {
+      "q": "Each student in a Year 8 class counts how many siblings they have. What type of data is this?",
+      "opts": ["Numerical, discrete", "Numerical, continuous", "Categorical, nominal", "Categorical, ordinal"],
+      "why": "Siblings are counted, so the data is numerical and takes separate values: discrete. It is not continuous, because nobody has 1.5 siblings.",
+      "clue": "Is it counted or measured?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A coach in Parramatta times each runner over 100 m and rounds each time to the nearest tenth of a second. What type of data is this?",
+      "opts": ["Numerical, continuous", "Numerical, discrete", "Categorical, ordinal", "Categorical, nominal"],
+      "why": "Time is measured, so the data is numerical and continuous. Rounding to a tenth of a second makes the values look separate, but a runner's true time could be any value in a range, so it is not discrete.",
+      "clue": "Does rounding change how the time was found?"
+    }
+  },
+  "mat-choosing-graph": {
+    "title": "Choosing a graph",
+    "card": [
+      [
+        "Column graph",
+        "suits categorical data, such as favourite sport or type of pet. Each category gets its own column, and the height shows how many fall in it."
+      ],
+      [
+        "Histogram",
+        "suits numerical data grouped into classes, such as heights in classes of 150 to 160 cm, 160 to 170 cm and so on. The columns touch, because each class runs into the next."
+      ],
+      [
+        "Line graph",
+        "suits data that changes over time, such as a town's rainfall each month. The line keeps the times in order and shows the trend. Sorting the values into classes or categories loses that order."
+      ],
+      "To choose, ask what type of data you have and what you want to show. Example: students' ways of getting to school (walk, cycle or bus) are categories, so a column graph suits them."
+    ],
+    "remember": "Categories suit a column graph, grouped numbers suit a histogram, and change over time suits a line graph.",
+    "a": {
+      "q": "Priya records the colour of every car that passes her school gate in Parramatta. Which graph suits this data?",
+      "opts": [
+        "A column graph, as colours are categories",
+        "A histogram, as cars can be counted",
+        "A line graph, as cars pass over time",
+        "A histogram, as colours form groups"
+      ],
+      "why": "Car colours are categories, so a column graph with one column per colour suits them. A histogram, as cars can be counted, is tempting, but a histogram is for numerical data grouped into classes, such as heights, and colours are not numbers.",
+      "clue": "Can colours be put into number classes like 150 to 160?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A Newcastle council has the city's mean temperature for each month over three years. It wants to show how the temperature changed across that time. Which graph suits this best?",
+      "opts": [
+        "A line graph of the mean temperature for each month",
+        "A histogram of the 36 monthly mean temperatures",
+        "A column graph counting hot, mild and cold months",
+        "A column graph of the average for each season"
+      ],
+      "why": "The aim is to show change over time, so a line graph keeps the months in order and shows the trend. Temperature is numerical, which makes a histogram tempting, but sorting the values into classes loses the order of the months. The column graphs group the months into categories, which loses that order too.",
+      "clue": "Which display keeps the months in their order?"
+    }
+  },
+  "mat-dot-plots-stem-leaf": {
+    "title": "Dot plots and stem-and-leaf plots",
+    "card": [
+      [
+        "Dot plot",
+        "A dot plot puts one dot above a number line for each value. A tall pile of dots shows a value that occurs often."
+      ],
+      [
+        "Stem-and-leaf plot",
+        "A stem-and-leaf plot splits each value into a stem (the tens digit) and a leaf (the last digit). The leaves are put in order, and a note beside the plot explains how to read them."
+      ],
+      "Both displays keep every value, so you can read off the exact data. They also show clusters (where values bunch up) and gaps.",
+      "Example: in the stem-and-leaf plot above, the row 2 | 1 3 3 7 holds four scores, and they are 21, 23, 23 and 27."
+    ],
+    "cardFigs": {
+      "1": {
+        "kind": "chart",
+        "chart": "dot",
+        "alt": "A dot plot of the number of pets in 10 homes. The values are 0, 1, 1, 2, 2, 2, 3, 3, 4 and 6. The tallest pile is at 2.",
+        "x": {"min": 0, "max": 7, "step": 1, "label": "Pets"},
+        "data": [0, 1, 1, 2, 2, 2, 3, 3, 4, 6]
+      },
+      "2": {
+        "kind": "chart",
+        "chart": "stem",
+        "alt": "A stem-and-leaf plot of 9 quiz scores: 12, 15, 21, 23, 23, 27, 34, 38 and 41. The note says 2 | 3 means 23.",
+        "leaf": 1,
+        "key": "2 | 3 means 23",
+        "data": [12, 15, 21, 23, 23, 27, 34, 38, 41]
+      }
+    },
+    "remember": "Dot plots and stem-and-leaf plots keep every value and show clusters and gaps.",
+    "a": {
+      "q": "A stem-and-leaf plot has the note 3 | 0 means 30. What values are in the row 3 | 0 4 4 9?",
+      "opts": ["30, 34, 34, 39", "3, 0, 4, 4, 9", "30, 4, 4, 9", "34, 44, 94, 30"],
+      "why": "The stem 3 is the tens digit and each leaf is a ones digit, so the row gives 30, 34, 34 and 39. Reading the leaves as 4, 4 and 9 alone ignores the stem.",
+      "clue": "Join the stem to each leaf in turn."
+    },
+    "b": {
+      "d": 2,
+      "q": "The dot plot shows the number of goals scored by a soccer team in 10 games. How many games had exactly 2 goals?",
+      "opts": ["4", "2", "6", "10"],
+      "why": "Count the dots above 2 on the number line. There are 4 dots there. The number 2 is the value, not the count of games.",
+      "clue": "Count the dots, do not read the number.",
+      "fig": {
+        "kind": "chart",
+        "chart": "dot",
+        "alt": "A dot plot of goals scored by a soccer team in 10 games. The values are 0, 1, 2, 2, 2, 2, 3, 3, 4 and 5.",
+        "x": {"min": 0, "max": 6, "step": 1, "label": "Goals"},
+        "data": [0, 1, 2, 2, 2, 2, 3, 3, 4, 5]
+      }
+    }
+  },
+  "mat-reading-graphs-critically": {
+    "title": "Reading graphs critically",
+    "card": [
+      "First read the title, the axis labels and the scale. They tell you what the graph measures and in what units.",
+      [
+        "Axis not at zero",
+        "If a column graph's axis starts above zero, small differences look huge. The column heights no longer match the sizes of the values."
+      ],
+      [
+        "Uneven scale",
+        "If the steps on an axis are not equal, such as 0, 10, 20, 50, a graph can look steady when it is not. Check that each step is the same size."
+      ],
+      "Example: in the graph above, Shop B's column looks twice as tall, but 100 is only 5 more than 95."
+    ],
+    "cardFigs": {
+      "2": {
+        "kind": "chart",
+        "chart": "bar",
+        "alt": "A column graph of two shops' weekly sales. The axis starts at 90. Shop A is 95 and Shop B is 100. Shop B's column looks twice as tall as Shop A's.",
+        "bars": [["Shop A", 95], ["Shop B", 100]],
+        "x": {"label": "Shop"},
+        "y": {"min": 90, "max": 102, "step": 2, "label": "Sales"},
+        "truncated": true
+      }
+    },
+    "remember": "Check the title, labels and scale before you trust the shape of a graph.",
+    "a": {
+      "q": "A column graph's axis starts at 90 instead of 0. What is the effect on how the graph looks?",
+      "opts": [
+        "Small differences look much bigger",
+        "Large differences look much smaller",
+        "All the columns look equal",
+        "The values are changed"
+      ],
+      "why": "Cutting off the bottom of the axis makes the columns shorter, so a small gap looks like a big one. The values themselves stay the same.",
+      "clue": "Think about how tall the columns look compared with each other."
+    },
+    "b": {
+      "d": 3,
+      "q": "A line graph of a town's monthly rainfall has an axis marked 0, 10, 20, 50, 100 at equal spacing. Why is this misleading?",
+      "opts": [
+        "The steps are unequal, so the line looks flatter than it is",
+        "The axis starts at zero, so changes look larger",
+        "The axis has too many numbers on it",
+        "The line graph should be a column graph"
+      ],
+      "why": "Equal spacing for unequal steps squashes the big jumps, so the rises look smaller than they are. Starting at zero is not a problem.",
+      "clue": "Compare the size of each step on the axis."
+    }
+  },
+  "mat-mean": {
+    "title": "The mean",
+    "card": [
+      "The mean is the total of the values divided by how many values there are. It is the average people often mean.",
+      "Example: Sam scores 6, 8, 7 and 11 in four quizzes. The total is \\(6 + 8 + 7 + 11 = 32\\). The mean is \\(32 \\div 4 = 8\\).",
+      "If you know the mean, you can find the total. Total \\(=\\) mean \\(\\times\\) number of values. In the example, \\(8 \\times 4 = 32\\).",
+      "To find a missing value, work out the total needed, then take away the values you have. If the mean of 3 values is 10, the total is 30. Two values of 9 and 12 add to 21, so the third is \\(30 - 21 = 9\\)."
+    ],
+    "remember": "Mean \\(=\\) total \\(\\div\\) number of values. Mean \\(\\times\\) number of values gives the total.",
+    "a": {
+      "q": "What is the mean of 4, 9, 5, 6 and 11?",
+      "opts": ["7", "6", "8", "35"],
+      "why": "The total is \\(4 + 9 + 5 + 6 + 11 = 35\\). There are 5 values, so the mean is \\(35 \\div 5 = 7\\). The answer 35 is only the total: it has not been divided.",
+      "clue": "Add the values, then divide by how many there are."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's mean score in 4 maths tests is 15. Her scores in the first three tests are 12, 18 and 14. What was her score in the fourth test?",
+      "opts": ["16", "15", "14", "60"],
+      "why": "The total needed is \\(15 \\times 4 = 60\\). The first three tests add to \\(12 + 18 + 14 = 44\\), so the fourth is \\(60 - 44 = 16\\). The answer 60 is the total of all four tests, not the missing score.",
+      "clue": "Find the total of all four tests first."
+    }
+  },
+  "mat-median-mode-range": {
+    "title": "Median, mode and range",
+    "card": [
+      [
+        "Median",
+        "The middle value once the data is in order from smallest to largest. If there are two middle values, the median is halfway between them."
+      ],
+      ["Mode", "The value that appears most often. A set of data can have no mode, one mode or more than one mode."],
+      ["Range", "The highest value minus the lowest value. It tells you how spread out the data is."],
+      [
+        "Example",
+        "Data: 7, 3, 9, 3, 5, 8. In order: 3, 3, 5, 7, 8, 9. The median is \\(\\frac{5 + 7}{2} = 6\\), the mode is 3 and the range is \\(9 - 3 = 6\\)."
+      ]
+    ],
+    "remember": "Order the data first. Median is the middle, mode is the most common, range is highest minus lowest.",
+    "a": {
+      "q": "Mia's quiz scores are 6, 9, 4, 9, 7. What is the median?",
+      "opts": ["\\(7\\)", "\\(9\\)", "\\(4\\)", "\\(5\\)"],
+      "why": "In order the scores are 4, 6, 7, 9, 9, and the middle value is 7. The tempting answer 4 is the middle score of the list as first written, which is not in order. The value 9 is the mode and 5 is the range.",
+      "clue": "Put the scores in order before finding the middle."
+    },
+    "b": {
+      "d": 3,
+      "q": "The daily number of customers at Sam's shop over six days was 12, 15, 11, 15, 20, 13. What is the range, and what is the median?",
+      "opts": ["Range 9, median 14", "Range 9, median 15", "Range 8, median 14", "Range 8, median 15"],
+      "why": "The highest is 20 and the lowest is 11, so the range is \\(20 - 11 = 9\\). In order: 11, 12, 13, 15, 15, 20. The two middle values are 13 and 15, so the median is 14. The value 15 is the mode, not the median.",
+      "clue": "With six values, there are two middle values."
+    }
+  },
+  "mat-effect-outlier": {
+    "title": "The effect of an outlier",
+    "card": [
+      "An outlier is a value that is far from the rest of the data. For example, in the scores 6, 7, 7, 8, 9 and 40, the score 40 is an outlier.",
+      "An outlier pulls the mean towards it. Without the 40, the mean is \\(\\frac{37}{5} = 7.4\\). With the 40, the mean is \\(\\frac{77}{6} \\approx 12.8\\).",
+      "An outlier changes the range a lot. The range is \\(9 - 6 = 3\\) without the 40, and \\(40 - 6 = 34\\) with it.",
+      "An outlier barely moves the median. The median is 7 without the 40, and \\(\\frac{7 + 8}{2} = 7.5\\) with it."
+    ],
+    "remember": "An outlier pulls the mean and stretches the range, but the median hardly moves.",
+    "a": {
+      "q": "The ages of five friends are 12, 13, 13, 14 and 13. A 60 year old joins them. Which measure changes the least?",
+      "opts": ["The median", "The mean", "The range", "The total of the ages"],
+      "why": "The median goes from 13 to 13, so it does not change at all. The mean jumps from 13 to about 20.8 and the range goes from 2 to 48. The mean is the tempting choice, but it is pulled towards the outlier.",
+      "clue": "Find each measure before and after the 60 joins."
+    },
+    "b": {
+      "d": 3,
+      "q": "Leila's quiz marks are 14, 15, 15, 16 and 15. She then scores 2 on a sixth quiz. Which statement is correct?",
+      "opts": [
+        "The mean falls by more than the median",
+        "The median falls by more than the mean",
+        "The mean and median fall by the same amount",
+        "The range stays the same as before"
+      ],
+      "why": "The mean goes from 15 to \\(\\frac{77}{6} \\approx 12.8\\), a fall of about 2.2. The median goes from 15 to 15, so it does not fall. The range grows from 2 to 14, so it does not stay the same.",
+      "clue": "Work out the mean and median both before and after the 2."
+    }
+  },
+  "mat-comparing-two-datasets": {
+    "title": "Comparing two datasets",
+    "card": [
+      [
+        "Centre",
+        "To compare two groups, start with the centre of each, using the mean or the median. The group with the higher centre tends to have higher values."
+      ],
+      [
+        "Spread",
+        "Next compare the spread, using the range. A smaller range means the values are closer together, so the group is more consistent."
+      ],
+      [
+        "Example",
+        "Mia's quiz scores are 6, 7, 7, 8, 7. Leo's are 3, 5, 7, 9, 11. Both means are \\(7\\). Mia's range is \\(2\\) and Leo's is \\(8\\)."
+      ],
+      [
+        "Conclusion",
+        "Use both measures and claim only what the data shows. Here the centres are equal, but Mia's scores are more consistent than Leo's. The data does not show who is smarter."
+      ]
+    ],
+    "remember": "Compare the centre, then the spread, and only claim what the data shows.",
+    "a": {
+      "q": "Route A has a mean wait of 8 minutes and a range of 4 minutes. Route B has a mean wait of 8 minutes and a range of 15 minutes. Which conclusion does the data support?",
+      "opts": [
+        "Same mean wait, and Route A's waits are more consistent",
+        "Same mean wait, and Route B's waits are more consistent",
+        "Route A has the shorter mean wait and is more consistent",
+        "Route B has the longer mean wait and is less consistent"
+      ],
+      "why": "Both means are 8, so neither route has a shorter or longer wait on average. Route A has the smaller range, so its waits are closer together and more consistent. A larger range means less consistent, not more.",
+      "clue": "Compare the means first, then the ranges."
+    },
+    "b": {
+      "d": 3,
+      "q": "Café X sold 40, 45, 50, 55 and 60 coffees over five days. Café Y sold 44, 46, 48, 50 and 52. Which conclusion does the data support?",
+      "opts": [
+        "X has the higher mean, and its sales vary more",
+        "Y has the higher mean, and its sales vary more",
+        "X has the higher mean, and its sales are steadier",
+        "Y has the higher mean, and its sales are steadier"
+      ],
+      "why": "Café X has a mean of \\(250 \\div 5 = 50\\) and Café Y has a mean of \\(240 \\div 5 = 48\\), so X is higher. The range for X is \\(20\\) and for Y is \\(8\\), so X varies more. Saying X is steadier mixes up a bigger range with more consistency.",
+      "clue": "Find both means, then both ranges, and check each part of the claim."
+    }
+  },
+  "mat-sample-spaces-outcomes": {
+    "title": "Sample spaces and outcomes",
+    "card": [
+      [
+        "Outcome",
+        "An outcome is one possible result of an activity. Rolling a die can give the outcome 1, 2, 3, 4, 5 or 6."
+      ],
+      [
+        "Sample space",
+        "The sample space is the list of all possible outcomes. For a coin toss it is heads, tails. For a die it is 1, 2, 3, 4, 5, 6."
+      ],
+      [
+        "Equally likely",
+        "Outcomes are equally likely when each has the same chance of happening. The six faces of a fair die are equally likely."
+      ],
+      "Outcomes are not always equally likely. A spinner with one large section and two small sections has three outcomes, but the large section is more likely."
+    ],
+    "remember": "The sample space lists every possible outcome. Equally likely means each has the same chance.",
+    "a": {
+      "q": "A bag holds one red, one blue and one green counter. You take one counter without looking. What is the sample space?",
+      "opts": ["Red, blue, green", "Red, blue", "Red, blue, green, red", "Red or blue or green, twice"],
+      "why": "The sample space lists every possible outcome once. Here the three outcomes are red, blue and green. Listing only two colours leaves out an outcome, so it is not the whole sample space.",
+      "clue": "List every colour you could possibly take out."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia spins a spinner with three sections: red takes half the circle, blue takes a quarter and green takes a quarter. Which statement is correct?",
+      "opts": [
+        "The sample space has 3 outcomes, not equally likely",
+        "The sample space has 3 outcomes, all equally likely",
+        "The sample space has 2 outcomes, equally likely",
+        "The sample space has 4 outcomes, all equally likely"
+      ],
+      "why": "The spinner can land on red, blue or green, so there are 3 outcomes. Red covers more of the circle, so it has a greater chance than blue or green. Having 3 outcomes does not make them equally likely.",
+      "clue": "Look at how much of the circle each colour covers."
+    }
+  },
+  "mat-experimental-probability": {
+    "title": "Experimental probability",
+    "card": [
+      "Experimental probability is found by doing an experiment, or by collecting results. Each go is called a trial.",
+      "Relative frequency \\(=\\) number of times the event happened \\(\\div\\) total number of trials. It can be written as a fraction, a decimal or a percentage.",
+      "Example: Ravi flips a drawing pin 40 times. It lands point up 28 times. The relative frequency of point up is \\(\\frac{28}{40} = 0.7\\).",
+      "Results vary from one experiment to the next. The more trials there are, the closer the relative frequency tends to get to the theoretical probability."
+    ],
+    "remember": "Relative frequency is the number of times it happened out of the number of trials. More trials usually bring it closer to the theoretical probability.",
+    "a": {
+      "q": "Priya spins a spinner 50 times and it lands on red 18 times. What is the relative frequency of red?",
+      "opts": ["\\(\\frac{18}{50}\\)", "\\(\\frac{50}{18}\\)", "\\(\\frac{18}{32}\\)", "\\(\\frac{32}{50}\\)"],
+      "why": "Relative frequency is the number of times red happened over the number of trials, so \\(\\frac{18}{50}\\). The option \\(\\frac{18}{32}\\) uses the 32 spins that were not red as the total, but the total is all 50 trials.",
+      "clue": "The total is every spin, not just some of them."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom drops a cup 20 times and it lands upside down 5 times. His sister drops it 200 times and it lands upside down 62 times. Whose result is likely to be closer to the theoretical probability?",
+      "opts": [
+        "His sister's, because she did more trials",
+        "Tom's, because his result is a simpler fraction",
+        "Both equally, because each is a real result",
+        "Tom's, because fewer trials means fewer mistakes"
+      ],
+      "why": "Results vary from one experiment to the next, and with more trials the relative frequency tends to get closer to the theoretical probability. So his sister's result is likely to be closer. Tom's \\(\\frac{5}{20}\\) is a simpler fraction, but that has nothing to do with how close it is likely to be.",
+      "clue": "Which result would change less if the experiment were done again?"
+    }
+  },
+  "mat-overtime-commission-piecework": {
+    "title": "Overtime, commission and piecework",
+    "card": [
+      [
+        "Overtime",
+        "Hours worked beyond normal hours are paid at a higher rate. Time-and-a-half means \\(1.5 \\times\\) the normal hourly rate. Double time means \\(2 \\times\\) the normal rate."
+      ],
+      [
+        "Commission",
+        "A worker earns a percentage of the value of what they sell. Commission \\(=\\) rate \\(\\times\\) sales."
+      ],
+      [
+        "Piecework",
+        "A worker is paid a set amount for each item made. Pay \\(=\\) rate per item \\(\\times\\) number of items."
+      ],
+      [
+        "Example",
+        "Ravi earns $20 an hour. Three hours of time-and-a-half pays \\(3 \\times 1.5 \\times 20 = 90\\) dollars."
+      ]
+    ],
+    "remember": "Overtime raises the hourly rate, commission follows sales, and piecework follows items made.",
+    "a": {
+      "q": "Mei earns $18 an hour. How much is she paid for 4 hours of overtime at time-and-a-half?",
+      "opts": ["$108", "$72", "$27", "$90"],
+      "why": "Time-and-a-half is \\(1.5 \\times 18 = 27\\) dollars an hour. For 4 hours, \\(4 \\times 27 = 108\\) dollars. $72 is wrong because it uses the normal rate and leaves out the extra half.",
+      "clue": "Find the overtime hourly rate first."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom sells cars in Orange and earns 3% commission on sales. He sells cars worth $85,000 in a week. What is his commission?",
+      "opts": ["$2,550", "$255", "$25,500", "$2,833"],
+      "why": "Commission is \\(0.03 \\times 85\\,000 = 2550\\) dollars. $255 is wrong because it uses 0.3% instead of 3%, a slip when changing a percentage to a decimal.",
+      "clue": "Change 3% to a decimal, then multiply by the sales."
+    }
+  },
+  "mat-spending-gst-best-buys": {
+    "title": "Spending, GST and best buys",
+    "card": [
+      [
+        "Discount",
+        "A discount lowers the price. Take the percentage off the price, or multiply by the percentage that remains. A 20% discount means paying \\(80\\%\\) of the price."
+      ],
+      [
+        "GST",
+        "GST is a tax of 10% added to the price of most goods and services. Price with GST \\(=\\) price \\(\\times 1.1\\)."
+      ],
+      [
+        "Unit cost",
+        "To find the best buy, work out the price of one unit, such as 100 g. For $3 for 600 g, that is \\(3 \\div 6 = 0.50\\) dollars per 100 g. The lower unit cost is the better buy."
+      ],
+      [
+        "Credit",
+        "Buying on credit or with a loan usually means paying back more than the price, because of interest and fees. Total cost \\(=\\) deposit \\(+\\) all repayments."
+      ]
+    ],
+    "remember": "Discount and GST change the price. Unit cost compares sizes. Credit usually adds to the total paid.",
+    "a": {
+      "q": "A pair of shoes costs $80 before GST. GST of 10% is added. What is the final price?",
+      "opts": ["$88", "$8", "$72", "$90"],
+      "why": "GST is \\(0.1 \\times 80 = 8\\) dollars, so the price is \\(80 + 8 = 88\\) dollars. $72 is wrong because it takes the GST off instead of adding it.",
+      "clue": "GST is added to the price."
+    },
+    "b": {
+      "d": 3,
+      "q": "Cereal costs $4.50 for 500 g, or $8.00 for 800 g. Which is the better buy, and why?",
+      "opts": [
+        "The 500 g box, at $0.90 per 100 g",
+        "The 800 g box, at $1.00 per 100 g",
+        "The 800 g box, because it costs more",
+        "The 500 g box, because it costs less"
+      ],
+      "why": "The 500 g box costs \\(4.50 \\div 5 = 0.90\\) dollars per 100 g, and the 800 g box costs \\(8.00 \\div 8 = 1.00\\) dollar per 100 g. The 500 g box has the lower unit cost, so it is the better buy. Bigger packs are often cheaper per gram, but not here.",
+      "clue": "Work out the cost per 100 g for each box."
+    }
+  },
+  "mat-compound-interest-by-repeated-2": {
+    "title": "Compound interest by repeated percentages",
+    "card": [
+      "With compound interest, each period's interest is added to the balance. The next period then earns interest on the new, larger balance, so it earns interest on interest.",
+      "To add a rate of \\(5\\%\\) to an amount, multiply by \\(1.05\\). The multiplier is 1 plus the rate as a decimal.",
+      "Multiply by the multiplier once for each period. After 3 periods you multiply by it 3 times.",
+      [
+        "Example",
+        "$1000 earns \\(10\\%\\) each year, compounded. After year 1: \\(1000 \\times 1.1 = 1100\\). After year 2: \\(1100 \\times 1.1 = 1210\\). The year 2 interest is $110, not $100."
+      ]
+    ],
+    "remember": "Compound interest: multiply by 1 plus the rate, once for each period.",
+    "a": {
+      "q": "Which multiplier adds \\(8\\%\\) compound interest for one period?",
+      "opts": ["\\(1.08\\)", "\\(0.08\\)", "\\(0.92\\)", "\\(1.8\\)"],
+      "why": "Adding \\(8\\%\\) means keeping the whole amount and adding \\(0.08\\) of it, so you multiply by \\(1.08\\). Multiplying by \\(0.08\\) would find only the interest, not the new balance.",
+      "clue": "Keep the whole amount, then add the rate as a decimal."
+    },
+    "b": {
+      "d": 2,
+      "q": "Ava invests $2000 at \\(10\\%\\) per year, compounded yearly. What is the balance after 2 years?",
+      "opts": ["$2420", "$2400", "$2200", "$2220"],
+      "why": "Year 1: \\(2000 \\times 1.1 = 2200\\). Year 2: \\(2200 \\times 1.1 = 2420\\). The tempting $2400 adds $200 each year, but year 2 interest is earned on $2200, so it is $220.",
+      "clue": "Year 2 interest is worked out on the new balance."
+    }
+  },
+  "mat-depreciation-nsw": {
+    "title": "Depreciation",
+    "card": [
+      "Depreciation is the fall in an item's value over time. Here the item loses a fixed percentage of its value each period.",
+      [
+        "Same factor",
+        "The value is multiplied by the same factor each period. For 15% depreciation the factor is \\(1 - 0.15 = 0.85\\)."
+      ],
+      [
+        "Formula",
+        "\\(A = P(1 - r)^{n}\\). \\(A\\) is the value after \\(n\\) periods, \\(P\\) is the starting value, \\(n\\) is the number of periods and \\(r\\) is the rate per period as a decimal."
+      ],
+      "Example: a $20,000 machine loses 10% a year for 3 years. \\(A = \\$20{,}000 \\times 0.9^{3}\\), which is \\(\\$20{,}000 \\times 0.729 = \\$14{,}580\\)."
+    ],
+    "remember": "Multiply by \\((1 - r)\\) once for each period. The value falls, but the rate stays the same.",
+    "a": {
+      "q": "A ute costs $50,000 new and depreciates by 10% each year. What is its value after 2 years?",
+      "opts": ["$40,500", "$40,000", "$60,500", "$9,500"],
+      "why": "\\(A = \\$50{,}000 \\times 0.9^{2}\\), which is \\(\\$50{,}000 \\times 0.81 = \\$40{,}500\\). The value $40,000 comes from taking 10% of $50,000 off each year, which ignores that each year's loss is taken from the smaller current value. $9,500 is the amount lost, not the value, and $60,500 uses a factor of 1.1, which makes the value rise.",
+      "clue": "Multiply by 0.9 twice."
+    },
+    "b": {
+      "d": 3,
+      "q": "A laptop bought for $2000 depreciates by 20% each year. What is its value after 3 years?",
+      "opts": ["$1024", "$800", "$1280", "$1200"],
+      "why": "\\(A = \\$2000 \\times 0.8^{3}\\), which is \\(\\$2000 \\times 0.512 = \\$1024\\). The value $800 comes from taking 20% of the original price off each year, which ignores that each year's loss is taken from the smaller current value.",
+      "clue": "The factor each year is \\(1 - 0.20\\), used three times."
+    }
+  },
+  "mat-adding-subtracting-algebraic-fractions": {
+    "title": "Adding and subtracting algebraic fractions",
+    "card": [
+      "Algebraic fractions are added and subtracted like number fractions. You can only add or subtract once the denominators are the same.",
+      "To find a common denominator, use a common multiple of the denominators. For \\(\\frac{x}{3}\\) and \\(\\frac{x}{4}\\), use 12.",
+      "Rewrite each fraction with that denominator by multiplying its top and bottom by the same number: \\(\\frac{x}{3} = \\frac{4x}{12}\\) and \\(\\frac{x}{4} = \\frac{3x}{12}\\).",
+      "Add or subtract the numerators and keep the denominator: \\(\\frac{x}{3} + \\frac{x}{4} = \\frac{4x + 3x}{12} = \\frac{7x}{12}\\). The denominator does not change."
+    ],
+    "remember": "Match the denominators first, then add or subtract only the numerators.",
+    "a": {
+      "q": "What is \\(\\frac{x}{3} + \\frac{x}{4}\\) written as one fraction?",
+      "opts": ["\\(\\frac{7x}{12}\\)", "\\(\\frac{2x}{7}\\)", "\\(\\frac{7x}{7}\\)", "\\(\\frac{x}{12}\\)"],
+      "why": "The common denominator is 12, so the sum is \\(\\frac{4x + 3x}{12} = \\frac{7x}{12}\\). Adding the denominators to get 7 is tempting, but denominators are matched, never added.",
+      "clue": "Write both fractions with denominator 12 first."
+    },
+    "b": {
+      "d": 3,
+      "q": "What is \\(\\frac{2x}{3} - \\frac{x}{5}\\) written as one fraction?",
+      "opts": ["\\(\\frac{7x}{15}\\)", "\\(\\frac{x}{2}\\)", "\\(\\frac{x}{15}\\)", "\\(\\frac{3x}{15}\\)"],
+      "why": "The common denominator is 15. \\(\\frac{2x}{3} = \\frac{10x}{15}\\) and \\(\\frac{x}{5} = \\frac{3x}{15}\\), so the difference is \\(\\frac{10x - 3x}{15} = \\frac{7x}{15}\\). Subtracting the tops and bottoms separately gives a wrong answer.",
+      "clue": "Change both fractions to fifteenths before subtracting."
+    }
+  },
+  "mat-multiplying-dividing-algebraic-fractions": {
+    "title": "Multiplying and dividing algebraic fractions",
+    "card": [
+      [
+        "Multiply",
+        "Multiply the numerators, then multiply the denominators. Cancel any common factor first to keep the numbers small."
+      ],
+      [
+        "Example",
+        "\\(\\frac{3x}{4} \\times \\frac{8}{9}\\): cancel 3 with 9 and 4 with 8. This gives \\(\\frac{x}{1} \\times \\frac{2}{3}\\), which is \\(\\frac{2x}{3}\\)."
+      ],
+      [
+        "Divide",
+        "To divide, flip the second fraction (find its reciprocal) and multiply. Only the fraction after the \\(\\div\\) sign is flipped."
+      ],
+      [
+        "Example",
+        "\\(\\frac{5a}{6} \\div \\frac{10}{3}\\) becomes \\(\\frac{5a}{6} \\times \\frac{3}{10}\\). Cancel 5 with 10 and 3 with 6 to get \\(\\frac{a}{4}\\)."
+      ]
+    ],
+    "remember": "Cancel common factors, then multiply across. For division, flip the second fraction and multiply.",
+    "a": {
+      "q": "What is \\(\\frac{2x}{5} \\times \\frac{10}{7}\\) in simplest form?",
+      "opts": ["\\(\\frac{4x}{7}\\)", "\\(\\frac{20x}{12}\\)", "\\(\\frac{4x}{35}\\)", "\\(\\frac{7x}{5}\\)"],
+      "why": "Cancel 5 with 10 to get \\(\\frac{2x}{1} \\times \\frac{2}{7} = \\frac{4x}{7}\\). The option \\(\\frac{4x}{35}\\) comes from cancelling only the 10 and forgetting to divide the 5.",
+      "clue": "Cancel the 5 and the 10 first, then multiply across."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia simplifies \\(\\frac{3m}{8} \\div \\frac{9}{4}\\). What is the correct answer in simplest form?",
+      "opts": ["\\(\\frac{m}{6}\\)", "\\(\\frac{3m}{2}\\)", "\\(\\frac{27m}{32}\\)", "\\(\\frac{6}{m}\\)"],
+      "why": "Flip the second fraction: \\(\\frac{3m}{8} \\times \\frac{4}{9}\\). Cancel 3 with 9 and 4 with 8 to get \\(\\frac{m}{2} \\times \\frac{1}{3} = \\frac{m}{6}\\). The option \\(\\frac{27m}{32}\\) comes from multiplying without flipping, and \\(\\frac{6}{m}\\) comes from flipping the first fraction instead of the second.",
+      "clue": "Flip only the fraction after the \\(\\div\\) sign."
+    }
+  },
+  "mat-expanding-collecting-like-terms": {
+    "title": "Expanding and collecting like terms",
+    "card": [
+      "To expand, multiply every term inside the brackets by the number outside. So \\(3(x + 2) = 3x + 6\\).",
+      "A negative number outside the brackets multiplies every term inside, and it changes each sign. So \\(-2(x - 5) = -2x + 10\\).",
+      "Like terms have the same pronumeral part. Add or subtract their coefficients: \\(3x\\) and \\(-2x\\) are like terms, but \\(x\\) and 7 are not.",
+      "Worked example: \\(3(x + 2) - 2(x - 5)\\) becomes \\(3x + 6 - 2x + 10\\), which is \\(x + 16\\)."
+    ],
+    "remember": "Expand each bracket first, with the sign that sits in front of it, then collect like terms.",
+    "a": {
+      "q": "What is \\(-3(x - 4)\\) when expanded?",
+      "opts": ["\\(-3x + 12\\)", "\\(-3x - 12\\)", "\\(3x - 12\\)", "\\(-3x - 4\\)"],
+      "why": "The \\(-3\\) multiplies both terms: \\(-3 \\times x = -3x\\) and \\(-3 \\times -4 = +12\\). The tempting \\(-3x - 12\\) forgets that a negative times a negative is positive.",
+      "clue": "Multiply \\(-4\\) by \\(-3\\) as well."
+    },
+    "b": {
+      "d": 3,
+      "q": "Simplify \\(4(x + 3) - 3(x - 2)\\).",
+      "opts": ["\\(x + 18\\)", "\\(x + 6\\)", "\\(7x + 18\\)", "\\(x + 9\\)"],
+      "why": "Expanding gives \\(4x + 12 - 3x + 6\\). Collecting like terms gives \\(x + 18\\). The tempting \\(x + 6\\) comes from writing \\(-3 \\times -2\\) as \\(-6\\), so the second sign is wrong.",
+      "clue": "Expand each bracket, then collect the \\(x\\) terms and the numbers."
+    }
+  },
+  "mat-index-laws-with-pronumerals": {
+    "title": "Index laws with pronumerals",
+    "card": [
+      "An index tells you how many copies of the base are multiplied together. In \\(x^{5} = x \\times x \\times x \\times x \\times x\\), the base is the pronumeral \\(x\\) and the index is 5. A pronumeral with no index shown has index 1, so \\(y = y^{1}\\).",
+      [
+        "Multiply",
+        "add the indices of the same base, and multiply the numbers in front: \\(3x^{2} \\times 4x^{5} = 12x^{7}\\). Treat each pronumeral on its own: \\(2x^{3}y \\times 5x^{4} = 10x^{7}y\\), where \\(y\\) appears once, so it stays \\(y\\)."
+      ],
+      [
+        "Divide",
+        "subtract the indices of the same base. \\(x^{6} \\div x^{2} = x^{4}\\). Numbers in front are divided: \\(12x^{7} \\div 4x^{2} = 3x^{5}\\)."
+      ],
+      [
+        "Power of a power",
+        "multiply the indices. \\((x^{2})^{3} = x^{6}\\). A number in front is also raised to the power: \\((2x^{2})^{3} = 8x^{6}\\)."
+      ]
+    ],
+    "remember": "Multiply powers: add indices. Divide: subtract. Power of a power: multiply. Work out the numbers, then each pronumeral on its own.",
+    "a": {
+      "q": "Simplify \\(x^{7} \\times x^{2}\\).",
+      "opts": ["\\(x^{9}\\)", "\\(x^{14}\\)", "\\(x^{5}\\)", "\\(x^{49}\\)"],
+      "why": "Multiplying powers with the same base means adding the indices: \\(7 + 2 = 9\\). Multiplying the indices to get \\(x^{14}\\) is the rule for a power of a power, not for a product.",
+      "clue": "Which law covers two powers multiplied together?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Simplify \\(3a^{2}b \\times 4a^{3}\\).",
+      "opts": ["\\(12a^{5}b\\)", "\\(12a^{6}b\\)", "\\(7a^{5}b\\)", "\\(12a^{5}b^{2}\\)"],
+      "why": "Multiply the numbers: \\(3 \\times 4 = 12\\). Add the indices of \\(a\\): \\(2 + 3 = 5\\). The pronumeral \\(b\\) appears only once, so it stays \\(b\\). Multiplying the indices of \\(a\\) to get \\(a^{6}\\) uses the power of a power rule, which is wrong here.",
+      "clue": "Deal with the numbers, then each pronumeral on its own."
+    }
+  },
+  "mat-negative-indices-with-numbers": {
+    "title": "Negative indices with numbers",
+    "card": [
+      "A negative index means the reciprocal. The reciprocal of a number is 1 divided by that number. So \\(a^{-n} = \\frac{1}{a^{n}}\\).",
+      "Worked example: \\(2^{-3} = \\frac{1}{2^{3}}\\), which is \\(\\frac{1}{8}\\). The negative sign does not make the answer negative.",
+      "To go back, write a fraction with 1 on top as a power with a negative index. For example, \\(\\frac{1}{5^{2}} = 5^{-2}\\). Also, \\(\\frac{1}{49} = \\frac{1}{7^{2}}\\), which is \\(7^{-2}\\).",
+      "Do not multiply the base by the index. \\(3^{-2}\\) is \\(\\frac{1}{3^{2}} = \\frac{1}{9}\\), not \\(3 \\times (-2) = -6\\)."
+    ],
+    "remember": "A negative index gives the reciprocal of the power with a positive index. It does not make the value negative.",
+    "a": {
+      "q": "What is \\(4^{-3}\\) as a fraction?",
+      "opts": ["\\(\\frac{1}{64}\\)", "\\(-\\frac{1}{64}\\)", "\\(\\frac{1}{12}\\)", "\\(-12\\)"],
+      "why": "A negative index means the reciprocal, so \\(4^{-3} = \\frac{1}{4^{3}}\\), which is \\(\\frac{1}{64}\\). The tempting option \\(-\\frac{1}{64}\\) treats the negative index as making the value negative, but it only gives the reciprocal.",
+      "clue": "Write 1 over the power with a positive index."
+    },
+    "b": {
+      "d": 2,
+      "q": "Which power of 10 equals \\(\\frac{1}{1000}\\)?",
+      "opts": ["\\(10^{-3}\\)", "\\(10^{3}\\)", "\\(10^{-4}\\)", "\\(-10^{3}\\)"],
+      "why": "\\(1000 = 10^{3}\\), so \\(\\frac{1}{1000} = \\frac{1}{10^{3}}\\), which is \\(10^{-3}\\). The option \\(10^{-4}\\) counts the zeros plus one by mistake. The option \\(10^{3}\\) is 1000 itself, not its reciprocal.",
+      "clue": "Write 1000 as a power of 10 first."
+    }
+  },
+  "mat-three-step-equations": {
+    "title": "Three-step equations",
+    "card": [
+      "To solve an equation, undo each operation with its inverse, and do the same to both sides. Adding and subtracting undo each other. Multiplying and dividing undo each other.",
+      "Undo the adding or subtracting first, then the multiplying or dividing. With a bracket, divide both sides by the number outside it, then undo the rest.",
+      [
+        "Example",
+        "Solve \\(2(x + 3) - 4 = 12\\). Add 4: \\(2(x + 3) = 16\\). Divide by 2: \\(x + 3 = 8\\). Subtract 3: \\(x = 5\\)."
+      ],
+      ["Check", "Put \\(x = 5\\) back in: \\(2(5 + 3) - 4 = 16 - 4 = 12\\). It matches, so the answer is right."]
+    ],
+    "remember": "Undo the adding or subtracting first, then the multiplying or dividing, doing the same to both sides.",
+    "a": {
+      "q": "What is the solution of \\(3(x - 2) + 5 = 20\\)?",
+      "opts": ["\\(x = 7\\)", "\\(x = 3\\)", "\\(x = 9\\)", "\\(x = 5\\)"],
+      "why": "Subtract 5: \\(3(x - 2) = 15\\). Divide by 3: \\(x - 2 = 5\\), so \\(x = 7\\). The tempting \\(x = 3\\) comes from subtracting 2 instead of adding it back.",
+      "clue": "Subtract 5 first, then divide by 3."
+    },
+    "b": {
+      "d": 3,
+      "q": "Liam solves \\(4(x + 1) - 6 = 14\\). His first line is \\(4(x + 1) = 8\\). What did he do wrong, and what is the correct solution?",
+      "opts": [
+        "He subtracted 6 instead of adding it; \\(x = 4\\)",
+        "He subtracted 6 instead of adding it; \\(x = 1\\)",
+        "He added 6 but should have subtracted it; \\(x = 4\\)",
+        "He divided by 4 too early; \\(x = 1\\)"
+      ],
+      "why": "The \\(-6\\) is undone by adding 6, giving \\(4(x + 1) = 20\\). Dividing by 4 gives \\(x + 1 = 5\\), so \\(x = 4\\). Using \\(x = 1\\) follows from his wrong line \\(4(x + 1) = 8\\), so it keeps his error.",
+      "clue": "Undoing a subtraction means adding."
+    }
+  },
+  "mat-pronumerals-both-sides": {
+    "title": "Pronumerals on both sides",
+    "card": [
+      "Some equations have a pronumeral on both sides, such as \\(5x - 3 = 2x + 9\\). First collect the pronumeral terms on one side.",
+      "Add or subtract the same term on both sides. To remove \\(2x\\) from the right, subtract \\(2x\\) from both sides: \\(3x - 3 = 9\\).",
+      "Now solve as usual. Add 3 to both sides: \\(3x = 12\\). Divide both sides by 3: \\(x = 4\\).",
+      "Check by substituting into both sides. Left: \\(5(4) - 3 = 17\\). Right: \\(2(4) + 9 = 17\\). The sides match, so \\(x = 4\\) is correct."
+    ],
+    "remember": "Do the same to both sides: move the pronumeral terms together, then solve.",
+    "a": {
+      "q": "To solve \\(7x + 2 = 3x + 18\\), which step collects the pronumeral terms on one side?",
+      "opts": [
+        "Subtract \\(3x\\) from both sides",
+        "Add \\(3x\\) to both sides",
+        "Subtract \\(3x\\) from the left side only",
+        "Subtract \\(2\\) from both sides"
+      ],
+      "why": "Subtracting \\(3x\\) from both sides removes it from the right and gives \\(4x + 2 = 18\\). Adding \\(3x\\) would give \\(10x\\) on the left and still leave \\(6x\\) on the right, so the terms would not be collected.",
+      "clue": "Remove the smaller pronumeral term from both sides."
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia solves \\(6x - 5 = 2x + 11\\). What is the value of \\(x\\)?",
+      "opts": ["\\(x = 4\\)", "\\(x = 1.5\\)", "\\(x = 2\\)", "\\(x = 16\\)"],
+      "why": "Subtract \\(2x\\) from both sides: \\(4x - 5 = 11\\). Add 5: \\(4x = 16\\). Divide by 4: \\(x = 4\\). Check: \\(6(4) - 5 = 19\\) and \\(2(4) + 11 = 19\\). The answer \\(x = 1.5\\) comes from subtracting 5 instead of adding it.",
+      "clue": "Check your answer in both sides of the equation."
+    }
+  },
+  "mat-equations-with-fraction": {
+    "title": "Equations with a fraction",
+    "card": [
+      "A fraction bar means divide. In \\(\\frac{x + 4}{3} = 5\\), the whole top, \\(x + 4\\), is divided by 3.",
+      "To clear the fraction, multiply both sides by the denominator. The denominator is the bottom number, here 3. This undoes the divide.",
+      "Worked example: \\(\\frac{x + 4}{3} = 5\\). Multiply both sides by 3 to get \\(x + 4 = 15\\). Then subtract 4 from both sides to get \\(x = 11\\).",
+      "Check by substituting. \\(\\frac{11 + 4}{3} = \\frac{15}{3} = 5\\), so the answer is right."
+    ],
+    "remember": "Multiply both sides by the denominator first, then solve what is left.",
+    "a": {
+      "q": "What is the first step to solve \\(\\frac{x - 2}{5} = 4\\)?",
+      "opts": ["Multiply both sides by 5", "Add 2 to both sides", "Divide both sides by 5", "Subtract 5 from both sides"],
+      "why": "The top is divided by 5, so multiplying both sides by 5 undoes it and gives \\(x - 2 = 20\\). Dividing by 5 would divide again and make the fraction harder to clear.",
+      "clue": "Undo a divide with the opposite operation."
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia solves \\(\\frac{x + 6}{4} = 3\\). What is the value of \\(x\\)?",
+      "opts": ["\\(x = 6\\)", "\\(x = 18\\)", "\\(x = -3\\)", "\\(x = 9\\)"],
+      "why": "Multiply both sides by 4 to get \\(x + 6 = 12\\), then subtract 6 to get \\(x = 6\\). The answer \\(x = 18\\) comes from adding 6 instead of subtracting it.",
+      "clue": "Clear the fraction, then undo the plus 6."
+    }
+  },
+  "mat-equations-from-word-problems": {
+    "title": "Equations from word problems",
+    "card": [
+      "Start by choosing a pronumeral for the unknown, and say what it stands for. For example, let \\(n\\) be the number of tickets sold.",
+      "Write an equation from the words. Look for the operations hidden in them: \"twice\" means \\(\\times 2\\), \"more than\" means \\(+\\), and \"total\" or \"is\" points to \\(=\\).",
+      "Example: Sam is paid $15 to start, plus $8 an hour. In total he is paid $63. Let \\(h\\) be the hours worked. Then \\(15 + 8h = 63\\), so \\(8h = 48\\) and \\(h = 6\\).",
+      "Check the answer in the story, not only in the equation. Sam works 6 hours: \\(15 + 8 \\times 6 = 63\\), and 6 hours makes sense."
+    ],
+    "remember": "Define the pronumeral, write the equation, solve it, then check it against the story.",
+    "a": {
+      "q": "Priya is given $12 and then earns $5 for each job she does. She now has $47. Let \\(j\\) be her number of jobs. Which equation fits?",
+      "opts": ["\\(12 + 5j = 47\\)", "\\(5 + 12j = 47\\)", "\\(12 + 5 + j = 47\\)", "\\(12j + 5j = 47\\)"],
+      "why": "The $12 is a one-off amount, so it is added once. The $5 is earned for each job, so it is multiplied by \\(j\\). The option \\(5 + 12j = 47\\) swaps the two amounts.",
+      "clue": "Which amount is repeated for every job?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom is 4 years older than twice his cousin's age. Tom is 18. Let \\(c\\) be his cousin's age in years. How old is the cousin?",
+      "opts": ["7 years", "14 years", "9 years", "11 years"],
+      "why": "Twice the cousin's age plus 4 gives Tom's age, so \\(2c + 4 = 18\\). Then \\(2c = 14\\) and \\(c = 7\\). Check: \\(2 \\times 7 + 4 = 18\\). The answer 14 comes from forgetting to divide by 2.",
+      "clue": "Write 'twice the age' first, then add the 4."
+    }
+  },
+  "mat-substituting-into-formulas-2-nsw": {
+    "title": "Substituting into formulas",
+    "card": [
+      "A formula links quantities with pronumerals, such as \\(v = u + at\\). To use it, replace each pronumeral you know with its value. Put the value in brackets if it is negative.",
+      "After substituting, you have an equation with one unknown. Solve it with inverse operations, as you would any linear equation.",
+      "Example: use \\(v = u + at\\) to find \\(a\\) when \\(v = 20\\), \\(u = 8\\) and \\(t = 3\\). Substitute to get \\(20 = 8 + 3a\\).",
+      "Subtract 8 from both sides: \\(12 = 3a\\). Divide both sides by 3: \\(a = 4\\). Check by putting 4 back into the formula: \\(8 + 3 \\times 4 = 20\\)."
+    ],
+    "remember": "Substitute the known values first, then solve the equation for the unknown.",
+    "a": {
+      "q": "In \\(v = u + at\\), \\(v = 25\\), \\(u = 7\\) and \\(a = 2\\). Which equation results from substituting?",
+      "opts": ["\\(25 = 7 + 2t\\)", "\\(25 = 2 + 7t\\)", "\\(7 = 25 + 2t\\)", "\\(25 = 7t + 2\\)"],
+      "why": "Each known value replaces its own pronumeral, so \\(v\\) becomes 25, \\(u\\) becomes 7 and \\(a\\) becomes 2, which leaves \\(25 = 7 + 2t\\). Swapping the values of \\(u\\) and \\(a\\) gives \\(25 = 2 + 7t\\), which is a tempting mistake.",
+      "clue": "Match each value to its own pronumeral."
+    },
+    "b": {
+      "d": 2,
+      "q": "The formula \\(P = 2l + 2w\\) gives the perimeter of a rectangle. A rectangle has \\(P = 30\\) and \\(l = 9\\). What is \\(w\\)?",
+      "opts": ["\\(w = 6\\)", "\\(w = 12\\)", "\\(w = 10.5\\)", "\\(w = 21\\)"],
+      "why": "Substitute to get \\(30 = 2 \\times 9 + 2w\\), so \\(30 = 18 + 2w\\). Subtract 18 to get \\(12 = 2w\\), then divide by 2 to get \\(w = 6\\). The answer \\(w = 12\\) forgets to divide by 2 at the end.",
+      "clue": "Subtract before you divide."
+    }
+  },
+  "mat-scientific-notation": {
+    "title": "Scientific notation",
+    "card": [
+      "A number in scientific notation is written as \\(a \\times 10^{n}\\). Here \\(a\\) is at least 1 and less than 10, and \\(n\\) is an integer, such as 3, 0 or \\(-4\\).",
+      "To write a large number, move the decimal point until the number is from 1 to less than 10. Count the moves. That count is a positive power of 10.",
+      "Example: \\(52{,}000\\) becomes \\(5.2\\) after 4 moves left, so it is \\(5.2 \\times 10^{4}\\).",
+      "For a small number between 0 and 1, the point moves right and the power is negative. For example, \\(0.0007 = 7 \\times 10^{-4}\\). To go back to an ordinary number, move the point the other way."
+    ],
+    "remember": "Write a number from 1 to less than 10 times a power of 10. Numbers of 10 or more have a positive power, and numbers between 0 and 1 have a negative power.",
+    "a": {
+      "q": "Which is \\(36{,}000\\) in scientific notation?",
+      "opts": ["\\(3.6 \\times 10^{4}\\)", "\\(36 \\times 10^{3}\\)", "\\(3.6 \\times 10^{3}\\)", "\\(3.6 \\times 10^{-4}\\)"],
+      "why": "Moving the point 4 places left gives \\(3.6\\), so the power is 4. \\(36 \\times 10^{3}\\) has the right value, but 36 is not from 1 to less than 10, so it is not scientific notation.",
+      "clue": "Count how many places the point moves to get 3.6."
+    },
+    "b": {
+      "d": 3,
+      "q": "A bacterium in a lab measures \\(0.0000045\\) m long. Which is this length in scientific notation?",
+      "opts": [
+        "\\(4.5 \\times 10^{-6}\\) m",
+        "\\(4.5 \\times 10^{6}\\) m",
+        "\\(4.5 \\times 10^{-5}\\) m",
+        "\\(45 \\times 10^{-7}\\) m"
+      ],
+      "why": "The point moves 6 places right to give \\(4.5\\), and the number is less than 1, so the power is \\(-6\\). The option with \\(10^{-5}\\) comes from counting one move too few.",
+      "clue": "Count each place the point moves, including the one past the 4."
+    }
+  },
+  "mat-very-large-very-small": {
+    "title": "Very large and very small units",
+    "card": [
+      "A prefix is a word placed before a unit to show a power of 10. It saves writing many zeros.",
+      [
+        "Large",
+        "kilo is \\(10^{3}\\), mega is \\(10^{6}\\), giga is \\(10^{9}\\), tera is \\(10^{12}\\). So 1 gigabyte is \\(10^{9}\\) bytes."
+      ],
+      [
+        "Small",
+        "milli is \\(10^{-3}\\), micro is \\(10^{-6}\\), nano is \\(10^{-9}\\). So 1 nanometre is \\(10^{-9}\\) metres."
+      ],
+      "To change units, replace the prefix with its power of 10. Example: 5 megawatts is \\(5 \\times 10^{6}\\) watts, which is \\(5{,}000{,}000\\) watts."
+    ],
+    "remember": "Each prefix stands for a power of 10: positive powers for large units, negative powers for small ones.",
+    "a": {
+      "q": "Which power of 10 does the prefix giga stand for?",
+      "opts": ["\\(10^{9}\\)", "\\(10^{6}\\)", "\\(10^{-9}\\)", "\\(10^{12}\\)"],
+      "why": "Giga means \\(10^{9}\\), or one billion. Mega is only \\(10^{6}\\), and nano is the small unit \\(10^{-9}\\), which has the same size of power but a negative sign.",
+      "clue": "Giga is a large prefix, and it sits between mega and tera."
+    },
+    "b": {
+      "d": 2,
+      "q": "A virus particle in a Sydney lab is 100 nanometres wide. How wide is it in metres?",
+      "opts": [
+        "\\(1 \\times 10^{-7}\\) m",
+        "\\(1 \\times 10^{-6}\\) m",
+        "\\(1 \\times 10^{7}\\) m",
+        "\\(1 \\times 10^{-11}\\) m"
+      ],
+      "why": "Nano is \\(10^{-9}\\), so the width is \\(100 \\times 10^{-9}\\), which is \\(10^{2} \\times 10^{-9} = 10^{-7}\\) m. An answer of \\(10^{-6}\\) m is 1 micrometre, which is 1000 nanometres, so it is ten times too wide.",
+      "clue": "Write 100 as a power of 10, then combine it with the nano power."
+    }
+  },
+  "mat-significant-figures-nsw": {
+    "title": "Significant figures",
+    "card": [
+      "Significant figures are the digits that carry the size of a number. Counting starts at the first non-zero digit and moves right.",
+      "Zeros before the first non-zero digit only show place value, so they are not counted. Zeros between non-zero digits are counted, so 2.07 has 3 significant figures.",
+      "To round, keep the number of digits asked for. Look at the next digit. If it is 5 or more, round the last kept digit up. If it is 4 or less, leave it.",
+      "Worked example: round 0.004 562 to 2 significant figures. The first two are 4 and 5, and the next digit is 6, so the 5 becomes 6. The answer is 0.0046."
+    ],
+    "remember": "Skip the zeros at the start, count the zeros in between, then round using the next digit.",
+    "a": {
+      "q": "Round 0.007 381 to 2 significant figures. What is the answer?",
+      "opts": ["0.0074", "0.0073", "0.007", "0.074"],
+      "why": "The first significant figure is 7, so the two digits are 7 and 3. The next digit is 8, so the 3 rounds up to 4, giving 0.0074. Rounding down to 0.0073 ignores the 8.",
+      "clue": "Start counting at the first digit that is not zero."
+    },
+    "b": {
+      "d": 3,
+      "q": "A rock pool at Bondi holds 0.030 468 megalitres of water. What is this to 3 significant figures?",
+      "opts": ["0.0305", "0.0304", "0.030", "0.305"],
+      "why": "Counting starts at the 3, and the zero between 3 and 4 is counted, so the three digits are 3, 0 and 4. The next digit is 6, so the 4 rounds up to 5, giving 0.0305. 0.0304 forgets to round up.",
+      "clue": "Does the zero after the 3 count as a significant figure?"
+    }
+  },
+  "mat-absolute-percentage-error": {
+    "title": "Absolute and percentage error",
+    "card": [
+      "Every measurement can be a little out. The absolute error is half the smallest unit on the instrument.",
+      "Example: a ruler marked in millimetres has smallest unit 1 mm. The absolute error is \\(0.5\\) mm, so a length of 80 mm could be from \\(79.5\\) to \\(80.5\\) mm.",
+      "Percentage error compares the error with the measurement. Percentage error \\(=\\) absolute error \\(\\div\\) measurement \\(\\times 100\\%\\).",
+      "Example: \\(0.5 \\div 80 \\times 100 = 0.625\\%\\). Use the same unit for both numbers."
+    ],
+    "remember": "Absolute error is half the smallest unit. Divide it by the measurement and multiply by 100 for percentage error.",
+    "a": {
+      "q": "A scale shows a mass in steps of 0.2 kg. What is the absolute error?",
+      "opts": ["\\(0.1\\) kg", "\\(0.2\\) kg", "\\(0.4\\) kg", "\\(0.02\\) kg"],
+      "why": "The absolute error is half the smallest unit, and half of \\(0.2\\) is \\(0.1\\) kg. The option \\(0.2\\) kg is tempting, but it is the whole unit, not half.",
+      "clue": "Halve the smallest unit."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya measures a plank as 50 cm using a tape marked in whole centimetres. What is the percentage error?",
+      "opts": ["\\(1\\%\\)", "\\(0.5\\%\\)", "\\(2\\%\\)", "\\(0.01\\%\\)"],
+      "why": "The absolute error is half of 1 cm, which is \\(0.5\\) cm. Then \\(0.5 \\div 50 \\times 100 = 1\\%\\). The option \\(0.5\\%\\) is just the absolute error with a % sign added, without dividing by the measurement or multiplying by 100.",
+      "clue": "There are three steps: halve the unit, divide by the measurement, then multiply by 100."
+    }
+  },
+  "mat-gradient-interval-nsw": {
+    "title": "Gradient of an interval",
+    "card": [
+      "Gradient measures how steep an interval is. Gradient \\(=\\) rise \\(\\div\\) run, where the rise is the change up or down and the run is the change across.",
+      "Worked example: from \\(A(1, 2)\\) to \\(B(5, 10)\\), the rise is \\(10 - 2 = 8\\) and the run is \\(5 - 1 = 4\\). The gradient is \\(\\frac{8}{4} = 2\\).",
+      "Going right, an interval that slopes up has a positive gradient. One that slopes down has a negative gradient, because the rise is negative.",
+      "A horizontal interval has rise 0, so its gradient is 0. A vertical interval has run 0, and you cannot divide by 0, so it has no gradient."
+    ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "An interval from A(1, 2) to B(5, 10) sloping up to the right. The run is 4 across and the rise is 8 up.",
+        "x": {"min": -1, "max": 8, "label": "\\(x\\)", "step": 1},
+        "y": {"min": -1, "max": 12, "label": "\\(y\\)", "step": 1},
+        "grid": true,
+        "items": [
+          {"type": "curve", "id": "AB", "points": [[1, 2], [5, 10]]},
+          {"type": "point", "at": [1, 2], "label": "\\(A(1, 2)\\)", "pos": "below-right"},
+          {"type": "point", "at": [5, 10], "label": "\\(B(5, 10)\\)", "pos": "below-right"}
+        ]
+      }
+    },
+    "remember": "Gradient is rise over run: up is positive, down is negative.",
+    "a": {
+      "q": "An interval joins \\(P(2, 9)\\) and \\(Q(6, 1)\\). What is its gradient?",
+      "opts": ["\\(-2\\)", "\\(2\\)", "\\(-\\frac{1}{2}\\)", "\\(\\frac{1}{2}\\)"],
+      "why": "The rise is \\(1 - 9 = -8\\) and the run is \\(6 - 2 = 4\\), so the gradient is \\(\\frac{-8}{4} = -2\\). The interval slopes down to the right, so the gradient is negative. Choosing \\(2\\) drops that sign.",
+      "clue": "Which way does the interval go as you move right?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Which interval has no gradient?",
+      "opts": [
+        "From \\((3, 1)\\) to \\((3, 7)\\)",
+        "From \\((1, 3)\\) to \\((7, 3)\\)",
+        "From \\((0, 0)\\) to \\((4, 4)\\)",
+        "From \\((5, 2)\\) to \\((1, 6)\\)"
+      ],
+      "why": "From \\((3, 1)\\) to \\((3, 7)\\) the run is \\(3 - 3 = 0\\), so the interval is vertical and has no gradient. The horizontal interval is tempting, but its rise is 0, so its gradient is 0, which is a gradient.",
+      "clue": "Check which interval has a run of zero."
+    }
+  },
+  "mat-distance-between-two-points-nsw": {
+    "title": "Distance between two points",
+    "card": [
+      "To find the distance between two points on the number plane, draw a right-angled triangle. The interval joining the points is its hypotenuse.",
+      "Make the other two sides horizontal and vertical. Find their lengths from the coordinates: subtract the \\(x\\) values for the horizontal side and the \\(y\\) values for the vertical side.",
+      "Use Pythagoras' theorem on the triangle: \\(c^{2} = a^{2} + b^{2}\\), where \\(c\\) is the hypotenuse. Add the squares of the two sides, then take the square root to find \\(c\\).",
+      [
+        "Example",
+        "From \\((1, 2)\\) to \\((4, 6)\\): the horizontal side is 3 and the vertical side is 4. So \\(c^{2} = 3^{2} + 4^{2} = 25\\), and \\(c = 5\\)."
+      ]
+    ],
+    "remember": "Draw the triangle, find its two sides, then use \\(c^{2} = a^{2} + b^{2}\\).",
+    "a": {
+      "q": "A right-angled triangle is drawn with the interval from \\((2, 1)\\) to \\((5, 5)\\) as its hypotenuse. How long is the interval?",
+      "opts": ["5", "7", "25", "3.5"],
+      "why": "The horizontal side is 3 and the vertical side is 4, so \\(c^{2} = 9 + 16 = 25\\). Then \\(c = 5\\). The answer 25 is tempting, but it is \\(c^{2}\\), so the square root step is missing.",
+      "clue": "Find \\(c^{2}\\), then take the square root."
+    },
+    "b": {
+      "d": 3,
+      "q": "On a park map grid in metres, a path runs from \\((-3, 2)\\) to \\((5, -4)\\). Use a right-angled triangle to find the path's length.",
+      "opts": ["10 m", "14 m", "100 m", "2 m"],
+      "why": "The horizontal side is \\(5 - (-3) = 8\\) and the vertical side is 6 in length. So \\(c^{2} = 64 + 36 = 100\\), and \\(c = 10\\) m. The answer 14 comes from adding the sides instead of using Pythagoras' theorem.",
+      "clue": "Take care with the negative numbers when finding each side."
+    }
+  },
+  "mat-horizontal-vertical-lines": {
+    "title": "Horizontal and vertical lines",
+    "card": [
+      [
+        "Horizontal",
+        "Every point on a horizontal line has the same y value, so its equation is \\(y = c\\). The line \\(y = 3\\) passes through \\((-2, 3)\\) and \\((5, 3)\\)."
+      ],
+      [
+        "Vertical",
+        "Every point on a vertical line has the same x value, so its equation is \\(x = c\\). The line \\(x = 2\\) passes through \\((2, -2)\\) and \\((2, 4)\\)."
+      ],
+      "A horizontal line has gradient 0. A vertical line has no gradient. The equation \\(y = c\\) names the height of the line, and \\(x = c\\) names where it crosses the x-axis.",
+      "Parallel lines have the same gradient. All horizontal lines are parallel to each other, and so are all vertical lines."
+    ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "The horizontal line \\(y = 3\\) passing through the points \\((-2, 3)\\) and \\((5, 3)\\), and the vertical line \\(x = 2\\) passing through the points \\((2, -2)\\) and \\((2, 4)\\).",
+        "x": {"min": -4, "max": 7, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -4, "max": 6, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "curve",
+            "id": "h",
+            "points": [[-4, 3], [7, 3]],
+            "label": "\\(y = 3\\)",
+            "pos": "above",
+            "labelAt": 6
+          },
+          {
+            "type": "curve",
+            "id": "v",
+            "points": [[2, -4], [2, 6]],
+            "label": "\\(x = 2\\)",
+            "pos": "right",
+            "labelAt": 2
+          },
+          {"type": "point", "at": [-2, 3], "on": ["h"], "label": "\\((-2, 3)\\)", "pos": "above"},
+          {"type": "point", "at": [5, 3], "on": ["h"], "label": "\\((5, 3)\\)", "pos": "below"}
+        ]
+      }
+    },
+    "remember": "\\(y = c\\) is a flat line at height \\(c\\). \\(x = c\\) is an upright line through \\(x = c\\).",
+    "a": {
+      "q": "Which line passes through the points \\((4, -1)\\) and \\((4, 6)\\)?",
+      "opts": ["\\(x = 4\\)", "\\(y = 4\\)", "\\(x = -1\\)", "\\(y = 6\\)"],
+      "why": "Both points have an x value of 4, so the line is vertical with equation \\(x = 4\\). The option \\(y = 4\\) mixes up the two axes: it is a horizontal line through height 4.",
+      "clue": "Which coordinate is the same in both points?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia's garden fence is the line \\(y = -2\\). A second fence is parallel to it and passes through \\((3, 5)\\). What is the equation of the second fence?",
+      "opts": ["\\(y = 5\\)", "\\(x = 3\\)", "\\(y = 3\\)", "\\(x = 5\\)"],
+      "why": "The line \\(y = -2\\) is horizontal, so a parallel line is also horizontal. Every point on it has the same y value, which is 5 here, so it is \\(y = 5\\). The option \\(x = 3\\) is a vertical line, which is not parallel to a horizontal one.",
+      "clue": "A horizontal line has the same y value everywhere."
+    }
+  },
+  "mat-gradient-intercept-form": {
+    "title": "Gradient-intercept form",
+    "card": [
+      "A straight line can be written as \\(y = mx + c\\). This is called gradient-intercept form.",
+      [
+        "Gradient",
+        "\\(m\\) is the number multiplying \\(x\\). It tells you how much \\(y\\) changes when \\(x\\) goes up by 1. A negative \\(m\\) means the line slopes down."
+      ],
+      [
+        "y-intercept",
+        "\\(c\\) is the number added on its own. It is the value of \\(y\\) where the line crosses the y-axis, at the point \\((0, c)\\)."
+      ],
+      [
+        "Example",
+        "For \\(y = 2x - 3\\), \\(m = 2\\) and \\(c = -3\\). Start at \\((0, -3)\\). Go across 1 and up 2 to reach \\((1, -1)\\). Join the points with a line."
+      ]
+    ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The line \\(y = 2x - 3\\), crossing the y-axis at \\((0, -3)\\) and passing through \\((1, -1)\\).",
+        "x": {"min": -3, "max": 6, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -7, "max": 5, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "2x - 3",
+            "domain": [-1.5, 3.5],
+            "label": "\\(y = 2x - 3\\)",
+            "labelAt": 2.5,
+            "pos": "below-right"
+          },
+          {
+            "type": "point",
+            "at": [0, -3],
+            "on": ["f"],
+            "is": "y-intercept",
+            "label": "\\((0, -3)\\)",
+            "pos": "below-right"
+          },
+          {"type": "point", "at": [1, -1], "on": ["f"], "label": "\\((1, -1)\\)", "pos": "below-right"}
+        ]
+      }
+    },
+    "remember": "In \\(y = mx + c\\), \\(m\\) is the gradient and \\(c\\) is where the line meets the y-axis.",
+    "a": {
+      "q": "What are the gradient and y-intercept of the line \\(y = -4x + 5\\)?",
+      "opts": [
+        "Gradient \\(-4\\), y-intercept \\(5\\)",
+        "Gradient \\(5\\), y-intercept \\(-4\\)",
+        "Gradient \\(4\\), y-intercept \\(5\\)",
+        "Gradient \\(-4\\), y-intercept \\(-5\\)"
+      ],
+      "why": "The number multiplying \\(x\\) is the gradient, \\(-4\\). The number added on its own is the y-intercept, \\(5\\). Swapping the two is a common mistake, but \\(c\\) is the part without \\(x\\).",
+      "clue": "The gradient is the number multiplying \\(x\\), with its sign."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya draws the line \\(y = -\\frac{1}{2}x + 3\\). She starts at the y-intercept. Which move takes her to another point on the line?",
+      "opts": [
+        "Across 2, down 1, to reach \\((2, 2)\\)",
+        "Across 2, up 1, to reach \\((2, 4)\\)",
+        "Across 1, down 2, to reach \\((1, 1)\\)",
+        "Across 3, down 1, to reach \\((3, 2)\\)"
+      ],
+      "why": "The y-intercept is \\((0, 3)\\) and the gradient is \\(-\\frac{1}{2}\\). So \\(y\\) falls 1 each time \\(x\\) rises 2, which gives \\((2, 2)\\). Across 2 and up 1 would give a gradient of \\(\\frac{1}{2}\\), which slopes up.",
+      "clue": "Start at \\((0, 3)\\). A negative gradient means the line goes down as it goes right."
+    }
+  },
+  "mat-finding-equation-line": {
+    "title": "Finding the equation of a line",
+    "card": [
+      "To write a line as \\(y = mx + c\\), you need the gradient \\(m\\) and the y-intercept \\(c\\). The y-intercept is where the line crosses the y-axis.",
+      [
+        "From a graph",
+        "Read \\(c\\) where the line crosses the y-axis. Pick two clear points, then find \\(m\\) as rise \\(\\div\\) run."
+      ],
+      [
+        "From a point",
+        "Put \\(m\\) and the point's \\(x\\) and \\(y\\) into \\(y = mx + c\\), then solve for \\(c\\). Example: \\(m = 3\\) and the point \\((2, 5)\\) give \\(5 = 3 \\times 2 + c\\), so \\(c = -1\\)."
+      ],
+      "Then write the equation with both numbers in place. In the example, the line is \\(y = 3x - 1\\). In the graph above, the rise is 4 and the run is 2, so \\(m = 2\\), \\(c = 1\\) and \\(y = 2x + 1\\)."
+    ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "A straight line on a grid through the points (0, 1) and (2, 5). It crosses the y-axis at (0, 1) and rises 4 units for every 2 units across.",
+        "x": {"min": -3, "max": 6, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -3, "max": 9, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {"type": "fn", "id": "f", "expr": "2x + 1", "domain": [-1.5, 3.5]},
+          {
+            "type": "point",
+            "at": [0, 1],
+            "on": ["f"],
+            "is": "y-intercept",
+            "label": "\\((0, 1)\\)",
+            "pos": "above-left"
+          },
+          {"type": "point", "at": [2, 5], "on": ["f"], "label": "\\((2, 5)\\)", "pos": "below-right"}
+        ]
+      }
+    },
+    "remember": "Find \\(m\\) from rise over run, find \\(c\\) from the y-axis or by substituting a point, then write \\(y = mx + c\\).",
+    "a": {
+      "q": "A line has gradient 4 and passes through the point \\((3, 7)\\). What is its equation?",
+      "opts": ["\\(y = 4x - 5\\)", "\\(y = 4x + 5\\)", "\\(y = 4x + 7\\)", "\\(y = 4x + 19\\)"],
+      "why": "Substituting gives \\(7 = 4 \\times 3 + c\\), so \\(7 = 12 + c\\) and \\(c = -5\\). Using \\(c = 5\\) comes from subtracting the wrong way round.",
+      "clue": "Put \\(x = 3\\) and \\(y = 7\\) into \\(y = mx + c\\) and solve for \\(c\\)."
+    },
+    "b": {
+      "d": 3,
+      "q": "A line passes through \\((0, 4)\\) and \\((2, 0)\\). What is its equation?",
+      "opts": ["\\(y = -2x + 4\\)", "\\(y = 2x + 4\\)", "\\(y = -\\frac{1}{2}x + 4\\)", "\\(y = -2x + 2\\)"],
+      "why": "The line crosses the y-axis at 4, so \\(c = 4\\). The rise is \\(0 - 4 = -4\\) over a run of 2, so \\(m = -2\\). Using \\(m = 2\\) ignores that the line falls as it goes right.",
+      "clue": "Does the line rise or fall as \\(x\\) increases?"
+    }
+  },
+  "mat-parallel-perpendicular-lines": {
+    "title": "Parallel and perpendicular lines",
+    "card": [
+      [
+        "Parallel",
+        "Parallel lines never meet. They have equal gradients, so \\(y = 3x + 1\\) and \\(y = 3x - 4\\) are parallel."
+      ],
+      ["Perpendicular", "Perpendicular lines meet at a right angle. Their gradients multiply to \\(-1\\)."],
+      "To find a perpendicular gradient, flip the fraction and change the sign. The gradient \\(2\\) is \\(\\frac{2}{1}\\). Flip it to get \\(\\frac{1}{2}\\), then change the sign to get \\(-\\frac{1}{2}\\).",
+      "Example: a line has gradient \\(-\\frac{3}{4}\\). Flip it to get \\(-\\frac{4}{3}\\), then change the sign to get \\(\\frac{4}{3}\\). Check: \\(-\\frac{3}{4} \\times \\frac{4}{3} = -1\\)."
+    ],
+    "remember": "Parallel: same gradient. Perpendicular: flip it and change the sign.",
+    "a": {
+      "q": "Which line is perpendicular to \\(y = 5x + 2\\)?",
+      "opts": ["\\(y = -\\frac{1}{5}x + 2\\)", "\\(y = \\frac{1}{5}x + 2\\)", "\\(y = -5x + 2\\)", "\\(y = 5x - 2\\)"],
+      "why": "The gradient of the given line is \\(5\\). The perpendicular gradient is \\(-\\frac{1}{5}\\), because \\(5 \\times -\\frac{1}{5} = -1\\). The line \\(y = \\frac{1}{5}x + 2\\) only flips the fraction and keeps the sign, so its product with \\(5\\) is \\(1\\), not \\(-1\\).",
+      "clue": "Flip the gradient, then change its sign."
+    },
+    "b": {
+      "d": 3,
+      "q": "Line \\(p\\) has equation \\(y = -\\frac{2}{3}x + 7\\). Line \\(q\\) is perpendicular to \\(p\\). What is the gradient of \\(q\\)?",
+      "opts": ["\\(\\frac{3}{2}\\)", "\\(-\\frac{3}{2}\\)", "\\(\\frac{2}{3}\\)", "\\(-\\frac{2}{3}\\)"],
+      "why": "The gradient of \\(p\\) is \\(-\\frac{2}{3}\\). Flip it to get \\(-\\frac{3}{2}\\), then change the sign to get \\(\\frac{3}{2}\\). Check: \\(-\\frac{2}{3} \\times \\frac{3}{2} = -1\\). The option \\(-\\frac{3}{2}\\) flips the fraction but forgets to change the sign.",
+      "clue": "The two gradients must multiply to \\(-1\\)."
+    }
+  },
+  "mat-features-parabola": {
+    "title": "Features of a parabola",
+    "card": [
+      [
+        "Vertex",
+        "the turning point of the parabola, its highest or lowest point. It is the lowest point when the parabola is concave up and the highest when it is concave down."
+      ],
+      [
+        "Axis of symmetry",
+        "the vertical line through the vertex. It splits the parabola into two mirror halves. In a table, equal y-values sit the same distance either side of it."
+      ],
+      [
+        "Intercepts",
+        "the y-intercept is where the curve crosses the y-axis, at \\(x = 0\\). The x-intercepts are where it crosses the x-axis, at \\(y = 0\\). There can be two, one or none."
+      ],
+      [
+        "Example",
+        "For \\(y = x^{2} - 4\\), the vertex is \\((0, -4)\\), the axis of symmetry is \\(x = 0\\), the y-intercept is \\(-4\\), and the x-intercepts are \\(x = -2\\) and \\(x = 2\\)."
+      ]
+    ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The parabola \\(y = x^{2} - 4\\), concave up, with vertex \\((0, -4)\\), crossing the x-axis at \\(x = -2\\) and \\(x = 2\\) and the y-axis at \\(-4\\).",
+        "x": {"min": -4, "max": 4, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -6, "max": 6, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "x^{2} - 4",
+            "label": "\\(y = x^{2} - 4\\)",
+            "labelAt": 2.8,
+            "pos": "left"
+          },
+          {
+            "type": "point",
+            "at": [-2, 0],
+            "on": ["f"],
+            "is": "x-intercept",
+            "label": "\\((-2, 0)\\)",
+            "pos": "below-left"
+          },
+          {
+            "type": "point",
+            "at": [2, 0],
+            "on": ["f"],
+            "is": "x-intercept",
+            "label": "\\((2, 0)\\)",
+            "pos": "below-right"
+          },
+          {
+            "type": "point",
+            "at": [0, -4],
+            "on": ["f"],
+            "is": "turning point",
+            "label": "\\((0, -4)\\)",
+            "pos": "below-right"
+          }
+        ]
+      }
+    },
+    "remember": "The vertex is the turning point, the axis of symmetry runs through it, and the intercepts are where the curve meets the axes.",
+    "a": {
+      "q": "A parabola has a table of values with \\(y = 5\\) at both \\(x = 1\\) and \\(x = 5\\). Which line is its axis of symmetry?",
+      "opts": ["\\(x = 3\\)", "\\(x = 5\\)", "\\(y = 5\\)", "\\(x = 1\\)"],
+      "why": "Equal y-values sit the same distance either side of the axis, so the axis is halfway between \\(x = 1\\) and \\(x = 5\\), at \\(x = 3\\). The line \\(y = 5\\) is horizontal, but the axis of symmetry is vertical.",
+      "clue": "The axis is halfway between the two x-values."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia's parabola is \\(y = 9 - x^{2}\\). It is concave down. What are its vertex and y-intercept?",
+      "opts": [
+        "Vertex \\((0, 9)\\), y-intercept 9",
+        "Vertex \\((0, 9)\\), y-intercept 3",
+        "Vertex \\((0, 3)\\), y-intercept 9",
+        "Vertex \\((0, 3)\\), y-intercept 3"
+      ],
+      "why": "At \\(x = 0\\), \\(y = 9 - 0 = 9\\). This is the y-intercept, and it is also the highest point, so it is the vertex \\((0, 9)\\). The value 3 is an x-intercept, found where \\(y = 0\\), not the y-intercept.",
+      "clue": "Put \\(x = 0\\) into the equation."
+    }
+  },
+  "mat-exponential-graphs-nsw": {
+    "title": "Exponential graphs",
+    "card": [
+      "In \\(y = 2^{x}\\), the variable \\(x\\) is the power. Each time \\(x\\) goes up by 1, \\(y\\) is multiplied by 2, so \\(y\\) doubles.",
+      "For example, \\(x = 0, 1, 2, 3\\) gives \\(y = 1, 2, 4, 8\\). The curve passes through \\((0, 1)\\), because \\(2^{0} = 1\\).",
+      "When \\(x\\) is negative, \\(y\\) is a small positive number. For example, \\(x = -1\\) gives \\(y = \\frac{1}{2}\\). The curve gets close to the x-axis but never reaches it, because \\(2^{x}\\) is never 0.",
+      "The curve is always above the x-axis, and it rises faster and faster as \\(x\\) increases."
+    ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "The curve \\(y = 2^{x}\\), rising steeply to the right and passing through \\((0, 1)\\). On the left it gets close to the x-axis without touching it.",
+        "x": {"min": -4, "max": 4, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -1, "max": 9, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {"type": "fn", "id": "f", "expr": "2^{x}", "label": "\\(y = 2^{x}\\)", "labelAt": 2.6, "pos": "left"},
+          {
+            "type": "point",
+            "at": [0, 1],
+            "on": ["f"],
+            "is": "y-intercept",
+            "label": "\\((0, 1)\\)",
+            "pos": "above-left"
+          }
+        ]
+      }
+    },
+    "remember": "For \\(y = 2^{x}\\), \\(y\\) doubles as \\(x\\) goes up by 1. The curve passes through \\((0, 1)\\) and stays above the x-axis.",
+    "a": {
+      "q": "Which point lies on the graph of \\(y = 2^{x}\\)?",
+      "opts": ["\\((3, 8)\\)", "\\((3, 6)\\)", "\\((0, 0)\\)", "\\((2, 8)\\)"],
+      "why": "When \\(x = 3\\), \\(y = 2^{3} = 8\\), so \\((3, 8)\\) is on the curve. The point \\((3, 6)\\) comes from multiplying \\(2 \\times 3\\) instead of using \\(x\\) as the power.",
+      "clue": "Put the x value in as the power of 2."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia plots \\(y = 2^{x}\\) and reads \\(y = 16\\) at \\(x = 4\\). Using the pattern of the curve, what is \\(y\\) at \\(x = 6\\)?",
+      "opts": ["64", "48", "32", "20"],
+      "why": "Going from \\(x = 4\\) to \\(x = 6\\) is two steps, so \\(y\\) doubles twice: 16 to 32 to 64, which matches \\(2^{6} = 64\\). The answer 48 comes from adding 16 at each step, but \\(y\\) is multiplied by 2 each step, not increased by a fixed amount.",
+      "clue": "Count how many steps of 1 there are from \\(x = 4\\) to \\(x = 6\\)."
+    }
+  },
+  "mat-exponential-growth-decay-2": {
+    "title": "Exponential growth and decay",
+    "card": [
+      "In an exponential pattern, the amount is multiplied by the same number each step. That number is called the multiplier.",
+      [
+        "Growth",
+        "the multiplier is greater than 1, so the amount gets bigger each step. A population that rises by 10% each year has a multiplier of 1.1."
+      ],
+      [
+        "Decay",
+        "the multiplier is between 0 and 1, so the amount gets smaller each step. A drink whose excess heat falls by 20% each minute has a multiplier of 0.8."
+      ],
+      "Example: 200 bacteria double every hour. After 1 hour there are \\(200 \\times 2 = 400\\). After 2 hours there are \\(400 \\times 2 = 800\\). The multiplier is 2, so this is growth."
+    ],
+    "remember": "Multiplier above 1 gives growth. Multiplier between 0 and 1 gives decay.",
+    "a": {
+      "q": "A town's population is multiplied by 1.05 each year. Which describes this?",
+      "opts": [
+        "Exponential growth, as the multiplier is above 1",
+        "Exponential decay, as the multiplier is above 1",
+        "Exponential growth, as the multiplier is below 1",
+        "Exponential decay, as the multiplier is below 1"
+      ],
+      "why": "The multiplier 1.05 is greater than 1, so the population gets bigger each year. That is growth. Decay needs a multiplier between 0 and 1.",
+      "clue": "Is the multiplier bigger or smaller than 1?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A car is worth $20,000. Its value is multiplied by 0.9 each year. What is it worth after 2 years?",
+      "opts": ["$16,200", "$16,000", "$18,000", "$14,000"],
+      "why": "Each year the value is multiplied by 0.9. After 1 year it is \\(20{,}000 \\times 0.9 = 18{,}000\\), and after 2 years it is \\(18{,}000 \\times 0.9 = 16{,}200\\). Taking off 10% of the starting value twice gives $16,000, but the second 10% is taken from the new, smaller value.",
+      "clue": "Multiply by 0.9 twice, using the new value each time."
+    }
+  },
+  "mat-linear-quadratic-or-exponential": {
+    "title": "Linear, quadratic or exponential",
+    "card": [
+      [
+        "Linear",
+        "Equal steps in \\(x\\) give equal differences in \\(y\\). The graph is a straight line, such as \\(y = 3x + 1\\)."
+      ],
+      [
+        "Quadratic",
+        "The differences in \\(y\\) are not equal, but the differences between those differences, called second differences, are equal. The graph is a parabola, such as \\(y = x^{2} + 1\\)."
+      ],
+      [
+        "Exponential",
+        "Equal steps in \\(x\\) give equal ratios in \\(y\\): each \\(y\\) is the one before multiplied by the same number. The variable is in the power, such as \\(y = 2^{x}\\)."
+      ],
+      "Example: \\(y\\) values 2, 6, 18, 54. The differences are 4, 12, 36, which are not equal. The ratios are \\(6 \\div 2 = 3\\), \\(18 \\div 6 = 3\\) and \\(54 \\div 18 = 3\\), so it is exponential."
+    ],
+    "remember": "Equal differences mean linear, equal second differences mean quadratic, and equal ratios mean exponential.",
+    "a": {
+      "q": "For \\(x = 0, 1, 2, 3\\), a table gives \\(y = 5, 8, 11, 14\\). Which kind of relationship is it?",
+      "opts": [
+        "Linear, because the differences are all 3",
+        "Exponential, because \\(y\\) keeps getting bigger",
+        "Quadratic, because the differences are all 3",
+        "Exponential, because the ratios are all 3"
+      ],
+      "why": "Each step adds 3, so the differences are equal and the relationship is linear. A rising \\(y\\) does not make it exponential, since the ratios \\(8 \\div 5\\) and \\(11 \\div 8\\) are not equal.",
+      "clue": "Subtract each \\(y\\) from the next one."
+    },
+    "b": {
+      "d": 3,
+      "q": "For \\(x = 0, 1, 2, 3\\), a table gives \\(y = 1, 2, 5, 10\\). Which kind of relationship is it?",
+      "opts": [
+        "Quadratic, because the second differences are equal",
+        "Linear, because \\(y\\) goes up at every single step",
+        "Exponential, because \\(y\\) rises faster at each step",
+        "Exponential, because the ratios of the \\(y\\) values are equal"
+      ],
+      "why": "The differences are 1, 3, 5, which are not equal, but the second differences are all 2. That makes it quadratic. Rising faster is not enough for exponential, because the ratios 2, 2.5 and 2 are not equal.",
+      "clue": "Find the differences, then find the differences of those."
+    }
+  },
+  "mat-naming-sides-right-angled": {
+    "title": "Naming the sides of a right-angled triangle",
+    "card": [
+      ["Hypotenuse", "The hypotenuse is the side opposite the right angle. It is always the longest side."],
+      ["Opposite", "The opposite side is directly across from the angle you are using. It does not touch that angle."],
+      [
+        "Adjacent",
+        "The adjacent side is next to the angle you are using. It is the side that touches the angle and is not the hypotenuse."
+      ],
+      "Example: in triangle \\(ABC\\), the right angle is at \\(C\\). The hypotenuse is \\(AB\\). For angle \\(A\\), the opposite side is \\(BC\\) and the adjacent side is \\(AC\\). For angle \\(B\\), they swap."
+    ],
+    "remember": "The hypotenuse stays the same. Opposite and adjacent change with the angle you choose.",
+    "a": {
+      "q": "In triangle \\(PQR\\), the right angle is at \\(Q\\). Which side is the hypotenuse?",
+      "opts": ["\\(PR\\)", "\\(PQ\\)", "\\(QR\\)", "\\(PQ\\) and \\(QR\\)"],
+      "why": "The hypotenuse is the one side opposite the right angle. The right angle is at \\(Q\\), so the side across from it is \\(PR\\). \\(PQ\\) and \\(QR\\) both touch the right angle, so neither of them is the hypotenuse.",
+      "clue": "Which side is across from the right angle?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In triangle \\(DEF\\), the right angle is at \\(E\\). Taking angle \\(F\\) as the angle you are using, which side is the opposite side?",
+      "opts": ["\\(DE\\)", "\\(EF\\)", "\\(DF\\)", "\\(FE\\) and \\(FD\\)"],
+      "why": "The opposite side is across from angle \\(F\\), so it is \\(DE\\). \\(EF\\) is tempting, but it touches angle \\(F\\), so it is the adjacent side. \\(DF\\) is the hypotenuse.",
+      "clue": "Find the side that does not touch angle \\(F\\) and is not across from the right angle."
+    }
+  },
+  "mat-finding-angle-with-trigonometry-nsw": {
+    "title": "Finding an angle with trigonometry",
+    "card": [
+      "When you know two sides of a right-angled triangle, you can find an angle. Start by naming the two known sides from the angle you want: opposite, adjacent or hypotenuse.",
+      "Choose sin, cos or tan, whichever ratio uses both of your known sides. Divide one side by the other to get a number.",
+      "Set your calculator to degree mode first. Then use the inverse function (\\(\\sin^{-1}\\), \\(\\cos^{-1}\\) or \\(\\tan^{-1}\\)) to turn that number into the angle. It must match the ratio you chose.",
+      "Example: opposite \\(= 3\\) and adjacent \\(= 4\\), so use tan. \\(\\tan \\theta = \\frac{3}{4} = 0.75\\), so \\(\\theta = \\tan^{-1}(0.75) \\approx 36.9^{\\circ}\\)."
+    ],
+    "remember": "Divide the two known sides, then use the matching inverse function to get the angle.",
+    "a": {
+      "q": "A 10 m ladder rests against a wall and reaches 5 m up the wall. What angle does the ladder make with the ground?",
+      "opts": ["30°", "60°", "26.6°", "63.4°"],
+      "why": "The wall height is opposite the angle and the ladder is the hypotenuse, so use sin. \\(\\sin \\theta = \\frac{5}{10} = 0.5\\), so \\(\\theta = \\sin^{-1}(0.5) = 30^{\\circ}\\). Using \\(\\tan^{-1}(0.5)\\) gives 26.6°, but tan needs the adjacent side, which is not given.",
+      "clue": "Which two sides do you know, seen from the angle at the ground?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A steep path up a hill in the Blue Mountains rises 1.2 m over a flat distance of 5 m. What is its angle of slope, to one decimal place?",
+      "opts": ["13.5°", "13.9°", "76.5°", "76.1°"],
+      "why": "The rise is opposite the angle and the flat distance is adjacent, so use tan. \\(\\tan \\theta = \\frac{1.2}{5} = 0.24\\), so \\(\\theta = \\tan^{-1}(0.24) \\approx 13.5^{\\circ}\\). Using \\(\\sin^{-1}(0.24)\\) gives 13.9°, but the 5 m is not the hypotenuse.",
+      "clue": "The rise and the flat distance are opposite and adjacent."
+    }
+  },
+  "mat-compass-true-bearings": {
+    "title": "Compass and true bearings",
+    "card": [
+      [
+        "Compass bearing",
+        "It starts from north or south, then turns east or west by an angle. S40°E means start facing south, then turn 40° towards east."
+      ],
+      [
+        "True bearing",
+        "It is measured clockwise from north and written with three digits. East is 090°, south is 180° and west is 270°."
+      ],
+      [
+        "Converting",
+        "S40°E is 40° east of south. South is 180°, and turning towards east takes you back round to 140°. So S40°E is 140°."
+      ],
+      [
+        "Another case",
+        "N30°W is 30° west of north. Going anticlockwise from north gives \\(360^{\\circ} - 30^{\\circ} = 330^{\\circ}\\). So N30°W is the true bearing 330°."
+      ]
+    ],
+    "remember": "True bearings go clockwise from north in three digits. Compass bearings start from north or south.",
+    "a": {
+      "q": "What is the true bearing for the compass bearing S40°E?",
+      "opts": ["140°", "040°", "220°", "320°"],
+      "why": "South is 180°. Turning 40° towards east means going back 40° from 180°, which gives 140°. 220° is wrong because it turns towards west instead.",
+      "clue": "South is 180°. Is east before or after south going clockwise from north?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A hiker in the Blue Mountains walks on a true bearing of 250°. What is this as a compass bearing?",
+      "opts": ["S70°W", "S20°W", "N70°W", "S70°E"],
+      "why": "250° is between 180° (south) and 270° (west), so the direction is south-west. It is \\(250^{\\circ} - 180^{\\circ} = 70^{\\circ}\\) past south towards west, so S70°W. S20°W is wrong because 20° is the angle from west, not from south.",
+      "clue": "Which quarter is 250° in, and how far is it from south?"
+    }
+  },
+  "mat-solving-bearing-problems": {
+    "title": "Solving bearing problems",
+    "card": [
+      [
+        "Draw",
+        "Sketch a north line at each point where a bearing is measured. Mark the true bearing clockwise from north to the direction of travel."
+      ],
+      [
+        "Find a triangle",
+        "Use the angles at the north lines to make a right-angled triangle. A due east or due north leg gives the right angle."
+      ],
+      [
+        "Solve",
+        "Use \\(\\sin\\), \\(\\cos\\) or \\(\\tan\\) with one side and one angle, or Pythagoras' theorem with two sides."
+      ],
+      [
+        "Example",
+        "A boat sails 10 km on a bearing of 060°. The angle from north is 60°. North distance is \\(10\\cos 60^{\\circ} = 5\\) km. East distance is \\(10\\sin 60^{\\circ} \\approx 8.7\\) km."
+      ]
+    ],
+    "remember": "Draw a north line, build a right-angled triangle, then use trigonometry or Pythagoras' theorem.",
+    "a": {
+      "q": "A drone flies 200 m on a bearing of 090°, then 150 m on a bearing of 000°. What is its distance from the start?",
+      "opts": ["250 m", "350 m", "\\(\\sqrt{17{,}500}\\) m, about 132 m", "50 m"],
+      "why": "The legs are east and north, so they meet at a right angle. Pythagoras gives \\(200^{2} + 150^{2} = 62{,}500\\), and \\(\\sqrt{62{,}500} = 250\\) m. Adding the legs gives 350 m, which ignores the right angle.",
+      "clue": "090° is due east and 000° is due north. What shape do the two legs make?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya walks 400 m due east, then 300 m due north. What is the true bearing of her finish from her start, to the nearest degree?",
+      "opts": ["053°", "037°", "143°", "127°"],
+      "why": "Angle from north is found with \\(\\tan \\theta = \\frac{400}{300}\\), so \\(\\theta \\approx 53^{\\circ}\\). Bearings start at north, so the east side is opposite the angle. 037° is wrong because it uses the 300 m side as opposite.",
+      "clue": "Measure the angle from the north line. Which side is opposite it?"
+    }
+  },
+  "mat-composite-areas": {
+    "title": "Composite areas",
+    "card": [
+      "A composite shape is made of simpler shapes, such as rectangles, triangles, trapeziums and parts of circles. Split it up, find each area, then add them.",
+      "If a piece is cut out of a shape, find the area of the whole shape and subtract the area of the piece.",
+      "Use \\(A = lw\\) for a rectangle, \\(A = \\frac{1}{2}bh\\) for a triangle and \\(A = \\pi r^{2}\\) for a circle. A semicircle is half a circle. The radius is half the diameter.",
+      "Example: a 10 m by 6 m rectangle has a semicircle of diameter 6 m on one end. Area \\(= 60 + \\frac{1}{2} \\times \\pi \\times 3^{2} \\approx 74.1 \\text{ m}^{2}\\)."
+    ],
+    "remember": "Add the parts that join on. Subtract the parts that are cut out.",
+    "a": {
+      "q": "A rectangle 8 m by 5 m has a triangle cut out of it. The triangle has base 4 m and height 3 m. What is the area left?",
+      "opts": ["\\(34 \\text{ m}^{2}\\)", "\\(46 \\text{ m}^{2}\\)", "\\(28 \\text{ m}^{2}\\)", "\\(52 \\text{ m}^{2}\\)"],
+      "why": "The rectangle is \\(8 \\times 5 = 40 \\text{ m}^{2}\\) and the triangle is \\(\\frac{1}{2} \\times 4 \\times 3 = 6 \\text{ m}^{2}\\). The piece is cut out, so \\(40 - 6 = 34 \\text{ m}^{2}\\). Adding gives \\(46 \\text{ m}^{2}\\), which treats the cut-out as extra area.",
+      "clue": "Is the triangle added to the rectangle or taken from it?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia's rectangular lawn in Dubbo is 10 m by 6 m. It has a circular pond of diameter 4 m in it. What is the area of grass, to one decimal place?",
+      "opts": [
+        "\\(47.4 \\text{ m}^{2}\\)",
+        "\\(72.6 \\text{ m}^{2}\\)",
+        "\\(9.7 \\text{ m}^{2}\\)",
+        "\\(53.7 \\text{ m}^{2}\\)"
+      ],
+      "why": "The pond has radius 2 m, so its area is \\(\\pi \\times 2^{2} \\approx 12.57 \\text{ m}^{2}\\). Grass area \\(= 60 - 12.57 \\approx 47.4 \\text{ m}^{2}\\). Using 4 m as the radius gives \\(9.7 \\text{ m}^{2}\\), which is the tempting mistake.",
+      "clue": "The formula needs the radius, not the diameter."
+    }
+  },
+  "mat-surface-area-cylinder": {
+    "title": "Surface area of a cylinder",
+    "card": [
+      "A closed cylinder has a circle at each end and a curved surface. The curved surface unrolls into a rectangle of length \\(2\\pi r\\), the circumference, and width \\(h\\), the height. Its area is \\(2\\pi r h\\).",
+      ["Closed", "two circles plus the curved surface, so \\(A = 2\\pi r^{2} + 2\\pi r h\\)."],
+      [
+        "Open",
+        "one circle plus the curved surface, so \\(A = \\pi r^{2} + 2\\pi r h\\). A bucket or a tin with no lid is open."
+      ],
+      "Example: a closed cylinder with radius 3 cm and height 10 cm has \\(A = 18\\pi + 60\\pi\\), which is \\(78\\pi \\approx 245.0\\) \\(\\text{cm}^{2}\\)."
+    ],
+    "remember": "Add the circles you have to the curved rectangle of area \\(2\\pi r h\\).",
+    "a": {
+      "q": "What is the area of the curved surface of a cylinder with radius 4 cm and height 9 cm?",
+      "opts": [
+        "\\(72\\pi \\text{ cm}^{2}\\)",
+        "\\(36\\pi \\text{ cm}^{2}\\)",
+        "\\(288\\pi \\text{ cm}^{2}\\)",
+        "\\(32\\pi \\text{ cm}^{2}\\)"
+      ],
+      "why": "The curved surface is a rectangle of length \\(2\\pi \\times 4 = 8\\pi\\) and width 9, so its area is \\(72\\pi \\text{ cm}^{2}\\). \\(32\\pi \\text{ cm}^{2}\\) is the area of the two circles, not the curved surface.",
+      "clue": "Unroll the side into a rectangle and find its length and width."
+    },
+    "b": {
+      "d": 3,
+      "q": "A metal bucket in Wagga has no lid. It is a cylinder with radius 7 cm and height 20 cm. What is the area of metal used, to the nearest square centimetre?",
+      "opts": [
+        "\\(1034 \\text{ cm}^{2}\\)",
+        "\\(1188 \\text{ cm}^{2}\\)",
+        "\\(880 \\text{ cm}^{2}\\)",
+        "\\(154 \\text{ cm}^{2}\\)"
+      ],
+      "why": "The bucket is open, so it has one circle: \\(\\pi \\times 7^{2} = 49\\pi\\). The curved surface is \\(2\\pi \\times 7 \\times 20 = 280\\pi\\). The total is \\(329\\pi \\approx 1034\\) \\(\\text{cm}^{2}\\). Using two circles gives \\(1188 \\text{ cm}^{2}\\), which is for a closed cylinder.",
+      "clue": "Count how many circles the bucket has."
+    }
+  },
+  "mat-similar-figures-scale-factor": {
+    "title": "Similar figures and scale factor",
+    "card": [
+      "Similar figures have the same shape but can be different sizes. Their matching angles are equal.",
+      "Matching sides are in the same ratio. Every side of one figure is the same number of times longer than the matching side of the other.",
+      "That number is the scale factor. Scale factor \\(=\\) new length \\(\\div\\) original length.",
+      "Example: a rectangle 4 cm by 6 cm and a rectangle 12 cm by 18 cm. Each side is multiplied by \\(12 \\div 4 = 3\\) and \\(18 \\div 6 = 3\\), so the scale factor is 3."
+    ],
+    "remember": "Similar figures have equal angles, and every matching side is multiplied by the same scale factor.",
+    "a": {
+      "q": "A photo is 10 cm wide and 15 cm tall. An enlargement is 30 cm wide and 45 cm tall. What is the scale factor from the photo to the enlargement?",
+      "opts": ["3", "20", "30", "\\(\\frac{1}{3}\\)"],
+      "why": "Scale factor \\(=\\) 30 \\(\\div\\) 10 \\(=\\) 3, and 45 \\(\\div\\) 15 \\(=\\) 3 as well. The option \\(\\frac{1}{3}\\) comes from dividing the wrong way round: that would be the scale factor from the enlargement back to the photo.",
+      "clue": "Divide a new length by the matching original length."
+    },
+    "b": {
+      "d": 3,
+      "q": "Rectangle A is 5 cm by 8 cm. Which rectangle is similar to A?",
+      "opts": ["10 cm by 16 cm", "10 cm by 13 cm", "9 cm by 12 cm", "7 cm by 10 cm"],
+      "why": "10 cm by 16 cm has both sides multiplied by 2, so the sides are in the same ratio. For 10 cm by 13 cm, 5 is multiplied by 2 but 8 is not, so adding 5 to each side does not keep the shape.",
+      "clue": "Check that both sides are multiplied by the same number."
+    }
+  },
+  "mat-finding-sides-similar-figures": {
+    "title": "Finding sides in similar figures",
+    "card": [
+      "First match the corresponding sides. They sit in the same position in each figure, such as the shortest side or the side opposite the same angle.",
+      "Find the scale factor from a pair of matching sides where both lengths are known. Put both in the same unit, then divide the larger length by the smaller.",
+      "To find an unknown side, multiply by the scale factor if going to the larger figure. Divide by it if going to the smaller figure.",
+      "Example: two similar triangles have matching sides of 4 cm and 10 cm. The scale factor is \\(10 \\div 4 = 2.5\\). A 6 cm side in the small triangle matches \\(6 \\times 2.5 = 15\\) cm in the large one."
+    ],
+    "remember": "Find the scale factor from a known pair, then multiply or divide to reach the unknown side.",
+    "a": {
+      "q": "Two similar triangles have matching sides of 6 cm and 15 cm. Another side of the smaller triangle is 8 cm. What is the matching side of the larger triangle?",
+      "opts": ["20 cm", "17 cm", "3.2 cm", "12 cm"],
+      "why": "The scale factor is \\(15 \\div 6 = 2.5\\), so the side is \\(8 \\times 2.5 = 20\\) cm. Adding 9 to get 17 cm treats the difference between 6 and 15 as the rule, but similar figures use multiplication.",
+      "clue": "Find the scale factor first, then multiply."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia has a model boat 24 cm long with a sail 18 cm tall. The real boat is similar and its sail is 4.5 m tall. How long is the real boat, in centimetres?",
+      "opts": ["600 cm", "6 cm", "60 cm", "456 cm"],
+      "why": "Change 4.5 m to 450 cm. Sail to sail, the scale factor is \\(450 \\div 18 = 25\\), so the real boat is \\(24 \\times 25 = 600\\) cm. Dividing 4.5 by 18 without converting gives 0.25 and an answer of 6, but that 6 is in metres, so 6 cm is wrong.",
+      "clue": "Put both sail heights in centimetres before dividing."
+    }
+  },
+  "mat-scale-drawings-maps": {
+    "title": "Scale drawings and maps",
+    "card": [
+      "A scale on a map or scale drawing, such as 1:50,000, means 1 unit on the map is 50,000 of the same unit in real life. So 1 cm on the map is 50,000 cm, which is 500 m on the ground.",
+      "To find a real distance, measure the map distance and multiply by the second number in the scale. Then change the units to something sensible.",
+      "Useful changes: 100 cm \\(=\\) 1 m, 1000 m \\(=\\) 1 km, and 100,000 cm \\(=\\) 1 km. So on a 1:50,000 map, 2 cm on the map is 100,000 cm, which is 1 km.",
+      "To go from real to map, change the real distance to cm, then divide by the scale number. On a 1:50,000 map, 3 km is 300,000 cm. \\(300{,}000 \\div 50{,}000 = 6\\) cm on the map."
+    ],
+    "remember": "Map to real: multiply by the scale number. Real to map: change to cm, then divide by the scale number.",
+    "a": {
+      "q": "A walking track is 2 km long in real life. How long is it on a 1:40,000 map?",
+      "opts": ["5 cm", "50 cm", "0.5 cm", "0.05 cm"],
+      "why": "2 km is 200,000 cm, and \\(200{,}000 \\div 40{,}000 = 5\\) cm. The option 0.05 cm comes from stopping at metres: \\(2000 \\div 40{,}000 = 0.05\\). The option 50 cm comes from writing 2 km as 2,000,000 cm, one zero too many.",
+      "clue": "Change km all the way to cm before you divide."
+    },
+    "b": {
+      "d": 3,
+      "q": "On a 1:25,000 map, a campsite and a lake are 7.2 cm apart. How far apart are they in real life?",
+      "opts": ["1.8 km", "18 km", "180 m", "3.6 km"],
+      "why": "\\(7.2 \\times 25{,}000 = 180{,}000\\) cm. Dividing by 100,000 gives 1.8 km. The option 18 km comes from dividing by 10,000, which mixes up the cm to km change.",
+      "clue": "Multiply by 25,000, then use 100,000 cm \\(=\\) 1 km."
+    }
+  },
+  "mat-quartiles-interquartile-range": {
+    "title": "Quartiles and interquartile range",
+    "card": [
+      "Put the data in order from smallest to largest. The median is the middle value. It splits the data into a lower half and an upper half.",
+      [
+        "Lower quartile",
+        "\\(Q_{1}\\) is the median of the lower half. When the number of values is odd, leave the overall median out of both halves. When it is even, split the values into two equal halves."
+      ],
+      [
+        "Upper quartile",
+        "\\(Q_{3}\\) is the median of the upper half. Together with the median, \\(Q_{1}\\) and \\(Q_{3}\\) split the data into four equal parts."
+      ],
+      "The interquartile range is \\(\\text{IQR} = Q_{3} - Q_{1}\\). It is the spread of the middle half of the data. Example: for 2, 4, 5, 7, 8, 10, 12, the median is 7, \\(Q_{1} = 4\\) and \\(Q_{3} = 10\\), so the IQR is \\(10 - 4 = 6\\)."
+    ],
+    "remember": "Order the data, find the median of each half, then subtract: \\(Q_{3} - Q_{1}\\).",
+    "a": {
+      "q": "What does the interquartile range measure?",
+      "opts": [
+        "The spread of the middle half of the data",
+        "The spread from the smallest to the largest value",
+        "The average distance of values from the mean",
+        "The middle value of the ordered data"
+      ],
+      "why": "The IQR is \\(Q_{3} - Q_{1}\\), which covers the middle half of the data. The spread from smallest to largest is the range, which is a different measure.",
+      "clue": "Think about which values \\(Q_{1}\\) and \\(Q_{3}\\) sit between."
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia times her laps at a pool in Dubbo, in seconds: 31, 33, 35, 36, 38, 41, 45, 47. What is the interquartile range?",
+      "opts": ["\\(9\\)", "\\(16\\)", "\\(12\\)", "\\(6\\)"],
+      "why": "The data has 8 values, so the lower half is 31, 33, 35, 36 and \\(Q_{1} = 34\\). The upper half is 38, 41, 45, 47 and \\(Q_{3} = 43\\). The IQR is \\(43 - 34 = 9\\), not the range \\(47 - 31 = 16\\).",
+      "clue": "Split the 8 values into two halves of 4 and find the median of each."
+    }
+  },
+  "mat-five-number-summary-box": {
+    "title": "The five-number summary and box plots",
+    "card": [
+      [
+        "Five-number summary",
+        "Five values describe a data set: the minimum, the lower quartile \\(Q_{1}\\), the median, the upper quartile \\(Q_{3}\\) and the maximum. They are listed in order from smallest to largest."
+      ],
+      [
+        "Example",
+        "For 3, 5, 6, 8, 9, 12, 14 the median is 8. The halves either side give \\(Q_{1} = 5\\) and \\(Q_{3} = 12\\). The summary is 3, 5, 8, 12, 14."
+      ],
+      [
+        "Box plot",
+        "A box plot draws the summary above a number line. The box runs from \\(Q_{1}\\) to \\(Q_{3}\\), a line inside it marks the median, and whiskers reach out to the minimum and maximum."
+      ],
+      "Each of the four parts, whisker, lower box, upper box and whisker, holds about a quarter of the data. A long part means the values in it are spread out. A short part means they are close together."
+    ],
+    "cardFigs": {
+      "3": {
+        "kind": "chart",
+        "chart": "box",
+        "alt": "A box plot on a number line. The whiskers run from 3 to 14. The box runs from 5 to 12 with the median line at 8.",
+        "x": {"min": 0, "max": 16, "step": 2, "label": "Value"},
+        "sets": [{"data": [3, 5, 6, 8, 9, 12, 14]}],
+        "stats": {"median": 8, "q1": 5, "q3": 12}
+      }
+    },
+    "remember": "A box plot shows the five-number summary: the box holds the middle half of the data.",
+    "a": {
+      "q": "What is the five-number summary of 4, 6, 7, 9, 10, 12, 15?",
+      "opts": ["4, 6, 9, 12, 15", "4, 7, 9, 10, 15", "4, 6, 9, 12, 11", "4, 6, 8, 12, 15"],
+      "why": "The data is already in order. The minimum is 4, the median is 9 and the maximum is 15. The halves 4, 6, 7 and 10, 12, 15 give \\(Q_{1} = 6\\) and \\(Q_{3} = 12\\). The option ending in 11 gives the range, not the maximum.",
+      "clue": "List the smallest value, the three middle markers in order, then the largest value."
+    },
+    "b": {
+      "d": 2,
+      "q": "A box plot of daily bus delays for a route in Orange has whiskers from 2 to 18 minutes. Its box runs from 5 to 11 minutes with the median line at 8. Which statement is true?",
+      "opts": [
+        "About half the delays were between 5 and 11 minutes",
+        "About half the delays were between 2 and 18 minutes",
+        "About half the delays were between 11 and 18 minutes",
+        "Three quarters of the delays were below 8 minutes"
+      ],
+      "why": "The box runs from \\(Q_{1}\\) to \\(Q_{3}\\), so it holds the middle half of the delays. The whiskers reach the minimum and maximum, so 2 to 18 covers all the delays, and the upper whisker from 11 to 18 holds only about a quarter. The line at 8 is the median, so about half the delays were below 8, not three quarters.",
+      "clue": "What fraction of the data lies inside the box?",
+      "fig": {
+        "kind": "chart",
+        "chart": "box",
+        "alt": "A box plot of bus delays. The whiskers run from 2 to 18 minutes. The box runs from 5 to 11 with the median line at 8.",
+        "x": {"min": 0, "max": 20, "step": 2, "label": "Delay (minutes)"},
+        "sets": [{"five": [2, 5, 8, 11, 18]}]
+      }
+    }
+  },
+  "mat-comparing-datasets-with-box": {
+    "title": "Comparing distributions",
+    "card": [
+      "To compare groups, look at the same variable in each group. Parallel box plots sit on one scale, one above the other.",
+      [
+        "Centre",
+        "Compare the medians. Example: group A has median 62 and group B has median 55. Group A is centred 7 higher."
+      ],
+      [
+        "Spread",
+        "Compare the IQRs. A larger IQR means the middle half of the data is more spread out. Example: A has IQR 10 and B has IQR 18, so B is more spread out."
+      ],
+      "A smaller IQR means the group is more consistent. When higher scores are better, a higher median usually means the group did better. Write the comparison in context, and take care with the range, as one extreme value can stretch it."
+    ],
+    "cardFigs": {
+      "3": {
+        "kind": "chart",
+        "chart": "box",
+        "alt": "Parallel box plots on one scale. Group A: median 62, box from 57 to 67 (IQR 10), whiskers from 45 to 78. Group B: median 55, box from 46 to 64 (IQR 18), whiskers from 35 to 80. A is centred higher, and B is more spread out.",
+        "x": {"min": 30, "max": 85, "label": "Score", "step": 5},
+        "sets": [{"label": "A", "five": [45, 57, 62, 67, 78]}, {"label": "B", "five": [35, 46, 55, 64, 80]}]
+      }
+    },
+    "remember": "Compare medians for centre and IQRs for spread, in context.",
+    "a": {
+      "q": "Two classes sit the same test, shown as parallel box plots. Class P has median 70 and IQR 8. Class Q has median 70 and IQR 20. What is the best comparison?",
+      "opts": [
+        "Same centre, but Q's scores are more spread out",
+        "Same centre, but P's scores are more spread out",
+        "Q has a higher centre and a wider spread",
+        "P has a higher centre and a narrower spread"
+      ],
+      "why": "Both medians are 70, so the centres are the same. Q's IQR of 20 is larger than P's IQR of 8, so Q is more spread out. Saying P is more spread out reverses what a larger IQR means.",
+      "clue": "Compare the medians first, then the IQRs."
+    },
+    "b": {
+      "d": 3,
+      "q": "Parallel box plots show daily sales (in dollars) at two Newcastle cafés. Café X: median 400, IQR 120, range 500. Café Y: median 360, IQR 200, range 380. Using medians and IQRs, which comparison is correct?",
+      "opts": [
+        "X is centred higher, and Y is more spread out",
+        "X is centred higher, and X is more spread out",
+        "Y is centred higher, and Y is more spread out",
+        "Y is centred higher, and X is more spread out"
+      ],
+      "why": "X's median of 400 is higher than Y's 360, so X is centred higher. Y's IQR of 200 is larger than X's 120, so Y's middle half is more spread out. X's larger range is tempting, but one extreme day can stretch the range.",
+      "clue": "Ignore the ranges and compare the IQRs."
+    }
+  },
+  "mat-standard-deviation": {
+    "title": "Standard deviation",
+    "card": [
+      "Standard deviation measures how far values typically are from the mean. It is a measure of spread, written \\(\\sigma\\) for a whole population.",
+      "A small standard deviation means the values are clustered close to the mean. A large one means they are spread out.",
+      "Use the statistics mode of a calculator. Enter the data, then read the value labelled \\(\\sigma\\). You do not need to work it out by hand.",
+      "Example: 5, 5, 5, 5 and 1, 5, 5, 9 both have mean 5. The first has standard deviation 0. The second has a larger one, because its values lie further from 5."
+    ],
+    "remember": "Standard deviation is the typical distance from the mean: small means clustered, large means spread out.",
+    "a": {
+      "q": "A dataset has a very small standard deviation. What does this tell you about the values?",
+      "opts": [
+        "They are clustered close to the mean",
+        "They are spread far from the mean",
+        "They are all smaller than the mean",
+        "They are all equal to the median"
+      ],
+      "why": "Standard deviation is the typical distance from the mean, so a small value means the data is close to the mean. It does not say the values are below the mean or equal to the median.",
+      "clue": "What does standard deviation measure the distance from?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Two bakeries in Orange weigh their loaves. Both have a mean of 800 g. Bakery P has a standard deviation of 4 g and Bakery Q has 15 g. Which bakery has more consistent loaf weights?",
+      "opts": [
+        "Bakery P, because its weights are closer to the mean",
+        "Bakery Q, because its weights are closer to the mean",
+        "Bakery P, because its standard deviation is larger",
+        "Neither, because the means are the same"
+      ],
+      "why": "The smaller standard deviation of 4 g means P's weights cluster closer to 800 g, so P is more consistent. Equal means do not make equal spread, because standard deviation measures spread.",
+      "clue": "Compare the standard deviations, not the means."
+    }
+  },
+  "mat-independent-dependent-variables": {
+    "title": "Independent and dependent variables",
+    "card": [
+      "Bivariate data has two numerical variables. When they may be linked, we ask which one might explain or predict the other.",
+      [
+        "Independent variable",
+        "the variable that may explain or predict changes in the other. It goes on the horizontal axis."
+      ],
+      ["Dependent variable", "the variable that may depend on the other. It goes on the vertical axis."],
+      "Example: a teacher studies hours of study and test score. Hours of study may explain the score, so hours is independent and score is dependent."
+    ],
+    "remember": "Independent may explain or predict. Dependent may depend on it. Independent goes across.",
+    "a": {
+      "q": "Mia records the daily hours of sunshine and the number of ice creams sold at her kiosk in Manly. She wants to predict sales from sunshine. Which is the dependent variable?",
+      "opts": ["Number of ice creams sold", "Hours of sunshine", "The day of the week", "The price of an ice cream"],
+      "why": "Mia wants to predict sales from sunshine, so sales is the dependent variable. Hours of sunshine is the independent variable, the one used to explain or predict.",
+      "clue": "Which variable is being predicted?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam measures the height and forearm length of 20 students. He wants to predict height from forearm length. Which statement about his graph is correct?",
+      "opts": [
+        "Forearm length goes on the horizontal axis",
+        "Height goes on the horizontal axis",
+        "Forearm length is the dependent variable",
+        "Either variable can go on the horizontal axis"
+      ],
+      "why": "Sam predicts height from forearm length, so forearm length is independent and goes on the horizontal axis. Height is dependent and goes on the vertical axis. Because Sam has chosen which variable predicts the other, the axes are not interchangeable.",
+      "clue": "Which variable is being used to make the prediction?"
+    }
+  },
+  "mat-scatter-plots-correlation": {
+    "title": "Scatter plots and correlation",
+    "card": [
+      "A scatter plot shows each pair of values in bivariate data as one point. The pattern the points make shows how the two variables are related.",
+      [
+        "Direction",
+        "The correlation is positive if the points rise from left to right, so the dependent variable goes up as the independent variable goes up. It is negative if the points fall from left to right."
+      ],
+      [
+        "Strength",
+        "The correlation is strong if the points lie close to a straight line. It is weak if they are spread out around a trend."
+      ],
+      ["No correlation", "If the points show no trend at all, there is no correlation."]
+    ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "A scatter plot of test mark against hours studied. Seven points rise from the lower left to the upper right and sit close to a straight line.",
+        "x": {"min": 0, "max": 9, "label": "Hours studied", "step": 1},
+        "y": {"min": 0, "max": 10, "label": "Test mark", "step": 1},
+        "items": [
+          {"type": "point", "at": [1, 2]},
+          {"type": "point", "at": [2, 3]},
+          {"type": "point", "at": [3, 3]},
+          {"type": "point", "at": [4, 5]},
+          {"type": "point", "at": [5, 6]},
+          {"type": "point", "at": [6, 6]},
+          {"type": "point", "at": [7, 8]}
+        ]
+      }
+    },
+    "remember": "Describe a scatter plot by its direction (positive or negative) and its strength (strong or weak), or say there is no correlation.",
+    "a": {
+      "q": "A coach plots hours of training against 100 m sprint time for runners. As training hours go up, sprint times go down, and the points lie close to a straight line. What is the correlation?",
+      "opts": ["Strong negative correlation", "Strong positive correlation", "Weak negative correlation", "No correlation"],
+      "why": "Sprint time goes down as training goes up, so the points fall from left to right and the correlation is negative. They lie close to a straight line, so it is strong. Strong positive is tempting because training goes up, but it is the sprint time that falls, so the direction is negative.",
+      "clue": "Ask which way the points move from left to right, then how tightly they sit."
+    },
+    "b": {
+      "d": 3,
+      "q": "Lena plots daily temperature against hot chocolate sales at a café in Orange. The points trend downhill but are widely spread out. How is the correlation described?",
+      "opts": ["Weak negative correlation", "Strong negative correlation", "Weak positive correlation", "No correlation"],
+      "why": "Sales fall as temperature rises, so the correlation is negative. The points are widely spread, so it is weak. It is not no correlation, because there is still a clear downhill trend.",
+      "clue": "A wide spread can still show a trend."
+    }
+  },
+  "mat-lines-best-fit": {
+    "title": "Lines of best fit",
+    "card": [
+      "A line of best fit is a straight line drawn through a scatter plot to follow its trend. It is used when the correlation is clear.",
+      "Draw it by eye so that about as many points are above it as below it. It does not need to pass through any point.",
+      "To predict, read across from a value on the horizontal axis to the line, then to the vertical axis.",
+      "A prediction inside the range of the data is fairly reliable. A prediction beyond the data is much less reliable, as the trend may not continue."
+    ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "A scatter plot of hours against score with eight points and a rising line of best fit through the middle. Four points lie above the line and four lie below it.",
+        "x": {"min": 0, "max": 10, "label": "Hours", "step": 1},
+        "y": {"min": 0, "max": 12, "label": "Score", "step": 1},
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "x + 1",
+            "domain": [0, 9],
+            "label": "Line of best fit",
+            "labelAt": 9,
+            "pos": "above-left"
+          },
+          {"type": "point", "at": [1, 2.5]},
+          {"type": "point", "at": [2, 2]},
+          {"type": "point", "at": [3, 4.5]},
+          {"type": "point", "at": [4, 4]},
+          {"type": "point", "at": [5, 6.5]},
+          {"type": "point", "at": [6, 6]},
+          {"type": "point", "at": [7, 8.5]},
+          {"type": "point", "at": [8, 8]}
+        ]
+      }
+    },
+    "remember": "A line of best fit follows the trend. Trust predictions inside the data more than those beyond it.",
+    "a": {
+      "q": "Which describes a well-drawn line of best fit?",
+      "opts": [
+        "About as many points lie above it as below it",
+        "It passes through the first and last points",
+        "It passes through as many points as possible",
+        "It joins every point in order from left to right"
+      ],
+      "why": "A line of best fit follows the trend, with about as many points above it as below it. Passing through the most points is tempting, but the line does not need to touch any point at all.",
+      "clue": "Does the line need to touch any of the points?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia plots the age of used cars (1 to 8 years) against their price and draws a line of best fit. Which prediction is most reliable?",
+      "opts": [
+        "The price of a 5-year-old car",
+        "The price of a 12-year-old car",
+        "The price of a 15-year-old car",
+        "The price of a 20-year-old car"
+      ],
+      "why": "A car aged 5 years is inside the range of the data, 1 to 8 years, where the line is backed by real points. The other ages are beyond the data, so the trend may not continue there.",
+      "clue": "Where is the line supported by cars Mia actually measured?"
+    }
+  },
+  "mat-correlation-cause": {
+    "title": "Correlation and causation",
+    "card": [
+      "Correlation means two variables move together. Causation means a change in one variable produces a change in the other.",
+      "A strong correlation does not prove causation. The data only shows that the variables move together, not why.",
+      [
+        "Third factor",
+        "a separate variable that affects both of the others and makes them move together. Ice cream sales and sunburn cases both rise in hot weather, so temperature is a third factor."
+      ],
+      "To claim causation, there needs to be more than a scatter plot or a strong trend. A reasonable explanation for how one variable affects the other is needed, and third factors need to be ruled out."
+    ],
+    "remember": "Moving together does not prove one causes the other. Look for a third factor.",
+    "a": {
+      "q": "A town finds that fires with more fire trucks sent to them also have more damage, and the trend is strong and positive. What is the best conclusion?",
+      "opts": [
+        "The correlation alone does not show trucks cause damage",
+        "Sending more fire trucks causes more damage to buildings",
+        "Damage causes fewer fire trucks to be sent to a fire",
+        "The trend is an error, as it cannot slope upwards here"
+      ],
+      "why": "A correlation shows only that the variables move together. A third factor, the size of the fire, probably leads to both more trucks and more damage. Saying the trucks cause the damage is the tempting mistake.",
+      "clue": "Think about what makes both numbers larger."
+    },
+    "b": {
+      "d": 3,
+      "q": "A city's data shows that suburbs with more swimming pools also have more cases of heat stroke. What is the most likely reason?",
+      "opts": [
+        "Hotter suburbs have more pools and more heat stroke",
+        "Owning a pool causes heat stroke in the owner",
+        "Heat stroke leads people to build pools at home",
+        "Pools and heat stroke are unrelated, so there is no pattern"
+      ],
+      "why": "Hot weather is a third factor that could lead to both more pools and more heat stroke. Claiming pools cause heat stroke treats the correlation as causation.",
+      "clue": "Look for a separate factor that affects both variables."
+    }
+  },
+  "mat-tree-diagrams-tables-outcomes": {
+    "title": "Tree diagrams and tables of outcomes",
+    "card": [
+      "A multistage experiment has two or more steps, such as tossing a coin and then rolling a die. A list of every possible result is called the sample space.",
+      [
+        "Tree diagram",
+        "Each step is a set of branches. Follow each path from left to right to list one outcome. Tossing a coin then a die gives H1, H2, H3, H4, H5, H6, T1, T2, T3, T4, T5 and T6."
+      ],
+      [
+        "Table of outcomes",
+        "For two steps, put the results of step 1 down the side and step 2 along the top. Each cell is one outcome."
+      ],
+      "Count the outcomes by multiplying. A coin has 2 results and a die has 6, so there are \\(2 \\times 6 = 12\\) outcomes. Three steps work the same way: multiply all three counts."
+    ],
+    "remember": "List every path or cell so no outcome is missed. The number of outcomes is the product of the results at each step.",
+    "a": {
+      "q": "A spinner has 3 equal sections: red, blue and green. It is spun and then a coin is tossed. How many outcomes are in the sample space?",
+      "opts": ["\\(6\\)", "\\(5\\)", "\\(9\\)", "\\(3\\)"],
+      "why": "The spinner has 3 results and the coin has 2, so there are \\(3 \\times 2 = 6\\) outcomes. Adding gives 5, but each spinner result can pair with both coin results, so the counts are multiplied.",
+      "clue": "Each spinner result pairs with every coin result."
+    },
+    "b": {
+      "d": 3,
+      "q": "Lena tosses a coin three times and lists the outcomes with a tree diagram. How many outcomes have exactly two heads?",
+      "opts": ["\\(3\\)", "\\(2\\)", "\\(4\\)", "\\(8\\)"],
+      "why": "There are \\(2 \\times 2 \\times 2 = 8\\) outcomes in total. The ones with exactly two heads are HHT, HTH and THH, which is 3. The number 8 is the whole sample space, not just the outcomes with two heads.",
+      "clue": "List all the paths, then pick out those with two H."
+    }
+  },
+  "mat-multiplying-along-branches": {
+    "title": "Multiplying along branches",
+    "card": [
+      "Each branch of a tree diagram has a probability. The probability of one path is found by multiplying the probabilities along its branches.",
+      "Example: a bag has 3 red and 2 blue counters. Draw one, put it back, then draw again. \\(P(\\text{red, then red}) = \\frac{3}{5} \\times \\frac{3}{5} = \\frac{9}{25}\\).",
+      "Some events can happen by more than one path. Find the probability of each path that gives the event, then add them.",
+      "Example: for one red and one blue in any order, the paths are red then blue, and blue then red. \\(\\frac{3}{5} \\times \\frac{2}{5} + \\frac{2}{5} \\times \\frac{3}{5} = \\frac{6}{25} + \\frac{6}{25} = \\frac{12}{25}\\)."
+    ],
+    "remember": "Multiply along a path. Add the paths that make the event.",
+    "a": {
+      "q": "Mei spins a spinner twice. Each spin lands on green with probability \\(\\frac{1}{4}\\). What is \\(P(\\text{green, then green})\\)?",
+      "opts": ["\\(\\frac{1}{16}\\)", "\\(\\frac{1}{2}\\)", "\\(\\frac{1}{8}\\)", "\\(\\frac{1}{4}\\)"],
+      "why": "Along one path, multiply: \\(\\frac{1}{4} \\times \\frac{1}{4} = \\frac{1}{16}\\). Adding gives \\(\\frac{1}{2}\\), which is the tempting mistake, but adding is only for combining different paths.",
+      "clue": "One path, so which operation joins its branches?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A bag has 2 red and 3 blue counters. Jo draws one, replaces it, then draws again. What is the probability that the two counters are different colours?",
+      "opts": ["\\(\\frac{12}{25}\\)", "\\(\\frac{6}{25}\\)", "\\(\\frac{6}{5}\\)", "\\(\\frac{13}{25}\\)"],
+      "why": "Two paths give different colours: red then blue is \\(\\frac{2}{5} \\times \\frac{3}{5} = \\frac{6}{25}\\), and blue then red is also \\(\\frac{6}{25}\\). Add them to get \\(\\frac{12}{25}\\). Using only one path gives \\(\\frac{6}{25}\\) and misses the other order.",
+      "clue": "Different colours can happen in two orders."
+    }
+  },
+  "mat-simulations": {
+    "title": "Simulation",
+    "card": [
+      "A simulation copies a random experiment using a device that is easier to run. Coins, dice, spinners and random number generators are common choices. So is a spreadsheet.",
+      "The device must match the chances in the real experiment. A fair coin has two equally likely outcomes, so it can stand in for any yes or no event with probability \\(\\frac{1}{2}\\).",
+      "Run the simulation many times. A spreadsheet can do this fast: a formula that gives random whole numbers can run 1000 trials in seconds. The estimate is the number of trials with the event divided by the total number of trials.",
+      "Example: a spinner has 5 equal sectors. Let 1 stand for rain and 2 to 5 for no rain. In 40 spins, 1 comes up 9 times. The estimate for rain is \\(\\frac{9}{40} = 0.225\\). The true value is \\(\\frac{1}{5} = 0.2\\). More trials usually bring the estimate closer."
+    ],
+    "remember": "Match the device to the chances, run many trials, then divide successes by trials.",
+    "a": {
+      "q": "A spreadsheet simulates 50 rolls of a fair die and gives a 6 on 7 of them. What is the estimated probability of a 6?",
+      "opts": ["\\(\\frac{7}{50}\\)", "\\(\\frac{1}{6}\\)", "\\(\\frac{7}{43}\\)", "\\(\\frac{43}{50}\\)"],
+      "why": "The estimate is the number of trials with the event divided by all trials, so \\(7 \\div 50 = 0.14\\). The value \\(\\frac{1}{6}\\) is the theoretical probability, not the result of this simulation.",
+      "clue": "Divide the count of 6s by the total number of rolls."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya wants to model a bus being late, with probability \\(\\frac{1}{4}\\). Which device matches this chance?",
+      "opts": [
+        "A spinner with 4 equal sectors, one marked late",
+        "A fair coin, with heads meaning late",
+        "A fair die, with 1 meaning late",
+        "A spinner with 3 equal sectors, one marked late"
+      ],
+      "why": "One of 4 equal sectors gives a chance of \\(\\frac{1}{4}\\). A coin gives \\(\\frac{1}{2}\\), a die gives \\(\\frac{1}{6}\\) for a single face, and a 3-sector spinner gives \\(\\frac{1}{3}\\).",
+      "clue": "Find the device where the late outcome has chance \\(\\frac{1}{4}\\)."
+    }
+  },
+  "mat-constant-rates-change": {
+    "title": "Constant rates of change",
+    "card": [
+      "A straight-line graph means the rate of change is constant. Any two points on the line give the same rate.",
+      "The rate is the gradient of the line. It is the change in \\(y\\) for each 1 unit of \\(x\\). Its unit is the \\(y\\) unit per \\(x\\) unit, such as litres per minute.",
+      "To find it, pick two points. \\(\\text{Rate} = \\text{rise} \\div \\text{run}\\), with both changes taken in the same order.",
+      "Example: a graph of money earned ($) against hours worked passes through (2, 30) and (5, 75). \\(\\text{Rise} = 75 - 30 = 45\\). \\(\\text{Run} = 5 - 2 = 3\\). \\(\\text{Gradient} = 45 \\div 3 = 15\\), so the rate is $15 per hour."
+    ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A line graph of money earned in dollars against hours worked. The line passes through \\((2, 30)\\) and \\((5, 75)\\). From \\((2, 30)\\), a run of 3 across and a rise of 45 up reach \\((5, 75)\\), so the gradient is \\(45 \\div 3 = 15\\), or $15 per hour.",
+        "x": {"min": 0, "max": 6.5, "label": "Hours", "step": 1},
+        "y": {"min": 0, "max": 100, "label": "Money ($)", "step": 20},
+        "grid": true,
+        "items": [
+          {"type": "fn", "id": "f", "expr": "15x", "domain": [0, 6.5]},
+          {"type": "arrow", "from": [2, 30], "to": [5, 30], "label": "run 3", "pos": "below"},
+          {"type": "arrow", "from": [5, 30], "to": [5, 75], "label": "rise 45", "pos": "right"},
+          {"type": "point", "at": [2, 30], "label": "\\((2, 30)\\)", "pos": "above-left", "on": ["f"]},
+          {"type": "point", "at": [5, 75], "label": "\\((5, 75)\\)", "pos": "above-left", "on": ["f"]}
+        ]
+      }
+    },
+    "remember": "A straight line means a constant rate of change. The rate is the gradient, in \\(y\\) units per \\(x\\) unit.",
+    "a": {
+      "q": "A graph of distance against time is a straight line. What does this tell you about the speed?",
+      "opts": ["It is constant", "It keeps increasing", "It keeps decreasing", "It is zero"],
+      "why": "A straight line has the same gradient everywhere, so the rate of change is constant. Any two points on the line give the same speed.",
+      "clue": "Think about the gradient of a straight line."
+    },
+    "b": {
+      "d": 2,
+      "q": "Priya fills a pool. The graph of litres in the pool against minutes is a straight line through (2, 50) and (6, 130). What is the rate of filling?",
+      "opts": ["20 litres per minute", "80 litres per minute", "25 litres per minute", "0.05 litres per minute"],
+      "why": "The rate is constant, so use any two points. \\(\\text{Rise} = 130 - 50 = 80\\) litres and \\(\\text{run} = 6 - 2 = 4\\) minutes, so the rate is \\(80 \\div 4 = 20\\) litres per minute. The answer 80 is only the rise.",
+      "clue": "Find the rise and the run first, then divide."
+    }
+  },
+  "mat-variable-rates-change": {
+    "title": "Variable rates of change",
+    "card": [
+      "On a straight-line graph the rate of change is constant. On a curved graph the rate changes from one place to another.",
+      "Where the curve is steeper, the quantity is changing faster. Where it is flatter, the quantity is changing more slowly.",
+      "The rate at one moment is the gradient of the tangent there. A tangent is a straight line that just touches the curve at that point.",
+      "Example: a tangent to a distance graph touches it at 3 s. It rises 12 m over a run of 4 s. The speed at 3 s is \\(12 \\div 4 = 3\\) m/s."
+    ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "A curve showing the depth of water in a tank in cm against time in minutes. It starts steep and flattens out, passing through the points (0, 0), (2, 6) and (4, 8), and reaching (6, 8.5).",
+        "x": {"min": 0, "max": 7, "label": "Time (min)", "step": 1},
+        "y": {"min": 0, "max": 10, "label": "Depth (cm)", "step": 2},
+        "grid": true,
+        "items": [
+          {
+            "type": "curve",
+            "id": "d",
+            "points": [[0, 0], [1, 3.5], [2, 6], [3, 7.2], [4, 8], [5, 8.4], [6, 8.5]],
+            "smooth": true,
+            "label": "Depth",
+            "pos": "below-right",
+            "labelAt": 5
+          }
+        ]
+      }
+    },
+    "remember": "On a curve the rate changes. The rate at a moment is the gradient of the tangent.",
+    "a": {
+      "q": "On a curved graph of distance against time, the curve is steepest at 5 s. What does this tell you about 5 s?",
+      "opts": [
+        "The distance is changing fastest around then",
+        "The distance is changing slowest around then",
+        "The distance is not changing at that time",
+        "The rate of change is constant on the whole graph"
+      ],
+      "why": "A steeper curve means the quantity is changing faster. Slowest change would be where the curve is flattest. A constant rate only happens on a straight line.",
+      "clue": "Steeper means faster change."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya draws a tangent to a graph of a tank's volume (litres) against time (minutes). The tangent touches the curve at 4 min and passes through \\((2, 10)\\) and \\((6, 30)\\). What is the rate of change at 4 min?",
+      "opts": ["5 litres per minute", "20 litres per minute", "0.2 litres per minute", "4 litres per minute"],
+      "why": "The tangent's gradient is the rate: \\(\\frac{30 - 10}{6 - 2} = \\frac{20}{4} = 5\\) litres per minute. The tempting 20 is only the rise, and it forgets to divide by the run.",
+      "clue": "Find rise over run for the tangent line."
+    }
+  },
+  "mat-factorising-out-algebraic-factor": {
+    "title": "Factorising out an algebraic factor",
+    "card": [
+      "Factorising is the reverse of expanding. It writes an expression as a product: a common factor multiplied by a bracket.",
+      "The highest common factor (HCF) is the largest number, pronumeral, or product of them that divides every term. For \\(6x^{2}y\\) and \\(9xy\\), the HCF is \\(3xy\\). For \\(6x^{2}\\) and \\(9x\\), it is \\(3x\\), so \\(6x^{2} + 9x = 3x(2x + 3)\\).",
+      "To factorise, find the HCF, write it outside the bracket, then divide each term by it to get what goes inside.",
+      "Example: \\(6x^{2}y - 9xy\\). The HCF is \\(3xy\\). \\(6x^{2}y \\div 3xy = 2x\\) and \\(9xy \\div 3xy = 3\\), so \\(6x^{2}y - 9xy = 3xy(2x - 3)\\). Expand to check: \\(3xy \\times 2x - 3xy \\times 3 = 6x^{2}y - 9xy\\)."
+    ],
+    "remember": "Take out the HCF, then check by expanding the brackets.",
+    "a": {
+      "q": "Factorise \\(8a^{2}b + 12ab\\) by taking out the HCF.",
+      "opts": ["\\(4ab(2a + 3)\\)", "\\(4(2a^{2}b + 3ab)\\)", "\\(ab(8a + 12)\\)", "\\(4ab(2a + 12)\\)"],
+      "why": "The HCF of \\(8a^{2}b\\) and \\(12ab\\) is \\(4ab\\). \\(8a^{2}b \\div 4ab = 2a\\) and \\(12ab \\div 4ab = 3\\), so the answer is \\(4ab(2a + 3)\\). \\(4(2a^{2}b + 3ab)\\) is tempting, but \\(ab\\) is still common inside the bracket, so 4 is not the HCF.",
+      "clue": "Find the number and the pronumerals that divide both terms."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia takes out the HCF from \\(10x^{2} + 15x\\). What does she write?",
+      "opts": ["\\(5x(2x + 3)\\)", "\\(5(2x^{2} + 3x)\\)", "\\(x(10x + 15)\\)", "\\(5x(2x + 15)\\)"],
+      "why": "The HCF of \\(10x^{2}\\) and \\(15x\\) is \\(5x\\). \\(10x^{2} \\div 5x = 2x\\) and \\(15x \\div 5x = 3\\), so the answer is \\(5x(2x + 3)\\). \\(5(2x^{2} + 3x)\\) is tempting, but it leaves a common factor of \\(x\\) inside the bracket, so 5 is not the HCF.",
+      "clue": "Both terms share a number and a pronumeral. Take out both."
+    }
+  },
+  "mat-algebraic-fractions-with-pronumeral": {
+    "title": "Algebraic fractions with pronumerals",
+    "card": [
+      [
+        "Add and subtract",
+        "Write each fraction with the same denominator, then add or subtract the numerators. For \\(\\frac{3}{x} + \\frac{2}{5x}\\), the common denominator is \\(5x\\)."
+      ],
+      "Multiply the top and bottom of \\(\\frac{3}{x}\\) by 5 to get \\(\\frac{15}{5x}\\). Then \\(\\frac{15}{5x} + \\frac{2}{5x} = \\frac{17}{5x}\\).",
+      [
+        "Multiply",
+        "Multiply the numerators, multiply the denominators, then cancel common factors. So \\(\\frac{4}{x} \\times \\frac{x}{8} = \\frac{4x}{8x} = \\frac{1}{2}\\)."
+      ],
+      [
+        "Divide",
+        "Flip the second fraction and multiply. So \\(\\frac{3}{x} \\div \\frac{6}{5x} = \\frac{3}{x} \\times \\frac{5x}{6} = \\frac{5}{2}\\)."
+      ]
+    ],
+    "remember": "Add or subtract over a common denominator. Multiply across, and divide by flipping.",
+    "a": {
+      "q": "What is \\(\\frac{2}{x} + \\frac{3}{4x}\\) as a single fraction?",
+      "opts": ["\\(\\frac{11}{4x}\\)", "\\(\\frac{5}{5x}\\)", "\\(\\frac{5}{4x}\\)", "\\(\\frac{11}{4x^{2}}\\)"],
+      "why": "The common denominator is \\(4x\\), so \\(\\frac{2}{x}\\) becomes \\(\\frac{8}{4x}\\), and \\(8 + 3 = 11\\). Adding the numerators without first multiplying 2 by 4 gives \\(\\frac{5}{4x}\\), which is a common mistake.",
+      "clue": "Write \\(\\frac{2}{x}\\) with denominator \\(4x\\) first."
+    },
+    "b": {
+      "d": 3,
+      "q": "What is \\(\\frac{5}{2x} - \\frac{1}{3x}\\) as a single fraction?",
+      "opts": ["\\(\\frac{13}{6x}\\)", "\\(\\frac{4}{6x}\\)", "\\(\\frac{17}{6x}\\)", "\\(\\frac{7}{6x}\\)"],
+      "why": "The common denominator is \\(6x\\). Then \\(\\frac{5}{2x} = \\frac{15}{6x}\\) and \\(\\frac{1}{3x} = \\frac{2}{6x}\\), so the answer is \\(\\frac{15 - 2}{6x} = \\frac{13}{6x}\\). Putting \\(5 - 1\\) over \\(6x\\) without changing the numerators gives \\(\\frac{4}{6x}\\), which is wrong.",
+      "clue": "Find a number that both 2 and 3 divide into, and keep the \\(x\\)."
+    }
+  },
+  "mat-perfect-squares-difference-two-nsw": {
+    "title": "Perfect squares and difference of two squares",
+    "card": [
+      [
+        "Perfect square",
+        "Squaring a binomial gives \\((a + b)^{2} = a^{2} + 2ab + b^{2}\\). The middle term is twice the product of the two terms, so it is not left out."
+      ],
+      [
+        "Difference of two squares",
+        "A sum times a difference gives \\((a + b)(a - b) = a^{2} - b^{2}\\). The two middle terms cancel, so only a square minus a square is left."
+      ],
+      [
+        "Worked example",
+        "\\((x + 5)^{2} = x^{2} + 2 \\times x \\times 5 + 5^{2} = x^{2} + 10x + 25\\). Also \\((x + 5)(x - 5) = x^{2} - 25\\)."
+      ],
+      [
+        "Spotting them",
+        "\\(x^{2} - 49\\) is a square minus a square, so it factorises as \\((x + 7)(x - 7)\\). \\(x^{2} - 6x + 9\\) has first and last terms that are squares and a middle term of \\(-2 \\times x \\times 3\\), so it is \\((x - 3)^{2}\\)."
+      ]
+    ],
+    "remember": "Squaring a binomial has a middle term of twice the product. A sum times a difference has no middle term.",
+    "a": {
+      "q": "What is the expansion of \\((x + 4)^{2}\\)?",
+      "opts": ["\\(x^{2} + 8x + 16\\)", "\\(x^{2} + 16\\)", "\\(x^{2} + 4x + 16\\)", "\\(x^{2} + 8x + 8\\)"],
+      "why": "Twice the product of \\(x\\) and 4 is \\(8x\\), and \\(4^{2} = 16\\), so the result is \\(x^{2} + 8x + 16\\). The option \\(x^{2} + 16\\) is the tempting mistake of squaring each term and leaving out the middle term.",
+      "clue": "Write the middle term as twice the product of the two terms."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which is the factorised form of \\(9x^{2} - 25\\)?",
+      "opts": ["\\((3x + 5)(3x - 5)\\)", "\\((3x - 5)^{2}\\)", "\\((9x + 5)(9x - 5)\\)", "\\((3x + 25)(3x - 25)\\)"],
+      "why": "\\(9x^{2} = (3x)^{2}\\) and \\(25 = 5^{2}\\), so this is a square minus a square: \\((3x + 5)(3x - 5)\\). The option \\((3x - 5)^{2}\\) is tempting, but it expands to \\(9x^{2} - 30x + 25\\), which has a middle term.",
+      "clue": "Find the square root of each term, including the 9 in front of \\(x^{2}\\)."
+    }
+  },
+  "mat-factorising-non-monic-quadratics": {
+    "title": "Factorising non-monic quadratics",
+    "card": [
+      "A non-monic quadratic has an \\(x^{2}\\) term with a coefficient other than 1, such as \\(2x^{2} + 7x + 3\\). Always take out any common factor first.",
+      "For \\(ax^{2} + bx + c\\), find two numbers that multiply to \\(a \\times c\\) and add to \\(b\\). For \\(2x^{2} + 7x + 3\\), \\(a \\times c = 6\\) and \\(b = 7\\), so the numbers are 1 and 6.",
+      "Split the middle term: \\(2x^{2} + x + 6x + 3\\). Factorise the first pair and the last pair: \\(x(2x + 1) + 3(2x + 1)\\).",
+      "Take out the common bracket: \\((2x + 1)(x + 3)\\). Check by expanding: \\(2x^{2} + 6x + x + 3 = 2x^{2} + 7x + 3\\)."
+    ],
+    "remember": "Find two numbers that multiply to \\(a \\times c\\) and add to \\(b\\), split the middle term, then take out the common bracket.",
+    "a": {
+      "q": "Which pair of numbers is used to split the middle term of \\(3x^{2} + 10x + 8\\)?",
+      "opts": ["4 and 6", "2 and 4", "1 and 8", "5 and 5"],
+      "why": "Here \\(a \\times c = 3 \\times 8 = 24\\) and \\(b = 10\\). The numbers 4 and 6 multiply to 24 and add to 10. The pair 1 and 8 multiplies to 8, which is just \\(c\\), but \\(a\\) must be included.",
+      "clue": "Multiply the \\(x^{2}\\) coefficient by the constant first."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which is the correct factorisation of \\(6x^{2} + 13x + 5\\)?",
+      "opts": ["\\((2x + 1)(3x + 5)\\)", "\\((2x + 5)(3x + 1)\\)", "\\((6x + 1)(x + 5)\\)", "\\((2x + 1)(3x + 6)\\)"],
+      "why": "\\(a \\times c = 30\\), and 3 and 10 multiply to 30 and add to 13. So \\(6x^{2} + 3x + 10x + 5 = 3x(2x + 1) + 5(2x + 1) = (2x + 1)(3x + 5)\\). The option \\((2x + 5)(3x + 1)\\) has the right terms in the wrong places: it expands to \\(6x^{2} + 17x + 5\\).",
+      "clue": "Expand each option and compare the middle term with \\(13x\\)."
+    }
+  },
+  "mat-factorising-by-grouping-pairs": {
+    "title": "Factorising by grouping in pairs",
+    "card": [
+      "Some expressions have four terms and no factor common to all of them. Try splitting them into two pairs.",
+      "Factorise each pair by taking out its highest common factor. If the brackets that are left match, the method is working.",
+      "Now the matching bracket is a common factor of the whole expression. Take it out and write what is left as a second bracket.",
+      [
+        "Example",
+        "\\(ax + ay + bx + by\\) becomes \\(a(x + y) + b(x + y)\\), which is \\((x + y)(a + b)\\). Expand the answer to check it."
+      ]
+    ],
+    "remember": "Pair the terms, factorise each pair, then take out the matching bracket.",
+    "a": {
+      "q": "Factorise \\(3x + 3y + ax + ay\\) by grouping in pairs.",
+      "opts": ["\\((x + y)(3 + a)\\)", "\\((x + y)(3a)\\)", "\\((x + 3)(y + a)\\)", "\\(3(x + y) + a(x + y)\\)"],
+      "why": "The pairs give \\(3(x + y) + a(x + y)\\). The bracket \\((x + y)\\) is common, so take it out to get \\((x + y)(3 + a)\\). The last option is the middle step, not the finished factorised form.",
+      "clue": "Factorise each pair, then take out the bracket that matches."
+    },
+    "b": {
+      "d": 3,
+      "q": "Factorise \\(2m - 2n + km - kn\\).",
+      "opts": ["\\((m - n)(2 + k)\\)", "\\((m + n)(2 + k)\\)", "\\((m - n)(2k)\\)", "\\((m - n)(2 - k)\\)"],
+      "why": "The pairs give \\(2(m - n) + k(m - n)\\), so the common bracket is \\((m - n)\\) and the answer is \\((m - n)(2 + k)\\). Expanding gives back \\(2m - 2n + km - kn\\). Writing \\((m + n)\\) instead of \\((m - n)\\) is a sign error: that answer expands to \\(2m + 2n + km + kn\\).",
+      "clue": "Take out \\(k\\) from the second pair, and check that both brackets match."
+    }
+  },
+  "mat-algebraic-fractions-with-binomial": {
+    "title": "Algebraic fractions with binomial numerators",
+    "card": [
+      "To add or subtract algebraic fractions, first write them over a common denominator. For \\(\\frac{x + 2}{3}\\) and \\(\\frac{x - 1}{4}\\), the lowest common denominator is 12.",
+      "Multiply each numerator by the same number as its denominator was multiplied by. Put each numerator in brackets: \\(\\frac{4(x + 2)}{12} - \\frac{3(x - 1)}{12}\\).",
+      "Combine into one fraction and expand the brackets. The minus sign applies to every term in the second bracket: \\(\\frac{4x + 8 - 3x + 3}{12}\\).",
+      "Collect like terms to finish: \\(\\frac{x + 11}{12}\\). Here \\(-3 \\times -1 = +3\\), so the last sign changes."
+    ],
+    "remember": "Use brackets on the numerators, then expand before collecting like terms.",
+    "a": {
+      "q": "Simplify \\(\\frac{x + 3}{2} - \\frac{x - 2}{5}\\).",
+      "opts": [
+        "\\(\\frac{3x + 19}{10}\\)",
+        "\\(\\frac{3x + 11}{10}\\)",
+        "\\(\\frac{3x + 13}{10}\\)",
+        "\\(\\frac{3x + 5}{10}\\)"
+      ],
+      "why": "Over 10 the numerator is \\(5(x + 3) - 2(x - 2)\\), which is \\(5x + 15 - 2x + 4 = 3x + 19\\). The tempting \\(3x + 11\\) comes from writing \\(-2x - 4\\), which multiplies out the \\(-2\\) but leaves the sign of the last term unchanged.",
+      "clue": "The minus sign applies to both terms in the second bracket."
+    },
+    "b": {
+      "d": 3,
+      "q": "Simplify \\(\\frac{2x + 1}{5} - \\frac{x - 3}{2}\\).",
+      "opts": [
+        "\\(\\frac{-x + 17}{10}\\)",
+        "\\(\\frac{-x + 7}{10}\\)",
+        "\\(\\frac{3x + 17}{10}\\)",
+        "\\(\\frac{3x - 7}{10}\\)"
+      ],
+      "why": "Over 10 the numerator is \\(2(2x + 1) - 5(x - 3)\\), which is \\(4x + 2 - 5x + 15 = -x + 17\\). The option \\(-x + 7\\) comes from writing \\(-5(x - 3)\\) as \\(-5x + 5\\) instead of \\(-5x + 15\\), so the constant becomes \\(2 + 5\\).",
+      "clue": "Multiply the first numerator by 2 and the second by 5, in brackets."
+    }
+  },
+  "mat-negative-indices-with-pronumerals": {
+    "title": "Negative indices with pronumerals",
+    "card": [
+      "A negative index means a reciprocal: \\(x^{-n} = \\frac{1}{x^{n}}\\). The power moves to the other side of the fraction line, and the sign of its index changes.",
+      "Only the base that carries the negative index moves. In \\(3x^{-2}\\), only \\(x\\) has the index \\(-2\\), so \\(3x^{-2} = \\frac{3}{x^{2}}\\), not \\(\\frac{1}{3x^{2}}\\).",
+      "The index laws still work with negative indices. Multiplying adds the indices, and dividing subtracts them: \\(x^{5} \\times x^{-8} = x^{-3}\\).",
+      "Finish with positive indices. Example: \\(\\frac{6x^{2}}{2x^{5}} = 3x^{2-5}\\), which is \\(3x^{-3} = \\frac{3}{x^{3}}\\)."
+    ],
+    "remember": "Move just the base with the negative index across the fraction line, and give final answers with positive indices.",
+    "a": {
+      "q": "Which expression is \\(5y^{-3}\\) written with a positive index?",
+      "opts": ["\\(\\frac{5}{y^{3}}\\)", "\\(\\frac{1}{5y^{3}}\\)", "\\(-5y^{3}\\)", "\\(\\frac{1}{(5y)^{3}}\\)"],
+      "why": "Only \\(y\\) has the index \\(-3\\), so only \\(y^{3}\\) moves to the denominator and the 5 stays on top. \\(\\frac{1}{5y^{3}}\\) is tempting, but it wrongly moves the 5 as well.",
+      "clue": "Which part of the term has the negative index?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Simplify \\(\\frac{12a^{3}}{4a^{7}}\\), giving the answer with a positive index.",
+      "opts": ["\\(\\frac{3}{a^{4}}\\)", "\\(3a^{4}\\)", "\\(\\frac{1}{3a^{4}}\\)", "\\(\\frac{3}{a^{10}}\\)"],
+      "why": "Divide the numbers: \\(12 \\div 4 = 3\\). Subtract the indices: \\(3 - 7 = -4\\), so the result is \\(3a^{-4} = \\frac{3}{a^{4}}\\). \\(3a^{4}\\) comes from subtracting the indices the wrong way round.",
+      "clue": "Subtract the index on the bottom from the index on top, then fix the sign."
+    }
+  },
+  "mat-fractional-indices": {
+    "title": "Fractional indices",
+    "card": [
+      "A power of \\(\\frac{1}{2}\\) means a square root, and a power of \\(\\frac{1}{3}\\) means a cube root. So \\(x^{\\frac{1}{2}} = \\sqrt{x}\\) and \\(x^{\\frac{1}{3}} = \\sqrt[3]{x}\\).",
+      "For a whole number \\(n\\) of 2 or more, \\(x^{\\frac{1}{n}}\\) is the \\(n\\)th root of \\(x\\). For example, \\(16^{\\frac{1}{4}} = 2\\), because \\(2^{4} = 16\\).",
+      "For an index such as \\(\\frac{m}{n}\\), the bottom number is the root and the top number is the power: \\(x^{\\frac{m}{n}} = (\\sqrt[n]{x})^{m}\\). Take the root first, as it keeps the numbers small.",
+      "Worked example: \\(8^{\\frac{2}{3}} = (\\sqrt[3]{8})^{2}\\), which is \\(2^{2} = 4\\). To go back, \\(\\sqrt[3]{y^{2}}\\) is written \\(y^{\\frac{2}{3}}\\)."
+    ],
+    "remember": "In a fractional index, the bottom number is the root and the top number is the power.",
+    "a": {
+      "q": "What is the value of \\(27^{\\frac{2}{3}}\\)?",
+      "opts": ["\\(9\\)", "\\(18\\)", "\\(6\\)", "\\(729\\)"],
+      "why": "The bottom number 3 is the cube root: \\(\\sqrt[3]{27} = 3\\). The top number 2 is the power: \\(3^{2} = 9\\). Multiplying 27 by \\(\\frac{2}{3}\\) to get 18 mixes up an index with a multiplier.",
+      "clue": "Take the cube root first, then square it."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which expression is the same as \\(\\sqrt[5]{a^{3}}\\)?",
+      "opts": ["\\(a^{\\frac{3}{5}}\\)", "\\(a^{\\frac{5}{3}}\\)", "\\(a^{15}\\)", "\\(a^{\\frac{1}{8}}\\)"],
+      "why": "The root is 5, so it goes on the bottom of the index. The power is 3, so it goes on top, giving \\(a^{\\frac{3}{5}}\\). Writing \\(a^{\\frac{5}{3}}\\) swaps the root and the power.",
+      "clue": "Which number is the root, and where does the root go?"
+    }
+  },
+  "mat-simplifying-surds": {
+    "title": "Simplifying surds",
+    "card": [
+      "A surd is a root that cannot be written as a fraction, so its decimal never ends or repeats. \\(\\sqrt{5}\\) and \\(\\sqrt{12}\\) are surds. \\(\\sqrt{9}\\) is not, because it equals 3.",
+      "To simplify a surd, find the largest square number that divides the number under the root. Square numbers are \\(4\\), \\(9\\), \\(16\\), \\(25\\), \\(36\\) and so on.",
+      "Split the root using \\(\\sqrt{a \\times b} = \\sqrt{a} \\times \\sqrt{b}\\). Then take the square root of the square factor and write it in front.",
+      "Example: \\(\\sqrt{50} = \\sqrt{25 \\times 2}\\), which is \\(\\sqrt{25} \\times \\sqrt{2} = 5\\sqrt{2}\\). A number already in front is multiplied: \\(3\\sqrt{8} = 3 \\times 2\\sqrt{2} = 6\\sqrt{2}\\)."
+    ],
+    "remember": "Pull out the largest square factor, and its square root goes in front of the surd.",
+    "a": {
+      "q": "Which is \\(\\sqrt{72}\\) in simplest form?",
+      "opts": ["\\(6\\sqrt{2}\\)", "\\(2\\sqrt{18}\\)", "\\(3\\sqrt{8}\\)", "\\(36\\sqrt{2}\\)"],
+      "why": "Here \\(72 = 36 \\times 2\\), and \\(\\sqrt{36} = 6\\), so \\(\\sqrt{72} = 6\\sqrt{2}\\). The option \\(3\\sqrt{8}\\) is equal in value but not simplest, because \\(8\\) still has the square factor \\(4\\).",
+      "clue": "Find the largest square number that divides 72."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia says the diagonal of a square tile is \\(\\sqrt{48}\\) cm. Which is this length in simplest form?",
+      "opts": ["\\(4\\sqrt{3}\\) cm", "\\(2\\sqrt{12}\\) cm", "\\(6\\sqrt{2}\\) cm", "\\(16\\sqrt{3}\\) cm"],
+      "why": "Here \\(48 = 16 \\times 3\\), and \\(\\sqrt{16} = 4\\), so \\(\\sqrt{48} = 4\\sqrt{3}\\). The option \\(2\\sqrt{12}\\) used the square factor \\(4\\) only, so \\(12\\) can still be simplified.",
+      "clue": "Check that no square factor is left under the root."
+    }
+  },
+  "mat-operations-with-surds": {
+    "title": "Operations with surds",
+    "card": [
+      "Like surds have the same number under the root, such as \\(3\\sqrt{2}\\) and \\(5\\sqrt{2}\\). Add or subtract only like surds, by adding or subtracting the numbers in front: \\(3\\sqrt{2} + 5\\sqrt{2} = 8\\sqrt{2}\\).",
+      "Unlike surds cannot be combined, so \\(\\sqrt{2} + \\sqrt{3}\\) stays as it is. Simplify first, because \\(\\sqrt{8} + \\sqrt{2} = 2\\sqrt{2} + \\sqrt{2} = 3\\sqrt{2}\\).",
+      "Any surds can be multiplied: \\(\\sqrt{a} \\times \\sqrt{b} = \\sqrt{ab}\\). So \\(\\sqrt{3} \\times \\sqrt{5} = \\sqrt{15}\\), and \\(\\sqrt{6} \\times \\sqrt{6} = 6\\).",
+      "To expand brackets, multiply each term inside by the term outside: \\(\\sqrt{2}(3 + \\sqrt{2}) = 3\\sqrt{2} + 2\\)."
+    ],
+    "remember": "Add or subtract like surds only. Multiply any surds, and a surd times itself is the number.",
+    "a": {
+      "q": "What is \\(4\\sqrt{3} + 2\\sqrt{3}\\)?",
+      "opts": ["\\(6\\sqrt{3}\\)", "\\(6\\sqrt{6}\\)", "\\(8\\sqrt{3}\\)", "\\(6\\sqrt{9}\\)"],
+      "why": "The surds are alike, so add the numbers in front: \\(4 + 2 = 6\\), giving \\(6\\sqrt{3}\\). The root stays the same. Adding the numbers under the root, as in \\(6\\sqrt{6}\\), is a common mistake.",
+      "clue": "Treat \\(\\sqrt{3}\\) like a unit, as in 4 apples plus 2 apples."
+    },
+    "b": {
+      "d": 3,
+      "q": "Expand and simplify \\(\\sqrt{5}(2 + \\sqrt{5})\\).",
+      "opts": ["\\(2\\sqrt{5} + 5\\)", "\\(2\\sqrt{5} + \\sqrt{5}\\)", "\\(2\\sqrt{5} + 25\\)", "\\(2 + 5\\sqrt{5}\\)"],
+      "why": "Multiply each term by \\(\\sqrt{5}\\): \\(\\sqrt{5} \\times 2 = 2\\sqrt{5}\\) and \\(\\sqrt{5} \\times \\sqrt{5} = 5\\). The result is \\(2\\sqrt{5} + 5\\). The option \\(2\\sqrt{5} + \\sqrt{5}\\) wrongly treats \\(\\sqrt{5} \\times \\sqrt{5}\\) as \\(\\sqrt{5}\\).",
+      "clue": "What is a surd multiplied by itself?"
+    }
+  },
+  "mat-rationalising-denominator": {
+    "title": "Rationalising the denominator",
+    "card": [
+      "A fraction with a surd in the denominator, such as \\(\\frac{6}{\\sqrt{3}}\\), is not in simplest form. Rationalising means rewriting it so the denominator is a whole number.",
+      "Multiply the top and bottom by the surd in the denominator. This is the same as multiplying by 1, so the value does not change.",
+      "The denominator becomes a whole number, because \\(\\sqrt{a} \\times \\sqrt{a} = a\\). The numerator is multiplied by the same surd.",
+      [
+        "Example",
+        "\\(\\frac{6}{\\sqrt{3}} = \\frac{6 \\times \\sqrt{3}}{\\sqrt{3} \\times \\sqrt{3}} = \\frac{6\\sqrt{3}}{3} = 2\\sqrt{3}\\). Divide the whole numbers at the end if you can."
+      ]
+    ],
+    "remember": "Multiply top and bottom by the denominator's surd, so the bottom becomes a whole number.",
+    "a": {
+      "q": "Which step rationalises the denominator of \\(\\frac{10}{\\sqrt{5}}\\)?",
+      "opts": [
+        "Multiply the top and bottom by \\(\\sqrt{5}\\)",
+        "Multiply the top only by \\(\\sqrt{5}\\)",
+        "Multiply the top and bottom by 5",
+        "Divide the top and bottom by \\(\\sqrt{5}\\)"
+      ],
+      "why": "Multiplying the top and bottom by \\(\\sqrt{5}\\) keeps the value the same and makes the bottom \\(\\sqrt{5} \\times \\sqrt{5} = 5\\). Multiplying only the top changes the value of the fraction.",
+      "clue": "Multiply by a fraction equal to 1, using the surd on the bottom."
+    },
+    "b": {
+      "d": 2,
+      "q": "Rationalise the denominator of \\(\\frac{12}{\\sqrt{6}}\\) and simplify.",
+      "opts": ["\\(2\\sqrt{6}\\)", "\\(12\\sqrt{6}\\)", "\\(\\frac{\\sqrt{6}}{2}\\)", "\\(\\frac{12\\sqrt{6}}{36}\\)"],
+      "why": "\\(\\frac{12}{\\sqrt{6}} = \\frac{12\\sqrt{6}}{6} = 2\\sqrt{6}\\). Leaving it as \\(12\\sqrt{6}\\) forgets to divide by the new denominator 6.",
+      "clue": "After multiplying, the denominator is 6. Divide 12 by it."
+    }
+  },
+  "mat-simple-cubic-equations": {
+    "title": "Simple cubic equations",
+    "card": [
+      "A simple cubic equation has a cube such as \\(x^{3}\\) and no other power of \\(x\\). Solve it by isolating \\(x^{3}\\), then taking the cube root of both sides.",
+      "Worked example: \\(2x^{3} = 54\\). Divide by 2 to get \\(x^{3} = 27\\). Then \\(x = \\sqrt[3]{27} = 3\\).",
+      "A negative number has a real cube root. For \\(x^{3} = -8\\), the answer is \\(x = -2\\), because \\((-2) \\times (-2) \\times (-2) = -8\\).",
+      "Unlike \\(x^{2} = 9\\), which has two answers, \\(x^{3} = k\\) has only one real answer. Check by cubing your answer."
+    ],
+    "remember": "Isolate the cube, then take the cube root. There is one real answer.",
+    "a": {
+      "q": "What is the solution of \\(x^{3} + 5 = 13\\)?",
+      "opts": ["\\(x = 2\\)", "\\(x = 8\\)", "\\(x = \\sqrt[3]{18}\\)", "\\(x = \\pm 2\\)"],
+      "why": "Subtract 5 to get \\(x^{3} = 8\\), so \\(x = \\sqrt[3]{8} = 2\\). The option \\(\\pm 2\\) is wrong because a cube equation has only one real answer: \\((-2)^{3} = -8\\), not 8.",
+      "clue": "Subtract 5 first, then take the cube root."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya solves \\(3x^{3} = -81\\). She divides by 3 to get \\(x^{3} = -27\\), then says there is no real solution because \\(-27\\) is negative. What is the correct solution?",
+      "opts": ["\\(x = -3\\)", "\\(x = 3\\)", "\\(x = -27\\)", "\\(x = \\pm 3\\)"],
+      "why": "From \\(x^{3} = -27\\), \\(x = \\sqrt[3]{-27} = -3\\), since \\((-3)^{3} = -27\\). Priya is wrong because a negative number does have a real cube root. The answer \\(x = 3\\) is wrong because \\(3^{3} = 27\\), not \\(-27\\).",
+      "clue": "Which number, cubed, gives \\(-27\\)?"
+    }
+  },
+  "mat-linear-inequalities": {
+    "title": "Linear inequalities",
+    "card": [
+      "An inequality uses \\(<\\), \\(>\\), \\(\\le\\) or \\(\\ge\\). Solve it like an equation: do the same to both sides.",
+      "Multiplying or dividing both sides by a negative number reverses the sign. For \\(-2x < 6\\), divide by \\(-2\\) to get \\(x > -3\\).",
+      "On a number line, an open circle shows \\(<\\) or \\(>\\), and a closed circle shows \\(\\le\\) or \\(\\ge\\). The arrow points to the values that work.",
+      "Worked example: \\(3 - 4x \\ge 11\\). Subtract 3 to get \\(-4x \\ge 8\\). Divide by \\(-4\\) and reverse the sign: \\(x \\le -2\\)."
+    ],
+    "remember": "Solve as for an equation, but reverse the sign when you multiply or divide by a negative.",
+    "a": {
+      "q": "What is the solution of \\(-3x > 12\\)?",
+      "opts": ["\\(x < -4\\)", "\\(x > -4\\)", "\\(x < 4\\)", "\\(x > 4\\)"],
+      "why": "Dividing both sides by \\(-3\\) gives \\(x\\) less than \\(-4\\), and the sign reverses. The option \\(x > -4\\) forgets to reverse the sign.",
+      "clue": "You divide by a negative number."
+    },
+    "b": {
+      "d": 3,
+      "q": "Leo solves \\(5 - 2x \\le 1\\). Which number line description shows his solution?",
+      "opts": [
+        "Closed circle at 2, arrow pointing right",
+        "Closed circle at 2, arrow pointing left",
+        "Open circle at 2, arrow pointing right",
+        "Closed circle at \\(-2\\), arrow pointing right"
+      ],
+      "why": "Subtract 5 to get \\(-2x \\le -4\\). Divide by \\(-2\\) and reverse the sign: \\(x \\ge 2\\). That is a closed circle at 2 with the arrow pointing right. The arrow pointing left comes from not reversing the sign.",
+      "clue": "Divide by \\(-2\\), then think about which way the sign points."
+    }
+  },
+  "mat-coordinate-geometry-formulas": {
+    "title": "Coordinate geometry formulas",
+    "card": [
+      [
+        "Gradient",
+        "The gradient between \\((x_{1}, y_{1})\\) and \\((x_{2}, y_{2})\\) is \\(m = \\frac{y_{2} - y_{1}}{x_{2} - x_{1}}\\). Parallel lines have equal gradients."
+      ],
+      [
+        "Midpoint",
+        "The midpoint is the average of the x values and the average of the y values: \\(\\left(\\frac{x_{1} + x_{2}}{2}, \\frac{y_{1} + y_{2}}{2}\\right)\\)."
+      ],
+      [
+        "Distance",
+        "The distance is \\(d = \\sqrt{(x_{2} - x_{1})^{2} + (y_{2} - y_{1})^{2}}\\). It comes from Pythagoras' theorem."
+      ],
+      "Example: \\(A(1, 2)\\) and \\(B(7, 10)\\). The gradient is \\(\\frac{8}{6} = \\frac{4}{3}\\), the midpoint is \\((4, 6)\\), and the distance is \\(\\sqrt{36 + 64} = 10\\). A quadrilateral is a parallelogram if both pairs of opposite sides have equal gradients."
+    ],
+    "remember": "Gradient is rise over run, midpoint is the average, and distance is Pythagoras. Equal gradients mean parallel.",
+    "a": {
+      "q": "What is the midpoint of the interval joining \\(P(-2, 3)\\) and \\(Q(6, 9)\\)?",
+      "opts": ["\\((2, 6)\\)", "\\((4, 3)\\)", "\\((4, 6)\\)", "\\((2, 3)\\)"],
+      "why": "Average the x values: \\(\\frac{-2 + 6}{2} = 2\\). Average the y values: \\(\\frac{3 + 9}{2} = 6\\). The tempting \\((4, 6)\\) comes from forgetting that \\(-2\\) is negative when adding.",
+      "clue": "Add the two x values, then halve. Take care with the sign."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia plots \\(A(0, 0)\\), \\(B(4, 1)\\), \\(C(6, 4)\\) and \\(D(2, 3)\\) on a map of a park. Which fact shows that \\(ABCD\\) is a parallelogram?",
+      "opts": [
+        "Both pairs of opposite sides have equal gradients",
+        "\\(AB\\) and \\(BC\\) have equal lengths",
+        "The gradients of \\(AB\\) and \\(BC\\) are equal",
+        "Only one pair of opposite sides has equal gradients"
+      ],
+      "why": "The gradients are: \\(AB = \\frac{1}{4}\\), \\(DC = \\frac{1}{4}\\), \\(BC = \\frac{3}{2}\\) and \\(AD = \\frac{3}{2}\\). So both pairs of opposite sides are parallel. Equal gradients of neighbouring sides would put them on one line, not make a parallelogram.",
+      "clue": "Parallel sides have equal gradients. Check opposite sides."
+    }
+  },
+  "mat-point-gradient-general-form": {
+    "title": "Point-gradient and general form",
+    "card": [
+      "If a line has gradient \\(m\\) and passes through the point \\((x_{1}, y_{1})\\), its equation is \\(y - y_{1} = m(x - x_{1})\\). Put in the numbers, then tidy up. Take care with negatives: \\(y - (-1)\\) is \\(y + 1\\).",
+      "Example: gradient \\(3\\), through \\((2, 5)\\). This gives \\(y - 5 = 3(x - 2)\\). Expanding gives \\(y - 5 = 3x - 6\\), so \\(y = 3x - 1\\).",
+      "General form writes the equation as \\(ax + by + c = 0\\), with everything on one side equal to zero. Usually \\(a\\), \\(b\\) and \\(c\\) are integers: whole numbers or their negatives.",
+      "To change \\(y = 3x - 1\\) to general form, move every term to one side: \\(3x - y - 1 = 0\\). To go back, make \\(y\\) the subject. Then the gradient is the number in front of \\(x\\)."
+    ],
+    "remember": "Use \\(y - y_{1} = m(x - x_{1})\\) to build a line, then rearrange it to the form you need.",
+    "a": {
+      "q": "A line has gradient \\(2\\) and passes through \\((1, 4)\\). Which equation is correct?",
+      "opts": ["\\(y - 4 = 2(x - 1)\\)", "\\(y - 1 = 2(x - 4)\\)", "\\(y + 4 = 2(x + 1)\\)", "\\(y - 4 = 1(x - 2)\\)"],
+      "why": "The point \\((1, 4)\\) gives \\(x_{1} = 1\\) and \\(y_{1} = 4\\), so the equation is \\(y - 4 = 2(x - 1)\\). Swapping the coordinates, as in \\(y - 1 = 2(x - 4)\\), gives a line through \\((4, 1)\\) instead.",
+      "clue": "The \\(y\\) value of the point goes with \\(y\\)."
+    },
+    "b": {
+      "d": 3,
+      "q": "A line has gradient \\(-2\\) and passes through \\((3, -1)\\). What is its equation in general form?",
+      "opts": ["\\(2x + y - 5 = 0\\)", "\\(2x + y + 5 = 0\\)", "\\(2x - y - 7 = 0\\)", "\\(2x + y - 7 = 0\\)"],
+      "why": "The line is \\(y + 1 = -2(x - 3)\\), which expands to \\(y + 1 = -2x + 6\\). Moving everything to the left gives \\(2x + y - 5 = 0\\). Forgetting that \\(y - (-1)\\) is \\(y + 1\\) leads to \\(2x + y - 7 = 0\\).",
+      "clue": "Subtracting \\(-1\\) is the same as adding \\(1\\)."
+    }
+  },
+  "mat-transformations-cartesian-plane": {
+    "title": "Transformations on the Cartesian plane",
+    "card": [
+      [
+        "Translation",
+        "Every point slides the same distance in the same direction. Moving right 3 and down 2 changes \\((x, y)\\) to \\((x + 3, y - 2)\\)."
+      ],
+      [
+        "Reflection",
+        "In the \\(x\\)-axis, \\((x, y)\\) becomes \\((x, -y)\\). In the \\(y\\)-axis, \\((x, y)\\) becomes \\((-x, y)\\)."
+      ],
+      [
+        "Rotation",
+        "About the origin, turning 180° changes \\((x, y)\\) to \\((-x, -y)\\). Turning 90° anticlockwise gives \\((-y, x)\\). Turning 270° anticlockwise gives \\((y, -x)\\)."
+      ],
+      "Example: rotate \\((3, 1)\\) by 90° anticlockwise. Use \\((x, y) \\to (-y, x)\\) to get \\((-1, 3)\\). A clockwise turn of 90° is the same as 270° anticlockwise."
+    ],
+    "remember": "Translations add to the coordinates. Reflections and rotations swap or change their signs.",
+    "a": {
+      "q": "The point \\((4, -5)\\) is reflected in the \\(y\\)-axis. What are its new coordinates?",
+      "opts": ["\\((-4, -5)\\)", "\\((4, 5)\\)", "\\((-4, 5)\\)", "\\((-5, 4)\\)"],
+      "why": "A reflection in the \\(y\\)-axis changes the sign of \\(x\\) only, so \\((4, -5)\\) becomes \\((-4, -5)\\). Changing both signs, \\((-4, 5)\\), is a 180° rotation, not a reflection.",
+      "clue": "The \\(y\\)-axis is vertical. Which coordinate stays on the same height?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Triangle vertex \\(P(2, 6)\\) is rotated 90° clockwise about the origin. What are the coordinates of its image?",
+      "opts": ["\\((6, -2)\\)", "\\((-6, 2)\\)", "\\((-2, -6)\\)", "\\((-6, -2)\\)"],
+      "why": "A 90° clockwise turn is the same as 270° anticlockwise, which changes \\((x, y)\\) to \\((y, -x)\\). So \\((2, 6)\\) becomes \\((6, -2)\\). The point \\((-6, 2)\\) comes from turning anticlockwise instead.",
+      "clue": "Clockwise 90° equals 270° anticlockwise."
+    }
+  },
+  "mat-transforming-parabolas": {
+    "title": "Transforming parabolas",
+    "card": [
+      "A parabola can be written as \\(y = a(x - h)^{2} + k\\). Its vertex, the turning point, is the point \\((h, k)\\).",
+      "Changing \\(h\\) moves the parabola sideways. Changing \\(k\\) moves it up or down. The shape stays the same.",
+      "The number \\(a\\) stretches or flips the parabola. If \\(a\\) is negative, it flips and is concave down. If \\(a\\) is positive, it is concave up.",
+      "Example: \\(y = -(x - 3)^{2} + 2\\) has \\(h = 3\\), \\(k = 2\\) and \\(a = -1\\). Its vertex is \\((3, 2)\\) and it is concave down. Note that \\(x - 3\\) gives \\(h = 3\\), not \\(-3\\)."
+    ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The parabola \\(y = -(x - 3)^{2} + 2\\), concave down, with its vertex at \\((3, 2)\\).",
+        "x": {"min": -2, "max": 10, "label": "\\(x\\)", "step": 1},
+        "y": {"min": -6, "max": 5, "label": "\\(y\\)", "step": 1},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "-(x - 3)^{2} + 2",
+            "label": "\\(y = -(x - 3)^{2} + 2\\)",
+            "labelAt": 4.2,
+            "pos": "above-right"
+          },
+          {"type": "point", "at": [3, 2], "on": ["f"], "is": "turning point", "label": "\\((3, 2)\\)", "pos": "above"}
+        ]
+      }
+    },
+    "remember": "In \\(y = a(x - h)^{2} + k\\), read the vertex \\((h, k)\\) and use \\(a\\) to see the flip.",
+    "a": {
+      "q": "What is the vertex of \\(y = (x - 4)^{2} + 5\\)?",
+      "opts": ["\\((4, 5)\\)", "\\((-4, 5)\\)", "\\((4, -5)\\)", "\\((5, 4)\\)"],
+      "why": "The equation matches \\(y = a(x - h)^{2} + k\\) with \\(h = 4\\) and \\(k = 5\\), so the vertex is \\((4, 5)\\). The option \\((-4, 5)\\) is tempting because of the minus sign, but \\(x - 4\\) means \\(h = 4\\).",
+      "clue": "Match the equation to \\(a(x - h)^{2} + k\\) and read \\(h\\) and \\(k\\)."
+    },
+    "b": {
+      "d": 3,
+      "q": "The parabola \\(y = x^{2}\\) is changed to \\(y = -(x + 2)^{2} - 3\\). Which describes the change?",
+      "opts": [
+        "Flipped, then moved 2 left and 3 down",
+        "Flipped, then moved 2 right and 3 down",
+        "Flipped, then moved 2 left and 3 up",
+        "Not flipped, moved 2 left and 3 down"
+      ],
+      "why": "The negative sign makes \\(a = -1\\), so it flips. Writing \\(x + 2\\) as \\(x - (-2)\\) gives \\(h = -2\\), which is 2 left, and \\(k = -3\\) is 3 down. Moving 2 right is the common mistake of reading the sign of \\(h\\) the wrong way.",
+      "clue": "Find the vertex \\((h, k)\\), then check the sign of \\(a\\)."
+    }
+  },
+  "mat-circles-cartesian-plane": {
+    "title": "Circles on the Cartesian plane",
+    "card": [
+      "A circle is all the points a fixed distance, the radius \\(r\\), from its centre. A circle with centre \\((0, 0)\\) has equation \\(x^{2} + y^{2} = r^{2}\\).",
+      "Example: \\(x^{2} + y^{2} = 25\\) has centre \\((0, 0)\\). Here \\(r^{2} = 25\\), so the radius is \\(r = 5\\), not 25.",
+      "A circle with centre \\((h, k)\\) has equation \\((x - h)^{2} + (y - k)^{2} = r^{2}\\). The signs inside the brackets are the opposite of the centre's coordinates.",
+      "Example: \\((x - 3)^{2} + (y + 2)^{2} = 16\\) has centre \\((3, -2)\\) and radius 4. Here \\(y + 2\\) is \\(y - (-2)\\)."
+    ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "The circle \\(x^{2} + y^{2} = 25\\) with centre \\((0, 0)\\) and radius 5. It crosses the axes at \\((5, 0)\\), \\((-5, 0)\\), \\((0, 5)\\) and \\((0, -5)\\).",
+        "x": {"min": -8, "max": 8, "label": "\\(x\\)", "step": 2},
+        "y": {"min": -8, "max": 8, "label": "\\(y\\)", "step": 2},
+        "grid": true,
+        "equal": true,
+        "items": [
+          {"type": "circle", "centre": [0, 0], "r": 5},
+          {"type": "point", "at": [0, 0], "label": "\\((0, 0)\\)", "pos": "above-right"}
+        ]
+      }
+    },
+    "remember": "Read the centre from the brackets with the signs flipped, and the radius as the square root of the right side.",
+    "a": {
+      "q": "What are the centre and radius of \\((x - 1)^{2} + (y - 4)^{2} = 9\\)?",
+      "opts": [
+        "Centre \\((1, 4)\\), radius 3",
+        "Centre \\((1, 4)\\), radius 9",
+        "Centre \\((-1, -4)\\), radius 3",
+        "Centre \\((-1, -4)\\), radius 9"
+      ],
+      "why": "The brackets are \\(x - 1\\) and \\(y - 4\\), so the centre is \\((1, 4)\\). The right side is \\(r^{2} = 9\\), so the radius is 3. Radius 9 forgets to take the square root.",
+      "clue": "Flip the signs for the centre, and take a square root for the radius."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which equation is the circle with centre \\((-2, 5)\\) and radius 6?",
+      "opts": [
+        "\\((x + 2)^{2} + (y - 5)^{2} = 36\\)",
+        "\\((x - 2)^{2} + (y + 5)^{2} = 36\\)",
+        "\\((x + 2)^{2} + (y - 5)^{2} = 6\\)",
+        "\\((x - 2)^{2} + (y + 5)^{2} = 6\\)"
+      ],
+      "why": "With \\(h = -2\\) and \\(k = 5\\), the brackets are \\(x - (-2) = x + 2\\) and \\(y - 5\\). The right side is \\(r^{2} = 6^{2} = 36\\). The options ending in 6 forget to square the radius.",
+      "clue": "The right side is the radius squared, and the signs in the brackets are opposite to the centre."
+    }
+  },
+  "mat-matching-equations-graphs": {
+    "title": "Matching equations to graphs",
+    "card": [
+      "Look at where \\(x\\) sits in the equation. \\(y = mx + c\\) is a straight line, \\(y = ax^{2} + bx + c\\) is a parabola, and an equation with \\(x^{3}\\) as its highest power, such as \\(y = x^{3} - 4x\\), is a cubic.",
+      "A hyperbola has \\(x\\) under a fraction bar, as in \\(y = \\frac{k}{x}\\). A circle has both \\(x^{2}\\) and \\(y^{2}\\), as in \\(x^{2} + y^{2} = r^{2}\\).",
+      "An exponential has \\(x\\) in the power, as in \\(y = 2^{x}\\). When the base is more than 1, it rises to the right, gets close to the \\(x\\)-axis on the left without touching it, and crosses the \\(y\\)-axis at \\((0, 1)\\).",
+      "Use the shape to check. A parabola has one turn and both ends go the same way. A cubic has ends that go in opposite directions. Putting \\(x = 0\\) into the equation gives the \\(y\\)-intercept."
+    ],
+    "remember": "Match the equation by where \\(x\\) sits, then check the graph's shape and intercept.",
+    "a": {
+      "q": "Which equation gives an exponential graph?",
+      "opts": ["\\(y = 3^{x}\\)", "\\(y = x^{3}\\)", "\\(y = 3x\\)", "\\(y = \\frac{3}{x}\\)"],
+      "why": "In \\(y = 3^{x}\\) the \\(x\\) is in the power, so the graph is an exponential. In \\(y = x^{3}\\) the \\(x\\) is the base and the power is fixed, which makes a cubic.",
+      "clue": "Which one has \\(x\\) up in the power?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A graph crosses the \\(y\\)-axis at 1. It rises steeply to the right and gets close to the \\(x\\)-axis on the left without touching it. Which equation fits?",
+      "opts": ["\\(y = 2^{x}\\)", "\\(y = x^{2} + 1\\)", "\\(y = x^{3} + 1\\)", "\\(y = 2x + 1\\)"],
+      "why": "\\(y = 2^{x}\\) is an exponential with base more than 1. It passes through \\((0, 1)\\) and gets close to the \\(x\\)-axis on the left. The other three also cross the \\(y\\)-axis at 1, but a parabola, a cubic and a line never get close to the \\(x\\)-axis on one side and stay above it.",
+      "clue": "Crossing at 1 is not enough. Think about the left-hand end."
+    }
+  },
+  "mat-language-polynomials": {
+    "title": "The language of polynomials",
+    "card": [
+      "A polynomial is a sum of terms, each a number times a power of \\(x\\), where the power is a whole number (0, 1, 2, ...). For example, \\(4x^{3} - 5x + 7\\) is a polynomial.",
+      "The degree is the highest power of \\(x\\). In \\(4x^{3} - 5x + 7\\), the degree is 3.",
+      "The leading coefficient is the number in front of the highest power, here \\(4\\). The constant term has no \\(x\\), here \\(7\\).",
+      "Powers such as \\(x^{-1}\\), \\(\\sqrt{x}\\) or \\(\\frac{1}{x}\\) are not whole-number powers, so an expression with one of them is not a polynomial. Write terms from the highest power down."
+    ],
+    "remember": "Degree is the highest power. The leading coefficient is its number, the constant term has no \\(x\\).",
+    "a": {
+      "q": "For \\(P(x) = 2x^{4} - 3x^{2} + 9x - 6\\), what is the leading coefficient?",
+      "opts": ["\\(2\\)", "\\(4\\)", "\\(-6\\)", "\\(9\\)"],
+      "why": "The highest power is \\(x^{4}\\), so the leading coefficient is the number in front of it, \\(2\\). The number \\(4\\) is the degree, not the coefficient.",
+      "clue": "Find the term with the highest power first."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which expression is a polynomial of degree 3 with constant term \\(-5\\)?",
+      "opts": ["\\(7x - x^{3} - 5\\)", "\\(x^{3} + \\frac{2}{x} - 5\\)", "\\(5x^{3} - 3x^{2}\\)", "\\(x^{5} + 3x - 3\\)"],
+      "why": "\\(7x - x^{3} - 5\\) has whole-number powers, highest power 3 and constant term \\(-5\\), even though it is not written in order. The expression \\(x^{3} + \\frac{2}{x} - 5\\) has a \\(\\frac{2}{x}\\) term, so it is not a polynomial.",
+      "clue": "Check every power is a whole number, then find the highest."
+    }
+  },
+  "mat-remainder-factor-theorems-2": {
+    "title": "The remainder and factor theorems",
+    "card": [
+      "When a polynomial \\(P(x)\\) is divided by \\(x - a\\), the remainder is \\(P(a)\\). This is the value you get by putting \\(x = a\\) into \\(P(x)\\).",
+      [
+        "Example",
+        "Find the remainder when \\(P(x) = x^{3} + 2x - 5\\) is divided by \\(x - 2\\). Here \\(a = 2\\), so \\(P(2) = 8 + 4 - 5 = 7\\). The remainder is 7."
+      ],
+      [
+        "Factor theorem",
+        "If \\(P(a) = 0\\), the remainder is zero, so \\(x - a\\) is a factor of \\(P(x)\\). If \\(P(a) \\ne 0\\), then \\(x - a\\) is not a factor."
+      ],
+      [
+        "Use",
+        "To factorise, test small whole numbers such as \\(\\pm 1\\) and \\(\\pm 2\\) until \\(P(a) = 0\\). Then \\(x - a\\) is a factor, and a root of \\(P(x) = 0\\) is \\(x = a\\)."
+      ]
+    ],
+    "remember": "Put \\(x = a\\) in to get the remainder. A remainder of zero means \\(x - a\\) is a factor.",
+    "a": {
+      "q": "What is the remainder when \\(P(x) = x^{3} - 4x + 3\\) is divided by \\(x - 3\\)?",
+      "opts": ["18", "\\(-12\\)", "0", "3"],
+      "why": "Here \\(a = 3\\), so \\(P(3) = 27 - 12 + 3 = 18\\). Using \\(-3\\) instead gives \\(-27 + 12 + 3 = -12\\), which is the sign mistake of using the wrong value for \\(a\\).",
+      "clue": "Divide by \\(x - 3\\), so put \\(x = 3\\) into \\(P(x)\\)."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which of these is a factor of \\(P(x) = x^{3} - 7x + 6\\)?",
+      "opts": ["\\(x - 1\\)", "\\(x + 1\\)", "\\(x - 3\\)", "\\(x + 2\\)"],
+      "why": "\\(P(1) = 1 - 7 + 6 = 0\\), so \\(x - 1\\) is a factor. The tempting \\(x + 1\\) needs \\(P(-1) = 0\\), but \\(P(-1) = -1 + 7 + 6 = 12\\). Also \\(P(3) = 12\\) and \\(P(-2) = 12\\), so the other two are not factors.",
+      "clue": "A factor \\(x - a\\) needs \\(P(a) = 0\\), so test each value of \\(a\\)."
+    }
+  },
+  "mat-graphs-polynomials": {
+    "title": "Graphs of polynomials",
+    "card": [
+      "Each factor of a polynomial gives an x-intercept. For \\(y = (x + 1)(x - 3)\\), the intercepts are at \\(x = -1\\) and \\(x = 3\\).",
+      "A single root is from a factor that appears once. The curve crosses the x-axis there.",
+      "A double root is from a factor that is squared, such as \\((x - 2)^{2}\\). The curve touches the x-axis there and turns back.",
+      "The y-intercept is found by putting \\(x = 0\\). For a positive leading coefficient, the right end of the curve goes up."
+    ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "The curve \\(y = (x + 1)(x - 2)^{2}\\). It crosses the x-axis at \\(x = -1\\), touches it at \\(x = 2\\), and crosses the y-axis at \\(y = 4\\).",
+        "x": {"min": -3, "max": 4, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -10, "max": 10, "label": "\\(y\\)", "step": 2, "nums": false},
+        "items": [
+          {"type": "fn", "id": "f", "expr": "(x + 1)(x - 2)^{2}", "domain": [-1.5, 3.3]},
+          {"type": "point", "at": [-1, 0], "on": ["f"], "is": "x-intercept", "label": "\\(-1\\)", "pos": "above-left"},
+          {"type": "point", "at": [2, 0], "on": ["f"], "is": "x-intercept", "label": "\\(2\\)", "pos": "below"},
+          {"type": "point", "at": [0, 4], "on": ["f"], "is": "y-intercept", "label": "\\(4\\)", "pos": "above"}
+        ]
+      }
+    },
+    "remember": "A single root crosses the axis. A double root touches it and turns back.",
+    "a": {
+      "q": "The curve \\(y = (x - 4)^{2}(x + 1)\\) meets the x-axis at \\(x = 4\\). What does the curve do there?",
+      "opts": ["Touches the axis and turns back", "Crosses the axis", "Stops at the axis", "Crosses the axis twice"],
+      "why": "The factor \\((x - 4)\\) is squared, so \\(x = 4\\) is a double root and the curve touches the axis and turns back. At a single root such as \\(x = -1\\), the curve crosses instead.",
+      "clue": "Look at the power on the factor \\((x - 4)\\)."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia sketches \\(y = (x - 1)(x + 3)^{2}\\). Where does her curve cross the y-axis?",
+      "opts": ["\\(y = -9\\)", "\\(y = 9\\)", "\\(y = 3\\)", "\\(y = -3\\)"],
+      "why": "Put \\(x = 0\\): \\((0 - 1)(0 + 3)^{2} = -1 \\times 9 = -9\\). The answer \\(9\\) comes from forgetting the sign of the factor \\((x - 1)\\).",
+      "clue": "Substitute \\(x = 0\\) and keep the sign of each factor."
+    }
+  },
+  "mat-logarithm-2": {
+    "title": "What a logarithm is",
+    "card": [
+      "A logarithm is an index. \\(\\log_{a}(x)\\) is the index that \\(a\\) must be raised to, to give \\(x\\). The number \\(a\\) is called the base.",
+      "Example: \\(2^{3} = 8\\), so \\(\\log_{2} 8 = 3\\). Read it as: 2 to what power gives 8? The answer is 3.",
+      "To work one out, ask the question in words. For \\(\\log_{3} 81\\), ask: 3 to what power gives 81? Since \\(3^{4} = 81\\), \\(\\log_{3} 81 = 4\\).",
+      "Logarithms undo indices. The statements \\(a^{y} = x\\) and \\(\\log_{a}(x) = y\\) say the same thing. The first is index form and the second is logarithmic form, so you can swap between them."
+    ],
+    "remember": "A logarithm is a power: \\(\\log_{a}(x)\\) asks what power of \\(a\\) gives \\(x\\).",
+    "a": {
+      "q": "Find the value of \\(\\log_{5} 25\\).",
+      "opts": ["2", "5", "20", "\\(\\frac{25}{5}\\)"],
+      "why": "\\(5^{2} = 25\\), so 5 must be raised to the power 2. The answer 5 is tempting because it is the base, but the logarithm is the power, not the base.",
+      "clue": "5 to what power gives 25?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Which statement in index form is the same as the logarithm \\(\\log_{4} x = 3\\)?",
+      "opts": ["\\(4^{3} = x\\)", "\\(3^{4} = x\\)", "\\(x^{3} = 4\\)", "\\(4x = 3\\)"],
+      "why": "\\(\\log_{4} x = 3\\) means 4 raised to the index 3 gives \\(x\\), so \\(4^{3} = x\\). The option \\(3^{4} = x\\) swaps the base and the index, which is a common mistake.",
+      "clue": "The base of the logarithm stays the base of the power."
+    }
+  },
+  "mat-solving-exponential-equations-2-nsw": {
+    "title": "Solving exponential equations",
+    "card": [
+      "In an exponential equation the unknown is in the index, such as \\(3^{x} = 20\\). If the two sides cannot be written with the same base, take logs of both sides.",
+      "The log law for a power lets the index come down: \\(\\log (3^{x}) = x \\log 3\\). So \\(3^{x} = 20\\) becomes \\(x \\log 3 = \\log 20\\).",
+      "Divide both sides by \\(\\log 3\\). Then \\(x = \\frac{\\log 20}{\\log 3} \\approx 2.73\\). Check: \\(3^{2.73} \\approx 20\\).",
+      "The graph of \\(y = \\log_{2} x\\) is the graph of \\(y = 2^{x}\\) reflected in the line \\(y = x\\). A point \\((a, b)\\) on one graph matches \\((b, a)\\) on the other."
+    ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The curves \\(y = 2^{x}\\) and \\(y = \\log_{2} x\\), with the dotted line \\(y = x\\) between them. The point \\((3, 8)\\) is on the exponential curve and the point \\((8, 3)\\) is on the log curve, each the reflection of the other in \\(y = x\\).",
+        "x": {"min": -2, "max": 10, "label": "\\(x\\)", "step": 2},
+        "y": {"min": -2, "max": 10, "label": "\\(y\\)", "step": 2},
+        "equal": true,
+        "items": [
+          {"type": "fn", "id": "f", "expr": "2^{x}", "label": "\\(y = 2^{x}\\)", "labelAt": 2, "pos": "left"},
+          {
+            "type": "fn",
+            "id": "g",
+            "expr": "\\log_{2} x",
+            "domain": [0.1, 10],
+            "label": "\\(y = \\log_{2} x\\)",
+            "labelAt": 5,
+            "pos": "below-right"
+          },
+          {
+            "type": "fn",
+            "id": "h",
+            "expr": "x",
+            "label": "\\(y = x\\)",
+            "labelAt": 6.5,
+            "pos": "above-left",
+            "style": "dot"
+          },
+          {"type": "point", "at": [3, 8], "on": ["f"], "label": "\\((3, 8)\\)", "pos": "right"},
+          {"type": "point", "at": [8, 3], "on": ["g"], "label": "\\((8, 3)\\)", "pos": "above-left"}
+        ]
+      }
+    },
+    "remember": "Take logs of both sides, bring the index down, then divide.",
+    "a": {
+      "q": "Which step correctly solves \\(5^{x} = 12\\) after taking logs of both sides?",
+      "opts": [
+        "\\(x = \\frac{\\log 12}{\\log 5}\\)",
+        "\\(x = \\log 12 - \\log 5\\)",
+        "\\(x = \\frac{\\log 5}{\\log 12}\\)",
+        "\\(x = \\frac{12}{5}\\)"
+      ],
+      "why": "Taking logs gives \\(x \\log 5 = \\log 12\\), so divide by \\(\\log 5\\). Subtracting the logs would be the quotient law, which is a different step and gives the log of \\(\\frac{12}{5}\\), not the value of \\(x\\).",
+      "clue": "Bring the index down, then divide by the log that multiplies \\(x\\)."
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia solves \\(4^{x} = 50\\). What is \\(x\\), correct to 2 decimal places?",
+      "opts": ["\\(2.82\\)", "\\(12.50\\)", "\\(0.35\\)", "\\(46.00\\)"],
+      "why": "\\(x = \\frac{\\log 50}{\\log 4} \\approx \\frac{1.699}{0.602} \\approx 2.82\\). The answer \\(0.35\\) comes from dividing the wrong way round, with \\(\\log 4\\) on top.",
+      "clue": "Put \\(\\log 50\\) on top and \\(\\log 4\\) underneath."
+    }
+  },
+  "mat-relations-functions-2": {
+    "title": "Relations and functions",
+    "card": [
+      "A relation links inputs (\\(x\\) values) to outputs (\\(y\\) values). A function is a relation that gives exactly one output for each input.",
+      "Vertical line test: if any vertical line meets a graph more than once, one input has two outputs, so it is not a function.",
+      "Function notation \\(f(x)\\) means the output for input \\(x\\). For \\(f(x) = 2x + 1\\), find \\(f(3)\\) by putting 3 in place of \\(x\\).",
+      "Worked example: \\(f(3) = 2 \\times 3 + 1 = 7\\). So the input 3 gives the output 7, and the graph passes through \\((3, 7)\\)."
+    ],
+    "remember": "A function has one output for each input. \\(f(3)\\) is the output when \\(x = 3\\).",
+    "a": {
+      "q": "Which set of \\((x, y)\\) pairs is NOT a function?",
+      "opts": [
+        "\\((1, 4), (2, 5), (1, 6)\\)",
+        "\\((1, 4), (2, 4), (3, 4)\\)",
+        "\\((1, 2), (2, 4), (3, 6)\\)",
+        "\\((0, 5), (1, 3), (2, 1)\\)"
+      ],
+      "why": "The input 1 gives two outputs, 4 and 6, so this is not a function. In the pairs where every output is 4, each input still has just one output, so that is a function.",
+      "clue": "Look for an input that appears twice with different outputs."
+    },
+    "b": {
+      "d": 3,
+      "q": "Given \\(f(x) = x^{2} - 4x\\), what is \\(f(-1)\\)?",
+      "opts": ["\\(5\\)", "\\(-3\\)", "\\(-5\\)", "\\(3\\)"],
+      "why": "Put \\(-1\\) in for \\(x\\): \\((-1)^{2} - 4 \\times (-1) = 1 + 4 = 5\\). The tempting answer \\(-3\\) comes from treating \\(-4 \\times (-1)\\) as \\(-4\\) and getting \\(1 - 4\\).",
+      "clue": "Square \\(-1\\) first, then deal with the sign of the second term."
+    }
+  },
+  "mat-domain-range-function": {
+    "title": "Domain and range of a function",
+    "card": [
+      ["Domain", "every \\(x\\) value the function allows as an input."],
+      ["Range", "every \\(y\\) value the function produces as an output."],
+      "From a rule: a function such as \\(\\frac{1}{x}\\) cannot divide by zero, so \\(x \\ne 0\\). A function such as \\(\\sqrt{x}\\) needs \\(x \\ge 0\\).",
+      "Worked example: for \\(y = x^{2} + 1\\), any \\(x\\) works, so the domain is all real numbers. As \\(x^{2} \\ge 0\\), we get \\(y \\ge 1\\), so the range is \\(y \\ge 1\\)."
+    ],
+    "remember": "Domain is the allowed inputs, \\(x\\). Range is the outputs produced, \\(y\\).",
+    "a": {
+      "q": "What is the domain of \\(y = \\sqrt{x}\\)?",
+      "opts": ["\\(x \\ge 0\\)", "\\(x > 0\\)", "\\(x \\le 0\\)", "\\(y \\ge 0\\)"],
+      "why": "The square root of a negative number is not a real number, so \\(x\\) must be 0 or more. \\(y \\ge 0\\) is the range, not the domain, since it lists outputs.",
+      "clue": "Which \\(x\\) values give a real square root?"
+    },
+    "b": {
+      "d": 3,
+      "q": "What is the range of \\(y = x^{2} - 3\\)?",
+      "opts": ["\\(y \\ge -3\\)", "\\(y \\ge 3\\)", "\\(y \\le -3\\)", "All real numbers"],
+      "why": "Since \\(x^{2} \\ge 0\\), the smallest output is \\(0 - 3 = -3\\), and outputs grow without limit. All real numbers is the domain, not the range, because \\(y\\) can never go below \\(-3\\).",
+      "clue": "Find the smallest value \\(x^{2}\\) can take."
+    }
+  },
+  "mat-trigonometry-three-dimensions": {
+    "title": "Trigonometry in three dimensions",
+    "card": [
+      "A box or prism has flat faces. Find a right-angled triangle inside it, redraw it flat, and solve it with Pythagoras' theorem or trigonometry.",
+      "Start with the base. A box with a base 3 cm by 4 cm has a base diagonal of \\(\\sqrt{3^{2} + 4^{2}} = 5\\) cm.",
+      "Then use a second triangle that stands upright. Its sides are the base diagonal and the height. If the box is 12 cm high, the longest diagonal is \\(\\sqrt{5^{2} + 12^{2}} = 13\\) cm.",
+      "For the angle between that diagonal and the base, use the same upright triangle: \\(\\tan \\theta = \\frac{12}{5}\\), so \\(\\theta \\approx 67.4^{\\circ}\\)."
+    ],
+    "remember": "Solve one right-angled triangle at a time, and use each answer in the next.",
+    "a": {
+      "q": "A box has a base 9 cm by 12 cm and is 8 cm high. How long is the diagonal from one corner to the opposite corner?",
+      "opts": ["17 cm", "15 cm", "29 cm", "14.4 cm"],
+      "why": "The base diagonal is \\(\\sqrt{9^{2} + 12^{2}} = 15\\) cm. The upright triangle then gives \\(\\sqrt{15^{2} + 8^{2}} = \\sqrt{289} = 17\\) cm. Stopping at 15 cm only finds the diagonal of the base.",
+      "clue": "Find the diagonal of the base first."
+    },
+    "b": {
+      "d": 3,
+      "q": "A storage box in Cairns has a base 5 m by 12 m and is 6 m high. What is the angle between its longest diagonal and the base, to the nearest tenth of a degree?",
+      "opts": ["\\(24.8^{\\circ}\\)", "\\(26.6^{\\circ}\\)", "\\(50.2^{\\circ}\\)", "\\(65.2^{\\circ}\\)"],
+      "why": "The base diagonal is \\(\\sqrt{5^{2} + 12^{2}} = 13\\) m. The angle is in the upright triangle, so \\(\\tan \\theta = \\frac{6}{13}\\) and \\(\\theta \\approx 24.8^{\\circ}\\). Using the 12 m edge in place of the 13 m base diagonal gives about \\(26.6^{\\circ}\\), an angle inside a side face, not the angle to the base.",
+      "clue": "The angle sits at the base end of the diagonal, so the base side is the base diagonal."
+    }
+  },
+  "mat-sine-rule-2": {
+    "title": "The sine rule",
+    "card": [
+      "In triangle ABC, side \\(a\\) is opposite angle \\(A\\), side \\(b\\) is opposite angle \\(B\\), and side \\(c\\) is opposite angle \\(C\\).",
+      "The sine rule says \\(\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C}\\). Each side divided by the sine of its opposite angle gives the same value.",
+      "Use it when you know a side and its opposite angle, plus one more side or angle. To find a side, put the unknown side on top: \\(\\frac{b}{\\sin B} = \\frac{a}{\\sin A}\\).",
+      "Example: \\(A = 30^{\\circ}\\), \\(B = 45^{\\circ}\\) and \\(a = 8\\) cm. Then \\(b = \\frac{8 \\sin 45^{\\circ}}{\\sin 30^{\\circ}} \\approx 11.3\\) cm."
+    ],
+    "remember": "Match each side with the sine of the angle opposite it.",
+    "a": {
+      "q": "In triangle PQR, \\(p = 7\\) cm, \\(P = 35^{\\circ}\\) and \\(Q = 62^{\\circ}\\). Which line gives the length of \\(q\\)?",
+      "opts": [
+        "\\(q = \\frac{7 \\sin 62^{\\circ}}{\\sin 35^{\\circ}}\\)",
+        "\\(q = \\frac{7 \\sin 35^{\\circ}}{\\sin 62^{\\circ}}\\)",
+        "\\(q = 7 \\sin 35^{\\circ} \\times \\sin 62^{\\circ}\\)",
+        "\\(q = \\frac{\\sin 62^{\\circ}}{7 \\sin 35^{\\circ}}\\)"
+      ],
+      "why": "Side \\(p\\) is opposite \\(P\\) and side \\(q\\) is opposite \\(Q\\), so \\(\\frac{q}{\\sin 62^{\\circ}} = \\frac{7}{\\sin 35^{\\circ}}\\). Multiplying both sides by \\(\\sin 62^{\\circ}\\) gives \\(q = \\frac{7 \\sin 62^{\\circ}}{\\sin 35^{\\circ}}\\). The line with \\(\\sin 35^{\\circ}\\) on top pairs each side with the wrong angle.",
+      "clue": "Write the rule with \\(q\\) on top, then multiply both sides."
+    },
+    "b": {
+      "d": 2,
+      "q": "Tom surveys a triangular paddock. One side is 120 m and is opposite an angle of \\(50^{\\circ}\\). The side \\(x\\) is opposite an angle of \\(70^{\\circ}\\). How long is \\(x\\), to the nearest 0.1 m?",
+      "opts": ["147.2 m", "97.8 m", "112.8 m", "156.7 m"],
+      "why": "\\(\\frac{x}{\\sin 70^{\\circ}} = \\frac{120}{\\sin 50^{\\circ}}\\), so \\(x = \\frac{120 \\sin 70^{\\circ}}{\\sin 50^{\\circ}} \\approx 147.2\\) m. Putting \\(\\sin 50^{\\circ}\\) on top gives 97.8 m, which pairs each side with the wrong angle. The answer 156.7 m forgets to multiply by \\(\\sin 70^{\\circ}\\).",
+      "clue": "Pair \\(x\\) with the sine of the angle opposite it."
+    }
+  },
+  "mat-area-any-triangle-2": {
+    "title": "Area of any triangle",
+    "card": [
+      "\\(\\text{Area} = \\frac{1}{2}ab \\sin C\\). Here \\(a\\) and \\(b\\) are two sides, and \\(C\\) is the angle between them.",
+      "It works for any triangle, because \\(a \\sin C\\) acts as the height. You do not need to measure the height.",
+      "Example: sides 8 cm and 5 cm with 30° between them. \\(\\text{Area} = \\frac{1}{2} \\times 8 \\times 5 \\times \\sin 30^{\\circ} = 20 \\times 0.5 = 10 \\text{ cm}^{2}\\).",
+      "To find an angle from a known area, rearrange to \\(\\sin C = \\frac{2 \\times \\text{Area}}{ab}\\) and take the inverse sine."
+    ],
+    "remember": "Half the product of two sides, times the sine of the angle between them.",
+    "a": {
+      "q": "A triangular garden bed has two edges of 9 m and 12 m that meet at an angle of 40°. What is its area, to 1 decimal place?",
+      "opts": [
+        "\\(34.7 \\text{ m}^{2}\\)",
+        "\\(41.4 \\text{ m}^{2}\\)",
+        "\\(69.4 \\text{ m}^{2}\\)",
+        "\\(108.0 \\text{ m}^{2}\\)"
+      ],
+      "why": "\\(\\text{Area} = \\frac{1}{2} \\times 9 \\times 12 \\times \\sin 40^{\\circ}\\), which is \\(54 \\times 0.6428 = 34.7 \\text{ m}^{2}\\). Using \\(\\cos 40^{\\circ}\\) gives \\(41.4 \\text{ m}^{2}\\), which uses the wrong ratio.",
+      "clue": "Half, times both sides, times the sine."
+    },
+    "b": {
+      "d": 3,
+      "q": "A triangle has an area of \\(20 \\text{ cm}^{2}\\). Two sides measure 8 cm and 10 cm, and the angle \\(C\\) between them is acute. What is \\(C\\)?",
+      "opts": ["30°", "14.5°", "60°", "7.2°"],
+      "why": "\\(20 = \\frac{1}{2} \\times 8 \\times 10 \\times \\sin C = 40 \\sin C\\), so \\(\\sin C = 0.5\\) and \\(C = 30^{\\circ}\\). Forgetting the \\(\\frac{1}{2}\\) gives \\(\\sin C = 0.25\\), which is 14.5°.",
+      "clue": "Write the area formula, then solve for \\(\\sin C\\)."
+    }
+  },
+  "mat-surface-area-pyramids-cones": {
+    "title": "Surface area of pyramids and cones",
+    "card": [
+      [
+        "Pyramid",
+        "Its surface area is the area of the base plus the area of all its triangular faces. Find each face separately, then add."
+      ],
+      [
+        "Cone",
+        "Its curved surface has area \\(\\pi r l\\), where \\(r\\) is the radius and \\(l\\) is the slant height. The slant height runs along the surface from the tip to the edge of the base."
+      ],
+      [
+        "Slant height",
+        "The height, the radius and the slant height form a right-angled triangle, with \\(l\\) the longest side. So \\(l^{2} = r^{2} + h^{2}\\)."
+      ],
+      [
+        "Example",
+        "A cone has radius 3 cm and height 4 cm. Then \\(l = \\sqrt{3^{2} + 4^{2}} = 5\\) cm, so the curved surface is \\(\\pi \\times 3 \\times 5 = 15\\pi \\text{ cm}^{2}\\), about 47.1 square centimetres. Add the base \\(\\pi r^{2}\\) for the total."
+      ]
+    ],
+    "remember": "Pyramid: base plus triangles. Cone: curved part \\(\\pi r l\\), with \\(l\\) from Pythagoras.",
+    "a": {
+      "q": "A cone has radius 5 cm and slant height 13 cm. What is the area of its curved surface?",
+      "opts": [
+        "\\(65\\pi \\text{ cm}^{2}\\)",
+        "\\(25\\pi \\text{ cm}^{2}\\)",
+        "\\(90\\pi \\text{ cm}^{2}\\)",
+        "\\(169\\pi \\text{ cm}^{2}\\)"
+      ],
+      "why": "Curved surface is \\(\\pi r l = \\pi \\times 5 \\times 13 = 65\\pi \\text{ cm}^{2}\\). The option \\(90\\pi\\) adds the base \\(25\\pi\\) as well, but the question asks only for the curved surface.",
+      "clue": "Multiply the radius by the slant height, then by \\(\\pi\\)."
+    },
+    "b": {
+      "d": 3,
+      "q": "A cone has radius 6 cm and height 8 cm. What is the area of its curved surface?",
+      "opts": [
+        "\\(60\\pi \\text{ cm}^{2}\\)",
+        "\\(48\\pi \\text{ cm}^{2}\\)",
+        "\\(80\\pi \\text{ cm}^{2}\\)",
+        "\\(36\\pi \\text{ cm}^{2}\\)"
+      ],
+      "why": "The slant height is \\(l = \\sqrt{6^{2} + 8^{2}} = \\sqrt{100} = 10\\) cm, so the curved surface is \\(\\pi \\times 6 \\times 10 = 60\\pi \\text{ cm}^{2}\\). Using the height 8 in place of the slant height gives \\(48\\pi\\), which is the tempting mistake.",
+      "clue": "Find the slant height with Pythagoras first."
+    }
+  },
+  "mat-surface-area-sphere": {
+    "title": "Surface area of a sphere",
+    "card": [
+      "A sphere is a perfectly round solid. Every point on its surface is the same distance, the radius \\(r\\), from its centre.",
+      [
+        "Formula",
+        "The surface area of a sphere is \\(A = 4\\pi r^{2}\\). Square the radius first, then multiply by \\(4\\pi\\)."
+      ],
+      [
+        "Hemisphere",
+        "A hemisphere is half a sphere. Its curved surface is half of \\(4\\pi r^{2}\\), which is \\(2\\pi r^{2}\\)."
+      ],
+      [
+        "Example",
+        "A ball has radius 5 cm. \\(A = 4 \\times \\pi \\times 5^{2} = 100\\pi\\), which is about \\(314.2\\) cm\\(^{2}\\). Area is measured in square units."
+      ]
+    ],
+    "remember": "Sphere: \\(4\\pi r^{2}\\). Curved surface of a hemisphere: half of that.",
+    "a": {
+      "q": "A sphere has radius 3 cm. What is its surface area, to 1 decimal place?",
+      "opts": ["\\(113.1\\) cm\\(^{2}\\)", "\\(37.7\\) cm\\(^{2}\\)", "\\(28.3\\) cm\\(^{2}\\)", "\\(339.3\\) cm\\(^{2}\\)"],
+      "why": "\\(A = 4\\pi r^{2} = 4 \\times \\pi \\times 3^{2} = 36\\pi\\), which is about \\(113.1\\) cm\\(^{2}\\). The option \\(37.7\\) comes from using \\(4\\pi \\times 3\\), which forgets to square the radius.",
+      "clue": "Square the radius before multiplying by \\(4\\pi\\)."
+    },
+    "b": {
+      "d": 3,
+      "q": "A dome on a building is a hemisphere with radius 10 m. Its curved roof is to be painted. What area needs paint, to the nearest square metre?",
+      "opts": ["\\(628\\) m\\(^{2}\\)", "\\(1257\\) m\\(^{2}\\)", "\\(314\\) m\\(^{2}\\)", "\\(942\\) m\\(^{2}\\)"],
+      "why": "The curved surface of a hemisphere is \\(2\\pi r^{2} = 2 \\times \\pi \\times 10^{2} = 200\\pi\\), which is about \\(628\\) m\\(^{2}\\). The option \\(1257\\) is the whole sphere, which is twice as much as the dome's curved roof.",
+      "clue": "Only half of the sphere's surface is the roof."
+    }
+  },
+  "mat-volume-pyramids-cones": {
+    "title": "Volume of pyramids and cones",
+    "card": [
+      "A pyramid has one third of the volume of the prism with the same base and the same height. A cone has one third of the volume of the cylinder with the same base and height.",
+      "For both solids, \\(V = \\frac{1}{3}Ah\\). Here \\(A\\) is the area of the base and \\(h\\) is the perpendicular height, the straight-up height from the base to the tip.",
+      "For a cone, the base is a circle, so \\(A = \\pi r^{2}\\) and \\(V = \\frac{1}{3}\\pi r^{2}h\\). Do not use the slant height for \\(h\\).",
+      [
+        "Example",
+        "A square pyramid has a base of side 6 cm and a height of 10 cm. \\(A = 6 \\times 6 = 36\\), so \\(V = \\frac{1}{3} \\times 36 \\times 10 = 120\\text{ cm}^{3}\\)."
+      ]
+    ],
+    "remember": "Find the base area, multiply by the perpendicular height, then divide by 3.",
+    "a": {
+      "q": "A cone has radius 3 cm and perpendicular height 4 cm. What is its volume, in terms of \\(\\pi\\)?",
+      "opts": [
+        "\\(12\\pi\\text{ cm}^{3}\\)",
+        "\\(36\\pi\\text{ cm}^{3}\\)",
+        "\\(4\\pi\\text{ cm}^{3}\\)",
+        "\\(15\\pi\\text{ cm}^{3}\\)"
+      ],
+      "why": "\\(V = \\frac{1}{3} \\times \\pi \\times 3^{2} \\times 4 = \\frac{1}{3} \\times 36\\pi = 12\\pi\\). The option \\(36\\pi\\text{ cm}^{3}\\) is the volume of the cylinder, because it skips the division by 3.",
+      "clue": "Find the base area first, then take one third."
+    },
+    "b": {
+      "d": 3,
+      "q": "A square pyramid has a base of side 8 cm and a slant height of 5 cm on each triangular face. Its perpendicular height is 3 cm. What is its volume?",
+      "opts": [
+        "\\(64\\text{ cm}^{3}\\)",
+        "\\(\\frac{320}{3}\\text{ cm}^{3}\\)",
+        "\\(192\\text{ cm}^{3}\\)",
+        "\\(320\\text{ cm}^{3}\\)"
+      ],
+      "why": "Use the perpendicular height: \\(V = \\frac{1}{3} \\times 64 \\times 3 = 64\\text{ cm}^{3}\\). Using the slant height 5 instead gives \\(\\frac{1}{3} \\times 64 \\times 5 = \\frac{320}{3}\\), which is the tempting mix-up. The option \\(192\\text{ cm}^{3}\\) skips the division by 3.",
+      "clue": "Which of the two heights goes straight up from the base?"
+    }
+  },
+  "mat-volume-sphere": {
+    "title": "Volume of a sphere",
+    "card": [
+      "The volume of a sphere with radius \\(r\\) is \\(V = \\frac{4}{3}\\pi r^{3}\\). The radius is cubed, not squared, because volume is measured in cubic units.",
+      "Example: a ball has radius 3 cm. \\(V = \\frac{4}{3} \\times \\pi \\times 3^{3}\\), which is \\(\\frac{4}{3} \\times \\pi \\times 27 = 36\\pi\\). That is about \\(113.1\\) \\(\\text{cm}^{3}\\).",
+      "If you are given the diameter, halve it to find the radius before you cube it.",
+      "A hemisphere is half a sphere, so its volume is \\(\\frac{2}{3}\\pi r^{3}\\). For a solid made of parts, such as a cylinder with a hemisphere on top, find each volume and add them."
+    ],
+    "remember": "Sphere volume uses \\(r^{3}\\). Halve a diameter first, and add the volumes of the parts of a combined solid.",
+    "a": {
+      "q": "What is the exact volume of a sphere with radius 6 cm?",
+      "opts": [
+        "\\(288\\pi\\) \\(\\text{cm}^{3}\\)",
+        "\\(144\\pi\\) \\(\\text{cm}^{3}\\)",
+        "\\(48\\pi\\) \\(\\text{cm}^{3}\\)",
+        "\\(864\\pi\\) \\(\\text{cm}^{3}\\)"
+      ],
+      "why": "\\(V = \\frac{4}{3}\\pi \\times 6^{3} = \\frac{4}{3}\\pi \\times 216 = 288\\pi\\). Squaring the radius instead gives \\(\\frac{4}{3}\\pi \\times 36 = 48\\pi\\), which is wrong because volume needs the cube.",
+      "clue": "Cube the radius, then multiply by \\(\\frac{4}{3}\\pi\\)."
+    },
+    "b": {
+      "d": 3,
+      "q": "A toy is a cylinder of radius 3 cm and height 10 cm with a hemisphere of radius 3 cm fixed on top. What is its exact volume?",
+      "opts": [
+        "\\(108\\pi\\) \\(\\text{cm}^{3}\\)",
+        "\\(90\\pi\\) \\(\\text{cm}^{3}\\)",
+        "\\(126\\pi\\) \\(\\text{cm}^{3}\\)",
+        "\\(72\\pi\\) \\(\\text{cm}^{3}\\)"
+      ],
+      "why": "Cylinder: \\(\\pi \\times 3^{2} \\times 10 = 90\\pi\\). Hemisphere: \\(\\frac{2}{3}\\pi \\times 27 = 18\\pi\\). The total is \\(108\\pi\\). Using a whole sphere, \\(36\\pi\\), would give \\(126\\pi\\), but only half a sphere is on top.",
+      "clue": "The top is half a sphere, so halve the sphere volume."
+    }
+  },
+  "mat-congruent-triangles": {
+    "title": "Congruent triangles",
+    "card": [
+      "Congruent figures are exactly the same shape and size. One can be moved onto the other by sliding, turning or flipping it, so matching sides and angles are equal.",
+      ["SSS and SAS", "SSS: all three sides are equal. SAS: two sides and the angle between them are equal."],
+      [
+        "AAS and RHS",
+        "AAS: two angles and a side are equal, with the side in the same place in both triangles. RHS: both have a right angle, and the hypotenuse and one other side are equal."
+      ],
+      [
+        "Not enough",
+        "AAA is not a test: triangles with equal angles can be different sizes. Two sides and an angle that is not between them is not a test either: two different triangles can sometimes fit those measurements."
+      ]
+    ],
+    "remember": "Congruent triangles match in shape and size. Check them with SSS, SAS, AAS or RHS.",
+    "a": {
+      "q": "Triangle ABC has \\(AB = 5\\) cm, \\(BC = 7\\) cm and \\(\\angle B = 40^{\\circ}\\). Triangle PQR has \\(PQ = 5\\) cm, \\(QR = 7\\) cm and \\(\\angle Q = 40^{\\circ}\\). Which test shows they are congruent?",
+      "opts": ["SAS", "SSS", "AAS", "RHS"],
+      "why": "The equal angle is between the two equal sides in each triangle, so the test is SAS. SSS is tempting, but the third side of each triangle is not given.",
+      "clue": "Where does the angle sit compared with the two sides?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Triangle DEF has \\(DE = 6\\) cm, \\(EF = 4\\) cm and \\(\\angle D = 30^{\\circ}\\). Triangle XYZ has \\(XY = 6\\) cm, \\(YZ = 4\\) cm and \\(\\angle X = 30^{\\circ}\\). Are they shown to be congruent?",
+      "opts": [
+        "No, as the angle is not between the two sides",
+        "Yes, by SAS, as two sides and an angle are equal",
+        "Yes, by SSS, as the two given sides are equal",
+        "Yes, by AAS, as an angle and two sides match"
+      ],
+      "why": "The angle at D is formed by sides DE and DF, so it is not between DE and EF. Two sides and an angle that is not between them is not a test, and here two different triangles fit these measurements. SAS is tempting, but it needs the angle between the two given sides.",
+      "clue": "Which two sides meet to form the angle at D?"
+    }
+  },
+  "mat-tests-similar-triangles": {
+    "title": "Tests for similar triangles",
+    "card": [
+      "Similar triangles have the same shape but may differ in size. Matching angles are equal, and matching sides are in the same ratio, called the scale factor.",
+      "AAA: two triangles are similar if their angles are equal. Two pairs of equal angles are enough, as the third pair must then be equal too.",
+      "SSS: all three pairs of matching sides are in the same ratio. SAS: two pairs of sides are in the same ratio, and the angles between those sides are equal.",
+      "RHS: two right-angled triangles are similar if their hypotenuses and one other pair of sides are in the same ratio. For example, sides 3 and 5 against 6 and 10 give a ratio of 2 each time."
+    ],
+    "remember": "To prove two triangles similar, show one test holds: AAA, SSS, SAS or RHS.",
+    "a": {
+      "q": "Triangle ABC has sides 4 cm, 6 cm and 8 cm. Triangle DEF has sides 6 cm, 9 cm and 12 cm. Which statement is correct?",
+      "opts": [
+        "They are similar, as all three side ratios are \\(1.5\\)",
+        "They are similar, as each side is 2 cm longer",
+        "They are not similar, as the sides are different lengths",
+        "They are not similar, as no angles are given"
+      ],
+      "why": "Each ratio is \\(6 \\div 4 = 1.5\\), \\(9 \\div 6 = 1.5\\) and \\(12 \\div 8 = 1.5\\), so the sides are in proportion (SSS). Adding 2 cm to each side is a difference, not a ratio, and it does not hold for the 8 cm side anyway.",
+      "clue": "Divide each side of DEF by the matching side of ABC."
+    },
+    "b": {
+      "d": 3,
+      "q": "In triangle PQR, \\(PQ = 5\\) cm, \\(PR = 8\\) cm and angle \\(P = 50^{\\circ}\\). In triangle XYZ, \\(XY = 10\\) cm, \\(XZ = 16\\) cm and angle \\(X = 50^{\\circ}\\). Why are they similar?",
+      "opts": [
+        "Two sides are in the ratio 2 and the angle between is equal",
+        "All three angles are known to be equal",
+        "All three sides are known to be in the same ratio",
+        "They have a right angle and a matching hypotenuse"
+      ],
+      "why": "Both \\(10 \\div 5\\) and \\(16 \\div 8\\) equal 2, and the equal angle of \\(50^{\\circ}\\) lies between those sides, so it is SAS. We are not told the third sides or the other angles, so SSS and AAA cannot be used yet.",
+      "clue": "Check where the 50 degree angle sits compared with the two sides."
+    }
+  },
+  "mat-angles-polygons": {
+    "title": "Angles of polygons",
+    "card": [
+      "A polygon with \\(n\\) sides can be split into \\(n - 2\\) triangles by drawing diagonals from one vertex. Each triangle has angles adding to \\(180^{\\circ}\\).",
+      [
+        "Interior",
+        "The interior angles add to \\((n - 2) \\times 180^{\\circ}\\). For a hexagon, \\(n = 6\\), so the sum is \\(4 \\times 180^{\\circ} = 720^{\\circ}\\)."
+      ],
+      [
+        "Exterior",
+        "An exterior angle is formed by extending one side. The exterior angles of any convex polygon add to \\(360^{\\circ}\\), whatever the number of sides."
+      ],
+      [
+        "Regular",
+        "In a regular polygon all angles are equal. Each exterior angle is \\(360^{\\circ} \\div n\\), and the interior angle is \\(180^{\\circ}\\) minus the exterior angle."
+      ]
+    ],
+    "remember": "Interior angles add to \\((n - 2) \\times 180^{\\circ}\\). Exterior angles add to \\(360^{\\circ}\\).",
+    "a": {
+      "q": "What is the sum of the interior angles of a pentagon?",
+      "opts": ["\\(540^{\\circ}\\)", "\\(720^{\\circ}\\)", "\\(900^{\\circ}\\)", "\\(360^{\\circ}\\)"],
+      "why": "A pentagon has \\(n = 5\\), so the sum is \\(3 \\times 180^{\\circ} = 540^{\\circ}\\). Using \\(4 \\times 180^{\\circ} = 720^{\\circ}\\) is the tempting mistake of subtracting only 1 instead of 2.",
+      "clue": "A pentagon splits into three triangles."
+    },
+    "b": {
+      "d": 3,
+      "q": "Each exterior angle of a regular polygon is \\(24^{\\circ}\\). How many sides does the polygon have, and what is each interior angle?",
+      "opts": [
+        "15 sides, interior angle \\(156^{\\circ}\\)",
+        "15 sides, interior angle \\(24^{\\circ}\\)",
+        "16 sides, interior angle \\(156^{\\circ}\\)",
+        "12 sides, interior angle \\(168^{\\circ}\\)"
+      ],
+      "why": "The number of sides is \\(360 \\div 24 = 15\\). Each interior angle is \\(180^{\\circ} - 24^{\\circ} = 156^{\\circ}\\). Giving \\(24^{\\circ}\\) as the interior angle confuses it with the exterior angle.",
+      "clue": "Exterior angles add to a fixed total, shared equally."
+    }
+  },
+  "mat-proving-properties-quadrilaterals": {
+    "title": "Proving properties of quadrilaterals",
+    "card": [
+      "A parallelogram has both pairs of opposite sides parallel. In parallelogram ABCD, AB is parallel to DC and AD is parallel to BC. Diagonal AC splits it into triangles ABC and CDA.",
+      "In triangles ABC and CDA: angle BAC equals angle DCA (alternate angles, AB parallel to DC). Angle BCA equals angle DAC (alternate angles, AD parallel to BC). AC is a common side. So the triangles are congruent (AAS).",
+      "Matching sides of congruent triangles are equal. So \\(AB = CD\\) and \\(AD = BC\\) (matching sides of congruent triangles). The opposite sides of a parallelogram are equal.",
+      "The diagonals meet at M. In triangles AMB and CMD: angle MAB equals angle MCD and angle MBA equals angle MDC (both alternate angles, AB parallel to DC), and \\(AB = CD\\) (proved above). So the triangles are congruent (AAS), giving \\(AM = CM\\) and \\(BM = DM\\): the diagonals bisect each other."
+    ],
+    "remember": "Congruent triangles inside a parallelogram explain why its opposite sides are equal and its diagonals bisect each other.",
+    "a": {
+      "q": "In the proof that angle BAC equals angle DCA in parallelogram ABCD, which reason is given?",
+      "opts": [
+        "Alternate angles, AB parallel to DC",
+        "Co-interior angles, AB parallel to DC",
+        "Vertically opposite angles at A and C",
+        "Angles in a triangle add to \\(180^{\\circ}\\)"
+      ],
+      "why": "AC cuts the parallel lines AB and DC, and the two angles sit on opposite sides of AC, so they are alternate angles and are equal. Co-interior angles add to \\(180^{\\circ}\\), so they would not give equal angles.",
+      "clue": "AC crosses two parallel lines. Which angle pair is equal?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Triangles ABC and CDA in a parallelogram have two pairs of equal angles and share side AC. Which test shows they are congruent?",
+      "opts": ["AAS", "SSS", "SAS", "RHS"],
+      "why": "There are two pairs of equal angles and one equal side, so the test is AAS. SSS needs three pairs of sides and SAS needs two pairs of sides. RHS needs a right angle.",
+      "clue": "Count the equal angles and the equal sides."
+    }
+  },
+  "mat-similar-triangle-proofs": {
+    "title": "Similar triangle proofs",
+    "card": [
+      "Two triangles are similar if they have the same shape but not always the same size. Matching angles are equal and matching sides are in the same ratio.",
+      "To prove similarity, give a reason for each fact. Use a test: two pairs of equal angles (AA), three pairs of sides in the same ratio, or two pairs of sides in the same ratio with equal angles between them.",
+      "Write the triangles with matching vertices in the same order. Then matching sides are in proportion, and you can use that to find a length.",
+      "Example: in \\(\\triangle ABC\\), \\(D\\) is on \\(AB\\), \\(E\\) is on \\(AC\\) and \\(DE \\parallel BC\\). Angle \\(A\\) is shared, and angle \\(ADE =\\) angle \\(ABC\\) (corresponding angles, parallel lines). So \\(\\triangle ADE \\sim \\triangle ABC\\) (AA), and \\(\\frac{AD}{AB} = \\frac{DE}{BC}\\)."
+    ],
+    "remember": "Give a reason for equal angles or ratios, name the test, then use matching sides in proportion.",
+    "a": {
+      "q": "Triangles \\(PQR\\) and \\(XYZ\\) have \\(\\angle P = \\angle X = 40^{\\circ}\\) and \\(\\angle Q = \\angle Y = 65^{\\circ}\\). Which test shows they are similar?",
+      "opts": [
+        "Two pairs of equal angles (AA)",
+        "Three pairs of equal sides (SSS)",
+        "Right angle, hypotenuse, side (RHS)",
+        "Two sides and the included angle equal (SAS)"
+      ],
+      "why": "Two pairs of angles are given as equal, so the AA test proves the triangles similar. The other tests need side lengths, and none are given, so they cannot be used.",
+      "clue": "Only angles are given. Which test uses only angles?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In \\(\\triangle ABC\\), \\(D\\) is on \\(AB\\) and \\(E\\) is on \\(AC\\), with \\(DE \\parallel BC\\). \\(AD = 4\\) cm, \\(AB = 10\\) cm and \\(BC = 15\\) cm. What is \\(DE\\)?",
+      "opts": ["6 cm", "10 cm", "9 cm", "37.5 cm"],
+      "why": "\\(\\triangle ADE \\sim \\triangle ABC\\) (AA), so \\(\\frac{DE}{BC} = \\frac{AD}{AB} = \\frac{4}{10}\\), and \\(DE = \\frac{4}{10} \\times 15 = 6\\) cm. Using \\(DB = 6\\) in place of \\(AB\\) gives \\(\\frac{4}{6} \\times 15 = 10\\), but \\(DB\\) is not a side of either triangle. Using \\(\\frac{6}{10}\\) gives 9, and turning the ratio upside down gives \\(\\frac{10}{4} \\times 15 = 37.5\\).",
+      "clue": "Match \\(DE\\) with \\(BC\\), and \\(AD\\) with the whole side \\(AB\\)."
+    }
+  },
+  "mat-eulerian-trails-circuits": {
+    "title": "Eulerian trails and circuits",
+    "card": [
+      [
+        "Eulerian trail",
+        "a walk along the edges of a network that uses every edge exactly once. Vertices can be visited more than once."
+      ],
+      ["Eulerian circuit", "an Eulerian trail that ends at the vertex where it started."],
+      "A connected network has an Eulerian trail when 0 or 2 of its vertices have odd degree, and no trail otherwise. Königsberg's 7 bridges joined 4 land areas, all of odd degree, so no walk could cross each bridge once.",
+      "With 0 odd vertices there is a circuit, and it can start at any vertex. With 2 odd vertices the trail must start at one odd vertex and end at the other."
+    ],
+    "remember": "In a connected network, count the odd vertices: 0 or 2 means a trail exists, and any other number means none.",
+    "a": {
+      "q": "A connected network has vertices with degrees 2, 3, 3, 4 and 4. Which statement is true?",
+      "opts": [
+        "It has an Eulerian trail starting at a degree 3 vertex",
+        "It has an Eulerian circuit starting at any vertex",
+        "It has an Eulerian trail starting at a degree 4 vertex",
+        "It has no Eulerian trail, as it has two odd vertices"
+      ],
+      "why": "Only the two degree 3 vertices are odd, so a trail exists, and it must start at one of them and end at the other. That rules out starting at a degree 4 vertex, and there is no circuit, which needs 0 odd vertices. The 'no Eulerian trail' option is wrong because 2 odd vertices allow a trail.",
+      "clue": "Count the vertices with odd degree first."
+    },
+    "b": {
+      "d": 3,
+      "q": "A town has 4 islands joined by 5 bridges. The degrees of the islands are 3, 3, 3 and 1. Can a walk cross every bridge exactly once?",
+      "opts": [
+        "No, because four islands have odd degree",
+        "Yes, because the degrees add to 10",
+        "Yes, because there are more bridges than islands",
+        "No, because one island has degree 1"
+      ],
+      "why": "All four islands have odd degree. A trail needs 0 or 2 odd vertices, so no such walk exists. A vertex of degree 1 is not a problem on its own: it can be the start or end of a trail.",
+      "clue": "Count how many degrees are odd, then compare with 0 or 2."
+    }
+  },
+  "mat-statistical-inquiry-process": {
+    "title": "The statistical inquiry process",
+    "card": [
+      [
+        "Pose",
+        "Start with a clear question that data can answer, such as \"How many hours do Year 9 students at our school sleep on school nights?\""
+      ],
+      [
+        "Plan",
+        "Decide what data you need, who you will collect it from and how, such as a short survey with one question about hours of sleep."
+      ],
+      ["Collect", "Gather the data by following the plan and record it carefully, in a table or spreadsheet."],
+      [
+        "Analyse and report",
+        "Analyse the data with a graph and with measures such as the mean or median. Then report a conclusion that answers the original question."
+      ]
+    ],
+    "remember": "A statistical inquiry runs from a question, to a plan, to data, to analysis, to a conclusion that answers the question.",
+    "a": {
+      "q": "Mia wants to find out how long students at her school spend travelling to school. She writes a survey form and decides which students to ask. Which step is she doing?",
+      "opts": [
+        "Planning how to collect the data",
+        "Posing the question to investigate",
+        "Analysing the data that was collected",
+        "Reporting a conclusion from the data"
+      ],
+      "why": "Writing the survey form and deciding who to ask is planning how to collect the data. Posing the question comes earlier, when Mia decides what she wants to find out. She has no answers yet, so she cannot analyse or report.",
+      "clue": "She has not collected any answers yet."
+    },
+    "b": {
+      "d": 2,
+      "q": "Tom asks \"Do students at my school walk or ride to school?\" He collects the answers and draws a graph. What should he do next to finish the inquiry?",
+      "opts": [
+        "Write a conclusion that answers his question",
+        "Change the question to match the graph",
+        "Collect the data again with a new plan",
+        "Pose a second question about sport"
+      ],
+      "why": "The graph is the analysis. The inquiry ends with a conclusion that answers the original question, such as whether most students walk or ride. Collecting again or changing the question is not needed.",
+      "clue": "The last step goes back to the question he first asked."
+    }
+  },
+  "mat-samples-bias": {
+    "title": "Samples and bias",
+    "card": [
+      [
+        "Census",
+        "A census collects data from every member of the population. It is accurate but often costly and slow."
+      ],
+      [
+        "Sample",
+        "A sample collects data from only some of the population. It is quicker and cheaper, but its results are only an estimate of the whole population."
+      ],
+      "A sample is biased if it favours some members of the population over others. A sample of volunteers or friends may be biased, because those people may differ from everyone else.",
+      "A random sample gives every member an equal chance of being chosen, which reduces bias. A larger sample usually gives a more reliable estimate."
+    ],
+    "remember": "A good sample is chosen at random and is large enough, so it can stand in for the population.",
+    "a": {
+      "q": "Which sampling method is most likely to reduce bias?",
+      "opts": [
+        "Choosing students by drawing names from a full class list",
+        "Asking the students who sit near the front of the class",
+        "Asking only the students who offer to answer the survey",
+        "Asking the friends of the person who writes the survey"
+      ],
+      "why": "Drawing names from a full list gives every student an equal chance of being chosen. The other methods favour some students, such as those who volunteer, so they may not represent the group.",
+      "clue": "Which method gives everyone an equal chance?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya wants to know how Year 10 students at her school travel to school. She asks 15 members of her own netball team. Why might her results be unreliable?",
+      "opts": [
+        "Her team was not picked at random, so it may not be typical",
+        "Her team was picked at random, so it may give odd results",
+        "She asked everyone in Year 10, so it may cost too much",
+        "She asked too many students, so it may be hard to analyse"
+      ],
+      "why": "Priya chose her own team, not a random group, and team members may travel differently from other students, so the sample may be biased. It is not a census, because she did not ask everyone in Year 10, and 15 students is not too many.",
+      "clue": "Did every Year 10 student have an equal chance of being asked?"
+    }
+  },
+  "mat-judging-statistics-media": {
+    "title": "Judging statistics in the media",
+    "card": [
+      "A news report may quote a study. Before you trust it, ask who was asked and how they were chosen.",
+      "Ask how many people were in the study. A very small sample gives a less reliable result than a large one.",
+      "Ask who paid for the study. A group that gains from a result may have a reason to present it in its favour.",
+      "Ask whether the claim goes further than the data. A link between two things does not prove one causes the other, and a result about one group may not hold for everyone."
+    ],
+    "remember": "Check who was asked, how many, who paid, and whether the claim fits the data.",
+    "a": {
+      "q": "A headline says 'Most Australians love our juice'. It is based on 12 customers at one shop. Which check does this fail most clearly?",
+      "opts": [
+        "The sample is small and from one place",
+        "The study was paid for by a government",
+        "The sample was chosen at random",
+        "The data was collected over a week"
+      ],
+      "why": "Twelve customers at one shop is a very small group and cannot stand for most Australians. The claim goes further than the data. Random choice would be a strength, not a problem.",
+      "clue": "Count the people, then think about where they came from."
+    },
+    "b": {
+      "d": 3,
+      "q": "A company that makes Stride shoes pays for a survey of 2000 adults. People in it who wear Stride shoes run faster on average. Which conclusion does this data support?",
+      "opts": [
+        "Stride wearers in the survey ran faster on average",
+        "In the survey, Stride shoes made people run faster",
+        "On average, any adult who buys Stride shoes runs faster",
+        "In the survey, fast runners chose Stride shoes for speed"
+      ],
+      "why": "The survey shows only a link among the people asked, and other things, such as fitness, could explain it. The tempting option says the shoes made people run faster, which claims a cause the data cannot show. The other two also claim more than the data: a result for every adult, or why runners chose the shoes.",
+      "clue": "Does a link between two things prove one causes the other?"
+    }
+  },
+  "mat-venn-diagrams-nsw": {
+    "title": "Venn diagrams",
+    "card": [
+      "A Venn diagram has overlapping circles inside a box. Each circle holds the outcomes of one event. The box holds every outcome in the sample space, and the region outside every circle is neither event.",
+      "\\(A\\) and \\(B\\) is the overlap, in both circles. \\(A\\) or \\(B\\) is everything in at least one circle, with the overlap counted once. Not \\(A\\) is everything outside circle \\(A\\).",
+      "Fill the overlap first, then subtract it from each circle's total to get the only parts. Example: of 30 students, 12 play netball, 9 play soccer and 4 play both. Netball only is \\(12 - 4 = 8\\) and soccer only is \\(9 - 4 = 5\\).",
+      "Neither is \\(30 - (8 + 4 + 5) = 13\\). A probability is the count in a region over the total, so \\(P(\\text{neither}) = \\frac{13}{30}\\)."
+    ],
+    "remember": "Count the overlap once. Probability is the count in a region over the total.",
+    "a": {
+      "q": "In a group of 32 students, 15 study French, 11 study Japanese and 5 study both. How many study neither language?",
+      "opts": ["11", "6", "16", "21"],
+      "why": "French only is \\(15 - 5 = 10\\) and Japanese only is \\(11 - 5 = 6\\). At least one language is \\(10 + 5 + 6 = 21\\), so neither is \\(32 - 21 = 11\\). Subtracting \\(15 + 11 = 26\\) gives 6, which counts the 5 in both twice.",
+      "clue": "Find the only parts first, and count each student once."
+    },
+    "b": {
+      "d": 3,
+      "q": "Of 40 people at a Dubbo gym, 18 use the pool, 15 use the weights room and 6 use both. A person is chosen at random. What is the probability they use the pool or the weights room?",
+      "opts": ["\\(\\frac{27}{40}\\)", "\\(\\frac{33}{40}\\)", "\\(\\frac{21}{40}\\)", "\\(\\frac{13}{40}\\)"],
+      "why": "Pool only is \\(18 - 6 = 12\\) and weights only is \\(15 - 6 = 9\\). Pool or weights is \\(12 + 6 + 9 = 27\\) people, so the probability is \\(\\frac{27}{40}\\). Adding \\(18 + 15 = 33\\) counts the 6 in both twice.",
+      "clue": "Or includes the overlap, but only once."
+    }
+  },
+  "mat-two-way-tables-2-nsw": {
+    "title": "Two-way tables",
+    "card": [
+      "A two-way table records two categories at once. One category runs along the rows and the other down the columns. Each cell counts the outcomes that fit both.",
+      "Totals are written at the end of each row and column. The grand total, in the bottom right corner, is the number of all outcomes.",
+      "To find a probability, take the count you want and divide by the grand total. A row or column total gives the probability of one category on its own.",
+      "Example: 50 students, 20 Year 9 and 30 Year 10. 15 of the Year 9 students walk to school. P(Year 9 and walks) \\(= \\frac{15}{50} = \\frac{3}{10}\\)."
+    ],
+    "remember": "Read the cell for both categories, or the total for one, and divide by the grand total.",
+    "a": {
+      "q": "A survey of 60 people asked about pets. 24 own a dog, 18 own a cat and 18 own neither. None of them own both. What is the probability a person owns a cat?",
+      "opts": ["\\(\\frac{3}{10}\\)", "\\(\\frac{18}{42}\\)", "\\(\\frac{7}{10}\\)", "\\(\\frac{18}{24}\\)"],
+      "why": "The cat total is 18 out of a grand total of 60, so \\(\\frac{18}{60} = \\frac{3}{10}\\). Using 42 as the total leaves out the people with neither pet.",
+      "clue": "Divide by the grand total, not by another column."
+    },
+    "b": {
+      "d": 2,
+      "q": "At a Bathurst school, 100 students were asked how they travel. 35 of the 60 girls take the bus, and 25 of the 40 boys take the bus. What is the probability a student chosen at random is a boy who takes the bus?",
+      "opts": ["\\(\\frac{1}{4}\\)", "\\(\\frac{5}{8}\\)", "\\(\\frac{3}{5}\\)", "\\(\\frac{2}{5}\\)"],
+      "why": "The cell for boys who take the bus is 25, out of a grand total of 100, so \\(\\frac{25}{100} = \\frac{1}{4}\\). Using 40, the number of boys, gives \\(\\frac{5}{8}\\), which is a different question.",
+      "clue": "Use the cell for both categories and the grand total."
+    }
+  },
+  "mat-conditional-probability-3": {
+    "title": "Language of conditional probability",
+    "card": [
+      "A conditional probability is the chance of one event when we already know another event has happened. We write \\(P(A \\mid B)\\) and say \"the probability of \\(A\\) given \\(B\\)\".",
+      "The event after the bar is the condition: the event we know has happened. The event before the bar is the one whose chance we find.",
+      "Words such as given, if and knowing that introduce the condition. In \"if \\(B\\), then \\(A\\)\", the word then introduces \\(A\\), the event whose chance we find.",
+      "The condition shrinks the outcomes we count. Example: given a die shows an even number, the outcomes are 2, 4 and 6, so the chance of a 6 is \\(\\frac{1}{3}\\), not \\(\\frac{1}{6}\\)."
+    ],
+    "remember": "The condition is what we already know. It goes after the bar in \\(P(A \\mid B)\\).",
+    "a": {
+      "q": "Look at \\(P(\\text{rain} \\mid \\text{cloudy})\\). Which event do we already know has happened?",
+      "opts": ["Cloudy", "Rain", "Rain and cloudy", "Not cloudy"],
+      "why": "The event after the bar is the condition, so cloudy is already known. Rain is the event whose chance we are finding.",
+      "clue": "Look at the event after the bar."
+    },
+    "b": {
+      "d": 3,
+      "q": "At a high school in Newcastle, some students walk to school and some own a bike. Which statement describes \\(P(\\text{owns a bike} \\mid \\text{walks to school})\\)?",
+      "opts": [
+        "Chance a student who walks owns a bike",
+        "Chance a student who owns a bike walks",
+        "Chance a student walks and owns a bike",
+        "Chance a student walks or owns a bike"
+      ],
+      "why": "The condition is after the bar, so we already know the student walks, and we ask about owning a bike. The option about a student who owns a bike walking swaps the two events: that would be \\(P(\\text{walks} \\mid \\text{owns a bike})\\).",
+      "clue": "Which event do we already know about?"
+    }
+  },
+  "mat-mutually-exclusive-events": {
+    "title": "Mutually exclusive events",
+    "card": [
+      "\\(P(A \\text{ or } B)\\) is the chance that \\(A\\) happens, or \\(B\\) happens, or both. The rule is \\(P(A \\text{ or } B) = P(A) + P(B) - P(A \\text{ and } B)\\).",
+      "We subtract \\(P(A \\text{ and } B)\\) because outcomes in both \\(A\\) and \\(B\\) are counted twice when we add \\(P(A)\\) and \\(P(B)\\).",
+      "Mutually exclusive events cannot happen together, so \\(P(A \\text{ and } B) = 0\\). Then \\(P(A \\text{ or } B) = P(A) + P(B)\\).",
+      "Example: \\(P(A) = 0.5\\), \\(P(B) = 0.4\\) and \\(P(A \\text{ and } B) = 0.2\\). Then \\(P(A \\text{ or } B) = 0.5 + 0.4 - 0.2 = 0.7\\)."
+    ],
+    "remember": "Add the two chances, then take away the overlap so it is counted once.",
+    "a": {
+      "q": "Suppose \\(P(A) = 0.6\\), \\(P(B) = 0.3\\) and \\(P(A \\text{ and } B) = 0.1\\). Find \\(P(A \\text{ or } B)\\).",
+      "opts": ["0.8", "0.9", "0.7", "0.18"],
+      "why": "\\(P(A \\text{ or } B) = 0.6 + 0.3 - 0.1 = 0.8\\). Adding only \\(P(A)\\) and \\(P(B)\\) gives 0.9, which counts the overlap twice.",
+      "clue": "Take away the overlap once."
+    },
+    "b": {
+      "d": 3,
+      "q": "At a school in Parramatta, the chance a student plays netball is 0.35 and the chance a student plays chess is 0.15. No student does both. What is the chance a student plays netball or chess?",
+      "opts": ["0.50", "0.20", "0.0525", "0.4475"],
+      "why": "No student does both, so playing netball and playing chess are mutually exclusive, and the chance of doing both is 0. So the chance of netball or chess is \\(0.35 + 0.15 = 0.50\\). The answer 0.0525 multiplies the two chances, but the rule adds them.",
+      "clue": "If no one does both, what is the overlap?"
+    }
   }
 };

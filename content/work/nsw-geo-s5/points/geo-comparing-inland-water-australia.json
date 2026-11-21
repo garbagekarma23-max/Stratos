@@ -24,8 +24,409 @@
    0.227
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:48Z write: failed the content check, writing again",
+  "2026-11-20T12:35:50Z write: done",
+  "2026-11-20T12:44:55Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (b wording, card fact)",
+  "2026-11-20T13:44:56Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.02255,
+  "check": 0.01544,
+  "fix": 0.02505,
+  "recheck": 0.01427
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The new point compares the Murray-Darling with an overseas shared river such as the Mekong, which no bank point covers, and the Murray-Darling cards only describe the Australian basin.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The right option is the only one with a hedged 'can'. Every distractor uses an absolute ('only', 'only', 'no effect'), so a student could pick the answer by spotting the qualifier without knowing the idea.\n- Card, fact: 'Countries must cooperate by agreement' oversimplifies Mekong management. The 1995 Mekong Agreement (Mekong River Commission) covers only Laos, Thailand, Cambodia and Vietnam. China and Myanmar are only dialogue partners, and China builds upstream dams without a binding agreement. Better: 'countries need to cooperate, but not all have signed the same agreement'.",
+ "rejected": {
+  "title": "Comparing inland water in Australia and another country",
+  "card": [
+   "The Murray-Darling Basin in Australia is shared by several states and territories. Its water is used for farms, towns, industry and the environment.",
+   "The Mekong River runs through six countries: China, Myanmar, Laos, Thailand, Cambodia and Vietnam. Millions of people rely on it for fishing, farming and water.",
+   "Both rivers face competing uses. Dams and water taken upstream can change how much water, and how much sediment, reaches the people and wildlife downstream.",
+   "The management differs. The Murray-Darling is managed within one country, under Australian laws. The Mekong crosses national borders, so countries must cooperate by agreement."
+  ],
+  "remember": "Both rivers have competing uses. They differ in who must agree on how to manage them.",
+  "a": {
+   "q": "What is a main difference between managing the Mekong and the Murray-Darling?",
+   "opts": [
+    "The Mekong crosses countries, so agreements are needed",
+    "The Mekong has no dams, so it needs no rules",
+    "The Murray-Darling is not used by farms or towns",
+    "The Murray-Darling is shared by several countries"
+   ],
+   "why": "The Mekong flows through several countries, so they must cooperate by agreement. The Murray-Darling is within Australia, so Australian laws apply. It is shared by states, not countries.",
+   "clue": "Think about borders."
+  },
+  "b": {
+   "d": 3,
+   "q": "A new dam on the upper Mekong traps sediment, and fishers in Cambodia downstream catch fewer fish. What does this suggest about the Murray-Darling?",
+   "opts": [
+    "Murray-Darling dams can also cut flows to users downstream",
+    "Murray-Darling dams have no effect, as it is in one country",
+    "Murray-Darling dams only affect users who live upstream",
+    "Murray-Darling dams cause harm only across state borders"
+   ],
+   "why": "Dams and water taken upstream can change the water and sediment that reach people downstream, on either river. Being within one country changes who manages the river, not the way water flows, so the Murray-Darling is not free of these effects.",
+   "clue": "Does the way water flows depend on a border?"
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "image",
+    "brief": "A map of the Mekong River basin showing the river's course through China, Myanmar, Laos, Thailand, Cambodia and Vietnam, with country names labelled.",
+    "why": "It shows that the river is shared by several countries."
+   }
+  ]
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The right option is the only one with a hedged 'can'. Every distractor uses an absolute ('only', 'only', 'no effect'), so a student could pick the answer by spotting the qualifier without knowing the idea.",
+    "Card, fact: 'Countries must cooperate by agreement' oversimplifies Mekong management. The 1995 Mekong Agreement (Mekong River Commission) covers only Laos, Thailand, Cambodia and Vietnam. China and Myanmar are only dialogue partners, and China builds upstream dams without a binding agreement. Better: 'countries need to cooperate, but not all have signed the same agreement'."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Comparing inland water in Australia and another country",
+     "card": [
+      "The Murray-Darling Basin in Australia is shared by several states and territories. Its water is used for farms, towns, industry and the environment.",
+      "The Mekong River runs through six countries: China, Myanmar, Laos, Thailand, Cambodia and Vietnam. Millions of people rely on it for fishing, farming and water.",
+      "Both rivers face competing uses. Dams and water taken upstream can change how much water, and how much sediment, reaches the people and wildlife downstream.",
+      "The management differs. The Murray-Darling is managed within one country, under Australian laws. The Mekong crosses national borders, so countries must cooperate by agreement."
+     ],
+     "remember": "Both rivers have competing uses. They differ in who must agree on how to manage them.",
+     "a": {
+      "q": "What is a main difference between managing the Mekong and the Murray-Darling?",
+      "opts": [
+       "The Mekong crosses countries, so agreements are needed",
+       "The Mekong has no dams, so it needs no rules",
+       "The Murray-Darling is not used by farms or towns",
+       "The Murray-Darling is shared by several countries"
+      ],
+      "why": "The Mekong flows through several countries, so they must cooperate by agreement. The Murray-Darling is within Australia, so Australian laws apply. Both rivers have competing uses.",
+      "clue": "Think about borders."
+     },
+     "b": {
+      "d": 3,
+      "q": "A new dam is built on the upper Mekong. Fishers in Cambodia report fewer fish. Which statement best fits the comparison?",
+      "opts": [
+       "Upstream use affects downstream users on both rivers",
+       "Only rivers within one country have upstream effects",
+       "Fishers in Cambodia have no claim because of the border",
+       "The effect is unique to the Mekong, not the Murray-Darling"
+      ],
+      "why": "Water use upstream can change flows and sediment downstream, which can happen on both rivers. Borders do not stop these effects, so the other options are wrong.",
+      "clue": "Both rivers have users downstream of dams and water taking."
+     },
+     "wants": [
+      {
+       "at": "card 2",
+       "kind": "image",
+       "brief": "A map of the Mekong River basin showing the river's course through China, Myanmar, Laos, Thailand, Cambodia and Vietnam, with country names labelled.",
+       "why": "It shows that the river is shared by several countries."
+      }
+     ]
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "The Mekong crosses countries, so agreements are needed",
+      "also_right": []
+     },
+     "b": {
+      "best": "Upstream use affects downstream users on both rivers",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue 'Both rivers have users downstream of dams and water taking' nearly restates the right option. It is also the only option that mentions both rivers, so a student can match the wording without knowing the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts check out: the six Mekong countries are right, and so is the comparison of management within one country and across borders. The only problem is that question b's clue nearly restates the right answer."
+    },
+    "flags": [
+     "Question b, other: The clue 'Both rivers have users downstream of dams and water taking' nearly restates the right option. It is also the only option that mentions both rivers, so a student can match the wording without knowing the idea."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Comparing inland water in Australia and another country",
+     "card": [
+      "The Murray-Darling Basin in Australia is shared by several states and territories. Its water is used for farms, towns, industry and the environment.",
+      "The Mekong River runs through six countries: China, Myanmar, Laos, Thailand, Cambodia and Vietnam. Millions of people rely on it for fishing, farming and water.",
+      "Both rivers face competing uses. Dams and water taken upstream can change how much water, and how much sediment, reaches the people and wildlife downstream.",
+      "The management differs. The Murray-Darling is managed within one country, under Australian laws. The Mekong crosses national borders, so countries must cooperate by agreement."
+     ],
+     "remember": "Both rivers have competing uses. They differ in who must agree on how to manage them.",
+     "a": {
+      "q": "What is a main difference between managing the Mekong and the Murray-Darling?",
+      "opts": [
+       "The Mekong crosses countries, so agreements are needed",
+       "The Mekong has no dams, so it needs no rules",
+       "The Murray-Darling is not used by farms or towns",
+       "The Murray-Darling is shared by several countries"
+      ],
+      "why": "The Mekong flows through several countries, so they must cooperate by agreement. The Murray-Darling is within Australia, so Australian laws apply. It is shared by states, not countries.",
+      "clue": "Think about borders."
+     },
+     "b": {
+      "d": 3,
+      "q": "A new dam on the upper Mekong traps sediment, and fishers in Cambodia downstream catch fewer fish. What does this suggest about the Murray-Darling?",
+      "opts": [
+       "Murray-Darling dams can also cut flows to users downstream",
+       "Murray-Darling dams have no effect, as it is in one country",
+       "Murray-Darling dams only affect users who live upstream",
+       "Murray-Darling dams cause harm only across state borders"
+      ],
+      "why": "Dams and water taken upstream can change the water and sediment that reach people downstream, on either river. Being within one country changes who manages the river, not the way water flows, so the Murray-Darling is not free of these effects.",
+      "clue": "Does the way water flows depend on a border?"
+     },
+     "wants": [
+      {
+       "at": "card 2",
+       "kind": "image",
+       "brief": "A map of the Mekong River basin showing the river's course through China, Myanmar, Laos, Thailand, Cambodia and Vietnam, with country names labelled.",
+       "why": "It shows that the river is shared by several countries."
+      }
+     ]
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "The Mekong crosses countries, so agreements are needed",
+       "also_right": []
+      },
+      "b": {
+       "best": "Murray-Darling dams can also cut flows to users downstream",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The right option is the only one with a hedged 'can'. Every distractor uses an absolute ('only', 'only', 'no effect'), so a student could pick the answer by spotting the qualifier without knowing the idea."
+       },
+       {
+        "part": "card",
+        "kind": "fact",
+        "detail": "'Countries must cooperate by agreement' oversimplifies Mekong management. The 1995 Mekong Agreement (Mekong River Commission) covers only Laos, Thailand, Cambodia and Vietnam. China and Myanmar are only dialogue partners, and China builds upstream dams without a binding agreement. Better: 'countries need to cooperate, but not all have signed the same agreement'."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both answers are correct. In question b the right option is the only one without an absolute word, which gives it away, and the card overstates how far all six Mekong countries manage the river by agreement."
+     },
+     "flags": [
+      "Question b, wording: The right option is the only one with a hedged 'can'. Every distractor uses an absolute ('only', 'only', 'no effect'), so a student could pick the answer by spotting the qualifier without knowing the idea.",
+      "Card, fact: 'Countries must cooperate by agreement' oversimplifies Mekong management. The 1995 Mekong Agreement (Mekong River Commission) covers only Laos, Thailand, Cambodia and Vietnam. China and Myanmar are only dialogue partners, and China builds upstream dams without a binding agreement. Better: 'countries need to cooperate, but not all have signed the same agreement'."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:56Z",
+   "step": "write",
+   "version": {
+    "title": "Comparing inland water in Australia and another country",
+    "card": [
+     "The Murray-Darling Basin in Australia is shared by several states and territories. Its water is used for farms, towns, industry and the environment.",
+     "The Mekong River runs through six countries: China, Myanmar, Laos, Thailand, Cambodia and Vietnam. Millions of people rely on it for fishing, farming and water.",
+     "Both rivers face competing uses. Dams and water taken upstream can change how much water, and how much sediment, reaches the people and wildlife downstream.",
+     "The management differs. The Murray-Darling is managed within one country, under Australian laws. The Mekong crosses national borders, so countries need to cooperate, but not all six have signed the same agreement."
+    ],
+    "remember": "Both rivers have competing uses. They differ in who has to agree on how to manage them.",
+    "a": {
+     "q": "What is a main difference between managing the Mekong and the Murray-Darling?",
+     "opts": [
+      "The Mekong crosses borders, so countries need to cooperate",
+      "The Mekong has no dams, so countries need no shared rules",
+      "The Murray-Darling is not used by farms, towns or industry",
+      "The Murray-Darling is shared by several separate countries"
+     ],
+     "why": "The Mekong flows through six countries, so they need to cooperate, though not all of them have signed the same agreement. The Murray-Darling is within Australia, so Australian laws apply. It is shared by states, not countries.",
+     "clue": "Think about borders."
+    },
+    "b": {
+     "d": 3,
+     "q": "A new dam on the upper Mekong traps sediment, and fishers in Cambodia downstream catch fewer fish. What does this suggest about the Murray-Darling?",
+     "opts": [
+      "Its upstream dams also change what reaches users downstream",
+      "Being in one country keeps its downstream users unaffected",
+      "Its dams change the river near each dam, not downstream",
+      "Its dams change how much water flows, not how much sediment"
+     ],
+     "why": "On both rivers, dams and water taken upstream can change how much water and sediment reach people and wildlife downstream. Being within one country changes who manages the river, not the way water flows, so users downstream on the Murray-Darling are affected too.",
+     "clue": "Does the way water flows depend on a border?"
+    },
+    "wants": [
+     {
+      "at": "card 2",
+      "kind": "image",
+      "brief": "A map of the Mekong River basin showing the river's course through China, Myanmar, Laos, Thailand, Cambodia and Vietnam, with country names labelled.",
+      "why": "It shows that the river is shared by several countries."
+     }
+    ]
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "The Mekong crosses borders, so countries need to cooperate",
+     "also_right": []
+    },
+    "b": {
+     "best": "Its upstream dams also change what reaches users downstream",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Comparing inland water in Australia and another country",
+  "card": [
+   "The Murray-Darling Basin in Australia is shared by several states and territories. Its water is used for farms, towns, industry and the environment.",
+   "The Mekong River runs through six countries: China, Myanmar, Laos, Thailand, Cambodia and Vietnam. Millions of people rely on it for fishing, farming and water.",
+   "Both rivers face competing uses. Dams and water taken upstream can change how much water, and how much sediment, reaches the people and wildlife downstream.",
+   "The management differs. The Murray-Darling is managed within one country, under Australian laws. The Mekong crosses national borders, so countries need to cooperate, but not all six have signed the same agreement."
+  ],
+  "remember": "Both rivers have competing uses. They differ in who has to agree on how to manage them.",
+  "a": {
+   "q": "What is a main difference between managing the Mekong and the Murray-Darling?",
+   "opts": [
+    "The Mekong crosses borders, so countries need to cooperate",
+    "The Mekong has no dams, so countries need no shared rules",
+    "The Murray-Darling is not used by farms, towns or industry",
+    "The Murray-Darling is shared by several separate countries"
+   ],
+   "why": "The Mekong flows through six countries, so they need to cooperate, though not all of them have signed the same agreement. The Murray-Darling is within Australia, so Australian laws apply. It is shared by states, not countries.",
+   "clue": "Think about borders."
+  },
+  "b": {
+   "d": 3,
+   "q": "A new dam on the upper Mekong traps sediment, and fishers in Cambodia downstream catch fewer fish. What does this suggest about the Murray-Darling?",
+   "opts": [
+    "Its upstream dams also change what reaches users downstream",
+    "Being in one country keeps its downstream users unaffected",
+    "Its dams change the river near each dam, not downstream",
+    "Its dams change how much water flows, not how much sediment"
+   ],
+   "why": "On both rivers, dams and water taken upstream can change how much water and sediment reach people and wildlife downstream. Being within one country changes who manages the river, not the way water flows, so users downstream on the Murray-Darling are affected too.",
+   "clue": "Does the way water flows depend on a border?"
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "image",
+    "brief": "A map of the Mekong River basin showing the river's course through China, Myanmar, Laos, Thailand, Cambodia and Vietnam, with country names labelled.",
+    "why": "It shows that the river is shared by several countries."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The Mekong crosses borders, so countries need to cooperate",
+   "also_right": []
+  },
+  "b": {
+   "best": "Its upstream dams also change what reaches users downstream",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Comparing inland water in Australia and another country",
+  "card": [
+   "The Murray-Darling Basin in Australia is shared by several states and territories. Its water is used for farms, towns, industry and the environment.",
+   "The Mekong River runs through six countries: China, Myanmar, Laos, Thailand, Cambodia and Vietnam. Millions of people rely on it for fishing, farming and water.",
+   "Both rivers face competing uses. Dams and water taken upstream can change how much water, and how much sediment, reaches the people and wildlife downstream.",
+   "The management differs. The Murray-Darling is managed within one country, under Australian laws. The Mekong crosses national borders, so countries need to cooperate, but not all six have signed the same agreement."
+  ],
+  "remember": "Both rivers have competing uses. They differ in who has to agree on how to manage them.",
+  "a": {
+   "q": "What is a main difference between managing the Mekong and the Murray-Darling?",
+   "opts": [
+    "The Mekong crosses borders, so countries need to cooperate",
+    "The Mekong has no dams, so countries need no shared rules",
+    "The Murray-Darling is not used by farms, towns or industry",
+    "The Murray-Darling is shared by several separate countries"
+   ],
+   "why": "The Mekong flows through six countries, so they need to cooperate, though not all of them have signed the same agreement. The Murray-Darling is within Australia, so Australian laws apply. It is shared by states, not countries.",
+   "clue": "Think about borders."
+  },
+  "b": {
+   "d": 3,
+   "q": "A new dam on the upper Mekong traps sediment, and fishers in Cambodia downstream catch fewer fish. What does this suggest about the Murray-Darling?",
+   "opts": [
+    "Its upstream dams also change what reaches users downstream",
+    "Being in one country keeps its downstream users unaffected",
+    "Its dams change the river near each dam, not downstream",
+    "Its dams change how much water flows, not how much sediment"
+   ],
+   "why": "On both rivers, dams and water taken upstream can change how much water and sediment reach people and wildlife downstream. Being within one country changes who manages the river, not the way water flows, so users downstream on the Murray-Darling are affected too.",
+   "clue": "Does the way water flows depend on a border?"
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "image",
+    "brief": "A map of the Mekong River basin showing the river's course through China, Myanmar, Laos, Thailand, Cambodia and Vietnam, with country names labelled.",
+    "why": "It shows that the river is shared by several countries."
+   }
+  ]
+ },
+ "checked_by": "claude-code"
 }

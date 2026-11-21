@@ -24,8 +24,113 @@
    0.309
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: done",
+  "2026-11-20T12:35:55Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "write": 0.01296,
+  "check": 0.01091
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches building a two-way table with totals and reading probabilities from it at Stage 5 depth: the closest, the Year 10 conditional-probability card, focuses on conditional probability, and the others are Year 8, Year 12 or Victorian spreadsheet cards that teach different ideas or depths.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Two-way tables",
+  "card": [
+   "A two-way table records two categories at once. One category runs along the rows and the other down the columns. Each cell counts the outcomes that fit both.",
+   "Totals are written at the end of each row and column. The grand total, in the bottom right corner, is the number of all outcomes.",
+   "To find a probability, take the count you want and divide by the grand total. A row or column total gives the probability of one category on its own.",
+   "Example: 50 students, 20 Year 9 and 30 Year 10. 15 of the Year 9 students walk to school. P(Year 9 and walks) \\(= \\frac{15}{50} = \\frac{3}{10}\\)."
+  ],
+  "remember": "Read the cell for both categories, or the total for one, and divide by the grand total.",
+  "a": {
+   "q": "A survey of 60 people asked about pets. 24 own a dog, 18 own a cat and 18 own neither. None of them own both. What is the probability a person owns a cat?",
+   "opts": [
+    "\\(\\frac{3}{10}\\)",
+    "\\(\\frac{18}{42}\\)",
+    "\\(\\frac{7}{10}\\)",
+    "\\(\\frac{18}{24}\\)"
+   ],
+   "why": "The cat total is 18 out of a grand total of 60, so \\(\\frac{18}{60} = \\frac{3}{10}\\). Using 42 as the total leaves out the people with neither pet.",
+   "clue": "Divide by the grand total, not by another column."
+  },
+  "b": {
+   "d": 2,
+   "q": "At a Bathurst school, 100 students were asked how they travel. 35 of the 60 girls take the bus, and 25 of the 40 boys take the bus. What is the probability a student chosen at random is a boy who takes the bus?",
+   "opts": [
+    "\\(\\frac{1}{4}\\)",
+    "\\(\\frac{5}{8}\\)",
+    "\\(\\frac{3}{5}\\)",
+    "\\(\\frac{2}{5}\\)"
+   ],
+   "why": "The cell for boys who take the bus is 25, out of a grand total of 100, so \\(\\frac{25}{100} = \\frac{1}{4}\\). Using 40, the number of boys, gives \\(\\frac{5}{8}\\), which is a different question.",
+   "clue": "Use the cell for both categories and the grand total."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(\\frac{3}{10}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(\\frac{1}{4}\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out: a is 18/60 = 3/10 and b is 25/100 = 1/4, and the explanations agree with the card."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Two-way tables",
+  "card": [
+   "A two-way table records two categories at once. One category runs along the rows and the other down the columns. Each cell counts the outcomes that fit both.",
+   "Totals are written at the end of each row and column. The grand total, in the bottom right corner, is the number of all outcomes.",
+   "To find a probability, take the count you want and divide by the grand total. A row or column total gives the probability of one category on its own.",
+   "Example: 50 students, 20 Year 9 and 30 Year 10. 15 of the Year 9 students walk to school. P(Year 9 and walks) \\(= \\frac{15}{50} = \\frac{3}{10}\\)."
+  ],
+  "remember": "Read the cell for both categories, or the total for one, and divide by the grand total.",
+  "a": {
+   "q": "A survey of 60 people asked about pets. 24 own a dog, 18 own a cat and 18 own neither. None of them own both. What is the probability a person owns a cat?",
+   "opts": [
+    "\\(\\frac{3}{10}\\)",
+    "\\(\\frac{18}{42}\\)",
+    "\\(\\frac{7}{10}\\)",
+    "\\(\\frac{18}{24}\\)"
+   ],
+   "why": "The cat total is 18 out of a grand total of 60, so \\(\\frac{18}{60} = \\frac{3}{10}\\). Using 42 as the total leaves out the people with neither pet.",
+   "clue": "Divide by the grand total, not by another column."
+  },
+  "b": {
+   "d": 2,
+   "q": "At a Bathurst school, 100 students were asked how they travel. 35 of the 60 girls take the bus, and 25 of the 40 boys take the bus. What is the probability a student chosen at random is a boy who takes the bus?",
+   "opts": [
+    "\\(\\frac{1}{4}\\)",
+    "\\(\\frac{5}{8}\\)",
+    "\\(\\frac{3}{5}\\)",
+    "\\(\\frac{2}{5}\\)"
+   ],
+   "why": "The cell for boys who take the bus is 25, out of a grand total of 100, so \\(\\frac{25}{100} = \\frac{1}{4}\\). Using 40, the number of boys, gives \\(\\frac{5}{8}\\), which is a different question.",
+   "clue": "Use the cell for both categories and the grand total."
+  }
+ },
+ "cleared_by": "checker"
 }

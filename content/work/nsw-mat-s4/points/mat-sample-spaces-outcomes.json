@@ -24,8 +24,131 @@
    0.288
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:54Z write: done",
+  "2026-11-20T12:35:53Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "write": 0.00664,
+  "check": 0.00721
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-sample-spaces-probability-2, covers the sample space but also teaches events and the probability formula, which goes beyond this point's narrower focus on sample spaces and equally likely outcomes, so a new point fits better.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Sample spaces and outcomes",
+  "card": [
+   [
+    "Outcome",
+    "An outcome is one possible result of an activity. Rolling a die can give the outcome 1, 2, 3, 4, 5 or 6."
+   ],
+   [
+    "Sample space",
+    "The sample space is the list of all possible outcomes. For a coin toss it is heads, tails. For a die it is 1, 2, 3, 4, 5, 6."
+   ],
+   [
+    "Equally likely",
+    "Outcomes are equally likely when each has the same chance of happening. The six faces of a fair die are equally likely."
+   ],
+   "Outcomes are not always equally likely. A spinner with one large section and two small sections has three outcomes, but the large section is more likely."
+  ],
+  "remember": "The sample space lists every possible outcome. Equally likely means each has the same chance.",
+  "a": {
+   "q": "A bag holds one red, one blue and one green counter. You take one counter without looking. What is the sample space?",
+   "opts": [
+    "Red, blue, green",
+    "Red, blue",
+    "Red, blue, green, red",
+    "Red or blue or green, twice"
+   ],
+   "why": "The sample space lists every possible outcome once. Here the three outcomes are red, blue and green. Listing only two colours leaves out an outcome, so it is not the whole sample space.",
+   "clue": "List every colour you could possibly take out."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia spins a spinner with three sections: red takes half the circle, blue takes a quarter and green takes a quarter. Which statement is correct?",
+   "opts": [
+    "The sample space has 3 outcomes, not equally likely",
+    "The sample space has 3 outcomes, all equally likely",
+    "The sample space has 2 outcomes, equally likely",
+    "The sample space has 4 outcomes, all equally likely"
+   ],
+   "why": "The spinner can land on red, blue or green, so there are 3 outcomes. Red covers more of the circle, so it has a greater chance than blue or green. Having 3 outcomes does not make them equally likely.",
+   "clue": "Look at how much of the circle each colour covers."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Red, blue, green",
+   "also_right": []
+  },
+  "b": {
+   "best": "The sample space has 3 outcomes, not equally likely",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Sample spaces and outcomes",
+  "card": [
+   [
+    "Outcome",
+    "An outcome is one possible result of an activity. Rolling a die can give the outcome 1, 2, 3, 4, 5 or 6."
+   ],
+   [
+    "Sample space",
+    "The sample space is the list of all possible outcomes. For a coin toss it is heads, tails. For a die it is 1, 2, 3, 4, 5, 6."
+   ],
+   [
+    "Equally likely",
+    "Outcomes are equally likely when each has the same chance of happening. The six faces of a fair die are equally likely."
+   ],
+   "Outcomes are not always equally likely. A spinner with one large section and two small sections has three outcomes, but the large section is more likely."
+  ],
+  "remember": "The sample space lists every possible outcome. Equally likely means each has the same chance.",
+  "a": {
+   "q": "A bag holds one red, one blue and one green counter. You take one counter without looking. What is the sample space?",
+   "opts": [
+    "Red, blue, green",
+    "Red, blue",
+    "Red, blue, green, red",
+    "Red or blue or green, twice"
+   ],
+   "why": "The sample space lists every possible outcome once. Here the three outcomes are red, blue and green. Listing only two colours leaves out an outcome, so it is not the whole sample space.",
+   "clue": "List every colour you could possibly take out."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia spins a spinner with three sections: red takes half the circle, blue takes a quarter and green takes a quarter. Which statement is correct?",
+   "opts": [
+    "The sample space has 3 outcomes, not equally likely",
+    "The sample space has 3 outcomes, all equally likely",
+    "The sample space has 2 outcomes, equally likely",
+    "The sample space has 4 outcomes, all equally likely"
+   ],
+   "why": "The spinner can land on red, blue or green, so there are 3 outcomes. Red covers more of the circle, so it has a greater chance than blue or green. Having 3 outcomes does not make them equally likely.",
+   "clue": "Look at how much of the circle each colour covers."
+  }
+ },
+ "cleared_by": "checker"
 }

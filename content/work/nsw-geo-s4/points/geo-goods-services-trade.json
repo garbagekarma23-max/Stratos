@@ -24,8 +24,248 @@
    0.216
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 may adapt ecb-goods-services, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:45Z confirm: Claude Opus 5.5 may adapt ecb-goods-services, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt ecb-goods-services (3 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting ecb-goods-services on the next run",
+  "2026-11-20T14:12:37Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00046,
+  "confirm": 0.01074,
+  "adapt": 0.00581,
+  "check": 0.0067
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "ecb-goods-services",
+  "changes": [
+   "Reframe the examples around trade between places, such as exports of wheat or education services, instead of a shop sale to a customer.",
+   "Add that goods and services are bought and sold between places, including overseas, so the card links to the Stage 4 trade topic.",
+   "Replace the haircut and bike shop questions with trade-based questions suited to Geography, such as identifying a good or service sold to another country.",
+   "Add streaming and tourism as service examples, in line with the brief."
+  ],
+  "sure": "medium",
+  "reason": "The ecb-goods-services card teaches the same goods and services definition at a suitable Year 7 depth, but its business-shop framing needs changing to fit trade in Geography.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "ecb-goods-services",
+  "changes": [
+   "Swap the examples for trade ones the brief names, such as food and phones as goods and tourism, education and streaming as services.",
+   "Move the bike shop question from Townsville, Queensland to a New South Wales town.",
+   "Add a short line linking the idea to trade, noting that both goods and services are bought and sold between places."
+  ],
+  "sure": "medium",
+  "reason": "The Economics and Business card teaches the same goods-versus-services idea at a Year 7 depth, but its examples and place need changing to suit a NSW Geography trade chapter.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "ecb-goods-services",
+  "changes": [
+   "Use the brief's examples: food and phones as goods, and tourism, education and streaming as services.",
+   "Add a short line saying both goods and services are bought and sold between places in trade.",
+   "Move question b from Townsville, Queensland to a New South Wales setting, and keep both questions reworded."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card1",
+   "card2",
+   "card3",
+   "card4",
+   "a.q",
+   "a.opt1",
+   "a.opt2",
+   "a.opt3",
+   "a.opt4",
+   "a.why",
+   "a.clue",
+   "b.q",
+   "b.opt1",
+   "b.opt2",
+   "b.opt3",
+   "b.opt4"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same goods and services idea at a Years 7 and 8 depth, but it is framed around shops and customers, while this Geography chapter needs it tied to trade with the brief's examples.",
+   "item": "191321ce5ca560b9",
+   "result": "decided",
+   "saved": {
+    "id": "geo-goods-services-trade",
+    "title": "Goods and services in trade",
+    "brief": "04a400d3ed4f",
+    "shortlist": [
+     [
+      "geo-trade-links-places",
+      0.327
+     ],
+     [
+      "ecb-goods-services",
+      0.31
+     ],
+     [
+      "geo-access-services",
+      0.249
+     ],
+     [
+      "geo-services-across-borders",
+      0.236
+     ],
+     [
+      "geo-changing-trade-links",
+      0.216
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00046,
+     "confirm": 0.01074
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "ecb-goods-services",
+     "changes": [
+      "Reframe the examples around trade between places, such as exports of wheat or education services, instead of a shop sale to a customer.",
+      "Add that goods and services are bought and sold between places, including overseas, so the card links to the Stage 4 trade topic.",
+      "Replace the haircut and bike shop questions with trade-based questions suited to Geography, such as identifying a good or service sold to another country.",
+      "Add streaming and tourism as service examples, in line with the brief."
+     ],
+     "sure": "medium",
+     "reason": "The ecb-goods-services card teaches the same goods and services definition at a suitable Year 7 depth, but its business-shop framing needs changing to fit trade in Geography.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "ecb-goods-services",
+     "changes": [
+      "Swap the examples for trade ones the brief names, such as food and phones as goods and tourism, education and streaming as services.",
+      "Move the bike shop question from Townsville, Queensland to a New South Wales town.",
+      "Add a short line linking the idea to trade, noting that both goods and services are bought and sold between places."
+     ],
+     "sure": "medium",
+     "reason": "The Economics and Business card teaches the same goods-versus-services idea at a Year 7 depth, but its examples and place need changing to suit a NSW Geography trade chapter.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "d6f35dc397b82e56"
+  }
+ ],
+ "draft": {
+  "title": "Goods and services",
+  "card": [
+   [
+    "Goods",
+    "things you can touch and own, such as food or a phone. Once bought, the good belongs to the customer."
+   ],
+   [
+    "Services",
+    "work done for people, such as tourism, education or streaming. The customer gets the result but does not take home a physical item."
+   ],
+   "Both goods and services are bought and sold between places in trade. A country can export phones, and it can also sell education to overseas students.",
+   "To tell them apart, ask: does the customer leave owning a physical item, or did someone do work for them? Streaming a film is a service, even though you watch it on a phone."
+  ],
+  "remember": "A good is a thing you own. A service is work done for you.",
+  "a": {
+   "q": "Why is watching a film on a streaming service a service and not a good?",
+   "opts": [
+    "It is work done for the customer, not an item they own",
+    "It costs less than the physical items most shops sell",
+    "It is sold by a large company and not a small business",
+    "It is paid for before the customer uses it"
+   ],
+   "why": "Streaming is work done for the customer, and they do not take home a physical item to own. Price, business size and when it is paid for do not decide whether something is a good or a service.",
+   "clue": "Does the customer end up owning a thing they can touch?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a bike shop in Parramatta, NSW. She sells new bikes and also tunes up bikes by adjusting the gears and brakes. Which is correct?",
+   "opts": [
+    "The bikes are goods and the tune-ups are a service",
+    "The bikes are a service and the tune-ups are goods",
+    "Both are services, as staff help customers choose",
+    "Both are goods, as tune-ups are done on a bike"
+   ],
+   "why": "A new bike is a physical item the customer owns, so it is a good. A tune-up is work done on a bike the customer already owns, so it is a service. Being done on a physical item does not turn a tune-up into a good.",
+   "clue": "What does the customer own after each sale that they did not own before?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It is work done for the customer, not an item they own",
+   "also_right": []
+  },
+  "b": {
+   "best": "The bikes are goods and the tune-ups are a service",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Goods and services",
+  "card": [
+   [
+    "Goods",
+    "things you can touch and own, such as food or a phone. Once bought, the good belongs to the customer."
+   ],
+   [
+    "Services",
+    "work done for people, such as tourism, education or streaming. The customer gets the result but does not take home a physical item."
+   ],
+   "Both goods and services are bought and sold between places in trade. A country can export phones, and it can also sell education to overseas students.",
+   "To tell them apart, ask: does the customer leave owning a physical item, or did someone do work for them? Streaming a film is a service, even though you watch it on a phone."
+  ],
+  "remember": "A good is a thing you own. A service is work done for you.",
+  "a": {
+   "q": "Why is watching a film on a streaming service a service and not a good?",
+   "opts": [
+    "It is work done for the customer, not an item they own",
+    "It costs less than the physical items most shops sell",
+    "It is sold by a large company and not a small business",
+    "It is paid for before the customer uses it"
+   ],
+   "why": "Streaming is work done for the customer, and they do not take home a physical item to own. Price, business size and when it is paid for do not decide whether something is a good or a service.",
+   "clue": "Does the customer end up owning a thing they can touch?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a bike shop in Parramatta, NSW. She sells new bikes and also tunes up bikes by adjusting the gears and brakes. Which is correct?",
+   "opts": [
+    "The bikes are goods and the tune-ups are a service",
+    "The bikes are a service and the tune-ups are goods",
+    "Both are services, as staff help customers choose",
+    "Both are goods, as tune-ups are done on a bike"
+   ],
+   "why": "A new bike is a physical item the customer owns, so it is a good. A tune-up is work done on a bike the customer already owns, so it is a service. Being done on a physical item does not turn a tune-up into a good.",
+   "clue": "What does the customer own after each sale that they did not own before?"
+  }
+ }
 }

@@ -20,8 +20,235 @@
    0.273
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 may adapt eng-author-s-style, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:44Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:48Z write: failed the content check, writing again",
+  "2026-11-20T12:44:54Z write: done (still fails the content check)",
+  "2026-11-20T13:11:47Z check: flagged",
+  "2026-11-20T13:17:56Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:34:14Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "confirm": 0.00872,
+  "write": 0.0142,
+  "check": 0.01357,
+  "fix": 0.02246,
+  "recheck": 0.00907
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "eng-author-s-style",
+  "changes": [
+   "Extend the point from authors to film directors, since the brief covers both writers and film directors and the card speaks only of authors and texts.",
+   "Add repeated subjects as a kind of pattern, since the brief names subjects and the card lists only words, sentence lengths, devices and structure.",
+   "Add an example of a film director's recognisable style, such as a recurring subject or visual technique across several films, so the card suits film as well as writing."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea of a style as a pattern repeated across works at the right depth, but it needs small changes to cover film directors and repeated subjects.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point (eng-author-s-style) defines style as a pattern in one author's word, sentence and device choices, mostly within a text, but it does not teach a signature style recognisable across a body of work, including film directors and repeated subjects, so it is a related but different idea.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "A signature style",
+  "card": [
+   "A signature style is a way of writing or filmmaking that you can recognise across many of a creator's works. It is a pattern, not a single choice in one text.",
+   "The pattern can come from repeated subjects, such as lonely teenagers. It can also come from repeated structures, images or techniques, such as endings that circle back to the opening.",
+   "Imagine a director who often shoots scenes in warm orange light, uses long silent pauses, and tells stories about families who drift apart. Seeing these features again and again across her films is what makes her style her own.",
+   "To describe a signature style, name the feature, show it appears in more than one work, and say what effect it has on the viewer or reader."
+  ],
+  "remember": "A signature style is a pattern of features that repeats across a creator's works.",
+  "a": {
+   "q": "Which description best shows a signature style?",
+   "opts": [
+    "A novelist ends most books with a letter and writes of migration",
+    "A novelist uses one simile in a single chapter of one book",
+    "A novelist writes one book that is set in a city",
+    "A novelist writes one book that has a happy ending"
+   ],
+   "why": "A signature style is a pattern that repeats across works. The first option names a repeated structure and a repeated subject. The simile option is tempting because it is a technique, but a feature used once in one text is not a pattern.",
+   "clue": "Look for features that come back in more than one work."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jo watches three films by director Ravi Nair. Each is set in a fishing town, opens with a shot of an empty boat, and follows a character who is leaving home. Which statement about Ravi Nair's style is best supported?",
+   "opts": [
+    "The repeated setting, opening image and subject form a style",
+    "The films share a style only because they are about fishing",
+    "The empty boat shows his style, but only in the first film",
+    "The films share a style because they came out in one year"
+   ],
+   "why": "The three films repeat a setting, an opening image and a subject, so the pattern is recognisable across his work. The fishing option is tempting, but one shared topic is only part of the pattern and it leaves out the repeated image and structure.",
+   "clue": "Count how many features repeat across the three films."
+  }
+ },
+ "redone": true,
+ "local": [
+  "eng-signature-stylea option is 64 characters: A novelist ends most books with a letter and writes of migration"
+ ],
+ "check": {
+  "a": {
+   "best": "A novelist ends most books with a letter and writes of migration",
+   "also_right": []
+  },
+  "b": {
+   "best": "The repeated setting, opening image and subject form a style",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 'The first option names a repeated structure and a repeated subject', but options are shown in random order (here the right option is third), so the why can point students to the wrong option. Name the option by its content instead."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one with a plural qualifier ('most books'). Every distractor says 'one book' or 'a single chapter', so a student can pick it by spotting the odd word out without understanding signature style. Consider a distractor that also spans several works but lacks a shared feature."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are sound, but why (a) refers to 'the first option', which is wrong once options are shuffled. In question a, the right option is the only one not limited to one book, which gives it away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) says 'The first option names a repeated structure and a repeated subject', but options are shown in random order (here the right option is third), so the why can point students to the wrong option. Name the option by its content instead.",
+  "Question a, wording: The right option is the only one with a plural qualifier ('most books'). Every distractor says 'one book' or 'a single chapter', so a student can pick it by spotting the odd word out without understanding signature style. Consider a distractor that also spans several works but lacks a shared feature.",
+  "Content check: eng-signature-stylea option is 64 characters: A novelist ends most books with a letter and writes of migration"
+ ],
+ "proposal": {
+  "title": "A signature style",
+  "card": [
+   "A signature style is a way of writing or filmmaking that you can recognise across many of a creator's works. It is a pattern across works, not a choice made in one text.",
+   "The pattern can come from repeated subjects, such as lonely teenagers. It can also come from repeated structures, images or techniques, such as endings that circle back to the opening.",
+   "Imagine a director who often shoots scenes in warm orange light, uses long silent pauses, and tells stories about families who drift apart. Seeing these features again and again across her films is what makes her style her own.",
+   "To describe a signature style, name the feature, show it appears in more than one work, and say what effect it has on the viewer or reader."
+  ],
+  "remember": "A signature style is a pattern of features that repeats across a creator's works.",
+  "a": {
+   "q": "Which description best shows a signature style?",
+   "opts": [
+    "A novelist's books all open with a storm at sea",
+    "A novelist uses a storm at sea once, in one of her books",
+    "A novelist's books each use new settings, forms and subjects",
+    "A novelist's one book opens and closes with a storm at sea"
+   ],
+   "why": "A signature style is a feature that repeats across works, so books that all open with a storm at sea show one. The book that opens and closes with a storm is tempting, but the repeat stays inside one text. Books that each try something new span many works but share no feature.",
+   "clue": "Look for a feature that comes back in more than one work."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jo watches three films by director Ravi Nair. Each is set in a fishing town, opens with a shot of an empty boat, and follows a character who is leaving home. Which statement about Ravi Nair's style is best supported?",
+   "opts": [
+    "The repeated setting, opening image and subject form a style",
+    "The films share a style only because they are about fishing",
+    "The empty boat shows his style, but only in the first film",
+    "The films share a style because they came out in one year"
+   ],
+   "why": "The three films repeat a setting, an opening image and a subject, so the pattern is recognisable across his work. The fishing option is tempting, but one shared topic is only part of the pattern and it leaves out the repeated image and structure.",
+   "clue": "Count how many features repeat across the three films."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A novelist's books all open with a storm at sea",
+    "also_right": []
+   },
+   "b": {
+    "best": "The repeated setting, opening image and subject form a style",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 21,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 'The first option names a repeated structure and a repeated subject', but options are shown in random order (here the right option is third), so the why can point students to the wrong option. Name the option by its content instead."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one with a plural qualifier ('most books'). Every distractor says 'one book' or 'a single chapter', so a student can pick it by spotting the odd word out without understanding signature style. Consider a distractor that also spans several works but lacks a shared feature."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) says 'The first option names a repeated structure and a repeated subject', but options are shown in random order (here the right option is third), so the why can point students to the wrong option. Name the option by its content instead.",
+   "Question a, wording: The right option is the only one with a plural qualifier ('most books'). Every distractor says 'one book' or 'a single chapter', so a student can pick it by spotting the odd word out without understanding signature style. Consider a distractor that also spans several works but lacks a shared feature.",
+   "Content check: eng-signature-stylea option is 64 characters: A novelist ends most books with a letter and writes of migration"
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "A signature style",
+  "card": [
+   "A signature style is a way of writing or filmmaking that you can recognise across many of a creator's works. It is a pattern across works, not a choice made in one text.",
+   "The pattern can come from repeated subjects, such as lonely teenagers. It can also come from repeated structures, images or techniques, such as endings that circle back to the opening.",
+   "Imagine a director who often shoots scenes in warm orange light, uses long silent pauses, and tells stories about families who drift apart. Seeing these features again and again across her films is what makes her style her own.",
+   "To describe a signature style, name the feature, show it appears in more than one work, and say what effect it has on the viewer or reader."
+  ],
+  "remember": "A signature style is a pattern of features that repeats across a creator's works.",
+  "a": {
+   "q": "Which description best shows a signature style?",
+   "opts": [
+    "A novelist's books all open with a storm at sea",
+    "A novelist uses a storm at sea once, in one of her books",
+    "A novelist's books each use new settings, forms and subjects",
+    "A novelist's one book opens and closes with a storm at sea"
+   ],
+   "why": "A signature style is a feature that repeats across works, so books that all open with a storm at sea show one. The book that opens and closes with a storm is tempting, but the repeat stays inside one text. Books that each try something new span many works but share no feature.",
+   "clue": "Look for a feature that comes back in more than one work."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jo watches three films by director Ravi Nair. Each is set in a fishing town, opens with a shot of an empty boat, and follows a character who is leaving home. Which statement about Ravi Nair's style is best supported?",
+   "opts": [
+    "The repeated setting, opening image and subject form a style",
+    "The films share a style only because they are about fishing",
+    "The empty boat shows his style, but only in the first film",
+    "The films share a style because they came out in one year"
+   ],
+   "why": "The three films repeat a setting, an opening image and a subject, so the pattern is recognisable across his work. The fishing option is tempting, but one shared topic is only part of the pattern and it leaves out the repeated image and structure.",
+   "clue": "Count how many features repeat across the three films."
+  }
+ },
+ "cleared_by": "owner"
 }

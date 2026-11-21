@@ -8,8 +8,141 @@
    0.218
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:48Z write: done",
+  "2026-11-20T12:35:49Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 8e-05,
+  "write": 0.01828,
+  "check": 0.0062
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches population change through births, deaths and migration at Year 11 depth, while the new point teaches how age and sex structure is shown in a population pyramid, so it is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Population pyramids",
+  "card": [
+   "A population pyramid is a graph that shows a country's people by age and sex. Age groups are stacked in bands, with the youngest at the bottom and the oldest at the top.",
+   "Males are shown on one side and females on the other. The longer a bar, the more people are in that age group.",
+   [
+    "Wide base",
+    "many children and young people. The population is young, and it often has a high birth rate."
+   ],
+   [
+    "Narrow base, wide top",
+    "few young people and many older people. The population is ageing, and it often has a low birth rate."
+   ]
+  ],
+  "remember": "Read the shape: a wide base is a young population, a narrow base with a wide top is an ageing one.",
+  "a": {
+   "q": "A country's population pyramid has a very wide base that gets narrower towards the top. What does this show about its people?",
+   "opts": [
+    "Many of its people are children and young people",
+    "Many of its people are over the age of 65",
+    "Its people are spread evenly across all ages",
+    "Its males greatly outnumber its females"
+   ],
+   "why": "A wide base means a large share of the population is in the youngest age groups, so the population is young. Bar length shows how many people are in each age group, and the sides show sex, so the shape does not show that males outnumber females.",
+   "clue": "Look at which age groups have the longest bars."
+  },
+  "b": {
+   "d": 3,
+   "q": "Country X has a narrow base and its widest bars are in the oldest age groups. Which statement about Country X is most likely to be true?",
+   "opts": [
+    "It has an ageing population with a low birth rate",
+    "It has a young population with a high birth rate",
+    "It has a young population with a low birth rate",
+    "It has an ageing population with a high birth rate"
+   ],
+   "why": "A narrow base means few children, which often goes with a low birth rate. Wide bars at the top mean many older people, so the population is ageing. A high birth rate would give a wide base instead.",
+   "clue": "Check both the base and the top of the pyramid."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "Two population pyramids side by side. The left one has a wide base that narrows steadily to the top and is labelled 'Wide base: young population'. The right one has a narrow base and its widest bars near the top and is labelled 'Narrow base, wide top: ageing population'. Each has males on the left and females on the right, age groups up the middle, and the label 'Population' along the bottom.",
+    "why": "Seeing the two shapes together helps students link each shape to a young or an ageing population."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Many of its people are children and young people",
+   "also_right": []
+  },
+  "b": {
+   "best": "It has an ageing population with a low birth rate",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Population pyramids",
+  "card": [
+   "A population pyramid is a graph that shows a country's people by age and sex. Age groups are stacked in bands, with the youngest at the bottom and the oldest at the top.",
+   "Males are shown on one side and females on the other. The longer a bar, the more people are in that age group.",
+   [
+    "Wide base",
+    "many children and young people. The population is young, and it often has a high birth rate."
+   ],
+   [
+    "Narrow base, wide top",
+    "few young people and many older people. The population is ageing, and it often has a low birth rate."
+   ]
+  ],
+  "remember": "Read the shape: a wide base is a young population, a narrow base with a wide top is an ageing one.",
+  "a": {
+   "q": "A country's population pyramid has a very wide base that gets narrower towards the top. What does this show about its people?",
+   "opts": [
+    "Many of its people are children and young people",
+    "Many of its people are over the age of 65",
+    "Its people are spread evenly across all ages",
+    "Its males greatly outnumber its females"
+   ],
+   "why": "A wide base means a large share of the population is in the youngest age groups, so the population is young. Bar length shows how many people are in each age group, and the sides show sex, so the shape does not show that males outnumber females.",
+   "clue": "Look at which age groups have the longest bars."
+  },
+  "b": {
+   "d": 3,
+   "q": "Country X has a narrow base and its widest bars are in the oldest age groups. Which statement about Country X is most likely to be true?",
+   "opts": [
+    "It has an ageing population with a low birth rate",
+    "It has a young population with a high birth rate",
+    "It has a young population with a low birth rate",
+    "It has an ageing population with a high birth rate"
+   ],
+   "why": "A narrow base means few children, which often goes with a low birth rate. Wide bars at the top mean many older people, so the population is ageing. A high birth rate would give a wide base instead.",
+   "clue": "Check both the base and the top of the pyramid."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "Two population pyramids side by side. The left one has a wide base that narrows steadily to the top and is labelled 'Wide base: young population'. The right one has a narrow base and its widest bars near the top and is labelled 'Narrow base, wide top: ageing population'. Each has males on the left and females on the right, age groups up the middle, and the label 'Population' along the bottom.",
+    "why": "Seeing the two shapes together helps students link each shape to a young or an ageing population."
+   }
+  ]
+ },
+ "cleared_by": "checker"
 }

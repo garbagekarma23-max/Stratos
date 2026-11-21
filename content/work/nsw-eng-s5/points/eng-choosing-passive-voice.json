@@ -20,8 +20,220 @@
    0.206
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:48Z write: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00638,
+  "check": 0.01061,
+  "fix": 0.01718,
+  "recheck": 0.00821
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the passive voice or how writers use it for focus, impersonal tone or hiding the agent; the bank points cover voice, point of view and literary devices instead.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Choosing the passive voice",
+  "card": [
+   [
+    "Active",
+    "the doer comes first. \"The storm destroyed the jetty.\" The subject does the action."
+   ],
+   [
+    "Passive",
+    "the receiver of the action comes first. \"The jetty was destroyed by the storm.\" The verb uses a form of be plus a past participle, such as was destroyed. The doer can sit at the end or be left out: \"The jetty was destroyed.\""
+   ],
+   "Writers choose the passive for effect. It puts the focus on what happened, as in \"The window was smashed.\" It also sounds impersonal and formal, as in a science report: \"The mixture was heated.\"",
+   "Leaving out the doer can also hide who was responsible. \"Mistakes were made\" says nothing about who made them."
+  ],
+  "remember": "The passive is a choice: it can shift focus to the event, sound impersonal, or leave the doer unnamed.",
+  "a": {
+   "q": "A student writes: \"The pond water was tested for acidity.\" Why might the writer choose the passive here?",
+   "opts": [
+    "It sounds impersonal, as a report should",
+    "It names the person who did the testing",
+    "It makes the action feel fast and tense",
+    "It puts the doer at the start of the sentence"
+   ],
+   "why": "The passive leaves out the tester and keeps the tone impersonal, which suits a science report. It does not name the doer, so the option claiming it does is wrong.",
+   "clue": "Think about who is missing from the sentence, and what kind of text this is."
+  },
+  "b": {
+   "d": 3,
+   "q": "A council statement reads: \"The footpath was left unrepaired for two years.\" What effect does the passive voice have here?",
+   "opts": [
+    "It leaves out who was responsible for the neglect",
+    "It names the council as the one who failed",
+    "It makes the sentence active and direct",
+    "It puts the focus on the person who complained"
+   ],
+   "why": "The doer is left out, so the sentence does not say who failed to repair the path. The option about naming the council is tempting, but the passive here does not name anyone.",
+   "clue": "Look for who is named as the doer in the sentence."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It sounds impersonal, as a report should",
+   "also_right": []
+  },
+  "b": {
+   "best": "It leaves out who was responsible for the neglect",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem only says \"A student writes\" and never says the text is a report, yet the right option and the clue rely on the student knowing what kind of text it is. Saying it is from a science report would remove the guesswork."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate, and each question has one clear answer. Question a should say the sentence comes from a science report, because the right option depends on knowing that."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The stem only says \"A student writes\" and never says the text is a report, yet the right option and the clue rely on the student knowing what kind of text it is. Saying it is from a science report would remove the guesswork."
+ ],
+ "proposal": {
+  "title": "Choosing the passive voice",
+  "card": [
+   [
+    "Active",
+    "the doer comes first. \"The storm destroyed the jetty.\" The subject does the action."
+   ],
+   [
+    "Passive",
+    "the receiver of the action comes first. \"The jetty was destroyed by the storm.\" The verb uses a form of be plus a past participle, such as was destroyed. The doer can sit at the end or be left out: \"The jetty was destroyed.\""
+   ],
+   "Writers choose the passive for effect. It puts the focus on what happened, as in \"The window was smashed.\" It also sounds impersonal and formal, as in a science report: \"The mixture was heated.\"",
+   "Leaving out the doer can also hide who was responsible. \"Mistakes were made\" says nothing about who made them."
+  ],
+  "remember": "The passive is a choice: it can shift focus to the event, sound impersonal, or leave the doer unnamed.",
+  "a": {
+   "q": "A student's science report says: \"The pond water was tested for acidity.\" Why might the writer choose the passive here?",
+   "opts": [
+    "It keeps the tone impersonal and formal",
+    "It names the person who did the testing",
+    "It makes the action feel fast and tense",
+    "It puts the doer at the start of the sentence"
+   ],
+   "why": "The passive leaves out the tester, so the sentence sounds impersonal and formal, which suits a science report. It does not name who did the testing, so the option claiming it does is wrong.",
+   "clue": "Think about who is missing from the sentence, and what kind of text this is."
+  },
+  "b": {
+   "d": 3,
+   "q": "A council statement reads: \"The footpath was left unrepaired for two years.\" What effect does the passive voice have here?",
+   "opts": [
+    "It leaves out who was responsible for the neglect",
+    "It names the council as the one who failed",
+    "It makes the sentence active and direct",
+    "It puts the focus on the person who complained"
+   ],
+   "why": "The doer is left out, so the sentence does not say who failed to repair the path. The option about naming the council is tempting, but the passive here does not name anyone.",
+   "clue": "Look for who is named as the doer in the sentence."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It keeps the tone impersonal and formal",
+    "also_right": []
+   },
+   "b": {
+    "best": "It leaves out who was responsible for the neglect",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 20,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem only says \"A student writes\" and never says the text is a report, yet the right option and the clue rely on the student knowing what kind of text it is. Saying it is from a science report would remove the guesswork."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The stem only says \"A student writes\" and never says the text is a report, yet the right option and the clue rely on the student knowing what kind of text it is. Saying it is from a science report would remove the guesswork."
+  ]
+ },
+ "final": {
+  "title": "Choosing the passive voice",
+  "card": [
+   [
+    "Active",
+    "the doer comes first. \"The storm destroyed the jetty.\" The subject does the action."
+   ],
+   [
+    "Passive",
+    "the receiver of the action comes first. \"The jetty was destroyed by the storm.\" The verb uses a form of be plus a past participle, such as was destroyed. The doer can sit at the end or be left out: \"The jetty was destroyed.\""
+   ],
+   "Writers choose the passive for effect. It puts the focus on what happened, as in \"The window was smashed.\" It also sounds impersonal and formal, as in a science report: \"The mixture was heated.\"",
+   "Leaving out the doer can also hide who was responsible. \"Mistakes were made\" says nothing about who made them."
+  ],
+  "remember": "The passive is a choice: it can shift focus to the event, sound impersonal, or leave the doer unnamed.",
+  "a": {
+   "q": "A student's science report says: \"The pond water was tested for acidity.\" Why might the writer choose the passive here?",
+   "opts": [
+    "It keeps the tone impersonal and formal",
+    "It names the person who did the testing",
+    "It makes the action feel fast and tense",
+    "It puts the doer at the start of the sentence"
+   ],
+   "why": "The passive leaves out the tester, so the sentence sounds impersonal and formal, which suits a science report. It does not name who did the testing, so the option claiming it does is wrong.",
+   "clue": "Think about who is missing from the sentence, and what kind of text this is."
+  },
+  "b": {
+   "d": 3,
+   "q": "A council statement reads: \"The footpath was left unrepaired for two years.\" What effect does the passive voice have here?",
+   "opts": [
+    "It leaves out who was responsible for the neglect",
+    "It names the council as the one who failed",
+    "It makes the sentence active and direct",
+    "It puts the focus on the person who complained"
+   ],
+   "why": "The doer is left out, so the sentence does not say who failed to repair the path. The option about naming the council is tempting, but the passive here does not name anyone.",
+   "clue": "Look for who is named as the doer in the sentence."
+  }
+ },
+ "cleared_by": "recheck"
 }

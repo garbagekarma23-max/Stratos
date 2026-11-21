@@ -24,8 +24,155 @@
    0.213
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00692,
+  "check": 0.0096
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the comparison of plant and animal cells including mitochondria; the closest, sci-parts-plant-cell, covers only the plant-specific extras and sci-parts-animal-cell omits mitochondria, so combining them would need a new card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Plant and animal cells",
+  "card": [
+   [
+    "Both cells",
+    "Plant and animal cells both have a cell membrane, cytoplasm, a nucleus and mitochondria. The membrane controls what enters and leaves. The nucleus holds the cell's instructions."
+   ],
+   [
+    "Plant cells only",
+    "Plant cells also have a cell wall, chloroplasts and a large vacuole. The wall is a stiff layer outside the membrane that gives support. The vacuole stores water and other substances."
+   ],
+   [
+    "Mitochondria",
+    "Mitochondria release energy from food for the cell to use. Plant and animal cells both have them."
+   ],
+   [
+    "Chloroplasts",
+    "Chloroplasts make food for the plant cell. They are found in plant cells but not in animal cells."
+   ]
+  ],
+  "remember": "Plant cells have everything animal cells have, plus a cell wall, chloroplasts and a large vacuole.",
+  "a": {
+   "q": "Which part is found in plant cells but not in animal cells?",
+   "opts": [
+    "Chloroplast",
+    "Mitochondrion",
+    "Nucleus",
+    "Cell membrane"
+   ],
+   "why": "Chloroplasts make food and are found only in plant cells. Mitochondria are the tempting choice, but both plant and animal cells have them to release energy.",
+   "clue": "Which part makes food?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya looks at a cell from a leaf and a cell from her cheek. Both cells release energy from food. Which part does this job in both?",
+   "opts": [
+    "Mitochondria",
+    "Chloroplasts",
+    "The nucleus",
+    "The cell wall"
+   ],
+   "why": "Mitochondria release energy and are in both plant and animal cells. Chloroplasts make food rather than release energy, and they are only in plant cells such as the leaf cell, so they cannot do the job in her cheek cell.",
+   "clue": "Which part is in both types of cell and releases energy?"
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "Two labelled cell diagrams side by side. An animal cell labelled cell membrane, cytoplasm, nucleus and mitochondria. A plant cell labelled cell wall, cell membrane, cytoplasm, nucleus, mitochondria, chloroplasts and large vacuole.",
+    "why": "Seeing both cells together shows which parts are shared and which are only in plant cells."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Chloroplast",
+   "also_right": []
+  },
+  "b": {
+   "best": "Mitochondria",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Plant and animal cells",
+  "card": [
+   [
+    "Both cells",
+    "Plant and animal cells both have a cell membrane, cytoplasm, a nucleus and mitochondria. The membrane controls what enters and leaves. The nucleus holds the cell's instructions."
+   ],
+   [
+    "Plant cells only",
+    "Plant cells also have a cell wall, chloroplasts and a large vacuole. The wall is a stiff layer outside the membrane that gives support. The vacuole stores water and other substances."
+   ],
+   [
+    "Mitochondria",
+    "Mitochondria release energy from food for the cell to use. Plant and animal cells both have them."
+   ],
+   [
+    "Chloroplasts",
+    "Chloroplasts make food for the plant cell. They are found in plant cells but not in animal cells."
+   ]
+  ],
+  "remember": "Plant cells have everything animal cells have, plus a cell wall, chloroplasts and a large vacuole.",
+  "a": {
+   "q": "Which part is found in plant cells but not in animal cells?",
+   "opts": [
+    "Chloroplast",
+    "Mitochondrion",
+    "Nucleus",
+    "Cell membrane"
+   ],
+   "why": "Chloroplasts make food and are found only in plant cells. Mitochondria are the tempting choice, but both plant and animal cells have them to release energy.",
+   "clue": "Which part makes food?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya looks at a cell from a leaf and a cell from her cheek. Both cells release energy from food. Which part does this job in both?",
+   "opts": [
+    "Mitochondria",
+    "Chloroplasts",
+    "The nucleus",
+    "The cell wall"
+   ],
+   "why": "Mitochondria release energy and are in both plant and animal cells. Chloroplasts make food rather than release energy, and they are only in plant cells such as the leaf cell, so they cannot do the job in her cheek cell.",
+   "clue": "Which part is in both types of cell and releases energy?"
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "Two labelled cell diagrams side by side. An animal cell labelled cell membrane, cytoplasm, nucleus and mitochondria. A plant cell labelled cell wall, cell membrane, cytoplasm, nucleus, mitochondria, chloroplasts and large vacuole.",
+    "why": "Seeing both cells together shows which parts are shared and which are only in plant cells."
+   }
+  ]
+ },
+ "cleared_by": "checker"
 }

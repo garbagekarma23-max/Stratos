@@ -24,8 +24,135 @@
    0.317
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: failed the content check, writing again",
+  "2026-11-20T12:44:52Z write: done",
+  "2026-11-20T12:53:23Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "write": 0.01392,
+  "check": 0.00991
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No single bank point covers all four parts of the brief: ecb-entrepreneur covers spotting opportunities and risk but not solving problems or persisting after failure, while ecb-qualities-entrepreneurs covers persistence and creativity but not spotting opportunities, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "What makes an entrepreneur",
+  "card": [
+   "An entrepreneur is a person who starts a new business or builds something new, such as a product or a way of working.",
+   [
+    "Spotting opportunities",
+    "Entrepreneurs notice a need or a gap that others have missed, such as a problem customers have that no business is solving."
+   ],
+   [
+    "Taking risks",
+    "They accept that they may lose time or money. They weigh up the risk and go ahead, rather than waiting for a sure result."
+   ],
+   [
+    "Solving problems and persisting",
+    "They find practical ways around problems. When an idea fails, they learn from it and keep going."
+   ]
+  ],
+  "remember": "Entrepreneurs spot a gap, accept risk, solve problems and keep going after failure.",
+  "a": {
+   "q": "Which person is best described as an entrepreneur?",
+   "opts": [
+    "Ravi, who starts a business to fill a gap he spotted",
+    "Ravi, who is paid a set wage to pack factory boxes",
+    "Ravi, who buys pet food each week for his own dog",
+    "Ravi, who follows his manager's list of tasks"
+   ],
+   "why": "Ravi spots a gap in the market and builds a new business to fill it, and that is what an entrepreneur does. The other Ravis work for someone else or are only customers, so none of them is starting or building something new.",
+   "clue": "Who is building something new?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia opens a bike repair van in Dubbo. Her first van breaks down and she loses money. She sells it, fixes her costs and starts again with a cheaper van. Which entrepreneurial quality does this show most clearly?",
+   "opts": [
+    "Persisting after a failure and learning from it",
+    "Spotting an opportunity that no one else had seen",
+    "Avoiding risk by waiting for a certain result",
+    "Following rules set by an employer"
+   ],
+   "why": "Mia loses money, then learns from it and starts again, which is persisting after failure. Spotting an opportunity is about noticing a gap at the start, and she took a risk rather than avoiding one.",
+   "clue": "Look at what Mia does after the van breaks down."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Ravi, who starts a business to fill a gap he spotted",
+   "also_right": []
+  },
+  "b": {
+   "best": "Persisting after a failure and learning from it",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "What makes an entrepreneur",
+  "card": [
+   "An entrepreneur is a person who starts a new business or builds something new, such as a product or a way of working.",
+   [
+    "Spotting opportunities",
+    "Entrepreneurs notice a need or a gap that others have missed, such as a problem customers have that no business is solving."
+   ],
+   [
+    "Taking risks",
+    "They accept that they may lose time or money. They weigh up the risk and go ahead, rather than waiting for a sure result."
+   ],
+   [
+    "Solving problems and persisting",
+    "They find practical ways around problems. When an idea fails, they learn from it and keep going."
+   ]
+  ],
+  "remember": "Entrepreneurs spot a gap, accept risk, solve problems and keep going after failure.",
+  "a": {
+   "q": "Which person is best described as an entrepreneur?",
+   "opts": [
+    "Ravi, who starts a business to fill a gap he spotted",
+    "Ravi, who is paid a set wage to pack factory boxes",
+    "Ravi, who buys pet food each week for his own dog",
+    "Ravi, who follows his manager's list of tasks"
+   ],
+   "why": "Ravi spots a gap in the market and builds a new business to fill it, and that is what an entrepreneur does. The other Ravis work for someone else or are only customers, so none of them is starting or building something new.",
+   "clue": "Who is building something new?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia opens a bike repair van in Dubbo. Her first van breaks down and she loses money. She sells it, fixes her costs and starts again with a cheaper van. Which entrepreneurial quality does this show most clearly?",
+   "opts": [
+    "Persisting after a failure and learning from it",
+    "Spotting an opportunity that no one else had seen",
+    "Avoiding risk by waiting for a certain result",
+    "Following rules set by an employer"
+   ],
+   "why": "Mia loses money, then learns from it and starts again, which is persisting after failure. Spotting an opportunity is about noticing a gap at the start, and she took a risk rather than avoiding one.",
+   "clue": "Look at what Mia does after the van breaks down."
+  }
+ },
+ "cleared_by": "checker"
 }

@@ -16,8 +16,360 @@
    0.207
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:58Z write: done",
+  "2026-11-20T12:45:00Z check: flagged",
+  "2026-11-20T12:53:29Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (card fact)",
+  "2026-11-20T13:44:57Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00604,
+  "check": 0.01315,
+  "fix": 0.01579,
+  "recheck": 0.0133
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The brief teaches where the heavier elements come from, through fusion inside stars, and no bank point covers that; the big bang card is related but only covers the early universe and the formation of atoms.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, fact: 'Heavier elements, such as iron, form only in much more massive stars' is not strictly true. Much of the universe's iron comes from Type Ia supernovae (exploding white dwarfs), not only from massive stars. Elements heavier than iron mostly form by neutron capture, some of it in lower-mass stars, rather than by fusion. Drop 'only', e.g. 'Heavier elements, such as iron, form in much more massive stars.'",
+ "rejected": {
+  "title": "Where elements come from",
+  "card": [
+   "Soon after the Big Bang, the universe was very hot and then cooled. The first nuclei that formed in this time were mostly hydrogen and helium.",
+   "Gravity pulled clouds of hydrogen and helium together to form stars. Inside a star, the core is hot and dense enough for nuclei to join together. This joining is called fusion.",
+   "In stars, fusion turns hydrogen into helium. Later in a star's life, helium can fuse into carbon and oxygen. Heavier elements, such as iron, form only in much more massive stars.",
+   "When some stars end their lives, they spread these elements into space. New stars and planets can then form from this material, including the Earth."
+  ],
+  "remember": "Hydrogen and helium came first. Fusion in stars made heavier elements.",
+  "a": {
+   "q": "Which elements formed soon after the Big Bang?",
+   "opts": [
+    "Hydrogen and helium",
+    "Carbon and oxygen",
+    "Helium and iron",
+    "Hydrogen and carbon"
+   ],
+   "why": "Mainly hydrogen and helium formed in the early universe. Carbon, oxygen and iron formed later, when fusion in stars joined smaller nuclei into larger ones.",
+   "clue": "Think of the two lightest elements."
+  },
+  "b": {
+   "d": 2,
+   "q": "Oxygen in the air in Orange, NSW, is a heavier element. Where did its atoms first form?",
+   "opts": [
+    "By fusion inside stars long ago",
+    "In the first moments after the Big Bang",
+    "By gravity pulling gas into the Earth",
+    "By fission in the Earth's crust"
+   ],
+   "why": "Heavier elements such as oxygen formed by fusion inside stars, then were spread into space when stars ended their lives. They did not form soon after the Big Bang. Gravity gathered this material into the Earth, but it did not make the elements.",
+   "clue": "Which process builds heavier nuclei from lighter ones?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, fact: 'Heavier elements, such as iron, form only in much more massive stars' is not strictly true. Much of the universe's iron comes from Type Ia supernovae (exploding white dwarfs), not only from massive stars. Elements heavier than iron mostly form by neutron capture, some of it in lower-mass stars, rather than by fusion. Drop 'only', e.g. 'Heavier elements, such as iron, form in much more massive stars.'"
+   ],
+   "saved": {
+    "draft": {
+     "title": "Where elements come from",
+     "card": [
+      "Soon after the Big Bang, the universe was very hot and then cooled. The first nuclei formed in this time were hydrogen and helium.",
+      "Gravity pulled clouds of hydrogen and helium together to form stars. Inside a star, the core is hot and dense enough for nuclei to join together. This joining is called fusion.",
+      "In stars, fusion turns hydrogen into helium. Over time, in larger stars, it builds heavier elements such as carbon and oxygen.",
+      "When some stars end their lives, they spread these elements into space. New stars and planets can then form from this material, including the Earth."
+     ],
+     "remember": "Hydrogen and helium came first. Fusion in stars made heavier elements.",
+     "a": {
+      "q": "Which elements formed soon after the Big Bang?",
+      "opts": [
+       "Hydrogen and helium",
+       "Carbon and oxygen",
+       "Helium and iron",
+       "Hydrogen and carbon"
+      ],
+      "why": "Only hydrogen and helium formed in the early universe. Carbon and oxygen formed later, when fusion in stars joined smaller nuclei into larger ones.",
+      "clue": "Think of the two lightest elements."
+     },
+     "b": {
+      "d": 2,
+      "q": "Oxygen in the air in Orange, NSW, is a heavier element. Where did its atoms first form?",
+      "opts": [
+       "By fusion inside stars long ago",
+       "In the first moments after the Big Bang",
+       "By gravity pulling gas into the Earth",
+       "By fission in the Earth's crust"
+      ],
+      "why": "Heavier elements such as oxygen formed by fusion inside stars, then were spread into space when stars ended their lives. They did not form soon after the Big Bang. Gravity gathered this material into the Earth, but it did not make the elements.",
+      "clue": "Which process builds heavier nuclei from lighter ones?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Hydrogen and helium",
+      "also_right": []
+     },
+     "b": {
+      "best": "By fusion inside stars long ago",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "fact",
+       "detail": "Why (a) says 'Only hydrogen and helium formed in the early universe', but tiny amounts of lithium also formed then. The card avoids 'only'. Suggest 'Mainly hydrogen and helium'."
+      },
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "'Over time, in larger stars, it builds heavier elements such as carbon and oxygen' suggests only larger stars make carbon and oxygen. Sun-like stars also fuse helium into carbon and oxygen. It is elements heavier than these that need massive stars."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions are sound and their answers are clear. Two minor fact issues: why (a) says 'only' hydrogen and helium formed (trace lithium did too), and the card suggests carbon and oxygen form only in larger stars."
+    },
+    "flags": [
+     "Question a, fact: Why (a) says 'Only hydrogen and helium formed in the early universe', but tiny amounts of lithium also formed then. The card avoids 'only'. Suggest 'Mainly hydrogen and helium'.",
+     "Card, fact: 'Over time, in larger stars, it builds heavier elements such as carbon and oxygen' suggests only larger stars make carbon and oxygen. Sun-like stars also fuse helium into carbon and oxygen. It is elements heavier than these that need massive stars."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Where elements come from",
+     "card": [
+      "Soon after the Big Bang, the universe was very hot and then cooled. The first nuclei that formed in this time were mostly hydrogen and helium.",
+      "Gravity pulled clouds of hydrogen and helium together to form stars. Inside a star, the core is hot and dense enough for nuclei to join together. This joining is called fusion.",
+      "In stars, fusion turns hydrogen into helium. Later in a star's life, helium can fuse into carbon and oxygen. Heavier elements, such as iron, form only in much more massive stars.",
+      "When some stars end their lives, they spread these elements into space. New stars and planets can then form from this material, including the Earth."
+     ],
+     "remember": "Hydrogen and helium came first. Fusion in stars made heavier elements.",
+     "a": {
+      "q": "Which elements formed soon after the Big Bang?",
+      "opts": [
+       "Hydrogen and helium",
+       "Carbon and oxygen",
+       "Helium and iron",
+       "Hydrogen and carbon"
+      ],
+      "why": "Mainly hydrogen and helium formed in the early universe. Carbon, oxygen and iron formed later, when fusion in stars joined smaller nuclei into larger ones.",
+      "clue": "Think of the two lightest elements."
+     },
+     "b": {
+      "d": 2,
+      "q": "Oxygen in the air in Orange, NSW, is a heavier element. Where did its atoms first form?",
+      "opts": [
+       "By fusion inside stars long ago",
+       "In the first moments after the Big Bang",
+       "By gravity pulling gas into the Earth",
+       "By fission in the Earth's crust"
+      ],
+      "why": "Heavier elements such as oxygen formed by fusion inside stars, then were spread into space when stars ended their lives. They did not form soon after the Big Bang. Gravity gathered this material into the Earth, but it did not make the elements.",
+      "clue": "Which process builds heavier nuclei from lighter ones?"
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:08Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Hydrogen and helium",
+       "also_right": []
+      },
+      "b": {
+       "best": "By fusion inside stars long ago",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "fact",
+        "detail": "'Heavier elements, such as iron, form only in much more massive stars' is not strictly true. Much of the universe's iron comes from Type Ia supernovae (exploding white dwarfs), not only from massive stars. Elements heavier than iron mostly form by neutron capture, some of it in lower-mass stars, rather than by fusion. Drop 'only', e.g. 'Heavier elements, such as iron, form in much more massive stars.'"
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are sound and their answers are clear. One card line says heavier elements such as iron form 'only' in much more massive stars, which overstates the science. Removing 'only' fixes it."
+     },
+     "flags": [
+      "Card, fact: 'Heavier elements, such as iron, form only in much more massive stars' is not strictly true. Much of the universe's iron comes from Type Ia supernovae (exploding white dwarfs), not only from massive stars. Elements heavier than iron mostly form by neutron capture, some of it in lower-mass stars, rather than by fusion. Drop 'only', e.g. 'Heavier elements, such as iron, form in much more massive stars.'"
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:57Z",
+   "step": "write",
+   "version": {
+    "title": "Where elements come from",
+    "card": [
+     "Soon after the Big Bang, the universe was very hot and then cooled. The first nuclei that formed in this time were mostly hydrogen and helium.",
+     "Gravity pulled clouds of hydrogen and helium together to form stars. Inside a star, the core is hot and dense enough for nuclei to join together. This joining is called fusion.",
+     "In stars, fusion turns hydrogen into helium. Later in a star's life, helium can fuse into carbon and oxygen. Heavier elements, such as iron, form in stars much more massive than the Sun.",
+     "When some stars end their lives, they spread these elements into space. New stars and planets can then form from this material, including the Earth."
+    ],
+    "remember": "Hydrogen and helium came first. Fusion in stars made heavier elements.",
+    "a": {
+     "q": "Which elements formed soon after the Big Bang?",
+     "opts": [
+      "Hydrogen and helium",
+      "Carbon and oxygen",
+      "Helium and iron",
+      "Hydrogen and carbon"
+     ],
+     "why": "Mainly hydrogen and helium formed in the early universe. Carbon, oxygen and iron formed later, when fusion in stars joined smaller nuclei into larger ones.",
+     "clue": "Think of the two lightest elements."
+    },
+    "b": {
+     "d": 2,
+     "q": "Oxygen in the air in Orange, NSW, is a heavier element. Where did its atoms first form?",
+     "opts": [
+      "By fusion inside stars long ago",
+      "In the first moments after the Big Bang",
+      "By gravity pulling gas into the Earth",
+      "By fission in the Earth's crust"
+     ],
+     "why": "Heavier elements such as oxygen formed by fusion inside stars, then were spread into space when stars ended their lives. They did not form soon after the Big Bang. Gravity gathered this material into the Earth, but it did not make the elements.",
+     "clue": "Which process builds heavier nuclei from lighter ones?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Hydrogen and helium",
+     "also_right": []
+    },
+    "b": {
+     "best": "By fusion inside stars long ago",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Where elements come from",
+  "card": [
+   "Soon after the Big Bang, the universe was very hot and then cooled. The first nuclei that formed in this time were mostly hydrogen and helium.",
+   "Gravity pulled clouds of hydrogen and helium together to form stars. Inside a star, the core is hot and dense enough for nuclei to join together. This joining is called fusion.",
+   "In stars, fusion turns hydrogen into helium. Later in a star's life, helium can fuse into carbon and oxygen. Heavier elements, such as iron, form in stars much more massive than the Sun.",
+   "When some stars end their lives, they spread these elements into space. New stars and planets can then form from this material, including the Earth."
+  ],
+  "remember": "Hydrogen and helium came first. Fusion in stars made heavier elements.",
+  "a": {
+   "q": "Which elements formed soon after the Big Bang?",
+   "opts": [
+    "Hydrogen and helium",
+    "Carbon and oxygen",
+    "Helium and iron",
+    "Hydrogen and carbon"
+   ],
+   "why": "Mainly hydrogen and helium formed in the early universe. Carbon, oxygen and iron formed later, when fusion in stars joined smaller nuclei into larger ones.",
+   "clue": "Think of the two lightest elements."
+  },
+  "b": {
+   "d": 2,
+   "q": "Oxygen in the air in Orange, NSW, is a heavier element. Where did its atoms first form?",
+   "opts": [
+    "By fusion inside stars long ago",
+    "In the first moments after the Big Bang",
+    "By gravity pulling gas into the Earth",
+    "By fission in the Earth's crust"
+   ],
+   "why": "Heavier elements such as oxygen formed by fusion inside stars, then were spread into space when stars ended their lives. They did not form soon after the Big Bang. Gravity gathered this material into the Earth, but it did not make the elements.",
+   "clue": "Which process builds heavier nuclei from lighter ones?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Hydrogen and helium",
+   "also_right": []
+  },
+  "b": {
+   "best": "By fusion inside stars long ago",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Where elements come from",
+  "card": [
+   "Soon after the Big Bang, the universe was very hot and then cooled. The first nuclei that formed in this time were mostly hydrogen and helium.",
+   "Gravity pulled clouds of hydrogen and helium together to form stars. Inside a star, the core is hot and dense enough for nuclei to join together. This joining is called fusion.",
+   "In stars, fusion turns hydrogen into helium. Later in a star's life, helium can fuse into carbon and oxygen. Heavier elements, such as iron, form in stars much more massive than the Sun.",
+   "When some stars end their lives, they spread these elements into space. New stars and planets can then form from this material, including the Earth."
+  ],
+  "remember": "Hydrogen and helium came first. Fusion in stars made heavier elements.",
+  "a": {
+   "q": "Which elements formed soon after the Big Bang?",
+   "opts": [
+    "Hydrogen and helium",
+    "Carbon and oxygen",
+    "Helium and iron",
+    "Hydrogen and carbon"
+   ],
+   "why": "Mainly hydrogen and helium formed in the early universe. Carbon, oxygen and iron formed later, when fusion in stars joined smaller nuclei into larger ones.",
+   "clue": "Think of the two lightest elements."
+  },
+  "b": {
+   "d": 2,
+   "q": "Oxygen in the air in Orange, NSW, is a heavier element. Where did its atoms first form?",
+   "opts": [
+    "By fusion inside stars long ago",
+    "In the first moments after the Big Bang",
+    "By gravity pulling gas into the Earth",
+    "By fission in the Earth's crust"
+   ],
+   "why": "Heavier elements such as oxygen formed by fusion inside stars, then were spread into space when stars ended their lives. They did not form soon after the Big Bang. Gravity gathered this material into the Earth, but it did not make the elements.",
+   "clue": "Which process builds heavier nuclei from lighter ones?"
+  }
+ },
+ "checked_by": "claude-code"
 }

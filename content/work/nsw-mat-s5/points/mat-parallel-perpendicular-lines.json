@@ -24,8 +24,232 @@
    0.332
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:55Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:54Z write: done",
+  "2026-11-20T12:44:58Z check: flagged",
+  "2026-11-20T12:53:28Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00047,
+  "write": 0.00825,
+  "check": 0.01455,
+  "fix": 0.02104,
+  "recheck": 0.01074
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, mat-linear-functions, covers parallel and perpendicular lines only as one bullet inside a broader Year 11 card on gradient formulas, forms of the line and point-slope form, so it is broader than this Stage 5 point and no bank point teaches this idea alone.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Parallel and perpendicular lines",
+  "card": [
+   [
+    "Parallel",
+    "Parallel lines never meet. They have equal gradients, so \\(y = 3x + 1\\) and \\(y = 3x - 4\\) are parallel."
+   ],
+   [
+    "Perpendicular",
+    "Perpendicular lines meet at a right angle. Their gradients multiply to \\(-1\\)."
+   ],
+   "To find a perpendicular gradient, flip the fraction and change the sign. The gradient \\(2\\) is \\(\\frac{2}{1}\\), so a perpendicular line has gradient \\(-\\frac{1}{2}\\).",
+   "Example: a line has gradient \\(-\\frac{3}{4}\\). Flip it to get \\(\\frac{4}{3}\\), then change the sign. The perpendicular gradient is \\(\\frac{4}{3}\\). Check: \\(-\\frac{3}{4} \\times \\frac{4}{3} = -1\\)."
+  ],
+  "remember": "Parallel: same gradient. Perpendicular: flip it and change the sign.",
+  "a": {
+   "q": "Which line is perpendicular to \\(y = 5x + 2\\)?",
+   "opts": [
+    "\\(y = -\\frac{1}{5}x + 2\\)",
+    "\\(y = \\frac{1}{5}x + 2\\)",
+    "\\(y = -5x + 2\\)",
+    "\\(y = 5x - 2\\)"
+   ],
+   "why": "The gradient of the given line is \\(5\\). The perpendicular gradient is \\(-\\frac{1}{5}\\), because \\(5 \\times -\\frac{1}{5} = -1\\). The line \\(y = \\frac{1}{5}x + 2\\) only flips the fraction and keeps the sign, so its product with \\(5\\) is \\(1\\), not \\(-1\\).",
+   "clue": "Flip the gradient, then change its sign."
+  },
+  "b": {
+   "d": 3,
+   "q": "Line \\(p\\) has equation \\(y = -\\frac{2}{3}x + 7\\). Line \\(q\\) is perpendicular to \\(p\\). What is the gradient of \\(q\\)?",
+   "opts": [
+    "\\(\\frac{3}{2}\\)",
+    "\\(-\\frac{3}{2}\\)",
+    "\\(\\frac{2}{3}\\)",
+    "\\(-\\frac{2}{3}\\)"
+   ],
+   "why": "The gradient of \\(p\\) is \\(-\\frac{2}{3}\\). Flip it to get \\(\\frac{3}{2}\\) and change the sign, which gives \\(\\frac{3}{2}\\). Check: \\(-\\frac{2}{3} \\times \\frac{3}{2} = -1\\). The option \\(-\\frac{3}{2}\\) flips the fraction but forgets to change the sign.",
+   "clue": "The original gradient is negative, so the new one must be positive."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(y = -\\frac{1}{5}x + 2\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(\\frac{3}{2}\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The worked example says flipping \\(-\\frac{3}{4}\\) gives \\(\\frac{4}{3}\\), then changing the sign gives \\(\\frac{4}{3}\\). Flipping gives \\(-\\frac{4}{3}\\), and changing the sign then gives \\(\\frac{4}{3}\\). As written, 'change the sign' leaves the number unchanged, which contradicts the rule just taught and will confuse students."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why repeats the card's error: 'Flip it to get \\(\\frac{3}{2}\\) and change the sign, which gives \\(\\frac{3}{2}\\).' Flipping \\(-\\frac{2}{3}\\) gives \\(-\\frac{3}{2}\\), and changing the sign gives \\(\\frac{3}{2}\\). The why's own later sentence, that \\(-\\frac{3}{2}\\) flips but forgets the sign change, contradicts its first step."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are right (\\(y = -\\frac{1}{5}x + 2\\) and \\(\\frac{3}{2}\\)). The card's worked example and why (b) both mis-state the flip step: they drop the negative sign when flipping, so 'change the sign' appears to do nothing. Fix: flipping \\(-\\frac{3}{4}\\) gives \\(-\\frac{4}{3}\\), and flipping \\(-\\frac{2}{3}\\) gives \\(-\\frac{3}{2}\\)."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The worked example says flipping \\(-\\frac{3}{4}\\) gives \\(\\frac{4}{3}\\), then changing the sign gives \\(\\frac{4}{3}\\). Flipping gives \\(-\\frac{4}{3}\\), and changing the sign then gives \\(\\frac{4}{3}\\). As written, 'change the sign' leaves the number unchanged, which contradicts the rule just taught and will confuse students.",
+  "Question b, other: The why repeats the card's error: 'Flip it to get \\(\\frac{3}{2}\\) and change the sign, which gives \\(\\frac{3}{2}\\).' Flipping \\(-\\frac{2}{3}\\) gives \\(-\\frac{3}{2}\\), and changing the sign gives \\(\\frac{3}{2}\\). The why's own later sentence, that \\(-\\frac{3}{2}\\) flips but forgets the sign change, contradicts its first step."
+ ],
+ "proposal": {
+  "title": "Parallel and perpendicular lines",
+  "card": [
+   [
+    "Parallel",
+    "Parallel lines never meet. They have equal gradients, so \\(y = 3x + 1\\) and \\(y = 3x - 4\\) are parallel."
+   ],
+   [
+    "Perpendicular",
+    "Perpendicular lines meet at a right angle. Their gradients multiply to \\(-1\\)."
+   ],
+   "To find a perpendicular gradient, flip the fraction and change the sign. The gradient \\(2\\) is \\(\\frac{2}{1}\\). Flip it to get \\(\\frac{1}{2}\\), then change the sign to get \\(-\\frac{1}{2}\\).",
+   "Example: a line has gradient \\(-\\frac{3}{4}\\). Flip it to get \\(-\\frac{4}{3}\\), then change the sign to get \\(\\frac{4}{3}\\). Check: \\(-\\frac{3}{4} \\times \\frac{4}{3} = -1\\)."
+  ],
+  "remember": "Parallel: same gradient. Perpendicular: flip it and change the sign.",
+  "a": {
+   "q": "Which line is perpendicular to \\(y = 5x + 2\\)?",
+   "opts": [
+    "\\(y = -\\frac{1}{5}x + 2\\)",
+    "\\(y = \\frac{1}{5}x + 2\\)",
+    "\\(y = -5x + 2\\)",
+    "\\(y = 5x - 2\\)"
+   ],
+   "why": "The gradient of the given line is \\(5\\). The perpendicular gradient is \\(-\\frac{1}{5}\\), because \\(5 \\times -\\frac{1}{5} = -1\\). The line \\(y = \\frac{1}{5}x + 2\\) only flips the fraction and keeps the sign, so its product with \\(5\\) is \\(1\\), not \\(-1\\).",
+   "clue": "Flip the gradient, then change its sign."
+  },
+  "b": {
+   "d": 3,
+   "q": "Line \\(p\\) has equation \\(y = -\\frac{2}{3}x + 7\\). Line \\(q\\) is perpendicular to \\(p\\). What is the gradient of \\(q\\)?",
+   "opts": [
+    "\\(\\frac{3}{2}\\)",
+    "\\(-\\frac{3}{2}\\)",
+    "\\(\\frac{2}{3}\\)",
+    "\\(-\\frac{2}{3}\\)"
+   ],
+   "why": "The gradient of \\(p\\) is \\(-\\frac{2}{3}\\). Flip it to get \\(-\\frac{3}{2}\\), then change the sign to get \\(\\frac{3}{2}\\). Check: \\(-\\frac{2}{3} \\times \\frac{3}{2} = -1\\). The option \\(-\\frac{3}{2}\\) flips the fraction but forgets to change the sign.",
+   "clue": "The two gradients must multiply to \\(-1\\)."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(y = -\\frac{1}{5}x + 2\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(\\frac{3}{2}\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card, both questions and both explanations are correct and consistent: a has the perpendicular line \\(y = -\\frac{1}{5}x + 2\\), and b has the gradient \\(\\frac{3}{2}\\)."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The worked example says flipping \\(-\\frac{3}{4}\\) gives \\(\\frac{4}{3}\\), then changing the sign gives \\(\\frac{4}{3}\\). Flipping gives \\(-\\frac{4}{3}\\), and changing the sign then gives \\(\\frac{4}{3}\\). As written, 'change the sign' leaves the number unchanged, which contradicts the rule just taught and will confuse students."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why repeats the card's error: 'Flip it to get \\(\\frac{3}{2}\\) and change the sign, which gives \\(\\frac{3}{2}\\).' Flipping \\(-\\frac{2}{3}\\) gives \\(-\\frac{3}{2}\\), and changing the sign gives \\(\\frac{3}{2}\\). The why's own later sentence, that \\(-\\frac{3}{2}\\) flips but forgets the sign change, contradicts its first step."
+   }
+  ],
+  "flags": [
+   "Card, fact: The worked example says flipping \\(-\\frac{3}{4}\\) gives \\(\\frac{4}{3}\\), then changing the sign gives \\(\\frac{4}{3}\\). Flipping gives \\(-\\frac{4}{3}\\), and changing the sign then gives \\(\\frac{4}{3}\\). As written, 'change the sign' leaves the number unchanged, which contradicts the rule just taught and will confuse students.",
+   "Question b, other: The why repeats the card's error: 'Flip it to get \\(\\frac{3}{2}\\) and change the sign, which gives \\(\\frac{3}{2}\\).' Flipping \\(-\\frac{2}{3}\\) gives \\(-\\frac{3}{2}\\), and changing the sign gives \\(\\frac{3}{2}\\). The why's own later sentence, that \\(-\\frac{3}{2}\\) flips but forgets the sign change, contradicts its first step."
+  ]
+ },
+ "final": {
+  "title": "Parallel and perpendicular lines",
+  "card": [
+   [
+    "Parallel",
+    "Parallel lines never meet. They have equal gradients, so \\(y = 3x + 1\\) and \\(y = 3x - 4\\) are parallel."
+   ],
+   [
+    "Perpendicular",
+    "Perpendicular lines meet at a right angle. Their gradients multiply to \\(-1\\)."
+   ],
+   "To find a perpendicular gradient, flip the fraction and change the sign. The gradient \\(2\\) is \\(\\frac{2}{1}\\). Flip it to get \\(\\frac{1}{2}\\), then change the sign to get \\(-\\frac{1}{2}\\).",
+   "Example: a line has gradient \\(-\\frac{3}{4}\\). Flip it to get \\(-\\frac{4}{3}\\), then change the sign to get \\(\\frac{4}{3}\\). Check: \\(-\\frac{3}{4} \\times \\frac{4}{3} = -1\\)."
+  ],
+  "remember": "Parallel: same gradient. Perpendicular: flip it and change the sign.",
+  "a": {
+   "q": "Which line is perpendicular to \\(y = 5x + 2\\)?",
+   "opts": [
+    "\\(y = -\\frac{1}{5}x + 2\\)",
+    "\\(y = \\frac{1}{5}x + 2\\)",
+    "\\(y = -5x + 2\\)",
+    "\\(y = 5x - 2\\)"
+   ],
+   "why": "The gradient of the given line is \\(5\\). The perpendicular gradient is \\(-\\frac{1}{5}\\), because \\(5 \\times -\\frac{1}{5} = -1\\). The line \\(y = \\frac{1}{5}x + 2\\) only flips the fraction and keeps the sign, so its product with \\(5\\) is \\(1\\), not \\(-1\\).",
+   "clue": "Flip the gradient, then change its sign."
+  },
+  "b": {
+   "d": 3,
+   "q": "Line \\(p\\) has equation \\(y = -\\frac{2}{3}x + 7\\). Line \\(q\\) is perpendicular to \\(p\\). What is the gradient of \\(q\\)?",
+   "opts": [
+    "\\(\\frac{3}{2}\\)",
+    "\\(-\\frac{3}{2}\\)",
+    "\\(\\frac{2}{3}\\)",
+    "\\(-\\frac{2}{3}\\)"
+   ],
+   "why": "The gradient of \\(p\\) is \\(-\\frac{2}{3}\\). Flip it to get \\(-\\frac{3}{2}\\), then change the sign to get \\(\\frac{3}{2}\\). Check: \\(-\\frac{2}{3} \\times \\frac{3}{2} = -1\\). The option \\(-\\frac{3}{2}\\) flips the fraction but forgets to change the sign.",
+   "clue": "The two gradients must multiply to \\(-1\\)."
+  }
+ },
+ "cleared_by": "recheck"
 }

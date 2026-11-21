@@ -24,8 +24,139 @@
    0.256
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:56Z write: done",
+  "2026-11-20T12:44:59Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00032,
+  "write": 0.00814,
+  "check": 0.00751
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-perfect-squares-difference-two, covers the same expansions at the right depth, but it only teaches expanding, while the new point also asks students to spot expressions that factorise this way, which would need a new step.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Perfect squares and difference of two squares",
+  "card": [
+   [
+    "Perfect square",
+    "Squaring a binomial gives \\((a + b)^{2} = a^{2} + 2ab + b^{2}\\). The middle term is twice the product of the two terms, so it is not left out."
+   ],
+   [
+    "Difference of two squares",
+    "A sum times a difference gives \\((a + b)(a - b) = a^{2} - b^{2}\\). The two middle terms cancel, so only a square minus a square is left."
+   ],
+   [
+    "Worked example",
+    "\\((x + 5)^{2} = x^{2} + 2 \\times x \\times 5 + 5^{2} = x^{2} + 10x + 25\\). Also \\((x + 5)(x - 5) = x^{2} - 25\\)."
+   ],
+   [
+    "Spotting them",
+    "\\(x^{2} - 49\\) is a square minus a square, so it factorises as \\((x + 7)(x - 7)\\). \\(x^{2} - 6x + 9\\) has first and last terms that are squares and a middle term of \\(-2 \\times x \\times 3\\), so it is \\((x - 3)^{2}\\)."
+   ]
+  ],
+  "remember": "Squaring a binomial has a middle term of twice the product. A sum times a difference has no middle term.",
+  "a": {
+   "q": "What is the expansion of \\((x + 4)^{2}\\)?",
+   "opts": [
+    "\\(x^{2} + 8x + 16\\)",
+    "\\(x^{2} + 16\\)",
+    "\\(x^{2} + 4x + 16\\)",
+    "\\(x^{2} + 8x + 8\\)"
+   ],
+   "why": "Twice the product of \\(x\\) and 4 is \\(8x\\), and \\(4^{2} = 16\\), so the result is \\(x^{2} + 8x + 16\\). The option \\(x^{2} + 16\\) is the tempting mistake of squaring each term and leaving out the middle term.",
+   "clue": "Write the middle term as twice the product of the two terms."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which is the factorised form of \\(9x^{2} - 25\\)?",
+   "opts": [
+    "\\((3x + 5)(3x - 5)\\)",
+    "\\((3x - 5)^{2}\\)",
+    "\\((9x + 5)(9x - 5)\\)",
+    "\\((3x + 25)(3x - 25)\\)"
+   ],
+   "why": "\\(9x^{2} = (3x)^{2}\\) and \\(25 = 5^{2}\\), so this is a square minus a square: \\((3x + 5)(3x - 5)\\). The option \\((3x - 5)^{2}\\) is tempting, but it expands to \\(9x^{2} - 30x + 25\\), which has a middle term.",
+   "clue": "Find the square root of each term, including the 9 in front of \\(x^{2}\\)."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(x^{2} + 8x + 16\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\((3x + 5)(3x - 5)\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Perfect squares and difference of two squares",
+  "card": [
+   [
+    "Perfect square",
+    "Squaring a binomial gives \\((a + b)^{2} = a^{2} + 2ab + b^{2}\\). The middle term is twice the product of the two terms, so it is not left out."
+   ],
+   [
+    "Difference of two squares",
+    "A sum times a difference gives \\((a + b)(a - b) = a^{2} - b^{2}\\). The two middle terms cancel, so only a square minus a square is left."
+   ],
+   [
+    "Worked example",
+    "\\((x + 5)^{2} = x^{2} + 2 \\times x \\times 5 + 5^{2} = x^{2} + 10x + 25\\). Also \\((x + 5)(x - 5) = x^{2} - 25\\)."
+   ],
+   [
+    "Spotting them",
+    "\\(x^{2} - 49\\) is a square minus a square, so it factorises as \\((x + 7)(x - 7)\\). \\(x^{2} - 6x + 9\\) has first and last terms that are squares and a middle term of \\(-2 \\times x \\times 3\\), so it is \\((x - 3)^{2}\\)."
+   ]
+  ],
+  "remember": "Squaring a binomial has a middle term of twice the product. A sum times a difference has no middle term.",
+  "a": {
+   "q": "What is the expansion of \\((x + 4)^{2}\\)?",
+   "opts": [
+    "\\(x^{2} + 8x + 16\\)",
+    "\\(x^{2} + 16\\)",
+    "\\(x^{2} + 4x + 16\\)",
+    "\\(x^{2} + 8x + 8\\)"
+   ],
+   "why": "Twice the product of \\(x\\) and 4 is \\(8x\\), and \\(4^{2} = 16\\), so the result is \\(x^{2} + 8x + 16\\). The option \\(x^{2} + 16\\) is the tempting mistake of squaring each term and leaving out the middle term.",
+   "clue": "Write the middle term as twice the product of the two terms."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which is the factorised form of \\(9x^{2} - 25\\)?",
+   "opts": [
+    "\\((3x + 5)(3x - 5)\\)",
+    "\\((3x - 5)^{2}\\)",
+    "\\((9x + 5)(9x - 5)\\)",
+    "\\((3x + 25)(3x - 25)\\)"
+   ],
+   "why": "\\(9x^{2} = (3x)^{2}\\) and \\(25 = 5^{2}\\), so this is a square minus a square: \\((3x + 5)(3x - 5)\\). The option \\((3x - 5)^{2}\\) is tempting, but it expands to \\(9x^{2} - 30x + 25\\), which has a middle term.",
+   "clue": "Find the square root of each term, including the 9 in front of \\(x^{2}\\)."
+  }
+ },
+ "cleared_by": "checker"
 }

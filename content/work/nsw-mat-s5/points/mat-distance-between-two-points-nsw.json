@@ -24,8 +24,224 @@
    0.385
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 says reuse mat-distance-between-two-points, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:55Z confirm: Claude Opus 5.5 may adapt mat-distance-between-two-points, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt mat-distance-between-two-points (2 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting mat-distance-between-two-points on the next run",
+  "2026-11-20T14:12:39Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "confirm": 0.01364,
+  "adapt": 0.00701,
+  "check": 0.00798
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-distance-between-two-points",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the same method at the same Year 9 depth: the horizontal and vertical changes form the shorter sides of a right-angled triangle, and Pythagoras gives the distance, with fair worked and practice questions for a Stage 5 student.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-distance-between-two-points",
+  "changes": [
+   "Have students sketch the right-angled triangle on the Cartesian plane, with the interval as its hypotenuse, and find the horizontal and vertical sides from it.",
+   "Present the method as applying Pythagoras' theorem to that triangle rather than as a distance formula, since the NSW Stage 5 core works from the triangle and leaves the formula to path content."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea at a Year 9 depth with fair questions, but it should lead with drawing the triangle and using Pythagoras' theorem, as the NSW Stage 5 core outcome and the brief describe, rather than framing it as a formula.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-distance-between-two-points",
+  "changes": [
+   "Lead with drawing a right-angled triangle on the number plane with the interval as its hypotenuse, then finding the horizontal and vertical sides from the coordinates.",
+   "Present the working as Pythagoras' theorem on that triangle, \\(c^{2} = a^{2} + b^{2}\\), rather than as a distance formula."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card1",
+   "card2",
+   "card3",
+   "card4",
+   "remember",
+   "a.q",
+   "a.why",
+   "a.clue",
+   "b.q",
+   "b.why",
+   "b.clue"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same idea and its sums are right, but it frames the method as a formula. The brief, like NSW Stage 5 core, works by drawing the right-angled triangle and using Pythagoras' theorem, leaving the distance formula to the paths course.",
+   "item": "7bdb8d7bde6b2591",
+   "result": "decided",
+   "saved": {
+    "id": "mat-distance-between-two-points-nsw",
+    "title": "Distance between two points",
+    "brief": "ddd1c9858514",
+    "shortlist": [
+     [
+      "mat-problems-with-two-right",
+      0.512
+     ],
+     [
+      "mat-pythagoras-theorem-hypotenuse",
+      0.455
+     ],
+     [
+      "mat-distance-between-two-points",
+      0.423
+     ],
+     [
+      "mat-right-angled-trigonometry",
+      0.388
+     ],
+     [
+      "mat-pythagoras-theorem",
+      0.385
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00033,
+     "confirm": 0.01364
+    },
+    "match": {
+     "verdict": "reuse",
+     "same": "mat-distance-between-two-points",
+     "changes": [],
+     "sure": "high",
+     "reason": "The bank point teaches the same method at the same Year 9 depth: the horizontal and vertical changes form the shorter sides of a right-angled triangle, and Pythagoras gives the distance, with fair worked and practice questions for a Stage 5 student.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-distance-between-two-points",
+     "changes": [
+      "Have students sketch the right-angled triangle on the Cartesian plane, with the interval as its hypotenuse, and find the horizontal and vertical sides from it.",
+      "Present the method as applying Pythagoras' theorem to that triangle rather than as a distance formula, since the NSW Stage 5 core works from the triangle and leaves the formula to path content."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same idea at a Year 9 depth with fair questions, but it should lead with drawing the triangle and using Pythagoras' theorem, as the NSW Stage 5 core outcome and the brief describe, rather than framing it as a formula.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "4fcd06334cdb39bf"
+  }
+ ],
+ "draft": {
+  "title": "Distance between two points",
+  "card": [
+   "To find the distance between two points on the number plane, draw a right-angled triangle. The interval joining the points is its hypotenuse.",
+   "Make the other two sides horizontal and vertical. Find their lengths from the coordinates: subtract the \\(x\\) values for the horizontal side and the \\(y\\) values for the vertical side.",
+   "Use Pythagoras' theorem on the triangle: \\(c^{2} = a^{2} + b^{2}\\), where \\(c\\) is the hypotenuse. Add the squares of the two sides, then take the square root to find \\(c\\).",
+   [
+    "Example",
+    "From \\((1, 2)\\) to \\((4, 6)\\): the horizontal side is 3 and the vertical side is 4. So \\(c^{2} = 3^{2} + 4^{2} = 25\\), and \\(c = 5\\)."
+   ]
+  ],
+  "remember": "Draw the triangle, find its two sides, then use \\(c^{2} = a^{2} + b^{2}\\).",
+  "a": {
+   "q": "A right-angled triangle is drawn with the interval from \\((2, 1)\\) to \\((5, 5)\\) as its hypotenuse. How long is the interval?",
+   "opts": [
+    "5",
+    "7",
+    "25",
+    "3.5"
+   ],
+   "why": "The horizontal side is 3 and the vertical side is 4, so \\(c^{2} = 9 + 16 = 25\\). Then \\(c = 5\\). The answer 25 is tempting, but it is \\(c^{2}\\), so the square root step is missing.",
+   "clue": "Find \\(c^{2}\\), then take the square root."
+  },
+  "b": {
+   "d": 3,
+   "q": "On a park map grid in metres, a path runs from \\((-3, 2)\\) to \\((5, -4)\\). Use a right-angled triangle to find the path's length.",
+   "opts": [
+    "10 m",
+    "14 m",
+    "100 m",
+    "2 m"
+   ],
+   "why": "The horizontal side is \\(5 - (-3) = 8\\) and the vertical side is 6 in length. So \\(c^{2} = 64 + 36 = 100\\), and \\(c = 10\\) m. The answer 14 comes from adding the sides instead of using Pythagoras' theorem.",
+   "clue": "Take care with the negative numbers when finding each side."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "5",
+   "also_right": []
+  },
+  "b": {
+   "best": "10 m",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out: the sides 3 and 4 give a length of 5, and the sides 8 and 6 give 10 m. The explanations agree with the card."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Distance between two points",
+  "card": [
+   "To find the distance between two points on the number plane, draw a right-angled triangle. The interval joining the points is its hypotenuse.",
+   "Make the other two sides horizontal and vertical. Find their lengths from the coordinates: subtract the \\(x\\) values for the horizontal side and the \\(y\\) values for the vertical side.",
+   "Use Pythagoras' theorem on the triangle: \\(c^{2} = a^{2} + b^{2}\\), where \\(c\\) is the hypotenuse. Add the squares of the two sides, then take the square root to find \\(c\\).",
+   [
+    "Example",
+    "From \\((1, 2)\\) to \\((4, 6)\\): the horizontal side is 3 and the vertical side is 4. So \\(c^{2} = 3^{2} + 4^{2} = 25\\), and \\(c = 5\\)."
+   ]
+  ],
+  "remember": "Draw the triangle, find its two sides, then use \\(c^{2} = a^{2} + b^{2}\\).",
+  "a": {
+   "q": "A right-angled triangle is drawn with the interval from \\((2, 1)\\) to \\((5, 5)\\) as its hypotenuse. How long is the interval?",
+   "opts": [
+    "5",
+    "7",
+    "25",
+    "3.5"
+   ],
+   "why": "The horizontal side is 3 and the vertical side is 4, so \\(c^{2} = 9 + 16 = 25\\). Then \\(c = 5\\). The answer 25 is tempting, but it is \\(c^{2}\\), so the square root step is missing.",
+   "clue": "Find \\(c^{2}\\), then take the square root."
+  },
+  "b": {
+   "d": 3,
+   "q": "On a park map grid in metres, a path runs from \\((-3, 2)\\) to \\((5, -4)\\). Use a right-angled triangle to find the path's length.",
+   "opts": [
+    "10 m",
+    "14 m",
+    "100 m",
+    "2 m"
+   ],
+   "why": "The horizontal side is \\(5 - (-3) = 8\\) and the vertical side is 6 in length. So \\(c^{2} = 64 + 36 = 100\\), and \\(c = 10\\) m. The answer 14 comes from adding the sides instead of using Pythagoras' theorem.",
+   "clue": "Take care with the negative numbers when finding each side."
+  }
+ }
 }

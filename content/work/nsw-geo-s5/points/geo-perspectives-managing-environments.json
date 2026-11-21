@@ -16,8 +16,141 @@
    0.21
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:48Z write: done",
+  "2026-11-20T12:35:49Z check: for review (first-nations)",
+  "2026-11-20T14:39:34Z review: rejected, to be written again",
+  "2026-11-20T14:58:19Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.01089,
+  "check": 0.01238
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Trade-offs in environmental decisions, is about the trade-off itself and only touches on groups weighing costs differently, while the new point is about the range of stakeholder perspectives on how an environment should be used, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Perspectives on managing environments",
+  "card": [
+   "A perspective is the view a person or group holds, shaped by their interests, values and experience. Different groups can hold different views on how the same environment should be used.",
+   "Farmers may want land and water for growing food. Developers may want land for housing or industry. Governments may try to balance jobs, services and the environment.",
+   "Scientists may offer evidence about how an environment works and how it is changing. Environmental groups may argue for protecting nature.",
+   "Aboriginal communities may see the environment as Country, with cultural and spiritual connections and a responsibility to care for it. Groups can also disagree within themselves."
+  ],
+  "remember": "The same place can be seen in different ways, depending on a group's interests, values and experience.",
+  "a": {
+   "q": "Why can a farmer and an environmental group disagree about a river?",
+   "opts": [
+    "They have different interests and values about its use",
+    "They are looking at two different rivers",
+    "One of them does not need the river's water",
+    "Only one of them can read scientific evidence"
+   ],
+   "why": "Perspectives come from interests, values and experience. A farmer may value water for crops, while an environmental group may value the river's health. The other options are not reasons that the card gives.",
+   "clue": "Think about what each group wants from the river."
+  },
+  "b": {
+   "d": 3,
+   "q": "A developer plans homes on bushland near Orange. Which view is most likely to come from an environmental group?",
+   "opts": [
+    "The bushland should be protected as habitat for wildlife",
+    "The land should be cleared quickly to supply new housing",
+    "The council should weigh jobs, housing and the environment",
+    "The bushland should be cleared to make room for crops"
+   ],
+   "why": "Environmental groups may argue for protecting nature, so protecting habitat fits their perspective. Clearing for housing is the developer's view. Weighing several needs is more like a government's role.",
+   "clue": "Which group may argue for protecting nature?"
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:19Z",
+   "step": "write",
+   "version": {
+    "title": "Perspectives on managing environments",
+    "card": [
+     "A perspective is the way a person or group sees an issue, shaped by their interests, values and experiences. Different groups can want very different things from the same place.",
+     "Farmers may want water and land to grow food. Developers may want land for housing or industry. Governments may weigh jobs, services and the environment against each other.",
+     "Scientists may gather evidence on how an environment works and how it is changing. Environmental groups may argue for protecting habitats and species.",
+     "Aboriginal communities may see the place as Country, with cultural ties and a responsibility to care for it. People within one group can also disagree."
+    ],
+    "remember": "Who you are and what you need shapes how you think a place should be used.",
+    "a": {
+     "q": "A wetland could be drained for farming or kept for birds. Why are groups likely to disagree about it?",
+     "opts": [
+      "Their interests and values point to different uses",
+      "Each group has different facts about the wetland's size",
+      "One group has misread what the wetland is like",
+      "The wetland means the same to every group that uses it"
+     ],
+     "why": "A perspective is shaped by interests, values and experiences. A farmer may value the land for crops, while a bird group values the habitat. They can agree on the facts and still want different uses.",
+     "clue": "What shapes the way each group sees the wetland?"
+    },
+    "b": {
+     "d": 3,
+     "q": "A company plans a mine near a river that local farms draw on. Which view most likely comes from the farmers?",
+     "opts": [
+      "The mine could cut the river water we need for crops",
+      "The mine will bring new homes and jobs to the town",
+      "The mine could damage habitat for rare river fish",
+      "Testing should measure how the mine changes the river"
+     ],
+     "why": "Farmers may want water and land to grow food, so their likely concern is losing water for crops. Concern for fish habitat fits an environmental group, and measuring the change fits scientists.",
+     "clue": "What does a farm need most from the river?"
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Perspectives on managing environments",
+  "card": [
+   "A perspective is the way a person or group sees an issue, shaped by their interests, values and experiences. Different groups can want very different things from the same place.",
+   "Farmers may want water and land to grow food. Developers may want land for housing or industry. Governments may weigh jobs, services and the environment against each other.",
+   "Scientists may gather evidence on how an environment works and how it is changing. Environmental groups may argue for protecting habitats and species.",
+   "Aboriginal communities may see the place as Country, with cultural ties and a responsibility to care for it. People within one group can also disagree."
+  ],
+  "remember": "Who you are and what you need shapes how you think a place should be used.",
+  "a": {
+   "q": "A wetland could be drained for farming or kept for birds. Why are groups likely to disagree about it?",
+   "opts": [
+    "Their interests and values point to different uses",
+    "Each group has different facts about the wetland's size",
+    "One group has misread what the wetland is like",
+    "The wetland means the same to every group that uses it"
+   ],
+   "why": "A perspective is shaped by interests, values and experiences. A farmer may value the land for crops, while a bird group values the habitat. They can agree on the facts and still want different uses.",
+   "clue": "What shapes the way each group sees the wetland?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A company plans a mine near a river that local farms draw on. Which view most likely comes from the farmers?",
+   "opts": [
+    "The mine could cut the river water we need for crops",
+    "The mine will bring new homes and jobs to the town",
+    "The mine could damage habitat for rare river fish",
+    "Testing should measure how the mine changes the river"
+   ],
+   "why": "Farmers may want water and land to grow food, so their likely concern is losing water for crops. Concern for fish habitat fits an environmental group, and measuring the change fits scientists.",
+   "clue": "What does a farm need most from the river?"
+  }
+ },
+ "local": []
 }

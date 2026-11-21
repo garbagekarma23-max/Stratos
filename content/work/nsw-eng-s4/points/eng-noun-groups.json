@@ -16,8 +16,244 @@
    0.276
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:42Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.00589,
+  "check": 0.0126,
+  "fix": 0.02079,
+  "recheck": 0.00622
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the three bank points teaches noun groups: abstract nouns covers word types, nominalisation covers turning verbs into nouns, and embedded clauses covers clauses, so none is the same idea at Stage 4 depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Noun groups",
+  "card": [
+   "A noun group is a noun with the words around it that describe or point to it. The noun is the main word, called the head.",
+   [
+    "Short",
+    "a noun group with few or no extra words, such as the jetty. It is clear and simple."
+   ],
+   [
+    "Elaborated",
+    "a noun group with extra detail before or after the noun, such as the old timber jetty by the river. Here jetty is the head."
+   ],
+   "Writers add detail to a noun group to tell the reader exactly which thing, or what it is like. Use a short one when plain and quick is better."
+  ],
+  "remember": "A noun group is the noun plus its extra words. More detail makes the picture more precise.",
+  "a": {
+   "q": "Which of these is an elaborated noun group?",
+   "opts": [
+    "the cracked blue mug on the shelf",
+    "the mug",
+    "she drank",
+    "quickly and quietly"
+   ],
+   "why": "The first option has a head noun, mug, with detail before it (cracked, blue) and after it (on the shelf). The mug is a noun group too, but it is short, not elaborated.",
+   "clue": "Look for a noun with extra detail around it."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia writes: A dog barked. She wants the reader to picture exactly which dog. Which rewrite does this best?",
+   "opts": [
+    "A scruffy brown terrier from next door barked",
+    "A dog barked loudly and suddenly",
+    "The dog barked and then it stopped",
+    "Barking, the dog ran away fast"
+   ],
+   "why": "The first option adds detail to the noun group itself, so the reader can picture the dog. The second adds detail about how it barked, which describes the action, not the dog.",
+   "clue": "Which option adds detail around the noun, not the verb?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "the cracked blue mug on the shelf",
+   "also_right": []
+  },
+  "b": {
+   "best": "A scruffy brown terrier from next door barked",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why refers to 'the first option', but options are shown in random order. The right answer, 'the cracked blue mug on the shelf', is not first here, so the explanation points students to the wrong option. Name the option by its text instead."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why refers to 'the first option' and 'the second'. In the order shown, the right answer is third, and 'A dog barked loudly and suddenly' is first, not second. Refer to options by their wording, not their position."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option, 'the cracked blue mug on the shelf', is by far the longest and the only one with several detail words. A student could pick it on length alone without knowing what an elaborated noun group is."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and answers are correct. Both whys refer to options by position ('first', 'second'), which does not match the shuffled order students see. In question a, the right option stands out as clearly the longest."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The why refers to 'the first option', but options are shown in random order. The right answer, 'the cracked blue mug on the shelf', is not first here, so the explanation points students to the wrong option. Name the option by its text instead.",
+  "Question b, other: The why refers to 'the first option' and 'the second'. In the order shown, the right answer is third, and 'A dog barked loudly and suddenly' is first, not second. Refer to options by their wording, not their position.",
+  "Question a, wording: The right option, 'the cracked blue mug on the shelf', is by far the longest and the only one with several detail words. A student could pick it on length alone without knowing what an elaborated noun group is."
+ ],
+ "proposal": {
+  "title": "Noun groups",
+  "card": [
+   "A noun group is a noun with the words around it that describe or point to it. The noun is the main word, called the head.",
+   [
+    "Short",
+    "a noun group with few or no extra words, such as the jetty. It is clear and simple."
+   ],
+   [
+    "Elaborated",
+    "a noun group with extra detail before or after the noun, such as the old timber jetty by the river. Here jetty is the head."
+   ],
+   "Writers add detail to a noun group to tell the reader exactly which thing, or what it is like. Use a short one when plain and quick is better."
+  ],
+  "remember": "A noun group is the noun plus its extra words. More detail makes the picture more precise.",
+  "a": {
+   "q": "In the noun group the old wooden box under my bed, which word is the head?",
+   "opts": [
+    "box",
+    "bed",
+    "old",
+    "wooden"
+   ],
+   "why": "Box is the head: old and wooden describe it, and under my bed tells you where it is. Bed is a noun too, but it is part of the extra detail about the box, not the main word of the group.",
+   "clue": "Which thing is the whole group about?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia writes: A dog barked. She wants the reader to picture exactly which dog. Which rewrite does this best?",
+   "opts": [
+    "The scruffy terrier from next door barked",
+    "A dog barked loudly and suddenly at night",
+    "A dog barked again and again in the yard",
+    "Barking, a dog ran off down the street fast"
+   ],
+   "why": "The scruffy terrier from next door barked builds detail around the noun, so the reader knows which dog it is. A dog barked loudly and suddenly at night adds detail about how and when it barked, which describes the action, not the dog.",
+   "clue": "Which rewrite adds detail around the noun, not the verb?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "box",
+    "also_right": []
+   },
+   "b": {
+    "best": "The scruffy terrier from next door barked",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why refers to 'the first option', but options are shown in random order. The right answer, 'the cracked blue mug on the shelf', is not first here, so the explanation points students to the wrong option. Name the option by its text instead."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why refers to 'the first option' and 'the second'. In the order shown, the right answer is third, and 'A dog barked loudly and suddenly' is first, not second. Refer to options by their wording, not their position."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option, 'the cracked blue mug on the shelf', is by far the longest and the only one with several detail words. A student could pick it on length alone without knowing what an elaborated noun group is."
+   }
+  ],
+  "flags": [
+   "Question a, other: The why refers to 'the first option', but options are shown in random order. The right answer, 'the cracked blue mug on the shelf', is not first here, so the explanation points students to the wrong option. Name the option by its text instead.",
+   "Question b, other: The why refers to 'the first option' and 'the second'. In the order shown, the right answer is third, and 'A dog barked loudly and suddenly' is first, not second. Refer to options by their wording, not their position.",
+   "Question a, wording: The right option, 'the cracked blue mug on the shelf', is by far the longest and the only one with several detail words. A student could pick it on length alone without knowing what an elaborated noun group is."
+  ]
+ },
+ "final": {
+  "title": "Noun groups",
+  "card": [
+   "A noun group is a noun with the words around it that describe or point to it. The noun is the main word, called the head.",
+   [
+    "Short",
+    "a noun group with few or no extra words, such as the jetty. It is clear and simple."
+   ],
+   [
+    "Elaborated",
+    "a noun group with extra detail before or after the noun, such as the old timber jetty by the river. Here jetty is the head."
+   ],
+   "Writers add detail to a noun group to tell the reader exactly which thing, or what it is like. Use a short one when plain and quick is better."
+  ],
+  "remember": "A noun group is the noun plus its extra words. More detail makes the picture more precise.",
+  "a": {
+   "q": "In the noun group the old wooden box under my bed, which word is the head?",
+   "opts": [
+    "box",
+    "bed",
+    "old",
+    "wooden"
+   ],
+   "why": "Box is the head: old and wooden describe it, and under my bed tells you where it is. Bed is a noun too, but it is part of the extra detail about the box, not the main word of the group.",
+   "clue": "Which thing is the whole group about?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia writes: A dog barked. She wants the reader to picture exactly which dog. Which rewrite does this best?",
+   "opts": [
+    "The scruffy terrier from next door barked",
+    "A dog barked loudly and suddenly at night",
+    "A dog barked again and again in the yard",
+    "Barking, a dog ran off down the street fast"
+   ],
+   "why": "The scruffy terrier from next door barked builds detail around the noun, so the reader knows which dog it is. A dog barked loudly and suddenly at night adds detail about how and when it barked, which describes the action, not the dog.",
+   "clue": "Which rewrite adds detail around the noun, not the verb?"
+  }
+ },
+ "cleared_by": "recheck"
 }

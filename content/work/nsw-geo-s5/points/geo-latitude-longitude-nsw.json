@@ -8,8 +8,413 @@
    0.703
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: done",
+  "2026-11-20T12:44:55Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00667,
+  "check": 0.00944,
+  "fix": 0.01937,
+  "recheck": 0.00699
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers latitude and longitude in degrees only and is pitched at Year 7, while the new point adds degrees and minutes, which would need a new step, so a new point fits better.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Latitude and longitude",
+  "card": [
+   [
+    "Latitude",
+    "Lines of latitude run east to west, parallel to the equator. They measure how many degrees a place is north or south of the equator, which is 0 degrees."
+   ],
+   [
+    "Longitude",
+    "Lines of longitude run from the North Pole to the South Pole. They measure how many degrees a place is east or west of Greenwich in London, which is 0 degrees."
+   ],
+   "Each degree is split into 60 minutes. A position such as 33° 52′ S, 151° 12′ E is written with latitude first, then longitude.",
+   "The letters N, S, E and W tell you the side of the equator or Greenwich. Sydney is south of the equator and east of Greenwich, so it is S and E."
+  ],
+  "remember": "Latitude measures north or south of the equator. Longitude measures east or west of Greenwich.",
+  "a": {
+   "q": "A town is at 30° S, 150° E. What does the 150° E tell you?",
+   "opts": [
+    "It is 150 degrees east of Greenwich",
+    "It is 150 degrees east of the equator",
+    "It is 150 degrees north of Greenwich",
+    "It is 150 degrees south of the equator"
+   ],
+   "why": "Longitude is measured east or west of Greenwich, so 150° E means 150 degrees east of Greenwich. Saying east of the equator mixes up the two, because the equator is the starting line for latitude.",
+   "clue": "Which line is the starting point for longitude?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya writes the position of her school as 33° 45′ S, 150° 55′ E. Which statement about the position is correct?",
+   "opts": [
+    "It is 33° 45′ south of the equator",
+    "It is 33° 45′ east of Greenwich",
+    "It is 150° 55′ south of the equator",
+    "It is 33 degrees and 45 degrees south"
+   ],
+   "why": "The first figure is latitude, so 33° 45′ S is 33 degrees and 45 minutes south of the equator. The option about 33° 45′ east of Greenwich mixes up the two, as longitude is the second figure. The last option treats minutes as degrees, but a degree is split into 60 minutes.",
+   "clue": "Latitude comes first. Check what the letter S refers to."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It is 150 degrees east of Greenwich",
+   "also_right": []
+  },
+  "b": {
+   "best": "It is 33° 45′ south of the equator",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) refers to 'the last option' as the one that treats minutes as degrees. Options are shown in random order, and in this order the last option is '150° 55′ south of the equator', not '33 degrees and 45 degrees south'. The why should name the option by its content. It also never explains why the '150° 55′ south' option is wrong."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate, and each question has one clear right answer. Why (b) points to 'the last option', which depends on option order, and it does not explain the '150° 55′ south' distractor."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) refers to 'the last option' as the one that treats minutes as degrees. Options are shown in random order, and in this order the last option is '150° 55′ south of the equator', not '33 degrees and 45 degrees south'. The why should name the option by its content. It also never explains why the '150° 55′ south' option is wrong."
+ ],
+ "proposal": {
+  "title": "Latitude and longitude",
+  "card": [
+   [
+    "Latitude",
+    "Lines of latitude run east to west, parallel to the equator. They measure how many degrees a place is north or south of the equator, which is 0 degrees."
+   ],
+   [
+    "Longitude",
+    "Lines of longitude run from the North Pole to the South Pole. They measure how many degrees a place is east or west of Greenwich in London, which is 0 degrees."
+   ],
+   "Each degree is split into 60 minutes, and the sign ′ marks minutes. A position such as 33° 52′ S, 151° 12′ E is written with latitude first, then longitude.",
+   "The letters N, S, E and W tell you the side of the equator or Greenwich. Sydney is south of the equator and east of Greenwich, so it is S and E."
+  ],
+  "remember": "Latitude measures north or south of the equator. Longitude measures east or west of Greenwich.",
+  "a": {
+   "q": "A town is at 30° S, 150° E. What does the 150° E tell you?",
+   "opts": [
+    "It is 150 degrees east of Greenwich",
+    "It is 150 degrees east of the equator",
+    "It is 150 degrees north of Greenwich",
+    "It is 150 degrees south of the equator"
+   ],
+   "why": "Longitude is measured east or west of Greenwich, so 150° E means 150 degrees east of Greenwich. Saying east of the equator mixes up the two, because the equator is the starting line for latitude.",
+   "clue": "Which line is the starting point for longitude?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya writes the position of her school as 33° 45′ S, 150° 55′ E. Which statement about the position is correct?",
+   "opts": [
+    "It is 33° 45′ south of the equator",
+    "It is 33° 45′ east of Greenwich",
+    "It is 150° 55′ south of the equator",
+    "It is 33 degrees and 45 degrees south"
+   ],
+   "why": "The first figure is latitude, so 33° 45′ S means 33 degrees and 45 minutes south of the equator. The second figure, 150° 55′ E, is longitude: it measures east of Greenwich, so it is not a distance south of the equator, and 33° 45′ is not an east value. Reading 45′ as 45 degrees is also wrong, because the ′ sign marks minutes and a degree is split into 60 minutes.",
+   "clue": "Latitude comes first. Check what the letter S refers to."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It is 150 degrees east of Greenwich",
+    "also_right": []
+   },
+   "b": {
+    "best": "It is 33° 45′ south of the equator",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) refers to 'the last option' as the one that treats minutes as degrees. Options are shown in random order, and in this order the last option is '150° 55′ south of the equator', not '33 degrees and 45 degrees south'. The why should name the option by its content. It also never explains why the '150° 55′ south' option is wrong."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) refers to 'the last option' as the one that treats minutes as degrees. Options are shown in random order, and in this order the last option is '150° 55′ south of the equator', not '33 degrees and 45 degrees south'. The why should name the option by its content. It also never explains why the '150° 55′ south' option is wrong."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Latitude and longitude",
+  "card": [
+   [
+    "Latitude",
+    "Lines of latitude run east to west, parallel to the equator. They measure how many degrees a place is north or south of the equator, which is 0 degrees."
+   ],
+   [
+    "Longitude",
+    "Lines of longitude run from the North Pole to the South Pole. They measure how many degrees a place is east or west of Greenwich in London, which is 0 degrees."
+   ],
+   "Each degree is split into 60 minutes, and the sign ′ marks minutes. A position such as 33° 52′ S, 151° 12′ E is written with latitude first, then longitude.",
+   "The letters N, S, E and W tell you the side of the equator or Greenwich. Sydney is south of the equator and east of Greenwich, so it is S and E."
+  ],
+  "remember": "Latitude measures north or south of the equator. Longitude measures east or west of Greenwich.",
+  "a": {
+   "q": "A town is at 30° S, 150° E. What does the 150° E tell you?",
+   "opts": [
+    "It is 150 degrees east of Greenwich",
+    "It is 150 degrees east of the equator",
+    "It is 150 degrees north of Greenwich",
+    "It is 150 degrees south of the equator"
+   ],
+   "why": "Longitude is measured east or west of Greenwich, so 150° E means 150 degrees east of Greenwich. Saying east of the equator mixes up the two, because the equator is the starting line for latitude.",
+   "clue": "Which line is the starting point for longitude?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya writes the position of her school as 33° 45′ S, 150° 55′ E. Which statement about the position is correct?",
+   "opts": [
+    "It is 33° 45′ south of the equator",
+    "It is 33° 45′ east of Greenwich",
+    "It is 150° 55′ south of the equator",
+    "It is 33 degrees and 45 degrees south"
+   ],
+   "why": "The first figure is latitude, so 33° 45′ S means 33 degrees and 45 minutes south of the equator. The second figure, 150° 55′ E, is longitude: it measures east of Greenwich, so it is not a distance south of the equator, and 33° 45′ is not an east value. Reading 45′ as 45 degrees is also wrong, because the ′ sign marks minutes and a degree is split into 60 minutes.",
+   "clue": "Latitude comes first. Check what the letter S refers to."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix's why for question b now names each wrong option by its content and explains the 150° 55′ south option, which answers the checker's one problem. Every fact is right and each question has one clear right answer listed first.",
+   "item": "7e0a8139d978b357",
+   "result": "decided",
+   "saved": {
+    "id": "geo-latitude-longitude-nsw",
+    "title": "Latitude and longitude",
+    "brief": "047eb4b60bae",
+    "shortlist": [
+     [
+      "mat-latitude-longitude",
+      0.703
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00018,
+     "write": 0.00667,
+     "check": 0.00944,
+     "fix": 0.01937,
+     "recheck": 0.00699
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The closest bank point covers latitude and longitude in degrees only and is pitched at Year 7, while the new point adds degrees and minutes, which would need a new step, so a new point fits better.",
+     "model": "claude-haiku-5-5"
+    },
+    "alone": true,
+    "draft": {
+     "title": "Latitude and longitude",
+     "card": [
+      [
+       "Latitude",
+       "Lines of latitude run east to west, parallel to the equator. They measure how many degrees a place is north or south of the equator, which is 0 degrees."
+      ],
+      [
+       "Longitude",
+       "Lines of longitude run from the North Pole to the South Pole. They measure how many degrees a place is east or west of Greenwich in London, which is 0 degrees."
+      ],
+      "Each degree is split into 60 minutes. A position such as 33° 52′ S, 151° 12′ E is written with latitude first, then longitude.",
+      "The letters N, S, E and W tell you the side of the equator or Greenwich. Sydney is south of the equator and east of Greenwich, so it is S and E."
+     ],
+     "remember": "Latitude measures north or south of the equator. Longitude measures east or west of Greenwich.",
+     "a": {
+      "q": "A town is at 30° S, 150° E. What does the 150° E tell you?",
+      "opts": [
+       "It is 150 degrees east of Greenwich",
+       "It is 150 degrees east of the equator",
+       "It is 150 degrees north of Greenwich",
+       "It is 150 degrees south of the equator"
+      ],
+      "why": "Longitude is measured east or west of Greenwich, so 150° E means 150 degrees east of Greenwich. Saying east of the equator mixes up the two, because the equator is the starting line for latitude.",
+      "clue": "Which line is the starting point for longitude?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya writes the position of her school as 33° 45′ S, 150° 55′ E. Which statement about the position is correct?",
+      "opts": [
+       "It is 33° 45′ south of the equator",
+       "It is 33° 45′ east of Greenwich",
+       "It is 150° 55′ south of the equator",
+       "It is 33 degrees and 45 degrees south"
+      ],
+      "why": "The first figure is latitude, so 33° 45′ S is 33 degrees and 45 minutes south of the equator. The option about 33° 45′ east of Greenwich mixes up the two, as longitude is the second figure. The last option treats minutes as degrees, but a degree is split into 60 minutes.",
+      "clue": "Latitude comes first. Check what the letter S refers to."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "It is 150 degrees east of Greenwich",
+      "also_right": []
+     },
+     "b": {
+      "best": "It is 33° 45′ south of the equator",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "Why (b) refers to 'the last option' as the one that treats minutes as degrees. Options are shown in random order, and in this order the last option is '150° 55′ south of the equator', not '33 degrees and 45 degrees south'. The why should name the option by its content. It also never explains why the '150° 55′ south' option is wrong."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both questions are accurate, and each question has one clear right answer. Why (b) points to 'the last option', which depends on option order, and it does not explain the '150° 55′ south' distractor."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question b, other: Why (b) refers to 'the last option' as the one that treats minutes as degrees. Options are shown in random order, and in this order the last option is '150° 55′ south of the equator', not '33 degrees and 45 degrees south'. The why should name the option by its content. It also never explains why the '150° 55′ south' option is wrong."
+    ],
+    "proposal": {
+     "title": "Latitude and longitude",
+     "card": [
+      [
+       "Latitude",
+       "Lines of latitude run east to west, parallel to the equator. They measure how many degrees a place is north or south of the equator, which is 0 degrees."
+      ],
+      [
+       "Longitude",
+       "Lines of longitude run from the North Pole to the South Pole. They measure how many degrees a place is east or west of Greenwich in London, which is 0 degrees."
+      ],
+      "Each degree is split into 60 minutes, and the sign ′ marks minutes. A position such as 33° 52′ S, 151° 12′ E is written with latitude first, then longitude.",
+      "The letters N, S, E and W tell you the side of the equator or Greenwich. Sydney is south of the equator and east of Greenwich, so it is S and E."
+     ],
+     "remember": "Latitude measures north or south of the equator. Longitude measures east or west of Greenwich.",
+     "a": {
+      "q": "A town is at 30° S, 150° E. What does the 150° E tell you?",
+      "opts": [
+       "It is 150 degrees east of Greenwich",
+       "It is 150 degrees east of the equator",
+       "It is 150 degrees north of Greenwich",
+       "It is 150 degrees south of the equator"
+      ],
+      "why": "Longitude is measured east or west of Greenwich, so 150° E means 150 degrees east of Greenwich. Saying east of the equator mixes up the two, because the equator is the starting line for latitude.",
+      "clue": "Which line is the starting point for longitude?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya writes the position of her school as 33° 45′ S, 150° 55′ E. Which statement about the position is correct?",
+      "opts": [
+       "It is 33° 45′ south of the equator",
+       "It is 33° 45′ east of Greenwich",
+       "It is 150° 55′ south of the equator",
+       "It is 33 degrees and 45 degrees south"
+      ],
+      "why": "The first figure is latitude, so 33° 45′ S means 33 degrees and 45 minutes south of the equator. The second figure, 150° 55′ E, is longitude: it measures east of Greenwich, so it is not a distance south of the equator, and 33° 45′ is not an east value. Reading 45′ as 45 degrees is also wrong, because the ′ sign marks minutes and a degree is split into 60 minutes.",
+      "clue": "Latitude comes first. Check what the letter S refers to."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "It is 150 degrees east of Greenwich",
+       "also_right": []
+      },
+      "b": {
+       "best": "It is 33° 45′ south of the equator",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-20T13:37:07Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "Why (b) refers to 'the last option' as the one that treats minutes as degrees. Options are shown in random order, and in this order the last option is '150° 55′ south of the equator', not '33 degrees and 45 degrees south'. The why should name the option by its content. It also never explains why the '150° 55′ south' option is wrong."
+      }
+     ],
+     "flags": [
+      "Question b, other: Why (b) refers to 'the last option' as the one that treats minutes as degrees. Options are shown in random order, and in this order the last option is '150° 55′ south of the equator', not '33 degrees and 45 degrees south'. The why should name the option by its content. It also never explains why the '150° 55′ south' option is wrong."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "cdd7189d4517b185"
+  }
  ]
 }

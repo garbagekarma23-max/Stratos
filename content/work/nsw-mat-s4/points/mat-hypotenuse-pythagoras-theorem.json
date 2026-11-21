@@ -24,8 +24,220 @@
    0.331
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 says reuse mat-pythagoras-theorem-hypotenuse, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:53Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:53Z write: failed the content check, writing again",
+  "2026-11-20T12:44:58Z write: done",
+  "2026-11-20T12:53:27Z check: flagged",
+  "2026-11-20T12:59:59Z fix: suggested",
+  "2026-11-20T13:23:42Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "confirm": 0.01235,
+  "write": 0.01729,
+  "check": 0.01118,
+  "fix": 0.02042
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-pythagoras-theorem-hypotenuse",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank card teaches the same idea at the same depth: the hypotenuse is the longest side opposite the right angle, and c² = a² + b², with questions that suit a Stage 4 student.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point teaches how to calculate the hypotenuse, and both its questions test that calculation, while this point teaches identifying the hypotenuse and stating the theorem as a relation between the squares on the sides, so the bank point is a broader, procedure-focused idea rather than the same one.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "The hypotenuse and Pythagoras' theorem",
+  "card": [
+   [
+    "Hypotenuse",
+    "In a right-angled triangle, the hypotenuse is the side opposite the right angle. It is always the longest side."
+   ],
+   "Pythagoras' theorem links the three sides. The square on the hypotenuse equals the sum of the squares on the other two sides.",
+   "If the hypotenuse is \\(c\\) and the other sides are \\(a\\) and \\(b\\), then \\(c^{2} = a^{2} + b^{2}\\).",
+   [
+    "Example",
+    "A triangle has shorter sides 3 and 4, and hypotenuse 5. Check: \\(3^{2} + 4^{2} = 9 + 16 = 25\\), and \\(5^{2} = 25\\)."
+   ]
+  ],
+  "remember": "The hypotenuse faces the right angle, and its square equals the sum of the other two squares.",
+  "a": {
+   "q": "A triangle has a right angle at corner B. Which side lies directly across from corner B, and so is the hypotenuse?",
+   "opts": [
+    "The side joining the other two corners",
+    "A side that touches corner B",
+    "The shortest side of the triangle",
+    "The side drawn along the bottom"
+   ],
+   "why": "The hypotenuse is opposite the right angle, so it joins the two corners that are not the right angle. The sides touching corner B are the two shorter sides. Which side sits at the bottom depends only on how the triangle is turned.",
+   "clue": "Find the right angle, then look across the triangle."
+  },
+  "b": {
+   "d": 3,
+   "q": "A right-angled triangle has sides 5, 12 and 13. Which equation is correct for it?",
+   "opts": [
+    "\\(13^{2} = 5^{2} + 12^{2}\\)",
+    "\\(12^{2} = 5^{2} + 13^{2}\\)",
+    "\\(5^{2} = 12^{2} + 13^{2}\\)",
+    "\\(13 = 5 + 12\\)"
+   ],
+   "why": "The hypotenuse is the longest side, 13, so its square is on its own: \\(169 = 25 + 144\\). The last option adds the sides without squaring them, and \\(5 + 12 = 17\\), not 13.",
+   "clue": "Put the longest side on its own, and square every side."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A right-angled triangle turned so the right angle is at the bottom left, with the right angle marked by a small square. The side opposite the right angle is labelled hypotenuse. The two sides next to the right angle are labelled with the letters a and b, and the hypotenuse is labelled c.",
+    "why": "It shows which side is the hypotenuse by its position opposite the right angle."
+   }
+  ]
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The side joining the other two corners",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(13^{2} = 5^{2} + 12^{2}\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says 'The last option adds the sides without squaring them', but options are shown in random order. The adding option (\\(13 = 5 + 12\\)) will not always be last, and as listed here the last option is the correct one. The why should name the option by its content, not its position."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct. The why for question b refers to 'the last option', which is wrong once options are shuffled, so it should name the option \\(13 = 5 + 12\\) instead."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The why says 'The last option adds the sides without squaring them', but options are shown in random order. The adding option (\\(13 = 5 + 12\\)) will not always be last, and as listed here the last option is the correct one. The why should name the option by its content, not its position."
+ ],
+ "proposal": {
+  "title": "The hypotenuse and Pythagoras' theorem",
+  "card": [
+   "In a right-angled triangle, the hypotenuse is the side opposite the right angle. It is always the longest side.",
+   "Pythagoras' theorem links the three sides. The square on the hypotenuse equals the sum of the squares on the other two sides.",
+   "If the hypotenuse is \\(c\\) and the other sides are \\(a\\) and \\(b\\), then \\(c^{2} = a^{2} + b^{2}\\).",
+   "For example, a triangle has shorter sides 3 and 4, and hypotenuse 5. Check: \\(3^{2} + 4^{2} = 9 + 16 = 25\\), and \\(5^{2} = 25\\)."
+  ],
+  "remember": "The hypotenuse faces the right angle, and its square equals the sum of the other two squares.",
+  "a": {
+   "q": "A triangle has a right angle at corner B. Which side lies directly across from corner B, and so is the hypotenuse?",
+   "opts": [
+    "The side joining the other two corners",
+    "A side that touches corner B",
+    "The shortest side of the triangle",
+    "The side drawn along the bottom"
+   ],
+   "why": "The hypotenuse is opposite the right angle, so it joins the two corners that are not the right angle. The sides touching corner B are the two shorter sides. Which side sits at the bottom depends only on how the triangle is turned.",
+   "clue": "Find the right angle, then look across the triangle."
+  },
+  "b": {
+   "d": 3,
+   "q": "A right-angled triangle has sides 5, 12 and 13. Which equation is correct for it?",
+   "opts": [
+    "\\(13^{2} = 5^{2} + 12^{2}\\)",
+    "\\(12^{2} = 5^{2} + 13^{2}\\)",
+    "\\(5^{2} = 12^{2} + 13^{2}\\)",
+    "\\(13 = 5 + 12\\)"
+   ],
+   "why": "The hypotenuse is the longest side, 13, so its square is on its own: \\(169 = 25 + 144\\). The equation \\(13 = 5 + 12\\) adds the sides without squaring them, and \\(5 + 12 = 17\\), not 13.",
+   "clue": "Put the longest side on its own, and square every side."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A right-angled triangle turned so the right angle is at the bottom left, with the right angle marked by a small square. The side opposite the right angle is labelled hypotenuse. The two sides next to the right angle are labelled with the letters a and b, and the hypotenuse is labelled c.",
+    "why": "It shows which side is the hypotenuse by its position opposite the right angle."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:42Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says 'The last option adds the sides without squaring them', but options are shown in random order. The adding option (\\(13 = 5 + 12\\)) will not always be last, and as listed here the last option is the correct one. The why should name the option by its content, not its position."
+   }
+  ],
+  "flags": [
+   "Question b, other: The why says 'The last option adds the sides without squaring them', but options are shown in random order. The adding option (\\(13 = 5 + 12\\)) will not always be last, and as listed here the last option is the correct one. The why should name the option by its content, not its position."
+  ]
+ },
+ "final": {
+  "title": "The hypotenuse and Pythagoras' theorem",
+  "card": [
+   "In a right-angled triangle, the hypotenuse is the side opposite the right angle. It is always the longest side.",
+   "Pythagoras' theorem links the three sides. The square on the hypotenuse equals the sum of the squares on the other two sides.",
+   "If the hypotenuse is \\(c\\) and the other sides are \\(a\\) and \\(b\\), then \\(c^{2} = a^{2} + b^{2}\\).",
+   "For example, a triangle has shorter sides 3 and 4, and hypotenuse 5. Check: \\(3^{2} + 4^{2} = 9 + 16 = 25\\), and \\(5^{2} = 25\\)."
+  ],
+  "remember": "The hypotenuse faces the right angle, and its square equals the sum of the other two squares.",
+  "a": {
+   "q": "A triangle has a right angle at corner B. Which side lies directly across from corner B, and so is the hypotenuse?",
+   "opts": [
+    "The side joining the other two corners",
+    "A side that touches corner B",
+    "The shortest side of the triangle",
+    "The side drawn along the bottom"
+   ],
+   "why": "The hypotenuse is opposite the right angle, so it joins the two corners that are not the right angle. The sides touching corner B are the two shorter sides. Which side sits at the bottom depends only on how the triangle is turned.",
+   "clue": "Find the right angle, then look across the triangle."
+  },
+  "b": {
+   "d": 3,
+   "q": "A right-angled triangle has sides 5, 12 and 13. Which equation is correct for it?",
+   "opts": [
+    "\\(13^{2} = 5^{2} + 12^{2}\\)",
+    "\\(12^{2} = 5^{2} + 13^{2}\\)",
+    "\\(5^{2} = 12^{2} + 13^{2}\\)",
+    "\\(13 = 5 + 12\\)"
+   ],
+   "why": "The hypotenuse is the longest side, 13, so its square is on its own: \\(169 = 25 + 144\\). The equation \\(13 = 5 + 12\\) adds the sides without squaring them, and \\(5 + 12 = 17\\), not 13.",
+   "clue": "Put the longest side on its own, and square every side."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A right-angled triangle turned so the right angle is at the bottom left, with the right angle marked by a small square. The side opposite the right angle is labelled hypotenuse. The two sides next to the right angle are labelled with the letters a and b, and the hypotenuse is labelled c.",
+    "why": "It shows which side is the hypotenuse by its position opposite the right angle."
+   }
+  ]
+ },
+ "cleared_by": "auto"
 }

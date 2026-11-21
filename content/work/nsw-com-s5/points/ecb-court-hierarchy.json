@@ -24,8 +24,214 @@
    0.375
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: failed the content check, writing again",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: flagged",
+  "2026-11-20T12:53:23Z fix: suggested",
+  "2026-11-20T13:37:05Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "write": 0.01729,
+  "check": 0.01385,
+  "fix": 0.01802,
+  "recheck": 0.00771
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "None of the bank points describes the NSW court structure: they cover Victorian courts at Legal Studies depth, and none covers federal courts or the High Court's role in the way the brief requires, so adapting one would need too many changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The court hierarchy",
+  "card": [
+   "Courts are ranked in a hierarchy. In NSW, a case starts in the Local, District or Supreme Court, depending on how serious it is.",
+   "The Local Court hears the least serious matters, which are the most common cases. The District Court hears more serious matters.",
+   "The Supreme Court hears the most serious matters in NSW, such as murder.",
+   "Federal matters go to federal courts. The High Court of Australia is the highest court in the country."
+  ],
+  "remember": "In NSW, the more serious the case, the higher the court it starts in. The High Court is at the top.",
+  "a": {
+   "q": "In NSW, which court would normally hear a charge of murder first?",
+   "opts": [
+    "The Supreme Court",
+    "The Local Court",
+    "The District Court",
+    "The High Court"
+   ],
+   "why": "Murder is among the most serious matters, so it starts in the Supreme Court. The District Court is the tempting answer because it also hears serious cases, but it hears less serious matters than the Supreme Court.",
+   "clue": "Which NSW court hears the most serious matters?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya is charged with a minor offence in Newcastle. Which court would normally hear the case first?",
+   "opts": [
+    "The Local Court",
+    "The Supreme Court",
+    "The District Court",
+    "The High Court"
+   ],
+   "why": "Cases start in a court that matches how serious they are, and minor offences are heard in the Local Court. The High Court is the tempting answer because it is the highest court, but it is not where a minor matter begins.",
+   "clue": "The least serious matters start in the lowest court."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The Supreme Court",
+   "also_right": []
+  },
+  "b": {
+   "best": "The Local Court",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "In NSW, a murder charge first goes before the Local Court for bail and committal proceedings, and only then to the Supreme Court for trial. A careful teacher could defend 'The Local Court' for 'hear a charge of murder first'. Rewording to 'Which court would normally hold the trial for murder?' would remove the ambiguity."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'A case starts in the Local, District or Supreme Court, depending on how serious it is' simplifies NSW practice: serious indictable offences are first mentioned and committed in the Local Court before trial in the District or Supreme Court. Consider saying serious cases are 'tried' or 'heard' in the higher courts rather than that they 'start' there."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "The answers match the card. However, the card and question a say murder cases 'start' or are 'first' heard in the Supreme Court, when in NSW they first appear in the Local Court for committal before trial in the Supreme Court. Rewording to refer to where the trial is held would fix this."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: In NSW, a murder charge first goes before the Local Court for bail and committal proceedings, and only then to the Supreme Court for trial. A careful teacher could defend 'The Local Court' for 'hear a charge of murder first'. Rewording to 'Which court would normally hold the trial for murder?' would remove the ambiguity.",
+  "Card, fact: 'A case starts in the Local, District or Supreme Court, depending on how serious it is' simplifies NSW practice: serious indictable offences are first mentioned and committed in the Local Court before trial in the District or Supreme Court. Consider saying serious cases are 'tried' or 'heard' in the higher courts rather than that they 'start' there."
+ ],
+ "proposal": {
+  "title": "The court hierarchy",
+  "card": [
+   "Courts are ranked in a hierarchy, from lower courts to higher courts. In NSW, the more serious a case is, the higher the court that tries or hears it.",
+   "The Local Court hears the least serious matters, such as minor offences, and it handles most cases. The District Court hears more serious matters.",
+   "The Supreme Court is the highest court in NSW. It holds the trials for the most serious matters, such as murder.",
+   "Many federal matters, such as family law disputes, go to federal courts. The High Court of Australia is the highest court in the country."
+  ],
+  "remember": "In NSW, the more serious the case, the higher the court that hears it. The High Court is at the top.",
+  "a": {
+   "q": "In NSW, which court would normally hold the trial for a charge of murder?",
+   "opts": [
+    "The Supreme Court",
+    "The Local Court",
+    "The District Court",
+    "The High Court"
+   ],
+   "why": "Murder is among the most serious matters, so its trial is held in the Supreme Court, the highest court in NSW. The District Court is tempting because it also hears serious matters, but they are less serious than those in the Supreme Court.",
+   "clue": "Which NSW court hears the most serious matters?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya is charged with a minor offence in Newcastle. Which court would normally hear and decide her case?",
+   "opts": [
+    "The Local Court",
+    "The Supreme Court",
+    "The District Court",
+    "The High Court"
+   ],
+   "why": "Minor offences are among the least serious matters, so they are heard in the Local Court. The High Court is tempting because it is the highest court in Australia, but a minor offence is not heard there.",
+   "clue": "The least serious matters go to the lowest court."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:05Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The Supreme Court",
+    "also_right": []
+   },
+   "b": {
+    "best": "The Local Court",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:05Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "In NSW, a murder charge first goes before the Local Court for bail and committal proceedings, and only then to the Supreme Court for trial. A careful teacher could defend 'The Local Court' for 'hear a charge of murder first'. Rewording to 'Which court would normally hold the trial for murder?' would remove the ambiguity."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'A case starts in the Local, District or Supreme Court, depending on how serious it is' simplifies NSW practice: serious indictable offences are first mentioned and committed in the Local Court before trial in the District or Supreme Court. Consider saying serious cases are 'tried' or 'heard' in the higher courts rather than that they 'start' there."
+   }
+  ],
+  "flags": [
+   "Question a, fact: In NSW, a murder charge first goes before the Local Court for bail and committal proceedings, and only then to the Supreme Court for trial. A careful teacher could defend 'The Local Court' for 'hear a charge of murder first'. Rewording to 'Which court would normally hold the trial for murder?' would remove the ambiguity.",
+   "Card, fact: 'A case starts in the Local, District or Supreme Court, depending on how serious it is' simplifies NSW practice: serious indictable offences are first mentioned and committed in the Local Court before trial in the District or Supreme Court. Consider saying serious cases are 'tried' or 'heard' in the higher courts rather than that they 'start' there."
+  ]
+ },
+ "final": {
+  "title": "The court hierarchy",
+  "card": [
+   "Courts are ranked in a hierarchy, from lower courts to higher courts. In NSW, the more serious a case is, the higher the court that tries or hears it.",
+   "The Local Court hears the least serious matters, such as minor offences, and it handles most cases. The District Court hears more serious matters.",
+   "The Supreme Court is the highest court in NSW. It holds the trials for the most serious matters, such as murder.",
+   "Many federal matters, such as family law disputes, go to federal courts. The High Court of Australia is the highest court in the country."
+  ],
+  "remember": "In NSW, the more serious the case, the higher the court that hears it. The High Court is at the top.",
+  "a": {
+   "q": "In NSW, which court would normally hold the trial for a charge of murder?",
+   "opts": [
+    "The Supreme Court",
+    "The Local Court",
+    "The District Court",
+    "The High Court"
+   ],
+   "why": "Murder is among the most serious matters, so its trial is held in the Supreme Court, the highest court in NSW. The District Court is tempting because it also hears serious matters, but they are less serious than those in the Supreme Court.",
+   "clue": "Which NSW court hears the most serious matters?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya is charged with a minor offence in Newcastle. Which court would normally hear and decide her case?",
+   "opts": [
+    "The Local Court",
+    "The Supreme Court",
+    "The District Court",
+    "The High Court"
+   ],
+   "why": "Minor offences are among the least serious matters, so they are heard in the Local Court. The High Court is tempting because it is the highest court in Australia, but a minor offence is not heard there.",
+   "clue": "The least serious matters go to the lowest court."
+  }
+ },
+ "cleared_by": "recheck"
 }

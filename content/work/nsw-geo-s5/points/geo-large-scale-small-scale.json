@@ -24,8 +24,127 @@
    0.204
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: done",
+  "2026-11-20T12:44:55Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00649,
+  "check": 0.00702
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches that a large-scale map shows a small area in detail and a small-scale map shows a large area with less detail; the closest points cover study scope (geo-scale), calculating real distances from a map ratio (mat-scale-maps), or scale as one map part (geo-map-conventions), which are different ideas.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Large-scale and small-scale maps",
+  "card": [
+   [
+    "Large-scale map",
+    "shows a small area of land in great detail. A map of one town or one beach is large scale. Houses, streets and small creeks can be seen."
+   ],
+   [
+    "Small-scale map",
+    "shows a large area of land with little detail. A map of a whole country or continent is small scale. Only big features such as states, major cities and oceans can be seen."
+   ],
+   "The names can seem backwards. Think of a ratio as a fraction: 1 to 10,000 is a bigger fraction than 1 to 1,000,000. So the 1 to 10,000 map is the larger scale, even though it covers less land.",
+   "Pick the scale that suits the job. Use a large-scale map to find a walking track. Use a small-scale map to compare the size of two countries."
+  ],
+  "remember": "Large scale: small area, lots of detail. Small scale: large area, little detail.",
+  "a": {
+   "q": "Which map is large scale?",
+   "opts": [
+    "A map of one suburb showing each house",
+    "A map of Australia showing the capital cities",
+    "A map of the world showing the oceans",
+    "A map of New South Wales showing major highways"
+   ],
+   "why": "A map of one suburb covers a small area and shows each house, so it is large scale. The other three cover large areas and show only major features, so they are small scale.",
+   "clue": "Which map covers the smallest area?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is planning a bushwalk around Lake Burley Griffin in Canberra. She wants to see each track and footbridge. Which map should she choose?",
+   "opts": [
+    "1 to 10,000, because it is the larger scale",
+    "1 to 5,000,000, because it covers a larger area",
+    "1 to 10,000, because it is the smaller scale",
+    "1 to 5,000,000, because it shows more detail"
+   ],
+   "why": "Small features such as tracks and footbridges show up on a large-scale map. 1 to 10,000 is a bigger fraction than 1 to 5,000,000, so it is the larger scale. The 1 to 5,000,000 map covers more land but shows far less detail.",
+   "clue": "Which ratio is the bigger fraction?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A map of one suburb showing each house",
+   "also_right": []
+  },
+  "b": {
+   "best": "1 to 10,000, because it is the larger scale",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Large-scale and small-scale maps",
+  "card": [
+   [
+    "Large-scale map",
+    "shows a small area of land in great detail. A map of one town or one beach is large scale. Houses, streets and small creeks can be seen."
+   ],
+   [
+    "Small-scale map",
+    "shows a large area of land with little detail. A map of a whole country or continent is small scale. Only big features such as states, major cities and oceans can be seen."
+   ],
+   "The names can seem backwards. Think of a ratio as a fraction: 1 to 10,000 is a bigger fraction than 1 to 1,000,000. So the 1 to 10,000 map is the larger scale, even though it covers less land.",
+   "Pick the scale that suits the job. Use a large-scale map to find a walking track. Use a small-scale map to compare the size of two countries."
+  ],
+  "remember": "Large scale: small area, lots of detail. Small scale: large area, little detail.",
+  "a": {
+   "q": "Which map is large scale?",
+   "opts": [
+    "A map of one suburb showing each house",
+    "A map of Australia showing the capital cities",
+    "A map of the world showing the oceans",
+    "A map of New South Wales showing major highways"
+   ],
+   "why": "A map of one suburb covers a small area and shows each house, so it is large scale. The other three cover large areas and show only major features, so they are small scale.",
+   "clue": "Which map covers the smallest area?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is planning a bushwalk around Lake Burley Griffin in Canberra. She wants to see each track and footbridge. Which map should she choose?",
+   "opts": [
+    "1 to 10,000, because it is the larger scale",
+    "1 to 5,000,000, because it covers a larger area",
+    "1 to 10,000, because it is the smaller scale",
+    "1 to 5,000,000, because it shows more detail"
+   ],
+   "why": "Small features such as tracks and footbridges show up on a large-scale map. 1 to 10,000 is a bigger fraction than 1 to 5,000,000, so it is the larger scale. The 1 to 5,000,000 map covers more land but shows far less detail.",
+   "clue": "Which ratio is the bigger fraction?"
+  }
+ },
+ "cleared_by": "checker"
 }

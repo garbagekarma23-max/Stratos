@@ -8,8 +8,220 @@
    0.236
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: flagged",
+  "2026-11-20T12:53:23Z fix: suggested",
+  "2026-11-20T13:23:35Z autoreview: picked as a spot check. It would have been cleared with the fix (a other)",
+  "2026-11-20T14:02:37Z claude-code review: left for you (it chose to leave it)",
+  "2026-11-20T14:31:38Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.0066,
+  "check": 0.01076,
+  "fix": 0.01601
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point is a broad Year 12 overview of the whole Australian Consumer Law, while the new point is specifically about misleading advertising, bait advertising and hidden conditions in ads at Stage 5 depth, so it is broader and at a different depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Misleading advertising",
+  "card": [
+   "The Australian Consumer Law (ACL) bans businesses from making false or misleading claims in ads. A claim can mislead by what it says, or by what it leaves out.",
+   [
+    "False claim",
+    "a statement that is not true, such as saying a jacket is waterproof when it leaks, or that a product has won an award it has not won."
+   ],
+   [
+    "Bait advertising",
+    "advertising a product at a low price without enough stock to meet likely demand. The aim is to bring customers in, then sell them something else."
+   ],
+   [
+    "Hidden conditions",
+    "a catch that changes the offer but is not made clear, such as tiny print that adds fees to a \"free\" deal. The main message must not be cancelled out by the fine print."
+   ]
+  ],
+  "remember": "The ACL bans ads that mislead: false claims, bait advertising and hidden conditions.",
+  "a": {
+   "q": "A shop advertises a TV at a very low price, but has only one in stock and tells shoppers it has sold out. Which type of banned advertising is this most likely to be?",
+   "opts": [
+    "Bait advertising",
+    "A false claim about an award",
+    "A hidden condition in fine print",
+    "A normal sales promotion"
+   ],
+   "why": "The low price drew shoppers in, but the shop did not have enough stock to meet likely demand. That is bait advertising. A hidden condition would be a catch left out of the ad, which is not the problem here.",
+   "clue": "Think about the price that brought people in and the stock available."
+  },
+  "b": {
+   "d": 3,
+   "q": "Kai's gym advertises \"Join for $1 a week!\" in large print. Tiny print at the bottom says a $300 joining fee applies. Why is this likely to break the Australian Consumer Law?",
+   "opts": [
+    "A condition that changes the offer is hidden in small print",
+    "The gym did not have enough memberships for demand",
+    "The gym claimed an award that it has not won",
+    "Gyms are not allowed to advertise a weekly price"
+   ],
+   "why": "The large print suggests a cheap deal, but a major cost is buried in tiny print. That is a hidden condition that can mislead. It is not bait advertising, because nothing suggests the gym ran out of memberships.",
+   "clue": "Look at where the $300 fee appears in the ad."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Bait advertising",
+   "also_right": []
+  },
+  "b": {
+   "best": "A condition that changes the offer is hidden in small print",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) describes a hidden condition as 'a catch left out of the ad'. The card defines it as a catch that is in the ad but not made clear, such as tiny print. The why should match the card's wording."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate, and each question has one clear answer. One minor issue: why (a) describes a hidden condition as a catch 'left out of the ad', which does not match the card's definition of a catch in fine print."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) describes a hidden condition as 'a catch left out of the ad'. The card defines it as a catch that is in the ad but not made clear, such as tiny print. The why should match the card's wording."
+ ],
+ "proposal": {
+  "title": "Misleading advertising",
+  "card": [
+   "The Australian Consumer Law (ACL) bans businesses from making false or misleading claims in ads. A claim can mislead by what it says, or by what it leaves out.",
+   [
+    "False claim",
+    "a statement that is not true, such as saying a jacket is waterproof when it leaks, or that a product has won an award it has not won."
+   ],
+   [
+    "Bait advertising",
+    "advertising a product at a low price without enough stock to meet likely demand. The aim is to bring customers in, then sell them something else."
+   ],
+   [
+    "Hidden conditions",
+    "a catch that changes the offer but is not made clear, such as tiny print that adds fees to a \"free\" deal. The main message must not be cancelled out by the fine print."
+   ]
+  ],
+  "remember": "The ACL bans ads that mislead: false claims, bait advertising and hidden conditions.",
+  "a": {
+   "q": "A shop advertises a TV at a very low price, but has only one in stock and tells shoppers it has sold out. Which type of banned advertising is this most likely to be?",
+   "opts": [
+    "Bait advertising",
+    "A false claim about an award",
+    "A hidden condition in fine print",
+    "A normal sales promotion"
+   ],
+   "why": "The low price drew shoppers in, but the shop did not have enough stock to meet likely demand. That is bait advertising. A hidden condition would be a catch in the ad that is not made clear, such as tiny print, and nothing like that is described here.",
+   "clue": "Think about the price that brought people in and the stock available."
+  },
+  "b": {
+   "d": 3,
+   "q": "Kai's gym advertises \"Join for $1 a week!\" in large print. Tiny print at the bottom says a $300 joining fee applies. Why is this likely to break the Australian Consumer Law?",
+   "opts": [
+    "A condition that changes the offer is hidden in small print",
+    "The gym did not have enough memberships for demand",
+    "The gym claimed an award that it has not won",
+    "Gyms are not allowed to advertise a weekly price"
+   ],
+   "why": "The large print suggests a cheap deal, but a major cost is buried in tiny print. That is a hidden condition that can mislead. It is not bait advertising, because nothing suggests the gym ran out of memberships.",
+   "clue": "Look at where the $300 fee appears in the ad."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:35Z",
+  "rules": 1,
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) describes a hidden condition as 'a catch left out of the ad'. The card defines it as a catch that is in the ad but not made clear, such as tiny print. The why should match the card's wording."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) describes a hidden condition as 'a catch left out of the ad'. The card defines it as a catch that is in the ad but not made clear, such as tiny print. The why should match the card's wording."
+  ],
+  "owner": "fix"
+ },
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "leave",
+   "sure": "medium",
+   "reason": "The fix corrects question a's why, and the facts on the Australian Consumer Law are right. But in question b the right option (59 characters) is clearly the longest, about 12 characters above the wrong options' average, and its 'small print' echoes the stem's 'tiny print'.",
+   "item": "90a1d63200d5faee",
+   "result": "left"
+  }
+ ],
+ "final": {
+  "title": "Misleading advertising",
+  "card": [
+   "The Australian Consumer Law (ACL) bans businesses from making false or misleading claims in ads. A claim can mislead by what it says, or by what it leaves out.",
+   [
+    "False claim",
+    "a statement that is not true, such as saying a jacket is waterproof when it leaks, or that a product has won an award it has not won."
+   ],
+   [
+    "Bait advertising",
+    "advertising a product at a low price without enough stock to meet likely demand. The aim is to bring customers in, then sell them something else."
+   ],
+   [
+    "Hidden conditions",
+    "a catch that changes the offer but is not made clear, such as tiny print that adds fees to a \"free\" deal. The main message must not be cancelled out by the fine print."
+   ]
+  ],
+  "remember": "The ACL bans ads that mislead: false claims, bait advertising and hidden conditions.",
+  "a": {
+   "q": "A shop advertises a TV at a very low price, but has only one in stock and tells shoppers it has sold out. Which type of banned advertising is this most likely to be?",
+   "opts": [
+    "Bait advertising",
+    "A false claim about an award",
+    "A hidden condition in fine print",
+    "A normal sales promotion"
+   ],
+   "why": "The low price drew shoppers in, but the shop did not have enough stock to meet likely demand. That is bait advertising. A hidden condition would be a catch in the ad that is not made clear, such as tiny print, and nothing like that is described here.",
+   "clue": "Think about the price that brought people in and the stock available."
+  },
+  "b": {
+   "d": 3,
+   "q": "Kai's gym advertises \"Join for $1 a week!\" in large print. Tiny print at the bottom says a $300 joining fee applies. Why is this likely to break the Australian Consumer Law?",
+   "opts": [
+    "A condition that changes the offer is hidden in small print",
+    "The gym did not have enough memberships for demand",
+    "The gym claimed an award that it has not won",
+    "Gyms are not allowed to advertise a weekly price"
+   ],
+   "why": "The large print suggests a cheap deal, but a major cost is buried in tiny print. That is a hidden condition that can mislead. It is not bait advertising, because nothing suggests the gym ran out of memberships.",
+   "clue": "Look at where the $300 fee appears in the ad."
+  }
+ },
+ "cleared_by": "owner"
 }

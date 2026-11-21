@@ -24,8 +24,219 @@
    0.214
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 says reuse sci-endocrine-system, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:26:01Z confirm: Claude Opus 5.5 may adapt sci-endocrine-system, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt sci-endocrine-system (2 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting sci-endocrine-system on the next run",
+  "2026-11-20T14:12:40Z adapt: failed the content check, writing again",
+  "2026-11-20T14:20:03Z adapt: done",
+  "2026-11-20T14:26:15Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "confirm": 0.01177,
+  "adapt": 0.01712,
+  "check": 0.01382
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "sci-endocrine-system",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the same core idea at the right Stage 5 depth: glands release hormones into the blood, which act more slowly and for longer than nerve messages, and its terms and questions suit a NSW Year 9 and 10 course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "sci-endocrine-system",
+  "changes": [
+   "Replace the adrenaline example in the fourth card line with insulin: the pancreas releases insulin after a meal, and it lowers blood glucose over minutes to hours.",
+   "Rewrite question b around insulin lowering blood glucose after a meal, keeping the focus on hormones acting more slowly and for longer than nerves."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same idea at a Year 9–10 depth: glands release hormones into the blood, and hormones act more slowly and for longer than nerves, but your brief uses insulin as the example rather than adrenaline, so the example and one question need swapping.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "sci-endocrine-system",
+  "changes": [
+   "Replace the adrenaline example in the fourth card line with insulin: the pancreas releases insulin when blood glucose rises after a meal, and it lowers blood glucose over minutes to hours. Only mention feedback, since the Homeostasis point teaches it.",
+   "Rewrite question b around insulin lowering blood glucose after a meal, keeping the focus on hormones acting more slowly and for longer than nerves."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card4",
+   "a.q",
+   "a.opt1",
+   "b.q",
+   "b.opt1",
+   "b.opt2",
+   "b.opt3",
+   "b.opt4",
+   "b.why",
+   "b.clue"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches glands, hormones in the blood and hormones acting more slowly and for longer than nerves, but its example is adrenaline where the brief asks for insulin. Swapping the example and question b is a small change.",
+   "item": "557d270392e926f1",
+   "result": "decided",
+   "saved": {
+    "id": "sci-endocrine-system-nsw",
+    "title": "The endocrine system",
+    "brief": "5e35ea984c46",
+    "shortlist": [
+     [
+      "sci-endocrine-system",
+      0.634
+     ],
+     [
+      "sci-blood-glucose-diabetes",
+      0.456
+     ],
+     [
+      "bio-endocrine-system",
+      0.323
+     ],
+     [
+      "bio-regulating-blood-glucose",
+      0.253
+     ],
+     [
+      "sci-circulatory-system",
+      0.214
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00033,
+     "confirm": 0.01177
+    },
+    "match": {
+     "verdict": "reuse",
+     "same": "sci-endocrine-system",
+     "changes": [],
+     "sure": "high",
+     "reason": "The bank point teaches the same core idea at the right Stage 5 depth: glands release hormones into the blood, which act more slowly and for longer than nerve messages, and its terms and questions suit a NSW Year 9 and 10 course.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "sci-endocrine-system",
+     "changes": [
+      "Replace the adrenaline example in the fourth card line with insulin: the pancreas releases insulin after a meal, and it lowers blood glucose over minutes to hours.",
+      "Rewrite question b around insulin lowering blood glucose after a meal, keeping the focus on hormones acting more slowly and for longer than nerves."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches the same idea at a Year 9–10 depth: glands release hormones into the blood, and hormones act more slowly and for longer than nerves, but your brief uses insulin as the example rather than adrenaline, so the example and one question need swapping.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "c7838cdef52f85aa"
+  }
+ ],
+ "draft": {
+  "title": "The endocrine system",
+  "card": [
+   "The endocrine system is made up of glands. Glands release chemical messengers called hormones.",
+   "Hormones travel in the blood. They reach cells all around the body, but they only affect cells that can respond to them.",
+   "Hormone messages are slower than nerve messages, because blood carries them. Their effects often last longer, from minutes to hours or more.",
+   "Insulin is a hormone released by the pancreas when blood glucose rises after a meal. It lowers blood glucose, and its effects build up over minutes to hours."
+  ],
+  "remember": "Hormones are slower than nerves, but their effects often last longer.",
+  "a": {
+   "q": "A gland releases a hormone. How does the hormone reach the cells it affects?",
+   "opts": [
+    "In the blood",
+    "Along neurons",
+    "Through the skin",
+    "Through the lungs"
+   ],
+   "why": "Glands release hormones into the blood, and the blood carries them around the body. Neurons carry nerve impulses, not hormones, so travelling along neurons is a common mix-up.",
+   "clue": "Think about what the body uses to carry things around."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia eats a big meal and her blood glucose rises. The pancreas releases insulin, and her glucose falls slowly over the next hour or two. What best explains this?",
+   "opts": [
+    "Hormone effects are slower and last longer than nerves",
+    "Insulin is a hormone, so it acts faster than nerve messages",
+    "Insulin is carried along neurons to the body cells",
+    "The pancreas sends the message as a quick electrical impulse"
+   ],
+   "why": "Insulin is a hormone. It travels in the blood, so it acts more slowly than a nerve message, and its effects last longer. That is why glucose falls over minutes to hours. Hormones do not travel along neurons, and they are not quick electrical impulses.",
+   "clue": "Compare the speed and length of hormone effects with nerve effects."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "In the blood",
+   "also_right": []
+  },
+  "b": {
+   "best": "Hormone effects are slower and last longer than nerves",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The endocrine system",
+  "card": [
+   "The endocrine system is made up of glands. Glands release chemical messengers called hormones.",
+   "Hormones travel in the blood. They reach cells all around the body, but they only affect cells that can respond to them.",
+   "Hormone messages are slower than nerve messages, because blood carries them. Their effects often last longer, from minutes to hours or more.",
+   "Insulin is a hormone released by the pancreas when blood glucose rises after a meal. It lowers blood glucose, and its effects build up over minutes to hours."
+  ],
+  "remember": "Hormones are slower than nerves, but their effects often last longer.",
+  "a": {
+   "q": "A gland releases a hormone. How does the hormone reach the cells it affects?",
+   "opts": [
+    "In the blood",
+    "Along neurons",
+    "Through the skin",
+    "Through the lungs"
+   ],
+   "why": "Glands release hormones into the blood, and the blood carries them around the body. Neurons carry nerve impulses, not hormones, so travelling along neurons is a common mix-up.",
+   "clue": "Think about what the body uses to carry things around."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia eats a big meal and her blood glucose rises. The pancreas releases insulin, and her glucose falls slowly over the next hour or two. What best explains this?",
+   "opts": [
+    "Hormone effects are slower and last longer than nerves",
+    "Insulin is a hormone, so it acts faster than nerve messages",
+    "Insulin is carried along neurons to the body cells",
+    "The pancreas sends the message as a quick electrical impulse"
+   ],
+   "why": "Insulin is a hormone. It travels in the blood, so it acts more slowly than a nerve message, and its effects last longer. That is why glucose falls over minutes to hours. Hormones do not travel along neurons, and they are not quick electrical impulses.",
+   "clue": "Compare the speed and length of hormone effects with nerve effects."
+  }
+ }
 }

@@ -24,8 +24,48 @@
    0.268
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 may adapt eng-literature-from-different-contexts, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:42Z confirm: Claude Opus 5.5 may adapt eng-context-text, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:32:08Z review: reusing eng-context-text"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "confirm": 0.01257
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "eng-literature-from-different-contexts",
+  "changes": [
+   "Adjust the depth and wording to suit NSW Stage 4 Years 7 and 8, using the NSW syllabus code EN4-URB-01 and its terminology rather than the Queensland, South Australia or Western Australia year-level framing of the bank point.",
+   "Replace the example of a play from a faraway country with an example that suits Australian students and the NSW Stage 4 context."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same core idea of context as time, place and culture shaping a text, but its wording, examples and depth need small changes to fit the NSW Stage 4 course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "eng-context-text",
+  "changes": [
+   "Use the NSW syllabus term 'composer' alongside or in place of 'writer' when saying context shapes the choices made in a text.",
+   "Give a brief plain gloss for 'economic depression' in question a, such as a time when many people lost their jobs and money, so it suits Years 7 and 8."
+  ],
+  "sure": "medium",
+  "reason": "This bank point teaches the same two-sided idea of context, where a text comes from and where it is read, shaping both the text and how readers respond, in language plain enough for Stage 4, but it should use NSW's term 'composer' and a simpler example.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "eng-context-text",
+ "matched": {
+  "verdict": "reuse",
+  "from": "eng-context-text",
+  "by": "owner",
+  "at": "2026-11-20T14:32:08Z"
+ }
 }

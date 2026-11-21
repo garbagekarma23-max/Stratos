@@ -24,8 +24,179 @@
    0.229
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:52Z write: failed the content check, writing again",
+  "2026-11-20T12:35:52Z write: done",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:23:40Z autoreview: cleared with the fix (a other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.01381,
+  "check": 0.00956,
+  "fix": 0.01677
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, his-cold-war, covers the rivalry and the no-direct-war idea at a suitable depth, but the new brief also requires the effect of nuclear fear on films, music and daily life, which that card does not teach, so adding it would be a new step rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The Cold War",
+  "card": [
+   "The Cold War was a long rivalry after 1945 between the United States and the Soviet Union. Each was a superpower, a country with huge military and economic strength.",
+   "The two sides competed for power and influence around the world. They did not fight each other directly, which is why it was called a cold war rather than a hot one.",
+   "The United States and the Soviet Union both built nuclear weapons. Many people feared that a mistake or a crisis could start a nuclear war.",
+   "This fear shaped everyday culture. Films and songs dealt with nuclear war, and some families and schools practised what to do in an attack."
+  ],
+  "remember": "The Cold War was a rivalry, not a direct fight, and fear of nuclear war shaped daily life.",
+  "a": {
+   "q": "Why was the rivalry between the United States and the Soviet Union called a cold war?",
+   "opts": [
+    "They competed without fighting each other directly",
+    "They fought only in cold, snowy places",
+    "They had stopped all contact with each other",
+    "They fought a short war and then made peace"
+   ],
+   "why": "The word cold shows that the two superpowers competed for power but did not fight each other directly. The option about stopping all contact is tempting, but the rivalry was an active contest for influence around the world.",
+   "clue": "Think about whether the two sides fought each other directly."
+  },
+  "b": {
+   "d": 2,
+   "q": "In the 1950s, a school in a US city holds regular drills where students practise what to do in a nuclear attack. What does this show about the Cold War?",
+   "opts": [
+    "Fear of nuclear war affected daily life",
+    "Soldiers from the Soviet Union had landed in the US",
+    "The US and the Soviet Union were at war directly",
+    "Schools were run by the military during the Cold War"
+   ],
+   "why": "The drills show that fear of nuclear war reached into ordinary life, even for students. They do not show direct fighting, because the Cold War was a rivalry without the two superpowers fighting each other.",
+   "clue": "Ask what the drills say about how people felt, not about any fighting."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "They competed without fighting each other directly",
+   "also_right": []
+  },
+  "b": {
+   "best": "Fear of nuclear war affected daily life",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue ('Think about whether the two sides fought each other directly') nearly restates the right option, so a student can pick it without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, questions and explanations are accurate. The clue for question a almost gives the answer away and should be made less direct."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue ('Think about whether the two sides fought each other directly') nearly restates the right option, so a student can pick it without knowing the idea."
+ ],
+ "proposal": {
+  "title": "The Cold War",
+  "card": [
+   "The Cold War was a long rivalry after 1945 between the United States and the Soviet Union. Each was a superpower, a country with huge military and economic strength.",
+   "The two sides competed for power and influence around the world. They did not fight each other directly, which is why it was called a cold war rather than a hot one.",
+   "The United States and the Soviet Union both built nuclear weapons. Many people feared that a mistake or a crisis could start a nuclear war.",
+   "This fear shaped everyday culture. Films and songs dealt with nuclear war, and some families and schools practised what to do in an attack."
+  ],
+  "remember": "The Cold War was a rivalry, not a direct fight, and fear of nuclear war shaped daily life.",
+  "a": {
+   "q": "Why was the rivalry between the United States and the Soviet Union called a cold war?",
+   "opts": [
+    "They competed without fighting each other directly",
+    "They fought a long war against each other in Europe",
+    "They had stopped all contact with each other",
+    "They fought a short war and then made peace"
+   ],
+   "why": "The word cold shows that the two superpowers competed for power but did not fight each other directly. The option about stopping all contact is tempting, but the rivalry was an active contest for influence around the world.",
+   "clue": "Think about what made this rivalry different from the two world wars."
+  },
+  "b": {
+   "d": 2,
+   "q": "In the 1950s, a school in a US city holds regular drills where students practise what to do in a nuclear attack. What does this show about the Cold War?",
+   "opts": [
+    "Fear of nuclear war affected daily life",
+    "Soldiers from the Soviet Union had landed in the US",
+    "The US and the Soviet Union were at war directly",
+    "Schools were run by the military during the Cold War"
+   ],
+   "why": "The drills show that fear of nuclear war reached into ordinary life, even for students. They do not show direct fighting, because the Cold War was a rivalry without the two superpowers fighting each other.",
+   "clue": "Ask what the drills tell you about how people felt."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:40Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue ('Think about whether the two sides fought each other directly') nearly restates the right option, so a student can pick it without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue ('Think about whether the two sides fought each other directly') nearly restates the right option, so a student can pick it without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "The Cold War",
+  "card": [
+   "The Cold War was a long rivalry after 1945 between the United States and the Soviet Union. Each was a superpower, a country with huge military and economic strength.",
+   "The two sides competed for power and influence around the world. They did not fight each other directly, which is why it was called a cold war rather than a hot one.",
+   "The United States and the Soviet Union both built nuclear weapons. Many people feared that a mistake or a crisis could start a nuclear war.",
+   "This fear shaped everyday culture. Films and songs dealt with nuclear war, and some families and schools practised what to do in an attack."
+  ],
+  "remember": "The Cold War was a rivalry, not a direct fight, and fear of nuclear war shaped daily life.",
+  "a": {
+   "q": "Why was the rivalry between the United States and the Soviet Union called a cold war?",
+   "opts": [
+    "They competed without fighting each other directly",
+    "They fought a long war against each other in Europe",
+    "They had stopped all contact with each other",
+    "They fought a short war and then made peace"
+   ],
+   "why": "The word cold shows that the two superpowers competed for power but did not fight each other directly. The option about stopping all contact is tempting, but the rivalry was an active contest for influence around the world.",
+   "clue": "Think about what made this rivalry different from the two world wars."
+  },
+  "b": {
+   "d": 2,
+   "q": "In the 1950s, a school in a US city holds regular drills where students practise what to do in a nuclear attack. What does this show about the Cold War?",
+   "opts": [
+    "Fear of nuclear war affected daily life",
+    "Soldiers from the Soviet Union had landed in the US",
+    "The US and the Soviet Union were at war directly",
+    "Schools were run by the military during the Cold War"
+   ],
+   "why": "The drills show that fear of nuclear war reached into ordinary life, even for students. They do not show direct fighting, because the Cold War was a rivalry without the two superpowers fighting each other.",
+   "clue": "Ask what the drills tell you about how people felt."
+  }
+ },
+ "cleared_by": "auto"
 }

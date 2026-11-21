@@ -24,8 +24,210 @@
    0.317
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 says reuse mat-logarithm, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:57Z confirm: Claude Opus 5.5 may adapt mat-logarithm, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt mat-logarithm (2 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting mat-logarithm on the next run",
+  "2026-11-20T14:12:39Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "confirm": 0.01187,
+  "adapt": 0.00463,
+  "check": 0.00867
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-logarithm",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point mat-logarithm teaches exactly the new point's idea: a logarithm is the power of the base that gives the number, with swapping between index and log form, at a suitable depth for Years 9 and 10 and with fair questions.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-logarithm",
+  "changes": [
+   "Use the NSW Stage 5 terms 'index form' and 'logarithmic form' (a logarithm is an index) in place of 'exponentials' and 'exponential statement', including in the wording of question b."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same definition of a logarithm and switching between the two forms at a suitable depth, but it should use the index-form wording that the NSW Stage 5 syllabus uses.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-logarithm",
+  "changes": [
+   "Say a logarithm is an index, and name the two forms index form and logarithmic form, in place of 'exponentials' and 'the two forms'.",
+   "Reword question b to ask which statement in index form is the same as the logarithm, in place of 'exponential statement'."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card1",
+   "card4",
+   "a.q",
+   "b.q",
+   "b.why"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same definition and its answers are right, but the brief says a logarithm is an index and asks for moving between index form and log form. The bank point says power and exponential statement instead.",
+   "item": "8b5e97b7d4a53b77",
+   "result": "decided",
+   "saved": {
+    "id": "mat-logarithm-2",
+    "title": "What a logarithm is",
+    "brief": "d5e59f67b356",
+    "shortlist": [
+     [
+      "mat-logarithm-laws",
+      0.552
+     ],
+     [
+      "mat-logarithm",
+      0.437
+     ],
+     [
+      "mat-change-base",
+      0.421
+     ],
+     [
+      "mat-solving-exponential-equations",
+      0.365
+     ],
+     [
+      "mat-exponential-logarithmic-equations",
+      0.317
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00018,
+     "confirm": 0.01187
+    },
+    "match": {
+     "verdict": "reuse",
+     "same": "mat-logarithm",
+     "changes": [],
+     "sure": "high",
+     "reason": "The bank point mat-logarithm teaches exactly the new point's idea: a logarithm is the power of the base that gives the number, with swapping between index and log form, at a suitable depth for Years 9 and 10 and with fair questions.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-logarithm",
+     "changes": [
+      "Use the NSW Stage 5 terms 'index form' and 'logarithmic form' (a logarithm is an index) in place of 'exponentials' and 'exponential statement', including in the wording of question b."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same definition of a logarithm and switching between the two forms at a suitable depth, but it should use the index-form wording that the NSW Stage 5 syllabus uses.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "8bf0a9d7b5191610"
+  }
+ ],
+ "draft": {
+  "title": "What a logarithm is",
+  "card": [
+   "A logarithm is an index. \\(\\log_{a}(x)\\) is the index that \\(a\\) must be raised to, to give \\(x\\). The number \\(a\\) is called the base.",
+   "Example: \\(2^{3} = 8\\), so \\(\\log_{2} 8 = 3\\). Read it as: 2 to what power gives 8? The answer is 3.",
+   "To work one out, ask the question in words. For \\(\\log_{3} 81\\), ask: 3 to what power gives 81? Since \\(3^{4} = 81\\), \\(\\log_{3} 81 = 4\\).",
+   "Logarithms undo indices. The statements \\(a^{y} = x\\) and \\(\\log_{a}(x) = y\\) say the same thing. The first is index form and the second is logarithmic form, so you can swap between them."
+  ],
+  "remember": "A logarithm is a power: \\(\\log_{a}(x)\\) asks what power of \\(a\\) gives \\(x\\).",
+  "a": {
+   "q": "Find the value of \\(\\log_{5} 25\\).",
+   "opts": [
+    "2",
+    "5",
+    "20",
+    "\\(\\frac{25}{5}\\)"
+   ],
+   "why": "\\(5^{2} = 25\\), so 5 must be raised to the power 2. The answer 5 is tempting because it is the base, but the logarithm is the power, not the base.",
+   "clue": "5 to what power gives 25?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which statement in index form is the same as the logarithm \\(\\log_{4} x = 3\\)?",
+   "opts": [
+    "\\(4^{3} = x\\)",
+    "\\(3^{4} = x\\)",
+    "\\(x^{3} = 4\\)",
+    "\\(4x = 3\\)"
+   ],
+   "why": "\\(\\log_{4} x = 3\\) means 4 raised to the index 3 gives \\(x\\), so \\(4^{3} = x\\). The option \\(3^{4} = x\\) swaps the base and the index, which is a common mistake.",
+   "clue": "The base of the logarithm stays the base of the power."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(4^{3} = x\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "What a logarithm is",
+  "card": [
+   "A logarithm is an index. \\(\\log_{a}(x)\\) is the index that \\(a\\) must be raised to, to give \\(x\\). The number \\(a\\) is called the base.",
+   "Example: \\(2^{3} = 8\\), so \\(\\log_{2} 8 = 3\\). Read it as: 2 to what power gives 8? The answer is 3.",
+   "To work one out, ask the question in words. For \\(\\log_{3} 81\\), ask: 3 to what power gives 81? Since \\(3^{4} = 81\\), \\(\\log_{3} 81 = 4\\).",
+   "Logarithms undo indices. The statements \\(a^{y} = x\\) and \\(\\log_{a}(x) = y\\) say the same thing. The first is index form and the second is logarithmic form, so you can swap between them."
+  ],
+  "remember": "A logarithm is a power: \\(\\log_{a}(x)\\) asks what power of \\(a\\) gives \\(x\\).",
+  "a": {
+   "q": "Find the value of \\(\\log_{5} 25\\).",
+   "opts": [
+    "2",
+    "5",
+    "20",
+    "\\(\\frac{25}{5}\\)"
+   ],
+   "why": "\\(5^{2} = 25\\), so 5 must be raised to the power 2. The answer 5 is tempting because it is the base, but the logarithm is the power, not the base.",
+   "clue": "5 to what power gives 25?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which statement in index form is the same as the logarithm \\(\\log_{4} x = 3\\)?",
+   "opts": [
+    "\\(4^{3} = x\\)",
+    "\\(3^{4} = x\\)",
+    "\\(x^{3} = 4\\)",
+    "\\(4x = 3\\)"
+   ],
+   "why": "\\(\\log_{4} x = 3\\) means 4 raised to the index 3 gives \\(x\\), so \\(4^{3} = x\\). The option \\(3^{4} = x\\) swaps the base and the index, which is a common mistake.",
+   "clue": "The base of the logarithm stays the base of the power."
+  }
+ }
 }

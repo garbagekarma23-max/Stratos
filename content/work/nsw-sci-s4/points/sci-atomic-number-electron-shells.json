@@ -16,8 +16,177 @@
    0.26
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: done",
+  "2026-11-20T12:35:56Z check: flagged",
+  "2026-11-20T12:45:00Z fix: suggested",
+  "2026-11-20T13:23:45Z autoreview: cleared with the fix (remember other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.00606,
+  "check": 0.01023,
+  "fix": 0.01344
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point combines two ideas: atomic number as the number of protons, and electron shell filling for the first 18 elements. The closest bank point covers only shells, at Year 10 depth, and the other covers only atomic number, so neither matches the brief exactly.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Atomic number and electron shells",
+  "card": [
+   "The atomic number of an element is the number of protons in the nucleus of each of its atoms. Every atom of one element has the same atomic number.",
+   "A neutral atom has equal numbers of protons and electrons. So its atomic number is also its number of electrons.",
+   "Electrons move around the nucleus in shells. In the first 18 elements, the first shell holds up to 2 electrons. The second and third shells each hold up to 8.",
+   "Electrons fill the inner shell first, then the next one. Sodium has atomic number 11, so its electrons are arranged 2, 8, 1."
+  ],
+  "remember": "Atomic number = protons. Electrons fill shells from the inside out: 2, 8, 8.",
+  "a": {
+   "q": "A neutral atom of an element has atomic number 7. How many electrons does it have?",
+   "opts": [
+    "7, the same as its protons",
+    "14, double its protons",
+    "0, because electrons are neutral",
+    "8, one more than its protons"
+   ],
+   "why": "The atomic number is the number of protons. A neutral atom has equal numbers of protons and electrons, so it has 7 electrons. Electrons are negative, not neutral, so they are not absent.",
+   "clue": "A neutral atom has equal numbers of two particles."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia is drawing a neutral atom of chlorine, atomic number 17. How should she arrange its electrons in shells?",
+   "opts": [
+    "2, 8, 7",
+    "2, 8, 8",
+    "8, 8, 1",
+    "2, 7, 8"
+   ],
+   "why": "Chlorine has 17 protons, so a neutral atom has 17 electrons. The first shell takes 2, the second takes 8, and the remaining 7 go in the third shell. Putting 8 in the third shell gives 18 electrons, which is too many.",
+   "clue": "Fill the inner shells first, then count what is left over."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "7, the same as its protons",
+   "also_right": []
+  },
+  "b": {
+   "best": "2, 8, 7",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line gives '2, 8, 8' as the filling pattern but drops the card's 'up to', so it reads as a fixed arrangement rather than shell capacities. This could push students towards the distractor '2, 8, 8' in question b. Something like 'Shells hold up to 2, 8, 8' would match the card."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct and match the card. The remember line states '2, 8, 8' without 'up to', which could be read as the arrangement itself and lead students to the wrong answer for chlorine."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The remember line gives '2, 8, 8' as the filling pattern but drops the card's 'up to', so it reads as a fixed arrangement rather than shell capacities. This could push students towards the distractor '2, 8, 8' in question b. Something like 'Shells hold up to 2, 8, 8' would match the card."
+ ],
+ "proposal": {
+  "title": "Atomic number and electron shells",
+  "card": [
+   "The atomic number of an element is the number of protons in the nucleus of each of its atoms. Every atom of one element has the same atomic number.",
+   "A neutral atom has equal numbers of protons and electrons. So its atomic number is also its number of electrons.",
+   "Electrons move around the nucleus in shells. In the first 18 elements, the first shell holds up to 2 electrons. The second and third shells each hold up to 8.",
+   "Electrons fill the inner shell first, then the next one. Sodium has atomic number 11, so its electrons are arranged 2, 8, 1."
+  ],
+  "remember": "Atomic number = protons. Electrons fill shells from the inside out, and the shells hold up to 2, 8, 8.",
+  "a": {
+   "q": "A neutral atom of an element has atomic number 7. How many electrons does it have?",
+   "opts": [
+    "7, the same as its protons",
+    "14, double its protons",
+    "0, because electrons are neutral",
+    "8, one more than its protons"
+   ],
+   "why": "The atomic number is the number of protons. A neutral atom has equal numbers of protons and electrons, so it has 7 electrons. Electrons are negative, not neutral, so they are not absent.",
+   "clue": "A neutral atom has equal numbers of two particles."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia is drawing a neutral atom of chlorine, atomic number 17. How should she arrange its electrons in shells?",
+   "opts": [
+    "2, 8, 7",
+    "2, 8, 8",
+    "8, 8, 1",
+    "2, 7, 8"
+   ],
+   "why": "Chlorine has 17 protons, so a neutral atom has 17 electrons. The first shell takes 2, the second takes 8, and the remaining 7 go in the third shell. Putting 8 in the third shell gives 18 electrons, which is too many.",
+   "clue": "Fill the inner shells first, then count what is left over."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:45Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line gives '2, 8, 8' as the filling pattern but drops the card's 'up to', so it reads as a fixed arrangement rather than shell capacities. This could push students towards the distractor '2, 8, 8' in question b. Something like 'Shells hold up to 2, 8, 8' would match the card."
+   }
+  ],
+  "flags": [
+   "Remember, other: The remember line gives '2, 8, 8' as the filling pattern but drops the card's 'up to', so it reads as a fixed arrangement rather than shell capacities. This could push students towards the distractor '2, 8, 8' in question b. Something like 'Shells hold up to 2, 8, 8' would match the card."
+  ]
+ },
+ "final": {
+  "title": "Atomic number and electron shells",
+  "card": [
+   "The atomic number of an element is the number of protons in the nucleus of each of its atoms. Every atom of one element has the same atomic number.",
+   "A neutral atom has equal numbers of protons and electrons. So its atomic number is also its number of electrons.",
+   "Electrons move around the nucleus in shells. In the first 18 elements, the first shell holds up to 2 electrons. The second and third shells each hold up to 8.",
+   "Electrons fill the inner shell first, then the next one. Sodium has atomic number 11, so its electrons are arranged 2, 8, 1."
+  ],
+  "remember": "Atomic number = protons. Electrons fill shells from the inside out, and the shells hold up to 2, 8, 8.",
+  "a": {
+   "q": "A neutral atom of an element has atomic number 7. How many electrons does it have?",
+   "opts": [
+    "7, the same as its protons",
+    "14, double its protons",
+    "0, because electrons are neutral",
+    "8, one more than its protons"
+   ],
+   "why": "The atomic number is the number of protons. A neutral atom has equal numbers of protons and electrons, so it has 7 electrons. Electrons are negative, not neutral, so they are not absent.",
+   "clue": "A neutral atom has equal numbers of two particles."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia is drawing a neutral atom of chlorine, atomic number 17. How should she arrange its electrons in shells?",
+   "opts": [
+    "2, 8, 7",
+    "2, 8, 8",
+    "8, 8, 1",
+    "2, 7, 8"
+   ],
+   "why": "Chlorine has 17 protons, so a neutral atom has 17 electrons. The first shell takes 2, the second takes 8, and the remaining 7 go in the third shell. Putting 8 in the third shell gives 18 electrons, which is too many.",
+   "clue": "Fill the inner shells first, then count what is left over."
+  }
+ },
+ "cleared_by": "auto"
 }

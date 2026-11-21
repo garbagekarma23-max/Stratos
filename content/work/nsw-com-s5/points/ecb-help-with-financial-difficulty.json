@@ -16,8 +16,433 @@
    0.235
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:41Z write: done",
+  "2026-11-20T12:35:44Z check: flagged",
+  "2026-11-20T12:44:52Z fix: suggested",
+  "2026-11-20T13:37:05Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "write": 0.00625,
+  "check": 0.01214,
+  "fix": 0.01734,
+  "recheck": 0.01051
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the three bank points teaches where people in money trouble can get help, such as hardship arrangements, free financial counsellors or bankruptcy, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Help with financial difficulty",
+  "card": [
+   [
+    "Hardship arrangement",
+    "a request to your lender for changed terms when you cannot keep up repayments. The lender may pause repayments or lower them for a time."
+   ],
+   [
+    "Financial counsellor",
+    "a trained person who helps you sort out debts and plan a way forward. The service is free and confidential, and you can use it before your debts get out of hand."
+   ],
+   [
+    "Bankruptcy",
+    "a legal process for people who cannot pay their debts. It is a last resort, because it can limit what the person can do with money for years."
+   ],
+   "It is usually best to ask for help early. Lenders and counsellors have more options when a person acts before missing many payments."
+  ],
+  "remember": "Ask early: talk to your lender, see a free counsellor, and keep bankruptcy as the last resort.",
+  "a": {
+   "q": "Jo has lost shifts at work and may miss her car loan repayments next month. What is a sensible first step?",
+   "opts": [
+    "Ask the lender for a hardship arrangement",
+    "Declare bankruptcy straight away",
+    "Ignore the loan until the lender contacts her",
+    "Take out a new loan to cover the repayments"
+   ],
+   "why": "A hardship arrangement lets the lender change the terms while Jo cannot keep up. Bankruptcy is wrong as a first step because it is a last resort with long effects.",
+   "clue": "Which step is made to your lender, before things get worse?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam has debts from several sources and is not sure what he can afford to repay. He does not want to pay a fee for advice. What should he do?",
+   "opts": [
+    "See a free financial counsellor to plan his debts",
+    "Go bankrupt so that all his debts disappear",
+    "Pay a company to arrange the debts for him",
+    "Wait until he misses many payments before acting"
+   ],
+   "why": "A financial counsellor is free and helps people sort out debts and plan. Bankruptcy is a tempting wrong answer, but it is a last resort with long effects and not the first step.",
+   "clue": "Look for the help that costs nothing and comes before drastic steps."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Ask the lender for a hardship arrangement",
+   "also_right": []
+  },
+  "b": {
+   "best": "See a free financial counsellor to plan his debts",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says Sam does not want to pay a fee, and the right option is the only one that says 'free'. A student can match the two words without knowing that financial counsellors are free. Drop 'free' from the option, or drop the fee detail from the stem."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card is accurate and both intended answers are right. In question b, the word 'free' in the right option matches the stem's 'does not want to pay a fee', which gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The stem says Sam does not want to pay a fee, and the right option is the only one that says 'free'. A student can match the two words without knowing that financial counsellors are free. Drop 'free' from the option, or drop the fee detail from the stem."
+ ],
+ "proposal": {
+  "title": "Help with financial difficulty",
+  "card": [
+   [
+    "Hardship arrangement",
+    "a request to your lender for changed terms when you cannot keep up repayments. The lender may pause repayments or lower them for a time."
+   ],
+   [
+    "Financial counsellor",
+    "a trained person who helps you sort out debts and plan a way forward. The service is free and confidential, and you can use it before your debts get out of hand."
+   ],
+   [
+    "Bankruptcy",
+    "a legal process for people who cannot pay their debts. It is a last resort, because it can limit what the person can do with money for years."
+   ],
+   "It is usually best to ask for help early. Lenders and counsellors have more options when a person acts before missing many payments."
+  ],
+  "remember": "Ask early: talk to your lender, see a free counsellor, and keep bankruptcy as the last resort.",
+  "a": {
+   "q": "Jo has lost shifts at work and may miss her car loan repayments next month. What is a sensible first step?",
+   "opts": [
+    "Ask the lender for a hardship arrangement",
+    "Declare bankruptcy straight away",
+    "Ignore the loan until the lender contacts her",
+    "Take out a new loan to cover the repayments"
+   ],
+   "why": "A hardship arrangement lets the lender change the terms while Jo cannot keep up. Bankruptcy is wrong as a first step because it is a last resort with long effects.",
+   "clue": "Which step is made to your lender, before things get worse?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam has debts from several sources and is not sure what he can afford to repay. He does not want to pay a fee for advice. What should he do?",
+   "opts": [
+    "See a financial counsellor to plan his debts",
+    "Go bankrupt so that all his debts disappear",
+    "Pay a company to arrange the debts for him",
+    "Wait until he misses many payments before acting"
+   ],
+   "why": "A financial counsellor helps people sort out debts and plan, and the service is free, so Sam pays no fee. Bankruptcy is a tempting wrong answer, but it is a last resort with long effects and not the first step. Paying a company means paying a fee, which Sam wants to avoid.",
+   "clue": "Which of these services does not charge for help?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:05Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Ask the lender for a hardship arrangement",
+    "also_right": []
+   },
+   "b": {
+    "best": "See a financial counsellor to plan his debts",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card's facts on hardship arrangements, free financial counsellors and bankruptcy as a last resort are correct for Australia, and each question has one clear right answer that matches its explanation."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:05Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says Sam does not want to pay a fee, and the right option is the only one that says 'free'. A student can match the two words without knowing that financial counsellors are free. Drop 'free' from the option, or drop the fee detail from the stem."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The stem says Sam does not want to pay a fee, and the right option is the only one that says 'free'. A student can match the two words without knowing that financial counsellors are free. Drop 'free' from the option, or drop the fee detail from the stem."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Help with financial difficulty",
+  "card": [
+   [
+    "Hardship arrangement",
+    "a request to your lender for changed terms when you cannot keep up repayments. The lender may pause repayments or lower them for a time."
+   ],
+   [
+    "Financial counsellor",
+    "a trained person who helps you sort out debts and plan a way forward. The service is free and confidential, and you can use it before your debts get out of hand."
+   ],
+   [
+    "Bankruptcy",
+    "a legal process for people who cannot pay their debts. It is a last resort, because it can limit what the person can do with money for years."
+   ],
+   "It is usually best to ask for help early. Lenders and counsellors have more options when a person acts before missing many payments."
+  ],
+  "remember": "Ask early: talk to your lender, see a free counsellor, and keep bankruptcy as the last resort.",
+  "a": {
+   "q": "Jo has lost shifts at work and may miss her car loan repayments next month. What is a sensible first step?",
+   "opts": [
+    "Ask the lender for a hardship arrangement",
+    "Declare bankruptcy straight away",
+    "Ignore the loan until the lender contacts her",
+    "Take out a new loan to cover the repayments"
+   ],
+   "why": "A hardship arrangement lets the lender change the terms while Jo cannot keep up. Bankruptcy is wrong as a first step because it is a last resort with long effects.",
+   "clue": "Which step is made to your lender, before things get worse?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam has debts from several sources and is not sure what he can afford to repay. He does not want to pay a fee for advice. What should he do?",
+   "opts": [
+    "See a financial counsellor to plan his debts",
+    "Go bankrupt so that all his debts disappear",
+    "Pay a company to arrange the debts for him",
+    "Wait until he misses many payments before acting"
+   ],
+   "why": "A financial counsellor helps people sort out debts and plan, and the service is free, so Sam pays no fee. Bankruptcy is a tempting wrong answer, but it is a last resort with long effects and not the first step. Paying a company means paying a fee, which Sam wants to avoid.",
+   "clue": "Which of these services does not charge for help?"
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix takes 'free' out of question b's right option, so the stem no longer gives it away, and the why now explains that counselling is free and paying a company costs a fee. The facts are right for Australia and each question has one clear right answer, not the longest option.",
+   "item": "fb8111cd9f130563",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-help-with-financial-difficulty",
+    "title": "Help with financial difficulty",
+    "brief": "860ed0e2b255",
+    "shortlist": [
+     [
+      "ecb-financial-institutions",
+      0.305
+     ],
+     [
+      "ecb-shapes-financial-sector",
+      0.292
+     ],
+     [
+      "ecb-managing-financial-risk",
+      0.235
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 1,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00013,
+     "write": 0.00625,
+     "check": 0.01214,
+     "fix": 0.01734,
+     "recheck": 0.01051
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "high",
+     "reason": "None of the three bank points teaches where people in money trouble can get help, such as hardship arrangements, free financial counsellors or bankruptcy, so a new point is needed.",
+     "model": "claude-haiku-5-5"
+    },
+    "draft": {
+     "title": "Help with financial difficulty",
+     "card": [
+      [
+       "Hardship arrangement",
+       "a request to your lender for changed terms when you cannot keep up repayments. The lender may pause repayments or lower them for a time."
+      ],
+      [
+       "Financial counsellor",
+       "a trained person who helps you sort out debts and plan a way forward. The service is free and confidential, and you can use it before your debts get out of hand."
+      ],
+      [
+       "Bankruptcy",
+       "a legal process for people who cannot pay their debts. It is a last resort, because it can limit what the person can do with money for years."
+      ],
+      "It is usually best to ask for help early. Lenders and counsellors have more options when a person acts before missing many payments."
+     ],
+     "remember": "Ask early: talk to your lender, see a free counsellor, and keep bankruptcy as the last resort.",
+     "a": {
+      "q": "Jo has lost shifts at work and may miss her car loan repayments next month. What is a sensible first step?",
+      "opts": [
+       "Ask the lender for a hardship arrangement",
+       "Declare bankruptcy straight away",
+       "Ignore the loan until the lender contacts her",
+       "Take out a new loan to cover the repayments"
+      ],
+      "why": "A hardship arrangement lets the lender change the terms while Jo cannot keep up. Bankruptcy is wrong as a first step because it is a last resort with long effects.",
+      "clue": "Which step is made to your lender, before things get worse?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Sam has debts from several sources and is not sure what he can afford to repay. He does not want to pay a fee for advice. What should he do?",
+      "opts": [
+       "See a free financial counsellor to plan his debts",
+       "Go bankrupt so that all his debts disappear",
+       "Pay a company to arrange the debts for him",
+       "Wait until he misses many payments before acting"
+      ],
+      "why": "A financial counsellor is free and helps people sort out debts and plan. Bankruptcy is a tempting wrong answer, but it is a last resort with long effects and not the first step.",
+      "clue": "Look for the help that costs nothing and comes before drastic steps."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Ask the lender for a hardship arrangement",
+      "also_right": []
+     },
+     "b": {
+      "best": "See a free financial counsellor to plan his debts",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The stem says Sam does not want to pay a fee, and the right option is the only one that says 'free'. A student can match the two words without knowing that financial counsellors are free. Drop 'free' from the option, or drop the fee detail from the stem."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card is accurate and both intended answers are right. In question b, the word 'free' in the right option matches the stem's 'does not want to pay a fee', which gives the answer away."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question b, wording: The stem says Sam does not want to pay a fee, and the right option is the only one that says 'free'. A student can match the two words without knowing that financial counsellors are free. Drop 'free' from the option, or drop the fee detail from the stem."
+    ],
+    "proposal": {
+     "title": "Help with financial difficulty",
+     "card": [
+      [
+       "Hardship arrangement",
+       "a request to your lender for changed terms when you cannot keep up repayments. The lender may pause repayments or lower them for a time."
+      ],
+      [
+       "Financial counsellor",
+       "a trained person who helps you sort out debts and plan a way forward. The service is free and confidential, and you can use it before your debts get out of hand."
+      ],
+      [
+       "Bankruptcy",
+       "a legal process for people who cannot pay their debts. It is a last resort, because it can limit what the person can do with money for years."
+      ],
+      "It is usually best to ask for help early. Lenders and counsellors have more options when a person acts before missing many payments."
+     ],
+     "remember": "Ask early: talk to your lender, see a free counsellor, and keep bankruptcy as the last resort.",
+     "a": {
+      "q": "Jo has lost shifts at work and may miss her car loan repayments next month. What is a sensible first step?",
+      "opts": [
+       "Ask the lender for a hardship arrangement",
+       "Declare bankruptcy straight away",
+       "Ignore the loan until the lender contacts her",
+       "Take out a new loan to cover the repayments"
+      ],
+      "why": "A hardship arrangement lets the lender change the terms while Jo cannot keep up. Bankruptcy is wrong as a first step because it is a last resort with long effects.",
+      "clue": "Which step is made to your lender, before things get worse?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Sam has debts from several sources and is not sure what he can afford to repay. He does not want to pay a fee for advice. What should he do?",
+      "opts": [
+       "See a financial counsellor to plan his debts",
+       "Go bankrupt so that all his debts disappear",
+       "Pay a company to arrange the debts for him",
+       "Wait until he misses many payments before acting"
+      ],
+      "why": "A financial counsellor helps people sort out debts and plan, and the service is free, so Sam pays no fee. Bankruptcy is a tempting wrong answer, but it is a last resort with long effects and not the first step. Paying a company means paying a fee, which Sam wants to avoid.",
+      "clue": "Which of these services does not charge for help?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:05Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "Ask the lender for a hardship arrangement",
+       "also_right": []
+      },
+      "b": {
+       "best": "See a financial counsellor to plan his debts",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found. The card's facts on hardship arrangements, free financial counsellors and bankruptcy as a last resort are correct for Australia, and each question has one clear right answer that matches its explanation."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-20T13:37:05Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 11,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The stem says Sam does not want to pay a fee, and the right option is the only one that says 'free'. A student can match the two words without knowing that financial counsellors are free. Drop 'free' from the option, or drop the fee detail from the stem."
+      }
+     ],
+     "flags": [
+      "Question b, wording: The stem says Sam does not want to pay a fee, and the right option is the only one that says 'free'. A student can match the two words without knowing that financial counsellors are free. Drop 'free' from the option, or drop the fee detail from the stem."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "25d97b76d1391a09"
+  }
  ]
 }

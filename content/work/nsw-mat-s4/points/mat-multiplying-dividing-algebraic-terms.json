@@ -24,8 +24,113 @@
    0.211
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:54Z write: done",
+  "2026-11-20T12:35:53Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.01256,
+  "check": 0.00564
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches multiplying or dividing algebraic terms: the fractions point covers numeric fractions, like terms covers adding and subtracting, and expanding brackets covers a term times a sum, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Multiplying and dividing algebraic terms",
+  "card": [
+   "To multiply terms, multiply the numbers first, then the pronumerals. So \\(3a \\times 4b = 12ab\\).",
+   "Same pronumerals multiply to a power: \\(a \\times a = a^{2}\\). So \\(2x \\times 5x = 10x^{2}\\).",
+   "To divide terms, write them as a fraction and cancel common factors from the top and bottom.",
+   "Example: \\(12xy \\div 4x = \\frac{12xy}{4x}\\). Divide 12 by 4 to get 3, and cancel \\(x\\), leaving \\(3y\\)."
+  ],
+  "remember": "Multiply numbers then pronumerals. To divide, cancel like a fraction.",
+  "a": {
+   "q": "Simplify \\(5m \\times 2n\\).",
+   "opts": [
+    "\\(10mn\\)",
+    "\\(7mn\\)",
+    "\\(10m + n\\)",
+    "\\(10m^{2}n\\)"
+   ],
+   "why": "Multiply the numbers: \\(5 \\times 2 = 10\\). Then the pronumerals: \\(m \\times n = mn\\). Adding the numbers to get \\(7mn\\) mixes up multiplying with adding.",
+   "clue": "Multiply the numbers, then write the letters together."
+  },
+  "b": {
+   "d": 3,
+   "q": "Simplify \\(18ab \\div 6b\\).",
+   "opts": [
+    "\\(3a\\)",
+    "\\(3ab\\)",
+    "\\(12a\\)",
+    "\\(3b\\)"
+   ],
+   "why": "Write \\(\\frac{18ab}{6b}\\). Divide 18 by 6 to get 3, and cancel \\(b\\), leaving \\(3a\\). The answer \\(3ab\\) forgets that \\(b\\) is on the bottom as well.",
+   "clue": "Which pronumeral appears on both the top and the bottom?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(10mn\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(3a\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Multiplying and dividing algebraic terms",
+  "card": [
+   "To multiply terms, multiply the numbers first, then the pronumerals. So \\(3a \\times 4b = 12ab\\).",
+   "Same pronumerals multiply to a power: \\(a \\times a = a^{2}\\). So \\(2x \\times 5x = 10x^{2}\\).",
+   "To divide terms, write them as a fraction and cancel common factors from the top and bottom.",
+   "Example: \\(12xy \\div 4x = \\frac{12xy}{4x}\\). Divide 12 by 4 to get 3, and cancel \\(x\\), leaving \\(3y\\)."
+  ],
+  "remember": "Multiply numbers then pronumerals. To divide, cancel like a fraction.",
+  "a": {
+   "q": "Simplify \\(5m \\times 2n\\).",
+   "opts": [
+    "\\(10mn\\)",
+    "\\(7mn\\)",
+    "\\(10m + n\\)",
+    "\\(10m^{2}n\\)"
+   ],
+   "why": "Multiply the numbers: \\(5 \\times 2 = 10\\). Then the pronumerals: \\(m \\times n = mn\\). Adding the numbers to get \\(7mn\\) mixes up multiplying with adding.",
+   "clue": "Multiply the numbers, then write the letters together."
+  },
+  "b": {
+   "d": 3,
+   "q": "Simplify \\(18ab \\div 6b\\).",
+   "opts": [
+    "\\(3a\\)",
+    "\\(3ab\\)",
+    "\\(12a\\)",
+    "\\(3b\\)"
+   ],
+   "why": "Write \\(\\frac{18ab}{6b}\\). Divide 18 by 6 to get 3, and cancel \\(b\\), leaving \\(3a\\). The answer \\(3ab\\) forgets that \\(b\\) is on the bottom as well.",
+   "clue": "Which pronumeral appears on both the top and the bottom?"
+  }
+ },
+ "cleared_by": "checker"
 }

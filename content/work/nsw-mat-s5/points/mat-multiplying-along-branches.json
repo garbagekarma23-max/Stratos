@@ -24,8 +24,124 @@
    0.255
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 says reuse mat-multi-stage-experiments, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:55Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:54Z write: done",
+  "2026-11-20T12:44:58Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0005,
+  "confirm": 0.01001,
+  "write": 0.00782,
+  "check": 0.00754
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-multi-stage-experiments",
+  "changes": [],
+  "sure": "medium",
+  "reason": "This card teaches the same idea as the new point, multiplying along branches and adding the paths that give the event, at a depth that suits Stage 5 students, and both of its questions are fair for them.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Multi-stage experiments, teaches multiplying along paths and adding them. It also teaches with and without replacement, and both its questions depend on that, so it is broader than this point, which teaches only multiplying along branches and adding the paths.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Multiplying along branches",
+  "card": [
+   "Each branch of a tree diagram has a probability. The probability of one path is found by multiplying the probabilities along its branches.",
+   "Example: a bag has 3 red and 2 blue counters. Draw one, put it back, then draw again. \\(P(\\text{red, then red}) = \\frac{3}{5} \\times \\frac{3}{5} = \\frac{9}{25}\\).",
+   "Some events can happen by more than one path. Find the probability of each path that gives the event, then add them.",
+   "Example: for one red and one blue in any order, the paths are red then blue, and blue then red. \\(\\frac{3}{5} \\times \\frac{2}{5} + \\frac{2}{5} \\times \\frac{3}{5} = \\frac{6}{25} + \\frac{6}{25} = \\frac{12}{25}\\)."
+  ],
+  "remember": "Multiply along a path. Add the paths that make the event.",
+  "a": {
+   "q": "Mei spins a spinner twice. Each spin lands on green with probability \\(\\frac{1}{4}\\). What is \\(P(\\text{green, then green})\\)?",
+   "opts": [
+    "\\(\\frac{1}{16}\\)",
+    "\\(\\frac{1}{2}\\)",
+    "\\(\\frac{1}{8}\\)",
+    "\\(\\frac{1}{4}\\)"
+   ],
+   "why": "Along one path, multiply: \\(\\frac{1}{4} \\times \\frac{1}{4} = \\frac{1}{16}\\). Adding gives \\(\\frac{1}{2}\\), which is the tempting mistake, but adding is only for combining different paths.",
+   "clue": "One path, so which operation joins its branches?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A bag has 2 red and 3 blue counters. Jo draws one, replaces it, then draws again. What is the probability that the two counters are different colours?",
+   "opts": [
+    "\\(\\frac{12}{25}\\)",
+    "\\(\\frac{6}{25}\\)",
+    "\\(\\frac{6}{5}\\)",
+    "\\(\\frac{13}{25}\\)"
+   ],
+   "why": "Two paths give different colours: red then blue is \\(\\frac{2}{5} \\times \\frac{3}{5} = \\frac{6}{25}\\), and blue then red is also \\(\\frac{6}{25}\\). Add them to get \\(\\frac{12}{25}\\). Using only one path gives \\(\\frac{6}{25}\\) and misses the other order.",
+   "clue": "Different colours can happen in two orders."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(\\frac{1}{16}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(\\frac{12}{25}\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Multiplying along branches",
+  "card": [
+   "Each branch of a tree diagram has a probability. The probability of one path is found by multiplying the probabilities along its branches.",
+   "Example: a bag has 3 red and 2 blue counters. Draw one, put it back, then draw again. \\(P(\\text{red, then red}) = \\frac{3}{5} \\times \\frac{3}{5} = \\frac{9}{25}\\).",
+   "Some events can happen by more than one path. Find the probability of each path that gives the event, then add them.",
+   "Example: for one red and one blue in any order, the paths are red then blue, and blue then red. \\(\\frac{3}{5} \\times \\frac{2}{5} + \\frac{2}{5} \\times \\frac{3}{5} = \\frac{6}{25} + \\frac{6}{25} = \\frac{12}{25}\\)."
+  ],
+  "remember": "Multiply along a path. Add the paths that make the event.",
+  "a": {
+   "q": "Mei spins a spinner twice. Each spin lands on green with probability \\(\\frac{1}{4}\\). What is \\(P(\\text{green, then green})\\)?",
+   "opts": [
+    "\\(\\frac{1}{16}\\)",
+    "\\(\\frac{1}{2}\\)",
+    "\\(\\frac{1}{8}\\)",
+    "\\(\\frac{1}{4}\\)"
+   ],
+   "why": "Along one path, multiply: \\(\\frac{1}{4} \\times \\frac{1}{4} = \\frac{1}{16}\\). Adding gives \\(\\frac{1}{2}\\), which is the tempting mistake, but adding is only for combining different paths.",
+   "clue": "One path, so which operation joins its branches?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A bag has 2 red and 3 blue counters. Jo draws one, replaces it, then draws again. What is the probability that the two counters are different colours?",
+   "opts": [
+    "\\(\\frac{12}{25}\\)",
+    "\\(\\frac{6}{25}\\)",
+    "\\(\\frac{6}{5}\\)",
+    "\\(\\frac{13}{25}\\)"
+   ],
+   "why": "Two paths give different colours: red then blue is \\(\\frac{2}{5} \\times \\frac{3}{5} = \\frac{6}{25}\\), and blue then red is also \\(\\frac{6}{25}\\). Add them to get \\(\\frac{12}{25}\\). Using only one path gives \\(\\frac{6}{25}\\) and misses the other order.",
+   "clue": "Different colours can happen in two orders."
+  }
+ },
+ "cleared_by": "checker"
 }

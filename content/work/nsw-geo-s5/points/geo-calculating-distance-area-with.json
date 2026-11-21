@@ -16,8 +16,115 @@
    0.212
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: done",
+  "2026-11-20T12:44:55Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00656,
+  "check": 0.009
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches calculating distance and area from a ratio scale; the scale cards cover the geographic scale of an issue (local to global), which is a different idea, and the map-scale card lacks the area-by-grid-squares content.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Distance and area with a ratio scale",
+  "card": [
+   "A ratio scale such as 1:25,000 means one unit on the map is 25,000 of the same unit on the ground. So 1 cm on the map is 25,000 cm on the ground, which is 250 m.",
+   "To find a distance, measure it on the map in centimetres. Then multiply by the ground distance for 1 cm. On a 1:25,000 map, 4 cm is 4 × 250 m = 1000 m, or 1 km.",
+   "On a topographic map, grid lines make squares. On a 1:25,000 map, each square is 1 km by 1 km on the ground, so it has an area of 1 square kilometre (1 km²).",
+   "To find an area, count the whole squares. Put together the parts of squares to make up whole squares, then add them up. The total is the area in km²."
+  ],
+  "remember": "Multiply map centimetres by the scale to get the ground distance. Count grid squares to get area.",
+  "a": {
+   "q": "On a map with a scale of 1:25,000, a track measures 6 cm. How long is the track on the ground?",
+   "opts": [
+    "1.5 km",
+    "6 km",
+    "15 km",
+    "150 m"
+   ],
+   "why": "Each centimetre on the map is 250 m on the ground, so 6 × 250 m = 1500 m, or 1.5 km. Giving 150 m comes from slipping a decimal place when changing 25,000 cm to metres.",
+   "clue": "First work out how many metres 1 cm stands for."
+  },
+  "b": {
+   "d": 3,
+   "q": "A national park on a 1:25,000 map covers 5 whole grid squares and parts of squares that join to make 3 more whole squares. Each square is 1 km by 1 km on the ground. What is the area of the park?",
+   "opts": [
+    "8 km²",
+    "5 km²",
+    "3 km²",
+    "8 km"
+   ],
+   "why": "Whole squares and the joined parts give 5 + 3 = 8 squares. Each square is 1 km², so the area is 8 km². Counting only the whole squares gives 5 km², which leaves out the parts of squares.",
+   "clue": "Put the parts of squares together, then count all the squares."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "1.5 km",
+   "also_right": []
+  },
+  "b": {
+   "best": "8 km²",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Distance and area with a ratio scale",
+  "card": [
+   "A ratio scale such as 1:25,000 means one unit on the map is 25,000 of the same unit on the ground. So 1 cm on the map is 25,000 cm on the ground, which is 250 m.",
+   "To find a distance, measure it on the map in centimetres. Then multiply by the ground distance for 1 cm. On a 1:25,000 map, 4 cm is 4 × 250 m = 1000 m, or 1 km.",
+   "On a topographic map, grid lines make squares. On a 1:25,000 map, each square is 1 km by 1 km on the ground, so it has an area of 1 square kilometre (1 km²).",
+   "To find an area, count the whole squares. Put together the parts of squares to make up whole squares, then add them up. The total is the area in km²."
+  ],
+  "remember": "Multiply map centimetres by the scale to get the ground distance. Count grid squares to get area.",
+  "a": {
+   "q": "On a map with a scale of 1:25,000, a track measures 6 cm. How long is the track on the ground?",
+   "opts": [
+    "1.5 km",
+    "6 km",
+    "15 km",
+    "150 m"
+   ],
+   "why": "Each centimetre on the map is 250 m on the ground, so 6 × 250 m = 1500 m, or 1.5 km. Giving 150 m comes from slipping a decimal place when changing 25,000 cm to metres.",
+   "clue": "First work out how many metres 1 cm stands for."
+  },
+  "b": {
+   "d": 3,
+   "q": "A national park on a 1:25,000 map covers 5 whole grid squares and parts of squares that join to make 3 more whole squares. Each square is 1 km by 1 km on the ground. What is the area of the park?",
+   "opts": [
+    "8 km²",
+    "5 km²",
+    "3 km²",
+    "8 km"
+   ],
+   "why": "Whole squares and the joined parts give 5 + 3 = 8 squares. Each square is 1 km², so the area is 8 km². Counting only the whole squares gives 5 km², which leaves out the parts of squares.",
+   "clue": "Put the parts of squares together, then count all the squares."
+  }
+ },
+ "cleared_by": "checker"
 }

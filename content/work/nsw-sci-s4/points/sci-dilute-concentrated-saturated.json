@@ -8,8 +8,133 @@
    0.265
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.00607,
+  "check": 0.0069
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches what solutes and solvents are and the universal solvent idea, not the concentration levels of dilute, concentrated and saturated solutions, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Dilute, concentrated and saturated",
+  "card": [
+   [
+    "Dilute",
+    "A solution with only a little solute for the amount of solvent. A drop of cordial in a large glass of water is dilute."
+   ],
+   [
+    "Concentrated",
+    "A solution with a lot of solute for the amount of solvent. Cordial made with only a little water is concentrated."
+   ],
+   [
+    "Saturated",
+    "A solution that can dissolve no more solute at that temperature. Any extra solute added stays undissolved and settles at the bottom."
+   ],
+   "Dilute and concentrated compare how much solute is present. Saturated tells you the limit has been reached."
+  ],
+  "remember": "Dilute has little solute, concentrated has a lot, and saturated has reached its limit at that temperature.",
+  "a": {
+   "q": "Sam stirs spoonfuls of salt into water. After the fifth spoonful, extra salt stays on the bottom of the glass however long he stirs. What is the solution?",
+   "opts": [
+    "Saturated",
+    "Dilute",
+    "Insoluble",
+    "Unsaturated"
+   ],
+   "why": "The water cannot dissolve any more salt at that temperature, so the solution is saturated. It is not dilute, because it holds a lot of salt.",
+   "clue": "What does undissolved solid left on the bottom tell you about the limit?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya adds one grain of sugar to a large jug of water and stirs until it disappears. Which describes her solution?",
+   "opts": [
+    "Dilute, as it has very little solute",
+    "Concentrated, as the sugar dissolved fully",
+    "Saturated, as the sugar dissolved fully",
+    "Concentrated, as the jug holds a lot of water"
+   ],
+   "why": "Only a tiny amount of solute is in a lot of solvent, so the solution is dilute. Dissolving fully does not make it saturated, because it could still dissolve much more sugar.",
+   "clue": "Compare the amount of sugar with the amount of water."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Saturated",
+   "also_right": []
+  },
+  "b": {
+   "best": "Dilute, as it has very little solute",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Dilute, concentrated and saturated",
+  "card": [
+   [
+    "Dilute",
+    "A solution with only a little solute for the amount of solvent. A drop of cordial in a large glass of water is dilute."
+   ],
+   [
+    "Concentrated",
+    "A solution with a lot of solute for the amount of solvent. Cordial made with only a little water is concentrated."
+   ],
+   [
+    "Saturated",
+    "A solution that can dissolve no more solute at that temperature. Any extra solute added stays undissolved and settles at the bottom."
+   ],
+   "Dilute and concentrated compare how much solute is present. Saturated tells you the limit has been reached."
+  ],
+  "remember": "Dilute has little solute, concentrated has a lot, and saturated has reached its limit at that temperature.",
+  "a": {
+   "q": "Sam stirs spoonfuls of salt into water. After the fifth spoonful, extra salt stays on the bottom of the glass however long he stirs. What is the solution?",
+   "opts": [
+    "Saturated",
+    "Dilute",
+    "Insoluble",
+    "Unsaturated"
+   ],
+   "why": "The water cannot dissolve any more salt at that temperature, so the solution is saturated. It is not dilute, because it holds a lot of salt.",
+   "clue": "What does undissolved solid left on the bottom tell you about the limit?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya adds one grain of sugar to a large jug of water and stirs until it disappears. Which describes her solution?",
+   "opts": [
+    "Dilute, as it has very little solute",
+    "Concentrated, as the sugar dissolved fully",
+    "Saturated, as the sugar dissolved fully",
+    "Concentrated, as the jug holds a lot of water"
+   ],
+   "why": "Only a tiny amount of solute is in a lot of solvent, so the solution is dilute. Dissolving fully does not make it saturated, because it could still dissolve much more sugar.",
+   "clue": "Compare the amount of sugar with the amount of water."
+  }
+ },
+ "cleared_by": "checker"
 }

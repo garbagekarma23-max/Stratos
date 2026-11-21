@@ -24,8 +24,212 @@
    0.324
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:56Z write: done",
+  "2026-11-20T12:35:54Z check: flagged",
+  "2026-11-20T12:44:59Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00037,
+  "write": 0.0128,
+  "check": 0.01309,
+  "fix": 0.01669,
+  "recheck": 0.00743
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches both parts of this point: the accuracy card gives absolute error as half the smallest unit but goes on to limits of accuracy, and the percentage error cards divide by the true value rather than the measurement, so adapting one would change its core idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Absolute and percentage error",
+  "card": [
+   "Every measurement can be a little out. The absolute error is half the smallest unit on the instrument.",
+   "Example: a ruler marked in millimetres has smallest unit 1 mm. The absolute error is \\(0.5\\) mm, so a length of 80 mm could be from \\(79.5\\) to \\(80.5\\) mm.",
+   "Percentage error compares the error with the measurement. Percentage error \\(=\\) absolute error \\(\\div\\) measurement \\(\\times 100\\%\\).",
+   "Example: \\(0.5 \\div 80 \\times 100 = 0.625\\%\\). Use the same unit for both numbers."
+  ],
+  "remember": "Absolute error is half the smallest unit. Divide it by the measurement and multiply by 100 for percentage error.",
+  "a": {
+   "q": "A scale shows a mass in steps of 0.2 kg. What is the absolute error?",
+   "opts": [
+    "\\(0.1\\) kg",
+    "\\(0.2\\) kg",
+    "\\(0.4\\) kg",
+    "\\(0.02\\) kg"
+   ],
+   "why": "The absolute error is half the smallest unit, and half of \\(0.2\\) is \\(0.1\\) kg. The option \\(0.2\\) kg is tempting, but it is the whole unit, not half.",
+   "clue": "Halve the smallest unit."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya measures a plank as 50 cm using a tape marked in whole centimetres. What is the percentage error?",
+   "opts": [
+    "\\(1\\%\\)",
+    "\\(0.5\\%\\)",
+    "\\(2\\%\\)",
+    "\\(0.01\\%\\)"
+   ],
+   "why": "The absolute error is \\(0.5\\) cm. Then \\(0.5 \\div 50 \\times 100 = 1\\%\\). The option \\(0.5\\%\\) forgets to divide by the measurement correctly and just repeats the absolute error.",
+   "clue": "Find the absolute error first, then divide by 50."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(0.1\\) kg",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(1\\%\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue says to find the absolute error and then divide by 50, but leaves out multiplying by 100. A student who follows it gets 0.01, which matches the distractor \\(0.01\\%\\)."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says \\(0.5\\%\\) 'forgets to divide by the measurement correctly and just repeats the absolute error'. This is muddled: that option does not divide at all. It is simply the absolute error with a % sign added."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct: 0.1 kg and 1%. Question b's clue leaves out the ×100 step, which points students to the 0.01% distractor, and its why describes the 0.5% mistake confusingly."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The clue says to find the absolute error and then divide by 50, but leaves out multiplying by 100. A student who follows it gets 0.01, which matches the distractor \\(0.01\\%\\).",
+  "Question b, wording: The why says \\(0.5\\%\\) 'forgets to divide by the measurement correctly and just repeats the absolute error'. This is muddled: that option does not divide at all. It is simply the absolute error with a % sign added."
+ ],
+ "proposal": {
+  "title": "Absolute and percentage error",
+  "card": [
+   "Every measurement can be a little out. The absolute error is half the smallest unit on the instrument.",
+   "Example: a ruler marked in millimetres has smallest unit 1 mm. The absolute error is \\(0.5\\) mm, so a length of 80 mm could be from \\(79.5\\) to \\(80.5\\) mm.",
+   "Percentage error compares the error with the measurement. Percentage error \\(=\\) absolute error \\(\\div\\) measurement \\(\\times 100\\%\\).",
+   "Example: \\(0.5 \\div 80 \\times 100 = 0.625\\%\\). Use the same unit for both numbers."
+  ],
+  "remember": "Absolute error is half the smallest unit. Divide it by the measurement and multiply by 100 for percentage error.",
+  "a": {
+   "q": "A scale shows a mass in steps of 0.2 kg. What is the absolute error?",
+   "opts": [
+    "\\(0.1\\) kg",
+    "\\(0.2\\) kg",
+    "\\(0.4\\) kg",
+    "\\(0.02\\) kg"
+   ],
+   "why": "The absolute error is half the smallest unit, and half of \\(0.2\\) is \\(0.1\\) kg. The option \\(0.2\\) kg is tempting, but it is the whole unit, not half.",
+   "clue": "Halve the smallest unit."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya measures a plank as 50 cm using a tape marked in whole centimetres. What is the percentage error?",
+   "opts": [
+    "\\(1\\%\\)",
+    "\\(0.5\\%\\)",
+    "\\(2\\%\\)",
+    "\\(0.01\\%\\)"
+   ],
+   "why": "The absolute error is half of 1 cm, which is \\(0.5\\) cm. Then \\(0.5 \\div 50 \\times 100 = 1\\%\\). The option \\(0.5\\%\\) is just the absolute error with a % sign added, without dividing by the measurement or multiplying by 100.",
+   "clue": "There are three steps: halve the unit, divide by the measurement, then multiply by 100."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(0.1\\) kg",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(1\\%\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue says to find the absolute error and then divide by 50, but leaves out multiplying by 100. A student who follows it gets 0.01, which matches the distractor \\(0.01\\%\\)."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says \\(0.5\\%\\) 'forgets to divide by the measurement correctly and just repeats the absolute error'. This is muddled: that option does not divide at all. It is simply the absolute error with a % sign added."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The clue says to find the absolute error and then divide by 50, but leaves out multiplying by 100. A student who follows it gets 0.01, which matches the distractor \\(0.01\\%\\).",
+   "Question b, wording: The why says \\(0.5\\%\\) 'forgets to divide by the measurement correctly and just repeats the absolute error'. This is muddled: that option does not divide at all. It is simply the absolute error with a % sign added."
+  ]
+ },
+ "final": {
+  "title": "Absolute and percentage error",
+  "card": [
+   "Every measurement can be a little out. The absolute error is half the smallest unit on the instrument.",
+   "Example: a ruler marked in millimetres has smallest unit 1 mm. The absolute error is \\(0.5\\) mm, so a length of 80 mm could be from \\(79.5\\) to \\(80.5\\) mm.",
+   "Percentage error compares the error with the measurement. Percentage error \\(=\\) absolute error \\(\\div\\) measurement \\(\\times 100\\%\\).",
+   "Example: \\(0.5 \\div 80 \\times 100 = 0.625\\%\\). Use the same unit for both numbers."
+  ],
+  "remember": "Absolute error is half the smallest unit. Divide it by the measurement and multiply by 100 for percentage error.",
+  "a": {
+   "q": "A scale shows a mass in steps of 0.2 kg. What is the absolute error?",
+   "opts": [
+    "\\(0.1\\) kg",
+    "\\(0.2\\) kg",
+    "\\(0.4\\) kg",
+    "\\(0.02\\) kg"
+   ],
+   "why": "The absolute error is half the smallest unit, and half of \\(0.2\\) is \\(0.1\\) kg. The option \\(0.2\\) kg is tempting, but it is the whole unit, not half.",
+   "clue": "Halve the smallest unit."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya measures a plank as 50 cm using a tape marked in whole centimetres. What is the percentage error?",
+   "opts": [
+    "\\(1\\%\\)",
+    "\\(0.5\\%\\)",
+    "\\(2\\%\\)",
+    "\\(0.01\\%\\)"
+   ],
+   "why": "The absolute error is half of 1 cm, which is \\(0.5\\) cm. Then \\(0.5 \\div 50 \\times 100 = 1\\%\\). The option \\(0.5\\%\\) is just the absolute error with a % sign added, without dividing by the measurement or multiplying by 100.",
+   "clue": "There are three steps: halve the unit, divide by the measurement, then multiply by 100."
+  }
+ },
+ "cleared_by": "recheck"
 }

@@ -12,8 +12,202 @@
    0.212
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:39Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00583,
+  "check": 0.00918,
+  "fix": 0.02211,
+  "recheck": 0.00699
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches diversification as its own idea: ecb-risk-return only mentions spreading money in one sentence while teaching risk and return, and ecb-managing-financial-risk covers goals, savings, insurance and scams, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Diversification",
+  "card": [
+   "Diversification means spreading your money across different investments instead of putting it all in one.",
+   "Investments do not all rise and fall together. A loss on one may be balanced by gains on others.",
+   "Spreading money lowers the risk that one poor result will wipe out most of your savings. It does not remove risk completely.",
+   "You can diversify across types, such as shares and property, and within a type, such as shares in companies from different industries."
+  ],
+  "remember": "Do not put all your eggs in one basket: spread your money to lower risk.",
+  "a": {
+   "q": "Why does diversification reduce the risk of an investor losing a lot of money?",
+   "opts": [
+    "A loss on one investment may be balanced by gains on others",
+    "It guarantees that every investment will make a profit",
+    "It means the investor only buys the safest investments",
+    "It removes all risk because the money is held in one place"
+   ],
+   "why": "Investments do not all move the same way, so a fall in one may be offset by a rise in another. Diversification does not guarantee profits, and it lowers risk rather than removing it.",
+   "clue": "Think about what happens to the whole amount if one investment falls."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya has $10,000 to invest. Which choice is the most diversified?",
+   "opts": [
+    "$2,500 each in shares, property, bonds and a bank deposit",
+    "$10,000 in shares of one large mining company",
+    "$10,000 in shares of one large bank",
+    "$10,000 spread across shares in three mining companies"
+   ],
+   "why": "Priya's first choice spreads the money across four different types of investment. Three mining companies is spread across companies, but they are all in one industry, so they may rise and fall together.",
+   "clue": "Spreading across companies in the same industry may still leave the money moving together."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A loss on one investment may be balanced by gains on others",
+   "also_right": []
+  },
+  "b": {
+   "best": "$2,500 each in shares, property, bonds and a bank deposit",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one with a hedge ('may'). Every wrong option uses an absolute ('removes all', 'guarantees', 'every', 'only'), so a test-wise student could pick the answer without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The content is accurate and both intended answers are right. One minor issue: in question a, only the right option is hedged with 'may', while every distractor uses an absolute, which could give the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option is the only one with a hedge ('may'). Every wrong option uses an absolute ('removes all', 'guarantees', 'every', 'only'), so a test-wise student could pick the answer without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Diversification",
+  "card": [
+   "Diversification means spreading your money across different investments instead of putting it all in one. It is not the same as choosing safer investments.",
+   "Investments do not all rise and fall together. A loss on one may be balanced by gains on others, so the total amount is steadier.",
+   "Each investment keeps its own risk and return. Spreading lowers the risk that one poor result will wipe out most of your savings, but it does not remove risk completely.",
+   "You can diversify across types, such as shares and property, and within a type, such as shares in companies from different industries."
+  ],
+  "remember": "Do not put all your eggs in one basket: spread your money to lower risk.",
+  "a": {
+   "q": "Why does diversification reduce the risk of an investor losing a lot of money?",
+   "opts": [
+    "A loss on one investment can be offset by gains on others",
+    "Owning more investments makes each one less likely to fall",
+    "It moves the money into low-risk investments, like deposits",
+    "Spreading money makes each investment earn a higher return"
+   ],
+   "why": "Investments do not all move the same way, so a fall in one can be offset by a rise in another, keeping the total steadier. Each investment keeps its own risk, so owning more of them does not make any single one less likely to fall. Diversification is about spreading money, not about moving it into safer investments.",
+   "clue": "Think about the whole amount, not each investment on its own."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya has $10,000 to invest. Which choice is the most diversified?",
+   "opts": [
+    "$2,500 each in shares, property, bonds and a bank deposit",
+    "$10,000 in shares of one large mining company",
+    "$10,000 in shares of one large bank",
+    "$10,000 spread across shares in three mining companies"
+   ],
+   "why": "Priya's first choice spreads the money across four different types of investment. Three mining companies is spread across companies, but they are all in one industry, so they may rise and fall together.",
+   "clue": "Spreading across companies in the same industry may still leave the money moving together."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A loss on one investment can be offset by gains on others",
+    "also_right": []
+   },
+   "b": {
+    "best": "$2,500 each in shares, property, bonds and a bank deposit",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 14,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one with a hedge ('may'). Every wrong option uses an absolute ('removes all', 'guarantees', 'every', 'only'), so a test-wise student could pick the answer without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The right option is the only one with a hedge ('may'). Every wrong option uses an absolute ('removes all', 'guarantees', 'every', 'only'), so a test-wise student could pick the answer without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "Diversification",
+  "card": [
+   "Diversification means spreading your money across different investments instead of putting it all in one. It is not the same as choosing safer investments.",
+   "Investments do not all rise and fall together. A loss on one may be balanced by gains on others, so the total amount is steadier.",
+   "Each investment keeps its own risk and return. Spreading lowers the risk that one poor result will wipe out most of your savings, but it does not remove risk completely.",
+   "You can diversify across types, such as shares and property, and within a type, such as shares in companies from different industries."
+  ],
+  "remember": "Do not put all your eggs in one basket: spread your money to lower risk.",
+  "a": {
+   "q": "Why does diversification reduce the risk of an investor losing a lot of money?",
+   "opts": [
+    "A loss on one investment can be offset by gains on others",
+    "Owning more investments makes each one less likely to fall",
+    "It moves the money into low-risk investments, like deposits",
+    "Spreading money makes each investment earn a higher return"
+   ],
+   "why": "Investments do not all move the same way, so a fall in one can be offset by a rise in another, keeping the total steadier. Each investment keeps its own risk, so owning more of them does not make any single one less likely to fall. Diversification is about spreading money, not about moving it into safer investments.",
+   "clue": "Think about the whole amount, not each investment on its own."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya has $10,000 to invest. Which choice is the most diversified?",
+   "opts": [
+    "$2,500 each in shares, property, bonds and a bank deposit",
+    "$10,000 in shares of one large mining company",
+    "$10,000 in shares of one large bank",
+    "$10,000 spread across shares in three mining companies"
+   ],
+   "why": "Priya's first choice spreads the money across four different types of investment. Three mining companies is spread across companies, but they are all in one industry, so they may rise and fall together.",
+   "clue": "Spreading across companies in the same industry may still leave the money moving together."
+  }
+ },
+ "cleared_by": "recheck"
 }

@@ -24,8 +24,48 @@
    0.22
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 may adapt sci-mutations, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:26:01Z confirm: Claude Opus 5.5 may adapt sci-mutations, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:45:14Z review: reusing sci-mutations"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00037,
+  "confirm": 0.01078
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "sci-mutations",
+  "changes": [
+   "State explicitly that some mutations are helpful, as the brief asks; the card only says some mutations change a trait.",
+   "Use the term sex cells alongside gametes, as the NSW syllabus and the brief word it."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea at the right Year 10 depth, but it needs a small wording change to name helpful mutations and match the brief's terms.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "sci-mutations",
+  "changes": [
+   "In the third line, say that a few mutations can be helpful, for example by giving a trait that improves survival, so the card covers harmful, helpful and little effect as the brief asks.",
+   "Where the card says gamete, add the term sex cell (sperm or egg) alongside it to match the brief's wording."
+  ],
+  "sure": "medium",
+  "reason": "The Year 10 bank card teaches the same idea at the right depth, but it never says that some mutations can be helpful, which the NSW brief includes, so it needs a small addition.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "sci-mutations",
+ "matched": {
+  "verdict": "reuse",
+  "from": "sci-mutations",
+  "by": "owner",
+  "at": "2026-11-20T14:45:14Z"
+ }
 }

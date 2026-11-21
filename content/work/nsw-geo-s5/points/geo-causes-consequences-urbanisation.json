@@ -20,8 +20,212 @@
    0.211
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:48Z write: done",
+  "2026-11-20T12:35:49Z check: flagged",
+  "2026-11-20T12:44:56Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.01103,
+  "check": 0.01123,
+  "fix": 0.01721,
+  "recheck": 0.00746
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teach why people move to cities or the problems fast urban growth causes; they define urbanisation, describe Australian urban concentration, or cover counter-urbanisation, so the causes and consequences point needs a new card.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Causes and consequences of urbanisation",
+  "card": [
+   "Many people move from the country to cities because of pull factors, such as more jobs, better schools and hospitals. Push factors in rural areas, such as drought or few jobs, can also lead people to leave.",
+   "When a city grows fast, services and roads may not keep up. This can cause traffic jams, crowded public transport and air pollution.",
+   "Demand for homes can rise faster than the supply of homes. This can push up housing costs and rents.",
+   "Where people cannot afford housing, some build homes on land they do not own or have no legal right to use. These are informal settlements, and they often have poor water, sanitation and power."
+  ],
+  "remember": "People move to cities for jobs and services. Fast growth can strain housing, transport and the environment.",
+  "a": {
+   "q": "Which of these is a pull factor drawing people to a city?",
+   "opts": [
+    "More jobs in a wide range of industries",
+    "A long drought on farms",
+    "Few schools in country towns",
+    "Low rents in small villages"
+   ],
+   "why": "A pull factor is something about the city that attracts people, and a wider range of jobs does this. The drought and few schools are push factors that make people leave the country, so they are not features of the city itself.",
+   "clue": "Pull factors belong to the city, not the place people leave."
+  },
+  "b": {
+   "d": 3,
+   "q": "A city in Nigeria has doubled in size in 20 years. Many new arrivals cannot afford rent, so they build homes on unused land at the edge of the city. What are these homes called?",
+   "opts": [
+    "Informal settlements",
+    "Suburbs of planned housing",
+    "Satellite towns",
+    "Inner-city apartments"
+   ],
+   "why": "Homes built by people who cannot afford housing, on land they have no legal right to use, are informal settlements. Planned suburbs are built with approval and services, so they are not the same, even though both are on the edge of a city.",
+   "clue": "Think about who built the homes and whether the land was theirs."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "More jobs in a wide range of industries",
+   "also_right": []
+  },
+  "b": {
+   "best": "Informal settlements",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option, 'More jobs in a wide range of industries', is clearly the longest and the only one with an extra qualifier ('a wide range of'), so a student could pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says the homes are on 'unused land' but never says the builders do not own it or have no right to use it, which is the defining feature in the card and the why. Only the clue supplies this. The stem should state that the land is not theirs."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The content is accurate. In question a the right option stands out as the longest and most detailed. Question b's stem should say the land is not the builders' own rather than relying on the clue."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option, 'More jobs in a wide range of industries', is clearly the longest and the only one with an extra qualifier ('a wide range of'), so a student could pick it without knowing the idea.",
+  "Question b, wording: The stem says the homes are on 'unused land' but never says the builders do not own it or have no right to use it, which is the defining feature in the card and the why. Only the clue supplies this. The stem should state that the land is not theirs."
+ ],
+ "proposal": {
+  "title": "Causes and consequences of urbanisation",
+  "card": [
+   "Many people move from the country to cities because of pull factors, such as more jobs, better schools and hospitals. Push factors in rural areas, such as drought or few jobs, can also lead people to leave.",
+   "When a city grows fast, services and roads may not keep up. This can cause traffic jams, crowded public transport and air pollution.",
+   "Demand for homes can rise faster than the supply of homes. This can push up housing costs and rents.",
+   "Where people cannot afford housing, some build homes on land they do not own or have no legal right to use. These are informal settlements, and they often have poor water, sanitation and power."
+  ],
+  "remember": "People move to cities for jobs and services. Fast growth can strain housing, transport and the environment.",
+  "a": {
+   "q": "Which of these is a pull factor drawing people to a city?",
+   "opts": [
+    "Plenty of jobs in offices and shops",
+    "A long drought on outback farms",
+    "Few hospitals in country towns",
+    "Cheap rents in small country villages"
+   ],
+   "why": "A pull factor is something about the city that attracts people, and plenty of jobs does this. The drought and the lack of hospitals are push factors that make people leave the country, and cheap village rents would draw people to villages, not to a city.",
+   "clue": "Pull factors belong to the city, not the place people leave."
+  },
+  "b": {
+   "d": 3,
+   "q": "A city in Nigeria has doubled in size in 20 years. Many new arrivals cannot afford rent, so they build homes at the city's edge on land they do not own and have no right to use. What are these homes called?",
+   "opts": [
+    "Informal settlements",
+    "Suburbs of planned housing",
+    "Satellite towns",
+    "Inner-city apartments"
+   ],
+   "why": "Homes built by people who cannot afford housing, on land they have no legal right to use, are informal settlements. Planned suburbs are built with approval and services, so they are not the same, even though both can be on the edge of a city.",
+   "clue": "Think about who built the homes and whether they had a right to the land."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Plenty of jobs in offices and shops",
+    "also_right": []
+   },
+   "b": {
+    "best": "Informal settlements",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option, 'More jobs in a wide range of industries', is clearly the longest and the only one with an extra qualifier ('a wide range of'), so a student could pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says the homes are on 'unused land' but never says the builders do not own it or have no right to use it, which is the defining feature in the card and the why. Only the clue supplies this. The stem should state that the land is not theirs."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The right option, 'More jobs in a wide range of industries', is clearly the longest and the only one with an extra qualifier ('a wide range of'), so a student could pick it without knowing the idea.",
+   "Question b, wording: The stem says the homes are on 'unused land' but never says the builders do not own it or have no right to use it, which is the defining feature in the card and the why. Only the clue supplies this. The stem should state that the land is not theirs."
+  ]
+ },
+ "final": {
+  "title": "Causes and consequences of urbanisation",
+  "card": [
+   "Many people move from the country to cities because of pull factors, such as more jobs, better schools and hospitals. Push factors in rural areas, such as drought or few jobs, can also lead people to leave.",
+   "When a city grows fast, services and roads may not keep up. This can cause traffic jams, crowded public transport and air pollution.",
+   "Demand for homes can rise faster than the supply of homes. This can push up housing costs and rents.",
+   "Where people cannot afford housing, some build homes on land they do not own or have no legal right to use. These are informal settlements, and they often have poor water, sanitation and power."
+  ],
+  "remember": "People move to cities for jobs and services. Fast growth can strain housing, transport and the environment.",
+  "a": {
+   "q": "Which of these is a pull factor drawing people to a city?",
+   "opts": [
+    "Plenty of jobs in offices and shops",
+    "A long drought on outback farms",
+    "Few hospitals in country towns",
+    "Cheap rents in small country villages"
+   ],
+   "why": "A pull factor is something about the city that attracts people, and plenty of jobs does this. The drought and the lack of hospitals are push factors that make people leave the country, and cheap village rents would draw people to villages, not to a city.",
+   "clue": "Pull factors belong to the city, not the place people leave."
+  },
+  "b": {
+   "d": 3,
+   "q": "A city in Nigeria has doubled in size in 20 years. Many new arrivals cannot afford rent, so they build homes at the city's edge on land they do not own and have no right to use. What are these homes called?",
+   "opts": [
+    "Informal settlements",
+    "Suburbs of planned housing",
+    "Satellite towns",
+    "Inner-city apartments"
+   ],
+   "why": "Homes built by people who cannot afford housing, on land they have no legal right to use, are informal settlements. Planned suburbs are built with approval and services, so they are not the same, even though both can be on the edge of a city.",
+   "clue": "Think about who built the homes and whether they had a right to the land."
+  }
+ },
+ "cleared_by": "recheck"
 }

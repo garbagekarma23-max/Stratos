@@ -12,8 +12,240 @@
    0.24
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:48Z write: failed the content check, writing again",
+  "2026-11-20T12:44:54Z write: done",
+  "2026-11-20T13:11:47Z check: flagged",
+  "2026-11-20T13:17:56Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.01588,
+  "check": 0.01012,
+  "fix": 0.01987,
+  "recheck": 0.00769
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches the difference between direct, indirect and free indirect speech; they cover evaluation and speech structure, so the new point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Direct, indirect and free indirect speech",
+  "card": [
+   [
+    "Direct speech",
+    "quotes a character's exact words, inside quotation marks. Example: Lena said, \"I am not going to the match.\""
+   ],
+   [
+    "Indirect speech",
+    "reports what a character said in the narrator's words, with no quotation marks. The tense and pronouns usually change. Example: Lena said that she was not going to the match."
+   ],
+   [
+    "Free indirect speech",
+    "blends a character's thoughts into the narrator's voice, with no quotation marks and no \"she thought\". Example: Lena stared at the ticket. The match again? No chance. She had had enough."
+   ],
+   [
+    "Effect",
+    "Direct speech lets a reader hear the character's own voice. Indirect speech keeps a distance and can sum up what was said. Free indirect speech puts the reader close to a character's mind while the narrator still tells the story."
+   ]
+  ],
+  "remember": "Direct quotes the words, indirect reports them, free indirect blends the character's thoughts into the narration.",
+  "a": {
+   "q": "Which sentence is an example of free indirect speech?",
+   "opts": [
+    "Tom looked at the empty fridge. Dinner again? Not likely",
+    "Tom said, \"There is nothing in the fridge for dinner.\"",
+    "Tom said that there was nothing in the fridge for dinner",
+    "Tom thought, \"There is nothing in the fridge for dinner.\""
+   ],
+   "why": "The first option slips into Tom's thoughts without quotation marks or a phrase such as \"he thought\". The last option is tempting, but it uses quotation marks and a thinking phrase, so it is direct speech of a thought.",
+   "clue": "Look for thoughts told in the narrator's voice with no marks and no \"said\" or \"thought\"."
+  },
+  "b": {
+   "d": 3,
+   "q": "A writer changes Priya's quoted words about losing the final into a report beginning \"Priya said that she could not believe...\". What is the main effect of the change?",
+   "opts": [
+    "The reader is held at a distance from Priya's own voice",
+    "The reader is placed closer to Priya's private thoughts",
+    "The reader hears Priya's exact words more clearly",
+    "The reader is shown Priya's thoughts without a narrator"
+   ],
+   "why": "The new version is indirect speech. The narrator reports what Priya said, so her exact voice is lost and the telling sits further away. Free indirect speech would be the one to move closer to her mind, but this sentence still uses \"said that\".",
+   "clue": "Ask whose words the reader now gets: Priya's or the narrator's."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Tom looked at the empty fridge. Dinner again? Not likely",
+   "also_right": []
+  },
+  "b": {
+   "best": "The reader is held at a distance from Priya's own voice",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) points to options by position ('The first option', 'The last option'), but the options are shown in random order. In the order shown, the first option is direct speech and the last is the quoted thought, so the explanation names the wrong option as free indirect speech. It should name the options by their wording."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate, and each has one clear answer. The explanation for question a refers to options by position ('first', 'last'), which does not match the random order and points to the wrong sentence."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) points to options by position ('The first option', 'The last option'), but the options are shown in random order. In the order shown, the first option is direct speech and the last is the quoted thought, so the explanation names the wrong option as free indirect speech. It should name the options by their wording."
+ ],
+ "proposal": {
+  "title": "Direct, indirect and free indirect speech",
+  "card": [
+   [
+    "Direct speech",
+    "quotes a character's exact words, inside quotation marks. Example: Lena said, \"I am not going to the match.\""
+   ],
+   [
+    "Indirect speech",
+    "reports what a character said in the narrator's words, with no quotation marks. The tense and pronouns usually change. Example: Lena said that she was not going to the match."
+   ],
+   [
+    "Free indirect speech",
+    "blends a character's thoughts into the narrator's voice, with no quotation marks and no \"she thought\". Example: Lena stared at the ticket. The match again? No chance. She had had enough."
+   ],
+   [
+    "Effect",
+    "Direct speech lets a reader hear the character's own voice. Indirect speech keeps a distance and can sum up what was said. Free indirect speech puts the reader close to a character's mind while the narrator still tells the story."
+   ]
+  ],
+  "remember": "Direct quotes the words, indirect reports them, free indirect blends the character's thoughts into the narration.",
+  "a": {
+   "q": "Which sentence is an example of free indirect speech?",
+   "opts": [
+    "Tom looked at the empty fridge. Dinner again? Not likely",
+    "Tom said, \"There is nothing in the fridge for dinner\"",
+    "Tom said that there was nothing in the fridge for dinner",
+    "Tom thought, \"There is nothing in the fridge for dinner\""
+   ],
+   "why": "The sentence ending \"Dinner again? Not likely\" slips into Tom's thoughts in the narrator's voice, with no quotation marks and no phrase such as \"he thought\". The sentence beginning \"Tom thought\" is tempting, but it uses quotation marks and a thinking phrase, so it is direct speech of a thought.",
+   "clue": "Look for thoughts told in the narrator's voice with no marks and no \"said\" or \"thought\"."
+  },
+  "b": {
+   "d": 3,
+   "q": "A writer changes Priya's quoted words about losing the final into a report beginning \"Priya said that she could not believe...\". What is the main effect of the change?",
+   "opts": [
+    "The reader is held at a distance from Priya's own voice",
+    "The reader is placed closer to Priya's private thoughts",
+    "The reader hears Priya's exact words more clearly",
+    "The reader is shown Priya's thoughts without a narrator"
+   ],
+   "why": "The new version is indirect speech. The narrator reports what Priya said, so her exact voice is lost and the telling sits further away. Free indirect speech would be the one to move closer to her mind, but this sentence still uses \"said that\".",
+   "clue": "Ask whose words the reader now gets: Priya's or the narrator's."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Tom looked at the empty fridge. Dinner again? Not likely",
+    "also_right": []
+   },
+   "b": {
+    "best": "The reader is held at a distance from Priya's own voice",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) points to options by position ('The first option', 'The last option'), but the options are shown in random order. In the order shown, the first option is direct speech and the last is the quoted thought, so the explanation names the wrong option as free indirect speech. It should name the options by their wording."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) points to options by position ('The first option', 'The last option'), but the options are shown in random order. In the order shown, the first option is direct speech and the last is the quoted thought, so the explanation names the wrong option as free indirect speech. It should name the options by their wording."
+  ]
+ },
+ "final": {
+  "title": "Direct, indirect and free indirect speech",
+  "card": [
+   [
+    "Direct speech",
+    "quotes a character's exact words, inside quotation marks. Example: Lena said, \"I am not going to the match.\""
+   ],
+   [
+    "Indirect speech",
+    "reports what a character said in the narrator's words, with no quotation marks. The tense and pronouns usually change. Example: Lena said that she was not going to the match."
+   ],
+   [
+    "Free indirect speech",
+    "blends a character's thoughts into the narrator's voice, with no quotation marks and no \"she thought\". Example: Lena stared at the ticket. The match again? No chance. She had had enough."
+   ],
+   [
+    "Effect",
+    "Direct speech lets a reader hear the character's own voice. Indirect speech keeps a distance and can sum up what was said. Free indirect speech puts the reader close to a character's mind while the narrator still tells the story."
+   ]
+  ],
+  "remember": "Direct quotes the words, indirect reports them, free indirect blends the character's thoughts into the narration.",
+  "a": {
+   "q": "Which sentence is an example of free indirect speech?",
+   "opts": [
+    "Tom looked at the empty fridge. Dinner again? Not likely",
+    "Tom said, \"There is nothing in the fridge for dinner\"",
+    "Tom said that there was nothing in the fridge for dinner",
+    "Tom thought, \"There is nothing in the fridge for dinner\""
+   ],
+   "why": "The sentence ending \"Dinner again? Not likely\" slips into Tom's thoughts in the narrator's voice, with no quotation marks and no phrase such as \"he thought\". The sentence beginning \"Tom thought\" is tempting, but it uses quotation marks and a thinking phrase, so it is direct speech of a thought.",
+   "clue": "Look for thoughts told in the narrator's voice with no marks and no \"said\" or \"thought\"."
+  },
+  "b": {
+   "d": 3,
+   "q": "A writer changes Priya's quoted words about losing the final into a report beginning \"Priya said that she could not believe...\". What is the main effect of the change?",
+   "opts": [
+    "The reader is held at a distance from Priya's own voice",
+    "The reader is placed closer to Priya's private thoughts",
+    "The reader hears Priya's exact words more clearly",
+    "The reader is shown Priya's thoughts without a narrator"
+   ],
+   "why": "The new version is indirect speech. The narrator reports what Priya said, so her exact voice is lost and the telling sits further away. Free indirect speech would be the one to move closer to her mind, but this sentence still uses \"said that\".",
+   "clue": "Ask whose words the reader now gets: Priya's or the narrator's."
+  }
+ },
+ "cleared_by": "recheck"
 }

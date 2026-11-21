@@ -24,8 +24,222 @@
    0.277
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:51Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:52Z write: done",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: kept for you (the fresh check named a sensitive topic)",
+  "2026-11-20T14:02:37Z claude-code review: left for you (it chose to leave it)",
+  "2026-11-20T14:41:56Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.00737,
+  "check": 0.01598,
+  "fix": 0.02421,
+  "recheck": 0.01093
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The brief combines three events, the bombing of Darwin, the Kokoda Track campaign and the turn to the United States, and no single bank point teaches the Battle for Australia as a whole idea; the closest points each cover only one part, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The Battle for Australia",
+  "card": [
+   "On 19 February 1942, Japanese aircraft bombed Darwin. It was the first and largest of many air raids on northern Australia. Darwin was an important base for Allied ships and aircraft.",
+   "In 1942, Australian soldiers fought the Japanese along the Kokoda Track, a narrow path over steep mountains in Papua, in New Guinea. The fighting was in thick jungle, with heavy rain, disease and supply problems.",
+   "Many Papuan and New Guinean men helped the Australians on the track. They carried supplies and carried the wounded to safety.",
+   "Japan was now close to Australia, and Britain could not defend it. Prime Minister John Curtin turned to the United States for help in the Pacific War, and American forces began to base themselves in Australia."
+  ],
+  "remember": "In 1942 Japan attacked Australia's north and Australians fought in New Guinea, so Australia looked to the United States.",
+  "a": {
+   "q": "Why did Australia turn to the United States for help in 1942?",
+   "opts": [
+    "Japan was close and Britain could not defend Australia",
+    "Japan had already invaded and captured Sydney",
+    "Britain had asked the United States to take over Australia",
+    "Australian troops had all been defeated in New Guinea"
+   ],
+   "why": "Japan had bombed Darwin and was fighting in New Guinea, while Britain could not protect Australia. Japan did not capture Sydney, and Australians were still fighting in New Guinea.",
+   "clue": "Think about who could protect Australia once Japan was nearby."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom reads that in 1942 Australians fought on the Kokoda Track. Which description fits this campaign?",
+   "opts": [
+    "Fighting in jungle and mountains in Papua, New Guinea",
+    "Fighting in desert country in North Africa",
+    "Air raids on a northern Australian port",
+    "A siege of a city held by British forces"
+   ],
+   "why": "The Kokoda Track was a narrow path over steep mountains and jungle in Papua, New Guinea. The air raids describe Darwin, which was a bombing and not a track fought over on foot.",
+   "clue": "Kokoda was fought in New Guinea, not in Australia."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "image",
+    "brief": "A map of Papua and New Guinea showing the Kokoda Track between Port Moresby and the north coast, with Darwin and northern Australia visible to the south, in open licence.",
+    "why": "It shows how close the fighting was to Australia and where the track ran."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Japan was close and Britain could not defend Australia",
+   "also_right": []
+  },
+  "b": {
+   "best": "Fighting in jungle and mountains in Papua, New Guinea",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue says Kokoda was fought in New Guinea, and the right option is the only one that mentions New Guinea. It is also the longest and most detailed option. A student can pick it without knowing what the campaign was like."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts check out. In question b, the clue names New Guinea, and only the right option mentions it, so the clue gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The clue says Kokoda was fought in New Guinea, and the right option is the only one that mentions New Guinea. It is also the longest and most detailed option. A student can pick it without knowing what the campaign was like."
+ ],
+ "proposal": {
+  "title": "The Battle for Australia",
+  "card": [
+   "On 19 February 1942, Japanese aircraft bombed Darwin. It was the first and largest of many air raids on northern Australia. Darwin was an important base for Allied ships and aircraft.",
+   "In 1942, Australian soldiers fought the Japanese along the Kokoda Track, a narrow path over steep mountains in Papua, on the island of New Guinea. They fought on foot in thick jungle, with heavy rain, disease and supply problems.",
+   "Many Papuan and New Guinean men helped the Australians on the track. They carried supplies and carried the wounded to safety.",
+   "Japan was now close to Australia, and Britain could not defend it. Prime Minister John Curtin turned to the United States for help in the Pacific War, and American forces began to base themselves in Australia."
+  ],
+  "remember": "In 1942 Japan attacked Australia's north and Australians fought in New Guinea, so Australia looked to the United States.",
+  "a": {
+   "q": "Why did Australia turn to the United States for help in 1942?",
+   "opts": [
+    "Japan was close and Britain could not defend Australia",
+    "Japan had already invaded and captured Sydney",
+    "Britain had asked the United States to take over Australia",
+    "Australian troops had all been defeated in New Guinea"
+   ],
+   "why": "Japan had bombed Darwin and was fighting in New Guinea, while Britain could not protect Australia. Japan did not capture Sydney, and Australians were still fighting in New Guinea.",
+   "clue": "Think about who could protect Australia once Japan was nearby."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom's great-grandfather fought on the Kokoda Track in 1942. Which description best fits what he faced there?",
+   "opts": [
+    "Fighting on foot through steep, wet and thick jungle",
+    "Tank battles across flat, dry and open desert",
+    "Warships firing on each other far out at sea",
+    "Bombers attacking a town and its harbour from the air"
+   ],
+   "why": "The Kokoda Track was a narrow path over steep mountains, so soldiers fought on foot in jungle, rain and disease. Bombers attacking a harbour describes the raids on Darwin, which were from the air, not fighting along a track.",
+   "clue": "Think about the ground the track crossed."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "image",
+    "brief": "An openly licensed map of Papua, on the island of New Guinea, showing the Kokoda Track running over the mountains between Port Moresby and the north coast, with Darwin and northern Australia visible to the south.",
+    "why": "It shows where the track ran and how close the fighting was to Australia."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "kept",
+  "why": [
+   "the fresh check named a sensitive topic"
+  ],
+  "check": {
+   "a": {
+    "best": "Japan was close and Britain could not defend Australia",
+    "also_right": []
+   },
+   "b": {
+    "best": "Fighting on foot through steep, wet and thick jungle",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "other-sensitive",
+   "summary": "No problems found. The facts on the Darwin raid, Kokoda, Papuan carriers and Curtin's turn to the United States are accurate, and both questions have one clear answer."
+  },
+  "flags": []
+ },
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "leave",
+   "sure": "medium",
+   "reason": "The point deals with bombing raids, fighting on the Kokoda Track and carrying the wounded, and the fresh check named a sensitive topic, so the owner decides.",
+   "item": "e797c9096d56380a",
+   "result": "left"
+  }
+ ],
+ "final": {
+  "title": "The Battle for Australia",
+  "card": [
+   "On 19 February 1942, Japanese aircraft bombed Darwin. It was the first and largest of many air raids on northern Australia. Darwin was an important base for Allied ships and aircraft.",
+   "In 1942, Australian soldiers fought the Japanese along the Kokoda Track, a narrow path over steep mountains in Papua, on the island of New Guinea. They fought on foot in thick jungle, with heavy rain, disease and supply problems.",
+   "Many Papuan and New Guinean men helped the Australians on the track. They carried supplies and carried the wounded to safety.",
+   "Japan was now close to Australia, and Britain could not defend it. Prime Minister John Curtin turned to the United States for help in the Pacific War, and American forces began to base themselves in Australia."
+  ],
+  "remember": "In 1942 Japan attacked Australia's north and Australians fought in New Guinea, so Australia looked to the United States.",
+  "a": {
+   "q": "Why did Australia turn to the United States for help in 1942?",
+   "opts": [
+    "Japan was close and Britain could not defend Australia",
+    "Japan had already invaded and captured Sydney",
+    "Britain had asked the United States to take over Australia",
+    "Australian troops had all been defeated in New Guinea"
+   ],
+   "why": "Japan had bombed Darwin and was fighting in New Guinea, while Britain could not protect Australia. Japan did not capture Sydney, and Australians were still fighting in New Guinea.",
+   "clue": "Think about who could protect Australia once Japan was nearby."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom's great-grandfather fought on the Kokoda Track in 1942. Which description best fits what he faced there?",
+   "opts": [
+    "Fighting on foot through steep, wet and thick jungle",
+    "Tank battles across flat, dry and open desert",
+    "Warships firing on each other far out at sea",
+    "Bombers attacking a town and its harbour from the air"
+   ],
+   "why": "The Kokoda Track was a narrow path over steep mountains, so soldiers fought on foot in jungle, rain and disease. Bombers attacking a harbour describes the raids on Darwin, which were from the air, not fighting along a track.",
+   "clue": "Think about the ground the track crossed."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "image",
+    "brief": "An openly licensed map of Papua, on the island of New Guinea, showing the Kokoda Track running over the mountains between Port Moresby and the north coast, with Darwin and northern Australia visible to the south.",
+    "why": "It shows where the track ran and how close the fighting was to Australia."
+   }
+  ]
+ },
+ "cleared_by": "owner"
 }

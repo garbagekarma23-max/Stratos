@@ -24,8 +24,45 @@
    0.268
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 may adapt eng-context-reception, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:44Z confirm: Claude Opus 5.5 may reuse eng-context-reception, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:34:06Z review: reusing eng-context-reception"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00041,
+  "confirm": 0.01124
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "eng-context-reception",
+  "changes": [
+   "Replace the Year 11 term 'context of reception' with plain wording a Stage 5 student will know, such as 'the context of the reader'.",
+   "Add a sentence saying that different audiences at the same time, not only readers in different eras, can find different themes in the same work."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea that readers bring their own values and experiences, so meaning can differ, but it is labelled for Year 11 and only covers differences across time, so it needs small wording and scope changes for Stage 5.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "eng-context-reception",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches exactly this idea: readers bring their own values and experiences, so the same text can be read differently across times and places. It does so at a plain level that suits Years 9 and 10, and both questions are fair for these students.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "eng-context-reception",
+ "matched": {
+  "verdict": "reuse",
+  "from": "eng-context-reception",
+  "by": "owner",
+  "at": "2026-11-20T14:34:06Z"
+ }
 }

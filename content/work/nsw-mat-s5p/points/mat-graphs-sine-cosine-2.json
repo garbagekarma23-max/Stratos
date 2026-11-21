@@ -24,8 +24,489 @@
    0.203
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:56Z write: failed the content check, writing again",
+  "2026-11-20T12:44:59Z write: done",
+  "2026-11-20T12:53:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00042,
+  "write": 0.05091,
+  "check": 0.01294
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point covers sine, cosine and tangent at Year 11 depth, with radians, a 90° phase shift and tangent asymptotes, and its questions test tangent, so it is broader and deeper than this Stage 5 point on sine and cosine from 0° to 360°.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Graphs of sine and cosine",
+  "card": [
+   [
+    "Sine",
+    "The graph of \\(y = \\sin x\\) starts at 0 when \\(x = 0^{\\circ}\\). It rises to 1 at \\(90^{\\circ}\\), falls to 0 at \\(180^{\\circ}\\), reaches \\(-1\\) at \\(270^{\\circ}\\), and is back at 0 at \\(360^{\\circ}\\)."
+   ],
+   [
+    "Cosine",
+    "The graph of \\(y = \\cos x\\) starts at 1 when \\(x = 0^{\\circ}\\). It falls to 0 at \\(90^{\\circ}\\), reaches \\(-1\\) at \\(180^{\\circ}\\), is back at 0 at \\(270^{\\circ}\\), and ends at 1 at \\(360^{\\circ}\\)."
+   ],
+   "Both graphs are smooth waves with the same shape. Their highest value is 1 and their lowest value is \\(-1\\). They differ in where they start."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "The graph of \\(y = \\sin x\\) from \\(0^{\\circ}\\) to \\(360^{\\circ}\\). It crosses the x-axis at \\(0^{\\circ}\\), \\(180^{\\circ}\\) and \\(360^{\\circ}\\), has its highest point \\((90, 1)\\) and its lowest point \\((270, -1)\\).",
+    "x": {
+     "min": -90,
+     "max": 450,
+     "label": "\\(x\\)",
+     "step": 90,
+     "nums": false
+    },
+    "y": {
+     "min": -2,
+     "max": 2,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\sin(\\frac{\\pi x}{180})",
+      "domain": [
+       0,
+       360
+      ],
+      "label": "\\(y = \\sin x\\)",
+      "labelAt": 20,
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       180,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       360,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       90,
+       1
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point",
+      "label": "\\((90, 1)\\)",
+      "pos": "above"
+     },
+     {
+      "type": "point",
+      "at": [
+       270,
+       -1
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point",
+      "label": "\\((270, -1)\\)",
+      "pos": "below"
+     }
+    ]
+   },
+   "2": {
+    "kind": "graph",
+    "alt": "The graph of \\(y = \\cos x\\) from \\(0^{\\circ}\\) to \\(360^{\\circ}\\). It starts at \\((0, 1)\\), crosses the x-axis at \\(90^{\\circ}\\) and \\(270^{\\circ}\\), has its lowest point \\((180, -1)\\) and ends at \\((360, 1)\\).",
+    "x": {
+     "min": -90,
+     "max": 450,
+     "label": "\\(x\\)",
+     "step": 90,
+     "nums": false
+    },
+    "y": {
+     "min": -2,
+     "max": 2,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "\\cos(\\frac{\\pi x}{180})",
+      "domain": [
+       0,
+       360
+      ],
+      "label": "\\(y = \\cos x\\)",
+      "labelAt": 360,
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       1
+      ],
+      "on": [
+       "g"
+      ],
+      "is": "y-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       90,
+       0
+      ],
+      "on": [
+       "g"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       270,
+       0
+      ],
+      "on": [
+       "g"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       180,
+       -1
+      ],
+      "on": [
+       "g"
+      ],
+      "is": "turning point",
+      "label": "\\((180, -1)\\)",
+      "pos": "below"
+     },
+     {
+      "type": "point",
+      "at": [
+       360,
+       1
+      ],
+      "on": [
+       "g"
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "Both waves stay between \\(-1\\) and \\(1\\). Sine starts at 0, and cosine starts at 1.",
+  "a": {
+   "q": "Which statement is true for the graph of \\(y = \\sin x\\) from \\(0^{\\circ}\\) to \\(360^{\\circ}\\)?",
+   "opts": [
+    "It crosses the x-axis at \\(0^{\\circ}\\), \\(180^{\\circ}\\) and \\(360^{\\circ}\\)",
+    "It crosses the x-axis at \\(90^{\\circ}\\) and \\(270^{\\circ}\\)",
+    "It starts at 1 and falls to \\(-1\\) at \\(180^{\\circ}\\)",
+    "It has its lowest value of \\(-1\\) at \\(90^{\\circ}\\)"
+   ],
+   "why": "Sine starts at 0, returns to 0 at \\(180^{\\circ}\\) and ends at 0 at \\(360^{\\circ}\\), so it meets the axis three times. Crossing at \\(90^{\\circ}\\) and \\(270^{\\circ}\\) belongs to cosine, which is the tempting mix-up.",
+   "clue": "Where does sine start, and what is its value there?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia sketches \\(y = \\cos x\\) from \\(0^{\\circ}\\) to \\(360^{\\circ}\\). Where does her graph cross the x-axis?",
+   "opts": [
+    "Twice, at \\(90^{\\circ}\\) and \\(270^{\\circ}\\)",
+    "Twice, at \\(0^{\\circ}\\) and \\(180^{\\circ}\\)",
+    "Three times, at \\(0^{\\circ}\\), \\(180^{\\circ}\\) and \\(360^{\\circ}\\)",
+    "Twice, at \\(180^{\\circ}\\) and \\(360^{\\circ}\\)"
+   ],
+   "why": "Cosine starts at 1, so it is not on the axis at \\(0^{\\circ}\\). It falls to 0 at \\(90^{\\circ}\\) and rises back to 0 at \\(270^{\\circ}\\). The option with three crossings describes sine.",
+   "clue": "Cosine starts at its highest value, not at 0."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It crosses the x-axis at \\(0^{\\circ}\\), \\(180^{\\circ}\\) and \\(360^{\\circ}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "Twice, at \\(90^{\\circ}\\) and \\(270^{\\circ}\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Graphs of sine and cosine",
+  "card": [
+   [
+    "Sine",
+    "The graph of \\(y = \\sin x\\) starts at 0 when \\(x = 0^{\\circ}\\). It rises to 1 at \\(90^{\\circ}\\), falls to 0 at \\(180^{\\circ}\\), reaches \\(-1\\) at \\(270^{\\circ}\\), and is back at 0 at \\(360^{\\circ}\\)."
+   ],
+   [
+    "Cosine",
+    "The graph of \\(y = \\cos x\\) starts at 1 when \\(x = 0^{\\circ}\\). It falls to 0 at \\(90^{\\circ}\\), reaches \\(-1\\) at \\(180^{\\circ}\\), is back at 0 at \\(270^{\\circ}\\), and ends at 1 at \\(360^{\\circ}\\)."
+   ],
+   "Both graphs are smooth waves with the same shape. Their highest value is 1 and their lowest value is \\(-1\\). They differ in where they start."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "The graph of \\(y = \\sin x\\) from \\(0^{\\circ}\\) to \\(360^{\\circ}\\). It crosses the x-axis at \\(0^{\\circ}\\), \\(180^{\\circ}\\) and \\(360^{\\circ}\\), has its highest point \\((90, 1)\\) and its lowest point \\((270, -1)\\).",
+    "x": {
+     "min": -90,
+     "max": 450,
+     "label": "\\(x\\)",
+     "step": 90,
+     "nums": false
+    },
+    "y": {
+     "min": -2,
+     "max": 2,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\sin(\\frac{\\pi x}{180})",
+      "domain": [
+       0,
+       360
+      ],
+      "label": "\\(y = \\sin x\\)",
+      "labelAt": 20,
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       180,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       360,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       90,
+       1
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point",
+      "label": "\\((90, 1)\\)",
+      "pos": "above"
+     },
+     {
+      "type": "point",
+      "at": [
+       270,
+       -1
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point",
+      "label": "\\((270, -1)\\)",
+      "pos": "below"
+     }
+    ]
+   },
+   "2": {
+    "kind": "graph",
+    "alt": "The graph of \\(y = \\cos x\\) from \\(0^{\\circ}\\) to \\(360^{\\circ}\\). It starts at \\((0, 1)\\), crosses the x-axis at \\(90^{\\circ}\\) and \\(270^{\\circ}\\), has its lowest point \\((180, -1)\\) and ends at \\((360, 1)\\).",
+    "x": {
+     "min": -90,
+     "max": 450,
+     "label": "\\(x\\)",
+     "step": 90,
+     "nums": false
+    },
+    "y": {
+     "min": -2,
+     "max": 2,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "\\cos(\\frac{\\pi x}{180})",
+      "domain": [
+       0,
+       360
+      ],
+      "label": "\\(y = \\cos x\\)",
+      "labelAt": 360,
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       1
+      ],
+      "on": [
+       "g"
+      ],
+      "is": "y-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       90,
+       0
+      ],
+      "on": [
+       "g"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       270,
+       0
+      ],
+      "on": [
+       "g"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       180,
+       -1
+      ],
+      "on": [
+       "g"
+      ],
+      "is": "turning point",
+      "label": "\\((180, -1)\\)",
+      "pos": "below"
+     },
+     {
+      "type": "point",
+      "at": [
+       360,
+       1
+      ],
+      "on": [
+       "g"
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "Both waves stay between \\(-1\\) and \\(1\\). Sine starts at 0, and cosine starts at 1.",
+  "a": {
+   "q": "Which statement is true for the graph of \\(y = \\sin x\\) from \\(0^{\\circ}\\) to \\(360^{\\circ}\\)?",
+   "opts": [
+    "It crosses the x-axis at \\(0^{\\circ}\\), \\(180^{\\circ}\\) and \\(360^{\\circ}\\)",
+    "It crosses the x-axis at \\(90^{\\circ}\\) and \\(270^{\\circ}\\)",
+    "It starts at 1 and falls to \\(-1\\) at \\(180^{\\circ}\\)",
+    "It has its lowest value of \\(-1\\) at \\(90^{\\circ}\\)"
+   ],
+   "why": "Sine starts at 0, returns to 0 at \\(180^{\\circ}\\) and ends at 0 at \\(360^{\\circ}\\), so it meets the axis three times. Crossing at \\(90^{\\circ}\\) and \\(270^{\\circ}\\) belongs to cosine, which is the tempting mix-up.",
+   "clue": "Where does sine start, and what is its value there?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia sketches \\(y = \\cos x\\) from \\(0^{\\circ}\\) to \\(360^{\\circ}\\). Where does her graph cross the x-axis?",
+   "opts": [
+    "Twice, at \\(90^{\\circ}\\) and \\(270^{\\circ}\\)",
+    "Twice, at \\(0^{\\circ}\\) and \\(180^{\\circ}\\)",
+    "Three times, at \\(0^{\\circ}\\), \\(180^{\\circ}\\) and \\(360^{\\circ}\\)",
+    "Twice, at \\(180^{\\circ}\\) and \\(360^{\\circ}\\)"
+   ],
+   "why": "Cosine starts at 1, so it is not on the axis at \\(0^{\\circ}\\). It falls to 0 at \\(90^{\\circ}\\) and rises back to 0 at \\(270^{\\circ}\\). The option with three crossings describes sine.",
+   "clue": "Cosine starts at its highest value, not at 0."
+  }
+ },
+ "cleared_by": "checker"
 }

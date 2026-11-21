@@ -12,8 +12,131 @@
    0.226
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:44Z write: done",
+  "2026-11-20T12:35:46Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.01125,
+  "check": 0.00685
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Narrative structure, is a Year 11 card on the whole plot shape and treats flashbacks only briefly, not how out-of-order telling controls what the reader knows, when, to build suspense or shift judgement, so it is broader and at a different depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Nonlinear structure",
+  "card": [
+   "A linear story tells events in the order they happen. A nonlinear story does not. It may use flashbacks, time jumps or an out-of-order sequence.",
+   [
+    "Flashback",
+    "a scene from an earlier time, placed in the present of the story. Example: a woman opens a locked drawer, and the story cuts to the night her brother left home."
+   ],
+   [
+    "Time jump",
+    "a skip forward or back, often marked by a line such as \"Ten years later\". It leaves out the time between."
+   ],
+   [
+    "Effect",
+    "The writer decides what the reader knows and when. Holding back a cause can build suspense. Revealing the past later can change how a reader judges a character."
+   ]
+  ],
+  "remember": "Nonlinear structure controls when a reader learns things, so it can build suspense or change judgements.",
+  "a": {
+   "q": "A story opens with Tam waiting nervously outside a courtroom. The next chapter shows the argument with his boss a year before. What is the second chapter?",
+   "opts": [
+    "A flashback",
+    "A time jump forward",
+    "A linear sequence",
+    "An orientation"
+   ],
+   "why": "The story returns to an earlier time than the courtroom scene, so it is a flashback. A time jump forward goes to a later time, which does not fit here.",
+   "clue": "Is the second chapter earlier or later than the courtroom?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a novel, Leila seems cold and unkind to her neighbour. Near the end, a flashback shows she nursed the neighbour's son through a long illness. What is the most likely effect on the reader?",
+   "opts": [
+    "They judge Leila's earlier actions differently",
+    "They feel less sure what happens next",
+    "They think the story is now in order",
+    "They lose track of who Leila is"
+   ],
+   "why": "The late flashback gives new information about Leila's past, so the reader rethinks her earlier behaviour. It does not make the story linear, because the events are still told out of order.",
+   "clue": "Think about what the reader learns late and how it changes earlier scenes."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A flashback",
+   "also_right": []
+  },
+  "b": {
+   "best": "They judge Leila's earlier actions differently",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Nonlinear structure",
+  "card": [
+   "A linear story tells events in the order they happen. A nonlinear story does not. It may use flashbacks, time jumps or an out-of-order sequence.",
+   [
+    "Flashback",
+    "a scene from an earlier time, placed in the present of the story. Example: a woman opens a locked drawer, and the story cuts to the night her brother left home."
+   ],
+   [
+    "Time jump",
+    "a skip forward or back, often marked by a line such as \"Ten years later\". It leaves out the time between."
+   ],
+   [
+    "Effect",
+    "The writer decides what the reader knows and when. Holding back a cause can build suspense. Revealing the past later can change how a reader judges a character."
+   ]
+  ],
+  "remember": "Nonlinear structure controls when a reader learns things, so it can build suspense or change judgements.",
+  "a": {
+   "q": "A story opens with Tam waiting nervously outside a courtroom. The next chapter shows the argument with his boss a year before. What is the second chapter?",
+   "opts": [
+    "A flashback",
+    "A time jump forward",
+    "A linear sequence",
+    "An orientation"
+   ],
+   "why": "The story returns to an earlier time than the courtroom scene, so it is a flashback. A time jump forward goes to a later time, which does not fit here.",
+   "clue": "Is the second chapter earlier or later than the courtroom?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a novel, Leila seems cold and unkind to her neighbour. Near the end, a flashback shows she nursed the neighbour's son through a long illness. What is the most likely effect on the reader?",
+   "opts": [
+    "They judge Leila's earlier actions differently",
+    "They feel less sure what happens next",
+    "They think the story is now in order",
+    "They lose track of who Leila is"
+   ],
+   "why": "The late flashback gives new information about Leila's past, so the reader rethinks her earlier behaviour. It does not make the story linear, because the events are still told out of order.",
+   "clue": "Think about what the reader learns late and how it changes earlier scenes."
+  }
+ },
+ "cleared_by": "checker"
 }

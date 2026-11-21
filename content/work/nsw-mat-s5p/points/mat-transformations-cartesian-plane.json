@@ -16,8 +16,133 @@
    0.231
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:56Z write: done",
+  "2026-11-20T12:44:59Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.00772,
+  "check": 0.00847
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, Translations and reflections, is a Year 7 card that covers only translations and reflection in the x-axis, while this point also needs reflection in the y-axis and rotations of 90°, 180° and 270° about the origin, which are new steps rather than small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Transformations on the Cartesian plane",
+  "card": [
+   [
+    "Translation",
+    "Every point slides the same distance in the same direction. Moving right 3 and down 2 changes \\((x, y)\\) to \\((x + 3, y - 2)\\)."
+   ],
+   [
+    "Reflection",
+    "In the \\(x\\)-axis, \\((x, y)\\) becomes \\((x, -y)\\). In the \\(y\\)-axis, \\((x, y)\\) becomes \\((-x, y)\\)."
+   ],
+   [
+    "Rotation",
+    "About the origin, turning 180° changes \\((x, y)\\) to \\((-x, -y)\\). Turning 90° anticlockwise gives \\((-y, x)\\). Turning 270° anticlockwise gives \\((y, -x)\\)."
+   ],
+   "Example: rotate \\((3, 1)\\) by 90° anticlockwise. Use \\((x, y) \\to (-y, x)\\) to get \\((-1, 3)\\). A clockwise turn of 90° is the same as 270° anticlockwise."
+  ],
+  "remember": "Translations add to the coordinates. Reflections and rotations swap or change their signs.",
+  "a": {
+   "q": "The point \\((4, -5)\\) is reflected in the \\(y\\)-axis. What are its new coordinates?",
+   "opts": [
+    "\\((-4, -5)\\)",
+    "\\((4, 5)\\)",
+    "\\((-4, 5)\\)",
+    "\\((-5, 4)\\)"
+   ],
+   "why": "A reflection in the \\(y\\)-axis changes the sign of \\(x\\) only, so \\((4, -5)\\) becomes \\((-4, -5)\\). Changing both signs, \\((-4, 5)\\), is a 180° rotation, not a reflection.",
+   "clue": "The \\(y\\)-axis is vertical. Which coordinate stays on the same height?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Triangle vertex \\(P(2, 6)\\) is rotated 90° clockwise about the origin. What are the coordinates of its image?",
+   "opts": [
+    "\\((6, -2)\\)",
+    "\\((-6, 2)\\)",
+    "\\((-2, -6)\\)",
+    "\\((-6, -2)\\)"
+   ],
+   "why": "A 90° clockwise turn is the same as 270° anticlockwise, which changes \\((x, y)\\) to \\((y, -x)\\). So \\((2, 6)\\) becomes \\((6, -2)\\). The point \\((-6, 2)\\) comes from turning anticlockwise instead.",
+   "clue": "Clockwise 90° equals 270° anticlockwise."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\((-4, -5)\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\((6, -2)\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Transformations on the Cartesian plane",
+  "card": [
+   [
+    "Translation",
+    "Every point slides the same distance in the same direction. Moving right 3 and down 2 changes \\((x, y)\\) to \\((x + 3, y - 2)\\)."
+   ],
+   [
+    "Reflection",
+    "In the \\(x\\)-axis, \\((x, y)\\) becomes \\((x, -y)\\). In the \\(y\\)-axis, \\((x, y)\\) becomes \\((-x, y)\\)."
+   ],
+   [
+    "Rotation",
+    "About the origin, turning 180° changes \\((x, y)\\) to \\((-x, -y)\\). Turning 90° anticlockwise gives \\((-y, x)\\). Turning 270° anticlockwise gives \\((y, -x)\\)."
+   ],
+   "Example: rotate \\((3, 1)\\) by 90° anticlockwise. Use \\((x, y) \\to (-y, x)\\) to get \\((-1, 3)\\). A clockwise turn of 90° is the same as 270° anticlockwise."
+  ],
+  "remember": "Translations add to the coordinates. Reflections and rotations swap or change their signs.",
+  "a": {
+   "q": "The point \\((4, -5)\\) is reflected in the \\(y\\)-axis. What are its new coordinates?",
+   "opts": [
+    "\\((-4, -5)\\)",
+    "\\((4, 5)\\)",
+    "\\((-4, 5)\\)",
+    "\\((-5, 4)\\)"
+   ],
+   "why": "A reflection in the \\(y\\)-axis changes the sign of \\(x\\) only, so \\((4, -5)\\) becomes \\((-4, -5)\\). Changing both signs, \\((-4, 5)\\), is a 180° rotation, not a reflection.",
+   "clue": "The \\(y\\)-axis is vertical. Which coordinate stays on the same height?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Triangle vertex \\(P(2, 6)\\) is rotated 90° clockwise about the origin. What are the coordinates of its image?",
+   "opts": [
+    "\\((6, -2)\\)",
+    "\\((-6, 2)\\)",
+    "\\((-2, -6)\\)",
+    "\\((-6, -2)\\)"
+   ],
+   "why": "A 90° clockwise turn is the same as 270° anticlockwise, which changes \\((x, y)\\) to \\((y, -x)\\). So \\((2, 6)\\) becomes \\((6, -2)\\). The point \\((-6, 2)\\) comes from turning anticlockwise instead.",
+   "clue": "Clockwise 90° equals 270° anticlockwise."
+  }
+ },
+ "cleared_by": "checker"
 }

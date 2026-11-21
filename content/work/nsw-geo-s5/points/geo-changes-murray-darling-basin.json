@@ -24,8 +24,275 @@
    0.253
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 may adapt geo-river-health-basin, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:47Z confirm: Claude Opus 5.5 may adapt geo-river-health-basin, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt geo-river-health-basin (2 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting geo-river-health-basin on the next run",
+  "2026-11-20T14:12:38Z adapt: done",
+  "2026-11-20T14:20:02Z check: flagged",
+  "2026-11-20T14:26:14Z fix: suggested",
+  "2026-11-20T14:39:42Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00051,
+  "confirm": 0.01429,
+  "adapt": 0.00635,
+  "check": 0.01394,
+  "fix": 0.02234
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-river-health-basin",
+  "changes": [
+   "The card attributes salinity only to clearing deep-rooted trees, but the point should also say that irrigation and reduced river flows can raise salt levels in the basin."
+  ],
+  "sure": "medium",
+  "reason": "The river health card covers the same human impacts on Murray-Darling rivers (water extraction, dams and weirs, salt, algal blooms and fish kills) at the right depth, but its salinity explanation needs to include irrigation and reduced flows.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "geo-river-health-basin",
+  "changes": [
+   "Link salinity to irrigation and reduced flows, for example irrigation raising saline water tables and low flows no longer flushing salt out to sea, rather than mainly to land clearing.",
+   "Replace question b, which tests land clearing, with a question on how dams, weirs or irrigation extraction lead to salinity, algal blooms or fish deaths."
+  ],
+  "sure": "medium",
+  "reason": "The bank point already teaches how dams, weirs and water taken for farms have reduced flows in the Murray-Darling Basin, causing salinity, algal blooms and fish kills, at a Year 10 depth that suits Stage 5, but it blames salinity mainly on land clearing, while the brief ties it to dams, weirs and irrigation.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "geo-river-health-basin",
+  "changes": [
+   "Link salinity to irrigation and reduced flows, such as irrigation water raising saline water tables and low flows no longer flushing salt out to sea, rather than mainly to land clearing.",
+   "Replace question b with a question on how dams, weirs or taking water for irrigation lead to salinity, algal blooms or fish deaths."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "title",
+   "card1",
+   "card3",
+   "remember",
+   "a.q",
+   "a.opt1",
+   "a.opt2",
+   "a.opt3",
+   "a.opt4",
+   "a.why",
+   "a.clue",
+   "b.q",
+   "b.opt1",
+   "b.opt2",
+   "b.opt3",
+   "b.opt4",
+   "b.why",
+   "b.clue"
+  ]
+ },
+ "cleared_by": "owner",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point covers reduced flows, algal blooms and fish kills in the basin at the right depth, but it ties salinity to land clearing, while the brief ties it to dams, weirs and irrigation. Question b tests land clearing, so it needs replacing too.",
+   "item": "be7c5e4ceed3a078",
+   "result": "decided",
+   "saved": {
+    "id": "geo-changes-murray-darling-basin",
+    "title": "Changes to the Murray-Darling Basin",
+    "brief": "db2a928e2ee8",
+    "shortlist": [
+     [
+      "geo-water-use-murray-darling",
+      0.634
+     ],
+     [
+      "geo-murray-darling-basin-plan",
+      0.549
+     ],
+     [
+      "geo-river-health-basin",
+      0.461
+     ],
+     [
+      "geo-first-nations-voices-water",
+      0.271
+     ],
+     [
+      "geo-managing-water",
+      0.253
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00051,
+     "confirm": 0.01429
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "geo-river-health-basin",
+     "changes": [
+      "The card attributes salinity only to clearing deep-rooted trees, but the point should also say that irrigation and reduced river flows can raise salt levels in the basin."
+     ],
+     "sure": "medium",
+     "reason": "The river health card covers the same human impacts on Murray-Darling rivers (water extraction, dams and weirs, salt, algal blooms and fish kills) at the right depth, but its salinity explanation needs to include irrigation and reduced flows.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "geo-river-health-basin",
+     "changes": [
+      "Link salinity to irrigation and reduced flows, for example irrigation raising saline water tables and low flows no longer flushing salt out to sea, rather than mainly to land clearing.",
+      "Replace question b, which tests land clearing, with a question on how dams, weirs or irrigation extraction lead to salinity, algal blooms or fish deaths."
+     ],
+     "sure": "medium",
+     "reason": "The bank point already teaches how dams, weirs and water taken for farms have reduced flows in the Murray-Darling Basin, causing salinity, algal blooms and fish kills, at a Year 10 depth that suits Stage 5, but it blames salinity mainly on land clearing, while the brief ties it to dams, weirs and irrigation.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "e4ae305971832d5a"
+  }
+ ],
+ "draft": {
+  "title": "Changes to the Murray-Darling Basin",
+  "card": [
+   "Dams, weirs and taking water for irrigation have changed the Murray-Darling Basin. Rivers carry less water and flows are different from before.",
+   "Taking large amounts of water for use on farms and in towns leaves less water in the rivers. Wetlands can dry out, and low flows can leave fish and other water life short of habitat.",
+   "Dams and weirs change when and how much water flows downstream. Irrigation can raise saline water tables. Low flows then no longer flush salt out to sea, so salinity builds up.",
+   "Algal blooms can form when water is warm, slow and low and has extra nutrients, such as fertiliser washed off farms. Blooms can use up oxygen in the water, which can lead to fish kills."
+  ],
+  "remember": "Dams, weirs and irrigation reduce flows, causing salinity, algal blooms, fish kills and drying wetlands.",
+  "a": {
+   "q": "A river in the basin is warm, slow and low in summer, and farm fertiliser washes in. What is most likely to follow?",
+   "opts": [
+    "An algal bloom",
+    "A cold, fast flow that keeps algae away",
+    "A flood that mixes the water quickly",
+    "Water that stays cool and shaded"
+   ],
+   "why": "Warm, slow, low water with extra nutrients meets every condition for a bloom. The other options describe cold, fast or mixing water, which does not suit algae.",
+   "clue": "Match the conditions in the question to what a bloom needs."
+  },
+  "b": {
+   "d": 3,
+   "q": "Irrigators take much more water from a basin river, so flows stay low for years. What is the most likely effect on salt?",
+   "opts": [
+    "Salt is not flushed out and builds up in the river",
+    "Salt is washed out to sea faster",
+    "Salt levels fall as the river gets shallower",
+    "Salt is not affected by the amount of flow"
+   ],
+   "why": "Low flows no longer flush salt out to sea, and irrigation water can raise saline water tables. Both lead to more salt in the river and soil.",
+   "clue": "Think about what a strong flow does to salt."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "An algal bloom",
+   "also_right": []
+  },
+  "b": {
+   "best": "Salt is not flushed out and builds up in the river",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The three wrong options all contradict the stem: they describe a flood, a cold fast flow, or cool water, when the stem says the river is warm, slow and low. The right option is also the only one that names an outcome. A student can pick it without knowing what a bloom needs."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts on the card, both answers and the explanations are correct. In question a, the wrong options contradict the conditions given in the question, so the answer can be picked without knowing the idea."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The three wrong options all contradict the stem: they describe a flood, a cold fast flow, or cool water, when the stem says the river is warm, slow and low. The right option is also the only one that names an outcome. A student can pick it without knowing what a bloom needs."
+ ],
+ "proposal": {
+  "title": "Changes to the Murray-Darling Basin",
+  "card": [
+   "Dams, weirs and taking water for irrigation have changed the Murray-Darling Basin. Rivers carry less water and flows are different from before.",
+   "Taking large amounts of water for use on farms and in towns leaves less water in the rivers. Wetlands can dry out, and low flows can leave fish and other water life short of habitat.",
+   "Dams and weirs change when and how much water flows downstream. Irrigation can raise saline water tables. Low flows then no longer flush salt out to sea, so salinity builds up.",
+   "Algal blooms can form when water is warm, slow and low and has extra nutrients, such as fertiliser washed off farms. Blooms can use up oxygen in the water, which can lead to fish kills."
+  ],
+  "remember": "Dams, weirs and irrigation reduce flows, causing salinity, algal blooms, fish kills and drying wetlands.",
+  "a": {
+   "q": "Which conditions in a basin river make an algal bloom most likely?",
+   "opts": [
+    "Warm, slow, low water with fertiliser washing in",
+    "Cool, fast, high water with fertiliser washing in",
+    "Warm, slow, low water with no extra nutrients",
+    "Cool, fast, high water with no extra nutrients"
+   ],
+   "why": "A bloom is most likely when the water is warm, slow and low and also has extra nutrients, such as fertiliser. Warm, slow, low water with no extra nutrients is tempting, but it is missing the nutrients that feed the algae.",
+   "clue": "A bloom needs the right water and something to feed on."
+  },
+  "b": {
+   "d": 3,
+   "q": "Irrigators take much more water from a basin river, so flows stay low for years. What is the most likely effect on salt?",
+   "opts": [
+    "Salt is no longer flushed out and builds up",
+    "Salt is flushed out to sea faster than before",
+    "Salt levels fall as the river gets shallower",
+    "Salt levels stay the same whatever the flow"
+   ],
+   "why": "Low flows no longer flush salt out to sea, and irrigation can raise saline water tables. Both lead to more salt in the river and soil. A shallower river does not mean less salt, because the salt is not being carried away.",
+   "clue": "Think about what a strong flow does to salt."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Changes to the Murray-Darling Basin",
+  "card": [
+   "Dams, weirs and taking water for irrigation have changed the Murray-Darling Basin. Rivers carry less water and flows are different from before.",
+   "Taking large amounts of water for use on farms and in towns leaves less water in the rivers. Wetlands can dry out, and low flows can leave fish and other water life short of habitat.",
+   "Dams and weirs change when and how much water flows downstream. Irrigation can raise saline water tables. Low flows then no longer flush salt out to sea, so salinity builds up.",
+   "Algal blooms can form when water is warm, slow and low and has extra nutrients, such as fertiliser washed off farms. Blooms can use up oxygen in the water, which can lead to fish kills."
+  ],
+  "remember": "Dams, weirs and irrigation reduce flows, causing salinity, algal blooms, fish kills and drying wetlands.",
+  "a": {
+   "q": "Which conditions in a basin river make an algal bloom most likely?",
+   "opts": [
+    "Warm, slow, low water with fertiliser washing in",
+    "Cool, fast, high water with fertiliser washing in",
+    "Warm, slow, low water with no extra nutrients",
+    "Cool, fast, high water with no extra nutrients"
+   ],
+   "why": "A bloom is most likely when the water is warm, slow and low and also has extra nutrients, such as fertiliser. Warm, slow, low water with no extra nutrients is tempting, but it is missing the nutrients that feed the algae.",
+   "clue": "A bloom needs the right water and something to feed on."
+  },
+  "b": {
+   "d": 3,
+   "q": "Irrigators take much more water from a basin river, so flows stay low for years. What is the most likely effect on salt?",
+   "opts": [
+    "Salt is no longer flushed out and builds up",
+    "Salt is flushed out to sea faster than before",
+    "Salt levels fall as the river gets shallower",
+    "Salt levels stay the same whatever the flow"
+   ],
+   "why": "Low flows no longer flush salt out to sea, and irrigation can raise saline water tables. Both lead to more salt in the river and soil. A shallower river does not mean less salt, because the salt is not being carried away.",
+   "clue": "Think about what a strong flow does to salt."
+  }
+ }
 }

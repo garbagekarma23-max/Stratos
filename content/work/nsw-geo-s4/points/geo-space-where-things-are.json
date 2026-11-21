@@ -12,8 +12,102 @@
    0.213
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 may adapt geo-space, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:45Z confirm: Claude Opus 5.5 may reuse geo-space, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z claude-code review: reusing geo-space"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "confirm": 0.007
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-space",
+  "changes": [
+   "Replace the Northern Territory example in question b (Kai's town and the 300 km hospital trip) with a place in New South Wales so the example is local to the NSW course.",
+   "Make the card's point about distance and nearby places explicit, so it covers how one location relates to other places nearby as the brief asks."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches location, distance and pattern at the right Year 7 depth, but its second question uses a Northern Territory example and it does not state the relation to nearby places directly, so it needs small local and wording changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "geo-space",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point on space teaches location, distance and pattern at a Year 7 level, which matches this brief for NSW Stage 4, and both questions are fair for these students as they are.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "geo-space",
+ "matched": {
+  "verdict": "reuse",
+  "from": "geo-space",
+  "by": "claude-code",
+  "at": "2026-11-20T14:02:37Z"
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "reuse",
+   "sure": "high",
+   "reason": "The bank point teaches where things are, how they are spread out and how far apart they are, which is the brief at a Years 7 and 8 depth. Its facts, example and questions are right for NSW students as they are.",
+   "item": "bad8670fe0e82101",
+   "result": "decided",
+   "saved": {
+    "id": "geo-space-where-things-are",
+    "title": "Space and where things are",
+    "brief": "4f542be3dc12",
+    "shortlist": [
+     [
+      "geo-space",
+      0.492
+     ],
+     [
+      "geo-place-space",
+      0.213
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00023,
+     "confirm": 0.007
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "geo-space",
+     "changes": [
+      "Replace the Northern Territory example in question b (Kai's town and the 300 km hospital trip) with a place in New South Wales so the example is local to the NSW course.",
+      "Make the card's point about distance and nearby places explicit, so it covers how one location relates to other places nearby as the brief asks."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches location, distance and pattern at the right Year 7 depth, but its second question uses a Northern Territory example and it does not state the relation to nearby places directly, so it needs small local and wording changes.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "reuse",
+     "same": "geo-space",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The bank point on space teaches location, distance and pattern at a Year 7 level, which matches this brief for NSW Stage 4, and both questions are fair for these students as they are.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "66213b0cd7a5d3fc"
+  }
  ]
 }

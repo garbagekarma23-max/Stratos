@@ -24,8 +24,234 @@
    0.21
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: failed the content check, writing again",
+  "2026-11-20T12:44:56Z write: done",
+  "2026-11-20T12:53:25Z check: flagged",
+  "2026-11-20T12:59:59Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.01281,
+  "check": 0.01297,
+  "fix": 0.01928,
+  "recheck": 0.00547
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the reasons Australians move within the country, such as work, study, retirement and sea or tree change; the closest, geo-internal-international-migration, only defines internal and international migration, and the mining card covers just one cause.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Internal migration in Australia",
+  "card": [
+   "Internal migration is movement within a country. In Australia, people move between cities, towns and regions without crossing a border.",
+   "Many people move for work or study. A job offer, or a university or TAFE place, can draw people to a different city or town. Others move to retire, or for the lifestyle.",
+   [
+    "Sea change",
+    "a move from a big city to the coast, for the beach and a slower pace of life."
+   ],
+   [
+    "Tree change",
+    "a move from a big city to the country, for open space and a rural way of life."
+   ]
+  ],
+  "remember": "Australians move within the country for work, study, retirement and lifestyle.",
+  "a": {
+   "q": "Jo leaves Sydney to live in a small coastal town for a slower pace of life. What is this kind of move called?",
+   "opts": [
+    "A sea change",
+    "A tree change",
+    "A forced move",
+    "An international move"
+   ],
+   "why": "Jo moves from a big city to the coast for lifestyle, which is a sea change. A tree change is a move to the country, not the coast.",
+   "clue": "Where is Jo moving to: the coast or the country?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam leaves Melbourne for a farming town. He wants open space and a rural way of life, and he has no new job lined up. Which best describes his move?",
+   "opts": [
+    "A tree change, which is internal migration",
+    "A sea change, which is internal migration",
+    "A tree change, which is international migration",
+    "A sea change, which is international migration"
+   ],
+   "why": "Sam moves from a big city to the country for lifestyle, so it is a tree change. He stays in Australia, so it is internal migration. A sea change would be a move to the coast.",
+   "clue": "Check both where he is going and whether he crosses a border."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A sea change",
+   "also_right": []
+  },
+  "b": {
+   "best": "A tree change, which is internal migration",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'without crossing a border' could suggest that interstate moves (e.g. Sydney to Melbourne, which crosses a state border) are not internal migration. It should say 'without crossing a national border' or 'without leaving the country'."
+   },
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The first card line defines internal migration, a term taught in point 2 (Types of migration), instead of only mentioning it. Question b also tests point 2's distinction between internal and international migration."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both answers are correct. The card's phrase 'without crossing a border' could make students think interstate moves are not internal, and the card re-teaches the internal versus international distinction that belongs to point 2."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: 'without crossing a border' could suggest that interstate moves (e.g. Sydney to Melbourne, which crosses a state border) are not internal migration. It should say 'without crossing a national border' or 'without leaving the country'.",
+  "Card, other: The first card line defines internal migration, a term taught in point 2 (Types of migration), instead of only mentioning it. Question b also tests point 2's distinction between internal and international migration."
+ ],
+ "proposal": {
+  "title": "Internal migration in Australia",
+  "card": [
+   "Many Australians move from one city, town or region to another without leaving the country. These moves are a form of internal migration.",
+   "Many people move for work or study. A job offer, or a university or TAFE place, can draw people to a different city or town. Others move when they retire, or for the lifestyle.",
+   [
+    "Sea change",
+    "a move from a big city to the coast, for the beach and a slower pace of life."
+   ],
+   [
+    "Tree change",
+    "a move from a big city to the country, for open space and a rural way of life."
+   ]
+  ],
+  "remember": "Australians move around their own country for work, study, retirement and lifestyle, such as a sea change or a tree change.",
+  "a": {
+   "q": "Jo leaves Sydney to live in a small coastal town for a slower pace of life. What is this kind of move called?",
+   "opts": [
+    "A sea change",
+    "A tree change",
+    "A move for study",
+    "A move for work"
+   ],
+   "why": "Jo moves from a big city to the coast for lifestyle, which is a sea change. A tree change is a move to the country, not the coast, and Jo is not moving for a job or a course.",
+   "clue": "Where is Jo moving to: the coast or the country?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam leaves Melbourne for a farming town. He wants open space and a rural way of life, and he has no new job lined up. Which best describes his move?",
+   "opts": [
+    "A tree change, made for lifestyle",
+    "A sea change, made for lifestyle",
+    "A tree change, made for work",
+    "A sea change, made for work"
+   ],
+   "why": "Sam moves from a big city to the country, so it is a tree change. He wants open space and has no job lined up, so he moves for lifestyle, not work. A sea change would be a move to the coast.",
+   "clue": "Check both where he is going and why he is going."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A sea change",
+    "also_right": []
+   },
+   "b": {
+    "best": "A tree change, made for lifestyle",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'without crossing a border' could suggest that interstate moves (e.g. Sydney to Melbourne, which crosses a state border) are not internal migration. It should say 'without crossing a national border' or 'without leaving the country'."
+   },
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The first card line defines internal migration, a term taught in point 2 (Types of migration), instead of only mentioning it. Question b also tests point 2's distinction between internal and international migration."
+   }
+  ],
+  "flags": [
+   "Card, wording: 'without crossing a border' could suggest that interstate moves (e.g. Sydney to Melbourne, which crosses a state border) are not internal migration. It should say 'without crossing a national border' or 'without leaving the country'.",
+   "Card, other: The first card line defines internal migration, a term taught in point 2 (Types of migration), instead of only mentioning it. Question b also tests point 2's distinction between internal and international migration."
+  ]
+ },
+ "final": {
+  "title": "Internal migration in Australia",
+  "card": [
+   "Many Australians move from one city, town or region to another without leaving the country. These moves are a form of internal migration.",
+   "Many people move for work or study. A job offer, or a university or TAFE place, can draw people to a different city or town. Others move when they retire, or for the lifestyle.",
+   [
+    "Sea change",
+    "a move from a big city to the coast, for the beach and a slower pace of life."
+   ],
+   [
+    "Tree change",
+    "a move from a big city to the country, for open space and a rural way of life."
+   ]
+  ],
+  "remember": "Australians move around their own country for work, study, retirement and lifestyle, such as a sea change or a tree change.",
+  "a": {
+   "q": "Jo leaves Sydney to live in a small coastal town for a slower pace of life. What is this kind of move called?",
+   "opts": [
+    "A sea change",
+    "A tree change",
+    "A move for study",
+    "A move for work"
+   ],
+   "why": "Jo moves from a big city to the coast for lifestyle, which is a sea change. A tree change is a move to the country, not the coast, and Jo is not moving for a job or a course.",
+   "clue": "Where is Jo moving to: the coast or the country?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam leaves Melbourne for a farming town. He wants open space and a rural way of life, and he has no new job lined up. Which best describes his move?",
+   "opts": [
+    "A tree change, made for lifestyle",
+    "A sea change, made for lifestyle",
+    "A tree change, made for work",
+    "A sea change, made for work"
+   ],
+   "why": "Sam moves from a big city to the country, so it is a tree change. He wants open space and has no job lined up, so he moves for lifestyle, not work. A sea change would be a move to the coast.",
+   "clue": "Check both where he is going and why he is going."
+  }
+ },
+ "cleared_by": "recheck"
 }

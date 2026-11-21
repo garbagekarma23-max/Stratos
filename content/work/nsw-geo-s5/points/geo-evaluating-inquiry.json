@@ -8,8 +8,430 @@
    0.218
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:48Z write: failed the content check, writing again",
+  "2026-11-20T12:35:50Z write: done",
+  "2026-11-20T12:44:55Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (b wording, b wording)",
+  "2026-11-20T13:44:56Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.01768,
+  "check": 0.01368,
+  "fix": 0.02334,
+  "recheck": 0.01083
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the four steps of the inquiry process and drawing a conclusion, while the new point is about evaluating an inquiry's data reliability, source bias and improvements, which is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The question says Priya asks 'how each person gets to work' in 6 households, then 'Four say they drive'. It is unclear whether four households or four people answered, which could confuse students. Asking 'how one person in each household gets to work' would fix this.\n- Question b, wording: Why (b) says six households 'cannot show a pattern', but the card only says a very small sample 'may not show the real pattern'. The why should match the card's hedged wording.",
+ "rejected": {
+  "title": "Evaluating an inquiry",
+  "card": [
+   "Evaluating means judging how well an inquiry worked. It is the last step, and it also says what could be done better next time.",
+   [
+    "Reliable",
+    "the data would give similar results if it were collected again in the same way."
+   ],
+   [
+    "Enough",
+    "there is enough data to support the conclusion. A very small sample may not show the real pattern."
+   ],
+   [
+    "Biased",
+    "a source or sample favours one side unfairly, perhaps because of who made it or where the data was collected."
+   ]
+  ],
+  "remember": "Check the data is reliable and enough, check for bias, then say how to improve.",
+  "a": {
+   "q": "Which question would a student ask to check whether data is reliable?",
+   "opts": [
+    "Would collecting it again give similar results?",
+    "Was the data shown in a graph?",
+    "Did the inquiry start with a question?",
+    "Was the data collected in a nearby place?"
+   ],
+   "why": "Reliable data gives similar results when collected again in the same way. A graph, a starting question or a nearby place do not show that results would repeat.",
+   "clue": "Think about repeating the data collection."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya picks 6 households at random from across Parramatta and asks how each person gets to work. Four say they drive, so she concludes most residents drive. What is the best evaluation?",
+   "opts": [
+    "The sample was too small, so the data is not enough",
+    "The sample was biased, so the conclusion is unfair",
+    "The data is reliable, so the conclusion is secure",
+    "The data is enough, so no improvement is needed"
+   ],
+   "why": "Six households cannot show a pattern for a suburb of thousands of people, so the sample was too small and the data is not enough. Bias is tempting, but she picked households at random from across the suburb, so no group or place was favoured. A larger sample would improve the inquiry.",
+   "clue": "She chose the households fairly. What else can weaken a conclusion?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The question says Priya asks 'how each person gets to work' in 6 households, then 'Four say they drive'. It is unclear whether four households or four people answered, which could confuse students. Asking 'how one person in each household gets to work' would fix this.",
+    "Question b, wording: Why (b) says six households 'cannot show a pattern', but the card only says a very small sample 'may not show the real pattern'. The why should match the card's hedged wording."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Evaluating an inquiry",
+     "card": [
+      "Evaluating means judging how well an inquiry worked. It is the last step, after conclusions and proposed action.",
+      [
+       "Reliable",
+       "the data would give similar results if it were collected again in the same way."
+      ],
+      [
+       "Enough",
+       "there is enough data to support the conclusion. A very small sample may not show the real pattern."
+      ],
+      [
+       "Biased",
+       "a source gives one side unfairly, perhaps because of who made it or why. A good evaluation also says what could be done better next time."
+      ]
+     ],
+     "remember": "Ask if the data is reliable and enough, if sources are biased, and how to improve.",
+     "a": {
+      "q": "Which question would a student ask to check whether data is reliable?",
+      "opts": [
+       "Would collecting it again give similar results?",
+       "Was the data shown in a graph?",
+       "Did the inquiry start with a question?",
+       "Was the data collected in a nearby place?"
+      ],
+      "why": "Reliable data gives similar results when collected again in the same way. A graph, a starting question or a nearby place do not show that results would repeat.",
+      "clue": "Think about repeating the data collection."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya surveys 6 people at one bus stop in Parramatta and concludes that most of the suburb's residents drive to work. What is the best evaluation of her inquiry?",
+      "opts": [
+       "The data is not enough, so the sample was too small",
+       "The data is biased, so the survey should be repeated",
+       "The data is reliable, so the conclusion is secure",
+       "The data is enough, so no improvement is needed"
+      ],
+      "why": "Six people at one bus stop is too little data to show a pattern for a whole suburb. The tempting answer is bias, but nothing suggests a source gave one side unfairly. The problem is the amount of data.",
+      "clue": "Count how many people she asked compared with the suburb."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Would collecting it again give similar results?",
+      "also_right": []
+     },
+     "b": {
+      "best": "The data is not enough, so the sample was too small",
+      "also_right": [
+       "The data is biased, so the survey should be repeated"
+      ]
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "Surveying people at a bus stop gives an unrepresentative sample, which is a form of bias. So the 'biased' option is defensible, and the why's claim that nothing suggests bias is wrong. The scenario is also odd: bus-stop users are unlikely to show that most residents drive. Choose a neutral survey site, such as a shopping centre, so only the sample size is at issue."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue 'Count how many people she asked compared with the suburb' points straight at sample size and gives the answer away."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The intended option reverses cause and effect: 'The data is not enough, so the sample was too small'. It should read that the sample was too small, so the data is not enough."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Question b's bus-stop setting builds in sampling bias, so the 'biased' option is also defensible and the why is wrong to rule it out. Its clue gives the answer away, and the right option reverses cause and effect."
+    },
+    "flags": [
+     "Question b: the checker says “The data is biased, so the survey should be repeated” could also be right.",
+     "Question b, fact: Surveying people at a bus stop gives an unrepresentative sample, which is a form of bias. So the 'biased' option is defensible, and the why's claim that nothing suggests bias is wrong. The scenario is also odd: bus-stop users are unlikely to show that most residents drive. Choose a neutral survey site, such as a shopping centre, so only the sample size is at issue.",
+     "Question b, other: The clue 'Count how many people she asked compared with the suburb' points straight at sample size and gives the answer away.",
+     "Question b, wording: The intended option reverses cause and effect: 'The data is not enough, so the sample was too small'. It should read that the sample was too small, so the data is not enough."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Evaluating an inquiry",
+     "card": [
+      "Evaluating means judging how well an inquiry worked. It is the last step, and it also says what could be done better next time.",
+      [
+       "Reliable",
+       "the data would give similar results if it were collected again in the same way."
+      ],
+      [
+       "Enough",
+       "there is enough data to support the conclusion. A very small sample may not show the real pattern."
+      ],
+      [
+       "Biased",
+       "a source or sample favours one side unfairly, perhaps because of who made it or where the data was collected."
+      ]
+     ],
+     "remember": "Check the data is reliable and enough, check for bias, then say how to improve.",
+     "a": {
+      "q": "Which question would a student ask to check whether data is reliable?",
+      "opts": [
+       "Would collecting it again give similar results?",
+       "Was the data shown in a graph?",
+       "Did the inquiry start with a question?",
+       "Was the data collected in a nearby place?"
+      ],
+      "why": "Reliable data gives similar results when collected again in the same way. A graph, a starting question or a nearby place do not show that results would repeat.",
+      "clue": "Think about repeating the data collection."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya picks 6 households at random from across Parramatta and asks how each person gets to work. Four say they drive, so she concludes most residents drive. What is the best evaluation?",
+      "opts": [
+       "The sample was too small, so the data is not enough",
+       "The sample was biased, so the conclusion is unfair",
+       "The data is reliable, so the conclusion is secure",
+       "The data is enough, so no improvement is needed"
+      ],
+      "why": "Six households cannot show a pattern for a suburb of thousands of people, so the sample was too small and the data is not enough. Bias is tempting, but she picked households at random from across the suburb, so no group or place was favoured. A larger sample would improve the inquiry.",
+      "clue": "She chose the households fairly. What else can weaken a conclusion?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Would collecting it again give similar results?",
+       "also_right": []
+      },
+      "b": {
+       "best": "The sample was too small, so the data is not enough",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The question says Priya asks 'how each person gets to work' in 6 households, then 'Four say they drive'. It is unclear whether four households or four people answered, which could confuse students. Asking 'how one person in each household gets to work' would fix this."
+       },
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "Why (b) says six households 'cannot show a pattern', but the card only says a very small sample 'may not show the real pattern'. The why should match the card's hedged wording."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and answers are correct. Question b's stem mixes households and persons, so it is unclear what 'Four say they drive' counts, and its why says 'cannot' where the card says 'may not'."
+     },
+     "flags": [
+      "Question b, wording: The question says Priya asks 'how each person gets to work' in 6 households, then 'Four say they drive'. It is unclear whether four households or four people answered, which could confuse students. Asking 'how one person in each household gets to work' would fix this.",
+      "Question b, wording: Why (b) says six households 'cannot show a pattern', but the card only says a very small sample 'may not show the real pattern'. The why should match the card's hedged wording."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:56Z",
+   "step": "write",
+   "version": {
+    "title": "Evaluating an inquiry",
+    "card": [
+     "Evaluating means judging how well an inquiry worked. It is the last step, and it also says what could be done better next time.",
+     [
+      "Reliable",
+      "the data would give similar results if it were collected again in the same way."
+     ],
+     [
+      "Enough",
+      "there is enough data to support the conclusion. A very small sample may not show the real pattern."
+     ],
+     [
+      "Biased",
+      "a source or sample favours one side unfairly, perhaps because of who made it or where the data was collected."
+     ]
+    ],
+    "remember": "Check the data is reliable and enough, check for bias, then say how to improve.",
+    "a": {
+     "q": "Which question would a student ask to check whether data is reliable?",
+     "opts": [
+      "Would collecting it again give similar results?",
+      "Was the data shown in a graph or a table?",
+      "Did the inquiry start with a clear question?",
+      "Was the data collected in a place near the school?"
+     ],
+     "why": "Reliable data gives similar results when collected again in the same way. A graph, a clear starting question or a place near the school do not show that results would repeat.",
+     "clue": "Think about repeating the data collection."
+    },
+    "b": {
+     "d": 3,
+     "q": "Priya picks 6 households at random from across Parramatta and asks one person in each how they get to work. Four of the six say they drive, so she concludes most residents drive. What is the best evaluation?",
+     "opts": [
+      "The sample was too small, so the data is not enough",
+      "The sample was biased, so the conclusion is unfair",
+      "The data is reliable, so the conclusion is secure",
+      "The data is enough, so no improvement is needed"
+     ],
+     "why": "Six households in a suburb of thousands of people may not show the real pattern, so the sample was too small and the data is not enough. Bias is tempting, but she picked households at random from across the suburb, so no group or place was favoured. A larger sample would improve the inquiry.",
+     "clue": "She chose the households fairly. What else can weaken a conclusion?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Would collecting it again give similar results?",
+     "also_right": []
+    },
+    "b": {
+     "best": "The sample was too small, so the data is not enough",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Evaluating an inquiry",
+  "card": [
+   "Evaluating means judging how well an inquiry worked. It is the last step, and it also says what could be done better next time.",
+   [
+    "Reliable",
+    "the data would give similar results if it were collected again in the same way."
+   ],
+   [
+    "Enough",
+    "there is enough data to support the conclusion. A very small sample may not show the real pattern."
+   ],
+   [
+    "Biased",
+    "a source or sample favours one side unfairly, perhaps because of who made it or where the data was collected."
+   ]
+  ],
+  "remember": "Check the data is reliable and enough, check for bias, then say how to improve.",
+  "a": {
+   "q": "Which question would a student ask to check whether data is reliable?",
+   "opts": [
+    "Would collecting it again give similar results?",
+    "Was the data shown in a graph or a table?",
+    "Did the inquiry start with a clear question?",
+    "Was the data collected in a place near the school?"
+   ],
+   "why": "Reliable data gives similar results when collected again in the same way. A graph, a clear starting question or a place near the school do not show that results would repeat.",
+   "clue": "Think about repeating the data collection."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya picks 6 households at random from across Parramatta and asks one person in each how they get to work. Four of the six say they drive, so she concludes most residents drive. What is the best evaluation?",
+   "opts": [
+    "The sample was too small, so the data is not enough",
+    "The sample was biased, so the conclusion is unfair",
+    "The data is reliable, so the conclusion is secure",
+    "The data is enough, so no improvement is needed"
+   ],
+   "why": "Six households in a suburb of thousands of people may not show the real pattern, so the sample was too small and the data is not enough. Bias is tempting, but she picked households at random from across the suburb, so no group or place was favoured. A larger sample would improve the inquiry.",
+   "clue": "She chose the households fairly. What else can weaken a conclusion?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Would collecting it again give similar results?",
+   "also_right": []
+  },
+  "b": {
+   "best": "The sample was too small, so the data is not enough",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Evaluating an inquiry",
+  "card": [
+   "Evaluating means judging how well an inquiry worked. It is the last step, and it also says what could be done better next time.",
+   [
+    "Reliable",
+    "the data would give similar results if it were collected again in the same way."
+   ],
+   [
+    "Enough",
+    "there is enough data to support the conclusion. A very small sample may not show the real pattern."
+   ],
+   [
+    "Biased",
+    "a source or sample favours one side unfairly, perhaps because of who made it or where the data was collected."
+   ]
+  ],
+  "remember": "Check the data is reliable and enough, check for bias, then say how to improve.",
+  "a": {
+   "q": "Which question would a student ask to check whether data is reliable?",
+   "opts": [
+    "Would collecting it again give similar results?",
+    "Was the data shown in a graph or a table?",
+    "Did the inquiry start with a clear question?",
+    "Was the data collected in a place near the school?"
+   ],
+   "why": "Reliable data gives similar results when collected again in the same way. A graph, a clear starting question or a place near the school do not show that results would repeat.",
+   "clue": "Think about repeating the data collection."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya picks 6 households at random from across Parramatta and asks one person in each how they get to work. Four of the six say they drive, so she concludes most residents drive. What is the best evaluation?",
+   "opts": [
+    "The sample was too small, so the data is not enough",
+    "The sample was biased, so the conclusion is unfair",
+    "The data is reliable, so the conclusion is secure",
+    "The data is enough, so no improvement is needed"
+   ],
+   "why": "Six households in a suburb of thousands of people may not show the real pattern, so the sample was too small and the data is not enough. Bias is tempting, but she picked households at random from across the suburb, so no group or place was favoured. A larger sample would improve the inquiry.",
+   "clue": "She chose the households fairly. What else can weaken a conclusion?"
+  }
+ },
+ "checked_by": "claude-code"
 }

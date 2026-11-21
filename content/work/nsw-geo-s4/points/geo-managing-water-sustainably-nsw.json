@@ -24,8 +24,417 @@
    0.283
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 says reuse geo-managing-water-sustainably, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:45Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:49Z write: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-20T13:44:55Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00043,
+  "confirm": 0.00845,
+  "write": 0.01146,
+  "check": 0.01078,
+  "fix": 0.01495,
+  "recheck": 0.01143
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "geo-managing-water-sustainably",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point has the same title and covers the brief's practices of reusing grey water, capturing rain in tanks and using less at home, at a suitable Stage 4 depth, though it also covers desalination and water trading, which the brief does not mention.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point shares the title, but it teaches large-scale methods such as stormwater harvesting, desalination and water trading, while this brief is about everyday saving at school, home and in the community, such as fixing leaks, shorter showers and water-wise gardens, so the idea and focus differ.",
+  "model": "claude-opus-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The why says 'the tempting pair with the roof gets the term right but the reason wrong', but only one roof option ('Grey water, because it is collected from the roof') has the right term. The other roof option ('Rainwater, because it is collected from the roof') gets the term wrong. 'Pair' is confusing, so the why should name the single option.",
+ "rejected": {
+  "title": "Managing water sustainably",
+  "card": [
+   "Managing water sustainably means using water so there is enough for people and nature now and in the future. Every home, school and community can help.",
+   [
+    "Collecting",
+    "A rainwater tank collects rain from a roof. The water can be used on gardens or to flush toilets, so less tap water is needed."
+   ],
+   [
+    "Reducing",
+    "Fixing leaks, taking shorter showers and planting water-wise gardens all cut the amount of water used. Water-wise gardens use plants that need little water."
+   ],
+   [
+    "Reusing",
+    "Grey water is used water from showers, baths, basins and washing machines. It can be reused on lawns and flower beds instead of going straight down the drain."
+   ]
+  ],
+  "remember": "Save water by collecting it, using less of it and reusing it.",
+  "a": {
+   "q": "A school wants to use less tap water on its garden beds. Which action does this best?",
+   "opts": [
+    "Connect a rainwater tank to the garden taps",
+    "Water the beds each day in the same way",
+    "Plant more lawn that needs regular watering",
+    "Wash the school's paths with a hose each week"
+   ],
+   "why": "A tank collects rain, so the garden needs less tap water. The other options keep using tap water or use even more of it.",
+   "clue": "Which choice collects water that would otherwise run away?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's family in Tamworth reuses water from their washing machine on their flower beds. What is this water called, and why does it help?",
+   "opts": [
+    "Grey water, because it is reused instead of wasted",
+    "Grey water, because it is collected from the roof",
+    "Rainwater, because it is reused instead of wasted",
+    "Rainwater, because it is collected from the roof"
+   ],
+   "why": "Water from a washing machine is grey water, and reusing it means less tap water is needed. The tempting pair with the roof gets the term right but the reason wrong: rain from a roof is rainwater, not grey water.",
+   "clue": "Think about where the water first came from: a roof or a washing machine?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The why says 'the tempting pair with the roof gets the term right but the reason wrong', but only one roof option ('Grey water, because it is collected from the roof') has the right term. The other roof option ('Rainwater, because it is collected from the roof') gets the term wrong. 'Pair' is confusing, so the why should name the single option."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Managing water sustainably",
+     "card": [
+      "Managing water sustainably means using water so there is enough for people and nature now and in the future. Every home, school and community can help.",
+      [
+       "Collecting",
+       "A rainwater tank collects rain from a roof. The water can be used on gardens or to flush toilets, so less tap water is needed."
+      ],
+      [
+       "Reducing",
+       "Fixing leaks, taking shorter showers and planting water-wise gardens all cut the amount of water used. Water-wise gardens use plants that need little water."
+      ],
+      [
+       "Reusing",
+       "Grey water is used water from showers, baths, basins and washing machines. It can be reused on gardens instead of going straight down the drain."
+      ]
+     ],
+     "remember": "Save water by collecting it, using less of it and reusing it.",
+     "a": {
+      "q": "A school wants to use less tap water on its garden beds. Which action does this best?",
+      "opts": [
+       "Connect a rainwater tank to the garden taps",
+       "Water the beds each day in the same way",
+       "Plant more lawn that needs regular watering",
+       "Wash the school's paths with a hose each week"
+      ],
+      "why": "A tank collects rain, so the garden needs less tap water. The other options keep using tap water or use even more of it.",
+      "clue": "Which choice collects water that would otherwise run away?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya's family in Tamworth reuses water from their washing machine on the vegetable patch. What is this water called, and why does it help?",
+      "opts": [
+       "Grey water, because it is reused instead of wasted",
+       "Grey water, because it is collected from the roof",
+       "Rainwater, because it is reused instead of wasted",
+       "Rainwater, because it is collected from the roof"
+      ],
+      "why": "Water from washing machines is grey water. Reusing it means less tap water is needed. Rainwater is collected from roofs, so the other pairs mix up the term or the reason.",
+      "clue": "Think about where the water first came from: a roof or a washing machine?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Connect a rainwater tank to the garden taps",
+      "also_right": []
+     },
+     "b": {
+      "best": "Grey water, because it is reused instead of wasted",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The scenario shows untreated washing-machine water put on a vegetable patch as good practice. NSW Health greywater guidance advises against using untreated greywater on vegetables eaten raw, such as leafy greens and root crops, so this could teach an unsafe habit. A flower bed or lawn would be a safer setting."
+      }
+     ],
+     "sure": "medium",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer and match the card. Question b's setting has Priya's family put untreated washing-machine water on a vegetable patch, which NSW health guidance discourages. Change it to a garden or lawn."
+    },
+    "flags": [
+     "Question b, fact: The scenario shows untreated washing-machine water put on a vegetable patch as good practice. NSW Health greywater guidance advises against using untreated greywater on vegetables eaten raw, such as leafy greens and root crops, so this could teach an unsafe habit. A flower bed or lawn would be a safer setting."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Managing water sustainably",
+     "card": [
+      "Managing water sustainably means using water so there is enough for people and nature now and in the future. Every home, school and community can help.",
+      [
+       "Collecting",
+       "A rainwater tank collects rain from a roof. The water can be used on gardens or to flush toilets, so less tap water is needed."
+      ],
+      [
+       "Reducing",
+       "Fixing leaks, taking shorter showers and planting water-wise gardens all cut the amount of water used. Water-wise gardens use plants that need little water."
+      ],
+      [
+       "Reusing",
+       "Grey water is used water from showers, baths, basins and washing machines. It can be reused on lawns and flower beds instead of going straight down the drain."
+      ]
+     ],
+     "remember": "Save water by collecting it, using less of it and reusing it.",
+     "a": {
+      "q": "A school wants to use less tap water on its garden beds. Which action does this best?",
+      "opts": [
+       "Connect a rainwater tank to the garden taps",
+       "Water the beds each day in the same way",
+       "Plant more lawn that needs regular watering",
+       "Wash the school's paths with a hose each week"
+      ],
+      "why": "A tank collects rain, so the garden needs less tap water. The other options keep using tap water or use even more of it.",
+      "clue": "Which choice collects water that would otherwise run away?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya's family in Tamworth reuses water from their washing machine on their flower beds. What is this water called, and why does it help?",
+      "opts": [
+       "Grey water, because it is reused instead of wasted",
+       "Grey water, because it is collected from the roof",
+       "Rainwater, because it is reused instead of wasted",
+       "Rainwater, because it is collected from the roof"
+      ],
+      "why": "Water from a washing machine is grey water, and reusing it means less tap water is needed. The tempting pair with the roof gets the term right but the reason wrong: rain from a roof is rainwater, not grey water.",
+      "clue": "Think about where the water first came from: a roof or a washing machine?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:06Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Connect a rainwater tank to the garden taps",
+       "also_right": []
+      },
+      "b": {
+       "best": "Grey water, because it is reused instead of wasted",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The why says 'the tempting pair with the roof gets the term right but the reason wrong', but only one roof option ('Grey water, because it is collected from the roof') has the right term. The other roof option ('Rainwater, because it is collected from the roof') gets the term wrong. 'Pair' is confusing, so the why should name the single option."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both questions are accurate and match the chapter point. The only problem is a confusing why for question b: it calls one distractor 'the tempting pair with the roof', which mixes up the two roof options."
+     },
+     "flags": [
+      "Question b, wording: The why says 'the tempting pair with the roof gets the term right but the reason wrong', but only one roof option ('Grey water, because it is collected from the roof') has the right term. The other roof option ('Rainwater, because it is collected from the roof') gets the term wrong. 'Pair' is confusing, so the why should name the single option."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:55Z",
+   "step": "write",
+   "version": {
+    "title": "Managing water sustainably",
+    "card": [
+     "Managing water sustainably means using water so there is enough for people and nature now and in the future. Every home, school and community can help.",
+     [
+      "Collecting",
+      "A rainwater tank collects rain from a roof. The water can be used on gardens or to flush toilets, so less tap water is needed."
+     ],
+     [
+      "Reducing",
+      "Fixing leaks, taking shorter showers and planting water-wise gardens all cut the amount of water used. Water-wise gardens use plants that need little water."
+     ],
+     [
+      "Reusing",
+      "Grey water is used water from showers, baths, basins and washing machines. It can be reused on lawns and flower beds instead of going straight down the drain."
+     ]
+    ],
+    "remember": "Save water by collecting it, using less of it and reusing it.",
+    "a": {
+     "q": "A school wants to use less tap water on its garden beds. Which action does this best?",
+     "opts": [
+      "Connect a rainwater tank to the garden taps",
+      "Water the beds each day in the same way",
+      "Plant more lawn that needs regular watering",
+      "Wash the school's paths with a hose each week"
+     ],
+     "why": "A tank collects rain, so the garden needs less tap water. The other options keep using tap water or use even more of it.",
+     "clue": "Which choice collects water that would otherwise run away?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Priya's family in Tamworth reuses water from their washing machine on their flower beds. What is this water called, and why does it help?",
+     "opts": [
+      "Grey water, because it is reused instead of wasted",
+      "Grey water, because it is collected from the roof",
+      "Rainwater, because it is reused instead of wasted",
+      "Rainwater, because it is collected from the roof"
+     ],
+     "why": "Water from a washing machine is grey water, and reusing it means less tap water is needed. The option 'Grey water, because it is collected from the roof' has the right name but the wrong reason: water collected from a roof is rainwater, not grey water.",
+     "clue": "Think about where the water first came from: a roof or a washing machine?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Connect a rainwater tank to the garden taps",
+     "also_right": []
+    },
+    "b": {
+     "best": "Grey water, because it is reused instead of wasted",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Managing water sustainably",
+  "card": [
+   "Managing water sustainably means using water so there is enough for people and nature now and in the future. Every home, school and community can help.",
+   [
+    "Collecting",
+    "A rainwater tank collects rain from a roof. The water can be used on gardens or to flush toilets, so less tap water is needed."
+   ],
+   [
+    "Reducing",
+    "Fixing leaks, taking shorter showers and planting water-wise gardens all cut the amount of water used. Water-wise gardens use plants that need little water."
+   ],
+   [
+    "Reusing",
+    "Grey water is used water from showers, baths, basins and washing machines. It can be reused on lawns and flower beds instead of going straight down the drain."
+   ]
+  ],
+  "remember": "Save water by collecting it, using less of it and reusing it.",
+  "a": {
+   "q": "A school wants to use less tap water on its garden beds. Which action does this best?",
+   "opts": [
+    "Connect a rainwater tank to the garden taps",
+    "Water the beds each day in the same way",
+    "Plant more lawn that needs regular watering",
+    "Wash the school's paths with a hose each week"
+   ],
+   "why": "A tank collects rain, so the garden needs less tap water. The other options keep using tap water or use even more of it.",
+   "clue": "Which choice collects water that would otherwise run away?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's family in Tamworth reuses water from their washing machine on their flower beds. What is this water called, and why does it help?",
+   "opts": [
+    "Grey water, because it is reused instead of wasted",
+    "Grey water, because it is collected from the roof",
+    "Rainwater, because it is reused instead of wasted",
+    "Rainwater, because it is collected from the roof"
+   ],
+   "why": "Water from a washing machine is grey water, and reusing it means less tap water is needed. The option 'Grey water, because it is collected from the roof' has the right name but the wrong reason: water collected from a roof is rainwater, not grey water.",
+   "clue": "Think about where the water first came from: a roof or a washing machine?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Connect a rainwater tank to the garden taps",
+   "also_right": []
+  },
+  "b": {
+   "best": "Grey water, because it is reused instead of wasted",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Managing water sustainably",
+  "card": [
+   "Managing water sustainably means using water so there is enough for people and nature now and in the future. Every home, school and community can help.",
+   [
+    "Collecting",
+    "A rainwater tank collects rain from a roof. The water can be used on gardens or to flush toilets, so less tap water is needed."
+   ],
+   [
+    "Reducing",
+    "Fixing leaks, taking shorter showers and planting water-wise gardens all cut the amount of water used. Water-wise gardens use plants that need little water."
+   ],
+   [
+    "Reusing",
+    "Grey water is used water from showers, baths, basins and washing machines. It can be reused on lawns and flower beds instead of going straight down the drain."
+   ]
+  ],
+  "remember": "Save water by collecting it, using less of it and reusing it.",
+  "a": {
+   "q": "A school wants to use less tap water on its garden beds. Which action does this best?",
+   "opts": [
+    "Connect a rainwater tank to the garden taps",
+    "Water the beds each day in the same way",
+    "Plant more lawn that needs regular watering",
+    "Wash the school's paths with a hose each week"
+   ],
+   "why": "A tank collects rain, so the garden needs less tap water. The other options keep using tap water or use even more of it.",
+   "clue": "Which choice collects water that would otherwise run away?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's family in Tamworth reuses water from their washing machine on their flower beds. What is this water called, and why does it help?",
+   "opts": [
+    "Grey water, because it is reused instead of wasted",
+    "Grey water, because it is collected from the roof",
+    "Rainwater, because it is reused instead of wasted",
+    "Rainwater, because it is collected from the roof"
+   ],
+   "why": "Water from a washing machine is grey water, and reusing it means less tap water is needed. The option 'Grey water, because it is collected from the roof' has the right name but the wrong reason: water collected from a roof is rainwater, not grey water.",
+   "clue": "Think about where the water first came from: a roof or a washing machine?"
+  }
+ },
+ "checked_by": "claude-code"
 }

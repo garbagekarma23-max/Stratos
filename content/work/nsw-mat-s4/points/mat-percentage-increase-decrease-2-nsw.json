@@ -20,8 +20,221 @@
    0.219
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 says reuse mat-percentage-increase-decrease-2-ac, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:53Z confirm: Claude Opus 5.5 may adapt mat-percentage-increase-decrease-2-ac, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt mat-percentage-increase-decrease-2-ac (2 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting mat-percentage-increase-decrease-2-ac on the next run",
+  "2026-11-20T14:12:39Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "confirm": 0.00929,
+  "adapt": 0.00483,
+  "check": 0.00728
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-percentage-increase-decrease-2-ac",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the same multiplier method (1.15 for an increase, 0.8 for a decrease) at a Year 8 depth that suits this Stage 4 course, and its terms and questions contain nothing that needs changing for NSW.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-percentage-increase-decrease-2-ac",
+  "changes": [
+   "Change the worked example (or add one) so it uses the brief's contexts, such as adding 10% GST by multiplying by 1.1 or applying a discount by multiplying by 0.8.",
+   "Name the terms discount and mark-up on the card so it matches the brief's wording."
+  ],
+  "sure": "medium",
+  "reason": "The Year 8 bank point teaches the same one-step multiplier method at a suitable depth for NSW Stage 4, but its examples should be swapped to cover the brief's discounts, mark-ups and 10% GST.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-percentage-increase-decrease-2-ac",
+  "changes": [
+   "Name discount and mark-up on the card as a percentage decrease and increase.",
+   "Add an example of adding 10% GST by multiplying by 1.1, and use a discount (such as multiplying by 0.8 for 20% off) or a mark-up in an example or question."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card1",
+   "card2",
+   "card3",
+   "card4",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same one-step multiplier method at the right depth and both answers are right (0.7 and $46), but the brief asks for discounts, mark-ups and GST at 10%, which the card does not cover.",
+   "item": "ae49bfe73fee6684",
+   "result": "decided",
+   "saved": {
+    "id": "mat-percentage-increase-decrease-2-nsw",
+    "title": "Percentage increase and decrease",
+    "brief": "9b27bfe20488",
+    "shortlist": [
+     [
+      "mat-discounts-price-increases",
+      0.465
+     ],
+     [
+      "mat-percentage-increase-decrease-2-ac",
+      0.456
+     ],
+     [
+      "mat-percentage-quantity",
+      0.263
+     ],
+     [
+      "mat-percentage-increase-decrease",
+      0.219
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00029,
+     "confirm": 0.00929
+    },
+    "match": {
+     "verdict": "reuse",
+     "same": "mat-percentage-increase-decrease-2-ac",
+     "changes": [],
+     "sure": "high",
+     "reason": "The bank point teaches the same multiplier method (1.15 for an increase, 0.8 for a decrease) at a Year 8 depth that suits this Stage 4 course, and its terms and questions contain nothing that needs changing for NSW.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-percentage-increase-decrease-2-ac",
+     "changes": [
+      "Change the worked example (or add one) so it uses the brief's contexts, such as adding 10% GST by multiplying by 1.1 or applying a discount by multiplying by 0.8.",
+      "Name the terms discount and mark-up on the card so it matches the brief's wording."
+     ],
+     "sure": "medium",
+     "reason": "The Year 8 bank point teaches the same one-step multiplier method at a suitable depth for NSW Stage 4, but its examples should be swapped to cover the brief's discounts, mark-ups and 10% GST.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "7eadb02fe512c1ba"
+  }
+ ],
+ "draft": {
+  "title": "Percentage increase and decrease",
+  "card": [
+   "A discount is a percentage decrease. A mark-up is a percentage increase. To change an amount in one step, multiply by a single factor. The factor is the new amount as a decimal fraction of the original.",
+   [
+    "Increase",
+    "Add the percentage to 100%, then write it as a decimal. A mark-up of 15% is \\(100\\% + 15\\% = 115\\%\\), so the factor is 1.15."
+   ],
+   [
+    "Decrease",
+    "Take the percentage from 100%, then write it as a decimal. A 20% discount is \\(100\\% - 20\\% = 80\\%\\), so the factor is 0.8."
+   ],
+   "Adding 10% GST is an increase of 10%, so multiply by 1.1. A $60 jacket with GST added costs \\(60 \\times 1.1 = \\$66\\)."
+  ],
+  "remember": "Increase: 100% plus the change. Decrease: 100% minus the change. Then multiply.",
+  "a": {
+   "q": "A shop gives 30% off. Which factor do you multiply the price by?",
+   "opts": [
+    "0.7",
+    "0.3",
+    "1.3",
+    "0.03"
+   ],
+   "why": "A 30% decrease leaves \\(100\\% - 30\\% = 70\\%\\), which is 0.7. The factor 0.3 is tempting, but multiplying by 0.3 leaves only 30% of the amount, so it is a 70% decrease.",
+   "clue": "Work out what percentage is left after the decrease."
+  },
+  "b": {
+   "d": 2,
+   "q": "A gym fee is $40 a week before a 15% mark-up. What is the new weekly fee?",
+   "opts": [
+    "$46",
+    "$55",
+    "$41.50",
+    "$6"
+   ],
+   "why": "The factor is 1.15, so \\(40 \\times 1.15 = \\$46\\). The answer $6 is only the increase (15% of 40), not the new fee.",
+   "clue": "The question asks for the new fee, not the size of the rise."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "0.7",
+   "also_right": []
+  },
+  "b": {
+   "best": "$46",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Percentage increase and decrease",
+  "card": [
+   "A discount is a percentage decrease. A mark-up is a percentage increase. To change an amount in one step, multiply by a single factor. The factor is the new amount as a decimal fraction of the original.",
+   [
+    "Increase",
+    "Add the percentage to 100%, then write it as a decimal. A mark-up of 15% is \\(100\\% + 15\\% = 115\\%\\), so the factor is 1.15."
+   ],
+   [
+    "Decrease",
+    "Take the percentage from 100%, then write it as a decimal. A 20% discount is \\(100\\% - 20\\% = 80\\%\\), so the factor is 0.8."
+   ],
+   "Adding 10% GST is an increase of 10%, so multiply by 1.1. A $60 jacket with GST added costs \\(60 \\times 1.1 = \\$66\\)."
+  ],
+  "remember": "Increase: 100% plus the change. Decrease: 100% minus the change. Then multiply.",
+  "a": {
+   "q": "A shop gives 30% off. Which factor do you multiply the price by?",
+   "opts": [
+    "0.7",
+    "0.3",
+    "1.3",
+    "0.03"
+   ],
+   "why": "A 30% decrease leaves \\(100\\% - 30\\% = 70\\%\\), which is 0.7. The factor 0.3 is tempting, but multiplying by 0.3 leaves only 30% of the amount, so it is a 70% decrease.",
+   "clue": "Work out what percentage is left after the decrease."
+  },
+  "b": {
+   "d": 2,
+   "q": "A gym fee is $40 a week before a 15% mark-up. What is the new weekly fee?",
+   "opts": [
+    "$46",
+    "$55",
+    "$41.50",
+    "$6"
+   ],
+   "why": "The factor is 1.15, so \\(40 \\times 1.15 = \\$46\\). The answer $6 is only the increase (15% of 40), not the new fee.",
+   "clue": "The question asks for the new fee, not the size of the rise."
+  }
+ }
 }

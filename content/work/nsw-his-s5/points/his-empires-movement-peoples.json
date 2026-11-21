@@ -24,8 +24,57 @@
    0.223
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 may adapt his-movements-people-from-1750, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:51Z confirm: Claude Opus 5.5 may reuse his-movements-people-from-1750, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z claude-code review: left for you (it chose to leave it)",
+  "2026-11-20T14:41:26Z review: reusing his-movements-people-from-1750"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "confirm": 0.01089
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "his-movements-people-from-1750",
+  "changes": [
+   "Add a sentence that links the forced and free movements to European empires, which organised the slave trade, convict transportation and colonial migration that the new point names.",
+   "Make the convict and migration examples specific to New South Wales and Australia, as the NSW course expects."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same forced and free movement of people from 1750 to 1914, at a suitable depth, but it does not yet tie these movements to European empires as the new point does.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "his-movements-people-from-1750",
+  "changes": [],
+  "sure": "medium",
+  "reason": "This bank point already teaches the same Year 9 idea: the slave trade, convict transportation to New South Wales and free migration for land and work. Its examples and questions suit NSW Stage 5 students as written, though it frames the topic as forced versus free movement rather than naming empires as the cause.",
+  "model": "claude-opus-5-5"
+ },
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "leave",
+   "sure": "medium",
+   "reason": "The point covers the slave trade and convict transportation, which touch violence and lived discrimination, so the owner decides. The bank point also frames it as forced and free movement, not empires moving people as the brief does.",
+   "item": "00d7dfa578d3a5a7",
+   "result": "left"
+  }
+ ],
+ "reuse": "his-movements-people-from-1750",
+ "matched": {
+  "verdict": "reuse",
+  "from": "his-movements-people-from-1750",
+  "by": "owner",
+  "at": "2026-11-20T14:41:26Z"
+ }
 }

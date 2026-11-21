@@ -16,8 +16,442 @@
    0.202
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:52Z write: done",
+  "2026-11-20T12:35:52Z check: flagged",
+  "2026-11-20T12:44:57Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (remember other)",
+  "2026-11-20T13:44:56Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.01114,
+  "check": 0.01163,
+  "fix": 0.0471,
+  "recheck": 0.01143
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches both bias and propaganda together: his-bias-reliability covers only bias and reliability, and his-propaganda-censorship covers propaganda and censorship but not bias, so the new point is broader than either.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Remember, other: The remember line says 'All propaganda is biased', but the card never says this. It sets out a neater subset rule than the card teaches, and Why (b) leans on the poster being biased even though the card only implies it. Add a card line saying propaganda is always one-sided, or soften the remember line.",
+ "rejected": {
+  "title": "Bias and propaganda",
+  "card": [
+   [
+    "Bias",
+    "Bias is a one-sided view. It comes from who made a source and why they made it."
+   ],
+   [
+    "Propaganda",
+    "Propaganda is made on purpose to persuade people to think or act in a certain way. Governments often use it in wartime."
+   ],
+   "Signs of bias or propaganda include loaded words, strong emotion, one side shown as good and the other as evil, and facts left out.",
+   "Bias can be there without anyone trying to persuade, as in a private diary. Propaganda is aimed at an audience on purpose, to change minds."
+  ],
+  "remember": "All propaganda is biased, but not all bias is propaganda. Propaganda sets out to persuade.",
+  "a": {
+   "q": "Which description best fits a piece of propaganda?",
+   "opts": [
+    "A poster made to persuade people to support a cause",
+    "A diary entry written to record a private memory",
+    "A map made to show the roads of a town",
+    "A table of figures collected for a census"
+   ],
+   "why": "Propaganda is made on purpose to persuade. The poster is made to win support. The diary entry may be one-sided, but it was not made to persuade an audience.",
+   "clue": "Look for the source made to change what people think or do."
+  },
+  "b": {
+   "d": 3,
+   "q": "In wartime, a soldier writes in his private diary that the enemy are cowards. His government prints posters showing the enemy as monsters to get men to enlist. Which is correct?",
+   "opts": [
+    "The diary shows bias, and the poster is propaganda",
+    "The diary is propaganda, and the poster shows bias",
+    "Both are propaganda, because both are one-sided",
+    "Only the poster is biased, as the diary is private"
+   ],
+   "why": "Both sources are one-sided, so both are biased. Only the poster was made on purpose to persuade an audience, so only it is propaganda. Being one-sided is not enough to make the diary propaganda, as no one was meant to be persuaded by it.",
+   "clue": "Which source was made to change what other people do?"
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "image",
+    "brief": "A First World War government recruitment poster from an open-licence archive, showing one side as heroic and urging men to enlist.",
+    "why": "It gives students a real example of a source made on purpose to persuade."
+   }
+  ]
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Remember, other: The remember line says 'All propaganda is biased', but the card never says this. It sets out a neater subset rule than the card teaches, and Why (b) leans on the poster being biased even though the card only implies it. Add a card line saying propaganda is always one-sided, or soften the remember line."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Bias and propaganda",
+     "card": [
+      [
+       "Bias",
+       "Bias is a one-sided view. It comes from who made a source and why they made it."
+      ],
+      [
+       "Propaganda",
+       "Propaganda is made on purpose to persuade people to think or act in a certain way. Governments often use it in wartime."
+      ],
+      "Signs of bias or propaganda include loaded words, strong emotion, one side shown as good and the other as evil, and facts left out.",
+      "A biased source can still be used as evidence. It can show what its maker wanted people to believe."
+     ],
+     "remember": "Ask who made the source and why. A one-sided source still shows a point of view.",
+     "a": {
+      "q": "Which description best fits a piece of propaganda?",
+      "opts": [
+       "A poster made to persuade people to support a cause",
+       "A diary entry written to record a private memory",
+       "A map made to show the roads of a town",
+       "A table of figures collected for a census"
+      ],
+      "why": "Propaganda is made on purpose to persuade. The poster is made to win support. The diary entry may be one-sided, but it was not made to persuade a public audience.",
+      "clue": "Look for the source made to change what people think or do."
+     },
+     "b": {
+      "d": 3,
+      "q": "During a war, a government publishes a poster showing the enemy as cruel monsters and its own soldiers as brave heroes. What is the most sensible use of the poster for a historian?",
+      "opts": [
+       "Evidence of what the government wanted people to believe",
+       "Proof that the enemy really was cruel in every way",
+       "Useless, because a biased source tells us nothing",
+       "Proof that most people agreed with the government"
+      ],
+      "why": "The poster is one-sided, but it shows the message the government wanted to spread. It cannot prove the enemy's behaviour. A biased source is still useful evidence of a point of view, so it is not useless.",
+      "clue": "A one-sided source can still show what its maker wanted others to think."
+     },
+     "wants": [
+      {
+       "at": "b",
+       "kind": "image",
+       "brief": "A First World War recruitment or enemy-caricature poster from a government, from an open-licence archive, showing one side as heroic and the other as threatening.",
+       "why": "It gives students a real example of one-sided persuasion to picture."
+      }
+     ]
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "A poster made to persuade people to support a cause",
+      "also_right": []
+     },
+     "b": {
+      "best": "Evidence of what the government wanted people to believe",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "other",
+       "detail": "The last card line, 'A biased source can still be used as evidence', and the remember line's 'A one-sided source still shows a point of view' explain the idea of point 1 (Usefulness and reliability: 'Even a biased source can be useful as evidence of a point of view'). Point 1 should teach this; this point should only mention it."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "Question b tests whether a biased source is useful as evidence of a point of view. That is the idea of point 1 (Usefulness and reliability), not of this point on recognising bias and propaganda."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and answers are correct. However, the card's last line, the remember line and question b teach and test point 1's idea that a biased source is still useful evidence, rather than this point's idea of recognising bias and propaganda."
+    },
+    "flags": [
+     "Card, other: The last card line, 'A biased source can still be used as evidence', and the remember line's 'A one-sided source still shows a point of view' explain the idea of point 1 (Usefulness and reliability: 'Even a biased source can be useful as evidence of a point of view'). Point 1 should teach this; this point should only mention it.",
+     "Question b, other: Question b tests whether a biased source is useful as evidence of a point of view. That is the idea of point 1 (Usefulness and reliability), not of this point on recognising bias and propaganda."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Bias and propaganda",
+     "card": [
+      [
+       "Bias",
+       "Bias is a one-sided view. It comes from who made a source and why they made it."
+      ],
+      [
+       "Propaganda",
+       "Propaganda is made on purpose to persuade people to think or act in a certain way. Governments often use it in wartime."
+      ],
+      "Signs of bias or propaganda include loaded words, strong emotion, one side shown as good and the other as evil, and facts left out.",
+      "Bias can be there without anyone trying to persuade, as in a private diary. Propaganda is aimed at an audience on purpose, to change minds."
+     ],
+     "remember": "All propaganda is biased, but not all bias is propaganda. Propaganda sets out to persuade.",
+     "a": {
+      "q": "Which description best fits a piece of propaganda?",
+      "opts": [
+       "A poster made to persuade people to support a cause",
+       "A diary entry written to record a private memory",
+       "A map made to show the roads of a town",
+       "A table of figures collected for a census"
+      ],
+      "why": "Propaganda is made on purpose to persuade. The poster is made to win support. The diary entry may be one-sided, but it was not made to persuade an audience.",
+      "clue": "Look for the source made to change what people think or do."
+     },
+     "b": {
+      "d": 3,
+      "q": "In wartime, a soldier writes in his private diary that the enemy are cowards. His government prints posters showing the enemy as monsters to get men to enlist. Which is correct?",
+      "opts": [
+       "The diary shows bias, and the poster is propaganda",
+       "The diary is propaganda, and the poster shows bias",
+       "Both are propaganda, because both are one-sided",
+       "Only the poster is biased, as the diary is private"
+      ],
+      "why": "Both sources are one-sided, so both are biased. Only the poster was made on purpose to persuade an audience, so only it is propaganda. Being one-sided is not enough to make the diary propaganda, as no one was meant to be persuaded by it.",
+      "clue": "Which source was made to change what other people do?"
+     },
+     "wants": [
+      {
+       "at": "card 2",
+       "kind": "image",
+       "brief": "A First World War government recruitment poster from an open-licence archive, showing one side as heroic and urging men to enlist.",
+       "why": "It gives students a real example of a source made on purpose to persuade."
+      }
+     ]
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "A poster made to persuade people to support a cause",
+       "also_right": []
+      },
+      "b": {
+       "best": "The diary shows bias, and the poster is propaganda",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "remember",
+        "kind": "other",
+        "detail": "The remember line says 'All propaganda is biased', but the card never says this. It sets out a neater subset rule than the card teaches, and Why (b) leans on the poster being biased even though the card only implies it. Add a card line saying propaganda is always one-sided, or soften the remember line."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are sound and their answers match the card. One minor issue: the remember line says 'all propaganda is biased', which the card never states."
+     },
+     "flags": [
+      "Remember, other: The remember line says 'All propaganda is biased', but the card never says this. It sets out a neater subset rule than the card teaches, and Why (b) leans on the poster being biased even though the card only implies it. Add a card line saying propaganda is always one-sided, or soften the remember line."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:56Z",
+   "step": "write",
+   "version": {
+    "title": "Bias and propaganda",
+    "card": [
+     [
+      "Bias",
+      "Bias is a one-sided view. It comes from who made a source and why they made it."
+     ],
+     [
+      "Propaganda",
+      "Propaganda is made on purpose to persuade people to think or act in a certain way. It is always one-sided, and governments often use it in wartime."
+     ],
+     "Signs of bias or propaganda include loaded words, strong emotion, one side shown as good and the other as evil, and facts left out.",
+     "Bias can be there without anyone trying to persuade, as in a private diary. So a biased source is not propaganda unless it was aimed at an audience on purpose, to change minds."
+    ],
+    "remember": "Propaganda is one-sided on purpose, to persuade. Bias can be there without that purpose.",
+    "a": {
+     "q": "Which description best fits a piece of propaganda?",
+     "opts": [
+      "A poster made to persuade people to support a cause",
+      "A diary entry written to record a private memory",
+      "A map drawn to show the roads and rivers of a town",
+      "A table of population figures collected for a census"
+     ],
+     "why": "Propaganda is made on purpose to persuade. The poster is made to win support. The diary entry may be one-sided, but it was not made to persuade an audience.",
+     "clue": "Look for the source made to change what people think or do."
+    },
+    "b": {
+     "d": 3,
+     "q": "In wartime, a soldier writes in his private diary that the enemy are cowards. His government prints posters showing the enemy as monsters to get men to enlist. Which is correct?",
+     "opts": [
+      "The diary shows bias, and the poster is propaganda",
+      "The diary is propaganda, and the poster shows bias",
+      "Both are propaganda, because both are one-sided",
+      "The poster is biased, but a private diary is not"
+     ],
+     "why": "Both sources are one-sided, so both show bias. The poster was also made on purpose to persuade an audience, so it is propaganda. Being one-sided is not enough to make the diary propaganda, as no one was meant to be persuaded by it.",
+     "clue": "Which source was made to change what other people do?"
+    },
+    "wants": [
+     {
+      "at": "card 2",
+      "kind": "image",
+      "brief": "A First World War government recruitment poster from an open-licence archive, showing one side as heroic and urging men to enlist.",
+      "why": "It gives students a real example of a source made on purpose to persuade."
+     }
+    ]
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "A poster made to persuade people to support a cause",
+     "also_right": []
+    },
+    "b": {
+     "best": "The diary shows bias, and the poster is propaganda",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Bias and propaganda",
+  "card": [
+   [
+    "Bias",
+    "Bias is a one-sided view. It comes from who made a source and why they made it."
+   ],
+   [
+    "Propaganda",
+    "Propaganda is made on purpose to persuade people to think or act in a certain way. It is always one-sided, and governments often use it in wartime."
+   ],
+   "Signs of bias or propaganda include loaded words, strong emotion, one side shown as good and the other as evil, and facts left out.",
+   "Bias can be there without anyone trying to persuade, as in a private diary. So a biased source is not propaganda unless it was aimed at an audience on purpose, to change minds."
+  ],
+  "remember": "Propaganda is one-sided on purpose, to persuade. Bias can be there without that purpose.",
+  "a": {
+   "q": "Which description best fits a piece of propaganda?",
+   "opts": [
+    "A poster made to persuade people to support a cause",
+    "A diary entry written to record a private memory",
+    "A map drawn to show the roads and rivers of a town",
+    "A table of population figures collected for a census"
+   ],
+   "why": "Propaganda is made on purpose to persuade. The poster is made to win support. The diary entry may be one-sided, but it was not made to persuade an audience.",
+   "clue": "Look for the source made to change what people think or do."
+  },
+  "b": {
+   "d": 3,
+   "q": "In wartime, a soldier writes in his private diary that the enemy are cowards. His government prints posters showing the enemy as monsters to get men to enlist. Which is correct?",
+   "opts": [
+    "The diary shows bias, and the poster is propaganda",
+    "The diary is propaganda, and the poster shows bias",
+    "Both are propaganda, because both are one-sided",
+    "The poster is biased, but a private diary is not"
+   ],
+   "why": "Both sources are one-sided, so both show bias. The poster was also made on purpose to persuade an audience, so it is propaganda. Being one-sided is not enough to make the diary propaganda, as no one was meant to be persuaded by it.",
+   "clue": "Which source was made to change what other people do?"
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "image",
+    "brief": "A First World War government recruitment poster from an open-licence archive, showing one side as heroic and urging men to enlist.",
+    "why": "It gives students a real example of a source made on purpose to persuade."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A poster made to persuade people to support a cause",
+   "also_right": []
+  },
+  "b": {
+   "best": "The diary shows bias, and the poster is propaganda",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Bias and propaganda",
+  "card": [
+   [
+    "Bias",
+    "Bias is a one-sided view. It comes from who made a source and why they made it."
+   ],
+   [
+    "Propaganda",
+    "Propaganda is made on purpose to persuade people to think or act in a certain way. It is always one-sided, and governments often use it in wartime."
+   ],
+   "Signs of bias or propaganda include loaded words, strong emotion, one side shown as good and the other as evil, and facts left out.",
+   "Bias can be there without anyone trying to persuade, as in a private diary. So a biased source is not propaganda unless it was aimed at an audience on purpose, to change minds."
+  ],
+  "remember": "Propaganda is one-sided on purpose, to persuade. Bias can be there without that purpose.",
+  "a": {
+   "q": "Which description best fits a piece of propaganda?",
+   "opts": [
+    "A poster made to persuade people to support a cause",
+    "A diary entry written to record a private memory",
+    "A map drawn to show the roads and rivers of a town",
+    "A table of population figures collected for a census"
+   ],
+   "why": "Propaganda is made on purpose to persuade. The poster is made to win support. The diary entry may be one-sided, but it was not made to persuade an audience.",
+   "clue": "Look for the source made to change what people think or do."
+  },
+  "b": {
+   "d": 3,
+   "q": "In wartime, a soldier writes in his private diary that the enemy are cowards. His government prints posters showing the enemy as monsters to get men to enlist. Which is correct?",
+   "opts": [
+    "The diary shows bias, and the poster is propaganda",
+    "The diary is propaganda, and the poster shows bias",
+    "Both are propaganda, because both are one-sided",
+    "The poster is biased, but a private diary is not"
+   ],
+   "why": "Both sources are one-sided, so both show bias. The poster was also made on purpose to persuade an audience, so it is propaganda. Being one-sided is not enough to make the diary propaganda, as no one was meant to be persuaded by it.",
+   "clue": "Which source was made to change what other people do?"
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "image",
+    "brief": "A First World War government recruitment poster from an open-licence archive, showing one side as heroic and urging men to enlist.",
+    "why": "It gives students a real example of a source made on purpose to persuade."
+   }
+  ]
+ },
+ "checked_by": "claude-code"
 }

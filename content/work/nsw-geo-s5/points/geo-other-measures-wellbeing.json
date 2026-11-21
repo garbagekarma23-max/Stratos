@@ -24,8 +24,238 @@
    0.259
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: done",
+  "2026-11-20T12:44:55Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.00575,
+  "check": 0.01051,
+  "fix": 0.01854,
+  "recheck": 0.00785
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point is a broad list of wellbeing indicators (GDP per person, infant mortality, literacy, clean water, life satisfaction), which none of the bank points teach: the closest, geo-other-wellbeing-measures, is about the Multidimensional Poverty Index and the Happy Planet Index, and geo-gdp-per-person covers only GDP per person.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Other measures of wellbeing",
+  "card": [
+   [
+    "GDP per person",
+    "the value of all goods and services a country produces in a year, divided by its population. It is an economic measure of average income."
+   ],
+   [
+    "Infant mortality",
+    "the number of babies who die before their first birthday for every 1000 born alive. A high rate points to poor health care and living conditions."
+   ],
+   [
+    "Literacy",
+    "the share of adults who can read and write. It shows how well people have had access to education."
+   ],
+   [
+    "Other measures",
+    "Access to clean water shows the share of people with safe drinking water. Life satisfaction surveys ask people how happy they say they are with their lives."
+   ]
+  ],
+  "remember": "Wellbeing can be measured by money, health, education, water and how people feel.",
+  "a": {
+   "q": "Which measure shows how people feel about their own lives?",
+   "opts": [
+    "Life satisfaction surveys",
+    "GDP per person",
+    "Infant mortality rate",
+    "Adult literacy rate"
+   ],
+   "why": "Life satisfaction surveys ask people how happy they say they are, so they record feelings. GDP per person is tempting, but it measures average income, not how people feel.",
+   "clue": "Which measure asks people a question?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Country X has a high GDP per person, but many babies there die before their first birthday. What does this suggest?",
+   "opts": [
+    "Average income may hide poor health care",
+    "Average income shows health is also high",
+    "Infant mortality only measures education",
+    "Literacy must also be very low there"
+   ],
+   "why": "GDP per person is an average income, so a country can have a high figure while many people lack good health care. A high infant mortality rate shows this gap. Infant mortality measures health, not education, and the case says nothing about literacy.",
+   "clue": "One measure is about money and the other is about health."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Life satisfaction surveys",
+   "also_right": []
+  },
+  "b": {
+   "best": "Average income may hide poor health care",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only hedged one ('may'). The wrong options use absolute words ('only', 'must') or overclaim, so a student can pick the answer from the wording without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and answers are correct. In question b, the right option is the only hedged one while the others use 'only' and 'must', so students can spot it from the wording alone."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option is the only hedged one ('may'). The wrong options use absolute words ('only', 'must') or overclaim, so a student can pick the answer from the wording without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Other measures of wellbeing",
+  "card": [
+   [
+    "GDP per person",
+    "the value of all goods and services a country produces in a year, divided by its population. It shows average income, which can hide big gaps between rich and poor."
+   ],
+   [
+    "Infant mortality",
+    "the number of babies who die before their first birthday for every 1000 born alive. A high rate points to poor health care and living conditions."
+   ],
+   [
+    "Literacy",
+    "the share of adults who can read and write. It shows how well people have had access to education."
+   ],
+   [
+    "Other measures",
+    "Access to clean water shows the share of people with safe drinking water. Life satisfaction surveys ask people how happy they say they are with their lives."
+   ]
+  ],
+  "remember": "Wellbeing can be measured by money, health, education, water and how people feel.",
+  "a": {
+   "q": "Which measure shows how people feel about their own lives?",
+   "opts": [
+    "Life satisfaction surveys",
+    "GDP per person",
+    "Infant mortality rate",
+    "Adult literacy rate"
+   ],
+   "why": "Life satisfaction surveys ask people how happy they say they are, so they record feelings. GDP per person is tempting, but it measures average income, not how people feel.",
+   "clue": "Which measure asks people a question?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Country X has a high GDP per person, but many babies there die before their first birthday. What does this suggest?",
+   "opts": [
+    "High average income does not guarantee good health care",
+    "High average income means health care is also good",
+    "Infant mortality measures education, not health",
+    "GDP per person measures the health of the population"
+   ],
+   "why": "GDP per person is an average income, and an average can hide gaps, so many people may still lack good health care. The high infant mortality rate shows this. Assuming high income means good health care is tempting, but the infant mortality figure shows otherwise.",
+   "clue": "One measure is about money and the other is about health."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Life satisfaction surveys",
+    "also_right": []
+   },
+   "b": {
+    "best": "High average income does not guarantee good health care",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only hedged one ('may'). The wrong options use absolute words ('only', 'must') or overclaim, so a student can pick the answer from the wording without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The right option is the only hedged one ('may'). The wrong options use absolute words ('only', 'must') or overclaim, so a student can pick the answer from the wording without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "Other measures of wellbeing",
+  "card": [
+   [
+    "GDP per person",
+    "the value of all goods and services a country produces in a year, divided by its population. It shows average income, which can hide big gaps between rich and poor."
+   ],
+   [
+    "Infant mortality",
+    "the number of babies who die before their first birthday for every 1000 born alive. A high rate points to poor health care and living conditions."
+   ],
+   [
+    "Literacy",
+    "the share of adults who can read and write. It shows how well people have had access to education."
+   ],
+   [
+    "Other measures",
+    "Access to clean water shows the share of people with safe drinking water. Life satisfaction surveys ask people how happy they say they are with their lives."
+   ]
+  ],
+  "remember": "Wellbeing can be measured by money, health, education, water and how people feel.",
+  "a": {
+   "q": "Which measure shows how people feel about their own lives?",
+   "opts": [
+    "Life satisfaction surveys",
+    "GDP per person",
+    "Infant mortality rate",
+    "Adult literacy rate"
+   ],
+   "why": "Life satisfaction surveys ask people how happy they say they are, so they record feelings. GDP per person is tempting, but it measures average income, not how people feel.",
+   "clue": "Which measure asks people a question?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Country X has a high GDP per person, but many babies there die before their first birthday. What does this suggest?",
+   "opts": [
+    "High average income does not guarantee good health care",
+    "High average income means health care is also good",
+    "Infant mortality measures education, not health",
+    "GDP per person measures the health of the population"
+   ],
+   "why": "GDP per person is an average income, and an average can hide gaps, so many people may still lack good health care. The high infant mortality rate shows this. Assuming high income means good health care is tempting, but the infant mortality figure shows otherwise.",
+   "clue": "One measure is about money and the other is about health."
+  }
+ },
+ "cleared_by": "recheck"
 }

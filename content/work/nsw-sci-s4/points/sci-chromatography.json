@@ -16,8 +16,131 @@
    0.217
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.00732,
+  "check": 0.00971
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, sci-distillation-chromatography, covers chromatography but is a combined card that also teaches distillation, and its question a tests distillation, so it does not fit a chromatography-only point and a new point is the safer match.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Chromatography",
+  "card": [
+   "Chromatography separates a mixture of dissolved substances, such as the dyes in an ink. It works well on small amounts of a mixture.",
+   "A spot of the mixture is placed near the bottom of a strip of paper. The bottom edge is stood in a solvent, such as water. The spot must start above the level of the solvent.",
+   "The solvent soaks up the paper and carries the dissolved substances with it. Each substance travels a different distance, so the substances spread out into separate spots or bands.",
+   "A substance that is carried further up the paper has moved faster than one that stays lower down. A pure substance usually gives one spot. A mixture gives more than one."
+  ],
+  "remember": "In chromatography, the solvent carries each substance a different distance up the paper.",
+  "a": {
+   "q": "Why does chromatography separate the dyes in a black ink into different spots?",
+   "opts": [
+    "Each dye is carried a different distance by the solvent",
+    "Each dye dissolves in the paper and stays there",
+    "Each dye evaporates from the paper at its own time",
+    "Each dye is too large to pass through the paper"
+   ],
+   "why": "The solvent moves up the paper and carries each dye with it, but each dye travels a different distance. This spreads them into separate spots. The dyes are not trapped by the paper, because they are carried along by the solvent.",
+   "clue": "Think about what moves up the paper and how far each dye goes."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya tests a green ink on paper. After the solvent has risen, she sees a yellow spot near the top and a blue spot lower down. What does this show?",
+   "opts": [
+    "The ink is a mixture of at least two dyes",
+    "The ink is a single pure dye",
+    "The blue dye is carried faster than the yellow dye",
+    "The solvent has made the ink change colour"
+   ],
+   "why": "Two separate spots mean the ink contains at least two different dyes, so it is a mixture. The yellow dye was carried further, so it moved faster than the blue dye, which is the reverse of the tempting option.",
+   "clue": "Count the spots, then compare how far each one has travelled."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A strip of paper standing in a beaker with a little solvent in the bottom. A start line with a spot of ink sits above the solvent level. A second strip shows the solvent front near the top and three separate coloured spots at different heights, labelled spot 1, spot 2 and spot 3.",
+    "why": "Seeing the setup and the spread-out spots helps students understand how each substance travels a different distance."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Each dye is carried a different distance by the solvent",
+   "also_right": []
+  },
+  "b": {
+   "best": "The ink is a mixture of at least two dyes",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Chromatography",
+  "card": [
+   "Chromatography separates a mixture of dissolved substances, such as the dyes in an ink. It works well on small amounts of a mixture.",
+   "A spot of the mixture is placed near the bottom of a strip of paper. The bottom edge is stood in a solvent, such as water. The spot must start above the level of the solvent.",
+   "The solvent soaks up the paper and carries the dissolved substances with it. Each substance travels a different distance, so the substances spread out into separate spots or bands.",
+   "A substance that is carried further up the paper has moved faster than one that stays lower down. A pure substance usually gives one spot. A mixture gives more than one."
+  ],
+  "remember": "In chromatography, the solvent carries each substance a different distance up the paper.",
+  "a": {
+   "q": "Why does chromatography separate the dyes in a black ink into different spots?",
+   "opts": [
+    "Each dye is carried a different distance by the solvent",
+    "Each dye dissolves in the paper and stays there",
+    "Each dye evaporates from the paper at its own time",
+    "Each dye is too large to pass through the paper"
+   ],
+   "why": "The solvent moves up the paper and carries each dye with it, but each dye travels a different distance. This spreads them into separate spots. The dyes are not trapped by the paper, because they are carried along by the solvent.",
+   "clue": "Think about what moves up the paper and how far each dye goes."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya tests a green ink on paper. After the solvent has risen, she sees a yellow spot near the top and a blue spot lower down. What does this show?",
+   "opts": [
+    "The ink is a mixture of at least two dyes",
+    "The ink is a single pure dye",
+    "The blue dye is carried faster than the yellow dye",
+    "The solvent has made the ink change colour"
+   ],
+   "why": "Two separate spots mean the ink contains at least two different dyes, so it is a mixture. The yellow dye was carried further, so it moved faster than the blue dye, which is the reverse of the tempting option.",
+   "clue": "Count the spots, then compare how far each one has travelled."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A strip of paper standing in a beaker with a little solvent in the bottom. A start line with a spot of ink sits above the solvent level. A second strip shows the solvent front near the top and three separate coloured spots at different heights, labelled spot 1, spot 2 and spot 3.",
+    "why": "Seeing the setup and the spread-out spots helps students understand how each substance travels a different distance."
+   }
+  ]
+ },
+ "cleared_by": "checker"
 }

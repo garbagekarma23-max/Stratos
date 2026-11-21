@@ -20,8 +20,391 @@
    0.253
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:52Z write: done",
+  "2026-11-20T12:35:52Z check: flagged",
+  "2026-11-20T12:44:57Z fix: suggested",
+  "2026-11-20T13:23:40Z autoreview: picked as a spot check. It would have been cleared with the fix (b other)",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "write": 0.01114,
+  "check": 0.01086,
+  "fix": 0.01647
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Contested interpretations, covers evidence and questions or values but never teaches that the time a historian writes in shapes their interpretation, which the new point requires, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Historians' interpretations",
+  "card": [
+   "An interpretation is a historian's explanation of what happened and why. Different historians can interpret the same events differently.",
+   [
+    "Evidence",
+    "Historians may use different sources, or give more weight to some sources than to others."
+   ],
+   [
+    "Questions",
+    "Historians ask different questions. One may study leaders and battles, while another studies the lives of ordinary people."
+   ],
+   [
+    "Time",
+    "The time a historian writes in shapes the view too. New evidence can appear, and the values and concerns of the day change."
+   ]
+  ],
+  "remember": "Evidence, questions and the time of writing all shape an interpretation.",
+  "a": {
+   "q": "Two historians study the same event and reach different conclusions. Which is a likely reason?",
+   "opts": [
+    "They asked different questions about the event",
+    "They used a different calendar to date the event",
+    "One of them was not allowed to use any sources",
+    "The event happened differently for each of them"
+   ],
+   "why": "Different questions lead historians to look at different evidence and reach different conclusions. The event itself happened only one way, so the difference lies in how it is studied.",
+   "clue": "Think about what each historian set out to find out."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1950 a historian wrote about a colonial town using only official reports. In 2015 another used diaries and oral histories of local residents as well, and reached a different view. What best explains the difference?",
+   "opts": [
+    "The evidence used and the time of writing differed",
+    "The first historian made up the official reports",
+    "Only the later historian can ever be correct",
+    "The town changed after the first book was written"
+   ],
+   "why": "The two historians used different evidence and wrote in different times, with different concerns. The later view is not automatically correct, because it is also an interpretation. Neither case suggests the reports were invented.",
+   "clue": "Compare the sources each historian used and when each wrote."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "They asked different questions about the event",
+   "also_right": []
+  },
+  "b": {
+   "best": "The evidence used and the time of writing differed",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue ('Compare the sources each historian used and when each wrote') names both parts of the right option, evidence and time of writing, so a student can match it without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate, and each question has one clear answer. The clue for question b gives the answer away by naming both the evidence and the time of writing."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue ('Compare the sources each historian used and when each wrote') names both parts of the right option, evidence and time of writing, so a student can match it without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Historians' interpretations",
+  "card": [
+   "An interpretation is a historian's explanation of what happened and why. Different historians can interpret the same events differently.",
+   [
+    "Evidence",
+    "Historians may use different sources, or give more weight to some sources than to others."
+   ],
+   [
+    "Questions",
+    "Historians ask different questions. One may study leaders and battles, while another studies the lives of ordinary people."
+   ],
+   [
+    "Time",
+    "The time a historian writes in shapes the view too. New evidence can appear, and the values and concerns of the day change. A newer view is still an interpretation, not the final word."
+   ]
+  ],
+  "remember": "Evidence, questions and the time of writing all shape an interpretation.",
+  "a": {
+   "q": "Two historians study the same event and reach different conclusions. Which is a likely reason?",
+   "opts": [
+    "They asked different questions about the event",
+    "They used a different calendar to date the event",
+    "One of them was not allowed to use any sources",
+    "The event happened differently for each of them"
+   ],
+   "why": "Different questions lead historians to look at different evidence and reach different conclusions. The event itself happened only one way, so the difference lies in how it is studied.",
+   "clue": "Think about what each historian set out to find out."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1950 a historian wrote about a colonial town using only official reports. In 2015 another used diaries and oral histories of local residents as well, and reached a different view. What best explains the difference?",
+   "opts": [
+    "The evidence used and the time of writing differed",
+    "The first historian made up the official reports",
+    "Only the later historian can ever be correct",
+    "The town changed after the first book was written"
+   ],
+   "why": "The two historians used different evidence and wrote in different times, with different concerns. The later view is not automatically correct, because it is also an interpretation. Nothing suggests the reports were invented, and both wrote about the same past events.",
+   "clue": "Think about what shapes an interpretation, not the event itself."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:40Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue ('Compare the sources each historian used and when each wrote') names both parts of the right option, evidence and time of writing, so a student can match it without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue ('Compare the sources each historian used and when each wrote') names both parts of the right option, evidence and time of writing, so a student can match it without knowing the idea."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Historians' interpretations",
+  "card": [
+   "An interpretation is a historian's explanation of what happened and why. Different historians can interpret the same events differently.",
+   [
+    "Evidence",
+    "Historians may use different sources, or give more weight to some sources than to others."
+   ],
+   [
+    "Questions",
+    "Historians ask different questions. One may study leaders and battles, while another studies the lives of ordinary people."
+   ],
+   [
+    "Time",
+    "The time a historian writes in shapes the view too. New evidence can appear, and the values and concerns of the day change. A newer view is still an interpretation, not the final word."
+   ]
+  ],
+  "remember": "Evidence, questions and the time of writing all shape an interpretation.",
+  "a": {
+   "q": "Two historians study the same event and reach different conclusions. Which is a likely reason?",
+   "opts": [
+    "They asked different questions about the event",
+    "They used a different calendar to date the event",
+    "One of them was not allowed to use any sources",
+    "The event happened differently for each of them"
+   ],
+   "why": "Different questions lead historians to look at different evidence and reach different conclusions. The event itself happened only one way, so the difference lies in how it is studied.",
+   "clue": "Think about what each historian set out to find out."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1950 a historian wrote about a colonial town using only official reports. In 2015 another used diaries and oral histories of local residents as well, and reached a different view. What best explains the difference?",
+   "opts": [
+    "The evidence used and the time of writing differed",
+    "The first historian made up the official reports",
+    "Only the later historian can ever be correct",
+    "The town changed after the first book was written"
+   ],
+   "why": "The two historians used different evidence and wrote in different times, with different concerns. The later view is not automatically correct, because it is also an interpretation. Nothing suggests the reports were invented, and both wrote about the same past events.",
+   "clue": "Think about what shapes an interpretation, not the event itself."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix's clue for question b no longer names both parts of the right option, and the card now teaches that a newer view is still an interpretation, which the why relies on. Each question has one clear answer.",
+   "item": "4c3d64897f525945",
+   "result": "decided",
+   "saved": {
+    "id": "his-historians-interpretations",
+    "title": "Historians' interpretations",
+    "brief": "39a63bbefbe9",
+    "shortlist": [
+     [
+      "his-contested-interpretations",
+      0.625
+     ],
+     [
+      "his-judging-historian-s-argument",
+      0.613
+     ],
+     [
+      "his-historical-interpretations",
+      0.456
+     ],
+     [
+      "anc-changing-interpretations",
+      0.253
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 1,
+     "check": 1,
+     "fix": 1
+    },
+    "usd": {
+     "match": 0.00031,
+     "write": 0.01114,
+     "check": 0.01086,
+     "fix": 0.01647
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The closest bank point, Contested interpretations, covers evidence and questions or values but never teaches that the time a historian writes in shapes their interpretation, which the new point requires, so a new point is needed.",
+     "model": "claude-haiku-5-5"
+    },
+    "draft": {
+     "title": "Historians' interpretations",
+     "card": [
+      "An interpretation is a historian's explanation of what happened and why. Different historians can interpret the same events differently.",
+      [
+       "Evidence",
+       "Historians may use different sources, or give more weight to some sources than to others."
+      ],
+      [
+       "Questions",
+       "Historians ask different questions. One may study leaders and battles, while another studies the lives of ordinary people."
+      ],
+      [
+       "Time",
+       "The time a historian writes in shapes the view too. New evidence can appear, and the values and concerns of the day change."
+      ]
+     ],
+     "remember": "Evidence, questions and the time of writing all shape an interpretation.",
+     "a": {
+      "q": "Two historians study the same event and reach different conclusions. Which is a likely reason?",
+      "opts": [
+       "They asked different questions about the event",
+       "They used a different calendar to date the event",
+       "One of them was not allowed to use any sources",
+       "The event happened differently for each of them"
+      ],
+      "why": "Different questions lead historians to look at different evidence and reach different conclusions. The event itself happened only one way, so the difference lies in how it is studied.",
+      "clue": "Think about what each historian set out to find out."
+     },
+     "b": {
+      "d": 3,
+      "q": "In 1950 a historian wrote about a colonial town using only official reports. In 2015 another used diaries and oral histories of local residents as well, and reached a different view. What best explains the difference?",
+      "opts": [
+       "The evidence used and the time of writing differed",
+       "The first historian made up the official reports",
+       "Only the later historian can ever be correct",
+       "The town changed after the first book was written"
+      ],
+      "why": "The two historians used different evidence and wrote in different times, with different concerns. The later view is not automatically correct, because it is also an interpretation. Neither case suggests the reports were invented.",
+      "clue": "Compare the sources each historian used and when each wrote."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "They asked different questions about the event",
+      "also_right": []
+     },
+     "b": {
+      "best": "The evidence used and the time of writing differed",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue ('Compare the sources each historian used and when each wrote') names both parts of the right option, evidence and time of writing, so a student can match it without knowing the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both questions are accurate, and each question has one clear answer. The clue for question b gives the answer away by naming both the evidence and the time of writing."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question b, other: The clue ('Compare the sources each historian used and when each wrote') names both parts of the right option, evidence and time of writing, so a student can match it without knowing the idea."
+    ],
+    "proposal": {
+     "title": "Historians' interpretations",
+     "card": [
+      "An interpretation is a historian's explanation of what happened and why. Different historians can interpret the same events differently.",
+      [
+       "Evidence",
+       "Historians may use different sources, or give more weight to some sources than to others."
+      ],
+      [
+       "Questions",
+       "Historians ask different questions. One may study leaders and battles, while another studies the lives of ordinary people."
+      ],
+      [
+       "Time",
+       "The time a historian writes in shapes the view too. New evidence can appear, and the values and concerns of the day change. A newer view is still an interpretation, not the final word."
+      ]
+     ],
+     "remember": "Evidence, questions and the time of writing all shape an interpretation.",
+     "a": {
+      "q": "Two historians study the same event and reach different conclusions. Which is a likely reason?",
+      "opts": [
+       "They asked different questions about the event",
+       "They used a different calendar to date the event",
+       "One of them was not allowed to use any sources",
+       "The event happened differently for each of them"
+      ],
+      "why": "Different questions lead historians to look at different evidence and reach different conclusions. The event itself happened only one way, so the difference lies in how it is studied.",
+      "clue": "Think about what each historian set out to find out."
+     },
+     "b": {
+      "d": 3,
+      "q": "In 1950 a historian wrote about a colonial town using only official reports. In 2015 another used diaries and oral histories of local residents as well, and reached a different view. What best explains the difference?",
+      "opts": [
+       "The evidence used and the time of writing differed",
+       "The first historian made up the official reports",
+       "Only the later historian can ever be correct",
+       "The town changed after the first book was written"
+      ],
+      "why": "The two historians used different evidence and wrote in different times, with different concerns. The later view is not automatically correct, because it is also an interpretation. Nothing suggests the reports were invented, and both wrote about the same past events.",
+      "clue": "Think about what shapes an interpretation, not the event itself."
+     }
+    },
+    "proposal_problems": [],
+    "auto": {
+     "at": "2026-11-20T13:23:40Z",
+     "rules": 1,
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue ('Compare the sources each historian used and when each wrote') names both parts of the right option, evidence and time of writing, so a student can match it without knowing the idea."
+      }
+     ],
+     "flags": [
+      "Question b, other: The clue ('Compare the sources each historian used and when each wrote') names both parts of the right option, evidence and time of writing, so a student can match it without knowing the idea."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "9fc18167af8911a5"
+  }
  ]
 }

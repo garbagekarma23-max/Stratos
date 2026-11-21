@@ -20,8 +20,147 @@
    0.202
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: done",
+  "2026-11-20T12:35:55Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.01426,
+  "check": 0.01043
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, mat-angle-sum-polygons, covers only the interior angle sum (n - 2) × 180° and is pitched at Year 7, while this point also requires the exterior angle sum of 360° for convex polygons, which it does not teach.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Angles of polygons",
+  "card": [
+   "A polygon with \\(n\\) sides can be split into \\(n - 2\\) triangles by drawing diagonals from one vertex. Each triangle has angles adding to \\(180^{\\circ}\\).",
+   [
+    "Interior",
+    "The interior angles add to \\((n - 2) \\times 180^{\\circ}\\). For a hexagon, \\(n = 6\\), so the sum is \\(4 \\times 180^{\\circ} = 720^{\\circ}\\)."
+   ],
+   [
+    "Exterior",
+    "An exterior angle is formed by extending one side. The exterior angles of any convex polygon add to \\(360^{\\circ}\\), whatever the number of sides."
+   ],
+   [
+    "Regular",
+    "In a regular polygon all angles are equal. Each exterior angle is \\(360^{\\circ} \\div n\\), and the interior angle is \\(180^{\\circ}\\) minus the exterior angle."
+   ]
+  ],
+  "remember": "Interior angles add to \\((n - 2) \\times 180^{\\circ}\\). Exterior angles add to \\(360^{\\circ}\\).",
+  "a": {
+   "q": "What is the sum of the interior angles of a pentagon?",
+   "opts": [
+    "\\(540^{\\circ}\\)",
+    "\\(720^{\\circ}\\)",
+    "\\(900^{\\circ}\\)",
+    "\\(360^{\\circ}\\)"
+   ],
+   "why": "A pentagon has \\(n = 5\\), so the sum is \\(3 \\times 180^{\\circ} = 540^{\\circ}\\). Using \\(4 \\times 180^{\\circ} = 720^{\\circ}\\) is the tempting mistake of subtracting only 1 instead of 2.",
+   "clue": "A pentagon splits into three triangles."
+  },
+  "b": {
+   "d": 3,
+   "q": "Each exterior angle of a regular polygon is \\(24^{\\circ}\\). How many sides does the polygon have, and what is each interior angle?",
+   "opts": [
+    "15 sides, interior angle \\(156^{\\circ}\\)",
+    "15 sides, interior angle \\(24^{\\circ}\\)",
+    "16 sides, interior angle \\(156^{\\circ}\\)",
+    "12 sides, interior angle \\(168^{\\circ}\\)"
+   ],
+   "why": "The number of sides is \\(360 \\div 24 = 15\\). Each interior angle is \\(180^{\\circ} - 24^{\\circ} = 156^{\\circ}\\). Giving \\(24^{\\circ}\\) as the interior angle confuses it with the exterior angle.",
+   "clue": "Exterior angles add to a fixed total, shared equally."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A hexagon with diagonals drawn from one vertex, splitting it into four triangles, each labelled with its angle sum of 180 degrees.",
+    "why": "It shows why the sum uses n minus 2 triangles."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(540^{\\circ}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "15 sides, interior angle \\(156^{\\circ}\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Angles of polygons",
+  "card": [
+   "A polygon with \\(n\\) sides can be split into \\(n - 2\\) triangles by drawing diagonals from one vertex. Each triangle has angles adding to \\(180^{\\circ}\\).",
+   [
+    "Interior",
+    "The interior angles add to \\((n - 2) \\times 180^{\\circ}\\). For a hexagon, \\(n = 6\\), so the sum is \\(4 \\times 180^{\\circ} = 720^{\\circ}\\)."
+   ],
+   [
+    "Exterior",
+    "An exterior angle is formed by extending one side. The exterior angles of any convex polygon add to \\(360^{\\circ}\\), whatever the number of sides."
+   ],
+   [
+    "Regular",
+    "In a regular polygon all angles are equal. Each exterior angle is \\(360^{\\circ} \\div n\\), and the interior angle is \\(180^{\\circ}\\) minus the exterior angle."
+   ]
+  ],
+  "remember": "Interior angles add to \\((n - 2) \\times 180^{\\circ}\\). Exterior angles add to \\(360^{\\circ}\\).",
+  "a": {
+   "q": "What is the sum of the interior angles of a pentagon?",
+   "opts": [
+    "\\(540^{\\circ}\\)",
+    "\\(720^{\\circ}\\)",
+    "\\(900^{\\circ}\\)",
+    "\\(360^{\\circ}\\)"
+   ],
+   "why": "A pentagon has \\(n = 5\\), so the sum is \\(3 \\times 180^{\\circ} = 540^{\\circ}\\). Using \\(4 \\times 180^{\\circ} = 720^{\\circ}\\) is the tempting mistake of subtracting only 1 instead of 2.",
+   "clue": "A pentagon splits into three triangles."
+  },
+  "b": {
+   "d": 3,
+   "q": "Each exterior angle of a regular polygon is \\(24^{\\circ}\\). How many sides does the polygon have, and what is each interior angle?",
+   "opts": [
+    "15 sides, interior angle \\(156^{\\circ}\\)",
+    "15 sides, interior angle \\(24^{\\circ}\\)",
+    "16 sides, interior angle \\(156^{\\circ}\\)",
+    "12 sides, interior angle \\(168^{\\circ}\\)"
+   ],
+   "why": "The number of sides is \\(360 \\div 24 = 15\\). Each interior angle is \\(180^{\\circ} - 24^{\\circ} = 156^{\\circ}\\). Giving \\(24^{\\circ}\\) as the interior angle confuses it with the exterior angle.",
+   "clue": "Exterior angles add to a fixed total, shared equally."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A hexagon with diagonals drawn from one vertex, splitting it into four triangles, each labelled with its angle sum of 180 degrees.",
+    "why": "It shows why the sum uses n minus 2 triangles."
+   }
+  ]
+ },
+ "cleared_by": "checker"
 }

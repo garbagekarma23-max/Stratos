@@ -239,14 +239,22 @@ for (const [place, own, line, route] of [
   const made = loadContent().MADE_COURSES.filter(c => c.place === 'nsw');
   check(names.includes('Economics, Year 12: The Global EconomyHSC, The Global Economy') && names.includes('Maths, Year 11HSC, Equations') && names.includes('Business Studies, Year 11: Nature of businessHSC, Nature of businessFollows the NSW Business Studies syllabus. Not made or endorsed by NESA.') &&
     made.every(c => names.includes(c.row.name + c.row.about + c.note)) && names.some(n => n.startsWith('Economics, AS yearInternational A Level (Edexcel)')) && names.length === made.length + 3, 'each row has a plain name and the exam it leads to', R);
-  // By year: NSW's Year 11 courses, then Year 12, each A to Z by subject; the Edexcel course under AS. The year comes
-  // from each course's data (its years), so a course is checked against its data, not its name.
-  const g = await grouped(p), nswG = g[0][1], yearOfData = id => id === 'eco' ? 12 : id === 'maths' ? 11 : made.find(c => c.id === id).years[0];
+  // By stage and year: NSW's Stage 4 courses (Years 7 and 8), then Stage 5 (Years 9 and 10, with Mathematics, Stage 5
+  // paths among them), then Year 11 and Year 12, each A to Z by subject; the Edexcel course under AS. The heading comes
+  // from each course's data (its level, or its years), so a course is checked against its data, not its name.
+  const g = await grouped(p), nswG = g[0][1], ids = y => (nswG.find(x => x[0] === y) || [y, []])[1];
+  const STAGE = {'Stage 4': 'Stage 4 (Years 7 and 8)', 'Stage 5': 'Stage 5 (Years 9 and 10)', 'Stage 5 paths': 'Stage 5 (Years 9 and 10)'};
+  const headingOfData = id => id === 'eco' ? 'Year 12' : id === 'maths' ? 'Year 11' : (c => STAGE[c.level] || 'Year ' + c.years[0])(made.find(c => c.id === id));
   const subjOf = id => id === 'eco' ? 'Economics' : id === 'maths' ? 'Maths' : made.find(c => c.id === id).course;
-  check(g.map(x => x[0]).join('|') === 'New South Wales|International courses' && nswG.map(x => x[0]).join('|') === 'Year 11|Year 12' && JSON.stringify(g[1][1]) === JSON.stringify([['AS', ['edexcel']]]), 'under New South Wales the courses go under Year 11 then Year 12, and the Edexcel course under AS', R);
-  check(nswG.every(([y, ids]) => ids.every(id => 'Year ' + yearOfData(id) === y)) && nswG.flatMap(x => x[1]).length === made.length + 2, 'each NSW course sits under the year its data gives', R);
-  check(nswG.every(([, ids]) => ids.every((id, i) => !i || subjOf(ids[i - 1]).localeCompare(subjOf(id), 'en') <= 0)), 'within a year the courses go A to Z by subject', R);
-  check(nswG[0][1].indexOf('maths') > nswG[0][1].indexOf('nsw-bus-11') && nswG[1][1].includes('eco') && !nswG[0][1].includes('eco'), 'Maths, Year 11 is under Year 11 after Business Studies, and Economics, Year 12 under Year 12', R);
+  check(g.map(x => x[0]).join('|') === 'New South Wales|International courses' && nswG.map(x => x[0]).join('|') === 'Stage 4 (Years 7 and 8)|Stage 5 (Years 9 and 10)|Year 11|Year 12' && JSON.stringify(g[1][1]) === JSON.stringify([['AS', ['edexcel']]]),
+    'under New South Wales the courses go under Stage 4 (Years 7 and 8), Stage 5 (Years 9 and 10), Year 11 then Year 12, and the Edexcel course under AS: ' + nswG.map(x => x[0]).join('|'), R);
+  check(nswG.every(([y, ids]) => ids.every(id => headingOfData(id) === y)) && nswG.flatMap(x => x[1]).length === made.length + 2, 'each NSW course sits under the stage or year its data gives', R);
+  check(ids('Stage 4 (Years 7 and 8)').length > 0 && ids('Stage 4 (Years 7 and 8)').every(id => made.find(c => c.id === id).years.join() === '7,8') &&
+    ids('Stage 5 (Years 9 and 10)').length > 0 && ids('Stage 5 (Years 9 and 10)').every(id => made.find(c => c.id === id).years.join() === '9,10'), 'the Years 7 to 10 courses are there, Stage 4 for Years 7 and 8 and Stage 5 for Years 9 and 10', R);
+  const s5 = ids('Stage 5 (Years 9 and 10)');
+  check(s5.includes('nsw-mat-s5p') && s5.indexOf('nsw-mat-s5p') === s5.indexOf('nsw-mat-s5') + 1 && !nswG.some(([y]) => /paths/.test(y)), 'Mathematics, Stage 5 paths is under Stage 5, just after Mathematics, Stage 5, with no heading of its own', R);
+  check(nswG.every(([, ids]) => ids.every((id, i) => !i || subjOf(ids[i - 1]).localeCompare(subjOf(id), 'en') <= 0)), 'within a stage or year the courses go A to Z by subject', R);
+  check(ids('Year 11').indexOf('maths') > ids('Year 11').indexOf('nsw-bus-11') && ids('Year 12').includes('eco') && !ids('Year 11').includes('eco'), 'Maths, Year 11 is under Year 11 after Business Studies, and Economics, Year 12 under Year 12', R);
   check(new Set(names).size === names.length, 'no two rows read the same', R);
   check((await row('eco').locator('.v').textContent()) === 'Open' && (await row('maths').locator('.v').textContent()) === 'Switch' && (await row('edexcel').locator('.v').textContent()) === 'Switch', 'the course open now says Open, the others Switch', R);
   check((await p.locator('#sheetBody .pick:disabled').count()) === 0 && !(await text(p, '#sheetBody')).includes('Soon'), 'there are no Soon rows', R);

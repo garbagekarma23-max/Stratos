@@ -20,8 +20,45 @@
    0.254
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 says reuse eng-intertextual-references-literature, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:41Z confirm: Claude Opus 5.5 may adapt eng-intertextual-references-literature, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:32:32Z review: reusing eng-intertextual-references-literature"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "confirm": 0.00981
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "eng-intertextual-references-literature",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The literature card teaches intertextuality as a reference to another text through a name, situation or echoed words, which matches the brief's allusion examples at a suitable Stage 4 depth, though it does not use the word allusion.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "eng-intertextual-references-literature",
+  "changes": [
+   "Name the brief reference to another text as an allusion, so the card uses both terms, allusion and intertextuality, as the title does.",
+   "Include a borrowed plot and a famous line among the examples of how a text can draw on another, alongside names and echoed words."
+  ],
+  "sure": "medium",
+  "reason": "The Year 8 intertextual references card teaches this idea at the right depth: a text draws on another through a name, situation or echoed words, which adds meaning for readers who notice it. It only needs to use the term allusion and mention borrowed plots and famous lines, as the brief does.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "eng-intertextual-references-literature",
+ "matched": {
+  "verdict": "reuse",
+  "from": "eng-intertextual-references-literature",
+  "by": "owner",
+  "at": "2026-11-20T14:32:32Z"
+ }
 }

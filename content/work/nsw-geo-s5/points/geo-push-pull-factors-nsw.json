@@ -12,8 +12,102 @@
    0.547
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 may adapt geo-push-pull-factors, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:47Z confirm: Claude Opus 5.5 may reuse geo-push-pull-factors, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z claude-code review: reusing geo-push-pull-factors"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "confirm": 0.00576
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-push-pull-factors",
+  "changes": [
+   "Replace the Darwin, Perth and Western Australia examples with NSW places, such as Sydney and a country town in New South Wales, so the examples are local to the NSW course.",
+   "Check that the Year 8 depth of the card suits Stage 5 (Years 9 and 10) and adjust the wording of the question stems if they need to be pitched higher."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same push and pull idea at a suitable depth, but its examples are set in other states and would need to be made local to NSW.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "geo-push-pull-factors",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches push and pull factors at a depth that suits Years 9 and 10, and its Australian examples and questions are fair for NSW students as they stand.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "geo-push-pull-factors",
+ "matched": {
+  "verdict": "reuse",
+  "from": "geo-push-pull-factors",
+  "by": "claude-code",
+  "at": "2026-11-20T14:02:37Z"
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "reuse",
+   "sure": "high",
+   "reason": "The bank point teaches push and pull factors exactly as the brief does, with conflict, drought and few jobs as pushes and work and a safer home as pulls. Its Australian examples and questions are right for NSW Stage 5, and nothing needs changing.",
+   "item": "b92c21596ee502dd",
+   "result": "decided",
+   "saved": {
+    "id": "geo-push-pull-factors-nsw",
+    "title": "Push and pull factors",
+    "brief": "fd7d374bd66f",
+    "shortlist": [
+     [
+      "geo-push-pull-factors",
+      0.639
+     ],
+     [
+      "geo-migration",
+      0.547
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00026,
+     "confirm": 0.00576
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "geo-push-pull-factors",
+     "changes": [
+      "Replace the Darwin, Perth and Western Australia examples with NSW places, such as Sydney and a country town in New South Wales, so the examples are local to the NSW course.",
+      "Check that the Year 8 depth of the card suits Stage 5 (Years 9 and 10) and adjust the wording of the question stems if they need to be pitched higher."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches the same push and pull idea at a suitable depth, but its examples are set in other states and would need to be made local to NSW.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "reuse",
+     "same": "geo-push-pull-factors",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The bank point teaches push and pull factors at a depth that suits Years 9 and 10, and its Australian examples and questions are fair for NSW students as they stand.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "75743c11354d7c6e"
+  }
  ]
 }

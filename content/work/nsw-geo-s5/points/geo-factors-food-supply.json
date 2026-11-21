@@ -24,8 +24,253 @@
    0.259
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: done",
+  "2026-11-20T12:44:55Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.0063,
+  "check": 0.01484,
+  "fix": 0.0286,
+  "recheck": 0.00749
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No single bank point covers both the environmental factors (climate and water) and the economic factors (land, technology, labour and money) that this point asks for; the two closest points each cover only one half, so the new point is broader than either.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Factors in food supply",
+  "card": [
+   "Food supply is the amount of food that farmers produce and make available. Many factors decide how much a place can supply.",
+   [
+    "Environmental",
+    "Climate and water set what can grow. Crops need enough rain or irrigation, suitable temperatures and a long enough growing season. Soil quality matters too."
+   ],
+   [
+    "Land and technology",
+    "Farmers need enough usable land. Technology, such as machinery, improved seeds and irrigation systems, lets them produce more from the same land."
+   ],
+   [
+    "Labour and money",
+    "Farms need workers, from planting to harvest. Money pays for seed, equipment, water and transport. Without it, a farmer cannot use the land and technology available."
+   ]
+  ],
+  "remember": "Food supply depends on the environment, land, technology, labour and money working together.",
+  "a": {
+   "q": "A region in Asia has fertile soil and plenty of rain, but its farmers cannot afford tractors or irrigation pumps. What is the best description of its food supply?",
+   "opts": [
+    "Limited by money and technology, not by climate",
+    "Limited by climate, because rain is not enough",
+    "Limited by land, because soil is fertile",
+    "Limited by labour, because rain falls every year"
+   ],
+   "why": "Soil and rain are favourable, so the environment is not the problem. The farmers lack the money for machinery and pumps, so money and technology limit supply. Rain alone does not decide how much can be produced.",
+   "clue": "Look at what the farmers cannot afford."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dale farms wheat in western New South Wales. A long drought dries up his dam, and his harvest falls by half, although he has plenty of workers and money. Which factor most directly cut his food supply?",
+   "opts": [
+    "Water, an environmental factor",
+    "Labour, because he has many workers",
+    "Money, because he can buy machinery",
+    "Technology, because he grows wheat"
+   ],
+   "why": "The drought removed the water his crop needed, so the environment cut his harvest. Workers and money are not the problem in this case. Having money does not make up for water that is not there.",
+   "clue": "What did the drought take away?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Limited by money and technology, not by climate",
+   "also_right": []
+  },
+  "b": {
+   "best": "Water, an environmental factor",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The wrong options give reasons that contradict themselves or the stem ('Limited by land, because soil is fertile', 'Limited by labour, because rain falls every year'), so a student can rule them out without knowing the idea. The right option is the only one that makes sense."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one without a 'because' clause, so it stands out. The distractors give reasons that argue against themselves ('Money, because he can buy machinery'), and the stem already rules out labour and money."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Wheat in western NSW is mostly grown dryland and depends on rainfall, not on irrigation from a farm dam, which mainly holds stock water. The scenario suggests a harvest that is watered from a dam, which could mislead about how wheat is grown there. Better: the drought brought too little rain for the crop."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts on the card are sound and both intended answers are right. However, the distractors in both questions are self-contradicting, so the right answer is easy to spot without knowing the idea. Question b also implies that western NSW wheat is watered from a farm dam, when it is mostly rain-fed."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The wrong options give reasons that contradict themselves or the stem ('Limited by land, because soil is fertile', 'Limited by labour, because rain falls every year'), so a student can rule them out without knowing the idea. The right option is the only one that makes sense.",
+  "Question b, wording: The right option is the only one without a 'because' clause, so it stands out. The distractors give reasons that argue against themselves ('Money, because he can buy machinery'), and the stem already rules out labour and money.",
+  "Question b, fact: Wheat in western NSW is mostly grown dryland and depends on rainfall, not on irrigation from a farm dam, which mainly holds stock water. The scenario suggests a harvest that is watered from a dam, which could mislead about how wheat is grown there. Better: the drought brought too little rain for the crop."
+ ],
+ "proposal": {
+  "title": "Factors in food supply",
+  "card": [
+   "Food supply is the amount of food that farmers produce and make available. Many factors decide how much a place can supply.",
+   [
+    "Environmental",
+    "Climate and water set what can grow. Crops need enough rain or irrigation, suitable temperatures and a long enough growing season. Soil quality matters too. Much of Australia's wheat is grown without irrigation, so it relies on rain."
+   ],
+   [
+    "Land and technology",
+    "Farmers need enough usable land. Technology, such as machinery, improved seeds and irrigation systems, lets them produce more from the same land."
+   ],
+   [
+    "Labour and money",
+    "Farms need workers, from planting to harvest. Money pays for seed, equipment, water and transport. Without it, a farmer cannot use the land and technology available."
+   ]
+  ],
+  "remember": "Food supply depends on the environment, land, technology, labour and money working together.",
+  "a": {
+   "q": "A farming region in Asia has fertile soil, plenty of rain and many workers. Its farmers cannot afford tractors or improved seeds. Which factors most limit its food supply?",
+   "opts": [
+    "Money and technology",
+    "Climate and water",
+    "Soil quality and land",
+    "Labour and climate"
+   ],
+   "why": "Soil, rain and workers are all in good supply, so the environment and labour are not the problem. The farmers lack money, so they cannot buy the technology that would raise their output.",
+   "clue": "Sort what the region has from what it lacks."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dale grows wheat without irrigation in western New South Wales. A drought brings too little rain, and his harvest falls by half. His land, workers and machinery are the same as in good years. Which change would most likely restore his harvest?",
+   "opts": [
+    "Normal rainfall in the growing season",
+    "Hiring extra workers for the harvest",
+    "Buying a larger harvesting machine",
+    "Borrowing money to sow more seed"
+   ],
+   "why": "His crop relies on rain, so the drought cut his supply through an environmental factor: water. Sowing more seed is tempting, but extra seed still needs rain to grow. Extra workers or machinery cannot replace missing water either.",
+   "clue": "What does his wheat depend on that the drought took away?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Money and technology",
+    "also_right": []
+   },
+   "b": {
+    "best": "Normal rainfall in the growing season",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The wrong options give reasons that contradict themselves or the stem ('Limited by land, because soil is fertile', 'Limited by labour, because rain falls every year'), so a student can rule them out without knowing the idea. The right option is the only one that makes sense."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one without a 'because' clause, so it stands out. The distractors give reasons that argue against themselves ('Money, because he can buy machinery'), and the stem already rules out labour and money."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Wheat in western NSW is mostly grown dryland and depends on rainfall, not on irrigation from a farm dam, which mainly holds stock water. The scenario suggests a harvest that is watered from a dam, which could mislead about how wheat is grown there. Better: the drought brought too little rain for the crop."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The wrong options give reasons that contradict themselves or the stem ('Limited by land, because soil is fertile', 'Limited by labour, because rain falls every year'), so a student can rule them out without knowing the idea. The right option is the only one that makes sense.",
+   "Question b, wording: The right option is the only one without a 'because' clause, so it stands out. The distractors give reasons that argue against themselves ('Money, because he can buy machinery'), and the stem already rules out labour and money.",
+   "Question b, fact: Wheat in western NSW is mostly grown dryland and depends on rainfall, not on irrigation from a farm dam, which mainly holds stock water. The scenario suggests a harvest that is watered from a dam, which could mislead about how wheat is grown there. Better: the drought brought too little rain for the crop."
+  ]
+ },
+ "final": {
+  "title": "Factors in food supply",
+  "card": [
+   "Food supply is the amount of food that farmers produce and make available. Many factors decide how much a place can supply.",
+   [
+    "Environmental",
+    "Climate and water set what can grow. Crops need enough rain or irrigation, suitable temperatures and a long enough growing season. Soil quality matters too. Much of Australia's wheat is grown without irrigation, so it relies on rain."
+   ],
+   [
+    "Land and technology",
+    "Farmers need enough usable land. Technology, such as machinery, improved seeds and irrigation systems, lets them produce more from the same land."
+   ],
+   [
+    "Labour and money",
+    "Farms need workers, from planting to harvest. Money pays for seed, equipment, water and transport. Without it, a farmer cannot use the land and technology available."
+   ]
+  ],
+  "remember": "Food supply depends on the environment, land, technology, labour and money working together.",
+  "a": {
+   "q": "A farming region in Asia has fertile soil, plenty of rain and many workers. Its farmers cannot afford tractors or improved seeds. Which factors most limit its food supply?",
+   "opts": [
+    "Money and technology",
+    "Climate and water",
+    "Soil quality and land",
+    "Labour and climate"
+   ],
+   "why": "Soil, rain and workers are all in good supply, so the environment and labour are not the problem. The farmers lack money, so they cannot buy the technology that would raise their output.",
+   "clue": "Sort what the region has from what it lacks."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dale grows wheat without irrigation in western New South Wales. A drought brings too little rain, and his harvest falls by half. His land, workers and machinery are the same as in good years. Which change would most likely restore his harvest?",
+   "opts": [
+    "Normal rainfall in the growing season",
+    "Hiring extra workers for the harvest",
+    "Buying a larger harvesting machine",
+    "Borrowing money to sow more seed"
+   ],
+   "why": "His crop relies on rain, so the drought cut his supply through an environmental factor: water. Sowing more seed is tempting, but extra seed still needs rain to grow. Extra workers or machinery cannot replace missing water either.",
+   "clue": "What does his wheat depend on that the drought took away?"
+  }
+ },
+ "cleared_by": "recheck"
 }

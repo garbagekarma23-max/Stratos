@@ -24,8 +24,153 @@
    0.216
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:56Z write: done",
+  "2026-11-20T12:35:54Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00038,
+  "write": 0.01321,
+  "check": 0.01013
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Bearings and elevation, is broader than the new point because it also covers elevation and depression and is pitched at Year 11, while the other bearing points cover bearings alone without the trigonometry or Pythagoras step to find a distance, so no single point teaches the same idea at this depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Solving bearing problems",
+  "card": [
+   [
+    "Draw",
+    "Sketch a north line at each point where a bearing is measured. Mark the true bearing clockwise from north to the direction of travel."
+   ],
+   [
+    "Find a triangle",
+    "Use the angles at the north lines to make a right-angled triangle. A due east or due north leg gives the right angle."
+   ],
+   [
+    "Solve",
+    "Use \\(\\sin\\), \\(\\cos\\) or \\(\\tan\\) with one side and one angle, or Pythagoras' theorem with two sides."
+   ],
+   [
+    "Example",
+    "A boat sails 10 km on a bearing of 060°. The angle from north is 60°. North distance is \\(10\\cos 60^{\\circ} = 5\\) km. East distance is \\(10\\sin 60^{\\circ} \\approx 8.7\\) km."
+   ]
+  ],
+  "remember": "Draw a north line, build a right-angled triangle, then use trigonometry or Pythagoras' theorem.",
+  "a": {
+   "q": "A drone flies 200 m on a bearing of 090°, then 150 m on a bearing of 000°. What is its distance from the start?",
+   "opts": [
+    "250 m",
+    "350 m",
+    "\\(\\sqrt{17{,}500}\\) m, about 132 m",
+    "50 m"
+   ],
+   "why": "The legs are east and north, so they meet at a right angle. Pythagoras gives \\(200^{2} + 150^{2} = 62{,}500\\), and \\(\\sqrt{62{,}500} = 250\\) m. Adding the legs gives 350 m, which ignores the right angle.",
+   "clue": "090° is due east and 000° is due north. What shape do the two legs make?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya walks 400 m due east, then 300 m due north. What is the true bearing of her finish from her start, to the nearest degree?",
+   "opts": [
+    "053°",
+    "037°",
+    "143°",
+    "127°"
+   ],
+   "why": "Angle from north is found with \\(\\tan \\theta = \\frac{400}{300}\\), so \\(\\theta \\approx 53^{\\circ}\\). Bearings start at north, so the east side is opposite the angle. 037° is wrong because it uses the 300 m side as opposite.",
+   "clue": "Measure the angle from the north line. Which side is opposite it?"
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A right-angled triangle on a north-east grid. A start point with a north line going up. A 10 km hypotenuse on bearing 060° with the 60° angle marked from north. A 5 km vertical leg labelled north distance and a horizontal leg labelled east distance, with the right angle marked.",
+    "why": "It shows how a bearing forms a right-angled triangle."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "250 m",
+   "also_right": []
+  },
+  "b": {
+   "best": "053°",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The worked example is correct (5 km north, about 8.7 km east), and both questions are sound: Pythagoras gives 250 m, and tan θ = 400/300 gives a bearing of 053°."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Solving bearing problems",
+  "card": [
+   [
+    "Draw",
+    "Sketch a north line at each point where a bearing is measured. Mark the true bearing clockwise from north to the direction of travel."
+   ],
+   [
+    "Find a triangle",
+    "Use the angles at the north lines to make a right-angled triangle. A due east or due north leg gives the right angle."
+   ],
+   [
+    "Solve",
+    "Use \\(\\sin\\), \\(\\cos\\) or \\(\\tan\\) with one side and one angle, or Pythagoras' theorem with two sides."
+   ],
+   [
+    "Example",
+    "A boat sails 10 km on a bearing of 060°. The angle from north is 60°. North distance is \\(10\\cos 60^{\\circ} = 5\\) km. East distance is \\(10\\sin 60^{\\circ} \\approx 8.7\\) km."
+   ]
+  ],
+  "remember": "Draw a north line, build a right-angled triangle, then use trigonometry or Pythagoras' theorem.",
+  "a": {
+   "q": "A drone flies 200 m on a bearing of 090°, then 150 m on a bearing of 000°. What is its distance from the start?",
+   "opts": [
+    "250 m",
+    "350 m",
+    "\\(\\sqrt{17{,}500}\\) m, about 132 m",
+    "50 m"
+   ],
+   "why": "The legs are east and north, so they meet at a right angle. Pythagoras gives \\(200^{2} + 150^{2} = 62{,}500\\), and \\(\\sqrt{62{,}500} = 250\\) m. Adding the legs gives 350 m, which ignores the right angle.",
+   "clue": "090° is due east and 000° is due north. What shape do the two legs make?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya walks 400 m due east, then 300 m due north. What is the true bearing of her finish from her start, to the nearest degree?",
+   "opts": [
+    "053°",
+    "037°",
+    "143°",
+    "127°"
+   ],
+   "why": "Angle from north is found with \\(\\tan \\theta = \\frac{400}{300}\\), so \\(\\theta \\approx 53^{\\circ}\\). Bearings start at north, so the east side is opposite the angle. 037° is wrong because it uses the 300 m side as opposite.",
+   "clue": "Measure the angle from the north line. Which side is opposite it?"
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A right-angled triangle on a north-east grid. A start point with a north line going up. A 10 km hypotenuse on bearing 060° with the 60° angle marked from north. A 5 km vertical leg labelled north distance and a horizontal leg labelled east distance, with the right angle marked.",
+    "why": "It shows how a bearing forms a right-angled triangle."
+   }
+  ]
+ },
+ "cleared_by": "checker"
 }

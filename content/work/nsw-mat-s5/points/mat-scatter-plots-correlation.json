@@ -20,8 +20,438 @@
    0.206
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 may adapt mat-scatterplots-association, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:55Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:54Z write: done",
+  "2026-11-20T12:44:58Z check: flagged",
+  "2026-11-20T12:53:28Z fix: suggested",
+  "2026-11-20T13:23:43Z autoreview: cleared with the fix (card other, a wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00045,
+  "confirm": 0.01328,
+  "write": 0.01927,
+  "check": 0.01197,
+  "fix": 0.02184
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-scatterplots-association",
+  "changes": [
+   "Use the term correlation in place of association, and say no correlation where the card says no direction, to match the NSW Stage 5 syllabus wording.",
+   "Remove the linear and non-linear form description, since this point covers only positive, negative, strong, weak and no correlation.",
+   "Change the Perth example in question b to a New South Wales location, such as Sydney."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same core idea of direction and strength in a scatter plot at a suitable depth, but it uses Queensland-style terms and a Perth example and adds form content this NSW point does not need.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-scatterplots-association, is broader: it adds linear and non-linear form and causation, and it does not teach plotting each pair as a point. The geography card leaves out strong and weak correlation, so this point needs its own card.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Scatter plots and correlation",
+  "card": [
+   "A scatter plot shows each pair of values as one point. The independent variable is on the horizontal axis and the dependent variable is on the vertical axis.",
+   [
+    "Direction",
+    "The correlation is positive if the points rise from left to right, so the dependent variable goes up as the independent variable goes up. It is negative if the points fall from left to right."
+   ],
+   [
+    "Strength",
+    "The correlation is strong if the points lie close to a straight line. It is weak if they are spread out around a trend."
+   ],
+   [
+    "No correlation",
+    "If the points show no trend at all, there is no correlation."
+   ]
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "A scatter plot of test mark against hours studied. Seven points rise from the lower left to the upper right and sit close to a straight line.",
+    "x": {
+     "min": 0,
+     "max": 9,
+     "label": "Hours studied",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Test mark",
+     "step": 1
+    },
+    "items": [
+     {
+      "type": "point",
+      "at": [
+       1,
+       2
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       3
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       3
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       6
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       6
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       7,
+       8
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "Describe a scatter plot by its direction (up or down) and its strength (close to a line or spread out).",
+  "a": {
+   "q": "A coach plots hours of training against 100 m sprint time for runners. The points fall steeply and lie close to a line. What is the correlation?",
+   "opts": [
+    "Strong negative correlation",
+    "Strong positive correlation",
+    "Weak negative correlation",
+    "No correlation"
+   ],
+   "why": "The points fall from left to right, so the correlation is negative. They lie close to a line, so it is strong. Strong positive is tempting because training goes up, but it is the sprint time that falls, so the direction is negative.",
+   "clue": "Look at which way the points slope, then how tightly they cluster."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena plots daily temperature against hot chocolate sales at a café in Orange. The points trend downhill but are widely spread out. How is the correlation described?",
+   "opts": [
+    "Weak negative correlation",
+    "Strong negative correlation",
+    "Weak positive correlation",
+    "No correlation"
+   ],
+   "why": "Sales fall as temperature rises, so the correlation is negative. The points are widely spread, so it is weak. It is not no correlation, because there is still a clear downhill trend.",
+   "clue": "A wide spread can still show a trend."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Strong negative correlation",
+   "also_right": []
+  },
+  "b": {
+   "best": "Weak negative correlation",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The first card line re-explains which axis the independent and dependent variables go on. That is the content of point 1 (Independent and dependent variables), so it should only be mentioned here, not taught again."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "'The points fall steeply' brings in steepness, which has nothing to do with correlation strength. Beside 'lie close to a line', it may lead students to think a steep slope means strong correlation."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are clear and correct, and the graph matches its text. The card re-teaches axis placement, which belongs to point 1, and question a's 'steeply' may suggest that slope shows strength."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The first card line re-explains which axis the independent and dependent variables go on. That is the content of point 1 (Independent and dependent variables), so it should only be mentioned here, not taught again.",
+  "Question a, wording: 'The points fall steeply' brings in steepness, which has nothing to do with correlation strength. Beside 'lie close to a line', it may lead students to think a steep slope means strong correlation."
+ ],
+ "proposal": {
+  "title": "Scatter plots and correlation",
+  "card": [
+   "A scatter plot shows each pair of values in bivariate data as one point. The pattern the points make shows how the two variables are related.",
+   [
+    "Direction",
+    "The correlation is positive if the points rise from left to right, so the dependent variable goes up as the independent variable goes up. It is negative if the points fall from left to right."
+   ],
+   [
+    "Strength",
+    "The correlation is strong if the points lie close to a straight line. It is weak if they are spread out around a trend."
+   ],
+   [
+    "No correlation",
+    "If the points show no trend at all, there is no correlation."
+   ]
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "A scatter plot of test mark against hours studied. Seven points rise from the lower left to the upper right and sit close to a straight line.",
+    "x": {
+     "min": 0,
+     "max": 9,
+     "label": "Hours studied",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Test mark",
+     "step": 1
+    },
+    "items": [
+     {
+      "type": "point",
+      "at": [
+       1,
+       2
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       3
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       3
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       6
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       6
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       7,
+       8
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "Describe a scatter plot by its direction (positive or negative) and its strength (strong or weak), or say there is no correlation.",
+  "a": {
+   "q": "A coach plots hours of training against 100 m sprint time for runners. As training hours go up, sprint times go down, and the points lie close to a straight line. What is the correlation?",
+   "opts": [
+    "Strong negative correlation",
+    "Strong positive correlation",
+    "Weak negative correlation",
+    "No correlation"
+   ],
+   "why": "Sprint time goes down as training goes up, so the points fall from left to right and the correlation is negative. They lie close to a straight line, so it is strong. Strong positive is tempting because training goes up, but it is the sprint time that falls, so the direction is negative.",
+   "clue": "Ask which way the points move from left to right, then how tightly they sit."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena plots daily temperature against hot chocolate sales at a café in Orange. The points trend downhill but are widely spread out. How is the correlation described?",
+   "opts": [
+    "Weak negative correlation",
+    "Strong negative correlation",
+    "Weak positive correlation",
+    "No correlation"
+   ],
+   "why": "Sales fall as temperature rises, so the correlation is negative. The points are widely spread, so it is weak. It is not no correlation, because there is still a clear downhill trend.",
+   "clue": "A wide spread can still show a trend."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:43Z",
+  "rules": 1,
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The first card line re-explains which axis the independent and dependent variables go on. That is the content of point 1 (Independent and dependent variables), so it should only be mentioned here, not taught again."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "'The points fall steeply' brings in steepness, which has nothing to do with correlation strength. Beside 'lie close to a line', it may lead students to think a steep slope means strong correlation."
+   }
+  ],
+  "flags": [
+   "Card, other: The first card line re-explains which axis the independent and dependent variables go on. That is the content of point 1 (Independent and dependent variables), so it should only be mentioned here, not taught again.",
+   "Question a, wording: 'The points fall steeply' brings in steepness, which has nothing to do with correlation strength. Beside 'lie close to a line', it may lead students to think a steep slope means strong correlation."
+  ]
+ },
+ "final": {
+  "title": "Scatter plots and correlation",
+  "card": [
+   "A scatter plot shows each pair of values in bivariate data as one point. The pattern the points make shows how the two variables are related.",
+   [
+    "Direction",
+    "The correlation is positive if the points rise from left to right, so the dependent variable goes up as the independent variable goes up. It is negative if the points fall from left to right."
+   ],
+   [
+    "Strength",
+    "The correlation is strong if the points lie close to a straight line. It is weak if they are spread out around a trend."
+   ],
+   [
+    "No correlation",
+    "If the points show no trend at all, there is no correlation."
+   ]
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "A scatter plot of test mark against hours studied. Seven points rise from the lower left to the upper right and sit close to a straight line.",
+    "x": {
+     "min": 0,
+     "max": 9,
+     "label": "Hours studied",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Test mark",
+     "step": 1
+    },
+    "items": [
+     {
+      "type": "point",
+      "at": [
+       1,
+       2
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       3
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       3
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       6
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       6
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       7,
+       8
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "Describe a scatter plot by its direction (positive or negative) and its strength (strong or weak), or say there is no correlation.",
+  "a": {
+   "q": "A coach plots hours of training against 100 m sprint time for runners. As training hours go up, sprint times go down, and the points lie close to a straight line. What is the correlation?",
+   "opts": [
+    "Strong negative correlation",
+    "Strong positive correlation",
+    "Weak negative correlation",
+    "No correlation"
+   ],
+   "why": "Sprint time goes down as training goes up, so the points fall from left to right and the correlation is negative. They lie close to a straight line, so it is strong. Strong positive is tempting because training goes up, but it is the sprint time that falls, so the direction is negative.",
+   "clue": "Ask which way the points move from left to right, then how tightly they sit."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena plots daily temperature against hot chocolate sales at a café in Orange. The points trend downhill but are widely spread out. How is the correlation described?",
+   "opts": [
+    "Weak negative correlation",
+    "Strong negative correlation",
+    "Weak positive correlation",
+    "No correlation"
+   ],
+   "why": "Sales fall as temperature rises, so the correlation is negative. The points are widely spread, so it is weak. It is not no correlation, because there is still a clear downhill trend.",
+   "clue": "A wide spread can still show a trend."
+  }
+ },
+ "cleared_by": "auto"
 }

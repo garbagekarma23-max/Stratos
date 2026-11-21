@@ -16,8 +16,240 @@
    0.203
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 may adapt sci-filtration-decanting, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:59Z confirm: Claude Opus 5.5 may adapt sci-filtration-decanting, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt sci-filtration-decanting (3 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting sci-filtration-decanting on the next run",
+  "2026-11-20T14:12:40Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "confirm": 0.00832,
+  "adapt": 0.00495,
+  "check": 0.00979
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "sci-filtration-decanting",
+  "changes": [
+   "Add a sentence that sieving works in a similar way, catching solid particles too big to pass through the holes, since the new point names sieving.",
+   "Add a drinking-water treatment example of filtration, since the new point's brief uses it."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same core idea of filtration and decanting at the right Year 7 and 8 depth, but it does not yet mention sieving or the drinking-water example the new point uses.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "sci-filtration-decanting",
+  "changes": [
+   "Add drinking water treatment as an example of filtration, ideally a local NSW one such as a Sydney water filtration plant.",
+   "Add a short line saying sieving works in a similar way to filtration, catching solid pieces too big to pass through the holes."
+  ],
+  "sure": "medium",
+  "reason": "The bank point already teaches filtration and decanting of an insoluble solid from a liquid at the right Year 7 depth, but it needs the brief's drinking water example and a brief mention of sieving.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "sci-filtration-decanting",
+  "changes": [
+   "Add treating drinking water as an example of filtration, described in general terms (water passing through layers such as sand to catch solid particles) without naming a particular treatment plant.",
+   "Add a short line saying sieving works in a similar way, catching solid pieces too big to pass through the holes.",
+   "Retitle the point Filtration to match this course's outline."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "title",
+   "card3 label",
+   "card3",
+   "card4 label",
+   "card4",
+   "remember",
+   "a.q",
+   "b.q",
+   "b.opt4",
+   "b.why"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches filtration and decanting at the right depth, but it lacks the brief's drinking water example and any mention of sieving. Both are small additions.",
+   "item": "377b426e9a9363c7",
+   "result": "decided",
+   "saved": {
+    "id": "sci-filtration",
+    "title": "Filtration",
+    "brief": "9c85e4e35f80",
+    "shortlist": [
+     [
+      "sci-filtration-decanting",
+      0.545
+     ],
+     [
+      "sci-choosing-separation-method",
+      0.273
+     ],
+     [
+      "sci-solids-liquids-gases",
+      0.203
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.0003,
+     "confirm": 0.00832
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "sci-filtration-decanting",
+     "changes": [
+      "Add a sentence that sieving works in a similar way, catching solid particles too big to pass through the holes, since the new point names sieving.",
+      "Add a drinking-water treatment example of filtration, since the new point's brief uses it."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same core idea of filtration and decanting at the right Year 7 and 8 depth, but it does not yet mention sieving or the drinking-water example the new point uses.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "sci-filtration-decanting",
+     "changes": [
+      "Add drinking water treatment as an example of filtration, ideally a local NSW one such as a Sydney water filtration plant.",
+      "Add a short line saying sieving works in a similar way to filtration, catching solid pieces too big to pass through the holes."
+     ],
+     "sure": "medium",
+     "reason": "The bank point already teaches filtration and decanting of an insoluble solid from a liquid at the right Year 7 depth, but it needs the brief's drinking water example and a brief mention of sieving.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "f9e0a3ef516102f4"
+  }
+ ],
+ "draft": {
+  "title": "Filtration",
+  "card": [
+   [
+    "Filtration",
+    "a way to separate an undissolved solid from a liquid. The mixture is poured through filter paper, which has tiny holes. The liquid passes through and the solid particles are caught."
+   ],
+   [
+    "Filtrate and residue",
+    "The liquid that passes through is the filtrate. The solid left on the paper is the residue."
+   ],
+   [
+    "Sieving",
+    "works in a similar way. A sieve has holes that let a liquid or small pieces through. Solid pieces too big for the holes are caught."
+   ],
+   [
+    "Drinking water",
+    "Filtration is used to treat drinking water. The water passes through layers such as sand, which catch solid particles. A dissolved solid is spread out as tiny particles, so filtering does not catch it."
+   ]
+  ],
+  "remember": "Filtration catches undissolved solids in a filter. Sieving catches pieces too big for the holes.",
+  "a": {
+   "q": "A mix of sand and water is poured through filter paper in a funnel. What stays on the paper?",
+   "opts": [
+    "The sand, as the residue",
+    "The water, as the filtrate",
+    "The sand, as the filtrate",
+    "The water, as the residue"
+   ],
+   "why": "The sand is an undissolved solid, so the holes in the paper are too small for it to pass. It stays on the paper as the residue. The water that passes through is the filtrate, so the option with water as the filtrate has the wrong substance on the paper.",
+   "clue": "Which part of the mixture is too big to pass through the holes?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia stirs salt into a cup of water until it vanishes. She then pours the cup through filter paper. What is most likely to happen?",
+   "opts": [
+    "The salt water passes through and no salt is caught",
+    "The salt is caught on the paper as the residue",
+    "The water is caught and only the salt passes through",
+    "The salt settles so Mia can sieve the water off"
+   ],
+   "why": "The salt has dissolved, so it is spread through the water as tiny particles that pass through the holes in the paper. Nothing is caught. Filtering only catches undissolved solid, so the option about salt left as residue is wrong.",
+   "clue": "Has the salt dissolved or is it still an undissolved solid?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The sand, as the residue",
+   "also_right": []
+  },
+  "b": {
+   "best": "The salt water passes through and no salt is caught",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Filtration",
+  "card": [
+   [
+    "Filtration",
+    "a way to separate an undissolved solid from a liquid. The mixture is poured through filter paper, which has tiny holes. The liquid passes through and the solid particles are caught."
+   ],
+   [
+    "Filtrate and residue",
+    "The liquid that passes through is the filtrate. The solid left on the paper is the residue."
+   ],
+   [
+    "Sieving",
+    "works in a similar way. A sieve has holes that let a liquid or small pieces through. Solid pieces too big for the holes are caught."
+   ],
+   [
+    "Drinking water",
+    "Filtration is used to treat drinking water. The water passes through layers such as sand, which catch solid particles. A dissolved solid is spread out as tiny particles, so filtering does not catch it."
+   ]
+  ],
+  "remember": "Filtration catches undissolved solids in a filter. Sieving catches pieces too big for the holes.",
+  "a": {
+   "q": "A mix of sand and water is poured through filter paper in a funnel. What stays on the paper?",
+   "opts": [
+    "The sand, as the residue",
+    "The water, as the filtrate",
+    "The sand, as the filtrate",
+    "The water, as the residue"
+   ],
+   "why": "The sand is an undissolved solid, so the holes in the paper are too small for it to pass. It stays on the paper as the residue. The water that passes through is the filtrate, so the option with water as the filtrate has the wrong substance on the paper.",
+   "clue": "Which part of the mixture is too big to pass through the holes?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia stirs salt into a cup of water until it vanishes. She then pours the cup through filter paper. What is most likely to happen?",
+   "opts": [
+    "The salt water passes through and no salt is caught",
+    "The salt is caught on the paper as the residue",
+    "The water is caught and only the salt passes through",
+    "The salt settles so Mia can sieve the water off"
+   ],
+   "why": "The salt has dissolved, so it is spread through the water as tiny particles that pass through the holes in the paper. Nothing is caught. Filtering only catches undissolved solid, so the option about salt left as residue is wrong.",
+   "clue": "Has the salt dissolved or is it still an undissolved solid?"
+  }
+ }
 }

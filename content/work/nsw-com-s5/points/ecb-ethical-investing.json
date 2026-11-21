@@ -12,8 +12,164 @@
    0.207
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:39Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: failed the content check, writing again",
+  "2026-11-20T12:44:52Z write: done",
+  "2026-11-20T12:53:23Z check: flagged",
+  "2026-11-20T12:59:58Z fix: suggested",
+  "2026-11-20T14:31:34Z review: rejected, to be written again",
+  "2026-11-20T14:58:18Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.01345,
+  "check": 0.00951,
+  "fix": 0.01946
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, ecb-ethical-consumer-decisions, teaches ethical choices when buying products, not ethical choices when investing money, so it is a related idea at the wrong context and no bank point teaches ethical investing.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Ethical investing",
+  "card": [
+   "An ethical investor chooses where to put money by thinking about values as well as profit. They ask what a company does to people and the environment.",
+   [
+    "Avoid",
+    "ethical investors may avoid companies that harm people or the environment, such as tobacco makers or coal miners."
+   ],
+   [
+    "Choose",
+    "ethical investors may choose companies that do good, such as those that make renewable energy or treat their workers fairly."
+   ],
+   "Different investors hold different values, so what counts as ethical can vary from person to person. Ethical investors may still want a return on their money."
+  ],
+  "remember": "Ethical investors let values guide which companies they back, as well as the return they hope to earn.",
+  "a": {
+   "q": "Which investor is making an ethical investing choice?",
+   "opts": [
+    "Sam buys shares in a solar panel maker to cut pollution",
+    "Sam buys shares in a firm because its price rose last year",
+    "Sam buys shares in a firm because a friend owns some too",
+    "Sam buys shares in a firm because it pays a big dividend"
+   ],
+   "why": "Sam is choosing a company because it does good for the environment, which is a values-based choice. The other choices rest on price, a friend or payouts, and say nothing about values.",
+   "clue": "Look for the choice based on what the company does to the world."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya wants a good return on her savings. She also does not want her money to support companies that harm the environment. Which choice best fits her aim?",
+   "opts": [
+    "Invest in a company with a record of cutting pollution",
+    "Invest in the coal miner with the highest share price",
+    "Invest in the company that has the most staff",
+    "Invest in the company that is the best known in Australia"
+   ],
+   "why": "Priya wants a return but also wants to avoid environmental harm, so she picks a company with a good environmental record. A coal miner harms the environment. Size and fame say nothing about whether a company does good or harm.",
+   "clue": "Which company matches her values as well as her wish for a return?"
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:18Z",
+   "step": "write",
+   "version": {
+    "title": "Ethical investing",
+    "card": [
+     "Ethical investing means choosing where to put money using your values as well as the return you hope to earn. The investor asks what a company does to people and the environment.",
+     [
+      "Avoiding harm",
+      "many ethical investors leave out companies whose products or actions cause harm, such as tobacco makers or coal miners."
+     ],
+     [
+      "Choosing good",
+      "many also pick companies that do good, such as renewable energy firms or businesses known for treating their workers fairly."
+     ],
+     "People hold different values, so two ethical investors may draw the line in different places. Most still want their money to grow."
+    ],
+    "remember": "Ethical investors ask what a company does to the world, not only what it might earn.",
+    "a": {
+     "q": "What makes an investment choice an example of ethical investing?",
+     "opts": [
+      "It weighs the company's effect on people and the planet",
+      "It picks the company with the highest return last year",
+      "It spreads money over many companies to lower the risk",
+      "It uses a licensed adviser who acts in your best interests"
+     ],
+     "why": "Ethical investing brings values into the choice: what the company does to people and the environment. Spreading money to lower risk is a separate idea. It can be done with or without any thought about values.",
+     "clue": "Which choice looks beyond money and risk?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Leila wants her savings to grow, but she does not want to own part of any business that harms people's health. Which choice fits ethical investing best?",
+     "opts": [
+      "Buy shares in a medical company, not a tobacco company",
+      "Buy shares in a tobacco company because profits are high",
+      "Buy tobacco shares and give the dividends to charity",
+      "Buy shares in whichever company carries the lowest risk"
+     ],
+     "why": "Leila's value is not harming health, so she avoids tobacco and backs a company that helps people. Giving the dividends away still leaves her money in a tobacco company, which is the harm she wants to avoid.",
+     "clue": "Where does her money actually end up?"
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Ethical investing",
+  "card": [
+   "Ethical investing means choosing where to put money using your values as well as the return you hope to earn. The investor asks what a company does to people and the environment.",
+   [
+    "Avoiding harm",
+    "many ethical investors leave out companies whose products or actions cause harm, such as tobacco makers or coal miners."
+   ],
+   [
+    "Choosing good",
+    "many also pick companies that do good, such as renewable energy firms or businesses known for treating their workers fairly."
+   ],
+   "People hold different values, so two ethical investors may draw the line in different places. Most still want their money to grow."
+  ],
+  "remember": "Ethical investors ask what a company does to the world, not only what it might earn.",
+  "a": {
+   "q": "What makes an investment choice an example of ethical investing?",
+   "opts": [
+    "It weighs the company's effect on people and the planet",
+    "It picks the company with the highest return last year",
+    "It spreads money over many companies to lower the risk",
+    "It uses a licensed adviser who acts in your best interests"
+   ],
+   "why": "Ethical investing brings values into the choice: what the company does to people and the environment. Spreading money to lower risk is a separate idea. It can be done with or without any thought about values.",
+   "clue": "Which choice looks beyond money and risk?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Leila wants her savings to grow, but she does not want to own part of any business that harms people's health. Which choice fits ethical investing best?",
+   "opts": [
+    "Buy shares in a medical company, not a tobacco company",
+    "Buy shares in a tobacco company because profits are high",
+    "Buy tobacco shares and give the dividends to charity",
+    "Buy shares in whichever company carries the lowest risk"
+   ],
+   "why": "Leila's value is not harming health, so she avoids tobacco and backs a company that helps people. Giving the dividends away still leaves her money in a tobacco company, which is the harm she wants to avoid.",
+   "clue": "Where does her money actually end up?"
+  }
+ },
+ "local": []
 }

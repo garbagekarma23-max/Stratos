@@ -16,8 +16,222 @@
    0.361
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:42Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: failed the content check, writing again",
+  "2026-11-20T12:44:53Z write: done",
+  "2026-11-20T12:53:24Z check: flagged",
+  "2026-11-20T13:11:46Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.01381,
+  "check": 0.01084,
+  "fix": 0.01674,
+  "recheck": 0.00799
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches both pronouns and connectives for cohesion: one covers only pronouns and word chains at Year 9 depth, and the other covers only connectives at Year 7 depth, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Pronouns and connectives for cohesion",
+  "card": [
+   "Cohesion is how a text holds together, so that one sentence leads smoothly to the next. Pronouns and connectives are two tools that build it.",
+   [
+    "Pronoun",
+    "a word such as he, she, it or they that stands in for a noun. It must point clearly to one noun. In \"Mia told Zoe she was late\", we cannot tell who was late."
+   ],
+   [
+    "Connective",
+    "a word or phrase that links ideas across sentences. However shows contrast, therefore shows a result, and meanwhile shows that two things happen at the same time."
+   ],
+   "A connective must match the link between the ideas. Using the wrong one, such as therefore for a contrast, confuses the reader."
+  ],
+  "remember": "Clear pronouns and well-chosen connectives help a reader follow your ideas.",
+  "a": {
+   "q": "Which sentence has a pronoun that could point to more than one noun?",
+   "opts": [
+    "Sam told Leo he had won the race",
+    "Sam told Leo that Sam had won the race",
+    "Sam smiled because he had won the race",
+    "Sam ran fast, so he won the race"
+   ],
+   "why": "In the first sentence, he could mean Sam or Leo, so the reader cannot be sure. In the last two, he can only mean Sam, because only one person is named before it.",
+   "clue": "Look for a pronoun with two possible people it could mean."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ava's first sentence says the bushwalk was long and tiring. Her second says the group enjoyed the view from the top. Which connective, placed at the start of the second sentence, links them best?",
+   "opts": [
+    "However",
+    "Therefore",
+    "Meanwhile",
+    "For example"
+   ],
+   "why": "The second sentence is a contrast with the first: the walk was tiring, but the view was enjoyed. However shows contrast. Therefore is tempting, but it shows a result, and enjoying the view is not a result of being tired.",
+   "clue": "Does the second sentence add to the first, or push against it?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Sam told Leo he had won the race",
+   "also_right": []
+  },
+  "b": {
+   "best": "However",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why refers to options by position ('the first sentence', 'the last two'), but options are shown in random order. It also skips one of the three wrong options. It says 'he' can only mean Sam because only one person is named before it, which is false for 'Sam told Leo that Sam had won the race': that sentence names two people and has no pronoun 'he' at all. The why should name each sentence and explain the repeated-name option correctly."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have clear, correct answers ('Sam told Leo he had won the race' and 'However'). The why for question a refers to options by position, which breaks when they are shuffled, and it misdescribes the 'that Sam had won' option as having a pronoun and only one person named."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The why refers to options by position ('the first sentence', 'the last two'), but options are shown in random order. It also skips one of the three wrong options. It says 'he' can only mean Sam because only one person is named before it, which is false for 'Sam told Leo that Sam had won the race': that sentence names two people and has no pronoun 'he' at all. The why should name each sentence and explain the repeated-name option correctly."
+ ],
+ "proposal": {
+  "title": "Pronouns and connectives for cohesion",
+  "card": [
+   "Cohesion is how a text holds together, so that one sentence leads smoothly to the next. Pronouns and connectives are two tools that build it.",
+   [
+    "Pronoun",
+    "a word such as he, she, it or they that stands in for a noun. It must point clearly to one noun. In \"Mia told Zoe she was late\", we cannot tell who was late."
+   ],
+   [
+    "Connective",
+    "a word or phrase that links ideas across sentences. However shows contrast, therefore shows a result, and meanwhile shows that two things happen at the same time."
+   ],
+   "A connective must match the link between the ideas. Using the wrong one, such as therefore for a contrast, confuses the reader."
+  ],
+  "remember": "Clear pronouns and well-chosen connectives help a reader follow your ideas.",
+  "a": {
+   "q": "Which sentence has a pronoun that could point to more than one noun?",
+   "opts": [
+    "Sam told Leo he had won the race",
+    "Sam told Leo that Sam had won the race",
+    "Sam smiled because he had won the race",
+    "Sam ran fast, so he won the race"
+   ],
+   "why": "In \"Sam told Leo he had won the race\", he could mean Sam or Leo, so the reader cannot be sure. \"Sam told Leo that Sam had won the race\" repeats the name instead of using a pronoun, so nothing is unclear. In the sentences about Sam smiling and Sam running fast, Sam is the only person named, so he can only mean Sam.",
+   "clue": "Look for a pronoun with two possible people it could mean."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ava's first sentence says the bushwalk was long and tiring. Her second says the group enjoyed the view from the top. Which connective, placed at the start of the second sentence, links them best?",
+   "opts": [
+    "However",
+    "Therefore",
+    "Meanwhile",
+    "For example"
+   ],
+   "why": "The second sentence is a contrast with the first: the walk was tiring, but the view was enjoyed. However shows contrast. Therefore is tempting, but it shows a result, and enjoying the view is not a result of being tired.",
+   "clue": "Does the second sentence add to the first, or push against it?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Sam told Leo he had won the race",
+    "also_right": []
+   },
+   "b": {
+    "best": "However",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 14,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why refers to options by position ('the first sentence', 'the last two'), but options are shown in random order. It also skips one of the three wrong options. It says 'he' can only mean Sam because only one person is named before it, which is false for 'Sam told Leo that Sam had won the race': that sentence names two people and has no pronoun 'he' at all. The why should name each sentence and explain the repeated-name option correctly."
+   }
+  ],
+  "flags": [
+   "Question a, other: The why refers to options by position ('the first sentence', 'the last two'), but options are shown in random order. It also skips one of the three wrong options. It says 'he' can only mean Sam because only one person is named before it, which is false for 'Sam told Leo that Sam had won the race': that sentence names two people and has no pronoun 'he' at all. The why should name each sentence and explain the repeated-name option correctly."
+  ]
+ },
+ "final": {
+  "title": "Pronouns and connectives for cohesion",
+  "card": [
+   "Cohesion is how a text holds together, so that one sentence leads smoothly to the next. Pronouns and connectives are two tools that build it.",
+   [
+    "Pronoun",
+    "a word such as he, she, it or they that stands in for a noun. It must point clearly to one noun. In \"Mia told Zoe she was late\", we cannot tell who was late."
+   ],
+   [
+    "Connective",
+    "a word or phrase that links ideas across sentences. However shows contrast, therefore shows a result, and meanwhile shows that two things happen at the same time."
+   ],
+   "A connective must match the link between the ideas. Using the wrong one, such as therefore for a contrast, confuses the reader."
+  ],
+  "remember": "Clear pronouns and well-chosen connectives help a reader follow your ideas.",
+  "a": {
+   "q": "Which sentence has a pronoun that could point to more than one noun?",
+   "opts": [
+    "Sam told Leo he had won the race",
+    "Sam told Leo that Sam had won the race",
+    "Sam smiled because he had won the race",
+    "Sam ran fast, so he won the race"
+   ],
+   "why": "In \"Sam told Leo he had won the race\", he could mean Sam or Leo, so the reader cannot be sure. \"Sam told Leo that Sam had won the race\" repeats the name instead of using a pronoun, so nothing is unclear. In the sentences about Sam smiling and Sam running fast, Sam is the only person named, so he can only mean Sam.",
+   "clue": "Look for a pronoun with two possible people it could mean."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ava's first sentence says the bushwalk was long and tiring. Her second says the group enjoyed the view from the top. Which connective, placed at the start of the second sentence, links them best?",
+   "opts": [
+    "However",
+    "Therefore",
+    "Meanwhile",
+    "For example"
+   ],
+   "why": "The second sentence is a contrast with the first: the walk was tiring, but the view was enjoyed. However shows contrast. Therefore is tempting, but it shows a result, and enjoying the view is not a result of being tired.",
+   "clue": "Does the second sentence add to the first, or push against it?"
+  }
+ },
+ "cleared_by": "recheck"
 }

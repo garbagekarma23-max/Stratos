@@ -24,8 +24,126 @@
    0.273
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 may adapt ecb-superannuation, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:40Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00037,
+  "confirm": 0.01042,
+  "write": 0.01091,
+  "check": 0.00955
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "ecb-superannuation",
+  "changes": [
+   "Add that employers pay a set share of each employee's wages into the super fund, since the brief names this and the bank card does not mention it."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same core idea of super as retirement savings at a suitable depth, but it does not mention employer payments from wages, which the brief requires.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The new point defines super through employers paying a share of wages into a fund. The closest bank point, ecb-superannuation, defines super but never says who pays in, while the employer payment rule sits in a separate point (the superannuation guarantee), so no single bank point teaches this idea as briefed.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Superannuation",
+  "card": [
+   "Superannuation, or super, is money saved to live on in retirement. It is built up over a person's working life.",
+   "Employers pay super into a super fund for each eligible employee. The payment is a share of the employee's wages.",
+   "The fund holds and invests the money for the employee. The employee can usually only take it out when they reach retirement age, which is set by law.",
+   "Because the money is paid on top of wages and grows over many years, it can build a large amount by retirement."
+  ],
+  "remember": "Super is retirement savings that an employer pays into a fund as a share of wages.",
+  "a": {
+   "q": "Who pays the regular super contributions for an employee?",
+   "opts": [
+    "The employer, into the employee's super fund",
+    "The employee, from their own pay each week",
+    "The bank, into the employee's savings account",
+    "The fund, into the employer's business account"
+   ],
+   "why": "Employers must pay super for eligible employees into a super fund. The money does not go into a savings account or to the employer, so those options are wrong.",
+   "clue": "Think about who pays the wages."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya works part time at a bakery in Newcastle. Her boss pays a share of her wages into a fund she can usually only access in retirement. What is this payment?",
+   "opts": [
+    "Superannuation",
+    "A personal loan",
+    "A hardship payment",
+    "A credit card limit"
+   ],
+   "why": "Money paid by an employer into a fund as a share of wages, to be used in retirement, is superannuation. A loan is borrowed money that must be repaid, so it does not fit.",
+   "clue": "Which one is saved for retirement?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The employer, into the employee's super fund",
+   "also_right": []
+  },
+  "b": {
+   "best": "Superannuation",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Superannuation",
+  "card": [
+   "Superannuation, or super, is money saved to live on in retirement. It is built up over a person's working life.",
+   "Employers pay super into a super fund for each eligible employee. The payment is a share of the employee's wages.",
+   "The fund holds and invests the money for the employee. The employee can usually only take it out when they reach retirement age, which is set by law.",
+   "Because the money is paid on top of wages and grows over many years, it can build a large amount by retirement."
+  ],
+  "remember": "Super is retirement savings that an employer pays into a fund as a share of wages.",
+  "a": {
+   "q": "Who pays the regular super contributions for an employee?",
+   "opts": [
+    "The employer, into the employee's super fund",
+    "The employee, from their own pay each week",
+    "The bank, into the employee's savings account",
+    "The fund, into the employer's business account"
+   ],
+   "why": "Employers must pay super for eligible employees into a super fund. The money does not go into a savings account or to the employer, so those options are wrong.",
+   "clue": "Think about who pays the wages."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya works part time at a bakery in Newcastle. Her boss pays a share of her wages into a fund she can usually only access in retirement. What is this payment?",
+   "opts": [
+    "Superannuation",
+    "A personal loan",
+    "A hardship payment",
+    "A credit card limit"
+   ],
+   "why": "Money paid by an employer into a fund as a share of wages, to be used in retirement, is superannuation. A loan is borrowed money that must be repaid, so it does not fit.",
+   "clue": "Which one is saved for retirement?"
+  }
+ },
+ "cleared_by": "checker"
 }

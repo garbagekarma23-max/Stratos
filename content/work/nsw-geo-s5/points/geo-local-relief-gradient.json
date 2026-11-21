@@ -8,8 +8,390 @@
    0.232
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: done",
+  "2026-11-20T12:44:55Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (a wording)",
+  "2026-11-20T13:44:56Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00594,
+  "check": 0.00855,
+  "fix": 0.01765,
+  "recheck": 0.00988
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank card teaches the slope of a coordinate line between two points, but the new point is about local relief (highest minus lowest elevation) and gradient as a real-world rise over horizontal distance written as a ratio like 1 in 20, which is a different idea and needs new content.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, wording: The question gives a ridge at 480 m and a creek at 330 m but does not say these are the highest and lowest points in the area. Local relief needs the highest and lowest points, so it is safer to add something like 'the highest point is a ridge at 480 m and the lowest is a creek at 330 m'.",
+ "rejected": {
+  "title": "Local relief and gradient",
+  "card": [
+   [
+    "Local relief",
+    "the difference in height between the highest and lowest points in an area. Find it by subtracting the lowest height from the highest."
+   ],
+   [
+    "Gradient",
+    "how steep a slope is. Gradient = vertical rise ÷ horizontal distance, with both in the same units."
+   ],
+   "Gradient is often written as a ratio, such as 1 in 20. This means the land rises 1 metre for every 20 metres of horizontal distance.",
+   "On a topographic map, read heights from the contour lines. The rise is the difference in height between two points. The horizontal distance comes from the map scale."
+  ],
+  "remember": "Relief is highest minus lowest. Gradient is rise over horizontal distance.",
+  "a": {
+   "q": "A map of a valley shows a ridge at 480 m and a creek at 330 m. What is the local relief?",
+   "opts": [
+    "150 m",
+    "330 m",
+    "480 m",
+    "810 m"
+   ],
+   "why": "Local relief is the highest height minus the lowest: 480 - 330 = 150 m. Adding the two heights gives 810 m, but relief is a difference, not a total.",
+   "clue": "Subtract the lowest height from the highest."
+  },
+  "b": {
+   "d": 3,
+   "q": "Between two points on a map, the land rises 20 m over a horizontal distance of 400 m. What is the gradient?",
+   "opts": [
+    "1 in 20",
+    "20 in 1",
+    "1 in 380",
+    "1 in 420"
+   ],
+   "why": "Gradient = rise ÷ horizontal distance = 20 ÷ 400 = 1/20, which is 1 in 20. Writing 20 in 1 puts the ratio the wrong way round: it would mean a 20 m rise for every 1 m across. 1 in 380 and 1 in 420 come from subtracting or adding the numbers instead of dividing.",
+   "clue": "Divide the rise by the horizontal distance, then write it as 1 in something."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, wording: The question gives a ridge at 480 m and a creek at 330 m but does not say these are the highest and lowest points in the area. Local relief needs the highest and lowest points, so it is safer to add something like 'the highest point is a ridge at 480 m and the lowest is a creek at 330 m'."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Local relief and gradient",
+     "card": [
+      [
+       "Local relief",
+       "the difference in height between the highest and lowest points in an area. Find it by subtracting the lowest height from the highest."
+      ],
+      [
+       "Gradient",
+       "how steep a slope is. Gradient = vertical rise ÷ horizontal distance, with both in the same units."
+      ],
+      "Gradient is often written as a ratio, such as 1 in 20. This means the land rises 1 metre for every 20 metres of horizontal distance.",
+      "On a topographic map, read heights from the contour lines. The rise is the difference in height between two points. The horizontal distance comes from the map scale."
+     ],
+     "remember": "Relief is highest minus lowest. Gradient is rise over horizontal distance.",
+     "a": {
+      "q": "A map of a valley shows a ridge at 480 m and a creek at 330 m. What is the local relief?",
+      "opts": [
+       "150 m",
+       "330 m",
+       "480 m",
+       "810 m"
+      ],
+      "why": "Local relief is the highest height minus the lowest: 480 - 330 = 150 m. Adding the two heights gives 810 m, but relief is a difference, not a total.",
+      "clue": "Subtract the lowest height from the highest."
+     },
+     "b": {
+      "d": 3,
+      "q": "Between two points on a map, the land rises 20 m over a horizontal distance of 400 m. What is the gradient?",
+      "opts": [
+       "1 in 20",
+       "1 in 5",
+       "1 in 200",
+       "1 in 420"
+      ],
+      "why": "Gradient = rise ÷ horizontal distance = 20 ÷ 400, which is 1 in 20. The tempting answer 1 in 5 comes from putting the horizontal distance over the rise the wrong way round.",
+      "clue": "Divide the rise by the horizontal distance, then write it as 1 in something."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "150 m",
+      "also_right": []
+     },
+     "b": {
+      "best": "1 in 20",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "Why (b) says 1 in 5 comes from putting the horizontal distance over the rise. 400 ÷ 20 = 20, which gives 1 in 20 again, not 1 in 5. The explanation of the distractor is false and could confuse students."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both answers check out (150 m and 1 in 20). The why for question b wrongly claims that 1 in 5 comes from dividing the horizontal distance by the rise, when 400 ÷ 20 = 20."
+    },
+    "flags": [
+     "Question b, fact: Why (b) says 1 in 5 comes from putting the horizontal distance over the rise. 400 ÷ 20 = 20, which gives 1 in 20 again, not 1 in 5. The explanation of the distractor is false and could confuse students."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Local relief and gradient",
+     "card": [
+      [
+       "Local relief",
+       "the difference in height between the highest and lowest points in an area. Find it by subtracting the lowest height from the highest."
+      ],
+      [
+       "Gradient",
+       "how steep a slope is. Gradient = vertical rise ÷ horizontal distance, with both in the same units."
+      ],
+      "Gradient is often written as a ratio, such as 1 in 20. This means the land rises 1 metre for every 20 metres of horizontal distance.",
+      "On a topographic map, read heights from the contour lines. The rise is the difference in height between two points. The horizontal distance comes from the map scale."
+     ],
+     "remember": "Relief is highest minus lowest. Gradient is rise over horizontal distance.",
+     "a": {
+      "q": "A map of a valley shows a ridge at 480 m and a creek at 330 m. What is the local relief?",
+      "opts": [
+       "150 m",
+       "330 m",
+       "480 m",
+       "810 m"
+      ],
+      "why": "Local relief is the highest height minus the lowest: 480 - 330 = 150 m. Adding the two heights gives 810 m, but relief is a difference, not a total.",
+      "clue": "Subtract the lowest height from the highest."
+     },
+     "b": {
+      "d": 3,
+      "q": "Between two points on a map, the land rises 20 m over a horizontal distance of 400 m. What is the gradient?",
+      "opts": [
+       "1 in 20",
+       "20 in 1",
+       "1 in 380",
+       "1 in 420"
+      ],
+      "why": "Gradient = rise ÷ horizontal distance = 20 ÷ 400 = 1/20, which is 1 in 20. Writing 20 in 1 puts the ratio the wrong way round: it would mean a 20 m rise for every 1 m across. 1 in 380 and 1 in 420 come from subtracting or adding the numbers instead of dividing.",
+      "clue": "Divide the rise by the horizontal distance, then write it as 1 in something."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "150 m",
+       "also_right": []
+      },
+      "b": {
+       "best": "1 in 20",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "wording",
+        "detail": "The question gives a ridge at 480 m and a creek at 330 m but does not say these are the highest and lowest points in the area. Local relief needs the highest and lowest points, so it is safer to add something like 'the highest point is a ridge at 480 m and the lowest is a creek at 330 m'."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both answers are correct: 480 − 330 = 150 m, and 20 ÷ 400 gives 1 in 20. One minor wording issue: question a should say the ridge and creek are the highest and lowest points in the area."
+     },
+     "flags": [
+      "Question a, wording: The question gives a ridge at 480 m and a creek at 330 m but does not say these are the highest and lowest points in the area. Local relief needs the highest and lowest points, so it is safer to add something like 'the highest point is a ridge at 480 m and the lowest is a creek at 330 m'."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:56Z",
+   "step": "write",
+   "version": {
+    "title": "Local relief and gradient",
+    "card": [
+     [
+      "Local relief",
+      "the difference in height between the highest and lowest points in an area. Find it by subtracting the lowest height from the highest."
+     ],
+     [
+      "Gradient",
+      "how steep a slope is. Gradient = vertical rise ÷ horizontal distance, with both in the same units."
+     ],
+     "Gradient is often written as a ratio, such as 1 in 20. This means the land rises 1 metre for every 20 metres of horizontal distance.",
+     "On a topographic map, read heights from the contour lines. The rise is the difference in height between two points. The horizontal distance comes from the map scale."
+    ],
+    "remember": "Relief is highest minus lowest. Gradient is rise over horizontal distance.",
+    "a": {
+     "q": "On a map of a valley, the highest point is a ridge at 480 m and the lowest point is a creek at 330 m. What is the local relief?",
+     "opts": [
+      "150 m",
+      "330 m",
+      "480 m",
+      "810 m"
+     ],
+     "why": "Local relief is the highest height minus the lowest: 480 - 330 = 150 m. Adding the two heights gives 810 m, but relief is a difference, not a total.",
+     "clue": "Subtract the lowest height from the highest."
+    },
+    "b": {
+     "d": 3,
+     "q": "Between two points on a map, the land rises 20 m over a horizontal distance of 400 m. What is the gradient?",
+     "opts": [
+      "1 in 20",
+      "20 in 1",
+      "1 in 380",
+      "1 in 420"
+     ],
+     "why": "Gradient = rise ÷ horizontal distance = 20 ÷ 400 = 1/20, which is 1 in 20. Writing 20 in 1 puts the ratio the wrong way round: it would mean a 20 m rise for every 1 m across. 1 in 380 and 1 in 420 come from subtracting or adding the numbers instead of dividing.",
+     "clue": "Divide the rise by the horizontal distance, then write it as 1 in something."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "150 m",
+     "also_right": []
+    },
+    "b": {
+     "best": "1 in 20",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Local relief and gradient",
+  "card": [
+   [
+    "Local relief",
+    "the difference in height between the highest and lowest points in an area. Find it by subtracting the lowest height from the highest."
+   ],
+   [
+    "Gradient",
+    "how steep a slope is. Gradient = vertical rise ÷ horizontal distance, with both in the same units."
+   ],
+   "Gradient is often written as a ratio, such as 1 in 20. This means the land rises 1 metre for every 20 metres of horizontal distance.",
+   "On a topographic map, read heights from the contour lines. The rise is the difference in height between two points. The horizontal distance comes from the map scale."
+  ],
+  "remember": "Relief is highest minus lowest. Gradient is rise over horizontal distance.",
+  "a": {
+   "q": "On a map of a valley, the highest point is a ridge at 480 m and the lowest point is a creek at 330 m. What is the local relief?",
+   "opts": [
+    "150 m",
+    "330 m",
+    "480 m",
+    "810 m"
+   ],
+   "why": "Local relief is the highest height minus the lowest: 480 - 330 = 150 m. Adding the two heights gives 810 m, but relief is a difference, not a total.",
+   "clue": "Subtract the lowest height from the highest."
+  },
+  "b": {
+   "d": 3,
+   "q": "Between two points on a map, the land rises 20 m over a horizontal distance of 400 m. What is the gradient?",
+   "opts": [
+    "1 in 20",
+    "20 in 1",
+    "1 in 380",
+    "1 in 420"
+   ],
+   "why": "Gradient = rise ÷ horizontal distance = 20 ÷ 400 = 1/20, which is 1 in 20. Writing 20 in 1 puts the ratio the wrong way round: it would mean a 20 m rise for every 1 m across. 1 in 380 and 1 in 420 come from subtracting or adding the numbers instead of dividing.",
+   "clue": "Divide the rise by the horizontal distance, then write it as 1 in something."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "150 m",
+   "also_right": []
+  },
+  "b": {
+   "best": "1 in 20",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Local relief and gradient",
+  "card": [
+   [
+    "Local relief",
+    "the difference in height between the highest and lowest points in an area. Find it by subtracting the lowest height from the highest."
+   ],
+   [
+    "Gradient",
+    "how steep a slope is. Gradient = vertical rise ÷ horizontal distance, with both in the same units."
+   ],
+   "Gradient is often written as a ratio, such as 1 in 20. This means the land rises 1 metre for every 20 metres of horizontal distance.",
+   "On a topographic map, read heights from the contour lines. The rise is the difference in height between two points. The horizontal distance comes from the map scale."
+  ],
+  "remember": "Relief is highest minus lowest. Gradient is rise over horizontal distance.",
+  "a": {
+   "q": "On a map of a valley, the highest point is a ridge at 480 m and the lowest point is a creek at 330 m. What is the local relief?",
+   "opts": [
+    "150 m",
+    "330 m",
+    "480 m",
+    "810 m"
+   ],
+   "why": "Local relief is the highest height minus the lowest: 480 - 330 = 150 m. Adding the two heights gives 810 m, but relief is a difference, not a total.",
+   "clue": "Subtract the lowest height from the highest."
+  },
+  "b": {
+   "d": 3,
+   "q": "Between two points on a map, the land rises 20 m over a horizontal distance of 400 m. What is the gradient?",
+   "opts": [
+    "1 in 20",
+    "20 in 1",
+    "1 in 380",
+    "1 in 420"
+   ],
+   "why": "Gradient = rise ÷ horizontal distance = 20 ÷ 400 = 1/20, which is 1 in 20. Writing 20 in 1 puts the ratio the wrong way round: it would mean a 20 m rise for every 1 m across. 1 in 380 and 1 in 420 come from subtracting or adding the numbers instead of dividing.",
+   "clue": "Divide the rise by the horizontal distance, then write it as 1 in something."
+  }
+ },
+ "checked_by": "claude-code"
 }

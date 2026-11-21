@@ -8,8 +8,242 @@
    0.31
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:44Z write: done",
+  "2026-11-20T12:35:46Z check: flagged",
+  "2026-11-20T12:44:54Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 8e-05,
+  "write": 0.01125,
+  "check": 0.01298,
+  "fix": 0.03265,
+  "recheck": 0.00853
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches how to evaluate an individual author's style against purpose and readers, not how groups of texts from one period share a movement's style, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Literary movements",
+  "card": [
+   "A literary movement is a group of texts from one period that share a style. Writers in a movement often respond to the same ideas and events of their time.",
+   [
+    "Romantic",
+    "poetry from about the late 1700s to mid 1800s. It focuses on nature, strong emotion and the individual, and often values imagination and feeling."
+   ],
+   [
+    "Gothic",
+    "fiction with dark settings such as ruined castles or storms, and a mood of dread, mystery and fear."
+   ],
+   "Spotting these shared features helps a reader place a text in a movement. A poem praising a lonely mountain and the poet's feelings is Romantic in style."
+  ],
+  "remember": "Texts in a movement share a style: Romantic leans to nature and feeling, Gothic to dark settings and dread.",
+  "a": {
+   "q": "A story is set in a crumbling mansion on a stormy night, where a strange noise fills the narrator with dread. Which movement does its style match?",
+   "opts": [
+    "Gothic",
+    "Romantic",
+    "Informative",
+    "Persuasive"
+   ],
+   "why": "A dark setting and a mood of dread are features of Gothic fiction. Romantic writing focuses on nature, emotion and the individual, and does not rely on dread.",
+   "clue": "Look at the setting and the mood."
+  },
+  "b": {
+   "d": 2,
+   "q": "A poem describes a poet wandering alone through hills, moved to joy by the sunrise and the wild flowers. Which movement's style does it share?",
+   "opts": [
+    "Romantic poetry",
+    "Gothic fiction",
+    "Persuasive speech",
+    "Instruction manual"
+   ],
+   "why": "The focus on nature, strong emotion and a single person's feelings is typical of Romantic poetry. Gothic fiction would rely on dark settings and dread, not joy in a sunrise.",
+   "clue": "What is the poem's main subject and feeling?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Gothic",
+   "also_right": []
+  },
+  "b": {
+   "best": "Romantic poetry",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "Two of the four options, Informative and Persuasive, are text types or purposes, not literary movements, so the question asks for a movement but offers only two real ones. This makes it a coin-flip between Romantic and Gothic and easy for Years 9–10."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says 'A poem', and 'Romantic poetry' is the only option naming poetry. A student can match the words without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "'Instruction manual' and 'Persuasive speech' are not literary movements, so they are implausible distractors. Only Romantic and Gothic are real choices."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and answers are correct. In both questions half the options are not literary movements, and in (b) the word 'poem' in the stem points straight to 'Romantic poetry', so both questions are too easy to guess."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, level: Two of the four options, Informative and Persuasive, are text types or purposes, not literary movements, so the question asks for a movement but offers only two real ones. This makes it a coin-flip between Romantic and Gothic and easy for Years 9–10.",
+  "Question b, wording: The stem says 'A poem', and 'Romantic poetry' is the only option naming poetry. A student can match the words without knowing the idea.",
+  "Question b, level: 'Instruction manual' and 'Persuasive speech' are not literary movements, so they are implausible distractors. Only Romantic and Gothic are real choices."
+ ],
+ "proposal": {
+  "title": "Literary movements",
+  "card": [
+   "A literary movement is a group of texts from one period that share a style. Writers in a movement often respond to the same ideas and events of their time.",
+   [
+    "Romantic",
+    "writing, often poetry, from about the late 1700s to the mid 1800s. It focuses on nature, strong emotion and the individual, and values imagination and feeling."
+   ],
+   [
+    "Gothic",
+    "fiction, popular from the late 1700s, with dark settings such as ruined castles or storms, and a mood of dread, mystery and fear."
+   ],
+   "Realist fiction, from the 1800s, shows ordinary people and everyday life in plain detail. Modernist writing, from the early 1900s, breaks with older forms, often using fragments and a character's flowing thoughts."
+  ],
+  "remember": "Texts in a movement share a style, so their shared features help you place a text in its movement.",
+  "a": {
+   "q": "In a story, a candle flickers in a dark old house, a door creaks open by itself, and the narrator senses something terrible is coming. Which movement does its style match?",
+   "opts": [
+    "Gothic",
+    "Romantic",
+    "Realist",
+    "Modernist"
+   ],
+   "why": "The dark house, the strange door and the sense that something terrible is coming build dread, a mark of Gothic fiction. Romantic writing can use wild settings too, but its focus is nature and a person's feelings, not fear.",
+   "clue": "What mood does the writer build?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A writer describes climbing a mountain alone in a storm. Instead of fear, she feels wild joy and freedom as the wind roars around her. Which movement's style does this share?",
+   "opts": [
+    "Romantic",
+    "Gothic",
+    "Realist",
+    "Modernist"
+   ],
+   "why": "The focus is one person's strong emotion in wild nature, which is Romantic. The storm might suggest Gothic, but Gothic builds dread and fear, and here the mood is joy.",
+   "clue": "Look past the storm to the feeling it stirs."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Gothic",
+    "also_right": []
+   },
+   "b": {
+    "best": "Romantic",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "Two of the four options, Informative and Persuasive, are text types or purposes, not literary movements, so the question asks for a movement but offers only two real ones. This makes it a coin-flip between Romantic and Gothic and easy for Years 9–10."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says 'A poem', and 'Romantic poetry' is the only option naming poetry. A student can match the words without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "'Instruction manual' and 'Persuasive speech' are not literary movements, so they are implausible distractors. Only Romantic and Gothic are real choices."
+   }
+  ],
+  "flags": [
+   "Question a, level: Two of the four options, Informative and Persuasive, are text types or purposes, not literary movements, so the question asks for a movement but offers only two real ones. This makes it a coin-flip between Romantic and Gothic and easy for Years 9–10.",
+   "Question b, wording: The stem says 'A poem', and 'Romantic poetry' is the only option naming poetry. A student can match the words without knowing the idea.",
+   "Question b, level: 'Instruction manual' and 'Persuasive speech' are not literary movements, so they are implausible distractors. Only Romantic and Gothic are real choices."
+  ]
+ },
+ "final": {
+  "title": "Literary movements",
+  "card": [
+   "A literary movement is a group of texts from one period that share a style. Writers in a movement often respond to the same ideas and events of their time.",
+   [
+    "Romantic",
+    "writing, often poetry, from about the late 1700s to the mid 1800s. It focuses on nature, strong emotion and the individual, and values imagination and feeling."
+   ],
+   [
+    "Gothic",
+    "fiction, popular from the late 1700s, with dark settings such as ruined castles or storms, and a mood of dread, mystery and fear."
+   ],
+   "Realist fiction, from the 1800s, shows ordinary people and everyday life in plain detail. Modernist writing, from the early 1900s, breaks with older forms, often using fragments and a character's flowing thoughts."
+  ],
+  "remember": "Texts in a movement share a style, so their shared features help you place a text in its movement.",
+  "a": {
+   "q": "In a story, a candle flickers in a dark old house, a door creaks open by itself, and the narrator senses something terrible is coming. Which movement does its style match?",
+   "opts": [
+    "Gothic",
+    "Romantic",
+    "Realist",
+    "Modernist"
+   ],
+   "why": "The dark house, the strange door and the sense that something terrible is coming build dread, a mark of Gothic fiction. Romantic writing can use wild settings too, but its focus is nature and a person's feelings, not fear.",
+   "clue": "What mood does the writer build?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A writer describes climbing a mountain alone in a storm. Instead of fear, she feels wild joy and freedom as the wind roars around her. Which movement's style does this share?",
+   "opts": [
+    "Romantic",
+    "Gothic",
+    "Realist",
+    "Modernist"
+   ],
+   "why": "The focus is one person's strong emotion in wild nature, which is Romantic. The storm might suggest Gothic, but Gothic builds dread and fear, and here the mood is joy.",
+   "clue": "Look past the storm to the feeling it stirs."
+  }
+ },
+ "cleared_by": "recheck"
 }

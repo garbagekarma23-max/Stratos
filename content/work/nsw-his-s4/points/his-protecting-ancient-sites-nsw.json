@@ -12,8 +12,408 @@
    0.229
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: done",
+  "2026-11-20T12:44:56Z check: flagged",
+  "2026-11-20T12:53:26Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-20T13:44:56Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.00629,
+  "check": 0.01057,
+  "fix": 0.02006,
+  "recheck": 0.00981
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers war, looting, building and tourism and the UNESCO list, but it never mentions climate or conservation, which the brief requires, and adding them would be more than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The stem describes thieves taking objects, but three options describe unrelated events (crowds, official recognition, rising seas), so they do not explain the thieves' actions. Only the right option fits the scenario, so a student can pick it by matching the stem without understanding why looting loses historical clues.",
+ "rejected": {
+  "title": "Protecting ancient sites",
+  "card": [
+   "Ancient sites, such as temples, tombs and old cities, are clues to the past. Once damaged or lost, they cannot be replaced.",
+   [
+    "Threats",
+    "War can damage or destroy sites. Looting is the theft of objects from a site, which also removes clues about how people lived. Tourism can wear down sites through crowds and pollution. Climate, such as floods, storms and rising seas, can also harm them."
+   ],
+   [
+    "Conservation",
+    "means caring for a site so that it lasts. It can include repairing damage, controlling visitor numbers and guarding the site."
+   ],
+   [
+    "Heritage listing",
+    "means a site is officially recognised as important. A listing, such as World Heritage status, can bring attention, rules and support for protecting it."
+   ]
+  ],
+  "remember": "Sites face threats such as war, looting, tourism and climate. Conservation and heritage listing help to protect them.",
+  "a": {
+   "q": "Staff at an ancient temple set a daily limit on visitors and repair its cracked walls. What are they doing?",
+   "opts": [
+    "Conserving the site by caring for it",
+    "Heritage listing the site as important",
+    "Looting the site by removing its objects",
+    "Harming the site through tourism"
+   ],
+   "why": "Limiting visitors and repairing damage are ways of caring for a site so it lasts, which is conservation. Heritage listing is tempting, but it means officially recognising a site as important, not the hands-on work of looking after it.",
+   "clue": "Think about what the staff are physically doing to the temple."
+  },
+  "b": {
+   "d": 3,
+   "q": "Thieves dig up pottery and statues from an ancient town and sell them. Why does this harm what historians can learn?",
+   "opts": [
+    "The objects are removed, along with clues about the town",
+    "The crowds of visitors wear down the old town paths",
+    "Rising seas flood the town and wash away its buildings",
+    "The town gets official recognition and new rules"
+   ],
+   "why": "This is looting, which removes objects and the clues about how people lived. Tourism also harms sites, but the thieves here dug up objects and took them away, which is not crowd damage.",
+   "clue": "Which threat involves taking things from a site?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The stem describes thieves taking objects, but three options describe unrelated events (crowds, official recognition, rising seas), so they do not explain the thieves' actions. Only the right option fits the scenario, so a student can pick it by matching the stem without understanding why looting loses historical clues."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Protecting ancient sites",
+     "card": [
+      "Ancient sites, such as temples, tombs and old cities, are clues to the past. Once damaged or lost, they cannot be replaced.",
+      [
+       "Threats",
+       "War can damage or destroy sites. Looting is the theft of objects from a site, which also removes clues about how people lived. Tourism can wear down sites through crowds and pollution. Climate, such as floods, storms and rising seas, can also harm them."
+      ],
+      [
+       "Conservation",
+       "means caring for a site so that it lasts. It can include repairing damage, controlling visitor numbers and guarding the site."
+      ],
+      [
+       "Heritage listing",
+       "means a site is officially recognised as important. A listing, such as World Heritage status, can bring attention, rules and support for protecting it."
+      ]
+     ],
+     "remember": "Sites face threats such as war, looting, tourism and climate. Conservation and heritage listing help to protect them.",
+     "a": {
+      "q": "What is the main aim of conserving an ancient site?",
+      "opts": [
+       "To care for it so that it lasts for the future",
+       "To make it easier for the most visitors to enter",
+       "To replace it with a modern copy of the site",
+       "To move its objects to a place far from the site"
+      ],
+      "why": "Conservation means caring for a site so that it lasts. Letting in the most visitors is tempting, but tourism can wear a site down, so conservation may limit visitor numbers.",
+      "clue": "Think about what conservation is meant to do for people in the future."
+     },
+     "b": {
+      "d": 3,
+      "q": "Thieves dig up pottery and statues from an ancient town and sell them. Why does this harm what historians can learn?",
+      "opts": [
+       "The objects are removed, along with clues about the town",
+       "The crowds of visitors wear down the old town paths",
+       "Rising seas flood the town and wash away its buildings",
+       "The town is officially recognised as important"
+      ],
+      "why": "This is looting, which removes objects and the clues about how people lived. Tourism also harms sites, but the thieves here dug up objects and took them away, which is not crowd damage.",
+      "clue": "Which threat involves taking things from a site?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "To care for it so that it lasts for the future",
+      "also_right": []
+     },
+     "b": {
+      "best": "The objects are removed, along with clues about the town",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue says 'what conservation is meant to do for people in the future', and the right option is the only one that mentions the future. A student could match the word without knowing the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and answers check out. The only issue is that question a's clue echoes 'future', the word found only in the right option, which gives the answer away."
+    },
+    "flags": [
+     "Question a, other: The clue says 'what conservation is meant to do for people in the future', and the right option is the only one that mentions the future. A student could match the word without knowing the idea."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Protecting ancient sites",
+     "card": [
+      "Ancient sites, such as temples, tombs and old cities, are clues to the past. Once damaged or lost, they cannot be replaced.",
+      [
+       "Threats",
+       "War can damage or destroy sites. Looting is the theft of objects from a site, which also removes clues about how people lived. Tourism can wear down sites through crowds and pollution. Climate, such as floods, storms and rising seas, can also harm them."
+      ],
+      [
+       "Conservation",
+       "means caring for a site so that it lasts. It can include repairing damage, controlling visitor numbers and guarding the site."
+      ],
+      [
+       "Heritage listing",
+       "means a site is officially recognised as important. A listing, such as World Heritage status, can bring attention, rules and support for protecting it."
+      ]
+     ],
+     "remember": "Sites face threats such as war, looting, tourism and climate. Conservation and heritage listing help to protect them.",
+     "a": {
+      "q": "Staff at an ancient temple set a daily limit on visitors and repair its cracked walls. What are they doing?",
+      "opts": [
+       "Conserving the site by caring for it",
+       "Heritage listing the site as important",
+       "Looting the site by removing its objects",
+       "Harming the site through tourism"
+      ],
+      "why": "Limiting visitors and repairing damage are ways of caring for a site so it lasts, which is conservation. Heritage listing is tempting, but it means officially recognising a site as important, not the hands-on work of looking after it.",
+      "clue": "Think about what the staff are physically doing to the temple."
+     },
+     "b": {
+      "d": 3,
+      "q": "Thieves dig up pottery and statues from an ancient town and sell them. Why does this harm what historians can learn?",
+      "opts": [
+       "The objects are removed, along with clues about the town",
+       "The crowds of visitors wear down the old town paths",
+       "Rising seas flood the town and wash away its buildings",
+       "The town gets official recognition and new rules"
+      ],
+      "why": "This is looting, which removes objects and the clues about how people lived. Tourism also harms sites, but the thieves here dug up objects and took them away, which is not crowd damage.",
+      "clue": "Which threat involves taking things from a site?"
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Conserving the site by caring for it",
+       "also_right": []
+      },
+      "b": {
+       "best": "The objects are removed, along with clues about the town",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The stem describes thieves taking objects, but three options describe unrelated events (crowds, official recognition, rising seas), so they do not explain the thieves' actions. Only the right option fits the scenario, so a student can pick it by matching the stem without understanding why looting loses historical clues."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card, the remember line and both answers are accurate. In question b, three distractors do not relate to the thieves in the stem, so the right answer is easy to spot without knowing the idea."
+     },
+     "flags": [
+      "Question b, wording: The stem describes thieves taking objects, but three options describe unrelated events (crowds, official recognition, rising seas), so they do not explain the thieves' actions. Only the right option fits the scenario, so a student can pick it by matching the stem without understanding why looting loses historical clues."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:56Z",
+   "step": "write",
+   "version": {
+    "title": "Protecting ancient sites",
+    "card": [
+     "Ancient sites, such as temples, tombs and old cities, are clues to the past. Once damaged or lost, they cannot be replaced.",
+     [
+      "Threats",
+      "War can destroy sites, and looting, the theft of objects from a site, removes clues about how people lived. Crowds of tourists can wear sites down, and climate, through floods, storms and rising seas, can harm them too."
+     ],
+     [
+      "Conservation",
+      "means caring for a site so that it lasts. It can include repairing damage, controlling visitor numbers and guarding the site."
+     ],
+     [
+      "Heritage listing",
+      "means a site is officially recognised as important. A listing, such as World Heritage status, can bring attention, rules and support for protecting it."
+     ]
+    ],
+    "remember": "Sites face threats such as war, looting, tourism and climate. Conservation and heritage listing help to protect them.",
+    "a": {
+     "q": "Staff at an ancient temple set a daily limit on visitors and repair its cracked walls. What are they doing?",
+     "opts": [
+      "Conserving the site by caring for it",
+      "Heritage listing the site as important",
+      "Looting the site by removing its objects",
+      "Harming the site through tourism"
+     ],
+     "why": "Limiting visitors and repairing damage are ways of caring for a site so it lasts, which is conservation. Heritage listing is tempting, but it means officially recognising a site as important, not the hands-on work of looking after it.",
+     "clue": "Think about what the staff are physically doing to the temple."
+    },
+    "b": {
+     "d": 2,
+     "q": "Thieves dig up pottery and statues from an ancient town and sell them. Which threat is this, and how does it harm the site?",
+     "opts": [
+      "Looting, which takes away clues about how people lived",
+      "Tourism, which wears the town down through crowds",
+      "War, which destroys the town's buildings during fighting",
+      "Conservation, which moves objects to keep them safe"
+     ],
+     "why": "Taking objects from a site is looting. Once the pottery and statues are dug up and sold, the clues they held about life in the town go with them. Tourism also harms sites, but these people are thieves taking objects, not crowds of visitors.",
+     "clue": "What are the thieves doing with the objects?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Conserving the site by caring for it",
+     "also_right": []
+    },
+    "b": {
+     "best": "Looting, which takes away clues about how people lived",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Protecting ancient sites",
+  "card": [
+   "Ancient sites, such as temples, tombs and old cities, are clues to the past. Once damaged or lost, they cannot be replaced.",
+   [
+    "Threats",
+    "War can destroy sites, and looting, the theft of objects from a site, removes clues about how people lived. Crowds of tourists can wear sites down, and climate, through floods, storms and rising seas, can harm them too."
+   ],
+   [
+    "Conservation",
+    "means caring for a site so that it lasts. It can include repairing damage, controlling visitor numbers and guarding the site."
+   ],
+   [
+    "Heritage listing",
+    "means a site is officially recognised as important. A listing, such as World Heritage status, can bring attention, rules and support for protecting it."
+   ]
+  ],
+  "remember": "Sites face threats such as war, looting, tourism and climate. Conservation and heritage listing help to protect them.",
+  "a": {
+   "q": "Staff at an ancient temple set a daily limit on visitors and repair its cracked walls. What are they doing?",
+   "opts": [
+    "Conserving the site by caring for it",
+    "Heritage listing the site as important",
+    "Looting the site by removing its objects",
+    "Harming the site through tourism"
+   ],
+   "why": "Limiting visitors and repairing damage are ways of caring for a site so it lasts, which is conservation. Heritage listing is tempting, but it means officially recognising a site as important, not the hands-on work of looking after it.",
+   "clue": "Think about what the staff are physically doing to the temple."
+  },
+  "b": {
+   "d": 2,
+   "q": "Thieves dig up pottery and statues from an ancient town and sell them. Which threat is this, and how does it harm the site?",
+   "opts": [
+    "Looting, which takes away clues about how people lived",
+    "Tourism, which wears the town down through crowds",
+    "War, which destroys the town's buildings during fighting",
+    "Conservation, which moves objects to keep them safe"
+   ],
+   "why": "Taking objects from a site is looting. Once the pottery and statues are dug up and sold, the clues they held about life in the town go with them. Tourism also harms sites, but these people are thieves taking objects, not crowds of visitors.",
+   "clue": "What are the thieves doing with the objects?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Conserving the site by caring for it",
+   "also_right": []
+  },
+  "b": {
+   "best": "Looting, which takes away clues about how people lived",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Protecting ancient sites",
+  "card": [
+   "Ancient sites, such as temples, tombs and old cities, are clues to the past. Once damaged or lost, they cannot be replaced.",
+   [
+    "Threats",
+    "War can destroy sites, and looting, the theft of objects from a site, removes clues about how people lived. Crowds of tourists can wear sites down, and climate, through floods, storms and rising seas, can harm them too."
+   ],
+   [
+    "Conservation",
+    "means caring for a site so that it lasts. It can include repairing damage, controlling visitor numbers and guarding the site."
+   ],
+   [
+    "Heritage listing",
+    "means a site is officially recognised as important. A listing, such as World Heritage status, can bring attention, rules and support for protecting it."
+   ]
+  ],
+  "remember": "Sites face threats such as war, looting, tourism and climate. Conservation and heritage listing help to protect them.",
+  "a": {
+   "q": "Staff at an ancient temple set a daily limit on visitors and repair its cracked walls. What are they doing?",
+   "opts": [
+    "Conserving the site by caring for it",
+    "Heritage listing the site as important",
+    "Looting the site by removing its objects",
+    "Harming the site through tourism"
+   ],
+   "why": "Limiting visitors and repairing damage are ways of caring for a site so it lasts, which is conservation. Heritage listing is tempting, but it means officially recognising a site as important, not the hands-on work of looking after it.",
+   "clue": "Think about what the staff are physically doing to the temple."
+  },
+  "b": {
+   "d": 2,
+   "q": "Thieves dig up pottery and statues from an ancient town and sell them. Which threat is this, and how does it harm the site?",
+   "opts": [
+    "Looting, which takes away clues about how people lived",
+    "Tourism, which wears the town down through crowds",
+    "War, which destroys the town's buildings during fighting",
+    "Conservation, which moves objects to keep them safe"
+   ],
+   "why": "Taking objects from a site is looting. Once the pottery and statues are dug up and sold, the clues they held about life in the town go with them. Tourism also harms sites, but these people are thieves taking objects, not crowds of visitors.",
+   "clue": "What are the thieves doing with the objects?"
+  }
+ },
+ "checked_by": "claude-code"
 }

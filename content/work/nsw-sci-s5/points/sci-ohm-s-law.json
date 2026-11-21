@@ -20,8 +20,115 @@
    0.21
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:58Z write: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "write": 0.00602,
+  "check": 0.00664
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, phys-resistance-ohm-s-law, is written for Victorian senior Physics and goes beyond this Stage 5 brief, adding non-ohmic devices, diodes and I-V graph shapes, so it is broader and at a deeper level than the point needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Ohm's law",
+  "card": [
+   "Voltage is the energy given to each unit of charge, measured in volts (V). Current is the flow of charge, measured in amperes (A). Resistance is how much a part opposes the current, measured in ohms (Ω).",
+   "Ohm's law links the three: V = I × R. Voltage equals current times resistance.",
+   "If the resistance stays fixed, more voltage gives more current. Doubling the voltage doubles the current.",
+   "The law can be rearranged to find current, I = V ÷ R, or resistance, R = V ÷ I. For example, 12 V across a 4 Ω resistor gives a current of 3 A."
+  ],
+  "remember": "V = IR. With a fixed resistance, current rises as voltage rises.",
+  "a": {
+   "q": "A resistor has a fixed resistance. The voltage across it is doubled. What happens to the current through it?",
+   "opts": [
+    "It doubles",
+    "It halves",
+    "It stays the same",
+    "It increases by 2 A"
+   ],
+   "why": "With R fixed, I = V ÷ R, so current is in proportion to voltage. Doubling the voltage doubles the current. It does not halve, because a higher voltage pushes more charge through, not less.",
+   "clue": "Resistance stays fixed, so current follows voltage."
+  },
+  "b": {
+   "d": 2,
+   "q": "A heater element in Tom's workshop has a resistance of 40 Ω. It is connected to a 240 V supply. What current flows through it?",
+   "opts": [
+    "6 A",
+    "0.17 A",
+    "9600 A",
+    "200 A"
+   ],
+   "why": "I = V ÷ R = 240 ÷ 40 = 6 A. Multiplying the two numbers gives 9600, which is the common mistake. Current is found by dividing voltage by resistance.",
+   "clue": "To find current, divide voltage by resistance."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It doubles",
+   "also_right": []
+  },
+  "b": {
+   "best": "6 A",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Ohm's law",
+  "card": [
+   "Voltage is the energy given to each unit of charge, measured in volts (V). Current is the flow of charge, measured in amperes (A). Resistance is how much a part opposes the current, measured in ohms (Ω).",
+   "Ohm's law links the three: V = I × R. Voltage equals current times resistance.",
+   "If the resistance stays fixed, more voltage gives more current. Doubling the voltage doubles the current.",
+   "The law can be rearranged to find current, I = V ÷ R, or resistance, R = V ÷ I. For example, 12 V across a 4 Ω resistor gives a current of 3 A."
+  ],
+  "remember": "V = IR. With a fixed resistance, current rises as voltage rises.",
+  "a": {
+   "q": "A resistor has a fixed resistance. The voltage across it is doubled. What happens to the current through it?",
+   "opts": [
+    "It doubles",
+    "It halves",
+    "It stays the same",
+    "It increases by 2 A"
+   ],
+   "why": "With R fixed, I = V ÷ R, so current is in proportion to voltage. Doubling the voltage doubles the current. It does not halve, because a higher voltage pushes more charge through, not less.",
+   "clue": "Resistance stays fixed, so current follows voltage."
+  },
+  "b": {
+   "d": 2,
+   "q": "A heater element in Tom's workshop has a resistance of 40 Ω. It is connected to a 240 V supply. What current flows through it?",
+   "opts": [
+    "6 A",
+    "0.17 A",
+    "9600 A",
+    "200 A"
+   ],
+   "why": "I = V ÷ R = 240 ÷ 40 = 6 A. Multiplying the two numbers gives 9600, which is the common mistake. Current is found by dividing voltage by resistance.",
+   "clue": "To find current, divide voltage by resistance."
+  }
+ },
+ "cleared_by": "checker"
 }

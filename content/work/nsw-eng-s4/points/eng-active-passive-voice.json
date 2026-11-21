@@ -8,8 +8,212 @@
    0.211
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:42Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: failed the content check, writing again",
+  "2026-11-20T12:44:53Z write: done",
+  "2026-11-20T12:53:24Z check: flagged",
+  "2026-11-20T13:11:46Z fix: suggested",
+  "2026-11-20T14:33:09Z review: rejected, to be written again",
+  "2026-11-20T14:58:18Z claude-code write: failed the content check, to be written once more",
+  "2026-11-20T14:59:14Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 6e-05,
+  "write": 0.01355,
+  "check": 0.0139,
+  "fix": 0.01824
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches voice in spoken presentations, which is unrelated to active and passive voice in grammar, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Active and passive voice",
+  "card": [
+   [
+    "Active voice",
+    "The doer comes first, then the action, then the receiver. Example: The dog chased the cat."
+   ],
+   [
+    "Passive voice",
+    "The receiver comes first. The verb is usually a form of be plus a past form of the verb. Example: The cat was chased by the dog."
+   ],
+   "In the passive, the doer can be left out. Example: The cat was chased. Now the reader does not know who did it.",
+   "A writer may choose the passive to put the focus on the receiver, or to hide who was responsible. The active makes the doer clear and the sentence direct."
+  ],
+  "remember": "Active names the doer first. Passive puts the receiver first and can hide the doer.",
+  "a": {
+   "q": "In which sentence does the receiver of the action come first?",
+   "opts": [
+    "The window was smashed during the storm",
+    "The storm smashed the window on Friday",
+    "Strong winds smashed the old window",
+    "The window smashed under the heavy hail"
+   ],
+   "why": "The window is the receiver and it comes first, with was smashed after it. In the other options the doer or the thing acting comes first. The last option can look passive, but the window is the one that smashed, not something done to it.",
+   "clue": "Look for the thing the action is done to, placed at the start."
+  },
+  "b": {
+   "d": 3,
+   "q": "A school newsletter says: \"Mistakes were made when the excursion money was counted.\" Why might the writer have chosen this wording?",
+   "opts": [
+    "It leaves out who made the mistakes",
+    "It names the person who made the mistakes",
+    "It makes the sentence more direct and active",
+    "It shows the writer is very certain"
+   ],
+   "why": "Both verbs are passive, and neither names a doer, so the reader is not told who was responsible. An active sentence such as \"The office staff made mistakes\" would name the doer and be more direct. Certainty is a matter of modality, not voice.",
+   "clue": "Does the sentence say who made the mistakes?"
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:18Z",
+   "step": "write",
+   "version": {
+    "title": "Active and passive voice",
+    "card": [
+     [
+      "Active voice",
+      "the doer of the action comes first. In \"The coach picked the team\", the coach is the doer and the team receives the action."
+     ],
+     [
+      "Passive voice",
+      "the receiver comes first, and the verb is a form of be with a past participle, such as picked or eaten. In \"The team was picked by the coach\", the team comes first."
+     ],
+     "In the passive, the doer can be left out: \"The team was picked.\" The reader is no longer told who made the choice.",
+     "Writers may use the passive to keep the focus on the receiver, or to hide who was responsible. The active voice makes the doer clear and the sentence direct."
+    ],
+    "remember": "Active puts the doer first. Passive puts the receiver first and can leave the doer out.",
+    "a": {
+     "q": "Which sentence is in the passive voice?",
+     "opts": [
+      "The fence was painted by Leo",
+      "Leo painted the old fence",
+      "Leo was painting the fence",
+      "Leo has painted the fence"
+     ],
+     "why": "The fence receives the action and comes first, with was plus the past participle painted. Leo was painting the fence uses was too, but Leo, the doer, still comes first, so it is active.",
+     "clue": "Who or what comes first: the doer or the receiver?"
+    },
+    "b": {
+     "d": 3,
+     "q": "A factory's report says: \"The river was polluted last year.\" Why might the factory have chosen this wording?",
+     "opts": [
+      "To avoid saying who polluted the river",
+      "To make clear that it caused the pollution",
+      "To put the doer first so it sounds direct",
+      "To show the pollution is still happening"
+     ],
+     "why": "The sentence is passive and names no doer, so readers are not told who caused the pollution. An active sentence such as \"Our factory polluted the river\" would put the doer first and make the blame clear.",
+     "clue": "Does the sentence say who did the polluting?"
+    }
+   },
+   "problems": [
+    "eng-active-passive-voicea asks the same question, word for word, as eng-active-passive-voice-vica: Which sentence is in the passive voice? Word it differently."
+   ]
+  },
+  {
+   "at": "2026-11-20T14:59:14Z",
+   "step": "write",
+   "version": {
+    "title": "Active and passive voice",
+    "card": [
+     [
+      "Active voice",
+      "the doer of the action comes first. In \"The coach picked the team\", the coach is the doer and the team receives the action."
+     ],
+     [
+      "Passive voice",
+      "the receiver comes first, and the verb is a form of be with a past participle, such as picked or eaten. In \"The team was picked by the coach\", the team comes first."
+     ],
+     "In the passive, the doer can be left out: \"The team was picked.\" The reader is no longer told who made the choice.",
+     "Writers may use the passive to keep the focus on the receiver, or to hide who was responsible. The active voice makes the doer clear and the sentence direct."
+    ],
+    "remember": "Active puts the doer first. Passive puts the receiver first and can leave the doer out.",
+    "a": {
+     "q": "Which of these sentences puts the receiver of the action first?",
+     "opts": [
+      "The fence was painted by Leo",
+      "Leo painted the old fence",
+      "Leo was painting the fence",
+      "Leo has painted the fence"
+     ],
+     "why": "The fence receives the action and comes first, with was plus the past participle painted, so it is passive. Leo was painting the fence uses was too, but Leo, the doer, still comes first, so it is active.",
+     "clue": "Who or what comes first: the doer or the receiver?"
+    },
+    "b": {
+     "d": 3,
+     "q": "A factory's report says: \"The river was polluted last year.\" Why might the factory have chosen this wording?",
+     "opts": [
+      "To avoid saying who polluted the river",
+      "To make clear that it caused the pollution",
+      "To put the doer first so it sounds direct",
+      "To show the pollution is still happening"
+     ],
+     "why": "The sentence is passive and names no doer, so readers are not told who caused the pollution. An active sentence such as \"Our factory polluted the river\" would put the doer first and make the blame clear.",
+     "clue": "Does the sentence say who did the polluting?"
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Active and passive voice",
+  "card": [
+   [
+    "Active voice",
+    "the doer of the action comes first. In \"The coach picked the team\", the coach is the doer and the team receives the action."
+   ],
+   [
+    "Passive voice",
+    "the receiver comes first, and the verb is a form of be with a past participle, such as picked or eaten. In \"The team was picked by the coach\", the team comes first."
+   ],
+   "In the passive, the doer can be left out: \"The team was picked.\" The reader is no longer told who made the choice.",
+   "Writers may use the passive to keep the focus on the receiver, or to hide who was responsible. The active voice makes the doer clear and the sentence direct."
+  ],
+  "remember": "Active puts the doer first. Passive puts the receiver first and can leave the doer out.",
+  "a": {
+   "q": "Which of these sentences puts the receiver of the action first?",
+   "opts": [
+    "The fence was painted by Leo",
+    "Leo painted the old fence",
+    "Leo was painting the fence",
+    "Leo has painted the fence"
+   ],
+   "why": "The fence receives the action and comes first, with was plus the past participle painted, so it is passive. Leo was painting the fence uses was too, but Leo, the doer, still comes first, so it is active.",
+   "clue": "Who or what comes first: the doer or the receiver?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A factory's report says: \"The river was polluted last year.\" Why might the factory have chosen this wording?",
+   "opts": [
+    "To avoid saying who polluted the river",
+    "To make clear that it caused the pollution",
+    "To put the doer first so it sounds direct",
+    "To show the pollution is still happening"
+   ],
+   "why": "The sentence is passive and names no doer, so readers are not told who caused the pollution. An active sentence such as \"Our factory polluted the river\" would put the doer first and make the blame clear.",
+   "clue": "Does the sentence say who did the polluting?"
+  }
+ },
+ "redone": true,
+ "local": []
 }

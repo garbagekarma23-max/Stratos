@@ -24,8 +24,133 @@
    0.209
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:45Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:49Z write: done",
+  "2026-11-20T12:44:54Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "write": 0.0063,
+  "check": 0.01093
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, geo-makes-natural-hazard, is mainly about what turns an event into a hazard, and only touches the hydrological and atmospheric split, so it is broader than the new point and no bank point teaches this classification on its own.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Types of water and weather hazards",
+  "card": [
+   [
+    "Hazard",
+    "A hazard is a natural event that can harm people, property or the environment. Hazards are grouped by what causes them."
+   ],
+   [
+    "Hydrological",
+    "These hazards involve water on or over the land. A flood is the main example: water covers land that is usually dry."
+   ],
+   [
+    "Atmospheric",
+    "These hazards come from the weather. Examples are cyclones, severe storms, droughts and heatwaves."
+   ],
+   "A drought is a long period of much lower rainfall than usual. It is atmospheric because the weather causes it, even though it leaves water supplies short."
+  ],
+  "remember": "Hydrological hazards involve water. Atmospheric hazards come from the weather.",
+  "a": {
+   "q": "Which of these is an atmospheric hazard?",
+   "opts": [
+    "A heatwave in Mildura",
+    "A flood on the Hawkesbury River",
+    "Water covering a paddock near Lismore",
+    "A river bursting its banks at Wagga Wagga"
+   ],
+   "why": "A heatwave is a spell of very hot weather, so it is atmospheric. The other three are floods, where water covers land that is usually dry, which makes them hydrological.",
+   "clue": "Which one comes from the weather rather than from water covering land?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Rain has barely fallen on a farming district near Dubbo for two years. Dams are low and crops are failing. How is this hazard best described?",
+   "opts": [
+    "Atmospheric, because the weather causes it",
+    "Hydrological, because it affects water supplies",
+    "Hydrological, because water is missing from the land",
+    "Atmospheric, because it is a very strong windstorm"
+   ],
+   "why": "A drought is caused by a long spell of low rainfall, which is weather, so it is atmospheric. It is tempting to call it hydrological because the effects show up in dams and water supplies, but the card sorts hazards by their cause.",
+   "clue": "Sort the hazard by what causes it, not by what it affects."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A heatwave in Mildura",
+   "also_right": []
+  },
+  "b": {
+   "best": "Atmospheric, because the weather causes it",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Types of water and weather hazards",
+  "card": [
+   [
+    "Hazard",
+    "A hazard is a natural event that can harm people, property or the environment. Hazards are grouped by what causes them."
+   ],
+   [
+    "Hydrological",
+    "These hazards involve water on or over the land. A flood is the main example: water covers land that is usually dry."
+   ],
+   [
+    "Atmospheric",
+    "These hazards come from the weather. Examples are cyclones, severe storms, droughts and heatwaves."
+   ],
+   "A drought is a long period of much lower rainfall than usual. It is atmospheric because the weather causes it, even though it leaves water supplies short."
+  ],
+  "remember": "Hydrological hazards involve water. Atmospheric hazards come from the weather.",
+  "a": {
+   "q": "Which of these is an atmospheric hazard?",
+   "opts": [
+    "A heatwave in Mildura",
+    "A flood on the Hawkesbury River",
+    "Water covering a paddock near Lismore",
+    "A river bursting its banks at Wagga Wagga"
+   ],
+   "why": "A heatwave is a spell of very hot weather, so it is atmospheric. The other three are floods, where water covers land that is usually dry, which makes them hydrological.",
+   "clue": "Which one comes from the weather rather than from water covering land?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Rain has barely fallen on a farming district near Dubbo for two years. Dams are low and crops are failing. How is this hazard best described?",
+   "opts": [
+    "Atmospheric, because the weather causes it",
+    "Hydrological, because it affects water supplies",
+    "Hydrological, because water is missing from the land",
+    "Atmospheric, because it is a very strong windstorm"
+   ],
+   "why": "A drought is caused by a long spell of low rainfall, which is weather, so it is atmospheric. It is tempting to call it hydrological because the effects show up in dams and water supplies, but the card sorts hazards by their cause.",
+   "clue": "Sort the hazard by what causes it, not by what it affects."
+  }
+ },
+ "cleared_by": "checker"
 }

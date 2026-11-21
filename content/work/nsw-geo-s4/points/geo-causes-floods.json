@@ -16,8 +16,232 @@
    0.263
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:45Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:49Z write: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.00626,
+  "check": 0.01285,
+  "fix": 0.02601,
+  "recheck": 0.00954
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Floods and tropical cyclones, is broader: it centres on cyclones and storm surges and only touches river and drain flooding, and it does not cover long rain or ground that cannot absorb water, which the new point's brief describes.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "What causes floods",
+  "card": [
+   "A flood happens when water covers land that is usually dry. Most floods start with rain.",
+   [
+    "River flood",
+    "heavy rain, or rain that lasts many days, fills a river with more water than its banks can hold. The river overflows onto the land beside it, called the floodplain."
+   ],
+   [
+    "Flash flood",
+    "rain falls faster than the ground can soak it up or drains can carry it away. Water collects on the surface, often in towns and cities with many hard surfaces such as roads."
+   ],
+   "Ground that is already wet, or is hard and paved, takes in less water. This means the same rain can cause a bigger flood."
+  ],
+  "remember": "Floods happen when there is more water than rivers, soil and drains can take.",
+  "a": {
+   "q": "Why does a river flood after many days of heavy rain?",
+   "opts": [
+    "It receives more water than its banks can hold",
+    "The soil beside it makes extra water",
+    "The river's banks soak up too little sun",
+    "The sea pushes water up into the river"
+   ],
+   "why": "Long, heavy rain puts more water into the river than its channel can carry, so it spills over onto the floodplain. The sea is not the cause in this case, as the card says most floods start with rain.",
+   "clue": "Think about how much water the river channel can carry."
+  },
+  "b": {
+   "d": 3,
+   "q": "A storm drops heavy rain on a suburb in Penrith in under an hour. Streets flood, although no river has overflowed. What best explains this?",
+   "opts": [
+    "Rain fell faster than the ground and drains could take it",
+    "The nearest river rose over its banks and spread out",
+    "Many days of light rain filled the nearby river slowly",
+    "The soil in the suburb was too dry to hold any water"
+   ],
+   "why": "This is a flash flood. Rain fell faster than the ground could soak it up and the drains could carry it away, so water collected on the streets. A river overflow is wrong because the question says no river overflowed.",
+   "clue": "No river is involved, so look at the ground and drains."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It receives more water than its banks can hold",
+   "also_right": []
+  },
+  "b": {
+   "best": "Rain fell faster than the ground and drains could take it",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue ('look at the ground and drains') repeats the key words of the right option, and the stem already rules out both river options. A student can pick the answer without knowing what causes a flash flood."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why rules out the sea option because 'the card says most floods start with rain'. That is weak reasoning: the stem itself names many days of heavy rain as the cause. The sea can push up coastal rivers (storm surge, tides), so the why should rest on the stem, not on 'most floods'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Content is accurate and both answers are clear. Question b's clue nearly gives away the answer, and why (a) uses weak reasoning to rule out the sea option."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The clue ('look at the ground and drains') repeats the key words of the right option, and the stem already rules out both river options. A student can pick the answer without knowing what causes a flash flood.",
+  "Question a, other: The why rules out the sea option because 'the card says most floods start with rain'. That is weak reasoning: the stem itself names many days of heavy rain as the cause. The sea can push up coastal rivers (storm surge, tides), so the why should rest on the stem, not on 'most floods'."
+ ],
+ "proposal": {
+  "title": "What causes floods",
+  "card": [
+   "A flood happens when water covers land that is usually dry. Most floods start with rain.",
+   [
+    "River flood",
+    "heavy rain, or rain that lasts many days, fills a river with more water than its banks can hold. The river overflows onto the land beside it, called the floodplain."
+   ],
+   [
+    "Flash flood",
+    "rain falls faster than the ground can soak it up or drains can carry it away. Water collects on the surface, often in towns and cities with many hard surfaces such as roads."
+   ],
+   "Ground that is already wet, or is hard and paved, takes in less water. This means the same rain can cause a bigger flood."
+  ],
+  "remember": "Floods happen when there is more water than rivers, soil and drains can take.",
+  "a": {
+   "q": "Why does a river flood after many days of heavy rain?",
+   "opts": [
+    "It receives more water than its banks can hold",
+    "The soil beside it makes extra water",
+    "The river's banks soak up too little sun",
+    "The sea pushes water up into the river"
+   ],
+   "why": "The question says the cause is many days of heavy rain. That rain puts more water into the river than its channel can carry, so it spills over onto the floodplain. Nothing in this case involves the sea, so the sea option does not explain this flood.",
+   "clue": "Think about how much water the river channel can carry."
+  },
+  "b": {
+   "d": 3,
+   "q": "A storm drops very heavy rain on a suburb in Penrith in under an hour. Water fills the streets, far from any river. What best explains this flood?",
+   "opts": [
+    "Rain fell faster than it could soak in or drain away",
+    "Hard roads and roofs soaked up more rain than grass would",
+    "Wet ground beforehand let more of the rain soak in",
+    "Light rain over many days slowly filled the streets"
+   ],
+   "why": "This is a flash flood. The rain arrived in under an hour, faster than the ground could take it in or the drains could carry it off, so it collected on the streets. Hard surfaces and wet ground take in less water, not more, so those options have the idea backwards.",
+   "clue": "Compare how quickly the water arrived with how quickly it could leave."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It receives more water than its banks can hold",
+    "also_right": []
+   },
+   "b": {
+    "best": "Rain fell faster than it could soak in or drain away",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue ('look at the ground and drains') repeats the key words of the right option, and the stem already rules out both river options. A student can pick the answer without knowing what causes a flash flood."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why rules out the sea option because 'the card says most floods start with rain'. That is weak reasoning: the stem itself names many days of heavy rain as the cause. The sea can push up coastal rivers (storm surge, tides), so the why should rest on the stem, not on 'most floods'."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The clue ('look at the ground and drains') repeats the key words of the right option, and the stem already rules out both river options. A student can pick the answer without knowing what causes a flash flood.",
+   "Question a, other: The why rules out the sea option because 'the card says most floods start with rain'. That is weak reasoning: the stem itself names many days of heavy rain as the cause. The sea can push up coastal rivers (storm surge, tides), so the why should rest on the stem, not on 'most floods'."
+  ]
+ },
+ "final": {
+  "title": "What causes floods",
+  "card": [
+   "A flood happens when water covers land that is usually dry. Most floods start with rain.",
+   [
+    "River flood",
+    "heavy rain, or rain that lasts many days, fills a river with more water than its banks can hold. The river overflows onto the land beside it, called the floodplain."
+   ],
+   [
+    "Flash flood",
+    "rain falls faster than the ground can soak it up or drains can carry it away. Water collects on the surface, often in towns and cities with many hard surfaces such as roads."
+   ],
+   "Ground that is already wet, or is hard and paved, takes in less water. This means the same rain can cause a bigger flood."
+  ],
+  "remember": "Floods happen when there is more water than rivers, soil and drains can take.",
+  "a": {
+   "q": "Why does a river flood after many days of heavy rain?",
+   "opts": [
+    "It receives more water than its banks can hold",
+    "The soil beside it makes extra water",
+    "The river's banks soak up too little sun",
+    "The sea pushes water up into the river"
+   ],
+   "why": "The question says the cause is many days of heavy rain. That rain puts more water into the river than its channel can carry, so it spills over onto the floodplain. Nothing in this case involves the sea, so the sea option does not explain this flood.",
+   "clue": "Think about how much water the river channel can carry."
+  },
+  "b": {
+   "d": 3,
+   "q": "A storm drops very heavy rain on a suburb in Penrith in under an hour. Water fills the streets, far from any river. What best explains this flood?",
+   "opts": [
+    "Rain fell faster than it could soak in or drain away",
+    "Hard roads and roofs soaked up more rain than grass would",
+    "Wet ground beforehand let more of the rain soak in",
+    "Light rain over many days slowly filled the streets"
+   ],
+   "why": "This is a flash flood. The rain arrived in under an hour, faster than the ground could take it in or the drains could carry it off, so it collected on the streets. Hard surfaces and wet ground take in less water, not more, so those options have the idea backwards.",
+   "clue": "Compare how quickly the water arrived with how quickly it could leave."
+  }
+ },
+ "cleared_by": "recheck"
 }

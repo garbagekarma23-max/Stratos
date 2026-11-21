@@ -8,8 +8,361 @@
    0.481
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:56Z write: done",
+  "2026-11-20T12:44:59Z check: flagged",
+  "2026-11-20T12:53:28Z fix: suggested",
+  "2026-11-20T13:23:43Z autoreview: picked as a spot check. It would have been cleared with the fix (b wording, card wording)",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.00805,
+  "check": 0.01284,
+  "fix": 0.01956
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card only covers rearranging with linear inverse steps (multiply, divide, add, subtract), but the new point's example, making r the subject of A = πr², needs square roots, which is a new step the card does not teach.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Changing the subject of a formula",
+  "card": [
+   "The subject of a formula is the pronumeral on its own on one side, such as \\(A\\) in \\(A = \\pi r^{2}\\). Changing the subject means rearranging so a different pronumeral is on its own.",
+   "Use the same inverse steps as when solving an equation. Do the same thing to both sides, and undo the operations in the reverse order to how they were applied.",
+   "Example: make \\(r\\) the subject of \\(A = \\pi r^{2}\\). Divide both sides by \\(\\pi\\) to get \\(\\frac{A}{\\pi} = r^{2}\\). Then take the square root of both sides.",
+   "This gives \\(r = \\sqrt{\\frac{A}{\\pi}}\\), taking the positive root because a radius is a length. Always divide or subtract the whole of the other side, not just part of it."
+  ],
+  "remember": "Undo each operation with its inverse, on both sides, until the pronumeral you want stands alone.",
+  "a": {
+   "q": "Make \\(x\\) the subject of \\(y = 3x + 5\\). Which is correct?",
+   "opts": [
+    "\\(x = \\frac{y - 5}{3}\\)",
+    "\\(x = \\frac{y}{3} - 5\\)",
+    "\\(x = 3(y - 5)\\)",
+    "\\(x = \\frac{y + 5}{3}\\)"
+   ],
+   "why": "First subtract 5 from both sides to get \\(y - 5 = 3x\\), then divide the whole of the left side by 3. Dividing only \\(y\\) by 3 is tempting, but the 5 must be divided by 3 too.",
+   "clue": "Undo the addition first, then the multiplication."
+  },
+  "b": {
+   "d": 3,
+   "q": "The formula \\(v^{2} = u^{2} + 2as\\) gives the speed of a moving object. Which is \\(a\\) made the subject, with \\(a > 0\\) not needed?",
+   "opts": [
+    "\\(a = \\frac{v^{2} - u^{2}}{2s}\\)",
+    "\\(a = \\frac{v - u}{2s}\\)",
+    "\\(a = \\frac{v^{2}}{2s} - u^{2}\\)",
+    "\\(a = \\frac{v^{2} + u^{2}}{2s}\\)"
+   ],
+   "why": "Subtract \\(u^{2}\\) from both sides to get \\(v^{2} - u^{2} = 2as\\), then divide both sides by \\(2s\\). Writing \\(\\frac{v^{2}}{2s} - u^{2}\\) is tempting, but it divides only one term by \\(2s\\).",
+   "clue": "Get the term with \\(a\\) alone first, then divide by what multiplies \\(a\\)."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(x = \\frac{y - 5}{3}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(a = \\frac{v^{2} - u^{2}}{2s}\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The phrase \"with \\(a > 0\\) not needed\" is confusing and ungrammatical. Nothing in the rearrangement involves a sign condition on \\(a\\), so students may wonder what it means. It should be removed."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"Always divide or subtract the whole of the other side, not just part of it\" is misleading. You subtract a term from both sides; you do not subtract \"the whole of the other side\". The rule about the whole side only applies to dividing or multiplying, for example dividing all of \\(y - 5\\) by 3."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both intended answers are correct. Question b has a confusing phrase, \"with \\(a > 0\\) not needed\", that should be removed. The card's last line wrongly says to \"subtract the whole of the other side\" when only dividing applies to the whole side."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The phrase \"with \\(a > 0\\) not needed\" is confusing and ungrammatical. Nothing in the rearrangement involves a sign condition on \\(a\\), so students may wonder what it means. It should be removed.",
+  "Card, wording: \"Always divide or subtract the whole of the other side, not just part of it\" is misleading. You subtract a term from both sides; you do not subtract \"the whole of the other side\". The rule about the whole side only applies to dividing or multiplying, for example dividing all of \\(y - 5\\) by 3."
+ ],
+ "proposal": {
+  "title": "Changing the subject of a formula",
+  "card": [
+   "The subject of a formula is the pronumeral on its own on one side, such as \\(A\\) in \\(A = \\pi r^{2}\\). Changing the subject means rearranging so a different pronumeral is on its own.",
+   "Use the same inverse steps as when solving an equation. Do the same thing to both sides, and undo the operations in the reverse order to how they were applied.",
+   "Example: make \\(r\\) the subject of \\(A = \\pi r^{2}\\). Divide both sides by \\(\\pi\\) to get \\(\\frac{A}{\\pi} = r^{2}\\). Then take the square root of both sides to get \\(r = \\sqrt{\\frac{A}{\\pi}}\\), the positive root because a radius is a length.",
+   "When you divide, divide the whole of the other side, not just one term. From \\(P - 4 = 2k\\), you get \\(k = \\frac{P - 4}{2}\\), not \\(\\frac{P}{2} - 4\\)."
+  ],
+  "remember": "Undo each operation with its inverse, on both sides, until the pronumeral you want stands alone.",
+  "a": {
+   "q": "Make \\(x\\) the subject of \\(y = 3x + 5\\). Which is correct?",
+   "opts": [
+    "\\(x = \\frac{y - 5}{3}\\)",
+    "\\(x = \\frac{y}{3} - 5\\)",
+    "\\(x = 3(y - 5)\\)",
+    "\\(x = \\frac{y + 5}{3}\\)"
+   ],
+   "why": "First subtract 5 from both sides to get \\(y - 5 = 3x\\), then divide the whole of the left side by 3. Dividing only \\(y\\) by 3 is tempting, but the 5 must be divided by 3 too.",
+   "clue": "Undo the addition first, then the multiplication."
+  },
+  "b": {
+   "d": 3,
+   "q": "The formula \\(v^{2} = u^{2} + 2as\\) is used for a moving object. Which shows \\(a\\) made the subject?",
+   "opts": [
+    "\\(a = \\frac{v^{2} - u^{2}}{2s}\\)",
+    "\\(a = \\frac{v - u}{2s}\\)",
+    "\\(a = \\frac{v^{2}}{2s} - u^{2}\\)",
+    "\\(a = \\frac{v^{2} + u^{2}}{2s}\\)"
+   ],
+   "why": "Subtract \\(u^{2}\\) from both sides to get \\(v^{2} - u^{2} = 2as\\), then divide the whole left side by \\(2s\\). Writing \\(\\frac{v^{2}}{2s} - u^{2}\\) is tempting, but it divides only one term by \\(2s\\).",
+   "clue": "Get the term with \\(a\\) alone first, then divide by what multiplies \\(a\\)."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:43Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The phrase \"with \\(a > 0\\) not needed\" is confusing and ungrammatical. Nothing in the rearrangement involves a sign condition on \\(a\\), so students may wonder what it means. It should be removed."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"Always divide or subtract the whole of the other side, not just part of it\" is misleading. You subtract a term from both sides; you do not subtract \"the whole of the other side\". The rule about the whole side only applies to dividing or multiplying, for example dividing all of \\(y - 5\\) by 3."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The phrase \"with \\(a > 0\\) not needed\" is confusing and ungrammatical. Nothing in the rearrangement involves a sign condition on \\(a\\), so students may wonder what it means. It should be removed.",
+   "Card, wording: \"Always divide or subtract the whole of the other side, not just part of it\" is misleading. You subtract a term from both sides; you do not subtract \"the whole of the other side\". The rule about the whole side only applies to dividing or multiplying, for example dividing all of \\(y - 5\\) by 3."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Changing the subject of a formula",
+  "card": [
+   "The subject of a formula is the pronumeral on its own on one side, such as \\(A\\) in \\(A = \\pi r^{2}\\). Changing the subject means rearranging so a different pronumeral is on its own.",
+   "Use the same inverse steps as when solving an equation. Do the same thing to both sides, and undo the operations in the reverse order to how they were applied.",
+   "Example: make \\(r\\) the subject of \\(A = \\pi r^{2}\\). Divide both sides by \\(\\pi\\) to get \\(\\frac{A}{\\pi} = r^{2}\\). Then take the square root of both sides to get \\(r = \\sqrt{\\frac{A}{\\pi}}\\), the positive root because a radius is a length.",
+   "When you divide, divide the whole of the other side, not just one term. From \\(P - 4 = 2k\\), you get \\(k = \\frac{P - 4}{2}\\), not \\(\\frac{P}{2} - 4\\)."
+  ],
+  "remember": "Undo each operation with its inverse, on both sides, until the pronumeral you want stands alone.",
+  "a": {
+   "q": "Make \\(x\\) the subject of \\(y = 3x + 5\\). Which is correct?",
+   "opts": [
+    "\\(x = \\frac{y - 5}{3}\\)",
+    "\\(x = \\frac{y}{3} - 5\\)",
+    "\\(x = 3(y - 5)\\)",
+    "\\(x = \\frac{y + 5}{3}\\)"
+   ],
+   "why": "First subtract 5 from both sides to get \\(y - 5 = 3x\\), then divide the whole of the left side by 3. Dividing only \\(y\\) by 3 is tempting, but the 5 must be divided by 3 too.",
+   "clue": "Undo the addition first, then the multiplication."
+  },
+  "b": {
+   "d": 3,
+   "q": "The formula \\(v^{2} = u^{2} + 2as\\) is used for a moving object. Which shows \\(a\\) made the subject?",
+   "opts": [
+    "\\(a = \\frac{v^{2} - u^{2}}{2s}\\)",
+    "\\(a = \\frac{v - u}{2s}\\)",
+    "\\(a = \\frac{v^{2}}{2s} - u^{2}\\)",
+    "\\(a = \\frac{v^{2} + u^{2}}{2s}\\)"
+   ],
+   "why": "Subtract \\(u^{2}\\) from both sides to get \\(v^{2} - u^{2} = 2as\\), then divide the whole left side by \\(2s\\). Writing \\(\\frac{v^{2}}{2s} - u^{2}\\) is tempting, but it divides only one term by \\(2s\\).",
+   "clue": "Get the term with \\(a\\) alone first, then divide by what multiplies \\(a\\)."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix removes the confusing phrase from question b and rewrites the card's last line so the whole-side rule applies only to dividing, with a correct example. Both answers and every distractor check out.",
+   "item": "172e5c1854a7906e",
+   "result": "decided",
+   "saved": {
+    "id": "mat-changing-subject-formula-2",
+    "title": "Changing the subject of a formula",
+    "brief": "fd5d9c5b9329",
+    "shortlist": [
+     [
+      "mat-changing-subject-formula",
+      0.481
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 1
+    },
+    "usd": {
+     "match": 0.00015,
+     "write": 0.00805,
+     "check": 0.01284,
+     "fix": 0.01956
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The bank card only covers rearranging with linear inverse steps (multiply, divide, add, subtract), but the new point's example, making r the subject of A = πr², needs square roots, which is a new step the card does not teach.",
+     "model": "claude-haiku-5-5"
+    },
+    "alone": true,
+    "draft": {
+     "title": "Changing the subject of a formula",
+     "card": [
+      "The subject of a formula is the pronumeral on its own on one side, such as \\(A\\) in \\(A = \\pi r^{2}\\). Changing the subject means rearranging so a different pronumeral is on its own.",
+      "Use the same inverse steps as when solving an equation. Do the same thing to both sides, and undo the operations in the reverse order to how they were applied.",
+      "Example: make \\(r\\) the subject of \\(A = \\pi r^{2}\\). Divide both sides by \\(\\pi\\) to get \\(\\frac{A}{\\pi} = r^{2}\\). Then take the square root of both sides.",
+      "This gives \\(r = \\sqrt{\\frac{A}{\\pi}}\\), taking the positive root because a radius is a length. Always divide or subtract the whole of the other side, not just part of it."
+     ],
+     "remember": "Undo each operation with its inverse, on both sides, until the pronumeral you want stands alone.",
+     "a": {
+      "q": "Make \\(x\\) the subject of \\(y = 3x + 5\\). Which is correct?",
+      "opts": [
+       "\\(x = \\frac{y - 5}{3}\\)",
+       "\\(x = \\frac{y}{3} - 5\\)",
+       "\\(x = 3(y - 5)\\)",
+       "\\(x = \\frac{y + 5}{3}\\)"
+      ],
+      "why": "First subtract 5 from both sides to get \\(y - 5 = 3x\\), then divide the whole of the left side by 3. Dividing only \\(y\\) by 3 is tempting, but the 5 must be divided by 3 too.",
+      "clue": "Undo the addition first, then the multiplication."
+     },
+     "b": {
+      "d": 3,
+      "q": "The formula \\(v^{2} = u^{2} + 2as\\) gives the speed of a moving object. Which is \\(a\\) made the subject, with \\(a > 0\\) not needed?",
+      "opts": [
+       "\\(a = \\frac{v^{2} - u^{2}}{2s}\\)",
+       "\\(a = \\frac{v - u}{2s}\\)",
+       "\\(a = \\frac{v^{2}}{2s} - u^{2}\\)",
+       "\\(a = \\frac{v^{2} + u^{2}}{2s}\\)"
+      ],
+      "why": "Subtract \\(u^{2}\\) from both sides to get \\(v^{2} - u^{2} = 2as\\), then divide both sides by \\(2s\\). Writing \\(\\frac{v^{2}}{2s} - u^{2}\\) is tempting, but it divides only one term by \\(2s\\).",
+      "clue": "Get the term with \\(a\\) alone first, then divide by what multiplies \\(a\\)."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "\\(x = \\frac{y - 5}{3}\\)",
+      "also_right": []
+     },
+     "b": {
+      "best": "\\(a = \\frac{v^{2} - u^{2}}{2s}\\)",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The phrase \"with \\(a > 0\\) not needed\" is confusing and ungrammatical. Nothing in the rearrangement involves a sign condition on \\(a\\), so students may wonder what it means. It should be removed."
+      },
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "\"Always divide or subtract the whole of the other side, not just part of it\" is misleading. You subtract a term from both sides; you do not subtract \"the whole of the other side\". The rule about the whole side only applies to dividing or multiplying, for example dividing all of \\(y - 5\\) by 3."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both intended answers are correct. Question b has a confusing phrase, \"with \\(a > 0\\) not needed\", that should be removed. The card's last line wrongly says to \"subtract the whole of the other side\" when only dividing applies to the whole side."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question b, wording: The phrase \"with \\(a > 0\\) not needed\" is confusing and ungrammatical. Nothing in the rearrangement involves a sign condition on \\(a\\), so students may wonder what it means. It should be removed.",
+     "Card, wording: \"Always divide or subtract the whole of the other side, not just part of it\" is misleading. You subtract a term from both sides; you do not subtract \"the whole of the other side\". The rule about the whole side only applies to dividing or multiplying, for example dividing all of \\(y - 5\\) by 3."
+    ],
+    "proposal": {
+     "title": "Changing the subject of a formula",
+     "card": [
+      "The subject of a formula is the pronumeral on its own on one side, such as \\(A\\) in \\(A = \\pi r^{2}\\). Changing the subject means rearranging so a different pronumeral is on its own.",
+      "Use the same inverse steps as when solving an equation. Do the same thing to both sides, and undo the operations in the reverse order to how they were applied.",
+      "Example: make \\(r\\) the subject of \\(A = \\pi r^{2}\\). Divide both sides by \\(\\pi\\) to get \\(\\frac{A}{\\pi} = r^{2}\\). Then take the square root of both sides to get \\(r = \\sqrt{\\frac{A}{\\pi}}\\), the positive root because a radius is a length.",
+      "When you divide, divide the whole of the other side, not just one term. From \\(P - 4 = 2k\\), you get \\(k = \\frac{P - 4}{2}\\), not \\(\\frac{P}{2} - 4\\)."
+     ],
+     "remember": "Undo each operation with its inverse, on both sides, until the pronumeral you want stands alone.",
+     "a": {
+      "q": "Make \\(x\\) the subject of \\(y = 3x + 5\\). Which is correct?",
+      "opts": [
+       "\\(x = \\frac{y - 5}{3}\\)",
+       "\\(x = \\frac{y}{3} - 5\\)",
+       "\\(x = 3(y - 5)\\)",
+       "\\(x = \\frac{y + 5}{3}\\)"
+      ],
+      "why": "First subtract 5 from both sides to get \\(y - 5 = 3x\\), then divide the whole of the left side by 3. Dividing only \\(y\\) by 3 is tempting, but the 5 must be divided by 3 too.",
+      "clue": "Undo the addition first, then the multiplication."
+     },
+     "b": {
+      "d": 3,
+      "q": "The formula \\(v^{2} = u^{2} + 2as\\) is used for a moving object. Which shows \\(a\\) made the subject?",
+      "opts": [
+       "\\(a = \\frac{v^{2} - u^{2}}{2s}\\)",
+       "\\(a = \\frac{v - u}{2s}\\)",
+       "\\(a = \\frac{v^{2}}{2s} - u^{2}\\)",
+       "\\(a = \\frac{v^{2} + u^{2}}{2s}\\)"
+      ],
+      "why": "Subtract \\(u^{2}\\) from both sides to get \\(v^{2} - u^{2} = 2as\\), then divide the whole left side by \\(2s\\). Writing \\(\\frac{v^{2}}{2s} - u^{2}\\) is tempting, but it divides only one term by \\(2s\\).",
+      "clue": "Get the term with \\(a\\) alone first, then divide by what multiplies \\(a\\)."
+     }
+    },
+    "proposal_problems": [],
+    "auto": {
+     "at": "2026-11-20T13:23:43Z",
+     "rules": 1,
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The phrase \"with \\(a > 0\\) not needed\" is confusing and ungrammatical. Nothing in the rearrangement involves a sign condition on \\(a\\), so students may wonder what it means. It should be removed."
+      },
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "\"Always divide or subtract the whole of the other side, not just part of it\" is misleading. You subtract a term from both sides; you do not subtract \"the whole of the other side\". The rule about the whole side only applies to dividing or multiplying, for example dividing all of \\(y - 5\\) by 3."
+      }
+     ],
+     "flags": [
+      "Question b, wording: The phrase \"with \\(a > 0\\) not needed\" is confusing and ungrammatical. Nothing in the rearrangement involves a sign condition on \\(a\\), so students may wonder what it means. It should be removed.",
+      "Card, wording: \"Always divide or subtract the whole of the other side, not just part of it\" is misleading. You subtract a term from both sides; you do not subtract \"the whole of the other side\". The rule about the whole side only applies to dividing or multiplying, for example dividing all of \\(y - 5\\) by 3."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "a716bded39484a89"
+  }
  ]
 }

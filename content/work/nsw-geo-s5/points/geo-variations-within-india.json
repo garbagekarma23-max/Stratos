@@ -16,8 +16,172 @@
    0.205
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 says reuse geo-wellbeing-within-india, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:47Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:50Z write: failed the content check, writing again",
+  "2026-11-20T12:44:56Z write: done",
+  "2026-11-20T12:53:25Z check: flagged",
+  "2026-11-20T12:59:58Z fix: suggested",
+  "2026-11-20T14:39:50Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "confirm": 0.00702,
+  "write": 0.01345,
+  "check": 0.01094,
+  "fix": 0.02023
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "geo-wellbeing-within-india",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point Wellbeing within India teaches the same idea at the right depth, showing that wellbeing varies between rich and poor states, cities and villages, and within places, with questions and examples that suit a Stage 5 student.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card covers city–rural and within-city gaps in India, but the new point also needs differences between social groups and historical causes, which would add content rather than a small change.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Variations within India",
+  "card": [
+   "Wellbeing is not the same everywhere in one country. In India, it differs between places and between groups of people.",
+   "Between states: some states, such as Kerala, have higher incomes, longer lives and higher literacy than poorer states, such as Bihar.",
+   "Between cities and villages: cities usually have more jobs, hospitals and schools. Many villages have fewer services and lower incomes.",
+   "Between social groups: some groups have faced unfair treatment for a long time, which can limit their access to schooling, jobs and health care. Income, services and history all help explain the gaps."
+  ],
+  "remember": "Wellbeing in India differs by place and by group, and income, services and history all play a part.",
+  "a": {
+   "q": "Which statement best describes wellbeing across India?",
+   "opts": [
+    "It differs by state, by city or village, and by group",
+    "It is the same in every state as India has one government",
+    "It differs between states but not within them",
+    "It is higher in villages than in cities as they are quieter"
+   ],
+   "why": "The card shows gaps between states, between cities and villages, and between social groups. Having one government does not make wellbeing equal, because income and services differ from place to place.",
+   "clue": "Think about how many kinds of gap the card names."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two girls in India are the same age. Asha lives in a village with a distant clinic and a school that has few teachers. Priya lives in a city with a nearby hospital and several schools. Which reason best explains why Asha's wellbeing is likely to be lower?",
+   "opts": [
+    "Her village has fewer services, such as clinics and schools",
+    "India's cities have lower incomes than its villages",
+    "All people in villages choose to spend less on education",
+    "Her state's name decides how long she will live"
+   ],
+   "why": "Fewer health and school services in villages can limit wellbeing, and cities usually have more of them. The claim that cities have lower incomes is wrong, because cities usually have more jobs and higher incomes.",
+   "clue": "Compare the services each girl can reach."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It differs by state, by city or village, and by group",
+   "also_right": []
+  },
+  "b": {
+   "best": "Her village has fewer services, such as clinics and schools",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Compare the services each girl can reach' points straight at the only option that mentions services. The stem already describes clinics and schools, so a student can pick the answer without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "other-sensitive",
+  "summary": "The facts check out: Kerala is ahead of Bihar on income, life expectancy and literacy, and cities have more services than villages. Question b's clue, together with its stem, gives the answer away."
+ },
+ "sensitive": "other-sensitive",
+ "flags": [
+  "Question b, other: The clue 'Compare the services each girl can reach' points straight at the only option that mentions services. The stem already describes clinics and schools, so a student can pick the answer without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Variations within India",
+  "card": [
+   "Wellbeing is not the same everywhere in one country. In India, it differs between places and between groups of people.",
+   "Between states: some states, such as Kerala, have higher incomes, longer lives and higher literacy than poorer states, such as Bihar.",
+   "Between cities and villages: cities usually have more jobs, hospitals and schools. Many villages have fewer services and lower incomes.",
+   "Between social groups: some groups have faced unfair treatment for a long time, which can limit their access to schooling, jobs and health care. Income, services and history all help explain the gaps."
+  ],
+  "remember": "Wellbeing in India differs by place and by group, and income, services and history all play a part.",
+  "a": {
+   "q": "Which statement best describes wellbeing across India?",
+   "opts": [
+    "It differs by state, by city or village, and by group",
+    "It is the same in every state as India has one government",
+    "It differs between states but not within them",
+    "It is higher in villages than in cities as they are quieter"
+   ],
+   "why": "The card shows gaps between states, between cities and villages, and between social groups. Having one government does not make wellbeing equal, because income and services differ from place to place.",
+   "clue": "Think about how many kinds of gap the card names."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two families live in the same village in India and earn similar incomes. One belongs to a social group that has faced unfair treatment for a long time. Why might that family still have lower wellbeing?",
+   "opts": [
+    "Unfair treatment over time can limit its access to services",
+    "Villages have fewer services, so place explains the gap",
+    "Its state has lower incomes than richer states like Kerala",
+    "It earns less money, which is the main cause of the gap"
+   ],
+   "why": "The families share a village, a state and similar incomes, so place and income cannot explain the difference. A group treated unfairly for a long time can have less access to schooling, jobs and health care. Fewer village services is tempting, but it would affect both families.",
+   "clue": "Rule out what the two families have in common."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Variations within India",
+  "card": [
+   "Wellbeing is not the same everywhere in one country. In India, it differs between places and between groups of people.",
+   "Between states: some states, such as Kerala, have higher incomes, longer lives and higher literacy than poorer states, such as Bihar.",
+   "Between cities and villages: cities usually have more jobs, hospitals and schools. Many villages have fewer services and lower incomes.",
+   "Between social groups: some groups have faced unfair treatment for a long time, which can limit their access to schooling, jobs and health care. Income, services and history all help explain the gaps."
+  ],
+  "remember": "Wellbeing in India differs by place and by group, and income, services and history all play a part.",
+  "a": {
+   "q": "Which statement best describes wellbeing across India?",
+   "opts": [
+    "It differs by state, by city or village, and by group",
+    "It is the same in every state as India has one government",
+    "It differs between states but not within them",
+    "It is higher in villages than in cities as they are quieter"
+   ],
+   "why": "The card shows gaps between states, between cities and villages, and between social groups. Having one government does not make wellbeing equal, because income and services differ from place to place.",
+   "clue": "Think about how many kinds of gap the card names."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two families live in the same village in India and earn similar incomes. One belongs to a social group that has faced unfair treatment for a long time. Why might that family still have lower wellbeing?",
+   "opts": [
+    "Unfair treatment over time can limit its access to services",
+    "Villages have fewer services, so place explains the gap",
+    "Its state has lower incomes than richer states like Kerala",
+    "It earns less money, which is the main cause of the gap"
+   ],
+   "why": "The families share a village, a state and similar incomes, so place and income cannot explain the difference. A group treated unfairly for a long time can have less access to schooling, jobs and health care. Fewer village services is tempting, but it would affect both families.",
+   "clue": "Rule out what the two families have in common."
+  }
+ },
+ "cleared_by": "owner"
 }

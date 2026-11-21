@@ -24,8 +24,126 @@
    0.332
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 may adapt sci-reading-chemical-formulas, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:59Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "confirm": 0.00814,
+  "write": 0.01095,
+  "check": 0.00783
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "sci-reading-chemical-formulas",
+  "changes": [
+   "The bank point teaches reading formulas such as H2O and NH3, but the new point also needs the element symbol rule of one or two letters, which is covered in the sci-atoms-elements card, so the course should pair it with that point's symbol content."
+  ],
+  "sure": "low",
+  "reason": "No single bank point covers both element symbols and reading formulas, so the closest match is the formulas card, which would need the symbol rule added; because the new point combines two ideas, a new point may be the safer choice.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The new point combines one- and two-letter element symbols with the idea that a formula such as H2O or CO2 shows which elements are joined in a compound, but no single bank point does both. 'Atoms and elements' teaches symbols alongside the definition of an element, and 'Reading chemical formulas' teaches counting atoms from subscripts.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Element symbols and compounds",
+  "card": [
+   "Each element has a symbol of one or two letters. The first letter is a capital and the second, if there is one, is small. Carbon is C and calcium is Ca.",
+   "Some symbols come from older names, often Latin. Sodium is Na and iron is Fe.",
+   "A compound is made of two or more different elements joined together. Its formula shows which elements are in it.",
+   "A small number after a symbol tells how many atoms of that element are in the formula. In CO2 there is one carbon atom and two oxygen atoms. With no number, there is one atom."
+  ],
+  "remember": "A symbol names an element. A formula uses symbols and small numbers to show what a compound is made of.",
+  "a": {
+   "q": "Which formula shows a compound with one sulfur atom and three oxygen atoms?",
+   "opts": [
+    "SO3",
+    "S3O",
+    "S3O3",
+    "SO"
+   ],
+   "why": "S is sulfur and O is oxygen. The small number 3 after O gives three oxygen atoms, and no number after S means one sulfur atom. S3O has the numbers on the wrong atoms.",
+   "clue": "The small number goes after the symbol it counts."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dani reads the formula CaCO3 on a bag of garden lime. Which statement about CaCO3 is correct?",
+   "opts": [
+    "It is a compound with three elements, and three oxygen atoms",
+    "It is an element with two letters in its symbol",
+    "It is a compound with two elements, and three calcium atoms",
+    "It is a compound with three elements, and three carbon atoms"
+   ],
+   "why": "Ca, C and O are three different elements, so CaCO3 is a compound. Only O has a small 3, so there are three oxygen atoms. Ca is one symbol of two letters, not C and a separate a.",
+   "clue": "Split the formula at each capital letter."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "SO3",
+   "also_right": []
+  },
+  "b": {
+   "best": "It is a compound with three elements, and three oxygen atoms",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Element symbols and compounds",
+  "card": [
+   "Each element has a symbol of one or two letters. The first letter is a capital and the second, if there is one, is small. Carbon is C and calcium is Ca.",
+   "Some symbols come from older names, often Latin. Sodium is Na and iron is Fe.",
+   "A compound is made of two or more different elements joined together. Its formula shows which elements are in it.",
+   "A small number after a symbol tells how many atoms of that element are in the formula. In CO2 there is one carbon atom and two oxygen atoms. With no number, there is one atom."
+  ],
+  "remember": "A symbol names an element. A formula uses symbols and small numbers to show what a compound is made of.",
+  "a": {
+   "q": "Which formula shows a compound with one sulfur atom and three oxygen atoms?",
+   "opts": [
+    "SO3",
+    "S3O",
+    "S3O3",
+    "SO"
+   ],
+   "why": "S is sulfur and O is oxygen. The small number 3 after O gives three oxygen atoms, and no number after S means one sulfur atom. S3O has the numbers on the wrong atoms.",
+   "clue": "The small number goes after the symbol it counts."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dani reads the formula CaCO3 on a bag of garden lime. Which statement about CaCO3 is correct?",
+   "opts": [
+    "It is a compound with three elements, and three oxygen atoms",
+    "It is an element with two letters in its symbol",
+    "It is a compound with two elements, and three calcium atoms",
+    "It is a compound with three elements, and three carbon atoms"
+   ],
+   "why": "Ca, C and O are three different elements, so CaCO3 is a compound. Only O has a small 3, so there are three oxygen atoms. Ca is one symbol of two letters, not C and a separate a.",
+   "clue": "Split the formula at each capital letter."
+  }
+ },
+ "cleared_by": "checker"
 }

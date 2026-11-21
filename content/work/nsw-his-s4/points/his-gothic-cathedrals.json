@@ -3,8 +3,449 @@
  "title": "Gothic cathedrals",
  "brief": "f546257e17b0",
  "shortlist": [],
- "stage": "write",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, write"
- ]
+  "2026-11-12T12:22:36Z new, write",
+  "2026-11-20T12:15:18Z write: done",
+  "2026-11-20T12:25:49Z check: flagged",
+  "2026-11-20T12:35:51Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (a fact)",
+  "2026-11-20T13:44:56Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00676,
+  "check": 0.01114,
+  "fix": 0.01969,
+  "recheck": 0.01232
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, fact: Why (a) says the buttresses took the push of 'the heavy stone roof'. Gothic cathedrals usually had timber roofs above stone vaults, and the outward push came mainly from the stone vaults. The card says only 'heavy roof'. Say 'the heavy stone ceiling (vault) and roof', or keep the card's wording.",
+ "rejected": {
+  "title": "Gothic cathedrals",
+  "card": [
+   "Gothic cathedrals were tall stone churches built in European towns from about the 1100s. They cost huge sums and often took decades to build, so they showed a town's wealth and its faith in God.",
+   [
+    "Pointed arches",
+    "arches that rise to a point, not a curve. They carried weight better than rounded arches, so walls could be taller."
+   ],
+   [
+    "Flying buttresses",
+    "stone supports built outside the walls. They took the push of the heavy roof, so the walls could hold large windows."
+   ],
+   [
+    "Stained glass",
+    "windows made of coloured glass. They let in light and often showed Bible stories, which people who could not read could still follow."
+   ]
+  ],
+  "remember": "Gothic features let walls rise high and fill with light, and the whole building showed a town's wealth and faith.",
+  "a": {
+   "q": "What did flying buttresses allow Gothic builders to do?",
+   "opts": [
+    "Build tall walls with large windows",
+    "Make the roof out of lighter timber",
+    "Replace stone with coloured glass",
+    "Build churches without any arches"
+   ],
+   "why": "Flying buttresses took the push of the heavy stone roof from outside. This let the walls hold large windows. They did not replace stone or arches, because the cathedral was still built of stone with pointed arches.",
+   "clue": "Think about what held up the roof from outside the walls."
+  },
+  "b": {
+   "d": 3,
+   "q": "A town in medieval France spent decades building a huge cathedral with tall windows of coloured glass. What did this most clearly show?",
+   "opts": [
+    "The town had both wealth and strong faith",
+    "The town had no need for stone buildings",
+    "The town's people could all read the Bible",
+    "The town needed a fort to defend itself"
+   ],
+   "why": "A huge cathedral cost a great deal and took many years, so it showed the town's wealth. It was built as a church, so it also showed faith. The glass told Bible stories because many people could not read, so it does not show that everyone could read.",
+   "clue": "Think about the cost of the building and why it was built."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "image",
+    "brief": "A photo of the outside of a Gothic cathedral, such as Notre-Dame de Paris or Chartres Cathedral, showing the pointed arches, flying buttresses and stained glass windows.",
+    "why": "It lets students see the three Gothic features named on the card and the size of the building."
+   }
+  ]
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, fact: Why (a) says the buttresses took the push of 'the heavy stone roof'. Gothic cathedrals usually had timber roofs above stone vaults, and the outward push came mainly from the stone vaults. The card says only 'heavy roof'. Say 'the heavy stone ceiling (vault) and roof', or keep the card's wording."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Gothic cathedrals",
+     "card": [
+      "Gothic cathedrals were large stone churches built in Europe from about the 1100s. They are known for their height and their light-filled interiors.",
+      [
+       "Pointed arches",
+       "arches that rise to a point, not a curve. They carried weight better than rounded arches, so walls could be taller."
+      ],
+      [
+       "Flying buttresses",
+       "stone supports built outside the walls. They took the push of the heavy roof, so the walls could hold large windows."
+      ],
+      [
+       "Stained glass",
+       "windows made of coloured glass. They let in light and often showed Bible stories, which people who could not read could still follow."
+      ]
+     ],
+     "remember": "Gothic cathedrals used pointed arches, flying buttresses and stained glass, and they showed a town's wealth and faith.",
+     "a": {
+      "q": "What did flying buttresses allow Gothic builders to do?",
+      "opts": [
+       "Build tall walls with large windows",
+       "Make the roof out of lighter timber",
+       "Replace stone with coloured glass",
+       "Build churches without any arches"
+      ],
+      "why": "Flying buttresses took the push of the heavy stone roof from outside. This let the walls hold large windows. They did not replace stone or arches, because the cathedral was still built of stone.",
+      "clue": "Think about what held up the roof from outside the walls."
+     },
+     "b": {
+      "d": 3,
+      "q": "A town in medieval France spent decades building a huge cathedral with tall windows of coloured glass. What did this most clearly show?",
+      "opts": [
+       "The town had both wealth and strong faith",
+       "The town had no need for stone buildings",
+       "The town's people could all read the Bible",
+       "The town was ruled by a king, not a lord"
+      ],
+      "why": "A huge cathedral cost a great deal and took many years, so it showed wealth. Its religious scenes and purpose showed faith. The glass told Bible stories because many people could not read, so it does not show that all could read.",
+      "clue": "Think about the cost of the building and why it was built."
+     },
+     "wants": [
+      {
+       "at": "card 1",
+       "kind": "image",
+       "brief": "A photo of the outside of a Gothic cathedral, such as Notre-Dame de Paris or Chartres Cathedral, showing the pointed arches, flying buttresses and stained glass windows.",
+       "why": "It lets students see the three Gothic features named on the card."
+      }
+     ]
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Build tall walls with large windows",
+      "also_right": []
+     },
+     "b": {
+      "best": "The town had both wealth and strong faith",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "remember",
+       "kind": "other",
+       "detail": "The remember line says cathedrals showed a town's wealth and faith, but no card line teaches this. The card covers only construction features and Bible stories in glass, not cost, wealth or faith as the point of building."
+      },
+      {
+       "part": "b",
+       "kind": "level",
+       "detail": "Question b depends on the cathedrals-as-wealth-and-faith idea, which appears only in the remember line and is never taught or explained on the card. The card should state that their cost and purpose showed a town's wealth and faith."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts are sound. The card never teaches that cathedrals showed a town's wealth and faith, yet the remember line states it and question b depends on it. Add a card line explaining this."
+    },
+    "flags": [
+     "Remember, other: The remember line says cathedrals showed a town's wealth and faith, but no card line teaches this. The card covers only construction features and Bible stories in glass, not cost, wealth or faith as the point of building.",
+     "Question b, level: Question b depends on the cathedrals-as-wealth-and-faith idea, which appears only in the remember line and is never taught or explained on the card. The card should state that their cost and purpose showed a town's wealth and faith."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Gothic cathedrals",
+     "card": [
+      "Gothic cathedrals were tall stone churches built in European towns from about the 1100s. They cost huge sums and often took decades to build, so they showed a town's wealth and its faith in God.",
+      [
+       "Pointed arches",
+       "arches that rise to a point, not a curve. They carried weight better than rounded arches, so walls could be taller."
+      ],
+      [
+       "Flying buttresses",
+       "stone supports built outside the walls. They took the push of the heavy roof, so the walls could hold large windows."
+      ],
+      [
+       "Stained glass",
+       "windows made of coloured glass. They let in light and often showed Bible stories, which people who could not read could still follow."
+      ]
+     ],
+     "remember": "Gothic features let walls rise high and fill with light, and the whole building showed a town's wealth and faith.",
+     "a": {
+      "q": "What did flying buttresses allow Gothic builders to do?",
+      "opts": [
+       "Build tall walls with large windows",
+       "Make the roof out of lighter timber",
+       "Replace stone with coloured glass",
+       "Build churches without any arches"
+      ],
+      "why": "Flying buttresses took the push of the heavy stone roof from outside. This let the walls hold large windows. They did not replace stone or arches, because the cathedral was still built of stone with pointed arches.",
+      "clue": "Think about what held up the roof from outside the walls."
+     },
+     "b": {
+      "d": 3,
+      "q": "A town in medieval France spent decades building a huge cathedral with tall windows of coloured glass. What did this most clearly show?",
+      "opts": [
+       "The town had both wealth and strong faith",
+       "The town had no need for stone buildings",
+       "The town's people could all read the Bible",
+       "The town needed a fort to defend itself"
+      ],
+      "why": "A huge cathedral cost a great deal and took many years, so it showed the town's wealth. It was built as a church, so it also showed faith. The glass told Bible stories because many people could not read, so it does not show that everyone could read.",
+      "clue": "Think about the cost of the building and why it was built."
+     },
+     "wants": [
+      {
+       "at": "card 1",
+       "kind": "image",
+       "brief": "A photo of the outside of a Gothic cathedral, such as Notre-Dame de Paris or Chartres Cathedral, showing the pointed arches, flying buttresses and stained glass windows.",
+       "why": "It lets students see the three Gothic features named on the card and the size of the building."
+      }
+     ]
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Build tall walls with large windows",
+       "also_right": []
+      },
+      "b": {
+       "best": "The town had both wealth and strong faith",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "fact",
+        "detail": "Why (a) says the buttresses took the push of 'the heavy stone roof'. Gothic cathedrals usually had timber roofs above stone vaults, and the outward push came mainly from the stone vaults. The card says only 'heavy roof'. Say 'the heavy stone ceiling (vault) and roof', or keep the card's wording."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are sound and their intended answers are right. One small fact slip: why (a) calls the roof 'stone', when Gothic roofs were timber over stone vaults."
+     },
+     "flags": [
+      "Question a, fact: Why (a) says the buttresses took the push of 'the heavy stone roof'. Gothic cathedrals usually had timber roofs above stone vaults, and the outward push came mainly from the stone vaults. The card says only 'heavy roof'. Say 'the heavy stone ceiling (vault) and roof', or keep the card's wording."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:56Z",
+   "step": "write",
+   "version": {
+    "title": "Gothic cathedrals",
+    "card": [
+     "Gothic cathedrals were tall stone churches built in European towns from about the 1100s. They cost huge sums and often took decades to build, so they showed a town's wealth and its faith in God.",
+     [
+      "Pointed arches",
+      "arches that rise to a point, not a curve. They carried weight better than rounded arches, so walls could be taller."
+     ],
+     [
+      "Flying buttresses",
+      "stone supports built outside the walls. They took the outward push of the heavy stone ceiling and roof, so the walls could hold large windows."
+     ],
+     [
+      "Stained glass",
+      "windows made of coloured glass. They let in light and often showed Bible stories, which people who could not read could still follow."
+     ]
+    ],
+    "remember": "Gothic features let walls rise high and fill with light, and the whole building showed a town's wealth and faith.",
+    "a": {
+     "q": "What did flying buttresses allow Gothic builders to do?",
+     "opts": [
+      "Build tall walls with large windows",
+      "Build thick walls with small windows",
+      "Replace stone with coloured glass",
+      "Build churches without any arches"
+     ],
+     "why": "Flying buttresses took the outward push of the heavy stone ceiling and roof from outside the walls. This let the walls hold large windows, not small ones. They did not replace stone or arches, because the cathedral was still built of stone with pointed arches.",
+     "clue": "Think about what held up the walls from outside."
+    },
+    "b": {
+     "d": 3,
+     "q": "A town in medieval France spent decades building a huge cathedral with tall windows of coloured glass. What did this most clearly show?",
+     "opts": [
+      "The town had both wealth and strong faith",
+      "The town had no need for stone buildings",
+      "The town's people could all read the Bible",
+      "The town needed a fort to defend itself"
+     ],
+     "why": "A huge cathedral cost a great deal and took many years, so it showed the town's wealth. It was built as a church, so it also showed faith. The glass told Bible stories because many people could not read, so it does not show that everyone could read.",
+     "clue": "Think about the cost of the building and why it was built."
+    },
+    "wants": [
+     {
+      "at": "card 1",
+      "kind": "image",
+      "brief": "A photo of the outside of a Gothic cathedral, such as Notre-Dame de Paris or Chartres Cathedral, showing the pointed arches, flying buttresses and stained glass windows.",
+      "why": "It lets students see the three Gothic features named on the card and the size of the building."
+     }
+    ]
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Build tall walls with large windows",
+     "also_right": []
+    },
+    "b": {
+     "best": "The town had both wealth and strong faith",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Gothic cathedrals",
+  "card": [
+   "Gothic cathedrals were tall stone churches built in European towns from about the 1100s. They cost huge sums and often took decades to build, so they showed a town's wealth and its faith in God.",
+   [
+    "Pointed arches",
+    "arches that rise to a point, not a curve. They carried weight better than rounded arches, so walls could be taller."
+   ],
+   [
+    "Flying buttresses",
+    "stone supports built outside the walls. They took the outward push of the heavy stone ceiling and roof, so the walls could hold large windows."
+   ],
+   [
+    "Stained glass",
+    "windows made of coloured glass. They let in light and often showed Bible stories, which people who could not read could still follow."
+   ]
+  ],
+  "remember": "Gothic features let walls rise high and fill with light, and the whole building showed a town's wealth and faith.",
+  "a": {
+   "q": "What did flying buttresses allow Gothic builders to do?",
+   "opts": [
+    "Build tall walls with large windows",
+    "Build thick walls with small windows",
+    "Replace stone with coloured glass",
+    "Build churches without any arches"
+   ],
+   "why": "Flying buttresses took the outward push of the heavy stone ceiling and roof from outside the walls. This let the walls hold large windows, not small ones. They did not replace stone or arches, because the cathedral was still built of stone with pointed arches.",
+   "clue": "Think about what held up the walls from outside."
+  },
+  "b": {
+   "d": 3,
+   "q": "A town in medieval France spent decades building a huge cathedral with tall windows of coloured glass. What did this most clearly show?",
+   "opts": [
+    "The town had both wealth and strong faith",
+    "The town had no need for stone buildings",
+    "The town's people could all read the Bible",
+    "The town needed a fort to defend itself"
+   ],
+   "why": "A huge cathedral cost a great deal and took many years, so it showed the town's wealth. It was built as a church, so it also showed faith. The glass told Bible stories because many people could not read, so it does not show that everyone could read.",
+   "clue": "Think about the cost of the building and why it was built."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "image",
+    "brief": "A photo of the outside of a Gothic cathedral, such as Notre-Dame de Paris or Chartres Cathedral, showing the pointed arches, flying buttresses and stained glass windows.",
+    "why": "It lets students see the three Gothic features named on the card and the size of the building."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Build tall walls with large windows",
+   "also_right": []
+  },
+  "b": {
+   "best": "The town had both wealth and strong faith",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Gothic cathedrals",
+  "card": [
+   "Gothic cathedrals were tall stone churches built in European towns from about the 1100s. They cost huge sums and often took decades to build, so they showed a town's wealth and its faith in God.",
+   [
+    "Pointed arches",
+    "arches that rise to a point, not a curve. They carried weight better than rounded arches, so walls could be taller."
+   ],
+   [
+    "Flying buttresses",
+    "stone supports built outside the walls. They took the outward push of the heavy stone ceiling and roof, so the walls could hold large windows."
+   ],
+   [
+    "Stained glass",
+    "windows made of coloured glass. They let in light and often showed Bible stories, which people who could not read could still follow."
+   ]
+  ],
+  "remember": "Gothic features let walls rise high and fill with light, and the whole building showed a town's wealth and faith.",
+  "a": {
+   "q": "What did flying buttresses allow Gothic builders to do?",
+   "opts": [
+    "Build tall walls with large windows",
+    "Build thick walls with small windows",
+    "Replace stone with coloured glass",
+    "Build churches without any arches"
+   ],
+   "why": "Flying buttresses took the outward push of the heavy stone ceiling and roof from outside the walls. This let the walls hold large windows, not small ones. They did not replace stone or arches, because the cathedral was still built of stone with pointed arches.",
+   "clue": "Think about what held up the walls from outside."
+  },
+  "b": {
+   "d": 3,
+   "q": "A town in medieval France spent decades building a huge cathedral with tall windows of coloured glass. What did this most clearly show?",
+   "opts": [
+    "The town had both wealth and strong faith",
+    "The town had no need for stone buildings",
+    "The town's people could all read the Bible",
+    "The town needed a fort to defend itself"
+   ],
+   "why": "A huge cathedral cost a great deal and took many years, so it showed the town's wealth. It was built as a church, so it also showed faith. The glass told Bible stories because many people could not read, so it does not show that everyone could read.",
+   "clue": "Think about the cost of the building and why it was built."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "image",
+    "brief": "A photo of the outside of a Gothic cathedral, such as Notre-Dame de Paris or Chartres Cathedral, showing the pointed arches, flying buttresses and stained glass windows.",
+    "why": "It lets students see the three Gothic features named on the card and the size of the building."
+   }
+  ]
+ },
+ "checked_by": "claude-code"
 }

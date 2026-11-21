@@ -8,8 +8,428 @@
    0.607
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:51Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:52Z write: done",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.00673,
+  "check": 0.01112,
+  "fix": 0.01912,
+  "recheck": 0.00844
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point Federation covers the 1901 event and the reasons for it, but it does not teach the road to Federation: Parkes's advocacy, the doubts of others, or voters approving the Constitution before 1 January 1901, so it is a related but different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The road to Federation",
+  "card": [
+   "Before 1901, Australia was six separate British colonies, each with its own government and laws. Federation means joining them into one nation.",
+   [
+    "Reasons for",
+    "Supporters such as Henry Parkes argued for shared defence, free trade between colonies (no taxes on goods crossing borders) and a national identity."
+   ],
+   [
+    "Doubts",
+    "Some people had doubts. Smaller colonies feared that larger ones would dominate, and some colonies feared losing trade income or control over their own affairs."
+   ],
+   [
+    "Approval",
+    "Colonial voters were asked to approve the draft Constitution in referendums in the late 1890s. After they did, the colonies federated on 1 January 1901."
+   ]
+  ],
+  "remember": "Supporters wanted defence, free trade and a national identity. Some had doubts, and voters approved the Constitution before 1901.",
+  "a": {
+   "q": "Which of these was an argument made by supporters of Federation?",
+   "opts": [
+    "Free trade between colonies would remove border taxes",
+    "Each colony would keep its own tariffs on goods",
+    "Britain would stop protecting the colonies",
+    "Smaller colonies would gain control over larger ones"
+   ],
+   "why": "Supporters argued that taxes on goods crossing colonial borders held back trade, so joining the colonies would remove them. Keeping separate tariffs is the opposite of free trade, and it was the system Federation aimed to end.",
+   "clue": "Think about what happens to goods crossing a colonial border."
+  },
+  "b": {
+   "d": 3,
+   "q": "In the 1890s, a farmer in a small colony says, 'I fear the bigger colonies will dominate a national parliament.' What does this show?",
+   "opts": [
+    "A doubt about Federation held by some people",
+    "A reason why Henry Parkes wanted Federation",
+    "A result of the vote that approved the Constitution",
+    "A claim that the colonies lacked a national identity"
+   ],
+   "why": "The farmer is worried about the effects of joining, so this is a doubt about Federation. Parkes supported Federation, and the farmer's worry is not a reason for it. The vote on the Constitution came from the voters, not from this fear.",
+   "clue": "Is the farmer for Federation or worried about it?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Free trade between colonies would remove border taxes",
+   "also_right": []
+  },
+  "b": {
+   "best": "A doubt about Federation held by some people",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says colonial voters approved the draft Constitution in referendums 'in the late 1890s'. Western Australia's referendum was held on 31 July 1900, after the Constitution had already passed the British Parliament. Something like 'between 1898 and 1900' would be accurate."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and each has one clear answer. The card's 'late 1890s' for the Federation referendums leaves out Western Australia's 1900 vote."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says colonial voters approved the draft Constitution in referendums 'in the late 1890s'. Western Australia's referendum was held on 31 July 1900, after the Constitution had already passed the British Parliament. Something like 'between 1898 and 1900' would be accurate."
+ ],
+ "proposal": {
+  "title": "The road to Federation",
+  "card": [
+   "Before 1901, Australia was six separate British colonies, each with its own government and laws. Federation means joining them into one nation.",
+   [
+    "Reasons for",
+    "Supporters such as Henry Parkes argued for shared defence, free trade between colonies (no taxes on goods crossing borders) and a national identity."
+   ],
+   [
+    "Doubts",
+    "Some people had doubts. Smaller colonies feared that larger ones would dominate, and some colonies feared losing trade income or control over their own affairs."
+   ],
+   [
+    "Approval",
+    "Colonial voters were asked to approve the draft Constitution in referendums held between 1898 and 1900. Once all six colonies had approved it, they federated on 1 January 1901."
+   ]
+  ],
+  "remember": "Supporters wanted defence, free trade and a national identity. Some had doubts, and voters approved the Constitution before 1901.",
+  "a": {
+   "q": "Which of these was an argument made by supporters of Federation?",
+   "opts": [
+    "Free trade between colonies would remove border taxes",
+    "Each colony would keep its own tariffs on goods",
+    "Each colony would build its own separate army",
+    "Smaller colonies would gain control over larger ones"
+   ],
+   "why": "Supporters argued that taxes on goods crossing colonial borders held back trade, so joining the colonies would remove them. Keeping separate tariffs is the opposite of free trade, and it was the system Federation aimed to end.",
+   "clue": "Think about what happens to goods crossing a colonial border."
+  },
+  "b": {
+   "d": 3,
+   "q": "In the 1890s, a farmer in a small colony says, 'I fear the bigger colonies will dominate a national parliament.' What does this show?",
+   "opts": [
+    "A doubt about Federation held by some people",
+    "A reason why Henry Parkes wanted Federation",
+    "A result of the vote that approved the Constitution",
+    "A claim that the colonies lacked a national identity"
+   ],
+   "why": "The farmer is worried about what joining would mean for a small colony, so this is a doubt about Federation. It is not a reason Parkes gave, because supporters argued for joining, not against it.",
+   "clue": "Is the farmer for Federation or worried about it?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Free trade between colonies would remove border taxes",
+    "also_right": []
+   },
+   "b": {
+    "best": "A doubt about Federation held by some people",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says colonial voters approved the draft Constitution in referendums 'in the late 1890s'. Western Australia's referendum was held on 31 July 1900, after the Constitution had already passed the British Parliament. Something like 'between 1898 and 1900' would be accurate."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card says colonial voters approved the draft Constitution in referendums 'in the late 1890s'. Western Australia's referendum was held on 31 July 1900, after the Constitution had already passed the British Parliament. Something like 'between 1898 and 1900' would be accurate."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "The road to Federation",
+  "card": [
+   "Before 1901, Australia was six separate British colonies, each with its own government and laws. Federation means joining them into one nation.",
+   [
+    "Reasons for",
+    "Supporters such as Henry Parkes argued for shared defence, free trade between colonies (no taxes on goods crossing borders) and a national identity."
+   ],
+   [
+    "Doubts",
+    "Some people had doubts. Smaller colonies feared that larger ones would dominate, and some colonies feared losing trade income or control over their own affairs."
+   ],
+   [
+    "Approval",
+    "Colonial voters were asked to approve the draft Constitution in referendums held between 1898 and 1900. Once all six colonies had approved it, they federated on 1 January 1901."
+   ]
+  ],
+  "remember": "Supporters wanted defence, free trade and a national identity. Some had doubts, and voters approved the Constitution before 1901.",
+  "a": {
+   "q": "Which of these was an argument made by supporters of Federation?",
+   "opts": [
+    "Free trade between colonies would remove border taxes",
+    "Each colony would keep its own tariffs on goods",
+    "Each colony would build its own separate army",
+    "Smaller colonies would gain control over larger ones"
+   ],
+   "why": "Supporters argued that taxes on goods crossing colonial borders held back trade, so joining the colonies would remove them. Keeping separate tariffs is the opposite of free trade, and it was the system Federation aimed to end.",
+   "clue": "Think about what happens to goods crossing a colonial border."
+  },
+  "b": {
+   "d": 3,
+   "q": "In the 1890s, a farmer in a small colony says, 'I fear the bigger colonies will dominate a national parliament.' What does this show?",
+   "opts": [
+    "A doubt about Federation held by some people",
+    "A reason why Henry Parkes wanted Federation",
+    "A result of the vote that approved the Constitution",
+    "A claim that the colonies lacked a national identity"
+   ],
+   "why": "The farmer is worried about what joining would mean for a small colony, so this is a doubt about Federation. It is not a reason Parkes gave, because supporters argued for joining, not against it.",
+   "clue": "Is the farmer for Federation or worried about it?"
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix dates the referendums correctly as 1898 to 1900, taking in Western Australia's vote in July 1900. The new wrong option in question a is clearly wrong, and each question has one clear answer.",
+   "item": "9d500033e20748d0",
+   "result": "decided",
+   "saved": {
+    "id": "his-road-federation",
+    "title": "The road to Federation",
+    "brief": "9440fbed87df",
+    "shortlist": [
+     [
+      "his-federation",
+      0.607
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00015,
+     "write": 0.00673,
+     "check": 0.01112,
+     "fix": 0.01912,
+     "recheck": 0.00844
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The bank point Federation covers the 1901 event and the reasons for it, but it does not teach the road to Federation: Parkes's advocacy, the doubts of others, or voters approving the Constitution before 1 January 1901, so it is a related but different idea.",
+     "model": "claude-haiku-5-5"
+    },
+    "alone": true,
+    "draft": {
+     "title": "The road to Federation",
+     "card": [
+      "Before 1901, Australia was six separate British colonies, each with its own government and laws. Federation means joining them into one nation.",
+      [
+       "Reasons for",
+       "Supporters such as Henry Parkes argued for shared defence, free trade between colonies (no taxes on goods crossing borders) and a national identity."
+      ],
+      [
+       "Doubts",
+       "Some people had doubts. Smaller colonies feared that larger ones would dominate, and some colonies feared losing trade income or control over their own affairs."
+      ],
+      [
+       "Approval",
+       "Colonial voters were asked to approve the draft Constitution in referendums in the late 1890s. After they did, the colonies federated on 1 January 1901."
+      ]
+     ],
+     "remember": "Supporters wanted defence, free trade and a national identity. Some had doubts, and voters approved the Constitution before 1901.",
+     "a": {
+      "q": "Which of these was an argument made by supporters of Federation?",
+      "opts": [
+       "Free trade between colonies would remove border taxes",
+       "Each colony would keep its own tariffs on goods",
+       "Britain would stop protecting the colonies",
+       "Smaller colonies would gain control over larger ones"
+      ],
+      "why": "Supporters argued that taxes on goods crossing colonial borders held back trade, so joining the colonies would remove them. Keeping separate tariffs is the opposite of free trade, and it was the system Federation aimed to end.",
+      "clue": "Think about what happens to goods crossing a colonial border."
+     },
+     "b": {
+      "d": 3,
+      "q": "In the 1890s, a farmer in a small colony says, 'I fear the bigger colonies will dominate a national parliament.' What does this show?",
+      "opts": [
+       "A doubt about Federation held by some people",
+       "A reason why Henry Parkes wanted Federation",
+       "A result of the vote that approved the Constitution",
+       "A claim that the colonies lacked a national identity"
+      ],
+      "why": "The farmer is worried about the effects of joining, so this is a doubt about Federation. Parkes supported Federation, and the farmer's worry is not a reason for it. The vote on the Constitution came from the voters, not from this fear.",
+      "clue": "Is the farmer for Federation or worried about it?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Free trade between colonies would remove border taxes",
+      "also_right": []
+     },
+     "b": {
+      "best": "A doubt about Federation held by some people",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card says colonial voters approved the draft Constitution in referendums 'in the late 1890s'. Western Australia's referendum was held on 31 July 1900, after the Constitution had already passed the British Parliament. Something like 'between 1898 and 1900' would be accurate."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions are sound and each has one clear answer. The card's 'late 1890s' for the Federation referendums leaves out Western Australia's 1900 vote."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Card, fact: The card says colonial voters approved the draft Constitution in referendums 'in the late 1890s'. Western Australia's referendum was held on 31 July 1900, after the Constitution had already passed the British Parliament. Something like 'between 1898 and 1900' would be accurate."
+    ],
+    "proposal": {
+     "title": "The road to Federation",
+     "card": [
+      "Before 1901, Australia was six separate British colonies, each with its own government and laws. Federation means joining them into one nation.",
+      [
+       "Reasons for",
+       "Supporters such as Henry Parkes argued for shared defence, free trade between colonies (no taxes on goods crossing borders) and a national identity."
+      ],
+      [
+       "Doubts",
+       "Some people had doubts. Smaller colonies feared that larger ones would dominate, and some colonies feared losing trade income or control over their own affairs."
+      ],
+      [
+       "Approval",
+       "Colonial voters were asked to approve the draft Constitution in referendums held between 1898 and 1900. Once all six colonies had approved it, they federated on 1 January 1901."
+      ]
+     ],
+     "remember": "Supporters wanted defence, free trade and a national identity. Some had doubts, and voters approved the Constitution before 1901.",
+     "a": {
+      "q": "Which of these was an argument made by supporters of Federation?",
+      "opts": [
+       "Free trade between colonies would remove border taxes",
+       "Each colony would keep its own tariffs on goods",
+       "Each colony would build its own separate army",
+       "Smaller colonies would gain control over larger ones"
+      ],
+      "why": "Supporters argued that taxes on goods crossing colonial borders held back trade, so joining the colonies would remove them. Keeping separate tariffs is the opposite of free trade, and it was the system Federation aimed to end.",
+      "clue": "Think about what happens to goods crossing a colonial border."
+     },
+     "b": {
+      "d": 3,
+      "q": "In the 1890s, a farmer in a small colony says, 'I fear the bigger colonies will dominate a national parliament.' What does this show?",
+      "opts": [
+       "A doubt about Federation held by some people",
+       "A reason why Henry Parkes wanted Federation",
+       "A result of the vote that approved the Constitution",
+       "A claim that the colonies lacked a national identity"
+      ],
+      "why": "The farmer is worried about what joining would mean for a small colony, so this is a doubt about Federation. It is not a reason Parkes gave, because supporters argued for joining, not against it.",
+      "clue": "Is the farmer for Federation or worried about it?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "Free trade between colonies would remove border taxes",
+       "also_right": []
+      },
+      "b": {
+       "best": "A doubt about Federation held by some people",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-20T13:37:07Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card says colonial voters approved the draft Constitution in referendums 'in the late 1890s'. Western Australia's referendum was held on 31 July 1900, after the Constitution had already passed the British Parliament. Something like 'between 1898 and 1900' would be accurate."
+      }
+     ],
+     "flags": [
+      "Card, fact: The card says colonial voters approved the draft Constitution in referendums 'in the late 1890s'. Western Australia's referendum was held on 31 July 1900, after the Constitution had already passed the British Parliament. Something like 'between 1898 and 1900' would be accurate."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "6ba3ac04e4457676"
+  }
  ]
 }

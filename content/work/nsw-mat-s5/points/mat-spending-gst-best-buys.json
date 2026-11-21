@@ -20,8 +20,224 @@
    0.232
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:56Z write: done",
+  "2026-11-20T12:35:54Z check: flagged",
+  "2026-11-20T12:44:59Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.0126,
+  "check": 0.00851,
+  "fix": 0.02082,
+  "recheck": 0.00974
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point covers the whole brief: the GST cards only teach adding and removing GST at a senior or business level, and none covers discounts, unit-cost comparison or the cost of credit and loans, so the new point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Spending, GST and best buys",
+  "card": [
+   [
+    "Discount",
+    "A discount lowers the price. Take the percentage off the price, or multiply by the percentage that remains. A 20% discount means paying \\(80\\%\\) of the price."
+   ],
+   [
+    "GST",
+    "GST is a tax of 10% added to the price of most goods. Price with GST \\(=\\) price \\(\\times 1.1\\)."
+   ],
+   [
+    "Unit cost",
+    "To find the best buy, work out the price for one unit, such as per 100 g. Unit cost \\(=\\) price \\(\\div\\) amount. The lower unit cost is the better buy."
+   ],
+   [
+    "Credit",
+    "Buying on credit or with a loan means paying back more than the price. Total cost \\(=\\) deposit \\(+\\) all repayments."
+   ]
+  ],
+  "remember": "Discount and GST change the price. Unit cost compares sizes. Credit adds extra to the total paid.",
+  "a": {
+   "q": "A pair of shoes costs $80 before GST. GST of 10% is added. What is the final price?",
+   "opts": [
+    "$88",
+    "$8",
+    "$72",
+    "$90"
+   ],
+   "why": "GST is \\(0.1 \\times 80 = 8\\) dollars, so the price is \\(80 + 8 = 88\\) dollars. $72 is wrong because it takes the GST off instead of adding it.",
+   "clue": "GST is added to the price."
+  },
+  "b": {
+   "d": 3,
+   "q": "Cereal costs $4.50 for 500 g, or $8.00 for 800 g. Which is the better buy, and why?",
+   "opts": [
+    "The 800 g box, at $1.00 per 100 g",
+    "The 500 g box, at $0.90 per 100 g",
+    "The 800 g box, because it costs more",
+    "The 500 g box, because it costs less"
+   ],
+   "why": "The 500 g box costs \\(4.50 \\div 5 = 0.90\\) dollars per 100 g, and the 800 g box costs \\(8.00 \\div 8 = 1.00\\) dollar per 100 g. The 500 g box has the lower unit cost, so it is the better buy.",
+   "clue": "Work out the cost per 100 g for each box."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$88",
+   "also_right": []
+  },
+  "b": {
+   "best": "The 500 g box, at $0.90 per 100 g",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker picked “The 500 g box, at $0.90 per 100 g”, not the writer’s answer “The 800 g box, at $1.00 per 100 g”."
+ ],
+ "proposal": {
+  "title": "Spending, GST and best buys",
+  "card": [
+   [
+    "Discount",
+    "A discount lowers the price. Take the percentage off the price, or multiply by the percentage that remains. A 20% discount means paying \\(80\\%\\) of the price."
+   ],
+   [
+    "GST",
+    "GST is a tax of 10% added to the price of most goods and services. Price with GST \\(=\\) price \\(\\times 1.1\\)."
+   ],
+   [
+    "Unit cost",
+    "To find the best buy, work out the price of one unit, such as 100 g. For $3 for 600 g, that is \\(3 \\div 6 = 0.50\\) dollars per 100 g. The lower unit cost is the better buy."
+   ],
+   [
+    "Credit",
+    "Buying on credit or with a loan usually means paying back more than the price, because of interest and fees. Total cost \\(=\\) deposit \\(+\\) all repayments."
+   ]
+  ],
+  "remember": "Discount and GST change the price. Unit cost compares sizes. Credit usually adds to the total paid.",
+  "a": {
+   "q": "A pair of shoes costs $80 before GST. GST of 10% is added. What is the final price?",
+   "opts": [
+    "$88",
+    "$8",
+    "$72",
+    "$90"
+   ],
+   "why": "GST is \\(0.1 \\times 80 = 8\\) dollars, so the price is \\(80 + 8 = 88\\) dollars. $72 is wrong because it takes the GST off instead of adding it.",
+   "clue": "GST is added to the price."
+  },
+  "b": {
+   "d": 3,
+   "q": "Cereal costs $4.50 for 500 g, or $8.00 for 800 g. Which is the better buy, and why?",
+   "opts": [
+    "The 500 g box, at $0.90 per 100 g",
+    "The 800 g box, at $1.00 per 100 g",
+    "The 800 g box, because it costs more",
+    "The 500 g box, because it costs less"
+   ],
+   "why": "The 500 g box costs \\(4.50 \\div 5 = 0.90\\) dollars per 100 g, and the 800 g box costs \\(8.00 \\div 8 = 1.00\\) dollar per 100 g. The 500 g box has the lower unit cost, so it is the better buy. Bigger packs are often cheaper per gram, but not here.",
+   "clue": "Work out the cost per 100 g for each box."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "$88",
+    "also_right": []
+   },
+   "b": {
+    "best": "The 500 g box, at $0.90 per 100 g",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [],
+  "flags": [
+   "Question b: the checker picked “The 500 g box, at $0.90 per 100 g”, not the writer’s answer “The 800 g box, at $1.00 per 100 g”."
+  ]
+ },
+ "final": {
+  "title": "Spending, GST and best buys",
+  "card": [
+   [
+    "Discount",
+    "A discount lowers the price. Take the percentage off the price, or multiply by the percentage that remains. A 20% discount means paying \\(80\\%\\) of the price."
+   ],
+   [
+    "GST",
+    "GST is a tax of 10% added to the price of most goods and services. Price with GST \\(=\\) price \\(\\times 1.1\\)."
+   ],
+   [
+    "Unit cost",
+    "To find the best buy, work out the price of one unit, such as 100 g. For $3 for 600 g, that is \\(3 \\div 6 = 0.50\\) dollars per 100 g. The lower unit cost is the better buy."
+   ],
+   [
+    "Credit",
+    "Buying on credit or with a loan usually means paying back more than the price, because of interest and fees. Total cost \\(=\\) deposit \\(+\\) all repayments."
+   ]
+  ],
+  "remember": "Discount and GST change the price. Unit cost compares sizes. Credit usually adds to the total paid.",
+  "a": {
+   "q": "A pair of shoes costs $80 before GST. GST of 10% is added. What is the final price?",
+   "opts": [
+    "$88",
+    "$8",
+    "$72",
+    "$90"
+   ],
+   "why": "GST is \\(0.1 \\times 80 = 8\\) dollars, so the price is \\(80 + 8 = 88\\) dollars. $72 is wrong because it takes the GST off instead of adding it.",
+   "clue": "GST is added to the price."
+  },
+  "b": {
+   "d": 3,
+   "q": "Cereal costs $4.50 for 500 g, or $8.00 for 800 g. Which is the better buy, and why?",
+   "opts": [
+    "The 500 g box, at $0.90 per 100 g",
+    "The 800 g box, at $1.00 per 100 g",
+    "The 800 g box, because it costs more",
+    "The 500 g box, because it costs less"
+   ],
+   "why": "The 500 g box costs \\(4.50 \\div 5 = 0.90\\) dollars per 100 g, and the 800 g box costs \\(8.00 \\div 8 = 1.00\\) dollar per 100 g. The 500 g box has the lower unit cost, so it is the better buy. Bigger packs are often cheaper per gram, but not here.",
+   "clue": "Work out the cost per 100 g for each box."
+  }
+ },
+ "cleared_by": "recheck"
 }

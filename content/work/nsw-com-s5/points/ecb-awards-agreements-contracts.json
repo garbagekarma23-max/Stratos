@@ -20,8 +20,422 @@
    0.223
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 may adapt bus-employment-contracts, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:40Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:45Z write: failed the content check, writing again",
+  "2026-11-20T12:44:52Z write: done",
+  "2026-11-20T12:53:23Z check: flagged",
+  "2026-11-20T12:59:58Z fix: suggested",
+  "2026-11-20T13:37:05Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (card fact)",
+  "2026-11-20T13:44:55Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00046,
+  "confirm": 0.00893,
+  "write": 0.01341,
+  "check": 0.01202,
+  "fix": 0.0181,
+  "recheck": 0.01409
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "bus-employment-contracts",
+  "changes": [
+   "The card and question b cover the National Employment Standards, which the new point's brief does not mention, so that content should be removed or moved to its own point.",
+   "The card should be pitched at a Stage 5 (Years 9 and 10) level, with simpler wording than the Year 12 Business Studies version."
+  ],
+  "sure": "medium",
+  "reason": "The bank point covers the same three forms of pay and conditions (common law contract, modern award and enterprise agreement), but it is written for Year 12 and adds National Employment Standards content that goes beyond this point's brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, bus-employment-contracts, covers awards, agreements and contracts but also teaches the National Employment Standards and tests them in a question, so it is broader than this brief; the award and agreement points leave out common law contracts.",
+  "model": "claude-opus-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, fact: An enterprise agreement is made for one employer (enterprise), and it often covers many workplaces, such as a chain of stores. 'For one workplace' is a simplification that could mislead. 'For one business or employer' would be more accurate. The same simplification appears in the chapter outline and the remember line.",
+ "rejected": {
+  "title": "Awards, agreements and contracts",
+  "card": [
+   [
+    "Award",
+    "sets the minimum pay and conditions for workers in an industry or occupation, such as retail or hospitality. It applies to the employers and workers in that industry that it covers."
+   ],
+   [
+    "Enterprise agreement",
+    "is negotiated between an employer and its employees (often through a union) for one workplace. It must leave each worker better off overall than the award would."
+   ],
+   [
+    "Common law contract",
+    "is an agreement between an employer and one worker. It sets out their terms, such as the job, the pay and the hours, and it can include more than an award or agreement requires."
+   ],
+   "A contract cannot give a worker less than the minimum set by an award or agreement that covers them."
+  ],
+  "remember": "Award: one industry. Agreement: one workplace. Contract: one worker.",
+  "a": {
+   "q": "Sam owns a single bakery in Orange. He and his staff negotiate pay and hours that apply only to that bakery. What is this arrangement called?",
+   "opts": [
+    "An enterprise agreement",
+    "An award",
+    "A common law contract",
+    "A grievance procedure"
+   ],
+   "why": "Terms negotiated between an employer and its staff for one workplace are an enterprise agreement. An award covers a whole industry, and a common law contract is made with one worker, not the whole staff.",
+   "clue": "Think about who negotiated it and how many workplaces it covers."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya starts as a waiter in a Newcastle café. The industry award sets a minimum hourly rate. Her signed contract offers less than that rate. What is the result?",
+   "opts": [
+    "Priya must be paid at least the award rate",
+    "Priya gets the lower rate because she signed",
+    "Priya gets the award rate only if she joins a union",
+    "Priya gets the lower rate if the café is small"
+   ],
+   "why": "A contract cannot give a worker less than the minimum in an award that covers them, so Priya must get at least the award rate. Signing the contract does not remove that minimum.",
+   "clue": "Which of the three sets the minimum that others cannot go below?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, fact: An enterprise agreement is made for one employer (enterprise), and it often covers many workplaces, such as a chain of stores. 'For one workplace' is a simplification that could mislead. 'For one business or employer' would be more accurate. The same simplification appears in the chapter outline and the remember line."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Awards, agreements and contracts",
+     "card": [
+      [
+       "Award",
+       "sets the minimum pay and conditions for workers in an industry or occupation, such as retail or hospitality. It covers every employer and worker in that industry who falls under it."
+      ],
+      [
+       "Enterprise agreement",
+       "is negotiated between an employer and its employees (often through a union) for one workplace. It must leave each worker better off overall than the award would."
+      ],
+      [
+       "Common law contract",
+       "is an agreement between an employer and one worker. It sets out their terms, such as the job, the pay and the hours, and it can include more than an award or agreement requires."
+      ],
+      "A contract cannot give a worker less than the minimum set by an award or agreement that covers them."
+     ],
+     "remember": "Award: one industry. Agreement: one workplace. Contract: one worker.",
+     "a": {
+      "q": "A bakery chain and its staff negotiate pay and hours that apply only to that one business. What is this arrangement called?",
+      "opts": [
+       "An enterprise agreement",
+       "An award",
+       "A common law contract",
+       "A grievance procedure"
+      ],
+      "why": "Terms negotiated between an employer and its staff for one workplace are an enterprise agreement. An award covers a whole industry, and a common law contract is made with one worker.",
+      "clue": "Think about how many workplaces it covers."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya starts as a waiter in a Newcastle café. The industry award sets a minimum hourly rate. Her signed contract offers less than that rate. What is the result?",
+      "opts": [
+       "The contract cannot go below the award minimum",
+       "The contract wins because Priya signed it",
+       "The award applies only if Priya joins a union",
+       "The contract is valid if the café is small"
+      ],
+      "why": "A contract cannot give a worker less than the minimum in an award that covers them, so the award rate must be paid. Signing the contract does not remove that minimum.",
+      "clue": "Which of the three sets the minimum that others cannot go below?"
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "An enterprise agreement",
+      "also_right": []
+     },
+     "b": {
+      "best": "The contract cannot go below the award minimum",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The question describes a bakery chain, which usually has several shops, but the card, the remember line and the clue all say an enterprise agreement is for 'one workplace'. Following the clue ('how many workplaces it covers') could lead a student away from the right answer. Use a single bakery, or say 'one business' consistently."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Facts check out and both intended answers are right. Question a uses a bakery chain (many workplaces), which clashes with the card's and the clue's 'one workplace' framing and could confuse students."
+    },
+    "flags": [
+     "Question a, wording: The question describes a bakery chain, which usually has several shops, but the card, the remember line and the clue all say an enterprise agreement is for 'one workplace'. Following the clue ('how many workplaces it covers') could lead a student away from the right answer. Use a single bakery, or say 'one business' consistently."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Awards, agreements and contracts",
+     "card": [
+      [
+       "Award",
+       "sets the minimum pay and conditions for workers in an industry or occupation, such as retail or hospitality. It applies to the employers and workers in that industry that it covers."
+      ],
+      [
+       "Enterprise agreement",
+       "is negotiated between an employer and its employees (often through a union) for one workplace. It must leave each worker better off overall than the award would."
+      ],
+      [
+       "Common law contract",
+       "is an agreement between an employer and one worker. It sets out their terms, such as the job, the pay and the hours, and it can include more than an award or agreement requires."
+      ],
+      "A contract cannot give a worker less than the minimum set by an award or agreement that covers them."
+     ],
+     "remember": "Award: one industry. Agreement: one workplace. Contract: one worker.",
+     "a": {
+      "q": "Sam owns a single bakery in Orange. He and his staff negotiate pay and hours that apply only to that bakery. What is this arrangement called?",
+      "opts": [
+       "An enterprise agreement",
+       "An award",
+       "A common law contract",
+       "A grievance procedure"
+      ],
+      "why": "Terms negotiated between an employer and its staff for one workplace are an enterprise agreement. An award covers a whole industry, and a common law contract is made with one worker, not the whole staff.",
+      "clue": "Think about who negotiated it and how many workplaces it covers."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya starts as a waiter in a Newcastle café. The industry award sets a minimum hourly rate. Her signed contract offers less than that rate. What is the result?",
+      "opts": [
+       "Priya must be paid at least the award rate",
+       "Priya gets the lower rate because she signed",
+       "Priya gets the award rate only if she joins a union",
+       "Priya gets the lower rate if the café is small"
+      ],
+      "why": "A contract cannot give a worker less than the minimum in an award that covers them, so Priya must get at least the award rate. Signing the contract does not remove that minimum.",
+      "clue": "Which of the three sets the minimum that others cannot go below?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:05Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "An enterprise agreement",
+       "also_right": []
+      },
+      "b": {
+       "best": "Priya must be paid at least the award rate",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "fact",
+        "detail": "An enterprise agreement is made for one employer (enterprise), and it often covers many workplaces, such as a chain of stores. 'For one workplace' is a simplification that could mislead. 'For one business or employer' would be more accurate. The same simplification appears in the chapter outline and the remember line."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are correct and well built. The only issue is a minor simplification: enterprise agreements are made for one employer and can cover several workplaces, not strictly one workplace."
+     },
+     "flags": [
+      "Card, fact: An enterprise agreement is made for one employer (enterprise), and it often covers many workplaces, such as a chain of stores. 'For one workplace' is a simplification that could mislead. 'For one business or employer' would be more accurate. The same simplification appears in the chapter outline and the remember line."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:55Z",
+   "step": "write",
+   "version": {
+    "title": "Awards, agreements and contracts",
+    "card": [
+     [
+      "Award",
+      "sets the minimum pay and conditions for workers in an industry or occupation, such as retail or hospitality. It applies to the employers and workers in that industry that it covers."
+     ],
+     [
+      "Enterprise agreement",
+      "is negotiated between one employer and its employees (often through a union), and can cover all of that business's sites. It must leave each worker better off overall than the award would."
+     ],
+     [
+      "Common law contract",
+      "is an agreement between an employer and one worker. It sets out their terms, such as the job, the pay and the hours, and it can include more than an award or agreement requires."
+     ],
+     "A contract cannot give a worker less than the minimum set by an award or agreement that covers them."
+    ],
+    "remember": "Award: one industry. Agreement: one employer. Contract: one worker.",
+    "a": {
+     "q": "Sam owns a single bakery in Orange. He and his staff negotiate pay and hours that apply only to his business. What is this arrangement called?",
+     "opts": [
+      "An enterprise agreement",
+      "An industry award",
+      "A common law contract",
+      "A grievance procedure"
+     ],
+     "why": "Terms negotiated between one employer and its staff for that business are an enterprise agreement. An award covers a whole industry, and a common law contract is made with one worker, not the whole staff.",
+     "clue": "Think about who negotiated it and how many employers it covers."
+    },
+    "b": {
+     "d": 3,
+     "q": "Priya starts as a waiter in a Newcastle café. The industry award sets a minimum hourly rate. Her signed contract offers less than that rate. What is the result?",
+     "opts": [
+      "Priya must be paid at least the award rate",
+      "Priya gets the lower rate because she signed",
+      "Priya gets the award rate only if she joins a union",
+      "Priya gets the lower rate if the café is small"
+     ],
+     "why": "A contract cannot give a worker less than the minimum in an award that covers them, so Priya must get at least the award rate. Signing the contract does not remove that minimum.",
+     "clue": "Which of the three sets the minimum that others cannot go below?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "An enterprise agreement",
+     "also_right": []
+    },
+    "b": {
+     "best": "Priya must be paid at least the award rate",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Awards, agreements and contracts",
+  "card": [
+   [
+    "Award",
+    "sets the minimum pay and conditions for workers in an industry or occupation, such as retail or hospitality. It applies to the employers and workers in that industry that it covers."
+   ],
+   [
+    "Enterprise agreement",
+    "is negotiated between one employer and its employees (often through a union), and can cover all of that business's sites. It must leave each worker better off overall than the award would."
+   ],
+   [
+    "Common law contract",
+    "is an agreement between an employer and one worker. It sets out their terms, such as the job, the pay and the hours, and it can include more than an award or agreement requires."
+   ],
+   "A contract cannot give a worker less than the minimum set by an award or agreement that covers them."
+  ],
+  "remember": "Award: one industry. Agreement: one employer. Contract: one worker.",
+  "a": {
+   "q": "Sam owns a single bakery in Orange. He and his staff negotiate pay and hours that apply only to his business. What is this arrangement called?",
+   "opts": [
+    "An enterprise agreement",
+    "An industry award",
+    "A common law contract",
+    "A grievance procedure"
+   ],
+   "why": "Terms negotiated between one employer and its staff for that business are an enterprise agreement. An award covers a whole industry, and a common law contract is made with one worker, not the whole staff.",
+   "clue": "Think about who negotiated it and how many employers it covers."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya starts as a waiter in a Newcastle café. The industry award sets a minimum hourly rate. Her signed contract offers less than that rate. What is the result?",
+   "opts": [
+    "Priya must be paid at least the award rate",
+    "Priya gets the lower rate because she signed",
+    "Priya gets the award rate only if she joins a union",
+    "Priya gets the lower rate if the café is small"
+   ],
+   "why": "A contract cannot give a worker less than the minimum in an award that covers them, so Priya must get at least the award rate. Signing the contract does not remove that minimum.",
+   "clue": "Which of the three sets the minimum that others cannot go below?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "An enterprise agreement",
+   "also_right": []
+  },
+  "b": {
+   "best": "Priya must be paid at least the award rate",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Awards, agreements and contracts",
+  "card": [
+   [
+    "Award",
+    "sets the minimum pay and conditions for workers in an industry or occupation, such as retail or hospitality. It applies to the employers and workers in that industry that it covers."
+   ],
+   [
+    "Enterprise agreement",
+    "is negotiated between one employer and its employees (often through a union), and can cover all of that business's sites. It must leave each worker better off overall than the award would."
+   ],
+   [
+    "Common law contract",
+    "is an agreement between an employer and one worker. It sets out their terms, such as the job, the pay and the hours, and it can include more than an award or agreement requires."
+   ],
+   "A contract cannot give a worker less than the minimum set by an award or agreement that covers them."
+  ],
+  "remember": "Award: one industry. Agreement: one employer. Contract: one worker.",
+  "a": {
+   "q": "Sam owns a single bakery in Orange. He and his staff negotiate pay and hours that apply only to his business. What is this arrangement called?",
+   "opts": [
+    "An enterprise agreement",
+    "An industry award",
+    "A common law contract",
+    "A grievance procedure"
+   ],
+   "why": "Terms negotiated between one employer and its staff for that business are an enterprise agreement. An award covers a whole industry, and a common law contract is made with one worker, not the whole staff.",
+   "clue": "Think about who negotiated it and how many employers it covers."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya starts as a waiter in a Newcastle café. The industry award sets a minimum hourly rate. Her signed contract offers less than that rate. What is the result?",
+   "opts": [
+    "Priya must be paid at least the award rate",
+    "Priya gets the lower rate because she signed",
+    "Priya gets the award rate only if she joins a union",
+    "Priya gets the lower rate if the café is small"
+   ],
+   "why": "A contract cannot give a worker less than the minimum in an award that covers them, so Priya must get at least the award rate. Signing the contract does not remove that minimum.",
+   "clue": "Which of the three sets the minimum that others cannot go below?"
+  }
+ },
+ "checked_by": "claude-code"
 }

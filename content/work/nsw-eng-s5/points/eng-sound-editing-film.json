@@ -16,8 +16,230 @@
    0.205
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:44Z write: done",
+  "2026-11-20T12:35:47Z check: flagged",
+  "2026-11-20T12:44:54Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.01133,
+  "check": 0.01049,
+  "fix": 0.01844,
+  "recheck": 0.00708
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers only diegetic and non-diegetic sound, but the new point also teaches how editing pace controls tension, which no bank point covers, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Sound and editing in film",
+  "card": [
+   [
+    "Diegetic sound",
+    "comes from the world of the film, so the characters could hear it. Examples are footsteps, dialogue and a car horn."
+   ],
+   [
+    "Non-diegetic sound",
+    "is added over the film for the audience only, such as a music score or a narrator's voice. The characters cannot hear it."
+   ],
+   "Editing is the joining of shots with cuts. The pace is how long each shot lasts before the next cut.",
+   "Slow cuts, with long shots held on screen, can build calm or a slow dread. Quick cuts can build tension and urgency, as in a chase."
+  ],
+  "remember": "Diegetic sound is in the film's world, non-diegetic is added over it, and cut pace shapes tension.",
+  "a": {
+   "q": "In a film, a boy walks down a street. The viewer hears his footsteps and a car passing, plus a low, eerie score that he cannot hear. Which sound is non-diegetic?",
+   "opts": [
+    "The eerie score",
+    "The footsteps",
+    "The passing car",
+    "The footsteps and the passing car"
+   ],
+   "why": "The score is added over the film for the audience, and the boy cannot hear it, so it is non-diegetic. The footsteps and the car are part of the street, so they are diegetic.",
+   "clue": "Which sound could the boy not hear?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A film shows a runner chased through a market. The editor cuts between shots every half second. What is the most likely effect of this editing?",
+   "opts": [
+    "It builds tension and a sense of urgency",
+    "It creates a calm, slow mood",
+    "It makes the sound non-diegetic",
+    "It lets the viewer study each detail closely"
+   ],
+   "why": "Quick cuts give the viewer little time to settle, which builds tension and urgency, as in a chase. Slow cuts would give a calmer mood and more time to study each shot. Cut pace has no effect on whether sound is diegetic.",
+   "clue": "Think about how long the viewer has to look at each shot."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The eerie score",
+   "also_right": []
+  },
+  "b": {
+   "best": "It builds tension and a sense of urgency",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"Slow cuts, with long shots held on screen\" uses \"long shots\" to mean shots held for a long time. In point 1 a long shot is a framing that shows setting, so students may confuse the two. Say \"with each shot held on screen for longer\" instead."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem says the score is one \"he cannot hear\". That repeats the card's definition of non-diegetic sound, so a student can match the words without understanding the idea. The clue repeats the giveaway."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct. The card's phrase \"long shots held on screen\" clashes with the camera-shot term \"long shot\" from point 1. Question a's stem gives the answer away by stating the boy cannot hear the score."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: \"Slow cuts, with long shots held on screen\" uses \"long shots\" to mean shots held for a long time. In point 1 a long shot is a framing that shows setting, so students may confuse the two. Say \"with each shot held on screen for longer\" instead.",
+  "Question a, wording: The stem says the score is one \"he cannot hear\". That repeats the card's definition of non-diegetic sound, so a student can match the words without understanding the idea. The clue repeats the giveaway."
+ ],
+ "proposal": {
+  "title": "Sound and editing in film",
+  "card": [
+   [
+    "Diegetic sound",
+    "comes from the world of the film, so the characters could hear it. Examples are footsteps, dialogue, a car horn and a song playing on a radio."
+   ],
+   [
+    "Non-diegetic sound",
+    "is added over the film for the audience only, such as a music score or a narrator's voice. The characters cannot hear it."
+   ],
+   "Editing is the joining of shots with cuts. The pace is how long each shot lasts before the next cut.",
+   "Slow cuts, with each shot held on screen for longer, can build calm or a slow dread. Quick cuts can build tension and urgency, as in a chase."
+  ],
+  "remember": "Diegetic sound is in the film's world, non-diegetic is added over it, and cut pace can shape tension.",
+  "a": {
+   "q": "In a film, a boy walks down a street. The viewer hears his footsteps, a song from a passing car's radio and a low, eerie music score. Which sound is non-diegetic?",
+   "opts": [
+    "The eerie music score",
+    "The boy's footsteps",
+    "The song on the car radio",
+    "The car radio song and the score"
+   ],
+   "why": "The score is added over the film for the audience and has no source in the street, so it is non-diegetic. The car radio song is music too, but it plays inside the boy's world and he could hear it, so it is diegetic.",
+   "clue": "Ask whether each sound has a source in the boy's world."
+  },
+  "b": {
+   "d": 3,
+   "q": "A film shows a runner chased through a market. The editor cuts between shots every half second. What is the most likely effect of this editing?",
+   "opts": [
+    "It builds tension and a sense of urgency",
+    "It creates a calm, slow mood",
+    "It makes the sound non-diegetic",
+    "It lets the viewer study each detail closely"
+   ],
+   "why": "Quick cuts give the viewer little time to settle, which builds tension and urgency, as in a chase. Slow cuts would give a calmer mood and more time to study each shot. Cut pace has no effect on whether sound is diegetic.",
+   "clue": "Think about how long the viewer has to look at each shot."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The eerie music score",
+    "also_right": []
+   },
+   "b": {
+    "best": "It builds tension and a sense of urgency",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 18,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"Slow cuts, with long shots held on screen\" uses \"long shots\" to mean shots held for a long time. In point 1 a long shot is a framing that shows setting, so students may confuse the two. Say \"with each shot held on screen for longer\" instead."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem says the score is one \"he cannot hear\". That repeats the card's definition of non-diegetic sound, so a student can match the words without understanding the idea. The clue repeats the giveaway."
+   }
+  ],
+  "flags": [
+   "Card, wording: \"Slow cuts, with long shots held on screen\" uses \"long shots\" to mean shots held for a long time. In point 1 a long shot is a framing that shows setting, so students may confuse the two. Say \"with each shot held on screen for longer\" instead.",
+   "Question a, wording: The stem says the score is one \"he cannot hear\". That repeats the card's definition of non-diegetic sound, so a student can match the words without understanding the idea. The clue repeats the giveaway."
+  ]
+ },
+ "final": {
+  "title": "Sound and editing in film",
+  "card": [
+   [
+    "Diegetic sound",
+    "comes from the world of the film, so the characters could hear it. Examples are footsteps, dialogue, a car horn and a song playing on a radio."
+   ],
+   [
+    "Non-diegetic sound",
+    "is added over the film for the audience only, such as a music score or a narrator's voice. The characters cannot hear it."
+   ],
+   "Editing is the joining of shots with cuts. The pace is how long each shot lasts before the next cut.",
+   "Slow cuts, with each shot held on screen for longer, can build calm or a slow dread. Quick cuts can build tension and urgency, as in a chase."
+  ],
+  "remember": "Diegetic sound is in the film's world, non-diegetic is added over it, and cut pace can shape tension.",
+  "a": {
+   "q": "In a film, a boy walks down a street. The viewer hears his footsteps, a song from a passing car's radio and a low, eerie music score. Which sound is non-diegetic?",
+   "opts": [
+    "The eerie music score",
+    "The boy's footsteps",
+    "The song on the car radio",
+    "The car radio song and the score"
+   ],
+   "why": "The score is added over the film for the audience and has no source in the street, so it is non-diegetic. The car radio song is music too, but it plays inside the boy's world and he could hear it, so it is diegetic.",
+   "clue": "Ask whether each sound has a source in the boy's world."
+  },
+  "b": {
+   "d": 3,
+   "q": "A film shows a runner chased through a market. The editor cuts between shots every half second. What is the most likely effect of this editing?",
+   "opts": [
+    "It builds tension and a sense of urgency",
+    "It creates a calm, slow mood",
+    "It makes the sound non-diegetic",
+    "It lets the viewer study each detail closely"
+   ],
+   "why": "Quick cuts give the viewer little time to settle, which builds tension and urgency, as in a chase. Slow cuts would give a calmer mood and more time to study each shot. Cut pace has no effect on whether sound is diegetic.",
+   "clue": "Think about how long the viewer has to look at each shot."
+  }
+ },
+ "cleared_by": "recheck"
 }

@@ -8,8 +8,173 @@
    0.443
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 may adapt his-fall-singapore-prisoners-war, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:51Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:52Z write: done",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T14:42:05Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "confirm": 0.00579,
+  "write": 0.00685,
+  "check": 0.01334,
+  "fix": 0.02617
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "his-fall-singapore-prisoners-war",
+  "changes": [
+   "Name Changi as the main prison camp on Singapore island where many Australian prisoners were held, since the new point refers to it directly.",
+   "Make the card's focus on the treatment of POWs (starvation, disease, forced labour and deaths) clearer, since the new point is about the human cost rather than the fall of Singapore."
+  ],
+  "sure": "medium",
+  "reason": "The bank card covers the same idea (Australian POWs held by Japan, forced labour on the Burma-Thailand Railway, and thousands of deaths) at a suitable depth, but it needs small changes to name Changi and to centre the treatment of prisoners.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point also covers the fall of Singapore as a military event, and one of its questions tests that, which makes it broader than this point on the experience of Australian POWs held by Japan; it also never mentions Changi.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Prisoners of war",
+  "card": [
+   "After Japan captured Singapore in February 1942, about 15,000 Australians became prisoners of war (POWs) of Japan. Many were held at Changi in Singapore. Thousands more were taken across the Pacific and held in camps in other places.",
+   "Japan used POWs as forced labour. On the Burma-Thailand Railway, Australians and other Allied prisoners worked in jungle heat and monsoon rain to build a railway through rough country. Asian labourers were forced to work on it too.",
+   "Prisoners were given very little food and had poor shelter and almost no medicine. Starvation and diseases such as malaria, dysentery and cholera were common. Guards also beat and punished prisoners.",
+   "Many Australian POWs died in Japanese captivity. Survivors came home thin and ill, and many kept health problems for years. Prisoners helped each other to survive by sharing food and caring for the sick."
+  ],
+  "remember": "Australian POWs of Japan were forced to work, starved and left to get sick, and many died.",
+  "a": {
+   "q": "Why did so many Australian prisoners of war held by Japan die?",
+   "opts": [
+    "Starvation, disease and forced labour wore them down",
+    "They were killed in battle while trying to escape",
+    "They were left without work and died of boredom",
+    "Allied bombing destroyed every camp where they were held"
+   ],
+   "why": "Prisoners were fed very little, had almost no medicine and were made to do hard labour, so illness and exhaustion killed many. Escape attempts and battles were not the main cause of death, as the camps were about forced work and neglect.",
+   "clue": "Think about food, health care and work in the camps."
+  },
+  "b": {
+   "d": 2,
+   "q": "Private Tom Reid is a prisoner on the Burma-Thailand Railway in 1943. Which of these is he most likely to face?",
+   "opts": [
+    "Long days of heavy work with little food and disease",
+    "A short working day with regular meals and a doctor",
+    "Release after helping to plan the railway route",
+    "Safe work in a camp far from the jungle"
+   ],
+   "why": "Prisoners on the railway were forced to do heavy labour in jungle conditions on small amounts of food, and disease spread easily. They did not get good food or medicine, and they did not plan the route.",
+   "clue": "Remember what the card says about food, medicine and jungle work."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Starvation, disease and forced labour wore them down",
+   "also_right": []
+  },
+  "b": {
+   "best": "Long days of heavy work with little food and disease",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Thousands more were taken across the Pacific and held in camps in other places' is unclear and misleading. 'Thousands more' suggests prisoners on top of the 15,000, when many of those moved were the Singapore prisoners themselves. 'Across the Pacific' is also inaccurate, since most were sent to Burma, Thailand, Borneo and Japan, mostly in South-East and East Asia, not across the Pacific."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "other-sensitive",
+  "summary": "The facts and both questions are sound. One card sentence ('Thousands more were taken across the Pacific') is ambiguous about who was moved and inaccurate about where, so it should be reworded, for example 'Many were later sent to camps in Burma, Thailand, Borneo and Japan.'"
+ },
+ "sensitive": "other-sensitive",
+ "flags": [
+  "Card, wording: 'Thousands more were taken across the Pacific and held in camps in other places' is unclear and misleading. 'Thousands more' suggests prisoners on top of the 15,000, when many of those moved were the Singapore prisoners themselves. 'Across the Pacific' is also inaccurate, since most were sent to Burma, Thailand, Borneo and Japan, mostly in South-East and East Asia, not across the Pacific."
+ ],
+ "proposal": {
+  "title": "Prisoners of war",
+  "card": [
+   "When Japan captured Singapore in February 1942, about 15,000 Australians became prisoners of war (POWs) of Japan. Many were held at Changi, and groups of them were later sent to work camps in Burma, Thailand, Borneo and Japan.",
+   "Japan used POWs as forced labour. On the Burma-Thailand Railway, prisoners cut a railway through jungle in heat and monsoon rain, beside many Asian labourers who were also forced to work.",
+   "Prisoners got very little food, poor shelter and almost no medicine, so starvation and diseases such as malaria, dysentery and cholera were common. Guards also beat and punished prisoners.",
+   "About one in three Australian POWs of Japan died in captivity, most from hunger, disease and overwork. Survivors came home thin and ill, and many had health problems for years."
+  ],
+  "remember": "Australian POWs of Japan were starved, made to do forced labour and left without medicine, and many died.",
+  "a": {
+   "q": "What caused most of the deaths among Australian POWs held by Japan?",
+   "opts": [
+    "Hunger, disease and overwork in the camps",
+    "Wounds from the fighting before Singapore fell",
+    "Battles they were made to fight in for Japan",
+    "Gunfire during failed attempts to escape"
+   ],
+   "why": "Prisoners were fed very little, had almost no medicine and were made to do heavy labour, so most deaths came from hunger, disease and exhaustion. Battle wounds and escape attempts were not the main cause, because the danger came from life in the camps themselves.",
+   "clue": "Think about food, medicine and work in the camps."
+  },
+  "b": {
+   "d": 2,
+   "q": "Private Tom Reid is a prisoner on the Burma-Thailand Railway in 1943. Which of these is he most likely to face?",
+   "opts": [
+    "Long days of heavy work with little food and disease",
+    "A short working day with regular meals and a doctor",
+    "Release after helping to plan the railway route",
+    "Light work in a camp far from the jungle"
+   ],
+   "why": "Prisoners on the railway were forced to do heavy labour in jungle heat and rain on small amounts of food, and disease spread easily. They did not get regular meals or medical care, and they were not released for their work.",
+   "clue": "Remember what the card says about food, medicine and jungle work."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Prisoners of war",
+  "card": [
+   "When Japan captured Singapore in February 1942, about 15,000 Australians became prisoners of war (POWs) of Japan. Many were held at Changi, and groups of them were later sent to work camps in Burma, Thailand, Borneo and Japan.",
+   "Japan used POWs as forced labour. On the Burma-Thailand Railway, prisoners cut a railway through jungle in heat and monsoon rain, beside many Asian labourers who were also forced to work.",
+   "Prisoners got very little food, poor shelter and almost no medicine, so starvation and diseases such as malaria, dysentery and cholera were common. Guards also beat and punished prisoners.",
+   "About one in three Australian POWs of Japan died in captivity, most from hunger, disease and overwork. Survivors came home thin and ill, and many had health problems for years."
+  ],
+  "remember": "Australian POWs of Japan were starved, made to do forced labour and left without medicine, and many died.",
+  "a": {
+   "q": "What caused most of the deaths among Australian POWs held by Japan?",
+   "opts": [
+    "Hunger, disease and overwork in the camps",
+    "Wounds from the fighting before Singapore fell",
+    "Battles they were made to fight in for Japan",
+    "Gunfire during failed attempts to escape"
+   ],
+   "why": "Prisoners were fed very little, had almost no medicine and were made to do heavy labour, so most deaths came from hunger, disease and exhaustion. Battle wounds and escape attempts were not the main cause, because the danger came from life in the camps themselves.",
+   "clue": "Think about food, medicine and work in the camps."
+  },
+  "b": {
+   "d": 2,
+   "q": "Private Tom Reid is a prisoner on the Burma-Thailand Railway in 1943. Which of these is he most likely to face?",
+   "opts": [
+    "Long days of heavy work with little food and disease",
+    "A short working day with regular meals and a doctor",
+    "Release after helping to plan the railway route",
+    "Light work in a camp far from the jungle"
+   ],
+   "why": "Prisoners on the railway were forced to do heavy labour in jungle heat and rain on small amounts of food, and disease spread easily. They did not get regular meals or medical care, and they were not released for their work.",
+   "clue": "Remember what the card says about food, medicine and jungle work."
+  }
+ },
+ "cleared_by": "owner"
 }

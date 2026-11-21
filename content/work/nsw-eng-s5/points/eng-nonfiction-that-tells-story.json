@@ -8,8 +8,354 @@
    0.429
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:47Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (card fact)",
+  "2026-11-20T13:44:55Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00638,
+  "check": 0.01271,
+  "fix": 0.01478,
+  "recheck": 0.01042
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers how selection and framing shape non-fiction representation, while the new point teaches using fiction techniques such as scene, dialogue and character in true nonfiction, which is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, fact: The card says 'the people, events and words are real'. In memoir, dialogue is often reconstructed from memory rather than recorded word for word, so 'words are real' overstates it. Something like 'true to what happened' would be more accurate.",
+ "rejected": {
+  "title": "Nonfiction that tells a story",
+  "card": [
+   "Some nonfiction tells true events in the way a story does. Memoir (a writer's account of their own life) and feature journalism (a long, in-depth news article) often do this.",
+   "Writers borrow fiction techniques: scene (an event shown moment by moment), dialogue, and character (a real person shown through actions and words). These help readers picture and care about what happened.",
+   "The content stays true to fact. The people, events and words are real, even though they are told with a storyteller's skill.",
+   "A nonfiction writer still chooses how to tell the truth, such as where to begin and which moments to show."
+  ],
+  "remember": "Nonfiction can use story techniques to engage readers, while the facts stay true.",
+  "a": {
+   "q": "Which of these is an example of nonfiction that tells a story?",
+   "opts": [
+    "A memoir that recreates a real childhood day as a scene",
+    "A novel about an invented detective in a made-up town",
+    "A table listing the rainfall recorded in Dubbo each month",
+    "A fantasy tale in which a talking fox rescues a village"
+   ],
+   "why": "A memoir is nonfiction, and recreating a real day as a scene uses a fiction technique while staying true to fact. The novel is tempting because it is a story, but its events are invented, so it is not nonfiction.",
+   "clue": "Look for a real event told like a story."
+  },
+  "b": {
+   "d": 3,
+   "q": "A journalist writes a feature about a real bushfire. She opens with a firefighter's actions and spoken words, minute by minute, as they happened. What is the effect of this choice?",
+   "opts": [
+    "It draws readers into the real events like a story",
+    "It shows the feature is fiction with invented events",
+    "It proves the writer has not chosen what to include",
+    "It replaces the facts with the writer's imagination"
+   ],
+   "why": "Showing real actions and words moment by moment uses scene and dialogue, which engage readers while the content stays factual. The claim that the feature is fiction is wrong: using story techniques does not make events invented, and these events really happened.",
+   "clue": "Fiction techniques can be used with true events."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, fact: The card says 'the people, events and words are real'. In memoir, dialogue is often reconstructed from memory rather than recorded word for word, so 'words are real' overstates it. Something like 'true to what happened' would be more accurate."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Nonfiction that tells a story",
+     "card": [
+      "Some nonfiction tells true events in the way a story does. Memoir (a writer's account of their own life) and feature journalism (a long, in-depth news article) often do this.",
+      "Writers borrow fiction techniques: scene (an event shown moment by moment), dialogue, and character (a real person shown through actions and words). These help readers picture and care about what happened.",
+      "The content stays true to fact. The people, events and words are real, even though they are told with a storyteller's skill.",
+      "A nonfiction writer still chooses how to tell the truth, such as where to begin and which moments to show."
+     ],
+     "remember": "Nonfiction can use story techniques to engage readers, while the facts stay true.",
+     "a": {
+      "q": "Which of these is an example of nonfiction that tells a story?",
+      "opts": [
+       "A memoir that recreates a real childhood day as a scene",
+       "A novel about an invented detective in a made-up town",
+       "A table listing the rainfall recorded in Dubbo each month",
+       "A fantasy tale in which a talking fox rescues a village"
+      ],
+      "why": "A memoir is nonfiction, and recreating a real day as a scene uses a fiction technique while staying true to fact. The novel is tempting because it is a story, but its events are invented, so it is not nonfiction.",
+      "clue": "Look for a real event told like a story."
+     },
+     "b": {
+      "d": 3,
+      "q": "A journalist writes a feature about a real bushfire. She opens with the fire fighter's actions and spoken words, minute by minute, as they happened. What is the effect of this choice?",
+      "opts": [
+       "It draws readers into the real events like a story",
+       "It shows the feature is fiction with invented events",
+       "It proves the writer has not chosen what to include",
+       "It replaces the facts with the writer's imagination"
+      ],
+      "why": "Showing real actions and words moment by moment uses scene and dialogue, which engage readers while the content stays factual. Using story techniques does not make the article fiction, so the second option is wrong.",
+      "clue": "Fiction techniques can be used with true events."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "A memoir that recreates a real childhood day as a scene",
+      "also_right": []
+     },
+     "b": {
+      "best": "It draws readers into the real events like a story",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "Why (b) says 'the second option is wrong' about the claim that the article is fiction. Options are shown in random order, and that option is not second here, so the position reference will mislead students. Refer to the option by its content instead."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both questions are accurate, and each question has one clear right answer. The why for question b points to 'the second option', a position that does not hold when options are shuffled."
+    },
+    "flags": [
+     "Question b, other: Why (b) says 'the second option is wrong' about the claim that the article is fiction. Options are shown in random order, and that option is not second here, so the position reference will mislead students. Refer to the option by its content instead."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Nonfiction that tells a story",
+     "card": [
+      "Some nonfiction tells true events in the way a story does. Memoir (a writer's account of their own life) and feature journalism (a long, in-depth news article) often do this.",
+      "Writers borrow fiction techniques: scene (an event shown moment by moment), dialogue, and character (a real person shown through actions and words). These help readers picture and care about what happened.",
+      "The content stays true to fact. The people, events and words are real, even though they are told with a storyteller's skill.",
+      "A nonfiction writer still chooses how to tell the truth, such as where to begin and which moments to show."
+     ],
+     "remember": "Nonfiction can use story techniques to engage readers, while the facts stay true.",
+     "a": {
+      "q": "Which of these is an example of nonfiction that tells a story?",
+      "opts": [
+       "A memoir that recreates a real childhood day as a scene",
+       "A novel about an invented detective in a made-up town",
+       "A table listing the rainfall recorded in Dubbo each month",
+       "A fantasy tale in which a talking fox rescues a village"
+      ],
+      "why": "A memoir is nonfiction, and recreating a real day as a scene uses a fiction technique while staying true to fact. The novel is tempting because it is a story, but its events are invented, so it is not nonfiction.",
+      "clue": "Look for a real event told like a story."
+     },
+     "b": {
+      "d": 3,
+      "q": "A journalist writes a feature about a real bushfire. She opens with a firefighter's actions and spoken words, minute by minute, as they happened. What is the effect of this choice?",
+      "opts": [
+       "It draws readers into the real events like a story",
+       "It shows the feature is fiction with invented events",
+       "It proves the writer has not chosen what to include",
+       "It replaces the facts with the writer's imagination"
+      ],
+      "why": "Showing real actions and words moment by moment uses scene and dialogue, which engage readers while the content stays factual. The claim that the feature is fiction is wrong: using story techniques does not make events invented, and these events really happened.",
+      "clue": "Fiction techniques can be used with true events."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:06Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "A memoir that recreates a real childhood day as a scene",
+       "also_right": []
+      },
+      "b": {
+       "best": "It draws readers into the real events like a story",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "fact",
+        "detail": "The card says 'the people, events and words are real'. In memoir, dialogue is often reconstructed from memory rather than recorded word for word, so 'words are real' overstates it. Something like 'true to what happened' would be more accurate."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are sound and each has one clear right answer. The card overstates accuracy by saying the words in memoir are always real, when dialogue is often reconstructed from memory."
+     },
+     "flags": [
+      "Card, fact: The card says 'the people, events and words are real'. In memoir, dialogue is often reconstructed from memory rather than recorded word for word, so 'words are real' overstates it. Something like 'true to what happened' would be more accurate."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:55Z",
+   "step": "write",
+   "version": {
+    "title": "Nonfiction that tells a story",
+    "card": [
+     "Some nonfiction tells true events in the way a story does. Memoir (a writer's account of their own life) and feature journalism (a long, in-depth news article) often do this.",
+     "Writers borrow fiction techniques: scene (an event shown moment by moment), dialogue, and character (a real person shown through actions and words). These help readers picture and care about what happened.",
+     "The content stays true to fact. The people and events are real, and the telling stays true to what happened, even when dialogue is rebuilt from memory.",
+     "A nonfiction writer still chooses how to tell the truth, such as where to begin and which moments to show."
+    ],
+    "remember": "Nonfiction can use story techniques to engage readers, while the facts stay true.",
+    "a": {
+     "q": "Which of these is an example of nonfiction that tells a story?",
+     "opts": [
+      "A memoir that recreates a real childhood day as a scene",
+      "A novel about an invented detective in a made-up town",
+      "A table listing the rainfall recorded in Dubbo each month",
+      "A fantasy tale in which a talking fox rescues a village"
+     ],
+     "why": "A memoir is nonfiction, and recreating a real day as a scene uses a fiction technique while staying true to fact. The novel is tempting because it is a story, but its events are invented, so it is not nonfiction.",
+     "clue": "Look for a real event told like a story."
+    },
+    "b": {
+     "d": 3,
+     "q": "A journalist writes a feature about a real bushfire. She opens with a firefighter's actions and spoken words, minute by minute, as they happened. What is the effect of this choice?",
+     "opts": [
+      "It draws readers into the real events like a story",
+      "It shows the feature is fiction with invented events",
+      "It proves the writer has not chosen what to include",
+      "It replaces the facts with the writer's imagination"
+     ],
+     "why": "Showing real actions and words moment by moment uses scene and dialogue, which engage readers while the content stays factual. The claim that the feature is fiction is wrong: using story techniques does not make events invented, and these events really happened.",
+     "clue": "Fiction techniques can be used with true events."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "A memoir that recreates a real childhood day as a scene",
+     "also_right": []
+    },
+    "b": {
+     "best": "It draws readers into the real events like a story",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Nonfiction that tells a story",
+  "card": [
+   "Some nonfiction tells true events in the way a story does. Memoir (a writer's account of their own life) and feature journalism (a long, in-depth news article) often do this.",
+   "Writers borrow fiction techniques: scene (an event shown moment by moment), dialogue, and character (a real person shown through actions and words). These help readers picture and care about what happened.",
+   "The content stays true to fact. The people and events are real, and the telling stays true to what happened, even when dialogue is rebuilt from memory.",
+   "A nonfiction writer still chooses how to tell the truth, such as where to begin and which moments to show."
+  ],
+  "remember": "Nonfiction can use story techniques to engage readers, while the facts stay true.",
+  "a": {
+   "q": "Which of these is an example of nonfiction that tells a story?",
+   "opts": [
+    "A memoir that recreates a real childhood day as a scene",
+    "A novel about an invented detective in a made-up town",
+    "A table listing the rainfall recorded in Dubbo each month",
+    "A fantasy tale in which a talking fox rescues a village"
+   ],
+   "why": "A memoir is nonfiction, and recreating a real day as a scene uses a fiction technique while staying true to fact. The novel is tempting because it is a story, but its events are invented, so it is not nonfiction.",
+   "clue": "Look for a real event told like a story."
+  },
+  "b": {
+   "d": 3,
+   "q": "A journalist writes a feature about a real bushfire. She opens with a firefighter's actions and spoken words, minute by minute, as they happened. What is the effect of this choice?",
+   "opts": [
+    "It draws readers into the real events like a story",
+    "It shows the feature is fiction with invented events",
+    "It proves the writer has not chosen what to include",
+    "It replaces the facts with the writer's imagination"
+   ],
+   "why": "Showing real actions and words moment by moment uses scene and dialogue, which engage readers while the content stays factual. The claim that the feature is fiction is wrong: using story techniques does not make events invented, and these events really happened.",
+   "clue": "Fiction techniques can be used with true events."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A memoir that recreates a real childhood day as a scene",
+   "also_right": []
+  },
+  "b": {
+   "best": "It draws readers into the real events like a story",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Nonfiction that tells a story",
+  "card": [
+   "Some nonfiction tells true events in the way a story does. Memoir (a writer's account of their own life) and feature journalism (a long, in-depth news article) often do this.",
+   "Writers borrow fiction techniques: scene (an event shown moment by moment), dialogue, and character (a real person shown through actions and words). These help readers picture and care about what happened.",
+   "The content stays true to fact. The people and events are real, and the telling stays true to what happened, even when dialogue is rebuilt from memory.",
+   "A nonfiction writer still chooses how to tell the truth, such as where to begin and which moments to show."
+  ],
+  "remember": "Nonfiction can use story techniques to engage readers, while the facts stay true.",
+  "a": {
+   "q": "Which of these is an example of nonfiction that tells a story?",
+   "opts": [
+    "A memoir that recreates a real childhood day as a scene",
+    "A novel about an invented detective in a made-up town",
+    "A table listing the rainfall recorded in Dubbo each month",
+    "A fantasy tale in which a talking fox rescues a village"
+   ],
+   "why": "A memoir is nonfiction, and recreating a real day as a scene uses a fiction technique while staying true to fact. The novel is tempting because it is a story, but its events are invented, so it is not nonfiction.",
+   "clue": "Look for a real event told like a story."
+  },
+  "b": {
+   "d": 3,
+   "q": "A journalist writes a feature about a real bushfire. She opens with a firefighter's actions and spoken words, minute by minute, as they happened. What is the effect of this choice?",
+   "opts": [
+    "It draws readers into the real events like a story",
+    "It shows the feature is fiction with invented events",
+    "It proves the writer has not chosen what to include",
+    "It replaces the facts with the writer's imagination"
+   ],
+   "why": "Showing real actions and words moment by moment uses scene and dialogue, which engage readers while the content stays factual. The claim that the feature is fiction is wrong: using story techniques does not make events invented, and these events really happened.",
+   "clue": "Fiction techniques can be used with true events."
+  }
+ },
+ "checked_by": "claude-code"
 }

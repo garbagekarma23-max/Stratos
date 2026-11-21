@@ -24,8 +24,229 @@
    0.204
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:46Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:49Z write: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.00605,
+  "check": 0.01045,
+  "fix": 0.01943,
+  "recheck": 0.00742
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the broader idea that people value landscapes for beauty, recreation, farming, tourism, and cultural and spiritual meaning; the closest, the water beauty and spiritual card, covers only water and is narrower.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Why landscapes matter",
+  "card": [
+   "A landscape is the natural and built features of an area, such as hills, rivers, beaches and farms. People value landscapes in different ways.",
+   [
+    "Beauty and recreation",
+    "Some people value a landscape for its scenery. Others value it for activities such as bushwalking, surfing or camping."
+   ],
+   [
+    "Farming and tourism",
+    "Farmers value fertile soil and water for growing crops and raising animals. Tourism businesses value landscapes that visitors pay to see."
+   ],
+   [
+    "Cultural and spiritual",
+    "A landscape can be valued for its meaning to a community, such as its stories and history. It can also hold spiritual meaning, such as a place seen as sacred."
+   ]
+  ],
+  "remember": "People value the same landscape for different reasons, such as beauty, use, income and meaning.",
+  "a": {
+   "q": "A family drives to a lookout in the Blue Mountains to enjoy the view. Why do they value this landscape?",
+   "opts": [
+    "For its beauty",
+    "For farming",
+    "For its spiritual meaning",
+    "For tourism income"
+   ],
+   "why": "The family values the scenery, which is beauty. They are not growing food or earning money from the place, and nothing in the case points to spiritual meaning.",
+   "clue": "What are they doing at the lookout?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's family runs a cattle farm near Dubbo. They say the river flats are the best part of their land. Which value does this show?",
+   "opts": [
+    "Farming, as the flats support their animals",
+    "Recreation, as the flats suit family picnics",
+    "Tourism, as the flats attract paying visitors",
+    "Beauty, as the flats have pleasing scenery"
+   ],
+   "why": "The family values the flats for raising cattle, which is farming. Beauty could also be a reason in other cases, but here the case is about their working farm and nothing suggests visitors or picnics.",
+   "clue": "Think about what the family does for a living on the land."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "For its beauty",
+   "also_right": []
+  },
+  "b": {
+   "best": "Farming, as the flats support their animals",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line regroups the card's three headings (beauty and recreation, farming and tourism, cultural and spiritual) into four new labels (beauty, use, income, meaning). 'Use' and 'income' do not appear on the card, and it is unclear where recreation or farming fit, so students may be confused about which category is which."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and have one clear answer each. The only issue is that the remember line sorts the values into new labels (use, income) that do not match the card's headings."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The remember line regroups the card's three headings (beauty and recreation, farming and tourism, cultural and spiritual) into four new labels (beauty, use, income, meaning). 'Use' and 'income' do not appear on the card, and it is unclear where recreation or farming fit, so students may be confused about which category is which."
+ ],
+ "proposal": {
+  "title": "Why landscapes matter",
+  "card": [
+   "A landscape is the natural and built features of an area, such as hills, rivers, beaches and farms. People value landscapes in different ways.",
+   [
+    "Beauty and recreation",
+    "Some people value a landscape for its scenery. Others value it for activities such as bushwalking, surfing or camping."
+   ],
+   [
+    "Farming and tourism",
+    "Farmers value fertile soil and water for growing crops and raising animals. Tourism businesses value landscapes that attract paying visitors."
+   ],
+   [
+    "Cultural and spiritual",
+    "A landscape can be valued for its meaning to a community, such as its stories and history. It can also hold spiritual meaning, such as a place seen as sacred."
+   ]
+  ],
+  "remember": "One landscape can be valued for beauty, recreation, farming, tourism, culture or spiritual meaning.",
+  "a": {
+   "q": "A family drives to a lookout in the Blue Mountains to enjoy the view. Why do they value this landscape?",
+   "opts": [
+    "For its beauty",
+    "For farming",
+    "For its spiritual meaning",
+    "For tourism income"
+   ],
+   "why": "The family values the scenery, which is beauty. They are not growing food or earning money from the place, and nothing in the case points to spiritual meaning.",
+   "clue": "What are they doing at the lookout?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam runs a business near Kempsey that sells guided kayak trips on the Macleay River. Why does Sam's business value the river?",
+   "opts": [
+    "Tourism, as visitors pay for trips on it",
+    "Recreation, as kayaking is an outdoor activity",
+    "Farming, as its water can be used on crops",
+    "Spiritual, as the river is seen as sacred"
+   ],
+   "why": "Sam's business earns money from visitors who pay to use the river, which is tourism. Recreation is tempting because kayaking is an activity, but that is why the visitors value the river, not why the business does.",
+   "clue": "Who pays, and who earns money from the river?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "For its beauty",
+    "also_right": []
+   },
+   "b": {
+    "best": "Tourism, as visitors pay for trips on it",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line regroups the card's three headings (beauty and recreation, farming and tourism, cultural and spiritual) into four new labels (beauty, use, income, meaning). 'Use' and 'income' do not appear on the card, and it is unclear where recreation or farming fit, so students may be confused about which category is which."
+   }
+  ],
+  "flags": [
+   "Remember, other: The remember line regroups the card's three headings (beauty and recreation, farming and tourism, cultural and spiritual) into four new labels (beauty, use, income, meaning). 'Use' and 'income' do not appear on the card, and it is unclear where recreation or farming fit, so students may be confused about which category is which."
+  ]
+ },
+ "final": {
+  "title": "Why landscapes matter",
+  "card": [
+   "A landscape is the natural and built features of an area, such as hills, rivers, beaches and farms. People value landscapes in different ways.",
+   [
+    "Beauty and recreation",
+    "Some people value a landscape for its scenery. Others value it for activities such as bushwalking, surfing or camping."
+   ],
+   [
+    "Farming and tourism",
+    "Farmers value fertile soil and water for growing crops and raising animals. Tourism businesses value landscapes that attract paying visitors."
+   ],
+   [
+    "Cultural and spiritual",
+    "A landscape can be valued for its meaning to a community, such as its stories and history. It can also hold spiritual meaning, such as a place seen as sacred."
+   ]
+  ],
+  "remember": "One landscape can be valued for beauty, recreation, farming, tourism, culture or spiritual meaning.",
+  "a": {
+   "q": "A family drives to a lookout in the Blue Mountains to enjoy the view. Why do they value this landscape?",
+   "opts": [
+    "For its beauty",
+    "For farming",
+    "For its spiritual meaning",
+    "For tourism income"
+   ],
+   "why": "The family values the scenery, which is beauty. They are not growing food or earning money from the place, and nothing in the case points to spiritual meaning.",
+   "clue": "What are they doing at the lookout?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam runs a business near Kempsey that sells guided kayak trips on the Macleay River. Why does Sam's business value the river?",
+   "opts": [
+    "Tourism, as visitors pay for trips on it",
+    "Recreation, as kayaking is an outdoor activity",
+    "Farming, as its water can be used on crops",
+    "Spiritual, as the river is seen as sacred"
+   ],
+   "why": "Sam's business earns money from visitors who pay to use the river, which is tourism. Recreation is tempting because kayaking is an activity, but that is why the visitors value the river, not why the business does.",
+   "clue": "Who pays, and who earns money from the river?"
+  }
+ },
+ "cleared_by": "recheck"
 }

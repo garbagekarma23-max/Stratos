@@ -24,8 +24,202 @@
    0.203
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:48Z write: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00647,
+  "check": 0.01012,
+  "fix": 0.02421,
+  "recheck": 0.00892
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches how several parts of a text (characters, settings, images) combine to build one unifying theme; the closest, extending interpretations, is about testing and building on readings, and the others cover comparison, context or values.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Themes that unify a text",
+  "card": [
+   "A theme is a central idea that a text explores, such as loneliness, courage or the cost of ambition. It is more than a topic. It is a point the text makes about that topic.",
+   "A theme can hold a text together. Characters, settings, images and events can each add to the same idea, so the parts do not feel separate.",
+   "Here is an invented example. In a story about isolation, a boy eats alone, his house sits at the end of a long empty road, and the narrator keeps describing locked doors. Each part feeds the theme of isolation.",
+   "To show a theme unifies a text, point to several parts of the text and explain how each one works towards the same idea."
+  ],
+  "remember": "A unifying theme is one central idea that many parts of a text work towards.",
+  "a": {
+   "q": "What does it mean to say a theme unifies a text?",
+   "opts": [
+    "Many parts of the text work towards one central idea",
+    "The text keeps repeating the same word on every page",
+    "Every character in the text feels the same emotion",
+    "The text tells one event from several points of view"
+   ],
+   "why": "A unifying theme links characters, settings and images to one central idea. Repeating a word or sharing an emotion may happen, but neither is what makes a theme hold the text together.",
+   "clue": "Think about how separate parts join up."
+  },
+  "b": {
+   "d": 3,
+   "q": "In Priya's short story, a girl moves to a new town. She wears her old school jumper, a grey sky hangs over the streets, and a stray dog is shut out of every yard. Which statement best explains how these parts unify the story?",
+   "opts": [
+    "Each one adds to the idea of not belonging",
+    "Each one shows that the town has bad weather",
+    "Each one shows the girl dislikes her new school",
+    "Each one is a symbol of the girl's old friends"
+   ],
+   "why": "The jumper, the grey sky and the shut-out dog all suggest being an outsider, so together they build the theme of not belonging. Saying they only show weather or dislike of school treats them as separate details, not parts of one idea.",
+   "clue": "Look for the one idea all three details share."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Many parts of the text work towards one central idea",
+   "also_right": []
+  },
+  "b": {
+   "best": "Each one adds to the idea of not belonging",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says a theme is more than a topic and is a point the text makes about that topic. Its own examples (loneliness, courage, the theme of isolation) and question b's answer (not belonging) are named as topic words, not as statements. Students may be unsure which counts as a theme."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer, and the explanations fit them. One minor issue: the card defines a theme as a point about a topic, but its examples and question b's answer are single topic words, which may confuse students."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The card says a theme is more than a topic and is a point the text makes about that topic. Its own examples (loneliness, courage, the theme of isolation) and question b's answer (not belonging) are named as topic words, not as statements. Students may be unsure which counts as a theme."
+ ],
+ "proposal": {
+  "title": "Themes that unify a text",
+  "card": [
+   "A topic is a subject, such as loneliness. A theme is the point a text makes about that topic, such as the idea that loneliness can make people cruel.",
+   "A theme can hold a text together. Characters, settings, images and events can each add to the same idea, so the parts do not feel separate.",
+   "In an invented story, a boy eats alone, his house sits at the end of a long empty road, and the narrator keeps describing locked doors. Each part feeds one theme: that isolation can trap a person.",
+   "To show that a theme unifies a text, point to several parts of the text and explain how each one works towards the same idea."
+  ],
+  "remember": "A unifying theme is one point about a topic that many parts of a text work towards.",
+  "a": {
+   "q": "What does it mean to say a theme unifies a text?",
+   "opts": [
+    "Many parts of the text work towards one central idea",
+    "The text keeps repeating the same word on every page",
+    "Every character in the text feels the same emotion",
+    "The text tells one event from several points of view"
+   ],
+   "why": "A unifying theme links characters, settings and images to one central idea. Repeating a word or sharing an emotion may happen, but neither is what makes a theme hold the text together.",
+   "clue": "Think about how separate parts join up."
+  },
+  "b": {
+   "d": 3,
+   "q": "In Priya's short story, a girl moves to a new town. She wears her old school jumper, a grey sky hangs over the streets, and a stray dog is shut out of every yard. Which statement best explains how these parts unify the story?",
+   "opts": [
+    "Each suggests that fitting in somewhere new is hard",
+    "Each suggests that the new town has gloomy weather",
+    "Each suggests that the girl dislikes her new school",
+    "Each suggests the girl will soon forget her old home"
+   ],
+   "why": "The old jumper, the grey sky and the shut-out dog all suggest being an outsider, so together they build the theme that fitting in somewhere new is hard. Gloomy weather fits only the sky, so it treats one detail on its own instead of linking all three to one idea.",
+   "clue": "Look for the one idea all three details share."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Many parts of the text work towards one central idea",
+    "also_right": []
+   },
+   "b": {
+    "best": "Each suggests that fitting in somewhere new is hard",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 16,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says a theme is more than a topic and is a point the text makes about that topic. Its own examples (loneliness, courage, the theme of isolation) and question b's answer (not belonging) are named as topic words, not as statements. Students may be unsure which counts as a theme."
+   }
+  ],
+  "flags": [
+   "Card, wording: The card says a theme is more than a topic and is a point the text makes about that topic. Its own examples (loneliness, courage, the theme of isolation) and question b's answer (not belonging) are named as topic words, not as statements. Students may be unsure which counts as a theme."
+  ]
+ },
+ "final": {
+  "title": "Themes that unify a text",
+  "card": [
+   "A topic is a subject, such as loneliness. A theme is the point a text makes about that topic, such as the idea that loneliness can make people cruel.",
+   "A theme can hold a text together. Characters, settings, images and events can each add to the same idea, so the parts do not feel separate.",
+   "In an invented story, a boy eats alone, his house sits at the end of a long empty road, and the narrator keeps describing locked doors. Each part feeds one theme: that isolation can trap a person.",
+   "To show that a theme unifies a text, point to several parts of the text and explain how each one works towards the same idea."
+  ],
+  "remember": "A unifying theme is one point about a topic that many parts of a text work towards.",
+  "a": {
+   "q": "What does it mean to say a theme unifies a text?",
+   "opts": [
+    "Many parts of the text work towards one central idea",
+    "The text keeps repeating the same word on every page",
+    "Every character in the text feels the same emotion",
+    "The text tells one event from several points of view"
+   ],
+   "why": "A unifying theme links characters, settings and images to one central idea. Repeating a word or sharing an emotion may happen, but neither is what makes a theme hold the text together.",
+   "clue": "Think about how separate parts join up."
+  },
+  "b": {
+   "d": 3,
+   "q": "In Priya's short story, a girl moves to a new town. She wears her old school jumper, a grey sky hangs over the streets, and a stray dog is shut out of every yard. Which statement best explains how these parts unify the story?",
+   "opts": [
+    "Each suggests that fitting in somewhere new is hard",
+    "Each suggests that the new town has gloomy weather",
+    "Each suggests that the girl dislikes her new school",
+    "Each suggests the girl will soon forget her old home"
+   ],
+   "why": "The old jumper, the grey sky and the shut-out dog all suggest being an outsider, so together they build the theme that fitting in somewhere new is hard. Gloomy weather fits only the sky, so it treats one detail on its own instead of linking all three to one idea.",
+   "clue": "Look for the one idea all three details share."
+  }
+ },
+ "cleared_by": "recheck"
 }

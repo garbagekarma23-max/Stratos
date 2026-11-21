@@ -24,8 +24,235 @@
    0.338
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 may adapt leg-sources-law, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:39Z confirm: Claude Opus 5.5 may adapt leg-sources-law, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt leg-sources-law (3 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting leg-sources-law on the next run",
+  "2026-11-20T14:12:37Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "confirm": 0.01112,
+  "adapt": 0.00388,
+  "check": 0.00949
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "leg-sources-law",
+  "changes": [
+   "Change the opening line from 'Law in Victoria' to 'Law in New South Wales' to match the NSW Commerce course.",
+   "Replace the Crimes Act 1958 (Vic) example with a New South Wales Act, such as the Crimes Act 1900 (NSW), so the statute example is local to NSW.",
+   "Add that common law is also called case law and is built up through the precedents judges set for later cases, so it matches the brief's wording on precedent."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same statute and common law idea at a similar depth, but it is framed for Victoria and needs its opening line and Act example changed to suit NSW Commerce students.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "leg-sources-law",
+  "changes": [
+   "Change 'Law in Victoria' to 'Law in New South Wales'.",
+   "Replace the Crimes Act 1958 (Vic) example with a NSW Act, such as the Crimes Act 1900 (NSW).",
+   "In the common law line, say that judges' decisions set precedents that later courts follow in similar cases, to match the brief's wording."
+  ],
+  "sure": "medium",
+  "reason": "The Sources of law card teaches statute law and common law at a simple level that suits Years 9 and 10, but it needs NSW references and should name precedent, as the brief does.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "leg-sources-law",
+  "changes": [
+   "Change 'Law in Victoria' to 'Law in New South Wales'.",
+   "Replace the Crimes Act 1958 (Vic) with a NSW Act, such as the Crimes Act 1900 (NSW).",
+   "In the common law line, say that a judge's decision sets a precedent that later courts follow in similar cases."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card1",
+   "card2",
+   "card3",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches statute law and common law at a level that suits Years 9 and 10, but it names Victoria and a Victorian Act, and does not name precedent as the brief does.",
+   "item": "6aec3aef0034c54d",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-statute-law-common-law",
+    "title": "Statute law and common law",
+    "brief": "3506b21f1da7",
+    "shortlist": [
+     [
+      "leg-sources-law",
+      0.684
+     ],
+     [
+      "leg-rights-statute-common-law",
+      0.604
+     ],
+     [
+      "leg-courts-law-reform",
+      0.378
+     ],
+     [
+      "leg-parliament-courts",
+      0.362
+     ],
+     [
+      "leg-courts-parliament",
+      0.338
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00033,
+     "confirm": 0.01112
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "leg-sources-law",
+     "changes": [
+      "Change the opening line from 'Law in Victoria' to 'Law in New South Wales' to match the NSW Commerce course.",
+      "Replace the Crimes Act 1958 (Vic) example with a New South Wales Act, such as the Crimes Act 1900 (NSW), so the statute example is local to NSW.",
+      "Add that common law is also called case law and is built up through the precedents judges set for later cases, so it matches the brief's wording on precedent."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same statute and common law idea at a similar depth, but it is framed for Victoria and needs its opening line and Act example changed to suit NSW Commerce students.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "leg-sources-law",
+     "changes": [
+      "Change 'Law in Victoria' to 'Law in New South Wales'.",
+      "Replace the Crimes Act 1958 (Vic) example with a NSW Act, such as the Crimes Act 1900 (NSW).",
+      "In the common law line, say that judges' decisions set precedents that later courts follow in similar cases, to match the brief's wording."
+     ],
+     "sure": "medium",
+     "reason": "The Sources of law card teaches statute law and common law at a simple level that suits Years 9 and 10, but it needs NSW references and should name precedent, as the brief does.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "af2c6018cc915da0"
+  }
+ ],
+ "draft": {
+  "title": "Sources of law",
+  "card": [
+   "Law in New South Wales comes from two main sources: parliament, and the decisions judges make when they decide court cases.",
+   [
+    "Statute law",
+    "law made by parliament and set out in an Act of Parliament, such as the Crimes Act 1900 (NSW). A bill is only a proposed law until parliament passes it."
+   ],
+   [
+    "Common law",
+    "law made by judges when they decide cases. A judge's decision sets a precedent that later courts follow in similar cases. It is recorded in the judge's written reasons."
+   ],
+   "The two sources do not rank equally. Where a statute and a common law rule are inconsistent, the statute prevails and the common law rule no longer applies."
+  ],
+  "remember": "Acts make statute law, judges' decisions make common law, and statute wins if they clash.",
+  "a": {
+   "q": "Which one of these is an example of common law?",
+   "opts": [
+    "A rule set out in a judge's reasons for deciding a case",
+    "A rule set out in a new Act passed by parliament",
+    "A rule set out in a bill before parliament",
+    "A rule set out in a council's list of local fees"
+   ],
+   "why": "Common law is made by judges when they decide cases, and it is recorded in their reasons. An Act of Parliament is statute law, not common law. A bill is only a proposed law until parliament passes it.",
+   "clue": "Who makes common law?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Parliament passes an Act that changes a rule judges set in earlier cases. Which statement is correct?",
+   "opts": [
+    "The new rule is statute law and replaces the judges' rule",
+    "The new rule is common law because it replaces a case",
+    "The judges' rule stays in force over the new Act",
+    "The new rule is common law until a court approves it"
+   ],
+   "why": "An Act of Parliament is statute law, whatever rule it changes. Where a statute and a common law rule are inconsistent, the statute prevails, so the judges' rule no longer applies. Replacing a rule from a case does not make the Act common law.",
+   "clue": "Look at who made the new rule, not what it replaced."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A rule set out in a judge's reasons for deciding a case",
+   "also_right": []
+  },
+  "b": {
+   "best": "The new rule is statute law and replaces the judges' rule",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Sources of law",
+  "card": [
+   "Law in New South Wales comes from two main sources: parliament, and the decisions judges make when they decide court cases.",
+   [
+    "Statute law",
+    "law made by parliament and set out in an Act of Parliament, such as the Crimes Act 1900 (NSW). A bill is only a proposed law until parliament passes it."
+   ],
+   [
+    "Common law",
+    "law made by judges when they decide cases. A judge's decision sets a precedent that later courts follow in similar cases. It is recorded in the judge's written reasons."
+   ],
+   "The two sources do not rank equally. Where a statute and a common law rule are inconsistent, the statute prevails and the common law rule no longer applies."
+  ],
+  "remember": "Acts make statute law, judges' decisions make common law, and statute wins if they clash.",
+  "a": {
+   "q": "Which one of these is an example of common law?",
+   "opts": [
+    "A rule set out in a judge's reasons for deciding a case",
+    "A rule set out in a new Act passed by parliament",
+    "A rule set out in a bill before parliament",
+    "A rule set out in a council's list of local fees"
+   ],
+   "why": "Common law is made by judges when they decide cases, and it is recorded in their reasons. An Act of Parliament is statute law, not common law. A bill is only a proposed law until parliament passes it.",
+   "clue": "Who makes common law?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Parliament passes an Act that changes a rule judges set in earlier cases. Which statement is correct?",
+   "opts": [
+    "The new rule is statute law and replaces the judges' rule",
+    "The new rule is common law because it replaces a case",
+    "The judges' rule stays in force over the new Act",
+    "The new rule is common law until a court approves it"
+   ],
+   "why": "An Act of Parliament is statute law, whatever rule it changes. Where a statute and a common law rule are inconsistent, the statute prevails, so the judges' rule no longer applies. Replacing a rule from a case does not make the Act common law.",
+   "clue": "Look at who made the new rule, not what it replaced."
+  }
+ }
 }

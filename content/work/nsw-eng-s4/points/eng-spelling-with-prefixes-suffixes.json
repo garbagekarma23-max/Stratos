@@ -24,8 +24,231 @@
    0.213
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:42Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: failed the content check, writing again",
+  "2026-11-20T12:44:53Z write: done",
+  "2026-11-20T12:53:24Z check: flagged",
+  "2026-11-20T13:11:46Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "write": 0.01347,
+  "check": 0.00909,
+  "fix": 0.01646,
+  "recheck": 0.00671
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank points teach what prefixes and suffixes mean and a general strategy for splitting words, but none teaches the spelling rules the new point asks for, such as dropping a final e before -ing, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Spelling with prefixes and suffixes",
+  "card": [
+   [
+    "Prefix",
+    "a word part added to the start of a word. It changes the meaning but not the spelling of the base word. Un + necessary = unnecessary, with both n letters kept."
+   ],
+   [
+    "Root",
+    "the main part of a word that carries its core meaning. In \"transport\", the root port means carry."
+   ],
+   [
+    "Suffix",
+    "a word part added to the end. It can change the meaning or the word class. Care + ful = careful, with only one l in -ful."
+   ],
+   "If a word ends in a silent e, drop the e before a suffix that starts with a vowel. Hope + ing = hoping. Keep the e before a suffix that starts with a consonant. Hope + ful = hopeful."
+  ],
+  "remember": "Build long words from parts, and check the final e before adding a suffix.",
+  "a": {
+   "q": "Which spelling is correct when the suffix -ing is added to the word \"make\"?",
+   "opts": [
+    "making",
+    "makeing",
+    "makeking",
+    "makking"
+   ],
+   "why": "Make ends in a silent e, and -ing starts with a vowel, so the e is dropped: making. Makeing keeps the e, which the rule says to drop before a vowel suffix.",
+   "clue": "Look at the first letter of the suffix."
+  },
+  "b": {
+   "d": 3,
+   "q": "Zara adds the prefix dis- to \"appear\" and the suffix -ful to \"hope\". Which pair of spellings is correct?",
+   "opts": [
+    "disappear and hopeful",
+    "dissappear and hopeful",
+    "disappear and hopful",
+    "dissappear and hopful"
+   ],
+   "why": "A prefix keeps the base word's spelling, so dis + appear = disappear, with one s from the prefix and one s from the word. Hope + ful keeps the e because -ful starts with a consonant. Dissappear adds an extra s, and hopful wrongly drops the e.",
+   "clue": "Keep every letter of the base word when adding a prefix, and check what -ful starts with."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "making",
+   "also_right": []
+  },
+  "b": {
+   "best": "disappear and hopeful",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) says disappear has 'one s from the prefix and one s from the word', which implies two s letters. 'Appear' has no s, and disappear has only one s, from dis-. It should say the only s comes from the prefix, because appear starts with a."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct. Why (b) wrongly says disappear has an s from the prefix and an s from the base word; appear has no s, so the word's only s comes from dis-."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: Why (b) says disappear has 'one s from the prefix and one s from the word', which implies two s letters. 'Appear' has no s, and disappear has only one s, from dis-. It should say the only s comes from the prefix, because appear starts with a."
+ ],
+ "proposal": {
+  "title": "Spelling with prefixes and suffixes",
+  "card": [
+   [
+    "Prefix",
+    "a word part added to the start of a word. It changes the meaning but not the spelling of the base word. Un + necessary = unnecessary, with both n letters kept."
+   ],
+   [
+    "Root",
+    "the main part of a word that carries its core meaning. In \"transport\", the root port means carry."
+   ],
+   [
+    "Suffix",
+    "a word part added to the end. It can change the meaning or the word class. Care + ful = careful, with only one l in -ful."
+   ],
+   "If a word ends in a silent e, drop the e before a suffix that starts with a vowel. Hope + ing = hoping. Keep the e before a suffix that starts with a consonant. Hope + ful = hopeful."
+  ],
+  "remember": "Build long words from parts, and check the final e before adding a suffix.",
+  "a": {
+   "q": "Which spelling is correct when the suffix -ing is added to the word \"make\"?",
+   "opts": [
+    "making",
+    "makeing",
+    "makeking",
+    "makking"
+   ],
+   "why": "Make ends in a silent e, and -ing starts with a vowel, so the e is dropped: making. Makeing keeps the e, which the rule says to drop before a vowel suffix.",
+   "clue": "Look at the first letter of the suffix."
+  },
+  "b": {
+   "d": 3,
+   "q": "Zara adds the prefix dis- to \"appear\" and the suffix -ful to \"hope\". Which pair of spellings is correct?",
+   "opts": [
+    "disappear and hopeful",
+    "dissappear and hopeful",
+    "disappear and hopful",
+    "dissappear and hopful"
+   ],
+   "why": "A prefix keeps the base word's spelling, so dis + appear = disappear: appear starts with a, so the only s comes from the prefix. Hope + ful keeps the e because -ful starts with a consonant. Dissappear adds an s that neither part has, and hopful wrongly drops the e.",
+   "clue": "Keep every letter of the base word when adding a prefix, and check what -ful starts with."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "making",
+    "also_right": []
+   },
+   "b": {
+    "best": "disappear and hopeful",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) says disappear has 'one s from the prefix and one s from the word', which implies two s letters. 'Appear' has no s, and disappear has only one s, from dis-. It should say the only s comes from the prefix, because appear starts with a."
+   }
+  ],
+  "flags": [
+   "Question b, fact: Why (b) says disappear has 'one s from the prefix and one s from the word', which implies two s letters. 'Appear' has no s, and disappear has only one s, from dis-. It should say the only s comes from the prefix, because appear starts with a."
+  ]
+ },
+ "final": {
+  "title": "Spelling with prefixes and suffixes",
+  "card": [
+   [
+    "Prefix",
+    "a word part added to the start of a word. It changes the meaning but not the spelling of the base word. Un + necessary = unnecessary, with both n letters kept."
+   ],
+   [
+    "Root",
+    "the main part of a word that carries its core meaning. In \"transport\", the root port means carry."
+   ],
+   [
+    "Suffix",
+    "a word part added to the end. It can change the meaning or the word class. Care + ful = careful, with only one l in -ful."
+   ],
+   "If a word ends in a silent e, drop the e before a suffix that starts with a vowel. Hope + ing = hoping. Keep the e before a suffix that starts with a consonant. Hope + ful = hopeful."
+  ],
+  "remember": "Build long words from parts, and check the final e before adding a suffix.",
+  "a": {
+   "q": "Which spelling is correct when the suffix -ing is added to the word \"make\"?",
+   "opts": [
+    "making",
+    "makeing",
+    "makeking",
+    "makking"
+   ],
+   "why": "Make ends in a silent e, and -ing starts with a vowel, so the e is dropped: making. Makeing keeps the e, which the rule says to drop before a vowel suffix.",
+   "clue": "Look at the first letter of the suffix."
+  },
+  "b": {
+   "d": 3,
+   "q": "Zara adds the prefix dis- to \"appear\" and the suffix -ful to \"hope\". Which pair of spellings is correct?",
+   "opts": [
+    "disappear and hopeful",
+    "dissappear and hopeful",
+    "disappear and hopful",
+    "dissappear and hopful"
+   ],
+   "why": "A prefix keeps the base word's spelling, so dis + appear = disappear: appear starts with a, so the only s comes from the prefix. Hope + ful keeps the e because -ful starts with a consonant. Dissappear adds an s that neither part has, and hopful wrongly drops the e.",
+   "clue": "Keep every letter of the base word when adding a prefix, and check what -ful starts with."
+  }
+ },
+ "cleared_by": "recheck"
 }

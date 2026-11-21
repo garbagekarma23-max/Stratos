@@ -16,8 +16,166 @@
    0.305
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: done",
+  "2026-11-20T12:44:56Z check: for review (other-sensitive)",
+  "2026-11-20T14:40:32Z review: rejected, to be written again",
+  "2026-11-20T14:58:19Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00632,
+  "check": 0.01245
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, his-mongols-conquered, covers horse archers, speed, tactics and terror but does not teach the brief's strict discipline or fast communication, and its fake-retreat tactic is not in the brief, so no single bank point teaches this same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "The Mongol army",
+  "card": [
+   "Mongol soldiers grew up riding horses and hunting on the steppe. They became skilled horse archers who could shoot accurately while riding fast.",
+   "Riders carried messages across the empire on a relay system. They changed to fresh horses at stations along the way, so news and orders travelled fast.",
+   "The army was strict about discipline. It was organised into groups of ten, hundreds, thousands and larger units, and soldiers had to obey their commanders.",
+   "The Mongols also used terror. Cities that fought back could be destroyed, so many others gave up without a fight. Together, these methods helped build the largest land empire in history."
+  ],
+  "remember": "Mounted skill, fast messages, discipline and fear together built the Mongol empire.",
+  "a": {
+   "q": "Why did the relay system of riders help the Mongol army?",
+   "opts": [
+    "Orders and news could travel quickly across the empire",
+    "Soldiers could avoid fighting in large battles",
+    "Cities were made to pay taxes in horses",
+    "Soldiers learned to shoot arrows from horseback"
+   ],
+   "why": "Riders changed to fresh horses at stations, so messages moved far and fast. Skill at shooting from horseback is a different strength of the army and does not explain how messages travelled.",
+   "clue": "Think about what the riders carried and how far it went."
+  },
+  "b": {
+   "d": 3,
+   "q": "A Mongol army arrives at a city. Its leaders have heard that nearby cities which resisted were destroyed, so they open the gates. Which part of the Mongol army's success does this show?",
+   "opts": [
+    "The use of terror to make enemies give up",
+    "The strict discipline of the Mongol soldiers",
+    "The skill of the Mongol horse archers",
+    "The speed of the relay message system"
+   ],
+   "why": "The city gave up because its leaders feared being destroyed, which shows terror at work. Discipline and archery helped win battles, but no fighting happened here, so they are not what made the city surrender.",
+   "clue": "Why did the leaders decide to open the gates?"
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:19Z",
+   "step": "write",
+   "version": {
+    "title": "The Mongol army",
+    "card": [
+     [
+      "Horse archers",
+      "Mongol warriors learned to ride and shoot as children. Each had several horses and could fire arrows accurately at a gallop."
+     ],
+     [
+      "Fast communication",
+      "a relay system called the yam had stations with fresh horses along the routes, so riders could carry orders and news a long way quickly."
+     ],
+     [
+      "Strict discipline",
+      "the army was organised in units of 10, 100, 1,000 and 10,000. Soldiers had to obey orders and could be punished harshly for breaking them."
+     ],
+     [
+      "Terror",
+      "cities that resisted were often destroyed and their people killed. As news spread, many surrendered without a fight, and the Mongols built the largest land empire in history."
+     ]
+    ],
+    "remember": "Skill, speed, discipline and fear together built the largest land empire in history.",
+    "a": {
+     "q": "Why did many cities surrender to Mongol armies without a fight?",
+     "opts": [
+      "News that resisting cities were destroyed spread fear",
+      "Horse archers could shoot arrows over city walls",
+      "Riders on the yam carried offers of peace to them",
+      "Mongol soldiers refused to attack walled cities"
+     ],
+     "why": "Cities that resisted were often destroyed, and news of it spread, so many leaders gave up out of fear. Horse archers were strong in battle, but that does not explain why cities gave up without one.",
+     "clue": "What had other cities heard?"
+    },
+    "b": {
+     "d": 3,
+     "q": "A Mongol general on campaign sends word of an enemy army far to the west. Within days, the khan's orders reach him. Which strength of the army does this show?",
+     "opts": [
+      "Fast communication through the yam",
+      "Strict discipline in units of ten",
+      "Skill of the horse archers in battle",
+      "Use of terror to make cities surrender"
+     ],
+     "why": "The orders crossed a long distance in days because riders changed to fresh horses at yam stations. Discipline made soldiers obey orders once they arrived, but it did not carry them there.",
+     "clue": "How did the orders travel so far so fast?"
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "The Mongol army",
+  "card": [
+   [
+    "Horse archers",
+    "Mongol warriors learned to ride and shoot as children. Each had several horses and could fire arrows accurately at a gallop."
+   ],
+   [
+    "Fast communication",
+    "a relay system called the yam had stations with fresh horses along the routes, so riders could carry orders and news a long way quickly."
+   ],
+   [
+    "Strict discipline",
+    "the army was organised in units of 10, 100, 1,000 and 10,000. Soldiers had to obey orders and could be punished harshly for breaking them."
+   ],
+   [
+    "Terror",
+    "cities that resisted were often destroyed and their people killed. As news spread, many surrendered without a fight, and the Mongols built the largest land empire in history."
+   ]
+  ],
+  "remember": "Skill, speed, discipline and fear together built the largest land empire in history.",
+  "a": {
+   "q": "Why did many cities surrender to Mongol armies without a fight?",
+   "opts": [
+    "News that resisting cities were destroyed spread fear",
+    "Horse archers could shoot arrows over city walls",
+    "Riders on the yam carried offers of peace to them",
+    "Mongol soldiers refused to attack walled cities"
+   ],
+   "why": "Cities that resisted were often destroyed, and news of it spread, so many leaders gave up out of fear. Horse archers were strong in battle, but that does not explain why cities gave up without one.",
+   "clue": "What had other cities heard?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A Mongol general on campaign sends word of an enemy army far to the west. Within days, the khan's orders reach him. Which strength of the army does this show?",
+   "opts": [
+    "Fast communication through the yam",
+    "Strict discipline in units of ten",
+    "Skill of the horse archers in battle",
+    "Use of terror to make cities surrender"
+   ],
+   "why": "The orders crossed a long distance in days because riders changed to fresh horses at yam stations. Discipline made soldiers obey orders once they arrived, but it did not carry them there.",
+   "clue": "How did the orders travel so far so fast?"
+  }
+ },
+ "local": []
 }

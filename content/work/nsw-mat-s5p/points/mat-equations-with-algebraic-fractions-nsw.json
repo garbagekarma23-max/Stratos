@@ -24,8 +24,230 @@
    0.261
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 says reuse mat-equations-with-algebraic-fractions, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:57Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:56Z write: done",
+  "2026-11-20T12:44:59Z check: flagged",
+  "2026-11-20T12:53:28Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "confirm": 0.01252,
+  "write": 0.00737,
+  "check": 0.01401,
+  "fix": 0.02908,
+  "recheck": 0.00818
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-equations-with-algebraic-fractions",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches clearing algebraic fractions by multiplying every term by the LCD and then solving, at the right Year 9 and 10 depth, with terminology and examples that fit the NSW course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card teaches clearing fractions only when every numerator is a single term, such as x/3 + x/4. This point's example, x/3 - (x - 2)/5 = 2, also needs the extra step of bracketing a binomial numerator and handling the minus sign in front of it, which is more than a small change.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Equations with algebraic fractions",
+  "card": [
+   "An equation with fractions is easier to solve once the fractions are gone. Find the lowest common denominator (LCD): the smallest number that every denominator divides into.",
+   "Multiply every term on both sides by the LCD. Each denominator cancels. Put brackets around any top that has more than one term, such as \\((x - 2)\\).",
+   "Example: \\(\\frac{x}{3} - \\frac{x - 2}{5} = 2\\). The LCD is 15, so \\(5x - 3(x - 2) = 30\\).",
+   "Expand and collect: \\(5x - 3x + 6 = 30\\), so \\(2x = 24\\) and \\(x = 12\\). Check: \\(\\frac{12}{3} - \\frac{10}{5} = 4 - 2 = 2\\)."
+  ],
+  "remember": "Multiply every term by the LCD, keep brackets round multi-term tops, then solve.",
+  "a": {
+   "q": "What is the first step in solving \\(\\frac{x}{4} + \\frac{x}{6} = 5\\)?",
+   "opts": [
+    "Multiply every term by 12",
+    "Multiply every term by 24",
+    "Add the fractions and leave the 5 alone",
+    "Multiply only the fractions by 10"
+   ],
+   "why": "The lowest common denominator of 4 and 6 is 12, and every term must be multiplied by it, including the 5. Using 24 also works but is not the lowest, and leaving the 5 out breaks the equation.",
+   "clue": "Find the smallest number both 4 and 6 divide into."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia solves \\(\\frac{x + 1}{2} - \\frac{x}{3} = 4\\). What is the value of \\(x\\)?",
+   "opts": [
+    "\\(x = 21\\)",
+    "\\(x = 27\\)",
+    "\\(x = 19\\)",
+    "\\(x = 25\\)"
+   ],
+   "why": "The LCD is 6, so \\(3(x + 1) - 2x = 24\\). This gives \\(3x + 3 - 2x = 24\\), so \\(x = 21\\). Forgetting the bracket gives \\(3x + 1 - 2x = 24\\) and the wrong answer 23, and the other options come from sign slips.",
+   "clue": "Multiply every term by 6, and bracket \\(x + 1\\)."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Multiply every term by 12",
+   "also_right": [
+    "Multiply every term by 24",
+    "Add the fractions and leave the 5 alone"
+   ]
+  },
+  "b": {
+   "best": "\\(x = 21\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The question asks for 'the first step', but more than one option is a valid first step. Multiplying every term by 24 works, as the why admits. Adding the fractions first (x/4 + x/6 = 5x/12 = 5) and leaving the 5 alone is also correct. Ask instead for the first step using the LCD method, or change these options so only one is right."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says forgetting the bracket gives the wrong answer 23, but 23 is not one of the options. It also says the other options come from sign slips, which does not explain distractors such as 19 and 25. The why should match the options actually given."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card is correct and the answers are 12 for (a) and x = 21 for (b). Question a has more than one defensible first step (multiplying by 24, or adding the fractions first). The why for b names a wrong answer, 23, that is not among the options."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a: the checker says “Multiply every term by 24” could also be right.",
+  "Question a: the checker says “Add the fractions and leave the 5 alone” could also be right.",
+  "Question a, wording: The question asks for 'the first step', but more than one option is a valid first step. Multiplying every term by 24 works, as the why admits. Adding the fractions first (x/4 + x/6 = 5x/12 = 5) and leaving the 5 alone is also correct. Ask instead for the first step using the LCD method, or change these options so only one is right.",
+  "Question b, other: The why says forgetting the bracket gives the wrong answer 23, but 23 is not one of the options. It also says the other options come from sign slips, which does not explain distractors such as 19 and 25. The why should match the options actually given."
+ ],
+ "proposal": {
+  "title": "Equations with algebraic fractions",
+  "card": [
+   "An equation with fractions is easier to solve once the fractions are gone. Find the lowest common denominator (LCD): the smallest number that every denominator divides into.",
+   "Multiply every term on both sides by the LCD. Each denominator cancels. Put brackets around any top that has more than one term, such as \\((x - 2)\\).",
+   "Example: \\(\\frac{x}{3} - \\frac{x - 2}{5} = 2\\). The LCD is 15, so \\(5x - 3(x - 2) = 30\\).",
+   "Expand and collect: \\(5x - 3x + 6 = 30\\), so \\(2x = 24\\) and \\(x = 12\\). Check: \\(\\frac{12}{3} - \\frac{10}{5} = 4 - 2 = 2\\)."
+  ],
+  "remember": "Multiply every term by the LCD, keep brackets around multi-term tops, then solve.",
+  "a": {
+   "q": "To solve \\(\\frac{x}{4} + \\frac{x}{6} = 5\\), you multiply every term by the LCD. Which equation do you get?",
+   "opts": [
+    "\\(3x + 2x = 60\\)",
+    "\\(3x + 2x = 5\\)",
+    "\\(4x + 6x = 60\\)",
+    "\\(x + x = 60\\)"
+   ],
+   "why": "The LCD of 4 and 6 is 12, and \\(12 \\div 4 = 3\\) and \\(12 \\div 6 = 2\\), so the terms become \\(3x\\), \\(2x\\) and 60. Forgetting to multiply the 5 gives \\(3x + 2x = 5\\), and \\(4x + 6x\\) comes from multiplying by the denominators instead of dividing 12 by them.",
+   "clue": "Every term, including the 5, gets multiplied by 12."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia solves \\(\\frac{x + 1}{2} - \\frac{x}{3} = 4\\). What is the value of \\(x\\)?",
+   "opts": [
+    "\\(x = 21\\)",
+    "\\(x = 23\\)",
+    "\\(x = 1\\)",
+    "\\(x = 27\\)"
+   ],
+   "why": "The LCD is 6, so \\(3(x + 1) - 2x = 24\\), which gives \\(x + 3 = 24\\) and \\(x = 21\\). Leaving out the bracket gives \\(3x + 1 - 2x = 24\\) and 23. Not multiplying the 4 by 6 gives 1, and adding 3 to 24 instead of subtracting gives 27.",
+   "clue": "Multiply every term by 6, and bracket \\(x + 1\\)."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(3x + 2x = 60\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(x = 21\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 15,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The question asks for 'the first step', but more than one option is a valid first step. Multiplying every term by 24 works, as the why admits. Adding the fractions first (x/4 + x/6 = 5x/12 = 5) and leaving the 5 alone is also correct. Ask instead for the first step using the LCD method, or change these options so only one is right."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says forgetting the bracket gives the wrong answer 23, but 23 is not one of the options. It also says the other options come from sign slips, which does not explain distractors such as 19 and 25. The why should match the options actually given."
+   }
+  ],
+  "flags": [
+   "Question a: the checker says “Multiply every term by 24” could also be right.",
+   "Question a: the checker says “Add the fractions and leave the 5 alone” could also be right.",
+   "Question a, wording: The question asks for 'the first step', but more than one option is a valid first step. Multiplying every term by 24 works, as the why admits. Adding the fractions first (x/4 + x/6 = 5x/12 = 5) and leaving the 5 alone is also correct. Ask instead for the first step using the LCD method, or change these options so only one is right.",
+   "Question b, other: The why says forgetting the bracket gives the wrong answer 23, but 23 is not one of the options. It also says the other options come from sign slips, which does not explain distractors such as 19 and 25. The why should match the options actually given."
+  ]
+ },
+ "final": {
+  "title": "Equations with algebraic fractions",
+  "card": [
+   "An equation with fractions is easier to solve once the fractions are gone. Find the lowest common denominator (LCD): the smallest number that every denominator divides into.",
+   "Multiply every term on both sides by the LCD. Each denominator cancels. Put brackets around any top that has more than one term, such as \\((x - 2)\\).",
+   "Example: \\(\\frac{x}{3} - \\frac{x - 2}{5} = 2\\). The LCD is 15, so \\(5x - 3(x - 2) = 30\\).",
+   "Expand and collect: \\(5x - 3x + 6 = 30\\), so \\(2x = 24\\) and \\(x = 12\\). Check: \\(\\frac{12}{3} - \\frac{10}{5} = 4 - 2 = 2\\)."
+  ],
+  "remember": "Multiply every term by the LCD, keep brackets around multi-term tops, then solve.",
+  "a": {
+   "q": "To solve \\(\\frac{x}{4} + \\frac{x}{6} = 5\\), you multiply every term by the LCD. Which equation do you get?",
+   "opts": [
+    "\\(3x + 2x = 60\\)",
+    "\\(3x + 2x = 5\\)",
+    "\\(4x + 6x = 60\\)",
+    "\\(x + x = 60\\)"
+   ],
+   "why": "The LCD of 4 and 6 is 12, and \\(12 \\div 4 = 3\\) and \\(12 \\div 6 = 2\\), so the terms become \\(3x\\), \\(2x\\) and 60. Forgetting to multiply the 5 gives \\(3x + 2x = 5\\), and \\(4x + 6x\\) comes from multiplying by the denominators instead of dividing 12 by them.",
+   "clue": "Every term, including the 5, gets multiplied by 12."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia solves \\(\\frac{x + 1}{2} - \\frac{x}{3} = 4\\). What is the value of \\(x\\)?",
+   "opts": [
+    "\\(x = 21\\)",
+    "\\(x = 23\\)",
+    "\\(x = 1\\)",
+    "\\(x = 27\\)"
+   ],
+   "why": "The LCD is 6, so \\(3(x + 1) - 2x = 24\\), which gives \\(x + 3 = 24\\) and \\(x = 21\\). Leaving out the bracket gives \\(3x + 1 - 2x = 24\\) and 23. Not multiplying the 4 by 6 gives 1, and adding 3 to 24 instead of subtracting gives 27.",
+   "clue": "Multiply every term by 6, and bracket \\(x + 1\\)."
+  }
+ },
+ "cleared_by": "recheck"
 }

@@ -24,8 +24,185 @@
    0.296
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:53Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:53Z write: done",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:23:42Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.01468,
+  "check": 0.01358,
+  "fix": 0.0222
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No single bank point teaches the whole idea of finding unknown angles in reasoned steps across several angle rules and using them to prove parallel lines: the best matches cover only one rule each, and the Year 10 proof point is at a clearly greater depth than Stage 4.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Giving reasons for angles",
+  "card": [
+   "To find an unknown angle, work in steps. Write each step as a statement, its working and a reason in brackets. The reason names the angle rule you used.",
+   "The reasons you can use are: angles on a straight line add to \\(180^{\\circ}\\), angles at a point add to \\(360^{\\circ}\\), vertically opposite angles are equal, and for parallel lines corresponding angles are equal, alternate angles are equal and co-interior angles add to \\(180^{\\circ}\\).",
+   [
+    "Example",
+    "AOB is a straight line and \\(\\angle AOC = 110^{\\circ}\\). Then \\(\\angle COB = 180^{\\circ} - 110^{\\circ} = 70^{\\circ}\\) (angles on a straight line add to \\(180^{\\circ}\\))."
+   ],
+   [
+    "Showing lines are parallel",
+    "Work backwards. Two lines are parallel if a transversal makes equal corresponding angles, equal alternate angles, or co-interior angles that add to \\(180^{\\circ}\\). State the angles, then the rule."
+   ]
+  ],
+  "remember": "Every step needs a reason, and an angle pair that fits a parallel-line rule shows the lines are parallel.",
+  "a": {
+   "q": "Straight lines AB and CD cross at O. If \\(\\angle AOC = 70^{\\circ}\\), which reason gives \\(\\angle BOD = 70^{\\circ}\\)?",
+   "opts": [
+    "Vertically opposite angles are equal",
+    "Angles on a straight line add to \\(180^{\\circ}\\)",
+    "Corresponding angles are equal",
+    "Angles at a point add to \\(360^{\\circ}\\)"
+   ],
+   "why": "\\(\\angle BOD\\) lies directly across the crossing point from \\(\\angle AOC\\), so the two are vertically opposite and equal. Angles on a straight line would give \\(110^{\\circ}\\) for a neighbouring angle, not \\(70^{\\circ}\\) for this one.",
+   "clue": "Where is \\(\\angle BOD\\) compared with \\(\\angle AOC\\)?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A transversal crosses lines PQ and RS. Between the lines, on the same side of the transversal, the angles are \\(112^{\\circ}\\) and \\(68^{\\circ}\\). What can be said about PQ and RS?",
+   "opts": [
+    "Parallel, as co-interior angles add to \\(180^{\\circ}\\)",
+    "Not parallel, as the two angles are unequal",
+    "Parallel, as co-interior angles are equal",
+    "Parallel, as alternate angles are equal"
+   ],
+   "why": "These are co-interior angles and \\(112^{\\circ} + 68^{\\circ} = 180^{\\circ}\\), so the lines are parallel. Unequal angles do not show the lines are not parallel, because co-interior angles on parallel lines are not meant to be equal.",
+   "clue": "Add the two angles and compare with a rule."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Vertically opposite angles are equal",
+   "also_right": []
+  },
+  "b": {
+   "best": "Parallel, as co-interior angles add to \\(180^{\\circ}\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) says co-interior angles on parallel lines are 'not meant to be equal'. They are equal when both are 90°, so this could suggest to students that co-interior angles can never be equal. Better: 'co-interior angles on parallel lines add to 180°, so they need not be equal.'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct and match the card. One small issue: why (b) implies co-interior angles on parallel lines cannot be equal, when they are equal if both are 90°."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: Why (b) says co-interior angles on parallel lines are 'not meant to be equal'. They are equal when both are 90°, so this could suggest to students that co-interior angles can never be equal. Better: 'co-interior angles on parallel lines add to 180°, so they need not be equal.'"
+ ],
+ "proposal": {
+  "title": "Giving reasons for angles",
+  "card": [
+   "To find an unknown angle, work in steps. Write each step as a statement, its working and a reason in brackets. The reason names the angle rule you used.",
+   "The reasons you can use are: angles on a straight line add to \\(180^{\\circ}\\), angles at a point add to \\(360^{\\circ}\\), vertically opposite angles are equal, and for parallel lines corresponding angles are equal, alternate angles are equal and co-interior angles add to \\(180^{\\circ}\\).",
+   "For example, AOB is a straight line and \\(\\angle AOC = 110^{\\circ}\\). Then \\(\\angle COB = 180^{\\circ} - 110^{\\circ} = 70^{\\circ}\\) (angles on a straight line add to \\(180^{\\circ}\\)).",
+   "To show two lines are parallel, work backwards. They are parallel if a transversal makes equal corresponding angles, equal alternate angles, or co-interior angles that add to \\(180^{\\circ}\\). State the angles, then the rule."
+  ],
+  "remember": "Every step needs a reason, and an angle pair that fits a parallel-line rule shows the lines are parallel.",
+  "a": {
+   "q": "Straight lines AB and CD cross at O. If \\(\\angle AOC = 70^{\\circ}\\), which reason gives \\(\\angle BOD = 70^{\\circ}\\)?",
+   "opts": [
+    "Vertically opposite angles are equal",
+    "Angles on a straight line add to \\(180^{\\circ}\\)",
+    "Corresponding angles are equal",
+    "Angles at a point add to \\(360^{\\circ}\\)"
+   ],
+   "why": "\\(\\angle BOD\\) lies directly across the crossing point from \\(\\angle AOC\\), so the two are vertically opposite and equal. Angles on a straight line would give \\(110^{\\circ}\\) for a neighbouring angle, not \\(70^{\\circ}\\) for this one.",
+   "clue": "Where is \\(\\angle BOD\\) compared with \\(\\angle AOC\\)?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A transversal crosses lines PQ and RS. Between the lines, on the same side of the transversal, the angles are \\(112^{\\circ}\\) and \\(68^{\\circ}\\). What can be said about PQ and RS?",
+   "opts": [
+    "Parallel, as co-interior angles add to \\(180^{\\circ}\\)",
+    "Not parallel, as the two angles are unequal",
+    "Parallel, as co-interior angles are equal",
+    "Parallel, as alternate angles are equal"
+   ],
+   "why": "These are co-interior angles and \\(112^{\\circ} + 68^{\\circ} = 180^{\\circ}\\), so the lines are parallel. Unequal angles do not show the lines are not parallel, because co-interior angles on parallel lines add to \\(180^{\\circ}\\), so they need not be equal.",
+   "clue": "Add the two angles and compare with a rule."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:42Z",
+  "rules": 1,
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) says co-interior angles on parallel lines are 'not meant to be equal'. They are equal when both are 90°, so this could suggest to students that co-interior angles can never be equal. Better: 'co-interior angles on parallel lines add to 180°, so they need not be equal.'"
+   }
+  ],
+  "flags": [
+   "Question b, wording: Why (b) says co-interior angles on parallel lines are 'not meant to be equal'. They are equal when both are 90°, so this could suggest to students that co-interior angles can never be equal. Better: 'co-interior angles on parallel lines add to 180°, so they need not be equal.'"
+  ]
+ },
+ "final": {
+  "title": "Giving reasons for angles",
+  "card": [
+   "To find an unknown angle, work in steps. Write each step as a statement, its working and a reason in brackets. The reason names the angle rule you used.",
+   "The reasons you can use are: angles on a straight line add to \\(180^{\\circ}\\), angles at a point add to \\(360^{\\circ}\\), vertically opposite angles are equal, and for parallel lines corresponding angles are equal, alternate angles are equal and co-interior angles add to \\(180^{\\circ}\\).",
+   "For example, AOB is a straight line and \\(\\angle AOC = 110^{\\circ}\\). Then \\(\\angle COB = 180^{\\circ} - 110^{\\circ} = 70^{\\circ}\\) (angles on a straight line add to \\(180^{\\circ}\\)).",
+   "To show two lines are parallel, work backwards. They are parallel if a transversal makes equal corresponding angles, equal alternate angles, or co-interior angles that add to \\(180^{\\circ}\\). State the angles, then the rule."
+  ],
+  "remember": "Every step needs a reason, and an angle pair that fits a parallel-line rule shows the lines are parallel.",
+  "a": {
+   "q": "Straight lines AB and CD cross at O. If \\(\\angle AOC = 70^{\\circ}\\), which reason gives \\(\\angle BOD = 70^{\\circ}\\)?",
+   "opts": [
+    "Vertically opposite angles are equal",
+    "Angles on a straight line add to \\(180^{\\circ}\\)",
+    "Corresponding angles are equal",
+    "Angles at a point add to \\(360^{\\circ}\\)"
+   ],
+   "why": "\\(\\angle BOD\\) lies directly across the crossing point from \\(\\angle AOC\\), so the two are vertically opposite and equal. Angles on a straight line would give \\(110^{\\circ}\\) for a neighbouring angle, not \\(70^{\\circ}\\) for this one.",
+   "clue": "Where is \\(\\angle BOD\\) compared with \\(\\angle AOC\\)?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A transversal crosses lines PQ and RS. Between the lines, on the same side of the transversal, the angles are \\(112^{\\circ}\\) and \\(68^{\\circ}\\). What can be said about PQ and RS?",
+   "opts": [
+    "Parallel, as co-interior angles add to \\(180^{\\circ}\\)",
+    "Not parallel, as the two angles are unequal",
+    "Parallel, as co-interior angles are equal",
+    "Parallel, as alternate angles are equal"
+   ],
+   "why": "These are co-interior angles and \\(112^{\\circ} + 68^{\\circ} = 180^{\\circ}\\), so the lines are parallel. Unequal angles do not show the lines are not parallel, because co-interior angles on parallel lines add to \\(180^{\\circ}\\), so they need not be equal.",
+   "clue": "Add the two angles and compare with a rule."
+  }
+ },
+ "cleared_by": "auto"
 }

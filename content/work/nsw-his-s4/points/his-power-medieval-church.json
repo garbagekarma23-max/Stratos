@@ -16,8 +16,365 @@
    0.232
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 may adapt his-power-church, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:49Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:51Z write: done",
+  "2026-11-20T12:44:56Z check: flagged",
+  "2026-11-20T12:53:26Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (a other)",
+  "2026-11-20T13:44:56Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "confirm": 0.00686,
+  "write": 0.0061,
+  "check": 0.00867,
+  "fix": 0.01841,
+  "recheck": 0.01055
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "his-power-church",
+  "changes": [
+   "The card's second sentence and its remember line describe the Church's power in tithes, monasteries and excommunication, which fits the brief's courts, taxes and land only partly, so the card should add the Church's own courts, its role as the main source of learning and authority, and its land ownership."
+  ],
+  "sure": "medium",
+  "reason": "his-power-church teaches the Church's power at the right depth but leaves out its own courts and land, and the Stage 4 syllabus may want its authority over learning added, so it needs small changes rather than a fresh point.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Christianity in medieval Europe, covers the Church's learning, land and tithes but says nothing about its own courts, which the brief names as part of its authority, and adding that would be new content rather than a small change.",
+  "model": "claude-opus-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The clue 'Which one is about books and knowledge?' gives the answer away, because only one option mentions books. A student can pick it without knowing what learning meant for the Church.",
+ "rejected": {
+  "title": "The power of the medieval Church",
+  "card": [
+   "In medieval Europe, the Catholic Church was the main source of learning. Monks and nuns copied books by hand in monasteries, and the Church ran most schools and early universities.",
+   "The Church was also a major authority. Priests, bishops and the Pope guided how people were expected to live and believe.",
+   "The Church had its own courts, called Church courts. They judged clergy and cases about matters such as marriage and wills, using Church law.",
+   "The Church collected a tax called the tithe, usually a tenth of a person's produce or income. It also owned large areas of land, which made it wealthy."
+  ],
+  "remember": "The Church shaped learning and authority, and it had its own courts, taxes and land.",
+  "a": {
+   "q": "Which of these shows the Church acting as a source of learning in medieval Europe?",
+   "opts": [
+    "Monks copying books by hand in a monastery",
+    "Church courts judging a case about a will",
+    "Farmers paying a tithe from their harvest",
+    "Bishops owning large estates of farmland"
+   ],
+   "why": "Copying books and running schools is how the Church kept and passed on learning. The courts, the tithe and the land show its authority and wealth, not its role in learning.",
+   "clue": "Which one is about books and knowledge?"
+  },
+  "b": {
+   "d": 2,
+   "q": "In medieval England, a monk is accused of stealing. A bishop's court tries him under Church law, not the king's court. Which power of the Church does this show?",
+   "opts": [
+    "The Church had its own courts",
+    "The Church ran most schools",
+    "The Church collected the tithe",
+    "The Church owned large areas of land"
+   ],
+   "why": "The monk is one of the clergy, and he is judged by a court the Church ran, using its own law. A bishop is involved, which can make land or the tithe tempting, but this case is about judging someone, not about wealth.",
+   "clue": "Who heard the case, and whose law did they use?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: The clue 'Which one is about books and knowledge?' gives the answer away, because only one option mentions books. A student can pick it without knowing what learning meant for the Church."
+   ],
+   "saved": {
+    "draft": {
+     "title": "The power of the medieval Church",
+     "card": [
+      "In medieval Europe, the Catholic Church was the main source of learning. Monks and nuns copied books by hand in monasteries, and the Church ran most schools and early universities.",
+      "The Church was also a major authority. Priests, bishops and the Pope guided how people were expected to live and believe.",
+      "The Church had its own courts, called Church courts. They judged clergy and cases about matters such as marriage and wills, using Church law.",
+      "The Church collected a tax called the tithe, usually a tenth of a person's produce or income. It also owned large areas of land, which made it wealthy."
+     ],
+     "remember": "The Church shaped learning and authority, and it had its own courts, taxes and land.",
+     "a": {
+      "q": "Which of these shows the Church acting as a source of learning in medieval Europe?",
+      "opts": [
+       "Monks copying books by hand in a monastery",
+       "Church courts judging a case about a will",
+       "Farmers paying a tithe from their harvest",
+       "Bishops owning large estates of farmland"
+      ],
+      "why": "Copying books and running schools is how the Church kept and passed on learning. The courts, the tithe and the land show its authority and wealth, not its role in learning.",
+      "clue": "Which one is about books and knowledge?"
+     },
+     "b": {
+      "d": 2,
+      "q": "In a village in medieval France, a farmer gives the local priest one tenth of his wheat harvest each year. What is this payment called?",
+      "opts": [
+       "The tithe, a Church tax",
+       "A Church court fine",
+       "A gift of Church land",
+       "A fee for copying books"
+      ],
+      "why": "The tithe was a Church tax, usually a tenth of produce or income. A court fine is a different payment, because it is set by a Church court when someone is judged, not collected each year from everyone.",
+      "clue": "Think of the Church's yearly tax on a tenth of produce."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Monks copying books by hand in a monastery",
+      "also_right": []
+     },
+     "b": {
+      "best": "The tithe, a Church tax",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is the only one that names a term and adds a gloss ('The tithe, a Church tax'). The clue then restates the card's definition ('yearly tax on a tenth of produce'), so a student can pick it without knowing the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card's facts are accurate. In question b the right option stands out as the only named term with an added explanation, and the clue all but states the answer, so the question tests little."
+    },
+    "flags": [
+     "Question b, wording: The right option is the only one that names a term and adds a gloss ('The tithe, a Church tax'). The clue then restates the card's definition ('yearly tax on a tenth of produce'), so a student can pick it without knowing the idea."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "The power of the medieval Church",
+     "card": [
+      "In medieval Europe, the Catholic Church was the main source of learning. Monks and nuns copied books by hand in monasteries, and the Church ran most schools and early universities.",
+      "The Church was also a major authority. Priests, bishops and the Pope guided how people were expected to live and believe.",
+      "The Church had its own courts, called Church courts. They judged clergy and cases about matters such as marriage and wills, using Church law.",
+      "The Church collected a tax called the tithe, usually a tenth of a person's produce or income. It also owned large areas of land, which made it wealthy."
+     ],
+     "remember": "The Church shaped learning and authority, and it had its own courts, taxes and land.",
+     "a": {
+      "q": "Which of these shows the Church acting as a source of learning in medieval Europe?",
+      "opts": [
+       "Monks copying books by hand in a monastery",
+       "Church courts judging a case about a will",
+       "Farmers paying a tithe from their harvest",
+       "Bishops owning large estates of farmland"
+      ],
+      "why": "Copying books and running schools is how the Church kept and passed on learning. The courts, the tithe and the land show its authority and wealth, not its role in learning.",
+      "clue": "Which one is about books and knowledge?"
+     },
+     "b": {
+      "d": 2,
+      "q": "In medieval England, a monk is accused of stealing. A bishop's court tries him under Church law, not the king's court. Which power of the Church does this show?",
+      "opts": [
+       "The Church had its own courts",
+       "The Church ran most schools",
+       "The Church collected the tithe",
+       "The Church owned large areas of land"
+      ],
+      "why": "The monk is one of the clergy, and he is judged by a court the Church ran, using its own law. A bishop is involved, which can make land or the tithe tempting, but this case is about judging someone, not about wealth.",
+      "clue": "Who heard the case, and whose law did they use?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Monks copying books by hand in a monastery",
+       "also_right": []
+      },
+      "b": {
+       "best": "The Church had its own courts",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The clue 'Which one is about books and knowledge?' gives the answer away, because only one option mentions books. A student can pick it without knowing what learning meant for the Church."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts on the card and both answers are correct. Question a's clue points straight to the only option about books, so it gives the answer away."
+     },
+     "flags": [
+      "Question a, other: The clue 'Which one is about books and knowledge?' gives the answer away, because only one option mentions books. A student can pick it without knowing what learning meant for the Church."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:56Z",
+   "step": "write",
+   "version": {
+    "title": "The power of the medieval Church",
+    "card": [
+     "In medieval Europe, the Catholic Church was the main source of learning. Monks and nuns copied books by hand in monasteries, and the Church ran most schools and early universities.",
+     "The Church was also a major authority. Priests, bishops and the Pope guided how people were expected to live and believe.",
+     "The Church had its own courts, called Church courts. They judged clergy and cases about matters such as marriage and wills, using Church law.",
+     "The Church collected a tax called the tithe, usually a tenth of a person's produce or income. It also owned large areas of land, which made it wealthy."
+    ],
+    "remember": "The Church shaped learning and authority, and it had its own courts, taxes and land.",
+    "a": {
+     "q": "Which of these shows the Church acting as a source of learning in medieval Europe?",
+     "opts": [
+      "Monks copying books by hand in a monastery",
+      "Church courts judging a case about a will",
+      "Farmers paying a tithe from their harvest",
+      "Bishops owning large estates of farmland"
+     ],
+     "why": "Copying books and running schools is how the Church kept and passed on learning. The courts, the tithe and the land show its authority and wealth, not its role in learning.",
+     "clue": "Learning is about keeping knowledge and passing it on."
+    },
+    "b": {
+     "d": 2,
+     "q": "In medieval England, a monk is accused of stealing. A bishop's court tries him under Church law, not the king's court. Which power of the Church does this show?",
+     "opts": [
+      "The Church had its own courts",
+      "The Church ran most schools",
+      "The Church collected the tithe",
+      "The Church owned large areas of land"
+     ],
+     "why": "The monk is one of the clergy, and he is judged by a court the Church ran, using its own law. A bishop is involved, which can make land or the tithe tempting, but this case is about judging someone, not about wealth.",
+     "clue": "Who heard the case, and whose law did they use?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Monks copying books by hand in a monastery",
+     "also_right": []
+    },
+    "b": {
+     "best": "The Church had its own courts",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "The power of the medieval Church",
+  "card": [
+   "In medieval Europe, the Catholic Church was the main source of learning. Monks and nuns copied books by hand in monasteries, and the Church ran most schools and early universities.",
+   "The Church was also a major authority. Priests, bishops and the Pope guided how people were expected to live and believe.",
+   "The Church had its own courts, called Church courts. They judged clergy and cases about matters such as marriage and wills, using Church law.",
+   "The Church collected a tax called the tithe, usually a tenth of a person's produce or income. It also owned large areas of land, which made it wealthy."
+  ],
+  "remember": "The Church shaped learning and authority, and it had its own courts, taxes and land.",
+  "a": {
+   "q": "Which of these shows the Church acting as a source of learning in medieval Europe?",
+   "opts": [
+    "Monks copying books by hand in a monastery",
+    "Church courts judging a case about a will",
+    "Farmers paying a tithe from their harvest",
+    "Bishops owning large estates of farmland"
+   ],
+   "why": "Copying books and running schools is how the Church kept and passed on learning. The courts, the tithe and the land show its authority and wealth, not its role in learning.",
+   "clue": "Learning is about keeping knowledge and passing it on."
+  },
+  "b": {
+   "d": 2,
+   "q": "In medieval England, a monk is accused of stealing. A bishop's court tries him under Church law, not the king's court. Which power of the Church does this show?",
+   "opts": [
+    "The Church had its own courts",
+    "The Church ran most schools",
+    "The Church collected the tithe",
+    "The Church owned large areas of land"
+   ],
+   "why": "The monk is one of the clergy, and he is judged by a court the Church ran, using its own law. A bishop is involved, which can make land or the tithe tempting, but this case is about judging someone, not about wealth.",
+   "clue": "Who heard the case, and whose law did they use?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Monks copying books by hand in a monastery",
+   "also_right": []
+  },
+  "b": {
+   "best": "The Church had its own courts",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The power of the medieval Church",
+  "card": [
+   "In medieval Europe, the Catholic Church was the main source of learning. Monks and nuns copied books by hand in monasteries, and the Church ran most schools and early universities.",
+   "The Church was also a major authority. Priests, bishops and the Pope guided how people were expected to live and believe.",
+   "The Church had its own courts, called Church courts. They judged clergy and cases about matters such as marriage and wills, using Church law.",
+   "The Church collected a tax called the tithe, usually a tenth of a person's produce or income. It also owned large areas of land, which made it wealthy."
+  ],
+  "remember": "The Church shaped learning and authority, and it had its own courts, taxes and land.",
+  "a": {
+   "q": "Which of these shows the Church acting as a source of learning in medieval Europe?",
+   "opts": [
+    "Monks copying books by hand in a monastery",
+    "Church courts judging a case about a will",
+    "Farmers paying a tithe from their harvest",
+    "Bishops owning large estates of farmland"
+   ],
+   "why": "Copying books and running schools is how the Church kept and passed on learning. The courts, the tithe and the land show its authority and wealth, not its role in learning.",
+   "clue": "Learning is about keeping knowledge and passing it on."
+  },
+  "b": {
+   "d": 2,
+   "q": "In medieval England, a monk is accused of stealing. A bishop's court tries him under Church law, not the king's court. Which power of the Church does this show?",
+   "opts": [
+    "The Church had its own courts",
+    "The Church ran most schools",
+    "The Church collected the tithe",
+    "The Church owned large areas of land"
+   ],
+   "why": "The monk is one of the clergy, and he is judged by a court the Church ran, using its own law. A bishop is involved, which can make land or the tithe tempting, but this case is about judging someone, not about wealth.",
+   "clue": "Who heard the case, and whose law did they use?"
+  }
+ },
+ "checked_by": "claude-code"
 }

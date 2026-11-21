@@ -12,8 +12,141 @@
    0.201
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:02Z write: done",
+  "2026-11-20T12:35:57Z check: for review (first-nations)",
+  "2026-11-20T14:45:28Z review: rejected, to be written again",
+  "2026-11-20T14:58:20Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00648,
+  "check": 0.00873
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point covers Aboriginal knowledge of ecosystems through cultural burning, which is related but not the same idea as harvesting only part of a resource and following seasons so it lasts, and the other point is about health.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Sustainable harvesting by First Peoples",
+  "card": [
+   "Aboriginal and Torres Strait Islander Peoples have cared for Country for tens of thousands of years. Over that time they built deep ecological knowledge: knowledge of how plants, animals, water and seasons fit together.",
+   "This knowledge was passed on through stories, songs, ceremony and teaching from Elders. It guided how and when resources were harvested.",
+   "Harvesting practices include taking only part of a resource, so enough is left to regrow or breed. Another practice is following the seasons, harvesting a plant or animal only when it is plentiful and not breeding.",
+   "Practices differ between Nations because each Country has its own plants, animals and climate. Sustainable harvesting means using a resource in a way that lets it last for future generations."
+  ],
+  "remember": "Knowledge of Country guides what is taken and when, so the resource lasts.",
+  "a": {
+   "q": "Why does taking only part of a resource help it to last?",
+   "opts": [
+    "Enough is left to regrow or breed",
+    "Plants and animals no longer need to grow",
+    "The resource can be harvested at any time",
+    "Other resources are used up in its place"
+   ],
+   "why": "If some of the resource is left, plants can regrow and animals can breed, so there is more to harvest later. Harvesting at any time is not the reason, because the card says practices follow the seasons.",
+   "clue": "Think about what is left behind after harvesting."
+  },
+  "b": {
+   "d": 3,
+   "q": "A community harvests a river fish only in the months when it is not breeding. Which idea about sustainable harvesting does this show?",
+   "opts": [
+    "Following seasons, so breeding is not disturbed",
+    "Taking only part of a resource from each place",
+    "Using one fixed practice across every Nation",
+    "Passing on knowledge through written reports"
+   ],
+   "why": "Harvesting only outside the breeding months is following the seasons, so the fish can breed and the population lasts. Taking only part of a resource is a different practice: it is about how much is taken, not when.",
+   "clue": "The scenario is about when the fish is taken, not how much."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:20Z",
+   "step": "write",
+   "version": {
+    "title": "Aboriginal and Torres Strait Islander sustainable harvesting",
+    "card": [
+     "Aboriginal and Torres Strait Islander Peoples built deep ecological knowledge over thousands of years: how the plants, animals, water and seasons of their Country are linked.",
+     "This knowledge guides harvesting so a resource lasts. One practice is taking only part of it, such as some eggs from a nest, so enough is left to breed or regrow.",
+     "Another practice is following the seasons: a plant or animal is harvested when it is plentiful and left alone while it breeds. Signs such as a plant flowering can show when the time is right.",
+     "Practices differ between communities, because each Country has its own plants, animals and climate."
+    ],
+    "remember": "Ecological knowledge guides how much is taken and when, so the resource is still there later.",
+    "a": {
+     "q": "Why does leaving part of each yam in the ground help the yams last?",
+     "opts": [
+      "The part left behind can regrow into new yams",
+      "Yams left in the ground stop other plants growing",
+      "The yams can then be dug up at any time of year",
+      "Leaving part of each yam makes the soil dry out"
+     ],
+     "why": "Taking only part of a resource leaves enough to regrow, so there are yams to harvest again later. Digging them up at any time of year goes against following the seasons.",
+     "clue": "What happens to the part that stays in the soil?"
+    },
+    "b": {
+     "d": 3,
+     "q": "A community catches a kind of fish only after a certain tree flowers, which signals the fish have finished breeding. Which practice does this show?",
+     "opts": [
+      "Following the seasons, using signs from nature",
+      "Taking only part of the fish from each river",
+      "Catching the fish whenever people need food",
+      "Using the same rule as every other community"
+     ],
+     "why": "The flowering tree is a seasonal sign, so the fish are caught after breeding, when taking them does less harm to the next generation. Taking only part of a resource is about how much is caught, not when.",
+     "clue": "Is this about how much is taken, or when?"
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Aboriginal and Torres Strait Islander sustainable harvesting",
+  "card": [
+   "Aboriginal and Torres Strait Islander Peoples built deep ecological knowledge over thousands of years: how the plants, animals, water and seasons of their Country are linked.",
+   "This knowledge guides harvesting so a resource lasts. One practice is taking only part of it, such as some eggs from a nest, so enough is left to breed or regrow.",
+   "Another practice is following the seasons: a plant or animal is harvested when it is plentiful and left alone while it breeds. Signs such as a plant flowering can show when the time is right.",
+   "Practices differ between communities, because each Country has its own plants, animals and climate."
+  ],
+  "remember": "Ecological knowledge guides how much is taken and when, so the resource is still there later.",
+  "a": {
+   "q": "Why does leaving part of each yam in the ground help the yams last?",
+   "opts": [
+    "The part left behind can regrow into new yams",
+    "Yams left in the ground stop other plants growing",
+    "The yams can then be dug up at any time of year",
+    "Leaving part of each yam makes the soil dry out"
+   ],
+   "why": "Taking only part of a resource leaves enough to regrow, so there are yams to harvest again later. Digging them up at any time of year goes against following the seasons.",
+   "clue": "What happens to the part that stays in the soil?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A community catches a kind of fish only after a certain tree flowers, which signals the fish have finished breeding. Which practice does this show?",
+   "opts": [
+    "Following the seasons, using signs from nature",
+    "Taking only part of the fish from each river",
+    "Catching the fish whenever people need food",
+    "Using the same rule as every other community"
+   ],
+   "why": "The flowering tree is a seasonal sign, so the fish are caught after breeding, when taking them does less harm to the next generation. Taking only part of a resource is about how much is caught, not when.",
+   "clue": "Is this about how much is taken, or when?"
+  }
+ },
+ "local": []
 }

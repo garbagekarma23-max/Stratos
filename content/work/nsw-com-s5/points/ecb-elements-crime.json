@@ -24,8 +24,429 @@
    0.25
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: flagged",
+  "2026-11-20T12:53:23Z fix: suggested",
+  "2026-11-20T13:37:05Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00039,
+  "write": 0.00636,
+  "check": 0.01168,
+  "fix": 0.01955,
+  "recheck": 0.01028
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Actus reus and mens rea, teaches the same idea but at Year 12 Legal Studies depth, with Latin terms, omission and exceptions that go beyond this Stage 5 Commerce brief, so it would need a change of depth rather than a small adaptation.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Elements of a crime",
+  "card": [
+   "The prosecution is the side that brings the charge. To convict someone, it must prove the case. The accused does not have to prove they are innocent.",
+   [
+    "Guilty act",
+    "the physical act, or a failure to act, that the law forbids, such as taking someone else's property."
+   ],
+   [
+    "Guilty mind",
+    "the person meant to do the act, or knew what they were doing was wrong or risky. An accident is not a guilty mind."
+   ],
+   "In a criminal case the prosecution must prove both elements beyond reasonable doubt. If it proves only one, or leaves a reasonable doubt, the accused is not convicted."
+  ],
+  "remember": "Conviction needs both a guilty act and a guilty mind, proved beyond reasonable doubt.",
+  "a": {
+   "q": "Which of these must the prosecution prove to convict a person of a crime?",
+   "opts": [
+    "Both the guilty act and the guilty mind",
+    "The guilty act only, as the mind cannot be seen",
+    "The accused cannot prove they are innocent",
+    "Either the guilty act or the guilty mind"
+   ],
+   "why": "Both elements must be proved beyond reasonable doubt. Proving only the act is tempting, but the act alone is not enough if the person did not have a guilty mind.",
+   "clue": "Think about how many elements there are."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo trips in a shop in Dubbo and knocks a vase off a shelf, and it breaks. There is clear video of him doing it. Why might he not be convicted of intentionally damaging property?",
+   "opts": [
+    "The prosecution may not prove a guilty mind",
+    "The prosecution may not prove a guilty act",
+    "Leo must prove he did not break the vase",
+    "The vase was not worth enough to be a crime"
+   ],
+   "why": "The video shows the guilty act, but a trip is an accident. Without a guilty mind the prosecution cannot prove both elements. The act is already clear, so the doubt is about his mind, not the act.",
+   "clue": "The video shows what Leo did, not what he meant."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Both the guilty act and the guilty mind",
+   "also_right": []
+  },
+  "b": {
+   "best": "The prosecution may not prove a guilty mind",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says that in a criminal case the prosecution must prove both elements, with no exception. Strict and absolute liability offences, such as many traffic offences, need no guilty mind. A short qualifier such as 'for most crimes' would keep students from overgeneralising."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer, and the explanations match the card. The only issue is that the card presents act plus mind as needed for every crime, without noting strict liability offences."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says that in a criminal case the prosecution must prove both elements, with no exception. Strict and absolute liability offences, such as many traffic offences, need no guilty mind. A short qualifier such as 'for most crimes' would keep students from overgeneralising."
+ ],
+ "proposal": {
+  "title": "Elements of a crime",
+  "card": [
+   "The prosecution is the side that brings the charge. To convict someone, it must prove the case. The accused does not have to prove they are innocent.",
+   [
+    "Guilty act",
+    "the physical act, or a failure to act, that the law forbids, such as taking someone else's property."
+   ],
+   [
+    "Guilty mind",
+    "the person meant to do the act, or knew the risk and went ahead anyway. An accident is not a guilty mind."
+   ],
+   "For most crimes, the prosecution must prove both elements beyond reasonable doubt. If it proves only one, or leaves a reasonable doubt, the accused is not convicted. Some minor offences, such as many traffic offences, need no guilty mind."
+  ],
+  "remember": "For most crimes, conviction needs both a guilty act and a guilty mind, proved beyond reasonable doubt.",
+  "a": {
+   "q": "To convict a person of theft, what must the prosecution prove?",
+   "opts": [
+    "Both the guilty act and the guilty mind",
+    "The guilty act only, as minds cannot be seen",
+    "The guilty mind only, as intent is the crime",
+    "Either the guilty act or the guilty mind"
+   ],
+   "why": "Theft is a crime that needs both elements, proved beyond reasonable doubt. Proving only the act is tempting, but the act alone is not enough if the person did not have a guilty mind.",
+   "clue": "Think about how many elements there are."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo trips in a shop in Dubbo and knocks a vase off a shelf, and it breaks. There is clear video of him doing it. Why might he not be convicted of intentionally damaging property?",
+   "opts": [
+    "The prosecution may not prove a guilty mind",
+    "The prosecution may not prove a guilty act",
+    "Leo must prove he did not break the vase",
+    "The vase was not worth enough to be a crime"
+   ],
+   "why": "The video shows the guilty act, but a trip is an accident, so there is no guilty mind. Without it the prosecution cannot prove both elements. The act is already clear, so the doubt is about his mind, not the act.",
+   "clue": "The video shows what Leo did, not what he meant."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:05Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Both the guilty act and the guilty mind",
+    "also_right": []
+   },
+   "b": {
+    "best": "The prosecution may not prove a guilty mind",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:05Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says that in a criminal case the prosecution must prove both elements, with no exception. Strict and absolute liability offences, such as many traffic offences, need no guilty mind. A short qualifier such as 'for most crimes' would keep students from overgeneralising."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card says that in a criminal case the prosecution must prove both elements, with no exception. Strict and absolute liability offences, such as many traffic offences, need no guilty mind. A short qualifier such as 'for most crimes' would keep students from overgeneralising."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Elements of a crime",
+  "card": [
+   "The prosecution is the side that brings the charge. To convict someone, it must prove the case. The accused does not have to prove they are innocent.",
+   [
+    "Guilty act",
+    "the physical act, or a failure to act, that the law forbids, such as taking someone else's property."
+   ],
+   [
+    "Guilty mind",
+    "the person meant to do the act, or knew the risk and went ahead anyway. An accident is not a guilty mind."
+   ],
+   "For most crimes, the prosecution must prove both elements beyond reasonable doubt. If it proves only one, or leaves a reasonable doubt, the accused is not convicted. Some minor offences, such as many traffic offences, need no guilty mind."
+  ],
+  "remember": "For most crimes, conviction needs both a guilty act and a guilty mind, proved beyond reasonable doubt.",
+  "a": {
+   "q": "To convict a person of theft, what must the prosecution prove?",
+   "opts": [
+    "Both the guilty act and the guilty mind",
+    "The guilty act only, as minds cannot be seen",
+    "The guilty mind only, as intent is the crime",
+    "Either the guilty act or the guilty mind"
+   ],
+   "why": "Theft is a crime that needs both elements, proved beyond reasonable doubt. Proving only the act is tempting, but the act alone is not enough if the person did not have a guilty mind.",
+   "clue": "Think about how many elements there are."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo trips in a shop in Dubbo and knocks a vase off a shelf, and it breaks. There is clear video of him doing it. Why might he not be convicted of intentionally damaging property?",
+   "opts": [
+    "The prosecution may not prove a guilty mind",
+    "The prosecution may not prove a guilty act",
+    "Leo must prove he did not break the vase",
+    "The vase was not worth enough to be a crime"
+   ],
+   "why": "The video shows the guilty act, but a trip is an accident, so there is no guilty mind. Without it the prosecution cannot prove both elements. The act is already clear, so the doubt is about his mind, not the act.",
+   "clue": "The video shows what Leo did, not what he meant."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix adds 'for most crimes' and notes that some minor offences, such as many traffic offences, need no guilty mind, which answers the checker. It also tightens the guilty mind to intent or knowing the risk, and question a now names theft with a better set of wrong options, each question having one right answer that is not the longest.",
+   "item": "dc5cc82706e84e23",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-elements-crime",
+    "title": "Elements of a crime",
+    "brief": "cee4820ce999",
+    "shortlist": [
+     [
+      "leg-actus-reus-mens-rea",
+      0.568
+     ],
+     [
+      "leg-burden-standard-proof-criminal",
+      0.299
+     ],
+     [
+      "leg-offence-against-person",
+      0.274
+     ],
+     [
+      "leg-participants-crime",
+      0.267
+     ],
+     [
+      "leg-strict-absolute-liability",
+      0.25
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00039,
+     "write": 0.00636,
+     "check": 0.01168,
+     "fix": 0.01955,
+     "recheck": 0.01028
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The closest bank point, Actus reus and mens rea, teaches the same idea but at Year 12 Legal Studies depth, with Latin terms, omission and exceptions that go beyond this Stage 5 Commerce brief, so it would need a change of depth rather than a small adaptation.",
+     "model": "claude-haiku-5-5"
+    },
+    "alone": true,
+    "draft": {
+     "title": "Elements of a crime",
+     "card": [
+      "The prosecution is the side that brings the charge. To convict someone, it must prove the case. The accused does not have to prove they are innocent.",
+      [
+       "Guilty act",
+       "the physical act, or a failure to act, that the law forbids, such as taking someone else's property."
+      ],
+      [
+       "Guilty mind",
+       "the person meant to do the act, or knew what they were doing was wrong or risky. An accident is not a guilty mind."
+      ],
+      "In a criminal case the prosecution must prove both elements beyond reasonable doubt. If it proves only one, or leaves a reasonable doubt, the accused is not convicted."
+     ],
+     "remember": "Conviction needs both a guilty act and a guilty mind, proved beyond reasonable doubt.",
+     "a": {
+      "q": "Which of these must the prosecution prove to convict a person of a crime?",
+      "opts": [
+       "Both the guilty act and the guilty mind",
+       "The guilty act only, as the mind cannot be seen",
+       "The accused cannot prove they are innocent",
+       "Either the guilty act or the guilty mind"
+      ],
+      "why": "Both elements must be proved beyond reasonable doubt. Proving only the act is tempting, but the act alone is not enough if the person did not have a guilty mind.",
+      "clue": "Think about how many elements there are."
+     },
+     "b": {
+      "d": 3,
+      "q": "Leo trips in a shop in Dubbo and knocks a vase off a shelf, and it breaks. There is clear video of him doing it. Why might he not be convicted of intentionally damaging property?",
+      "opts": [
+       "The prosecution may not prove a guilty mind",
+       "The prosecution may not prove a guilty act",
+       "Leo must prove he did not break the vase",
+       "The vase was not worth enough to be a crime"
+      ],
+      "why": "The video shows the guilty act, but a trip is an accident. Without a guilty mind the prosecution cannot prove both elements. The act is already clear, so the doubt is about his mind, not the act.",
+      "clue": "The video shows what Leo did, not what he meant."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Both the guilty act and the guilty mind",
+      "also_right": []
+     },
+     "b": {
+      "best": "The prosecution may not prove a guilty mind",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card says that in a criminal case the prosecution must prove both elements, with no exception. Strict and absolute liability offences, such as many traffic offences, need no guilty mind. A short qualifier such as 'for most crimes' would keep students from overgeneralising."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer, and the explanations match the card. The only issue is that the card presents act plus mind as needed for every crime, without noting strict liability offences."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Card, fact: The card says that in a criminal case the prosecution must prove both elements, with no exception. Strict and absolute liability offences, such as many traffic offences, need no guilty mind. A short qualifier such as 'for most crimes' would keep students from overgeneralising."
+    ],
+    "proposal": {
+     "title": "Elements of a crime",
+     "card": [
+      "The prosecution is the side that brings the charge. To convict someone, it must prove the case. The accused does not have to prove they are innocent.",
+      [
+       "Guilty act",
+       "the physical act, or a failure to act, that the law forbids, such as taking someone else's property."
+      ],
+      [
+       "Guilty mind",
+       "the person meant to do the act, or knew the risk and went ahead anyway. An accident is not a guilty mind."
+      ],
+      "For most crimes, the prosecution must prove both elements beyond reasonable doubt. If it proves only one, or leaves a reasonable doubt, the accused is not convicted. Some minor offences, such as many traffic offences, need no guilty mind."
+     ],
+     "remember": "For most crimes, conviction needs both a guilty act and a guilty mind, proved beyond reasonable doubt.",
+     "a": {
+      "q": "To convict a person of theft, what must the prosecution prove?",
+      "opts": [
+       "Both the guilty act and the guilty mind",
+       "The guilty act only, as minds cannot be seen",
+       "The guilty mind only, as intent is the crime",
+       "Either the guilty act or the guilty mind"
+      ],
+      "why": "Theft is a crime that needs both elements, proved beyond reasonable doubt. Proving only the act is tempting, but the act alone is not enough if the person did not have a guilty mind.",
+      "clue": "Think about how many elements there are."
+     },
+     "b": {
+      "d": 3,
+      "q": "Leo trips in a shop in Dubbo and knocks a vase off a shelf, and it breaks. There is clear video of him doing it. Why might he not be convicted of intentionally damaging property?",
+      "opts": [
+       "The prosecution may not prove a guilty mind",
+       "The prosecution may not prove a guilty act",
+       "Leo must prove he did not break the vase",
+       "The vase was not worth enough to be a crime"
+      ],
+      "why": "The video shows the guilty act, but a trip is an accident, so there is no guilty mind. Without it the prosecution cannot prove both elements. The act is already clear, so the doubt is about his mind, not the act.",
+      "clue": "The video shows what Leo did, not what he meant."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:05Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "Both the guilty act and the guilty mind",
+       "also_right": []
+      },
+      "b": {
+       "best": "The prosecution may not prove a guilty mind",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-20T13:37:05Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card says that in a criminal case the prosecution must prove both elements, with no exception. Strict and absolute liability offences, such as many traffic offences, need no guilty mind. A short qualifier such as 'for most crimes' would keep students from overgeneralising."
+      }
+     ],
+     "flags": [
+      "Card, fact: The card says that in a criminal case the prosecution must prove both elements, with no exception. Strict and absolute liability offences, such as many traffic offences, need no guilty mind. A short qualifier such as 'for most crimes' would keep students from overgeneralising."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "570796441f723213"
+  }
  ]
 }

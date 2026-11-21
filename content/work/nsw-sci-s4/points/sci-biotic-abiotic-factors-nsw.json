@@ -8,8 +8,223 @@
    0.945
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 says adapt sci-biotic-abiotic-factors (1 change)",
+  "2026-11-20T12:26:00Z adapt: failed the content check, writing again",
+  "2026-11-20T12:35:57Z adapt: done (still fails the content check)",
+  "2026-11-20T12:45:00Z check: flagged",
+  "2026-11-20T12:53:29Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "adapt": 0.00706,
+  "check": 0.00795,
+  "fix": 0.01685,
+  "recheck": 0.00896
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "sci-biotic-abiotic-factors",
+  "changes": [
+   "Replace the Perth example in question b with a dry summer in a New South Wales location so the example is local to the NSW course."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same biotic and abiotic idea at a suitable Year 7 depth, and only its Perth example needs to be made local to New South Wales.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "sci-biotic-abiotic-factors",
+  "changes": [
+   "Replace the Perth example in question b with a dry summer in a New South Wales location so the example is local to the NSW course."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "a.q",
+   "b.q"
+  ]
+ },
+ "draft": {
+  "title": "Biotic and abiotic factors",
+  "card": [
+   [
+    "Biotic factor",
+    "a living part of an ecosystem, or something made by living things. Plants, animals, fungi and bacteria are biotic."
+   ],
+   [
+    "Abiotic factor",
+    "a non-living part of an ecosystem. Temperature, water, light, soil and wind are abiotic."
+   ],
+   "Both kinds affect how many of an organism can live in a place. A lack of water can shrink a plant population. More predators can shrink a prey population.",
+   "Biotic and abiotic factors also affect each other. Soil type, an abiotic factor, helps decide which plants grow, and those plants are biotic."
+  ],
+  "remember": "Living parts are biotic, non-living parts are abiotic, and both affect population sizes.",
+  "a": {
+   "q": "A desert ecosystem has many parts. Which one of them is abiotic?",
+   "opts": [
+    "The amount of rainfall",
+    "The number of lizards",
+    "The seeds eaten by ants",
+    "The bacteria in the sand"
+   ],
+   "why": "Rainfall is a non-living part of the ecosystem, so it is abiotic. Bacteria are tempting because they are tiny and in the sand, but they are living things, so they are biotic.",
+   "clue": "Which one is not alive and not made by living things?"
+  },
+  "b": {
+   "d": 3,
+   "q": "After a dry summer near Dubbo, a farm pond shrinks and fewer frogs survive. Which statement about this is correct?",
+   "opts": [
+    "An abiotic factor, water level, lowered a biotic population",
+    "A biotic factor, the frogs, lowered the water level",
+    "A biotic factor lowered a biotic population",
+    "Only living factors can change a population size"
+   ],
+   "why": "Water level is non-living, so it is abiotic, and it affected the number of frogs. Frogs are living, but they did not cause the drop in water. Abiotic factors can change populations as well as biotic ones.",
+   "clue": "Decide whether water and frogs are living, then see which one caused the change."
+  }
+ },
+ "redone": true,
+ "local": [
+  "sci-biotic-abiotic-factors-nswa asks the same question, word for word, as sci-biotic-abiotic-factors-vica: A desert ecosystem has many parts. Which one of them is abiotic? Word it differently."
+ ],
+ "check": {
+  "a": {
+   "best": "The amount of rainfall",
+   "also_right": []
+  },
+  "b": {
+   "best": "An abiotic factor, water level, lowered a biotic population",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Content check: sci-biotic-abiotic-factors-nswa asks the same question, word for word, as sci-biotic-abiotic-factors-vica: A desert ecosystem has many parts. Which one of them is abiotic? Word it differently."
+ ],
+ "proposal": {
+  "title": "Biotic and abiotic factors",
+  "card": [
+   [
+    "Biotic factor",
+    "a living part of an ecosystem, or something made by living things. Plants, animals, fungi and bacteria are biotic."
+   ],
+   [
+    "Abiotic factor",
+    "a non-living part of an ecosystem. Temperature, water, light, soil and wind are abiotic."
+   ],
+   "Both kinds affect how many of an organism can live in a place. A lack of water can shrink a plant population. More predators can shrink a prey population.",
+   "Biotic and abiotic factors also affect each other. Soil type, an abiotic factor, helps decide which plants grow, and those plants are biotic."
+  ],
+  "remember": "Living parts are biotic, non-living parts are abiotic, and both affect population sizes.",
+  "a": {
+   "q": "A student lists what she finds in a rock pool on the NSW coast. Which item on her list is abiotic?",
+   "opts": [
+    "The saltiness of the water",
+    "The snails on the rocks",
+    "The seaweed washed in by waves",
+    "The bacteria coating the rocks"
+   ],
+   "why": "Saltiness is a property of the water, which is non-living, so it is abiotic. Seaweed washed in by waves is tempting because it may no longer be growing, but it was made by a living thing, so it is biotic.",
+   "clue": "Which one is not alive and not made by living things?"
+  },
+  "b": {
+   "d": 3,
+   "q": "After a dry summer near Dubbo, a farm pond shrinks and fewer frogs survive. Which statement about this is correct?",
+   "opts": [
+    "Water level, an abiotic factor, lowered the frog numbers",
+    "The frogs, a biotic factor, lowered the water level",
+    "Water level, a biotic factor, lowered the frog numbers",
+    "The frogs, an abiotic factor, lowered the water level"
+   ],
+   "why": "Water is non-living, so water level is an abiotic factor, and its drop meant fewer frogs survived. Calling water level biotic is tempting because the pond holds living things, but the water itself is not alive.",
+   "clue": "Decide whether water and frogs are living, then see which one caused the change."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The saltiness of the water",
+    "also_right": []
+   },
+   "b": {
+    "best": "Water level, an abiotic factor, lowered the frog numbers",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [],
+  "flags": [
+   "Content check: sci-biotic-abiotic-factors-nswa asks the same question, word for word, as sci-biotic-abiotic-factors-vica: A desert ecosystem has many parts. Which one of them is abiotic? Word it differently."
+  ]
+ },
+ "final": {
+  "title": "Biotic and abiotic factors",
+  "card": [
+   [
+    "Biotic factor",
+    "a living part of an ecosystem, or something made by living things. Plants, animals, fungi and bacteria are biotic."
+   ],
+   [
+    "Abiotic factor",
+    "a non-living part of an ecosystem. Temperature, water, light, soil and wind are abiotic."
+   ],
+   "Both kinds affect how many of an organism can live in a place. A lack of water can shrink a plant population. More predators can shrink a prey population.",
+   "Biotic and abiotic factors also affect each other. Soil type, an abiotic factor, helps decide which plants grow, and those plants are biotic."
+  ],
+  "remember": "Living parts are biotic, non-living parts are abiotic, and both affect population sizes.",
+  "a": {
+   "q": "A student lists what she finds in a rock pool on the NSW coast. Which item on her list is abiotic?",
+   "opts": [
+    "The saltiness of the water",
+    "The snails on the rocks",
+    "The seaweed washed in by waves",
+    "The bacteria coating the rocks"
+   ],
+   "why": "Saltiness is a property of the water, which is non-living, so it is abiotic. Seaweed washed in by waves is tempting because it may no longer be growing, but it was made by a living thing, so it is biotic.",
+   "clue": "Which one is not alive and not made by living things?"
+  },
+  "b": {
+   "d": 3,
+   "q": "After a dry summer near Dubbo, a farm pond shrinks and fewer frogs survive. Which statement about this is correct?",
+   "opts": [
+    "Water level, an abiotic factor, lowered the frog numbers",
+    "The frogs, a biotic factor, lowered the water level",
+    "Water level, a biotic factor, lowered the frog numbers",
+    "The frogs, an abiotic factor, lowered the water level"
+   ],
+   "why": "Water is non-living, so water level is an abiotic factor, and its drop meant fewer frogs survived. Calling water level biotic is tempting because the pond holds living things, but the water itself is not alive.",
+   "clue": "Decide whether water and frogs are living, then see which one caused the change."
+  }
+ },
+ "cleared_by": "recheck"
 }

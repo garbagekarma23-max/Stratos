@@ -8269,5 +8269,2266 @@ MADE_BANKS.ecb = {
       "why": "The trend is rising petrol prices, so a long commute now costs more. With more spent on petrol, less is left for other things. Falling costs would need the trend to run the other way.",
       "clue": "Link the rising price to the driver's weekly costs."
     }
+  },
+  "ecb-role-consumers": {
+    "title": "The role of consumers",
+    "card": [
+      "A consumer is a person who buys and uses goods and services. Goods are things you can touch, such as shoes. Services are things done for you, such as a haircut.",
+      ["Need", "something a person must have to live and be well, such as food, water, shelter and clothing."],
+      [
+        "Want",
+        "something a person would like to have but can live without, such as a new game console or concert tickets."
+      ],
+      "Consumers spend money to meet their needs and wants. Businesses watch what people buy and make more of what sells well. In this way, consumers' spending helps decide what businesses make."
+    ],
+    "remember": "Consumers buy to meet needs and wants, and their spending guides what businesses make.",
+    "a": {
+      "q": "Which of these is a consumer buying a service?",
+      "opts": [
+        "Paying a mechanic to repair a car",
+        "Buying a new pair of running shoes",
+        "Buying a loaf of bread at a bakery",
+        "Buying a phone from an electronics shop"
+      ],
+      "why": "A repair is work done for the buyer, so it is a service. Running shoes, bread and a phone are things you can touch, so they are goods. Shoes are tempting because they are bought by a consumer, but they are a good.",
+      "clue": "Which one is work done for you, not a thing you hold?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Many shoppers in Wagga Wagga start buying oat milk instead of dairy milk. Over time, the local supermarket stocks more oat milk. What does this show about consumers?",
+      "opts": [
+        "Their spending helps decide what businesses supply",
+        "Their spending is decided by what the supermarket stocks",
+        "Their needs change whenever a new product appears",
+        "Their wants must be met before their needs"
+      ],
+      "why": "Shoppers changed what they bought, and the supermarket then changed what it stocked. This shows consumer spending helping to decide what businesses make or supply. The reverse option is tempting, but here the shoppers acted first and the shop followed.",
+      "clue": "Who changed their behaviour first, the shoppers or the shop?"
+    }
+  },
+  "ecb-influences-consumer-decisions": {
+    "title": "What influences consumer decisions",
+    "card": [
+      [
+        "Price and income",
+        "Price is what a good costs. Income is the money a person has to spend. A higher price or a lower income can lead a consumer to buy less, or to choose a cheaper option."
+      ],
+      [
+        "Quality",
+        "Quality is how well a product is made and how long it lasts. Some consumers pay more for a product they expect to last."
+      ],
+      [
+        "Advertising",
+        "Advertising is paid messages that try to persuade people to buy. It can make a product seem more appealing or more needed than it is."
+      ],
+      [
+        "Other influences",
+        "Friends and family, and social media, can shape choices through what others buy, wear or recommend. Ethical concerns are beliefs about right and wrong, such as not buying from a business that treats workers badly."
+      ]
+    ],
+    "remember": "Price, income, quality, advertising, friends and family, social media and ethical concerns can all shape what a consumer buys.",
+    "a": {
+      "q": "Zara wants new headphones. She skips a well-known brand and buys a cheaper pair because her part-time pay is low. Which influence is shaping her choice most?",
+      "opts": ["Price and income", "Advertising", "Friends and family", "Ethical concerns"],
+      "why": "Zara's choice is driven by how much money she has and how much the headphones cost. Nothing in the case says an advert, a friend or a belief about right and wrong changed her mind.",
+      "clue": "What does her low pay limit?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Liam sees many creators on his social media feed wearing a certain brand of trainers. He decides to buy a pair even though his old ones still fit. Which is the best description of what influenced him?",
+      "opts": [
+        "Social media, as he copied what others were wearing",
+        "Quality, as his old trainers had worn out",
+        "Ethical concerns, as he wanted to support a cause",
+        "Income, as he suddenly had more money to spend"
+      ],
+      "why": "Liam bought after seeing others wearing the brand online, so social media was the influence. His old trainers still fit, so quality is not the reason, and the case gives no sign of a cause or a change in income.",
+      "clue": "What did he see before he decided?"
+    }
+  },
+  "ecb-pros-cons-payment-methods": {
+    "title": "Pros and cons of payment methods",
+    "card": [
+      [
+        "Debit card",
+        "Spends money you already have in your bank account. You usually cannot spend more than your balance, so there is no debt to repay unless you use an overdraft, which is a small loan from the bank."
+      ],
+      [
+        "Credit card",
+        "Borrows money from the card provider, which you must repay. If you do not pay the full balance by the due date, interest is usually charged. Late fees may also apply."
+      ],
+      [
+        "Buy now pay later",
+        "Lets you take a product now and pay it off in instalments. It borrows money too. Missed payments can bring late fees, and it can tempt people to buy more than they can afford."
+      ],
+      [
+        "Cash",
+        "Physical notes and coins. It is easy to track, because you can see what is left in your wallet. It is also easy to lose or have stolen, and it cannot be recovered like a card can."
+      ]
+    ],
+    "remember": "Debit spends your own money. Credit and buy now pay later borrow it, so interest and fees can be added. Cash is easy to track but easy to lose.",
+    "a": {
+      "q": "Leo taps a card to pay for groceries, and the money comes straight out of his own savings account. Which payment method is he using?",
+      "opts": ["Debit card", "Credit card", "Buy now pay later", "Cash"],
+      "why": "A debit card takes money straight from your own account, so no debt is created. A credit card also uses a tapped card, but it borrows money from the card provider that Leo would repay later.",
+      "clue": "Whose money is being spent at the checkout?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Jaya buys a $300 jacket with a credit card. She forgets to pay the full balance by the due date. What is the most likely result?",
+      "opts": [
+        "Interest is charged on what she owes",
+        "The $300 is taken from her bank account at once",
+        "The jacket price is split into set instalments",
+        "She pays nothing extra because the card is borrowed"
+      ],
+      "why": "A credit card borrows money, so an unpaid balance usually attracts interest, and late fees may also apply. Taking the money from her account straight away is how a debit card works, not a credit card.",
+      "clue": "Think about what happens to borrowed money that is not repaid on time."
+    }
+  },
+  "ecb-scams-identity-theft-nsw": {
+    "title": "Scams and identity theft",
+    "card": [
+      [
+        "Scam",
+        "a trick to get money or personal details from a person. Common types include fake online shops, phishing messages and fake prizes."
+      ],
+      [
+        "Identity theft",
+        "when someone uses another person's stolen details, such as a name, birth date or bank details, to pretend to be them. They may open accounts or buy things in that person's name."
+      ],
+      "Scams often add pressure, such as \"act now\" or \"you have won\". A message that asks for details you did not expect to be asked for is a warning sign.",
+      "Consumers can guard against both by checking a seller is real before paying. They should also never share passwords or codes, even with someone who says they are from a bank."
+    ],
+    "remember": "A scam tricks you into giving up money or details. Identity theft misuses those details. Check sellers and keep passwords private.",
+    "a": {
+      "q": "Jai gets a text saying a parcel is held and he must click a link and enter his bank details. The text is from an unknown sender. What is the best description of it?",
+      "opts": [
+        "A scam that tries to trick him into giving details",
+        "A refund offered by a real delivery company",
+        "Identity theft that has already been carried out",
+        "A fair deal that he can trust if he acts quickly"
+      ],
+      "why": "The text tries to trick Jai into handing over his bank details, so it is a scam. It is not yet identity theft, because nothing has been used. That would only start if the criminals used his details to pretend to be him.",
+      "clue": "Has anyone used Jai's details yet, or are they trying to get them?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya finds a bank loan in her name that she never applied for. The loan was taken out using her name, birth date and address. What has most likely happened?",
+      "opts": [
+        "Identity theft, as someone used her stolen details",
+        "A scam, as she was tricked into buying a product",
+        "A consumer guarantee, as the loan was unfit for purpose",
+        "A refund, as the lender chose to repair the loan"
+      ],
+      "why": "Someone used Priya's personal details to pretend to be her and take out a loan, which is identity theft. A scam would involve Priya being tricked into handing over money or details herself, and nothing suggests she was tricked into handing anything over.",
+      "clue": "Did someone trick Priya, or did someone act in her name?"
+    }
+  },
+  "ecb-consumer-guarantees-nsw": {
+    "title": "Consumer guarantees",
+    "card": [
+      "The Australian Consumer Law (ACL) gives consumers automatic rights, called consumer guarantees, when they buy goods. No store policy or sign can take them away, and the buyer does not pay extra for them.",
+      [
+        "Acceptable quality",
+        "Goods must be safe, work properly, last a reasonable time, look right and do what such goods are normally used for, given the price and what they are."
+      ],
+      [
+        "Fit for purpose",
+        "Goods must suit any particular purpose the buyer told the seller about, or that the seller said they would suit."
+      ],
+      [
+        "Match description",
+        "Goods must match what the seller said, or what the label, packaging, sample or advertisement showed."
+      ]
+    ],
+    "remember": "Quality, purpose and description are three of the main guarantees, and no store policy can remove them.",
+    "a": {
+      "q": "Zoe buys a new kettle in Newcastle. She tells the seller nothing special about how she will use it. It stops working after two days. Which consumer guarantee is most clearly broken?",
+      "opts": [
+        "Acceptable quality, because it failed far too soon",
+        "Match description, because it was not advertised",
+        "Fit for purpose, because kettles are for boiling water",
+        "None, because the store gave no written warranty"
+      ],
+      "why": "A new kettle should work properly, do its normal job and last a reasonable time, so the guarantee of acceptable quality is broken. Fit for purpose is about a particular purpose the buyer told the seller about, and Zoe named none. A written warranty is not needed, because the guarantees apply automatically.",
+      "clue": "Which guarantee covers what goods are normally used for?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam buys a tent in Orange. A sign on the shop wall says no refunds on camping gear. The tent leaks in light rain, though its label says waterproof. What is the position?",
+      "opts": [
+        "The sign cannot remove the match description guarantee",
+        "The sign is valid, because Sam saw it before buying",
+        "The guarantees apply only if Sam paid for extra cover",
+        "The guarantees are void, as camping gear is used outdoors"
+      ],
+      "why": "The tent does not match its description, as the label said waterproof. Consumer guarantees apply whatever the store's own policy says, so a no refunds sign cannot take them away. Seeing the sign before buying does not change this.",
+      "clue": "Does a store's own sign override the law?"
+    }
+  },
+  "ecb-refunds-repairs-replacements": {
+    "title": "Refunds, repairs and replacements",
+    "card": [
+      "If goods fail a consumer guarantee, the Australian Consumer Law gives the buyer a remedy. The remedy depends on whether the fault is major or minor.",
+      [
+        "Major fault",
+        "a serious problem, such as one that makes the goods unsafe or means a reasonable buyer would not have bought them. The consumer chooses a refund or a replacement."
+      ],
+      [
+        "Minor fault",
+        "a smaller problem that can be fixed. The business chooses whether to repair the goods, replace them or give a refund. Usually the business fixes it first."
+      ],
+      "If a business does not fix a minor fault in a reasonable time, the consumer can then ask for a refund or replacement. A store cannot refuse just because it has a \"no refunds\" sign."
+    ],
+    "remember": "Major fault: the consumer chooses refund or replacement. Minor fault: the business can repair first.",
+    "a": {
+      "q": "Who chooses between a refund and a replacement when goods have a major fault?",
+      "opts": ["The consumer", "The business", "The manufacturer", "NSW Fair Trading"],
+      "why": "For a major fault, the consumer picks a refund or a replacement. The business picks only for a minor fault, where it can choose to repair the goods first.",
+      "clue": "Think about who gets the choice when the fault is serious."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya buys a pair of headphones in Penrith. A week later the left speaker crackles, but they still work. The store offers to repair them. What is the best description of this?",
+      "opts": [
+        "A minor fault, so the store may repair first",
+        "A major fault, so Priya must get a refund",
+        "A minor fault, so Priya must accept a refund",
+        "A major fault, so the store may repair first"
+      ],
+      "why": "The headphones still work and the problem can be fixed, so it is a minor fault. The business can choose to repair first. It would be a major fault only if the problem were serious, and then Priya would choose.",
+      "clue": "The headphones still work and can be fixed."
+    }
+  },
+  "ecb-organisations-that-help-consumers": {
+    "title": "Organisations that help consumers",
+    "card": [
+      [
+        "ACCC",
+        "The Australian Competition and Consumer Commission is a national agency. It enforces the Australian Consumer Law across the country and can take businesses to court, but it does not usually settle one person's dispute."
+      ],
+      [
+        "NSW Fair Trading",
+        "a NSW government agency. It takes complaints about businesses in the state, helps both sides sort out a dispute and can act against businesses that break consumer laws."
+      ],
+      [
+        "Ombudsman",
+        "an independent service that looks into complaints about a particular industry, such as banking or energy, usually after the business has had a chance to fix the problem."
+      ],
+      "The ACCC and NSW Fair Trading also warn the public about scams and unsafe products. The ACCC runs the Scamwatch website for this."
+    ],
+    "remember": "These organisations take complaints, enforce consumer laws and warn people about scams.",
+    "a": {
+      "q": "Dev bought a faulty laptop from a store in Newcastle. The store refused to help, and he wants someone to help him and the store settle the dispute. Who should he contact first?",
+      "opts": ["NSW Fair Trading", "The ACCC", "A banking ombudsman", "The Scamwatch website"],
+      "why": "NSW Fair Trading takes complaints about businesses in the state and helps both sides sort out a dispute. The ACCC enforces the law across the country, but it does not usually settle one shopper's dispute with a store.",
+      "clue": "Which organisation works on single disputes, not just the law nationwide?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya has a complaint about her energy provider. The company has tried to fix it but she is still unhappy. Which step suits her best?",
+      "opts": [
+        "Take the complaint to an energy ombudsman service",
+        "Ask the ACCC to enforce the law for her alone",
+        "Report the energy provider to Scamwatch",
+        "Wait for NSW Fair Trading to send a scam warning"
+      ],
+      "why": "An ombudsman looks into complaints about one industry, such as energy, usually once the business has had a chance to fix the problem. The ACCC enforces the law across the country and does not usually settle one person's complaint.",
+      "clue": "Which service deals with complaints about one industry?"
+    }
+  },
+  "ecb-borrowing-money": {
+    "title": "Borrowing money",
+    "card": [
+      "Borrowing means using someone else's money now and paying it back later, with interest. Interest is the extra amount the borrower pays the lender for the loan.",
+      [
+        "Personal loan",
+        "a set amount borrowed for a purpose such as a car, repaid in regular instalments over a fixed time. Spreading the loan over a longer time makes each instalment smaller."
+      ],
+      [
+        "Credit card",
+        "a card that lets you borrow up to a limit when you buy things. You are charged interest on any amount you do not repay in time."
+      ],
+      "A home loan is a large loan to buy property, usually repaid over many years. A loan's real cost depends on its interest rate, fees and term (how long it takes to repay), and at the same rate a longer term means more interest in total."
+    ],
+    "remember": "A loan costs the amount borrowed plus interest and fees, and a longer term lets more interest build up.",
+    "a": {
+      "q": "Which of these is the best description of interest on a loan?",
+      "opts": [
+        "The extra amount paid to the lender for borrowing",
+        "The amount borrowed from the lender at the start",
+        "A fee paid once to the lender to open the loan",
+        "The time the borrower has to repay the loan"
+      ],
+      "why": "Interest is the extra the borrower pays the lender for using their money. The amount borrowed is not extra, and the time to repay is the term, so those options describe other ideas.",
+      "clue": "Think about what the lender gets on top of being repaid."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tariq can repay a $10,000 personal loan over 2 years or 5 years, at the same interest rate and with the same fees. What does choosing the 5 year term mean for him?",
+      "opts": [
+        "Smaller repayments, but more interest in total",
+        "Smaller repayments, and less interest in total",
+        "Bigger repayments, and more interest in total",
+        "Bigger repayments, but less interest in total"
+      ],
+      "why": "Spreading the loan over 5 years makes each repayment smaller, but the money is owed for longer, so interest is charged for longer and the total is higher. The smaller repayments can make the longer term look cheaper, but it costs more overall.",
+      "clue": "Think about how long money is still owed."
+    }
+  },
+  "ecb-budgeting": {
+    "title": "Making a personal budget",
+    "card": [
+      "A budget is a plan that lists the money you expect to receive (income) and the money you expect to spend (expenses) over a period, such as a month. It keeps spending within income so money can be set aside for a savings goal, such as saving a set amount each week for something you want to buy.",
+      ["Fixed expenses", "expenses that stay the same each time, such as a phone plan or a gym fee."],
+      ["Variable expenses", "expenses that can go up or down, such as snacks, clothes or bus fares."],
+      "Subtract total expenses from income to see what is left to save. If expenses are higher than income, the budget shows a shortfall, and you need to cut expenses or earn more."
+    ],
+    "remember": "Income minus all expenses, fixed and variable, shows what is left to save.",
+    "a": {
+      "q": "Mia checks what she paid for four things in March and April. Which is a fixed expense?",
+      "opts": [
+        "Music app: $12 in March, $12 in April",
+        "Snacks: $18 in March, $25 in April",
+        "Bus fares: $30 in March, $22 in April",
+        "Clothes: $0 in March, $45 in April"
+      ],
+      "why": "The music app cost the same amount in both months, so it is a fixed expense. Snacks, bus fares and clothes went up or down between months, so they are variable expenses, even though bus fares are paid often.",
+      "clue": "Compare the two months for each item."
+    },
+    "b": {
+      "d": 3,
+      "q": "Jaden gets $200 a month from a weekend job. His fixed expenses are $60 and his variable expenses are $150. What does his budget show?",
+      "opts": [
+        "A shortfall of $10, so he needs to cut expenses or earn more",
+        "$10 left over, so he can save $10 a month from his job",
+        "$140 left over, because only fixed expenses are counted",
+        "$50 left over, because only variable expenses are counted"
+      ],
+      "why": "Total expenses are $60 + $150 = $210, which is $10 more than his income of $200, so the budget shows a shortfall. The $140 and $50 answers each subtract only one kind of expense, but a budget counts both fixed and variable expenses.",
+      "clue": "Add both kinds of expense before comparing with income."
+    }
+  },
+  "ecb-superannuation-nsw": {
+    "title": "Superannuation",
+    "card": [
+      "Superannuation, or super, is money saved to live on in retirement. It is built up over a person's working life.",
+      "Employers pay super into a super fund for each eligible employee. The payment is a share of the employee's wages.",
+      "The fund holds and invests the money for the employee. The employee can usually only take it out when they reach retirement age, which is set by law.",
+      "Because the money is paid on top of wages and grows over many years, it can build a large amount by retirement."
+    ],
+    "remember": "Super is retirement savings that an employer pays into a fund as a share of wages.",
+    "a": {
+      "q": "Who pays the regular super contributions for an employee?",
+      "opts": [
+        "The employer, into the employee's super fund",
+        "The employee, from their own pay each week",
+        "The bank, into the employee's savings account",
+        "The fund, into the employer's business account"
+      ],
+      "why": "Employers must pay super for eligible employees into a super fund. The money does not go into a savings account or to the employer, so those options are wrong.",
+      "clue": "Think about who pays the wages."
+    },
+    "b": {
+      "d": 2,
+      "q": "Priya works part time at a bakery in Newcastle. Her boss pays a share of her wages into a fund she can usually only access in retirement. What is this payment?",
+      "opts": ["Superannuation", "A personal loan", "A hardship payment", "A credit card limit"],
+      "why": "Money paid by an employer into a fund as a share of wages, to be used in retirement, is superannuation. A loan is borrowed money that must be repaid, so it does not fit.",
+      "clue": "Which one is saved for retirement?"
+    }
+  },
+  "ecb-help-with-financial-difficulty": {
+    "title": "Help with financial difficulty",
+    "card": [
+      [
+        "Hardship arrangement",
+        "a request to your lender for changed terms when you cannot keep up repayments. The lender may pause repayments or lower them for a time."
+      ],
+      [
+        "Financial counsellor",
+        "a trained person who helps you sort out debts and plan a way forward. The service is free and confidential, and you can use it before your debts get out of hand."
+      ],
+      [
+        "Bankruptcy",
+        "a legal process for people who cannot pay their debts. It is a last resort, because it can limit what the person can do with money for years."
+      ],
+      "It is usually best to ask for help early. Lenders and counsellors have more options when a person acts before missing many payments."
+    ],
+    "remember": "Ask early: talk to your lender, see a free counsellor, and keep bankruptcy as the last resort.",
+    "a": {
+      "q": "Jo has lost shifts at work and may miss her car loan repayments next month. What is a sensible first step?",
+      "opts": [
+        "Ask the lender for a hardship arrangement",
+        "Declare bankruptcy straight away",
+        "Ignore the loan until the lender contacts her",
+        "Take out a new loan to cover the repayments"
+      ],
+      "why": "A hardship arrangement lets the lender change the terms while Jo cannot keep up. Bankruptcy is wrong as a first step because it is a last resort with long effects.",
+      "clue": "Which step is made to your lender, before things get worse?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam has debts from several sources and is not sure what he can afford to repay. He does not want to pay a fee for advice. What should he do?",
+      "opts": [
+        "See a financial counsellor to plan his debts",
+        "Go bankrupt so that all his debts disappear",
+        "Pay a company to arrange the debts for him",
+        "Wait until he misses many payments before acting"
+      ],
+      "why": "A financial counsellor helps people sort out debts and plan, and the service is free, so Sam pays no fee. Bankruptcy is a tempting wrong answer, but it is a last resort with long effects and not the first step. Paying a company means paying a fee, which Sam wants to avoid.",
+      "clue": "Which of these services does not charge for help?"
+    }
+  },
+  "ecb-economic-problem-scarcity": {
+    "title": "The basic economic problem",
+    "card": [
+      "Wants are unlimited. People always want more goods and services than they have. Resources are limited, so they are scarce.",
+      "Scarcity is the gap between unlimited wants and limited resources. Every society faces it, rich or poor, so choices must be made.",
+      "Scarcity forces three questions. What and how much should be made? How should it be made? Who gets what is made?",
+      "The how question is about methods, such as using more workers or more machines. The who question is about how output is shared among people."
+    ],
+    "remember": "Unlimited wants meet limited resources, so every society must answer what, how and who.",
+    "a": {
+      "q": "What is the main reason scarcity is a problem for all societies, rich or poor?",
+      "opts": [
+        "Wants are unlimited but resources are limited",
+        "Resources are unlimited but wants are limited",
+        "Poor societies have too few goods to share",
+        "Governments choose to make some goods rare"
+      ],
+      "why": "Scarcity comes from unlimited wants meeting limited resources. It is not only a problem of poor societies, because rich societies still cannot meet every want.",
+      "clue": "Think about the gap between wants and resources."
+    },
+    "b": {
+      "d": 3,
+      "q": "Orange, a town in New South Wales, has one vacant block of land. The council is deciding whether to build a library or a sports centre on it. Which economic question is the council answering?",
+      "opts": [
+        "What to make, given limited resources",
+        "How to make it, given limited resources",
+        "Who gets it, given limited resources",
+        "How to remove scarcity in the town"
+      ],
+      "why": "The council is choosing which good to make, so it is answering the what question. It is not choosing a method of production or who receives the output, and choosing between two uses of the land does not remove scarcity.",
+      "clue": "Is the council choosing a good, a method or a group of people?"
+    }
+  },
+  "ecb-opportunity-cost-nsw": {
+    "title": "Opportunity cost",
+    "card": [
+      "Resources are scarce, so choosing one option means giving up others. Opportunity cost is the value of the next best option given up.",
+      "It is only the single next best option, not every option left behind. It is not always money: time, land or effort can be what is given up. A student who studies instead of working a shift gives up the wage they would have earned, if working was the next best option.",
+      "A trade-off is the act of giving up one thing to get another. Weighing the opportunity cost shows what each choice really costs.",
+      "In a cost-benefit analysis, a person or government compares the costs and benefits of a choice. A choice is worth making when its benefits outweigh its costs, including the opportunity cost."
+    ],
+    "remember": "Every choice has a cost: the next best option you gave up.",
+    "a": {
+      "q": "Mia has a free Saturday. She could work a shift for $120, go to the beach, or study. She chooses the beach and ranks studying second. What is her opportunity cost?",
+      "opts": [
+        "The study time she gave up",
+        "The $120 she would have earned",
+        "The study time and the $120 together",
+        "The cost of getting to the beach"
+      ],
+      "why": "Opportunity cost is the next best option given up, and for Mia that is studying. The $120 shift was a third choice, so it is not counted. Adding it would count more than the single next best option.",
+      "clue": "Which option did she rank second?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Dubbo council has land for one project. It could build a library, which it ranks first, a car park, which it ranks second, or a skate park, which it ranks third. What is the opportunity cost of choosing the library?",
+      "opts": [
+        "The car park",
+        "The skate park",
+        "The car park and the skate park",
+        "Nothing, as the library was its first choice"
+      ],
+      "why": "The opportunity cost is the next best option given up, which is the car park. The skate park is also given up but ranks lower, so it is not counted. Choosing the best option still has an opportunity cost, because something is given up.",
+      "clue": "Does making the best choice mean nothing at all is given up?"
+    }
+  },
+  "ecb-circular-flow-income-nsw": {
+    "title": "The circular flow of income",
+    "card": [
+      "Households own labour, which is the work people do. They sell their labour to businesses.",
+      "Businesses pay households income, such as wages, for that work.",
+      "Households then spend that income on the goods and services that businesses sell.",
+      "That spending becomes money for businesses, which they can use to pay workers again. So money flows around the economy in a circle."
+    ],
+    "remember": "Households earn income from businesses, then spend it back on businesses.",
+    "a": {
+      "q": "Priya works at a bakery in Newcastle and uses her wages to buy shoes. What does this show about money?",
+      "opts": [
+        "It flows from business to household and back to business",
+        "It flows from household to business and then stops",
+        "It moves only between households and never to businesses",
+        "It is spent once and does not return to any business"
+      ],
+      "why": "The bakery pays wages to Priya, and she spends them at a shoe business, so money moves from business to household and back to a business. It does not stop, because the shoe business can pay its own workers.",
+      "clue": "Follow the money from the bakery to Priya to the shoe shop."
+    },
+    "b": {
+      "d": 3,
+      "q": "A large factory in Wollongong closes and its workers lose their jobs. What is a likely effect on local shops?",
+      "opts": [
+        "Less income for households, so less spending at shops",
+        "More income for households, so more spending at shops",
+        "No change, as households do not spend their income",
+        "Shops gain money because workers stop selling labour"
+      ],
+      "why": "Without wages, households have less income to spend, so local shops are likely to sell less. Workers no longer selling labour means less income, not more.",
+      "clue": "What happens to spending when wages stop?"
+    }
+  },
+  "ecb-price-mechanism": {
+    "title": "The price mechanism",
+    "card": [
+      "The price mechanism is how a market sets prices. It settles on the equilibrium price, where the amount buyers want equals the amount sellers offer.",
+      [
+        "Shortage",
+        "the price is below equilibrium, so buyers want more than sellers offer. Buyers compete for the limited goods, which pushes the price up."
+      ],
+      [
+        "Surplus",
+        "the price is above equilibrium, so sellers offer more than buyers want. Sellers are left with unsold stock and cut prices, which pushes the price down."
+      ],
+      "Prices keep moving until the shortage or surplus is gone. The market then settles at the equilibrium price."
+    ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A demand curve and a supply curve cross at the equilibrium price. At a higher price, sellers offer more than buyers want: the gap between the curves is a surplus. At a lower price, buyers want more than sellers offer: the gap is a shortage.",
+        "x": {"min": 0, "max": 10, "label": "Quantity"},
+        "y": {"min": 0, "max": 10, "label": "Price"},
+        "items": [
+          {
+            "type": "curve",
+            "id": "D",
+            "points": [[1, 9], [9, 1]],
+            "label": "Demand",
+            "pos": "below-left",
+            "labelAt": 8.6
+          },
+          {
+            "type": "curve",
+            "id": "S",
+            "points": [[1, 1], [9, 9]],
+            "label": "Supply",
+            "pos": "above-left",
+            "labelAt": 8.6
+          },
+          {"type": "arrow", "from": [2, 8], "to": [8, 8], "label": "surplus", "pos": "above"},
+          {"type": "arrow", "from": [2, 2], "to": [8, 2], "label": "shortage", "pos": "below"},
+          {"type": "point", "at": [5, 5], "on": ["D", "S"], "is": "intersection"},
+          {"type": "text", "at": [4.5, 5], "label": "equilibrium", "pos": "left"}
+        ]
+      }
+    },
+    "remember": "Shortage: price rises. Surplus: price falls. Both end at equilibrium.",
+    "a": {
+      "q": "A market has a surplus at its current price. Which statement describes it?",
+      "opts": [
+        "Sellers offer more than buyers want to buy",
+        "Buyers want more than sellers offer",
+        "Buyers want exactly what sellers offer",
+        "The price is below the equilibrium price"
+      ],
+      "why": "A surplus means sellers offer more than buyers want at the current price, so stock is left unsold. Buyers wanting more than sellers offer describes a shortage, which is the reverse.",
+      "clue": "Think about who is left with goods they cannot sell."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia sells fresh mangoes at a market stall in Coffs Harbour, NSW. At $4 each, she has 80 mangoes left at the end of the day. If the market keeps adjusting, what will most likely happen to the price?",
+      "opts": [
+        "It falls, because $4 is above the equilibrium price",
+        "It rises, because $4 is below the equilibrium price",
+        "It stays at $4, because Mia sets the price",
+        "It rises, because there are goods left to sell"
+      ],
+      "why": "Unsold mangoes mean Mia offered more than buyers wanted at $4, which is a surplus. A surplus shows the price is above equilibrium, so sellers cut prices until it clears. Leftover goods do not push prices up.",
+      "clue": "Leftover stock means sellers offered more than buyers wanted."
+    }
+  },
+  "ecb-effects-economic-growth-australia": {
+    "title": "Effects of economic growth in Australia",
+    "card": [
+      [
+        "Benefits",
+        "When the economy grows, businesses often need more workers, so more jobs can be created. More jobs and higher wages can lift incomes."
+      ],
+      [
+        "Tax",
+        "Higher incomes and more spending mean the government can collect more tax. That money can pay for services such as hospitals and schools."
+      ],
+      [
+        "Costs",
+        "Growth can also push prices up when spending rises faster than the economy can produce. This rise in the general level of prices is inflation."
+      ],
+      [
+        "More costs",
+        "The gains may not be shared evenly, so the gap between richer and poorer households can widen. Using more land, water and energy can also harm the environment."
+      ]
+    ],
+    "remember": "Growth can bring jobs, incomes and tax for services, but it can also bring inflation, inequality and harm to the environment.",
+    "a": {
+      "q": "A mining town in Western Australia grows quickly. Which is a possible benefit for the people who live there?",
+      "opts": [
+        "More jobs and higher incomes",
+        "Falling prices for housing",
+        "A smaller gap between rich and poor",
+        "Less pressure on local water supplies"
+      ],
+      "why": "Growth often means businesses hire more workers, which can lift incomes. The other options are costs or opposite effects: growth can push prices up, widen the income gap and use more water.",
+      "clue": "Think about what businesses need when they produce more."
+    },
+    "b": {
+      "d": 3,
+      "q": "Over five years, Australia's economy grows and the government collects more tax. At the same time, the wealthiest households gain far more than the poorest. Which pair of effects is this?",
+      "opts": [
+        "More tax for services, and greater inequality",
+        "More jobs, and higher inflation",
+        "Harm to the environment, and higher incomes",
+        "Higher inflation, and greater inequality"
+      ],
+      "why": "More tax collected is a benefit, because it can pay for services. Gains going mostly to wealthier households is inequality. Inflation is a rise in the general level of prices, which the scenario does not describe.",
+      "clue": "Match each part of the scenario to one effect on the card."
+    }
+  },
+  "ecb-government-economic-objectives": {
+    "title": "Government economic objectives",
+    "card": [
+      "An economic objective is a goal a government sets for how the economy should perform. Most Australian governments share a few main ones.",
+      [
+        "Growth",
+        "steady growth in the goods and services the economy produces. Steady means growth that is not wildly up and down."
+      ],
+      [
+        "Jobs and prices",
+        "low unemployment, so most people who want work can find it, and low, stable inflation, so prices rise only slowly and predictably."
+      ],
+      ["Fairness", "a fair share of income, so the gap between richer and poorer households does not grow too wide."]
+    ],
+    "remember": "Governments aim for steady growth, low unemployment, low stable inflation and a fair share of income.",
+    "a": {
+      "q": "A treasurer wants a goal that matches the government's usual economic objectives. Which goal fits?",
+      "opts": [
+        "Keep unemployment low across the economy",
+        "Hold inflation at zero so prices never change",
+        "Make every household's income exactly equal",
+        "Push growth as fast as possible every year"
+      ],
+      "why": "Low unemployment is one of the main objectives. The others are extreme versions: the objective is low and stable inflation, not zero, a fair share of income rather than equal incomes, and steady growth rather than the fastest possible.",
+      "clue": "The objectives use words like low, steady and fair, not extremes."
+    },
+    "b": {
+      "d": 3,
+      "q": "Suppose prices across Australia rose 6% one year, 1% the next, then 7% the year after. Which objective is the government failing to meet?",
+      "opts": ["Low and stable inflation", "Steady economic growth", "A fair share of income", "Low unemployment"],
+      "why": "A general rise in prices is inflation, and here it jumps up and down, so it is neither low nor stable. The facts say nothing about output, jobs or how income is shared, so the other objectives cannot be judged from them.",
+      "clue": "Look at what is happening to prices, and whether the changes are steady."
+    }
+  },
+  "ecb-governments-intervene": {
+    "title": "Why governments intervene",
+    "card": [
+      "Governments step into the economy because markets left alone do not always give fair or good results. Stepping in is called intervention.",
+      [
+        "Public goods",
+        "Some goods, such as street lighting and national defence, are hard to charge for because everyone can use them. Private firms rarely supply them, so governments often do."
+      ],
+      [
+        "Protection",
+        "Governments protect consumers from unsafe products and unfair business practices. They also protect the environment from harm that firms may ignore."
+      ],
+      [
+        "Fairness and stability",
+        "Governments may reduce inequality by helping people on low incomes. They may also try to smooth out booms and slumps, so the economy does not swing too far up or down."
+      ]
+    ],
+    "remember": "Governments step in to provide public goods, protect people and the environment, reduce inequality and smooth booms and slumps.",
+    "a": {
+      "q": "Why does the government, rather than private firms, usually provide street lighting?",
+      "opts": [
+        "Everyone can use it, so firms struggle to charge for it",
+        "It is too cheap for any firm to make a profit from",
+        "It only helps people with low incomes in a town",
+        "It is a consumer product that needs safety checks"
+      ],
+      "why": "Street lighting is a public good. Everyone can use it, so a firm cannot easily charge people, and few firms would supply it. It is not about low incomes or product safety.",
+      "clue": "Think about whether a firm could stop people using the light."
+    },
+    "b": {
+      "d": 3,
+      "q": "A chemical factory near a town in the Hunter Valley is dumping waste into a river. The NSW Government steps in and fines the factory. Which reason for intervention does this show?",
+      "opts": [
+        "Protecting the environment from harm that firms may ignore",
+        "Providing a public good that firms will not supply",
+        "Smoothing out a slump in the economy",
+        "Reducing inequality between high and low incomes"
+      ],
+      "why": "The fine aims to stop harm to the river, so it protects the environment. It is not a public good, because the factory is not supplying something everyone uses, and it does not target a slump or income gaps.",
+      "clue": "What is being harmed by the factory?"
+    }
+  },
+  "ecb-governments-intervene-2": {
+    "title": "How governments intervene",
+    "card": [
+      [
+        "Budget",
+        "The government raises money through taxes and spends it on things such as health, schools and roads. Changing taxes and spending changes how much money moves through the economy."
+      ],
+      [
+        "Laws and regulation",
+        "Governments make rules that businesses and people must follow, such as consumer protection laws and limits on pollution. Rules set the standards for how the market works."
+      ],
+      [
+        "Payments",
+        "The government pays money to people, such as the Age Pension and JobSeeker. These payments support people's incomes and are paid for from tax."
+      ],
+      [
+        "Interest rates",
+        "The Reserve Bank of Australia is not part of the budget and makes its decisions independently of the government. It sets the cash rate, which influences the interest rates banks charge on loans."
+      ]
+    ],
+    "remember": "Governments use the budget, laws and payments. The Reserve Bank sets the cash rate on its own.",
+    "a": {
+      "q": "Which action is the Reserve Bank of Australia responsible for?",
+      "opts": [
+        "Setting the cash rate that influences loan interest rates",
+        "Setting the rate of income tax paid by workers",
+        "Deciding how much is spent on public hospitals",
+        "Passing laws that protect consumers from false claims"
+      ],
+      "why": "The Reserve Bank sets the cash rate, which influences the interest rates banks charge on loans. Income tax and spending are decided by the government through the budget, and consumer laws are made by governments.",
+      "clue": "Think about who is not part of the budget."
+    },
+    "b": {
+      "d": 2,
+      "q": "A state government stops cafés from handing out single-use plastic straws to customers. Which way of intervening is this?",
+      "opts": ["Laws and regulation", "Spending in the budget", "Welfare payments", "Setting interest rates"],
+      "why": "The government is setting what cafés are allowed to do, which is regulation. It is not spending or a welfare payment, because no money is handed over, and the Reserve Bank's cash rate has nothing to do with straws.",
+      "clue": "Is the government handing over money, or setting what is allowed?"
+    }
+  },
+  "ecb-goals-business": {
+    "title": "The goals of a business",
+    "card": [
+      [
+        "Profit",
+        "Profit is the money left after all costs are paid out of revenue. Most businesses aim to make a profit so they can pay owners and keep operating."
+      ],
+      ["Growth", "Growth means getting bigger, for example by selling more, hiring more staff or opening new shops."],
+      [
+        "Market share",
+        "Market share is the part of total sales in a market that one business wins from its competitors."
+      ],
+      [
+        "Other goals",
+        "Some businesses also aim for good customer service, or for social or environmental goals, such as hiring local people or cutting waste."
+      ]
+    ],
+    "remember": "Profit is a common goal, but businesses may also aim for growth, market share, service and social or environmental goals.",
+    "a": {
+      "q": "Mia's café in Dubbo sells more coffee than the other cafés in town. Which goal is she mainly achieving?",
+      "opts": ["A larger market share", "A higher level of profit", "A social goal", "An environmental goal"],
+      "why": "Winning a bigger part of the town's coffee sales from competitors is market share. Profit would depend on costs as well as sales, and the case says nothing about costs.",
+      "clue": "Think about her sales compared with the other cafés."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tane's bakery in Hobart switches to compostable bags, even though they cost more. Which goal does this show?",
+      "opts": ["An environmental goal", "A profit goal", "A growth goal", "A market share goal"],
+      "why": "Compostable bags aim to cut waste, which is an environmental goal. It is tempting to call it a profit goal, but the bags cost more, so the switch is not aimed at profit.",
+      "clue": "The switch adds to costs, so what else could it be for?"
+    }
+  },
+  "ecb-types-businesses": {
+    "title": "Types of businesses",
+    "card": [
+      [
+        "Sole trader",
+        "A business owned and run by one person. The owner keeps all the profit and is personally responsible for its debts."
+      ],
+      ["Partnership", "A business owned by two or more people who share the work, the profit and the risk."],
+      [
+        "Company",
+        "A business that is a separate legal entity from its owners, who are called shareholders. It can own property and be sued in its own name."
+      ],
+      [
+        "Size",
+        "Businesses are also small, medium or large, judged by things such as how many staff they employ and how much they sell. A business can be, for example, a small company or a large company."
+      ]
+    ],
+    "remember": "Ownership type (sole trader, partnership, company) is one question and size is another.",
+    "a": {
+      "q": "Priya owns and runs a bike repair shop by herself. She keeps all the profit. What type of business is it?",
+      "opts": ["A sole trader", "A partnership", "A company", "A franchise"],
+      "why": "One owner who runs the business and keeps all the profit is a sole trader. It is not a partnership, which needs two or more owners.",
+      "clue": "Count how many owners there are."
+    },
+    "b": {
+      "d": 3,
+      "q": "A company called Bright Tiles Pty Ltd is sued after a faulty job. Which feature of companies explains why the case is against the business itself?",
+      "opts": [
+        "It is a separate legal entity from its owners",
+        "It is owned by two or more partners",
+        "It always has many staff",
+        "Its owner keeps all the profit"
+      ],
+      "why": "A company is a separate legal entity, so it can be sued in its own name. Sharing ownership between partners describes a partnership, not why a company is sued.",
+      "clue": "Think about who the law treats as the business."
+    }
+  },
+  "ecb-inputs-processes-outputs": {
+    "title": "Inputs, processes and outputs",
+    "card": [
+      "Operations is the part of a business that makes its goods or delivers its services. It turns inputs into outputs.",
+      ["Inputs", "the resources put into operations, such as materials, labour, equipment, energy and money."],
+      [
+        "Processes",
+        "the activities that change the inputs into outputs, such as cutting, assembling, cooking or advising a client. Good processes add value."
+      ],
+      [
+        "Outputs",
+        "the finished goods or services that go to customers. Value is added when the output is worth more to the customer than the inputs that went into it."
+      ]
+    ],
+    "remember": "Inputs go in, processes change them, outputs come out, and good processes add value.",
+    "a": {
+      "q": "A furniture workshop makes chairs. Which of these is a process?",
+      "opts": [
+        "Sanding and assembling timber into chairs",
+        "Timber bought from a timber supplier",
+        "Finished chairs sent to a furniture shop",
+        "The wages paid to the workshop's workers"
+      ],
+      "why": "Sanding and assembling are activities that change inputs into outputs. Timber and wages are resources put in, so they are inputs. The finished chairs are outputs.",
+      "clue": "Look for the activity that changes one thing into another."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya owns a bakery in Orange, NSW. She buys flour and butter, and her staff mix and bake them into loaves for customers. Which option sorts these items correctly?",
+      "opts": [
+        "Flour is an input, baking is a process, loaves are outputs",
+        "Flour is a process, baking is an input, loaves are outputs",
+        "Flour is an input, baking is an output, loaves are a process",
+        "Flour and loaves are both inputs, baking is an output"
+      ],
+      "why": "Flour is a resource put in, so it is an input, and baking changes it, so it is a process. The loaves are what customers receive, so they are outputs. Baking may seem like an output because it is the last step, but it is an activity, not the finished product.",
+      "clue": "Ask what is put in, what is done to it, and what comes out."
+    }
+  },
+  "ecb-recruiting-skilled-staff": {
+    "title": "Recruiting skilled staff",
+    "card": [
+      "Recruitment is how a business finds and chooses new staff. A business wants people with the skills and attitude the job needs.",
+      "The steps usually run in order. The business writes a job ad, people send in applications, and the business picks some applicants to interview.",
+      "Last, the business may do reference checks. It phones people who know the applicant's work, such as a past boss, to confirm what the applicant has claimed.",
+      "Skilled staff can lift a business's performance. They tend to work faster, make fewer mistakes and serve customers well, which can help sales and profit."
+    ],
+    "remember": "Good recruiting finds skilled staff, and skilled staff can lift how well a business performs.",
+    "a": {
+      "q": "Which step in recruiting involves asking a past employer about an applicant's work?",
+      "opts": ["A reference check", "A job ad", "An application", "An interview"],
+      "why": "A reference check means contacting people who know the applicant's work, such as a past boss, to confirm their claims. An interview is tempting, but it is a meeting with the applicant, not a check with someone else.",
+      "clue": "Which step involves speaking to someone other than the applicant?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Jasmine owns a bike repair shop in Bathurst. She hires a skilled mechanic after checking her references. Why might this help the shop's performance?",
+      "opts": [
+        "Repairs are done faster and with fewer errors",
+        "The shop no longer needs to advertise jobs",
+        "The shop can ignore what customers want",
+        "Wages become lower for all of the staff"
+      ],
+      "why": "A skilled mechanic can work faster and make fewer mistakes, so customers are served well and sales can grow. Lower wages is tempting, but the card does not say skill cuts wages, and skilled staff are not linked to lower pay.",
+      "clue": "Think about what skilled staff do better at work."
+    }
+  },
+  "ecb-business-cycle": {
+    "title": "The business cycle",
+    "card": [
+      "The business cycle is the way the economy moves up and down over time. It does not grow at the same pace all the time.",
+      [
+        "Boom",
+        "a period when the economy grows strongly. Households spend more, sales rise and businesses hire more workers."
+      ],
+      [
+        "Recession",
+        "a period when the economy shrinks. Households spend less, sales fall and businesses may cut jobs."
+      ],
+      "Businesses may need to adjust to both. In a boom they may hire staff or make more stock. In a recession they may cut costs or lower prices to keep customers."
+    ],
+    "remember": "The economy rises and falls, and businesses adjust to both stages.",
+    "a": {
+      "q": "Which change is most likely to happen to a business during a recession?",
+      "opts": [
+        "Customers spend less, so sales fall",
+        "Customers spend more, so sales rise",
+        "Customers buy more, so it hires more staff",
+        "Customers stay the same, so nothing changes"
+      ],
+      "why": "In a recession households spend less, so sales fall. Rising sales and more hiring are signs of a boom, which is the opposite stage.",
+      "clue": "Think about what households do with their money when the economy shrinks."
+    },
+    "b": {
+      "d": 2,
+      "q": "Jess owns a bakery in Orange. The economy is in a boom, and orders have risen sharply. What is a sensible way for Jess to adjust?",
+      "opts": [
+        "Hire extra staff to meet the higher demand",
+        "Lay off staff to cut costs straight away",
+        "Cut prices to attract customers who are scarce",
+        "Make less stock so that less is wasted"
+      ],
+      "why": "In a boom sales and jobs grow, so more demand can mean hiring more staff to meet it. Cutting jobs or prices suits a recession, when customers spend less.",
+      "clue": "Is demand for her bread rising or falling?"
+    }
+  },
+  "ecb-ethical-business-decisions": {
+    "title": "Ethical business decisions",
+    "card": [
+      "An ethical business treats its workers, customers and the environment fairly. For example, it deals with customers honestly, with true prices and claims.",
+      "Corporate social responsibility (CSR) means a business acts for the good of workers, communities and the environment, not only for profit. It goes beyond what the law requires.",
+      "Obeying the law is the minimum. A business that only does what the law demands is not showing CSR.",
+      "CSR examples include cutting waste, buying from sustainable sources, paying for staff training, and supporting a local community. It is a choice and can cost money."
+    ],
+    "remember": "Ethical businesses act fairly, and CSR goes past legal duties to help people and the planet.",
+    "a": {
+      "q": "A bakery owner wants the business to show corporate social responsibility. Which action fits best?",
+      "opts": [
+        "It donates unsold bread to a local shelter",
+        "It pays its staff the award wage the law sets",
+        "It follows food safety rules so it can open",
+        "It lowers its prices to attract more customers"
+      ],
+      "why": "Donating unsold bread helps the community, and no law requires it. Paying the award wage is tempting, but the law requires it, so it is only the minimum. Lowering prices to attract customers is aimed at profit.",
+      "clue": "Ask who gains, and whether the law requires it."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tariq owns a furniture company in Newcastle. Which decision shows CSR instead of only meeting his legal duties?",
+      "opts": [
+        "He buys timber only from sustainably managed forests",
+        "He fits the safety equipment that workplace laws require",
+        "He pays company tax on the profit the business earns",
+        "He lowers prices to win customers from a rival store"
+      ],
+      "why": "Buying only sustainable timber protects the environment and goes beyond what the law demands. Fitting required safety equipment is tempting because it helps workers, but it is a legal duty, so it does not go beyond the law.",
+      "clue": "Ask whether the law would have made him do it."
+    }
+  },
+  "ecb-makes-entrepreneur": {
+    "title": "What makes an entrepreneur",
+    "card": [
+      "An entrepreneur is a person who starts a new business or builds something new, such as a product or a way of working.",
+      [
+        "Spotting opportunities",
+        "Entrepreneurs notice a need or a gap that others have missed, such as a problem customers have that no business is solving."
+      ],
+      [
+        "Taking risks",
+        "They accept that they may lose time or money. They weigh up the risk and go ahead, rather than waiting for a sure result."
+      ],
+      [
+        "Solving problems and persisting",
+        "They find practical ways around problems. When an idea fails, they learn from it and keep going."
+      ]
+    ],
+    "remember": "Entrepreneurs spot a gap, accept risk, solve problems and keep going after failure.",
+    "a": {
+      "q": "Which person is best described as an entrepreneur?",
+      "opts": [
+        "Ravi, who starts a business to fill a gap he spotted",
+        "Ravi, who is paid a set wage to pack factory boxes",
+        "Ravi, who buys pet food each week for his own dog",
+        "Ravi, who follows his manager's list of tasks"
+      ],
+      "why": "Ravi spots a gap in the market and builds a new business to fill it, and that is what an entrepreneur does. The other Ravis work for someone else or are only customers, so none of them is starting or building something new.",
+      "clue": "Who is building something new?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia opens a bike repair van in Dubbo. Her first van breaks down and she loses money. She sells it, fixes her costs and starts again with a cheaper van. Which entrepreneurial quality does this show most clearly?",
+      "opts": [
+        "Persisting after a failure and learning from it",
+        "Spotting an opportunity that no one else had seen",
+        "Avoiding risk by waiting for a certain result",
+        "Following rules set by an employer"
+      ],
+      "why": "Mia loses money, then learns from it and starts again, which is persisting after failure. Spotting an opportunity is about noticing a gap at the start, and she took a risk rather than avoiding one.",
+      "clue": "Look at what Mia does after the van breaks down."
+    }
+  },
+  "ecb-entrepreneurs-contribution-society": {
+    "title": "Entrepreneurs' contribution to society",
+    "card": [
+      "An entrepreneur starts a new business or builds a new idea into a business. Their work can help society in several ways.",
+      [
+        "Jobs",
+        "A new business often hires staff. Those workers earn incomes and spend them in the community, which can help other businesses too."
+      ],
+      [
+        "Products and ways of working",
+        "Entrepreneurs can bring new goods and services to customers. They can also find new ways of working, such as a faster delivery method or a new way to sell online."
+      ],
+      [
+        "Community and culture",
+        "Some Aboriginal and Torres Strait Islander entrepreneurs build businesses on their culture and community, such as sharing bush foods or running cultural tours. These businesses can create jobs and keep culture strong, and the community often shares in the benefits."
+      ]
+    ],
+    "remember": "Entrepreneurs can create jobs, new products and new ways of working, and some build businesses on culture and community.",
+    "a": {
+      "q": "Ava starts a bakery in Orange and hires four local people. Which contribution to society does this show most directly?",
+      "opts": [
+        "Creating jobs in the community",
+        "Inventing a new way of working",
+        "Building a business on culture",
+        "Providing a new type of product"
+      ],
+      "why": "Hiring four local people creates jobs, and those workers earn incomes they can spend locally. The scenario does not mention a new product or a new method, so a new way of working is the tempting but wrong option.",
+      "clue": "Look at what Ava does for local people."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom runs tours on his Country in New South Wales, where he shares stories and food from his community. He employs two young people from the community. Which statement best describes how his business helps society?",
+      "opts": [
+        "It creates local jobs and helps keep culture strong",
+        "It helps keep culture strong but creates no jobs",
+        "It creates local jobs but has no link to culture",
+        "It is built on a new way of selling online"
+      ],
+      "why": "Tom employs two young people, which creates jobs, and his tours share stories and food from his community, which helps keep culture strong. The options that say no jobs or no link to culture each miss one part of what Tom does. The scenario says nothing about selling online.",
+      "clue": "Test each part of an option against what Tom actually does."
+    }
+  },
+  "ecb-rule-law": {
+    "title": "The rule of law",
+    "card": [
+      "The rule of law means everyone must obey the law. This includes the government, police and public officials, not only ordinary citizens.",
+      "Laws must be known. They are made public, so people can find out what is allowed and what is not.",
+      "Laws must be fair and applied equally. Wealth, fame or power do not give anyone special treatment.",
+      "If a person or an official breaks the law, the same legal process applies to them as to anyone else. A court decides, not the person in power."
+    ],
+    "remember": "Nobody is above the law, and the same rules apply to all.",
+    "a": {
+      "q": "Which situation best shows the rule of law in action?",
+      "opts": [
+        "A minister is charged and tried like any other person",
+        "A minister is excused because of the office they hold",
+        "A minister decides the penalty for their own offence",
+        "A minister can change a law to avoid being charged"
+      ],
+      "why": "The rule of law means government officials must obey the law and face the same legal process as everyone else. Excusing a minister because of their office is the tempting wrong answer, as it gives special treatment to someone with power.",
+      "clue": "Does the person in power get special treatment?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Two drivers in Wagga Wagga are caught driving at the same speed in the same zone. One is a well-known local footballer. The court fines both the same amount. Why does this show the rule of law?",
+      "opts": [
+        "The law was applied equally, whatever their fame",
+        "The law was kept secret until the court hearing",
+        "Only the footballer had to obey the speed limit",
+        "The court chose the fine based on who was popular"
+      ],
+      "why": "Both drivers faced the same law and the same penalty, so the law was applied equally. Fame gave the footballer no special treatment. The idea that fame might change the fine is the tempting mistake, and it is the opposite of the rule of law.",
+      "clue": "Did being well known change what happened?"
+    }
+  },
+  "ecb-statute-law-common-law": {
+    "title": "Sources of law",
+    "card": [
+      "Law in New South Wales comes from two main sources: parliament, and the decisions judges make when they decide court cases.",
+      [
+        "Statute law",
+        "law made by parliament and set out in an Act of Parliament, such as the Crimes Act 1900 (NSW). A bill is only a proposed law until parliament passes it."
+      ],
+      [
+        "Common law",
+        "law made by judges when they decide cases. A judge's decision sets a precedent that later courts follow in similar cases. It is recorded in the judge's written reasons."
+      ],
+      "The two sources do not rank equally. Where a statute and a common law rule are inconsistent, the statute prevails and the common law rule no longer applies."
+    ],
+    "remember": "Acts make statute law, judges' decisions make common law, and statute wins if they clash.",
+    "a": {
+      "q": "Which one of these is an example of common law?",
+      "opts": [
+        "A rule set out in a judge's reasons for deciding a case",
+        "A rule set out in a new Act passed by parliament",
+        "A rule set out in a bill before parliament",
+        "A rule set out in a council's list of local fees"
+      ],
+      "why": "Common law is made by judges when they decide cases, and it is recorded in their reasons. An Act of Parliament is statute law, not common law. A bill is only a proposed law until parliament passes it.",
+      "clue": "Who makes common law?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Parliament passes an Act that changes a rule judges set in earlier cases. Which statement is correct?",
+      "opts": [
+        "The new rule is statute law and replaces the judges' rule",
+        "The new rule is common law because it replaces a case",
+        "The judges' rule stays in force over the new Act",
+        "The new rule is common law until a court approves it"
+      ],
+      "why": "An Act of Parliament is statute law, whatever rule it changes. Where a statute and a common law rule are inconsistent, the statute prevails, so the judges' rule no longer applies. Replacing a rule from a case does not make the Act common law.",
+      "clue": "Look at who made the new rule, not what it replaced."
+    }
+  },
+  "ecb-aboriginal-customary-lore": {
+    "title": "Aboriginal customary lore",
+    "card": [
+      "Aboriginal and Torres Strait Islander peoples have their own systems of lore. Lore is passed down through generations, in stories, songs, ceremony and teaching from Elders, the respected senior members of a community.",
+      "This lore has been in place for thousands of years, long before the British legal system came to Australia. Each community has its own lore, so it is not the same everywhere.",
+      "Lore guides how people behave and how they relate to each other. It also guides the responsibilities people have to look after Country, which includes land, waters, plants and animals.",
+      "Customary lore is not made by a parliament or decided by judges in a court. Many communities continue to follow their lore today, alongside Australian law."
+    ],
+    "remember": "Lore is a living system of rules passed down over thousands of years. It guides behaviour and care for Country.",
+    "a": {
+      "q": "Which of these best describes Aboriginal and Torres Strait Islander customary lore?",
+      "opts": [
+        "Rules for behaviour and Country, passed down by Elders",
+        "Laws written by parliament for Aboriginal communities",
+        "Decisions made by judges that set later precedents",
+        "A single set of rules that is the same for every community"
+      ],
+      "why": "Lore is passed down through generations and guides behaviour and relationships with Country. It is not made by parliament or judges, and each community has its own lore, so it is not one shared set of rules.",
+      "clue": "Think about how lore is shared and how long it has existed."
+    },
+    "b": {
+      "d": 2,
+      "q": "Uncle Ray, an Elder, teaches young people in his community how to care for a river and the animals that live there, using stories handed down from his grandparents. What is he passing on?",
+      "opts": [
+        "Customary lore about responsibilities to Country",
+        "Common law built from the precedents of judges",
+        "Statute law passed by the NSW Parliament",
+        "Civil law used to settle a dispute over a contract"
+      ],
+      "why": "Stories handed down by an Elder that guide care for the river and its animals are customary lore, which includes responsibilities to Country. Lore is not made by a parliament or decided by judges, and no dispute is being settled here, so the other options do not fit.",
+      "clue": "Who is teaching, and what is being passed down?"
+    }
+  },
+  "ecb-court-hierarchy": {
+    "title": "The court hierarchy",
+    "card": [
+      "Courts are ranked in a hierarchy, from lower courts to higher courts. In NSW, the more serious a case is, the higher the court that tries or hears it.",
+      "The Local Court hears the least serious matters, such as minor offences, and it handles most cases. The District Court hears more serious matters.",
+      "The Supreme Court is the highest court in NSW. It holds the trials for the most serious matters, such as murder.",
+      "Many federal matters, such as family law disputes, go to federal courts. The High Court of Australia is the highest court in the country."
+    ],
+    "remember": "In NSW, the more serious the case, the higher the court that hears it. The High Court is at the top.",
+    "a": {
+      "q": "In NSW, which court would normally hold the trial for a charge of murder?",
+      "opts": ["The Supreme Court", "The Local Court", "The District Court", "The High Court"],
+      "why": "Murder is among the most serious matters, so its trial is held in the Supreme Court, the highest court in NSW. The District Court is tempting because it also hears serious matters, but they are less serious than those in the Supreme Court.",
+      "clue": "Which NSW court hears the most serious matters?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Priya is charged with a minor offence in Newcastle. Which court would normally hear and decide her case?",
+      "opts": ["The Local Court", "The Supreme Court", "The District Court", "The High Court"],
+      "why": "Minor offences are among the least serious matters, so they are heard in the Local Court. The High Court is tempting because it is the highest court in Australia, but a minor offence is not heard there.",
+      "clue": "The least serious matters go to the lowest court."
+    }
+  },
+  "ecb-australian-constitution": {
+    "title": "The Australian Constitution",
+    "card": [
+      "The Constitution is the set of rules that creates Australia's system of government. It came into effect on 1 January 1901, when the colonies joined to form the Commonwealth of Australia.",
+      "It sets up three institutions at the federal level: the federal parliament, the federal government and the High Court.",
+      "It also divides power between the Commonwealth (the federal level) and the states. Some powers are given to the Commonwealth, such as defence. Other matters are left mainly to the states.",
+      "The Constitution can only be changed by a referendum. The federal parliament first passes the proposed change, then Australian voters decide whether to accept it."
+    ],
+    "remember": "The Constitution sets up the federal institutions and shares power between the Commonwealth and the states.",
+    "a": {
+      "q": "What is the main job of the Australian Constitution?",
+      "opts": [
+        "It sets up the federal institutions and divides power",
+        "It lists the laws that each citizen must obey each day",
+        "It sets the prices of goods sold by Australian firms",
+        "It names the people who must lead each federal party"
+      ],
+      "why": "The Constitution creates the federal parliament, government and High Court, and shares power between the Commonwealth and the states. It does not list everyday laws, because ordinary laws are made later by parliaments.",
+      "clue": "Think about what it creates and how it shares power."
+    },
+    "b": {
+      "d": 3,
+      "q": "How can a rule in the Australian Constitution be changed?",
+      "opts": [
+        "By a referendum in which voters decide",
+        "By a vote of the federal parliament alone",
+        "By a decision of the High Court judges",
+        "By an order from the state governments"
+      ],
+      "why": "A change to the Constitution needs a referendum. The federal parliament passes the proposed change first, but it only takes effect if voters accept it. A vote of parliament alone is not enough, which is how the Constitution differs from an ordinary law.",
+      "clue": "Who has the final say on a change to the Constitution?"
+    }
+  },
+  "ecb-three-levels-government": {
+    "title": "Three levels of government",
+    "card": [
+      [
+        "Federal",
+        "the national government, based in Canberra. It handles matters for the whole country, such as defence, immigration and Medicare."
+      ],
+      [
+        "State",
+        "the government of a state, such as New South Wales. It handles matters such as public schools, police and hospitals."
+      ],
+      [
+        "Local",
+        "a council that serves a town, city or shire. It handles matters such as rubbish collection, local roads, footpaths and parks."
+      ],
+      "Each level looks after the matters that suit its size. Citizens deal with all three levels in daily life."
+    ],
+    "remember": "Federal covers the whole nation, state covers a state, and local covers a community.",
+    "a": {
+      "q": "Which matter is mainly handled by a local council?",
+      "opts": [
+        "Collecting household rubbish",
+        "Running the defence force",
+        "Running public schools",
+        "Running the police force"
+      ],
+      "why": "Rubbish collection serves a local community, so it is a council matter. Police work in every town, which makes that option tempting, but police are run by the state government, not a council.",
+      "clue": "Which service is organised street by street?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Priya lives in Newcastle. Her street has a damaged footpath and her brother needs a place at a public high school. Which levels of government mainly handle each matter, in that order?",
+      "opts": [
+        "Local council, then state government",
+        "State government, then local council",
+        "Federal government, then state government",
+        "Local council, then federal government"
+      ],
+      "why": "Footpaths are looked after by the local council, and public schools are run by the state government. Federal government is tempting for schools because it is the biggest level, but the card places schools with the state.",
+      "clue": "Match each matter to the size of the area it serves."
+    }
+  },
+  "ecb-two-houses-federal-parliament": {
+    "title": "The two houses of federal parliament",
+    "card": [
+      "The federal parliament has two houses: the House of Representatives and the Senate. A bill (a proposed law) usually has to pass both before it becomes law.",
+      [
+        "House of Representatives",
+        "the party or group of parties with the support of most of its members forms the government. Most bills start here."
+      ],
+      [
+        "Senate",
+        "it reviews bills that come from the House of Representatives and can pass, change or reject them. Each state has the same number of senators, so it represents the states."
+      ],
+      "Because the government may not hold most seats in the Senate, it can need support from other parties there to pass its bills."
+    ],
+    "remember": "The House of Representatives forms the government. The Senate reviews bills and represents the states.",
+    "a": {
+      "q": "Which house of federal parliament is where the government is formed?",
+      "opts": [
+        "The House of Representatives",
+        "The Senate",
+        "Both houses, by a joint vote",
+        "Neither, as the High Court forms it"
+      ],
+      "why": "The party or group with the support of most members of the House of Representatives forms the government. The Senate reviews bills and represents the states, but it does not form the government.",
+      "clue": "Think about which house the party with most members controls."
+    },
+    "b": {
+      "d": 3,
+      "q": "A government bill passes the House of Representatives. Senators then vote to add a new rule to the bill before they pass it. What does this show about the Senate?",
+      "opts": [
+        "It checks bills from the other house and can alter them",
+        "It forms the government after each federal election",
+        "It starts most of the bills in federal parliament",
+        "It has the same number of senators from each party"
+      ],
+      "why": "The Senate reviews bills that come from the House of Representatives, and it can pass, change or reject them. Adding a rule is a change made during that review. Most bills start in the House of Representatives, not the Senate, so the option about starting bills is wrong.",
+      "clue": "Where did this bill come from before it reached the Senate?"
+    }
+  },
+  "ecb-separation-powers": {
+    "title": "The separation of powers",
+    "card": [
+      "The separation of powers splits government power into three parts. This stops any one person or group from holding all of it.",
+      ["Legislature", "parliament, which makes and changes laws."],
+      [
+        "Executive",
+        "the Prime Minister, ministers and government departments, who carry out the laws and run the country day to day."
+      ],
+      [
+        "Judiciary",
+        "the courts, which apply the laws and settle disputes about them. They are separate from parliament and the executive."
+      ]
+    ],
+    "remember": "Three parts share power: parliament makes laws, the executive carries them out, the courts apply them.",
+    "a": {
+      "q": "A government department begins running a new program that parliament has passed into law. Which part of government is it acting as?",
+      "opts": [
+        "The executive, because it carries out a law",
+        "The legislature, because it works with a law",
+        "The judiciary, because it follows a law",
+        "The legislature, because it set up the program"
+      ],
+      "why": "Carrying out laws and running the country day to day is the job of the executive. The legislature makes laws, so a department running a program that is already law is not doing that.",
+      "clue": "Who makes the law, and who puts it into action?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A court in Perth hears a dispute about a business contract and decides what the law means for both sides. How does this show the separation of powers at work?",
+      "opts": [
+        "The judiciary applies the law, separate from parliament",
+        "The judiciary makes the law, as part of parliament",
+        "The executive carries out the law, through the courts",
+        "The legislature settles disputes, through the courts"
+      ],
+      "why": "The court is the judiciary, applying the law to settle a dispute. It is a separate part from parliament, the main lawmaker, and from the executive, which carries out the laws. The tempting option places the courts inside parliament, but the judiciary is its own separate part of government.",
+      "clue": "Which of the three parts settles disputes about the law?"
+    }
+  },
+  "ecb-enrolling-voting": {
+    "title": "Enrolling and voting",
+    "card": [
+      "To vote in Australia, a person must be on the electoral roll. Putting your name on the roll is called enrolling.",
+      "Australian citizens must enrol once they turn 18. They can enrol from age 16, so they are ready when they turn 18.",
+      "Enrolled citizens aged 18 or over must vote in federal elections and in state and territory elections.",
+      "A person who moves house should update their enrolment, so that the roll shows where they now live."
+    ],
+    "remember": "Enrol at 18, or from 16 to be ready. Then vote in federal and state elections.",
+    "a": {
+      "q": "Priya is an Australian citizen who has just turned 16. What can she do about the electoral roll?",
+      "opts": [
+        "Enrol now, so she is ready when she turns 18",
+        "Wait, because she cannot enrol until she is 18",
+        "Enrol now and vote in the next federal election",
+        "Wait, because only people aged 21 can enrol"
+      ],
+      "why": "Priya has just turned 16, the youngest age at which a citizen can enrol. Enrolling now means she is ready when she turns 18. It does not let her vote yet, because the duty to vote applies from 18.",
+      "clue": "Think about the youngest age at which a citizen can enrol."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom is an Australian citizen who turned 18 last year. He moved from Bathurst to Newcastle and has not updated his enrolment. What should he do?",
+      "opts": [
+        "Update his enrolment to show his new address",
+        "Leave it, because he only has to enrol once",
+        "Wait until he turns 21 before he updates it",
+        "Update it only if he plans to vote in a state election"
+      ],
+      "why": "Tom should update his enrolment so the roll shows where he now lives. Enrolling once is not enough when his address changes, and he must vote in both federal and state elections, so the update matters for every election, not just state ones.",
+      "clue": "The roll needs to show where a person lives now."
+    }
+  },
+  "ecb-voting-methods": {
+    "title": "Voting methods",
+    "card": [
+      [
+        "First-past-the-post",
+        "Voters mark one candidate, and the candidate with the most votes wins, even without more than half of all votes."
+      ],
+      [
+        "Preferential",
+        "Voters rank candidates in order, 1, 2, 3 and so on, to elect one winner. If no one has more than half the votes, the last-placed candidate is dropped and their votes go to each voter's next choice. This repeats until one candidate has a majority."
+      ],
+      [
+        "Proportional",
+        "Several members are elected at once, and seats are shared out by each party's share of the votes. A party with about a third of the votes wins about a third of the seats. The Australian Senate uses this approach."
+      ],
+      "The same voters' choices can lead to different results, depending on which method is used."
+    ],
+    "remember": "First-past-the-post: most votes wins. Preferential: rank and pass on votes. Proportional: seats match vote share.",
+    "a": {
+      "q": "Which method elects one winner from ranked votes, passing votes on until a candidate has a majority?",
+      "opts": ["Preferential voting", "First-past-the-post voting", "Proportional voting", "Compulsory voting"],
+      "why": "Preferential voting elects one winner, and votes from dropped candidates pass to each voter's next choice until someone has more than half. Proportional voting is tempting because Senate voters also number their choices, but it elects several members and shares seats by vote share. First-past-the-post needs no majority and uses no ranking.",
+      "clue": "Which method needs one winner with more than half the votes?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In a town election, Priya gets 40 votes, Sam gets 35 and Lee gets 25. Under first-past-the-post, who wins, and why?",
+      "opts": [
+        "Priya, because she has the most votes",
+        "Priya, because she has over half the votes",
+        "Sam, because Lee's votes pass to him",
+        "No one, because no one has over half the votes"
+      ],
+      "why": "First-past-the-post gives the win to the candidate with the most votes, and Priya has 40. Saying no one wins yet, or that Lee's votes pass to Sam, applies preferential counting, where a majority is needed. First-past-the-post needs no majority, and 40 of 100 votes is not over half anyway.",
+      "clue": "Does this method need more than half the votes?"
+    }
+  },
+  "ecb-compulsory-voting": {
+    "title": "Compulsory voting",
+    "card": [
+      "In Australia, voting in federal and state elections is compulsory for enrolled voters. Voters must have their name marked off the roll, and a person who does not vote without a valid reason may be sent a notice and asked to explain.",
+      "Compulsory voting brings high turnout. Turnout is the share of enrolled voters who vote. In Australia it is usually about 90% or more.",
+      [
+        "Argument for",
+        "Governments are chosen by almost all voters, so the result reflects the views of the whole community, not only the most motivated people."
+      ],
+      [
+        "Argument against",
+        "Some people argue that citizens should be free to choose not to vote, because they see voting as a right and not a duty."
+      ]
+    ],
+    "remember": "Compulsory voting brings high turnout, but some argue voters should be free to choose.",
+    "a": {
+      "q": "Which of these is an argument against compulsory voting?",
+      "opts": [
+        "People should be free to choose not to vote",
+        "Governments should be chosen by most voters",
+        "Voting is a duty that every citizen owes",
+        "Results should reflect the whole community"
+      ],
+      "why": "The argument against rests on freedom of choice: voting is seen as a right, so people should be able to decline. Seeing voting as a duty, or wanting governments chosen by most voters, supports compulsory voting.",
+      "clue": "Think about why someone might object to being made to vote."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a federal election, 92% of enrolled voters in Jaya's town vote. Her friend Ben says this shows most people there love politics. What is the best reply?",
+      "opts": [
+        "High turnout is expected because voting is compulsory",
+        "High turnout shows people there are very well informed",
+        "Turnout is high because the town has few enrolled voters",
+        "Turnout is high because people there pay more tax"
+      ],
+      "why": "Compulsory voting brings high turnout, so a high figure does not show that people love politics. The tempting option about being well informed treats turnout as a sign of knowledge, which the card does not support.",
+      "clue": "What does Australia require of enrolled voters?"
+    }
+  },
+  "ecb-parties-independents-forming-government": {
+    "title": "Parties, independents and forming government",
+    "card": [
+      "Australians vote for a member for each seat in the House of Representatives. There are 150 seats, so a majority is 76 seats.",
+      "The party, or the coalition of parties, that has a majority in the House of Representatives forms government. Its leader becomes Prime Minister.",
+      "Independents are members who belong to no party. Sometimes no party or coalition wins 76 seats. This is called a hung parliament.",
+      "In a hung parliament, a party can form a minority government if enough independents or small parties agree to support it on votes about whether it stays in power. It usually needs their votes, or other members' votes, to pass laws in the House."
+    ],
+    "remember": "Government is formed by whoever can win the support of a majority in the House of Representatives.",
+    "a": {
+      "q": "After an election, the Orange Party holds 81 of the 150 seats in the House of Representatives. What happens?",
+      "opts": [
+        "It forms government, as it has a majority of seats",
+        "It must ask independents to back it before it can govern",
+        "It forms a minority government with a hung parliament",
+        "It cannot govern until it wins a majority of the Senate"
+      ],
+      "why": "A majority in the House of Representatives is 76 seats or more, and 81 is above that. So the Orange Party forms government by itself. A hung parliament happens only when no party or coalition reaches 76.",
+      "clue": "Compare 81 with the number needed for a majority."
+    },
+    "b": {
+      "d": 3,
+      "q": "At an election, the Blue Party wins 70 seats, the Green Alliance wins 68, and 12 seats go to independents and small parties. What is the most likely way a government is formed?",
+      "opts": [
+        "A party wins the support of enough independents to govern",
+        "The party with the most seats governs without anyone's help",
+        "The two largest parties must form a coalition together",
+        "A new election is held straight away to choose a winner"
+      ],
+      "why": "No party has 76 seats, so this is a hung parliament. A party can form a minority government if enough independents or small parties back it. Having the most seats is not enough by itself, as 70 is short of a majority.",
+      "clue": "Does 70 seats reach a majority of 150?"
+    }
+  },
+  "ecb-referendums": {
+    "title": "Referendums",
+    "card": [
+      "The Constitution is the set of rules that sets up Australia's government. It can be changed only by a referendum, which is a vote of all enrolled voters.",
+      "Parliament first passes a bill that proposes the change. Then voters are asked to answer yes or no to it.",
+      "To pass, a referendum needs a double majority. First, a majority of voters across the whole nation must vote yes.",
+      "Second, a majority of voters must vote yes in at least four of the six states. Voters in the territories count in the national total only."
+    ],
+    "remember": "A referendum passes only with a national majority and a majority in at least four states.",
+    "a": {
+      "q": "Which result would meet the double majority test for a referendum to pass?",
+      "opts": [
+        "A national yes majority and yes majorities in four states",
+        "A national yes majority and yes majorities in two states",
+        "Yes majorities in four states but a national no majority",
+        "A yes majority in the House and in the Senate"
+      ],
+      "why": "The double majority has two parts: a majority of all voters and a majority in at least four states. Two states is not enough, and a House and Senate vote is how Parliament passes bills, not how voters change the Constitution.",
+      "clue": "Both tests must be met at the same time."
+    },
+    "b": {
+      "d": 3,
+      "q": "A proposed change gets a yes vote from 55% of voters nationally, but only three states vote yes. What is the result?",
+      "opts": [
+        "It fails, as only three states voted yes",
+        "It passes, as a national majority voted yes",
+        "It passes, as three states is nearly enough",
+        "It goes back to Parliament, which can then pass it"
+      ],
+      "why": "A national majority is only one of the two tests. A majority in at least four states is also needed, and three is not enough. So the change fails, however large the national yes vote is.",
+      "clue": "Check both tests, not just the national vote."
+    }
+  },
+  "ecb-types-work-nsw": {
+    "title": "Types of work",
+    "card": [
+      [
+        "Paid and unpaid",
+        "Paid work earns money, such as wages or income from a business. Unpaid work is done without pay, such as volunteering at a surf life saving club or caring for a family member."
+      ],
+      [
+        "Employment type",
+        "Full-time workers have regular hours, usually around 38 a week. Part-time workers have regular but fewer hours. Casual workers have no guaranteed hours and are usually paid a higher hourly rate, called a loading."
+      ],
+      ["Employee", "An employee works for an employer, who pays them and sets their tasks and hours."],
+      [
+        "Self-employed",
+        "A self-employed person runs their own business. They earn income from customers, not wages from an employer, and make their own decisions about their work."
+      ]
+    ],
+    "remember": "Work can be paid or unpaid. Paid work can be full-time, part-time or casual, as an employee or self-employed.",
+    "a": {
+      "q": "Jo works at a shop for an employer. She has no guaranteed hours and is paid a loading on her hourly rate. What type of worker is she?",
+      "opts": ["A casual employee", "A part-time employee", "A self-employed person", "An unpaid volunteer"],
+      "why": "Jo has no guaranteed hours and works for an employer, so she is a casual employee. A part-time employee has regular hours, so that option is tempting but does not fit.",
+      "clue": "Look at whether her hours are guaranteed."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya mows lawns in Bathurst. She owns her mower, finds her own customers and sets her own prices and hours. How is her work best described?",
+      "opts": [
+        "Paid work, as a self-employed person",
+        "Paid work, as a casual employee",
+        "Paid work, as a part-time employee",
+        "Unpaid work, as a volunteer"
+      ],
+      "why": "Priya earns income from customers and makes her own decisions, so she is self-employed. A casual employee also has irregular hours, but works for an employer who sets the tasks and pays wages, and Priya has no employer.",
+      "clue": "Who decides her prices and hours, and who pays her?"
+    }
+  },
+  "ecb-unions-employer-groups": {
+    "title": "Unions and employer groups",
+    "card": [
+      [
+        "Trade union",
+        "an organisation of workers. It represents its members when dealing with employers, for example on pay, safety and conditions at work."
+      ],
+      [
+        "Employer association",
+        "an organisation of businesses. It represents its members when dealing with unions and governments, for example on costs, rules and workplace laws."
+      ],
+      "Both are groups that people or businesses choose to join, often by paying a fee. Together they let many members speak with one voice instead of each acting alone.",
+      "A union can speak for workers in talks with an employer, such as a request for safer equipment. An employer association can speak for businesses in an industry, such as on a proposed change to workplace laws."
+    ],
+    "remember": "Unions speak for workers. Employer associations speak for businesses.",
+    "a": {
+      "q": "Which body represents the interests of its members who are workers?",
+      "opts": ["A trade union", "An employer association", "A single business owner", "A government department"],
+      "why": "A trade union is an organisation of workers that represents them when dealing with employers. An employer association is the tempting wrong answer, because it represents businesses, not workers.",
+      "clue": "Think about who the members of each group are."
+    },
+    "b": {
+      "d": 2,
+      "q": "Several bakery owners in Newcastle join together to tell a government inquiry how a proposed workplace law would affect their costs. Which type of group are they acting through?",
+      "opts": ["An employer association", "A trade union", "A group of casual workers", "A volunteer group"],
+      "why": "The bakery owners are businesses, and an employer association represents businesses when they deal with governments. A trade union is tempting because it also speaks for a group, but its members are workers, not business owners.",
+      "clue": "Who are the members of this group: workers or businesses?"
+    }
+  },
+  "ecb-changing-nature-work": {
+    "title": "The changing nature of work",
+    "card": [
+      [
+        "Automation",
+        "Machines or software do tasks that people once did, such as self-serve checkouts or robots in a factory. Some jobs shrink, and new jobs appear to build and run the machines."
+      ],
+      [
+        "Artificial intelligence",
+        "Artificial intelligence (AI) is software that can do tasks that seem to need thinking, such as sorting data or writing a first draft. It changes the tasks within many jobs, so workers may need new skills, such as checking what AI produces."
+      ],
+      [
+        "Working from home",
+        "Better internet and online tools let many people do their jobs away from the workplace. This can save travel time and change how teams meet and share work."
+      ],
+      [
+        "Gig work",
+        "Gig work is short jobs paid one at a time, often arranged through an app, such as food delivery. Gig workers choose when to work, but the amount of work and pay can change from week to week."
+      ]
+    ],
+    "remember": "New technology and new ways of working change jobs, and so the skills workers need change too.",
+    "a": {
+      "q": "A supermarket in Orange replaces most staffed checkouts with self-serve machines. Which change in work does this show?",
+      "opts": ["Automation", "Gig work", "Working from home", "Artificial intelligence"],
+      "why": "Machines now do a task that cashiers once did, which is automation. It is not gig work, because the jobs are not short tasks arranged through an app.",
+      "clue": "Who or what is now doing the task?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Tariq in Wollongong uses an app to pick up meal deliveries on weekends. Some weeks he gets many jobs, and other weeks only a few. Which change in work does this best show?",
+      "opts": ["Gig work", "Automation", "Working from home", "Artificial intelligence"],
+      "why": "Tariq does short delivery jobs arranged through an app, and his amount of work changes from week to week, which is gig work. The app is technology, but this is not automation, because a person, not a machine, still does the delivery.",
+      "clue": "Think about how Tariq finds his jobs and who does them."
+    }
+  },
+  "ecb-employers-rights-responsibilities": {
+    "title": "Employers' rights and responsibilities",
+    "card": [
+      [
+        "Responsibilities",
+        "An employer must pay at least the correct wages and entitlements, such as the pay rate set by the award or agreement that covers the job."
+      ],
+      "An employer must also provide a safe workplace. This means finding hazards, fixing them and giving staff training and equipment.",
+      "An employer must treat staff fairly. That includes not discriminating against them or harassing them.",
+      [
+        "Rights",
+        "An employer can expect staff to turn up and work properly. They can also expect staff to follow reasonable instructions about the job."
+      ]
+    ],
+    "remember": "Employers owe pay, safety and fair treatment, and can expect proper work and reasonable instructions.",
+    "a": {
+      "q": "Tariq owns a bakery in Newcastle. Which of these is his responsibility as an employer?",
+      "opts": [
+        "Fixing a faulty oven that could burn staff",
+        "Deciding which shifts his staff enjoy most",
+        "Making sure staff arrive on time each day",
+        "Telling staff how to wear their hair at home"
+      ],
+      "why": "An employer must provide a safe workplace, and a faulty oven is a hazard to fix. Expecting staff to arrive on time is a right of the employer, not a responsibility owed to staff.",
+      "clue": "Think about what the employer owes staff, not what the employer can expect from them."
+    },
+    "b": {
+      "d": 3,
+      "q": "Lena manages a gym in Wollongong. She tells a trainer to wipe down equipment after each class. The trainer refuses and says it is not in the job. Which statement is correct?",
+      "opts": [
+        "Lena is using her right to give a reasonable instruction",
+        "Lena is breaking her duty to keep staff safe",
+        "Lena must pay extra before she can give any instruction",
+        "Lena can only ask for tasks written in the job title"
+      ],
+      "why": "Wiping equipment is a reasonable instruction linked to the job, and employers can expect staff to follow such instructions. The tempting option about safety is wrong because the task is not a hazard.",
+      "clue": "Is the task reasonable and linked to the work?"
+    }
+  },
+  "ecb-employees-rights-responsibilities": {
+    "title": "Employees' rights and responsibilities",
+    "card": [
+      [
+        "Rights",
+        "Employees have the right to a safe workplace. They can raise safety concerns without being punished for it."
+      ],
+      "Employees also have the right to work free of discrimination and harassment. Discrimination is unfair treatment because of a trait such as race, sex, age or disability.",
+      [
+        "Responsibilities",
+        "Employees must work safely. They must follow safety rules, use equipment correctly and take care not to put others at risk."
+      ],
+      "Employees must also follow lawful instructions from their employer. An instruction to break the law, or to do something unsafe, is not one they must follow."
+    ],
+    "remember": "Employees have the right to safety and fair treatment, and must work safely and follow lawful instructions.",
+    "a": {
+      "q": "Jai works in a warehouse in Penrith. Which of these is his responsibility as an employee?",
+      "opts": [
+        "Wearing the safety boots supplied for the job",
+        "Being paid the rate set for his work",
+        "Working in a place free of harassment",
+        "Raising a safety concern without being punished"
+      ],
+      "why": "Using the safety equipment supplied is part of working safely, which is a duty of employees. The other three are rights Jai holds, not things he must do.",
+      "clue": "Three options are things Jai is owed. One is something he must do."
+    },
+    "b": {
+      "d": 3,
+      "q": "A café owner in Orange tells a waiter to serve a customer, then tells him to lift a heavy machine alone, which a safety rule forbids. What should the waiter do?",
+      "opts": [
+        "Follow the first instruction but not the unsafe one",
+        "Follow both, because bosses decide the tasks",
+        "Refuse both, because instructions are optional",
+        "Follow neither until he is paid extra"
+      ],
+      "why": "Employees must follow lawful instructions, and serving a customer is one. An instruction that breaks a safety rule is not one they must follow, so refusing both is wrong.",
+      "clue": "Check each instruction separately: is it lawful and safe?"
+    }
+  },
+  "ecb-awards-agreements-contracts": {
+    "title": "Awards, agreements and contracts",
+    "card": [
+      [
+        "Award",
+        "sets the minimum pay and conditions for workers in an industry or occupation, such as retail or hospitality. It applies to the employers and workers in that industry that it covers."
+      ],
+      [
+        "Enterprise agreement",
+        "is negotiated between one employer and its employees (often through a union), and can cover all of that business's sites. It must leave each worker better off overall than the award would."
+      ],
+      [
+        "Common law contract",
+        "is an agreement between an employer and one worker. It sets out their terms, such as the job, the pay and the hours, and it can include more than an award or agreement requires."
+      ],
+      "A contract cannot give a worker less than the minimum set by an award or agreement that covers them."
+    ],
+    "remember": "Award: one industry. Agreement: one employer. Contract: one worker.",
+    "a": {
+      "q": "Sam owns a single bakery in Orange. He and his staff negotiate pay and hours that apply only to his business. What is this arrangement called?",
+      "opts": ["An enterprise agreement", "An industry award", "A common law contract", "A grievance procedure"],
+      "why": "Terms negotiated between one employer and its staff for that business are an enterprise agreement. An award covers a whole industry, and a common law contract is made with one worker, not the whole staff.",
+      "clue": "Think about who negotiated it and how many employers it covers."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya starts as a waiter in a Newcastle café. The industry award sets a minimum hourly rate. Her signed contract offers less than that rate. What is the result?",
+      "opts": [
+        "Priya must be paid at least the award rate",
+        "Priya gets the lower rate because she signed",
+        "Priya gets the award rate only if she joins a union",
+        "Priya gets the lower rate if the café is small"
+      ],
+      "why": "A contract cannot give a worker less than the minimum in an award that covers them, so Priya must get at least the award rate. Signing the contract does not remove that minimum.",
+      "clue": "Which of the three sets the minimum that others cannot go below?"
+    }
+  },
+  "ecb-people-are-paid": {
+    "title": "How people are paid",
+    "card": [
+      [
+        "Wages",
+        "a set rate for each hour worked. Pay rises or falls with the hours, so a worker who does more hours earns more."
+      ],
+      [
+        "Salary",
+        "a set amount for the year, usually paid in equal parts such as fortnightly. The pay stays the same even if the hours change a little."
+      ],
+      [
+        "Commission",
+        "a payment based on the value of what a worker sells, often a percentage of sales. More sales mean more pay."
+      ],
+      ["Piece rate", "a set payment for each item a worker makes. More items made mean more pay."]
+    ],
+    "remember": "Wages pay for hours, salary pays for the year, commission pays for sales and piece rates pay for items made.",
+    "a": {
+      "q": "Jai is paid $4 for every cap he sews at a factory. Which way is he paid?",
+      "opts": ["Piece rate", "Commission", "Wages", "Salary"],
+      "why": "Jai is paid for each item he makes, which is a piece rate. Commission is tempting because pay depends on output, but commission is based on the value of sales, not items made.",
+      "clue": "What is Jai paid for: hours, sales or items made?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya sells cars in Newcastle and earns 3% of the value of every car she sells. In a quiet month she sells no cars. What is true of her pay?",
+      "opts": [
+        "It is commission, so it falls when sales fall",
+        "It is a salary, so it stays the same each month",
+        "It is a piece rate, so it depends on items made",
+        "It is wages, so it depends on the hours she works"
+      ],
+      "why": "Priya is paid a percentage of the value of her sales, which is commission, so her pay falls when she sells less. A piece rate is tempting because she sells items, but a piece rate is paid for items made, not a share of sales value.",
+      "clue": "Look at what her 3% is taken from."
+    }
+  },
+  "ecb-reading-payslip": {
+    "title": "Reading a payslip",
+    "card": [
+      "A payslip is a record of one pay period. It shows the hours worked and the pay rate, such as the dollars paid for each hour.",
+      ["Gross pay", "the total earned before anything is taken out. For hourly work, it is hours worked × pay rate."],
+      [
+        "Net pay",
+        "the money paid to the worker after tax and any other deductions, such as union fees, are taken out. Net pay = gross pay - all deductions. It is often called take-home pay."
+      ],
+      "The payslip also shows super, which is money the employer pays into the worker's super fund. Employer super is not part of net pay. At the end of the year, an income statement totals the pay and tax for the whole year."
+    ],
+    "remember": "Gross is before deductions, net is after them, and employer super goes to a fund, not into take-home pay.",
+    "a": {
+      "q": "Ravi's payslip shows gross pay of $800 and tax of $120. Tax is his only deduction. What is his net pay?",
+      "opts": ["$680", "$920", "$800", "$120"],
+      "why": "Net pay is gross pay minus all deductions. Tax is Ravi's only deduction, so $800 - $120 = $680. Adding the tax gives $920, but deductions are taken out of gross pay, not added to it.",
+      "clue": "Net pay is what is left after deductions are taken out."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia works 20 hours in a fortnight at $25 an hour. Her employer takes out $60 in tax, her only deduction, and pays $55 into her super fund. What is her net pay?",
+      "opts": ["$440", "$385", "$500", "$495"],
+      "why": "Gross pay is 20 × $25 = $500. Tax is the only deduction, so net pay is $500 - $60 = $440. The employer pays the super into a fund, so it is not part of net pay and is not subtracted here.",
+      "clue": "Find gross pay first, then take out only the deductions."
+    }
+  },
+  "ecb-we-pay-tax": {
+    "title": "Why we pay tax",
+    "card": [
+      "A tax is money that people and businesses must pay to the government. Governments in Australia collect taxes at the federal, state and local levels.",
+      "Tax pays for public services that many people use, such as schools, hospitals, roads and welfare payments. Welfare payments support people who cannot fully support themselves, for example some people who are unemployed or retired.",
+      "Income tax is a tax on the money a person earns. In Australia, income tax rises with income: people who earn more pay a higher share of their income in tax.",
+      "This means tax is shared out by ability to pay. A person on a high income pays more tax than a person on a low income, and both can use the same public services."
+    ],
+    "remember": "Tax pays for public services, and income tax takes a higher share from people who earn more.",
+    "a": {
+      "q": "What is the main reason governments collect taxes?",
+      "opts": [
+        "To pay for public services such as schools and roads",
+        "To pay every worker the same amount of wages",
+        "To stop people from earning more money",
+        "To pay for goods that only taxpayers can use"
+      ],
+      "why": "Taxes give the government money to provide public services such as schools, hospitals, roads and welfare. Tax is not aimed at stopping people earning more, and public services are not limited to those who pay tax.",
+      "clue": "Think about what the government spends tax money on."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya earns $120 000 a year and Tom earns $40 000. Which statement about their income tax is correct?",
+      "opts": [
+        "Priya pays a higher share of her income in tax than Tom",
+        "Priya and Tom pay the same share of their income in tax",
+        "Tom pays a higher share of his income in tax than Priya",
+        "Only Tom can use public services such as hospitals"
+      ],
+      "why": "Income tax rises with income, so Priya, who earns more, pays a higher share of her income in tax. The tempting wrong answer is that they pay the same share, but a higher income means a higher share. Both can use public services.",
+      "clue": "Income tax rises as income rises."
+    }
+  },
+  "ecb-tax-file-numbers-tax": {
+    "title": "Tax file numbers and tax returns",
+    "card": [
+      "A young person who starts a job needs a tax file number (TFN). It is a personal number that the Australian Taxation Office (ATO) uses to keep track of their tax.",
+      "When they start the job, the worker gives their TFN to their employer. The employer then takes tax out of each pay and sends it to the government.",
+      "The tax year ends on 30 June. After that date, the worker lodges their own tax return with the ATO, which tells the ATO what they earned and what tax was paid.",
+      "If the tax taken from their pay was more than the tax they owed for the year, the worker may get the difference back as a refund."
+    ],
+    "remember": "Your employer takes tax from each pay, and your tax return after 30 June can show whether you paid too much.",
+    "a": {
+      "q": "A Year 10 student works part time and lodges a tax return. Why might they get money back?",
+      "opts": [
+        "More tax came out of their pay than they owed for the year",
+        "Their employer took no tax at all out of their pay that year",
+        "They gave their employer their tax file number when hired",
+        "They lodged their tax return early, before the 30 June date"
+      ],
+      "why": "A refund is the difference when the tax taken from pay is more than the tax owed. If no tax was taken out, there would be nothing to give back. Giving a TFN to an employer is a normal step, not a reason for a refund.",
+      "clue": "Compare what was taken from pay with what was owed."
+    },
+    "b": {
+      "d": 2,
+      "q": "Noah, aged 15, starts a job at a bakery in Newcastle. What should he do with his tax file number when he starts?",
+      "opts": [
+        "Give it to the bakery so tax can be taken from his pay",
+        "Keep it to himself until he lodges a tax return in July",
+        "Use it to pay his own tax to the ATO each week",
+        "Give it to the bakery so it can lodge his tax return"
+      ],
+      "why": "A new worker gives their TFN to their employer, and the employer takes tax from each pay. The bakery does not lodge Noah's return for him: he lodges his own after 30 June.",
+      "clue": "Who takes the tax out of each pay, and who lodges the return?"
+    }
+  },
+  "ecb-children-s-rights": {
+    "title": "Children's rights",
+    "card": [
+      "A right is something a person is entitled to have or do. Children have human rights as people, and they also need extra protection because they are young and can be vulnerable.",
+      "The United Nations Convention on the Rights of the Child is an international agreement. It sets out special protections for everyone under 18.",
+      "It sets out many rights. Among them are a child's right to safety, education, health care and a say in matters that affect them.",
+      "Australia signed the Convention and then ratified it in December 1990. Ratifying it is what commits the Australian Government to respect and protect these rights."
+    ],
+    "remember": "The Convention protects rights such as safety, education, health and a say, and Australia has ratified it.",
+    "a": {
+      "q": "Which of these is a right protected by the Convention on the Rights of the Child?",
+      "opts": [
+        "The right to be heard on decisions about them",
+        "The right to be paid the same wage as an adult",
+        "The right to own a mobile phone from age 12",
+        "The right to free tickets to sports and concerts"
+      ],
+      "why": "Being heard on decisions about their life is the right to a say, one of the rights the Convention protects. Equal adult pay may sound fair, but it is not a right the Convention sets out, and neither are phones or free tickets.",
+      "clue": "Which option fits safety, education, health or a say?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Jin, aged 10, lives in Wagga Wagga. Her family cannot afford a doctor, and she misses out on treatment for a sore ear. Which right in the Convention is most affected?",
+      "opts": ["The right to health care", "The right to a say", "The right to education", "The right to safety"],
+      "why": "Missing out on treatment for an illness affects Jin's right to health care. The right to safety is tempting, but the problem here is access to medical treatment, not protection from harm.",
+      "clue": "What does Jin need that a doctor provides?"
+    }
+  },
+  "ecb-legal-capacity-age": {
+    "title": "Legal capacity and age",
+    "card": [
+      "Legal capacity is a person's ability to hold legal rights and duties. It lets a person do things the law recognises, such as make a binding contract or be responsible for their actions.",
+      "The law grants many rights and duties by age. A person gains them as they grow older, because the law assumes older people are better able to make decisions and take responsibility.",
+      "In New South Wales, a person must be 16 to get a learner licence and 18 to vote in elections. The law also limits the work children can do, such as through safety rules and limits on some kinds of jobs.",
+      "Each right has its own age, so a person can have some rights before others. Having one right, such as a learner licence, does not give a person another, such as the vote."
+    ],
+    "remember": "The law grants legal rights and duties as people reach set ages.",
+    "a": {
+      "q": "Why does the law tie rights such as voting and driving to a person's age?",
+      "opts": [
+        "It uses age as a guide to readiness for duties",
+        "It says people under 18 have no legal rights",
+        "It gives all rights at birth and removes them later",
+        "It lets each person pick the age they gain a right"
+      ],
+      "why": "The law uses age as a guide to when people are ready to make decisions and take on the duties that come with a right. It does not take away all rights from young people, so the option saying under 18s have no legal rights is wrong.",
+      "clue": "Think about what changes for a person as they grow up."
+    },
+    "b": {
+      "d": 2,
+      "q": "Jaya is 17 and lives in Wagga Wagga. She wants to vote in the next state election. What is the legal position?",
+      "opts": [
+        "She cannot vote yet, because the voting age is 18",
+        "She can vote, because she can already hold a learner licence",
+        "She can vote, because she already has a part-time job",
+        "She can vote if her parents give written permission"
+      ],
+      "why": "Voting is a right the law grants at 18, so Jaya has to wait. Being able to hold a learner licence or having a job does not give her the right to vote, because each right has its own age.",
+      "clue": "Each right has its own age set by law."
+    }
+  },
+  "ecb-young-people-police": {
+    "title": "Young people and the police",
+    "card": [
+      "Police have powers to stop, question and search people, but young people also have rights when police deal with them. Police must act within the law.",
+      [
+        "Right to know why",
+        "A young person who is stopped can ask why. Police should explain the reason for stopping, questioning or searching them."
+      ],
+      [
+        "Right to an adult",
+        "A young person who is questioned about an offence has the right to have a support person, such as a parent, present. They can also ask to speak to a lawyer."
+      ],
+      [
+        "Name and address",
+        "A young person may have to give their name and address when police ask in certain situations, such as when police suspect they have committed an offence. Beyond that, they do not have to answer questions and can stay silent."
+      ]
+    ],
+    "remember": "Young people can ask why they are stopped and ask for an adult, but may have to give their name and address.",
+    "a": {
+      "q": "Police stop Jess, who is 15, in a park and want to question her about a break-in. What is one right she has?",
+      "opts": [
+        "To have a support person present during questioning",
+        "To refuse to give her name and address in every case",
+        "To be let go as soon as she says she is innocent",
+        "To stop police asking questions until she turns 18"
+      ],
+      "why": "A young person questioned about an offence can have a support person, such as a parent, present. Refusing her name and address is tempting because she can stay silent on other questions, but when police suspect an offence she may have to give those details.",
+      "clue": "Remember the one thing she may still have to tell police."
+    },
+    "b": {
+      "d": 3,
+      "q": "Police in Newcastle stop Tom, 16, because they suspect he took part in a theft. Which action by Tom is within his rights?",
+      "opts": [
+        "Asking why he was stopped and giving his name and address",
+        "Giving a false name and address to protect his friends",
+        "Refusing to give his name and address in all situations",
+        "Giving his name and address only if his parents are there"
+      ],
+      "why": "Tom can ask why he was stopped, and when police suspect an offence he may have to give his name and address. Refusing or lying is not within his rights, even though he can stay silent on other questions.",
+      "clue": "Check each option against all four lines of the card, not just one."
+    }
+  },
+  "ecb-elements-crime": {
+    "title": "Elements of a crime",
+    "card": [
+      "The prosecution is the side that brings the charge. To convict someone, it must prove the case. The accused does not have to prove they are innocent.",
+      [
+        "Guilty act",
+        "the physical act, or a failure to act, that the law forbids, such as taking someone else's property."
+      ],
+      [
+        "Guilty mind",
+        "the person meant to do the act, or knew the risk and went ahead anyway. An accident is not a guilty mind."
+      ],
+      "For most crimes, the prosecution must prove both elements beyond reasonable doubt. If it proves only one, or leaves a reasonable doubt, the accused is not convicted. Some minor offences, such as many traffic offences, need no guilty mind."
+    ],
+    "remember": "For most crimes, conviction needs both a guilty act and a guilty mind, proved beyond reasonable doubt.",
+    "a": {
+      "q": "To convict a person of theft, what must the prosecution prove?",
+      "opts": [
+        "Both the guilty act and the guilty mind",
+        "The guilty act only, as minds cannot be seen",
+        "The guilty mind only, as intent is the crime",
+        "Either the guilty act or the guilty mind"
+      ],
+      "why": "Theft is a crime that needs both elements, proved beyond reasonable doubt. Proving only the act is tempting, but the act alone is not enough if the person did not have a guilty mind.",
+      "clue": "Think about how many elements there are."
+    },
+    "b": {
+      "d": 3,
+      "q": "Leo trips in a shop in Dubbo and knocks a vase off a shelf, and it breaks. There is clear video of him doing it. Why might he not be convicted of intentionally damaging property?",
+      "opts": [
+        "The prosecution may not prove a guilty mind",
+        "The prosecution may not prove a guilty act",
+        "Leo must prove he did not break the vase",
+        "The vase was not worth enough to be a crime"
+      ],
+      "why": "The video shows the guilty act, but a trip is an accident, so there is no guilty mind. Without it the prosecution cannot prove both elements. The act is already clear, so the doubt is about his mind, not the act.",
+      "clue": "The video shows what Leo did, not what he meant."
+    }
+  },
+  "ecb-punishments": {
+    "title": "Punishments",
+    "card": [
+      [
+        "Deterrence",
+        "punishments such as a fine, community service or prison aim to put people off crime. Specific deterrence aims at the offender, and general deterrence aims at other people."
+      ],
+      [
+        "Protection",
+        "a punishment aims to keep the community safe. Prison does this by keeping an offender away from the public."
+      ],
+      [
+        "Rehabilitation",
+        "a punishment aims to help the offender change, so they do not offend again. Training, counselling or treatment can help them do this."
+      ],
+      [
+        "Disapproval",
+        "a punishment shows that the community does not accept the act. A more serious crime can draw a harsher punishment to show stronger disapproval."
+      ]
+    ],
+    "remember": "One punishment can serve several aims: to deter, protect, rehabilitate and show disapproval.",
+    "a": {
+      "q": "A court orders a man to do 100 hours of community service so he can learn job skills and stay out of trouble. Which aim is the court mainly pursuing?",
+      "opts": ["Rehabilitation", "Deterrence", "Protection of society", "Showing disapproval"],
+      "why": "The order aims to help the man change so he does not offend again, which is rehabilitation. Deterrence is about putting people off a crime, but the aim here is to build his skills.",
+      "clue": "Which aim is about helping the offender change?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A magistrate gives a driver a large fine for dangerous driving, hoping other drivers hear about it and drive more carefully. Which aim is this mainly?",
+      "opts": ["General deterrence", "Specific deterrence", "Rehabilitation", "Protection of society"],
+      "why": "The aim is to put off other drivers who hear of the fine, so it is general deterrence. Specific deterrence is aimed at the offender, so it is the most tempting wrong answer, but here the hope is to influence other people.",
+      "clue": "Who is the punishment meant to put off: the offender or others?"
+    }
+  },
+  "ecb-alternative-dispute-resolution": {
+    "title": "Alternative dispute resolution",
+    "card": [
+      [
+        "Mediation",
+        "a neutral third person helps the parties talk and reach their own agreement. The mediator does not give advice on the outcome or decide it."
+      ],
+      [
+        "Conciliation",
+        "a neutral third person also helps the parties talk, and may suggest options for settling. The parties still make the final decision."
+      ],
+      [
+        "Arbitration",
+        "a neutral third person, the arbitrator, hears both sides and makes a decision. The decision is binding, so the parties must follow it."
+      ],
+      "These are forms of alternative dispute resolution (ADR), used outside a courtroom. ADR is often faster, cheaper and less stressful than going to court. The main difference is who controls the outcome: the parties, or the third person."
+    ],
+    "remember": "Mediation and conciliation leave the decision with the parties. In arbitration the third person decides.",
+    "a": {
+      "q": "Two neighbours argue over a fence. A neutral person helps them talk and suggests ways to settle, but the neighbours make the final choice. Which ADR method is this?",
+      "opts": ["Conciliation", "Mediation", "Arbitration", "A court hearing"],
+      "why": "The neutral person suggests options, which is what separates conciliation from mediation. The neighbours still decide, so it is not arbitration, where the third person makes the decision.",
+      "clue": "Who suggests options, and who decides?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya and a builder send their bill dispute to an arbitrator. Priya dislikes the decision. What is her position?",
+      "opts": [
+        "She is bound by the outcome and has to follow it",
+        "She can reject it and keep negotiating with the builder",
+        "She can ignore it, as the parties make the final decision",
+        "She has to follow it only if the builder also agrees to it"
+      ],
+      "why": "In arbitration the third person makes the decision, and it is binding on both parties. Saying the parties make the final decision is true of mediation and conciliation, not arbitration.",
+      "clue": "In this method, who controls the outcome?"
+    }
+  },
+  "ecb-circle-sentencing": {
+    "title": "Circle sentencing",
+    "card": [
+      "Circle sentencing is a way of deciding the sentence for an adult Aboriginal person who has pleaded guilty or been found guilty. It is used in some NSW Local Courts, and the offender must agree to take part.",
+      "The people sit in a circle instead of at the usual court tables. The magistrate, Aboriginal Elders, the offender, the victim if they choose to come, and other community members all take part.",
+      "Everyone in the circle can speak about the offence, its effects and what the sentence should be. The magistrate still makes the final decision.",
+      "The process involves the Aboriginal community in the sentence. It aims to make the offender face the harm done and to repair the relationship with the community."
+    ],
+    "remember": "In circle sentencing, Elders and community members help the magistrate decide the sentence, and the magistrate makes the final decision.",
+    "a": {
+      "q": "Who makes the final decision on the sentence in circle sentencing?",
+      "opts": [
+        "The magistrate, after hearing the circle",
+        "The Elders, who vote on the sentence",
+        "The victim, who chooses the punishment",
+        "The offender, who proposes their own sentence"
+      ],
+      "why": "Elders and community members speak and give their views, but the magistrate still makes the final decision. The Elders have an important voice, but they do not replace the magistrate.",
+      "clue": "Who is the court officer in the circle?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Jarrah, a 19-year-old Aboriginal man in a NSW town, has pleaded guilty to an offence and agrees to circle sentencing. Which describes what will happen?",
+      "opts": [
+        "Elders and community members help the magistrate decide",
+        "A jury of twelve people decides the sentence",
+        "A neutral person helps him and the victim reach a deal",
+        "The police officer who arrested him chooses the sentence"
+      ],
+      "why": "In circle sentencing, Elders and community members join the magistrate and help decide the sentence. A neutral person helping two sides reach a deal describes mediation, which is a different process and does not set a sentence.",
+      "clue": "Think about who sits in the circle with the magistrate."
+    }
+  },
+  "ecb-businesses-promote": {
+    "title": "Why businesses promote",
+    "card": [
+      "Promotion is how a business communicates with customers about its goods and services. Businesses do it for three main purposes.",
+      [
+        "Inform",
+        "tell customers that a product exists, what it does, where to buy it and what it costs. This matters most for new products."
+      ],
+      ["Persuade", "give customers reasons to choose this product over a rival's, so that they buy it."],
+      ["Remind", "keep the brand in customers' minds so they remember it when they next buy."]
+    ],
+    "remember": "Promotion informs customers, persuades them to buy and reminds them the brand is there.",
+    "a": {
+      "q": "A bakery in Orange has sold bread for 20 years. It runs a short radio ad that just repeats its name and slogan. What is the main purpose?",
+      "opts": [
+        "To remind customers the brand exists",
+        "To inform customers about a new product",
+        "To persuade customers to leave a rival",
+        "To tell customers where the bakery is"
+      ],
+      "why": "The ad adds no new facts and gives no reasons to switch. It only repeats the name and slogan, so it reminds. Informing is tempting, but the bakery has nothing new to tell.",
+      "clue": "What new facts does the ad give?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's new gym opens in Wagga Wagga next month. Her flyer lists the address, opening hours and membership prices. Which purpose does it mainly serve?",
+      "opts": [
+        "To inform locals that the gym exists and its details",
+        "To remind locals of a gym they already use",
+        "To persuade locals that her gym beats a rival's",
+        "To remind locals to renew their memberships"
+      ],
+      "why": "The gym is new, so people need to learn it exists. The flyer gives facts like address, hours and prices, so it informs. It does not argue why her gym is better, so persuading is not the main purpose.",
+      "clue": "Do locals know the gym exists yet?"
+    }
+  },
+  "ecb-target-markets-differentiation": {
+    "title": "Target markets and differentiation",
+    "card": [
+      [
+        "Target market",
+        "The group of customers a product is aimed at. A business picks the group by things such as age, income, interests or location."
+      ],
+      [
+        "Differentiation",
+        "Making a product stand out from similar products, so customers have a reason to choose it."
+      ],
+      "A business can differentiate by price (cheaper or more exclusive), quality (more durable or better made), design (look or features) or brand (name and image).",
+      "The best way to stand out depends on the target market. A group with little money may care most about price, while another group may care more about quality or design."
+    ],
+    "remember": "Pick the customers first, then stand out in a way that matters to them.",
+    "a": {
+      "q": "A business says its new skateboard is aimed at teenagers who like street skating. What are the teenagers in this case?",
+      "opts": [
+        "The product's target market",
+        "The product's point of difference",
+        "The product's brand image",
+        "The product's price range"
+      ],
+      "why": "The teenagers are the group the skateboard is aimed at, which is its target market. A point of difference is how the product stands out, which is differentiation and a separate idea.",
+      "clue": "Think about who the product is for."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tariq opens a bike shop in Orange. He sells lightweight bikes made from strong, long-lasting materials to serious riders. How does he differentiate his product?",
+      "opts": [
+        "By quality, as the bikes are better made",
+        "By price, as the bikes are cheaper than rivals",
+        "By design, as the bikes have a new look",
+        "By brand, as the shop has a well-known name"
+      ],
+      "why": "The bikes stand out because of lightweight, long-lasting materials, which is quality. The serious riders are his target market, but they are the customers, not the way he stands out.",
+      "clue": "Look at what the bikes are made from."
+    }
+  },
+  "ecb-promotion-techniques": {
+    "title": "Promotion techniques",
+    "card": [
+      [
+        "Advertising",
+        "paid messages on TV, radio, print, websites and social media, including influencers paid to feature a product. The business controls what is said and where it appears."
+      ],
+      [
+        "Sales promotion",
+        "short-term offers that encourage a quick purchase, such as discounts, free samples, competitions and loyalty points."
+      ],
+      ["Personal selling", "a salesperson speaks with a customer directly, answers questions and helps them choose."],
+      [
+        "Publicity",
+        "unpaid media coverage of a business, such as a news story about a new store. The business does not control what is said."
+      ]
+    ],
+    "remember": "Businesses can mix paid messages, special offers, face-to-face selling and free media coverage to reach customers.",
+    "a": {
+      "q": "A shoe shop in Parramatta offers 30% off all sandals for one weekend only. Which technique is this?",
+      "opts": ["Sales promotion", "Personal selling", "Publicity", "Advertising"],
+      "why": "A discount that runs for a short time to prompt a quick purchase is a sales promotion. Advertising is a paid message in the media. The offer is not advertising in itself, even though the shop may advertise it.",
+      "clue": "Is the shop changing its message, or changing the deal itself?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A local newspaper writes a story about Ava's new bakery in Orange after a reporter visited. Ava did not pay for it. What is this?",
+      "opts": ["Publicity", "Advertising", "Sales promotion", "Personal selling"],
+      "why": "Unpaid media coverage of a business is publicity. It is tempting to call it advertising because it appears in the media, but advertising is paid for and the business controls the message.",
+      "clue": "Who paid for the story?"
+    }
+  },
+  "ecb-misleading-advertising": {
+    "title": "Misleading advertising",
+    "card": [
+      "The Australian Consumer Law (ACL) bans businesses from making false or misleading claims in ads. A claim can mislead by what it says, or by what it leaves out.",
+      [
+        "False claim",
+        "a statement that is not true, such as saying a jacket is waterproof when it leaks, or that a product has won an award it has not won."
+      ],
+      [
+        "Bait advertising",
+        "advertising a product at a low price without enough stock to meet likely demand. The aim is to bring customers in, then sell them something else."
+      ],
+      [
+        "Hidden conditions",
+        "a catch that changes the offer but is not made clear, such as tiny print that adds fees to a \"free\" deal. The main message must not be cancelled out by the fine print."
+      ]
+    ],
+    "remember": "The ACL bans ads that mislead: false claims, bait advertising and hidden conditions.",
+    "a": {
+      "q": "A shop advertises a TV at a very low price, but has only one in stock and tells shoppers it has sold out. Which type of banned advertising is this most likely to be?",
+      "opts": [
+        "Bait advertising",
+        "A false claim about an award",
+        "A hidden condition in fine print",
+        "A normal sales promotion"
+      ],
+      "why": "The low price drew shoppers in, but the shop did not have enough stock to meet likely demand. That is bait advertising. A hidden condition would be a catch in the ad that is not made clear, such as tiny print, and nothing like that is described here.",
+      "clue": "Think about the price that brought people in and the stock available."
+    },
+    "b": {
+      "d": 3,
+      "q": "Kai's gym advertises \"Join for $1 a week!\" in large print. Tiny print at the bottom says a $300 joining fee applies. Why is this likely to break the Australian Consumer Law?",
+      "opts": [
+        "A condition that changes the offer is hidden in small print",
+        "The gym did not have enough memberships for demand",
+        "The gym claimed an award that it has not won",
+        "Gyms are not allowed to advertise a weekly price"
+      ],
+      "why": "The large print suggests a cheap deal, but a major cost is buried in tiny print. That is a hidden condition that can mislead. It is not bait advertising, because nothing suggests the gym ran out of memberships.",
+      "clue": "Look at where the $300 fee appears in the ad."
+    }
+  },
+  "ecb-advertising-children": {
+    "title": "Advertising to children",
+    "card": [
+      "Children are easier to influence than adults. They may not tell an ad from other content, or see that its aim is to sell.",
+      "Ad Standards is the body that handles complaints about ads in Australia. Its codes set the rules for ads aimed at children.",
+      "The rules limit ads that could harm children, such as ads for unhealthy food and drinks. Ads must not pressure children or play on their trust.",
+      "Ads must also be clearly marked as ads, so a child can tell them from a show, a game or a video. This applies to ads in social media and online videos too."
+    ],
+    "remember": "Codes limit ads that could harm children, and ads must be clearly marked as ads.",
+    "a": {
+      "q": "Why do Ad Standards codes set extra rules for ads aimed at children?",
+      "opts": [
+        "They find it harder to tell when content is selling",
+        "They find it easier than adults to spot an ad",
+        "They spend more money on products than adults do",
+        "They are the main buyers of most food and drinks"
+      ],
+      "why": "Children are easier to influence because they may not tell an ad from other content or see that it aims to sell, so extra rules protect them. Saying children spot ads more easily than adults reverses the reason.",
+      "clue": "Think about how well a child can spot a selling message."
+    },
+    "b": {
+      "d": 3,
+      "q": "A popular video creator in Perth shows a new sweet drink in a video made for children. She was paid by the brand but does not say so. Which rule is most clearly broken?",
+      "opts": [
+        "Ads must be clearly marked so children can tell they are ads",
+        "Ads for drinks may only be shown after school hours",
+        "Creators must not talk about any food or drink products",
+        "Ads aimed at children must always show the price"
+      ],
+      "why": "The video is an ad because the brand paid for it, but children cannot tell. The codes require ads to be clearly marked as ads. The rules limit some food ads but do not ban all talk of food and drink.",
+      "clue": "Could a child tell this video is an ad?"
+    }
   }
 };

@@ -20,8 +20,169 @@
    0.202
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:51Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:52Z write: failed the content check, writing again",
+  "2026-11-20T12:44:57Z write: done",
+  "2026-11-20T12:53:26Z check: flagged",
+  "2026-11-20T12:59:59Z fix: suggested",
+  "2026-11-20T14:42:13Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00032,
+  "write": 0.01484,
+  "check": 0.01297,
+  "fix": 0.0249
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The returned soldiers point covers injuries, trauma and soldier settlement but says nothing about Aboriginal and Torres Strait Islander veterans being left out, while the First Nations soldiers point covers that exclusion but not injuries or trauma, so no single bank point teaches the whole new idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Coming home from war",
+  "card": [
+   "When WWII ended, hundreds of thousands of Australian service personnel returned home. Many had physical injuries, such as lost limbs, or illnesses picked up in the field or as prisoners.",
+   "Many also carried lasting trauma. Memories of battle, captivity and lost mates could bring nightmares, anxiety and difficulty settling into family and work life. At the time, little was understood about this, and many people kept it to themselves.",
+   "The government offered help to returned personnel, such as pensions, medical care, job training and land for soldier settlers, who were given farms to start a new life.",
+   "Aboriginal and Torres Strait Islander veterans had served alongside other Australians, but they were often left out of this help. Many were refused land or other support when they came home."
+  ],
+  "remember": "Coming home meant injury and trauma for many, and Aboriginal and Torres Strait Islander veterans were often left out of the help offered.",
+  "a": {
+   "q": "Which of these was a common challenge for Australian personnel returning from WWII?",
+   "opts": [
+    "Lasting trauma and physical injuries from service",
+    "Having no one willing to offer them any support",
+    "Being forced to return to their old jobs at once",
+    "Being unable to apply for any government help"
+   ],
+   "why": "Many returned with injuries and trauma that stayed with them long after the war. Support such as pensions, medical care and land did exist, so it is wrong to say there was no help at all.",
+   "clue": "Think about what the war left in their bodies and minds."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jack, an Aboriginal man from northern NSW, served in the army through WWII. After the war he applied for a farm under the soldier settler scheme but was turned down. What does his case show?",
+   "opts": [
+    "Aboriginal veterans were often left out of offered help",
+    "Soldier settler land was only for injured veterans",
+    "Aboriginal people had not been allowed to serve in the army",
+    "The government gave land to no veterans after the war"
+   ],
+   "why": "Jack served like other soldiers, yet he was refused help that other returned personnel could receive. This shows Aboriginal and Torres Strait Islander veterans were often left out. The scheme did give land to many other veterans, so it was not closed to everyone.",
+   "clue": "Jack served like others, but did he get the same help?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Lasting trauma and physical injuries from service",
+   "also_right": []
+  },
+  "b": {
+   "best": "Aboriginal veterans were often left out of offered help",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'what the war left in their bodies and minds' maps directly onto 'trauma and physical injuries', so a student can match the clue to the option without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one with a hedge ('often') and repeats the remember line almost word for word. The three wrong options are all absolutes ('no veterans', 'had not been allowed', 'only for injured'), so the answer stands out."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "mental-health",
+  "summary": "The facts are accurate. The clue for question a gives the answer away, and in question b the right option stands out as the only hedged one among absolute distractors."
+ },
+ "sensitive": "mental-health",
+ "flags": [
+  "Question a, other: The clue 'what the war left in their bodies and minds' maps directly onto 'trauma and physical injuries', so a student can match the clue to the option without knowing the idea.",
+  "Question b, wording: The right option is the only one with a hedge ('often') and repeats the remember line almost word for word. The three wrong options are all absolutes ('no veterans', 'had not been allowed', 'only for injured'), so the answer stands out."
+ ],
+ "proposal": {
+  "title": "Coming home from war",
+  "card": [
+   "When WWII ended, hundreds of thousands of Australian service personnel returned home. Many had physical injuries, such as lost limbs, or illnesses picked up in the field or as prisoners.",
+   "Many also carried lasting trauma. Memories of battle, captivity and lost mates could bring nightmares, anxiety and difficulty settling into family and work life. At the time, little was understood about this, and many people kept it to themselves.",
+   "The government offered help to returned personnel, such as pensions, medical care, job training and land for soldier settlers, who were given farms to start a new life.",
+   "Aboriginal and Torres Strait Islander veterans had served alongside other Australians, but they were often left out of this help. Many were refused land or other support when they came home."
+  ],
+  "remember": "The war followed many personnel home in body and mind, and the help offered was not shared fairly with First Nations veterans.",
+  "a": {
+   "q": "Which of these was a common challenge for Australian personnel returning from WWII?",
+   "opts": [
+    "Lasting trauma and physical injuries from service",
+    "Having no one willing to offer them any support",
+    "Being forced to return to their old jobs at once",
+    "Being unable to apply for any government help"
+   ],
+   "why": "Many returned with injuries and trauma that stayed with them long after the war. Support such as pensions, medical care and land did exist, so it is wrong to say there was no help at all.",
+   "clue": "Pensions and medical care were offered. What problems were they meant to meet?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jack, an Aboriginal man from northern NSW, served in the army through WWII. After the war he applied for a farm under the soldier settler scheme but was turned down. What does his case show?",
+   "opts": [
+    "Aboriginal veterans could be denied help others received",
+    "Soldier settler farms went mainly to injured veterans",
+    "Aboriginal people were mostly kept out of the army",
+    "Settler land depended on how long a soldier had served"
+   ],
+   "why": "Jack served like other soldiers, yet he was refused help that other returned personnel could receive, which shows Aboriginal and Torres Strait Islander veterans were often left out. The scheme was not limited to injured veterans, and Jack served through the whole war, so neither injury nor length of service explains his case.",
+   "clue": "Think about what was different about Jack, not about his service."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Coming home from war",
+  "card": [
+   "When WWII ended, hundreds of thousands of Australian service personnel returned home. Many had physical injuries, such as lost limbs, or illnesses picked up in the field or as prisoners.",
+   "Many also carried lasting trauma. Memories of battle, captivity and lost mates could bring nightmares, anxiety and difficulty settling into family and work life. At the time, little was understood about this, and many people kept it to themselves.",
+   "The government offered help to returned personnel, such as pensions, medical care, job training and land for soldier settlers, who were given farms to start a new life.",
+   "Aboriginal and Torres Strait Islander veterans had served alongside other Australians, but they were often left out of this help. Many were refused land or other support when they came home."
+  ],
+  "remember": "The war followed many personnel home in body and mind, and the help offered was not shared fairly with First Nations veterans.",
+  "a": {
+   "q": "Which of these was a common challenge for Australian personnel returning from WWII?",
+   "opts": [
+    "Lasting trauma and physical injuries from service",
+    "Having no one willing to offer them any support",
+    "Being forced to return to their old jobs at once",
+    "Being unable to apply for any government help"
+   ],
+   "why": "Many returned with injuries and trauma that stayed with them long after the war. Support such as pensions, medical care and land did exist, so it is wrong to say there was no help at all.",
+   "clue": "Pensions and medical care were offered. What problems were they meant to meet?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jack, an Aboriginal man from northern NSW, served in the army through WWII. After the war he applied for a farm under the soldier settler scheme but was turned down. What does his case show?",
+   "opts": [
+    "Aboriginal veterans could be denied help others received",
+    "Soldier settler farms went mainly to injured veterans",
+    "Aboriginal people were mostly kept out of the army",
+    "Settler land depended on how long a soldier had served"
+   ],
+   "why": "Jack served like other soldiers, yet he was refused help that other returned personnel could receive, which shows Aboriginal and Torres Strait Islander veterans were often left out. The scheme was not limited to injured veterans, and Jack served through the whole war, so neither injury nor length of service explains his case.",
+   "clue": "Think about what was different about Jack, not about his service."
+  }
+ },
+ "cleared_by": "owner"
 }

@@ -24,8 +24,213 @@
    0.212
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:02Z write: done",
+  "2026-11-20T12:35:57Z check: flagged",
+  "2026-11-20T12:45:01Z fix: suggested",
+  "2026-11-20T13:23:46Z autoreview: cleared with the fix (a other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00674,
+  "check": 0.00947,
+  "fix": 0.01796
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point is a broad overview of several reaction types, including combustion and acids reacting with metals or carbonates, and no bank point covers that set; the closest ones each teach only one type (decomposition, precipitation or displacement) or a different idea (rates, signs of reaction).",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Types of reactions",
+  "card": [
+   [
+    "Combustion",
+    "a substance reacts with oxygen and gives off heat and light. Burning methane in a gas stove is an example. A complete combustion of a fuel containing carbon and hydrogen makes carbon dioxide and water."
+   ],
+   [
+    "Decomposition",
+    "one substance breaks down into two or more simpler substances. Heating calcium carbonate gives calcium oxide and carbon dioxide."
+   ],
+   [
+    "Precipitation",
+    "two solutions are mixed and an insoluble solid forms. The solid is called the precipitate. Mixing silver nitrate and sodium chloride solutions makes solid silver chloride."
+   ],
+   [
+    "Acid reactions",
+    "an acid reacting with a metal makes a salt and hydrogen gas. An acid reacting with a carbonate makes a salt, water and carbon dioxide gas."
+   ]
+  ],
+  "remember": "Match the reaction to what you start with and what you see: oxygen and burning, one thing splitting, a solid forming from solutions, or an acid giving off gas.",
+  "a": {
+   "q": "Which reaction is a precipitation reaction?",
+   "opts": [
+    "Two clear solutions mixed form a solid that sinks",
+    "A candle burns in air and gives off heat and light",
+    "A carbonate is heated and gives off a gas",
+    "A metal is added to acid and fizzes"
+   ],
+   "why": "Precipitation is when two solutions mix and an insoluble solid forms. The fizzing metal in acid makes hydrogen gas, so it is an acid reaction, not a precipitation.",
+   "clue": "Look for two solutions making a solid."
+  },
+  "b": {
+   "d": 3,
+   "q": "Zara drops a piece of limestone, which is mostly calcium carbonate, into dilute hydrochloric acid. It fizzes and the gas turns limewater cloudy. Which type of reaction is this?",
+   "opts": [
+    "An acid reacting with a carbonate",
+    "Decomposition by heating",
+    "Combustion in oxygen",
+    "Precipitation of an insoluble solid"
+   ],
+   "why": "A carbonate added to an acid fizzes as carbon dioxide gas is released, along with a salt and water. It is not decomposition, because nothing was heated and the acid takes part in the reaction.",
+   "clue": "What two substances were mixed, and what gas formed?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Two clear solutions mixed form a solid that sinks",
+   "also_right": []
+  },
+  "b": {
+   "best": "An acid reacting with a carbonate",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Look for two solutions making a solid' restates the right option almost word for word, so a student can pick it by matching words without knowing what precipitation is."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct. Question a's clue gives the answer away by echoing the wording of the right option."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'Look for two solutions making a solid' restates the right option almost word for word, so a student can pick it by matching words without knowing what precipitation is."
+ ],
+ "proposal": {
+  "title": "Types of reactions",
+  "card": [
+   [
+    "Combustion",
+    "a substance reacts with oxygen and gives off heat and light. Burning methane in a gas stove is an example. Complete combustion of a fuel containing carbon and hydrogen makes carbon dioxide and water."
+   ],
+   [
+    "Decomposition",
+    "one substance breaks down into two or more simpler substances. Heating calcium carbonate gives calcium oxide and carbon dioxide."
+   ],
+   [
+    "Precipitation",
+    "two solutions are mixed and an insoluble solid forms. The solid is called the precipitate. Mixing silver nitrate and sodium chloride solutions makes solid silver chloride."
+   ],
+   [
+    "Acid reactions",
+    "an acid reacting with a metal makes a salt and hydrogen gas. An acid reacting with a carbonate makes a salt, water and carbon dioxide gas."
+   ]
+  ],
+  "remember": "Match the reaction to what you start with and what you see: oxygen and burning, one thing splitting, a solid forming from solutions, or an acid giving off gas.",
+  "a": {
+   "q": "Which reaction is a precipitation reaction?",
+   "opts": [
+    "Two clear solutions mixed form a solid that sinks",
+    "A candle burns in air and gives off heat and light",
+    "A carbonate is heated and gives off a gas",
+    "A metal is added to acid and fizzes"
+   ],
+   "why": "Precipitation is when two solutions mix and an insoluble solid forms. The fizzing metal in acid makes hydrogen gas, so it is an acid reaction, not a precipitation.",
+   "clue": "Think about what a precipitate is and what it is made from."
+  },
+  "b": {
+   "d": 3,
+   "q": "Zara drops a piece of limestone, which is mostly calcium carbonate, into dilute hydrochloric acid. It fizzes and the gas turns limewater cloudy. Which type of reaction is this?",
+   "opts": [
+    "An acid reacting with a carbonate",
+    "Decomposition by heating",
+    "Combustion in oxygen",
+    "Precipitation of an insoluble solid"
+   ],
+   "why": "A carbonate added to an acid fizzes as carbon dioxide gas is released, along with a salt and water. It is not decomposition, because nothing was heated and the acid takes part in the reaction.",
+   "clue": "What two substances were mixed, and what gas formed?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:46Z",
+  "rules": 1,
+  "n": 13,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Look for two solutions making a solid' restates the right option almost word for word, so a student can pick it by matching words without knowing what precipitation is."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue 'Look for two solutions making a solid' restates the right option almost word for word, so a student can pick it by matching words without knowing what precipitation is."
+  ]
+ },
+ "final": {
+  "title": "Types of reactions",
+  "card": [
+   [
+    "Combustion",
+    "a substance reacts with oxygen and gives off heat and light. Burning methane in a gas stove is an example. Complete combustion of a fuel containing carbon and hydrogen makes carbon dioxide and water."
+   ],
+   [
+    "Decomposition",
+    "one substance breaks down into two or more simpler substances. Heating calcium carbonate gives calcium oxide and carbon dioxide."
+   ],
+   [
+    "Precipitation",
+    "two solutions are mixed and an insoluble solid forms. The solid is called the precipitate. Mixing silver nitrate and sodium chloride solutions makes solid silver chloride."
+   ],
+   [
+    "Acid reactions",
+    "an acid reacting with a metal makes a salt and hydrogen gas. An acid reacting with a carbonate makes a salt, water and carbon dioxide gas."
+   ]
+  ],
+  "remember": "Match the reaction to what you start with and what you see: oxygen and burning, one thing splitting, a solid forming from solutions, or an acid giving off gas.",
+  "a": {
+   "q": "Which reaction is a precipitation reaction?",
+   "opts": [
+    "Two clear solutions mixed form a solid that sinks",
+    "A candle burns in air and gives off heat and light",
+    "A carbonate is heated and gives off a gas",
+    "A metal is added to acid and fizzes"
+   ],
+   "why": "Precipitation is when two solutions mix and an insoluble solid forms. The fizzing metal in acid makes hydrogen gas, so it is an acid reaction, not a precipitation.",
+   "clue": "Think about what a precipitate is and what it is made from."
+  },
+  "b": {
+   "d": 3,
+   "q": "Zara drops a piece of limestone, which is mostly calcium carbonate, into dilute hydrochloric acid. It fizzes and the gas turns limewater cloudy. Which type of reaction is this?",
+   "opts": [
+    "An acid reacting with a carbonate",
+    "Decomposition by heating",
+    "Combustion in oxygen",
+    "Precipitation of an insoluble solid"
+   ],
+   "why": "A carbonate added to an acid fizzes as carbon dioxide gas is released, along with a salt and water. It is not decomposition, because nothing was heated and the acid takes part in the reaction.",
+   "clue": "What two substances were mixed, and what gas formed?"
+  }
+ },
+ "cleared_by": "auto"
 }

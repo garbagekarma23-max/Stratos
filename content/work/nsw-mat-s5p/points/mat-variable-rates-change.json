@@ -24,8 +24,231 @@
    0.277
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:58Z write: done",
+  "2026-11-20T12:35:55Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00039,
+  "write": 0.00833,
+  "check": 0.00765
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Rates in context, only covers reading steeper as faster on a curve and leaves out the tangent-gradient idea this point teaches, while the instantaneous-rate point uses limits and chords at a deeper level than Stage 5 paths.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Variable rates of change",
+  "card": [
+   "On a straight-line graph the rate of change is constant. On a curved graph the rate changes from one place to another.",
+   "Where the curve is steeper, the quantity is changing faster. Where it is flatter, the quantity is changing more slowly.",
+   "The rate at one moment is the gradient of the tangent there. A tangent is a straight line that just touches the curve at that point.",
+   "Example: a tangent to a distance graph touches it at 3 s. It rises 12 m over a run of 4 s. The speed at 3 s is \\(12 \\div 4 = 3\\) m/s."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A curve showing the depth of water in a tank in cm against time in minutes. It starts steep and flattens out, passing through the points (0, 0), (2, 6) and (4, 8), and reaching (6, 8.5).",
+    "x": {
+     "min": 0,
+     "max": 7,
+     "label": "Time (min)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Depth (cm)",
+     "step": 2
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "d",
+      "points": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        3.5
+       ],
+       [
+        2,
+        6
+       ],
+       [
+        3,
+        7.2
+       ],
+       [
+        4,
+        8
+       ],
+       [
+        5,
+        8.4
+       ],
+       [
+        6,
+        8.5
+       ]
+      ],
+      "smooth": true,
+      "label": "Depth",
+      "pos": "below-right",
+      "labelAt": 5
+     }
+    ]
+   }
+  },
+  "remember": "On a curve the rate changes. The rate at a moment is the gradient of the tangent.",
+  "a": {
+   "q": "On a curved graph of distance against time, the curve is steepest at 5 s. What does this tell you about 5 s?",
+   "opts": [
+    "The distance is changing fastest around then",
+    "The distance is changing slowest around then",
+    "The distance is not changing at that time",
+    "The rate of change is constant on the whole graph"
+   ],
+   "why": "A steeper curve means the quantity is changing faster. Slowest change would be where the curve is flattest. A constant rate only happens on a straight line.",
+   "clue": "Steeper means faster change."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya draws a tangent to a graph of a tank's volume (litres) against time (minutes). The tangent touches the curve at 4 min and passes through \\((2, 10)\\) and \\((6, 30)\\). What is the rate of change at 4 min?",
+   "opts": [
+    "5 litres per minute",
+    "20 litres per minute",
+    "0.2 litres per minute",
+    "4 litres per minute"
+   ],
+   "why": "The tangent's gradient is the rate: \\(\\frac{30 - 10}{6 - 2} = \\frac{20}{4} = 5\\) litres per minute. The tempting 20 is only the rise, and it forgets to divide by the run.",
+   "clue": "Find rise over run for the tangent line."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The distance is changing fastest around then",
+   "also_right": []
+  },
+  "b": {
+   "best": "5 litres per minute",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Variable rates of change",
+  "card": [
+   "On a straight-line graph the rate of change is constant. On a curved graph the rate changes from one place to another.",
+   "Where the curve is steeper, the quantity is changing faster. Where it is flatter, the quantity is changing more slowly.",
+   "The rate at one moment is the gradient of the tangent there. A tangent is a straight line that just touches the curve at that point.",
+   "Example: a tangent to a distance graph touches it at 3 s. It rises 12 m over a run of 4 s. The speed at 3 s is \\(12 \\div 4 = 3\\) m/s."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A curve showing the depth of water in a tank in cm against time in minutes. It starts steep and flattens out, passing through the points (0, 0), (2, 6) and (4, 8), and reaching (6, 8.5).",
+    "x": {
+     "min": 0,
+     "max": 7,
+     "label": "Time (min)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Depth (cm)",
+     "step": 2
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "d",
+      "points": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        3.5
+       ],
+       [
+        2,
+        6
+       ],
+       [
+        3,
+        7.2
+       ],
+       [
+        4,
+        8
+       ],
+       [
+        5,
+        8.4
+       ],
+       [
+        6,
+        8.5
+       ]
+      ],
+      "smooth": true,
+      "label": "Depth",
+      "pos": "below-right",
+      "labelAt": 5
+     }
+    ]
+   }
+  },
+  "remember": "On a curve the rate changes. The rate at a moment is the gradient of the tangent.",
+  "a": {
+   "q": "On a curved graph of distance against time, the curve is steepest at 5 s. What does this tell you about 5 s?",
+   "opts": [
+    "The distance is changing fastest around then",
+    "The distance is changing slowest around then",
+    "The distance is not changing at that time",
+    "The rate of change is constant on the whole graph"
+   ],
+   "why": "A steeper curve means the quantity is changing faster. Slowest change would be where the curve is flattest. A constant rate only happens on a straight line.",
+   "clue": "Steeper means faster change."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya draws a tangent to a graph of a tank's volume (litres) against time (minutes). The tangent touches the curve at 4 min and passes through \\((2, 10)\\) and \\((6, 30)\\). What is the rate of change at 4 min?",
+   "opts": [
+    "5 litres per minute",
+    "20 litres per minute",
+    "0.2 litres per minute",
+    "4 litres per minute"
+   ],
+   "why": "The tangent's gradient is the rate: \\(\\frac{30 - 10}{6 - 2} = \\frac{20}{4} = 5\\) litres per minute. The tempting 20 is only the rise, and it forgets to divide by the run.",
+   "clue": "Find rise over run for the tangent line."
+  }
+ },
+ "cleared_by": "checker"
 }

@@ -16,8 +16,213 @@
    0.498
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:54Z write: done",
+  "2026-11-20T12:35:53Z check: flagged",
+  "2026-11-20T12:44:58Z fix: suggested",
+  "2026-11-20T13:23:42Z autoreview: cleared with the fix (remember other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.01245,
+  "check": 0.00932,
+  "fix": 0.0209
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers only radius, diameter, circumference and pi, but the new point also requires chord, arc, sector, segment and tangent, so it is broader and no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Parts of a circle",
+  "card": [
+   [
+    "Centre",
+    "the point in the middle. Every point on the circle is the same distance from it."
+   ],
+   [
+    "Radius",
+    "a line from the centre to the circle. The diameter is a line through the centre from one side of the circle to the other. So the diameter is twice the radius: \\(d = 2r\\)."
+   ],
+   [
+    "Circumference",
+    "the distance around the circle. An arc is part of the circumference."
+   ],
+   [
+    "Others",
+    "A chord joins two points on the circle. A sector is a slice like a pizza slice, between two radii and an arc. A segment is the region between a chord and an arc. A tangent is a line that touches the circle at one point only."
+   ]
+  ],
+  "remember": "The diameter is twice the radius, and it is the longest chord.",
+  "a": {
+   "q": "A circle has a radius of 6 cm. What is its diameter?",
+   "opts": [
+    "12 cm",
+    "3 cm",
+    "6 cm",
+    "36 cm"
+   ],
+   "why": "The diameter is twice the radius, so \\(2 \\times 6 = 12\\) cm. Halving the radius to get 3 cm mixes up the two.",
+   "clue": "The diameter goes all the way across."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia cuts a round pizza along a straight line that does not pass through the centre. The smaller piece between the cut and the crust is which part of a circle?",
+   "opts": [
+    "A segment",
+    "A sector",
+    "A tangent",
+    "A diameter"
+   ],
+   "why": "A segment lies between a chord and an arc, and a straight cut off the centre makes a chord. A sector would need two cuts from the centre, each along a radius.",
+   "clue": "The cut is a chord. What region does a chord make?"
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A circle with the centre, radius, diameter, chord, arc, sector, segment and tangent each labelled.",
+    "why": "Seeing every part on one circle helps students tell them apart."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "12 cm",
+   "also_right": []
+  },
+  "b": {
+   "best": "A segment",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says the diameter is the longest chord, but the card never says that a diameter is a chord or that it is the longest one. The remember line teaches a fact the card does not."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct, with single clear answers (12 cm and a segment). The only issue is that the remember line adds a fact the card does not teach: that the diameter is the longest chord."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The remember line says the diameter is the longest chord, but the card never says that a diameter is a chord or that it is the longest one. The remember line teaches a fact the card does not."
+ ],
+ "proposal": {
+  "title": "Parts of a circle",
+  "card": [
+   "The centre is the middle point, the same distance from every point on the circle. The circumference is the distance around the circle, and an arc is part of it.",
+   "A radius goes from the centre to the circle. A diameter goes through the centre from one side to the other, so it is twice the radius: \\(d = 2r\\).",
+   "A chord is a straight line joining two points on the circle. A tangent is a straight line that touches the circle at one point only.",
+   "A sector is the region between two radii and an arc, like a pizza slice. A segment is the region between a chord and an arc."
+  ],
+  "remember": "Lines: radius, diameter, chord, tangent. Regions: sector and segment. And \\(d = 2r\\).",
+  "a": {
+   "q": "A circle has a radius of 6 cm. What is its diameter?",
+   "opts": [
+    "12 cm",
+    "3 cm",
+    "6 cm",
+    "36 cm"
+   ],
+   "why": "The diameter is twice the radius, so \\(2 \\times 6 = 12\\) cm. Halving the radius to get 3 cm mixes up the radius and the diameter.",
+   "clue": "The diameter goes all the way across, through the centre."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia cuts a round pizza along a straight line that does not pass through the centre. The smaller piece between the cut and the crust is which part of a circle?",
+   "opts": [
+    "A segment",
+    "A sector",
+    "A tangent",
+    "A diameter"
+   ],
+   "why": "The straight cut joins two points on the circle, so it is a chord, and the region between a chord and an arc is a segment. A sector would need two cuts from the centre, each along a radius.",
+   "clue": "The cut is a chord. What region does a chord make?"
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A circle with the centre, a radius, a diameter, a chord, an arc, a sector, a segment, a tangent and the circumference each labelled.",
+    "why": "Seeing every part on one circle helps students tell them apart."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:42Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says the diameter is the longest chord, but the card never says that a diameter is a chord or that it is the longest one. The remember line teaches a fact the card does not."
+   }
+  ],
+  "flags": [
+   "Remember, other: The remember line says the diameter is the longest chord, but the card never says that a diameter is a chord or that it is the longest one. The remember line teaches a fact the card does not."
+  ]
+ },
+ "final": {
+  "title": "Parts of a circle",
+  "card": [
+   "The centre is the middle point, the same distance from every point on the circle. The circumference is the distance around the circle, and an arc is part of it.",
+   "A radius goes from the centre to the circle. A diameter goes through the centre from one side to the other, so it is twice the radius: \\(d = 2r\\).",
+   "A chord is a straight line joining two points on the circle. A tangent is a straight line that touches the circle at one point only.",
+   "A sector is the region between two radii and an arc, like a pizza slice. A segment is the region between a chord and an arc."
+  ],
+  "remember": "Lines: radius, diameter, chord, tangent. Regions: sector and segment. And \\(d = 2r\\).",
+  "a": {
+   "q": "A circle has a radius of 6 cm. What is its diameter?",
+   "opts": [
+    "12 cm",
+    "3 cm",
+    "6 cm",
+    "36 cm"
+   ],
+   "why": "The diameter is twice the radius, so \\(2 \\times 6 = 12\\) cm. Halving the radius to get 3 cm mixes up the radius and the diameter.",
+   "clue": "The diameter goes all the way across, through the centre."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia cuts a round pizza along a straight line that does not pass through the centre. The smaller piece between the cut and the crust is which part of a circle?",
+   "opts": [
+    "A segment",
+    "A sector",
+    "A tangent",
+    "A diameter"
+   ],
+   "why": "The straight cut joins two points on the circle, so it is a chord, and the region between a chord and an arc is a segment. A sector would need two cuts from the centre, each along a radius.",
+   "clue": "The cut is a chord. What region does a chord make?"
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A circle with the centre, a radius, a diameter, a chord, an arc, a sector, a segment, a tangent and the circumference each labelled.",
+    "why": "Seeing every part on one circle helps students tell them apart."
+   }
+  ]
+ },
+ "cleared_by": "auto"
 }

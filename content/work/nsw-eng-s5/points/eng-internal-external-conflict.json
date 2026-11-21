@@ -8,8 +8,229 @@
    0.216
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:48Z write: failed the content check, writing again",
+  "2026-11-20T12:44:54Z write: done (still fails the content check)",
+  "2026-11-20T13:11:47Z check: flagged",
+  "2026-11-20T13:17:56Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 6e-05,
+  "write": 0.01439,
+  "check": 0.01049,
+  "fix": 0.01775,
+  "recheck": 0.00944
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers how characters are revealed through actions, speech, thoughts and choices, not the distinction between internal and external conflict that the new point teaches.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Internal and external conflict",
+  "card": [
+   [
+    "External conflict",
+    "a struggle between a character and something outside them: another person, society or nature. A rival, an unfair law or a storm can each cause one."
+   ],
+   [
+    "Internal conflict",
+    "a struggle inside a character's mind, such as a fear against a duty, or what they want against what they believe is right."
+   ],
+   "Example: Tia wants to win the race. She learns her rival has hurt his ankle, and she wonders whether to tell the officials. The rival and the race are outside her. Her doubt is inside her.",
+   "Characters drive the plot through both kinds. Their choices, and how they deal with a struggle, move the story forward. A text can use both kinds at once."
+  ],
+  "remember": "External conflict is with something outside the character. Internal conflict is within the character's own mind.",
+  "a": {
+   "q": "A character longs to leave her small town but feels guilty about leaving her sick mother. What kind of conflict is this?",
+   "opts": [
+    "Internal conflict, as the struggle is within her mind",
+    "External conflict, as it involves her mother",
+    "External conflict, as it involves her town",
+    "Internal conflict, as the setting is a small town"
+   ],
+   "why": "Her struggle is between a wish and a feeling of guilt, and both are in her own mind. Her mother is part of the situation, but she is not opposing her, so it is not a struggle against another person.",
+   "clue": "Where does the struggle take place: between people or inside one person?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a short story, Kofi is lost in a bushfire. He pushes through smoke to reach a creek, and he also doubts that he can survive. Which choice describes the conflicts?",
+   "opts": [
+    "External conflict with the fire, and internal conflict in doubt",
+    "Internal conflict with the fire, and external conflict in doubt",
+    "Only external conflict, because the fire causes his doubt",
+    "Only internal conflict, because the story follows one person"
+   ],
+   "why": "The fire is part of nature, so Kofi's struggle against it is external. His doubt about surviving happens in his mind, so it is internal. The fire may cause the doubt, but the doubt is still a struggle within him, so there are two kinds.",
+   "clue": "Look for one struggle outside Kofi and one inside him."
+  }
+ },
+ "redone": true,
+ "local": [
+  "eng-internal-external-conflictb option is 63 characters: External conflict with the fire, and internal conflict in doubt",
+  "eng-internal-external-conflictb option is 63 characters: Internal conflict with the fire, and external conflict in doubt"
+ ],
+ "check": {
+  "a": {
+   "best": "Internal conflict, as the struggle is within her mind",
+   "also_right": []
+  },
+  "b": {
+   "best": "External conflict with the fire, and internal conflict in doubt",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Look for one struggle outside Kofi and one inside him' tells students there is one external and one internal conflict. That gives the answer away instead of prompting them to think."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate. The only problem is that question b's clue gives the answer away by saying there is one struggle outside Kofi and one inside him."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue 'Look for one struggle outside Kofi and one inside him' tells students there is one external and one internal conflict. That gives the answer away instead of prompting them to think.",
+  "Content check: eng-internal-external-conflictb option is 63 characters: External conflict with the fire, and internal conflict in doubt",
+  "Content check: eng-internal-external-conflictb option is 63 characters: Internal conflict with the fire, and external conflict in doubt"
+ ],
+ "proposal": {
+  "title": "Internal and external conflict",
+  "card": [
+   [
+    "External conflict",
+    "a struggle between a character and something outside them: another person, society or nature. A rival, an unfair law or a storm can each cause one."
+   ],
+   [
+    "Internal conflict",
+    "a struggle inside a character's mind, such as a fear against a duty, or what they want against what they believe is right."
+   ],
+   "Example: Tia wants to win the race. She learns her rival has hurt his ankle, and she wonders whether to tell the officials. The rival and the race are outside her. Her doubt is inside her.",
+   "Characters drive the plot through both kinds. Their choices, and how they deal with a struggle, move the story forward. A text can use both kinds at once."
+  ],
+  "remember": "Ask where the struggle happens: outside the character is external, inside their own mind is internal.",
+  "a": {
+   "q": "A character longs to leave her small town but feels guilty about leaving her sick mother. What kind of conflict is this?",
+   "opts": [
+    "Internal conflict, as the struggle is within her mind",
+    "External conflict, as it involves her mother",
+    "External conflict, as it involves her town",
+    "Internal conflict, as the setting is a small town"
+   ],
+   "why": "Her struggle is between a wish and a feeling of guilt, and both are in her own mind. Her mother is part of the situation, but she is not opposing her, so it is not a struggle against another person.",
+   "clue": "Where does the struggle take place: between people or inside one person?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a short story, Kofi is lost in a bushfire. He pushes through smoke to reach a creek, and he also doubts that he can survive. Which choice describes his conflicts?",
+   "opts": [
+    "External with the fire, internal with his doubt",
+    "Internal with the fire, external with his doubt",
+    "Only external, because the fire causes his doubt",
+    "Only internal, because the story follows one person"
+   ],
+   "why": "The fire is part of nature, so Kofi's struggle against it is external. His doubt about surviving happens in his mind, so it is internal. The fire may cause the doubt, but the doubt is still a struggle within him, so both kinds are present.",
+   "clue": "Check each struggle on its own: where does it happen?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Internal conflict, as the struggle is within her mind",
+    "also_right": []
+   },
+   "b": {
+    "best": "External with the fire, internal with his doubt",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Look for one struggle outside Kofi and one inside him' tells students there is one external and one internal conflict. That gives the answer away instead of prompting them to think."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue 'Look for one struggle outside Kofi and one inside him' tells students there is one external and one internal conflict. That gives the answer away instead of prompting them to think.",
+   "Content check: eng-internal-external-conflictb option is 63 characters: External conflict with the fire, and internal conflict in doubt",
+   "Content check: eng-internal-external-conflictb option is 63 characters: Internal conflict with the fire, and external conflict in doubt"
+  ]
+ },
+ "final": {
+  "title": "Internal and external conflict",
+  "card": [
+   [
+    "External conflict",
+    "a struggle between a character and something outside them: another person, society or nature. A rival, an unfair law or a storm can each cause one."
+   ],
+   [
+    "Internal conflict",
+    "a struggle inside a character's mind, such as a fear against a duty, or what they want against what they believe is right."
+   ],
+   "Example: Tia wants to win the race. She learns her rival has hurt his ankle, and she wonders whether to tell the officials. The rival and the race are outside her. Her doubt is inside her.",
+   "Characters drive the plot through both kinds. Their choices, and how they deal with a struggle, move the story forward. A text can use both kinds at once."
+  ],
+  "remember": "Ask where the struggle happens: outside the character is external, inside their own mind is internal.",
+  "a": {
+   "q": "A character longs to leave her small town but feels guilty about leaving her sick mother. What kind of conflict is this?",
+   "opts": [
+    "Internal conflict, as the struggle is within her mind",
+    "External conflict, as it involves her mother",
+    "External conflict, as it involves her town",
+    "Internal conflict, as the setting is a small town"
+   ],
+   "why": "Her struggle is between a wish and a feeling of guilt, and both are in her own mind. Her mother is part of the situation, but she is not opposing her, so it is not a struggle against another person.",
+   "clue": "Where does the struggle take place: between people or inside one person?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a short story, Kofi is lost in a bushfire. He pushes through smoke to reach a creek, and he also doubts that he can survive. Which choice describes his conflicts?",
+   "opts": [
+    "External with the fire, internal with his doubt",
+    "Internal with the fire, external with his doubt",
+    "Only external, because the fire causes his doubt",
+    "Only internal, because the story follows one person"
+   ],
+   "why": "The fire is part of nature, so Kofi's struggle against it is external. His doubt about surviving happens in his mind, so it is internal. The fire may cause the doubt, but the doubt is still a struggle within him, so both kinds are present.",
+   "clue": "Check each struggle on its own: where does it happen?"
+  }
+ },
+ "cleared_by": "recheck"
 }

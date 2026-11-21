@@ -8,8 +8,133 @@
    0.355
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:58Z write: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.0062,
+  "check": 0.00857
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers only medical uses of radioisotopes (finding and treating cancer), while the new point also covers sterilising equipment, checking for leaks and dating ancient materials, so it is broader and no single bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Uses of radioisotopes",
+  "card": [
+   "A radioisotope is an unstable form of an element that gives off radiation as it decays. Its radiation can be detected, and it can also damage or kill cells.",
+   [
+    "Medicine",
+    "a radioisotope that collects in an organ can be tracked with a detector to find cancer. Stronger radiation aimed at a tumour can kill cancer cells."
+   ],
+   [
+    "Industry",
+    "gamma radiation can kill germs on sealed medical equipment. A radioisotope added to a pipe's fluid can be tracked outside to find a leak."
+   ],
+   [
+    "Dating",
+    "the amount of a radioisotope left in an ancient material, compared with its half-life, shows how old the material is."
+   ]
+  ],
+  "remember": "Radiation can be detected and can kill cells, so it is used to find, treat, sterilise, check and date, with care.",
+  "a": {
+   "q": "Why can gamma radiation be used to sterilise sealed medical equipment?",
+   "opts": [
+    "It kills germs on the equipment",
+    "It makes the equipment stronger",
+    "It detects germs inside the packet",
+    "It makes the germs stop moving but stay alive"
+   ],
+   "why": "Radiation can kill living cells, including germs, even through sealed packaging. Detecting radiation is a different use, and it does not remove germs.",
+   "clue": "Think about what radiation can do to cells."
+  },
+  "b": {
+   "d": 3,
+   "q": "A water company in Wagga Wagga adds a radioisotope to the water in an underground pipe. A worker walks above the ground with a detector. What is the company trying to do?",
+   "opts": [
+    "Find where the pipe is leaking",
+    "Kill germs growing in the pipe",
+    "Work out how old the pipe is",
+    "Treat a tumour near the pipe"
+   ],
+   "why": "The radiation can be detected through soil, so a strong reading shows where water has escaped. The company is not killing germs or dating the pipe: it is only tracking the radiation.",
+   "clue": "The detector is used to find where the radiation has gone."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It kills germs on the equipment",
+   "also_right": []
+  },
+  "b": {
+   "best": "Find where the pipe is leaking",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Uses of radioisotopes",
+  "card": [
+   "A radioisotope is an unstable form of an element that gives off radiation as it decays. Its radiation can be detected, and it can also damage or kill cells.",
+   [
+    "Medicine",
+    "a radioisotope that collects in an organ can be tracked with a detector to find cancer. Stronger radiation aimed at a tumour can kill cancer cells."
+   ],
+   [
+    "Industry",
+    "gamma radiation can kill germs on sealed medical equipment. A radioisotope added to a pipe's fluid can be tracked outside to find a leak."
+   ],
+   [
+    "Dating",
+    "the amount of a radioisotope left in an ancient material, compared with its half-life, shows how old the material is."
+   ]
+  ],
+  "remember": "Radiation can be detected and can kill cells, so it is used to find, treat, sterilise, check and date, with care.",
+  "a": {
+   "q": "Why can gamma radiation be used to sterilise sealed medical equipment?",
+   "opts": [
+    "It kills germs on the equipment",
+    "It makes the equipment stronger",
+    "It detects germs inside the packet",
+    "It makes the germs stop moving but stay alive"
+   ],
+   "why": "Radiation can kill living cells, including germs, even through sealed packaging. Detecting radiation is a different use, and it does not remove germs.",
+   "clue": "Think about what radiation can do to cells."
+  },
+  "b": {
+   "d": 3,
+   "q": "A water company in Wagga Wagga adds a radioisotope to the water in an underground pipe. A worker walks above the ground with a detector. What is the company trying to do?",
+   "opts": [
+    "Find where the pipe is leaking",
+    "Kill germs growing in the pipe",
+    "Work out how old the pipe is",
+    "Treat a tumour near the pipe"
+   ],
+   "why": "The radiation can be detected through soil, so a strong reading shows where water has escaped. The company is not killing germs or dating the pipe: it is only tracking the radiation.",
+   "clue": "The detector is used to find where the radiation has gone."
+  }
+ },
+ "cleared_by": "checker"
 }

@@ -24,8 +24,223 @@
    0.265
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:48Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: kept for you (the fresh check was not highly sure; the fresh check says another option could also be right; the fresh check found a problem)",
+  "2026-11-20T14:33:31Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.00627,
+  "check": 0.01224,
+  "fix": 0.01946,
+  "recheck": 0.01561
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches the difference between linear texts read in order and nonlinear texts where the reader chooses a path, so this needs a new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Linear and nonlinear texts",
+  "card": [
+   [
+    "Linear text",
+    "A text read in order from start to end, such as a novel or a feature film. The writer decides the sequence, so the reader meets each event when the writer chooses."
+   ],
+   [
+    "Nonlinear text",
+    "A text where the reader can choose a path, such as a website, a hypertext story or a game with choices. Different readers can meet the parts in a different order."
+   ],
+   "In a nonlinear text, the order a reader chooses can change what they understand. Two readers may finish with different views of the same text.",
+   "Linear texts give the writer more control over how meaning builds. Nonlinear texts give the reader more say in how it builds."
+  ],
+  "remember": "Linear: the writer sets the order. Nonlinear: the reader helps choose it.",
+  "a": {
+   "q": "What makes a text nonlinear?",
+   "opts": [
+    "The reader can choose the order in which they meet its parts",
+    "The events in the story are not true to life",
+    "The text is told by more than one narrator",
+    "The text uses images as well as words"
+   ],
+   "why": "A text is nonlinear when the reader can choose a path through it. Having several narrators is a different matter: a novel can have many narrators and still be read in a fixed order from start to end.",
+   "clue": "Think about who decides the order of the parts."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya reads an interactive story online. At each page she picks one of two links, and Sam picks the other links. They compare endings and find they differ. Which explanation fits best?",
+   "opts": [
+    "Each reader's path changed how the story's meaning was built",
+    "The writer of the story lost control of the plot",
+    "The story must be a novel with a hidden order",
+    "One of the readers read the story in the wrong way"
+   ],
+   "why": "In a nonlinear text the reader's choices shape the order of events, so meaning can build differently for each reader. Neither path is a wrong way to read it, because the text is made to allow several paths.",
+   "clue": "Ask who chose the order in which each reader met the parts."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The reader can choose the order in which they meet its parts",
+   "also_right": []
+  },
+  "b": {
+   "best": "Each reader's path changed how the story's meaning was built",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is clearly the longest (12 words against 8–9). With the clue about 'who decides the order', it is also the only option that mentions order, so a student could pick it without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, answers and explanations are accurate. In question a, the right option stands out as the longest and is the only one that matches the clue's word 'order', so it can be guessed."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option is clearly the longest (12 words against 8–9). With the clue about 'who decides the order', it is also the only option that mentions order, so a student could pick it without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Linear and nonlinear texts",
+  "card": [
+   [
+    "Linear text",
+    "A text read in order from start to end, such as a novel or a feature film. The writer decides the sequence, so the reader meets each part when the writer chooses."
+   ],
+   [
+    "Nonlinear text",
+    "A text where the reader can choose a path, such as a website, a hypertext story or a game with choices. Different readers can meet the parts in a different order."
+   ],
+   "A novel with flashbacks, scenes that jump back in time, is still linear. Every reader still follows the one order the writer set.",
+   "In a nonlinear text, the order a reader chooses can change what they understand. Linear texts give the writer more control over how meaning builds, and nonlinear texts give the reader more say."
+  ],
+  "remember": "Linear: the writer sets the order. Nonlinear: the reader helps choose it.",
+  "a": {
+   "q": "What makes a text nonlinear?",
+   "opts": [
+    "The reader can choose the order of its parts",
+    "The writer tells events out of time order",
+    "The reader must read every part in a set order",
+    "The text is told by more than one narrator"
+   ],
+   "why": "A text is nonlinear when the reader can choose a path through it. A writer telling events out of time order, as in a flashback, still sets one order that every reader follows, so the text stays linear.",
+   "clue": "Ask whether two readers could meet the parts in different orders."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya reads an interactive story online. At each page she picks one of two links, and Sam picks the other links. They compare endings and find they differ. Which explanation fits best?",
+   "opts": [
+    "Each reader's path built the story's meaning differently",
+    "The writer lost control of the story's plot and ending",
+    "The story is a linear text with one hidden true order",
+    "One of the readers followed the story in the wrong way"
+   ],
+   "why": "In a nonlinear text the reader's choices shape the order of events, so meaning can build differently for each reader. Neither path is a wrong way to read it, because the text is made to allow several paths.",
+   "clue": "Did the text allow more than one path?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "kept",
+  "why": [
+   "the fresh check was not highly sure",
+   "the fresh check says another option could also be right",
+   "the fresh check found a problem"
+  ],
+  "check": {
+   "a": {
+    "best": "The reader can choose the order of its parts",
+    "also_right": [
+     "The writer tells events out of time order"
+    ]
+   },
+   "b": {
+    "best": "Each reader's path built the story's meaning differently",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "card",
+     "kind": "fact",
+     "detail": "The card flatly states that a novel with flashbacks 'is still linear'. In common literary and film usage, a story told out of chronological order is often called a 'nonlinear narrative' (for example Pulp Fiction or fragmented novels). Students who meet that usage elsewhere will be confused. The card should say that in this chapter's sense (reader choice of path) such a novel is linear, and acknowledge the other use of the term."
+    },
+    {
+     "part": "a",
+     "kind": "fact",
+     "detail": "Because 'nonlinear narrative' commonly means events told out of time order, the distractor 'The writer tells events out of time order' is defensible under a looser reading. The question should specify the reader-choice sense, for example 'In this chapter's sense, what makes a text nonlinear?'"
+    }
+   ],
+   "sure": "medium",
+   "sensitive": "none",
+   "summary": "Both questions have a clear intended answer. However, the card's claim that a flashback novel is 'still linear' ignores the common term 'nonlinear narrative' (out-of-order storytelling), so the flashback distractor in question a is defensible. The card and question should signal which sense of 'nonlinear' they mean."
+  },
+  "flags": [
+   "Question a: the checker says “The writer tells events out of time order” could also be right.",
+   "Card, fact: The card flatly states that a novel with flashbacks 'is still linear'. In common literary and film usage, a story told out of chronological order is often called a 'nonlinear narrative' (for example Pulp Fiction or fragmented novels). Students who meet that usage elsewhere will be confused. The card should say that in this chapter's sense (reader choice of path) such a novel is linear, and acknowledge the other use of the term.",
+   "Question a, fact: Because 'nonlinear narrative' commonly means events told out of time order, the distractor 'The writer tells events out of time order' is defensible under a looser reading. The question should specify the reader-choice sense, for example 'In this chapter's sense, what makes a text nonlinear?'"
+  ]
+ },
+ "final": {
+  "title": "Linear and nonlinear texts",
+  "card": [
+   [
+    "Linear text",
+    "A text read in order from start to end, such as a novel or a feature film. The writer decides the sequence, so the reader meets each part when the writer chooses."
+   ],
+   [
+    "Nonlinear text",
+    "A text where the reader can choose a path, such as a website, a hypertext story or a game with choices. Different readers can meet the parts in a different order."
+   ],
+   "A novel with flashbacks, scenes that jump back in time, is still linear. Every reader still follows the one order the writer set.",
+   "In a nonlinear text, the order a reader chooses can change what they understand. Linear texts give the writer more control over how meaning builds, and nonlinear texts give the reader more say."
+  ],
+  "remember": "Linear: the writer sets the order. Nonlinear: the reader helps choose it.",
+  "a": {
+   "q": "What makes a text nonlinear?",
+   "opts": [
+    "The reader can choose the order of its parts",
+    "The writer tells events out of time order",
+    "The reader must read every part in a set order",
+    "The text is told by more than one narrator"
+   ],
+   "why": "A text is nonlinear when the reader can choose a path through it. A writer telling events out of time order, as in a flashback, still sets one order that every reader follows, so the text stays linear.",
+   "clue": "Ask whether two readers could meet the parts in different orders."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya reads an interactive story online. At each page she picks one of two links, and Sam picks the other links. They compare endings and find they differ. Which explanation fits best?",
+   "opts": [
+    "Each reader's path built the story's meaning differently",
+    "The writer lost control of the story's plot and ending",
+    "The story is a linear text with one hidden true order",
+    "One of the readers followed the story in the wrong way"
+   ],
+   "why": "In a nonlinear text the reader's choices shape the order of events, so meaning can build differently for each reader. Neither path is a wrong way to read it, because the text is made to allow several paths.",
+   "clue": "Did the text allow more than one path?"
+  }
+ },
+ "cleared_by": "owner"
 }

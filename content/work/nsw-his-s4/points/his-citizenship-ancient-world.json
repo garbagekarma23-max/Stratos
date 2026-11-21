@@ -16,8 +16,508 @@
    0.217
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: done",
+  "2026-11-20T12:44:56Z check: flagged",
+  "2026-11-20T12:53:26Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.00621,
+  "check": 0.01963,
+  "fix": 0.02682,
+  "recheck": 0.01011
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Democracy in Athens, covers only Athenian citizenship, while the new point covers both Athens and Rome, so it is broader and no bank point teaches the same idea as it stands.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Citizenship in the ancient world",
+  "card": [
+   [
+    "Citizen",
+    "A citizen is a member of a state who has certain rights and duties. In the ancient world, only some people in a city were counted as citizens."
+   ],
+   [
+    "Athens",
+    "In ancient Athens, adult male citizens could vote in the assembly, where laws and decisions were debated. This was an early form of democracy, which means rule by the people."
+   ],
+   [
+    "Rome",
+    "Roman citizens had legal rights, such as the right to a fair trial. Citizenship was a legal status that set citizens apart from other people."
+   ],
+   "In both Athens and Rome, women, slaves and foreigners were left out of citizenship. Most people living in these places could not take part in public decisions."
+  ],
+  "remember": "Citizenship brought rights in Athens and Rome, but only a limited group of people held it.",
+  "a": {
+   "q": "Who could vote in the assembly in ancient Athens?",
+   "opts": [
+    "Adult male citizens",
+    "All adults who lived in the city",
+    "Adult male citizens and foreigners",
+    "Adult citizens, including women and slaves"
+   ],
+   "why": "Only adult male citizens had a vote in the Athenian assembly. Foreigners, women and slaves lived in Athens but were left out, so a person living in the city was not enough.",
+   "clue": "Think about who was counted as a citizen."
+  },
+  "b": {
+   "d": 3,
+   "q": "Livia is a woman who lives in ancient Athens. Her family has lived there for generations. Why can she not vote in the assembly?",
+   "opts": [
+    "Women were left out of citizenship and voting",
+    "She is a foreigner who has not been given rights",
+    "She is a slave owned by another family",
+    "Only Roman citizens could vote in assemblies"
+   ],
+   "why": "Athens gave the vote to adult male citizens, and women were left out even when their families had lived there for a long time. The tempting wrong option is that she is a foreigner, but the scenario says her family has lived there for generations.",
+   "clue": "Living in a city for a long time did not make someone a voting citizen."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Adult male citizens",
+   "also_right": []
+  },
+  "b": {
+   "best": "Women were left out of citizenship and voting",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says women were left out of citizenship in both Athens and Rome. Roman women were citizens (cives) with some legal rights, though they could not vote or hold office. Athenian women of citizen birth also had a citizen status: Pericles' law required both parents to be citizens. What they lacked was political rights. The card should say women were shut out of voting and public office, not out of citizenship."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why rules out 'foreigner' because her family has lived there for generations. In Athens, metic (resident foreigner) families could live there for generations and still not be citizens. The clue itself says this: living in a city for a long time did not make someone a citizen. So the why's reasoning is historically wrong and contradicts the clue. Livia is ruled out because she is a woman, not because of how long her family has lived there."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'Livia' is a Roman name for a woman said to live in Athens. Next to the option 'Only Roman citizens could vote in assemblies', it could make students wonder whether she is Roman, and so a foreigner. A Greek name would avoid this."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The right option says women were left out of citizenship and voting. As with the card, this overstates the case: Athenian women could hold a citizen status but had no political rights. It would be safer to say women were left out of voting and the assembly."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "Both questions have clear right answers. The card and question b say women were excluded from citizenship itself, when Roman and Athenian women could be citizens without political rights. The why for b wrongly says living somewhere for generations rules out being a foreigner, though metic families did exactly that, and the clue says the opposite."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says women were left out of citizenship in both Athens and Rome. Roman women were citizens (cives) with some legal rights, though they could not vote or hold office. Athenian women of citizen birth also had a citizen status: Pericles' law required both parents to be citizens. What they lacked was political rights. The card should say women were shut out of voting and public office, not out of citizenship.",
+  "Question b, fact: The why rules out 'foreigner' because her family has lived there for generations. In Athens, metic (resident foreigner) families could live there for generations and still not be citizens. The clue itself says this: living in a city for a long time did not make someone a citizen. So the why's reasoning is historically wrong and contradicts the clue. Livia is ruled out because she is a woman, not because of how long her family has lived there.",
+  "Question b, wording: 'Livia' is a Roman name for a woman said to live in Athens. Next to the option 'Only Roman citizens could vote in assemblies', it could make students wonder whether she is Roman, and so a foreigner. A Greek name would avoid this.",
+  "Question b, fact: The right option says women were left out of citizenship and voting. As with the card, this overstates the case: Athenian women could hold a citizen status but had no political rights. It would be safer to say women were left out of voting and the assembly."
+ ],
+ "proposal": {
+  "title": "Citizenship in the ancient world",
+  "card": [
+   [
+    "Citizen",
+    "A citizen is a member of a state who has certain rights and duties. In the ancient world, only some people in a city were counted as citizens."
+   ],
+   [
+    "Athens",
+    "In ancient Athens, adult male citizens could vote in the assembly, where laws and decisions were debated. This was an early form of democracy, which means rule by the people."
+   ],
+   [
+    "Rome",
+    "Roman citizens had legal rights, such as the right to a fair trial. Citizenship was a legal status that set citizens apart from other people."
+   ],
+   "Slaves and foreigners were not citizens, even if a foreign family had lived in Athens for generations. Women from citizen families had citizen status, but in both places they could not vote or hold public office."
+  ],
+  "remember": "Citizenship brought rights in Athens and Rome, but many people were left out of it, and women could not vote or hold office.",
+  "a": {
+   "q": "Who could vote in the assembly in ancient Athens?",
+   "opts": [
+    "Adult male citizens",
+    "All adults who lived in the city",
+    "Adult male citizens and foreigners",
+    "Adult citizens, including women and slaves"
+   ],
+   "why": "Only adult male citizens had a vote in the Athenian assembly. Foreigners, women and slaves lived in Athens but could not vote, so living in the city was not enough.",
+   "clue": "Think about who could take part in public decisions."
+  },
+  "b": {
+   "d": 3,
+   "q": "Thalia is 30 and lives in ancient Athens. Both her parents are Athenian citizens. Why can she not vote in the assembly?",
+   "opts": [
+    "Women could not vote in the assembly",
+    "She is a foreigner without citizen rights",
+    "She is not yet old enough to vote",
+    "Her family has not lived there long enough"
+   ],
+   "why": "Thalia comes from a citizen family, but the vote in Athens belonged to adult male citizens, and women could not vote or hold office. She is not a foreigner, because her parents are citizens, and how long a family had lived in Athens did not decide who could vote.",
+   "clue": "Look at what the scenario tells you about her parents and her age."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Adult male citizens",
+    "also_right": []
+   },
+   "b": {
+    "best": "Women could not vote in the assembly",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says women were left out of citizenship in both Athens and Rome. Roman women were citizens (cives) with some legal rights, though they could not vote or hold office. Athenian women of citizen birth also had a citizen status: Pericles' law required both parents to be citizens. What they lacked was political rights. The card should say women were shut out of voting and public office, not out of citizenship."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why rules out 'foreigner' because her family has lived there for generations. In Athens, metic (resident foreigner) families could live there for generations and still not be citizens. The clue itself says this: living in a city for a long time did not make someone a citizen. So the why's reasoning is historically wrong and contradicts the clue. Livia is ruled out because she is a woman, not because of how long her family has lived there."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'Livia' is a Roman name for a woman said to live in Athens. Next to the option 'Only Roman citizens could vote in assemblies', it could make students wonder whether she is Roman, and so a foreigner. A Greek name would avoid this."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The right option says women were left out of citizenship and voting. As with the card, this overstates the case: Athenian women could hold a citizen status but had no political rights. It would be safer to say women were left out of voting and the assembly."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card says women were left out of citizenship in both Athens and Rome. Roman women were citizens (cives) with some legal rights, though they could not vote or hold office. Athenian women of citizen birth also had a citizen status: Pericles' law required both parents to be citizens. What they lacked was political rights. The card should say women were shut out of voting and public office, not out of citizenship.",
+   "Question b, fact: The why rules out 'foreigner' because her family has lived there for generations. In Athens, metic (resident foreigner) families could live there for generations and still not be citizens. The clue itself says this: living in a city for a long time did not make someone a citizen. So the why's reasoning is historically wrong and contradicts the clue. Livia is ruled out because she is a woman, not because of how long her family has lived there.",
+   "Question b, wording: 'Livia' is a Roman name for a woman said to live in Athens. Next to the option 'Only Roman citizens could vote in assemblies', it could make students wonder whether she is Roman, and so a foreigner. A Greek name would avoid this.",
+   "Question b, fact: The right option says women were left out of citizenship and voting. As with the card, this overstates the case: Athenian women could hold a citizen status but had no political rights. It would be safer to say women were left out of voting and the assembly."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Citizenship in the ancient world",
+  "card": [
+   [
+    "Citizen",
+    "A citizen is a member of a state who has certain rights and duties. In the ancient world, only some people in a city were counted as citizens."
+   ],
+   [
+    "Athens",
+    "In ancient Athens, adult male citizens could vote in the assembly, where laws and decisions were debated. This was an early form of democracy, which means rule by the people."
+   ],
+   [
+    "Rome",
+    "Roman citizens had legal rights, such as the right to a fair trial. Citizenship was a legal status that set citizens apart from other people."
+   ],
+   "Slaves and foreigners were not citizens, even if a foreign family had lived in Athens for generations. Women from citizen families had citizen status, but in both places they could not vote or hold public office."
+  ],
+  "remember": "Citizenship brought rights in Athens and Rome, but many people were left out of it, and women could not vote or hold office.",
+  "a": {
+   "q": "Who could vote in the assembly in ancient Athens?",
+   "opts": [
+    "Adult male citizens",
+    "All adults who lived in the city",
+    "Adult male citizens and foreigners",
+    "Adult citizens, including women and slaves"
+   ],
+   "why": "Only adult male citizens had a vote in the Athenian assembly. Foreigners, women and slaves lived in Athens but could not vote, so living in the city was not enough.",
+   "clue": "Think about who could take part in public decisions."
+  },
+  "b": {
+   "d": 3,
+   "q": "Thalia is 30 and lives in ancient Athens. Both her parents are Athenian citizens. Why can she not vote in the assembly?",
+   "opts": [
+    "Women could not vote in the assembly",
+    "She is a foreigner without citizen rights",
+    "She is not yet old enough to vote",
+    "Her family has not lived there long enough"
+   ],
+   "why": "Thalia comes from a citizen family, but the vote in Athens belonged to adult male citizens, and women could not vote or hold office. She is not a foreigner, because her parents are citizens, and how long a family had lived in Athens did not decide who could vote.",
+   "clue": "Look at what the scenario tells you about her parents and her age."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix says correctly that women from citizen families had citizen status but could not vote or hold office, and that foreign families stayed non-citizens however long they lived in Athens. Question b now uses a Greek name and has one clear answer.",
+   "item": "0921f6a1f6e6a8f1",
+   "result": "decided",
+   "saved": {
+    "id": "his-citizenship-ancient-world",
+    "title": "Citizenship in the ancient world",
+    "brief": "e81c9f18808a",
+    "shortlist": [
+     [
+      "his-democracy-athens",
+      0.383
+     ],
+     [
+      "his-families-slaves-rome",
+      0.254
+     ],
+     [
+      "his-renaissance-was",
+      0.217
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00022,
+     "write": 0.00621,
+     "check": 0.01963,
+     "fix": 0.02682,
+     "recheck": 0.01011
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The closest bank point, Democracy in Athens, covers only Athenian citizenship, while the new point covers both Athens and Rome, so it is broader and no bank point teaches the same idea as it stands.",
+     "model": "claude-haiku-5-5"
+    },
+    "alone": true,
+    "draft": {
+     "title": "Citizenship in the ancient world",
+     "card": [
+      [
+       "Citizen",
+       "A citizen is a member of a state who has certain rights and duties. In the ancient world, only some people in a city were counted as citizens."
+      ],
+      [
+       "Athens",
+       "In ancient Athens, adult male citizens could vote in the assembly, where laws and decisions were debated. This was an early form of democracy, which means rule by the people."
+      ],
+      [
+       "Rome",
+       "Roman citizens had legal rights, such as the right to a fair trial. Citizenship was a legal status that set citizens apart from other people."
+      ],
+      "In both Athens and Rome, women, slaves and foreigners were left out of citizenship. Most people living in these places could not take part in public decisions."
+     ],
+     "remember": "Citizenship brought rights in Athens and Rome, but only a limited group of people held it.",
+     "a": {
+      "q": "Who could vote in the assembly in ancient Athens?",
+      "opts": [
+       "Adult male citizens",
+       "All adults who lived in the city",
+       "Adult male citizens and foreigners",
+       "Adult citizens, including women and slaves"
+      ],
+      "why": "Only adult male citizens had a vote in the Athenian assembly. Foreigners, women and slaves lived in Athens but were left out, so a person living in the city was not enough.",
+      "clue": "Think about who was counted as a citizen."
+     },
+     "b": {
+      "d": 3,
+      "q": "Livia is a woman who lives in ancient Athens. Her family has lived there for generations. Why can she not vote in the assembly?",
+      "opts": [
+       "Women were left out of citizenship and voting",
+       "She is a foreigner who has not been given rights",
+       "She is a slave owned by another family",
+       "Only Roman citizens could vote in assemblies"
+      ],
+      "why": "Athens gave the vote to adult male citizens, and women were left out even when their families had lived there for a long time. The tempting wrong option is that she is a foreigner, but the scenario says her family has lived there for generations.",
+      "clue": "Living in a city for a long time did not make someone a voting citizen."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Adult male citizens",
+      "also_right": []
+     },
+     "b": {
+      "best": "Women were left out of citizenship and voting",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card says women were left out of citizenship in both Athens and Rome. Roman women were citizens (cives) with some legal rights, though they could not vote or hold office. Athenian women of citizen birth also had a citizen status: Pericles' law required both parents to be citizens. What they lacked was political rights. The card should say women were shut out of voting and public office, not out of citizenship."
+      },
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The why rules out 'foreigner' because her family has lived there for generations. In Athens, metic (resident foreigner) families could live there for generations and still not be citizens. The clue itself says this: living in a city for a long time did not make someone a citizen. So the why's reasoning is historically wrong and contradicts the clue. Livia is ruled out because she is a woman, not because of how long her family has lived there."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "'Livia' is a Roman name for a woman said to live in Athens. Next to the option 'Only Roman citizens could vote in assemblies', it could make students wonder whether she is Roman, and so a foreigner. A Greek name would avoid this."
+      },
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The right option says women were left out of citizenship and voting. As with the card, this overstates the case: Athenian women could hold a citizen status but had no political rights. It would be safer to say women were left out of voting and the assembly."
+      }
+     ],
+     "sure": "medium",
+     "sensitive": "none",
+     "summary": "Both questions have clear right answers. The card and question b say women were excluded from citizenship itself, when Roman and Athenian women could be citizens without political rights. The why for b wrongly says living somewhere for generations rules out being a foreigner, though metic families did exactly that, and the clue says the opposite."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Card, fact: The card says women were left out of citizenship in both Athens and Rome. Roman women were citizens (cives) with some legal rights, though they could not vote or hold office. Athenian women of citizen birth also had a citizen status: Pericles' law required both parents to be citizens. What they lacked was political rights. The card should say women were shut out of voting and public office, not out of citizenship.",
+     "Question b, fact: The why rules out 'foreigner' because her family has lived there for generations. In Athens, metic (resident foreigner) families could live there for generations and still not be citizens. The clue itself says this: living in a city for a long time did not make someone a citizen. So the why's reasoning is historically wrong and contradicts the clue. Livia is ruled out because she is a woman, not because of how long her family has lived there.",
+     "Question b, wording: 'Livia' is a Roman name for a woman said to live in Athens. Next to the option 'Only Roman citizens could vote in assemblies', it could make students wonder whether she is Roman, and so a foreigner. A Greek name would avoid this.",
+     "Question b, fact: The right option says women were left out of citizenship and voting. As with the card, this overstates the case: Athenian women could hold a citizen status but had no political rights. It would be safer to say women were left out of voting and the assembly."
+    ],
+    "proposal": {
+     "title": "Citizenship in the ancient world",
+     "card": [
+      [
+       "Citizen",
+       "A citizen is a member of a state who has certain rights and duties. In the ancient world, only some people in a city were counted as citizens."
+      ],
+      [
+       "Athens",
+       "In ancient Athens, adult male citizens could vote in the assembly, where laws and decisions were debated. This was an early form of democracy, which means rule by the people."
+      ],
+      [
+       "Rome",
+       "Roman citizens had legal rights, such as the right to a fair trial. Citizenship was a legal status that set citizens apart from other people."
+      ],
+      "Slaves and foreigners were not citizens, even if a foreign family had lived in Athens for generations. Women from citizen families had citizen status, but in both places they could not vote or hold public office."
+     ],
+     "remember": "Citizenship brought rights in Athens and Rome, but many people were left out of it, and women could not vote or hold office.",
+     "a": {
+      "q": "Who could vote in the assembly in ancient Athens?",
+      "opts": [
+       "Adult male citizens",
+       "All adults who lived in the city",
+       "Adult male citizens and foreigners",
+       "Adult citizens, including women and slaves"
+      ],
+      "why": "Only adult male citizens had a vote in the Athenian assembly. Foreigners, women and slaves lived in Athens but could not vote, so living in the city was not enough.",
+      "clue": "Think about who could take part in public decisions."
+     },
+     "b": {
+      "d": 3,
+      "q": "Thalia is 30 and lives in ancient Athens. Both her parents are Athenian citizens. Why can she not vote in the assembly?",
+      "opts": [
+       "Women could not vote in the assembly",
+       "She is a foreigner without citizen rights",
+       "She is not yet old enough to vote",
+       "Her family has not lived there long enough"
+      ],
+      "why": "Thalia comes from a citizen family, but the vote in Athens belonged to adult male citizens, and women could not vote or hold office. She is not a foreigner, because her parents are citizens, and how long a family had lived in Athens did not decide who could vote.",
+      "clue": "Look at what the scenario tells you about her parents and her age."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "Adult male citizens",
+       "also_right": []
+      },
+      "b": {
+       "best": "Women could not vote in the assembly",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-20T13:37:07Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 11,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card says women were left out of citizenship in both Athens and Rome. Roman women were citizens (cives) with some legal rights, though they could not vote or hold office. Athenian women of citizen birth also had a citizen status: Pericles' law required both parents to be citizens. What they lacked was political rights. The card should say women were shut out of voting and public office, not out of citizenship."
+      },
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The why rules out 'foreigner' because her family has lived there for generations. In Athens, metic (resident foreigner) families could live there for generations and still not be citizens. The clue itself says this: living in a city for a long time did not make someone a citizen. So the why's reasoning is historically wrong and contradicts the clue. Livia is ruled out because she is a woman, not because of how long her family has lived there."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "'Livia' is a Roman name for a woman said to live in Athens. Next to the option 'Only Roman citizens could vote in assemblies', it could make students wonder whether she is Roman, and so a foreigner. A Greek name would avoid this."
+      },
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The right option says women were left out of citizenship and voting. As with the card, this overstates the case: Athenian women could hold a citizen status but had no political rights. It would be safer to say women were left out of voting and the assembly."
+      }
+     ],
+     "flags": [
+      "Card, fact: The card says women were left out of citizenship in both Athens and Rome. Roman women were citizens (cives) with some legal rights, though they could not vote or hold office. Athenian women of citizen birth also had a citizen status: Pericles' law required both parents to be citizens. What they lacked was political rights. The card should say women were shut out of voting and public office, not out of citizenship.",
+      "Question b, fact: The why rules out 'foreigner' because her family has lived there for generations. In Athens, metic (resident foreigner) families could live there for generations and still not be citizens. The clue itself says this: living in a city for a long time did not make someone a citizen. So the why's reasoning is historically wrong and contradicts the clue. Livia is ruled out because she is a woman, not because of how long her family has lived there.",
+      "Question b, wording: 'Livia' is a Roman name for a woman said to live in Athens. Next to the option 'Only Roman citizens could vote in assemblies', it could make students wonder whether she is Roman, and so a foreigner. A Greek name would avoid this.",
+      "Question b, fact: The right option says women were left out of citizenship and voting. As with the card, this overstates the case: Athenian women could hold a citizen status but had no political rights. It would be safer to say women were left out of voting and the assembly."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "eec9740d46163cad"
+  }
  ]
 }

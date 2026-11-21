@@ -12,8 +12,382 @@
    0.301
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: flagged",
+  "2026-11-20T12:53:29Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00766,
+  "check": 0.01171,
+  "fix": 0.02007,
+  "recheck": 0.00912
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point combines two ideas, choosing a column or line graph and writing a conclusion about the trend, but neither bank point teaches both: sci-tables-graphs covers only tables and graph types, and sci-drawing-conclusion covers only conclusions.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Graphs and conclusions",
+  "card": [
+   [
+    "Column graph",
+    "Use it when the data is in separate categories, such as the colour of flowers or the type of pet. Each category gets its own column."
+   ],
+   [
+    "Line graph",
+    "Use it when the data is measured values that change, such as temperature over time. The independent variable goes on the x-axis and the dependent variable on the y-axis."
+   ],
+   [
+    "Trend",
+    "A trend is the pattern in the data. For example, the line may rise, fall or stay flat as the independent variable changes."
+   ],
+   [
+    "Conclusion",
+    "A conclusion uses the trend to answer the aim. It states what the data shows, and it only claims what the results support."
+   ]
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A line graph of water temperature in degrees Celsius against time in minutes. The line rises steadily from 20 degrees at 0 minutes to 60 degrees at 8 minutes.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Time (min)",
+     "step": 2
+    },
+    "y": {
+     "min": 0,
+     "max": 80,
+     "label": "Temperature (°C)",
+     "step": 20
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "T",
+      "points": [
+       [
+        0,
+        20
+       ],
+       [
+        2,
+        30
+       ],
+       [
+        4,
+        40
+       ],
+       [
+        6,
+        50
+       ],
+       [
+        8,
+        60
+       ]
+      ],
+      "label": "Water",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Pick the graph to suit the data. Then use the trend to answer the aim.",
+  "a": {
+   "q": "Which data would be best shown on a line graph?",
+   "opts": [
+    "The height of a plant measured each day for 10 days",
+    "The number of students who chose each school sport",
+    "The favourite fruit of each student in a class",
+    "The number of cars of each colour in a car park"
+   ],
+   "why": "Plant height is a measured value that changes over time, so a line graph shows the trend. The other options sort things into separate categories, which suit column graphs.",
+   "clue": "Look for a measurement that changes as something else changes."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi's aim was to find out if more sunlight makes bean seedlings grow taller. His graph shows seedling height rising as hours of sunlight per day increase. Which conclusion fits his data?",
+   "opts": [
+    "Seedlings grew taller as the hours of sunlight increased",
+    "Sunlight is the only thing that makes any plant grow",
+    "Seedlings grew taller as the hours of sunlight decreased",
+    "Seedlings of all kinds grow best in very long daylight"
+   ],
+   "why": "The trend is that height rises as sunlight hours rise, and this answers the aim. The option about all plants goes beyond bean seedlings, so the data does not support it. Reversing the trend contradicts the graph.",
+   "clue": "A conclusion must match the trend and only claim what was tested."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The height of a plant measured each day for 10 days",
+   "also_right": []
+  },
+  "b": {
+   "best": "Seedlings grew taller as the hours of sunlight increased",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) refers to 'the option about all plants' as if there were only one. Two distractors overreach: 'Sunlight is the only thing that makes any plant grow' and 'Seedlings of all kinds grow best in very long daylight'. The explanation should say why both are wrong."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, graph and both questions are accurate, and the intended answers are correct. The only issue is minor: why (b) speaks of a single 'all plants' option when two distractors overgeneralise."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: Why (b) refers to 'the option about all plants' as if there were only one. Two distractors overreach: 'Sunlight is the only thing that makes any plant grow' and 'Seedlings of all kinds grow best in very long daylight'. The explanation should say why both are wrong."
+ ],
+ "proposal": {
+  "title": "Graphs and conclusions",
+  "card": [
+   [
+    "Column graph",
+    "Use it when the data is in separate categories, such as the colour of flowers or the type of pet. Each category gets its own column."
+   ],
+   [
+    "Line graph",
+    "Use it when the data is measured values that change, such as temperature over time. The independent variable goes on the x-axis and the dependent variable on the y-axis."
+   ],
+   [
+    "Trend",
+    "A trend is the pattern in the data. For example, the line may rise, fall or stay flat as the independent variable changes."
+   ],
+   [
+    "Conclusion",
+    "A conclusion uses the trend to answer the aim. It states what the data shows, and it only claims what the results support."
+   ]
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A line graph of water temperature in degrees Celsius against time in minutes. The line rises steadily from 20 degrees at 0 minutes to 60 degrees at 8 minutes.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Time (min)",
+     "step": 2
+    },
+    "y": {
+     "min": 0,
+     "max": 80,
+     "label": "Temperature (°C)",
+     "step": 20
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "T",
+      "points": [
+       [
+        0,
+        20
+       ],
+       [
+        2,
+        30
+       ],
+       [
+        4,
+        40
+       ],
+       [
+        6,
+        50
+       ],
+       [
+        8,
+        60
+       ]
+      ],
+      "label": "Water",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Pick the graph to suit the data. Then use the trend to answer the aim.",
+  "a": {
+   "q": "Which data would be best shown on a line graph?",
+   "opts": [
+    "The height of a plant measured each day for 10 days",
+    "The number of students who chose each school sport",
+    "The favourite fruit of each student in a class",
+    "The number of cars of each colour in a car park"
+   ],
+   "why": "Plant height is a measured value that changes over time, so a line graph shows the trend. The other options sort things into separate categories, which suit column graphs.",
+   "clue": "Look for a measurement that changes as something else changes."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi's aim was to find out if more sunlight makes bean seedlings grow taller. His graph shows seedling height rising as hours of sunlight per day increase. Which conclusion fits his data?",
+   "opts": [
+    "Seedlings grew taller as the hours of sunlight increased",
+    "Sunlight is the only thing that makes any plant grow",
+    "Seedlings grew taller as the hours of sunlight decreased",
+    "Seedlings of all kinds grow best in very long daylight"
+   ],
+   "why": "The trend is that height rises as sunlight hours rise, and this answers the aim. The claims that sunlight is the only thing that makes plants grow, and that all kinds of seedlings grow best in very long daylight, both go beyond what Ravi tested, since he only measured bean seedlings over the sunlight hours he used. Saying seedlings grew taller with less sunlight reverses the trend and contradicts the graph.",
+   "clue": "A conclusion must match the trend and only claim what was tested."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The height of a plant measured each day for 10 days",
+    "also_right": []
+   },
+   "b": {
+    "best": "Seedlings grew taller as the hours of sunlight increased",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) refers to 'the option about all plants' as if there were only one. Two distractors overreach: 'Sunlight is the only thing that makes any plant grow' and 'Seedlings of all kinds grow best in very long daylight'. The explanation should say why both are wrong."
+   }
+  ],
+  "flags": [
+   "Question b, wording: Why (b) refers to 'the option about all plants' as if there were only one. Two distractors overreach: 'Sunlight is the only thing that makes any plant grow' and 'Seedlings of all kinds grow best in very long daylight'. The explanation should say why both are wrong."
+  ]
+ },
+ "final": {
+  "title": "Graphs and conclusions",
+  "card": [
+   [
+    "Column graph",
+    "Use it when the data is in separate categories, such as the colour of flowers or the type of pet. Each category gets its own column."
+   ],
+   [
+    "Line graph",
+    "Use it when the data is measured values that change, such as temperature over time. The independent variable goes on the x-axis and the dependent variable on the y-axis."
+   ],
+   [
+    "Trend",
+    "A trend is the pattern in the data. For example, the line may rise, fall or stay flat as the independent variable changes."
+   ],
+   [
+    "Conclusion",
+    "A conclusion uses the trend to answer the aim. It states what the data shows, and it only claims what the results support."
+   ]
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A line graph of water temperature in degrees Celsius against time in minutes. The line rises steadily from 20 degrees at 0 minutes to 60 degrees at 8 minutes.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Time (min)",
+     "step": 2
+    },
+    "y": {
+     "min": 0,
+     "max": 80,
+     "label": "Temperature (°C)",
+     "step": 20
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "T",
+      "points": [
+       [
+        0,
+        20
+       ],
+       [
+        2,
+        30
+       ],
+       [
+        4,
+        40
+       ],
+       [
+        6,
+        50
+       ],
+       [
+        8,
+        60
+       ]
+      ],
+      "label": "Water",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Pick the graph to suit the data. Then use the trend to answer the aim.",
+  "a": {
+   "q": "Which data would be best shown on a line graph?",
+   "opts": [
+    "The height of a plant measured each day for 10 days",
+    "The number of students who chose each school sport",
+    "The favourite fruit of each student in a class",
+    "The number of cars of each colour in a car park"
+   ],
+   "why": "Plant height is a measured value that changes over time, so a line graph shows the trend. The other options sort things into separate categories, which suit column graphs.",
+   "clue": "Look for a measurement that changes as something else changes."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi's aim was to find out if more sunlight makes bean seedlings grow taller. His graph shows seedling height rising as hours of sunlight per day increase. Which conclusion fits his data?",
+   "opts": [
+    "Seedlings grew taller as the hours of sunlight increased",
+    "Sunlight is the only thing that makes any plant grow",
+    "Seedlings grew taller as the hours of sunlight decreased",
+    "Seedlings of all kinds grow best in very long daylight"
+   ],
+   "why": "The trend is that height rises as sunlight hours rise, and this answers the aim. The claims that sunlight is the only thing that makes plants grow, and that all kinds of seedlings grow best in very long daylight, both go beyond what Ravi tested, since he only measured bean seedlings over the sunlight hours he used. Saying seedlings grew taller with less sunlight reverses the trend and contradicts the graph.",
+   "clue": "A conclusion must match the trend and only claim what was tested."
+  }
+ },
+ "cleared_by": "recheck"
 }

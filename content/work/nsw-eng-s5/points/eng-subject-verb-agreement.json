@@ -12,8 +12,236 @@
    0.247
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:48Z write: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 8e-05,
+  "write": 0.00602,
+  "check": 0.01524,
+  "fix": 0.02051,
+  "recheck": 0.0075
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches subject-verb agreement: abstract nouns and nominalisation are different grammar ideas, so the new point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Subject-verb agreement",
+  "card": [
+   "A verb must agree with its subject. A singular subject takes a singular verb (\"the dog barks\"). A plural subject takes a plural verb (\"the dogs bark\").",
+   "Find the subject by asking who or what does the action or is described. Words that come between the subject and the verb do not change it.",
+   "In a long noun group, the subject is the main noun, called the head noun. In \"the list of names on the wall is long\", the head noun is list, so the verb is singular.",
+   "A collective noun, such as team, class or flock, names a group as one unit. It usually takes a singular verb: \"The team wins.\""
+  ],
+  "remember": "Find the head noun of the subject, then match the verb to it.",
+  "a": {
+   "q": "Which sentence has a verb that agrees with its subject?",
+   "opts": [
+    "The box of old photos was on the shelf",
+    "The box of old photos were on the shelf",
+    "The box of old photos are on the shelf",
+    "The box of old photos were in the shelf"
+   ],
+   "why": "The head noun is box, which is singular, so the verb must be singular: was. The word photos is plural, but it sits inside the group \"of old photos\" and does not control the verb.",
+   "clue": "Which noun is the subject: box or photos?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which sentence is correct? Mia is writing about her school netball squad.",
+   "opts": [
+    "The squad trains every Tuesday morning",
+    "The squad train every Tuesday morning",
+    "The squad have trained every Tuesday morning",
+    "The squad are training every Tuesday morning"
+   ],
+   "why": "Squad is a collective noun that names one group, so it takes a singular verb: trains. The other options use plural verbs, which are tempting because a squad has many players, but the sentence treats the group as one unit.",
+   "clue": "The group acts as one unit."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The box of old photos was on the shelf",
+   "also_right": []
+  },
+  "b": {
+   "best": "The squad trains every Tuesday morning",
+   "also_right": [
+    "The squad train every Tuesday morning",
+    "The squad are training every Tuesday morning",
+    "The squad have trained every Tuesday morning"
+   ]
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Australian English accepts plural agreement with collective nouns when the members are thought of as individuals (\"The squad are training\"). The card itself says collective nouns only \"usually\" take a singular verb, so a careful teacher could defend the three plural options as correct."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem asks which sentence is \"correct\", but nothing in Mia's context shows the squad acting as one unit. Only the clue supplies that, so the question does not rule out the plural options. Ask which sentence treats the squad as one unit, or which follows the usual rule for collective nouns."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says the other options are wrong because \"the sentence treats the group as one unit\", but the sentences do not establish this. It also presents plural agreement as an error, while the card says \"usually\"."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "Question a is sound. Question b marks the plural verbs wrong, but plural agreement with a collective noun is accepted in Australian English and the card only says \"usually\". The stem should ask about the usual rule or treating the group as one unit, rather than which sentence is correct."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker says “The squad train every Tuesday morning” could also be right.",
+  "Question b: the checker says “The squad are training every Tuesday morning” could also be right.",
+  "Question b: the checker says “The squad have trained every Tuesday morning” could also be right.",
+  "Question b, fact: Australian English accepts plural agreement with collective nouns when the members are thought of as individuals (\"The squad are training\"). The card itself says collective nouns only \"usually\" take a singular verb, so a careful teacher could defend the three plural options as correct.",
+  "Question b, wording: The stem asks which sentence is \"correct\", but nothing in Mia's context shows the squad acting as one unit. Only the clue supplies that, so the question does not rule out the plural options. Ask which sentence treats the squad as one unit, or which follows the usual rule for collective nouns.",
+  "Question b, other: The why says the other options are wrong because \"the sentence treats the group as one unit\", but the sentences do not establish this. It also presents plural agreement as an error, while the card says \"usually\"."
+ ],
+ "proposal": {
+  "title": "Subject-verb agreement",
+  "card": [
+   "A verb must agree with its subject. A singular subject takes a singular verb (\"the dog barks\"). A plural subject takes a plural verb (\"the dogs bark\").",
+   "Find the subject by asking who or what does the action or is described. Words that come between the subject and the verb do not change it.",
+   "In a long noun group, the subject is the main noun, called the head noun. In \"the list of names on the wall is long\", the head noun is list, so the verb is singular.",
+   "A collective noun, such as team, class or flock, names a group. When the group acts as one unit, it takes a singular verb: \"The team wins.\" Australian English also allows a plural verb when the members act as individuals."
+  ],
+  "remember": "Find the head noun of the subject, then match the verb to it.",
+  "a": {
+   "q": "Which sentence has a verb that agrees with its subject?",
+   "opts": [
+    "The box of old photos was on the shelf",
+    "The box of old photos were on the shelf",
+    "The box of old photos are on the shelf",
+    "The box of old photos have been on the shelf"
+   ],
+   "why": "The head noun is box, which is singular, so the verb must be singular: was. The word photos is plural, but it sits inside the group \"of old photos\" and does not control the verb.",
+   "clue": "Which noun is the subject: box or photos?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's netball squad trains together as one group. Which sentence treats the squad as one unit?",
+   "opts": [
+    "The squad of new players trains every Tuesday",
+    "The squad of new players train every Tuesday",
+    "The squad of new players are training every Tuesday",
+    "The squad of new players have trained every Tuesday"
+   ],
+   "why": "The head noun is squad, and the singular verb trains treats the squad as one unit. The other three use plural verbs, which treat the members as individuals. They are tempting because the plural word players sits right before the verb, but it is not the head noun.",
+   "clue": "Find the head noun first, then ask if the verb is singular."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The box of old photos was on the shelf",
+    "also_right": []
+   },
+   "b": {
+    "best": "The squad of new players trains every Tuesday",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Australian English accepts plural agreement with collective nouns when the members are thought of as individuals (\"The squad are training\"). The card itself says collective nouns only \"usually\" take a singular verb, so a careful teacher could defend the three plural options as correct."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem asks which sentence is \"correct\", but nothing in Mia's context shows the squad acting as one unit. Only the clue supplies that, so the question does not rule out the plural options. Ask which sentence treats the squad as one unit, or which follows the usual rule for collective nouns."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says the other options are wrong because \"the sentence treats the group as one unit\", but the sentences do not establish this. It also presents plural agreement as an error, while the card says \"usually\"."
+   }
+  ],
+  "flags": [
+   "Question b: the checker says “The squad train every Tuesday morning” could also be right.",
+   "Question b: the checker says “The squad are training every Tuesday morning” could also be right.",
+   "Question b: the checker says “The squad have trained every Tuesday morning” could also be right.",
+   "Question b, fact: Australian English accepts plural agreement with collective nouns when the members are thought of as individuals (\"The squad are training\"). The card itself says collective nouns only \"usually\" take a singular verb, so a careful teacher could defend the three plural options as correct.",
+   "Question b, wording: The stem asks which sentence is \"correct\", but nothing in Mia's context shows the squad acting as one unit. Only the clue supplies that, so the question does not rule out the plural options. Ask which sentence treats the squad as one unit, or which follows the usual rule for collective nouns.",
+   "Question b, other: The why says the other options are wrong because \"the sentence treats the group as one unit\", but the sentences do not establish this. It also presents plural agreement as an error, while the card says \"usually\"."
+  ]
+ },
+ "final": {
+  "title": "Subject-verb agreement",
+  "card": [
+   "A verb must agree with its subject. A singular subject takes a singular verb (\"the dog barks\"). A plural subject takes a plural verb (\"the dogs bark\").",
+   "Find the subject by asking who or what does the action or is described. Words that come between the subject and the verb do not change it.",
+   "In a long noun group, the subject is the main noun, called the head noun. In \"the list of names on the wall is long\", the head noun is list, so the verb is singular.",
+   "A collective noun, such as team, class or flock, names a group. When the group acts as one unit, it takes a singular verb: \"The team wins.\" Australian English also allows a plural verb when the members act as individuals."
+  ],
+  "remember": "Find the head noun of the subject, then match the verb to it.",
+  "a": {
+   "q": "Which sentence has a verb that agrees with its subject?",
+   "opts": [
+    "The box of old photos was on the shelf",
+    "The box of old photos were on the shelf",
+    "The box of old photos are on the shelf",
+    "The box of old photos have been on the shelf"
+   ],
+   "why": "The head noun is box, which is singular, so the verb must be singular: was. The word photos is plural, but it sits inside the group \"of old photos\" and does not control the verb.",
+   "clue": "Which noun is the subject: box or photos?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's netball squad trains together as one group. Which sentence treats the squad as one unit?",
+   "opts": [
+    "The squad of new players trains every Tuesday",
+    "The squad of new players train every Tuesday",
+    "The squad of new players are training every Tuesday",
+    "The squad of new players have trained every Tuesday"
+   ],
+   "why": "The head noun is squad, and the singular verb trains treats the squad as one unit. The other three use plural verbs, which treat the members as individuals. They are tempting because the plural word players sits right before the verb, but it is not the head noun.",
+   "clue": "Find the head noun first, then ask if the verb is singular."
+  }
+ },
+ "cleared_by": "recheck"
 }

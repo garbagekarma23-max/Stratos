@@ -8,8 +8,222 @@
    0.22
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:41Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: failed the content check, writing again",
+  "2026-11-20T12:44:53Z write: done",
+  "2026-11-20T12:53:24Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 6e-05,
+  "write": 0.01336,
+  "check": 0.01111,
+  "fix": 0.02033,
+  "recheck": 0.00992
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the planning, drafting and editing stages of writing, not how to use feedback from a draft, a model text or classmates to find changes and reflect on what worked, so it is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Using feedback",
+  "card": [
+   "Feedback shows how a draft compares with what it should be. It can come from the task, a model text or a classmate.",
+   [
+    "Task or model",
+    "check the draft against the task, or read a good example of the same type of text. Notice how it opens, how it is ordered and which words it chooses."
+   ],
+   [
+    "Classmate",
+    "a classmate reads your draft and says what is clear and what is confusing. They may see problems that you miss."
+   ],
+   "After you use feedback, reflect. Ask what worked and what to do differently next time. Then change the draft."
+  ],
+  "remember": "Compare your draft with the task, a model or a reader, then reflect on what to change.",
+  "a": {
+   "q": "Sam reads a model text about a school trip, then notices his own draft has no clear opening. What is Sam doing?",
+   "opts": [
+    "Comparing his draft with a model text to find a change",
+    "Asking a classmate to comment on his draft",
+    "Checking his draft against the written task only",
+    "Reflecting on what worked after finishing the draft"
+   ],
+   "why": "Sam is using a model text as feedback. He compares how the model opens with his own draft and sees what to change. He has not asked a classmate, because no one else has read his draft.",
+   "clue": "What did Sam read before he noticed the problem?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's task is a speech to persuade Year 7 students to join a club. A classmate says her draft sounds like a report. What should Priya do first?",
+   "opts": [
+    "Compare the draft with the task and the form it asks for",
+    "Ask the classmate to correct her spelling and punctuation",
+    "Decide the comment is wrong because a classmate wrote it",
+    "Add more facts to make the draft longer"
+   ],
+   "why": "The comment suggests the draft may not suit the form the task asks for. Priya should compare it with the task, then change it. Fixing spelling would not solve a problem with form.",
+   "clue": "The comment is about the type of text, not small errors."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Comparing his draft with a model text to find a change",
+   "also_right": []
+  },
+  "b": {
+   "best": "Compare the draft with the task and the form it asks for",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option repeats the stem's phrase 'model text', and no other option mentions it. A student can match the words without understanding the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate. In question a, the right option reuses the stem's words 'model text', so a student could pick it by matching words."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option repeats the stem's phrase 'model text', and no other option mentions it. A student can match the words without understanding the idea."
+ ],
+ "proposal": {
+  "title": "Using feedback",
+  "card": [
+   "Feedback shows how a draft compares with what it should be. It can come from the task, a model text or a classmate.",
+   [
+    "Task or model",
+    "check the draft against the task, or read a model text: a good example of the same type of text. Notice how it opens, how it is ordered and which words it chooses."
+   ],
+   [
+    "Classmate",
+    "a classmate reads your draft and says what is clear and what is confusing. They may see problems that you miss."
+   ],
+   "After you use feedback, reflect. Ask what worked and what to do differently next time. Then change the draft."
+  ],
+  "remember": "Compare your draft with the task, a model or a reader, then reflect on what to change.",
+  "a": {
+   "q": "Sam is writing a recount of a school trip. He reads a published recount of another trip and sees it opens with a clear hook. His own draft does not. Which kind of feedback is Sam using?",
+   "opts": [
+    "A good example of the same type of text",
+    "A classmate's comments on his draft",
+    "The wording of the task he was set",
+    "His teacher's comments on the draft"
+   ],
+   "why": "Sam is using a model text, a good example of the kind of text he is writing. He compares how it opens with his own draft and sees what to change. It is not comments from a classmate or teacher, because no one else has read his draft.",
+   "clue": "What did Sam read before he noticed the problem?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's task is a speech to persuade Year 7 students to join a club. A classmate says her draft sounds like a report. What should Priya do first?",
+   "opts": [
+    "Compare the draft with the task and the form it asks for",
+    "Ask the classmate to correct her spelling and punctuation",
+    "Decide the comment is wrong because a classmate wrote it",
+    "Add more facts so that the draft becomes longer"
+   ],
+   "why": "The comment suggests the draft may not suit the form the task asks for. Priya should compare it with the task, then change it. Fixing spelling would not solve a problem with form.",
+   "clue": "The comment is about the type of text, not small errors."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A good example of the same type of text",
+    "also_right": []
+   },
+   "b": {
+    "best": "Compare the draft with the task and the form it asks for",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 17,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option repeats the stem's phrase 'model text', and no other option mentions it. A student can match the words without understanding the idea."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The right option repeats the stem's phrase 'model text', and no other option mentions it. A student can match the words without understanding the idea."
+  ]
+ },
+ "final": {
+  "title": "Using feedback",
+  "card": [
+   "Feedback shows how a draft compares with what it should be. It can come from the task, a model text or a classmate.",
+   [
+    "Task or model",
+    "check the draft against the task, or read a model text: a good example of the same type of text. Notice how it opens, how it is ordered and which words it chooses."
+   ],
+   [
+    "Classmate",
+    "a classmate reads your draft and says what is clear and what is confusing. They may see problems that you miss."
+   ],
+   "After you use feedback, reflect. Ask what worked and what to do differently next time. Then change the draft."
+  ],
+  "remember": "Compare your draft with the task, a model or a reader, then reflect on what to change.",
+  "a": {
+   "q": "Sam is writing a recount of a school trip. He reads a published recount of another trip and sees it opens with a clear hook. His own draft does not. Which kind of feedback is Sam using?",
+   "opts": [
+    "A good example of the same type of text",
+    "A classmate's comments on his draft",
+    "The wording of the task he was set",
+    "His teacher's comments on the draft"
+   ],
+   "why": "Sam is using a model text, a good example of the kind of text he is writing. He compares how it opens with his own draft and sees what to change. It is not comments from a classmate or teacher, because no one else has read his draft.",
+   "clue": "What did Sam read before he noticed the problem?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's task is a speech to persuade Year 7 students to join a club. A classmate says her draft sounds like a report. What should Priya do first?",
+   "opts": [
+    "Compare the draft with the task and the form it asks for",
+    "Ask the classmate to correct her spelling and punctuation",
+    "Decide the comment is wrong because a classmate wrote it",
+    "Add more facts so that the draft becomes longer"
+   ],
+   "why": "The comment suggests the draft may not suit the form the task asks for. Priya should compare it with the task, then change it. Fixing spelling would not solve a problem with form.",
+   "clue": "The comment is about the type of text, not small errors."
+  }
+ },
+ "cleared_by": "recheck"
 }

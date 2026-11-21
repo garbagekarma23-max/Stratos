@@ -20,8 +20,236 @@
    0.217
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:41Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: failed the content check, writing again",
+  "2026-11-20T12:44:53Z write: done",
+  "2026-11-20T12:53:24Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T14:32:22Z review: rejected, to be written again",
+  "2026-11-20T14:58:18Z claude-code write: failed the content check, to be written once more",
+  "2026-11-20T14:59:14Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.01349,
+  "check": 0.01122,
+  "fix": 0.01714
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, eng-persuasive-devices, covers rhetorical questions, emotive words and inclusive language but not lists of three, which the brief requires, and it adds statistics, which the brief does not ask for, so adding the missing device would go beyond small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Persuasive language devices",
+  "card": [
+   [
+    "Rhetorical question",
+    "a question asked for effect, not for an answer. It makes the reader think the answer is obvious and lean towards the writer's view."
+   ],
+   [
+    "Emotive words",
+    "words chosen to stir a feeling. \"Heartless\" and \"cherished\" push a reader to feel angry or caring, which can win them over before they weigh the facts."
+   ],
+   [
+    "Inclusive language",
+    "words such as we, us and our. They place the writer and the reader on the same side, so the view feels shared."
+   ],
+   [
+    "List of three",
+    "three items or phrases in a row, such as \"quick, cheap and safe\". The rhythm makes the point sound complete and easy to remember."
+   ]
+  ],
+  "remember": "Each device moves a reader in its own way: thought, feeling, belonging or rhythm.",
+  "a": {
+   "q": "A speaker asks the crowd, \"Who wants a rubbish tip in our creek?\" They do not expect a reply. Which device is this?",
+   "opts": [
+    "A rhetorical question",
+    "A list of three",
+    "An emotive word",
+    "Inclusive language"
+   ],
+   "why": "The speaker does not want an answer. The question is asked so the crowd thinks the answer is obviously no. It is not a list of three, because it names no group of three items.",
+   "clue": "Does the speaker want anyone to reply?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia writes in a school newsletter: \"Let's all join together and clean up our playground.\" How does her language mainly move readers towards her view?",
+   "opts": [
+    "It makes readers feel they are on the same team",
+    "It makes readers feel angry about the playground",
+    "It gives readers facts to prove the playground is dirty",
+    "It gives readers a rhythm they can easily remember"
+   ],
+   "why": "Let's, all, together and our are inclusive language. They place Mia and her readers on the same side. The sentence has no strong emotive words or facts, and it does not use a list of three.",
+   "clue": "Look at the small words such as let's and our."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:18Z",
+   "step": "write",
+   "version": {
+    "title": "Persuasive language devices",
+    "card": [
+     [
+      "Rhetorical question",
+      "a question asked for effect, not for a reply. It leads the audience to the answer the writer wants, so the view seems obvious."
+     ],
+     [
+      "Emotive language",
+      "words chosen to stir strong feelings, such as \"cruel\" or \"precious\". Feeling angry or caring can push an audience towards a view before they weigh the facts."
+     ],
+     [
+      "Inclusive language",
+      "words such as we, us and our. They put the writer and the audience on the same side, so the view feels shared."
+     ],
+     [
+      "List of three",
+      "three words or phrases in a row, such as \"cheaper, faster and safer\". The rhythm makes a point sound complete and easy to remember."
+     ]
+    ],
+    "remember": "Persuasive devices work on how an audience thinks and feels, nudging them towards the writer's view.",
+    "a": {
+     "q": "A council flyer says: \"The new bike path will be safer, greener and quicker.\" Which device does this sentence use?",
+     "opts": [
+      "A list of three",
+      "A rhetorical question",
+      "Inclusive language",
+      "Emotive language"
+     ],
+     "why": "Safer, greener and quicker are three items in a row, which gives the claim rhythm and makes it easy to remember. There is no we, us or our, so it is not inclusive language.",
+     "clue": "Count the describing words that sit in a row."
+    },
+    "b": {
+     "d": 3,
+     "q": "An ad for an animal shelter says: \"These frightened, abandoned puppies are waiting for someone to love them.\" How do the words mainly move readers?",
+     "opts": [
+      "They stir pity, so readers want to help the puppies",
+      "They put readers on the shelter's side with we and us",
+      "They ask a question, so the answer seems obvious",
+      "They give facts, so readers can judge the need calmly"
+     ],
+     "why": "Frightened and abandoned are emotive words chosen to make readers feel pity, which pushes them to help. The sentence gives no facts or figures to judge calmly, and it has no we or us.",
+     "clue": "Which words are there to make you feel something?"
+    }
+   },
+   "problems": [
+    "eng-persuasive-language-devices quotes more than 10 words: \"These frightened, abandoned puppies are waiting for someone to love them.\""
+   ]
+  },
+  {
+   "at": "2026-11-20T14:59:14Z",
+   "step": "write",
+   "version": {
+    "title": "Persuasive language devices",
+    "card": [
+     [
+      "Rhetorical question",
+      "a question asked for effect, not for a reply. It leads the audience to the answer the writer wants, so the view seems obvious."
+     ],
+     [
+      "Emotive language",
+      "words chosen to stir strong feelings, such as \"cruel\" or \"precious\". Feeling angry or caring can push an audience towards a view before they weigh the facts."
+     ],
+     [
+      "Inclusive language",
+      "words such as we, us and our. They put the writer and the audience on the same side, so the view feels shared."
+     ],
+     [
+      "List of three",
+      "three words or phrases in a row, such as \"cheaper, faster and safer\". The rhythm makes a point sound complete and easy to remember."
+     ]
+    ],
+    "remember": "Persuasive devices work on how an audience thinks and feels, nudging them towards the writer's view.",
+    "a": {
+     "q": "A council flyer says: \"The new bike path will be safer, greener and quicker.\" Which device does this sentence use?",
+     "opts": [
+      "A list of three",
+      "A rhetorical question",
+      "Inclusive language",
+      "Emotive language"
+     ],
+     "why": "Safer, greener and quicker are three items in a row, which gives the claim rhythm and makes it easy to remember. There is no we, us or our, so it is not inclusive language.",
+     "clue": "Count the describing words that sit in a row."
+    },
+    "b": {
+     "d": 3,
+     "q": "An ad for an animal shelter says: \"These frightened, abandoned puppies need a home.\" How do the words mainly move readers?",
+     "opts": [
+      "They stir pity, so readers want to help the puppies",
+      "They put readers on the shelter's side with we and us",
+      "They ask a question, so the answer seems obvious",
+      "They give facts, so readers can judge the need calmly"
+     ],
+     "why": "Frightened and abandoned are emotive words chosen to make readers feel pity, which pushes them to help. The sentence gives no facts or figures to judge calmly, and it has no we or us.",
+     "clue": "Which words are there to make you feel something?"
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Persuasive language devices",
+  "card": [
+   [
+    "Rhetorical question",
+    "a question asked for effect, not for a reply. It leads the audience to the answer the writer wants, so the view seems obvious."
+   ],
+   [
+    "Emotive language",
+    "words chosen to stir strong feelings, such as \"cruel\" or \"precious\". Feeling angry or caring can push an audience towards a view before they weigh the facts."
+   ],
+   [
+    "Inclusive language",
+    "words such as we, us and our. They put the writer and the audience on the same side, so the view feels shared."
+   ],
+   [
+    "List of three",
+    "three words or phrases in a row, such as \"cheaper, faster and safer\". The rhythm makes a point sound complete and easy to remember."
+   ]
+  ],
+  "remember": "Persuasive devices work on how an audience thinks and feels, nudging them towards the writer's view.",
+  "a": {
+   "q": "A council flyer says: \"The new bike path will be safer, greener and quicker.\" Which device does this sentence use?",
+   "opts": [
+    "A list of three",
+    "A rhetorical question",
+    "Inclusive language",
+    "Emotive language"
+   ],
+   "why": "Safer, greener and quicker are three items in a row, which gives the claim rhythm and makes it easy to remember. There is no we, us or our, so it is not inclusive language.",
+   "clue": "Count the describing words that sit in a row."
+  },
+  "b": {
+   "d": 3,
+   "q": "An ad for an animal shelter says: \"These frightened, abandoned puppies need a home.\" How do the words mainly move readers?",
+   "opts": [
+    "They stir pity, so readers want to help the puppies",
+    "They put readers on the shelter's side with we and us",
+    "They ask a question, so the answer seems obvious",
+    "They give facts, so readers can judge the need calmly"
+   ],
+   "why": "Frightened and abandoned are emotive words chosen to make readers feel pity, which pushes them to help. The sentence gives no facts or figures to judge calmly, and it has no we or us.",
+   "clue": "Which words are there to make you feel something?"
+  }
+ },
+ "redone": true,
+ "local": []
 }

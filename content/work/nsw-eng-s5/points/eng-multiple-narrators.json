@@ -20,8 +20,117 @@
    0.213
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:47Z write: failed the content check, writing again",
+  "2026-11-20T12:44:54Z write: done",
+  "2026-11-20T13:11:47Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.02545,
+  "check": 0.00876
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches the idea of several narrators taking turns, with each giving a partial view that readers compare; they all cover single narrators, narrator types, reliability or voice.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Multiple narrators",
+  "card": [
+   "Some texts are told by several narrators in turn. A novel might hand each chapter to a different character, who tells that part in their own voice.",
+   "Each narrator gives a partial view. They only know what they have seen, heard or been told, and they tell it through their own feelings and beliefs.",
+   "The reader builds a fuller picture by comparing the narrators. Where two accounts agree, the reader can be more confident. Where they differ, the reader asks why.",
+   "For example, one narrator calls an argument a harmless joke, while another remembers being hurt. Neither tells the whole story, but together they show more than either could alone."
+  ],
+  "remember": "Each narrator sees only part of the story, so the reader compares them to see more.",
+  "a": {
+   "q": "Why might an author tell a story through several narrators in turn?",
+   "opts": [
+    "Each gives a partial view, so readers can compare them",
+    "One narrator always knows more than all the others",
+    "It lets the author speak directly to the reader",
+    "It makes sure every narrator is honest and reliable"
+   ],
+   "why": "Each narrator sees only part of events, so the reader gains a fuller picture by comparing them. It is wrong to think one narrator always knows more: the card says each view is partial.",
+   "clue": "Think about what the reader does with the different accounts."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a novel, Priya says the school camp was a great success. In the next chapter, her friend Tom describes feeling left out and lonely at the same camp. What does the reader gain from reading both chapters?",
+   "opts": [
+    "A fuller picture, as each shows a different part",
+    "The truth, because Tom's account cancels out Priya's",
+    "Proof that Priya is lying about the camp",
+    "A single view, because both narrators agree on events"
+   ],
+   "why": "Priya and Tom each give a partial view, and comparing them shows that the camp felt different to each of them. It is tempting to say Priya is lying, but a different experience does not mean she is dishonest.",
+   "clue": "A difference between accounts does not always mean someone is lying."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Each gives a partial view, so readers can compare them",
+   "also_right": []
+  },
+  "b": {
+   "best": "A fuller picture, as each shows a different part",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Multiple narrators",
+  "card": [
+   "Some texts are told by several narrators in turn. A novel might hand each chapter to a different character, who tells that part in their own voice.",
+   "Each narrator gives a partial view. They only know what they have seen, heard or been told, and they tell it through their own feelings and beliefs.",
+   "The reader builds a fuller picture by comparing the narrators. Where two accounts agree, the reader can be more confident. Where they differ, the reader asks why.",
+   "For example, one narrator calls an argument a harmless joke, while another remembers being hurt. Neither tells the whole story, but together they show more than either could alone."
+  ],
+  "remember": "Each narrator sees only part of the story, so the reader compares them to see more.",
+  "a": {
+   "q": "Why might an author tell a story through several narrators in turn?",
+   "opts": [
+    "Each gives a partial view, so readers can compare them",
+    "One narrator always knows more than all the others",
+    "It lets the author speak directly to the reader",
+    "It makes sure every narrator is honest and reliable"
+   ],
+   "why": "Each narrator sees only part of events, so the reader gains a fuller picture by comparing them. It is wrong to think one narrator always knows more: the card says each view is partial.",
+   "clue": "Think about what the reader does with the different accounts."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a novel, Priya says the school camp was a great success. In the next chapter, her friend Tom describes feeling left out and lonely at the same camp. What does the reader gain from reading both chapters?",
+   "opts": [
+    "A fuller picture, as each shows a different part",
+    "The truth, because Tom's account cancels out Priya's",
+    "Proof that Priya is lying about the camp",
+    "A single view, because both narrators agree on events"
+   ],
+   "why": "Priya and Tom each give a partial view, and comparing them shows that the camp felt different to each of them. It is tempting to say Priya is lying, but a different experience does not mean she is dishonest.",
+   "clue": "A difference between accounts does not always mean someone is lying."
+  }
+ },
+ "cleared_by": "checker"
 }

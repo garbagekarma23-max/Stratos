@@ -24,8 +24,157 @@
    0.365
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:53Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:53Z write: failed the content check, writing again",
+  "2026-11-20T12:44:58Z write: done",
+  "2026-11-20T12:53:27Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.01857,
+  "check": 0.00786
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No single bank point covers all three rules in the brief: the corresponding and alternate angles card lacks the co-interior angles rule, and the co-interior card lacks the corresponding and alternate rules, so adding the missing rule would be more than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Angles and parallel lines",
+  "card": [
+   [
+    "Transversal",
+    "A transversal is a line that crosses two or more other lines. When it crosses two parallel lines, it makes eight angles, and some of them are linked."
+   ],
+   [
+    "Corresponding",
+    "angles in matching positions at the two crossings, such as both above the line and both to the right of the transversal (an F shape). They are equal."
+   ],
+   [
+    "Alternate",
+    "angles on opposite sides of the transversal and between the parallel lines (a Z shape). They are equal."
+   ],
+   [
+    "Co-interior",
+    "angles on the same side of the transversal and between the parallel lines (a C shape). They add to \\(180^{\\circ}\\). Example: if one is \\(70^{\\circ}\\), the other is \\(180^{\\circ} - 70^{\\circ} = 110^{\\circ}\\)."
+   ]
+  ],
+  "remember": "Parallel lines: F angles are equal, Z angles are equal, C angles add to \\(180^{\\circ}\\).",
+  "a": {
+   "q": "Two parallel lines are cut by a transversal. Between the lines, on the same side of the transversal, one angle is \\(65^{\\circ}\\). What is the other angle on that side?",
+   "opts": [
+    "\\(115^{\\circ}\\)",
+    "\\(65^{\\circ}\\)",
+    "\\(25^{\\circ}\\)",
+    "\\(295^{\\circ}\\)"
+   ],
+   "why": "These are co-interior angles, which add to \\(180^{\\circ}\\), so the other is \\(180^{\\circ} - 65^{\\circ} = 115^{\\circ}\\). The answer \\(65^{\\circ}\\) treats them as equal, which is true for corresponding and alternate angles but not co-interior angles.",
+   "clue": "Same side and between the lines makes a C shape."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two parallel fences are crossed by a path. One angle between the path and the upper fence is \\(48^{\\circ}\\). The alternate angle is between the path and the lower fence. What is its size?",
+   "opts": [
+    "\\(48^{\\circ}\\)",
+    "\\(132^{\\circ}\\)",
+    "\\(42^{\\circ}\\)",
+    "\\(312^{\\circ}\\)"
+   ],
+   "why": "Alternate angles between parallel lines are equal, so the angle is \\(48^{\\circ}\\). The answer \\(132^{\\circ}\\) comes from using the co-interior rule, which applies to angles on the same side of the path, not opposite sides.",
+   "clue": "Alternate angles make a Z shape."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "Two horizontal parallel lines marked with arrows, crossed by a slanted transversal. Label the eight angles at the two crossings. Show one pair of corresponding angles (F shape), one pair of alternate angles (Z shape) and one pair of co-interior angles (C shape), each pair highlighted in a different style and named.",
+    "why": "Seeing the F, Z and C shapes on one diagram helps students spot each type of angle pair."
+   }
+  ]
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(115^{\\circ}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(48^{\\circ}\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Angles and parallel lines",
+  "card": [
+   [
+    "Transversal",
+    "A transversal is a line that crosses two or more other lines. When it crosses two parallel lines, it makes eight angles, and some of them are linked."
+   ],
+   [
+    "Corresponding",
+    "angles in matching positions at the two crossings, such as both above the line and both to the right of the transversal (an F shape). They are equal."
+   ],
+   [
+    "Alternate",
+    "angles on opposite sides of the transversal and between the parallel lines (a Z shape). They are equal."
+   ],
+   [
+    "Co-interior",
+    "angles on the same side of the transversal and between the parallel lines (a C shape). They add to \\(180^{\\circ}\\). Example: if one is \\(70^{\\circ}\\), the other is \\(180^{\\circ} - 70^{\\circ} = 110^{\\circ}\\)."
+   ]
+  ],
+  "remember": "Parallel lines: F angles are equal, Z angles are equal, C angles add to \\(180^{\\circ}\\).",
+  "a": {
+   "q": "Two parallel lines are cut by a transversal. Between the lines, on the same side of the transversal, one angle is \\(65^{\\circ}\\). What is the other angle on that side?",
+   "opts": [
+    "\\(115^{\\circ}\\)",
+    "\\(65^{\\circ}\\)",
+    "\\(25^{\\circ}\\)",
+    "\\(295^{\\circ}\\)"
+   ],
+   "why": "These are co-interior angles, which add to \\(180^{\\circ}\\), so the other is \\(180^{\\circ} - 65^{\\circ} = 115^{\\circ}\\). The answer \\(65^{\\circ}\\) treats them as equal, which is true for corresponding and alternate angles but not co-interior angles.",
+   "clue": "Same side and between the lines makes a C shape."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two parallel fences are crossed by a path. One angle between the path and the upper fence is \\(48^{\\circ}\\). The alternate angle is between the path and the lower fence. What is its size?",
+   "opts": [
+    "\\(48^{\\circ}\\)",
+    "\\(132^{\\circ}\\)",
+    "\\(42^{\\circ}\\)",
+    "\\(312^{\\circ}\\)"
+   ],
+   "why": "Alternate angles between parallel lines are equal, so the angle is \\(48^{\\circ}\\). The answer \\(132^{\\circ}\\) comes from using the co-interior rule, which applies to angles on the same side of the path, not opposite sides.",
+   "clue": "Alternate angles make a Z shape."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "Two horizontal parallel lines marked with arrows, crossed by a slanted transversal. Label the eight angles at the two crossings. Show one pair of corresponding angles (F shape), one pair of alternate angles (Z shape) and one pair of co-interior angles (C shape), each pair highlighted in a different style and named.",
+    "why": "Seeing the F, Z and C shapes on one diagram helps students spot each type of angle pair."
+   }
+  ]
+ },
+ "cleared_by": "checker"
 }

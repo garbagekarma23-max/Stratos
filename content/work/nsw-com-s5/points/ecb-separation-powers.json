@@ -12,8 +12,231 @@
    0.299
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: failed the content check, writing again",
+  "2026-11-20T12:44:52Z write: done",
+  "2026-11-20T12:53:23Z check: flagged",
+  "2026-11-20T12:59:58Z fix: suggested",
+  "2026-11-20T13:37:05Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.01261,
+  "check": 0.01147,
+  "fix": 0.01834,
+  "recheck": 0.00808
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, leg-separation-powers-2, teaches the same idea but at senior Legal Studies depth, with Governor-General, responsible government and the overlap of executive and legislative power, which is more than a Stage 5 Commerce point needs, so the change in depth is too large for an adaptation.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The separation of powers",
+  "card": [
+   "The separation of powers splits government power into three parts. This stops any one person or group from holding all of it.",
+   [
+    "Legislature",
+    "parliament, which makes and changes laws."
+   ],
+   [
+    "Executive",
+    "the Prime Minister, ministers and government departments, who carry out the laws and run the country day to day."
+   ],
+   [
+    "Judiciary",
+    "the courts, which apply the laws and settle disputes about them."
+   ]
+  ],
+  "remember": "Three parts share power: parliament makes laws, the executive carries them out, the courts apply them.",
+  "a": {
+   "q": "A government department begins running a new program that parliament has passed into law. Which part of government is it acting as?",
+   "opts": [
+    "The executive, because it carries out a law",
+    "The legislature, because it works with a law",
+    "The judiciary, because it follows a law",
+    "The legislature, because it set up the program"
+   ],
+   "why": "Carrying out laws and running the country day to day is the job of the executive. The legislature makes laws, so a department running a program that is already law is not doing that.",
+   "clue": "Who makes the law, and who puts it into action?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A court in Perth hears a dispute about a business contract and decides what the law means for both sides. Why does this show the separation of powers at work?",
+   "opts": [
+    "Courts apply the law, separate from the lawmakers",
+    "Courts make the law, separate from the lawmakers",
+    "Courts carry out the law, separate from the lawmakers",
+    "Courts run the country, separate from the lawmakers"
+   ],
+   "why": "The court applies the law to a dispute. This is the job of the judiciary, which is separate from the parliament that makes laws and the executive that carries them out. The tempting option says courts make the law, but that is the job of parliament.",
+   "clue": "Which of the three parts settles disputes about the law?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The executive, because it carries out a law",
+   "also_right": []
+  },
+  "b": {
+   "best": "Courts apply the law, separate from the lawmakers",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) says making law is the job of parliament, not the courts. Australian courts also make common law through precedent, which students may meet in Commerce law topics. The why could say parliament is the main lawmaker, rather than implying courts never make law."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate, and each has one clear answer. One small issue: why (b) implies courts never make law, which overlooks common law made through precedent."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: Why (b) says making law is the job of parliament, not the courts. Australian courts also make common law through precedent, which students may meet in Commerce law topics. The why could say parliament is the main lawmaker, rather than implying courts never make law."
+ ],
+ "proposal": {
+  "title": "The separation of powers",
+  "card": [
+   "The separation of powers splits government power into three parts. This stops any one person or group from holding all of it.",
+   [
+    "Legislature",
+    "parliament, which makes and changes laws."
+   ],
+   [
+    "Executive",
+    "the Prime Minister, ministers and government departments, who carry out the laws and run the country day to day."
+   ],
+   [
+    "Judiciary",
+    "the courts, which apply the laws and settle disputes about them. They are separate from parliament and the executive."
+   ]
+  ],
+  "remember": "Three parts share power: parliament makes laws, the executive carries them out, the courts apply them.",
+  "a": {
+   "q": "A government department begins running a new program that parliament has passed into law. Which part of government is it acting as?",
+   "opts": [
+    "The executive, because it carries out a law",
+    "The legislature, because it works with a law",
+    "The judiciary, because it follows a law",
+    "The legislature, because it set up the program"
+   ],
+   "why": "Carrying out laws and running the country day to day is the job of the executive. The legislature makes laws, so a department running a program that is already law is not doing that.",
+   "clue": "Who makes the law, and who puts it into action?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A court in Perth hears a dispute about a business contract and decides what the law means for both sides. How does this show the separation of powers at work?",
+   "opts": [
+    "The judiciary applies the law, separate from parliament",
+    "The judiciary makes the law, as part of parliament",
+    "The executive carries out the law, through the courts",
+    "The legislature settles disputes, through the courts"
+   ],
+   "why": "The court is the judiciary, applying the law to settle a dispute. It is a separate part from parliament, the main lawmaker, and from the executive, which carries out the laws. The tempting option places the courts inside parliament, but the judiciary is its own separate part of government.",
+   "clue": "Which of the three parts settles disputes about the law?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:05Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The executive, because it carries out a law",
+    "also_right": []
+   },
+   "b": {
+    "best": "The judiciary applies the law, separate from parliament",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:05Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) says making law is the job of parliament, not the courts. Australian courts also make common law through precedent, which students may meet in Commerce law topics. The why could say parliament is the main lawmaker, rather than implying courts never make law."
+   }
+  ],
+  "flags": [
+   "Question b, fact: Why (b) says making law is the job of parliament, not the courts. Australian courts also make common law through precedent, which students may meet in Commerce law topics. The why could say parliament is the main lawmaker, rather than implying courts never make law."
+  ]
+ },
+ "final": {
+  "title": "The separation of powers",
+  "card": [
+   "The separation of powers splits government power into three parts. This stops any one person or group from holding all of it.",
+   [
+    "Legislature",
+    "parliament, which makes and changes laws."
+   ],
+   [
+    "Executive",
+    "the Prime Minister, ministers and government departments, who carry out the laws and run the country day to day."
+   ],
+   [
+    "Judiciary",
+    "the courts, which apply the laws and settle disputes about them. They are separate from parliament and the executive."
+   ]
+  ],
+  "remember": "Three parts share power: parliament makes laws, the executive carries them out, the courts apply them.",
+  "a": {
+   "q": "A government department begins running a new program that parliament has passed into law. Which part of government is it acting as?",
+   "opts": [
+    "The executive, because it carries out a law",
+    "The legislature, because it works with a law",
+    "The judiciary, because it follows a law",
+    "The legislature, because it set up the program"
+   ],
+   "why": "Carrying out laws and running the country day to day is the job of the executive. The legislature makes laws, so a department running a program that is already law is not doing that.",
+   "clue": "Who makes the law, and who puts it into action?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A court in Perth hears a dispute about a business contract and decides what the law means for both sides. How does this show the separation of powers at work?",
+   "opts": [
+    "The judiciary applies the law, separate from parliament",
+    "The judiciary makes the law, as part of parliament",
+    "The executive carries out the law, through the courts",
+    "The legislature settles disputes, through the courts"
+   ],
+   "why": "The court is the judiciary, applying the law to settle a dispute. It is a separate part from parliament, the main lawmaker, and from the executive, which carries out the laws. The tempting option places the courts inside parliament, but the judiciary is its own separate part of government.",
+   "clue": "Which of the three parts settles disputes about the law?"
+  }
+ },
+ "cleared_by": "recheck"
 }

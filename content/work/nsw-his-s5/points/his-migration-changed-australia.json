@@ -8,8 +8,252 @@
    0.214
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:51Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:52Z write: failed the content check, writing again",
+  "2026-11-20T12:44:57Z write: done",
+  "2026-11-20T12:53:26Z check: flagged",
+  "2026-11-20T12:59:59Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.01402,
+  "check": 0.01049,
+  "fix": 0.01698,
+  "recheck": 0.00811
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers the end of the White Australia policy and the rise of multiculturalism, not the broader effects of migrants on Australia's population, economy, food, culture and links with their countries of origin, so it teaches a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "How migration changed Australia",
+  "card": [
+   [
+    "Population",
+    "Migration made Australia's population larger and more varied. People came from many countries, so the mix of backgrounds, languages and religions grew."
+   ],
+   [
+    "Economy",
+    "Migrants added workers, skills and new businesses. Many worked in factories, building and farming, and many started their own shops and firms."
+   ],
+   [
+    "Food and culture",
+    "Migrants brought foods, festivals, music and languages. Dishes and customs that began in other countries became part of everyday Australian life."
+   ],
+   [
+    "Links abroad",
+    "Migrants kept ties with family and communities in their countries of origin. These ties helped build connections in trade, travel and culture between Australia and other countries."
+   ]
+  ],
+  "remember": "Migration changed who lives in Australia, how the economy works, what people eat and enjoy, and how Australia connects with other countries.",
+  "a": {
+   "q": "Which change shows how migration affected Australian culture?",
+   "opts": [
+    "Foods and festivals from abroad became part of daily life",
+    "The population grew but its backgrounds stayed much the same",
+    "Migrants cut their ties with their countries of origin",
+    "Australia ended its trade with the countries migrants left"
+   ],
+   "why": "Migrants brought foods, festivals, music and languages that many Australians now share. The second option is wrong because migration made the population more varied, not the same.",
+   "clue": "Think about what migrants brought with them."
+  },
+  "b": {
+   "d": 2,
+   "q": "Thanh moved to Sydney from Vietnam and opened a bakery. She still sends money to relatives and visits them often. Which two effects of migration does her story show?",
+   "opts": [
+    "Economic activity and links with her country of origin",
+    "A rise in population and a loss of ties with other countries",
+    "A new language policy and a change in Australian food",
+    "Fewer new businesses and stronger ties with Australia only"
+   ],
+   "why": "Her bakery is a new business, which adds to the economy. Her visits and support for relatives show a link with her country of origin. The second option is wrong because she keeps her ties abroad.",
+   "clue": "Look at what her bakery does and who she stays in touch with."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Foods and festivals from abroad became part of daily life",
+   "also_right": []
+  },
+  "b": {
+   "best": "Economic activity and links with her country of origin",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) refers to 'the second option', but options are shown in random order. The reason it gives ('the population ... more varied, not the same') matches the option about the population staying the same, not whichever option appears second. Name the option by its content instead."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) refers to 'the second option' by position. Options are shown in random order, so this can point students to the wrong option. Name the option ('a loss of ties with other countries') by its content instead."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and questions are accurate and each has one clear right answer. Both explanations refer to 'the second option' by position, which will mislead once options are shuffled; in (a) the reason given doesn't even match the second option as written."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) refers to 'the second option', but options are shown in random order. The reason it gives ('the population ... more varied, not the same') matches the option about the population staying the same, not whichever option appears second. Name the option by its content instead.",
+  "Question b, other: Why (b) refers to 'the second option' by position. Options are shown in random order, so this can point students to the wrong option. Name the option ('a loss of ties with other countries') by its content instead."
+ ],
+ "proposal": {
+  "title": "How migration changed Australia",
+  "card": [
+   [
+    "Population",
+    "Migration made Australia's population larger and more varied. People came from many countries, so the mix of backgrounds, languages and religions grew."
+   ],
+   [
+    "Economy",
+    "Migrants added workers, skills and new businesses. Many worked in factories, building and farming, and many started their own shops and firms."
+   ],
+   [
+    "Food and culture",
+    "Migrants brought foods, festivals, music and languages. Dishes and customs that began in other countries became part of everyday Australian life."
+   ],
+   [
+    "Links abroad",
+    "Migrants kept ties with family and communities in their countries of origin. These ties helped build trade, travel and cultural links between Australia and other countries."
+   ]
+  ],
+  "remember": "Migration changed who lives in Australia, how the economy works, what people eat and enjoy, and how Australia connects with other countries.",
+  "a": {
+   "q": "Which change shows how migration affected Australian culture?",
+   "opts": [
+    "Foods and festivals from abroad became part of daily life",
+    "The population grew but its backgrounds stayed much the same",
+    "Migrants cut their ties with their countries of origin",
+    "Australia ended its trade with the countries migrants left"
+   ],
+   "why": "Migrants brought foods, festivals, music and languages that many Australians now share. The option saying backgrounds stayed much the same is wrong, because migration made the population more varied, not the same.",
+   "clue": "Think about what migrants brought with them."
+  },
+  "b": {
+   "d": 2,
+   "q": "Thanh moved to Sydney from Vietnam and opened a bakery. She still sends money to relatives and visits them often. Which two effects of migration does her story show?",
+   "opts": [
+    "Economic activity and links with her country of origin",
+    "A rise in population and a loss of ties with other countries",
+    "A change in religion and a loss of her first language",
+    "Fewer new businesses and stronger ties with Australia only"
+   ],
+   "why": "Her bakery is a new business, which adds to the economy. Her visits and support for relatives show a link with her country of origin. The option with a loss of ties with other countries is wrong, because she keeps her ties abroad.",
+   "clue": "Look at what her bakery does and who she stays in touch with."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Foods and festivals from abroad became part of daily life",
+    "also_right": []
+   },
+   "b": {
+    "best": "Economic activity and links with her country of origin",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) refers to 'the second option', but options are shown in random order. The reason it gives ('the population ... more varied, not the same') matches the option about the population staying the same, not whichever option appears second. Name the option by its content instead."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) refers to 'the second option' by position. Options are shown in random order, so this can point students to the wrong option. Name the option ('a loss of ties with other countries') by its content instead."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) refers to 'the second option', but options are shown in random order. The reason it gives ('the population ... more varied, not the same') matches the option about the population staying the same, not whichever option appears second. Name the option by its content instead.",
+   "Question b, other: Why (b) refers to 'the second option' by position. Options are shown in random order, so this can point students to the wrong option. Name the option ('a loss of ties with other countries') by its content instead."
+  ]
+ },
+ "final": {
+  "title": "How migration changed Australia",
+  "card": [
+   [
+    "Population",
+    "Migration made Australia's population larger and more varied. People came from many countries, so the mix of backgrounds, languages and religions grew."
+   ],
+   [
+    "Economy",
+    "Migrants added workers, skills and new businesses. Many worked in factories, building and farming, and many started their own shops and firms."
+   ],
+   [
+    "Food and culture",
+    "Migrants brought foods, festivals, music and languages. Dishes and customs that began in other countries became part of everyday Australian life."
+   ],
+   [
+    "Links abroad",
+    "Migrants kept ties with family and communities in their countries of origin. These ties helped build trade, travel and cultural links between Australia and other countries."
+   ]
+  ],
+  "remember": "Migration changed who lives in Australia, how the economy works, what people eat and enjoy, and how Australia connects with other countries.",
+  "a": {
+   "q": "Which change shows how migration affected Australian culture?",
+   "opts": [
+    "Foods and festivals from abroad became part of daily life",
+    "The population grew but its backgrounds stayed much the same",
+    "Migrants cut their ties with their countries of origin",
+    "Australia ended its trade with the countries migrants left"
+   ],
+   "why": "Migrants brought foods, festivals, music and languages that many Australians now share. The option saying backgrounds stayed much the same is wrong, because migration made the population more varied, not the same.",
+   "clue": "Think about what migrants brought with them."
+  },
+  "b": {
+   "d": 2,
+   "q": "Thanh moved to Sydney from Vietnam and opened a bakery. She still sends money to relatives and visits them often. Which two effects of migration does her story show?",
+   "opts": [
+    "Economic activity and links with her country of origin",
+    "A rise in population and a loss of ties with other countries",
+    "A change in religion and a loss of her first language",
+    "Fewer new businesses and stronger ties with Australia only"
+   ],
+   "why": "Her bakery is a new business, which adds to the economy. Her visits and support for relatives show a link with her country of origin. The option with a loss of ties with other countries is wrong, because she keeps her ties abroad.",
+   "clue": "Look at what her bakery does and who she stays in touch with."
+  }
+ },
+ "cleared_by": "recheck"
 }

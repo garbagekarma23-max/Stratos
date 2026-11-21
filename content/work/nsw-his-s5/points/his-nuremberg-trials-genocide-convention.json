@@ -8,8 +8,142 @@
    0.231
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:51Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:52Z write: done",
+  "2026-11-20T12:44:57Z check: for review (other-sensitive)",
+  "2026-11-20T14:42:18Z review: rejected, to be written again",
+  "2026-11-20T14:58:19Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.00653,
+  "check": 0.01315
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the Holocaust as a planned genocide, while the new point teaches the Nuremberg trials and the 1948 Genocide Convention, which the Holocaust card does not cover.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Nuremberg trials and the Genocide Convention",
+  "card": [
+   "After World War II, the Allied powers put leading Nazis on trial in the German city of Nuremberg. The first trial began in November 1945.",
+   "The accused were charged with crimes such as war crimes and crimes against humanity. The trials held that leaders could be punished for what they did, even if they said they were only following orders.",
+   "Some of the accused were sentenced to death, some to prison, and some were found not guilty.",
+   "In 1948 the United Nations agreed the Genocide Convention. It made genocide, the deliberate destruction of a national, ethnic, racial or religious group, a crime that countries promised to prevent and punish."
+  ],
+  "remember": "Nuremberg tried Nazi leaders for their crimes. The Genocide Convention aimed to prevent and punish genocide.",
+  "a": {
+   "q": "What did the Nuremberg trials show about leaders who commit war crimes?",
+   "opts": [
+    "They could be tried and punished for their actions",
+    "They could not be tried once the war had ended",
+    "They were safe if they said they followed orders",
+    "They could only be judged by their own country"
+   ],
+   "why": "The trials put Nazi leaders in court and held them responsible for their crimes. Saying they were only following orders did not protect them, so the idea that orders are a defence is wrong.",
+   "clue": "Think about what happened to the accused in the courtroom."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1948 a group of countries wants an agreement that makes the deliberate destruction of a religious group a crime. Which one fits?",
+   "opts": [
+    "The Genocide Convention, agreed by the United Nations",
+    "The Nuremberg trials, which began in 1945",
+    "The Genocide Convention, agreed by the Allied generals",
+    "The Nuremberg trials, which began in 1948"
+   ],
+   "why": "The Genocide Convention was agreed by the United Nations in 1948 and made genocide a crime to prevent and punish. The Nuremberg trials were court cases against Nazi leaders that began in 1945, not an agreement between countries.",
+   "clue": "One was a set of trials, the other was an agreement."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:19Z",
+   "step": "write",
+   "version": {
+    "title": "Nuremberg trials and the Genocide Convention",
+    "card": [
+     "From November 1945, the Allies put leading Nazis on trial before an international court in the German city of Nuremberg.",
+     "They were charged with crimes such as war crimes and crimes against humanity, including the murder of civilians. The court ruled that following orders was no defence.",
+     "Twelve were sentenced to death, others went to prison, and three were found not guilty. The trials showed that leaders could be held to account under international law.",
+     "In 1948 the United Nations agreed the Genocide Convention. Genocide is acts meant to destroy a national, ethnic, racial or religious group, in whole or in part, and countries that join promise to prevent and punish it."
+    ],
+    "remember": "After the war, leaders were held to account in court, and genocide became a crime that countries promised to stop.",
+    "a": {
+     "q": "A Nazi official on trial at Nuremberg says he was just following orders. How did the court treat this?",
+     "opts": [
+      "It ruled that following orders was no defence",
+      "It ruled that he could not be tried at all",
+      "It freed him, as orders came from his leaders",
+      "It sent his case to be tried in a German court"
+     ],
+     "why": "The court ruled that following orders was no defence, so officials were held responsible for what they did. Freeing someone because the orders came from above would have let them escape blame.",
+     "clue": "Did the court let orders excuse the crime?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Under the 1948 Genocide Convention, which of these acts is genocide?",
+     "opts": [
+      "Killing people to destroy a religious group",
+      "Bombing an army base during a declared war",
+      "Arresting protesters who march against a law",
+      "Making a country pay for damage it caused"
+     ],
+     "why": "Genocide is acts meant to destroy a national, ethnic, racial or religious group, in whole or in part. Bombing an army base is an act of war, but it does not aim to destroy a group of people for who they are.",
+     "clue": "Which act aims to destroy a group of people?"
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Nuremberg trials and the Genocide Convention",
+  "card": [
+   "From November 1945, the Allies put leading Nazis on trial before an international court in the German city of Nuremberg.",
+   "They were charged with crimes such as war crimes and crimes against humanity, including the murder of civilians. The court ruled that following orders was no defence.",
+   "Twelve were sentenced to death, others went to prison, and three were found not guilty. The trials showed that leaders could be held to account under international law.",
+   "In 1948 the United Nations agreed the Genocide Convention. Genocide is acts meant to destroy a national, ethnic, racial or religious group, in whole or in part, and countries that join promise to prevent and punish it."
+  ],
+  "remember": "After the war, leaders were held to account in court, and genocide became a crime that countries promised to stop.",
+  "a": {
+   "q": "A Nazi official on trial at Nuremberg says he was just following orders. How did the court treat this?",
+   "opts": [
+    "It ruled that following orders was no defence",
+    "It ruled that he could not be tried at all",
+    "It freed him, as orders came from his leaders",
+    "It sent his case to be tried in a German court"
+   ],
+   "why": "The court ruled that following orders was no defence, so officials were held responsible for what they did. Freeing someone because the orders came from above would have let them escape blame.",
+   "clue": "Did the court let orders excuse the crime?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Under the 1948 Genocide Convention, which of these acts is genocide?",
+   "opts": [
+    "Killing people to destroy a religious group",
+    "Bombing an army base during a declared war",
+    "Arresting protesters who march against a law",
+    "Making a country pay for damage it caused"
+   ],
+   "why": "Genocide is acts meant to destroy a national, ethnic, racial or religious group, in whole or in part. Bombing an army base is an act of war, but it does not aim to destroy a group of people for who they are.",
+   "clue": "Which act aims to destroy a group of people?"
+  }
+ },
+ "local": []
 }

@@ -8,8 +8,216 @@
    0.233
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: failed the content check, writing again",
+  "2026-11-20T12:44:56Z write: done",
+  "2026-11-20T12:53:26Z check: flagged",
+  "2026-11-20T13:11:48Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "write": 0.01329,
+  "check": 0.01155,
+  "fix": 0.01667,
+  "recheck": 0.00863
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches archaeological ages named after tool materials (Stone, Bronze, Iron), not timelines putting events in order or the named historical periods (ancient, medieval, modern) that the new point covers, so it is a related but different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Timelines and periods of history",
+  "card": [
+   "A timeline puts events in the order they happened, from earliest to latest. The gaps between events are drawn to scale, so a long gap looks long.",
+   "Historians divide the past into named periods, such as ancient, medieval and modern. A period is a stretch of time with features that set it apart from the time before and after.",
+   "The names are labels that historians choose to make the past easier to study. The lines between periods are not sharp, and people at the time did not know which period they were living in.",
+   "The dates of a period differ around the world. Europe's medieval period is often placed from about 500 to about 1500 CE, but other regions had different turning points."
+  ],
+  "remember": "Timelines show order. Periods are labels historians choose, and their dates differ around the world.",
+  "a": {
+   "q": "What is the main job of a timeline?",
+   "opts": [
+    "To show events in the order they happened",
+    "To prove which events were most important",
+    "To explain why each event took place",
+    "To show who made each source about the events"
+   ],
+   "why": "A timeline places events in order, from earliest to latest, with the gaps to scale. It does not show importance or causes by itself. Those need other evidence and thinking.",
+   "clue": "Think about what a timeline lays out from left to right."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student says, 'The medieval period began on the same date everywhere in the world.' Why is this wrong?",
+   "opts": [
+    "Historians choose period dates, and they differ by region",
+    "Medieval is a term used only for Europe, so it has no dates",
+    "Periods are fixed by the first source made in each region",
+    "Each country started the period when its timeline began"
+   ],
+   "why": "Periods are labels that historians choose, and the dates fit different regions differently. Medieval is often used for Europe, but that does not mean it has no dates. The tempting second option wrongly says the term has no dates, when the card gives approximate ones.",
+   "clue": "Who decides where one period ends and the next begins?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "To show events in the order they happened",
+   "also_right": []
+  },
+  "b": {
+   "best": "Historians choose period dates, and they differ by region",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says outright that the gaps between events are drawn to scale. Many timelines are not to scale, or they use breaks for long stretches. It would be accurate to say a timeline 'can' or 'should' be drawn to scale, so that a long gap looks long. Why (a) repeats the same claim."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) calls the 'Medieval is a term used only for Europe' option 'the tempting second option'. Options are shown in random order, so this position reference will often be wrong. In this order the second option is actually the correct answer, which would confuse a student reading the explanation."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are clear and correct. The card says all timelines are drawn to scale, which is too absolute. Why (b) refers to 'the second option', which breaks when options are shuffled."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says outright that the gaps between events are drawn to scale. Many timelines are not to scale, or they use breaks for long stretches. It would be accurate to say a timeline 'can' or 'should' be drawn to scale, so that a long gap looks long. Why (a) repeats the same claim.",
+  "Question b, other: Why (b) calls the 'Medieval is a term used only for Europe' option 'the tempting second option'. Options are shown in random order, so this position reference will often be wrong. In this order the second option is actually the correct answer, which would confuse a student reading the explanation."
+ ],
+ "proposal": {
+  "title": "Timelines and periods of history",
+  "card": [
+   "A timeline puts events in the order they happened, from earliest to latest. When it is drawn to scale, a long gap between events looks long.",
+   "Historians divide the past into named periods, such as ancient, medieval and modern. A period is a stretch of time with features that set it apart from the time before and after.",
+   "The names are labels that historians choose to make the past easier to study. The lines between periods are not sharp, and people at the time did not know which period they were living in.",
+   "The dates of a period differ around the world. Europe's medieval period is often placed from about 500 to about 1500 CE, but other regions had different turning points."
+  ],
+  "remember": "Timelines show order. Periods are labels historians choose, and their dates differ around the world.",
+  "a": {
+   "q": "What is the main job of a timeline?",
+   "opts": [
+    "To show events in the order they happened",
+    "To prove which events were most important",
+    "To explain why each event took place",
+    "To show who made each source about the events"
+   ],
+   "why": "A timeline places events in order, from earliest to latest. It does not show importance or causes by itself. Those need other evidence and careful thinking.",
+   "clue": "Think about what a timeline lays out from left to right."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student says, 'The medieval period began on the same date everywhere in the world.' Why is this wrong?",
+   "opts": [
+    "Historians choose period dates, and they differ by region",
+    "Medieval is a term used only for Europe, so it has no dates",
+    "Periods are fixed by the first source made in each region",
+    "Each country started the period when its timeline began"
+   ],
+   "why": "Periods are labels that historians choose, and their dates fit different regions differently. The option saying medieval has no dates is wrong: Europe's medieval period is often dated from about 500 to about 1500 CE, so the term does have dates.",
+   "clue": "Who decides where one period ends and the next begins?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "To show events in the order they happened",
+    "also_right": []
+   },
+   "b": {
+    "best": "Historians choose period dates, and they differ by region",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says outright that the gaps between events are drawn to scale. Many timelines are not to scale, or they use breaks for long stretches. It would be accurate to say a timeline 'can' or 'should' be drawn to scale, so that a long gap looks long. Why (a) repeats the same claim."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) calls the 'Medieval is a term used only for Europe' option 'the tempting second option'. Options are shown in random order, so this position reference will often be wrong. In this order the second option is actually the correct answer, which would confuse a student reading the explanation."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card says outright that the gaps between events are drawn to scale. Many timelines are not to scale, or they use breaks for long stretches. It would be accurate to say a timeline 'can' or 'should' be drawn to scale, so that a long gap looks long. Why (a) repeats the same claim.",
+   "Question b, other: Why (b) calls the 'Medieval is a term used only for Europe' option 'the tempting second option'. Options are shown in random order, so this position reference will often be wrong. In this order the second option is actually the correct answer, which would confuse a student reading the explanation."
+  ]
+ },
+ "final": {
+  "title": "Timelines and periods of history",
+  "card": [
+   "A timeline puts events in the order they happened, from earliest to latest. When it is drawn to scale, a long gap between events looks long.",
+   "Historians divide the past into named periods, such as ancient, medieval and modern. A period is a stretch of time with features that set it apart from the time before and after.",
+   "The names are labels that historians choose to make the past easier to study. The lines between periods are not sharp, and people at the time did not know which period they were living in.",
+   "The dates of a period differ around the world. Europe's medieval period is often placed from about 500 to about 1500 CE, but other regions had different turning points."
+  ],
+  "remember": "Timelines show order. Periods are labels historians choose, and their dates differ around the world.",
+  "a": {
+   "q": "What is the main job of a timeline?",
+   "opts": [
+    "To show events in the order they happened",
+    "To prove which events were most important",
+    "To explain why each event took place",
+    "To show who made each source about the events"
+   ],
+   "why": "A timeline places events in order, from earliest to latest. It does not show importance or causes by itself. Those need other evidence and careful thinking.",
+   "clue": "Think about what a timeline lays out from left to right."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student says, 'The medieval period began on the same date everywhere in the world.' Why is this wrong?",
+   "opts": [
+    "Historians choose period dates, and they differ by region",
+    "Medieval is a term used only for Europe, so it has no dates",
+    "Periods are fixed by the first source made in each region",
+    "Each country started the period when its timeline began"
+   ],
+   "why": "Periods are labels that historians choose, and their dates fit different regions differently. The option saying medieval has no dates is wrong: Europe's medieval period is often dated from about 500 to about 1500 CE, so the term does have dates.",
+   "clue": "Who decides where one period ends and the next begins?"
+  }
+ },
+ "cleared_by": "recheck"
 }

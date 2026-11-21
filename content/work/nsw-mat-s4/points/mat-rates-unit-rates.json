@@ -24,8 +24,192 @@
    0.22
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 says adapt mat-rates-best-buys (2 changes)",
+  "2026-11-20T12:25:54Z adapt: done",
+  "2026-11-20T12:35:53Z check: flagged",
+  "2026-11-20T12:44:58Z fix: suggested",
+  "2026-11-20T13:23:42Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "adapt": 0.00359,
+  "check": 0.01343,
+  "fix": 0.02121
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-rates-best-buys",
+  "changes": [
+   "Replace the Hobart cyclist example in question a with a NSW location, such as Sydney or Newcastle, so the example is local to the course.",
+   "Replace the Alice Springs rice shop example in question b with a NSW location, such as Dubbo or Wollongong, so the example is local to the course."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same idea of rates, unit rates and best buys at a suitable Year 8 depth, and only its two place-based examples need localising for New South Wales.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "mat-rates-best-buys",
+  "changes": [
+   "Replace the Hobart cyclist example in question a with a NSW location, such as Sydney or Newcastle, so the example is local to the course.",
+   "Replace the Alice Springs rice shop example in question b with a NSW location, such as Dubbo or Wollongong, so the example is local to the course."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "a.q",
+   "b.q"
+  ]
+ },
+ "draft": {
+  "title": "Rates and best buys",
+  "card": [
+   "A rate compares two quantities with different units. Speed in km/h and price in $/kg are rates. The word per means for each one.",
+   "To find a unit rate, divide the first quantity by the second. 6 kg of apples for $21 costs \\(\\$21 \\div 6 = \\$3.50\\) per kg.",
+   "To compare two deals, find the unit rate of each in the same unit. The deal with the lower price per unit is the better buy.",
+   "Unit rates also find totals. At 80 km/h, a car travels \\(80 \\times 2.5 = 200\\) km in 2.5 hours."
+  ],
+  "remember": "Divide to get a rate per one unit, then compare the unit rates.",
+  "a": {
+   "q": "A cyclist in Newcastle rides 45 km in 3 hours at a steady pace. What is the rate?",
+   "opts": [
+    "15 km/h",
+    "135 km/h",
+    "48 km/h",
+    "0.07 km/h"
+   ],
+   "why": "Divide distance by time: \\(45 \\div 3 = 15\\) km/h. Multiplying to get 135 is the tempting mistake, but a rate is found by dividing.",
+   "clue": "Divide distance by time."
+  },
+  "b": {
+   "d": 3,
+   "q": "At a shop in Dubbo, 5 kg of rice costs $12.50 and 3 kg costs $8.40. Which is the better buy, and why?",
+   "opts": [
+    "5 kg, at $2.50 per kg",
+    "3 kg, at $2.80 per kg",
+    "5 kg, at $12.50 in total",
+    "3 kg, because it costs less in total"
+   ],
+   "why": "5 kg costs \\(\\$12.50 \\div 5 = \\$2.50\\) per kg. 3 kg costs \\(\\$8.40 \\div 3 = \\$2.80\\) per kg. The 5 kg bag has the lower price per kg. The lower total for 3 kg is tempting but it buys less rice.",
+   "clue": "Find the price per kg for both bags."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "15 km/h",
+   "also_right": []
+  },
+  "b": {
+   "best": "5 kg, at $2.50 per kg",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Divide the first quantity by the second' is ambiguous. In the example '6 kg of apples for $21' the first quantity named is 6 kg, yet the working divides $21 by 6. Better: 'divide the quantity in the first unit of the rate by the second, e.g. dollars by kilograms for $/kg'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "All the arithmetic and both intended answers are correct (15 km/h; 5 kg at $2.50 per kg). The one issue is that the card's 'divide the first quantity by the second' clashes with its own example, where kilograms are named first but dollars are divided by kilograms."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: 'Divide the first quantity by the second' is ambiguous. In the example '6 kg of apples for $21' the first quantity named is 6 kg, yet the working divides $21 by 6. Better: 'divide the quantity in the first unit of the rate by the second, e.g. dollars by kilograms for $/kg'."
+ ],
+ "proposal": {
+  "title": "Rates and best buys",
+  "card": [
+   "A rate compares two quantities with different units. Speed in km/h and price in $/kg are rates. The word per means for each one.",
+   "To find a unit rate, divide the quantity in the rate's first unit by the quantity in its second unit. For $/kg, divide dollars by kilograms: $21 for 6 kg of apples is \\(\\$21 \\div 6 = \\$3.50\\) per kg.",
+   "To compare two deals, find the unit rate of each in the same unit. The deal with the lower price per unit is the better buy.",
+   "Unit rates also find totals. At 80 km/h, a car travels \\(80 \\times 2.5 = 200\\) km in 2.5 hours."
+  ],
+  "remember": "Divide to get a rate per one unit, then compare the unit rates.",
+  "a": {
+   "q": "A cyclist in Newcastle rides 45 km in 3 hours at a steady pace. What is her speed in km/h?",
+   "opts": [
+    "15 km/h",
+    "135 km/h",
+    "48 km/h",
+    "42 km/h"
+   ],
+   "why": "For km/h, divide kilometres by hours: \\(45 \\div 3 = 15\\) km/h. Multiplying to get 135 is the tempting mistake, but a rate per hour is found by dividing.",
+   "clue": "Which unit comes first in km/h?"
+  },
+  "b": {
+   "d": 3,
+   "q": "At a shop in Dubbo, 5 kg of rice costs $12.50 and 3 kg costs $8.40. Which is the better buy, and why?",
+   "opts": [
+    "5 kg, at $2.50 per kg",
+    "3 kg, at $2.80 per kg",
+    "Both, as they cost the same per kg",
+    "3 kg, because it costs less in total"
+   ],
+   "why": "5 kg costs \\(\\$12.50 \\div 5 = \\$2.50\\) per kg. 3 kg costs \\(\\$8.40 \\div 3 = \\$2.80\\) per kg. The 5 kg bag has the lower price per kg. The lower total for 3 kg is tempting, but it buys less rice.",
+   "clue": "Find the price per kg for both bags."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:42Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Divide the first quantity by the second' is ambiguous. In the example '6 kg of apples for $21' the first quantity named is 6 kg, yet the working divides $21 by 6. Better: 'divide the quantity in the first unit of the rate by the second, e.g. dollars by kilograms for $/kg'."
+   }
+  ],
+  "flags": [
+   "Card, wording: 'Divide the first quantity by the second' is ambiguous. In the example '6 kg of apples for $21' the first quantity named is 6 kg, yet the working divides $21 by 6. Better: 'divide the quantity in the first unit of the rate by the second, e.g. dollars by kilograms for $/kg'."
+  ]
+ },
+ "final": {
+  "title": "Rates and best buys",
+  "card": [
+   "A rate compares two quantities with different units. Speed in km/h and price in $/kg are rates. The word per means for each one.",
+   "To find a unit rate, divide the quantity in the rate's first unit by the quantity in its second unit. For $/kg, divide dollars by kilograms: $21 for 6 kg of apples is \\(\\$21 \\div 6 = \\$3.50\\) per kg.",
+   "To compare two deals, find the unit rate of each in the same unit. The deal with the lower price per unit is the better buy.",
+   "Unit rates also find totals. At 80 km/h, a car travels \\(80 \\times 2.5 = 200\\) km in 2.5 hours."
+  ],
+  "remember": "Divide to get a rate per one unit, then compare the unit rates.",
+  "a": {
+   "q": "A cyclist in Newcastle rides 45 km in 3 hours at a steady pace. What is her speed in km/h?",
+   "opts": [
+    "15 km/h",
+    "135 km/h",
+    "48 km/h",
+    "42 km/h"
+   ],
+   "why": "For km/h, divide kilometres by hours: \\(45 \\div 3 = 15\\) km/h. Multiplying to get 135 is the tempting mistake, but a rate per hour is found by dividing.",
+   "clue": "Which unit comes first in km/h?"
+  },
+  "b": {
+   "d": 3,
+   "q": "At a shop in Dubbo, 5 kg of rice costs $12.50 and 3 kg costs $8.40. Which is the better buy, and why?",
+   "opts": [
+    "5 kg, at $2.50 per kg",
+    "3 kg, at $2.80 per kg",
+    "Both, as they cost the same per kg",
+    "3 kg, because it costs less in total"
+   ],
+   "why": "5 kg costs \\(\\$12.50 \\div 5 = \\$2.50\\) per kg. 3 kg costs \\(\\$8.40 \\div 3 = \\$2.80\\) per kg. The 5 kg bag has the lower price per kg. The lower total for 3 kg is tempting, but it buys less rice.",
+   "clue": "Find the price per kg for both bags."
+  }
+ },
+ "cleared_by": "auto"
 }

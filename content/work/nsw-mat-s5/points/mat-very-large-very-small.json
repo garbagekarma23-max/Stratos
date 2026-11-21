@@ -3,8 +3,338 @@
  "title": "Very large and very small units",
  "brief": "99812b3f6687",
  "shortlist": [],
- "stage": "write",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, write"
+  "2026-11-12T12:22:40Z new, write",
+  "2026-11-20T12:15:20Z write: done",
+  "2026-11-20T12:25:55Z check: flagged",
+  "2026-11-20T12:35:54Z fix: suggested",
+  "2026-11-20T13:23:43Z autoreview: picked as a spot check. It would have been cleared with the fix (card wording)",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "write": 0.00724,
+  "check": 0.01044,
+  "fix": 0.04901
+ },
+ "draft": {
+  "title": "Very large and very small units",
+  "card": [
+   "A prefix is a word placed before a unit to show a power of 10. It saves writing many zeros.",
+   [
+    "Large",
+    "kilo is \\(10^{3}\\), mega is \\(10^{6}\\), giga is \\(10^{9}\\), tera is \\(10^{12}\\). So 1 gigabyte is \\(10^{9}\\) bytes."
+   ],
+   [
+    "Small",
+    "milli is \\(10^{-3}\\), micro is \\(10^{-6}\\), nano is \\(10^{-9}\\). So 1 nanometre is \\(10^{-9}\\) metres."
+   ],
+   "To change units, replace the prefix with its power of 10. Example: 5 megawatts is \\(5 \\times 10^{6}\\) watts, which is 5{,}000{,}000 watts."
+  ],
+  "remember": "Each prefix stands for a power of 10: positive powers for large units, negative powers for small ones.",
+  "a": {
+   "q": "Which power of 10 does the prefix giga stand for?",
+   "opts": [
+    "\\(10^{9}\\)",
+    "\\(10^{6}\\)",
+    "\\(10^{-9}\\)",
+    "\\(10^{12}\\)"
+   ],
+   "why": "Giga means \\(10^{9}\\), or one billion. Mega is only \\(10^{6}\\), and nano is the small unit \\(10^{-9}\\), which has the same size of power but a negative sign.",
+   "clue": "Giga is a large prefix, and it sits between mega and tera."
+  },
+  "b": {
+   "d": 2,
+   "q": "A virus particle in a Sydney lab is 100 nanometres wide. How wide is it in metres?",
+   "opts": [
+    "\\(1 \\times 10^{-7}\\) m",
+    "\\(1 \\times 10^{-6}\\) m",
+    "\\(1 \\times 10^{7}\\) m",
+    "\\(1 \\times 10^{-11}\\) m"
+   ],
+   "why": "Nano is \\(10^{-9}\\), so the width is \\(100 \\times 10^{-9}\\), which is \\(10^{2} \\times 10^{-9} = 10^{-7}\\) m. Using \\(10^{-6}\\) would be the micro prefix, which is a different unit.",
+   "clue": "Write 100 as a power of 10, then combine it with the nano power."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(10^{9}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(1 \\times 10^{-7}\\) m",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"5{,}000{,}000 watts\" is outside the \\( \\) delimiters, so the LaTeX braces will show as literal text (5{,}000{,}000). It should be written as \\(5\\,000\\,000\\) inside LaTeX, or as plain 5 000 000."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct: giga is 10^9, and 100 nm is 10^-7 m. One formatting problem: the card's \"5{,}000{,}000 watts\" sits outside LaTeX, so the braces will appear on screen."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: \"5{,}000{,}000 watts\" is outside the \\( \\) delimiters, so the LaTeX braces will show as literal text (5{,}000{,}000). It should be written as \\(5\\,000\\,000\\) inside LaTeX, or as plain 5 000 000."
+ ],
+ "proposal": {
+  "title": "Very large and very small units",
+  "card": [
+   "A prefix is a word placed before a unit to show a power of 10. It saves writing many zeros.",
+   [
+    "Large",
+    "kilo is \\(10^{3}\\), mega is \\(10^{6}\\), giga is \\(10^{9}\\), tera is \\(10^{12}\\). So 1 gigabyte is \\(10^{9}\\) bytes."
+   ],
+   [
+    "Small",
+    "milli is \\(10^{-3}\\), micro is \\(10^{-6}\\), nano is \\(10^{-9}\\). So 1 nanometre is \\(10^{-9}\\) metres."
+   ],
+   "To change units, replace the prefix with its power of 10. Example: 5 megawatts is \\(5 \\times 10^{6}\\) watts, which is \\(5{,}000{,}000\\) watts."
+  ],
+  "remember": "Each prefix stands for a power of 10: positive powers for large units, negative powers for small ones.",
+  "a": {
+   "q": "Which power of 10 does the prefix giga stand for?",
+   "opts": [
+    "\\(10^{9}\\)",
+    "\\(10^{6}\\)",
+    "\\(10^{-9}\\)",
+    "\\(10^{12}\\)"
+   ],
+   "why": "Giga means \\(10^{9}\\), or one billion. Mega is only \\(10^{6}\\), and nano is the small unit \\(10^{-9}\\), which has the same size of power but a negative sign.",
+   "clue": "Giga is a large prefix, and it sits between mega and tera."
+  },
+  "b": {
+   "d": 2,
+   "q": "A virus particle in a Sydney lab is 100 nanometres wide. How wide is it in metres?",
+   "opts": [
+    "\\(1 \\times 10^{-7}\\) m",
+    "\\(1 \\times 10^{-6}\\) m",
+    "\\(1 \\times 10^{7}\\) m",
+    "\\(1 \\times 10^{-11}\\) m"
+   ],
+   "why": "Nano is \\(10^{-9}\\), so the width is \\(100 \\times 10^{-9}\\), which is \\(10^{2} \\times 10^{-9} = 10^{-7}\\) m. An answer of \\(10^{-6}\\) m is 1 micrometre, which is 1000 nanometres, so it is ten times too wide.",
+   "clue": "Write 100 as a power of 10, then combine it with the nano power."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:43Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"5{,}000{,}000 watts\" is outside the \\( \\) delimiters, so the LaTeX braces will show as literal text (5{,}000{,}000). It should be written as \\(5\\,000\\,000\\) inside LaTeX, or as plain 5 000 000."
+   }
+  ],
+  "flags": [
+   "Card, wording: \"5{,}000{,}000 watts\" is outside the \\( \\) delimiters, so the LaTeX braces will show as literal text (5{,}000{,}000). It should be written as \\(5\\,000\\,000\\) inside LaTeX, or as plain 5 000 000."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Very large and very small units",
+  "card": [
+   "A prefix is a word placed before a unit to show a power of 10. It saves writing many zeros.",
+   [
+    "Large",
+    "kilo is \\(10^{3}\\), mega is \\(10^{6}\\), giga is \\(10^{9}\\), tera is \\(10^{12}\\). So 1 gigabyte is \\(10^{9}\\) bytes."
+   ],
+   [
+    "Small",
+    "milli is \\(10^{-3}\\), micro is \\(10^{-6}\\), nano is \\(10^{-9}\\). So 1 nanometre is \\(10^{-9}\\) metres."
+   ],
+   "To change units, replace the prefix with its power of 10. Example: 5 megawatts is \\(5 \\times 10^{6}\\) watts, which is \\(5{,}000{,}000\\) watts."
+  ],
+  "remember": "Each prefix stands for a power of 10: positive powers for large units, negative powers for small ones.",
+  "a": {
+   "q": "Which power of 10 does the prefix giga stand for?",
+   "opts": [
+    "\\(10^{9}\\)",
+    "\\(10^{6}\\)",
+    "\\(10^{-9}\\)",
+    "\\(10^{12}\\)"
+   ],
+   "why": "Giga means \\(10^{9}\\), or one billion. Mega is only \\(10^{6}\\), and nano is the small unit \\(10^{-9}\\), which has the same size of power but a negative sign.",
+   "clue": "Giga is a large prefix, and it sits between mega and tera."
+  },
+  "b": {
+   "d": 2,
+   "q": "A virus particle in a Sydney lab is 100 nanometres wide. How wide is it in metres?",
+   "opts": [
+    "\\(1 \\times 10^{-7}\\) m",
+    "\\(1 \\times 10^{-6}\\) m",
+    "\\(1 \\times 10^{7}\\) m",
+    "\\(1 \\times 10^{-11}\\) m"
+   ],
+   "why": "Nano is \\(10^{-9}\\), so the width is \\(100 \\times 10^{-9}\\), which is \\(10^{2} \\times 10^{-9} = 10^{-7}\\) m. An answer of \\(10^{-6}\\) m is 1 micrometre, which is 1000 nanometres, so it is ten times too wide.",
+   "clue": "Write 100 as a power of 10, then combine it with the nano power."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix puts the 5,000,000 inside LaTeX so the braces no longer show, which was the only problem named. The prefixes are right and 100 nanometres is \\(10^{-7}\\) m, with only wrong distractors.",
+   "item": "ea003020612cbc4b",
+   "result": "decided",
+   "saved": {
+    "id": "mat-very-large-very-small",
+    "title": "Very large and very small units",
+    "brief": "99812b3f6687",
+    "shortlist": [],
+    "stage": "review",
+    "sent": {
+     "write": 1,
+     "check": 1,
+     "fix": 1
+    },
+    "usd": {
+     "write": 0.00724,
+     "check": 0.01044,
+     "fix": 0.04901
+    },
+    "draft": {
+     "title": "Very large and very small units",
+     "card": [
+      "A prefix is a word placed before a unit to show a power of 10. It saves writing many zeros.",
+      [
+       "Large",
+       "kilo is \\(10^{3}\\), mega is \\(10^{6}\\), giga is \\(10^{9}\\), tera is \\(10^{12}\\). So 1 gigabyte is \\(10^{9}\\) bytes."
+      ],
+      [
+       "Small",
+       "milli is \\(10^{-3}\\), micro is \\(10^{-6}\\), nano is \\(10^{-9}\\). So 1 nanometre is \\(10^{-9}\\) metres."
+      ],
+      "To change units, replace the prefix with its power of 10. Example: 5 megawatts is \\(5 \\times 10^{6}\\) watts, which is 5{,}000{,}000 watts."
+     ],
+     "remember": "Each prefix stands for a power of 10: positive powers for large units, negative powers for small ones.",
+     "a": {
+      "q": "Which power of 10 does the prefix giga stand for?",
+      "opts": [
+       "\\(10^{9}\\)",
+       "\\(10^{6}\\)",
+       "\\(10^{-9}\\)",
+       "\\(10^{12}\\)"
+      ],
+      "why": "Giga means \\(10^{9}\\), or one billion. Mega is only \\(10^{6}\\), and nano is the small unit \\(10^{-9}\\), which has the same size of power but a negative sign.",
+      "clue": "Giga is a large prefix, and it sits between mega and tera."
+     },
+     "b": {
+      "d": 2,
+      "q": "A virus particle in a Sydney lab is 100 nanometres wide. How wide is it in metres?",
+      "opts": [
+       "\\(1 \\times 10^{-7}\\) m",
+       "\\(1 \\times 10^{-6}\\) m",
+       "\\(1 \\times 10^{7}\\) m",
+       "\\(1 \\times 10^{-11}\\) m"
+      ],
+      "why": "Nano is \\(10^{-9}\\), so the width is \\(100 \\times 10^{-9}\\), which is \\(10^{2} \\times 10^{-9} = 10^{-7}\\) m. Using \\(10^{-6}\\) would be the micro prefix, which is a different unit.",
+      "clue": "Write 100 as a power of 10, then combine it with the nano power."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "\\(10^{9}\\)",
+      "also_right": []
+     },
+     "b": {
+      "best": "\\(1 \\times 10^{-7}\\) m",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "\"5{,}000{,}000 watts\" is outside the \\( \\) delimiters, so the LaTeX braces will show as literal text (5{,}000{,}000). It should be written as \\(5\\,000\\,000\\) inside LaTeX, or as plain 5 000 000."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and answers are correct: giga is 10^9, and 100 nm is 10^-7 m. One formatting problem: the card's \"5{,}000{,}000 watts\" sits outside LaTeX, so the braces will appear on screen."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Card, wording: \"5{,}000{,}000 watts\" is outside the \\( \\) delimiters, so the LaTeX braces will show as literal text (5{,}000{,}000). It should be written as \\(5\\,000\\,000\\) inside LaTeX, or as plain 5 000 000."
+    ],
+    "proposal": {
+     "title": "Very large and very small units",
+     "card": [
+      "A prefix is a word placed before a unit to show a power of 10. It saves writing many zeros.",
+      [
+       "Large",
+       "kilo is \\(10^{3}\\), mega is \\(10^{6}\\), giga is \\(10^{9}\\), tera is \\(10^{12}\\). So 1 gigabyte is \\(10^{9}\\) bytes."
+      ],
+      [
+       "Small",
+       "milli is \\(10^{-3}\\), micro is \\(10^{-6}\\), nano is \\(10^{-9}\\). So 1 nanometre is \\(10^{-9}\\) metres."
+      ],
+      "To change units, replace the prefix with its power of 10. Example: 5 megawatts is \\(5 \\times 10^{6}\\) watts, which is \\(5{,}000{,}000\\) watts."
+     ],
+     "remember": "Each prefix stands for a power of 10: positive powers for large units, negative powers for small ones.",
+     "a": {
+      "q": "Which power of 10 does the prefix giga stand for?",
+      "opts": [
+       "\\(10^{9}\\)",
+       "\\(10^{6}\\)",
+       "\\(10^{-9}\\)",
+       "\\(10^{12}\\)"
+      ],
+      "why": "Giga means \\(10^{9}\\), or one billion. Mega is only \\(10^{6}\\), and nano is the small unit \\(10^{-9}\\), which has the same size of power but a negative sign.",
+      "clue": "Giga is a large prefix, and it sits between mega and tera."
+     },
+     "b": {
+      "d": 2,
+      "q": "A virus particle in a Sydney lab is 100 nanometres wide. How wide is it in metres?",
+      "opts": [
+       "\\(1 \\times 10^{-7}\\) m",
+       "\\(1 \\times 10^{-6}\\) m",
+       "\\(1 \\times 10^{7}\\) m",
+       "\\(1 \\times 10^{-11}\\) m"
+      ],
+      "why": "Nano is \\(10^{-9}\\), so the width is \\(100 \\times 10^{-9}\\), which is \\(10^{2} \\times 10^{-9} = 10^{-7}\\) m. An answer of \\(10^{-6}\\) m is 1 micrometre, which is 1000 nanometres, so it is ten times too wide.",
+      "clue": "Write 100 as a power of 10, then combine it with the nano power."
+     }
+    },
+    "proposal_problems": [],
+    "auto": {
+     "at": "2026-11-20T13:23:43Z",
+     "rules": 1,
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "\"5{,}000{,}000 watts\" is outside the \\( \\) delimiters, so the LaTeX braces will show as literal text (5{,}000{,}000). It should be written as \\(5\\,000\\,000\\) inside LaTeX, or as plain 5 000 000."
+      }
+     ],
+     "flags": [
+      "Card, wording: \"5{,}000{,}000 watts\" is outside the \\( \\) delimiters, so the LaTeX braces will show as literal text (5{,}000{,}000). It should be written as \\(5\\,000\\,000\\) inside LaTeX, or as plain 5 000 000."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "5466a1cb7a3c2a8c"
+  }
  ]
 }

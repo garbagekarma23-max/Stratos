@@ -16,8 +16,256 @@
    0.276
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: done",
+  "2026-11-20T12:44:55Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00729,
+  "check": 0.01456,
+  "fix": 0.02827,
+  "recheck": 0.00711
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches the global pattern of wellbeing: the closest, on wellbeing and development, defines the terms, while the others cover differences within India and the causes of wellbeing gaps.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Global patterns of wellbeing",
+  "card": [
+   "Wellbeing is not the same everywhere. Geographers look at where it is high and where it is low across the world, using measures such as the Human Development Index (HDI).",
+   [
+    "Higher wellbeing",
+    "Places such as Western Europe, North America and Australia. People there generally live longer, have more years of schooling and earn higher incomes."
+   ],
+   [
+    "Lower wellbeing",
+    "Parts of sub-Saharan Africa and South Asia. People there are more likely to face shorter lives, less schooling and lower incomes."
+   ],
+   "The pattern is not the same for every country in a region. Wellbeing can differ between countries, and between people within one country."
+  ],
+  "remember": "Wellbeing is generally higher in places such as Western Europe, North America and Australia, and lower in parts of sub-Saharan Africa and South Asia.",
+  "a": {
+   "q": "Which pair of regions is usually described as having the highest wellbeing?",
+   "opts": [
+    "Western Europe and North America",
+    "Sub-Saharan Africa and South Asia",
+    "South Asia and North America",
+    "Sub-Saharan Africa and Western Europe"
+   ],
+   "why": "Western Europe and North America are places where wellbeing is generally high. The pair with sub-Saharan Africa and South Asia is the tempting wrong choice, because those are the parts of the world where wellbeing is generally lowest.",
+   "clue": "Look at which regions the card links to longer lives and higher incomes."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mei says that every country in South Asia has lower wellbeing than every country in Western Europe. What is the best response?",
+   "opts": [
+    "Wellbeing varies, so this is only a general pattern",
+    "She is right, as the regions never overlap at all",
+    "She is wrong, as South Asia has the highest wellbeing",
+    "She is wrong, as wellbeing is the same in all regions"
+   ],
+   "why": "The card describes general patterns. Wellbeing can differ between countries in a region and between people within a country, so a claim about every country is too strong. Saying the regions never overlap treats a general pattern as a rule with no exceptions.",
+   "clue": "Does the card say the pattern holds for every country?"
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "image",
+    "brief": "A world map shading countries by Human Development Index level, from low to very high, so that Western Europe, North America and Australia appear in the highest group and parts of sub-Saharan Africa and South Asia in the lowest groups. Include a legend.",
+    "why": "Seeing the pattern on a map shows where wellbeing is higher and lower across the world."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Western Europe and North America",
+   "also_right": []
+  },
+  "b": {
+   "best": "Wellbeing varies, so this is only a general pattern",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Mei's claim is actually true by HDI. The highest South Asian countries (Sri Lanka, Maldives, about 0.76–0.78) still score below the lowest Western European countries (about 0.87 and above). So the intended answer, and the why's statement that a claim about every country is 'too strong', teach students that a true statement is wrong. The scenario needs regions or measures that really overlap, or a within-country contrast."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only hedged, general statement. The three others are plainly absurd ('South Asia has the highest wellbeing', 'the same in all regions', 'never overlap at all'), so a student can pick the answer without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b is factually flawed: every South Asian country does have a lower HDI than every Western European country, so Mei's claim is true, yet the question and why treat it as wrong. Its right option also stands out against implausible distractors."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: Mei's claim is actually true by HDI. The highest South Asian countries (Sri Lanka, Maldives, about 0.76–0.78) still score below the lowest Western European countries (about 0.87 and above). So the intended answer, and the why's statement that a claim about every country is 'too strong', teach students that a true statement is wrong. The scenario needs regions or measures that really overlap, or a within-country contrast.",
+  "Question b, wording: The right option is the only hedged, general statement. The three others are plainly absurd ('South Asia has the highest wellbeing', 'the same in all regions', 'never overlap at all'), so a student can pick the answer without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Global patterns of wellbeing",
+  "card": [
+   "Wellbeing is not the same everywhere. Geographers look at where it is high and where it is low across the world, using measures such as the Human Development Index (HDI).",
+   [
+    "Higher wellbeing",
+    "Places such as Western Europe, North America and Australia. People there generally live longer, have more years of schooling and earn higher incomes."
+   ],
+   [
+    "Lower wellbeing",
+    "Parts of sub-Saharan Africa and South Asia. People there are more likely to face shorter lives, less schooling and lower incomes."
+   ],
+   "These are general patterns, and wellbeing can differ between countries in a region. A country's overall figure is an average, so even where it is high, some people can have much lower wellbeing."
+  ],
+  "remember": "Wellbeing is generally higher in Western Europe, North America and Australia, and lower in parts of sub-Saharan Africa and South Asia, but averages hide gaps.",
+  "a": {
+   "q": "Which pair of regions is usually described as having the highest wellbeing?",
+   "opts": [
+    "Western Europe and North America",
+    "Sub-Saharan Africa and South Asia",
+    "South Asia and North America",
+    "Sub-Saharan Africa and Western Europe"
+   ],
+   "why": "Western Europe and North America are places where wellbeing is generally high. The pair with sub-Saharan Africa and South Asia is the tempting wrong choice, because those are the parts of the world where wellbeing is generally lowest.",
+   "clue": "Look at which regions the card links to longer lives and higher incomes."
+  },
+  "b": {
+   "d": 3,
+   "q": "A report shows that a country has a very high HDI. Leo says this proves every person living there has high wellbeing. Is he right?",
+   "opts": [
+    "No, wellbeing can differ between people in one country",
+    "Yes, a high HDI means every person there is well off",
+    "Yes, people in high-wellbeing regions are equally well off",
+    "No, gaps within countries only occur in poorer regions"
+   ],
+   "why": "A country's HDI is an average, so it can hide groups of people whose wellbeing is much lower. Saying a high HDI means every person is well off treats an average as if it described each person. Gaps are not limited to poorer regions: they can exist even where the overall figure is high.",
+   "clue": "What does an overall figure for a whole country leave out?"
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "image",
+    "brief": "A world map shading countries by Human Development Index level, from low to very high, so that Western Europe, North America and Australia appear in the highest group and parts of sub-Saharan Africa and South Asia in the lowest groups. Include a legend.",
+    "why": "Seeing the pattern on a map shows where wellbeing is higher and lower across the world."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Western Europe and North America",
+    "also_right": []
+   },
+   "b": {
+    "best": "No, wellbeing can differ between people in one country",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Mei's claim is actually true by HDI. The highest South Asian countries (Sri Lanka, Maldives, about 0.76–0.78) still score below the lowest Western European countries (about 0.87 and above). So the intended answer, and the why's statement that a claim about every country is 'too strong', teach students that a true statement is wrong. The scenario needs regions or measures that really overlap, or a within-country contrast."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only hedged, general statement. The three others are plainly absurd ('South Asia has the highest wellbeing', 'the same in all regions', 'never overlap at all'), so a student can pick the answer without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question b, fact: Mei's claim is actually true by HDI. The highest South Asian countries (Sri Lanka, Maldives, about 0.76–0.78) still score below the lowest Western European countries (about 0.87 and above). So the intended answer, and the why's statement that a claim about every country is 'too strong', teach students that a true statement is wrong. The scenario needs regions or measures that really overlap, or a within-country contrast.",
+   "Question b, wording: The right option is the only hedged, general statement. The three others are plainly absurd ('South Asia has the highest wellbeing', 'the same in all regions', 'never overlap at all'), so a student can pick the answer without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "Global patterns of wellbeing",
+  "card": [
+   "Wellbeing is not the same everywhere. Geographers look at where it is high and where it is low across the world, using measures such as the Human Development Index (HDI).",
+   [
+    "Higher wellbeing",
+    "Places such as Western Europe, North America and Australia. People there generally live longer, have more years of schooling and earn higher incomes."
+   ],
+   [
+    "Lower wellbeing",
+    "Parts of sub-Saharan Africa and South Asia. People there are more likely to face shorter lives, less schooling and lower incomes."
+   ],
+   "These are general patterns, and wellbeing can differ between countries in a region. A country's overall figure is an average, so even where it is high, some people can have much lower wellbeing."
+  ],
+  "remember": "Wellbeing is generally higher in Western Europe, North America and Australia, and lower in parts of sub-Saharan Africa and South Asia, but averages hide gaps.",
+  "a": {
+   "q": "Which pair of regions is usually described as having the highest wellbeing?",
+   "opts": [
+    "Western Europe and North America",
+    "Sub-Saharan Africa and South Asia",
+    "South Asia and North America",
+    "Sub-Saharan Africa and Western Europe"
+   ],
+   "why": "Western Europe and North America are places where wellbeing is generally high. The pair with sub-Saharan Africa and South Asia is the tempting wrong choice, because those are the parts of the world where wellbeing is generally lowest.",
+   "clue": "Look at which regions the card links to longer lives and higher incomes."
+  },
+  "b": {
+   "d": 3,
+   "q": "A report shows that a country has a very high HDI. Leo says this proves every person living there has high wellbeing. Is he right?",
+   "opts": [
+    "No, wellbeing can differ between people in one country",
+    "Yes, a high HDI means every person there is well off",
+    "Yes, people in high-wellbeing regions are equally well off",
+    "No, gaps within countries only occur in poorer regions"
+   ],
+   "why": "A country's HDI is an average, so it can hide groups of people whose wellbeing is much lower. Saying a high HDI means every person is well off treats an average as if it described each person. Gaps are not limited to poorer regions: they can exist even where the overall figure is high.",
+   "clue": "What does an overall figure for a whole country leave out?"
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "image",
+    "brief": "A world map shading countries by Human Development Index level, from low to very high, so that Western Europe, North America and Australia appear in the highest group and parts of sub-Saharan Africa and South Asia in the lowest groups. Include a legend.",
+    "why": "Seeing the pattern on a map shows where wellbeing is higher and lower across the world."
+   }
+  ]
+ },
+ "cleared_by": "recheck"
 }

@@ -20,8 +20,408 @@
    0.287
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: flagged",
+  "2026-11-20T12:53:29Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (card fact)",
+  "2026-11-20T13:44:57Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.00593,
+  "check": 0.0135,
+  "fix": 0.02472,
+  "recheck": 0.01196
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points compares bacterial and fungal cells; the closest, the plant cell point, covers only plant cell parts and does not teach that bacteria lack a nucleus or that fungi lack chloroplasts.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, fact: The card gives the cell wall only for the fungal cell and lists only the membrane and cytoplasm as shared. Most bacterial cells also have a cell wall, so students may wrongly learn that a cell wall separates fungi from bacteria. Question b's list of a cell wall as a fungal feature reinforces this.",
+ "rejected": {
+  "title": "Bacterial and fungal cells",
+  "card": [
+   [
+    "Bacterial cell",
+    "A bacterial cell is very small and has no nucleus. Its genetic material floats loose in the cytoplasm."
+   ],
+   [
+    "Fungal cell",
+    "A fungal cell has a nucleus and a cell wall. It has no chloroplasts, so it cannot make its own food as plants do."
+   ],
+   "Yeast is a fungus that is a single cell. Mushrooms are also fungi, but they are made of many cells.",
+   "Both cells have a cell membrane and cytoplasm. The nucleus is the main difference: bacterial cells lack one, and fungal cells have one."
+  ],
+  "remember": "Bacteria have no nucleus. Fungi have a nucleus but no chloroplasts.",
+  "a": {
+   "q": "Which structure do fungal cells have but bacterial cells do not?",
+   "opts": [
+    "A nucleus",
+    "A cell membrane",
+    "Cytoplasm",
+    "A chloroplast"
+   ],
+   "why": "Fungal cells have a nucleus, while bacterial cells have none. A cell membrane and cytoplasm are found in both, and chloroplasts are found in neither, so none of these is the difference.",
+   "clue": "Think about where each cell keeps its genetic material."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam finds tiny living things feeding on old bread. Each is a single cell with a cell wall and a nucleus, but no chloroplasts. What are they most likely to be?",
+   "opts": [
+    "Fungi",
+    "Bacteria",
+    "Plants",
+    "Animals"
+   ],
+   "why": "A single cell with a nucleus and a cell wall, with no chloroplasts, that feeds on bread matches a fungus such as yeast. Bacteria are tempting because they are single cells too, but they have no nucleus. Plants make their own food rather than feeding on bread.",
+   "clue": "Which single cell has a nucleus but cannot make its own food?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, fact: The card gives the cell wall only for the fungal cell and lists only the membrane and cytoplasm as shared. Most bacterial cells also have a cell wall, so students may wrongly learn that a cell wall separates fungi from bacteria. Question b's list of a cell wall as a fungal feature reinforces this."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Bacterial and fungal cells",
+     "card": [
+      [
+       "Bacterial cell",
+       "A bacterial cell is very small and has no nucleus. Its genetic material floats loose in the cytoplasm."
+      ],
+      [
+       "Fungal cell",
+       "A fungal cell has a nucleus and a cell wall. It has no chloroplasts, so it cannot make its own food as plants do."
+      ],
+      "Yeast is a fungus that is a single cell. Mushrooms are also fungi, but they are made of many cells.",
+      "The nucleus is the main difference between the two. Bacterial cells lack one, and fungal cells have one."
+     ],
+     "remember": "Bacteria have no nucleus. Fungi have a nucleus but no chloroplasts.",
+     "a": {
+      "q": "Which structure do fungal cells have but bacterial cells do not?",
+      "opts": [
+       "A nucleus",
+       "A cytoplasm",
+       "A chloroplast",
+       "A mitochondrion"
+      ],
+      "why": "Fungal cells have a nucleus, while bacterial cells have none. Chloroplasts are tempting, but fungal cells have no chloroplasts, so they cannot be the difference.",
+      "clue": "Think about where each cell keeps its genetic material."
+     },
+     "b": {
+      "d": 3,
+      "q": "Under a microscope, Sam sees a cell with a cell wall and a nucleus, but no chloroplasts. What type of cell is it most likely to be?",
+      "opts": [
+       "A fungal cell",
+       "A bacterial cell",
+       "A plant cell",
+       "An animal cell"
+      ],
+      "why": "A cell wall with a nucleus and no chloroplasts matches a fungal cell. A plant cell also has a cell wall and a nucleus, but it has chloroplasts, so it is ruled out.",
+      "clue": "Check which cell has a nucleus but no chloroplasts."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "A nucleus",
+      "also_right": [
+       "A mitochondrion"
+      ]
+     },
+     "b": {
+      "best": "A fungal cell",
+      "also_right": [
+       "A plant cell"
+      ]
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "fact",
+       "detail": "Fungal cells have mitochondria and bacterial cells do not, so 'A mitochondrion' is also a correct answer. Point 2 teaches mitochondria, so students may know this. Replace it with a structure both cells share, such as a cell membrane, or one neither has."
+      },
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "Many plant cells, such as onion epidermis and root cells, have a cell wall and a nucleus but no chloroplasts. Onion skin is the classic Year 7 microscope cell, so 'A plant cell' is defensible. Add a detail that rules plants out, such as a single cell growing on bread, or say the cell is a yeast sample."
+      },
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "Why (b) says a plant cell 'has chloroplasts, so it is ruled out'. That is not true of all plant cells, such as root and onion skin cells."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "In question a, 'A mitochondrion' is also correct, because fungi have mitochondria and bacteria do not. In question b, a plant cell without chloroplasts (for example onion skin or root) fits the description too, and the why wrongly says all plant cells have chloroplasts."
+    },
+    "flags": [
+     "Question a: the checker says “A mitochondrion” could also be right.",
+     "Question b: the checker says “A plant cell” could also be right.",
+     "Question a, fact: Fungal cells have mitochondria and bacterial cells do not, so 'A mitochondrion' is also a correct answer. Point 2 teaches mitochondria, so students may know this. Replace it with a structure both cells share, such as a cell membrane, or one neither has.",
+     "Question b, fact: Many plant cells, such as onion epidermis and root cells, have a cell wall and a nucleus but no chloroplasts. Onion skin is the classic Year 7 microscope cell, so 'A plant cell' is defensible. Add a detail that rules plants out, such as a single cell growing on bread, or say the cell is a yeast sample.",
+     "Question b, fact: Why (b) says a plant cell 'has chloroplasts, so it is ruled out'. That is not true of all plant cells, such as root and onion skin cells."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Bacterial and fungal cells",
+     "card": [
+      [
+       "Bacterial cell",
+       "A bacterial cell is very small and has no nucleus. Its genetic material floats loose in the cytoplasm."
+      ],
+      [
+       "Fungal cell",
+       "A fungal cell has a nucleus and a cell wall. It has no chloroplasts, so it cannot make its own food as plants do."
+      ],
+      "Yeast is a fungus that is a single cell. Mushrooms are also fungi, but they are made of many cells.",
+      "Both cells have a cell membrane and cytoplasm. The nucleus is the main difference: bacterial cells lack one, and fungal cells have one."
+     ],
+     "remember": "Bacteria have no nucleus. Fungi have a nucleus but no chloroplasts.",
+     "a": {
+      "q": "Which structure do fungal cells have but bacterial cells do not?",
+      "opts": [
+       "A nucleus",
+       "A cell membrane",
+       "Cytoplasm",
+       "A chloroplast"
+      ],
+      "why": "Fungal cells have a nucleus, while bacterial cells have none. A cell membrane and cytoplasm are found in both, and chloroplasts are found in neither, so none of these is the difference.",
+      "clue": "Think about where each cell keeps its genetic material."
+     },
+     "b": {
+      "d": 3,
+      "q": "Sam finds tiny living things feeding on old bread. Each is a single cell with a cell wall and a nucleus, but no chloroplasts. What are they most likely to be?",
+      "opts": [
+       "Fungi",
+       "Bacteria",
+       "Plants",
+       "Animals"
+      ],
+      "why": "A single cell with a nucleus and a cell wall, with no chloroplasts, that feeds on bread matches a fungus such as yeast. Bacteria are tempting because they are single cells too, but they have no nucleus. Plants make their own food rather than feeding on bread.",
+      "clue": "Which single cell has a nucleus but cannot make its own food?"
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:08Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "A nucleus",
+       "also_right": []
+      },
+      "b": {
+       "best": "Fungi",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "fact",
+        "detail": "The card gives the cell wall only for the fungal cell and lists only the membrane and cytoplasm as shared. Most bacterial cells also have a cell wall, so students may wrongly learn that a cell wall separates fungi from bacteria. Question b's list of a cell wall as a fungal feature reinforces this."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The answers are sound: a nucleus for a, and fungi for b. The card implies bacteria lack a cell wall, though most have one; it should say both have a cell wall, or not present the wall as a fungal-only feature."
+     },
+     "flags": [
+      "Card, fact: The card gives the cell wall only for the fungal cell and lists only the membrane and cytoplasm as shared. Most bacterial cells also have a cell wall, so students may wrongly learn that a cell wall separates fungi from bacteria. Question b's list of a cell wall as a fungal feature reinforces this."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:57Z",
+   "step": "write",
+   "version": {
+    "title": "Bacterial and fungal cells",
+    "card": [
+     [
+      "Bacterial cell",
+      "A bacterial cell is very small and has no nucleus. Its genetic material floats loose in the cytoplasm."
+     ],
+     [
+      "Fungal cell",
+      "A fungal cell has a nucleus. It has no chloroplasts, so it cannot make its own food as plants do."
+     ],
+     "Both kinds of cell have a cell membrane and cytoplasm. Fungal cells and most bacterial cells also have a cell wall, so a cell wall does not tell them apart.",
+     "The nucleus is the main difference: fungal cells have one, and bacterial cells do not. Yeast is a fungus that is a single cell, while mushrooms are fungi made of many cells."
+    ],
+    "remember": "Bacteria have no nucleus. Fungi have a nucleus but no chloroplasts.",
+    "a": {
+     "q": "Which structure do fungal cells have but bacterial cells do not?",
+     "opts": [
+      "A nucleus",
+      "A cell membrane",
+      "Cytoplasm",
+      "A chloroplast"
+     ],
+     "why": "Fungal cells have a nucleus, while bacterial cells have none. A cell membrane and cytoplasm are found in both, and chloroplasts are found in neither, so none of these is the difference.",
+     "clue": "Think about where each cell keeps its genetic material."
+    },
+    "b": {
+     "d": 3,
+     "q": "Lena looks at a drop of fermenting fruit juice under a microscope. She sees single cells, each with a cell wall and a nucleus but no chloroplasts. What are they most likely to be?",
+     "opts": [
+      "Fungal cells",
+      "Bacterial cells",
+      "Plant cells",
+      "Animal cells"
+     ],
+     "why": "A single cell with a nucleus and a cell wall but no chloroplasts matches a fungus such as yeast. Bacterial cells are tempting, since most of them have a cell wall too, but they have no nucleus. Plant cells have chloroplasts, and animal cells have no cell wall.",
+     "clue": "Which feature tells a fungal cell apart from a bacterial one?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "A nucleus",
+     "also_right": []
+    },
+    "b": {
+     "best": "Fungal cells",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Bacterial and fungal cells",
+  "card": [
+   [
+    "Bacterial cell",
+    "A bacterial cell is very small and has no nucleus. Its genetic material floats loose in the cytoplasm."
+   ],
+   [
+    "Fungal cell",
+    "A fungal cell has a nucleus. It has no chloroplasts, so it cannot make its own food as plants do."
+   ],
+   "Both kinds of cell have a cell membrane and cytoplasm. Fungal cells and most bacterial cells also have a cell wall, so a cell wall does not tell them apart.",
+   "The nucleus is the main difference: fungal cells have one, and bacterial cells do not. Yeast is a fungus that is a single cell, while mushrooms are fungi made of many cells."
+  ],
+  "remember": "Bacteria have no nucleus. Fungi have a nucleus but no chloroplasts.",
+  "a": {
+   "q": "Which structure do fungal cells have but bacterial cells do not?",
+   "opts": [
+    "A nucleus",
+    "A cell membrane",
+    "Cytoplasm",
+    "A chloroplast"
+   ],
+   "why": "Fungal cells have a nucleus, while bacterial cells have none. A cell membrane and cytoplasm are found in both, and chloroplasts are found in neither, so none of these is the difference.",
+   "clue": "Think about where each cell keeps its genetic material."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena looks at a drop of fermenting fruit juice under a microscope. She sees single cells, each with a cell wall and a nucleus but no chloroplasts. What are they most likely to be?",
+   "opts": [
+    "Fungal cells",
+    "Bacterial cells",
+    "Plant cells",
+    "Animal cells"
+   ],
+   "why": "A single cell with a nucleus and a cell wall but no chloroplasts matches a fungus such as yeast. Bacterial cells are tempting, since most of them have a cell wall too, but they have no nucleus. Plant cells have chloroplasts, and animal cells have no cell wall.",
+   "clue": "Which feature tells a fungal cell apart from a bacterial one?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A nucleus",
+   "also_right": []
+  },
+  "b": {
+   "best": "Fungal cells",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Bacterial and fungal cells",
+  "card": [
+   [
+    "Bacterial cell",
+    "A bacterial cell is very small and has no nucleus. Its genetic material floats loose in the cytoplasm."
+   ],
+   [
+    "Fungal cell",
+    "A fungal cell has a nucleus. It has no chloroplasts, so it cannot make its own food as plants do."
+   ],
+   "Both kinds of cell have a cell membrane and cytoplasm. Fungal cells and most bacterial cells also have a cell wall, so a cell wall does not tell them apart.",
+   "The nucleus is the main difference: fungal cells have one, and bacterial cells do not. Yeast is a fungus that is a single cell, while mushrooms are fungi made of many cells."
+  ],
+  "remember": "Bacteria have no nucleus. Fungi have a nucleus but no chloroplasts.",
+  "a": {
+   "q": "Which structure do fungal cells have but bacterial cells do not?",
+   "opts": [
+    "A nucleus",
+    "A cell membrane",
+    "Cytoplasm",
+    "A chloroplast"
+   ],
+   "why": "Fungal cells have a nucleus, while bacterial cells have none. A cell membrane and cytoplasm are found in both, and chloroplasts are found in neither, so none of these is the difference.",
+   "clue": "Think about where each cell keeps its genetic material."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena looks at a drop of fermenting fruit juice under a microscope. She sees single cells, each with a cell wall and a nucleus but no chloroplasts. What are they most likely to be?",
+   "opts": [
+    "Fungal cells",
+    "Bacterial cells",
+    "Plant cells",
+    "Animal cells"
+   ],
+   "why": "A single cell with a nucleus and a cell wall but no chloroplasts matches a fungus such as yeast. Bacterial cells are tempting, since most of them have a cell wall too, but they have no nucleus. Plant cells have chloroplasts, and animal cells have no cell wall.",
+   "clue": "Which feature tells a fungal cell apart from a bacterial one?"
+  }
+ },
+ "checked_by": "claude-code"
 }

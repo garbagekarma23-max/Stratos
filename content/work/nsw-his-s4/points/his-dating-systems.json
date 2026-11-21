@@ -16,8 +16,139 @@
    0.257
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: done",
+  "2026-11-20T12:44:56Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00048,
+  "write": 0.00603,
+  "check": 0.00624
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The brief combines how BCE and CE years are numbered from year 1 with how centuries are counted, and no single bank point teaches both at this depth without extra content like BP dates or millennia.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Dating systems",
+  "card": [
+   [
+    "BC and AD",
+    "BC means before Christ and AD means anno Domini, Latin for in the year of the Lord. Years are counted from year 1."
+   ],
+   [
+    "BCE and CE",
+    "BCE means before common era and CE means common era. They match BC and AD year for year, and many historians use them because they do not refer to a religion."
+   ],
+   [
+    "Counting",
+    "There is no year 0. Years BCE count down towards year 1, so 500 BCE is earlier than 100 BCE. Years CE count up, so 100 CE is earlier than 500 CE."
+   ],
+   [
+    "Centuries",
+    "A century is 100 years. Year 1 to 100 is the 1st century, so the 1500s are the 16th century and the 1800s are the 19th century."
+   ]
+  ],
+  "remember": "BCE years count down to year 1, CE years count up, and the 1500s are the 16th century.",
+  "a": {
+   "q": "Which of these dates is the earliest?",
+   "opts": [
+    "300 BCE",
+    "100 BCE",
+    "50 CE",
+    "200 CE"
+   ],
+   "why": "BCE years count down towards year 1, so a larger BCE number is further back in time. 300 BCE is earlier than 100 BCE. The tempting answer is 100 BCE, which treats BCE numbers as if they count up.",
+   "clue": "BCE years count down towards year 1."
+  },
+  "b": {
+   "d": 3,
+   "q": "A museum in Sydney shows a bowl made in 1620. In which century was the bowl made?",
+   "opts": [
+    "The 17th century",
+    "The 16th century",
+    "The 15th century",
+    "The 18th century"
+   ],
+   "why": "The 1600s are the 17th century, because the 1st century covers years 1 to 100. The tempting answer is the 16th century, which matches the first two digits of the year, but those digits are one less than the century number.",
+   "clue": "The 1500s are the 16th century. What does that suggest for the 1600s?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "300 BCE",
+   "also_right": []
+  },
+  "b": {
+   "best": "The 17th century",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Dating systems",
+  "card": [
+   [
+    "BC and AD",
+    "BC means before Christ and AD means anno Domini, Latin for in the year of the Lord. Years are counted from year 1."
+   ],
+   [
+    "BCE and CE",
+    "BCE means before common era and CE means common era. They match BC and AD year for year, and many historians use them because they do not refer to a religion."
+   ],
+   [
+    "Counting",
+    "There is no year 0. Years BCE count down towards year 1, so 500 BCE is earlier than 100 BCE. Years CE count up, so 100 CE is earlier than 500 CE."
+   ],
+   [
+    "Centuries",
+    "A century is 100 years. Year 1 to 100 is the 1st century, so the 1500s are the 16th century and the 1800s are the 19th century."
+   ]
+  ],
+  "remember": "BCE years count down to year 1, CE years count up, and the 1500s are the 16th century.",
+  "a": {
+   "q": "Which of these dates is the earliest?",
+   "opts": [
+    "300 BCE",
+    "100 BCE",
+    "50 CE",
+    "200 CE"
+   ],
+   "why": "BCE years count down towards year 1, so a larger BCE number is further back in time. 300 BCE is earlier than 100 BCE. The tempting answer is 100 BCE, which treats BCE numbers as if they count up.",
+   "clue": "BCE years count down towards year 1."
+  },
+  "b": {
+   "d": 3,
+   "q": "A museum in Sydney shows a bowl made in 1620. In which century was the bowl made?",
+   "opts": [
+    "The 17th century",
+    "The 16th century",
+    "The 15th century",
+    "The 18th century"
+   ],
+   "why": "The 1600s are the 17th century, because the 1st century covers years 1 to 100. The tempting answer is the 16th century, which matches the first two digits of the year, but those digits are one less than the century number.",
+   "clue": "The 1500s are the 16th century. What does that suggest for the 1600s?"
+  }
+ },
+ "cleared_by": "checker"
 }

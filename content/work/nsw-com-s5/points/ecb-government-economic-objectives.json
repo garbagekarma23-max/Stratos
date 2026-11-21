@@ -24,8 +24,254 @@
    0.236
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 may adapt ecb-government-s-economic-objectives, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:40Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: flagged",
+  "2026-11-20T12:53:23Z fix: suggested",
+  "2026-11-20T13:37:05Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "confirm": 0.00826,
+  "write": 0.00597,
+  "check": 0.01058,
+  "fix": 0.01756,
+  "recheck": 0.00738
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "ecb-government-s-economic-objectives",
+  "changes": [
+   "Add the fourth objective, a fair share of income, which the bank card does not cover.",
+   "Describe the unemployment aim as low unemployment to match the brief, rather than only full employment, and note that some unemployment always remains.",
+   "Replace the Economics and Business Year 10 usage note and the Australia-wide framing with NSW Stage 5 Commerce wording and examples."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same government objectives at the right depth, but it omits the fair share of income aim and frames unemployment differently, so it needs small additions and wording changes for this NSW Commerce course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, the Year 10 card, covers growth, full employment and stable prices but leaves out a fair share of income, which this brief names as a core aim, and the Year 12 card works at a senior depth with balance of payments and inflation targets, so neither fits without adding content.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Government economic objectives",
+  "card": [
+   "An economic objective is a goal a government sets for how the economy should perform. Most Australian governments share a few main ones.",
+   [
+    "Growth",
+    "steady growth in the goods and services the economy produces. Steady means growth that is not wildly up and down."
+   ],
+   [
+    "Jobs and prices",
+    "low unemployment, so most people who want work can find it, and low, stable inflation, so prices rise only slowly and predictably."
+   ],
+   [
+    "Fairness",
+    "a fair share of income, so the gap between richer and poorer households does not grow too wide."
+   ]
+  ],
+  "remember": "Governments aim for steady growth, low unemployment, low stable inflation and a fair share of income.",
+  "a": {
+   "q": "Which goal is an economic objective of a government?",
+   "opts": [
+    "Low unemployment, so most people who want work can find it",
+    "Zero inflation, so prices never change at all",
+    "Equal incomes for every household in the country",
+    "The fastest possible growth in any single year"
+   ],
+   "why": "Low unemployment is one of the main objectives. The other options are extreme versions: the objective is low and stable inflation, a fair share of income rather than equal incomes, and steady growth rather than the fastest possible.",
+   "clue": "The card uses words like low, steady and fair, not extremes."
+  },
+  "b": {
+   "d": 3,
+   "q": "Prices in Tamara's town rose 12% one year, then 1% the next, then 9% the year after. Which objective is the government failing to meet?",
+   "opts": [
+    "Low and stable inflation",
+    "Steady economic growth",
+    "A fair share of income",
+    "Low unemployment"
+   ],
+   "why": "The rise in prices is inflation, and it jumps up and down, so it is neither low nor stable. The facts say nothing about output, jobs or how income is shared, so the other objectives cannot be judged from them.",
+   "clue": "Look at what is happening to prices, and whether the changes are steady."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Low unemployment, so most people who want work can find it",
+   "also_right": []
+  },
+  "b": {
+   "best": "Low and stable inflation",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is clearly the longest and repeats the card's wording word for word ('so most people who want work can find it'). A student could pick it by matching text without understanding the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Inflation is measured across the whole economy (the CPI), not for one town. Framing the scenario as prices in 'Tamara's town' suggests governments target local price changes. Saying 'prices in Australia' would be accurate."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct. Question a's right option stands out because it is the longest and copies the card's wording, and question b's 'prices in Tamara's town' blurs the fact that inflation is a national measure."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option is clearly the longest and repeats the card's wording word for word ('so most people who want work can find it'). A student could pick it by matching text without understanding the idea.",
+  "Question b, wording: Inflation is measured across the whole economy (the CPI), not for one town. Framing the scenario as prices in 'Tamara's town' suggests governments target local price changes. Saying 'prices in Australia' would be accurate."
+ ],
+ "proposal": {
+  "title": "Government economic objectives",
+  "card": [
+   "An economic objective is a goal a government sets for how the economy should perform. Most Australian governments share a few main ones.",
+   [
+    "Growth",
+    "steady growth in the goods and services the economy produces. Steady means growth that is not wildly up and down."
+   ],
+   [
+    "Jobs and prices",
+    "low unemployment, so most people who want work can find it, and low, stable inflation, so prices rise only slowly and predictably."
+   ],
+   [
+    "Fairness",
+    "a fair share of income, so the gap between richer and poorer households does not grow too wide."
+   ]
+  ],
+  "remember": "Governments aim for steady growth, low unemployment, low stable inflation and a fair share of income.",
+  "a": {
+   "q": "A treasurer wants a goal that matches the government's usual economic objectives. Which goal fits?",
+   "opts": [
+    "Keep unemployment low across the economy",
+    "Hold inflation at zero so prices never change",
+    "Make every household's income exactly equal",
+    "Push growth as fast as possible every year"
+   ],
+   "why": "Low unemployment is one of the main objectives. The others are extreme versions: the objective is low and stable inflation, not zero, a fair share of income rather than equal incomes, and steady growth rather than the fastest possible.",
+   "clue": "The objectives use words like low, steady and fair, not extremes."
+  },
+  "b": {
+   "d": 3,
+   "q": "Suppose prices across Australia rose 6% one year, 1% the next, then 7% the year after. Which objective is the government failing to meet?",
+   "opts": [
+    "Low and stable inflation",
+    "Steady economic growth",
+    "A fair share of income",
+    "Low unemployment"
+   ],
+   "why": "A general rise in prices is inflation, and here it jumps up and down, so it is neither low nor stable. The facts say nothing about output, jobs or how income is shared, so the other objectives cannot be judged from them.",
+   "clue": "Look at what is happening to prices, and whether the changes are steady."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:05Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Keep unemployment low across the economy",
+    "also_right": []
+   },
+   "b": {
+    "best": "Low and stable inflation",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:05Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is clearly the longest and repeats the card's wording word for word ('so most people who want work can find it'). A student could pick it by matching text without understanding the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Inflation is measured across the whole economy (the CPI), not for one town. Framing the scenario as prices in 'Tamara's town' suggests governments target local price changes. Saying 'prices in Australia' would be accurate."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The right option is clearly the longest and repeats the card's wording word for word ('so most people who want work can find it'). A student could pick it by matching text without understanding the idea.",
+   "Question b, wording: Inflation is measured across the whole economy (the CPI), not for one town. Framing the scenario as prices in 'Tamara's town' suggests governments target local price changes. Saying 'prices in Australia' would be accurate."
+  ]
+ },
+ "final": {
+  "title": "Government economic objectives",
+  "card": [
+   "An economic objective is a goal a government sets for how the economy should perform. Most Australian governments share a few main ones.",
+   [
+    "Growth",
+    "steady growth in the goods and services the economy produces. Steady means growth that is not wildly up and down."
+   ],
+   [
+    "Jobs and prices",
+    "low unemployment, so most people who want work can find it, and low, stable inflation, so prices rise only slowly and predictably."
+   ],
+   [
+    "Fairness",
+    "a fair share of income, so the gap between richer and poorer households does not grow too wide."
+   ]
+  ],
+  "remember": "Governments aim for steady growth, low unemployment, low stable inflation and a fair share of income.",
+  "a": {
+   "q": "A treasurer wants a goal that matches the government's usual economic objectives. Which goal fits?",
+   "opts": [
+    "Keep unemployment low across the economy",
+    "Hold inflation at zero so prices never change",
+    "Make every household's income exactly equal",
+    "Push growth as fast as possible every year"
+   ],
+   "why": "Low unemployment is one of the main objectives. The others are extreme versions: the objective is low and stable inflation, not zero, a fair share of income rather than equal incomes, and steady growth rather than the fastest possible.",
+   "clue": "The objectives use words like low, steady and fair, not extremes."
+  },
+  "b": {
+   "d": 3,
+   "q": "Suppose prices across Australia rose 6% one year, 1% the next, then 7% the year after. Which objective is the government failing to meet?",
+   "opts": [
+    "Low and stable inflation",
+    "Steady economic growth",
+    "A fair share of income",
+    "Low unemployment"
+   ],
+   "why": "A general rise in prices is inflation, and here it jumps up and down, so it is neither low nor stable. The facts say nothing about output, jobs or how income is shared, so the other objectives cannot be judged from them.",
+   "clue": "Look at what is happening to prices, and whether the changes are steady."
+  }
+ },
+ "cleared_by": "recheck"
 }

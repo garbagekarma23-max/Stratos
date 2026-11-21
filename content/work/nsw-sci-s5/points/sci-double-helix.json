@@ -8,8 +8,420 @@
    0.219
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: done",
+  "2026-11-20T12:35:57Z check: flagged",
+  "2026-11-20T12:45:01Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.01154,
+  "check": 0.0126,
+  "fix": 0.02125,
+  "recheck": 0.00931
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches genes and chromosomes and only mentions the double helix as a shape, while the new point is about the helix's base pairing (A with T, C with G) and the discovery work of Franklin, Wilkins, Watson and Crick, which is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The double helix",
+  "card": [
+   "DNA is made of two long strands twisted around each other. This shape is called a double helix, like a twisted ladder.",
+   "Each strand is a chain of units that carry a base. The four bases are A, T, C and G. The bases of the two strands face each other in the middle.",
+   "Bases pair in a fixed way: A with T, and C with G. So if one strand reads A, A, C, the other strand reads T, T, G.",
+   "The structure was worked out using the work of Rosalind Franklin, Maurice Wilkins, James Watson and Francis Crick. Franklin and Wilkins made X-ray images of DNA, and Watson and Crick built the model of the double helix."
+  ],
+  "remember": "DNA is a twisted ladder of two strands, with A pairing with T and C with G.",
+  "a": {
+   "q": "One strand of DNA has the base sequence G, A, T, C. What is the matching sequence on the other strand?",
+   "opts": [
+    "C, T, A, G",
+    "C, A, T, G",
+    "G, A, T, C",
+    "T, C, G, A"
+   ],
+   "why": "Each base pairs with a fixed partner: G with C, A with T, T with A and C with G. This gives C, T, A, G. Copying the same sequence is tempting, but a base never pairs with itself.",
+   "clue": "Pair each base with its partner, one at a time."
+  },
+  "b": {
+   "d": 3,
+   "q": "A scientist tests a sample of DNA and finds that 30% of its bases are A. What percentage of its bases are C?",
+   "opts": [
+    "20%",
+    "30%",
+    "40%",
+    "70%"
+   ],
+   "why": "A pairs with T, so 30% of the bases are T as well. That makes 60% A and T, leaving 40% for C and G together. C and G pair, so each is 20%. Choosing 40% forgets that C and G share that amount.",
+   "clue": "Find T first, then share what is left between C and G."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A double helix of DNA drawn as a twisted ladder. Two twisting strands are joined by rungs in the middle. Label the two strands and the bases. Show the pairs A with T and C with G.",
+    "why": "Seeing the twisted ladder and the paired bases makes the structure easier to understand."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "C, T, A, G",
+   "also_right": []
+  },
+  "b": {
+   "best": "20%",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "G, A, T, C is its own reverse complement. Read in its own direction (antiparallel), the partner strand is also G, A, T, C, so the distractor 'G, A, T, C' is defensible for a student who knows more. A non-palindromic sequence would remove this."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate, and the intended answers (C, T, A, G and 20%) are correct. The one minor issue: question a's sequence G, A, T, C is palindromic, so the 'copy the same sequence' distractor is technically the partner strand read antiparallel. A different sequence would avoid this."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: G, A, T, C is its own reverse complement. Read in its own direction (antiparallel), the partner strand is also G, A, T, C, so the distractor 'G, A, T, C' is defensible for a student who knows more. A non-palindromic sequence would remove this."
+ ],
+ "proposal": {
+  "title": "The double helix",
+  "card": [
+   "DNA is made of two long strands twisted around each other. This shape is called a double helix, like a twisted ladder.",
+   "Each strand is a chain of units that carry a base. The four bases are A, T, C and G. The bases of the two strands face each other in the middle.",
+   "Bases pair in a fixed way: A with T, and C with G. So if one strand reads A, A, C, the other strand reads T, T, G.",
+   "The structure was worked out using the work of Rosalind Franklin, Maurice Wilkins, James Watson and Francis Crick. Franklin and Wilkins made X-ray images of DNA, and Watson and Crick built the model of the double helix."
+  ],
+  "remember": "DNA is a twisted ladder of two strands, with A pairing with T and C with G.",
+  "a": {
+   "q": "One strand of DNA has the base sequence G, G, A, T. What is the matching sequence on the other strand?",
+   "opts": [
+    "C, C, T, A",
+    "G, G, A, T",
+    "A, A, G, C",
+    "C, C, A, T"
+   ],
+   "why": "Each base pairs with a fixed partner: G with C, A with T and T with A. This gives C, C, T, A. Pairing only the G bases and copying the rest gives C, C, A, T, but A and T must also be swapped for their partners.",
+   "clue": "Pair each base with its partner, one at a time."
+  },
+  "b": {
+   "d": 3,
+   "q": "A scientist tests a sample of DNA and finds that 30% of its bases are A. What percentage of its bases are C?",
+   "opts": [
+    "20%",
+    "30%",
+    "40%",
+    "70%"
+   ],
+   "why": "A pairs with T, so 30% of the bases are T as well. That makes 60% A and T, leaving 40% for C and G together. C and G pair, so each is 20%. Choosing 40% forgets that C and G share that amount.",
+   "clue": "Find T first, then share what is left between C and G."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A double helix of DNA drawn as a twisted ladder. Two twisting strands are joined by rungs in the middle. Label the two strands and the bases. Show the pairs A with T and C with G.",
+    "why": "Seeing the twisted ladder and the paired bases makes the structure easier to understand."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "C, C, T, A",
+    "also_right": []
+   },
+   "b": {
+    "best": "20%",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out: G, G, A, T pairs to C, C, T, A, and 30% A gives 30% T, leaving 40% shared equally so C is 20%."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "G, A, T, C is its own reverse complement. Read in its own direction (antiparallel), the partner strand is also G, A, T, C, so the distractor 'G, A, T, C' is defensible for a student who knows more. A non-palindromic sequence would remove this."
+   }
+  ],
+  "flags": [
+   "Question a, wording: G, A, T, C is its own reverse complement. Read in its own direction (antiparallel), the partner strand is also G, A, T, C, so the distractor 'G, A, T, C' is defensible for a student who knows more. A non-palindromic sequence would remove this."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "The double helix",
+  "card": [
+   "DNA is made of two long strands twisted around each other. This shape is called a double helix, like a twisted ladder.",
+   "Each strand is a chain of units that carry a base. The four bases are A, T, C and G. The bases of the two strands face each other in the middle.",
+   "Bases pair in a fixed way: A with T, and C with G. So if one strand reads A, A, C, the other strand reads T, T, G.",
+   "The structure was worked out using the work of Rosalind Franklin, Maurice Wilkins, James Watson and Francis Crick. Franklin and Wilkins made X-ray images of DNA, and Watson and Crick built the model of the double helix."
+  ],
+  "remember": "DNA is a twisted ladder of two strands, with A pairing with T and C with G.",
+  "a": {
+   "q": "One strand of DNA has the base sequence G, G, A, T. What is the matching sequence on the other strand?",
+   "opts": [
+    "C, C, T, A",
+    "G, G, A, T",
+    "A, A, G, C",
+    "C, C, A, T"
+   ],
+   "why": "Each base pairs with a fixed partner: G with C, A with T and T with A. This gives C, C, T, A. Pairing only the G bases and copying the rest gives C, C, A, T, but A and T must also be swapped for their partners.",
+   "clue": "Pair each base with its partner, one at a time."
+  },
+  "b": {
+   "d": 3,
+   "q": "A scientist tests a sample of DNA and finds that 30% of its bases are A. What percentage of its bases are C?",
+   "opts": [
+    "20%",
+    "30%",
+    "40%",
+    "70%"
+   ],
+   "why": "A pairs with T, so 30% of the bases are T as well. That makes 60% A and T, leaving 40% for C and G together. C and G pair, so each is 20%. Choosing 40% forgets that C and G share that amount.",
+   "clue": "Find T first, then share what is left between C and G."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A double helix of DNA drawn as a twisted ladder. Two twisting strands are joined by rungs in the middle. Label the two strands and the bases. Show the pairs A with T and C with G.",
+    "why": "Seeing the twisted ladder and the paired bases makes the structure easier to understand."
+   }
+  ]
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix swaps G, A, T, C, which matches its own partner strand read backwards, for G, G, A, T. Its partner is C, C, T, A, and no wrong option matches the partner strand read either way.",
+   "item": "65e9bf8a9ccb17c7",
+   "result": "decided",
+   "saved": {
+    "id": "sci-double-helix",
+    "title": "The double helix",
+    "brief": "cfdf1bcf28ec",
+    "shortlist": [
+     [
+      "sci-dna-genes-chromosomes",
+      0.219
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 1,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00011,
+     "write": 0.01154,
+     "check": 0.0126,
+     "fix": 0.02125,
+     "recheck": 0.00931
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "high",
+     "reason": "The bank point teaches genes and chromosomes and only mentions the double helix as a shape, while the new point is about the helix's base pairing (A with T, C with G) and the discovery work of Franklin, Wilkins, Watson and Crick, which is a different idea.",
+     "model": "claude-haiku-5-5"
+    },
+    "draft": {
+     "title": "The double helix",
+     "card": [
+      "DNA is made of two long strands twisted around each other. This shape is called a double helix, like a twisted ladder.",
+      "Each strand is a chain of units that carry a base. The four bases are A, T, C and G. The bases of the two strands face each other in the middle.",
+      "Bases pair in a fixed way: A with T, and C with G. So if one strand reads A, A, C, the other strand reads T, T, G.",
+      "The structure was worked out using the work of Rosalind Franklin, Maurice Wilkins, James Watson and Francis Crick. Franklin and Wilkins made X-ray images of DNA, and Watson and Crick built the model of the double helix."
+     ],
+     "remember": "DNA is a twisted ladder of two strands, with A pairing with T and C with G.",
+     "a": {
+      "q": "One strand of DNA has the base sequence G, A, T, C. What is the matching sequence on the other strand?",
+      "opts": [
+       "C, T, A, G",
+       "C, A, T, G",
+       "G, A, T, C",
+       "T, C, G, A"
+      ],
+      "why": "Each base pairs with a fixed partner: G with C, A with T, T with A and C with G. This gives C, T, A, G. Copying the same sequence is tempting, but a base never pairs with itself.",
+      "clue": "Pair each base with its partner, one at a time."
+     },
+     "b": {
+      "d": 3,
+      "q": "A scientist tests a sample of DNA and finds that 30% of its bases are A. What percentage of its bases are C?",
+      "opts": [
+       "20%",
+       "30%",
+       "40%",
+       "70%"
+      ],
+      "why": "A pairs with T, so 30% of the bases are T as well. That makes 60% A and T, leaving 40% for C and G together. C and G pair, so each is 20%. Choosing 40% forgets that C and G share that amount.",
+      "clue": "Find T first, then share what is left between C and G."
+     },
+     "wants": [
+      {
+       "at": "card 1",
+       "kind": "diagram",
+       "brief": "A double helix of DNA drawn as a twisted ladder. Two twisting strands are joined by rungs in the middle. Label the two strands and the bases. Show the pairs A with T and C with G.",
+       "why": "Seeing the twisted ladder and the paired bases makes the structure easier to understand."
+      }
+     ]
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "C, T, A, G",
+      "also_right": []
+     },
+     "b": {
+      "best": "20%",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "G, A, T, C is its own reverse complement. Read in its own direction (antiparallel), the partner strand is also G, A, T, C, so the distractor 'G, A, T, C' is defensible for a student who knows more. A non-palindromic sequence would remove this."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both questions are accurate, and the intended answers (C, T, A, G and 20%) are correct. The one minor issue: question a's sequence G, A, T, C is palindromic, so the 'copy the same sequence' distractor is technically the partner strand read antiparallel. A different sequence would avoid this."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a, wording: G, A, T, C is its own reverse complement. Read in its own direction (antiparallel), the partner strand is also G, A, T, C, so the distractor 'G, A, T, C' is defensible for a student who knows more. A non-palindromic sequence would remove this."
+    ],
+    "proposal": {
+     "title": "The double helix",
+     "card": [
+      "DNA is made of two long strands twisted around each other. This shape is called a double helix, like a twisted ladder.",
+      "Each strand is a chain of units that carry a base. The four bases are A, T, C and G. The bases of the two strands face each other in the middle.",
+      "Bases pair in a fixed way: A with T, and C with G. So if one strand reads A, A, C, the other strand reads T, T, G.",
+      "The structure was worked out using the work of Rosalind Franklin, Maurice Wilkins, James Watson and Francis Crick. Franklin and Wilkins made X-ray images of DNA, and Watson and Crick built the model of the double helix."
+     ],
+     "remember": "DNA is a twisted ladder of two strands, with A pairing with T and C with G.",
+     "a": {
+      "q": "One strand of DNA has the base sequence G, G, A, T. What is the matching sequence on the other strand?",
+      "opts": [
+       "C, C, T, A",
+       "G, G, A, T",
+       "A, A, G, C",
+       "C, C, A, T"
+      ],
+      "why": "Each base pairs with a fixed partner: G with C, A with T and T with A. This gives C, C, T, A. Pairing only the G bases and copying the rest gives C, C, A, T, but A and T must also be swapped for their partners.",
+      "clue": "Pair each base with its partner, one at a time."
+     },
+     "b": {
+      "d": 3,
+      "q": "A scientist tests a sample of DNA and finds that 30% of its bases are A. What percentage of its bases are C?",
+      "opts": [
+       "20%",
+       "30%",
+       "40%",
+       "70%"
+      ],
+      "why": "A pairs with T, so 30% of the bases are T as well. That makes 60% A and T, leaving 40% for C and G together. C and G pair, so each is 20%. Choosing 40% forgets that C and G share that amount.",
+      "clue": "Find T first, then share what is left between C and G."
+     },
+     "wants": [
+      {
+       "at": "card 1",
+       "kind": "diagram",
+       "brief": "A double helix of DNA drawn as a twisted ladder. Two twisting strands are joined by rungs in the middle. Label the two strands and the bases. Show the pairs A with T and C with G.",
+       "why": "Seeing the twisted ladder and the paired bases makes the structure easier to understand."
+      }
+     ]
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:08Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "C, C, T, A",
+       "also_right": []
+      },
+      "b": {
+       "best": "20%",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found. Both answers check out: G, G, A, T pairs to C, C, T, A, and 30% A gives 30% T, leaving 40% shared equally so C is 20%."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-20T13:37:08Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 11,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "G, A, T, C is its own reverse complement. Read in its own direction (antiparallel), the partner strand is also G, A, T, C, so the distractor 'G, A, T, C' is defensible for a student who knows more. A non-palindromic sequence would remove this."
+      }
+     ],
+     "flags": [
+      "Question a, wording: G, A, T, C is its own reverse complement. Read in its own direction (antiparallel), the partner strand is also G, A, T, C, so the distractor 'G, A, T, C' is defensible for a student who knows more. A non-palindromic sequence would remove this."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "dbe6e4546dc6a716"
+  }
  ]
 }

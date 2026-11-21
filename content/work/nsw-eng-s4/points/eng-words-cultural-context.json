@@ -24,8 +24,171 @@
    0.251
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:42Z write: done",
+  "2026-11-20T12:35:45Z check: flagged",
+  "2026-11-20T12:44:53Z fix: suggested",
+  "2026-11-20T14:32:16Z review: rejected, to be written again",
+  "2026-11-20T14:58:18Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.01118,
+  "check": 0.01327,
+  "fix": 0.02214
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches how a word's meaning depends on culture, such as Aboriginal English as a dialect and words like Country and mob; the closest points cover technical meanings, slang, or texts reflecting their time, which are different ideas.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Words and cultural context",
+  "card": [
+   "The meaning of a word can depend on the culture of the people using it. The same word can mean different things in different communities.",
+   [
+    "Aboriginal English",
+    "This is a dialect of English spoken by many Aboriginal and Torres Strait Islander people. It has its own rules and ways of speaking. It is not incorrect English."
+   ],
+   [
+    "Country",
+    "To many Aboriginal people, Country means more than land. It includes the land, waters, plants, animals and stories a person belongs to, and has a duty to care for."
+   ],
+   [
+    "Mob",
+    "In Aboriginal English, mob can mean a group of people with a shared connection, such as family or community. It is often tied to a place."
+   ]
+  ],
+  "remember": "A word can carry meanings tied to a culture, so a reader should not assume it means only what they know.",
+  "a": {
+   "q": "An Aboriginal writer uses the word Country in a poem. Which reading best fits how many Aboriginal people use the word?",
+   "opts": [
+    "A living place of land, waters, family and stories",
+    "A nation with its own government and flag",
+    "Any area of farmland away from a city",
+    "A single piece of land that a person owns"
+   ],
+   "why": "Country is tied to land, waters, stories and community, and to a person's duty to care for it. Reading it as owned land is tempting, but it misses the sense of belonging and responsibility.",
+   "clue": "Think about belonging and care, not owning."
+  },
+  "b": {
+   "d": 2,
+   "q": "In a story, Kayla says, \"My mob is coming to the footy on Saturday.\" Who is she most likely talking about?",
+   "opts": [
+    "Her family and community",
+    "A crowd of angry strangers",
+    "Her school sports team only",
+    "Animals on her farm"
+   ],
+   "why": "In Aboriginal English, mob can mean a group with a shared connection, such as family or community. Reading it as a crowd of strangers uses the everyday meaning of mob and ignores the cultural one.",
+   "clue": "Mob is about people connected to each other."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:18Z",
+   "step": "write",
+   "version": {
+    "title": "Words and cultural context",
+    "card": [
+     "The meaning of a word can depend on the culture of the people using it. A reader who knows only one meaning may miss what a writer intends.",
+     [
+      "Aboriginal English",
+      "a dialect of English spoken by many Aboriginal people across Australia. Like every dialect, it is a form of English with its own consistent rules for sounds, grammar and meanings."
+     ],
+     [
+      "Country",
+      "for many Aboriginal people, Country means the land, waters, sky and living things a person belongs to, joined to them by family, stories and a duty of care."
+     ],
+     [
+      "Mob",
+      "in Aboriginal English, mob often means a person's family, kin or community. Asking \"Who's your mob?\" asks where and to whom someone belongs."
+     ]
+    ],
+    "remember": "Some words carry meanings from a culture, so read them in the context of the people who use them.",
+    "a": {
+     "q": "Why is Aboriginal English called a dialect rather than incorrect English?",
+     "opts": [
+      "It follows its own rules, as every dialect does",
+      "It uses no words found in standard English",
+      "It is a separate language with no link to English",
+      "It is mostly written down rather than spoken"
+     ],
+     "why": "A dialect is a form of a language with its own consistent rules for sounds, grammar and meanings. Aboriginal English is a form of English, so it is not a separate language with no link to English.",
+     "clue": "What does every dialect have, whoever speaks it?"
+    },
+    "b": {
+     "d": 3,
+     "q": "In a story by an Aboriginal author, a character says she is visiting her mob on Country these holidays. What does she most likely mean?",
+     "opts": [
+      "She is visiting family on the land she belongs to",
+      "She is visiting a crowd of people in the countryside",
+      "She is visiting her friends in another nation",
+      "She is visiting her relatives on land they have bought"
+     ],
+     "why": "Mob often means family, kin or community, and Country is the land a person belongs to. Reading mob as a crowd and Country as the countryside uses everyday meanings and misses the cultural ones.",
+     "clue": "Read both words in the culture of the speaker."
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Words and cultural context",
+  "card": [
+   "The meaning of a word can depend on the culture of the people using it. A reader who knows only one meaning may miss what a writer intends.",
+   [
+    "Aboriginal English",
+    "a dialect of English spoken by many Aboriginal people across Australia. Like every dialect, it is a form of English with its own consistent rules for sounds, grammar and meanings."
+   ],
+   [
+    "Country",
+    "for many Aboriginal people, Country means the land, waters, sky and living things a person belongs to, joined to them by family, stories and a duty of care."
+   ],
+   [
+    "Mob",
+    "in Aboriginal English, mob often means a person's family, kin or community. Asking \"Who's your mob?\" asks where and to whom someone belongs."
+   ]
+  ],
+  "remember": "Some words carry meanings from a culture, so read them in the context of the people who use them.",
+  "a": {
+   "q": "Why is Aboriginal English called a dialect rather than incorrect English?",
+   "opts": [
+    "It follows its own rules, as every dialect does",
+    "It uses no words found in standard English",
+    "It is a separate language with no link to English",
+    "It is mostly written down rather than spoken"
+   ],
+   "why": "A dialect is a form of a language with its own consistent rules for sounds, grammar and meanings. Aboriginal English is a form of English, so it is not a separate language with no link to English.",
+   "clue": "What does every dialect have, whoever speaks it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a story by an Aboriginal author, a character says she is visiting her mob on Country these holidays. What does she most likely mean?",
+   "opts": [
+    "She is visiting family on the land she belongs to",
+    "She is visiting a crowd of people in the countryside",
+    "She is visiting her friends in another nation",
+    "She is visiting her relatives on land they have bought"
+   ],
+   "why": "Mob often means family, kin or community, and Country is the land a person belongs to. Reading mob as a crowd and Country as the countryside uses everyday meanings and misses the cultural ones.",
+   "clue": "Read both words in the culture of the speaker."
+  }
+ },
+ "local": []
 }

@@ -20,8 +20,214 @@
    0.206
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: done",
+  "2026-11-20T12:44:56Z check: flagged",
+  "2026-11-20T12:53:26Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.00612,
+  "check": 0.01202,
+  "fix": 0.01431,
+  "recheck": 0.00858
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches daily life in ancient Egypt: the social pyramid card covers social rank and only touches on women owning property, the Nile card covers farming without daily life, and none mentions women running businesses or children helping their families.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Daily life in ancient Egypt",
+  "card": [
+   "Most ancient Egyptians were farmers. They grew crops such as wheat and barley on land beside the Nile, and much of their year followed the river's flood and the growing season.",
+   "Most families lived in simple homes, often built from mud brick. Richer families could afford larger houses and more goods.",
+   "Women could own property, make contracts and run businesses. Most still looked after the home and children, and the pharaoh and most officials were men.",
+   "Children helped their families from a young age. Many worked in the fields or learned a family trade. Some boys learned to read and write to become scribes."
+  ],
+  "remember": "Daily life centred on farming, and women and children both played real parts in their families.",
+  "a": {
+   "q": "Which job did most people in ancient Egypt do?",
+   "opts": [
+    "Farming land beside the Nile",
+    "Writing records as scribes",
+    "Serving as priests in temples",
+    "Ruling as officials for the pharaoh"
+   ],
+   "why": "Most Egyptians were farmers who grew crops beside the Nile. Scribes, priests and officials existed, but they were only a small part of the population.",
+   "clue": "Think about what the Nile's land was used for."
+  },
+  "b": {
+   "d": 3,
+   "q": "Neferet lived in an Egyptian town. She owned a small bakery in her own name and signed contracts with her suppliers. What does her case show about women in ancient Egypt?",
+   "opts": [
+    "Women could own property and run businesses",
+    "Women ruled Egypt in place of the pharaoh",
+    "Women were barred from all kinds of work",
+    "Women had the same jobs and power as men"
+   ],
+   "why": "Neferet owned a business and made contracts, which shows that women could own property and run businesses. It does not show equal power, because the pharaoh and most officials were men.",
+   "clue": "Look at what Neferet did herself, not at who ruled."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Farming land beside the Nile",
+   "also_right": []
+  },
+  "b": {
+   "best": "Women could own property and run businesses",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'the pharaoh and most officials were men' implies every pharaoh was a man. A few women ruled as pharaoh, for example Hatshepsut, Sobekneferu and Cleopatra VII. Better: 'almost all pharaohs and most officials were men'."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) repeats the claim that 'the pharaoh ... were men', which overlooks female pharaohs such as Hatshepsut. Better: 'almost all pharaohs'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The questions and answers are sound. The card and why (b) say the pharaoh was a man, which overlooks female pharaohs such as Hatshepsut and should be softened to 'almost all pharaohs'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: 'the pharaoh and most officials were men' implies every pharaoh was a man. A few women ruled as pharaoh, for example Hatshepsut, Sobekneferu and Cleopatra VII. Better: 'almost all pharaohs and most officials were men'.",
+  "Question b, fact: Why (b) repeats the claim that 'the pharaoh ... were men', which overlooks female pharaohs such as Hatshepsut. Better: 'almost all pharaohs'."
+ ],
+ "proposal": {
+  "title": "Daily life in ancient Egypt",
+  "card": [
+   "Most ancient Egyptians were farmers. They grew crops such as wheat and barley on land beside the Nile, and much of their year followed the river's flood and the growing season.",
+   "Most families lived in simple homes, often built from mud brick. Richer families could afford larger houses and more goods.",
+   "Women could own property, make contracts and run businesses. Most still looked after the home and children, and almost all pharaohs and most officials were men.",
+   "Children helped their families from a young age. Many worked in the fields or learned a family trade. Some boys learned to read and write to become scribes."
+  ],
+  "remember": "Daily life centred on farming, and women and children both played real parts in their families.",
+  "a": {
+   "q": "Which job did most people in ancient Egypt do?",
+   "opts": [
+    "Farming land beside the Nile",
+    "Writing records as scribes",
+    "Serving as priests in temples",
+    "Ruling as officials for the pharaoh"
+   ],
+   "why": "Most Egyptians were farmers who grew crops beside the Nile. Scribes, priests and officials existed, but they were only a small part of the population.",
+   "clue": "Think about what the Nile's land was used for."
+  },
+  "b": {
+   "d": 3,
+   "q": "Neferet lived in an Egyptian town. She owned a small bakery in her own name and signed contracts with her suppliers. What does her case show about women in ancient Egypt?",
+   "opts": [
+    "Women could own property and run businesses",
+    "Women ruled Egypt in place of the pharaoh",
+    "Women were barred from all kinds of work",
+    "Women had the same jobs and power as men"
+   ],
+   "why": "Neferet owned a business and made contracts, which shows that women could own property and run businesses. It does not show equal power, because almost all pharaohs and most officials were men.",
+   "clue": "Look at what Neferet did herself, not at who ruled."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Farming land beside the Nile",
+    "also_right": []
+   },
+   "b": {
+    "best": "Women could own property and run businesses",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'the pharaoh and most officials were men' implies every pharaoh was a man. A few women ruled as pharaoh, for example Hatshepsut, Sobekneferu and Cleopatra VII. Better: 'almost all pharaohs and most officials were men'."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) repeats the claim that 'the pharaoh ... were men', which overlooks female pharaohs such as Hatshepsut. Better: 'almost all pharaohs'."
+   }
+  ],
+  "flags": [
+   "Card, fact: 'the pharaoh and most officials were men' implies every pharaoh was a man. A few women ruled as pharaoh, for example Hatshepsut, Sobekneferu and Cleopatra VII. Better: 'almost all pharaohs and most officials were men'.",
+   "Question b, fact: Why (b) repeats the claim that 'the pharaoh ... were men', which overlooks female pharaohs such as Hatshepsut. Better: 'almost all pharaohs'."
+  ]
+ },
+ "final": {
+  "title": "Daily life in ancient Egypt",
+  "card": [
+   "Most ancient Egyptians were farmers. They grew crops such as wheat and barley on land beside the Nile, and much of their year followed the river's flood and the growing season.",
+   "Most families lived in simple homes, often built from mud brick. Richer families could afford larger houses and more goods.",
+   "Women could own property, make contracts and run businesses. Most still looked after the home and children, and almost all pharaohs and most officials were men.",
+   "Children helped their families from a young age. Many worked in the fields or learned a family trade. Some boys learned to read and write to become scribes."
+  ],
+  "remember": "Daily life centred on farming, and women and children both played real parts in their families.",
+  "a": {
+   "q": "Which job did most people in ancient Egypt do?",
+   "opts": [
+    "Farming land beside the Nile",
+    "Writing records as scribes",
+    "Serving as priests in temples",
+    "Ruling as officials for the pharaoh"
+   ],
+   "why": "Most Egyptians were farmers who grew crops beside the Nile. Scribes, priests and officials existed, but they were only a small part of the population.",
+   "clue": "Think about what the Nile's land was used for."
+  },
+  "b": {
+   "d": 3,
+   "q": "Neferet lived in an Egyptian town. She owned a small bakery in her own name and signed contracts with her suppliers. What does her case show about women in ancient Egypt?",
+   "opts": [
+    "Women could own property and run businesses",
+    "Women ruled Egypt in place of the pharaoh",
+    "Women were barred from all kinds of work",
+    "Women had the same jobs and power as men"
+   ],
+   "why": "Neferet owned a business and made contracts, which shows that women could own property and run businesses. It does not show equal power, because almost all pharaohs and most officials were men.",
+   "clue": "Look at what Neferet did herself, not at who ruled."
+  }
+ },
+ "cleared_by": "recheck"
 }

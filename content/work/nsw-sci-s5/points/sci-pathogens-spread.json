@@ -3,8 +3,361 @@
  "title": "How pathogens spread",
  "brief": "7ba257b4af8f",
  "shortlist": [],
- "stage": "write",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, write"
- ]
+  "2026-11-12T12:22:43Z new, write",
+  "2026-11-20T12:15:22Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:26:02Z write: done",
+  "2026-11-20T12:35:57Z check: flagged",
+  "2026-11-20T12:45:01Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (remember wording)",
+  "2026-11-20T13:44:57Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.0065,
+  "check": 0.01651,
+  "fix": 0.02461,
+  "recheck": 0.0111
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Remember, wording: \"Each pathogen travels by its own route\" suggests every pathogen has a single route. The card lists several ways pathogens spread, and some pathogens (such as flu, by droplets and contact) use more than one. Something like \"Each pathogen has its own routes\" would avoid this.",
+ "rejected": {
+  "title": "How pathogens spread",
+  "card": [
+   "A pathogen is a living thing or agent that causes disease. The main groups are bacteria, viruses, fungi and parasites.",
+   "Pathogens spread in several ways. These include direct contact with an infected person, droplets in the air, contaminated water or food, and animals such as mosquitoes.",
+   "Cholera bacteria can spread in dirty water. Influenza viruses can spread in droplets when a person coughs. Malaria parasites can spread in the bite of a mosquito.",
+   "Spread can be slowed. Handwashing and food hygiene remove pathogens, clean drinking water avoids water-borne ones, and isolating sick people keeps pathogens from reaching others."
+  ],
+  "remember": "Each pathogen travels by its own route, and cutting that route can slow the spread.",
+  "a": {
+   "q": "Cholera breaks out in a town, and tests find the bacteria in the town's reservoir. Which step would best slow the spread?",
+   "opts": [
+    "Treating the town's supply to kill the bacteria",
+    "Asking sick people to cover coughs and sneezes",
+    "Spraying the town to get rid of mosquitoes",
+    "Isolating the people who have no symptoms"
+   ],
+   "why": "The reservoir supplies drinking water, and cholera spreads in dirty water, so treating the supply cuts the route the bacteria use. Covering coughs slows pathogens that travel in droplets, but that is not how cholera is reaching people here.",
+   "clue": "Where were the bacteria found, and what is it used for?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Ava has the flu, which spreads in droplets from coughs and sneezes. She stays home from school until she is well. Why does this slow the spread?",
+   "opts": [
+    "Her droplets cannot reach her classmates",
+    "It kills the flu viruses inside her body",
+    "It stops the flu getting into the school's water",
+    "It stops mosquitoes carrying the flu to others"
+   ],
+   "why": "Flu travels in droplets, so staying away from others means her droplets cannot reach them. Staying home does not kill the viruses in her body: her body deals with them over time.",
+   "clue": "Think about how flu travels from one person to the next."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Remember, wording: \"Each pathogen travels by its own route\" suggests every pathogen has a single route. The card lists several ways pathogens spread, and some pathogens (such as flu, by droplets and contact) use more than one. Something like \"Each pathogen has its own routes\" would avoid this."
+   ],
+   "saved": {
+    "draft": {
+     "title": "How pathogens spread",
+     "card": [
+      "A pathogen is a microbe that causes disease. The main groups are bacteria, viruses, fungi and parasites.",
+      "Pathogens spread in several ways. These include direct contact with an infected person, droplets in the air, contaminated water or food, and animals such as mosquitoes.",
+      "Cholera bacteria can spread in dirty water. Influenza viruses can spread in droplets when a person coughs. Malaria parasites can spread in the bite of a mosquito.",
+      "Spread can be slowed. Handwashing and food hygiene remove pathogens, clean drinking water avoids water-borne ones, and isolating sick people keeps pathogens from reaching others."
+     ],
+     "remember": "Pathogens travel by contact, air, water, food and animals, and each route can be blocked.",
+     "a": {
+      "q": "A town's drinking water is contaminated with cholera bacteria, and many people fall ill. Which step would best slow the spread?",
+      "opts": [
+       "Providing clean, safe drinking water",
+       "Telling sick people to cover their coughs",
+       "Spraying the town to remove mosquitoes",
+       "Isolating only people who have no symptoms"
+      ],
+      "why": "Cholera spreads through contaminated water, so cleaning the water blocks the route. Covering coughs helps with pathogens spread in the air, but that is not how cholera spreads here.",
+      "clue": "Match the step to the way the pathogen travels."
+     },
+     "b": {
+      "d": 3,
+      "q": "Ava has the flu, which spreads in droplets from coughs and sneezes. She stays home from school until she is well. Why does this slow the spread?",
+      "opts": [
+       "It keeps her pathogens away from other people",
+       "It kills the flu viruses that are inside her body",
+       "It cleans the water supply at her school",
+       "It stops mosquitoes from carrying the flu"
+      ],
+      "why": "Isolation keeps an infected person away from others, so droplets cannot reach them. It does not kill the viruses in her body, which her body deals with over time.",
+      "clue": "Isolation changes who the sick person can reach."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Providing clean, safe drinking water",
+      "also_right": []
+     },
+     "b": {
+      "best": "It keeps her pathogens away from other people",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card says 'A pathogen is a microbe that causes disease' and then lists parasites as a main group. Many parasites, such as parasitic worms and ticks, are not microbes. Better: 'A pathogen is a living thing or agent that causes disease.'"
+      },
+      {
+       "part": "remember",
+       "kind": "other",
+       "detail": "The remember line says each route 'can be blocked', but the card only says spread 'can be slowed'. 'Blocked' overstates what hygiene, clean water and isolation do."
+      },
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The right option repeats 'drinking water' from the stem and is the only option with qualifiers ('clean, safe'). A student could pick it by word-matching without knowing how cholera spreads."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue 'Isolation changes who the sick person can reach' nearly states the right option ('keeps her pathogens away from other people'), so it gives the answer away."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both answers are clear and the explanations agree with them. The card loosely calls all pathogens microbes, the remember line says 'blocked' where the card says 'slowed', question a's right option echoes the stem's wording, and question b's clue nearly gives the answer away."
+    },
+    "flags": [
+     "Card, fact: The card says 'A pathogen is a microbe that causes disease' and then lists parasites as a main group. Many parasites, such as parasitic worms and ticks, are not microbes. Better: 'A pathogen is a living thing or agent that causes disease.'",
+     "Remember, other: The remember line says each route 'can be blocked', but the card only says spread 'can be slowed'. 'Blocked' overstates what hygiene, clean water and isolation do.",
+     "Question a, wording: The right option repeats 'drinking water' from the stem and is the only option with qualifiers ('clean, safe'). A student could pick it by word-matching without knowing how cholera spreads.",
+     "Question b, other: The clue 'Isolation changes who the sick person can reach' nearly states the right option ('keeps her pathogens away from other people'), so it gives the answer away."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "How pathogens spread",
+     "card": [
+      "A pathogen is a living thing or agent that causes disease. The main groups are bacteria, viruses, fungi and parasites.",
+      "Pathogens spread in several ways. These include direct contact with an infected person, droplets in the air, contaminated water or food, and animals such as mosquitoes.",
+      "Cholera bacteria can spread in dirty water. Influenza viruses can spread in droplets when a person coughs. Malaria parasites can spread in the bite of a mosquito.",
+      "Spread can be slowed. Handwashing and food hygiene remove pathogens, clean drinking water avoids water-borne ones, and isolating sick people keeps pathogens from reaching others."
+     ],
+     "remember": "Each pathogen travels by its own route, and cutting that route can slow the spread.",
+     "a": {
+      "q": "Cholera breaks out in a town, and tests find the bacteria in the town's reservoir. Which step would best slow the spread?",
+      "opts": [
+       "Treating the town's supply to kill the bacteria",
+       "Asking sick people to cover coughs and sneezes",
+       "Spraying the town to get rid of mosquitoes",
+       "Isolating the people who have no symptoms"
+      ],
+      "why": "The reservoir supplies drinking water, and cholera spreads in dirty water, so treating the supply cuts the route the bacteria use. Covering coughs slows pathogens that travel in droplets, but that is not how cholera is reaching people here.",
+      "clue": "Where were the bacteria found, and what is it used for?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Ava has the flu, which spreads in droplets from coughs and sneezes. She stays home from school until she is well. Why does this slow the spread?",
+      "opts": [
+       "Her droplets cannot reach her classmates",
+       "It kills the flu viruses inside her body",
+       "It stops the flu getting into the school's water",
+       "It stops mosquitoes carrying the flu to others"
+      ],
+      "why": "Flu travels in droplets, so staying away from others means her droplets cannot reach them. Staying home does not kill the viruses in her body: her body deals with them over time.",
+      "clue": "Think about how flu travels from one person to the next."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:08Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Treating the town's supply to kill the bacteria",
+       "also_right": []
+      },
+      "b": {
+       "best": "Her droplets cannot reach her classmates",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "remember",
+        "kind": "wording",
+        "detail": "\"Each pathogen travels by its own route\" suggests every pathogen has a single route. The card lists several ways pathogens spread, and some pathogens (such as flu, by droplets and contact) use more than one. Something like \"Each pathogen has its own routes\" would avoid this."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are sound and have one clearly right answer. The remember line implies each pathogen spreads by only one route, which could mislead students."
+     },
+     "flags": [
+      "Remember, wording: \"Each pathogen travels by its own route\" suggests every pathogen has a single route. The card lists several ways pathogens spread, and some pathogens (such as flu, by droplets and contact) use more than one. Something like \"Each pathogen has its own routes\" would avoid this."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:57Z",
+   "step": "write",
+   "version": {
+    "title": "How pathogens spread",
+    "card": [
+     "A pathogen is a living thing or agent that causes disease. The main groups are bacteria, viruses, fungi and parasites.",
+     "Pathogens spread in several ways. These include direct contact with an infected person, droplets in the air, contaminated water or food, and animals such as mosquitoes.",
+     "Cholera bacteria can spread in dirty water. Influenza viruses can spread in droplets when a person coughs. Malaria parasites can spread in the bite of a mosquito.",
+     "Spread can be slowed. Handwashing and food hygiene remove pathogens, clean drinking water avoids water-borne ones, and isolating sick people keeps pathogens from reaching others."
+    ],
+    "remember": "Each pathogen has its own routes of spread, and cutting those routes can slow it down.",
+    "a": {
+     "q": "Cholera breaks out in a town, and tests find the bacteria in the town's reservoir. Which step would best slow the spread?",
+     "opts": [
+      "Treating the town's supply to kill the bacteria",
+      "Asking sick people to cover coughs and sneezes",
+      "Spraying the town to get rid of mosquitoes",
+      "Isolating the people who have no symptoms"
+     ],
+     "why": "The reservoir supplies drinking water, and cholera spreads in dirty water, so treating the supply cuts the route the bacteria use. Covering coughs slows pathogens that travel in droplets, but that is not how cholera is reaching people here.",
+     "clue": "Where were the bacteria found, and what is it used for?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Ava has the flu, which spreads in droplets from coughs and sneezes. She stays home from school until she is well. Why does this slow the spread?",
+     "opts": [
+      "Her droplets cannot reach her classmates",
+      "It kills the flu viruses inside her body",
+      "It stops the flu getting into the school's water",
+      "It stops mosquitoes carrying the flu to others"
+     ],
+     "why": "Flu travels in droplets, so staying away from others means her droplets cannot reach them. Staying home does not kill the viruses in her body: her body deals with them over time.",
+     "clue": "Think about how flu travels from one person to the next."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Treating the town's supply to kill the bacteria",
+     "also_right": []
+    },
+    "b": {
+     "best": "Her droplets cannot reach her classmates",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "How pathogens spread",
+  "card": [
+   "A pathogen is a living thing or agent that causes disease. The main groups are bacteria, viruses, fungi and parasites.",
+   "Pathogens spread in several ways. These include direct contact with an infected person, droplets in the air, contaminated water or food, and animals such as mosquitoes.",
+   "Cholera bacteria can spread in dirty water. Influenza viruses can spread in droplets when a person coughs. Malaria parasites can spread in the bite of a mosquito.",
+   "Spread can be slowed. Handwashing and food hygiene remove pathogens, clean drinking water avoids water-borne ones, and isolating sick people keeps pathogens from reaching others."
+  ],
+  "remember": "Each pathogen has its own routes of spread, and cutting those routes can slow it down.",
+  "a": {
+   "q": "Cholera breaks out in a town, and tests find the bacteria in the town's reservoir. Which step would best slow the spread?",
+   "opts": [
+    "Treating the town's supply to kill the bacteria",
+    "Asking sick people to cover coughs and sneezes",
+    "Spraying the town to get rid of mosquitoes",
+    "Isolating the people who have no symptoms"
+   ],
+   "why": "The reservoir supplies drinking water, and cholera spreads in dirty water, so treating the supply cuts the route the bacteria use. Covering coughs slows pathogens that travel in droplets, but that is not how cholera is reaching people here.",
+   "clue": "Where were the bacteria found, and what is it used for?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Ava has the flu, which spreads in droplets from coughs and sneezes. She stays home from school until she is well. Why does this slow the spread?",
+   "opts": [
+    "Her droplets cannot reach her classmates",
+    "It kills the flu viruses inside her body",
+    "It stops the flu getting into the school's water",
+    "It stops mosquitoes carrying the flu to others"
+   ],
+   "why": "Flu travels in droplets, so staying away from others means her droplets cannot reach them. Staying home does not kill the viruses in her body: her body deals with them over time.",
+   "clue": "Think about how flu travels from one person to the next."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Treating the town's supply to kill the bacteria",
+   "also_right": []
+  },
+  "b": {
+   "best": "Her droplets cannot reach her classmates",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "How pathogens spread",
+  "card": [
+   "A pathogen is a living thing or agent that causes disease. The main groups are bacteria, viruses, fungi and parasites.",
+   "Pathogens spread in several ways. These include direct contact with an infected person, droplets in the air, contaminated water or food, and animals such as mosquitoes.",
+   "Cholera bacteria can spread in dirty water. Influenza viruses can spread in droplets when a person coughs. Malaria parasites can spread in the bite of a mosquito.",
+   "Spread can be slowed. Handwashing and food hygiene remove pathogens, clean drinking water avoids water-borne ones, and isolating sick people keeps pathogens from reaching others."
+  ],
+  "remember": "Each pathogen has its own routes of spread, and cutting those routes can slow it down.",
+  "a": {
+   "q": "Cholera breaks out in a town, and tests find the bacteria in the town's reservoir. Which step would best slow the spread?",
+   "opts": [
+    "Treating the town's supply to kill the bacteria",
+    "Asking sick people to cover coughs and sneezes",
+    "Spraying the town to get rid of mosquitoes",
+    "Isolating the people who have no symptoms"
+   ],
+   "why": "The reservoir supplies drinking water, and cholera spreads in dirty water, so treating the supply cuts the route the bacteria use. Covering coughs slows pathogens that travel in droplets, but that is not how cholera is reaching people here.",
+   "clue": "Where were the bacteria found, and what is it used for?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Ava has the flu, which spreads in droplets from coughs and sneezes. She stays home from school until she is well. Why does this slow the spread?",
+   "opts": [
+    "Her droplets cannot reach her classmates",
+    "It kills the flu viruses inside her body",
+    "It stops the flu getting into the school's water",
+    "It stops mosquitoes carrying the flu to others"
+   ],
+   "why": "Flu travels in droplets, so staying away from others means her droplets cannot reach them. Staying home does not kill the viruses in her body: her body deals with them over time.",
+   "clue": "Think about how flu travels from one person to the next."
+  }
+ },
+ "checked_by": "claude-code"
 }

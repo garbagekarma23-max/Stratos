@@ -24,8 +24,220 @@
    0.408
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: failed the content check, writing again",
+  "2026-11-20T12:35:56Z write: done",
+  "2026-11-20T12:44:59Z check: flagged",
+  "2026-11-20T12:53:28Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00032,
+  "write": 0.01944,
+  "check": 0.01064,
+  "fix": 0.0216,
+  "recheck": 0.01008
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Sampling methods, covers random, systematic, stratified and self-selected sampling but does not teach the census-versus-sample idea or that a large enough random sample reduces bias, so it is broader and would need new content rather than small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Samples and bias",
+  "card": [
+   [
+    "Census",
+    "A census collects data from every member of the population. It is accurate but often costly and slow."
+   ],
+   [
+    "Sample",
+    "A sample collects data from only some of the population. It is quicker and cheaper, but its results are only an estimate of the whole population."
+   ],
+   "A sample is biased if it favours some members of the population over others. A sample of volunteers or friends may be biased, because those people may differ from everyone else.",
+   "A random sample gives every member an equal chance of being chosen, which reduces bias. A larger sample usually gives a more reliable estimate."
+  ],
+  "remember": "A good sample is chosen at random and is large enough, so it can stand in for the population.",
+  "a": {
+   "q": "Which sampling method is most likely to reduce bias?",
+   "opts": [
+    "Choosing students by drawing names from a full class list",
+    "Asking the students who sit near the front of the class",
+    "Asking only the students who offer to answer the survey",
+    "Asking the friends of the person who writes the survey"
+   ],
+   "why": "Drawing names from a full list gives every student an equal chance of being chosen. The other methods favour some students, such as those who volunteer, so they may not represent the group.",
+   "clue": "Which method gives everyone an equal chance?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya wants to know how Year 10 students at her school travel to school. She asks 15 members of her own netball team. Why might her results be unreliable?",
+   "opts": [
+    "Her sample is not random, so it may not represent Year 10",
+    "Her sample is a census, so the results are too costly",
+    "Her sample is random, so it has too few students",
+    "Her sample is too large, so it cannot be checked"
+   ],
+   "why": "Netball team members are not chosen at random, and they may travel differently from other students. This can make the sample biased. It is not a census, because it does not ask everyone.",
+   "clue": "Would a netball team look like all of Year 10?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Choosing students by drawing names from a full class list",
+   "also_right": []
+  },
+  "b": {
+   "best": "Her sample is not random, so it may not represent Year 10",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one with a hedged qualifier ('may not represent'). The others make flat, plainly odd claims, so a student could pick it without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The content is accurate and matches the card. In question b, the right option stands out as the only hedged, sensible statement among clearly odd distractors."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option is the only one with a hedged qualifier ('may not represent'). The others make flat, plainly odd claims, so a student could pick it without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Samples and bias",
+  "card": [
+   [
+    "Census",
+    "A census collects data from every member of the population. It is accurate but often costly and slow."
+   ],
+   [
+    "Sample",
+    "A sample collects data from only some of the population. It is quicker and cheaper, but its results are only an estimate of the whole population."
+   ],
+   "A sample is biased if it favours some members of the population over others. A sample of volunteers or friends may be biased, because those people may differ from everyone else.",
+   "A random sample gives every member an equal chance of being chosen, which reduces bias. A larger sample usually gives a more reliable estimate."
+  ],
+  "remember": "A good sample is chosen at random and is large enough, so it can stand in for the population.",
+  "a": {
+   "q": "Which sampling method is most likely to reduce bias?",
+   "opts": [
+    "Choosing students by drawing names from a full class list",
+    "Asking the students who sit near the front of the class",
+    "Asking only the students who offer to answer the survey",
+    "Asking the friends of the person who writes the survey"
+   ],
+   "why": "Drawing names from a full list gives every student an equal chance of being chosen. The other methods favour some students, such as those who volunteer, so they may not represent the group.",
+   "clue": "Which method gives everyone an equal chance?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya wants to know how Year 10 students at her school travel to school. She asks 15 members of her own netball team. Why might her results be unreliable?",
+   "opts": [
+    "Her team was not picked at random, so it may not be typical",
+    "Her team was picked at random, so it may give odd results",
+    "She asked everyone in Year 10, so it may cost too much",
+    "She asked too many students, so it may be hard to analyse"
+   ],
+   "why": "Priya chose her own team, not a random group, and team members may travel differently from other students, so the sample may be biased. It is not a census, because she did not ask everyone in Year 10, and 15 students is not too many.",
+   "clue": "Did every Year 10 student have an equal chance of being asked?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Choosing students by drawing names from a full class list",
+    "also_right": []
+   },
+   "b": {
+    "best": "Her team was not picked at random, so it may not be typical",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one with a hedged qualifier ('may not represent'). The others make flat, plainly odd claims, so a student could pick it without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The right option is the only one with a hedged qualifier ('may not represent'). The others make flat, plainly odd claims, so a student could pick it without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "Samples and bias",
+  "card": [
+   [
+    "Census",
+    "A census collects data from every member of the population. It is accurate but often costly and slow."
+   ],
+   [
+    "Sample",
+    "A sample collects data from only some of the population. It is quicker and cheaper, but its results are only an estimate of the whole population."
+   ],
+   "A sample is biased if it favours some members of the population over others. A sample of volunteers or friends may be biased, because those people may differ from everyone else.",
+   "A random sample gives every member an equal chance of being chosen, which reduces bias. A larger sample usually gives a more reliable estimate."
+  ],
+  "remember": "A good sample is chosen at random and is large enough, so it can stand in for the population.",
+  "a": {
+   "q": "Which sampling method is most likely to reduce bias?",
+   "opts": [
+    "Choosing students by drawing names from a full class list",
+    "Asking the students who sit near the front of the class",
+    "Asking only the students who offer to answer the survey",
+    "Asking the friends of the person who writes the survey"
+   ],
+   "why": "Drawing names from a full list gives every student an equal chance of being chosen. The other methods favour some students, such as those who volunteer, so they may not represent the group.",
+   "clue": "Which method gives everyone an equal chance?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya wants to know how Year 10 students at her school travel to school. She asks 15 members of her own netball team. Why might her results be unreliable?",
+   "opts": [
+    "Her team was not picked at random, so it may not be typical",
+    "Her team was picked at random, so it may give odd results",
+    "She asked everyone in Year 10, so it may cost too much",
+    "She asked too many students, so it may be hard to analyse"
+   ],
+   "why": "Priya chose her own team, not a random group, and team members may travel differently from other students, so the sample may be biased. It is not a census, because she did not ask everyone in Year 10, and 15 students is not too many.",
+   "clue": "Did every Year 10 student have an equal chance of being asked?"
+  }
+ },
+ "cleared_by": "recheck"
 }

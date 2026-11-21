@@ -24,8 +24,115 @@
    0.283
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:55Z write: done",
+  "2026-11-20T12:44:59Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.01499,
+  "check": 0.01166
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches matching equations of lines, parabolas, cubics, hyperbolas, circles and exponentials to their graphs; the closest, Graphing parabolas, covers only y = x² and is narrower than the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Matching equations to graphs",
+  "card": [
+   "Look at where \\(x\\) sits in the equation. \\(y = mx + c\\) is a straight line, \\(y = ax^{2} + bx + c\\) is a parabola, and an equation with \\(x^{3}\\) as its highest power, such as \\(y = x^{3} - 4x\\), is a cubic.",
+   "A hyperbola has \\(x\\) under a fraction bar, as in \\(y = \\frac{k}{x}\\). A circle has both \\(x^{2}\\) and \\(y^{2}\\), as in \\(x^{2} + y^{2} = r^{2}\\).",
+   "An exponential has \\(x\\) in the power, as in \\(y = 2^{x}\\). When the base is more than 1, it rises to the right, gets close to the \\(x\\)-axis on the left without touching it, and crosses the \\(y\\)-axis at \\((0, 1)\\).",
+   "Use the shape to check. A parabola has one turn and both ends go the same way. A cubic has ends that go in opposite directions. Putting \\(x = 0\\) into the equation gives the \\(y\\)-intercept."
+  ],
+  "remember": "Match the equation by where \\(x\\) sits, then check the graph's shape and intercept.",
+  "a": {
+   "q": "Which equation gives an exponential graph?",
+   "opts": [
+    "\\(y = 3^{x}\\)",
+    "\\(y = x^{3}\\)",
+    "\\(y = 3x\\)",
+    "\\(y = \\frac{3}{x}\\)"
+   ],
+   "why": "In \\(y = 3^{x}\\) the \\(x\\) is in the power, so the graph is an exponential. In \\(y = x^{3}\\) the \\(x\\) is the base and the power is fixed, which makes a cubic.",
+   "clue": "Which one has \\(x\\) up in the power?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A graph crosses the \\(y\\)-axis at 1. It rises steeply to the right and gets close to the \\(x\\)-axis on the left without touching it. Which equation fits?",
+   "opts": [
+    "\\(y = 2^{x}\\)",
+    "\\(y = x^{2} + 1\\)",
+    "\\(y = x^{3} + 1\\)",
+    "\\(y = 2x + 1\\)"
+   ],
+   "why": "\\(y = 2^{x}\\) is an exponential with base more than 1. It passes through \\((0, 1)\\) and gets close to the \\(x\\)-axis on the left. The other three also cross the \\(y\\)-axis at 1, but a parabola, a cubic and a line never get close to the \\(x\\)-axis on one side and stay above it.",
+   "clue": "Crossing at 1 is not enough. Think about the left-hand end."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(y = 3^{x}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(y = 2^{x}\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Matching equations to graphs",
+  "card": [
+   "Look at where \\(x\\) sits in the equation. \\(y = mx + c\\) is a straight line, \\(y = ax^{2} + bx + c\\) is a parabola, and an equation with \\(x^{3}\\) as its highest power, such as \\(y = x^{3} - 4x\\), is a cubic.",
+   "A hyperbola has \\(x\\) under a fraction bar, as in \\(y = \\frac{k}{x}\\). A circle has both \\(x^{2}\\) and \\(y^{2}\\), as in \\(x^{2} + y^{2} = r^{2}\\).",
+   "An exponential has \\(x\\) in the power, as in \\(y = 2^{x}\\). When the base is more than 1, it rises to the right, gets close to the \\(x\\)-axis on the left without touching it, and crosses the \\(y\\)-axis at \\((0, 1)\\).",
+   "Use the shape to check. A parabola has one turn and both ends go the same way. A cubic has ends that go in opposite directions. Putting \\(x = 0\\) into the equation gives the \\(y\\)-intercept."
+  ],
+  "remember": "Match the equation by where \\(x\\) sits, then check the graph's shape and intercept.",
+  "a": {
+   "q": "Which equation gives an exponential graph?",
+   "opts": [
+    "\\(y = 3^{x}\\)",
+    "\\(y = x^{3}\\)",
+    "\\(y = 3x\\)",
+    "\\(y = \\frac{3}{x}\\)"
+   ],
+   "why": "In \\(y = 3^{x}\\) the \\(x\\) is in the power, so the graph is an exponential. In \\(y = x^{3}\\) the \\(x\\) is the base and the power is fixed, which makes a cubic.",
+   "clue": "Which one has \\(x\\) up in the power?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A graph crosses the \\(y\\)-axis at 1. It rises steeply to the right and gets close to the \\(x\\)-axis on the left without touching it. Which equation fits?",
+   "opts": [
+    "\\(y = 2^{x}\\)",
+    "\\(y = x^{2} + 1\\)",
+    "\\(y = x^{3} + 1\\)",
+    "\\(y = 2x + 1\\)"
+   ],
+   "why": "\\(y = 2^{x}\\) is an exponential with base more than 1. It passes through \\((0, 1)\\) and gets close to the \\(x\\)-axis on the left. The other three also cross the \\(y\\)-axis at 1, but a parabola, a cubic and a line never get close to the \\(x\\)-axis on one side and stay above it.",
+   "clue": "Crossing at 1 is not enough. Think about the left-hand end."
+  }
+ },
+ "cleared_by": "checker"
 }

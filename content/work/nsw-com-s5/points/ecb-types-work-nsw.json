@@ -12,8 +12,139 @@
    0.209
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00618,
+  "check": 0.00741
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point covers paid, unpaid, full-time, part-time and casual work at a Year 7 depth, but it does not teach the employee versus self-employed distinction the brief requires, and that addition is a new idea rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Types of work",
+  "card": [
+   [
+    "Paid and unpaid",
+    "Paid work earns money, such as wages or income from a business. Unpaid work is done without pay, such as volunteering at a surf life saving club or caring for a family member."
+   ],
+   [
+    "Employment type",
+    "Full-time workers have regular hours, usually around 38 a week. Part-time workers have regular but fewer hours. Casual workers have no guaranteed hours and are usually paid a higher hourly rate, called a loading."
+   ],
+   [
+    "Employee",
+    "An employee works for an employer, who pays them and sets their tasks and hours."
+   ],
+   [
+    "Self-employed",
+    "A self-employed person runs their own business. They earn income from customers, not wages from an employer, and make their own decisions about their work."
+   ]
+  ],
+  "remember": "Work can be paid or unpaid. Paid work can be full-time, part-time or casual, as an employee or self-employed.",
+  "a": {
+   "q": "Jo works at a shop for an employer. She has no guaranteed hours and is paid a loading on her hourly rate. What type of worker is she?",
+   "opts": [
+    "A casual employee",
+    "A part-time employee",
+    "A self-employed person",
+    "An unpaid volunteer"
+   ],
+   "why": "Jo has no guaranteed hours and works for an employer, so she is a casual employee. A part-time employee has regular hours, so that option is tempting but does not fit.",
+   "clue": "Look at whether her hours are guaranteed."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya mows lawns in Bathurst. She owns her mower, finds her own customers and sets her own prices and hours. How is her work best described?",
+   "opts": [
+    "Paid work, as a self-employed person",
+    "Paid work, as a casual employee",
+    "Paid work, as a part-time employee",
+    "Unpaid work, as a volunteer"
+   ],
+   "why": "Priya earns income from customers and makes her own decisions, so she is self-employed. A casual employee also has irregular hours, but works for an employer who sets the tasks and pays wages, and Priya has no employer.",
+   "clue": "Who decides her prices and hours, and who pays her?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A casual employee",
+   "also_right": []
+  },
+  "b": {
+   "best": "Paid work, as a self-employed person",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Types of work",
+  "card": [
+   [
+    "Paid and unpaid",
+    "Paid work earns money, such as wages or income from a business. Unpaid work is done without pay, such as volunteering at a surf life saving club or caring for a family member."
+   ],
+   [
+    "Employment type",
+    "Full-time workers have regular hours, usually around 38 a week. Part-time workers have regular but fewer hours. Casual workers have no guaranteed hours and are usually paid a higher hourly rate, called a loading."
+   ],
+   [
+    "Employee",
+    "An employee works for an employer, who pays them and sets their tasks and hours."
+   ],
+   [
+    "Self-employed",
+    "A self-employed person runs their own business. They earn income from customers, not wages from an employer, and make their own decisions about their work."
+   ]
+  ],
+  "remember": "Work can be paid or unpaid. Paid work can be full-time, part-time or casual, as an employee or self-employed.",
+  "a": {
+   "q": "Jo works at a shop for an employer. She has no guaranteed hours and is paid a loading on her hourly rate. What type of worker is she?",
+   "opts": [
+    "A casual employee",
+    "A part-time employee",
+    "A self-employed person",
+    "An unpaid volunteer"
+   ],
+   "why": "Jo has no guaranteed hours and works for an employer, so she is a casual employee. A part-time employee has regular hours, so that option is tempting but does not fit.",
+   "clue": "Look at whether her hours are guaranteed."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya mows lawns in Bathurst. She owns her mower, finds her own customers and sets her own prices and hours. How is her work best described?",
+   "opts": [
+    "Paid work, as a self-employed person",
+    "Paid work, as a casual employee",
+    "Paid work, as a part-time employee",
+    "Unpaid work, as a volunteer"
+   ],
+   "why": "Priya earns income from customers and makes her own decisions, so she is self-employed. A casual employee also has irregular hours, but works for an employer who sets the tasks and pays wages, and Priya has no employer.",
+   "clue": "Who decides her prices and hours, and who pays her?"
+  }
+ },
+ "cleared_by": "checker"
 }

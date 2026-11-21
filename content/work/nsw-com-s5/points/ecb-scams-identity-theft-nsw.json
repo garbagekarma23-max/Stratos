@@ -8,8 +8,209 @@
    0.776
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: flagged",
+  "2026-11-20T12:53:23Z fix: suggested",
+  "2026-11-20T13:23:35Z autoreview: cleared with the fix (b wording, b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.00654,
+  "check": 0.01375,
+  "fix": 0.01697
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point covers scams, identity theft and warning signs well, but it does not teach the brief's protective steps of checking sellers and never sharing passwords, and adding those would be a new step rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Scams and identity theft",
+  "card": [
+   [
+    "Scam",
+    "a trick to get money or personal details from a person. Common types include fake online shops, phishing messages and fake prizes."
+   ],
+   [
+    "Identity theft",
+    "when someone uses another person's stolen details, such as a name, birth date or bank details, to pretend to be them. They may open accounts or buy things in that person's name."
+   ],
+   "Scams often add pressure, such as \"act now\" or \"you have won\". A message that asks for details you did not expect to be asked for is a warning sign.",
+   "Consumers can guard against both by checking a seller is real before paying. They should also never share passwords or codes, even with someone who says they are from a bank."
+  ],
+  "remember": "A scam tricks you into giving up money or details. Identity theft misuses those details. Check sellers and keep passwords private.",
+  "a": {
+   "q": "Jai gets a text saying a parcel is held and he must click a link and enter his bank details. The text is from an unknown sender. What is the best description of it?",
+   "opts": [
+    "A scam that tries to trick him into giving details",
+    "A refund offered by a real delivery company",
+    "Identity theft that has already been carried out",
+    "A fair deal that he can trust if he acts quickly"
+   ],
+   "why": "The text tries to trick Jai into handing over his bank details, so it is a scam. It is not yet identity theft, because nothing has been used. That would only start if the criminals used his details to pretend to be him.",
+   "clue": "Has anyone used Jai's details yet, or are they trying to get them?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya finds a bank loan in her name that she never applied for. The lender used her name, birth date and address. What has most likely happened?",
+   "opts": [
+    "Identity theft, as someone used her stolen details",
+    "A scam, as she was tricked into buying a product",
+    "A consumer guarantee, as the loan was unfit for purpose",
+    "A refund, as the lender chose to repair the loan"
+   ],
+   "why": "Someone used Priya's personal details to pretend to be her and take out a loan, which is identity theft. A scam would involve her being tricked into handing over money or details herself, and she was not told of this at all.",
+   "clue": "Did someone trick Priya, or did someone act in her name?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A scam that tries to trick him into giving details",
+   "also_right": []
+  },
+  "b": {
+   "best": "Identity theft, as someone used her stolen details",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why's last clause, 'she was not told of this at all', is confusing. The stem gives no sign she was tricked, so it should say something like 'nothing suggests she was tricked into handing anything over'."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says 'The lender used her name, birth date and address', which could suggest the lender itself misused her details. Wording such as 'The loan was taken out using her name...' would be clearer."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate, and each question has one clearly right answer. There are two minor wording issues: an unclear clause in the why for question b, and a stem for question b that could suggest the lender misused Priya's details."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The why's last clause, 'she was not told of this at all', is confusing. The stem gives no sign she was tricked, so it should say something like 'nothing suggests she was tricked into handing anything over'.",
+  "Question b, wording: The stem says 'The lender used her name, birth date and address', which could suggest the lender itself misused her details. Wording such as 'The loan was taken out using her name...' would be clearer."
+ ],
+ "proposal": {
+  "title": "Scams and identity theft",
+  "card": [
+   [
+    "Scam",
+    "a trick to get money or personal details from a person. Common types include fake online shops, phishing messages and fake prizes."
+   ],
+   [
+    "Identity theft",
+    "when someone uses another person's stolen details, such as a name, birth date or bank details, to pretend to be them. They may open accounts or buy things in that person's name."
+   ],
+   "Scams often add pressure, such as \"act now\" or \"you have won\". A message that asks for details you did not expect to be asked for is a warning sign.",
+   "Consumers can guard against both by checking a seller is real before paying. They should also never share passwords or codes, even with someone who says they are from a bank."
+  ],
+  "remember": "A scam tricks you into giving up money or details. Identity theft misuses those details. Check sellers and keep passwords private.",
+  "a": {
+   "q": "Jai gets a text saying a parcel is held and he must click a link and enter his bank details. The text is from an unknown sender. What is the best description of it?",
+   "opts": [
+    "A scam that tries to trick him into giving details",
+    "A refund offered by a real delivery company",
+    "Identity theft that has already been carried out",
+    "A fair deal that he can trust if he acts quickly"
+   ],
+   "why": "The text tries to trick Jai into handing over his bank details, so it is a scam. It is not yet identity theft, because nothing has been used. That would only start if the criminals used his details to pretend to be him.",
+   "clue": "Has anyone used Jai's details yet, or are they trying to get them?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya finds a bank loan in her name that she never applied for. The loan was taken out using her name, birth date and address. What has most likely happened?",
+   "opts": [
+    "Identity theft, as someone used her stolen details",
+    "A scam, as she was tricked into buying a product",
+    "A consumer guarantee, as the loan was unfit for purpose",
+    "A refund, as the lender chose to repair the loan"
+   ],
+   "why": "Someone used Priya's personal details to pretend to be her and take out a loan, which is identity theft. A scam would involve Priya being tricked into handing over money or details herself, and nothing suggests she was tricked into handing anything over.",
+   "clue": "Did someone trick Priya, or did someone act in her name?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:35Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why's last clause, 'she was not told of this at all', is confusing. The stem gives no sign she was tricked, so it should say something like 'nothing suggests she was tricked into handing anything over'."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says 'The lender used her name, birth date and address', which could suggest the lender itself misused her details. Wording such as 'The loan was taken out using her name...' would be clearer."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The why's last clause, 'she was not told of this at all', is confusing. The stem gives no sign she was tricked, so it should say something like 'nothing suggests she was tricked into handing anything over'.",
+   "Question b, wording: The stem says 'The lender used her name, birth date and address', which could suggest the lender itself misused her details. Wording such as 'The loan was taken out using her name...' would be clearer."
+  ]
+ },
+ "final": {
+  "title": "Scams and identity theft",
+  "card": [
+   [
+    "Scam",
+    "a trick to get money or personal details from a person. Common types include fake online shops, phishing messages and fake prizes."
+   ],
+   [
+    "Identity theft",
+    "when someone uses another person's stolen details, such as a name, birth date or bank details, to pretend to be them. They may open accounts or buy things in that person's name."
+   ],
+   "Scams often add pressure, such as \"act now\" or \"you have won\". A message that asks for details you did not expect to be asked for is a warning sign.",
+   "Consumers can guard against both by checking a seller is real before paying. They should also never share passwords or codes, even with someone who says they are from a bank."
+  ],
+  "remember": "A scam tricks you into giving up money or details. Identity theft misuses those details. Check sellers and keep passwords private.",
+  "a": {
+   "q": "Jai gets a text saying a parcel is held and he must click a link and enter his bank details. The text is from an unknown sender. What is the best description of it?",
+   "opts": [
+    "A scam that tries to trick him into giving details",
+    "A refund offered by a real delivery company",
+    "Identity theft that has already been carried out",
+    "A fair deal that he can trust if he acts quickly"
+   ],
+   "why": "The text tries to trick Jai into handing over his bank details, so it is a scam. It is not yet identity theft, because nothing has been used. That would only start if the criminals used his details to pretend to be him.",
+   "clue": "Has anyone used Jai's details yet, or are they trying to get them?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya finds a bank loan in her name that she never applied for. The loan was taken out using her name, birth date and address. What has most likely happened?",
+   "opts": [
+    "Identity theft, as someone used her stolen details",
+    "A scam, as she was tricked into buying a product",
+    "A consumer guarantee, as the loan was unfit for purpose",
+    "A refund, as the lender chose to repair the loan"
+   ],
+   "why": "Someone used Priya's personal details to pretend to be her and take out a loan, which is identity theft. A scam would involve Priya being tricked into handing over money or details herself, and nothing suggests she was tricked into handing anything over.",
+   "clue": "Did someone trick Priya, or did someone act in her name?"
+  }
+ },
+ "cleared_by": "auto"
 }

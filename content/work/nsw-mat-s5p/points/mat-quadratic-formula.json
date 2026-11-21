@@ -24,8 +24,202 @@
    0.302
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:56Z write: done",
+  "2026-11-20T12:44:59Z check: flagged",
+  "2026-11-20T12:53:28Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00039,
+  "write": 0.00967,
+  "check": 0.01341,
+  "fix": 0.0311,
+  "recheck": 0.01056
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the quadratic formula itself: the closest, Solving quadratics by factorising, covers a different method, and Quadratic functions (Year 11) uses the formula only as one step within a broader, deeper topic.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The quadratic formula",
+  "card": [
+   "Any quadratic equation \\(ax^{2} + bx + c = 0\\) can be solved with the quadratic formula: \\(x = \\frac{-b \\pm \\sqrt{b^{2} - 4ac}}{2a}\\). It is most useful when the expression will not factorise.",
+   "First write the equation as \\(ax^{2} + bx + c = 0\\) and read off \\(a\\), \\(b\\) and \\(c\\), keeping their signs. Then substitute them in brackets.",
+   "The \\(\\pm\\) gives two answers: one using \\(+\\) and one using \\(-\\). If the number under the root is 0, there is one answer.",
+   "Example: \\(x^{2} - 2x - 4 = 0\\) has \\(a = 1\\), \\(b = -2\\), \\(c = -4\\). Then \\(x = \\frac{2 \\pm \\sqrt{4 + 16}}{2}\\), which is \\(\\frac{2 \\pm \\sqrt{20}}{2}\\). So \\(x \\approx 3.24\\) or \\(x \\approx -1.24\\)."
+  ],
+  "remember": "Write the equation equal to 0, read off \\(a\\), \\(b\\) and \\(c\\) with their signs, then substitute carefully.",
+  "a": {
+   "q": "For \\(x^{2} - 5x + 3 = 0\\), which line shows the correct substitution into the formula?",
+   "opts": [
+    "\\(x = \\frac{5 \\pm \\sqrt{25 - 12}}{2}\\)",
+    "\\(x = \\frac{-5 \\pm \\sqrt{25 - 12}}{2}\\)",
+    "\\(x = \\frac{5 \\pm \\sqrt{25 + 12}}{2}\\)",
+    "\\(x = \\frac{5 \\pm \\sqrt{25 - 12}}{1}\\)"
+   ],
+   "why": "Here \\(a = 1\\), \\(b = -5\\), \\(c = 3\\). So \\(-b = 5\\), and \\(b^{2} - 4ac = 25 - 12\\), with \\(2a = 2\\). Using \\(-5\\) for \\(-b\\) forgets that \\(b\\) is already negative.",
+   "clue": "Here \\(b\\) is negative, so \\(-b\\) is positive."
+  },
+  "b": {
+   "d": 3,
+   "q": "Solve \\(2x^{2} + 3x - 4 = 0\\) using the quadratic formula. Which pair of answers is correct, to 2 decimal places?",
+   "opts": [
+    "\\(x \\approx 0.85\\) or \\(x \\approx -2.35\\)",
+    "\\(x \\approx 2.35\\) or \\(x \\approx -0.85\\)",
+    "\\(x \\approx 0.43\\) or \\(x \\approx -1.93\\)",
+    "\\(x \\approx 1.70\\) or \\(x \\approx -4.70\\)"
+   ],
+   "why": "With \\(a = 2\\), \\(b = 3\\), \\(c = -4\\): \\(x = \\frac{-3 \\pm \\sqrt{9 + 32}}{4} = \\frac{-3 \\pm \\sqrt{41}}{4}\\). So \\(x \\approx 0.85\\) or \\(x \\approx -2.35\\). Dividing only by 2 instead of \\(2a = 4\\) gives the tempting wrong pair \\(1.70\\) and \\(-4.70\\).",
+   "clue": "The bottom of the formula is \\(2a\\), and \\(-4ac\\) with \\(c = -4\\) adds."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(x = \\frac{5 \\pm \\sqrt{25 - 12}}{2}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(x \\approx 0.85\\) or \\(x \\approx -2.35\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says any quadratic can be solved with the formula, that ± gives two answers, and that a 0 under the root gives one answer. It never says that a negative number under the root gives no real solutions. Students may wrongly believe every quadratic has a real answer, or be stuck when they meet a negative under the root."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card's example and both questions check out: each question has exactly one right answer, and the explanations agree. The one gap is that the card says any quadratic can be solved but never says that a negative number under the root means there are no real solutions."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says any quadratic can be solved with the formula, that ± gives two answers, and that a 0 under the root gives one answer. It never says that a negative number under the root gives no real solutions. Students may wrongly believe every quadratic has a real answer, or be stuck when they meet a negative under the root."
+ ],
+ "proposal": {
+  "title": "The quadratic formula",
+  "card": [
+   "Any quadratic equation \\(ax^{2} + bx + c = 0\\) can be worked through with the quadratic formula: \\(x = \\frac{-b \\pm \\sqrt{b^{2} - 4ac}}{2a}\\). It is most useful when the expression will not factorise.",
+   "First write the equation as \\(ax^{2} + bx + c = 0\\) and read off \\(a\\), \\(b\\) and \\(c\\), keeping their signs. Then substitute them in brackets.",
+   "The \\(\\pm\\) gives two answers, one using \\(+\\) and one using \\(-\\). If \\(b^{2} - 4ac\\) is 0 there is one answer, and if it is negative there are no real solutions, since a negative number has no real square root.",
+   "Example: \\(x^{2} - 2x - 4 = 0\\) has \\(a = 1\\), \\(b = -2\\), \\(c = -4\\). Then \\(x = \\frac{2 \\pm \\sqrt{4 + 16}}{2}\\), which is \\(\\frac{2 \\pm \\sqrt{20}}{2}\\). So \\(x \\approx 3.24\\) or \\(x \\approx -1.24\\)."
+  ],
+  "remember": "Write the equation equal to 0, read off \\(a\\), \\(b\\) and \\(c\\) with their signs, then substitute carefully.",
+  "a": {
+   "q": "For \\(x^{2} - 5x + 3 = 0\\), which line shows the correct substitution into the formula?",
+   "opts": [
+    "\\(x = \\frac{5 \\pm \\sqrt{25 - 12}}{2}\\)",
+    "\\(x = \\frac{-5 \\pm \\sqrt{25 - 12}}{2}\\)",
+    "\\(x = \\frac{5 \\pm \\sqrt{25 + 12}}{2}\\)",
+    "\\(x = \\frac{5 \\pm \\sqrt{25 - 12}}{1}\\)"
+   ],
+   "why": "Here \\(a = 1\\), \\(b = -5\\), \\(c = 3\\). So \\(-b = 5\\), and \\(b^{2} - 4ac = 25 - 12\\), with \\(2a = 2\\). Using \\(-5\\) for \\(-b\\) forgets that \\(b\\) is already negative.",
+   "clue": "Here \\(b\\) is negative, so \\(-b\\) is positive."
+  },
+  "b": {
+   "d": 3,
+   "q": "Solve \\(2x^{2} + 3x - 4 = 0\\) using the quadratic formula. Which pair of answers is correct, to 2 decimal places?",
+   "opts": [
+    "\\(x \\approx 0.85\\) or \\(x \\approx -2.35\\)",
+    "\\(x \\approx 2.35\\) or \\(x \\approx -0.85\\)",
+    "\\(x \\approx 0.43\\) or \\(x \\approx -1.18\\)",
+    "\\(x \\approx 1.70\\) or \\(x \\approx -4.70\\)"
+   ],
+   "why": "With \\(a = 2\\), \\(b = 3\\), \\(c = -4\\): \\(x = \\frac{-3 \\pm \\sqrt{9 + 32}}{4}\\), which is \\(\\frac{-3 \\pm \\sqrt{41}}{4}\\). So \\(x \\approx 0.85\\) or \\(x \\approx -2.35\\). Dividing by 2 instead of \\(2a = 4\\) gives the tempting wrong pair \\(1.70\\) and \\(-4.70\\).",
+   "clue": "The bottom of the formula is \\(2a\\), and \\(-4ac\\) with \\(c = -4\\) adds."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(x = \\frac{5 \\pm \\sqrt{25 - 12}}{2}\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(x \\approx 0.85\\) or \\(x \\approx -2.35\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says any quadratic can be solved with the formula, that ± gives two answers, and that a 0 under the root gives one answer. It never says that a negative number under the root gives no real solutions. Students may wrongly believe every quadratic has a real answer, or be stuck when they meet a negative under the root."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card says any quadratic can be solved with the formula, that ± gives two answers, and that a 0 under the root gives one answer. It never says that a negative number under the root gives no real solutions. Students may wrongly believe every quadratic has a real answer, or be stuck when they meet a negative under the root."
+  ]
+ },
+ "final": {
+  "title": "The quadratic formula",
+  "card": [
+   "Any quadratic equation \\(ax^{2} + bx + c = 0\\) can be worked through with the quadratic formula: \\(x = \\frac{-b \\pm \\sqrt{b^{2} - 4ac}}{2a}\\). It is most useful when the expression will not factorise.",
+   "First write the equation as \\(ax^{2} + bx + c = 0\\) and read off \\(a\\), \\(b\\) and \\(c\\), keeping their signs. Then substitute them in brackets.",
+   "The \\(\\pm\\) gives two answers, one using \\(+\\) and one using \\(-\\). If \\(b^{2} - 4ac\\) is 0 there is one answer, and if it is negative there are no real solutions, since a negative number has no real square root.",
+   "Example: \\(x^{2} - 2x - 4 = 0\\) has \\(a = 1\\), \\(b = -2\\), \\(c = -4\\). Then \\(x = \\frac{2 \\pm \\sqrt{4 + 16}}{2}\\), which is \\(\\frac{2 \\pm \\sqrt{20}}{2}\\). So \\(x \\approx 3.24\\) or \\(x \\approx -1.24\\)."
+  ],
+  "remember": "Write the equation equal to 0, read off \\(a\\), \\(b\\) and \\(c\\) with their signs, then substitute carefully.",
+  "a": {
+   "q": "For \\(x^{2} - 5x + 3 = 0\\), which line shows the correct substitution into the formula?",
+   "opts": [
+    "\\(x = \\frac{5 \\pm \\sqrt{25 - 12}}{2}\\)",
+    "\\(x = \\frac{-5 \\pm \\sqrt{25 - 12}}{2}\\)",
+    "\\(x = \\frac{5 \\pm \\sqrt{25 + 12}}{2}\\)",
+    "\\(x = \\frac{5 \\pm \\sqrt{25 - 12}}{1}\\)"
+   ],
+   "why": "Here \\(a = 1\\), \\(b = -5\\), \\(c = 3\\). So \\(-b = 5\\), and \\(b^{2} - 4ac = 25 - 12\\), with \\(2a = 2\\). Using \\(-5\\) for \\(-b\\) forgets that \\(b\\) is already negative.",
+   "clue": "Here \\(b\\) is negative, so \\(-b\\) is positive."
+  },
+  "b": {
+   "d": 3,
+   "q": "Solve \\(2x^{2} + 3x - 4 = 0\\) using the quadratic formula. Which pair of answers is correct, to 2 decimal places?",
+   "opts": [
+    "\\(x \\approx 0.85\\) or \\(x \\approx -2.35\\)",
+    "\\(x \\approx 2.35\\) or \\(x \\approx -0.85\\)",
+    "\\(x \\approx 0.43\\) or \\(x \\approx -1.18\\)",
+    "\\(x \\approx 1.70\\) or \\(x \\approx -4.70\\)"
+   ],
+   "why": "With \\(a = 2\\), \\(b = 3\\), \\(c = -4\\): \\(x = \\frac{-3 \\pm \\sqrt{9 + 32}}{4}\\), which is \\(\\frac{-3 \\pm \\sqrt{41}}{4}\\). So \\(x \\approx 0.85\\) or \\(x \\approx -2.35\\). Dividing by 2 instead of \\(2a = 4\\) gives the tempting wrong pair \\(1.70\\) and \\(-4.70\\).",
+   "clue": "The bottom of the formula is \\(2a\\), and \\(-4ac\\) with \\(c = -4\\) adds."
+  }
+ },
+ "cleared_by": "recheck"
 }

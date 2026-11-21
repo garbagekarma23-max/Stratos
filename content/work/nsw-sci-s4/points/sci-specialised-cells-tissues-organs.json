@@ -24,8 +24,129 @@
    0.329
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: failed the content check, writing again",
+  "2026-11-20T12:45:00Z write: done",
+  "2026-11-20T12:53:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.01319,
+  "check": 0.00755
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No single bank point covers both the specialised-cell idea and the cell-to-tissue-to-organ link the new point needs; the closest matches each cover only one of these, and the organ-systems point goes beyond the brief, so a new point is the safer choice.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Specialised cells, tissues and organs",
+  "card": [
+   "In many-celled organisms, cells take on special shapes for special jobs. This is called specialisation. A specialised cell has a structure that suits its job.",
+   [
+    "Nerve cell",
+    "long and thin, with branches at the ends. This shape helps it carry messages around the body."
+   ],
+   [
+    "Red blood cell",
+    "small and disc-shaped, and it carries oxygen around the body in the blood."
+   ],
+   "A group of similar cells that do the same job is a tissue, such as muscle tissue. Different tissues working together form an organ, such as the heart or the stomach."
+  ],
+  "remember": "Cells are specialised for a job, similar cells make a tissue, and different tissues make an organ.",
+  "a": {
+   "q": "What is a tissue?",
+   "opts": [
+    "A group of similar cells that do the same job",
+    "A single cell with a special shape",
+    "A group of organs that work together",
+    "A cell that carries messages around the body"
+   ],
+   "why": "A tissue is made of many similar cells doing the same job. A single specialised cell is not a tissue, because a tissue is a group of cells. Organs are made of tissues, not the other way around.",
+   "clue": "Think about how many cells there are, and how alike they are."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dani reads that the stomach has muscle tissue, gland tissue and other tissues that work together to digest food. What is the stomach?",
+   "opts": [
+    "An organ, because it is made of different tissues",
+    "A tissue, because it is made of many cells",
+    "A specialised cell, because it has one job",
+    "A tissue, because all its cells look the same"
+   ],
+   "why": "The stomach is made of different tissues working together, so it is an organ. It is not a tissue, because a tissue is made of similar cells and the stomach has more than one kind of tissue.",
+   "clue": "Count how many kinds of tissue the stomach has."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A group of similar cells that do the same job",
+   "also_right": []
+  },
+  "b": {
+   "best": "An organ, because it is made of different tissues",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Specialised cells, tissues and organs",
+  "card": [
+   "In many-celled organisms, cells take on special shapes for special jobs. This is called specialisation. A specialised cell has a structure that suits its job.",
+   [
+    "Nerve cell",
+    "long and thin, with branches at the ends. This shape helps it carry messages around the body."
+   ],
+   [
+    "Red blood cell",
+    "small and disc-shaped, and it carries oxygen around the body in the blood."
+   ],
+   "A group of similar cells that do the same job is a tissue, such as muscle tissue. Different tissues working together form an organ, such as the heart or the stomach."
+  ],
+  "remember": "Cells are specialised for a job, similar cells make a tissue, and different tissues make an organ.",
+  "a": {
+   "q": "What is a tissue?",
+   "opts": [
+    "A group of similar cells that do the same job",
+    "A single cell with a special shape",
+    "A group of organs that work together",
+    "A cell that carries messages around the body"
+   ],
+   "why": "A tissue is made of many similar cells doing the same job. A single specialised cell is not a tissue, because a tissue is a group of cells. Organs are made of tissues, not the other way around.",
+   "clue": "Think about how many cells there are, and how alike they are."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dani reads that the stomach has muscle tissue, gland tissue and other tissues that work together to digest food. What is the stomach?",
+   "opts": [
+    "An organ, because it is made of different tissues",
+    "A tissue, because it is made of many cells",
+    "A specialised cell, because it has one job",
+    "A tissue, because all its cells look the same"
+   ],
+   "why": "The stomach is made of different tissues working together, so it is an organ. It is not a tissue, because a tissue is made of similar cells and the stomach has more than one kind of tissue.",
+   "clue": "Count how many kinds of tissue the stomach has."
+  }
+ },
+ "cleared_by": "checker"
 }

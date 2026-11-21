@@ -3,8 +3,471 @@
  "title": "Naming alkanes",
  "brief": "037f8878cf5e",
  "shortlist": [],
- "stage": "write",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, write"
- ]
+  "2026-11-12T12:22:43Z new, write",
+  "2026-11-20T12:15:23Z write: done",
+  "2026-11-20T12:26:01Z check: flagged",
+  "2026-11-20T12:35:58Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (a other)",
+  "2026-11-20T13:44:57Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: flagged",
+  "2026-11-20T13:56:51Z fix: suggested",
+  "2026-11-20T13:57:33Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 2,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.01198,
+  "check": 0.01067,
+  "fix": 0.03868,
+  "recheck": 0.01
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The clue 'Pent means five' gives the answer away. Only one option starts with 'pent', so the question no longer tests whether the student knows the prefixes.",
+ "rejected": {
+  "title": "Naming alkanes",
+  "card": [
+   "Alkanes are hydrocarbons with only single bonds between carbon atoms. Each carbon atom forms four bonds in total.",
+   "The name of an alkane shows how many carbons it has: methane 1, ethane 2, propane 3, butane 4, pentane 5, hexane 6, heptane 7, octane 8.",
+   "In a drawing, each line is one bond. Each carbon is joined to other carbons and to hydrogen atoms until it has four bonds. Methane, for example, is one carbon bonded to four hydrogens.",
+   "The ending -ane shows an alkane. The first part of the name gives the number of carbons."
+  ],
+  "remember": "Meth, eth, prop, but, pent, hex, hept, oct give 1 to 8 carbons. Each carbon has four bonds.",
+  "a": {
+   "q": "An alkane has five carbon atoms joined in a chain. What is its name?",
+   "opts": [
+    "Pentane",
+    "Butane",
+    "Hexane",
+    "Propane"
+   ],
+   "why": "Five carbons gives the name pentane. Butane has four carbons and hexane has six, so they are close but wrong.",
+   "clue": "Pent means five."
+  },
+  "b": {
+   "d": 3,
+   "q": "A gas lighter in Orange holds an alkane. A chemist draws its molecule with four carbon atoms in a row, all joined by single bonds. Which name and number of hydrogens match?",
+   "opts": [
+    "Butane, with 10 hydrogen atoms",
+    "Butane, with 8 hydrogen atoms",
+    "Propane, with 10 hydrogen atoms",
+    "Pentane, with 10 hydrogen atoms"
+   ],
+   "why": "Four carbons is butane. The two end carbons each bond to one carbon, so they need three hydrogens each. The two middle carbons bond to two carbons, so they need two hydrogens each, giving 10. Eight hydrogens would leave some carbons with fewer than four bonds.",
+   "clue": "Count the hydrogens each carbon needs to reach four bonds."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "Structural drawings of methane, ethane and propane. Each carbon (C) is joined by lines to other carbons and hydrogen (H) atoms, so each carbon has four bonds. Label each with its name.",
+    "why": "It shows how bonds are drawn and how the carbon count gives the name."
+   }
+  ]
+ },
+ "rewrites": 1,
+ "cleared_by": "auto",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: The clue 'Pent means five' gives the answer away. Only one option starts with 'pent', so the question no longer tests whether the student knows the prefixes."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Naming alkanes",
+     "card": [
+      "Alkanes are hydrocarbons with only single bonds between carbon atoms. Each carbon atom forms four bonds in total.",
+      "The name of an alkane shows how many carbons it has: methane 1, ethane 2, propane 3, butane 4, pentane 5, hexane 6, heptane 7, octane 8.",
+      "In a drawing, each line is one bond. Each carbon is joined to other carbons and to hydrogen atoms until it has four bonds. Propane, for example, has three carbons in a row.",
+      "The ending -ane shows an alkane. The first part of the name gives the number of carbons."
+     ],
+     "remember": "Meth, eth, prop, but, pent, hex, hept, oct give 1 to 8 carbons. Each carbon has four bonds.",
+     "a": {
+      "q": "An alkane has five carbon atoms joined in a chain. What is its name?",
+      "opts": [
+       "Pentane",
+       "Butane",
+       "Hexane",
+       "Propane"
+      ],
+      "why": "Five carbons gives the name pentane. Butane has four carbons and hexane has six, so they are close but wrong.",
+      "clue": "Pent means five."
+     },
+     "b": {
+      "d": 2,
+      "q": "A camping stove in Orange burns an alkane. A chemist draws its molecule with three carbon atoms in a row, all joined by single bonds. Which name and formula match?",
+      "opts": [
+       "Propane, C3H8",
+       "Propane, C3H6",
+       "Butane, C3H8",
+       "Ethane, C3H8"
+      ],
+      "why": "Three carbons is propane. The two end carbons each have three hydrogens and the middle carbon has two, which gives eight hydrogens. C3H6 has too few hydrogens for four bonds on each carbon.",
+      "clue": "Count the hydrogens needed to give each carbon four bonds."
+     },
+     "wants": [
+      {
+       "at": "card 3",
+       "kind": "diagram",
+       "brief": "Structural drawings of methane, ethane and propane. Each carbon (C) is joined by lines to other carbons and hydrogen (H) atoms, so each carbon has four bonds. Label each with its name.",
+       "why": "It shows how bonds are drawn and how carbon count gives the name."
+      }
+     ]
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Pentane",
+      "also_right": []
+     },
+     "b": {
+      "best": "Propane, C3H8",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "level",
+       "detail": "The card never teaches molecular formulas or how to write one (CₙHₘ), but the question asks students to choose between formulas. The card does say each carbon bonds to hydrogens until it has four bonds, which helps, but the formula notation itself is untaught."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The formulas are written as C3H8 and C3H6, with the numbers inline instead of as subscripts (C₃H₈). This can confuse students who are new to chemical formulas."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both intended answers are correct (pentane; propane, C3H8). Question b tests molecular formulas, which the card does not teach, and writes them without subscripts."
+    },
+    "flags": [
+     "Question b, level: The card never teaches molecular formulas or how to write one (CₙHₘ), but the question asks students to choose between formulas. The card does say each carbon bonds to hydrogens until it has four bonds, which helps, but the formula notation itself is untaught.",
+     "Question b, wording: The formulas are written as C3H8 and C3H6, with the numbers inline instead of as subscripts (C₃H₈). This can confuse students who are new to chemical formulas."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Naming alkanes",
+     "card": [
+      "Alkanes are hydrocarbons with only single bonds between carbon atoms. Each carbon atom forms four bonds in total.",
+      "The name of an alkane shows how many carbons it has: methane 1, ethane 2, propane 3, butane 4, pentane 5, hexane 6, heptane 7, octane 8.",
+      "In a drawing, each line is one bond. Each carbon is joined to other carbons and to hydrogen atoms until it has four bonds. Methane, for example, is one carbon bonded to four hydrogens.",
+      "The ending -ane shows an alkane. The first part of the name gives the number of carbons."
+     ],
+     "remember": "Meth, eth, prop, but, pent, hex, hept, oct give 1 to 8 carbons. Each carbon has four bonds.",
+     "a": {
+      "q": "An alkane has five carbon atoms joined in a chain. What is its name?",
+      "opts": [
+       "Pentane",
+       "Butane",
+       "Hexane",
+       "Propane"
+      ],
+      "why": "Five carbons gives the name pentane. Butane has four carbons and hexane has six, so they are close but wrong.",
+      "clue": "Pent means five."
+     },
+     "b": {
+      "d": 3,
+      "q": "A gas lighter in Orange holds an alkane. A chemist draws its molecule with four carbon atoms in a row, all joined by single bonds. Which name and number of hydrogens match?",
+      "opts": [
+       "Butane, with 10 hydrogen atoms",
+       "Butane, with 8 hydrogen atoms",
+       "Propane, with 10 hydrogen atoms",
+       "Pentane, with 10 hydrogen atoms"
+      ],
+      "why": "Four carbons is butane. The two end carbons each bond to one carbon, so they need three hydrogens each. The two middle carbons bond to two carbons, so they need two hydrogens each, giving 10. Eight hydrogens would leave some carbons with fewer than four bonds.",
+      "clue": "Count the hydrogens each carbon needs to reach four bonds."
+     },
+     "wants": [
+      {
+       "at": "card 3",
+       "kind": "diagram",
+       "brief": "Structural drawings of methane, ethane and propane. Each carbon (C) is joined by lines to other carbons and hydrogen (H) atoms, so each carbon has four bonds. Label each with its name.",
+       "why": "It shows how bonds are drawn and how the carbon count gives the name."
+      }
+     ]
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:08Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Pentane",
+       "also_right": []
+      },
+      "b": {
+       "best": "Butane, with 10 hydrogen atoms",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The clue 'Pent means five' gives the answer away. Only one option starts with 'pent', so the question no longer tests whether the student knows the prefixes."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts are correct: five carbons is pentane, and butane has 10 hydrogens. The only problem is that question a's clue, 'Pent means five', hands students the answer."
+     },
+     "flags": [
+      "Question a, other: The clue 'Pent means five' gives the answer away. Only one option starts with 'pent', so the question no longer tests whether the student knows the prefixes."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:57Z",
+   "step": "write",
+   "version": {
+    "title": "Naming alkanes",
+    "card": [
+     "Alkanes are hydrocarbons with only single bonds between carbon atoms. Each carbon atom forms four bonds in total.",
+     "The name of an alkane shows how many carbons it has: methane 1, ethane 2, propane 3, butane 4, pentane 5, hexane 6, heptane 7, octane 8.",
+     "In a drawing, each line is one bond. Each carbon is joined to other carbons and to hydrogen atoms until it has four bonds. Methane, for example, is one carbon bonded to four hydrogens.",
+     "The ending -ane shows an alkane. The first part of the name gives the number of carbons."
+    ],
+    "remember": "Meth, eth, prop, but, pent, hex, hept, oct give 1 to 8 carbons. Each carbon has four bonds.",
+    "a": {
+     "q": "An alkane has five carbon atoms joined in a chain. What is its name?",
+     "opts": [
+      "Pentane",
+      "Butane",
+      "Hexane",
+      "Propane"
+     ],
+     "why": "Five carbons gives the name pentane. Butane has four carbons and hexane has six, so they are close but wrong.",
+     "clue": "Count up the names in order, starting from methane for one carbon."
+    },
+    "b": {
+     "d": 3,
+     "q": "A gas lighter in Orange holds an alkane. A chemist draws its molecule with four carbon atoms in a row, all joined by single bonds. Which name and number of hydrogens match?",
+     "opts": [
+      "Butane, with 10 hydrogen atoms",
+      "Butane, with 8 hydrogen atoms",
+      "Propane, with 10 hydrogen atoms",
+      "Pentane, with 10 hydrogen atoms"
+     ],
+     "why": "Four carbons is butane. The two end carbons each bond to one carbon, so they need three hydrogens each. The two middle carbons bond to two carbons, so they need two hydrogens each, giving 10. Eight hydrogens would leave some carbons with fewer than four bonds.",
+     "clue": "Count the hydrogens each carbon needs to reach four bonds."
+    },
+    "wants": [
+     {
+      "at": "card 3",
+      "kind": "diagram",
+      "brief": "Structural drawings of methane, ethane and propane. Each carbon (C) is joined by lines to other carbons and hydrogen (H) atoms, so each carbon has four bonds. Label each with its name.",
+      "why": "It shows how bonds are drawn and how the carbon count gives the name."
+     }
+    ]
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Pentane",
+     "also_right": []
+    },
+    "b": {
+     "best": "Butane, with 10 hydrogen atoms",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "card",
+      "kind": "wording",
+      "detail": "Card line 3 says each carbon is joined to other carbons, then gives methane as the example, whose single carbon is joined to no other carbon. Saying each carbon is joined to any other carbons and to hydrogen atoms would avoid the clash."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "The facts and both answers are right. One small wording issue: card line 3 says each carbon joins other carbons, which methane, its own example, does not."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Naming alkanes",
+  "card": [
+   "Alkanes are hydrocarbons with only single bonds between carbon atoms. Each carbon atom forms four bonds in total.",
+   "The name of an alkane shows how many carbons it has: methane 1, ethane 2, propane 3, butane 4, pentane 5, hexane 6, heptane 7, octane 8.",
+   "In a drawing, each line is one bond. Each carbon is joined to other carbons and to hydrogen atoms until it has four bonds. Methane, for example, is one carbon bonded to four hydrogens.",
+   "The ending -ane shows an alkane. The first part of the name gives the number of carbons."
+  ],
+  "remember": "Meth, eth, prop, but, pent, hex, hept, oct give 1 to 8 carbons. Each carbon has four bonds.",
+  "a": {
+   "q": "An alkane has five carbon atoms joined in a chain. What is its name?",
+   "opts": [
+    "Pentane",
+    "Butane",
+    "Hexane",
+    "Propane"
+   ],
+   "why": "Five carbons gives the name pentane. Butane has four carbons and hexane has six, so they are close but wrong.",
+   "clue": "Count up the names in order, starting from methane for one carbon."
+  },
+  "b": {
+   "d": 3,
+   "q": "A gas lighter in Orange holds an alkane. A chemist draws its molecule with four carbon atoms in a row, all joined by single bonds. Which name and number of hydrogens match?",
+   "opts": [
+    "Butane, with 10 hydrogen atoms",
+    "Butane, with 8 hydrogen atoms",
+    "Propane, with 10 hydrogen atoms",
+    "Pentane, with 10 hydrogen atoms"
+   ],
+   "why": "Four carbons is butane. The two end carbons each bond to one carbon, so they need three hydrogens each. The two middle carbons bond to two carbons, so they need two hydrogens each, giving 10. Eight hydrogens would leave some carbons with fewer than four bonds.",
+   "clue": "Count the hydrogens each carbon needs to reach four bonds."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "Structural drawings of methane, ethane and propane. Each carbon (C) is joined by lines to other carbons and hydrogen (H) atoms, so each carbon has four bonds. Label each with its name.",
+    "why": "It shows how bonds are drawn and how the carbon count gives the name."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Pentane",
+   "also_right": []
+  },
+  "b": {
+   "best": "Butane, with 10 hydrogen atoms",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "Card line 3 says each carbon is joined to other carbons, then gives methane as the example, whose single carbon is joined to no other carbon. Saying each carbon is joined to any other carbons and to hydrogen atoms would avoid the clash."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both answers are right. One small wording issue: card line 3 says each carbon joins other carbons, which methane, its own example, does not."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: Card line 3 says each carbon is joined to other carbons, then gives methane as the example, whose single carbon is joined to no other carbon. Saying each carbon is joined to any other carbons and to hydrogen atoms would avoid the clash."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Naming alkanes",
+  "card": [
+   "Alkanes are hydrocarbons with only single bonds between carbon atoms. Each carbon atom forms four bonds in total.",
+   "The name of an alkane shows how many carbons it has: methane 1, ethane 2, propane 3, butane 4, pentane 5, hexane 6, heptane 7, octane 8.",
+   "In a drawing, each line is one bond. Each carbon is joined to any other carbons and to hydrogen atoms until it has four bonds. Methane, for example, is one carbon bonded to four hydrogens.",
+   "The ending -ane shows an alkane. The first part of the name gives the number of carbons."
+  ],
+  "remember": "Meth, eth, prop, but, pent, hex, hept, oct give 1 to 8 carbons. Each carbon has four bonds.",
+  "a": {
+   "q": "An alkane has five carbon atoms joined in a chain. What is its name?",
+   "opts": [
+    "Pentane",
+    "Butane",
+    "Hexane",
+    "Propane"
+   ],
+   "why": "Five carbons gives the name pentane. Butane has four carbons and hexane has six, so they are close but wrong.",
+   "clue": "Count up the names in order, starting from methane for one carbon."
+  },
+  "b": {
+   "d": 3,
+   "q": "A gas lighter in Orange holds an alkane. A chemist draws its molecule with four carbon atoms in a row, all joined by single bonds. Which name and number of hydrogens match?",
+   "opts": [
+    "Butane, with 10 hydrogen atoms",
+    "Butane, with 8 hydrogen atoms",
+    "Propane, with 10 hydrogen atoms",
+    "Pentane, with 10 hydrogen atoms"
+   ],
+   "why": "Four carbons is butane. The two end carbons each bond to one carbon, so they need three hydrogens each. The two middle carbons bond to two carbons, so they need two hydrogens each, giving 10. Eight hydrogens would leave some carbons with fewer than four bonds.",
+   "clue": "Count the hydrogens each carbon needs to reach four bonds."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "Structural drawings of methane, ethane and propane. Each carbon (C) is joined by lines to any other carbons and to hydrogen (H) atoms, so each carbon has four bonds. Label each with its name.",
+    "why": "It shows how bonds are drawn and how the carbon count gives the name."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:57:33Z",
+  "rules": 1,
+  "n": 14,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "Card line 3 says each carbon is joined to other carbons, then gives methane as the example, whose single carbon is joined to no other carbon. Saying each carbon is joined to any other carbons and to hydrogen atoms would avoid the clash."
+   }
+  ],
+  "flags": [
+   "Card, wording: Card line 3 says each carbon is joined to other carbons, then gives methane as the example, whose single carbon is joined to no other carbon. Saying each carbon is joined to any other carbons and to hydrogen atoms would avoid the clash."
+  ]
+ },
+ "final": {
+  "title": "Naming alkanes",
+  "card": [
+   "Alkanes are hydrocarbons with only single bonds between carbon atoms. Each carbon atom forms four bonds in total.",
+   "The name of an alkane shows how many carbons it has: methane 1, ethane 2, propane 3, butane 4, pentane 5, hexane 6, heptane 7, octane 8.",
+   "In a drawing, each line is one bond. Each carbon is joined to any other carbons and to hydrogen atoms until it has four bonds. Methane, for example, is one carbon bonded to four hydrogens.",
+   "The ending -ane shows an alkane. The first part of the name gives the number of carbons."
+  ],
+  "remember": "Meth, eth, prop, but, pent, hex, hept, oct give 1 to 8 carbons. Each carbon has four bonds.",
+  "a": {
+   "q": "An alkane has five carbon atoms joined in a chain. What is its name?",
+   "opts": [
+    "Pentane",
+    "Butane",
+    "Hexane",
+    "Propane"
+   ],
+   "why": "Five carbons gives the name pentane. Butane has four carbons and hexane has six, so they are close but wrong.",
+   "clue": "Count up the names in order, starting from methane for one carbon."
+  },
+  "b": {
+   "d": 3,
+   "q": "A gas lighter in Orange holds an alkane. A chemist draws its molecule with four carbon atoms in a row, all joined by single bonds. Which name and number of hydrogens match?",
+   "opts": [
+    "Butane, with 10 hydrogen atoms",
+    "Butane, with 8 hydrogen atoms",
+    "Propane, with 10 hydrogen atoms",
+    "Pentane, with 10 hydrogen atoms"
+   ],
+   "why": "Four carbons is butane. The two end carbons each bond to one carbon, so they need three hydrogens each. The two middle carbons bond to two carbons, so they need two hydrogens each, giving 10. Eight hydrogens would leave some carbons with fewer than four bonds.",
+   "clue": "Count the hydrogens each carbon needs to reach four bonds."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "Structural drawings of methane, ethane and propane. Each carbon (C) is joined by lines to any other carbons and to hydrogen (H) atoms, so each carbon has four bonds. Label each with its name.",
+    "why": "It shows how bonds are drawn and how the carbon count gives the name."
+   }
+  ]
+ }
 }

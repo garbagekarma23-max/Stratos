@@ -24,8 +24,230 @@
    0.212
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 may adapt geo-measuring-liveability, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:46Z confirm: Claude Opus 5.5 may adapt geo-measuring-liveability, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt geo-measuring-liveability (3 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting geo-measuring-liveability on the next run",
+  "2026-11-20T14:12:37Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "confirm": 0.01062,
+  "adapt": 0.00351,
+  "check": 0.00891
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-measuring-liveability",
+  "changes": [
+   "Change the Tasmanian council in question b to a New South Wales council so the example is local to the course.",
+   "Add crime rates, travel times, house prices and access to parks as examples of objective measures, to match the new point's brief."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same objective-versus-subjective idea at a suitable depth, but its Tasmanian example needs localising and its examples should match the brief's data types.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "geo-measuring-liveability",
+  "changes": [
+   "Add the brief's examples to the objective measure line, such as crime rates, house prices and access to parks, next to travel times.",
+   "Change the Tasmanian council in question b to a New South Wales council so the example is local to the course."
+  ],
+  "sure": "medium",
+  "reason": "The bank point already teaches measuring liveability with counted data and resident surveys at a Year 7 depth, so it only needs the brief's examples and a New South Wales setting.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "geo-measuring-liveability",
+  "changes": [
+   "Add the brief's examples to the objective measure line: crime rates, travel times, house prices and access to parks.",
+   "Change the Tasmanian council in question b to a New South Wales council.",
+   "Keep the line on people rating a place differently short, since perceptions of a place is its own point in this chapter."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card2",
+   "card4",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches measuring liveability with counted data and resident surveys at the right depth, but it needs the brief's examples and a New South Wales setting.",
+   "item": "fddc297c1ed3d81f",
+   "result": "decided",
+   "saved": {
+    "id": "geo-measuring-liveability-with-data",
+    "title": "Measuring liveability with data",
+    "brief": "6471a17a122d",
+    "shortlist": [
+     [
+      "geo-strategies-improve-liveability",
+      0.409
+     ],
+     [
+      "geo-liveability-means",
+      0.372
+     ],
+     [
+      "geo-measuring-liveability",
+      0.324
+     ],
+     [
+      "geo-liveability-everyone",
+      0.288
+     ],
+     [
+      "geo-access-services",
+      0.212
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00033,
+     "confirm": 0.01062
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "geo-measuring-liveability",
+     "changes": [
+      "Change the Tasmanian council in question b to a New South Wales council so the example is local to the course.",
+      "Add crime rates, travel times, house prices and access to parks as examples of objective measures, to match the new point's brief."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same objective-versus-subjective idea at a suitable depth, but its Tasmanian example needs localising and its examples should match the brief's data types.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "geo-measuring-liveability",
+     "changes": [
+      "Add the brief's examples to the objective measure line, such as crime rates, house prices and access to parks, next to travel times.",
+      "Change the Tasmanian council in question b to a New South Wales council so the example is local to the course."
+     ],
+     "sure": "medium",
+     "reason": "The bank point already teaches measuring liveability with counted data and resident surveys at a Year 7 depth, so it only needs the brief's examples and a New South Wales setting.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "4ef7dc62ff596f2c"
+  }
+ ],
+ "draft": {
+  "title": "Measuring liveability",
+  "card": [
+   "Geographers can measure how liveable a place is in two ways. Both give useful information.",
+   [
+    "Objective measure",
+    "counts or records facts that can be checked, such as crime rates, average travel times, house prices or how many homes are near a park."
+   ],
+   [
+    "Subjective measure",
+    "asks people how they feel about a place, such as in a survey on how safe or happy they feel. It is based on opinion, even when the results are given as numbers."
+   ],
+   "People have different needs, so they can rate the same place differently. Counted facts stay the same no matter who checks them."
+  ],
+  "remember": "Objective measures count facts. Subjective measures record opinions, which differ from person to person.",
+  "a": {
+   "q": "Which one of these is a subjective measure of how liveable a place is?",
+   "opts": [
+    "A survey asking residents how safe they feel at night",
+    "The number of libraries and public pools in each town",
+    "The number of trains that stop at a station each day",
+    "The average length of a trip to the nearest hospital"
+   ],
+   "why": "How safe people feel is an opinion, so it is subjective and can differ between residents. The other three are counts or recorded facts that anyone could check, so they are objective.",
+   "clue": "Which one depends on what people feel, not on a count?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A council in New South Wales counts 12 parks in a town. A survey finds that teenagers rate the town's things to do lower than retirees do. What do the two results show?",
+   "opts": [
+    "The count is objective, and the survey is subjective",
+    "Both results are objective, because both use numbers",
+    "The count is subjective, and the survey is objective",
+    "Both results are subjective, because people use the parks"
+   ],
+   "why": "Counting parks records a fact that can be checked, so it is objective. The survey records opinions, and the opinions differ between groups, which is why it is subjective. A survey can produce numbers, but it is still subjective because it measures feelings.",
+   "clue": "Does the result record a checkable fact or a feeling?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A survey asking residents how safe they feel at night",
+   "also_right": []
+  },
+  "b": {
+   "best": "The count is objective, and the survey is subjective",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Measuring liveability",
+  "card": [
+   "Geographers can measure how liveable a place is in two ways. Both give useful information.",
+   [
+    "Objective measure",
+    "counts or records facts that can be checked, such as crime rates, average travel times, house prices or how many homes are near a park."
+   ],
+   [
+    "Subjective measure",
+    "asks people how they feel about a place, such as in a survey on how safe or happy they feel. It is based on opinion, even when the results are given as numbers."
+   ],
+   "People have different needs, so they can rate the same place differently. Counted facts stay the same no matter who checks them."
+  ],
+  "remember": "Objective measures count facts. Subjective measures record opinions, which differ from person to person.",
+  "a": {
+   "q": "Which one of these is a subjective measure of how liveable a place is?",
+   "opts": [
+    "A survey asking residents how safe they feel at night",
+    "The number of libraries and public pools in each town",
+    "The number of trains that stop at a station each day",
+    "The average length of a trip to the nearest hospital"
+   ],
+   "why": "How safe people feel is an opinion, so it is subjective and can differ between residents. The other three are counts or recorded facts that anyone could check, so they are objective.",
+   "clue": "Which one depends on what people feel, not on a count?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A council in New South Wales counts 12 parks in a town. A survey finds that teenagers rate the town's things to do lower than retirees do. What do the two results show?",
+   "opts": [
+    "The count is objective, and the survey is subjective",
+    "Both results are objective, because both use numbers",
+    "The count is subjective, and the survey is objective",
+    "Both results are subjective, because people use the parks"
+   ],
+   "why": "Counting parks records a fact that can be checked, so it is objective. The survey records opinions, and the opinions differ between groups, which is why it is subjective. A survey can produce numbers, but it is still subjective because it measures feelings.",
+   "clue": "Does the result record a checkable fact or a feeling?"
+  }
+ }
 }

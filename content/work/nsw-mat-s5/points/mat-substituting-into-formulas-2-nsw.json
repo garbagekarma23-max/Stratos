@@ -24,8 +24,115 @@
    0.212
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:55Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:54Z write: done",
+  "2026-11-20T12:44:58Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.00772,
+  "check": 0.00642
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank card, Substituting into formulas, only evaluates a formula when every letter is known, while the new point also needs solving the resulting equation for the unknown, which no single bank card teaches as one idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Substituting into formulas",
+  "card": [
+   "A formula links quantities with pronumerals, such as \\(v = u + at\\). To use it, replace each pronumeral you know with its value. Put the value in brackets if it is negative.",
+   "After substituting, you have an equation with one unknown. Solve it with inverse operations, as you would any linear equation.",
+   "Example: use \\(v = u + at\\) to find \\(a\\) when \\(v = 20\\), \\(u = 8\\) and \\(t = 3\\). Substitute to get \\(20 = 8 + 3a\\).",
+   "Subtract 8 from both sides: \\(12 = 3a\\). Divide both sides by 3: \\(a = 4\\). Check by putting 4 back into the formula: \\(8 + 3 \\times 4 = 20\\)."
+  ],
+  "remember": "Substitute the known values first, then solve the equation for the unknown.",
+  "a": {
+   "q": "In \\(v = u + at\\), \\(v = 25\\), \\(u = 7\\) and \\(a = 2\\). Which equation results from substituting?",
+   "opts": [
+    "\\(25 = 7 + 2t\\)",
+    "\\(25 = 2 + 7t\\)",
+    "\\(7 = 25 + 2t\\)",
+    "\\(25 = 7t + 2\\)"
+   ],
+   "why": "Each known value replaces its own pronumeral, so \\(v\\) becomes 25, \\(u\\) becomes 7 and \\(a\\) becomes 2, which leaves \\(25 = 7 + 2t\\). Swapping the values of \\(u\\) and \\(a\\) gives \\(25 = 2 + 7t\\), which is a tempting mistake.",
+   "clue": "Match each value to its own pronumeral."
+  },
+  "b": {
+   "d": 2,
+   "q": "The formula \\(P = 2l + 2w\\) gives the perimeter of a rectangle. A rectangle has \\(P = 30\\) and \\(l = 9\\). What is \\(w\\)?",
+   "opts": [
+    "\\(w = 6\\)",
+    "\\(w = 12\\)",
+    "\\(w = 10.5\\)",
+    "\\(w = 21\\)"
+   ],
+   "why": "Substitute to get \\(30 = 2 \\times 9 + 2w\\), so \\(30 = 18 + 2w\\). Subtract 18 to get \\(12 = 2w\\), then divide by 2 to get \\(w = 6\\). The answer \\(w = 12\\) forgets to divide by 2 at the end.",
+   "clue": "Subtract before you divide."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(25 = 7 + 2t\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(w = 6\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Substituting into formulas",
+  "card": [
+   "A formula links quantities with pronumerals, such as \\(v = u + at\\). To use it, replace each pronumeral you know with its value. Put the value in brackets if it is negative.",
+   "After substituting, you have an equation with one unknown. Solve it with inverse operations, as you would any linear equation.",
+   "Example: use \\(v = u + at\\) to find \\(a\\) when \\(v = 20\\), \\(u = 8\\) and \\(t = 3\\). Substitute to get \\(20 = 8 + 3a\\).",
+   "Subtract 8 from both sides: \\(12 = 3a\\). Divide both sides by 3: \\(a = 4\\). Check by putting 4 back into the formula: \\(8 + 3 \\times 4 = 20\\)."
+  ],
+  "remember": "Substitute the known values first, then solve the equation for the unknown.",
+  "a": {
+   "q": "In \\(v = u + at\\), \\(v = 25\\), \\(u = 7\\) and \\(a = 2\\). Which equation results from substituting?",
+   "opts": [
+    "\\(25 = 7 + 2t\\)",
+    "\\(25 = 2 + 7t\\)",
+    "\\(7 = 25 + 2t\\)",
+    "\\(25 = 7t + 2\\)"
+   ],
+   "why": "Each known value replaces its own pronumeral, so \\(v\\) becomes 25, \\(u\\) becomes 7 and \\(a\\) becomes 2, which leaves \\(25 = 7 + 2t\\). Swapping the values of \\(u\\) and \\(a\\) gives \\(25 = 2 + 7t\\), which is a tempting mistake.",
+   "clue": "Match each value to its own pronumeral."
+  },
+  "b": {
+   "d": 2,
+   "q": "The formula \\(P = 2l + 2w\\) gives the perimeter of a rectangle. A rectangle has \\(P = 30\\) and \\(l = 9\\). What is \\(w\\)?",
+   "opts": [
+    "\\(w = 6\\)",
+    "\\(w = 12\\)",
+    "\\(w = 10.5\\)",
+    "\\(w = 21\\)"
+   ],
+   "why": "Substitute to get \\(30 = 2 \\times 9 + 2w\\), so \\(30 = 18 + 2w\\). Subtract 18 to get \\(12 = 2w\\), then divide by 2 to get \\(w = 6\\). The answer \\(w = 12\\) forgets to divide by 2 at the end.",
+   "clue": "Subtract before you divide."
+  }
+ },
+ "cleared_by": "checker"
 }

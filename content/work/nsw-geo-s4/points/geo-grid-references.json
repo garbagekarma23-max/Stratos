@@ -3,8 +3,201 @@
  "title": "Grid references",
  "brief": "92799230ecba",
  "shortlist": [],
- "stage": "write",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, write"
- ]
+  "2026-11-12T12:22:34Z new, write",
+  "2026-11-20T12:15:16Z write: done",
+  "2026-11-20T12:25:45Z check: flagged",
+  "2026-11-20T12:35:49Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.01105,
+  "check": 0.01157,
+  "fix": 0.01789,
+  "recheck": 0.00693
+ },
+ "draft": {
+  "title": "Grid references",
+  "card": [
+   "A four-figure area reference names a whole grid square. A six-figure grid reference gives a more exact position inside that square.",
+   "Imagine each grid square split into ten equal parts along each side. The tenths are counted from 0 to 9, starting at the bottom left corner.",
+   "For the easting, write the two-figure line number, then the tenths across from that line. For the northing, write the line number, then the tenths up from that line.",
+   "Easting always comes first. Easting 45 with 3 tenths across and northing 12 with 7 tenths up gives the six-figure reference 453127."
+  ],
+  "remember": "Six figures: easting line and tenths, then northing line and tenths.",
+  "a": {
+   "q": "A picnic table is 6 tenths across from easting line 52 and 2 tenths up from northing line 80. What is its six-figure grid reference?",
+   "opts": [
+    "526802",
+    "528062",
+    "526280",
+    "522806"
+   ],
+   "why": "The easting is 52 with 6 tenths, written 526. The northing is 80 with 2 tenths, written 802. Joined with easting first, this is 526802. The reference 528062 swaps the easting and northing.",
+   "clue": "Write the easting and its tenth, then the northing and its tenth."
+  },
+  "b": {
+   "d": 3,
+   "q": "A hiker is at grid reference 174905 on a map. Which describes the hiker's position?",
+   "opts": [
+    "Easting 17 plus 4 tenths, northing 90 plus 5 tenths",
+    "Easting 17 plus 5 tenths, northing 90 plus 4 tenths",
+    "Easting 90 plus 5 tenths, northing 17 plus 4 tenths",
+    "Easting 74 plus 9 tenths, northing 05 plus 1 tenth"
+   ],
+   "why": "Split the figures into 174 and 905. The easting is 17 with 4 tenths, and the northing is 90 with 5 tenths. The second option moves the tenths to the wrong lines. Easting always comes first.",
+   "clue": "Split the six figures into two groups of three."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "526802",
+   "also_right": []
+  },
+  "b": {
+   "best": "Easting 17 plus 4 tenths, northing 90 plus 5 tenths",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 528062 'swaps the easting and northing', but a swap would give 802526. 528062 writes both line numbers first (52, 80) and then both tenths (6, 2). The explanation misdescribes the error."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says 'The second option moves the tenths to the wrong lines', but options are shown in random order. As displayed, the second option is the correct answer, so this contradicts the answer. The wrong option meant is 'Easting 17 plus 5 tenths, northing 90 plus 4 tenths'; it should be named by its content, not by position."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct (526802; easting 17 plus 4 tenths, northing 90 plus 5 tenths). Why (a) misdescribes the distractor 528062 as a swap of easting and northing. Why (b) refers to 'the second option' by position, which is wrong once options are shuffled; as shown here, the second option is the correct one."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) says 528062 'swaps the easting and northing', but a swap would give 802526. 528062 writes both line numbers first (52, 80) and then both tenths (6, 2). The explanation misdescribes the error.",
+  "Question b, other: Why (b) says 'The second option moves the tenths to the wrong lines', but options are shown in random order. As displayed, the second option is the correct answer, so this contradicts the answer. The wrong option meant is 'Easting 17 plus 5 tenths, northing 90 plus 4 tenths'; it should be named by its content, not by position."
+ ],
+ "proposal": {
+  "title": "Grid references",
+  "card": [
+   "A four-figure area reference only finds a grid square. A six-figure grid reference gives a more exact position inside that square.",
+   "Imagine each grid square split into ten equal parts along each side. The tenths are counted from 0 to 9, starting at the bottom left corner.",
+   "For the easting, write the two-figure line number, then the tenths across from that line. For the northing, write the line number, then the tenths up from that line.",
+   "Easting always comes first. Easting 45 with 3 tenths across and northing 12 with 7 tenths up gives the six-figure reference 453127."
+  ],
+  "remember": "Six figures: easting line and tenths, then northing line and tenths.",
+  "a": {
+   "q": "A picnic table is 6 tenths across from easting line 52 and 2 tenths up from northing line 80. What is its six-figure grid reference?",
+   "opts": [
+    "526802",
+    "528062",
+    "526280",
+    "522806"
+   ],
+   "why": "The easting is 52 with 6 tenths, written 526. The northing is 80 with 2 tenths, written 802. Joined with easting first, this is 526802. The reference 528062 writes both line numbers first and then both tenths, instead of keeping each line with its own tenth.",
+   "clue": "Write the easting and its tenth, then the northing and its tenth."
+  },
+  "b": {
+   "d": 3,
+   "q": "A hiker is at grid reference 174905 on a map. Which describes the hiker's position?",
+   "opts": [
+    "Easting 17 plus 4 tenths, northing 90 plus 5 tenths",
+    "Easting 17 plus 5 tenths, northing 90 plus 4 tenths",
+    "Easting 90 plus 5 tenths, northing 17 plus 4 tenths",
+    "Easting 74 plus 9 tenths, northing 05 plus 1 tenth"
+   ],
+   "why": "Split the figures into 174 and 905. The easting is 17 with 4 tenths, and the northing is 90 with 5 tenths. The option with easting 17 plus 5 tenths and northing 90 plus 4 tenths pairs each line with the other line's tenth.",
+   "clue": "Split the six figures into two groups of three."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "526802",
+    "also_right": []
+   },
+   "b": {
+    "best": "Easting 17 plus 4 tenths, northing 90 plus 5 tenths",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 528062 'swaps the easting and northing', but a swap would give 802526. 528062 writes both line numbers first (52, 80) and then both tenths (6, 2). The explanation misdescribes the error."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says 'The second option moves the tenths to the wrong lines', but options are shown in random order. As displayed, the second option is the correct answer, so this contradicts the answer. The wrong option meant is 'Easting 17 plus 5 tenths, northing 90 plus 4 tenths'; it should be named by its content, not by position."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) says 528062 'swaps the easting and northing', but a swap would give 802526. 528062 writes both line numbers first (52, 80) and then both tenths (6, 2). The explanation misdescribes the error.",
+   "Question b, other: Why (b) says 'The second option moves the tenths to the wrong lines', but options are shown in random order. As displayed, the second option is the correct answer, so this contradicts the answer. The wrong option meant is 'Easting 17 plus 5 tenths, northing 90 plus 4 tenths'; it should be named by its content, not by position."
+  ]
+ },
+ "final": {
+  "title": "Grid references",
+  "card": [
+   "A four-figure area reference only finds a grid square. A six-figure grid reference gives a more exact position inside that square.",
+   "Imagine each grid square split into ten equal parts along each side. The tenths are counted from 0 to 9, starting at the bottom left corner.",
+   "For the easting, write the two-figure line number, then the tenths across from that line. For the northing, write the line number, then the tenths up from that line.",
+   "Easting always comes first. Easting 45 with 3 tenths across and northing 12 with 7 tenths up gives the six-figure reference 453127."
+  ],
+  "remember": "Six figures: easting line and tenths, then northing line and tenths.",
+  "a": {
+   "q": "A picnic table is 6 tenths across from easting line 52 and 2 tenths up from northing line 80. What is its six-figure grid reference?",
+   "opts": [
+    "526802",
+    "528062",
+    "526280",
+    "522806"
+   ],
+   "why": "The easting is 52 with 6 tenths, written 526. The northing is 80 with 2 tenths, written 802. Joined with easting first, this is 526802. The reference 528062 writes both line numbers first and then both tenths, instead of keeping each line with its own tenth.",
+   "clue": "Write the easting and its tenth, then the northing and its tenth."
+  },
+  "b": {
+   "d": 3,
+   "q": "A hiker is at grid reference 174905 on a map. Which describes the hiker's position?",
+   "opts": [
+    "Easting 17 plus 4 tenths, northing 90 plus 5 tenths",
+    "Easting 17 plus 5 tenths, northing 90 plus 4 tenths",
+    "Easting 90 plus 5 tenths, northing 17 plus 4 tenths",
+    "Easting 74 plus 9 tenths, northing 05 plus 1 tenth"
+   ],
+   "why": "Split the figures into 174 and 905. The easting is 17 with 4 tenths, and the northing is 90 with 5 tenths. The option with easting 17 plus 5 tenths and northing 90 plus 4 tenths pairs each line with the other line's tenth.",
+   "clue": "Split the six figures into two groups of three."
+  }
+ },
+ "cleared_by": "recheck"
 }

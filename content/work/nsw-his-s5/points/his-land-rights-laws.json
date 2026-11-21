@@ -24,8 +24,177 @@
    0.201
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:52Z write: done",
+  "2026-11-20T12:35:51Z check: flagged",
+  "2026-11-20T12:44:57Z fix: suggested",
+  "2026-11-20T14:42:45Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.00704,
+  "check": 0.01211,
+  "fix": 0.03052
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the state and territory land rights statutes (the 1976 NT Act and 1983 NSW Act); the closest, the Mabo and Native Title Act card, covers the different federal native title system, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Land rights laws",
+  "card": [
+   "Land rights laws let Aboriginal people claim back some land. They came from long campaigns for recognition of Aboriginal connection to Country.",
+   [
+    "Northern Territory",
+    "The Aboriginal Land Rights (Northern Territory) Act 1976 was a federal law. It set up a way for Aboriginal people to claim some unalienated Crown land in the Northern Territory, which is land not already owned or leased by others."
+   ],
+   [
+    "New South Wales",
+    "The NSW Aboriginal Land Rights Act 1983 was a state law. It set up a network of Aboriginal Land Councils, and these councils can claim some Crown land in NSW that is not being used or needed."
+   ],
+   "Both laws cover only some land. Land already owned or leased by others generally cannot be claimed, so these laws did not return all the land that was taken."
+  ],
+  "remember": "Two laws, one federal and one NSW, let Aboriginal people claim some land back, not all of it.",
+  "a": {
+   "q": "What did the Aboriginal Land Rights (Northern Territory) Act 1976 allow?",
+   "opts": [
+    "Aboriginal people to claim some unalienated Crown land",
+    "Aboriginal people to claim any land in Australia",
+    "The NSW Government to set up Aboriginal Land Councils",
+    "The return of all land owned by farmers and miners"
+   ],
+   "why": "The 1976 Act set up a way to claim some Crown land in the Northern Territory that was not owned or leased by others. It did not cover all land, and the Land Councils in NSW came from the 1983 state law.",
+   "clue": "Think about which land could be claimed, and where."
+  },
+  "b": {
+   "d": 3,
+   "q": "A Land Council in a NSW town wants to claim two blocks. One is unused Crown land. The other is a farm owned by a family. Under the NSW Act, which claim is possible?",
+   "opts": [
+    "The unused Crown land only, as the farm is privately owned",
+    "Both blocks, because the Act covers all land in NSW",
+    "The farm only, as private land is easier to return",
+    "Neither block, because the Act was a federal law"
+   ],
+   "why": "The 1983 NSW Act lets Land Councils claim some Crown land that is not being used or needed. Land already owned by others generally cannot be claimed. It was a state law, so the claim that it was federal is wrong.",
+   "clue": "Check who owns each block and which level of government made the law."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Aboriginal people to claim some unalienated Crown land",
+   "also_right": []
+  },
+  "b": {
+   "best": "The unused Crown land only, as the farm is privately owned",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one with the hedge 'some' and the precise term 'unalienated Crown land'. Two distractors use the absolutes 'any' and 'all', so a student can pick the answer without knowing the Act."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "first-nations",
+  "summary": "The facts about both Acts are correct, and the intended answers match the card. In question a, the right option stands out as the only qualified, precise one against absolute distractors, which gives the answer away."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Question a, wording: The right option is the only one with the hedge 'some' and the precise term 'unalienated Crown land'. Two distractors use the absolutes 'any' and 'all', so a student can pick the answer without knowing the Act."
+ ],
+ "proposal": {
+  "title": "Land rights laws",
+  "card": [
+   "Land rights laws let Aboriginal people claim back some land. They came from long campaigns for recognition of Aboriginal connection to Country.",
+   [
+    "Northern Territory",
+    "The Aboriginal Land Rights (Northern Territory) Act 1976 was a federal law. It set up a way for Aboriginal people to claim some unalienated Crown land in the Northern Territory, which is land not already owned or leased by others."
+   ],
+   [
+    "New South Wales",
+    "The NSW Aboriginal Land Rights Act 1983 was a state law. It set up a network of Aboriginal Land Councils, and these councils can claim some Crown land in NSW that is not being used or needed."
+   ],
+   "Both laws cover only some land. Land already owned or leased by others generally cannot be claimed, so these laws did not return all the land that was taken."
+  ],
+  "remember": "Two laws, one federal and one NSW, let Aboriginal people claim some land back, not all of it.",
+  "a": {
+   "q": "Which describes the land rights law passed in 1976?",
+   "opts": [
+    "A federal law for claims to unalienated Crown land in the NT",
+    "A state law for claims to unalienated Crown land in NSW",
+    "A federal law for claims to leased farm land in the NT",
+    "A federal law for claims to unalienated Crown land in NSW"
+   ],
+   "why": "The 1976 Act was a federal law for claims to unalienated Crown land in the Northern Territory. The state law covering NSW came later, in 1983. Leased farm land is already held by others, so it is not unalienated and could not be claimed.",
+   "clue": "Recall which level of government made it, where it applied and what land it covered."
+  },
+  "b": {
+   "d": 3,
+   "q": "A Land Council in a NSW town wants to claim two blocks. One is unused Crown land. The other is a farm owned by a family. Under the NSW Act, which claim is possible?",
+   "opts": [
+    "The unused Crown land only, as the farm is privately owned",
+    "Both blocks, because the Act covers all land in NSW",
+    "The farm only, as private land is easier to return",
+    "Neither block, because the Act was a federal law"
+   ],
+   "why": "The 1983 NSW Act lets Land Councils claim some Crown land that is not being used or needed. Land already owned by others generally cannot be claimed, so the farm is ruled out. It was a state law, so the claim that it was federal is wrong.",
+   "clue": "Check who owns each block and which level of government made the law."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Land rights laws",
+  "card": [
+   "Land rights laws let Aboriginal people claim back some land. They came from long campaigns for recognition of Aboriginal connection to Country.",
+   [
+    "Northern Territory",
+    "The Aboriginal Land Rights (Northern Territory) Act 1976 was a federal law. It set up a way for Aboriginal people to claim some unalienated Crown land in the Northern Territory, which is land not already owned or leased by others."
+   ],
+   [
+    "New South Wales",
+    "The NSW Aboriginal Land Rights Act 1983 was a state law. It set up a network of Aboriginal Land Councils, and these councils can claim some Crown land in NSW that is not being used or needed."
+   ],
+   "Both laws cover only some land. Land already owned or leased by others generally cannot be claimed, so these laws did not return all the land that was taken."
+  ],
+  "remember": "Two laws, one federal and one NSW, let Aboriginal people claim some land back, not all of it.",
+  "a": {
+   "q": "Which describes the land rights law passed in 1976?",
+   "opts": [
+    "A federal law for claims to unalienated Crown land in the NT",
+    "A state law for claims to unalienated Crown land in NSW",
+    "A federal law for claims to leased farm land in the NT",
+    "A federal law for claims to unalienated Crown land in NSW"
+   ],
+   "why": "The 1976 Act was a federal law for claims to unalienated Crown land in the Northern Territory. The state law covering NSW came later, in 1983. Leased farm land is already held by others, so it is not unalienated and could not be claimed.",
+   "clue": "Recall which level of government made it, where it applied and what land it covered."
+  },
+  "b": {
+   "d": 3,
+   "q": "A Land Council in a NSW town wants to claim two blocks. One is unused Crown land. The other is a farm owned by a family. Under the NSW Act, which claim is possible?",
+   "opts": [
+    "The unused Crown land only, as the farm is privately owned",
+    "Both blocks, because the Act covers all land in NSW",
+    "The farm only, as private land is easier to return",
+    "Neither block, because the Act was a federal law"
+   ],
+   "why": "The 1983 NSW Act lets Land Councils claim some Crown land that is not being used or needed. Land already owned by others generally cannot be claimed, so the farm is ruled out. It was a state law, so the claim that it was federal is wrong.",
+   "clue": "Check who owns each block and which level of government made the law."
+  }
+ },
+ "cleared_by": "owner"
 }

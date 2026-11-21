@@ -12,8 +12,135 @@
    0.201
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: failed the content check, writing again",
+  "2026-11-20T12:44:56Z write: done",
+  "2026-11-20T12:53:25Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.01341,
+  "check": 0.00819
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers pollution, biodiversity loss from land clearing and degradation, but it does not teach introduced species, dams or climate change from fossil fuels, so it is narrower than the new point's brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Human-induced environmental change",
+  "card": [
+   "Human-induced change is change to an environment that people cause. It differs from natural change, such as a flood or a bushfire started by lightning.",
+   [
+    "Land clearing and pollution",
+    "Clearing removes trees and other plants for farms, towns or mines. Pollution adds harmful materials, such as chemicals or sewage, to air, water or soil."
+   ],
+   [
+    "Introduced species and dams",
+    "People move plants or animals to places where they did not live before, and some spread and harm native species, such as the cane toad. Dams are walls across rivers that store water and change how much flows downstream."
+   ],
+   [
+    "Burning fossil fuels",
+    "Burning coal, oil and gas for energy releases gases that trap heat. This causes climate change."
+   ]
+  ],
+  "remember": "People change environments by clearing land, polluting, moving species, building dams and burning fossil fuels.",
+  "a": {
+   "q": "Which change to an environment was caused by people?",
+   "opts": [
+    "Farmers clear a forest to plant wheat",
+    "Lightning starts a bushfire in a national park",
+    "A river floods after heavy rain and moves its bank",
+    "A volcano erupts and covers land in ash"
+   ],
+   "why": "Clearing a forest for crops is an action by people, so it is human-induced. Lightning, floods and volcanoes are natural processes. The bushfire is tempting because fires can harm environments, but this one was started by lightning, not by people.",
+   "clue": "Which change came from a decision made by people?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Rabbits were brought to a farming region by settlers and now eat the native grasses. Which type of human-induced change is this?",
+   "opts": [
+    "An introduced species",
+    "Land clearing",
+    "Pollution",
+    "Building a dam"
+   ],
+   "why": "People moved the rabbits to a place where they did not live before, and they now harm native plants. That is an introduced species. It is not land clearing, because no one removed the vegetation. The rabbits eating the grass is the result, not the cause.",
+   "clue": "Who or what was moved to a new place?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Farmers clear a forest to plant wheat",
+   "also_right": []
+  },
+  "b": {
+   "best": "An introduced species",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Human-induced environmental change",
+  "card": [
+   "Human-induced change is change to an environment that people cause. It differs from natural change, such as a flood or a bushfire started by lightning.",
+   [
+    "Land clearing and pollution",
+    "Clearing removes trees and other plants for farms, towns or mines. Pollution adds harmful materials, such as chemicals or sewage, to air, water or soil."
+   ],
+   [
+    "Introduced species and dams",
+    "People move plants or animals to places where they did not live before, and some spread and harm native species, such as the cane toad. Dams are walls across rivers that store water and change how much flows downstream."
+   ],
+   [
+    "Burning fossil fuels",
+    "Burning coal, oil and gas for energy releases gases that trap heat. This causes climate change."
+   ]
+  ],
+  "remember": "People change environments by clearing land, polluting, moving species, building dams and burning fossil fuels.",
+  "a": {
+   "q": "Which change to an environment was caused by people?",
+   "opts": [
+    "Farmers clear a forest to plant wheat",
+    "Lightning starts a bushfire in a national park",
+    "A river floods after heavy rain and moves its bank",
+    "A volcano erupts and covers land in ash"
+   ],
+   "why": "Clearing a forest for crops is an action by people, so it is human-induced. Lightning, floods and volcanoes are natural processes. The bushfire is tempting because fires can harm environments, but this one was started by lightning, not by people.",
+   "clue": "Which change came from a decision made by people?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Rabbits were brought to a farming region by settlers and now eat the native grasses. Which type of human-induced change is this?",
+   "opts": [
+    "An introduced species",
+    "Land clearing",
+    "Pollution",
+    "Building a dam"
+   ],
+   "why": "People moved the rabbits to a place where they did not live before, and they now harm native plants. That is an introduced species. It is not land clearing, because no one removed the vegetation. The rabbits eating the grass is the result, not the cause.",
+   "clue": "Who or what was moved to a new place?"
+  }
+ },
+ "cleared_by": "checker"
 }

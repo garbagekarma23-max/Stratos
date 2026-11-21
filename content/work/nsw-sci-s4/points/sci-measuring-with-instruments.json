@@ -8,8 +8,139 @@
    0.398
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00695,
+  "check": 0.01191
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers choosing instruments and reading them, but it does not teach the brief's comparison of digital and analog instruments by range and sensitivity, or against our senses, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Measuring with instruments",
+  "card": [
+   [
+    "Instrument and unit",
+    "Pick the instrument that suits the quantity. Length: ruler or tape measure, in millimetres, centimetres, metres or kilometres. Mass: balance, in grams or kilograms. Volume: measuring cylinder, in millilitres or litres. Temperature: thermometer, in degrees Celsius."
+   ],
+   [
+    "Match the size",
+    "Choose an instrument and unit that fit the size of the thing. A ruler in millimetres suits a seed. A tape measure in metres suits a classroom."
+   ],
+   [
+    "Analog and digital",
+    "An analog instrument shows a reading on a scale or dial, and you read the value between the marks. A digital instrument shows the number on a screen. Digital ones often show smaller steps, which makes them more sensitive."
+   ],
+   [
+    "Range and senses",
+    "Every instrument has a range, the smallest to the largest value it can measure. Our senses are not reliable for measuring. Touch cannot give an exact temperature, and two people may judge the same thing differently."
+   ]
+  ],
+  "remember": "Choose the instrument and unit to suit the size, and trust a measuring instrument over your senses.",
+  "a": {
+   "q": "Why is a thermometer a better choice than touch for finding the temperature of water?",
+   "opts": [
+    "It gives a reading that does not depend on the person",
+    "It can measure any temperature that exists",
+    "It always shows smaller steps than a digital one",
+    "It measures the volume of water as well"
+   ],
+   "why": "A thermometer gives a number on a scale, so different people get the same reading. Touch depends on the person and cannot give an exact value. A thermometer does have a range, so it cannot measure every temperature.",
+   "clue": "Think about whether two people would agree."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia wants to find the mass of a single pea. A kitchen balance reads in steps of 10 g. A lab balance reads in steps of 0.01 g. Which should she use, and why?",
+   "opts": [
+    "The lab balance, because it is more sensitive",
+    "The kitchen balance, because it has a larger range",
+    "The lab balance, because it is a digital instrument",
+    "The kitchen balance, because it reads in whole grams"
+   ],
+   "why": "A pea has a very small mass, so Mia needs an instrument that shows small steps. The lab balance is more sensitive. Being digital is not the reason, because a digital instrument can also have large steps.",
+   "clue": "Which balance can show a very small change in mass?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It gives a reading that does not depend on the person",
+   "also_right": []
+  },
+  "b": {
+   "best": "The lab balance, because it is more sensitive",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Measuring with instruments",
+  "card": [
+   [
+    "Instrument and unit",
+    "Pick the instrument that suits the quantity. Length: ruler or tape measure, in millimetres, centimetres, metres or kilometres. Mass: balance, in grams or kilograms. Volume: measuring cylinder, in millilitres or litres. Temperature: thermometer, in degrees Celsius."
+   ],
+   [
+    "Match the size",
+    "Choose an instrument and unit that fit the size of the thing. A ruler in millimetres suits a seed. A tape measure in metres suits a classroom."
+   ],
+   [
+    "Analog and digital",
+    "An analog instrument shows a reading on a scale or dial, and you read the value between the marks. A digital instrument shows the number on a screen. Digital ones often show smaller steps, which makes them more sensitive."
+   ],
+   [
+    "Range and senses",
+    "Every instrument has a range, the smallest to the largest value it can measure. Our senses are not reliable for measuring. Touch cannot give an exact temperature, and two people may judge the same thing differently."
+   ]
+  ],
+  "remember": "Choose the instrument and unit to suit the size, and trust a measuring instrument over your senses.",
+  "a": {
+   "q": "Why is a thermometer a better choice than touch for finding the temperature of water?",
+   "opts": [
+    "It gives a reading that does not depend on the person",
+    "It can measure any temperature that exists",
+    "It always shows smaller steps than a digital one",
+    "It measures the volume of water as well"
+   ],
+   "why": "A thermometer gives a number on a scale, so different people get the same reading. Touch depends on the person and cannot give an exact value. A thermometer does have a range, so it cannot measure every temperature.",
+   "clue": "Think about whether two people would agree."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia wants to find the mass of a single pea. A kitchen balance reads in steps of 10 g. A lab balance reads in steps of 0.01 g. Which should she use, and why?",
+   "opts": [
+    "The lab balance, because it is more sensitive",
+    "The kitchen balance, because it has a larger range",
+    "The lab balance, because it is a digital instrument",
+    "The kitchen balance, because it reads in whole grams"
+   ],
+   "why": "A pea has a very small mass, so Mia needs an instrument that shows small steps. The lab balance is more sensitive. Being digital is not the reason, because a digital instrument can also have large steps.",
+   "clue": "Which balance can show a very small change in mass?"
+  }
+ },
+ "cleared_by": "checker"
 }

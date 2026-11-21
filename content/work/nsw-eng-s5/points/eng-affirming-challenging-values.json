@@ -24,8 +24,244 @@
    0.31
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:47Z write: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.00653,
+  "check": 0.01455,
+  "fix": 0.02209,
+  "recheck": 0.00777
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches the specific idea of judging whether a text supports or challenges the values of its context; the closest, Context and a text, only mentions that a writer may challenge values in passing, and its questions test context in general.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Affirming and challenging values",
+  "card": [
+   "Values are the beliefs and attitudes a society treats as important or right. Every text carries some, in what it praises, mocks or treats as normal.",
+   [
+    "Affirming",
+    "a text supports the values of its time. It presents them as sensible or admirable, and rewards characters who hold them."
+   ],
+   [
+    "Challenging",
+    "a text pushes against the values of its time. It may show them as unfair or harmful, and may give sympathy to characters who resist them."
+   ],
+   "To tell which a text does, compare the values it presents with the values common in the context it was made in. A text can also affirm some values and challenge others."
+  ],
+  "remember": "Compare what the text values with what its time valued. That shows whether it affirms or challenges.",
+  "a": {
+   "q": "Which description best fits a text that challenges the values of its time?",
+   "opts": [
+    "It shows a widely held attitude as unfair and harmful",
+    "It rewards characters who follow the attitudes of its time",
+    "It avoids showing any attitudes or beliefs at all",
+    "It is set in a different time from when it was written"
+   ],
+   "why": "Challenging means pushing against the attitudes of the time, such as by showing them as unfair. Rewarding characters who follow those attitudes would affirm them instead.",
+   "clue": "Challenging means pushing against what most people believed."
+  },
+  "b": {
+   "d": 3,
+   "q": "A novel written in 1890 is set in a town where most people believe girls do not need schooling. The narrator admires Ada, a girl who teaches herself to read in secret, and shows the townspeople's belief as narrow-minded. What does the novel do?",
+   "opts": [
+    "Challenges the values of its time about girls and education",
+    "Affirms the values of its time about girls and education",
+    "Neither, because Ada is only one character in the story",
+    "Affirms them, because the novel is set in the past"
+   ],
+   "why": "The common belief of the time was that girls did not need schooling. The novel admires Ada and presents that belief as narrow-minded, so it challenges it. Being set in the past does not make a text affirm the values of its time.",
+   "clue": "Compare the narrator's attitude with the attitude of the townspeople."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It shows a widely held attitude as unfair and harmful",
+   "also_right": []
+  },
+  "b": {
+   "best": "Challenges the values of its time about girls and education",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The option 'Affirms them, because the novel is set in the past' uses 'them' with no clear referent. It also brings in a setting in the past that the stem never states: the stem gives only the year of writing. The why then argues against a premise the question did not set up, which could confuse students."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says the townspeople believe girls do not need schooling, but never says this belief was the common value of 1890. The options and the why treat the town's view as 'the values of its time', so a careful student could question the link the card says to check: the text's values against those common in the context it was made in."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line frames the result as a clean either/or ('whether it affirms or challenges'). The card says a text can affirm some values and challenge others."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Answers are clear and correct. In question b, the stem does not say the town's belief was common in 1890, and one distractor uses an unclear 'them' and a 'set in the past' premise the stem never states. The remember line also drops the card's point that a text can both affirm and challenge."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The option 'Affirms them, because the novel is set in the past' uses 'them' with no clear referent. It also brings in a setting in the past that the stem never states: the stem gives only the year of writing. The why then argues against a premise the question did not set up, which could confuse students.",
+  "Question b, wording: The stem says the townspeople believe girls do not need schooling, but never says this belief was the common value of 1890. The options and the why treat the town's view as 'the values of its time', so a careful student could question the link the card says to check: the text's values against those common in the context it was made in.",
+  "Remember, other: The remember line frames the result as a clean either/or ('whether it affirms or challenges'). The card says a text can affirm some values and challenge others."
+ ],
+ "proposal": {
+  "title": "Affirming and challenging values",
+  "card": [
+   "Values are the beliefs and attitudes a society treats as important or right. Every text carries some, in what it praises, mocks or treats as normal.",
+   [
+    "Affirming",
+    "a text supports the values of its time. It presents them as sensible or admirable, and rewards characters who hold them."
+   ],
+   [
+    "Challenging",
+    "a text pushes against the values of its time. It may show them as unfair or harmful, and may give sympathy to characters who resist them."
+   ],
+   "To tell which a text does, compare the values it presents with the values common in the context it was made in. A text can also affirm some values and challenge others."
+  ],
+  "remember": "Compare what a text values with what its time valued. It may affirm some values and challenge others.",
+  "a": {
+   "q": "Which description best fits a text that challenges the values of its time?",
+   "opts": [
+    "It shows a widely held attitude as unfair and harmful",
+    "It rewards characters who follow the attitudes of its time",
+    "It avoids showing any attitudes or beliefs at all",
+    "It praises the attitudes most people held at the time"
+   ],
+   "why": "Challenging means pushing against the attitudes of the time, such as by showing them as unfair. Rewarding or praising characters and attitudes that follow the common view would affirm it instead.",
+   "clue": "Challenging means pushing against what most people believed."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1890, when a novel was written, many people believed girls did not need schooling. Its narrator admires Ada, a girl who teaches herself to read in secret, and shows the townspeople who hold that belief as narrow-minded. What does the novel do with this value?",
+   "opts": [
+    "Challenges the common view of girls' schooling in 1890",
+    "Affirms the common view of girls' schooling in 1890",
+    "Neither, as only one character resists that view",
+    "Affirms the view, because most of its characters hold it"
+   ],
+   "why": "Many people in 1890 believed girls did not need schooling. The novel admires Ada and shows that belief as narrow-minded, so it challenges it. Showing many characters who hold a view is not the same as supporting it: what matters is how the text presents them.",
+   "clue": "Ask how the narrator presents the belief, not who holds it."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It shows a widely held attitude as unfair and harmful",
+    "also_right": []
+   },
+   "b": {
+    "best": "Challenges the common view of girls' schooling in 1890",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The option 'Affirms them, because the novel is set in the past' uses 'them' with no clear referent. It also brings in a setting in the past that the stem never states: the stem gives only the year of writing. The why then argues against a premise the question did not set up, which could confuse students."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says the townspeople believe girls do not need schooling, but never says this belief was the common value of 1890. The options and the why treat the town's view as 'the values of its time', so a careful student could question the link the card says to check: the text's values against those common in the context it was made in."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line frames the result as a clean either/or ('whether it affirms or challenges'). The card says a text can affirm some values and challenge others."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The option 'Affirms them, because the novel is set in the past' uses 'them' with no clear referent. It also brings in a setting in the past that the stem never states: the stem gives only the year of writing. The why then argues against a premise the question did not set up, which could confuse students.",
+   "Question b, wording: The stem says the townspeople believe girls do not need schooling, but never says this belief was the common value of 1890. The options and the why treat the town's view as 'the values of its time', so a careful student could question the link the card says to check: the text's values against those common in the context it was made in.",
+   "Remember, other: The remember line frames the result as a clean either/or ('whether it affirms or challenges'). The card says a text can affirm some values and challenge others."
+  ]
+ },
+ "final": {
+  "title": "Affirming and challenging values",
+  "card": [
+   "Values are the beliefs and attitudes a society treats as important or right. Every text carries some, in what it praises, mocks or treats as normal.",
+   [
+    "Affirming",
+    "a text supports the values of its time. It presents them as sensible or admirable, and rewards characters who hold them."
+   ],
+   [
+    "Challenging",
+    "a text pushes against the values of its time. It may show them as unfair or harmful, and may give sympathy to characters who resist them."
+   ],
+   "To tell which a text does, compare the values it presents with the values common in the context it was made in. A text can also affirm some values and challenge others."
+  ],
+  "remember": "Compare what a text values with what its time valued. It may affirm some values and challenge others.",
+  "a": {
+   "q": "Which description best fits a text that challenges the values of its time?",
+   "opts": [
+    "It shows a widely held attitude as unfair and harmful",
+    "It rewards characters who follow the attitudes of its time",
+    "It avoids showing any attitudes or beliefs at all",
+    "It praises the attitudes most people held at the time"
+   ],
+   "why": "Challenging means pushing against the attitudes of the time, such as by showing them as unfair. Rewarding or praising characters and attitudes that follow the common view would affirm it instead.",
+   "clue": "Challenging means pushing against what most people believed."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1890, when a novel was written, many people believed girls did not need schooling. Its narrator admires Ada, a girl who teaches herself to read in secret, and shows the townspeople who hold that belief as narrow-minded. What does the novel do with this value?",
+   "opts": [
+    "Challenges the common view of girls' schooling in 1890",
+    "Affirms the common view of girls' schooling in 1890",
+    "Neither, as only one character resists that view",
+    "Affirms the view, because most of its characters hold it"
+   ],
+   "why": "Many people in 1890 believed girls did not need schooling. The novel admires Ada and shows that belief as narrow-minded, so it challenges it. Showing many characters who hold a view is not the same as supporting it: what matters is how the text presents them.",
+   "clue": "Ask how the narrator presents the belief, not who holds it."
+  }
+ },
+ "cleared_by": "recheck"
 }

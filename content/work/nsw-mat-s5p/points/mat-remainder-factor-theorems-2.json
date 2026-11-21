@@ -20,8 +20,146 @@
    0.232
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 may adapt mat-remainder-factor-theorems, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:57Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:56Z write: failed the content check, writing again",
+  "2026-11-20T12:44:59Z write: done",
+  "2026-11-20T12:53:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00038,
+  "confirm": 0.00962,
+  "write": 0.02097,
+  "check": 0.00826
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-remainder-factor-theorems",
+  "changes": [
+   "Remove the rational root theorem bullet, which goes beyond the remainder and factor theorems in this Stage 5 paths point and is not needed for it."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same remainder and factor theorems, but its rational root theorem bullet goes beyond the new point's scope and depth for Years 9 and 10, so it needs trimming.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card covers the remainder and factor theorems but also teaches the rational root theorem, which is beyond the NSW Stage 5 paths content, so it is broader than this point and a new card is safer.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "The remainder and factor theorems",
+  "card": [
+   "When a polynomial \\(P(x)\\) is divided by \\(x - a\\), the remainder is \\(P(a)\\). This is the value you get by putting \\(x = a\\) into \\(P(x)\\).",
+   [
+    "Example",
+    "Find the remainder when \\(P(x) = x^{3} + 2x - 5\\) is divided by \\(x - 2\\). Here \\(a = 2\\), so \\(P(2) = 8 + 4 - 5 = 7\\). The remainder is 7."
+   ],
+   [
+    "Factor theorem",
+    "If \\(P(a) = 0\\), the remainder is zero, so \\(x - a\\) is a factor of \\(P(x)\\). If \\(P(a) \\ne 0\\), then \\(x - a\\) is not a factor."
+   ],
+   [
+    "Use",
+    "To factorise, test small whole numbers such as \\(\\pm 1\\) and \\(\\pm 2\\) until \\(P(a) = 0\\). Then \\(x - a\\) is a factor, and a root of \\(P(x) = 0\\) is \\(x = a\\)."
+   ]
+  ],
+  "remember": "Put \\(x = a\\) in to get the remainder. A remainder of zero means \\(x - a\\) is a factor.",
+  "a": {
+   "q": "What is the remainder when \\(P(x) = x^{3} - 4x + 3\\) is divided by \\(x - 3\\)?",
+   "opts": [
+    "18",
+    "\\(-12\\)",
+    "0",
+    "3"
+   ],
+   "why": "Here \\(a = 3\\), so \\(P(3) = 27 - 12 + 3 = 18\\). Using \\(-3\\) instead gives \\(-27 + 12 + 3 = -12\\), which is the sign mistake of using the wrong value for \\(a\\).",
+   "clue": "Divide by \\(x - 3\\), so put \\(x = 3\\) into \\(P(x)\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which of these is a factor of \\(P(x) = x^{3} - 7x + 6\\)?",
+   "opts": [
+    "\\(x - 1\\)",
+    "\\(x + 1\\)",
+    "\\(x - 3\\)",
+    "\\(x + 2\\)"
+   ],
+   "why": "\\(P(1) = 1 - 7 + 6 = 0\\), so \\(x - 1\\) is a factor. The tempting \\(x + 1\\) needs \\(P(-1) = 0\\), but \\(P(-1) = -1 + 7 + 6 = 12\\). Also \\(P(3) = 12\\) and \\(P(-2) = 12\\), so the other two are not factors.",
+   "clue": "A factor \\(x - a\\) needs \\(P(a) = 0\\), so test each value of \\(a\\)."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "18",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(x - 1\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out: P(3) = 18 in (a), and only x - 1 is a factor in (b), since P(1) = 0 and P(3), P(-1) and P(-2) all equal 12."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The remainder and factor theorems",
+  "card": [
+   "When a polynomial \\(P(x)\\) is divided by \\(x - a\\), the remainder is \\(P(a)\\). This is the value you get by putting \\(x = a\\) into \\(P(x)\\).",
+   [
+    "Example",
+    "Find the remainder when \\(P(x) = x^{3} + 2x - 5\\) is divided by \\(x - 2\\). Here \\(a = 2\\), so \\(P(2) = 8 + 4 - 5 = 7\\). The remainder is 7."
+   ],
+   [
+    "Factor theorem",
+    "If \\(P(a) = 0\\), the remainder is zero, so \\(x - a\\) is a factor of \\(P(x)\\). If \\(P(a) \\ne 0\\), then \\(x - a\\) is not a factor."
+   ],
+   [
+    "Use",
+    "To factorise, test small whole numbers such as \\(\\pm 1\\) and \\(\\pm 2\\) until \\(P(a) = 0\\). Then \\(x - a\\) is a factor, and a root of \\(P(x) = 0\\) is \\(x = a\\)."
+   ]
+  ],
+  "remember": "Put \\(x = a\\) in to get the remainder. A remainder of zero means \\(x - a\\) is a factor.",
+  "a": {
+   "q": "What is the remainder when \\(P(x) = x^{3} - 4x + 3\\) is divided by \\(x - 3\\)?",
+   "opts": [
+    "18",
+    "\\(-12\\)",
+    "0",
+    "3"
+   ],
+   "why": "Here \\(a = 3\\), so \\(P(3) = 27 - 12 + 3 = 18\\). Using \\(-3\\) instead gives \\(-27 + 12 + 3 = -12\\), which is the sign mistake of using the wrong value for \\(a\\).",
+   "clue": "Divide by \\(x - 3\\), so put \\(x = 3\\) into \\(P(x)\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which of these is a factor of \\(P(x) = x^{3} - 7x + 6\\)?",
+   "opts": [
+    "\\(x - 1\\)",
+    "\\(x + 1\\)",
+    "\\(x - 3\\)",
+    "\\(x + 2\\)"
+   ],
+   "why": "\\(P(1) = 1 - 7 + 6 = 0\\), so \\(x - 1\\) is a factor. The tempting \\(x + 1\\) needs \\(P(-1) = 0\\), but \\(P(-1) = -1 + 7 + 6 = 12\\). Also \\(P(3) = 12\\) and \\(P(-2) = 12\\), so the other two are not factors.",
+   "clue": "A factor \\(x - a\\) needs \\(P(a) = 0\\), so test each value of \\(a\\)."
+  }
+ },
+ "cleared_by": "checker"
 }

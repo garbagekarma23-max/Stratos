@@ -24,8 +24,384 @@
    0.376
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:55Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:55Z write: failed the content check, writing again",
+  "2026-11-20T12:44:59Z write: done (still fails the content check)",
+  "2026-11-20T12:53:27Z check: flagged",
+  "2026-11-20T13:00:00Z fix: suggested",
+  "2026-11-20T13:23:43Z autoreview: cleared with the fix (the content check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00067,
+  "write": 0.02252,
+  "check": 0.00927,
+  "fix": 0.03045
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest card, mat-equation-y-mx-c, covers the same idea and includes drawing, but it is written at Year 11 depth, and the Year 9 card mat-gradient-y-intercept has no drawing step, so neither fits Stage 5 closely enough to reuse or adapt.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Gradient-intercept form",
+  "card": [
+   "A straight line can be written as \\(y = mx + c\\). This is called gradient-intercept form.",
+   [
+    "Gradient",
+    "\\(m\\) is the number multiplying \\(x\\). It tells you how much \\(y\\) changes when \\(x\\) goes up by 1. A negative \\(m\\) means the line slopes down."
+   ],
+   [
+    "y-intercept",
+    "\\(c\\) is the number added on its own. It is the value of \\(y\\) where the line crosses the y-axis, at the point \\((0, c)\\)."
+   ],
+   [
+    "Example",
+    "For \\(y = 2x - 3\\), \\(m = 2\\) and \\(c = -3\\). Start at \\((0, -3)\\). Go across 1 and up 2 to reach \\((1, -1)\\). Join the points with a line."
+   ]
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The line \\(y = 2x - 3\\), crossing the y-axis at \\((0, -3)\\) and passing through \\((1, -1)\\) and \\((2, 1)\\).",
+    "x": {
+     "min": -3,
+     "max": 6,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -7,
+     "max": 5,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2x - 3",
+      "domain": [
+       -2,
+       4
+      ],
+      "label": "\\(y = 2x - 3\\)",
+      "labelAt": 3.2,
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       -3
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, -3)\\)",
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       -1
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((1, -1)\\)",
+      "pos": "right"
+     }
+    ]
+   }
+  },
+  "remember": "In \\(y = mx + c\\), \\(m\\) is the gradient and \\(c\\) is where the line meets the y-axis.",
+  "a": {
+   "q": "What are the gradient and y-intercept of the line \\(y = -4x + 5\\)?",
+   "opts": [
+    "Gradient \\(-4\\), y-intercept \\(5\\)",
+    "Gradient \\(5\\), y-intercept \\(-4\\)",
+    "Gradient \\(4\\), y-intercept \\(5\\)",
+    "Gradient \\(-4\\), y-intercept \\(-5\\)"
+   ],
+   "why": "The number multiplying \\(x\\) is the gradient, \\(-4\\). The number added on its own is the y-intercept, \\(5\\). Swapping the two is a common mistake, but \\(c\\) is the part without \\(x\\).",
+   "clue": "The gradient is the number multiplying \\(x\\), with its sign."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya draws the line \\(y = -\\frac{1}{2}x + 3\\). She starts at the y-intercept. Which move takes her to another point on the line?",
+   "opts": [
+    "Across 2, down 1, to reach \\((2, 2)\\)",
+    "Across 2, up 1, to reach \\((2, 4)\\)",
+    "Across 1, down 2, to reach \\((1, 1)\\)",
+    "Across 3, down 1, to reach \\((3, 2)\\)"
+   ],
+   "why": "The y-intercept is \\((0, 3)\\) and the gradient is \\(-\\frac{1}{2}\\). So \\(y\\) falls 1 each time \\(x\\) rises 2, which gives \\((2, 2)\\). Across 2 and up 1 would give a gradient of \\(\\frac{1}{2}\\), which slopes up.",
+   "clue": "Start at \\((0, 3)\\). A negative gradient means the line goes down as it goes right."
+  }
+ },
+ "redone": true,
+ "local": [
+  "mat-gradient-intercept-form the figure on card line 4 has the label \\(y = 2x - 3\\) on a curve. Move it with pos or labelAt, or move the curve",
+  "mat-gradient-intercept-form the figure on card line 4 has the label \\((0, -3)\\) on a curve. Move it with pos or labelAt, or move the curve",
+  "mat-gradient-intercept-form the figure on card line 4 has the label \\((1, -1)\\) on a curve. Move it with pos or labelAt, or move the curve"
+ ],
+ "check": {
+  "a": {
+   "best": "Gradient \\(-4\\), y-intercept \\(5\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "Across 2, down 1, to reach \\((2, 2)\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Content check: mat-gradient-intercept-form the figure on card line 4 has the label \\(y = 2x - 3\\) on a curve. Move it with pos or labelAt, or move the curve",
+  "Content check: mat-gradient-intercept-form the figure on card line 4 has the label \\((0, -3)\\) on a curve. Move it with pos or labelAt, or move the curve",
+  "Content check: mat-gradient-intercept-form the figure on card line 4 has the label \\((1, -1)\\) on a curve. Move it with pos or labelAt, or move the curve"
+ ],
+ "proposal": {
+  "title": "Gradient-intercept form",
+  "card": [
+   "A straight line can be written as \\(y = mx + c\\). This is called gradient-intercept form.",
+   [
+    "Gradient",
+    "\\(m\\) is the number multiplying \\(x\\). It tells you how much \\(y\\) changes when \\(x\\) goes up by 1. A negative \\(m\\) means the line slopes down."
+   ],
+   [
+    "y-intercept",
+    "\\(c\\) is the number added on its own. It is the value of \\(y\\) where the line crosses the y-axis, at the point \\((0, c)\\)."
+   ],
+   [
+    "Example",
+    "For \\(y = 2x - 3\\), \\(m = 2\\) and \\(c = -3\\). Start at \\((0, -3)\\). Go across 1 and up 2 to reach \\((1, -1)\\). Join the points with a line."
+   ]
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The line \\(y = 2x - 3\\), crossing the y-axis at \\((0, -3)\\) and passing through \\((1, -1)\\).",
+    "x": {
+     "min": -3,
+     "max": 6,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -7,
+     "max": 5,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2x - 3",
+      "domain": [
+       -1.5,
+       3.5
+      ],
+      "label": "\\(y = 2x - 3\\)",
+      "labelAt": 2.5,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       -3
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, -3)\\)",
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       -1
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((1, -1)\\)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "In \\(y = mx + c\\), \\(m\\) is the gradient and \\(c\\) is where the line meets the y-axis.",
+  "a": {
+   "q": "What are the gradient and y-intercept of the line \\(y = -4x + 5\\)?",
+   "opts": [
+    "Gradient \\(-4\\), y-intercept \\(5\\)",
+    "Gradient \\(5\\), y-intercept \\(-4\\)",
+    "Gradient \\(4\\), y-intercept \\(5\\)",
+    "Gradient \\(-4\\), y-intercept \\(-5\\)"
+   ],
+   "why": "The number multiplying \\(x\\) is the gradient, \\(-4\\). The number added on its own is the y-intercept, \\(5\\). Swapping the two is a common mistake, but \\(c\\) is the part without \\(x\\).",
+   "clue": "The gradient is the number multiplying \\(x\\), with its sign."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya draws the line \\(y = -\\frac{1}{2}x + 3\\). She starts at the y-intercept. Which move takes her to another point on the line?",
+   "opts": [
+    "Across 2, down 1, to reach \\((2, 2)\\)",
+    "Across 2, up 1, to reach \\((2, 4)\\)",
+    "Across 1, down 2, to reach \\((1, 1)\\)",
+    "Across 3, down 1, to reach \\((3, 2)\\)"
+   ],
+   "why": "The y-intercept is \\((0, 3)\\) and the gradient is \\(-\\frac{1}{2}\\). So \\(y\\) falls 1 each time \\(x\\) rises 2, which gives \\((2, 2)\\). Across 2 and up 1 would give a gradient of \\(\\frac{1}{2}\\), which slopes up.",
+   "clue": "Start at \\((0, 3)\\). A negative gradient means the line goes down as it goes right."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:43Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [],
+  "flags": [
+   "Content check: mat-gradient-intercept-form the figure on card line 4 has the label \\(y = 2x - 3\\) on a curve. Move it with pos or labelAt, or move the curve",
+   "Content check: mat-gradient-intercept-form the figure on card line 4 has the label \\((0, -3)\\) on a curve. Move it with pos or labelAt, or move the curve",
+   "Content check: mat-gradient-intercept-form the figure on card line 4 has the label \\((1, -1)\\) on a curve. Move it with pos or labelAt, or move the curve"
+  ]
+ },
+ "final": {
+  "title": "Gradient-intercept form",
+  "card": [
+   "A straight line can be written as \\(y = mx + c\\). This is called gradient-intercept form.",
+   [
+    "Gradient",
+    "\\(m\\) is the number multiplying \\(x\\). It tells you how much \\(y\\) changes when \\(x\\) goes up by 1. A negative \\(m\\) means the line slopes down."
+   ],
+   [
+    "y-intercept",
+    "\\(c\\) is the number added on its own. It is the value of \\(y\\) where the line crosses the y-axis, at the point \\((0, c)\\)."
+   ],
+   [
+    "Example",
+    "For \\(y = 2x - 3\\), \\(m = 2\\) and \\(c = -3\\). Start at \\((0, -3)\\). Go across 1 and up 2 to reach \\((1, -1)\\). Join the points with a line."
+   ]
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The line \\(y = 2x - 3\\), crossing the y-axis at \\((0, -3)\\) and passing through \\((1, -1)\\).",
+    "x": {
+     "min": -3,
+     "max": 6,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -7,
+     "max": 5,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2x - 3",
+      "domain": [
+       -1.5,
+       3.5
+      ],
+      "label": "\\(y = 2x - 3\\)",
+      "labelAt": 2.5,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       -3
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, -3)\\)",
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       -1
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((1, -1)\\)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "In \\(y = mx + c\\), \\(m\\) is the gradient and \\(c\\) is where the line meets the y-axis.",
+  "a": {
+   "q": "What are the gradient and y-intercept of the line \\(y = -4x + 5\\)?",
+   "opts": [
+    "Gradient \\(-4\\), y-intercept \\(5\\)",
+    "Gradient \\(5\\), y-intercept \\(-4\\)",
+    "Gradient \\(4\\), y-intercept \\(5\\)",
+    "Gradient \\(-4\\), y-intercept \\(-5\\)"
+   ],
+   "why": "The number multiplying \\(x\\) is the gradient, \\(-4\\). The number added on its own is the y-intercept, \\(5\\). Swapping the two is a common mistake, but \\(c\\) is the part without \\(x\\).",
+   "clue": "The gradient is the number multiplying \\(x\\), with its sign."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya draws the line \\(y = -\\frac{1}{2}x + 3\\). She starts at the y-intercept. Which move takes her to another point on the line?",
+   "opts": [
+    "Across 2, down 1, to reach \\((2, 2)\\)",
+    "Across 2, up 1, to reach \\((2, 4)\\)",
+    "Across 1, down 2, to reach \\((1, 1)\\)",
+    "Across 3, down 1, to reach \\((3, 2)\\)"
+   ],
+   "why": "The y-intercept is \\((0, 3)\\) and the gradient is \\(-\\frac{1}{2}\\). So \\(y\\) falls 1 each time \\(x\\) rises 2, which gives \\((2, 2)\\). Across 2 and up 1 would give a gradient of \\(\\frac{1}{2}\\), which slopes up.",
+   "clue": "Start at \\((0, 3)\\). A negative gradient means the line goes down as it goes right."
+  }
+ },
+ "cleared_by": "auto"
 }

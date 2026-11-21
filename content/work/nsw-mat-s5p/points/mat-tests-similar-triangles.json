@@ -24,8 +24,196 @@
    0.357
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: failed the content check, writing again",
+  "2026-11-20T12:35:56Z write: done (still fails the content check)",
+  "2026-11-20T12:44:59Z check: flagged",
+  "2026-11-20T12:53:28Z fix: suggested",
+  "2026-11-20T13:23:44Z autoreview: cleared with the fix (remember other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "write": 0.02339,
+  "check": 0.01392,
+  "fix": 0.02524
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank card, Similarity and scale factors, covers only the equal-angles test and the all-sides-in-proportion test, and it is broader, centred on scale factors, so it lacks the SAS-proportion and right-angled (RHS) similarity tests that this point needs.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Tests for similar triangles",
+  "card": [
+   "Similar triangles have the same shape but may differ in size. Matching sides are in the same ratio, called the scale factor.",
+   [
+    "AAA",
+    "Triangles are similar if their angles are equal. Two equal angles are enough, as the third must then be equal too."
+   ],
+   [
+    "SSS",
+    "They are similar if all three pairs of matching sides are in the same ratio."
+   ],
+   [
+    "SAS",
+    "They are similar if two pairs of sides are in the same ratio and the angles between those sides are equal."
+   ],
+   [
+    "RHS",
+    "Right-angled triangles are similar if the hypotenuses and one other pair of sides are in the same ratio."
+   ]
+  ],
+  "remember": "Similar triangles have equal angles or sides in the same ratio.",
+  "a": {
+   "q": "Triangle ABC has sides 4 cm, 6 cm and 8 cm. Triangle DEF has sides 6 cm, 9 cm and 12 cm. Which statement is correct?",
+   "opts": [
+    "They are similar, as all three side ratios are \\(1.5\\)",
+    "They are similar, as each side is 2 cm longer",
+    "They are not similar, as the sides are different lengths",
+    "They are not similar, as no angles are given"
+   ],
+   "why": "Each ratio is \\(6 \\div 4 = 1.5\\), \\(9 \\div 6 = 1.5\\) and \\(12 \\div 8 = 1.5\\), so the sides are in proportion (SSS). Adding 2 cm to each side is a difference, not a ratio, though it is tempting.",
+   "clue": "Divide each side of DEF by the matching side of ABC."
+  },
+  "b": {
+   "d": 3,
+   "q": "In triangle PQR, \\(PQ = 5\\) cm, \\(PR = 8\\) cm and angle \\(P = 50^{\\circ}\\). In triangle XYZ, \\(XY = 10\\) cm, \\(XZ = 16\\) cm and angle \\(X = 50^{\\circ}\\). Why are they similar?",
+   "opts": [
+    "Two sides are in the ratio 2 and the angle between is equal",
+    "All three angles are known to be equal",
+    "All three sides are known to be in the same ratio",
+    "They have a right angle and a matching hypotenuse"
+   ],
+   "why": "Both \\(10 \\div 5\\) and \\(16 \\div 8\\) equal 2, and the equal angle of \\(50^{\\circ}\\) lies between those sides, so it is SAS. We are not told the third sides or the other angles, so the other tests cannot be used.",
+   "clue": "Check where the 50 degree angle sits compared with the two sides."
+  }
+ },
+ "redone": true,
+ "local": [
+  "mat-tests-similar-triangles card has 5 lines"
+ ],
+ "check": {
+  "a": {
+   "best": "They are similar, as all three side ratios are \\(1.5\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "Two sides are in the ratio 2 and the angle between is equal",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "\"Similar triangles have equal angles or sides in the same ratio\" says 'or', which suggests a similar triangle may have only one of these properties. The card says similar triangles have both: equal angles and matching sides in the same ratio. The line also leaves out the SAS and RHS tests, so it is less complete than the card."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and their explanations are correct (SSS with ratio 1.5, and SAS with ratio 2). The remember line uses 'or', which wrongly suggests similar triangles have either equal angles or proportional sides, when they have both."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: \"Similar triangles have equal angles or sides in the same ratio\" says 'or', which suggests a similar triangle may have only one of these properties. The card says similar triangles have both: equal angles and matching sides in the same ratio. The line also leaves out the SAS and RHS tests, so it is less complete than the card.",
+  "Content check: mat-tests-similar-triangles card has 5 lines"
+ ],
+ "proposal": {
+  "title": "Tests for similar triangles",
+  "card": [
+   "Similar triangles have the same shape but may differ in size. Matching angles are equal, and matching sides are in the same ratio, called the scale factor.",
+   "AAA: two triangles are similar if their angles are equal. Two pairs of equal angles are enough, as the third pair must then be equal too.",
+   "SSS: all three pairs of matching sides are in the same ratio. SAS: two pairs of sides are in the same ratio, and the angles between those sides are equal.",
+   "RHS: two right-angled triangles are similar if their hypotenuses and one other pair of sides are in the same ratio. For example, sides 3 and 5 against 6 and 10 give a ratio of 2 each time."
+  ],
+  "remember": "To prove two triangles similar, show one test holds: AAA, SSS, SAS or RHS.",
+  "a": {
+   "q": "Triangle ABC has sides 4 cm, 6 cm and 8 cm. Triangle DEF has sides 6 cm, 9 cm and 12 cm. Which statement is correct?",
+   "opts": [
+    "They are similar, as all three side ratios are \\(1.5\\)",
+    "They are similar, as each side is 2 cm longer",
+    "They are not similar, as the sides are different lengths",
+    "They are not similar, as no angles are given"
+   ],
+   "why": "Each ratio is \\(6 \\div 4 = 1.5\\), \\(9 \\div 6 = 1.5\\) and \\(12 \\div 8 = 1.5\\), so the sides are in proportion (SSS). Adding 2 cm to each side is a difference, not a ratio, and it does not hold for the 8 cm side anyway.",
+   "clue": "Divide each side of DEF by the matching side of ABC."
+  },
+  "b": {
+   "d": 3,
+   "q": "In triangle PQR, \\(PQ = 5\\) cm, \\(PR = 8\\) cm and angle \\(P = 50^{\\circ}\\). In triangle XYZ, \\(XY = 10\\) cm, \\(XZ = 16\\) cm and angle \\(X = 50^{\\circ}\\). Why are they similar?",
+   "opts": [
+    "Two sides are in the ratio 2 and the angle between is equal",
+    "All three angles are known to be equal",
+    "All three sides are known to be in the same ratio",
+    "They have a right angle and a matching hypotenuse"
+   ],
+   "why": "Both \\(10 \\div 5\\) and \\(16 \\div 8\\) equal 2, and the equal angle of \\(50^{\\circ}\\) lies between those sides, so it is SAS. We are not told the third sides or the other angles, so SSS and AAA cannot be used yet.",
+   "clue": "Check where the 50 degree angle sits compared with the two sides."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:44Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "\"Similar triangles have equal angles or sides in the same ratio\" says 'or', which suggests a similar triangle may have only one of these properties. The card says similar triangles have both: equal angles and matching sides in the same ratio. The line also leaves out the SAS and RHS tests, so it is less complete than the card."
+   }
+  ],
+  "flags": [
+   "Remember, other: \"Similar triangles have equal angles or sides in the same ratio\" says 'or', which suggests a similar triangle may have only one of these properties. The card says similar triangles have both: equal angles and matching sides in the same ratio. The line also leaves out the SAS and RHS tests, so it is less complete than the card.",
+   "Content check: mat-tests-similar-triangles card has 5 lines"
+  ]
+ },
+ "final": {
+  "title": "Tests for similar triangles",
+  "card": [
+   "Similar triangles have the same shape but may differ in size. Matching angles are equal, and matching sides are in the same ratio, called the scale factor.",
+   "AAA: two triangles are similar if their angles are equal. Two pairs of equal angles are enough, as the third pair must then be equal too.",
+   "SSS: all three pairs of matching sides are in the same ratio. SAS: two pairs of sides are in the same ratio, and the angles between those sides are equal.",
+   "RHS: two right-angled triangles are similar if their hypotenuses and one other pair of sides are in the same ratio. For example, sides 3 and 5 against 6 and 10 give a ratio of 2 each time."
+  ],
+  "remember": "To prove two triangles similar, show one test holds: AAA, SSS, SAS or RHS.",
+  "a": {
+   "q": "Triangle ABC has sides 4 cm, 6 cm and 8 cm. Triangle DEF has sides 6 cm, 9 cm and 12 cm. Which statement is correct?",
+   "opts": [
+    "They are similar, as all three side ratios are \\(1.5\\)",
+    "They are similar, as each side is 2 cm longer",
+    "They are not similar, as the sides are different lengths",
+    "They are not similar, as no angles are given"
+   ],
+   "why": "Each ratio is \\(6 \\div 4 = 1.5\\), \\(9 \\div 6 = 1.5\\) and \\(12 \\div 8 = 1.5\\), so the sides are in proportion (SSS). Adding 2 cm to each side is a difference, not a ratio, and it does not hold for the 8 cm side anyway.",
+   "clue": "Divide each side of DEF by the matching side of ABC."
+  },
+  "b": {
+   "d": 3,
+   "q": "In triangle PQR, \\(PQ = 5\\) cm, \\(PR = 8\\) cm and angle \\(P = 50^{\\circ}\\). In triangle XYZ, \\(XY = 10\\) cm, \\(XZ = 16\\) cm and angle \\(X = 50^{\\circ}\\). Why are they similar?",
+   "opts": [
+    "Two sides are in the ratio 2 and the angle between is equal",
+    "All three angles are known to be equal",
+    "All three sides are known to be in the same ratio",
+    "They have a right angle and a matching hypotenuse"
+   ],
+   "why": "Both \\(10 \\div 5\\) and \\(16 \\div 8\\) equal 2, and the equal angle of \\(50^{\\circ}\\) lies between those sides, so it is SAS. We are not told the third sides or the other angles, so SSS and AAA cannot be used yet.",
+   "clue": "Check where the 50 degree angle sits compared with the two sides."
+  }
+ },
+ "cleared_by": "auto"
 }

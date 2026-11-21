@@ -24,8 +24,765 @@
    0.45
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 may adapt sci-energy-transfer-transformation, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:59Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: flagged",
+  "2026-11-20T12:53:29Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (card fact)",
+  "2026-11-20T13:44:57Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: flagged",
+  "2026-11-20T13:56:50Z fix: suggested",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 2,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "confirm": 0.01042,
+  "write": 0.00618,
+  "check": 0.015,
+  "fix": 0.0379,
+  "recheck": 0.01102
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "sci-energy-transfer-transformation",
+  "changes": [
+   "Bring the card into line with the NSW Stage 4 Science 7-10 wording for energy transformations, which the bank card does not use.",
+   "Replace the Queensland-style Year 8 framing with a Stage 4 (Years 7 and 8) framing for NSW students."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same transformation idea at a suitable depth, but its card and sample questions need NSW-specific wording and framing before they fit the new course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The new point teaches energy transformation itself and shows it with flow diagrams. The bank splits this idea differently: one card is broader, also teaching transfer and how to tell it apart from transformation, and the other teaches mainly how to read flow diagrams, so neither matches it as it stands.",
+  "model": "claude-opus-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, fact: The card treats 'heat' as a form of energy that comes out of the light globe. Point 1 names the store as thermal energy, and point 2 treats heat as energy moving. Calling the output 'thermal energy' (or 'heat, which raises its thermal energy') would keep the terms consistent across the chapter. The same wording appears in question b's options.",
+ "rejected": {
+  "title": "Energy transformations",
+  "card": [
+   "An energy transformation is when energy changes from one form to another. A torch changes chemical energy in its battery into light energy.",
+   "A car engine changes chemical energy in petrol into kinetic energy. A solar cell changes light energy into electrical energy.",
+   "A flow diagram shows the energy going in on the left and the energy coming out on the right, with an arrow for each change. For example: chemical energy → engine → kinetic energy.",
+   "Often more than one form comes out. A light globe changes electrical energy into light and also into heat, which is not the form we wanted."
+  ],
+  "remember": "Find what goes in, then list every form that comes out, including the ones you did not want.",
+  "a": {
+   "q": "A solar-powered calculator in a classroom in Orange is switched on. What energy transformation takes place?",
+   "opts": [
+    "Light energy to electrical energy",
+    "Electrical energy to light energy",
+    "Chemical energy to light energy",
+    "Heat energy to kinetic energy"
+   ],
+   "why": "The calculator's solar cell takes in light energy and gives out electrical energy to run the calculator. Electrical energy to light energy is tempting, but it reverses the direction of the change.",
+   "clue": "Check what goes in and what comes out."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia plugs a speaker into a power point and plays music. After a while the speaker feels warm. Which flow diagram shows this?",
+   "opts": [
+    "Electrical energy → speaker → sound energy and heat",
+    "Sound energy → speaker → electrical energy and heat",
+    "Electrical energy → speaker → sound energy only",
+    "Heat energy → speaker → electrical energy and sound"
+   ],
+   "why": "Electrical energy goes in from the power point, and sound and heat come out, as the speaker gets warm. The option with sound only leaves out the heat, which is also an output. The other two put the input and output the wrong way round.",
+   "clue": "Name what goes in, then list every form that comes out."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "claude-code",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, fact: The card treats 'heat' as a form of energy that comes out of the light globe. Point 1 names the store as thermal energy, and point 2 treats heat as energy moving. Calling the output 'thermal energy' (or 'heat, which raises its thermal energy') would keep the terms consistent across the chapter. The same wording appears in question b's options."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Energy transformations",
+     "card": [
+      "An energy transformation is when energy changes from one form to another. A torch changes chemical energy in its battery into light energy.",
+      "A car engine changes chemical energy in petrol into kinetic energy, which is the energy of movement. A toaster changes electrical energy into heat.",
+      "A flow diagram shows the energy going in on the left and the energy coming out on the right, with an arrow for each change. For example: chemical energy → engine → kinetic energy.",
+      "Often more than one form comes out. A light globe changes electrical energy into light and also into heat, which is not the form we wanted."
+     ],
+     "remember": "A transformation changes energy from one form to another. A flow diagram shows what goes in and what comes out.",
+     "a": {
+      "q": "A solar-powered calculator in a classroom in Orange is switched on. What energy transformation takes place?",
+      "opts": [
+       "Light energy to electrical energy",
+       "Electrical energy to light energy",
+       "Chemical energy to light energy",
+       "Heat energy to kinetic energy"
+      ],
+      "why": "A solar cell takes in light energy and gives out electrical energy to run the calculator. Electrical energy to light energy is tempting, but it reverses the direction of the change.",
+      "clue": "Check what goes in and what comes out."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia charges her phone. Which flow diagram shows what happens when she then plays music through its speaker and the phone also gets warm?",
+      "opts": [
+       "Electrical energy → phone → sound energy and heat",
+       "Sound energy → phone → electrical energy and heat",
+       "Electrical energy → phone → sound energy only",
+       "Heat energy → phone → electrical energy and sound"
+      ],
+      "why": "Electrical energy goes in, and sound and heat come out, as the scenario says the phone gets warm. The option with sound only leaves out the heat, which is also an output. The others have the input and output the wrong way round.",
+      "clue": "Name what goes in, then list every form that comes out."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Light energy to electrical energy",
+      "also_right": []
+     },
+     "b": {
+      "best": "Electrical energy → phone → sound energy and heat",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The card says a battery stores chemical energy (the torch example), but when Mia plays music from her already charged phone, the energy going in comes from the battery's chemical store, not electrical energy. The question treats electrical energy as the input, which clashes with the card. No option offers a chemical input, so the intended answer still stands, but a careful student could be confused. Rewording the stem, e.g. playing music while plugged in, would fix this."
+      },
+      {
+       "part": "card",
+       "kind": "other",
+       "detail": "The card defines kinetic energy ('which is the energy of movement'). Kinetic energy belongs to the Energy stores point, so it should only be mentioned here, not explained."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both answers are clear. In question b the input is called electrical energy, but the phone is running from its charged battery, which the card says holds chemical energy. The card also re-defines kinetic energy, which belongs to the Energy stores point."
+    },
+    "flags": [
+     "Question b, other: The card says a battery stores chemical energy (the torch example), but when Mia plays music from her already charged phone, the energy going in comes from the battery's chemical store, not electrical energy. The question treats electrical energy as the input, which clashes with the card. No option offers a chemical input, so the intended answer still stands, but a careful student could be confused. Rewording the stem, e.g. playing music while plugged in, would fix this.",
+     "Card, other: The card defines kinetic energy ('which is the energy of movement'). Kinetic energy belongs to the Energy stores point, so it should only be mentioned here, not explained."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Energy transformations",
+     "card": [
+      "An energy transformation is when energy changes from one form to another. A torch changes chemical energy in its battery into light energy.",
+      "A car engine changes chemical energy in petrol into kinetic energy. A solar cell changes light energy into electrical energy.",
+      "A flow diagram shows the energy going in on the left and the energy coming out on the right, with an arrow for each change. For example: chemical energy → engine → kinetic energy.",
+      "Often more than one form comes out. A light globe changes electrical energy into light and also into heat, which is not the form we wanted."
+     ],
+     "remember": "Find what goes in, then list every form that comes out, including the ones you did not want.",
+     "a": {
+      "q": "A solar-powered calculator in a classroom in Orange is switched on. What energy transformation takes place?",
+      "opts": [
+       "Light energy to electrical energy",
+       "Electrical energy to light energy",
+       "Chemical energy to light energy",
+       "Heat energy to kinetic energy"
+      ],
+      "why": "The calculator's solar cell takes in light energy and gives out electrical energy to run the calculator. Electrical energy to light energy is tempting, but it reverses the direction of the change.",
+      "clue": "Check what goes in and what comes out."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia plugs a speaker into a power point and plays music. After a while the speaker feels warm. Which flow diagram shows this?",
+      "opts": [
+       "Electrical energy → speaker → sound energy and heat",
+       "Sound energy → speaker → electrical energy and heat",
+       "Electrical energy → speaker → sound energy only",
+       "Heat energy → speaker → electrical energy and sound"
+      ],
+      "why": "Electrical energy goes in from the power point, and sound and heat come out, as the speaker gets warm. The option with sound only leaves out the heat, which is also an output. The other two put the input and output the wrong way round.",
+      "clue": "Name what goes in, then list every form that comes out."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:08Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Light energy to electrical energy",
+       "also_right": []
+      },
+      "b": {
+       "best": "Electrical energy → speaker → sound energy and heat",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "fact",
+        "detail": "The card treats 'heat' as a form of energy that comes out of the light globe. Point 1 names the store as thermal energy, and point 2 treats heat as energy moving. Calling the output 'thermal energy' (or 'heat, which raises its thermal energy') would keep the terms consistent across the chapter. The same wording appears in question b's options."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are correct and fairly built. The only issue is minor: the card and question b call 'heat' a form of energy, where the chapter elsewhere uses 'thermal energy' for the store and 'heat' for energy being transferred."
+     },
+     "flags": [
+      "Card, fact: The card treats 'heat' as a form of energy that comes out of the light globe. Point 1 names the store as thermal energy, and point 2 treats heat as energy moving. Calling the output 'thermal energy' (or 'heat, which raises its thermal energy') would keep the terms consistent across the chapter. The same wording appears in question b's options."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:57Z",
+   "step": "write",
+   "version": {
+    "title": "Energy transformations",
+    "card": [
+     "An energy transformation is when energy changes from one form to another. A torch changes chemical energy in its battery into light energy.",
+     "A car engine changes chemical energy in petrol into kinetic energy. A solar cell changes light energy into electrical energy.",
+     "A flow diagram shows the energy going in on the left and the energy coming out on the right, with an arrow for each change. For example: chemical energy → engine → kinetic energy.",
+     "Often more than one form comes out. A light globe changes electrical energy into light energy and also thermal energy, which warms the globe but is not the form we wanted."
+    ],
+    "remember": "Find what goes in, then list every form that comes out, including the ones you did not want.",
+    "a": {
+     "q": "A solar-powered calculator in a classroom in Orange is switched on. What energy transformation takes place?",
+     "opts": [
+      "Light energy to electrical energy",
+      "Electrical energy to light energy",
+      "Chemical energy to light energy",
+      "Thermal energy to kinetic energy"
+     ],
+     "why": "The calculator's solar cell takes in light energy and gives out electrical energy to run the calculator. Electrical energy to light energy is tempting, but it reverses the direction of the change.",
+     "clue": "Check what goes in and what comes out."
+    },
+    "b": {
+     "d": 3,
+     "q": "Mia plugs a speaker into a power point and plays music. After a while the speaker feels warm. Which flow diagram shows this?",
+     "opts": [
+      "Electrical energy → speaker → sound and thermal energy",
+      "Sound energy → speaker → electrical and thermal energy",
+      "Electrical energy → speaker → sound energy only",
+      "Thermal energy → speaker → electrical and sound energy"
+     ],
+     "why": "Electrical energy goes in from the power point. Sound energy comes out, and so does thermal energy, which makes the speaker warm. The option with sound only leaves out the thermal energy. The other two put the input and output the wrong way round.",
+     "clue": "Name what goes in, then list every form that comes out."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Light energy to electrical energy",
+     "also_right": []
+    },
+    "b": {
+     "best": "Electrical energy → speaker → sound and thermal energy",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "card",
+      "kind": "wording",
+      "detail": "The example flow diagram 'chemical energy → engine → kinetic energy' shows only kinetic energy coming out, but a car engine also gives out a lot of thermal energy (and sound). This clashes with card line 4, the remember line ('list every form that comes out, including the ones you did not want') and question b, where an option is wrong for leaving out thermal energy. Add thermal energy to the engine's outputs, or pick an example where the single output is not misleading."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "Both questions are right and clear. The card's engine flow diagram lists only kinetic energy coming out, which contradicts the point's own rule to list every form that comes out, including thermal energy."
+   }
+  },
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix lists thermal and sound energy coming out of the car engine, so the card's example now matches its own rule and question b. The facts are right and both questions keep one clear right answer.",
+   "item": "acb7d780ab881e97",
+   "result": "decided",
+   "saved": {
+    "id": "sci-energy-transformations",
+    "title": "Energy transformations",
+    "brief": "407037195e10",
+    "shortlist": [
+     [
+      "sci-energy-transfer-transformation",
+      0.635
+     ],
+     [
+      "sci-kinetic-potential-energy",
+      0.571
+     ],
+     [
+      "sci-energy-swinging-or-rolling",
+      0.537
+     ],
+     [
+      "sci-energy-flow-diagrams",
+      0.485
+     ],
+     [
+      "sci-conservation-energy",
+      0.45
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "confirm": 1,
+     "write": 1,
+     "check": 1,
+     "fix": 2,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00019,
+     "confirm": 0.01042,
+     "write": 0.00618,
+     "check": 0.015,
+     "fix": 0.0379,
+     "recheck": 0.01102
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "sci-energy-transfer-transformation",
+     "changes": [
+      "Bring the card into line with the NSW Stage 4 Science 7-10 wording for energy transformations, which the bank card does not use.",
+      "Replace the Queensland-style Year 8 framing with a Stage 4 (Years 7 and 8) framing for NSW students."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same transformation idea at a suitable depth, but its card and sample questions need NSW-specific wording and framing before they fit the new course.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The new point teaches energy transformation itself and shows it with flow diagrams. The bank splits this idea differently: one card is broader, also teaching transfer and how to tell it apart from transformation, and the other teaches mainly how to read flow diagrams, so neither matches it as it stands.",
+     "model": "claude-opus-5-5"
+    },
+    "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, fact: The card treats 'heat' as a form of energy that comes out of the light globe. Point 1 names the store as thermal energy, and point 2 treats heat as energy moving. Calling the output 'thermal energy' (or 'heat, which raises its thermal energy') would keep the terms consistent across the chapter. The same wording appears in question b's options.",
+    "rejected": {
+     "title": "Energy transformations",
+     "card": [
+      "An energy transformation is when energy changes from one form to another. A torch changes chemical energy in its battery into light energy.",
+      "A car engine changes chemical energy in petrol into kinetic energy. A solar cell changes light energy into electrical energy.",
+      "A flow diagram shows the energy going in on the left and the energy coming out on the right, with an arrow for each change. For example: chemical energy → engine → kinetic energy.",
+      "Often more than one form comes out. A light globe changes electrical energy into light and also into heat, which is not the form we wanted."
+     ],
+     "remember": "Find what goes in, then list every form that comes out, including the ones you did not want.",
+     "a": {
+      "q": "A solar-powered calculator in a classroom in Orange is switched on. What energy transformation takes place?",
+      "opts": [
+       "Light energy to electrical energy",
+       "Electrical energy to light energy",
+       "Chemical energy to light energy",
+       "Heat energy to kinetic energy"
+      ],
+      "why": "The calculator's solar cell takes in light energy and gives out electrical energy to run the calculator. Electrical energy to light energy is tempting, but it reverses the direction of the change.",
+      "clue": "Check what goes in and what comes out."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia plugs a speaker into a power point and plays music. After a while the speaker feels warm. Which flow diagram shows this?",
+      "opts": [
+       "Electrical energy → speaker → sound energy and heat",
+       "Sound energy → speaker → electrical energy and heat",
+       "Electrical energy → speaker → sound energy only",
+       "Heat energy → speaker → electrical energy and sound"
+      ],
+      "why": "Electrical energy goes in from the power point, and sound and heat come out, as the speaker gets warm. The option with sound only leaves out the heat, which is also an output. The other two put the input and output the wrong way round.",
+      "clue": "Name what goes in, then list every form that comes out."
+     }
+    },
+    "rewrites": 1,
+    "cleared_by": "autoreject",
+    "autoreject": [
+     {
+      "at": "2026-11-20T13:37:52Z",
+      "rules": 1,
+      "rewrites": 1,
+      "flags": [
+       "Card, fact: The card treats 'heat' as a form of energy that comes out of the light globe. Point 1 names the store as thermal energy, and point 2 treats heat as energy moving. Calling the output 'thermal energy' (or 'heat, which raises its thermal energy') would keep the terms consistent across the chapter. The same wording appears in question b's options."
+      ],
+      "saved": {
+       "draft": {
+        "title": "Energy transformations",
+        "card": [
+         "An energy transformation is when energy changes from one form to another. A torch changes chemical energy in its battery into light energy.",
+         "A car engine changes chemical energy in petrol into kinetic energy, which is the energy of movement. A toaster changes electrical energy into heat.",
+         "A flow diagram shows the energy going in on the left and the energy coming out on the right, with an arrow for each change. For example: chemical energy → engine → kinetic energy.",
+         "Often more than one form comes out. A light globe changes electrical energy into light and also into heat, which is not the form we wanted."
+        ],
+        "remember": "A transformation changes energy from one form to another. A flow diagram shows what goes in and what comes out.",
+        "a": {
+         "q": "A solar-powered calculator in a classroom in Orange is switched on. What energy transformation takes place?",
+         "opts": [
+          "Light energy to electrical energy",
+          "Electrical energy to light energy",
+          "Chemical energy to light energy",
+          "Heat energy to kinetic energy"
+         ],
+         "why": "A solar cell takes in light energy and gives out electrical energy to run the calculator. Electrical energy to light energy is tempting, but it reverses the direction of the change.",
+         "clue": "Check what goes in and what comes out."
+        },
+        "b": {
+         "d": 3,
+         "q": "Mia charges her phone. Which flow diagram shows what happens when she then plays music through its speaker and the phone also gets warm?",
+         "opts": [
+          "Electrical energy → phone → sound energy and heat",
+          "Sound energy → phone → electrical energy and heat",
+          "Electrical energy → phone → sound energy only",
+          "Heat energy → phone → electrical energy and sound"
+         ],
+         "why": "Electrical energy goes in, and sound and heat come out, as the scenario says the phone gets warm. The option with sound only leaves out the heat, which is also an output. The others have the input and output the wrong way round.",
+         "clue": "Name what goes in, then list every form that comes out."
+        }
+       },
+       "local": [],
+       "check": {
+        "a": {
+         "best": "Light energy to electrical energy",
+         "also_right": []
+        },
+        "b": {
+         "best": "Electrical energy → phone → sound energy and heat",
+         "also_right": []
+        },
+        "problems": [
+         {
+          "part": "b",
+          "kind": "other",
+          "detail": "The card says a battery stores chemical energy (the torch example), but when Mia plays music from her already charged phone, the energy going in comes from the battery's chemical store, not electrical energy. The question treats electrical energy as the input, which clashes with the card. No option offers a chemical input, so the intended answer still stands, but a careful student could be confused. Rewording the stem, e.g. playing music while plugged in, would fix this."
+         },
+         {
+          "part": "card",
+          "kind": "other",
+          "detail": "The card defines kinetic energy ('which is the energy of movement'). Kinetic energy belongs to the Energy stores point, so it should only be mentioned here, not explained."
+         }
+        ],
+        "sure": "high",
+        "sensitive": "none",
+        "summary": "Both answers are clear. In question b the input is called electrical energy, but the phone is running from its charged battery, which the card says holds chemical energy. The card also re-defines kinetic energy, which belongs to the Energy stores point."
+       },
+       "flags": [
+        "Question b, other: The card says a battery stores chemical energy (the torch example), but when Mia plays music from her already charged phone, the energy going in comes from the battery's chemical store, not electrical energy. The question treats electrical energy as the input, which clashes with the card. No option offers a chemical input, so the intended answer still stands, but a careful student could be confused. Rewording the stem, e.g. playing music while plugged in, would fix this.",
+        "Card, other: The card defines kinetic energy ('which is the energy of movement'). Kinetic energy belongs to the Energy stores point, so it should only be mentioned here, not explained."
+       ],
+       "sensitive": "none",
+       "proposal": {
+        "title": "Energy transformations",
+        "card": [
+         "An energy transformation is when energy changes from one form to another. A torch changes chemical energy in its battery into light energy.",
+         "A car engine changes chemical energy in petrol into kinetic energy. A solar cell changes light energy into electrical energy.",
+         "A flow diagram shows the energy going in on the left and the energy coming out on the right, with an arrow for each change. For example: chemical energy → engine → kinetic energy.",
+         "Often more than one form comes out. A light globe changes electrical energy into light and also into heat, which is not the form we wanted."
+        ],
+        "remember": "Find what goes in, then list every form that comes out, including the ones you did not want.",
+        "a": {
+         "q": "A solar-powered calculator in a classroom in Orange is switched on. What energy transformation takes place?",
+         "opts": [
+          "Light energy to electrical energy",
+          "Electrical energy to light energy",
+          "Chemical energy to light energy",
+          "Heat energy to kinetic energy"
+         ],
+         "why": "The calculator's solar cell takes in light energy and gives out electrical energy to run the calculator. Electrical energy to light energy is tempting, but it reverses the direction of the change.",
+         "clue": "Check what goes in and what comes out."
+        },
+        "b": {
+         "d": 3,
+         "q": "Mia plugs a speaker into a power point and plays music. After a while the speaker feels warm. Which flow diagram shows this?",
+         "opts": [
+          "Electrical energy → speaker → sound energy and heat",
+          "Sound energy → speaker → electrical energy and heat",
+          "Electrical energy → speaker → sound energy only",
+          "Heat energy → speaker → electrical energy and sound"
+         ],
+         "why": "Electrical energy goes in from the power point, and sound and heat come out, as the speaker gets warm. The option with sound only leaves out the heat, which is also an output. The other two put the input and output the wrong way round.",
+         "clue": "Name what goes in, then list every form that comes out."
+        }
+       },
+       "proposal_problems": [],
+       "recheck": {
+        "at": "2026-11-20T13:37:08Z",
+        "result": "kept",
+        "why": [
+         "the fresh check found a problem"
+        ],
+        "check": {
+         "a": {
+          "best": "Light energy to electrical energy",
+          "also_right": []
+         },
+         "b": {
+          "best": "Electrical energy → speaker → sound energy and heat",
+          "also_right": []
+         },
+         "problems": [
+          {
+           "part": "card",
+           "kind": "fact",
+           "detail": "The card treats 'heat' as a form of energy that comes out of the light globe. Point 1 names the store as thermal energy, and point 2 treats heat as energy moving. Calling the output 'thermal energy' (or 'heat, which raises its thermal energy') would keep the terms consistent across the chapter. The same wording appears in question b's options."
+          }
+         ],
+         "sure": "high",
+         "sensitive": "none",
+         "summary": "Both questions are correct and fairly built. The only issue is minor: the card and question b call 'heat' a form of energy, where the chapter elsewhere uses 'thermal energy' for the store and 'heat' for energy being transferred."
+        },
+        "flags": [
+         "Card, fact: The card treats 'heat' as a form of energy that comes out of the light globe. Point 1 names the store as thermal energy, and point 2 treats heat as energy moving. Calling the output 'thermal energy' (or 'heat, which raises its thermal energy') would keep the terms consistent across the chapter. The same wording appears in question b's options."
+        ]
+       }
+      }
+     }
+    ],
+    "written_by": "claude-code",
+    "draft": {
+     "title": "Energy transformations",
+     "card": [
+      "An energy transformation is when energy changes from one form to another. A torch changes chemical energy in its battery into light energy.",
+      "A car engine changes chemical energy in petrol into kinetic energy. A solar cell changes light energy into electrical energy.",
+      "A flow diagram shows the energy going in on the left and the energy coming out on the right, with an arrow for each change. For example: chemical energy → engine → kinetic energy.",
+      "Often more than one form comes out. A light globe changes electrical energy into light energy and also thermal energy, which warms the globe but is not the form we wanted."
+     ],
+     "remember": "Find what goes in, then list every form that comes out, including the ones you did not want.",
+     "a": {
+      "q": "A solar-powered calculator in a classroom in Orange is switched on. What energy transformation takes place?",
+      "opts": [
+       "Light energy to electrical energy",
+       "Electrical energy to light energy",
+       "Chemical energy to light energy",
+       "Thermal energy to kinetic energy"
+      ],
+      "why": "The calculator's solar cell takes in light energy and gives out electrical energy to run the calculator. Electrical energy to light energy is tempting, but it reverses the direction of the change.",
+      "clue": "Check what goes in and what comes out."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia plugs a speaker into a power point and plays music. After a while the speaker feels warm. Which flow diagram shows this?",
+      "opts": [
+       "Electrical energy → speaker → sound and thermal energy",
+       "Sound energy → speaker → electrical and thermal energy",
+       "Electrical energy → speaker → sound energy only",
+       "Thermal energy → speaker → electrical and sound energy"
+      ],
+      "why": "Electrical energy goes in from the power point. Sound energy comes out, and so does thermal energy, which makes the speaker warm. The option with sound only leaves out the thermal energy. The other two put the input and output the wrong way round.",
+      "clue": "Name what goes in, then list every form that comes out."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Light energy to electrical energy",
+      "also_right": []
+     },
+     "b": {
+      "best": "Electrical energy → speaker → sound and thermal energy",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "The example flow diagram 'chemical energy → engine → kinetic energy' shows only kinetic energy coming out, but a car engine also gives out a lot of thermal energy (and sound). This clashes with card line 4, the remember line ('list every form that comes out, including the ones you did not want') and question b, where an option is wrong for leaving out thermal energy. Add thermal energy to the engine's outputs, or pick an example where the single output is not misleading."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions are right and clear. The card's engine flow diagram lists only kinetic energy coming out, which contradicts the point's own rule to list every form that comes out, including thermal energy."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Card, wording: The example flow diagram 'chemical energy → engine → kinetic energy' shows only kinetic energy coming out, but a car engine also gives out a lot of thermal energy (and sound). This clashes with card line 4, the remember line ('list every form that comes out, including the ones you did not want') and question b, where an option is wrong for leaving out thermal energy. Add thermal energy to the engine's outputs, or pick an example where the single output is not misleading."
+    ],
+    "checked_by": "claude-code",
+    "proposal": {
+     "title": "Energy transformations",
+     "card": [
+      "An energy transformation is when energy changes from one form to another. A solar cell changes light energy into electrical energy.",
+      "A car engine changes chemical energy in petrol into kinetic energy, which moves the car. It also gives out thermal energy and sound energy, which are not the forms we wanted.",
+      "A flow diagram shows the energy going in on the left and the energy coming out on the right. For a car engine: chemical energy → engine → kinetic, thermal and sound energy.",
+      "Often more than one form comes out. A light globe changes electrical energy into light energy and also thermal energy, which warms the globe."
+     ],
+     "remember": "Find what goes in, then list every form that comes out, including the ones you did not want.",
+     "a": {
+      "q": "A solar-powered calculator in a classroom in Orange is switched on. What energy transformation takes place?",
+      "opts": [
+       "Light energy to electrical energy",
+       "Electrical energy to light energy",
+       "Chemical energy to light energy",
+       "Thermal energy to kinetic energy"
+      ],
+      "why": "The calculator's solar cell takes in light energy and gives out electrical energy to run the calculator. Electrical energy to light energy is tempting, but it reverses the direction of the change.",
+      "clue": "Check what goes in and what comes out."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia plugs a speaker into a power point and plays music. After a while the speaker feels warm. Which flow diagram shows this?",
+      "opts": [
+       "Electrical energy → speaker → sound and thermal energy",
+       "Sound energy → speaker → electrical and thermal energy",
+       "Electrical energy → speaker → sound energy only",
+       "Thermal energy → speaker → electrical and sound energy"
+      ],
+      "why": "Electrical energy goes in from the power point. Sound energy comes out, and so does thermal energy, which makes the speaker warm. The option with sound only leaves out the thermal energy, and the other two put the input and output the wrong way round.",
+      "clue": "Name what goes in, then list every form that comes out."
+     }
+    },
+    "proposal_problems": []
+   },
+   "after": "717208ae47de9909"
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Energy transformations",
+  "card": [
+   "An energy transformation is when energy changes from one form to another. A torch changes chemical energy in its battery into light energy.",
+   "A car engine changes chemical energy in petrol into kinetic energy. A solar cell changes light energy into electrical energy.",
+   "A flow diagram shows the energy going in on the left and the energy coming out on the right, with an arrow for each change. For example: chemical energy → engine → kinetic energy.",
+   "Often more than one form comes out. A light globe changes electrical energy into light energy and also thermal energy, which warms the globe but is not the form we wanted."
+  ],
+  "remember": "Find what goes in, then list every form that comes out, including the ones you did not want.",
+  "a": {
+   "q": "A solar-powered calculator in a classroom in Orange is switched on. What energy transformation takes place?",
+   "opts": [
+    "Light energy to electrical energy",
+    "Electrical energy to light energy",
+    "Chemical energy to light energy",
+    "Thermal energy to kinetic energy"
+   ],
+   "why": "The calculator's solar cell takes in light energy and gives out electrical energy to run the calculator. Electrical energy to light energy is tempting, but it reverses the direction of the change.",
+   "clue": "Check what goes in and what comes out."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia plugs a speaker into a power point and plays music. After a while the speaker feels warm. Which flow diagram shows this?",
+   "opts": [
+    "Electrical energy → speaker → sound and thermal energy",
+    "Sound energy → speaker → electrical and thermal energy",
+    "Electrical energy → speaker → sound energy only",
+    "Thermal energy → speaker → electrical and sound energy"
+   ],
+   "why": "Electrical energy goes in from the power point. Sound energy comes out, and so does thermal energy, which makes the speaker warm. The option with sound only leaves out the thermal energy. The other two put the input and output the wrong way round.",
+   "clue": "Name what goes in, then list every form that comes out."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Light energy to electrical energy",
+   "also_right": []
+  },
+  "b": {
+   "best": "Electrical energy → speaker → sound and thermal energy",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The example flow diagram 'chemical energy → engine → kinetic energy' shows only kinetic energy coming out, but a car engine also gives out a lot of thermal energy (and sound). This clashes with card line 4, the remember line ('list every form that comes out, including the ones you did not want') and question b, where an option is wrong for leaving out thermal energy. Add thermal energy to the engine's outputs, or pick an example where the single output is not misleading."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are right and clear. The card's engine flow diagram lists only kinetic energy coming out, which contradicts the point's own rule to list every form that comes out, including thermal energy."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The example flow diagram 'chemical energy → engine → kinetic energy' shows only kinetic energy coming out, but a car engine also gives out a lot of thermal energy (and sound). This clashes with card line 4, the remember line ('list every form that comes out, including the ones you did not want') and question b, where an option is wrong for leaving out thermal energy. Add thermal energy to the engine's outputs, or pick an example where the single output is not misleading."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Energy transformations",
+  "card": [
+   "An energy transformation is when energy changes from one form to another. A solar cell changes light energy into electrical energy.",
+   "A car engine changes chemical energy in petrol into kinetic energy, which moves the car. It also gives out thermal energy and sound energy, which are not the forms we wanted.",
+   "A flow diagram shows the energy going in on the left and the energy coming out on the right. For a car engine: chemical energy → engine → kinetic, thermal and sound energy.",
+   "Often more than one form comes out. A light globe changes electrical energy into light energy and also thermal energy, which warms the globe."
+  ],
+  "remember": "Find what goes in, then list every form that comes out, including the ones you did not want.",
+  "a": {
+   "q": "A solar-powered calculator in a classroom in Orange is switched on. What energy transformation takes place?",
+   "opts": [
+    "Light energy to electrical energy",
+    "Electrical energy to light energy",
+    "Chemical energy to light energy",
+    "Thermal energy to kinetic energy"
+   ],
+   "why": "The calculator's solar cell takes in light energy and gives out electrical energy to run the calculator. Electrical energy to light energy is tempting, but it reverses the direction of the change.",
+   "clue": "Check what goes in and what comes out."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia plugs a speaker into a power point and plays music. After a while the speaker feels warm. Which flow diagram shows this?",
+   "opts": [
+    "Electrical energy → speaker → sound and thermal energy",
+    "Sound energy → speaker → electrical and thermal energy",
+    "Electrical energy → speaker → sound energy only",
+    "Thermal energy → speaker → electrical and sound energy"
+   ],
+   "why": "Electrical energy goes in from the power point. Sound energy comes out, and so does thermal energy, which makes the speaker warm. The option with sound only leaves out the thermal energy, and the other two put the input and output the wrong way round.",
+   "clue": "Name what goes in, then list every form that comes out."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Energy transformations",
+  "card": [
+   "An energy transformation is when energy changes from one form to another. A solar cell changes light energy into electrical energy.",
+   "A car engine changes chemical energy in petrol into kinetic energy, which moves the car. It also gives out thermal energy and sound energy, which are not the forms we wanted.",
+   "A flow diagram shows the energy going in on the left and the energy coming out on the right. For a car engine: chemical energy → engine → kinetic, thermal and sound energy.",
+   "Often more than one form comes out. A light globe changes electrical energy into light energy and also thermal energy, which warms the globe."
+  ],
+  "remember": "Find what goes in, then list every form that comes out, including the ones you did not want.",
+  "a": {
+   "q": "A solar-powered calculator in a classroom in Orange is switched on. What energy transformation takes place?",
+   "opts": [
+    "Light energy to electrical energy",
+    "Electrical energy to light energy",
+    "Chemical energy to light energy",
+    "Thermal energy to kinetic energy"
+   ],
+   "why": "The calculator's solar cell takes in light energy and gives out electrical energy to run the calculator. Electrical energy to light energy is tempting, but it reverses the direction of the change.",
+   "clue": "Check what goes in and what comes out."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia plugs a speaker into a power point and plays music. After a while the speaker feels warm. Which flow diagram shows this?",
+   "opts": [
+    "Electrical energy → speaker → sound and thermal energy",
+    "Sound energy → speaker → electrical and thermal energy",
+    "Electrical energy → speaker → sound energy only",
+    "Thermal energy → speaker → electrical and sound energy"
+   ],
+   "why": "Electrical energy goes in from the power point. Sound energy comes out, and so does thermal energy, which makes the speaker warm. The option with sound only leaves out the thermal energy, and the other two put the input and output the wrong way round.",
+   "clue": "Name what goes in, then list every form that comes out."
+  }
+ }
 }

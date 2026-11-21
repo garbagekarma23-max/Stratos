@@ -24,8 +24,430 @@
    0.203
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:54Z write: failed the content check, writing again",
+  "2026-11-20T12:35:53Z write: done",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.02733,
+  "check": 0.01246,
+  "fix": 0.02061,
+  "recheck": 0.008
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point covers both dot plots and stem-and-leaf plots, but the closest bank point, mat-stem-leaf-plots, teaches only stem-and-leaf plots, so it is narrower and a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Dot plots and stem-and-leaf plots",
+  "card": [
+   [
+    "Dot plot",
+    "A dot plot puts one dot above a number line for each value. A tall pile of dots shows a value that occurs often."
+   ],
+   [
+    "Stem-and-leaf plot",
+    "A stem-and-leaf plot splits each value into a stem (the tens digit) and a leaf (the last digit). The leaves are put in order, and a note beside the plot explains how to read them."
+   ],
+   "Both displays keep every value, so you can read off the exact data. They also show clusters (where values bunch up) and gaps.",
+   "Example: in the stem-and-leaf plot above, the row 2 | 1 3 3 7 holds four scores, and they are 21, 23, 23 and 27."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "chart",
+    "chart": "dot",
+    "alt": "A dot plot of the number of pets in 10 homes. The values are 0, 1, 1, 2, 2, 2, 3, 3, 4 and 6. The tallest pile is at 2.",
+    "x": {
+     "min": 0,
+     "max": 7,
+     "step": 1,
+     "label": "Pets"
+    },
+    "data": [
+     0,
+     1,
+     1,
+     2,
+     2,
+     2,
+     3,
+     3,
+     4,
+     6
+    ]
+   },
+   "2": {
+    "kind": "chart",
+    "chart": "stem",
+    "alt": "A stem-and-leaf plot of 9 quiz scores: 12, 15, 21, 23, 23, 27, 34, 38 and 41. The note says 2 | 3 means 23.",
+    "leaf": 1,
+    "key": "2 | 3 means 23",
+    "data": [
+     12,
+     15,
+     21,
+     23,
+     23,
+     27,
+     34,
+     38,
+     41
+    ]
+   }
+  },
+  "remember": "Dot plots and stem-and-leaf plots keep every value and show clusters and gaps.",
+  "a": {
+   "q": "A stem-and-leaf plot has the note 3 | 0 means 30. What values are in the row 3 | 0 4 4 9?",
+   "opts": [
+    "30, 34, 34, 39",
+    "3, 0, 4, 4, 9",
+    "30, 4, 4, 9",
+    "34, 44, 94, 30"
+   ],
+   "why": "The stem 3 is the tens digit and each leaf is a ones digit, so the row gives 30, 34, 34 and 39. Reading the leaves as 4, 4 and 9 alone ignores the stem.",
+   "clue": "Join the stem to each leaf in turn."
+  },
+  "b": {
+   "d": 2,
+   "q": "The dot plot shows the number of goals scored by a netball team in 10 games. How many games had exactly 2 goals?",
+   "opts": [
+    "4",
+    "2",
+    "6",
+    "10"
+   ],
+   "why": "Count the dots above 2 on the number line. There are 4 dots there. The number 2 is the value, not the count of games.",
+   "clue": "Count the dots, do not read the number.",
+   "fig": {
+    "kind": "chart",
+    "chart": "dot",
+    "alt": "A dot plot of goals in 10 games. The values are 0, 1, 2, 2, 2, 2, 3, 3, 4 and 5. There are 4 dots at 2.",
+    "x": {
+     "min": 0,
+     "max": 6,
+     "step": 1,
+     "label": "Goals"
+    },
+    "data": [
+     0,
+     1,
+     2,
+     2,
+     2,
+     2,
+     3,
+     3,
+     4,
+     5
+    ]
+   }
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "30, 34, 34, 39",
+   "also_right": []
+  },
+  "b": {
+   "best": "4",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Netball teams usually score dozens of goals a game, so 0 to 5 goals per game is unrealistic for Australian students who know the sport. Use a low-scoring sport such as soccer or hockey instead."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The figure's alt ends with 'There are 4 dots at 2', which states the answer outright for a student using a screen reader. The list of values is enough."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, figures and both answers check out. Question b's netball context is unrealistic (netball scores are much higher than 0 to 5), and its alt states the answer directly."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: Netball teams usually score dozens of goals a game, so 0 to 5 goals per game is unrealistic for Australian students who know the sport. Use a low-scoring sport such as soccer or hockey instead.",
+  "Question b, wording: The figure's alt ends with 'There are 4 dots at 2', which states the answer outright for a student using a screen reader. The list of values is enough."
+ ],
+ "proposal": {
+  "title": "Dot plots and stem-and-leaf plots",
+  "card": [
+   [
+    "Dot plot",
+    "A dot plot puts one dot above a number line for each value. A tall pile of dots shows a value that occurs often."
+   ],
+   [
+    "Stem-and-leaf plot",
+    "A stem-and-leaf plot splits each value into a stem (the tens digit) and a leaf (the last digit). The leaves are put in order, and a note beside the plot explains how to read them."
+   ],
+   "Both displays keep every value, so you can read off the exact data. They also show clusters (where values bunch up) and gaps.",
+   "Example: in the stem-and-leaf plot above, the row 2 | 1 3 3 7 holds four scores, and they are 21, 23, 23 and 27."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "chart",
+    "chart": "dot",
+    "alt": "A dot plot of the number of pets in 10 homes. The values are 0, 1, 1, 2, 2, 2, 3, 3, 4 and 6. The tallest pile is at 2.",
+    "x": {
+     "min": 0,
+     "max": 7,
+     "step": 1,
+     "label": "Pets"
+    },
+    "data": [
+     0,
+     1,
+     1,
+     2,
+     2,
+     2,
+     3,
+     3,
+     4,
+     6
+    ]
+   },
+   "2": {
+    "kind": "chart",
+    "chart": "stem",
+    "alt": "A stem-and-leaf plot of 9 quiz scores: 12, 15, 21, 23, 23, 27, 34, 38 and 41. The note says 2 | 3 means 23.",
+    "leaf": 1,
+    "key": "2 | 3 means 23",
+    "data": [
+     12,
+     15,
+     21,
+     23,
+     23,
+     27,
+     34,
+     38,
+     41
+    ]
+   }
+  },
+  "remember": "Dot plots and stem-and-leaf plots keep every value and show clusters and gaps.",
+  "a": {
+   "q": "A stem-and-leaf plot has the note 3 | 0 means 30. What values are in the row 3 | 0 4 4 9?",
+   "opts": [
+    "30, 34, 34, 39",
+    "3, 0, 4, 4, 9",
+    "30, 4, 4, 9",
+    "34, 44, 94, 30"
+   ],
+   "why": "The stem 3 is the tens digit and each leaf is a ones digit, so the row gives 30, 34, 34 and 39. Reading the leaves as 4, 4 and 9 alone ignores the stem.",
+   "clue": "Join the stem to each leaf in turn."
+  },
+  "b": {
+   "d": 2,
+   "q": "The dot plot shows the number of goals scored by a soccer team in 10 games. How many games had exactly 2 goals?",
+   "opts": [
+    "4",
+    "2",
+    "6",
+    "10"
+   ],
+   "why": "Count the dots above 2 on the number line. There are 4 dots there. The number 2 is the value, not the count of games.",
+   "clue": "Count the dots, do not read the number.",
+   "fig": {
+    "kind": "chart",
+    "chart": "dot",
+    "alt": "A dot plot of goals scored by a soccer team in 10 games. The values are 0, 1, 2, 2, 2, 2, 3, 3, 4 and 5.",
+    "x": {
+     "min": 0,
+     "max": 6,
+     "step": 1,
+     "label": "Goals"
+    },
+    "data": [
+     0,
+     1,
+     2,
+     2,
+     2,
+     2,
+     3,
+     3,
+     4,
+     5
+    ]
+   }
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "30, 34, 34, 39",
+    "also_right": []
+   },
+   "b": {
+    "best": "4",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 13,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Netball teams usually score dozens of goals a game, so 0 to 5 goals per game is unrealistic for Australian students who know the sport. Use a low-scoring sport such as soccer or hockey instead."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The figure's alt ends with 'There are 4 dots at 2', which states the answer outright for a student using a screen reader. The list of values is enough."
+   }
+  ],
+  "flags": [
+   "Question b, fact: Netball teams usually score dozens of goals a game, so 0 to 5 goals per game is unrealistic for Australian students who know the sport. Use a low-scoring sport such as soccer or hockey instead.",
+   "Question b, wording: The figure's alt ends with 'There are 4 dots at 2', which states the answer outright for a student using a screen reader. The list of values is enough."
+  ]
+ },
+ "final": {
+  "title": "Dot plots and stem-and-leaf plots",
+  "card": [
+   [
+    "Dot plot",
+    "A dot plot puts one dot above a number line for each value. A tall pile of dots shows a value that occurs often."
+   ],
+   [
+    "Stem-and-leaf plot",
+    "A stem-and-leaf plot splits each value into a stem (the tens digit) and a leaf (the last digit). The leaves are put in order, and a note beside the plot explains how to read them."
+   ],
+   "Both displays keep every value, so you can read off the exact data. They also show clusters (where values bunch up) and gaps.",
+   "Example: in the stem-and-leaf plot above, the row 2 | 1 3 3 7 holds four scores, and they are 21, 23, 23 and 27."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "chart",
+    "chart": "dot",
+    "alt": "A dot plot of the number of pets in 10 homes. The values are 0, 1, 1, 2, 2, 2, 3, 3, 4 and 6. The tallest pile is at 2.",
+    "x": {
+     "min": 0,
+     "max": 7,
+     "step": 1,
+     "label": "Pets"
+    },
+    "data": [
+     0,
+     1,
+     1,
+     2,
+     2,
+     2,
+     3,
+     3,
+     4,
+     6
+    ]
+   },
+   "2": {
+    "kind": "chart",
+    "chart": "stem",
+    "alt": "A stem-and-leaf plot of 9 quiz scores: 12, 15, 21, 23, 23, 27, 34, 38 and 41. The note says 2 | 3 means 23.",
+    "leaf": 1,
+    "key": "2 | 3 means 23",
+    "data": [
+     12,
+     15,
+     21,
+     23,
+     23,
+     27,
+     34,
+     38,
+     41
+    ]
+   }
+  },
+  "remember": "Dot plots and stem-and-leaf plots keep every value and show clusters and gaps.",
+  "a": {
+   "q": "A stem-and-leaf plot has the note 3 | 0 means 30. What values are in the row 3 | 0 4 4 9?",
+   "opts": [
+    "30, 34, 34, 39",
+    "3, 0, 4, 4, 9",
+    "30, 4, 4, 9",
+    "34, 44, 94, 30"
+   ],
+   "why": "The stem 3 is the tens digit and each leaf is a ones digit, so the row gives 30, 34, 34 and 39. Reading the leaves as 4, 4 and 9 alone ignores the stem.",
+   "clue": "Join the stem to each leaf in turn."
+  },
+  "b": {
+   "d": 2,
+   "q": "The dot plot shows the number of goals scored by a soccer team in 10 games. How many games had exactly 2 goals?",
+   "opts": [
+    "4",
+    "2",
+    "6",
+    "10"
+   ],
+   "why": "Count the dots above 2 on the number line. There are 4 dots there. The number 2 is the value, not the count of games.",
+   "clue": "Count the dots, do not read the number.",
+   "fig": {
+    "kind": "chart",
+    "chart": "dot",
+    "alt": "A dot plot of goals scored by a soccer team in 10 games. The values are 0, 1, 2, 2, 2, 2, 3, 3, 4 and 5.",
+    "x": {
+     "min": 0,
+     "max": 6,
+     "step": 1,
+     "label": "Goals"
+    },
+    "data": [
+     0,
+     1,
+     2,
+     2,
+     2,
+     2,
+     3,
+     3,
+     4,
+     5
+    ]
+   }
+  }
+ },
+ "cleared_by": "recheck"
 }

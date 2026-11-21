@@ -24,8 +24,242 @@
    0.214
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: done",
+  "2026-11-20T12:35:57Z check: flagged",
+  "2026-11-20T12:45:01Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.00704,
+  "check": 0.0121,
+  "fix": 0.02123,
+  "recheck": 0.00861
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the definition of organic compounds as carbon-based and hydrocarbons as carbon-and-hydrogen-only compounds with their sources; the closest, the everyday organic materials point, covers examples rather than this definition, and the family-formulas point goes deeper than Stage 5 needs.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Organic compounds and hydrocarbons",
+  "card": [
+   [
+    "Organic compound",
+    "a compound built around carbon atoms, usually joined to hydrogen and sometimes to oxygen or nitrogen. Sugar, plastic and petrol are all organic compounds."
+   ],
+   [
+    "Hydrocarbon",
+    "a compound that contains only carbon and hydrogen atoms. Every hydrocarbon is an organic compound."
+   ],
+   "A compound that contains carbon is not always organic. Carbon dioxide has carbon, but it is not counted as an organic compound.",
+   "Most hydrocarbons come from crude oil and natural gas, which formed from the remains of living things. Living things also make organic compounds, such as the sugars in plants."
+  ],
+  "remember": "Organic compounds are based on carbon. A hydrocarbon has only carbon and hydrogen.",
+  "a": {
+   "q": "Which statement correctly describes a hydrocarbon?",
+   "opts": [
+    "It contains only carbon and hydrogen atoms",
+    "It contains carbon and oxygen atoms only",
+    "It contains carbon, hydrogen and oxygen atoms",
+    "It contains hydrogen and oxygen atoms only"
+   ],
+   "why": "A hydrocarbon is made of carbon and hydrogen and nothing else. A compound with oxygen as well, such as sugar, can be organic, but it is not a hydrocarbon.",
+   "clue": "Look at the name: hydro and carbon."
+  },
+  "b": {
+   "d": 3,
+   "q": "A chemist tests three compounds. X has only carbon and hydrogen. Y has carbon, hydrogen and oxygen, and is made by plants. Z is carbon dioxide. Which sorts them correctly?",
+   "opts": [
+    "X is a hydrocarbon, Y is organic but not a hydrocarbon",
+    "X and Y are hydrocarbons, Z is organic",
+    "Only X is organic, Y and Z are hydrocarbons",
+    "X, Y and Z are all organic hydrocarbons"
+   ],
+   "why": "X has only carbon and hydrogen, so it is a hydrocarbon. Y is based on carbon but has oxygen too, so it is organic but not a hydrocarbon. Z contains carbon but is not counted as organic, so the tempting idea that any carbon compound is organic is wrong.",
+   "clue": "Check which atoms each compound contains, and whether Z counts as organic."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It contains only carbon and hydrogen atoms",
+   "also_right": []
+  },
+  "b": {
+   "best": "X is a hydrocarbon, Y is organic but not a hydrocarbon",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question asks which option sorts all three compounds, but the intended answer never says where Z goes. A careful student may reject it as incomplete. It should add 'and Z is not organic'."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option stands out. It is the longest and the only one with a qualifier ('organic but not a hydrocarbon'), so a student could pick it without knowing the idea."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Petrol is a mixture of many hydrocarbons, not a single compound. Calling it an organic compound blurs the compound/mixture distinction Stage 5 students learn. Better: 'petrol is made of organic compounds'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts on hydrocarbons and organic compounds are right, but the card calls petrol a compound when it is a mixture. In question b, the right option does not place Z and stands out as the longest and only qualified option."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The question asks which option sorts all three compounds, but the intended answer never says where Z goes. A careful student may reject it as incomplete. It should add 'and Z is not organic'.",
+  "Question b, wording: The right option stands out. It is the longest and the only one with a qualifier ('organic but not a hydrocarbon'), so a student could pick it without knowing the idea.",
+  "Card, fact: Petrol is a mixture of many hydrocarbons, not a single compound. Calling it an organic compound blurs the compound/mixture distinction Stage 5 students learn. Better: 'petrol is made of organic compounds'."
+ ],
+ "proposal": {
+  "title": "Organic compounds and hydrocarbons",
+  "card": [
+   [
+    "Organic compound",
+    "a compound built around carbon atoms, usually joined to hydrogen and sometimes to oxygen or nitrogen. Sugar is an organic compound, and plastics and petrol are made of organic compounds."
+   ],
+   [
+    "Hydrocarbon",
+    "a compound that contains only carbon and hydrogen atoms. Every hydrocarbon is an organic compound."
+   ],
+   "A compound that contains carbon is not always organic. Carbon dioxide has carbon, but it is not counted as an organic compound.",
+   "Most hydrocarbons come from crude oil and natural gas, which formed from the remains of living things. Living things also make organic compounds, such as the sugars in plants."
+  ],
+  "remember": "Organic compounds are based on carbon. A hydrocarbon has only carbon and hydrogen.",
+  "a": {
+   "q": "Which statement correctly describes a hydrocarbon?",
+   "opts": [
+    "It contains only carbon and hydrogen atoms",
+    "It contains carbon and oxygen atoms only",
+    "It contains carbon, hydrogen and oxygen atoms",
+    "It contains hydrogen and oxygen atoms only"
+   ],
+   "why": "A hydrocarbon is made of carbon and hydrogen and nothing else. A compound with oxygen as well, such as sugar, can be organic, but it is not a hydrocarbon.",
+   "clue": "Look at the name: hydro and carbon."
+  },
+  "b": {
+   "d": 3,
+   "q": "A chemist tests three compounds. X has only carbon and hydrogen. Y has carbon, hydrogen and oxygen, and is made by plants. Z is carbon dioxide. Which labels all three correctly?",
+   "opts": [
+    "X hydrocarbon, Y organic, Z not organic",
+    "X hydrocarbon, Y hydrocarbon, Z not organic",
+    "X hydrocarbon, Y organic, Z organic",
+    "X organic, Y hydrocarbon, Z not organic"
+   ],
+   "why": "X has only carbon and hydrogen, so it is a hydrocarbon. Y is based on carbon but has oxygen too, so it is organic but not a hydrocarbon. Z contains carbon, but carbon dioxide is not counted as organic, so the tempting idea that any carbon compound is organic is wrong.",
+   "clue": "Check which atoms each compound contains, and whether Z counts as organic."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It contains only carbon and hydrogen atoms",
+    "also_right": []
+   },
+   "b": {
+    "best": "X hydrocarbon, Y organic, Z not organic",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question asks which option sorts all three compounds, but the intended answer never says where Z goes. A careful student may reject it as incomplete. It should add 'and Z is not organic'."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option stands out. It is the longest and the only one with a qualifier ('organic but not a hydrocarbon'), so a student could pick it without knowing the idea."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Petrol is a mixture of many hydrocarbons, not a single compound. Calling it an organic compound blurs the compound/mixture distinction Stage 5 students learn. Better: 'petrol is made of organic compounds'."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The question asks which option sorts all three compounds, but the intended answer never says where Z goes. A careful student may reject it as incomplete. It should add 'and Z is not organic'.",
+   "Question b, wording: The right option stands out. It is the longest and the only one with a qualifier ('organic but not a hydrocarbon'), so a student could pick it without knowing the idea.",
+   "Card, fact: Petrol is a mixture of many hydrocarbons, not a single compound. Calling it an organic compound blurs the compound/mixture distinction Stage 5 students learn. Better: 'petrol is made of organic compounds'."
+  ]
+ },
+ "final": {
+  "title": "Organic compounds and hydrocarbons",
+  "card": [
+   [
+    "Organic compound",
+    "a compound built around carbon atoms, usually joined to hydrogen and sometimes to oxygen or nitrogen. Sugar is an organic compound, and plastics and petrol are made of organic compounds."
+   ],
+   [
+    "Hydrocarbon",
+    "a compound that contains only carbon and hydrogen atoms. Every hydrocarbon is an organic compound."
+   ],
+   "A compound that contains carbon is not always organic. Carbon dioxide has carbon, but it is not counted as an organic compound.",
+   "Most hydrocarbons come from crude oil and natural gas, which formed from the remains of living things. Living things also make organic compounds, such as the sugars in plants."
+  ],
+  "remember": "Organic compounds are based on carbon. A hydrocarbon has only carbon and hydrogen.",
+  "a": {
+   "q": "Which statement correctly describes a hydrocarbon?",
+   "opts": [
+    "It contains only carbon and hydrogen atoms",
+    "It contains carbon and oxygen atoms only",
+    "It contains carbon, hydrogen and oxygen atoms",
+    "It contains hydrogen and oxygen atoms only"
+   ],
+   "why": "A hydrocarbon is made of carbon and hydrogen and nothing else. A compound with oxygen as well, such as sugar, can be organic, but it is not a hydrocarbon.",
+   "clue": "Look at the name: hydro and carbon."
+  },
+  "b": {
+   "d": 3,
+   "q": "A chemist tests three compounds. X has only carbon and hydrogen. Y has carbon, hydrogen and oxygen, and is made by plants. Z is carbon dioxide. Which labels all three correctly?",
+   "opts": [
+    "X hydrocarbon, Y organic, Z not organic",
+    "X hydrocarbon, Y hydrocarbon, Z not organic",
+    "X hydrocarbon, Y organic, Z organic",
+    "X organic, Y hydrocarbon, Z not organic"
+   ],
+   "why": "X has only carbon and hydrogen, so it is a hydrocarbon. Y is based on carbon but has oxygen too, so it is organic but not a hydrocarbon. Z contains carbon, but carbon dioxide is not counted as organic, so the tempting idea that any carbon compound is organic is wrong.",
+   "clue": "Check which atoms each compound contains, and whether Z counts as organic."
+  }
+ },
+ "cleared_by": "recheck"
 }

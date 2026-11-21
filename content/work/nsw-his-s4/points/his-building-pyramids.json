@@ -8,8 +8,356 @@
    0.398
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: failed the content check, writing again",
+  "2026-11-20T12:44:56Z write: done",
+  "2026-11-20T12:53:26Z check: flagged",
+  "2026-11-20T13:11:48Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-20T13:44:56Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.0144,
+  "check": 0.01036,
+  "fix": 0.02753,
+  "recheck": 0.01277
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point 'Egypt's social pyramid' teaches the layers of Egyptian society, not how the pyramids were built or who built them, so it is a different idea and no bank point matches the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The distractor 'Visitors to a place are always unreliable as sources' uses 'always', while the card says a later source 'may be less reliable'. The absolute word makes the option easy to rule out without knowing the idea.",
+ "rejected": {
+  "title": "Building the pyramids",
+  "card": [
+   "The great pyramids at Giza were built as tombs for pharaohs. They were built about 4,500 years ago, and the biggest is the Great Pyramid of Khufu.",
+   "Many people once believed that slaves built the pyramids. That idea came from some later writers, who lived long after the pyramids were built. A source from long after an event may be less reliable than evidence from the time.",
+   "Archaeologists have dug up villages near Giza where the workers lived. They found bakeries, sleeping areas and large amounts of bread, beef and fish bones.",
+   "This evidence suggests that teams of fed and housed workers built the pyramids, not slaves. New archaeological finds changed what historians believed."
+  ],
+  "remember": "Evidence from the workers' villages changed an old view: the pyramids seem to have been built by teams of fed and housed workers.",
+  "a": {
+   "q": "Which find best supports the view that the pyramid builders were fed and housed?",
+   "opts": [
+    "Bakeries and food remains in a village near Giza",
+    "A pharaoh's name carved inside a pyramid tomb",
+    "A story about slaves written long after the pyramids",
+    "Gold goods buried with a pharaoh in his tomb"
+   ],
+   "why": "Bakeries and food remains show that the workers lived nearby and were given meals. A story written long after the pyramids does not come from the time and cannot show how workers were treated.",
+   "clue": "Look for evidence from where the workers lived."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tour guide tells Amir that slaves built the pyramids. The guide quotes a Greek writer who visited Egypt about 2,000 years after they were built. Why do historians now doubt this claim?",
+   "opts": [
+    "Remains of workers' villages point to fed and housed teams",
+    "The Greek writer lived too early to know much about Egypt",
+    "Visitors to a place are always unreliable as sources",
+    "No one has ever found where the pyramid workers lived"
+   ],
+   "why": "Digs at villages near Giza found bakeries, sleeping areas and food remains, which suggest fed and housed teams did the work. The writer lived long after the pyramids, not too early. A later source may be less reliable, but that does not make every visitor always unreliable.",
+   "clue": "What did archaeologists find near Giza?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The distractor 'Visitors to a place are always unreliable as sources' uses 'always', while the card says a later source 'may be less reliable'. The absolute word makes the option easy to rule out without knowing the idea."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Building the pyramids",
+     "card": [
+      "The great pyramids at Giza were built as tombs for pharaohs. They were built about 4,500 years ago, and the biggest is the Great Pyramid of Khufu.",
+      "Many people once believed that slaves built the pyramids. That idea came from some later writers, who lived long after the pyramids were built.",
+      "Archaeologists have dug up villages near Giza where the workers lived. They found bakeries, sleeping areas and large amounts of bread, beef and fish bones.",
+      "This evidence suggests that teams of fed and housed workers built the pyramids, not slaves. New archaeological finds changed what historians believed."
+     ],
+     "remember": "Evidence from workers' villages changed an old view: teams of fed and housed workers, not slaves, built the pyramids.",
+     "a": {
+      "q": "Which find best supports the view that the pyramid builders were fed and housed?",
+      "opts": [
+       "Bakeries and food remains in a village near Giza",
+       "A pharaoh's name carved inside a pyramid tomb",
+       "A story about slaves written long after the pyramids",
+       "Gold goods buried with a pharaoh in his tomb"
+      ],
+      "why": "Bakeries and food remains show that the workers lived nearby and were given meals. A story written long after the pyramids does not come from the time and cannot show how workers were treated.",
+      "clue": "Look for evidence from where the workers lived."
+     },
+     "b": {
+      "d": 3,
+      "q": "Dr Lena reads a book that says slaves built the pyramids, but it was written long after they were built. Why should she be careful with this claim?",
+      "opts": [
+       "It was written long after, and digs suggest otherwise",
+       "Archaeologists found no villages near the Giza pyramids",
+       "Pyramids were tombs, so no workers could have built them",
+       "Evidence from the time proves that all builders were slaves"
+      ],
+      "why": "A source written long after an event may be less reliable. Digs at the workers' villages suggest fed and housed teams built the pyramids. The option saying no villages were found is wrong, because archaeologists did find them.",
+      "clue": "Think about when the book was written and what the digs found."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Bakeries and food remains in a village near Giza",
+      "also_right": []
+     },
+     "b": {
+      "best": "It was written long after, and digs suggest otherwise",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The stem already says the book 'was written long after they were built', and the right option repeats 'written long after'. A student can match the words without understanding source reliability. The three distractors are also plainly absurd, which adds to the giveaway."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts check out and both answers are clear. In question b, the right option repeats the stem's phrase 'written long after' and the distractors are absurd, so the question gives its answer away."
+    },
+    "flags": [
+     "Question b, wording: The stem already says the book 'was written long after they were built', and the right option repeats 'written long after'. A student can match the words without understanding source reliability. The three distractors are also plainly absurd, which adds to the giveaway."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Building the pyramids",
+     "card": [
+      "The great pyramids at Giza were built as tombs for pharaohs. They were built about 4,500 years ago, and the biggest is the Great Pyramid of Khufu.",
+      "Many people once believed that slaves built the pyramids. That idea came from some later writers, who lived long after the pyramids were built. A source from long after an event may be less reliable than evidence from the time.",
+      "Archaeologists have dug up villages near Giza where the workers lived. They found bakeries, sleeping areas and large amounts of bread, beef and fish bones.",
+      "This evidence suggests that teams of fed and housed workers built the pyramids, not slaves. New archaeological finds changed what historians believed."
+     ],
+     "remember": "Evidence from the workers' villages changed an old view: the pyramids seem to have been built by teams of fed and housed workers.",
+     "a": {
+      "q": "Which find best supports the view that the pyramid builders were fed and housed?",
+      "opts": [
+       "Bakeries and food remains in a village near Giza",
+       "A pharaoh's name carved inside a pyramid tomb",
+       "A story about slaves written long after the pyramids",
+       "Gold goods buried with a pharaoh in his tomb"
+      ],
+      "why": "Bakeries and food remains show that the workers lived nearby and were given meals. A story written long after the pyramids does not come from the time and cannot show how workers were treated.",
+      "clue": "Look for evidence from where the workers lived."
+     },
+     "b": {
+      "d": 3,
+      "q": "A tour guide tells Amir that slaves built the pyramids. The guide quotes a Greek writer who visited Egypt about 2,000 years after they were built. Why do historians now doubt this claim?",
+      "opts": [
+       "Remains of workers' villages point to fed and housed teams",
+       "The Greek writer lived too early to know much about Egypt",
+       "Visitors to a place are always unreliable as sources",
+       "No one has ever found where the pyramid workers lived"
+      ],
+      "why": "Digs at villages near Giza found bakeries, sleeping areas and food remains, which suggest fed and housed teams did the work. The writer lived long after the pyramids, not too early. A later source may be less reliable, but that does not make every visitor always unreliable.",
+      "clue": "What did archaeologists find near Giza?"
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Bakeries and food remains in a village near Giza",
+       "also_right": []
+      },
+      "b": {
+       "best": "Remains of workers' villages point to fed and housed teams",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The distractor 'Visitors to a place are always unreliable as sources' uses 'always', while the card says a later source 'may be less reliable'. The absolute word makes the option easy to rule out without knowing the idea."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts check out: Giza is about 4,500 years old, Herodotus wrote about 2,000 years later, and the workers' villages had bakeries and food remains. One minor issue: a question b distractor uses 'always' where the card says 'may', which makes it easy to eliminate."
+     },
+     "flags": [
+      "Question b, wording: The distractor 'Visitors to a place are always unreliable as sources' uses 'always', while the card says a later source 'may be less reliable'. The absolute word makes the option easy to rule out without knowing the idea."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:56Z",
+   "step": "write",
+   "version": {
+    "title": "Building the pyramids",
+    "card": [
+     "The great pyramids at Giza were built as tombs for pharaohs. They were built about 4,500 years ago, and the biggest is the Great Pyramid of Khufu.",
+     "Many people once believed that slaves built the pyramids. That idea came from writers who lived long after, and a source from long after an event may be less reliable than evidence from the time.",
+     "Archaeologists have dug up villages near Giza where the workers lived. They found bakeries, sleeping areas and large amounts of bread, beef and fish bones.",
+     "This evidence suggests that teams of fed and housed workers built the pyramids, not slaves. New archaeological finds changed what historians believed."
+    ],
+    "remember": "Evidence from the workers' villages changed an old view: the pyramids seem to have been built by teams of fed and housed workers.",
+    "a": {
+     "q": "Which find best supports the view that the pyramid builders were fed and housed?",
+     "opts": [
+      "Bakeries and food remains in a village near Giza",
+      "A pharaoh's name carved inside a pyramid tomb",
+      "A story about slaves written long after the pyramids",
+      "Gold goods buried with a pharaoh in his tomb"
+     ],
+     "why": "Bakeries and food remains show that the workers lived nearby and were given meals. A story written long after the pyramids does not come from the time and cannot show how workers were treated.",
+     "clue": "Look for evidence from where the workers lived."
+    },
+    "b": {
+     "d": 3,
+     "q": "A tour guide tells Amir that slaves built the pyramids. The guide quotes a Greek writer who visited Egypt about 2,000 years after they were built. Why do historians now doubt this claim?",
+     "opts": [
+      "Remains of workers' villages point to fed and housed teams",
+      "The Greek writer lived too early to know much about Egypt",
+      "Digs near Giza show that priests built the pyramids",
+      "No one has ever found where the pyramid workers lived"
+     ],
+     "why": "Digs at villages near Giza found bakeries, sleeping areas and food remains, which suggest fed and housed teams of workers did the job. The Greek writer lived long after the pyramids were built, not too early, so his claim is not evidence from the time.",
+     "clue": "What did archaeologists find near Giza?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Bakeries and food remains in a village near Giza",
+     "also_right": []
+    },
+    "b": {
+     "best": "Remains of workers' villages point to fed and housed teams",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Building the pyramids",
+  "card": [
+   "The great pyramids at Giza were built as tombs for pharaohs. They were built about 4,500 years ago, and the biggest is the Great Pyramid of Khufu.",
+   "Many people once believed that slaves built the pyramids. That idea came from writers who lived long after, and a source from long after an event may be less reliable than evidence from the time.",
+   "Archaeologists have dug up villages near Giza where the workers lived. They found bakeries, sleeping areas and large amounts of bread, beef and fish bones.",
+   "This evidence suggests that teams of fed and housed workers built the pyramids, not slaves. New archaeological finds changed what historians believed."
+  ],
+  "remember": "Evidence from the workers' villages changed an old view: the pyramids seem to have been built by teams of fed and housed workers.",
+  "a": {
+   "q": "Which find best supports the view that the pyramid builders were fed and housed?",
+   "opts": [
+    "Bakeries and food remains in a village near Giza",
+    "A pharaoh's name carved inside a pyramid tomb",
+    "A story about slaves written long after the pyramids",
+    "Gold goods buried with a pharaoh in his tomb"
+   ],
+   "why": "Bakeries and food remains show that the workers lived nearby and were given meals. A story written long after the pyramids does not come from the time and cannot show how workers were treated.",
+   "clue": "Look for evidence from where the workers lived."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tour guide tells Amir that slaves built the pyramids. The guide quotes a Greek writer who visited Egypt about 2,000 years after they were built. Why do historians now doubt this claim?",
+   "opts": [
+    "Remains of workers' villages point to fed and housed teams",
+    "The Greek writer lived too early to know much about Egypt",
+    "Digs near Giza show that priests built the pyramids",
+    "No one has ever found where the pyramid workers lived"
+   ],
+   "why": "Digs at villages near Giza found bakeries, sleeping areas and food remains, which suggest fed and housed teams of workers did the job. The Greek writer lived long after the pyramids were built, not too early, so his claim is not evidence from the time.",
+   "clue": "What did archaeologists find near Giza?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Bakeries and food remains in a village near Giza",
+   "also_right": []
+  },
+  "b": {
+   "best": "Remains of workers' villages point to fed and housed teams",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Building the pyramids",
+  "card": [
+   "The great pyramids at Giza were built as tombs for pharaohs. They were built about 4,500 years ago, and the biggest is the Great Pyramid of Khufu.",
+   "Many people once believed that slaves built the pyramids. That idea came from writers who lived long after, and a source from long after an event may be less reliable than evidence from the time.",
+   "Archaeologists have dug up villages near Giza where the workers lived. They found bakeries, sleeping areas and large amounts of bread, beef and fish bones.",
+   "This evidence suggests that teams of fed and housed workers built the pyramids, not slaves. New archaeological finds changed what historians believed."
+  ],
+  "remember": "Evidence from the workers' villages changed an old view: the pyramids seem to have been built by teams of fed and housed workers.",
+  "a": {
+   "q": "Which find best supports the view that the pyramid builders were fed and housed?",
+   "opts": [
+    "Bakeries and food remains in a village near Giza",
+    "A pharaoh's name carved inside a pyramid tomb",
+    "A story about slaves written long after the pyramids",
+    "Gold goods buried with a pharaoh in his tomb"
+   ],
+   "why": "Bakeries and food remains show that the workers lived nearby and were given meals. A story written long after the pyramids does not come from the time and cannot show how workers were treated.",
+   "clue": "Look for evidence from where the workers lived."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tour guide tells Amir that slaves built the pyramids. The guide quotes a Greek writer who visited Egypt about 2,000 years after they were built. Why do historians now doubt this claim?",
+   "opts": [
+    "Remains of workers' villages point to fed and housed teams",
+    "The Greek writer lived too early to know much about Egypt",
+    "Digs near Giza show that priests built the pyramids",
+    "No one has ever found where the pyramid workers lived"
+   ],
+   "why": "Digs at villages near Giza found bakeries, sleeping areas and food remains, which suggest fed and housed teams of workers did the job. The Greek writer lived long after the pyramids were built, not too early, so his claim is not evidence from the time.",
+   "clue": "What did archaeologists find near Giza?"
+  }
+ },
+ "checked_by": "claude-code"
 }

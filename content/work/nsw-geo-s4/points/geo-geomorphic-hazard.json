@@ -16,8 +16,179 @@
    0.27
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:45Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:49Z write: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:23:38Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.00621,
+  "check": 0.01202,
+  "fix": 0.01772
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point defines natural hazards in general and sorts them into atmospheric and hydrological types, but it never introduces geomorphic hazards, which are land-based events, so it teaches a broader idea than the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "What a geomorphic hazard is",
+  "card": [
+   "Geomorphic means to do with the land and its shape. A geomorphic hazard is a natural event in the land that can harm people.",
+   "Examples are earthquakes, volcanic eruptions, landslides and tsunamis. Each one involves the ground, rock or sea floor moving or breaking out.",
+   "An event becomes a hazard when it can harm people, their homes or their work. A landslide on a mountain where nobody lives is still a natural event, but it threatens no one.",
+   "Not every natural event is a geomorphic hazard. A heatwave comes from the weather, not from movement of the land."
+  ],
+  "remember": "A geomorphic hazard is a natural event in the land that can harm people.",
+  "a": {
+   "q": "Which of these is a geomorphic hazard?",
+   "opts": [
+    "A landslide that buries a road",
+    "A heatwave that lasts a week",
+    "A drought that dries up a farm dam",
+    "A cyclone that brings strong winds"
+   ],
+   "why": "A landslide is a natural event in the land, and it can harm people by burying a road. The heatwave is tempting because it is a natural hazard, but it comes from the weather, not from movement of the land.",
+   "clue": "Look for the event where the land itself moves."
+  },
+  "b": {
+   "d": 3,
+   "q": "A volcano erupts on a remote island where no one lives. Which statement is the best description of it?",
+   "opts": [
+    "It is a natural event in the land, but it harms no one",
+    "It is a geomorphic hazard, because it harms many people",
+    "It is not geomorphic, because nobody is living nearby",
+    "It is a weather event, because ash rises into the sky"
+   ],
+   "why": "An eruption is a natural event in the land, so it is geomorphic. With no people nearby it harms no one, so it is not a hazard to anyone. The second option is tempting, but it claims harm that does not happen.",
+   "clue": "Ask two things: is it in the land, and does it threaten people?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A landslide that buries a road",
+   "also_right": []
+  },
+  "b": {
+   "best": "It is a natural event in the land, but it harms no one",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says 'The second option is tempting, but it claims harm that does not happen.' Options are shown in random order, so 'second option' does not reliably point to the right one. In this order it is 'It is not geomorphic, because nobody is living nearby', which claims no harm. The why should name the distractor by its content, the one calling it a geomorphic hazard that harms many people."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate and the intended answers are right. The explanation for question b refers to 'the second option' by position, which does not match the shuffled options and should name the distractor by its content."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) says 'The second option is tempting, but it claims harm that does not happen.' Options are shown in random order, so 'second option' does not reliably point to the right one. In this order it is 'It is not geomorphic, because nobody is living nearby', which claims no harm. The why should name the distractor by its content, the one calling it a geomorphic hazard that harms many people."
+ ],
+ "proposal": {
+  "title": "What a geomorphic hazard is",
+  "card": [
+   "Geomorphic means to do with the land and its shape. A geomorphic hazard is a natural event in the land that can harm people.",
+   "Examples are earthquakes, volcanic eruptions, landslides and tsunamis. Each one involves the ground, rock or sea floor moving or breaking out.",
+   "An event becomes a hazard when it can harm people, their homes or their work. A landslide on a mountain where nobody lives is still a natural event, but it threatens no one.",
+   "Not every natural event is a geomorphic hazard. A heatwave, drought or cyclone comes from the weather, not from movement of the land."
+  ],
+  "remember": "Two tests: the land moves or breaks out, and people could be harmed.",
+  "a": {
+   "q": "Which of these is a geomorphic hazard?",
+   "opts": [
+    "A landslide that buries a road",
+    "A heatwave that lasts a week",
+    "A drought that dries up a farm dam",
+    "A cyclone that brings strong winds"
+   ],
+   "why": "A landslide is a natural event in the land, and it can harm people by burying a road. The heatwave is tempting because it is a natural hazard, but it comes from the weather, not from movement of the land.",
+   "clue": "Look for the event where the land itself moves."
+  },
+  "b": {
+   "d": 3,
+   "q": "A volcano erupts on a remote island where no one lives. Which statement is the best description of it?",
+   "opts": [
+    "It is a natural event in the land, but it harms no one",
+    "It is a geomorphic hazard, because it harms many people",
+    "It is not geomorphic, because nobody is living nearby",
+    "It is a weather event, because ash rises into the sky"
+   ],
+   "why": "An eruption is a natural event in the land, so it is geomorphic. With no people nearby it harms no one, so it is not a hazard to anyone. The option calling it a geomorphic hazard that harms many people is tempting, but no one lives there to be harmed.",
+   "clue": "Ask two things: is it in the land, and does it threaten people?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:38Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says 'The second option is tempting, but it claims harm that does not happen.' Options are shown in random order, so 'second option' does not reliably point to the right one. In this order it is 'It is not geomorphic, because nobody is living nearby', which claims no harm. The why should name the distractor by its content, the one calling it a geomorphic hazard that harms many people."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) says 'The second option is tempting, but it claims harm that does not happen.' Options are shown in random order, so 'second option' does not reliably point to the right one. In this order it is 'It is not geomorphic, because nobody is living nearby', which claims no harm. The why should name the distractor by its content, the one calling it a geomorphic hazard that harms many people."
+  ]
+ },
+ "final": {
+  "title": "What a geomorphic hazard is",
+  "card": [
+   "Geomorphic means to do with the land and its shape. A geomorphic hazard is a natural event in the land that can harm people.",
+   "Examples are earthquakes, volcanic eruptions, landslides and tsunamis. Each one involves the ground, rock or sea floor moving or breaking out.",
+   "An event becomes a hazard when it can harm people, their homes or their work. A landslide on a mountain where nobody lives is still a natural event, but it threatens no one.",
+   "Not every natural event is a geomorphic hazard. A heatwave, drought or cyclone comes from the weather, not from movement of the land."
+  ],
+  "remember": "Two tests: the land moves or breaks out, and people could be harmed.",
+  "a": {
+   "q": "Which of these is a geomorphic hazard?",
+   "opts": [
+    "A landslide that buries a road",
+    "A heatwave that lasts a week",
+    "A drought that dries up a farm dam",
+    "A cyclone that brings strong winds"
+   ],
+   "why": "A landslide is a natural event in the land, and it can harm people by burying a road. The heatwave is tempting because it is a natural hazard, but it comes from the weather, not from movement of the land.",
+   "clue": "Look for the event where the land itself moves."
+  },
+  "b": {
+   "d": 3,
+   "q": "A volcano erupts on a remote island where no one lives. Which statement is the best description of it?",
+   "opts": [
+    "It is a natural event in the land, but it harms no one",
+    "It is a geomorphic hazard, because it harms many people",
+    "It is not geomorphic, because nobody is living nearby",
+    "It is a weather event, because ash rises into the sky"
+   ],
+   "why": "An eruption is a natural event in the land, so it is geomorphic. With no people nearby it harms no one, so it is not a hazard to anyone. The option calling it a geomorphic hazard that harms many people is tempting, but no one lives there to be harmed.",
+   "clue": "Ask two things: is it in the land, and does it threaten people?"
+  }
+ },
+ "cleared_by": "auto"
 }

@@ -12,8 +12,115 @@
    0.221
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:45Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:49Z write: done",
+  "2026-11-20T12:44:55Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.00631,
+  "check": 0.0092
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, geo-landslides-avalanches, covers both landslides and avalanches and does not mention earthquakes as a cause, so it is broader than the new point's focus on what causes landslides and would need more than small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "What causes landslides",
+  "card": [
+   "A landslide is when soil, rock and other material slide down a slope. It happens when the slope gives way.",
+   "Heavy rain is a common cause. Water soaks into the soil, makes it heavy and can loosen it, so it may slide.",
+   "An earthquake can shake a slope so hard that the material on it breaks loose and slides.",
+   "Clearing plants can also cause a landslide. Roots help hold the soil together, so a slope with the plants removed may give way more easily."
+  ],
+  "remember": "A landslide is a slope giving way. Rain, earthquakes and clearing plants can all cause it.",
+  "a": {
+   "q": "Why can clearing plants from a steep hillside lead to a landslide?",
+   "opts": [
+    "Roots that held the soil together are gone",
+    "Plants add weight that pulls the slope down",
+    "Cleared land attracts more earthquakes",
+    "Bare soil takes in less water and cracks open"
+   ],
+   "why": "Plant roots help hold soil together, so removing the plants can leave the slope weaker. The tempting idea that plants add weight is wrong, because on the card the roots hold the soil in place.",
+   "clue": "Think about what the roots do to the soil."
+  },
+  "b": {
+   "d": 3,
+   "q": "A hillside above a town near Wollongong has been cleared of trees. After several days of heavy rain, part of the slope slides down. What best explains why it slid?",
+   "opts": [
+    "Rain soaked the soil while no roots held it in place",
+    "Rain on bare soil made the hill shake like an earthquake",
+    "Rain alone caused it, so the cleared trees did not matter",
+    "The cleared trees made the rain fall harder on the hill"
+   ],
+   "why": "Two causes worked together: the heavy rain made the soil wet and heavy, and the cleared trees meant no roots held it. The option saying the trees did not matter is wrong, because the card says clearing plants can also make a slope give way more easily.",
+   "clue": "Look for the answer that uses both the rain and the cleared trees."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Roots that held the soil together are gone",
+   "also_right": []
+  },
+  "b": {
+   "best": "Rain soaked the soil while no roots held it in place",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "What causes landslides",
+  "card": [
+   "A landslide is when soil, rock and other material slide down a slope. It happens when the slope gives way.",
+   "Heavy rain is a common cause. Water soaks into the soil, makes it heavy and can loosen it, so it may slide.",
+   "An earthquake can shake a slope so hard that the material on it breaks loose and slides.",
+   "Clearing plants can also cause a landslide. Roots help hold the soil together, so a slope with the plants removed may give way more easily."
+  ],
+  "remember": "A landslide is a slope giving way. Rain, earthquakes and clearing plants can all cause it.",
+  "a": {
+   "q": "Why can clearing plants from a steep hillside lead to a landslide?",
+   "opts": [
+    "Roots that held the soil together are gone",
+    "Plants add weight that pulls the slope down",
+    "Cleared land attracts more earthquakes",
+    "Bare soil takes in less water and cracks open"
+   ],
+   "why": "Plant roots help hold soil together, so removing the plants can leave the slope weaker. The tempting idea that plants add weight is wrong, because on the card the roots hold the soil in place.",
+   "clue": "Think about what the roots do to the soil."
+  },
+  "b": {
+   "d": 3,
+   "q": "A hillside above a town near Wollongong has been cleared of trees. After several days of heavy rain, part of the slope slides down. What best explains why it slid?",
+   "opts": [
+    "Rain soaked the soil while no roots held it in place",
+    "Rain on bare soil made the hill shake like an earthquake",
+    "Rain alone caused it, so the cleared trees did not matter",
+    "The cleared trees made the rain fall harder on the hill"
+   ],
+   "why": "Two causes worked together: the heavy rain made the soil wet and heavy, and the cleared trees meant no roots held it. The option saying the trees did not matter is wrong, because the card says clearing plants can also make a slope give way more easily.",
+   "clue": "Look for the answer that uses both the rain and the cleared trees."
+  }
+ },
+ "cleared_by": "checker"
 }

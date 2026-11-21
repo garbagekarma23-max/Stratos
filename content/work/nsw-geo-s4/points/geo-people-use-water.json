@@ -24,8 +24,137 @@
    0.302
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:46Z write: done",
+  "2026-11-20T12:35:48Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.01043,
+  "check": 0.00623
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "None of the bank points teaches the basic idea of how people use water in everyday life, farming, industry and electricity; the closest, Competing uses of water, is about uses clashing in dry years, which is a different and narrower idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "How people use water",
+  "card": [
+   [
+    "At home",
+    "People use water every day for drinking, cooking and washing. Many also use it to water gardens."
+   ],
+   [
+    "Farming",
+    "Farmers use water to grow crops and to give drinking water to livestock. Watering crops is called irrigation."
+   ],
+   [
+    "Industry",
+    "Factories and mines use water to clean, cool and process things. Water is also an ingredient in some products, such as drinks."
+   ],
+   [
+    "Electricity",
+    "Water is used to make electricity. Falling water can turn machines called turbines in hydroelectric power stations."
+   ]
+  ],
+  "remember": "Water is used at home, in farming, in industry and to make electricity.",
+  "a": {
+   "q": "A farmer near Griffith pumps water onto her rice crop. Which use of water is this?",
+   "opts": [
+    "Farming",
+    "Industry",
+    "Making electricity",
+    "Use at home"
+   ],
+   "why": "Giving water to crops is irrigation, which is a farming use. Industry means factories and mines, which is a different use, even though the water is still used to make a product.",
+   "clue": "Think about what the water is helping to grow."
+  },
+  "b": {
+   "d": 2,
+   "q": "At a hydroelectric power station in the Snowy Mountains, falling water turns turbines. What is the water being used for?",
+   "opts": [
+    "Making electricity",
+    "Irrigating crops",
+    "Washing and cooking",
+    "Cooling a factory"
+   ],
+   "why": "Falling water turns turbines, and this makes electricity. Cooling a factory is an industry use, but the water here is not cooling anything.",
+   "clue": "What do the turbines produce?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Farming",
+   "also_right": []
+  },
+  "b": {
+   "best": "Making electricity",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "How people use water",
+  "card": [
+   [
+    "At home",
+    "People use water every day for drinking, cooking and washing. Many also use it to water gardens."
+   ],
+   [
+    "Farming",
+    "Farmers use water to grow crops and to give drinking water to livestock. Watering crops is called irrigation."
+   ],
+   [
+    "Industry",
+    "Factories and mines use water to clean, cool and process things. Water is also an ingredient in some products, such as drinks."
+   ],
+   [
+    "Electricity",
+    "Water is used to make electricity. Falling water can turn machines called turbines in hydroelectric power stations."
+   ]
+  ],
+  "remember": "Water is used at home, in farming, in industry and to make electricity.",
+  "a": {
+   "q": "A farmer near Griffith pumps water onto her rice crop. Which use of water is this?",
+   "opts": [
+    "Farming",
+    "Industry",
+    "Making electricity",
+    "Use at home"
+   ],
+   "why": "Giving water to crops is irrigation, which is a farming use. Industry means factories and mines, which is a different use, even though the water is still used to make a product.",
+   "clue": "Think about what the water is helping to grow."
+  },
+  "b": {
+   "d": 2,
+   "q": "At a hydroelectric power station in the Snowy Mountains, falling water turns turbines. What is the water being used for?",
+   "opts": [
+    "Making electricity",
+    "Irrigating crops",
+    "Washing and cooking",
+    "Cooling a factory"
+   ],
+   "why": "Falling water turns turbines, and this makes electricity. Cooling a factory is an industry use, but the water here is not cooling anything.",
+   "clue": "What do the turbines produce?"
+  }
+ },
+ "cleared_by": "checker"
 }

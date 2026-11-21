@@ -24,8 +24,216 @@
    0.232
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: failed the content check, writing again",
+  "2026-11-20T12:45:00Z write: done",
+  "2026-11-20T12:53:28Z check: flagged",
+  "2026-11-20T13:00:01Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.0127,
+  "check": 0.01747,
+  "fix": 0.02637,
+  "recheck": 0.00664
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches data science or the use of data, methods and computers to find patterns, and the closest ones cover science communication, media claims or maths data types, which are different ideas.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Data and data science",
+  "card": [
+   "Data is information collected by observing or measuring, such as temperatures, counts or survey answers. Scientists collect data to look for evidence.",
+   "Data science uses data, methods and computers to find patterns in large amounts of data. A computer can sort millions of records far faster than a person can.",
+   "A pattern can help scientists make predictions. For example, patterns in weather records help forecasters predict rain.",
+   "Our online activity creates data about us, such as what we search for or where our phone has been. This data can be collected and used, so we need to share it carefully."
+  ],
+  "remember": "Data science finds patterns in data. Your online activity makes data, so share it carefully.",
+  "a": {
+   "q": "What does data science do?",
+   "opts": [
+    "Uses data, methods and computers to find patterns",
+    "Uses opinions to decide which results are correct",
+    "Uses computers to replace the need for any data",
+    "Uses one measurement to prove a scientific law"
+   ],
+   "why": "Data science looks for patterns in data, using methods and computers. It relies on data, so it cannot replace data, and one measurement is not a large body of data.",
+   "clue": "Think about what computers help scientists to find in large amounts of data."
+  },
+  "b": {
+   "d": 2,
+   "q": "Zoe posts photos online and turns on location sharing for her apps. Why should she think carefully about this?",
+   "opts": [
+    "Her activity creates data about her that can be collected",
+    "Sharing data online always stops scientists finding patterns",
+    "Data about her can only be used by her own phone",
+    "Photos are not a kind of data, so nothing is recorded"
+   ],
+   "why": "Online activity, such as posting or sharing location, creates data about a person, and it can be collected and used by others. That is why we share it carefully. Photos and locations are data too.",
+   "clue": "Ask who else might be able to see the data her activity makes."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Uses data, methods and computers to find patterns",
+   "also_right": []
+  },
+  "b": {
+   "best": "Her activity creates data about her that can be collected",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Two wrong options use absolute words ('can only be used', 'always stops') where the card says data 'can be collected and used'. This lets a student rule them out without knowing the idea."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue asks what computers help scientists find in large amounts of data. Only the right option mentions patterns, and it copies the card's wording exactly, so the clue nearly gives the answer away."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are accurate. Question b's wrong options use 'only' and 'always', which makes them easy to rule out, and question a's clue points almost directly at the only option that mentions patterns."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: Two wrong options use absolute words ('can only be used', 'always stops') where the card says data 'can be collected and used'. This lets a student rule them out without knowing the idea.",
+  "Question a, other: The clue asks what computers help scientists find in large amounts of data. Only the right option mentions patterns, and it copies the card's wording exactly, so the clue nearly gives the answer away."
+ ],
+ "proposal": {
+  "title": "Data and data science",
+  "card": [
+   "Data is information collected by observing or measuring, such as temperatures, counts or survey answers. Scientists collect data to look for evidence.",
+   "Data science uses data, methods and computers to find patterns in large amounts of data. A computer can sort millions of records far faster than a person can.",
+   "A pattern can help scientists make predictions. For example, patterns in weather records help forecasters predict rain.",
+   "Our online activity creates data about us, such as what we search for, the photos we post or where our phone has been. This data can be collected and used by others, so we need to share it carefully."
+  ],
+  "remember": "Data science finds patterns in data. Your online activity makes data, so share it carefully.",
+  "a": {
+   "q": "A researcher has millions of bird sightings sent in by the public. How would data science help her study them?",
+   "opts": [
+    "Computers sort the sightings to look for patterns",
+    "She reads every sighting by hand to look for patterns",
+    "She keeps only the sightings that match her ideas",
+    "She stops studying them and collects new sightings"
+   ],
+   "why": "Data science uses computers and methods to find patterns in large amounts of data. Reading millions of sightings by hand is the tempting choice, but a computer can sort that many records far faster than a person can.",
+   "clue": "Think about how many sightings there are."
+  },
+  "b": {
+   "d": 2,
+   "q": "Zoe posts photos online and turns on location sharing for her apps. Why should she think carefully about this?",
+   "opts": [
+    "Her activity creates data about her that others can collect",
+    "Photos and places are opinions, so they are not data",
+    "Her phone makes data about her, but apps cannot see it",
+    "Data is made by surveys she answers, not by her posts"
+   ],
+   "why": "Online activity, such as posting photos or sharing location, creates data about a person, and that data can be collected and used by others. The tempting idea that the data stays on her phone is wrong: sharing it with apps is exactly how others can collect it.",
+   "clue": "Who else might see what her apps record?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Computers sort the sightings to look for patterns",
+    "also_right": []
+   },
+   "b": {
+    "best": "Her activity creates data about her that others can collect",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Two wrong options use absolute words ('can only be used', 'always stops') where the card says data 'can be collected and used'. This lets a student rule them out without knowing the idea."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue asks what computers help scientists find in large amounts of data. Only the right option mentions patterns, and it copies the card's wording exactly, so the clue nearly gives the answer away."
+   }
+  ],
+  "flags": [
+   "Question b, wording: Two wrong options use absolute words ('can only be used', 'always stops') where the card says data 'can be collected and used'. This lets a student rule them out without knowing the idea.",
+   "Question a, other: The clue asks what computers help scientists find in large amounts of data. Only the right option mentions patterns, and it copies the card's wording exactly, so the clue nearly gives the answer away."
+  ]
+ },
+ "final": {
+  "title": "Data and data science",
+  "card": [
+   "Data is information collected by observing or measuring, such as temperatures, counts or survey answers. Scientists collect data to look for evidence.",
+   "Data science uses data, methods and computers to find patterns in large amounts of data. A computer can sort millions of records far faster than a person can.",
+   "A pattern can help scientists make predictions. For example, patterns in weather records help forecasters predict rain.",
+   "Our online activity creates data about us, such as what we search for, the photos we post or where our phone has been. This data can be collected and used by others, so we need to share it carefully."
+  ],
+  "remember": "Data science finds patterns in data. Your online activity makes data, so share it carefully.",
+  "a": {
+   "q": "A researcher has millions of bird sightings sent in by the public. How would data science help her study them?",
+   "opts": [
+    "Computers sort the sightings to look for patterns",
+    "She reads every sighting by hand to look for patterns",
+    "She keeps only the sightings that match her ideas",
+    "She stops studying them and collects new sightings"
+   ],
+   "why": "Data science uses computers and methods to find patterns in large amounts of data. Reading millions of sightings by hand is the tempting choice, but a computer can sort that many records far faster than a person can.",
+   "clue": "Think about how many sightings there are."
+  },
+  "b": {
+   "d": 2,
+   "q": "Zoe posts photos online and turns on location sharing for her apps. Why should she think carefully about this?",
+   "opts": [
+    "Her activity creates data about her that others can collect",
+    "Photos and places are opinions, so they are not data",
+    "Her phone makes data about her, but apps cannot see it",
+    "Data is made by surveys she answers, not by her posts"
+   ],
+   "why": "Online activity, such as posting photos or sharing location, creates data about a person, and that data can be collected and used by others. The tempting idea that the data stays on her phone is wrong: sharing it with apps is exactly how others can collect it.",
+   "clue": "Who else might see what her apps record?"
+  }
+ },
+ "cleared_by": "recheck"
 }

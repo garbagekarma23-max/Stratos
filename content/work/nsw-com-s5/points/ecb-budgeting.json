@@ -24,8 +24,238 @@
    0.297
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 may adapt ecb-making-personal-budget, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:40Z confirm: Claude Opus 5.5 may adapt ecb-making-personal-budget, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt ecb-making-personal-budget (2 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting ecb-making-personal-budget on the next run",
+  "2026-11-20T14:12:37Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "confirm": 0.01315,
+  "adapt": 0.01241,
+  "check": 0.01442
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "ecb-making-personal-budget",
+  "changes": [
+   "Use the term variable costs instead of changing costs, to match the NSW Commerce Stage 5 syllabus wording.",
+   "Add that money left after expenses is set aside toward a named savings goal, as the brief asks.",
+   "Pitch the card at the Stage 5 Years 9 and 10 depth, since the card is written for Year 8 in other states."
+  ],
+  "sure": "medium",
+  "reason": "The existing budgeting card teaches the same idea of income minus expenses with what is left to save, but it needs small wording and savings-goal changes to suit NSW Stage 5 Commerce.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "ecb-making-personal-budget",
+  "changes": [
+   "Rename 'changing costs' to 'variable expenses' (and 'fixed costs' to 'fixed expenses') to match the terms used in the NSW Commerce syllabus, in the card, the remember line and both questions."
+  ],
+  "sure": "medium",
+  "reason": "This bank point teaches the same budgeting idea at a suitable depth: income minus fixed and variable expenses shows savings, and expenses above income show a shortfall, but it uses 'changing costs' where NSW Commerce says 'variable expenses'.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "ecb-making-personal-budget",
+  "changes": [
+   "Rename 'fixed costs' to 'fixed expenses' and 'changing costs' to 'variable expenses' in the card, the remember line, both questions and both whys.",
+   "Add to the card that a budget keeps spending within income so money can be set aside for a savings goal, such as saving a set amount each week for something you want to buy."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card2 label",
+   "card3 label",
+   "card4",
+   "card1",
+   "remember",
+   "a.q",
+   "a.why",
+   "b.q",
+   "b.opt1",
+   "b.opt3",
+   "b.opt4",
+   "b.why",
+   "b.clue"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches budgeting with income, fixed and changing expenses and a shortfall at a depth that suits Years 9 and 10. It needs the usual terms fixed and variable expenses and a line on setting money aside for a savings goal, which the brief asks for.",
+   "item": "8f48f279170911cd",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-budgeting",
+    "title": "Budgeting",
+    "brief": "67706b013744",
+    "shortlist": [
+     [
+      "ecb-making-personal-budget",
+      0.466
+     ],
+     [
+      "ecb-federal-budget",
+      0.369
+     ],
+     [
+      "mat-budgeting",
+      0.314
+     ],
+     [
+      "ecb-managing-financial-risk",
+      0.301
+     ],
+     [
+      "ecb-budgeting-before-you-buy",
+      0.297
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00035,
+     "confirm": 0.01315
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "ecb-making-personal-budget",
+     "changes": [
+      "Use the term variable costs instead of changing costs, to match the NSW Commerce Stage 5 syllabus wording.",
+      "Add that money left after expenses is set aside toward a named savings goal, as the brief asks.",
+      "Pitch the card at the Stage 5 Years 9 and 10 depth, since the card is written for Year 8 in other states."
+     ],
+     "sure": "medium",
+     "reason": "The existing budgeting card teaches the same idea of income minus expenses with what is left to save, but it needs small wording and savings-goal changes to suit NSW Stage 5 Commerce.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "ecb-making-personal-budget",
+     "changes": [
+      "Rename 'changing costs' to 'variable expenses' (and 'fixed costs' to 'fixed expenses') to match the terms used in the NSW Commerce syllabus, in the card, the remember line and both questions."
+     ],
+     "sure": "medium",
+     "reason": "This bank point teaches the same budgeting idea at a suitable depth: income minus fixed and variable expenses shows savings, and expenses above income show a shortfall, but it uses 'changing costs' where NSW Commerce says 'variable expenses'.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "857c4c6743bd27d3"
+  }
+ ],
+ "draft": {
+  "title": "Making a personal budget",
+  "card": [
+   "A budget is a plan that lists the money you expect to receive (income) and the money you expect to spend (expenses) over a period, such as a month. It keeps spending within income so money can be set aside for a savings goal, such as saving a set amount each week for something you want to buy.",
+   [
+    "Fixed expenses",
+    "expenses that stay the same each time, such as a phone plan or a gym fee."
+   ],
+   [
+    "Variable expenses",
+    "expenses that can go up or down, such as snacks, clothes or bus fares."
+   ],
+   "Subtract total expenses from income to see what is left to save. If expenses are higher than income, the budget shows a shortfall, and you need to cut expenses or earn more."
+  ],
+  "remember": "Income minus all expenses, fixed and variable, shows what is left to save.",
+  "a": {
+   "q": "Mia checks what she paid for four things in March and April. Which is a fixed expense?",
+   "opts": [
+    "Music app: $12 in March, $12 in April",
+    "Snacks: $18 in March, $25 in April",
+    "Bus fares: $30 in March, $22 in April",
+    "Clothes: $0 in March, $45 in April"
+   ],
+   "why": "The music app cost the same amount in both months, so it is a fixed expense. Snacks, bus fares and clothes went up or down between months, so they are variable expenses, even though bus fares are paid often.",
+   "clue": "Compare the two months for each item."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jaden gets $200 a month from a weekend job. His fixed expenses are $60 and his variable expenses are $150. What does his budget show?",
+   "opts": [
+    "A shortfall of $10, so he needs to cut expenses or earn more",
+    "$10 left over, so he can save $10 a month from his job",
+    "$140 left over, because only fixed expenses are counted",
+    "$50 left over, because only variable expenses are counted"
+   ],
+   "why": "Total expenses are $60 + $150 = $210, which is $10 more than his income of $200, so the budget shows a shortfall. The $140 and $50 answers each subtract only one kind of expense, but a budget counts both fixed and variable expenses.",
+   "clue": "Add both kinds of expense before comparing with income."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Music app: $12 in March, $12 in April",
+   "also_right": []
+  },
+  "b": {
+   "best": "A shortfall of $10, so he needs to cut expenses or earn more",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Making a personal budget",
+  "card": [
+   "A budget is a plan that lists the money you expect to receive (income) and the money you expect to spend (expenses) over a period, such as a month. It keeps spending within income so money can be set aside for a savings goal, such as saving a set amount each week for something you want to buy.",
+   [
+    "Fixed expenses",
+    "expenses that stay the same each time, such as a phone plan or a gym fee."
+   ],
+   [
+    "Variable expenses",
+    "expenses that can go up or down, such as snacks, clothes or bus fares."
+   ],
+   "Subtract total expenses from income to see what is left to save. If expenses are higher than income, the budget shows a shortfall, and you need to cut expenses or earn more."
+  ],
+  "remember": "Income minus all expenses, fixed and variable, shows what is left to save.",
+  "a": {
+   "q": "Mia checks what she paid for four things in March and April. Which is a fixed expense?",
+   "opts": [
+    "Music app: $12 in March, $12 in April",
+    "Snacks: $18 in March, $25 in April",
+    "Bus fares: $30 in March, $22 in April",
+    "Clothes: $0 in March, $45 in April"
+   ],
+   "why": "The music app cost the same amount in both months, so it is a fixed expense. Snacks, bus fares and clothes went up or down between months, so they are variable expenses, even though bus fares are paid often.",
+   "clue": "Compare the two months for each item."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jaden gets $200 a month from a weekend job. His fixed expenses are $60 and his variable expenses are $150. What does his budget show?",
+   "opts": [
+    "A shortfall of $10, so he needs to cut expenses or earn more",
+    "$10 left over, so he can save $10 a month from his job",
+    "$140 left over, because only fixed expenses are counted",
+    "$50 left over, because only variable expenses are counted"
+   ],
+   "why": "Total expenses are $60 + $150 = $210, which is $10 more than his income of $200, so the budget shows a shortfall. The $140 and $50 answers each subtract only one kind of expense, but a budget counts both fixed and variable expenses.",
+   "clue": "Add both kinds of expense before comparing with income."
+  }
+ }
 }

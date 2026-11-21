@@ -12,8 +12,178 @@
    0.252
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: failed the content check, writing again",
+  "2026-11-20T12:44:56Z write: done (still fails the content check)",
+  "2026-11-20T12:53:26Z check: flagged",
+  "2026-11-20T13:11:48Z fix: suggested",
+  "2026-11-20T14:40:47Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.01465,
+  "check": 0.01618,
+  "fix": 0.0192
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches the new point's contrast between Aboriginal spiritual, lasting connection to Country and the British view of land as property: the terra nullius point covers only Britain's treatment of land, and the geography point covers Country and belonging without the historical contrast, so no bank point fits as is or with small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Connection to Country",
+  "card": [
+   "Country is the word Aboriginal and Torres Strait Islander Peoples use for the land, waters, sky and living things of a place, and for the people's bond with them.",
+   "The connection to Country is spiritual and cultural. Stories, laws, ceremonies and responsibilities are tied to particular places, and they are passed down through generations.",
+   "The connection is lasting. People care for Country and Country sustains them, and this bond continues today. Country is not something owned or traded.",
+   "The British saw land as property that could be bought, sold and used for profit. They called the land terra nullius, meaning land belonging to no one, and ignored Aboriginal Peoples' connection to it."
+  ],
+  "remember": "For Aboriginal Peoples, Country is a lasting bond. The British treated land as property and called it terra nullius.",
+  "a": {
+   "q": "Which statement best describes Aboriginal Peoples' connection to Country?",
+   "opts": [
+    "A lasting bond with a place, with spiritual and cultural ties",
+    "A claim to land that could be sold to others for profit",
+    "A temporary link that ended when the British arrived",
+    "A set of borders drawn up to divide land into farms"
+   ],
+   "why": "Country includes land, waters and living things, and people have spiritual and cultural responsibilities to it that last over time. Treating land as something to buy and sell is the British view of property, not the Aboriginal connection.",
+   "clue": "Think about care and responsibility, not ownership."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1788 the British described the land around Sydney Cove as terra nullius. What did this idea ignore?",
+   "opts": [
+    "Aboriginal Peoples' existing connection to their Country",
+    "Whether the land was good enough for farming crops",
+    "How far the land was from the nearest British port",
+    "Whether the colony could pay for the land in coin"
+   ],
+   "why": "Terra nullius means land belonging to no one. It ignored that Aboriginal people already lived on the land and had a spiritual, cultural and lasting connection to it. The other options are about farming, distance or money, which are not what the term set aside.",
+   "clue": "Terra nullius says nobody was there with a claim."
+  }
+ },
+ "redone": true,
+ "local": [
+  "his-connection-countrya option is 61 characters: A lasting bond with a place, with spiritual and cultural ties"
+ ],
+ "check": {
+  "a": {
+   "best": "A lasting bond with a place, with spiritual and cultural ties",
+   "also_right": []
+  },
+  "b": {
+   "best": "Aboriginal Peoples' existing connection to their Country",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'They called the land terra nullius' suggests the British used this phrase at the time. Historians note that the Latin term was applied later, from the late 1800s and especially in the Mabo era. In 1788 the British acted as if the land belonged to no one. The chapter outline itself says 'treated the land as belonging to no one (terra nullius)'. Reword to 'treated the land as terra nullius'."
+   },
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "'called it terra nullius' repeats the anachronism. Use 'treated it as terra nullius' or 'treated it as belonging to no one'."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The stem says 'In 1788 the British described the land around Sydney Cove as terra nullius'. The British did not use that term in 1788. Reword to something like 'The British treated the land as terra nullius (belonging to no one). What did this idea ignore?'"
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "first-nations",
+  "summary": "The card, remember line and question b say the British 'called' or 'described' the land as terra nullius in 1788. The term was applied later, so reword these to say the British treated the land as terra nullius. Both questions are otherwise sound, each with one clear right answer."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Card, fact: 'They called the land terra nullius' suggests the British used this phrase at the time. Historians note that the Latin term was applied later, from the late 1800s and especially in the Mabo era. In 1788 the British acted as if the land belonged to no one. The chapter outline itself says 'treated the land as belonging to no one (terra nullius)'. Reword to 'treated the land as terra nullius'.",
+  "Remember, fact: 'called it terra nullius' repeats the anachronism. Use 'treated it as terra nullius' or 'treated it as belonging to no one'.",
+  "Question b, fact: The stem says 'In 1788 the British described the land around Sydney Cove as terra nullius'. The British did not use that term in 1788. Reword to something like 'The British treated the land as terra nullius (belonging to no one). What did this idea ignore?'",
+  "Content check: his-connection-countrya option is 61 characters: A lasting bond with a place, with spiritual and cultural ties"
+ ],
+ "proposal": {
+  "title": "Connection to Country",
+  "card": [
+   "Country is the word Aboriginal and Torres Strait Islander Peoples use for the land, waters, sky and living things of a place, and for the people's bond with them.",
+   "The connection to Country is spiritual and cultural. Stories, laws, ceremonies and responsibilities are tied to particular places, and they are passed down through generations.",
+   "The connection is lasting. People care for Country and Country sustains them, and this bond continues today. Country is not something owned or traded.",
+   "The British saw land as property that could be bought, sold and used for profit. They treated the land as terra nullius, meaning land belonging to no one, and ignored Aboriginal Peoples' connection to it."
+  ],
+  "remember": "For Aboriginal Peoples, Country is a lasting bond, not property. The British treated the land as belonging to no one.",
+  "a": {
+   "q": "Which statement best describes Aboriginal Peoples' connection to Country?",
+   "opts": [
+    "A lasting spiritual and cultural bond with a place",
+    "A claim to land that could be sold to others for profit",
+    "A temporary link that ended when the British arrived",
+    "A set of borders drawn up to divide land into farms"
+   ],
+   "why": "Country includes land, waters and living things, and people have spiritual and cultural responsibilities to it that last over time. Treating land as something to buy and sell is the British view of property, not the Aboriginal connection.",
+   "clue": "Think about care and responsibility, not ownership."
+  },
+  "b": {
+   "d": 3,
+   "q": "The British treated the land around Sydney Cove as terra nullius (belonging to no one). What did this idea ignore?",
+   "opts": [
+    "Aboriginal Peoples' existing connection to their Country",
+    "Whether the land was good enough for farming crops",
+    "How far the land was from the nearest British port",
+    "Whether the colony could pay for the land in coin"
+   ],
+   "why": "Terra nullius means land belonging to no one. Treating the land this way ignored that Aboriginal people already lived there and had a spiritual, cultural and lasting connection to it. The other options are about farming, distance or money, which are not what the idea set aside.",
+   "clue": "Terra nullius says nobody was there with a claim."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Connection to Country",
+  "card": [
+   "Country is the word Aboriginal and Torres Strait Islander Peoples use for the land, waters, sky and living things of a place, and for the people's bond with them.",
+   "The connection to Country is spiritual and cultural. Stories, laws, ceremonies and responsibilities are tied to particular places, and they are passed down through generations.",
+   "The connection is lasting. People care for Country and Country sustains them, and this bond continues today. Country is not something owned or traded.",
+   "The British saw land as property that could be bought, sold and used for profit. They treated the land as terra nullius, meaning land belonging to no one, and ignored Aboriginal Peoples' connection to it."
+  ],
+  "remember": "For Aboriginal Peoples, Country is a lasting bond, not property. The British treated the land as belonging to no one.",
+  "a": {
+   "q": "Which statement best describes Aboriginal Peoples' connection to Country?",
+   "opts": [
+    "A lasting spiritual and cultural bond with a place",
+    "A claim to land that could be sold to others for profit",
+    "A temporary link that ended when the British arrived",
+    "A set of borders drawn up to divide land into farms"
+   ],
+   "why": "Country includes land, waters and living things, and people have spiritual and cultural responsibilities to it that last over time. Treating land as something to buy and sell is the British view of property, not the Aboriginal connection.",
+   "clue": "Think about care and responsibility, not ownership."
+  },
+  "b": {
+   "d": 3,
+   "q": "The British treated the land around Sydney Cove as terra nullius (belonging to no one). What did this idea ignore?",
+   "opts": [
+    "Aboriginal Peoples' existing connection to their Country",
+    "Whether the land was good enough for farming crops",
+    "How far the land was from the nearest British port",
+    "Whether the colony could pay for the land in coin"
+   ],
+   "why": "Terra nullius means land belonging to no one. Treating the land this way ignored that Aboriginal people already lived there and had a spiritual, cultural and lasting connection to it. The other options are about farming, distance or money, which are not what the idea set aside.",
+   "clue": "Terra nullius says nobody was there with a claim."
+  }
+ },
+ "cleared_by": "owner"
 }

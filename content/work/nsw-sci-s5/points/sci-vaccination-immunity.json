@@ -3,8 +3,360 @@
  "title": "Vaccination and immunity",
  "brief": "925ecf0a09fc",
  "shortlist": [],
- "stage": "write",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, write"
+  "2026-11-12T12:22:43Z new, write",
+  "2026-11-20T12:15:22Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:26:01Z write: failed the content check, writing again",
+  "2026-11-20T12:35:58Z write: done",
+  "2026-11-20T12:45:00Z check: flagged",
+  "2026-11-20T12:53:29Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.01485,
+  "check": 0.01444,
+  "fix": 0.02042,
+  "recheck": 0.01249
+ },
+ "draft": {
+  "title": "Vaccination and immunity",
+  "card": [
+   "A vaccine contains a harmless form of a pathogen, such as a weakened or inactive germ or a part of one. It cannot cause the disease it protects against.",
+   "The immune system responds to the vaccine as if it were the real pathogen. It makes antibodies and memory cells, so the body can respond faster if the real pathogen arrives later.",
+   "When most people in a community are vaccinated, the pathogen finds it hard to move from person to person. Data show the disease becomes rare.",
+   "This also protects people who cannot be vaccinated, such as newborn babies, because they are less likely to meet the pathogen. This is called herd immunity."
+  ],
+  "remember": "A vaccine trains the body ahead of time, and when most people are vaccinated, the disease becomes rare for everyone.",
+  "a": {
+   "q": "How does a vaccine help the body fight a disease?",
+   "opts": [
+    "It trains the immune system with a harmless pathogen form",
+    "It kills the pathogen using chemicals made in the vaccine",
+    "It gives the person a mild case of the disease every time",
+    "It builds a layer on the skin that keeps pathogens out"
+   ],
+   "why": "A vaccine shows the immune system a harmless form of the pathogen, so the body makes antibodies and memory cells before any real infection. It does not give the disease, because the form it contains is harmless.",
+   "clue": "Think about what the body practises on."
+  },
+  "b": {
+   "d": 3,
+   "q": "In the town of Wyalong, most people are vaccinated against measles and the disease has become rare. Baby Ari is too young to be vaccinated. Why is Ari still less likely to catch measles?",
+   "opts": [
+    "Measles rarely spreads between people in a vaccinated town",
+    "Ari's body makes antibodies from vaccines others received",
+    "Vaccines in other people kill measles germs in the air",
+    "Ari's skin and mucus block measles better than adults' do"
+   ],
+   "why": "When most people are vaccinated, the pathogen has few people to spread through, so Ari is less likely to meet it. Ari's own body has not been trained, so it is not Ari's antibodies that give this protection.",
+   "clue": "Ari's protection comes from the people around Ari."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It trains the immune system with a harmless pathogen form",
+   "also_right": []
+  },
+  "b": {
+   "best": "Measles rarely spreads between people in a vaccinated town",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"It cannot cause the disease it protects against\" is too absolute. Live attenuated vaccines (e.g. MMR, varicella, oral polio) can very rarely cause the disease or a mild form of it, especially in people with weak immune systems. Better: \"It is very unlikely to cause the disease.\" Why (a) repeats the claim (\"It does not give the disease\")."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and have one clear answer each. The card states that a vaccine cannot cause the disease it protects against, which is not strictly true for live attenuated vaccines; this should be softened in the card and in Why (a)."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: \"It cannot cause the disease it protects against\" is too absolute. Live attenuated vaccines (e.g. MMR, varicella, oral polio) can very rarely cause the disease or a mild form of it, especially in people with weak immune systems. Better: \"It is very unlikely to cause the disease.\" Why (a) repeats the claim (\"It does not give the disease\")."
+ ],
+ "proposal": {
+  "title": "Vaccination and immunity",
+  "card": [
+   "A vaccine contains a harmless form of a pathogen, such as a weakened or inactive germ or a part of one. It is very unlikely to cause the disease it protects against.",
+   "The immune system responds to the vaccine as if it were the real pathogen. It makes antibodies and memory cells, so the body can respond faster if the real pathogen arrives later.",
+   "When most people in a community are vaccinated, the pathogen finds it hard to move from person to person. Data show the disease becomes rare.",
+   "This also protects people who cannot be vaccinated, such as babies too young for a vaccine, because they are less likely to meet the pathogen. This is called herd immunity."
+  ],
+  "remember": "A vaccine trains the body ahead of time, and when most people are vaccinated, the disease becomes rare for everyone.",
+  "a": {
+   "q": "How does a vaccine help the body fight a disease?",
+   "opts": [
+    "It trains the immune system with a harmless pathogen form",
+    "It kills the pathogen using chemicals made in the vaccine",
+    "It gives the person a mild case of the disease every time",
+    "It builds a layer on the skin that keeps pathogens out"
+   ],
+   "why": "A vaccine shows the immune system a harmless form of the pathogen, so the body makes antibodies and memory cells before any real infection. The vaccine does not kill the pathogen itself: the trained immune system does that later. Because the form it contains is weakened, inactive or only a part, it is very unlikely to cause the disease.",
+   "clue": "Think about what the body practises on."
+  },
+  "b": {
+   "d": 3,
+   "q": "In the town of Wyalong, most people are vaccinated against measles and the disease has become rare. Baby Ari is too young to be vaccinated. Why is Ari still less likely to catch measles?",
+   "opts": [
+    "Measles rarely spreads between people in a vaccinated town",
+    "Ari's body makes antibodies from vaccines others received",
+    "Vaccines in other people kill measles germs in the air",
+    "Ari's skin and mucus block measles better than adults' do"
+   ],
+   "why": "When most people are vaccinated, the pathogen has few people to spread through, so Ari is less likely to meet it. Ari's own body has not been trained by a vaccine, so it is not Ari's antibodies that give this protection.",
+   "clue": "Ari's protection comes from the people around Ari."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It trains the immune system with a harmless pathogen form",
+    "also_right": []
+   },
+   "b": {
+    "best": "Measles rarely spreads between people in a vaccinated town",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"It cannot cause the disease it protects against\" is too absolute. Live attenuated vaccines (e.g. MMR, varicella, oral polio) can very rarely cause the disease or a mild form of it, especially in people with weak immune systems. Better: \"It is very unlikely to cause the disease.\" Why (a) repeats the claim (\"It does not give the disease\")."
+   }
+  ],
+  "flags": [
+   "Card, fact: \"It cannot cause the disease it protects against\" is too absolute. Live attenuated vaccines (e.g. MMR, varicella, oral polio) can very rarely cause the disease or a mild form of it, especially in people with weak immune systems. Better: \"It is very unlikely to cause the disease.\" Why (a) repeats the claim (\"It does not give the disease\")."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Vaccination and immunity",
+  "card": [
+   "A vaccine contains a harmless form of a pathogen, such as a weakened or inactive germ or a part of one. It is very unlikely to cause the disease it protects against.",
+   "The immune system responds to the vaccine as if it were the real pathogen. It makes antibodies and memory cells, so the body can respond faster if the real pathogen arrives later.",
+   "When most people in a community are vaccinated, the pathogen finds it hard to move from person to person. Data show the disease becomes rare.",
+   "This also protects people who cannot be vaccinated, such as babies too young for a vaccine, because they are less likely to meet the pathogen. This is called herd immunity."
+  ],
+  "remember": "A vaccine trains the body ahead of time, and when most people are vaccinated, the disease becomes rare for everyone.",
+  "a": {
+   "q": "How does a vaccine help the body fight a disease?",
+   "opts": [
+    "It trains the immune system with a harmless pathogen form",
+    "It kills the pathogen using chemicals made in the vaccine",
+    "It gives the person a mild case of the disease every time",
+    "It builds a layer on the skin that keeps pathogens out"
+   ],
+   "why": "A vaccine shows the immune system a harmless form of the pathogen, so the body makes antibodies and memory cells before any real infection. The vaccine does not kill the pathogen itself: the trained immune system does that later. Because the form it contains is weakened, inactive or only a part, it is very unlikely to cause the disease.",
+   "clue": "Think about what the body practises on."
+  },
+  "b": {
+   "d": 3,
+   "q": "In the town of Wyalong, most people are vaccinated against measles and the disease has become rare. Baby Ari is too young to be vaccinated. Why is Ari still less likely to catch measles?",
+   "opts": [
+    "Measles rarely spreads between people in a vaccinated town",
+    "Ari's body makes antibodies from vaccines others received",
+    "Vaccines in other people kill measles germs in the air",
+    "Ari's skin and mucus block measles better than adults' do"
+   ],
+   "why": "When most people are vaccinated, the pathogen has few people to spread through, so Ari is less likely to meet it. Ari's own body has not been trained by a vaccine, so it is not Ari's antibodies that give this protection.",
+   "clue": "Ari's protection comes from the people around Ari."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix changes \"cannot cause the disease\" to \"very unlikely to cause the disease\" in the card and why (a), which is right for live weakened vaccines and answers the flag. It stays neutral, needs no current program details, and both questions keep one clear right answer.",
+   "item": "4c2128bf6afee3d2",
+   "result": "decided",
+   "saved": {
+    "id": "sci-vaccination-immunity",
+    "title": "Vaccination and immunity",
+    "brief": "925ecf0a09fc",
+    "shortlist": [],
+    "stage": "review",
+    "sent": {
+     "write": 3,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "alone": true,
+    "usd": {
+     "write": 0.01485,
+     "check": 0.01444,
+     "fix": 0.02042,
+     "recheck": 0.01249
+    },
+    "draft": {
+     "title": "Vaccination and immunity",
+     "card": [
+      "A vaccine contains a harmless form of a pathogen, such as a weakened or inactive germ or a part of one. It cannot cause the disease it protects against.",
+      "The immune system responds to the vaccine as if it were the real pathogen. It makes antibodies and memory cells, so the body can respond faster if the real pathogen arrives later.",
+      "When most people in a community are vaccinated, the pathogen finds it hard to move from person to person. Data show the disease becomes rare.",
+      "This also protects people who cannot be vaccinated, such as newborn babies, because they are less likely to meet the pathogen. This is called herd immunity."
+     ],
+     "remember": "A vaccine trains the body ahead of time, and when most people are vaccinated, the disease becomes rare for everyone.",
+     "a": {
+      "q": "How does a vaccine help the body fight a disease?",
+      "opts": [
+       "It trains the immune system with a harmless pathogen form",
+       "It kills the pathogen using chemicals made in the vaccine",
+       "It gives the person a mild case of the disease every time",
+       "It builds a layer on the skin that keeps pathogens out"
+      ],
+      "why": "A vaccine shows the immune system a harmless form of the pathogen, so the body makes antibodies and memory cells before any real infection. It does not give the disease, because the form it contains is harmless.",
+      "clue": "Think about what the body practises on."
+     },
+     "b": {
+      "d": 3,
+      "q": "In the town of Wyalong, most people are vaccinated against measles and the disease has become rare. Baby Ari is too young to be vaccinated. Why is Ari still less likely to catch measles?",
+      "opts": [
+       "Measles rarely spreads between people in a vaccinated town",
+       "Ari's body makes antibodies from vaccines others received",
+       "Vaccines in other people kill measles germs in the air",
+       "Ari's skin and mucus block measles better than adults' do"
+      ],
+      "why": "When most people are vaccinated, the pathogen has few people to spread through, so Ari is less likely to meet it. Ari's own body has not been trained, so it is not Ari's antibodies that give this protection.",
+      "clue": "Ari's protection comes from the people around Ari."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "It trains the immune system with a harmless pathogen form",
+      "also_right": []
+     },
+     "b": {
+      "best": "Measles rarely spreads between people in a vaccinated town",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "\"It cannot cause the disease it protects against\" is too absolute. Live attenuated vaccines (e.g. MMR, varicella, oral polio) can very rarely cause the disease or a mild form of it, especially in people with weak immune systems. Better: \"It is very unlikely to cause the disease.\" Why (a) repeats the claim (\"It does not give the disease\")."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions are sound and have one clear answer each. The card states that a vaccine cannot cause the disease it protects against, which is not strictly true for live attenuated vaccines; this should be softened in the card and in Why (a)."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Card, fact: \"It cannot cause the disease it protects against\" is too absolute. Live attenuated vaccines (e.g. MMR, varicella, oral polio) can very rarely cause the disease or a mild form of it, especially in people with weak immune systems. Better: \"It is very unlikely to cause the disease.\" Why (a) repeats the claim (\"It does not give the disease\")."
+    ],
+    "proposal": {
+     "title": "Vaccination and immunity",
+     "card": [
+      "A vaccine contains a harmless form of a pathogen, such as a weakened or inactive germ or a part of one. It is very unlikely to cause the disease it protects against.",
+      "The immune system responds to the vaccine as if it were the real pathogen. It makes antibodies and memory cells, so the body can respond faster if the real pathogen arrives later.",
+      "When most people in a community are vaccinated, the pathogen finds it hard to move from person to person. Data show the disease becomes rare.",
+      "This also protects people who cannot be vaccinated, such as babies too young for a vaccine, because they are less likely to meet the pathogen. This is called herd immunity."
+     ],
+     "remember": "A vaccine trains the body ahead of time, and when most people are vaccinated, the disease becomes rare for everyone.",
+     "a": {
+      "q": "How does a vaccine help the body fight a disease?",
+      "opts": [
+       "It trains the immune system with a harmless pathogen form",
+       "It kills the pathogen using chemicals made in the vaccine",
+       "It gives the person a mild case of the disease every time",
+       "It builds a layer on the skin that keeps pathogens out"
+      ],
+      "why": "A vaccine shows the immune system a harmless form of the pathogen, so the body makes antibodies and memory cells before any real infection. The vaccine does not kill the pathogen itself: the trained immune system does that later. Because the form it contains is weakened, inactive or only a part, it is very unlikely to cause the disease.",
+      "clue": "Think about what the body practises on."
+     },
+     "b": {
+      "d": 3,
+      "q": "In the town of Wyalong, most people are vaccinated against measles and the disease has become rare. Baby Ari is too young to be vaccinated. Why is Ari still less likely to catch measles?",
+      "opts": [
+       "Measles rarely spreads between people in a vaccinated town",
+       "Ari's body makes antibodies from vaccines others received",
+       "Vaccines in other people kill measles germs in the air",
+       "Ari's skin and mucus block measles better than adults' do"
+      ],
+      "why": "When most people are vaccinated, the pathogen has few people to spread through, so Ari is less likely to meet it. Ari's own body has not been trained by a vaccine, so it is not Ari's antibodies that give this protection.",
+      "clue": "Ari's protection comes from the people around Ari."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:08Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "It trains the immune system with a harmless pathogen form",
+       "also_right": []
+      },
+      "b": {
+       "best": "Measles rarely spreads between people in a vaccinated town",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-20T13:37:08Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "\"It cannot cause the disease it protects against\" is too absolute. Live attenuated vaccines (e.g. MMR, varicella, oral polio) can very rarely cause the disease or a mild form of it, especially in people with weak immune systems. Better: \"It is very unlikely to cause the disease.\" Why (a) repeats the claim (\"It does not give the disease\")."
+      }
+     ],
+     "flags": [
+      "Card, fact: \"It cannot cause the disease it protects against\" is too absolute. Live attenuated vaccines (e.g. MMR, varicella, oral polio) can very rarely cause the disease or a mild form of it, especially in people with weak immune systems. Better: \"It is very unlikely to cause the disease.\" Why (a) repeats the claim (\"It does not give the disease\")."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "bf6a0919a3d5c5b6"
+  }
  ]
 }

@@ -20,8 +20,58 @@
    0.224
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 may adapt mat-classifying-quadrilaterals, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:53Z confirm: Claude Opus 5.5 may adapt mat-classifying-quadrilaterals, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z claude-code review: left for you (it chose to leave it)",
+  "2026-11-20T14:43:34Z review: reusing mat-classifying-quadrilaterals"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "confirm": 0.01034
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-classifying-quadrilaterals",
+  "changes": [
+   "The card's question a describes a shape with two pairs of parallel sides and four equal sides; this is fine for NSW, but the card should also name the kite and trapezium families in the NSW Stage 4 sequence consistent with the brief, which asks how one family includes another, so add a sentence on how squares are special rectangles and rhombuses and how parallelograms are special trapeziums under the NSW inclusive definition."
+  ],
+  "sure": "medium",
+  "reason": "The bank card covers the same classifying idea at the right depth, but its wording of trapezium (at least one pair of parallel sides) and the family-inclusion explanation need small adjustment to match the NSW Stage 4 brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-classifying-quadrilaterals",
+  "changes": [
+   "Rewrite the square line so it says outright that a square is a special rectangle and also a special rhombus, and that every rectangle and rhombus is a parallelogram, so the family inclusions the brief asks for are taught openly rather than only implied."
+  ],
+  "sure": "medium",
+  "reason": "The bank card already classifies the same six quadrilaterals at a Year 7 depth and uses NSW terms like trapezium, but it only hints at how one family includes another, so it needs a clearer line on that.",
+  "model": "claude-opus-5-5"
+ },
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "leave",
+   "sure": "medium",
+   "reason": "The bank card uses the inclusive trapezium definition (at least one pair of parallel sides), and I am not sure that is the definition the NSW syllabus uses, which matters for a point about families. The card also teaches diagonal properties that belong to this chapter's Properties of quadrilaterals point.",
+   "item": "99b4a4a640b65aab",
+   "result": "left"
+  }
+ ],
+ "reuse": "mat-classifying-quadrilaterals",
+ "matched": {
+  "verdict": "reuse",
+  "from": "mat-classifying-quadrilaterals",
+  "by": "owner",
+  "at": "2026-11-20T14:43:34Z"
+ }
 }

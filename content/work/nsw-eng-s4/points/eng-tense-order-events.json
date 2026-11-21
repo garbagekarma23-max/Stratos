@@ -12,8 +12,139 @@
    0.219
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:42Z write: failed the content check, writing again",
+  "2026-11-20T12:35:46Z write: done",
+  "2026-11-20T12:44:53Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.01822,
+  "check": 0.00822
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches how tense and flashbacks or forward jumps change the order of events and what the reader knows; the first covers only keeping verb tense consistent and the second covers ideas and point of view.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Tense and the order of events",
+  "card": [
+   [
+    "Present tense",
+    "Events are told as happening now: \"I open the door and step inside.\" This feels immediate, as if the reader is there as it happens."
+   ],
+   [
+    "Past tense",
+    "Events are told as already finished: \"I opened the door and stepped inside.\" This often feels reflective, as the narrator looks back."
+   ],
+   [
+    "Flashback",
+    "A flashback jumps back to an earlier time, such as a scene from a character's childhood. It can explain why a character acts as they do."
+   ],
+   [
+    "Jump forward",
+    "A jump forward moves ahead to a later time. It can build suspense or let the reader know what will happen before the characters do."
+   ]
+  ],
+  "remember": "Tense sets the feel of the story, and changing the order of events changes what the reader knows and when.",
+  "a": {
+   "q": "Which sentence is written in the present tense?",
+   "opts": [
+    "Mina pushes open the creaking gate",
+    "Mina pushed open the creaking gate",
+    "Mina had pushed open the creaking gate",
+    "Mina will push open the creaking gate"
+   ],
+   "why": "Pushes tells the reader the action is happening now. Pushed and had pushed are past tense, and will push is a future form.",
+   "clue": "Which verb describes the action as it happens?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A story about Leo's football final stops to show a scene from two years earlier, when he quit the team. What does this scene do?",
+   "opts": [
+    "It is a flashback that explains why the final matters to him",
+    "It is a jump forward that shows how the match ends",
+    "It is present tense, so the match feels more immediate",
+    "It is a reflective ending that sums up the story"
+   ],
+   "why": "Going back to an earlier time is a flashback, and it gives the reader background on Leo's feelings. A jump forward moves ahead in time, not back.",
+   "clue": "Is the scene earlier or later than the final?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Mina pushes open the creaking gate",
+   "also_right": []
+  },
+  "b": {
+   "best": "It is a flashback that explains why the final matters to him",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Tense and the order of events",
+  "card": [
+   [
+    "Present tense",
+    "Events are told as happening now: \"I open the door and step inside.\" This feels immediate, as if the reader is there as it happens."
+   ],
+   [
+    "Past tense",
+    "Events are told as already finished: \"I opened the door and stepped inside.\" This often feels reflective, as the narrator looks back."
+   ],
+   [
+    "Flashback",
+    "A flashback jumps back to an earlier time, such as a scene from a character's childhood. It can explain why a character acts as they do."
+   ],
+   [
+    "Jump forward",
+    "A jump forward moves ahead to a later time. It can build suspense or let the reader know what will happen before the characters do."
+   ]
+  ],
+  "remember": "Tense sets the feel of the story, and changing the order of events changes what the reader knows and when.",
+  "a": {
+   "q": "Which sentence is written in the present tense?",
+   "opts": [
+    "Mina pushes open the creaking gate",
+    "Mina pushed open the creaking gate",
+    "Mina had pushed open the creaking gate",
+    "Mina will push open the creaking gate"
+   ],
+   "why": "Pushes tells the reader the action is happening now. Pushed and had pushed are past tense, and will push is a future form.",
+   "clue": "Which verb describes the action as it happens?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A story about Leo's football final stops to show a scene from two years earlier, when he quit the team. What does this scene do?",
+   "opts": [
+    "It is a flashback that explains why the final matters to him",
+    "It is a jump forward that shows how the match ends",
+    "It is present tense, so the match feels more immediate",
+    "It is a reflective ending that sums up the story"
+   ],
+   "why": "Going back to an earlier time is a flashback, and it gives the reader background on Leo's feelings. A jump forward moves ahead in time, not back.",
+   "clue": "Is the scene earlier or later than the final?"
+  }
+ },
+ "cleared_by": "checker"
 }

@@ -24,8 +24,44 @@
    0.403
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 may adapt mat-compound-interest, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:56Z match: Claude Opus 5.5 says reuse mat-compound-interest, with nothing more to write, check or review"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "confirm": 0.00735
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-compound-interest",
+  "changes": [
+   "Use the NSW Stage 5 wording and notation for the compound interest formula, with the rate and number of periods matched to how often interest is added, and check the examples and questions suit Year 9 and 10 students.",
+   "Replace the Year 12 usage tag with the NSW Stage 5 course context and the current NSW syllabus code MA5-FIN-C-02, since the card is shown as used in NSW Year 12 Mathematics."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same compound interest formula at a suitable depth, but it is tagged to NSW Year 12 and its questions and framing should be checked for Stage 5 students.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "mat-compound-interest",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches A = P(1 + r)ⁿ with r as a decimal, matching rate and periods to the compounding, and finding interest as A − P, which is exactly what this NSW Stage 5 point needs, and its notation matches the NSW syllabus.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "mat-compound-interest",
+ "matched": {
+  "verdict": "reuse",
+  "from": "mat-compound-interest",
+  "by": "Claude Opus 5.5",
+  "at": "2026-11-20T12:25:56Z"
+ }
 }

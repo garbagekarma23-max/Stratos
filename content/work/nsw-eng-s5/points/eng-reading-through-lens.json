@@ -24,8 +24,202 @@
    0.26
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:47Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.00639,
+  "check": 0.00998,
+  "fix": 0.01952,
+  "recheck": 0.00892
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches reading a text through a particular perspective such as gender, class or culture at Stage 5 depth: the closest, Critical lenses, is Year 12 theory, and Extending interpretations covers interpretation in general rather than lens-based reading.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Reading through a lens",
+  "card": [
+   "A lens is a particular perspective a reader uses to look at a text, such as gender, class or culture. It is like choosing which pair of glasses to wear.",
+   "A lens brings some ideas forward. A class lens asks about money, work and power. A gender lens asks how male and female characters are shown and treated.",
+   "A reading through a lens must be supported with evidence from the text, such as what characters do and say, or the way a setting is described.",
+   "Different lenses can give different readings of the same text. Each can be valid if the evidence supports it."
+  ],
+  "remember": "A lens is a chosen perspective that brings some ideas forward, and any reading through it needs evidence from the text.",
+  "a": {
+   "q": "A student reads a story about a rich landowner and his farm workers by asking who holds power and who does the labour. Which lens is the student using?",
+   "opts": [
+    "A class lens",
+    "A gender lens",
+    "A cultural lens",
+    "A historical lens"
+   ],
+   "why": "The student is looking at wealth, work and power, which are the focus of a class lens. A cultural lens would look at the beliefs and traditions of a group, which is not the question being asked here.",
+   "clue": "Think about what money, work and power point to."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two students read the same novel. Ravi reads it through a gender lens. Lena reads it through a class lens. Both give quotes and scenes from the novel to back up their ideas. What is the best conclusion?",
+   "opts": [
+    "Both readings can be valid, as each is supported by evidence",
+    "Only Ravi is right, because gender is the main lens",
+    "Neither reading is valid, because the lenses differ",
+    "Only one reading is valid, because a text has one meaning"
+   ],
+   "why": "Different lenses bring different ideas forward, and each reading is sound when the text supports it. The option saying a text has one meaning is tempting, but a lens lets a reader find different ideas in the same text, as long as there is evidence.",
+   "clue": "What makes a reading through a lens sound?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A class lens",
+   "also_right": []
+  },
+  "b": {
+   "best": "Both readings can be valid, as each is supported by evidence",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only hedged one ('can be valid'). The three distractors are all absolute ('Only', 'Neither', 'Only one'), so a student could pick it by elimination without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct. In question b, the right option is the only hedged one among absolute distractors, which gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option is the only hedged one ('can be valid'). The three distractors are all absolute ('Only', 'Neither', 'Only one'), so a student could pick it by elimination without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Reading through a lens",
+  "card": [
+   "A lens is a particular perspective a reader uses to look at a text, such as gender, class or culture. It is like choosing which pair of glasses to wear.",
+   "A lens brings some ideas forward. A class lens asks about money, work and power. A gender lens asks how male and female characters are shown and treated.",
+   "A reading through a lens must be supported with evidence from the text, such as what characters do and say, or the way a setting is described.",
+   "Different lenses can give different readings of the same text. Each can be valid if the evidence supports it."
+  ],
+  "remember": "A lens is a chosen perspective that brings some ideas forward, and any reading through it needs evidence from the text.",
+  "a": {
+   "q": "A student reads a story about a rich landowner and his farm workers by asking who holds power and who does the labour. Which lens is the student using?",
+   "opts": [
+    "A class lens",
+    "A gender lens",
+    "A cultural lens",
+    "A historical lens"
+   ],
+   "why": "The student is looking at wealth, work and power, which are the focus of a class lens. A cultural lens would look at the beliefs and traditions of a group, which is not the question being asked here.",
+   "clue": "Think about what money, work and power point to."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two students read the same novel. Ravi reads it through a gender lens. Lena reads it through a class lens. Both give quotes and scenes from the novel to back up their ideas. What is the best conclusion?",
+   "opts": [
+    "Both readings are sound, as each is backed by evidence",
+    "Ravi's reading is sound, as gender outranks class",
+    "Neither reading is sound, as the two lenses disagree",
+    "One reading is wrong, as a text has one true meaning"
+   ],
+   "why": "Different lenses bring different ideas forward, and a reading is sound when evidence from the text supports it. Both students give evidence, so both readings stand. The option saying a text has one true meaning is tempting, but different lenses can find different ideas in the same text.",
+   "clue": "What makes a reading through a lens sound?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A class lens",
+    "also_right": []
+   },
+   "b": {
+    "best": "Both readings are sound, as each is backed by evidence",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only hedged one ('can be valid'). The three distractors are all absolute ('Only', 'Neither', 'Only one'), so a student could pick it by elimination without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The right option is the only hedged one ('can be valid'). The three distractors are all absolute ('Only', 'Neither', 'Only one'), so a student could pick it by elimination without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "Reading through a lens",
+  "card": [
+   "A lens is a particular perspective a reader uses to look at a text, such as gender, class or culture. It is like choosing which pair of glasses to wear.",
+   "A lens brings some ideas forward. A class lens asks about money, work and power. A gender lens asks how male and female characters are shown and treated.",
+   "A reading through a lens must be supported with evidence from the text, such as what characters do and say, or the way a setting is described.",
+   "Different lenses can give different readings of the same text. Each can be valid if the evidence supports it."
+  ],
+  "remember": "A lens is a chosen perspective that brings some ideas forward, and any reading through it needs evidence from the text.",
+  "a": {
+   "q": "A student reads a story about a rich landowner and his farm workers by asking who holds power and who does the labour. Which lens is the student using?",
+   "opts": [
+    "A class lens",
+    "A gender lens",
+    "A cultural lens",
+    "A historical lens"
+   ],
+   "why": "The student is looking at wealth, work and power, which are the focus of a class lens. A cultural lens would look at the beliefs and traditions of a group, which is not the question being asked here.",
+   "clue": "Think about what money, work and power point to."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two students read the same novel. Ravi reads it through a gender lens. Lena reads it through a class lens. Both give quotes and scenes from the novel to back up their ideas. What is the best conclusion?",
+   "opts": [
+    "Both readings are sound, as each is backed by evidence",
+    "Ravi's reading is sound, as gender outranks class",
+    "Neither reading is sound, as the two lenses disagree",
+    "One reading is wrong, as a text has one true meaning"
+   ],
+   "why": "Different lenses bring different ideas forward, and a reading is sound when evidence from the text supports it. Both students give evidence, so both readings stand. The option saying a text has one true meaning is tempting, but different lenses can find different ideas in the same text.",
+   "clue": "What makes a reading through a lens sound?"
+  }
+ },
+ "cleared_by": "recheck"
 }

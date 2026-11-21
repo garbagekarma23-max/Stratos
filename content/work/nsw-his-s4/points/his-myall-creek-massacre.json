@@ -8,8 +8,142 @@
    0.293
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:50Z write: failed the content check, writing again",
+  "2026-11-20T12:35:51Z write: done",
+  "2026-11-20T12:44:56Z check: for review (first-nations)",
+  "2026-11-20T14:41:03Z review: rejected, to be written again",
+  "2026-11-20T14:58:19Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.01919,
+  "check": 0.01527
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches frontier conflict and resistance in general, with Myall Creek only as a brief example, so it is broader than the new point's focus on the 1838 Myall Creek massacre and the first hangings of colonists for killing Aboriginal people.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "The Myall Creek Massacre",
+  "card": [
+   "In June 1838, a group of stockmen killed at least 28 Wirrayaraay people at Myall Creek station in northern NSW. The victims were mostly women, children and older men.",
+   "The Wirrayaraay are the Aboriginal people of that part of the country. The killers were colonists who worked on pastoral runs, which were large properties for grazing sheep and cattle.",
+   "Many colonists did not think Aboriginal people deserved protection. Killings like this were common on the frontier, but few were ever reported or punished.",
+   "This case went to court. Several of the stockmen were tried and hanged in Sydney in December 1838. It was the first time colonists were executed for killing Aboriginal people in a massacre."
+  ],
+  "remember": "Myall Creek in 1838 was a massacre of Wirrayaraay people, and some of the killers were hanged.",
+  "a": {
+   "q": "Why is the Myall Creek case seen as a turning point in colonial NSW?",
+   "opts": [
+    "Colonists were hanged for a massacre of Aboriginal people",
+    "Colonists were first to kill Aboriginal people in NSW",
+    "It ended all killing of Aboriginal people on the frontier",
+    "It was the only massacre of Aboriginal people in NSW"
+   ],
+   "why": "Colonists were put on trial and some were hanged, which had not happened before for a massacre. It did not stop frontier violence, and the card says killings like this were common.",
+   "clue": "Think about what happened in court after the killings."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student says, \"Myall Creek was a lone event, because frontier killings of Aboriginal people were rare.\" Which fact from the card shows this is wrong?",
+   "opts": [
+    "Killings like it were common, but few were punished",
+    "Several of the stockmen were hanged in Sydney",
+    "The victims were mostly women and children",
+    "It took place on a pastoral run in northern NSW"
+   ],
+   "why": "The card says killings like this were common on the frontier, so the claim that they were rare is wrong. The hangings, the victims and the place are true, but they do not show how common such killings were.",
+   "clue": "Look for the fact about how often killings happened."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:19Z",
+   "step": "write",
+   "version": {
+    "title": "The Myall Creek Massacre",
+    "card": [
+     "In June 1838, a group of stockmen rode onto Myall Creek station in northern NSW and killed at least 28 Wirrayaraay people, mostly women, children and older men.",
+     "The Wirrayaraay had been camped peacefully at the station. The stockmen were mostly convicts or former convicts working on nearby properties.",
+     "Violence against Aboriginal people was widespread on the frontier, and those responsible were rarely charged. This time the killings were reported, and the governor ordered an investigation.",
+     "After two trials, seven of the stockmen were found guilty and hanged in Sydney in December 1838. It was the first time colonists were executed for a massacre of Aboriginal people."
+    ],
+    "remember": "Myall Creek was a massacre of Wirrayaraay people, and the first for which colonists were hanged.",
+    "a": {
+     "q": "What made the Myall Creek Massacre different from most frontier killings of Aboriginal people?",
+     "opts": [
+      "Some of those responsible were tried and hanged",
+      "It was the first killing of Aboriginal people in NSW",
+      "It brought violence on the frontier to an end",
+      "Those responsible were never charged with a crime"
+     ],
+     "why": "Those responsible for frontier violence were rarely charged, but at Myall Creek seven stockmen were found guilty and hanged. It was not the first such killing, and frontier violence did not end.",
+     "clue": "Think about what happened in court."
+    },
+    "b": {
+     "d": 3,
+     "q": "A student writes: \"The hangings after Myall Creek show that the colony always punished violence against Aboriginal people.\" Why is this wrong?",
+     "opts": [
+      "Those responsible for frontier killings were rarely charged",
+      "None of the stockmen at Myall Creek were found guilty",
+      "The Myall Creek killings took place outside the colony",
+      "The hangings took place long after colonial times"
+     ],
+     "why": "Myall Creek stood out because it led to trials and hangings. Violence on the frontier was widespread, and those responsible were rarely charged, so the colony did not always punish it.",
+     "clue": "Was Myall Creek typical, or an exception?"
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "The Myall Creek Massacre",
+  "card": [
+   "In June 1838, a group of stockmen rode onto Myall Creek station in northern NSW and killed at least 28 Wirrayaraay people, mostly women, children and older men.",
+   "The Wirrayaraay had been camped peacefully at the station. The stockmen were mostly convicts or former convicts working on nearby properties.",
+   "Violence against Aboriginal people was widespread on the frontier, and those responsible were rarely charged. This time the killings were reported, and the governor ordered an investigation.",
+   "After two trials, seven of the stockmen were found guilty and hanged in Sydney in December 1838. It was the first time colonists were executed for a massacre of Aboriginal people."
+  ],
+  "remember": "Myall Creek was a massacre of Wirrayaraay people, and the first for which colonists were hanged.",
+  "a": {
+   "q": "What made the Myall Creek Massacre different from most frontier killings of Aboriginal people?",
+   "opts": [
+    "Some of those responsible were tried and hanged",
+    "It was the first killing of Aboriginal people in NSW",
+    "It brought violence on the frontier to an end",
+    "Those responsible were never charged with a crime"
+   ],
+   "why": "Those responsible for frontier violence were rarely charged, but at Myall Creek seven stockmen were found guilty and hanged. It was not the first such killing, and frontier violence did not end.",
+   "clue": "Think about what happened in court."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student writes: \"The hangings after Myall Creek show that the colony always punished violence against Aboriginal people.\" Why is this wrong?",
+   "opts": [
+    "Those responsible for frontier killings were rarely charged",
+    "None of the stockmen at Myall Creek were found guilty",
+    "The Myall Creek killings took place outside the colony",
+    "The hangings took place long after colonial times"
+   ],
+   "why": "Myall Creek stood out because it led to trials and hangings. Violence on the frontier was widespread, and those responsible were rarely charged, so the colony did not always punish it.",
+   "clue": "Was Myall Creek typical, or an exception?"
+  }
+ },
+ "local": []
 }

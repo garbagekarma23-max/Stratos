@@ -20,8 +20,228 @@
    0.224
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 may adapt sci-balancing-chemical-equation, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:26:00Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:58Z write: failed the content check, writing again",
+  "2026-11-20T12:45:01Z write: done",
+  "2026-11-20T12:53:29Z check: flagged",
+  "2026-11-20T13:00:01Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "confirm": 0.00706,
+  "write": 0.01512,
+  "check": 0.01345,
+  "fix": 0.02162,
+  "recheck": 0.00955
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "sci-balancing-chemical-equation",
+  "changes": [
+   "Add a card line explaining the state symbols (s), (l), (g) and (aq) that the brief requires, since the bank card does not mention states.",
+   "Keep the card's depth and balancing method, which already suit NSW Stage 5 Year 9 students."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same balancing idea at the right Year 9 depth, but it lacks the state symbols the NSW brief requires, so it needs a small addition rather than a full reuse.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The Year 9 bank point teaches balancing at the right depth, but it never covers the state symbols (s), (l), (g) and (aq) that this brief requires, and adding them would be a new step rather than a small change.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Balanced chemical equations",
+  "card": [
+   "A chemical equation shows reactants on the left and products on the right, with an arrow between them. Each formula has a number in front, called a coefficient, that says how many of that substance react or form.",
+   "A balanced equation has the same number of each kind of atom on both sides. Atoms are only rearranged, so none can appear or vanish.",
+   "To balance an equation, change the coefficients only. Never change the small numbers inside a formula, because that would make a different substance. For example, 2H₂ + O₂ → 2H₂O has 4 H atoms and 2 O atoms on each side.",
+   "State symbols follow each formula: (s) solid, (l) liquid, (g) gas and (aq) dissolved in water. Example: 2H₂(g) + O₂(g) → 2H₂O(l)."
+  ],
+  "remember": "Balance by changing coefficients only, so each atom count matches. State symbols show the form of each substance.",
+  "a": {
+   "q": "Magnesium burns in oxygen. Which of these equations shows the reaction with the same atoms on both sides?",
+   "opts": [
+    "2Mg + O₂ → 2MgO",
+    "Mg + O₂ → MgO",
+    "Mg + O₂ → 2MgO",
+    "2Mg + 2O₂ → 2MgO"
+   ],
+   "why": "2Mg + O₂ → 2MgO has 2 Mg and 2 O on each side. Mg + O₂ → MgO looks tempting because each formula is correct, but it has 2 O atoms on the left and only 1 on the right.",
+   "clue": "Count the Mg atoms and the O atoms on each side."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student balances H₂ + O₂ → H₂O by changing the product to H₂O₂. Why is this wrong, and what is the right fix?",
+   "opts": [
+    "It changes the substance; put a 2 in front of H₂O",
+    "It changes the substance; put a 2 in front of O₂",
+    "It is fine, because both sides now have 2 O atoms",
+    "It is fine, because the state symbols are still missing"
+   ],
+   "why": "Changing a small number inside a formula makes a different substance, since H₂O₂ is not water. Only coefficients can change, so write 2H₂ + O₂ → 2H₂O. The option saying it is fine is tempting because the atom counts match, but the product is no longer water.",
+   "clue": "Which numbers are you allowed to change?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2Mg + O₂ → 2MgO",
+   "also_right": []
+  },
+  "b": {
+   "best": "It changes the substance; put a 2 in front of H₂O",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The intended option says the right fix is to put a 2 in front of H₂O. That alone gives H₂ + O₂ → 2H₂O, with 2 H atoms on the left and 4 on the right, which is still unbalanced. The full fix, 2H₂ + O₂ → 2H₂O as the why says, also needs a 2 in front of H₂. The option should name both coefficients."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says each formula has a number in front, called a coefficient. But in its own examples O₂ has no number shown. It should say that a coefficient of 1 is not written, or younger students may be confused."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "In question b, the keyed fix (a 2 in front of H₂O only) still leaves the equation unbalanced; it also needs a 2 in front of H₂. The card should also say that a coefficient of 1 is not written."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The intended option says the right fix is to put a 2 in front of H₂O. That alone gives H₂ + O₂ → 2H₂O, with 2 H atoms on the left and 4 on the right, which is still unbalanced. The full fix, 2H₂ + O₂ → 2H₂O as the why says, also needs a 2 in front of H₂. The option should name both coefficients.",
+  "Card, wording: The card says each formula has a number in front, called a coefficient. But in its own examples O₂ has no number shown. It should say that a coefficient of 1 is not written, or younger students may be confused."
+ ],
+ "proposal": {
+  "title": "Balanced chemical equations",
+  "card": [
+   "A chemical equation shows reactants on the left and products on the right, with an arrow between them. A number in front of a formula, called a coefficient, says how many of that substance react or form. A coefficient of 1 is not written.",
+   "A balanced equation has the same number of each kind of atom on both sides. Atoms are only rearranged, so none can appear or vanish.",
+   "To balance an equation, change the coefficients only. Never change the small numbers inside a formula, because that would make a different substance. For example, 2H₂ + O₂ → 2H₂O has 4 H atoms and 2 O atoms on each side.",
+   "State symbols follow each formula: (s) solid, (l) liquid, (g) gas and (aq) dissolved in water. Example: 2H₂(g) + O₂(g) → 2H₂O(l)."
+  ],
+  "remember": "Balance by changing coefficients only, so each atom count matches. State symbols show the form of each substance.",
+  "a": {
+   "q": "Magnesium burns in oxygen. Which of these equations shows the reaction with the same atoms on both sides?",
+   "opts": [
+    "2Mg + O₂ → 2MgO",
+    "Mg + O₂ → MgO",
+    "Mg + O₂ → 2MgO",
+    "2Mg + 2O₂ → 2MgO"
+   ],
+   "why": "2Mg + O₂ → 2MgO has 2 Mg and 2 O on each side. Mg + O₂ → MgO looks tempting because each formula is correct, but it has 2 O atoms on the left and only 1 on the right.",
+   "clue": "Count the Mg atoms and the O atoms on each side."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student balances H₂ + O₂ → H₂O by changing the product to H₂O₂. Why is this wrong, and what is the right fix?",
+   "opts": [
+    "It changes the substance; put 2 in front of H₂ and H₂O",
+    "It changes the substance; put 2 in front of O₂ and H₂O",
+    "It is fine, because both sides now have the same atoms",
+    "It is fine, as small numbers can change like coefficients"
+   ],
+   "why": "Changing a small number inside a formula makes a different substance, since H₂O₂ is not water. Only coefficients can change, so write 2H₂ + O₂ → 2H₂O, with 4 H and 2 O on each side. Putting 2 in front of O₂ and H₂O is tempting, but it gives 2 H on the left and 4 on the right.",
+   "clue": "Which numbers are you allowed to change? Then count the H atoms."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "2Mg + O₂ → 2MgO",
+    "also_right": []
+   },
+   "b": {
+    "best": "It changes the substance; put 2 in front of H₂ and H₂O",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The intended option says the right fix is to put a 2 in front of H₂O. That alone gives H₂ + O₂ → 2H₂O, with 2 H atoms on the left and 4 on the right, which is still unbalanced. The full fix, 2H₂ + O₂ → 2H₂O as the why says, also needs a 2 in front of H₂. The option should name both coefficients."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says each formula has a number in front, called a coefficient. But in its own examples O₂ has no number shown. It should say that a coefficient of 1 is not written, or younger students may be confused."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The intended option says the right fix is to put a 2 in front of H₂O. That alone gives H₂ + O₂ → 2H₂O, with 2 H atoms on the left and 4 on the right, which is still unbalanced. The full fix, 2H₂ + O₂ → 2H₂O as the why says, also needs a 2 in front of H₂. The option should name both coefficients.",
+   "Card, wording: The card says each formula has a number in front, called a coefficient. But in its own examples O₂ has no number shown. It should say that a coefficient of 1 is not written, or younger students may be confused."
+  ]
+ },
+ "final": {
+  "title": "Balanced chemical equations",
+  "card": [
+   "A chemical equation shows reactants on the left and products on the right, with an arrow between them. A number in front of a formula, called a coefficient, says how many of that substance react or form. A coefficient of 1 is not written.",
+   "A balanced equation has the same number of each kind of atom on both sides. Atoms are only rearranged, so none can appear or vanish.",
+   "To balance an equation, change the coefficients only. Never change the small numbers inside a formula, because that would make a different substance. For example, 2H₂ + O₂ → 2H₂O has 4 H atoms and 2 O atoms on each side.",
+   "State symbols follow each formula: (s) solid, (l) liquid, (g) gas and (aq) dissolved in water. Example: 2H₂(g) + O₂(g) → 2H₂O(l)."
+  ],
+  "remember": "Balance by changing coefficients only, so each atom count matches. State symbols show the form of each substance.",
+  "a": {
+   "q": "Magnesium burns in oxygen. Which of these equations shows the reaction with the same atoms on both sides?",
+   "opts": [
+    "2Mg + O₂ → 2MgO",
+    "Mg + O₂ → MgO",
+    "Mg + O₂ → 2MgO",
+    "2Mg + 2O₂ → 2MgO"
+   ],
+   "why": "2Mg + O₂ → 2MgO has 2 Mg and 2 O on each side. Mg + O₂ → MgO looks tempting because each formula is correct, but it has 2 O atoms on the left and only 1 on the right.",
+   "clue": "Count the Mg atoms and the O atoms on each side."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student balances H₂ + O₂ → H₂O by changing the product to H₂O₂. Why is this wrong, and what is the right fix?",
+   "opts": [
+    "It changes the substance; put 2 in front of H₂ and H₂O",
+    "It changes the substance; put 2 in front of O₂ and H₂O",
+    "It is fine, because both sides now have the same atoms",
+    "It is fine, as small numbers can change like coefficients"
+   ],
+   "why": "Changing a small number inside a formula makes a different substance, since H₂O₂ is not water. Only coefficients can change, so write 2H₂ + O₂ → 2H₂O, with 4 H and 2 O on each side. Putting 2 in front of O₂ and H₂O is tempting, but it gives 2 H on the left and 4 on the right.",
+   "clue": "Which numbers are you allowed to change? Then count the H atoms."
+  }
+ },
+ "cleared_by": "recheck"
 }

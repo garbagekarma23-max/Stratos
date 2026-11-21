@@ -24,8 +24,238 @@
    0.22
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:53Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:53Z write: done",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.00648,
+  "check": 0.00688,
+  "fix": 0.0163,
+  "recheck": 0.00591
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, mat-mean-median-mode-range, also teaches the mean and asks a mean question, which goes beyond this point's median, mode and range brief, so a narrower new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Median, mode and range",
+  "card": [
+   [
+    "Median",
+    "The middle value once the data is in order from smallest to largest. If there are two middle values, the median is halfway between them."
+   ],
+   [
+    "Mode",
+    "The value that appears most often. A set of data can have no mode, one mode or more than one mode."
+   ],
+   [
+    "Range",
+    "The highest value minus the lowest value. It tells you how spread out the data is."
+   ],
+   [
+    "Example",
+    "Data: 7, 3, 9, 3, 5, 8. In order: 3, 3, 5, 7, 8, 9. The median is \\(\\frac{5 + 7}{2} = 6\\), the mode is 3 and the range is \\(9 - 3 = 6\\)."
+   ]
+  ],
+  "remember": "Order the data first. Median is the middle, mode is the most common, range is highest minus lowest.",
+  "a": {
+   "q": "Mia's quiz scores are 6, 9, 4, 9, 7. What is the median?",
+   "opts": [
+    "\\(7\\)",
+    "\\(9\\)",
+    "\\(4\\)",
+    "\\(6\\)"
+   ],
+   "why": "In order the scores are 4, 6, 7, 9, 9, and the middle value is 7. The tempting answer 6 is the middle score of the list as first written, which is not in order.",
+   "clue": "Put the scores in order before finding the middle."
+  },
+  "b": {
+   "d": 3,
+   "q": "The daily number of customers at Sam's shop over six days was 12, 15, 11, 15, 20, 13. What is the range, and what is the median?",
+   "opts": [
+    "Range 9, median 14",
+    "Range 9, median 15",
+    "Range 8, median 14",
+    "Range 8, median 15"
+   ],
+   "why": "The highest is 20 and the lowest is 11, so the range is \\(20 - 11 = 9\\). In order: 11, 12, 13, 15, 15, 20. The two middle values are 13 and 15, so the median is 14. The value 15 is the mode, not the median.",
+   "clue": "With six values, there are two middle values."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(7\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "Range 9, median 14",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says 6 is 'the middle score of the list as first written', but the list as written is 6, 9, 4, 9, 7, whose middle score is 4, not 6. The explanation of the distractor is false."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and the card are correct (a: median 7; b: range 9, median 14). The why for question a wrongly says 6 is the middle of the unordered list, when that middle value is 4."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: The why says 6 is 'the middle score of the list as first written', but the list as written is 6, 9, 4, 9, 7, whose middle score is 4, not 6. The explanation of the distractor is false."
+ ],
+ "proposal": {
+  "title": "Median, mode and range",
+  "card": [
+   [
+    "Median",
+    "The middle value once the data is in order from smallest to largest. If there are two middle values, the median is halfway between them."
+   ],
+   [
+    "Mode",
+    "The value that appears most often. A set of data can have no mode, one mode or more than one mode."
+   ],
+   [
+    "Range",
+    "The highest value minus the lowest value. It tells you how spread out the data is."
+   ],
+   [
+    "Example",
+    "Data: 7, 3, 9, 3, 5, 8. In order: 3, 3, 5, 7, 8, 9. The median is \\(\\frac{5 + 7}{2} = 6\\), the mode is 3 and the range is \\(9 - 3 = 6\\)."
+   ]
+  ],
+  "remember": "Order the data first. Median is the middle, mode is the most common, range is highest minus lowest.",
+  "a": {
+   "q": "Mia's quiz scores are 6, 9, 4, 9, 7. What is the median?",
+   "opts": [
+    "\\(7\\)",
+    "\\(9\\)",
+    "\\(4\\)",
+    "\\(5\\)"
+   ],
+   "why": "In order the scores are 4, 6, 7, 9, 9, and the middle value is 7. The tempting answer 4 is the middle score of the list as first written, which is not in order. The value 9 is the mode and 5 is the range.",
+   "clue": "Put the scores in order before finding the middle."
+  },
+  "b": {
+   "d": 3,
+   "q": "The daily number of customers at Sam's shop over six days was 12, 15, 11, 15, 20, 13. What is the range, and what is the median?",
+   "opts": [
+    "Range 9, median 14",
+    "Range 9, median 15",
+    "Range 8, median 14",
+    "Range 8, median 15"
+   ],
+   "why": "The highest is 20 and the lowest is 11, so the range is \\(20 - 11 = 9\\). In order: 11, 12, 13, 15, 15, 20. The two middle values are 13 and 15, so the median is 14. The value 15 is the mode, not the median.",
+   "clue": "With six values, there are two middle values."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(7\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "Range 9, median 14",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says 6 is 'the middle score of the list as first written', but the list as written is 6, 9, 4, 9, 7, whose middle score is 4, not 6. The explanation of the distractor is false."
+   }
+  ],
+  "flags": [
+   "Question a, fact: The why says 6 is 'the middle score of the list as first written', but the list as written is 6, 9, 4, 9, 7, whose middle score is 4, not 6. The explanation of the distractor is false."
+  ]
+ },
+ "final": {
+  "title": "Median, mode and range",
+  "card": [
+   [
+    "Median",
+    "The middle value once the data is in order from smallest to largest. If there are two middle values, the median is halfway between them."
+   ],
+   [
+    "Mode",
+    "The value that appears most often. A set of data can have no mode, one mode or more than one mode."
+   ],
+   [
+    "Range",
+    "The highest value minus the lowest value. It tells you how spread out the data is."
+   ],
+   [
+    "Example",
+    "Data: 7, 3, 9, 3, 5, 8. In order: 3, 3, 5, 7, 8, 9. The median is \\(\\frac{5 + 7}{2} = 6\\), the mode is 3 and the range is \\(9 - 3 = 6\\)."
+   ]
+  ],
+  "remember": "Order the data first. Median is the middle, mode is the most common, range is highest minus lowest.",
+  "a": {
+   "q": "Mia's quiz scores are 6, 9, 4, 9, 7. What is the median?",
+   "opts": [
+    "\\(7\\)",
+    "\\(9\\)",
+    "\\(4\\)",
+    "\\(5\\)"
+   ],
+   "why": "In order the scores are 4, 6, 7, 9, 9, and the middle value is 7. The tempting answer 4 is the middle score of the list as first written, which is not in order. The value 9 is the mode and 5 is the range.",
+   "clue": "Put the scores in order before finding the middle."
+  },
+  "b": {
+   "d": 3,
+   "q": "The daily number of customers at Sam's shop over six days was 12, 15, 11, 15, 20, 13. What is the range, and what is the median?",
+   "opts": [
+    "Range 9, median 14",
+    "Range 9, median 15",
+    "Range 8, median 14",
+    "Range 8, median 15"
+   ],
+   "why": "The highest is 20 and the lowest is 11, so the range is \\(20 - 11 = 9\\). In order: 11, 12, 13, 15, 15, 20. The two middle values are 13 and 15, so the median is 14. The value 15 is the mode, not the median.",
+   "clue": "With six values, there are two middle values."
+  }
+ },
+ "cleared_by": "recheck"
 }

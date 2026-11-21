@@ -8,8 +8,184 @@
    0.228
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: failed the content check, writing again",
+  "2026-11-20T12:44:56Z write: done (still fails the content check)",
+  "2026-11-20T12:53:26Z check: flagged",
+  "2026-11-20T13:11:48Z fix: suggested",
+  "2026-11-20T14:40:07Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.01534,
+  "check": 0.01421,
+  "fix": 0.0215
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point covers only the burial and cremation rites at Lake Mungo, about 40,000 years ago, while the new point is broader, covering occupation for more than 65,000 years and oral traditions as evidence, so it needs a new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Ancient Aboriginal and Torres Strait Islander histories",
+  "card": [
+   "Aboriginal and Torres Strait Islander Peoples have lived in Australia for more than 65,000 years. Their cultures are among the oldest continuing cultures in the world.",
+   [
+    "Archaeological sites",
+    "Sites hold physical evidence of past lives. Lake Mungo, on Paakantyi, Mutthi Mutthi and Ngiyampaa Country in New South Wales, has ancient human remains and campfire sites."
+   ],
+   [
+    "Oral traditions",
+    "Stories, songs and law are passed down through generations. Some describe past events, such as changes in coastlines and landscapes, so they are a source of knowledge about the ancient past."
+   ],
+   "Historians can use both kinds of evidence together. Sites show what was left behind, and oral traditions record knowledge held by the people themselves."
+  ],
+  "remember": "Aboriginal and Torres Strait Islander Peoples have lived here for more than 65,000 years, and sites and oral traditions both tell us about it.",
+  "a": {
+   "q": "Which statement best describes the history of Aboriginal and Torres Strait Islander Peoples in Australia?",
+   "opts": [
+    "They have lived here for more than 65,000 years",
+    "They have lived here for about 5,000 years",
+    "They arrived here only after the first sea voyages",
+    "They have lived here for about 20,000 years"
+   ],
+   "why": "The evidence shows Aboriginal and Torres Strait Islander Peoples have lived in Australia for more than 65,000 years. The other options give much shorter times, which do not match the evidence from sites and oral traditions.",
+   "clue": "Think about how many tens of thousands of years the evidence covers."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student says that oral traditions are not real evidence because they were not written down. Which reply is best?",
+   "opts": [
+    "Oral traditions pass knowledge down and are a source",
+    "Oral traditions only count if a site also proves them",
+    "Oral traditions are less reliable than sites like Lake Mungo",
+    "Oral traditions are just entertaining stories, not history"
+   ],
+   "why": "Oral traditions are passed down through generations and are a source of knowledge about the ancient past, so a source does not need to be written. The tempting wrong option says a site must prove them first, but the card treats both as sources that can be used together.",
+   "clue": "Does a source have to be written to count as evidence?"
+  }
+ },
+ "redone": true,
+ "local": [
+  "his-ancient-aboriginal-torres-strait banned word in: Stories, songs and law are passed down through generations. Some describe past events, such as changes in coastlines and landscapes, so they are a source of knowledge about the ancient past."
+ ],
+ "check": {
+  "a": {
+   "best": "They have lived here for more than 65,000 years",
+   "also_right": []
+  },
+  "b": {
+   "best": "Oral traditions pass knowledge down and are a source",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The distractor 'They arrived here only after the first sea voyages' is arguably true. Ancestors of Aboriginal and Torres Strait Islander Peoples had to cross open sea to reach Sahul, so arrival did come after (and through) some of the earliest known sea voyages. A careful student could find this option confusing or defensible. It should be replaced with a clearly wrong time-based option."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "first-nations",
+  "summary": "The facts check out (more than 65,000 years; Lake Mungo on Paakantyi, Mutthi Mutthi and Ngiyampaa Country), and both intended answers are correct. One distractor in question a, 'arrived only after the first sea voyages', is arguably true, because arrival in Australia required sea crossings, so it should be replaced."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Question a, wording: The distractor 'They arrived here only after the first sea voyages' is arguably true. Ancestors of Aboriginal and Torres Strait Islander Peoples had to cross open sea to reach Sahul, so arrival did come after (and through) some of the earliest known sea voyages. A careful student could find this option confusing or defensible. It should be replaced with a clearly wrong time-based option.",
+  "Content check: his-ancient-aboriginal-torres-strait banned word in: Stories, songs and law are passed down through generations. Some describe past events, such as changes in coastlines and landscapes, so they are a source of knowledge about the ancient past."
+ ],
+ "proposal": {
+  "title": "Ancient Aboriginal and Torres Strait Islander histories",
+  "card": [
+   "Aboriginal and Torres Strait Islander Peoples have lived in Australia for more than 65,000 years. Their cultures are among the oldest continuing cultures in the world.",
+   [
+    "Archaeological sites",
+    "Sites hold physical evidence of past lives. Lake Mungo, on Paakantyi, Mutthi Mutthi and Ngiyampaa Country in New South Wales, has ancient human remains and campfire sites."
+   ],
+   [
+    "Oral traditions",
+    "Stories, songs and law are passed down through generations. Some describe events from long ago, such as changes in coastlines and sea levels, so they are a source of knowledge about the ancient past."
+   ],
+   "Each kind of evidence is a source in its own right. Sites show what was left behind, oral traditions record knowledge held by the people themselves, and historians can use both together."
+  ],
+  "remember": "Sites like Lake Mungo and oral traditions are both evidence of a history in Australia that goes back more than 65,000 years.",
+  "a": {
+   "q": "Which statement best describes the history of Aboriginal and Torres Strait Islander Peoples in Australia?",
+   "opts": [
+    "They have lived here for more than 65,000 years",
+    "They have lived here for about 5,000 years",
+    "They have lived here for about 1,000 years",
+    "They have lived here for about 20,000 years"
+   ],
+   "why": "The evidence shows Aboriginal and Torres Strait Islander Peoples have lived in Australia for more than 65,000 years. About 20,000 years is the most tempting wrong option, but it is far too short to match the evidence.",
+   "clue": "Think about how many tens of thousands of years the evidence covers."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student says that oral traditions are not real evidence because they were not written down. Which reply is best?",
+   "opts": [
+    "Oral traditions are a source that passes down knowledge",
+    "Oral traditions only count if a site also proves them",
+    "Oral traditions only tell of recent events, not the past",
+    "Oral traditions are just entertaining stories, not history"
+   ],
+   "why": "Oral traditions pass knowledge down through generations and are a source in their own right, so a source does not need to be written. The tempting wrong option says a site must prove them first, but sites and oral traditions are each sources that historians can also use together.",
+   "clue": "Does a source have to be written to count as evidence?"
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Ancient Aboriginal and Torres Strait Islander histories",
+  "card": [
+   "Aboriginal and Torres Strait Islander Peoples have lived in Australia for more than 65,000 years. Their cultures are among the oldest continuing cultures in the world.",
+   [
+    "Archaeological sites",
+    "Sites hold physical evidence of past lives. Lake Mungo, on Paakantyi, Mutthi Mutthi and Ngiyampaa Country in New South Wales, has ancient human remains and campfire sites."
+   ],
+   [
+    "Oral traditions",
+    "Stories, songs and law are passed down through generations. Some describe events from long ago, such as changes in coastlines and sea levels, so they are a source of knowledge about the ancient past."
+   ],
+   "Each kind of evidence is a source in its own right. Sites show what was left behind, oral traditions record knowledge held by the people themselves, and historians can use both together."
+  ],
+  "remember": "Sites like Lake Mungo and oral traditions are both evidence of a history in Australia that goes back more than 65,000 years.",
+  "a": {
+   "q": "Which statement best describes the history of Aboriginal and Torres Strait Islander Peoples in Australia?",
+   "opts": [
+    "They have lived here for more than 65,000 years",
+    "They have lived here for about 5,000 years",
+    "They have lived here for about 1,000 years",
+    "They have lived here for about 20,000 years"
+   ],
+   "why": "The evidence shows Aboriginal and Torres Strait Islander Peoples have lived in Australia for more than 65,000 years. About 20,000 years is the most tempting wrong option, but it is far too short to match the evidence.",
+   "clue": "Think about how many tens of thousands of years the evidence covers."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student says that oral traditions are not real evidence because they were not written down. Which reply is best?",
+   "opts": [
+    "Oral traditions are a source that passes down knowledge",
+    "Oral traditions only count if a site also proves them",
+    "Oral traditions only tell of recent events, not the past",
+    "Oral traditions are just entertaining stories, not history"
+   ],
+   "why": "Oral traditions pass knowledge down through generations and are a source in their own right, so a source does not need to be written. The tempting wrong option says a site must prove them first, but sites and oral traditions are each sources that historians can also use together.",
+   "clue": "Does a source have to be written to count as evidence?"
+  }
+ },
+ "cleared_by": "owner"
 }

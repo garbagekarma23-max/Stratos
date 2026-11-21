@@ -24,8 +24,128 @@
    0.291
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 says adapt ecb-circular-flow-income (2 changes)",
+  "2026-11-20T12:25:40Z adapt: done",
+  "2026-11-20T12:35:44Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "adapt": 0.00288,
+  "check": 0.00921
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "ecb-circular-flow-income",
+  "changes": [
+   "Change the Perth bakery in question a to a bakery in a New South Wales town or city, so the example is local to NSW students.",
+   "Change the Adelaide factory in question b to a factory in a New South Wales town or city, so the example is local to NSW students."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same households-businesses income loop at a suitable depth, and only its Perth and Adelaide examples need to be made local to New South Wales.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "ecb-circular-flow-income",
+  "changes": [
+   "Change the Perth bakery in question a to a bakery in a New South Wales town or city, so the example is local to NSW students.",
+   "Change the Adelaide factory in question b to a factory in a New South Wales town or city, so the example is local to NSW students."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "a.q",
+   "b.q"
+  ]
+ },
+ "draft": {
+  "title": "The circular flow of income",
+  "card": [
+   "Households own labour, which is the work people do. They sell their labour to businesses.",
+   "Businesses pay households income, such as wages, for that work.",
+   "Households then spend that income on the goods and services that businesses sell.",
+   "That spending becomes money for businesses, which they can use to pay workers again. So money flows around the economy in a circle."
+  ],
+  "remember": "Households earn income from businesses, then spend it back on businesses.",
+  "a": {
+   "q": "Priya works at a bakery in Newcastle and uses her wages to buy shoes. What does this show about money?",
+   "opts": [
+    "It flows from business to household and back to business",
+    "It flows from household to business and then stops",
+    "It moves only between households and never to businesses",
+    "It is spent once and does not return to any business"
+   ],
+   "why": "The bakery pays wages to Priya, and she spends them at a shoe business, so money moves from business to household and back to a business. It does not stop, because the shoe business can pay its own workers.",
+   "clue": "Follow the money from the bakery to Priya to the shoe shop."
+  },
+  "b": {
+   "d": 3,
+   "q": "A large factory in Wollongong closes and its workers lose their jobs. What is a likely effect on local shops?",
+   "opts": [
+    "Less income for households, so less spending at shops",
+    "More income for households, so more spending at shops",
+    "No change, as households do not spend their income",
+    "Shops gain money because workers stop selling labour"
+   ],
+   "why": "Without wages, households have less income to spend, so local shops are likely to sell less. Workers no longer selling labour means less income, not more.",
+   "clue": "What happens to spending when wages stop?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It flows from business to household and back to business",
+   "also_right": []
+  },
+  "b": {
+   "best": "Less income for households, so less spending at shops",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The circular flow of income",
+  "card": [
+   "Households own labour, which is the work people do. They sell their labour to businesses.",
+   "Businesses pay households income, such as wages, for that work.",
+   "Households then spend that income on the goods and services that businesses sell.",
+   "That spending becomes money for businesses, which they can use to pay workers again. So money flows around the economy in a circle."
+  ],
+  "remember": "Households earn income from businesses, then spend it back on businesses.",
+  "a": {
+   "q": "Priya works at a bakery in Newcastle and uses her wages to buy shoes. What does this show about money?",
+   "opts": [
+    "It flows from business to household and back to business",
+    "It flows from household to business and then stops",
+    "It moves only between households and never to businesses",
+    "It is spent once and does not return to any business"
+   ],
+   "why": "The bakery pays wages to Priya, and she spends them at a shoe business, so money moves from business to household and back to a business. It does not stop, because the shoe business can pay its own workers.",
+   "clue": "Follow the money from the bakery to Priya to the shoe shop."
+  },
+  "b": {
+   "d": 3,
+   "q": "A large factory in Wollongong closes and its workers lose their jobs. What is a likely effect on local shops?",
+   "opts": [
+    "Less income for households, so less spending at shops",
+    "More income for households, so more spending at shops",
+    "No change, as households do not spend their income",
+    "Shops gain money because workers stop selling labour"
+   ],
+   "why": "Without wages, households have less income to spend, so local shops are likely to sell less. Workers no longer selling labour means less income, not more.",
+   "clue": "What happens to spending when wages stop?"
+  }
+ },
+ "cleared_by": "checker"
 }

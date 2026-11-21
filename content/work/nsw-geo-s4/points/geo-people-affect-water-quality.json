@@ -24,8 +24,241 @@
    0.217
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:45Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:49Z write: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.00675,
+  "check": 0.01455,
+  "fix": 0.02003,
+  "recheck": 0.00634
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches how human activities pollute water; they cover scarcity, managing supply, competing uses, green and blue water, and the forms of water, so the water quality idea needs a new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "How people affect water quality",
+  "card": [
+   "Water quality is how clean and safe water is. A pollutant is a harmful substance or material that makes water dirtier or less safe.",
+   [
+    "Farm runoff",
+    "Rain washes fertiliser, animal waste and chemicals off paddocks into rivers. Extra nutrients can make algae grow fast and use up the oxygen that fish need."
+   ],
+   [
+    "Sewage and industrial waste",
+    "Sewage that is not treated well can carry germs into water. Factories can release chemicals and heavy metals if their waste is not controlled."
+   ],
+   [
+    "Rubbish and stormwater",
+    "Stormwater is rain that runs off roads and roofs into drains. It often flows to creeks and the sea without treatment, carrying litter, oil and dirt with it."
+   ]
+  ],
+  "remember": "People's activities put pollutants in water, and rain and drains often carry them to rivers, lakes and the sea.",
+  "a": {
+   "q": "After heavy rain, fertiliser from a farm paddock washes into a nearby creek. What is this an example of?",
+   "opts": [
+    "Farm runoff carrying a pollutant into a waterway",
+    "Sewage entering a river from a treatment plant",
+    "Stormwater washing litter off a city road",
+    "Industrial waste released from a factory pipe"
+   ],
+   "why": "Rain washed fertiliser off farmland and into a creek, which is farm runoff. Stormwater is similar because rain carries material into waterways, but it comes from roads and roofs in built-up areas, not paddocks.",
+   "clue": "Think about where the fertiliser came from."
+  },
+  "b": {
+   "d": 3,
+   "q": "A storm hits a town in NSW. Rain runs off the streets, picks up litter and oil, and flows through drains into the nearby river. Which term best describes how the pollutants reached the river?",
+   "opts": [
+    "Stormwater carried them through the drains",
+    "Farm runoff carried them from the paddocks",
+    "Sewage leaked into the river from homes",
+    "Industrial waste was poured in by a factory"
+   ],
+   "why": "The rain ran off streets and drains took it to the river, so this is stormwater. Farm runoff is the tempting choice because rain also carries pollutants, but this water came from a town's streets, not farmland.",
+   "clue": "Where did the rain run off from, and what carried it to the river?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Farm runoff carrying a pollutant into a waterway",
+   "also_right": []
+  },
+  "b": {
+   "best": "Stormwater carried them through the drains",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem says 'farm paddock', and the right option is the only one that starts with 'Farm', so a student can match the word without knowing what farm runoff is."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says the rain 'flows through drains', and the right option is the only one that mentions drains, so a student can match the word without knowing what stormwater is."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card is accurate and both intended answers are right. In each question the right option repeats a key word from the stem ('farm' in a, 'drains' in b), so students could pick it by word-matching."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The stem says 'farm paddock', and the right option is the only one that starts with 'Farm', so a student can match the word without knowing what farm runoff is.",
+  "Question b, wording: The stem says the rain 'flows through drains', and the right option is the only one that mentions drains, so a student can match the word without knowing what stormwater is."
+ ],
+ "proposal": {
+  "title": "How people affect water quality",
+  "card": [
+   "Water quality is how clean and safe water is. A pollutant is a harmful substance or material that makes water dirtier or less safe.",
+   [
+    "Farm runoff",
+    "Rain washes fertiliser, animal waste and chemicals off paddocks into rivers. Extra nutrients can make algae grow fast and use up the oxygen that fish need."
+   ],
+   [
+    "Sewage and industrial waste",
+    "Sewage that is not treated well can carry germs into water. Factories can release chemicals and heavy metals if their waste is not controlled."
+   ],
+   [
+    "Rubbish and stormwater",
+    "Stormwater is rain that runs off roads and roofs into drains. It often flows to creeks and the sea without treatment, carrying litter, oil and dirt with it."
+   ]
+  ],
+  "remember": "People's activities put pollutants in water, and rain and drains often carry them to rivers, lakes and the sea.",
+  "a": {
+   "q": "After heavy rain, fertiliser spread on a wheat crop washes into a nearby creek. What is this an example of?",
+   "opts": [
+    "Farm runoff",
+    "Stormwater",
+    "Untreated sewage",
+    "Industrial waste"
+   ],
+   "why": "Rain washed fertiliser off land used to grow crops and into a creek, which is farm runoff. Stormwater is the tempting choice because rain also carries material into waterways, but stormwater runs off roads and roofs in built-up areas, not crop land.",
+   "clue": "Think about what kind of land the fertiliser was on."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a NSW town, heavy rain runs off the streets and roofs, picks up litter and oil, and flows untreated into a nearby river. Which source of pollution is this?",
+   "opts": [
+    "Stormwater",
+    "Farm runoff",
+    "Untreated sewage",
+    "Industrial waste"
+   ],
+   "why": "Rain running off streets and roofs and flowing untreated to a river is stormwater. Farm runoff is the tempting choice because rain carries pollutants there too, but farm runoff comes off paddocks, not a town's streets and roofs.",
+   "clue": "Where did the rain run off from?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Farm runoff",
+    "also_right": []
+   },
+   "b": {
+    "best": "Stormwater",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem says 'farm paddock', and the right option is the only one that starts with 'Farm', so a student can match the word without knowing what farm runoff is."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says the rain 'flows through drains', and the right option is the only one that mentions drains, so a student can match the word without knowing what stormwater is."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The stem says 'farm paddock', and the right option is the only one that starts with 'Farm', so a student can match the word without knowing what farm runoff is.",
+   "Question b, wording: The stem says the rain 'flows through drains', and the right option is the only one that mentions drains, so a student can match the word without knowing what stormwater is."
+  ]
+ },
+ "final": {
+  "title": "How people affect water quality",
+  "card": [
+   "Water quality is how clean and safe water is. A pollutant is a harmful substance or material that makes water dirtier or less safe.",
+   [
+    "Farm runoff",
+    "Rain washes fertiliser, animal waste and chemicals off paddocks into rivers. Extra nutrients can make algae grow fast and use up the oxygen that fish need."
+   ],
+   [
+    "Sewage and industrial waste",
+    "Sewage that is not treated well can carry germs into water. Factories can release chemicals and heavy metals if their waste is not controlled."
+   ],
+   [
+    "Rubbish and stormwater",
+    "Stormwater is rain that runs off roads and roofs into drains. It often flows to creeks and the sea without treatment, carrying litter, oil and dirt with it."
+   ]
+  ],
+  "remember": "People's activities put pollutants in water, and rain and drains often carry them to rivers, lakes and the sea.",
+  "a": {
+   "q": "After heavy rain, fertiliser spread on a wheat crop washes into a nearby creek. What is this an example of?",
+   "opts": [
+    "Farm runoff",
+    "Stormwater",
+    "Untreated sewage",
+    "Industrial waste"
+   ],
+   "why": "Rain washed fertiliser off land used to grow crops and into a creek, which is farm runoff. Stormwater is the tempting choice because rain also carries material into waterways, but stormwater runs off roads and roofs in built-up areas, not crop land.",
+   "clue": "Think about what kind of land the fertiliser was on."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a NSW town, heavy rain runs off the streets and roofs, picks up litter and oil, and flows untreated into a nearby river. Which source of pollution is this?",
+   "opts": [
+    "Stormwater",
+    "Farm runoff",
+    "Untreated sewage",
+    "Industrial waste"
+   ],
+   "why": "Rain running off streets and roofs and flowing untreated to a river is stormwater. Farm runoff is the tempting choice because rain carries pollutants there too, but farm runoff comes off paddocks, not a town's streets and roofs.",
+   "clue": "Where did the rain run off from?"
+  }
+ },
+ "cleared_by": "recheck"
 }

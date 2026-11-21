@@ -24,8 +24,200 @@
    0.245
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:58Z write: done",
+  "2026-11-20T12:35:55Z check: flagged",
+  "2026-11-20T12:44:59Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.0141,
+  "check": 0.01111,
+  "fix": 0.01782,
+  "recheck": 0.00896
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points defines the language of polynomials (degree, leading coefficient, constant term); the closest, solving polynomial equations, teaches a different idea and depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The language of polynomials",
+  "card": [
+   "A polynomial is a sum of terms, each a number times a power of \\(x\\), where the power is a whole number (0, 1, 2, ...). For example, \\(4x^{3} - 5x + 7\\) is a polynomial.",
+   "The degree is the highest power of \\(x\\). In \\(4x^{3} - 5x + 7\\), the degree is 3.",
+   "The leading coefficient is the number in front of the highest power, here \\(4\\). The constant term has no \\(x\\), here \\(7\\).",
+   "Powers such as \\(x^{-1}\\), \\(\\sqrt{x}\\) or \\(\\frac{1}{x}\\) are not whole-number powers, so an expression with one of them is not a polynomial. Write terms from the highest power down."
+  ],
+  "remember": "Degree is the highest power. The leading coefficient is its number, the constant term has no \\(x\\).",
+  "a": {
+   "q": "For \\(P(x) = 2x^{4} - 3x^{2} + 9x - 6\\), what is the leading coefficient?",
+   "opts": [
+    "\\(2\\)",
+    "\\(4\\)",
+    "\\(-6\\)",
+    "\\(9\\)"
+   ],
+   "why": "The highest power is \\(x^{4}\\), so the leading coefficient is the number in front of it, \\(2\\). The number \\(4\\) is the degree, not the coefficient.",
+   "clue": "Find the term with the highest power first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which expression is a polynomial of degree 3 with constant term \\(-5\\)?",
+   "opts": [
+    "\\(7x - x^{3} - 5\\)",
+    "\\(x^{3} + \\frac{2}{x} - 5\\)",
+    "\\(5x^{3} - 3x^{2}\\)",
+    "\\(x^{5} + 3x - 3\\)"
+   ],
+   "why": "\\(7x - x^{3} - 5\\) has whole-number powers, highest power 3 and constant term \\(-5\\), even though it is not written in order. The second option has \\(\\frac{2}{x}\\), so it is not a polynomial.",
+   "clue": "Check every power is a whole number, then find the highest."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(2\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(7x - x^{3} - 5\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) calls the expression with \\(\\frac{2}{x}\\) 'the second option', but options are shown in random order. In this order it is the third option, so the explanation can point students to the wrong option. Name the expression \\(x^{3} + \\frac{2}{x} - 5\\) itself instead."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct. Why (b) refers to 'the second option' by position, which is wrong once options are shuffled. It should name the expression with \\(\\frac{2}{x}\\) directly."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) calls the expression with \\(\\frac{2}{x}\\) 'the second option', but options are shown in random order. In this order it is the third option, so the explanation can point students to the wrong option. Name the expression \\(x^{3} + \\frac{2}{x} - 5\\) itself instead."
+ ],
+ "proposal": {
+  "title": "The language of polynomials",
+  "card": [
+   "A polynomial is a sum of terms, each a number times a power of \\(x\\), where the power is a whole number (0, 1, 2, ...). For example, \\(4x^{3} - 5x + 7\\) is a polynomial.",
+   "The degree is the highest power of \\(x\\). In \\(4x^{3} - 5x + 7\\), the degree is 3.",
+   "The leading coefficient is the number in front of the highest power, here \\(4\\). The constant term has no \\(x\\), here \\(7\\).",
+   "Powers such as \\(x^{-1}\\), \\(\\sqrt{x}\\) or \\(\\frac{1}{x}\\) are not whole-number powers, so an expression with one of them is not a polynomial. Write terms from the highest power down."
+  ],
+  "remember": "Degree is the highest power. The leading coefficient is its number, the constant term has no \\(x\\).",
+  "a": {
+   "q": "For \\(P(x) = 2x^{4} - 3x^{2} + 9x - 6\\), what is the leading coefficient?",
+   "opts": [
+    "\\(2\\)",
+    "\\(4\\)",
+    "\\(-6\\)",
+    "\\(9\\)"
+   ],
+   "why": "The highest power is \\(x^{4}\\), so the leading coefficient is the number in front of it, \\(2\\). The number \\(4\\) is the degree, not the coefficient.",
+   "clue": "Find the term with the highest power first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which expression is a polynomial of degree 3 with constant term \\(-5\\)?",
+   "opts": [
+    "\\(7x - x^{3} - 5\\)",
+    "\\(x^{3} + \\frac{2}{x} - 5\\)",
+    "\\(5x^{3} - 3x^{2}\\)",
+    "\\(x^{5} + 3x - 3\\)"
+   ],
+   "why": "\\(7x - x^{3} - 5\\) has whole-number powers, highest power 3 and constant term \\(-5\\), even though it is not written in order. The expression \\(x^{3} + \\frac{2}{x} - 5\\) has a \\(\\frac{2}{x}\\) term, so it is not a polynomial.",
+   "clue": "Check every power is a whole number, then find the highest."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(2\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(7x - x^{3} - 5\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) calls the expression with \\(\\frac{2}{x}\\) 'the second option', but options are shown in random order. In this order it is the third option, so the explanation can point students to the wrong option. Name the expression \\(x^{3} + \\frac{2}{x} - 5\\) itself instead."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) calls the expression with \\(\\frac{2}{x}\\) 'the second option', but options are shown in random order. In this order it is the third option, so the explanation can point students to the wrong option. Name the expression \\(x^{3} + \\frac{2}{x} - 5\\) itself instead."
+  ]
+ },
+ "final": {
+  "title": "The language of polynomials",
+  "card": [
+   "A polynomial is a sum of terms, each a number times a power of \\(x\\), where the power is a whole number (0, 1, 2, ...). For example, \\(4x^{3} - 5x + 7\\) is a polynomial.",
+   "The degree is the highest power of \\(x\\). In \\(4x^{3} - 5x + 7\\), the degree is 3.",
+   "The leading coefficient is the number in front of the highest power, here \\(4\\). The constant term has no \\(x\\), here \\(7\\).",
+   "Powers such as \\(x^{-1}\\), \\(\\sqrt{x}\\) or \\(\\frac{1}{x}\\) are not whole-number powers, so an expression with one of them is not a polynomial. Write terms from the highest power down."
+  ],
+  "remember": "Degree is the highest power. The leading coefficient is its number, the constant term has no \\(x\\).",
+  "a": {
+   "q": "For \\(P(x) = 2x^{4} - 3x^{2} + 9x - 6\\), what is the leading coefficient?",
+   "opts": [
+    "\\(2\\)",
+    "\\(4\\)",
+    "\\(-6\\)",
+    "\\(9\\)"
+   ],
+   "why": "The highest power is \\(x^{4}\\), so the leading coefficient is the number in front of it, \\(2\\). The number \\(4\\) is the degree, not the coefficient.",
+   "clue": "Find the term with the highest power first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which expression is a polynomial of degree 3 with constant term \\(-5\\)?",
+   "opts": [
+    "\\(7x - x^{3} - 5\\)",
+    "\\(x^{3} + \\frac{2}{x} - 5\\)",
+    "\\(5x^{3} - 3x^{2}\\)",
+    "\\(x^{5} + 3x - 3\\)"
+   ],
+   "why": "\\(7x - x^{3} - 5\\) has whole-number powers, highest power 3 and constant term \\(-5\\), even though it is not written in order. The expression \\(x^{3} + \\frac{2}{x} - 5\\) has a \\(\\frac{2}{x}\\) term, so it is not a polynomial.",
+   "clue": "Check every power is a whole number, then find the highest."
+  }
+ },
+ "cleared_by": "recheck"
 }

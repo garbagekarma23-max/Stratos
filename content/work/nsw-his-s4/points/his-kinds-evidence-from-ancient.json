@@ -16,8 +16,232 @@
    0.239
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: done",
+  "2026-11-20T12:44:56Z check: flagged",
+  "2026-11-20T12:53:26Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00654,
+  "check": 0.01373,
+  "fix": 0.02413,
+  "recheck": 0.00763
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the three bank points teaches the broad idea of the kinds of evidence historians use (art, writing, buildings, remains, oral traditions) and their strengths and gaps: the science point covers only dating and DNA methods, the periods point covers tool-based period names, and the Renaissance point is about a different period entirely.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Kinds of evidence from the ancient past",
+  "card": [
+   "Historians and archaeologists study sources, which are the things that give us clues about the past. Ancient sources include art, symbols, writing, tools, buildings, human remains and oral traditions.",
+   [
+    "Written and oral",
+    "Writing, such as letters, laws and records on clay tablets, can tell us what people thought and did. Oral traditions are stories, songs and knowledge passed down by speaking from one generation to the next."
+   ],
+   [
+    "Objects and places",
+    "Tools, buildings, art and human remains show how people lived, worked and died. They cannot tell us what people thought unless we also have other sources."
+   ],
+   "Every kind of source has strengths and gaps. Many things rot away or are lost, so no single source gives the whole story. Historians compare different kinds of evidence to build a fuller picture."
+  ],
+  "remember": "Each kind of evidence has strengths and gaps, so historians use several kinds together.",
+  "a": {
+   "q": "Why do historians compare several kinds of evidence about an ancient society?",
+   "opts": [
+    "Each kind has gaps that others may help to fill",
+    "Only one kind of evidence can ever be correct",
+    "Written sources are always more truthful than objects",
+    "Objects show what people thought better than writing"
+   ],
+   "why": "Each source shows only part of the past, so using several kinds gives a fuller picture. It is wrong to say writing is always more truthful, because the card says every kind has strengths and gaps.",
+   "clue": "Think about what is left out of any one source."
+  },
+  "b": {
+   "d": 3,
+   "q": "Archaeologists dig up the stone foundations of a house and some tools in an ancient village. What can this evidence show, and what is a gap?",
+   "opts": [
+    "It shows how people lived, but not what they thought",
+    "It shows what people thought, but not how they lived",
+    "It shows how people lived, and nothing is left out",
+    "It shows nothing, as only writing counts as evidence"
+   ],
+   "why": "Buildings and tools show how people lived and worked. On their own they cannot tell us what people thought, so that is a gap. Saying they show what people thought reverses the strength and the gap.",
+   "clue": "Objects and buildings show actions more than ideas."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Each kind has gaps that others may help to fill",
+   "also_right": []
+  },
+  "b": {
+   "best": "It shows how people lived, but not what they thought",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says tools, buildings, art and human remains 'cannot tell us what people thought' without other sources. Art, symbols and burials (such as grave goods) are often key evidence for ancient beliefs, even with no writing. Grouping art here and saying 'cannot' is misleading. Something like 'can tell us less about what people thought' would be accurate."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Objects and buildings show actions more than ideas' restates the right option almost directly, so a student can pick it without thinking about the evidence."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clearly right answer, but the card overstates its point: it says art and other objects cannot tell us what people thought, when art and burials are often used as evidence of beliefs. The clue for question b also nearly gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says tools, buildings, art and human remains 'cannot tell us what people thought' without other sources. Art, symbols and burials (such as grave goods) are often key evidence for ancient beliefs, even with no writing. Grouping art here and saying 'cannot' is misleading. Something like 'can tell us less about what people thought' would be accurate.",
+  "Question b, other: The clue 'Objects and buildings show actions more than ideas' restates the right option almost directly, so a student can pick it without thinking about the evidence."
+ ],
+ "proposal": {
+  "title": "Kinds of evidence from the ancient past",
+  "card": [
+   "Historians and archaeologists study sources, which are the things that give us clues about the past. Ancient sources include art, symbols, writing, tools, buildings, human remains and oral traditions.",
+   [
+    "Written and oral",
+    "Writing, such as letters, laws and records on clay tablets, can tell us what people thought and did. Oral traditions are stories, songs and knowledge passed down by speaking from one generation to the next."
+   ],
+   [
+    "Objects and places",
+    "Tools, buildings and human remains show how people lived, worked and died. On their own they tell us less about what people thought, though art, symbols and burials can give clues to beliefs."
+   ],
+   "Every kind of source has strengths and gaps. Many things rot away or are lost, so no single source gives the whole story. Historians compare different kinds of evidence to build a fuller picture."
+  ],
+  "remember": "Each kind of evidence has strengths and gaps, so historians use several kinds together.",
+  "a": {
+   "q": "Why do historians compare several kinds of evidence about an ancient society?",
+   "opts": [
+    "Each kind has gaps that others may help to fill",
+    "Only one kind of evidence can ever be correct",
+    "Written sources are always more truthful than objects",
+    "Objects show what people thought better than writing"
+   ],
+   "why": "Each source shows only part of the past, so using several kinds gives a fuller picture. It is wrong to say writing is always more truthful, because the card says every kind has strengths and gaps.",
+   "clue": "Think about what is left out of any one source."
+  },
+  "b": {
+   "d": 3,
+   "q": "Archaeologists dig up the stone foundations of a house and some tools in an ancient village. What can this evidence show, and what is a gap?",
+   "opts": [
+    "It shows how people lived, but less about their thoughts",
+    "It shows what people thought, but not how they lived",
+    "It shows how people lived, and nothing is left out",
+    "It shows nothing, as only writing counts as evidence"
+   ],
+   "why": "Buildings and tools show how people lived and worked. On their own they tell us less about what people thought, so that is a gap. Saying they show what people thought reverses the strength and the gap.",
+   "clue": "Picture a stone wall and a stone axe. What could they tell you without any writing?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Each kind has gaps that others may help to fill",
+    "also_right": []
+   },
+   "b": {
+    "best": "It shows how people lived, but less about their thoughts",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says tools, buildings, art and human remains 'cannot tell us what people thought' without other sources. Art, symbols and burials (such as grave goods) are often key evidence for ancient beliefs, even with no writing. Grouping art here and saying 'cannot' is misleading. Something like 'can tell us less about what people thought' would be accurate."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Objects and buildings show actions more than ideas' restates the right option almost directly, so a student can pick it without thinking about the evidence."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card says tools, buildings, art and human remains 'cannot tell us what people thought' without other sources. Art, symbols and burials (such as grave goods) are often key evidence for ancient beliefs, even with no writing. Grouping art here and saying 'cannot' is misleading. Something like 'can tell us less about what people thought' would be accurate.",
+   "Question b, other: The clue 'Objects and buildings show actions more than ideas' restates the right option almost directly, so a student can pick it without thinking about the evidence."
+  ]
+ },
+ "final": {
+  "title": "Kinds of evidence from the ancient past",
+  "card": [
+   "Historians and archaeologists study sources, which are the things that give us clues about the past. Ancient sources include art, symbols, writing, tools, buildings, human remains and oral traditions.",
+   [
+    "Written and oral",
+    "Writing, such as letters, laws and records on clay tablets, can tell us what people thought and did. Oral traditions are stories, songs and knowledge passed down by speaking from one generation to the next."
+   ],
+   [
+    "Objects and places",
+    "Tools, buildings and human remains show how people lived, worked and died. On their own they tell us less about what people thought, though art, symbols and burials can give clues to beliefs."
+   ],
+   "Every kind of source has strengths and gaps. Many things rot away or are lost, so no single source gives the whole story. Historians compare different kinds of evidence to build a fuller picture."
+  ],
+  "remember": "Each kind of evidence has strengths and gaps, so historians use several kinds together.",
+  "a": {
+   "q": "Why do historians compare several kinds of evidence about an ancient society?",
+   "opts": [
+    "Each kind has gaps that others may help to fill",
+    "Only one kind of evidence can ever be correct",
+    "Written sources are always more truthful than objects",
+    "Objects show what people thought better than writing"
+   ],
+   "why": "Each source shows only part of the past, so using several kinds gives a fuller picture. It is wrong to say writing is always more truthful, because the card says every kind has strengths and gaps.",
+   "clue": "Think about what is left out of any one source."
+  },
+  "b": {
+   "d": 3,
+   "q": "Archaeologists dig up the stone foundations of a house and some tools in an ancient village. What can this evidence show, and what is a gap?",
+   "opts": [
+    "It shows how people lived, but less about their thoughts",
+    "It shows what people thought, but not how they lived",
+    "It shows how people lived, and nothing is left out",
+    "It shows nothing, as only writing counts as evidence"
+   ],
+   "why": "Buildings and tools show how people lived and worked. On their own they tell us less about what people thought, so that is a gap. Saying they show what people thought reverses the strength and the gap.",
+   "clue": "Picture a stone wall and a stone axe. What could they tell you without any writing?"
+  }
+ },
+ "cleared_by": "recheck"
 }

@@ -16,8 +16,179 @@
    0.214
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:54Z write: done",
+  "2026-11-20T12:35:53Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.01395,
+  "check": 0.01043
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The brief asks for both interpreting a graph and spotting misleading features, but the closest bank point covers only misleading graphs at a Year 9 depth, and the other covers only interpreting real data, so neither matches the whole point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Reading graphs critically",
+  "card": [
+   "First read the title, the axis labels and the scale. They tell you what the graph measures and in what units.",
+   [
+    "Axis not at zero",
+    "If a column graph's axis starts above zero, small differences look huge. The column heights no longer match the sizes of the values."
+   ],
+   [
+    "Uneven scale",
+    "If the steps on an axis are not equal, such as 0, 10, 20, 50, a graph can look steady when it is not. Check that each step is the same size."
+   ],
+   "Example: in the graph above, Shop B's column looks twice as tall, but 100 is only 5 more than 95."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "chart",
+    "chart": "bar",
+    "alt": "A column graph of two shops' weekly sales. The axis starts at 90. Shop A is 95 and Shop B is 100. Shop B's column looks twice as tall as Shop A's.",
+    "bars": [
+     [
+      "Shop A",
+      95
+     ],
+     [
+      "Shop B",
+      100
+     ]
+    ],
+    "x": {
+     "label": "Shop"
+    },
+    "y": {
+     "min": 90,
+     "max": 102,
+     "step": 2,
+     "label": "Sales"
+    },
+    "truncated": true
+   }
+  },
+  "remember": "Check the title, labels and scale before you trust the shape of a graph.",
+  "a": {
+   "q": "A column graph's axis starts at 90 instead of 0. What is the effect on how the graph looks?",
+   "opts": [
+    "Small differences look much bigger",
+    "Large differences look much smaller",
+    "All the columns look equal",
+    "The values are changed"
+   ],
+   "why": "Cutting off the bottom of the axis makes the columns shorter, so a small gap looks like a big one. The values themselves stay the same.",
+   "clue": "Think about how tall the columns look compared with each other."
+  },
+  "b": {
+   "d": 3,
+   "q": "A line graph of a town's monthly rainfall has an axis marked 0, 10, 20, 50, 100 at equal spacing. Why is this misleading?",
+   "opts": [
+    "The steps are unequal, so the line looks flatter than it is",
+    "The axis starts at zero, so changes look larger",
+    "The axis has too many numbers on it",
+    "The line graph should be a column graph"
+   ],
+   "why": "Equal spacing for unequal steps squashes the big jumps, so the rises look smaller than they are. Starting at zero is not a problem.",
+   "clue": "Compare the size of each step on the axis."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Small differences look much bigger",
+   "also_right": []
+  },
+  "b": {
+   "best": "The steps are unequal, so the line looks flatter than it is",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The chart data matches the text: on an axis starting at 90, Shop A's column is 5 units tall and Shop B's is 10, so B's looks twice as tall."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Reading graphs critically",
+  "card": [
+   "First read the title, the axis labels and the scale. They tell you what the graph measures and in what units.",
+   [
+    "Axis not at zero",
+    "If a column graph's axis starts above zero, small differences look huge. The column heights no longer match the sizes of the values."
+   ],
+   [
+    "Uneven scale",
+    "If the steps on an axis are not equal, such as 0, 10, 20, 50, a graph can look steady when it is not. Check that each step is the same size."
+   ],
+   "Example: in the graph above, Shop B's column looks twice as tall, but 100 is only 5 more than 95."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "chart",
+    "chart": "bar",
+    "alt": "A column graph of two shops' weekly sales. The axis starts at 90. Shop A is 95 and Shop B is 100. Shop B's column looks twice as tall as Shop A's.",
+    "bars": [
+     [
+      "Shop A",
+      95
+     ],
+     [
+      "Shop B",
+      100
+     ]
+    ],
+    "x": {
+     "label": "Shop"
+    },
+    "y": {
+     "min": 90,
+     "max": 102,
+     "step": 2,
+     "label": "Sales"
+    },
+    "truncated": true
+   }
+  },
+  "remember": "Check the title, labels and scale before you trust the shape of a graph.",
+  "a": {
+   "q": "A column graph's axis starts at 90 instead of 0. What is the effect on how the graph looks?",
+   "opts": [
+    "Small differences look much bigger",
+    "Large differences look much smaller",
+    "All the columns look equal",
+    "The values are changed"
+   ],
+   "why": "Cutting off the bottom of the axis makes the columns shorter, so a small gap looks like a big one. The values themselves stay the same.",
+   "clue": "Think about how tall the columns look compared with each other."
+  },
+  "b": {
+   "d": 3,
+   "q": "A line graph of a town's monthly rainfall has an axis marked 0, 10, 20, 50, 100 at equal spacing. Why is this misleading?",
+   "opts": [
+    "The steps are unequal, so the line looks flatter than it is",
+    "The axis starts at zero, so changes look larger",
+    "The axis has too many numbers on it",
+    "The line graph should be a column graph"
+   ],
+   "why": "Equal spacing for unequal steps squashes the big jumps, so the rises look smaller than they are. Starting at zero is not a problem.",
+   "clue": "Compare the size of each step on the axis."
+  }
+ },
+ "cleared_by": "checker"
 }

@@ -8,8 +8,115 @@
    0.205
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:42Z write: failed the content check, writing again",
+  "2026-11-20T12:35:46Z write: done",
+  "2026-11-20T12:44:53Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.01844,
+  "check": 0.00856
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point covers first-person and third-person narration together, and its second question tests third-person narration, so it is broader than the first-person point and would not test the new point fairly.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "First-person narration",
+  "card": [
+   "A first-person narrator is a character who tells the story using I and me. Example: \"I shut the gate and felt my stomach tighten.\"",
+   "The reader gets close to the narrator's thoughts and feelings, so the story can feel personal and honest.",
+   "The reader sees only what the narrator knows, sees and believes. The narrator cannot know what other characters think unless they are told.",
+   "Because the narrator has opinions, the reader may sense that the account is one-sided or mistaken. The narrator's view is not always the whole truth."
+  ],
+  "remember": "First person means I: close to one mind, but limited to what that person knows and believes.",
+  "a": {
+   "q": "Which sentence is written from a first-person narrator's point of view?",
+   "opts": [
+    "I hid the letter, hoping nobody had noticed",
+    "She hid the letter, hoping nobody had noticed",
+    "You hide the letter, hoping nobody has noticed",
+    "Tariq hid the letter while the whole class watched"
+   ],
+   "why": "The word I shows that the narrator is a character telling their own story. The she and Tariq options use third person, and you speaks to the reader.",
+   "clue": "Look for the pronoun the narrator uses for themselves."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya narrates a story as I. Her friend Jo goes quiet at lunch, and Priya says Jo must be angry with her. Why might a reader doubt this?",
+   "opts": [
+    "Priya can only guess at Jo's feelings from her own view",
+    "Priya is telling the story in the past tense",
+    "Jo is a minor character, so she has no feelings",
+    "First-person narrators always lie to the reader"
+   ],
+   "why": "A first-person narrator knows only what she sees and believes, so her guess about Jo may be wrong. It is not true that such narrators always lie: they are limited, not necessarily dishonest.",
+   "clue": "Can Priya see inside Jo's head?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "I hid the letter, hoping nobody had noticed",
+   "also_right": []
+  },
+  "b": {
+   "best": "Priya can only guess at Jo's feelings from her own view",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "First-person narration",
+  "card": [
+   "A first-person narrator is a character who tells the story using I and me. Example: \"I shut the gate and felt my stomach tighten.\"",
+   "The reader gets close to the narrator's thoughts and feelings, so the story can feel personal and honest.",
+   "The reader sees only what the narrator knows, sees and believes. The narrator cannot know what other characters think unless they are told.",
+   "Because the narrator has opinions, the reader may sense that the account is one-sided or mistaken. The narrator's view is not always the whole truth."
+  ],
+  "remember": "First person means I: close to one mind, but limited to what that person knows and believes.",
+  "a": {
+   "q": "Which sentence is written from a first-person narrator's point of view?",
+   "opts": [
+    "I hid the letter, hoping nobody had noticed",
+    "She hid the letter, hoping nobody had noticed",
+    "You hide the letter, hoping nobody has noticed",
+    "Tariq hid the letter while the whole class watched"
+   ],
+   "why": "The word I shows that the narrator is a character telling their own story. The she and Tariq options use third person, and you speaks to the reader.",
+   "clue": "Look for the pronoun the narrator uses for themselves."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya narrates a story as I. Her friend Jo goes quiet at lunch, and Priya says Jo must be angry with her. Why might a reader doubt this?",
+   "opts": [
+    "Priya can only guess at Jo's feelings from her own view",
+    "Priya is telling the story in the past tense",
+    "Jo is a minor character, so she has no feelings",
+    "First-person narrators always lie to the reader"
+   ],
+   "why": "A first-person narrator knows only what she sees and believes, so her guess about Jo may be wrong. It is not true that such narrators always lie: they are limited, not necessarily dishonest.",
+   "clue": "Can Priya see inside Jo's head?"
+  }
+ },
+ "cleared_by": "checker"
 }

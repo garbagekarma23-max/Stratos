@@ -12,8 +12,115 @@
    0.298
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:53Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:53Z write: done",
+  "2026-11-20T12:44:57Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00657,
+  "check": 0.00578
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank cards cover the mean only as one of several measures (mean, median, mode, range) or as part of choosing a centre with outliers, and neither teaches finding a missing value from a known mean, so the new point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The mean",
+  "card": [
+   "The mean is the total of the values divided by how many values there are. It is the average people often mean.",
+   "Example: Sam scores 6, 8, 7 and 11 in four quizzes. The total is \\(6 + 8 + 7 + 11 = 32\\). The mean is \\(32 \\div 4 = 8\\).",
+   "If you know the mean, you can find the total. Total \\(=\\) mean \\(\\times\\) number of values. In the example, \\(8 \\times 4 = 32\\).",
+   "To find a missing value, work out the total needed, then take away the values you have. If the mean of 3 values is 10, the total is 30. Two values of 9 and 12 add to 21, so the third is \\(30 - 21 = 9\\)."
+  ],
+  "remember": "Mean \\(=\\) total \\(\\div\\) number of values. Mean \\(\\times\\) number of values gives the total.",
+  "a": {
+   "q": "What is the mean of 4, 9, 5, 6 and 11?",
+   "opts": [
+    "7",
+    "6",
+    "8",
+    "35"
+   ],
+   "why": "The total is \\(4 + 9 + 5 + 6 + 11 = 35\\). There are 5 values, so the mean is \\(35 \\div 5 = 7\\). The answer 35 is only the total: it has not been divided.",
+   "clue": "Add the values, then divide by how many there are."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's mean score in 4 maths tests is 15. Her scores in the first three tests are 12, 18 and 14. What was her score in the fourth test?",
+   "opts": [
+    "16",
+    "15",
+    "14",
+    "60"
+   ],
+   "why": "The total needed is \\(15 \\times 4 = 60\\). The first three tests add to \\(12 + 18 + 14 = 44\\), so the fourth is \\(60 - 44 = 16\\). The answer 60 is the total of all four tests, not the missing score.",
+   "clue": "Find the total of all four tests first."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "7",
+   "also_right": []
+  },
+  "b": {
+   "best": "16",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card's worked examples, both answers (7 and 16) and the explanations are all correct."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The mean",
+  "card": [
+   "The mean is the total of the values divided by how many values there are. It is the average people often mean.",
+   "Example: Sam scores 6, 8, 7 and 11 in four quizzes. The total is \\(6 + 8 + 7 + 11 = 32\\). The mean is \\(32 \\div 4 = 8\\).",
+   "If you know the mean, you can find the total. Total \\(=\\) mean \\(\\times\\) number of values. In the example, \\(8 \\times 4 = 32\\).",
+   "To find a missing value, work out the total needed, then take away the values you have. If the mean of 3 values is 10, the total is 30. Two values of 9 and 12 add to 21, so the third is \\(30 - 21 = 9\\)."
+  ],
+  "remember": "Mean \\(=\\) total \\(\\div\\) number of values. Mean \\(\\times\\) number of values gives the total.",
+  "a": {
+   "q": "What is the mean of 4, 9, 5, 6 and 11?",
+   "opts": [
+    "7",
+    "6",
+    "8",
+    "35"
+   ],
+   "why": "The total is \\(4 + 9 + 5 + 6 + 11 = 35\\). There are 5 values, so the mean is \\(35 \\div 5 = 7\\). The answer 35 is only the total: it has not been divided.",
+   "clue": "Add the values, then divide by how many there are."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's mean score in 4 maths tests is 15. Her scores in the first three tests are 12, 18 and 14. What was her score in the fourth test?",
+   "opts": [
+    "16",
+    "15",
+    "14",
+    "60"
+   ],
+   "why": "The total needed is \\(15 \\times 4 = 60\\). The first three tests add to \\(12 + 18 + 14 = 44\\), so the fourth is \\(60 - 44 = 16\\). The answer 60 is the total of all four tests, not the missing score.",
+   "clue": "Find the total of all four tests first."
+  }
+ },
+ "cleared_by": "checker"
 }

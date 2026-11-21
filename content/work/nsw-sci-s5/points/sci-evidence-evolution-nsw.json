@@ -8,8 +8,278 @@
    0.703
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 says reuse sci-evidence-evolution, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:26:01Z confirm: Claude Opus 5.5 may reuse sci-evidence-evolution, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt sci-evidence-evolution (2 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting sci-evidence-evolution on the next run",
+  "2026-11-20T14:12:40Z adapt: done",
+  "2026-11-20T14:20:02Z check: flagged",
+  "2026-11-20T14:26:16Z fix: suggested",
+  "2026-11-20T14:45:18Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "confirm": 0.00632,
+  "adapt": 0.0036,
+  "check": 0.01094,
+  "fix": 0.02239
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "sci-evidence-evolution",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the same evidence for evolution (fossils, similar bones and shared DNA showing common ancestry) at a Year 10 depth that suits Years 9 and 10, and its two questions are fair and contain no state-specific content.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "sci-evidence-evolution",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches the same evidence for evolution (fossils, similar bone structures and shared DNA) at a Year 9–10 depth, and both questions are fair for NSW Stage 5 students; its extra line on where species live is valid evidence at the same level and does not change the idea.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "sci-evidence-evolution",
+  "changes": [
+   "Replace the card line on where species live with a line saying fossils, similar bone structures and shared DNA together show that species have changed over time and share common ancestors.",
+   "Change the remember line to name only fossils, bone structures and DNA."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card4 label",
+   "card4",
+   "remember",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "owner",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches fossils, similar bone structures and DNA at the right depth, but it adds a fourth kind of evidence, where species live, that the brief does not ask for. Replacing that line keeps the point to the brief.",
+   "item": "12c925ac1a92d37b",
+   "result": "decided",
+   "saved": {
+    "id": "sci-evidence-evolution-nsw",
+    "title": "Evidence for evolution",
+    "brief": "2ebc8680832f",
+    "shortlist": [
+     [
+      "sci-evidence-evolution",
+      0.703
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00027,
+     "confirm": 0.00632
+    },
+    "match": {
+     "verdict": "reuse",
+     "same": "sci-evidence-evolution",
+     "changes": [],
+     "sure": "high",
+     "reason": "The bank point teaches the same evidence for evolution (fossils, similar bones and shared DNA showing common ancestry) at a Year 10 depth that suits Years 9 and 10, and its two questions are fair and contain no state-specific content.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "reuse",
+     "same": "sci-evidence-evolution",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The bank point teaches the same evidence for evolution (fossils, similar bone structures and shared DNA) at a Year 9–10 depth, and both questions are fair for NSW Stage 5 students; its extra line on where species live is valid evidence at the same level and does not change the idea.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "1456533af2985ed8"
+  }
+ ],
+ "draft": {
+  "title": "Evidence for evolution",
+  "card": [
+   [
+    "Fossils",
+    "Fossils are preserved remains or traces of past life. Deeper rock layers are usually older, so fossils in layers show how living things changed over time."
+   ],
+   [
+    "Bone structure",
+    "Some animals have similar bone patterns in limbs that do different jobs, such as a human arm, a bat wing and a whale flipper. This points to a shared ancestor."
+   ],
+   [
+    "DNA",
+    "DNA is the code that carries an organism's instructions. Species with more similar DNA are usually more closely related, and share a more recent ancestor."
+   ],
+   [
+    "Together",
+    "Fossils, similar bone structures and shared DNA together show that species have changed over time and share common ancestors."
+   ]
+  ],
+  "remember": "Fossils, bone structures and DNA all point to shared ancestors.",
+  "a": {
+   "q": "Two species are found to have DNA that is very similar. What does this most suggest about them?",
+   "opts": [
+    "They share a fairly recent common ancestor",
+    "They live in the same habitat today",
+    "They have exactly the same bone structures",
+    "One species evolved from the other directly"
+   ],
+   "why": "More similar DNA usually means a more recent shared ancestor. It does not show that one species came from the other, because both can descend from a common ancestor.",
+   "clue": "Think about how closely related species share ancestors."
+  },
+  "b": {
+   "d": 3,
+   "q": "A deep rock layer holds a simple fossil, and a higher layer holds a more complex relative. What does this best show?",
+   "opts": [
+    "Living things in this group changed over time",
+    "Both organisms lived at exactly the same time",
+    "The higher fossil must have evolved from the lower one",
+    "The deeper rock layer formed after the higher one"
+   ],
+   "why": "Deeper layers are usually older, so the fossils show a change in the group over time. The fossils alone do not prove that the higher one descended directly from the lower one.",
+   "clue": "Which layer is usually older, and what does a change between layers show?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "They share a fairly recent common ancestor",
+   "also_right": []
+  },
+  "b": {
+   "best": "Living things in this group changed over time",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only hedged one ('fairly recent'), while two of the three distractors use absolutes ('directly', 'exactly'). A test-wise student could pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Two of the three distractors use absolutes ('must', 'exactly'), so the one plain, hedged-sounding option stands out as right. The clue ('what does a change between layers show?') also nearly states the answer."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts are correct and both intended answers are right. In both questions, absolute words ('directly', 'exactly', 'must') in most of the wrong options make the right answer easy to spot without knowing the idea, and question b's clue nearly gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option is the only hedged one ('fairly recent'), while two of the three distractors use absolutes ('directly', 'exactly'). A test-wise student could pick it without knowing the idea.",
+  "Question b, wording: Two of the three distractors use absolutes ('must', 'exactly'), so the one plain, hedged-sounding option stands out as right. The clue ('what does a change between layers show?') also nearly states the answer."
+ ],
+ "proposal": {
+  "title": "Evidence for evolution",
+  "card": [
+   [
+    "Fossils",
+    "Fossils are preserved remains or traces of past life. Deeper rock layers are usually older, so fossils in layers show how living things changed over time."
+   ],
+   [
+    "Bone structure",
+    "Some animals have similar bone patterns in limbs that do different jobs, such as a human arm, a bat wing and a whale flipper. This points to a shared ancestor."
+   ],
+   [
+    "DNA",
+    "DNA is the code that carries an organism's instructions. Species with more similar DNA are usually more closely related, and share a more recent ancestor."
+   ],
+   [
+    "Together",
+    "These three kinds of evidence come from different sources, yet they agree: species have changed over time and share common ancestors."
+   ]
+  ],
+  "remember": "Fossils, bone structures and DNA all point to shared ancestors.",
+  "a": {
+   "q": "Two species are found to have DNA that is very similar. What does this most suggest about them?",
+   "opts": [
+    "They share a recent common ancestor",
+    "They share a distant common ancestor",
+    "They live in similar habitats today",
+    "They eat similar kinds of food today"
+   ],
+   "why": "More similar DNA usually means species are more closely related, so they share a more recent ancestor. A distant common ancestor fits species whose DNA is less alike. DNA shows how related species are, not where they live or what they eat.",
+   "clue": "Does similar DNA tell you about relatedness or about lifestyle?"
+  },
+  "b": {
+   "d": 2,
+   "q": "A deep rock layer holds a simple fossil, and a higher layer holds a more complex relative. What does this best show?",
+   "opts": [
+    "Living things in this group changed over time",
+    "Both organisms lived at the same point in time",
+    "The deeper rock layer formed after the higher one",
+    "Living things in this group stayed the same"
+   ],
+   "why": "Deeper layers are usually older, so the simple fossil comes from an earlier time than the complex one. That shows the group changed over time. The deeper layer forming later reverses the usual order of rock layers.",
+   "clue": "Which rock layer is usually older?"
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Evidence for evolution",
+  "card": [
+   [
+    "Fossils",
+    "Fossils are preserved remains or traces of past life. Deeper rock layers are usually older, so fossils in layers show how living things changed over time."
+   ],
+   [
+    "Bone structure",
+    "Some animals have similar bone patterns in limbs that do different jobs, such as a human arm, a bat wing and a whale flipper. This points to a shared ancestor."
+   ],
+   [
+    "DNA",
+    "DNA is the code that carries an organism's instructions. Species with more similar DNA are usually more closely related, and share a more recent ancestor."
+   ],
+   [
+    "Together",
+    "These three kinds of evidence come from different sources, yet they agree: species have changed over time and share common ancestors."
+   ]
+  ],
+  "remember": "Fossils, bone structures and DNA all point to shared ancestors.",
+  "a": {
+   "q": "Two species are found to have DNA that is very similar. What does this most suggest about them?",
+   "opts": [
+    "They share a recent common ancestor",
+    "They share a distant common ancestor",
+    "They live in similar habitats today",
+    "They eat similar kinds of food today"
+   ],
+   "why": "More similar DNA usually means species are more closely related, so they share a more recent ancestor. A distant common ancestor fits species whose DNA is less alike. DNA shows how related species are, not where they live or what they eat.",
+   "clue": "Does similar DNA tell you about relatedness or about lifestyle?"
+  },
+  "b": {
+   "d": 2,
+   "q": "A deep rock layer holds a simple fossil, and a higher layer holds a more complex relative. What does this best show?",
+   "opts": [
+    "Living things in this group changed over time",
+    "Both organisms lived at the same point in time",
+    "The deeper rock layer formed after the higher one",
+    "Living things in this group stayed the same"
+   ],
+   "why": "Deeper layers are usually older, so the simple fossil comes from an earlier time than the complex one. That shows the group changed over time. The deeper layer forming later reverses the usual order of rock layers.",
+   "clue": "Which rock layer is usually older?"
+  }
+ }
 }

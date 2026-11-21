@@ -12,8 +12,137 @@
    0.366
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:56Z write: done",
+  "2026-11-20T12:35:54Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.0126,
+  "check": 0.00619
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point covers the new point's full idea: mat-commission-piecework covers commission and piecework but not overtime, and mat-overtime-penalty-rates covers overtime and penalty rates but not commission or piecework, so no single bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Overtime, commission and piecework",
+  "card": [
+   [
+    "Overtime",
+    "Hours worked beyond normal hours are paid at a higher rate. Time-and-a-half means \\(1.5 \\times\\) the normal hourly rate. Double time means \\(2 \\times\\) the normal rate."
+   ],
+   [
+    "Commission",
+    "A worker earns a percentage of the value of what they sell. Commission \\(=\\) rate \\(\\times\\) sales."
+   ],
+   [
+    "Piecework",
+    "A worker is paid a set amount for each item made. Pay \\(=\\) rate per item \\(\\times\\) number of items."
+   ],
+   [
+    "Example",
+    "Ravi earns $20 an hour. Three hours of time-and-a-half pays \\(3 \\times 1.5 \\times 20 = 90\\) dollars."
+   ]
+  ],
+  "remember": "Overtime raises the hourly rate, commission follows sales, and piecework follows items made.",
+  "a": {
+   "q": "Mei earns $18 an hour. How much is she paid for 4 hours of overtime at time-and-a-half?",
+   "opts": [
+    "$108",
+    "$72",
+    "$27",
+    "$90"
+   ],
+   "why": "Time-and-a-half is \\(1.5 \\times 18 = 27\\) dollars an hour. For 4 hours, \\(4 \\times 27 = 108\\) dollars. $72 is wrong because it uses the normal rate and leaves out the extra half.",
+   "clue": "Find the overtime hourly rate first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom sells cars in Orange and earns 3% commission on sales. He sells cars worth $85,000 in a week. What is his commission?",
+   "opts": [
+    "$2,550",
+    "$255",
+    "$25,500",
+    "$2,833"
+   ],
+   "why": "Commission is \\(0.03 \\times 85\\,000 = 2550\\) dollars. $255 is wrong because it uses 0.3% instead of 3%, a slip when changing a percentage to a decimal.",
+   "clue": "Change 3% to a decimal, then multiply by the sales."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$108",
+   "also_right": []
+  },
+  "b": {
+   "best": "$2,550",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Overtime, commission and piecework",
+  "card": [
+   [
+    "Overtime",
+    "Hours worked beyond normal hours are paid at a higher rate. Time-and-a-half means \\(1.5 \\times\\) the normal hourly rate. Double time means \\(2 \\times\\) the normal rate."
+   ],
+   [
+    "Commission",
+    "A worker earns a percentage of the value of what they sell. Commission \\(=\\) rate \\(\\times\\) sales."
+   ],
+   [
+    "Piecework",
+    "A worker is paid a set amount for each item made. Pay \\(=\\) rate per item \\(\\times\\) number of items."
+   ],
+   [
+    "Example",
+    "Ravi earns $20 an hour. Three hours of time-and-a-half pays \\(3 \\times 1.5 \\times 20 = 90\\) dollars."
+   ]
+  ],
+  "remember": "Overtime raises the hourly rate, commission follows sales, and piecework follows items made.",
+  "a": {
+   "q": "Mei earns $18 an hour. How much is she paid for 4 hours of overtime at time-and-a-half?",
+   "opts": [
+    "$108",
+    "$72",
+    "$27",
+    "$90"
+   ],
+   "why": "Time-and-a-half is \\(1.5 \\times 18 = 27\\) dollars an hour. For 4 hours, \\(4 \\times 27 = 108\\) dollars. $72 is wrong because it uses the normal rate and leaves out the extra half.",
+   "clue": "Find the overtime hourly rate first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom sells cars in Orange and earns 3% commission on sales. He sells cars worth $85,000 in a week. What is his commission?",
+   "opts": [
+    "$2,550",
+    "$255",
+    "$25,500",
+    "$2,833"
+   ],
+   "why": "Commission is \\(0.03 \\times 85\\,000 = 2550\\) dollars. $255 is wrong because it uses 0.3% instead of 3%, a slip when changing a percentage to a decimal.",
+   "clue": "Change 3% to a decimal, then multiply by the sales."
+  }
+ },
+ "cleared_by": "checker"
 }

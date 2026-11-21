@@ -24,8 +24,179 @@
    0.269
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: flagged",
+  "2026-11-20T12:53:29Z fix: suggested",
+  "2026-11-20T13:23:45Z autoreview: cleared with the fix (a other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.00595,
+  "check": 0.01086,
+  "fix": 0.01658
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Cells as the building blocks of life, covers that all living things are made of cells and that cells are the basic unit of life, but it never says that new cells come from existing cells, which is a required part of the new point, so adding it would change the idea rather than make a small adjustment.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Cell theory and the microscope",
+  "card": [
+   "A cell is the smallest unit that can carry out the jobs of life. Cells are the basic unit of life.",
+   "Cell theory has three parts. All living things are made of one or more cells. Cells are the basic unit of life. New cells come only from cells that already exist.",
+   "Most cells are too small to see with the eye alone. A microscope uses lenses to make a small object look bigger, so we can see cells.",
+   "A light microscope has an eyepiece lens and an objective lens. Total magnification = eyepiece magnification × objective magnification. A 10× eyepiece with a 40× objective gives 400×."
+  ],
+  "remember": "Living things are made of cells, and cells come from cells. Microscopes let us see them.",
+  "a": {
+   "q": "Which statement is part of cell theory?",
+   "opts": [
+    "New cells come from cells that already exist",
+    "Cells can only be seen with a microscope",
+    "Only animals and plants are made of cells",
+    "Cells form from non-living material in water"
+   ],
+   "why": "Cell theory says new cells come from existing cells. Needing a microscope is true of most cells, but it is not part of the theory. Cell theory also says all living things are made of cells, not only animals and plants.",
+   "clue": "Think about where a new cell comes from."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam looks at a leaf sample with a 10× eyepiece lens and a 20× objective lens. What is the total magnification?",
+   "opts": [
+    "200×",
+    "30×",
+    "2×",
+    "2000×"
+   ],
+   "why": "Total magnification is the eyepiece magnification multiplied by the objective magnification: 10 × 20 = 200×. Adding the two numbers gives 30×, but the lenses work together by multiplying.",
+   "clue": "The two lens powers are multiplied."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "New cells come from cells that already exist",
+   "also_right": []
+  },
+  "b": {
+   "best": "200×",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about where a new cell comes from' points straight at the only option that mentions new cells, so a student can pick it without knowing cell theory."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct (a: new cells come from existing cells; b: 200×). The only issue is that question a's clue gives the answer away by pointing to the one option about new cells."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'Think about where a new cell comes from' points straight at the only option that mentions new cells, so a student can pick it without knowing cell theory."
+ ],
+ "proposal": {
+  "title": "Cell theory and the microscope",
+  "card": [
+   "A cell is the smallest unit that can carry out the jobs of life, such as using food, growing and getting rid of wastes.",
+   "Cell theory has three parts. All living things are made of one or more cells. Cells are the basic unit of life. New cells come only from cells that already exist.",
+   "Most cells are too small to see with the eye alone. A microscope uses lenses to make a small object look bigger, so we can see cells.",
+   "A light microscope has an eyepiece lens and an objective lens. Total magnification = eyepiece magnification × objective magnification. A 10× eyepiece with a 40× objective gives 400×."
+  ],
+  "remember": "Living things are made of cells, and cells come from cells. Microscopes let us see them.",
+  "a": {
+   "q": "Which statement is part of cell theory?",
+   "opts": [
+    "New cells come from cells that already exist",
+    "Cells can only be seen with a microscope",
+    "Only animals and plants are made of cells",
+    "Cells form from non-living material in water"
+   ],
+   "why": "Cell theory says new cells come from existing cells. Needing a microscope is true of most cells, but it is about the tool we use, not part of the theory. Cell theory also says all living things are made of cells, not only animals and plants.",
+   "clue": "Recall the three parts of cell theory on the card."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam looks at a leaf sample with a 10× eyepiece lens and a 20× objective lens. What is the total magnification?",
+   "opts": [
+    "200×",
+    "30×",
+    "2×",
+    "2000×"
+   ],
+   "why": "Total magnification is the eyepiece magnification multiplied by the objective magnification: 10 × 20 = 200×. Adding the two numbers gives 30×, but the lenses work together by multiplying.",
+   "clue": "The two lens powers are multiplied."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:45Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about where a new cell comes from' points straight at the only option that mentions new cells, so a student can pick it without knowing cell theory."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue 'Think about where a new cell comes from' points straight at the only option that mentions new cells, so a student can pick it without knowing cell theory."
+  ]
+ },
+ "final": {
+  "title": "Cell theory and the microscope",
+  "card": [
+   "A cell is the smallest unit that can carry out the jobs of life, such as using food, growing and getting rid of wastes.",
+   "Cell theory has three parts. All living things are made of one or more cells. Cells are the basic unit of life. New cells come only from cells that already exist.",
+   "Most cells are too small to see with the eye alone. A microscope uses lenses to make a small object look bigger, so we can see cells.",
+   "A light microscope has an eyepiece lens and an objective lens. Total magnification = eyepiece magnification × objective magnification. A 10× eyepiece with a 40× objective gives 400×."
+  ],
+  "remember": "Living things are made of cells, and cells come from cells. Microscopes let us see them.",
+  "a": {
+   "q": "Which statement is part of cell theory?",
+   "opts": [
+    "New cells come from cells that already exist",
+    "Cells can only be seen with a microscope",
+    "Only animals and plants are made of cells",
+    "Cells form from non-living material in water"
+   ],
+   "why": "Cell theory says new cells come from existing cells. Needing a microscope is true of most cells, but it is about the tool we use, not part of the theory. Cell theory also says all living things are made of cells, not only animals and plants.",
+   "clue": "Recall the three parts of cell theory on the card."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam looks at a leaf sample with a 10× eyepiece lens and a 20× objective lens. What is the total magnification?",
+   "opts": [
+    "200×",
+    "30×",
+    "2×",
+    "2000×"
+   ],
+   "why": "Total magnification is the eyepiece magnification multiplied by the objective magnification: 10 × 20 = 200×. Adding the two numbers gives 30×, but the lenses work together by multiplying.",
+   "clue": "The two lens powers are multiplied."
+  }
+ },
+ "cleared_by": "auto"
 }

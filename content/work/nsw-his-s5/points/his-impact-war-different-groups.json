@@ -24,8 +24,200 @@
    0.265
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:51Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:52Z write: done",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T14:41:46Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.0065,
+  "check": 0.01514,
+  "fix": 0.02793
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point covers the impact of the First World War on several groups together, including Aboriginal soldiers, migrants and women. The closest matches cover only women in the First World War or First Nations service in the Second World War, which is a different war and a narrower idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Impact of the war on different groups",
+  "card": [
+   "The First World War did not affect all Australians in the same way. Each group had its own experience, shaped by who they were and how others saw them.",
+   [
+    "Aboriginal soldiers",
+    "Some Aboriginal men enlisted and served overseas, often by hiding their background, as rules at the time discouraged their enlistment. On return, they were often not treated as equals. Many were denied the same rights and land offered to other returned soldiers."
+   ],
+   [
+    "Migrants",
+    "People of German background, and other migrants from countries fighting Britain, were often treated with suspicion. Some lost jobs, faced hostility or were interned."
+   ],
+   [
+    "Women",
+    "With many men overseas, women took on new roles, such as nursing near the fighting and work in jobs that men had held at home."
+   ]
+  ],
+  "remember": "The war touched groups in different ways: service without equality, suspicion, and new roles.",
+  "a": {
+   "q": "Which statement best describes how the war affected Australians?",
+   "opts": [
+    "Different groups had different experiences",
+    "All groups gained equal treatment",
+    "Only soldiers were affected by the war",
+    "Every group faced suspicion from the government"
+   ],
+   "why": "Aboriginal soldiers, migrants and women each met different conditions during and after the war. The idea that everyone was treated equally is wrong, because Aboriginal soldiers who served were often not treated as equals on return.",
+   "clue": "Think about what happened to each group on the card."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jim, an Aboriginal man from a country town, served overseas in 1916. After the war, what was he likely to find?",
+   "opts": [
+    "He was often not treated as an equal to other veterans",
+    "He received the same land and rights as other veterans",
+    "He was interned as a person of suspect loyalty",
+    "He took over jobs that women had done at home"
+   ],
+   "why": "Aboriginal soldiers who served were often denied the same rights and land given to other returned soldiers. Internment was a response to people of German background, not to Aboriginal soldiers.",
+   "clue": "Serving did not always bring equal treatment afterwards."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Different groups had different experiences",
+   "also_right": []
+  },
+  "b": {
+   "best": "He was often not treated as an equal to other veterans",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Saying women did 'work in jobs that men had held at home' overstates the change. Historians generally note that, unlike in Britain, few Australian women moved into men's jobs during the First World War. Most women's war work was voluntary fundraising and making supplies, plus nursing. Consider softening this to 'some' or adding that the change was limited."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The three wrong options all use absolute words ('Every', 'All', 'Only'). The right option is the only one without one, so a test-wise student can pick it without knowing the content."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question is about one man, Jim, but the right option says 'He was often not treated as an equal', a group-level hedge that reads awkwardly for an individual. 'He was likely not treated as an equal' would fit the stem better."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "first-nations",
+  "summary": "Both answers are clear and correct. The card overstates how much Australian women took over men's jobs during the war. Question a can be answered from the absolute words in its distractors, and option wording in b is awkward."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Card, fact: Saying women did 'work in jobs that men had held at home' overstates the change. Historians generally note that, unlike in Britain, few Australian women moved into men's jobs during the First World War. Most women's war work was voluntary fundraising and making supplies, plus nursing. Consider softening this to 'some' or adding that the change was limited.",
+  "Question a, wording: The three wrong options all use absolute words ('Every', 'All', 'Only'). The right option is the only one without one, so a test-wise student can pick it without knowing the content.",
+  "Question b, wording: The question is about one man, Jim, but the right option says 'He was often not treated as an equal', a group-level hedge that reads awkwardly for an individual. 'He was likely not treated as an equal' would fit the stem better."
+ ],
+ "proposal": {
+  "title": "Impact of the war on different groups",
+  "card": [
+   "The First World War did not affect all Australians in the same way. Each group's experience was shaped by who they were and how others saw them.",
+   [
+    "Aboriginal soldiers",
+    "Some Aboriginal men enlisted and served overseas, even though rules at first barred men not of mainly European descent. On return, many were not treated as equals and were left out of the land schemes offered to other returned soldiers."
+   ],
+   [
+    "Migrants",
+    "People of German background, and other migrants from countries fighting Britain, were often treated with suspicion. Some lost jobs, faced hostility or were interned."
+   ],
+   [
+    "Women",
+    "Some women took new roles, such as nursing near the fighting. Most women's war work was voluntary, such as raising money and making supplies, and few moved into men's paid jobs."
+   ]
+  ],
+  "remember": "The war's impact depended on the group: service without equality, suspicion, or new but limited roles.",
+  "a": {
+   "q": "Which statement best sums up the war's impact on Australians?",
+   "opts": [
+    "It depended on who people were and how others saw them",
+    "It was much the same for people across Australia",
+    "It changed life for soldiers but rarely for civilians",
+    "It fell mainly on migrants of German background"
+   ],
+   "why": "Aboriginal soldiers, migrants and women each met different conditions, shaped by who they were and how others saw them. Saying it fell mainly on German migrants is tempting, but it leaves out Aboriginal soldiers and women, who were affected in other ways.",
+   "clue": "Compare what happened to each group on the card."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jim, an Aboriginal man from a country town, served overseas in 1916. After the war, what was he likely to find?",
+   "opts": [
+    "Unequal treatment compared with other veterans",
+    "A land grant like the ones other veterans received",
+    "Internment as a person of suspect loyalty",
+    "Equal rights earned through his service overseas"
+   ],
+   "why": "Many Aboriginal soldiers who served were not treated as equals on return and were left out of the land schemes given to other returned soldiers. Internment is tempting, but it was used against people of German background, not Aboriginal soldiers.",
+   "clue": "Did serving overseas bring equal treatment at home?"
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Impact of the war on different groups",
+  "card": [
+   "The First World War did not affect all Australians in the same way. Each group's experience was shaped by who they were and how others saw them.",
+   [
+    "Aboriginal soldiers",
+    "Some Aboriginal men enlisted and served overseas, even though rules at first barred men not of mainly European descent. On return, many were not treated as equals and were left out of the land schemes offered to other returned soldiers."
+   ],
+   [
+    "Migrants",
+    "People of German background, and other migrants from countries fighting Britain, were often treated with suspicion. Some lost jobs, faced hostility or were interned."
+   ],
+   [
+    "Women",
+    "Some women took new roles, such as nursing near the fighting. Most women's war work was voluntary, such as raising money and making supplies, and few moved into men's paid jobs."
+   ]
+  ],
+  "remember": "The war's impact depended on the group: service without equality, suspicion, or new but limited roles.",
+  "a": {
+   "q": "Which statement best sums up the war's impact on Australians?",
+   "opts": [
+    "It depended on who people were and how others saw them",
+    "It was much the same for people across Australia",
+    "It changed life for soldiers but rarely for civilians",
+    "It fell mainly on migrants of German background"
+   ],
+   "why": "Aboriginal soldiers, migrants and women each met different conditions, shaped by who they were and how others saw them. Saying it fell mainly on German migrants is tempting, but it leaves out Aboriginal soldiers and women, who were affected in other ways.",
+   "clue": "Compare what happened to each group on the card."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jim, an Aboriginal man from a country town, served overseas in 1916. After the war, what was he likely to find?",
+   "opts": [
+    "Unequal treatment compared with other veterans",
+    "A land grant like the ones other veterans received",
+    "Internment as a person of suspect loyalty",
+    "Equal rights earned through his service overseas"
+   ],
+   "why": "Many Aboriginal soldiers who served were not treated as equals on return and were left out of the land schemes given to other returned soldiers. Internment is tempting, but it was used against people of German background, not Aboriginal soldiers.",
+   "clue": "Did serving overseas bring equal treatment at home?"
+  }
+ },
+ "cleared_by": "owner"
 }

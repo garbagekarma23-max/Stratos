@@ -16,8 +16,179 @@
    0.21
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: flagged",
+  "2026-11-20T12:53:29Z fix: suggested",
+  "2026-11-20T13:23:45Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.00625,
+  "check": 0.00887,
+  "fix": 0.01607
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point combines two ideas: the seven classification levels, which sci-linnaean-hierarchy covers but without the two-part naming, and the two-part scientific name, which sci-scientific-names covers but without the seven levels, so neither bank point matches it exactly.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Levels of classification",
+  "card": [
+   "Scientists sort living things into groups so they can be studied and named. The groups get smaller and more specific at each level.",
+   "The seven levels, from biggest to smallest, are kingdom, phylum, class, order, family, genus and species. A memory trick is: King Phillip Came Over For Good Soup.",
+   "Organisms in the same species are very alike. Organisms in the same kingdom share only a few broad features, so a kingdom holds far more organisms than a species does.",
+   "Each organism has a two-part scientific name made of its genus and then its species. The genus has a capital letter, the species does not, and both are written in italics, such as Homo sapiens."
+  ],
+  "remember": "Seven levels from kingdom down to species. The scientific name is genus, then species.",
+  "a": {
+   "q": "Which list puts the levels of classification in order from the biggest group to the smallest?",
+   "opts": [
+    "Class, order, family, genus",
+    "Order, class, family, genus",
+    "Genus, family, order, class",
+    "Class, family, order, genus"
+   ],
+   "why": "Each level sits inside the one above it, so the order from biggest to smallest is class, order, family, genus. The list starting with genus runs the wrong way, from smallest to biggest.",
+   "clue": "Think of the memory trick: King Phillip Came Over For Good Soup."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia studies two organisms. Both are in the same family but in different genera. Which statement about them is correct?",
+   "opts": [
+    "They are in the same order but different species",
+    "They are in the same genus but different orders",
+    "They are in the same species but different classes",
+    "They are in the same genus but different families"
+   ],
+   "why": "A family sits inside an order, so two organisms in the same family must share the same order too. Different genera means they are also different species. The option saying same genus is wrong, because the genus is a smaller group than the family and they do not share it.",
+   "clue": "Levels above the family are shared by both organisms."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Class, order, family, genus",
+   "also_right": []
+  },
+  "b": {
+   "best": "They are in the same order but different species",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question uses 'genera', but the card never gives this plural of genus. Some Year 7 students may not recognise it. Consider 'in different genus groups' or adding the plural to the card."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both answers check out. The only small issue is that question b uses the plural 'genera', which the card does not teach."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The question uses 'genera', but the card never gives this plural of genus. Some Year 7 students may not recognise it. Consider 'in different genus groups' or adding the plural to the card."
+ ],
+ "proposal": {
+  "title": "Levels of classification",
+  "card": [
+   "Scientists sort living things into groups so they can be studied and named. The groups get smaller and more specific at each level, and each group sits inside the one above it.",
+   "The seven levels, from biggest to smallest, are kingdom, phylum, class, order, family, genus and species. A memory trick is: King Phillip Came Over For Good Soup.",
+   "Organisms in the same species are very alike. Organisms in the same kingdom share only a few broad features, so a kingdom holds far more organisms than a species does.",
+   "Each organism has a two-part scientific name made of its genus and then its species. The genus has a capital letter, the species does not, and both are written in italics, such as Homo sapiens."
+  ],
+  "remember": "Seven levels from kingdom down to species. The scientific name is genus, then species.",
+  "a": {
+   "q": "Which list puts the levels of classification in order from the biggest group to the smallest?",
+   "opts": [
+    "Class, order, family, genus",
+    "Order, class, family, genus",
+    "Genus, family, order, class",
+    "Class, family, order, genus"
+   ],
+   "why": "Each level sits inside the one above it, so the order from biggest to smallest is class, order, family, genus. The list starting with genus runs the wrong way, from smallest to biggest.",
+   "clue": "Think of the memory trick: King Phillip Came Over For Good Soup."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia studies two organisms. Both are in the same family, but each one is in a different genus. Which statement about them is correct?",
+   "opts": [
+    "They are in the same order but different species",
+    "They are in the same genus but different orders",
+    "They are in the same species but different classes",
+    "They are in the same genus but different families"
+   ],
+   "why": "A family sits inside an order, so two organisms in the same family must share the same order too. A species sits inside a genus, so if their genus is different, their species is different as well. The option saying same genus is wrong, because the genus is a smaller group than the family and they do not share it.",
+   "clue": "Does the family sit inside the order, or the other way round?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:45Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question uses 'genera', but the card never gives this plural of genus. Some Year 7 students may not recognise it. Consider 'in different genus groups' or adding the plural to the card."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The question uses 'genera', but the card never gives this plural of genus. Some Year 7 students may not recognise it. Consider 'in different genus groups' or adding the plural to the card."
+  ]
+ },
+ "final": {
+  "title": "Levels of classification",
+  "card": [
+   "Scientists sort living things into groups so they can be studied and named. The groups get smaller and more specific at each level, and each group sits inside the one above it.",
+   "The seven levels, from biggest to smallest, are kingdom, phylum, class, order, family, genus and species. A memory trick is: King Phillip Came Over For Good Soup.",
+   "Organisms in the same species are very alike. Organisms in the same kingdom share only a few broad features, so a kingdom holds far more organisms than a species does.",
+   "Each organism has a two-part scientific name made of its genus and then its species. The genus has a capital letter, the species does not, and both are written in italics, such as Homo sapiens."
+  ],
+  "remember": "Seven levels from kingdom down to species. The scientific name is genus, then species.",
+  "a": {
+   "q": "Which list puts the levels of classification in order from the biggest group to the smallest?",
+   "opts": [
+    "Class, order, family, genus",
+    "Order, class, family, genus",
+    "Genus, family, order, class",
+    "Class, family, order, genus"
+   ],
+   "why": "Each level sits inside the one above it, so the order from biggest to smallest is class, order, family, genus. The list starting with genus runs the wrong way, from smallest to biggest.",
+   "clue": "Think of the memory trick: King Phillip Came Over For Good Soup."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia studies two organisms. Both are in the same family, but each one is in a different genus. Which statement about them is correct?",
+   "opts": [
+    "They are in the same order but different species",
+    "They are in the same genus but different orders",
+    "They are in the same species but different classes",
+    "They are in the same genus but different families"
+   ],
+   "why": "A family sits inside an order, so two organisms in the same family must share the same order too. A species sits inside a genus, so if their genus is different, their species is different as well. The option saying same genus is wrong, because the genus is a smaller group than the family and they do not share it.",
+   "clue": "Does the family sit inside the order, or the other way round?"
+  }
+ },
+ "cleared_by": "auto"
 }

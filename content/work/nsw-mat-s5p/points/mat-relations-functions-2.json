@@ -24,8 +24,113 @@
    0.341
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:58Z write: done",
+  "2026-11-20T12:35:55Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00048,
+  "write": 0.01266,
+  "check": 0.00582
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No single bank point covers both the vertical line test and f(x) evaluation at Stage 5 depth: the closest NSW card is Year 11 and lacks notation, while the Victorian card has notation but no vertical line test and adds domain and range.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Relations and functions",
+  "card": [
+   "A relation links inputs (\\(x\\) values) to outputs (\\(y\\) values). A function is a relation that gives exactly one output for each input.",
+   "Vertical line test: if any vertical line meets a graph more than once, one input has two outputs, so it is not a function.",
+   "Function notation \\(f(x)\\) means the output for input \\(x\\). For \\(f(x) = 2x + 1\\), find \\(f(3)\\) by putting 3 in place of \\(x\\).",
+   "Worked example: \\(f(3) = 2 \\times 3 + 1 = 7\\). So the input 3 gives the output 7, and the graph passes through \\((3, 7)\\)."
+  ],
+  "remember": "A function has one output for each input. \\(f(3)\\) is the output when \\(x = 3\\).",
+  "a": {
+   "q": "Which set of \\((x, y)\\) pairs is NOT a function?",
+   "opts": [
+    "\\((1, 4), (2, 5), (1, 6)\\)",
+    "\\((1, 4), (2, 4), (3, 4)\\)",
+    "\\((1, 2), (2, 4), (3, 6)\\)",
+    "\\((0, 5), (1, 3), (2, 1)\\)"
+   ],
+   "why": "The input 1 gives two outputs, 4 and 6, so this is not a function. In the pairs where every output is 4, each input still has just one output, so that is a function.",
+   "clue": "Look for an input that appears twice with different outputs."
+  },
+  "b": {
+   "d": 3,
+   "q": "Given \\(f(x) = x^{2} - 4x\\), what is \\(f(-1)\\)?",
+   "opts": [
+    "\\(5\\)",
+    "\\(-3\\)",
+    "\\(-5\\)",
+    "\\(3\\)"
+   ],
+   "why": "Put \\(-1\\) in for \\(x\\): \\((-1)^{2} - 4 \\times (-1) = 1 + 4 = 5\\). The tempting answer \\(-3\\) comes from treating \\(-4 \\times (-1)\\) as \\(-4\\) and getting \\(1 - 4\\).",
+   "clue": "Square \\(-1\\) first, then deal with the sign of the second term."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\((1, 4), (2, 5), (1, 6)\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(5\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Relations and functions",
+  "card": [
+   "A relation links inputs (\\(x\\) values) to outputs (\\(y\\) values). A function is a relation that gives exactly one output for each input.",
+   "Vertical line test: if any vertical line meets a graph more than once, one input has two outputs, so it is not a function.",
+   "Function notation \\(f(x)\\) means the output for input \\(x\\). For \\(f(x) = 2x + 1\\), find \\(f(3)\\) by putting 3 in place of \\(x\\).",
+   "Worked example: \\(f(3) = 2 \\times 3 + 1 = 7\\). So the input 3 gives the output 7, and the graph passes through \\((3, 7)\\)."
+  ],
+  "remember": "A function has one output for each input. \\(f(3)\\) is the output when \\(x = 3\\).",
+  "a": {
+   "q": "Which set of \\((x, y)\\) pairs is NOT a function?",
+   "opts": [
+    "\\((1, 4), (2, 5), (1, 6)\\)",
+    "\\((1, 4), (2, 4), (3, 4)\\)",
+    "\\((1, 2), (2, 4), (3, 6)\\)",
+    "\\((0, 5), (1, 3), (2, 1)\\)"
+   ],
+   "why": "The input 1 gives two outputs, 4 and 6, so this is not a function. In the pairs where every output is 4, each input still has just one output, so that is a function.",
+   "clue": "Look for an input that appears twice with different outputs."
+  },
+  "b": {
+   "d": 3,
+   "q": "Given \\(f(x) = x^{2} - 4x\\), what is \\(f(-1)\\)?",
+   "opts": [
+    "\\(5\\)",
+    "\\(-3\\)",
+    "\\(-5\\)",
+    "\\(3\\)"
+   ],
+   "why": "Put \\(-1\\) in for \\(x\\): \\((-1)^{2} - 4 \\times (-1) = 1 + 4 = 5\\). The tempting answer \\(-3\\) comes from treating \\(-4 \\times (-1)\\) as \\(-4\\) and getting \\(1 - 4\\).",
+   "clue": "Square \\(-1\\) first, then deal with the sign of the second term."
+  }
+ },
+ "cleared_by": "checker"
 }

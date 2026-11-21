@@ -24,8 +24,240 @@
    0.22
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 says reuse mat-classifying-triangles, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:53Z confirm: Claude Opus 5.5 may adapt mat-classifying-triangles, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt mat-classifying-triangles (2 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting mat-classifying-triangles on the next run",
+  "2026-11-20T14:12:39Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "confirm": 0.01043,
+  "adapt": 0.00655,
+  "check": 0.00956
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-classifying-triangles",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches exactly the side and angle classification of triangles at Stage 4 depth, and its terms and examples suit the NSW course without change.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-classifying-triangles",
+  "changes": [
+   "Use the NSW syllabus terms acute-angled, right-angled and obtuse-angled triangle instead of acute, right and obtuse triangle, on the card and in question b's options."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same Year 7 classification by sides and angles; it only needs the NSW angle terms the brief uses.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-classifying-triangles",
+  "changes": [
+   "Use acute-angled, right-angled and obtuse-angled triangle in place of acute, right and obtuse triangle on the card, in the example, and in question b's options, why and clue.",
+   "Cut the card line on the angle sum of 180 degrees down to a mention at most, since the Angle sum and exterior angle of a triangle point in this chapter teaches it."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card2",
+   "card3",
+   "card4",
+   "a.q",
+   "a.opt1",
+   "a.opt2",
+   "a.opt3",
+   "a.opt4",
+   "a.why",
+   "a.clue",
+   "b.q",
+   "b.opt1",
+   "b.opt2",
+   "b.opt3",
+   "b.opt4",
+   "b.why",
+   "b.clue"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same classification at the right depth and both answers are right, but it uses acute, right and obtuse triangle where the brief uses the NSW terms, and it explains the angle sum, which belongs to another point in this chapter.",
+   "item": "082f6e19c26e296c",
+   "result": "decided",
+   "saved": {
+    "id": "mat-classifying-triangles-nsw",
+    "title": "Classifying triangles",
+    "brief": "014d0ae3afac",
+    "shortlist": [
+     [
+      "mat-classifying-triangles",
+      0.6
+     ],
+     [
+      "mat-problems-with-two-right",
+      0.335
+     ],
+     [
+      "mat-angle-sum-triangle",
+      0.29
+     ],
+     [
+      "mat-properties-quadrilaterals",
+      0.281
+     ],
+     [
+      "mat-finding-sides-similar-triangles",
+      0.22
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00017,
+     "confirm": 0.01043
+    },
+    "match": {
+     "verdict": "reuse",
+     "same": "mat-classifying-triangles",
+     "changes": [],
+     "sure": "high",
+     "reason": "The bank point teaches exactly the side and angle classification of triangles at Stage 4 depth, and its terms and examples suit the NSW course without change.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-classifying-triangles",
+     "changes": [
+      "Use the NSW syllabus terms acute-angled, right-angled and obtuse-angled triangle instead of acute, right and obtuse triangle, on the card and in question b's options."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same Year 7 classification by sides and angles; it only needs the NSW angle terms the brief uses.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "c96ef9023e7e6d53"
+  }
+ ],
+ "draft": {
+  "title": "Classifying triangles",
+  "card": [
+   [
+    "By sides",
+    "An equilateral triangle has 3 equal sides. An isosceles triangle has at least 2 equal sides. A scalene triangle has no equal sides."
+   ],
+   [
+    "By angles",
+    "An acute-angled triangle has 3 angles less than 90°. A right-angled triangle has one angle of exactly 90°. An obtuse-angled triangle has one angle greater than 90°."
+   ],
+   "A triangle can have at most one right angle or one obtuse angle. The next point shows why, using the angle sum.",
+   [
+    "Example",
+    "A triangle has angles 50°, 50° and 80°. All are less than 90°, so it is acute-angled. Two angles are equal, so two sides are equal, so it is isosceles."
+   ]
+  ],
+  "remember": "Name a triangle by its sides and by its angles. Each name answers a different question.",
+  "a": {
+   "q": "A triangle has sides of 6 cm, 8 cm and 10 cm. What is it called, going by its sides?",
+   "opts": [
+    "Scalene",
+    "Isosceles",
+    "Equilateral",
+    "Right-angled"
+   ],
+   "why": "All three sides are different lengths, so the triangle is scalene. It is not isosceles, because that needs at least 2 equal sides. Right-angled describes an angle, not a side.",
+   "clue": "Compare the three side lengths. Are any equal?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A triangle has angles of 30°, 30° and 120°. What is it called by its angles, and by its sides?",
+   "opts": [
+    "Obtuse-angled and isosceles",
+    "Obtuse-angled and scalene",
+    "Acute-angled and isosceles",
+    "Acute-angled and equilateral"
+   ],
+   "why": "The 120° angle is greater than 90°, so the triangle is obtuse-angled. Two angles are equal, so two sides are equal, which makes it isosceles. It is not acute-angled, because one angle is over 90°.",
+   "clue": "Look for an angle over 90°, then for equal angles."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Scalene",
+   "also_right": []
+  },
+  "b": {
+   "best": "Obtuse-angled and isosceles",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Classifying triangles",
+  "card": [
+   [
+    "By sides",
+    "An equilateral triangle has 3 equal sides. An isosceles triangle has at least 2 equal sides. A scalene triangle has no equal sides."
+   ],
+   [
+    "By angles",
+    "An acute-angled triangle has 3 angles less than 90°. A right-angled triangle has one angle of exactly 90°. An obtuse-angled triangle has one angle greater than 90°."
+   ],
+   "A triangle can have at most one right angle or one obtuse angle. The next point shows why, using the angle sum.",
+   [
+    "Example",
+    "A triangle has angles 50°, 50° and 80°. All are less than 90°, so it is acute-angled. Two angles are equal, so two sides are equal, so it is isosceles."
+   ]
+  ],
+  "remember": "Name a triangle by its sides and by its angles. Each name answers a different question.",
+  "a": {
+   "q": "A triangle has sides of 6 cm, 8 cm and 10 cm. What is it called, going by its sides?",
+   "opts": [
+    "Scalene",
+    "Isosceles",
+    "Equilateral",
+    "Right-angled"
+   ],
+   "why": "All three sides are different lengths, so the triangle is scalene. It is not isosceles, because that needs at least 2 equal sides. Right-angled describes an angle, not a side.",
+   "clue": "Compare the three side lengths. Are any equal?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A triangle has angles of 30°, 30° and 120°. What is it called by its angles, and by its sides?",
+   "opts": [
+    "Obtuse-angled and isosceles",
+    "Obtuse-angled and scalene",
+    "Acute-angled and isosceles",
+    "Acute-angled and equilateral"
+   ],
+   "why": "The 120° angle is greater than 90°, so the triangle is obtuse-angled. Two angles are equal, so two sides are equal, which makes it isosceles. It is not acute-angled, because one angle is over 90°.",
+   "clue": "Look for an angle over 90°, then for equal angles."
+  }
+ }
 }

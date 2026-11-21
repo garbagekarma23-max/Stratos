@@ -16,8 +16,266 @@
    0.234
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 says reuse his-nationalism, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:51Z confirm: Claude Opus 5.5 may reuse his-nationalism, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt his-nationalism (2 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting his-nationalism on the next run",
+  "2026-11-20T14:12:38Z adapt: done",
+  "2026-11-20T14:20:02Z check: flagged",
+  "2026-11-20T14:26:14Z fix: suggested",
+  "2026-11-20T14:41:20Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "confirm": 0.00862,
+  "adapt": 0.00541,
+  "check": 0.01166,
+  "fix": 0.01949
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "his-nationalism",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the same idea at a suitable Year 9-10 depth, covering nationalism as self-rule for a people sharing language and culture and its role in uniting Italy and Germany, and its two questions and terms are fair for NSW Stage 5 students.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "his-nationalism",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches the same definition of nationalism and its role in unifying Italy and Germany at a Year 9 depth, and both questions suit NSW Stage 5. Its extra bullets on rivalry before 1914 are accurate and also fit this syllabus.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "his-nationalism",
+  "changes": [
+   "Use and explain the term nation-state, a country whose people share a national identity and rule themselves, and say Italy and Germany became nation-states in the 1800s.",
+   "Cut the two card lines on rivalry and the war of 1914 to one short line at most, since the chapter on empire and the world wars has its own point on the causes of the First World War."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "title",
+   "card1",
+   "card2",
+   "card2 label",
+   "card3",
+   "card4",
+   "remember",
+   "a.q",
+   "a.why",
+   "b.q",
+   "b.opt3",
+   "b.why"
+  ]
+ },
+ "cleared_by": "owner",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same definition of nationalism and the unification of Italy and Germany at the right depth. It never uses the term nation-state from the brief, and two of its four lines are on rivalry before 1914, which the next chapter's causes of the war point covers.",
+   "item": "9a1c3380d82406aa",
+   "result": "decided",
+   "saved": {
+    "id": "his-nationalism-nation-states",
+    "title": "Nationalism and nation-states",
+    "brief": "533220d597d6",
+    "shortlist": [
+     [
+      "his-nationalism",
+      0.599
+     ],
+     [
+      "mod-end-empires",
+      0.235
+     ],
+     [
+      "his-rise-fascism",
+      0.234
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00027,
+     "confirm": 0.00862
+    },
+    "match": {
+     "verdict": "reuse",
+     "same": "his-nationalism",
+     "changes": [],
+     "sure": "high",
+     "reason": "The bank point teaches the same idea at a suitable Year 9-10 depth, covering nationalism as self-rule for a people sharing language and culture and its role in uniting Italy and Germany, and its two questions and terms are fair for NSW Stage 5 students.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "reuse",
+     "same": "his-nationalism",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The bank point teaches the same definition of nationalism and its role in unifying Italy and Germany at a Year 9 depth, and both questions suit NSW Stage 5. Its extra bullets on rivalry before 1914 are accurate and also fit this syllabus.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "c1628e5f3f39110f"
+  }
+ ],
+ "draft": {
+  "title": "Nationalism and nation-states",
+  "card": [
+   "Nationalism is the belief that people who share a language, history and culture should rule themselves as a nation. It gives people a sense of belonging to a larger group.",
+   [
+    "Nation-state",
+    "A nation-state is a country whose people share a national identity and rule themselves. In the 1800s nationalism helped to unite people who lived in many small states."
+   ],
+   "Italy and Germany each became a nation-state in the 1800s. Before this, each was a group of separate states.",
+   "Nationalism can also fuel rivalry between nations."
+  ],
+  "remember": "Nationalism ties people to their nation, and in the 1800s it helped to create nation-states such as Italy and Germany.",
+  "a": {
+   "q": "Which statement is the best example of nationalism?",
+   "opts": [
+    "A people with one culture should rule themselves",
+    "A strong country should take over weaker lands",
+    "A people should be free to move wherever they like",
+    "A ruler should share power with an elected body"
+   ],
+   "why": "Nationalism is the belief that a people with a shared language, history and culture should rule themselves. The belief about taking over weaker lands is about ruling other peoples, not self-rule, so it is not nationalism.",
+   "clue": "Look for the belief about a shared identity and self-rule."
+  },
+  "b": {
+   "d": 3,
+   "q": "Italy was once many small states. Which idea best explains why many people backed a single Italian nation-state?",
+   "opts": [
+    "They saw themselves as one nation and wanted self-rule",
+    "They wanted their rulers to take over lands overseas",
+    "They hoped to keep their states separate from each other",
+    "They were made to move to Italy by other great powers"
+   ],
+   "why": "Many people shared a language, history and culture, so they saw themselves as one nation and wanted to rule themselves in one nation-state. Taking over lands overseas is about ruling other peoples, and keeping states separate is the opposite of unity.",
+   "clue": "Think about what a shared language and history can lead people to want."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A people with one culture should rule themselves",
+   "also_right": []
+  },
+  "b": {
+   "best": "They saw themselves as one nation and wanted self-rule",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Look for the belief about a shared identity and self-rule' nearly restates the right option ('A people with one culture should rule themselves'), so a student can match the words without knowing what nationalism is."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are sound. The only issue is that question a's clue almost restates the right option, which gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'Look for the belief about a shared identity and self-rule' nearly restates the right option ('A people with one culture should rule themselves'), so a student can match the words without knowing what nationalism is."
+ ],
+ "proposal": {
+  "title": "Nationalism and nation-states",
+  "card": [
+   [
+    "Nationalism",
+    "the belief that people who share a language, history and culture should rule themselves as a nation. It gives people a sense of belonging to a larger group."
+   ],
+   [
+    "Nation-state",
+    "a country whose people share a national identity and rule themselves. In the 1800s nationalism helped to unite people who lived in many small states."
+   ],
+   "Italy and Germany each became a nation-state in the 1800s. Before this, each was a group of separate states.",
+   "Nationalism can also fuel rivalry between nations, as each puts its own interests first."
+  ],
+  "remember": "Nationalism ties people to their nation, and in the 1800s it helped to create nation-states such as Italy and Germany.",
+  "a": {
+   "q": "Which statement is the best example of nationalism?",
+   "opts": [
+    "A people with one culture should rule themselves",
+    "A strong country should take over weaker lands",
+    "A people should be free to move wherever they like",
+    "A ruler should share power with an elected body"
+   ],
+   "why": "Nationalism is the belief that a people with a shared language, history and culture should rule themselves. The belief about taking over weaker lands is about ruling other peoples, not a people governing itself, so it is not nationalism.",
+   "clue": "Ask who a nationalist thinks should hold power over a people."
+  },
+  "b": {
+   "d": 3,
+   "q": "Italy was once many small states. Which idea best explains why many people backed a single Italian nation-state?",
+   "opts": [
+    "They saw themselves as one nation and wanted self-rule",
+    "They wanted their rulers to take over lands overseas",
+    "They hoped to keep their states separate from each other",
+    "They were made to move to Italy by other great powers"
+   ],
+   "why": "Many people shared a language, history and culture, so they saw themselves as one nation and wanted to rule themselves in one nation-state. Taking over lands overseas is about ruling other peoples, and keeping states separate is the opposite of unity.",
+   "clue": "Think about what a shared language and history can lead people to want."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Nationalism and nation-states",
+  "card": [
+   [
+    "Nationalism",
+    "the belief that people who share a language, history and culture should rule themselves as a nation. It gives people a sense of belonging to a larger group."
+   ],
+   [
+    "Nation-state",
+    "a country whose people share a national identity and rule themselves. In the 1800s nationalism helped to unite people who lived in many small states."
+   ],
+   "Italy and Germany each became a nation-state in the 1800s. Before this, each was a group of separate states.",
+   "Nationalism can also fuel rivalry between nations, as each puts its own interests first."
+  ],
+  "remember": "Nationalism ties people to their nation, and in the 1800s it helped to create nation-states such as Italy and Germany.",
+  "a": {
+   "q": "Which statement is the best example of nationalism?",
+   "opts": [
+    "A people with one culture should rule themselves",
+    "A strong country should take over weaker lands",
+    "A people should be free to move wherever they like",
+    "A ruler should share power with an elected body"
+   ],
+   "why": "Nationalism is the belief that a people with a shared language, history and culture should rule themselves. The belief about taking over weaker lands is about ruling other peoples, not a people governing itself, so it is not nationalism.",
+   "clue": "Ask who a nationalist thinks should hold power over a people."
+  },
+  "b": {
+   "d": 3,
+   "q": "Italy was once many small states. Which idea best explains why many people backed a single Italian nation-state?",
+   "opts": [
+    "They saw themselves as one nation and wanted self-rule",
+    "They wanted their rulers to take over lands overseas",
+    "They hoped to keep their states separate from each other",
+    "They were made to move to Italy by other great powers"
+   ],
+   "why": "Many people shared a language, history and culture, so they saw themselves as one nation and wanted to rule themselves in one nation-state. Taking over lands overseas is about ruling other peoples, and keeping states separate is the opposite of unity.",
+   "clue": "Think about what a shared language and history can lead people to want."
+  }
+ }
 }

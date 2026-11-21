@@ -8,8 +8,127 @@
    0.277
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 7e-05,
+  "write": 0.00604,
+  "check": 0.00846
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches inference from reading a text, not drawing scientific explanations from observations and testing them, so no bank point matches the Stage 4 science idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Observations and inferences",
+  "card": [
+   [
+    "Observation",
+    "What you see, hear, feel or measure. It is a fact about what happened, such as \"the plant leaves are yellow\" or \"the water is 40 °C\"."
+   ],
+   [
+    "Inference",
+    "An explanation you draw from observations. It goes beyond what you saw, such as \"the plant is not getting enough light\"."
+   ],
+   "One observation can have more than one possible inference. Yellow leaves might come from too little light, too little water or a disease.",
+   "Further tests can support an inference or reject it. If a plant moved into sunlight turns green again, that supports the light inference."
+  ],
+  "remember": "Observations are what you saw or measured. Inferences are explanations that more tests can support or reject.",
+  "a": {
+   "q": "Which of these is an inference?",
+   "opts": [
+    "The ice cube melted because the room was warm",
+    "The ice cube was gone after ten minutes",
+    "The puddle of water was 12 mL in volume",
+    "The ice cube felt cold when it was picked up"
+   ],
+   "why": "The room being warm is an explanation for what happened, so it is an inference. The other three describe what was seen, measured or felt, so they are observations.",
+   "clue": "Which one explains why something happened?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya sees that the grass under a tree in her yard is brown. She says the tree is taking all the water. What should she do to test this?",
+   "opts": [
+    "Water the brown patch well and see if the grass recovers",
+    "Write down again that the grass under the tree is brown",
+    "Measure the width of the brown patch with a ruler",
+    "Decide the inference is right because the grass is brown"
+   ],
+   "why": "Watering the patch is a further test that could support or reject her inference. If the grass stays brown, another explanation, such as too little light, may be better. Measuring the patch only adds another observation and does not test the explanation.",
+   "clue": "Which choice could show her explanation is wrong?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The ice cube melted because the room was warm",
+   "also_right": []
+  },
+  "b": {
+   "best": "Water the brown patch well and see if the grass recovers",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Observations and inferences",
+  "card": [
+   [
+    "Observation",
+    "What you see, hear, feel or measure. It is a fact about what happened, such as \"the plant leaves are yellow\" or \"the water is 40 °C\"."
+   ],
+   [
+    "Inference",
+    "An explanation you draw from observations. It goes beyond what you saw, such as \"the plant is not getting enough light\"."
+   ],
+   "One observation can have more than one possible inference. Yellow leaves might come from too little light, too little water or a disease.",
+   "Further tests can support an inference or reject it. If a plant moved into sunlight turns green again, that supports the light inference."
+  ],
+  "remember": "Observations are what you saw or measured. Inferences are explanations that more tests can support or reject.",
+  "a": {
+   "q": "Which of these is an inference?",
+   "opts": [
+    "The ice cube melted because the room was warm",
+    "The ice cube was gone after ten minutes",
+    "The puddle of water was 12 mL in volume",
+    "The ice cube felt cold when it was picked up"
+   ],
+   "why": "The room being warm is an explanation for what happened, so it is an inference. The other three describe what was seen, measured or felt, so they are observations.",
+   "clue": "Which one explains why something happened?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya sees that the grass under a tree in her yard is brown. She says the tree is taking all the water. What should she do to test this?",
+   "opts": [
+    "Water the brown patch well and see if the grass recovers",
+    "Write down again that the grass under the tree is brown",
+    "Measure the width of the brown patch with a ruler",
+    "Decide the inference is right because the grass is brown"
+   ],
+   "why": "Watering the patch is a further test that could support or reject her inference. If the grass stays brown, another explanation, such as too little light, may be better. Measuring the patch only adds another observation and does not test the explanation.",
+   "clue": "Which choice could show her explanation is wrong?"
+  }
+ },
+ "cleared_by": "checker"
 }

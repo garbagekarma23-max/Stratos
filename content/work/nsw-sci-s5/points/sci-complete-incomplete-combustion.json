@@ -20,8 +20,46 @@
    0.249
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 may adapt chem-combustion, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:26:00Z confirm: Claude Opus 5.5 may reuse chem-combustion, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:45:31Z review: reusing chem-combustion"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00044,
+  "confirm": 0.00815
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "chem-combustion",
+  "changes": [
+   "Reword the card in plain Stage 5 language, since it is written for senior Victorian chemistry (Units 3 and 4) and uses terms such as fuel reacting with oxygen.",
+   "Check that the depth suits Years 9 and 10 in NSW, trimming any detail beyond the Stage 5 Carbon compounds content, such as the flame-colour and toxicity notes.",
+   "Align the terms and product names with the NSW Science 7-10 Syllabus (2023) wording."
+  ],
+  "sure": "medium",
+  "reason": "The Victorian combustion card teaches the same complete and incomplete combustion idea, with a few wording and depth changes needed for NSW Stage 5 students.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "chem-combustion",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card on combustion teaches exactly this idea, that hydrocarbons burning with plenty of oxygen give carbon dioxide and water while limited oxygen also gives carbon monoxide or soot and less energy, and its wording and questions are simple enough for Years 9 and 10 with nothing Victoria-specific.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "chem-combustion",
+ "matched": {
+  "verdict": "reuse",
+  "from": "chem-combustion",
+  "by": "owner",
+  "at": "2026-11-20T14:45:31Z"
+ }
 }

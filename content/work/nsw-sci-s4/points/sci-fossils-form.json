@@ -12,8 +12,208 @@
    0.202
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: failed the content check, writing again",
+  "2026-11-20T12:45:00Z write: done (still fails the content check)",
+  "2026-11-20T12:53:28Z check: flagged",
+  "2026-11-20T13:00:01Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.01382,
+  "check": 0.01535,
+  "fix": 0.01837,
+  "recheck": 0.00922
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank's sedimentary rocks point teaches how sediment becomes rock and mentions fossils only in passing, while the new point is about how fossils form by mineral replacement and what fossil order shows about organisms living at different times, so no bank point teaches the same idea at the right depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "How fossils form",
+  "card": [
+   "A fossil is the preserved remains or traces of a living thing from long ago. Traces include footprints, burrows and droppings.",
+   "Fossils usually start when a dead organism is buried quickly in sediment, such as mud or sand. Burial protects it from being eaten or broken down.",
+   "Over a very long time, the sediment hardens into sedimentary rock. Water carrying minerals seeps into hard parts such as bones and shells, and the minerals slowly replace them.",
+   "Different layers of rock hold different fossils. This shows that different organisms lived at different times."
+  ],
+  "remember": "Quick burial, then minerals slowly replace the hard parts, leaving a fossil.",
+  "a": {
+   "q": "Why does a dead fish buried quickly in mud have a better chance of becoming a fossil than one left on the lakebed?",
+   "opts": [
+    "Burial protects it from being eaten or broken down",
+    "Burial turns the fish into rock straight away",
+    "Mud adds new bones to the fish as it is buried",
+    "Burial makes the fish older than other organisms"
+   ],
+   "why": "Sediment covers the remains, so scavengers and decay cannot destroy them. Burial does not change the fish into rock at once, because minerals replace the hard parts slowly over a very long time.",
+   "clue": "Think about what could happen to the fish if it stayed uncovered."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student in Broken Hill finds a rock containing a shell shape made of stone. Which statement best explains how the shell became a fossil?",
+   "opts": [
+    "Buried in sediment, its shell was slowly replaced by minerals",
+    "The shell melted and cooled into stone as magma",
+    "The shell was squashed flat by heat and became new rock",
+    "The shell turned to stone soon after the animal died"
+   ],
+   "why": "The shell was buried in sediment, and minerals carried by water slowly replaced its hard parts. The shell turning to stone soon after death is wrong because the change takes a very long time.",
+   "clue": "Fossils form slowly, and burial comes first."
+  }
+ },
+ "redone": true,
+ "local": [
+  "sci-fossils-formb option is 61 characters: Buried in sediment, its shell was slowly replaced by minerals"
+ ],
+ "check": {
+  "a": {
+   "best": "Burial protects it from being eaten or broken down",
+   "also_right": []
+  },
+  "b": {
+   "best": "Buried in sediment, its shell was slowly replaced by minerals",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Fossils form slowly, and burial comes first' gives the answer away. The right option is the only one that mentions burial or slowness, so a student can match words without understanding how fossils form."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct. The only problem is that question b's clue names burial and slow change, which only the right option mentions, so it gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue 'Fossils form slowly, and burial comes first' gives the answer away. The right option is the only one that mentions burial or slowness, so a student can match words without understanding how fossils form.",
+  "Content check: sci-fossils-formb option is 61 characters: Buried in sediment, its shell was slowly replaced by minerals"
+ ],
+ "proposal": {
+  "title": "How fossils form",
+  "card": [
+   "A fossil is the preserved remains or traces of a living thing from long ago. Traces include footprints, burrows and droppings.",
+   "Fossils usually start when a dead organism is buried quickly in sediment, such as mud or sand. Burial protects it from being eaten or broken down.",
+   "Over a very long time, the sediment hardens into sedimentary rock. Water carrying minerals seeps into hard parts such as bones and shells, and the minerals slowly replace them.",
+   "Different layers of rock hold different fossils. This shows that different organisms lived at different times."
+  ],
+  "remember": "Quick burial, then minerals slowly replace the hard parts, leaving a fossil.",
+  "a": {
+   "q": "Why does a dead fish buried quickly in mud have a better chance of becoming a fossil than one left on the lakebed?",
+   "opts": [
+    "Burial protects it from being eaten or broken down",
+    "Burial turns the fish into rock straight away",
+    "Mud adds new bones to the fish as it is buried",
+    "Burial makes the fish older than other organisms"
+   ],
+   "why": "Sediment covers the remains, so scavengers and decay cannot destroy them. Burial does not change the fish into rock at once, because minerals replace the hard parts slowly over a very long time.",
+   "clue": "Think about what could happen to the fish if it stayed uncovered."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student in Broken Hill finds a rock containing a shell shape made of stone. Which statement best explains how the shell became a fossil?",
+   "opts": [
+    "Minerals slowly replaced the shell after it was buried",
+    "Minerals replaced the shell straight after it was buried",
+    "The buried shell slowly dried out and hardened into stone",
+    "The buried shell slowly melted and cooled into stone"
+   ],
+   "why": "After burial, water carrying minerals seeped into the shell, and the minerals replaced it over a very long time. Minerals replacing it straight after burial is wrong, because this change is slow. Drying out or melting does not turn a shell into stone.",
+   "clue": "Check both the process and how long it takes."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Burial protects it from being eaten or broken down",
+    "also_right": []
+   },
+   "b": {
+    "best": "Minerals slowly replaced the shell after it was buried",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Fossils form slowly, and burial comes first' gives the answer away. The right option is the only one that mentions burial or slowness, so a student can match words without understanding how fossils form."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue 'Fossils form slowly, and burial comes first' gives the answer away. The right option is the only one that mentions burial or slowness, so a student can match words without understanding how fossils form.",
+   "Content check: sci-fossils-formb option is 61 characters: Buried in sediment, its shell was slowly replaced by minerals"
+  ]
+ },
+ "final": {
+  "title": "How fossils form",
+  "card": [
+   "A fossil is the preserved remains or traces of a living thing from long ago. Traces include footprints, burrows and droppings.",
+   "Fossils usually start when a dead organism is buried quickly in sediment, such as mud or sand. Burial protects it from being eaten or broken down.",
+   "Over a very long time, the sediment hardens into sedimentary rock. Water carrying minerals seeps into hard parts such as bones and shells, and the minerals slowly replace them.",
+   "Different layers of rock hold different fossils. This shows that different organisms lived at different times."
+  ],
+  "remember": "Quick burial, then minerals slowly replace the hard parts, leaving a fossil.",
+  "a": {
+   "q": "Why does a dead fish buried quickly in mud have a better chance of becoming a fossil than one left on the lakebed?",
+   "opts": [
+    "Burial protects it from being eaten or broken down",
+    "Burial turns the fish into rock straight away",
+    "Mud adds new bones to the fish as it is buried",
+    "Burial makes the fish older than other organisms"
+   ],
+   "why": "Sediment covers the remains, so scavengers and decay cannot destroy them. Burial does not change the fish into rock at once, because minerals replace the hard parts slowly over a very long time.",
+   "clue": "Think about what could happen to the fish if it stayed uncovered."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student in Broken Hill finds a rock containing a shell shape made of stone. Which statement best explains how the shell became a fossil?",
+   "opts": [
+    "Minerals slowly replaced the shell after it was buried",
+    "Minerals replaced the shell straight after it was buried",
+    "The buried shell slowly dried out and hardened into stone",
+    "The buried shell slowly melted and cooled into stone"
+   ],
+   "why": "After burial, water carrying minerals seeped into the shell, and the minerals replaced it over a very long time. Minerals replacing it straight after burial is wrong, because this change is slow. Drying out or melting does not turn a shell into stone.",
+   "clue": "Check both the process and how long it takes."
+  }
+ },
+ "cleared_by": "recheck"
 }

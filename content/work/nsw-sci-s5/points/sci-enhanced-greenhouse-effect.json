@@ -20,8 +20,157 @@
    0.236
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:58Z write: failed the content check, writing again",
+  "2026-11-20T12:45:01Z write: done",
+  "2026-11-20T12:53:29Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.01934,
+  "check": 0.00904
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, sci-greenhouse-effect, explains the natural greenhouse effect and that more gas traps more heat, but it does not teach the enhanced greenhouse effect or the human cause of burning fossil fuels since industrialisation, so the new point needs a new card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The enhanced greenhouse effect",
+  "card": [
+   [
+    "Greenhouse effect",
+    "Gases such as carbon dioxide, methane and water vapour trap some of the heat that Earth gives off. This natural effect keeps Earth warm enough for life."
+   ],
+   [
+    "Fossil fuels",
+    "Coal, oil and gas contain carbon stored over millions of years. Burning them releases carbon dioxide into the air."
+   ],
+   [
+    "Stronger effect",
+    "Since industrialisation, burning fossil fuels has added more greenhouse gases. More heat is trapped than by the natural effect alone. This stronger effect is the enhanced greenhouse effect."
+   ],
+   [
+    "Result",
+    "With more heat trapped, global average temperatures have risen. The natural effect is needed for life. The problem is the extra gases added by human activity."
+   ]
+  ],
+  "remember": "The natural greenhouse effect keeps Earth warm. Extra gases from burning fossil fuels strengthen it and raise temperatures.",
+  "a": {
+   "q": "What makes the enhanced greenhouse effect different from the natural greenhouse effect?",
+   "opts": [
+    "Extra greenhouse gases from human activity trap more heat",
+    "Greenhouse gases appear in the air for the first time",
+    "The gases stop trapping heat and let it escape to space",
+    "The Sun gives off more heat than it did before"
+   ],
+   "why": "Burning fossil fuels adds greenhouse gases, so more heat is trapped than by the natural effect alone. The natural effect already existed and already trapped heat, so the gases do not appear for the first time.",
+   "clue": "The natural effect was already there. What has been added?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A student says, \"We should get rid of the greenhouse effect to stop global warming.\" Which reply is correct?",
+   "opts": [
+    "The natural effect keeps Earth warm enough for life",
+    "The natural effect only began when factories were built",
+    "Greenhouse gases come only from burning fossil fuels",
+    "Removing the effect would make Earth warmer overall"
+   ],
+   "why": "The natural greenhouse effect keeps Earth warm enough for life. The extra gases from fossil fuels strengthen it, and that is the problem. The effect did not begin with factories, because gases such as water vapour were trapping heat long before.",
+   "clue": "Think about what the natural effect does for life on Earth."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "Side-by-side diagrams of Earth and its atmosphere. Left, labelled 'Natural greenhouse effect': Sun's energy arrives, Earth gives off heat, and some heat is trapped by greenhouse gases. Right, labelled 'Enhanced greenhouse effect': the same, with more greenhouse gases from burning fossil fuels (a power station and car) and more heat trapped, shown by thicker arrows back to Earth.",
+    "why": "Seeing the two effects together shows that the stronger effect traps more heat because of extra gases."
+   }
+  ]
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Extra greenhouse gases from human activity trap more heat",
+   "also_right": []
+  },
+  "b": {
+   "best": "The natural effect keeps Earth warm enough for life",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The enhanced greenhouse effect",
+  "card": [
+   [
+    "Greenhouse effect",
+    "Gases such as carbon dioxide, methane and water vapour trap some of the heat that Earth gives off. This natural effect keeps Earth warm enough for life."
+   ],
+   [
+    "Fossil fuels",
+    "Coal, oil and gas contain carbon stored over millions of years. Burning them releases carbon dioxide into the air."
+   ],
+   [
+    "Stronger effect",
+    "Since industrialisation, burning fossil fuels has added more greenhouse gases. More heat is trapped than by the natural effect alone. This stronger effect is the enhanced greenhouse effect."
+   ],
+   [
+    "Result",
+    "With more heat trapped, global average temperatures have risen. The natural effect is needed for life. The problem is the extra gases added by human activity."
+   ]
+  ],
+  "remember": "The natural greenhouse effect keeps Earth warm. Extra gases from burning fossil fuels strengthen it and raise temperatures.",
+  "a": {
+   "q": "What makes the enhanced greenhouse effect different from the natural greenhouse effect?",
+   "opts": [
+    "Extra greenhouse gases from human activity trap more heat",
+    "Greenhouse gases appear in the air for the first time",
+    "The gases stop trapping heat and let it escape to space",
+    "The Sun gives off more heat than it did before"
+   ],
+   "why": "Burning fossil fuels adds greenhouse gases, so more heat is trapped than by the natural effect alone. The natural effect already existed and already trapped heat, so the gases do not appear for the first time.",
+   "clue": "The natural effect was already there. What has been added?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A student says, \"We should get rid of the greenhouse effect to stop global warming.\" Which reply is correct?",
+   "opts": [
+    "The natural effect keeps Earth warm enough for life",
+    "The natural effect only began when factories were built",
+    "Greenhouse gases come only from burning fossil fuels",
+    "Removing the effect would make Earth warmer overall"
+   ],
+   "why": "The natural greenhouse effect keeps Earth warm enough for life. The extra gases from fossil fuels strengthen it, and that is the problem. The effect did not begin with factories, because gases such as water vapour were trapping heat long before.",
+   "clue": "Think about what the natural effect does for life on Earth."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "Side-by-side diagrams of Earth and its atmosphere. Left, labelled 'Natural greenhouse effect': Sun's energy arrives, Earth gives off heat, and some heat is trapped by greenhouse gases. Right, labelled 'Enhanced greenhouse effect': the same, with more greenhouse gases from burning fossil fuels (a power station and car) and more heat trapped, shown by thicker arrows back to Earth.",
+    "why": "Seeing the two effects together shows that the stronger effect traps more heat because of extra gases."
+   }
+  ]
+ },
+ "cleared_by": "checker"
 }

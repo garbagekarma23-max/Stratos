@@ -24,8 +24,127 @@
    0.252
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:58Z write: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.00642,
+  "check": 0.00886
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No single bank point covers both halves of the brief: the spectrum card covers only electromagnetic waves crossing a vacuum, and the sound card covers only mechanical waves needing a medium, so neither matches the combined idea that waves carry energy without matter and the two wave types differ in needing a medium.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Mechanical and electromagnetic waves",
+  "card": [
+   "A wave carries energy from one place to another. The wave does not carry matter along with it.",
+   [
+    "Mechanical wave",
+    "needs a medium, which is a material such as air, water or a solid, to travel through. Sound is a mechanical wave."
+   ],
+   [
+    "Electromagnetic wave",
+    "can travel through a vacuum, which is empty space with no matter. Light is an electromagnetic wave."
+   ],
+   "This is why light from the Sun reaches Earth across space, but sound cannot travel through space. A floating cork on a water wave bobs up and down and stays in about the same place, while the energy moves on."
+  ],
+  "remember": "Waves move energy, not matter. Mechanical waves need a medium. Electromagnetic waves do not.",
+  "a": {
+   "q": "A wave travels across a pond and passes a floating leaf. What happens to the leaf as the wave passes?",
+   "opts": [
+    "It moves about the same spot while the energy moves on",
+    "It is carried along with the wave to the shore",
+    "It travels with the wave and then drifts back",
+    "It moves faster than the energy in the wave"
+   ],
+   "why": "A wave carries energy, not matter, so the leaf mostly stays near its spot as the wave passes. The tempting wrong option says the leaf is carried along, which would mean the wave carries matter.",
+   "clue": "Does a wave carry matter or energy?"
+  },
+  "b": {
+   "d": 3,
+   "q": "An astronaut outside a spacecraft in space sees a bright flash from a distant explosion. Which statement about the flash and any sound from it is correct?",
+   "opts": [
+    "The light can cross the vacuum, but sound cannot",
+    "The sound can cross the vacuum, but light cannot",
+    "Neither can cross the vacuum, as both are waves",
+    "Both can cross the vacuum, as both carry energy"
+   ],
+   "why": "Light is an electromagnetic wave and can travel through a vacuum. Sound is a mechanical wave and needs a medium, and space has none. Carrying energy does not decide this, as all waves carry energy.",
+   "clue": "Which type of wave needs a medium?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It moves about the same spot while the energy moves on",
+   "also_right": []
+  },
+  "b": {
+   "best": "The light can cross the vacuum, but sound cannot",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Mechanical and electromagnetic waves",
+  "card": [
+   "A wave carries energy from one place to another. The wave does not carry matter along with it.",
+   [
+    "Mechanical wave",
+    "needs a medium, which is a material such as air, water or a solid, to travel through. Sound is a mechanical wave."
+   ],
+   [
+    "Electromagnetic wave",
+    "can travel through a vacuum, which is empty space with no matter. Light is an electromagnetic wave."
+   ],
+   "This is why light from the Sun reaches Earth across space, but sound cannot travel through space. A floating cork on a water wave bobs up and down and stays in about the same place, while the energy moves on."
+  ],
+  "remember": "Waves move energy, not matter. Mechanical waves need a medium. Electromagnetic waves do not.",
+  "a": {
+   "q": "A wave travels across a pond and passes a floating leaf. What happens to the leaf as the wave passes?",
+   "opts": [
+    "It moves about the same spot while the energy moves on",
+    "It is carried along with the wave to the shore",
+    "It travels with the wave and then drifts back",
+    "It moves faster than the energy in the wave"
+   ],
+   "why": "A wave carries energy, not matter, so the leaf mostly stays near its spot as the wave passes. The tempting wrong option says the leaf is carried along, which would mean the wave carries matter.",
+   "clue": "Does a wave carry matter or energy?"
+  },
+  "b": {
+   "d": 3,
+   "q": "An astronaut outside a spacecraft in space sees a bright flash from a distant explosion. Which statement about the flash and any sound from it is correct?",
+   "opts": [
+    "The light can cross the vacuum, but sound cannot",
+    "The sound can cross the vacuum, but light cannot",
+    "Neither can cross the vacuum, as both are waves",
+    "Both can cross the vacuum, as both carry energy"
+   ],
+   "why": "Light is an electromagnetic wave and can travel through a vacuum. Sound is a mechanical wave and needs a medium, and space has none. Carrying energy does not decide this, as all waves carry energy.",
+   "clue": "Which type of wave needs a medium?"
+  }
+ },
+ "cleared_by": "checker"
 }

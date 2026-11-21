@@ -16,8 +16,211 @@
    0.249
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 says reuse sci-periodic-table-begins, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:59Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:44:59Z check: flagged",
+  "2026-11-20T12:53:29Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "confirm": 0.00842,
+  "write": 0.01095,
+  "check": 0.01124,
+  "fix": 0.01774,
+  "recheck": 0.00717
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "sci-periodic-table-begins",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea at a suitable Year 8 depth: Mendeleev grouped elements by properties, left gaps for undiscovered elements, and later discoveries confirmed the table, and its questions and terms fit NSW Stage 4.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point sci-periodic-table-begins teaches Mendeleev's gaps and predictions, but it also adds a separate idea about where metals and non-metals sit, and one of its two questions tests only that. It is broader than this brief, and fixing it would mean replacing a question, which is more than a small change.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Building the periodic table",
+  "card": [
+   "In the 1860s, Dmitri Mendeleev, a Russian chemist, listed the elements known at the time. He placed elements with similar properties together in the same row or column of a table.",
+   "Sometimes an element did not fit the pattern. Mendeleev left a gap instead of forcing it into the wrong place.",
+   "He used the pattern to predict that the gaps were elements not yet found. He also predicted what their properties would be like.",
+   "Later, scientists discovered new elements that matched his predictions. Each one filled a gap, which showed the pattern was useful."
+  ],
+  "remember": "Mendeleev's table sorted elements by their properties, and its gaps led to predictions that later discoveries filled.",
+  "a": {
+   "q": "Why did Mendeleev leave gaps in his table?",
+   "opts": [
+    "He expected elements not yet found to fit there",
+    "He had run out of room for the known elements",
+    "The elements for those places had been used up",
+    "He did not know the properties of any elements"
+   ],
+   "why": "The gaps held places for elements he thought existed but had not been found. Running out of room is wrong, because the gaps came from breaks in the pattern of properties.",
+   "clue": "Think about what a gap in a pattern might point to."
+  },
+  "b": {
+   "d": 2,
+   "q": "A new element is found that has the properties Mendeleev predicted for one gap. What does this show?",
+   "opts": [
+    "His pattern could predict elements not yet found",
+    "His table was wrong and needed to be thrown out",
+    "Elements can only be sorted by their size",
+    "All the gaps in the table were now filled"
+   ],
+   "why": "A match between a find and a prediction shows the pattern worked. The table was not wrong. One new element fills one gap only, so it does not show all gaps were filled.",
+   "clue": "A prediction that comes true supports the idea behind it."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "He expected elements not yet found to fit there",
+   "also_right": []
+  },
+  "b": {
+   "best": "His pattern could predict elements not yet found",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Sometimes an element did not fit the pattern. Mendeleev left a gap instead of forcing it into the wrong place' reads as if the misfit element itself was left out or given a gap. In fact, when the next known element did not match the properties of a place, Mendeleev moved it on to a place it did fit and left that place empty for an undiscovered element. Rewording, for example 'when no known element fitted a place, he left it empty', would avoid this confusion."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and explanations are sound. One card line is ambiguous: it could suggest the gap was for a known element that did not fit, rather than an empty place for an undiscovered element."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: 'Sometimes an element did not fit the pattern. Mendeleev left a gap instead of forcing it into the wrong place' reads as if the misfit element itself was left out or given a gap. In fact, when the next known element did not match the properties of a place, Mendeleev moved it on to a place it did fit and left that place empty for an undiscovered element. Rewording, for example 'when no known element fitted a place, he left it empty', would avoid this confusion."
+ ],
+ "proposal": {
+  "title": "Building the periodic table",
+  "card": [
+   "In 1869, Dmitri Mendeleev, a Russian chemist, made a table of the elements known at the time. He listed them roughly in order of the mass of their atoms and placed elements with similar properties together.",
+   "Sometimes no known element had the right properties for the next place in his table. He left that place empty and moved the element on to a place where its properties fitted.",
+   "He said each empty place was for an element not yet found. Using the elements around each gap, he also predicted what its properties would be.",
+   "Later, scientists discovered elements that matched his predictions and filled the gaps. For example, gallium, found in 1875, matched the element he predicted below aluminium."
+  ],
+  "remember": "Gaps in a pattern can point to things not yet found, and Mendeleev's gaps were filled by later discoveries.",
+  "a": {
+   "q": "Why did Mendeleev leave some places in his table empty?",
+   "opts": [
+    "He expected elements not yet found to fit there",
+    "He had run out of room for the known elements",
+    "He was unsure which way to order the elements",
+    "He left out elements that were too reactive"
+   ],
+   "why": "When no known element had the right properties for a place, he left it empty for an element still to be found. Running out of room is wrong, because the gaps came from the pattern of properties, not the size of the table.",
+   "clue": "Think about what a gap in a pattern might point to."
+  },
+  "b": {
+   "d": 2,
+   "q": "A newly discovered element has the properties Mendeleev predicted for one gap. What does this show?",
+   "opts": [
+    "His pattern could predict elements not yet found",
+    "His table was wrong and needed to be thrown out",
+    "Elements with similar properties do not sit together",
+    "Every gap in his table had now been filled"
+   ],
+   "why": "A discovery that matches a prediction shows the pattern worked. It does not show the table was wrong. One new element fills one gap only, so it does not show every gap was filled.",
+   "clue": "A prediction that comes true supports the idea behind it."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "He expected elements not yet found to fit there",
+    "also_right": []
+   },
+   "b": {
+    "best": "His pattern could predict elements not yet found",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Sometimes an element did not fit the pattern. Mendeleev left a gap instead of forcing it into the wrong place' reads as if the misfit element itself was left out or given a gap. In fact, when the next known element did not match the properties of a place, Mendeleev moved it on to a place it did fit and left that place empty for an undiscovered element. Rewording, for example 'when no known element fitted a place, he left it empty', would avoid this confusion."
+   }
+  ],
+  "flags": [
+   "Card, wording: 'Sometimes an element did not fit the pattern. Mendeleev left a gap instead of forcing it into the wrong place' reads as if the misfit element itself was left out or given a gap. In fact, when the next known element did not match the properties of a place, Mendeleev moved it on to a place it did fit and left that place empty for an undiscovered element. Rewording, for example 'when no known element fitted a place, he left it empty', would avoid this confusion."
+  ]
+ },
+ "final": {
+  "title": "Building the periodic table",
+  "card": [
+   "In 1869, Dmitri Mendeleev, a Russian chemist, made a table of the elements known at the time. He listed them roughly in order of the mass of their atoms and placed elements with similar properties together.",
+   "Sometimes no known element had the right properties for the next place in his table. He left that place empty and moved the element on to a place where its properties fitted.",
+   "He said each empty place was for an element not yet found. Using the elements around each gap, he also predicted what its properties would be.",
+   "Later, scientists discovered elements that matched his predictions and filled the gaps. For example, gallium, found in 1875, matched the element he predicted below aluminium."
+  ],
+  "remember": "Gaps in a pattern can point to things not yet found, and Mendeleev's gaps were filled by later discoveries.",
+  "a": {
+   "q": "Why did Mendeleev leave some places in his table empty?",
+   "opts": [
+    "He expected elements not yet found to fit there",
+    "He had run out of room for the known elements",
+    "He was unsure which way to order the elements",
+    "He left out elements that were too reactive"
+   ],
+   "why": "When no known element had the right properties for a place, he left it empty for an element still to be found. Running out of room is wrong, because the gaps came from the pattern of properties, not the size of the table.",
+   "clue": "Think about what a gap in a pattern might point to."
+  },
+  "b": {
+   "d": 2,
+   "q": "A newly discovered element has the properties Mendeleev predicted for one gap. What does this show?",
+   "opts": [
+    "His pattern could predict elements not yet found",
+    "His table was wrong and needed to be thrown out",
+    "Elements with similar properties do not sit together",
+    "Every gap in his table had now been filled"
+   ],
+   "why": "A discovery that matches a prediction shows the pattern worked. It does not show the table was wrong. One new element fills one gap only, so it does not show every gap was filled.",
+   "clue": "A prediction that comes true supports the idea behind it."
+  }
+ },
+ "cleared_by": "recheck"
 }

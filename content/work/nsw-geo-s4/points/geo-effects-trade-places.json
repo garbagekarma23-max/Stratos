@@ -12,8 +12,246 @@
    0.252
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:45Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:49Z write: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:02:37Z claude-code review: left for you (it chose to leave it)",
+  "2026-11-20T14:39:13Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00613,
+  "check": 0.01266,
+  "fix": 0.01884,
+  "recheck": 0.00733
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point covers the effects of trade on places, such as jobs, port towns and environmental harm; they only explain what trade links are and how those links change over time.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Effects of trade on places",
+  "card": [
+   "Trade changes the places that take part in it. The changes can help people and can also harm environments.",
+   [
+    "Building places",
+    "Trade can lead to ports, roads, rail lines and towns being built to move goods. These can bring jobs, such as dock work, trucking and running shops."
+   ],
+   [
+    "Harming environments",
+    "Mining to produce goods for sale can clear land and damage habitats. Ships and trucks can pollute the water and air, and burning fuel adds emissions that can warm the climate."
+   ],
+   "Trade can have both kinds of effect on the same place at the same time."
+  ],
+  "remember": "Trade can bring ports, towns and jobs to a place, and it can also harm the environment.",
+  "a": {
+   "q": "Which is an environmental harm that trade can cause?",
+   "opts": [
+    "Ships and trucks adding emissions that warm the climate",
+    "A new port bringing dock jobs to a coastal town",
+    "A rail line built to carry goods to a city",
+    "A town growing around a busy trade route"
+   ],
+   "why": "Moving goods by ship and truck burns fuel, which can add emissions. The other three are ways trade can build places and bring jobs, so they are not harms to the environment.",
+   "clue": "Which option is about damage, not building?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A new coal mine opens near the town of Marlow so the coal can be sold overseas. A new port is built to ship it. Which statement fits what trade can do to Marlow?",
+   "opts": [
+    "It can bring jobs and also damage local habitats",
+    "It can bring jobs, but it cannot harm the environment",
+    "It can harm the environment, but it cannot bring jobs",
+    "It can only change the town if people travel there"
+   ],
+   "why": "The port and mine can bring jobs, and mining can clear land and damage habitats. Both effects can happen in the same place. The option saying trade cannot harm the environment is wrong because the card says mining and shipping can.",
+   "clue": "Trade can have good and bad effects at once."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Ships and trucks adding emissions that warm the climate",
+   "also_right": []
+  },
+  "b": {
+   "best": "It can bring jobs and also damage local habitats",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Every wrong option uses an absolute ('cannot' or 'only') and the right option is the only one without one. A test-wise student can pick it without knowing the idea. The 'only' in 'It can only change the town if people travel there' also clashes with the card's 'can' wording."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Trade can have good and bad effects at once' points straight at the one option that names both a good and a bad effect, so it gives the answer away."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question a are accurate. In question b the right option is the only one without 'cannot' or 'only', and the clue states the answer outright, so both should be reworded."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: Every wrong option uses an absolute ('cannot' or 'only') and the right option is the only one without one. A test-wise student can pick it without knowing the idea. The 'only' in 'It can only change the town if people travel there' also clashes with the card's 'can' wording.",
+  "Question b, other: The clue 'Trade can have good and bad effects at once' points straight at the one option that names both a good and a bad effect, so it gives the answer away."
+ ],
+ "proposal": {
+  "title": "Effects of trade on places",
+  "card": [
+   "Trade changes the places that take part in it. The changes can help people and can also harm environments.",
+   [
+    "Building places",
+    "Trade can lead to ports, roads, rail lines and towns being built to move goods. These can bring jobs, such as dock work, trucking and running shops."
+   ],
+   [
+    "Harming environments",
+    "Mining to produce goods for sale can clear land and damage habitats. Ships and trucks can pollute the water and air, and burning fuel adds emissions that can warm the climate."
+   ],
+   "Trade can have both kinds of effect on the same place at the same time."
+  ],
+  "remember": "Trade can bring ports, towns and jobs to a place, and it can also harm the environment.",
+  "a": {
+   "q": "Which is an environmental harm that trade can cause?",
+   "opts": [
+    "Ships and trucks adding emissions that warm the climate",
+    "A new port bringing dock jobs to a coastal town",
+    "A rail line built to carry goods to a city",
+    "A town growing around a busy trade route"
+   ],
+   "why": "Moving goods by ship and truck burns fuel, which can add emissions. The other three are ways trade can build places and bring jobs, so they are not harms to the environment.",
+   "clue": "Which option is about damage, not building?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A new coal mine opens near the town of Marlow so the coal can be sold overseas. A port is built to ship it. Which pair sorts two effects on Marlow correctly?",
+   "opts": [
+    "Help: dock jobs. Harm: land cleared for the mine",
+    "Help: land cleared for the mine. Harm: dock jobs",
+    "Help: ship emissions. Harm: land cleared for the mine",
+    "Help: dock jobs. Harm: new shops opening in town"
+   ],
+   "why": "Dock jobs are a way trade can help a place, and clearing land for the mine can damage habitats. Ship emissions are tempting as a help because they come with more trade, but they harm the air and climate. New shops bring jobs, so they help rather than harm.",
+   "clue": "For each effect, ask: does it build the place or damage it?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Ships and trucks adding emissions that warm the climate",
+    "also_right": []
+   },
+   "b": {
+    "best": "Help: dock jobs. Harm: land cleared for the mine",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Every wrong option uses an absolute ('cannot' or 'only') and the right option is the only one without one. A test-wise student can pick it without knowing the idea. The 'only' in 'It can only change the town if people travel there' also clashes with the card's 'can' wording."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Trade can have good and bad effects at once' points straight at the one option that names both a good and a bad effect, so it gives the answer away."
+   }
+  ],
+  "flags": [
+   "Question b, wording: Every wrong option uses an absolute ('cannot' or 'only') and the right option is the only one without one. A test-wise student can pick it without knowing the idea. The 'only' in 'It can only change the town if people travel there' also clashes with the card's 'can' wording.",
+   "Question b, other: The clue 'Trade can have good and bad effects at once' points straight at the one option that names both a good and a bad effect, so it gives the answer away."
+  ],
+  "owner": "fix"
+ },
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "leave",
+   "sure": "medium",
+   "reason": "The fix answers both problems in question b, but question a, kept as it was, has a right option clearly longer than every wrong one (54 characters against an average of 43). The owner can use the fix and rebalance question a, or ask for a rewrite.",
+   "item": "0354c4c855ff2cd5",
+   "result": "left"
+  }
+ ],
+ "final": {
+  "title": "Effects of trade on places",
+  "card": [
+   "Trade changes the places that take part in it. The changes can help people and can also harm environments.",
+   [
+    "Building places",
+    "Trade can lead to ports, roads, rail lines and towns being built to move goods. These can bring jobs, such as dock work, trucking and running shops."
+   ],
+   [
+    "Harming environments",
+    "Mining to produce goods for sale can clear land and damage habitats. Ships and trucks can pollute the water and air, and burning fuel adds emissions that can warm the climate."
+   ],
+   "Trade can have both kinds of effect on the same place at the same time."
+  ],
+  "remember": "Trade can bring ports, towns and jobs to a place, and it can also harm the environment.",
+  "a": {
+   "q": "Which is an environmental harm that trade can cause?",
+   "opts": [
+    "Ships and trucks adding emissions that warm the climate",
+    "A new port bringing dock jobs to a coastal town",
+    "A rail line built to carry goods to a city",
+    "A town growing around a busy trade route"
+   ],
+   "why": "Moving goods by ship and truck burns fuel, which can add emissions. The other three are ways trade can build places and bring jobs, so they are not harms to the environment.",
+   "clue": "Which option is about damage, not building?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A new coal mine opens near the town of Marlow so the coal can be sold overseas. A port is built to ship it. Which pair sorts two effects on Marlow correctly?",
+   "opts": [
+    "Help: dock jobs. Harm: land cleared for the mine",
+    "Help: land cleared for the mine. Harm: dock jobs",
+    "Help: ship emissions. Harm: land cleared for the mine",
+    "Help: dock jobs. Harm: new shops opening in town"
+   ],
+   "why": "Dock jobs are a way trade can help a place, and clearing land for the mine can damage habitats. Ship emissions are tempting as a help because they come with more trade, but they harm the air and climate. New shops bring jobs, so they help rather than harm.",
+   "clue": "For each effect, ask: does it build the place or damage it?"
+  }
+ },
+ "cleared_by": "owner"
 }

@@ -8,8 +8,201 @@
    0.229
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:50Z write: done",
+  "2026-11-20T12:35:50Z check: flagged",
+  "2026-11-20T12:44:56Z fix: suggested",
+  "2026-11-20T13:23:39Z autoreview: cleared with the fix (a other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 8e-05,
+  "write": 0.00674,
+  "check": 0.0118,
+  "fix": 0.0193
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches Mongol-era Silk Road trade for Year 8 with a different time, empire and depth, not the Han dynasty legacy of silk, ideas and paper spreading, so it does not match the new point's idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The Silk Road and the Han legacy",
+  "card": [
+   "The Han dynasty ruled China from 206 BCE to 220 CE. Under the Han, China grew strong and its trade reached far beyond its borders.",
+   "The Silk Road was not one road. It was a network of trade routes across Asia that linked China with lands to the west, as far as the Roman world.",
+   "Traders carried silk, which China was famous for, along with spices, metals and other goods. Ideas and beliefs also travelled with them.",
+   "Inventions spread too. Paper was made in Han China and later reached other lands. This is part of the Han legacy: what the Han left to later times."
+  ],
+  "remember": "The Silk Road was a trade network that moved goods, ideas and inventions between China and the West.",
+  "a": {
+   "q": "Which statement best describes the Silk Road?",
+   "opts": [
+    "A network of trade routes linking China with the West",
+    "A single paved road built by the Han emperor",
+    "A canal that carried silk down the Yellow River",
+    "A wall built to keep traders out of China"
+   ],
+   "why": "The Silk Road was a network of routes across Asia, and it carried goods and ideas. It was not one road, so the option about a single paved road is wrong even though the name sounds like it.",
+   "clue": "Think about the word network."
+  },
+  "b": {
+   "d": 2,
+   "q": "A merchant in Han China sends silk west along the Silk Road. Which other thing could also have travelled along these routes?",
+   "opts": [
+    "Ideas and inventions, such as how to make paper",
+    "Only goods, because ideas cannot be carried",
+    "Only silk, because no other goods were traded",
+    "Armies sent by the Han to take over every town"
+   ],
+   "why": "The card says traders carried ideas as well as goods, and inventions such as paper spread. The option saying only goods travelled is tempting, but people moving along the routes also took ideas with them.",
+   "clue": "Traders carried more than things they could sell."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "image",
+    "brief": "A map of the Silk Road routes across Asia, showing the network linking China in the east with the Roman world in the west, with China and the Roman world labelled.",
+    "why": "It shows that the Silk Road was a network of routes joining China and the West."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A network of trade routes linking China with the West",
+   "also_right": []
+  },
+  "b": {
+   "best": "Ideas and inventions, such as how to make paper",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about the word network' gives the answer away, because the right option is the only one that contains the word 'network'. A student can match the word without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts check out, but question a's clue points straight to the only option containing the word 'network', so it gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'Think about the word network' gives the answer away, because the right option is the only one that contains the word 'network'. A student can match the word without knowing the idea."
+ ],
+ "proposal": {
+  "title": "The Silk Road and the Han legacy",
+  "card": [
+   "The Han dynasty ruled China from 206 BCE to 220 CE. Under the Han, China grew strong and its trade reached far beyond its borders.",
+   "The Silk Road was not one road. It was a network of trade routes across Asia that linked China with lands to the west, as far as the Roman world.",
+   "Traders carried silk, which China was famous for, along with spices, metals and other goods. Ideas and beliefs also travelled with them.",
+   "Inventions spread too. Paper was made in Han China and later reached other lands. This is part of the Han legacy: what the Han left to later times."
+  ],
+  "remember": "The Silk Road was a trade network that moved goods, ideas and inventions between China and the West.",
+  "a": {
+   "q": "Which statement best describes the Silk Road?",
+   "opts": [
+    "A network of trade routes linking China with the West",
+    "A single paved road built by the Han emperor",
+    "A canal that carried silk down the Yellow River",
+    "A wall built to keep traders out of China"
+   ],
+   "why": "The Silk Road was many routes across Asia, and it carried goods and ideas between China and the West. It was not one road, so the option about a single paved road is wrong even though the name makes it sound that way.",
+   "clue": "Did every trader follow the same single path?"
+  },
+  "b": {
+   "d": 2,
+   "q": "A merchant in Han China sends silk west along the Silk Road. Which other thing could also have travelled along these routes?",
+   "opts": [
+    "Ideas and inventions, such as how to make paper",
+    "Only goods, because ideas cannot be carried",
+    "Only silk, because no other goods were traded",
+    "Nothing, because the routes only ran inside China"
+   ],
+   "why": "Traders carried ideas and beliefs as well as goods, and inventions such as paper spread to other lands. The option saying only goods travelled is tempting, but the people moving along the routes took their ideas with them.",
+   "clue": "Traders carried more than things they could sell."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "image",
+    "brief": "A map of the Silk Road routes across Asia, showing the network linking China in the east with the Roman world in the west, with China and the Roman world labelled.",
+    "why": "It shows that the Silk Road was a network of routes joining China and the West."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:39Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about the word network' gives the answer away, because the right option is the only one that contains the word 'network'. A student can match the word without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue 'Think about the word network' gives the answer away, because the right option is the only one that contains the word 'network'. A student can match the word without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "The Silk Road and the Han legacy",
+  "card": [
+   "The Han dynasty ruled China from 206 BCE to 220 CE. Under the Han, China grew strong and its trade reached far beyond its borders.",
+   "The Silk Road was not one road. It was a network of trade routes across Asia that linked China with lands to the west, as far as the Roman world.",
+   "Traders carried silk, which China was famous for, along with spices, metals and other goods. Ideas and beliefs also travelled with them.",
+   "Inventions spread too. Paper was made in Han China and later reached other lands. This is part of the Han legacy: what the Han left to later times."
+  ],
+  "remember": "The Silk Road was a trade network that moved goods, ideas and inventions between China and the West.",
+  "a": {
+   "q": "Which statement best describes the Silk Road?",
+   "opts": [
+    "A network of trade routes linking China with the West",
+    "A single paved road built by the Han emperor",
+    "A canal that carried silk down the Yellow River",
+    "A wall built to keep traders out of China"
+   ],
+   "why": "The Silk Road was many routes across Asia, and it carried goods and ideas between China and the West. It was not one road, so the option about a single paved road is wrong even though the name makes it sound that way.",
+   "clue": "Did every trader follow the same single path?"
+  },
+  "b": {
+   "d": 2,
+   "q": "A merchant in Han China sends silk west along the Silk Road. Which other thing could also have travelled along these routes?",
+   "opts": [
+    "Ideas and inventions, such as how to make paper",
+    "Only goods, because ideas cannot be carried",
+    "Only silk, because no other goods were traded",
+    "Nothing, because the routes only ran inside China"
+   ],
+   "why": "Traders carried ideas and beliefs as well as goods, and inventions such as paper spread to other lands. The option saying only goods travelled is tempting, but the people moving along the routes took their ideas with them.",
+   "clue": "Traders carried more than things they could sell."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "image",
+    "brief": "A map of the Silk Road routes across Asia, showing the network linking China in the east with the Roman world in the west, with China and the Roman world labelled.",
+    "why": "It shows that the Silk Road was a network of routes joining China and the West."
+   }
+  ]
+ },
+ "cleared_by": "auto"
 }

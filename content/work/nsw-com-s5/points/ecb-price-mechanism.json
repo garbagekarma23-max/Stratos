@@ -24,8 +24,423 @@
    0.357
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 may adapt ecb-equilibrium-price, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:40Z confirm: Claude Opus 5.5 may adapt ecb-equilibrium-price, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt ecb-equilibrium-price (2 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting ecb-equilibrium-price on the next run",
+  "2026-11-20T14:12:37Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00044,
+  "confirm": 0.01206,
+  "adapt": 0.00404,
+  "check": 0.00963
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "ecb-equilibrium-price",
+  "changes": [
+   "Move the mango stall example from Bowen, Queensland to a place in New South Wales, such as Dubbo or Wagga Wagga, so the example is local to the NSW course."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same idea (demand and supply meet at an equilibrium price, with shortages pushing the price up and surpluses pushing it down) at a suitable depth, but its example is set in Queensland and should be localised to NSW.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "ecb-equilibrium-price",
+  "changes": [
+   "In question b, move Mia's mango stall from Bowen, Queensland to a New South Wales location, such as a market in Coffs Harbour."
+  ],
+  "sure": "medium",
+  "reason": "The Year 8 equilibrium price card teaches exactly this idea at a suitable depth: supply and demand meet to set a price, and shortages push it up while surpluses push it down. Only its Queensland example needs to become a New South Wales one.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "ecb-equilibrium-price",
+  "changes": [
+   "Move Mia's mango stall in question b from Bowen, Queensland to a New South Wales market, such as one in Coffs Harbour.",
+   "Title the point 'The price mechanism' and say in the first card line that this is how the price mechanism sets prices in a market."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "title",
+   "card1",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches supply and demand setting a price, with a shortage pushing it up and a surplus pushing it down, which is the brief at the right depth. It needs a NSW place in question b and the name the brief uses, the price mechanism.",
+   "item": "d49cfb0361aac506",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-price-mechanism",
+    "title": "The price mechanism",
+    "brief": "ad8ea1d94323",
+    "shortlist": [
+     [
+      "e-pricemech",
+      0.499
+     ],
+     [
+      "ecb-equilibrium-price",
+      0.48
+     ],
+     [
+      "eco-market-equilibrium",
+      0.432
+     ],
+     [
+      "ecb-changes-price",
+      0.41
+     ],
+     [
+      "eco-market",
+      0.357
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00044,
+     "confirm": 0.01206
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "ecb-equilibrium-price",
+     "changes": [
+      "Move the mango stall example from Bowen, Queensland to a place in New South Wales, such as Dubbo or Wagga Wagga, so the example is local to the NSW course."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches the same idea (demand and supply meet at an equilibrium price, with shortages pushing the price up and surpluses pushing it down) at a suitable depth, but its example is set in Queensland and should be localised to NSW.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "ecb-equilibrium-price",
+     "changes": [
+      "In question b, move Mia's mango stall from Bowen, Queensland to a New South Wales location, such as a market in Coffs Harbour."
+     ],
+     "sure": "medium",
+     "reason": "The Year 8 equilibrium price card teaches exactly this idea at a suitable depth: supply and demand meet to set a price, and shortages push it up while surpluses push it down. Only its Queensland example needs to become a New South Wales one.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "48186536115833d7"
+  }
+ ],
+ "draft": {
+  "title": "The price mechanism",
+  "card": [
+   "The price mechanism is how a market sets prices. It settles on the equilibrium price, where the amount buyers want equals the amount sellers offer.",
+   [
+    "Shortage",
+    "the price is below equilibrium, so buyers want more than sellers offer. Buyers compete for the limited goods, which pushes the price up."
+   ],
+   [
+    "Surplus",
+    "the price is above equilibrium, so sellers offer more than buyers want. Sellers are left with unsold stock and cut prices, which pushes the price down."
+   ],
+   "Prices keep moving until the shortage or surplus is gone. The market then settles at the equilibrium price."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A demand curve and a supply curve cross at the equilibrium price. At a higher price, sellers offer more than buyers want: the gap between the curves is a surplus. At a lower price, buyers want more than sellers offer: the gap is a shortage.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Quantity"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Price"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "D",
+      "points": [
+       [
+        1,
+        9
+       ],
+       [
+        9,
+        1
+       ]
+      ],
+      "label": "Demand",
+      "pos": "below-left",
+      "labelAt": 8.6
+     },
+     {
+      "type": "curve",
+      "id": "S",
+      "points": [
+       [
+        1,
+        1
+       ],
+       [
+        9,
+        9
+       ]
+      ],
+      "label": "Supply",
+      "pos": "above-left",
+      "labelAt": 8.6
+     },
+     {
+      "type": "arrow",
+      "from": [
+       2,
+       8
+      ],
+      "to": [
+       8,
+       8
+      ],
+      "label": "surplus",
+      "pos": "above"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       2,
+       2
+      ],
+      "to": [
+       8,
+       2
+      ],
+      "label": "shortage",
+      "pos": "below"
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       5
+      ],
+      "on": [
+       "D",
+       "S"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "text",
+      "at": [
+       4.5,
+       5
+      ],
+      "label": "equilibrium",
+      "pos": "left"
+     }
+    ]
+   }
+  },
+  "remember": "Shortage: price rises. Surplus: price falls. Both end at equilibrium.",
+  "a": {
+   "q": "A market has a surplus at its current price. Which statement describes it?",
+   "opts": [
+    "Sellers offer more than buyers want to buy",
+    "Buyers want more than sellers offer",
+    "Buyers want exactly what sellers offer",
+    "The price is below the equilibrium price"
+   ],
+   "why": "A surplus means sellers offer more than buyers want at the current price, so stock is left unsold. Buyers wanting more than sellers offer describes a shortage, which is the reverse.",
+   "clue": "Think about who is left with goods they cannot sell."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia sells fresh mangoes at a market stall in Coffs Harbour, NSW. At $4 each, she has 80 mangoes left at the end of the day. If the market keeps adjusting, what will most likely happen to the price?",
+   "opts": [
+    "It falls, because $4 is above the equilibrium price",
+    "It rises, because $4 is below the equilibrium price",
+    "It stays at $4, because Mia sets the price",
+    "It rises, because there are goods left to sell"
+   ],
+   "why": "Unsold mangoes mean Mia offered more than buyers wanted at $4, which is a surplus. A surplus shows the price is above equilibrium, so sellers cut prices until it clears. Leftover goods do not push prices up.",
+   "clue": "Leftover stock means sellers offered more than buyers wanted."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Sellers offer more than buyers want to buy",
+   "also_right": []
+  },
+  "b": {
+   "best": "It falls, because $4 is above the equilibrium price",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The graph's surplus and shortage gaps sit at the right prices, and both questions have one clear right answer that matches the card."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The price mechanism",
+  "card": [
+   "The price mechanism is how a market sets prices. It settles on the equilibrium price, where the amount buyers want equals the amount sellers offer.",
+   [
+    "Shortage",
+    "the price is below equilibrium, so buyers want more than sellers offer. Buyers compete for the limited goods, which pushes the price up."
+   ],
+   [
+    "Surplus",
+    "the price is above equilibrium, so sellers offer more than buyers want. Sellers are left with unsold stock and cut prices, which pushes the price down."
+   ],
+   "Prices keep moving until the shortage or surplus is gone. The market then settles at the equilibrium price."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A demand curve and a supply curve cross at the equilibrium price. At a higher price, sellers offer more than buyers want: the gap between the curves is a surplus. At a lower price, buyers want more than sellers offer: the gap is a shortage.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Quantity"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Price"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "D",
+      "points": [
+       [
+        1,
+        9
+       ],
+       [
+        9,
+        1
+       ]
+      ],
+      "label": "Demand",
+      "pos": "below-left",
+      "labelAt": 8.6
+     },
+     {
+      "type": "curve",
+      "id": "S",
+      "points": [
+       [
+        1,
+        1
+       ],
+       [
+        9,
+        9
+       ]
+      ],
+      "label": "Supply",
+      "pos": "above-left",
+      "labelAt": 8.6
+     },
+     {
+      "type": "arrow",
+      "from": [
+       2,
+       8
+      ],
+      "to": [
+       8,
+       8
+      ],
+      "label": "surplus",
+      "pos": "above"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       2,
+       2
+      ],
+      "to": [
+       8,
+       2
+      ],
+      "label": "shortage",
+      "pos": "below"
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       5
+      ],
+      "on": [
+       "D",
+       "S"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "text",
+      "at": [
+       4.5,
+       5
+      ],
+      "label": "equilibrium",
+      "pos": "left"
+     }
+    ]
+   }
+  },
+  "remember": "Shortage: price rises. Surplus: price falls. Both end at equilibrium.",
+  "a": {
+   "q": "A market has a surplus at its current price. Which statement describes it?",
+   "opts": [
+    "Sellers offer more than buyers want to buy",
+    "Buyers want more than sellers offer",
+    "Buyers want exactly what sellers offer",
+    "The price is below the equilibrium price"
+   ],
+   "why": "A surplus means sellers offer more than buyers want at the current price, so stock is left unsold. Buyers wanting more than sellers offer describes a shortage, which is the reverse.",
+   "clue": "Think about who is left with goods they cannot sell."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia sells fresh mangoes at a market stall in Coffs Harbour, NSW. At $4 each, she has 80 mangoes left at the end of the day. If the market keeps adjusting, what will most likely happen to the price?",
+   "opts": [
+    "It falls, because $4 is above the equilibrium price",
+    "It rises, because $4 is below the equilibrium price",
+    "It stays at $4, because Mia sets the price",
+    "It rises, because there are goods left to sell"
+   ],
+   "why": "Unsold mangoes mean Mia offered more than buyers wanted at $4, which is a surplus. A surplus shows the price is above equilibrium, so sellers cut prices until it clears. Leftover goods do not push prices up.",
+   "clue": "Leftover stock means sellers offered more than buyers wanted."
+  }
+ }
 }

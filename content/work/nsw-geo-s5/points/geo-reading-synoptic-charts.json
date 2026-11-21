@@ -3,8 +3,426 @@
  "title": "Reading synoptic charts",
  "brief": "5fbea377fe0b",
  "shortlist": [],
- "stage": "write",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, write"
+  "2026-11-12T12:22:35Z new, write",
+  "2026-11-20T12:15:17Z write: done",
+  "2026-11-20T12:25:47Z check: flagged",
+  "2026-11-20T12:35:50Z fix: suggested",
+  "2026-11-20T13:23:39Z autoreview: picked as a spot check. It would have been cleared with the fix (a other, b wording, remember wording)",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "write": 0.00651,
+  "check": 0.0101,
+  "fix": 0.01794
+ },
+ "draft": {
+  "title": "Reading synoptic charts",
+  "card": [
+   "A synoptic chart is a weather map. It shows air pressure at sea level using isobars, which are lines joining places of equal air pressure.",
+   "Isobars that are close together mean the pressure changes quickly over a short distance. This brings strong winds. Isobars that are far apart mean light winds.",
+   [
+    "High",
+    "marked H. A high-pressure system usually brings fine, clear weather."
+   ],
+   [
+    "Low",
+    "marked L. A low-pressure system, and the fronts linked to it, usually bring cloud and rain."
+   ]
+  ],
+  "remember": "Close isobars mean strong winds. Highs bring fine weather. Lows and fronts bring rain.",
+  "a": {
+   "q": "On a synoptic chart, what does an isobar join?",
+   "opts": [
+    "Places with equal air pressure",
+    "Places with equal temperature",
+    "Places with equal rainfall",
+    "Places with equal wind speed"
+   ],
+   "why": "An isobar joins places that have the same air pressure. Wind speed is shown by how close the isobars are, not by what each line joins, so it is the tempting wrong choice.",
+   "clue": "The word isobar is about pressure."
+  },
+  "b": {
+   "d": 2,
+   "q": "On a synoptic chart, a town in Wagga Wagga lies under an H, with isobars far apart. What weather is most likely?",
+   "opts": [
+    "Fine, clear skies and light winds",
+    "Fine, clear skies and strong winds",
+    "Rain and light winds",
+    "Rain and strong winds"
+   ],
+   "why": "A high usually brings fine weather, and isobars far apart mean light winds. The option with fine weather and strong winds is tempting, but strong winds need isobars close together.",
+   "clue": "Check what H means, then check the spacing of the isobars."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A simple synoptic chart of part of Australia with curved isobars, one labelled H and one labelled L. A cold front is drawn as a line with triangles. Isobars are close together near the L and far apart near the H.",
+    "why": "Seeing isobars, highs, lows and fronts together helps students read a real chart."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Places with equal air pressure",
+   "also_right": []
+  },
+  "b": {
+   "best": "Fine, clear skies and light winds",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'The word isobar is about pressure' gives the answer away, so students can pick the right option without knowing what an isobar is."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'A town in Wagga Wagga' is confusing because Wagga Wagga is itself a city. Use 'Wagga Wagga lies under an H' or 'a town near Wagga Wagga'."
+   },
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "The remember line says 'Highs bring fine weather. Lows and fronts bring rain.' without the card's 'usually', so it turns a general tendency into a rule."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts are correct. Question a's clue gives the answer away, question b's 'a town in Wagga Wagga' is awkward, and the remember line drops the card's 'usually'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'The word isobar is about pressure' gives the answer away, so students can pick the right option without knowing what an isobar is.",
+  "Question b, wording: 'A town in Wagga Wagga' is confusing because Wagga Wagga is itself a city. Use 'Wagga Wagga lies under an H' or 'a town near Wagga Wagga'.",
+  "Remember, wording: The remember line says 'Highs bring fine weather. Lows and fronts bring rain.' without the card's 'usually', so it turns a general tendency into a rule."
+ ],
+ "proposal": {
+  "title": "Reading synoptic charts",
+  "card": [
+   "A synoptic chart is a weather map. It shows air pressure at sea level using isobars, which are lines joining places of equal air pressure.",
+   "Isobars that are close together mean the pressure changes quickly over a short distance. This brings strong winds. Isobars that are far apart mean light winds.",
+   [
+    "High",
+    "marked H. A high-pressure system usually brings fine, clear weather."
+   ],
+   [
+    "Low",
+    "marked L. A low-pressure system, and the fronts linked to it, usually bring cloud and rain."
+   ]
+  ],
+  "remember": "Close isobars mean strong winds. Highs usually bring fine weather, and lows and fronts usually bring rain.",
+  "a": {
+   "q": "On a synoptic chart, what does an isobar join?",
+   "opts": [
+    "Places with equal air pressure",
+    "Places with equal temperature",
+    "Places with equal rainfall",
+    "Places with equal wind speed"
+   ],
+   "why": "An isobar joins places that have the same air pressure. Wind speed is shown by how close the isobars are, not by what each line joins, so it is the tempting wrong choice.",
+   "clue": "Wind is read from the gaps between the lines, not from the lines themselves."
+  },
+  "b": {
+   "d": 2,
+   "q": "On a synoptic chart, Wagga Wagga lies under an H, with isobars far apart. What weather is most likely?",
+   "opts": [
+    "Fine, clear skies and light winds",
+    "Fine, clear skies and strong winds",
+    "Cloud, rain and light winds",
+    "Cloud, rain and strong winds"
+   ],
+   "why": "A high usually brings fine weather, and isobars far apart mean light winds. The option with fine weather and strong winds is tempting, but strong winds come with isobars close together.",
+   "clue": "Check what H means, then check the spacing of the isobars."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A simple synoptic chart of part of Australia with curved isobars around a high marked H and a low marked L. A cold front is drawn as a line with triangles, running from the low. Isobars are close together near the L and far apart near the H. Label one isobar as 'isobar'.",
+    "why": "Seeing isobars, highs, lows and fronts together helps students read a real chart."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:39Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'The word isobar is about pressure' gives the answer away, so students can pick the right option without knowing what an isobar is."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'A town in Wagga Wagga' is confusing because Wagga Wagga is itself a city. Use 'Wagga Wagga lies under an H' or 'a town near Wagga Wagga'."
+   },
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "The remember line says 'Highs bring fine weather. Lows and fronts bring rain.' without the card's 'usually', so it turns a general tendency into a rule."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue 'The word isobar is about pressure' gives the answer away, so students can pick the right option without knowing what an isobar is.",
+   "Question b, wording: 'A town in Wagga Wagga' is confusing because Wagga Wagga is itself a city. Use 'Wagga Wagga lies under an H' or 'a town near Wagga Wagga'.",
+   "Remember, wording: The remember line says 'Highs bring fine weather. Lows and fronts bring rain.' without the card's 'usually', so it turns a general tendency into a rule."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Reading synoptic charts",
+  "card": [
+   "A synoptic chart is a weather map. It shows air pressure at sea level using isobars, which are lines joining places of equal air pressure.",
+   "Isobars that are close together mean the pressure changes quickly over a short distance. This brings strong winds. Isobars that are far apart mean light winds.",
+   [
+    "High",
+    "marked H. A high-pressure system usually brings fine, clear weather."
+   ],
+   [
+    "Low",
+    "marked L. A low-pressure system, and the fronts linked to it, usually bring cloud and rain."
+   ]
+  ],
+  "remember": "Close isobars mean strong winds. Highs usually bring fine weather, and lows and fronts usually bring rain.",
+  "a": {
+   "q": "On a synoptic chart, what does an isobar join?",
+   "opts": [
+    "Places with equal air pressure",
+    "Places with equal temperature",
+    "Places with equal rainfall",
+    "Places with equal wind speed"
+   ],
+   "why": "An isobar joins places that have the same air pressure. Wind speed is shown by how close the isobars are, not by what each line joins, so it is the tempting wrong choice.",
+   "clue": "Wind is read from the gaps between the lines, not from the lines themselves."
+  },
+  "b": {
+   "d": 2,
+   "q": "On a synoptic chart, Wagga Wagga lies under an H, with isobars far apart. What weather is most likely?",
+   "opts": [
+    "Fine, clear skies and light winds",
+    "Fine, clear skies and strong winds",
+    "Cloud, rain and light winds",
+    "Cloud, rain and strong winds"
+   ],
+   "why": "A high usually brings fine weather, and isobars far apart mean light winds. The option with fine weather and strong winds is tempting, but strong winds come with isobars close together.",
+   "clue": "Check what H means, then check the spacing of the isobars."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A simple synoptic chart of part of Australia with curved isobars around a high marked H and a low marked L. A cold front is drawn as a line with triangles, running from the low. Isobars are close together near the L and far apart near the H. Label one isobar as 'isobar'.",
+    "why": "Seeing isobars, highs, lows and fronts together helps students read a real chart."
+   }
+  ]
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix keeps the card's usually in the remember line, swaps question a's clue for one that no longer gives the answer away, and names Wagga Wagga plainly in question b. The facts are right and each question has one right answer listed first.",
+   "item": "b5c012e094ac7f14",
+   "result": "decided",
+   "saved": {
+    "id": "geo-reading-synoptic-charts",
+    "title": "Reading synoptic charts",
+    "brief": "5fbea377fe0b",
+    "shortlist": [],
+    "stage": "review",
+    "sent": {
+     "write": 1,
+     "check": 1,
+     "fix": 1
+    },
+    "usd": {
+     "write": 0.00651,
+     "check": 0.0101,
+     "fix": 0.01794
+    },
+    "draft": {
+     "title": "Reading synoptic charts",
+     "card": [
+      "A synoptic chart is a weather map. It shows air pressure at sea level using isobars, which are lines joining places of equal air pressure.",
+      "Isobars that are close together mean the pressure changes quickly over a short distance. This brings strong winds. Isobars that are far apart mean light winds.",
+      [
+       "High",
+       "marked H. A high-pressure system usually brings fine, clear weather."
+      ],
+      [
+       "Low",
+       "marked L. A low-pressure system, and the fronts linked to it, usually bring cloud and rain."
+      ]
+     ],
+     "remember": "Close isobars mean strong winds. Highs bring fine weather. Lows and fronts bring rain.",
+     "a": {
+      "q": "On a synoptic chart, what does an isobar join?",
+      "opts": [
+       "Places with equal air pressure",
+       "Places with equal temperature",
+       "Places with equal rainfall",
+       "Places with equal wind speed"
+      ],
+      "why": "An isobar joins places that have the same air pressure. Wind speed is shown by how close the isobars are, not by what each line joins, so it is the tempting wrong choice.",
+      "clue": "The word isobar is about pressure."
+     },
+     "b": {
+      "d": 2,
+      "q": "On a synoptic chart, a town in Wagga Wagga lies under an H, with isobars far apart. What weather is most likely?",
+      "opts": [
+       "Fine, clear skies and light winds",
+       "Fine, clear skies and strong winds",
+       "Rain and light winds",
+       "Rain and strong winds"
+      ],
+      "why": "A high usually brings fine weather, and isobars far apart mean light winds. The option with fine weather and strong winds is tempting, but strong winds need isobars close together.",
+      "clue": "Check what H means, then check the spacing of the isobars."
+     },
+     "wants": [
+      {
+       "at": "card 1",
+       "kind": "diagram",
+       "brief": "A simple synoptic chart of part of Australia with curved isobars, one labelled H and one labelled L. A cold front is drawn as a line with triangles. Isobars are close together near the L and far apart near the H.",
+       "why": "Seeing isobars, highs, lows and fronts together helps students read a real chart."
+      }
+     ]
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Places with equal air pressure",
+      "also_right": []
+     },
+     "b": {
+      "best": "Fine, clear skies and light winds",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue 'The word isobar is about pressure' gives the answer away, so students can pick the right option without knowing what an isobar is."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "'A town in Wagga Wagga' is confusing because Wagga Wagga is itself a city. Use 'Wagga Wagga lies under an H' or 'a town near Wagga Wagga'."
+      },
+      {
+       "part": "remember",
+       "kind": "wording",
+       "detail": "The remember line says 'Highs bring fine weather. Lows and fronts bring rain.' without the card's 'usually', so it turns a general tendency into a rule."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts are correct. Question a's clue gives the answer away, question b's 'a town in Wagga Wagga' is awkward, and the remember line drops the card's 'usually'."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a, other: The clue 'The word isobar is about pressure' gives the answer away, so students can pick the right option without knowing what an isobar is.",
+     "Question b, wording: 'A town in Wagga Wagga' is confusing because Wagga Wagga is itself a city. Use 'Wagga Wagga lies under an H' or 'a town near Wagga Wagga'.",
+     "Remember, wording: The remember line says 'Highs bring fine weather. Lows and fronts bring rain.' without the card's 'usually', so it turns a general tendency into a rule."
+    ],
+    "proposal": {
+     "title": "Reading synoptic charts",
+     "card": [
+      "A synoptic chart is a weather map. It shows air pressure at sea level using isobars, which are lines joining places of equal air pressure.",
+      "Isobars that are close together mean the pressure changes quickly over a short distance. This brings strong winds. Isobars that are far apart mean light winds.",
+      [
+       "High",
+       "marked H. A high-pressure system usually brings fine, clear weather."
+      ],
+      [
+       "Low",
+       "marked L. A low-pressure system, and the fronts linked to it, usually bring cloud and rain."
+      ]
+     ],
+     "remember": "Close isobars mean strong winds. Highs usually bring fine weather, and lows and fronts usually bring rain.",
+     "a": {
+      "q": "On a synoptic chart, what does an isobar join?",
+      "opts": [
+       "Places with equal air pressure",
+       "Places with equal temperature",
+       "Places with equal rainfall",
+       "Places with equal wind speed"
+      ],
+      "why": "An isobar joins places that have the same air pressure. Wind speed is shown by how close the isobars are, not by what each line joins, so it is the tempting wrong choice.",
+      "clue": "Wind is read from the gaps between the lines, not from the lines themselves."
+     },
+     "b": {
+      "d": 2,
+      "q": "On a synoptic chart, Wagga Wagga lies under an H, with isobars far apart. What weather is most likely?",
+      "opts": [
+       "Fine, clear skies and light winds",
+       "Fine, clear skies and strong winds",
+       "Cloud, rain and light winds",
+       "Cloud, rain and strong winds"
+      ],
+      "why": "A high usually brings fine weather, and isobars far apart mean light winds. The option with fine weather and strong winds is tempting, but strong winds come with isobars close together.",
+      "clue": "Check what H means, then check the spacing of the isobars."
+     },
+     "wants": [
+      {
+       "at": "card 1",
+       "kind": "diagram",
+       "brief": "A simple synoptic chart of part of Australia with curved isobars around a high marked H and a low marked L. A cold front is drawn as a line with triangles, running from the low. Isobars are close together near the L and far apart near the H. Label one isobar as 'isobar'.",
+       "why": "Seeing isobars, highs, lows and fronts together helps students read a real chart."
+      }
+     ]
+    },
+    "proposal_problems": [],
+    "auto": {
+     "at": "2026-11-20T13:23:39Z",
+     "rules": 1,
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue 'The word isobar is about pressure' gives the answer away, so students can pick the right option without knowing what an isobar is."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "'A town in Wagga Wagga' is confusing because Wagga Wagga is itself a city. Use 'Wagga Wagga lies under an H' or 'a town near Wagga Wagga'."
+      },
+      {
+       "part": "remember",
+       "kind": "wording",
+       "detail": "The remember line says 'Highs bring fine weather. Lows and fronts bring rain.' without the card's 'usually', so it turns a general tendency into a rule."
+      }
+     ],
+     "flags": [
+      "Question a, other: The clue 'The word isobar is about pressure' gives the answer away, so students can pick the right option without knowing what an isobar is.",
+      "Question b, wording: 'A town in Wagga Wagga' is confusing because Wagga Wagga is itself a city. Use 'Wagga Wagga lies under an H' or 'a town near Wagga Wagga'.",
+      "Remember, wording: The remember line says 'Highs bring fine weather. Lows and fronts bring rain.' without the card's 'usually', so it turns a general tendency into a rule."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "c6c20baa37f82f24"
+  }
  ]
 }

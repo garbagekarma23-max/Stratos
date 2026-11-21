@@ -24,8 +24,200 @@
    0.204
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:42Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T14:31:53Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.00621,
+  "check": 0.01647,
+  "fix": 0.02399
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches that Australian English has borrowed words from many languages, including Aboriginal languages; the closest, on spelling patterns from French and Greek, is narrower and about spelling rather than borrowing.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Words Australian English has borrowed",
+  "card": [
+   "Languages borrow words from each other, and English has done this for centuries. Australian English has borrowed words from many languages.",
+   [
+    "Aboriginal languages",
+    "Many Australian place names and animal names come from Aboriginal languages. Kangaroo comes from Guugu Yimithirr, a language of far north Queensland. Other examples are koala and wombat."
+   ],
+   [
+    "French",
+    "English took many words from French, such as menu, ballet and restaurant. Many of these came into English long before English reached Australia."
+   ],
+   [
+    "Greek and Latin",
+    "Many English words are built from Greek and Latin parts. Telephone has Greek parts that mean far and sound. Library comes from the Latin word liber, which means book."
+   ]
+  ],
+  "remember": "Australian English is a mix of borrowed words, from Aboriginal languages, French, Greek, Latin and more.",
+  "a": {
+   "q": "The word kangaroo came into English from which source?",
+   "opts": [
+    "The Guugu Yimithirr language of far north Queensland",
+    "The French language",
+    "The Greek language",
+    "The Latin language"
+   ],
+   "why": "Kangaroo was borrowed from Guugu Yimithirr, an Aboriginal language of far north Queensland. French, Greek and Latin gave English many other words, but not this one.",
+   "clue": "Think of an Australian animal and an Aboriginal language."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ravi notices that the word telephone is built from Greek parts meaning far and sound. What does this show about English?",
+   "opts": [
+    "It has borrowed and built words from Greek",
+    "It borrowed telephone from an Aboriginal language",
+    "It borrowed telephone directly from French",
+    "It has never borrowed words from other languages"
+   ],
+   "why": "Telephone is made from Greek parts, so it shows English borrowing from Greek. The other options name the wrong source or deny that English borrows at all.",
+   "clue": "Look at where the parts of the word come from."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The Guugu Yimithirr language of far north Queensland",
+   "also_right": []
+  },
+  "b": {
+   "best": "It has borrowed and built words from Greek",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'Many of these came into English long before English reached Australia' sits under the examples menu, ballet and restaurant, but restaurant (about the 1820s) and menu (about the 1830s) entered English after English reached Australia in 1788. Only ballet fits. Use examples that do fit, such as beef, castle or justice, or drop the claim."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "'Australian English is a mix of borrowed words' suggests the whole language is borrowed. The card says only that it 'has borrowed words from many languages', and English has a large native core. Reword to something like 'Australian English includes words borrowed from...'."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is clearly the longest and the only one with precise detail ('of far north Queensland'). The clue's 'Aboriginal language' also points straight to it, since it is the only non-European option. A student could pick it without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "first-nations",
+  "summary": "The card's claim that French borrowings like menu and restaurant came into English long before English reached Australia is false for those examples. The remember line overstates the card by calling Australian English 'a mix of borrowed words', and question a's right option stands out as the longest and most detailed."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Card, fact: 'Many of these came into English long before English reached Australia' sits under the examples menu, ballet and restaurant, but restaurant (about the 1820s) and menu (about the 1830s) entered English after English reached Australia in 1788. Only ballet fits. Use examples that do fit, such as beef, castle or justice, or drop the claim.",
+  "Remember, other: 'Australian English is a mix of borrowed words' suggests the whole language is borrowed. The card says only that it 'has borrowed words from many languages', and English has a large native core. Reword to something like 'Australian English includes words borrowed from...'.",
+  "Question a, wording: The right option is clearly the longest and the only one with precise detail ('of far north Queensland'). The clue's 'Aboriginal language' also points straight to it, since it is the only non-European option. A student could pick it without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Words Australian English has borrowed",
+  "card": [
+   "Languages borrow words from each other, and English has done this for centuries. Australian English has borrowed words from many languages.",
+   [
+    "Aboriginal languages",
+    "Many Australian place names and animal names come from Aboriginal languages. Kangaroo comes from Guugu Yimithirr, a language of far north Queensland. Other examples are koala and wombat."
+   ],
+   [
+    "French",
+    "English took many words from French, such as beef, pork and justice. These came in after French-speaking Normans conquered England in 1066, long before English reached Australia."
+   ],
+   [
+    "Greek and Latin",
+    "Many English words are built from Greek and Latin parts. Telephone has Greek parts that mean far and sound. Library goes back to the Latin word liber, which means book."
+   ]
+  ],
+  "remember": "Australian English includes words borrowed from Aboriginal languages, French, Greek, Latin and more.",
+  "a": {
+   "q": "Which pair correctly matches a word with the language it came from?",
+   "opts": [
+    "Kangaroo, from Guugu Yimithirr",
+    "Library, from Guugu Yimithirr",
+    "Kangaroo, from Latin",
+    "Beef, from Greek"
+   ],
+   "why": "Kangaroo was borrowed from Guugu Yimithirr, an Aboriginal language of far north Queensland. Library goes back to Latin, not an Aboriginal language, and beef came from French, not Greek.",
+   "clue": "Think about where each word started out."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ravi notices that the word telephone is built from Greek parts meaning far and sound. What does this show about English?",
+   "opts": [
+    "It has borrowed and built words from Greek",
+    "It borrowed telephone from an Aboriginal language",
+    "It borrowed telephone directly from French",
+    "It built telephone from Latin parts"
+   ],
+   "why": "Telephone is made from Greek parts, so it shows English borrowing from Greek. Latin is a tempting choice, since library comes from Latin, but the parts of telephone are Greek.",
+   "clue": "Look at where the parts of the word come from."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Words Australian English has borrowed",
+  "card": [
+   "Languages borrow words from each other, and English has done this for centuries. Australian English has borrowed words from many languages.",
+   [
+    "Aboriginal languages",
+    "Many Australian place names and animal names come from Aboriginal languages. Kangaroo comes from Guugu Yimithirr, a language of far north Queensland. Other examples are koala and wombat."
+   ],
+   [
+    "French",
+    "English took many words from French, such as beef, pork and justice. These came in after French-speaking Normans conquered England in 1066, long before English reached Australia."
+   ],
+   [
+    "Greek and Latin",
+    "Many English words are built from Greek and Latin parts. Telephone has Greek parts that mean far and sound. Library goes back to the Latin word liber, which means book."
+   ]
+  ],
+  "remember": "Australian English includes words borrowed from Aboriginal languages, French, Greek, Latin and more.",
+  "a": {
+   "q": "Which pair correctly matches a word with the language it came from?",
+   "opts": [
+    "Kangaroo, from Guugu Yimithirr",
+    "Library, from Guugu Yimithirr",
+    "Kangaroo, from Latin",
+    "Beef, from Greek"
+   ],
+   "why": "Kangaroo was borrowed from Guugu Yimithirr, an Aboriginal language of far north Queensland. Library goes back to Latin, not an Aboriginal language, and beef came from French, not Greek.",
+   "clue": "Think about where each word started out."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ravi notices that the word telephone is built from Greek parts meaning far and sound. What does this show about English?",
+   "opts": [
+    "It has borrowed and built words from Greek",
+    "It borrowed telephone from an Aboriginal language",
+    "It borrowed telephone directly from French",
+    "It built telephone from Latin parts"
+   ],
+   "why": "Telephone is made from Greek parts, so it shows English borrowing from Greek. Latin is a tempting choice, since library comes from Latin, but the parts of telephone are Greek.",
+   "clue": "Look at where the parts of the word come from."
+  }
+ },
+ "cleared_by": "owner"
 }

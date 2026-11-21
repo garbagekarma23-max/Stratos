@@ -24,8 +24,241 @@
    0.261
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:47Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00045,
+  "write": 0.00658,
+  "check": 0.01261,
+  "fix": 0.02851,
+  "recheck": 0.00864
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Values in a text, covers character values and whether a text supports or questions them, but it does not teach that characters can reflect, challenge or subvert the values of their own world, so a new point is the safer match.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Characters and values",
+  "card": [
+   "Values are the beliefs a society treats as important, such as loyalty, wealth, obedience or fairness. A text is set in a world with its own values, and its characters show how they relate to those values.",
+   [
+    "Reflect",
+    "a character who lives by the values of their world and stands for them. A soldier who proudly puts duty before his own safety, in a society that prizes duty, reflects its values."
+   ],
+   [
+    "Challenge",
+    "a character who questions or stands against a value, and so makes readers think about it. A girl who speaks out against a town's unfair rules challenges them."
+   ],
+   [
+    "Subvert",
+    "a character who turns a value upside down or undermines it, often by showing it to be empty or harmful. A wealthy man who is admired for his money but is shown to be lonely and cruel subverts the value placed on wealth."
+   ]
+  ],
+  "remember": "Ask how a character stands in relation to their world's values, and what the text does to them.",
+  "a": {
+   "q": "In a story set in a village that prizes obedience, Tara breaks every rule and is shown to be braver and kinder than those who obey. What does her character do to the village's values?",
+   "opts": [
+    "Challenges them",
+    "Reflects them",
+    "Ignores them",
+    "Explains them"
+   ],
+   "why": "Tara stands against the value of obedience and the story makes readers question it. She does not reflect it, because she does the opposite of what the village values.",
+   "clue": "Does Tara stand with the village's value or against it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a novel set in a town where success means being rich, Dev works hard and becomes wealthy. He ends up lonely, and his family no longer speaks to him. What does his fate most likely suggest about the text's view of wealth?",
+   "opts": [
+    "It questions how much wealth is worth",
+    "It approves of wealth as the path to success",
+    "It shows that hard work is always a mistake",
+    "It treats wealth as a matter of luck"
+   ],
+   "why": "Dev gains what the town values but pays a heavy price, so the text invites readers to doubt the value placed on wealth. The option about approval is tempting because Dev does succeed, but the outcome for him is not a happy one. The text does not say hard work is always a mistake.",
+   "clue": "Look at what happens to Dev after he gets what the town values."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Challenges them",
+   "also_right": []
+  },
+  "b": {
+   "best": "It questions how much wealth is worth",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "level",
+    "detail": "The point's second idea, that what happens to a character can suggest what the text approves of or questions, is never stated on the card. It is only hinted at in the subvert example and the Remember line ('what the text does to them'), yet question b depends on it."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The distractor 'It shows that hard work is always a mistake' uses 'always', and the why repeats it. The absolute word makes this option easy to rule out without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer. However, the card never states outright that a character's fate can show what the text approves of or questions, which question b relies on, and one distractor in b uses 'always', which gives it away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, level: The point's second idea, that what happens to a character can suggest what the text approves of or questions, is never stated on the card. It is only hinted at in the subvert example and the Remember line ('what the text does to them'), yet question b depends on it.",
+  "Question b, wording: The distractor 'It shows that hard work is always a mistake' uses 'always', and the why repeats it. The absolute word makes this option easy to rule out without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Characters and values",
+  "card": [
+   [
+    "Reflect",
+    "a character lives by the values of their world, the beliefs it treats as important. A soldier who proudly puts duty first, in a society that prizes duty, reflects its values."
+   ],
+   [
+    "Challenge",
+    "a character questions or stands against a value, and so makes readers think about it. A girl who speaks out against a town's unfair rules challenges them."
+   ],
+   [
+    "Subvert",
+    "a character undermines a value by showing it to be empty or harmful. A man admired for his money but shown to be lonely and cruel subverts the value placed on wealth."
+   ],
+   "What happens to a character can suggest the text's view of a value. A character rewarded for living by a value suggests approval, while one who suffers for it suggests the text questions it."
+  ],
+  "remember": "How a character stands toward a value, and what happens to them, can suggest what the text approves of or questions.",
+  "a": {
+   "q": "In a story set in a village that prizes obedience, Tara breaks every rule and is shown to be braver and kinder than those who obey. What does her character do to the village's values?",
+   "opts": [
+    "Challenges them",
+    "Reflects them",
+    "Ignores them",
+    "Explains them"
+   ],
+   "why": "Tara stands against the value of obedience, and the story makes readers question it. She does not reflect it, because she does the opposite of what the village values.",
+   "clue": "Does Tara stand with the village's value or against it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a novel set in a town where success means being rich, Dev works hard and becomes wealthy. He ends up lonely, and his family no longer speaks to him. What does his fate most likely suggest about the text's view of wealth?",
+   "opts": [
+    "It questions how much wealth is worth",
+    "It approves of wealth as the path to success",
+    "It suggests wealth matters more than family",
+    "It treats wealth as a matter of luck"
+   ],
+   "why": "Dev gains what the town values but suffers for it, so the text invites readers to doubt the value placed on wealth. The option about approval is tempting because Dev does become rich, but the text does not reward him: his ending is lonely. Losing his family is shown as a cost, not as a fair trade.",
+   "clue": "Look at what happens to Dev after he gets what the town values."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Challenges them",
+    "also_right": []
+   },
+   "b": {
+    "best": "It questions how much wealth is worth",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 19,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "level",
+    "detail": "The point's second idea, that what happens to a character can suggest what the text approves of or questions, is never stated on the card. It is only hinted at in the subvert example and the Remember line ('what the text does to them'), yet question b depends on it."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The distractor 'It shows that hard work is always a mistake' uses 'always', and the why repeats it. The absolute word makes this option easy to rule out without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Card, level: The point's second idea, that what happens to a character can suggest what the text approves of or questions, is never stated on the card. It is only hinted at in the subvert example and the Remember line ('what the text does to them'), yet question b depends on it.",
+   "Question b, wording: The distractor 'It shows that hard work is always a mistake' uses 'always', and the why repeats it. The absolute word makes this option easy to rule out without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "Characters and values",
+  "card": [
+   [
+    "Reflect",
+    "a character lives by the values of their world, the beliefs it treats as important. A soldier who proudly puts duty first, in a society that prizes duty, reflects its values."
+   ],
+   [
+    "Challenge",
+    "a character questions or stands against a value, and so makes readers think about it. A girl who speaks out against a town's unfair rules challenges them."
+   ],
+   [
+    "Subvert",
+    "a character undermines a value by showing it to be empty or harmful. A man admired for his money but shown to be lonely and cruel subverts the value placed on wealth."
+   ],
+   "What happens to a character can suggest the text's view of a value. A character rewarded for living by a value suggests approval, while one who suffers for it suggests the text questions it."
+  ],
+  "remember": "How a character stands toward a value, and what happens to them, can suggest what the text approves of or questions.",
+  "a": {
+   "q": "In a story set in a village that prizes obedience, Tara breaks every rule and is shown to be braver and kinder than those who obey. What does her character do to the village's values?",
+   "opts": [
+    "Challenges them",
+    "Reflects them",
+    "Ignores them",
+    "Explains them"
+   ],
+   "why": "Tara stands against the value of obedience, and the story makes readers question it. She does not reflect it, because she does the opposite of what the village values.",
+   "clue": "Does Tara stand with the village's value or against it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a novel set in a town where success means being rich, Dev works hard and becomes wealthy. He ends up lonely, and his family no longer speaks to him. What does his fate most likely suggest about the text's view of wealth?",
+   "opts": [
+    "It questions how much wealth is worth",
+    "It approves of wealth as the path to success",
+    "It suggests wealth matters more than family",
+    "It treats wealth as a matter of luck"
+   ],
+   "why": "Dev gains what the town values but suffers for it, so the text invites readers to doubt the value placed on wealth. The option about approval is tempting because Dev does become rich, but the text does not reward him: his ending is lonely. Losing his family is shown as a cost, not as a fair trade.",
+   "clue": "Look at what happens to Dev after he gets what the town values."
+  }
+ },
+ "cleared_by": "recheck"
 }

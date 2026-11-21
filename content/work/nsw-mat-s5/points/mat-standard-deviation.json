@@ -24,8 +24,177 @@
    0.256
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:56Z write: done",
+  "2026-11-20T12:35:54Z check: flagged",
+  "2026-11-20T12:44:59Z fix: suggested",
+  "2026-11-20T13:23:43Z autoreview: cleared with the fix (a other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.01281,
+  "check": 0.01125,
+  "fix": 0.0175
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point defines standard deviation as a measure of spread for Stage 5 students; the closest cards assume normal distributions, z-scores or the empirical rule, which are a different and deeper idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Standard deviation",
+  "card": [
+   "Standard deviation measures how far values typically are from the mean. It is a measure of spread, written \\(\\sigma\\) for a whole population.",
+   "A small standard deviation means the values are clustered close to the mean. A large one means they are spread out.",
+   "Use the statistics mode of a calculator. Enter the data, then read the value labelled \\(\\sigma\\). Do not work it out by hand.",
+   "Example: 5, 5, 5, 5 and 1, 5, 5, 9 both have mean 5. The first has standard deviation 0. The second has a larger one, because its values lie further from 5."
+  ],
+  "remember": "Standard deviation is the typical distance from the mean: small means clustered, large means spread out.",
+  "a": {
+   "q": "A dataset has a very small standard deviation. What does this tell you about the values?",
+   "opts": [
+    "They are clustered close to the mean",
+    "They are spread far from the mean",
+    "They are all smaller than the mean",
+    "They are all equal to the median"
+   ],
+   "why": "Standard deviation is the typical distance from the mean, so a small value means the data is close to the mean. It does not say the values are below the mean or equal to the median.",
+   "clue": "Small spread means the values stay near the mean."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two bakeries in Orange weigh their loaves. Both have a mean of 800 g. Bakery P has a standard deviation of 4 g and Bakery Q has 15 g. Which bakery has more consistent loaf weights?",
+   "opts": [
+    "Bakery P, because its weights are closer to the mean",
+    "Bakery Q, because its weights are closer to the mean",
+    "Bakery P, because its standard deviation is larger",
+    "Neither, because the means are the same"
+   ],
+   "why": "The smaller standard deviation of 4 g means P's weights cluster closer to 800 g, so P is more consistent. Equal means do not make equal spread, because standard deviation measures spread.",
+   "clue": "Compare the standard deviations, not the means."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "They are clustered close to the mean",
+   "also_right": []
+  },
+  "b": {
+   "best": "Bakery P, because its weights are closer to the mean",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Small spread means the values stay near the mean' restates the right option almost word for word, so a student can pick it without knowing what standard deviation measures."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, the remember line, both answers and the explanations are correct. The only problem is that question a's clue gives the answer away by restating the right option."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'Small spread means the values stay near the mean' restates the right option almost word for word, so a student can pick it without knowing what standard deviation measures."
+ ],
+ "proposal": {
+  "title": "Standard deviation",
+  "card": [
+   "Standard deviation measures how far values typically are from the mean. It is a measure of spread, written \\(\\sigma\\) for a whole population.",
+   "A small standard deviation means the values are clustered close to the mean. A large one means they are spread out.",
+   "Use the statistics mode of a calculator. Enter the data, then read the value labelled \\(\\sigma\\). You do not need to work it out by hand.",
+   "Example: 5, 5, 5, 5 and 1, 5, 5, 9 both have mean 5. The first has standard deviation 0. The second has a larger one, because its values lie further from 5."
+  ],
+  "remember": "Standard deviation is the typical distance from the mean: small means clustered, large means spread out.",
+  "a": {
+   "q": "A dataset has a very small standard deviation. What does this tell you about the values?",
+   "opts": [
+    "They are clustered close to the mean",
+    "They are spread far from the mean",
+    "They are all smaller than the mean",
+    "They are all equal to the median"
+   ],
+   "why": "Standard deviation is the typical distance from the mean, so a small value means the data is close to the mean. It does not say the values are below the mean or equal to the median.",
+   "clue": "What does standard deviation measure the distance from?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Two bakeries in Orange weigh their loaves. Both have a mean of 800 g. Bakery P has a standard deviation of 4 g and Bakery Q has 15 g. Which bakery has more consistent loaf weights?",
+   "opts": [
+    "Bakery P, because its weights are closer to the mean",
+    "Bakery Q, because its weights are closer to the mean",
+    "Bakery P, because its standard deviation is larger",
+    "Neither, because the means are the same"
+   ],
+   "why": "The smaller standard deviation of 4 g means P's weights cluster closer to 800 g, so P is more consistent. Equal means do not make equal spread, because standard deviation measures spread.",
+   "clue": "Compare the standard deviations, not the means."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:43Z",
+  "rules": 1,
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Small spread means the values stay near the mean' restates the right option almost word for word, so a student can pick it without knowing what standard deviation measures."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue 'Small spread means the values stay near the mean' restates the right option almost word for word, so a student can pick it without knowing what standard deviation measures."
+  ]
+ },
+ "final": {
+  "title": "Standard deviation",
+  "card": [
+   "Standard deviation measures how far values typically are from the mean. It is a measure of spread, written \\(\\sigma\\) for a whole population.",
+   "A small standard deviation means the values are clustered close to the mean. A large one means they are spread out.",
+   "Use the statistics mode of a calculator. Enter the data, then read the value labelled \\(\\sigma\\). You do not need to work it out by hand.",
+   "Example: 5, 5, 5, 5 and 1, 5, 5, 9 both have mean 5. The first has standard deviation 0. The second has a larger one, because its values lie further from 5."
+  ],
+  "remember": "Standard deviation is the typical distance from the mean: small means clustered, large means spread out.",
+  "a": {
+   "q": "A dataset has a very small standard deviation. What does this tell you about the values?",
+   "opts": [
+    "They are clustered close to the mean",
+    "They are spread far from the mean",
+    "They are all smaller than the mean",
+    "They are all equal to the median"
+   ],
+   "why": "Standard deviation is the typical distance from the mean, so a small value means the data is close to the mean. It does not say the values are below the mean or equal to the median.",
+   "clue": "What does standard deviation measure the distance from?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Two bakeries in Orange weigh their loaves. Both have a mean of 800 g. Bakery P has a standard deviation of 4 g and Bakery Q has 15 g. Which bakery has more consistent loaf weights?",
+   "opts": [
+    "Bakery P, because its weights are closer to the mean",
+    "Bakery Q, because its weights are closer to the mean",
+    "Bakery P, because its standard deviation is larger",
+    "Neither, because the means are the same"
+   ],
+   "why": "The smaller standard deviation of 4 g means P's weights cluster closer to 800 g, so P is more consistent. Equal means do not make equal spread, because standard deviation measures spread.",
+   "clue": "Compare the standard deviations, not the means."
+  }
+ },
+ "cleared_by": "auto"
 }

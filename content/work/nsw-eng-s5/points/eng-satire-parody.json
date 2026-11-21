@@ -3,8 +3,390 @@
  "title": "Satire and parody",
  "brief": "980df4bf50df",
  "shortlist": [],
- "stage": "write",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, write"
- ]
+  "2026-11-12T12:22:33Z new, write",
+  "2026-11-20T12:15:15Z write: done",
+  "2026-11-20T12:25:43Z check: flagged",
+  "2026-11-20T12:35:47Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (card wording, b wording)",
+  "2026-11-20T13:44:55Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00687,
+  "check": 0.01298,
+  "fix": 0.05062,
+  "recheck": 0.01507
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, wording: The example says the fake ban on Tuesdays 'to save money' makes fun of 'wasteful decisions'. A cost-cutting ban mocks absurd or silly decisions, not wasteful ones, so the stated target of the satire may confuse students.\n- Question b, wording: The right option repeats the stem's wording ('weak promises' echoes 'how weak such promises are'), so a student could match the words without knowing what satire is.",
+ "rejected": {
+  "title": "Satire and parody",
+  "card": [
+   [
+    "Satire",
+    "a text that uses humour, irony and exaggeration to criticise people, habits or ideas. Its aim is to make the reader see a fault and think about it."
+   ],
+   [
+    "Parody",
+    "a text that copies the style of another text, such as its layout, voice or format, to mock it or to make a point. The reader must know the original to see the joke."
+   ],
+   "Example: a news article reports that the town council has banned Tuesdays to save money. The calm news voice and the silly claim make fun of wasteful decisions. This is satire, and it is also a parody of a news report.",
+   "Satire is about what it criticises. Parody is about how it copies. A text can do both, but a parody does not have to criticise anything serious."
+  ],
+  "remember": "Satire criticises with humour. Parody copies a style to mock it or make a point.",
+  "a": {
+   "q": "A writer publishes a mock recipe, with numbered steps and exact amounts, for a school canteen's burnt lunch. What makes it a parody?",
+   "opts": [
+    "Its layout follows the familiar format of a recipe",
+    "Its humour pokes fun at the canteen's cooking",
+    "Its subject is a lunch that students eat each day",
+    "Its claim about the burnt lunch is exaggerated"
+   ],
+   "why": "A parody imitates the style of another text, and here the writer copies the format of a recipe. Humour and exaggeration aimed at the canteen are tools of satire, so they do not by themselves make a text a parody. The everyday subject has nothing to do with copying a style.",
+   "clue": "A parody needs an original text that readers already know."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev writes a speech in a grand, serious voice. In it, a politician promises to fix traffic by asking every driver to leave home ten minutes earlier. Dev wants readers to see how weak such promises are. Which choice best describes his text?",
+   "opts": [
+    "Satire, as it exaggerates to criticise weak promises",
+    "Parody only, as it has no aim beyond copying a style",
+    "Satire, as it copies one real speech word for word",
+    "Neither, as a serious voice cannot carry any humour"
+   ],
+   "why": "The silly promise is exaggerated to criticise empty political claims, which is satire. It also copies a grand speech style, so it is a parody as well. The option 'Parody only, as it has no aim beyond copying a style' is tempting because of that copied style, but Dev has a clear target to criticise, which makes it satire.",
+   "clue": "Ask what Dev wants readers to think about politicians."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, wording: The example says the fake ban on Tuesdays 'to save money' makes fun of 'wasteful decisions'. A cost-cutting ban mocks absurd or silly decisions, not wasteful ones, so the stated target of the satire may confuse students.",
+    "Question b, wording: The right option repeats the stem's wording ('weak promises' echoes 'how weak such promises are'), so a student could match the words without knowing what satire is."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Satire and parody",
+     "card": [
+      [
+       "Satire",
+       "a text that uses humour, irony and exaggeration to criticise people, habits or ideas. Its aim is to make the reader see a fault and think about it."
+      ],
+      [
+       "Parody",
+       "a text that copies the style of another text, such as its layout, voice or format, to mock it or to make a point. The reader must know the original to see the joke."
+      ],
+      "Example: a news article reports that the town council has banned Tuesdays to save money. The calm news voice and the silly claim make fun of wasteful decisions. This is satire, and it is also a parody of a news report.",
+      "Satire is about what it criticises. Parody is about how it copies. A text can do both, but a parody does not have to criticise anything serious."
+     ],
+     "remember": "Satire criticises with humour. Parody copies a style to mock it or make a point.",
+     "a": {
+      "q": "A writer publishes a mock recipe with exact steps and quantities, but the dish is a school canteen's burnt lunch. What makes it a parody?",
+      "opts": [
+       "It copies the style of a recipe to make a point",
+       "It gives a serious warning about canteen food",
+       "It tells a true story of a real canteen lunch",
+       "It uses facts to prove the canteen is unsafe"
+      ],
+      "why": "The writer imitates the recipe format, steps and quantities, so the text is a parody. The other options describe a serious warning, a true account or an argument from facts, and none of these imitates a style.",
+      "clue": "Look at which text form is being copied."
+     },
+     "b": {
+      "d": 3,
+      "q": "Dev writes a speech in a grand, serious voice. In it, a politician promises to fix traffic by asking every driver to leave home ten minutes earlier. Dev wants readers to see how weak such promises are. Which choice best describes his text?",
+      "opts": [
+       "Satire, as it exaggerates to criticise weak promises",
+       "Parody only, as it has no aim beyond copying",
+       "Satire, as it copies one real speech word for word",
+       "Parody only, as it must avoid any humour or irony"
+      ],
+      "why": "The silly promise is exaggerated to criticise empty political claims, which is satire. It also copies a speech style, so it is a parody as well. The option calling it parody only is tempting, but Dev has a clear target to criticise, which makes it satire too.",
+      "clue": "Ask what Dev wants readers to think about politicians."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "It copies the style of a recipe to make a point",
+      "also_right": []
+     },
+     "b": {
+      "best": "Satire, as it exaggerates to criticise weak promises",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue 'Look at which text form is being copied' gives the answer away. Only one option mentions copying, and the right option repeats the card's parody definition almost word for word, so a student can pick it without understanding parody."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "Why (b) says 'The option calling it parody only is tempting', but two options say 'Parody only', so it is unclear which one is meant."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and answers are correct. Question a's clue, and the right option's match to the card's wording, give the answer away, and why (b) refers to 'the' parody-only option when there are two."
+    },
+    "flags": [
+     "Question a, other: The clue 'Look at which text form is being copied' gives the answer away. Only one option mentions copying, and the right option repeats the card's parody definition almost word for word, so a student can pick it without understanding parody.",
+     "Question b, wording: Why (b) says 'The option calling it parody only is tempting', but two options say 'Parody only', so it is unclear which one is meant."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Satire and parody",
+     "card": [
+      [
+       "Satire",
+       "a text that uses humour, irony and exaggeration to criticise people, habits or ideas. Its aim is to make the reader see a fault and think about it."
+      ],
+      [
+       "Parody",
+       "a text that copies the style of another text, such as its layout, voice or format, to mock it or to make a point. The reader must know the original to see the joke."
+      ],
+      "Example: a news article reports that the town council has banned Tuesdays to save money. The calm news voice and the silly claim make fun of wasteful decisions. This is satire, and it is also a parody of a news report.",
+      "Satire is about what it criticises. Parody is about how it copies. A text can do both, but a parody does not have to criticise anything serious."
+     ],
+     "remember": "Satire criticises with humour. Parody copies a style to mock it or make a point.",
+     "a": {
+      "q": "A writer publishes a mock recipe, with numbered steps and exact amounts, for a school canteen's burnt lunch. What makes it a parody?",
+      "opts": [
+       "Its layout follows the familiar format of a recipe",
+       "Its humour pokes fun at the canteen's cooking",
+       "Its subject is a lunch that students eat each day",
+       "Its claim about the burnt lunch is exaggerated"
+      ],
+      "why": "A parody imitates the style of another text, and here the writer copies the format of a recipe. Humour and exaggeration aimed at the canteen are tools of satire, so they do not by themselves make a text a parody. The everyday subject has nothing to do with copying a style.",
+      "clue": "A parody needs an original text that readers already know."
+     },
+     "b": {
+      "d": 3,
+      "q": "Dev writes a speech in a grand, serious voice. In it, a politician promises to fix traffic by asking every driver to leave home ten minutes earlier. Dev wants readers to see how weak such promises are. Which choice best describes his text?",
+      "opts": [
+       "Satire, as it exaggerates to criticise weak promises",
+       "Parody only, as it has no aim beyond copying a style",
+       "Satire, as it copies one real speech word for word",
+       "Neither, as a serious voice cannot carry any humour"
+      ],
+      "why": "The silly promise is exaggerated to criticise empty political claims, which is satire. It also copies a grand speech style, so it is a parody as well. The option 'Parody only, as it has no aim beyond copying a style' is tempting because of that copied style, but Dev has a clear target to criticise, which makes it satire.",
+      "clue": "Ask what Dev wants readers to think about politicians."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:06Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Its layout follows the familiar format of a recipe",
+       "also_right": []
+      },
+      "b": {
+       "best": "Satire, as it exaggerates to criticise weak promises",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "wording",
+        "detail": "The example says the fake ban on Tuesdays 'to save money' makes fun of 'wasteful decisions'. A cost-cutting ban mocks absurd or silly decisions, not wasteful ones, so the stated target of the satire may confuse students."
+       },
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The right option repeats the stem's wording ('weak promises' echoes 'how weak such promises are'), so a student could match the words without knowing what satire is."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The answers are sound. The card's example names 'wasteful decisions' as the target of a cost-saving joke, which is confusing, and question b's right option echoes the stem's wording, which gives it away."
+     },
+     "flags": [
+      "Card, wording: The example says the fake ban on Tuesdays 'to save money' makes fun of 'wasteful decisions'. A cost-cutting ban mocks absurd or silly decisions, not wasteful ones, so the stated target of the satire may confuse students.",
+      "Question b, wording: The right option repeats the stem's wording ('weak promises' echoes 'how weak such promises are'), so a student could match the words without knowing what satire is."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:55Z",
+   "step": "write",
+   "version": {
+    "title": "Satire and parody",
+    "card": [
+     [
+      "Satire",
+      "a text that uses humour, irony and exaggeration to criticise people, habits or ideas. Its aim is to make the reader see a fault and think about it."
+     ],
+     [
+      "Parody",
+      "a text that copies the style of another text, such as its layout, voice or format, to mock it or to make a point. The reader must know the original to see the joke."
+     ],
+     "Example: a fake news article reports that the town council has banned Tuesdays to save money. The calm news voice and the absurd plan mock foolish cost-cutting. This is satire, and it is also a parody of a news report.",
+     "Satire is about what it criticises. Parody is about how it copies. A text can do both, but a parody does not have to criticise anything serious."
+    ],
+    "remember": "Satire criticises with humour. Parody copies a style to mock it or make a point.",
+    "a": {
+     "q": "A writer publishes a mock recipe, with numbered steps and exact amounts, for a school canteen's burnt lunch. What makes it a parody?",
+     "opts": [
+      "Its layout follows the familiar format of a recipe",
+      "Its humour pokes fun at the canteen's cooking",
+      "Its subject is a lunch that students eat each day",
+      "Its claim about the burnt lunch is exaggerated"
+     ],
+     "why": "A parody imitates the style of another text, and here the writer copies the format of a recipe. Humour and exaggeration aimed at the canteen are tools of satire, so they do not by themselves make a text a parody. The everyday subject has nothing to do with copying a style.",
+     "clue": "A parody needs an original text that readers already know."
+    },
+    "b": {
+     "d": 3,
+     "q": "Dev writes a speech in a grand, serious voice. In it, a politician promises to fix traffic by asking every driver to leave home ten minutes earlier. Dev wants readers to see how weak such promises are. Which choice best describes his text?",
+     "opts": [
+      "Satire, as it uses exaggeration to criticise its target",
+      "Parody but not satire, as it just copies a style",
+      "Satire, as it copies one real speech word for word",
+      "Neither, as a grand voice is a sign of a serious text"
+     ],
+     "why": "The silly promise is exaggerated to criticise empty political claims, which is satire. It also copies a grand speech style, so it is a parody as well. Parody but not satire is tempting because of that copied style, but Dev has a clear target to criticise, which makes it satire.",
+     "clue": "Ask what Dev wants readers to think about politicians."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Its layout follows the familiar format of a recipe",
+     "also_right": []
+    },
+    "b": {
+     "best": "Satire, as it uses exaggeration to criticise its target",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Satire and parody",
+  "card": [
+   [
+    "Satire",
+    "a text that uses humour, irony and exaggeration to criticise people, habits or ideas. Its aim is to make the reader see a fault and think about it."
+   ],
+   [
+    "Parody",
+    "a text that copies the style of another text, such as its layout, voice or format, to mock it or to make a point. The reader must know the original to see the joke."
+   ],
+   "Example: a fake news article reports that the town council has banned Tuesdays to save money. The calm news voice and the absurd plan mock foolish cost-cutting. This is satire, and it is also a parody of a news report.",
+   "Satire is about what it criticises. Parody is about how it copies. A text can do both, but a parody does not have to criticise anything serious."
+  ],
+  "remember": "Satire criticises with humour. Parody copies a style to mock it or make a point.",
+  "a": {
+   "q": "A writer publishes a mock recipe, with numbered steps and exact amounts, for a school canteen's burnt lunch. What makes it a parody?",
+   "opts": [
+    "Its layout follows the familiar format of a recipe",
+    "Its humour pokes fun at the canteen's cooking",
+    "Its subject is a lunch that students eat each day",
+    "Its claim about the burnt lunch is exaggerated"
+   ],
+   "why": "A parody imitates the style of another text, and here the writer copies the format of a recipe. Humour and exaggeration aimed at the canteen are tools of satire, so they do not by themselves make a text a parody. The everyday subject has nothing to do with copying a style.",
+   "clue": "A parody needs an original text that readers already know."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev writes a speech in a grand, serious voice. In it, a politician promises to fix traffic by asking every driver to leave home ten minutes earlier. Dev wants readers to see how weak such promises are. Which choice best describes his text?",
+   "opts": [
+    "Satire, as it uses exaggeration to criticise its target",
+    "Parody but not satire, as it just copies a style",
+    "Satire, as it copies one real speech word for word",
+    "Neither, as a grand voice is a sign of a serious text"
+   ],
+   "why": "The silly promise is exaggerated to criticise empty political claims, which is satire. It also copies a grand speech style, so it is a parody as well. Parody but not satire is tempting because of that copied style, but Dev has a clear target to criticise, which makes it satire.",
+   "clue": "Ask what Dev wants readers to think about politicians."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Its layout follows the familiar format of a recipe",
+   "also_right": []
+  },
+  "b": {
+   "best": "Satire, as it uses exaggeration to criticise its target",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Satire and parody",
+  "card": [
+   [
+    "Satire",
+    "a text that uses humour, irony and exaggeration to criticise people, habits or ideas. Its aim is to make the reader see a fault and think about it."
+   ],
+   [
+    "Parody",
+    "a text that copies the style of another text, such as its layout, voice or format, to mock it or to make a point. The reader must know the original to see the joke."
+   ],
+   "Example: a fake news article reports that the town council has banned Tuesdays to save money. The calm news voice and the absurd plan mock foolish cost-cutting. This is satire, and it is also a parody of a news report.",
+   "Satire is about what it criticises. Parody is about how it copies. A text can do both, but a parody does not have to criticise anything serious."
+  ],
+  "remember": "Satire criticises with humour. Parody copies a style to mock it or make a point.",
+  "a": {
+   "q": "A writer publishes a mock recipe, with numbered steps and exact amounts, for a school canteen's burnt lunch. What makes it a parody?",
+   "opts": [
+    "Its layout follows the familiar format of a recipe",
+    "Its humour pokes fun at the canteen's cooking",
+    "Its subject is a lunch that students eat each day",
+    "Its claim about the burnt lunch is exaggerated"
+   ],
+   "why": "A parody imitates the style of another text, and here the writer copies the format of a recipe. Humour and exaggeration aimed at the canteen are tools of satire, so they do not by themselves make a text a parody. The everyday subject has nothing to do with copying a style.",
+   "clue": "A parody needs an original text that readers already know."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev writes a speech in a grand, serious voice. In it, a politician promises to fix traffic by asking every driver to leave home ten minutes earlier. Dev wants readers to see how weak such promises are. Which choice best describes his text?",
+   "opts": [
+    "Satire, as it uses exaggeration to criticise its target",
+    "Parody but not satire, as it just copies a style",
+    "Satire, as it copies one real speech word for word",
+    "Neither, as a grand voice is a sign of a serious text"
+   ],
+   "why": "The silly promise is exaggerated to criticise empty political claims, which is satire. It also copies a grand speech style, so it is a parody as well. Parody but not satire is tempting because of that copied style, but Dev has a clear target to criticise, which makes it satire.",
+   "clue": "Ask what Dev wants readers to think about politicians."
+  }
+ },
+ "checked_by": "claude-code"
 }

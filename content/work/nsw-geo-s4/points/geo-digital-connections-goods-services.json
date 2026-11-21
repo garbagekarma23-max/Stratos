@@ -20,8 +20,181 @@
    0.244
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:45Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:49Z write: failed the content check, writing again",
+  "2026-11-20T12:44:55Z write: done",
+  "2026-11-20T12:53:24Z check: flagged",
+  "2026-11-20T12:59:58Z fix: suggested",
+  "2026-11-20T13:23:38Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.01384,
+  "check": 0.00867,
+  "fix": 0.01609
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "None of the bank points teaches how the internet connects people to goods like online shopping and streaming, and the closest card, Transport, technology and access, covers access and liveability more broadly, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Digital connections to goods and services",
+  "card": [
+   "The internet links people to goods and services without a trip to a shop or bank. People can shop online, stream films and music, bank and book appointments from home.",
+   "A service is something a person does for you, such as banking or teaching. Many services can now be used online, so people in remote places can reach services that were once far away.",
+   "Online shopping connects buyers and sellers in different places. A shop in a city can sell to a customer in a small town, and the goods are sent by post or courier.",
+   "These links change how places connect. Distance matters less for services, but a good still has to be delivered, and a person needs a working internet connection to use them."
+  ],
+  "remember": "The internet connects people to goods and services from anywhere, but a good still has to be delivered.",
+  "a": {
+   "q": "Which example shows a person using a service online?",
+   "opts": [
+    "Sam has a video lesson with a tutor in another city",
+    "Sam buys a pair of boots from a shop in his town",
+    "Sam posts a parcel at the local post office",
+    "Sam catches a train to a shop in the city"
+   ],
+   "why": "A video lesson is a service, because the tutor does something for Sam, and it is delivered over the internet. Buying boots is buying a good, and it is not done online here.",
+   "clue": "A service is something a person does for you."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ayesha lives on a farm near Bourke and orders a jacket from a Sydney shop's website. How does the internet change how Bourke and Sydney are connected?",
+   "opts": [
+    "She orders from Sydney without a trip, then it is posted",
+    "She downloads the jacket online, so no delivery is needed",
+    "The jacket is made in Bourke, so the shop is not needed",
+    "Bourke is now as close to Sydney as any other town is"
+   ],
+   "why": "The internet lets Ayesha order from far away, but a jacket is a good, so it still has to be delivered. The tempting wrong options say a good can be sent through the internet or that distance disappears, but the card says distance matters less for services only.",
+   "clue": "Can a jacket travel through the internet?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Sam has a video lesson with a tutor in another city",
+   "also_right": []
+  },
+  "b": {
+   "best": "She orders from Sydney without a trip, then it is posted",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) says 'the card says distance matters less for services only', but the card does not say 'only'. It says distance matters less for services and that a good still has to be delivered."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate, and the intended answers are the only right options. One small issue: why (b) adds 'only' to what the card says about distance and services."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: Why (b) says 'the card says distance matters less for services only', but the card does not say 'only'. It says distance matters less for services and that a good still has to be delivered."
+ ],
+ "proposal": {
+  "title": "Digital connections to goods and services",
+  "card": [
+   "The internet links people to goods and services without a trip to a shop or bank. People can shop online, stream films and music, bank and book appointments from home.",
+   "A service is something a person does for you, such as banking or teaching. Many services can now be used online, so people in remote places can reach services that were once far away.",
+   "Online shopping connects buyers and sellers in different places. A shop in a city can sell to a customer in a small town, and the goods are sent by post or courier.",
+   "These links change how places connect. Distance matters less for services, but a good still has to be delivered, and a person needs a working internet connection to use them."
+  ],
+  "remember": "The internet connects people to goods and services from anywhere, but a good still has to be delivered.",
+  "a": {
+   "q": "Which example shows a person using a service online?",
+   "opts": [
+    "Sam has a video lesson with a tutor in another city",
+    "Sam buys a pair of boots from a shop in his town",
+    "Sam posts a parcel at the local post office",
+    "Sam catches a train to a shop in the city"
+   ],
+   "why": "A video lesson is a service, because the tutor does something for Sam, and it is delivered over the internet. Buying boots is buying a good, and it is not done online here.",
+   "clue": "A service is something a person does for you."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ayesha lives on a farm near Bourke and orders a jacket from a Sydney shop's website. How does the internet change how Bourke and Sydney are connected?",
+   "opts": [
+    "She orders from Sydney without a trip, then it is posted",
+    "She downloads the jacket online, so no delivery is needed",
+    "The jacket is made in Bourke, so the shop is not needed",
+    "Bourke is now as close to Sydney as any other town is"
+   ],
+   "why": "The internet lets Ayesha order from far away without travelling, but a jacket is a good, so it still has to be sent by post or courier. The option saying Bourke is now as close as any other town is tempting, but the jacket still has to travel the distance to reach her.",
+   "clue": "Can a jacket travel through the internet?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:38Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) says 'the card says distance matters less for services only', but the card does not say 'only'. It says distance matters less for services and that a good still has to be delivered."
+   }
+  ],
+  "flags": [
+   "Question b, wording: Why (b) says 'the card says distance matters less for services only', but the card does not say 'only'. It says distance matters less for services and that a good still has to be delivered."
+  ]
+ },
+ "final": {
+  "title": "Digital connections to goods and services",
+  "card": [
+   "The internet links people to goods and services without a trip to a shop or bank. People can shop online, stream films and music, bank and book appointments from home.",
+   "A service is something a person does for you, such as banking or teaching. Many services can now be used online, so people in remote places can reach services that were once far away.",
+   "Online shopping connects buyers and sellers in different places. A shop in a city can sell to a customer in a small town, and the goods are sent by post or courier.",
+   "These links change how places connect. Distance matters less for services, but a good still has to be delivered, and a person needs a working internet connection to use them."
+  ],
+  "remember": "The internet connects people to goods and services from anywhere, but a good still has to be delivered.",
+  "a": {
+   "q": "Which example shows a person using a service online?",
+   "opts": [
+    "Sam has a video lesson with a tutor in another city",
+    "Sam buys a pair of boots from a shop in his town",
+    "Sam posts a parcel at the local post office",
+    "Sam catches a train to a shop in the city"
+   ],
+   "why": "A video lesson is a service, because the tutor does something for Sam, and it is delivered over the internet. Buying boots is buying a good, and it is not done online here.",
+   "clue": "A service is something a person does for you."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ayesha lives on a farm near Bourke and orders a jacket from a Sydney shop's website. How does the internet change how Bourke and Sydney are connected?",
+   "opts": [
+    "She orders from Sydney without a trip, then it is posted",
+    "She downloads the jacket online, so no delivery is needed",
+    "The jacket is made in Bourke, so the shop is not needed",
+    "Bourke is now as close to Sydney as any other town is"
+   ],
+   "why": "The internet lets Ayesha order from far away without travelling, but a jacket is a good, so it still has to be sent by post or courier. The option saying Bourke is now as close as any other town is tempting, but the jacket still has to travel the distance to reach her.",
+   "clue": "Can a jacket travel through the internet?"
+  }
+ },
+ "cleared_by": "auto"
 }

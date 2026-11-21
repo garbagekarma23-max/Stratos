@@ -24,8 +24,221 @@
    0.288
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:54Z write: done",
+  "2026-11-20T12:35:53Z check: flagged",
+  "2026-11-20T12:44:58Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.00676,
+  "check": 0.01336,
+  "fix": 0.02094,
+  "recheck": 0.00833
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches the order of operations (brackets, powers, then multiplication and division, then addition and subtraction); they cover ordering integers, adding and subtracting, multiplying and dividing, algebraic properties and writing expressions, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Order of operations with integers",
+  "card": [
+   "Work in this order: brackets first, then powers, then multiplying and dividing from left to right, then adding and subtracting from left to right.",
+   "Multiplying and dividing share one step, and so do adding and subtracting. Within a step, work from left to right.",
+   "Keep each negative sign with its number. Use the sign rules from the last steps: same signs give a positive, different signs give a negative.",
+   [
+    "Example",
+    "\\(4 - 3 \\times (2 - 5)\\). Brackets: \\(2 - 5 = -3\\). Multiply: \\(3 \\times (-3) = -9\\). Subtract: \\(4 - (-9) = 13\\)."
+   ]
+  ],
+  "remember": "Brackets, powers, then multiply and divide, then add and subtract, left to right.",
+  "a": {
+   "q": "What is the value of \\(2 + 3 \\times (-4)\\)?",
+   "opts": [
+    "\\(-10\\)",
+    "\\(-20\\)",
+    "\\(14\\)",
+    "\\(20\\)"
+   ],
+   "why": "Multiply before adding: \\(3 \\times (-4) = -12\\), then \\(2 + (-12) = -10\\). Adding first gives \\(5 \\times (-4) = -20\\), which breaks the order.",
+   "clue": "Which operation comes first, adding or multiplying?"
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the value of \\(10 - 6 \\div 2 \\times (-3)\\)?",
+   "opts": [
+    "\\(19\\)",
+    "\\(1\\)",
+    "\\(-5\\)",
+    "\\(7\\)"
+   ],
+   "why": "Divide and multiply from left to right: \\(6 \\div 2 = 3\\), then \\(3 \\times (-3) = -9\\). Then \\(10 - (-9) = 19\\). Doing \\(2 \\times (-3)\\) first gives \\(-1\\), which is a tempting mistake, as is subtracting first.",
+   "clue": "Divide and multiply from the left before you subtract."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(-10\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(19\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why describes mistakes that match no option. Doing 2 × (-3) first gives 6 ÷ (-6) = -1 and then 10 - (-1) = 11, not -1. Subtracting first gives (10 - 6) ÷ 2 × (-3) = -6. Neither 11 nor -6 is offered. The actual distractors (7, 1, -5) are not explained, so the why misleads students about where those answers come from."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Use the sign rules from the last steps' could be misread as the adding and subtracting step just named in the card. It is meant to refer to the earlier points on multiplying and dividing integers. 'from earlier' or 'from multiplying and dividing integers' would be clearer."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers check out: (a) is -10 and (b) is 19. The why for (b) describes mistakes giving -1 and subtracting first, but neither leads to any of the offered options, so it should explain the actual distractors. The card's phrase 'sign rules from the last steps' is slightly ambiguous."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The why describes mistakes that match no option. Doing 2 × (-3) first gives 6 ÷ (-6) = -1 and then 10 - (-1) = 11, not -1. Subtracting first gives (10 - 6) ÷ 2 × (-3) = -6. Neither 11 nor -6 is offered. The actual distractors (7, 1, -5) are not explained, so the why misleads students about where those answers come from.",
+  "Card, wording: 'Use the sign rules from the last steps' could be misread as the adding and subtracting step just named in the card. It is meant to refer to the earlier points on multiplying and dividing integers. 'from earlier' or 'from multiplying and dividing integers' would be clearer."
+ ],
+ "proposal": {
+  "title": "Order of operations with integers",
+  "card": [
+   "Work in this order: brackets first, then powers, then multiplying and dividing from left to right, then adding and subtracting from left to right.",
+   "Multiplying and dividing share one step, and so do adding and subtracting. Within a step, work from left to right.",
+   "Keep each negative sign with its number. Use the sign rules from multiplying and dividing integers: same signs give a positive, different signs give a negative.",
+   [
+    "Example",
+    "\\(4 - 3 \\times (2 - 5)\\). Brackets: \\(2 - 5 = -3\\). Multiply: \\(3 \\times (-3) = -9\\). Subtract: \\(4 - (-9) = 13\\)."
+   ]
+  ],
+  "remember": "Brackets, powers, then multiply and divide, then add and subtract, left to right.",
+  "a": {
+   "q": "What is the value of \\(2 + 3 \\times (-4)\\)?",
+   "opts": [
+    "\\(-10\\)",
+    "\\(-20\\)",
+    "\\(14\\)",
+    "\\(20\\)"
+   ],
+   "why": "Multiply before adding: \\(3 \\times (-4) = -12\\), then \\(2 + (-12) = -10\\). Adding first gives \\(5 \\times (-4) = -20\\), which breaks the order.",
+   "clue": "Which operation comes first, adding or multiplying?"
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the value of \\(10 - 6 \\div 2 \\times (-3)\\)?",
+   "opts": [
+    "\\(19\\)",
+    "\\(1\\)",
+    "\\(11\\)",
+    "\\(-6\\)"
+   ],
+   "why": "Divide and multiply from left to right: \\(6 \\div 2 = 3\\), then \\(3 \\times (-3) = -9\\), so \\(10 - (-9) = 19\\). Writing \\(10 - 9 = 1\\) drops the negative sign of \\(-9\\). Doing \\(2 \\times (-3)\\) first gives \\(10 - (-1) = 11\\), and subtracting first gives \\(-6\\).",
+   "clue": "Divide and multiply from the left before you subtract."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(-10\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(19\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card example and both answers (−10 and 19) are correct, and each distractor matches a plausible order-of-operations or sign error."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why describes mistakes that match no option. Doing 2 × (-3) first gives 6 ÷ (-6) = -1 and then 10 - (-1) = 11, not -1. Subtracting first gives (10 - 6) ÷ 2 × (-3) = -6. Neither 11 nor -6 is offered. The actual distractors (7, 1, -5) are not explained, so the why misleads students about where those answers come from."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Use the sign rules from the last steps' could be misread as the adding and subtracting step just named in the card. It is meant to refer to the earlier points on multiplying and dividing integers. 'from earlier' or 'from multiplying and dividing integers' would be clearer."
+   }
+  ],
+  "flags": [
+   "Question b, other: The why describes mistakes that match no option. Doing 2 × (-3) first gives 6 ÷ (-6) = -1 and then 10 - (-1) = 11, not -1. Subtracting first gives (10 - 6) ÷ 2 × (-3) = -6. Neither 11 nor -6 is offered. The actual distractors (7, 1, -5) are not explained, so the why misleads students about where those answers come from.",
+   "Card, wording: 'Use the sign rules from the last steps' could be misread as the adding and subtracting step just named in the card. It is meant to refer to the earlier points on multiplying and dividing integers. 'from earlier' or 'from multiplying and dividing integers' would be clearer."
+  ]
+ },
+ "final": {
+  "title": "Order of operations with integers",
+  "card": [
+   "Work in this order: brackets first, then powers, then multiplying and dividing from left to right, then adding and subtracting from left to right.",
+   "Multiplying and dividing share one step, and so do adding and subtracting. Within a step, work from left to right.",
+   "Keep each negative sign with its number. Use the sign rules from multiplying and dividing integers: same signs give a positive, different signs give a negative.",
+   [
+    "Example",
+    "\\(4 - 3 \\times (2 - 5)\\). Brackets: \\(2 - 5 = -3\\). Multiply: \\(3 \\times (-3) = -9\\). Subtract: \\(4 - (-9) = 13\\)."
+   ]
+  ],
+  "remember": "Brackets, powers, then multiply and divide, then add and subtract, left to right.",
+  "a": {
+   "q": "What is the value of \\(2 + 3 \\times (-4)\\)?",
+   "opts": [
+    "\\(-10\\)",
+    "\\(-20\\)",
+    "\\(14\\)",
+    "\\(20\\)"
+   ],
+   "why": "Multiply before adding: \\(3 \\times (-4) = -12\\), then \\(2 + (-12) = -10\\). Adding first gives \\(5 \\times (-4) = -20\\), which breaks the order.",
+   "clue": "Which operation comes first, adding or multiplying?"
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the value of \\(10 - 6 \\div 2 \\times (-3)\\)?",
+   "opts": [
+    "\\(19\\)",
+    "\\(1\\)",
+    "\\(11\\)",
+    "\\(-6\\)"
+   ],
+   "why": "Divide and multiply from left to right: \\(6 \\div 2 = 3\\), then \\(3 \\times (-3) = -9\\), so \\(10 - (-9) = 19\\). Writing \\(10 - 9 = 1\\) drops the negative sign of \\(-9\\). Doing \\(2 \\times (-3)\\) first gives \\(10 - (-1) = 11\\), and subtracting first gives \\(-6\\).",
+   "clue": "Divide and multiply from the left before you subtract."
+  }
+ },
+ "cleared_by": "recheck"
 }

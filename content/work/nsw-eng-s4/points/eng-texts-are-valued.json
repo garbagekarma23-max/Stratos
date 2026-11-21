@@ -24,8 +24,229 @@
    0.328
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:42Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.00621,
+  "check": 0.01156,
+  "fix": 0.02122,
+  "recheck": 0.0065
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches why people value texts for their ideas, style and social role; they cover text structure, the values shown within texts, context, text purposes and hybrid texts, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Why texts are valued",
+  "card": [
+   "People value a text for different reasons. Three common ones are its ideas, its style and what it does in society.",
+   [
+    "Ideas",
+    "the text says something important about life, people or the world, such as courage, fairness or belonging. It makes readers think."
+   ],
+   [
+    "Style",
+    "the writer uses language well. Vivid images, a strong voice or a clever structure can make a text a pleasure to read or hear."
+   ],
+   [
+    "Role in society",
+    "the text does something for a community. A speech may help change a law, or a story may keep a culture's history alive by passing it on."
+   ]
+  ],
+  "remember": "A text can be valued for its ideas, its style or its role in society.",
+  "a": {
+   "q": "Which reason for valuing a text is about its role in society?",
+   "opts": [
+    "It was told for generations to keep a people's history alive",
+    "It uses vivid images that make a place feel real",
+    "It explores what it means to be brave",
+    "It has a clever twist in its final paragraph"
+   ],
+   "why": "A story that keeps a culture's history alive does a job for a community, so it is valued for its role in society. The vivid images and the twist are about style, and bravery is an idea.",
+   "clue": "Which one is about what the text does for a group of people?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A speech given by Leila, a Year 8 student in Bathurst, is still played at her school each year. Listeners say the pictures she paints with her words make them feel as if they are there. Mainly, why is it valued?",
+   "opts": [
+    "For its style, because of its strong use of language",
+    "For its ideas, because it explores a big theme",
+    "For its role in society, because it changed a law",
+    "For its role in society, because it is played each year"
+   ],
+   "why": "The listeners praise how Leila uses words to create pictures, which is style. Being played each year might tempt a student to pick role in society, but the scenario gives no sign that the speech does a job for a community.",
+   "clue": "Look at what the listeners say they like about the speech."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It was told for generations to keep a people's history alive",
+   "also_right": []
+  },
+  "b": {
+   "best": "For its style, because of its strong use of language",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is clearly the longest and the only one with extra detail ('for generations', 'a people's history'). It also closely echoes the card's wording, so a student could pick it without understanding role in society."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The content is accurate and both answers are sound. One minor issue: in question a the right option stands out as the longest and closely echoes the card's wording."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option is clearly the longest and the only one with extra detail ('for generations', 'a people's history'). It also closely echoes the card's wording, so a student could pick it without understanding role in society."
+ ],
+ "proposal": {
+  "title": "Why texts are valued",
+  "card": [
+   "People value a text for different reasons. Three common ones are its ideas, its style and what it does in society.",
+   [
+    "Ideas",
+    "the text says something important about life, people or the world, such as courage, fairness or belonging. It makes readers think."
+   ],
+   [
+    "Style",
+    "the writer uses language well. Vivid images, a strong voice or a clever structure can make a text a pleasure to read or hear."
+   ],
+   [
+    "Role in society",
+    "the text does something for a community. A speech may help change a law, or a story may keep a culture's history alive by passing it on."
+   ]
+  ],
+  "remember": "A text can be valued for its ideas, its style or its role in society.",
+  "a": {
+   "q": "Which reason for valuing a text is about its role in society?",
+   "opts": [
+    "It persuaded a town council to build a new library",
+    "It uses rhythm and rhyme that are fun to read aloud",
+    "It shows why forgiving a friend can be so hard",
+    "It tells its story backwards, from the end to the start"
+   ],
+   "why": "Persuading a council to build a library is something the text did for a community, so it is valued for its role in society. Rhythm, rhyme and telling a story backwards are about style, and forgiveness is an idea the text explores.",
+   "clue": "Which one changed something in the real world for a group of people?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Leila, a Year 8 student in Bathurst, gives a speech about a bushwalk. Listeners say the pictures she paints with her words make them feel as if they are there. Why do they value it?",
+   "opts": [
+    "For its style, because of its vivid use of language",
+    "For its ideas, because it explores a big theme",
+    "For its role in society, because it changed a law",
+    "For its role in society, because it keeps history alive"
+   ],
+   "why": "The listeners praise how Leila uses words to create pictures, which is style. Nothing in the scenario says the speech explores a big theme, changed a law or keeps a culture's history alive.",
+   "clue": "Look at what the listeners say they like about the speech."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It persuaded a town council to build a new library",
+    "also_right": []
+   },
+   "b": {
+    "best": "For its style, because of its vivid use of language",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 19,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is clearly the longest and the only one with extra detail ('for generations', 'a people's history'). It also closely echoes the card's wording, so a student could pick it without understanding role in society."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The right option is clearly the longest and the only one with extra detail ('for generations', 'a people's history'). It also closely echoes the card's wording, so a student could pick it without understanding role in society."
+  ]
+ },
+ "final": {
+  "title": "Why texts are valued",
+  "card": [
+   "People value a text for different reasons. Three common ones are its ideas, its style and what it does in society.",
+   [
+    "Ideas",
+    "the text says something important about life, people or the world, such as courage, fairness or belonging. It makes readers think."
+   ],
+   [
+    "Style",
+    "the writer uses language well. Vivid images, a strong voice or a clever structure can make a text a pleasure to read or hear."
+   ],
+   [
+    "Role in society",
+    "the text does something for a community. A speech may help change a law, or a story may keep a culture's history alive by passing it on."
+   ]
+  ],
+  "remember": "A text can be valued for its ideas, its style or its role in society.",
+  "a": {
+   "q": "Which reason for valuing a text is about its role in society?",
+   "opts": [
+    "It persuaded a town council to build a new library",
+    "It uses rhythm and rhyme that are fun to read aloud",
+    "It shows why forgiving a friend can be so hard",
+    "It tells its story backwards, from the end to the start"
+   ],
+   "why": "Persuading a council to build a library is something the text did for a community, so it is valued for its role in society. Rhythm, rhyme and telling a story backwards are about style, and forgiveness is an idea the text explores.",
+   "clue": "Which one changed something in the real world for a group of people?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Leila, a Year 8 student in Bathurst, gives a speech about a bushwalk. Listeners say the pictures she paints with her words make them feel as if they are there. Why do they value it?",
+   "opts": [
+    "For its style, because of its vivid use of language",
+    "For its ideas, because it explores a big theme",
+    "For its role in society, because it changed a law",
+    "For its role in society, because it keeps history alive"
+   ],
+   "why": "The listeners praise how Leila uses words to create pictures, which is style. Nothing in the scenario says the speech explores a big theme, changed a law or keeps a culture's history alive.",
+   "clue": "Look at what the listeners say they like about the speech."
+  }
+ },
+ "cleared_by": "recheck"
 }

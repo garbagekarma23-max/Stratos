@@ -24,8 +24,179 @@
    0.351
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:55Z write: done",
+  "2026-11-20T12:44:59Z check: flagged",
+  "2026-11-20T12:53:28Z fix: suggested",
+  "2026-11-20T13:23:44Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00043,
+  "write": 0.0082,
+  "check": 0.01118,
+  "fix": 0.02099
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Linear functions, covers the point-gradient form y - y₁ = m(x - x₁) but not converting to the general form ax + by + c = 0, and it is pitched at Year 11 rather than Stage 5 paths, so no bank point teaches this full idea at the right depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Point-gradient and general form",
+  "card": [
+   "If a line has gradient \\(m\\) and passes through the point \\((x_{1}, y_{1})\\), its equation is \\(y - y_{1} = m(x - x_{1})\\). Put in the numbers, then tidy up.",
+   "Example: gradient \\(3\\), through \\((2, 5)\\). This gives \\(y - 5 = 3(x - 2)\\). Expanding gives \\(y - 5 = 3x - 6\\), so \\(y = 3x - 1\\).",
+   "General form writes the equation as \\(ax + by + c = 0\\), with everything on one side equal to zero. Usually \\(a\\), \\(b\\) and \\(c\\) are whole numbers.",
+   "To change \\(y = 3x - 1\\) to general form, move every term to one side: \\(3x - y - 1 = 0\\). To go back, make \\(y\\) the subject. Then the gradient is the number in front of \\(x\\)."
+  ],
+  "remember": "Use \\(y - y_{1} = m(x - x_{1})\\) to build a line, then rearrange it to the form you need.",
+  "a": {
+   "q": "A line has gradient \\(2\\) and passes through \\((1, 4)\\). Which equation is correct?",
+   "opts": [
+    "\\(y - 4 = 2(x - 1)\\)",
+    "\\(y - 1 = 2(x - 4)\\)",
+    "\\(y + 4 = 2(x + 1)\\)",
+    "\\(y - 4 = 1(x - 2)\\)"
+   ],
+   "why": "The point \\((1, 4)\\) gives \\(x_{1} = 1\\) and \\(y_{1} = 4\\), so the equation is \\(y - 4 = 2(x - 1)\\). Swapping the coordinates, as in \\(y - 1 = 2(x - 4)\\), gives a line through \\((4, 1)\\) instead.",
+   "clue": "The \\(y\\) value of the point goes with \\(y\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "A line has gradient \\(-2\\) and passes through \\((3, -1)\\). What is its equation in general form?",
+   "opts": [
+    "\\(2x + y - 5 = 0\\)",
+    "\\(2x + y + 5 = 0\\)",
+    "\\(2x - y - 7 = 0\\)",
+    "\\(2x + y - 7 = 0\\)"
+   ],
+   "why": "The line is \\(y + 1 = -2(x - 3)\\), which expands to \\(y + 1 = -2x + 6\\). Moving everything to the left gives \\(2x + y - 5 = 0\\). Forgetting that \\(y - (-1)\\) is \\(y + 1\\) leads to \\(2x + y - 7 = 0\\).",
+   "clue": "Subtracting \\(-1\\) is the same as adding \\(1\\)."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(y - 4 = 2(x - 1)\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(2x + y - 5 = 0\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says a, b and c are 'usually whole numbers', but its own example 3x - y - 1 = 0 has b = -1 and c = -1. In Australian usage 'whole numbers' means 0, 1, 2, …, so 'integers' would be accurate."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers and both explanations are correct. The only issue is that the card calls a, b and c 'whole numbers' when its own example uses negative values; 'integers' is the right word."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The card says a, b and c are 'usually whole numbers', but its own example 3x - y - 1 = 0 has b = -1 and c = -1. In Australian usage 'whole numbers' means 0, 1, 2, …, so 'integers' would be accurate."
+ ],
+ "proposal": {
+  "title": "Point-gradient and general form",
+  "card": [
+   "If a line has gradient \\(m\\) and passes through the point \\((x_{1}, y_{1})\\), its equation is \\(y - y_{1} = m(x - x_{1})\\). Put in the numbers, then tidy up. Take care with negatives: \\(y - (-1)\\) is \\(y + 1\\).",
+   "Example: gradient \\(3\\), through \\((2, 5)\\). This gives \\(y - 5 = 3(x - 2)\\). Expanding gives \\(y - 5 = 3x - 6\\), so \\(y = 3x - 1\\).",
+   "General form writes the equation as \\(ax + by + c = 0\\), with everything on one side equal to zero. Usually \\(a\\), \\(b\\) and \\(c\\) are integers: whole numbers or their negatives.",
+   "To change \\(y = 3x - 1\\) to general form, move every term to one side: \\(3x - y - 1 = 0\\). To go back, make \\(y\\) the subject. Then the gradient is the number in front of \\(x\\)."
+  ],
+  "remember": "Use \\(y - y_{1} = m(x - x_{1})\\) to build a line, then rearrange it to the form you need.",
+  "a": {
+   "q": "A line has gradient \\(2\\) and passes through \\((1, 4)\\). Which equation is correct?",
+   "opts": [
+    "\\(y - 4 = 2(x - 1)\\)",
+    "\\(y - 1 = 2(x - 4)\\)",
+    "\\(y + 4 = 2(x + 1)\\)",
+    "\\(y - 4 = 1(x - 2)\\)"
+   ],
+   "why": "The point \\((1, 4)\\) gives \\(x_{1} = 1\\) and \\(y_{1} = 4\\), so the equation is \\(y - 4 = 2(x - 1)\\). Swapping the coordinates, as in \\(y - 1 = 2(x - 4)\\), gives a line through \\((4, 1)\\) instead.",
+   "clue": "The \\(y\\) value of the point goes with \\(y\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "A line has gradient \\(-2\\) and passes through \\((3, -1)\\). What is its equation in general form?",
+   "opts": [
+    "\\(2x + y - 5 = 0\\)",
+    "\\(2x + y + 5 = 0\\)",
+    "\\(2x - y - 7 = 0\\)",
+    "\\(2x + y - 7 = 0\\)"
+   ],
+   "why": "The line is \\(y + 1 = -2(x - 3)\\), which expands to \\(y + 1 = -2x + 6\\). Moving everything to the left gives \\(2x + y - 5 = 0\\). Forgetting that \\(y - (-1)\\) is \\(y + 1\\) leads to \\(2x + y - 7 = 0\\).",
+   "clue": "Subtracting \\(-1\\) is the same as adding \\(1\\)."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:44Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says a, b and c are 'usually whole numbers', but its own example 3x - y - 1 = 0 has b = -1 and c = -1. In Australian usage 'whole numbers' means 0, 1, 2, …, so 'integers' would be accurate."
+   }
+  ],
+  "flags": [
+   "Card, wording: The card says a, b and c are 'usually whole numbers', but its own example 3x - y - 1 = 0 has b = -1 and c = -1. In Australian usage 'whole numbers' means 0, 1, 2, …, so 'integers' would be accurate."
+  ]
+ },
+ "final": {
+  "title": "Point-gradient and general form",
+  "card": [
+   "If a line has gradient \\(m\\) and passes through the point \\((x_{1}, y_{1})\\), its equation is \\(y - y_{1} = m(x - x_{1})\\). Put in the numbers, then tidy up. Take care with negatives: \\(y - (-1)\\) is \\(y + 1\\).",
+   "Example: gradient \\(3\\), through \\((2, 5)\\). This gives \\(y - 5 = 3(x - 2)\\). Expanding gives \\(y - 5 = 3x - 6\\), so \\(y = 3x - 1\\).",
+   "General form writes the equation as \\(ax + by + c = 0\\), with everything on one side equal to zero. Usually \\(a\\), \\(b\\) and \\(c\\) are integers: whole numbers or their negatives.",
+   "To change \\(y = 3x - 1\\) to general form, move every term to one side: \\(3x - y - 1 = 0\\). To go back, make \\(y\\) the subject. Then the gradient is the number in front of \\(x\\)."
+  ],
+  "remember": "Use \\(y - y_{1} = m(x - x_{1})\\) to build a line, then rearrange it to the form you need.",
+  "a": {
+   "q": "A line has gradient \\(2\\) and passes through \\((1, 4)\\). Which equation is correct?",
+   "opts": [
+    "\\(y - 4 = 2(x - 1)\\)",
+    "\\(y - 1 = 2(x - 4)\\)",
+    "\\(y + 4 = 2(x + 1)\\)",
+    "\\(y - 4 = 1(x - 2)\\)"
+   ],
+   "why": "The point \\((1, 4)\\) gives \\(x_{1} = 1\\) and \\(y_{1} = 4\\), so the equation is \\(y - 4 = 2(x - 1)\\). Swapping the coordinates, as in \\(y - 1 = 2(x - 4)\\), gives a line through \\((4, 1)\\) instead.",
+   "clue": "The \\(y\\) value of the point goes with \\(y\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "A line has gradient \\(-2\\) and passes through \\((3, -1)\\). What is its equation in general form?",
+   "opts": [
+    "\\(2x + y - 5 = 0\\)",
+    "\\(2x + y + 5 = 0\\)",
+    "\\(2x - y - 7 = 0\\)",
+    "\\(2x + y - 7 = 0\\)"
+   ],
+   "why": "The line is \\(y + 1 = -2(x - 3)\\), which expands to \\(y + 1 = -2x + 6\\). Moving everything to the left gives \\(2x + y - 5 = 0\\). Forgetting that \\(y - (-1)\\) is \\(y + 1\\) leads to \\(2x + y - 7 = 0\\).",
+   "clue": "Subtracting \\(-1\\) is the same as adding \\(1\\)."
+  }
+ },
+ "cleared_by": "auto"
 }

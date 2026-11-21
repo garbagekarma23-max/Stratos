@@ -24,8 +24,235 @@
    0.236
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: done",
+  "2026-11-20T12:44:55Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "write": 0.00654,
+  "check": 0.01007,
+  "fix": 0.02755,
+  "recheck": 0.00808
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No single bank point covers the full list of farming impacts (land clearing, erosion, salinity, fertiliser pollution, river overuse and biodiversity loss) at Stage 5 depth for NSW. The closest points each cover only part of it, are aimed at other year levels, or are framed around production in general or the Murray-Darling Basin, so adapting one would need new content rather than small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Environmental impacts of food production",
+  "card": [
+   "Growing food changes the land and water around a farm. These changes are called environmental impacts, and farming can cause several of them.",
+   [
+    "Land clearing and erosion",
+    "Clearing native vegetation removes habitat. Without roots to hold soil, wind and rain can wash or blow topsoil away. This is soil erosion."
+   ],
+   [
+    "Salinity",
+    "In some regions, clearing deep-rooted plants lets the water table rise. It can bring salts to the surface, and the salty soil makes it hard for crops to grow. This is salinity."
+   ],
+   [
+    "Water impacts",
+    "Fertiliser can wash into rivers and cause water pollution. Taking too much water from a river for irrigation is overuse, and it can leave less for river life. Loss of habitat and polluted water can reduce biodiversity, the variety of living things."
+   ]
+  ],
+  "remember": "Farming can harm land, water and wildlife, through clearing, erosion, salinity, pollution and overuse of rivers.",
+  "a": {
+   "q": "After a farmer clears a hillside of trees and grass, heavy rain washes much of the topsoil into a creek. What is this impact called?",
+   "opts": [
+    "Soil erosion",
+    "Salinity",
+    "Overuse of a river",
+    "Water table loss"
+   ],
+   "why": "Soil erosion is the removal of topsoil by wind or water, which is more likely when roots no longer hold the soil. Salinity is the tempting wrong answer: it involves salt reaching the surface, not soil being washed away.",
+   "clue": "Think about what the roots were holding in place."
+  },
+  "b": {
+   "d": 3,
+   "q": "Farms upstream of a town use fertiliser on their crops. After a storm, the river below turns green with algae and fish numbers fall. What is the most likely cause?",
+   "opts": [
+    "Fertiliser washed into the river",
+    "Too much water taken from the river",
+    "Rising salts in the soil near the river",
+    "Trees cleared from the nearby hills"
+   ],
+   "why": "Fertiliser washing into a river is water pollution from farming. Overuse of a river is the tempting wrong answer, but it means taking too much water, not adding substances to it.",
+   "clue": "Look at what the farms put on their crops, and where it can end up."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Soil erosion",
+   "also_right": []
+  },
+  "b": {
+   "best": "Fertiliser washed into the river",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says the farms use fertiliser, and the right option is the only one that repeats that word. The clue then points straight to it, so a student can pick it by word-matching without knowing what water pollution from fertiliser is."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question a are accurate. Question b gives its answer away: the stem names fertiliser and only the right option repeats it, and the clue points to it again."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The stem says the farms use fertiliser, and the right option is the only one that repeats that word. The clue then points straight to it, so a student can pick it by word-matching without knowing what water pollution from fertiliser is."
+ ],
+ "proposal": {
+  "title": "Environmental impacts of food production",
+  "card": [
+   [
+    "Land clearing and erosion",
+    "Clearing native vegetation removes habitat. Without roots to hold it, topsoil can be washed or blown away by rain and wind. This is soil erosion."
+   ],
+   [
+    "Salinity",
+    "In some regions, clearing deep-rooted plants lets the water table rise. It can bring salts to the surface, and the salty soil makes it hard for crops to grow. This is salinity."
+   ],
+   [
+    "Water pollution",
+    "Rain can wash fertiliser off paddocks into rivers. The fertiliser feeds algae, which can turn the water green and harm fish."
+   ],
+   [
+    "Overuse and biodiversity",
+    "Taking too much water from a river for irrigation is overuse, and it can leave less for river life. Clearing, pollution and overuse can all reduce biodiversity, the variety of living things."
+   ]
+  ],
+  "remember": "Farming can harm soil, water and wildlife through clearing, erosion, salinity, pollution and river overuse.",
+  "a": {
+   "q": "After a farmer clears a hillside of trees and grass, heavy rain washes much of the topsoil into a creek. What is this impact called?",
+   "opts": [
+    "Soil erosion",
+    "Salinity",
+    "Overuse of a river",
+    "Water table loss"
+   ],
+   "why": "Soil erosion is the removal of topsoil by wind or water, which is more likely when roots no longer hold the soil. Salinity is the tempting wrong answer: it involves salt reaching the surface, not soil being washed away.",
+   "clue": "Think about what the roots were holding in place."
+  },
+  "b": {
+   "d": 3,
+   "q": "Wheat farms line a river. After heavy rain, water runs off the paddocks into the river. Days later the river turns green with algae and fish die. What is the most likely cause?",
+   "opts": [
+    "Fertiliser carried off the paddocks into the river",
+    "Too much water pumped out of the river for crops",
+    "Salt rising to the surface of the paddocks",
+    "Topsoil blown off the paddocks by strong wind"
+   ],
+   "why": "The rain carried fertiliser off the paddocks, and it fed the algae that turned the river green. This is water pollution from farming. Overuse is the tempting wrong answer, but it means taking too much water out of a river, not adding something to it.",
+   "clue": "Think about what the rain carried off the paddocks, and what algae need to grow."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Soil erosion",
+    "also_right": []
+   },
+   "b": {
+    "best": "Fertiliser carried off the paddocks into the river",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says the farms use fertiliser, and the right option is the only one that repeats that word. The clue then points straight to it, so a student can pick it by word-matching without knowing what water pollution from fertiliser is."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The stem says the farms use fertiliser, and the right option is the only one that repeats that word. The clue then points straight to it, so a student can pick it by word-matching without knowing what water pollution from fertiliser is."
+  ]
+ },
+ "final": {
+  "title": "Environmental impacts of food production",
+  "card": [
+   [
+    "Land clearing and erosion",
+    "Clearing native vegetation removes habitat. Without roots to hold it, topsoil can be washed or blown away by rain and wind. This is soil erosion."
+   ],
+   [
+    "Salinity",
+    "In some regions, clearing deep-rooted plants lets the water table rise. It can bring salts to the surface, and the salty soil makes it hard for crops to grow. This is salinity."
+   ],
+   [
+    "Water pollution",
+    "Rain can wash fertiliser off paddocks into rivers. The fertiliser feeds algae, which can turn the water green and harm fish."
+   ],
+   [
+    "Overuse and biodiversity",
+    "Taking too much water from a river for irrigation is overuse, and it can leave less for river life. Clearing, pollution and overuse can all reduce biodiversity, the variety of living things."
+   ]
+  ],
+  "remember": "Farming can harm soil, water and wildlife through clearing, erosion, salinity, pollution and river overuse.",
+  "a": {
+   "q": "After a farmer clears a hillside of trees and grass, heavy rain washes much of the topsoil into a creek. What is this impact called?",
+   "opts": [
+    "Soil erosion",
+    "Salinity",
+    "Overuse of a river",
+    "Water table loss"
+   ],
+   "why": "Soil erosion is the removal of topsoil by wind or water, which is more likely when roots no longer hold the soil. Salinity is the tempting wrong answer: it involves salt reaching the surface, not soil being washed away.",
+   "clue": "Think about what the roots were holding in place."
+  },
+  "b": {
+   "d": 3,
+   "q": "Wheat farms line a river. After heavy rain, water runs off the paddocks into the river. Days later the river turns green with algae and fish die. What is the most likely cause?",
+   "opts": [
+    "Fertiliser carried off the paddocks into the river",
+    "Too much water pumped out of the river for crops",
+    "Salt rising to the surface of the paddocks",
+    "Topsoil blown off the paddocks by strong wind"
+   ],
+   "why": "The rain carried fertiliser off the paddocks, and it fed the algae that turned the river green. This is water pollution from farming. Overuse is the tempting wrong answer, but it means taking too much water out of a river, not adding something to it.",
+   "clue": "Think about what the rain carried off the paddocks, and what algae need to grow."
+  }
+ },
+ "cleared_by": "recheck"
 }

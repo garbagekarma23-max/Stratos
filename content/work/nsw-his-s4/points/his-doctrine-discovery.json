@@ -8,8 +8,163 @@
    0.206
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: failed the content check, writing again",
+  "2026-11-20T12:44:56Z write: done",
+  "2026-11-20T12:53:25Z check: flagged",
+  "2026-11-20T13:11:48Z fix: suggested",
+  "2026-11-20T14:40:36Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.01398,
+  "check": 0.01484,
+  "fix": 0.01656
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers the voyages of Columbus and da Gama and their search for routes to Asia, not the papal doctrine of 1493 that European powers later used to justify taking Indigenous lands, so it teaches a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The Doctrine of Discovery",
+  "card": [
+   "The Doctrine of Discovery was an idea, backed by the Christian church in Europe, that European rulers could claim lands that Christian rulers did not hold.",
+   "In 1493 the Pope, the head of the Catholic Church, issued a document that gave Spain the right to claim lands in the Americas that were not ruled by Christians.",
+   "The people already living on those lands had their own laws, leaders and ties to Country. The doctrine did not ask for their agreement.",
+   "Later, other European powers used the same idea to justify taking Indigenous lands. It treated lands as open to claim even when people already lived there."
+  ],
+  "remember": "The Doctrine of Discovery let Europeans claim lands without the agreement of the people who lived there.",
+  "a": {
+   "q": "What did the Pope give Spain the right to do in 1493?",
+   "opts": [
+    "Claim lands not ruled by Christians",
+    "Rule all lands in the Pacific Ocean",
+    "Trade freely with every other European power",
+    "Sign agreements with Indigenous leaders"
+   ],
+   "why": "The Pope gave Spain the right to claim lands that were not ruled by Christians. It did not give Spain any duty to seek agreement from the people living there, so a right to make agreements is not what the doctrine gave.",
+   "clue": "Think about whose rule decided which lands could be claimed."
+  },
+  "b": {
+   "d": 3,
+   "q": "A British ship's captain in the 1700s claims a coast for the king, even though people have lived there for thousands of years. Which idea does this act reflect?",
+   "opts": [
+    "Lands could be claimed without the people's agreement",
+    "Coastal peoples had to agree before a claim was made",
+    "Only lands with no people living on them could be claimed",
+    "Only the Pope, and not a ruler, could claim new lands"
+   ],
+   "why": "The doctrine let European powers claim lands without asking the people who lived there. The idea that only empty lands could be claimed is tempting but wrong, because people were already there and the claim ignored them.",
+   "clue": "Did the people living there get a say in the claim?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Claim lands not ruled by Christians",
+   "also_right": []
+  },
+  "b": {
+   "best": "Lands could be claimed without the people's agreement",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"ties to Country\" uses capitalised Country, an Aboriginal and Torres Strait Islander term, for the peoples of the Americas the 1493 grant covered. Students may wrongly link it to Australia here; \"ties to their land\" would be clearer."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "first-nations",
+  "summary": "Facts and answers check out. One minor wording issue: the card applies the Aboriginal term \"Country\" to Indigenous peoples of the Americas, which could confuse students."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Card, wording: \"ties to Country\" uses capitalised Country, an Aboriginal and Torres Strait Islander term, for the peoples of the Americas the 1493 grant covered. Students may wrongly link it to Australia here; \"ties to their land\" would be clearer."
+ ],
+ "proposal": {
+  "title": "The Doctrine of Discovery",
+  "card": [
+   "The Doctrine of Discovery was an idea, backed by the Christian church in Europe, that European rulers could claim lands that Christian rulers did not hold.",
+   "In 1493 the Pope, the head of the Catholic Church, issued a document that gave Spain the right to claim lands in the Americas that were not ruled by Christians.",
+   "The people already living on those lands had their own laws, leaders and ties to their land. The doctrine did not ask for their agreement.",
+   "Later, other European powers used the same idea to justify taking Indigenous lands. It treated lands as open to claim even when people already lived there."
+  ],
+  "remember": "The Doctrine of Discovery let Europeans claim lands without the agreement of the people who lived there.",
+  "a": {
+   "q": "What did the Pope give Spain the right to do in 1493?",
+   "opts": [
+    "Claim lands not ruled by Christians",
+    "Rule all lands in the Pacific Ocean",
+    "Trade freely with other European powers",
+    "Sign agreements with Indigenous leaders"
+   ],
+   "why": "The Pope gave Spain the right to claim lands that were not ruled by Christians. It did not give Spain any duty to seek agreement from the people living there, so a right to make agreements is not what the doctrine gave.",
+   "clue": "Think about whose rule decided which lands could be claimed."
+  },
+  "b": {
+   "d": 3,
+   "q": "A British ship's captain in the 1700s claims a coast for the king, even though people have lived there for thousands of years. Which idea does this act reflect?",
+   "opts": [
+    "Lands could be claimed without the people's agreement",
+    "Coastal peoples had to agree before a claim was made",
+    "Only lands with no people living on them could be claimed",
+    "Only the Pope, and not a ruler, could claim new lands"
+   ],
+   "why": "The doctrine let European powers claim lands without asking the people who lived there. The idea that only empty lands could be claimed is tempting but wrong, because people were already there and the claim ignored them.",
+   "clue": "Did the people living there get a say in the claim?"
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "The Doctrine of Discovery",
+  "card": [
+   "The Doctrine of Discovery was an idea, backed by the Christian church in Europe, that European rulers could claim lands that Christian rulers did not hold.",
+   "In 1493 the Pope, the head of the Catholic Church, issued a document that gave Spain the right to claim lands in the Americas that were not ruled by Christians.",
+   "The people already living on those lands had their own laws, leaders and ties to their land. The doctrine did not ask for their agreement.",
+   "Later, other European powers used the same idea to justify taking Indigenous lands. It treated lands as open to claim even when people already lived there."
+  ],
+  "remember": "The Doctrine of Discovery let Europeans claim lands without the agreement of the people who lived there.",
+  "a": {
+   "q": "What did the Pope give Spain the right to do in 1493?",
+   "opts": [
+    "Claim lands not ruled by Christians",
+    "Rule all lands in the Pacific Ocean",
+    "Trade freely with other European powers",
+    "Sign agreements with Indigenous leaders"
+   ],
+   "why": "The Pope gave Spain the right to claim lands that were not ruled by Christians. It did not give Spain any duty to seek agreement from the people living there, so a right to make agreements is not what the doctrine gave.",
+   "clue": "Think about whose rule decided which lands could be claimed."
+  },
+  "b": {
+   "d": 3,
+   "q": "A British ship's captain in the 1700s claims a coast for the king, even though people have lived there for thousands of years. Which idea does this act reflect?",
+   "opts": [
+    "Lands could be claimed without the people's agreement",
+    "Coastal peoples had to agree before a claim was made",
+    "Only lands with no people living on them could be claimed",
+    "Only the Pope, and not a ruler, could claim new lands"
+   ],
+   "why": "The doctrine let European powers claim lands without asking the people who lived there. The idea that only empty lands could be claimed is tempting but wrong, because people were already there and the claim ignored them.",
+   "clue": "Did the people living there get a say in the claim?"
+  }
+ },
+ "cleared_by": "owner"
 }

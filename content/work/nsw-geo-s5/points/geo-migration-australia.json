@@ -16,8 +16,185 @@
    0.21
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: done",
+  "2026-11-20T12:44:55Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T14:39:19Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00615,
+  "check": 0.01359,
+  "fix": 0.01766
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches the history of migration to Australia from Britain, Europe and Asia; the closest, Types of migration, covers migration categories rather than where migrants to Australia came from, and the two trade points cover trade, not migration.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Migration to Australia",
+  "card": [
+   "Migration to Australia is not new. Aboriginal and Torres Strait Islander peoples have lived here for tens of thousands of years, and settlers from other countries have arrived since 1788.",
+   [
+    "After World War II",
+    "From 1945, the government ran assisted migration programs. Most migrants came from Britain, and many also came from Europe, such as Italy, Greece and the Netherlands."
+   ],
+   [
+    "More recently",
+    "Since the 1970s, more migrants have come from Asia. China and India are now among the largest sources of migrants to Australia."
+   ],
+   "The mix of countries has changed over time. Many migrants have come for work, study or family, and others have come to escape war."
+  ],
+  "remember": "After World War II, most migrants came from Britain and Europe. More recently, many have come from Asia, especially China and India.",
+  "a": {
+   "q": "Which pair of places has been a major source of recent migrants to Australia?",
+   "opts": [
+    "China and India",
+    "Italy and Greece",
+    "Canada and Brazil",
+    "Egypt and Kenya"
+   ],
+   "why": "China and India are among the largest sources of migrants in recent years. Italy and Greece were important sources after World War II, but they are not the main sources now.",
+   "clue": "Think of the two Asian countries named on the card."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dimitri's grandparents moved to Sydney from Greece in the 1950s. Which statement best describes their move?",
+   "opts": [
+    "It was part of the wave of European migration after the war",
+    "It was part of the recent rise in migration from Asia",
+    "It was the first migration to Australia in history",
+    "It was a move within Australia from the country to the city"
+   ],
+   "why": "The 1950s fall in the years after World War II, when many migrants came from Britain and Europe, including Greece. Recent migration from Asia is the wrong choice because it began later, from the 1970s.",
+   "clue": "Check the time and the country they came from."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "China and India",
+   "also_right": []
+  },
+  "b": {
+   "best": "It was part of the wave of European migration after the war",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think of the two Asian countries named on the card' gives the answer away, because China and India is the only pair of Asian countries among the options."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The first bullet places Aboriginal and Torres Strait Islander peoples' presence under the heading 'Migration to Australia is not new'. This can read as calling First Peoples migrants, the same as later settlers. Their continuous connection to Country should be stated separately from settler migration since 1788."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "first-nations",
+  "summary": "The facts and answers are correct. Question a's clue gives the answer away, and the card's opening line frames First Nations peoples within migration in a way that may mislead and should be reworded."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Question a, other: The clue 'Think of the two Asian countries named on the card' gives the answer away, because China and India is the only pair of Asian countries among the options.",
+  "Card, wording: The first bullet places Aboriginal and Torres Strait Islander peoples' presence under the heading 'Migration to Australia is not new'. This can read as calling First Peoples migrants, the same as later settlers. Their continuous connection to Country should be stated separately from settler migration since 1788."
+ ],
+ "proposal": {
+  "title": "Migration to Australia",
+  "card": [
+   "Aboriginal and Torres Strait Islander peoples have lived in Australia for tens of thousands of years, with a continuous connection to Country. Migration of settlers from other countries began with British colonisation in 1788.",
+   [
+    "After World War II",
+    "From 1945, the government ran assisted migration programs. Most migrants came from Britain, and many also came from Europe, such as Italy, Greece and the Netherlands."
+   ],
+   [
+    "More recently",
+    "Since the 1970s, more migrants have come from Asia. China and India are now among the largest sources of migrants to Australia."
+   ],
+   "The mix of countries has changed over time. Many migrants have come for work, study or family, and others have come to escape war."
+  ],
+  "remember": "After World War II, most migrants came from Britain and Europe. More recently, many have come from Asia, especially China and India.",
+  "a": {
+   "q": "Which pair of places has been a major source of recent migrants to Australia?",
+   "opts": [
+    "China and India",
+    "Italy and Greece",
+    "Canada and Brazil",
+    "Egypt and Kenya"
+   ],
+   "why": "China and India are among the largest sources of migrants in recent years. Italy and Greece were important sources after World War II, but they are not the main sources now.",
+   "clue": "Which pair fits the period since the 1970s, not the 1950s?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Dimitri's grandparents moved to Sydney from Greece in the 1950s. Which statement best describes their move?",
+   "opts": [
+    "It was part of the wave of European migration after the war",
+    "It was part of the recent rise in migration from Asia",
+    "It was the first migration of settlers to Australia",
+    "It was a move within Australia from the country to the city"
+   ],
+   "why": "The 1950s fall in the years after World War II, when many migrants came from Britain and Europe, including Greece. Recent migration from Asia is the wrong choice because it grew later, from the 1970s.",
+   "clue": "Check the time and the country they came from."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Migration to Australia",
+  "card": [
+   "Aboriginal and Torres Strait Islander peoples have lived in Australia for tens of thousands of years, with a continuous connection to Country. Migration of settlers from other countries began with British colonisation in 1788.",
+   [
+    "After World War II",
+    "From 1945, the government ran assisted migration programs. Most migrants came from Britain, and many also came from Europe, such as Italy, Greece and the Netherlands."
+   ],
+   [
+    "More recently",
+    "Since the 1970s, more migrants have come from Asia. China and India are now among the largest sources of migrants to Australia."
+   ],
+   "The mix of countries has changed over time. Many migrants have come for work, study or family, and others have come to escape war."
+  ],
+  "remember": "After World War II, most migrants came from Britain and Europe. More recently, many have come from Asia, especially China and India.",
+  "a": {
+   "q": "Which pair of places has been a major source of recent migrants to Australia?",
+   "opts": [
+    "China and India",
+    "Italy and Greece",
+    "Canada and Brazil",
+    "Egypt and Kenya"
+   ],
+   "why": "China and India are among the largest sources of migrants in recent years. Italy and Greece were important sources after World War II, but they are not the main sources now.",
+   "clue": "Which pair fits the period since the 1970s, not the 1950s?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Dimitri's grandparents moved to Sydney from Greece in the 1950s. Which statement best describes their move?",
+   "opts": [
+    "It was part of the wave of European migration after the war",
+    "It was part of the recent rise in migration from Asia",
+    "It was the first migration of settlers to Australia",
+    "It was a move within Australia from the country to the city"
+   ],
+   "why": "The 1950s fall in the years after World War II, when many migrants came from Britain and Europe, including Greece. Recent migration from Asia is the wrong choice because it grew later, from the 1970s.",
+   "clue": "Check the time and the country they came from."
+  }
+ },
+ "cleared_by": "owner"
 }

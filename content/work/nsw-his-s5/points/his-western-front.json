@@ -12,8 +12,199 @@
    0.277
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:51Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:52Z write: failed the content check, writing again",
+  "2026-11-20T12:44:57Z write: done",
+  "2026-11-20T12:53:26Z check: flagged",
+  "2026-11-20T12:59:59Z fix: suggested",
+  "2026-11-20T14:41:42Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.01547,
+  "check": 0.01507,
+  "fix": 0.02237
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The new point is a broader overview of where most Australians fought, including Belgium, while the closest bank point covers only Fromelles and Pozières and the Somme, so it is narrower and would not teach the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The Western Front",
+  "card": [
+   "The Western Front was the line of trenches that ran across France and Belgium. Most Australians who fought overseas in the First World War served there, not at Gallipoli.",
+   "Both sides dug trenches and defended them with machine guns, barbed wire and artillery. Attacking across open ground, called no man's land, often led to very heavy losses.",
+   "In July 1916 Australians fought at Fromelles in France. It was their first major battle on the Western Front, and many were killed or wounded in one night.",
+   "A few weeks later they fought at Pozières, also in France. Australian casualties there were very high, and the village was taken only after heavy fighting."
+  ],
+  "remember": "Most Australians fought in the trenches of France and Belgium, and 1916 brought very high casualties.",
+  "a": {
+   "q": "Where did most Australians who fought overseas in the First World War serve?",
+   "opts": [
+    "On the Western Front in France and Belgium",
+    "On the Gallipoli peninsula in Turkey",
+    "In German colonies in the Pacific",
+    "In Britain, training and guarding ports"
+   ],
+   "why": "Most Australians served on the Western Front, in France and Belgium. Gallipoli is the tempting answer because it is so well known, but the campaign lasted only eight months and involved fewer Australians.",
+   "clue": "Think of the trench line across France and Belgium."
+  },
+  "b": {
+   "d": 2,
+   "q": "Why were Australian casualties so high at Fromelles and Pozières in 1916?",
+   "opts": [
+    "Attacks crossed open ground under machine guns and shells",
+    "Australian troops had no trenches and no weapons at all",
+    "The battles were fought in Turkey, far from supply lines",
+    "Australian troops stayed in the trenches and did not attack"
+   ],
+   "why": "Defenders in trenches used machine guns, barbed wire and artillery, so attacks across no man's land caused heavy losses. The Turkey option is wrong because these battles were in France.",
+   "clue": "Think about what defenders had and what attackers had to cross."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A simple cross-section diagram of Western Front trenches. It shows two opposing trench lines, with barbed wire and no man's land labelled between them, and a machine gun position in one trench.",
+    "why": "It helps students see why attacking across no man's land was so costly."
+   }
+  ]
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "On the Western Front in France and Belgium",
+   "also_right": []
+  },
+  "b": {
+   "best": "Attacks crossed open ground under machine guns and shells",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Pozières was not 'a few weeks' after Fromelles. Fromelles was 19–20 July 1916 and the Pozières attack began on 23 July 1916, only a few days later. Change to 'a few days later'."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'The village was taken only after heavy fighting' is misleading. Australians took Pozières village fairly quickly on 23 July. Most of the very high casualties came in the following weeks, from German artillery bombardment and counter-attacks while holding and pushing beyond the village."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue ('Think of the trench line across France and Belgium') names the place in the correct option, so it gives the answer away."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "other-sensitive",
+  "summary": "The card wrongly says Pozières came 'a few weeks' after Fromelles (it was a few days), and it oversimplifies how the Pozières village was taken and where the casualties came from. The clue for question a gives the answer away."
+ },
+ "sensitive": "other-sensitive",
+ "flags": [
+  "Card, fact: Pozières was not 'a few weeks' after Fromelles. Fromelles was 19–20 July 1916 and the Pozières attack began on 23 July 1916, only a few days later. Change to 'a few days later'.",
+  "Card, fact: 'The village was taken only after heavy fighting' is misleading. Australians took Pozières village fairly quickly on 23 July. Most of the very high casualties came in the following weeks, from German artillery bombardment and counter-attacks while holding and pushing beyond the village.",
+  "Question a, other: The clue ('Think of the trench line across France and Belgium') names the place in the correct option, so it gives the answer away."
+ ],
+ "proposal": {
+  "title": "The Western Front",
+  "card": [
+   "The Western Front was the line of trenches that ran across France and Belgium. Most Australians who fought overseas in the First World War served there, not at Gallipoli.",
+   "Both sides dug trenches and defended them with machine guns, barbed wire and artillery. Attacking across open ground, called no man's land, often led to very heavy losses.",
+   "On 19 July 1916 Australians attacked at Fromelles in France. It was their first major battle on the Western Front, and thousands were killed or wounded in less than a day.",
+   "A few days later they attacked Pozières, also in France, and took the village quickly. Over the following weeks, German shelling and counter-attacks caused very high Australian casualties."
+  ],
+  "remember": "Most Australians fought in the trenches of France and Belgium, and 1916 brought very high casualties.",
+  "a": {
+   "q": "Where did most Australians who fought overseas in the First World War serve?",
+   "opts": [
+    "On the Western Front in France and Belgium",
+    "On the Gallipoli peninsula in Turkey",
+    "In German colonies in the Pacific",
+    "In Britain, training and guarding ports"
+   ],
+   "why": "Most Australians served on the Western Front, in France and Belgium. Gallipoli is the tempting answer because it is so well known, but the campaign lasted only eight months and involved fewer Australians.",
+   "clue": "The best-known campaign is not always the largest one."
+  },
+  "b": {
+   "d": 2,
+   "q": "Why were Australian casualties so high at Fromelles and Pozières in 1916?",
+   "opts": [
+    "Machine guns and heavy artillery fire cut down the troops",
+    "Most of the soldiers died of disease, not enemy fire",
+    "The battles were fought in Turkey, far from supply lines",
+    "Australian troops stayed in the trenches and did not attack"
+   ],
+   "why": "At Fromelles, attackers crossing no man's land were hit by machine guns and shells. At Pozières, heavy German shelling and counter-attacks caused most losses. The Turkey option is wrong because both battles were in France.",
+   "clue": "Think about the weapons that defended the trenches."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A simple cross-section diagram of Western Front trenches. It shows two opposing trench lines, with barbed wire and no man's land labelled between them, and a machine gun position in one trench.",
+    "why": "It helps students see why attacking across no man's land was so costly."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "The Western Front",
+  "card": [
+   "The Western Front was the line of trenches that ran across France and Belgium. Most Australians who fought overseas in the First World War served there, not at Gallipoli.",
+   "Both sides dug trenches and defended them with machine guns, barbed wire and artillery. Attacking across open ground, called no man's land, often led to very heavy losses.",
+   "On 19 July 1916 Australians attacked at Fromelles in France. It was their first major battle on the Western Front, and thousands were killed or wounded in less than a day.",
+   "A few days later they attacked Pozières, also in France, and took the village quickly. Over the following weeks, German shelling and counter-attacks caused very high Australian casualties."
+  ],
+  "remember": "Most Australians fought in the trenches of France and Belgium, and 1916 brought very high casualties.",
+  "a": {
+   "q": "Where did most Australians who fought overseas in the First World War serve?",
+   "opts": [
+    "On the Western Front in France and Belgium",
+    "On the Gallipoli peninsula in Turkey",
+    "In German colonies in the Pacific",
+    "In Britain, training and guarding ports"
+   ],
+   "why": "Most Australians served on the Western Front, in France and Belgium. Gallipoli is the tempting answer because it is so well known, but the campaign lasted only eight months and involved fewer Australians.",
+   "clue": "The best-known campaign is not always the largest one."
+  },
+  "b": {
+   "d": 2,
+   "q": "Why were Australian casualties so high at Fromelles and Pozières in 1916?",
+   "opts": [
+    "Machine guns and heavy artillery fire cut down the troops",
+    "Most of the soldiers died of disease, not enemy fire",
+    "The battles were fought in Turkey, far from supply lines",
+    "Australian troops stayed in the trenches and did not attack"
+   ],
+   "why": "At Fromelles, attackers crossing no man's land were hit by machine guns and shells. At Pozières, heavy German shelling and counter-attacks caused most losses. The Turkey option is wrong because both battles were in France.",
+   "clue": "Think about the weapons that defended the trenches."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A simple cross-section diagram of Western Front trenches. It shows two opposing trench lines, with barbed wire and no man's land labelled between them, and a machine gun position in one trench.",
+    "why": "It helps students see why attacking across no man's land was so costly."
+   }
+  ]
+ },
+ "cleared_by": "owner"
 }

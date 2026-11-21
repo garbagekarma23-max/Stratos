@@ -12,8 +12,136 @@
    0.498
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 says reuse his-power-church, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:49Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:51Z write: done",
+  "2026-11-20T12:44:56Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "confirm": 0.00645,
+  "write": 0.00628,
+  "check": 0.00681
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "his-power-church",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches the tithe as a tenth of produce and shows monasteries copying books and caring for the sick, at a depth suited to Years 7 and 8, with fair questions and nothing out of place for NSW, though it is framed around the Church's power and adds excommunication.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, his-power-church, covers tithes and monasteries but is broader: it also teaches excommunication and spends one of its two questions on it, while the second bank point is a wider overview of the Church's wealth, politics and learning, so neither matches this focused point on tithes and monasteries.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "The Church in everyday life",
+  "card": [
+   "In medieval Europe, the Christian Church was part of daily life for almost everyone. Villagers went to church on Sundays and holy days, and the priest marked births, marriages and deaths.",
+   [
+    "Tithe",
+    "a tax of about a tenth of a person's produce or income, paid to the Church. Peasants often paid it in grain, animals or other goods."
+   ],
+   [
+    "Monasteries",
+    "communities of monks who lived by religious rules. Before printing existed, monks copied books by hand, which helped keep learning alive."
+   ],
+   "Monasteries also cared for the sick. Monks gave travellers and poor people food, shelter and basic medical care."
+  ],
+  "remember": "The Church took a tithe from people, and monasteries kept books and cared for the sick.",
+  "a": {
+   "q": "What was the tithe in medieval Europe?",
+   "opts": [
+    "A payment of about a tenth of produce to the Church",
+    "A payment of about a tenth of produce to the king",
+    "A payment of about a tenth of produce to the lord",
+    "A fee of about a tenth of wages paid to a monastery for care"
+   ],
+   "why": "The tithe was a tax of about a tenth of a person's produce, paid to the Church. The tempting option is the lord, since peasants also owed the lord, but the tithe went to the Church.",
+   "clue": "Think about who received the tenth."
+  },
+  "b": {
+   "d": 2,
+   "q": "Brother Tomas lives in a monastery in France in 1100. There is no printing press. How could he help keep learning alive?",
+   "opts": [
+    "By copying books by hand",
+    "By printing books on a press",
+    "By collecting the tithe from villagers",
+    "By teaching soldiers how to fight"
+   ],
+   "why": "Without printing, books had to be copied by hand, and monks did this work in monasteries. Collecting the tithe was a different job: it raised money for the Church but did not keep books or knowledge safe.",
+   "clue": "Books were made one at a time."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A payment of about a tenth of produce to the Church",
+   "also_right": []
+  },
+  "b": {
+   "best": "By copying books by hand",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The Church in everyday life",
+  "card": [
+   "In medieval Europe, the Christian Church was part of daily life for almost everyone. Villagers went to church on Sundays and holy days, and the priest marked births, marriages and deaths.",
+   [
+    "Tithe",
+    "a tax of about a tenth of a person's produce or income, paid to the Church. Peasants often paid it in grain, animals or other goods."
+   ],
+   [
+    "Monasteries",
+    "communities of monks who lived by religious rules. Before printing existed, monks copied books by hand, which helped keep learning alive."
+   ],
+   "Monasteries also cared for the sick. Monks gave travellers and poor people food, shelter and basic medical care."
+  ],
+  "remember": "The Church took a tithe from people, and monasteries kept books and cared for the sick.",
+  "a": {
+   "q": "What was the tithe in medieval Europe?",
+   "opts": [
+    "A payment of about a tenth of produce to the Church",
+    "A payment of about a tenth of produce to the king",
+    "A payment of about a tenth of produce to the lord",
+    "A fee of about a tenth of wages paid to a monastery for care"
+   ],
+   "why": "The tithe was a tax of about a tenth of a person's produce, paid to the Church. The tempting option is the lord, since peasants also owed the lord, but the tithe went to the Church.",
+   "clue": "Think about who received the tenth."
+  },
+  "b": {
+   "d": 2,
+   "q": "Brother Tomas lives in a monastery in France in 1100. There is no printing press. How could he help keep learning alive?",
+   "opts": [
+    "By copying books by hand",
+    "By printing books on a press",
+    "By collecting the tithe from villagers",
+    "By teaching soldiers how to fight"
+   ],
+   "why": "Without printing, books had to be copied by hand, and monks did this work in monasteries. Collecting the tithe was a different job: it raised money for the Church but did not keep books or knowledge safe.",
+   "clue": "Books were made one at a time."
+  }
+ },
+ "cleared_by": "checker"
 }

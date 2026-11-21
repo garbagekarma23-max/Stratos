@@ -20,8 +20,206 @@
    0.215
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: flagged",
+  "2026-11-20T12:53:23Z fix: suggested",
+  "2026-11-20T13:23:35Z autoreview: cleared with the fix (a wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.00646,
+  "check": 0.00965,
+  "fix": 0.02228
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point covers the roles of organisations that help consumers; the closest, leg-remedies-consumers, is about the steps a consumer takes for a faulty product and mentions Fair Trading only in passing, and it does not cover the ACCC, ombudsman services or scam warnings.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Organisations that help consumers",
+  "card": [
+   [
+    "ACCC",
+    "The Australian Competition and Consumer Commission is a national agency. It enforces the Australian Consumer Law across the country and can take businesses to court."
+   ],
+   [
+    "NSW Fair Trading",
+    "a NSW government agency. It takes complaints about businesses in the state, helps both sides sort out a dispute and can act against businesses that break consumer laws."
+   ],
+   [
+    "Ombudsman",
+    "an independent service that looks into complaints about a particular industry, such as banking or energy, usually after the business has had a chance to fix the problem."
+   ],
+   "The ACCC and NSW Fair Trading also warn the public about scams and unsafe products. The ACCC runs the Scamwatch website for this."
+  ],
+  "remember": "These organisations take complaints, enforce consumer laws and warn people about scams.",
+  "a": {
+   "q": "Dev bought a faulty phone in Newcastle. The store would not help, so he wants a NSW government agency to help sort out the dispute. Who should he contact?",
+   "opts": [
+    "NSW Fair Trading",
+    "The Scamwatch website",
+    "A banking ombudsman",
+    "A court in another state"
+   ],
+   "why": "NSW Fair Trading is the state agency that takes complaints about businesses in NSW and helps both sides sort out a dispute. Scamwatch warns people about scams, so it is not the place for a dispute over a faulty phone.",
+   "clue": "Which option is a government agency for the state?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya has a complaint about her energy provider. The company has tried to fix it but she is still unhappy. Which step suits her best?",
+   "opts": [
+    "Take the complaint to an energy ombudsman service",
+    "Ask the ACCC to enforce the law for her alone",
+    "Report the energy provider to Scamwatch",
+    "Wait for NSW Fair Trading to send a scam warning"
+   ],
+   "why": "An ombudsman looks into complaints about one industry, such as energy, usually once the business has had a chance to fix the problem. The ACCC enforces the law across the country, so it is not set up to settle one person's complaint.",
+   "clue": "Which service deals with complaints about one industry?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "NSW Fair Trading",
+   "also_right": []
+  },
+  "b": {
+   "best": "Take the complaint to an energy ombudsman service",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem says Dev wants 'a NSW government agency', and the clue asks for 'a government agency for the state'. NSW Fair Trading is the only option with 'NSW' in it and the only government agency for the state, so a student can match the words without knowing what Fair Trading does."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card is accurate. In question a, the stem and the clue both name 'a NSW government agency', so the answer can be picked by matching words rather than knowing the idea."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The stem says Dev wants 'a NSW government agency', and the clue asks for 'a government agency for the state'. NSW Fair Trading is the only option with 'NSW' in it and the only government agency for the state, so a student can match the words without knowing what Fair Trading does."
+ ],
+ "proposal": {
+  "title": "Organisations that help consumers",
+  "card": [
+   [
+    "ACCC",
+    "The Australian Competition and Consumer Commission is a national agency. It enforces the Australian Consumer Law across the country and can take businesses to court, but it does not usually settle one person's dispute."
+   ],
+   [
+    "NSW Fair Trading",
+    "a NSW government agency. It takes complaints about businesses in the state, helps both sides sort out a dispute and can act against businesses that break consumer laws."
+   ],
+   [
+    "Ombudsman",
+    "an independent service that looks into complaints about a particular industry, such as banking or energy, usually after the business has had a chance to fix the problem."
+   ],
+   "The ACCC and NSW Fair Trading also warn the public about scams and unsafe products. The ACCC runs the Scamwatch website for this."
+  ],
+  "remember": "These organisations take complaints, enforce consumer laws and warn people about scams.",
+  "a": {
+   "q": "Dev bought a faulty laptop from a store in Newcastle. The store refused to help, and he wants someone to help him and the store settle the dispute. Who should he contact first?",
+   "opts": [
+    "NSW Fair Trading",
+    "The ACCC",
+    "A banking ombudsman",
+    "The Scamwatch website"
+   ],
+   "why": "NSW Fair Trading takes complaints about businesses in the state and helps both sides sort out a dispute. The ACCC enforces the law across the country, but it does not usually settle one shopper's dispute with a store.",
+   "clue": "Which organisation works on single disputes, not just the law nationwide?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya has a complaint about her energy provider. The company has tried to fix it but she is still unhappy. Which step suits her best?",
+   "opts": [
+    "Take the complaint to an energy ombudsman service",
+    "Ask the ACCC to enforce the law for her alone",
+    "Report the energy provider to Scamwatch",
+    "Wait for NSW Fair Trading to send a scam warning"
+   ],
+   "why": "An ombudsman looks into complaints about one industry, such as energy, usually once the business has had a chance to fix the problem. The ACCC enforces the law across the country and does not usually settle one person's complaint.",
+   "clue": "Which service deals with complaints about one industry?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:35Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem says Dev wants 'a NSW government agency', and the clue asks for 'a government agency for the state'. NSW Fair Trading is the only option with 'NSW' in it and the only government agency for the state, so a student can match the words without knowing what Fair Trading does."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The stem says Dev wants 'a NSW government agency', and the clue asks for 'a government agency for the state'. NSW Fair Trading is the only option with 'NSW' in it and the only government agency for the state, so a student can match the words without knowing what Fair Trading does."
+  ]
+ },
+ "final": {
+  "title": "Organisations that help consumers",
+  "card": [
+   [
+    "ACCC",
+    "The Australian Competition and Consumer Commission is a national agency. It enforces the Australian Consumer Law across the country and can take businesses to court, but it does not usually settle one person's dispute."
+   ],
+   [
+    "NSW Fair Trading",
+    "a NSW government agency. It takes complaints about businesses in the state, helps both sides sort out a dispute and can act against businesses that break consumer laws."
+   ],
+   [
+    "Ombudsman",
+    "an independent service that looks into complaints about a particular industry, such as banking or energy, usually after the business has had a chance to fix the problem."
+   ],
+   "The ACCC and NSW Fair Trading also warn the public about scams and unsafe products. The ACCC runs the Scamwatch website for this."
+  ],
+  "remember": "These organisations take complaints, enforce consumer laws and warn people about scams.",
+  "a": {
+   "q": "Dev bought a faulty laptop from a store in Newcastle. The store refused to help, and he wants someone to help him and the store settle the dispute. Who should he contact first?",
+   "opts": [
+    "NSW Fair Trading",
+    "The ACCC",
+    "A banking ombudsman",
+    "The Scamwatch website"
+   ],
+   "why": "NSW Fair Trading takes complaints about businesses in the state and helps both sides sort out a dispute. The ACCC enforces the law across the country, but it does not usually settle one shopper's dispute with a store.",
+   "clue": "Which organisation works on single disputes, not just the law nationwide?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya has a complaint about her energy provider. The company has tried to fix it but she is still unhappy. Which step suits her best?",
+   "opts": [
+    "Take the complaint to an energy ombudsman service",
+    "Ask the ACCC to enforce the law for her alone",
+    "Report the energy provider to Scamwatch",
+    "Wait for NSW Fair Trading to send a scam warning"
+   ],
+   "why": "An ombudsman looks into complaints about one industry, such as energy, usually once the business has had a chance to fix the problem. The ACCC enforces the law across the country and does not usually settle one person's complaint.",
+   "clue": "Which service deals with complaints about one industry?"
+  }
+ },
+ "cleared_by": "auto"
 }

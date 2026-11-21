@@ -20,8 +20,214 @@
    0.217
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:51Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:52Z write: done",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.00647,
+  "check": 0.01485,
+  "fix": 0.0203,
+  "recheck": 0.01099
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the Paris Peace Conference as a whole: Versailles covers only the German treaty, the postwar settlement card is a Year 12 treatment of all the 1919-1920 treaties without the League, and the League card covers only the League, so the new point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The Paris Peace Conference",
+  "card": [
+   "In 1919 the winning powers met in Paris to decide the terms of peace after the First World War. Britain, France and the United States had the most say. Germany and its allies were not invited to the talks.",
+   "The winners redrew the map of Europe. Empires that had lost the war were broken up, and new or restored countries, such as Poland and Czechoslovakia, appeared.",
+   "The winners also set up the League of Nations, an international body meant to settle disputes between countries and help keep peace.",
+   "The Treaty of Versailles dealt with Germany. Germany had to accept blame for the war and pay reparations, which are payments to make up for the damage the war caused."
+  ],
+  "remember": "In 1919 the winners redrew Europe, created the League of Nations and made Germany accept blame and pay reparations.",
+  "a": {
+   "q": "What were reparations in the Treaty of Versailles?",
+   "opts": [
+    "Payments Germany had to make for war damage",
+    "Land Germany had to hand over to Poland",
+    "A limit on the size of Germany's army",
+    "A promise by Germany to join the League"
+   ],
+   "why": "Reparations were payments meant to make up for the damage caused by the war, and Germany had to make them. Losing land is a different matter: the map of Europe was redrawn, but that is not what reparations means.",
+   "clue": "Think of repair: what is being paid for?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Many Germans were angry about the Treaty of Versailles. Which fact about the 1919 peace process best explains why they felt it was unfair?",
+   "opts": [
+    "Germany was not invited to the talks but had to accept blame",
+    "Germany was not allowed to join the League of Nations",
+    "Germany had to give up all of its land in Europe",
+    "Germany was asked to pay reparations to the League"
+   ],
+   "why": "Germany had no seat at the talks, yet it was made to accept blame and pay reparations. That gives a clear reason for the anger. The option about all of its land is wrong: the map was redrawn, but Germany was not stripped of everything.",
+   "clue": "Who made the decisions, and who had to accept them?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Payments Germany had to make for war damage",
+   "also_right": []
+  },
+  "b": {
+   "best": "Germany was not invited to the talks but had to accept blame",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The distractor 'Germany was not allowed to join the League of Nations' is historically true: Germany was kept out until 1926. Students may learn it as false. The card does not mention it and the why does not address it. Replace it with a clearly false option."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the longest and the only two-part statement, so it stands out slightly from the shorter distractors."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and answers are accurate. In question b, the distractor about Germany being kept out of the League of Nations is actually true (Germany joined only in 1926), so it should be replaced with a clearly false option."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The distractor 'Germany was not allowed to join the League of Nations' is historically true: Germany was kept out until 1926. Students may learn it as false. The card does not mention it and the why does not address it. Replace it with a clearly false option.",
+  "Question b, wording: The right option is the longest and the only two-part statement, so it stands out slightly from the shorter distractors."
+ ],
+ "proposal": {
+  "title": "The Paris Peace Conference",
+  "card": [
+   "In 1919 the winning powers met in Paris to decide the terms of peace after the First World War. Britain, France and the United States had the most say. Germany and its allies were not invited to the talks.",
+   "The winners redrew the map of Europe. Empires that had lost the war were broken up, and new or restored countries, such as Poland and Czechoslovakia, appeared. Germany lost some land, including land given to Poland, but it remained a country.",
+   "The winners also set up the League of Nations, an international body meant to settle disputes between countries and help keep peace.",
+   "The Treaty of Versailles dealt with Germany. Germany had to accept blame for the war and pay reparations to the winners. Reparations are payments to make up for the damage the war caused."
+  ],
+  "remember": "In 1919 the winners redrew Europe, created the League of Nations and made Germany accept blame and pay reparations.",
+  "a": {
+   "q": "What were reparations in the Treaty of Versailles?",
+   "opts": [
+    "Payments Germany had to make for war damage",
+    "Land Germany had to hand over to Poland",
+    "A limit on the size of Germany's army",
+    "A promise by Germany to join the League"
+   ],
+   "why": "Reparations were payments meant to make up for the damage caused by the war, and Germany had to make them. Losing land is a different matter: the map of Europe was redrawn, but that is not what reparations means.",
+   "clue": "Think of repair: what is being paid for?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Many Germans saw the Treaty of Versailles as unfair. Which fact about the 1919 peace process helps explain this view?",
+   "opts": [
+    "Germany had no say in the terms but had to accept blame",
+    "Germany helped write the terms but was still made to pay",
+    "Germany lost all of its land and stopped being a country",
+    "Germany paid reparations to the League, not to the winners"
+   ],
+   "why": "Germany was not invited to the talks, yet it was made to accept blame and pay reparations. Being bound by terms it had no part in deciding gives a clear reason for the view. The option about losing all its land is wrong: Germany lost some land but remained a country.",
+   "clue": "Who made the decisions, and who had to accept them?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Payments Germany had to make for war damage",
+    "also_right": []
+   },
+   "b": {
+    "best": "Germany had no say in the terms but had to accept blame",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The distractor 'Germany was not allowed to join the League of Nations' is historically true: Germany was kept out until 1926. Students may learn it as false. The card does not mention it and the why does not address it. Replace it with a clearly false option."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the longest and the only two-part statement, so it stands out slightly from the shorter distractors."
+   }
+  ],
+  "flags": [
+   "Question b, other: The distractor 'Germany was not allowed to join the League of Nations' is historically true: Germany was kept out until 1926. Students may learn it as false. The card does not mention it and the why does not address it. Replace it with a clearly false option.",
+   "Question b, wording: The right option is the longest and the only two-part statement, so it stands out slightly from the shorter distractors."
+  ]
+ },
+ "final": {
+  "title": "The Paris Peace Conference",
+  "card": [
+   "In 1919 the winning powers met in Paris to decide the terms of peace after the First World War. Britain, France and the United States had the most say. Germany and its allies were not invited to the talks.",
+   "The winners redrew the map of Europe. Empires that had lost the war were broken up, and new or restored countries, such as Poland and Czechoslovakia, appeared. Germany lost some land, including land given to Poland, but it remained a country.",
+   "The winners also set up the League of Nations, an international body meant to settle disputes between countries and help keep peace.",
+   "The Treaty of Versailles dealt with Germany. Germany had to accept blame for the war and pay reparations to the winners. Reparations are payments to make up for the damage the war caused."
+  ],
+  "remember": "In 1919 the winners redrew Europe, created the League of Nations and made Germany accept blame and pay reparations.",
+  "a": {
+   "q": "What were reparations in the Treaty of Versailles?",
+   "opts": [
+    "Payments Germany had to make for war damage",
+    "Land Germany had to hand over to Poland",
+    "A limit on the size of Germany's army",
+    "A promise by Germany to join the League"
+   ],
+   "why": "Reparations were payments meant to make up for the damage caused by the war, and Germany had to make them. Losing land is a different matter: the map of Europe was redrawn, but that is not what reparations means.",
+   "clue": "Think of repair: what is being paid for?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Many Germans saw the Treaty of Versailles as unfair. Which fact about the 1919 peace process helps explain this view?",
+   "opts": [
+    "Germany had no say in the terms but had to accept blame",
+    "Germany helped write the terms but was still made to pay",
+    "Germany lost all of its land and stopped being a country",
+    "Germany paid reparations to the League, not to the winners"
+   ],
+   "why": "Germany was not invited to the talks, yet it was made to accept blame and pay reparations. Being bound by terms it had no part in deciding gives a clear reason for the view. The option about losing all its land is wrong: Germany lost some land but remained a country.",
+   "clue": "Who made the decisions, and who had to accept them?"
+  }
+ },
+ "cleared_by": "recheck"
 }

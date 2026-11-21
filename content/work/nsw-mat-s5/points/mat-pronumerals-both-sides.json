@@ -24,8 +24,115 @@
    0.225
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:55Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:54Z write: done",
+  "2026-11-20T12:44:58Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.00741,
+  "check": 0.00936
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Equations with brackets and variables on both sides, teaches the same move of collecting variable terms on one side but also covers expanding brackets, which this point does not need, so it is broader than the brief and a new point is the safer match.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Pronumerals on both sides",
+  "card": [
+   "Some equations have a pronumeral on both sides, such as \\(5x - 3 = 2x + 9\\). First collect the pronumeral terms on one side.",
+   "Add or subtract the same term on both sides. To remove \\(2x\\) from the right, subtract \\(2x\\) from both sides: \\(3x - 3 = 9\\).",
+   "Now solve as usual. Add 3 to both sides: \\(3x = 12\\). Divide both sides by 3: \\(x = 4\\).",
+   "Check by substituting into both sides. Left: \\(5(4) - 3 = 17\\). Right: \\(2(4) + 9 = 17\\). The sides match, so \\(x = 4\\) is correct."
+  ],
+  "remember": "Do the same to both sides: move the pronumeral terms together, then solve.",
+  "a": {
+   "q": "To solve \\(7x + 2 = 3x + 18\\), which step collects the pronumeral terms on one side?",
+   "opts": [
+    "Subtract \\(3x\\) from both sides",
+    "Add \\(3x\\) to both sides",
+    "Subtract \\(3x\\) from the left side only",
+    "Subtract \\(2\\) from both sides"
+   ],
+   "why": "Subtracting \\(3x\\) from both sides removes it from the right and gives \\(4x + 2 = 18\\). Adding \\(3x\\) would give \\(10x\\) on the left and still leave \\(6x\\) on the right, so the terms would not be collected.",
+   "clue": "Remove the smaller pronumeral term from both sides."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia solves \\(6x - 5 = 2x + 11\\). What is the value of \\(x\\)?",
+   "opts": [
+    "\\(x = 4\\)",
+    "\\(x = 1.5\\)",
+    "\\(x = 2\\)",
+    "\\(x = 16\\)"
+   ],
+   "why": "Subtract \\(2x\\) from both sides: \\(4x - 5 = 11\\). Add 5: \\(4x = 16\\). Divide by 4: \\(x = 4\\). Check: \\(6(4) - 5 = 19\\) and \\(2(4) + 11 = 19\\). The answer \\(x = 1.5\\) comes from subtracting 5 instead of adding it.",
+   "clue": "Check your answer in both sides of the equation."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Subtract \\(3x\\) from both sides",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(x = 4\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Pronumerals on both sides",
+  "card": [
+   "Some equations have a pronumeral on both sides, such as \\(5x - 3 = 2x + 9\\). First collect the pronumeral terms on one side.",
+   "Add or subtract the same term on both sides. To remove \\(2x\\) from the right, subtract \\(2x\\) from both sides: \\(3x - 3 = 9\\).",
+   "Now solve as usual. Add 3 to both sides: \\(3x = 12\\). Divide both sides by 3: \\(x = 4\\).",
+   "Check by substituting into both sides. Left: \\(5(4) - 3 = 17\\). Right: \\(2(4) + 9 = 17\\). The sides match, so \\(x = 4\\) is correct."
+  ],
+  "remember": "Do the same to both sides: move the pronumeral terms together, then solve.",
+  "a": {
+   "q": "To solve \\(7x + 2 = 3x + 18\\), which step collects the pronumeral terms on one side?",
+   "opts": [
+    "Subtract \\(3x\\) from both sides",
+    "Add \\(3x\\) to both sides",
+    "Subtract \\(3x\\) from the left side only",
+    "Subtract \\(2\\) from both sides"
+   ],
+   "why": "Subtracting \\(3x\\) from both sides removes it from the right and gives \\(4x + 2 = 18\\). Adding \\(3x\\) would give \\(10x\\) on the left and still leave \\(6x\\) on the right, so the terms would not be collected.",
+   "clue": "Remove the smaller pronumeral term from both sides."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia solves \\(6x - 5 = 2x + 11\\). What is the value of \\(x\\)?",
+   "opts": [
+    "\\(x = 4\\)",
+    "\\(x = 1.5\\)",
+    "\\(x = 2\\)",
+    "\\(x = 16\\)"
+   ],
+   "why": "Subtract \\(2x\\) from both sides: \\(4x - 5 = 11\\). Add 5: \\(4x = 16\\). Divide by 4: \\(x = 4\\). Check: \\(6(4) - 5 = 19\\) and \\(2(4) + 11 = 19\\). The answer \\(x = 1.5\\) comes from subtracting 5 instead of adding it.",
+   "clue": "Check your answer in both sides of the equation."
+  }
+ },
+ "cleared_by": "checker"
 }

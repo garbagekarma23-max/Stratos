@@ -24,8 +24,131 @@
    0.23
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:54Z write: done",
+  "2026-11-20T12:35:53Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.00738,
+  "check": 0.00728
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point covers only square numbers and square roots, while the new point also requires cube roots, which is a further idea the card does not teach, so no bank point fits as it is or with small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Square roots and cube roots",
+  "card": [
+   [
+    "Square root",
+    "A square root undoes squaring. Since \\(7^{2} = 49\\), we write \\(\\sqrt{49} = 7\\). It asks: which number multiplied by itself gives 49?"
+   ],
+   [
+    "Cube root",
+    "A cube root undoes cubing. Since \\(4^{3} = 64\\), we write \\(\\sqrt[3]{64} = 4\\). It asks: which number multiplied by itself three times gives 64?"
+   ],
+   "Perfect squares are 1, 4, 9, 16, 25 and so on. Perfect cubes are 1, 8, 27, 64, 125 and so on. Their roots are whole numbers.",
+   [
+    "Estimating",
+    "For other numbers, find the two perfect squares either side. \\(\\sqrt{40}\\) lies between \\(\\sqrt{36} = 6\\) and \\(\\sqrt{49} = 7\\), so it is between 6 and 7. Cube roots work the same way with perfect cubes."
+   ]
+  ],
+  "remember": "A root undoes a power. For other numbers, trap the root between the roots of the nearest perfect squares or cubes.",
+  "a": {
+   "q": "What is the value of \\(\\sqrt[3]{125}\\)?",
+   "opts": [
+    "\\(5\\)",
+    "\\(25\\)",
+    "\\(15\\)",
+    "\\(125\\)"
+   ],
+   "why": "\\(5 \\times 5 \\times 5 = 125\\), so the cube root of 125 is 5. The option 25 comes from squaring 5 instead of cubing it, but \\(25^{3}\\) is far larger than 125.",
+   "clue": "Which number multiplied by itself three times gives 125?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia is tiling a square courtyard with an area of 70 square metres. Between which two whole numbers does the side length, \\(\\sqrt{70}\\), lie?",
+   "opts": [
+    "8 and 9",
+    "7 and 8",
+    "9 and 10",
+    "35 and 36"
+   ],
+   "why": "\\(8^{2} = 64\\) and \\(9^{2} = 81\\), and 70 is between 64 and 81. So \\(\\sqrt{70}\\) is between 8 and 9. Using 7 and 8 is tempting, but \\(8^{2} = 64\\) is still less than 70.",
+   "clue": "Find the perfect squares just below and just above 70."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(5\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "8 and 9",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Square roots and cube roots",
+  "card": [
+   [
+    "Square root",
+    "A square root undoes squaring. Since \\(7^{2} = 49\\), we write \\(\\sqrt{49} = 7\\). It asks: which number multiplied by itself gives 49?"
+   ],
+   [
+    "Cube root",
+    "A cube root undoes cubing. Since \\(4^{3} = 64\\), we write \\(\\sqrt[3]{64} = 4\\). It asks: which number multiplied by itself three times gives 64?"
+   ],
+   "Perfect squares are 1, 4, 9, 16, 25 and so on. Perfect cubes are 1, 8, 27, 64, 125 and so on. Their roots are whole numbers.",
+   [
+    "Estimating",
+    "For other numbers, find the two perfect squares either side. \\(\\sqrt{40}\\) lies between \\(\\sqrt{36} = 6\\) and \\(\\sqrt{49} = 7\\), so it is between 6 and 7. Cube roots work the same way with perfect cubes."
+   ]
+  ],
+  "remember": "A root undoes a power. For other numbers, trap the root between the roots of the nearest perfect squares or cubes.",
+  "a": {
+   "q": "What is the value of \\(\\sqrt[3]{125}\\)?",
+   "opts": [
+    "\\(5\\)",
+    "\\(25\\)",
+    "\\(15\\)",
+    "\\(125\\)"
+   ],
+   "why": "\\(5 \\times 5 \\times 5 = 125\\), so the cube root of 125 is 5. The option 25 comes from squaring 5 instead of cubing it, but \\(25^{3}\\) is far larger than 125.",
+   "clue": "Which number multiplied by itself three times gives 125?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia is tiling a square courtyard with an area of 70 square metres. Between which two whole numbers does the side length, \\(\\sqrt{70}\\), lie?",
+   "opts": [
+    "8 and 9",
+    "7 and 8",
+    "9 and 10",
+    "35 and 36"
+   ],
+   "why": "\\(8^{2} = 64\\) and \\(9^{2} = 81\\), and 70 is between 64 and 81. So \\(\\sqrt{70}\\) is between 8 and 9. Using 7 and 8 is tempting, but \\(8^{2} = 64\\) is still less than 70.",
+   "clue": "Find the perfect squares just below and just above 70."
+  }
+ },
+ "cleared_by": "checker"
 }

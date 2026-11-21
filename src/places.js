@@ -29,13 +29,17 @@ const COURSE_LIST = [
    heading for one year comes before one that spans two (Year 8, then Levels 7 and 8), and a plain year before a level
    (Year 10, then Level 10A). So Victoria reads Year 7, Year 8, Levels 7 and 8, Year 9, Year 10, Level 10A, Levels 9 and
    10, Units 1 and 2 (Year 11), Units 3 and 4 (Year 12). A heading with no years comes after every year: a plain year
-   first, then a level, AS before A level. Headings with the same rank go in name order. */
+   first, then a level, AS before A level. Headings with the same rank go in name order.
+   HEADINGS gives a level a heading of its own on the sheet. NSW's stages name their years, and Mathematics, Stage 5
+   paths goes under Stage 5 with the core course, so NSW reads Stage 4, Stage 5, Year 11, Year 12. Home still names each
+   course by its own level ("Mathematics, Stage 5 paths"). South Australia's Stage 1 and Stage 2 are not in the list. */
 const LEVELS = ['AS', 'A level'];
+const HEADINGS = {'Stage 4': 'Stage 4 (Years 7 and 8)', 'Stage 5': 'Stage 5 (Years 9 and 10)', 'Stage 5 paths': 'Stage 5 (Years 9 and 10)'};
 function yearGroup(d) {
   const ys = (d.years || []).slice().sort((a, b) => a - b);
   if (!ys.length) return d.level ? {group: d.level, rank: 100001 + Math.max(0, LEVELS.indexOf(d.level))} : {group: d.year, rank: 100000};
   const last = ys[ys.length - 1], span = last - ys[0];
-  return {group: d.level || d.year, rank: last * 100 + span * 10 + (d.level ? 1 : 0)};
+  return {group: HEADINGS[d.level] || d.level || d.year, rank: last * 100 + span * 10 + (d.level ? 1 : 0)};
 }
 COURSE_LIST.forEach(c => Object.assign(c, yearGroup(c.data)));
 const CURRICULA = {

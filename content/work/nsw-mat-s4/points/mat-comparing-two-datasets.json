@@ -8,8 +8,250 @@
    0.243
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 may adapt mat-comparing-data-sets-2, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:53Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:53Z write: done",
+  "2026-11-20T12:44:58Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "confirm": 0.00758,
+  "write": 0.01271,
+  "check": 0.01102,
+  "fix": 0.02097,
+  "recheck": 0.0086
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-comparing-data-sets-2",
+  "changes": [
+   "Replace the Year 9 Perth quiz-score context in question b with a New South Wales Year 7 or 8 class context.",
+   "Add a short step asking the student to state a conclusion the data supports, in addition to the comparison of centre and spread."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same comparison of centre and spread using the same kinds of plots, but its example and question b are set for Year 9 in Perth, and it does not yet ask for a supported conclusion.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card covers the same comparison idea but is broader, adding plot types, shape and outliers. It never teaches the step this brief centres on, drawing a conclusion the data supports, so fitting it would need a new step rather than small changes.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Comparing two datasets",
+  "card": [
+   [
+    "Centre",
+    "To compare two groups, start with the centre of each, using the mean or the median. The group with the higher centre tends to have higher values."
+   ],
+   [
+    "Spread",
+    "Next compare the spread, using the range. A smaller range means the values are closer together, so the group is more consistent."
+   ],
+   [
+    "Example",
+    "Mia's quiz scores are 6, 7, 7, 8, 7. Leo's are 3, 5, 7, 9, 11. Both means are \\(7\\). Mia's range is \\(2\\) and Leo's is \\(8\\)."
+   ],
+   [
+    "Conclusion",
+    "Use both measures and claim only what the data shows. Here the centres are equal, but Mia's scores are more consistent than Leo's. The data does not show who is smarter."
+   ]
+  ],
+  "remember": "Compare the centre, then the spread, and only claim what the data shows.",
+  "a": {
+   "q": "Route A has a mean wait of 8 minutes and a range of 4 minutes. Route B has a mean wait of 8 minutes and a range of 15 minutes. Which conclusion does the data support?",
+   "opts": [
+    "The centres are equal, but Route A is more consistent",
+    "Route A has the lower mean wait, so it is quicker",
+    "Route B is more consistent because its range is larger",
+    "Route B has the higher mean wait, so it is slower"
+   ],
+   "why": "Both means are 8, so neither route has a shorter wait on average. Route A has the smaller range, so its waits are closer together. A larger range means less consistent, not more.",
+   "clue": "Compare the means first, then the ranges."
+  },
+  "b": {
+   "d": 3,
+   "q": "Café X sold 40, 45, 50, 55 and 60 coffees over five days. Café Y sold 44, 46, 48, 50 and 52. Which conclusion does the data support?",
+   "opts": [
+    "X sells more on average, but its sales vary more",
+    "Y sells more on average, and its sales vary more",
+    "X sells more on average, and its sales are steadier",
+    "Y sells more on average, and its sales are steadier"
+   ],
+   "why": "Café X has a mean of \\(250 \\div 5 = 50\\) and Café Y has a mean of \\(240 \\div 5 = 48\\), so X is higher. The range for X is \\(20\\) and for Y is \\(8\\), so X varies more. Saying X is steadier mixes up a bigger range with more consistency.",
+   "clue": "Find both means, then both ranges, and check each part of the claim."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The centres are equal, but Route A is more consistent",
+   "also_right": []
+  },
+  "b": {
+   "best": "X sells more on average, but its sales vary more",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one joined by 'but'; the other three use 'and'. A student could pick it from the contrast word alone, without working out the means and ranges."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and the working check out: Mia and Leo both have mean 7 with ranges 2 and 8, and Café X has mean 50 and range 20 against Café Y's 48 and 8. The one flag is in question b, where the right option alone uses 'but', which could give the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option is the only one joined by 'but'; the other three use 'and'. A student could pick it from the contrast word alone, without working out the means and ranges."
+ ],
+ "proposal": {
+  "title": "Comparing two datasets",
+  "card": [
+   [
+    "Centre",
+    "To compare two groups, start with the centre of each, using the mean or the median. The group with the higher centre tends to have higher values."
+   ],
+   [
+    "Spread",
+    "Next compare the spread, using the range. A smaller range means the values are closer together, so the group is more consistent."
+   ],
+   [
+    "Example",
+    "Mia's quiz scores are 6, 7, 7, 8, 7. Leo's are 3, 5, 7, 9, 11. Both means are \\(7\\). Mia's range is \\(2\\) and Leo's is \\(8\\)."
+   ],
+   [
+    "Conclusion",
+    "Use both measures and claim only what the data shows. Here the centres are equal, but Mia's scores are more consistent than Leo's. The data does not show who is smarter."
+   ]
+  ],
+  "remember": "Compare the centre, then the spread, and only claim what the data shows.",
+  "a": {
+   "q": "Route A has a mean wait of 8 minutes and a range of 4 minutes. Route B has a mean wait of 8 minutes and a range of 15 minutes. Which conclusion does the data support?",
+   "opts": [
+    "Same mean wait, and Route A's waits are more consistent",
+    "Same mean wait, and Route B's waits are more consistent",
+    "Route A has the shorter mean wait and is more consistent",
+    "Route B has the longer mean wait and is less consistent"
+   ],
+   "why": "Both means are 8, so neither route has a shorter or longer wait on average. Route A has the smaller range, so its waits are closer together and more consistent. A larger range means less consistent, not more.",
+   "clue": "Compare the means first, then the ranges."
+  },
+  "b": {
+   "d": 3,
+   "q": "Café X sold 40, 45, 50, 55 and 60 coffees over five days. Café Y sold 44, 46, 48, 50 and 52. Which conclusion does the data support?",
+   "opts": [
+    "X has the higher mean, and its sales vary more",
+    "Y has the higher mean, and its sales vary more",
+    "X has the higher mean, and its sales are steadier",
+    "Y has the higher mean, and its sales are steadier"
+   ],
+   "why": "Café X has a mean of \\(250 \\div 5 = 50\\) and Café Y has a mean of \\(240 \\div 5 = 48\\), so X is higher. The range for X is \\(20\\) and for Y is \\(8\\), so X varies more. Saying X is steadier mixes up a bigger range with more consistency.",
+   "clue": "Find both means, then both ranges, and check each part of the claim."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Same mean wait, and Route A's waits are more consistent",
+    "also_right": []
+   },
+   "b": {
+    "best": "X has the higher mean, and its sales vary more",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one joined by 'but'; the other three use 'and'. A student could pick it from the contrast word alone, without working out the means and ranges."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The right option is the only one joined by 'but'; the other three use 'and'. A student could pick it from the contrast word alone, without working out the means and ranges."
+  ]
+ },
+ "final": {
+  "title": "Comparing two datasets",
+  "card": [
+   [
+    "Centre",
+    "To compare two groups, start with the centre of each, using the mean or the median. The group with the higher centre tends to have higher values."
+   ],
+   [
+    "Spread",
+    "Next compare the spread, using the range. A smaller range means the values are closer together, so the group is more consistent."
+   ],
+   [
+    "Example",
+    "Mia's quiz scores are 6, 7, 7, 8, 7. Leo's are 3, 5, 7, 9, 11. Both means are \\(7\\). Mia's range is \\(2\\) and Leo's is \\(8\\)."
+   ],
+   [
+    "Conclusion",
+    "Use both measures and claim only what the data shows. Here the centres are equal, but Mia's scores are more consistent than Leo's. The data does not show who is smarter."
+   ]
+  ],
+  "remember": "Compare the centre, then the spread, and only claim what the data shows.",
+  "a": {
+   "q": "Route A has a mean wait of 8 minutes and a range of 4 minutes. Route B has a mean wait of 8 minutes and a range of 15 minutes. Which conclusion does the data support?",
+   "opts": [
+    "Same mean wait, and Route A's waits are more consistent",
+    "Same mean wait, and Route B's waits are more consistent",
+    "Route A has the shorter mean wait and is more consistent",
+    "Route B has the longer mean wait and is less consistent"
+   ],
+   "why": "Both means are 8, so neither route has a shorter or longer wait on average. Route A has the smaller range, so its waits are closer together and more consistent. A larger range means less consistent, not more.",
+   "clue": "Compare the means first, then the ranges."
+  },
+  "b": {
+   "d": 3,
+   "q": "Café X sold 40, 45, 50, 55 and 60 coffees over five days. Café Y sold 44, 46, 48, 50 and 52. Which conclusion does the data support?",
+   "opts": [
+    "X has the higher mean, and its sales vary more",
+    "Y has the higher mean, and its sales vary more",
+    "X has the higher mean, and its sales are steadier",
+    "Y has the higher mean, and its sales are steadier"
+   ],
+   "why": "Café X has a mean of \\(250 \\div 5 = 50\\) and Café Y has a mean of \\(240 \\div 5 = 48\\), so X is higher. The range for X is \\(20\\) and for Y is \\(8\\), so X varies more. Saying X is steadier mixes up a bigger range with more consistency.",
+   "clue": "Find both means, then both ranges, and check each part of the claim."
+  }
+ },
+ "cleared_by": "recheck"
 }

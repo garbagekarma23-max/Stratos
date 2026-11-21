@@ -20,8 +20,208 @@
    0.208
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:48Z write: failed the content check, writing again",
+  "2026-11-20T12:44:54Z write: done (still fails the content check)",
+  "2026-11-20T13:11:47Z check: flagged",
+  "2026-11-20T13:17:56Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "write": 0.01425,
+  "check": 0.0103,
+  "fix": 0.01728,
+  "recheck": 0.0062
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Making a personal response, grounds the response in events, choices and setting, not in how the text is made, such as its tone, voice or genre, so matching it would need a new step rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Justifying a personal response",
+  "card": [
+   "A personal response is your own reaction to a text, such as feeling sad, tense or amused. A strong one does not stop at the feeling.",
+   "It explains why the text caused that reaction. To do this, point to how the text was made: its tone, a character's voice, the genre, or the language used.",
+   "Weak: \"I felt scared when I read it.\" Stronger: \"The short, flat sentences made the danger feel close, so I felt scared.\"",
+   "A good pattern is to name your reaction, name the feature of the text, then link the two. Short quoted words or a described moment can back up your point."
+  ],
+  "remember": "Say how you felt, then show which part of the text made you feel it.",
+  "a": {
+   "q": "Which sentence best justifies a personal response to a short story?",
+   "opts": [
+    "The narrator's joking voice made the sad ending hit harder",
+    "I really loved this story and everyone should read it",
+    "The story made me feel sad because sad things happen in it",
+    "I felt very sad at the end, and I cried when I finished it"
+   ],
+   "why": "The right answer links a feeling to a feature of the text, the narrator's voice. The tempting option about crying only states how strong the feeling was and does not say what in the text caused it.",
+   "clue": "Look for the sentence that names something the writer did."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom writes: \"The poem made me feel hopeful.\" He wants to justify this response. Which addition would help most?",
+   "opts": [
+    "The bright sunrise images and steady rhythm lifted the mood",
+    "I often feel hopeful when I read poems, as I did this time",
+    "The poem is short, so it was easy to read and I felt hopeful",
+    "Many students in my class also felt hopeful after reading it"
+   ],
+   "why": "The first option explains how the poet's imagery and rhythm created the hopeful feeling, which is the job of a justification. The option about other students repeats the feeling and adds no reason from the text.",
+   "clue": "Which option points to how the poem was made?"
+  }
+ },
+ "redone": true,
+ "local": [
+  "eng-justifying-personal-response quotes more than 10 words: \"The short, flat sentences made the danger feel close, so I felt scared.\""
+ ],
+ "check": {
+  "a": {
+   "best": "The narrator's joking voice made the sad ending hit harder",
+   "also_right": []
+  },
+  "b": {
+   "best": "The bright sunrise images and steady rhythm lifted the mood",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) calls the right answer 'The first option'. The options are shuffled, and here the imagery-and-rhythm option is shown last, so the explanation points students to the wrong option ('Many students in my class also felt hopeful…'). Refer to the option by its content instead."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate and suited to Years 9 and 10. The only problem is that the explanation for question b calls the right answer 'the first option', but the options are shuffled, so the reference can point students to a wrong option."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) calls the right answer 'The first option'. The options are shuffled, and here the imagery-and-rhythm option is shown last, so the explanation points students to the wrong option ('Many students in my class also felt hopeful…'). Refer to the option by its content instead.",
+  "Content check: eng-justifying-personal-response quotes more than 10 words: \"The short, flat sentences made the danger feel close, so I felt scared.\""
+ ],
+ "proposal": {
+  "title": "Justifying a personal response",
+  "card": [
+   "A personal response is your own reaction to a text, such as feeling sad, tense or amused. A strong one does not stop at the feeling.",
+   "It explains why the text caused that reaction. To do this, point to how the text was made: its tone, a character's voice, the genre, or the language used.",
+   "Weak: \"I felt scared.\" Stronger: \"Short, flat sentences made the danger feel close.\"",
+   "A good pattern is to name your reaction, name the feature of the text, then link the two. Short quoted words or a described moment can back up your point."
+  ],
+  "remember": "Say how you felt, then show which part of the text made you feel it.",
+  "a": {
+   "q": "Which sentence best justifies a personal response to a short story?",
+   "opts": [
+    "The narrator's joking voice made the sad ending hit harder",
+    "I really loved this story and everyone should read it",
+    "The story made me feel sad because sad things happen in it",
+    "I felt very sad at the end, and I cried when I finished it"
+   ],
+   "why": "The sentence about the narrator's joking voice links a feeling to a feature of the text. The tempting option about crying only states how strong the feeling was and does not say what in the text caused it.",
+   "clue": "Look for the sentence that names something the writer did."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom writes: \"The poem made me feel hopeful.\" He wants to justify this response. Which addition would help most?",
+   "opts": [
+    "The bright sunrise images and steady rhythm lifted the mood",
+    "I often feel hopeful when I read poems, as I did this time",
+    "The poem gave me hope because it is a very hopeful poem",
+    "Many students in my class also felt hopeful after reading it"
+   ],
+   "why": "The option about bright sunrise images and steady rhythm explains how the poet's choices created the hopeful feeling, which is the job of a justification. The option about other students only shows that others shared the feeling and gives no reason from the text.",
+   "clue": "Which option points to how the poem was made?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The narrator's joking voice made the sad ending hit harder",
+    "also_right": []
+   },
+   "b": {
+    "best": "The bright sunrise images and steady rhythm lifted the mood",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 17,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) calls the right answer 'The first option'. The options are shuffled, and here the imagery-and-rhythm option is shown last, so the explanation points students to the wrong option ('Many students in my class also felt hopeful…'). Refer to the option by its content instead."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) calls the right answer 'The first option'. The options are shuffled, and here the imagery-and-rhythm option is shown last, so the explanation points students to the wrong option ('Many students in my class also felt hopeful…'). Refer to the option by its content instead.",
+   "Content check: eng-justifying-personal-response quotes more than 10 words: \"The short, flat sentences made the danger feel close, so I felt scared.\""
+  ]
+ },
+ "final": {
+  "title": "Justifying a personal response",
+  "card": [
+   "A personal response is your own reaction to a text, such as feeling sad, tense or amused. A strong one does not stop at the feeling.",
+   "It explains why the text caused that reaction. To do this, point to how the text was made: its tone, a character's voice, the genre, or the language used.",
+   "Weak: \"I felt scared.\" Stronger: \"Short, flat sentences made the danger feel close.\"",
+   "A good pattern is to name your reaction, name the feature of the text, then link the two. Short quoted words or a described moment can back up your point."
+  ],
+  "remember": "Say how you felt, then show which part of the text made you feel it.",
+  "a": {
+   "q": "Which sentence best justifies a personal response to a short story?",
+   "opts": [
+    "The narrator's joking voice made the sad ending hit harder",
+    "I really loved this story and everyone should read it",
+    "The story made me feel sad because sad things happen in it",
+    "I felt very sad at the end, and I cried when I finished it"
+   ],
+   "why": "The sentence about the narrator's joking voice links a feeling to a feature of the text. The tempting option about crying only states how strong the feeling was and does not say what in the text caused it.",
+   "clue": "Look for the sentence that names something the writer did."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom writes: \"The poem made me feel hopeful.\" He wants to justify this response. Which addition would help most?",
+   "opts": [
+    "The bright sunrise images and steady rhythm lifted the mood",
+    "I often feel hopeful when I read poems, as I did this time",
+    "The poem gave me hope because it is a very hopeful poem",
+    "Many students in my class also felt hopeful after reading it"
+   ],
+   "why": "The option about bright sunrise images and steady rhythm explains how the poet's choices created the hopeful feeling, which is the job of a justification. The option about other students only shows that others shared the feeling and gives no reason from the text.",
+   "clue": "Which option points to how the poem was made?"
+  }
+ },
+ "cleared_by": "recheck"
 }

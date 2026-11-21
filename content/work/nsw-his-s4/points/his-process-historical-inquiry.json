@@ -24,8 +24,218 @@
    0.244
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: done",
+  "2026-11-20T12:44:56Z check: flagged",
+  "2026-11-20T12:53:26Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00591,
+  "check": 0.0131,
+  "fix": 0.01717,
+  "recheck": 0.00659
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point covers the whole inquiry process of question, sourcing and judging sources, and then answering with evidence; the closest, asking historical questions, covers only the first step and is narrower.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The process of historical inquiry",
+  "card": [
+   "A historical inquiry is how historians find out about the past. It starts with a question, such as \"How did people in Sydney live in the 1850s?\"",
+   "Next, historians gather sources that could help answer the question. They judge each source: who made it, when, and how useful and reliable it is.",
+   "Then they use the evidence from the sources to answer the question. A good answer points to the evidence that supports it.",
+   "The answer is written or told using the right historical terms, such as source, evidence, primary, secondary and century."
+  ],
+  "remember": "Ask a question, gather and judge sources, then answer it using evidence.",
+  "a": {
+   "q": "Leila is starting a historical inquiry. What should she do first?",
+   "opts": [
+    "Write a question she wants to answer",
+    "Write her final answer to the inquiry",
+    "Collect every source she can find",
+    "Choose the historical terms to use"
+   ],
+   "why": "An inquiry starts with a question, because the question tells her which sources she needs. Collecting sources first is tempting, but without a question she cannot tell which ones are useful.",
+   "clue": "The question guides the rest of the steps."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom asks, \"Why did people move to the goldfields?\" He finds a diary and a textbook, checks who made each one and when, then writes his answer. Which step has he left out?",
+   "opts": [
+    "Using the evidence to support his answer",
+    "Asking a question to begin the inquiry",
+    "Gathering sources about the question",
+    "Judging how reliable his sources are"
+   ],
+   "why": "Tom asked a question, gathered sources and judged them by checking who made them and when. He has not said what the evidence shows or used it to back up his answer, so he has skipped that step.",
+   "clue": "Check each step against his actions, in order."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Write a question she wants to answer",
+   "also_right": []
+  },
+  "b": {
+   "best": "Using the evidence to support his answer",
+   "also_right": [
+    "Judging how reliable his sources are"
+   ]
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The card says judging a source means checking who made it, when, and how useful and reliable it is. Tom checks only who and when, so 'Judging how reliable his sources are' is also a missing step. The scenario also does not say whether his written answer uses evidence. Two options can be defended."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says Tom judged his sources by checking who made them and when. This contradicts the card, which includes how useful and reliable a source is as part of judging it."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b is ambiguous: Tom checks only who made each source and when, so by the card's own definition he has also skipped judging reliability. The why contradicts the card on this. Rewrite the scenario so that only the evidence step is clearly missing, for example by having Tom judge reliability but write his answer without citing the diary or textbook."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker says “Judging how reliable his sources are” could also be right.",
+  "Question b, wording: The card says judging a source means checking who made it, when, and how useful and reliable it is. Tom checks only who and when, so 'Judging how reliable his sources are' is also a missing step. The scenario also does not say whether his written answer uses evidence. Two options can be defended.",
+  "Question b, other: The why says Tom judged his sources by checking who made them and when. This contradicts the card, which includes how useful and reliable a source is as part of judging it."
+ ],
+ "proposal": {
+  "title": "The process of historical inquiry",
+  "card": [
+   "A historical inquiry is how historians find out about the past. It starts with a question, such as \"How did people in Sydney live in the 1850s?\"",
+   "Next, historians gather sources that could help answer the question. They judge each source: who made it, when, and how useful and reliable it is.",
+   "Then they use the evidence from the sources to answer the question. A good answer points to the evidence that supports it.",
+   "The answer is written or told using the right historical terms, such as source, evidence, primary, secondary and century."
+  ],
+  "remember": "Ask a question, gather and judge sources, then answer it using evidence.",
+  "a": {
+   "q": "Leila is starting a historical inquiry. What should she do first?",
+   "opts": [
+    "Write a question she wants to answer",
+    "Write her final answer to the inquiry",
+    "Collect every source she can find",
+    "Choose the historical terms to use"
+   ],
+   "why": "An inquiry starts with a question, because the question tells her which sources she needs. Collecting sources first is tempting, but without a question she cannot tell which ones are useful.",
+   "clue": "The question guides the rest of the steps."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom asks, \"Why did people move to the goldfields?\" He finds a diary and a textbook. For each, he checks who made it, when, and how useful and reliable it is. He then writes his answer from what he already believed, without mentioning anything the sources show. Which step has he left out?",
+   "opts": [
+    "Using the evidence to support his answer",
+    "Asking a question to begin the inquiry",
+    "Gathering sources about the question",
+    "Judging how useful and reliable his sources are"
+   ],
+   "why": "Tom asked a question, gathered two sources and judged each one fully: who made it, when, and how useful and reliable it is. But his answer comes from what he already believed and does not point to anything the sources show, so he skipped using the evidence. Judging the sources is tempting, but he did all of that step.",
+   "clue": "Does his answer point to what the diary or textbook shows?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Write a question she wants to answer",
+    "also_right": []
+   },
+   "b": {
+    "best": "Using the evidence to support his answer",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The card says judging a source means checking who made it, when, and how useful and reliable it is. Tom checks only who and when, so 'Judging how reliable his sources are' is also a missing step. The scenario also does not say whether his written answer uses evidence. Two options can be defended."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says Tom judged his sources by checking who made them and when. This contradicts the card, which includes how useful and reliable a source is as part of judging it."
+   }
+  ],
+  "flags": [
+   "Question b: the checker says “Judging how reliable his sources are” could also be right.",
+   "Question b, wording: The card says judging a source means checking who made it, when, and how useful and reliable it is. Tom checks only who and when, so 'Judging how reliable his sources are' is also a missing step. The scenario also does not say whether his written answer uses evidence. Two options can be defended.",
+   "Question b, other: The why says Tom judged his sources by checking who made them and when. This contradicts the card, which includes how useful and reliable a source is as part of judging it."
+  ]
+ },
+ "final": {
+  "title": "The process of historical inquiry",
+  "card": [
+   "A historical inquiry is how historians find out about the past. It starts with a question, such as \"How did people in Sydney live in the 1850s?\"",
+   "Next, historians gather sources that could help answer the question. They judge each source: who made it, when, and how useful and reliable it is.",
+   "Then they use the evidence from the sources to answer the question. A good answer points to the evidence that supports it.",
+   "The answer is written or told using the right historical terms, such as source, evidence, primary, secondary and century."
+  ],
+  "remember": "Ask a question, gather and judge sources, then answer it using evidence.",
+  "a": {
+   "q": "Leila is starting a historical inquiry. What should she do first?",
+   "opts": [
+    "Write a question she wants to answer",
+    "Write her final answer to the inquiry",
+    "Collect every source she can find",
+    "Choose the historical terms to use"
+   ],
+   "why": "An inquiry starts with a question, because the question tells her which sources she needs. Collecting sources first is tempting, but without a question she cannot tell which ones are useful.",
+   "clue": "The question guides the rest of the steps."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom asks, \"Why did people move to the goldfields?\" He finds a diary and a textbook. For each, he checks who made it, when, and how useful and reliable it is. He then writes his answer from what he already believed, without mentioning anything the sources show. Which step has he left out?",
+   "opts": [
+    "Using the evidence to support his answer",
+    "Asking a question to begin the inquiry",
+    "Gathering sources about the question",
+    "Judging how useful and reliable his sources are"
+   ],
+   "why": "Tom asked a question, gathered two sources and judged each one fully: who made it, when, and how useful and reliable it is. But his answer comes from what he already believed and does not point to anything the sources show, so he skipped using the evidence. Judging the sources is tempting, but he did all of that step.",
+   "clue": "Does his answer point to what the diary or textbook shows?"
+  }
+ },
+ "cleared_by": "recheck"
 }

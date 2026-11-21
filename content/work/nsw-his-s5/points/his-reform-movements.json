@@ -8,8 +8,265 @@
    0.368
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:52Z write: failed the content check, writing again",
+  "2026-11-20T12:35:52Z write: done",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.01869,
+  "check": 0.01786,
+  "fix": 0.02385,
+  "recheck": 0.0089
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers economic and political ideologies (capitalism, socialism, Chartism, Factory Acts) and its questions test those ideas, not reform movements, reformers or trade unions pushing for change, so it does not teach the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Reform movements",
+  "card": [
+   "By the early 1800s many people in Britain saw that factory and mine work harmed workers, especially children. Reformers wrote reports and spoke in public to make others care.",
+   [
+    "Trade unions",
+    "groups of workers who joined together to seek better pay and conditions. Early unions faced strong opposition, and for a time were banned by law."
+   ],
+   [
+    "Chartists",
+    "a movement of the late 1830s and 1840s that sought political change. They wanted votes for all adult men and a secret ballot, so that working people had a say in making laws."
+   ],
+   [
+    "Factory Acts",
+    "laws passed by Parliament from 1833 onwards that began to limit children's working hours and set a minimum age in some factories. Inspectors were appointed to check that factories followed them."
+   ]
+  ],
+  "remember": "Reformers, unions and Chartists pushed for change. Factory Acts began to limit children's hours.",
+  "a": {
+   "q": "What was the main aim of the Chartists in Britain?",
+   "opts": [
+    "To win votes for working men and a say in making laws",
+    "To ban the use of steam engines in factories",
+    "To win a shorter working day for children only",
+    "To end all trade unions in British factories"
+   ],
+   "why": "The Chartists wanted political change, including votes for all adult men and a secret ballot. Shorter hours for children were the aim of Factory Acts and reformers, not the Chartists' main aim.",
+   "clue": "The Chartists wanted a say in who made the laws."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1834 a mill owner in Lancashire finds that an inspector has visited and checked the ages of his young workers. Which development best explains this?",
+   "opts": [
+    "A Factory Act that limited children's hours with inspectors",
+    "A Chartist law that gave working men the vote",
+    "A trade union ban on children entering factories",
+    "A new steam engine that made child workers unneeded"
+   ],
+   "why": "Factory Acts began to limit children's hours and set a minimum age, and inspectors checked that factories followed them. The Chartists sought votes, not factory rules, so they are the tempting wrong choice.",
+   "clue": "Which group had the power to make laws that inspectors enforced?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "To win votes for working men and a say in making laws",
+   "also_right": []
+  },
+  "b": {
+   "best": "A Factory Act that limited children's hours with inspectors",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Saying Factory Acts were passed 'from 1833 onwards' is inaccurate. Earlier Factory Acts in 1802 and 1819 already limited children's hours, and the 1819 Act set a minimum age of 9 in cotton mills. The 1833 Act was the first effective one, because it appointed inspectors. Something like 'from the early 1800s, with the 1833 Act first appointing inspectors' would be accurate."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'The Chartists wanted a say in who made the laws' repeats the wording of the right option ('a say in making laws'), so a student can match it without knowing the idea."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is clearly the longest, and the only one with two parts (votes and a say in making laws), so it stands out from the distractors."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one that mentions inspectors, echoing the 'inspector' in the stem, so it can be picked by word-matching alone."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "The intended answers are correct, but the card wrongly dates the Factory Acts from 1833 when earlier Acts in 1802 and 1819 existed. Both questions give the answer away: in (a) through the clue and the longest option, and in (b) through the stem word 'inspector'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: Saying Factory Acts were passed 'from 1833 onwards' is inaccurate. Earlier Factory Acts in 1802 and 1819 already limited children's hours, and the 1819 Act set a minimum age of 9 in cotton mills. The 1833 Act was the first effective one, because it appointed inspectors. Something like 'from the early 1800s, with the 1833 Act first appointing inspectors' would be accurate.",
+  "Question a, other: The clue 'The Chartists wanted a say in who made the laws' repeats the wording of the right option ('a say in making laws'), so a student can match it without knowing the idea.",
+  "Question a, wording: The right option is clearly the longest, and the only one with two parts (votes and a say in making laws), so it stands out from the distractors.",
+  "Question b, wording: The right option is the only one that mentions inspectors, echoing the 'inspector' in the stem, so it can be picked by word-matching alone."
+ ],
+ "proposal": {
+  "title": "Reform movements",
+  "card": [
+   "By the early 1800s many people in Britain saw that factory and mine work harmed workers, especially children. Reformers wrote reports and spoke in public to make others care.",
+   [
+    "Trade unions",
+    "groups of workers who joined together to seek better pay and conditions. Early unions faced strong opposition, and for a time were banned by law."
+   ],
+   [
+    "Chartists",
+    "a movement of the late 1830s and 1840s that sought political change. They wanted votes for all adult men and a secret ballot, so that working people had a voice in Parliament."
+   ],
+   [
+    "Factory Acts",
+    "laws passed by Parliament from the early 1800s that began to limit children's working hours and set a minimum age in some mills. The 1833 Act was the first to appoint inspectors to check that factories obeyed."
+   ]
+  ],
+  "remember": "Reformers, unions and Chartists pushed for change. Factory Acts began to limit children's hours, and from 1833 inspectors checked them.",
+  "a": {
+   "q": "What was the main aim of the Chartists in Britain?",
+   "opts": [
+    "To win the vote for all adult men",
+    "To raise the wages paid by factory owners",
+    "To cut the hours worked by child labourers",
+    "To ban steam engines from British factories"
+   ],
+   "why": "The Chartists sought political change, above all votes for all adult men and a secret ballot. Shorter hours for children came through reformers and the Factory Acts, and better wages were what trade unions sought, so neither was the Chartists' main aim.",
+   "clue": "Were the Chartists after economic or political change?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1834 a government official visits a Lancashire cotton mill and checks the ages of the young workers. Which development best explains this visit?",
+   "opts": [
+    "A new law limiting children's work in mills",
+    "A Chartist demand for votes for all men",
+    "A trade union rule banning child workers",
+    "A new steam engine replacing child workers"
+   ],
+   "why": "Factory Acts limited children's hours and set a minimum age, and the 1833 Act was the first to appoint inspectors to check that mills obeyed. A trade union rule might seem likely, but unions could not send officials to enforce the law on mill owners.",
+   "clue": "Who could send officials to make every mill obey a rule?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "To win the vote for all adult men",
+    "also_right": []
+   },
+   "b": {
+    "best": "A new law limiting children's work in mills",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Saying Factory Acts were passed 'from 1833 onwards' is inaccurate. Earlier Factory Acts in 1802 and 1819 already limited children's hours, and the 1819 Act set a minimum age of 9 in cotton mills. The 1833 Act was the first effective one, because it appointed inspectors. Something like 'from the early 1800s, with the 1833 Act first appointing inspectors' would be accurate."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'The Chartists wanted a say in who made the laws' repeats the wording of the right option ('a say in making laws'), so a student can match it without knowing the idea."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is clearly the longest, and the only one with two parts (votes and a say in making laws), so it stands out from the distractors."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one that mentions inspectors, echoing the 'inspector' in the stem, so it can be picked by word-matching alone."
+   }
+  ],
+  "flags": [
+   "Card, fact: Saying Factory Acts were passed 'from 1833 onwards' is inaccurate. Earlier Factory Acts in 1802 and 1819 already limited children's hours, and the 1819 Act set a minimum age of 9 in cotton mills. The 1833 Act was the first effective one, because it appointed inspectors. Something like 'from the early 1800s, with the 1833 Act first appointing inspectors' would be accurate.",
+   "Question a, other: The clue 'The Chartists wanted a say in who made the laws' repeats the wording of the right option ('a say in making laws'), so a student can match it without knowing the idea.",
+   "Question a, wording: The right option is clearly the longest, and the only one with two parts (votes and a say in making laws), so it stands out from the distractors.",
+   "Question b, wording: The right option is the only one that mentions inspectors, echoing the 'inspector' in the stem, so it can be picked by word-matching alone."
+  ]
+ },
+ "final": {
+  "title": "Reform movements",
+  "card": [
+   "By the early 1800s many people in Britain saw that factory and mine work harmed workers, especially children. Reformers wrote reports and spoke in public to make others care.",
+   [
+    "Trade unions",
+    "groups of workers who joined together to seek better pay and conditions. Early unions faced strong opposition, and for a time were banned by law."
+   ],
+   [
+    "Chartists",
+    "a movement of the late 1830s and 1840s that sought political change. They wanted votes for all adult men and a secret ballot, so that working people had a voice in Parliament."
+   ],
+   [
+    "Factory Acts",
+    "laws passed by Parliament from the early 1800s that began to limit children's working hours and set a minimum age in some mills. The 1833 Act was the first to appoint inspectors to check that factories obeyed."
+   ]
+  ],
+  "remember": "Reformers, unions and Chartists pushed for change. Factory Acts began to limit children's hours, and from 1833 inspectors checked them.",
+  "a": {
+   "q": "What was the main aim of the Chartists in Britain?",
+   "opts": [
+    "To win the vote for all adult men",
+    "To raise the wages paid by factory owners",
+    "To cut the hours worked by child labourers",
+    "To ban steam engines from British factories"
+   ],
+   "why": "The Chartists sought political change, above all votes for all adult men and a secret ballot. Shorter hours for children came through reformers and the Factory Acts, and better wages were what trade unions sought, so neither was the Chartists' main aim.",
+   "clue": "Were the Chartists after economic or political change?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1834 a government official visits a Lancashire cotton mill and checks the ages of the young workers. Which development best explains this visit?",
+   "opts": [
+    "A new law limiting children's work in mills",
+    "A Chartist demand for votes for all men",
+    "A trade union rule banning child workers",
+    "A new steam engine replacing child workers"
+   ],
+   "why": "Factory Acts limited children's hours and set a minimum age, and the 1833 Act was the first to appoint inspectors to check that mills obeyed. A trade union rule might seem likely, but unions could not send officials to enforce the law on mill owners.",
+   "clue": "Who could send officials to make every mill obey a rule?"
+  }
+ },
+ "cleared_by": "recheck"
 }

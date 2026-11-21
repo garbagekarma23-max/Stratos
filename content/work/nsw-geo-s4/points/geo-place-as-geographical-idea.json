@@ -24,8 +24,62 @@
    0.212
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 may adapt geo-place, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:45Z confirm: Claude Opus 5.5 may adapt geo-place, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z claude-code review: left for you (it chose to leave it)",
+  "2026-11-20T14:38:42Z review: reusing geo-place"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00032,
+  "confirm": 0.01202
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-place",
+  "changes": [
+   "Add the idea that places shape people's sense of belonging, which the bank card does not state.",
+   "Add sacred sites as an example of a place given meaning, to match the new brief.",
+   "Replace the Port Lincoln jetty example in question b with an example from New South Wales, such as a local place in the course's own state."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same core idea of places as meaningful parts of the Earth's surface, but it needs a belonging statement, a sacred-site example and a New South Wales example.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "geo-place",
+  "changes": [
+   "Add a short line to the card saying that the meanings people give to places shape their sense of belonging.",
+   "Replace the Port Lincoln (South Australia) jetty example in question b with a New South Wales location.",
+   "Include a sacred site among the card's examples of places people give meaning to, as the brief names it."
+  ],
+  "sure": "medium",
+  "reason": "The bank point Place teaches the same Year 7 idea, that a place is part of the Earth's surface that people give meaning to, but it needs a line on belonging and a local NSW example to match this brief.",
+  "model": "claude-opus-5-5"
+ },
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "leave",
+   "sure": "medium",
+   "reason": "The brief asks for a sacred site as an example, which touches Aboriginal and Torres Strait Islander cultures and connection to Country, so the owner should decide how it is written.",
+   "item": "2122d8341db48244",
+   "result": "left"
+  }
+ ],
+ "reuse": "geo-place",
+ "matched": {
+  "verdict": "reuse",
+  "from": "geo-place",
+  "by": "owner",
+  "at": "2026-11-20T14:38:42Z"
+ }
 }

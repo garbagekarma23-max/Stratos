@@ -8,8 +8,161 @@
    0.273
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:37Z new, match"
- ]
+  "2026-11-12T12:22:37Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: done",
+  "2026-11-20T12:44:56Z check: flagged",
+  "2026-11-20T12:53:26Z fix: suggested",
+  "2026-11-20T14:40:59Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00668,
+  "check": 0.01135,
+  "fix": 0.01991
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point 'Frontier conflict and resistance' is broader and only mentions Windradyne in passing, while the new point is a specific case study of Wiradjuri resistance at Bathurst that includes the 1824 martial law declaration, which the bank point does not teach.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Wiradjuri resistance at Bathurst",
+  "card": [
+   "The Wiradjuri are the Aboriginal people of a large part of central-western New South Wales. Their Country includes the land around Bathurst.",
+   "From 1815, colonists settled on Wiradjuri land around Bathurst. Their sheep and cattle used the water and grass that Wiradjuri people relied on for food.",
+   "The Wiradjuri resisted. Windradyne, a Wiradjuri man, led them in attacks on colonists' farms and stock in the early 1820s.",
+   "In 1824, Governor Brisbane declared martial law around Bathurst. This meant the army could use force under military rule instead of the usual courts. Many Wiradjuri people were killed."
+  ],
+  "remember": "Colonists took Wiradjuri land, Windradyne led resistance, and martial law in 1824 brought military force.",
+  "a": {
+   "q": "Why did the Wiradjuri resist the colonists around Bathurst?",
+   "opts": [
+    "Colonists took their land, water and food sources",
+    "Colonists asked them to leave the region for good",
+    "Colonists blocked trade routes between Wiradjuri groups",
+    "Colonists banned them from holding ceremonies"
+   ],
+   "why": "The colonists' sheep and cattle used the water and grass the Wiradjuri relied on, and the settlers took over their Country. The other options describe things the card does not say happened.",
+   "clue": "Think about what the colonists' farms and animals used."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1824 the governor declared martial law around Bathurst. What did this mean for the Wiradjuri?",
+   "opts": [
+    "The army could use force without the usual courts",
+    "The Wiradjuri were given back their land",
+    "Colonists were told to stop farming near Bathurst",
+    "Windradyne was made a magistrate for the area"
+   ],
+   "why": "Martial law is military rule, so soldiers could use force instead of the usual courts. It did not return land or stop settlement. It was a response to the resistance, and many Wiradjuri were killed.",
+   "clue": "Martial law means military rule in place of the usual courts."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Colonists took their land, water and food sources",
+   "also_right": []
+  },
+  "b": {
+   "best": "The army could use force without the usual courts",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue ('Martial law means military rule in place of the usual courts') restates the right option almost word for word. A student can match the words without understanding martial law, so the clue gives the answer away."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "first-nations",
+  "summary": "The facts check out: Bathurst settlement from 1815, Windradyne's resistance, and Governor Brisbane's martial law in 1824. The only problem is that question b's clue restates the right option almost word for word, which gives the answer away."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Question b, other: The clue ('Martial law means military rule in place of the usual courts') restates the right option almost word for word. A student can match the words without understanding martial law, so the clue gives the answer away."
+ ],
+ "proposal": {
+  "title": "Wiradjuri resistance at Bathurst",
+  "card": [
+   "The Wiradjuri are the Aboriginal people of a large part of central-western New South Wales. Their Country includes the land around Bathurst.",
+   "From 1815, colonists settled on Wiradjuri land around Bathurst. Their sheep and cattle used the water and grass that Wiradjuri people relied on for food.",
+   "The Wiradjuri resisted. Windradyne, a Wiradjuri man, led them in attacks on colonists' farms and stock in the early 1820s.",
+   "In 1824, Governor Brisbane declared martial law around Bathurst. This meant the army could use force under military rule instead of the usual courts. Many Wiradjuri people were killed."
+  ],
+  "remember": "Colonists took Wiradjuri land, Windradyne led resistance, and martial law in 1824 brought military force.",
+  "a": {
+   "q": "Why did the Wiradjuri resist the colonists around Bathurst?",
+   "opts": [
+    "Colonists took their land, water and food sources",
+    "Colonists asked them to leave the region for good",
+    "Colonists blocked trade routes between Wiradjuri groups",
+    "Colonists banned them from holding ceremonies"
+   ],
+   "why": "The colonists settled on Wiradjuri Country, and their sheep and cattle used the water and grass the Wiradjuri relied on for food. The colonists did not simply ask them to leave: they took the land and its resources, which is what the Wiradjuri resisted.",
+   "clue": "Think about what the colonists' farms and animals used."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1824 the governor declared martial law around Bathurst. What did this mean for the Wiradjuri?",
+   "opts": [
+    "The army could use force without the usual courts",
+    "Wiradjuri people could take disputes to the courts",
+    "Soldiers were sent away from the Bathurst district",
+    "Colonists were told to stop farming near Bathurst"
+   ],
+   "why": "Martial law put the area under military rule, so soldiers could use force instead of the usual courts. It did not send soldiers away or stop settlement. It was a response to Wiradjuri resistance, and many Wiradjuri were killed.",
+   "clue": "Think about what the word martial refers to."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Wiradjuri resistance at Bathurst",
+  "card": [
+   "The Wiradjuri are the Aboriginal people of a large part of central-western New South Wales. Their Country includes the land around Bathurst.",
+   "From 1815, colonists settled on Wiradjuri land around Bathurst. Their sheep and cattle used the water and grass that Wiradjuri people relied on for food.",
+   "The Wiradjuri resisted. Windradyne, a Wiradjuri man, led them in attacks on colonists' farms and stock in the early 1820s.",
+   "In 1824, Governor Brisbane declared martial law around Bathurst. This meant the army could use force under military rule instead of the usual courts. Many Wiradjuri people were killed."
+  ],
+  "remember": "Colonists took Wiradjuri land, Windradyne led resistance, and martial law in 1824 brought military force.",
+  "a": {
+   "q": "Why did the Wiradjuri resist the colonists around Bathurst?",
+   "opts": [
+    "Colonists took their land, water and food sources",
+    "Colonists asked them to leave the region for good",
+    "Colonists blocked trade routes between Wiradjuri groups",
+    "Colonists banned them from holding ceremonies"
+   ],
+   "why": "The colonists settled on Wiradjuri Country, and their sheep and cattle used the water and grass the Wiradjuri relied on for food. The colonists did not simply ask them to leave: they took the land and its resources, which is what the Wiradjuri resisted.",
+   "clue": "Think about what the colonists' farms and animals used."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1824 the governor declared martial law around Bathurst. What did this mean for the Wiradjuri?",
+   "opts": [
+    "The army could use force without the usual courts",
+    "Wiradjuri people could take disputes to the courts",
+    "Soldiers were sent away from the Bathurst district",
+    "Colonists were told to stop farming near Bathurst"
+   ],
+   "why": "Martial law put the area under military rule, so soldiers could use force instead of the usual courts. It did not send soldiers away or stop settlement. It was a response to Wiradjuri resistance, and many Wiradjuri were killed.",
+   "clue": "Think about what the word martial refers to."
+  }
+ },
+ "cleared_by": "owner"
 }

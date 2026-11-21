@@ -8,8 +8,139 @@
    0.245
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:41Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: done",
+  "2026-11-20T12:44:53Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.00592,
+  "check": 0.00746
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches how sentence length shapes tone, while the new point teaches the four sentence types by purpose (state, ask, command, exclaim), so they are different ideas.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The four sentence types",
+  "card": [
+   [
+    "Declarative",
+    "A declarative sentence states a fact or an idea. It usually ends with a full stop. Example: The bus leaves at eight."
+   ],
+   [
+    "Interrogative",
+    "An interrogative sentence asks a question. It ends with a question mark. Example: When does the bus leave?"
+   ],
+   [
+    "Imperative",
+    "An imperative sentence gives a command or an instruction. The subject \"you\" is usually left out. Example: Catch the bus at eight."
+   ],
+   [
+    "Exclamatory",
+    "An exclamatory sentence shows strong feeling and ends with an exclamation mark. Example: What a huge bus that is!"
+   ]
+  ],
+  "remember": "Match the type to the job: state, ask, command or show strong feeling.",
+  "a": {
+   "q": "Which sentence is imperative?",
+   "opts": [
+    "Hand in your story before recess",
+    "Did you hand in your story before recess",
+    "Everyone handed in their story before recess",
+    "I can't believe you handed it in so early"
+   ],
+   "why": "Hand in your story before recess gives a command, and the subject \"you\" is left out. Everyone handed in their story states a fact, so it is declarative.",
+   "clue": "Which sentence tells someone what to do?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya writes a recipe for her class cookbook. Which sentence from her recipe is imperative?",
+   "opts": [
+    "Stir the butter and sugar together",
+    "The butter should be soft by then",
+    "Have you softened the butter yet",
+    "How delicious this mixture smells"
+   ],
+   "why": "Stir the butter and sugar together is an instruction, so it is imperative. The butter should be soft by then looks tempting because it is about the recipe, but it states a fact, so it is declarative.",
+   "clue": "A recipe mostly tells the cook what to do."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Hand in your story before recess",
+   "also_right": []
+  },
+  "b": {
+   "best": "Stir the butter and sugar together",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The four sentence types",
+  "card": [
+   [
+    "Declarative",
+    "A declarative sentence states a fact or an idea. It usually ends with a full stop. Example: The bus leaves at eight."
+   ],
+   [
+    "Interrogative",
+    "An interrogative sentence asks a question. It ends with a question mark. Example: When does the bus leave?"
+   ],
+   [
+    "Imperative",
+    "An imperative sentence gives a command or an instruction. The subject \"you\" is usually left out. Example: Catch the bus at eight."
+   ],
+   [
+    "Exclamatory",
+    "An exclamatory sentence shows strong feeling and ends with an exclamation mark. Example: What a huge bus that is!"
+   ]
+  ],
+  "remember": "Match the type to the job: state, ask, command or show strong feeling.",
+  "a": {
+   "q": "Which sentence is imperative?",
+   "opts": [
+    "Hand in your story before recess",
+    "Did you hand in your story before recess",
+    "Everyone handed in their story before recess",
+    "I can't believe you handed it in so early"
+   ],
+   "why": "Hand in your story before recess gives a command, and the subject \"you\" is left out. Everyone handed in their story states a fact, so it is declarative.",
+   "clue": "Which sentence tells someone what to do?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya writes a recipe for her class cookbook. Which sentence from her recipe is imperative?",
+   "opts": [
+    "Stir the butter and sugar together",
+    "The butter should be soft by then",
+    "Have you softened the butter yet",
+    "How delicious this mixture smells"
+   ],
+   "why": "Stir the butter and sugar together is an instruction, so it is imperative. The butter should be soft by then looks tempting because it is about the recipe, but it states a fact, so it is declarative.",
+   "clue": "A recipe mostly tells the cook what to do."
+  }
+ },
+ "cleared_by": "checker"
 }

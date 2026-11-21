@@ -8,8 +8,161 @@
    0.404
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: done",
+  "2026-11-20T12:44:55Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T14:39:56Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "write": 0.00636,
+  "check": 0.01238,
+  "fix": 0.01837
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches community-led change in general, with health and ranger examples, while the new point is about the specific organisational form of Aboriginal Community Controlled Organisations, so it is broader and not the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Aboriginal Community Controlled Organisations",
+  "card": [
+   "An Aboriginal Community Controlled Organisation (ACCO) is run by the local Aboriginal community it serves. A board elected by community members makes the decisions.",
+   "ACCOs deliver services such as health care, legal help, housing and early childhood education. Many are not-for-profit and have Aboriginal staff.",
+   "They aim to provide services in culturally safe ways. This means people are respected, their culture and family ties are understood, and they feel safe to ask for help.",
+   "Services that people trust and feel comfortable using can improve wellbeing. Aboriginal Community Controlled Health Services are one well-known example."
+  ],
+  "remember": "ACCOs are run by the local Aboriginal community and deliver services in culturally safe ways.",
+  "a": {
+   "q": "What makes an organisation an Aboriginal Community Controlled Organisation?",
+   "opts": [
+    "It is run by the local Aboriginal community it serves",
+    "It is funded by a government department to deliver services",
+    "It employs some Aboriginal people in its front office",
+    "It provides services only in remote parts of Australia"
+   ],
+   "why": "An ACCO is controlled by the local Aboriginal community, through a board elected by its members. Government funding or having some Aboriginal staff does not mean the community makes the decisions.",
+   "clue": "Think about who makes the decisions."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two health clinics open in the same town. One is run by an elected board of local Aboriginal community members. The other is run by a company based in another city. Why might the first clinic be better trusted by many Aboriginal families?",
+   "opts": [
+    "Local people control it and it aims to be culturally safe",
+    "It receives more money than any other kind of clinic",
+    "It offers a wider range of treatments than other clinics",
+    "It is run by a government agency with local offices"
+   ],
+   "why": "Community control means local people decide how services are run, which helps make them culturally safe and trusted. Funding and range of treatments are not what defines an ACCO, and it is not a government agency.",
+   "clue": "Look at who controls each clinic."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It is run by the local Aboriginal community it serves",
+   "also_right": []
+  },
+  "b": {
+   "best": "Local people control it and it aims to be culturally safe",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says 'Many are not-for-profit', but under the National Agreement on Closing the Gap definition an ACCO is a not-for-profit organisation by definition. 'Many' suggests some ACCOs are for-profit."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "first-nations",
+  "summary": "The card understates that ACCOs are not-for-profit: it says 'many are', but the Closing the Gap definition requires it. The questions, answers and explanations are otherwise correct."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Card, fact: The card says 'Many are not-for-profit', but under the National Agreement on Closing the Gap definition an ACCO is a not-for-profit organisation by definition. 'Many' suggests some ACCOs are for-profit."
+ ],
+ "proposal": {
+  "title": "Aboriginal Community Controlled Organisations",
+  "card": [
+   "An Aboriginal Community Controlled Organisation (ACCO) is run by the local Aboriginal community it serves. A board, usually elected by community members, makes the decisions.",
+   "ACCOs deliver services such as health care, legal help, housing and early childhood education. They are not-for-profit, and many have Aboriginal staff.",
+   "They aim to provide services in culturally safe ways. This means people are respected, their culture and family ties are understood, and they feel safe to ask for help.",
+   "Services that people trust and feel comfortable using can improve wellbeing. Aboriginal Community Controlled Health Services are one well-known example."
+  ],
+  "remember": "ACCOs are run by the local Aboriginal community and deliver services in culturally safe ways.",
+  "a": {
+   "q": "What makes an organisation an Aboriginal Community Controlled Organisation?",
+   "opts": [
+    "It is run by the local Aboriginal community it serves",
+    "It is funded by a government department to deliver services",
+    "It employs some Aboriginal people in its front office",
+    "It provides services only in remote parts of Australia"
+   ],
+   "why": "An ACCO is controlled by the local Aboriginal community, through a board usually elected by community members. Government funding or having some Aboriginal staff does not mean the community makes the decisions.",
+   "clue": "Think about who makes the decisions."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two health clinics open in the same town. One is run by an elected board of local Aboriginal community members. The other is run by a company based in another city. Why might the first clinic be better trusted by many Aboriginal families?",
+   "opts": [
+    "Local people control it and it aims to be culturally safe",
+    "It receives more money than any other kind of clinic",
+    "It offers a wider range of treatments than other clinics",
+    "It is run by a government agency with local offices"
+   ],
+   "why": "Community control means local people decide how services are run, which helps make them culturally safe and trusted. Funding and range of treatments are not what defines an ACCO, and it is not a government agency.",
+   "clue": "Look at who controls each clinic."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Aboriginal Community Controlled Organisations",
+  "card": [
+   "An Aboriginal Community Controlled Organisation (ACCO) is run by the local Aboriginal community it serves. A board, usually elected by community members, makes the decisions.",
+   "ACCOs deliver services such as health care, legal help, housing and early childhood education. They are not-for-profit, and many have Aboriginal staff.",
+   "They aim to provide services in culturally safe ways. This means people are respected, their culture and family ties are understood, and they feel safe to ask for help.",
+   "Services that people trust and feel comfortable using can improve wellbeing. Aboriginal Community Controlled Health Services are one well-known example."
+  ],
+  "remember": "ACCOs are run by the local Aboriginal community and deliver services in culturally safe ways.",
+  "a": {
+   "q": "What makes an organisation an Aboriginal Community Controlled Organisation?",
+   "opts": [
+    "It is run by the local Aboriginal community it serves",
+    "It is funded by a government department to deliver services",
+    "It employs some Aboriginal people in its front office",
+    "It provides services only in remote parts of Australia"
+   ],
+   "why": "An ACCO is controlled by the local Aboriginal community, through a board usually elected by community members. Government funding or having some Aboriginal staff does not mean the community makes the decisions.",
+   "clue": "Think about who makes the decisions."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two health clinics open in the same town. One is run by an elected board of local Aboriginal community members. The other is run by a company based in another city. Why might the first clinic be better trusted by many Aboriginal families?",
+   "opts": [
+    "Local people control it and it aims to be culturally safe",
+    "It receives more money than any other kind of clinic",
+    "It offers a wider range of treatments than other clinics",
+    "It is run by a government agency with local offices"
+   ],
+   "why": "Community control means local people decide how services are run, which helps make them culturally safe and trusted. Funding and range of treatments are not what defines an ACCO, and it is not a government agency.",
+   "clue": "Look at who controls each clinic."
+  }
+ },
+ "cleared_by": "owner"
 }

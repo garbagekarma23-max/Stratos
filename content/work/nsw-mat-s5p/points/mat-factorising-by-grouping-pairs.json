@@ -24,8 +24,211 @@
    0.287
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:56Z write: done",
+  "2026-11-20T12:44:59Z check: flagged",
+  "2026-11-20T12:53:28Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.00707,
+  "check": 0.01003,
+  "fix": 0.0162,
+  "recheck": 0.00772
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, Expanding and factorising, covers grouping only as one bullet among several methods (common factor, difference of two squares, perfect squares), so it is broader than this single grouping point and is not a match for it.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Factorising by grouping in pairs",
+  "card": [
+   "Some expressions have four terms and no factor common to all of them. Try splitting them into two pairs.",
+   "Factorise each pair by taking out its highest common factor. If the brackets that are left match, the method is working.",
+   "Now the matching bracket is a common factor of the whole expression. Take it out and write what is left as a second bracket.",
+   [
+    "Example",
+    "\\(ax + ay + bx + by\\) becomes \\(a(x + y) + b(x + y)\\), which is \\((x + y)(a + b)\\). Expand the answer to check it."
+   ]
+  ],
+  "remember": "Pair the terms, factorise each pair, then take out the matching bracket.",
+  "a": {
+   "q": "Factorise \\(3x + 3y + ax + ay\\) by grouping in pairs.",
+   "opts": [
+    "\\((x + y)(3 + a)\\)",
+    "\\((x + y)(3a)\\)",
+    "\\((x + 3)(y + a)\\)",
+    "\\(3(x + y) + a(x + y)\\)"
+   ],
+   "why": "The pairs give \\(3(x + y) + a(x + y)\\). The bracket \\((x + y)\\) is common, so take it out to get \\((x + y)(3 + a)\\). The last option is the middle step, not the finished factorised form.",
+   "clue": "Factorise each pair, then take out the bracket that matches."
+  },
+  "b": {
+   "d": 3,
+   "q": "Factorise \\(2m - 2n + km - kn\\).",
+   "opts": [
+    "\\((m - n)(2 + k)\\)",
+    "\\((m + n)(2 + k)\\)",
+    "\\((m - n)(2k)\\)",
+    "\\((m - n)(2 - k)\\)"
+   ],
+   "why": "The pairs give \\(2(m - n) + k(m - n)\\), so the common bracket is \\((m - n)\\) and the answer is \\((m - n)(2 + k)\\). Expanding gives \\(2m - 2n + km - kn\\). Taking out \\(-n\\) wrongly as \\(+n\\) would give a bracket that does not match.",
+   "clue": "Take out \\(k\\) from the second pair, and check that both brackets match."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\((x + y)(3 + a)\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\((m - n)(2 + k)\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The last sentence of Why (b), 'Taking out \\(-n\\) wrongly as \\(+n\\) would give a bracket that does not match', is confusing. No step takes out \\(-n\\). The sign error it means is writing \\(m + n\\) instead of \\(m - n\\) inside the bracket."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Card and both questions are correct: (a) is \\((x + y)(3 + a)\\) and (b) is \\((m - n)(2 + k)\\). The only problem is a confusingly worded last sentence in the explanation for (b)."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The last sentence of Why (b), 'Taking out \\(-n\\) wrongly as \\(+n\\) would give a bracket that does not match', is confusing. No step takes out \\(-n\\). The sign error it means is writing \\(m + n\\) instead of \\(m - n\\) inside the bracket."
+ ],
+ "proposal": {
+  "title": "Factorising by grouping in pairs",
+  "card": [
+   "Some expressions have four terms and no factor common to all of them. Try splitting them into two pairs.",
+   "Factorise each pair by taking out its highest common factor. If the brackets that are left match, the method is working.",
+   "Now the matching bracket is a common factor of the whole expression. Take it out and write what is left as a second bracket.",
+   [
+    "Example",
+    "\\(ax + ay + bx + by\\) becomes \\(a(x + y) + b(x + y)\\), which is \\((x + y)(a + b)\\). Expand the answer to check it."
+   ]
+  ],
+  "remember": "Pair the terms, factorise each pair, then take out the matching bracket.",
+  "a": {
+   "q": "Factorise \\(3x + 3y + ax + ay\\) by grouping in pairs.",
+   "opts": [
+    "\\((x + y)(3 + a)\\)",
+    "\\((x + y)(3a)\\)",
+    "\\((x + 3)(y + a)\\)",
+    "\\(3(x + y) + a(x + y)\\)"
+   ],
+   "why": "The pairs give \\(3(x + y) + a(x + y)\\). The bracket \\((x + y)\\) is common, so take it out to get \\((x + y)(3 + a)\\). The last option is the middle step, not the finished factorised form.",
+   "clue": "Factorise each pair, then take out the bracket that matches."
+  },
+  "b": {
+   "d": 3,
+   "q": "Factorise \\(2m - 2n + km - kn\\).",
+   "opts": [
+    "\\((m - n)(2 + k)\\)",
+    "\\((m + n)(2 + k)\\)",
+    "\\((m - n)(2k)\\)",
+    "\\((m - n)(2 - k)\\)"
+   ],
+   "why": "The pairs give \\(2(m - n) + k(m - n)\\), so the common bracket is \\((m - n)\\) and the answer is \\((m - n)(2 + k)\\). Expanding gives back \\(2m - 2n + km - kn\\). Writing \\((m + n)\\) instead of \\((m - n)\\) is a sign error: that answer expands to \\(2m + 2n + km + kn\\).",
+   "clue": "Take out \\(k\\) from the second pair, and check that both brackets match."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\((x + y)(3 + a)\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\((m - n)(2 + k)\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 17,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The last sentence of Why (b), 'Taking out \\(-n\\) wrongly as \\(+n\\) would give a bracket that does not match', is confusing. No step takes out \\(-n\\). The sign error it means is writing \\(m + n\\) instead of \\(m - n\\) inside the bracket."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The last sentence of Why (b), 'Taking out \\(-n\\) wrongly as \\(+n\\) would give a bracket that does not match', is confusing. No step takes out \\(-n\\). The sign error it means is writing \\(m + n\\) instead of \\(m - n\\) inside the bracket."
+  ]
+ },
+ "final": {
+  "title": "Factorising by grouping in pairs",
+  "card": [
+   "Some expressions have four terms and no factor common to all of them. Try splitting them into two pairs.",
+   "Factorise each pair by taking out its highest common factor. If the brackets that are left match, the method is working.",
+   "Now the matching bracket is a common factor of the whole expression. Take it out and write what is left as a second bracket.",
+   [
+    "Example",
+    "\\(ax + ay + bx + by\\) becomes \\(a(x + y) + b(x + y)\\), which is \\((x + y)(a + b)\\). Expand the answer to check it."
+   ]
+  ],
+  "remember": "Pair the terms, factorise each pair, then take out the matching bracket.",
+  "a": {
+   "q": "Factorise \\(3x + 3y + ax + ay\\) by grouping in pairs.",
+   "opts": [
+    "\\((x + y)(3 + a)\\)",
+    "\\((x + y)(3a)\\)",
+    "\\((x + 3)(y + a)\\)",
+    "\\(3(x + y) + a(x + y)\\)"
+   ],
+   "why": "The pairs give \\(3(x + y) + a(x + y)\\). The bracket \\((x + y)\\) is common, so take it out to get \\((x + y)(3 + a)\\). The last option is the middle step, not the finished factorised form.",
+   "clue": "Factorise each pair, then take out the bracket that matches."
+  },
+  "b": {
+   "d": 3,
+   "q": "Factorise \\(2m - 2n + km - kn\\).",
+   "opts": [
+    "\\((m - n)(2 + k)\\)",
+    "\\((m + n)(2 + k)\\)",
+    "\\((m - n)(2k)\\)",
+    "\\((m - n)(2 - k)\\)"
+   ],
+   "why": "The pairs give \\(2(m - n) + k(m - n)\\), so the common bracket is \\((m - n)\\) and the answer is \\((m - n)(2 + k)\\). Expanding gives back \\(2m - 2n + km - kn\\). Writing \\((m + n)\\) instead of \\((m - n)\\) is a sign error: that answer expands to \\(2m + 2n + km + kn\\).",
+   "clue": "Take out \\(k\\) from the second pair, and check that both brackets match."
+  }
+ },
+ "cleared_by": "recheck"
 }

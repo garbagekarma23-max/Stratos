@@ -12,8 +12,197 @@
    0.429
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 says reuse sci-nervous-system, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:26:01Z confirm: Claude Opus 5.5 may adapt sci-nervous-system, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt sci-nervous-system (2 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting sci-nervous-system on the next run",
+  "2026-11-20T14:12:40Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "confirm": 0.00716,
+  "adapt": 0.0037,
+  "check": 0.00801
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "sci-nervous-system",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the same nervous system idea at the same Year 9 depth, covering fast electrical impulses to the brain or spinal cord, effectors, and reflexes that skip the brain, and its content and questions suit an NSW Stage 5 course without changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "sci-nervous-system",
+  "changes": [
+   "Change the Perth beach in question b to a New South Wales location, such as a beach in Sydney."
+  ],
+  "sure": "medium",
+  "reason": "The bank point already teaches receptors, fast electrical impulses to the brain or spinal cord, effectors and reflexes that skip the brain, at the right depth for Years 9 and 10; only the Perth example in question b could be swapped for a New South Wales place.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "sci-nervous-system",
+  "changes": [
+   "Add that receptors detect a stimulus, a change inside or outside the body, and that an effector such as a muscle makes the response.",
+   "Change the beach in Perth in question b to a beach in New South Wales."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card2",
+   "card3",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches neurons, receptors, effectors and reflexes at the right depth, but it never uses the word stimulus, which the brief opens with. The Perth example can also become a NSW one.",
+   "item": "c005ff50d018287d",
+   "result": "decided",
+   "saved": {
+    "id": "sci-nervous-system-nsw",
+    "title": "The nervous system",
+    "brief": "f137046574dc",
+    "shortlist": [
+     [
+      "sci-nervous-system",
+      0.595
+     ],
+     [
+      "sci-stimulus-receptor-effector",
+      0.429
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00023,
+     "confirm": 0.00716
+    },
+    "match": {
+     "verdict": "reuse",
+     "same": "sci-nervous-system",
+     "changes": [],
+     "sure": "high",
+     "reason": "The bank point teaches the same nervous system idea at the same Year 9 depth, covering fast electrical impulses to the brain or spinal cord, effectors, and reflexes that skip the brain, and its content and questions suit an NSW Stage 5 course without changes.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "sci-nervous-system",
+     "changes": [
+      "Change the Perth beach in question b to a New South Wales location, such as a beach in Sydney."
+     ],
+     "sure": "medium",
+     "reason": "The bank point already teaches receptors, fast electrical impulses to the brain or spinal cord, effectors and reflexes that skip the brain, at the right depth for Years 9 and 10; only the Perth example in question b could be swapped for a New South Wales place.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "61c4f62519f2cee5"
+  }
+ ],
+ "draft": {
+  "title": "The nervous system",
+  "card": [
+   "The nervous system is made of neurons, which are cells that carry messages as electrical impulses. Impulses travel very fast.",
+   "Receptors detect a stimulus, which is a change inside or outside the body. Sensory neurons carry impulses from receptors to the brain and spinal cord. Motor neurons carry impulses from the brain and spinal cord to effectors.",
+   "An effector, such as a muscle, makes the response. In most responses, the impulse goes to the brain, which decides what to do. This takes a little longer.",
+   "A reflex is a fast, automatic response. The impulse is passed on in the spinal cord without going to the brain first, so the effector acts sooner."
+  ],
+  "remember": "Neurons carry fast impulses, and a reflex is quicker because it skips the brain.",
+  "a": {
+   "q": "What is the job of a motor neuron?",
+   "opts": [
+    "Carries impulses from the spinal cord to a muscle",
+    "Carries impulses from a receptor to the spinal cord",
+    "Carries hormones from a gland to the blood",
+    "Carries impulses from the brain to a receptor"
+   ],
+   "why": "A motor neuron carries impulses to an effector such as a muscle. Carrying impulses from a receptor to the spinal cord is the job of a sensory neuron, which is the most tempting mix-up.",
+   "clue": "Motor neurons lead to the part that responds."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam steps on a sharp shell at a beach on the NSW coast and his foot jerks up before he feels pain. Why was the response so quick?",
+   "opts": [
+    "The impulse was passed on in the spinal cord, not the brain",
+    "The impulse travelled faster along the neurons than normal",
+    "The foot detected the shell without using a receptor",
+    "The brain sent a stronger impulse to the leg muscles"
+   ],
+   "why": "In a reflex, the impulse is passed on in the spinal cord without going to the brain first, which shortens the path. The impulses do not travel faster, and a receptor is still needed to detect the shell.",
+   "clue": "Think about the path the impulse takes, not its speed."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Carries impulses from the spinal cord to a muscle",
+   "also_right": []
+  },
+  "b": {
+   "best": "The impulse was passed on in the spinal cord, not the brain",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The nervous system",
+  "card": [
+   "The nervous system is made of neurons, which are cells that carry messages as electrical impulses. Impulses travel very fast.",
+   "Receptors detect a stimulus, which is a change inside or outside the body. Sensory neurons carry impulses from receptors to the brain and spinal cord. Motor neurons carry impulses from the brain and spinal cord to effectors.",
+   "An effector, such as a muscle, makes the response. In most responses, the impulse goes to the brain, which decides what to do. This takes a little longer.",
+   "A reflex is a fast, automatic response. The impulse is passed on in the spinal cord without going to the brain first, so the effector acts sooner."
+  ],
+  "remember": "Neurons carry fast impulses, and a reflex is quicker because it skips the brain.",
+  "a": {
+   "q": "What is the job of a motor neuron?",
+   "opts": [
+    "Carries impulses from the spinal cord to a muscle",
+    "Carries impulses from a receptor to the spinal cord",
+    "Carries hormones from a gland to the blood",
+    "Carries impulses from the brain to a receptor"
+   ],
+   "why": "A motor neuron carries impulses to an effector such as a muscle. Carrying impulses from a receptor to the spinal cord is the job of a sensory neuron, which is the most tempting mix-up.",
+   "clue": "Motor neurons lead to the part that responds."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam steps on a sharp shell at a beach on the NSW coast and his foot jerks up before he feels pain. Why was the response so quick?",
+   "opts": [
+    "The impulse was passed on in the spinal cord, not the brain",
+    "The impulse travelled faster along the neurons than normal",
+    "The foot detected the shell without using a receptor",
+    "The brain sent a stronger impulse to the leg muscles"
+   ],
+   "why": "In a reflex, the impulse is passed on in the spinal cord without going to the brain first, which shortens the path. The impulses do not travel faster, and a receptor is still needed to detect the shell.",
+   "clue": "Think about the path the impulse takes, not its speed."
+  }
+ }
 }

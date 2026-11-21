@@ -24,8 +24,233 @@
    0.456
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:55Z write: failed the content check, writing again",
+  "2026-11-20T12:44:59Z write: done (still fails the content check)",
+  "2026-11-20T12:53:28Z check: flagged",
+  "2026-11-20T13:00:00Z fix: suggested",
+  "2026-11-20T14:43:53Z review: rejected, to be written again",
+  "2026-11-20T14:58:20Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "write": 0.0206,
+  "check": 0.01093,
+  "fix": 0.03411
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point covers all three solving methods (substitution, elimination and graphing), but each bank point teaches only one of them, so none teaches the same idea in full.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Simultaneous equations",
+  "card": [
+   "Simultaneous equations are two equations with two unknowns, such as \\(x\\) and \\(y\\). The solution is the pair of values that makes both equations true.",
+   [
+    "Substitution",
+    "Make one unknown the subject of one equation, then put it into the other. For \\(y = 2x\\) and \\(x + y = 9\\): \\(x + 2x = 9\\), so \\(x = 3\\). Then \\(y = 2 \\times 3 = 6\\)."
+   ],
+   [
+    "Elimination",
+    "Add or subtract the equations so one unknown cancels. For \\(x + y = 10\\) and \\(x - y = 4\\): adding gives \\(2x = 14\\), so \\(x = 7\\). Then \\(y = 3\\). If the signs of the unknown to cancel are the same, subtract."
+   ],
+   [
+    "Graphs",
+    "Each equation is a straight line. The solution is the point where the two lines cross. The lines \\(y = x + 1\\) and \\(y = -x + 5\\) cross at \\((2, 3)\\)."
+   ]
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The lines y = x + 1 and y = -x + 5 cross at the point (2, 3).",
+    "x": {
+     "min": -1,
+     "max": 7,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -1,
+     "max": 8,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x + 1",
+      "domain": [
+       -0.5,
+       6
+      ],
+      "label": "\\(y = x + 1\\)",
+      "labelAt": 5.5,
+      "pos": "below-right"
+     },
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "-x + 5",
+      "domain": [
+       -0.5,
+       6
+      ],
+      "label": "\\(y = -x + 5\\)",
+      "labelAt": 0,
+      "pos": "above-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       3
+      ],
+      "on": [
+       "f",
+       "g"
+      ],
+      "is": "intersection",
+      "label": "\\((2, 3)\\)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "The solution is one pair of values that fits both equations. It is also where the two lines cross.",
+  "a": {
+   "q": "Solve \\(x + y = 12\\) and \\(x - y = 2\\). What is the value of \\(x\\)?",
+   "opts": [
+    "\\(7\\)",
+    "\\(5\\)",
+    "\\(10\\)",
+    "\\(14\\)"
+   ],
+   "why": "Adding the equations cancels \\(y\\): \\(2x = 14\\), so \\(x = 7\\). The value 5 is \\(y\\), not \\(x\\).",
+   "clue": "Add the two equations so that \\(y\\) cancels."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia buys 2 pens and 1 ruler for $7, and 1 pen and 1 ruler for $5. How much does one pen cost?",
+   "opts": [
+    "$2",
+    "$3",
+    "$1",
+    "$5"
+   ],
+   "why": "Subtract the second purchase from the first: one pen costs \\$2. Then the ruler costs \\$3, which is the tempting wrong option because it is the price of the other item.",
+   "clue": "Subtract one purchase from the other so the rulers cancel."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:20Z",
+   "step": "write",
+   "version": {
+    "title": "Simultaneous equations",
+    "card": [
+     "Simultaneous equations are two equations with the same two unknowns. The solution is the one pair of values that makes both equations true at once.",
+     [
+      "Substitution",
+      "make one unknown the subject of one equation and put it into the other. For \\(y = 2x\\) and \\(x + y = 9\\): \\(x + 2x = 9\\), so \\(x = 3\\) and \\(y = 6\\)."
+     ],
+     [
+      "Elimination",
+      "add or subtract the equations so one unknown cancels. For \\(x + y = 10\\) and \\(x - y = 4\\), adding gives \\(2x = 14\\), so \\(x = 7\\) and \\(y = 3\\)."
+     ],
+     [
+      "Graphs",
+      "each equation is a straight line, and the solution is the point where the lines cross. The lines \\(y = x + 1\\) and \\(y = 5 - x\\) cross at \\((2, 3)\\)."
+     ]
+    ],
+    "remember": "Find the one pair of values that fits both equations: substitute, eliminate, or read where the lines cross.",
+    "a": {
+     "q": "Solve \\(y = x + 4\\) and \\(2x + y = 13\\). What is the value of \\(y\\)?",
+     "opts": [
+      "\\(7\\)",
+      "\\(3\\)",
+      "\\(9\\)",
+      "\\(10\\)"
+     ],
+     "why": "Substitute \\(y = x + 4\\) into the second equation: \\(2x + x + 4 = 13\\), so \\(3x = 9\\) and \\(x = 3\\). Then \\(y = 3 + 4 = 7\\). The value 3 is \\(x\\), not \\(y\\).",
+     "clue": "Replace \\(y\\) in the second equation with \\(x + 4\\)."
+    },
+    "b": {
+     "d": 3,
+     "q": "At a canteen, 3 pies and 2 drinks cost $16, and 1 pie and 2 drinks cost $8. How much is one pie?",
+     "opts": [
+      "$4",
+      "$2",
+      "$8",
+      "$6"
+     ],
+     "why": "Subtracting the second order from the first cancels the drinks: 2 pies cost $8, so one pie costs $4. Then each drink costs $2. Answering $8 forgets that the $8 buys two pies.",
+     "clue": "Subtract one order from the other so the drinks cancel."
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Simultaneous equations",
+  "card": [
+   "Simultaneous equations are two equations with the same two unknowns. The solution is the one pair of values that makes both equations true at once.",
+   [
+    "Substitution",
+    "make one unknown the subject of one equation and put it into the other. For \\(y = 2x\\) and \\(x + y = 9\\): \\(x + 2x = 9\\), so \\(x = 3\\) and \\(y = 6\\)."
+   ],
+   [
+    "Elimination",
+    "add or subtract the equations so one unknown cancels. For \\(x + y = 10\\) and \\(x - y = 4\\), adding gives \\(2x = 14\\), so \\(x = 7\\) and \\(y = 3\\)."
+   ],
+   [
+    "Graphs",
+    "each equation is a straight line, and the solution is the point where the lines cross. The lines \\(y = x + 1\\) and \\(y = 5 - x\\) cross at \\((2, 3)\\)."
+   ]
+  ],
+  "remember": "Find the one pair of values that fits both equations: substitute, eliminate, or read where the lines cross.",
+  "a": {
+   "q": "Solve \\(y = x + 4\\) and \\(2x + y = 13\\). What is the value of \\(y\\)?",
+   "opts": [
+    "\\(7\\)",
+    "\\(3\\)",
+    "\\(9\\)",
+    "\\(10\\)"
+   ],
+   "why": "Substitute \\(y = x + 4\\) into the second equation: \\(2x + x + 4 = 13\\), so \\(3x = 9\\) and \\(x = 3\\). Then \\(y = 3 + 4 = 7\\). The value 3 is \\(x\\), not \\(y\\).",
+   "clue": "Replace \\(y\\) in the second equation with \\(x + 4\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "At a canteen, 3 pies and 2 drinks cost $16, and 1 pie and 2 drinks cost $8. How much is one pie?",
+   "opts": [
+    "$4",
+    "$2",
+    "$8",
+    "$6"
+   ],
+   "why": "Subtracting the second order from the first cancels the drinks: 2 pies cost $8, so one pie costs $4. Then each drink costs $2. Answering $8 forgets that the $8 buys two pies.",
+   "clue": "Subtract one order from the other so the drinks cancel."
+  }
+ },
+ "local": []
 }

@@ -24,8 +24,218 @@
    0.272
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:48Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:23:37Z autoreview: cleared with the fix (b wording, remember other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "write": 0.00626,
+  "check": 0.01039,
+  "fix": 0.02317
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, eng-context-shapes-representation, covers only how context shapes who is shown and how, while the new point also covers the composer's personal and political context and the form they choose, so it is narrower and no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The composer's context",
+  "card": [
+   "A composer is the person who creates a text, such as an author, poet or filmmaker. Their context is the world they live in while they create it.",
+   [
+    "Personal",
+    "the composer's own life, such as their family, experiences and beliefs. A writer who grew up poor may write with close feeling about hardship."
+   ],
+   [
+    "Cultural",
+    "the composer's community, traditions and shared values. These can shape what ideas and stories seem important to them."
+   ],
+   [
+    "Political",
+    "the events, laws and power struggles of the composer's time. A writer living through a war may write to question it or to support it."
+   ]
+  ],
+  "remember": "A composer's context can shape their perspective, the ideas they represent and the form they choose.",
+  "a": {
+   "q": "A poet lived through a long drought on a farm and writes poems about dry land and worry. Which part of her context most shapes the poems?",
+   "opts": [
+    "Her personal experience of drought",
+    "The political laws of a far-off country",
+    "The form of poems from other eras",
+    "The reader's own culture and values"
+   ],
+   "why": "The poet's own life on the farm is her personal context, and it shapes what she writes about. The reader's culture is not the composer's context, so it cannot explain why she chose these ideas.",
+   "clue": "Think about what she lived through herself."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya writes a play in a country where the government bans criticism of its leaders. She sets the play in an imaginary kingdom with a foolish king. Which statement best explains her choice of form?",
+   "opts": [
+    "Her political context makes a disguised setting safer",
+    "Her personal tastes mean she dislikes real settings",
+    "Her cultural traditions require every play to have a king",
+    "Her readers today want plays set in imaginary places"
+   ],
+   "why": "The ban on criticism is part of Priya's political context, and it can shape how she presents her ideas. The reader's wishes today are not the composer's context, and nothing in the case says tradition requires a king.",
+   "clue": "What danger does the ban create for a writer?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Her personal experience of drought",
+   "also_right": []
+  },
+  "b": {
+   "best": "Her political context makes a disguised setting safer",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question asks about her 'choice of form', but setting a play in an imaginary kingdom is a choice of setting or allegory, not form. The card never explains form, so 'choice of setting' (or 'how she presents her ideas') would be accurate and would match the card."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says context shapes 'the form they choose', but the card never mentions or explains form, so students meet the term without any teaching."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are clear and correct. Question b calls an imaginary setting a 'choice of form', but it is really a choice of setting. The remember line mentions form, which the card never teaches."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The question asks about her 'choice of form', but setting a play in an imaginary kingdom is a choice of setting or allegory, not form. The card never explains form, so 'choice of setting' (or 'how she presents her ideas') would be accurate and would match the card.",
+  "Remember, other: The remember line says context shapes 'the form they choose', but the card never mentions or explains form, so students meet the term without any teaching."
+ ],
+ "proposal": {
+  "title": "The composer's context",
+  "card": [
+   "A composer is the person who creates a text, such as an author, poet or filmmaker. Their context is the world they live in while they create it.",
+   [
+    "Personal",
+    "the composer's own life, such as their family, experiences and beliefs. A writer who grew up poor may write with close feeling about hardship."
+   ],
+   [
+    "Cultural",
+    "the composer's community, traditions and shared values. These can shape which ideas matter to them and their form: the type of text, such as a song, poem or play."
+   ],
+   [
+    "Political",
+    "the events, laws and power struggles of the composer's time. A writer living through a war may question it or support it, openly or in disguise."
+   ]
+  ],
+  "remember": "A composer's context can shape their perspective, the ideas they represent and the form they choose.",
+  "a": {
+   "q": "A poet lived through a long drought on a farm and writes poems about dry land and worry. Which part of her context most shapes the poems?",
+   "opts": [
+    "Her personal experience of drought",
+    "The political laws of a far-off country",
+    "The form of poems from other eras",
+    "The reader's own culture and values"
+   ],
+   "why": "The poet's own life on the farm is her personal context, and it shapes what she writes about. The reader's culture is not the composer's context, so it cannot explain why she chose these ideas.",
+   "clue": "Think about what she lived through herself."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya writes a play in a country where the government bans criticism of its leaders. She sets the play in an imaginary kingdom with a foolish king. Which statement best explains her choice of setting?",
+   "opts": [
+    "Her political context makes a disguised setting safer",
+    "Her personal tastes mean she dislikes real settings",
+    "Her cultural traditions require every play to have a king",
+    "Her readers today want plays set in imaginary places"
+   ],
+   "why": "The ban on criticism is part of Priya's political context, and it can shape how she presents her ideas, here in disguise. The wishes of readers today are not the composer's context, and nothing in the case says tradition requires a king.",
+   "clue": "What danger does the ban create for a writer?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:37Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question asks about her 'choice of form', but setting a play in an imaginary kingdom is a choice of setting or allegory, not form. The card never explains form, so 'choice of setting' (or 'how she presents her ideas') would be accurate and would match the card."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says context shapes 'the form they choose', but the card never mentions or explains form, so students meet the term without any teaching."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The question asks about her 'choice of form', but setting a play in an imaginary kingdom is a choice of setting or allegory, not form. The card never explains form, so 'choice of setting' (or 'how she presents her ideas') would be accurate and would match the card.",
+   "Remember, other: The remember line says context shapes 'the form they choose', but the card never mentions or explains form, so students meet the term without any teaching."
+  ]
+ },
+ "final": {
+  "title": "The composer's context",
+  "card": [
+   "A composer is the person who creates a text, such as an author, poet or filmmaker. Their context is the world they live in while they create it.",
+   [
+    "Personal",
+    "the composer's own life, such as their family, experiences and beliefs. A writer who grew up poor may write with close feeling about hardship."
+   ],
+   [
+    "Cultural",
+    "the composer's community, traditions and shared values. These can shape which ideas matter to them and their form: the type of text, such as a song, poem or play."
+   ],
+   [
+    "Political",
+    "the events, laws and power struggles of the composer's time. A writer living through a war may question it or support it, openly or in disguise."
+   ]
+  ],
+  "remember": "A composer's context can shape their perspective, the ideas they represent and the form they choose.",
+  "a": {
+   "q": "A poet lived through a long drought on a farm and writes poems about dry land and worry. Which part of her context most shapes the poems?",
+   "opts": [
+    "Her personal experience of drought",
+    "The political laws of a far-off country",
+    "The form of poems from other eras",
+    "The reader's own culture and values"
+   ],
+   "why": "The poet's own life on the farm is her personal context, and it shapes what she writes about. The reader's culture is not the composer's context, so it cannot explain why she chose these ideas.",
+   "clue": "Think about what she lived through herself."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya writes a play in a country where the government bans criticism of its leaders. She sets the play in an imaginary kingdom with a foolish king. Which statement best explains her choice of setting?",
+   "opts": [
+    "Her political context makes a disguised setting safer",
+    "Her personal tastes mean she dislikes real settings",
+    "Her cultural traditions require every play to have a king",
+    "Her readers today want plays set in imaginary places"
+   ],
+   "why": "The ban on criticism is part of Priya's political context, and it can shape how she presents her ideas, here in disguise. The wishes of readers today are not the composer's context, and nothing in the case says tradition requires a king.",
+   "clue": "What danger does the ban create for a writer?"
+  }
+ },
+ "cleared_by": "auto"
 }

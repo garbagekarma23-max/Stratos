@@ -24,8 +24,127 @@
    0.412
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.0064,
+  "check": 0.00746
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, sci-conservation-energy, covers energy being conserved but not the open and closed system distinction about whether matter can enter or leave, which the brief teaches, so it would need a new step rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Conservation of energy",
+  "card": [
+   "Energy cannot be made or destroyed. It can only be changed from one form to another or moved from one place to another.",
+   "The total amount of energy stays the same. When a toaster seems to \"use up\" energy, the energy has really spread out into the surroundings, mostly as heat.",
+   [
+    "Open system",
+    "energy and matter can both enter and leave. A pot of boiling water with no lid is one: heat and steam both escape."
+   ],
+   [
+    "Closed system",
+    "only energy can enter and leave, and matter cannot. A sealed jar of hot soup is one: heat can escape through the glass, but the soup stays inside."
+   ]
+  ],
+  "remember": "Energy is never lost, only changed or moved. Open systems swap energy and matter, closed systems swap only energy.",
+  "a": {
+   "q": "A student says a rolling ball stops and so its energy has been destroyed. What is the best reply?",
+   "opts": [
+    "The energy has moved to the surroundings, mostly as heat",
+    "The energy was destroyed by friction as the ball slowed",
+    "The ball made new energy to replace what it lost",
+    "The energy has stayed inside the ball as kinetic energy"
+   ],
+   "why": "Energy is never destroyed. Friction moves the ball's energy to the ground and the air, mostly as heat. Saying friction destroys it is tempting, but that would break the rule that energy cannot be destroyed.",
+   "clue": "Where could the energy go if it cannot disappear?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia seals hot tea in a thermos flask with the lid on tight. Heat slowly escapes through the walls. Which system is the tea, and why?",
+   "opts": [
+    "Closed, because energy can leave but matter cannot",
+    "Open, because energy can leave the flask as heat",
+    "Closed, because neither energy nor matter can leave",
+    "Open, because matter can enter and leave the tea"
+   ],
+   "why": "With the lid on, no matter enters or leaves, but heat still escapes, so it is a closed system. It is not a system where nothing can leave, because energy still moves out.",
+   "clue": "Check what can cross the boundary: energy, matter or both?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The energy has moved to the surroundings, mostly as heat",
+   "also_right": []
+  },
+  "b": {
+   "best": "Closed, because energy can leave but matter cannot",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Conservation of energy",
+  "card": [
+   "Energy cannot be made or destroyed. It can only be changed from one form to another or moved from one place to another.",
+   "The total amount of energy stays the same. When a toaster seems to \"use up\" energy, the energy has really spread out into the surroundings, mostly as heat.",
+   [
+    "Open system",
+    "energy and matter can both enter and leave. A pot of boiling water with no lid is one: heat and steam both escape."
+   ],
+   [
+    "Closed system",
+    "only energy can enter and leave, and matter cannot. A sealed jar of hot soup is one: heat can escape through the glass, but the soup stays inside."
+   ]
+  ],
+  "remember": "Energy is never lost, only changed or moved. Open systems swap energy and matter, closed systems swap only energy.",
+  "a": {
+   "q": "A student says a rolling ball stops and so its energy has been destroyed. What is the best reply?",
+   "opts": [
+    "The energy has moved to the surroundings, mostly as heat",
+    "The energy was destroyed by friction as the ball slowed",
+    "The ball made new energy to replace what it lost",
+    "The energy has stayed inside the ball as kinetic energy"
+   ],
+   "why": "Energy is never destroyed. Friction moves the ball's energy to the ground and the air, mostly as heat. Saying friction destroys it is tempting, but that would break the rule that energy cannot be destroyed.",
+   "clue": "Where could the energy go if it cannot disappear?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia seals hot tea in a thermos flask with the lid on tight. Heat slowly escapes through the walls. Which system is the tea, and why?",
+   "opts": [
+    "Closed, because energy can leave but matter cannot",
+    "Open, because energy can leave the flask as heat",
+    "Closed, because neither energy nor matter can leave",
+    "Open, because matter can enter and leave the tea"
+   ],
+   "why": "With the lid on, no matter enters or leaves, but heat still escapes, so it is a closed system. It is not a system where nothing can leave, because energy still moves out.",
+   "clue": "Check what can cross the boundary: energy, matter or both?"
+  }
+ },
+ "cleared_by": "checker"
 }

@@ -20,8 +20,222 @@
    0.213
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:45Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:49Z write: failed the content check, writing again",
+  "2026-11-20T12:44:55Z write: done",
+  "2026-11-20T12:53:24Z check: flagged",
+  "2026-11-20T12:59:58Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.01288,
+  "check": 0.01289,
+  "fix": 0.0168,
+  "recheck": 0.00791
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches what Australia imports (cars, fuel, electronics) or lists its farm and resource exports together, and the closest match, the Asia trade card, covers only exports to Asia at a Year 9 Economics depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Australia's trade",
+  "card": [
+   [
+    "Exports",
+    "Exports are goods and services that Australia sells to other countries. They include resources such as iron ore, coal and gas, farm products such as wheat and beef, and education."
+   ],
+   [
+    "Imports",
+    "Imports are goods and services that Australia buys from other countries. They include cars, fuel and electronics such as phones and computers."
+   ],
+   "Education is a service export. When an overseas student pays to study at an Australian university, Australia earns money from another country.",
+   "Many of Australia's exports are raw materials or farm products. Many of its imports are made goods, though Australia also buys fuel from overseas."
+  ],
+  "remember": "Australia sells resources, farm products and education, and buys cars, fuel and electronics.",
+  "a": {
+   "q": "A shipment leaves an Australian port bound for a buyer overseas. Which cargo would be part of Australia's exports?",
+   "opts": [
+    "Iron ore sold to a steel maker in another country",
+    "Cars bought from a factory in another country",
+    "Phones bought from a company in another country",
+    "Fuel bought from a refinery in another country"
+   ],
+   "why": "An export is sold to another country, and iron ore is one of Australia's main exports. The other three are bought from overseas, so they are imports.",
+   "clue": "An export is sold out of Australia, not bought in."
+  },
+  "b": {
+   "d": 3,
+   "q": "A university in Armidale enrols students from Vietnam who pay fees to study there. How is this trade best described?",
+   "opts": [
+    "A service export, because money comes in from overseas",
+    "A service import, because the students come from overseas",
+    "A goods export, because the students pay to learn",
+    "A goods import, because the students arrive from abroad"
+   ],
+   "why": "Education is work done for people, so it is a service. The fees are paid by people from another country to an Australian provider, so it is an export. It is not an import just because the students travel here.",
+   "clue": "Ask who is paid, and which country they are in."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Iron ore sold to a steel maker in another country",
+   "also_right": []
+  },
+  "b": {
+   "best": "A service export, because money comes in from overseas",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem says the shipment leaves an Australian port for a buyer overseas. That describes every option, so phones, fuel or cars on that ship would also be leaving Australia (re-exports). Better to ask which cargo is one of Australia's main exports, or to drop the shipment set-up."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers check out. Question a's stem says every cargo is leaving Australia for an overseas buyer, which blurs why the phones, fuel and cars are imports, so the stem should be reworded."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The stem says the shipment leaves an Australian port for a buyer overseas. That describes every option, so phones, fuel or cars on that ship would also be leaving Australia (re-exports). Better to ask which cargo is one of Australia's main exports, or to drop the shipment set-up."
+ ],
+ "proposal": {
+  "title": "Australia's trade",
+  "card": [
+   [
+    "Exports",
+    "Exports are goods and services that Australia sells to other countries. They include resources such as iron ore, coal and gas, farm products such as wheat and beef, and education."
+   ],
+   [
+    "Imports",
+    "Imports are goods and services that Australia buys from other countries. They include cars, fuel and electronics such as phones and computers."
+   ],
+   "Education is a service export. When an overseas student pays to study at an Australian university, Australia earns money from another country.",
+   "Many of Australia's exports are raw materials or farm products. Many of its imports are made goods. Australia exports gas, but it buys much of its petrol and diesel fuel from overseas."
+  ],
+  "remember": "Australia sells resources, farm products and education, and buys cars, fuel and electronics.",
+  "a": {
+   "q": "Which list is made up only of things Australia mainly exports?",
+   "opts": [
+    "Iron ore, wheat and education",
+    "Iron ore, cars and education",
+    "Coal, phones and beef",
+    "Gas, petrol fuel and wheat"
+   ],
+   "why": "Iron ore is a resource, wheat is a farm product and education is a service, and Australia sells all three overseas. The list with gas is tempting, but Australia buys much of its petrol fuel from other countries, so fuel is an import.",
+   "clue": "Gas and petrol fuel are not on the same side of Australia's trade."
+  },
+  "b": {
+   "d": 3,
+   "q": "A university in Armidale enrols students from Vietnam who pay fees to study there. How is this trade best described?",
+   "opts": [
+    "A service export, because money comes in from overseas",
+    "A service import, because the students come from overseas",
+    "A goods export, because the students pay to learn",
+    "A goods import, because the students arrive from abroad"
+   ],
+   "why": "Education is work done for people, so it is a service. The fees are paid by people from another country to an Australian provider, so it is an export. It is not an import just because the students travel here.",
+   "clue": "Ask who is paid, and which country they are in."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Iron ore, wheat and education",
+    "also_right": []
+   },
+   "b": {
+    "best": "A service export, because money comes in from overseas",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 16,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem says the shipment leaves an Australian port for a buyer overseas. That describes every option, so phones, fuel or cars on that ship would also be leaving Australia (re-exports). Better to ask which cargo is one of Australia's main exports, or to drop the shipment set-up."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The stem says the shipment leaves an Australian port for a buyer overseas. That describes every option, so phones, fuel or cars on that ship would also be leaving Australia (re-exports). Better to ask which cargo is one of Australia's main exports, or to drop the shipment set-up."
+  ]
+ },
+ "final": {
+  "title": "Australia's trade",
+  "card": [
+   [
+    "Exports",
+    "Exports are goods and services that Australia sells to other countries. They include resources such as iron ore, coal and gas, farm products such as wheat and beef, and education."
+   ],
+   [
+    "Imports",
+    "Imports are goods and services that Australia buys from other countries. They include cars, fuel and electronics such as phones and computers."
+   ],
+   "Education is a service export. When an overseas student pays to study at an Australian university, Australia earns money from another country.",
+   "Many of Australia's exports are raw materials or farm products. Many of its imports are made goods. Australia exports gas, but it buys much of its petrol and diesel fuel from overseas."
+  ],
+  "remember": "Australia sells resources, farm products and education, and buys cars, fuel and electronics.",
+  "a": {
+   "q": "Which list is made up only of things Australia mainly exports?",
+   "opts": [
+    "Iron ore, wheat and education",
+    "Iron ore, cars and education",
+    "Coal, phones and beef",
+    "Gas, petrol fuel and wheat"
+   ],
+   "why": "Iron ore is a resource, wheat is a farm product and education is a service, and Australia sells all three overseas. The list with gas is tempting, but Australia buys much of its petrol fuel from other countries, so fuel is an import.",
+   "clue": "Gas and petrol fuel are not on the same side of Australia's trade."
+  },
+  "b": {
+   "d": 3,
+   "q": "A university in Armidale enrols students from Vietnam who pay fees to study there. How is this trade best described?",
+   "opts": [
+    "A service export, because money comes in from overseas",
+    "A service import, because the students come from overseas",
+    "A goods export, because the students pay to learn",
+    "A goods import, because the students arrive from abroad"
+   ],
+   "why": "Education is work done for people, so it is a service. The fees are paid by people from another country to an Australian provider, so it is an export. It is not an import just because the students travel here.",
+   "clue": "Ask who is paid, and which country they are in."
+  }
+ },
+ "cleared_by": "recheck"
 }

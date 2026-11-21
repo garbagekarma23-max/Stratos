@@ -8,8 +8,139 @@
    0.207
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 8e-05,
+  "write": 0.00586,
+  "check": 0.00974
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers types of work (full-time, part-time, casual, unpaid) rather than the methods of payment (hourly wages, salary, commission, piece rates), so it teaches a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "How people are paid",
+  "card": [
+   [
+    "Wages",
+    "a set rate for each hour worked. Pay rises or falls with the hours, so a worker who does more hours earns more."
+   ],
+   [
+    "Salary",
+    "a set amount for the year, usually paid in equal parts such as fortnightly. The pay stays the same even if the hours change a little."
+   ],
+   [
+    "Commission",
+    "a payment based on the value of what a worker sells, often a percentage of sales. More sales mean more pay."
+   ],
+   [
+    "Piece rate",
+    "a set payment for each item a worker makes. More items made mean more pay."
+   ]
+  ],
+  "remember": "Wages pay for hours, salary pays for the year, commission pays for sales and piece rates pay for items made.",
+  "a": {
+   "q": "Jai is paid $4 for every cap he sews at a factory. Which way is he paid?",
+   "opts": [
+    "Piece rate",
+    "Commission",
+    "Wages",
+    "Salary"
+   ],
+   "why": "Jai is paid for each item he makes, which is a piece rate. Commission is tempting because pay depends on output, but commission is based on the value of sales, not items made.",
+   "clue": "What is Jai paid for: hours, sales or items made?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya sells cars in Newcastle and earns 3% of the value of every car she sells. In a quiet month she sells no cars. What is true of her pay?",
+   "opts": [
+    "It is commission, so it falls when sales fall",
+    "It is a salary, so it stays the same each month",
+    "It is a piece rate, so it depends on items made",
+    "It is wages, so it depends on the hours she works"
+   ],
+   "why": "Priya is paid a percentage of the value of her sales, which is commission, so her pay falls when she sells less. A piece rate is tempting because she sells items, but a piece rate is paid for items made, not a share of sales value.",
+   "clue": "Look at what her 3% is taken from."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Piece rate",
+   "also_right": []
+  },
+  "b": {
+   "best": "It is commission, so it falls when sales fall",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "How people are paid",
+  "card": [
+   [
+    "Wages",
+    "a set rate for each hour worked. Pay rises or falls with the hours, so a worker who does more hours earns more."
+   ],
+   [
+    "Salary",
+    "a set amount for the year, usually paid in equal parts such as fortnightly. The pay stays the same even if the hours change a little."
+   ],
+   [
+    "Commission",
+    "a payment based on the value of what a worker sells, often a percentage of sales. More sales mean more pay."
+   ],
+   [
+    "Piece rate",
+    "a set payment for each item a worker makes. More items made mean more pay."
+   ]
+  ],
+  "remember": "Wages pay for hours, salary pays for the year, commission pays for sales and piece rates pay for items made.",
+  "a": {
+   "q": "Jai is paid $4 for every cap he sews at a factory. Which way is he paid?",
+   "opts": [
+    "Piece rate",
+    "Commission",
+    "Wages",
+    "Salary"
+   ],
+   "why": "Jai is paid for each item he makes, which is a piece rate. Commission is tempting because pay depends on output, but commission is based on the value of sales, not items made.",
+   "clue": "What is Jai paid for: hours, sales or items made?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya sells cars in Newcastle and earns 3% of the value of every car she sells. In a quiet month she sells no cars. What is true of her pay?",
+   "opts": [
+    "It is commission, so it falls when sales fall",
+    "It is a salary, so it stays the same each month",
+    "It is a piece rate, so it depends on items made",
+    "It is wages, so it depends on the hours she works"
+   ],
+   "why": "Priya is paid a percentage of the value of her sales, which is commission, so her pay falls when she sells less. A piece rate is tempting because she sells items, but a piece rate is paid for items made, not a share of sales value.",
+   "clue": "Look at what her 3% is taken from."
+  }
+ },
+ "cleared_by": "checker"
 }

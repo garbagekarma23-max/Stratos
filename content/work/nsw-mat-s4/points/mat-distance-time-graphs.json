@@ -12,8 +12,354 @@
    0.275
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 may adapt mat-speed-distance-time, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:53Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:53Z write: done",
+  "2026-11-20T12:44:57Z check: flagged",
+  "2026-11-20T12:53:27Z fix: suggested",
+  "2026-11-20T13:23:42Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "confirm": 0.0084,
+  "write": 0.00833,
+  "check": 0.01085,
+  "fix": 0.01978
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-speed-distance-time",
+  "changes": [
+   "The card is written for Year 12 depth with gradient as rise over run and rearranged formulas, so it should be simplified to the Stage 4 idea that speed is distance divided by time read from a distance-time graph.",
+   "The worked examples and questions use km/h and hours at a level above Stage 4, so they should be replaced with a simpler Stage 4 example using whole-number distances and times.",
+   "The point should not rely on the gradient terminology or on the returning-to-start line, which goes beyond the single idea of reading speed as distance divided by time."
+  ],
+  "sure": "medium",
+  "reason": "The bank point covers the same speed-distance-time graph idea but is pitched at Year 12 depth, so it needs simplifying for Stage 4 rather than being reused as is.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-speed-distance-time, is broader: it also teaches rearranging the speed formula (one of its questions is on that) and frames speed as gradient, which NSW Stage 4 students may not have met yet, while the real-data graph point never deals with speed.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Distance-time graphs",
+  "card": [
+   "A distance-time graph has time across the bottom and distance from the start up the side. Each point shows how far something has travelled at that time.",
+   "A steeper line means a faster speed. A flat line means no movement, because the distance is not changing.",
+   "To find a speed, divide a distance by the time it took: speed \\(=\\) distance \\(\\div\\) time. Use any two points on a straight part of the line.",
+   [
+    "Example",
+    "Ava rides 10 km in the first 2 hours, then stops for 1 hour. Her speed is \\(10 \\div 2 = 5\\) km/h, then 0 km/h while the line is flat."
+   ]
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A distance-time graph for Ava. The line rises from \\((0, 0)\\) to \\((2, 10)\\), then is flat from \\((2, 10)\\) to \\((3, 10)\\).",
+    "x": {
+     "min": 0,
+     "max": 4,
+     "label": "Time (h)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 12,
+     "label": "Distance (km)",
+     "step": 2
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "A",
+      "points": [
+       [
+        0,
+        0
+       ],
+       [
+        2,
+        10
+       ],
+       [
+        3,
+        10
+       ]
+      ],
+      "label": "Ava",
+      "pos": "above-left",
+      "labelAt": 1
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       10
+      ],
+      "label": "\\((2, 10)\\)",
+      "pos": "above"
+     }
+    ]
+   }
+  },
+  "remember": "Steeper means faster, flat means stopped, and speed is distance divided by time.",
+  "a": {
+   "q": "On a distance-time graph, what does a flat line show?",
+   "opts": [
+    "The object is not moving",
+    "The object is moving slowly",
+    "The object is moving at a steady speed",
+    "The object is going back to the start"
+   ],
+   "why": "A flat line means the distance does not change while time passes, so the object is not moving. A slow object would still show a line that rises, just not steeply.",
+   "clue": "What happens to the distance as time goes on?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo walks 6 km in 2 hours, rests, then walks 6 km more in 1 hour. Which part of the graph is steeper, and what is the speed there?",
+   "opts": [
+    "The second part, at 6 km/h",
+    "The first part, at 3 km/h",
+    "The second part, at 3 km/h",
+    "The first part, at 6 km/h"
+   ],
+   "why": "The first part is \\(6 \\div 2 = 3\\) km/h. The second part is \\(6 \\div 1 = 6\\) km/h. The distance is the same, but the second part takes less time, so it is faster and steeper.",
+   "clue": "Divide each distance by its own time and compare."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The object is not moving",
+   "also_right": []
+  },
+  "b": {
+   "best": "The second part, at 6 km/h",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The first line says the vertical axis is 'distance from the start', then says each point shows 'how far something has travelled'. These differ when an object turns back: distance travelled never decreases, but distance from the start does. One consistent phrase, such as 'distance from the start', would avoid confusion."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, graph, questions and explanations are correct. There is one minor wording point: the card mixes 'distance from the start' with 'how far something has travelled' when describing the vertical axis."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The first line says the vertical axis is 'distance from the start', then says each point shows 'how far something has travelled'. These differ when an object turns back: distance travelled never decreases, but distance from the start does. One consistent phrase, such as 'distance from the start', would avoid confusion."
+ ],
+ "proposal": {
+  "title": "Distance-time graphs",
+  "card": [
+   "A distance-time graph has time across the bottom and distance from the start up the side. Each point shows how far from the start something is at that time.",
+   "A steeper line means a faster speed. A flat line means no movement, because the distance from the start is not changing.",
+   "To find a speed, divide a distance by the time it took: speed \\(=\\) distance \\(\\div\\) time. Use any two points on a straight part of the line.",
+   "For example, Ava rides 10 km in the first 2 hours, then stops for 1 hour. Her speed is \\(10 \\div 2 = 5\\) km/h, then 0 km/h while the line is flat."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A distance-time graph for Ava. The line rises from \\((0, 0)\\) to \\((2, 10)\\), then is flat from \\((2, 10)\\) to \\((3, 10)\\).",
+    "x": {
+     "min": 0,
+     "max": 4,
+     "label": "Time (h)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 12,
+     "label": "Distance (km)",
+     "step": 2
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "A",
+      "points": [
+       [
+        0,
+        0
+       ],
+       [
+        2,
+        10
+       ],
+       [
+        3,
+        10
+       ]
+      ],
+      "label": "Ava",
+      "pos": "above-left",
+      "labelAt": 1
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       10
+      ],
+      "on": [
+       "A"
+      ],
+      "label": "\\((2, 10)\\)",
+      "pos": "above"
+     }
+    ]
+   }
+  },
+  "remember": "Steeper means faster, flat means stopped, and speed is distance divided by time.",
+  "a": {
+   "q": "On a distance-time graph, what does a flat line show?",
+   "opts": [
+    "The object is not moving",
+    "The object is moving slowly",
+    "The object is moving at a steady speed",
+    "The object is going back to the start"
+   ],
+   "why": "A flat line means the distance from the start does not change while time passes, so the object is not moving. A slow object would still show a line that rises, just not steeply.",
+   "clue": "What happens to the distance as time goes on?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo walks 6 km in 2 hours, rests, then walks 6 km more in 1 hour. Which part of the graph is steeper, and what is the speed there?",
+   "opts": [
+    "The second part, at 6 km/h",
+    "The first part, at 3 km/h",
+    "The second part, at 3 km/h",
+    "The first part, at 6 km/h"
+   ],
+   "why": "The first part is \\(6 \\div 2 = 3\\) km/h. The second part is \\(6 \\div 1 = 6\\) km/h. The distance is the same, but the second part takes less time, so it is faster and steeper.",
+   "clue": "Divide each distance by its own time and compare."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:42Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The first line says the vertical axis is 'distance from the start', then says each point shows 'how far something has travelled'. These differ when an object turns back: distance travelled never decreases, but distance from the start does. One consistent phrase, such as 'distance from the start', would avoid confusion."
+   }
+  ],
+  "flags": [
+   "Card, wording: The first line says the vertical axis is 'distance from the start', then says each point shows 'how far something has travelled'. These differ when an object turns back: distance travelled never decreases, but distance from the start does. One consistent phrase, such as 'distance from the start', would avoid confusion."
+  ]
+ },
+ "final": {
+  "title": "Distance-time graphs",
+  "card": [
+   "A distance-time graph has time across the bottom and distance from the start up the side. Each point shows how far from the start something is at that time.",
+   "A steeper line means a faster speed. A flat line means no movement, because the distance from the start is not changing.",
+   "To find a speed, divide a distance by the time it took: speed \\(=\\) distance \\(\\div\\) time. Use any two points on a straight part of the line.",
+   "For example, Ava rides 10 km in the first 2 hours, then stops for 1 hour. Her speed is \\(10 \\div 2 = 5\\) km/h, then 0 km/h while the line is flat."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A distance-time graph for Ava. The line rises from \\((0, 0)\\) to \\((2, 10)\\), then is flat from \\((2, 10)\\) to \\((3, 10)\\).",
+    "x": {
+     "min": 0,
+     "max": 4,
+     "label": "Time (h)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 12,
+     "label": "Distance (km)",
+     "step": 2
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "A",
+      "points": [
+       [
+        0,
+        0
+       ],
+       [
+        2,
+        10
+       ],
+       [
+        3,
+        10
+       ]
+      ],
+      "label": "Ava",
+      "pos": "above-left",
+      "labelAt": 1
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       10
+      ],
+      "on": [
+       "A"
+      ],
+      "label": "\\((2, 10)\\)",
+      "pos": "above"
+     }
+    ]
+   }
+  },
+  "remember": "Steeper means faster, flat means stopped, and speed is distance divided by time.",
+  "a": {
+   "q": "On a distance-time graph, what does a flat line show?",
+   "opts": [
+    "The object is not moving",
+    "The object is moving slowly",
+    "The object is moving at a steady speed",
+    "The object is going back to the start"
+   ],
+   "why": "A flat line means the distance from the start does not change while time passes, so the object is not moving. A slow object would still show a line that rises, just not steeply.",
+   "clue": "What happens to the distance as time goes on?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo walks 6 km in 2 hours, rests, then walks 6 km more in 1 hour. Which part of the graph is steeper, and what is the speed there?",
+   "opts": [
+    "The second part, at 6 km/h",
+    "The first part, at 3 km/h",
+    "The second part, at 3 km/h",
+    "The first part, at 6 km/h"
+   ],
+   "why": "The first part is \\(6 \\div 2 = 3\\) km/h. The second part is \\(6 \\div 1 = 6\\) km/h. The distance is the same, but the second part takes less time, so it is faster and steeper.",
+   "clue": "Divide each distance by its own time and compare."
+  }
+ },
+ "cleared_by": "auto"
 }

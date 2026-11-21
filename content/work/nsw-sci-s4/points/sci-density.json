@@ -12,8 +12,200 @@
    0.238
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:00Z write: done",
+  "2026-11-20T12:35:56Z check: flagged",
+  "2026-11-20T12:45:00Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.01185,
+  "check": 0.00842,
+  "fix": 0.01723,
+  "recheck": 0.00792
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Both bank points teach population density in geography (people per square kilometre), which is a different idea from the mass-per-volume density, displacement and floating taught by the new science point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Density",
+  "card": [
+   "Density tells you how much mass is packed into a volume. Density = mass ÷ volume. It is often measured in g/cm³.",
+   "For example, 200 g of a material that takes up 50 cm³ has a density of 200 ÷ 50 = 4 g/cm³.",
+   "The volume of an irregular object can be found by displacement. Put it in water and measure how much the water level rises. That rise is the object's volume.",
+   "An object floats on a liquid if it is less dense than the liquid. It sinks if it is denser. Water has a density of about 1 g/cm³."
+  ],
+  "remember": "Density is mass ÷ volume. Less dense than the liquid means it floats.",
+  "a": {
+   "q": "A rock has a mass of 90 g and a volume of 30 cm³. What is its density?",
+   "opts": [
+    "3 g/cm³",
+    "0.33 g/cm³",
+    "60 g/cm³",
+    "120 g/cm³"
+   ],
+   "why": "Density = mass ÷ volume = 90 ÷ 30 = 3 g/cm³. Dividing volume by mass gives 0.33, which is the wrong way round.",
+   "clue": "Divide mass by volume."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ana drops a lumpy stone into a measuring cylinder. The water rises from 40 mL to 55 mL, and the stone's mass is 30 g. Will it float in water?",
+   "opts": [
+    "No, its density is 2 g/cm³, which is more than water",
+    "Yes, its density is 2 g/cm³, which is more than water",
+    "No, its density is 0.5 g/cm³, which is less than water",
+    "Yes, its density is 0.5 g/cm³, which is less than water"
+   ],
+   "why": "The volume is 55 - 40 = 15 mL, which is 15 cm³. Density = 30 ÷ 15 = 2 g/cm³. This is more than water's 1 g/cm³, so the stone sinks.",
+   "clue": "The rise in water level is the stone's volume."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "3 g/cm³",
+   "also_right": []
+  },
+  "b": {
+   "best": "No, its density is 2 g/cm³, which is more than water",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The question gives the water rise in mL, but the card only uses cm³ and never says that 1 mL = 1 cm³. Students need this fact to get an answer in g/cm³. It is explained only in the why. Add it to the card's displacement line."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct (3 g/cm³; the stone sinks at 2 g/cm³). Question b relies on 1 mL = 1 cm³, which the card does not teach."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, level: The question gives the water rise in mL, but the card only uses cm³ and never says that 1 mL = 1 cm³. Students need this fact to get an answer in g/cm³. It is explained only in the why. Add it to the card's displacement line."
+ ],
+ "proposal": {
+  "title": "Density",
+  "card": [
+   "Density tells you how much mass is packed into a volume. Density = mass ÷ volume. It is often measured in g/cm³.",
+   "For example, 200 g of a material that takes up 50 cm³ has a density of 200 ÷ 50 = 4 g/cm³.",
+   "The volume of an irregular object can be found by displacement: put it in water, and the rise in water level is its volume. Since 1 mL = 1 cm³, a 10 mL rise means a volume of 10 cm³.",
+   "An object floats on a liquid if it is less dense than the liquid. It sinks if it is denser. Water has a density of about 1 g/cm³."
+  ],
+  "remember": "Density is mass ÷ volume. Less dense than the liquid means it floats.",
+  "a": {
+   "q": "A rock has a mass of 90 g and a volume of 30 cm³. What is its density?",
+   "opts": [
+    "3 g/cm³",
+    "0.33 g/cm³",
+    "60 g/cm³",
+    "120 g/cm³"
+   ],
+   "why": "Density = mass ÷ volume = 90 ÷ 30 = 3 g/cm³. Dividing volume by mass gives 0.33, which is the wrong way round.",
+   "clue": "Divide mass by volume."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ana drops a lumpy stone into a measuring cylinder of water. The water rises from 40 mL to 55 mL, and the stone's mass is 30 g. Will it float in water?",
+   "opts": [
+    "No, its density is 2 g/cm³, which is more than water",
+    "Yes, its density is 2 g/cm³, which is more than water",
+    "No, its density is 0.5 g/cm³, which is less than water",
+    "Yes, its density is 0.5 g/cm³, which is less than water"
+   ],
+   "why": "The volume is 55 - 40 = 15 mL, which is 15 cm³. Density = 30 ÷ 15 = 2 g/cm³. This is more than water's 1 g/cm³, so the stone sinks. Dividing volume by mass gives 0.5, which is the wrong way round.",
+   "clue": "The rise in water level is the stone's volume."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "3 g/cm³",
+    "also_right": []
+   },
+   "b": {
+    "best": "No, its density is 2 g/cm³, which is more than water",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The question gives the water rise in mL, but the card only uses cm³ and never says that 1 mL = 1 cm³. Students need this fact to get an answer in g/cm³. It is explained only in the why. Add it to the card's displacement line."
+   }
+  ],
+  "flags": [
+   "Question b, level: The question gives the water rise in mL, but the card only uses cm³ and never says that 1 mL = 1 cm³. Students need this fact to get an answer in g/cm³. It is explained only in the why. Add it to the card's displacement line."
+  ]
+ },
+ "final": {
+  "title": "Density",
+  "card": [
+   "Density tells you how much mass is packed into a volume. Density = mass ÷ volume. It is often measured in g/cm³.",
+   "For example, 200 g of a material that takes up 50 cm³ has a density of 200 ÷ 50 = 4 g/cm³.",
+   "The volume of an irregular object can be found by displacement: put it in water, and the rise in water level is its volume. Since 1 mL = 1 cm³, a 10 mL rise means a volume of 10 cm³.",
+   "An object floats on a liquid if it is less dense than the liquid. It sinks if it is denser. Water has a density of about 1 g/cm³."
+  ],
+  "remember": "Density is mass ÷ volume. Less dense than the liquid means it floats.",
+  "a": {
+   "q": "A rock has a mass of 90 g and a volume of 30 cm³. What is its density?",
+   "opts": [
+    "3 g/cm³",
+    "0.33 g/cm³",
+    "60 g/cm³",
+    "120 g/cm³"
+   ],
+   "why": "Density = mass ÷ volume = 90 ÷ 30 = 3 g/cm³. Dividing volume by mass gives 0.33, which is the wrong way round.",
+   "clue": "Divide mass by volume."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ana drops a lumpy stone into a measuring cylinder of water. The water rises from 40 mL to 55 mL, and the stone's mass is 30 g. Will it float in water?",
+   "opts": [
+    "No, its density is 2 g/cm³, which is more than water",
+    "Yes, its density is 2 g/cm³, which is more than water",
+    "No, its density is 0.5 g/cm³, which is less than water",
+    "Yes, its density is 0.5 g/cm³, which is less than water"
+   ],
+   "why": "The volume is 55 - 40 = 15 mL, which is 15 cm³. Density = 30 ÷ 15 = 2 g/cm³. This is more than water's 1 g/cm³, so the stone sinks. Dividing volume by mass gives 0.5, which is the wrong way round.",
+   "clue": "The rise in water level is the stone's volume."
+  }
+ },
+ "cleared_by": "recheck"
 }

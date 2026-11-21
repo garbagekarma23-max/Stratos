@@ -12,8 +12,644 @@
    0.257
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 says reuse geo-scatter-graphs-correlation, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:47Z confirm: Claude Opus 5.5 may adapt geo-scatter-graphs-correlation, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt geo-scatter-graphs-correlation (1 change)",
+  "2026-11-20T14:02:37Z claude-code review: adapting geo-scatter-graphs-correlation on the next run",
+  "2026-11-20T14:12:38Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "confirm": 0.00838,
+  "adapt": 0.01021,
+  "check": 0.00901
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "geo-scatter-graphs-correlation",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches positive, negative and no correlation in scatter graphs at a depth that suits NSW Stage 5, and its questions and examples are fair for Geography students.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "geo-scatter-graphs-correlation",
+  "changes": [
+   "Use the term 'scatter plot' instead of 'scatter graph' throughout the card, remember line and questions, to match the course's wording."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea at a Year 10 geography depth, but it calls the graph a 'scatter graph' while this course uses 'scatter plot', so only the term needs changing.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "geo-scatter-graphs-correlation",
+  "changes": [
+   "Use the term scatter plot instead of scatter graph in the title, card, remember line, questions, whys and graph descriptions, to match this course's chapter."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "title",
+   "card1",
+   "card2 fig",
+   "card3 fig",
+   "remember",
+   "a.q",
+   "a.why",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same idea at the right depth, and its graphs show a clear positive and negative correlation. It calls the graph a scatter graph, while this chapter calls it a scatter plot, so only the term needs changing.",
+   "item": "340c8c4946dd46be",
+   "result": "decided",
+   "saved": {
+    "id": "geo-scatter-plots-correlation",
+    "title": "Scatter plots and correlation",
+    "brief": "bd3ce4c0fbd0",
+    "shortlist": [
+     [
+      "geo-scatter-graphs-correlation",
+      0.605
+     ],
+     [
+      "sci-correlation-causation",
+      0.257
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00024,
+     "confirm": 0.00838
+    },
+    "match": {
+     "verdict": "reuse",
+     "same": "geo-scatter-graphs-correlation",
+     "changes": [],
+     "sure": "high",
+     "reason": "The bank point teaches positive, negative and no correlation in scatter graphs at a depth that suits NSW Stage 5, and its questions and examples are fair for Geography students.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "geo-scatter-graphs-correlation",
+     "changes": [
+      "Use the term 'scatter plot' instead of 'scatter graph' throughout the card, remember line and questions, to match the course's wording."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same idea at a Year 10 geography depth, but it calls the graph a 'scatter graph' while this course uses 'scatter plot', so only the term needs changing.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "75aa0bd5d7edbf1e"
+  }
+ ],
+ "draft": {
+  "title": "Scatter plots and correlation",
+  "card": [
+   "A scatter plot plots two measures for many places. Each place is one dot, placed by its value on each measure.",
+   [
+    "Positive correlation",
+    "the dots slope upward. As one measure rises, the other tends to rise too."
+   ],
+   [
+    "Negative correlation",
+    "the dots slope downward. As one measure rises, the other tends to fall."
+   ],
+   "If the dots are scattered with no pattern, there is no correlation. A correlation shows a link, not a cause, because a third factor may affect both measures or the link may be chance."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A scatter plot of two measures for 13 places, one dot each. The dots slope upward from left to right: as the first measure rises, the second tends to rise too. This is a positive correlation.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "First measure"
+    },
+    "y": {
+     "min": 0,
+     "max": 9,
+     "label": "Second measure"
+    },
+    "items": [
+     {
+      "type": "point",
+      "at": [
+       1,
+       1.8
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1.6,
+       1.2
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2.2,
+       2.9
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2.9,
+       2.2
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3.5,
+       3.6
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4.1,
+       3
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4.8,
+       4.6
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5.4,
+       3.9
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6.1,
+       5.4
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6.7,
+       4.9
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       7.4,
+       6.3
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       8.2,
+       6
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       8.8,
+       7.4
+      ]
+     }
+    ]
+   },
+   "3": {
+    "kind": "graph",
+    "alt": "A scatter plot of two measures for 13 places, one dot each. The dots slope downward from left to right: as the first measure rises, the second tends to fall. This is a negative correlation.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "First measure"
+    },
+    "y": {
+     "min": 0,
+     "max": 9,
+     "label": "Second measure"
+    },
+    "items": [
+     {
+      "type": "point",
+      "at": [
+       1,
+       7.2
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1.6,
+       7.8
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2.2,
+       6.1
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2.9,
+       6.8
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3.5,
+       5.4
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4.1,
+       6
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4.8,
+       4.4
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5.4,
+       5.1
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6.1,
+       3.6
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6.7,
+       4.1
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       7.4,
+       2.7
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       8.2,
+       3
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       8.8,
+       1.6
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "A scatter plot shows whether two measures are linked. It does not show that one causes the other.",
+  "a": {
+   "q": "A scatter plot of 30 countries has dots that slope downward from left to right. What does this show about the two measures?",
+   "opts": [
+    "They have a negative correlation",
+    "They have a positive correlation",
+    "They have no correlation",
+    "One measure causes the other to fall"
+   ],
+   "why": "Dots that slope downward mean one measure tends to fall as the other rises, which is a negative correlation. A downward slope shows a link only, so saying one measure causes the other goes beyond what the scatter plot shows.",
+   "clue": "Look at the direction the dots slope."
+  },
+  "b": {
+   "d": 3,
+   "q": "A scatter plot of 40 Australian towns shows that towns with more ice cream sales also have more sunburn cases. What can be concluded?",
+   "opts": [
+    "The measures rise together, but this does not prove a cause",
+    "Eating more ice cream causes people to get sunburnt",
+    "Sunburn cases cause ice cream sales to rise",
+    "The graph shows there is no link between the measures"
+   ],
+   "why": "The dots show a positive correlation, so the measures rise together. A correlation does not prove cause, and a third factor such as hot weather may affect both. Claiming ice cream causes sunburn treats a link as a cause.",
+   "clue": "Could something else, such as the weather, affect both measures?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "They have a negative correlation",
+   "also_right": []
+  },
+  "b": {
+   "best": "The measures rise together, but this does not prove a cause",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Scatter plots and correlation",
+  "card": [
+   "A scatter plot plots two measures for many places. Each place is one dot, placed by its value on each measure.",
+   [
+    "Positive correlation",
+    "the dots slope upward. As one measure rises, the other tends to rise too."
+   ],
+   [
+    "Negative correlation",
+    "the dots slope downward. As one measure rises, the other tends to fall."
+   ],
+   "If the dots are scattered with no pattern, there is no correlation. A correlation shows a link, not a cause, because a third factor may affect both measures or the link may be chance."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A scatter plot of two measures for 13 places, one dot each. The dots slope upward from left to right: as the first measure rises, the second tends to rise too. This is a positive correlation.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "First measure"
+    },
+    "y": {
+     "min": 0,
+     "max": 9,
+     "label": "Second measure"
+    },
+    "items": [
+     {
+      "type": "point",
+      "at": [
+       1,
+       1.8
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1.6,
+       1.2
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2.2,
+       2.9
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2.9,
+       2.2
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3.5,
+       3.6
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4.1,
+       3
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4.8,
+       4.6
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5.4,
+       3.9
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6.1,
+       5.4
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6.7,
+       4.9
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       7.4,
+       6.3
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       8.2,
+       6
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       8.8,
+       7.4
+      ]
+     }
+    ]
+   },
+   "3": {
+    "kind": "graph",
+    "alt": "A scatter plot of two measures for 13 places, one dot each. The dots slope downward from left to right: as the first measure rises, the second tends to fall. This is a negative correlation.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "First measure"
+    },
+    "y": {
+     "min": 0,
+     "max": 9,
+     "label": "Second measure"
+    },
+    "items": [
+     {
+      "type": "point",
+      "at": [
+       1,
+       7.2
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1.6,
+       7.8
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2.2,
+       6.1
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2.9,
+       6.8
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3.5,
+       5.4
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4.1,
+       6
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4.8,
+       4.4
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5.4,
+       5.1
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6.1,
+       3.6
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6.7,
+       4.1
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       7.4,
+       2.7
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       8.2,
+       3
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       8.8,
+       1.6
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "A scatter plot shows whether two measures are linked. It does not show that one causes the other.",
+  "a": {
+   "q": "A scatter plot of 30 countries has dots that slope downward from left to right. What does this show about the two measures?",
+   "opts": [
+    "They have a negative correlation",
+    "They have a positive correlation",
+    "They have no correlation",
+    "One measure causes the other to fall"
+   ],
+   "why": "Dots that slope downward mean one measure tends to fall as the other rises, which is a negative correlation. A downward slope shows a link only, so saying one measure causes the other goes beyond what the scatter plot shows.",
+   "clue": "Look at the direction the dots slope."
+  },
+  "b": {
+   "d": 3,
+   "q": "A scatter plot of 40 Australian towns shows that towns with more ice cream sales also have more sunburn cases. What can be concluded?",
+   "opts": [
+    "The measures rise together, but this does not prove a cause",
+    "Eating more ice cream causes people to get sunburnt",
+    "Sunburn cases cause ice cream sales to rise",
+    "The graph shows there is no link between the measures"
+   ],
+   "why": "The dots show a positive correlation, so the measures rise together. A correlation does not prove cause, and a third factor such as hot weather may affect both. Claiming ice cream causes sunburn treats a link as a cause.",
+   "clue": "Could something else, such as the weather, affect both measures?"
+  }
+ }
 }

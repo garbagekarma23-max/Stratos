@@ -24,8 +24,269 @@
    0.296
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 says reuse mat-adding-subtracting-fractions, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:53Z confirm: Claude Opus 5.5 may adapt mat-adding-subtracting-fractions, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt mat-adding-subtracting-fractions (2 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting mat-adding-subtracting-fractions on the next run",
+  "2026-11-20T14:12:39Z adapt: done",
+  "2026-11-20T14:20:02Z check: flagged",
+  "2026-11-20T14:26:14Z fix: suggested",
+  "2026-11-20T14:43:16Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "confirm": 0.01171,
+  "adapt": 0.00769,
+  "check": 0.01465,
+  "fix": 0.02854
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-adding-subtracting-fractions",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches adding and subtracting fractions with common denominators and mixed numbers at the right depth for Year 7 and 8 Stage 4, and its content is general enough that no NSW-specific change is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-adding-subtracting-fractions",
+  "changes": [
+   "Use the term 'lowest common denominator' to name the common denominator the fractions are rewritten over, as the brief does.",
+   "Show the option of changing mixed numbers to improper fractions before adding or subtracting, alongside or instead of the regrouping method."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same skill at Year 7 depth and both questions suit NSW Stage 4, but it should use the 'lowest common denominator' term and show the improper-fraction method for mixed numbers that the brief names.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-adding-subtracting-fractions",
+  "changes": [
+   "Name the common denominator as the lowest common denominator, and call the top and bottom numbers the numerator and denominator, as the brief does.",
+   "Show changing mixed numbers to improper fractions before adding or subtracting, for example \\(2\\frac{1}{2} - \\frac{3}{4} = \\frac{10}{4} - \\frac{3}{4} = \\frac{7}{4} = 1\\frac{3}{4}\\), in place of or beside the regrouping method, and word question b's why and clue to match."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card1",
+   "card3",
+   "card4",
+   "remember",
+   "a.q",
+   "a.why",
+   "a.clue",
+   "b.q",
+   "b.why",
+   "b.clue"
+  ]
+ },
+ "cleared_by": "owner",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same skill at the right depth and its maths is right, but the brief asks for the lowest common denominator and the improper fraction method for mixed numbers, which the card does not name or show.",
+   "item": "19834880894a4d27",
+   "result": "decided",
+   "saved": {
+    "id": "mat-adding-subtracting-fractions-nsw",
+    "title": "Adding and subtracting fractions",
+    "brief": "554c2ca06129",
+    "shortlist": [
+     [
+      "mat-adding-subtracting-fractions",
+      0.704
+     ],
+     [
+      "mat-multiplying-dividing-fractions",
+      0.5
+     ],
+     [
+      "mat-operations-with-negative-fractions",
+      0.337
+     ],
+     [
+      "mat-converting-fractions-decimals-percentages",
+      0.309
+     ],
+     [
+      "mat-equivalent-fractions-simplest-form",
+      0.296
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.0002,
+     "confirm": 0.01171
+    },
+    "match": {
+     "verdict": "reuse",
+     "same": "mat-adding-subtracting-fractions",
+     "changes": [],
+     "sure": "high",
+     "reason": "The bank point teaches adding and subtracting fractions with common denominators and mixed numbers at the right depth for Year 7 and 8 Stage 4, and its content is general enough that no NSW-specific change is needed.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-adding-subtracting-fractions",
+     "changes": [
+      "Use the term 'lowest common denominator' to name the common denominator the fractions are rewritten over, as the brief does.",
+      "Show the option of changing mixed numbers to improper fractions before adding or subtracting, alongside or instead of the regrouping method."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same skill at Year 7 depth and both questions suit NSW Stage 4, but it should use the 'lowest common denominator' term and show the improper-fraction method for mixed numbers that the brief names.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "1951f14b4c8812e3"
+  }
+ ],
+ "draft": {
+  "title": "Adding and subtracting fractions",
+  "card": [
+   "To add or subtract, the fractions need the same denominator (the bottom number). If they differ, rewrite them as equivalent fractions over the lowest common denominator. This is the lowest common multiple of the denominators.",
+   "Example: \\(\\frac{1}{2} + \\frac{1}{3}\\). Over 6, this is \\(\\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}\\).",
+   "Once the denominators match, add or subtract the numerators (the top numbers) and keep the denominator the same. Do not add the denominators.",
+   "For mixed numbers, change them to improper fractions first. Example: \\(2\\frac{1}{2} - \\frac{3}{4} = \\frac{10}{4} - \\frac{3}{4} = \\frac{7}{4} = 1\\frac{3}{4}\\)."
+  ],
+  "remember": "Find the lowest common denominator first. Then add or subtract only the numerators.",
+  "a": {
+   "q": "Work out \\(\\frac{2}{3} + \\frac{1}{4}\\).",
+   "opts": [
+    "\\(\\frac{11}{12}\\)",
+    "\\(\\frac{3}{7}\\)",
+    "\\(\\frac{3}{12}\\)",
+    "\\(\\frac{9}{12}\\)"
+   ],
+   "why": "The lowest common denominator is 12. So \\(\\frac{2}{3} = \\frac{8}{12}\\) and \\(\\frac{1}{4} = \\frac{3}{12}\\), and \\(\\frac{8}{12} + \\frac{3}{12} = \\frac{11}{12}\\). The answer \\(\\frac{3}{7}\\) comes from adding the numerators and the denominators, which is a common mistake.",
+   "clue": "Rewrite both fractions over the lowest common denominator, 12."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tank holds \\(2\\frac{1}{2}\\) L of water. Mia pours out \\(\\frac{3}{4}\\) L. How much water is left?",
+   "opts": [
+    "\\(1\\frac{3}{4}\\) L",
+    "\\(2\\frac{1}{4}\\) L",
+    "\\(1\\frac{1}{4}\\) L",
+    "\\(1\\frac{2}{4}\\) L"
+   ],
+   "why": "Change \\(2\\frac{1}{2}\\) to \\(\\frac{5}{2}\\), which is \\(\\frac{10}{4}\\) over the lowest common denominator 4. Then \\(\\frac{10}{4} - \\frac{3}{4} = \\frac{7}{4} = 1\\frac{3}{4}\\). The answer \\(2\\frac{1}{4}\\) L comes from taking the smaller numerator from the larger, doing \\(3 - 2 = 1\\).",
+   "clue": "Change \\(2\\frac{1}{2}\\) to an improper fraction over 4, then subtract."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(\\frac{11}{12}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(1\\frac{3}{4}\\) L",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Question b uses exactly the card's worked example, 2 1/2 − 3/4 = 1 3/4. A student can match the numbers to the card and copy the answer without doing the subtraction, so the question does not test the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) says the wrong answer 2 1/4 L comes from 'taking the smaller numerator from the larger, doing 3 − 2 = 1'. That only makes sense after 1/2 has been rewritten as 2/4 and the whole number 2 kept, and the why does not say either step, so it may confuse students."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "All the maths is correct: a is 11/12 and b is 1 3/4 L. However, question b copies the card's worked example exactly, so students can find the answer without working it out. The why for b's distractor is also unclear."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Question b uses exactly the card's worked example, 2 1/2 − 3/4 = 1 3/4. A student can match the numbers to the card and copy the answer without doing the subtraction, so the question does not test the idea.",
+  "Question b, wording: Why (b) says the wrong answer 2 1/4 L comes from 'taking the smaller numerator from the larger, doing 3 − 2 = 1'. That only makes sense after 1/2 has been rewritten as 2/4 and the whole number 2 kept, and the why does not say either step, so it may confuse students."
+ ],
+ "proposal": {
+  "title": "Adding and subtracting fractions",
+  "card": [
+   "To add or subtract, the fractions need the same denominator (the bottom number). If they differ, rewrite them as equivalent fractions over the lowest common denominator. This is the lowest common multiple of the denominators.",
+   "Example: \\(\\frac{1}{2} + \\frac{1}{3}\\). Over 6, this is \\(\\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}\\).",
+   "Once the denominators match, add or subtract the numerators (the top numbers) and keep the denominator the same. Do not add the denominators.",
+   "For mixed numbers, change them to improper fractions first. Example: \\(2\\frac{1}{2} - \\frac{3}{4} = \\frac{10}{4} - \\frac{3}{4}\\), which is \\(\\frac{7}{4} = 1\\frac{3}{4}\\)."
+  ],
+  "remember": "Find the lowest common denominator first. Then add or subtract only the numerators.",
+  "a": {
+   "q": "Work out \\(\\frac{2}{3} + \\frac{1}{4}\\).",
+   "opts": [
+    "\\(\\frac{11}{12}\\)",
+    "\\(\\frac{3}{7}\\)",
+    "\\(\\frac{3}{12}\\)",
+    "\\(\\frac{9}{12}\\)"
+   ],
+   "why": "The lowest common denominator is 12. So \\(\\frac{2}{3} = \\frac{8}{12}\\) and \\(\\frac{1}{4} = \\frac{3}{12}\\), and \\(\\frac{8}{12} + \\frac{3}{12} = \\frac{11}{12}\\). The answer \\(\\frac{3}{7}\\) comes from adding the numerators and the denominators, which is a common mistake.",
+   "clue": "Rewrite both fractions over the lowest common denominator, 12."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tank holds \\(3\\frac{1}{3}\\) L of water. Mia pours out \\(1\\frac{3}{4}\\) L. How much water is left?",
+   "opts": [
+    "\\(1\\frac{7}{12}\\) L",
+    "\\(2\\frac{5}{12}\\) L",
+    "\\(2\\frac{7}{12}\\) L",
+    "\\(1\\frac{5}{12}\\) L"
+   ],
+   "why": "Change both to improper fractions: \\(3\\frac{1}{3} = \\frac{10}{3} = \\frac{40}{12}\\) and \\(1\\frac{3}{4} = \\frac{7}{4} = \\frac{21}{12}\\). Then \\(\\frac{40}{12} - \\frac{21}{12} = \\frac{19}{12}\\), which is \\(1\\frac{7}{12}\\). The answer \\(2\\frac{5}{12}\\) L comes from subtracting the whole numbers, \\(3 - 1 = 2\\), then rewriting the fractions as \\(\\frac{4}{12}\\) and \\(\\frac{9}{12}\\) and taking 4 from 9 instead of 9 from 4.",
+   "clue": "Change both mixed numbers to improper fractions over 12 before you subtract."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Adding and subtracting fractions",
+  "card": [
+   "To add or subtract, the fractions need the same denominator (the bottom number). If they differ, rewrite them as equivalent fractions over the lowest common denominator. This is the lowest common multiple of the denominators.",
+   "Example: \\(\\frac{1}{2} + \\frac{1}{3}\\). Over 6, this is \\(\\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}\\).",
+   "Once the denominators match, add or subtract the numerators (the top numbers) and keep the denominator the same. Do not add the denominators.",
+   "For mixed numbers, change them to improper fractions first. Example: \\(2\\frac{1}{2} - \\frac{3}{4} = \\frac{10}{4} - \\frac{3}{4}\\), which is \\(\\frac{7}{4} = 1\\frac{3}{4}\\)."
+  ],
+  "remember": "Find the lowest common denominator first. Then add or subtract only the numerators.",
+  "a": {
+   "q": "Work out \\(\\frac{2}{3} + \\frac{1}{4}\\).",
+   "opts": [
+    "\\(\\frac{11}{12}\\)",
+    "\\(\\frac{3}{7}\\)",
+    "\\(\\frac{3}{12}\\)",
+    "\\(\\frac{9}{12}\\)"
+   ],
+   "why": "The lowest common denominator is 12. So \\(\\frac{2}{3} = \\frac{8}{12}\\) and \\(\\frac{1}{4} = \\frac{3}{12}\\), and \\(\\frac{8}{12} + \\frac{3}{12} = \\frac{11}{12}\\). The answer \\(\\frac{3}{7}\\) comes from adding the numerators and the denominators, which is a common mistake.",
+   "clue": "Rewrite both fractions over the lowest common denominator, 12."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tank holds \\(3\\frac{1}{3}\\) L of water. Mia pours out \\(1\\frac{3}{4}\\) L. How much water is left?",
+   "opts": [
+    "\\(1\\frac{7}{12}\\) L",
+    "\\(2\\frac{5}{12}\\) L",
+    "\\(2\\frac{7}{12}\\) L",
+    "\\(1\\frac{5}{12}\\) L"
+   ],
+   "why": "Change both to improper fractions: \\(3\\frac{1}{3} = \\frac{10}{3} = \\frac{40}{12}\\) and \\(1\\frac{3}{4} = \\frac{7}{4} = \\frac{21}{12}\\). Then \\(\\frac{40}{12} - \\frac{21}{12} = \\frac{19}{12}\\), which is \\(1\\frac{7}{12}\\). The answer \\(2\\frac{5}{12}\\) L comes from subtracting the whole numbers, \\(3 - 1 = 2\\), then rewriting the fractions as \\(\\frac{4}{12}\\) and \\(\\frac{9}{12}\\) and taking 4 from 9 instead of 9 from 4.",
+   "clue": "Change both mixed numbers to improper fractions over 12 before you subtract."
+  }
+ }
 }

@@ -16,8 +16,143 @@
    0.223
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:58Z write: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00673,
+  "check": 0.00669
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No single bank point covers both series and parallel circuits: the series and parallel cards each teach only one arrangement, and the household card is about parallel wiring in homes, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Series and parallel circuits",
+  "card": [
+   [
+    "Series",
+    "The parts are joined in one loop, so the charge passes through each part in turn. The current is the same at every point in the loop."
+   ],
+   [
+    "Parallel",
+    "The circuit has more than one path, called branches. The current splits between the branches and joins up again after them."
+   ],
+   "In a series circuit there is only one path. If one part is removed or breaks, the loop is open and the current stops everywhere.",
+   "In a parallel circuit each branch is its own loop with the source. If one branch is broken, the current still flows in the other branches."
+  ],
+  "remember": "Series: one path, the same current everywhere. Parallel: the current splits between branches.",
+  "a": {
+   "q": "In a circuit, the current is the same at every point and passes through each lamp one after another. What type of circuit is it?",
+   "opts": [
+    "A series circuit",
+    "A parallel circuit",
+    "A circuit with branches",
+    "An open circuit"
+   ],
+   "why": "One path means the same current at every point, which is a series circuit. A parallel circuit is tempting, but there the current splits between branches, so it is not the same everywhere.",
+   "clue": "How many paths does the current have?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam wires three lamps in parallel to a battery. One lamp's filament breaks. What happens to the other two lamps?",
+   "opts": [
+    "They stay lit, as each branch is its own loop",
+    "They go out, as the current has only one path",
+    "They go out, as the broken lamp opens the loop",
+    "They get dimmer, as the current is now the same"
+   ],
+   "why": "In a parallel circuit each lamp is on its own branch, so the other branches still form closed loops with the battery. The tempting answer is that they go out, but that happens in a series circuit, where one break opens the only loop.",
+   "clue": "Is there still a closed loop through each of the other lamps?"
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "Two circuit diagrams side by side using standard symbols. Left, labelled Series: a cell and two lamps in one single loop. Right, labelled Parallel: a cell with two lamps on separate branches, with the branch points marked where the current splits and joins.",
+    "why": "Seeing one loop beside two branches shows how the paths differ."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A series circuit",
+   "also_right": []
+  },
+  "b": {
+   "best": "They stay lit, as each branch is its own loop",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Series and parallel circuits",
+  "card": [
+   [
+    "Series",
+    "The parts are joined in one loop, so the charge passes through each part in turn. The current is the same at every point in the loop."
+   ],
+   [
+    "Parallel",
+    "The circuit has more than one path, called branches. The current splits between the branches and joins up again after them."
+   ],
+   "In a series circuit there is only one path. If one part is removed or breaks, the loop is open and the current stops everywhere.",
+   "In a parallel circuit each branch is its own loop with the source. If one branch is broken, the current still flows in the other branches."
+  ],
+  "remember": "Series: one path, the same current everywhere. Parallel: the current splits between branches.",
+  "a": {
+   "q": "In a circuit, the current is the same at every point and passes through each lamp one after another. What type of circuit is it?",
+   "opts": [
+    "A series circuit",
+    "A parallel circuit",
+    "A circuit with branches",
+    "An open circuit"
+   ],
+   "why": "One path means the same current at every point, which is a series circuit. A parallel circuit is tempting, but there the current splits between branches, so it is not the same everywhere.",
+   "clue": "How many paths does the current have?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam wires three lamps in parallel to a battery. One lamp's filament breaks. What happens to the other two lamps?",
+   "opts": [
+    "They stay lit, as each branch is its own loop",
+    "They go out, as the current has only one path",
+    "They go out, as the broken lamp opens the loop",
+    "They get dimmer, as the current is now the same"
+   ],
+   "why": "In a parallel circuit each lamp is on its own branch, so the other branches still form closed loops with the battery. The tempting answer is that they go out, but that happens in a series circuit, where one break opens the only loop.",
+   "clue": "Is there still a closed loop through each of the other lamps?"
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "Two circuit diagrams side by side using standard symbols. Left, labelled Series: a cell and two lamps in one single loop. Right, labelled Parallel: a cell with two lamps on separate branches, with the branch points marked where the current splits and joins.",
+    "why": "Seeing one loop beside two branches shows how the paths differ."
+   }
+  ]
+ },
+ "cleared_by": "checker"
 }

@@ -24,8 +24,393 @@
    0.245
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:58Z write: done",
+  "2026-11-20T12:45:01Z check: flagged",
+  "2026-11-20T12:53:29Z fix: suggested",
+  "2026-11-20T13:23:46Z autoreview: picked as a spot check. It would have been cleared with the fix (a other)",
+  "2026-11-20T14:02:37Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.00697,
+  "check": 0.01001,
+  "fix": 0.01729
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point chem-covalent-bonding is Year 11 depth, covering molecular and network solids, melting points and why covalent substances do not conduct like ions, which goes well beyond the short Stage 5 brief about non-metal atoms sharing electrons to form molecules like water and O2.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Covalent bonding",
+  "card": [
+   "A covalent bond forms when two atoms share a pair of electrons. It usually forms between non-metal atoms.",
+   "Sharing lets each atom fill its outer shell, so the atoms end up more stable than they were apart. No electrons are fully transferred, so no ions form.",
+   "A group of atoms joined by covalent bonds is a molecule. Water, H2O, is a molecule: one oxygen atom shares electrons with two hydrogen atoms.",
+   "Some elements also exist as molecules. Oxygen is found as O2, a pair of oxygen atoms sharing electrons."
+  ],
+  "remember": "Covalent bonds are shared electrons, usually between non-metal atoms, and they make molecules.",
+  "a": {
+   "q": "What happens to electrons when a covalent bond forms between two atoms?",
+   "opts": [
+    "The atoms share a pair of electrons",
+    "One atom gives electrons to the other",
+    "The electrons are lost from both atoms",
+    "The electrons move freely between many atoms"
+   ],
+   "why": "In a covalent bond, two atoms share electrons so each can fill its outer shell. Giving electrons from one atom to another is what happens when ions form, and that is not covalent bonding.",
+   "clue": "Think about the word share."
+  },
+  "b": {
+   "d": 2,
+   "q": "Which of these is made of molecules held together by covalent bonds?",
+   "opts": [
+    "Oxygen gas, O2",
+    "A piece of copper wire",
+    "Sodium chloride, NaCl",
+    "A lump of solid sodium metal"
+   ],
+   "why": "Oxygen gas is made of pairs of non-metal atoms sharing electrons, so each O2 is a molecule. Sodium chloride is tempting because it contains a non-metal, but it is a metal joined to a non-metal, which forms ions rather than shared pairs.",
+   "clue": "Look for atoms of non-metals only."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A water molecule, H2O, showing one oxygen atom in the centre joined to two hydrogen atoms. Each bond is drawn as a shared pair of electrons between the oxygen atom and a hydrogen atom. Label the oxygen atom, the two hydrogen atoms and a shared pair of electrons.",
+    "why": "Seeing the shared pairs between atoms shows how a molecule is held together."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The atoms share a pair of electrons",
+   "also_right": []
+  },
+  "b": {
+   "best": "Oxygen gas, O2",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about the word share' gives the answer away: only the right option contains the word 'share', so a student can pick it without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The content is accurate. The clue for question a gives the answer away by pointing to the word 'share', which appears only in the right option."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'Think about the word share' gives the answer away: only the right option contains the word 'share', so a student can pick it without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Covalent bonding",
+  "card": [
+   "A covalent bond forms when two atoms share a pair of electrons. It usually forms between non-metal atoms.",
+   "Sharing lets each atom fill its outer shell, so the atoms end up more stable than they were apart. No electrons are fully transferred, so no ions form.",
+   "A group of atoms joined by covalent bonds is a molecule. Water, H2O, is a molecule: one oxygen atom shares electrons with two hydrogen atoms.",
+   "Some elements also exist as molecules. Oxygen is found as O2, a pair of oxygen atoms sharing electrons."
+  ],
+  "remember": "Covalent bonds are shared electrons, usually between non-metal atoms, and they make molecules.",
+  "a": {
+   "q": "What happens to electrons when a covalent bond forms between two atoms?",
+   "opts": [
+    "The atoms share a pair of electrons",
+    "One atom gives electrons to the other",
+    "The electrons are lost from both atoms",
+    "The electrons move freely between many atoms"
+   ],
+   "why": "In a covalent bond, two atoms share electrons so each can fill its outer shell. Giving electrons from one atom to another is what happens when ions form, and that is not covalent bonding.",
+   "clue": "Both atoms fill their outer shells, and neither becomes an ion."
+  },
+  "b": {
+   "d": 2,
+   "q": "Which of these is made of molecules held together by covalent bonds?",
+   "opts": [
+    "Oxygen gas, O2",
+    "A piece of copper wire",
+    "Sodium chloride, NaCl",
+    "A lump of solid sodium metal"
+   ],
+   "why": "Oxygen gas is made of pairs of non-metal atoms sharing electrons, so each O2 is a molecule. Sodium chloride is tempting because it contains a non-metal, but it is a metal joined to a non-metal, which forms ions rather than shared pairs.",
+   "clue": "Look for atoms of non-metals only."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A water molecule, H2O, showing one oxygen atom in the centre joined to two hydrogen atoms. Each bond is drawn as a shared pair of electrons between the oxygen atom and a hydrogen atom. Label the oxygen atom, the two hydrogen atoms and a shared pair of electrons.",
+    "why": "Seeing the shared pairs between atoms shows how a molecule is held together."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:46Z",
+  "rules": 1,
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about the word share' gives the answer away: only the right option contains the word 'share', so a student can pick it without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue 'Think about the word share' gives the answer away: only the right option contains the word 'share', so a student can pick it without knowing the idea."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Covalent bonding",
+  "card": [
+   "A covalent bond forms when two atoms share a pair of electrons. It usually forms between non-metal atoms.",
+   "Sharing lets each atom fill its outer shell, so the atoms end up more stable than they were apart. No electrons are fully transferred, so no ions form.",
+   "A group of atoms joined by covalent bonds is a molecule. Water, H2O, is a molecule: one oxygen atom shares electrons with two hydrogen atoms.",
+   "Some elements also exist as molecules. Oxygen is found as O2, a pair of oxygen atoms sharing electrons."
+  ],
+  "remember": "Covalent bonds are shared electrons, usually between non-metal atoms, and they make molecules.",
+  "a": {
+   "q": "What happens to electrons when a covalent bond forms between two atoms?",
+   "opts": [
+    "The atoms share a pair of electrons",
+    "One atom gives electrons to the other",
+    "The electrons are lost from both atoms",
+    "The electrons move freely between many atoms"
+   ],
+   "why": "In a covalent bond, two atoms share electrons so each can fill its outer shell. Giving electrons from one atom to another is what happens when ions form, and that is not covalent bonding.",
+   "clue": "Both atoms fill their outer shells, and neither becomes an ion."
+  },
+  "b": {
+   "d": 2,
+   "q": "Which of these is made of molecules held together by covalent bonds?",
+   "opts": [
+    "Oxygen gas, O2",
+    "A piece of copper wire",
+    "Sodium chloride, NaCl",
+    "A lump of solid sodium metal"
+   ],
+   "why": "Oxygen gas is made of pairs of non-metal atoms sharing electrons, so each O2 is a molecule. Sodium chloride is tempting because it contains a non-metal, but it is a metal joined to a non-metal, which forms ions rather than shared pairs.",
+   "clue": "Look for atoms of non-metals only."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A water molecule, H2O, showing one oxygen atom in the centre joined to two hydrogen atoms. Each bond is drawn as a shared pair of electrons between the oxygen atom and a hydrogen atom. Label the oxygen atom, the two hydrogen atoms and a shared pair of electrons.",
+    "why": "Seeing the shared pairs between atoms shows how a molecule is held together."
+   }
+  ]
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix replaces the clue that pointed to the word share with one about full outer shells and no ions, which helps without giving the answer away. The rest of the point is accurate and unchanged.",
+   "item": "884c5268b56cd9fe",
+   "result": "decided",
+   "saved": {
+    "id": "sci-covalent-bonding",
+    "title": "Covalent bonding",
+    "brief": "54ccf2d9c184",
+    "shortlist": [
+     [
+      "chem-covalent-bonding",
+      0.375
+     ],
+     [
+      "sci-metals-non-metals",
+      0.333
+     ],
+     [
+      "sci-atoms-elements",
+      0.326
+     ],
+     [
+      "sci-reading-chemical-formulas",
+      0.274
+     ],
+     [
+      "sci-molecules-compounds",
+      0.245
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 1
+    },
+    "usd": {
+     "match": 0.00027,
+     "write": 0.00697,
+     "check": 0.01001,
+     "fix": 0.01729
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The bank point chem-covalent-bonding is Year 11 depth, covering molecular and network solids, melting points and why covalent substances do not conduct like ions, which goes well beyond the short Stage 5 brief about non-metal atoms sharing electrons to form molecules like water and O2.",
+     "model": "claude-haiku-5-5"
+    },
+    "alone": true,
+    "draft": {
+     "title": "Covalent bonding",
+     "card": [
+      "A covalent bond forms when two atoms share a pair of electrons. It usually forms between non-metal atoms.",
+      "Sharing lets each atom fill its outer shell, so the atoms end up more stable than they were apart. No electrons are fully transferred, so no ions form.",
+      "A group of atoms joined by covalent bonds is a molecule. Water, H2O, is a molecule: one oxygen atom shares electrons with two hydrogen atoms.",
+      "Some elements also exist as molecules. Oxygen is found as O2, a pair of oxygen atoms sharing electrons."
+     ],
+     "remember": "Covalent bonds are shared electrons, usually between non-metal atoms, and they make molecules.",
+     "a": {
+      "q": "What happens to electrons when a covalent bond forms between two atoms?",
+      "opts": [
+       "The atoms share a pair of electrons",
+       "One atom gives electrons to the other",
+       "The electrons are lost from both atoms",
+       "The electrons move freely between many atoms"
+      ],
+      "why": "In a covalent bond, two atoms share electrons so each can fill its outer shell. Giving electrons from one atom to another is what happens when ions form, and that is not covalent bonding.",
+      "clue": "Think about the word share."
+     },
+     "b": {
+      "d": 2,
+      "q": "Which of these is made of molecules held together by covalent bonds?",
+      "opts": [
+       "Oxygen gas, O2",
+       "A piece of copper wire",
+       "Sodium chloride, NaCl",
+       "A lump of solid sodium metal"
+      ],
+      "why": "Oxygen gas is made of pairs of non-metal atoms sharing electrons, so each O2 is a molecule. Sodium chloride is tempting because it contains a non-metal, but it is a metal joined to a non-metal, which forms ions rather than shared pairs.",
+      "clue": "Look for atoms of non-metals only."
+     },
+     "wants": [
+      {
+       "at": "card 3",
+       "kind": "diagram",
+       "brief": "A water molecule, H2O, showing one oxygen atom in the centre joined to two hydrogen atoms. Each bond is drawn as a shared pair of electrons between the oxygen atom and a hydrogen atom. Label the oxygen atom, the two hydrogen atoms and a shared pair of electrons.",
+       "why": "Seeing the shared pairs between atoms shows how a molecule is held together."
+      }
+     ]
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "The atoms share a pair of electrons",
+      "also_right": []
+     },
+     "b": {
+      "best": "Oxygen gas, O2",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue 'Think about the word share' gives the answer away: only the right option contains the word 'share', so a student can pick it without knowing the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The content is accurate. The clue for question a gives the answer away by pointing to the word 'share', which appears only in the right option."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a, other: The clue 'Think about the word share' gives the answer away: only the right option contains the word 'share', so a student can pick it without knowing the idea."
+    ],
+    "proposal": {
+     "title": "Covalent bonding",
+     "card": [
+      "A covalent bond forms when two atoms share a pair of electrons. It usually forms between non-metal atoms.",
+      "Sharing lets each atom fill its outer shell, so the atoms end up more stable than they were apart. No electrons are fully transferred, so no ions form.",
+      "A group of atoms joined by covalent bonds is a molecule. Water, H2O, is a molecule: one oxygen atom shares electrons with two hydrogen atoms.",
+      "Some elements also exist as molecules. Oxygen is found as O2, a pair of oxygen atoms sharing electrons."
+     ],
+     "remember": "Covalent bonds are shared electrons, usually between non-metal atoms, and they make molecules.",
+     "a": {
+      "q": "What happens to electrons when a covalent bond forms between two atoms?",
+      "opts": [
+       "The atoms share a pair of electrons",
+       "One atom gives electrons to the other",
+       "The electrons are lost from both atoms",
+       "The electrons move freely between many atoms"
+      ],
+      "why": "In a covalent bond, two atoms share electrons so each can fill its outer shell. Giving electrons from one atom to another is what happens when ions form, and that is not covalent bonding.",
+      "clue": "Both atoms fill their outer shells, and neither becomes an ion."
+     },
+     "b": {
+      "d": 2,
+      "q": "Which of these is made of molecules held together by covalent bonds?",
+      "opts": [
+       "Oxygen gas, O2",
+       "A piece of copper wire",
+       "Sodium chloride, NaCl",
+       "A lump of solid sodium metal"
+      ],
+      "why": "Oxygen gas is made of pairs of non-metal atoms sharing electrons, so each O2 is a molecule. Sodium chloride is tempting because it contains a non-metal, but it is a metal joined to a non-metal, which forms ions rather than shared pairs.",
+      "clue": "Look for atoms of non-metals only."
+     },
+     "wants": [
+      {
+       "at": "card 3",
+       "kind": "diagram",
+       "brief": "A water molecule, H2O, showing one oxygen atom in the centre joined to two hydrogen atoms. Each bond is drawn as a shared pair of electrons between the oxygen atom and a hydrogen atom. Label the oxygen atom, the two hydrogen atoms and a shared pair of electrons.",
+       "why": "Seeing the shared pairs between atoms shows how a molecule is held together."
+      }
+     ]
+    },
+    "proposal_problems": [],
+    "auto": {
+     "at": "2026-11-20T13:23:46Z",
+     "rules": 1,
+     "n": 11,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue 'Think about the word share' gives the answer away: only the right option contains the word 'share', so a student can pick it without knowing the idea."
+      }
+     ],
+     "flags": [
+      "Question a, other: The clue 'Think about the word share' gives the answer away: only the right option contains the word 'share', so a student can pick it without knowing the idea."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "6b663244c4a62b93"
+  }
  ]
 }

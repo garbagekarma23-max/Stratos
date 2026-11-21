@@ -24,8 +24,221 @@
    0.24
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 may adapt mat-collecting-like-terms, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:53Z confirm: Claude Opus 5.5 may adapt mat-collecting-like-terms, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt mat-collecting-like-terms (2 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting mat-collecting-like-terms on the next run",
+  "2026-11-20T14:12:39Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "confirm": 0.01024,
+  "adapt": 0.00626,
+  "check": 0.00849
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-collecting-like-terms",
+  "changes": [
+   "The card's worked example and wording use terms and notation that should be checked against the NSW Stage 4 syllabus, such as the term 'pronumeral' used in the brief versus 'variable' in the card.",
+   "Add a note that like terms share the same pronumerals with the same powers, matching the brief's wording for NSW Year 7 and 8 students.",
+   "Use NSW-appropriate context in the questions if desired, keeping the same algebra."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches exactly this idea at the right depth for Stage 4, but its terminology and example wording need small adjustments to match the NSW course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-collecting-like-terms",
+  "changes": [
+   "Use the term 'pronumeral' in place of 'variable' throughout the card (for example, 'like terms have the same pronumerals with the same powers'), as the NSW course and the brief use that term."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea of adding and subtracting like terms at a Year 7–8 depth, with fair questions, and only needs its wording changed to the 'pronumeral' term used in this course.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-collecting-like-terms",
+  "changes": [
+   "Use pronumeral in place of variable throughout the card, without defining pronumeral, since the chapter's first point defines it.",
+   "Write the maths left as plain text in LaTeX, such as ab on the card, the option 6ab and the a in question a's why."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card1",
+   "card2",
+   "card3",
+   "remember",
+   "a.q",
+   "a.opt4",
+   "a.why",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same idea at the right depth and both answers are right (3a + 3b and 4m squared + 5m), but it says variable where this course and its other points say pronumeral.",
+   "item": "fe056fbd927c5e9b",
+   "result": "decided",
+   "saved": {
+    "id": "mat-adding-subtracting-like-terms",
+    "title": "Adding and subtracting like terms",
+    "brief": "49ae51c9bd55",
+    "shortlist": [
+     [
+      "mat-collecting-like-terms",
+      0.682
+     ],
+     [
+      "mat-expanding-binomial-products",
+      0.33
+     ],
+     [
+      "mat-adding-subtracting-integers",
+      0.298
+     ],
+     [
+      "mat-adding-subtracting-fractions",
+      0.265
+     ],
+     [
+      "mat-perfect-squares-difference-two",
+      0.24
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00023,
+     "confirm": 0.01024
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-collecting-like-terms",
+     "changes": [
+      "The card's worked example and wording use terms and notation that should be checked against the NSW Stage 4 syllabus, such as the term 'pronumeral' used in the brief versus 'variable' in the card.",
+      "Add a note that like terms share the same pronumerals with the same powers, matching the brief's wording for NSW Year 7 and 8 students.",
+      "Use NSW-appropriate context in the questions if desired, keeping the same algebra."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches exactly this idea at the right depth for Stage 4, but its terminology and example wording need small adjustments to match the NSW course.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-collecting-like-terms",
+     "changes": [
+      "Use the term 'pronumeral' in place of 'variable' throughout the card (for example, 'like terms have the same pronumerals with the same powers'), as the NSW course and the brief use that term."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same idea of adding and subtracting like terms at a Year 7–8 depth, with fair questions, and only needs its wording changed to the 'pronumeral' term used in this course.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "14b09ed9a1a9da55"
+  }
+ ],
+ "draft": {
+  "title": "Collecting like terms",
+  "card": [
+   "A term is a number, a pronumeral, or numbers and pronumerals multiplied together, such as 7, \\(y\\), \\(3x\\), \\(3x^{2}\\) or \\(ab\\). The number in front of the pronumeral part is its coefficient.",
+   "Like terms have the same pronumerals with the same powers. \\(3x\\) and \\(-5x\\) are like terms. \\(3x\\) and \\(3x^{2}\\) are not, because the powers differ. \\(3x\\) and \\(3y\\) are not, because the pronumerals differ.",
+   "Only like terms can be added or subtracted. Add or subtract the coefficients and keep the pronumeral part the same. The sign in front of a term belongs to that term, and a lone \\(x\\) means \\(1x\\).",
+   "Example: \\(5x + 2y - 3x + 4y\\). The \\(x\\) terms give \\(5x - 3x = 2x\\). The \\(y\\) terms give \\(2y + 4y = 6y\\). So the answer is \\(2x + 6y\\)."
+  ],
+  "remember": "Add or subtract the coefficients of like terms, and leave unlike terms apart.",
+  "a": {
+   "q": "Simplify \\(7a + 2b - 4a + b\\).",
+   "opts": [
+    "\\(3a + 3b\\)",
+    "\\(3a + 2b\\)",
+    "\\(11a + 3b\\)",
+    "\\(6ab\\)"
+   ],
+   "why": "The \\(a\\) terms give \\(7a - 4a = 3a\\). The \\(b\\) terms give \\(2b + b = 3b\\), because a lone \\(b\\) means \\(1b\\). Writing \\(3a + 2b\\) leaves out the lone \\(b\\) as if it were worth nothing.",
+   "clue": "A lone \\(b\\) has a coefficient of 1."
+  },
+  "b": {
+   "d": 3,
+   "q": "Zara collects like terms in \\(6m^{2} + 4m - 2m^{2} + m\\). What answer should she get?",
+   "opts": [
+    "\\(4m^{2} + 5m\\)",
+    "\\(4m^{2} + 3m\\)",
+    "\\(8m^{2} + 5m\\)",
+    "\\(9m^{2}\\)"
+   ],
+   "why": "The \\(m^{2}\\) terms give \\(6m^{2} - 2m^{2} = 4m^{2}\\), and the \\(m\\) terms give \\(4m + m = 5m\\). The answer \\(4m^{2} + 3m\\) comes from a sign slip: the \\(m\\) term has a plus in front, so it is added, not subtracted. \\(m^{2}\\) and \\(m\\) are not like terms, so they stay apart.",
+   "clue": "Check the sign and the power on each term before combining."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(3a + 3b\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(4m^{2} + 5m\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Collecting like terms",
+  "card": [
+   "A term is a number, a pronumeral, or numbers and pronumerals multiplied together, such as 7, \\(y\\), \\(3x\\), \\(3x^{2}\\) or \\(ab\\). The number in front of the pronumeral part is its coefficient.",
+   "Like terms have the same pronumerals with the same powers. \\(3x\\) and \\(-5x\\) are like terms. \\(3x\\) and \\(3x^{2}\\) are not, because the powers differ. \\(3x\\) and \\(3y\\) are not, because the pronumerals differ.",
+   "Only like terms can be added or subtracted. Add or subtract the coefficients and keep the pronumeral part the same. The sign in front of a term belongs to that term, and a lone \\(x\\) means \\(1x\\).",
+   "Example: \\(5x + 2y - 3x + 4y\\). The \\(x\\) terms give \\(5x - 3x = 2x\\). The \\(y\\) terms give \\(2y + 4y = 6y\\). So the answer is \\(2x + 6y\\)."
+  ],
+  "remember": "Add or subtract the coefficients of like terms, and leave unlike terms apart.",
+  "a": {
+   "q": "Simplify \\(7a + 2b - 4a + b\\).",
+   "opts": [
+    "\\(3a + 3b\\)",
+    "\\(3a + 2b\\)",
+    "\\(11a + 3b\\)",
+    "\\(6ab\\)"
+   ],
+   "why": "The \\(a\\) terms give \\(7a - 4a = 3a\\). The \\(b\\) terms give \\(2b + b = 3b\\), because a lone \\(b\\) means \\(1b\\). Writing \\(3a + 2b\\) leaves out the lone \\(b\\) as if it were worth nothing.",
+   "clue": "A lone \\(b\\) has a coefficient of 1."
+  },
+  "b": {
+   "d": 3,
+   "q": "Zara collects like terms in \\(6m^{2} + 4m - 2m^{2} + m\\). What answer should she get?",
+   "opts": [
+    "\\(4m^{2} + 5m\\)",
+    "\\(4m^{2} + 3m\\)",
+    "\\(8m^{2} + 5m\\)",
+    "\\(9m^{2}\\)"
+   ],
+   "why": "The \\(m^{2}\\) terms give \\(6m^{2} - 2m^{2} = 4m^{2}\\), and the \\(m\\) terms give \\(4m + m = 5m\\). The answer \\(4m^{2} + 3m\\) comes from a sign slip: the \\(m\\) term has a plus in front, so it is added, not subtracted. \\(m^{2}\\) and \\(m\\) are not like terms, so they stay apart.",
+   "clue": "Check the sign and the power on each term before combining."
+  }
+ }
 }

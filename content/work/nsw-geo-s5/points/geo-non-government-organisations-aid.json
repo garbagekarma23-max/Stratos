@@ -16,8 +16,209 @@
    0.249
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: done",
+  "2026-11-20T12:44:55Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:23:39Z autoreview: cleared with the fix (a other, b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.00626,
+  "check": 0.01168,
+  "fix": 0.01764
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The brief combines two ideas, charities such as the Red Cross and government foreign aid for health, water and education, and neither bank point covers both: the NGO point covers only non-government groups and the overseas aid point covers only government aid, so a single match would teach only half of it.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Non-government organisations and aid",
+  "card": [
+   [
+    "NGO",
+    "A non-government organisation (NGO) is a group that is not run by a government. Many are charities that raise money from donations. The Red Cross is one example."
+   ],
+   [
+    "Foreign aid",
+    "Foreign aid is help that one country's government gives to another country. It can be money, goods or skills. Australia gives foreign aid to countries in the Pacific and Asia."
+   ],
+   "NGOs and foreign aid both fund projects that can improve wellbeing. These include clinics and vaccines for health, wells and pipes for clean water, and schools and teacher training for education.",
+   "The difference is the giver. An NGO is a private group. Foreign aid comes from a government, often paid for by its taxpayers."
+  ],
+  "remember": "NGOs are groups outside government. Foreign aid is a government helping another country.",
+  "a": {
+   "q": "Which of these is an example of foreign aid?",
+   "opts": [
+    "The Australian Government funds a water project in Fiji",
+    "A charity runs a school lunch program using donations",
+    "A local council builds a new park in its own town",
+    "A state government opens a new hospital in Sydney"
+   ],
+   "why": "Foreign aid is help from one country's government to another country. The charity is an NGO, not a government. The council and state hospital help people inside Australia, so they are not foreign aid.",
+   "clue": "Look for a government helping people in another country."
+  },
+  "b": {
+   "d": 3,
+   "q": "A charity in Sydney raises money from public donations. It uses the money to pay for vaccines in a village in Kenya. How is the charity best described?",
+   "opts": [
+    "An NGO, because it is not run by a government",
+    "Foreign aid, because the money goes to another country",
+    "A government initiative, because it improves health",
+    "Foreign aid, because it helps people in need"
+   ],
+   "why": "The charity is not run by a government, so it is an NGO. Sending help overseas does not make it foreign aid, because foreign aid comes from a government. Improving health is a goal that NGOs and governments share.",
+   "clue": "Ask who runs the charity, not where the help goes."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The Australian Government funds a water project in Fiji",
+   "also_right": []
+  },
+  "b": {
+   "best": "An NGO, because it is not run by a government",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Look for a government helping people in another country' restates the definition and matches only one option, the only one that mentions another country. It gives the answer away."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Ask who runs the charity, not where the help goes' points straight at the only option about who runs the group. It gives the answer away."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, the answers and the explanations are accurate. The clues for both questions all but name the right option, so students can answer without knowing the idea."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'Look for a government helping people in another country' restates the definition and matches only one option, the only one that mentions another country. It gives the answer away.",
+  "Question b, other: The clue 'Ask who runs the charity, not where the help goes' points straight at the only option about who runs the group. It gives the answer away."
+ ],
+ "proposal": {
+  "title": "Non-government organisations and aid",
+  "card": [
+   [
+    "NGO",
+    "A non-government organisation (NGO) is a group that is not run by a government. Many are charities that raise money from donations. The Red Cross is one example."
+   ],
+   [
+    "Foreign aid",
+    "Foreign aid is help that one country's government gives to another country. It can be money, goods or skills. Australia gives foreign aid to countries in the Pacific and Asia."
+   ],
+   "NGOs and foreign aid both fund projects that can improve wellbeing. These include clinics and vaccines for health, wells and pipes for clean water, and schools and teacher training for education.",
+   "The difference is the giver. An NGO is a private group. Foreign aid comes from a government, often paid for by its taxpayers."
+  ],
+  "remember": "NGOs are groups outside government. Foreign aid is a government helping another country.",
+  "a": {
+   "q": "Which of these is an example of foreign aid?",
+   "opts": [
+    "The Australian Government funds a water project in Fiji",
+    "A charity funds a water project in Fiji using donations",
+    "A state government builds a water pipeline in Dubbo",
+    "A local council upgrades the water supply in its town"
+   ],
+   "why": "Foreign aid is help from one country's government to another country. The charity also helps Fiji, but it is a private group, so it is an NGO. The state government and the council are governments, but they help people inside Australia.",
+   "clue": "Check two things: who gives the help, and where it goes."
+  },
+  "b": {
+   "d": 3,
+   "q": "A charity in Sydney raises money from public donations. It uses the money to pay for vaccines in a village in Kenya. How is the charity best described?",
+   "opts": [
+    "An NGO, because it is not run by a government",
+    "Foreign aid, because the money goes to another country",
+    "A government initiative, because it improves health",
+    "Foreign aid, because it helps people in need"
+   ],
+   "why": "The charity is not run by a government, so it is an NGO. Sending help overseas does not make it foreign aid, because foreign aid comes from a government. Improving health is a goal that NGOs and governments share.",
+   "clue": "Think about what the card says separates an NGO from foreign aid."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:39Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Look for a government helping people in another country' restates the definition and matches only one option, the only one that mentions another country. It gives the answer away."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Ask who runs the charity, not where the help goes' points straight at the only option about who runs the group. It gives the answer away."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue 'Look for a government helping people in another country' restates the definition and matches only one option, the only one that mentions another country. It gives the answer away.",
+   "Question b, other: The clue 'Ask who runs the charity, not where the help goes' points straight at the only option about who runs the group. It gives the answer away."
+  ]
+ },
+ "final": {
+  "title": "Non-government organisations and aid",
+  "card": [
+   [
+    "NGO",
+    "A non-government organisation (NGO) is a group that is not run by a government. Many are charities that raise money from donations. The Red Cross is one example."
+   ],
+   [
+    "Foreign aid",
+    "Foreign aid is help that one country's government gives to another country. It can be money, goods or skills. Australia gives foreign aid to countries in the Pacific and Asia."
+   ],
+   "NGOs and foreign aid both fund projects that can improve wellbeing. These include clinics and vaccines for health, wells and pipes for clean water, and schools and teacher training for education.",
+   "The difference is the giver. An NGO is a private group. Foreign aid comes from a government, often paid for by its taxpayers."
+  ],
+  "remember": "NGOs are groups outside government. Foreign aid is a government helping another country.",
+  "a": {
+   "q": "Which of these is an example of foreign aid?",
+   "opts": [
+    "The Australian Government funds a water project in Fiji",
+    "A charity funds a water project in Fiji using donations",
+    "A state government builds a water pipeline in Dubbo",
+    "A local council upgrades the water supply in its town"
+   ],
+   "why": "Foreign aid is help from one country's government to another country. The charity also helps Fiji, but it is a private group, so it is an NGO. The state government and the council are governments, but they help people inside Australia.",
+   "clue": "Check two things: who gives the help, and where it goes."
+  },
+  "b": {
+   "d": 3,
+   "q": "A charity in Sydney raises money from public donations. It uses the money to pay for vaccines in a village in Kenya. How is the charity best described?",
+   "opts": [
+    "An NGO, because it is not run by a government",
+    "Foreign aid, because the money goes to another country",
+    "A government initiative, because it improves health",
+    "Foreign aid, because it helps people in need"
+   ],
+   "why": "The charity is not run by a government, so it is an NGO. Sending help overseas does not make it foreign aid, because foreign aid comes from a government. Improving health is a goal that NGOs and governments share.",
+   "clue": "Think about what the card says separates an NGO from foreign aid."
+  }
+ },
+ "cleared_by": "auto"
 }

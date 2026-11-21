@@ -24,8 +24,135 @@
    0.226
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: failed the content check, writing again",
+  "2026-11-20T12:44:56Z write: done",
+  "2026-11-20T12:53:25Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.0135,
+  "check": 0.0059
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches government initiatives in general; the closest, reducing regional inequality, is narrower because it covers only programs that close gaps between regions, and none of the bank points covers welfare payments.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Government initiatives",
+  "card": [
+   "An initiative is a planned action taken to improve something. Governments use initiatives to improve the wellbeing of the people they serve.",
+   [
+    "Health care and schooling",
+    "Governments fund hospitals, clinics and public schools. Healthy, educated people can work, earn and take part in community life."
+   ],
+   [
+    "Welfare payments",
+    "Governments pay money to people who cannot earn enough, such as the unemployed, people with a disability and people who are retired. This helps them afford food, housing and other basics."
+   ],
+   [
+    "Infrastructure",
+    "Governments build the systems a community relies on, such as water supply, sewage, roads and electricity. Clean water lowers the spread of disease, and roads link people to jobs, schools and clinics."
+   ]
+  ],
+  "remember": "Governments improve wellbeing through services, payments and infrastructure.",
+  "a": {
+   "q": "Which government initiative is an example of building infrastructure?",
+   "opts": [
+    "Laying pipes to bring clean water to a town",
+    "Paying an allowance to people who are unemployed",
+    "Opening a free vaccination clinic in a suburb",
+    "Hiring more teachers for a public primary school"
+   ],
+   "why": "Pipes for a water supply are a system a community relies on, so they are infrastructure. A payment is welfare, a clinic is health care and teachers provide schooling.",
+   "clue": "Look for something physical that is built and used by a whole community."
+  },
+  "b": {
+   "d": 3,
+   "q": "A state government sealed the only road linking a remote town to its nearest hospital and high school. How does this initiative most directly improve wellbeing?",
+   "opts": [
+    "It helps people reach health care and schooling",
+    "It gives residents a regular payment for living costs",
+    "It removes the need for a local clinic or school",
+    "It brings clean drinking water into every home"
+   ],
+   "why": "A road is infrastructure, and it links people to services such as health care and schooling. It is not a welfare payment, and it does not supply water. A road helps people reach services but does not replace them.",
+   "clue": "Think about what the road connects the town to."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Laying pipes to bring clean water to a town",
+   "also_right": []
+  },
+  "b": {
+   "best": "It helps people reach health care and schooling",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Government initiatives",
+  "card": [
+   "An initiative is a planned action taken to improve something. Governments use initiatives to improve the wellbeing of the people they serve.",
+   [
+    "Health care and schooling",
+    "Governments fund hospitals, clinics and public schools. Healthy, educated people can work, earn and take part in community life."
+   ],
+   [
+    "Welfare payments",
+    "Governments pay money to people who cannot earn enough, such as the unemployed, people with a disability and people who are retired. This helps them afford food, housing and other basics."
+   ],
+   [
+    "Infrastructure",
+    "Governments build the systems a community relies on, such as water supply, sewage, roads and electricity. Clean water lowers the spread of disease, and roads link people to jobs, schools and clinics."
+   ]
+  ],
+  "remember": "Governments improve wellbeing through services, payments and infrastructure.",
+  "a": {
+   "q": "Which government initiative is an example of building infrastructure?",
+   "opts": [
+    "Laying pipes to bring clean water to a town",
+    "Paying an allowance to people who are unemployed",
+    "Opening a free vaccination clinic in a suburb",
+    "Hiring more teachers for a public primary school"
+   ],
+   "why": "Pipes for a water supply are a system a community relies on, so they are infrastructure. A payment is welfare, a clinic is health care and teachers provide schooling.",
+   "clue": "Look for something physical that is built and used by a whole community."
+  },
+  "b": {
+   "d": 3,
+   "q": "A state government sealed the only road linking a remote town to its nearest hospital and high school. How does this initiative most directly improve wellbeing?",
+   "opts": [
+    "It helps people reach health care and schooling",
+    "It gives residents a regular payment for living costs",
+    "It removes the need for a local clinic or school",
+    "It brings clean drinking water into every home"
+   ],
+   "why": "A road is infrastructure, and it links people to services such as health care and schooling. It is not a welfare payment, and it does not supply water. A road helps people reach services but does not replace them.",
+   "clue": "Think about what the road connects the town to."
+  }
+ },
+ "cleared_by": "checker"
 }

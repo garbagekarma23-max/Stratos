@@ -8,8 +8,166 @@
    0.254
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: failed the content check, writing again",
+  "2026-11-20T12:44:56Z write: done (still fails the content check)",
+  "2026-11-20T12:53:26Z check: flagged",
+  "2026-11-20T13:11:48Z fix: suggested",
+  "2026-11-20T14:40:50Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.01438,
+  "check": 0.01195,
+  "fix": 0.01933
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers frontier conflict across the whole colony and includes Myall Creek and Windradyne, while the new point is narrower, focused on Sydney Cove and food sources from 1788, and pitched at Stage 4 rather than the Year 9 depth of the bank card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Contact and conflict at Sydney Cove",
+  "card": [
+   "In 1788 the British set up a colony at Sydney Cove. The Sydney region was already home to Aboriginal clans, including the Eora and the Darug.",
+   "The British cleared land, built farms and took fish and game. This cut Aboriginal people off from places and food sources they had cared for over many generations.",
+   "Aboriginal people did not accept this. They resisted in different ways, including by defending their land and taking food from colonial farms.",
+   "Pemulwuy, a Bidjigal man, led attacks on colonists for over a decade. The British saw him as a threat and he was killed in 1802."
+  ],
+  "remember": "The colony took land and food, and Aboriginal people, such as Pemulwuy, resisted.",
+  "a": {
+   "q": "Why did conflict begin around Sydney Cove after 1788?",
+   "opts": [
+    "The colony took land and food Aboriginal people relied on",
+    "Aboriginal clans wanted to trade for British farming tools",
+    "Aboriginal clans moved onto land the British had farmed",
+    "The British would not share their food with Aboriginal people"
+   ],
+   "why": "The British cleared land and took fish and game, so Aboriginal people lost places and food they relied on. The land was already home to Aboriginal clans, so it was not the case that they moved onto British farms.",
+   "clue": "Think about who was living around the cove before 1788."
+  },
+  "b": {
+   "d": 2,
+   "q": "Which statement best describes Pemulwuy's role in the conflict around Sydney?",
+   "opts": [
+    "He led resistance by a Bidjigal man for over a decade",
+    "He was a British governor who ordered farms to be built",
+    "He was a Darug trader who sold food to the colony",
+    "He led a short revolt that ended within a few months"
+   ],
+   "why": "Pemulwuy, a Bidjigal man, led attacks on colonists for over a decade, so his resistance was long, not short. He was an Aboriginal leader, not a governor or a trader supplying the colony.",
+   "clue": "Remember how long his attacks went on."
+  }
+ },
+ "redone": true,
+ "local": [
+  "his-contact-conflict-at-sydneya option is 61 characters: The British would not share their food with Aboriginal people"
+ ],
+ "check": {
+  "a": {
+   "best": "The colony took land and food Aboriginal people relied on",
+   "also_right": []
+  },
+  "b": {
+   "best": "He led resistance by a Bidjigal man for over a decade",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option, 'He led resistance by a Bidjigal man for over a decade', is garbled: it reads as if Pemulwuy led the resistance of some other Bidjigal man. It should say something like 'A Bidjigal man, he led resistance for over a decade'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "first-nations",
+  "summary": "The facts check out, and the answers to both questions are clear. The right option in question b is badly worded and suggests Pemulwuy led resistance 'by a Bidjigal man' rather than being one."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Question b, wording: The right option, 'He led resistance by a Bidjigal man for over a decade', is garbled: it reads as if Pemulwuy led the resistance of some other Bidjigal man. It should say something like 'A Bidjigal man, he led resistance for over a decade'.",
+  "Content check: his-contact-conflict-at-sydneya option is 61 characters: The British would not share their food with Aboriginal people"
+ ],
+ "proposal": {
+  "title": "Contact and conflict at Sydney Cove",
+  "card": [
+   "In 1788 the British set up a colony at Sydney Cove. The Sydney region was already home to Aboriginal clans, including the Eora and the Darug.",
+   "The British cleared land, built farms and took fish and game. This cut Aboriginal people off from places and food sources they had cared for over many generations.",
+   "Aboriginal people did not accept this. They resisted in different ways, including by defending their land and taking food from colonial farms.",
+   "Pemulwuy, a Bidjigal man, led attacks on colonists for over a decade. The British saw him as a threat and he was killed in 1802."
+  ],
+  "remember": "The colony took land and food, and Aboriginal people, such as Pemulwuy, resisted.",
+  "a": {
+   "q": "Why did conflict begin around Sydney Cove after 1788?",
+   "opts": [
+    "The colony took land and food Aboriginal people relied on",
+    "Aboriginal clans wanted to trade for British farming tools",
+    "Aboriginal clans moved onto land the British had farmed",
+    "The British refused to share food with Aboriginal people"
+   ],
+   "why": "The British cleared land and took fish and game, so Aboriginal people lost places and food they relied on. The land was already home to Aboriginal clans, so it was not the case that they moved onto British farms.",
+   "clue": "Think about who was living around the cove before 1788."
+  },
+  "b": {
+   "d": 2,
+   "q": "Which statement best describes Pemulwuy's role in the conflict around Sydney?",
+   "opts": [
+    "A Bidjigal man, he led resistance for over a decade",
+    "He was a British governor who ordered farms to be built",
+    "He was a convict who escaped to live with Aboriginal clans",
+    "He led a short revolt that ended within a few months"
+   ],
+   "why": "Pemulwuy, a Bidjigal man, led attacks on colonists for over a decade, so his resistance was long, not short. He was an Aboriginal leader, not a British governor or an escaped convict.",
+   "clue": "Remember how long his attacks went on."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Contact and conflict at Sydney Cove",
+  "card": [
+   "In 1788 the British set up a colony at Sydney Cove. The Sydney region was already home to Aboriginal clans, including the Eora and the Darug.",
+   "The British cleared land, built farms and took fish and game. This cut Aboriginal people off from places and food sources they had cared for over many generations.",
+   "Aboriginal people did not accept this. They resisted in different ways, including by defending their land and taking food from colonial farms.",
+   "Pemulwuy, a Bidjigal man, led attacks on colonists for over a decade. The British saw him as a threat and he was killed in 1802."
+  ],
+  "remember": "The colony took land and food, and Aboriginal people, such as Pemulwuy, resisted.",
+  "a": {
+   "q": "Why did conflict begin around Sydney Cove after 1788?",
+   "opts": [
+    "The colony took land and food Aboriginal people relied on",
+    "Aboriginal clans wanted to trade for British farming tools",
+    "Aboriginal clans moved onto land the British had farmed",
+    "The British refused to share food with Aboriginal people"
+   ],
+   "why": "The British cleared land and took fish and game, so Aboriginal people lost places and food they relied on. The land was already home to Aboriginal clans, so it was not the case that they moved onto British farms.",
+   "clue": "Think about who was living around the cove before 1788."
+  },
+  "b": {
+   "d": 2,
+   "q": "Which statement best describes Pemulwuy's role in the conflict around Sydney?",
+   "opts": [
+    "A Bidjigal man, he led resistance for over a decade",
+    "He was a British governor who ordered farms to be built",
+    "He was a convict who escaped to live with Aboriginal clans",
+    "He led a short revolt that ended within a few months"
+   ],
+   "why": "Pemulwuy, a Bidjigal man, led attacks on colonists for over a decade, so his resistance was long, not short. He was an Aboriginal leader, not a British governor or an escaped convict.",
+   "clue": "Remember how long his attacks went on."
+  }
+ },
+ "cleared_by": "owner"
 }

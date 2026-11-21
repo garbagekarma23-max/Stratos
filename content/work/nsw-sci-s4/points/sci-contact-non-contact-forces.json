@@ -16,8 +16,125 @@
    0.22
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:00Z write: done",
+  "2026-11-20T12:35:56Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.00589,
+  "check": 0.00709
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches the difference between contact and non-contact forces; they cover what a force is, balanced and unbalanced forces, and mass's effect on motion.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Contact and non-contact forces",
+  "card": [
+   "A force is a push or a pull. It can change how an object moves or change its shape.",
+   [
+    "Contact force",
+    "a force that acts where two objects touch. Examples are a push, a pull, friction and the force of a stretched spring."
+   ],
+   [
+    "Non-contact force",
+    "a force that acts at a distance, with no touching needed. Examples are gravity, magnetism and the force between electric charges."
+   ],
+   "To sort a force, ask whether the objects must touch for it to act. A magnet can pull a paper clip across a gap, so magnetism is non-contact."
+  ],
+  "remember": "Contact forces need touching. Non-contact forces act across a gap.",
+  "a": {
+   "q": "Which of these is a non-contact force?",
+   "opts": [
+    "The pull of gravity on a falling apple",
+    "The friction of a shoe on a floor",
+    "A push on a shopping trolley",
+    "A stretched spring pulling on a hook"
+   ],
+   "why": "Gravity pulls on the apple without touching it, so it is a non-contact force. Friction is tempting because it slows things, but it only acts where surfaces touch.",
+   "clue": "Which force acts with a gap between the objects?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia drags a box across the floor of her garage in Dubbo. The floor slows the box down. Which force is the floor exerting on the box?",
+   "opts": [
+    "Friction, which is a contact force",
+    "Friction, which is a non-contact force",
+    "Gravity, which is a contact force",
+    "Magnetism, which is a non-contact force"
+   ],
+   "why": "The floor and the box touch, and the force of the floor slows the box. That is friction, a contact force. Gravity is tempting because it acts on the box too, but gravity is non-contact and it does not come from the floor.",
+   "clue": "The floor slows the box only because their surfaces touch."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The pull of gravity on a falling apple",
+   "also_right": []
+  },
+  "b": {
+   "best": "Friction, which is a contact force",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Contact and non-contact forces",
+  "card": [
+   "A force is a push or a pull. It can change how an object moves or change its shape.",
+   [
+    "Contact force",
+    "a force that acts where two objects touch. Examples are a push, a pull, friction and the force of a stretched spring."
+   ],
+   [
+    "Non-contact force",
+    "a force that acts at a distance, with no touching needed. Examples are gravity, magnetism and the force between electric charges."
+   ],
+   "To sort a force, ask whether the objects must touch for it to act. A magnet can pull a paper clip across a gap, so magnetism is non-contact."
+  ],
+  "remember": "Contact forces need touching. Non-contact forces act across a gap.",
+  "a": {
+   "q": "Which of these is a non-contact force?",
+   "opts": [
+    "The pull of gravity on a falling apple",
+    "The friction of a shoe on a floor",
+    "A push on a shopping trolley",
+    "A stretched spring pulling on a hook"
+   ],
+   "why": "Gravity pulls on the apple without touching it, so it is a non-contact force. Friction is tempting because it slows things, but it only acts where surfaces touch.",
+   "clue": "Which force acts with a gap between the objects?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia drags a box across the floor of her garage in Dubbo. The floor slows the box down. Which force is the floor exerting on the box?",
+   "opts": [
+    "Friction, which is a contact force",
+    "Friction, which is a non-contact force",
+    "Gravity, which is a contact force",
+    "Magnetism, which is a non-contact force"
+   ],
+   "why": "The floor and the box touch, and the force of the floor slows the box. That is friction, a contact force. Gravity is tempting because it acts on the box too, but gravity is non-contact and it does not come from the floor.",
+   "clue": "The floor slows the box only because their surfaces touch."
+  }
+ },
+ "cleared_by": "checker"
 }

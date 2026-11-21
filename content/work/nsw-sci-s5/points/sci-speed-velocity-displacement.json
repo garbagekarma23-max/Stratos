@@ -20,8 +20,131 @@
    0.208
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: done",
+  "2026-11-20T12:35:57Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00032,
+  "write": 0.01196,
+  "check": 0.00759
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches the distance versus displacement distinction and average velocity as change in displacement over time at Stage 5 depth; the closest card, phys-displacement-velocity-acceleration, is written for Year 11 Physics and also covers acceleration, so it is not a small adaptation.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Speed, velocity and displacement",
+  "card": [
+   [
+    "Distance",
+    "how far an object travels along its path. It has a size only, with no direction."
+   ],
+   [
+    "Displacement",
+    "how far an object ends up from where it started, in a straight line, in a stated direction. It can be smaller than the distance travelled."
+   ],
+   [
+    "Average speed",
+    "distance travelled ÷ time taken. Average velocity = change in displacement ÷ time taken, and it has a direction."
+   ],
+   "Speed and velocity are measured in metres per second (m/s). If an object returns to its start, its displacement is zero, so its average velocity is zero."
+  ],
+  "remember": "Distance and speed have no direction. Displacement and velocity do.",
+  "a": {
+   "q": "Priya walks 60 m east along a path, then 20 m back west. What is her displacement from the start?",
+   "opts": [
+    "40 m east",
+    "80 m east",
+    "40 m west",
+    "80 m"
+   ],
+   "why": "Displacement is the straight-line change from the start, in a direction. She ends 60 - 20 = 40 m east of the start. Adding the two parts gives 80 m, which is the distance, not the displacement.",
+   "clue": "Subtract the walk back from the walk out."
+  },
+  "b": {
+   "d": 3,
+   "q": "A cyclist in Wagga Wagga rides 3 km north in 10 minutes, then rides 3 km back to the start in 10 minutes. Which statement is correct for the whole trip?",
+   "opts": [
+    "Average velocity is zero, average speed is not",
+    "Average speed is zero, average velocity is not",
+    "Both average speed and average velocity are zero",
+    "Neither average speed nor average velocity is zero"
+   ],
+   "why": "The cyclist ends where she began, so displacement is zero and average velocity is zero. She still travelled 6 km in 20 minutes, so her average speed is not zero. Average speed uses distance, which never cancels out.",
+   "clue": "Where does the cyclist finish compared with the start?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "40 m east",
+   "also_right": []
+  },
+  "b": {
+   "best": "Average velocity is zero, average speed is not",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Speed, velocity and displacement",
+  "card": [
+   [
+    "Distance",
+    "how far an object travels along its path. It has a size only, with no direction."
+   ],
+   [
+    "Displacement",
+    "how far an object ends up from where it started, in a straight line, in a stated direction. It can be smaller than the distance travelled."
+   ],
+   [
+    "Average speed",
+    "distance travelled ÷ time taken. Average velocity = change in displacement ÷ time taken, and it has a direction."
+   ],
+   "Speed and velocity are measured in metres per second (m/s). If an object returns to its start, its displacement is zero, so its average velocity is zero."
+  ],
+  "remember": "Distance and speed have no direction. Displacement and velocity do.",
+  "a": {
+   "q": "Priya walks 60 m east along a path, then 20 m back west. What is her displacement from the start?",
+   "opts": [
+    "40 m east",
+    "80 m east",
+    "40 m west",
+    "80 m"
+   ],
+   "why": "Displacement is the straight-line change from the start, in a direction. She ends 60 - 20 = 40 m east of the start. Adding the two parts gives 80 m, which is the distance, not the displacement.",
+   "clue": "Subtract the walk back from the walk out."
+  },
+  "b": {
+   "d": 3,
+   "q": "A cyclist in Wagga Wagga rides 3 km north in 10 minutes, then rides 3 km back to the start in 10 minutes. Which statement is correct for the whole trip?",
+   "opts": [
+    "Average velocity is zero, average speed is not",
+    "Average speed is zero, average velocity is not",
+    "Both average speed and average velocity are zero",
+    "Neither average speed nor average velocity is zero"
+   ],
+   "why": "The cyclist ends where she began, so displacement is zero and average velocity is zero. She still travelled 6 km in 20 minutes, so her average speed is not zero. Average speed uses distance, which never cancels out.",
+   "clue": "Where does the cyclist finish compared with the start?"
+  }
+ },
+ "cleared_by": "checker"
 }

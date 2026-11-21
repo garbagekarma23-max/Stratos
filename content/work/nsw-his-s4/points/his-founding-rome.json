@@ -12,8 +12,259 @@
    0.222
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: done",
+  "2026-11-20T12:44:56Z check: flagged",
+  "2026-11-20T12:53:26Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00683,
+  "check": 0.01417,
+  "fix": 0.02078,
+  "recheck": 0.00669
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches the founding of Rome: the army card only mentions Rome beginning as a small city on the Tiber in passing, and the families card is about household and slavery, so no bank point teaches the village origins or the Romulus and Remus legend.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The founding of Rome",
+  "card": [
+   "Rome began as a group of small villages on hills beside the Tiber River in central Italy. Over time the villages joined together to form one city.",
+   "The site suited a settlement. The river gave fresh water and a way to travel and trade, and the hills were good places to defend.",
+   [
+    "Legend",
+    "a story passed down over time that people tell about the past. It may have some truth in it, but it is not proven history."
+   ],
+   "Romans told a legend that twin brothers, Romulus and Remus, founded their city. In the story, Romulus became its first king and the city was named after him."
+  ],
+  "remember": "Rome grew from villages by the Tiber River, and Romans explained its start with the legend of Romulus and Remus.",
+  "a": {
+   "q": "Which statement about the founding of Rome is best supported by the card?",
+   "opts": [
+    "Rome grew from small villages beside the Tiber River",
+    "Rome was built in a single year by Romulus and Remus",
+    "Rome began as a port city on the coast of Greece",
+    "Rome was founded after a republic replaced its kings"
+   ],
+   "why": "The card says Rome began as small villages by the Tiber River in Italy that joined into one city. The legend names twin founders, but it is a story and not proven history, so it cannot be treated as a fact about who built the city.",
+   "clue": "Think about what actually grew into the city, not the story told about it."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student says, 'Romulus and Remus really did found Rome, because Romans told this story for hundreds of years.' Why is this reasoning weak?",
+   "opts": [
+    "A legend can hold some truth but is not proven history",
+    "A story cannot be about real places such as the Tiber",
+    "Romans did not tell any stories about their origins",
+    "Legends are always made up and have no link to the past"
+   ],
+   "why": "A legend is a story told about the past. It may have some truth in it, but being told for a long time does not prove it happened. The last option goes too far, because the card says a legend may contain some truth.",
+   "clue": "Does telling a story for a long time make it proven?"
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "image",
+    "brief": "A simple map of central Italy showing the Tiber River and the site of Rome on it, with the hills marked near the river.",
+    "why": "It shows how the river and hills made a good place for villages to grow into a city."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Rome grew from small villages beside the Tiber River",
+   "also_right": []
+  },
+  "b": {
+   "best": "A legend can hold some truth but is not proven history",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says 'the last option goes too far', but options are shown in random order. The option that goes too far is 'Legends are always made up and have no link to the past', not whichever option a student sees last. Name the option instead of its position."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The clue 'Think about what actually grew into the city' echoes the word 'grew' in the right option, so a student can match words without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The distractor 'Legends are always made up' uses 'always' where the card says a legend 'may' have some truth. It is meant to be wrong, but the absolute word is a test-wise cue that marks it as wrong."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and the intended answers are correct. Why (b) refers to 'the last option' even though option order is randomised, and the clue for (a) echoes the right option's wording; both should be fixed."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) says 'the last option goes too far', but options are shown in random order. The option that goes too far is 'Legends are always made up and have no link to the past', not whichever option a student sees last. Name the option instead of its position.",
+  "Question a, wording: The clue 'Think about what actually grew into the city' echoes the word 'grew' in the right option, so a student can match words without knowing the idea.",
+  "Question b, wording: The distractor 'Legends are always made up' uses 'always' where the card says a legend 'may' have some truth. It is meant to be wrong, but the absolute word is a test-wise cue that marks it as wrong."
+ ],
+ "proposal": {
+  "title": "The founding of Rome",
+  "card": [
+   "Rome began as a group of small villages on hills beside the Tiber River in central Italy. Over time the villages joined together to form one city.",
+   "The site suited a settlement. The river gave fresh water and a way to travel and trade, and the hills were good places to defend.",
+   [
+    "Legend",
+    "a story passed down over time that people tell about the past. It may have some truth in it, but it is not proven history."
+   ],
+   "Romans told a legend that twin brothers, Romulus and Remus, founded their city. In the story, Romulus became its first king and the city was named after him."
+  ],
+  "remember": "Rome grew from villages by the Tiber River, and Romans explained its start with the legend of Romulus and Remus.",
+  "a": {
+   "q": "Which statement about how Rome began is most accurate?",
+   "opts": [
+    "Rome grew from small villages beside the Tiber River",
+    "Rome was built in a single year by Romulus and Remus",
+    "Rome began as a port city on the coast of Greece",
+    "Rome began as one walled city on a flat plain"
+   ],
+   "why": "Rome began as small villages on hills by the Tiber River in Italy, which joined into one city over time. The twin founders come from a legend, which is a story and not proven history, so it cannot be treated as a fact about who built the city.",
+   "clue": "What came before the city, and where was it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A student says, 'Romulus and Remus really did found Rome, because Romans told this story for hundreds of years.' Why is this reasoning weak?",
+   "opts": [
+    "A legend can hold some truth but is not proven history",
+    "A story cannot be about real places such as the Tiber",
+    "Romans did not tell any stories about their origins",
+    "A legend is made up, so it has no link to the past"
+   ],
+   "why": "A legend is a story told about the past. It may have some truth in it, but being told for a long time does not prove it happened. The option saying a legend is made up with no link to the past goes too far, because a legend may contain some truth.",
+   "clue": "Does telling a story for a long time make it proven?"
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "image",
+    "brief": "A simple map of central Italy showing the Tiber River and the site of Rome on it, with the hills marked near the river.",
+    "why": "It shows how the river and hills made a good place for villages to grow into a city."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Rome grew from small villages beside the Tiber River",
+    "also_right": []
+   },
+   "b": {
+    "best": "A legend can hold some truth but is not proven history",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says 'the last option goes too far', but options are shown in random order. The option that goes too far is 'Legends are always made up and have no link to the past', not whichever option a student sees last. Name the option instead of its position."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The clue 'Think about what actually grew into the city' echoes the word 'grew' in the right option, so a student can match words without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The distractor 'Legends are always made up' uses 'always' where the card says a legend 'may' have some truth. It is meant to be wrong, but the absolute word is a test-wise cue that marks it as wrong."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) says 'the last option goes too far', but options are shown in random order. The option that goes too far is 'Legends are always made up and have no link to the past', not whichever option a student sees last. Name the option instead of its position.",
+   "Question a, wording: The clue 'Think about what actually grew into the city' echoes the word 'grew' in the right option, so a student can match words without knowing the idea.",
+   "Question b, wording: The distractor 'Legends are always made up' uses 'always' where the card says a legend 'may' have some truth. It is meant to be wrong, but the absolute word is a test-wise cue that marks it as wrong."
+  ]
+ },
+ "final": {
+  "title": "The founding of Rome",
+  "card": [
+   "Rome began as a group of small villages on hills beside the Tiber River in central Italy. Over time the villages joined together to form one city.",
+   "The site suited a settlement. The river gave fresh water and a way to travel and trade, and the hills were good places to defend.",
+   [
+    "Legend",
+    "a story passed down over time that people tell about the past. It may have some truth in it, but it is not proven history."
+   ],
+   "Romans told a legend that twin brothers, Romulus and Remus, founded their city. In the story, Romulus became its first king and the city was named after him."
+  ],
+  "remember": "Rome grew from villages by the Tiber River, and Romans explained its start with the legend of Romulus and Remus.",
+  "a": {
+   "q": "Which statement about how Rome began is most accurate?",
+   "opts": [
+    "Rome grew from small villages beside the Tiber River",
+    "Rome was built in a single year by Romulus and Remus",
+    "Rome began as a port city on the coast of Greece",
+    "Rome began as one walled city on a flat plain"
+   ],
+   "why": "Rome began as small villages on hills by the Tiber River in Italy, which joined into one city over time. The twin founders come from a legend, which is a story and not proven history, so it cannot be treated as a fact about who built the city.",
+   "clue": "What came before the city, and where was it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A student says, 'Romulus and Remus really did found Rome, because Romans told this story for hundreds of years.' Why is this reasoning weak?",
+   "opts": [
+    "A legend can hold some truth but is not proven history",
+    "A story cannot be about real places such as the Tiber",
+    "Romans did not tell any stories about their origins",
+    "A legend is made up, so it has no link to the past"
+   ],
+   "why": "A legend is a story told about the past. It may have some truth in it, but being told for a long time does not prove it happened. The option saying a legend is made up with no link to the past goes too far, because a legend may contain some truth.",
+   "clue": "Does telling a story for a long time make it proven?"
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "image",
+    "brief": "A simple map of central Italy showing the Tiber River and the site of Rome on it, with the hills marked near the river.",
+    "why": "It shows how the river and hills made a good place for villages to grow into a city."
+   }
+  ]
+ },
+ "cleared_by": "recheck"
 }

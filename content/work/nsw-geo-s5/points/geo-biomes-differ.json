@@ -24,8 +24,115 @@
    0.343
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: done",
+  "2026-11-20T12:44:55Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00635,
+  "check": 0.00722
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point explains why biomes differ from place to place: geo-biome defines a biome, and geo-land-biomes covers the types and climate bands, but neither covers latitude, altitude, soils or distance from the sea as causes.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Why biomes differ",
+  "card": [
+   "Climate is the main reason one biome differs from another. Temperature and rainfall decide which plants can grow, and the plants decide which animals can live there.",
+   "Latitude, the distance from the equator, affects climate. Places near the equator get more heat from the sun than places near the poles.",
+   "Altitude, the height above sea level, also matters. Air is cooler at higher altitudes, so a high mountain can be cold enough for tundra-like conditions even in a warm region.",
+   "Soils and distance from the sea add to the picture. Soil type affects which plants can root and find nutrients. Places far from the sea often get less rain than places near it."
+  ],
+  "remember": "Climate is the main factor. Latitude, altitude, soils and distance from the sea add to it.",
+  "a": {
+   "q": "Which factor is the main reason biomes differ from one another?",
+   "opts": [
+    "Climate, mainly temperature and rainfall",
+    "Soil type, mainly its colour and depth",
+    "Altitude, mainly the height of mountains",
+    "Distance from the sea, mainly for coasts"
+   ],
+   "why": "Temperature and rainfall decide which plants can grow, and so which animals can live there. Soils, altitude and distance from the sea matter, but they add to climate rather than being the main factor.",
+   "clue": "Think about what plants need to grow."
+  },
+  "b": {
+   "d": 3,
+   "q": "A mountain stands in a warm region close to the equator. Near its summit the land is cold and treeless, unlike the forest at its base. Which factor best explains the difference?",
+   "opts": [
+    "Altitude, because air is cooler higher up",
+    "Latitude, because the summit is nearer the poles",
+    "Distance from the sea, because the summit is inland",
+    "Soil, because mountains have no soil at all"
+   ],
+   "why": "The summit and the base are at about the same latitude, but air is cooler at higher altitude, so the summit has a colder climate. Latitude is the tempting answer, but it does not change between the base and the summit.",
+   "clue": "The base and the summit have almost the same distance from the equator."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Climate, mainly temperature and rainfall",
+   "also_right": []
+  },
+  "b": {
+   "best": "Altitude, because air is cooler higher up",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Why biomes differ",
+  "card": [
+   "Climate is the main reason one biome differs from another. Temperature and rainfall decide which plants can grow, and the plants decide which animals can live there.",
+   "Latitude, the distance from the equator, affects climate. Places near the equator get more heat from the sun than places near the poles.",
+   "Altitude, the height above sea level, also matters. Air is cooler at higher altitudes, so a high mountain can be cold enough for tundra-like conditions even in a warm region.",
+   "Soils and distance from the sea add to the picture. Soil type affects which plants can root and find nutrients. Places far from the sea often get less rain than places near it."
+  ],
+  "remember": "Climate is the main factor. Latitude, altitude, soils and distance from the sea add to it.",
+  "a": {
+   "q": "Which factor is the main reason biomes differ from one another?",
+   "opts": [
+    "Climate, mainly temperature and rainfall",
+    "Soil type, mainly its colour and depth",
+    "Altitude, mainly the height of mountains",
+    "Distance from the sea, mainly for coasts"
+   ],
+   "why": "Temperature and rainfall decide which plants can grow, and so which animals can live there. Soils, altitude and distance from the sea matter, but they add to climate rather than being the main factor.",
+   "clue": "Think about what plants need to grow."
+  },
+  "b": {
+   "d": 3,
+   "q": "A mountain stands in a warm region close to the equator. Near its summit the land is cold and treeless, unlike the forest at its base. Which factor best explains the difference?",
+   "opts": [
+    "Altitude, because air is cooler higher up",
+    "Latitude, because the summit is nearer the poles",
+    "Distance from the sea, because the summit is inland",
+    "Soil, because mountains have no soil at all"
+   ],
+   "why": "The summit and the base are at about the same latitude, but air is cooler at higher altitude, so the summit has a colder climate. Latitude is the tempting answer, but it does not change between the base and the summit.",
+   "clue": "The base and the summit have almost the same distance from the equator."
+  }
+ },
+ "cleared_by": "checker"
 }

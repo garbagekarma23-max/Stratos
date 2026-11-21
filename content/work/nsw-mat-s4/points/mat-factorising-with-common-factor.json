@@ -24,8 +24,212 @@
    0.215
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 may adapt mat-factorising-by-highest-common, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:53Z confirm: Claude Opus 5.5 may adapt mat-factorising-by-highest-common, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt mat-factorising-by-highest-common (1 change)",
+  "2026-11-20T14:02:37Z claude-code review: adapting mat-factorising-by-highest-common on the next run",
+  "2026-11-20T14:12:39Z adapt: done",
+  "2026-11-20T14:20:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "confirm": 0.01214,
+  "adapt": 0.0045,
+  "check": 0.01008
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-factorising-by-highest-common",
+  "changes": [
+   "The card's worked examples and questions use the same HCF method, but the NSW Stage 4 course should use its own local examples, such as expressions built from the NSW syllabus wording and context."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same highest common factor idea at about the right depth, but it is tagged to other states' courses and its examples and question wording may need localising for NSW Stage 4.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-factorising-by-highest-common",
+  "changes": [
+   "Use the NSW term 'pronumeral' in place of 'variable' when describing the parts of the highest common factor."
+  ],
+  "sure": "medium",
+  "reason": "The bank point already teaches factorising as the reverse of expanding by taking out the highest common factor of numbers and pronumerals, at a Year 8 depth with fair questions; it only needs NSW's preferred term 'pronumeral'.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-factorising-by-highest-common",
+  "changes": [
+   "Use pronumeral in place of variable on the card and in question b's clue."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card2",
+   "a.q",
+   "b.q",
+   "b.clue"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same idea at the right depth and both answers are right (6(2x + 3) and 5x(2x + 3)), but it says variable where this course and its other points say pronumeral.",
+   "item": "688a534b6398cc88",
+   "result": "decided",
+   "saved": {
+    "id": "mat-factorising-with-common-factor",
+    "title": "Factorising with a common factor",
+    "brief": "b4690077b266",
+    "shortlist": [
+     [
+      "mat-factorising-by-highest-common",
+      0.584
+     ],
+     [
+      "mat-expanding-factorising-as-reverse",
+      0.338
+     ],
+     [
+      "mat-factorising-monic-quadratics",
+      0.266
+     ],
+     [
+      "mat-solving-quadratics-by-factorising",
+      0.252
+     ],
+     [
+      "mat-expanding-factorising",
+      0.215
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00022,
+     "confirm": 0.01214
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-factorising-by-highest-common",
+     "changes": [
+      "The card's worked examples and questions use the same HCF method, but the NSW Stage 4 course should use its own local examples, such as expressions built from the NSW syllabus wording and context."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same highest common factor idea at about the right depth, but it is tagged to other states' courses and its examples and question wording may need localising for NSW Stage 4.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-factorising-by-highest-common",
+     "changes": [
+      "Use the NSW term 'pronumeral' in place of 'variable' when describing the parts of the highest common factor."
+     ],
+     "sure": "medium",
+     "reason": "The bank point already teaches factorising as the reverse of expanding by taking out the highest common factor of numbers and pronumerals, at a Year 8 depth with fair questions; it only needs NSW's preferred term 'pronumeral'.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "b0604ff50df29133"
+  }
+ ],
+ "draft": {
+  "title": "Factorising by the highest common factor",
+  "card": [
+   "Factorising is the reverse of expanding. It writes an expression as a product: a common factor multiplied by a bracket.",
+   "The highest common factor (HCF) is the largest number, pronumeral, or product of them that divides every term. For \\(8x\\) and 12, the HCF is 4. For \\(6x^{2}\\) and \\(9x\\), it is \\(3x\\), so \\(6x^{2} + 9x = 3x(2x + 3)\\).",
+   "To factorise, find the HCF, write it outside the bracket, then divide each term by it to get what goes inside.",
+   "Example: \\(8x + 12\\). The HCF is 4. \\(8x \\div 4 = 2x\\) and \\(12 \\div 4 = 3\\), so \\(8x + 12 = 4(2x + 3)\\). Expand the answer to check: \\(4 \\times 2x + 4 \\times 3 = 8x + 12\\)."
+  ],
+  "remember": "Take out the HCF, then check by expanding the brackets.",
+  "a": {
+   "q": "Which option shows \\(12x + 18\\) fully factorised?",
+   "opts": [
+    "\\(6(2x + 3)\\)",
+    "\\(3(4x + 6)\\)",
+    "\\(2(6x + 9)\\)",
+    "\\(6(2x + 18)\\)"
+   ],
+   "why": "The HCF of 12 and 18 is 6. \\(12x \\div 6 = 2x\\) and \\(18 \\div 6 = 3\\), so the answer is \\(6(2x + 3)\\). \\(3(4x + 6)\\) is tempting, but 3 is a common factor, not the highest, so the bracket can still be factorised.",
+   "clue": "Find the largest number that divides both 12 and 18."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia takes out the HCF of \\(10x^{2} + 15x\\). What does she get?",
+   "opts": [
+    "\\(5x(2x + 3)\\)",
+    "\\(5(2x^{2} + 3x)\\)",
+    "\\(x(10x + 15)\\)",
+    "\\(5x(2x + 15)\\)"
+   ],
+   "why": "The HCF of \\(10x^{2}\\) and \\(15x\\) is \\(5x\\). \\(10x^{2} \\div 5x = 2x\\) and \\(15x \\div 5x = 3\\), so the answer is \\(5x(2x + 3)\\). \\(5(2x^{2} + 3x)\\) is tempting, but it leaves a common factor of \\(x\\) inside the bracket, so 5 is not the HCF.",
+   "clue": "Both terms share a number and a pronumeral. Take out both."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(6(2x + 3)\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(5x(2x + 3)\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Factorising by the highest common factor",
+  "card": [
+   "Factorising is the reverse of expanding. It writes an expression as a product: a common factor multiplied by a bracket.",
+   "The highest common factor (HCF) is the largest number, pronumeral, or product of them that divides every term. For \\(8x\\) and 12, the HCF is 4. For \\(6x^{2}\\) and \\(9x\\), it is \\(3x\\), so \\(6x^{2} + 9x = 3x(2x + 3)\\).",
+   "To factorise, find the HCF, write it outside the bracket, then divide each term by it to get what goes inside.",
+   "Example: \\(8x + 12\\). The HCF is 4. \\(8x \\div 4 = 2x\\) and \\(12 \\div 4 = 3\\), so \\(8x + 12 = 4(2x + 3)\\). Expand the answer to check: \\(4 \\times 2x + 4 \\times 3 = 8x + 12\\)."
+  ],
+  "remember": "Take out the HCF, then check by expanding the brackets.",
+  "a": {
+   "q": "Which option shows \\(12x + 18\\) fully factorised?",
+   "opts": [
+    "\\(6(2x + 3)\\)",
+    "\\(3(4x + 6)\\)",
+    "\\(2(6x + 9)\\)",
+    "\\(6(2x + 18)\\)"
+   ],
+   "why": "The HCF of 12 and 18 is 6. \\(12x \\div 6 = 2x\\) and \\(18 \\div 6 = 3\\), so the answer is \\(6(2x + 3)\\). \\(3(4x + 6)\\) is tempting, but 3 is a common factor, not the highest, so the bracket can still be factorised.",
+   "clue": "Find the largest number that divides both 12 and 18."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia takes out the HCF of \\(10x^{2} + 15x\\). What does she get?",
+   "opts": [
+    "\\(5x(2x + 3)\\)",
+    "\\(5(2x^{2} + 3x)\\)",
+    "\\(x(10x + 15)\\)",
+    "\\(5x(2x + 15)\\)"
+   ],
+   "why": "The HCF of \\(10x^{2}\\) and \\(15x\\) is \\(5x\\). \\(10x^{2} \\div 5x = 2x\\) and \\(15x \\div 5x = 3\\), so the answer is \\(5x(2x + 3)\\). \\(5(2x^{2} + 3x)\\) is tempting, but it leaves a common factor of \\(x\\) inside the bracket, so 5 is not the HCF.",
+   "clue": "Both terms share a number and a pronumeral. Take out both."
+  }
+ }
 }

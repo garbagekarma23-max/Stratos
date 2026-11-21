@@ -12,8 +12,392 @@
    0.321
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: failed the content check, writing again",
+  "2026-11-20T12:44:56Z write: done",
+  "2026-11-20T12:53:26Z check: flagged",
+  "2026-11-20T13:11:48Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-20T13:44:56Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "write": 0.01336,
+  "check": 0.01101,
+  "fix": 0.02193,
+  "recheck": 0.01128
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches that history has been recorded in different ways across cultures, such as Herodotus, Sima Qian and oral traditions: one covers prehistory versus written history, and the other covers checking oral history interviews as evidence at Year 10 depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: Every wrong option makes an absolute claim ('only', 'never', 'always'), and the right option is the only one without one. It also repeats the card's wording, so a student could pick it without understanding why both sources are useful.",
+ "rejected": {
+  "title": "Ways of writing history",
+  "card": [
+   "People have recorded the past in more than one way. Two main ways are written accounts and oral histories.",
+   [
+    "Written accounts",
+    "Herodotus, a Greek writer, wrote about the wars between Greece and Persia and the lands and peoples he learned about. Sima Qian, in China, wrote a long history of China from its earliest rulers up to his own time."
+   ],
+   [
+    "Oral histories",
+    "These are stories, songs and memories spoken aloud and passed from one generation to the next. Many cultures have used them to keep their past alive, and some still do."
+   ],
+   "Each way gives a different view of the past. A historian can use both kinds of source, and can ask who made each one and why."
+  ],
+  "remember": "The past has been kept in writing, as Herodotus and Sima Qian did, and in spoken stories passed down through generations.",
+  "a": {
+   "q": "Which of these is an example of an oral history?",
+   "opts": [
+    "A story about the past told aloud and passed on in a family",
+    "A history of Greece and Persia written by Herodotus",
+    "A long history of China written by Sima Qian",
+    "A report on the past copied out and stored in a library"
+   ],
+   "why": "An oral history is spoken and passed from one generation to the next. The works of Herodotus and Sima Qian were written down, so they are written accounts.",
+   "clue": "Look for the way the story is passed on, not just who tells it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is studying a people whose past was kept in two ways: a written account and stories passed down aloud. How should she use these sources?",
+   "opts": [
+    "Use both, and ask who made each one and why",
+    "Use only the written one, as writing is always accurate",
+    "Use only the oral one, as spoken stories never change",
+    "Use neither, as only objects can tell us about the past"
+   ],
+   "why": "Each kind of source gives a different view of the past, so a historian can use both and ask who made each one and why. It is tempting to trust only writing, but a written account was also made by a person with their own purpose.",
+   "clue": "Every source, spoken or written, was made by someone for a reason."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: Every wrong option makes an absolute claim ('only', 'never', 'always'), and the right option is the only one without one. It also repeats the card's wording, so a student could pick it without understanding why both sources are useful."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Ways of writing history",
+     "card": [
+      "People have recorded the past in more than one way. Two main ways are written accounts and oral histories.",
+      [
+       "Written accounts",
+       "Herodotus, a Greek writer, wrote about the wars between Greece and Persia and the lands and peoples he learned about. Sima Qian, in China, wrote a long history of China from its earliest rulers up to his own time."
+      ],
+      [
+       "Oral histories",
+       "These are stories, songs and memories spoken aloud and passed from one generation to the next. Many cultures have used them to keep their past alive, and some still do."
+      ],
+      "Each way gives a different view of the past. A historian can use both kinds of source, and can ask who made each one and why."
+     ],
+     "remember": "The past has been kept in writing, as Herodotus and Sima Qian did, and in spoken stories passed down through generations.",
+     "a": {
+      "q": "Which of these is an example of an oral history?",
+      "opts": [
+       "A story about the past told aloud and passed on in a family",
+       "A history of Greece and Persia written by Herodotus",
+       "A long history of China written by Sima Qian",
+       "A report on the past copied out and stored in a library"
+      ],
+      "why": "An oral history is spoken and passed from one generation to the next. The works of Herodotus and Sima Qian were written down, so they are written accounts.",
+      "clue": "Look for the way the story is passed on, not just who tells it."
+     },
+     "b": {
+      "d": 2,
+      "q": "A historian wants to study how people in ancient China understood their own past. Which source was written by Sima Qian?",
+      "opts": [
+       "A written history of China from its earliest rulers",
+       "A written account of the wars between Greece and Persia",
+       "A song passed down by memory in a village",
+       "A story told aloud by an elder to children"
+      ],
+      "why": "Sima Qian wrote a long history of China, so it is a written account. The account of Greece and Persia was written by Herodotus, and the song and the story are oral histories.",
+      "clue": "Sima Qian lived in China and wrote his history down."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "A story about the past told aloud and passed on in a family",
+      "also_right": []
+     },
+     "b": {
+      "best": "A written history of China from its earliest rulers",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The stem names China, and only one option mentions China. The clue then adds that Sima Qian 'wrote his history down', which rules out both oral options. A student can pick the answer by matching words without knowing the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts are correct: Herodotus wrote about the Greek–Persian wars, and Sima Qian wrote a history of China from its earliest rulers. Question b gives its answer away, because only one option mentions China and the clue says Sima Qian wrote his history down."
+    },
+    "flags": [
+     "Question b, wording: The stem names China, and only one option mentions China. The clue then adds that Sima Qian 'wrote his history down', which rules out both oral options. A student can pick the answer by matching words without knowing the idea."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Ways of writing history",
+     "card": [
+      "People have recorded the past in more than one way. Two main ways are written accounts and oral histories.",
+      [
+       "Written accounts",
+       "Herodotus, a Greek writer, wrote about the wars between Greece and Persia and the lands and peoples he learned about. Sima Qian, in China, wrote a long history of China from its earliest rulers up to his own time."
+      ],
+      [
+       "Oral histories",
+       "These are stories, songs and memories spoken aloud and passed from one generation to the next. Many cultures have used them to keep their past alive, and some still do."
+      ],
+      "Each way gives a different view of the past. A historian can use both kinds of source, and can ask who made each one and why."
+     ],
+     "remember": "The past has been kept in writing, as Herodotus and Sima Qian did, and in spoken stories passed down through generations.",
+     "a": {
+      "q": "Which of these is an example of an oral history?",
+      "opts": [
+       "A story about the past told aloud and passed on in a family",
+       "A history of Greece and Persia written by Herodotus",
+       "A long history of China written by Sima Qian",
+       "A report on the past copied out and stored in a library"
+      ],
+      "why": "An oral history is spoken and passed from one generation to the next. The works of Herodotus and Sima Qian were written down, so they are written accounts.",
+      "clue": "Look for the way the story is passed on, not just who tells it."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya is studying a people whose past was kept in two ways: a written account and stories passed down aloud. How should she use these sources?",
+      "opts": [
+       "Use both, and ask who made each one and why",
+       "Use only the written one, as writing is always accurate",
+       "Use only the oral one, as spoken stories never change",
+       "Use neither, as only objects can tell us about the past"
+      ],
+      "why": "Each kind of source gives a different view of the past, so a historian can use both and ask who made each one and why. It is tempting to trust only writing, but a written account was also made by a person with their own purpose.",
+      "clue": "Every source, spoken or written, was made by someone for a reason."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "A story about the past told aloud and passed on in a family",
+       "also_right": []
+      },
+      "b": {
+       "best": "Use both, and ask who made each one and why",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "Every wrong option makes an absolute claim ('only', 'never', 'always'), and the right option is the only one without one. It also repeats the card's wording, so a student could pick it without understanding why both sources are useful."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts about Herodotus, Sima Qian and oral histories are correct, and both answers are clear. In question b, the wrong options all use absolute words and the right one copies the card's wording, so it stands out too easily."
+     },
+     "flags": [
+      "Question b, wording: Every wrong option makes an absolute claim ('only', 'never', 'always'), and the right option is the only one without one. It also repeats the card's wording, so a student could pick it without understanding why both sources are useful."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:56Z",
+   "step": "write",
+   "version": {
+    "title": "Ways of writing history",
+    "card": [
+     "People have recorded the past in more than one way. Two main ways are written accounts and oral histories.",
+     [
+      "Written accounts",
+      "Herodotus, a Greek writer, wrote about the wars between Greece and Persia and the lands and peoples he learned about. Sima Qian, in China, wrote a long history of China from its earliest rulers up to his own time."
+     ],
+     [
+      "Oral histories",
+      "These are stories, songs and memories spoken aloud and passed from one generation to the next. Many cultures have used them to keep their past alive, and some still do."
+     ],
+     "Each way gives its own view of the past, so a historian can learn from both. Writing something down does not make it true, and for any source a historian asks who made it and why."
+    ],
+    "remember": "The past has been kept in writing, as Herodotus and Sima Qian did, and in spoken stories passed down through generations.",
+    "a": {
+     "q": "Which of these is an example of an oral history?",
+     "opts": [
+      "A story about the past told aloud and passed down",
+      "A history of Greece and Persia written by Herodotus",
+      "A long history of China written by Sima Qian",
+      "A report on the past copied out and stored in a library"
+     ],
+     "why": "An oral history is spoken and passed from one generation to the next. The works of Herodotus and Sima Qian were written down, so they are written accounts.",
+     "clue": "Look for the way the story is passed on, not just who tells it."
+    },
+    "b": {
+     "d": 3,
+     "q": "Priya is studying a people whose past was kept in two ways: a written account and stories passed down aloud. How should she use these sources?",
+     "opts": [
+      "Compare the two, thinking about the purpose of each",
+      "Trust the written account more, as it was set down",
+      "Set the stories aside, as nobody wrote them down",
+      "Accept both as told, as people from that time made them"
+     ],
+     "why": "Each kind of source gives its own view of the past, and writing something down does not make it true. So Priya can learn from both by comparing them and asking why each was made. Accepting both as told is tempting, but every source was made by someone for a reason.",
+     "clue": "Every source, spoken or written, was made by someone for a reason."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "A story about the past told aloud and passed down",
+     "also_right": []
+    },
+    "b": {
+     "best": "Compare the two, thinking about the purpose of each",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Ways of writing history",
+  "card": [
+   "People have recorded the past in more than one way. Two main ways are written accounts and oral histories.",
+   [
+    "Written accounts",
+    "Herodotus, a Greek writer, wrote about the wars between Greece and Persia and the lands and peoples he learned about. Sima Qian, in China, wrote a long history of China from its earliest rulers up to his own time."
+   ],
+   [
+    "Oral histories",
+    "These are stories, songs and memories spoken aloud and passed from one generation to the next. Many cultures have used them to keep their past alive, and some still do."
+   ],
+   "Each way gives its own view of the past, so a historian can learn from both. Writing something down does not make it true, and for any source a historian asks who made it and why."
+  ],
+  "remember": "The past has been kept in writing, as Herodotus and Sima Qian did, and in spoken stories passed down through generations.",
+  "a": {
+   "q": "Which of these is an example of an oral history?",
+   "opts": [
+    "A story about the past told aloud and passed down",
+    "A history of Greece and Persia written by Herodotus",
+    "A long history of China written by Sima Qian",
+    "A report on the past copied out and stored in a library"
+   ],
+   "why": "An oral history is spoken and passed from one generation to the next. The works of Herodotus and Sima Qian were written down, so they are written accounts.",
+   "clue": "Look for the way the story is passed on, not just who tells it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is studying a people whose past was kept in two ways: a written account and stories passed down aloud. How should she use these sources?",
+   "opts": [
+    "Compare the two, thinking about the purpose of each",
+    "Trust the written account more, as it was set down",
+    "Set the stories aside, as nobody wrote them down",
+    "Accept both as told, as people from that time made them"
+   ],
+   "why": "Each kind of source gives its own view of the past, and writing something down does not make it true. So Priya can learn from both by comparing them and asking why each was made. Accepting both as told is tempting, but every source was made by someone for a reason.",
+   "clue": "Every source, spoken or written, was made by someone for a reason."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A story about the past told aloud and passed down",
+   "also_right": []
+  },
+  "b": {
+   "best": "Compare the two, thinking about the purpose of each",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Ways of writing history",
+  "card": [
+   "People have recorded the past in more than one way. Two main ways are written accounts and oral histories.",
+   [
+    "Written accounts",
+    "Herodotus, a Greek writer, wrote about the wars between Greece and Persia and the lands and peoples he learned about. Sima Qian, in China, wrote a long history of China from its earliest rulers up to his own time."
+   ],
+   [
+    "Oral histories",
+    "These are stories, songs and memories spoken aloud and passed from one generation to the next. Many cultures have used them to keep their past alive, and some still do."
+   ],
+   "Each way gives its own view of the past, so a historian can learn from both. Writing something down does not make it true, and for any source a historian asks who made it and why."
+  ],
+  "remember": "The past has been kept in writing, as Herodotus and Sima Qian did, and in spoken stories passed down through generations.",
+  "a": {
+   "q": "Which of these is an example of an oral history?",
+   "opts": [
+    "A story about the past told aloud and passed down",
+    "A history of Greece and Persia written by Herodotus",
+    "A long history of China written by Sima Qian",
+    "A report on the past copied out and stored in a library"
+   ],
+   "why": "An oral history is spoken and passed from one generation to the next. The works of Herodotus and Sima Qian were written down, so they are written accounts.",
+   "clue": "Look for the way the story is passed on, not just who tells it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is studying a people whose past was kept in two ways: a written account and stories passed down aloud. How should she use these sources?",
+   "opts": [
+    "Compare the two, thinking about the purpose of each",
+    "Trust the written account more, as it was set down",
+    "Set the stories aside, as nobody wrote them down",
+    "Accept both as told, as people from that time made them"
+   ],
+   "why": "Each kind of source gives its own view of the past, and writing something down does not make it true. So Priya can learn from both by comparing them and asking why each was made. Accepting both as told is tempting, but every source was made by someone for a reason.",
+   "clue": "Every source, spoken or written, was made by someone for a reason."
+  }
+ },
+ "checked_by": "claude-code"
 }

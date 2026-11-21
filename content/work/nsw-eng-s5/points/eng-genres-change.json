@@ -20,8 +20,231 @@
    0.225
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:47Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:34:20Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.00675,
+  "check": 0.01244,
+  "fix": 0.02084,
+  "recheck": 0.00876
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point covers how genres change over time through adaptation, remakes and new versions; the closest points cover only single subversions or hybrid texts, which are narrower than the brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "How genres change",
+  "card": [
+   "A genre is a group of texts that share conventions, such as the usual characters, settings and plot of a detective story. Genres do not stay fixed. They change as audiences and values change.",
+   [
+    "Adapted",
+    "a genre's conventions are moved into a new form, setting or time. A fairytale might be retold as a film set in a modern city."
+   ],
+   [
+    "Hybrid",
+    "conventions from two genres are mixed into one text. A story that is both a western and science fiction is a hybrid."
+   ],
+   [
+    "Subverted",
+    "a text sets up a genre's conventions, then twists them on purpose. A fairytale in which the princess rescues herself, and does not marry the prince, subverts the genre."
+   ]
+  ],
+  "remember": "Genres change as audiences and values change: they can be adapted, mixed or subverted.",
+  "a": {
+   "q": "A film uses the usual steps of a murder mystery, but the story is set on a space station and the detective is a robot. What is the film doing with the genre?",
+   "opts": [
+    "Adapting it by moving its conventions to a new setting",
+    "Subverting it by twisting its conventions on purpose",
+    "Mixing it with a genre that has no conventions",
+    "Leaving it unchanged so it matches older versions"
+   ],
+   "why": "The murder mystery conventions are kept and moved to a new setting, so the genre is adapted. Nothing is turned against audience expectations, so it is not subverted.",
+   "clue": "Are the conventions kept and moved, or turned upside down?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a new version of a fairytale, the young hero is expected to defeat the dragon. Instead he befriends it, and the story ends with the dragon teaching him to read. Which statement best describes this change?",
+   "opts": [
+    "It subverts the genre by twisting a convention on purpose",
+    "It makes a hybrid by mixing in a second genre's conventions",
+    "It adapts the genre by moving it into a new form",
+    "It leaves the genre unchanged because a dragon appears"
+   ],
+   "why": "The story sets up the usual convention of a hero defeating a monster, then twists it on purpose, so it subverts the genre. It is not a hybrid, because no second genre's conventions are mixed in. The form and setting have not changed, so it is not an adaptation.",
+   "clue": "The story builds an expectation, then does the opposite."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Adapting it by moving its conventions to a new setting",
+   "also_right": []
+  },
+  "b": {
+   "best": "It subverts the genre by twisting a convention on purpose",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "A murder mystery set on a space station with a robot detective brings in science-fiction conventions. By the card's own example (a western that is also science fiction is a hybrid), this reads as a hybrid. Teaching it as only an adaptation clashes with the card. The only hybrid option is made absurd ('a genre that has no conventions'), so the question works only by ruling hybrid out artificially. Use a setting that is not genre-marked, such as a modern office or a small town today."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question a's scenario (space station, robot detective) is arguably a mystery/science-fiction hybrid under the card's own definition, so calling it only an adaptation could mislead. Question b and the card are fine."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: A murder mystery set on a space station with a robot detective brings in science-fiction conventions. By the card's own example (a western that is also science fiction is a hybrid), this reads as a hybrid. Teaching it as only an adaptation clashes with the card. The only hybrid option is made absurd ('a genre that has no conventions'), so the question works only by ruling hybrid out artificially. Use a setting that is not genre-marked, such as a modern office or a small town today."
+ ],
+ "proposal": {
+  "title": "How genres change",
+  "card": [
+   "A genre is a group of texts that share conventions, such as the usual characters, settings and plot of a detective story. Genres do not stay fixed. They change as audiences and values change.",
+   [
+    "Adapted",
+    "a genre's conventions are moved into a new form, setting or time. A fairytale might be retold as a film set in a modern city."
+   ],
+   [
+    "Hybrid",
+    "conventions from two genres are mixed into one text. A story that is both a western and science fiction is a hybrid."
+   ],
+   [
+    "Subverted",
+    "a text sets up a genre's conventions, then twists them on purpose. A fairytale in which the princess rescues herself, and does not marry the prince, subverts the genre."
+   ]
+  ],
+  "remember": "Genres change as audiences and values change: they can be adapted, mixed or subverted.",
+  "a": {
+   "q": "A film keeps the usual parts of a murder mystery: a detective, a group of suspects, clues and a final reveal. The story is moved from an English country house in the 1920s to a small Australian town today. What is the film doing with the genre?",
+   "opts": [
+    "Adapting it by moving its conventions to a new time",
+    "Subverting it by twisting its conventions on purpose",
+    "Making a hybrid by mixing in a second genre's conventions",
+    "Leaving it unchanged because its conventions are kept"
+   ],
+   "why": "The murder mystery conventions are kept and moved to a new time and place, so the genre is adapted. Nothing is twisted against what the audience expects, so it is not subverted, and no second genre is mixed in, so it is not a hybrid.",
+   "clue": "Are the conventions kept and moved, mixed, or turned upside down?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a new version of a fairytale, the young hero is expected to defeat the dragon. Instead he befriends it, and the story ends with the dragon teaching him to read. Which statement best describes this change?",
+   "opts": [
+    "It subverts the genre by twisting a convention on purpose",
+    "It makes a hybrid by mixing in a second genre's conventions",
+    "It adapts the genre by moving it into a new form",
+    "It leaves the genre unchanged because a dragon appears"
+   ],
+   "why": "The story sets up the usual convention of a hero defeating a monster, then twists it on purpose, so it subverts the genre. It is not a hybrid, because no second genre's conventions are mixed in. The form and setting have not changed, so it is not an adaptation.",
+   "clue": "The story builds an expectation, then does the opposite."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Adapting it by moving its conventions to a new time",
+    "also_right": []
+   },
+   "b": {
+    "best": "It subverts the genre by twisting a convention on purpose",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "A murder mystery set on a space station with a robot detective brings in science-fiction conventions. By the card's own example (a western that is also science fiction is a hybrid), this reads as a hybrid. Teaching it as only an adaptation clashes with the card. The only hybrid option is made absurd ('a genre that has no conventions'), so the question works only by ruling hybrid out artificially. Use a setting that is not genre-marked, such as a modern office or a small town today."
+   }
+  ],
+  "flags": [
+   "Question a, other: A murder mystery set on a space station with a robot detective brings in science-fiction conventions. By the card's own example (a western that is also science fiction is a hybrid), this reads as a hybrid. Teaching it as only an adaptation clashes with the card. The only hybrid option is made absurd ('a genre that has no conventions'), so the question works only by ruling hybrid out artificially. Use a setting that is not genre-marked, such as a modern office or a small town today."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "How genres change",
+  "card": [
+   "A genre is a group of texts that share conventions, such as the usual characters, settings and plot of a detective story. Genres do not stay fixed. They change as audiences and values change.",
+   [
+    "Adapted",
+    "a genre's conventions are moved into a new form, setting or time. A fairytale might be retold as a film set in a modern city."
+   ],
+   [
+    "Hybrid",
+    "conventions from two genres are mixed into one text. A story that is both a western and science fiction is a hybrid."
+   ],
+   [
+    "Subverted",
+    "a text sets up a genre's conventions, then twists them on purpose. A fairytale in which the princess rescues herself, and does not marry the prince, subverts the genre."
+   ]
+  ],
+  "remember": "Genres change as audiences and values change: they can be adapted, mixed or subverted.",
+  "a": {
+   "q": "A film keeps the usual parts of a murder mystery: a detective, a group of suspects, clues and a final reveal. The story is moved from an English country house in the 1920s to a small Australian town today. What is the film doing with the genre?",
+   "opts": [
+    "Adapting it by moving its conventions to a new time",
+    "Subverting it by twisting its conventions on purpose",
+    "Making a hybrid by mixing in a second genre's conventions",
+    "Leaving it unchanged because its conventions are kept"
+   ],
+   "why": "The murder mystery conventions are kept and moved to a new time and place, so the genre is adapted. Nothing is twisted against what the audience expects, so it is not subverted, and no second genre is mixed in, so it is not a hybrid.",
+   "clue": "Are the conventions kept and moved, mixed, or turned upside down?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a new version of a fairytale, the young hero is expected to defeat the dragon. Instead he befriends it, and the story ends with the dragon teaching him to read. Which statement best describes this change?",
+   "opts": [
+    "It subverts the genre by twisting a convention on purpose",
+    "It makes a hybrid by mixing in a second genre's conventions",
+    "It adapts the genre by moving it into a new form",
+    "It leaves the genre unchanged because a dragon appears"
+   ],
+   "why": "The story sets up the usual convention of a hero defeating a monster, then twists it on purpose, so it subverts the genre. It is not a hybrid, because no second genre's conventions are mixed in. The form and setting have not changed, so it is not an adaptation.",
+   "clue": "The story builds an expectation, then does the opposite."
+  }
+ },
+ "cleared_by": "owner"
 }

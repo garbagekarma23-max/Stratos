@@ -20,8 +20,197 @@
    0.235
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:48Z write: failed the content check, writing again",
+  "2026-11-20T12:44:54Z write: done (still fails the content check)",
+  "2026-11-20T13:11:47Z check: flagged",
+  "2026-11-20T13:17:56Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00039,
+  "write": 0.01487,
+  "check": 0.0065,
+  "fix": 0.02075,
+  "recheck": 0.00879
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank points cover representation of people and places or context alone, while this point covers every text as a construction, including creative aims and assumptions the composer may not notice, so no bank point matches it exactly.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Representation as construction",
+  "card": [
+   "Representation is the way a text presents a person, group, place, event or idea. A text does not show the world as it simply is. Its composer builds a version of it.",
+   "Every text is a construction. The composer chooses what to include, what to leave out, and how to present it, through choices of words, images, order and viewpoint.",
+   "These choices are shaped by the composer's context, such as when and where they live, and by their creative aims, such as what they want the audience to feel or believe.",
+   "Composers may also work from assumptions they do not notice. Because of this, a representation can seem natural or neutral when it is really one version among many."
+  ],
+  "remember": "No text is a window onto the world. It is built from choices, and each choice shapes what the audience sees.",
+  "a": {
+   "q": "A news website runs a story about a new skate park. It quotes the council and the skaters, but no nearby residents. What does this show about the story?",
+   "opts": [
+    "It is a construction, as the composer chose whose views appear",
+    "It is a failure, as every text must include all possible views",
+    "It is a neutral record, as the quotes are all real people's",
+    "It is a construction, but only as skaters were quoted in it"
+   ],
+   "why": "Choosing whose voices appear is a choice about what to include and leave out, so the story is a construction. Real quotes do not make it neutral, because the composer still selected them.",
+   "clue": "Think about who chose the quotes, and who was left out."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya makes a short film about her small country town. She shows only sunny days, friendly shopkeepers and the river. She did not plan to hide anything, and she believes the film simply shows the town as it is. Which statement best explains the film?",
+   "opts": [
+    "It is a construction shaped by choices she may not notice",
+    "It is an accurate window, as she did not mean to mislead",
+    "It is a construction only if she planned to hide problems",
+    "It is a neutral record, as the scenes are real places"
+   ],
+   "why": "Every text is a construction, even when the composer does not notice their own choices. Priya's selection of scenes shapes how the town is seen. The tempting wrong answer says a construction needs a deliberate plan, but assumptions can shape a text without the composer noticing.",
+   "clue": "Does a composer have to notice a choice for it to be a choice?"
+  }
+ },
+ "redone": true,
+ "local": [
+  "eng-representation-as-constructiona option is 62 characters: It is a construction, as the composer chose whose views appear",
+  "eng-representation-as-constructiona option is 62 characters: It is a failure, as every text must include all possible views"
+ ],
+ "check": {
+  "a": {
+   "best": "It is a construction, as the composer chose whose views appear",
+   "also_right": []
+  },
+  "b": {
+   "best": "It is a construction shaped by choices she may not notice",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Content check: eng-representation-as-constructiona option is 62 characters: It is a construction, as the composer chose whose views appear",
+  "Content check: eng-representation-as-constructiona option is 62 characters: It is a failure, as every text must include all possible views"
+ ],
+ "proposal": {
+  "title": "Representation as construction",
+  "card": [
+   "Representation is the way a text presents a person, group, place, event or idea. A text does not show the world as it simply is. Its composer builds a version of it.",
+   "Every text is a construction. The composer chooses what to include, what to leave out, and how to present it, through choices of words, images, order and viewpoint.",
+   "These choices are shaped by the composer's context, such as when and where they live, and by their creative aims, such as what they want the audience to feel or believe.",
+   "Composers may also work from assumptions they do not notice. Because of this, a representation can seem natural or neutral when it is really one version among many."
+  ],
+  "remember": "No text is a window onto the world. It is built from choices, and each choice shapes what the audience sees.",
+  "a": {
+   "q": "A news website runs a story about a new skate park. It quotes the council and the skaters, but no nearby residents. What does this show about the story?",
+   "opts": [
+    "It is a construction, as someone chose whose views appear",
+    "It is a failure, as every text must include all views",
+    "It is a neutral record, as the quotes are all real people's",
+    "It is a construction, but only as skaters were quoted in it"
+   ],
+   "why": "Choosing whose voices appear is a choice about what to include and leave out, so the story is a construction. Real quotes do not make it neutral, because the composer still selected them.",
+   "clue": "Think about who chose the quotes, and who was left out."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya makes a short film about her small country town. She shows only sunny days, friendly shopkeepers and the river. She did not plan to hide anything, and she believes the film simply shows the town as it is. Which statement best explains the film?",
+   "opts": [
+    "It is a construction shaped by choices she may not notice",
+    "It is an accurate window, as she did not mean to mislead",
+    "It is a construction only if she planned to hide problems",
+    "It is a neutral record, as the scenes are real places"
+   ],
+   "why": "Every text is a construction, even when the composer does not notice their own choices. Priya's selection of scenes shapes how the town is seen. The tempting wrong answer says a construction needs a deliberate plan, but assumptions can shape a text without the composer noticing.",
+   "clue": "Does a composer have to notice a choice for it to be a choice?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It is a construction, as someone chose whose views appear",
+    "also_right": []
+   },
+   "b": {
+    "best": "It is a construction shaped by choices she may not notice",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [],
+  "flags": [
+   "Content check: eng-representation-as-constructiona option is 62 characters: It is a construction, as the composer chose whose views appear",
+   "Content check: eng-representation-as-constructiona option is 62 characters: It is a failure, as every text must include all possible views"
+  ]
+ },
+ "final": {
+  "title": "Representation as construction",
+  "card": [
+   "Representation is the way a text presents a person, group, place, event or idea. A text does not show the world as it simply is. Its composer builds a version of it.",
+   "Every text is a construction. The composer chooses what to include, what to leave out, and how to present it, through choices of words, images, order and viewpoint.",
+   "These choices are shaped by the composer's context, such as when and where they live, and by their creative aims, such as what they want the audience to feel or believe.",
+   "Composers may also work from assumptions they do not notice. Because of this, a representation can seem natural or neutral when it is really one version among many."
+  ],
+  "remember": "No text is a window onto the world. It is built from choices, and each choice shapes what the audience sees.",
+  "a": {
+   "q": "A news website runs a story about a new skate park. It quotes the council and the skaters, but no nearby residents. What does this show about the story?",
+   "opts": [
+    "It is a construction, as someone chose whose views appear",
+    "It is a failure, as every text must include all views",
+    "It is a neutral record, as the quotes are all real people's",
+    "It is a construction, but only as skaters were quoted in it"
+   ],
+   "why": "Choosing whose voices appear is a choice about what to include and leave out, so the story is a construction. Real quotes do not make it neutral, because the composer still selected them.",
+   "clue": "Think about who chose the quotes, and who was left out."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya makes a short film about her small country town. She shows only sunny days, friendly shopkeepers and the river. She did not plan to hide anything, and she believes the film simply shows the town as it is. Which statement best explains the film?",
+   "opts": [
+    "It is a construction shaped by choices she may not notice",
+    "It is an accurate window, as she did not mean to mislead",
+    "It is a construction only if she planned to hide problems",
+    "It is a neutral record, as the scenes are real places"
+   ],
+   "why": "Every text is a construction, even when the composer does not notice their own choices. Priya's selection of scenes shapes how the town is seen. The tempting wrong answer says a construction needs a deliberate plan, but assumptions can shape a text without the composer noticing.",
+   "clue": "Does a composer have to notice a choice for it to be a choice?"
+  }
+ },
+ "cleared_by": "recheck"
 }

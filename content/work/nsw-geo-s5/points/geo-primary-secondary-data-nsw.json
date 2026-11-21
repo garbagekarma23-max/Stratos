@@ -24,8 +24,114 @@
    0.397
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 may adapt geo-primary-secondary-data, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:47Z confirm: Claude Opus 5.5 may reuse geo-primary-secondary-data, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z claude-code review: reusing geo-primary-secondary-data"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "confirm": 0.01038
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-primary-secondary-data",
+  "changes": [
+   "The card's examples of secondary data (census figures, maps, satellite images, published reports) should be aligned to NSW Stage 5 geographical inquiry, such as Bureau of Meteorology records and government reports as used in the NSW Stage 5 course.",
+   "The Question b example uses a Darwin school and a Year 7 context, so it should be replaced with a Stage 5 NSW context such as a Year 9 or 10 student inquiry in a NSW town."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same primary versus secondary distinction at a suitable depth, but its Year 7 examples and Darwin scenario need localising for NSW Stage 5, and its Question b is set in the wrong context.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "geo-primary-secondary-data",
+  "changes": [],
+  "sure": "medium",
+  "reason": "This bank point teaches exactly the brief's idea, first-hand data such as surveys and fieldwork against others' data such as census figures and reports, at a simple depth that still suits Years 9 and 10, and its Australian examples and questions are fair for NSW students.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "geo-primary-secondary-data",
+ "matched": {
+  "verdict": "reuse",
+  "from": "geo-primary-secondary-data",
+  "by": "claude-code",
+  "at": "2026-11-20T14:02:37Z"
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "reuse",
+   "sure": "high",
+   "reason": "The bank point teaches exactly the brief: first-hand data such as surveys and fieldwork against others' data such as census figures and reports. Its examples, strengths and limits suit Years 9 and 10 in NSW, and nothing needs changing.",
+   "item": "1d96691f4153c63b",
+   "result": "decided",
+   "saved": {
+    "id": "geo-primary-secondary-data-nsw",
+    "title": "Primary and secondary data",
+    "brief": "956f8c0b2042",
+    "shortlist": [
+     [
+      "geo-fieldwork-primary-data",
+      0.551
+     ],
+     [
+      "geo-primary-secondary-data",
+      0.478
+     ],
+     [
+      "geo-secondary-data",
+      0.469
+     ],
+     [
+      "mat-primary-secondary-data",
+      0.406
+     ],
+     [
+      "chem-primary-secondary-data",
+      0.397
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00021,
+     "confirm": 0.01038
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "geo-primary-secondary-data",
+     "changes": [
+      "The card's examples of secondary data (census figures, maps, satellite images, published reports) should be aligned to NSW Stage 5 geographical inquiry, such as Bureau of Meteorology records and government reports as used in the NSW Stage 5 course.",
+      "The Question b example uses a Darwin school and a Year 7 context, so it should be replaced with a Stage 5 NSW context such as a Year 9 or 10 student inquiry in a NSW town."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same primary versus secondary distinction at a suitable depth, but its Year 7 examples and Darwin scenario need localising for NSW Stage 5, and its Question b is set in the wrong context.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "reuse",
+     "same": "geo-primary-secondary-data",
+     "changes": [],
+     "sure": "medium",
+     "reason": "This bank point teaches exactly the brief's idea, first-hand data such as surveys and fieldwork against others' data such as census figures and reports, at a simple depth that still suits Years 9 and 10, and its Australian examples and questions are fair for NSW students.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "931dfd99b28be03c"
+  }
  ]
 }

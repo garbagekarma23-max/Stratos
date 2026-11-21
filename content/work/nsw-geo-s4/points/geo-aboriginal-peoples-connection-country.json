@@ -20,8 +20,158 @@
    0.242
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 may adapt geo-connection-country, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:45Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:49Z write: failed the content check, writing again",
+  "2026-11-20T12:44:55Z write: done",
+  "2026-11-20T12:53:24Z check: for review (first-nations)",
+  "2026-11-20T14:38:50Z review: rejected, to be written again",
+  "2026-11-20T14:58:19Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "confirm": 0.0087,
+  "write": 0.02422,
+  "check": 0.00813
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-connection-country",
+  "changes": [
+   "Replace the term 'First Nations Australians' with 'Aboriginal and Torres Strait Islander Peoples', the term the NSW syllabus uses.",
+   "Add that Country is tied to law as well as identity, stories and family.",
+   "Add that landscapes such as Uluru are part of Country, using the Anangu example from the brief.",
+   "Adjust the question examples so they suit a NSW student rather than the other states' contexts."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same idea of connection to Country at the right Year 7 depth, but it needs NSW terminology, the link to law, and the landscape example added.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank's Connection to Country point covers belonging, dispossession and relocation, while this point teaches landscapes as part of Country, tied to identity, stories and law, through Uluru and the Anangu, so matching it would mean a different focus rather than small changes.",
+  "model": "claude-opus-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Connection to Country",
+  "card": [
+   "For Aboriginal and Torres Strait Islander Peoples, Country is more than land. It includes the land, waters, sky, plants, animals and the people who belong to it.",
+   "Country is tied to identity. People may say who they are by naming the Country they come from and the Country of their family.",
+   "Country holds stories and law. Stories explain how the landscape was formed and how people should live with it and each other.",
+   "Uluru is an example. For the Anangu, it is part of their Country, and its stories and law are passed on through generations."
+  ],
+  "remember": "Country is the land, waters and living things, tied to identity, stories and law.",
+  "a": {
+   "q": "Which description best matches how many Aboriginal and Torres Strait Islander Peoples understand Country?",
+   "opts": [
+    "Land, waters and living things tied to identity and law",
+    "An area of farmland used to grow crops and raise animals",
+    "A rural region outside a major city or large town",
+    "A section of land that is owned by one person"
+   ],
+   "why": "Country includes land, waters, sky, plants, animals and people, and it is tied to identity, stories and law. It is not just a rural area or a piece of land that someone owns.",
+   "clue": "Think about more than the soil and rocks."
+  },
+  "b": {
+   "d": 2,
+   "q": "Why is Uluru more than a tourist attraction for the Anangu?",
+   "opts": [
+    "It is part of their Country, with stories and law",
+    "It is a large rock that is hard to climb safely",
+    "It is the only landform found in central Australia",
+    "It gives them land that is good for farming"
+   ],
+   "why": "For the Anangu, Uluru is part of Country, which holds stories and law that are passed on through generations. Its size and the way it looks do not explain this meaning.",
+   "clue": "Think about what Country holds besides the landform itself."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:19Z",
+   "step": "write",
+   "version": {
+    "title": "Aboriginal Peoples' connection to Country",
+    "card": [
+     "For Aboriginal and Torres Strait Islander Peoples, a landscape is part of Country: the land, waters, sky and living things, and the people who belong to them.",
+     "Country is tied to identity. People often say who they are by naming their Country, the place they and their family belong to.",
+     "Country holds stories and law. Stories tell how features of the land were made and how people should live with the land and with each other.",
+     "Uluru is part of Country for the Anangu, its Traditional Owners. Its features are tied to Tjukurpa, the Anangu word for their stories and law, passed down through generations."
+    ],
+    "remember": "A landscape that is Country is part of who people are, and it holds their stories and law.",
+    "a": {
+     "q": "A geographer describes a landscape as part of Country for an Aboriginal community. What does this tell you about the landscape?",
+     "opts": [
+      "It is tied to people's identity, stories and law",
+      "It is valued mainly for its beauty and its views",
+      "It is land set aside for the community to farm",
+      "It is a rural area far from any city or town"
+     ],
+     "why": "Country is the land, waters, sky and living things that people belong to, and it is tied to identity, stories and law. Seeing it as farmland or as a rural area misses those ties.",
+     "clue": "Think about what Country holds besides the land itself."
+    },
+    "b": {
+     "d": 3,
+     "q": "A tour guide tells visitors that Uluru is just a big rock that formed millions of years ago. What does this leave out for the Anangu?",
+     "opts": [
+      "That Uluru is part of Country, tied to Tjukurpa",
+      "That Uluru is the tallest mountain in Australia",
+      "That Uluru is good land for growing crops",
+      "That Uluru was built by people long ago"
+     ],
+     "why": "For the Anangu, Uluru is part of Country, and its features are tied to Tjukurpa, their stories and law. Its age as a rock formation is true, but it says nothing about what Uluru means to the people who belong to it.",
+     "clue": "What does Uluru hold for the people who belong to it?"
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Aboriginal Peoples' connection to Country",
+  "card": [
+   "For Aboriginal and Torres Strait Islander Peoples, a landscape is part of Country: the land, waters, sky and living things, and the people who belong to them.",
+   "Country is tied to identity. People often say who they are by naming their Country, the place they and their family belong to.",
+   "Country holds stories and law. Stories tell how features of the land were made and how people should live with the land and with each other.",
+   "Uluru is part of Country for the Anangu, its Traditional Owners. Its features are tied to Tjukurpa, the Anangu word for their stories and law, passed down through generations."
+  ],
+  "remember": "A landscape that is Country is part of who people are, and it holds their stories and law.",
+  "a": {
+   "q": "A geographer describes a landscape as part of Country for an Aboriginal community. What does this tell you about the landscape?",
+   "opts": [
+    "It is tied to people's identity, stories and law",
+    "It is valued mainly for its beauty and its views",
+    "It is land set aside for the community to farm",
+    "It is a rural area far from any city or town"
+   ],
+   "why": "Country is the land, waters, sky and living things that people belong to, and it is tied to identity, stories and law. Seeing it as farmland or as a rural area misses those ties.",
+   "clue": "Think about what Country holds besides the land itself."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tour guide tells visitors that Uluru is just a big rock that formed millions of years ago. What does this leave out for the Anangu?",
+   "opts": [
+    "That Uluru is part of Country, tied to Tjukurpa",
+    "That Uluru is the tallest mountain in Australia",
+    "That Uluru is good land for growing crops",
+    "That Uluru was built by people long ago"
+   ],
+   "why": "For the Anangu, Uluru is part of Country, and its features are tied to Tjukurpa, their stories and law. Its age as a rock formation is true, but it says nothing about what Uluru means to the people who belong to it.",
+   "clue": "What does Uluru hold for the people who belong to it?"
+  }
+ },
+ "local": []
 }

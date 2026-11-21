@@ -3,8 +3,350 @@
  "title": "Polymers and plastics",
  "brief": "d238c4f56eb6",
  "shortlist": [],
- "stage": "write",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:43Z new, write"
- ]
+  "2026-11-12T12:22:43Z new, write",
+  "2026-11-20T12:15:23Z write: failed the content check, writing again",
+  "2026-11-20T12:26:01Z write: done",
+  "2026-11-20T12:35:57Z check: flagged",
+  "2026-11-20T12:45:01Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (a other, b wording)",
+  "2026-11-20T13:44:57Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.01368,
+  "check": 0.01185,
+  "fix": 0.01772,
+  "recheck": 0.01235
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The clue mentions 'a chain', and the right option is the only one that contains the word 'chain', so a student can match the word without knowing what a polymer is.\n- Question b, wording: The right option is the only one with a hedging qualifier ('Many plastics'), and it repeats the card's wording almost word for word. The distractors make sweeping or absurd claims ('poison all animals', 'run out', 'dissolve'), so the answer stands out.",
+ "rejected": {
+  "title": "Polymers and plastics",
+  "card": [
+   "A polymer is a very long molecule made of many small molecules joined in a repeating chain. The small repeating molecule is called a monomer.",
+   "Many polymers, including most plastics, are made from crude oil, which is a finite resource. Polyethylene, used in shopping bags, is one example.",
+   "Many plastics break down very slowly. They can last for centuries in the environment, where they can harm wildlife and build up as waste.",
+   "Because of this, alternatives are being developed, such as plastics made from plant material and plastics designed to break down faster."
+  ],
+  "remember": "Many polymers, including most plastics, are made from crude oil, and many plastics can last for centuries as waste.",
+  "a": {
+   "q": "Which statement best describes a polymer?",
+   "opts": [
+    "A long molecule made of many small molecules in a chain",
+    "A single large atom made of many smaller atoms joined",
+    "A mixture of different plastics melted into one block",
+    "A small molecule that is the starting unit of a plastic"
+   ],
+   "why": "A polymer is a long chain of repeating small molecules. The last option describes a monomer, which is one unit of the chain, not the whole chain.",
+   "clue": "Think of a chain made of many identical links."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev's council wants to cut plastic waste in a local creek. Which reason best explains why plastic bags left near the creek are a long-term problem?",
+   "opts": [
+    "Many plastics break down so slowly they can last centuries",
+    "Plastics come from crude oil, so they dissolve in water",
+    "Plastics are made of monomers, which poison all animals",
+    "Plastics are finite, so the creek will soon run out of them"
+   ],
+   "why": "Many plastics break down very slowly, so a bag left near the creek can remain for centuries. Being made from crude oil does not make plastic dissolve in water, and the finite supply of oil is a separate issue from how long waste lasts.",
+   "clue": "Focus on what happens to plastic after it is thrown away."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: The clue mentions 'a chain', and the right option is the only one that contains the word 'chain', so a student can match the word without knowing what a polymer is.",
+    "Question b, wording: The right option is the only one with a hedging qualifier ('Many plastics'), and it repeats the card's wording almost word for word. The distractors make sweeping or absurd claims ('poison all animals', 'run out', 'dissolve'), so the answer stands out."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Polymers and plastics",
+     "card": [
+      "A polymer is a very long molecule made of many small molecules joined in a repeating chain. The small repeating molecule is called a monomer.",
+      "Many polymers are made from crude oil, which is a finite resource. Plastics such as polyethylene (used in shopping bags) are polymers made this way.",
+      "Many plastics break down very slowly. They can last for centuries in the environment, where they can harm wildlife and build up as waste.",
+      "Because of this, alternatives are being developed, such as plastics made from plant material and plastics designed to break down faster."
+     ],
+     "remember": "Polymers are long chains of repeating monomers, mostly made from crude oil, and many plastics last for centuries.",
+     "a": {
+      "q": "Which statement best describes a polymer?",
+      "opts": [
+       "A long molecule made of many small molecules in a chain",
+       "A single large atom made of many smaller atoms joined",
+       "A mixture of different plastics melted into one block",
+       "A small molecule that is the starting unit of a plastic"
+      ],
+      "why": "A polymer is a long chain of repeating small molecules. The last option describes a monomer, which is one unit of the chain, not the whole chain.",
+      "clue": "Think of a chain made of many identical links."
+     },
+     "b": {
+      "d": 3,
+      "q": "Dev's council wants to cut plastic waste in a local creek. Which reason best explains why plastic bags left near the creek are a long-term problem?",
+      "opts": [
+       "Many plastics break down very slowly and last centuries",
+       "Plastics come from crude oil, so they dissolve in water",
+       "Plastics are made of monomers, which poison all animals",
+       "Plastics are finite, so the creek will soon run out of them"
+      ],
+      "why": "Many plastics break down very slowly, so a bag left near the creek can remain for centuries. Being made from crude oil does not make plastic dissolve in water, and the finite supply of oil is a separate issue from how long waste lasts.",
+      "clue": "Focus on what happens to plastic after it is thrown away."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "A long molecule made of many small molecules in a chain",
+      "also_right": []
+     },
+     "b": {
+      "best": "Many plastics break down very slowly and last centuries",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "remember",
+       "kind": "other",
+       "detail": "The remember line says polymers are 'mostly made from crude oil', but the card says only that 'many polymers' are. As a general claim it is also misleading: natural polymers such as starch, cellulose, proteins and DNA are not made from crude oil. Make it 'many polymers, including most plastics, are made from crude oil'."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions are sound and each has one clear answer. The remember line says polymers are 'mostly' made from crude oil, which goes beyond the card's 'many' and ignores natural polymers."
+    },
+    "flags": [
+     "Remember, other: The remember line says polymers are 'mostly made from crude oil', but the card says only that 'many polymers' are. As a general claim it is also misleading: natural polymers such as starch, cellulose, proteins and DNA are not made from crude oil. Make it 'many polymers, including most plastics, are made from crude oil'."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Polymers and plastics",
+     "card": [
+      "A polymer is a very long molecule made of many small molecules joined in a repeating chain. The small repeating molecule is called a monomer.",
+      "Many polymers, including most plastics, are made from crude oil, which is a finite resource. Polyethylene, used in shopping bags, is one example.",
+      "Many plastics break down very slowly. They can last for centuries in the environment, where they can harm wildlife and build up as waste.",
+      "Because of this, alternatives are being developed, such as plastics made from plant material and plastics designed to break down faster."
+     ],
+     "remember": "Many polymers, including most plastics, are made from crude oil, and many plastics can last for centuries as waste.",
+     "a": {
+      "q": "Which statement best describes a polymer?",
+      "opts": [
+       "A long molecule made of many small molecules in a chain",
+       "A single large atom made of many smaller atoms joined",
+       "A mixture of different plastics melted into one block",
+       "A small molecule that is the starting unit of a plastic"
+      ],
+      "why": "A polymer is a long chain of repeating small molecules. The last option describes a monomer, which is one unit of the chain, not the whole chain.",
+      "clue": "Think of a chain made of many identical links."
+     },
+     "b": {
+      "d": 3,
+      "q": "Dev's council wants to cut plastic waste in a local creek. Which reason best explains why plastic bags left near the creek are a long-term problem?",
+      "opts": [
+       "Many plastics break down so slowly they can last centuries",
+       "Plastics come from crude oil, so they dissolve in water",
+       "Plastics are made of monomers, which poison all animals",
+       "Plastics are finite, so the creek will soon run out of them"
+      ],
+      "why": "Many plastics break down very slowly, so a bag left near the creek can remain for centuries. Being made from crude oil does not make plastic dissolve in water, and the finite supply of oil is a separate issue from how long waste lasts.",
+      "clue": "Focus on what happens to plastic after it is thrown away."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:08Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "A long molecule made of many small molecules in a chain",
+       "also_right": []
+      },
+      "b": {
+       "best": "Many plastics break down so slowly they can last centuries",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The clue mentions 'a chain', and the right option is the only one that contains the word 'chain', so a student can match the word without knowing what a polymer is."
+       },
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The right option is the only one with a hedging qualifier ('Many plastics'), and it repeats the card's wording almost word for word. The distractors make sweeping or absurd claims ('poison all animals', 'run out', 'dissolve'), so the answer stands out."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts are correct and both questions have one clear answer. However, the clue for (a) gives the answer away with the word 'chain', and the right option in (b) stands out as the only qualified, card-worded choice."
+     },
+     "flags": [
+      "Question a, other: The clue mentions 'a chain', and the right option is the only one that contains the word 'chain', so a student can match the word without knowing what a polymer is.",
+      "Question b, wording: The right option is the only one with a hedging qualifier ('Many plastics'), and it repeats the card's wording almost word for word. The distractors make sweeping or absurd claims ('poison all animals', 'run out', 'dissolve'), so the answer stands out."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:57Z",
+   "step": "write",
+   "version": {
+    "title": "Polymers and plastics",
+    "card": [
+     "A polymer is a very long molecule made of many small molecules joined in a repeating chain. The small repeating molecule is called a monomer.",
+     "Many polymers, including most plastics, are made from crude oil, which is a finite resource. Polyethylene, used in shopping bags, is one example.",
+     "Many plastics break down very slowly. They can last for centuries in the environment, where they can harm wildlife and build up as waste.",
+     "Because of this, alternatives are being developed, such as plastics made from plant material and plastics designed to break down faster."
+    ],
+    "remember": "Many polymers, including most plastics, are made from crude oil, and many plastics can last for centuries as waste.",
+    "a": {
+     "q": "Which statement best describes a polymer?",
+     "opts": [
+      "A long chain of many small molecules joined together",
+      "One small molecule that repeats to form a long chain",
+      "A single giant atom built from many smaller atoms",
+      "A mixture of plastics melted together into one block"
+     ],
+     "why": "A polymer is the whole long chain, made of many small repeating molecules. The second option describes a monomer, which is one unit of the chain, not the whole chain.",
+     "clue": "Is a polymer the whole structure or one of its parts?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Dev's council wants to cut plastic waste in a local creek. Why are plastic bags left near the creek a long-term problem?",
+     "opts": [
+      "They can stay in the creek for hundreds of years",
+      "They can dissolve into the water within a few weeks",
+      "They can turn back into crude oil as they break down",
+      "They can rot in months and add nutrients to the soil"
+     ],
+     "why": "Plastic bags break down very slowly, so one left by the creek can stay there for centuries, harming wildlife and building up as waste. They do not dissolve or rot away within weeks or months, and breaking down does not turn them back into crude oil.",
+     "clue": "Think about how fast plastic breaks down once it is thrown away."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "A long chain of many small molecules joined together",
+     "also_right": []
+    },
+    "b": {
+     "best": "They can stay in the creek for hundreds of years",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Polymers and plastics",
+  "card": [
+   "A polymer is a very long molecule made of many small molecules joined in a repeating chain. The small repeating molecule is called a monomer.",
+   "Many polymers, including most plastics, are made from crude oil, which is a finite resource. Polyethylene, used in shopping bags, is one example.",
+   "Many plastics break down very slowly. They can last for centuries in the environment, where they can harm wildlife and build up as waste.",
+   "Because of this, alternatives are being developed, such as plastics made from plant material and plastics designed to break down faster."
+  ],
+  "remember": "Many polymers, including most plastics, are made from crude oil, and many plastics can last for centuries as waste.",
+  "a": {
+   "q": "Which statement best describes a polymer?",
+   "opts": [
+    "A long chain of many small molecules joined together",
+    "One small molecule that repeats to form a long chain",
+    "A single giant atom built from many smaller atoms",
+    "A mixture of plastics melted together into one block"
+   ],
+   "why": "A polymer is the whole long chain, made of many small repeating molecules. The second option describes a monomer, which is one unit of the chain, not the whole chain.",
+   "clue": "Is a polymer the whole structure or one of its parts?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev's council wants to cut plastic waste in a local creek. Why are plastic bags left near the creek a long-term problem?",
+   "opts": [
+    "They can stay in the creek for hundreds of years",
+    "They can dissolve into the water within a few weeks",
+    "They can turn back into crude oil as they break down",
+    "They can rot in months and add nutrients to the soil"
+   ],
+   "why": "Plastic bags break down very slowly, so one left by the creek can stay there for centuries, harming wildlife and building up as waste. They do not dissolve or rot away within weeks or months, and breaking down does not turn them back into crude oil.",
+   "clue": "Think about how fast plastic breaks down once it is thrown away."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A long chain of many small molecules joined together",
+   "also_right": []
+  },
+  "b": {
+   "best": "They can stay in the creek for hundreds of years",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Polymers and plastics",
+  "card": [
+   "A polymer is a very long molecule made of many small molecules joined in a repeating chain. The small repeating molecule is called a monomer.",
+   "Many polymers, including most plastics, are made from crude oil, which is a finite resource. Polyethylene, used in shopping bags, is one example.",
+   "Many plastics break down very slowly. They can last for centuries in the environment, where they can harm wildlife and build up as waste.",
+   "Because of this, alternatives are being developed, such as plastics made from plant material and plastics designed to break down faster."
+  ],
+  "remember": "Many polymers, including most plastics, are made from crude oil, and many plastics can last for centuries as waste.",
+  "a": {
+   "q": "Which statement best describes a polymer?",
+   "opts": [
+    "A long chain of many small molecules joined together",
+    "One small molecule that repeats to form a long chain",
+    "A single giant atom built from many smaller atoms",
+    "A mixture of plastics melted together into one block"
+   ],
+   "why": "A polymer is the whole long chain, made of many small repeating molecules. The second option describes a monomer, which is one unit of the chain, not the whole chain.",
+   "clue": "Is a polymer the whole structure or one of its parts?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev's council wants to cut plastic waste in a local creek. Why are plastic bags left near the creek a long-term problem?",
+   "opts": [
+    "They can stay in the creek for hundreds of years",
+    "They can dissolve into the water within a few weeks",
+    "They can turn back into crude oil as they break down",
+    "They can rot in months and add nutrients to the soil"
+   ],
+   "why": "Plastic bags break down very slowly, so one left by the creek can stay there for centuries, harming wildlife and building up as waste. They do not dissolve or rot away within weeks or months, and breaking down does not turn them back into crude oil.",
+   "clue": "Think about how fast plastic breaks down once it is thrown away."
+  }
+ },
+ "checked_by": "claude-code"
 }

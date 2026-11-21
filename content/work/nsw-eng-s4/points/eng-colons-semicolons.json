@@ -12,8 +12,278 @@
    0.541
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:42Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: failed the content check, writing again",
+  "2026-11-20T12:44:53Z write: done",
+  "2026-11-20T12:53:24Z check: flagged",
+  "2026-11-20T13:11:46Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:33:17Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.01391,
+  "check": 0.01631,
+  "fix": 0.02182,
+  "recheck": 0.0107
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point covers the whole new point: the colon card teaches colons for lists and explanations, and the semicolon card teaches semicolons for joining clauses and lists, so no single bank point matches both at the Stage 4 depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Colons and semicolons",
+  "card": [
+   [
+    "Colon",
+    "A colon introduces a list, an explanation or an example. The words before it must make a complete sentence on their own."
+   ],
+   [
+    "Colon example",
+    "Pack three things: a hat, a water bottle and sunscreen. The words before the colon stand alone as a sentence."
+   ],
+   [
+    "Semicolon",
+    "A semicolon joins two closely related main clauses. A main clause is a group of words that could stand alone as a sentence."
+   ],
+   [
+    "Semicolon example",
+    "Mia loves winter; her brother prefers summer. Each side of the semicolon could be its own sentence."
+   ]
+  ],
+  "remember": "A colon introduces what follows. A semicolon joins two related sentences.",
+  "a": {
+   "q": "Zara is listing what she packed. Which version places the colon so the words before it stand alone?",
+   "opts": [
+    "Zara packed her bag: a book, a jumper and lunch",
+    "Zara packed: her bag, a book, a jumper and lunch",
+    "Zara packed her bag with: a book, a jumper, lunch",
+    "Zara: packed her bag with a book, a jumper and lunch"
+   ],
+   "why": "The words before the colon, Zara packed her bag, make a complete sentence, and the list follows. In the second option, the words Zara packed leave the sentence unfinished, so the colon breaks it in the wrong place.",
+   "clue": "Check that the words before the colon could stand alone."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi missed his bus. Which version joins two related main clauses with a semicolon?",
+   "opts": [
+    "The bus was late; Ravi walked to school instead",
+    "The bus was late; and Ravi walked to school",
+    "The bus was late; because of heavy traffic",
+    "Because the bus was late; Ravi walked to school"
+   ],
+   "why": "Both sides of the semicolon, The bus was late and Ravi walked to school instead, could stand alone as sentences, and they are closely related. The second option is tempting, but the word and after the semicolon is not needed to join them. The third and fourth options have a part that cannot stand alone.",
+   "clue": "Test each side of the semicolon: could it be a sentence alone?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Zara packed her bag: a book, a jumper and lunch",
+   "also_right": []
+  },
+  "b": {
+   "best": "The bus was late; Ravi walked to school instead",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why refers to 'the second option' as 'Zara packed: her bag…', but the options are shown in a random order. Here the second option is 'Zara packed her bag with:…', so the explanation points students to the wrong option. It should name the option by its words."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why refers to the second, third and fourth options by position, but the order is shuffled. As shown, the fourth option is the correct one and the third is 'Because the bus was late;…', so the why contradicts what students see. It should name options by their words."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says the 'and' after the semicolon 'is not needed', which suggests that option is acceptable but wordy. It should say a semicolon is not followed by a joining word like 'and', so that option is incorrect."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says Ravi 'missed his bus', but every option says the bus was late. A late bus is not a missed bus, so the set-up is confusing."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both right answers are sound. Both explanations refer to options by position ('second', 'third and fourth'), which does not match the shuffled order and points to the wrong options. Why (b) also suggests a semicolon followed by 'and' is merely unnecessary rather than wrong, and question b's stem ('missed his bus') does not match the options ('the bus was late')."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The why refers to 'the second option' as 'Zara packed: her bag…', but the options are shown in a random order. Here the second option is 'Zara packed her bag with:…', so the explanation points students to the wrong option. It should name the option by its words.",
+  "Question b, other: The why refers to the second, third and fourth options by position, but the order is shuffled. As shown, the fourth option is the correct one and the third is 'Because the bus was late;…', so the why contradicts what students see. It should name options by their words.",
+  "Question b, wording: The why says the 'and' after the semicolon 'is not needed', which suggests that option is acceptable but wordy. It should say a semicolon is not followed by a joining word like 'and', so that option is incorrect.",
+  "Question b, wording: The stem says Ravi 'missed his bus', but every option says the bus was late. A late bus is not a missed bus, so the set-up is confusing."
+ ],
+ "proposal": {
+  "title": "Colons and semicolons",
+  "card": [
+   [
+    "Colon",
+    "A colon introduces a list, an explanation or an example. The words before it must make a complete sentence on their own."
+   ],
+   [
+    "Colon example",
+    "Pack three things: a hat, a water bottle and sunscreen. The words before the colon stand alone as a sentence."
+   ],
+   [
+    "Semicolon",
+    "A semicolon joins two closely related main clauses. A main clause is a group of words that could stand alone as a sentence."
+   ],
+   [
+    "Semicolon example",
+    "Mia loves winter; her brother prefers summer. The semicolon does the joining, so no joining word such as and or but follows it."
+   ]
+  ],
+  "remember": "A colon introduces what follows. A semicolon joins two related sentences.",
+  "a": {
+   "q": "Zara is listing what she packed. Which version places the colon so the words before it stand alone?",
+   "opts": [
+    "Zara packed her bag: a book, a jumper and lunch",
+    "Zara's bag held: a book, a jumper and some lunch",
+    "Zara packed her bag with: a book, a jumper, lunch",
+    "Zara: packed her bag with a book, a jumper and lunch"
+   ],
+   "why": "The words before the colon, Zara packed her bag, make a complete sentence, and the list follows. In the version starting Zara's bag held, the words before the colon leave the sentence unfinished: held what? So the colon breaks it in the wrong place.",
+   "clue": "Check that the words before the colon could stand alone."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi's bus was late, so he walked to school. Which version joins two related main clauses with a semicolon?",
+   "opts": [
+    "The bus was late; Ravi walked to school instead",
+    "The bus was late; and Ravi walked to school",
+    "The bus was late; because of heavy traffic",
+    "Because the bus was late; Ravi walked to school"
+   ],
+   "why": "In The bus was late; Ravi walked to school instead, both sides could stand alone as sentences, and they are closely related. The version with and is wrong, because the semicolon does the joining and is not followed by a joining word such as and. The versions with because each have a part that cannot stand alone.",
+   "clue": "Test each side of the semicolon: could it be a sentence alone?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Zara packed her bag: a book, a jumper and lunch",
+    "also_right": []
+   },
+   "b": {
+    "best": "The bus was late; Ravi walked to school instead",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why refers to 'the second option' as 'Zara packed: her bag…', but the options are shown in a random order. Here the second option is 'Zara packed her bag with:…', so the explanation points students to the wrong option. It should name the option by its words."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why refers to the second, third and fourth options by position, but the order is shuffled. As shown, the fourth option is the correct one and the third is 'Because the bus was late;…', so the why contradicts what students see. It should name options by their words."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says the 'and' after the semicolon 'is not needed', which suggests that option is acceptable but wordy. It should say a semicolon is not followed by a joining word like 'and', so that option is incorrect."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says Ravi 'missed his bus', but every option says the bus was late. A late bus is not a missed bus, so the set-up is confusing."
+   }
+  ],
+  "flags": [
+   "Question a, other: The why refers to 'the second option' as 'Zara packed: her bag…', but the options are shown in a random order. Here the second option is 'Zara packed her bag with:…', so the explanation points students to the wrong option. It should name the option by its words.",
+   "Question b, other: The why refers to the second, third and fourth options by position, but the order is shuffled. As shown, the fourth option is the correct one and the third is 'Because the bus was late;…', so the why contradicts what students see. It should name options by their words.",
+   "Question b, wording: The why says the 'and' after the semicolon 'is not needed', which suggests that option is acceptable but wordy. It should say a semicolon is not followed by a joining word like 'and', so that option is incorrect.",
+   "Question b, wording: The stem says Ravi 'missed his bus', but every option says the bus was late. A late bus is not a missed bus, so the set-up is confusing."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Colons and semicolons",
+  "card": [
+   [
+    "Colon",
+    "A colon introduces a list, an explanation or an example. The words before it must make a complete sentence on their own."
+   ],
+   [
+    "Colon example",
+    "Pack three things: a hat, a water bottle and sunscreen. The words before the colon stand alone as a sentence."
+   ],
+   [
+    "Semicolon",
+    "A semicolon joins two closely related main clauses. A main clause is a group of words that could stand alone as a sentence."
+   ],
+   [
+    "Semicolon example",
+    "Mia loves winter; her brother prefers summer. The semicolon does the joining, so no joining word such as and or but follows it."
+   ]
+  ],
+  "remember": "A colon introduces what follows. A semicolon joins two related sentences.",
+  "a": {
+   "q": "Zara is listing what she packed. Which version places the colon so the words before it stand alone?",
+   "opts": [
+    "Zara packed her bag: a book, a jumper and lunch",
+    "Zara's bag held: a book, a jumper and some lunch",
+    "Zara packed her bag with: a book, a jumper, lunch",
+    "Zara: packed her bag with a book, a jumper and lunch"
+   ],
+   "why": "The words before the colon, Zara packed her bag, make a complete sentence, and the list follows. In the version starting Zara's bag held, the words before the colon leave the sentence unfinished: held what? So the colon breaks it in the wrong place.",
+   "clue": "Check that the words before the colon could stand alone."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi's bus was late, so he walked to school. Which version joins two related main clauses with a semicolon?",
+   "opts": [
+    "The bus was late; Ravi walked to school instead",
+    "The bus was late; and Ravi walked to school",
+    "The bus was late; because of heavy traffic",
+    "Because the bus was late; Ravi walked to school"
+   ],
+   "why": "In The bus was late; Ravi walked to school instead, both sides could stand alone as sentences, and they are closely related. The version with and is wrong, because the semicolon does the joining and is not followed by a joining word such as and. The versions with because each have a part that cannot stand alone.",
+   "clue": "Test each side of the semicolon: could it be a sentence alone?"
+  }
+ },
+ "cleared_by": "owner"
 }

@@ -8,8 +8,232 @@
    0.263
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:42Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00649,
+  "check": 0.01056,
+  "fix": 0.01719,
+  "recheck": 0.00649
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point covers setting as a way to reveal a character's traits, but it does not teach setting as time and place that shapes mood, and it does not cover subplot at all, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Setting and subplot",
+  "card": [
+   [
+    "Setting",
+    "the time and place of a story. It can be a season, a decade, a town or a single room."
+   ],
+   "Setting shapes mood, the feeling a reader gets. A dark, empty street at midnight feels tense. A sunny beach in summer feels relaxed.",
+   [
+    "Subplot",
+    "a smaller story line that runs beside the main plot. It has its own events, but it is not the main story."
+   ],
+   "A subplot often adds to the ideas of the main plot. For example, a main plot about winning a race might have a subplot about a friendship that is tested."
+  ],
+  "remember": "Setting is when and where, and it shapes mood. A subplot runs beside the main plot and adds to its ideas.",
+  "a": {
+   "q": "A story opens in a cold, dim school hall, empty after a storm has knocked out the power. What is the setting doing here?",
+   "opts": [
+    "Creating a lonely, uneasy mood",
+    "Starting a subplot about the school",
+    "Telling the reader the hero's traits",
+    "Showing the climax of the story"
+   ],
+   "why": "The time and place, an empty, dim hall after a storm, shape the mood and make it feel lonely and uneasy. It is not a subplot, because a subplot is a separate story line, not a place.",
+   "clue": "Think about how the time and place would make a reader feel."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a novel, Priya spends the whole story trying to save her family's farm in a drought. Beside this, her brother Sam slowly mends his friendship with a neighbour. What is Sam's story?",
+   "opts": [
+    "A subplot that runs beside the main plot",
+    "The setting, because it happens on the farm",
+    "The main plot, because Sam is in the family",
+    "The mood, because it is about feelings"
+   ],
+   "why": "Sam's friendship has its own events and runs beside Priya's main story about the farm, so it is a subplot. It happens on the farm, but a setting is a time and place, not a story line.",
+   "clue": "Which part is a smaller story line beside the main one?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Creating a lonely, uneasy mood",
+   "also_right": []
+  },
+  "b": {
+   "best": "A subplot that runs beside the main plot",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The card says a subplot 'often' adds to the ideas of the main plot, but the remember line drops 'often' and states it as always true, which overstates the card."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option stands out. It is the only one without a 'because' reason, and it repeats the stem's word 'beside' ('Beside this'), so a student could match the words without knowing what a subplot is."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Facts and answers are correct. The remember line drops 'often' from the card's claim that a subplot adds to the main plot's ideas. In question b, the right option echoes the stem's 'beside' and is the only one without a 'because', so it stands out."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The card says a subplot 'often' adds to the ideas of the main plot, but the remember line drops 'often' and states it as always true, which overstates the card.",
+  "Question b, wording: The right option stands out. It is the only one without a 'because' reason, and it repeats the stem's word 'beside' ('Beside this'), so a student could match the words without knowing what a subplot is."
+ ],
+ "proposal": {
+  "title": "Setting and subplot",
+  "card": [
+   [
+    "Setting",
+    "the time and place of a story. It can be a season, a decade, a town or a single room."
+   ],
+   "Setting shapes mood, the feeling a reader gets. A dark, empty street at midnight feels tense. A sunny beach in summer feels relaxed.",
+   [
+    "Subplot",
+    "a smaller story line that runs beside the main plot. It has its own events, but it is not the main story."
+   ],
+   "A subplot often adds to the ideas of the main plot. For example, a main plot about winning a race might have a subplot about a friendship that is tested."
+  ],
+  "remember": "Setting is when and where, and it shapes mood. A subplot is a smaller story line that often adds to the main plot's ideas.",
+  "a": {
+   "q": "A story opens in a cold, dim school hall, empty after a storm has knocked out the power. What is the setting doing here?",
+   "opts": [
+    "Creating a lonely, uneasy mood",
+    "Starting a subplot about the school",
+    "Telling the reader the hero's traits",
+    "Showing the climax of the story"
+   ],
+   "why": "The time and place, an empty, dim hall after a storm, shape the mood and make it feel lonely and uneasy. It is not a subplot, because a subplot is a separate story line, not a place.",
+   "clue": "Think about how the time and place would make a reader feel."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a novel, Priya spends the whole story trying to save her family's farm in a drought. At the same time, her brother Sam slowly mends his friendship with a neighbour. What is Sam's story?",
+   "opts": [
+    "A subplot, because it is a smaller story line of its own",
+    "The setting, because it takes place on the family farm",
+    "The main plot, because Sam is part of Priya's family",
+    "The mood, because it is about how the characters feel"
+   ],
+   "why": "Sam's friendship has its own events, but the novel mainly follows Priya's fight for the farm, so Sam's story is a subplot. It happens on the farm, but a setting is a time and place, not a story line.",
+   "clue": "Whose story does the whole novel follow?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Creating a lonely, uneasy mood",
+    "also_right": []
+   },
+   "b": {
+    "best": "A subplot, because it is a smaller story line of its own",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The card says a subplot 'often' adds to the ideas of the main plot, but the remember line drops 'often' and states it as always true, which overstates the card."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option stands out. It is the only one without a 'because' reason, and it repeats the stem's word 'beside' ('Beside this'), so a student could match the words without knowing what a subplot is."
+   }
+  ],
+  "flags": [
+   "Remember, other: The card says a subplot 'often' adds to the ideas of the main plot, but the remember line drops 'often' and states it as always true, which overstates the card.",
+   "Question b, wording: The right option stands out. It is the only one without a 'because' reason, and it repeats the stem's word 'beside' ('Beside this'), so a student could match the words without knowing what a subplot is."
+  ]
+ },
+ "final": {
+  "title": "Setting and subplot",
+  "card": [
+   [
+    "Setting",
+    "the time and place of a story. It can be a season, a decade, a town or a single room."
+   ],
+   "Setting shapes mood, the feeling a reader gets. A dark, empty street at midnight feels tense. A sunny beach in summer feels relaxed.",
+   [
+    "Subplot",
+    "a smaller story line that runs beside the main plot. It has its own events, but it is not the main story."
+   ],
+   "A subplot often adds to the ideas of the main plot. For example, a main plot about winning a race might have a subplot about a friendship that is tested."
+  ],
+  "remember": "Setting is when and where, and it shapes mood. A subplot is a smaller story line that often adds to the main plot's ideas.",
+  "a": {
+   "q": "A story opens in a cold, dim school hall, empty after a storm has knocked out the power. What is the setting doing here?",
+   "opts": [
+    "Creating a lonely, uneasy mood",
+    "Starting a subplot about the school",
+    "Telling the reader the hero's traits",
+    "Showing the climax of the story"
+   ],
+   "why": "The time and place, an empty, dim hall after a storm, shape the mood and make it feel lonely and uneasy. It is not a subplot, because a subplot is a separate story line, not a place.",
+   "clue": "Think about how the time and place would make a reader feel."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a novel, Priya spends the whole story trying to save her family's farm in a drought. At the same time, her brother Sam slowly mends his friendship with a neighbour. What is Sam's story?",
+   "opts": [
+    "A subplot, because it is a smaller story line of its own",
+    "The setting, because it takes place on the family farm",
+    "The main plot, because Sam is part of Priya's family",
+    "The mood, because it is about how the characters feel"
+   ],
+   "why": "Sam's friendship has its own events, but the novel mainly follows Priya's fight for the farm, so Sam's story is a subplot. It happens on the farm, but a setting is a time and place, not a story line.",
+   "clue": "Whose story does the whole novel follow?"
+  }
+ },
+ "cleared_by": "recheck"
 }

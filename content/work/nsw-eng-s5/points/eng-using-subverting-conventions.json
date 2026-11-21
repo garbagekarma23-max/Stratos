@@ -16,8 +16,414 @@
    0.328
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:47Z write: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T13:11:47Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-20T13:44:55Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00647,
+  "check": 0.0095,
+  "fix": 0.01891,
+  "recheck": 0.01079
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, eng-subverting-text-conventions, covers conventions and subverting well at a suitable Year 9 depth, but the new point also asks students to understand following and adapting conventions, which that card does not teach.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The detective gives up only 'midway through', which need not mean the story withholds the solution: a mid-story setback is itself a common detective convention, and the crime could still be solved later. Saying the story ends with the crime unsolved would make 'withholding the solution' clearly true.",
+ "rejected": {
+  "title": "Using and subverting conventions",
+  "card": [
+   "Conventions are the expected patterns of a form or genre. A fairy tale often opens with \"once upon a time\" and ends happily. A news report opens with the most important facts.",
+   [
+    "Follow",
+    "a composer uses a convention as audiences expect. This gives a text a familiar shape and meets what the audience is ready for."
+   ],
+   [
+    "Adapt",
+    "a composer keeps a convention but changes it to suit a new purpose, such as a fairy tale set in a modern city."
+   ],
+   [
+    "Subvert",
+    "a composer deliberately breaks an expected pattern to surprise the audience or make a point. For example, a fairy tale in which the princess rescues herself and refuses to marry."
+   ]
+  ],
+  "remember": "Composers can follow, adapt or subvert conventions, and subverting breaks a pattern on purpose.",
+  "a": {
+   "q": "What does it mean to subvert a convention?",
+   "opts": [
+    "To break an expected pattern on purpose for effect",
+    "To repeat an expected pattern exactly as audiences know it",
+    "To keep a pattern but change its setting to a new time",
+    "To leave out a pattern because the composer forgot it"
+   ],
+   "why": "Subverting means deliberately breaking an expected pattern, to surprise the audience or make a point. Keeping the pattern but changing the setting is adapting, not subverting.",
+   "clue": "Recall the princess who rescues herself. What did that tale do?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jess writes a detective story. Midway through, the detective gives up and says the crime will never be solved, though readers expect an answer. What has Jess done?",
+   "opts": [
+    "Subverted a convention by withholding the solution",
+    "Followed a convention so the story feels familiar",
+    "Adapted a convention by moving it to a new setting",
+    "Made a mistake, because conventions cannot be broken"
+   ],
+   "why": "Readers expect a detective story to solve the crime. Jess breaks that pattern on purpose by withholding the solution, so she subverts the convention, which can surprise readers or make a point. Adapting would keep the pattern while changing something such as the setting.",
+   "clue": "What do readers of detective stories expect to happen?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The detective gives up only 'midway through', which need not mean the story withholds the solution: a mid-story setback is itself a common detective convention, and the crime could still be solved later. Saying the story ends with the crime unsolved would make 'withholding the solution' clearly true."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Using and subverting conventions",
+     "card": [
+      "Conventions are the expected patterns of a form or genre. A fairy tale often opens with \"once upon a time\" and ends with a happy ending. A news report opens with the most important facts.",
+      [
+       "Follow",
+       "a composer uses a convention as audiences expect. This gives a text a familiar shape and meets what the audience is ready for."
+      ],
+      [
+       "Adapt",
+       "a composer keeps a convention but changes it to suit a new purpose, such as a fairy tale set in a modern city."
+      ],
+      [
+       "Subvert",
+       "a composer deliberately breaks an expected pattern to surprise the audience or make a point. For example, a fairy tale in which the princess rescues herself and refuses to marry."
+      ]
+     ],
+     "remember": "Composers can follow, adapt or subvert conventions, and subverting breaks a pattern on purpose.",
+     "a": {
+      "q": "What does it mean to subvert a convention?",
+      "opts": [
+       "To break an expected pattern on purpose for effect",
+       "To repeat an expected pattern exactly as audiences know it",
+       "To keep a pattern but change its setting to a new time",
+       "To leave out a pattern because the composer forgot it"
+      ],
+      "why": "Subverting means deliberately breaking an expected pattern, to surprise the audience or make a point. Keeping the pattern but changing the setting is adapting, not subverting.",
+      "clue": "Think about breaking a pattern deliberately, not by accident."
+     },
+     "b": {
+      "d": 3,
+      "q": "Jess writes a detective story. Midway through, the detective gives up and says the crime will never be solved, though readers expect an answer. What has Jess done?",
+      "opts": [
+       "Subverted a convention to make a point about justice",
+       "Followed a convention so the story feels familiar",
+       "Adapted a convention by moving it to a new setting",
+       "Made a mistake, because conventions cannot be broken"
+      ],
+      "why": "Readers expect a detective story to solve the crime. Jess deliberately breaks that pattern, so she subverts the convention, perhaps to make a point. Adapting would keep the pattern while changing something like the setting.",
+      "clue": "What do readers of detective stories expect to happen?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "To break an expected pattern on purpose for effect",
+      "also_right": []
+     },
+     "b": {
+      "best": "Subverted a convention to make a point about justice",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue ('breaking a pattern deliberately, not by accident') restates the right option almost word for word, so students can pick it without knowing the idea."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is the only one with a precise added detail ('to make a point about justice'). The stem never says the ending is about justice, and the why only says 'perhaps to make a point'. The option claims more than the scenario supports and stands out from the others."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card is accurate. Question a's clue gives the answer away, and question b's right option adds an unsupported 'about justice' detail that makes it stand out."
+    },
+    "flags": [
+     "Question a, other: The clue ('breaking a pattern deliberately, not by accident') restates the right option almost word for word, so students can pick it without knowing the idea.",
+     "Question b, wording: The right option is the only one with a precise added detail ('to make a point about justice'). The stem never says the ending is about justice, and the why only says 'perhaps to make a point'. The option claims more than the scenario supports and stands out from the others."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Using and subverting conventions",
+     "card": [
+      "Conventions are the expected patterns of a form or genre. A fairy tale often opens with \"once upon a time\" and ends happily. A news report opens with the most important facts.",
+      [
+       "Follow",
+       "a composer uses a convention as audiences expect. This gives a text a familiar shape and meets what the audience is ready for."
+      ],
+      [
+       "Adapt",
+       "a composer keeps a convention but changes it to suit a new purpose, such as a fairy tale set in a modern city."
+      ],
+      [
+       "Subvert",
+       "a composer deliberately breaks an expected pattern to surprise the audience or make a point. For example, a fairy tale in which the princess rescues herself and refuses to marry."
+      ]
+     ],
+     "remember": "Composers can follow, adapt or subvert conventions, and subverting breaks a pattern on purpose.",
+     "a": {
+      "q": "What does it mean to subvert a convention?",
+      "opts": [
+       "To break an expected pattern on purpose for effect",
+       "To repeat an expected pattern exactly as audiences know it",
+       "To keep a pattern but change its setting to a new time",
+       "To leave out a pattern because the composer forgot it"
+      ],
+      "why": "Subverting means deliberately breaking an expected pattern, to surprise the audience or make a point. Keeping the pattern but changing the setting is adapting, not subverting.",
+      "clue": "Recall the princess who rescues herself. What did that tale do?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Jess writes a detective story. Midway through, the detective gives up and says the crime will never be solved, though readers expect an answer. What has Jess done?",
+      "opts": [
+       "Subverted a convention by withholding the solution",
+       "Followed a convention so the story feels familiar",
+       "Adapted a convention by moving it to a new setting",
+       "Made a mistake, because conventions cannot be broken"
+      ],
+      "why": "Readers expect a detective story to solve the crime. Jess breaks that pattern on purpose by withholding the solution, so she subverts the convention, which can surprise readers or make a point. Adapting would keep the pattern while changing something such as the setting.",
+      "clue": "What do readers of detective stories expect to happen?"
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:06Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "To break an expected pattern on purpose for effect",
+       "also_right": []
+      },
+      "b": {
+       "best": "Subverted a convention by withholding the solution",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The detective gives up only 'midway through', which need not mean the story withholds the solution: a mid-story setback is itself a common detective convention, and the crime could still be solved later. Saying the story ends with the crime unsolved would make 'withholding the solution' clearly true."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and question a are accurate. In question b, the detective gives up only 'midway through', so it is unclear whether the story actually ends unsolved; reword it so the story ends without a solution."
+     },
+     "flags": [
+      "Question b, wording: The detective gives up only 'midway through', which need not mean the story withholds the solution: a mid-story setback is itself a common detective convention, and the crime could still be solved later. Saying the story ends with the crime unsolved would make 'withholding the solution' clearly true."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:55Z",
+   "step": "write",
+   "version": {
+    "title": "Using and subverting conventions",
+    "card": [
+     "Conventions are the expected patterns of a form or genre. A fairy tale often opens with \"once upon a time\" and ends happily. A news report opens with the most important facts.",
+     [
+      "Follow",
+      "a composer uses a convention as audiences expect. This gives a text a familiar shape and meets what the audience is ready for."
+     ],
+     [
+      "Adapt",
+      "a composer keeps a convention but changes it to suit a new purpose, such as a fairy tale set in a modern city."
+     ],
+     [
+      "Subvert",
+      "a composer deliberately breaks an expected pattern to surprise the audience or make a point. For example, a fairy tale in which the princess rescues herself and refuses to marry."
+     ]
+    ],
+    "remember": "Composers can follow, adapt or subvert conventions, and subverting breaks a pattern on purpose.",
+    "a": {
+     "q": "What does it mean to subvert a convention?",
+     "opts": [
+      "To break an expected pattern on purpose for effect",
+      "To repeat an expected pattern exactly as audiences know it",
+      "To keep a pattern but change its setting to a new time",
+      "To leave out a pattern because the composer forgot it"
+     ],
+     "why": "Subverting means deliberately breaking an expected pattern, to surprise the audience or make a point. Keeping the pattern but changing the setting is adapting, not subverting.",
+     "clue": "Recall the princess who rescues herself. What did that tale do?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Jess writes a detective story and chooses to end it with the crime unsolved and the culprit unnamed, though readers expect an answer. What has Jess done?",
+     "opts": [
+      "Subverted a convention by withholding the solution",
+      "Followed a convention so the story feels familiar",
+      "Adapted a convention by moving it to a new setting",
+      "Made an error that leaves the plot unfinished"
+     ],
+     "why": "Readers expect a detective story to solve the crime. Jess breaks that pattern on purpose by ending with the crime unsolved, so she subverts the convention, which can surprise readers or make a point. Adapting would keep the pattern while changing something such as the setting.",
+     "clue": "What do readers of detective stories expect to happen?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "To break an expected pattern on purpose for effect",
+     "also_right": []
+    },
+    "b": {
+     "best": "Subverted a convention by withholding the solution",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Using and subverting conventions",
+  "card": [
+   "Conventions are the expected patterns of a form or genre. A fairy tale often opens with \"once upon a time\" and ends happily. A news report opens with the most important facts.",
+   [
+    "Follow",
+    "a composer uses a convention as audiences expect. This gives a text a familiar shape and meets what the audience is ready for."
+   ],
+   [
+    "Adapt",
+    "a composer keeps a convention but changes it to suit a new purpose, such as a fairy tale set in a modern city."
+   ],
+   [
+    "Subvert",
+    "a composer deliberately breaks an expected pattern to surprise the audience or make a point. For example, a fairy tale in which the princess rescues herself and refuses to marry."
+   ]
+  ],
+  "remember": "Composers can follow, adapt or subvert conventions, and subverting breaks a pattern on purpose.",
+  "a": {
+   "q": "What does it mean to subvert a convention?",
+   "opts": [
+    "To break an expected pattern on purpose for effect",
+    "To repeat an expected pattern exactly as audiences know it",
+    "To keep a pattern but change its setting to a new time",
+    "To leave out a pattern because the composer forgot it"
+   ],
+   "why": "Subverting means deliberately breaking an expected pattern, to surprise the audience or make a point. Keeping the pattern but changing the setting is adapting, not subverting.",
+   "clue": "Recall the princess who rescues herself. What did that tale do?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jess writes a detective story and chooses to end it with the crime unsolved and the culprit unnamed, though readers expect an answer. What has Jess done?",
+   "opts": [
+    "Subverted a convention by withholding the solution",
+    "Followed a convention so the story feels familiar",
+    "Adapted a convention by moving it to a new setting",
+    "Made an error that leaves the plot unfinished"
+   ],
+   "why": "Readers expect a detective story to solve the crime. Jess breaks that pattern on purpose by ending with the crime unsolved, so she subverts the convention, which can surprise readers or make a point. Adapting would keep the pattern while changing something such as the setting.",
+   "clue": "What do readers of detective stories expect to happen?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "To break an expected pattern on purpose for effect",
+   "also_right": []
+  },
+  "b": {
+   "best": "Subverted a convention by withholding the solution",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Using and subverting conventions",
+  "card": [
+   "Conventions are the expected patterns of a form or genre. A fairy tale often opens with \"once upon a time\" and ends happily. A news report opens with the most important facts.",
+   [
+    "Follow",
+    "a composer uses a convention as audiences expect. This gives a text a familiar shape and meets what the audience is ready for."
+   ],
+   [
+    "Adapt",
+    "a composer keeps a convention but changes it to suit a new purpose, such as a fairy tale set in a modern city."
+   ],
+   [
+    "Subvert",
+    "a composer deliberately breaks an expected pattern to surprise the audience or make a point. For example, a fairy tale in which the princess rescues herself and refuses to marry."
+   ]
+  ],
+  "remember": "Composers can follow, adapt or subvert conventions, and subverting breaks a pattern on purpose.",
+  "a": {
+   "q": "What does it mean to subvert a convention?",
+   "opts": [
+    "To break an expected pattern on purpose for effect",
+    "To repeat an expected pattern exactly as audiences know it",
+    "To keep a pattern but change its setting to a new time",
+    "To leave out a pattern because the composer forgot it"
+   ],
+   "why": "Subverting means deliberately breaking an expected pattern, to surprise the audience or make a point. Keeping the pattern but changing the setting is adapting, not subverting.",
+   "clue": "Recall the princess who rescues herself. What did that tale do?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jess writes a detective story and chooses to end it with the crime unsolved and the culprit unnamed, though readers expect an answer. What has Jess done?",
+   "opts": [
+    "Subverted a convention by withholding the solution",
+    "Followed a convention so the story feels familiar",
+    "Adapted a convention by moving it to a new setting",
+    "Made an error that leaves the plot unfinished"
+   ],
+   "why": "Readers expect a detective story to solve the crime. Jess breaks that pattern on purpose by ending with the crime unsolved, so she subverts the convention, which can surprise readers or make a point. Adapting would keep the pattern while changing something such as the setting.",
+   "clue": "What do readers of detective stories expect to happen?"
+  }
+ },
+ "checked_by": "claude-code"
 }

@@ -12,8 +12,231 @@
    0.212
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:46Z write: done",
+  "2026-11-20T12:35:48Z check: flagged",
+  "2026-11-20T12:44:55Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.0108,
+  "check": 0.01041,
+  "fix": 0.01823,
+  "recheck": 0.00923
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, geo-physical-chemical-weathering, covers only physical and chemical weathering, while the new point also requires biological weathering by living things such as roots, which would be a new step rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Weathering",
+  "card": [
+   "Weathering is the breaking down of rock where it sits. The broken rock is not carried away while it is being weathered.",
+   [
+    "Physical",
+    "rock is broken into smaller pieces without changing what it is made of. Heating and cooling, and water freezing in cracks, can split rock apart."
+   ],
+   [
+    "Chemical",
+    "rock is changed or dissolved by a chemical reaction, such as rainwater slowly reacting with it. This can change what the rock is made of."
+   ],
+   [
+    "Biological",
+    "living things help break rock down. Plant roots grow into cracks and can widen them over time."
+   ]
+  ],
+  "remember": "Weathering breaks rock down in place, by physical, chemical or biological processes.",
+  "a": {
+   "q": "Water seeps into a crack in a rock and freezes. The ice widens the crack. What kind of weathering is this?",
+   "opts": [
+    "Physical weathering",
+    "Chemical weathering",
+    "Biological weathering",
+    "Weathering that moves rock away"
+   ],
+   "why": "Freezing water splits the rock into pieces without changing what it is made of, so it is physical weathering. It is not biological, because no living thing is involved.",
+   "clue": "The rock is split, but not changed into something else."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tree seedling grows in a crack in a sandstone cliff. Years later, its roots have widened the crack. What kind of weathering is this?",
+   "opts": [
+    "Biological weathering",
+    "Physical weathering",
+    "Chemical weathering",
+    "Weathering by freezing"
+   ],
+   "why": "The roots of a living plant are breaking the rock, so this is biological weathering. Physical weathering is tempting because the crack is forced wider, but the cause here is a living thing.",
+   "clue": "Ask what is doing the breaking."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Physical weathering",
+   "also_right": []
+  },
+  "b": {
+   "best": "Biological weathering",
+   "also_right": [
+    "Physical weathering"
+   ]
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Root wedging breaks rock into pieces without changing what it is made of, which fits the card's own definition of physical weathering. Many textbooks call it physical (mechanical) weathering caused by a living thing, so 'Physical weathering' is defensible alongside 'Biological weathering'. Reword the question to ask which of the card's three types the living cause points to, or replace 'Physical weathering' with a clearly wrong option."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b is ambiguous: roots widening a crack fits the card's definition of physical weathering as well as biological, so 'Physical weathering' could also be marked right. Everything else checks out."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker says “Physical weathering” could also be right.",
+  "Question b, wording: Root wedging breaks rock into pieces without changing what it is made of, which fits the card's own definition of physical weathering. Many textbooks call it physical (mechanical) weathering caused by a living thing, so 'Physical weathering' is defensible alongside 'Biological weathering'. Reword the question to ask which of the card's three types the living cause points to, or replace 'Physical weathering' with a clearly wrong option."
+ ],
+ "proposal": {
+  "title": "Weathering",
+  "card": [
+   "Weathering is the breaking down of rock where it sits. The broken rock is not carried away while it is being weathered.",
+   [
+    "Physical",
+    "non-living forces break rock into smaller pieces without changing what it is made of. Heating and cooling, and water freezing in cracks, can split rock apart."
+   ],
+   [
+    "Chemical",
+    "rock is changed or dissolved by a chemical reaction, such as rainwater slowly reacting with it. This can change what the rock is made of."
+   ],
+   [
+    "Biological",
+    "a living thing is the cause. Plant roots grow into cracks and can widen them over time."
+   ]
+  ],
+  "remember": "Weathering breaks rock down in place, by physical, chemical or biological processes.",
+  "a": {
+   "q": "Water seeps into a crack in a rock and freezes. The ice widens the crack. What kind of weathering is this?",
+   "opts": [
+    "Physical weathering",
+    "Chemical weathering",
+    "Biological weathering",
+    "Weathering that moves rock away"
+   ],
+   "why": "Freezing water splits the rock into pieces without changing what it is made of, so it is physical weathering. It is not biological, because no living thing is involved.",
+   "clue": "The rock is split, but not changed into something else."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tree seedling grows in a crack in a sandstone cliff. Years later, its roots have widened the crack. What is the cause, and what type of weathering is it?",
+   "opts": [
+    "A living thing, so biological weathering",
+    "Ice in the crack, so physical weathering",
+    "A chemical reaction, so chemical weathering",
+    "Heating and cooling, so physical weathering"
+   ],
+   "why": "The roots of a living plant are widening the crack, and a living cause makes this biological weathering. The physical options are tempting because the crack is forced wider, but nothing in the case says ice or heat is doing the work.",
+   "clue": "Look at what the case says is growing in the crack."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Physical weathering",
+    "also_right": []
+   },
+   "b": {
+    "best": "A living thing, so biological weathering",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 15,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Root wedging breaks rock into pieces without changing what it is made of, which fits the card's own definition of physical weathering. Many textbooks call it physical (mechanical) weathering caused by a living thing, so 'Physical weathering' is defensible alongside 'Biological weathering'. Reword the question to ask which of the card's three types the living cause points to, or replace 'Physical weathering' with a clearly wrong option."
+   }
+  ],
+  "flags": [
+   "Question b: the checker says “Physical weathering” could also be right.",
+   "Question b, wording: Root wedging breaks rock into pieces without changing what it is made of, which fits the card's own definition of physical weathering. Many textbooks call it physical (mechanical) weathering caused by a living thing, so 'Physical weathering' is defensible alongside 'Biological weathering'. Reword the question to ask which of the card's three types the living cause points to, or replace 'Physical weathering' with a clearly wrong option."
+  ]
+ },
+ "final": {
+  "title": "Weathering",
+  "card": [
+   "Weathering is the breaking down of rock where it sits. The broken rock is not carried away while it is being weathered.",
+   [
+    "Physical",
+    "non-living forces break rock into smaller pieces without changing what it is made of. Heating and cooling, and water freezing in cracks, can split rock apart."
+   ],
+   [
+    "Chemical",
+    "rock is changed or dissolved by a chemical reaction, such as rainwater slowly reacting with it. This can change what the rock is made of."
+   ],
+   [
+    "Biological",
+    "a living thing is the cause. Plant roots grow into cracks and can widen them over time."
+   ]
+  ],
+  "remember": "Weathering breaks rock down in place, by physical, chemical or biological processes.",
+  "a": {
+   "q": "Water seeps into a crack in a rock and freezes. The ice widens the crack. What kind of weathering is this?",
+   "opts": [
+    "Physical weathering",
+    "Chemical weathering",
+    "Biological weathering",
+    "Weathering that moves rock away"
+   ],
+   "why": "Freezing water splits the rock into pieces without changing what it is made of, so it is physical weathering. It is not biological, because no living thing is involved.",
+   "clue": "The rock is split, but not changed into something else."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tree seedling grows in a crack in a sandstone cliff. Years later, its roots have widened the crack. What is the cause, and what type of weathering is it?",
+   "opts": [
+    "A living thing, so biological weathering",
+    "Ice in the crack, so physical weathering",
+    "A chemical reaction, so chemical weathering",
+    "Heating and cooling, so physical weathering"
+   ],
+   "why": "The roots of a living plant are widening the crack, and a living cause makes this biological weathering. The physical options are tempting because the crack is forced wider, but nothing in the case says ice or heat is doing the work.",
+   "clue": "Look at what the case says is growing in the crack."
+  }
+ },
+ "cleared_by": "recheck"
 }

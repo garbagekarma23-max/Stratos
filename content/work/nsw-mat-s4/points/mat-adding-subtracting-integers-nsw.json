@@ -24,8 +24,44 @@
    0.297
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:38Z new, match"
- ]
+  "2026-11-12T12:22:38Z new, match",
+  "2026-11-20T12:15:19Z match: Claude Haiku 5.5 may adapt mat-adding-subtracting-integers, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:55Z match: Claude Opus 5.5 says reuse mat-adding-subtracting-integers, with nothing more to write, check or review"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "confirm": 0.00725
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-adding-subtracting-integers",
+  "changes": [
+   "The card's worked examples and questions use Queensland-style wording such as Hobart winter temperatures; a local NSW example (for instance Sydney or Canberra temperatures) would suit this course better.",
+   "The card's rule that adding a negative is the same as subtracting is stated, but the NSW Stage 4 brief asks for the number line check to be emphasised, so the card should add a short number line check step for 5 - (-3) = 8."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea at the right depth for Year 7, but its examples and emphasis need small local adjustments to match the NSW brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "mat-adding-subtracting-integers",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the same idea, the sign rules for adding and subtracting integers with a number line check, at a Year 7 depth that suits NSW Stage 4, and its questions are fair for NSW students as they stand.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "mat-adding-subtracting-integers",
+ "matched": {
+  "verdict": "reuse",
+  "from": "mat-adding-subtracting-integers",
+  "by": "Claude Opus 5.5",
+  "at": "2026-11-20T12:25:55Z"
+ }
 }

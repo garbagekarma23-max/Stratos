@@ -20,8 +20,139 @@
    0.256
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:22Z match: Claude Haiku 5.5 may adapt sci-gravity-mass-weight, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:59Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "confirm": 0.00866,
+  "write": 0.0061,
+  "check": 0.00523
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "sci-gravity-mass-weight",
+  "changes": [
+   "Add the formula weight = mass × gravitational acceleration (W = m × g), which the card does not give, since the new point asks students to use it.",
+   "State the unit of gravitational acceleration as metres per second squared (m/s²), or as newtons per kilogram (N/kg), as the NSW syllabus expects, in place of the card's unstated value."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same mass and weight idea at a suitable depth, but it omits the W = m × g formula the new point requires, so it needs that small addition.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, sci-gravity-mass-weight, explains mass and weight only in words and also covers gravity between masses, while this point needs students to calculate weight using weight = mass × gravitational acceleration, so adapting it would add a new step and change its depth.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Mass and weight",
+  "card": [
+   [
+    "Mass",
+    "Mass is the amount of matter in an object. It is measured in kilograms (kg) and stays the same wherever the object is."
+   ],
+   [
+    "Weight",
+    "Weight is the force of gravity pulling on an object. It is a force, so it is measured in newtons (N)."
+   ],
+   "Weight = mass × gravitational acceleration, or W = m × g. On Earth, g is about 10 N/kg, so a 3 kg object weighs about 30 N.",
+   "The Moon has weaker gravity than Earth, with g about 1.6 N/kg. An object has the same mass there but a smaller weight."
+  ],
+  "remember": "Mass is matter in kg and does not change. Weight is a force in N: W = m × g.",
+  "a": {
+   "q": "An astronaut travels from Earth to the Moon. What happens to the astronaut's mass and weight?",
+   "opts": [
+    "Mass stays the same and weight decreases",
+    "Mass decreases and weight stays the same",
+    "Both mass and weight decrease",
+    "Both mass and weight stay the same"
+   ],
+   "why": "Mass is the amount of matter, so it does not change with place. Weight is the pull of gravity, and the Moon's gravity is weaker, so weight decreases. Saying both decrease mixes up the two ideas.",
+   "clue": "Which one depends on how strongly gravity pulls?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's backpack has a mass of 6 kg. Using g = 10 N/kg, what is its weight on Earth?",
+   "opts": [
+    "60 N",
+    "6 N",
+    "60 kg",
+    "0.6 N"
+   ],
+   "why": "Weight = mass × g = 6 kg × 10 N/kg = 60 N. Giving 60 kg is tempting, but weight is a force, so it is measured in newtons, not kilograms.",
+   "clue": "Multiply the mass by g, and think about the unit for a force."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Mass stays the same and weight decreases",
+   "also_right": []
+  },
+  "b": {
+   "best": "60 N",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Mass and weight",
+  "card": [
+   [
+    "Mass",
+    "Mass is the amount of matter in an object. It is measured in kilograms (kg) and stays the same wherever the object is."
+   ],
+   [
+    "Weight",
+    "Weight is the force of gravity pulling on an object. It is a force, so it is measured in newtons (N)."
+   ],
+   "Weight = mass × gravitational acceleration, or W = m × g. On Earth, g is about 10 N/kg, so a 3 kg object weighs about 30 N.",
+   "The Moon has weaker gravity than Earth, with g about 1.6 N/kg. An object has the same mass there but a smaller weight."
+  ],
+  "remember": "Mass is matter in kg and does not change. Weight is a force in N: W = m × g.",
+  "a": {
+   "q": "An astronaut travels from Earth to the Moon. What happens to the astronaut's mass and weight?",
+   "opts": [
+    "Mass stays the same and weight decreases",
+    "Mass decreases and weight stays the same",
+    "Both mass and weight decrease",
+    "Both mass and weight stay the same"
+   ],
+   "why": "Mass is the amount of matter, so it does not change with place. Weight is the pull of gravity, and the Moon's gravity is weaker, so weight decreases. Saying both decrease mixes up the two ideas.",
+   "clue": "Which one depends on how strongly gravity pulls?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's backpack has a mass of 6 kg. Using g = 10 N/kg, what is its weight on Earth?",
+   "opts": [
+    "60 N",
+    "6 N",
+    "60 kg",
+    "0.6 N"
+   ],
+   "why": "Weight = mass × g = 6 kg × 10 N/kg = 60 N. Giving 60 kg is tempting, but weight is a force, so it is measured in newtons, not kilograms.",
+   "clue": "Multiply the mass by g, and think about the unit for a force."
+  }
+ },
+ "cleared_by": "checker"
 }

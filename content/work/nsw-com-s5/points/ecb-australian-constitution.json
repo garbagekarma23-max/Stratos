@@ -24,8 +24,179 @@
    0.28
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, match"
- ]
+  "2026-11-12T12:22:31Z new, match",
+  "2026-11-20T12:15:12Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:45Z write: done",
+  "2026-11-20T12:44:52Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T13:23:35Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00605,
+  "check": 0.00996,
+  "fix": 0.01643
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank card, leg-commonwealth-constitution, covers parliament and the division of powers but not the High Court or the executive government, and it is written at senior Legal Studies depth, so adapting it would need new content and a change of depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The Australian Constitution",
+  "card": [
+   "The Constitution is the set of rules that creates Australia's system of government. It came into effect on 1 January 1901, when the colonies joined to form the Commonwealth of Australia.",
+   "It sets up three institutions at the federal level: the federal parliament, the federal government and the High Court.",
+   "It also divides power between the Commonwealth (the federal level) and the states. Some powers are given to the Commonwealth, such as defence. Other matters are left mainly to the states.",
+   "The Constitution can only be changed by a referendum. A referendum is a vote in which Australian voters decide whether to accept the change."
+  ],
+  "remember": "The Constitution sets up the federal institutions and shares power between the Commonwealth and the states.",
+  "a": {
+   "q": "What is the main job of the Australian Constitution?",
+   "opts": [
+    "It sets up the federal institutions and divides power",
+    "It lists the laws that each citizen must obey each day",
+    "It sets the prices of goods sold by Australian firms",
+    "It names the people who must lead each federal party"
+   ],
+   "why": "The Constitution creates the federal parliament, government and High Court, and shares power between the Commonwealth and the states. It does not list everyday laws, because ordinary laws are made later by parliaments.",
+   "clue": "Think about what it creates and how it shares power."
+  },
+  "b": {
+   "d": 3,
+   "q": "A group of voters wants to change a rule in the Constitution. How can the change be made?",
+   "opts": [
+    "By a referendum in which voters decide",
+    "By a vote of the federal parliament alone",
+    "By a decision of the High Court judges",
+    "By an order from the state governments"
+   ],
+   "why": "The Constitution can only be changed by a referendum, where Australian voters decide whether to accept the change. Parliament alone cannot change it, which is why it differs from an ordinary law that parliament can pass or amend.",
+   "clue": "Who gets to vote on a change to the Constitution?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It sets up the federal institutions and divides power",
+   "also_right": []
+  },
+  "b": {
+   "best": "By a referendum in which voters decide",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question says a group of voters wants to change a rule, which suggests voters can start a constitutional change themselves. In fact the federal parliament must first pass the proposed change before it goes to a referendum. Reframing it as 'How can a rule in the Constitution be changed?' would avoid this."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers check out. Question b's scenario implies voters can start a constitutional change themselves, when parliament must first pass the proposal before the referendum."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The question says a group of voters wants to change a rule, which suggests voters can start a constitutional change themselves. In fact the federal parliament must first pass the proposed change before it goes to a referendum. Reframing it as 'How can a rule in the Constitution be changed?' would avoid this."
+ ],
+ "proposal": {
+  "title": "The Australian Constitution",
+  "card": [
+   "The Constitution is the set of rules that creates Australia's system of government. It came into effect on 1 January 1901, when the colonies joined to form the Commonwealth of Australia.",
+   "It sets up three institutions at the federal level: the federal parliament, the federal government and the High Court.",
+   "It also divides power between the Commonwealth (the federal level) and the states. Some powers are given to the Commonwealth, such as defence. Other matters are left mainly to the states.",
+   "The Constitution can only be changed by a referendum. The federal parliament first passes the proposed change, then Australian voters decide whether to accept it."
+  ],
+  "remember": "The Constitution sets up the federal institutions and shares power between the Commonwealth and the states.",
+  "a": {
+   "q": "What is the main job of the Australian Constitution?",
+   "opts": [
+    "It sets up the federal institutions and divides power",
+    "It lists the laws that each citizen must obey each day",
+    "It sets the prices of goods sold by Australian firms",
+    "It names the people who must lead each federal party"
+   ],
+   "why": "The Constitution creates the federal parliament, government and High Court, and shares power between the Commonwealth and the states. It does not list everyday laws, because ordinary laws are made later by parliaments.",
+   "clue": "Think about what it creates and how it shares power."
+  },
+  "b": {
+   "d": 3,
+   "q": "How can a rule in the Australian Constitution be changed?",
+   "opts": [
+    "By a referendum in which voters decide",
+    "By a vote of the federal parliament alone",
+    "By a decision of the High Court judges",
+    "By an order from the state governments"
+   ],
+   "why": "A change to the Constitution needs a referendum. The federal parliament passes the proposed change first, but it only takes effect if voters accept it. A vote of parliament alone is not enough, which is how the Constitution differs from an ordinary law.",
+   "clue": "Who has the final say on a change to the Constitution?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:35Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question says a group of voters wants to change a rule, which suggests voters can start a constitutional change themselves. In fact the federal parliament must first pass the proposed change before it goes to a referendum. Reframing it as 'How can a rule in the Constitution be changed?' would avoid this."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The question says a group of voters wants to change a rule, which suggests voters can start a constitutional change themselves. In fact the federal parliament must first pass the proposed change before it goes to a referendum. Reframing it as 'How can a rule in the Constitution be changed?' would avoid this."
+  ]
+ },
+ "final": {
+  "title": "The Australian Constitution",
+  "card": [
+   "The Constitution is the set of rules that creates Australia's system of government. It came into effect on 1 January 1901, when the colonies joined to form the Commonwealth of Australia.",
+   "It sets up three institutions at the federal level: the federal parliament, the federal government and the High Court.",
+   "It also divides power between the Commonwealth (the federal level) and the states. Some powers are given to the Commonwealth, such as defence. Other matters are left mainly to the states.",
+   "The Constitution can only be changed by a referendum. The federal parliament first passes the proposed change, then Australian voters decide whether to accept it."
+  ],
+  "remember": "The Constitution sets up the federal institutions and shares power between the Commonwealth and the states.",
+  "a": {
+   "q": "What is the main job of the Australian Constitution?",
+   "opts": [
+    "It sets up the federal institutions and divides power",
+    "It lists the laws that each citizen must obey each day",
+    "It sets the prices of goods sold by Australian firms",
+    "It names the people who must lead each federal party"
+   ],
+   "why": "The Constitution creates the federal parliament, government and High Court, and shares power between the Commonwealth and the states. It does not list everyday laws, because ordinary laws are made later by parliaments.",
+   "clue": "Think about what it creates and how it shares power."
+  },
+  "b": {
+   "d": 3,
+   "q": "How can a rule in the Australian Constitution be changed?",
+   "opts": [
+    "By a referendum in which voters decide",
+    "By a vote of the federal parliament alone",
+    "By a decision of the High Court judges",
+    "By an order from the state governments"
+   ],
+   "why": "A change to the Constitution needs a referendum. The federal parliament passes the proposed change first, but it only takes effect if voters accept it. A vote of parliament alone is not enough, which is how the Constitution differs from an ordinary law.",
+   "clue": "Who has the final say on a change to the Constitution?"
+  }
+ },
+ "cleared_by": "auto"
 }

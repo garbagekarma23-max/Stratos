@@ -24,8 +24,133 @@
    0.399
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 may adapt mat-compound-interest, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:55Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:55Z write: done",
+  "2026-11-20T12:44:58Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "confirm": 0.0134,
+  "write": 0.00672,
+  "check": 0.00609
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-compound-interest",
+  "changes": [
+   "The card's formula and worked examples use the multiplier form A = P(1 + r)^n, which suits the NSW Stage 5 approach of repeated percentage multiplication, but the card should be checked against the NSW Stage 5 Financial Mathematics wording for MA5-FIN-C-02 and any terms the syllabus uses differently.",
+   "The card's example and question context (Mia and Sam, dollar amounts) should be reviewed to suit a NSW Stage 5 student, and the Year 12 course label on the source point should not be carried over."
+  ],
+  "sure": "medium",
+  "reason": "The bank point Compound interest teaches the same idea at a suitable depth, but its formula-based approach and labelling come from a different course and may need small local wording changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The new point teaches compound interest by multiplying by (1 + r) once per period. One bank point goes further, using the formula A = P(1 + r)^n and monthly compounding, which the NSW syllabus places in the Stage 5 path content rather than core. The other works by adding the interest step by step and never uses the multiplier, so neither fits without changing the method or depth.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Compound interest by repeated percentages",
+  "card": [
+   "With compound interest, each period's interest is added to the balance. The next period then earns interest on the new, larger balance, so it earns interest on interest.",
+   "To add a rate of \\(5\\%\\) to an amount, multiply by \\(1.05\\). The multiplier is 1 plus the rate as a decimal.",
+   "Multiply by the multiplier once for each period. After 3 periods you multiply by it 3 times.",
+   [
+    "Example",
+    "$1000 earns \\(10\\%\\) each year, compounded. After year 1: \\(1000 \\times 1.1 = 1100\\). After year 2: \\(1100 \\times 1.1 = 1210\\). The year 2 interest is $110, not $100."
+   ]
+  ],
+  "remember": "Compound interest: multiply by 1 plus the rate, once for each period.",
+  "a": {
+   "q": "Which multiplier adds \\(8\\%\\) compound interest for one period?",
+   "opts": [
+    "\\(1.08\\)",
+    "\\(0.08\\)",
+    "\\(0.92\\)",
+    "\\(1.8\\)"
+   ],
+   "why": "Adding \\(8\\%\\) means keeping the whole amount and adding \\(0.08\\) of it, so you multiply by \\(1.08\\). Multiplying by \\(0.08\\) would find only the interest, not the new balance.",
+   "clue": "Keep the whole amount, then add the rate as a decimal."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ava invests $2000 at \\(10\\%\\) per year, compounded yearly. What is the balance after 2 years?",
+   "opts": [
+    "$2420",
+    "$2400",
+    "$2200",
+    "$2220"
+   ],
+   "why": "Year 1: \\(2000 \\times 1.1 = 2200\\). Year 2: \\(2200 \\times 1.1 = 2420\\). The tempting $2400 adds $200 each year, but year 2 interest is earned on $2200, so it is $220.",
+   "clue": "Year 2 interest is worked out on the new balance."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(1.08\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "$2420",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Compound interest by repeated percentages",
+  "card": [
+   "With compound interest, each period's interest is added to the balance. The next period then earns interest on the new, larger balance, so it earns interest on interest.",
+   "To add a rate of \\(5\\%\\) to an amount, multiply by \\(1.05\\). The multiplier is 1 plus the rate as a decimal.",
+   "Multiply by the multiplier once for each period. After 3 periods you multiply by it 3 times.",
+   [
+    "Example",
+    "$1000 earns \\(10\\%\\) each year, compounded. After year 1: \\(1000 \\times 1.1 = 1100\\). After year 2: \\(1100 \\times 1.1 = 1210\\). The year 2 interest is $110, not $100."
+   ]
+  ],
+  "remember": "Compound interest: multiply by 1 plus the rate, once for each period.",
+  "a": {
+   "q": "Which multiplier adds \\(8\\%\\) compound interest for one period?",
+   "opts": [
+    "\\(1.08\\)",
+    "\\(0.08\\)",
+    "\\(0.92\\)",
+    "\\(1.8\\)"
+   ],
+   "why": "Adding \\(8\\%\\) means keeping the whole amount and adding \\(0.08\\) of it, so you multiply by \\(1.08\\). Multiplying by \\(0.08\\) would find only the interest, not the new balance.",
+   "clue": "Keep the whole amount, then add the rate as a decimal."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ava invests $2000 at \\(10\\%\\) per year, compounded yearly. What is the balance after 2 years?",
+   "opts": [
+    "$2420",
+    "$2400",
+    "$2200",
+    "$2220"
+   ],
+   "why": "Year 1: \\(2000 \\times 1.1 = 2200\\). Year 2: \\(2200 \\times 1.1 = 2420\\). The tempting $2400 adds $200 each year, but year 2 interest is earned on $2200, so it is $220.",
+   "clue": "Year 2 interest is worked out on the new balance."
+  }
+ },
+ "cleared_by": "checker"
 }

@@ -24,8 +24,149 @@
    0.368
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: done",
+  "2026-11-20T12:44:55Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.00689,
+  "check": 0.01778
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The new point is about the global latitude pattern of biomes (rainforest near the equator, deserts near the tropics, tundra near the poles), but the closest bank point, Land biomes, mainly teaches how to identify biome types and only mentions bands in passing, with no card content on deserts or the tropics and poles, so adding that would be a new idea rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Where the biomes are",
+  "card": [
+   "Biomes form broad bands across the world. The pattern follows latitude, which is how far a place is north or south of the equator.",
+   [
+    "Rainforest",
+    "Tropical rainforests are found near the equator, in places such as the Amazon Basin in South America and the Congo Basin in Africa."
+   ],
+   [
+    "Desert",
+    "Many large deserts lie near the tropics of Cancer and Capricorn, such as the Sahara in Africa and the Great Victoria Desert in Australia."
+   ],
+   [
+    "Tundra",
+    "Tundra is found near the poles, in the far north of Canada, Russia and Alaska. Moving from the equator to a pole, the biomes change in a rough pattern."
+   ]
+  ],
+  "remember": "Biomes lie in bands: rainforest near the equator, deserts near the tropics, tundra near the poles.",
+  "a": {
+   "q": "Which pattern best describes where biomes are found on Earth?",
+   "opts": [
+    "Broad bands that follow latitude",
+    "Random patches with no pattern",
+    "Rings around each large mountain",
+    "Strips that follow national borders"
+   ],
+   "why": "Biomes form broad bands across the world, and these bands follow latitude. Borders do not decide biomes, and the pattern is not random.",
+   "clue": "Think of how far north or south a place is from the equator."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tara is looking at a world map. She sees a large area of tundra near the North Pole. Where would she most likely find tropical rainforest?",
+   "opts": [
+    "Near the equator, such as in the Amazon Basin",
+    "Near the tropics, such as in the Sahara",
+    "Near the South Pole, such as in Antarctica",
+    "Near the North Pole, such as in northern Russia"
+   ],
+   "why": "Tropical rainforests are found near the equator, and the Amazon Basin is an example. The Sahara is a desert near the tropics, and the polar regions are where tundra is found.",
+   "clue": "Which line of latitude runs through the middle of the world map?"
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A simple world map showing the equator, the tropic of Cancer and the tropic of Capricorn, with broad bands shaded and labelled: tropical rainforest near the equator, desert near the tropics, and tundra near the poles.",
+    "why": "It lets students see the bands of biomes across latitude."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Broad bands that follow latitude",
+   "also_right": []
+  },
+  "b": {
+   "best": "Near the equator, such as in the Amazon Basin",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Where the biomes are",
+  "card": [
+   "Biomes form broad bands across the world. The pattern follows latitude, which is how far a place is north or south of the equator.",
+   [
+    "Rainforest",
+    "Tropical rainforests are found near the equator, in places such as the Amazon Basin in South America and the Congo Basin in Africa."
+   ],
+   [
+    "Desert",
+    "Many large deserts lie near the tropics of Cancer and Capricorn, such as the Sahara in Africa and the Great Victoria Desert in Australia."
+   ],
+   [
+    "Tundra",
+    "Tundra is found near the poles, in the far north of Canada, Russia and Alaska. Moving from the equator to a pole, the biomes change in a rough pattern."
+   ]
+  ],
+  "remember": "Biomes lie in bands: rainforest near the equator, deserts near the tropics, tundra near the poles.",
+  "a": {
+   "q": "Which pattern best describes where biomes are found on Earth?",
+   "opts": [
+    "Broad bands that follow latitude",
+    "Random patches with no pattern",
+    "Rings around each large mountain",
+    "Strips that follow national borders"
+   ],
+   "why": "Biomes form broad bands across the world, and these bands follow latitude. Borders do not decide biomes, and the pattern is not random.",
+   "clue": "Think of how far north or south a place is from the equator."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tara is looking at a world map. She sees a large area of tundra near the North Pole. Where would she most likely find tropical rainforest?",
+   "opts": [
+    "Near the equator, such as in the Amazon Basin",
+    "Near the tropics, such as in the Sahara",
+    "Near the South Pole, such as in Antarctica",
+    "Near the North Pole, such as in northern Russia"
+   ],
+   "why": "Tropical rainforests are found near the equator, and the Amazon Basin is an example. The Sahara is a desert near the tropics, and the polar regions are where tundra is found.",
+   "clue": "Which line of latitude runs through the middle of the world map?"
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "diagram",
+    "brief": "A simple world map showing the equator, the tropic of Cancer and the tropic of Capricorn, with broad bands shaded and labelled: tropical rainforest near the equator, desert near the tropics, and tundra near the poles.",
+    "why": "It lets students see the bands of biomes across latitude."
+   }
+  ]
+ },
+ "cleared_by": "checker"
 }

@@ -16,8 +16,179 @@
    0.203
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:50Z write: failed the content check, writing again",
+  "2026-11-20T12:35:51Z write: done",
+  "2026-11-20T12:44:56Z check: flagged",
+  "2026-11-20T12:53:26Z fix: suggested",
+  "2026-11-20T13:23:39Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.01913,
+  "check": 0.01051,
+  "fix": 0.01835
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches medieval social hierarchy or women's legal status under feudal ranks; they cover twentieth-century war work and feminism, which are a different topic and depth from the new Europe after Rome point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Social hierarchy and medieval women",
+  "card": [
+   "Sources such as manuscripts, church records and tapestries show a ranked society in medieval Europe. Most people had a fixed place in a hierarchy, which is a ladder of ranks from top to bottom.",
+   "Rulers such as kings were at the top, with nobles beneath them. The clergy, who worked for the Church, also held high rank. Peasants, who farmed the land, made up most of the people and were near the bottom.",
+   "A woman's life depended on her rank. A noblewoman might manage an estate while her husband was away. A peasant woman worked in the fields and home, and often brewed ale or made cloth.",
+   "Women of every rank had few legal rights. A father or husband usually spoke for a woman in law. Some women, such as nuns, found a role in the Church."
+  ],
+  "remember": "Medieval society was ranked from rulers to peasants. A woman's life followed her rank, and she had few legal rights.",
+  "a": {
+   "q": "Which group made up most of the people in medieval Europe, near the bottom of the hierarchy?",
+   "opts": [
+    "Peasants",
+    "Nobles",
+    "Clergy",
+    "Rulers"
+   ],
+   "why": "Peasants farmed the land and were most of the people. Nobles ranked higher and were far fewer. The clergy held high rank too, so they were not near the bottom.",
+   "clue": "Think of who farmed the land."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two women lived in medieval England. Edith was a noblewoman who ran her family's estate. Hilda was a peasant who worked in the fields. What do their lives show?",
+   "opts": [
+    "Daily work differed by rank, but both had few legal rights",
+    "Their lives were much the same, because both were women",
+    "Edith had full legal rights, while Hilda had none",
+    "Hilda had more legal rights, as she worked the land"
+   ],
+   "why": "Rank shaped what each woman did every day, but women of every rank had few legal rights. Being a woman did not make their lives the same. Edith's rank gave her more to manage, not full legal rights.",
+   "clue": "Rank changed their work. Did it change their legal rights much?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Peasants",
+   "also_right": []
+  },
+  "b": {
+   "best": "Daily work differed by rank, but both had few legal rights",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Rank changed their work. Did it change their legal rights much?' restates the right option almost word for word, so a student can pick it without understanding the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts match the card and both answers are sound. The only problem is that question b's clue almost states the right answer."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue 'Rank changed their work. Did it change their legal rights much?' restates the right option almost word for word, so a student can pick it without understanding the idea."
+ ],
+ "proposal": {
+  "title": "Social hierarchy and medieval women",
+  "card": [
+   "Sources such as manuscripts, church records and paintings show a ranked society in medieval Europe. Most people had a fixed place in a hierarchy, which is a ladder of ranks from top to bottom.",
+   "Rulers such as kings were at the top, with nobles beneath them. The clergy, who worked for the Church, also held high rank. Peasants, who farmed the land, made up most of the people and were near the bottom.",
+   "A woman's life depended on her rank. A noblewoman might manage an estate while her husband was away. A peasant woman worked in the fields and home, and often brewed ale or made cloth.",
+   "Women of every rank had few legal rights. A father or husband usually spoke for a woman in law. Some women, such as nuns, found a role in the Church."
+  ],
+  "remember": "Medieval society was ranked from rulers to peasants. A woman's life followed her rank, and she had few legal rights.",
+  "a": {
+   "q": "A manor record lists many families who farmed the lord's land and owed him work. Which group in the hierarchy were they?",
+   "opts": [
+    "Peasants",
+    "Nobles",
+    "Clergy",
+    "Rulers"
+   ],
+   "why": "Peasants farmed the land and were near the bottom of the hierarchy. Nobles ranked higher and owned land rather than working it. The clergy worked for the Church, not on a lord's fields.",
+   "clue": "Who did the farming?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Two women lived in medieval England. Edith was a noblewoman who ran her family's estate. Hilda was a peasant who worked in the fields. What do their lives show?",
+   "opts": [
+    "Daily work differed by rank, but both had few legal rights",
+    "Their lives were much the same, because both were women",
+    "Edith had full legal rights, while Hilda had none",
+    "Hilda had more legal rights, as she worked the land"
+   ],
+   "why": "Rank shaped what each woman did every day, but women of every rank had few legal rights. Being a woman did not make their lives the same. Edith's rank gave her more to manage, not full legal rights.",
+   "clue": "Think about what rank shaped for women, and what it did not."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:39Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Rank changed their work. Did it change their legal rights much?' restates the right option almost word for word, so a student can pick it without understanding the idea."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue 'Rank changed their work. Did it change their legal rights much?' restates the right option almost word for word, so a student can pick it without understanding the idea."
+  ]
+ },
+ "final": {
+  "title": "Social hierarchy and medieval women",
+  "card": [
+   "Sources such as manuscripts, church records and paintings show a ranked society in medieval Europe. Most people had a fixed place in a hierarchy, which is a ladder of ranks from top to bottom.",
+   "Rulers such as kings were at the top, with nobles beneath them. The clergy, who worked for the Church, also held high rank. Peasants, who farmed the land, made up most of the people and were near the bottom.",
+   "A woman's life depended on her rank. A noblewoman might manage an estate while her husband was away. A peasant woman worked in the fields and home, and often brewed ale or made cloth.",
+   "Women of every rank had few legal rights. A father or husband usually spoke for a woman in law. Some women, such as nuns, found a role in the Church."
+  ],
+  "remember": "Medieval society was ranked from rulers to peasants. A woman's life followed her rank, and she had few legal rights.",
+  "a": {
+   "q": "A manor record lists many families who farmed the lord's land and owed him work. Which group in the hierarchy were they?",
+   "opts": [
+    "Peasants",
+    "Nobles",
+    "Clergy",
+    "Rulers"
+   ],
+   "why": "Peasants farmed the land and were near the bottom of the hierarchy. Nobles ranked higher and owned land rather than working it. The clergy worked for the Church, not on a lord's fields.",
+   "clue": "Who did the farming?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Two women lived in medieval England. Edith was a noblewoman who ran her family's estate. Hilda was a peasant who worked in the fields. What do their lives show?",
+   "opts": [
+    "Daily work differed by rank, but both had few legal rights",
+    "Their lives were much the same, because both were women",
+    "Edith had full legal rights, while Hilda had none",
+    "Hilda had more legal rights, as she worked the land"
+   ],
+   "why": "Rank shaped what each woman did every day, but women of every rank had few legal rights. Being a woman did not make their lives the same. Edith's rank gave her more to manage, not full legal rights.",
+   "clue": "Think about what rank shaped for women, and what it did not."
+  }
+ },
+ "cleared_by": "auto"
 }

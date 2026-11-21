@@ -24,8 +24,113 @@
    0.217
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: done",
+  "2026-11-20T12:35:55Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00039,
+  "write": 0.01296,
+  "check": 0.00686
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Solving linear inequalities, covers solving and the sign flip but not showing the answer on a number line, which the new point requires, and the one-variable card that does include the number line is pitched at Year 8 rather than Years 9 and 10.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Linear inequalities",
+  "card": [
+   "An inequality uses \\(<\\), \\(>\\), \\(\\le\\) or \\(\\ge\\). Solve it like an equation: do the same to both sides.",
+   "Multiplying or dividing both sides by a negative number reverses the sign. For \\(-2x < 6\\), divide by \\(-2\\) to get \\(x > -3\\).",
+   "On a number line, an open circle shows \\(<\\) or \\(>\\), and a closed circle shows \\(\\le\\) or \\(\\ge\\). The arrow points to the values that work.",
+   "Worked example: \\(3 - 4x \\ge 11\\). Subtract 3 to get \\(-4x \\ge 8\\). Divide by \\(-4\\) and reverse the sign: \\(x \\le -2\\)."
+  ],
+  "remember": "Solve as for an equation, but reverse the sign when you multiply or divide by a negative.",
+  "a": {
+   "q": "What is the solution of \\(-3x > 12\\)?",
+   "opts": [
+    "\\(x < -4\\)",
+    "\\(x > -4\\)",
+    "\\(x < 4\\)",
+    "\\(x > 4\\)"
+   ],
+   "why": "Dividing both sides by \\(-3\\) gives \\(x\\) less than \\(-4\\), and the sign reverses. The option \\(x > -4\\) forgets to reverse the sign.",
+   "clue": "You divide by a negative number."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo solves \\(5 - 2x \\le 1\\). Which number line description shows his solution?",
+   "opts": [
+    "Closed circle at 2, arrow pointing right",
+    "Closed circle at 2, arrow pointing left",
+    "Open circle at 2, arrow pointing right",
+    "Closed circle at \\(-2\\), arrow pointing right"
+   ],
+   "why": "Subtract 5 to get \\(-2x \\le -4\\). Divide by \\(-2\\) and reverse the sign: \\(x \\ge 2\\). That is a closed circle at 2 with the arrow pointing right. The arrow pointing left comes from not reversing the sign.",
+   "clue": "Divide by \\(-2\\), then think about which way the sign points."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(x < -4\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "Closed circle at 2, arrow pointing right",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Linear inequalities",
+  "card": [
+   "An inequality uses \\(<\\), \\(>\\), \\(\\le\\) or \\(\\ge\\). Solve it like an equation: do the same to both sides.",
+   "Multiplying or dividing both sides by a negative number reverses the sign. For \\(-2x < 6\\), divide by \\(-2\\) to get \\(x > -3\\).",
+   "On a number line, an open circle shows \\(<\\) or \\(>\\), and a closed circle shows \\(\\le\\) or \\(\\ge\\). The arrow points to the values that work.",
+   "Worked example: \\(3 - 4x \\ge 11\\). Subtract 3 to get \\(-4x \\ge 8\\). Divide by \\(-4\\) and reverse the sign: \\(x \\le -2\\)."
+  ],
+  "remember": "Solve as for an equation, but reverse the sign when you multiply or divide by a negative.",
+  "a": {
+   "q": "What is the solution of \\(-3x > 12\\)?",
+   "opts": [
+    "\\(x < -4\\)",
+    "\\(x > -4\\)",
+    "\\(x < 4\\)",
+    "\\(x > 4\\)"
+   ],
+   "why": "Dividing both sides by \\(-3\\) gives \\(x\\) less than \\(-4\\), and the sign reverses. The option \\(x > -4\\) forgets to reverse the sign.",
+   "clue": "You divide by a negative number."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo solves \\(5 - 2x \\le 1\\). Which number line description shows his solution?",
+   "opts": [
+    "Closed circle at 2, arrow pointing right",
+    "Closed circle at 2, arrow pointing left",
+    "Open circle at 2, arrow pointing right",
+    "Closed circle at \\(-2\\), arrow pointing right"
+   ],
+   "why": "Subtract 5 to get \\(-2x \\le -4\\). Divide by \\(-2\\) and reverse the sign: \\(x \\ge 2\\). That is a closed circle at 2 with the arrow pointing right. The arrow pointing left comes from not reversing the sign.",
+   "clue": "Divide by \\(-2\\), then think about which way the sign points."
+  }
+ },
+ "cleared_by": "checker"
 }

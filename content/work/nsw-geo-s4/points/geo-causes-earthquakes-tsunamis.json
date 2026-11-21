@@ -16,8 +16,164 @@
    0.213
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 may adapt geo-tsunamis, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:45Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:49Z write: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T14:38:59Z review: rejected, to be written again",
+  "2026-11-20T14:58:19Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "confirm": 0.00507,
+  "write": 0.0064,
+  "check": 0.01236,
+  "fix": 0.02062
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-tsunamis",
+  "changes": [
+   "Add the plate-boundary cause of the undersea earthquake, since the new brief says stress builds where plates meet and the rock slips.",
+   "Add the stress build-up and sudden slip as the cause of the earthquake that starts the tsunami, to match the brief."
+  ],
+  "sure": "medium",
+  "reason": "The bank's tsunami card covers the tsunami side well but does not explain how stress builds at plate boundaries, so it needs a small addition about plate-boundary earthquakes.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point teaches both what causes earthquakes and how an undersea earthquake can trigger a tsunami. Each bank point covers only one of these ideas (earthquakes alone, tsunamis alone, or earthquakes with volcanoes), so none matches it.",
+  "model": "claude-opus-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Causes of earthquakes and tsunamis",
+  "card": [
+   "The Earth's crust is broken into huge pieces called plates. They move very slowly, and they push against, pull away from or slide past each other where they meet.",
+   [
+    "Earthquake",
+    "Where plates meet, they can get stuck. Stress builds up in the rock. When the rock suddenly slips, the energy is released as shaking in the ground."
+   ],
+   [
+    "Tsunami",
+    "A tsunami is a series of very long sea waves. An earthquake under the sea can push the sea floor up or down, and this moves the water above it and can start a tsunami."
+   ],
+   "A tsunami can travel across the ocean and reach coasts far from where the earthquake happened. Not every undersea earthquake causes one."
+  ],
+  "remember": "Stress builds where plates meet, then the rock slips. A sea floor earthquake can start a tsunami.",
+  "a": {
+   "q": "What happens just before an earthquake begins?",
+   "opts": [
+    "Rock suddenly slips after stress has built up",
+    "Plates stop moving and the rock cools down",
+    "Magma pushes up through the crust and erupts",
+    "Heavy rain makes a slope give way"
+   ],
+   "why": "Plates get stuck where they meet, so stress builds. The earthquake happens when the rock suddenly slips. Magma erupting is a volcano, not the cause of an earthquake.",
+   "clue": "Think about plates getting stuck, then letting go."
+  },
+  "b": {
+   "d": 3,
+   "q": "A strong earthquake shakes the sea floor off the coast of a country. The sea floor is pushed up. What is the most likely effect on the water above?",
+   "opts": [
+    "It is moved and may start a tsunami",
+    "It is pulled down and forms a volcano",
+    "It stays still, as water cannot be moved",
+    "It is warmed and makes a storm form"
+   ],
+   "why": "When the sea floor is pushed up, the water above it moves too, and this can start a tsunami. A volcano comes from magma, not from moving water. Storms are not caused by earthquakes.",
+   "clue": "What happens to the water when the floor beneath it moves?"
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:19Z",
+   "step": "write",
+   "version": {
+    "title": "What causes earthquakes and tsunamis",
+    "card": [
+     "Earth's outer layer is broken into huge slabs of rock called plates. They move very slowly, a few centimetres a year, and press against each other where they meet.",
+     "Where plates meet, the rock can lock together while the plates keep moving. Stress then builds up in the rock, often over many years.",
+     "When the stress becomes too great, the rock suddenly slips. The stored energy is released as vibrations that shake the ground. This is an earthquake.",
+     "An earthquake under the sea can push the sea floor up or drop it down. This moves the water above it, which spreads out as a tsunami, a series of long, fast waves."
+    ],
+    "remember": "Locked rock builds stress until it slips. If the slip lifts or drops the sea floor, it can start a tsunami.",
+    "a": {
+     "q": "Two plates have been locked together for 200 years while still being pushed. What is most likely to happen?",
+     "opts": [
+      "Stress builds until the rock suddenly slips",
+      "The stress slowly fades as the rock cools",
+      "Magma rises between them and erupts as lava",
+      "The plates melt together and stop moving"
+     ],
+     "why": "While the plates are locked but still pushed, stress keeps building in the rock. In the end the rock suddenly slips, releasing the energy as an earthquake. Magma erupting is a volcano, which has a different cause.",
+     "clue": "What happens to stress that keeps building?"
+    },
+    "b": {
+     "d": 3,
+     "q": "An earthquake strikes under the ocean floor, but the sea floor does not move up or down. Why is a large tsunami unlikely?",
+     "opts": [
+      "The water above was not pushed up or dropped",
+      "Tsunamis start from earthquakes on land",
+      "Tsunamis are caused by strong winds over the sea",
+      "A tsunami needs a volcano to erupt at the same time"
+     ],
+     "why": "A tsunami starts when the sea floor is pushed up or dropped, moving the water above it. Here the sea floor did not move up or down, so the water was not shifted. Strong winds make ordinary waves, not tsunamis.",
+     "clue": "What has to happen to the water to start a tsunami?"
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "What causes earthquakes and tsunamis",
+  "card": [
+   "Earth's outer layer is broken into huge slabs of rock called plates. They move very slowly, a few centimetres a year, and press against each other where they meet.",
+   "Where plates meet, the rock can lock together while the plates keep moving. Stress then builds up in the rock, often over many years.",
+   "When the stress becomes too great, the rock suddenly slips. The stored energy is released as vibrations that shake the ground. This is an earthquake.",
+   "An earthquake under the sea can push the sea floor up or drop it down. This moves the water above it, which spreads out as a tsunami, a series of long, fast waves."
+  ],
+  "remember": "Locked rock builds stress until it slips. If the slip lifts or drops the sea floor, it can start a tsunami.",
+  "a": {
+   "q": "Two plates have been locked together for 200 years while still being pushed. What is most likely to happen?",
+   "opts": [
+    "Stress builds until the rock suddenly slips",
+    "The stress slowly fades as the rock cools",
+    "Magma rises between them and erupts as lava",
+    "The plates melt together and stop moving"
+   ],
+   "why": "While the plates are locked but still pushed, stress keeps building in the rock. In the end the rock suddenly slips, releasing the energy as an earthquake. Magma erupting is a volcano, which has a different cause.",
+   "clue": "What happens to stress that keeps building?"
+  },
+  "b": {
+   "d": 3,
+   "q": "An earthquake strikes under the ocean floor, but the sea floor does not move up or down. Why is a large tsunami unlikely?",
+   "opts": [
+    "The water above was not pushed up or dropped",
+    "Tsunamis start from earthquakes on land",
+    "Tsunamis are caused by strong winds over the sea",
+    "A tsunami needs a volcano to erupt at the same time"
+   ],
+   "why": "A tsunami starts when the sea floor is pushed up or dropped, moving the water above it. Here the sea floor did not move up or down, so the water was not shifted. Strong winds make ordinary waves, not tsunamis.",
+   "clue": "What has to happen to the water to start a tsunami?"
+  }
+ },
+ "local": []
 }

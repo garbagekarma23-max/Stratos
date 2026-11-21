@@ -24,8 +24,345 @@
    0.264
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:40Z new, match"
- ]
+  "2026-11-12T12:22:40Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 says reuse mat-exponential-functions, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:55Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:35:54Z write: failed the content check, writing again",
+  "2026-11-20T12:44:59Z write: done",
+  "2026-11-20T12:53:27Z check: flagged",
+  "2026-11-20T13:00:00Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "confirm": 0.01727,
+  "write": 0.02195,
+  "check": 0.01202,
+  "fix": 0.02633,
+  "recheck": 0.00726
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-exponential-functions",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the same idea (graphs of y = a^x passing through (0, 1) with the x-axis as asymptote) at a suitable depth for Year 9-10 NSW, and its examples and questions fit the new brief, though it is tagged to Year 10 and Year 11 elsewhere.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card covers general exponential functions y = a^x, including decay and the formal asymptote, but it never teaches the brief's key idea that y doubles each time x goes up by 1, so it is broader and does not match this introductory Stage 5 point.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Exponential graphs",
+  "card": [
+   "In \\(y = 2^{x}\\), the variable \\(x\\) is the power. Each time \\(x\\) goes up by 1, \\(y\\) is multiplied by 2, so \\(y\\) doubles.",
+   "For example, \\(x = 0, 1, 2, 3\\) gives \\(y = 1, 2, 4, 8\\). The curve passes through \\((0, 1)\\), because \\(2^{0} = 1\\).",
+   "When \\(x\\) is negative, \\(y\\) is a small positive number. For example, \\(x = -1\\) gives \\(y = \\frac{1}{2}\\). The curve gets close to the x-axis but never reaches it, because \\(2^{x}\\) is never 0.",
+   "The curve is always above the x-axis, and it rises faster and faster as \\(x\\) increases."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "The curve \\(y = 2^{x}\\), rising steeply to the right and passing through \\((0, 1)\\). On the left it gets close to the x-axis without touching it.",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -1,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2^{x}",
+      "label": "\\(y = 2^{x}\\)",
+      "labelAt": 2.6,
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       1
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, 1)\\)",
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
+  "remember": "For \\(y = 2^{x}\\), \\(y\\) doubles as \\(x\\) goes up by 1. The curve passes through \\((0, 1)\\) and stays above the x-axis.",
+  "a": {
+   "q": "Which point lies on the graph of \\(y = 2^{x}\\)?",
+   "opts": [
+    "\\((3, 8)\\)",
+    "\\((3, 6)\\)",
+    "\\((0, 0)\\)",
+    "\\((2, 8)\\)"
+   ],
+   "why": "When \\(x = 3\\), \\(y = 2^{3} = 8\\), so \\((3, 8)\\) is on the curve. The point \\((3, 6)\\) comes from multiplying \\(2 \\times 3\\) instead of using \\(x\\) as the power.",
+   "clue": "Put the x value in as the power of 2."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia plots \\(y = 2^{x}\\) and reads the value of \\(y\\) at \\(x = 4\\) as 16. She then says \\(y\\) at \\(x = 5\\) is 32. Which reason explains why she is right?",
+   "opts": [
+    "Each step of 1 in \\(x\\) doubles \\(y\\)",
+    "Each step of 1 in \\(x\\) adds 16 to \\(y\\)",
+    "Each step of 1 in \\(x\\) adds 2 to \\(y\\)",
+    "The curve reaches the x-axis at \\(x = 5\\)"
+   ],
+   "why": "Going from \\(x = 4\\) to \\(x = 5\\) doubles \\(y\\): \\(16 \\times 2 = 32\\), which matches \\(2^{5}\\). Adding the same amount each step would give a straight line, not this curve.",
+   "clue": "Check what happens to \\(y\\) each time \\(x\\) goes up by 1."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\((3, 8)\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "Each step of 1 in \\(x\\) doubles \\(y\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The distractor 'Each step of 1 in x adds 16 to y' also turns 16 into 32 for the step Mia uses, since doubling 16 is the same as adding 16. A student could defend it from the question as written. Use a starting value where doubling and adding a fixed amount give different results, or ask about more than one step."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b has a distractor ('adds 16') that also gives 32 for the one step from x = 4 to x = 5, so the question does not cleanly separate doubling from adding. The card, the graph and question a are correct."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The distractor 'Each step of 1 in x adds 16 to y' also turns 16 into 32 for the step Mia uses, since doubling 16 is the same as adding 16. A student could defend it from the question as written. Use a starting value where doubling and adding a fixed amount give different results, or ask about more than one step."
+ ],
+ "proposal": {
+  "title": "Exponential graphs",
+  "card": [
+   "In \\(y = 2^{x}\\), the variable \\(x\\) is the power. Each time \\(x\\) goes up by 1, \\(y\\) is multiplied by 2, so \\(y\\) doubles.",
+   "For example, \\(x = 0, 1, 2, 3\\) gives \\(y = 1, 2, 4, 8\\). The curve passes through \\((0, 1)\\), because \\(2^{0} = 1\\).",
+   "When \\(x\\) is negative, \\(y\\) is a small positive number. For example, \\(x = -1\\) gives \\(y = \\frac{1}{2}\\). The curve gets close to the x-axis but never reaches it, because \\(2^{x}\\) is never 0.",
+   "The curve is always above the x-axis, and it rises faster and faster as \\(x\\) increases."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "The curve \\(y = 2^{x}\\), rising steeply to the right and passing through \\((0, 1)\\). On the left it gets close to the x-axis without touching it.",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -1,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2^{x}",
+      "label": "\\(y = 2^{x}\\)",
+      "labelAt": 2.6,
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       1
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, 1)\\)",
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
+  "remember": "For \\(y = 2^{x}\\), \\(y\\) doubles as \\(x\\) goes up by 1. The curve passes through \\((0, 1)\\) and stays above the x-axis.",
+  "a": {
+   "q": "Which point lies on the graph of \\(y = 2^{x}\\)?",
+   "opts": [
+    "\\((3, 8)\\)",
+    "\\((3, 6)\\)",
+    "\\((0, 0)\\)",
+    "\\((2, 8)\\)"
+   ],
+   "why": "When \\(x = 3\\), \\(y = 2^{3} = 8\\), so \\((3, 8)\\) is on the curve. The point \\((3, 6)\\) comes from multiplying \\(2 \\times 3\\) instead of using \\(x\\) as the power.",
+   "clue": "Put the x value in as the power of 2."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia plots \\(y = 2^{x}\\) and reads \\(y = 16\\) at \\(x = 4\\). Using the pattern of the curve, what is \\(y\\) at \\(x = 6\\)?",
+   "opts": [
+    "64",
+    "48",
+    "32",
+    "20"
+   ],
+   "why": "Going from \\(x = 4\\) to \\(x = 6\\) is two steps, so \\(y\\) doubles twice: 16 to 32 to 64, which matches \\(2^{6} = 64\\). The answer 48 comes from adding 16 at each step, but \\(y\\) is multiplied by 2 each step, not increased by a fixed amount.",
+   "clue": "Count how many steps of 1 there are from \\(x = 4\\) to \\(x = 6\\)."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\((3, 8)\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "64",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The distractor 'Each step of 1 in x adds 16 to y' also turns 16 into 32 for the step Mia uses, since doubling 16 is the same as adding 16. A student could defend it from the question as written. Use a starting value where doubling and adding a fixed amount give different results, or ask about more than one step."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The distractor 'Each step of 1 in x adds 16 to y' also turns 16 into 32 for the step Mia uses, since doubling 16 is the same as adding 16. A student could defend it from the question as written. Use a starting value where doubling and adding a fixed amount give different results, or ask about more than one step."
+  ]
+ },
+ "final": {
+  "title": "Exponential graphs",
+  "card": [
+   "In \\(y = 2^{x}\\), the variable \\(x\\) is the power. Each time \\(x\\) goes up by 1, \\(y\\) is multiplied by 2, so \\(y\\) doubles.",
+   "For example, \\(x = 0, 1, 2, 3\\) gives \\(y = 1, 2, 4, 8\\). The curve passes through \\((0, 1)\\), because \\(2^{0} = 1\\).",
+   "When \\(x\\) is negative, \\(y\\) is a small positive number. For example, \\(x = -1\\) gives \\(y = \\frac{1}{2}\\). The curve gets close to the x-axis but never reaches it, because \\(2^{x}\\) is never 0.",
+   "The curve is always above the x-axis, and it rises faster and faster as \\(x\\) increases."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "The curve \\(y = 2^{x}\\), rising steeply to the right and passing through \\((0, 1)\\). On the left it gets close to the x-axis without touching it.",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -1,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2^{x}",
+      "label": "\\(y = 2^{x}\\)",
+      "labelAt": 2.6,
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       1
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, 1)\\)",
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
+  "remember": "For \\(y = 2^{x}\\), \\(y\\) doubles as \\(x\\) goes up by 1. The curve passes through \\((0, 1)\\) and stays above the x-axis.",
+  "a": {
+   "q": "Which point lies on the graph of \\(y = 2^{x}\\)?",
+   "opts": [
+    "\\((3, 8)\\)",
+    "\\((3, 6)\\)",
+    "\\((0, 0)\\)",
+    "\\((2, 8)\\)"
+   ],
+   "why": "When \\(x = 3\\), \\(y = 2^{3} = 8\\), so \\((3, 8)\\) is on the curve. The point \\((3, 6)\\) comes from multiplying \\(2 \\times 3\\) instead of using \\(x\\) as the power.",
+   "clue": "Put the x value in as the power of 2."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia plots \\(y = 2^{x}\\) and reads \\(y = 16\\) at \\(x = 4\\). Using the pattern of the curve, what is \\(y\\) at \\(x = 6\\)?",
+   "opts": [
+    "64",
+    "48",
+    "32",
+    "20"
+   ],
+   "why": "Going from \\(x = 4\\) to \\(x = 6\\) is two steps, so \\(y\\) doubles twice: 16 to 32 to 64, which matches \\(2^{6} = 64\\). The answer 48 comes from adding 16 at each step, but \\(y\\) is multiplied by 2 each step, not increased by a fixed amount.",
+   "clue": "Count how many steps of 1 there are from \\(x = 4\\) to \\(x = 6\\)."
+  }
+ },
+ "cleared_by": "recheck"
 }

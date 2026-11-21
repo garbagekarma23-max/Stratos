@@ -16,8 +16,44 @@
    0.232
   ]
  ],
- "stage": "match",
+ "stage": "reuse",
  "log": [
-  "2026-11-12T12:22:33Z new, match"
- ]
+  "2026-11-12T12:22:33Z new, match",
+  "2026-11-20T12:15:14Z match: Claude Haiku 5.5 may adapt eng-camera-angles, but is not highly sure, so to the Opus match check",
+  "2026-11-20T12:25:43Z confirm: Claude Opus 5.5 may reuse eng-camera-angles, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:38:38Z review: reusing eng-camera-angles"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "confirm": 0.00793
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "eng-camera-angles",
+  "changes": [
+   "Reword the eye-level description from making the subject feel equal to the viewer to describing the shot as neutral, to match the new point's brief."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same three camera angles at a basic level that suits Stage 5, and only the eye-level wording needs to change to match the brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "eng-camera-angles",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card teaches high, low and eye-level angles and their effects at the same depth the brief asks for, and its photo and poster questions suit a Stage 5 unit on visual texts, with no NSW-specific terms needed.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "eng-camera-angles",
+ "matched": {
+  "verdict": "reuse",
+  "from": "eng-camera-angles",
+  "by": "owner",
+  "at": "2026-11-20T14:38:38Z"
+ }
 }

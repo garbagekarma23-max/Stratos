@@ -3,8 +3,474 @@
  "title": "Voting methods",
  "brief": "2e8f07ac4e7f",
  "shortlist": [],
- "stage": "write",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:31Z new, write"
- ]
+  "2026-11-12T12:22:31Z new, write",
+  "2026-11-20T12:15:12Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:25:41Z write: done",
+  "2026-11-20T12:35:44Z check: flagged",
+  "2026-11-20T12:44:52Z fix: suggested",
+  "2026-11-20T13:37:05Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (card wording)",
+  "2026-11-20T13:44:55Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: flagged",
+  "2026-11-20T13:56:50Z fix: suggested",
+  "2026-11-20T13:57:33Z autoreview: cleared with the fix (a wording)"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 2,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00627,
+  "check": 0.01248,
+  "fix": 0.06073,
+  "recheck": 0.01266
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, wording: The last line says the methods 'count the same ballots in different ways', but the card itself says first-past-the-post voters mark one candidate while preferential voters rank all of them, so the ballots are not the same. Something like 'the same voters' choices can lead to different results' would avoid this.",
+ "rejected": {
+  "title": "Voting methods",
+  "card": [
+   [
+    "First-past-the-post",
+    "Voters mark one candidate, and the candidate with the most votes wins, even without more than half of all votes."
+   ],
+   [
+    "Preferential",
+    "Voters rank candidates in order, 1, 2, 3 and so on. If no one has more than half the votes, the last-placed candidate is dropped and their votes go to the voters' next choice. This repeats until one candidate has a majority."
+   ],
+   [
+    "Proportional",
+    "Seats are shared out according to each party's share of the votes. A party with about a third of the votes wins about a third of the seats. The Australian Senate uses this approach."
+   ],
+   "The methods count the same ballots in different ways, so the same votes can lead to different results."
+  ],
+  "remember": "First-past-the-post: most votes wins. Preferential: rank and pass on votes. Proportional: seats match vote share.",
+  "a": {
+   "q": "Which method has voters rank the candidates in order of choice?",
+   "opts": [
+    "Preferential voting",
+    "First-past-the-post voting",
+    "Proportional voting",
+    "Compulsory voting"
+   ],
+   "why": "Preferential voting asks voters to number candidates, so a vote can pass to the next choice. First-past-the-post is the tempting wrong answer, but voters mark only one candidate and no ranking is used.",
+   "clue": "Think about which method uses numbers 1, 2, 3 on the ballot."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a town election, Priya gets 40 votes, Sam gets 35 and Lee gets 25. Under first-past-the-post, who wins, and why?",
+   "opts": [
+    "Priya, because she has the most votes",
+    "Priya, because she has over half the votes",
+    "Sam, because Lee's votes pass to him",
+    "No one, because no one has over half the votes"
+   ],
+   "why": "First-past-the-post gives the win to the candidate with the most votes, and Priya has 40. Saying no one wins yet, or that Lee's votes pass to Sam, applies preferential counting, where a majority is needed. First-past-the-post needs no majority, and 40 of 100 votes is not over half anyway.",
+   "clue": "Does this method need more than half the votes?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "auto",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, wording: The last line says the methods 'count the same ballots in different ways', but the card itself says first-past-the-post voters mark one candidate while preferential voters rank all of them, so the ballots are not the same. Something like 'the same voters' choices can lead to different results' would avoid this."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Voting methods",
+     "card": [
+      [
+       "First-past-the-post",
+       "Voters mark one candidate, and the candidate with the most votes wins, even without more than half of all votes."
+      ],
+      [
+       "Preferential",
+       "Voters rank candidates in order, 1, 2, 3 and so on. If no one has more than half the votes, the last-placed candidate is dropped and their votes go to the voters' next choice. This repeats until one candidate has a majority."
+      ],
+      [
+       "Proportional",
+       "Seats are shared out according to each party's share of the votes. A party with about a third of the votes wins about a third of the seats. The Australian Senate uses this approach."
+      ],
+      "The methods count the same ballots in different ways, so the same votes can lead to different results."
+     ],
+     "remember": "First-past-the-post: most votes wins. Preferential: rank and pass on votes. Proportional: seats match vote share.",
+     "a": {
+      "q": "Which method has voters rank the candidates in order of choice?",
+      "opts": [
+       "Preferential voting",
+       "First-past-the-post voting",
+       "Proportional voting",
+       "Compulsory voting"
+      ],
+      "why": "Preferential voting asks voters to number candidates, so a vote can pass to the next choice. First-past-the-post is the tempting wrong answer, because voters mark only one candidate and no ranking is used.",
+      "clue": "Think about which method uses numbers 1, 2, 3 on the ballot."
+     },
+     "b": {
+      "d": 3,
+      "q": "In a town election, Priya gets 40 votes, Sam gets 35 and Lee gets 25. Under first-past-the-post, who wins, and why?",
+      "opts": [
+       "Priya, because she has the most votes",
+       "Priya, because she has over half the votes",
+       "Sam, because Lee's votes pass to him",
+       "No one, because no one has over half the votes"
+      ],
+      "why": "First-past-the-post gives the win to the candidate with the most votes, and Priya has 40. The last option describes preferential voting, where a majority is needed. Under first-past-the-post no majority is required.",
+      "clue": "Does this method need more than half the votes?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Preferential voting",
+      "also_right": []
+     },
+     "b": {
+      "best": "Priya, because she has the most votes",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "Why (b) refers to 'the last option', but options are shown in random order, so the reference may point to the wrong option. As written it also misdescribes that option: 'Priya, because she has over half the votes' does not describe preferential voting. It is simply false, since 40 of 100 votes is not over half. The options that reflect preferential thinking are 'Sam, because Lee's votes pass to him' and 'No one, because no one has over half the votes'."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and questions are accurate, and both intended answers are correct. The why for question b refers to 'the last option', which breaks when options are shuffled, and it wrongly says that option describes preferential voting."
+    },
+    "flags": [
+     "Question b, other: Why (b) refers to 'the last option', but options are shown in random order, so the reference may point to the wrong option. As written it also misdescribes that option: 'Priya, because she has over half the votes' does not describe preferential voting. It is simply false, since 40 of 100 votes is not over half. The options that reflect preferential thinking are 'Sam, because Lee's votes pass to him' and 'No one, because no one has over half the votes'."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Voting methods",
+     "card": [
+      [
+       "First-past-the-post",
+       "Voters mark one candidate, and the candidate with the most votes wins, even without more than half of all votes."
+      ],
+      [
+       "Preferential",
+       "Voters rank candidates in order, 1, 2, 3 and so on. If no one has more than half the votes, the last-placed candidate is dropped and their votes go to the voters' next choice. This repeats until one candidate has a majority."
+      ],
+      [
+       "Proportional",
+       "Seats are shared out according to each party's share of the votes. A party with about a third of the votes wins about a third of the seats. The Australian Senate uses this approach."
+      ],
+      "The methods count the same ballots in different ways, so the same votes can lead to different results."
+     ],
+     "remember": "First-past-the-post: most votes wins. Preferential: rank and pass on votes. Proportional: seats match vote share.",
+     "a": {
+      "q": "Which method has voters rank the candidates in order of choice?",
+      "opts": [
+       "Preferential voting",
+       "First-past-the-post voting",
+       "Proportional voting",
+       "Compulsory voting"
+      ],
+      "why": "Preferential voting asks voters to number candidates, so a vote can pass to the next choice. First-past-the-post is the tempting wrong answer, but voters mark only one candidate and no ranking is used.",
+      "clue": "Think about which method uses numbers 1, 2, 3 on the ballot."
+     },
+     "b": {
+      "d": 3,
+      "q": "In a town election, Priya gets 40 votes, Sam gets 35 and Lee gets 25. Under first-past-the-post, who wins, and why?",
+      "opts": [
+       "Priya, because she has the most votes",
+       "Priya, because she has over half the votes",
+       "Sam, because Lee's votes pass to him",
+       "No one, because no one has over half the votes"
+      ],
+      "why": "First-past-the-post gives the win to the candidate with the most votes, and Priya has 40. Saying no one wins yet, or that Lee's votes pass to Sam, applies preferential counting, where a majority is needed. First-past-the-post needs no majority, and 40 of 100 votes is not over half anyway.",
+      "clue": "Does this method need more than half the votes?"
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-20T13:37:05Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Preferential voting",
+       "also_right": []
+      },
+      "b": {
+       "best": "Priya, because she has the most votes",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "wording",
+        "detail": "The last line says the methods 'count the same ballots in different ways', but the card itself says first-past-the-post voters mark one candidate while preferential voters rank all of them, so the ballots are not the same. Something like 'the same voters' choices can lead to different results' would avoid this."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are sound and the explanations agree with the card. One small wording issue: the card says the methods count 'the same ballots', which clashes with its own description of different ballot forms."
+     },
+     "flags": [
+      "Card, wording: The last line says the methods 'count the same ballots in different ways', but the card itself says first-past-the-post voters mark one candidate while preferential voters rank all of them, so the ballots are not the same. Something like 'the same voters' choices can lead to different results' would avoid this."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:55Z",
+   "step": "write",
+   "version": {
+    "title": "Voting methods",
+    "card": [
+     [
+      "First-past-the-post",
+      "Voters mark one candidate, and the candidate with the most votes wins, even without more than half of all votes."
+     ],
+     [
+      "Preferential",
+      "Voters rank candidates in order, 1, 2, 3 and so on. If no one has more than half the votes, the last-placed candidate is dropped and their votes go to the voters' next choice. This repeats until one candidate has a majority."
+     ],
+     [
+      "Proportional",
+      "Seats are shared out according to each party's share of the votes. A party with about a third of the votes wins about a third of the seats. The Australian Senate uses this approach."
+     ],
+     "The same voters' choices can lead to different results, depending on which method is used."
+    ],
+    "remember": "First-past-the-post: most votes wins. Preferential: rank and pass on votes. Proportional: seats match vote share.",
+    "a": {
+     "q": "Which method has voters rank the candidates in order of choice?",
+     "opts": [
+      "Preferential voting",
+      "First-past-the-post voting",
+      "Proportional voting",
+      "Compulsory voting"
+     ],
+     "why": "Preferential voting asks voters to number candidates, so a vote can pass to the next choice. First-past-the-post is the tempting wrong answer, but voters mark only one candidate and no ranking is used.",
+     "clue": "Think about which method uses numbers 1, 2, 3 on the ballot."
+    },
+    "b": {
+     "d": 3,
+     "q": "In a town election, Priya gets 40 votes, Sam gets 35 and Lee gets 25. Under first-past-the-post, who wins, and why?",
+     "opts": [
+      "Priya, because she has the most votes",
+      "Priya, because she has over half the votes",
+      "Sam, because Lee's votes pass to him",
+      "No one, because no one has over half the votes"
+     ],
+     "why": "First-past-the-post gives the win to the candidate with the most votes, and Priya has 40. Saying no one wins yet, or that Lee's votes pass to Sam, applies preferential counting, where a majority is needed. First-past-the-post needs no majority, and 40 of 100 votes is not over half anyway.",
+     "clue": "Does this method need more than half the votes?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Preferential voting",
+     "also_right": []
+    },
+    "b": {
+     "best": "Priya, because she has the most votes",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "a",
+      "kind": "wording",
+      "detail": "The Australian Senate, which the card gives as the example of proportional voting, also has voters number candidates or parties in order (1, 2, 3 and so on), so a student who knows Senate ballots could think proportional voting also ranks candidates. The clue about numbering 1, 2, 3 on the ballot fits Senate ballots too. Rewording the question to ask which method ranks candidates to elect one winner, with votes passed on until someone has a majority, would remove the doubt."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "The facts are right and both answers are clear. One small wording issue: question a and its clue could confuse a student who knows that Senate ballots, the card's proportional example, are also numbered in order."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Voting methods",
+  "card": [
+   [
+    "First-past-the-post",
+    "Voters mark one candidate, and the candidate with the most votes wins, even without more than half of all votes."
+   ],
+   [
+    "Preferential",
+    "Voters rank candidates in order, 1, 2, 3 and so on. If no one has more than half the votes, the last-placed candidate is dropped and their votes go to the voters' next choice. This repeats until one candidate has a majority."
+   ],
+   [
+    "Proportional",
+    "Seats are shared out according to each party's share of the votes. A party with about a third of the votes wins about a third of the seats. The Australian Senate uses this approach."
+   ],
+   "The same voters' choices can lead to different results, depending on which method is used."
+  ],
+  "remember": "First-past-the-post: most votes wins. Preferential: rank and pass on votes. Proportional: seats match vote share.",
+  "a": {
+   "q": "Which method has voters rank the candidates in order of choice?",
+   "opts": [
+    "Preferential voting",
+    "First-past-the-post voting",
+    "Proportional voting",
+    "Compulsory voting"
+   ],
+   "why": "Preferential voting asks voters to number candidates, so a vote can pass to the next choice. First-past-the-post is the tempting wrong answer, but voters mark only one candidate and no ranking is used.",
+   "clue": "Think about which method uses numbers 1, 2, 3 on the ballot."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a town election, Priya gets 40 votes, Sam gets 35 and Lee gets 25. Under first-past-the-post, who wins, and why?",
+   "opts": [
+    "Priya, because she has the most votes",
+    "Priya, because she has over half the votes",
+    "Sam, because Lee's votes pass to him",
+    "No one, because no one has over half the votes"
+   ],
+   "why": "First-past-the-post gives the win to the candidate with the most votes, and Priya has 40. Saying no one wins yet, or that Lee's votes pass to Sam, applies preferential counting, where a majority is needed. First-past-the-post needs no majority, and 40 of 100 votes is not over half anyway.",
+   "clue": "Does this method need more than half the votes?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Preferential voting",
+   "also_right": []
+  },
+  "b": {
+   "best": "Priya, because she has the most votes",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The Australian Senate, which the card gives as the example of proportional voting, also has voters number candidates or parties in order (1, 2, 3 and so on), so a student who knows Senate ballots could think proportional voting also ranks candidates. The clue about numbering 1, 2, 3 on the ballot fits Senate ballots too. Rewording the question to ask which method ranks candidates to elect one winner, with votes passed on until someone has a majority, would remove the doubt."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts are right and both answers are clear. One small wording issue: question a and its clue could confuse a student who knows that Senate ballots, the card's proportional example, are also numbered in order."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The Australian Senate, which the card gives as the example of proportional voting, also has voters number candidates or parties in order (1, 2, 3 and so on), so a student who knows Senate ballots could think proportional voting also ranks candidates. The clue about numbering 1, 2, 3 on the ballot fits Senate ballots too. Rewording the question to ask which method ranks candidates to elect one winner, with votes passed on until someone has a majority, would remove the doubt."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Voting methods",
+  "card": [
+   [
+    "First-past-the-post",
+    "Voters mark one candidate, and the candidate with the most votes wins, even without more than half of all votes."
+   ],
+   [
+    "Preferential",
+    "Voters rank candidates in order, 1, 2, 3 and so on, to elect one winner. If no one has more than half the votes, the last-placed candidate is dropped and their votes go to each voter's next choice. This repeats until one candidate has a majority."
+   ],
+   [
+    "Proportional",
+    "Several members are elected at once, and seats are shared out by each party's share of the votes. A party with about a third of the votes wins about a third of the seats. The Australian Senate uses this approach."
+   ],
+   "The same voters' choices can lead to different results, depending on which method is used."
+  ],
+  "remember": "First-past-the-post: most votes wins. Preferential: rank and pass on votes. Proportional: seats match vote share.",
+  "a": {
+   "q": "Which method elects one winner from ranked votes, passing votes on until a candidate has a majority?",
+   "opts": [
+    "Preferential voting",
+    "First-past-the-post voting",
+    "Proportional voting",
+    "Compulsory voting"
+   ],
+   "why": "Preferential voting elects one winner, and votes from dropped candidates pass to each voter's next choice until someone has more than half. Proportional voting is tempting because Senate voters also number their choices, but it elects several members and shares seats by vote share. First-past-the-post needs no majority and uses no ranking.",
+   "clue": "Which method needs one winner with more than half the votes?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a town election, Priya gets 40 votes, Sam gets 35 and Lee gets 25. Under first-past-the-post, who wins, and why?",
+   "opts": [
+    "Priya, because she has the most votes",
+    "Priya, because she has over half the votes",
+    "Sam, because Lee's votes pass to him",
+    "No one, because no one has over half the votes"
+   ],
+   "why": "First-past-the-post gives the win to the candidate with the most votes, and Priya has 40. Saying no one wins yet, or that Lee's votes pass to Sam, applies preferential counting, where a majority is needed. First-past-the-post needs no majority, and 40 of 100 votes is not over half anyway.",
+   "clue": "Does this method need more than half the votes?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:57:33Z",
+  "rules": 1,
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The Australian Senate, which the card gives as the example of proportional voting, also has voters number candidates or parties in order (1, 2, 3 and so on), so a student who knows Senate ballots could think proportional voting also ranks candidates. The clue about numbering 1, 2, 3 on the ballot fits Senate ballots too. Rewording the question to ask which method ranks candidates to elect one winner, with votes passed on until someone has a majority, would remove the doubt."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The Australian Senate, which the card gives as the example of proportional voting, also has voters number candidates or parties in order (1, 2, 3 and so on), so a student who knows Senate ballots could think proportional voting also ranks candidates. The clue about numbering 1, 2, 3 on the ballot fits Senate ballots too. Rewording the question to ask which method ranks candidates to elect one winner, with votes passed on until someone has a majority, would remove the doubt."
+  ]
+ },
+ "final": {
+  "title": "Voting methods",
+  "card": [
+   [
+    "First-past-the-post",
+    "Voters mark one candidate, and the candidate with the most votes wins, even without more than half of all votes."
+   ],
+   [
+    "Preferential",
+    "Voters rank candidates in order, 1, 2, 3 and so on, to elect one winner. If no one has more than half the votes, the last-placed candidate is dropped and their votes go to each voter's next choice. This repeats until one candidate has a majority."
+   ],
+   [
+    "Proportional",
+    "Several members are elected at once, and seats are shared out by each party's share of the votes. A party with about a third of the votes wins about a third of the seats. The Australian Senate uses this approach."
+   ],
+   "The same voters' choices can lead to different results, depending on which method is used."
+  ],
+  "remember": "First-past-the-post: most votes wins. Preferential: rank and pass on votes. Proportional: seats match vote share.",
+  "a": {
+   "q": "Which method elects one winner from ranked votes, passing votes on until a candidate has a majority?",
+   "opts": [
+    "Preferential voting",
+    "First-past-the-post voting",
+    "Proportional voting",
+    "Compulsory voting"
+   ],
+   "why": "Preferential voting elects one winner, and votes from dropped candidates pass to each voter's next choice until someone has more than half. Proportional voting is tempting because Senate voters also number their choices, but it elects several members and shares seats by vote share. First-past-the-post needs no majority and uses no ranking.",
+   "clue": "Which method needs one winner with more than half the votes?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a town election, Priya gets 40 votes, Sam gets 35 and Lee gets 25. Under first-past-the-post, who wins, and why?",
+   "opts": [
+    "Priya, because she has the most votes",
+    "Priya, because she has over half the votes",
+    "Sam, because Lee's votes pass to him",
+    "No one, because no one has over half the votes"
+   ],
+   "why": "First-past-the-post gives the win to the candidate with the most votes, and Priya has 40. Saying no one wins yet, or that Lee's votes pass to Sam, applies preferential counting, where a majority is needed. First-past-the-post needs no majority, and 40 of 100 votes is not over half anyway.",
+   "clue": "Does this method need more than half the votes?"
+  }
+ }
 }

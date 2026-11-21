@@ -8,8 +8,135 @@
    0.232
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:35Z new, match"
- ]
+  "2026-11-12T12:22:35Z new, match",
+  "2026-11-20T12:15:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:50Z write: failed the content check, writing again",
+  "2026-11-20T12:44:56Z write: done",
+  "2026-11-20T12:53:25Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.01345,
+  "check": 0.01054
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point is a general Year 8 introduction to planning for growth, while this point is a Stage 5 Sydney case study about different stakeholder views and specific strategies like density near train lines and the Metro, which is a change of depth and content rather than a small adjustment.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Managing population growth in Sydney",
+  "card": [
+   "Sydney's population is growing, so the city needs more homes, jobs and services. Planners use several ways to manage this growth.",
+   [
+    "New suburbs",
+    "Large new suburbs are built on the edge of the city, especially in the west. They add many homes but need new roads, schools and services."
+   ],
+   [
+    "Higher density",
+    "More homes, such as apartments, are built near train lines in existing suburbs. Residents can then reach work and services by public transport."
+   ],
+   [
+    "Different views",
+    "New transport, such as the Sydney Metro, helps people cross the city. Residents may worry about traffic or lost local character, councils about services, and developers about cost."
+   ]
+  ],
+  "remember": "Sydney manages growth with new western suburbs, more homes near trains and new transport, and groups can disagree about it.",
+  "a": {
+   "q": "Which strategy puts more homes near existing train lines in Sydney?",
+   "opts": [
+    "Higher density housing",
+    "New suburbs on the western edge",
+    "A new Metro line",
+    "Large lots with big gardens"
+   ],
+   "why": "Building more homes, such as apartments, near train lines is higher density housing. New suburbs are built on the edge of the city, and a Metro line is transport, not housing.",
+   "clue": "Think about where the homes are built, not about the trains."
+  },
+  "b": {
+   "d": 3,
+   "q": "A developer plans apartments beside a train station in an established Sydney suburb. Some nearby residents object. What is the most likely reason?",
+   "opts": [
+    "They worry about more traffic and local character",
+    "They want the new homes built on farmland in the west",
+    "They think the station will be closed after the building",
+    "They believe the apartments will lower the city's population"
+   ],
+   "why": "Residents may worry about traffic and a change in local character when density rises. The other options do not fit: the plan is near a train station, and apartments add homes for a growing population rather than lowering it.",
+   "clue": "Residents who already live there see their street change."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Higher density housing",
+   "also_right": []
+  },
+  "b": {
+   "best": "They worry about more traffic and local character",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Managing population growth in Sydney",
+  "card": [
+   "Sydney's population is growing, so the city needs more homes, jobs and services. Planners use several ways to manage this growth.",
+   [
+    "New suburbs",
+    "Large new suburbs are built on the edge of the city, especially in the west. They add many homes but need new roads, schools and services."
+   ],
+   [
+    "Higher density",
+    "More homes, such as apartments, are built near train lines in existing suburbs. Residents can then reach work and services by public transport."
+   ],
+   [
+    "Different views",
+    "New transport, such as the Sydney Metro, helps people cross the city. Residents may worry about traffic or lost local character, councils about services, and developers about cost."
+   ]
+  ],
+  "remember": "Sydney manages growth with new western suburbs, more homes near trains and new transport, and groups can disagree about it.",
+  "a": {
+   "q": "Which strategy puts more homes near existing train lines in Sydney?",
+   "opts": [
+    "Higher density housing",
+    "New suburbs on the western edge",
+    "A new Metro line",
+    "Large lots with big gardens"
+   ],
+   "why": "Building more homes, such as apartments, near train lines is higher density housing. New suburbs are built on the edge of the city, and a Metro line is transport, not housing.",
+   "clue": "Think about where the homes are built, not about the trains."
+  },
+  "b": {
+   "d": 3,
+   "q": "A developer plans apartments beside a train station in an established Sydney suburb. Some nearby residents object. What is the most likely reason?",
+   "opts": [
+    "They worry about more traffic and local character",
+    "They want the new homes built on farmland in the west",
+    "They think the station will be closed after the building",
+    "They believe the apartments will lower the city's population"
+   ],
+   "why": "Residents may worry about traffic and a change in local character when density rises. The other options do not fit: the plan is near a train station, and apartments add homes for a growing population rather than lowering it.",
+   "clue": "Residents who already live there see their street change."
+  }
+ },
+ "cleared_by": "checker"
 }

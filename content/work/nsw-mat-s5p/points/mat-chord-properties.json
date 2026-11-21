@@ -8,8 +8,238 @@
    0.342
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:56Z write: done",
+  "2026-11-20T12:44:59Z check: flagged",
+  "2026-11-20T12:53:28Z fix: suggested",
+  "2026-11-20T13:37:08Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.00763,
+  "check": 0.01094,
+  "fix": 0.02271,
+  "recheck": 0.00821
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches instantaneous rate of change via limits of chord gradients, which is a different idea from the circle theorems about chord perpendicular bisectors, equal chords and intersecting chord products, so no bank point matches.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Chord properties",
+  "card": [
+   "A chord is a straight line joining two points on a circle. A line from the centre that is perpendicular to a chord cuts the chord into two equal parts.",
+   "Example: a circle has radius 13 cm. A chord is 5 cm from the centre. Half the chord is \\(\\sqrt{13^{2} - 5^{2}}\\), which is \\(\\sqrt{144} = 12\\) cm, so the chord is 24 cm long.",
+   "Equal chords in a circle are the same distance from the centre. Chords that are the same distance from the centre are equal.",
+   "Two chords cross inside a circle. Each is cut into two parts. The product of the two parts of one chord equals the product of the two parts of the other: \\(a \\times b = c \\times d\\)."
+  ],
+  "remember": "A perpendicular from the centre bisects a chord. Crossing chords: part times part is the same for both.",
+  "a": {
+   "q": "A line from the centre of a circle is perpendicular to a chord of length 18 cm. How long is each part of the chord?",
+   "opts": [
+    "9 cm",
+    "18 cm",
+    "6 cm",
+    "36 cm"
+   ],
+   "why": "A perpendicular from the centre bisects the chord, so each part is \\(18 \\div 2 = 9\\) cm. Giving 18 cm ignores the halving, and 36 cm doubles instead of halving.",
+   "clue": "The perpendicular from the centre cuts the chord into two equal parts."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two chords cross inside a circle. One chord is cut into parts of 4 cm and 9 cm. The other is cut into parts of 6 cm and \\(x\\) cm. What is \\(x\\)?",
+   "opts": [
+    "6 cm",
+    "2 cm",
+    "7.5 cm",
+    "13 cm"
+   ],
+   "why": "The products are equal, so \\(6x = 4 \\times 9 = 36\\), which gives \\(x = 6\\). Adding the parts of the first chord and subtracting 6 would give 7, and that is not how the products work.",
+   "clue": "Set the product of one chord's parts equal to the product of the other's."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A circle with two chords crossing inside it. One chord is cut into parts labelled a and b, the other into parts labelled c and d, with the crossing point marked.",
+    "why": "It shows which parts are multiplied in the crossing chords rule."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "9 cm",
+   "also_right": []
+  },
+  "b": {
+   "best": "6 cm",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) explains a wrong answer of 7 (4 + 9 − 6), but 7 cm is not among the options (6, 7.5, 2, 13). It does not explain the distractors actually shown."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "A chord is called 'a straight line joining two points on a circle'. A chord is an interval (a line segment) with its endpoints on the circle. A full straight line through two points of a circle is a secant, which point 5 of this chapter covers, so the wording could blur the two terms."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct: 9 cm and 6 cm. The why for (b) explains a distractor of 7 that is not an option, and the card calls a chord a 'straight line' rather than an interval, which blurs it with a secant."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) explains a wrong answer of 7 (4 + 9 − 6), but 7 cm is not among the options (6, 7.5, 2, 13). It does not explain the distractors actually shown.",
+  "Card, wording: A chord is called 'a straight line joining two points on a circle'. A chord is an interval (a line segment) with its endpoints on the circle. A full straight line through two points of a circle is a secant, which point 5 of this chapter covers, so the wording could blur the two terms."
+ ],
+ "proposal": {
+  "title": "Chord properties",
+  "card": [
+   "A chord is an interval, a straight line segment, joining two points on a circle. A line from the centre that is perpendicular to a chord cuts the chord into two equal parts.",
+   "Example: a circle has radius 13 cm. A chord is 5 cm from the centre. Half the chord is \\(\\sqrt{13^{2} - 5^{2}}\\), which is \\(\\sqrt{144} = 12\\) cm, so the chord is 24 cm long.",
+   "Equal chords in a circle are the same distance from the centre. Chords that are the same distance from the centre are equal.",
+   "Two chords cross inside a circle. Each is cut into two parts. The product of the two parts of one chord equals the product of the two parts of the other: \\(a \\times b = c \\times d\\)."
+  ],
+  "remember": "A perpendicular from the centre bisects a chord. Crossing chords: part times part is the same for both.",
+  "a": {
+   "q": "A line from the centre of a circle is perpendicular to a chord of length 18 cm. How long is each part of the chord?",
+   "opts": [
+    "9 cm",
+    "18 cm",
+    "6 cm",
+    "36 cm"
+   ],
+   "why": "A perpendicular from the centre bisects the chord, so each part is \\(18 \\div 2 = 9\\) cm. Giving 18 cm ignores the halving, and 36 cm doubles instead of halving.",
+   "clue": "The perpendicular from the centre cuts the chord into two equal parts."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two chords cross inside a circle. One chord is cut into parts of 4 cm and 9 cm. The other is cut into parts of 6 cm and \\(x\\) cm. What is \\(x\\)?",
+   "opts": [
+    "6 cm",
+    "7 cm",
+    "13.5 cm",
+    "\\(\\frac{8}{3}\\) cm"
+   ],
+   "why": "The parts of each chord are multiplied, so \\(6x = 4 \\times 9 = 36\\), which gives \\(x = 6\\). Adding the parts instead, \\(4 + 9 = 6 + x\\), gives 7 cm. Multiplying parts from different chords, such as \\(4x = 9 \\times 6\\), gives 13.5 cm.",
+   "clue": "Multiply the two parts of the same chord, then set the products equal."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A circle with two chords crossing inside it. One chord is cut into parts labelled a and b, the other into parts labelled c and d, with the crossing point marked.",
+    "why": "It shows which parts are multiplied in the crossing chords rule."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:08Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "9 cm",
+    "also_right": []
+   },
+   "b": {
+    "best": "6 cm",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card's facts, the worked example (half chord 12 cm, chord 24 cm) and both intended answers (9 cm and x = 6 cm) are correct."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:08Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) explains a wrong answer of 7 (4 + 9 − 6), but 7 cm is not among the options (6, 7.5, 2, 13). It does not explain the distractors actually shown."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "A chord is called 'a straight line joining two points on a circle'. A chord is an interval (a line segment) with its endpoints on the circle. A full straight line through two points of a circle is a secant, which point 5 of this chapter covers, so the wording could blur the two terms."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) explains a wrong answer of 7 (4 + 9 − 6), but 7 cm is not among the options (6, 7.5, 2, 13). It does not explain the distractors actually shown.",
+   "Card, wording: A chord is called 'a straight line joining two points on a circle'. A chord is an interval (a line segment) with its endpoints on the circle. A full straight line through two points of a circle is a secant, which point 5 of this chapter covers, so the wording could blur the two terms."
+  ]
+ },
+ "final": {
+  "title": "Chord properties",
+  "card": [
+   "A chord is an interval, a straight line segment, joining two points on a circle. A line from the centre that is perpendicular to a chord cuts the chord into two equal parts.",
+   "Example: a circle has radius 13 cm. A chord is 5 cm from the centre. Half the chord is \\(\\sqrt{13^{2} - 5^{2}}\\), which is \\(\\sqrt{144} = 12\\) cm, so the chord is 24 cm long.",
+   "Equal chords in a circle are the same distance from the centre. Chords that are the same distance from the centre are equal.",
+   "Two chords cross inside a circle. Each is cut into two parts. The product of the two parts of one chord equals the product of the two parts of the other: \\(a \\times b = c \\times d\\)."
+  ],
+  "remember": "A perpendicular from the centre bisects a chord. Crossing chords: part times part is the same for both.",
+  "a": {
+   "q": "A line from the centre of a circle is perpendicular to a chord of length 18 cm. How long is each part of the chord?",
+   "opts": [
+    "9 cm",
+    "18 cm",
+    "6 cm",
+    "36 cm"
+   ],
+   "why": "A perpendicular from the centre bisects the chord, so each part is \\(18 \\div 2 = 9\\) cm. Giving 18 cm ignores the halving, and 36 cm doubles instead of halving.",
+   "clue": "The perpendicular from the centre cuts the chord into two equal parts."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two chords cross inside a circle. One chord is cut into parts of 4 cm and 9 cm. The other is cut into parts of 6 cm and \\(x\\) cm. What is \\(x\\)?",
+   "opts": [
+    "6 cm",
+    "7 cm",
+    "13.5 cm",
+    "\\(\\frac{8}{3}\\) cm"
+   ],
+   "why": "The parts of each chord are multiplied, so \\(6x = 4 \\times 9 = 36\\), which gives \\(x = 6\\). Adding the parts instead, \\(4 + 9 = 6 + x\\), gives 7 cm. Multiplying parts from different chords, such as \\(4x = 9 \\times 6\\), gives 13.5 cm.",
+   "clue": "Multiply the two parts of the same chord, then set the products equal."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A circle with two chords crossing inside it. One chord is cut into parts labelled a and b, the other into parts labelled c and d, with the crossing point marked.",
+    "why": "It shows which parts are multiplied in the crossing chords rule."
+   }
+  ]
+ },
+ "cleared_by": "recheck"
 }

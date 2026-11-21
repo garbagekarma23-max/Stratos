@@ -12,8 +12,352 @@
    0.207
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:57Z write: done",
+  "2026-11-20T12:35:55Z check: flagged",
+  "2026-11-20T12:44:59Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-20T13:37:52Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-20T13:44:57Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-20T13:49:28Z claude-code check: answered by a separate subagent",
+  "2026-11-20T13:49:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.01215,
+  "check": 0.01117,
+  "fix": 0.02418,
+  "recheck": 0.01109
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers sample size, sample fairness and overreaching conclusions, but it never teaches checking who paid for the study, which the new point requires, so adding that would be a new step rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The right option is the only one with qualifiers ('in the survey', 'on average'), and it simply restates the data. A student could pick it by spotting the hedged wording rather than by understanding that a link does not prove a cause.",
+ "rejected": {
+  "title": "Judging statistics in the media",
+  "card": [
+   "A news report may quote a study. Before you trust it, ask who was asked and how they were chosen.",
+   "Ask how many people were in the study. A very small sample gives a less reliable result than a large one.",
+   "Ask who paid for the study. A group that gains from a result may have a reason to present it in its favour.",
+   "Ask whether the claim goes further than the data. A link between two things does not prove one causes the other, and a result about one group may not hold for everyone."
+  ],
+  "remember": "Check who was asked, how many, who paid, and whether the claim fits the data.",
+  "a": {
+   "q": "A headline says 'Most Australians love our juice'. It is based on 12 customers at one shop. Which check does this fail most clearly?",
+   "opts": [
+    "The sample is small and from one place",
+    "The study was paid for by a government",
+    "The sample was chosen at random",
+    "The data was collected over a week"
+   ],
+   "why": "Twelve customers at one shop is a very small group and cannot stand for most Australians. The claim goes further than the data. Random choice would be a strength, not a problem.",
+   "clue": "Count the people, then think about where they came from."
+  },
+  "b": {
+   "d": 3,
+   "q": "A company that makes Stride shoes pays for a survey of 2000 adults. People in it who wear Stride shoes run faster on average. Which conclusion does this data support?",
+   "opts": [
+    "Stride wearers in the survey ran faster on average",
+    "Wearing Stride shoes makes people run faster",
+    "Anyone who buys Stride shoes will run faster",
+    "Fast runners are more likely to choose Stride shoes"
+   ],
+   "why": "The survey shows only a link among the people asked. Other things, such as fitness, could explain it, so the data cannot prove the shoes make anyone faster. The tempting option says the shoes cause faster running, which claims more than the data shows.",
+   "clue": "Does a link between two things prove one causes the other?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-20T13:37:52Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The right option is the only one with qualifiers ('in the survey', 'on average'), and it simply restates the data. A student could pick it by spotting the hedged wording rather than by understanding that a link does not prove a cause."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Judging statistics in the media",
+     "card": [
+      "A news report may quote a study. Before you trust it, ask who was asked and how they were chosen.",
+      "Ask how many people were in the study. A very small sample gives a less reliable result than a large one.",
+      "Ask who paid for the study. A group that gains from a result may have a reason to present it in its favour.",
+      "Ask whether the claim goes further than the data. A study of one group cannot prove something about everyone, and it may not show a cause."
+     ],
+     "remember": "Check who was asked, how many, who paid, and whether the claim fits the data.",
+     "a": {
+      "q": "A headline says 'Most Australians love our juice'. It is based on 12 customers at one shop. Which check does this fail most clearly?",
+      "opts": [
+       "The sample is small and from one place",
+       "The study was paid for by a government",
+       "The sample was chosen at random",
+       "The data was collected over a week"
+      ],
+      "why": "Twelve customers at one shop is a very small group and cannot stand for most Australians. The claim goes further than the data. Random choice would be a strength, not a problem.",
+      "clue": "Count the people, then think about where they came from."
+     },
+     "b": {
+      "d": 3,
+      "q": "A shoe company pays for a survey of 2000 randomly chosen adults. It reports that people who wear its shoes run faster, so its shoes make you faster. What is the best criticism?",
+      "opts": [
+       "The data may not show the shoes cause faster running",
+       "The sample of 2000 adults is far too small",
+       "The adults were not chosen at random",
+       "The survey was too large to give any result"
+      ],
+      "why": "The data may show only a link. Other things, such as fitness, could explain faster running, so the claim goes further than the data. The sample is fairly large and random, so those are not the main problem.",
+      "clue": "Does a link between two things prove one causes the other?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "The sample is small and from one place",
+      "also_right": []
+     },
+     "b": {
+      "best": "The data may not show the shoes cause faster running",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is the only one with a hedge ('may not show'). Two distractors contradict the stem outright: it says the adults were randomly chosen, and calling 2000 'far too small' or 'too large' is clearly wrong. A student can rule these out without understanding cause versus link."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Card and answers are correct. Question b's right option stands out as the only hedged one, and its distractors contradict the stem, so it is easy to answer by elimination."
+    },
+    "flags": [
+     "Question b, wording: The right option is the only one with a hedge ('may not show'). Two distractors contradict the stem outright: it says the adults were randomly chosen, and calling 2000 'far too small' or 'too large' is clearly wrong. A student can rule these out without understanding cause versus link."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Judging statistics in the media",
+     "card": [
+      "A news report may quote a study. Before you trust it, ask who was asked and how they were chosen.",
+      "Ask how many people were in the study. A very small sample gives a less reliable result than a large one.",
+      "Ask who paid for the study. A group that gains from a result may have a reason to present it in its favour.",
+      "Ask whether the claim goes further than the data. A link between two things does not prove one causes the other, and a result about one group may not hold for everyone."
+     ],
+     "remember": "Check who was asked, how many, who paid, and whether the claim fits the data.",
+     "a": {
+      "q": "A headline says 'Most Australians love our juice'. It is based on 12 customers at one shop. Which check does this fail most clearly?",
+      "opts": [
+       "The sample is small and from one place",
+       "The study was paid for by a government",
+       "The sample was chosen at random",
+       "The data was collected over a week"
+      ],
+      "why": "Twelve customers at one shop is a very small group and cannot stand for most Australians. The claim goes further than the data. Random choice would be a strength, not a problem.",
+      "clue": "Count the people, then think about where they came from."
+     },
+     "b": {
+      "d": 3,
+      "q": "A company that makes Stride shoes pays for a survey of 2000 adults. People in it who wear Stride shoes run faster on average. Which conclusion does this data support?",
+      "opts": [
+       "Stride wearers in the survey ran faster on average",
+       "Wearing Stride shoes makes people run faster",
+       "Anyone who buys Stride shoes will run faster",
+       "Fast runners are more likely to choose Stride shoes"
+      ],
+      "why": "The survey shows only a link among the people asked. Other things, such as fitness, could explain it, so the data cannot prove the shoes make anyone faster. The tempting option says the shoes cause faster running, which claims more than the data shows.",
+      "clue": "Does a link between two things prove one causes the other?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-20T13:37:07Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "The sample is small and from one place",
+       "also_right": []
+      },
+      "b": {
+       "best": "Stride wearers in the survey ran faster on average",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The right option is the only one with qualifiers ('in the survey', 'on average'), and it simply restates the data. A student could pick it by spotting the hedged wording rather than by understanding that a link does not prove a cause."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card, the remember line and question a are sound. In question b, the right option stands out as the only hedged one ('in the survey', 'on average'), so a student could guess it without knowing the idea."
+     },
+     "flags": [
+      "Question b, wording: The right option is the only one with qualifiers ('in the survey', 'on average'), and it simply restates the data. A student could pick it by spotting the hedged wording rather than by understanding that a link does not prove a cause."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-20T13:44:57Z",
+   "step": "write",
+   "version": {
+    "title": "Judging statistics in the media",
+    "card": [
+     "A news report may quote a study. Before you trust it, ask who was asked and how they were chosen.",
+     "Ask how many people were in the study. A very small sample gives a less reliable result than a large one.",
+     "Ask who paid for the study. A group that gains from a result may have a reason to present it in its favour.",
+     "Ask whether the claim goes further than the data. A link between two things does not prove one causes the other, and a result about one group may not hold for everyone."
+    ],
+    "remember": "Check who was asked, how many, who paid, and whether the claim fits the data.",
+    "a": {
+     "q": "A headline says 'Most Australians love our juice'. It is based on 12 customers at one shop. Which check does this fail most clearly?",
+     "opts": [
+      "The sample is small and from one place",
+      "The study was paid for by a government",
+      "The sample was chosen at random",
+      "The data was collected over a week"
+     ],
+     "why": "Twelve customers at one shop is a very small group and cannot stand for most Australians. The claim goes further than the data. Random choice would be a strength, not a problem.",
+     "clue": "Count the people, then think about where they came from."
+    },
+    "b": {
+     "d": 3,
+     "q": "A company that makes Stride shoes pays for a survey of 2000 adults. People in it who wear Stride shoes run faster on average. Which conclusion does this data support?",
+     "opts": [
+      "Stride wearers in the survey ran faster on average",
+      "In the survey, Stride shoes made people run faster",
+      "On average, any adult who buys Stride shoes runs faster",
+      "In the survey, fast runners chose Stride shoes for speed"
+     ],
+     "why": "The survey shows only a link among the people asked, and other things, such as fitness, could explain it. The tempting option says the shoes made people run faster, which claims a cause the data cannot show. The other two also claim more than the data: a result for every adult, or why runners chose the shoes.",
+     "clue": "Does a link between two things prove one causes the other?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-20T13:49:28Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "The sample is small and from one place",
+     "also_right": []
+    },
+    "b": {
+     "best": "Stride wearers in the survey ran faster on average",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Judging statistics in the media",
+  "card": [
+   "A news report may quote a study. Before you trust it, ask who was asked and how they were chosen.",
+   "Ask how many people were in the study. A very small sample gives a less reliable result than a large one.",
+   "Ask who paid for the study. A group that gains from a result may have a reason to present it in its favour.",
+   "Ask whether the claim goes further than the data. A link between two things does not prove one causes the other, and a result about one group may not hold for everyone."
+  ],
+  "remember": "Check who was asked, how many, who paid, and whether the claim fits the data.",
+  "a": {
+   "q": "A headline says 'Most Australians love our juice'. It is based on 12 customers at one shop. Which check does this fail most clearly?",
+   "opts": [
+    "The sample is small and from one place",
+    "The study was paid for by a government",
+    "The sample was chosen at random",
+    "The data was collected over a week"
+   ],
+   "why": "Twelve customers at one shop is a very small group and cannot stand for most Australians. The claim goes further than the data. Random choice would be a strength, not a problem.",
+   "clue": "Count the people, then think about where they came from."
+  },
+  "b": {
+   "d": 3,
+   "q": "A company that makes Stride shoes pays for a survey of 2000 adults. People in it who wear Stride shoes run faster on average. Which conclusion does this data support?",
+   "opts": [
+    "Stride wearers in the survey ran faster on average",
+    "In the survey, Stride shoes made people run faster",
+    "On average, any adult who buys Stride shoes runs faster",
+    "In the survey, fast runners chose Stride shoes for speed"
+   ],
+   "why": "The survey shows only a link among the people asked, and other things, such as fitness, could explain it. The tempting option says the shoes made people run faster, which claims a cause the data cannot show. The other two also claim more than the data: a result for every adult, or why runners chose the shoes.",
+   "clue": "Does a link between two things prove one causes the other?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The sample is small and from one place",
+   "also_right": []
+  },
+  "b": {
+   "best": "Stride wearers in the survey ran faster on average",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Judging statistics in the media",
+  "card": [
+   "A news report may quote a study. Before you trust it, ask who was asked and how they were chosen.",
+   "Ask how many people were in the study. A very small sample gives a less reliable result than a large one.",
+   "Ask who paid for the study. A group that gains from a result may have a reason to present it in its favour.",
+   "Ask whether the claim goes further than the data. A link between two things does not prove one causes the other, and a result about one group may not hold for everyone."
+  ],
+  "remember": "Check who was asked, how many, who paid, and whether the claim fits the data.",
+  "a": {
+   "q": "A headline says 'Most Australians love our juice'. It is based on 12 customers at one shop. Which check does this fail most clearly?",
+   "opts": [
+    "The sample is small and from one place",
+    "The study was paid for by a government",
+    "The sample was chosen at random",
+    "The data was collected over a week"
+   ],
+   "why": "Twelve customers at one shop is a very small group and cannot stand for most Australians. The claim goes further than the data. Random choice would be a strength, not a problem.",
+   "clue": "Count the people, then think about where they came from."
+  },
+  "b": {
+   "d": 3,
+   "q": "A company that makes Stride shoes pays for a survey of 2000 adults. People in it who wear Stride shoes run faster on average. Which conclusion does this data support?",
+   "opts": [
+    "Stride wearers in the survey ran faster on average",
+    "In the survey, Stride shoes made people run faster",
+    "On average, any adult who buys Stride shoes runs faster",
+    "In the survey, fast runners chose Stride shoes for speed"
+   ],
+   "why": "The survey shows only a link among the people asked, and other things, such as fitness, could explain it. The tempting option says the shoes made people run faster, which claims a cause the data cannot show. The other two also claim more than the data: a result for every adult, or why runners chose the shoes.",
+   "clue": "Does a link between two things prove one causes the other?"
+  }
+ },
+ "checked_by": "claude-code"
 }

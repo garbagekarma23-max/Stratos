@@ -12,8 +12,251 @@
    0.499
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:42Z new, match"
- ]
+  "2026-11-12T12:22:42Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: flagged",
+  "2026-11-20T12:53:29Z fix: suggested",
+  "2026-11-20T13:23:45Z autoreview: cleared with the fix (b wording, a wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00733,
+  "check": 0.01273,
+  "fix": 0.02167
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point teaches the circulatory and respiratory systems together as one idea, and neither bank point covers both: each teaches only one system, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Circulatory and respiratory systems",
+  "card": [
+   [
+    "Lungs",
+    "The lungs take in oxygen from the air we breathe in. They also remove carbon dioxide, which leaves the body when we breathe out."
+   ],
+   [
+    "Heart",
+    "The heart is a muscle that pumps blood around the body. The blood moves through tubes called blood vessels."
+   ],
+   [
+    "Blood",
+    "Blood picks up oxygen in the lungs and carries it to every cell. It also carries nutrients from digestion to every cell."
+   ],
+   [
+    "Cells",
+    "Cells use oxygen and nutrients to get energy, and they make carbon dioxide. Blood carries the carbon dioxide back to the lungs to be breathed out."
+   ]
+  ],
+  "remember": "The lungs swap gases with the blood, and the heart pumps the blood to and from every cell.",
+  "a": {
+   "q": "Which job does the heart do in the body?",
+   "opts": [
+    "Pumps blood through the blood vessels",
+    "Takes oxygen in from the air we breathe",
+    "Removes carbon dioxide from the body",
+    "Breaks food down into small nutrients"
+   ],
+   "why": "The heart is a muscle that pumps blood through the blood vessels. Taking in oxygen and removing carbon dioxide is the job of the lungs, so that option is tempting but wrong.",
+   "clue": "Think about which organ is a muscle that moves blood."
+  },
+  "b": {
+   "d": 2,
+   "q": "Kai runs hard and his muscle cells use more oxygen. How does the oxygen reach his muscle cells?",
+   "opts": [
+    "The blood carries it from the lungs to the cells",
+    "The lungs pass it straight into the muscle cells",
+    "The heart makes it and sends it to the cells",
+    "The blood vessels make it as the blood moves"
+   ],
+   "why": "Oxygen enters the blood in the lungs, and the heart pumps that blood through blood vessels to every cell. The lungs do not pass oxygen straight to muscles, because blood is the carrier.",
+   "clue": "Something has to carry the oxygen from the lungs to the cells."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A simple diagram of the circulatory and respiratory systems showing the lungs, the heart and blood vessels. Arrows show oxygen entering the blood at the lungs, blood pumped by the heart to the body cells, and carbon dioxide carried back to the lungs. Labels: lungs, heart, blood vessels, oxygen, carbon dioxide, body cells.",
+    "why": "It shows how blood links the lungs, heart and cells in one loop."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Pumps blood through the blood vessels",
+   "also_right": []
+  },
+  "b": {
+   "best": "The blood carries it from the lungs to the cells",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue 'Something has to carry the oxygen from the lungs to the cells' repeats the wording of the right option ('carries it from the lungs to the cells'). A student can match the words without knowing the idea."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The clue asks 'which organ is a muscle that moves blood', but the question already names the heart. It is also the only clue word ('blood') that matches just one option. The why also says 'that option' when it covers two separate options (taking in oxygen, removing carbon dioxide)."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts are correct and both answers are clear. The clue for question b repeats the right option's wording and gives the answer away. Question a's clue is oddly worded, and its why calls two options 'that option'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The clue 'Something has to carry the oxygen from the lungs to the cells' repeats the wording of the right option ('carries it from the lungs to the cells'). A student can match the words without knowing the idea.",
+  "Question a, wording: The clue asks 'which organ is a muscle that moves blood', but the question already names the heart. It is also the only clue word ('blood') that matches just one option. The why also says 'that option' when it covers two separate options (taking in oxygen, removing carbon dioxide)."
+ ],
+ "proposal": {
+  "title": "Circulatory and respiratory systems",
+  "card": [
+   [
+    "Lungs",
+    "The lungs take in oxygen from the air we breathe in. They also remove carbon dioxide, which leaves the body when we breathe out."
+   ],
+   [
+    "Heart",
+    "The heart is a muscle that pumps blood around the body. The blood moves through tubes called blood vessels."
+   ],
+   [
+    "Blood",
+    "Blood picks up oxygen in the lungs and carries it to every cell. It also carries nutrients from digestion to every cell."
+   ],
+   [
+    "Cells",
+    "Cells use oxygen and nutrients to get energy, and they make carbon dioxide. Blood carries the carbon dioxide back to the lungs to be breathed out."
+   ]
+  ],
+  "remember": "The lungs swap gases with the blood, and the heart pumps the blood to and from every cell.",
+  "a": {
+   "q": "Which job does the heart do in the body?",
+   "opts": [
+    "Pumps blood through the blood vessels",
+    "Takes oxygen in from the air we breathe",
+    "Removes carbon dioxide from the body",
+    "Breaks food down into small nutrients"
+   ],
+   "why": "The heart is a muscle that pumps blood through the blood vessels. Taking in oxygen and removing carbon dioxide are both jobs of the lungs, so those two options are tempting but wrong. Breaking food down is done by the digestive system.",
+   "clue": "Think about what a muscle is able to do."
+  },
+  "b": {
+   "d": 2,
+   "q": "Kai runs hard and his muscle cells use more oxygen. How does the oxygen reach his muscle cells?",
+   "opts": [
+    "The blood carries it from the lungs to the cells",
+    "The lungs pass it straight into the muscle cells",
+    "The heart makes it and sends it to the cells",
+    "The blood vessels make it as the blood moves"
+   ],
+   "why": "Oxygen enters the blood in the lungs, and the heart pumps that blood through blood vessels to every cell. The lungs do not pass oxygen straight to muscles, because blood is the carrier. The heart and blood vessels do not make oxygen.",
+   "clue": "Oxygen is not made inside the body. What moves around to every part of it?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A simple diagram of the circulatory and respiratory systems showing the lungs, the heart and blood vessels. Arrows show oxygen entering the blood at the lungs, blood pumped by the heart to the body cells, and carbon dioxide carried back to the lungs. Labels: lungs, heart, blood vessels, oxygen, carbon dioxide, body cells.",
+    "why": "It shows how blood links the lungs, heart and cells in one loop."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:45Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue 'Something has to carry the oxygen from the lungs to the cells' repeats the wording of the right option ('carries it from the lungs to the cells'). A student can match the words without knowing the idea."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The clue asks 'which organ is a muscle that moves blood', but the question already names the heart. It is also the only clue word ('blood') that matches just one option. The why also says 'that option' when it covers two separate options (taking in oxygen, removing carbon dioxide)."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The clue 'Something has to carry the oxygen from the lungs to the cells' repeats the wording of the right option ('carries it from the lungs to the cells'). A student can match the words without knowing the idea.",
+   "Question a, wording: The clue asks 'which organ is a muscle that moves blood', but the question already names the heart. It is also the only clue word ('blood') that matches just one option. The why also says 'that option' when it covers two separate options (taking in oxygen, removing carbon dioxide)."
+  ]
+ },
+ "final": {
+  "title": "Circulatory and respiratory systems",
+  "card": [
+   [
+    "Lungs",
+    "The lungs take in oxygen from the air we breathe in. They also remove carbon dioxide, which leaves the body when we breathe out."
+   ],
+   [
+    "Heart",
+    "The heart is a muscle that pumps blood around the body. The blood moves through tubes called blood vessels."
+   ],
+   [
+    "Blood",
+    "Blood picks up oxygen in the lungs and carries it to every cell. It also carries nutrients from digestion to every cell."
+   ],
+   [
+    "Cells",
+    "Cells use oxygen and nutrients to get energy, and they make carbon dioxide. Blood carries the carbon dioxide back to the lungs to be breathed out."
+   ]
+  ],
+  "remember": "The lungs swap gases with the blood, and the heart pumps the blood to and from every cell.",
+  "a": {
+   "q": "Which job does the heart do in the body?",
+   "opts": [
+    "Pumps blood through the blood vessels",
+    "Takes oxygen in from the air we breathe",
+    "Removes carbon dioxide from the body",
+    "Breaks food down into small nutrients"
+   ],
+   "why": "The heart is a muscle that pumps blood through the blood vessels. Taking in oxygen and removing carbon dioxide are both jobs of the lungs, so those two options are tempting but wrong. Breaking food down is done by the digestive system.",
+   "clue": "Think about what a muscle is able to do."
+  },
+  "b": {
+   "d": 2,
+   "q": "Kai runs hard and his muscle cells use more oxygen. How does the oxygen reach his muscle cells?",
+   "opts": [
+    "The blood carries it from the lungs to the cells",
+    "The lungs pass it straight into the muscle cells",
+    "The heart makes it and sends it to the cells",
+    "The blood vessels make it as the blood moves"
+   ],
+   "why": "Oxygen enters the blood in the lungs, and the heart pumps that blood through blood vessels to every cell. The lungs do not pass oxygen straight to muscles, because blood is the carrier. The heart and blood vessels do not make oxygen.",
+   "clue": "Oxygen is not made inside the body. What moves around to every part of it?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A simple diagram of the circulatory and respiratory systems showing the lungs, the heart and blood vessels. Arrows show oxygen entering the blood at the lungs, blood pumped by the heart to the body cells, and carbon dioxide carried back to the lungs. Labels: lungs, heart, blood vessels, oxygen, carbon dioxide, body cells.",
+    "why": "It shows how blood links the lungs, heart and cells in one loop."
+   }
+  ]
+ },
+ "cleared_by": "auto"
 }

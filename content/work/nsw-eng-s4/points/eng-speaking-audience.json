@@ -12,8 +12,229 @@
    0.24
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:32Z new, match"
- ]
+  "2026-11-12T12:22:32Z new, match",
+  "2026-11-20T12:15:13Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:41Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:46Z write: done",
+  "2026-11-20T12:44:53Z check: flagged",
+  "2026-11-20T12:53:24Z fix: suggested",
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00653,
+  "check": 0.00824,
+  "fix": 0.01714,
+  "recheck": 0.00741
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers only voice (volume, tone, pitch, pace), while the new point also needs emphasis, pauses as a distinct idea, gesture and eye contact, so it is broader and no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Speaking to an audience",
+  "card": [
+   [
+    "Voice",
+    "A speaker can change volume (how loud), pace (how fast), tone (the mood in the voice) and emphasis (stressing certain words). Each change shapes how the audience feels about the words."
+   ],
+   [
+    "Pause",
+    "A pause is a short silence. It can build suspense before an important point, or give listeners a moment to think about what they just heard."
+   ],
+   [
+    "Body",
+    "Gesture is the use of hands and body to support the words. Eye contact is looking at people in the audience. Eye contact helps a speaker connect with listeners and seem sincere."
+   ],
+   "A speaker chooses these techniques to suit the purpose. A slow, quiet voice can calm an audience, while a fast, loud voice can show excitement or urgency."
+  ],
+  "remember": "A speaker's voice and body are choices that shape how the audience receives the message.",
+  "a": {
+   "q": "Ravi is giving a speech. He stops speaking for two seconds just before his main point. What is the most likely effect of this pause?",
+   "opts": [
+    "It builds attention before the main point",
+    "It shows he has forgotten his speech",
+    "It makes the audience feel calmer and relaxed",
+    "It connects him to listeners through eye contact"
+   ],
+   "why": "A pause creates a short silence that makes listeners wait and focus on what comes next. Eye contact is a different technique, so the last option names the wrong one.",
+   "clue": "Think about what listeners do during a silence before a big point."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia is speaking at assembly about a lost class pet. She wants the school to feel gentle sympathy. Which choice would best suit her purpose?",
+   "opts": [
+    "A soft, slow voice with a sad tone",
+    "A fast, loud voice with an excited tone",
+    "A flat voice with no pauses or emphasis",
+    "A loud voice with sharp, jabbing gestures"
+   ],
+   "why": "A soft, slow voice and a sad tone match the mood of sympathy. A fast, loud, excited voice suits urgency or excitement, which would not match a gentle message.",
+   "clue": "Match the voice to the feeling Mia wants the audience to have."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It builds attention before the main point",
+   "also_right": []
+  },
+  "b": {
+   "best": "A soft, slow voice with a sad tone",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 'the last option names the wrong one' for eye contact, but options appear in random order and the eye-contact option is not last here, so the explanation points students to the wrong option."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Card and questions are accurate and at level. Why (a) refers to 'the last option' for the eye-contact distractor, which will be wrong when options are shuffled; it should name the option by its content."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) says 'the last option names the wrong one' for eye contact, but options appear in random order and the eye-contact option is not last here, so the explanation points students to the wrong option."
+ ],
+ "proposal": {
+  "title": "Speaking to an audience",
+  "card": [
+   [
+    "Voice",
+    "A speaker can change volume (how loud), pace (how fast), tone (the mood in the voice) and emphasis (stressing certain words). Each change shapes how the audience feels about the words."
+   ],
+   [
+    "Pause",
+    "A pause is a short silence. It can build suspense before an important point, or give listeners a moment to think about what they just heard."
+   ],
+   [
+    "Body",
+    "Gesture is the use of hands and body to support the words. Eye contact is looking at people in the audience. Eye contact helps a speaker connect with listeners and seem sincere."
+   ],
+   "A speaker chooses these techniques to suit the purpose. A slow, quiet voice can calm an audience, while a fast, loud voice can show excitement or urgency."
+  ],
+  "remember": "A speaker's voice and body are choices that shape how the audience receives the message.",
+  "a": {
+   "q": "Ravi is giving a speech. He stops speaking for two seconds just before his main point. What is the most likely effect of this pause?",
+   "opts": [
+    "It builds attention before the main point",
+    "It shows he has forgotten his speech",
+    "It makes the audience feel calm and relaxed",
+    "It connects him to listeners through eye contact"
+   ],
+   "why": "A pause before an important point makes listeners wait, which builds suspense and focuses them on what comes next. Calming an audience comes from a slow, quiet voice, not a pause before a point. Connecting through eye contact is a separate technique, not a pause.",
+   "clue": "Think about what listeners do during a silence before a big point."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia is speaking at assembly about a lost class pet. She wants the school to feel gentle sympathy. Which choice would best suit her purpose?",
+   "opts": [
+    "A soft, slow voice with a sad tone",
+    "A fast, loud voice with an excited tone",
+    "A flat voice with no pauses or emphasis",
+    "A loud voice with sharp, jabbing gestures"
+   ],
+   "why": "A soft, slow voice and a sad tone match the mood of sympathy. A fast, loud, excited voice suits urgency or excitement, which would not match a gentle message.",
+   "clue": "Match the voice to the feeling Mia wants the audience to have."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It builds attention before the main point",
+    "also_right": []
+   },
+   "b": {
+    "best": "A soft, slow voice with a sad tone",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 'the last option names the wrong one' for eye contact, but options appear in random order and the eye-contact option is not last here, so the explanation points students to the wrong option."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) says 'the last option names the wrong one' for eye contact, but options appear in random order and the eye-contact option is not last here, so the explanation points students to the wrong option."
+  ]
+ },
+ "final": {
+  "title": "Speaking to an audience",
+  "card": [
+   [
+    "Voice",
+    "A speaker can change volume (how loud), pace (how fast), tone (the mood in the voice) and emphasis (stressing certain words). Each change shapes how the audience feels about the words."
+   ],
+   [
+    "Pause",
+    "A pause is a short silence. It can build suspense before an important point, or give listeners a moment to think about what they just heard."
+   ],
+   [
+    "Body",
+    "Gesture is the use of hands and body to support the words. Eye contact is looking at people in the audience. Eye contact helps a speaker connect with listeners and seem sincere."
+   ],
+   "A speaker chooses these techniques to suit the purpose. A slow, quiet voice can calm an audience, while a fast, loud voice can show excitement or urgency."
+  ],
+  "remember": "A speaker's voice and body are choices that shape how the audience receives the message.",
+  "a": {
+   "q": "Ravi is giving a speech. He stops speaking for two seconds just before his main point. What is the most likely effect of this pause?",
+   "opts": [
+    "It builds attention before the main point",
+    "It shows he has forgotten his speech",
+    "It makes the audience feel calm and relaxed",
+    "It connects him to listeners through eye contact"
+   ],
+   "why": "A pause before an important point makes listeners wait, which builds suspense and focuses them on what comes next. Calming an audience comes from a slow, quiet voice, not a pause before a point. Connecting through eye contact is a separate technique, not a pause.",
+   "clue": "Think about what listeners do during a silence before a big point."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia is speaking at assembly about a lost class pet. She wants the school to feel gentle sympathy. Which choice would best suit her purpose?",
+   "opts": [
+    "A soft, slow voice with a sad tone",
+    "A fast, loud voice with an excited tone",
+    "A flat voice with no pauses or emphasis",
+    "A loud voice with sharp, jabbing gestures"
+   ],
+   "why": "A soft, slow voice and a sad tone match the mood of sympathy. A fast, loud, excited voice suits urgency or excitement, which would not match a gentle message.",
+   "clue": "Match the voice to the feeling Mia wants the audience to have."
+  }
+ },
+ "cleared_by": "recheck"
 }

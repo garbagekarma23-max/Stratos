@@ -24,8 +24,206 @@
    0.232
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:34Z new, match"
- ]
+  "2026-11-12T12:22:34Z new, match",
+  "2026-11-20T12:15:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:45Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:49Z write: done",
+  "2026-11-20T12:44:54Z check: flagged",
+  "2026-11-20T12:53:25Z fix: suggested",
+  "2026-11-20T13:23:38Z autoreview: cleared with the fix (a wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.00609,
+  "check": 0.00897,
+  "fix": 0.01715
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, geo-physical-economic-water-scarcity, only explains physical versus economic scarcity, while the new point lists causes such as low rainfall, drought, overuse, pollution and unaffordable or unreachable water, so it is related but not the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Causes of water scarcity",
+  "card": [
+   "Water scarcity means there is not enough clean water for people's needs. It can happen even where some water exists, if that water cannot be used.",
+   [
+    "Natural causes",
+    "low or unreliable rainfall, and drought, which is a long period of much less rain than usual."
+   ],
+   [
+    "Human causes",
+    "overuse, when people take water faster than it is replaced, and pollution, which makes water unsafe to use."
+   ],
+   [
+    "Access",
+    "people may be unable to afford clean water, or live too far from a safe source, such as a village with no pipes or wells."
+   ]
+  ],
+  "remember": "Scarcity can come from too little rain, too much use, dirty water, or no way to afford or reach clean water.",
+  "a": {
+   "q": "A town sits beside a large river, but the river is badly polluted by waste and is unsafe to drink. Which cause of water scarcity does this show?",
+   "opts": [
+    "Pollution making water unsafe to use",
+    "Drought causing a long period of low rain",
+    "Overuse taking water faster than it refills",
+    "Families living too far from any water"
+   ],
+   "why": "The river holds plenty of water, but pollution makes it unsafe, so people still lack clean water. Drought would mean less rain, and nothing here says rain has fallen short.",
+   "clue": "Is the problem the amount of water or its quality?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A village in Kenya has a safe, clean borehole, but it is a three-hour walk away. Many families cannot make that trip every day. Why do these families face water scarcity?",
+   "opts": [
+    "They cannot reach clean water",
+    "They are in a drought",
+    "They have overused the borehole",
+    "They have polluted their water"
+   ],
+   "why": "The water is clean and available, but the families cannot reach it easily, so they are short of usable water. Drought, overuse and pollution are not part of this case, so they do not explain the problem.",
+   "clue": "The water exists and is clean. What stops people using it?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Pollution making water unsafe to use",
+   "also_right": []
+  },
+  "b": {
+   "best": "They cannot reach clean water",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem says the river is 'badly polluted' and 'unsafe to drink', and the right option repeats those words ('Pollution making water unsafe to use'). A student can match the words without understanding the cause. The stem could describe the situation, such as factory waste and sewage entering the river, without naming pollution or 'unsafe'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct. In question a, the stem uses the words 'polluted' and 'unsafe', which the right option repeats, so the answer is given away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The stem says the river is 'badly polluted' and 'unsafe to drink', and the right option repeats those words ('Pollution making water unsafe to use'). A student can match the words without understanding the cause. The stem could describe the situation, such as factory waste and sewage entering the river, without naming pollution or 'unsafe'."
+ ],
+ "proposal": {
+  "title": "Causes of water scarcity",
+  "card": [
+   "Water scarcity means there is not enough clean water for people's needs. It can happen even where some water exists, if that water cannot be used.",
+   [
+    "Natural causes",
+    "low or unreliable rainfall, and drought, which is a long period of much less rain than usual."
+   ],
+   [
+    "Human causes",
+    "overuse, when people take water faster than it is replaced, and pollution, which makes water unsafe to use."
+   ],
+   [
+    "Access",
+    "people may be unable to afford clean water, or live too far from a safe source, such as a village with no pipes or wells."
+   ]
+  ],
+  "remember": "Scarcity can come from too little rain, too much use, dirty water, or no way to afford or reach clean water.",
+  "a": {
+   "q": "A town sits beside a large river that is full after good rains. A factory upstream releases waste into it, and sewage flows in after storms. The town can no longer drink from it. Which cause of water scarcity does this show?",
+   "opts": [
+    "Pollution making water unsafe to use",
+    "Drought causing a long period of low rain",
+    "Overuse taking water faster than it refills",
+    "Families living too far from any water"
+   ],
+   "why": "The river holds plenty of water, but factory waste and sewage pollute it, so people still lack clean water. Drought would mean much less rain than usual, but the river is full after good rains.",
+   "clue": "Is the problem the amount of water or what has got into it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A village in Kenya has a safe, clean borehole, but it is a three-hour walk away. Many families cannot make that trip every day. Why do these families face water scarcity?",
+   "opts": [
+    "They cannot reach clean water",
+    "They are in a drought",
+    "They have overused the borehole",
+    "They have polluted their water"
+   ],
+   "why": "The water is clean and available, but the families cannot reach it easily, so they are short of usable water. Drought, overuse and pollution are not part of this case, so they do not explain the problem.",
+   "clue": "The water exists and is clean. What stops people using it?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-20T13:23:38Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem says the river is 'badly polluted' and 'unsafe to drink', and the right option repeats those words ('Pollution making water unsafe to use'). A student can match the words without understanding the cause. The stem could describe the situation, such as factory waste and sewage entering the river, without naming pollution or 'unsafe'."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The stem says the river is 'badly polluted' and 'unsafe to drink', and the right option repeats those words ('Pollution making water unsafe to use'). A student can match the words without understanding the cause. The stem could describe the situation, such as factory waste and sewage entering the river, without naming pollution or 'unsafe'."
+  ]
+ },
+ "final": {
+  "title": "Causes of water scarcity",
+  "card": [
+   "Water scarcity means there is not enough clean water for people's needs. It can happen even where some water exists, if that water cannot be used.",
+   [
+    "Natural causes",
+    "low or unreliable rainfall, and drought, which is a long period of much less rain than usual."
+   ],
+   [
+    "Human causes",
+    "overuse, when people take water faster than it is replaced, and pollution, which makes water unsafe to use."
+   ],
+   [
+    "Access",
+    "people may be unable to afford clean water, or live too far from a safe source, such as a village with no pipes or wells."
+   ]
+  ],
+  "remember": "Scarcity can come from too little rain, too much use, dirty water, or no way to afford or reach clean water.",
+  "a": {
+   "q": "A town sits beside a large river that is full after good rains. A factory upstream releases waste into it, and sewage flows in after storms. The town can no longer drink from it. Which cause of water scarcity does this show?",
+   "opts": [
+    "Pollution making water unsafe to use",
+    "Drought causing a long period of low rain",
+    "Overuse taking water faster than it refills",
+    "Families living too far from any water"
+   ],
+   "why": "The river holds plenty of water, but factory waste and sewage pollute it, so people still lack clean water. Drought would mean much less rain than usual, but the river is full after good rains.",
+   "clue": "Is the problem the amount of water or what has got into it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A village in Kenya has a safe, clean borehole, but it is a three-hour walk away. Many families cannot make that trip every day. Why do these families face water scarcity?",
+   "opts": [
+    "They cannot reach clean water",
+    "They are in a drought",
+    "They have overused the borehole",
+    "They have polluted their water"
+   ],
+   "why": "The water is clean and available, but the families cannot reach it easily, so they are short of usable water. Drought, overuse and pollution are not part of this case, so they do not explain the problem.",
+   "clue": "The water exists and is clean. What stops people using it?"
+  }
+ },
+ "cleared_by": "auto"
 }

@@ -24,8 +24,281 @@
    0.247
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:39Z new, match"
- ]
+  "2026-11-12T12:22:39Z new, match",
+  "2026-11-20T12:15:20Z match: Claude Haiku 5.5 says reuse mat-depreciation, so to the Opus match check, as every reuse is",
+  "2026-11-20T12:25:55Z confirm: Claude Opus 5.5 may adapt mat-depreciation, but is not highly sure, so it is for you to review",
+  "2026-11-20T14:02:37Z match: claude-code says adapt mat-depreciation (3 changes)",
+  "2026-11-20T14:02:37Z claude-code review: adapting mat-depreciation on the next run",
+  "2026-11-20T14:12:39Z adapt: done",
+  "2026-11-20T14:20:02Z check: flagged",
+  "2026-11-20T14:26:15Z fix: suggested",
+  "2026-11-20T14:43:38Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "confirm": 0.01158,
+  "adapt": 0.00646,
+  "check": 0.01023,
+  "fix": 0.01897
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-depreciation",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the same idea at Year 10 depth, with the same (1 - r)^n formula, and both of its questions give correct answers that a NSW Stage 5 student can work out.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-depreciation",
+  "changes": [
+   "Describe n as the number of periods and r as the rate per period, not only per year, to match the brief.",
+   "Use the formula notation the NSW Stage 5 syllabus uses (for example A = P(1 − r)^n) if it differs from V = V₀(1 − r)^n."
+  ],
+  "sure": "medium",
+  "reason": "The Year 10 depreciation point teaches the same reducing-value formula at the right depth, but it needs small wording and notation changes to match the NSW Stage 5 brief, which uses periods rather than only years.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-depreciation",
+  "changes": [
+   "Describe \\(n\\) as the number of periods and \\(r\\) as the rate per period as a decimal, not only per year, as the brief says.",
+   "Write the formula with the same letters as the chapter's compound interest formula \\(A = P(1 + r)^{n}\\), so it reads \\(A = P(1 - r)^{n}\\), with \\(A\\) the value after \\(n\\) periods and \\(P\\) the starting value.",
+   "Remove the sentence comparing depreciation with exponential decay and \\(y = a^{x}\\), since exponential graphs come later in this course."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card1",
+   "card2",
+   "card3",
+   "card4",
+   "remember",
+   "a.q",
+   "a.why",
+   "b.q",
+   "b.why"
+  ]
+ },
+ "cleared_by": "owner",
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same reducing-balance idea at the right depth and its sums are right. It needs to talk about periods as the brief does, use the chapter's formula letters, and drop the link to exponential graphs, which this course teaches later in Unit 1.",
+   "item": "8a8d26b4d84df505",
+   "result": "decided",
+   "saved": {
+    "id": "mat-depreciation-nsw",
+    "title": "Depreciation",
+    "brief": "b1021532e900",
+    "shortlist": [
+     [
+      "mat-depreciation",
+      0.633
+     ],
+     [
+      "mat-flat-rate-depreciation",
+      0.321
+     ],
+     [
+      "mat-unit-cost-depreciation",
+      0.309
+     ],
+     [
+      "mat-declining-balance-depreciation",
+      0.291
+     ],
+     [
+      "acc-depreciation",
+      0.247
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00035,
+     "confirm": 0.01158
+    },
+    "match": {
+     "verdict": "reuse",
+     "same": "mat-depreciation",
+     "changes": [],
+     "sure": "high",
+     "reason": "The bank point teaches the same idea at Year 10 depth, with the same (1 - r)^n formula, and both of its questions give correct answers that a NSW Stage 5 student can work out.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-depreciation",
+     "changes": [
+      "Describe n as the number of periods and r as the rate per period, not only per year, to match the brief.",
+      "Use the formula notation the NSW Stage 5 syllabus uses (for example A = P(1 − r)^n) if it differs from V = V₀(1 − r)^n."
+     ],
+     "sure": "medium",
+     "reason": "The Year 10 depreciation point teaches the same reducing-value formula at the right depth, but it needs small wording and notation changes to match the NSW Stage 5 brief, which uses periods rather than only years.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "2c6f5d458dbb46e0"
+  }
+ ],
+ "draft": {
+  "title": "Depreciation",
+  "card": [
+   "Depreciation is the fall in an item's value over time. Here the item loses a fixed percentage of its value each period.",
+   [
+    "Same factor",
+    "The value is multiplied by the same factor each period. For 15% depreciation the factor is \\(1 - 0.15 = 0.85\\)."
+   ],
+   [
+    "Formula",
+    "\\(A = P(1 - r)^{n}\\). \\(A\\) is the value after \\(n\\) periods, \\(P\\) is the starting value, \\(n\\) is the number of periods and \\(r\\) is the rate per period as a decimal."
+   ],
+   "Example: a $20,000 machine loses 10% a year for 3 years. \\(A = \\$20{,}000 \\times 0.9^{3}\\), which is \\(\\$20{,}000 \\times 0.729 = \\$14{,}580\\)."
+  ],
+  "remember": "Multiply by \\((1 - r)\\) once for each period. The value falls, but the rate stays the same.",
+  "a": {
+   "q": "A ute costs $50,000 new and depreciates by 10% each year. What is its value after 2 years?",
+   "opts": [
+    "$40,500",
+    "$40,000",
+    "$45,000",
+    "$35,000"
+   ],
+   "why": "\\(A = \\$50{,}000 \\times 0.9^{2}\\), which is \\(\\$50{,}000 \\times 0.81 = \\$40{,}500\\). The value $40,000 comes from taking 10% of $50,000 off each year, which ignores that each year's loss is taken from the smaller current value.",
+   "clue": "Multiply by 0.9 twice."
+  },
+  "b": {
+   "d": 3,
+   "q": "A laptop bought for $2000 depreciates by 20% each year. What is its value after 3 years?",
+   "opts": [
+    "$1024",
+    "$800",
+    "$1280",
+    "$1200"
+   ],
+   "why": "\\(A = \\$2000 \\times 0.8^{3}\\), which is \\(\\$2000 \\times 0.512 = \\$1024\\). The value $800 comes from taking 20% of the original price off each year, which ignores that each year's loss is taken from the smaller current value.",
+   "clue": "The factor each year is \\(1 - 0.20\\), used three times."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$40,500",
+   "also_right": []
+  },
+  "b": {
+   "best": "$1024",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "$40,500 is the only option that is not a round multiple of $5,000. A student could guess that the less-round figure is the compound answer without working it out. A distractor such as $40,050 or $41,000 would remove this cue."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, example and both answers are correct ($40,500 and $1024), and the explanations match. One minor issue: in question a, the right option is the only non-round figure, which could let a student guess it."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: $40,500 is the only option that is not a round multiple of $5,000. A student could guess that the less-round figure is the compound answer without working it out. A distractor such as $40,050 or $41,000 would remove this cue."
+ ],
+ "proposal": {
+  "title": "Depreciation",
+  "card": [
+   "Depreciation is the fall in an item's value over time. Here the item loses a fixed percentage of its value each period.",
+   [
+    "Same factor",
+    "The value is multiplied by the same factor each period. For 15% depreciation the factor is \\(1 - 0.15 = 0.85\\)."
+   ],
+   [
+    "Formula",
+    "\\(A = P(1 - r)^{n}\\). \\(A\\) is the value after \\(n\\) periods, \\(P\\) is the starting value, \\(n\\) is the number of periods and \\(r\\) is the rate per period as a decimal."
+   ],
+   "Example: a $20,000 machine loses 10% a year for 3 years. \\(A = \\$20{,}000 \\times 0.9^{3}\\), which is \\(\\$20{,}000 \\times 0.729 = \\$14{,}580\\)."
+  ],
+  "remember": "Multiply by \\((1 - r)\\) once for each period. The value falls, but the rate stays the same.",
+  "a": {
+   "q": "A ute costs $50,000 new and depreciates by 10% each year. What is its value after 2 years?",
+   "opts": [
+    "$40,500",
+    "$40,000",
+    "$60,500",
+    "$9,500"
+   ],
+   "why": "\\(A = \\$50{,}000 \\times 0.9^{2}\\), which is \\(\\$50{,}000 \\times 0.81 = \\$40{,}500\\). The value $40,000 comes from taking 10% of $50,000 off each year, which ignores that each year's loss is taken from the smaller current value. $9,500 is the amount lost, not the value, and $60,500 uses a factor of 1.1, which makes the value rise.",
+   "clue": "Multiply by 0.9 twice."
+  },
+  "b": {
+   "d": 3,
+   "q": "A laptop bought for $2000 depreciates by 20% each year. What is its value after 3 years?",
+   "opts": [
+    "$1024",
+    "$800",
+    "$1280",
+    "$1200"
+   ],
+   "why": "\\(A = \\$2000 \\times 0.8^{3}\\), which is \\(\\$2000 \\times 0.512 = \\$1024\\). The value $800 comes from taking 20% of the original price off each year, which ignores that each year's loss is taken from the smaller current value.",
+   "clue": "The factor each year is \\(1 - 0.20\\), used three times."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Depreciation",
+  "card": [
+   "Depreciation is the fall in an item's value over time. Here the item loses a fixed percentage of its value each period.",
+   [
+    "Same factor",
+    "The value is multiplied by the same factor each period. For 15% depreciation the factor is \\(1 - 0.15 = 0.85\\)."
+   ],
+   [
+    "Formula",
+    "\\(A = P(1 - r)^{n}\\). \\(A\\) is the value after \\(n\\) periods, \\(P\\) is the starting value, \\(n\\) is the number of periods and \\(r\\) is the rate per period as a decimal."
+   ],
+   "Example: a $20,000 machine loses 10% a year for 3 years. \\(A = \\$20{,}000 \\times 0.9^{3}\\), which is \\(\\$20{,}000 \\times 0.729 = \\$14{,}580\\)."
+  ],
+  "remember": "Multiply by \\((1 - r)\\) once for each period. The value falls, but the rate stays the same.",
+  "a": {
+   "q": "A ute costs $50,000 new and depreciates by 10% each year. What is its value after 2 years?",
+   "opts": [
+    "$40,500",
+    "$40,000",
+    "$60,500",
+    "$9,500"
+   ],
+   "why": "\\(A = \\$50{,}000 \\times 0.9^{2}\\), which is \\(\\$50{,}000 \\times 0.81 = \\$40{,}500\\). The value $40,000 comes from taking 10% of $50,000 off each year, which ignores that each year's loss is taken from the smaller current value. $9,500 is the amount lost, not the value, and $60,500 uses a factor of 1.1, which makes the value rise.",
+   "clue": "Multiply by 0.9 twice."
+  },
+  "b": {
+   "d": 3,
+   "q": "A laptop bought for $2000 depreciates by 20% each year. What is its value after 3 years?",
+   "opts": [
+    "$1024",
+    "$800",
+    "$1280",
+    "$1200"
+   ],
+   "why": "\\(A = \\$2000 \\times 0.8^{3}\\), which is \\(\\$2000 \\times 0.512 = \\$1024\\). The value $800 comes from taking 20% of the original price off each year, which ignores that each year's loss is taken from the smaller current value.",
+   "clue": "The factor each year is \\(1 - 0.20\\), used three times."
+  }
+ }
 }

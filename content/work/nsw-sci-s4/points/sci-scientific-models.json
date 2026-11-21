@@ -16,8 +16,115 @@
    0.263
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:41Z new, match"
- ]
+  "2026-11-12T12:22:41Z new, match",
+  "2026-11-20T12:15:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:57Z write: done",
+  "2026-11-20T12:45:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.0057,
+  "check": 0.00775
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches what a scientific model is in general (a representation built from data that explains and predicts but leaves things out); they teach the history of atomic models and the wave and particle models of light, so the new point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Scientific models",
+  "card": [
+   "A scientific model is a representation of something real, such as an object, a system or an idea. Scientists build models using data.",
+   "Models come in different forms. A diagram, a physical model like a globe and a computer simulation are all models.",
+   "Models help scientists explain how something works and predict what might happen. A weather simulation, for example, uses data to predict tomorrow's rain.",
+   "A model leaves some things out. A globe shows the shape of Earth but not its real size, so it cannot show everything about the real thing."
+  ],
+  "remember": "A model represents something real using data. It helps explain and predict, but it is not the whole thing.",
+  "a": {
+   "q": "Which of these is a scientific model?",
+   "opts": [
+    "A globe used to show how Earth is shaped",
+    "A list of student names in a science class",
+    "A photo of a friend taken at the beach",
+    "A receipt from buying a science textbook"
+   ],
+   "why": "A globe represents something real, Earth, so it is a model. The other three are records of things, not representations built to explain how something works.",
+   "clue": "Which one stands in for something real to help explain it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya builds a computer simulation of how a bushfire spreads across a hill. It does not include every single plant. What does this show about her model?",
+   "opts": [
+    "It leaves some things out, but can still help predict",
+    "It is useless, because it is missing some plants",
+    "It is a law, because it always happens that way",
+    "It is the real fire, just shown on a screen"
+   ],
+   "why": "All models leave some things out, so missing plants does not make the model useless. It can still use data to help explain and predict how the fire spreads. It is a representation, not the real fire.",
+   "clue": "Does leaving something out stop a model from being useful?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A globe used to show how Earth is shaped",
+   "also_right": []
+  },
+  "b": {
+   "best": "It leaves some things out, but can still help predict",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Scientific models",
+  "card": [
+   "A scientific model is a representation of something real, such as an object, a system or an idea. Scientists build models using data.",
+   "Models come in different forms. A diagram, a physical model like a globe and a computer simulation are all models.",
+   "Models help scientists explain how something works and predict what might happen. A weather simulation, for example, uses data to predict tomorrow's rain.",
+   "A model leaves some things out. A globe shows the shape of Earth but not its real size, so it cannot show everything about the real thing."
+  ],
+  "remember": "A model represents something real using data. It helps explain and predict, but it is not the whole thing.",
+  "a": {
+   "q": "Which of these is a scientific model?",
+   "opts": [
+    "A globe used to show how Earth is shaped",
+    "A list of student names in a science class",
+    "A photo of a friend taken at the beach",
+    "A receipt from buying a science textbook"
+   ],
+   "why": "A globe represents something real, Earth, so it is a model. The other three are records of things, not representations built to explain how something works.",
+   "clue": "Which one stands in for something real to help explain it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya builds a computer simulation of how a bushfire spreads across a hill. It does not include every single plant. What does this show about her model?",
+   "opts": [
+    "It leaves some things out, but can still help predict",
+    "It is useless, because it is missing some plants",
+    "It is a law, because it always happens that way",
+    "It is the real fire, just shown on a screen"
+   ],
+   "why": "All models leave some things out, so missing plants does not make the model useless. It can still use data to help explain and predict how the fire spreads. It is a representation, not the real fire.",
+   "clue": "Does leaving something out stop a model from being useful?"
+  }
+ },
+ "cleared_by": "checker"
 }

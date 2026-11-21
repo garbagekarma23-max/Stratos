@@ -16,8 +16,160 @@
    0.203
   ]
  ],
- "stage": "match",
+ "stage": "cc-check",
  "log": [
-  "2026-11-12T12:22:43Z new, match"
- ]
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-20T12:15:23Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:26:01Z write: failed the content check, writing again",
+  "2026-11-20T12:35:58Z write: done",
+  "2026-11-20T12:45:00Z check: for review (first-nations)",
+  "2026-11-20T14:45:36Z review: rejected, to be written again",
+  "2026-11-20T14:58:20Z claude-code write: done, waiting for the Claude Code check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.01793,
+  "check": 0.00915
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches the uses of minerals by Aboriginal and Torres Strait Islander Peoples; they cover health views, ecosystem knowledge and civil rights history, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "First Peoples' uses of minerals",
+  "card": [
+   "Aboriginal and Torres Strait Islander Peoples have used minerals for many thousands of years. These uses show deep knowledge of the land and its materials.",
+   [
+    "Ochre",
+    "a coloured earth mineral, often red, yellow or white. It has been used for paint, for decoration of the body and for ceremony."
+   ],
+   [
+    "Hard stone",
+    "rock that can be shaped into tools. It has been used to make axes and grinding stones, which were used to prepare food such as seeds."
+   ],
+   "Stone and ochre were often traded over long distances between Countries, so these materials linked communities."
+  ],
+  "remember": "First Peoples used ochre for paint and ceremony and hard stone for tools.",
+  "a": {
+   "q": "Which pair correctly matches a mineral material with its traditional use?",
+   "opts": [
+    "Ochre, used for paint and ceremony",
+    "Ochre, used to make grinding stones",
+    "Hard stone, used for paint and ceremony",
+    "Hard stone, used as a coloured pigment"
+   ],
+   "why": "Ochre is a coloured earth used for paint and ceremony. Hard stone is shaped into tools such as axes and grinding stones, so the other pairs swap the uses.",
+   "clue": "One material gives colour and the other is strong."
+  },
+  "b": {
+   "d": 2,
+   "q": "A museum displays a tool from Aboriginal Peoples that was used to grind seeds into flour. Which material was it most likely made from?",
+   "opts": [
+    "Hard stone",
+    "Ochre",
+    "Coal",
+    "Bauxite"
+   ],
+   "why": "Grinding tools needed hard stone that would not crumble when used. Ochre is a soft pigment used for colour, so it is not suited to grinding seeds.",
+   "clue": "The tool had to be strong and long lasting."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:58:20Z",
+   "step": "write",
+   "version": {
+    "title": "Aboriginal and Torres Strait Islander uses of minerals",
+    "card": [
+     [
+      "Ochre",
+      "a soft earth coloured by iron minerals, in shades of red, yellow and brown. Ground and mixed with water or fat, it makes paint for rock art, body decoration and ceremony."
+     ],
+     [
+      "Hard stone",
+      "tough, fine-grained rock that can be ground to a sharp edge. It was shaped into axe heads, and flat slabs were used as grindstones to turn seeds into flour."
+     ],
+     "Choosing the right ochre or stone took knowledge of each material's properties, such as its colour and hardness.",
+     "Some sites were worked for thousands of years. Ochre from Wilgie Mia in Western Australia, and stone axes from Mount William in Victoria, were traded over long distances."
+    ],
+    "remember": "Each mineral was matched to its job: colour from ochre, hardness from stone.",
+    "a": {
+     "q": "Why was hard stone, not ochre, used to make axe heads?",
+     "opts": [
+      "Hard stone keeps a sharp edge, but ochre is soft",
+      "Hard stone is coloured, but ochre has no colour",
+      "Hard stone was rare, so it was saved for axes",
+      "Ochre was too heavy to carry, but stone was light"
+     ],
+     "why": "An axe head needs tough rock that can be ground to a sharp edge. Ochre is a soft, coloured earth, which suits paint but would crumble as a tool.",
+     "clue": "Which property does an axe need?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Archaeologists find stone axe heads made from Mount William stone hundreds of kilometres away, in New South Wales. What does this most likely show?",
+     "opts": [
+      "The axes were traded over long distances",
+      "Mount William stone is found all over NSW",
+      "The axes were made from ochre found in NSW",
+      "Each community made axes from its own rock"
+     ],
+     "why": "The axe heads are made of stone from Mount William, so finding them far away shows they were traded. If each community had used its own local rock, the axes would be made of local stone.",
+     "clue": "How did stone from one place end up far away?"
+    }
+   },
+   "problems": []
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Aboriginal and Torres Strait Islander uses of minerals",
+  "card": [
+   [
+    "Ochre",
+    "a soft earth coloured by iron minerals, in shades of red, yellow and brown. Ground and mixed with water or fat, it makes paint for rock art, body decoration and ceremony."
+   ],
+   [
+    "Hard stone",
+    "tough, fine-grained rock that can be ground to a sharp edge. It was shaped into axe heads, and flat slabs were used as grindstones to turn seeds into flour."
+   ],
+   "Choosing the right ochre or stone took knowledge of each material's properties, such as its colour and hardness.",
+   "Some sites were worked for thousands of years. Ochre from Wilgie Mia in Western Australia, and stone axes from Mount William in Victoria, were traded over long distances."
+  ],
+  "remember": "Each mineral was matched to its job: colour from ochre, hardness from stone.",
+  "a": {
+   "q": "Why was hard stone, not ochre, used to make axe heads?",
+   "opts": [
+    "Hard stone keeps a sharp edge, but ochre is soft",
+    "Hard stone is coloured, but ochre has no colour",
+    "Hard stone was rare, so it was saved for axes",
+    "Ochre was too heavy to carry, but stone was light"
+   ],
+   "why": "An axe head needs tough rock that can be ground to a sharp edge. Ochre is a soft, coloured earth, which suits paint but would crumble as a tool.",
+   "clue": "Which property does an axe need?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Archaeologists find stone axe heads made from Mount William stone hundreds of kilometres away, in New South Wales. What does this most likely show?",
+   "opts": [
+    "The axes were traded over long distances",
+    "Mount William stone is found all over NSW",
+    "The axes were made from ochre found in NSW",
+    "Each community made axes from its own rock"
+   ],
+   "why": "The axe heads are made of stone from Mount William, so finding them far away shows they were traded. If each community had used its own local rock, the axes would be made of local stone.",
+   "clue": "How did stone from one place end up far away?"
+  }
+ },
+ "local": []
 }

@@ -9251,5 +9251,3534 @@ MADE_BANKS.sci = {
       "why": "A strong argument deals with evidence that points the other way, for example by comparing methods and explaining why results differ. Leaving it out or dismissing it without a reason makes the argument weaker, even if her own trial is repeated.",
       "clue": "What should an argument do with evidence that disagrees with it?"
     }
+  },
+  "sci-variables-fair-tests": {
+    "title": "Variables and fair tests",
+    "card": [
+      ["Independent", "the one variable you change on purpose. Example: the amount of light a plant gets."],
+      ["Dependent", "the variable you measure to see the effect. Example: how tall the plant grows."],
+      [
+        "Controlled",
+        "all the other variables, which you keep the same so they do not affect the result. Example: the type of soil and the amount of water."
+      ],
+      "A fair test changes only one variable. Repeating the trials makes the results more reliable. An observational study watches things as they are and changes nothing."
+    ],
+    "remember": "Change one, measure one, keep the rest the same, and repeat.",
+    "a": {
+      "q": "Zara tests how the length of a pendulum affects how long it takes to swing 10 times. What is the dependent variable?",
+      "opts": [
+        "The time taken for 10 swings",
+        "The length of the pendulum",
+        "The mass of the weight on the string",
+        "The number of swings counted"
+      ],
+      "why": "The dependent variable is the one you measure to see the effect, which here is the time taken. The length of the pendulum is the one Zara changes, so it is the independent variable.",
+      "clue": "Which variable is measured to see what happened?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Liam tests whether warm water makes sugar dissolve faster. He uses 20 °C, 40 °C and 60 °C water, and a different amount of sugar in each cup. Why is this not a fair test?",
+      "opts": [
+        "The amount of sugar changes as well as the temperature",
+        "The water temperature is the only variable he changed",
+        "He measured the time that the sugar took to dissolve",
+        "He tested three water temperatures rather than just one"
+      ],
+      "why": "A fair test changes only one variable, so the amount of sugar must be kept the same. Changing the temperature is correct, because it is the independent variable. Using three temperatures is fine too, since they are all values of that one variable.",
+      "clue": "How many variables did Liam change on purpose?"
+    }
+  },
+  "sci-observations-inferences": {
+    "title": "Observations and inferences",
+    "card": [
+      [
+        "Observation",
+        "What you see, hear, feel or measure. It is a fact about what happened, such as \"the plant leaves are yellow\" or \"the water is 40 °C\"."
+      ],
+      [
+        "Inference",
+        "An explanation you draw from observations. It goes beyond what you saw, such as \"the plant is not getting enough light\"."
+      ],
+      "One observation can have more than one possible inference. Yellow leaves might come from too little light, too little water or a disease.",
+      "Further tests can support an inference or reject it. If a plant moved into sunlight turns green again, that supports the light inference."
+    ],
+    "remember": "Observations are what you saw or measured. Inferences are explanations that more tests can support or reject.",
+    "a": {
+      "q": "Which of these is an inference?",
+      "opts": [
+        "The ice cube melted because the room was warm",
+        "The ice cube was gone after ten minutes",
+        "The puddle of water was 12 mL in volume",
+        "The ice cube felt cold when it was picked up"
+      ],
+      "why": "The room being warm is an explanation for what happened, so it is an inference. The other three describe what was seen, measured or felt, so they are observations.",
+      "clue": "Which one explains why something happened?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya sees that the grass under a tree in her yard is brown. She says the tree is taking all the water. What should she do to test this?",
+      "opts": [
+        "Water the brown patch well and see if the grass recovers",
+        "Write down again that the grass under the tree is brown",
+        "Measure the width of the brown patch with a ruler",
+        "Decide the inference is right because the grass is brown"
+      ],
+      "why": "Watering the patch is a further test that could support or reject her inference. If the grass stays brown, another explanation, such as too little light, may be better. Measuring the patch only adds another observation and does not test the explanation.",
+      "clue": "Which choice could show her explanation is wrong?"
+    }
+  },
+  "sci-measuring-with-instruments": {
+    "title": "Measuring with instruments",
+    "card": [
+      [
+        "Instrument and unit",
+        "Pick the instrument that suits the quantity. Length: ruler or tape measure, in millimetres, centimetres, metres or kilometres. Mass: balance, in grams or kilograms. Volume: measuring cylinder, in millilitres or litres. Temperature: thermometer, in degrees Celsius."
+      ],
+      [
+        "Match the size",
+        "Choose an instrument and unit that fit the size of the thing. A ruler in millimetres suits a seed. A tape measure in metres suits a classroom."
+      ],
+      [
+        "Analog and digital",
+        "An analog instrument shows a reading on a scale or dial, and you read the value between the marks. A digital instrument shows the number on a screen. Digital ones often show smaller steps, which makes them more sensitive."
+      ],
+      [
+        "Range and senses",
+        "Every instrument has a range, the smallest to the largest value it can measure. Our senses are not reliable for measuring. Touch cannot give an exact temperature, and two people may judge the same thing differently."
+      ]
+    ],
+    "remember": "Choose the instrument and unit to suit the size, and trust a measuring instrument over your senses.",
+    "a": {
+      "q": "Why is a thermometer a better choice than touch for finding the temperature of water?",
+      "opts": [
+        "It gives a reading that does not depend on the person",
+        "It can measure any temperature that exists",
+        "It always shows smaller steps than a digital one",
+        "It measures the volume of water as well"
+      ],
+      "why": "A thermometer gives a number on a scale, so different people get the same reading. Touch depends on the person and cannot give an exact value. A thermometer does have a range, so it cannot measure every temperature.",
+      "clue": "Think about whether two people would agree."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia wants to find the mass of a single pea. A kitchen balance reads in steps of 10 g. A lab balance reads in steps of 0.01 g. Which should she use, and why?",
+      "opts": [
+        "The lab balance, because it is more sensitive",
+        "The kitchen balance, because it has a larger range",
+        "The lab balance, because it is a digital instrument",
+        "The kitchen balance, because it reads in whole grams"
+      ],
+      "why": "A pea has a very small mass, so Mia needs an instrument that shows small steps. The lab balance is more sensitive. Being digital is not the reason, because a digital instrument can also have large steps.",
+      "clue": "Which balance can show a very small change in mass?"
+    }
+  },
+  "sci-graphs-conclusions": {
+    "title": "Graphs and conclusions",
+    "card": [
+      [
+        "Column graph",
+        "Use it when the data is in separate categories, such as the colour of flowers or the type of pet. Each category gets its own column."
+      ],
+      [
+        "Line graph",
+        "Use it when the data is measured values that change, such as temperature over time. The independent variable goes on the x-axis and the dependent variable on the y-axis."
+      ],
+      [
+        "Trend",
+        "A trend is the pattern in the data. For example, the line may rise, fall or stay flat as the independent variable changes."
+      ],
+      [
+        "Conclusion",
+        "A conclusion uses the trend to answer the aim. It states what the data shows, and it only claims what the results support."
+      ]
+    ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "A line graph of water temperature in degrees Celsius against time in minutes. The line rises steadily from 20 degrees at 0 minutes to 60 degrees at 8 minutes.",
+        "x": {"min": 0, "max": 10, "label": "Time (min)", "step": 2},
+        "y": {"min": 0, "max": 80, "label": "Temperature (°C)", "step": 20},
+        "items": [
+          {
+            "type": "curve",
+            "id": "T",
+            "points": [[0, 20], [2, 30], [4, 40], [6, 50], [8, 60]],
+            "label": "Water",
+            "pos": "below-right"
+          }
+        ]
+      }
+    },
+    "remember": "Pick the graph to suit the data. Then use the trend to answer the aim.",
+    "a": {
+      "q": "Which data would be best shown on a line graph?",
+      "opts": [
+        "The height of a plant measured each day for 10 days",
+        "The number of students who chose each school sport",
+        "The favourite fruit of each student in a class",
+        "The number of cars of each colour in a car park"
+      ],
+      "why": "Plant height is a measured value that changes over time, so a line graph shows the trend. The other options sort things into separate categories, which suit column graphs.",
+      "clue": "Look for a measurement that changes as something else changes."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi's aim was to find out if more sunlight makes bean seedlings grow taller. His graph shows seedling height rising as hours of sunlight per day increase. Which conclusion fits his data?",
+      "opts": [
+        "Seedlings grew taller as the hours of sunlight increased",
+        "Sunlight is the only thing that makes any plant grow",
+        "Seedlings grew taller as the hours of sunlight decreased",
+        "Seedlings of all kinds grow best in very long daylight"
+      ],
+      "why": "The trend is that height rises as sunlight hours rise, and this answers the aim. The claims that sunlight is the only thing that makes plants grow, and that all kinds of seedlings grow best in very long daylight, both go beyond what Ravi tested, since he only measured bean seedlings over the sunlight hours he used. Saying seedlings grew taller with less sunlight reverses the trend and contradicts the graph.",
+      "clue": "A conclusion must match the trend and only claim what was tested."
+    }
+  },
+  "sci-theories-laws": {
+    "title": "Theories and laws",
+    "card": [
+      [
+        "Law",
+        "A scientific law describes a pattern that is seen every time under the same conditions. It tells us what happens, but not why."
+      ],
+      [
+        "Theory",
+        "A scientific theory explains why something happens. It is built on a large body of evidence gathered by many scientists."
+      ],
+      "For example, a law says that a dropped ball always falls towards the ground. The theory of gravity explains why it falls.",
+      "A theory does not become a law when it is proven. Laws and theories do different jobs. Either can change when new evidence appears."
+    ],
+    "remember": "A law describes what happens. A theory explains why. Both can change with new evidence.",
+    "a": {
+      "q": "Scientists find that every metal they test gets longer when heated. They write: \"Metals get longer when heated.\" What is this statement?",
+      "opts": [
+        "A law, because it describes what happens, not why",
+        "A theory, because it explains why metals expand",
+        "A theory, because many scientists have tested it",
+        "A law, because laws are proven and can never change"
+      ],
+      "why": "The statement describes a pattern seen every time, but gives no reason for it, so it is a law. Being tested by many scientists does not make it a theory: a theory must explain why. Laws can also change with new evidence.",
+      "clue": "Does the statement give a reason, or only a pattern?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Ana says: \"A theory is just a guess. When it has enough evidence, it turns into a law.\" Is Ana right?",
+      "opts": [
+        "No, laws and theories do different jobs in science",
+        "Yes, a theory becomes a law once it is fully proven",
+        "No, a law becomes a theory once scientists explain it",
+        "Yes, but a law can still change while a theory cannot"
+      ],
+      "why": "A law describes a pattern and a theory explains why it happens, so one does not grow into the other. A theory is not a guess either: it is built on a large body of evidence from many scientists. Both laws and theories can change when new evidence appears.",
+      "clue": "Think about what each one does, not how strong it is."
+    }
+  },
+  "sci-scientific-models": {
+    "title": "Scientific models",
+    "card": [
+      "A scientific model is a representation of something real, such as an object, a system or an idea. Scientists build models using data.",
+      "Models come in different forms. A diagram, a physical model like a globe and a computer simulation are all models.",
+      "Models help scientists explain how something works and predict what might happen. A weather simulation, for example, uses data to predict tomorrow's rain.",
+      "A model leaves some things out. A globe shows the shape of Earth but not its real size, so it cannot show everything about the real thing."
+    ],
+    "remember": "A model represents something real using data. It helps explain and predict, but it is not the whole thing.",
+    "a": {
+      "q": "Which of these is a scientific model?",
+      "opts": [
+        "A globe used to show how Earth is shaped",
+        "A list of student names in a science class",
+        "A photo of a friend taken at the beach",
+        "A receipt from buying a science textbook"
+      ],
+      "why": "A globe represents something real, Earth, so it is a model. The other three are records of things, not representations built to explain how something works.",
+      "clue": "Which one stands in for something real to help explain it?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya builds a computer simulation of how a bushfire spreads across a hill. It does not include every single plant. What does this show about her model?",
+      "opts": [
+        "It leaves some things out, but can still help predict",
+        "It is useless, because it is missing some plants",
+        "It is a law, because it always happens that way",
+        "It is the real fire, just shown on a screen"
+      ],
+      "why": "All models leave some things out, so missing plants does not make the model useless. It can still use data to help explain and predict how the fire spreads. It is a representation, not the real fire.",
+      "clue": "Does leaving something out stop a model from being useful?"
+    }
+  },
+  "sci-data-data-science": {
+    "title": "Data and data science",
+    "card": [
+      "Data is information collected by observing or measuring, such as temperatures, counts or survey answers. Scientists collect data to look for evidence.",
+      "Data science uses data, methods and computers to find patterns in large amounts of data. A computer can sort millions of records far faster than a person can.",
+      "A pattern can help scientists make predictions. For example, patterns in weather records help forecasters predict rain.",
+      "Our online activity creates data about us, such as what we search for, the photos we post or where our phone has been. This data can be collected and used by others, so we need to share it carefully."
+    ],
+    "remember": "Data science finds patterns in data. Your online activity makes data, so share it carefully.",
+    "a": {
+      "q": "A researcher has millions of bird sightings sent in by the public. How would data science help her study them?",
+      "opts": [
+        "Computers sort the sightings to look for patterns",
+        "She reads every sighting by hand to look for patterns",
+        "She keeps only the sightings that match her ideas",
+        "She stops studying them and collects new sightings"
+      ],
+      "why": "Data science uses computers and methods to find patterns in large amounts of data. Reading millions of sightings by hand is the tempting choice, but a computer can sort that many records far faster than a person can.",
+      "clue": "Think about how many sightings there are."
+    },
+    "b": {
+      "d": 2,
+      "q": "Zoe posts photos online and turns on location sharing for her apps. Why should she think carefully about this?",
+      "opts": [
+        "Her activity creates data about her that others can collect",
+        "Photos and places are opinions, so they are not data",
+        "Her phone makes data about her, but apps cannot see it",
+        "Data is made by surveys she answers, not by her posts"
+      ],
+      "why": "Online activity, such as posting photos or sharing location, creates data about a person, and that data can be collected and used by others. The tempting idea that the data stays on her phone is wrong: sharing it with apps is exactly how others can collect it.",
+      "clue": "Who else might see what her apps record?"
+    }
+  },
+  "sci-models-solar-system": {
+    "title": "Models of the solar system",
+    "card": [
+      [
+        "Earth-centred model",
+        "This model put Earth at the centre, with the Sun, Moon, planets and stars moving around it. It matched what people see: the Sun appears to cross the sky while Earth feels still."
+      ],
+      [
+        "Sun-centred model",
+        "This model puts the Sun at the centre, with Earth and the other planets orbiting it. Earth is one planet among several."
+      ],
+      "A scientific model can be changed when new evidence does not fit it. In 1610 Galileo used a telescope to see four moons orbiting Jupiter and the phases of Venus. Not everything orbited Earth, and the Earth-centred model could not explain Venus's phases.",
+      "As more evidence fitted the Sun-centred model, scientists accepted it in place of the old one. Models can be replaced when better evidence appears."
+    ],
+    "remember": "Models are tested against evidence. When evidence does not fit, the model may be changed or replaced.",
+    "a": {
+      "q": "Why did scientists move from the Earth-centred model to the Sun-centred model?",
+      "opts": [
+        "New observations did not fit the Earth-centred model",
+        "The Sun-centred model was older and more trusted",
+        "People could feel Earth moving around the Sun",
+        "Telescopes showed that Earth is the biggest planet"
+      ],
+      "why": "Galileo's telescope observations, such as the moons of Jupiter, did not fit the Earth-centred model. When evidence does not fit a model, the model may be changed or replaced. People cannot feel Earth moving, and the old model matched what we see, so that was not the reason.",
+      "clue": "Think about what Galileo's telescope showed."
+    },
+    "b": {
+      "d": 3,
+      "q": "Galileo saw four moons orbiting Jupiter. Why was this a problem for the Earth-centred model?",
+      "opts": [
+        "It showed that not everything orbits Earth",
+        "It showed that Jupiter is larger than Earth",
+        "It showed that Jupiter orbits the Sun",
+        "It showed that the Moon does not orbit Earth"
+      ],
+      "why": "The Earth-centred model said everything moved around Earth. Moons orbiting Jupiter showed that something else was a centre of orbit, which did not fit. Seeing those moons did not show where Jupiter itself travels, and it said nothing about Earth's Moon.",
+      "clue": "What did the old model say everything orbited?"
+    }
+  },
+  "sci-phases-moon-nsw": {
+    "title": "Phases of the moon",
+    "card": [
+      "The moon does not make its own light. It shines because its surface reflects sunlight.",
+      "The sun always lights half of the moon, the half facing it. The other half is dark.",
+      "As the moon orbits the Earth, we see a different amount of its lit half. The full cycle of phases takes about 29.5 days, roughly a month.",
+      "At new moon we see almost none of the lit half. At full moon we see all of it. The shape then shrinks back to new moon, and the cycle repeats."
+    ],
+    "remember": "The moon's phases come from how much of its lit half we can see as it orbits.",
+    "a": {
+      "q": "Over about two weeks, the moon goes from a thin crescent to a full moon. Why does its shape seem to change like this?",
+      "opts": [
+        "We see more of the moon's lit half as it orbits",
+        "The Earth's shadow covers less of the moon",
+        "The moon makes more light as it moves",
+        "The sun lights more of the moon's surface"
+      ],
+      "why": "The sun always lights half of the moon. As the moon orbits, we see more of that lit half from Earth. Earth's shadow is not the cause of phases, and the moon makes no light of its own.",
+      "clue": "Think about which half is lit and what we can see of it."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya looks up at the moon from her home in Sydney. One night it is a full moon. About how long until she sees the next full moon?",
+      "opts": ["About a month", "About two weeks", "About a week", "About a year"],
+      "why": "Full moon to full moon is one whole cycle of phases, which takes about 29.5 days, roughly a month. After about two weeks she would be halfway through the cycle and see a new moon, not a full one.",
+      "clue": "Going from full moon back to full moon is one whole cycle."
+    }
+  },
+  "sci-contact-non-contact-forces": {
+    "title": "Contact and non-contact forces",
+    "card": [
+      "A force is a push or a pull. It can change how an object moves or change its shape.",
+      [
+        "Contact force",
+        "a force that acts where two objects touch. Examples are a push, a pull, friction and the force of a stretched spring."
+      ],
+      [
+        "Non-contact force",
+        "a force that acts at a distance, with no touching needed. Examples are gravity, magnetism and the force between electric charges."
+      ],
+      "To sort a force, ask whether the objects must touch for it to act. A magnet can pull a paper clip across a gap, so magnetism is non-contact."
+    ],
+    "remember": "Contact forces need touching. Non-contact forces act across a gap.",
+    "a": {
+      "q": "Which of these is a non-contact force?",
+      "opts": [
+        "The pull of gravity on a falling apple",
+        "The friction of a shoe on a floor",
+        "A push on a shopping trolley",
+        "A stretched spring pulling on a hook"
+      ],
+      "why": "Gravity pulls on the apple without touching it, so it is a non-contact force. Friction is tempting because it slows things, but it only acts where surfaces touch.",
+      "clue": "Which force acts with a gap between the objects?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia drags a box across the floor of her garage in Dubbo. The floor slows the box down. Which force is the floor exerting on the box?",
+      "opts": [
+        "Friction, which is a contact force",
+        "Friction, which is a non-contact force",
+        "Gravity, which is a contact force",
+        "Magnetism, which is a non-contact force"
+      ],
+      "why": "The floor and the box touch, and the force of the floor slows the box. That is friction, a contact force. Gravity is tempting because it acts on the box too, but gravity is non-contact and it does not come from the floor.",
+      "clue": "The floor slows the box only because their surfaces touch."
+    }
+  },
+  "sci-balanced-unbalanced-forces-nsw": {
+    "title": "Balanced and unbalanced forces",
+    "card": [
+      "Several forces can act on an object at once. What matters is the total effect of all of them together.",
+      [
+        "Force arrows",
+        "Force arrows show each force acting on an object. The length of an arrow shows the size of the force, and its direction shows which way the force acts."
+      ],
+      [
+        "Balanced forces",
+        "forces that are equal in size and opposite in direction, so they cancel out. An object at rest stays still, and a moving object keeps moving at the same speed in the same direction."
+      ],
+      [
+        "Unbalanced forces",
+        "forces that do not cancel out. The object starts moving, stops, speeds up, slows down or changes direction."
+      ]
+    ],
+    "remember": "Read the arrows. Equal arrows in opposite directions are balanced and the motion stays the same. Unequal arrows are unbalanced and change the motion.",
+    "a": {
+      "q": "A force diagram of a box on a floor shows an arrow of 20 N to the right and an arrow of 35 N to the left. What do the arrows show?",
+      "opts": [
+        "Unbalanced forces, so the box changes its motion",
+        "Balanced forces, so the box changes its motion",
+        "Balanced forces, so the box keeps its motion the same",
+        "Unbalanced forces, so the box keeps its motion the same"
+      ],
+      "why": "The arrows point in opposite directions but are different lengths, so they do not cancel. Unbalanced forces change the motion. Here the bigger force is to the left, so the box is pushed that way.",
+      "clue": "Are the two arrows the same length?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Two teams pull on opposite ends of a rope with equal force, and the rope does not move. Team A then pulls harder while Team B stays the same. What happens to the rope?",
+      "opts": [
+        "It moves towards Team A because the forces are unbalanced",
+        "It stays still because the forces are still balanced",
+        "It moves towards Team B because the forces are unbalanced",
+        "It stays still because the forces are unbalanced"
+      ],
+      "why": "At first the equal, opposite pulls cancel, so the rope stays still. When Team A pulls harder the forces no longer cancel, so the rope starts to move in the direction of the bigger force, towards Team A. Team B's pull is smaller, so the rope does not go that way.",
+      "clue": "Which team now has the bigger pull?"
+    }
+  },
+  "sci-mass-weight": {
+    "title": "Mass and weight",
+    "card": [
+      [
+        "Mass",
+        "Mass is the amount of matter in an object. It is measured in kilograms (kg) and stays the same wherever the object is."
+      ],
+      [
+        "Weight",
+        "Weight is the force of gravity pulling on an object. It is a force, so it is measured in newtons (N)."
+      ],
+      "Weight = mass × gravitational acceleration, or W = m × g. On Earth, g is about 10 N/kg, so a 3 kg object weighs about 30 N.",
+      "The Moon has weaker gravity than Earth, with g about 1.6 N/kg. An object has the same mass there but a smaller weight."
+    ],
+    "remember": "Mass is matter in kg and does not change. Weight is a force in N: W = m × g.",
+    "a": {
+      "q": "An astronaut travels from Earth to the Moon. What happens to the astronaut's mass and weight?",
+      "opts": [
+        "Mass stays the same and weight decreases",
+        "Mass decreases and weight stays the same",
+        "Both mass and weight decrease",
+        "Both mass and weight stay the same"
+      ],
+      "why": "Mass is the amount of matter, so it does not change with place. Weight is the pull of gravity, and the Moon's gravity is weaker, so weight decreases. Saying both decrease mixes up the two ideas.",
+      "clue": "Which one depends on how strongly gravity pulls?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia's backpack has a mass of 6 kg. Using g = 10 N/kg, what is its weight on Earth?",
+      "opts": ["60 N", "6 N", "60 kg", "0.6 N"],
+      "why": "Weight = mass × g = 6 kg × 10 N/kg = 60 N. Giving 60 kg is tempting, but weight is a force, so it is measured in newtons, not kilograms.",
+      "clue": "Multiply the mass by g, and think about the unit for a force."
+    }
+  },
+  "sci-magnetic-poles": {
+    "title": "Magnetic poles",
+    "card": [
+      "Every magnet has two ends called poles. One is the north pole and the other is the south pole.",
+      ["Like poles", "two north poles, or two south poles, push each other apart. This is repulsion."],
+      ["Unlike poles", "a north pole and a south pole pull towards each other. This is attraction."],
+      "The force between magnets gets weaker as the distance between them grows. Magnets that are far apart barely affect each other."
+    ],
+    "remember": "Like poles repel, unlike poles attract, and the force weakens with distance.",
+    "a": {
+      "q": "The north pole of one magnet is held near the south pole of another magnet. What happens?",
+      "opts": [
+        "They pull towards each other",
+        "They push away from each other",
+        "They do nothing to each other",
+        "They push away, then pull together"
+      ],
+      "why": "A north pole and a south pole are unlike poles, and unlike poles attract. Pushing apart happens only with like poles, such as two north poles.",
+      "clue": "Are the two poles the same or different?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia holds two bar magnets so their ends are 1 cm apart, and feels a strong push between them. She slowly moves the magnets 20 cm apart. What does she notice?",
+      "opts": [
+        "The push gets much weaker",
+        "The push gets much stronger",
+        "The push stays exactly the same",
+        "The push turns into a pull"
+      ],
+      "why": "The force between magnets gets weaker as the distance grows, so the push fades when they are moved apart. It does not turn into a pull, because the poles facing each other have not changed.",
+      "clue": "Think about what happens to the force as distance grows."
+    }
+  },
+  "sci-magnetic-fields": {
+    "title": "Magnetic fields",
+    "card": [
+      "A magnetic field is the space around a magnet where its magnetic force acts. Another magnet or a piece of iron in this space feels a force.",
+      "We draw a magnetic field with field lines. Outside the magnet, the lines run from the north pole to the south pole. Arrows on the lines show this direction.",
+      "The field is strongest where the lines are closest together. This is near the poles. Far from the magnet the lines are spread out and the field is weaker.",
+      "Field lines are a model. They do not show real threads in the air. They help us show the direction and strength of the field."
+    ],
+    "remember": "Field lines run from north to south, and the closer they are, the stronger the field.",
+    "a": {
+      "q": "Field lines around a bar magnet are packed closely near its ends and spread out far away. What does this show?",
+      "opts": [
+        "The field is stronger near the ends than far away",
+        "The field is weaker near the ends than far away",
+        "The field only exists where the lines are drawn",
+        "The field is the same strength everywhere"
+      ],
+      "why": "Lines that are close together show a strong field, so the field is strongest near the ends. The lines are a model, so the field is not limited to the places where lines are drawn.",
+      "clue": "Think about what close lines mean."
+    },
+    "b": {
+      "d": 2,
+      "q": "Sam places a small compass near a bar magnet and moves it away. The compass needle reacts less and less. What best explains this?",
+      "opts": [
+        "The magnet's field gets weaker further from the magnet",
+        "The magnet's field gets stronger further from the magnet",
+        "The magnet's field stops at the edge of the table",
+        "The compass needle runs out of magnetic force"
+      ],
+      "why": "The field is strongest close to the magnet, so the compass feels a smaller force as it moves away. The field does not get stronger with distance.",
+      "clue": "Where are field lines closest together?"
+    }
+  },
+  "sci-electromagnets": {
+    "title": "Electromagnets",
+    "card": [
+      "An electric current in a wire makes a magnetic field around the wire. Winding the wire into a coil makes this field stronger, and the coil acts like a bar magnet.",
+      "This magnet works only while current flows. Switch the current off and the magnetism stops, or almost stops.",
+      "An electromagnet is made stronger by adding more turns of wire to the coil, by increasing the current, or by putting an iron core inside the coil.",
+      "Electromagnets are useful because they can be switched on and off and their strength can be changed. A scrapyard crane uses one to lift scrap steel and then drop it."
+    ],
+    "remember": "Current in a coil makes a magnet that can be switched off, and more turns, more current or an iron core make it stronger.",
+    "a": {
+      "q": "Which change would make an electromagnet weaker?",
+      "opts": [
+        "Lowering the current in the coil",
+        "Adding an iron core to the coil",
+        "Winding more turns into the coil",
+        "Keeping the current switched on for longer"
+      ],
+      "why": "A smaller current gives a weaker magnetic field, so the electromagnet is weaker. An iron core and more turns both make it stronger, and leaving the current on does not change its strength.",
+      "clue": "Think about what makes the magnetic field in the coil."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom wants a scrapyard crane magnet to drop its load of steel on cue. Which feature of an electromagnet lets him do this?",
+      "opts": [
+        "Its magnetism stops when the current is switched off",
+        "Its magnetism gets stronger with a longer wire",
+        "Its magnetism lasts after the iron core is removed",
+        "Its magnetism changes if the coil is turned around"
+      ],
+      "why": "An electromagnet works only while current flows, so cutting the current releases the steel. The other options describe things the card does not say: a longer wire alone is not what makes it stronger, and the magnetism does not last when the current stops.",
+      "clue": "What happens to the magnet when the power is cut?"
+    }
+  },
+  "sci-levers-pulleys": {
+    "title": "Levers and pulleys",
+    "card": [
+      "A simple machine changes the size or direction of a force. The force you apply is the effort. The weight or resistance you move is the load.",
+      [
+        "Lever",
+        "a rigid bar that turns around a fixed point called the fulcrum. The further the effort is from the fulcrum, the smaller the effort needed to lift a load."
+      ],
+      [
+        "Pulley",
+        "a wheel with a rope around it. A single fixed pulley changes the direction of the force, so you pull down to lift a load up. Adding more rope sections around moving pulleys lets a smaller effort lift the load."
+      ],
+      "A smaller effort has a cost. With a lever or a pulley system, the effort moves through a longer distance than the load does."
+    ],
+    "remember": "Machines trade effort for distance, or change the direction of the force.",
+    "a": {
+      "q": "A worker uses a single fixed pulley on a building site to lift a bucket of bricks by pulling down on the rope. What does the pulley do?",
+      "opts": [
+        "Changes the direction of the force",
+        "Makes the bucket weigh less",
+        "Makes the effort smaller than the load",
+        "Removes the need for any effort"
+      ],
+      "why": "A single fixed pulley lets the worker pull down to lift the load up, so it changes the direction of the force. It does not change the weight of the bucket, and the worker still needs to apply an effort.",
+      "clue": "Think about which way the worker pulls and which way the bucket moves."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya uses a long plank as a lever to lift a heavy rock. The fulcrum is a log under the plank. How can she lift the rock with a smaller effort?",
+      "opts": [
+        "Push down further from the fulcrum",
+        "Push down closer to the fulcrum",
+        "Use a shorter plank with the same log",
+        "Push down for a longer time"
+      ],
+      "why": "The further the effort is from the fulcrum, the smaller the effort needed. Pushing closer to the fulcrum would need a larger effort. The time spent pushing does not change the effort needed.",
+      "clue": "Where along the plank is it easiest to push?"
+    }
+  },
+  "sci-characteristics-living-things": {
+    "title": "Characteristics of living things",
+    "card": [
+      "Scientists use seven characteristics to decide if something is alive. Living things move, respire, are sensitive, grow, reproduce, excrete and need nutrition.",
+      ["Respire", "to release energy from food inside cells. Many living things use oxygen to do this."],
+      [
+        "Sensitive",
+        "able to detect changes in the surroundings and respond. A sunflower turning towards light is an example."
+      ],
+      [
+        "Excrete",
+        "to get rid of wastes made by the body's own cells, such as carbon dioxide. This is different from nutrition, which is taking in food."
+      ]
+    ],
+    "remember": "Living things show seven characteristics. MRS GREN helps you recall them: move, respire, sense, grow, reproduce, excrete, nutrition.",
+    "a": {
+      "q": "A kangaroo breathes out carbon dioxide made by its cells. Which characteristic of living things does this show?",
+      "opts": [
+        "Excretion, removing wastes made by the body",
+        "Nutrition, taking in food for energy",
+        "Sensitivity, detecting a change in surroundings",
+        "Growth, getting bigger over time"
+      ],
+      "why": "Carbon dioxide is a waste made by the body's cells, and getting rid of it is excretion. Nutrition is tempting, but that is taking in food, not removing wastes.",
+      "clue": "Is the kangaroo taking something in or getting rid of something?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Sam leaves a pot plant in a dark cupboard. After a week its stem has bent towards a crack of light under the door. Which characteristic does this show?",
+      "opts": ["Sensitivity", "Reproduction", "Excretion", "Respiration"],
+      "why": "The plant detected light and responded by bending towards it, which is sensitivity. Respiration is tempting because all living things respire, but it is a process inside cells that releases energy, and it does not explain bending towards light.",
+      "clue": "What did the plant detect, and how did it respond?"
+    }
+  },
+  "sci-levels-classification": {
+    "title": "Levels of classification",
+    "card": [
+      "Scientists sort living things into groups so they can be studied and named. The groups get smaller and more specific at each level, and each group sits inside the one above it.",
+      "The seven levels, from biggest to smallest, are kingdom, phylum, class, order, family, genus and species. A memory trick is: King Phillip Came Over For Good Soup.",
+      "Organisms in the same species are very alike. Organisms in the same kingdom share only a few broad features, so a kingdom holds far more organisms than a species does.",
+      "Each organism has a two-part scientific name made of its genus and then its species. The genus has a capital letter, the species does not, and both are written in italics, such as Homo sapiens."
+    ],
+    "remember": "Seven levels from kingdom down to species. The scientific name is genus, then species.",
+    "a": {
+      "q": "Which list puts the levels of classification in order from the biggest group to the smallest?",
+      "opts": [
+        "Class, order, family, genus",
+        "Order, class, family, genus",
+        "Genus, family, order, class",
+        "Class, family, order, genus"
+      ],
+      "why": "Each level sits inside the one above it, so the order from biggest to smallest is class, order, family, genus. The list starting with genus runs the wrong way, from smallest to biggest.",
+      "clue": "Think of the memory trick: King Phillip Came Over For Good Soup."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia studies two organisms. Both are in the same family, but each one is in a different genus. Which statement about them is correct?",
+      "opts": [
+        "They are in the same order but different species",
+        "They are in the same genus but different orders",
+        "They are in the same species but different classes",
+        "They are in the same genus but different families"
+      ],
+      "why": "A family sits inside an order, so two organisms in the same family must share the same order too. A species sits inside a genus, so if their genus is different, their species is different as well. The option saying same genus is wrong, because the genus is a smaller group than the family and they do not share it.",
+      "clue": "Does the family sit inside the order, or the other way round?"
+    }
+  },
+  "sci-adaptations": {
+    "title": "Adaptations",
+    "card": [
+      "An adaptation is a feature or behaviour that helps an organism survive and reproduce in its habitat. Adaptations are passed on to offspring over many generations.",
+      [
+        "Structural",
+        "a body part or shape. A camel's wide, flat feet spread its weight on sand. Many Australian plants have thick, waxy leaves that lose less water."
+      ],
+      [
+        "Behavioural",
+        "an action an organism does. A red kangaroo rests in shade during the heat of the day and feeds at dusk and dawn."
+      ],
+      [
+        "Physiological",
+        "a process inside the body. Some desert animals, such as the spinifex hopping mouse, make very concentrated urine, so they lose little water."
+      ]
+    ],
+    "remember": "Adaptations help survival: structural is a body part, behavioural is an action, physiological is an inside process.",
+    "a": {
+      "q": "A lizard in the Australian desert buries itself in cool sand during the hottest part of the day. What type of adaptation is this?",
+      "opts": [
+        "Behavioural, because it is an action the lizard does",
+        "Structural, because the lizard uses its body to dig",
+        "Physiological, because it helps the lizard control its heat",
+        "Structural, because the sand changes the lizard's shape"
+      ],
+      "why": "Burying itself is something the lizard does, so it is a behavioural adaptation. Digging uses the body, but a structural adaptation is a body part or shape, not an action.",
+      "clue": "Is it a body part, an action, or a process inside the body?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A desert plant in central Australia has leaves that are small, thick and covered in wax. Which statement best explains how this helps it survive?",
+      "opts": [
+        "It is a structural adaptation that reduces water loss",
+        "It is a behavioural adaptation that reduces water loss",
+        "It is a physiological adaptation that reduces water loss",
+        "It is a structural adaptation that increases water uptake"
+      ],
+      "why": "Leaf size, thickness and wax are parts of the plant's body, so they are structural. They cut water lost from the leaves. Increasing water uptake is wrong, because these features act on the leaves, not on taking in water.",
+      "clue": "Look at what the leaves are like, and what water does in dry places."
+    }
+  },
+  "sci-aboriginal-torres-strait-islander-2": {
+    "title": "Aboriginal and Torres Strait Islander classification",
+    "card": [
+      "Aboriginal and Torres Strait Islander Peoples have classified plants and animals for many thousands of years. Their systems come from deep knowledge of Country, built up and passed on over generations.",
+      ["Uses", "a plant or animal can be grouped by how it is used, such as for food, medicine, tools or shelter."],
+      [
+        "Forms",
+        "a plant or animal can be grouped by how it looks, such as its shape, size, colour, or the kind of leaves, bark, fur or scales it has."
+      ],
+      [
+        "Functions",
+        "a plant or animal can be grouped by the role it plays, such as a plant whose flowering shows that a food source is ready or a season is changing."
+      ]
+    ],
+    "remember": "Living things can be grouped by what they are used for, how they look and the role they play, using knowledge of Country.",
+    "a": {
+      "q": "A community groups some plants together because their leaves are used to treat skin sores. Which kind of grouping is this?",
+      "opts": ["By use", "By form", "By scientific name", "By kingdom"],
+      "why": "The plants are grouped by what people use them for, which is medicine. Grouping by form would depend on how the plants look, such as their shape or colour, not on what they are used for.",
+      "clue": "Think about what people do with the leaves."
+    },
+    "b": {
+      "d": 3,
+      "q": "Elders teach that when a certain tree flowers, a type of fish is ready to be caught nearby. Which kind of grouping does this show?",
+      "opts": [
+        "By function: the tree's role as a sign of the season",
+        "By use: the tree is used as a tool to catch fish",
+        "By form: the tree and the fish have a similar shape",
+        "By scientific name: the tree and fish share a genus"
+      ],
+      "why": "The tree is linked to the fish by the role its flowering plays, as a sign that a season has come and a food source is ready. That is grouping by function. It is not grouping by use, because the tree itself is not used for food, medicine, tools or shelter here.",
+      "clue": "Ask what the flowering tells people, not what the tree is made into."
+    }
+  },
+  "sci-cell-theory-microscope": {
+    "title": "Cell theory and the microscope",
+    "card": [
+      "A cell is the smallest unit that can carry out the jobs of life, such as using food, growing and getting rid of wastes.",
+      "Cell theory has three parts. All living things are made of one or more cells. Cells are the basic unit of life. New cells come only from cells that already exist.",
+      "Most cells are too small to see with the eye alone. A microscope uses lenses to make a small object look bigger, so we can see cells.",
+      "A light microscope has an eyepiece lens and an objective lens. Total magnification = eyepiece magnification × objective magnification. A 10× eyepiece with a 40× objective gives 400×."
+    ],
+    "remember": "Living things are made of cells, and cells come from cells. Microscopes let us see them.",
+    "a": {
+      "q": "Which statement is part of cell theory?",
+      "opts": [
+        "New cells come from cells that already exist",
+        "Cells can only be seen with a microscope",
+        "Only animals and plants are made of cells",
+        "Cells form from non-living material in water"
+      ],
+      "why": "Cell theory says new cells come from existing cells. Needing a microscope is true of most cells, but it is about the tool we use, not part of the theory. Cell theory also says all living things are made of cells, not only animals and plants.",
+      "clue": "Recall the three parts of cell theory on the card."
+    },
+    "b": {
+      "d": 2,
+      "q": "Sam looks at a leaf sample with a 10× eyepiece lens and a 20× objective lens. What is the total magnification?",
+      "opts": ["200×", "30×", "2×", "2000×"],
+      "why": "Total magnification is the eyepiece magnification multiplied by the objective magnification: 10 × 20 = 200×. Adding the two numbers gives 30×, but the lenses work together by multiplying.",
+      "clue": "The two lens powers are multiplied."
+    }
+  },
+  "sci-plant-animal-cells": {
+    "title": "Plant and animal cells",
+    "card": [
+      [
+        "Both cells",
+        "Plant and animal cells both have a cell membrane, cytoplasm, a nucleus and mitochondria. The membrane controls what enters and leaves. The nucleus holds the cell's instructions."
+      ],
+      [
+        "Plant cells only",
+        "Plant cells also have a cell wall, chloroplasts and a large vacuole. The wall is a stiff layer outside the membrane that gives support. The vacuole stores water and other substances."
+      ],
+      [
+        "Mitochondria",
+        "Mitochondria release energy from food for the cell to use. Plant and animal cells both have them."
+      ],
+      [
+        "Chloroplasts",
+        "Chloroplasts make food for the plant cell. They are found in plant cells but not in animal cells."
+      ]
+    ],
+    "remember": "Plant cells have everything animal cells have, plus a cell wall, chloroplasts and a large vacuole.",
+    "a": {
+      "q": "Which part is found in plant cells but not in animal cells?",
+      "opts": ["Chloroplast", "Mitochondrion", "Nucleus", "Cell membrane"],
+      "why": "Chloroplasts make food and are found only in plant cells. Mitochondria are the tempting choice, but both plant and animal cells have them to release energy.",
+      "clue": "Which part makes food?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya looks at a cell from a leaf and a cell from her cheek. Both cells release energy from food. Which part does this job in both?",
+      "opts": ["Mitochondria", "Chloroplasts", "The nucleus", "The cell wall"],
+      "why": "Mitochondria release energy and are in both plant and animal cells. Chloroplasts make food rather than release energy, and they are only in plant cells such as the leaf cell, so they cannot do the job in her cheek cell.",
+      "clue": "Which part is in both types of cell and releases energy?"
+    }
+  },
+  "sci-bacterial-fungal-cells": {
+    "title": "Bacterial and fungal cells",
+    "card": [
+      [
+        "Bacterial cell",
+        "A bacterial cell is very small and has no nucleus. Its genetic material floats loose in the cytoplasm."
+      ],
+      [
+        "Fungal cell",
+        "A fungal cell has a nucleus. It has no chloroplasts, so it cannot make its own food as plants do."
+      ],
+      "Both kinds of cell have a cell membrane and cytoplasm. Fungal cells and most bacterial cells also have a cell wall, so a cell wall does not tell them apart.",
+      "The nucleus is the main difference: fungal cells have one, and bacterial cells do not. Yeast is a fungus that is a single cell, while mushrooms are fungi made of many cells."
+    ],
+    "remember": "Bacteria have no nucleus. Fungi have a nucleus but no chloroplasts.",
+    "a": {
+      "q": "Which structure do fungal cells have but bacterial cells do not?",
+      "opts": ["A nucleus", "A cell membrane", "Cytoplasm", "A chloroplast"],
+      "why": "Fungal cells have a nucleus, while bacterial cells have none. A cell membrane and cytoplasm are found in both, and chloroplasts are found in neither, so none of these is the difference.",
+      "clue": "Think about where each cell keeps its genetic material."
+    },
+    "b": {
+      "d": 3,
+      "q": "Lena looks at a drop of fermenting fruit juice under a microscope. She sees single cells, each with a cell wall and a nucleus but no chloroplasts. What are they most likely to be?",
+      "opts": ["Fungal cells", "Bacterial cells", "Plant cells", "Animal cells"],
+      "why": "A single cell with a nucleus and a cell wall but no chloroplasts matches a fungus such as yeast. Bacterial cells are tempting, since most of them have a cell wall too, but they have no nucleus. Plant cells have chloroplasts, and animal cells have no cell wall.",
+      "clue": "Which feature tells a fungal cell apart from a bacterial one?"
+    }
+  },
+  "sci-specialised-cells-tissues-organs": {
+    "title": "Specialised cells, tissues and organs",
+    "card": [
+      "In many-celled organisms, cells take on special shapes for special jobs. This is called specialisation. A specialised cell has a structure that suits its job.",
+      ["Nerve cell", "long and thin, with branches at the ends. This shape helps it carry messages around the body."],
+      ["Red blood cell", "small and disc-shaped, and it carries oxygen around the body in the blood."],
+      "A group of similar cells that do the same job is a tissue, such as muscle tissue. Different tissues working together form an organ, such as the heart or the stomach."
+    ],
+    "remember": "Cells are specialised for a job, similar cells make a tissue, and different tissues make an organ.",
+    "a": {
+      "q": "What is a tissue?",
+      "opts": [
+        "A group of similar cells that do the same job",
+        "A single cell with a special shape",
+        "A group of organs that work together",
+        "A cell that carries messages around the body"
+      ],
+      "why": "A tissue is made of many similar cells doing the same job. A single specialised cell is not a tissue, because a tissue is a group of cells. Organs are made of tissues, not the other way around.",
+      "clue": "Think about how many cells there are, and how alike they are."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dani reads that the stomach has muscle tissue, gland tissue and other tissues that work together to digest food. What is the stomach?",
+      "opts": [
+        "An organ, because it is made of different tissues",
+        "A tissue, because it is made of many cells",
+        "A specialised cell, because it has one job",
+        "A tissue, because all its cells look the same"
+      ],
+      "why": "The stomach is made of different tissues working together, so it is an organ. It is not a tissue, because a tissue is made of similar cells and the stomach has more than one kind of tissue.",
+      "clue": "Count how many kinds of tissue the stomach has."
+    }
+  },
+  "sci-biotic-abiotic-factors-nsw": {
+    "title": "Biotic and abiotic factors",
+    "card": [
+      [
+        "Biotic factor",
+        "a living part of an ecosystem, or something made by living things. Plants, animals, fungi and bacteria are biotic."
+      ],
+      ["Abiotic factor", "a non-living part of an ecosystem. Temperature, water, light, soil and wind are abiotic."],
+      "Both kinds affect how many of an organism can live in a place. A lack of water can shrink a plant population. More predators can shrink a prey population.",
+      "Biotic and abiotic factors also affect each other. Soil type, an abiotic factor, helps decide which plants grow, and those plants are biotic."
+    ],
+    "remember": "Living parts are biotic, non-living parts are abiotic, and both affect population sizes.",
+    "a": {
+      "q": "A student lists what she finds in a rock pool on the NSW coast. Which item on her list is abiotic?",
+      "opts": [
+        "The saltiness of the water",
+        "The snails on the rocks",
+        "The seaweed washed in by waves",
+        "The bacteria coating the rocks"
+      ],
+      "why": "Saltiness is a property of the water, which is non-living, so it is abiotic. Seaweed washed in by waves is tempting because it may no longer be growing, but it was made by a living thing, so it is biotic.",
+      "clue": "Which one is not alive and not made by living things?"
+    },
+    "b": {
+      "d": 3,
+      "q": "After a dry summer near Dubbo, a farm pond shrinks and fewer frogs survive. Which statement about this is correct?",
+      "opts": [
+        "Water level, an abiotic factor, lowered the frog numbers",
+        "The frogs, a biotic factor, lowered the water level",
+        "Water level, a biotic factor, lowered the frog numbers",
+        "The frogs, an abiotic factor, lowered the water level"
+      ],
+      "why": "Water is non-living, so water level is an abiotic factor, and its drop meant fewer frogs survived. Calling water level biotic is tempting because the pond holds living things, but the water itself is not alive.",
+      "clue": "Decide whether water and frogs are living, then see which one caused the change."
+    }
+  },
+  "sci-food-chains-webs-energy": {
+    "title": "Food chains, webs and energy pyramids",
+    "card": [
+      "A food chain shows how energy passes from one living thing to the next. It starts with a producer, such as grass, which makes its own food using sunlight. Consumers get energy by eating other living things.",
+      "A food web joins many food chains together. Most animals eat more than one kind of food, so a web shows these links better than a single chain.",
+      "Only a small part of the energy at one level passes to the next. The rest is used for living or lost as heat. So an energy pyramid is widest at the producers and narrows towards the top.",
+      "Decomposers, such as fungi and bacteria, break down dead plants and animals. They return matter to the soil, where plants can use it again."
+    ],
+    "remember": "Energy passes along food chains, with only a small part reaching each next level. Decomposers return matter to the soil.",
+    "a": {
+      "q": "A pyramid shows 10 000 units of energy in grass but far less in the hawks at the top. What explains this?",
+      "opts": [
+        "Most energy at each level is used or lost as heat",
+        "Hawks need less food than any animal below them",
+        "Grass passes all of its energy to the next level",
+        "Decomposers take energy from the top level first"
+      ],
+      "why": "Most energy at each level is used for living or lost as heat, so only a small part passes up to the next level. Grass does not pass on all of its energy, because much of it is used by the grass itself.",
+      "clue": "Think about what happens to the energy at each level."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a paddock near Orange, grass is eaten by grasshoppers, which are eaten by lizards, which are eaten by hawks. A farmer finds that a dead lizard has broken down and the soil beneath it is richer. Which living things most directly caused this?",
+      "opts": [
+        "Fungi and bacteria acting as decomposers",
+        "Hawks acting as top consumers",
+        "Grasshoppers acting as consumers",
+        "Grass acting as a producer"
+      ],
+      "why": "Decomposers break down dead animals and return matter to the soil. Grass is a producer and makes food from sunlight, but it does not break down dead animals.",
+      "clue": "Which group breaks down dead things?"
+    }
+  },
+  "sci-introduced-species": {
+    "title": "Introduced species",
+    "card": [
+      "An introduced species is a species brought into an ecosystem where it did not live before. People bring them in on purpose or by accident.",
+      "Native species are the ones that belong in an ecosystem. An introduced species can change their numbers, because the native species have not lived alongside it before.",
+      [
+        "Competing",
+        "the introduced species uses the same food, water or shelter as a native species. European rabbits eat plants that native animals also need."
+      ],
+      [
+        "Eating or poisoning",
+        "the introduced species preys on native species or is poisonous to them. Cane toads carry poison, and native predators that eat them can die."
+      ]
+    ],
+    "remember": "An introduced species can change native populations by competing with, eating or poisoning them.",
+    "a": {
+      "q": "What is an introduced species?",
+      "opts": [
+        "A species brought into a place it did not live before",
+        "A species that has lived in a place for a very long time",
+        "A species that has become rare in a place",
+        "A species that feeds only on the plants of a place"
+      ],
+      "why": "An introduced species is one that has been brought into a new ecosystem by people, on purpose or by accident. A native species belongs there, so a species that has lived there for a long time is not introduced.",
+      "clue": "Think about where the species lived before."
+    },
+    "b": {
+      "d": 3,
+      "q": "Cane toads are poisonous. In a billabong in the Northern Territory, many native goannas die after eating cane toads. How have the toads changed the goanna population?",
+      "opts": [
+        "By poisoning them, which lowers their numbers",
+        "By competing with them for food, which lowers their numbers",
+        "By eating them, which lowers their numbers",
+        "By sharing the habitat, which raises their numbers"
+      ],
+      "why": "The goannas die because the toads carry poison, so the toads change the population by poisoning. Competing is a tempting answer, but it means using the same food or shelter, and the goannas here are dying from eating the toads, not from a shortage of resources.",
+      "clue": "Look at what happens to the goannas after they eat the toads."
+    }
+  },
+  "sci-threatened-species-australia": {
+    "title": "Threatened species in Australia",
+    "card": [
+      "A threatened species is at risk of dying out. A vulnerable species is likely to become endangered if the threats continue. An endangered species is at a very high risk of dying out in the wild.",
+      "Habitat loss is a major threat. Clearing land for farms, cities and roads removes the food and shelter that species need.",
+      "Other threats include introduced species, such as foxes and feral cats that eat native animals, disease, and climate change, which alters the conditions species live in.",
+      "Australia has one of the world's highest rates of mammal extinction. Many of its native mammals live nowhere else, so when they are lost they are lost from the whole world."
+    ],
+    "remember": "Habitat loss, introduced species, disease and climate change threaten species. Australia has lost many mammals.",
+    "a": {
+      "q": "A species of small marsupial is likely to become endangered if its threats continue. How is it best described?",
+      "opts": ["Vulnerable", "Extinct", "Abundant", "Introduced"],
+      "why": "A vulnerable species is likely to become endangered if threats continue. An extinct species has already died out completely, so it does not fit.",
+      "clue": "The species is at risk, but it has not yet reached the highest level of risk."
+    },
+    "b": {
+      "d": 2,
+      "q": "A bushland area near Dubbo is cleared for new farms. A native possum that lived only in that bushland now has far fewer places to live and find food. Which threat does this show?",
+      "opts": ["Habitat loss", "Disease", "Climate change", "An introduced predator"],
+      "why": "Clearing the bushland removed the food and shelter the possum needs, which is habitat loss. The case does not mention a disease, a change in climate or a new predator.",
+      "clue": "What was taken away from the possum?"
+    }
+  },
+  "sci-changes-state-nsw": {
+    "title": "Changes of state",
+    "card": [
+      [
+        "Heating",
+        "Melting (solid to liquid), evaporating and boiling (liquid to gas) happen when particles gain energy. As a substance heats up, its particles speed up. During the change of state, the energy breaks them free from their neighbours."
+      ],
+      [
+        "Cooling",
+        "Condensing (gas to liquid) and freezing (liquid to solid) happen when particles lose energy. As a substance cools, its particles slow down. During the change of state, they pull closer together."
+      ],
+      "Evaporation happens at the surface of a liquid at many temperatures. Boiling happens throughout the liquid at its boiling point.",
+      "On a heating graph, the temperature stays level while a substance changes state. The energy added is used to separate particles, not to speed them up."
+    ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A heating graph of temperature against time. The line rises, goes flat during melting, rises again, goes flat during boiling, then rises again.",
+        "x": {"min": 0, "max": 10, "label": "Time"},
+        "y": {"min": 0, "max": 10, "label": "Temperature"},
+        "items": [
+          {"type": "curve", "id": "T", "points": [[0, 1], [2, 3], [4, 3], [6, 7], [8, 7], [10, 9]]},
+          {"type": "text", "at": [3, 3], "label": "melting", "pos": "below-right"},
+          {"type": "text", "at": [7, 7], "label": "boiling", "pos": "below-right"}
+        ]
+      }
+    },
+    "remember": "Gaining energy lets particles move apart. Losing energy lets them move closer. The temperature stays level during a change of state.",
+    "a": {
+      "q": "Steam from a kettle touches a cold window and turns into drops of water. What happens to the particles?",
+      "opts": [
+        "They lose energy and move closer together",
+        "They gain energy and move closer together",
+        "They lose energy and move further apart",
+        "They gain energy and move further apart"
+      ],
+      "why": "Condensing is a gas changing to a liquid. The particles lose energy to the cold window and pull closer together. Gaining energy would make them move apart, as in boiling.",
+      "clue": "The cold window takes energy away from the particles."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam heats ice and records its temperature. While the ice is melting, the thermometer reading stays at 0 °C. What explains this?",
+      "opts": [
+        "The energy added is used to separate particles",
+        "The ice has stopped gaining any energy",
+        "The particles are vibrating faster and faster",
+        "The heater is not warm enough to heat ice"
+      ],
+      "why": "During a change of state, the added energy is used to pull particles apart rather than speed them up, so the temperature stays level. The ice is still gaining energy, so the second option is wrong. If the particles were speeding up, the temperature would rise.",
+      "clue": "Think about where the added energy goes during melting."
+    }
+  },
+  "sci-density": {
+    "title": "Density",
+    "card": [
+      "Density tells you how much mass is packed into a volume. Density = mass ÷ volume. It is often measured in g/cm³.",
+      "For example, 200 g of a material that takes up 50 cm³ has a density of 200 ÷ 50 = 4 g/cm³.",
+      "The volume of an irregular object can be found by displacement: put it in water, and the rise in water level is its volume. Since 1 mL = 1 cm³, a 10 mL rise means a volume of 10 cm³.",
+      "An object floats on a liquid if it is less dense than the liquid. It sinks if it is denser. Water has a density of about 1 g/cm³."
+    ],
+    "remember": "Density is mass ÷ volume. Less dense than the liquid means it floats.",
+    "a": {
+      "q": "A rock has a mass of 90 g and a volume of 30 cm³. What is its density?",
+      "opts": ["3 g/cm³", "0.33 g/cm³", "60 g/cm³", "120 g/cm³"],
+      "why": "Density = mass ÷ volume = 90 ÷ 30 = 3 g/cm³. Dividing volume by mass gives 0.33, which is the wrong way round.",
+      "clue": "Divide mass by volume."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ana drops a lumpy stone into a measuring cylinder of water. The water rises from 40 mL to 55 mL, and the stone's mass is 30 g. Will it float in water?",
+      "opts": [
+        "No, its density is 2 g/cm³, which is more than water",
+        "Yes, its density is 2 g/cm³, which is more than water",
+        "No, its density is 0.5 g/cm³, which is less than water",
+        "Yes, its density is 0.5 g/cm³, which is less than water"
+      ],
+      "why": "The volume is 55 - 40 = 15 mL, which is 15 cm³. Density = 30 ÷ 15 = 2 g/cm³. This is more than water's 1 g/cm³, so the stone sinks. Dividing volume by mass gives 0.5, which is the wrong way round.",
+      "clue": "The rise in water level is the stone's volume."
+    }
+  },
+  "sci-solutes-solvents-solutions": {
+    "title": "Solutes, solvents and solutions",
+    "card": [
+      ["Solute", "the substance that dissolves, such as salt or sugar."],
+      ["Solvent", "the substance that does the dissolving. Water is the solvent in most everyday solutions."],
+      [
+        "Solution",
+        "the mixture that forms when a solute dissolves in a solvent. The solute spreads out evenly, so the solution looks the same all through."
+      ],
+      "A substance that dissolves in a solvent is soluble. One that does not dissolve is insoluble. Sugar is soluble in water, but sand is insoluble in water."
+    ],
+    "remember": "Solute plus solvent makes a solution. Soluble means it dissolves.",
+    "a": {
+      "q": "Mia stirs a spoon of sugar into a glass of water until the sugar disappears. Which part of the solution is the water?",
+      "opts": ["The solvent", "The solute", "The solution", "The soluble part"],
+      "why": "Water does the dissolving, so it is the solvent. The sugar is the solute because it is the substance that dissolves. The solution is the whole mixture of both.",
+      "clue": "Which substance does the dissolving?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom stirs sand into one glass of water and salt into another. The salt vanishes and the sand sinks. What does this show?",
+      "opts": [
+        "Salt is soluble in water and sand is insoluble",
+        "Salt is insoluble in water and sand is soluble",
+        "Salt is the solvent and the water is the solute",
+        "Both salt and sand have made a solution with water"
+      ],
+      "why": "The salt dissolved, so it is soluble, and it makes a solution with the water. The sand did not dissolve, so it is insoluble. Sinking to the bottom shows it stayed as separate grains and no solution formed.",
+      "clue": "Which substance dissolved, and which did not?"
+    }
+  },
+  "sci-solubility-temperature": {
+    "title": "Solubility and temperature",
+    "card": [
+      "Solubility is how much solute dissolves in a set amount of solvent, such as 100 g of water. A solute that is very soluble has a high solubility.",
+      "Solubility depends on the solute, the solvent and the temperature. A different solute can have a different solubility in the same water.",
+      "For most solids, solubility rises as the water gets hotter. More sugar dissolves in 100 g of hot water than in 100 g of cold water.",
+      "To compare solubility at different temperatures, use the same solute and the same amount of solvent. Change only the temperature."
+    ],
+    "remember": "Solubility is how much dissolves in a set amount of solvent. For most solids it rises with temperature.",
+    "a": {
+      "q": "Which statement best describes the solubility of a solid?",
+      "opts": [
+        "How much of it dissolves in a set amount of solvent",
+        "How fast it dissolves when the water is stirred",
+        "How much solution forms when it is added to water",
+        "How much solvent is needed to see it disappear"
+      ],
+      "why": "Solubility is the amount of solute that dissolves in a set amount of solvent. The stirring option is wrong because it describes how fast a solid dissolves, not how much of it can dissolve.",
+      "clue": "Stirring changes one of these things but not solubility."
+    },
+    "b": {
+      "d": 2,
+      "q": "Ravi stirs copper sulfate into 100 g of cold water until no more dissolves. He then heats the water to 60 °C. For most solids, what would he expect to happen?",
+      "opts": [
+        "More copper sulfate can dissolve in the hot water",
+        "Less copper sulfate can dissolve in the hot water",
+        "The same amount of copper sulfate can dissolve in it",
+        "The dissolved copper sulfate comes back out as a solid"
+      ],
+      "why": "Copper sulfate behaves like most solids: its solubility rises as the water gets hotter, so more can dissolve at 60 °C. The option saying less dissolves gets the direction of the change backwards.",
+      "clue": "Look at what the card says changes for most solids as water warms."
+    }
+  },
+  "sci-dilute-concentrated-saturated": {
+    "title": "Dilute, concentrated and saturated",
+    "card": [
+      [
+        "Dilute",
+        "A solution with only a little solute for the amount of solvent. A drop of cordial in a large glass of water is dilute."
+      ],
+      [
+        "Concentrated",
+        "A solution with a lot of solute for the amount of solvent. Cordial made with only a little water is concentrated."
+      ],
+      [
+        "Saturated",
+        "A solution that can dissolve no more solute at that temperature. Any extra solute added stays undissolved and settles at the bottom."
+      ],
+      "Dilute and concentrated compare how much solute is present. Saturated tells you the limit has been reached."
+    ],
+    "remember": "Dilute has little solute, concentrated has a lot, and saturated has reached its limit at that temperature.",
+    "a": {
+      "q": "Sam stirs spoonfuls of salt into water. After the fifth spoonful, extra salt stays on the bottom of the glass however long he stirs. What is the solution?",
+      "opts": ["Saturated", "Dilute", "Insoluble", "Unsaturated"],
+      "why": "The water cannot dissolve any more salt at that temperature, so the solution is saturated. It is not dilute, because it holds a lot of salt.",
+      "clue": "What does undissolved solid left on the bottom tell you about the limit?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya adds one grain of sugar to a large jug of water and stirs until it disappears. Which describes her solution?",
+      "opts": [
+        "Dilute, as it has very little solute",
+        "Concentrated, as the sugar dissolved fully",
+        "Saturated, as the sugar dissolved fully",
+        "Concentrated, as the jug holds a lot of water"
+      ],
+      "why": "Only a tiny amount of solute is in a lot of solvent, so the solution is dilute. Dissolving fully does not make it saturated, because it could still dissolve much more sugar.",
+      "clue": "Compare the amount of sugar with the amount of water."
+    }
+  },
+  "sci-pure-substances-mixtures-nsw": {
+    "title": "Pure substances and mixtures",
+    "card": [
+      [
+        "Pure substance",
+        "Elements and compounds are both pure substances. Each has only one kind of particle. Distilled water is pure, because every particle in it is a water particle."
+      ],
+      [
+        "Mixture",
+        "It has two or more substances mixed together but not chemically joined. Each substance keeps its own properties."
+      ],
+      "Because the substances in a mixture are not joined, they can be separated by physical means. Examples are sieving, picking out pieces or filtering.",
+      "A pure substance cannot be split into other substances by physical means. Air, sea water and soil are mixtures."
+    ],
+    "remember": "Pure: one kind of particle. Mixture: two or more, and a physical method can separate them.",
+    "a": {
+      "q": "Which one of these samples is a pure substance?",
+      "opts": ["A sample of distilled water", "A glass of sea water", "A spoonful of garden soil", "A sample of clean air"],
+      "why": "Distilled water has only one kind of particle, so it is pure. Sea water has salt mixed in with the water, so it is a mixture even though it looks clear.",
+      "clue": "Look for the one with only one kind of particle."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia mixes sand and iron filings in a tray. She then uses a magnet to lift out the iron. What does this show?",
+      "opts": [
+        "A mixture formed, so a physical method can separate it",
+        "A pure substance formed, so a magnet can separate it",
+        "They were joined, so the magnet broke them apart",
+        "A mixture formed, so only a chemical change can split it"
+      ],
+      "why": "The sand and iron were only mixed, not joined, so a magnet could pull them apart. Using a magnet is a physical method. Mixing did not make a pure substance, because two kinds of particle were still present.",
+      "clue": "Did mixing join the two substances or leave each one as it was?"
+    }
+  },
+  "sci-filtration": {
+    "title": "Filtration",
+    "card": [
+      [
+        "Filtration",
+        "a way to separate an undissolved solid from a liquid. The mixture is poured through filter paper, which has tiny holes. The liquid passes through and the solid particles are caught."
+      ],
+      [
+        "Filtrate and residue",
+        "The liquid that passes through is the filtrate. The solid left on the paper is the residue."
+      ],
+      [
+        "Sieving",
+        "works in a similar way. A sieve has holes that let a liquid or small pieces through. Solid pieces too big for the holes are caught."
+      ],
+      [
+        "Drinking water",
+        "Filtration is used to treat drinking water. The water passes through layers such as sand, which catch solid particles. A dissolved solid is spread out as tiny particles, so filtering does not catch it."
+      ]
+    ],
+    "remember": "Filtration catches undissolved solids in a filter. Sieving catches pieces too big for the holes.",
+    "a": {
+      "q": "A mix of sand and water is poured through filter paper in a funnel. What stays on the paper?",
+      "opts": [
+        "The sand, as the residue",
+        "The water, as the filtrate",
+        "The sand, as the filtrate",
+        "The water, as the residue"
+      ],
+      "why": "The sand is an undissolved solid, so the holes in the paper are too small for it to pass. It stays on the paper as the residue. The water that passes through is the filtrate, so the option with water as the filtrate has the wrong substance on the paper.",
+      "clue": "Which part of the mixture is too big to pass through the holes?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia stirs salt into a cup of water until it vanishes. She then pours the cup through filter paper. What is most likely to happen?",
+      "opts": [
+        "The salt water passes through and no salt is caught",
+        "The salt is caught on the paper as the residue",
+        "The water is caught and only the salt passes through",
+        "The salt settles so Mia can sieve the water off"
+      ],
+      "why": "The salt has dissolved, so it is spread through the water as tiny particles that pass through the holes in the paper. Nothing is caught. Filtering only catches undissolved solid, so the option about salt left as residue is wrong.",
+      "clue": "Has the salt dissolved or is it still an undissolved solid?"
+    }
+  },
+  "sci-distillation": {
+    "title": "Distillation",
+    "card": [
+      "Distillation separates a liquid from other substances by boiling it. The vapour is then cooled so it turns back into a liquid.",
+      "Cooling vapour into a liquid is called condensing. A condenser is a tube kept cold, so the vapour condenses inside it. The liquid collected is called the distillate.",
+      "Distillation can separate a liquid from a dissolved solid. When salty water is boiled, only the water becomes vapour, and the salt stays behind in the flask.",
+      "Distillation can also separate two liquids that have different boiling points. The liquid with the lower boiling point turns to vapour first and is collected first."
+    ],
+    "remember": "Boil, then cool the vapour. The liquid that boils first is collected first.",
+    "a": {
+      "q": "Salty water is boiled and the vapour is cooled in a condenser. What is collected in the beaker, and what stays in the flask?",
+      "opts": [
+        "Pure water is collected, and salt stays in the flask",
+        "Salt is collected, and water stays in the flask",
+        "Salty water is collected, and nothing stays in the flask",
+        "Water vapour is collected, and salt stays in the flask"
+      ],
+      "why": "The water boils off, is cooled in the condenser and drips into the beaker as liquid water. The salt does not boil, so it stays in the flask. Water vapour is not collected, because it has been cooled back into a liquid.",
+      "clue": "Which part of the mixture turns into vapour?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Liquid X boils at 65 °C and liquid Y boils at 100 °C. A mixture of X and Y is heated slowly and kept at about 70 °C. What is collected from the condenser?",
+      "opts": [
+        "Mostly liquid X, because it boils first",
+        "Mostly liquid Y, because it boils first",
+        "A mix of X and Y, because both are hot",
+        "Nothing, because neither liquid has boiled yet"
+      ],
+      "why": "At 70 °C liquid X is above its boiling point, so it turns to vapour and condenses in the condenser. Liquid Y is below its boiling point of 100 °C, so most of it stays in the flask. Both liquids being warm does not mean both boil.",
+      "clue": "Which liquid has reached its boiling point at 70 °C?"
+    }
+  },
+  "sci-chromatography": {
+    "title": "Chromatography",
+    "card": [
+      "Chromatography separates a mixture of dissolved substances, such as the dyes in an ink. It works well on small amounts of a mixture.",
+      "A spot of the mixture is placed near the bottom of a strip of paper. The bottom edge is stood in a solvent, such as water. The spot must start above the level of the solvent.",
+      "The solvent soaks up the paper and carries the dissolved substances with it. Each substance travels a different distance, so the substances spread out into separate spots or bands.",
+      "A substance that is carried further up the paper has moved faster than one that stays lower down. A pure substance usually gives one spot. A mixture gives more than one."
+    ],
+    "remember": "In chromatography, the solvent carries each substance a different distance up the paper.",
+    "a": {
+      "q": "Why does chromatography separate the dyes in a black ink into different spots?",
+      "opts": [
+        "Each dye is carried a different distance by the solvent",
+        "Each dye dissolves in the paper and stays there",
+        "Each dye evaporates from the paper at its own time",
+        "Each dye is too large to pass through the paper"
+      ],
+      "why": "The solvent moves up the paper and carries each dye with it, but each dye travels a different distance. This spreads them into separate spots. The dyes are not trapped by the paper, because they are carried along by the solvent.",
+      "clue": "Think about what moves up the paper and how far each dye goes."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya tests a green ink on paper. After the solvent has risen, she sees a yellow spot near the top and a blue spot lower down. What does this show?",
+      "opts": [
+        "The ink is a mixture of at least two dyes",
+        "The ink is a single pure dye",
+        "The blue dye is carried faster than the yellow dye",
+        "The solvent has made the ink change colour"
+      ],
+      "why": "Two separate spots mean the ink contains at least two different dyes, so it is a mixture. The yellow dye was carried further, so it moved faster than the blue dye, which is the reverse of the tempting option.",
+      "clue": "Count the spots, then compare how far each one has travelled."
+    }
+  },
+  "sci-aboriginal-torres-strait-islander-3": {
+    "title": "Aboriginal and Torres Strait Islander separation methods",
+    "card": [
+      "Aboriginal and Torres Strait Islander Peoples have used separation methods for tens of thousands of years. They developed them through close knowledge of Country and passed them on through generations.",
+      [
+        "Grinding and sieving",
+        "Some seeds are ground between stones to make flour. The flour can then be shaken or sifted through a woven dish or basket to separate fine flour from larger bits of husk."
+      ],
+      [
+        "Soaking and washing",
+        "Some seeds and nuts contain toxins that can make people sick. Soaking them in water or washing them with water draws out the toxins, so the food is safe to eat."
+      ],
+      "Each method uses a difference in a property. Sieving uses particle size. Soaking and washing use solubility, which is whether a substance dissolves in water: the toxins dissolve and are carried away."
+    ],
+    "remember": "Sieving separates by particle size. Soaking and washing separate by solubility, as the toxins dissolve in water.",
+    "a": {
+      "q": "Why does soaking and washing some seeds in water make them safer to eat?",
+      "opts": [
+        "The toxins dissolve in the water and are washed away",
+        "The water makes the seeds swell so the toxins fall out",
+        "The water changes the toxins into harmless flour",
+        "The water makes the toxins evaporate into the air"
+      ],
+      "why": "The toxins are soluble, so they dissolve in the water and are carried out of the seeds. The water does not make the toxins evaporate: evaporation needs heat, and soaking uses water to dissolve them.",
+      "clue": "Think about what happens to a substance that dissolves in water."
+    },
+    "b": {
+      "d": 2,
+      "q": "Ground seeds are shaken through a woven basket so that fine flour falls through and larger husk pieces stay behind. Which property is used to separate them?",
+      "opts": ["Particle size", "Boiling point", "Colour", "Solubility in water"],
+      "why": "The fine flour is small enough to pass through the gaps in the basket, and the husk pieces are too big. Solubility is used in soaking and washing, but no water is used here.",
+      "clue": "What stops the husk from passing through the gaps?"
+    }
+  },
+  "sci-protons-neutrons-electrons-nsw": {
+    "title": "Protons, neutrons and electrons",
+    "card": [
+      "An atom is the smallest part of an element that still has the properties of that element. At its centre is a tiny core called the nucleus.",
+      "The nucleus holds protons, which have a positive charge, and neutrons, which have no charge.",
+      "Electrons have a negative charge. They move around the nucleus and are far lighter than protons or neutrons.",
+      "A proton and an electron carry equal and opposite charges. A neutral atom has as many electrons as protons, so the charges cancel out."
+    ],
+    "remember": "Positive protons and neutral neutrons sit in the nucleus. Negative electrons move around it, matching the protons in a neutral atom.",
+    "a": {
+      "q": "Which two types of particle make up the nucleus of an atom?",
+      "opts": ["Protons and neutrons", "Protons and electrons", "Neutrons and electrons", "Electrons only"],
+      "why": "Protons and neutrons are the heavier particles that sit in the nucleus. Protons and electrons can seem right because both have a charge, but electrons move around the nucleus rather than sitting in it.",
+      "clue": "Go through the three particles and recall where each one is."
+    },
+    "b": {
+      "d": 3,
+      "q": "A neutral sodium atom has 11 protons. How many electrons does it have, and what is the reason?",
+      "opts": [
+        "11, so the charges cancel out",
+        "11, because electrons sit in the nucleus",
+        "12, so there is one more than the protons",
+        "0, because the atom has no overall charge"
+      ],
+      "why": "A neutral atom has as many negative electrons as positive protons, so 11 electrons cancel the charge of 11 protons. No overall charge does not mean no electrons: it means the charges balance.",
+      "clue": "Neutral means the positive and negative charges are balanced."
+    }
+  },
+  "sci-atomic-number-electron-shells": {
+    "title": "Atomic number and electron shells",
+    "card": [
+      "The atomic number of an element is the number of protons in the nucleus of each of its atoms. Every atom of one element has the same atomic number.",
+      "A neutral atom has equal numbers of protons and electrons. So its atomic number is also its number of electrons.",
+      "Electrons move around the nucleus in shells. In the first 18 elements, the first shell holds up to 2 electrons. The second and third shells each hold up to 8.",
+      "Electrons fill the inner shell first, then the next one. Sodium has atomic number 11, so its electrons are arranged 2, 8, 1."
+    ],
+    "remember": "Atomic number = protons. Electrons fill shells from the inside out, and the shells hold up to 2, 8, 8.",
+    "a": {
+      "q": "A neutral atom of an element has atomic number 7. How many electrons does it have?",
+      "opts": [
+        "7, the same as its protons",
+        "14, double its protons",
+        "0, because electrons are neutral",
+        "8, one more than its protons"
+      ],
+      "why": "The atomic number is the number of protons. A neutral atom has equal numbers of protons and electrons, so it has 7 electrons. Electrons are negative, not neutral, so they are not absent.",
+      "clue": "A neutral atom has equal numbers of two particles."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia is drawing a neutral atom of chlorine, atomic number 17. How should she arrange its electrons in shells?",
+      "opts": ["2, 8, 7", "2, 8, 8", "8, 8, 1", "2, 7, 8"],
+      "why": "Chlorine has 17 protons, so a neutral atom has 17 electrons. The first shell takes 2, the second takes 8, and the remaining 7 go in the third shell. Putting 8 in the third shell gives 18 electrons, which is too many.",
+      "clue": "Fill the inner shells first, then count what is left over."
+    }
+  },
+  "sci-changing-models-atom": {
+    "title": "Changing models of the atom",
+    "card": [
+      [
+        "Dalton",
+        "In the early 1800s, John Dalton pictured atoms as tiny solid balls with nothing inside them. Each element had its own kind of ball."
+      ],
+      [
+        "Thomson",
+        "In 1897, J. J. Thomson found tiny negative particles inside atoms, now called electrons. His model showed an atom as a positive ball with electrons spread through it."
+      ],
+      [
+        "Rutherford",
+        "In 1911, Rutherford's team fired particles at thin gold foil. Most went straight through, but a few bounced back. This showed an atom has a tiny, dense, positive nucleus and is mostly empty space."
+      ],
+      [
+        "Bohr",
+        "In 1913, Niels Bohr said electrons move around the nucleus in set shells. A model changes when new experiments give evidence that it cannot explain."
+      ]
+    ],
+    "remember": "Each new model of the atom was built to fit new experimental evidence.",
+    "a": {
+      "q": "Why did scientists change the model of the atom over time?",
+      "opts": [
+        "New experiments gave evidence the old model could not fit",
+        "Older scientists were proven to have made no observations",
+        "Atoms themselves changed their structure over the years",
+        "Newer models were simply drawn with more detail and colour"
+      ],
+      "why": "Scientists changed the model when new experiments gave results it could not explain. For example, Thomson found electrons inside atoms, which Dalton's solid ball could not explain. Atoms themselves did not change, only our ideas about them.",
+      "clue": "Think about what experiments produce."
+    },
+    "b": {
+      "d": 3,
+      "q": "In Rutherford's gold foil experiment, most particles passed straight through the foil but a few bounced back. What did this show?",
+      "opts": [
+        "Atoms are mostly empty space with a tiny dense nucleus",
+        "Atoms are solid balls with nothing inside them",
+        "Atoms are positive balls with electrons spread through",
+        "Electrons move around the nucleus in set shells"
+      ],
+      "why": "Most particles went through, so atoms are mostly empty space. A few bounced back, so there must be a tiny, dense, positive centre. The solid ball and spread-out electron models could not explain these results.",
+      "clue": "What would make a few particles bounce back?"
+    }
+  },
+  "sci-metals-non-metals-metalloids": {
+    "title": "Metals, non-metals and metalloids",
+    "card": [
+      [
+        "Metals",
+        "Metals are shiny, conduct heat and electricity, and can be bent or hammered without breaking. Copper and iron are metals."
+      ],
+      [
+        "Non-metals",
+        "Most non-metals are dull and do not conduct heat or electricity well. Solid ones tend to break when hit. Sulfur and oxygen are non-metals."
+      ],
+      [
+        "Metalloids",
+        "Metalloids have some properties of each group. Silicon is shiny like a metal, but it conducts electricity only a little and it is brittle."
+      ],
+      "The properties of a material decide how it is used. Copper is used in wires because it conducts electricity and bends easily."
+    ],
+    "remember": "Metals conduct and bend, most non-metals do not, and metalloids sit in between.",
+    "a": {
+      "q": "A solid element is dull, snaps when hit with a hammer and does not conduct electricity. What is it most likely to be?",
+      "opts": ["A non-metal", "A metal", "A metalloid", "A metal that has rusted"],
+      "why": "Dull, brittle and not conducting are properties of most non-metals. A metal would be shiny and would bend, and a metalloid would conduct a little.",
+      "clue": "Think about which group does not conduct."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya needs a material for the handle of a cooking pot. It must not carry heat to her hand. Which property should she look for?",
+      "opts": ["Poor conduction of heat", "Good conduction of heat", "Shininess", "Ability to bend without breaking"],
+      "why": "A handle should stop heat reaching the hand, so the material must conduct heat poorly. Metals conduct heat well, which is why they suit the pot itself but not the handle.",
+      "clue": "The handle should do the opposite of the pot."
+    }
+  },
+  "sci-element-symbols-compounds": {
+    "title": "Element symbols and compounds",
+    "card": [
+      "Each element has a symbol of one or two letters. The first letter is a capital and the second, if there is one, is small. Carbon is C and calcium is Ca.",
+      "Some symbols come from older names, often Latin. Sodium is Na and iron is Fe.",
+      "A compound is made of two or more different elements joined together. Its formula shows which elements are in it.",
+      "A small number after a symbol tells how many atoms of that element are in the formula. In CO2 there is one carbon atom and two oxygen atoms. With no number, there is one atom."
+    ],
+    "remember": "A symbol names an element. A formula uses symbols and small numbers to show what a compound is made of.",
+    "a": {
+      "q": "Which formula shows a compound with one sulfur atom and three oxygen atoms?",
+      "opts": ["SO3", "S3O", "S3O3", "SO"],
+      "why": "S is sulfur and O is oxygen. The small number 3 after O gives three oxygen atoms, and no number after S means one sulfur atom. S3O has the numbers on the wrong atoms.",
+      "clue": "The small number goes after the symbol it counts."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dani reads the formula CaCO3 on a bag of garden lime. Which statement about CaCO3 is correct?",
+      "opts": [
+        "It is a compound with three elements, and three oxygen atoms",
+        "It is an element with two letters in its symbol",
+        "It is a compound with two elements, and three calcium atoms",
+        "It is a compound with three elements, and three carbon atoms"
+      ],
+      "why": "Ca, C and O are three different elements, so CaCO3 is a compound. Only O has a small 3, so there are three oxygen atoms. Ca is one symbol of two letters, not C and a separate a.",
+      "clue": "Split the formula at each capital letter."
+    }
+  },
+  "sci-groups-periods-nsw": {
+    "title": "Groups and periods",
+    "card": [
+      ["Group", "A group is a column of the periodic table. Elements in the same group have similar properties."],
+      [
+        "Period",
+        "A period is a row of the periodic table. Moving across a period, the properties change step by step."
+      ],
+      "The periodic table has 18 groups. Group 1 holds very reactive metals such as lithium, sodium and potassium.",
+      "An element's place in the table lets us predict its properties. If we know how sodium reacts, we can expect potassium, in the same group, to react in a similar way."
+    ],
+    "remember": "Groups are columns with similar elements. Periods are rows.",
+    "a": {
+      "q": "Lithium and sodium are in the same group. What does this tell us?",
+      "opts": [
+        "They have similar properties",
+        "They have exactly the same properties",
+        "They are in the same row",
+        "They are both non-metals"
+      ],
+      "why": "Elements in a group are similar, so we can predict one from the other. They are not identical, and a group is a column, not a row.",
+      "clue": "Think about what a column tells you."
+    },
+    "b": {
+      "d": 2,
+      "q": "Tom reads that rubidium is in Group 1, below potassium. A teacher asks him to predict how it reacts. What is the best prediction?",
+      "opts": [
+        "It is a reactive metal like potassium",
+        "It is an unreactive non-metal",
+        "It reacts exactly like potassium",
+        "It is in the same period as potassium"
+      ],
+      "why": "Rubidium, like potassium, is a very reactive Group 1 metal, so it should react in a similar way. Similar does not mean exactly the same. Sitting below potassium puts rubidium in the next row, so it is in a different period.",
+      "clue": "Use the group to predict."
+    }
+  },
+  "sci-building-periodic-table": {
+    "title": "Building the periodic table",
+    "card": [
+      "In 1869, Dmitri Mendeleev, a Russian chemist, made a table of the elements known at the time. He listed them roughly in order of the mass of their atoms and placed elements with similar properties together.",
+      "Sometimes no known element had the right properties for the next place in his table. He left that place empty and moved the element on to a place where its properties fitted.",
+      "He said each empty place was for an element not yet found. Using the elements around each gap, he also predicted what its properties would be.",
+      "Later, scientists discovered elements that matched his predictions and filled the gaps. For example, gallium, found in 1875, matched the element he predicted below aluminium."
+    ],
+    "remember": "Gaps in a pattern can point to things not yet found, and Mendeleev's gaps were filled by later discoveries.",
+    "a": {
+      "q": "Why did Mendeleev leave some places in his table empty?",
+      "opts": [
+        "He expected elements not yet found to fit there",
+        "He had run out of room for the known elements",
+        "He was unsure which way to order the elements",
+        "He left out elements that were too reactive"
+      ],
+      "why": "When no known element had the right properties for a place, he left it empty for an element still to be found. Running out of room is wrong, because the gaps came from the pattern of properties, not the size of the table.",
+      "clue": "Think about what a gap in a pattern might point to."
+    },
+    "b": {
+      "d": 2,
+      "q": "A newly discovered element has the properties Mendeleev predicted for one gap. What does this show?",
+      "opts": [
+        "His pattern could predict elements not yet found",
+        "His table was wrong and needed to be thrown out",
+        "Elements with similar properties do not sit together",
+        "Every gap in his table had now been filled"
+      ],
+      "why": "A discovery that matches a prediction shows the pattern worked. It does not show the table was wrong. One new element fills one gap only, so it does not show every gap was filled.",
+      "clue": "A prediction that comes true supports the idea behind it."
+    }
+  },
+  "sci-energy-stores": {
+    "title": "Energy stores",
+    "card": [
+      "Energy is the ability to make things change or move. It can be held in a store until it is used.",
+      "Kinetic energy is stored in a moving object. The faster or heavier the object, the more it has. A cyclist rolling downhill has kinetic energy.",
+      "Gravitational potential energy is stored in an object because of its height above the ground. A book on a high shelf has more than the same book on a low shelf.",
+      "Elastic energy is stored in an object that is stretched or squashed, such as a stretched rubber band. Chemical energy is stored in food and fuel, and thermal energy is stored in hot objects."
+    ],
+    "remember": "Energy can be stored in motion, height, stretching or squashing, chemicals and heat.",
+    "a": {
+      "q": "A ball is held 2 m above the floor and is not moving. Which energy store does it have because of its height?",
+      "opts": ["Gravitational potential", "Kinetic", "Elastic", "Thermal"],
+      "why": "Energy stored because of height above the ground is gravitational potential energy. Kinetic is tempting, but the ball is not moving, so it has no kinetic energy yet.",
+      "clue": "Think about why the ball would fall if let go."
+    },
+    "b": {
+      "d": 2,
+      "q": "As Mia pulls back the string of her bow, the bow bends. Which energy store increases in the bow?",
+      "opts": ["Elastic", "Kinetic", "Thermal", "Chemical"],
+      "why": "The bow is bent further out of shape as Mia pulls, so its elastic store increases. Chemical is tempting, but chemical energy is stored in Mia's muscles, and that store goes down as she pulls.",
+      "clue": "What is happening to the shape of the bow?"
+    }
+  },
+  "sci-energy-transfers": {
+    "title": "Energy transfers",
+    "card": [
+      [
+        "Conduction",
+        "Heat passes through a solid from particle to particle. Hot particles shake harder and pass this movement to the particles next to them, as when a metal spoon warms in hot soup."
+      ],
+      [
+        "Convection",
+        "Heat moves through a liquid or a gas as the fluid itself moves. Warmer fluid is less dense and rises, and cooler fluid sinks to take its place."
+      ],
+      [
+        "Radiation",
+        "Heat travels as waves and needs no matter to move through. This is how sunlight crosses empty space to reach Earth."
+      ],
+      "Heat always moves from a warmer place to a cooler place. More than one kind of transfer can happen at the same time."
+    ],
+    "remember": "Conduction passes heat through solids, convection through moving fluids, and radiation needs no matter.",
+    "a": {
+      "q": "Ravi leaves a metal spoon in a hot pot of soup. Soon the handle feels warm. How did the heat reach the handle?",
+      "opts": [
+        "Conduction, from particle to particle in the metal",
+        "Convection, as the metal spoon moved upwards",
+        "Radiation, as heat waves travelled through the metal",
+        "Convection, as warm metal particles rose in the spoon"
+      ],
+      "why": "A spoon is a solid, so heat passes along it from particle to particle. This is conduction. Convection is tempting, but it needs a fluid that moves, and the particles in a solid stay in place.",
+      "clue": "Is the spoon a solid or a fluid?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Lena sits near a campfire in Dubbo. Her hands feel warm even though the air between her and the fire is cool. Which transfer warms her hands most directly, and why?",
+      "opts": [
+        "Radiation, as heat waves travel without needing matter",
+        "Conduction, because the air touches both the fire and her",
+        "Convection, because warm air always rises to her hands",
+        "Conduction, because heat passes along the cool air to her"
+      ],
+      "why": "Heat travels as waves from the fire to her hands, so it is radiation. The waves pass through the air without needing it to carry the heat, which is why the air can stay cool. Convection is tempting because warm air rises from a fire, but rising air moves upwards, not sideways to her hands.",
+      "clue": "Think about how heat can cross space where the air stays cool."
+    }
+  },
+  "sci-energy-transformations": {
+    "title": "Energy transformations",
+    "card": [
+      "An energy transformation is when energy changes from one form to another. A solar cell changes light energy into electrical energy.",
+      "A car engine changes chemical energy in petrol into kinetic energy, which moves the car. It also gives out thermal energy and sound energy, which are not the forms we wanted.",
+      "A flow diagram shows the energy going in on the left and the energy coming out on the right. For a car engine: chemical energy → engine → kinetic, thermal and sound energy.",
+      "Often more than one form comes out. A light globe changes electrical energy into light energy and also thermal energy, which warms the globe."
+    ],
+    "remember": "Find what goes in, then list every form that comes out, including the ones you did not want.",
+    "a": {
+      "q": "A solar-powered calculator in a classroom in Orange is switched on. What energy transformation takes place?",
+      "opts": [
+        "Light energy to electrical energy",
+        "Electrical energy to light energy",
+        "Chemical energy to light energy",
+        "Thermal energy to kinetic energy"
+      ],
+      "why": "The calculator's solar cell takes in light energy and gives out electrical energy to run the calculator. Electrical energy to light energy is tempting, but it reverses the direction of the change.",
+      "clue": "Check what goes in and what comes out."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia plugs a speaker into a power point and plays music. After a while the speaker feels warm. Which flow diagram shows this?",
+      "opts": [
+        "Electrical energy → speaker → sound and thermal energy",
+        "Sound energy → speaker → electrical and thermal energy",
+        "Electrical energy → speaker → sound energy only",
+        "Thermal energy → speaker → electrical and sound energy"
+      ],
+      "why": "Electrical energy goes in from the power point. Sound energy comes out, and so does thermal energy, which makes the speaker warm. The option with sound only leaves out the thermal energy, and the other two put the input and output the wrong way round.",
+      "clue": "Name what goes in, then list every form that comes out."
+    }
+  },
+  "sci-conservation-energy-nsw": {
+    "title": "Conservation of energy",
+    "card": [
+      "Energy cannot be made or destroyed. It can only be changed from one form to another or moved from one place to another.",
+      "The total amount of energy stays the same. When a toaster seems to \"use up\" energy, the energy has really spread out into the surroundings, mostly as heat.",
+      [
+        "Open system",
+        "energy and matter can both enter and leave. A pot of boiling water with no lid is one: heat and steam both escape."
+      ],
+      [
+        "Closed system",
+        "only energy can enter and leave, and matter cannot. A sealed jar of hot soup is one: heat can escape through the glass, but the soup stays inside."
+      ]
+    ],
+    "remember": "Energy is never lost, only changed or moved. Open systems swap energy and matter, closed systems swap only energy.",
+    "a": {
+      "q": "A student says a rolling ball stops and so its energy has been destroyed. What is the best reply?",
+      "opts": [
+        "The energy has moved to the surroundings, mostly as heat",
+        "The energy was destroyed by friction as the ball slowed",
+        "The ball made new energy to replace what it lost",
+        "The energy has stayed inside the ball as kinetic energy"
+      ],
+      "why": "Energy is never destroyed. Friction moves the ball's energy to the ground and the air, mostly as heat. Saying friction destroys it is tempting, but that would break the rule that energy cannot be destroyed.",
+      "clue": "Where could the energy go if it cannot disappear?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia seals hot tea in a thermos flask with the lid on tight. Heat slowly escapes through the walls. Which system is the tea, and why?",
+      "opts": [
+        "Closed, because energy can leave but matter cannot",
+        "Open, because energy can leave the flask as heat",
+        "Closed, because neither energy nor matter can leave",
+        "Open, because matter can enter and leave the tea"
+      ],
+      "why": "With the lid on, no matter enters or leaves, but heat still escapes, so it is a closed system. It is not a system where nothing can leave, because energy still moves out.",
+      "clue": "Check what can cross the boundary: energy, matter or both?"
+    }
+  },
+  "sci-physical-chemical-change": {
+    "title": "Physical and chemical change",
+    "card": [
+      [
+        "Physical change",
+        "A change in shape, size or state, such as melting or dissolving. No new substance is made, and the change can often be reversed."
+      ],
+      [
+        "Chemical change",
+        "A change that makes one or more new substances, such as iron rusting. The new substances have different properties from the ones you started with."
+      ],
+      "Signs of a chemical change include a colour change, gas bubbles, light or a solid forming in a liquid (a precipitate).",
+      "A sign is a clue, not proof. Boiling water makes bubbles, but they are only water vapour, so it is still a physical change."
+    ],
+    "remember": "The test is always the same: ask whether a new substance has been made.",
+    "a": {
+      "q": "Which change is a chemical change?",
+      "opts": [
+        "Wood burning to leave ash and smoke",
+        "Ice melting to leave a puddle of water",
+        "Salt dissolving to leave clear salty water",
+        "Glass shattering to leave sharp pieces"
+      ],
+      "why": "Ash and smoke are new substances with different properties from wood, so burning is a chemical change. Melted ice is still water and dissolved salt is still salt, so those changes make nothing new.",
+      "clue": "Is what is left the same substance you started with?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya drops a fizzy tablet into water, and it reacts with the water to make carbon dioxide gas. Later, she sees bubbles in a pot of water boiling on the stove. Which statement is correct?",
+      "opts": [
+        "Fizzing is a chemical change, boiling is a physical change",
+        "Both are chemical changes, as both make gas bubbles",
+        "Fizzing is a physical change, boiling is a chemical change",
+        "Both are physical changes, as no solid is formed"
+      ],
+      "why": "The fizzing tablet makes carbon dioxide, a new substance, so it is a chemical change. The bubbles in boiling water are only water vapour, so no new substance is made. Bubbles alone do not prove a chemical change.",
+      "clue": "Ask what each set of bubbles is made of."
+    }
+  },
+  "sci-photosynthesis-respiration": {
+    "title": "Photosynthesis and respiration",
+    "card": [
+      [
+        "Photosynthesis",
+        "Plants use light energy to turn carbon dioxide and water into glucose and oxygen. It happens in the green parts of a plant, in structures called chloroplasts."
+      ],
+      ["Respiration", "Cells use glucose and oxygen to release energy. Carbon dioxide and water are also made."],
+      "Plants, animals and other living things all respire. Respiration happens all the time, in the light and the dark.",
+      "The two processes are linked. The products of one are the reactants of the other."
+    ],
+    "remember": "Photosynthesis stores energy in glucose. Respiration releases it.",
+    "a": {
+      "q": "Which pair of substances does a plant take in for photosynthesis?",
+      "opts": ["Carbon dioxide and water", "Glucose and oxygen", "Oxygen and water", "Carbon dioxide and glucose"],
+      "why": "Photosynthesis turns carbon dioxide and water into glucose and oxygen, using light. Glucose and oxygen are what respiration uses, so they are not what photosynthesis takes in.",
+      "clue": "Which two substances are on the starting side?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A potted fern sits in a dark cupboard overnight. What is happening in its cells?",
+      "opts": [
+        "Respiration continues but photosynthesis stops",
+        "Photosynthesis continues but respiration stops",
+        "Both processes stop until light returns",
+        "Photosynthesis stops and the plant makes oxygen"
+      ],
+      "why": "Photosynthesis needs light, so it stops in the dark. Respiration happens all the time in living cells, so it carries on. Plants respire as well as photosynthesise, so it is wrong to say respiration stops.",
+      "clue": "One process needs light and the other does not."
+    }
+  },
+  "sci-moving-plates": {
+    "title": "Moving plates",
+    "card": [
+      "Earth's outer layer of rock is called the crust. It is broken into large pieces called plates, which fit together like a cracked eggshell.",
+      "The plates move very slowly, only a few centimetres each year. They are carried on the hotter rock beneath them.",
+      "Plates can pull apart, which can make new crust. They can push together, which can build mountains. They can slide past each other.",
+      "The action where plates meet can cause earthquakes. Pulling apart and pushing together can also cause volcanoes."
+    ],
+    "remember": "Plates move slowly, and the action at their edges can cause earthquakes, volcanoes and mountains.",
+    "a": {
+      "q": "Which statement best describes Earth's plates?",
+      "opts": [
+        "Pieces of crust that move slowly over time",
+        "Pieces of crust that are fixed in place",
+        "Pieces of crust that move a few metres a day",
+        "Pieces of crust that float only in the oceans"
+      ],
+      "why": "The crust is broken into plates that move a few centimetres each year. They are not fixed, and they are far too slow to move metres in a day.",
+      "clue": "Think about how fast and how far plates move."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two plates near the coast of a country are pushing towards each other. Which result is most likely over millions of years?",
+      "opts": [
+        "A mountain range slowly builds up",
+        "The two plates become one fixed plate",
+        "A wide new ocean opens between them",
+        "The plates stop moving and earthquakes end"
+      ],
+      "why": "Plates that push together can build mountains. A new ocean opens where plates pull apart, which is the opposite movement. Plates keep moving, so earthquakes do not end.",
+      "clue": "Pushing together is the opposite of pulling apart."
+    }
+  },
+  "sci-evidence-moving-continents": {
+    "title": "Evidence for moving continents",
+    "card": [
+      "Alfred Wegener proposed that the continents move slowly over time. His idea was called continental drift. Later evidence from the sea floor turned it into the theory of plate tectonics.",
+      [
+        "Wegener's clues",
+        "Wegener noticed that the coastlines of South America and Africa fit together like puzzle pieces. He also found similar fossils and rock types on continents now far apart across oceans."
+      ],
+      [
+        "Sea-floor ridge",
+        "Marie Tharp mapped the ocean floor and showed a long ridge with a rift valley down its centre. This fits with new crust forming where plates move apart."
+      ],
+      [
+        "Magnetic stripes",
+        "Rock on the sea floor records Earth's magnetic field as it forms. It shows matching stripes on both sides of a ridge, which suggests new rock forms at the ridge and spreads outwards."
+      ]
+    ],
+    "remember": "Wegener's land clues came first. Later sea-floor evidence showed the plates move.",
+    "a": {
+      "q": "Wegener found the same kind of land animal fossil in South America and Africa. What did he propose from this?",
+      "opts": [
+        "The continents were once joined, then drifted apart",
+        "The animal swam across the ocean to breed",
+        "The continents have always been in their present places",
+        "The fossils were formed by rock stripes on the sea floor"
+      ],
+      "why": "A land animal could not cross a wide ocean, so Wegener proposed that the continents were once joined and have drifted apart. Swimming across is a tempting idea, but the card says the fossils are found on continents now far apart across oceans.",
+      "clue": "Think about where a land animal could live."
+    },
+    "b": {
+      "d": 3,
+      "q": "Matching magnetic stripes are found in sea-floor rock on both sides of a ridge. What does this later evidence suggest?",
+      "opts": [
+        "New rock forms at the ridge and spreads outwards",
+        "Old rock is sinking at the ridge and being destroyed",
+        "The coastlines on each side fit together like a puzzle",
+        "The ridge was mapped by Marie Tharp using fossils"
+      ],
+      "why": "The rock records Earth's magnetic field as it forms, so matching stripes on both sides suggest new rock forms at the ridge and spreads outwards. The puzzle fit is one of Wegener's clues, but it comes from coastlines, not from magnetic stripes.",
+      "clue": "The rock records the magnetic field as it forms."
+    }
+  },
+  "sci-aboriginal-accounts-volcanoes": {
+    "title": "Aboriginal accounts of volcanoes",
+    "card": [
+      "Aboriginal and Torres Strait Islander peoples have lived in Australia for more than 60,000 years. Knowledge about Country is passed down through stories, songs and ceremony.",
+      "Some of these accounts describe volcanic activity, such as fire, ground shaking and new land forms being made.",
+      "Gunditjmara accounts from western Victoria tell of Budj Bim, a volcano that is no longer active. Geologists have dated its eruption to about 37,000 years ago.",
+      "The accounts match what geologists have found in the rock. This shows that cultural accounts can record real events across a very long time."
+    ],
+    "remember": "Some Aboriginal accounts record volcanoes, and they match what geologists have found.",
+    "a": {
+      "q": "What does the Budj Bim example show about Gunditjmara spoken accounts?",
+      "opts": [
+        "Spoken accounts kept a record of an ancient eruption",
+        "Spoken accounts described a volcano from recent centuries",
+        "Spoken accounts and the rock evidence disagree",
+        "Rock evidence shows Budj Bim has never erupted"
+      ],
+      "why": "The Gunditjmara accounts describe volcanic activity that matches the rock evidence at Budj Bim, so they kept a record of a real eruption. That eruption was about 37,000 years ago, not in recent centuries.",
+      "clue": "How old is the eruption the accounts describe?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A student says that stories passed down by speaking cannot be good evidence about events thousands of years ago. Which reply best answers the student?",
+      "opts": [
+        "Budj Bim stories match the rock evidence of an old eruption",
+        "Budj Bim stories tell of an eruption geologists cannot find",
+        "Budj Bim stories mean the rock no longer needs to be dated",
+        "Budj Bim rock shows the stories tell of a recent eruption"
+      ],
+      "why": "Geologists dated the Budj Bim eruption to about 37,000 years ago, and the Gunditjmara stories match that evidence. So spoken accounts can record real events from long ago. The stories do not replace geology: it is the match between the two that answers the student.",
+      "clue": "Think about how the two kinds of evidence compare."
+    }
+  },
+  "sci-igneous-sedimentary-metamorphic-rocks": {
+    "title": "Igneous, sedimentary and metamorphic rocks",
+    "card": [
+      "Rocks are made of minerals. A mineral is a solid substance that forms naturally in the Earth, such as quartz. Most rocks are a mixture of minerals.",
+      ["Igneous", "forms when hot melted rock, called magma, cools and hardens. Granite and basalt are examples."],
+      [
+        "Sedimentary",
+        "forms when pieces of rock and other material, called sediment, settle in layers and are pressed together. Sandstone is an example."
+      ],
+      [
+        "Metamorphic",
+        "forms when an existing rock is changed by heat and pressure, without melting completely. Marble and slate are examples."
+      ]
+    ],
+    "remember": "Igneous rock comes from cooled magma, sedimentary from pressed layers of sediment, and metamorphic from rock changed by heat and pressure.",
+    "a": {
+      "q": "A rock is made of layers of sand grains that were pressed together over a long time. Which type of rock is it?",
+      "opts": ["Sedimentary", "Igneous", "Metamorphic", "A mineral"],
+      "why": "Sand is sediment, and rock made of pressed layers of sediment is sedimentary. It is not igneous, because that type forms from cooled magma and not from settled grains.",
+      "clue": "Think about what the layers of grains were before they were pressed."
+    },
+    "b": {
+      "d": 3,
+      "q": "Limestone is a sedimentary rock. Deep underground, heat and pressure change it into marble without melting it completely. What type of rock is marble?",
+      "opts": [
+        "Metamorphic, because heat and pressure changed it",
+        "Sedimentary, because it began as a sedimentary rock",
+        "Igneous, because heat was needed to change it",
+        "Metamorphic, because it was formed from magma"
+      ],
+      "why": "Marble is metamorphic because an existing rock was changed by heat and pressure. It is not igneous, because the limestone did not melt completely and cool as magma.",
+      "clue": "Ask how the rock formed now, not what it was before."
+    }
+  },
+  "sci-fossils-form": {
+    "title": "How fossils form",
+    "card": [
+      "A fossil is the preserved remains or traces of a living thing from long ago. Traces include footprints, burrows and droppings.",
+      "Fossils usually start when a dead organism is buried quickly in sediment, such as mud or sand. Burial protects it from being eaten or broken down.",
+      "Over a very long time, the sediment hardens into sedimentary rock. Water carrying minerals seeps into hard parts such as bones and shells, and the minerals slowly replace them.",
+      "Different layers of rock hold different fossils. This shows that different organisms lived at different times."
+    ],
+    "remember": "Quick burial, then minerals slowly replace the hard parts, leaving a fossil.",
+    "a": {
+      "q": "Why does a dead fish buried quickly in mud have a better chance of becoming a fossil than one left on the lakebed?",
+      "opts": [
+        "Burial protects it from being eaten or broken down",
+        "Burial turns the fish into rock straight away",
+        "Mud adds new bones to the fish as it is buried",
+        "Burial makes the fish older than other organisms"
+      ],
+      "why": "Sediment covers the remains, so scavengers and decay cannot destroy them. Burial does not change the fish into rock at once, because minerals replace the hard parts slowly over a very long time.",
+      "clue": "Think about what could happen to the fish if it stayed uncovered."
+    },
+    "b": {
+      "d": 3,
+      "q": "A student in Broken Hill finds a rock containing a shell shape made of stone. Which statement best explains how the shell became a fossil?",
+      "opts": [
+        "Minerals slowly replaced the shell after it was buried",
+        "Minerals replaced the shell straight after it was buried",
+        "The buried shell slowly dried out and hardened into stone",
+        "The buried shell slowly melted and cooled into stone"
+      ],
+      "why": "After burial, water carrying minerals seeped into the shell, and the minerals replaced it over a very long time. Minerals replacing it straight after burial is wrong, because this change is slow. Drying out or melting does not turn a shell into stone.",
+      "clue": "Check both the process and how long it takes."
+    }
+  },
+  "sci-relative-dating-rock-layers": {
+    "title": "Relative dating of rock layers",
+    "card": [
+      "Sedimentary rock forms in layers. Each new layer of sediment settles on top of the layers already there.",
+      "In layers that have not been disturbed, the lowest layer is the oldest and the top layer is the youngest.",
+      "Fossils lie in the layer where the living thing was buried. A fossil in a lower layer is older than a fossil in a layer above it.",
+      "This is relative dating. It tells us which is older or younger, but it does not give an age in years."
+    ],
+    "remember": "In undisturbed layers, lower means older. Relative dating gives order, not years.",
+    "a": {
+      "q": "A cliff has three undisturbed layers of sedimentary rock. Layer X is at the top, layer Y is in the middle and layer Z is at the bottom. Which layer is the oldest?",
+      "opts": [
+        "Layer Z, because it is at the bottom",
+        "Layer X, because it is at the top",
+        "Layer Y, because it is in the middle",
+        "They are the same age, as they are in one cliff"
+      ],
+      "why": "New sediment settles on top of older sediment, so in undisturbed layers the bottom layer formed first. Layer X is the youngest, not the oldest, because it was laid down last.",
+      "clue": "Which layer was laid down first?"
+    },
+    "b": {
+      "d": 2,
+      "q": "At a quarry near Dubbo, Sam finds a shell fossil in a lower layer and a fish fossil in a higher layer. The layers are undisturbed. What can Sam conclude?",
+      "opts": [
+        "The shell is older than the fish",
+        "The fish is older than the shell",
+        "The shell is 200 million years old",
+        "The shell and fish lived at the same time"
+      ],
+      "why": "The lower layer is older, so the shell fossil in it is older than the fish fossil above it. Relative dating cannot give an age in years, so the claim of 200 million years cannot be made from the layers alone.",
+      "clue": "Lower layers are older, and relative dating only gives order."
+    }
+  },
+  "sci-hypotheses-investigable-questions": {
+    "title": "Hypotheses and investigable questions",
+    "card": [
+      [
+        "Investigable question",
+        "a question that can be answered by collecting data, such as by measuring or counting. It often asks how changing one thing affects another."
+      ],
+      [
+        "Not investigable",
+        "a question about opinion or taste, such as which colour is nicest, cannot be answered with measurements. Neither can a question about what someone should do."
+      ],
+      [
+        "Hypothesis",
+        "a testable explanation that predicts what will happen if it is right. It is often written as: if we change this, then that will happen, because of this reason."
+      ],
+      [
+        "Testing it",
+        "an investigation collects data to test the hypothesis. The data may support it or not. A hypothesis must be able to be shown wrong."
+      ]
+    ],
+    "remember": "Investigable questions can be answered with data. A hypothesis is a testable prediction with a reason.",
+    "a": {
+      "q": "A class wants to plan an experiment. Which question could they answer by collecting data?",
+      "opts": [
+        "How does water temperature affect how fast sugar dissolves?",
+        "Which flavour of ice cream tastes the nicest?",
+        "Should schools have longer lunch breaks?",
+        "Is blue a better colour than green for a uniform?"
+      ],
+      "why": "Dissolving time can be measured at different water temperatures, so data can answer the question. The other three depend on opinion or on what people think should happen, so measurements cannot settle them.",
+      "clue": "Which question could you answer by measuring something?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia grows bean plants in a Dubbo school garden. She thinks plants given more sunlight will grow taller, because they can make more food. Which is the best hypothesis for her investigation?",
+      "opts": [
+        "Beans in more light grow taller because they make more food",
+        "Do beans grow taller in more light as they make more food?",
+        "Beans are the nicest plants to grow because they grow fast",
+        "Beans grow better in more light because they feel happier"
+      ],
+      "why": "This one predicts what will happen, gives Mia's reason, and can be tested by measuring height. The question form asks something but makes no prediction. The other two rest on an opinion and on feelings, which cannot be measured or shown wrong.",
+      "clue": "Look for a prediction with a reason that data could test."
+    }
+  },
+  "sci-validity-reliability-accuracy": {
+    "title": "Validity, reliability and accuracy",
+    "card": [
+      [
+        "Accuracy",
+        "is how close a measurement is to the true value. A scale reading 50.0 g for a 50.0 g mass is accurate."
+      ],
+      [
+        "Reliability",
+        "is whether results come out the same, or very close, when the test is repeated. Results can be reliable but not accurate."
+      ],
+      [
+        "Validity",
+        "is whether a test measures what it aims to measure. A valid test controls the other variables, keeping everything the same except the one being tested."
+      ],
+      [
+        "Link",
+        "A result can be reliable and still be off target. A test can have accurate tools but not be valid if it measures the wrong thing or other variables change."
+      ]
+    ],
+    "remember": "Accurate is close to the true value. Reliable is the same when repeated. Valid is measuring what you meant to, with other variables controlled.",
+    "a": {
+      "q": "A student repeats a water temperature test three times and gets 24.1, 24.0 and 24.2 °C. The water is truly 20.0 °C. What describes these results?",
+      "opts": [
+        "Reliable but not accurate",
+        "Accurate but not reliable",
+        "Both accurate and reliable",
+        "Neither accurate nor reliable"
+      ],
+      "why": "The results are almost the same each time, so they are reliable. They are not close to the true value of 20.0 °C, so they are not accurate.",
+      "clue": "Compare the repeats with each other, then with the true value."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam tests whether fertiliser makes bean plants grow taller. He puts the fertilised plants on a sunny bench and the others on a dark shelf. Why is his test not valid?",
+      "opts": [
+        "Light also differs, so height may not be due to fertiliser",
+        "His height measurements are not close to the true value",
+        "His repeated results do not come out the same",
+        "He used too few types of fertiliser in the investigation"
+      ],
+      "why": "A valid test controls the other variables, so only the factor being tested changes. Light also changed, so Sam cannot tell whether fertiliser or light caused the difference. Accuracy is about closeness to the true value, which is a different idea.",
+      "clue": "Count how many variables changed between the two groups."
+    }
+  },
+  "sci-science-pseudoscience": {
+    "title": "Science and pseudoscience",
+    "card": [
+      [
+        "Science",
+        "Science tests claims against evidence. Others can repeat the tests, and the claim is changed or dropped if the evidence does not support it."
+      ],
+      [
+        "Pseudoscience",
+        "Pseudoscience uses science-sounding words and looks scientific, but it avoids fair tests. It does not change its claims when evidence goes against them."
+      ],
+      "Pseudoscience often relies on stories, such as \"it worked for my cousin\", and on claims that cannot be tested at all. A story about one person is not a fair test.",
+      "Ask two questions of any claim: Can it be tested? What happens to the claim when a test goes against it?"
+    ],
+    "remember": "Science follows the evidence. Pseudoscience avoids tests and does not change.",
+    "a": {
+      "q": "Which feature best shows that a claim is science rather than pseudoscience?",
+      "opts": [
+        "It is tested, and changed if the evidence disagrees",
+        "It uses technical words and scientific-looking terms",
+        "It is supported by many personal stories of success",
+        "It has been believed by many people for a long time"
+      ],
+      "why": "Science tests claims and changes them when the evidence does not fit. Technical words can be copied by pseudoscience, so they do not show that a claim has been tested.",
+      "clue": "Think about what is done with the claim when a test goes against it."
+    },
+    "b": {
+      "d": 3,
+      "q": "A company says its \"energy bracelet\" improves balance. It shows glowing reviews from buyers, uses terms such as \"quantum frequency\", and says any failed test was \"unfair\". Why is this pseudoscience?",
+      "opts": [
+        "It relies on stories and rejects tests that go against it",
+        "It is sold by a company that wants to make money",
+        "It has not yet been tested by any other scientists",
+        "It uses words that most people do not understand"
+      ],
+      "why": "The claim rests on reviews and dismisses tests that do not support it, so it will not change when evidence goes against it. Science-sounding words do not make it scientific, and a profit motive alone does not make a claim pseudoscience.",
+      "clue": "Look at what the company does when a test goes against its claim."
+    }
+  },
+  "sci-judging-claims-sources": {
+    "title": "Judging claims and sources",
+    "card": [
+      "Ask who made the claim and why. A source that gains money or fame from the claim may leave out evidence that goes against it.",
+      "Ask whether the evidence is good enough. A small or hand-picked sample may not match the whole group, so the claim may not hold for everyone.",
+      "Ask whether the data was selected. Showing only the results that support a claim, and hiding the rest, can mislead.",
+      "Check a graph's scale. If a bar chart's axis starts well above zero, small differences look large."
+    ],
+    "cardFigs": {
+      "4": {
+        "kind": "chart",
+        "chart": "bar",
+        "alt": "A bar chart with a y-axis that starts at 90 and not at 0. Brand A has a value of 92 and Brand B has a value of 96, so Brand B's bar looks much taller than Brand A's.",
+        "bars": [["Brand A", 92], ["Brand B", 96]],
+        "y": {"min": 90, "max": 98, "step": 2, "label": "Score"},
+        "x": {"label": "Brand"},
+        "truncated": true
+      }
+    },
+    "remember": "Check who is speaking and why, how good the sample is, what data was left out, and how the graph is drawn.",
+    "a": {
+      "q": "A company that sells vitamin tablets says its tablets make people healthier. Which question checks who made the claim and why?",
+      "opts": [
+        "Does the company earn money if people believe it?",
+        "Did the study test enough people to be sure?",
+        "Did the advert leave out some of the results?",
+        "Does the advert's graph have its axis start at zero?"
+      ],
+      "why": "A company that earns money from the claim has a reason to show only evidence that supports it, so this question checks the source and its motive. Asking how many people were tested is a fair check too, but it checks the sample, not who made the claim.",
+      "clue": "Think about who gains if the claim is believed."
+    },
+    "b": {
+      "d": 3,
+      "q": "In an advert, Brand B running shoes score 96 and Brand A shoes score 92. Yet Brand B's bar is drawn about three times taller than Brand A's. Why do the bars look so different?",
+      "opts": [
+        "The y-axis starts well above zero",
+        "The y-axis stops well below 100",
+        "The chart shows only two brands",
+        "The bars are drawn too wide"
+      ],
+      "why": "Starting the axis well above zero, such as at 90, cuts off most of each bar, so a gap of 4 points looks huge. Where the axis stops at the top does not change how the bars compare, because both bars still start from the same low line.",
+      "clue": "A score of 96 is not three times a score of 92. Where would the bars have to begin?"
+    }
+  },
+  "sci-large-datasets-descriptive-statistics": {
+    "title": "Large datasets and descriptive statistics",
+    "card": [
+      "A large dataset is a big collection of measurements, such as daily weather records or hospital health records. Statistics and graphs sum it up, because too many numbers read one by one hide any pattern.",
+      [
+        "Mean",
+        "the total of all values divided by how many values there are. It is the average, but one very high or low value can pull it away from the rest."
+      ],
+      ["Median", "the middle value when the data is put in order. It is not pulled much by a very high or low value."],
+      [
+        "Mode and range",
+        "The mode is the value that appears most often. The range is the highest value minus the lowest, so it shows how spread out the data is."
+      ]
+    ],
+    "remember": "Statistics and graphs turn a mass of numbers into a pattern. An extreme value pulls the mean but barely moves the median.",
+    "a": {
+      "q": "A dataset has the daily rainfall for a town over ten years. Why do scientists work out the mean and range of it?",
+      "opts": [
+        "To sum up the data so the pattern is easier to see",
+        "To prove that the rainfall was caused by the season",
+        "To remove the highest and lowest days from the data",
+        "To make every day's rainfall the same value"
+      ],
+      "why": "The mean and range turn thousands of values into a few numbers that show the typical value and the spread. They do not show what caused the rainfall, and they do not change or remove any data.",
+      "clue": "Thousands of numbers are hard to read one by one."
+    },
+    "b": {
+      "d": 3,
+      "q": "Five houses in a street sold for $600 000, $620 000, $640 000, $650 000 and $5 000 000. Which statistic best shows the typical price of a house in this street?",
+      "opts": ["The median, $640 000", "The mean, $1 502 000", "The range, $4 400 000", "The highest price, $5 000 000"],
+      "why": "The median is the middle value, so the one very high sale hardly affects it. The mean is pulled up by the $5 000 000 sale and is higher than four of the five prices, so it is not typical.",
+      "clue": "Which statistic is not pulled by one very high value?"
+    }
+  },
+  "sci-energy-efficiency": {
+    "title": "Energy efficiency",
+    "card": [
+      "Energy cannot be created or destroyed. In any device, the total energy out equals the energy in.",
+      "Only some of the energy out is useful. The rest is wasted, often as heat, and it spreads into the surroundings.",
+      "Efficiency = useful energy out ÷ total energy in × 100%. It is a percentage.",
+      "For example, a lamp takes in 50 J and gives out 10 J as light. The light is useful, so its efficiency is 10 ÷ 50 × 100% = 20%. The other 40 J is wasted."
+    ],
+    "remember": "Energy out always equals energy in. Efficiency is the useful part as a percentage of the input.",
+    "a": {
+      "q": "A motor takes in 200 J of electrical energy. It gives out 150 J as movement, and the rest as heat and sound. What happens to the other 50 J?",
+      "opts": [
+        "It is wasted energy, not destroyed",
+        "It is destroyed inside the motor",
+        "It is stored as extra useful movement",
+        "It is not counted in the total energy"
+      ],
+      "why": "Energy is never destroyed, so the 50 J still exists as heat and sound in the surroundings. It is wasted because it is not the useful movement. Saying it is destroyed is wrong, because total energy out still equals 200 J.",
+      "clue": "Total energy out must equal total energy in."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dev tests two heaters in his Dubbo classroom. Heater X takes in 400 J and gives out 360 J as useful heat. Heater Y takes in 500 J and gives out 400 J as useful heat. Which statement is correct?",
+      "opts": [
+        "X is more efficient, at 90% compared with 80%",
+        "Y is more efficient, at 80% compared with 90%",
+        "Y is more efficient, as it gives out more heat",
+        "X is more efficient, as it wastes more energy"
+      ],
+      "why": "X: 360 ÷ 400 × 100% = 90%. Y: 400 ÷ 500 × 100% = 80%. Y gives out more useful energy, but it also takes in more, so the amount out alone does not show which is more efficient.",
+      "clue": "Work out useful out ÷ total in for each heater."
+    }
+  },
+  "sci-generating-electricity": {
+    "title": "Generating electricity",
+    "card": [
+      "Most electricity is made when a turbine spins a generator, and each source spins it in its own way. Solar panels are the exception: they turn sunlight straight into electricity, with no turbine.",
+      [
+        "Non-renewable",
+        "coal and gas. They are burnt to make steam or hot gas, and they will run out because they take millions of years to form."
+      ],
+      [
+        "Renewable",
+        "solar, wind and hydro. Sunlight, wind and flowing water are not used up. Hydro can store water behind a dam and release it when power is needed."
+      ],
+      "Burning coal and gas releases carbon dioxide, but these stations can run day and night. Solar, wind and hydro release none while running, but solar and wind depend on the weather."
+    ],
+    "remember": "Each source has trade-offs, so no single source is best on every count.",
+    "a": {
+      "q": "Why is coal called a non-renewable energy source?",
+      "opts": [
+        "It is used up much faster than it can form",
+        "It cannot be used to spin a turbine",
+        "It only works when the weather is suitable",
+        "It is too costly to use in any power station"
+      ],
+      "why": "Coal took millions of years to form, so once it is burnt it cannot be replaced in a useful time. Coal does spin turbines through steam, so that option is wrong.",
+      "clue": "Think about how long coal takes to form."
+    },
+    "b": {
+      "d": 3,
+      "q": "A town in the Snowy Mountains wants power that gives off no carbon dioxide while running and does not depend on sunshine or wind. Water can be stored behind a dam. Which choice fits best?",
+      "opts": [
+        "Hydro power, using water released through turbines",
+        "Solar power, using panels on the dam wall",
+        "Gas power, using a gas-fired power station",
+        "Wind power, using turbines along the ridge"
+      ],
+      "why": "Stored water can be released when power is needed, so hydro does not depend on sunshine or wind and gives off no carbon dioxide while running. Solar and wind depend on the weather, and gas releases carbon dioxide when burnt.",
+      "clue": "Which source can be stored and used on demand?"
+    }
+  },
+  "sci-future-energy-demand": {
+    "title": "Future energy demand",
+    "card": [
+      "Energy demand is the amount of energy people use. Over the last two centuries it has grown a lot.",
+      "Demand grows as the population grows, because more people need electricity, transport and heating. It also grows with new technology, such as air conditioners, computers and electric cars.",
+      "Scientists look at trends in past data, such as a line rising each year, to predict future demand. A prediction assumes the trend carries on in a similar way.",
+      "If demand keeps rising and is met by burning coal and gas, carbon dioxide emissions will rise too. This is one reason cleaner energy sources are being developed."
+    ],
+    "remember": "Past trends help predict demand, and rising demand drives the search for cleaner energy.",
+    "a": {
+      "q": "Which two changes have both helped increase energy demand over time?",
+      "opts": [
+        "More people and more electrical devices",
+        "Fewer people and more efficient devices",
+        "Cheaper coal and fewer power stations",
+        "Less technology and more renewable energy"
+      ],
+      "why": "More people need more energy, and new devices use extra electricity. The other options each include a change that would lower demand or does not explain it.",
+      "clue": "Think of people and what they plug in."
+    },
+    "b": {
+      "d": 2,
+      "q": "A city's electricity use has risen steadily every year for 20 years. A planner says it will probably keep rising. What is the planner's prediction based on?",
+      "opts": [
+        "The trend in past data continuing",
+        "A guess that has no link to data",
+        "The city running out of coal",
+        "The city having fewer people each year"
+      ],
+      "why": "Predictions about demand use trends in past data and assume they continue. It is not a guess without data. The planner has given no reason to think coal is running out or that the population is falling.",
+      "clue": "What does the 20 years of data show?"
+    }
+  },
+  "sci-circuits-circuit-diagrams": {
+    "title": "Circuits and circuit diagrams",
+    "card": [
+      "An electric circuit is a path that charge can flow around. A complete circuit needs three things: a power source, a closed path of wires, and a load.",
+      ["Power source", "a cell or battery. It gives energy to the charge in the circuit."],
+      ["Load", "a device that changes electrical energy into other forms, such as a globe making light and heat."],
+      "If the path has a gap, such as an open switch, no current flows and the load does not work. A circuit diagram draws each part with a standard symbol, joined by straight lines for wires."
+    ],
+    "remember": "Source, closed path and load make a circuit. A circuit diagram shows them with symbols.",
+    "a": {
+      "q": "A torch has a battery, wires and a globe, but the globe does not light. The switch is open. Why does the globe stay off?",
+      "opts": [
+        "The open switch leaves a gap, so the path is not closed",
+        "The battery cannot give energy to the charge in a torch",
+        "The globe needs a second load before it can light up",
+        "The wires already close the path, so no current is needed"
+      ],
+      "why": "An open switch breaks the path, so charge cannot flow around and the globe gets no current. The wires alone do not make a working circuit: the path must be closed as well as having a source and a load.",
+      "clue": "Look for a gap in the path."
+    },
+    "b": {
+      "d": 2,
+      "q": "Jaya draws a circuit diagram for a buzzer. It shows a cell joined to a buzzer by wires in a closed loop. Which part of her diagram is the load?",
+      "opts": ["The buzzer", "The cell", "The wires", "The closed loop"],
+      "why": "The buzzer changes electrical energy into sound, so it is the load. The cell is the power source. The wires form the path, which is closed as a loop.",
+      "clue": "Which part changes electrical energy into another form?"
+    }
+  },
+  "sci-series-parallel-circuits": {
+    "title": "Series and parallel circuits",
+    "card": [
+      [
+        "Series",
+        "The parts are joined in one loop, so the charge passes through each part in turn. The current is the same at every point in the loop."
+      ],
+      [
+        "Parallel",
+        "The circuit has more than one path, called branches. The current splits between the branches and joins up again after them."
+      ],
+      "In a series circuit there is only one path. If one part is removed or breaks, the loop is open and the current stops everywhere.",
+      "In a parallel circuit each branch is its own loop with the source. If one branch is broken, the current still flows in the other branches."
+    ],
+    "remember": "Series: one path, the same current everywhere. Parallel: the current splits between branches.",
+    "a": {
+      "q": "In a circuit, the current is the same at every point and passes through each lamp one after another. What type of circuit is it?",
+      "opts": ["A series circuit", "A parallel circuit", "A circuit with branches", "An open circuit"],
+      "why": "One path means the same current at every point, which is a series circuit. A parallel circuit is tempting, but there the current splits between branches, so it is not the same everywhere.",
+      "clue": "How many paths does the current have?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam wires three lamps in parallel to a battery. One lamp's filament breaks. What happens to the other two lamps?",
+      "opts": [
+        "They stay lit, as each branch is its own loop",
+        "They go out, as the current has only one path",
+        "They go out, as the broken lamp opens the loop",
+        "They get dimmer, as the current is now the same"
+      ],
+      "why": "In a parallel circuit each lamp is on its own branch, so the other branches still form closed loops with the battery. The tempting answer is that they go out, but that happens in a series circuit, where one break opens the only loop.",
+      "clue": "Is there still a closed loop through each of the other lamps?"
+    }
+  },
+  "sci-ohm-s-law": {
+    "title": "Ohm's law",
+    "card": [
+      "Voltage is the energy given to each unit of charge, measured in volts (V). Current is the flow of charge, measured in amperes (A). Resistance is how much a part opposes the current, measured in ohms (Ω).",
+      "Ohm's law links the three: V = I × R. Voltage equals current times resistance.",
+      "If the resistance stays fixed, more voltage gives more current. Doubling the voltage doubles the current.",
+      "The law can be rearranged to find current, I = V ÷ R, or resistance, R = V ÷ I. For example, 12 V across a 4 Ω resistor gives a current of 3 A."
+    ],
+    "remember": "V = IR. With a fixed resistance, current rises as voltage rises.",
+    "a": {
+      "q": "A resistor has a fixed resistance. The voltage across it is doubled. What happens to the current through it?",
+      "opts": ["It doubles", "It halves", "It stays the same", "It increases by 2 A"],
+      "why": "With R fixed, I = V ÷ R, so current is in proportion to voltage. Doubling the voltage doubles the current. It does not halve, because a higher voltage pushes more charge through, not less.",
+      "clue": "Resistance stays fixed, so current follows voltage."
+    },
+    "b": {
+      "d": 2,
+      "q": "A heater element in Tom's workshop has a resistance of 40 Ω. It is connected to a 240 V supply. What current flows through it?",
+      "opts": ["6 A", "0.17 A", "9600 A", "200 A"],
+      "why": "I = V ÷ R = 240 ÷ 40 = 6 A. Multiplying the two numbers gives 9600, which is the common mistake. Current is found by dividing voltage by resistance.",
+      "clue": "To find current, divide voltage by resistance."
+    }
+  },
+  "sci-electrical-energy-star-ratings": {
+    "title": "Electrical energy and star ratings",
+    "card": [
+      "Power is how fast an appliance transfers electrical energy. It is measured in watts (W), and 1000 W is 1 kilowatt (kW).",
+      "Energy used = power × time. With power in kW and time in hours, the energy is in kilowatt hours (kWh). A 2 kW heater running for 3 hours uses 6 kWh.",
+      "So an appliance uses more energy the higher its power and the longer it runs. A low power appliance left on for a long time can use more than a high power one used briefly.",
+      "Energy star ratings compare similar appliances, such as two fridges of the same size. More stars means the appliance does the same job using less energy."
+    ],
+    "remember": "Energy = power × time. More stars means less energy for the same job.",
+    "a": {
+      "q": "A 0.5 kW oven runs for 4 hours. How much energy does it use?",
+      "opts": ["2 kWh", "8 kWh", "0.125 kWh", "4.5 kWh"],
+      "why": "Energy = power × time = 0.5 kW × 4 h = 2 kWh. Dividing power by time gives 0.125, but the card says to multiply them.",
+      "clue": "Multiply power in kW by time in hours."
+    },
+    "b": {
+      "d": 3,
+      "q": "Liam is choosing between two fridges of the same size. Fridge X has 4 stars and fridge Y has 2 stars. Which statement is correct?",
+      "opts": [
+        "X uses less energy than Y to do the same job",
+        "X has a lower power rating than Y in watts",
+        "X is bigger than Y, so it keeps food colder",
+        "X uses less energy than Y only if it runs longer"
+      ],
+      "why": "Star ratings compare how little energy similar appliances use for the same job, so more stars means less energy used. The rating does not tell you the power in watts or the size, and running longer would use more energy, not less.",
+      "clue": "Stars compare energy used for the same job."
+    }
+  },
+  "sci-mechanical-electromagnetic-waves": {
+    "title": "Mechanical and electromagnetic waves",
+    "card": [
+      "A wave carries energy from one place to another. The wave does not carry matter along with it.",
+      [
+        "Mechanical wave",
+        "needs a medium, which is a material such as air, water or a solid, to travel through. Sound is a mechanical wave."
+      ],
+      [
+        "Electromagnetic wave",
+        "can travel through a vacuum, which is empty space with no matter. Light is an electromagnetic wave."
+      ],
+      "This is why light from the Sun reaches Earth across space, but sound cannot travel through space. A floating cork on a water wave bobs up and down and stays in about the same place, while the energy moves on."
+    ],
+    "remember": "Waves move energy, not matter. Mechanical waves need a medium. Electromagnetic waves do not.",
+    "a": {
+      "q": "A wave travels across a pond and passes a floating leaf. What happens to the leaf as the wave passes?",
+      "opts": [
+        "It moves about the same spot while the energy moves on",
+        "It is carried along with the wave to the shore",
+        "It travels with the wave and then drifts back",
+        "It moves faster than the energy in the wave"
+      ],
+      "why": "A wave carries energy, not matter, so the leaf mostly stays near its spot as the wave passes. The tempting wrong option says the leaf is carried along, which would mean the wave carries matter.",
+      "clue": "Does a wave carry matter or energy?"
+    },
+    "b": {
+      "d": 3,
+      "q": "An astronaut outside a spacecraft in space sees a bright flash from a distant explosion. Which statement about the flash and any sound from it is correct?",
+      "opts": [
+        "The light can cross the vacuum, but sound cannot",
+        "The sound can cross the vacuum, but light cannot",
+        "Neither can cross the vacuum, as both are waves",
+        "Both can cross the vacuum, as both carry energy"
+      ],
+      "why": "Light is an electromagnetic wave and can travel through a vacuum. Sound is a mechanical wave and needs a medium, and space has none. Carrying energy does not decide this, as all waves carry energy.",
+      "clue": "Which type of wave needs a medium?"
+    }
+  },
+  "sci-transverse-longitudinal-waves": {
+    "title": "Transverse and longitudinal waves",
+    "card": [
+      "Many waves travel by making the particles of a medium, such as air, water or a rope, vibrate. These waves can be sorted by the direction the particles vibrate.",
+      [
+        "Transverse",
+        "the particles move at right angles to the direction the wave travels. A wave on a rope shaken up and down is an example. It has crests (highest points) and troughs (lowest points)."
+      ],
+      [
+        "Longitudinal",
+        "the particles move back and forth along the direction the wave travels. Sound is an example. It has compressions, where particles are squeezed together, and rarefactions, where they are spread apart."
+      ],
+      "To classify a wave, compare the way the particles move with the way the wave travels. Right angles means transverse. Along the same line means longitudinal."
+    ],
+    "remember": "Transverse: particles move at right angles to the wave. Longitudinal: particles move along it.",
+    "a": {
+      "q": "A student shakes one end of a long spring up and down. The wave travels along the spring and the coils move up and down. What type of wave is this?",
+      "opts": [
+        "Transverse, as the coils move at right angles to the wave",
+        "Longitudinal, as the coils move at right angles to the wave",
+        "Transverse, as the coils move along the wave's direction",
+        "Longitudinal, as the coils move along the wave's direction"
+      ],
+      "why": "The wave travels along the spring, but the coils move up and down, which is at right angles to that direction. That makes it a transverse wave. A spring can carry either type, so the way the coils move decides it, not the fact that it is a spring.",
+      "clue": "Compare the way the coils move with the way the wave travels."
+    },
+    "b": {
+      "d": 3,
+      "q": "A speaker in a hall plays a note. A tiny piece of dust in the air near it moves forward and back, in line with the direction the sound travels. Which describes this sound wave?",
+      "opts": [
+        "Longitudinal, with compressions and rarefactions",
+        "Transverse, with compressions and rarefactions",
+        "Longitudinal, with crests and troughs",
+        "Transverse, with crests and troughs"
+      ],
+      "why": "The dust, like the air particles around it, moves back and forth along the direction the sound travels, so the wave is longitudinal. A longitudinal wave has compressions and rarefactions, where particles are squeezed together and spread apart. Crests and troughs belong to transverse waves, so pairing them with a longitudinal wave mixes up the two types.",
+      "clue": "Which way does the dust move compared with the sound, and which features go with that type?"
+    }
+  },
+  "sci-wave-equation": {
+    "title": "The wave equation",
+    "card": [
+      [
+        "Wavelength",
+        "the distance from one point on a wave to the same point on the next wave, such as crest to crest. It is measured in metres (m)."
+      ],
+      [
+        "Frequency",
+        "the number of waves that pass a point each second. It is measured in hertz (Hz), where 1 Hz is one wave per second."
+      ],
+      [
+        "Amplitude",
+        "the maximum distance a particle moves from its rest position. A bigger amplitude means the wave carries more energy."
+      ],
+      [
+        "Wave speed",
+        "how fast the wave moves, in metres per second (m/s). Wave speed = frequency × wavelength, or \\(v = f \\lambda\\)."
+      ]
+    ],
+    "remember": "Speed = frequency × wavelength. Amplitude is about energy, not speed.",
+    "a": {
+      "q": "A wave has a frequency of 5 Hz and a wavelength of 3 m. What is its speed?",
+      "opts": ["15 m/s", "8 m/s", "0.6 m/s", "1.7 m/s"],
+      "why": "Wave speed = frequency × wavelength = 5 × 3 = 15 m/s. Adding the two numbers (8) is tempting, but the equation multiplies them.",
+      "clue": "Multiply the two values together."
+    },
+    "b": {
+      "d": 3,
+      "q": "Kai makes waves on a rope. The waves travel at 6 m/s and have a wavelength of 2 m. How many waves pass a point on the rope each second?",
+      "opts": [
+        "3 waves, a frequency of 3 Hz",
+        "12 waves, a frequency of 12 Hz",
+        "0.3 waves, a frequency of 0.3 Hz",
+        "4 waves, a frequency of 4 Hz"
+      ],
+      "why": "Frequency = speed ÷ wavelength = 6 ÷ 2 = 3 Hz, so 3 waves pass each second. Multiplying 6 × 2 gives 12, but that treats speed like a frequency instead of rearranging the equation.",
+      "clue": "Rearrange the equation to find frequency."
+    }
+  },
+  "sci-electromagnetic-spectrum-nsw": {
+    "title": "The electromagnetic spectrum",
+    "card": [
+      "Visible light is one part of a family of waves called the electromagnetic spectrum. All of these waves carry energy, can cross a vacuum and travel at the same speed there.",
+      "In order from longest wavelength to shortest, the family is radio waves, microwaves, infrared, visible light, ultraviolet, X-rays and gamma rays.",
+      "From radio waves to gamma rays, the wavelength gets shorter, the frequency gets higher and the energy gets greater. Ultraviolet, X-rays and gamma rays carry the most energy, so they can damage living cells.",
+      "Each band has common uses: radio waves for broadcasting, microwaves for cooking and mobile phones, infrared for remote controls and heaters, ultraviolet for sterilising, X-rays for imaging bones and gamma rays for treating cancer."
+    ],
+    "remember": "The kinds of electromagnetic wave differ in wavelength, frequency and energy, not in speed through a vacuum. Their energy decides their uses and risks.",
+    "a": {
+      "q": "Which statement about visible light is correct?",
+      "opts": [
+        "It is one of several kinds of electromagnetic wave",
+        "It is the only kind of wave that can cross a vacuum",
+        "It has the shortest wavelength in the spectrum",
+        "It moves faster than radio waves through a vacuum"
+      ],
+      "why": "Visible light sits in a family with radio waves, X-rays and others. All of them can cross a vacuum and all travel at the same speed there, so light is not special in either way. Gamma rays, not visible light, have the shortest wavelength.",
+      "clue": "Think about which waves are in the same family as light."
+    },
+    "b": {
+      "d": 3,
+      "q": "The Sun sends other electromagnetic waves to Earth as well as visible light. Which comparison with visible light is correct?",
+      "opts": [
+        "Ultraviolet has a shorter wavelength than visible light",
+        "Ultraviolet has a longer wavelength than visible light",
+        "Infrared has a higher frequency than visible light",
+        "Infrared moves faster than visible light through space"
+      ],
+      "why": "Ultraviolet comes after visible light in the order, so its wavelength is shorter. Infrared comes before visible light, with a longer wavelength and a lower frequency, and all electromagnetic waves travel at the same speed in a vacuum.",
+      "clue": "Recall the order of the spectrum and which way wavelength changes along it."
+    }
+  },
+  "sci-pitch-loudness": {
+    "title": "Pitch and loudness",
+    "card": [
+      "Sound is a wave made by a vibrating object. It travels through a material as compressions, where particles are squashed together, and rarefactions, where they are spread apart.",
+      [
+        "Frequency and pitch",
+        "Frequency is the number of vibrations each second, measured in hertz (Hz). A higher frequency gives a higher pitch."
+      ],
+      [
+        "Amplitude and loudness",
+        "Amplitude is the size of the vibration. A larger amplitude carries more energy and gives a louder sound."
+      ],
+      "Pitch and loudness are separate. Plucking a guitar string harder makes the note louder, but the pitch stays the same."
+    ],
+    "remember": "Frequency sets the pitch. Amplitude sets the loudness.",
+    "a": {
+      "q": "A flute player raises the frequency of her note but blows with the same effort as before. What does a listener hear?",
+      "opts": ["A higher pitch", "A louder sound", "A lower pitch", "A quieter sound"],
+      "why": "A higher frequency means more vibrations each second, which is heard as a higher pitch. Loudness depends on amplitude, which did not change here, so the sound is not louder.",
+      "clue": "Frequency is linked to one of the two features of sound."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya hits a drum softly, then hits the same drum much harder. Which change happens in the sound waves?",
+      "opts": [
+        "The amplitude increases and the frequency stays the same",
+        "The frequency increases and the amplitude stays the same",
+        "Both the frequency and the amplitude increase",
+        "The amplitude increases and the frequency decreases"
+      ],
+      "why": "A harder hit makes the drum skin vibrate with a larger amplitude, so the sound is louder. The same drum skin still vibrates at about the same rate, so the frequency and pitch stay the same. Louder does not mean higher pitched.",
+      "clue": "First decide what a listener notices, then link it to a wave property."
+    }
+  },
+  "sci-doppler-effect-ultrasound": {
+    "title": "The Doppler effect and ultrasound",
+    "card": [
+      [
+        "Doppler effect",
+        "The pitch of a sound changes when its source moves relative to the listener. As a source comes towards you, the pitch is higher. As it moves away, the pitch is lower."
+      ],
+      "A moving source bunches the sound waves up in front of it and spreads them out behind it. Waves that arrive closer together have a higher frequency, so the pitch is higher.",
+      [
+        "Ultrasound",
+        "Ultrasound is sound with a frequency too high for people to hear. It is sent into the body, and some of it is reflected back from the boundaries between different tissues."
+      ],
+      "A machine picks up the reflected sound and turns it into an image. Doctors use this to look at an unborn baby or an organ without cutting the body open."
+    ],
+    "remember": "Pitch rises as a source approaches and falls as it leaves. Ultrasound echoes inside the body make images.",
+    "a": {
+      "q": "An ambulance drives past Sam with its siren on. What does Sam hear as it moves away?",
+      "opts": [
+        "The pitch of the siren gets lower",
+        "The pitch of the siren gets higher",
+        "The siren gets louder but the pitch stays the same",
+        "The siren stays the same because its frequency is fixed"
+      ],
+      "why": "As the ambulance moves away, the sound waves are spread out, so they reach Sam less often and the pitch is lower. A higher pitch is heard while the source comes towards the listener, not as it leaves.",
+      "clue": "Think about whether the waves are bunched up or spread out behind the source."
+    },
+    "b": {
+      "d": 2,
+      "q": "A clinic in Orange uses a scanner to make an image of an unborn baby. How does the scanner make the image?",
+      "opts": [
+        "It detects ultrasound reflected from tissue boundaries",
+        "It detects ultrasound that passes straight through the body",
+        "It detects ultrasound fully absorbed by the baby's skin",
+        "It detects high-pitched sound made by the baby itself"
+      ],
+      "why": "The scanner sends ultrasound into the body and picks up the echoes that come back from the boundaries between tissues. Sound that passes straight through or is fully absorbed never returns to the scanner, and the baby does not make the sound.",
+      "clue": "Think about what happens to some of the ultrasound where two tissues meet."
+    }
+  },
+  "sci-reflection-refraction-absorption": {
+    "title": "Reflection, refraction and absorption",
+    "card": [
+      [
+        "Reflection",
+        "Light bounces off a surface. A smooth, shiny surface such as a mirror reflects light in a clear, regular way, so we see an image."
+      ],
+      [
+        "Refraction",
+        "Light bends when it passes from one material into another, such as from air into water. This happens because light changes speed in the new material."
+      ],
+      [
+        "Absorption",
+        "A surface takes in some of the light that hits it and changes its energy, often into heat. Dark surfaces absorb more light than light-coloured ones."
+      ],
+      "One surface can do more than one of these. Light hitting a pond is partly reflected, partly absorbed and partly refracted as it enters the water."
+    ],
+    "remember": "Reflection bounces light, refraction bends it, and absorption takes it in.",
+    "a": {
+      "q": "A straw in a glass of water looks bent at the water's surface. Which process causes this?",
+      "opts": ["Refraction", "Reflection", "Absorption", "Emission"],
+      "why": "Light bends as it passes between water and air, which changes how the straw looks. Reflection is light bouncing off a surface, which does not bend the path of light through a material.",
+      "clue": "Think about light moving from one material into another."
+    },
+    "b": {
+      "d": 2,
+      "q": "Liam and Ava stand side by side in the same sun. Liam's shirt is black and Ava's is white. Why does Liam's shirt feel hotter?",
+      "opts": [
+        "It absorbs more light and changes it to heat",
+        "It reflects more light and so gains more heat",
+        "It refracts more light into the skin",
+        "It absorbs less light than the white shirt"
+      ],
+      "why": "Dark surfaces take in more of the light that hits them, and that energy becomes heat. The tempting idea that the black shirt reflects more is wrong: Ava's white shirt reflects more light, so it stays cooler.",
+      "clue": "Which colour takes in more light, and where does that energy go?"
+    }
+  },
+  "sci-speed-velocity-displacement": {
+    "title": "Speed, velocity and displacement",
+    "card": [
+      ["Distance", "how far an object travels along its path. It has a size only, with no direction."],
+      [
+        "Displacement",
+        "how far an object ends up from where it started, in a straight line, in a stated direction. It can be smaller than the distance travelled."
+      ],
+      [
+        "Average speed",
+        "distance travelled ÷ time taken. Average velocity = change in displacement ÷ time taken, and it has a direction."
+      ],
+      "Speed and velocity are measured in metres per second (m/s). If an object returns to its start, its displacement is zero, so its average velocity is zero."
+    ],
+    "remember": "Distance and speed have no direction. Displacement and velocity do.",
+    "a": {
+      "q": "Priya walks 60 m east along a path, then 20 m back west. What is her displacement from the start?",
+      "opts": ["40 m east", "80 m east", "40 m west", "80 m"],
+      "why": "Displacement is the straight-line change from the start, in a direction. She ends 60 - 20 = 40 m east of the start. Adding the two parts gives 80 m, which is the distance, not the displacement.",
+      "clue": "Subtract the walk back from the walk out."
+    },
+    "b": {
+      "d": 3,
+      "q": "A cyclist in Wagga Wagga rides 3 km north in 10 minutes, then rides 3 km back to the start in 10 minutes. Which statement is correct for the whole trip?",
+      "opts": [
+        "Average velocity is zero, average speed is not",
+        "Average speed is zero, average velocity is not",
+        "Both average speed and average velocity are zero",
+        "Neither average speed nor average velocity is zero"
+      ],
+      "why": "The cyclist ends where she began, so displacement is zero and average velocity is zero. She still travelled 6 km in 20 minutes, so her average speed is not zero. Average speed uses distance, which never cancels out.",
+      "clue": "Where does the cyclist finish compared with the start?"
+    }
+  },
+  "sci-acceleration": {
+    "title": "Acceleration",
+    "card": [
+      "Acceleration is how quickly velocity changes. Acceleration = change in velocity ÷ time taken.",
+      "It is measured in metres per second squared (m/s²). An acceleration of 2 m/s² means velocity changes by 2 m/s every second.",
+      "Velocity changes when an object speeds up, slows down or changes direction. Slowing down gives a negative acceleration when the motion is in the positive direction.",
+      "On a velocity-time graph, acceleration is the slope of the line. A steeper line means a bigger acceleration, and a flat line means zero acceleration."
+    ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A velocity-time graph. A straight line rises from 0 m/s at 0 s to 12 m/s at 4 s, so its slope is 3 m/s squared.",
+        "x": {"min": 0, "max": 5, "label": "Time (s)", "step": 1},
+        "y": {"min": 0, "max": 14, "label": "Velocity (m/s)", "step": 2},
+        "grid": true,
+        "items": [
+          {"type": "curve", "id": "v", "points": [[0, 0], [4, 12]], "label": "Car", "pos": "below-right"},
+          {"type": "point", "at": [4, 12], "on": ["v"], "label": "(4, 12)", "pos": "above-left"}
+        ]
+      }
+    },
+    "remember": "Acceleration is change in velocity per second, and it is the slope of a velocity-time graph.",
+    "a": {
+      "q": "A scooter in Hobart speeds up from 2 m/s to 12 m/s in 5 seconds. What is its acceleration?",
+      "opts": ["2 m/s²", "10 m/s²", "2.4 m/s²", "60 m/s²"],
+      "why": "Change in velocity is 12 - 2 = 10 m/s. Dividing by 5 s gives 2 m/s². Using 12 ÷ 5 ignores the starting velocity, which gives 2.4 m/s².",
+      "clue": "Find the change in velocity first."
+    },
+    "b": {
+      "d": 3,
+      "q": "On a velocity-time graph, a train's line runs flat at 20 m/s for 30 seconds. What is the train's acceleration during this time?",
+      "opts": [
+        "Zero, because its velocity is not changing",
+        "20 m/s², because its velocity is 20 m/s",
+        "Zero, because the train is not moving",
+        "0.67 m/s², because 20 ÷ 30 is 0.67"
+      ],
+      "why": "A flat line has zero slope, so the acceleration is zero. The train is moving at a steady 20 m/s, but its velocity does not change. Acceleration depends on change in velocity, not on how big the velocity is.",
+      "clue": "What is the slope of a flat line?"
+    }
+  },
+  "sci-homeostasis": {
+    "title": "Homeostasis",
+    "card": [
+      "Homeostasis is the body keeping its internal conditions steady, even when the outside world changes. Body temperature and blood glucose (sugar) are two examples.",
+      "Cells work best within a narrow range of conditions. If temperature or glucose drifts too far from that range, cells can stop working properly.",
+      "The body uses negative feedback. A receptor detects a change, and the body responds in a way that reverses the change and brings the condition back towards normal.",
+      "For example, if the body gets too hot, sweating and wider skin blood vessels help it lose heat. If it gets too cold, shivering helps it make heat."
+    ],
+    "remember": "Homeostasis keeps conditions steady by using feedback that reverses a change.",
+    "a": {
+      "q": "Which best describes homeostasis?",
+      "opts": [
+        "Keeping internal conditions steady as the outside changes",
+        "Keeping the outside environment the same as the body",
+        "Making the body's conditions rise as far as they can",
+        "Sending messages from the brain to the muscles"
+      ],
+      "why": "Homeostasis is about keeping the body's internal conditions steady. It does not control the outside environment, and the aim is a steady range, not a maximum.",
+      "clue": "Think about why cells need conditions to stay within a range."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam runs on a hot day and his body temperature starts to rise. His skin sweats and his skin blood vessels widen. How do these responses show homeostasis?",
+      "opts": [
+        "They reverse the rise and bring temperature back to normal",
+        "They raise his temperature further so cells work faster",
+        "They keep the outside air at a steady temperature",
+        "They stop his receptors from detecting the change"
+      ],
+      "why": "Sweating and wider blood vessels help the body lose heat, so they reverse the rise. This is negative feedback. Making the change bigger would move the body further from its normal range.",
+      "clue": "Does the response push the change further or undo it?"
+    }
+  },
+  "sci-nervous-system-nsw": {
+    "title": "The nervous system",
+    "card": [
+      "The nervous system is made of neurons, which are cells that carry messages as electrical impulses. Impulses travel very fast.",
+      "Receptors detect a stimulus, which is a change inside or outside the body. Sensory neurons carry impulses from receptors to the brain and spinal cord. Motor neurons carry impulses from the brain and spinal cord to effectors.",
+      "An effector, such as a muscle, makes the response. In most responses, the impulse goes to the brain, which decides what to do. This takes a little longer.",
+      "A reflex is a fast, automatic response. The impulse is passed on in the spinal cord without going to the brain first, so the effector acts sooner."
+    ],
+    "remember": "Neurons carry fast impulses, and a reflex is quicker because it skips the brain.",
+    "a": {
+      "q": "What is the job of a motor neuron?",
+      "opts": [
+        "Carries impulses from the spinal cord to a muscle",
+        "Carries impulses from a receptor to the spinal cord",
+        "Carries hormones from a gland to the blood",
+        "Carries impulses from the brain to a receptor"
+      ],
+      "why": "A motor neuron carries impulses to an effector such as a muscle. Carrying impulses from a receptor to the spinal cord is the job of a sensory neuron, which is the most tempting mix-up.",
+      "clue": "Motor neurons lead to the part that responds."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam steps on a sharp shell at a beach on the NSW coast and his foot jerks up before he feels pain. Why was the response so quick?",
+      "opts": [
+        "The impulse was passed on in the spinal cord, not the brain",
+        "The impulse travelled faster along the neurons than normal",
+        "The foot detected the shell without using a receptor",
+        "The brain sent a stronger impulse to the leg muscles"
+      ],
+      "why": "In a reflex, the impulse is passed on in the spinal cord without going to the brain first, which shortens the path. The impulses do not travel faster, and a receptor is still needed to detect the shell.",
+      "clue": "Think about the path the impulse takes, not its speed."
+    }
+  },
+  "sci-endocrine-system-nsw": {
+    "title": "The endocrine system",
+    "card": [
+      "The endocrine system is made up of glands. Glands release chemical messengers called hormones.",
+      "Hormones travel in the blood. They reach cells all around the body, but they only affect cells that can respond to them.",
+      "Hormone messages are slower than nerve messages, because blood carries them. Their effects often last longer, from minutes to hours or more.",
+      "Insulin is a hormone released by the pancreas when blood glucose rises after a meal. It lowers blood glucose, and its effects build up over minutes to hours."
+    ],
+    "remember": "Hormones are slower than nerves, but their effects often last longer.",
+    "a": {
+      "q": "A gland releases a hormone. How does the hormone reach the cells it affects?",
+      "opts": ["In the blood", "Along neurons", "Through the skin", "Through the lungs"],
+      "why": "Glands release hormones into the blood, and the blood carries them around the body. Neurons carry nerve impulses, not hormones, so travelling along neurons is a common mix-up.",
+      "clue": "Think about what the body uses to carry things around."
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia eats a big meal and her blood glucose rises. The pancreas releases insulin, and her glucose falls slowly over the next hour or two. What best explains this?",
+      "opts": [
+        "Hormone effects are slower and last longer than nerves",
+        "Insulin is a hormone, so it acts faster than nerve messages",
+        "Insulin is carried along neurons to the body cells",
+        "The pancreas sends the message as a quick electrical impulse"
+      ],
+      "why": "Insulin is a hormone. It travels in the blood, so it acts more slowly than a nerve message, and its effects last longer. That is why glucose falls over minutes to hours. Hormones do not travel along neurons, and they are not quick electrical impulses.",
+      "clue": "Compare the speed and length of hormone effects with nerve effects."
+    }
+  },
+  "sci-double-helix": {
+    "title": "The double helix",
+    "card": [
+      "DNA is made of two long strands twisted around each other. This shape is called a double helix, like a twisted ladder.",
+      "Each strand is a chain of units that carry a base. The four bases are A, T, C and G. The bases of the two strands face each other in the middle.",
+      "Bases pair in a fixed way: A with T, and C with G. So if one strand reads A, A, C, the other strand reads T, T, G.",
+      "The structure was worked out using the work of Rosalind Franklin, Maurice Wilkins, James Watson and Francis Crick. Franklin and Wilkins made X-ray images of DNA, and Watson and Crick built the model of the double helix."
+    ],
+    "remember": "DNA is a twisted ladder of two strands, with A pairing with T and C with G.",
+    "a": {
+      "q": "One strand of DNA has the base sequence G, G, A, T. What is the matching sequence on the other strand?",
+      "opts": ["C, C, T, A", "G, G, A, T", "A, A, G, C", "C, C, A, T"],
+      "why": "Each base pairs with a fixed partner: G with C, A with T and T with A. This gives C, C, T, A. Pairing only the G bases and copying the rest gives C, C, A, T, but A and T must also be swapped for their partners.",
+      "clue": "Pair each base with its partner, one at a time."
+    },
+    "b": {
+      "d": 3,
+      "q": "A scientist tests a sample of DNA and finds that 30% of its bases are A. What percentage of its bases are C?",
+      "opts": ["20%", "30%", "40%", "70%"],
+      "why": "A pairs with T, so 30% of the bases are T as well. That makes 60% A and T, leaving 40% for C and G together. C and G pair, so each is 20%. Choosing 40% forgets that C and G share that amount.",
+      "clue": "Find T first, then share what is left between C and G."
+    }
+  },
+  "sci-dominant-recessive-alleles": {
+    "title": "Dominant and recessive alleles",
+    "card": [
+      "Each trait is controlled by two alleles, which are versions of a gene. One allele comes from each parent.",
+      "A dominant allele shows in the offspring when it is present, written as a capital letter such as T. A recessive allele, written as a small letter such as t, shows only when there is no dominant allele.",
+      "The pair of alleles is the genotype, such as Tt. The trait that can be seen is the phenotype. Tt and TT both show the dominant trait, and only tt shows the recessive one.",
+      "A Punnett square predicts the chances of each genotype in offspring. Put one parent's alleles along the top and the other's down the side, then fill in each box. For Tt × Tt, the boxes give TT, Tt, Tt and tt, so 1 in 4 is tt."
+    ],
+    "remember": "A dominant allele hides a recessive one, and a Punnett square gives the chances.",
+    "a": {
+      "q": "Freckles (F) are dominant to no freckles (f) in a certain mouse. A mouse has the genotype Ff. What does its phenotype show?",
+      "opts": [
+        "Freckles, as F is dominant",
+        "No freckles, as f is present",
+        "Half freckled, as it has one of each",
+        "Freckles on one side only"
+      ],
+      "why": "The dominant allele F shows whenever it is present, so an Ff mouse has freckles. The recessive f is still in its genotype, but it is hidden and does not blend with F.",
+      "clue": "Which allele shows when both are present?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Black fur (B) is dominant to brown fur (b) in a rabbit. Two black rabbits that are both Bb are bred. What is the chance that a kitten has brown fur?",
+      "opts": ["1 in 4", "1 in 2", "3 in 4", "0, as both parents are black"],
+      "why": "A Punnett square for Bb × Bb gives BB, Bb, Bb and bb. Only bb is brown, so the chance is 1 in 4. Both parents are black, but each carries a recessive allele that can pass on.",
+      "clue": "Fill in the four boxes of the Punnett square."
+    }
+  },
+  "sci-weather-climate": {
+    "title": "Weather and climate",
+    "card": [
+      [
+        "Weather",
+        "the conditions in one place over hours or days, such as temperature, rain, wind and cloud. It can change quickly."
+      ],
+      [
+        "Climate",
+        "the average pattern of weather in a place over 30 years or more. It is found by collecting weather records for a long time."
+      ],
+      "Natural processes shape climate. Ocean currents move heat around the planet, and large volcanic eruptions can put ash and gas into the air.",
+      "One hot day or one wet week is weather. It does not on its own show that the climate has changed."
+    ],
+    "remember": "Weather is short term. Climate is the long term average.",
+    "a": {
+      "q": "Mia looks at weather records for her town. Which record describes the town's climate?",
+      "opts": [
+        "Rain averaged 600 mm a year from 1991 to 2020",
+        "Rain totalled 60 mm over three stormy days last week",
+        "It reached 38°C on the hottest day of 2024",
+        "Winds averaged 40 km/h across Sunday afternoon"
+      ],
+      "why": "An average taken over 30 years describes the long term pattern, so it is climate. The wind record is tempting because it is also an average, but it covers only one afternoon, so it is weather. The 2024 record names a year but describes a single day.",
+      "clue": "Check how long a span of time each record covers."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya lives in Broken Hill. It had a record hot week in January. She says this proves the climate there has changed. What is the best reply?",
+      "opts": [
+        "A hot week is weather, and climate is a 30 year average",
+        "A hot week is climate, because it is a record for the town",
+        "Climate can only change when a volcano erupts nearby",
+        "Climate is the weather on any one day, so Priya is right"
+      ],
+      "why": "A single hot week is weather, as it covers only days. Climate is an average over 30 years or more, so one week cannot show a change. The second option is tempting, but a record is still a short term event.",
+      "clue": "How long is a week compared with the time needed to describe climate?"
+    }
+  },
+  "sci-enhanced-greenhouse-effect": {
+    "title": "The enhanced greenhouse effect",
+    "card": [
+      [
+        "Greenhouse effect",
+        "Gases such as carbon dioxide, methane and water vapour trap some of the heat that Earth gives off. This natural effect keeps Earth warm enough for life."
+      ],
+      [
+        "Fossil fuels",
+        "Coal, oil and gas contain carbon stored over millions of years. Burning them releases carbon dioxide into the air."
+      ],
+      [
+        "Stronger effect",
+        "Since industrialisation, burning fossil fuels has added more greenhouse gases. More heat is trapped than by the natural effect alone. This stronger effect is the enhanced greenhouse effect."
+      ],
+      [
+        "Result",
+        "With more heat trapped, global average temperatures have risen. The natural effect is needed for life. The problem is the extra gases added by human activity."
+      ]
+    ],
+    "remember": "The natural greenhouse effect keeps Earth warm. Extra gases from burning fossil fuels strengthen it and raise temperatures.",
+    "a": {
+      "q": "What makes the enhanced greenhouse effect different from the natural greenhouse effect?",
+      "opts": [
+        "Extra greenhouse gases from human activity trap more heat",
+        "Greenhouse gases appear in the air for the first time",
+        "The gases stop trapping heat and let it escape to space",
+        "The Sun gives off more heat than it did before"
+      ],
+      "why": "Burning fossil fuels adds greenhouse gases, so more heat is trapped than by the natural effect alone. The natural effect already existed and already trapped heat, so the gases do not appear for the first time.",
+      "clue": "The natural effect was already there. What has been added?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A student says, \"We should get rid of the greenhouse effect to stop global warming.\" Which reply is correct?",
+      "opts": [
+        "The natural effect keeps Earth warm enough for life",
+        "The natural effect only began when factories were built",
+        "Greenhouse gases come only from burning fossil fuels",
+        "Removing the effect would make Earth warmer overall"
+      ],
+      "why": "The natural greenhouse effect keeps Earth warm enough for life. The extra gases from fossil fuels strengthen it, and that is the problem. The effect did not begin with factories, because gases such as water vapour were trapping heat long before.",
+      "clue": "Think about what the natural effect does for life on Earth."
+    }
+  },
+  "sci-impacts-climate-change": {
+    "title": "Impacts of climate change",
+    "card": [
+      "Satellites, ocean buoys and weather stations collect data over many years. The data show that Earth is warming and that the climate is changing.",
+      "Sea levels are rising for two reasons: ice on land melts and flows into the sea, and warmer ocean water expands. Oceans are also warmer, and sea ice and glaciers are shrinking.",
+      "Climate change alters the water cycle. A warmer atmosphere holds more water vapour, so some places get heavier rain and others get longer droughts.",
+      "Ecosystems come under stress when their conditions change faster than living things can adapt. Warmer ocean water can cause coral bleaching, where corals lose the algae that live in them."
+    ],
+    "remember": "Data show rising seas, warmer oceans and shrinking ice. Climate change also alters the water cycle and puts ecosystems under stress.",
+    "a": {
+      "q": "Which pair of changes both help to explain why sea levels are rising?",
+      "opts": [
+        "Land ice melting and ocean water expanding as it warms",
+        "Sea ice melting and ocean water becoming saltier",
+        "Heavier rainfall and ocean water cooling and sinking",
+        "Longer droughts and glaciers growing on land"
+      ],
+      "why": "Melting land ice adds water to the sea, and warm water takes up more space than cool water. The option with sea ice is tempting, but the card gives melting ice on land and expanding water as the causes, and saltier water is not a cause.",
+      "clue": "Think about water added and water that takes up more space."
+    },
+    "b": {
+      "d": 3,
+      "q": "Scientists studying a reef off Queensland record ocean water that is warmer than usual for several weeks. Many corals lose the algae that live in them. Which idea does this best show?",
+      "opts": [
+        "Ecosystems are stressed when conditions change too fast",
+        "The water cycle is speeding up over the reef",
+        "Sea levels are rising because ice is melting on land",
+        "Corals can adapt quickly to any change in water"
+      ],
+      "why": "The reef's conditions changed faster than the corals could adapt, so the ecosystem is under stress. The water cycle and sea level rise are also effects of climate change, but neither describes corals losing their algae.",
+      "clue": "The corals are reacting to a change in their surroundings."
+    }
+  },
+  "sci-reducing-emissions": {
+    "title": "Reducing emissions",
+    "card": [
+      "Emissions are greenhouse gases released into the air, mostly from burning fossil fuels. There are three main ways to cut them. Each has advantages and limits.",
+      [
+        "Renewable energy",
+        "Solar, wind and hydro power make electricity without burning fossil fuels, so they release very little carbon dioxide while running. Limit: solar and wind output changes with the weather and time of day, so storage or backup power is needed."
+      ],
+      [
+        "Using less energy",
+        "Better insulation, efficient appliances and less travel by car mean less fuel is burned. It can save money and can be done now. Limit: it only cuts emissions where people change habits or buy new equipment."
+      ],
+      [
+        "Carbon capture",
+        "Carbon dioxide is caught from a power station or factory and stored, often deep underground, so it does not enter the air. It lets existing plants keep running. Limits: it is costly, it uses extra energy, and the stored gas must be kept from leaking."
+      ]
+    ],
+    "remember": "Renewables, using less energy and carbon capture can all cut emissions, and each has limits.",
+    "a": {
+      "q": "Which action cuts emissions by using less energy?",
+      "opts": [
+        "Fitting insulation so a home needs less heating",
+        "Building a wind farm to supply a town",
+        "Storing a factory's carbon dioxide underground",
+        "Replacing a coal station with a hydro station"
+      ],
+      "why": "Insulation means less fuel is burned for heating, so it reduces the amount of energy used. A wind farm is renewable energy, not a cut in energy use. Storing carbon dioxide underground is carbon capture.",
+      "clue": "Which one lowers how much energy is needed?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A town in Queensland gets most of its power from a large solar farm. On some cloudy evenings the town still needs power from a gas-fired power station. Which limit of renewable energy does this show?",
+      "opts": [
+        "Solar output changes with weather and time of day",
+        "Solar farms release carbon dioxide while running",
+        "Solar power cannot be stored by any method",
+        "Solar farms need carbon dioxide to be captured"
+      ],
+      "why": "The town needs gas on cloudy evenings because solar output changes with the weather and time of day, so backup or storage is needed. Solar farms release very little carbon dioxide while running, so that option is wrong.",
+      "clue": "Think about what happens to sunlight on a cloudy evening."
+    }
+  },
+  "sci-ions-ionic-bonding": {
+    "title": "Ions and ionic bonding",
+    "card": [
+      "Atoms are most stable when their outer shell is full. Many atoms reach this by gaining or losing electrons.",
+      [
+        "Ion",
+        "an atom that has gained or lost electrons, so it has an electric charge. Losing electrons makes a positive ion. Gaining electrons makes a negative ion."
+      ],
+      [
+        "Ionic bond",
+        "the attraction between positive and negative ions. It forms when a metal gives electrons to a non-metal."
+      ],
+      "Sodium has one outer electron and chlorine has seven. Sodium gives one to chlorine, so sodium becomes Na\\u207a and chlorine becomes Cl\\u207b. They attract to form sodium chloride (NaCl)."
+    ],
+    "remember": "Metals lose electrons and non-metals gain them. Opposite charges attract to form an ionic bond.",
+    "a": {
+      "q": "A magnesium atom loses two electrons. What does it become?",
+      "opts": ["A positive ion", "A negative ion", "A neutral atom with a full shell", "A new element"],
+      "why": "Losing negative electrons leaves more protons than electrons, so the atom becomes a positive ion. A negative ion forms when electrons are gained, not lost.",
+      "clue": "Electrons carry a negative charge. What is left when some go?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Which statement best describes the ionic bond in sodium chloride?",
+      "opts": [
+        "Positive sodium ions attract negative chloride ions",
+        "Sodium and chlorine atoms share a pair of electrons",
+        "Sodium atoms gain an electron from chlorine atoms",
+        "Negative sodium ions attract positive chloride ions"
+      ],
+      "why": "Sodium gives an electron to chlorine, so sodium forms a positive ion and chlorine a negative ion, and they attract. The option with the charges swapped is tempting, but metals lose electrons so they form positive ions.",
+      "clue": "Which atom loses an electron, and what charge does that give it?"
+    }
+  },
+  "sci-covalent-bonding": {
+    "title": "Covalent bonding",
+    "card": [
+      "A covalent bond forms when two atoms share a pair of electrons. It usually forms between non-metal atoms.",
+      "Sharing lets each atom fill its outer shell, so the atoms end up more stable than they were apart. No electrons are fully transferred, so no ions form.",
+      "A group of atoms joined by covalent bonds is a molecule. Water, H2O, is a molecule: one oxygen atom shares electrons with two hydrogen atoms.",
+      "Some elements also exist as molecules. Oxygen is found as O2, a pair of oxygen atoms sharing electrons."
+    ],
+    "remember": "Covalent bonds are shared electrons, usually between non-metal atoms, and they make molecules.",
+    "a": {
+      "q": "What happens to electrons when a covalent bond forms between two atoms?",
+      "opts": [
+        "The atoms share a pair of electrons",
+        "One atom gives electrons to the other",
+        "The electrons are lost from both atoms",
+        "The electrons move freely between many atoms"
+      ],
+      "why": "In a covalent bond, two atoms share electrons so each can fill its outer shell. Giving electrons from one atom to another is what happens when ions form, and that is not covalent bonding.",
+      "clue": "Both atoms fill their outer shells, and neither becomes an ion."
+    },
+    "b": {
+      "d": 2,
+      "q": "Which of these is made of molecules held together by covalent bonds?",
+      "opts": ["Oxygen gas, O2", "A piece of copper wire", "Sodium chloride, NaCl", "A lump of solid sodium metal"],
+      "why": "Oxygen gas is made of pairs of non-metal atoms sharing electrons, so each O2 is a molecule. Sodium chloride is tempting because it contains a non-metal, but it is a metal joined to a non-metal, which forms ions rather than shared pairs.",
+      "clue": "Look for atoms of non-metals only."
+    }
+  },
+  "sci-metallic-bonding": {
+    "title": "Metallic bonding",
+    "card": [
+      "Metal atoms hold their outer electrons loosely. In a metal, these electrons come away from the atoms and are shared by the whole piece of metal.",
+      "This leaves positive ions packed in a regular pattern. They sit in a sea of shared electrons that can move. The attraction between the ions and the electrons is a metallic bond.",
+      "Metals conduct electricity because the electrons can move through the metal and carry charge.",
+      "Metals can be bent or hammered into shape because the layers of ions can slide past each other. The sea of electrons keeps holding the ions together as they move."
+    ],
+    "remember": "Metals have positive ions in a moving sea of shared electrons.",
+    "a": {
+      "q": "Which part of a copper wire carries the electric charge when it conducts electricity?",
+      "opts": [
+        "Electrons that move between the ions",
+        "Positive ions that move along the wire",
+        "Atoms that swap places with each other",
+        "Molecules that share pairs of electrons"
+      ],
+      "why": "The outer electrons are shared by the whole metal and are free to move, so they carry the charge. The positive ions stay packed in their pattern, so they do not carry it along the wire.",
+      "clue": "Which particles in a metal are free to move?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Jin hits a small piece of silver with a hammer and it flattens without breaking. Why does the silver change shape instead of shattering?",
+      "opts": [
+        "Layers of ions slide while shared electrons hold them",
+        "Electrons are pushed out, so the ions drift apart",
+        "Pairs of atoms share electrons and stretch in the metal",
+        "Negative ions are pulled past positive ions in layers"
+      ],
+      "why": "The layers of positive ions can slide past each other, and the sea of shared electrons keeps holding them together. The electrons are not pushed out, so the metal does not fall apart.",
+      "clue": "Think about what stays between the ions as the layers move."
+    }
+  },
+  "sci-properties-from-bonding": {
+    "title": "Properties from bonding",
+    "card": [
+      [
+        "Ionic",
+        "Strong attractions between oppositely charged ions hold the solid together. Ionic compounds have high melting points and are hard but brittle."
+      ],
+      [
+        "Conduction",
+        "Ionic compounds do not conduct as solids, because the ions are locked in place. They conduct when dissolved in water or melted, because the ions are then free to move."
+      ],
+      [
+        "Covalent",
+        "Many covalent substances are separate molecules with weak attractions between them, so they often have low melting points. With no charged particles free to move, they usually do not conduct."
+      ],
+      [
+        "Uses",
+        "Properties decide uses: wax is covalent and melts easily, so it suits candles. Salt is ionic, has a high melting point and conducts when dissolved in water."
+      ]
+    ],
+    "remember": "Ionic: high melting point, conducts only when dissolved or melted. Covalent molecules: often low melting point, usually no conduction.",
+    "a": {
+      "q": "Why does solid sodium chloride not conduct electricity, while a solution of it does?",
+      "opts": [
+        "Its ions cannot move in the solid but can in solution",
+        "Its electrons cannot move in the solid but can in solution",
+        "Its molecules are packed close in solid, spread in solution",
+        "Its atoms are neutral in the solid but charged in solution"
+      ],
+      "why": "Sodium chloride is made of ions. In the solid they are locked in place, but in water they are free to move and carry charge. The option about electrons is tempting, but the charge carriers here are ions.",
+      "clue": "What particles carry the charge, and can they move?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam tests two white solids. Solid X melts at 800 °C and its solution conducts. Solid Y melts at 60 °C and its solution does not conduct. What does this suggest about X and Y?",
+      "opts": [
+        "X is ionic and Y is made of covalent molecules",
+        "X is made of covalent molecules and Y is ionic",
+        "Both X and Y are ionic compounds",
+        "Both X and Y are made of covalent molecules"
+      ],
+      "why": "A high melting point and a solution that conducts match an ionic compound. A low melting point and no conduction match covalent molecules. Swapping them is a common mix-up, but strong attractions between ions need much more heat to overcome than the weak attractions between molecules.",
+      "clue": "Match each test result to ions or molecules."
+    }
+  },
+  "sci-organic-compounds-hydrocarbons": {
+    "title": "Organic compounds and hydrocarbons",
+    "card": [
+      [
+        "Organic compound",
+        "a compound built around carbon atoms, usually joined to hydrogen and sometimes to oxygen or nitrogen. Sugar is an organic compound, and plastics and petrol are made of organic compounds."
+      ],
+      [
+        "Hydrocarbon",
+        "a compound that contains only carbon and hydrogen atoms. Every hydrocarbon is an organic compound."
+      ],
+      "A compound that contains carbon is not always organic. Carbon dioxide has carbon, but it is not counted as an organic compound.",
+      "Most hydrocarbons come from crude oil and natural gas, which formed from the remains of living things. Living things also make organic compounds, such as the sugars in plants."
+    ],
+    "remember": "Organic compounds are based on carbon. A hydrocarbon has only carbon and hydrogen.",
+    "a": {
+      "q": "Which statement correctly describes a hydrocarbon?",
+      "opts": [
+        "It contains only carbon and hydrogen atoms",
+        "It contains carbon and oxygen atoms only",
+        "It contains carbon, hydrogen and oxygen atoms",
+        "It contains hydrogen and oxygen atoms only"
+      ],
+      "why": "A hydrocarbon is made of carbon and hydrogen and nothing else. A compound with oxygen as well, such as sugar, can be organic, but it is not a hydrocarbon.",
+      "clue": "Look at the name: hydro and carbon."
+    },
+    "b": {
+      "d": 3,
+      "q": "A chemist tests three compounds. X has only carbon and hydrogen. Y has carbon, hydrogen and oxygen, and is made by plants. Z is carbon dioxide. Which labels all three correctly?",
+      "opts": [
+        "X hydrocarbon, Y organic, Z not organic",
+        "X hydrocarbon, Y hydrocarbon, Z not organic",
+        "X hydrocarbon, Y organic, Z organic",
+        "X organic, Y hydrocarbon, Z not organic"
+      ],
+      "why": "X has only carbon and hydrogen, so it is a hydrocarbon. Y is based on carbon but has oxygen too, so it is organic but not a hydrocarbon. Z contains carbon, but carbon dioxide is not counted as organic, so the tempting idea that any carbon compound is organic is wrong.",
+      "clue": "Check which atoms each compound contains, and whether Z counts as organic."
+    }
+  },
+  "sci-fractional-distillation-crude-oil": {
+    "title": "Fractional distillation of crude oil",
+    "card": [
+      "Crude oil is a mixture of many hydrocarbons. Fractional distillation separates it into parts called fractions, using the fact that each hydrocarbon has a different boiling point.",
+      "The oil is heated until most of it is vapour. The vapour enters the bottom of a tall column, which is hot at the bottom and cooler towards the top.",
+      "As the vapour rises, each part cools until it reaches its boiling point. There it condenses back to a liquid and is drawn off.",
+      "Small molecules have low boiling points and collect near the top. These include petrol. Large molecules have high boiling points and collect near the bottom. These include bitumen. Diesel sits between them."
+    ],
+    "remember": "The column is hot at the bottom and cool at the top. Each fraction condenses where the temperature falls to its boiling point.",
+    "a": {
+      "q": "Why do the parts of crude oil separate as vapour rises up the column?",
+      "opts": [
+        "Each part condenses at a different temperature",
+        "Each part has a different colour and floats",
+        "Each part burns at a different height",
+        "Each part dissolves in the cooler liquid"
+      ],
+      "why": "Each hydrocarbon has its own boiling point, so each condenses where the column has cooled to that temperature. Colour does not decide where a part is collected.",
+      "clue": "Think about boiling points and the changing temperature of the column."
+    },
+    "b": {
+      "d": 3,
+      "q": "A refinery in Geelong separates crude oil. Fraction X is drawn off near the top of the column. Fraction Y is drawn off near the bottom. Which statement is correct?",
+      "opts": [
+        "X has a lower boiling point than Y",
+        "X has a higher boiling point than Y",
+        "X has larger molecules than Y",
+        "X was heated more than Y"
+      ],
+      "why": "Vapour that rises near the top only condenses where it is cool, so it has a low boiling point and small molecules. Fraction Y condenses where it is hot, so its molecules are larger and its boiling point is higher.",
+      "clue": "Which fraction stays as a vapour the longest as it rises?"
+    }
+  },
+  "sci-naming-alkanes": {
+    "title": "Naming alkanes",
+    "card": [
+      "Alkanes are hydrocarbons with only single bonds between carbon atoms. Each carbon atom forms four bonds in total.",
+      "The name of an alkane shows how many carbons it has: methane 1, ethane 2, propane 3, butane 4, pentane 5, hexane 6, heptane 7, octane 8.",
+      "In a drawing, each line is one bond. Each carbon is joined to any other carbons and to hydrogen atoms until it has four bonds. Methane, for example, is one carbon bonded to four hydrogens.",
+      "The ending -ane shows an alkane. The first part of the name gives the number of carbons."
+    ],
+    "remember": "Meth, eth, prop, but, pent, hex, hept, oct give 1 to 8 carbons. Each carbon has four bonds.",
+    "a": {
+      "q": "An alkane has five carbon atoms joined in a chain. What is its name?",
+      "opts": ["Pentane", "Butane", "Hexane", "Propane"],
+      "why": "Five carbons gives the name pentane. Butane has four carbons and hexane has six, so they are close but wrong.",
+      "clue": "Count up the names in order, starting from methane for one carbon."
+    },
+    "b": {
+      "d": 3,
+      "q": "A gas lighter in Orange holds an alkane. A chemist draws its molecule with four carbon atoms in a row, all joined by single bonds. Which name and number of hydrogens match?",
+      "opts": [
+        "Butane, with 10 hydrogen atoms",
+        "Butane, with 8 hydrogen atoms",
+        "Propane, with 10 hydrogen atoms",
+        "Pentane, with 10 hydrogen atoms"
+      ],
+      "why": "Four carbons is butane. The two end carbons each bond to one carbon, so they need three hydrogens each. The two middle carbons bond to two carbons, so they need two hydrogens each, giving 10. Eight hydrogens would leave some carbons with fewer than four bonds.",
+      "clue": "Count the hydrogens each carbon needs to reach four bonds."
+    }
+  },
+  "sci-balanced-chemical-equations": {
+    "title": "Balanced chemical equations",
+    "card": [
+      "A chemical equation shows reactants on the left and products on the right, with an arrow between them. A number in front of a formula, called a coefficient, says how many of that substance react or form. A coefficient of 1 is not written.",
+      "A balanced equation has the same number of each kind of atom on both sides. Atoms are only rearranged, so none can appear or vanish.",
+      "To balance an equation, change the coefficients only. Never change the small numbers inside a formula, because that would make a different substance. For example, 2H₂ + O₂ → 2H₂O has 4 H atoms and 2 O atoms on each side.",
+      "State symbols follow each formula: (s) solid, (l) liquid, (g) gas and (aq) dissolved in water. Example: 2H₂(g) + O₂(g) → 2H₂O(l)."
+    ],
+    "remember": "Balance by changing coefficients only, so each atom count matches. State symbols show the form of each substance.",
+    "a": {
+      "q": "Magnesium burns in oxygen. Which of these equations shows the reaction with the same atoms on both sides?",
+      "opts": ["2Mg + O₂ → 2MgO", "Mg + O₂ → MgO", "Mg + O₂ → 2MgO", "2Mg + 2O₂ → 2MgO"],
+      "why": "2Mg + O₂ → 2MgO has 2 Mg and 2 O on each side. Mg + O₂ → MgO looks tempting because each formula is correct, but it has 2 O atoms on the left and only 1 on the right.",
+      "clue": "Count the Mg atoms and the O atoms on each side."
+    },
+    "b": {
+      "d": 3,
+      "q": "A student balances H₂ + O₂ → H₂O by changing the product to H₂O₂. Why is this wrong, and what is the right fix?",
+      "opts": [
+        "It changes the substance; put 2 in front of H₂ and H₂O",
+        "It changes the substance; put 2 in front of O₂ and H₂O",
+        "It is fine, because both sides now have the same atoms",
+        "It is fine, as small numbers can change like coefficients"
+      ],
+      "why": "Changing a small number inside a formula makes a different substance, since H₂O₂ is not water. Only coefficients can change, so write 2H₂ + O₂ → 2H₂O, with 4 H and 2 O on each side. Putting 2 in front of O₂ and H₂O is tempting, but it gives 2 H on the left and 4 on the right.",
+      "clue": "Which numbers are you allowed to change? Then count the H atoms."
+    }
+  },
+  "sci-types-reactions": {
+    "title": "Types of reactions",
+    "card": [
+      [
+        "Combustion",
+        "a substance reacts with oxygen and gives off heat and light. Burning methane in a gas stove is an example. Complete combustion of a fuel containing carbon and hydrogen makes carbon dioxide and water."
+      ],
+      [
+        "Decomposition",
+        "one substance breaks down into two or more simpler substances. Heating calcium carbonate gives calcium oxide and carbon dioxide."
+      ],
+      [
+        "Precipitation",
+        "two solutions are mixed and an insoluble solid forms. The solid is called the precipitate. Mixing silver nitrate and sodium chloride solutions makes solid silver chloride."
+      ],
+      [
+        "Acid reactions",
+        "an acid reacting with a metal makes a salt and hydrogen gas. An acid reacting with a carbonate makes a salt, water and carbon dioxide gas."
+      ]
+    ],
+    "remember": "Match the reaction to what you start with and what you see: oxygen and burning, one thing splitting, a solid forming from solutions, or an acid giving off gas.",
+    "a": {
+      "q": "Which reaction is a precipitation reaction?",
+      "opts": [
+        "Two clear solutions mixed form a solid that sinks",
+        "A candle burns in air and gives off heat and light",
+        "A carbonate is heated and gives off a gas",
+        "A metal is added to acid and fizzes"
+      ],
+      "why": "Precipitation is when two solutions mix and an insoluble solid forms. The fizzing metal in acid makes hydrogen gas, so it is an acid reaction, not a precipitation.",
+      "clue": "Think about what a precipitate is and what it is made from."
+    },
+    "b": {
+      "d": 3,
+      "q": "Zara drops a piece of limestone, which is mostly calcium carbonate, into dilute hydrochloric acid. It fizzes and the gas turns limewater cloudy. Which type of reaction is this?",
+      "opts": [
+        "An acid reacting with a carbonate",
+        "Decomposition by heating",
+        "Combustion in oxygen",
+        "Precipitation of an insoluble solid"
+      ],
+      "why": "A carbonate added to an acid fizzes as carbon dioxide gas is released, along with a salt and water. It is not decomposition, because nothing was heated and the acid takes part in the reaction.",
+      "clue": "What two substances were mixed, and what gas formed?"
+    }
+  },
+  "sci-where-elements-come-from": {
+    "title": "Where elements come from",
+    "card": [
+      "Soon after the Big Bang, the universe was very hot and then cooled. The first nuclei that formed in this time were mostly hydrogen and helium.",
+      "Gravity pulled clouds of hydrogen and helium together to form stars. Inside a star, the core is hot and dense enough for nuclei to join together. This joining is called fusion.",
+      "In stars, fusion turns hydrogen into helium. Later in a star's life, helium can fuse into carbon and oxygen. Heavier elements, such as iron, form in stars much more massive than the Sun.",
+      "When some stars end their lives, they spread these elements into space. New stars and planets can then form from this material, including the Earth."
+    ],
+    "remember": "Hydrogen and helium came first. Fusion in stars made heavier elements.",
+    "a": {
+      "q": "Which elements formed soon after the Big Bang?",
+      "opts": ["Hydrogen and helium", "Carbon and oxygen", "Helium and iron", "Hydrogen and carbon"],
+      "why": "Mainly hydrogen and helium formed in the early universe. Carbon, oxygen and iron formed later, when fusion in stars joined smaller nuclei into larger ones.",
+      "clue": "Think of the two lightest elements."
+    },
+    "b": {
+      "d": 2,
+      "q": "Oxygen in the air in Orange, NSW, is a heavier element. Where did its atoms first form?",
+      "opts": [
+        "By fusion inside stars long ago",
+        "In the first moments after the Big Bang",
+        "By gravity pulling gas into the Earth",
+        "By fission in the Earth's crust"
+      ],
+      "why": "Heavier elements such as oxygen formed by fusion inside stars, then were spread into space when stars ended their lives. They did not form soon after the Big Bang. Gravity gathered this material into the Earth, but it did not make the elements.",
+      "clue": "Which process builds heavier nuclei from lighter ones?"
+    }
+  },
+  "sci-radioactive-decay-half-life": {
+    "title": "Radioactive decay and half-life",
+    "card": [
+      "Some atoms have an unstable nucleus. It gives off energy or particles to become more stable. This is radioactive decay.",
+      [
+        "Alpha",
+        "a particle of two protons and two neutrons. Beta is a fast electron from the nucleus. Gamma is a burst of energy, not a particle."
+      ],
+      "Alpha is stopped by paper and beta by thin aluminium. Gamma is only reduced by thick lead or concrete.",
+      "Half-life is the time for half the atoms in a sample to decay. The decay of one atom cannot be predicted, but a large sample follows a steady pattern. After one half-life, half the unstable atoms are left. After two, a quarter are left."
+    ],
+    "remember": "Unstable nuclei decay by giving off alpha, beta or gamma radiation. Half-life is the time for half the atoms to decay.",
+    "a": {
+      "q": "What does the half-life of a radioactive sample tell you?",
+      "opts": [
+        "The time for half its unstable atoms to decay",
+        "The time for all its unstable atoms to decay",
+        "The time for its radiation to be halved by lead",
+        "The time for each atom to lose half its mass"
+      ],
+      "why": "Half-life is the time for half the unstable atoms in a sample to decay. It does not mean all atoms decay in two half-lives, because only half of the remaining atoms decay in each half-life.",
+      "clue": "Think about how many atoms have decayed, not how long one atom lasts."
+    },
+    "b": {
+      "d": 3,
+      "q": "A sample of a radioisotope has a half-life of 6 hours. Mia starts with 80 g of the isotope. How much is left after 12 hours?",
+      "opts": ["20 g", "40 g", "0 g", "60 g"],
+      "why": "12 hours is two half-lives. The amount halves from 80 g to 40 g, then from 40 g to 20 g. The tempting answer of 40 g forgets the second half-life.",
+      "clue": "Work out how many half-lives fit into 12 hours."
+    }
+  },
+  "sci-uses-radioisotopes": {
+    "title": "Uses of radioisotopes",
+    "card": [
+      "A radioisotope is an unstable form of an element that gives off radiation as it decays. Its radiation can be detected, and it can also damage or kill cells.",
+      [
+        "Medicine",
+        "a radioisotope that collects in an organ can be tracked with a detector to find cancer. Stronger radiation aimed at a tumour can kill cancer cells."
+      ],
+      [
+        "Industry",
+        "gamma radiation can kill germs on sealed medical equipment. A radioisotope added to a pipe's fluid can be tracked outside to find a leak."
+      ],
+      [
+        "Dating",
+        "the amount of a radioisotope left in an ancient material, compared with its half-life, shows how old the material is."
+      ]
+    ],
+    "remember": "Radiation can be detected and can kill cells, so it is used to find, treat, sterilise, check and date, with care.",
+    "a": {
+      "q": "Why can gamma radiation be used to sterilise sealed medical equipment?",
+      "opts": [
+        "It kills germs on the equipment",
+        "It makes the equipment stronger",
+        "It detects germs inside the packet",
+        "It makes the germs stop moving but stay alive"
+      ],
+      "why": "Radiation can kill living cells, including germs, even through sealed packaging. Detecting radiation is a different use, and it does not remove germs.",
+      "clue": "Think about what radiation can do to cells."
+    },
+    "b": {
+      "d": 3,
+      "q": "A water company in Wagga Wagga adds a radioisotope to the water in an underground pipe. A worker walks above the ground with a detector. What is the company trying to do?",
+      "opts": [
+        "Find where the pipe is leaking",
+        "Kill germs growing in the pipe",
+        "Work out how old the pipe is",
+        "Treat a tumour near the pipe"
+      ],
+      "why": "The radiation can be detected through soil, so a strong reading shows where water has escaped. The company is not killing germs or dating the pipe: it is only tracking the radiation.",
+      "clue": "The detector is used to find where the radiation has gone."
+    }
+  },
+  "sci-fission-fusion": {
+    "title": "Fission and fusion",
+    "card": [
+      [
+        "Fission",
+        "A heavy nucleus, such as uranium, splits into smaller nuclei. Nuclear power stations use fission, and they leave radioactive waste that must be stored safely."
+      ],
+      [
+        "Fusion",
+        "Light nuclei, such as hydrogen, join to form a heavier nucleus. Fusion is how the Sun releases energy."
+      ],
+      "Both reactions change the nucleus, not just the outer electrons. This is why they release huge amounts of energy compared with chemical reactions.",
+      "To tell them apart, ask what happens to the nucleus. If one big nucleus breaks into smaller ones, it is fission. If small nuclei combine into a bigger one, it is fusion."
+    ],
+    "remember": "Fission splits a heavy nucleus. Fusion joins light nuclei. Both release huge amounts of energy.",
+    "a": {
+      "q": "Which description matches a nuclear fission reaction?",
+      "opts": [
+        "A uranium nucleus splits into smaller nuclei",
+        "Two hydrogen nuclei join to form a helium nucleus",
+        "A nucleus gains electrons to form a negative ion",
+        "Two atoms share electrons to form a molecule"
+      ],
+      "why": "Fission is the splitting of a heavy nucleus such as uranium into smaller nuclei. Two hydrogen nuclei joining is fusion, which is the most tempting wrong option because it is also a nuclear reaction.",
+      "clue": "Fission means splitting."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dr Lee compares two reactions. In Reaction X, a large nucleus breaks into two smaller ones. In Reaction Y, small nuclei combine into a larger one. Which statement is correct?",
+      "opts": [
+        "X is used in power stations and Y happens in the Sun",
+        "Y is used in power stations and X happens in the Sun",
+        "X releases energy but Y does not release any",
+        "X and Y both leave no radioactive waste at all"
+      ],
+      "why": "X is fission, which nuclear power stations use, and Y is fusion, which powers the Sun. The swapped option is tempting but reverses the two reactions. Both release huge amounts of energy, so the option saying only one does is wrong.",
+      "clue": "Work out which reaction splits and which joins."
+    }
   }
 };

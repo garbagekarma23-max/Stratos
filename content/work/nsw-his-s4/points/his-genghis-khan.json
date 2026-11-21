@@ -20,8 +20,216 @@
    0.214
   ]
  ],
- "stage": "match",
+ "stage": "cleared",
  "log": [
-  "2026-11-12T12:22:36Z new, match"
- ]
+  "2026-11-12T12:22:36Z new, match",
+  "2026-11-20T12:15:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-20T12:25:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-20T12:35:51Z write: done",
+  "2026-11-20T12:44:56Z check: flagged",
+  "2026-11-20T12:53:26Z fix: suggested",
+  "2026-11-20T13:37:07Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-20T14:02:37Z claude-code review: left for you (it chose to leave it)",
+  "2026-11-20T14:40:27Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00038,
+  "write": 0.00614,
+  "check": 0.01144,
+  "fix": 0.01502,
+  "recheck": 0.00858
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, his-genghis-khan-unites-mongols, covers the uniting of the tribes and the 1206 title but not the conquests across Asia that the brief asks for, so it is narrower than the new point and no bank point matches it exactly.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Genghis Khan",
+  "card": [
+   "Temujin was born around 1162 on the steppe of Central Asia. The Mongols were split into many tribes that often fought each other.",
+   "Temujin built alliances and defeated rival leaders. Over many years he brought the Mongol tribes together under one rule.",
+   "In 1206 a great gathering of Mongol leaders named him Genghis Khan. The title means ruler of all the Mongols.",
+   "Once the tribes were united, Genghis Khan led them in conquests across Asia. His armies attacked kingdoms and cities far beyond the steppe."
+  ],
+  "remember": "Temujin united the tribes first. As Genghis Khan he then led conquests.",
+  "a": {
+   "q": "What did Temujin do before he was named Genghis Khan in 1206?",
+   "opts": [
+    "United the Mongol tribes under one rule",
+    "Conquered the kingdoms of Europe",
+    "Moved the Mongols into walled cities",
+    "Founded a dynasty that ruled China"
+   ],
+   "why": "Temujin first brought the Mongol tribes together, and the gathering of 1206 named him Genghis Khan as their ruler. The conquests across Asia came after this, so conquering kingdoms was not what made him khan.",
+   "clue": "Think about who he ruled before he led armies abroad."
+  },
+  "b": {
+   "d": 2,
+   "q": "Why was it important for Genghis Khan's conquests that the Mongol tribes were united first?",
+   "opts": [
+    "The tribes could then fight together as one force",
+    "The tribes no longer needed to keep herds",
+    "The tribes had stopped using horses for travel",
+    "The tribes had already conquered Asia by 1206"
+   ],
+   "why": "Before 1206 the tribes often fought each other. United under one ruler, they could attack kingdoms and cities beyond the steppe together. The conquests came after 1206, not before it.",
+   "clue": "Before unity, the tribes often fought each other."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "United the Mongol tribes under one rule",
+   "also_right": []
+  },
+  "b": {
+   "best": "The tribes could then fight together as one force",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'The title means ruler of all the Mongols' is not an accepted meaning of 'Genghis (Chinggis) Khan'. The meaning is debated, and common renderings are 'universal ruler', 'oceanic ruler' or 'firm/fierce ruler'. The card should give one of these, hedged (for example 'is often said to mean universal ruler'), or drop the claim."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "Both questions are sound and have clear answers. The card misstates the meaning of the title Genghis Khan: it is usually given as 'universal' or 'oceanic' ruler, and the meaning is debated."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: 'The title means ruler of all the Mongols' is not an accepted meaning of 'Genghis (Chinggis) Khan'. The meaning is debated, and common renderings are 'universal ruler', 'oceanic ruler' or 'firm/fierce ruler'. The card should give one of these, hedged (for example 'is often said to mean universal ruler'), or drop the claim."
+ ],
+ "proposal": {
+  "title": "Genghis Khan",
+  "card": [
+   "Temujin was born around 1162 on the steppe of Central Asia. The Mongols were split into many tribes that often fought each other.",
+   "Temujin built alliances and defeated rival leaders. Over many years he brought the Mongol tribes together under one rule.",
+   "In 1206 a great gathering of Mongol leaders named him Genghis Khan. The title is often said to mean universal ruler, though historians still debate its meaning.",
+   "Once the tribes were united, Genghis Khan led them in conquests across Asia. His armies attacked kingdoms and cities far beyond the steppe."
+  ],
+  "remember": "Temujin united the tribes first. As Genghis Khan he then led conquests.",
+  "a": {
+   "q": "What did Temujin do before he was named Genghis Khan in 1206?",
+   "opts": [
+    "United the Mongol tribes under one rule",
+    "Conquered the kingdoms of Europe",
+    "Moved the Mongols into walled cities",
+    "Founded a dynasty that ruled China"
+   ],
+   "why": "Temujin first brought the Mongol tribes together, and the gathering of 1206 named him Genghis Khan as their ruler. The conquests across Asia came after this, so conquering kingdoms was not what made him khan.",
+   "clue": "Think about who he ruled before he led armies abroad."
+  },
+  "b": {
+   "d": 2,
+   "q": "Why was it important for Genghis Khan's conquests that the Mongol tribes were united first?",
+   "opts": [
+    "The tribes could then fight together as one force",
+    "The tribes no longer needed to keep herds",
+    "The tribes had stopped using horses for travel",
+    "The tribes had already conquered Asia by 1206"
+   ],
+   "why": "Before 1206 the tribes often fought each other. United under one ruler, they could attack kingdoms and cities beyond the steppe together. The conquests came after 1206, not before it.",
+   "clue": "Before unity, the tribes often fought each other."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-20T13:37:07Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "United the Mongol tribes under one rule",
+    "also_right": []
+   },
+   "b": {
+    "best": "The tribes could then fight together as one force",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-20T13:37:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'The title means ruler of all the Mongols' is not an accepted meaning of 'Genghis (Chinggis) Khan'. The meaning is debated, and common renderings are 'universal ruler', 'oceanic ruler' or 'firm/fierce ruler'. The card should give one of these, hedged (for example 'is often said to mean universal ruler'), or drop the claim."
+   }
+  ],
+  "flags": [
+   "Card, fact: 'The title means ruler of all the Mongols' is not an accepted meaning of 'Genghis (Chinggis) Khan'. The meaning is debated, and common renderings are 'universal ruler', 'oceanic ruler' or 'firm/fierce ruler'. The card should give one of these, hedged (for example 'is often said to mean universal ruler'), or drop the claim."
+  ],
+  "owner": "fix"
+ },
+ "claude_code": [
+  {
+   "at": "2026-11-20T14:02:37Z",
+   "step": "review",
+   "decision": "leave",
+   "sure": "medium",
+   "reason": "The card and question b deal with fighting and conquest, which goes to the owner. The fix's hedged meaning of the title looks reasonable.",
+   "item": "9f7108eb90cb982a",
+   "result": "left"
+  }
+ ],
+ "final": {
+  "title": "Genghis Khan",
+  "card": [
+   "Temujin was born around 1162 on the steppe of Central Asia. The Mongols were split into many tribes that often fought each other.",
+   "Temujin built alliances and defeated rival leaders. Over many years he brought the Mongol tribes together under one rule.",
+   "In 1206 a great gathering of Mongol leaders named him Genghis Khan. The title is often said to mean universal ruler, though historians still debate its meaning.",
+   "Once the tribes were united, Genghis Khan led them in conquests across Asia. His armies attacked kingdoms and cities far beyond the steppe."
+  ],
+  "remember": "Temujin united the tribes first. As Genghis Khan he then led conquests.",
+  "a": {
+   "q": "What did Temujin do before he was named Genghis Khan in 1206?",
+   "opts": [
+    "United the Mongol tribes under one rule",
+    "Conquered the kingdoms of Europe",
+    "Moved the Mongols into walled cities",
+    "Founded a dynasty that ruled China"
+   ],
+   "why": "Temujin first brought the Mongol tribes together, and the gathering of 1206 named him Genghis Khan as their ruler. The conquests across Asia came after this, so conquering kingdoms was not what made him khan.",
+   "clue": "Think about who he ruled before he led armies abroad."
+  },
+  "b": {
+   "d": 2,
+   "q": "Why was it important for Genghis Khan's conquests that the Mongol tribes were united first?",
+   "opts": [
+    "The tribes could then fight together as one force",
+    "The tribes no longer needed to keep herds",
+    "The tribes had stopped using horses for travel",
+    "The tribes had already conquered Asia by 1206"
+   ],
+   "why": "Before 1206 the tribes often fought each other. United under one ruler, they could attack kingdoms and cities beyond the steppe together. The conquests came after 1206, not before it.",
+   "clue": "Before unity, the tribes often fought each other."
+  }
+ },
+ "cleared_by": "owner"
 }
