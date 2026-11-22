@@ -62,12 +62,24 @@ const sound = (() => {
     g.gain.exponentialRampToValueAtTime(0.0001, t + 0.012 + dur);
     o.connect(g); g.connect(bus); o.start(t); o.stop(t + dur + 0.07);
   }
+  /* The click's noise is the same every time: a fixed run of random-looking numbers (mulberry32, started from 12345)
+     in place of Math.random. Fresh noise on each load gave about 1 click in 25 a sharper spike, so the click sounded a
+     little different from load to load and a test of its level failed by chance. This run sits in the middle of them. */
+  function clickNoise(d) {
+    let t = 12345;
+    for (let i = 0; i < d.length; i++) {
+      t = (t + 0x6D2B79F5) >>> 0;
+      let x = Math.imul(t ^ (t >>> 15), 1 | t);
+      x = (x + Math.imul(x ^ (x >>> 7), 61 | x)) ^ x;
+      d[i] = ((x ^ (x >>> 14)) >>> 0) / 4294967296 * 2 - 1;
+    }
+  }
   /* The maths keypad's click: a very short tap of filtered noise, like a soft key on a calculator.
      Copied from lab/sound.js with the level measured there, well below the ping. */
   let noise = null;
   function click(vol) {
     const a = ac(); if (!a) return;
-    if (!noise) { noise = a.createBuffer(1, Math.floor(a.sampleRate * 0.03), a.sampleRate); const d = noise.getChannelData(0); for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1; }
+    if (!noise) { noise = a.createBuffer(1, Math.floor(a.sampleRate * 0.03), a.sampleRate); clickNoise(noise.getChannelData(0)); }
     const t = a.currentTime, s = a.createBufferSource(), f = a.createBiquadFilter(), g = a.createGain();
     s.buffer = noise; f.type = 'bandpass'; f.frequency.value = 2600; f.Q.value = 1.1;
     g.gain.setValueAtTime(0.0001, t);
