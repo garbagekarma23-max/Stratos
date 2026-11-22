@@ -21,7 +21,9 @@ and which never, the checker seeing only the fix, the estimate, --max-dollars, w
 undo, nothing decided twice); autoreject (who it rejects and who stays, the rejection, the count of rewrites, the dry run,
 undo, the summary, and the whole loop up to the owner); rebalance (the questions whose right option is clearly the longest, the estimate on Sonnet,
 --max-dollars and --max-new-dollars, new wrong options with the question and right option kept, the check of each
-rewrite on Opus, what it keeps and why, nothing sent twice, and check_content's warning before and after); reuse, adapt and new
+rewrite on Opus, what it keeps and why, nothing sent twice, and check_content's warning before and after); feedback import (the dashboard's CSV in both shapes, a cleared point sent back
+with its published version kept live, a point written by hand listed, the dry run, nothing imported twice, publish
+keeping the chapter, and a decision closing the feedback); reuse, adapt and new
 across states (the shortlist with no API call, the split and estimate before sending, Haiku's match, Opus only for a
 reuse Haiku names and for an adapt it is not sure of, never told Haiku's answer, a sure Haiku reuse Opus turns down written
 new, a reuse with nothing written, a bank point reused twice, an
@@ -35,7 +37,7 @@ with autoreview, recheck and the fix carrying on, and the reviewer: what it may 
 sure decisions applied as the review page would, cleared_by claude-code, spot check answers, the dry run, nothing twice,
 and undo); and the API key never printed or saved.
 """
-import _thread, contextlib, io, json, os, re, shutil, subprocess, sys, tempfile, threading, urllib.request
+import _thread, contextlib, csv, io, json, os, re, shutil, subprocess, sys, tempfile, threading, urllib.request
 from types import SimpleNamespace as NS
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -952,6 +954,95 @@ def rebalance_tests(tmp, printed, api):
     check(code == 0 and cc.returncode == 0 and 'tst-rebal' not in cc.stdout.split('WARNINGS')[-1] and 'Testing, Year 9: 17 points, 34 questions' in cc.stdout,
           'published again, the course no longer gets the warning')
 
+
+def feedback_tests(tmp, printed):
+    """feedback import, on the course rebalance_tests published: the dashboard's CSV read in both shapes, a cleared point
+    sent back to the review list with its published version kept live, feedback added to a point already waiting, a
+    point written by hand listed for the owner, bad rows skipped, the dry run, nothing imported twice, the review page's
+    fields, publish keeping the chapter with the live version, and a decision closing the feedback."""
+    repo, work = os.path.join(tmp, 'repo-rebal'), os.path.join(tmp, 'work-rebal')
+    outline = os.path.join(tmp, 'tst-rebal.yaml')
+    def go(*argv):
+        code, out = run(['--repo', repo, '--work', work] + list(argv)); printed.append(out); return code, out
+    W = pipeline.Work(work, 'tst-rebal')
+    files = lambda: {os.path.join(r_, f): open(os.path.join(r_, f), encoding='utf-8').read() for r_, _, fs in os.walk(work) for f in fs}
+    bank_js = lambda: open(os.path.join(repo, 'src', 'bank', 'tsr.js'), encoding='utf-8').read()
+    course_js = lambda: open(os.path.join(repo, 'src', 'courses', 'tst-rebal.js'), encoding='utf-8').read()
+    alpha = W.load('tsr-plain-alpha')
+    published = alpha['final']
+    check(alpha['stage'] == 'cleared' and 'tsr-plain-alpha' in course_js(), 'feedback: the course is published with its first chapter')
+
+    # The view as the dashboard exports it: a point, its counts, and its items as JSON.
+    item = lambda i, at, part, reason, note=None, course='tst-rebal': {'id': i, 'at': at, 'part': part, 'reason': reason, 'note': note, 'course': course, 'version': '2026-11-21.abc1234'}
+    view = os.path.join(tmp, 'feedback_by_point.csv')
+    with open(view, 'w', encoding='utf-8-sig', newline='') as f:
+        w = csv.writer(f)
+        w.writerow(['point', 'last_at', 'total', 'wrong', 'unclear', 'typo', 'other', 'courses', 'items'])
+        w.writerow(['tsr-plain-alpha', '2026-11-21 10:00:00+00', 2, 1, 0, 1, 0, 'tst-rebal',
+                    json.dumps([item(7, '2026-11-21T10:00:00+00:00', 'a', 'wrong', 'Option B, is right too.'), item(3, '2026-11-20T09:00:00+00:00', 'card 2', 'typo')])])
+        w.writerow(['tsr-plain-flag', '2026-11-19 10:00:00+00', 1, 0, 1, 0, 0, 'tst-rebal', json.dumps([item(2, '2026-11-19T10:00:00+00:00', 'b', 'unclear')])])
+        w.writerow(['c1p1', '2026-11-18 10:00:00+00', 1, 0, 0, 0, 1, 'eco', json.dumps([item(1, '2026-11-18T10:00:00+00:00', 'card', 'other', 'Hand-written point.', 'eco')])])
+        w.writerow(['tsr-plain-charlie', '2026-11-18 10:00:00+00', 1, 0, 0, 0, 1, 'tst-rebal', json.dumps([item(9, '2026-11-18T10:00:00+00:00', 'card 99', 'rude')])])
+    saved = files()
+    code, out = go('feedback', 'import', view, '--dry-run')
+    check(code == 0 and 'Would import feedback' in out and 'tsr-plain-alpha in tst-rebal' in out and 'A dry run: nothing was changed.' in out and files() == saved,
+          'feedback import --dry-run says what it would do, and changes nothing')
+    code, out = go('feedback', 'import', view)
+    a, fl = W.load('tsr-plain-alpha'), W.load('tsr-plain-flag')
+    check(code == 0 and a['stage'] == 'review' and a['draft'] == published and a['live'] == published and a['final'] == published,
+          'a cleared point goes back to the review list as it is, and the version students see is kept live')
+    check([x['id'] for x in a['feedback']] == ['7', '3'] and a['feedback'][0]['note'] == 'Option B, is right too.' and a['feedback'][1]['part'] == 'card 2' and
+          not a.get('flags') and not a.get('proposal') and not a.get('cleared_by') and any('student feedback: back to the review list' in l for l in a['log']),
+          'with each piece of feedback (newest first, its part, reason and note), no old flags or fix, and a line in its log')
+    check(fl['stage'] == 'review' and [x['id'] for x in fl['feedback']] == ['2'] and fl.get('proposal'), 'feedback on a point already waiting is added to it, and its fix stays')
+    check('Not made by the content pipeline (1)' in out and '  c1p1\n    Something else, the card (eco): Hand-written point.' in out,
+          'a point written by hand is listed for the owner to change in src/, with its feedback')
+    check('Skipped, not in the shape the dashboard exports: line 5.' in out and not W.load('tsr-plain-charlie').get('feedback'), 'a row with a reason or part the app never sends is skipped')
+    check('Back to the review list (1). Students see the published version until you decide:' in out and 'The answer is wrong, question a (the check question) (tst-rebal): Option B, is right too.' in out,
+          'the summary lists each point sent back with its feedback in words')
+
+    items = {i['id']: i for i in pipeline.review_items(work, repo)['items']}
+    check('tsr-plain-alpha' in items and items['tsr-plain-alpha']['live'] and [x['reason'] for x in items['tsr-plain-alpha']['feedback']] == ['wrong', 'typo'] and
+          items['tsr-plain-flag']['feedback'][0]['reason'] == 'unclear', 'the review page lists the point with its feedback, and says students still see it')
+    saved = files()
+    code, out = go('feedback', 'import', view)
+    check(code == 0 and files() == saved and 'Already imported before, so left as they are: 3 pieces.' in out, 'importing the same file again changes nothing')
+
+    # The table's rows, one per piece of feedback, work too.
+    rows = os.path.join(tmp, 'feedback.csv')
+    with open(rows, 'w', encoding='utf-8', newline='') as f:
+        w = csv.writer(f)
+        w.writerow(['id', 'at', 'point', 'part', 'reason', 'note', 'course', 'version'])
+        w.writerow([11, '2026-11-21 11:00:00+00', 'tsr-plain-bravo', 'b', 'wrong', '', 'tst-rebal', 'dev'])
+    code, out = go('feedback', 'import', rows)
+    br = W.load('tsr-plain-bravo')
+    check(code == 0 and br['stage'] == 'review' and br['feedback'][0]['part'] == 'b' and br['feedback'][0]['note'] is None, 'a CSV of the table\'s rows works too')
+    bad = os.path.join(tmp, 'empty.csv')
+    with open(bad, 'w', encoding='utf-8') as f: f.write('point,items\n')
+    code, out = go('feedback', 'import', bad)
+    check(code == 1 and 'has no feedback in it' in out, 'a file with no feedback says so')
+
+    # Publish keeps the chapter in the app, with the version students already see.
+    old_bank = bank_js()
+    code, out = go('publish', outline)
+    check(code == 0 and 'tsr-plain-alpha' in course_js() and 'tsr-plain-bravo' in course_js() and bank_js() == old_bank,
+          'publish keeps the chapter while its points wait for the owner, with the published versions unchanged')
+
+    # The owner decides: approve keeps it, a rejection rewrites it, and the feedback moves to the point's history.
+    res = pipeline.decide(work, repo, {'course': 'tst-rebal', 'id': 'tsr-plain-alpha', 'action': 'approve'})
+    a = W.load('tsr-plain-alpha')
+    check(res['ok'] and a['stage'] == 'cleared' and a['final'] == published and not a.get('feedback') and [x['id'] for x in a['feedback_done']] == ['7', '3'] and
+          a['feedback_done'][0]['decision'] == 'approved as written', 'Approve as written clears it, and the feedback moves to its history with the decision')
+    res = pipeline.decide(work, repo, {'course': 'tst-rebal', 'id': 'tsr-plain-bravo', 'action': 'reject', 'note': 'Question b is unclear.'})
+    br = W.load('tsr-plain-bravo')
+    check(res['ok'] and br['stage'] == 'write' and br['note'] == 'Question b is unclear.' and br['live'] and br['feedback_done'][0]['decision'].startswith('rejected'),
+          'Reject and rewrite sends it to be written again, keeping the version students see')
+    code, out = go('publish', outline)
+    a, br = W.load('tsr-plain-alpha'), W.load('tsr-plain-bravo')
+    check(code == 0 and 'tsr-plain-bravo' in course_js() and 'live' not in a and br.get('live'), 'publish forgets the live copy of a point cleared again, and keeps it for one being rewritten')
+    code, out = go('feedback', 'import', view)
+    check(code == 0 and W.load('tsr-plain-alpha')['stage'] == 'cleared' and 'Already imported before, so left as they are: 3 pieces.' in out,
+          'feedback already decided is never imported again')
 
 def states_tests(tmp, repo, printed, api):
     """Reuse, adapt and new, in two Victorian courses with units for years, in their own copy of the repository with the
@@ -1977,6 +2068,7 @@ def main():
     recheck_tests(tmp, repo, printed, api)
     autoreject_tests(tmp, repo, printed, api)
     rebalance_tests(tmp, printed, api)
+    feedback_tests(tmp, printed)
 
     figure_tests(repo)
 

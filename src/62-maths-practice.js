@@ -128,7 +128,7 @@ function mpEl(i) {
       '<div class="actions">' + (it.back || game() ? '' : mpBtn('mpskip', IC.skip, 'Skip')) + mpBtn('mpreveal', IC.eye, 'Answer') + '</div></div>' +
     '<ol class="work" aria-label="Your working"></ol>' +
     '<div class="note" hidden></div>' +
-    '<div class="foot"><button class="next" type="button" data-act="nextslide" hidden>Next' + IC.down + '</button></div>';
+    '<div class="foot"><button class="next" type="button" data-act="nextslide" hidden>Next' + IC.down + '</button>' + fbLink(p.id, 'question', true) + '</div>';
   if (!mathsReady) loadMaths();
   return sec;
 }
@@ -270,6 +270,7 @@ function mpFinish(c, o, gain) {
   P.busy = false;
   chKeep();
   sec.classList.add('done');
+  fbShow(sec);
   $('.mq-head .actions', sec).hidden = true;
   const end = document.createElement('li');
   end.className = 'end';
@@ -368,6 +369,7 @@ function mpClose(c) {
   P.res.push({o: 'closed', gain: 0});
   P.busy = false;
   c.sec.classList.add('done');
+  fbShow(c.sec);
   $('.mq-head .actions', c.sec).hidden = true;
   const note = $('.note', c.sec);
   note.hidden = false; note.className = 'note quiet';

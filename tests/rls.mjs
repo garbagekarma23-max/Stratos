@@ -16,8 +16,8 @@ const tables = (await f.admin("select c.relname, c.relrowsecurity from pg_class 
 // schema.sql has profiles and progress. friends.sql (checked in friends-db.mjs) adds the friends tables, and
 // messages.sql (checked in messages-db.mjs) the chat tables, challenges.sql (checked in challenges-db.mjs) the
 // challenge tables, live.sql (checked in live-db.mjs) the online table, and week.sql (checked in week-db.mjs) the
-// weekly table's two tables.
-const ALL = ['banned_words', 'blocks', 'challenge_chapters', 'challenge_log', 'challenges', 'chats', 'friend_codes', 'friend_log', 'friend_requests', 'friend_seen', 'friendships', 'message_log', 'messages', 'online', 'profiles', 'progress', 'week_answers', 'week_points'];
+// weekly table's two tables, and feedback.sql (checked in feedback-db.mjs) the feedback table.
+const ALL = ['banned_words', 'blocks', 'challenge_chapters', 'challenge_log', 'challenges', 'chats', 'feedback', 'friend_codes', 'friend_log', 'friend_requests', 'friend_seen', 'friendships', 'message_log', 'messages', 'online', 'profiles', 'progress', 'week_answers', 'week_points'];
 check(tables.map(t => t.relname).sort().join() === ALL.join() && tables.every(t => t.relrowsecurity), 'row-level security is on for every table: ' + tables.map(t => t.relname).sort().join(', '), R);
 
 // Someone not signed in gets nothing.
