@@ -387,8 +387,20 @@ for (const scheme of ['light', 'dark']) {
   const kh = await p.$eval('.key[data-key="7"]', k => k.getBoundingClientRect().height);
   const pad = await p.evaluate(() => { const s = document.querySelector('#strip').getBoundingClientRect(), k = document.querySelector('#keys').getBoundingClientRect(); return k.bottom - s.top; });
   check(kh >= 42 && pad >= 290 && pad <= 345, 'at iPhone size the strip and keys are about the height of the iPhone keyboard (' + Math.round(pad) + ' px, keys ' + Math.round(kh) + ' px)');
-  const loud = await p.evaluate(async () => ({click: await labSound.measure('click'), ping: await labSound.measure('ping')}));
-  check(loud.click.peak > 0.01 && loud.click.peak < loud.ping.peak / 2 && loud.click.energy < loud.ping.energy / 4, 'the key click is quieter than the ping (click energy ' + loud.click.energy.toExponential(2) + ', ping ' + loud.ping.energy.toExponential(2) + ')');
+  // The click and the ping are worked out offline from exactly what the app asks the audio to play, so nothing is
+  // recorded and the machine's load makes no difference. The click is noise, so it is measured with 8 fixed noises
+  // and its loudest result on each measure is kept: the same numbers every run.
+  // peak: the loudest single sample. loud: the loudest 10 ms on average. energy: the whole sound added up.
+  const loud = await p.evaluate(async () => {
+    const click = {peak: 0, loud: 0, energy: 0};
+    for (let seed = 1; seed <= 8; seed++) { const c = await labSound.measure('click', seed); for (const k in click) click[k] = Math.max(click[k], c[k]); }
+    return {click, ping: await labSound.measure('ping')};
+  });
+  const e2 = v => v.toExponential(2);
+  check(loud.click.peak > 0.01, 'the key click can be heard (peak ' + e2(loud.click.peak) + ')');
+  check(loud.click.peak < loud.ping.peak && loud.click.loud < loud.ping.loud / 2 && loud.click.energy < loud.ping.energy / 4,
+    'the key click is quieter than the ping (click peak ' + e2(loud.click.peak) + ', loudest 10 ms ' + e2(loud.click.loud) + ', energy ' + e2(loud.click.energy) +
+    '; ping ' + e2(loud.ping.peak) + ', ' + e2(loud.ping.loud) + ', ' + e2(loud.ping.energy) + ')');
   // The sound switch is saved.
   // A tap's click comes after the touch ends, which can be late on a busy machine, so wait for the save.
   await tap(p, '#mute');
