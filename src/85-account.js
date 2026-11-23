@@ -304,7 +304,7 @@ function signInSheet(title) {
     '<label class="field"><span class="sr">Email</span><input id="emailIn" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="Email"></label>' +
     '<p class="fine err" id="acctErr" role="alert" hidden></p>' +
     '<div class="cta"><button class="primary" type="button" data-act="sendcode">Email me a code</button></div>' +
-    '<p class="fine">Your email is used only to sign in. Stratos keeps no name, birthday or location.</p>');
+    '<p class="fine" id="privLine">Your email is used only to sign in. See what Stratos keeps in the <button class="inlink" type="button" data-act="privacy">privacy policy</button>.</p>');
   const i = $('#emailIn'); i.value = codeFor; i.focus();
 }
 function acctErr(msg) { const e = $('#acctErr'); if (e) { e.textContent = msg; e.hidden = !msg; } }
