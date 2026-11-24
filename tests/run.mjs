@@ -29,6 +29,8 @@
 // with real friends (sending right answers, the table, the switch, offline, sign out) on several devices.
 // feedback-db.mjs checks the rules for Could we improve this? in supabase/feedback.sql with no browser, and feedback.mjs
 // runs the link and its sheet (tap, keyboard, a screen reader's words, offline, 360 px in light, dark and Sky).
+// privacy.mjs checks the privacy policy page: the Privacy row on You, the link on the sign-in sheet, and the time limits
+// it gives matching supabase/*.sql.
 // pipeline.mjs runs the content pipeline's tests (content/test_pipeline.py) with a stand-in for the API, and made.mjs
 // runs the course the pipeline made for those tests (tests/made/) in v2, built as v2-made.html.
 // words.mjs checks the banned words in check_content.mjs with no browser: the names and subject terms it lets through.
@@ -50,7 +52,7 @@ if (!fs.existsSync(new URL('../v2.html', import.meta.url))) {
   console.log('There is no v2.html to test. Build it first, from the repository folder: ' + (process.platform === 'win32' ? 'py' : 'python3') + ' build.py');
   process.exit(1);
 }
-const runs = [['flow.mjs'], ['social.mjs'], ['edge.mjs'], ['monkey.mjs', '1500', '7'], ['monkey.mjs', '1500', '4242'], ['lab-maths.mjs'], ['lab.mjs'], ['maths-content.mjs'], ['maths.mjs'], ['maths-practice.mjs'], ['maths-back.mjs'], ['maths-games.mjs'], ['edexcel.mjs'], ['places.mjs'], ['altitude.mjs'], ['preview.mjs'], ['fullscreen.mjs'], ['intro.mjs'], ['merge.mjs'], ['rls.mjs'], ['account.mjs'], ['friends-db.mjs'], ['friends.mjs'], ['messages-db.mjs'], ['report-email.mjs'], ['messages.mjs'], ['challenges-db.mjs'], ['challenges.mjs'], ['live-db.mjs'], ['live.mjs'], ['week-db.mjs'], ['week.mjs'], ['feedback-db.mjs'], ['feedback.mjs'], ['welcome.mjs'], ['first-open.mjs'], ['start.mjs'], ['pipeline.mjs'], ['made.mjs'], ['units.mjs'], ['words.mjs'], ['questions.mjs'], ['latex.mjs'], ['maths-text.mjs'], ['point-sheets.mjs'], ['figures.mjs'], ['pictures.mjs'], ['site.mjs']];
+const runs = [['flow.mjs'], ['social.mjs'], ['edge.mjs'], ['monkey.mjs', '1500', '7'], ['monkey.mjs', '1500', '4242'], ['lab-maths.mjs'], ['lab.mjs'], ['maths-content.mjs'], ['maths.mjs'], ['maths-practice.mjs'], ['maths-back.mjs'], ['maths-games.mjs'], ['edexcel.mjs'], ['places.mjs'], ['altitude.mjs'], ['preview.mjs'], ['fullscreen.mjs'], ['intro.mjs'], ['merge.mjs'], ['rls.mjs'], ['account.mjs'], ['friends-db.mjs'], ['friends.mjs'], ['messages-db.mjs'], ['report-email.mjs'], ['messages.mjs'], ['challenges-db.mjs'], ['challenges.mjs'], ['live-db.mjs'], ['live.mjs'], ['week-db.mjs'], ['week.mjs'], ['feedback-db.mjs'], ['feedback.mjs'], ['privacy.mjs'], ['welcome.mjs'], ['first-open.mjs'], ['start.mjs'], ['pipeline.mjs'], ['made.mjs'], ['units.mjs'], ['words.mjs'], ['questions.mjs'], ['latex.mjs'], ['maths-text.mjs'], ['point-sheets.mjs'], ['figures.mjs'], ['pictures.mjs'], ['site.mjs']];
 let ok = 0, bad = 0;
 for (const r of runs) {
   const out = spawnSync('node', r, {cwd: fileURLToPath(new URL('.', import.meta.url)), encoding: 'utf8'});

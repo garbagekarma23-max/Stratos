@@ -270,6 +270,7 @@ function renderYou() {
     '<div class="rows">' + acctRow() +
       '<button class="row" type="button" data-act="page" data-page="friends"><span class="t">Friends and messages</span><span class="val">' + (unread ? unread + ' new' : '') + '</span>' + IC.right + '</button>' +
       '<button class="row" type="button" data-act="page" data-page="store"><span class="t">Store</span><span class="val">Rockets, backgrounds, exhausts</span>' + IC.right + '</button>' +
+      '<button class="row" type="button" data-act="privacy"><span class="t">Privacy</span><span class="val">What Stratos keeps</span>' + IC.right + '</button>' +
     '</div>' +
     '<section class="sec"><h2 class="h2">Settings</h2>' +
       '<div class="set"><span class="t" id="setTheme">Appearance</span>' + seg('theme', [['system', 'System'], ['light', 'Light'], ['dark', 'Dark']], saved.theme, 'setTheme') + '</div>' +

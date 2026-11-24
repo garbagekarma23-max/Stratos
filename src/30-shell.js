@@ -66,7 +66,8 @@ function openPage(name, arg) {
   pages.push({name: name, arg: arg, scroll: 0, from: focusFrom()});
   paintPage('push');
 }
-function closePage() { const t = pages.pop(); paintPage('pop'); if (!pages.length) paint(); focusBack(t && t.from); }
+/* A page can carry then, run once it closes: the privacy page opened from the sign-in sheet opens the sheet again. */
+function closePage() { const t = pages.pop(); paintPage('pop'); if (!pages.length) paint(); if (t && t.then) t.then(); focusBack(t && t.from); }
 function closeAllPages() { if (!pages.length) return; const from = pages[0].from; pages = []; paintPage('pop'); focusBack(from); }
 // Closing a page takes away the button that had focus. Without this, focus is nowhere, and in newer browsers the next
 // Tab leaves the page. So, as the sheet does, focus goes back to the button that opened the page. The view or page

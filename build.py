@@ -61,7 +61,7 @@ def version():
         return 'dev'
 JS = ['content.js', 'maths-content.js', 'econ-points.js', 'edexcel-content.js', 'made.js', 'MADE', 'places.js', 'lab/topics.js', 'lab/maths.js', 'lab/keypad.js', 'lab/sheet.js',
       '05-maths-text.js', '06-figure.js', '10-core.js', '15-maths-make.js', '20-sound.js', '30-shell.js', '40-home.js', '50-feed.js', '55-maths.js',
-      '60-practice.js', '62-maths-practice.js', '70-social.js', '75-friends.js', '76-week.js', '77-messages.js', '78-challenges.js', '79-live.js', '80-intro.js', '83-feedback.js', '84-merge.js', '85-account.js', '90-boot.js']
+      '60-practice.js', '62-maths-practice.js', '70-social.js', '75-friends.js', '76-week.js', '77-messages.js', '78-challenges.js', '79-live.js', '80-intro.js', '83-feedback.js', '84-merge.js', '85-account.js', '87-privacy.js', '90-boot.js']
 
 def read(name):
     """A file from src/, or from lab/ when its name starts with lab/, or any file by its full path."""
