@@ -18,7 +18,8 @@
 --   functions below reach them, each finding the caller with auth.uid() and refusing anyone not signed in.
 -- * A student can only add answers for themselves, and only see totals for themselves and their friends. Someone with
 --   a request still waiting, a stranger, and anyone blocked either way has no friendship, so never appears.
--- * "Show me on friends' weekly table" (show_week) is on unless the student turns it off. Off, they are left out of
+-- * "Show me on friends' weekly table" (show_week) is off until the student turns it on (on for accounts from before
+--   supabase/switches.sql, which keep what they had). Off, they are left out of
 --   every friend's table. They still see their friends, and their own answers still count.
 --
 -- The limits, all in one place:
@@ -4696,9 +4697,9 @@ create table if not exists public.week_answers (
 create index if not exists week_answers_user on public.week_answers (user_id, at);
 create index if not exists week_answers_at on public.week_answers (at);
 
--- show_week: whether friends see this student on their weekly table. On unless they turn it off. Students cannot
+-- show_week: whether friends see this student on their weekly table. Off until they turn it on. Students cannot
 -- write it directly (schema.sql lets them change call_sign only). Only set_show_week below can.
-alter table public.profiles add column if not exists show_week boolean not null default true;
+alter table public.profiles add column if not exists show_week boolean not null default false;
 
 
 -- ---------- who may do what ----------
@@ -4788,7 +4789,7 @@ begin
     start := date_trunc('week', now() at time zone 'UTC') at time zone 'UTC';
   end if;
   return jsonb_build_object(
-    'show', coalesce((select p.show_week from public.profiles p where p.id = me), true),
+    'show', coalesce((select p.show_week from public.profiles p where p.id = me), false),
     'me', (select count(*) from public.week_answers w where w.user_id = me and w.at >= start)::int,
     'friends', coalesce((
       select jsonb_agg(jsonb_build_object('ref', f.id, 'name', p.call_sign, 'username', p.username,
@@ -4812,7 +4813,7 @@ declare
   me uuid := auth.uid();
 begin
   if me is null then raise exception 'not signed in' using errcode = '42501'; end if;
-  insert into public.profiles (id, show_week) values (me, coalesce(show_on, true))
+  insert into public.profiles (id, show_week) values (me, coalesce(show_on, false))
     on conflict (id) do update set show_week = excluded.show_week;
 end;
 $$;

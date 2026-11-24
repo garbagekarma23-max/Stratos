@@ -252,11 +252,13 @@ function render() {
 }
 
 /* Student feedback from Could we improve this? in the app (feedback import): each piece with its reason, the part it is
-   about, the note, the course and the day. */
+   about, the note, the course and the day. The point's file keeps only the reason: the rest comes from the local file
+   content/local/feedback.json, which git never commits. Without it (on another computer) only the reason shows. */
 const FB_REASON = {wrong: 'The answer is wrong', unclear: 'The question is unclear', typo: 'There\u2019s a typo', other: 'Something else'};
 const fbPart = p => p === 'card' ? 'the card' : /^card /.test(p) ? 'card line ' + p.slice(5) : ({a: 'question a (the check question)', b: 'question b (the practice question)', example: 'the worked example', question: 'a question'})[p] || p;
 function feedbackHtml(it) {
-  return '<div class="label">Student feedback</div>' + it.feedback.map(x => '<div class="flag"><b>' + esc(FB_REASON[x.reason] || x.reason) + '</b>, ' + esc(fbPart(x.part)) +
+  return '<div class="label">Student feedback</div>' + it.feedback.map(x => '<div class="flag"><b>' + esc(FB_REASON[x.reason] || x.reason) + '</b>' +
+      (x.part ? ', ' + esc(fbPart(x.part)) : '<br><span class="small">The part and any note are on the computer that imported it.</span>') +
       (x.note ? '<br>' + esc(x.note) : '') + '<br><span class="small">' + esc([x.course, (x.at || '').slice(0, 10), x.version && 'version ' + x.version].filter(Boolean).join(', ')) + '</span></div>').join('') +
     (it.live ? '<p class="small">Students see the published version until you decide. Approve as written keeps it as it is. Edit, or Reject and rewrite, changes it once you publish the course again.</p>' : '');
 }

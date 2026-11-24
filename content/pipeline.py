@@ -2644,6 +2644,13 @@ def cmd_rebalance(args):
 # Each point the content pipeline made goes back to the review list with the feedback beside it. A cleared point keeps
 # its published version (live), so students still see it and its chapter stays in the app until the owner decides.
 # No API calls, keys or secrets. Importing the same file again adds nothing: each piece of feedback has its id.
+#
+# Students' notes never go into content/work, which is committed to this public repository. A point's file keeps only
+# each piece's id (the database's number for it, so nothing is imported twice) and its reason. Everything else (the
+# note, the part, the day, the course and the app's version) goes into one local file, FEEDBACK_LOCAL, which .gitignore
+# keeps out of git. The review page reads it. On another computer, or if it is deleted, the page shows the reasons only.
+FEEDBACK_LOCAL = os.path.join('content', 'local', 'feedback.json')
+FEEDBACK_KEPT = ('id', 'reason')
 FEEDBACK_REASONS = {'wrong': 'The answer is wrong', 'unclear': 'The question is unclear', 'typo': 'There\u2019s a typo', 'other': 'Something else'}
 FEEDBACK_PART = re.compile(r'card|card ([1-9]|1[0-9]|20)|a|b|example|question')
 
@@ -2688,6 +2695,18 @@ def feedback_rows(path):
     for pid in found: found[pid].sort(key=lambda x: x['at'] or '', reverse=True)
     return found, skipped
 
+def feedback_local_path(repo):
+    return os.path.join(repo, FEEDBACK_LOCAL)
+
+def feedback_local(repo):
+    """The local file's pieces of feedback, by id: {id: {id, at, part, reason, note, course, version, point}}."""
+    data = read_json(feedback_local_path(repo))
+    return data if isinstance(data, dict) else {}
+
+def feedback_shown(items, local):
+    """A point's feedback for the review page: what its file keeps, with the details from the local file put back."""
+    return [dict(local.get(str(x.get('id'))) or {}, **x) for x in items or []]
+
 def feedback_owner(root, pid):
     """The course and record of the point the content pipeline made with this id, or (None, None). Trials are left out."""
     for cid in sorted(os.listdir(root)) if os.path.isdir(root) else []:
@@ -2702,6 +2721,10 @@ def feedback_import(args, repo):
     found, skipped = feedback_rows(args.file)
     dry = args.dry_run
     sent, added, waiting, by_hand, old = [], [], [], [], 0
+    local = feedback_local(repo)
+    for pid, items in found.items():
+        for x in items: local[x['id']] = dict(x, point=pid)
+    when = lambda x: (local.get(str(x.get('id'))) or {}).get('at') or ''
     for pid, items in sorted(found.items()):
         cid, rec = feedback_owner(root, pid)
         if not rec:
@@ -2710,7 +2733,9 @@ def feedback_import(args, repo):
         new = [x for x in items if x['id'] not in seen]
         old += len(items) - len(new)
         if not new: continue
-        rec['feedback'] = sorted((rec.get('feedback') or []) + new, key=lambda x: x.get('at') or '', reverse=True)
+        # Only the id and the reason go into the point's file. The note and the rest are in the local file.
+        kept = [{k: x[k] for k in FEEDBACK_KEPT} for x in new]
+        rec['feedback'] = sorted((rec.get('feedback') or []) + kept, key=when, reverse=True)
         words = ', '.join(sorted({FEEDBACK_REASONS[x['reason']].lower() for x in new}))
         if rec['stage'] == 'cleared':
             # Back to the review list, as it is now. Students keep seeing this version until it is cleared again.
@@ -2726,6 +2751,7 @@ def feedback_import(args, repo):
             log(rec, 'student feedback added while it is ' + STAGE_WORDS.get(rec['stage'], rec['stage']))
             waiting.append((cid, pid, new, rec['stage']))
         if not dry: Work(root, cid).put(rec)
+    if not dry: write_json(feedback_local_path(repo), local)
     say(('Would import' if dry else 'Imported') + ' feedback from ' + args.file + ': ' + many_of(sum(len(v) for v in found.values()), 'piece') +
         ' on ' + many_of(len(found), 'point') + '.')
     def show(head, items):
@@ -2747,7 +2773,8 @@ def feedback_import(args, repo):
     if old: say('\nAlready imported before, so left as they are: ' + many_of(old, 'piece') + '.')
     if skipped: say('\nSkipped, not in the shape the dashboard exports: ' + ', '.join(skipped[:10]) + (' and ' + str(len(skipped) - 10) + ' more' if len(skipped) > 10 else '') + '.')
     if dry: say('\nA dry run: nothing was changed.')
-    elif sent or added: say('\nNext: python3 content/pipeline.py review, then publish each course you change (content/README.md, step 15).')
+    else: say('\nStudents\u2019 notes are kept only on this computer, in ' + FEEDBACK_LOCAL + ', which git never commits.')
+    if not dry and (sent or added): say('\nNext: python3 content/pipeline.py review, then publish each course you change (content/README.md, step 15).')
 
 def cmd_feedback(args):
     if args.action != 'import': raise Stop('Use: feedback import FILE')
@@ -2758,6 +2785,7 @@ def cmd_feedback(args):
 def review_items(root, repo):
     """Every point waiting for the owner, in every course in the work folder. Trials are left out: they never publish."""
     d = dump(repo)
+    local = feedback_local(repo)
     courses, items = [], []
     for cid in sorted(os.listdir(root)) if os.path.isdir(root) else []:
         meta = read_json(os.path.join(root, cid, 'course.json'))
@@ -2784,7 +2812,7 @@ def review_items(root, repo):
                                   'recheck': recheck_item(rec.get('recheck')),
                                   'writtenBy': rec.get('written_by'), 'checkedBy': rec.get('checked_by'),
                                   'claudeCode': cc_left_item(rec),
-                                  'feedback': rec.get('feedback') or [], 'live': bool(rec.get('live')),
+                                  'feedback': feedback_shown(rec.get('feedback'), local), 'live': bool(rec.get('live')),
                                   'match': dict(match, point=bank_point(d, match['same']), usedIn=used_text(d, match['same']),
                                                 by=MODEL_NAMES.get(match.get('model'), '')) if match.get('same') else None})
         courses.append({'id': cid, 'name': meta['name'], 'counts': tally})

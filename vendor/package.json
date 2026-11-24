@@ -1,6 +1,13 @@
 {
   "private": true,
-  "description": "Pins the Supabase library v2.html uses for accounts. To refresh vendor/supabase: npm install, then npm run copy.",
-  "scripts": { "copy": "node copy-supabase.mjs" },
-  "dependencies": { "@supabase/supabase-js": "2.117.2" }
+  "description": "Pins the Supabase library v2.html uses for accounts, and the typefaces every page uses. To refresh vendor/supabase and fonts/: npm install, then npm run copy.",
+  "scripts": { "copy": "node copy-supabase.mjs && node copy-fonts.mjs" },
+  "dependencies": {
+    "@supabase/supabase-js": "2.117.2",
+    "@fontsource-variable/hanken-grotesk": "5.3.0",
+    "@fontsource-variable/archivo": "5.3.0",
+    "@fontsource/b612-mono": "5.3.0",
+    "@fontsource-variable/figtree": "5.3.0",
+    "@fontsource-variable/unbounded": "5.3.0"
+  }
 }

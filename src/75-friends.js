@@ -54,6 +54,7 @@ async function frLoad() {
   } catch (e) { frOffline = true; }
   /* Who is online (79-live.js) has its own timer. The first list loaded fetches it straight away. */
   if (!frOffline && !onMine()) await onCheck();
+  if (!frOffline) snCheck();
   frBusy = false;
   if (before !== now() || wasOff !== frOffline) frRepaint();
   if (frAgain) { frAgain = false; frLoad(); }
@@ -175,17 +176,48 @@ function acctFrHtml() {
   const d = frMine(); if (!d) return '';
   return '<div class="rows fr-acct"><div class="set"><span class="t">Username</span><span class="fr-un">' + (d.me.username ? '@' + esc(d.me.username) : 'Not picked yet') + '</span>' +
       '<button class="ghost sm" type="button" data-act="unamechange">' + (d.me.username ? 'Change' : 'Pick') + '</button></div>' +
-    '<div class="set"><span class="t" id="setFind">Let people find me by username</span><button class="switch" type="button" data-act="frfindable" aria-pressed="' + (d.me.findable !== false) + '" aria-labelledby="setFind"><span></span></button></div></div>' +
-    '<p class="fine">When this is off, nobody can find you by searching. Your friend code still works, and your friends stay your friends.</p>' +
+    '<div class="set"><span class="t" id="setFind">Let people find me by username</span><button class="switch" type="button" data-act="frfindable" aria-pressed="' + (d.me.findable === true) + '" aria-labelledby="setFind"><span></span></button></div></div>' +
+    '<p class="fine">On, anyone signed in can find you by typing the start of your username. Off, nobody can find you by searching. Your friend code still works, and your friends stay your friends.</p>' +
     onlineSetHtml() + weekSetHtml();
 }
 ACT.frfindable = async b => {
   const d = frMine(); if (!d) return;
-  const on = d.me.findable === false;
+  const on = d.me.findable !== true;
   d.me.findable = on; b.setAttribute('aria-pressed', on); saveFr();
   try { await frCall('set_findable', {findable_on: on}); toast(on ? 'People can find you by username.' : 'Nobody can find you by username now.'); }
   catch (e) { d.me.findable = !on; saveFr(); if (b.isConnected) b.setAttribute('aria-pressed', !on); toast(frWhy(e)); }
 };
+
+/* ---------- the notice about the three switches, shown once ----------
+   New accounts start with "Let people find me by username", "Show when I’m online" and "Show me on friends’ weekly
+   table" off (supabase/switches.sql). Accounts from before kept what they had, and the database marks them to see this
+   notice once: what each switch does, whether it is on, and a button to the Account sheet to change them. It waits for
+   Home or You with nothing else open, so it never covers a question. Showing it counts as seen, on every device.
+   New accounts start with all three off, so the Account sheet's line under each switch says what On does. */
+let snData = null, snAsked = '';
+async function snCheck() {
+  if (!st.uid) return;
+  /* Asked once each time the app opens. A notice that could not show yet tries again with each refresh of the list
+     (every 30 seconds away from Friends). */
+  if (snAsked === st.uid) { snShow(); return; }
+  snAsked = st.uid;
+  try { const r = await frCall('switch_notice'); snData = r && r.show ? Object.assign(r, {uid: st.uid}) : null; }
+  catch (e) { snAsked = ''; return; }
+  snShow();
+}
+function snShow() {
+  if (!snData || snData.uid !== st.uid || !sheet.hidden || pages.length || (ui.tab !== 'home' && ui.tab !== 'you') || document.hidden) return;
+  const d = snData; snData = null;
+  frCall('seen_switch_notice').catch(() => {});
+  const row = (name, on, what) => '<div class="rows fr-acct"><div class="set"><span class="t">' + name + '</span><span class="val">' + (on ? 'On' : 'Off') + '</span></div></div><p class="fine">' + what + '</p>';
+  openSheet('Your sharing switches',
+    '<p class="sub">New accounts now start with these three switches off. Yours are as you left them. Here is what each one does.</p>' +
+    row('Let people find me by username', d.findable, 'On, anyone signed in can find you by typing the start of your username. Off, only people you give your friend code to can add you.') +
+    row('Show when I’m online', d.online, 'On, your friends see a green dot while you have Stratos open. Off, nobody sees when you’re online.') +
+    row('Show me on friends’ weekly table', d.week, 'On, your friends see your call sign and how many right answers you got this week. Off, you leave their table, and your answers still count.') +
+    '<div class="cta"><button class="primary" type="button" data-act="account">Change them</button>' +
+    '<button class="ghost" type="button" data-act="sheetclose">Keep them as they are</button></div>');
+}
 
 /* ---------- adding a friend: by username or by code ---------- */
 ACT.fradd = b => {
@@ -293,6 +325,7 @@ ACT.frcode = () => {
   openSheet('Your friend code',
     '<p class="fr-code" aria-label="' + d.me.code.split('').join(' ') + '">' + codeText(d.me.code) + '</p>' +
     '<p class="sub">Show this to a friend in person, so they can type it. Anyone with your code can send you a request, and you choose whether to accept.</p>' +
+    (d.me.findable === true ? '' : '<p class="fine">Friends can’t find you by searching your username while “Let people find me by username” is off. You can turn it on in You, then Account.</p>') +
     '<p class="fine err" id="frErr" role="alert" hidden></p>' +
     '<div class="cta"><button class="ghost" type="button" data-act="frnewcode">Make a new code</button></div>' +
     '<p class="fine">A new code stops the old one working. Friends you have stay friends.</p>');

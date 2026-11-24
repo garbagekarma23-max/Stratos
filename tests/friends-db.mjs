@@ -7,7 +7,8 @@ import { fakeSupabase } from './fake-supabase.mjs';
 import { check } from './lib.mjs';
 
 const R = [];
-const f = await fakeSupabase();
+// The sharing switches start on here, as for an account from before switches.sql. switches-db.mjs checks they start off.
+const f = await fakeSupabase({sharing: true});
 const FRIENDS_SQL = fs.readFileSync(new URL('../supabase/friends.sql', import.meta.url), 'utf8');
 let n = 0;
 const user = async (name, findable = true) => {
@@ -48,6 +49,8 @@ const CHALLENGES = ['challenges_state', 'start_challenge', 'play_challenge', 'fi
 const LIVE = ['online_now', 'set_show_online'];
 // The weekly table's functions, from week.sql (checked in week-db.mjs).
 const WEEK = ['count_answers', 'set_show_week', 'week_table'];
+// The notice about the three switches, from switches.sql (checked in switches-db.mjs).
+const SWITCHES = ['switch_notice', 'seen_switch_notice'];
 
 // ---------- locked tables, and who may call what ----------
 const rls = (await f.admin("select c.relname, c.relrowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace where n.nspname = 'public' and c.relkind = 'r'")).rows;
@@ -69,7 +72,7 @@ let anonOut = 0;
 for (const fn of APP) if (await fails(null, 'select public.' + fn + '(' + (/(accept|decline|cancel|remove|block|unblock)/.test(fn) ? "'00000000-0000-0000-0000-000000000000'" : /^(set_username|find_students|send_friend_request_to|send_friend_request)$/.test(fn) ? "'abc'" : fn === 'set_findable' ? 'true' : '') + ')') === '42501') anonOut++;
 check(anonOut === APP.length, 'someone not signed in can call none of the ' + APP.length + ' friends functions', R);
 const exposed = (await f.admin("select p.proname from pg_proc p join pg_namespace n on n.oid = p.pronamespace where n.nspname = 'public' and p.prorettype <> 'trigger'::regtype and has_function_privilege('authenticated', p.oid, 'execute') order by 1")).rows.map(r => r.proname);
-check(exposed.join() === APP.concat(MESSAGES, CHALLENGES, LIVE, WEEK, ['delete_account', 'add_feedback']).sort().join(), 'signed-in students can call exactly the app functions (friends, messages, challenges, online, the weekly table and feedback) and delete_account, no helpers: ' + exposed.join(', '), R);
+check(exposed.join() === APP.concat(MESSAGES, CHALLENGES, LIVE, WEEK, SWITCHES, ['delete_account', 'add_feedback']).sort().join(), 'signed-in students can call exactly the app functions (friends, messages, challenges, online, the weekly table and feedback) and delete_account, no helpers: ' + exposed.join(', '), R);
 const anonFns = (await f.admin("select p.proname from pg_proc p join pg_namespace n on n.oid = p.pronamespace where n.nspname = 'public' and p.prorettype <> 'trigger'::regtype and has_function_privilege('anon', p.oid, 'execute')")).rows;
 // Feedback (feedback.sql) is the one thing someone not signed in can send. It only adds a row, and can read nothing back.
 check(anonFns.map(r => r.proname).join() === 'add_feedback', 'someone not signed in can call no function but add_feedback', R);

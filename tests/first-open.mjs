@@ -30,7 +30,7 @@ const STATES = ['New South WalesHSC', 'VictoriaVCE', 'Queensland' + Y, 'Western 
   'Australian Capital Territory' + Y, 'Northern Territory' + Y];
 async function close(d) { errsAll.push(...d.errs); await d.b.close(); }
 // Every request the page makes beyond the test server, so a test can check nothing is sent.
-function watch(d) { const seen = []; d.p.on('request', r => { if (!/^http:\/\/(127\.0\.0\.1|localhost)/.test(r.url()) && !/fonts\.(googleapis|gstatic)\.com/.test(r.url())) seen.push(r.url()); }); return seen; }
+function watch(d) { const seen = []; d.p.on('request', r => { if (!/^http:\/\/(127\.0\.0\.1|localhost)/.test(r.url())) seen.push(r.url()); }); return seen; }
 
 // ---------- the whole flow on an Australian phone: intro, country, state, course, welcome, Home ----------
 {

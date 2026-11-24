@@ -107,11 +107,11 @@ ACT.wkadd = () => {
 function weekSetHtml() {
   const d = wkMine();
   if (!d && Date.now() - wkAsked > 3000) setTimeout(wkLoad, 0);
-  return '<div class="rows fr-acct"><div class="set"><span class="t" id="setWeek">Show me on friends’ weekly table</span><button class="switch" type="button" data-act="wkshow" aria-pressed="' + (d ? d.show : true) + '" aria-labelledby="setWeek"><span></span></button></div></div>' +
-    '<p class="fine">When this is off, friends don’t see you on This week. You still see them, and your answers still count.</p>';
+  return '<div class="rows fr-acct"><div class="set"><span class="t" id="setWeek">Show me on friends’ weekly table</span><button class="switch" type="button" data-act="wkshow" aria-pressed="' + (d ? d.show : false) + '" aria-labelledby="setWeek"><span></span></button></div></div>' +
+    '<p class="fine">On, friends see your call sign and how many right answers you got this week. Off, they don’t see you on This week. You still see them, and your answers still count.</p>';
 }
 ACT.wkshow = async b => {
-  const d = wkMine(), on = !(d ? d.show : true);
+  const d = wkMine(), on = !(d ? d.show : false);
   if (d) d.show = on;
   b.setAttribute('aria-pressed', on);
   try { await frCall('set_show_week', {show_on: on}); toast(on ? 'Friends can see you on the weekly table.' : 'Friends can’t see you on the weekly table now.'); }

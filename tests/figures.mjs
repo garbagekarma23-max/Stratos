@@ -301,7 +301,9 @@ for (const scheme of ['light', 'dark']) {
 {
   // The page, its figure code and MathLive, served the way pipeline.py review serves them, with one point to review.
   const {chromium} = await import('playwright');
-  const exe = fs.existsSync('/opt/pw-browsers/chromium') ? {executablePath: '/opt/pw-browsers/chromium'} : {};
+  // The Chromium already on the machine, as lib.mjs finds it (CHROMIUM_PATH first).
+  const EXE = process.env.CHROMIUM_PATH || (fs.existsSync('/opt/pw-browsers/chromium') ? '/opt/pw-browsers/chromium' : undefined);
+  const exe = EXE ? {executablePath: EXE} : {};
   const b = await chromium.launch(exe), p = await b.newPage({viewport: {width: 1300, height: 1000}}), errs = [];
   p.on('pageerror', e => errs.push(e.message));
   const page = src('content/review/index.html').replace('{{TOKEN}}', 't'), pt = MAT['mat-quadratic-functions'];

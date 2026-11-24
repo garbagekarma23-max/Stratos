@@ -13,7 +13,8 @@
 -- * The table is locked like the friends tables. Only online_now reads it, and it answers only with the refs of the
 --   caller's own friendships whose friend is online. Someone not a friend, someone with a request still waiting, and
 --   anyone blocked either way has no friendship, so they never appear.
--- * "Show when I'm online" (show_online) is on unless the student turns it off. Off, they are never marked online.
+-- * "Show when I'm online" (show_online) is off until the student turns it on (on for accounts from before
+--   supabase/switches.sql, which keep what they had). Off, they are never marked online.
 --   They still see friends who show theirs.
 --
 -- Typing and new messages, in short:
@@ -29,9 +30,9 @@
 
 
 -- ---------- online ----------
--- show_online: whether friends can see this student online. On unless they turn it off. Students cannot write it
+-- show_online: whether friends can see this student online. Off until they turn it on. Students cannot write it
 -- directly (schema.sql lets them change call_sign only). Only set_show_online below can.
-alter table public.profiles add column if not exists show_online boolean not null default true;
+alter table public.profiles add column if not exists show_online boolean not null default false;
 
 -- One row per student who is online now. until: when the mark runs out. Nothing else is kept.
 create table if not exists public.online (
@@ -56,7 +57,7 @@ declare
 begin
   if me is null then raise exception 'not signed in' using errcode = '42501'; end if;
   delete from public.online where until < now();
-  select coalesce((select p.show_online from public.profiles p where p.id = me), true) into showing;
+  select coalesce((select p.show_online from public.profiles p where p.id = me), false) into showing;
   if coalesce(here, false) and showing then
     insert into public.online (user_id, until) values (me, now() + interval '60 seconds')
       on conflict (user_id) do update set until = excluded.until;
@@ -68,7 +69,7 @@ begin
     from public.friendships f
     join public.online o on o.user_id = case when f.a = me then f.b else f.a end
     left join public.profiles p on p.id = o.user_id
-    where (f.a = me or f.b = me) and o.until > now() and coalesce(p.show_online, true)
+    where (f.a = me or f.b = me) and o.until > now() and coalesce(p.show_online, false)
       and not exists (select 1 from public.blocks k where (k.blocker = f.a and k.blocked = f.b) or (k.blocker = f.b and k.blocked = f.a))
   ), '[]'::jsonb));
 end;
@@ -85,7 +86,7 @@ declare
   me uuid := auth.uid();
 begin
   if me is null then raise exception 'not signed in' using errcode = '42501'; end if;
-  insert into public.profiles (id, show_online) values (me, coalesce(show_on, true))
+  insert into public.profiles (id, show_online) values (me, coalesce(show_on, false))
     on conflict (id) do update set show_online = excluded.show_online;
   if not coalesce(show_on, true) then delete from public.online where user_id = me; end if;
 end;

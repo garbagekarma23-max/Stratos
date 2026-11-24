@@ -6,7 +6,8 @@ import { open, shot, tab as tabOnly, check } from './lib.mjs';
 import { fakeSupabase } from './fake-supabase.mjs';
 
 const R = [], SHOTS = process.argv[2] === 'shots';
-const f = await fakeSupabase();
+// The sharing switches start on here, as for an account from before switches.sql. switches.mjs checks they start off.
+const f = await fakeSupabase({sharing: true});
 const all = [];
 const wait = ms => new Promise(r => setTimeout(r, ms));
 const until = async (fn, ms = 6000) => { const end = Date.now() + ms; while (Date.now() < end) { if (await fn()) return true; await wait(100); } return false; };

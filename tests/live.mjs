@@ -8,7 +8,8 @@ import { open, shot, tab as tabOnly, check } from './lib.mjs';
 import { fakeSupabase } from './fake-supabase.mjs';
 
 const R = [], SHOTS = process.argv[2] === 'shots';
-const f = await fakeSupabase();
+// The sharing switches start on here, as for an account from before switches.sql. switches.mjs checks they start off.
+const f = await fakeSupabase({sharing: true});
 const all = [];
 const wait = ms => new Promise(r => setTimeout(r, ms));
 const until = async (fn, ms = 6000) => { const end = Date.now() + ms; while (Date.now() < end) { if (await fn()) return true; await wait(100); } return false; };
@@ -126,7 +127,7 @@ await tab(B.p, 'you');
 await B.p.click('[data-act="account"]');
 await B.p.waitForSelector('#sheetBody [data-act="frshowon"]');
 check((await text(B.p, '#setOnline')) === 'Show when I’m online' && (await B.p.getAttribute('[data-act="frshowon"]', 'aria-pressed')) === 'true', 'the account sheet has Show when I’m online, on', R);
-check((await text(B.p, '#acctFr .fr-acct:has(#setOnline) + .fine')).startsWith('When this is off, nobody sees when you’re online. You still see friends who show it.'), 'and says what off does', R);
+check((await text(B.p, '#acctFr .fr-acct:has(#setOnline) + .fine')).startsWith('On, your friends see a green dot while you have Stratos open. Off, nobody sees when you’re online. You still see friends who show it.'), 'and says what off does', R);
 await both(B.p, 'live-account');
 await B.p.click('[data-act="frshowon"]');
 check(await until(async () => (await text(B.p, '#toast')).includes('Nobody can see when you’re online now.')) && (await B.p.getAttribute('[data-act="frshowon"]', 'aria-pressed')) === 'false', 'turning it off says so', R);

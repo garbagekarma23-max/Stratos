@@ -19,8 +19,8 @@ const rocket = (w, flame) => '<svg width="' + w + '" height="' + (w * 40 / 24) +
   '<path fill="#ff7a1a" d="M4 20L1 28L1 30L6.2 27Z"/><path fill="#ff7a1a" d="M20 20L23 28L23 30L17.8 27Z"/>' +
   '<path fill="#0d0f14" d="M12 1C16.5 5 18 11 18 18L18 27L6 27L6 18C6 11 7.5 5 12 1Z"/><circle fill="#ffffff" cx="12" cy="13.5" r="2.7"/>' +
   '<rect fill="#6e7380" x="9" y="27" width="6" height="2" rx="1"/></svg>';
-const FONTS = '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap">' +
-  '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,600&text=Stratos&display=swap">';
+// The app's own typefaces, from fonts/ in this repository (the same style sheet the pages use).
+const FONTS = '<link rel="stylesheet" href="' + server.url + 'fonts/stratos.css">';
 const BASE = '<style>*{box-sizing:border-box;margin:0}body{background:#ffffff;color:#0d0f14;font-family:"Hanken Grotesk",system-ui,sans-serif;overflow:hidden}' +
   '.word{font-family:"Archivo","Hanken Grotesk";font-weight:600;font-stretch:125%;letter-spacing:.01em}</style>';
 
