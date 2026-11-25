@@ -32,7 +32,8 @@
   "2026-11-01T08:24:29Z write: done",
   "2026-11-01T08:33:48Z check: flagged",
   "2026-11-01T08:42:04Z fix: suggested",
-  "2026-11-01T09:24:23Z autoreview: cleared with the fix (a other)"
+  "2026-11-01T09:24:23Z autoreview: cleared with the fix (a other)",
+  "2026-11-25T20:03:11Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -190,13 +191,42 @@
    "q": "Dev has a mutation in a gene that normally tells his liver cells when to stop dividing. Which outcome is most likely to follow?",
    "opts": [
     "Liver cells may divide without control and form a tumour",
-    "Liver cells stop copying DNA and so cannot divide",
-    "Liver cells all die at once from the mutation",
-    "Liver cells divide in a controlled way to repair damage"
+    "Liver cells may stop copying DNA and so cannot divide",
+    "Liver cells may die off quickly because of the mutation",
+    "Liver cells may divide in a controlled way to repair damage"
    ],
    "why": "A mutation in a gene that signals cells to stop dividing can let them keep dividing, and the extra cells may form a tumour. Repair by controlled division is tempting, but that is normal division, which a loss of control does not produce.",
    "clue": "What happens when the signal to stop dividing is lost?"
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "rebalance": {
+  "at": "2026-11-25T20:03:11Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "Liver cells may divide without control and form a tumour",
+     "Liver cells stop copying DNA and so cannot divide",
+     "Liver cells all die at once from the mutation",
+     "Liver cells divide in a controlled way to repair damage"
+    ]
+   }
+  },
+  "check": {
+   "bio-cancer-cell-cycleb": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   }
+  }
+ }
 }

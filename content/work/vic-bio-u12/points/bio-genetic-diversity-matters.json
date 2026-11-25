@@ -15,7 +15,8 @@
   "2026-11-01T08:14:01Z write: done",
   "2026-11-01T08:24:29Z check: flagged",
   "2026-11-01T08:33:48Z fix: suggested",
-  "2026-11-01T09:24:23Z autoreview: cleared with the fix (a wording)"
+  "2026-11-01T09:24:23Z autoreview: cleared with the fix (a wording)",
+  "2026-11-25T20:03:11Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -173,12 +174,41 @@
    "opts": [
     "Some trees in A survive, but all in B face the same risk",
     "Trees in B survive, as identical trees share resistance",
-    "Trees in A and B are equally likely to survive",
-    "Trees in A all die, as variation weakens trees"
+    "Diversity makes no difference to which orchard does better",
+    "All the trees in A die, as variation weakens each tree"
    ],
    "why": "The trees in A differ, so some may carry the allele that gives resistance. The clones in B are identical, so if one lacks the allele, all do. Identical trees do not guarantee resistance: they share the same weakness or strength.",
    "clue": "Identical individuals respond to a threat in the same way."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "rebalance": {
+  "at": "2026-11-25T20:03:11Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "Some trees in A survive, but all in B face the same risk",
+     "Trees in B survive, as identical trees share resistance",
+     "Trees in A and B are equally likely to survive",
+     "Trees in A all die, as variation weakens trees"
+    ]
+   }
+  },
+  "check": {
+   "bio-genetic-diversity-mattersb": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   }
+  }
+ }
 }

@@ -57,9 +57,9 @@ MADE_BANKS.anc = {
       "q": "Which event buried Herculaneum?",
       "opts": [
         "Pyroclastic flows of hot gas, ash and rock",
-        "Falling pumice and ash over many hours",
-        "A tsunami from the Bay of Naples",
-        "Lava flows from the crater of Vesuvius"
+        "Falling pumice and ash carried by the wind",
+        "A tsunami rolling in from the Bay of Naples",
+        "Rivers of lava from the crater of Vesuvius"
       ],
       "why": "Herculaneum was buried by pyroclastic flows, which left a deposit about 20 metres deep. Falling pumice and ash is what first covered Pompeii, which lay downwind, so that option describes the wrong town.",
       "clue": "Which town lay in the path of the falling pumice?"
@@ -89,8 +89,8 @@ MADE_BANKS.anc = {
     "a": {
       "q": "Why are Pliny the Younger's letters important to historians of the eruption?",
       "opts": [
-        "They are the only surviving written account by an eyewitness",
-        "They were written on the day of the eruption itself",
+        "They are the only surviving written eyewitness account",
+        "They were written on the very day of the eruption",
         "They describe the destruction of Pompeii street by street",
         "They were written by Tacitus as an official report"
       ],
@@ -167,8 +167,8 @@ MADE_BANKS.anc = {
       "d": 3,
       "q": "An archaeologist studies a skeleton from the boat sheds and finds a healed broken arm, worn teeth and a chemical trace of a diet rich in fish. What does this evidence best show?",
       "opts": [
-        "Details of this person's health and diet before the eruption",
-        "The exact cause of the eruption that killed this person",
+        "This person's health and diet before the eruption",
+        "The exact cause of the eruption that killed them",
         "The name and social rank of the person who died",
         "The route the person took to reach the boat sheds"
       ],
@@ -266,7 +266,7 @@ MADE_BANKS.anc = {
     "a": {
       "q": "What can historians learn directly from a painted election notice in Pompeii?",
       "opts": [
-        "The candidate it urged people to elect and his backer",
+        "The candidate it supported and who backed him",
         "The candidate who won the election that year",
         "How many citizens voted in the election that year",
         "How long the winning candidate stayed in office"
@@ -278,10 +278,10 @@ MADE_BANKS.anc = {
       "d": 3,
       "q": "A wall in Pompeii reads: 'The bakers ask you to make Gaius aedile.' What does this notice best show?",
       "opts": [
-        "A trade group publicly backed a candidate for office",
-        "Gaius was elected aedile by the bakers",
-        "Bakers held the senior offices in the town",
-        "Gaius was a baker who ran his own shop"
+        "A trade group openly backed Gaius for office",
+        "Gaius was elected aedile thanks to the bakers",
+        "Bakers filled the senior offices in the town",
+        "Gaius was a baker who ran a shop in the town"
       ],
       "why": "The notice shows a group of bakers asking for votes for Gaius, so it records support. It does not say he won, and it does not say he was a baker. The tempting option is that he was elected, but a request for votes is not a result.",
       "clue": "The bakers are asking, not announcing."
@@ -416,7 +416,7 @@ MADE_BANKS.anc = {
     "a": {
       "q": "Why was the 2010 collapse of the House of the Gladiators important for conservation?",
       "opts": [
-        "It showed that the site was at risk without steady upkeep",
+        "It showed the site was at risk without steady upkeep",
         "It showed that the volcano had become active again",
         "It showed that tourists had pulled the building down",
         "It showed that Roman builders had used poor methods"
@@ -488,10 +488,10 @@ MADE_BANKS.anc = {
     "a": {
       "q": "Why can historians' views of Pompeii change over time?",
       "opts": [
-        "New evidence and methods can show old views were incomplete",
-        "Old sources are thrown out once they are a century old",
-        "Each historian's opinion stands without needing evidence",
-        "Historians pick whichever view is most popular"
+        "New finds and methods reveal gaps in earlier views",
+        "Old sources are discarded once they are a century old",
+        "Each historian's opinion stands without any evidence",
+        "Historians switch to whichever view is most popular"
       ],
       "why": "Fresh finds and better tools can show gaps or errors in earlier views. Old sources are not discarded for age alone, and views are tested against evidence, not popularity or opinion.",
       "clue": "What do new digs and tools give historians?"
@@ -500,10 +500,10 @@ MADE_BANKS.anc = {
       "d": 3,
       "q": "A 2018 inscription suggests the eruption came later in the year than the traditional date. What does this best show about the traditional date?",
       "opts": [
-        "It is open to revision when new evidence appears",
+        "It is open to revision by new evidence",
         "It was invented by Pliny the Younger",
-        "It has been proved to be correct",
-        "It is now useless to historians"
+        "It has been proved correct by the new find",
+        "It no longer has any use for historians"
       ],
       "why": "The inscription is new evidence that conflicts with the older date, so the date is open to revision. It does not make the older date useless, because the source it came from still matters, and nothing here shows it was invented.",
       "clue": "A single new find can challenge an old conclusion."
@@ -979,10 +979,10 @@ MADE_BANKS.anc = {
     "a": {
       "q": "What is the main source for the expedition to Punt in Hatshepsut's reign?",
       "opts": [
-        "Reliefs on the walls of her temple at Deir el-Bahri",
+        "Carved reliefs in her temple at Deir el-Bahri",
         "Written orders found in the tomb of Thutmose III",
-        "Gold objects found at the site of Punt itself",
-        "Letters sent by the king of Punt to Egypt"
+        "Gold objects dug up at the site of Punt itself",
+        "Letters sent by the king of Punt to Hatshepsut"
       ],
       "why": "The expedition is shown in carved reliefs at Deir el-Bahri, and the card names them as the record of it. The tomb of Thutmose III is tempting because he ruled with her, but the card gives no link between his tomb and the expedition.",
       "clue": "Think about where Hatshepsut chose to record it."
@@ -1045,10 +1045,10 @@ MADE_BANKS.anc = {
     "a": {
       "q": "Why was the name Caesar so useful to Octavian in 44 BC?",
       "opts": [
-        "It won him the loyalty of Caesar's veterans and soldiers",
-        "It made him consul as soon as Caesar died",
-        "It gave him control of the Senate's votes",
-        "It made Mark Antony hand over his own army"
+        "It drew Caesar's veterans and soldiers to him",
+        "It made him consul straight after Caesar died",
+        "It gave him control of the votes in the Senate",
+        "It made Mark Antony hand his army over to him"
       ],
       "why": "Many soldiers and veterans were loyal to Caesar, so his adopted son could draw on that loyalty and raise an army. The name did not give him an office or the Senate's votes, and Antony was a rival he had to challenge, not an ally who gave up his forces.",
       "clue": "Octavian held no office in 44 BC. What could a name give him instead?"
@@ -1079,9 +1079,9 @@ MADE_BANKS.anc = {
       "q": "Why did the triumvirs issue proscriptions?",
       "opts": [
         "To remove their enemies and seize money for their armies",
-        "To give soldiers land in the provinces after Philippi",
-        "To pass laws that restored the powers of the Senate",
-        "To reward Caesar's heirs with gifts from his will"
+        "To give their soldiers land in the provinces after Philippi",
+        "To pass laws that handed the Senate back its old powers",
+        "To pay Caesar's heirs the gifts left to them in his will"
       ],
       "why": "Proscriptions named enemies who could be killed and whose property was taken. That removed opposition and paid for the armies. They were not about restoring the Senate's powers, as the triumvirs held wide powers themselves.",
       "clue": "Think about what happened to the people on the lists and to their property."
@@ -1202,8 +1202,8 @@ MADE_BANKS.anc = {
       "q": "A historian argues that Augustus's control rested on force, not on his titles or legal powers. Which evidence best supports this view?",
       "opts": [
         "Soldiers swore loyalty to him and he held the provinces",
-        "He took the title princeps, meaning first citizen",
-        "He kept the Senate and the old offices in place",
+        "He took the title princeps, which meant first citizen",
+        "He kept the Senate and the old Republican offices in place",
         "He held tribunician power, which let him propose laws"
       ],
       "why": "Control of the provinces where the legions were, and the loyalty of the soldiers, gave him military strength. Tribunician power is tempting, but it was a legal power, which the historian sets aside. Princeps and the surviving Senate only kept up the look of the Republic.",
@@ -1228,12 +1228,12 @@ MADE_BANKS.anc = {
     "a": {
       "q": "Which of these was a main aim of Augustus's marriage laws?",
       "opts": [
-        "To raise the number of children born to upper-class families",
-        "To stop slave owners from freeing their slaves",
-        "To cut the number of men serving in the legions",
+        "To get upper-class families to have more children",
+        "To make divorce illegal for married upper-class couples",
+        "To cut the number of citizens serving in the legions",
         "To raise more taxes from citizens in the provinces"
       ],
-      "why": "The laws targeted the upper classes, who Augustus thought were having too few children. Freeing slaves, army numbers and provincial taxes were not what these laws set out to change.",
+      "why": "The laws targeted the upper classes, who Augustus thought were having too few children. Banning divorce, army numbers and provincial taxes were not what these laws set out to change.",
       "clue": "Think about who the laws were aimed at and what Augustus thought was wrong with them."
     },
     "b": {
@@ -1303,10 +1303,10 @@ MADE_BANKS.anc = {
     "a": {
       "q": "Why did Augustus have to prepare his successor by adopting and promoting family members?",
       "opts": [
-        "His position as princeps could not be inherited by law",
-        "The Senate had banned him from naming any heir",
-        "He had no relatives who were old enough to rule",
-        "The title of king had passed to the consuls"
+        "Princeps was not a legal office that passed to an heir",
+        "The Senate had passed a law banning him from naming an heir",
+        "He had no relatives who were old enough to rule after him",
+        "The title of king had already passed to the two consuls"
       ],
       "why": "Augustus ruled as princeps, a position built on powers and influence, not a legal office that passed to a son. So he used adoption and public honours to mark out an heir. The Senate did not ban him from naming heirs, and he had several relatives to choose from.",
       "clue": "Think about what kind of position princeps was, compared with a king."

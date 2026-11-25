@@ -17,7 +17,8 @@
   "2026-11-01T15:14:45Z check: flagged",
   "2026-11-02T04:27:51Z fix: suggested",
   "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix",
-  "2026-11-25T20:02:06Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
+  "2026-11-25T20:02:06Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check",
+  "2026-11-25T20:03:11Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -201,10 +202,10 @@
    "d": 3,
    "q": "A writer argues for a later school start. She admits that some parents worry about sport clashes, calls the worry fair, then suggests sport move to lunchtimes. What does she do?",
    "opts": [
-    "Admits the point has merit, then answers it with a solution",
-    "Ignores the opposing view to keep her own case simple",
+    "Grants the parents a point, then offers a solution",
+    "Ignores the parents' view to keep her own case simple",
     "Attacks the parents who raised the concern about sport",
-    "Agrees with the opposing view and drops her own case"
+    "Agrees with the parents' view and drops her own argument"
    ],
    "why": "She states the parents' concern fairly, grants it is reasonable, and then answers it. Admitting a fair point does not mean giving up her view, and she does not criticise the parents themselves.",
    "clue": "Look at what she does after saying the concern is fair."
@@ -212,10 +213,11 @@
  },
  "cleared_by": "recheck",
  "rebalance": {
-  "at": "2026-11-25T20:02:06Z",
+  "at": "2026-11-25T20:03:11Z",
   "result": "changed",
   "changed": [
-   "a"
+   "a",
+   "b"
   ],
   "why": [],
   "by": "claude-code",
@@ -227,6 +229,14 @@
      "Nobody sensible has ever backed the critics' claims",
      "The critics are too lazy to read the data on the fee"
     ]
+   },
+   "b": {
+    "opts": [
+     "Admits the point has merit, then answers it with a solution",
+     "Ignores the opposing view to keep her own case simple",
+     "Attacks the parents who raised the concern about sport",
+     "Agrees with the opposing view and drops her own case"
+    ]
    }
   },
   "check": {
@@ -237,6 +247,14 @@
     "problems": [],
     "sure": "high",
     "meant": "D"
+   },
+   "eng-rebuttal-respectful-disagreementb": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
    }
   }
  }

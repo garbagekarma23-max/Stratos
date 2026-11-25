@@ -13,7 +13,8 @@
   "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix",
   "2026-10-29T11:03:06Z rebalance: new wrong options for question a and b, waiting for the check",
   "2026-10-29T11:05:38Z rebalance: kept its old options (the check found a problem)",
-  "2026-11-25T20:01:34Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
+  "2026-11-25T20:01:34Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check",
+  "2026-11-25T20:03:11Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 3,
@@ -215,10 +216,10 @@
    "d": 3,
    "q": "In a new democracy, street fights between rival armed groups become common and unemployment is high. Many voters say, \"Parliament cannot keep order.\" What is the most likely effect?",
    "opts": [
-    "Support may grow for a leader promising strong rule",
-    "Voters will trust parliament more than before",
-    "Armed groups will become the lawful government",
-    "The economy will recover because order returns"
+    "Support is likely to grow for a leader promising order",
+    "Voters are likely to trust parliament more than before",
+    "The armed groups are likely to become the lawful government",
+    "The economy is likely to recover because order returned"
    ],
    "why": "Violence and hardship can make parliament look weak, so some voters may turn to a leader who promises order. Trusting parliament more is wrong because the scenario describes distrust growing, not shrinking.",
    "clue": "Ask what people want when they think the government is weak."
@@ -226,10 +227,11 @@
  },
  "cleared_by": "recheck",
  "rebalance": {
-  "at": "2026-11-25T20:01:34Z",
+  "at": "2026-11-25T20:03:11Z",
   "result": "changed",
   "changed": [
-   "a"
+   "a",
+   "b"
   ],
   "why": [],
   "by": "claude-code",
@@ -241,6 +243,14 @@
      "They were ruled by a single party from the start",
      "Their citizens had long experience of self-government"
     ]
+   },
+   "b": {
+    "opts": [
+     "Support may grow for a leader promising strong rule",
+     "Voters will trust parliament more than before",
+     "Armed groups will become the lawful government",
+     "The economy will recover because order returns"
+    ]
    }
   },
   "check": {
@@ -251,6 +261,14 @@
     "problems": [],
     "sure": "high",
     "meant": "B"
+   },
+   "mod-challenges-democracyb": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "medium",
+    "meant": "D"
    }
   },
   "before": {

@@ -9,7 +9,8 @@
   "2026-10-29T12:22:32Z write: done",
   "2026-10-29T12:30:15Z check: flagged",
   "2026-10-29T14:07:05Z fix: suggested",
-  "2026-10-29T16:45:04Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-29T16:45:04Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-25T20:03:11Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -221,12 +222,12 @@
   "a": {
    "q": "Which of these was a main aim of Augustus's marriage laws?",
    "opts": [
-    "To raise the number of children born to upper-class families",
-    "To stop slave owners from freeing their slaves",
-    "To cut the number of men serving in the legions",
+    "To get upper-class families to have more children",
+    "To make divorce illegal for married upper-class couples",
+    "To cut the number of citizens serving in the legions",
     "To raise more taxes from citizens in the provinces"
    ],
-   "why": "The laws targeted the upper classes, who Augustus thought were having too few children. Freeing slaves, army numbers and provincial taxes were not what these laws set out to change.",
+   "why": "The laws targeted the upper classes, who Augustus thought were having too few children. Banning divorce, army numbers and provincial taxes were not what these laws set out to change.",
    "clue": "Think about who the laws were aimed at and what Augustus thought was wrong with them."
   },
   "b": {
@@ -242,5 +243,35 @@
    "clue": "Check who Gaius's partner is married to."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-11-25T20:03:11Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "To raise the number of children born to upper-class families",
+     "To stop slave owners from freeing their slaves",
+     "To cut the number of men serving in the legions",
+     "To raise more taxes from citizens in the provinces"
+    ],
+    "why": "The laws targeted the upper classes, who Augustus thought were having too few children. Freeing slaves, army numbers and provincial taxes were not what these laws set out to change."
+   }
+  },
+  "check": {
+   "anc-social-moral-reforma": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  }
+ }
 }
