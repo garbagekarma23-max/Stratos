@@ -7,7 +7,16 @@ create role authenticated nologin;
 
 -- Supabase's own list of accounts. Students cannot reach it.
 create schema auth;
-create table auth.users (id uuid primary key default gen_random_uuid(), email text unique not null);
+-- created_at and last_sign_in_at have the names and types of the real ones. Supabase sets last_sign_in_at each time a
+-- student signs in with a code or a link; the tests set it by hand.
+create table auth.users (id uuid primary key default gen_random_uuid(), email text unique not null,
+  created_at timestamptz default now(), last_sign_in_at timestamptz);
+-- One row per sign-in (a phone or browser that is signed in), as in Supabase, with the same names and types for the
+-- columns kept here. Supabase updates updated_at, and in newer projects refreshed_at (a time with no time zone), as the
+-- phone keeps its sign-in fresh. Deleting the account deletes its sign-ins.
+create table auth.sessions (id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users (id) on delete cascade,
+  created_at timestamptz default now(), updated_at timestamptz default now(), refreshed_at timestamp);
 grant usage on schema auth to anon, authenticated;
 
 -- The id of the student who sent the request. Supabase reads it from their sign-in; the fake sets it for each request.

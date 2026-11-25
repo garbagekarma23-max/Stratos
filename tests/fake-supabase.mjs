@@ -1,11 +1,15 @@
 // A fake Supabase for the tests, so they never reach the real one.
-// The database is real: PGlite (Postgres running inside Node) with supabase/schema.sql, friends.sql, messages.sql, report-email.sql, challenges.sql, live.sql, week.sql and feedback.sql loaded
+// The database is real: PGlite (Postgres running inside Node) with supabase/schema.sql, friends.sql, messages.sql, report-email.sql, challenges.sql, live.sql, week.sql, feedback.sql, inactive.sql and switches.sql loaded
 // into it, the same files that go into Supabase. Each request from the page runs as the student who sent it, so the tests check the real
 // rules. Only the sign-in part is pretend: codes are kept here so a test can read them, and nothing is emailed.
 // Realtime is faked too, over a WebSocket route: it lets a phone join or send on a channel only if the rules in
 // live.sql allow it (f.channelOk), and passes each event to the other phones on that channel. f.rt.log keeps what it
 // saw; f.rt.down makes it refuse every connection, as if Realtime could not be reached.
 // It answers only the requests the app makes. Anything else gets an error, so a new kind of request shows up in a test.
+// The three sharing switches start off for a new account (switches.sql). fakeSupabase({sharing: true}) starts them on
+// instead, with no notice to see, for tests about search, online status or the weekly table that are not about the
+// switches. fakeSupabase({before: true}) leaves out switches.sql and puts back the defaults from before it, so a test
+// can make accounts the old way and then run the file (f.runSwitches) as the owner will.
 import { PGlite } from '@electric-sql/pglite';
 import crypto from 'crypto';
 import fs from 'fs';
@@ -16,7 +20,8 @@ const SECRET = crypto.randomBytes(32);
 const b64 = x => Buffer.from(typeof x === 'string' ? x : JSON.stringify(x)).toString('base64url');
 const sign = s => crypto.createHmac('sha256', SECRET).update(s).digest('base64url');
 
-export async function fakeSupabase() {
+const SWITCHES_SQL = new URL('../supabase/switches.sql', import.meta.url);
+export async function fakeSupabase(opts = {}) {
   const db = new PGlite();
   await db.exec(fs.readFileSync(new URL('./supabase-standin.sql', import.meta.url), 'utf8'));
   await db.exec(fs.readFileSync(new URL('../supabase/schema.sql', import.meta.url), 'utf8'));
@@ -27,7 +32,14 @@ export async function fakeSupabase() {
   await db.exec(fs.readFileSync(new URL('../supabase/live.sql', import.meta.url), 'utf8'));
   await db.exec(fs.readFileSync(new URL('../supabase/week.sql', import.meta.url), 'utf8'));
   await db.exec(fs.readFileSync(new URL('../supabase/feedback.sql', import.meta.url), 'utf8'));
+  await db.exec(fs.readFileSync(new URL('../supabase/inactive.sql', import.meta.url), 'utf8'));
+  if (opts.before) await db.exec('alter table public.profiles alter column findable set default true; ' +
+    'alter table public.profiles alter column show_online set default true; alter table public.profiles alter column show_week set default true;');
+  else await db.exec(fs.readFileSync(SWITCHES_SQL, 'utf8'));
+  if (opts.sharing) await db.exec('alter table public.profiles alter column findable set default true; ' +
+    'alter table public.profiles alter column show_online set default true; alter table public.profiles alter column show_week set default true;');
   const f = {url: URL_, key: KEY, db, codes: {}, refresh: {}, down: false, log: []};
+  f.runSwitches = () => db.exec(fs.readFileSync(SWITCHES_SQL, 'utf8'));
   // One request at a time, the way one database connection works.
   let queue = Promise.resolve();
   const one = fn => (queue = queue.then(fn, fn));

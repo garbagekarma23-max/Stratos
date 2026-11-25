@@ -3,7 +3,7 @@
    It is plain words for a Year 7 student, and it must say what the code and supabase/*.sql really do. If a change
    collects something new, keeps it longer or shows it to someone new, change this page in the same pull request.
    docs/privacy-review.md says where each line comes from. */
-const PRIVACY_DATE = '23 November 2026';
+const PRIVACY_DATE = '24 November 2026';
 const SUPPORT = 'support@stratosstudy.com';
 
 PAGE.privacy = () => {
@@ -18,14 +18,15 @@ PAGE.privacy = () => {
     ul(['You can use Stratos without an account. Then your progress stays on this device.',
       'An account needs only an email address. We never ask for your real name, birthday, photo or address.',
       'Friends see your call sign, your username and only a few other things, listed below.',
+      'Anything that shares more with other students starts switched off. You choose what to turn on.',
       'We never sell your information. Stratos has no ads.',
       'You can delete your account at any time. Almost everything goes straight away.']) +
 
     h('Without an account') +
     p('Your progress, settings and call sign are saved on this device only. Stratos gets nothing about you.') +
     p('Two things still leave your device:') +
-    ul(['When the page loads, GitHub (which hosts the website) and Google Fonts (which supplies the lettering) see your device’s internet address and browser. Every website works this way.',
-      'If you use Could we improve this?, we get the card or question, the problem you picked and any note you write. Nothing says who sent it.']) +
+    ul(['When the page loads, GitHub (which hosts the website) sees your device’s internet address and browser. Every website works this way. The lettering comes from the Stratos website too, so no other company sees it load.',
+      'If you use Could we improve this?, we get the card or question, the problem you picked and any note you write. Nothing says who sent it. Only the person who runs Stratos reads your note, and it is never made public.']) +
 
     h('With an account') +
     p('This is what we keep, and why:') +
@@ -44,10 +45,10 @@ PAGE.privacy = () => {
     p('A friend sees your call sign (or your username if you have no call sign), and:') +
     ul(['the messages you send them',
       'your challenge scores and times',
-      'your total right answers this week, unless you turn it off',
-      'that you are online, unless you turn it off.']) +
+      'your total right answers this week, if you turn that on',
+      'that you are online, if you turn that on.']) +
     p('Friends never see your email, your progress or who your other friends are.') +
-    p('Someone who isn’t your friend can find your username by searching, unless you turn that off. They see only your username and how many friends you share.') +
+    p('If you turn on Let people find me by username, someone who isn’t your friend can find your username by searching. They see only your username and how many friends you share. With it off, only people you give your friend code to can add you.') +
 
     h('Who else can see it') +
     ul(['The person who runs Stratos can see what is stored, including messages. They read messages only when someone reports them, to fix a problem, or to keep someone safe.',
@@ -58,7 +59,7 @@ PAGE.privacy = () => {
     h('Companies that help run Stratos') +
     ul(['Supabase stores account information. Our database is in Sydney, Australia.',
       'Resend sends the sign-in emails, so it gets your email address. It is in the United States.',
-      'GitHub and Google Fonts are in the United States. They get your internet address when the page loads.']) +
+      'GitHub hosts the website, in the United States. It gets your internet address when the page loads.']) +
     p('Each one has its own privacy rules. Some of your information can be stored outside Australia.') +
 
     h('How long we keep it') +
@@ -67,13 +68,15 @@ PAGE.privacy = () => {
       'Challenges: 90 days.',
       'Right answers for the weekly table: 15 days.',
       'Online: about a minute after you leave the app.',
-      'Feedback and reports: 12 months.']) +
+      'Feedback and reports: 12 months.',
+      'An account nobody has signed in to or used for 2 years: deleted, with everything in it.']) +
 
     h('Your choices') +
-    p('Open You, then Account. You can turn off:') +
-    ul(['Let people find me by username',
-      'Show when I’m online',
-      'Show me on friends’ weekly table']) +
+    p('Open You, then Account. These three switches start off for a new account. You can turn each one on or off at any time:') +
+    ul(['Let people find me by username: people who aren’t your friends can find you by searching.',
+      'Show when I’m online: your friends see a green dot while you have Stratos open.',
+      'Show me on friends’ weekly table: your friends see your total right answers this week.']) +
+    p('Accounts made before 24 November 2026 kept the switches they had, and are shown a notice once that explains them.') +
     p('You can block anyone, and report any message a friend sends you.') +
 
     h('See, change or delete it') +

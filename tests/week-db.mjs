@@ -9,7 +9,8 @@ import { fakeSupabase } from './fake-supabase.mjs';
 import { check } from './lib.mjs';
 
 const R = [];
-const f = await fakeSupabase();
+// The sharing switches start on here, as for an account from before switches.sql. switches-db.mjs checks they start off.
+const f = await fakeSupabase({sharing: true});
 const WEEK_SQL = fs.readFileSync(new URL('../supabase/week.sql', import.meta.url), 'utf8');
 let n = 0;
 async function call(uid, fn, args = {}) {

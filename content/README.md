@@ -360,7 +360,7 @@ This opens http://localhost:8765 in your browser. Only this computer can open it
 - **Flagged**: the checker found a problem. On the left is the point as students would see it, with the right option marked. On the right are the checker's reasons and how sure it was. If it suggested a fix, **The fix** shows it with the changed words in blue.
 - **Possible match**: the bank already has a point that may teach the same idea, and neither Haiku nor Opus was highly sure, or it is a reuse about a sensitive topic or for an English course. It shows the bank point, which courses use it, what the model said and the changes it suggested. **Reuse** shares that point, and each student's progress on it, with the courses that already use it. **Adapt it** has a new point adapted from it on the next run, with those changes. **Write a new point** has one written for this course from scratch.
 - **Not written**: Claude declined to write it, or it failed three times.
-- **Student feedback**: students flagged it in the app with Could we improve this? (step 15). On the right are each student's reason, the part, their note, the course and the day.
+- **Student feedback**: students flagged it in the app with Could we improve this? (step 15). On the right are each student's reason, the part, their note, the course and the day (the note and the rest come from `content/local/feedback.json`, on your computer only).
 
 The buttons:
 - **Approve as written** and **Use the fix** clear the point.
@@ -619,7 +619,8 @@ In the app, every Learn card and every answered question has a small "Could we i
    - A point being written or checked now keeps the feedback, which shows if the point comes to the review list.
    - A point written by hand (NSW Economics, the Economics bank in `src/econ-points.js`, and Maths) is listed with its feedback, to change in `src/` yourself.
    - Each piece of feedback has its own number, so importing the same file again, or a newer file with the old rows still in it, adds only what is new. Feedback you have already decided is never brought back.
-4. **Review.** Run `py content/pipeline.py review` (step 8). The point shows as **Student feedback**. **Approve as written** keeps it as it is. **Edit** changes it. **Reject and rewrite** has it written again on the next run, with your note (put in it what the students said). Each decision moves the feedback into the point's history.
+   - Students' notes never go into `content/work`, which is committed to this public repository. A point's file keeps only each piece's number and reason. The note, the part, the day, the course and the app's version go into `content/local/feedback.json`, on your computer only: `.gitignore` keeps the whole `content/local` folder out of git, and a test fails if a note reaches any other file. Delete the CSV from Downloads once it is imported. On another computer, the review page shows the reasons only.
+4. **Review.** Run `py content/pipeline.py review` (step 8). The point shows as **Student feedback**. **Approve as written** keeps it as it is. **Edit** changes it. **Reject and rewrite** has it written again on the next run, with your note (say what the problem is in your own words, never a student's note word for word, because your note is committed). Each decision moves the feedback into the point's history.
 5. **Publish** each course you changed, as in step 9. A point you approved as written changes nothing in the app.
 
 Feedback is kept in Supabase for 12 months, then deleted.

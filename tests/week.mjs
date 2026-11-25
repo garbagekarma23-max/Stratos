@@ -12,7 +12,8 @@ import { open, shot, tab as tabOnly, check, pick } from './lib.mjs';
 import { fakeSupabase } from './fake-supabase.mjs';
 
 const R = [], SHOTS = process.argv[2] === 'shots';
-const f = await fakeSupabase();
+// The sharing switches start on here, as for an account from before switches.sql. switches.mjs checks they start off.
+const f = await fakeSupabase({sharing: true});
 const all = [];
 const wait = ms => new Promise(r => setTimeout(r, ms));
 const until = async (fn, ms = 6000) => { const end = Date.now() + ms; while (Date.now() < end) { if (await fn()) return true; await wait(100); } return false; };
@@ -156,7 +157,7 @@ await A.p.click('[data-act="account"]');
 await A.p.waitForSelector('#sheetBody [data-act="wkshow"]');
 check((await text(A.p, '#setWeek')) === 'Show me on friends’ weekly table' && (await A.p.getAttribute('[data-act="wkshow"]', 'aria-pressed')) === 'true',
   'the Account sheet has the switch, on', R);
-check((await A.p.locator('#sheetBody .fine').allTextContents()).includes('When this is off, friends don’t see you on This week. You still see them, and your answers still count.'),
+check((await A.p.locator('#sheetBody .fine').allTextContents()).includes('On, friends see your call sign and how many right answers you got this week. Off, they don’t see you on This week. You still see them, and your answers still count.'),
   'with a line saying what off does', R);
 await both(A.p, 'week-account');
 await A.p.click('[data-act="wkshow"]');

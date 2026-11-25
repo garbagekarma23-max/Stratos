@@ -32,6 +32,11 @@ const sideways = p => p.evaluate(() => {
   check(says("'Online: about a minute after you leave the app.'") && /now\(\) \+ interval '60 seconds'/.test(sql('live.sql')), 'online: about a minute on the page, 60 seconds in live.sql', R);
   check(says("'Feedback and reports: 12 months.'") && /delete from public\.feedback where at < now\(\) - interval '12 months'/.test(sql('feedback.sql'))
     && /delete from moderation\.reports where at < now\(\) - interval '12 months'/.test(sql('messages.sql')), 'feedback and reports: 12 months on the page and in the SQL', R);
+  check(says("'An account nobody has signed in to or used for 2 years: deleted, with everything in it.'") && /interval '2 years'/.test(sql('inactive.sql')) && /stratos-inactive/.test(sql('inactive.sql')),
+    'unused accounts: 2 years on the page and in inactive.sql, with its Cron job', R);
+  check(says('These three switches start off for a new account.') && ['friends.sql', 'live.sql', 'week.sql'].every(f => /add column if not exists (findable|show_online|show_week) boolean not null default false/.test(sql(f)))
+    && /alter column findable set default false/.test(sql('switches.sql')), 'the three switches start off, on the page and in the SQL', R);
+  check(!/google/i.test(js), 'the page names no Google service, since the lettering comes from the Stratos website', R);
   check(says('up to 10 messages either side') && /report_message\.n - 10 and report_message\.n \+ 10/.test(sql('messages.sql')), 'a report copies up to 10 messages either side, as messages.sql does', R);
   check(/reporter uuid references auth\.users \(id\) on delete set null/.test(sql('messages.sql')) && /user_id uuid references auth\.users \(id\) on delete set null/.test(sql('feedback.sql')),
     'reports and feedback lose the account when it is deleted, as the page says', R);

@@ -26,12 +26,13 @@
 -- ---------- usernames and the search switch, on profiles ----------
 -- username: lower case, 3 to 20 of a to z, 0 to 9, dot and underscore, unique. Empty until the student picks one.
 -- collate "C" compares letters by their plain code, which lets the database find "names starting with" quickly.
--- findable: whether search can find this student. On unless they turn it off. Codes work either way.
+-- findable: whether search can find this student. Off until they turn it on (on for accounts from before
+-- supabase/switches.sql, which keep what they had). Codes work either way.
 -- username_at: when the username was last set, for the once-a-day limit.
 -- Students cannot write these three columns directly (schema.sql lets them change call_sign only). Only
 -- set_username and set_findable below can, so a username always passes every check.
 alter table public.profiles add column if not exists username text collate "C";
-alter table public.profiles add column if not exists findable boolean not null default true;
+alter table public.profiles add column if not exists findable boolean not null default false;
 alter table public.profiles add column if not exists username_at timestamptz;
 alter table public.profiles drop constraint if exists profiles_username_format;
 alter table public.profiles add constraint profiles_username_format check (
@@ -403,7 +404,7 @@ declare
 begin
   if me is null then raise exception 'not signed in' using errcode = '42501'; end if;
   return jsonb_build_object(
-    'me', (select jsonb_build_object('username', p.username, 'findable', coalesce(p.findable, true), 'code', public.code_of(me))
+    'me', (select jsonb_build_object('username', p.username, 'findable', coalesce(p.findable, false), 'code', public.code_of(me))
            from (select 1) one left join public.profiles p on p.id = me),
     'friends', coalesce((select jsonb_agg(jsonb_build_object('ref', f.id, 'since', f.since) || public.friend_face(case when f.a = me then f.b else f.a end) order by f.since desc)
                 from public.friendships f where f.a = me or f.b = me), '[]'::jsonb),
@@ -471,7 +472,7 @@ declare
   me uuid := auth.uid();
 begin
   if me is null then raise exception 'not signed in' using errcode = '42501'; end if;
-  insert into public.profiles (id, findable) values (me, coalesce(findable_on, true))
+  insert into public.profiles (id, findable) values (me, coalesce(findable_on, false))
     on conflict (id) do update set findable = excluded.findable;
 end;
 $$;

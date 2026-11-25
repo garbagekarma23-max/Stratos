@@ -106,10 +106,11 @@ def standalone(extra=None):
             '</head>\n<body>\n' + body + '</body>\n</html>\n')
 
 # The files and folders the live site serves next to v2.html, from the repository folder. --site copies them.
-SITE = ['index.html', 'maths-lab.html', 'manifest-v2.webmanifest', 'manifest-lab.webmanifest', 'icons', 'lab', 'vendor/supabase', 'pictures']
+SITE = ['index.html', 'maths-lab.html', 'manifest-v2.webmanifest', 'manifest-lab.webmanifest', 'icons', 'lab', 'vendor/supabase', 'pictures', 'fonts']
 # Files inside those folders that only the tools on a computer use, never a page on the site: the npm files, the
-# scripts that copy MathLive and Supabase in, and MathLive's build for Node (the content check uses it).
-NOT_SITE = ['node_modules', 'package.json', 'package-lock.json', 'copy-*.mjs', 'mathlive-ssr.min.mjs']
+# scripts that copy MathLive and Supabase in, MathLive's build for Node (the content check uses it), and notes for
+# people such as fonts/README.md.
+NOT_SITE = ['node_modules', 'package.json', 'package-lock.json', 'copy-*.mjs', 'mathlive-ssr.min.mjs', '*.md']
 
 def site(folder, page):
     """Write the whole site into folder: v2.html (page) and a copy of everything in SITE. The folder must be new or empty."""

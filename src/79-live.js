@@ -46,11 +46,11 @@ function liveForget() { liveLeave(); onl = null; rtNo = {}; }
 function onlineSetHtml() {
   const o = onMine();
   if (!o) setTimeout(onCheck, 0);
-  return '<div class="rows fr-acct"><div class="set"><span class="t" id="setOnline">Show when I’m online</span><button class="switch" type="button" data-act="frshowon" aria-pressed="' + (o ? o.show : true) + '" aria-labelledby="setOnline"><span></span></button></div></div>' +
-    '<p class="fine">When this is off, nobody sees when you’re online. You still see friends who show it. Stratos keeps no record of when you were online.</p>';
+  return '<div class="rows fr-acct"><div class="set"><span class="t" id="setOnline">Show when I’m online</span><button class="switch" type="button" data-act="frshowon" aria-pressed="' + (o ? o.show : false) + '" aria-labelledby="setOnline"><span></span></button></div></div>' +
+    '<p class="fine">On, your friends see a green dot while you have Stratos open. Off, nobody sees when you’re online. You still see friends who show it. Stratos keeps no record of when you were online.</p>';
 }
 ACT.frshowon = async b => {
-  const o = onMine(), on = !(o ? o.show : true);
+  const o = onMine(), on = !(o ? o.show : false);
   if (o) o.show = on;
   b.setAttribute('aria-pressed', on);
   try { await frCall('set_show_online', {show_on: on}); toast(on ? 'Friends can see when you’re online.' : 'Nobody can see when you’re online now.'); }

@@ -6,18 +6,25 @@ policy that goes with it is in the app (You, then Privacy), and its text is in `
 
 This is not legal advice. Before launch, have a lawyer read the policy and the gap list.
 
+Updated 24 November 2026 with the owner's first decisions (see Decisions for the owner at the end): the three sharing
+switches start off for new accounts, the typefaces come from this site instead of Google Fonts, students' feedback notes
+stay out of the public repository, accounts unused for 2 years are deleted, `CLAUDE.md` describes Stratos as a study app
+first, and the policy names "Stratos" with support@stratosstudy.com as the operator.
+
 ## The short version
 
-- Without an account, Stratos keeps everything on the device. Two things still leave it: the page load (GitHub Pages and
-  Google Fonts see the IP address and browser), and feedback a student sends, which carries no account.
+- Without an account, Stratos keeps everything on the device. Two things still leave it: the page load (GitHub Pages
+  sees the IP address and browser; the typefaces now come from the same site), and feedback a student sends, which
+  carries no account.
 - With an account, Stratos keeps an email address, a call sign, a username, progress, friends, messages for 90 days,
   challenges for 90 days, right answers for 15 days, an online mark for 60 seconds, feedback and reports for 12 months.
+  An account nobody signs in to or uses for 2 years is deleted with everything in it.
 - Every table has row-level security, students reach other students' data only through functions that return a ref,
   a call sign, a username and a few numbers, and Delete account removes nearly everything at once. That is a strong
   base.
-- The largest gaps against the draft Children's Online Privacy Code: no age question and no parental consent for
-  under-15s, three sharing switches that default to on, no privacy policy until this pull request, and no written
-  process for access or deletion requests by email.
+- The largest gap left against the draft Children's Online Privacy Code: no age question and no parental consent for
+  under-15s. Also open: no written process for access or deletion requests by email. The three sharing switches now
+  start off for new accounts, and the draft privacy policy is in the app.
 
 ## Does the law apply?
 
@@ -73,11 +80,11 @@ Messages and challenges with real friends are never kept on the device.
 | Recipient | What | Why | Where | Kept |
 | --- | --- | --- | --- | --- |
 | GitHub Pages | IP address, browser, the pages and files asked for | Hosting the site | United States | GitHub's logs, its own policy |
-| Google Fonts (`fonts.googleapis.com`, `fonts.gstatic.com`) | IP address, browser, the page that asked | The Hanken Grotesk and Archivo typefaces | United States | Google's logs, its own policy |
 | Supabase, `add_feedback` | Point id, part, reason, the note (free text, up to 300 characters), course id, app version, time | Could we improve this? | Supabase project | 12 months |
 
 Nothing else is sent while signed out. The Supabase library only loads for feedback, the sign-in sheet or a device
-already signed in. MathLive and the pictures come from this site.
+already signed in. MathLive, the pictures and the typefaces (`fonts/`, since 24 November 2026; Google Fonts before)
+come from this site. `tests/site.mjs` fails if any page names Google's font servers or loads a font from another site.
 
 ### With an account (Supabase)
 
@@ -87,7 +94,7 @@ already signed in. MathLive and the pictures come from this site.
 | IP address, browser, sign-in events | Supabase Auth sessions and logs | Security, run by Supabase | Owner, Supabase | Supabase's settings (not checked) | No |
 | Email address and the 6-digit code | Resend, via Supabase's SMTP | Sending sign-in emails | Resend | Resend's logs (not checked) | No |
 | Call sign | `profiles.call_sign` | Shown to friends | Friends, owner | Until changed or Delete account | You, Edit |
-| Username, when changed, three switches | `profiles.username`, `username_at`, `findable`, `show_online`, `show_week` | Search and friends | Friends see the username; search shows it to anyone signed in unless `findable` is off | Until Delete account | Account sheet |
+| Username, when changed, three switches, whether the switches notice is waiting | `profiles.username`, `username_at`, `findable`, `show_online`, `show_week`, `switch_notice` | Search and friends | Friends see the username; search shows it to anyone signed in only if `findable` is on. All three switches start off for accounts made after `supabase/switches.sql` | Until Delete account | Account sheet |
 | Progress | `progress.data` (answers with times, records, streak, chapters, rocket) | Sync | Owner only | Until Delete account | Shown in the app. Delete account |
 | Friend code | `friend_codes` | Adding friends | The student | Until Make a new code or Delete account | Account sheet |
 | Friend requests, with the code or username typed | `friend_requests` | Requests | Both students | Until answered or cancelled. No expiry | Cancel, Delete account |
@@ -100,10 +107,16 @@ already signed in. MathLive and the pictures come from this site.
 | Warnings, bans, the owner's actions | `moderation.notices`, `bans`, `actions` | Moderation | Owner; the student sees their own warning or ban | Actions 12 months, seen notices 12 months, unseen notices and bans until lifted or Delete account | No |
 | Report emails | `moderation.alerts`, Resend | Telling the owner a report came in | Owner. The email holds only the reason and a count | With the report, or 12 months | n/a |
 | Challenges: chapter, seed, scores, times | `challenges`, `challenge_log` | Challenges | Both students | 90 days, at once on remove or block | Shown on the friend's sheet |
-| Online mark | `online` | The green dot | Friends, unless `show_online` is off | 60 seconds | Switch on the Account sheet |
+| Online mark | `online` | The green dot | Friends, only if `show_online` is on | 60 seconds | Switch on the Account sheet |
 | Typing, stop, new | Supabase Realtime | The typing bubble | The friend in the chat | Not stored | n/a |
-| Each right answer: question and time | `week_answers` | Weekly table | Friends see only the total, unless `show_week` is off | 15 days | Switch on the Account sheet |
+| Each right answer: question and time | `week_answers` | Weekly table | Friends see only the total, only if `show_week` is on | 15 days | Switch on the Account sheet |
 | Feedback, with account id for the limit | `feedback` | Fixing content | Owner (`moderation.feedback_by_point`, without the id) | 12 months. Id cleared on Delete account | No |
+| Feedback once imported into the content pipeline | `content/work/<course>/points/*.json` (committed, public) and `content/local/feedback.json` (the owner's computer, git-ignored) | Fixing content | The public repository holds only each piece's database number and reason. The note, part, day, course and app version stay on the owner's computer | Until the owner deletes the local file | No |
+
+Every account: `supabase/inactive.sql` deletes an account nobody has signed in to or used for 2 years, with all of the
+above, daily through Supabase Cron (`stratos-inactive`). "Used" counts a sign-in, the app refreshing its sign-in (about
+hourly while open), and progress saved, so a student who stays signed in is never deleted. Reports and feedback stay
+until 12 months old with the account id cleared, as with Delete account. There is no warning email first.
 
 Region: `supabase/README.md` step 1 asks for Sydney (`ap-southeast-2`). The draft policy says the database is in Sydney.
 Confirm this in the dashboard before merging.
@@ -116,14 +129,14 @@ low means a small change or a rule to keep.
 | # | Gap | Code (secondhand) | Severity | What fixing it involves |
 | --- | --- | --- | --- | --- |
 | 1 | No age is asked, so there is no parental consent for under-15s. Years 7 to 9 are mostly 12 to 15. | Consent from a parent or guardian for under-15s, with reasonable steps to check they are one; the child's assent too for anything not strictly necessary; consent renewed every 12 months | High | Decide what needs consent. Signing in to sync progress is arguably strictly necessary; friends, messages and the weekly table are not. Ask the year level or birth year at sign-up (one more field). For under-15s, keep the social features off until a parent agrees: the student gives a parent's email, the parent gets a link (Resend, sharing the 100-a-day limit with sign-in codes), and a `consents` table records who agreed and when. A database function would then refuse friends and messages without it. Several pull requests, and tests for each |
-| 2 | "Let people find me by username", "Show when I'm online" and "Show me on friends' weekly table" all default to on | s 9: settings default to high privacy for anything not strictly necessary | High | Change the three column defaults to false in `friends.sql`, `live.sql` and `week.sql`, ask on the Account sheet or when Friends first opens, and decide whether existing accounts flip too. Small SQL and app change; the friends, live and week tests change with it. Search becomes less useful, since most students would not be findable |
+| 2 | "Let people find me by username", "Show when I'm online" and "Show me on friends' weekly table" all defaulted to on | s 9: settings default to high privacy for anything not strictly necessary | Fixed 24 November 2026 | New accounts start with all three off (`supabase/switches.sql`, and the defaults in `friends.sql`, `live.sql` and `week.sql`). Existing accounts kept their settings, as the owner decided, and see a notice once explaining each switch, with a button to the Account sheet. The Account sheet and the friend code sheet say what each switch does. Search finds fewer students, so codes matter more |
 | 3 | No privacy policy or collection notices existed | A child-specific privacy policy (s 23) and notices in language a child can follow | Medium, partly fixed here | This pull request adds the policy page and a line at sign-up. Still to do: a one-line notice where each thing is collected (picking a username, the first message request, the weekly table, the feedback note) |
-| 4 | The policy cannot name who runs Stratos | APP 1.4 and the Code expect the entity's identity and contact details | Medium | Decide the name (a person, a business name or a company, with ABN) to put under Questions or problems |
+| 4 | The policy names "Stratos" and support@stratosstudy.com, not a legal entity | APP 1.4 and the Code expect the entity's identity and contact details | Low, decided | The owner decided on "Stratos" with the support email and no personal name. If a business name or company (with ABN) is registered, add it under Questions or problems |
 | 5 | Access and correction work only by email, with no written process. Parents have no way in | s 32: destroy a child's information on request from the child or a parent | Medium | Write the steps: how to check the request comes from the account's email or a parent, a 30-day reply, and running `delete_account` for that user from the SQL Editor. Later, a "Download my information" button calling a function that returns the student's rows as JSON |
 | 6 | The owner can read every message in the dashboard. The policy promises to read them only on a report, to fix a problem, or to keep someone safe | Best interests of the child; use only for the purpose collected | Medium | A short written rule for yourself, and keep it. Optionally move message reading behind `moderation` functions that log each look in `moderation.actions` |
-| 7 | Feedback notes are free text, unfiltered, and `pipeline.py feedback import` copies them into `content/work/<course>/` files, which are committed to this public repository | Collect only what is needed; security | Medium | Leave notes out of committed files (keep them in a git-ignored file, or drop the note once read), and run `message_problem` on notes so emails and phone numbers are refused. No feedback has been imported yet, so nothing has leaked |
-| 8 | Overseas: Google Fonts and GitHub Pages get every visitor's IP address in the United States, signed in or not, and Resend gets every sign-in email | APP 8 (cross-border disclosure); collect only what is needed | Medium | Self-host the two typefaces (woff2 files in `icons/` or a `fonts/` folder, `@font-face` in `style.css`, add to `SITE`): Google drops out completely. GitHub Pages and Resend are needed to run; name them in the policy, which this draft does |
-| 9 | No limit on how long an inactive account is kept. Friend requests never expire, and unseen warnings and bans stay | Retention no longer than needed | Low to medium | A Cron job that deletes accounts unused for, say, 2 years after a warning email; requests deleted after 30 days, like message requests |
+| 7 | Feedback notes are free text and unfiltered. `pipeline.py feedback import` used to copy them into `content/work/<course>/` files, which are committed to this public repository | Collect only what is needed; security | Partly fixed 24 November 2026 | Import now keeps only each piece's database number and reason in `content/work`, and the note and the rest in `content/local/feedback.json`, which `.gitignore` keeps out of git and the review page reads. `content/test_pipeline.py` fails if a note reaches any file git would commit, and checks every point file in `content/work`. No feedback had been imported before, so nothing leaked. Still open: running `message_problem` on notes so emails and phone numbers are refused, and the CSV the owner downloads, which stays in Downloads until deleted |
+| 8 | Overseas: GitHub Pages gets every visitor's IP address in the United States, signed in or not, and Resend gets every sign-in email. Google Fonts did too, until 24 November 2026 | APP 8 (cross-border disclosure); collect only what is needed | Low, partly fixed | The typefaces are in `fonts/` now (Fontsource copies, SIL Open Font License), so Google drops out completely, for v2, the Maths Lab and the first prototype. GitHub Pages and Resend are needed to run; the policy names them |
+| 9 | Friend requests never expire, and unseen warnings and bans stay. Inactive accounts had no limit until 24 November 2026 | Retention no longer than needed | Low, partly fixed | `supabase/inactive.sql` deletes accounts unused for 2 years, with their data, daily by Cron, and the policy says so. Still open: a warning email before deleting (it would share Resend's 100 a day), and friend requests deleted after 30 days, like message requests |
 | 10 | No privacy impact assessment or yearly review | The draft asks for assessments, published, and a review at least once a year | Low | Treat this file as the first one. Date it and review it each year and before each new social feature (races) |
 | 11 | Reset leaves unsent feedback (`stratos2.fb`) and the Maths Lab's results on the device | Deletion | Low | Remove `stratos2.fb` in `eraseDevice`; a Reset button in the lab. The draft policy only claims Reset erases progress and settings |
 | 12 | Direct marketing | The draft narrows direct marketing to children sharply, and limits nudge techniques | Low (none today) | Stratos sends no marketing. Keep it that way when buying turns on: no emails or notifications about the store, no countdowns or limited-time offers, and streak rewards that never point at the store |
@@ -152,8 +165,9 @@ common use". Services should assess again when they add features.
 
 Risks to watch:
 
-- `CLAUDE.md`, which is public, opens with "Stratos is school as a social app" and compares it with Instagram. Anyone
-  assessing the purpose can read that. Rewording it to "a study app with friends" costs nothing.
+- `CLAUDE.md`, which is public, used to open with "Stratos is school as a social app" and compare it with Instagram.
+  Since 24 November 2026 it describes Stratos as a study app first, with friends, challenges and the weekly table as
+  support for studying, and no comparison with a social media service. Keep new writing about Stratos the same way.
 - Races with real friends (step 5's last piece) and any free-text feature add social weight. Assess again before each.
 - The March 2026 amendment reportedly adds a condition about a "recommender feature" or "logged-in feature". The
   definitions could not be read from here. Stratos has no recommender feed, but check the text.
@@ -161,15 +175,25 @@ Risks to watch:
 
 ## Decisions for the owner
 
+Decided on 24 November 2026:
+
+- The three sharing switches start off for new accounts. Existing accounts keep their settings and see a one-time
+  notice that explains each switch and opens the Account sheet (gap 2).
+- The operator is named as "Stratos", with support@stratosstudy.com, and no personal name (gap 4). The policy already
+  says this. A business name or ABN can be added later if one is registered.
+- The typefaces are hosted in this repository, and nothing loads from Google (gap 8).
+- Feedback notes stay in a git-ignored local file the review page reads. Committed files keep only the point id, the
+  piece's number and its reason, and a test fails if a note reaches a committed file (gap 7).
+- Accounts with no sign-in or use for 2 years are deleted with their data, by Cron, and the policy says so (gap 9).
+- `CLAUDE.md` opens with Stratos as a study app first, with no comparison with Instagram.
+
+Still open:
+
 1. Under-15s: require a parent's consent for the social features, for any account, or not yet. This shapes the next
    several pull requests.
-2. The three sharing switches: default them to off for new accounts, and whether to flip existing accounts.
-3. Who the policy names as running Stratos, and the postal or business details, if any.
-4. Confirm the Supabase region is Sydney before merging, since the draft says so.
-5. Whether the promises in the draft are ones you will keep: reading messages only on a report, to fix a problem or to
+2. Confirm the Supabase region is Sydney, since the draft says so.
+3. Whether the promises in the draft are ones you will keep: reading messages only on a report, to fix a problem or to
    keep someone safe; telling the police or an emergency service if someone may be in danger; telling students in the
    app before keeping anything new.
-6. Self-host the fonts to take Google out.
-7. How feedback notes are handled in the content pipeline before the first import.
-8. An inactive-account limit, and how long.
-9. Whether to reword the opening of `CLAUDE.md`.
+4. A warning email before an unused account is deleted, and an expiry for friend requests.
+5. Filtering feedback notes for emails and phone numbers, as messages are.

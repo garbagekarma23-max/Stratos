@@ -991,9 +991,13 @@ def feedback_tests(tmp, printed):
     a, fl = W.load('tsr-plain-alpha'), W.load('tsr-plain-flag')
     check(code == 0 and a['stage'] == 'review' and a['draft'] == published and a['live'] == published and a['final'] == published,
           'a cleared point goes back to the review list as it is, and the version students see is kept live')
-    check([x['id'] for x in a['feedback']] == ['7', '3'] and a['feedback'][0]['note'] == 'Option B, is right too.' and a['feedback'][1]['part'] == 'card 2' and
+    check(a['feedback'] == [{'id': '7', 'reason': 'wrong'}, {'id': '3', 'reason': 'typo'}] and
           not a.get('flags') and not a.get('proposal') and not a.get('cleared_by') and any('student feedback: back to the review list' in l for l in a['log']),
-          'with each piece of feedback (newest first, its part, reason and note), no old flags or fix, and a line in its log')
+          'with each piece of feedback, newest first, as its id and reason only, no old flags or fix, and a line in its log')
+    local = pipeline.feedback_local(repo)
+    check(local['7']['note'] == 'Option B, is right too.' and local['3']['part'] == 'card 2' and local['7']['point'] == 'tsr-plain-alpha' and
+          local['1']['note'] == 'Hand-written point.' and 'Students\u2019 notes are kept only on this computer, in ' + pipeline.FEEDBACK_LOCAL in out,
+          'the note, the part and the rest go into the local file, and the summary says where')
     check(fl['stage'] == 'review' and [x['id'] for x in fl['feedback']] == ['2'] and fl.get('proposal'), 'feedback on a point already waiting is added to it, and its fix stays')
     check('Not made by the content pipeline (1)' in out and '  c1p1\n    Something else, the card (eco): Hand-written point.' in out,
           'a point written by hand is listed for the owner to change in src/, with its feedback')
@@ -1004,6 +1008,14 @@ def feedback_tests(tmp, printed):
     items = {i['id']: i for i in pipeline.review_items(work, repo)['items']}
     check('tsr-plain-alpha' in items and items['tsr-plain-alpha']['live'] and [x['reason'] for x in items['tsr-plain-alpha']['feedback']] == ['wrong', 'typo'] and
           items['tsr-plain-flag']['feedback'][0]['reason'] == 'unclear', 'the review page lists the point with its feedback, and says students still see it')
+    check(items['tsr-plain-alpha']['feedback'][0]['note'] == 'Option B, is right too.' and items['tsr-plain-alpha']['feedback'][1]['part'] == 'card 2',
+          'the review page reads the note and the part from the local file')
+    keep = open(pipeline.feedback_local_path(repo), encoding='utf-8').read()
+    os.remove(pipeline.feedback_local_path(repo))
+    items = {i['id']: i for i in pipeline.review_items(work, repo)['items']}
+    check([x['reason'] for x in items['tsr-plain-alpha']['feedback']] == ['wrong', 'typo'] and not any(x.get('note') for x in items['tsr-plain-alpha']['feedback']),
+          'with no local file, the review page still shows each reason')
+    with open(pipeline.feedback_local_path(repo), 'w', encoding='utf-8') as f: f.write(keep)
     saved = files()
     code, out = go('feedback', 'import', view)
     check(code == 0 and files() == saved and 'Already imported before, so left as they are: 3 pieces.' in out, 'importing the same file again changes nothing')
@@ -1016,7 +1028,8 @@ def feedback_tests(tmp, printed):
         w.writerow([11, '2026-11-21 11:00:00+00', 'tsr-plain-bravo', 'b', 'wrong', '', 'tst-rebal', 'dev'])
     code, out = go('feedback', 'import', rows)
     br = W.load('tsr-plain-bravo')
-    check(code == 0 and br['stage'] == 'review' and br['feedback'][0]['part'] == 'b' and br['feedback'][0]['note'] is None, 'a CSV of the table\'s rows works too')
+    check(code == 0 and br['stage'] == 'review' and br['feedback'] == [{'id': '11', 'reason': 'wrong'}] and pipeline.feedback_local(repo)['11']['part'] == 'b' and
+          pipeline.feedback_local(repo)['7']['note'] == 'Option B, is right too.', 'a CSV of the table\'s rows works too, and the local file keeps the earlier notes')
     bad = os.path.join(tmp, 'empty.csv')
     with open(bad, 'w', encoding='utf-8') as f: f.write('point,items\n')
     code, out = go('feedback', 'import', bad)
@@ -1043,6 +1056,33 @@ def feedback_tests(tmp, printed):
     code, out = go('feedback', 'import', view)
     check(code == 0 and W.load('tsr-plain-alpha')['stage'] == 'cleared' and 'Already imported before, so left as they are: 3 pieces.' in out,
           'feedback already decided is never imported again')
+
+    # No student's note may reach a file git would commit. Every file in the test's repository and work folder is read,
+    # and any that holds a note must be one the real repository's .gitignore keeps out of git.
+    notes = ['Option B, is right too.', 'Hand-written point.']
+    holding = []
+    for top in (repo, work):
+        for r_, _, fs in os.walk(top):
+            for f in fs:
+                path = os.path.join(r_, f)
+                try: text = open(path, encoding='utf-8').read()
+                except (UnicodeDecodeError, OSError): continue
+                if any(n in text or json.dumps(n)[1:-1] in text for n in notes): holding.append(os.path.relpath(path, repo) if top == repo else os.path.join('content', 'work', os.path.relpath(path, work)))
+    ignored = lambda rel: subprocess.run(['git', 'check-ignore', '-q', '--no-index', rel.replace(os.sep, '/')], cwd=REPO).returncode == 0
+    committed = [h for h in holding if not ignored(h) or not h.replace(os.sep, '/').startswith('content/local/')]
+    check(holding and not committed, 'no student\'s note reaches a committed file: only ' + pipeline.FEEDBACK_LOCAL + ' holds them, and git ignores it' +
+          (' (found in ' + ', '.join(committed) + ')' if committed else ''))
+    # And in the real repository: every point file's feedback holds only the id and reason, and the decision on it.
+    extra = []
+    for r_, _, fs in os.walk(os.path.join(REPO, 'content', 'work')):
+        for f in fs:
+            if not f.endswith('.json') or '_claude-code' in r_: continue
+            try: rec = json.load(open(os.path.join(r_, f), encoding='utf-8'))
+            except (ValueError, OSError): continue
+            if not isinstance(rec, dict): continue
+            for x in (rec.get('feedback') or []) + (rec.get('feedback_done') or []):
+                if set(x) - set(pipeline.FEEDBACK_KEPT) - {'decided', 'decision', 'by'}: extra.append(f)
+    check(not extra, 'no point file in content/work keeps more of a piece of feedback than its id and reason' + (' (' + ', '.join(extra[:5]) + ')' if extra else ''))
 
 def states_tests(tmp, repo, printed, api):
     """Reuse, adapt and new, in two Victorian courses with units for years, in their own copy of the repository with the

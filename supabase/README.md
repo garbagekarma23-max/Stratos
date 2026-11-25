@@ -454,6 +454,68 @@ Once the site is updated.
 3. Sign in as A, answer a question, and send feedback on it with a note. Run the query again: the point has the
    note in `items`, and nothing in the view says who sent it.
 
+## 24. Delete accounts nobody uses
+
+`supabase/inactive.sql` deletes, once a day, accounts nobody has used for 2 years, with everything in them, as
+Delete account does. Reports and feedback stay with the account id cleared, until they are 12 months old.
+
+An account counts as used while any of these is less than 2 years ago: the last sign-in with a code or link, when the
+account was made, the last time a phone refreshed one of its sign-ins (which happens about once an hour while the app
+is open, so a student who stays signed in is never counted as gone), and the last time progress was saved to it.
+
+1. Check that Cron is on (step 12). This step needs it.
+2. Open **SQL Editor** and start a new query.
+3. Paste the whole of `supabase/inactive.sql` and press **Run**. It should say Success. No rows returned. It needs
+   the files from steps 2 to 22, which are in already. Running it deletes nothing by itself.
+4. In **Integrations**, then **Cron**, there should be a job called `stratos-inactive` that runs every day at 17:41
+   UTC (early morning in Sydney). If it is missing, Cron was off: turn it on (step 12) and run `inactive.sql` again.
+5. To see what it would do before the first run, run this in **SQL Editor**. It counts the accounts unused for 2
+   years and deletes nothing:
+
+   ```sql
+   select count(*) from auth.users u
+   where greatest(u.last_sign_in_at, u.created_at) < now() - interval '2 years'
+     and not exists (select 1 from auth.sessions s where s.user_id = u.id
+       and greatest(s.created_at, s.updated_at, (to_jsonb(s) ->> 'refreshed_at')::timestamptz) >= now() - interval '2 years')
+     and not exists (select 1 from public.progress p where p.user_id = u.id
+       and p.updated_at >= now() - interval '2 years');
+   ```
+
+   It should be 0 until the project is 2 years old.
+
+Running `inactive.sql` again later is safe. It puts the function and the job back as written, and leaves one job.
+The function is `moderation.delete_inactive()`. Only you can run it, in SQL Editor: students and someone not signed
+in cannot. It deletes at most 500 accounts a run, oldest first, and answers how many it deleted, so a backlog clears
+over the following days.
+
+## 25. Start the sharing switches off for new accounts
+
+`supabase/switches.sql` makes "Let people find me by username", "Show when I’m online" and "Show me on friends’
+weekly table" start off for every new account. Accounts made before keep exactly what they had, and the app shows
+each of them a notice once that explains the three switches and opens the Account sheet.
+
+Do this once the pull request with `supabase/switches.sql` is merged, in this order. Each file is safe to run again:
+it keeps every student's data and settings.
+
+1. Open **SQL Editor** and start a new query.
+2. Paste the whole of `supabase/friends.sql` and press **Run**. Then the same with `supabase/live.sql`, then
+   `supabase/week.sql`. These put back their functions, which now read a student with no profile row as having the
+   switches off.
+3. Paste the whole of `supabase/switches.sql` and press **Run**. It should say Success. No rows returned.
+4. Check it, in a new query:
+
+   ```sql
+   select count(*) filter (where switch_notice) as notices_waiting,
+          count(*) filter (where findable) as findable,
+          count(*) as accounts
+   from public.profiles;
+   ```
+
+   On the first run, `notices_waiting` is every account that existed, and `findable` is the number that had search
+   on before. Run `switches.sql` again and the numbers stay the same.
+
+Until step 3 runs, the app asks for `switch_notice` and gets no answer, which it ignores: nothing shows.
+
 ## If the project pauses
 
 A free project pauses after a week with no use. The app keeps working on each device while it is paused. Press
