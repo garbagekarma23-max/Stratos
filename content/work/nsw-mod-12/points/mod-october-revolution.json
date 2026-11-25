@@ -9,7 +9,8 @@
   "2026-10-27T01:00:12Z write: failed the content check, writing again",
   "2026-10-27T01:08:37Z write: done",
   "2026-10-27T01:23:02Z check: passed, cleared",
-  "2026-10-29T11:03:06Z rebalance: kept its old options (the new options failed the content check: mod-october-revolutiona option is 64 characters: It was paid for and backed by the Allied powers fighting Germany; mod-october-revolutiona option is 64 characters: It repeated promises the Provisional Government had already kept; mod-october-revolutiona option is 62 characters: It appealed mostly to the Tsar's former officers and officials; mod-october-revolutionb option is 62 characters: The Tsar had just returned to Petrograd to lead the army again; mod-october-revolutionb option is 63 characters: The Provisional Government had ended the war and fed the cities; mod-october-revolutionb option is 61 characters: Food was plentiful in Petrograd and the unrest had faded away)"
+  "2026-10-29T11:03:06Z rebalance: kept its old options (the new options failed the content check: mod-october-revolutiona option is 64 characters: It was paid for and backed by the Allied powers fighting Germany; mod-october-revolutiona option is 64 characters: It repeated promises the Provisional Government had already kept; mod-october-revolutiona option is 62 characters: It appealed mostly to the Tsar's former officers and officials; mod-october-revolutionb option is 62 characters: The Tsar had just returned to Petrograd to lead the army again; mod-october-revolutionb option is 63 characters: The Provisional Government had ended the war and fed the cities; mod-october-revolutionb option is 61 characters: Food was plentiful in Petrograd and the unrest had faded away)",
+  "2026-11-25T20:01:34Z rebalance: new options for question a and b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 3,
@@ -85,7 +86,7 @@
   "a": {
    "q": "Why did the Bolshevik slogan of peace, land and bread win them support in 1917?",
    "opts": [
-    "It matched the main needs of workers, soldiers and peasants",
+    "It matched what workers, soldiers and peasants wanted",
     "It was backed by the Allied powers fighting Germany",
     "It repeated promises the Provisional Government had kept",
     "It was popular mainly with the Tsar's former officials"
@@ -98,9 +99,9 @@
    "q": "Which situation best helps explain why the Bolsheviks could seize power in Petrograd in October 1917?",
    "opts": [
     "The Provisional Government was weak and unpopular",
-    "The Tsar had just returned to lead the army",
-    "The Provisional Government had ended the war",
-    "Food was plentiful and unrest had faded"
+    "The Tsar had just returned to lead the Russian army",
+    "The Provisional Government had just ended the war",
+    "Food was plentiful and unrest in the city had faded"
    ],
    "why": "A weak government that had not solved the war or food problems was easy to remove. The other options describe events that did not happen or would have made the Bolsheviks less popular.",
    "clue": "Think about what the Provisional Government had failed to fix."
@@ -108,11 +109,57 @@
  },
  "cleared_by": "checker",
  "rebalance": {
-  "at": "2026-10-29T11:03:06Z",
-  "result": "kept",
-  "changed": [],
-  "why": [
-   "the new options failed the content check: mod-october-revolutiona option is 64 characters: It was paid for and backed by the Allied powers fighting Germany; mod-october-revolutiona option is 64 characters: It repeated promises the Provisional Government had already kept; mod-october-revolutiona option is 62 characters: It appealed mostly to the Tsar's former officers and officials; mod-october-revolutionb option is 62 characters: The Tsar had just returned to Petrograd to lead the army again; mod-october-revolutionb option is 63 characters: The Provisional Government had ended the war and fed the cities; mod-october-revolutionb option is 61 characters: Food was plentiful in Petrograd and the unrest had faded away"
-  ]
+  "at": "2026-11-25T20:01:34Z",
+  "result": "changed",
+  "changed": [
+   "a",
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "It matched the main needs of workers, soldiers and peasants",
+     "It was backed by the Allied powers fighting Germany",
+     "It repeated promises the Provisional Government had kept",
+     "It was popular mainly with the Tsar's former officials"
+    ]
+   },
+   "b": {
+    "opts": [
+     "The Provisional Government was weak and unpopular",
+     "The Tsar had just returned to lead the army",
+     "The Provisional Government had ended the war",
+     "Food was plentiful and unrest had faded"
+    ]
+   }
+  },
+  "check": {
+   "mod-october-revolutiona": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   },
+   "mod-october-revolutionb": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   }
+  },
+  "before": {
+   "at": "2026-10-29T11:03:06Z",
+   "result": "kept",
+   "changed": [],
+   "why": [
+    "the new options failed the content check: mod-october-revolutiona option is 64 characters: It was paid for and backed by the Allied powers fighting Germany; mod-october-revolutiona option is 64 characters: It repeated promises the Provisional Government had already kept; mod-october-revolutiona option is 62 characters: It appealed mostly to the Tsar's former officers and officials; mod-october-revolutionb option is 62 characters: The Tsar had just returned to Petrograd to lead the army again; mod-october-revolutionb option is 63 characters: The Provisional Government had ended the war and fed the cities; mod-october-revolutionb option is 61 characters: Food was plentiful in Petrograd and the unrest had faded away"
+   ]
+  }
  }
 }

@@ -31,7 +31,8 @@
   "2026-11-01T14:56:00Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:26Z write: failed the content check, writing again",
   "2026-11-01T15:14:45Z write: done",
-  "2026-11-02T04:27:50Z check: passed, cleared"
+  "2026-11-02T04:27:50Z check: passed, cleared",
+  "2026-11-25T20:02:06Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -128,13 +129,42 @@
    "q": "A student writes: 'The author hated the class system and wanted to end it.' Why is this a weak way to discuss the author's views?",
    "opts": [
     "It states the author's private feelings as proven fact",
-    "It names the class system, which is not a value",
-    "It links the text to its historical context",
-    "It uses the writer's choices as evidence"
+    "It names the class system, which is not itself a value",
+    "It links the author's view to the historical context",
+    "It uses the writer's choices in the text as evidence"
    ],
    "why": "The sentence states the author's private feelings and aims as fact, and gives no evidence from the text. A stronger sentence would say what the text suggests about the class system through its characters and events. Mentioning context is not the problem.",
    "clue": "Can a reader know what the author felt inside?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-25T20:02:06Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "It states the author's private feelings as proven fact",
+     "It names the class system, which is not a value",
+     "It links the text to its historical context",
+     "It uses the writer's choices as evidence"
+    ]
+   }
+  },
+  "check": {
+   "eng-views-values-authorb": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   }
+  }
+ }
 }

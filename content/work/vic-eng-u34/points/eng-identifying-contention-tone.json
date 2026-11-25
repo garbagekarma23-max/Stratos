@@ -20,7 +20,8 @@
   "2026-11-01T15:05:26Z write: done",
   "2026-11-01T15:14:45Z check: flagged",
   "2026-11-02T04:27:51Z fix: suggested",
-  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-25T20:02:06Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -237,13 +238,42 @@
    "q": "Priya, a Melbourne student, writes a piece for the newsletter her school sends home each week. She mocks the idea that homework builds character and says it should be cut back. Which pairing of tone and audience fits?",
    "opts": [
     "Sarcastic tone, aimed at families at her school",
-    "Calm tone, aimed at families at her school",
-    "Sarcastic tone, aimed at state politicians",
-    "Calm tone, aimed at state politicians"
+    "Calm, even tone, aimed at families at her school",
+    "Sarcastic tone, aimed at politicians in parliament",
+    "Calm, even tone, aimed at politicians in parliament"
    ],
    "why": "Mocking an idea is a sarcastic tone, and a newsletter sent home each week is read by the school's families, so they are the audience. The calm option with families gets the readers right but ignores the mockery, and the politicians options ignore where the piece appears.",
    "clue": "Mockery shows the tone. Ask who reads what the school sends home."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-11-25T20:02:06Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "Sarcastic tone, aimed at families at her school",
+     "Calm tone, aimed at families at her school",
+     "Sarcastic tone, aimed at state politicians",
+     "Calm tone, aimed at state politicians"
+    ]
+   }
+  },
+  "check": {
+   "eng-identifying-contention-toneb": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   }
+  }
+ }
 }

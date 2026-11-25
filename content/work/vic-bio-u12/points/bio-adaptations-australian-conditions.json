@@ -10,7 +10,8 @@
   "2026-11-01T08:14:01Z write: done",
   "2026-11-01T08:24:29Z check: flagged",
   "2026-11-01T08:33:48Z fix: suggested",
-  "2026-11-01T09:32:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-01T09:32:50Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-25T20:01:34Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -210,7 +211,7 @@
    "d": 3,
    "q": "After a bushfire in the Victorian bush, a eucalypt with blackened bark grows new leaves from its trunk. Which adaptation allows this?",
    "opts": [
-    "Buds protected under thick bark that regrow after fire",
+    "Buds under thick bark that regrow after fire",
     "Deep roots that reach water far below the surface",
     "Seeds held in woody fruits that open after fire",
     "Waxy leaves that lose less water in hot weather"
@@ -219,5 +220,34 @@
    "clue": "The new leaves grow from the tree that survived, not from seed."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-11-25T20:01:34Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "Buds protected under thick bark that regrow after fire",
+     "Deep roots that reach water far below the surface",
+     "Seeds held in woody fruits that open after fire",
+     "Waxy leaves that lose less water in hot weather"
+    ]
+   }
+  },
+  "check": {
+   "bio-adaptations-australian-conditionsb": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   }
+  }
+ }
 }

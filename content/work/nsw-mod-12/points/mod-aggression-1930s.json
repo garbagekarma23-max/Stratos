@@ -11,7 +11,8 @@
   "2026-10-27T01:23:01Z check: flagged",
   "2026-10-27T01:29:35Z fix: suggested",
   "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix",
-  "2026-10-29T11:03:06Z rebalance: kept its old options (the new options failed the content check: mod-aggression-1930sb option is 73 characters: The League had forced Japan to give up Manchuria in 1933, so he held back; mod-aggression-1930sb option is 68 characters: League oil sanctions had crippled Italy, so he felt sure he was safe; mod-aggression-1930sb option is 65 characters: Germany had kept to the Treaty of Versailles, so he faced no risk)"
+  "2026-10-29T11:03:06Z rebalance: kept its old options (the new options failed the content check: mod-aggression-1930sb option is 73 characters: The League had forced Japan to give up Manchuria in 1933, so he held back; mod-aggression-1930sb option is 68 characters: League oil sanctions had crippled Italy, so he felt sure he was safe; mod-aggression-1930sb option is 65 characters: Germany had kept to the Treaty of Versailles, so he faced no risk)",
+  "2026-11-25T20:01:27Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 3,
@@ -235,10 +236,10 @@
    "d": 3,
    "q": "Which statement best explains why Hitler felt able to act from 1936 to 1938?",
    "opts": [
-    "Earlier aggression had gone unchecked, so he risked little",
-    "The League had forced Japan out of Manchuria in 1933",
-    "League oil sanctions had already crippled Italy",
-    "Germany had never broken the Treaty of Versailles"
+    "Earlier aggression went unchecked, so he risked little",
+    "The League had forced Japan to leave Manchuria in 1933",
+    "League oil sanctions had already crippled Italy by 1936",
+    "Germany had kept to the Treaty of Versailles until 1938"
    ],
    "why": "Japan kept Manchuria, the League's limited sanctions did not stop Italy, and Hitler's own first breaches went unchecked, so further aggression seemed to carry little risk. The oil option is tempting but wrong: the sanctions on Italy did not cover oil. Germany had broken Versailles by rearming and entering the Rhineland.",
    "clue": "Ask whether anyone had made an aggressor give back land."
@@ -246,11 +247,40 @@
  },
  "cleared_by": "recheck",
  "rebalance": {
-  "at": "2026-10-29T11:03:06Z",
-  "result": "kept",
-  "changed": [],
-  "why": [
-   "the new options failed the content check: mod-aggression-1930sb option is 73 characters: The League had forced Japan to give up Manchuria in 1933, so he held back; mod-aggression-1930sb option is 68 characters: League oil sanctions had crippled Italy, so he felt sure he was safe; mod-aggression-1930sb option is 65 characters: Germany had kept to the Treaty of Versailles, so he faced no risk"
-  ]
+  "at": "2026-11-25T20:01:27Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "Earlier aggression had gone unchecked, so he risked little",
+     "The League had forced Japan out of Manchuria in 1933",
+     "League oil sanctions had already crippled Italy",
+     "Germany had never broken the Treaty of Versailles"
+    ]
+   }
+  },
+  "check": {
+   "mod-aggression-1930sb": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   }
+  },
+  "before": {
+   "at": "2026-10-29T11:03:06Z",
+   "result": "kept",
+   "changed": [],
+   "why": [
+    "the new options failed the content check: mod-aggression-1930sb option is 73 characters: The League had forced Japan to give up Manchuria in 1933, so he held back; mod-aggression-1930sb option is 68 characters: League oil sanctions had crippled Italy, so he felt sure he was safe; mod-aggression-1930sb option is 65 characters: Germany had kept to the Treaty of Versailles, so he faced no risk"
+   ]
+  }
  }
 }

@@ -11,7 +11,8 @@
   "2026-11-01T08:24:34Z write: done (still fails the content check)",
   "2026-11-01T08:33:52Z check: flagged",
   "2026-11-01T08:42:07Z fix: suggested",
-  "2026-11-02T06:24:11Z review: approved with the fix"
+  "2026-11-02T06:24:11Z review: approved with the fix",
+  "2026-11-25T20:02:40Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 3,
@@ -152,10 +153,10 @@
   "a": {
    "q": "Which action is an example of pressure from abroad on South Africa's apartheid government?",
    "opts": [
-    "Other countries placing sanctions on South African trade",
+    "Other countries placing trade sanctions on South Africa",
     "ANC supporters joining strikes in South African cities",
-    "Students in Soweto protesting about their schooling",
-    "South Africa's government banning protest groups"
+    "Students in Soweto protesting about their own schooling",
+    "South Africa's government banning local protest groups"
    ],
    "why": "Sanctions were imposed by other countries to make apartheid costly to keep. The strikes and student protests were protest inside South Africa, and bans were the government's own response.",
    "clue": "Look for action taken by people outside South Africa."
@@ -173,5 +174,34 @@
    "clue": "The change came from more than one source of pressure."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "rebalance": {
+  "at": "2026-11-25T20:02:40Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "Other countries placing sanctions on South African trade",
+     "ANC supporters joining strikes in South African cities",
+     "Students in Soweto protesting about their schooling",
+     "South Africa's government banning protest groups"
+    ]
+   }
+  },
+  "check": {
+   "mod-end-apartheida": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   }
+  }
+ }
 }

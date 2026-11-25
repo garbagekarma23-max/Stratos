@@ -11,7 +11,8 @@
   "2026-11-01T08:24:34Z write: done",
   "2026-11-01T08:33:52Z check: flagged",
   "2026-11-01T08:42:07Z fix: suggested",
-  "2026-11-02T06:24:08Z review: approved with the fix"
+  "2026-11-02T06:24:08Z review: approved with the fix",
+  "2026-11-25T20:02:06Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 3,
@@ -174,7 +175,7 @@
    "d": 3,
    "q": "In 1965, students travelled by bus through towns in New South Wales and protested at a pool that barred Aboriginal children. What did this action mainly achieve?",
    "opts": [
-    "It drew national attention to everyday racial discrimination",
+    "It drew national attention to racial discrimination",
     "It changed the Constitution to count Aboriginal people",
     "It returned traditional land to the people of the town",
     "It won the Gurindji ownership of their land at Wave Hill"
@@ -183,5 +184,34 @@
    "clue": "Think about what media coverage of a protest in a town can do."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "rebalance": {
+  "at": "2026-11-25T20:02:06Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "It drew national attention to everyday racial discrimination",
+     "It changed the Constitution to count Aboriginal people",
+     "It returned traditional land to the people of the town",
+     "It won the Gurindji ownership of their land at Wave Hill"
+    ]
+   }
+  },
+  "check": {
+   "mod-aboriginal-torres-strait-islanderb": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   }
+  }
+ }
 }

@@ -32,7 +32,8 @@
   "2026-11-01T15:05:26Z write: done",
   "2026-11-01T15:14:45Z check: flagged",
   "2026-11-02T04:27:51Z fix: suggested",
-  "2026-11-02T04:35:40Z autoreview: cleared with the fix (card wording)"
+  "2026-11-02T04:35:40Z autoreview: cleared with the fix (card wording)",
+  "2026-11-25T20:01:59Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -204,7 +205,7 @@
   "a": {
    "q": "A writer opens an article on bus cuts with a story about Ayesha, who now walks two hours to work. What is the main reason for starting this way?",
    "opts": [
-    "To make the issue personal before the facts arrive",
+    "To make the issue feel real before the facts",
     "To prove the cuts have harmed most commuters",
     "To tell readers exactly what action to take",
     "To show that the writer has expert knowledge"
@@ -225,5 +226,34 @@
    "clue": "The line tells the reader to do something, and it comes last."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "rebalance": {
+  "at": "2026-11-25T20:01:59Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "To make the issue personal before the facts arrive",
+     "To prove the cuts have harmed most commuters",
+     "To tell readers exactly what action to take",
+     "To show that the writer has expert knowledge"
+    ]
+   }
+  },
+  "check": {
+   "eng-arguments-are-structureda": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  }
+ }
 }

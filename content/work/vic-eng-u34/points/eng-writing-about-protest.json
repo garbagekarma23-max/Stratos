@@ -11,7 +11,8 @@
   "2026-11-01T15:05:26Z write: done",
   "2026-11-01T15:14:45Z check: flagged",
   "2026-11-02T04:27:51Z fix: suggested",
-  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-25T20:02:06Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 3,
@@ -200,10 +201,10 @@
   "a": {
    "q": "Which piece of writing is exploring the framework of protest?",
    "opts": [
-    "A nurse writes to the paper about unsafe hospital wards",
+    "A nurse writes to the paper about unsafe wards",
     "A boy wins a trophy at his school sports carnival",
     "A family moves to a new city for a parent's job",
-    "A child invents a game with a cardboard box"
+    "A child invents a game with an old cardboard box"
    ],
    "why": "The nurse speaks out publicly about something she sees as wrong, which is a form of protest. The other pieces are about sport, moving and play, so they fit other frameworks. A sports story may involve rivalry, but winning a trophy is not speaking out against anything.",
    "clue": "Which character is pushing back against something?"
@@ -221,5 +222,34 @@
    "clue": "Think about what came just before the shift."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-11-25T20:02:06Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "A nurse writes to the paper about unsafe hospital wards",
+     "A boy wins a trophy at his school sports carnival",
+     "A family moves to a new city for a parent's job",
+     "A child invents a game with a cardboard box"
+    ]
+   }
+  },
+  "check": {
+   "eng-writing-about-protesta": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   }
+  }
+ }
 }

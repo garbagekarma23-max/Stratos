@@ -11,7 +11,8 @@
   "2026-10-27T01:23:01Z check: flagged",
   "2026-10-27T01:29:34Z fix: suggested",
   "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix",
-  "2026-10-29T11:03:06Z rebalance: kept its old options (the new options failed the content check: mod-tet-offensiveb option is 64 characters: A military and political victory for the communists in the South; mod-tet-offensiveb option is 61 characters: A military and political failure for the communists and Hanoi)"
+  "2026-10-29T11:03:06Z rebalance: kept its old options (the new options failed the content check: mod-tet-offensiveb option is 64 characters: A military and political victory for the communists in the South; mod-tet-offensiveb option is 61 characters: A military and political failure for the communists and Hanoi)",
+  "2026-11-25T20:01:34Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 3,
@@ -174,10 +175,10 @@
    "d": 3,
    "q": "Which statement best describes the results of the Tet Offensive?",
    "opts": [
-    "A communist military defeat but a political blow to the US",
-    "A military and political victory for the communists",
+    "A communist military loss but a political blow to the US",
+    "A military and a political victory for the communists",
     "A military victory for the US that lifted support at home",
-    "A military and political failure for the communists"
+    "A military and a political failure for the communists"
    ],
    "why": "The communists lost many fighters and gained no uprising, so the attacks failed militarily. Yet public trust in the US government fell and opposition grew, so the political effect hurt the US. Calling it a failure in every sense ignores this.",
    "clue": "Judge the battlefield result and the effect on American opinion separately."
@@ -185,11 +186,40 @@
  },
  "cleared_by": "recheck",
  "rebalance": {
-  "at": "2026-10-29T11:03:06Z",
-  "result": "kept",
-  "changed": [],
-  "why": [
-   "the new options failed the content check: mod-tet-offensiveb option is 64 characters: A military and political victory for the communists in the South; mod-tet-offensiveb option is 61 characters: A military and political failure for the communists and Hanoi"
-  ]
+  "at": "2026-11-25T20:01:34Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "A communist military defeat but a political blow to the US",
+     "A military and political victory for the communists",
+     "A military victory for the US that lifted support at home",
+     "A military and political failure for the communists"
+    ]
+   }
+  },
+  "check": {
+   "mod-tet-offensiveb": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   }
+  },
+  "before": {
+   "at": "2026-10-29T11:03:06Z",
+   "result": "kept",
+   "changed": [],
+   "why": [
+    "the new options failed the content check: mod-tet-offensiveb option is 64 characters: A military and political victory for the communists in the South; mod-tet-offensiveb option is 61 characters: A military and political failure for the communists and Hanoi"
+   ]
+  }
  }
 }

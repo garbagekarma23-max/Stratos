@@ -15,7 +15,8 @@
   "2026-11-01T13:41:59Z write: done",
   "2026-11-01T13:47:17Z check: flagged",
   "2026-11-01T13:49:26Z fix: suggested",
-  "2026-11-01T14:33:56Z autoreview: cleared with the fix (a other, card wording)"
+  "2026-11-01T14:33:56Z autoreview: cleared with the fix (a other, card wording)",
+  "2026-11-25T20:02:40Z rebalance: new options for question a and b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 3,
@@ -342,9 +343,9 @@
    "q": "Which agreement was made about Germany at Yalta and Potsdam?",
    "opts": [
     "It would be divided into zones run by the Allies",
-    "It would be joined to Poland as one state",
-    "It would be run by the Soviet Union alone",
-    "It would be left free to rule itself at once"
+    "It would be joined to Poland to form one new state",
+    "It would be run by the Soviet Union as one zone",
+    "It would be left free to rule itself straight away"
    ],
    "why": "The Allies agreed to divide Germany into zones, and Berlin was split too. Soviet control of all Germany is wrong, because the Western Allies ran zones as well.",
    "clue": "What did Potsdam confirm from the Yalta plan?"
@@ -353,13 +354,59 @@
    "d": 3,
    "q": "Why did the Yalta and Potsdam conferences add to Cold War distrust?",
    "opts": [
-    "Promised free elections in the east often did not happen",
-    "Germany was left united and armed after the war",
-    "Stalin refused to attend the Potsdam conference",
-    "The Western leaders agreed to give up their zones"
+    "Most eastern states did not get the free elections promised",
+    "Germany was left united and fully armed after the war ended",
+    "Stalin refused to attend the Potsdam conference in July 1945",
+    "The Western leaders agreed to give up most of their zones"
    ],
    "why": "Stalin had promised free elections in Eastern Europe, but Soviet forces stayed and in most countries the elections were not held or were rigged. The West saw this as a broken promise. Stalin did attend Potsdam, so that option is wrong.",
    "clue": "Look at what Stalin promised and what then happened."
+  }
+ },
+ "rebalance": {
+  "at": "2026-11-25T20:02:40Z",
+  "result": "changed",
+  "changed": [
+   "a",
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "It would be divided into zones run by the Allies",
+     "It would be joined to Poland as one state",
+     "It would be run by the Soviet Union alone",
+     "It would be left free to rule itself at once"
+    ]
+   },
+   "b": {
+    "opts": [
+     "Promised free elections in the east often did not happen",
+     "Germany was left united and armed after the war",
+     "Stalin refused to attend the Potsdam conference",
+     "The Western leaders agreed to give up their zones"
+    ]
+   }
+  },
+  "check": {
+   "mod-yalta-potsdama": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   },
+   "mod-yalta-potsdamb": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   }
   }
  }
 }

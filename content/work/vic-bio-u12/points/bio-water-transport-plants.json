@@ -19,7 +19,8 @@
   "2026-11-01T08:14:01Z write: done",
   "2026-11-01T08:24:29Z check: flagged",
   "2026-11-01T08:33:48Z fix: suggested",
-  "2026-11-01T09:24:23Z autoreview: cleared with the fix (b wording)"
+  "2026-11-01T09:24:23Z autoreview: cleared with the fix (b wording)",
+  "2026-11-25T20:01:59Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -163,7 +164,7 @@
   "a": {
    "q": "What mainly causes water to move up the xylem of a tall tree?",
    "opts": [
-    "Evaporation of water from the leaves pulls it upward",
+    "Evaporation from the leaves pulls it upward",
     "Pressure from the roots pushes it up like a pump",
     "The stem muscles squeeze water up the xylem",
     "Gravity draws water up from the soil to the leaves"
@@ -184,5 +185,34 @@
    "clue": "With a weaker pull from the leaves, what happens to the column of water?"
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "rebalance": {
+  "at": "2026-11-25T20:01:59Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "Evaporation of water from the leaves pulls it upward",
+     "Pressure from the roots pushes it up like a pump",
+     "The stem muscles squeeze water up the xylem",
+     "Gravity draws water up from the soil to the leaves"
+    ]
+   }
+  },
+  "check": {
+   "bio-water-transport-plantsa": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   }
+  }
+ }
 }

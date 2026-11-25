@@ -19,7 +19,8 @@
   "2026-11-01T08:14:01Z write: done",
   "2026-11-01T08:24:29Z check: flagged",
   "2026-11-01T08:33:48Z fix: suggested",
-  "2026-11-01T09:32:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-01T09:32:50Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-25T20:02:06Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -217,13 +218,42 @@
    "q": "In a cross of two fruit flies heterozygous for two genes, far fewer offspring than expected show new combinations of traits. What is the best explanation?",
    "opts": [
     "The two genes are close together on one chromosome",
-    "The two genes are on different chromosomes",
-    "Crossing over often occurs between the two genes",
-    "The two genes are far apart on one chromosome"
+    "The two genes are each on a different chromosome",
+    "Crossing over happens often between the two genes",
+    "The two genes are far apart on the same chromosome"
    ],
    "why": "Genes close together on the same chromosome tend to be inherited together, so new combinations are rare. Genes on different chromosomes would sort independently and give 9:3:3:1, with plenty of new combinations. Frequent crossing over, or genes far apart, would also make new combinations more common.",
    "clue": "Which genes tend to stay together as a unit?"
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-11-25T20:02:06Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "The two genes are close together on one chromosome",
+     "The two genes are on different chromosomes",
+     "Crossing over often occurs between the two genes",
+     "The two genes are far apart on one chromosome"
+    ]
+   }
+  },
+  "check": {
+   "bio-dihybrid-crosses-linked-genesb": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   }
+  }
+ }
 }

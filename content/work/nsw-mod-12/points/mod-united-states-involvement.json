@@ -10,7 +10,8 @@
   "2026-10-27T01:08:37Z check: flagged",
   "2026-10-27T01:23:02Z fix: suggested",
   "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix",
-  "2026-10-29T11:03:06Z rebalance: kept its old options (the new options failed the content check: mod-united-states-involvementa option is 63 characters: It was attacked by North Vietnamese boats in the Gulf of Tonkin)"
+  "2026-10-29T11:03:06Z rebalance: kept its old options (the new options failed the content check: mod-united-states-involvementa option is 63 characters: It was attacked by North Vietnamese boats in the Gulf of Tonkin)",
+  "2026-11-25T20:01:34Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -170,7 +171,7 @@
   "a": {
    "q": "Why did the United States first become involved in Vietnam?",
    "opts": [
-    "It feared communism would spread to neighbouring countries",
+    "It feared communism would spread to nearby countries",
     "It wanted to gain a new colony in Southeast Asia",
     "It needed Vietnam's rubber and rice for its own economy",
     "It was attacked by North Vietnamese forces in 1964"
@@ -193,11 +194,40 @@
  },
  "cleared_by": "recheck",
  "rebalance": {
-  "at": "2026-10-29T11:03:06Z",
-  "result": "kept",
-  "changed": [],
-  "why": [
-   "the new options failed the content check: mod-united-states-involvementa option is 63 characters: It was attacked by North Vietnamese boats in the Gulf of Tonkin"
-  ]
+  "at": "2026-11-25T20:01:34Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "It feared communism would spread to neighbouring countries",
+     "It wanted to gain a new colony in Southeast Asia",
+     "It needed Vietnam's rubber and rice for its own economy",
+     "It was attacked by North Vietnamese forces in 1964"
+    ]
+   }
+  },
+  "check": {
+   "mod-united-states-involvementa": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  },
+  "before": {
+   "at": "2026-10-29T11:03:06Z",
+   "result": "kept",
+   "changed": [],
+   "why": [
+    "the new options failed the content check: mod-united-states-involvementa option is 63 characters: It was attacked by North Vietnamese boats in the Gulf of Tonkin"
+   ]
+  }
  }
 }
