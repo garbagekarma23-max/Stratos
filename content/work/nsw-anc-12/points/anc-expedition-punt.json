@@ -7,7 +7,8 @@
   "2026-10-29T12:07:18Z new, write",
   "2026-10-29T12:14:23Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-29T12:22:32Z write: done",
-  "2026-10-29T12:30:15Z check: passed, cleared"
+  "2026-10-29T12:30:15Z check: passed, cleared",
+  "2026-11-25T20:01:02Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -80,10 +81,10 @@
   "a": {
    "q": "What is the main source for the expedition to Punt in Hatshepsut's reign?",
    "opts": [
-    "Reliefs on the walls of her temple at Deir el-Bahri",
+    "Carved reliefs in her temple at Deir el-Bahri",
     "Written orders found in the tomb of Thutmose III",
-    "Gold objects found at the site of Punt itself",
-    "Letters sent by the king of Punt to Egypt"
+    "Gold objects dug up at the site of Punt itself",
+    "Letters sent by the king of Punt to Hatshepsut"
    ],
    "why": "The expedition is shown in carved reliefs at Deir el-Bahri, and the card names them as the record of it. The tomb of Thutmose III is tempting because he ruled with her, but the card gives no link between his tomb and the expedition.",
    "clue": "Think about where Hatshepsut chose to record it."
@@ -101,5 +102,34 @@
    "clue": "Ask what the goods said about the ruler who gained them."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-25T20:01:02Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "Reliefs on the walls of her temple at Deir el-Bahri",
+     "Written orders found in the tomb of Thutmose III",
+     "Gold objects found at the site of Punt itself",
+     "Letters sent by the king of Punt to Egypt"
+    ]
+   }
+  },
+  "check": {
+   "anc-expedition-punta": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   }
+  }
+ }
 }

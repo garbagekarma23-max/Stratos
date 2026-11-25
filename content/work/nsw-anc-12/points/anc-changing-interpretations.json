@@ -9,7 +9,8 @@
   "2026-10-29T12:22:32Z write: done",
   "2026-10-29T12:30:15Z check: flagged",
   "2026-10-29T14:07:05Z fix: suggested",
-  "2026-10-29T16:45:05Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-29T16:45:05Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-25T20:01:02Z rebalance: new options for question a and b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -167,10 +168,10 @@
   "a": {
    "q": "Why can historians' views of Pompeii change over time?",
    "opts": [
-    "New evidence and methods can show old views were incomplete",
-    "Old sources are thrown out once they are a century old",
-    "Each historian's opinion stands without needing evidence",
-    "Historians pick whichever view is most popular"
+    "New finds and methods reveal gaps in earlier views",
+    "Old sources are discarded once they are a century old",
+    "Each historian's opinion stands without any evidence",
+    "Historians switch to whichever view is most popular"
    ],
    "why": "Fresh finds and better tools can show gaps or errors in earlier views. Old sources are not discarded for age alone, and views are tested against evidence, not popularity or opinion.",
    "clue": "What do new digs and tools give historians?"
@@ -179,14 +180,60 @@
    "d": 3,
    "q": "A 2018 inscription suggests the eruption came later in the year than the traditional date. What does this best show about the traditional date?",
    "opts": [
-    "It is open to revision when new evidence appears",
+    "It is open to revision by new evidence",
     "It was invented by Pliny the Younger",
-    "It has been proved to be correct",
-    "It is now useless to historians"
+    "It has been proved correct by the new find",
+    "It no longer has any use for historians"
    ],
    "why": "The inscription is new evidence that conflicts with the older date, so the date is open to revision. It does not make the older date useless, because the source it came from still matters, and nothing here shows it was invented.",
    "clue": "A single new find can challenge an old conclusion."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-11-25T20:01:02Z",
+  "result": "changed",
+  "changed": [
+   "a",
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "New evidence and methods can show old views were incomplete",
+     "Old sources are thrown out once they are a century old",
+     "Each historian's opinion stands without needing evidence",
+     "Historians pick whichever view is most popular"
+    ]
+   },
+   "b": {
+    "opts": [
+     "It is open to revision when new evidence appears",
+     "It was invented by Pliny the Younger",
+     "It has been proved to be correct",
+     "It is now useless to historians"
+    ]
+   }
+  },
+  "check": {
+   "anc-changing-interpretationsa": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   },
+   "anc-changing-interpretationsb": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   }
+  }
+ }
 }
