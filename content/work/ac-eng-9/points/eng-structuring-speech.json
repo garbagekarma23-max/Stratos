@@ -8,7 +8,8 @@
   "2026-11-04T09:23:30Z new, write",
   "2026-11-04T09:36:49Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-04T09:46:58Z write: done",
-  "2026-11-04T09:58:24Z check: passed, cleared"
+  "2026-11-04T09:58:24Z check: passed, cleared",
+  "2026-11-27T00:15:10Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -106,9 +107,9 @@
    "q": "A speaker says, \"I will give you three reasons. First, sleep helps learning.\" What is the speaker doing with the first sentence?",
    "opts": [
     "Signposting the points that will follow",
-    "Developing a point with an example",
-    "Closing with a memorable ending",
-    "Opening with a surprising hook"
+    "Developing a point with a detailed example",
+    "Closing the speech with a memorable ending",
+    "Opening the speech with a surprising hook"
    ],
    "why": "The speaker tells the audience how the speech is organised, which is signposting. It is not development, because no example or explanation backs up a point yet.",
    "clue": "The speaker is telling the audience what is coming."
@@ -126,5 +127,34 @@
    "clue": "A point needs something to back it up."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "Signposting the points that will follow",
+     "Developing a point with an example",
+     "Closing with a memorable ending",
+     "Opening with a surprising hook"
+    ]
+   }
+  },
+  "check": {
+   "eng-structuring-speecha": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   }
+  }
+ }
 }

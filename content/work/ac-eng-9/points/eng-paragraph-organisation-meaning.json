@@ -7,7 +7,8 @@
  "log": [
   "2026-11-04T09:23:30Z new, write",
   "2026-11-04T09:36:50Z write: done",
-  "2026-11-04T09:46:58Z check: passed, cleared"
+  "2026-11-04T09:46:58Z check: passed, cleared",
+  "2026-11-27T00:15:10Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 1,
@@ -103,14 +104,44 @@
    "d": 2,
    "q": "Jin writes a speech about water safety. He opens with a shocking fact about drownings in Queensland. Why might he place it first?",
    "opts": [
-    "To catch attention and set the main concern straight away",
+    "To catch attention and set the main concern at once",
     "To let the audience forget it by the end of the speech",
     "To act as a quiet link between two supporting points",
-    "To leave the audience with a final call to action"
+    "To leave the listeners with a final call to action"
    ],
    "why": "An idea placed first gets attention straight away and can set the main point. Placing it first does not make it a final call to action, because that effect belongs to the end of a text.",
    "clue": "Think about what the audience hears before anything else."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "To catch attention and set the main concern straight away",
+     "To let the audience forget it by the end of the speech",
+     "To act as a quiet link between two supporting points",
+     "To leave the audience with a final call to action"
+    ],
+    "right": "To catch attention and set the main concern straight away"
+   }
+  },
+  "check": {
+   "eng-paragraph-organisation-meaningb": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   }
+  }
+ }
 }

@@ -20,7 +20,8 @@
   "2026-11-12T15:25:56Z check: flagged",
   "2026-11-12T15:35:04Z fix: suggested",
   "2026-11-12T17:07:10Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
-  "2026-11-13T15:14:37Z review: approved with the fix (a spot check)"
+  "2026-11-13T15:14:37Z review: approved with the fix (a spot check)",
+  "2026-11-27T00:15:10Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -216,9 +217,9 @@
    "q": "A news story about a flood quotes only the mayor and a business owner. Residents who lost homes are not quoted. Which implicit value does this most suggest?",
    "opts": [
     "Officials and owners matter more than residents",
-    "Floods are less serious than people think",
-    "Residents should speak only in private",
-    "The reporter dislikes the mayor"
+    "Floods are less serious than residents believe",
+    "Residents should keep their views to themselves",
+    "The reporter personally dislikes the town's mayor"
    ],
    "why": "The story centres two voices and leaves out the residents, which suggests their views count for less. The text never states this, so it is implicit. Nothing in the story suggests the reporter's feelings about the mayor.",
    "clue": "Look at whose voices are included and whose are missing."
@@ -236,5 +237,34 @@
    "clue": "What does the narrator's silence about money suggest?"
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "Officials and owners matter more than residents",
+     "Floods are less serious than people think",
+     "Residents should speak only in private",
+     "The reporter dislikes the mayor"
+    ]
+   }
+  },
+  "check": {
+   "eng-implicit-valuesa": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   }
+  }
+ }
 }

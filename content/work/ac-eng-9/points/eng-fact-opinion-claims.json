@@ -13,7 +13,8 @@
   "2026-11-04T09:23:30Z new, match",
   "2026-11-04T09:36:49Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-04T09:46:58Z write: done",
-  "2026-11-04T09:58:24Z check: passed, cleared"
+  "2026-11-04T09:58:24Z check: passed, cleared",
+  "2026-11-27T00:15:10Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -114,9 +115,9 @@
    "q": "Which statement is an opinion?",
    "opts": [
     "The new park is the best place in town to relax",
-    "The new park opened to the public in March",
-    "The new park has two playgrounds and a pond",
-    "The new park covers about five hectares"
+    "The new park opened to the public in March last year",
+    "The new park has two playgrounds, a pond and a path",
+    "The new park covers about five hectares of land"
    ],
    "why": "Best is a judgement that depends on the speaker's view, so it cannot be proved true or false. The other three can be checked by looking at records or by measuring.",
    "clue": "Which one depends on what a person likes?"
@@ -134,5 +135,34 @@
    "clue": "A confident tone does not prove anything."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "The new park is the best place in town to relax",
+     "The new park opened to the public in March",
+     "The new park has two playgrounds and a pond",
+     "The new park covers about five hectares"
+    ]
+   }
+  },
+  "check": {
+   "eng-fact-opinion-claimsa": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   }
+  }
+ }
 }

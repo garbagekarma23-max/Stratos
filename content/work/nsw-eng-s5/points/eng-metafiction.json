@@ -17,7 +17,8 @@
   "2026-11-20T12:44:54Z write: done (still fails the content check)",
   "2026-11-20T13:11:47Z check: flagged",
   "2026-11-20T13:17:56Z fix: suggested",
-  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-27T00:15:10Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -188,14 +189,44 @@
    "d": 3,
    "q": "In Priya's short story, the narrator pauses to admit that a better writer would give this scene a clearer setting, and tells the reader to imagine one. What is the main effect of this on the reader?",
    "opts": [
-    "It reminds the reader that the story is being made up",
+    "It reminds the reader that the story is made up",
     "It makes the setting feel more real and detailed",
-    "It builds suspense about what happens next",
+    "It builds suspense about what happens in the scene",
     "It shows the narrator is a character in the action"
    ],
    "why": "The narrator comments on how the scene is written, so the reader is reminded that this is a made-up text. The comment gives no setting details, so it does not make the scene feel more real. It also says nothing about future events, so it does not build suspense.",
    "clue": "Look at what the narrator is talking about: the events, or the writing?"
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "It reminds the reader that the story is being made up",
+     "It makes the setting feel more real and detailed",
+     "It builds suspense about what happens next",
+     "It shows the narrator is a character in the action"
+    ],
+    "right": "It reminds the reader that the story is being made up"
+   }
+  },
+  "check": {
+   "eng-metafictionb": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  }
+ }
 }

@@ -30,7 +30,8 @@
   "2026-11-12T12:44:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-12T15:15:36Z write: failed the content check, writing again",
   "2026-11-12T15:25:57Z write: done",
-  "2026-11-12T15:35:03Z check: passed, cleared"
+  "2026-11-12T15:35:03Z check: passed, cleared",
+  "2026-11-27T00:15:10Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -143,8 +144,8 @@
    "d": 3,
    "q": "An essay argues that school uniforms should stay. Its introduction previews three points: cost, safety, then identity. The second body paragraph begins: \"Uniforms also protect students from danger on excursions.\" Which feature does this opening mainly show?",
    "opts": [
-    "A topic sentence echoing the introduction's second point",
-    "A linking word that contrasts two paragraphs",
+    "A topic sentence that echoes the introduction",
+    "A linking word that contrasts the two paragraphs",
     "An introduction that maps the whole argument",
     "A conclusion that sums up the three points"
    ],
@@ -152,5 +153,35 @@
    "clue": "Match the sentence to the order of points in the introduction."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "A topic sentence echoing the introduction's second point",
+     "A linking word that contrasts two paragraphs",
+     "An introduction that maps the whole argument",
+     "A conclusion that sums up the three points"
+    ],
+    "right": "A topic sentence echoing the introduction's second point"
+   }
+  },
+  "check": {
+   "eng-cohesion-across-extended-essayb": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  }
+ }
 }

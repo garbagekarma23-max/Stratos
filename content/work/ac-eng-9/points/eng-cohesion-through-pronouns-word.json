@@ -8,7 +8,8 @@
   "2026-11-04T09:23:30Z new, write",
   "2026-11-04T09:36:50Z write: failed the content check, writing again",
   "2026-11-04T09:46:58Z write: done",
-  "2026-11-04T09:58:24Z check: passed, cleared"
+  "2026-11-04T09:58:24Z check: passed, cleared",
+  "2026-11-27T00:15:10Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -106,13 +107,42 @@
    "q": "A paragraph uses the words coach, training, drills, laps and team. What is this an example of?",
    "opts": [
     "A word chain that keeps the text on one topic",
-    "A pronoun that refers back to a noun",
-    "A pronoun that sets up a new topic",
-    "A word chain that shifts topic each sentence"
+    "A pronoun that refers back to a noun named earlier",
+    "A pronoun that sets up a new topic for the reader",
+    "A word chain that shifts to a new topic each sentence"
    ],
    "why": "The words are all related to sport training, so they form a word chain that holds the topic together. None of them is a pronoun, because none stands in for an earlier noun.",
    "clue": "The words are all related in meaning."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "A word chain that keeps the text on one topic",
+     "A pronoun that refers back to a noun",
+     "A pronoun that sets up a new topic",
+     "A word chain that shifts topic each sentence"
+    ]
+   }
+  },
+  "check": {
+   "eng-cohesion-through-pronouns-wordb": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   }
+  }
+ }
 }

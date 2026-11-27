@@ -29,7 +29,8 @@
   "2026-11-12T12:22:33Z new, match",
   "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-20T12:25:44Z write: done",
-  "2026-11-20T12:35:46Z check: passed, cleared"
+  "2026-11-20T12:35:46Z check: passed, cleared",
+  "2026-11-27T00:15:10Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -123,7 +124,7 @@
    "d": 3,
    "q": "Nina writes a fire safety leaflet for Year 7 students. It uses short sentences, simple words and numbered steps. What is the main effect of this style on readers?",
    "opts": [
-    "It makes the instructions clear and easy to follow quickly",
+    "It makes the steps clear and easy to follow",
     "It makes readers feel a dreamy, reflective mood",
     "It makes readers angry about unsafe behaviour",
     "It makes the leaflet sound like a personal diary"
@@ -132,5 +133,35 @@
    "clue": "Think about what the leaflet needs readers to do in a hurry."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "It makes the instructions clear and easy to follow quickly",
+     "It makes readers feel a dreamy, reflective mood",
+     "It makes readers angry about unsafe behaviour",
+     "It makes the leaflet sound like a personal diary"
+    ],
+    "right": "It makes the instructions clear and easy to follow quickly"
+   }
+  },
+  "check": {
+   "eng-style-purposeb": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  }
+ }
 }

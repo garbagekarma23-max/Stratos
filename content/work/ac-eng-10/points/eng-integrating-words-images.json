@@ -18,7 +18,8 @@
   "2026-11-04T09:36:48Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-04T09:46:55Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-04T09:58:22Z write: done",
-  "2026-11-04T10:07:58Z check: passed, cleared"
+  "2026-11-04T10:07:58Z check: passed, cleared",
+  "2026-11-27T00:15:10Z rebalance: new options for question a and b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -115,8 +116,8 @@
    "opts": [
     "Makes the words clearer by showing the parts described",
     "Adds a new idea that the paragraph does not mention",
-    "Replaces the paragraph so the words are not needed",
-    "Gives the reader an opinion about wind power"
+    "Replaces the paragraph so the words are no longer needed",
+    "Gives the reader the writer's opinion about wind power"
    ],
    "why": "The diagram shows the parts the paragraph describes, so it explains the words. It does not add a new idea or replace the paragraph, because the two work together.",
    "clue": "Does the diagram show the same thing as the words or something new?"
@@ -125,14 +126,61 @@
    "d": 3,
    "q": "In a picture book, the words say Priya waved goodbye with a smile. The picture shows her tightly gripping her bag, with her eyes lowered. What do the words and image do together?",
    "opts": [
-    "The image extends the words by hinting she feels nervous",
-    "The image explains the words by showing her smile",
-    "The image repeats the words so nothing new is added",
-    "The image is unrelated to the words on the page"
+    "The image extends the words by hinting she is nervous",
+    "The image explains the words by showing her happy smile",
+    "The image repeats the words, so no new meaning is added",
+    "The image is unrelated to the words written on the page"
    ],
    "why": "The image shows something the words do not say, that Priya may be nervous. That extends the meaning. It does not simply explain the words, because the picture adds a different feeling from the smile.",
    "clue": "Does the picture say the same thing as the words, or more?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a",
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "Makes the words clearer by showing the parts described",
+     "Adds a new idea that the paragraph does not mention",
+     "Replaces the paragraph so the words are not needed",
+     "Gives the reader an opinion about wind power"
+    ]
+   },
+   "b": {
+    "opts": [
+     "The image extends the words by hinting she feels nervous",
+     "The image explains the words by showing her smile",
+     "The image repeats the words so nothing new is added",
+     "The image is unrelated to the words on the page"
+    ],
+    "right": "The image extends the words by hinting she feels nervous"
+   }
+  },
+  "check": {
+   "eng-integrating-words-imagesa": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   },
+   "eng-integrating-words-imagesb": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  }
+ }
 }

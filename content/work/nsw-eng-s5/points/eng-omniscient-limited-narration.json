@@ -22,7 +22,8 @@
   "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-20T12:35:47Z write: done",
-  "2026-11-20T12:44:53Z check: passed, cleared"
+  "2026-11-20T12:44:53Z check: passed, cleared",
+  "2026-11-27T00:15:10Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -135,14 +136,44 @@
    "d": 3,
    "q": "In a story, the narrator says: Leila wondered if the interview had gone badly. Her interviewer, Mr Ortiz, was already thinking about lunch. What kind of narration is this?",
    "opts": [
-    "Omniscient, because it gives two characters' thoughts",
-    "Limited, because it names only one character",
-    "Omniscient, because it uses the third person",
-    "Limited, because it describes Leila's feelings"
+    "Omniscient, because it gives two people's thoughts",
+    "Limited, because it names just a single character",
+    "Omniscient, because it is told in the third person",
+    "Limited, because it begins with Leila's feelings"
    ],
    "why": "The narrator reports both Leila's thoughts and Mr Ortiz's thoughts, so it moves between minds. That is omniscient. Limited narration would stay with Leila and show Mr Ortiz only from outside. The third person alone does not make narration omniscient.",
    "clue": "Count whose thoughts the narrator reveals."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "Omniscient, because it gives two characters' thoughts",
+     "Limited, because it names only one character",
+     "Omniscient, because it uses the third person",
+     "Limited, because it describes Leila's feelings"
+    ],
+    "right": "Omniscient, because it gives two characters' thoughts"
+   }
+  },
+  "check": {
+   "eng-omniscient-limited-narrationb": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   }
+  }
+ }
 }

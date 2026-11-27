@@ -26,7 +26,8 @@
   "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-20T12:25:44Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-20T12:35:48Z write: done",
-  "2026-11-20T12:44:53Z check: passed, cleared"
+  "2026-11-20T12:44:53Z check: passed, cleared",
+  "2026-11-27T00:15:10Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -109,10 +110,10 @@
   "a": {
    "q": "Which action is an example of reflecting on your own style?",
    "opts": [
-    "Noticing that most of your stories open with dialogue",
-    "Fixing the spelling mistakes in a finished draft",
-    "Asking a friend to choose a topic for you",
-    "Copying a published author's first paragraph"
+    "Noticing that your stories keep opening with dialogue",
+    "Fixing the spelling mistakes in your finished draft",
+    "Asking a friend to choose the topic for your next story",
+    "Copying the opening paragraph of a published story"
    ],
    "why": "Reflecting on style means noticing the choices you repeat as a writer. Spotting that your stories often open with dialogue does this. Fixing spelling is editing a single draft, not noticing a pattern in your choices.",
    "clue": "Which one is about a pattern in your own choices?"
@@ -130,5 +131,35 @@
    "clue": "The last step on the card is about trying something new."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "Noticing that most of your stories open with dialogue",
+     "Fixing the spelling mistakes in a finished draft",
+     "Asking a friend to choose a topic for you",
+     "Copying a published author's first paragraph"
+    ],
+    "right": "Noticing that most of your stories open with dialogue"
+   }
+  },
+  "check": {
+   "eng-reflecting-your-own-stylea": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   }
+  }
+ }
 }

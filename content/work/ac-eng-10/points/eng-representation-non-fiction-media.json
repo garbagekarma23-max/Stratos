@@ -7,7 +7,8 @@
  "log": [
   "2026-11-04T09:23:27Z new, write",
   "2026-11-04T09:36:48Z write: done",
-  "2026-11-04T09:46:56Z check: passed, cleared"
+  "2026-11-04T09:46:56Z check: passed, cleared",
+  "2026-11-27T00:15:10Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 1,
@@ -104,13 +105,42 @@
    "q": "Two reports cover the same school fun run. One is headed 'Hundreds of students cheer on runners'. The other is headed 'Fun run closes main street for hours'. What best explains the difference?",
    "opts": [
     "Each frames the event to suit its own angle and audience",
-    "One report is fiction and the other is non-fiction",
-    "One report has invented facts about the fun run",
-    "Only one report is allowed to choose its details"
+    "One report is fiction and the other report is non-fiction",
+    "One report has made up facts about what happened at the run",
+    "One report chose its details and the other just listed facts"
    ],
    "why": "Both headlines can be true, but each frames the same event differently. One stresses community spirit, the other stresses disruption, which suits different audiences. Having different angles does not mean either report is made up.",
    "clue": "Both headlines could be true at the same time."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "Each frames the event to suit its own angle and audience",
+     "One report is fiction and the other is non-fiction",
+     "One report has invented facts about the fun run",
+     "Only one report is allowed to choose its details"
+    ]
+   }
+  },
+  "check": {
+   "eng-representation-non-fiction-mediab": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   }
+  }
+ }
 }

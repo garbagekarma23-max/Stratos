@@ -7,7 +7,8 @@
  "log": [
   "2026-11-12T12:22:45Z new, write",
   "2026-11-12T15:05:55Z write: done",
-  "2026-11-12T15:15:35Z check: passed, cleared"
+  "2026-11-12T15:15:35Z check: passed, cleared",
+  "2026-11-27T00:15:10Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 1,
@@ -91,14 +92,44 @@
    "d": 3,
    "q": "A short story shows Tom, a ferry captain, who can save a few passengers quickly or search longer for many, at the risk of losing all. What is the best way for a reader to respond?",
    "opts": [
-    "Weigh the values at stake and use evidence from the text",
-    "Decide which choice is right and ignore the other",
-    "Treat Tom as a villain because someone is harmed",
-    "Assume the writer wants readers to feel no doubt"
+    "Weigh the values at stake using evidence from the text",
+    "Decide which choice is right and ignore the other one",
+    "Treat Tom as a villain because some passengers are harmed",
+    "Assume the writer wants readers to feel sure of the answer"
    ],
    "why": "A dilemma invites readers to weigh competing values, such as mercy and duty, using evidence from the text. Declaring Tom good or bad skips the weighing, which is the tempting mistake because harm occurs either way.",
    "clue": "No easy right answer means the reasoning matters most."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "Weigh the values at stake and use evidence from the text",
+     "Decide which choice is right and ignore the other",
+     "Treat Tom as a villain because someone is harmed",
+     "Assume the writer wants readers to feel no doubt"
+    ],
+    "right": "Weigh the values at stake and use evidence from the text"
+   }
+  },
+  "check": {
+   "eng-ethical-dilemmas-literatureb": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   }
+  }
+ }
 }

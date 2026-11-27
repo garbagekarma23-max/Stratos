@@ -9,7 +9,8 @@
   "2026-11-04T09:36:50Z write: done",
   "2026-11-04T09:46:58Z check: flagged",
   "2026-11-04T09:58:24Z fix: suggested",
-  "2026-11-05T06:13:02Z review: approved with the fix"
+  "2026-11-05T06:13:02Z review: approved with the fix",
+  "2026-11-27T00:15:10Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 1,
@@ -143,14 +144,44 @@
    "d": 3,
    "q": "An old novel by a visiting settler showed Aboriginal people only as silent figures in the background. Today, Leah, a First Nations author, writes a novel in which an Aboriginal family from that region tells its own story. What is Leah's novel doing?",
    "opts": [
-    "Challenging an outsider's portrayal with an insider's view",
-    "Repeating the older portrayal in a more modern style",
-    "Giving an outsider's view of a community she visited",
+    "Challenging an outside portrayal with an insider's view",
+    "Repeating the settler's older portrayal in a modern style",
+    "Giving an outsider's view of a community she once visited",
     "Moving the story from that region to an invented place"
    ],
    "why": "The family tells its own story, so Leah offers an insider's view that answers the settler's one-sided picture. It is not an outsider's view, because the voice comes from the community itself.",
    "clue": "Compare who speaks in each novel."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "Challenging an outsider's portrayal with an insider's view",
+     "Repeating the older portrayal in a more modern style",
+     "Giving an outsider's view of a community she visited",
+     "Moving the story from that region to an invented place"
+    ],
+    "right": "Challenging an outsider's portrayal with an insider's view"
+   }
+  },
+  "check": {
+   "eng-representation-first-nations-australianb": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   }
+  }
+ }
 }

@@ -7,7 +7,8 @@
  "log": [
   "2026-11-12T12:22:45Z new, write",
   "2026-11-12T15:05:55Z write: done",
-  "2026-11-12T15:15:35Z check: passed, cleared"
+  "2026-11-12T15:15:35Z check: passed, cleared",
+  "2026-11-27T00:15:10Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 1,
@@ -104,9 +105,9 @@
    "q": "Which statement best describes satire?",
    "opts": [
     "It uses irony and humour to criticise people or society",
-    "It uses humour only to make readers laugh",
-    "It states a writer's opinion in plain, serious words",
-    "It describes events that turn out as expected"
+    "It uses humour to entertain readers, with no wider target",
+    "It gives a writer's view of society in plain, serious words",
+    "It describes events in a story that turn out as expected"
    ],
    "why": "Satire uses irony and humour for a purpose: to criticise. Humour alone is not enough, because a text that only entertains is not satire.",
    "clue": "Satire has a target, not just a joke."
@@ -124,5 +125,34 @@
    "clue": "Do the words match what the writer really thinks?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "It uses irony and humour to criticise people or society",
+     "It uses humour only to make readers laugh",
+     "It states a writer's opinion in plain, serious words",
+     "It describes events that turn out as expected"
+    ]
+   }
+  },
+  "check": {
+   "eng-irony-satirea": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  }
+ }
 }

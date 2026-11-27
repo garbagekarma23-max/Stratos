@@ -22,7 +22,8 @@
   "2026-11-20T12:15:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-20T12:35:47Z write: done",
-  "2026-11-20T12:44:54Z check: passed, cleared"
+  "2026-11-20T12:44:54Z check: passed, cleared",
+  "2026-11-27T00:15:10Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -105,10 +106,10 @@
   "a": {
    "q": "Why is authority in a social media feed shared between the maker and the audience?",
    "opts": [
-    "Users' actions and algorithms help shape what is shown",
-    "The maker has no part in what the feed contains",
-    "Every user is shown exactly the same posts in order",
-    "Users can only read the feed and cannot change it"
+    "Users' actions and algorithms both help shape the feed",
+    "Users decide the whole feed while the maker stands aside",
+    "Each user is shown the same posts in the same order",
+    "Users read the feed but their actions do not change it"
    ],
    "why": "A feed responds to what users post, like and share, and algorithms use that to choose what appears. The maker still builds the platform and its rules, so the maker does not lose all control. That is why the authority is shared.",
    "clue": "Think about who and what decides which posts appear."
@@ -126,5 +127,35 @@
    "clue": "What do the app's rules do with what a user has watched?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "Users' actions and algorithms help shape what is shown",
+     "The maker has no part in what the feed contains",
+     "Every user is shown exactly the same posts in order",
+     "Users can only read the feed and cannot change it"
+    ],
+    "right": "Users' actions and algorithms help shape what is shown"
+   }
+  },
+  "check": {
+   "eng-authority-interactive-textsa": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   }
+  }
+ }
 }

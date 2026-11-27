@@ -7,7 +7,8 @@
  "log": [
   "2026-11-04T09:23:30Z new, write",
   "2026-11-04T09:36:50Z write: done",
-  "2026-11-04T09:46:58Z check: passed, cleared"
+  "2026-11-04T09:46:58Z check: passed, cleared",
+  "2026-11-27T00:15:10Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 1,
@@ -92,9 +93,9 @@
    "q": "Which sentence judges a new bus timetable indirectly?",
    "opts": [
     "The timetable is a maze that leaves commuters lost",
-    "The timetable is poor and should be scrapped",
-    "The timetable is a terrible idea",
-    "The timetable is clearly the worst one yet"
+    "The timetable is poor and should be scrapped at once",
+    "The timetable is a terrible idea for busy commuters",
+    "The timetable is clearly the worst one we have had"
    ],
    "why": "The comparison to a maze hints that the timetable is confusing without calling it bad. The other three state the judgement openly with words such as poor, terrible and worst.",
    "clue": "Which one hints rather than says?"
@@ -112,5 +113,34 @@
    "clue": "Does the reader have to work out the view?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "The timetable is a maze that leaves commuters lost",
+     "The timetable is poor and should be scrapped",
+     "The timetable is a terrible idea",
+     "The timetable is clearly the worst one yet"
+    ]
+   }
+  },
+  "check": {
+   "eng-direct-indirect-evaluationa": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   }
+  }
+ }
 }

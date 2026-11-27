@@ -37,7 +37,8 @@
   "2026-11-13T06:06:33Z autoreject: rejected, to be written again (card other)",
   "2026-11-13T09:32:51Z claude-code write: done, waiting for the Claude Code check",
   "2026-11-13T10:40:35Z claude-code check: answered by a separate subagent",
-  "2026-11-13T10:40:35Z check: passed, cleared"
+  "2026-11-13T10:40:35Z check: passed, cleared",
+  "2026-11-27T00:15:10Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -351,9 +352,9 @@
    "q": "Two poems describe the same storm. One uses long, rolling sentences and calls it a \"magnificent roar\". The other uses short, clipped sentences and calls it a \"nuisance\". What does comparing them show?",
    "opts": [
     "Different language choices create different feelings",
-    "Both poems give the reader the same feelings",
-    "Longer sentences make a poem better written",
-    "The storm itself changes between the two poems"
+    "Both poems leave the reader with the same feelings",
+    "Longer, rolling sentences make a poem better written",
+    "The storm itself is different in each of the two poems"
    ],
    "why": "The subject is the same, but the word choices and sentence lengths differ, so one voice feels awed and the other feels annoyed. The option about better writing is wrong because comparing voice is about effect, not quality.",
    "clue": "Keep the subject fixed and ask what changed."
@@ -371,5 +372,34 @@
    "clue": "Look at what each narrator admits to feeling, and how."
   }
  },
- "checked_by": "claude-code"
+ "checked_by": "claude-code",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "Different language choices create different feelings",
+     "Both poems give the reader the same feelings",
+     "Longer sentences make a poem better written",
+     "The storm itself changes between the two poems"
+    ]
+   }
+  },
+  "check": {
+   "eng-comparing-voice-across-textsa": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   }
+  }
+ }
 }

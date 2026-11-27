@@ -8,7 +8,8 @@
   "2026-11-04T09:23:27Z new, write",
   "2026-11-04T09:36:48Z write: failed the content check, writing again",
   "2026-11-04T09:46:56Z write: done",
-  "2026-11-04T09:58:22Z check: passed, cleared"
+  "2026-11-04T09:58:22Z check: passed, cleared",
+  "2026-11-27T00:15:10Z rebalance: new options for question a and b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -93,9 +94,9 @@
   "a": {
    "q": "Which sentence shows an implicit value about city living?",
    "opts": [
-    "Escaping the noisy, crowded city at last, Tom breathed again",
-    "I believe city life is worse than country life",
-    "City life is worse than country life, and everyone knows it",
+    "Leaving the noisy, crowded city, Tom breathed again",
+    "I strongly believe city life is worse than country life",
+    "City life is worse than country life, and that is a fact",
     "Tom decided that he preferred country life to city life"
    ],
    "why": "The words 'noisy', 'crowded' and 'breathed again' suggest the city is unpleasant without saying so directly. The other options state a preference outright, so those values are explicit.",
@@ -106,13 +107,60 @@
    "q": "An article about a new skate park describes teenagers as 'loitering' and the council as 'responsibly' spending money. What is the implicit attitude?",
    "opts": [
     "Teenagers are a problem and the council is trustworthy",
-    "Skate parks are a waste of public money",
-    "Teenagers and the council are equally to blame",
-    "The writer has no attitude and reports only facts"
+    "Skate parks are a poor use of the town's public money",
+    "Teenagers and the council are both equally to blame",
+    "The writer has no attitude and simply reports the facts"
    ],
    "why": "'Loitering' casts teenagers negatively and 'responsibly' praises the council, so the word choice shows the attitude. The text never says skate parks are a waste, so that is not supported. Neutral-sounding reporting can still carry an attitude.",
    "clue": "Look at the one word used for each group."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a",
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "Escaping the noisy, crowded city at last, Tom breathed again",
+     "I believe city life is worse than country life",
+     "City life is worse than country life, and everyone knows it",
+     "Tom decided that he preferred country life to city life"
+    ],
+    "right": "Escaping the noisy, crowded city at last, Tom breathed again"
+   },
+   "b": {
+    "opts": [
+     "Teenagers are a problem and the council is trustworthy",
+     "Skate parks are a waste of public money",
+     "Teenagers and the council are equally to blame",
+     "The writer has no attitude and reports only facts"
+    ]
+   }
+  },
+  "check": {
+   "eng-implicit-explicit-valuesa": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   },
+   "eng-implicit-explicit-valuesb": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  }
+ }
 }

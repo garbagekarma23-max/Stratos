@@ -9,7 +9,8 @@
   "2026-11-04T09:36:48Z write: done",
   "2026-11-04T09:46:55Z check: flagged",
   "2026-11-04T09:58:22Z fix: suggested",
-  "2026-11-04T18:10:11Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-04T18:10:11Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-27T00:15:10Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 1,
@@ -205,10 +206,10 @@
   "a": {
    "q": "A film shows a teacher lit from below in a dark room, with deep shadows across her face. What is the likely effect?",
    "opts": [
-    "She seems menacing or threatening",
-    "She seems warm and welcoming",
-    "She seems small and powerless",
-    "She seems calm and relaxed"
+    "She seems menacing and threatening",
+    "She seems warm, kind and welcoming",
+    "She seems small, weak and powerless",
+    "She seems calm, relaxed and at ease"
    ],
    "why": "Light from below and deep shadows can make a character seem threatening. Warm and welcoming is wrong because that effect comes from soft, warm light, not dark shadows.",
    "clue": "Think about what shadows and light from below suggest."
@@ -226,5 +227,35 @@
    "clue": "Ask whether the camera looks up at Leo or down on him."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "She seems menacing or threatening",
+     "She seems warm and welcoming",
+     "She seems small and powerless",
+     "She seems calm and relaxed"
+    ],
+    "right": "She seems menacing or threatening"
+   }
+  },
+  "check": {
+   "eng-film-techniques-representationa": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   }
+  }
+ }
 }

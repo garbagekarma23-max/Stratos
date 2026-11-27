@@ -19,7 +19,8 @@
   "2026-11-20T12:25:44Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-20T12:35:47Z write: failed the content check, writing again",
   "2026-11-20T12:44:54Z write: done",
-  "2026-11-20T13:11:47Z check: passed, cleared"
+  "2026-11-20T13:11:47Z check: passed, cleared",
+  "2026-11-27T00:15:10Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -133,14 +134,44 @@
    "d": 3,
    "q": "Ayla rereads her speech about a school canteen. She sees that two paragraphs make the same point and that one claim has no support. What should she do before polishing her word choices?",
    "opts": [
-    "Cut one repeated paragraph and add support for the claim",
-    "Add more adjectives to the repeated paragraphs",
-    "Fix the spelling and then read it aloud once",
-    "Keep both paragraphs so the speech is longer"
+    "Cut one repeated paragraph and support the claim",
+    "Add more adjectives to both repeated paragraphs",
+    "Fix the spelling and then read the speech aloud",
+    "Keep both paragraphs so the whole speech runs longer"
    ],
    "why": "Cutting repeated material and supporting the doubtful claim are revision for a reader, and they come first. Adding adjectives and fixing spelling are polishing, so they come after the bigger problems are fixed.",
    "clue": "Fix what the reader would question or skip before touching the wording."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "Cut one repeated paragraph and add support for the claim",
+     "Add more adjectives to the repeated paragraphs",
+     "Fix the spelling and then read it aloud once",
+     "Keep both paragraphs so the speech is longer"
+    ],
+    "right": "Cut one repeated paragraph and add support for the claim"
+   }
+  },
+  "check": {
+   "eng-revising-readerb": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   }
+  }
+ }
 }

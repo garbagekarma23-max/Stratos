@@ -33,7 +33,8 @@
   "2026-11-20T12:44:53Z check: flagged",
   "2026-11-20T13:11:47Z fix: suggested",
   "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
-  "2026-11-20T14:38:27Z review: approved with the fix (a spot check)"
+  "2026-11-20T14:38:27Z review: approved with the fix (a spot check)",
+  "2026-11-27T00:15:10Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -226,10 +227,10 @@
   "a": {
    "q": "What is the main job of a topic sentence in a body paragraph?",
    "opts": [
-    "To state the paragraph's point and link it to the thesis",
-    "To give a summary of the whole text being studied",
-    "To list every piece of evidence the paragraph will use",
-    "To restate the question in the writer's own words"
+    "To state the paragraph's point and tie it to the thesis",
+    "To give a short summary of the whole text being studied",
+    "To list the pieces of evidence the paragraph will use",
+    "To restate the essay question in the writer's own words"
    ],
    "why": "A topic sentence tells the reader what the paragraph will argue and how it connects to the thesis. A summary or a list of evidence does not do that, and the evidence belongs later in the paragraph.",
    "clue": "What does a reader need to know first about each paragraph?"
@@ -247,5 +248,35 @@
    "clue": "Which sentence picks up a part of the thesis rather than just the topic?"
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "To state the paragraph's point and link it to the thesis",
+     "To give a summary of the whole text being studied",
+     "To list every piece of evidence the paragraph will use",
+     "To restate the question in the writer's own words"
+    ],
+    "right": "To state the paragraph's point and link it to the thesis"
+   }
+  },
+  "check": {
+   "eng-sustaining-argumenta": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   }
+  }
+ }
 }
