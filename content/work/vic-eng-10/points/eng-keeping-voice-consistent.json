@@ -33,7 +33,8 @@
   "2026-11-12T15:35:04Z write: done (still fails the content check)",
   "2026-11-12T15:42:21Z check: flagged",
   "2026-11-12T15:45:41Z fix: suggested",
-  "2026-11-12T17:07:10Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-12T17:07:10Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-27T00:15:10Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -255,9 +256,9 @@
    "q": "What does it mean to sustain a voice in a piece of writing?",
    "opts": [
     "Keep viewpoint, vocabulary and attitude steady throughout",
-    "Use the most advanced vocabulary from start to finish",
-    "Change the speaker's attitude often to hold interest",
-    "Tell every event in the exact order it happened"
+    "Use the most advanced vocabulary possible from start to end",
+    "Shift the speaker's attitude often to keep readers hooked",
+    "Tell events in the exact order they happened, start to end"
    ],
    "why": "A sustained voice keeps viewpoint, vocabulary and attitude steady, so the speaker feels like one real person from start to finish. Advanced words are not the aim: a casual speaker who suddenly uses them would sound like someone else.",
    "clue": "Think of three things that should not change."
@@ -275,5 +276,34 @@
    "clue": "Which of the three parts of her voice does this sentence change?"
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "Keep viewpoint, vocabulary and attitude steady throughout",
+     "Use the most advanced vocabulary from start to finish",
+     "Change the speaker's attitude often to hold interest",
+     "Tell every event in the exact order it happened"
+    ]
+   }
+  },
+  "check": {
+   "eng-keeping-voice-consistenta": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   }
+  }
+ }
 }

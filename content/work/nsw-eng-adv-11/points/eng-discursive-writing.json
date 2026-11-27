@@ -9,7 +9,8 @@
   "2026-10-27T01:00:03Z write: failed the content check, writing again",
   "2026-10-27T01:08:31Z write: done",
   "2026-10-27T01:22:56Z check: passed, cleared",
-  "2026-10-29T11:03:05Z rebalance: kept its old options (the new options failed the content check: eng-discursive-writinga option is 61 characters: It tells a story through characters, setting and a plot twist; eng-discursive-writinga option is 61 characters: It presents facts in a neutral tone and reaches a firm ending)"
+  "2026-10-29T11:03:05Z rebalance: kept its old options (the new options failed the content check: eng-discursive-writinga option is 61 characters: It tells a story through characters, setting and a plot twist; eng-discursive-writinga option is 61 characters: It presents facts in a neutral tone and reaches a firm ending)",
+  "2026-11-27T00:15:10Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 3,
@@ -86,9 +87,9 @@
    "q": "Which description best fits a discursive text?",
    "opts": [
     "It explores an idea from several angles and may stay open",
-    "It argues for one view and dismisses all the others",
-    "It tells a story through characters, setting and plot",
-    "It presents facts in a neutral and impersonal tone"
+    "It argues for one view and usually dismisses the others",
+    "It tells a story through its characters, setting and plot",
+    "It mainly presents facts in a neutral, impersonal tone"
    ],
    "why": "A discursive text thinks through an idea and need not reach a final answer. A text that argues one view is persuasive, which is the most tempting wrong option, because a discursive writer is not trying to win.",
    "clue": "Think about whether the writer is trying to win or to explore."
@@ -108,11 +109,40 @@
  },
  "cleared_by": "checker",
  "rebalance": {
-  "at": "2026-10-29T11:03:05Z",
-  "result": "kept",
-  "changed": [],
-  "why": [
-   "the new options failed the content check: eng-discursive-writinga option is 61 characters: It tells a story through characters, setting and a plot twist; eng-discursive-writinga option is 61 characters: It presents facts in a neutral tone and reaches a firm ending"
-  ]
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "It explores an idea from several angles and may stay open",
+     "It argues for one view and dismisses all the others",
+     "It tells a story through characters, setting and plot",
+     "It presents facts in a neutral and impersonal tone"
+    ]
+   }
+  },
+  "check": {
+   "eng-discursive-writinga": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  },
+  "earlier": {
+   "at": "2026-10-29T11:03:05Z",
+   "result": "kept",
+   "changed": [],
+   "why": [
+    "the new options failed the content check: eng-discursive-writinga option is 61 characters: It tells a story through characters, setting and a plot twist; eng-discursive-writinga option is 61 characters: It presents facts in a neutral tone and reaches a firm ending"
+   ]
+  }
  }
 }

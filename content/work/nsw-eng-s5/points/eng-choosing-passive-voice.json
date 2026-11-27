@@ -28,7 +28,8 @@
   "2026-11-20T12:35:48Z write: done",
   "2026-11-20T12:44:54Z check: flagged",
   "2026-11-20T13:11:47Z fix: suggested",
-  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-27T00:15:10Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -226,14 +227,44 @@
    "d": 3,
    "q": "A council statement reads: \"The footpath was left unrepaired for two years.\" What effect does the passive voice have here?",
    "opts": [
-    "It leaves out who was responsible for the neglect",
-    "It names the council as the one who failed",
-    "It makes the sentence active and direct",
-    "It puts the focus on the person who complained"
+    "It leaves out who was to blame for the neglect",
+    "It names the council as the one that failed to act",
+    "It makes the sentence sound active and more direct",
+    "It puts the focus on the resident who complained"
    ],
    "why": "The doer is left out, so the sentence does not say who failed to repair the path. The option about naming the council is tempting, but the passive here does not name anyone.",
    "clue": "Look for who is named as the doer in the sentence."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "It leaves out who was responsible for the neglect",
+     "It names the council as the one who failed",
+     "It makes the sentence active and direct",
+     "It puts the focus on the person who complained"
+    ],
+    "right": "It leaves out who was responsible for the neglect"
+   }
+  },
+  "check": {
+   "eng-choosing-passive-voiceb": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   }
+  }
+ }
 }

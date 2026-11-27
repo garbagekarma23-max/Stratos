@@ -11,7 +11,8 @@
   "2026-11-04T09:58:22Z check: flagged",
   "2026-11-04T10:07:58Z fix: suggested",
   "2026-11-04T17:58:50Z autoreview: picked as a spot check. It would have been cleared with the fix (a other)",
-  "2026-11-05T06:11:52Z review: approved with the fix (a spot check)"
+  "2026-11-05T06:11:52Z review: approved with the fix (a spot check)",
+  "2026-11-27T00:15:10Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -175,9 +176,9 @@
    "q": "Which phrase is the most precise way to complete this sentence? \"The writer uses ___ to reveal that Tom is brave.\"",
    "opts": [
     "characterisation, through his actions",
-    "a good thing, in his actions",
-    "some stuff, about his actions",
-    "a style, in his actions"
+    "a really good thing, through his actions",
+    "some stuff, about the actions he takes",
+    "a certain style, in the way he acts"
    ],
    "why": "Characterisation is the exact term for how a writer builds a character, and actions are one way of doing it. The other options use vague words such as thing, stuff and style, which name no technique.",
    "clue": "Which option names a technique rather than a vague word?"
@@ -195,5 +196,34 @@
    "clue": "Two opposite things are placed next to each other."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "characterisation, through his actions",
+     "a good thing, in his actions",
+     "some stuff, about his actions",
+     "a style, in his actions"
+    ]
+   }
+  },
+  "check": {
+   "eng-precise-academic-vocabularya": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   }
+  }
+ }
 }

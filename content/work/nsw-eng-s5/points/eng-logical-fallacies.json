@@ -27,7 +27,8 @@
   "2026-11-20T12:25:43Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-20T12:35:48Z write: failed the content check, writing again",
   "2026-11-20T12:44:54Z write: done",
-  "2026-11-20T13:11:47Z check: passed, cleared"
+  "2026-11-20T13:11:47Z check: passed, cleared",
+  "2026-11-27T00:15:10Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -142,13 +143,42 @@
    "q": "A blogger says the council must build a new car park or the town centre will die. No other options are mentioned. Why is this argument weak?",
    "opts": [
     "It ignores other options, such as better buses",
-    "It attacks the people who want a car park",
-    "It predicts a chain of events with no proof",
-    "It uses facts that cannot be checked"
+    "It attacks the people who want to build a car park",
+    "It predicts a chain of events with no proof given",
+    "It uses facts about the town that are hard to check"
    ],
    "why": "The blogger gives only two choices when others could exist, such as better public transport. That is a false choice. The town centre dying is stated as certain, but the weakness is the missing options, not a chain of steps leading to it.",
    "clue": "Count how many options the blogger allows."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "It ignores other options, such as better buses",
+     "It attacks the people who want a car park",
+     "It predicts a chain of events with no proof",
+     "It uses facts that cannot be checked"
+    ]
+   }
+  },
+  "check": {
+   "eng-logical-fallaciesb": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   }
+  }
+ }
 }

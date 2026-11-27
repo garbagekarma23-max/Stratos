@@ -10,7 +10,8 @@
   "2026-10-27T01:08:31Z check: flagged",
   "2026-10-27T01:22:57Z fix: suggested",
   "2026-10-28T08:46:50Z autoreview: cleared with the fix (a other, b other, b wording)",
-  "2026-10-29T11:03:05Z rebalance: kept its old options (the new options failed the content check: eng-writing-thesisa option is 61 characters: Many families face hardship, and this novel shows one of them; eng-writing-thesisb option is 61 characters: In the first stanza the speaker remembers her happy childhood)"
+  "2026-10-29T11:03:05Z rebalance: kept its old options (the new options failed the content check: eng-writing-thesisa option is 61 characters: Many families face hardship, and this novel shows one of them; eng-writing-thesisb option is 61 characters: In the first stanza the speaker remembers her happy childhood)",
+  "2026-11-27T00:15:10Z rebalance: new options for question a and b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -172,11 +173,11 @@
    "q": "Which of these is the strongest thesis for an essay on a novel about a family living through a drought?",
    "opts": [
     "The novel argues that hardship can bind a family together",
-    "The novel is about a family living through a drought",
-    "The novel has a family, a farm and a long drought",
-    "Many families face hardship, and this novel shows one"
+    "The novel is about a family living through a long drought",
+    "The novel has a family, a farm, a dog and a long drought",
+    "Many families can face hardship, and this novel shows one"
    ],
-   "why": "The statement that hardship can bind a family together is an idea about the text that a reader could argue with, so the essay can set out to prove it. The statement that the novel is about a family living through a drought is tempting, but it only names the topic, so there is nothing to argue.",
+   "why": "The statement that hardship can bind a family together is an idea about the text that a reader could argue with, so the essay can set out to prove it. The statement that the novel is about a family living through a long drought is tempting, but it only names the topic, so there is nothing to argue.",
    "clue": "Which one says something a reader could disagree with?"
   },
   "b": {
@@ -184,21 +185,69 @@
    "q": "For the essay question 'How does the poet present memory?', which response is a thesis?",
    "opts": [
     "The poet presents memory as a comfort that is also painful",
-    "The poet presents memory in several different ways",
-    "The poem is about memory and uses many techniques",
+    "The poet presents memory in many different ways throughout",
+    "The poem is about memory and uses many different techniques",
     "In the first stanza the speaker remembers her childhood"
    ],
-   "why": "Presenting memory as a comfort that is also painful answers the question with an arguable idea about how memory is shown. The response that the poet presents memory in several different ways is tempting because it echoes the question, but it takes no position, so there is nothing to prove.",
+   "why": "Presenting memory as a comfort that is also painful answers the question with an arguable idea about how memory is shown. The response that the poet presents memory in many different ways is tempting because it echoes the question, but it takes no position, so there is nothing to prove.",
    "clue": "A thesis takes a position rather than repeating the question."
   }
  },
  "cleared_by": "auto",
  "rebalance": {
-  "at": "2026-10-29T11:03:05Z",
-  "result": "kept",
-  "changed": [],
-  "why": [
-   "the new options failed the content check: eng-writing-thesisa option is 61 characters: Many families face hardship, and this novel shows one of them; eng-writing-thesisb option is 61 characters: In the first stanza the speaker remembers her happy childhood"
-  ]
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a",
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "The novel argues that hardship can bind a family together",
+     "The novel is about a family living through a drought",
+     "The novel has a family, a farm and a long drought",
+     "Many families face hardship, and this novel shows one"
+    ],
+    "why": "The statement that hardship can bind a family together is an idea about the text that a reader could argue with, so the essay can set out to prove it. The statement that the novel is about a family living through a drought is tempting, but it only names the topic, so there is nothing to argue."
+   },
+   "b": {
+    "opts": [
+     "The poet presents memory as a comfort that is also painful",
+     "The poet presents memory in several different ways",
+     "The poem is about memory and uses many techniques",
+     "In the first stanza the speaker remembers her childhood"
+    ],
+    "why": "Presenting memory as a comfort that is also painful answers the question with an arguable idea about how memory is shown. The response that the poet presents memory in several different ways is tempting because it echoes the question, but it takes no position, so there is nothing to prove."
+   }
+  },
+  "check": {
+   "eng-writing-thesisa": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   },
+   "eng-writing-thesisb": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  },
+  "earlier": {
+   "at": "2026-10-29T11:03:05Z",
+   "result": "kept",
+   "changed": [],
+   "why": [
+    "the new options failed the content check: eng-writing-thesisa option is 61 characters: Many families face hardship, and this novel shows one of them; eng-writing-thesisb option is 61 characters: In the first stanza the speaker remembers her happy childhood"
+   ]
+  }
  }
 }

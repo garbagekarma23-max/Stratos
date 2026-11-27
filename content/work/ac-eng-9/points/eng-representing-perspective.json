@@ -9,7 +9,8 @@
   "2026-11-04T09:36:50Z write: done",
   "2026-11-04T09:46:58Z check: flagged",
   "2026-11-04T09:58:24Z fix: suggested",
-  "2026-11-04T18:10:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-04T18:10:12Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-27T00:15:10Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 1,
@@ -218,13 +219,42 @@
    "q": "Two reports describe the same crowd at a footy match. One says \"excited fans\", the other says \"rowdy mob\". What does the difference show?",
    "opts": [
     "Word choice gives each report a different perspective",
-    "The first report is biased but the second is neutral",
-    "Both reports share the same view of the crowd",
-    "The reports differ in whose voices they quote"
+    "The first report is biased, but the second one is neutral",
+    "Both reports share the same view of the crowd at the match",
+    "The reports differ in whose voices they choose to quote"
    ],
    "why": "\"Excited fans\" carries a positive feeling and \"rowdy mob\" a negative one, so word choice gives each report a different perspective on the same crowd. The second report is not neutral: its words carry strong feeling too.",
    "clue": "Does either description sound free of feeling?"
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "Word choice gives each report a different perspective",
+     "The first report is biased but the second is neutral",
+     "Both reports share the same view of the crowd",
+     "The reports differ in whose voices they quote"
+    ]
+   }
+  },
+  "check": {
+   "eng-representing-perspectiveb": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  }
+ }
 }

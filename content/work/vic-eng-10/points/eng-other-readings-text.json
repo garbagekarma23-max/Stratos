@@ -32,7 +32,8 @@
   "2026-11-12T15:25:57Z write: done",
   "2026-11-12T15:35:03Z check: flagged",
   "2026-11-12T15:42:22Z fix: suggested",
-  "2026-11-12T17:07:10Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-12T17:07:10Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-27T00:15:10Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -201,9 +202,9 @@
    "q": "Two students read the same invented story about a headmaster and a new teacher. One writes about who holds authority, the other about the era's attitudes to women. What explains the difference?",
    "opts": [
     "Each student chose a different focus for their reading",
-    "One student has misread what happens in the story",
-    "The text can support only one of these two focuses",
-    "The story means whatever each reader wants it to"
+    "One student has misread the events that happen in the story",
+    "The evidence in the text backs one focus but not the other",
+    "The story can mean whatever each reader wants it to mean"
    ],
    "why": "Readers can choose different focuses, such as power or gender, and each can use evidence from the text. The misreading option is tempting, but a different focus is not an error, and both readings still rest on the story itself.",
    "clue": "Think about what each reader chose to look at."
@@ -221,5 +222,34 @@
    "clue": "Which choice uses the other reading to improve his own?"
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "Each student chose a different focus for their reading",
+     "One student has misread what happens in the story",
+     "The text can support only one of these two focuses",
+     "The story means whatever each reader wants it to"
+    ]
+   }
+  },
+  "check": {
+   "eng-other-readings-texta": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   }
+  }
+ }
 }

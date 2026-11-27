@@ -13,7 +13,8 @@
   "2026-11-04T09:23:27Z new, match",
   "2026-11-04T09:36:48Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-04T09:46:56Z write: done",
-  "2026-11-04T09:58:22Z check: passed, cleared"
+  "2026-11-04T09:58:22Z check: passed, cleared",
+  "2026-11-27T00:15:10Z rebalance: new options for question a and b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -113,10 +114,10 @@
   "a": {
    "q": "Which plan for a comparative essay on how two stories treat loneliness is organised point by point?",
    "opts": [
-    "Each paragraph discusses both stories on one point",
+    "Each paragraph discusses both stories on one idea",
     "One paragraph for each story, then a short ending",
-    "All of story one, then all of story two",
-    "A summary of each story, then the thesis"
+    "The first half on story one, the second half on story two",
+    "A summary of each story in turn, then the thesis"
    ],
    "why": "A point-by-point essay puts both texts into every paragraph, built around one shared point. Discussing one whole text and then the other keeps the texts apart, so the comparison is left until the end.",
    "clue": "Where do both texts appear in the plan?"
@@ -126,13 +127,60 @@
    "q": "In a paragraph on how two poems treat the sea, Sam writes: 'Poem A uses a storm to show danger, whereas Poem B uses calm water to show comfort.' What makes this a comparison?",
    "opts": [
     "It links both poems on one point with a contrast word",
-    "It names a technique used in only one poem",
-    "It describes the plot of each poem in order",
-    "It gives a personal opinion about the sea"
+    "It names a technique that Poem A uses and Poem B does not",
+    "It describes the plot of each poem, one after the other",
+    "It gives Sam's personal opinion about the sea and storms"
    ],
    "why": "Sam places both poems in one sentence on one shared point, the sea, and uses whereas to show the difference. Naming techniques is useful, but the comparison comes from joining the two poems on the same point.",
    "clue": "Look at how the two poems sit in one sentence."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a",
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "Each paragraph discusses both stories on one point",
+     "One paragraph for each story, then a short ending",
+     "All of story one, then all of story two",
+     "A summary of each story, then the thesis"
+    ],
+    "right": "Each paragraph discusses both stories on one point"
+   },
+   "b": {
+    "opts": [
+     "It links both poems on one point with a contrast word",
+     "It names a technique used in only one poem",
+     "It describes the plot of each poem in order",
+     "It gives a personal opinion about the sea"
+    ]
+   }
+  },
+  "check": {
+   "eng-comparative-analytical-writinga": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   },
+   "eng-comparative-analytical-writingb": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  }
+ }
 }

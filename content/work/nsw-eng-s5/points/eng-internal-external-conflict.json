@@ -17,7 +17,8 @@
   "2026-11-20T12:44:54Z write: done (still fails the content check)",
   "2026-11-20T13:11:47Z check: flagged",
   "2026-11-20T13:17:56Z fix: suggested",
-  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-20T13:37:06Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-27T00:15:10Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -211,9 +212,9 @@
   "a": {
    "q": "A character longs to leave her small town but feels guilty about leaving her sick mother. What kind of conflict is this?",
    "opts": [
-    "Internal conflict, as the struggle is within her mind",
-    "External conflict, as it involves her mother",
-    "External conflict, as it involves her town",
+    "Internal conflict, as the struggle is in her mind",
+    "External conflict, as the struggle is with her mother",
+    "External conflict, as the struggle is with her town",
     "Internal conflict, as the setting is a small town"
    ],
    "why": "Her struggle is between a wish and a feeling of guilt, and both are in her own mind. Her mother is part of the situation, but she is not opposing her, so it is not a struggle against another person.",
@@ -232,5 +233,35 @@
    "clue": "Check each struggle on its own: where does it happen?"
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "Internal conflict, as the struggle is within her mind",
+     "External conflict, as it involves her mother",
+     "External conflict, as it involves her town",
+     "Internal conflict, as the setting is a small town"
+    ],
+    "right": "Internal conflict, as the struggle is within her mind"
+   }
+  },
+  "check": {
+   "eng-internal-external-conflicta": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   }
+  }
+ }
 }

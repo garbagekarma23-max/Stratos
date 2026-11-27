@@ -19,7 +19,8 @@
   "2026-11-20T12:25:44Z write: done",
   "2026-11-20T12:35:47Z check: flagged",
   "2026-11-20T12:44:54Z fix: suggested",
-  "2026-11-20T13:23:37Z autoreview: cleared with the fix (remember other)"
+  "2026-11-20T13:23:37Z autoreview: cleared with the fix (remember other)",
+  "2026-11-27T00:15:10Z rebalance: new options for question a and b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -164,9 +165,9 @@
    "q": "Why should an informative text name the source of its facts?",
    "opts": [
     "So readers can check the facts and trust the writer",
-    "So the text can be made longer with more detail",
-    "So the writer can show which opinion is correct",
-    "So the headings can be left out of the text"
+    "So the text can be made longer with more facts in it",
+    "So the writer can show which opinion is the correct one",
+    "So the headings and topic sentences can be left out"
    ],
    "why": "Naming sources lets readers check the information and shows it was gathered honestly. It does not exist to add length or to push an opinion, and headings are a separate way to organise the text.",
    "clue": "Think about what a reader can do once they know the source."
@@ -176,13 +177,59 @@
    "q": "Liam is writing a report on how coral reefs are protected. Which source should he trust most for facts?",
    "opts": [
     "A report from a marine science research institute",
-    "A comment left under a holiday video online",
-    "A post by a friend who once went snorkelling",
-    "An advertisement for a reef tour company"
+    "A comment left under a reef holiday video online",
+    "A blog post by a friend who once went snorkelling",
+    "An advertisement from a company selling reef tours"
    ],
    "why": "A research institute is made up of experts and its work can be checked. The other sources are based on opinion, a single experience or an aim to sell tours, so they are less reliable for facts.",
    "clue": "Which source is written by experts who study the topic?"
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a",
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "So readers can check the facts and trust the writer",
+     "So the text can be made longer with more detail",
+     "So the writer can show which opinion is correct",
+     "So the headings can be left out of the text"
+    ]
+   },
+   "b": {
+    "opts": [
+     "A report from a marine science research institute",
+     "A comment left under a holiday video online",
+     "A post by a friend who once went snorkelling",
+     "An advertisement for a reef tour company"
+    ]
+   }
+  },
+  "check": {
+   "eng-writing-from-researcha": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   },
+   "eng-writing-from-researchb": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   }
+  }
+ }
 }

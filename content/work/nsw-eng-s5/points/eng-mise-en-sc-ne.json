@@ -7,7 +7,8 @@
  "log": [
   "2026-11-12T12:22:33Z new, write",
   "2026-11-20T12:15:15Z write: done",
-  "2026-11-20T12:25:43Z check: passed, cleared"
+  "2026-11-20T12:25:43Z check: passed, cleared",
+  "2026-11-27T00:15:10Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 1,
@@ -91,10 +92,10 @@
   "a": {
    "q": "Which of these is part of a film's mise-en-scène?",
    "opts": [
-    "A character's costume and the props around them",
-    "A score that plays over a chase scene",
+    "A character's costume and the props nearby",
+    "A music score that plays over a chase scene",
     "The speed at which the shots are cut together",
-    "The angle the camera uses to look down"
+    "The high angle the camera uses to look down"
    ],
    "why": "Mise-en-scène is everything placed in the frame, so costume and props belong to it. A score is sound, cutting speed is editing and camera angle is a camera choice. None of these is placed in the frame.",
    "clue": "Think of what you could point to inside the picture."
@@ -112,5 +113,35 @@
    "clue": "Compare harsh shadows with soft light."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "A character's costume and the props around them",
+     "A score that plays over a chase scene",
+     "The speed at which the shots are cut together",
+     "The angle the camera uses to look down"
+    ],
+    "right": "A character's costume and the props around them"
+   }
+  },
+  "check": {
+   "eng-mise-en-sc-nea": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  }
+ }
 }

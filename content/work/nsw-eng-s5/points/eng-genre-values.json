@@ -29,7 +29,8 @@
   "2026-11-20T12:44:54Z check: flagged",
   "2026-11-20T13:11:47Z fix: suggested",
   "2026-11-20T13:37:06Z recheck: kept for you (the fresh check named a sensitive topic)",
-  "2026-11-20T14:34:17Z review: approved with the fix"
+  "2026-11-20T14:34:17Z review: approved with the fix",
+  "2026-11-27T00:15:10Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -204,14 +205,45 @@
    "d": 3,
    "q": "In a series of adventure stories set in a colony, the explorers are always the heroes, and the local people appear only as helpers or threats. What does this convention most likely assume?",
    "opts": [
-    "That the outsiders' view of events is the one that counts",
-    "That local people are the villains of these stories",
-    "That adventure stories work best in faraway places",
-    "That life in the colony was safe and peaceful for all"
+    "That the outsiders' view of events is what counts",
+    "That the local people are the true heroes of these tales",
+    "That adventure stories work best when set far from home",
+    "That life in the colony was mostly safe and peaceful"
    ],
-   "why": "Making the explorers the heroes, with locals as helpers or threats, treats the outsiders' view as the one that counts. The villain option does not fit, because the question says local people also appear as helpers, so they are not simply villains.",
+   "why": "Making the explorers the heroes, with locals as helpers or threats, treats the outsiders' view as the one that counts. The heroes option does not fit, because the question says the explorers are always the heroes, and the local people are only helpers or threats.",
    "clue": "Ask whose point of view the story treats as most important."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "That the outsiders' view of events is the one that counts",
+     "That local people are the villains of these stories",
+     "That adventure stories work best in faraway places",
+     "That life in the colony was safe and peaceful for all"
+    ],
+    "right": "That the outsiders' view of events is the one that counts",
+    "why": "Making the explorers the heroes, with locals as helpers or threats, treats the outsiders' view as the one that counts. The villain option does not fit, because the question says local people also appear as helpers, so they are not simply villains."
+   }
+  },
+  "check": {
+   "eng-genre-valuesb": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  }
+ }
 }

@@ -10,7 +10,8 @@
   "2026-11-04T09:46:58Z write: done (still fails the content check)",
   "2026-11-04T09:58:24Z check: flagged",
   "2026-11-04T10:08:00Z fix: suggested",
-  "2026-11-04T17:58:51Z autoreview: cleared with the fix (the content check)"
+  "2026-11-04T17:58:51Z autoreview: cleared with the fix (the content check)",
+  "2026-11-27T00:15:10Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -163,9 +164,9 @@
    "q": "A student speaker tells her audience, \"You pass this litter daily. You can fix it.\" Which technique is mainly used?",
    "opts": [
     "Direct address, to make listeners feel responsible",
-    "An anecdote, to tell a personal story",
-    "Emotive words, to stir anger in the listeners",
-    "Tone, to sound calm and relaxed to the listeners"
+    "An anecdote, to share a personal story with listeners",
+    "Emotive words, to stir anger and shame in listeners",
+    "Tone, to sound calm and relaxed to the whole audience"
    ],
    "why": "The speaker talks straight to the audience using \"you\", which makes each listener feel responsible. There is no story, so it is not an anecdote.",
    "clue": "Look at the words that speak straight to the audience."
@@ -183,5 +184,34 @@
    "clue": "Ask what kind of technique a short personal story is."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "Direct address, to make listeners feel responsible",
+     "An anecdote, to tell a personal story",
+     "Emotive words, to stir anger in the listeners",
+     "Tone, to sound calm and relaxed to the listeners"
+    ]
+   }
+  },
+  "check": {
+   "eng-speakers-position-listenersa": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   }
+  }
+ }
 }

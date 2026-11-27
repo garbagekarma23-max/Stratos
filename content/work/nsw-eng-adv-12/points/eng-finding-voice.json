@@ -12,7 +12,8 @@
   "2026-10-27T01:29:33Z fix: suggested",
   "2026-10-28T08:46:50Z autoreview: cleared with the fix (b other)",
   "2026-10-29T11:03:05Z rebalance: new wrong options for question a, waiting for the check",
-  "2026-10-29T11:05:38Z rebalance: kept its old options (the check found a problem)"
+  "2026-10-29T11:05:38Z rebalance: kept its old options (the check found a problem)",
+  "2026-11-27T00:15:10Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 3,
@@ -179,10 +180,10 @@
   "a": {
    "q": "Which choice would best help a writer build a distinct voice?",
    "opts": [
-    "Keeping a steady style of diction, rhythm and attitude",
-    "Changing the speaker's style in every paragraph",
-    "Using one very unusual word near the start",
-    "Switching to a new attitude for each new idea"
+    "Keeping diction, rhythm and attitude steady throughout",
+    "Changing the speaker's diction and rhythm each paragraph",
+    "Placing one striking, unusual word in the opening line",
+    "Switching the speaker's attitude with each new idea"
    ],
    "why": "Voice comes from choices repeated across a piece, so consistency lets the reader recognise one speaker. One unusual word is a single choice, so it cannot build a voice on its own.",
    "clue": "Think about what makes a speaker sound like the same person throughout."
@@ -202,78 +203,108 @@
  },
  "cleared_by": "auto",
  "rebalance": {
-  "at": "2026-10-29T11:05:38Z",
-  "result": "kept",
-  "changed": [],
-  "why": [
-   "the check found a problem"
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a"
   ],
-  "tried": {
-   "title": "Finding a voice",
-   "card": [
-    "Voice is the sense of a particular person speaking in a piece of writing. It comes from choices a writer makes again and again, not from one striking line.",
-    [
-     "Diction",
-     "the words chosen. Slang, formal terms or plain words each suggest a different speaker."
-    ],
-    [
-     "Rhythm",
-     "the pattern of sentence length and sound. Short, clipped sentences feel different from long, winding ones."
-    ],
-    [
-     "Attitude",
-     "the speaker's stance towards the subject, such as wry, angry, tender or doubtful. When these choices stay consistent, the voice is distinct, the writing is memorable and a reader is more likely to trust the speaker."
-    ]
-   ],
-   "remember": "A voice is built from repeated choices in diction, rhythm and attitude.",
+  "why": [],
+  "by": "claude-code",
+  "old": {
    "a": {
-    "q": "Which choice would best help a writer build a distinct voice?",
     "opts": [
      "Keeping a steady style of diction, rhythm and attitude",
-     "Changing the diction and rhythm to suit each new paragraph",
-     "Placing one striking and unusual line near the opening scene",
-     "Shifting to a new attitude whenever a new idea comes up now"
+     "Changing the speaker's style in every paragraph",
+     "Using one very unusual word near the start",
+     "Switching to a new attitude for each new idea"
     ],
-    "why": "Voice comes from choices repeated across a piece, so consistency lets the reader recognise one speaker. One unusual word is a single choice, so it cannot build a voice on its own.",
-    "clue": "Think about what makes a speaker sound like the same person throughout."
-   },
-   "b": {
-    "d": 3,
-    "q": "A student's speech opens with three very short sentences in a row, each only a few words long. Which feature of voice does this mainly show?",
-    "opts": [
-     "Rhythm",
-     "Diction",
-     "Attitude",
-     "Audience"
-    ],
-    "why": "Rhythm is the pattern of sentence length and sound, so a run of short sentences shapes the rhythm. Diction is tempting, but it is about which words are chosen, and the question says nothing about the words themselves.",
-    "clue": "Imagine reading the opening aloud and notice what you hear."
+    "right": "Keeping a steady style of diction, rhythm and attitude"
    }
   },
   "check": {
-   "a": {
-    "best": "Keeping a steady style of diction, rhythm and attitude",
-    "also_right": []
-   },
-   "b": {
-    "best": "Rhythm",
-    "also_right": []
-   },
-   "problems": [
-    {
-     "part": "a",
-     "kind": "other",
-     "detail": "Why (a) rejects 'one unusual word', but the option is 'one striking and unusual line'. The explanation does not match the distractor it is meant to address."
-    },
-    {
-     "part": "a",
-     "kind": "wording",
-     "detail": "The option 'Shifting to a new attitude whenever a new idea comes up now' ends with a stray 'now' that makes it read awkwardly."
-    }
+   "eng-finding-voicea": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   }
+  },
+  "earlier": {
+   "at": "2026-10-29T11:05:38Z",
+   "result": "kept",
+   "changed": [],
+   "why": [
+    "the check found a problem"
    ],
-   "sure": "high",
-   "sensitive": "none",
-   "summary": "The card and both answers are sound. Why (a) refers to 'one unusual word' instead of the option's 'one striking line', and one distractor in (a) has a stray 'now'."
+   "tried": {
+    "title": "Finding a voice",
+    "card": [
+     "Voice is the sense of a particular person speaking in a piece of writing. It comes from choices a writer makes again and again, not from one striking line.",
+     [
+      "Diction",
+      "the words chosen. Slang, formal terms or plain words each suggest a different speaker."
+     ],
+     [
+      "Rhythm",
+      "the pattern of sentence length and sound. Short, clipped sentences feel different from long, winding ones."
+     ],
+     [
+      "Attitude",
+      "the speaker's stance towards the subject, such as wry, angry, tender or doubtful. When these choices stay consistent, the voice is distinct, the writing is memorable and a reader is more likely to trust the speaker."
+     ]
+    ],
+    "remember": "A voice is built from repeated choices in diction, rhythm and attitude.",
+    "a": {
+     "q": "Which choice would best help a writer build a distinct voice?",
+     "opts": [
+      "Keeping a steady style of diction, rhythm and attitude",
+      "Changing the diction and rhythm to suit each new paragraph",
+      "Placing one striking and unusual line near the opening scene",
+      "Shifting to a new attitude whenever a new idea comes up now"
+     ],
+     "why": "Voice comes from choices repeated across a piece, so consistency lets the reader recognise one speaker. One unusual word is a single choice, so it cannot build a voice on its own.",
+     "clue": "Think about what makes a speaker sound like the same person throughout."
+    },
+    "b": {
+     "d": 3,
+     "q": "A student's speech opens with three very short sentences in a row, each only a few words long. Which feature of voice does this mainly show?",
+     "opts": [
+      "Rhythm",
+      "Diction",
+      "Attitude",
+      "Audience"
+     ],
+     "why": "Rhythm is the pattern of sentence length and sound, so a run of short sentences shapes the rhythm. Diction is tempting, but it is about which words are chosen, and the question says nothing about the words themselves.",
+     "clue": "Imagine reading the opening aloud and notice what you hear."
+    }
+   },
+   "check": {
+    "a": {
+     "best": "Keeping a steady style of diction, rhythm and attitude",
+     "also_right": []
+    },
+    "b": {
+     "best": "Rhythm",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "a",
+      "kind": "other",
+      "detail": "Why (a) rejects 'one unusual word', but the option is 'one striking and unusual line'. The explanation does not match the distractor it is meant to address."
+     },
+     {
+      "part": "a",
+      "kind": "wording",
+      "detail": "The option 'Shifting to a new attitude whenever a new idea comes up now' ends with a stray 'now' that makes it read awkwardly."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "The card and both answers are sound. Why (a) refers to 'one unusual word' instead of the option's 'one striking line', and one distractor in (a) has a stray 'now'."
+   }
   }
  }
 }

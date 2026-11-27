@@ -23,7 +23,8 @@
   "2026-11-04T09:46:55Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-04T09:58:22Z write: failed the content check, writing again",
   "2026-11-04T10:07:58Z write: done",
-  "2026-11-04T10:10:48Z check: passed, cleared"
+  "2026-11-04T10:10:48Z check: passed, cleared",
+  "2026-11-27T00:15:10Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -108,9 +109,9 @@
    "q": "What should a reader do first when judging how well a text's structure works?",
    "opts": [
     "Identify the purpose the text is trying to achieve",
-    "Count how many paragraphs the text has",
-    "List every technique the writer has used",
-    "Decide whether they agree with the writer"
+    "Count how many paragraphs and sentences the text has",
+    "List each technique the writer has used in the text",
+    "Decide whether they agree with the writer's argument"
    ],
    "why": "A structure can only be judged against what the text is trying to do, so the purpose comes first. Listing techniques is useful later, but it does not show whether they work.",
    "clue": "You need a goal before you can say if it was reached."
@@ -128,5 +129,34 @@
    "clue": "Ask what the last thing the audience hears does for the purpose."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "Identify the purpose the text is trying to achieve",
+     "Count how many paragraphs the text has",
+     "List every technique the writer has used",
+     "Decide whether they agree with the writer"
+    ]
+   }
+  },
+  "check": {
+   "eng-judging-well-structure-worksa": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  }
+ }
 }

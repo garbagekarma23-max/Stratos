@@ -329,9 +329,9 @@ MADE_BANKS.eng = {
       "q": "Which description best fits a discursive text?",
       "opts": [
         "It explores an idea from several angles and may stay open",
-        "It argues for one view and dismisses all the others",
-        "It tells a story through characters, setting and plot",
-        "It presents facts in a neutral and impersonal tone"
+        "It argues for one view and usually dismisses the others",
+        "It tells a story through its characters, setting and plot",
+        "It mainly presents facts in a neutral, impersonal tone"
       ],
       "why": "A discursive text thinks through an idea and need not reach a final answer. A text that argues one view is persuasive, which is the most tempting wrong option, because a discursive writer is not trying to win.",
       "clue": "Think about whether the writer is trying to win or to explore."
@@ -876,10 +876,10 @@ MADE_BANKS.eng = {
       "d": 3,
       "q": "An original tale has a prince rescue a village from a wolf. Mia writes a version where the villagers tame the wolf and the prince is ignored. What does comparing the two versions best show?",
       "opts": [
-        "The original values a lone rescuer, Mia's values community",
-        "The original values kindness, Mia's values bravery",
-        "Both versions value the same things in the same way",
-        "Mia's version is better because it has a new ending"
+        "The original values a lone hero and Mia's values community",
+        "The original values gentle kindness and Mia's values bravery",
+        "Both versions value the same things in exactly the same way",
+        "Mia's version is the better one because it has a new ending"
       ],
       "why": "The original rewards one hero who acts alone. Mia's version removes him and credits the villagers, so the change shows a different value. Comparing versions shows what each one values, not which one is better.",
       "clue": "Look at who solves the problem in each version."
@@ -1317,11 +1317,11 @@ MADE_BANKS.eng = {
       "q": "Which of these is the strongest thesis for an essay on a novel about a family living through a drought?",
       "opts": [
         "The novel argues that hardship can bind a family together",
-        "The novel is about a family living through a drought",
-        "The novel has a family, a farm and a long drought",
-        "Many families face hardship, and this novel shows one"
+        "The novel is about a family living through a long drought",
+        "The novel has a family, a farm, a dog and a long drought",
+        "Many families can face hardship, and this novel shows one"
       ],
-      "why": "The statement that hardship can bind a family together is an idea about the text that a reader could argue with, so the essay can set out to prove it. The statement that the novel is about a family living through a drought is tempting, but it only names the topic, so there is nothing to argue.",
+      "why": "The statement that hardship can bind a family together is an idea about the text that a reader could argue with, so the essay can set out to prove it. The statement that the novel is about a family living through a long drought is tempting, but it only names the topic, so there is nothing to argue.",
       "clue": "Which one says something a reader could disagree with?"
     },
     "b": {
@@ -1329,11 +1329,11 @@ MADE_BANKS.eng = {
       "q": "For the essay question 'How does the poet present memory?', which response is a thesis?",
       "opts": [
         "The poet presents memory as a comfort that is also painful",
-        "The poet presents memory in several different ways",
-        "The poem is about memory and uses many techniques",
+        "The poet presents memory in many different ways throughout",
+        "The poem is about memory and uses many different techniques",
         "In the first stanza the speaker remembers her childhood"
       ],
-      "why": "Presenting memory as a comfort that is also painful answers the question with an arguable idea about how memory is shown. The response that the poet presents memory in several different ways is tempting because it echoes the question, but it takes no position, so there is nothing to prove.",
+      "why": "Presenting memory as a comfort that is also painful answers the question with an arguable idea about how memory is shown. The response that the poet presents memory in many different ways is tempting because it echoes the question, but it takes no position, so there is nothing to prove.",
       "clue": "A thesis takes a position rather than repeating the question."
     }
   },
@@ -1440,9 +1440,9 @@ MADE_BANKS.eng = {
       "q": "A student writes: \"The repeated word 'alone' appears three times in the poem.\" The student's argument is that the speaker feels isolated. What is the main thing missing from this sentence?",
       "opts": [
         "An explanation of what the repetition does for the argument",
-        "The name of the technique, which is repetition",
-        "A longer quotation from the poem to prove the point",
-        "A second technique from the same part of the poem"
+        "The name of the technique that is used, which is repetition",
+        "A longer quotation from the poem as proof for the argument",
+        "A second technique taken from the same part of the poem"
       ],
       "why": "The student has named the technique and given the example, so the sentence only describes. It needs to explain what the repetition makes the reader feel and link that to isolation. A longer quotation is tempting, but more evidence does not replace explanation.",
       "clue": "The sentence says what is there, but not what it does."
@@ -2517,10 +2517,10 @@ MADE_BANKS.eng = {
     "a": {
       "q": "Which choice would best help a writer build a distinct voice?",
       "opts": [
-        "Keeping a steady style of diction, rhythm and attitude",
-        "Changing the speaker's style in every paragraph",
-        "Using one very unusual word near the start",
-        "Switching to a new attitude for each new idea"
+        "Keeping diction, rhythm and attitude steady throughout",
+        "Changing the speaker's diction and rhythm each paragraph",
+        "Placing one striking, unusual word in the opening line",
+        "Switching the speaker's attitude with each new idea"
       ],
       "why": "Voice comes from choices repeated across a piece, so consistency lets the reader recognise one speaker. One unusual word is a single choice, so it cannot build a voice on its own.",
       "clue": "Think about what makes a speaker sound like the same person throughout."
@@ -5009,9 +5009,9 @@ MADE_BANKS.eng = {
       "q": "What should a reader do first when judging how well a text's structure works?",
       "opts": [
         "Identify the purpose the text is trying to achieve",
-        "Count how many paragraphs the text has",
-        "List every technique the writer has used",
-        "Decide whether they agree with the writer"
+        "Count how many paragraphs and sentences the text has",
+        "List each technique the writer has used in the text",
+        "Decide whether they agree with the writer's argument"
       ],
       "why": "A structure can only be judged against what the text is trying to do, so the purpose comes first. Listing techniques is useful later, but it does not show whether they work.",
       "clue": "You need a goal before you can say if it was reached."
@@ -5088,8 +5088,8 @@ MADE_BANKS.eng = {
       "opts": [
         "Makes the words clearer by showing the parts described",
         "Adds a new idea that the paragraph does not mention",
-        "Replaces the paragraph so the words are not needed",
-        "Gives the reader an opinion about wind power"
+        "Replaces the paragraph so the words are no longer needed",
+        "Gives the reader the writer's opinion about wind power"
       ],
       "why": "The diagram shows the parts the paragraph describes, so it explains the words. It does not add a new idea or replace the paragraph, because the two work together.",
       "clue": "Does the diagram show the same thing as the words or something new?"
@@ -5098,10 +5098,10 @@ MADE_BANKS.eng = {
       "d": 3,
       "q": "In a picture book, the words say Priya waved goodbye with a smile. The picture shows her tightly gripping her bag, with her eyes lowered. What do the words and image do together?",
       "opts": [
-        "The image extends the words by hinting she feels nervous",
-        "The image explains the words by showing her smile",
-        "The image repeats the words so nothing new is added",
-        "The image is unrelated to the words on the page"
+        "The image extends the words by hinting she is nervous",
+        "The image explains the words by showing her happy smile",
+        "The image repeats the words, so no new meaning is added",
+        "The image is unrelated to the words written on the page"
       ],
       "why": "The image shows something the words do not say, that Priya may be nervous. That extends the meaning. It does not simply explain the words, because the picture adds a different feeling from the smile.",
       "clue": "Does the picture say the same thing as the words, or more?"
@@ -5128,10 +5128,10 @@ MADE_BANKS.eng = {
     "a": {
       "q": "A film shows a teacher lit from below in a dark room, with deep shadows across her face. What is the likely effect?",
       "opts": [
-        "She seems menacing or threatening",
-        "She seems warm and welcoming",
-        "She seems small and powerless",
-        "She seems calm and relaxed"
+        "She seems menacing and threatening",
+        "She seems warm, kind and welcoming",
+        "She seems small, weak and powerless",
+        "She seems calm, relaxed and at ease"
       ],
       "why": "Light from below and deep shadows can make a character seem threatening. Warm and welcoming is wrong because that effect comes from soft, warm light, not dark shadows.",
       "clue": "Think about what shadows and light from below suggest."
@@ -5276,9 +5276,9 @@ MADE_BANKS.eng = {
       "q": "Which phrase is the most precise way to complete this sentence? \"The writer uses ___ to reveal that Tom is brave.\"",
       "opts": [
         "characterisation, through his actions",
-        "a good thing, in his actions",
-        "some stuff, about his actions",
-        "a style, in his actions"
+        "a really good thing, through his actions",
+        "some stuff, about the actions he takes",
+        "a certain style, in the way he acts"
       ],
       "why": "Characterisation is the exact term for how a writer builds a character, and actions are one way of doing it. The other options use vague words such as thing, stuff and style, which name no technique.",
       "clue": "Which option names a technique rather than a vague word?"
@@ -5541,9 +5541,9 @@ MADE_BANKS.eng = {
       "q": "Which sentence best evaluates the aesthetic qualities of a poem?",
       "opts": [
         "The slow rhythm and soft sounds suit the quiet mood well",
-        "The poem has four stanzas and uses a slow rhythm",
-        "The poet was born in a small country town",
-        "The poem is about a quiet evening by the sea"
+        "The poem has four stanzas and uses a slow, steady rhythm",
+        "The poet grew up in a small country town near the sea",
+        "The poem is about a quiet evening spent walking by the sea"
       ],
       "why": "The sentence about slow rhythm and soft sounds names features, links them to the mood and judges that they suit it. The sentence about stanzas only names features and gives no judgement. It is the most tempting wrong option because it mentions rhythm.",
       "clue": "Look for the option that judges how well features work."
@@ -5663,9 +5663,9 @@ MADE_BANKS.eng = {
       "q": "Two reports cover the same school fun run. One is headed 'Hundreds of students cheer on runners'. The other is headed 'Fun run closes main street for hours'. What best explains the difference?",
       "opts": [
         "Each frames the event to suit its own angle and audience",
-        "One report is fiction and the other is non-fiction",
-        "One report has invented facts about the fun run",
-        "Only one report is allowed to choose its details"
+        "One report is fiction and the other report is non-fiction",
+        "One report has made up facts about what happened at the run",
+        "One report chose its details and the other just listed facts"
       ],
       "why": "Both headlines can be true, but each frames the same event differently. One stresses community spirit, the other stresses disruption, which suits different audiences. Having different angles does not mean either report is made up.",
       "clue": "Both headlines could be true at the same time."
@@ -5728,9 +5728,9 @@ MADE_BANKS.eng = {
     "a": {
       "q": "Which sentence shows an implicit value about city living?",
       "opts": [
-        "Escaping the noisy, crowded city at last, Tom breathed again",
-        "I believe city life is worse than country life",
-        "City life is worse than country life, and everyone knows it",
+        "Leaving the noisy, crowded city, Tom breathed again",
+        "I strongly believe city life is worse than country life",
+        "City life is worse than country life, and that is a fact",
         "Tom decided that he preferred country life to city life"
       ],
       "why": "The words 'noisy', 'crowded' and 'breathed again' suggest the city is unpleasant without saying so directly. The other options state a preference outright, so those values are explicit.",
@@ -5741,9 +5741,9 @@ MADE_BANKS.eng = {
       "q": "An article about a new skate park describes teenagers as 'loitering' and the council as 'responsibly' spending money. What is the implicit attitude?",
       "opts": [
         "Teenagers are a problem and the council is trustworthy",
-        "Skate parks are a waste of public money",
-        "Teenagers and the council are equally to blame",
-        "The writer has no attitude and reports only facts"
+        "Skate parks are a poor use of the town's public money",
+        "Teenagers and the council are both equally to blame",
+        "The writer has no attitude and simply reports the facts"
       ],
       "why": "'Loitering' casts teenagers negatively and 'responsibly' praises the council, so the word choice shows the attitude. The text never says skate parks are a waste, so that is not supported. Neutral-sounding reporting can still carry an attitude.",
       "clue": "Look at the one word used for each group."
@@ -5839,10 +5839,10 @@ MADE_BANKS.eng = {
     "a": {
       "q": "Which plan for a comparative essay on how two stories treat loneliness is organised point by point?",
       "opts": [
-        "Each paragraph discusses both stories on one point",
+        "Each paragraph discusses both stories on one idea",
         "One paragraph for each story, then a short ending",
-        "All of story one, then all of story two",
-        "A summary of each story, then the thesis"
+        "The first half on story one, the second half on story two",
+        "A summary of each story in turn, then the thesis"
       ],
       "why": "A point-by-point essay puts both texts into every paragraph, built around one shared point. Discussing one whole text and then the other keeps the texts apart, so the comparison is left until the end.",
       "clue": "Where do both texts appear in the plan?"
@@ -5852,9 +5852,9 @@ MADE_BANKS.eng = {
       "q": "In a paragraph on how two poems treat the sea, Sam writes: 'Poem A uses a storm to show danger, whereas Poem B uses calm water to show comfort.' What makes this a comparison?",
       "opts": [
         "It links both poems on one point with a contrast word",
-        "It names a technique used in only one poem",
-        "It describes the plot of each poem in order",
-        "It gives a personal opinion about the sea"
+        "It names a technique that Poem A uses and Poem B does not",
+        "It describes the plot of each poem, one after the other",
+        "It gives Sam's personal opinion about the sea and storms"
       ],
       "why": "Sam places both poems in one sentence on one shared point, the sea, and uses whereas to show the difference. Naming techniques is useful, but the comparison comes from joining the two poems on the same point.",
       "clue": "Look at how the two poems sit in one sentence."
@@ -8378,9 +8378,9 @@ MADE_BANKS.eng = {
       "q": "Which sentence judges a new bus timetable indirectly?",
       "opts": [
         "The timetable is a maze that leaves commuters lost",
-        "The timetable is poor and should be scrapped",
-        "The timetable is a terrible idea",
-        "The timetable is clearly the worst one yet"
+        "The timetable is poor and should be scrapped at once",
+        "The timetable is a terrible idea for busy commuters",
+        "The timetable is clearly the worst one we have had"
       ],
       "why": "The comparison to a maze hints that the timetable is confusing without calling it bad. The other three state the judgement openly with words such as poor, terrible and worst.",
       "clue": "Which one hints rather than says?"
@@ -8444,9 +8444,9 @@ MADE_BANKS.eng = {
       "q": "A detective story names the criminal on page one, then spends the book on why the crime happened. How does this subvert the genre?",
       "opts": [
         "It breaks the usual pattern of keeping the culprit hidden",
-        "It follows the mystery pattern of hiding the culprit",
-        "It repeats the same pattern used in a fairy tale",
-        "It turns the story into a genre with no conventions"
+        "It follows the usual mystery pattern of hiding the culprit",
+        "It repeats the same pattern that is used in a fairy tale",
+        "It turns the detective story into another genre altogether"
       ],
       "why": "Readers of detective stories usually expect the culprit to stay hidden until the end. Naming the culprit early breaks that expectation on purpose. It does not follow the pattern, so the option saying it does is wrong.",
       "clue": "What do readers of this genre usually expect about the culprit?"
@@ -8456,8 +8456,8 @@ MADE_BANKS.eng = {
       "q": "Ravi writes a fairy tale in which the princess leaves the castle to start a bakery, and no prince appears. What is the most likely reason for this choice?",
       "opts": [
         "To challenge the usual idea that a princess needs rescuing",
-        "To make the story fit the usual fairy tale pattern",
-        "To show that Ravi did not know the genre's conventions",
+        "To make the story follow the usual pattern of a fairy tale",
+        "To show that Ravi did not know the fairy tale's conventions",
         "To make the story a news report instead of a fairy tale"
       ],
       "why": "Fairy tales often have a princess who is rescued by a prince. Ravi twists this on purpose, which can make readers question that idea. Following the pattern would not be subverting it, so that option is wrong.",
@@ -8523,9 +8523,9 @@ MADE_BANKS.eng = {
       "q": "A paragraph uses the words coach, training, drills, laps and team. What is this an example of?",
       "opts": [
         "A word chain that keeps the text on one topic",
-        "A pronoun that refers back to a noun",
-        "A pronoun that sets up a new topic",
-        "A word chain that shifts topic each sentence"
+        "A pronoun that refers back to a noun named earlier",
+        "A pronoun that sets up a new topic for the reader",
+        "A word chain that shifts to a new topic each sentence"
       ],
       "why": "The words are all related to sport training, so they form a word chain that holds the topic together. None of them is a pronoun, because none stands in for an earlier noun.",
       "clue": "The words are all related in meaning."
@@ -8708,8 +8708,8 @@ MADE_BANKS.eng = {
       "opts": [
         "A version of a person or place built through choices",
         "An exact copy of a person or place as it really is",
-        "A summary of the plot of a story or film",
-        "A list of facts about a person or place"
+        "A short summary of the plot of a story, play or film",
+        "A plain list of the facts about a person or a place"
       ],
       "why": "A representation is a portrayal that the creator builds by choosing what to include and how to show it. It is not an exact copy of reality, because those choices always shape what the audience sees.",
       "clue": "Think about who decides what appears in the text."
@@ -8718,12 +8718,12 @@ MADE_BANKS.eng = {
       "d": 2,
       "q": "A travel blog describes a seaside town with sunny photos, friendly locals and no mention of the empty shops. What does this show?",
       "opts": [
-        "The blogger chose details to portray the town positively",
-        "The blogger has shown the town exactly as it is",
-        "The town has no problems of any kind",
-        "The photos were taken by someone else"
+        "The blogger chose details to show the town positively",
+        "The blogger has shown the town exactly as it really is",
+        "The town is thriving and its shops are doing very well",
+        "The photos were taken by someone other than the blogger"
       ],
-      "why": "The blogger selected some details and left out others, which creates a positive representation. It does not prove the town is perfect, because leaving out the empty shops is also a choice.",
+      "why": "The blogger selected some details and left out others, which creates a positive representation. It does not show the town is thriving, because leaving out the empty shops is also a choice.",
       "clue": "Notice what is included and what is left out."
     }
   },
@@ -8751,9 +8751,9 @@ MADE_BANKS.eng = {
       "d": 3,
       "q": "An old novel by a visiting settler showed Aboriginal people only as silent figures in the background. Today, Leah, a First Nations author, writes a novel in which an Aboriginal family from that region tells its own story. What is Leah's novel doing?",
       "opts": [
-        "Challenging an outsider's portrayal with an insider's view",
-        "Repeating the older portrayal in a more modern style",
-        "Giving an outsider's view of a community she visited",
+        "Challenging an outside portrayal with an insider's view",
+        "Repeating the settler's older portrayal in a modern style",
+        "Giving an outsider's view of a community she once visited",
         "Moving the story from that region to an invented place"
       ],
       "why": "The family tells its own story, so Leah offers an insider's view that answers the settler's one-sided picture. It is not an outsider's view, because the voice comes from the community itself.",
@@ -9089,9 +9089,9 @@ MADE_BANKS.eng = {
       "q": "A student speaker tells her audience, \"You pass this litter daily. You can fix it.\" Which technique is mainly used?",
       "opts": [
         "Direct address, to make listeners feel responsible",
-        "An anecdote, to tell a personal story",
-        "Emotive words, to stir anger in the listeners",
-        "Tone, to sound calm and relaxed to the listeners"
+        "An anecdote, to share a personal story with listeners",
+        "Emotive words, to stir anger and shame in listeners",
+        "Tone, to sound calm and relaxed to the whole audience"
       ],
       "why": "The speaker talks straight to the audience using \"you\", which makes each listener feel responsible. There is no story, so it is not an anecdote.",
       "clue": "Look at the words that speak straight to the audience."
@@ -9143,9 +9143,9 @@ MADE_BANKS.eng = {
       "q": "Two reports describe the same crowd at a footy match. One says \"excited fans\", the other says \"rowdy mob\". What does the difference show?",
       "opts": [
         "Word choice gives each report a different perspective",
-        "The first report is biased but the second is neutral",
-        "Both reports share the same view of the crowd",
-        "The reports differ in whose voices they quote"
+        "The first report is biased, but the second one is neutral",
+        "Both reports share the same view of the crowd at the match",
+        "The reports differ in whose voices they choose to quote"
       ],
       "why": "\"Excited fans\" carries a positive feeling and \"rowdy mob\" a negative one, so word choice gives each report a different perspective on the same crowd. The second report is not neutral: its words carry strong feeling too.",
       "clue": "Does either description sound free of feeling?"
@@ -9181,10 +9181,10 @@ MADE_BANKS.eng = {
       "d": 2,
       "q": "Jin writes a speech about water safety. He opens with a shocking fact about drownings in Queensland. Why might he place it first?",
       "opts": [
-        "To catch attention and set the main concern straight away",
+        "To catch attention and set the main concern at once",
         "To let the audience forget it by the end of the speech",
         "To act as a quiet link between two supporting points",
-        "To leave the audience with a final call to action"
+        "To leave the listeners with a final call to action"
       ],
       "why": "An idea placed first gets attention straight away and can set the main point. Placing it first does not make it a final call to action, because that effect belongs to the end of a text.",
       "clue": "Think about what the audience hears before anything else."
@@ -9208,10 +9208,10 @@ MADE_BANKS.eng = {
     "a": {
       "q": "Which is the best start to a comparison of two texts?",
       "opts": [
-        "Both texts explore loneliness, but they treat it differently",
-        "The first text is longer and has more paragraphs",
-        "The first text is a poem and the second is a story",
-        "Both texts are interesting and well written"
+        "Both texts explore loneliness but treat it differently",
+        "The first text is longer and has many more paragraphs",
+        "The first text is a poem and the second is a short story",
+        "Both texts are interesting, and both are well written"
       ],
       "why": "A comparison starts from a shared idea and then looks at how the treatment is alike and different. Saying the texts are different forms is a point of difference, but it does not name a shared idea.",
       "clue": "Look for the option that names an idea both texts share."
@@ -9220,9 +9220,9 @@ MADE_BANKS.eng = {
       "d": 3,
       "q": "Text A is a news report about a flood, written in a calm, factual tone. Text B is a poem about a flood, written in an emotional tone. Which comparison best explains the difference?",
       "opts": [
-        "The report aims to inform, but the poem aims to stir feeling",
+        "The report aims to inform and the poem to stir feeling",
         "Both texts describe a flood, so they treat it the same way",
-        "The report has more words, so it is the better text",
+        "The report has more words, so it is the better of the two",
         "The poem is about feelings, so it has no real purpose"
       ],
       "why": "A strong comparison explains a difference by linking it to purpose. A report informs, so its tone is factual, while a poem often aims to stir feelings. Saying both describe a flood only names the shared idea and ignores the clear difference in tone.",
@@ -9251,9 +9251,9 @@ MADE_BANKS.eng = {
       "q": "Which statement is an opinion?",
       "opts": [
         "The new park is the best place in town to relax",
-        "The new park opened to the public in March",
-        "The new park has two playgrounds and a pond",
-        "The new park covers about five hectares"
+        "The new park opened to the public in March last year",
+        "The new park has two playgrounds, a pond and a path",
+        "The new park covers about five hectares of land"
       ],
       "why": "Best is a judgement that depends on the speaker's view, so it cannot be proved true or false. The other three can be checked by looking at records or by measuring.",
       "clue": "Which one depends on what a person likes?"
@@ -9362,9 +9362,9 @@ MADE_BANKS.eng = {
       "q": "A speaker says, \"I will give you three reasons. First, sleep helps learning.\" What is the speaker doing with the first sentence?",
       "opts": [
         "Signposting the points that will follow",
-        "Developing a point with an example",
-        "Closing with a memorable ending",
-        "Opening with a surprising hook"
+        "Developing a point with a detailed example",
+        "Closing the speech with a memorable ending",
+        "Opening the speech with a surprising hook"
       ],
       "why": "The speaker tells the audience how the speech is organised, which is signposting. It is not development, because no example or explanation backs up a point yet.",
       "clue": "The speaker is telling the audience what is coming."
@@ -9535,8 +9535,8 @@ MADE_BANKS.eng = {
       "d": 3,
       "q": "An essay argues that school uniforms should stay. Its introduction previews three points: cost, safety, then identity. The second body paragraph begins: \"Uniforms also protect students from danger on excursions.\" Which feature does this opening mainly show?",
       "opts": [
-        "A topic sentence echoing the introduction's second point",
-        "A linking word that contrasts two paragraphs",
+        "A topic sentence that echoes the introduction",
+        "A linking word that contrasts the two paragraphs",
         "An introduction that maps the whole argument",
         "A conclusion that sums up the three points"
       ],
@@ -9852,9 +9852,9 @@ MADE_BANKS.eng = {
       "q": "Two students read the same invented story about a headmaster and a new teacher. One writes about who holds authority, the other about the era's attitudes to women. What explains the difference?",
       "opts": [
         "Each student chose a different focus for their reading",
-        "One student has misread what happens in the story",
-        "The text can support only one of these two focuses",
-        "The story means whatever each reader wants it to"
+        "One student has misread the events that happen in the story",
+        "The evidence in the text backs one focus but not the other",
+        "The story can mean whatever each reader wants it to mean"
       ],
       "why": "Readers can choose different focuses, such as power or gender, and each can use evidence from the text. The misreading option is tempting, but a different focus is not an error, and both readings still rest on the story itself.",
       "clue": "Think about what each reader chose to look at."
@@ -9896,10 +9896,10 @@ MADE_BANKS.eng = {
       "d": 3,
       "q": "A short story shows Tom, a ferry captain, who can save a few passengers quickly or search longer for many, at the risk of losing all. What is the best way for a reader to respond?",
       "opts": [
-        "Weigh the values at stake and use evidence from the text",
-        "Decide which choice is right and ignore the other",
-        "Treat Tom as a villain because someone is harmed",
-        "Assume the writer wants readers to feel no doubt"
+        "Weigh the values at stake using evidence from the text",
+        "Decide which choice is right and ignore the other one",
+        "Treat Tom as a villain because some passengers are harmed",
+        "Assume the writer wants readers to feel sure of the answer"
       ],
       "why": "A dilemma invites readers to weigh competing values, such as mercy and duty, using evidence from the text. Declaring Tom good or bad skips the weighing, which is the tempting mistake because harm occurs either way.",
       "clue": "No easy right answer means the reasoning matters most."
@@ -9960,9 +9960,9 @@ MADE_BANKS.eng = {
       "q": "Two poems describe the same storm. One uses long, rolling sentences and calls it a \"magnificent roar\". The other uses short, clipped sentences and calls it a \"nuisance\". What does comparing them show?",
       "opts": [
         "Different language choices create different feelings",
-        "Both poems give the reader the same feelings",
-        "Longer sentences make a poem better written",
-        "The storm itself changes between the two poems"
+        "Both poems leave the reader with the same feelings",
+        "Longer, rolling sentences make a poem better written",
+        "The storm itself is different in each of the two poems"
       ],
       "why": "The subject is the same, but the word choices and sentence lengths differ, so one voice feels awed and the other feels annoyed. The option about better writing is wrong because comparing voice is about effect, not quality.",
       "clue": "Keep the subject fixed and ask what changed."
@@ -10065,9 +10065,9 @@ MADE_BANKS.eng = {
       "q": "What does it mean to sustain a voice in a piece of writing?",
       "opts": [
         "Keep viewpoint, vocabulary and attitude steady throughout",
-        "Use the most advanced vocabulary from start to finish",
-        "Change the speaker's attitude often to hold interest",
-        "Tell every event in the exact order it happened"
+        "Use the most advanced vocabulary possible from start to end",
+        "Shift the speaker's attitude often to keep readers hooked",
+        "Tell events in the exact order they happened, start to end"
       ],
       "why": "A sustained voice keeps viewpoint, vocabulary and attitude steady, so the speaker feels like one real person from start to finish. Advanced words are not the aim: a casual speaker who suddenly uses them would sound like someone else.",
       "clue": "Think of three things that should not change."
@@ -10326,9 +10326,9 @@ MADE_BANKS.eng = {
       "q": "A news story about a flood quotes only the mayor and a business owner. Residents who lost homes are not quoted. Which implicit value does this most suggest?",
       "opts": [
         "Officials and owners matter more than residents",
-        "Floods are less serious than people think",
-        "Residents should speak only in private",
-        "The reporter dislikes the mayor"
+        "Floods are less serious than residents believe",
+        "Residents should keep their views to themselves",
+        "The reporter personally dislikes the town's mayor"
       ],
       "why": "The story centres two voices and leaves out the residents, which suggests their views count for less. The text never states this, so it is implicit. Nothing in the story suggests the reporter's feelings about the mayor.",
       "clue": "Look at whose voices are included and whose are missing."
@@ -10371,9 +10371,9 @@ MADE_BANKS.eng = {
       "q": "Which statement best describes satire?",
       "opts": [
         "It uses irony and humour to criticise people or society",
-        "It uses humour only to make readers laugh",
-        "It states a writer's opinion in plain, serious words",
-        "It describes events that turn out as expected"
+        "It uses humour to entertain readers, with no wider target",
+        "It gives a writer's view of society in plain, serious words",
+        "It describes events in a story that turn out as expected"
       ],
       "why": "Satire uses irony and humour for a purpose: to criticise. Humour alone is not enough, because a text that only entertains is not satire.",
       "clue": "Satire has a target, not just a joke."
@@ -10461,9 +10461,9 @@ MADE_BANKS.eng = {
       "q": "Liam's conclusion repeats his introduction almost word for word. Which revision best fits the aim of refining?",
       "opts": [
         "Show what his analysis has revealed about the text's ideas",
-        "Add a new quotation to prove his first body paragraph",
-        "Make the conclusion longer by restating each paragraph",
-        "Delete the conclusion so the essay ends on analysis"
+        "Add a new quotation to back up his first body paragraph",
+        "Make the conclusion longer by restating each body paragraph",
+        "Delete the conclusion so the essay ends on its last analysis"
       ],
       "why": "A refined conclusion does more than repeat, so it should show where the argument has arrived. Restating each paragraph is still repetition, and adding a quotation belongs in a body paragraph.",
       "clue": "The conclusion should move beyond what was already said."
@@ -14678,9 +14678,9 @@ MADE_BANKS.eng = {
       "d": 3,
       "q": "In Priya's short story, the narrator pauses to admit that a better writer would give this scene a clearer setting, and tells the reader to imagine one. What is the main effect of this on the reader?",
       "opts": [
-        "It reminds the reader that the story is being made up",
+        "It reminds the reader that the story is made up",
         "It makes the setting feel more real and detailed",
-        "It builds suspense about what happens next",
+        "It builds suspense about what happens in the scene",
         "It shows the narrator is a character in the action"
       ],
       "why": "The narrator comments on how the scene is written, so the reader is reminded that this is a made-up text. The comment gives no setting details, so it does not make the scene feel more real. It also says nothing about future events, so it does not build suspense.",
@@ -14720,10 +14720,10 @@ MADE_BANKS.eng = {
       "d": 3,
       "q": "In a story, the narrator says: Leila wondered if the interview had gone badly. Her interviewer, Mr Ortiz, was already thinking about lunch. What kind of narration is this?",
       "opts": [
-        "Omniscient, because it gives two characters' thoughts",
-        "Limited, because it names only one character",
-        "Omniscient, because it uses the third person",
-        "Limited, because it describes Leila's feelings"
+        "Omniscient, because it gives two people's thoughts",
+        "Limited, because it names just a single character",
+        "Omniscient, because it is told in the third person",
+        "Limited, because it begins with Leila's feelings"
       ],
       "why": "The narrator reports both Leila's thoughts and Mr Ortiz's thoughts, so it moves between minds. That is omniscient. Limited narration would stay with Leila and show Mr Ortiz only from outside. The third person alone does not make narration omniscient.",
       "clue": "Count whose thoughts the narrator reveals."
@@ -14933,9 +14933,9 @@ MADE_BANKS.eng = {
     "a": {
       "q": "A character longs to leave her small town but feels guilty about leaving her sick mother. What kind of conflict is this?",
       "opts": [
-        "Internal conflict, as the struggle is within her mind",
-        "External conflict, as it involves her mother",
-        "External conflict, as it involves her town",
+        "Internal conflict, as the struggle is in her mind",
+        "External conflict, as the struggle is with her mother",
+        "External conflict, as the struggle is with her town",
         "Internal conflict, as the setting is a small town"
       ],
       "why": "Her struggle is between a wish and a feeling of guilt, and both are in her own mind. Her mother is part of the situation, but she is not opposing her, so it is not a struggle against another person.",
@@ -15027,10 +15027,10 @@ MADE_BANKS.eng = {
       "d": 3,
       "q": "In Mia's story, Ravi is seen through his teacher: \"Ravi muttered some excuse about homework, as he always did.\" What does this narration suggest about Ravi?",
       "opts": [
-        "The teacher doubts him, so the reader may doubt him too",
+        "The reader is led to doubt him, as his teacher does",
         "Ravi is honest, because his words are quoted exactly",
-        "Ravi is lying, as the narrator states it outright",
-        "The narrator is neutral, as no opinion is given"
+        "Ravi is lying, because the narrator says so outright",
+        "The narrator is neutral, because no opinion is given"
       ],
       "why": "The words \"some excuse\" and \"as he always did\" show the teacher's doubt, and the reader sees Ravi through it. The option about lying is tempting, but the narration never says so outright: it guides the reader to doubt him indirectly. His words are also summed up, not quoted.",
       "clue": "Is \"some excuse\" a neutral way to report what Ravi said?"
@@ -15143,9 +15143,9 @@ MADE_BANKS.eng = {
       "q": "A blogger says the council must build a new car park or the town centre will die. No other options are mentioned. Why is this argument weak?",
       "opts": [
         "It ignores other options, such as better buses",
-        "It attacks the people who want a car park",
-        "It predicts a chain of events with no proof",
-        "It uses facts that cannot be checked"
+        "It attacks the people who want to build a car park",
+        "It predicts a chain of events with no proof given",
+        "It uses facts about the town that are hard to check"
       ],
       "why": "The blogger gives only two choices when others could exist, such as better public transport. That is a false choice. The town centre dying is stated as certain, but the weakness is the missing options, not a chain of steps leading to it.",
       "clue": "Count how many options the blogger allows."
@@ -15205,10 +15205,10 @@ MADE_BANKS.eng = {
     "a": {
       "q": "Why is authority in a social media feed shared between the maker and the audience?",
       "opts": [
-        "Users' actions and algorithms help shape what is shown",
-        "The maker has no part in what the feed contains",
-        "Every user is shown exactly the same posts in order",
-        "Users can only read the feed and cannot change it"
+        "Users' actions and algorithms both help shape the feed",
+        "Users decide the whole feed while the maker stands aside",
+        "Each user is shown the same posts in the same order",
+        "Users read the feed but their actions do not change it"
       ],
       "why": "A feed responds to what users post, like and share, and algorithms use that to choose what appears. The maker still builds the platform and its rules, so the maker does not lose all control. That is why the authority is shared.",
       "clue": "Think about who and what decides which posts appear."
@@ -15250,7 +15250,7 @@ MADE_BANKS.eng = {
       "d": 3,
       "q": "Nina writes a fire safety leaflet for Year 7 students. It uses short sentences, simple words and numbered steps. What is the main effect of this style on readers?",
       "opts": [
-        "It makes the instructions clear and easy to follow quickly",
+        "It makes the steps clear and easy to follow",
         "It makes readers feel a dreamy, reflective mood",
         "It makes readers angry about unsafe behaviour",
         "It makes the leaflet sound like a personal diary"
@@ -15345,12 +15345,12 @@ MADE_BANKS.eng = {
       "d": 3,
       "q": "In a series of adventure stories set in a colony, the explorers are always the heroes, and the local people appear only as helpers or threats. What does this convention most likely assume?",
       "opts": [
-        "That the outsiders' view of events is the one that counts",
-        "That local people are the villains of these stories",
-        "That adventure stories work best in faraway places",
-        "That life in the colony was safe and peaceful for all"
+        "That the outsiders' view of events is what counts",
+        "That the local people are the true heroes of these tales",
+        "That adventure stories work best when set far from home",
+        "That life in the colony was mostly safe and peaceful"
       ],
-      "why": "Making the explorers the heroes, with locals as helpers or threats, treats the outsiders' view as the one that counts. The villain option does not fit, because the question says local people also appear as helpers, so they are not simply villains.",
+      "why": "Making the explorers the heroes, with locals as helpers or threats, treats the outsiders' view as the one that counts. The heroes option does not fit, because the question says the explorers are always the heroes, and the local people are only helpers or threats.",
       "clue": "Ask whose point of view the story treats as most important."
     }
   },
@@ -15565,10 +15565,10 @@ MADE_BANKS.eng = {
       "d": 3,
       "q": "A council statement reads: \"The footpath was left unrepaired for two years.\" What effect does the passive voice have here?",
       "opts": [
-        "It leaves out who was responsible for the neglect",
-        "It names the council as the one who failed",
-        "It makes the sentence active and direct",
-        "It puts the focus on the person who complained"
+        "It leaves out who was to blame for the neglect",
+        "It names the council as the one that failed to act",
+        "It makes the sentence sound active and more direct",
+        "It puts the focus on the resident who complained"
       ],
       "why": "The doer is left out, so the sentence does not say who failed to repair the path. The option about naming the council is tempting, but the passive here does not name anyone.",
       "clue": "Look for who is named as the doer in the sentence."
@@ -15628,10 +15628,10 @@ MADE_BANKS.eng = {
     "a": {
       "q": "What is the main job of a topic sentence in a body paragraph?",
       "opts": [
-        "To state the paragraph's point and link it to the thesis",
-        "To give a summary of the whole text being studied",
-        "To list every piece of evidence the paragraph will use",
-        "To restate the question in the writer's own words"
+        "To state the paragraph's point and tie it to the thesis",
+        "To give a short summary of the whole text being studied",
+        "To list the pieces of evidence the paragraph will use",
+        "To restate the essay question in the writer's own words"
       ],
       "why": "A topic sentence tells the reader what the paragraph will argue and how it connects to the thesis. A summary or a list of evidence does not do that, and the evidence belongs later in the paragraph.",
       "clue": "What does a reader need to know first about each paragraph?"
@@ -15662,9 +15662,9 @@ MADE_BANKS.eng = {
       "q": "Why should an informative text name the source of its facts?",
       "opts": [
         "So readers can check the facts and trust the writer",
-        "So the text can be made longer with more detail",
-        "So the writer can show which opinion is correct",
-        "So the headings can be left out of the text"
+        "So the text can be made longer with more facts in it",
+        "So the writer can show which opinion is the correct one",
+        "So the headings and topic sentences can be left out"
       ],
       "why": "Naming sources lets readers check the information and shows it was gathered honestly. It does not exist to add length or to push an opinion, and headings are a separate way to organise the text.",
       "clue": "Think about what a reader can do once they know the source."
@@ -15674,9 +15674,9 @@ MADE_BANKS.eng = {
       "q": "Liam is writing a report on how coral reefs are protected. Which source should he trust most for facts?",
       "opts": [
         "A report from a marine science research institute",
-        "A comment left under a holiday video online",
-        "A post by a friend who once went snorkelling",
-        "An advertisement for a reef tour company"
+        "A comment left under a reef holiday video online",
+        "A blog post by a friend who once went snorkelling",
+        "An advertisement from a company selling reef tours"
       ],
       "why": "A research institute is made up of experts and its work can be checked. The other sources are based on opinion, a single experience or an aim to sell tours, so they are less reliable for facts.",
       "clue": "Which source is written by experts who study the topic?"
@@ -15742,10 +15742,10 @@ MADE_BANKS.eng = {
     "a": {
       "q": "Which of these is part of a film's mise-en-scène?",
       "opts": [
-        "A character's costume and the props around them",
-        "A score that plays over a chase scene",
+        "A character's costume and the props nearby",
+        "A music score that plays over a chase scene",
         "The speed at which the shots are cut together",
-        "The angle the camera uses to look down"
+        "The high angle the camera uses to look down"
       ],
       "why": "Mise-en-scène is everything placed in the frame, so costume and props belong to it. A score is sound, cutting speed is editing and camera angle is a camera choice. None of these is placed in the frame.",
       "clue": "Think of what you could point to inside the picture."
@@ -16025,10 +16025,10 @@ MADE_BANKS.eng = {
       "d": 3,
       "q": "Ayla rereads her speech about a school canteen. She sees that two paragraphs make the same point and that one claim has no support. What should she do before polishing her word choices?",
       "opts": [
-        "Cut one repeated paragraph and add support for the claim",
-        "Add more adjectives to the repeated paragraphs",
-        "Fix the spelling and then read it aloud once",
-        "Keep both paragraphs so the speech is longer"
+        "Cut one repeated paragraph and support the claim",
+        "Add more adjectives to both repeated paragraphs",
+        "Fix the spelling and then read the speech aloud",
+        "Keep both paragraphs so the whole speech runs longer"
       ],
       "why": "Cutting repeated material and supporting the doubtful claim are revision for a reader, and they come first. Adding adjectives and fixing spelling are polishing, so they come after the bigger problems are fixed.",
       "clue": "Fix what the reader would question or skip before touching the wording."
@@ -16046,10 +16046,10 @@ MADE_BANKS.eng = {
     "a": {
       "q": "Which action is an example of reflecting on your own style?",
       "opts": [
-        "Noticing that most of your stories open with dialogue",
-        "Fixing the spelling mistakes in a finished draft",
-        "Asking a friend to choose a topic for you",
-        "Copying a published author's first paragraph"
+        "Noticing that your stories keep opening with dialogue",
+        "Fixing the spelling mistakes in your finished draft",
+        "Asking a friend to choose the topic for your next story",
+        "Copying the opening paragraph of a published story"
       ],
       "why": "Reflecting on style means noticing the choices you repeat as a writer. Spotting that your stories often open with dialogue does this. Fixing spelling is editing a single draft, not noticing a pattern in your choices.",
       "clue": "Which one is about a pattern in your own choices?"

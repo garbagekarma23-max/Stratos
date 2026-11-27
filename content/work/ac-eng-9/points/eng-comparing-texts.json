@@ -28,7 +28,8 @@
   "2026-11-04T09:58:24Z write: done",
   "2026-11-04T10:07:59Z check: flagged",
   "2026-11-04T10:10:49Z fix: suggested",
-  "2026-11-04T17:58:51Z autoreview: cleared with the fix (b wording)"
+  "2026-11-04T17:58:51Z autoreview: cleared with the fix (b wording)",
+  "2026-11-27T00:15:10Z rebalance: new options for question a and b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -191,10 +192,10 @@
   "a": {
    "q": "Which is the best start to a comparison of two texts?",
    "opts": [
-    "Both texts explore loneliness, but they treat it differently",
-    "The first text is longer and has more paragraphs",
-    "The first text is a poem and the second is a story",
-    "Both texts are interesting and well written"
+    "Both texts explore loneliness but treat it differently",
+    "The first text is longer and has many more paragraphs",
+    "The first text is a poem and the second is a short story",
+    "Both texts are interesting, and both are well written"
    ],
    "why": "A comparison starts from a shared idea and then looks at how the treatment is alike and different. Saying the texts are different forms is a point of difference, but it does not name a shared idea.",
    "clue": "Look for the option that names an idea both texts share."
@@ -203,14 +204,62 @@
    "d": 3,
    "q": "Text A is a news report about a flood, written in a calm, factual tone. Text B is a poem about a flood, written in an emotional tone. Which comparison best explains the difference?",
    "opts": [
-    "The report aims to inform, but the poem aims to stir feeling",
+    "The report aims to inform and the poem to stir feeling",
     "Both texts describe a flood, so they treat it the same way",
-    "The report has more words, so it is the better text",
+    "The report has more words, so it is the better of the two",
     "The poem is about feelings, so it has no real purpose"
    ],
    "why": "A strong comparison explains a difference by linking it to purpose. A report informs, so its tone is factual, while a poem often aims to stir feelings. Saying both describe a flood only names the shared idea and ignores the clear difference in tone.",
    "clue": "Which option links the tone to what each text is trying to do?"
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a",
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "Both texts explore loneliness, but they treat it differently",
+     "The first text is longer and has more paragraphs",
+     "The first text is a poem and the second is a story",
+     "Both texts are interesting and well written"
+    ],
+    "right": "Both texts explore loneliness, but they treat it differently"
+   },
+   "b": {
+    "opts": [
+     "The report aims to inform, but the poem aims to stir feeling",
+     "Both texts describe a flood, so they treat it the same way",
+     "The report has more words, so it is the better text",
+     "The poem is about feelings, so it has no real purpose"
+    ],
+    "right": "The report aims to inform, but the poem aims to stir feeling"
+   }
+  },
+  "check": {
+   "eng-comparing-textsa": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   },
+   "eng-comparing-textsb": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   }
+  }
+ }
 }

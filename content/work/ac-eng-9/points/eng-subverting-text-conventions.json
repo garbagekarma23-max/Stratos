@@ -16,7 +16,8 @@
   "2026-11-04T09:58:24Z write: done (still fails the content check)",
   "2026-11-04T10:07:59Z check: flagged",
   "2026-11-04T10:10:49Z fix: suggested",
-  "2026-11-04T17:58:51Z autoreview: cleared with the fix (the content check)"
+  "2026-11-04T17:58:51Z autoreview: cleared with the fix (the content check)",
+  "2026-11-27T00:15:10Z rebalance: new options for question a and b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -152,9 +153,9 @@
    "q": "A detective story names the criminal on page one, then spends the book on why the crime happened. How does this subvert the genre?",
    "opts": [
     "It breaks the usual pattern of keeping the culprit hidden",
-    "It follows the mystery pattern of hiding the culprit",
-    "It repeats the same pattern used in a fairy tale",
-    "It turns the story into a genre with no conventions"
+    "It follows the usual mystery pattern of hiding the culprit",
+    "It repeats the same pattern that is used in a fairy tale",
+    "It turns the detective story into another genre altogether"
    ],
    "why": "Readers of detective stories usually expect the culprit to stay hidden until the end. Naming the culprit early breaks that expectation on purpose. It does not follow the pattern, so the option saying it does is wrong.",
    "clue": "What do readers of this genre usually expect about the culprit?"
@@ -164,13 +165,59 @@
    "q": "Ravi writes a fairy tale in which the princess leaves the castle to start a bakery, and no prince appears. What is the most likely reason for this choice?",
    "opts": [
     "To challenge the usual idea that a princess needs rescuing",
-    "To make the story fit the usual fairy tale pattern",
-    "To show that Ravi did not know the genre's conventions",
+    "To make the story follow the usual pattern of a fairy tale",
+    "To show that Ravi did not know the fairy tale's conventions",
     "To make the story a news report instead of a fairy tale"
    ],
    "why": "Fairy tales often have a princess who is rescued by a prince. Ravi twists this on purpose, which can make readers question that idea. Following the pattern would not be subverting it, so that option is wrong.",
    "clue": "Think about what a fairy tale princess usually does."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a",
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "It breaks the usual pattern of keeping the culprit hidden",
+     "It follows the mystery pattern of hiding the culprit",
+     "It repeats the same pattern used in a fairy tale",
+     "It turns the story into a genre with no conventions"
+    ]
+   },
+   "b": {
+    "opts": [
+     "To challenge the usual idea that a princess needs rescuing",
+     "To make the story fit the usual fairy tale pattern",
+     "To show that Ravi did not know the genre's conventions",
+     "To make the story a news report instead of a fairy tale"
+    ]
+   }
+  },
+  "check": {
+   "eng-subverting-text-conventionsa": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   },
+   "eng-subverting-text-conventionsb": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  }
+ }
 }

@@ -7,7 +7,8 @@
  "log": [
   "2026-11-04T09:23:30Z new, write",
   "2026-11-04T09:36:50Z write: done",
-  "2026-11-04T09:46:58Z check: passed, cleared"
+  "2026-11-04T09:46:58Z check: passed, cleared",
+  "2026-11-27T00:15:10Z rebalance: new options for question a and b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 1,
@@ -81,8 +82,8 @@
    "opts": [
     "A version of a person or place built through choices",
     "An exact copy of a person or place as it really is",
-    "A summary of the plot of a story or film",
-    "A list of facts about a person or place"
+    "A short summary of the plot of a story, play or film",
+    "A plain list of the facts about a person or a place"
    ],
    "why": "A representation is a portrayal that the creator builds by choosing what to include and how to show it. It is not an exact copy of reality, because those choices always shape what the audience sees.",
    "clue": "Think about who decides what appears in the text."
@@ -91,14 +92,62 @@
    "d": 2,
    "q": "A travel blog describes a seaside town with sunny photos, friendly locals and no mention of the empty shops. What does this show?",
    "opts": [
-    "The blogger chose details to portray the town positively",
-    "The blogger has shown the town exactly as it is",
-    "The town has no problems of any kind",
-    "The photos were taken by someone else"
+    "The blogger chose details to show the town positively",
+    "The blogger has shown the town exactly as it really is",
+    "The town is thriving and its shops are doing very well",
+    "The photos were taken by someone other than the blogger"
    ],
-   "why": "The blogger selected some details and left out others, which creates a positive representation. It does not prove the town is perfect, because leaving out the empty shops is also a choice.",
+   "why": "The blogger selected some details and left out others, which creates a positive representation. It does not show the town is thriving, because leaving out the empty shops is also a choice.",
    "clue": "Notice what is included and what is left out."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-27T00:15:10Z",
+  "result": "changed",
+  "changed": [
+   "a",
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "A version of a person or place built through choices",
+     "An exact copy of a person or place as it really is",
+     "A summary of the plot of a story or film",
+     "A list of facts about a person or place"
+    ]
+   },
+   "b": {
+    "opts": [
+     "The blogger chose details to portray the town positively",
+     "The blogger has shown the town exactly as it is",
+     "The town has no problems of any kind",
+     "The photos were taken by someone else"
+    ],
+    "right": "The blogger chose details to portray the town positively",
+    "why": "The blogger selected some details and left out others, which creates a positive representation. It does not prove the town is perfect, because leaving out the empty shops is also a choice."
+   }
+  },
+  "check": {
+   "eng-representation-people-placesa": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   },
+   "eng-representation-people-placesb": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   }
+  }
+ }
 }
