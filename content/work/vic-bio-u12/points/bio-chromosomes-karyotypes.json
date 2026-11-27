@@ -16,7 +16,8 @@
   "2026-11-01T08:24:29Z write: done",
   "2026-11-01T08:33:48Z check: flagged",
   "2026-11-01T08:42:04Z fix: suggested",
-  "2026-11-01T09:32:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-01T09:32:50Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-25T20:01:34Z rebalance: new options for question a and b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -185,8 +186,8 @@
    "q": "What does a karyotype show?",
    "opts": [
     "A cell's chromosomes arranged in pairs by size",
-    "The order of bases along one gene",
-    "The proteins made by a cell's genes",
+    "The order of bases along one gene on a chromosome",
+    "The proteins made from the genes in a cell's nucleus",
     "The alleles a person passes to their children"
    ],
    "why": "A karyotype is a picture of a cell's chromosomes sorted into pairs by size. It shows whole chromosomes, so it cannot show the base order of a gene or which alleles are passed on. It also does not show which proteins are made.",
@@ -197,13 +198,59 @@
    "q": "A karyotype of a cell from Sam shows 47 chromosomes instead of the usual 46. What can be concluded from the karyotype?",
    "opts": [
     "The cell has one chromosome more than usual",
-    "The cell has one pair more than usual",
-    "The cell has one gene more than usual",
-    "The cell has one allele more than usual"
+    "The cell has one chromosome pair more than usual",
+    "The cell has one gene more than usual in its DNA",
+    "The cell carries one allele more than usual"
    ],
    "why": "A karyotype lets chromosomes be counted, so 47 means one extra chromosome. It would not be a whole extra pair, as that would give 48. A karyotype does not show single genes or alleles.",
    "clue": "A karyotype counts whole chromosomes, so compare 47 with 46."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-11-25T20:01:34Z",
+  "result": "changed",
+  "changed": [
+   "a",
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "A cell's chromosomes arranged in pairs by size",
+     "The order of bases along one gene",
+     "The proteins made by a cell's genes",
+     "The alleles a person passes to their children"
+    ]
+   },
+   "b": {
+    "opts": [
+     "The cell has one chromosome more than usual",
+     "The cell has one pair more than usual",
+     "The cell has one gene more than usual",
+     "The cell has one allele more than usual"
+    ]
+   }
+  },
+  "check": {
+   "bio-chromosomes-karyotypesa": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   },
+   "bio-chromosomes-karyotypesb": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   }
+  }
+ }
 }

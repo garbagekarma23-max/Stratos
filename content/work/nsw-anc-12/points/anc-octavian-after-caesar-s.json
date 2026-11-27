@@ -9,7 +9,8 @@
   "2026-10-29T12:22:32Z write: done",
   "2026-10-29T12:30:15Z check: flagged",
   "2026-10-29T14:07:05Z fix: suggested",
-  "2026-10-29T14:30:27Z autoreview: cleared with the fix (a other)"
+  "2026-10-29T14:30:27Z autoreview: cleared with the fix (a other)",
+  "2026-11-25T20:01:02Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -144,10 +145,10 @@
   "a": {
    "q": "Why was the name Caesar so useful to Octavian in 44 BC?",
    "opts": [
-    "It won him the loyalty of Caesar's veterans and soldiers",
-    "It made him consul as soon as Caesar died",
-    "It gave him control of the Senate's votes",
-    "It made Mark Antony hand over his own army"
+    "It drew Caesar's veterans and soldiers to him",
+    "It made him consul straight after Caesar died",
+    "It gave him control of the votes in the Senate",
+    "It made Mark Antony hand his army over to him"
    ],
    "why": "Many soldiers and veterans were loyal to Caesar, so his adopted son could draw on that loyalty and raise an army. The name did not give him an office or the Senate's votes, and Antony was a rival he had to challenge, not an ally who gave up his forces.",
    "clue": "Octavian held no office in 44 BC. What could a name give him instead?"
@@ -165,5 +166,34 @@
    "clue": "Which option fits a young man with no office but many followers?"
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "rebalance": {
+  "at": "2026-11-25T20:01:02Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "It won him the loyalty of Caesar's veterans and soldiers",
+     "It made him consul as soon as Caesar died",
+     "It gave him control of the Senate's votes",
+     "It made Mark Antony hand over his own army"
+    ]
+   }
+  },
+  "check": {
+   "anc-octavian-after-caesar-sa": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   }
+  }
+ }
 }

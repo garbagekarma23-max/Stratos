@@ -9,7 +9,8 @@
   "2026-11-01T08:04:31Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T08:14:01Z write: failed the content check, writing again",
   "2026-11-01T08:24:29Z write: done",
-  "2026-11-01T08:33:48Z check: passed, cleared"
+  "2026-11-01T08:33:48Z check: passed, cleared",
+  "2026-11-25T20:01:59Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 3,
@@ -83,10 +84,10 @@
   "a": {
    "q": "Which statement best describes a species that shapes its ecosystem far beyond its numbers?",
    "opts": [
-    "Removing it would change many other species in the community",
+    "Losing it would change many other species",
     "It has the largest population in the ecosystem",
-    "It feeds on every other species in the community",
-    "It survives in a wider range of habitats than others"
+    "It feeds on most other species in the community",
+    "It lives in more habitats than other species"
    ],
    "why": "What marks this kind of species is its effect on the community, which is far greater than its numbers suggest. Having the largest population is a tempting idea, but such species are often not the most numerous.",
    "clue": "Think about effect compared with numbers, not population size."
@@ -104,5 +105,34 @@
    "clue": "Few in number does not mean small in effect."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-25T20:01:59Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "Removing it would change many other species in the community",
+     "It has the largest population in the ecosystem",
+     "It feeds on every other species in the community",
+     "It survives in a wider range of habitats than others"
+    ]
+   }
+  },
+  "check": {
+   "bio-keystone-speciesa": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   }
+  }
+ }
 }

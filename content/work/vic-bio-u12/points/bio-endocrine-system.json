@@ -8,7 +8,8 @@
   "2026-11-01T07:54:18Z new, write",
   "2026-11-01T08:04:31Z write: failed the content check, writing again",
   "2026-11-01T08:14:01Z write: done",
-  "2026-11-01T08:24:29Z check: passed, cleared"
+  "2026-11-01T08:24:29Z check: passed, cleared",
+  "2026-11-25T20:03:11Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -93,14 +94,43 @@
    "d": 3,
    "q": "Sam has a drug that blocks the receptors for a hormone on liver cells only. Blood levels of the hormone stay normal. What is the likely result?",
    "opts": [
-    "Liver cells do not respond, but other target cells still do",
-    "All cells stop responding to the hormone",
+    "Only the liver cells stop responding to the hormone",
+    "All target cells stop responding to the hormone",
     "The gland stops releasing the hormone into the blood",
-    "Other cells with different receptors respond instead"
+    "The liver cells respond through other receptors instead"
    ],
    "why": "Without working receptors, the liver cells cannot respond, even though the hormone is in the blood. Other target cells still have their receptors, so they respond as usual.",
    "clue": "Which cells lose their receptors?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-25T20:03:11Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "Liver cells do not respond, but other target cells still do",
+     "All cells stop responding to the hormone",
+     "The gland stops releasing the hormone into the blood",
+     "Other cells with different receptors respond instead"
+    ]
+   }
+  },
+  "check": {
+   "bio-endocrine-systemb": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  }
+ }
 }

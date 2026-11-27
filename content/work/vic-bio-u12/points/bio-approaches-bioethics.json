@@ -8,7 +8,8 @@
   "2026-11-01T07:54:18Z new, write",
   "2026-11-01T08:04:31Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T08:14:01Z write: done",
-  "2026-11-01T08:24:29Z check: passed, cleared"
+  "2026-11-01T08:24:29Z check: passed, cleared",
+  "2026-11-25T20:01:34Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -100,9 +101,9 @@
    "q": "A scientist says a trial is right because it will probably save many lives. Which approach is this?",
    "opts": [
     "Consequences-based, as it judges by the outcome",
-    "Duty-based, as it judges by the outcome",
-    "Virtue-based, as it judges by the outcome",
-    "Duty-based, as it follows a moral rule"
+    "Duty-based, as it judges an action by its outcome",
+    "Virtue-based, as it judges an action by its outcome",
+    "Duty-based, as it follows a moral rule or duty"
    ],
    "why": "The scientist judges the trial by its likely result, which is lives saved. That is a consequences-based approach. A duty-based approach would ask whether the trial follows moral rules, whatever the outcome.",
    "clue": "What is the scientist using to decide: outcome, rule or character?"
@@ -120,5 +121,34 @@
    "clue": "She sticks to the rule even when the result may be worse."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-25T20:01:34Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "Consequences-based, as it judges by the outcome",
+     "Duty-based, as it judges by the outcome",
+     "Virtue-based, as it judges by the outcome",
+     "Duty-based, as it follows a moral rule"
+    ]
+   }
+  },
+  "check": {
+   "bio-approaches-bioethicsa": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   }
+  }
+ }
 }

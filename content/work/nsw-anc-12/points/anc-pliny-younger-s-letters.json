@@ -11,7 +11,8 @@
   "2026-10-29T14:07:04Z check: flagged",
   "2026-10-29T14:10:38Z fix: suggested",
   "2026-10-29T14:30:27Z autoreview: picked as a spot check. It would have been cleared with the fix (b other)",
-  "2026-10-30T11:51:48Z review: approved with the fix (a spot check)"
+  "2026-10-30T11:51:48Z review: approved with the fix (a spot check)",
+  "2026-11-25T20:01:02Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 3,
@@ -148,8 +149,8 @@
   "a": {
    "q": "Why are Pliny the Younger's letters important to historians of the eruption?",
    "opts": [
-    "They are the only surviving written account by an eyewitness",
-    "They were written on the day of the eruption itself",
+    "They are the only surviving written eyewitness account",
+    "They were written on the very day of the eruption",
     "They describe the destruction of Pompeii street by street",
     "They were written by Tacitus as an official report"
    ],
@@ -169,5 +170,34 @@
    "clue": "Three of these get basic facts about the letters wrong."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "rebalance": {
+  "at": "2026-11-25T20:01:02Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "They are the only surviving written account by an eyewitness",
+     "They were written on the day of the eruption itself",
+     "They describe the destruction of Pompeii street by street",
+     "They were written by Tacitus as an official report"
+    ]
+   }
+  },
+  "check": {
+   "anc-pliny-younger-s-lettersa": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   }
+  }
+ }
 }

@@ -15,7 +15,8 @@
   "2026-11-01T08:14:08Z write: done",
   "2026-11-01T08:24:34Z check: flagged",
   "2026-11-01T08:33:52Z fix: suggested",
-  "2026-11-02T06:23:57Z review: approved with the fix"
+  "2026-11-02T06:23:57Z review: approved with the fix",
+  "2026-11-25T20:03:17Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -154,13 +155,43 @@
    "q": "Which event best shows the Nazis ending democracy after taking office?",
    "opts": [
     "The Enabling Act let Hitler make laws without the Reichstag",
-    "The Depression caused mass unemployment across Germany",
-    "Hindenburg appointed Hitler as chancellor in January",
-    "The Nuremberg Laws took citizenship rights from Jews"
+    "The Depression brought mass unemployment across Germany",
+    "Hindenburg made Hitler chancellor of Germany in January 1933",
+    "The Nuremberg Laws took away the citizenship rights of Jews"
    ],
-   "why": "The Enabling Act removed the Reichstag's power over lawmaking, which ended democratic government. The Depression and the appointment came before the Nazis took office. The Nuremberg Laws were persecution of Jews, not the step that ended lawmaking by parliament.",
+   "why": "The Enabling Act removed the Reichstag's power over lawmaking, which ended democratic government. The Depression came before the Nazis took office, and Hitler's appointment as chancellor was how they took office, not how they ended democracy. The Nuremberg Laws were persecution of Jews, not the step that ended lawmaking by parliament.",
    "clue": "Look for the step that removed parliament's power."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "rebalance": {
+  "at": "2026-11-25T20:03:17Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "The Enabling Act let Hitler make laws without the Reichstag",
+     "The Depression caused mass unemployment across Germany",
+     "Hindenburg appointed Hitler as chancellor in January",
+     "The Nuremberg Laws took citizenship rights from Jews"
+    ],
+    "why": "The Enabling Act removed the Reichstag's power over lawmaking, which ended democratic government. The Depression and the appointment came before the Nazis took office. The Nuremberg Laws were persecution of Jews, not the step that ended lawmaking by parliament."
+   }
+  },
+  "check": {
+   "mod-nazism-germanyb": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  }
+ }
 }

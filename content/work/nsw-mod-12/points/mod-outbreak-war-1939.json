@@ -11,7 +11,8 @@
   "2026-10-27T01:23:01Z check: flagged",
   "2026-10-27T01:29:34Z fix: suggested",
   "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix",
-  "2026-10-29T11:03:06Z rebalance: kept its old options (the new options failed the content check: mod-outbreak-war-1939a option is 62 characters: It gave Germany control of Soviet armies and weapons in Poland)"
+  "2026-10-29T11:03:06Z rebalance: kept its old options (the new options failed the content check: mod-outbreak-war-1939a option is 62 characters: It gave Germany control of Soviet armies and weapons in Poland)",
+  "2026-11-25T20:01:34Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 3,
@@ -162,7 +163,7 @@
   "a": {
    "q": "Why did the Nazi-Soviet Pact make it easier for Germany to invade Poland?",
    "opts": [
-    "It removed the risk of a war against the Soviet Union too",
+    "It removed the risk of fighting the Soviet Union too",
     "It gave Germany control of Soviet armies and weapons",
     "It forced Britain and France to promise not to fight",
     "It made Poland agree to give up its eastern land"
@@ -185,11 +186,40 @@
  },
  "cleared_by": "recheck",
  "rebalance": {
-  "at": "2026-10-29T11:03:06Z",
-  "result": "kept",
-  "changed": [],
-  "why": [
-   "the new options failed the content check: mod-outbreak-war-1939a option is 62 characters: It gave Germany control of Soviet armies and weapons in Poland"
-  ]
+  "at": "2026-11-25T20:01:34Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "It removed the risk of a war against the Soviet Union too",
+     "It gave Germany control of Soviet armies and weapons",
+     "It forced Britain and France to promise not to fight",
+     "It made Poland agree to give up its eastern land"
+    ]
+   }
+  },
+  "check": {
+   "mod-outbreak-war-1939a": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   }
+  },
+  "before": {
+   "at": "2026-10-29T11:03:06Z",
+   "result": "kept",
+   "changed": [],
+   "why": [
+    "the new options failed the content check: mod-outbreak-war-1939a option is 62 characters: It gave Germany control of Soviet armies and weapons in Poland"
+   ]
+  }
  }
 }

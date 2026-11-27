@@ -8,7 +8,8 @@
   "2026-10-29T12:14:23Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-29T12:22:32Z write: failed the content check, writing again",
   "2026-10-29T12:30:16Z write: done",
-  "2026-10-29T14:07:04Z check: passed, cleared"
+  "2026-10-29T14:07:04Z check: passed, cleared",
+  "2026-11-25T20:01:02Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 3,
@@ -94,8 +95,8 @@
    "d": 3,
    "q": "An archaeologist studies a skeleton from the boat sheds and finds a healed broken arm, worn teeth and a chemical trace of a diet rich in fish. What does this evidence best show?",
    "opts": [
-    "Details of this person's health and diet before the eruption",
-    "The exact cause of the eruption that killed this person",
+    "This person's health and diet before the eruption",
+    "The exact cause of the eruption that killed them",
     "The name and social rank of the person who died",
     "The route the person took to reach the boat sheds"
    ],
@@ -103,5 +104,34 @@
    "clue": "Healed bones and chemical traces build up during life."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-25T20:01:02Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "Details of this person's health and diet before the eruption",
+     "The exact cause of the eruption that killed this person",
+     "The name and social rank of the person who died",
+     "The route the person took to reach the boat sheds"
+    ]
+   }
+  },
+  "check": {
+   "anc-human-remains-as-evidenceb": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  }
+ }
 }

@@ -10,7 +10,8 @@
   "2026-10-27T01:08:37Z check: flagged",
   "2026-10-27T01:23:02Z fix: suggested",
   "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix",
-  "2026-10-29T11:03:06Z rebalance: kept its old options (the new options failed the content check: mod-end-cold-warb option is 64 characters: Soviet troops withdrew after they lost a war fought against NATO; mod-end-cold-warb option is 64 characters: The United States invaded the region and removed the governments; mod-end-cold-warb option is 64 characters: Gorbachev ordered every communist leader there to resign at once)"
+  "2026-10-29T11:03:06Z rebalance: kept its old options (the new options failed the content check: mod-end-cold-warb option is 64 characters: Soviet troops withdrew after they lost a war fought against NATO; mod-end-cold-warb option is 64 characters: The United States invaded the region and removed the governments; mod-end-cold-warb option is 64 characters: Gorbachev ordered every communist leader there to resign at once)",
+  "2026-11-25T20:01:34Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -212,10 +213,10 @@
    "d": 3,
    "q": "Why did communist governments in Eastern Europe fall in 1989?",
    "opts": [
-    "Gorbachev would not send Soviet force to keep them in power",
+    "Gorbachev would not use Soviet force to save them",
     "Soviet troops withdrew after losing a war with NATO",
     "The United States invaded the region and removed them",
-    "Gorbachev ordered every communist leader to resign"
+    "Gorbachev ordered the communist leaders to resign"
    ],
    "why": "These governments had relied on the threat of Soviet force. Once Gorbachev would not use it, protests brought them down. There was no war with NATO or invasion by the United States, and Gorbachev did not order the leaders to resign.",
    "clue": "Ask what had kept these governments in power before 1989."
@@ -223,11 +224,40 @@
  },
  "cleared_by": "recheck",
  "rebalance": {
-  "at": "2026-10-29T11:03:06Z",
-  "result": "kept",
-  "changed": [],
-  "why": [
-   "the new options failed the content check: mod-end-cold-warb option is 64 characters: Soviet troops withdrew after they lost a war fought against NATO; mod-end-cold-warb option is 64 characters: The United States invaded the region and removed the governments; mod-end-cold-warb option is 64 characters: Gorbachev ordered every communist leader there to resign at once"
-  ]
+  "at": "2026-11-25T20:01:34Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "Gorbachev would not send Soviet force to keep them in power",
+     "Soviet troops withdrew after losing a war with NATO",
+     "The United States invaded the region and removed them",
+     "Gorbachev ordered every communist leader to resign"
+    ]
+   }
+  },
+  "check": {
+   "mod-end-cold-warb": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   }
+  },
+  "before": {
+   "at": "2026-10-29T11:03:06Z",
+   "result": "kept",
+   "changed": [],
+   "why": [
+    "the new options failed the content check: mod-end-cold-warb option is 64 characters: Soviet troops withdrew after they lost a war fought against NATO; mod-end-cold-warb option is 64 characters: The United States invaded the region and removed the governments; mod-end-cold-warb option is 64 characters: Gorbachev ordered every communist leader there to resign at once"
+   ]
+  }
  }
 }

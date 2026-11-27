@@ -8,7 +8,8 @@
   "2026-10-29T12:14:23Z write: done",
   "2026-10-29T12:22:31Z check: flagged",
   "2026-10-29T12:30:16Z fix: suggested",
-  "2026-10-29T16:45:05Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-29T16:45:05Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-25T20:01:02Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 1,
@@ -189,7 +190,7 @@
   "a": {
    "q": "Why was the 2010 collapse of the House of the Gladiators important for conservation?",
    "opts": [
-    "It showed that the site was at risk without steady upkeep",
+    "It showed the site was at risk without steady upkeep",
     "It showed that the volcano had become active again",
     "It showed that tourists had pulled the building down",
     "It showed that Roman builders had used poor methods"
@@ -210,5 +211,34 @@
    "clue": "The repair was meant to help the wall."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-11-25T20:01:02Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "It showed that the site was at risk without steady upkeep",
+     "It showed that the volcano had become active again",
+     "It showed that tourists had pulled the building down",
+     "It showed that Roman builders had used poor methods"
+    ]
+   }
+  },
+  "check": {
+   "anc-conserving-sitesa": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  }
+ }
 }

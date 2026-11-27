@@ -14,7 +14,8 @@
   "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:01Z write: failed the content check, writing again",
   "2026-11-01T08:24:29Z write: done",
-  "2026-11-01T08:33:48Z check: passed, cleared"
+  "2026-11-01T08:33:48Z check: passed, cleared",
+  "2026-11-25T20:02:06Z rebalance: new options for question a and b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -109,10 +110,10 @@
   "a": {
    "q": "What is the effect of an epigenetic mark on a gene?",
    "opts": [
-    "It switches the gene on or off, leaving the bases unchanged",
+    "It turns the gene on or off, with the bases unchanged",
     "It changes one base in the gene into a different base",
-    "It removes the gene from the chromosome",
-    "It turns the gene into a different allele"
+    "It removes the gene from its place on the chromosome",
+    "It changes the gene into a different allele of the gene"
    ],
    "why": "Epigenetic marks are chemical tags that change whether a gene is used. The order of bases stays the same. A change to a base would be a change to the DNA itself, and that is not what epigenetic marks do.",
    "clue": "The DNA sequence itself stays the same."
@@ -122,13 +123,59 @@
    "q": "Two genetically identical clover plants are grown, one in a shady garden in Ballarat and one in full sun. The sunny plant grows shorter and thicker. What best explains this?",
    "opts": [
     "The environment changed how the same genes were expressed",
-    "The two plants carry different alleles for height",
-    "The sun changed the DNA sequence of the sunny plant",
-    "Environment has no effect on plants with identical genes"
+    "The two plants carry different alleles for plant height",
+    "The sunlight changed the DNA sequence of the sunny plant",
+    "The environment has no effect on plants with identical genes"
    ],
    "why": "The plants have the same genes, so the difference comes from the environment affecting how the genes show in the phenotype. The option about changed DNA is tempting, but light affecting growth does not mean the DNA sequence changed.",
    "clue": "The genes are the same, so what is left that differs?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-25T20:02:06Z",
+  "result": "changed",
+  "changed": [
+   "a",
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "It switches the gene on or off, leaving the bases unchanged",
+     "It changes one base in the gene into a different base",
+     "It removes the gene from the chromosome",
+     "It turns the gene into a different allele"
+    ]
+   },
+   "b": {
+    "opts": [
+     "The environment changed how the same genes were expressed",
+     "The two plants carry different alleles for height",
+     "The sun changed the DNA sequence of the sunny plant",
+     "Environment has no effect on plants with identical genes"
+    ]
+   }
+  },
+  "check": {
+   "bio-genes-environment-epigeneticsa": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   },
+   "bio-genes-environment-epigeneticsb": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   }
+  }
+ }
 }

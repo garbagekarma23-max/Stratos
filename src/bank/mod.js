@@ -59,10 +59,10 @@ MADE_BANKS.mod = {
       "d": 3,
       "q": "In 1935 Italy invaded Ethiopia, and League members applied only limited sanctions. Which factor best explains why the League failed to stop Italy?",
       "opts": [
-        "It could not force members to act, and had no army",
-        "It had too many members to meet in Geneva",
+        "It had no army and could not make members act",
+        "It had too many members to meet properly in Geneva",
         "It had been set up before the peace settlement",
-        "It was run mainly by the United States"
+        "It was led and run mainly by the United States"
       ],
       "why": "The League had no army and each member chose how far to act, so it could not make Italy stop. The United States did not run it: it never joined, which also limited the League's strength.",
       "clue": "Think about who could make members act."
@@ -89,9 +89,9 @@ MADE_BANKS.mod = {
     "a": {
       "q": "Why were new democracies in interwar Europe often easy to undermine?",
       "opts": [
-        "Hardship, violence and distrust weakened faith in them",
-        "They had no elections or written constitutions",
-        "They were ruled by a single party from the start",
+        "Hardship, violence and distrust eroded faith in them",
+        "They had no elections and no written constitutions",
+        "They were ruled by a single party from the very start",
         "Their citizens had long experience of self-government"
       ],
       "why": "Economic crisis, political violence and distrust made governments look weak, so many people were open to stronger leaders. The option saying they had no elections or constitutions is wrong, because these states did hold elections and had written constitutions.",
@@ -101,10 +101,10 @@ MADE_BANKS.mod = {
       "d": 3,
       "q": "In a new democracy, street fights between rival armed groups become common and unemployment is high. Many voters say, \"Parliament cannot keep order.\" What is the most likely effect?",
       "opts": [
-        "Support may grow for a leader promising strong rule",
-        "Voters will trust parliament more than before",
-        "Armed groups will become the lawful government",
-        "The economy will recover because order returns"
+        "Support is likely to grow for a leader promising order",
+        "Voters are likely to trust parliament more than before",
+        "The armed groups are likely to become the lawful government",
+        "The economy is likely to recover because order returned"
       ],
       "why": "Violence and hardship can make parliament look weak, so some voters may turn to a leader who promises order. Trusting parliament more is wrong because the scenario describes distrust growing, not shrinking.",
       "clue": "Ask what people want when they think the government is weak."
@@ -362,10 +362,10 @@ MADE_BANKS.mod = {
       "d": 3,
       "q": "Which statement best explains why Hitler felt able to act from 1936 to 1938?",
       "opts": [
-        "Earlier aggression had gone unchecked, so he risked little",
-        "The League had forced Japan out of Manchuria in 1933",
-        "League oil sanctions had already crippled Italy",
-        "Germany had never broken the Treaty of Versailles"
+        "Earlier aggression went unchecked, so he risked little",
+        "The League had forced Japan to leave Manchuria in 1933",
+        "League oil sanctions had already crippled Italy by 1936",
+        "Germany had kept to the Treaty of Versailles until 1938"
       ],
       "why": "Japan kept Manchuria, the League's limited sanctions did not stop Italy, and Hitler's own first breaches went unchecked, so further aggression seemed to carry little risk. The oil option is tempting but wrong: the sanctions on Italy did not cover oil. Germany had broken Versailles by rearming and entering the Rhineland.",
       "clue": "Ask whether anyone had made an aggressor give back land."
@@ -385,8 +385,8 @@ MADE_BANKS.mod = {
       "opts": [
         "To avoid another war by meeting some of his demands",
         "To help Germany rebuild its army after World War I",
-        "To make Czechoslovakia stronger against Germany",
-        "To prepare an immediate attack on Germany"
+        "To make Czechoslovakia stronger against German attack",
+        "To prepare an immediate attack on Germany and Italy"
       ],
       "why": "Appeasement meant giving in to some demands in the hope of keeping the peace. Helping Germany rearm was not the aim, even though rearmament happened in the 1930s.",
       "clue": "Think about what the policy was meant to prevent."
@@ -416,7 +416,7 @@ MADE_BANKS.mod = {
     "a": {
       "q": "Why did the Nazi-Soviet Pact make it easier for Germany to invade Poland?",
       "opts": [
-        "It removed the risk of a war against the Soviet Union too",
+        "It removed the risk of fighting the Soviet Union too",
         "It gave Germany control of Soviet armies and weapons",
         "It forced Britain and France to promise not to fight",
         "It made Poland agree to give up its eastern land"
@@ -515,9 +515,9 @@ MADE_BANKS.mod = {
     "a": {
       "q": "Which event made the Tsar's fall certain in February 1917?",
       "opts": [
-        "Soldiers joined the protesters instead of stopping them",
-        "The Duma won a vote that removed him from office",
-        "German troops captured the city of Petrograd",
+        "Soldiers sent to stop the crowds joined them instead",
+        "The Duma won a vote that removed the Tsar from office",
+        "German troops captured the capital city of Petrograd",
         "The Petrograd Soviet declared itself the government"
       ],
       "why": "Once troops sided with the crowds, the Tsar had lost the force he needed to keep order, so he abdicated. The Soviet did not take over formally: official authority passed to the Provisional Government.",
@@ -548,7 +548,7 @@ MADE_BANKS.mod = {
     "a": {
       "q": "Why did the Bolshevik slogan of peace, land and bread win them support in 1917?",
       "opts": [
-        "It matched the main needs of workers, soldiers and peasants",
+        "It matched what workers, soldiers and peasants wanted",
         "It was backed by the Allied powers fighting Germany",
         "It repeated promises the Provisional Government had kept",
         "It was popular mainly with the Tsar's former officials"
@@ -561,9 +561,9 @@ MADE_BANKS.mod = {
       "q": "Which situation best helps explain why the Bolsheviks could seize power in Petrograd in October 1917?",
       "opts": [
         "The Provisional Government was weak and unpopular",
-        "The Tsar had just returned to lead the army",
-        "The Provisional Government had ended the war",
-        "Food was plentiful and unrest had faded"
+        "The Tsar had just returned to lead the Russian army",
+        "The Provisional Government had just ended the war",
+        "Food was plentiful and unrest in the city had faded"
       ],
       "why": "A weak government that had not solved the war or food problems was easy to remove. The other options describe events that did not happen or would have made the Bolsheviks less popular.",
       "clue": "Think about what the Provisional Government had failed to fix."
@@ -863,9 +863,9 @@ MADE_BANKS.mod = {
     "a": {
       "q": "Who were the Viet Cong?",
       "opts": [
-        "Communist fighters in the South who opposed its government",
-        "The regular army of the Southern government",
-        "American soldiers sent to defend Saigon",
+        "Communist fighters in the South opposing its government",
+        "The regular army of the Southern government in Saigon",
+        "American soldiers sent to defend the government in Saigon",
         "Political leaders who governed North Vietnam from Hanoi"
       ],
       "why": "The Viet Cong were communists living in South Vietnam who fought the Southern government, with support from the North. They are easily mistaken for the North's own leaders, but those governed from Hanoi and were not fighters inside the South.",
@@ -896,7 +896,7 @@ MADE_BANKS.mod = {
     "a": {
       "q": "Why did the United States first become involved in Vietnam?",
       "opts": [
-        "It feared communism would spread to neighbouring countries",
+        "It feared communism would spread to nearby countries",
         "It wanted to gain a new colony in Southeast Asia",
         "It needed Vietnam's rubber and rice for its own economy",
         "It was attacked by North Vietnamese forces in 1964"
@@ -986,10 +986,10 @@ MADE_BANKS.mod = {
       "d": 3,
       "q": "Which statement best describes the results of the Tet Offensive?",
       "opts": [
-        "A communist military defeat but a political blow to the US",
-        "A military and political victory for the communists",
+        "A communist military loss but a political blow to the US",
+        "A military and a political victory for the communists",
         "A military victory for the US that lifted support at home",
-        "A military and political failure for the communists"
+        "A military and a political failure for the communists"
       ],
       "why": "The communists lost many fighters and gained no uprising, so the attacks failed militarily. Yet public trust in the US government fell and opposition grew, so the political effect hurt the US. Calling it a failure in every sense ignores this.",
       "clue": "Judge the battlefield result and the effect on American opinion separately."
@@ -1049,8 +1049,8 @@ MADE_BANKS.mod = {
     "a": {
       "q": "Why did the Paris Peace Accords of 1973 not end the war in Vietnam?",
       "opts": [
-        "North Vietnamese troops were allowed to stay in the South",
-        "US troops stayed in South Vietnam to defend Saigon",
+        "The North's troops were allowed to stay in the South",
+        "US troops stayed on in South Vietnam to defend Saigon",
         "North Vietnam withdrew its forces from the South",
         "South Vietnam's army was disbanded under the terms"
       ],
@@ -1187,10 +1187,10 @@ MADE_BANKS.mod = {
     "a": {
       "q": "Why is the world after 1945 described as bipolar?",
       "opts": [
-        "Two superpowers led rival blocs and held most power",
-        "Two wars were fought between the main powers",
-        "Two continents were ruled by one government",
-        "Two alliances merged into a single organisation"
+        "Two superpowers led rival blocs as the main powers",
+        "Two wars were fought directly between the main powers",
+        "Two continents were ruled by a single world government",
+        "Two rival alliances merged into a single organisation"
       ],
       "why": "Bipolar means two main centres of power. The United States and the Soviet Union each led a bloc of allies. The idea of two wars is tempting, but the superpowers avoided fighting each other directly.",
       "clue": "Think about what bi means, and who held the power."
@@ -1199,10 +1199,10 @@ MADE_BANKS.mod = {
       "d": 3,
       "q": "In the 1950s, a Soviet-backed government and a US-backed government fought a war in a third country. Their superpowers sent weapons and advisers but did not fight each other. What does this show about the superpowers?",
       "opts": [
-        "They competed for influence while avoiding direct conflict",
-        "They had ended their rivalry and cooperated",
+        "They competed for influence but avoided a direct war",
+        "They had ended their rivalry and begun to cooperate",
         "They had joined together in one military alliance",
-        "They had lost influence over smaller countries"
+        "They had lost their influence over smaller countries"
       ],
       "why": "Each superpower backed one side to gain influence, but neither fought the other directly. Cooperation is wrong because they supported opposing sides. Joining one alliance is wrong because NATO and the Warsaw Pact were rivals.",
       "clue": "Who was fighting, and who was only supplying help?"
@@ -1232,9 +1232,9 @@ MADE_BANKS.mod = {
       "d": 3,
       "q": "What was the main effect of the Cuban Missile Crisis on relations between the superpowers?",
       "opts": [
-        "It showed the danger of war and led to arms control steps",
+        "It showed the danger of war and led to arms limits",
         "It ended the rivalry between the two superpowers",
-        "It led the United States to invade Cuba",
+        "It led the United States to invade and occupy Cuba",
         "It led the Soviet Union to stop building weapons"
       ],
       "why": "The crisis brought the superpowers close to nuclear war, so both took steps such as a direct communication link and limits on testing. The rivalry did not end, and both kept building weapons.",
@@ -1268,10 +1268,10 @@ MADE_BANKS.mod = {
       "d": 3,
       "q": "Why did communist governments in Eastern Europe fall in 1989?",
       "opts": [
-        "Gorbachev would not send Soviet force to keep them in power",
+        "Gorbachev would not use Soviet force to save them",
         "Soviet troops withdrew after losing a war with NATO",
         "The United States invaded the region and removed them",
-        "Gorbachev ordered every communist leader to resign"
+        "Gorbachev ordered the communist leaders to resign"
       ],
       "why": "These governments had relied on the threat of Soviet force. Once Gorbachev would not use it, protests brought them down. There was no war with NATO or invasion by the United States, and Gorbachev did not order the leaders to resign.",
       "clue": "Ask what had kept these governments in power before 1989."
@@ -1719,9 +1719,9 @@ MADE_BANKS.mod = {
       "q": "What was the Prague Spring of 1968?",
       "opts": [
         "A reform movement in Czechoslovakia ended by invasion",
-        "An uprising in Hungary crushed by Soviet tanks",
-        "A series of protests in Poland that won independence",
-        "A Soviet plan to reform its own government"
+        "An uprising in Hungary that was crushed by Soviet tanks",
+        "A series of protests in Poland that won it independence",
+        "A Soviet plan to reform its own government in Moscow"
       ],
       "why": "The Prague Spring was a reform movement in Czechoslovakia, ended by a Warsaw Pact invasion. The Hungarian uprising was a different event, in 1956, and the Soviet Union did not allow independence.",
       "clue": "Which country, and what happened in 1968?"
@@ -1784,10 +1784,10 @@ MADE_BANKS.mod = {
     "a": {
       "q": "Why did many Germans distrust the Weimar Republic from its early years?",
       "opts": [
-        "They blamed it for the defeat and the Treaty of Versailles",
-        "They believed it had started the First World War",
-        "They thought it gave too much power to the Kaiser",
-        "They saw it as too slow to join the Allied powers"
+        "They blamed it for defeat and the Treaty of Versailles",
+        "They believed it had started the First World War in 1914",
+        "They thought it gave too much power back to the Kaiser",
+        "They saw it as far too slow to join the Allied powers"
       ],
       "why": "The republic took power as Germany lost the war, so many people blamed it for the defeat and the Treaty of Versailles. It did not start the war, and the Kaiser had already gone.",
       "clue": "Think about who was in government when the war ended."
@@ -1797,9 +1797,9 @@ MADE_BANKS.mod = {
       "q": "Karl, a clerk in Hamburg, says the republic was safe in 1927 but in danger by 1932. Which event best explains the change?",
       "opts": [
         "The Depression ended American loans and raised unemployment",
-        "Hyperinflation destroyed the value of German money",
-        "An uprising removed the Kaiser from power",
-        "The Treaty of Versailles placed harsh terms on Germany"
+        "Hyperinflation wiped out the savings of many German families",
+        "An uprising forced the Kaiser to give up the German throne",
+        "The Treaty of Versailles placed harsh peace terms on Germany"
       ],
       "why": "The Depression ended the American loans that had helped the recovery and raised unemployment, so extreme parties gained support. Hyperinflation is a tempting answer, but it happened in 1923, and the Treaty of Versailles and the Kaiser's fall came even earlier, all before 1927.",
       "clue": "Check which event came after 1927."
@@ -2077,7 +2077,7 @@ MADE_BANKS.mod = {
     "b": {
       "d": 2,
       "q": "In 1930s Moscow, a painter is asked to show a smiling crowd of farmers and a heroic leader. Which approach is the state asking for?",
-      "opts": ["Socialist realism", "Degenerate art", "Book burning", "Exile art"],
+      "opts": ["Socialist realism", "Degenerate art", "Burning banned books", "Art made in exile"],
       "why": "Socialist realism was the Soviet style that showed workers, farmers and leaders as heroic and the future as bright. Degenerate art is the Nazi label for modern work they banned, so it does not describe a request for praise.",
       "clue": "Which style praised the regime in a Soviet setting?"
     }
@@ -2203,9 +2203,9 @@ MADE_BANKS.mod = {
       "q": "Which agreement was made about Germany at Yalta and Potsdam?",
       "opts": [
         "It would be divided into zones run by the Allies",
-        "It would be joined to Poland as one state",
-        "It would be run by the Soviet Union alone",
-        "It would be left free to rule itself at once"
+        "It would be joined to Poland to form one new state",
+        "It would be run by the Soviet Union as one zone",
+        "It would be left free to rule itself straight away"
       ],
       "why": "The Allies agreed to divide Germany into zones, and Berlin was split too. Soviet control of all Germany is wrong, because the Western Allies ran zones as well.",
       "clue": "What did Potsdam confirm from the Yalta plan?"
@@ -2214,10 +2214,10 @@ MADE_BANKS.mod = {
       "d": 3,
       "q": "Why did the Yalta and Potsdam conferences add to Cold War distrust?",
       "opts": [
-        "Promised free elections in the east often did not happen",
-        "Germany was left united and armed after the war",
-        "Stalin refused to attend the Potsdam conference",
-        "The Western leaders agreed to give up their zones"
+        "Most eastern states did not get the free elections promised",
+        "Germany was left united and fully armed after the war ended",
+        "Stalin refused to attend the Potsdam conference in July 1945",
+        "The Western leaders agreed to give up most of their zones"
       ],
       "why": "Stalin had promised free elections in Eastern Europe, but Soviet forces stayed and in most countries the elections were not held or were rigged. The West saw this as a broken promise. Stalin did attend Potsdam, so that option is wrong.",
       "clue": "Look at what Stalin promised and what then happened."
@@ -2487,7 +2487,7 @@ MADE_BANKS.mod = {
       "d": 3,
       "q": "In 1965, students travelled by bus through towns in New South Wales and protested at a pool that barred Aboriginal children. What did this action mainly achieve?",
       "opts": [
-        "It drew national attention to everyday racial discrimination",
+        "It drew national attention to racial discrimination",
         "It changed the Constitution to count Aboriginal people",
         "It returned traditional land to the people of the town",
         "It won the Gurindji ownership of their land at Wave Hill"
@@ -2545,10 +2545,10 @@ MADE_BANKS.mod = {
     "a": {
       "q": "Which action is an example of pressure from abroad on South Africa's apartheid government?",
       "opts": [
-        "Other countries placing sanctions on South African trade",
+        "Other countries placing trade sanctions on South Africa",
         "ANC supporters joining strikes in South African cities",
-        "Students in Soweto protesting about their schooling",
-        "South Africa's government banning protest groups"
+        "Students in Soweto protesting about their own schooling",
+        "South Africa's government banning local protest groups"
       ],
       "why": "Sanctions were imposed by other countries to make apartheid costly to keep. The strikes and student protests were protest inside South Africa, and bans were the government's own response.",
       "clue": "Look for action taken by people outside South Africa."
@@ -3394,11 +3394,11 @@ MADE_BANKS.mod = {
       "q": "Which event best shows the Nazis ending democracy after taking office?",
       "opts": [
         "The Enabling Act let Hitler make laws without the Reichstag",
-        "The Depression caused mass unemployment across Germany",
-        "Hindenburg appointed Hitler as chancellor in January",
-        "The Nuremberg Laws took citizenship rights from Jews"
+        "The Depression brought mass unemployment across Germany",
+        "Hindenburg made Hitler chancellor of Germany in January 1933",
+        "The Nuremberg Laws took away the citizenship rights of Jews"
       ],
-      "why": "The Enabling Act removed the Reichstag's power over lawmaking, which ended democratic government. The Depression and the appointment came before the Nazis took office. The Nuremberg Laws were persecution of Jews, not the step that ended lawmaking by parliament.",
+      "why": "The Enabling Act removed the Reichstag's power over lawmaking, which ended democratic government. The Depression came before the Nazis took office, and Hitler's appointment as chancellor was how they took office, not how they ended democracy. The Nuremberg Laws were persecution of Jews, not the step that ended lawmaking by parliament.",
       "clue": "Look for the step that removed parliament's power."
     }
   },

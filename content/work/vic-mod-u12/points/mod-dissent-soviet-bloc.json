@@ -20,7 +20,8 @@
   "2026-11-01T08:24:34Z write: done",
   "2026-11-01T08:33:52Z check: flagged",
   "2026-11-01T08:42:07Z fix: suggested",
-  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-25T20:02:40Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -219,9 +220,9 @@
    "q": "What was the Prague Spring of 1968?",
    "opts": [
     "A reform movement in Czechoslovakia ended by invasion",
-    "An uprising in Hungary crushed by Soviet tanks",
-    "A series of protests in Poland that won independence",
-    "A Soviet plan to reform its own government"
+    "An uprising in Hungary that was crushed by Soviet tanks",
+    "A series of protests in Poland that won it independence",
+    "A Soviet plan to reform its own government in Moscow"
    ],
    "why": "The Prague Spring was a reform movement in Czechoslovakia, ended by a Warsaw Pact invasion. The Hungarian uprising was a different event, in 1956, and the Soviet Union did not allow independence.",
    "clue": "Which country, and what happened in 1968?"
@@ -239,5 +240,34 @@
    "clue": "Check who acted in each event, and whether they allowed or stopped change."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-11-25T20:02:40Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "A reform movement in Czechoslovakia ended by invasion",
+     "An uprising in Hungary crushed by Soviet tanks",
+     "A series of protests in Poland that won independence",
+     "A Soviet plan to reform its own government"
+    ]
+   }
+  },
+  "check": {
+   "mod-dissent-soviet-bloca": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   }
+  }
+ }
 }

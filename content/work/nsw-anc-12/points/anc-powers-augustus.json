@@ -11,7 +11,8 @@
   "2026-10-29T14:07:04Z check: flagged",
   "2026-10-29T14:10:39Z fix: suggested",
   "2026-10-29T16:45:04Z recheck: kept for you (the fresh check found a problem)",
-  "2026-10-30T11:51:52Z review: approved with the fix"
+  "2026-10-30T11:51:52Z review: approved with the fix",
+  "2026-11-25T20:01:27Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 3,
@@ -207,13 +208,42 @@
    "q": "A historian argues that Augustus's control rested on force, not on his titles or legal powers. Which evidence best supports this view?",
    "opts": [
     "Soldiers swore loyalty to him and he held the provinces",
-    "He took the title princeps, meaning first citizen",
-    "He kept the Senate and the old offices in place",
+    "He took the title princeps, which meant first citizen",
+    "He kept the Senate and the old Republican offices in place",
     "He held tribunician power, which let him propose laws"
    ],
    "why": "Control of the provinces where the legions were, and the loyalty of the soldiers, gave him military strength. Tribunician power is tempting, but it was a legal power, which the historian sets aside. Princeps and the surviving Senate only kept up the look of the Republic.",
    "clue": "Which option is about the army?"
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "rebalance": {
+  "at": "2026-11-25T20:01:27Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "Soldiers swore loyalty to him and he held the provinces",
+     "He took the title princeps, meaning first citizen",
+     "He kept the Senate and the old offices in place",
+     "He held tribunician power, which let him propose laws"
+    ]
+   }
+  },
+  "check": {
+   "anc-powers-augustusb": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   }
+  }
+ }
 }

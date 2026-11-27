@@ -8,7 +8,8 @@
   "2026-10-27T00:53:13Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:12Z write: done",
   "2026-10-27T01:08:37Z check: passed, cleared",
-  "2026-10-29T11:03:06Z rebalance: kept its old options (the new options failed the content check: mod-nuclear-arms-raceb option is 61 characters: It led the United States to invade Cuba and remove its leader)"
+  "2026-10-29T11:03:06Z rebalance: kept its old options (the new options failed the content check: mod-nuclear-arms-raceb option is 61 characters: It led the United States to invade Cuba and remove its leader)",
+  "2026-11-25T20:01:34Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -95,9 +96,9 @@
    "d": 3,
    "q": "What was the main effect of the Cuban Missile Crisis on relations between the superpowers?",
    "opts": [
-    "It showed the danger of war and led to arms control steps",
+    "It showed the danger of war and led to arms limits",
     "It ended the rivalry between the two superpowers",
-    "It led the United States to invade Cuba",
+    "It led the United States to invade and occupy Cuba",
     "It led the Soviet Union to stop building weapons"
    ],
    "why": "The crisis brought the superpowers close to nuclear war, so both took steps such as a direct communication link and limits on testing. The rivalry did not end, and both kept building weapons.",
@@ -106,11 +107,40 @@
  },
  "cleared_by": "checker",
  "rebalance": {
-  "at": "2026-10-29T11:03:06Z",
-  "result": "kept",
-  "changed": [],
-  "why": [
-   "the new options failed the content check: mod-nuclear-arms-raceb option is 61 characters: It led the United States to invade Cuba and remove its leader"
-  ]
+  "at": "2026-11-25T20:01:34Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "It showed the danger of war and led to arms control steps",
+     "It ended the rivalry between the two superpowers",
+     "It led the United States to invade Cuba",
+     "It led the Soviet Union to stop building weapons"
+    ]
+   }
+  },
+  "check": {
+   "mod-nuclear-arms-raceb": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   }
+  },
+  "before": {
+   "at": "2026-10-29T11:03:06Z",
+   "result": "kept",
+   "changed": [],
+   "why": [
+    "the new options failed the content check: mod-nuclear-arms-raceb option is 61 characters: It led the United States to invade Cuba and remove its leader"
+   ]
+  }
  }
 }

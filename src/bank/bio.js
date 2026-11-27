@@ -2103,9 +2103,9 @@ MADE_BANKS.bio = {
       "q": "In the plasma membrane, why do the phospholipid tails face the middle of the bilayer?",
       "opts": [
         "They are water-fearing, so they face away from water",
-        "They are water-loving, so they face towards water",
-        "They bond to the cholesterol in the centre",
-        "They are attached to carbohydrates on the outside"
+        "They are water-loving, so they face towards the water",
+        "They bond tightly to the cholesterol in the centre",
+        "They are attached to the carbohydrates on the outside"
       ],
       "why": "The tails are water-fearing, so they point inwards, away from the watery fluid on both sides of the membrane. The heads are the water-loving part, and they face the fluid.",
       "clue": "Think about which part of a phospholipid avoids water."
@@ -2192,10 +2192,10 @@ MADE_BANKS.bio = {
       "d": 3,
       "q": "A muscle cell has a low glucose level inside and a higher level outside. Glucose enters through a carrier protein, and the cell uses no ATP for this. What best describes the process?",
       "opts": [
-        "Facilitated diffusion, as glucose moves down its gradient",
-        "Active transport, as glucose moves through a protein",
-        "Simple diffusion, as glucose crosses the lipid part",
-        "Active transport, as glucose moves into the cell"
+        "Facilitated diffusion, as glucose goes down its gradient",
+        "Active transport, as glucose goes through a carrier protein",
+        "Simple diffusion, as glucose crosses the phospholipid part",
+        "Active transport, as glucose moves into the muscle cell"
       ],
       "why": "Glucose moves from high outside to low inside, which is down its gradient, and no ATP is used. This is facilitated diffusion. Using a carrier protein does not make it active transport, because active transport needs ATP and moves substances against the gradient.",
       "clue": "Check the direction of the gradient and whether ATP is used."
@@ -2316,8 +2316,8 @@ MADE_BANKS.bio = {
       "d": 3,
       "q": "In a human embryo, the cells between the developing fingers die and the fingers separate. Why is this best described as apoptosis?",
       "opts": [
-        "The cells die on a program because they are not needed",
-        "The cells die from injury and burst open",
+        "The cells are not needed and die by a set program",
+        "The cells die from an injury and then burst open",
         "The cells die because their DNA has been damaged",
         "The cells stop dividing, so the tissue shrinks away"
       ],
@@ -2350,9 +2350,9 @@ MADE_BANKS.bio = {
       "q": "Dev has a mutation in a gene that normally tells his liver cells when to stop dividing. Which outcome is most likely to follow?",
       "opts": [
         "Liver cells may divide without control and form a tumour",
-        "Liver cells stop copying DNA and so cannot divide",
-        "Liver cells all die at once from the mutation",
-        "Liver cells divide in a controlled way to repair damage"
+        "Liver cells may stop copying DNA and so cannot divide",
+        "Liver cells may die off quickly because of the mutation",
+        "Liver cells may divide in a controlled way to repair damage"
       ],
       "why": "A mutation in a gene that signals cells to stop dividing can let them keep dividing, and the extra cells may form a tumour. Repair by controlled division is tempting, but that is normal division, which a loss of control does not produce.",
       "clue": "What happens when the signal to stop dividing is lost?"
@@ -2376,8 +2376,8 @@ MADE_BANKS.bio = {
     "a": {
       "q": "Which pair of abilities makes a cell a stem cell?",
       "opts": [
-        "It renews itself and differentiates into specialised cells",
-        "It copies its DNA and keeps the same job in every cell",
+        "It renews itself and turns into specialised cells",
+        "It copies its DNA and keeps the same job it had",
         "It divides by binary fission and makes identical cells",
         "It differentiates once and then cannot divide again"
       ],
@@ -2416,7 +2416,7 @@ MADE_BANKS.bio = {
       "d": 3,
       "q": "A leaf contains epidermis, palisade tissue and xylem, which together carry out photosynthesis. At which level of organisation is the leaf?",
       "opts": [
-        "Organ, as it is made of several tissues working together",
+        "Organ, as several tissues work together in it",
         "Tissue, as it is made of similar cells doing one job",
         "System, as it carries out a major function",
         "Cell, as it is the smallest unit of a plant"
@@ -2437,7 +2437,7 @@ MADE_BANKS.bio = {
     "a": {
       "q": "What mainly causes water to move up the xylem of a tall tree?",
       "opts": [
-        "Evaporation of water from the leaves pulls it upward",
+        "Evaporation from the leaves pulls it upward",
         "Pressure from the roots pushes it up like a pump",
         "The stem muscles squeeze water up the xylem",
         "Gravity draws water up from the soil to the leaves"
@@ -2508,7 +2508,7 @@ MADE_BANKS.bio = {
     "remember": "Food is broken down physically and chemically, then absorbed in the small intestine.",
     "a": {
       "q": "Where are most digested nutrients absorbed into the blood?",
-      "opts": ["The small intestine", "The stomach", "The oesophagus", "The mouth"],
+      "opts": ["The small intestine", "The stomach lining", "The oesophagus wall", "The mouth and tongue"],
       "why": "The small intestine has folds and villi that give a large surface area for absorption. The stomach mainly churns food to break it into smaller pieces, so it is not the main site of absorption.",
       "clue": "Think about where villi are found."
     },
@@ -2549,10 +2549,10 @@ MADE_BANKS.bio = {
       "d": 3,
       "q": "Sam has a drug that blocks the receptors for a hormone on liver cells only. Blood levels of the hormone stay normal. What is the likely result?",
       "opts": [
-        "Liver cells do not respond, but other target cells still do",
-        "All cells stop responding to the hormone",
+        "Only the liver cells stop responding to the hormone",
+        "All target cells stop responding to the hormone",
         "The gland stops releasing the hormone into the blood",
-        "Other cells with different receptors respond instead"
+        "The liver cells respond through other receptors instead"
       ],
       "why": "Without working receptors, the liver cells cannot respond, even though the hormone is in the blood. Other target cells still have their receptors, so they respond as usual.",
       "clue": "Which cells lose their receptors?"
@@ -2843,10 +2843,10 @@ MADE_BANKS.bio = {
       "d": 3,
       "q": "A researcher records the daily steps and resting heart rates of 200 adults and finds that more active adults have lower heart rates. What can she conclude?",
       "opts": [
-        "The two factors are linked, but this study cannot show cause",
-        "More steps cause a lower resting heart rate in adults",
-        "A lower resting heart rate causes adults to take more steps",
-        "There is no relationship between steps and heart rate"
+        "They are linked, but the study cannot show cause",
+        "More steps cause adults to have a lower heart rate",
+        "A lower heart rate causes adults to take more steps",
+        "There is no link between steps and heart rate"
       ],
       "why": "She measured two factors without changing either, so this is a correlational study. It shows a link, but it cannot show that one factor causes the other. Fitter adults could have other differences that explain the pattern.",
       "clue": "She did not change either factor."
@@ -2915,7 +2915,7 @@ MADE_BANKS.bio = {
     "a": {
       "q": "A student times a heart rate with a stopwatch that runs 3 seconds fast every time. What kind of error is this?",
       "opts": [
-        "A systematic error, as every result is shifted the same way",
+        "A systematic error, as every result shifts the same way",
         "A random error, as the results vary between trials",
         "A random error, as the stopwatch is the cause of the fault",
         "A systematic error, as the sample size was too small"
@@ -2988,8 +2988,8 @@ MADE_BANKS.bio = {
       "q": "What does a karyotype show?",
       "opts": [
         "A cell's chromosomes arranged in pairs by size",
-        "The order of bases along one gene",
-        "The proteins made by a cell's genes",
+        "The order of bases along one gene on a chromosome",
+        "The proteins made from the genes in a cell's nucleus",
         "The alleles a person passes to their children"
       ],
       "why": "A karyotype is a picture of a cell's chromosomes sorted into pairs by size. It shows whole chromosomes, so it cannot show the base order of a gene or which alleles are passed on. It also does not show which proteins are made.",
@@ -3000,9 +3000,9 @@ MADE_BANKS.bio = {
       "q": "A karyotype of a cell from Sam shows 47 chromosomes instead of the usual 46. What can be concluded from the karyotype?",
       "opts": [
         "The cell has one chromosome more than usual",
-        "The cell has one pair more than usual",
-        "The cell has one gene more than usual",
-        "The cell has one allele more than usual"
+        "The cell has one chromosome pair more than usual",
+        "The cell has one gene more than usual in its DNA",
+        "The cell carries one allele more than usual"
       ],
       "why": "A karyotype lets chromosomes be counted, so 47 means one extra chromosome. It would not be a whole extra pair, as that would give 48. A karyotype does not show single genes or alleles.",
       "clue": "A karyotype counts whole chromosomes, so compare 47 with 46."
@@ -3026,10 +3026,10 @@ MADE_BANKS.bio = {
     "a": {
       "q": "Which statement correctly describes a pair of homologous autosomes in a human?",
       "opts": [
-        "They carry the same genes, perhaps with different alleles",
-        "They carry the same genes and always identical alleles",
-        "They carry different genes, so each has its own role",
-        "They differ in size between females and males"
+        "They carry the same genes but not always the same alleles",
+        "They carry the same genes and always have identical alleles",
+        "They carry different genes, so each one has its own role",
+        "They differ in size and shape between females and males"
       ],
       "why": "Homologous chromosomes carry the same genes in the same order, but each one may carry a different allele of a gene. They do not always carry identical alleles, and autosomes look the same in females and males.",
       "clue": "Think about genes and alleles on a matching pair."
@@ -3169,10 +3169,10 @@ MADE_BANKS.bio = {
     "a": {
       "q": "What is the effect of an epigenetic mark on a gene?",
       "opts": [
-        "It switches the gene on or off, leaving the bases unchanged",
+        "It turns the gene on or off, with the bases unchanged",
         "It changes one base in the gene into a different base",
-        "It removes the gene from the chromosome",
-        "It turns the gene into a different allele"
+        "It removes the gene from its place on the chromosome",
+        "It changes the gene into a different allele of the gene"
       ],
       "why": "Epigenetic marks are chemical tags that change whether a gene is used. The order of bases stays the same. A change to a base would be a change to the DNA itself, and that is not what epigenetic marks do.",
       "clue": "The DNA sequence itself stays the same."
@@ -3182,9 +3182,9 @@ MADE_BANKS.bio = {
       "q": "Two genetically identical clover plants are grown, one in a shady garden in Ballarat and one in full sun. The sunny plant grows shorter and thicker. What best explains this?",
       "opts": [
         "The environment changed how the same genes were expressed",
-        "The two plants carry different alleles for height",
-        "The sun changed the DNA sequence of the sunny plant",
-        "Environment has no effect on plants with identical genes"
+        "The two plants carry different alleles for plant height",
+        "The sunlight changed the DNA sequence of the sunny plant",
+        "The environment has no effect on plants with identical genes"
       ],
       "why": "The plants have the same genes, so the difference comes from the environment affecting how the genes show in the phenotype. The option about changed DNA is tempting, but light affecting growth does not mean the DNA sequence changed.",
       "clue": "The genes are the same, so what is left that differs?"
@@ -3272,9 +3272,9 @@ MADE_BANKS.bio = {
       "q": "In a cross of two fruit flies heterozygous for two genes, far fewer offspring than expected show new combinations of traits. What is the best explanation?",
       "opts": [
         "The two genes are close together on one chromosome",
-        "The two genes are on different chromosomes",
-        "Crossing over often occurs between the two genes",
-        "The two genes are far apart on one chromosome"
+        "The two genes are each on a different chromosome",
+        "Crossing over happens often between the two genes",
+        "The two genes are far apart on the same chromosome"
       ],
       "why": "Genes close together on the same chromosome tend to be inherited together, so new combinations are rare. Genes on different chromosomes would sort independently and give 9:3:3:1, with plenty of new combinations. Frequent crossing over, or genes far apart, would also make new combinations more common.",
       "clue": "Which genes tend to stay together as a unit?"
@@ -3453,8 +3453,8 @@ MADE_BANKS.bio = {
       "opts": [
         "Some trees in A survive, but all in B face the same risk",
         "Trees in B survive, as identical trees share resistance",
-        "Trees in A and B are equally likely to survive",
-        "Trees in A all die, as variation weakens trees"
+        "Diversity makes no difference to which orchard does better",
+        "All the trees in A die, as variation weakens each tree"
       ],
       "why": "The trees in A differ, so some may carry the allele that gives resistance. The clones in B are identical, so if one lacks the allele, all do. Identical trees do not guarantee resistance: they share the same weakness or strength.",
       "clue": "Identical individuals respond to a threat in the same way."
@@ -3485,9 +3485,9 @@ MADE_BANKS.bio = {
       "d": 3,
       "q": "Which of these is a behavioural adaptation?",
       "opts": [
-        "A meerkat standing upright to watch for hawks",
+        "A meerkat standing up to watch for hawks",
         "A camel having a hump that stores fat",
-        "A cactus having a thick, waxy skin",
+        "A cactus having a thick, waxy outer skin",
         "A desert rat making very concentrated urine"
       ],
       "why": "Standing up to watch for predators is an action the animal takes, so it is behavioural. The camel's hump is tempting, but it is a physical body feature, so it is structural. The waxy skin is structural and the concentrated urine is physiological.",
@@ -3524,7 +3524,7 @@ MADE_BANKS.bio = {
       "d": 3,
       "q": "After a bushfire in the Victorian bush, a eucalypt with blackened bark grows new leaves from its trunk. Which adaptation allows this?",
       "opts": [
-        "Buds protected under thick bark that regrow after fire",
+        "Buds under thick bark that regrow after fire",
         "Deep roots that reach water far below the surface",
         "Seeds held in woody fruits that open after fire",
         "Waxy leaves that lose less water in hot weather"
@@ -3580,10 +3580,10 @@ MADE_BANKS.bio = {
     "a": {
       "q": "Which statement best describes a species that shapes its ecosystem far beyond its numbers?",
       "opts": [
-        "Removing it would change many other species in the community",
+        "Losing it would change many other species",
         "It has the largest population in the ecosystem",
-        "It feeds on every other species in the community",
-        "It survives in a wider range of habitats than others"
+        "It feeds on most other species in the community",
+        "It lives in more habitats than other species"
       ],
       "why": "What marks this kind of species is its effect on the community, which is far greater than its numbers suggest. Having the largest population is a tempting idea, but such species are often not the most numerous.",
       "clue": "Think about effect compared with numbers, not population size."
@@ -3653,9 +3653,9 @@ MADE_BANKS.bio = {
       "q": "Which source is the best scientific evidence that a new fertiliser increases crop yield?",
       "opts": [
         "A controlled trial published in a peer-reviewed journal",
-        "A farmer's story that her crops did well last year",
-        "A social media post praising the fertiliser",
-        "A company advertisement stating that yields doubled"
+        "A farmer's story that her own crops did well last year",
+        "A social media post from a user praising the fertiliser",
+        "A company advertisement stating that crop yields doubled"
       ],
       "why": "A controlled trial that other experts have reviewed is valid and authoritative. The farmer's story is an anecdote, so it is not measured or tested, and it is the most tempting wrong option because it comes from real experience.",
       "clue": "Which source was tested and checked by experts?"
@@ -3728,9 +3728,9 @@ MADE_BANKS.bio = {
       "q": "A scientist says a trial is right because it will probably save many lives. Which approach is this?",
       "opts": [
         "Consequences-based, as it judges by the outcome",
-        "Duty-based, as it judges by the outcome",
-        "Virtue-based, as it judges by the outcome",
-        "Duty-based, as it follows a moral rule"
+        "Duty-based, as it judges an action by its outcome",
+        "Virtue-based, as it judges an action by its outcome",
+        "Duty-based, as it follows a moral rule or duty"
       ],
       "why": "The scientist judges the trial by its likely result, which is lives saved. That is a consequences-based approach. A duty-based approach would ask whether the trial follows moral rules, whatever the outcome.",
       "clue": "What is the scientist using to decide: outcome, rule or character?"
@@ -4069,7 +4069,7 @@ MADE_BANKS.bio = {
       "2": {
         "kind": "graph",
         "alt": "Rate of an enzyme reaction against temperature. The rate rises as the temperature rises towards the optimum, where it peaks. Above the optimum it falls steeply, because the enzyme's shape changes and it is denatured.",
-        "x": {"min": 0, "max": 90.0, "label": "Temperature (°C)", "step": 10},
+        "x": {"min": 0, "max": 90, "label": "Temperature (°C)", "step": 10},
         "y": {"min": 0, "max": 72, "label": "Rate of reaction"},
         "items": [
           {
@@ -4495,7 +4495,7 @@ MADE_BANKS.bio = {
       "2": {
         "kind": "graph",
         "alt": "Rate of cellular respiration against temperature. The rate rises with warmth up to the optimum, where it peaks. Past the optimum the enzymes denature and the rate drops sharply.",
-        "x": {"min": 0, "max": 90.0, "label": "Temperature (°C)", "step": 10},
+        "x": {"min": 0, "max": 90, "label": "Temperature (°C)", "step": 10},
         "y": {"min": 0, "max": 72, "label": "Rate of respiration"},
         "items": [
           {

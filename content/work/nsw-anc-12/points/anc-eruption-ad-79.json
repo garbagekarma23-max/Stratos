@@ -10,7 +10,8 @@
   "2026-10-29T12:30:15Z check: flagged",
   "2026-10-29T14:07:05Z fix: suggested",
   "2026-10-29T16:45:04Z recheck: kept for you (the fresh check was not highly sure)",
-  "2026-10-30T11:51:46Z review: approved with the fix"
+  "2026-10-30T11:51:46Z review: approved with the fix",
+  "2026-11-25T20:01:02Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -182,9 +183,9 @@
    "q": "Which event buried Herculaneum?",
    "opts": [
     "Pyroclastic flows of hot gas, ash and rock",
-    "Falling pumice and ash over many hours",
-    "A tsunami from the Bay of Naples",
-    "Lava flows from the crater of Vesuvius"
+    "Falling pumice and ash carried by the wind",
+    "A tsunami rolling in from the Bay of Naples",
+    "Rivers of lava from the crater of Vesuvius"
    ],
    "why": "Herculaneum was buried by pyroclastic flows, which left a deposit about 20 metres deep. Falling pumice and ash is what first covered Pompeii, which lay downwind, so that option describes the wrong town.",
    "clue": "Which town lay in the path of the falling pumice?"
@@ -202,5 +203,34 @@
    "clue": "Which kind of burial left the deepest, hardest seal?"
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "rebalance": {
+  "at": "2026-11-25T20:01:02Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "Pyroclastic flows of hot gas, ash and rock",
+     "Falling pumice and ash over many hours",
+     "A tsunami from the Bay of Naples",
+     "Lava flows from the crater of Vesuvius"
+    ]
+   }
+  },
+  "check": {
+   "anc-eruption-ad-79a": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   }
+  }
+ }
 }

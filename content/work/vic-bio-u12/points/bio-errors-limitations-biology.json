@@ -16,7 +16,8 @@
   "2026-11-01T08:24:29Z check: flagged",
   "2026-11-01T08:33:48Z fix: suggested",
   "2026-11-01T09:32:50Z recheck: kept for you (the fresh check found a problem)",
-  "2026-11-01T09:35:10Z review: approved with the fix"
+  "2026-11-01T09:35:10Z review: approved with the fix",
+  "2026-11-25T20:02:06Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -207,7 +208,7 @@
   "a": {
    "q": "A student times a heart rate with a stopwatch that runs 3 seconds fast every time. What kind of error is this?",
    "opts": [
-    "A systematic error, as every result is shifted the same way",
+    "A systematic error, as every result shifts the same way",
     "A random error, as the results vary between trials",
     "A random error, as the stopwatch is the cause of the fault",
     "A systematic error, as the sample size was too small"
@@ -228,5 +229,34 @@
    "clue": "Are the counts scattered both ways or shifted one way?"
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "rebalance": {
+  "at": "2026-11-25T20:02:06Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "A systematic error, as every result is shifted the same way",
+     "A random error, as the results vary between trials",
+     "A random error, as the stopwatch is the cause of the fault",
+     "A systematic error, as the sample size was too small"
+    ]
+   }
+  },
+  "check": {
+   "bio-errors-limitations-biologya": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   }
+  }
+ }
 }

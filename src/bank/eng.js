@@ -1218,9 +1218,9 @@ MADE_BANKS.eng = {
       "q": "Which statement best describes an interpretation of a text?",
       "opts": [
         "An argued view of meaning, backed by the text",
-        "A personal feeling that needs no support",
-        "A summary of the events in order",
-        "The one meaning the author intended"
+        "A personal feeling that needs no reasons behind it",
+        "A summary of the events of the text in order",
+        "The one meaning the author intended the text to have"
       ],
       "why": "An interpretation is a view of meaning that is argued and supported by evidence from the text. A summary only retells events, so it does not argue a view.",
       "clue": "Think about what turns a view into an argument."
@@ -2387,8 +2387,8 @@ MADE_BANKS.eng = {
       "opts": [
         "Each paragraph repeats the point instead of building on it",
         "The paragraphs are not in the order of the novel's events",
-        "The essay has too many paragraphs about the narrator",
-        "The thesis is about the narrator and not the plot"
+        "The essay has too many body paragraphs about the narrator",
+        "The thesis is about the narrator rather than about the plot"
       ],
       "why": "All three paragraphs make the same point, so the argument does not move forward. Following the order of the novel is not the problem: a change over time can suit that order, as long as each paragraph adds a new step.",
       "clue": "Ask what each paragraph adds that the last one did not."
@@ -3575,10 +3575,10 @@ MADE_BANKS.eng = {
       "d": 2,
       "q": "Sam is writing about a novel. His paragraph names a scene and describes what happens in it, but says nothing about how it proves his point. What is missing?",
       "opts": [
-        "Analysis explaining how the evidence supports the point",
+        "Analysis of how the evidence supports his point",
         "A longer summary of the scenes before and after it",
         "A second contention for the paragraph to argue",
-        "A personal opinion on whether the scene was enjoyable"
+        "A personal view on whether the scene was enjoyable"
       ],
       "why": "Evidence only helps when the writer explains how it proves the point. Sam has described the scene, which is not the same as analysing it. More summary would repeat the same problem.",
       "clue": "Evidence needs something done with it after it is given."
@@ -3657,9 +3657,9 @@ MADE_BANKS.eng = {
       "d": 3,
       "q": "Dev has a topic that gives a line spoken by a character and asks whether the text agrees with it. What should his essay focus on?",
       "opts": [
-        "What the line claims, and how the text supports or tests it",
+        "The line's claim, and how the text supports or tests it",
         "The speaker's motives, and how that character changes",
-        "The language techniques used within the line itself",
+        "The language techniques used in the line, word by word",
         "The events in the scenes just before and after the line"
       ],
       "why": "This is a quotation topic, so Dev must work out the claim in the line and then judge it against the text. Focusing on the speaker's motives treats it as a character topic, and that leaves the claim untested.",
@@ -3733,9 +3733,9 @@ MADE_BANKS.eng = {
       "q": "A student writes: 'The author hated the class system and wanted to end it.' Why is this a weak way to discuss the author's views?",
       "opts": [
         "It states the author's private feelings as proven fact",
-        "It names the class system, which is not a value",
-        "It links the text to its historical context",
-        "It uses the writer's choices as evidence"
+        "It names the class system, which is not itself a value",
+        "It links the author's view to the historical context",
+        "It uses the writer's choices in the text as evidence"
       ],
       "why": "The sentence states the author's private feelings and aims as fact, and gives no evidence from the text. A stronger sentence would say what the text suggests about the class system through its characters and events. Mentioning context is not the problem.",
       "clue": "Can a reader know what the author felt inside?"
@@ -3830,9 +3830,9 @@ MADE_BANKS.eng = {
       "q": "What is the job of the contention in an introduction?",
       "opts": [
         "To state the argument the essay will defend",
-        "To retell the opening of the text",
-        "To list the quotes the essay will use",
-        "To explain who the writer is"
+        "To retell the opening events of the text",
+        "To list the quotes the body paragraphs will use",
+        "To explain who the writer is and when they wrote"
       ],
       "why": "The contention is the clear answer to the topic that the essay argues. Retelling the opening is wrong because an introduction does not give detailed events, which belong to the body.",
       "clue": "It is the answer to the topic."
@@ -3934,10 +3934,10 @@ MADE_BANKS.eng = {
     "a": {
       "q": "Which piece of writing is exploring the framework of protest?",
       "opts": [
-        "A nurse writes to the paper about unsafe hospital wards",
+        "A nurse writes to the paper about unsafe wards",
         "A boy wins a trophy at his school sports carnival",
         "A family moves to a new city for a parent's job",
-        "A child invents a game with a cardboard box"
+        "A child invents a game with an old cardboard box"
       ],
       "why": "The nurse speaks out publicly about something she sees as wrong, which is a form of protest. The other pieces are about sport, moving and play, so they fit other frameworks. A sports story may involve rivalry, but winning a trophy is not speaking out against anything.",
       "clue": "Which character is pushing back against something?"
@@ -4034,9 +4034,9 @@ MADE_BANKS.eng = {
       "q": "Which sentence is a respectful rebuttal?",
       "opts": [
         "Critics say the fee cuts visitors, but data shows no fall",
-        "Only a selfish person would oppose this fee",
-        "Nobody sensible has ever backed the critics' claims",
-        "The critics are too lazy to read the data on the fee"
+        "Critics who oppose this fee are selfish and greedy people",
+        "The critics' claims are silly and not worth an answer",
+        "The critics are too lazy to look at the data on the fee"
       ],
       "why": "The sentence about the visitor data states the opposing claim and answers it with evidence, without insulting anyone. The others attack the critics' character or dismiss them, so they do not answer the argument.",
       "clue": "Which one answers the claim rather than the people?"
@@ -4045,10 +4045,10 @@ MADE_BANKS.eng = {
       "d": 3,
       "q": "A writer argues for a later school start. She admits that some parents worry about sport clashes, calls the worry fair, then suggests sport move to lunchtimes. What does she do?",
       "opts": [
-        "Admits the point has merit, then answers it with a solution",
-        "Ignores the opposing view to keep her own case simple",
+        "Grants the parents a point, then offers a solution",
+        "Ignores the parents' view to keep her own case simple",
         "Attacks the parents who raised the concern about sport",
-        "Agrees with the opposing view and drops her own case"
+        "Agrees with the parents' view and drops her own argument"
       ],
       "why": "She states the parents' concern fairly, grants it is reasonable, and then answers it. Admitting a fair point does not mean giving up her view, and she does not criticise the parents themselves.",
       "clue": "Look at what she does after saying the concern is fair."
@@ -4440,8 +4440,8 @@ MADE_BANKS.eng = {
       "opts": [
         "To build a casual, believable voice for the narrator",
         "To show the writer does not know the grammar rules",
-        "To make the piece sound formal and academic",
-        "To explain a process to the reader step by step"
+        "To make the piece sound more formal and academic",
+        "To explain a process clearly to the reader step by step"
       ],
       "why": "Slang and non-standard grammar can make a narrator sound real and casual. It is not a mistake when chosen on purpose, and it does not make writing formal.",
       "clue": "Think about who is speaking and how they would talk."
@@ -4555,10 +4555,10 @@ MADE_BANKS.eng = {
       "d": 3,
       "q": "A student writes that the ending can be read as hopeful, and that another reader might find it bleak. What should the student add to show depth?",
       "opts": [
-        "A reason from the text for preferring one reading",
+        "A reason from the text to prefer one reading",
         "A third reading that has no support in the text",
         "A claim that both readings are equally correct",
-        "A summary of the plot before the ending"
+        "A summary of the plot leading up to the ending"
       ],
       "why": "The student has named two readings but has not argued for either. A reason from the text turns a list into an argument. Saying both are equally correct avoids taking a position.",
       "clue": "Naming readings is only half the task."
@@ -4601,9 +4601,9 @@ MADE_BANKS.eng = {
       "q": "Priya, a Melbourne student, writes a piece for the newsletter her school sends home each week. She mocks the idea that homework builds character and says it should be cut back. Which pairing of tone and audience fits?",
       "opts": [
         "Sarcastic tone, aimed at families at her school",
-        "Calm tone, aimed at families at her school",
-        "Sarcastic tone, aimed at state politicians",
-        "Calm tone, aimed at state politicians"
+        "Calm, even tone, aimed at families at her school",
+        "Sarcastic tone, aimed at politicians in parliament",
+        "Calm, even tone, aimed at politicians in parliament"
       ],
       "why": "Mocking an idea is a sarcastic tone, and a newsletter sent home each week is read by the school's families, so they are the audience. The calm option with families gets the readers right but ignores the mockery, and the politicians options ignore where the piece appears.",
       "clue": "Mockery shows the tone. Ask who reads what the school sends home."
@@ -4663,7 +4663,7 @@ MADE_BANKS.eng = {
     "a": {
       "q": "A writer opens an article on bus cuts with a story about Ayesha, who now walks two hours to work. What is the main reason for starting this way?",
       "opts": [
-        "To make the issue personal before the facts arrive",
+        "To make the issue feel real before the facts",
         "To prove the cuts have harmed most commuters",
         "To tell readers exactly what action to take",
         "To show that the writer has expert knowledge"
@@ -4705,10 +4705,10 @@ MADE_BANKS.eng = {
     "a": {
       "q": "An article claims that city buses are too crowded. Beside it is a cartoon of passengers squashed against the windows. How does the cartoon work?",
       "opts": [
-        "It supports the claim by showing crowding in a picture",
+        "It supports the claim by showing it in a picture",
         "It adds a new claim that buses should be free",
         "It replaces the written argument with a joke",
-        "It proves the claim with statistics about passengers"
+        "It proves the claim with statistics on passengers"
       ],
       "why": "The cartoon shows the same point as the words, so it supports the claim. It adds no new claim about fares, and a cartoon does not give statistics, so it does not prove anything in that way.",
       "clue": "Does the picture repeat the writer's point or bring in a new one?"

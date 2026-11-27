@@ -8,7 +8,8 @@
   "2026-10-27T00:53:13Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:12Z write: done",
   "2026-10-27T01:08:37Z check: passed, cleared",
-  "2026-10-29T11:03:06Z rebalance: kept its old options (the new options failed the content check: mod-appeasementa option is 61 characters: To make Czechoslovakia stronger by giving it Hitler's support)"
+  "2026-10-29T11:03:06Z rebalance: kept its old options (the new options failed the content check: mod-appeasementa option is 61 characters: To make Czechoslovakia stronger by giving it Hitler's support)",
+  "2026-11-25T20:01:27Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -85,8 +86,8 @@
    "opts": [
     "To avoid another war by meeting some of his demands",
     "To help Germany rebuild its army after World War I",
-    "To make Czechoslovakia stronger against Germany",
-    "To prepare an immediate attack on Germany"
+    "To make Czechoslovakia stronger against German attack",
+    "To prepare an immediate attack on Germany and Italy"
    ],
    "why": "Appeasement meant giving in to some demands in the hope of keeping the peace. Helping Germany rearm was not the aim, even though rearmament happened in the 1930s.",
    "clue": "Think about what the policy was meant to prevent."
@@ -106,11 +107,40 @@
  },
  "cleared_by": "checker",
  "rebalance": {
-  "at": "2026-10-29T11:03:06Z",
-  "result": "kept",
-  "changed": [],
-  "why": [
-   "the new options failed the content check: mod-appeasementa option is 61 characters: To make Czechoslovakia stronger by giving it Hitler's support"
-  ]
+  "at": "2026-11-25T20:01:27Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "To avoid another war by meeting some of his demands",
+     "To help Germany rebuild its army after World War I",
+     "To make Czechoslovakia stronger against Germany",
+     "To prepare an immediate attack on Germany"
+    ]
+   }
+  },
+  "check": {
+   "mod-appeasementa": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  },
+  "before": {
+   "at": "2026-10-29T11:03:06Z",
+   "result": "kept",
+   "changed": [],
+   "why": [
+    "the new options failed the content check: mod-appeasementa option is 61 characters: To make Czechoslovakia stronger by giving it Hitler's support"
+   ]
+  }
  }
 }

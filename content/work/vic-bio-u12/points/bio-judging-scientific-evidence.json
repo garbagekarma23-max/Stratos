@@ -8,7 +8,8 @@
   "2026-11-01T07:54:18Z new, write",
   "2026-11-01T08:04:31Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T08:14:01Z write: done",
-  "2026-11-01T08:24:29Z check: passed, cleared"
+  "2026-11-01T08:24:29Z check: passed, cleared",
+  "2026-11-25T20:02:06Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -94,9 +95,9 @@
    "q": "Which source is the best scientific evidence that a new fertiliser increases crop yield?",
    "opts": [
     "A controlled trial published in a peer-reviewed journal",
-    "A farmer's story that her crops did well last year",
-    "A social media post praising the fertiliser",
-    "A company advertisement stating that yields doubled"
+    "A farmer's story that her own crops did well last year",
+    "A social media post from a user praising the fertiliser",
+    "A company advertisement stating that crop yields doubled"
    ],
    "why": "A controlled trial that other experts have reviewed is valid and authoritative. The farmer's story is an anecdote, so it is not measured or tested, and it is the most tempting wrong option because it comes from real experience.",
    "clue": "Which source was tested and checked by experts?"
@@ -114,5 +115,34 @@
    "clue": "Who collected the data, and could that group gain from the result?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-25T20:02:06Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "A controlled trial published in a peer-reviewed journal",
+     "A farmer's story that her crops did well last year",
+     "A social media post praising the fertiliser",
+     "A company advertisement stating that yields doubled"
+    ]
+   }
+  },
+  "check": {
+   "bio-judging-scientific-evidencea": {
+    "best": "A",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "A"
+   }
+  }
+ }
 }

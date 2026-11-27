@@ -10,7 +10,8 @@
   "2026-10-29T12:30:15Z check: flagged",
   "2026-10-29T14:07:05Z fix: suggested",
   "2026-10-29T16:45:04Z recheck: kept for you (the fresh check found a problem)",
-  "2026-10-30T11:51:53Z review: approved with the fix"
+  "2026-10-30T11:51:53Z review: approved with the fix",
+  "2026-11-25T20:01:27Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -177,10 +178,10 @@
   "a": {
    "q": "Why did Augustus have to prepare his successor by adopting and promoting family members?",
    "opts": [
-    "His position as princeps could not be inherited by law",
-    "The Senate had banned him from naming any heir",
-    "He had no relatives who were old enough to rule",
-    "The title of king had passed to the consuls"
+    "Princeps was not a legal office that passed to an heir",
+    "The Senate had passed a law banning him from naming an heir",
+    "He had no relatives who were old enough to rule after him",
+    "The title of king had already passed to the two consuls"
    ],
    "why": "Augustus ruled as princeps, a position built on powers and influence, not a legal office that passed to a son. So he used adoption and public honours to mark out an heir. The Senate did not ban him from naming heirs, and he had several relatives to choose from.",
    "clue": "Think about what kind of position princeps was, compared with a king."
@@ -198,5 +199,34 @@
    "clue": "Which heir actually went on to become the next princeps?"
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "rebalance": {
+  "at": "2026-11-25T20:01:27Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "His position as princeps could not be inherited by law",
+     "The Senate had banned him from naming any heir",
+     "He had no relatives who were old enough to rule",
+     "The title of king had passed to the consuls"
+    ]
+   }
+  },
+  "check": {
+   "anc-problem-successiona": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   }
+  }
+ }
 }

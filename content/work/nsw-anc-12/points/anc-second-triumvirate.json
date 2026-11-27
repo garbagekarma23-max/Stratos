@@ -7,7 +7,8 @@
   "2026-10-29T12:07:18Z new, write",
   "2026-10-29T12:14:23Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-29T12:22:32Z write: done",
-  "2026-10-29T12:30:15Z check: passed, cleared"
+  "2026-10-29T12:30:15Z check: passed, cleared",
+  "2026-11-25T20:01:27Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -81,9 +82,9 @@
    "q": "Why did the triumvirs issue proscriptions?",
    "opts": [
     "To remove their enemies and seize money for their armies",
-    "To give soldiers land in the provinces after Philippi",
-    "To pass laws that restored the powers of the Senate",
-    "To reward Caesar's heirs with gifts from his will"
+    "To give their soldiers land in the provinces after Philippi",
+    "To pass laws that handed the Senate back its old powers",
+    "To pay Caesar's heirs the gifts left to them in his will"
    ],
    "why": "Proscriptions named enemies who could be killed and whose property was taken. That removed opposition and paid for the armies. They were not about restoring the Senate's powers, as the triumvirs held wide powers themselves.",
    "clue": "Think about what happened to the people on the lists and to their property."
@@ -101,5 +102,34 @@
    "clue": "Recall what the Lex Titia did."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-25T20:01:27Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "To remove their enemies and seize money for their armies",
+     "To give soldiers land in the provinces after Philippi",
+     "To pass laws that restored the powers of the Senate",
+     "To reward Caesar's heirs with gifts from his will"
+    ]
+   }
+  },
+  "check": {
+   "anc-second-triumviratea": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   }
+  }
+ }
 }

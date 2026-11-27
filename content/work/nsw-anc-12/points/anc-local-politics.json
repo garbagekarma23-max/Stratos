@@ -10,7 +10,8 @@
   "2026-10-29T12:30:15Z check: flagged",
   "2026-10-29T14:07:05Z fix: suggested",
   "2026-10-29T16:45:04Z recheck: kept for you (the fresh check found a problem)",
-  "2026-10-30T11:51:50Z review: approved with the fix"
+  "2026-10-30T11:51:50Z review: approved with the fix",
+  "2026-11-25T20:01:02Z rebalance: new options for question a and b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -159,7 +160,7 @@
   "a": {
    "q": "What can historians learn directly from a painted election notice in Pompeii?",
    "opts": [
-    "The candidate it urged people to elect and his backer",
+    "The candidate it supported and who backed him",
     "The candidate who won the election that year",
     "How many citizens voted in the election that year",
     "How long the winning candidate stayed in office"
@@ -171,14 +172,60 @@
    "d": 3,
    "q": "A wall in Pompeii reads: 'The bakers ask you to make Gaius aedile.' What does this notice best show?",
    "opts": [
-    "A trade group publicly backed a candidate for office",
-    "Gaius was elected aedile by the bakers",
-    "Bakers held the senior offices in the town",
-    "Gaius was a baker who ran his own shop"
+    "A trade group openly backed Gaius for office",
+    "Gaius was elected aedile thanks to the bakers",
+    "Bakers filled the senior offices in the town",
+    "Gaius was a baker who ran a shop in the town"
    ],
    "why": "The notice shows a group of bakers asking for votes for Gaius, so it records support. It does not say he won, and it does not say he was a baker. The tempting option is that he was elected, but a request for votes is not a result.",
    "clue": "The bakers are asking, not announcing."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "rebalance": {
+  "at": "2026-11-25T20:01:02Z",
+  "result": "changed",
+  "changed": [
+   "a",
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "The candidate it urged people to elect and his backer",
+     "The candidate who won the election that year",
+     "How many citizens voted in the election that year",
+     "How long the winning candidate stayed in office"
+    ]
+   },
+   "b": {
+    "opts": [
+     "A trade group publicly backed a candidate for office",
+     "Gaius was elected aedile by the bakers",
+     "Bakers held the senior offices in the town",
+     "Gaius was a baker who ran his own shop"
+    ]
+   }
+  },
+  "check": {
+   "anc-local-politicsa": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   },
+   "anc-local-politicsb": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   }
+  }
+ }
 }

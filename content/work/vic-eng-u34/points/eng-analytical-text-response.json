@@ -30,7 +30,8 @@
   "2026-11-01T14:46:37Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:00Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:26Z write: done",
-  "2026-11-01T15:14:45Z check: passed, cleared"
+  "2026-11-01T15:14:45Z check: passed, cleared",
+  "2026-11-25T20:01:59Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -143,14 +144,43 @@
    "d": 2,
    "q": "Sam is writing about a novel. His paragraph names a scene and describes what happens in it, but says nothing about how it proves his point. What is missing?",
    "opts": [
-    "Analysis explaining how the evidence supports the point",
+    "Analysis of how the evidence supports his point",
     "A longer summary of the scenes before and after it",
     "A second contention for the paragraph to argue",
-    "A personal opinion on whether the scene was enjoyable"
+    "A personal view on whether the scene was enjoyable"
    ],
    "why": "Evidence only helps when the writer explains how it proves the point. Sam has described the scene, which is not the same as analysing it. More summary would repeat the same problem.",
    "clue": "Evidence needs something done with it after it is given."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-25T20:01:59Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "Analysis explaining how the evidence supports the point",
+     "A longer summary of the scenes before and after it",
+     "A second contention for the paragraph to argue",
+     "A personal opinion on whether the scene was enjoyable"
+    ]
+   }
+  },
+  "check": {
+   "eng-analytical-text-responseb": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  }
+ }
 }

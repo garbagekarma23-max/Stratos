@@ -11,7 +11,8 @@
   "2026-10-27T01:23:02Z fix: suggested",
   "2026-10-28T11:40:41Z recheck: kept for you (the fresh check found a problem)",
   "2026-10-28T11:49:46Z review: approved with the fix",
-  "2026-10-29T11:03:06Z rebalance: kept its old options (the new options failed the content check: mod-withdrawal-fall-saigona option is 70 characters: US combat troops were allowed to stay on in the South to defend Saigon; mod-withdrawal-fall-saigona option is 65 characters: North Vietnam pulled all of its forces out of the South as agreed; mod-withdrawal-fall-saigona option is 70 characters: South Vietnam's army was broken up and its weapons handed to the North)"
+  "2026-10-29T11:03:06Z rebalance: kept its old options (the new options failed the content check: mod-withdrawal-fall-saigona option is 70 characters: US combat troops were allowed to stay on in the South to defend Saigon; mod-withdrawal-fall-saigona option is 65 characters: North Vietnam pulled all of its forces out of the South as agreed; mod-withdrawal-fall-saigona option is 70 characters: South Vietnam's army was broken up and its weapons handed to the North)",
+  "2026-11-25T20:01:34Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -168,8 +169,8 @@
   "a": {
    "q": "Why did the Paris Peace Accords of 1973 not end the war in Vietnam?",
    "opts": [
-    "North Vietnamese troops were allowed to stay in the South",
-    "US troops stayed in South Vietnam to defend Saigon",
+    "The North's troops were allowed to stay in the South",
+    "US troops stayed on in South Vietnam to defend Saigon",
     "North Vietnam withdrew its forces from the South",
     "South Vietnam's army was disbanded under the terms"
    ],
@@ -191,11 +192,40 @@
  },
  "cleared_by": "owner",
  "rebalance": {
-  "at": "2026-10-29T11:03:06Z",
-  "result": "kept",
-  "changed": [],
-  "why": [
-   "the new options failed the content check: mod-withdrawal-fall-saigona option is 70 characters: US combat troops were allowed to stay on in the South to defend Saigon; mod-withdrawal-fall-saigona option is 65 characters: North Vietnam pulled all of its forces out of the South as agreed; mod-withdrawal-fall-saigona option is 70 characters: South Vietnam's army was broken up and its weapons handed to the North"
-  ]
+  "at": "2026-11-25T20:01:34Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "North Vietnamese troops were allowed to stay in the South",
+     "US troops stayed in South Vietnam to defend Saigon",
+     "North Vietnam withdrew its forces from the South",
+     "South Vietnam's army was disbanded under the terms"
+    ]
+   }
+  },
+  "check": {
+   "mod-withdrawal-fall-saigona": {
+    "best": "C",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "C"
+   }
+  },
+  "before": {
+   "at": "2026-10-29T11:03:06Z",
+   "result": "kept",
+   "changed": [],
+   "why": [
+    "the new options failed the content check: mod-withdrawal-fall-saigona option is 70 characters: US combat troops were allowed to stay on in the South to defend Saigon; mod-withdrawal-fall-saigona option is 65 characters: North Vietnam pulled all of its forces out of the South as agreed; mod-withdrawal-fall-saigona option is 70 characters: South Vietnam's army was broken up and its weapons handed to the North"
+   ]
+  }
  }
 }

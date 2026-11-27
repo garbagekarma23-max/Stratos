@@ -8,7 +8,8 @@
   "2026-11-01T07:54:17Z new, write",
   "2026-11-01T08:04:31Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T08:14:01Z write: done",
-  "2026-11-01T08:24:29Z check: passed, cleared"
+  "2026-11-01T08:24:29Z check: passed, cleared",
+  "2026-11-25T20:02:06Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -82,9 +83,9 @@
    "q": "In the plasma membrane, why do the phospholipid tails face the middle of the bilayer?",
    "opts": [
     "They are water-fearing, so they face away from water",
-    "They are water-loving, so they face towards water",
-    "They bond to the cholesterol in the centre",
-    "They are attached to carbohydrates on the outside"
+    "They are water-loving, so they face towards the water",
+    "They bond tightly to the cholesterol in the centre",
+    "They are attached to the carbohydrates on the outside"
    ],
    "why": "The tails are water-fearing, so they point inwards, away from the watery fluid on both sides of the membrane. The heads are the water-loving part, and they face the fluid.",
    "clue": "Think about which part of a phospholipid avoids water."
@@ -102,5 +103,34 @@
    "clue": "Fluid describes movement, and mosaic describes the mix of parts."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-11-25T20:02:06Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "They are water-fearing, so they face away from water",
+     "They are water-loving, so they face towards water",
+     "They bond to the cholesterol in the centre",
+     "They are attached to carbohydrates on the outside"
+    ]
+   }
+  },
+  "check": {
+   "bio-fluid-mosaic-model-2a": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  }
+ }
 }

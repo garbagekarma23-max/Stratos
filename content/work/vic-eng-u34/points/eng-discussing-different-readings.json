@@ -34,7 +34,8 @@
   "2026-11-02T04:56:45Z write: done",
   "2026-11-03T11:40:49Z check: flagged",
   "2026-11-03T11:44:03Z fix: suggested",
-  "2026-11-03T12:06:07Z review: approved with the fix"
+  "2026-11-03T12:06:07Z review: approved with the fix",
+  "2026-11-25T20:01:59Z rebalance: new options for question b by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -352,13 +353,42 @@
    "d": 3,
    "q": "A student writes that the ending can be read as hopeful, and that another reader might find it bleak. What should the student add to show depth?",
    "opts": [
-    "A reason from the text for preferring one reading",
+    "A reason from the text to prefer one reading",
     "A third reading that has no support in the text",
     "A claim that both readings are equally correct",
-    "A summary of the plot before the ending"
+    "A summary of the plot leading up to the ending"
    ],
    "why": "The student has named two readings but has not argued for either. A reason from the text turns a list into an argument. Saying both are equally correct avoids taking a position.",
    "clue": "Naming readings is only half the task."
+  }
+ },
+ "rebalance": {
+  "at": "2026-11-25T20:01:59Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "b": {
+    "opts": [
+     "A reason from the text for preferring one reading",
+     "A third reading that has no support in the text",
+     "A claim that both readings are equally correct",
+     "A summary of the plot before the ending"
+    ]
+   }
+  },
+  "check": {
+   "eng-discussing-different-readingsb": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   }
   }
  }
 }

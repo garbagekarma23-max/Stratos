@@ -8,7 +8,8 @@
   "2026-10-27T00:53:13Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:12Z write: done",
   "2026-10-27T01:08:37Z check: passed, cleared",
-  "2026-10-29T11:03:06Z rebalance: kept its old options (the new options failed the content check: mod-two-vietnamsa option is 61 characters: Soldiers in the regular army that defended the Southern state)"
+  "2026-10-29T11:03:06Z rebalance: kept its old options (the new options failed the content check: mod-two-vietnamsa option is 61 characters: Soldiers in the regular army that defended the Southern state)",
+  "2026-11-25T20:01:34Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "write": 2,
@@ -101,9 +102,9 @@
   "a": {
    "q": "Who were the Viet Cong?",
    "opts": [
-    "Communist fighters in the South who opposed its government",
-    "The regular army of the Southern government",
-    "American soldiers sent to defend Saigon",
+    "Communist fighters in the South opposing its government",
+    "The regular army of the Southern government in Saigon",
+    "American soldiers sent to defend the government in Saigon",
     "Political leaders who governed North Vietnam from Hanoi"
    ],
    "why": "The Viet Cong were communists living in South Vietnam who fought the Southern government, with support from the North. They are easily mistaken for the North's own leaders, but those governed from Hanoi and were not fighters inside the South.",
@@ -124,11 +125,40 @@
  },
  "cleared_by": "checker",
  "rebalance": {
-  "at": "2026-10-29T11:03:06Z",
-  "result": "kept",
-  "changed": [],
-  "why": [
-   "the new options failed the content check: mod-two-vietnamsa option is 61 characters: Soldiers in the regular army that defended the Southern state"
-  ]
+  "at": "2026-11-25T20:01:34Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "Communist fighters in the South who opposed its government",
+     "The regular army of the Southern government",
+     "American soldiers sent to defend Saigon",
+     "Political leaders who governed North Vietnam from Hanoi"
+    ]
+   }
+  },
+  "check": {
+   "mod-two-vietnamsa": {
+    "best": "B",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "B"
+   }
+  },
+  "before": {
+   "at": "2026-10-29T11:03:06Z",
+   "result": "kept",
+   "changed": [],
+   "why": [
+    "the new options failed the content check: mod-two-vietnamsa option is 61 characters: Soldiers in the regular army that defended the Southern state"
+   ]
+  }
  }
 }

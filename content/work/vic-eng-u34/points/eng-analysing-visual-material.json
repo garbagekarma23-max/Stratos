@@ -20,7 +20,8 @@
   "2026-11-01T15:05:26Z write: done",
   "2026-11-01T15:14:45Z check: flagged",
   "2026-11-02T04:27:51Z fix: suggested",
-  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-25T20:01:59Z rebalance: new options for question a by Claude Code, passed by a separate Claude Code check"
  ],
  "sent": {
   "match": 1,
@@ -227,10 +228,10 @@
   "a": {
    "q": "An article claims that city buses are too crowded. Beside it is a cartoon of passengers squashed against the windows. How does the cartoon work?",
    "opts": [
-    "It supports the claim by showing crowding in a picture",
+    "It supports the claim by showing it in a picture",
     "It adds a new claim that buses should be free",
     "It replaces the written argument with a joke",
-    "It proves the claim with statistics about passengers"
+    "It proves the claim with statistics on passengers"
    ],
    "why": "The cartoon shows the same point as the words, so it supports the claim. It adds no new claim about fares, and a cartoon does not give statistics, so it does not prove anything in that way.",
    "clue": "Does the picture repeat the writer's point or bring in a new one?"
@@ -248,5 +249,34 @@
    "clue": "Does the photo make the writer's point feel stronger, or bring in a new point?"
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-11-25T20:01:59Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "by": "claude-code",
+  "old": {
+   "a": {
+    "opts": [
+     "It supports the claim by showing crowding in a picture",
+     "It adds a new claim that buses should be free",
+     "It replaces the written argument with a joke",
+     "It proves the claim with statistics about passengers"
+    ]
+   }
+  },
+  "check": {
+   "eng-analysing-visual-materiala": {
+    "best": "D",
+    "also_right": [],
+    "pass": true,
+    "problems": [],
+    "sure": "high",
+    "meant": "D"
+   }
+  }
+ }
 }
